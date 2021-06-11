@@ -1,0 +1,3 @@
+[submodule "themes/simple-dev-blog"]
+	path = themes/simple-dev-blog
+	url = https://github.com/bennetthardwick/simple-dev-blog-zola-starter

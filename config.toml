@@ -1,16 +1,34 @@
 # The URL the site will be built for
 base_url = "http://chemaclass.com"
+name = "Chemaclass | Jose Maria Valera Reales"
+description = "Chema's blog."
 
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
-
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
-
-[markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
+generate_feed = true
+theme = "simple-dev-blog"
+taxonomies = [ { name = "tags" } ]
 
 [extra]
-# Put all your custom variables here
+
+nav = [
+  { name = "About", path = "/about/" },
+  { name = "Blog", path = "/blog/" }
+]
+
+blog_path = "blog"
+
+icon = "icon.png"
+profile_small = "icon.png"
+profile_large = "profile.jpg"
+
+accent = "#05a081"
+accent_light = "#82d0c0"
+
+footer_about = """
+I love writing about stuff that I find interesting and bring some value to my life,<br>
+so I can share them with you.
+"""
+
+not_found_message = """
+This is not the page you're looking for... return back to [safety?](/)
+"""
+
