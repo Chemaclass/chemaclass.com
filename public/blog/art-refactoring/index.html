@@ -47,7 +47,7 @@
     
 
     
-      <meta name="twitter:title" content="The Art of Testing: where design meets quality">
+      <meta name="twitter:title" content="The art of refactoring">
     
 
     
@@ -61,7 +61,7 @@
     <title>
       
         
-          The Art of Testing: where design meets quality
+          The art of refactoring
         
       
     </title>
@@ -72,21 +72,19 @@
     
     
   
-    <link rel="prerender" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;blog&#x2F;improve-your-tech-talk&#x2F;">
+    <link rel="prerender" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;blog&#x2F;final-classes&#x2F;">
   
 
   
-    <link rel="prerender" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;blog&#x2F;final-classes&#x2F;">
+    <link rel="prerender" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;blog&#x2F;strict-types&#x2F;">
   
 
   
     <link rel="prerender"  href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;software&#x2F;">
   
-    <link rel="prerender"  href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;design&#x2F;">
+    <link rel="prerender"  href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;refactoring&#x2F;">
   
     <link rel="prerender"  href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;testing&#x2F;">
-  
-    <link rel="prerender"  href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;quality&#x2F;">
   
 
   <script type="application/ld+json">
@@ -97,10 +95,10 @@
         "@type": "WebPage",
         "@id": "https://google.com/article"
       },
-      "headline": "The Art of Testing: where design meets quality",
+      "headline": "The art of refactoring",
       "image": [],
-      "datePublished": "2020-04-07T00:00:00+00:00",
-      "dateModified": "2020-04-07T00:00:00+00:00"
+      "datePublished": "2020-06-28T00:00:00+00:00",
+      "dateModified": "2020-06-28T00:00:00+00:00"
     }
   </script>
 
@@ -131,8 +129,8 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "The Art of Testing: where design meets quality",
-          "item": "https://chemaclass.es/blog/the-art-of-testing/"
+          "name": "The art of refactoring",
+          "item": "https://chemaclass.es/blog/art-refactoring/"
         }
       ]
     }
@@ -157,20 +155,18 @@
     <main>
     
   <div class="post-title">
-    <h1>The Art of Testing: where design meets quality</h1>
+    <h1>The art of refactoring</h1>
     <small>
-      April 07, 2020
+      June 28, 2020
       
         - 
         <span class="tags">
           
             <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;software&#x2F;">software</a>
           
-            <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;design&#x2F;">design</a>
+            <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;refactoring&#x2F;">refactoring</a>
           
             <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;testing&#x2F;">testing</a>
-          
-            <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;quality&#x2F;">quality</a>
           
         </span>
       
@@ -178,35 +174,38 @@
   </div>
 
   <div>
-    <p>The intention of this post is not to explain the different testing techniques out there that we can use. I'm not going to tell you what the differences are between unit, integration, feature, or end-to-end testing.</p>
-<p>I'm going to tell you why we should consider testing as part of our daily development and how it's directly linked to the software quality.</p>
-<p>I'm still amazed by the lack of experience about testing in software in general. Common ignorance in this world about best testing practices for us as developers. Inexperience that you can easily see if you have already worked on some different projects and teams.</p>
-<h3 id="software-testing">Software testing</h3>
-<p>Some horrible patterns I've seen (and done):</p>
+    <blockquote>
+<p>TL;DR: If you see something, in the scope of your current task, that can be easily improved, improve it. And if you have any questions about it, ask.</p>
+</blockquote>
+<h2 id="what-is-refactoring">What is refactoring?</h2>
+<p>Refactoring means improving your code. It can go from making a variable name more readable, extract some lines of code into a private method, or separate the responsibilities of a class into subclasses, for example.</p>
+<p>Refactoring is the action of showing that you care about what you do as a professional. It can be a controversial topic; it is indeed one of the major controversial topics since a long time ago. But we shouldn’t stop trying our best in order to improve the quality of the system just because of that controversiality.</p>
+<h2 id="when-and-how-should-we-refactor">When and how should we refactor?</h2>
+<p>Always in the scope of your current task unless it is an already planned task, something like “architecture refactoring” or similar, where the scope of the task is actually to do refactoring.</p>
+<blockquote>
+<p>Refactoring should be part of our daily job, not a separate task by default.</p>
+</blockquote>
+<p>We do not need to ask permission to refactor. Or do we ask our managers for permission to do our best job?</p>
+<p>In order to do proper refactoring, the intention of such refactoring needs to be clear. What is intended to achieve and how? Pair programming (or even pair thinking!) certainly helps in this topic because it syncs two brains on the same topic and that encourages team building and a better understanding of them.</p>
+<p>Applying refactoring in a collaborative way, in a “bidirectional channel”, is fundamental when working within a team. Refactoring shouldn’t be a tabu topic, on the contrary: it will be helpful in order to unify the goals and the direction of the team code quality.</p>
+<h3 id="some-personal-advice-about-the-how">Some personal advice about the “how”</h3>
+<p>Continuous improvement is what we’re looking for within this topic, but…</p>
 <ul>
-<li>Testing for the sake of testing: testing every single file, sometimes wrongly considered as a unit.</li>
-<li>Mocking every class that we intend to test, overriding the real implementation, and creating a fake-behavior, therefore providing a false coverage perception.</li>
-<li>Coupling production code with tests everywhere so it's impossible to change anything without breaking some tests, even if the feature itself it's working as intended.</li>
-<li>Not testing at all because “why should we even test anything if the feature it's done and it works? Why should we spend more time on this if it's done?”.</li>
+<li>If you realize your changes are generating more noise than help, stop immediately and think again if your changes are worth in the current system status.</li>
 </ul>
-<p>One of the main reasons for software testing is actually verifying a suite of proofs for the expected behavior of the final software piece. However, testing can (and should) be more than that.</p>
-<h3 id="software-design">Software design</h3>
-<p>Software design goes from algorithm to architecture design. Even when I believe these two levels of components have different needs and requirements, they still share some common patterns. For example, testing. And this is what we are going to talk about right now:</p>
-<blockquote>
-<p>If it's easy to test, it will likely be because of good design.</p>
-</blockquote>
-<h3 id="software-quality">Software quality</h3>
-<p>Is quality hard to measure out? Indeed. There are different measurement keys that we should take while considering quality for any piece of software. But I'm sure we could agree on this:</p>
-<blockquote>
-<p>If you aim for quality in your software, you better aim for a good design.</p>
-</blockquote>
-<p>Testing by itself means “proving”, as we all know. But how difficult it turns sometimes to prove some logic, that we finally give up because of its complexity itself?</p>
-<p>The art of testing is about being able to use testing itself to help and contribute to the final result. If we're able to use testing (of any kind) in our favor, depending on the context of what we want to prove, to encourage good design, it will certainly help us to increase the end quality of the product.</p>
-<blockquote>
-<p>Therefore, testing should be used not only to prove the behavior of our software but also to guide our software to a better design.</p>
-</blockquote>
-<p>Should we test everything? Well, that's the million $ question. In my opinion, everything depends on the context. We might encounter situations where tests might be not really useful. That said, we should write our code as if it could be tested anyway.</p>
-<p>Easily testable code tends to better design and therefore better quality.</p>
+<p>Maybe it’s not the right moment for that refactoring.</p>
+<p>Maybe you are polluting your current diff with out-scoped changes.</p>
+<p>Or, maybe, your refactoring idea is too big to be applied in your current task. In such a case, a follow-up task (in order to apply the refactoring) would be a better idea.</p>
+<ul>
+<li>If you see that refactoring is perhaps needed even before starting your current task, do the refactoring first.</li>
+</ul>
+<p>We usually refactor in order to increase our productivity, making the code more readable and therefore easier to understand.</p>
+<h3 id="testing">Testing</h3>
+<p>Be aware that you should have a pretty well suite of tests covering the logic that you might have changed. Without tests, refactoring can be really risky. Usually, the easier something is to be tested, the easier it is to be replaced or removed.</p>
+<p>You can read more about how testing is related to quality here.</p>
+<h2 id="why-should-we-do-it">Why should we do it?</h2>
+<p>Wouldn’t you want to have a better system as time goes by?</p>
+<h4 id="software-isn-t-like-wine-it-doesn-t-get-better-as-time-passes-by-therefore-if-you-want-to-have-a-better-system-you-must-work-for-it">Software isn’t like wine: it doesn’t get better as time passes by. Therefore, if you want to have a better system you must work for it.</h4>
 
   </div>
 
@@ -225,14 +224,14 @@ so I can share them with you.</p>
     
       <div class="link">
         Previous <br />
-        <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;blog&#x2F;improve-your-tech-talk&#x2F;">How to improve your tech-talk (or any other presentation)</a>
+        <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;blog&#x2F;final-classes&#x2F;">Final classes in PHP|Java|Any</a>
       </div>
     
 
     
       <div class="link">
         Next <br />
-        <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;blog&#x2F;final-classes&#x2F;">Final classes in PHP|Java|Any</a>
+        <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;blog&#x2F;strict-types&#x2F;">Strict Types in PHP</a>
       </div>
     
 

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+      }
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;processed_images&#x2F;444e76059742f47b00.png" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;processed_images&#x2F;444e76059742f47b00.png" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;processed_images&#x2F;6dfeb9b0bd094d5a00.png" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;processed_images&#x2F;3959b3b31b7ae92700.png" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;processed_images&#x2F;e644b27af091684500.png" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;processed_images&#x2F;3344ee474c2d849c00.png" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;processed_images&#x2F;d92103ca49c6bd5e00.png" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;processed_images&#x2F;b8dd2689e662c9cd00.png" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;processed_images&#x2F;c0d9496000275d3400.png" />
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="Chema&#x27;s blog." />
+        <meta name="twitter:description" content="Chema&#x27;s blog.">
+      
+    
+
+    
+      <meta name="twitter:title" content="Typed arrays in PHP">
+    
+
+    
+      <link rel="prerender" href="&#x2F;about&#x2F;" />
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;processed_images&#x2F;53af5229a2f8852200.png" />
+
+    <title>
+      
+        
+          Typed arrays in PHP
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://chemaclass.es/main.css">
+    
+    
+  
+    <link rel="prerender" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;blog&#x2F;the-process-itself-is-the-goal&#x2F;">
+  
+
+  
+    <link rel="prerender" href="https:&#x2F;&#x2F;chemaclass.es&#x2F;blog&#x2F;array-merge-in-loop&#x2F;">
+  
+
+  
+    <link rel="prerender"  href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;software&#x2F;">
+  
+    <link rel="prerender"  href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;php&#x2F;">
+  
+    <link rel="prerender"  href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;array&#x2F;">
+  
+    <link rel="prerender"  href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;generics&#x2F;">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Typed arrays in PHP",
+      "image": [],
+      "datePublished": "2020-10-13T00:00:00+00:00",
+      "dateModified": "2020-10-13T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Chemaclass | Jose Maria Valera Reales",
+          "item": "https://chemaclass.es/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "",
+          "item": "https://chemaclass.es/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Typed arrays in PHP",
+          "item": "https://chemaclass.es/blog/typed-arrays-php/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;chemaclass.es&#x2F;processed_images&#x2F;53af5229a2f8852200.png" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;about&#x2F;">About</a>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Typed arrays in PHP</h1>
+    <small>
+      October 13, 2020
+      
+        - 
+        <span class="tags">
+          
+            <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;software&#x2F;">software</a>
+          
+            <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;php&#x2F;">php</a>
+          
+            <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;array&#x2F;">array</a>
+          
+            <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;tags&#x2F;generics&#x2F;">generics</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h2 id="an-alternative-to-the-missing-feature-in-php-generics">An alternative to the missing feature in PHP: Generics</h2>
+<h3 id="the-perfect-combination">The perfect combination</h3>
+<ul>
+<li>Argument unpacking: Instead of passing the argument itself to the function, the elements it contains will be passed (as individual arguments).</li>
+<li>Function variable argument list: The arguments will be passed into the given variable as an array.</li>
+<li>Variadics function: Types can be checked with a type-hint.</li>
+</ul>
+<p>We will use this snipped for our examples
+Having a class, <code>Customer</code>:</p>
+<pre><code class="language-php" data-lang="php">/** 
+ * @psalm-immutable 
+ */
+final class Customer
+{
+    // Using PHP 8 constructor property promotion
+    public function __construct(
+        public string $name,
+    ) {}
+}
+// We create a list of 6 customers
+$customers = array_map(
+    fn(int $i): Customer =&gt; new Customer(&quot;name-{$i}&quot;),
+    range(1, 6)
+);
+</code></pre>
+<p>Whenever we want to manipulate a list of Customers, we can pass as an argument: <code>…$customers</code>.</p>
+<h2 id="how-we-use-to-do-it">How we use to do it</h2>
+<p>We define the array type using the PHPDoc param comment block above. But we cannot define the real type of the item. The code will still run without any problem passing any type on that argument <code>array $customers</code>:</p>
+<pre><code class="language-php" data-lang="php">/** 
+ * @param Customer[] 
+ */
+function createInvoiceForCustomers(array $customers): void
+{
+    foreach ($customers as $customer) {
+        // ... some irrelevant logic for this example
+    }
+}
+</code></pre>
+<p>The code below would work at &quot;compile-time&quot;. But it might fail at &quot;runtime&quot;.</p>
+<pre><code class="language-php" data-lang="php">createInvoiceForCustomers($customers);
+createInvoiceForCustomers([new Customer('any name')]);
+createInvoiceForCustomers([new AnyOtherType()]);
+</code></pre>
+<p>An alternative (recommended!) might be to extract that logic and ask for the particular type in order to &quot;check it&quot; at runtime in that particular moment, failing if one of the items wasn't really a Customer:</p>
+<pre><code class="language-php" data-lang="php">/** 
+ * @param Customer[] 
+ */
+function createInvoiceForCustomers(array $customers): void
+{
+    foreach ($customers as $customer) {
+        createInvoice($customer);
+    }
+}
+function createInvoice(Customer $customer): void
+{
+    // ... some irrelevant logic for this example
+}
+</code></pre>
+<p>Everything here below would work at &quot;compile-time&quot;. It will for sure break during &quot;runtime&quot; if the <code>createInvoice(Customer $customer)</code> receives something different than a Customer.</p>
+<pre><code class="language-php" data-lang="php">createInvoiceForCustomers($customers);
+createInvoiceForCustomers([new Customer('any name')]);
+createInvoiceForCustomers([new AnyOtherType()]); // won't work
+</code></pre>
+<p>By doing that <code>createInvoice(Customer $customer)</code> we are ensuring the type of the argument, which is good! But, what about going one step further. Could we check the types of the elements when calling the function <code>createInvoiceForCustomers(array $customers)</code>, even making the IDE complain when the types are not right?</p>
+<p>Well, that's actually what Generics are for, but sadly, they are not yet in PHP. Not even in the upcoming PHP 8. Hopefully in a near future, but we cannot predict that for now.
+Luckily, we have currently an alternative nowadays, but it's not that popular. It has its own &quot;pros&quot; and &quot;cons&quot;, so let's take a look at an example first:</p>
+<pre><code class="language-php" data-lang="php">function createInvoiceForCustomers(Customer ...$customers): void
+{
+    foreach ($customers as $customer) {
+        createInvoice($customer);
+    }
+}
+</code></pre>
+<p>Everything here below would work at &quot;compile-time&quot;. It will for sure break during &quot;runtime&quot; if the <code>createInvoice()</code> receives something different than a Customer.</p>
+<pre><code class="language-php" data-lang="php">createInvoiceForCustomers(...$customers); // OK
+createInvoiceForCustomers(
+    new Customer('any name'), 
+    new Customer('any name'),
+); // OK
+// This is not even possible to write. The IDE will yeld at you. 
+// It's expecting a `Customer`, but `AnyOtherType` is given:
+createInvoiceForCustomers(new AnyOtherType());
+</code></pre>
+<h3 id="pros">PROS</h3>
+<ul>
+<li>We can easily type a list of any concrete type.</li>
+</ul>
+<h3 id="cons">CONS</h3>
+<ul>
+<li>We better define our functions with one or two arguments max. Otherwise, it would be too complicated to read.</li>
+</ul>
+<h3 id="important-remarks">Important remarks</h3>
+<ul>
+<li>It needs to be the last taken argument of a function.</li>
+<li>It helps to minimize the number of arguments that we use in a function.</li>
+</ul>
+<h2 id="conclusions">Conclusions</h2>
+<p>Argument unpacking is a great feature that, in combination with variadic functions, can help us to simulate typed arrays. With great power comes great responsibility, and this is no exception.
+We need to learn about our toolbox in order to use it wisely.</p>
+<hr />
+<p>References</p>
+<ul>
+<li><a href="https://wiki.php.net/rfc/argument_unpacking">Argument unpacking</a></li>
+<li><a href="https://www.php.net/manual/en/functions.arguments.php#functions.variable-arg-list">Function variable argument list</a></li>
+<li><a href="https://wiki.php.net/rfc/variadics">Variadics function</a></li>
+</ul>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+    <div class="footer-about">
+      <p>I love writing about stuff that I find interesting and bring some value to my life,<br>
+so I can share them with you.</p>
+
+    </div>
+  
+
+  <div class="related-container">
+
+    
+      <div class="link">
+        Previous <br />
+        <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;blog&#x2F;the-process-itself-is-the-goal&#x2F;">The process itself is the goal</a>
+      </div>
+    
+
+    
+      <div class="link">
+        Next <br />
+        <a href="https:&#x2F;&#x2F;chemaclass.es&#x2F;blog&#x2F;array-merge-in-loop&#x2F;">Never use array_merge in a loop</a>
+      </div>
+    
+
+  </div>
+
+
+    </main>
+  </body>
+</html>
