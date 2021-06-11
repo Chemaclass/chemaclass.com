@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://chemaclass.com"
+base_url = "https://chemaclass.es"
 name = "Chemaclass | Jose Maria Valera Reales"
 description = "Chema's blog."
 

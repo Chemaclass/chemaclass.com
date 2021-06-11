@@ -21,8 +21,6 @@ Some horrible patterns I've seen (and done):
 
 One of the main reasons for software testing is actually verifying a suite of proofs for the expected behavior of the final software piece. However, testing can (and should) be more than that.
 
-[comment]: <> (![B]&#40;/images/art-testing-1.png&#41;)
-
 ### Software design
 
 Software design goes from algorithm to architecture design. Even when I believe these two levels of components have different needs and requirements, they still share some common patterns. For example, testing. And this is what we are going to talk about right now:
@@ -44,5 +42,3 @@ The art of testing is about being able to use testing itself to help and contrib
 Should we test everything? Well, that's the million $ question. In my opinion, everything depends on the context. We might encounter situations where tests might be not really useful. That said, we should write our code as if it could be tested anyway.
 
 Easily testable code tends to better design and therefore better quality.
-
-[comment]: <> (![C]&#40;/images/art-testing-3.png&#41;)

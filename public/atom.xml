@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title></title>
+	<subtitle>Chema&#x27;s blog.</subtitle>
+	<link href="https://chemaclass.es/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://chemaclass.es"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2020-04-07T00:00:00+00:00</updated>
+	<id>https://chemaclass.es/atom.xml</id>
+	<entry xml:lang="en">
+		<title>The Art of Testing: where design meets quality</title>
+		<published>2020-04-07T00:00:00+00:00</published>
+		<updated>2020-04-07T00:00:00+00:00</updated>
+		<link href="https://chemaclass.es/blog/the-art-of-testing/" type="text/html"/>
+		<id>https://chemaclass.es/blog/the-art-of-testing/</id>
+		<content type="html">&lt;p&gt;The intention of this post is not to explain the different testing techniques out there that we can use. I&#x27;m not going to tell you what the differences are between unit, integration, feature, or end-to-end testing.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m going to tell you why we should consider testing as part of our daily development and how it&#x27;s directly linked to the software quality.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m still amazed by the lack of experience about testing in software in general. Common ignorance in this world about best testing practices for us as developers. Inexperience that you can easily see if you have already worked on some different projects and teams.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;software-testing&quot;&gt;Software testing&lt;&#x2F;h3&gt;
+&lt;p&gt;Some horrible patterns I&#x27;ve seen (and done):&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Testing for the sake of testing: testing every single file, sometimes wrongly considered as a unit.&lt;&#x2F;li&gt;
+&lt;li&gt;Mocking every class that we intend to test, overriding the real implementation, and creating a fake-behavior, therefore providing a false coverage perception.&lt;&#x2F;li&gt;
+&lt;li&gt;Coupling production code with tests everywhere so it&#x27;s impossible to change anything without breaking some tests, even if the feature itself it&#x27;s working as intended.&lt;&#x2F;li&gt;
+&lt;li&gt;Not testing at all because “why should we even test anything if the feature it&#x27;s done and it works? Why should we spend more time on this if it&#x27;s done?”.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;One of the main reasons for software testing is actually verifying a suite of proofs for the expected behavior of the final software piece. However, testing can (and should) be more than that.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;software-design&quot;&gt;Software design&lt;&#x2F;h3&gt;
+&lt;p&gt;Software design goes from algorithm to architecture design. Even when I believe these two levels of components have different needs and requirements, they still share some common patterns. For example, testing. And this is what we are going to talk about right now:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If it&#x27;s easy to test, it will likely be because of good design.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;software-quality&quot;&gt;Software quality&lt;&#x2F;h3&gt;
+&lt;p&gt;Is quality hard to measure out? Indeed. There are different measurement keys that we should take while considering quality for any piece of software. But I&#x27;m sure we could agree on this:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you aim for quality in your software, you better aim for a good design.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Testing by itself means “proving”, as we all know. But how difficult it turns sometimes to prove some logic, that we finally give up because of its complexity itself?&lt;&#x2F;p&gt;
+&lt;p&gt;The art of testing is about being able to use testing itself to help and contribute to the final result. If we&#x27;re able to use testing (of any kind) in our favor, depending on the context of what we want to prove, to encourage good design, it will certainly help us to increase the end quality of the product.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Therefore, testing should be used not only to prove the behavior of our software but also to guide our software to a better design.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Should we test everything? Well, that&#x27;s the million $ question. In my opinion, everything depends on the context. We might encounter situations where tests might be not really useful. That said, we should write our code as if it could be tested anyway.&lt;&#x2F;p&gt;
+&lt;p&gt;Easily testable code tends to better design and therefore better quality.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>
