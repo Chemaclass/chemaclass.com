@@ -12,7 +12,8 @@ taxonomies = [ { name = "tags" } ]
 nav = [
   { name = "About", path = "/about/" },
   { name = "Blog", path = "/blog/" },
-  { name = "Book", path = "/book/" }
+  { name = "Book", path = "/book/" },
+  { name = "Readings", path = "/readings/" }
 ]
 
 blog_path = "blog"
