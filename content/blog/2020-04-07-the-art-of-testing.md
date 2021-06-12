@@ -19,7 +19,7 @@ Some horrible patterns I've seen (and done):
 * Testing for the sake of testing: testing every single file, sometimes wrongly considered as a unit.
 * Mocking every class that we intend to test, overriding the real implementation, and creating a fake-behavior, therefore providing a false coverage perception.
 * Coupling production code with tests everywhere so it's impossible to change anything without breaking some tests, even if the feature itself it's working as intended.
-* Not testing at all because “why should we even test anything if the feature it's done and it works? Why should we spend more time on this if it's done?”.
+* Not testing at all because "why should we even test anything if the feature it's done and it works? Why should we spend more time on this if it's done?".
 
 One of the main reasons for software testing is actually verifying a suite of proofs for the expected behavior of the final software piece. However, testing can (and should) be more than that.
 
@@ -35,7 +35,7 @@ Is quality hard to measure out? Indeed. There are different measurement keys tha
 
 > If you aim for quality in your software, you better aim for a good design.
 
-Testing by itself means “proving”, as we all know. But how difficult it turns sometimes to prove some logic, that we finally give up because of its complexity itself?
+Testing by itself means "proving", as we all know. But how difficult it turns sometimes to prove some logic, that we finally give up because of its complexity itself?
 
 The art of testing is about being able to use testing itself to help and contribute to the final result. If we're able to use testing (of any kind) in our favor, depending on the context of what we want to prove, to encourage good design, it will certainly help us to increase the end quality of the product.
 

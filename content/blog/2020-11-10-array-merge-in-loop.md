@@ -28,7 +28,7 @@ foreach($lists as $list) {
 // $merged === [1, 2, 3, 4, 5, 6];
 ```
 
-This is a very bad practice because it’s a (memory) performance killer!
+This is a very bad practice because it's a (memory) performance killer!
 Instead, you should use the spread operator (in PHP since 5.6!):
 
 ```php
@@ -103,7 +103,7 @@ $merged = iterator_to_array(
 
 # Conclusion
 
-Usually, being aware of how to flat a “2 level” array might be sufficient:
+Usually, being aware of how to flat a "2 level" array might be sufficient:
 ```php
 $flattenList = array_merge(...array_values($lists));
 ```

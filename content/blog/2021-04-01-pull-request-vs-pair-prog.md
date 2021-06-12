@@ -23,17 +23,17 @@ Usually, it's also used:
 
 ## Pull Requests aren't the best tool for everything
 
-The main problem with these topics above is that PR's are usually ready when the feature/bug is already being worked on and in the last stage of its development process. It's an “already change proposal to be merged into the current system”, don't forget that.
+The main problem with these topics above is that PR's are usually ready when the feature/bug is already being worked on and in the last stage of its development process. It's an "already change proposal to be merged into the current system", don't forget that.
 
-The concept of “Draft PR” exists to make explicit that a PR is not ready to be merged, so it's still a “work in progress thing”, but that's another topic.
+The concept of "Draft PR" exists to make explicit that a PR is not ready to be merged, so it's still a "work in progress thing", but that's another topic.
 
 Pull Requests are, indeed, one of the best tools that we have in our industry to share knowledge about the changes that we are doing in the system, but sometimes they might be misused, as for example:
 
 1. **Discussions about code style**. Code style shouldn't be discussed in a PR. There should be already a CI running a code style checker, that's all. If you want to talk about code style, request a change in your code style checker, but not in a random PR.
 2. **Spot bugs**. Bugs and desired behavior should be covered by automated tests. The developer is the first responsible person for this topic.
-3. **Architectural or design discussions**. Once a particular solution is developed and ready for review, it is usually really hard to “rollback” that idea and rewrite it again. Because “why would you do that? For some subjective opinion? It's done already. And it seems to work just fine.”
+3. **Architectural or design discussions**. Once a particular solution is developed and ready for review, it is usually really hard to "rollback" that idea and rewrite it again. Because "why would you do that? For some subjective opinion? It's done already. And it seems to work just fine."
 
-Having an extra person looking at the changes that we have done for “designing decisions” might be beneficial, but we could have addressed “potential disagreements” in a sooner stage.
+Having an extra person looking at the changes that we have done for "designing decisions" might be beneficial, but we could have addressed "potential disagreements" in a sooner stage.
 
 ## What should the purpose of a Pull Request be?
 
@@ -42,7 +42,7 @@ Having an extra person looking at the changes that we have done for “designing
 
 # Pair Programming
 
-The concept of “Pair Programming” can be understood from different points of view. Pair thinking and pair programming, driver-navigator roles concepts, or pure live coding from one side. Actually, this is way easier than it looks like at first instance:
+The concept of "Pair Programming" can be understood from different points of view. Pair thinking and pair programming, driver-navigator roles concepts, or pure live coding from one side. Actually, this is way easier than it looks like at first instance:
 - Either you watch and help the other person to write code,
 - Or you type while getting another pair of eyes watching and helping you.
 
@@ -68,9 +68,9 @@ The most common fear that I saw while encouraging to do Pair Programming is that
 
 ## After several years of experience on this topic
 
-The pattern which rejects Pair Programing is basically “fear”, and being out of your comfort zone. And this is due to the misunderstanding of the roots of the actual Pair Programming concept.
+The pattern which rejects Pair Programing is basically "fear", and being out of your comfort zone. And this is due to the misunderstanding of the roots of the actual Pair Programming concept.
 
-Pair Programming is not “to show off in front of your colleagues” or “to be screwed by your peers”, but to be transparent (showing your skills as they really are) and improve as a team lifting up each other.
+Pair Programming is not "to show off in front of your colleagues" or "to be screwed by your peers", but to be transparent (showing your skills as they really are) and improve as a team lifting up each other.
 
 Programming is an iterative process that needs a continuous refactoring of our way of thinking in order to achieve better solutions, day by day. Therefore, programming with another person next to you (with a different way of thinking) will help the team to get the best from each other while discarding the waste or bad habits if necessary.
 

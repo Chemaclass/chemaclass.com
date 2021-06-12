@@ -12,7 +12,7 @@ subtitle = "Another way of sharing quick suggestions with your team"
 
 You are reviewing a Pull Request (PR), and you see some minor improvements or suggestions that you would like to share with the author. You might write some comments, and usually, that would be sufficient.
 
-But imagine that in order to transmit your “whole idea” you would need to change some files because just communicating the full picture will end up in a huge comment which might be not as clear as it could be.
+But imagine that in order to transmit your "whole idea" you would need to change some files because just communicating the full picture will end up in a huge comment which might be not as clear as it could be.
 
 ## What possibilities are there apart from just comments in a PR?
 
@@ -25,7 +25,7 @@ Well, there are multiple options. The key is to be aware of them and use them wi
 
 What if you (as a reviewer) could share your idea without any single commit or comment in the PR, but sharing your changes directly with the author?
 
-Well, that’s actually possible and really easy. As you already know, the git diff command gives you the differences between any two branches.
+Well, that's actually possible and really easy. As you already know, the git diff command gives you the differences between any two branches.
 
 > git diff origin develop > ../my-origin-develop.patch
 
@@ -33,15 +33,15 @@ What we are doing here is redirecting the output of the diff command into a file
 
 ## What now?
 
-Well, having that patch file, it’s pretty easy to apply those changes in your local machine without doing any commit:
+Well, having that patch file, it's pretty easy to apply those changes in your local machine without doing any commit:
 
 > git apply ../my-origin-develop.patch
 
 Applying this patch will simply change your local system in the same way the patch was created.
 
-## “How to” by steps
+## "How to" by steps
 
-Let’s divide the responsibilities into two: the creator of the patch and its user:
+Let's divide the responsibilities into two: the creator of the patch and its user:
 
 ### The patch creator: the person who will create the patch
 

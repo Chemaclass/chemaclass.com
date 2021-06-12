@@ -6,7 +6,7 @@ tags = [ "presentation", "soft-skills", "communication"]
 subtitle = "Some tips to improve your communication skills"
 +++
 
-We cannot negate that we’ve found ourselves attending one meeting that felt like we were wasting our time with a “monologue” that is either hard to follow or doesn’t seem so interesting as it could.
+We cannot negate that we've found ourselves attending one meeting that felt like we were wasting our time with a "monologue" that is either hard to follow or doesn't seem so interesting as it could.
 
 <!-- more -->
 
@@ -76,7 +76,7 @@ If you have some code to present, consider:
 ### Responsibilities of the attendee
 
 * No unnecessary phone usage, like Twitter, Instagram, Facebook, WhatsApp, Telegram, etc.
-* Keep your questions for the questions time, unless the presenter mentions at the very beginning that you can ask at any moment. Usually, it’s better not to interrupt the topic, so we can ask the questions at the end.
+* Keep your questions for the questions time, unless the presenter mentions at the very beginning that you can ask at any moment. Usually, it's better not to interrupt the topic, so we can ask the questions at the end.
 * Show interest in the topic. The presenter should have spent some time preparing the slides for you.
 * Pair with the presenter the interest of the topic. This is also the responsibility of the presenter. You both should be eager to learn more about the topic.
 

@@ -14,11 +14,11 @@ subtitle = "When, how, and why"
 
 Refactoring means improving your code. It can go from making a variable name more readable, extract some lines of code into a private method, or separate the responsibilities of a class into subclasses, for example.
 
-Refactoring is the action of showing that you care about what you do as a professional. It can be a controversial topic; it is indeed one of the major controversial topics since a long time ago. But we shouldn’t stop trying our best in order to improve the quality of the system just because of that controversiality.
+Refactoring is the action of showing that you care about what you do as a professional. It can be a controversial topic; it is indeed one of the major controversial topics since a long time ago. But we shouldn't stop trying our best in order to improve the quality of the system just because of that controversiality.
 
 ## When and how should we refactor?
 
-Always in the scope of your current task unless it is an already planned task, something like “architecture refactoring” or similar, where the scope of the task is actually to do refactoring.
+Always in the scope of your current task unless it is an already planned task, something like "architecture refactoring" or similar, where the scope of the task is actually to do refactoring.
 
 > Refactoring should be part of our daily job, not a separate task by default.
 
@@ -26,14 +26,14 @@ We do not need to ask permission to refactor. Or do we ask our managers for perm
 
 In order to do proper refactoring, the intention of such refactoring needs to be clear. What is intended to achieve and how? Pair programming (or even pair thinking!) certainly helps in this topic because it syncs two brains on the same topic and that encourages team building and a better understanding of them.
 
-Applying refactoring in a collaborative way, in a “bidirectional channel”, is fundamental when working within a team. Refactoring shouldn’t be a tabu topic, on the contrary: it will be helpful in order to unify the goals and the direction of the team code quality.
+Applying refactoring in a collaborative way, in a "bidirectional channel", is fundamental when working within a team. Refactoring shouldn't be a tabu topic, on the contrary: it will be helpful in order to unify the goals and the direction of the team code quality.
 
-### Some personal advice about the “how”
+### Some personal advice about the "how"
 
-Continuous improvement is what we’re looking for within this topic, but…
+Continuous improvement is what we're looking for within this topic, but…
 * If you realize your changes are generating more noise than help, stop immediately and think again if your changes are worth in the current system status.
 
-Maybe it’s not the right moment for that refactoring.
+Maybe it's not the right moment for that refactoring.
 
 Maybe you are polluting your current diff with out-scoped changes.
 
@@ -51,6 +51,6 @@ You can read more about how testing is related to quality here.
 
 ## Why should we do it?
 
-Wouldn’t you want to have a better system as time goes by?
+Wouldn't you want to have a better system as time goes by?
 
-Software isn’t like wine: it doesn't get better as time passes by. Therefore, if you want to have a better system you must work for it.
+Software isn't like wine: it doesn't get better as time passes by. Therefore, if you want to have a better system you must work for it.

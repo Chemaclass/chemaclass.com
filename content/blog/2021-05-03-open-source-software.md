@@ -15,7 +15,7 @@ Pet projects? Knowledge sharing? Why all of these?
 
 ## What is Open-Source Software (OSS)? 🤔
 
-OSS shares similarities with free software, but it’s not the same. Free software is a form of OSS, but that doesn’t necessarily mean that it has to be free. For example:
+OSS shares similarities with free software, but it's not the same. Free software is a form of OSS, but that doesn't necessarily mean that it has to be free. For example:
 
 - [PHPUnit](https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE) is an example of OSS which is free.
 - [Spryker](https://github.com/spryker/spryker-core/blob/master/LICENSE) is an example of OSS which is not free.
@@ -27,7 +27,7 @@ OSS shares similarities with free software, but it’s not the same. Free softwa
 - Adoption: the easier the access, the easier the adoption.
 - Training and tutorials help the system to grow.
 - Tech: often on the cutting edge of technology.
-  Tech moves fast. They will get obsolete if they don’t.
+  Tech moves fast. They will get obsolete if they don't.
 - Community: the people around want to improve as it grows.
   Public channels enable easy access and community building.
 - Trust: the software is public and accessible.
@@ -44,25 +44,25 @@ OSS shares similarities with free software, but it’s not the same. Free softwa
   Good communication in the project is important.
   Especially when you face disagreements.
 
-> TL;DR: It can be a “constant kata” if you want to.
+> TL;DR: It can be a "constant kata" if you want to.
 
 ## Github to the rescue 😃
 
-Nowadays, it’s really trivial to start contributing to OSS:
+Nowadays, it's really trivial to start contributing to OSS:
 - You can start your own project. A pet project fits here perfectly!
 - You can contribute to an existing OSS project.
 
 ## Pet projects 🐘
 
-A pet project is a playground to create software and train your professional skills. Creating pet projects in your public Github profile has all the benefits of contributing to OSS, plus you’re your own boss:
+A pet project is a playground to create software and train your professional skills. Creating pet projects in your public Github profile has all the benefits of contributing to OSS, plus you're your own boss:
 - You dictate the roadmap.
 - You decide what to do and how.
-- You’re your own boss.
+- You're your own boss.
 
 > The project is there for you. <br>
 > You are responsible to play, explore and pass your limits.
 
-## Some Chema’s Pet Projects 🦣
+## Some Chema's Pet Projects 🦣
 
 #### Active
 - [php-best-practices](https://github.com/Chemaclass/php-best-practices): what I consider best practices for web-dev.
@@ -72,14 +72,14 @@ A pet project is a playground to create software and train your professional ski
 #### Inactive
 
 - stock-ticker: get a notification with the news from your favorites Tickers.
-- jira-status-notifier: Notify when the JIRA tickets don’t move along.
+- jira-status-notifier: Notify when the JIRA tickets don't move along.
 - edifact-parser: a parser for a UN/EDIFACT file format in PHP.
 
 #### Abandoned
 
 - knob-mvc: a framework to create WordPress templates (2015/2017).
 
-## Some of Chema’s OSS org contributions 🌚
+## Some of Chema's OSS org contributions 🌚
 
 #### Active
 

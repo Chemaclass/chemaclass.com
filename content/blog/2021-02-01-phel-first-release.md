@@ -12,7 +12,7 @@ Phel is a Functional Programming ([FP](https://en.wikipedia.org/wiki/Functional_
 
 ## Features
 
-- Built on PHP’s ecosystem
+- Built on PHP's ecosystem
 - Good error reporting
 - Different Datastructures (Arrays, Tables, and Tuples)
 - Macros
@@ -22,16 +22,16 @@ Phel is a Functional Programming ([FP](https://en.wikipedia.org/wiki/Functional_
 
 ## Why Phel?
 
-Phel is a creation of Jens Haase, and as he mentions on the website, “it is the result of many [failed attempts to do functional programming in PHP](https://phel-lang.org/blog/functional-programming-in-php)”. He was looking for something with these characteristics:
+Phel is a creation of Jens Haase, and as he mentions on the website, "it is the result of many [failed attempts to do functional programming in PHP](https://phel-lang.org/blog/functional-programming-in-php)". He was looking for something with these characteristics:
 
 - A LISP-inspired
 - Functional Programming language
 - That runs on cheap hosting providers
 - And is easy to write and debug
 
-From my point, it was ending May 2020 when I finished the book “[Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages](https://www.amazon.de/-/en/Bruce-Tate/dp/193435659X/)”, in which I learned a bit of Prolog, Erlang, Clojure, Haskell… I even created a [repository in Github](https://github.com/Chemaclass/7LangIn7Weeks) to store my progress over the weeks with these learnings.
+From my point, it was ending May 2020 when I finished the book "[Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages](https://www.amazon.de/-/en/Bruce-Tate/dp/193435659X/)", in which I learned a bit of Prolog, Erlang, Clojure, Haskell… I even created a [repository in Github](https://github.com/Chemaclass/7LangIn7Weeks) to store my progress over the weeks with these learnings.
 
-Suddenly, one day beginning of June 2020, I saw a post in Reddit's PHP official channel, with a message of someone mentioning this “**Phel**” project, claiming to be a “**functional programming language written in PHP**”! (or something like that).
+Suddenly, one day beginning of June 2020, I saw a post in Reddit's PHP official channel, with a message of someone mentioning this "**Phel**" project, claiming to be a "**functional programming language written in PHP**"! (or something like that).
 
 I work with PHP for around 8 years so far, and I always try to combine OOP with FP as much as possible (because I believe both paradigms are better combined; they are not necessarily exclusive), and a new dialect of Lisp fully written in native **PHP 7.4** sounded really exciting. I decided to take a look at it. I wanted to see the code.
 
