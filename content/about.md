@@ -8,16 +8,18 @@ I consider myself a competitive, sociable, and reliable person.
 I just love what I do: Software Development.
 I especially enjoy algorithm designing, software engineering, and resolution of logic problems.
 
-In love with SOLID code and Agile Methodologies.
+In love with SOLID code and Agile methodologies.
 I believe that clean code, testing, and refactoring are the best tools for every developer to achieve quality.
 
 > My motto: A piece of code should transmit what's going on without its language "syntax knowledge".
+
+Never stop learning!
 
 ---
 
 ## Why "Chema"?
 
-In Spain (where I come from) is pretty common this rule: 
+In Spain (where I come from) this is pretty common: 
 - Jose Maria === Chema
 - Jose Manuel === Chema
 - Jose Miguel === Chemi

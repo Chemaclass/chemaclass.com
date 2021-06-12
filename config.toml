@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://chemaclass.es"
 name = "Chemaclass | Jose Maria Valera Reales"
-description = "Chema's blog."
+description = "Chema's website."
 
 generate_feed = true
 theme = "simple-dev-blog"
@@ -13,8 +13,8 @@ nav = [
   { name = "About", path = "/about/" },
   { name = "Blog", path = "/blog/" },
   { name = "Book", path = "/book/" },
+  { name = "Music", path = "/music/" },
   { name = "Readings", path = "/readings/" },
-  { name = "Music", path = "/music/" }
 ]
 
 blog_path = "blog"
@@ -30,7 +30,7 @@ repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/cont
 
 footer_about = """
 Have you find this post useful? Do you want more?
-Follow me on [Twitter](https://twitter.com/Chemaclass) or say "Hi!" :)
+Follow me on [Twitter](https://twitter.com/Chemaclass) or just say "Hi!" :)
 """
 
 not_found_message = """
