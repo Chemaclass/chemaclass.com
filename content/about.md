@@ -11,7 +11,7 @@ I especially enjoy algorithm designing, software engineering, and resolution of 
 In love with SOLID code and Agile methodologies.
 I believe that clean code, testing, and refactoring are the best tools for every developer to achieve quality.
 
-> My motto: A piece of code should transmit what's going on without its language "syntax knowledge".
+> My motto: A piece of code should transmit what's going on without its language (syntax knowledge).
 
 Never stop learning!
 
@@ -27,7 +27,7 @@ In Spain (where I come from) this is pretty common:
 
 ## Why "class"?
 
-In 2011, I needed a nickname, at the same time I started learning with Java. It was 2011. 
-I wanted something unique, and I really liked Java, so I decided to have a nickname 
-as "Chema.class" (a "compiled" `.java` file into bytecode ends up into a `.class` file).
+In 2011, I needed a nickname at the same time I started learning with Java. 
+I wanted something unique, and I really liked Java, so I decided to have as nickname
+"Chema.class" (a "compiled" `.java` file into bytecode ends up into a `.class` file).
 In the end I remove the dot separation for simplicity.  
