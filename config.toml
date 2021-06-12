@@ -23,8 +23,11 @@ profile_large = "profile.jpg"
 accent = "#05a081"
 accent_light = "#82d0c0"
 
+repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/content/"
+
 footer_about = """
-Found a typo? [Edit-me](https://github.com/Chemaclass/website/)
+Have you find this post useful? Do you want more?
+Follow me on [Twitter](https://twitter.com/Chemaclass) or say "Hi!" :)
 """
 
 not_found_message = """

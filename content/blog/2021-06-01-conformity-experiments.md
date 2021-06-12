@@ -70,6 +70,6 @@ Asch went on to conduct further experiments in order to determine which factors 
 
 ### Resources
 
-- https://en.wikipedia.org/wiki/Solomon_Asch
-- https://www.verywellmind.com/solomon-asch-biography
-- https://www.verywellmind.com/the-asch-conformity-experiments
+- [Solomon Asch | Wikipedia](https://en.wikipedia.org/wiki/Solomon_Asch)
+- [Solomon Asch - Biography | VeryWellMind](https://www.verywellmind.com/solomon-asch-biography)
+- [The Asch conformity experiments | VeryWellMind](https://www.verywellmind.com/the-asch-conformity-experiments)

@@ -53,4 +53,4 @@ You can read more about how testing is related to quality here.
 
 Wouldn’t you want to have a better system as time goes by?
 
-#### Software isn’t like wine: it doesn’t get better as time passes by. Therefore, if you want to have a better system you must work for it.
+Software isn’t like wine: it doesn't get better as time passes by. Therefore, if you want to have a better system you must work for it.

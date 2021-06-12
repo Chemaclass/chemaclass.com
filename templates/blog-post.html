@@ -22,6 +22,9 @@
           {% endfor %}
         </span>
       {% endif %}
+
+      {% set url = config.extra.repo_content_url ~ page.relative_path %}
+      Found a typo? <a href="{{url}}">Edit me</a>
     </small>
   </div>
 
