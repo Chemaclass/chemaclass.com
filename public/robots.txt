@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://chemaclass.es/sitemap.xml
