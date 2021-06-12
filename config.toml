@@ -13,7 +13,8 @@ nav = [
   { name = "About", path = "/about/" },
   { name = "Blog", path = "/blog/" },
   { name = "Book", path = "/book/" },
-  { name = "Readings", path = "/readings/" }
+  { name = "Readings", path = "/readings/" },
+  { name = "Music", path = "/music/" }
 ]
 
 blog_path = "blog"

@@ -6,8 +6,8 @@ tags = [ "software", "php", "array", "performance" ]
 subtitle = "The spread operator to the rescue"
 +++
 
-> Using array_merge inside a loop is a performance killer.
-> The spread operator will help you to improve this by flatting the array.
+Using array_merge inside a loop is a performance killer.
+The spread operator will help you to improve this by flatting the array.
 
 <!-- more -->
 

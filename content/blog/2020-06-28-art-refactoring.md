@@ -6,7 +6,7 @@ tags = [ "software", "refactoring", "testing" ]
 subtitle = "When, how, and why"
 +++
 
-> If you see something, in the scope of your current task, that can be easily improved, improve it. And if you have any questions about it, ask.
+If you see something, in the scope of your current task, that can be easily improved, improve it. And if you have any questions about it, ask.
 
 <!-- more -->
 

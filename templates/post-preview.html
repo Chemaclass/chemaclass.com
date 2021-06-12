@@ -17,12 +17,12 @@
     </small>
     <div class="summary">
       {% if post.summary -%}
-        {{ post.summary | striptags }}
+        {{ post.summary | safe  }}
       {% else %}
-        {{ post.content | safe | striptags | truncate(length=200) }}
+        {{ post.content | safe | striptags | truncate(length=300) }}
       {%- endif %}
 
-      {% if post.content | length > 0 -%}
+      {% if post.content | length > 300 -%}
         <a href="{{ post.permalink }}">read more</a>
       {%- endif %}
     </div>
