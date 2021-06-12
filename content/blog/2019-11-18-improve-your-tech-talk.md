@@ -2,9 +2,13 @@
 title = "How to improve your tech-talk (or any other presentation)"
 [taxonomies]
 tags = [ "presentation", "soft-skills", "communication"]
+[extra]
+subtitle = "Some tips to improve your communication skills"
 +++
 
 We cannot negate that we’ve found ourselves attending one meeting that felt like we were wasting our time with a “monologue” that is either hard to follow or doesn’t seem so interesting as it could.
+
+<!-- more -->
 
 Therefore, I was thinking about it, and I tried to get some keys to improving their general quality. It applies to all presentations but also tech-talks and other tech presentations in which engineers are usually involved.
 

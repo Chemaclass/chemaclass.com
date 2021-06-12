@@ -24,8 +24,7 @@ accent = "#05a081"
 accent_light = "#82d0c0"
 
 footer_about = """
-I love writing about stuff that I find interesting and bring some value to my life,<br>
-so I can share them with you.
+Found a typo? [Edit-me](https://github.com/Chemaclass/website/)
 """
 
 not_found_message = """

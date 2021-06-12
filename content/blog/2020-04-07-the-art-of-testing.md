@@ -2,6 +2,8 @@
 title = "The Art of Testing: where design meets quality"
 [taxonomies]
 tags = [ "software", "design", "testing", "quality"]
+[extra]
+subtitle = "From a software developer's point of view"
 +++
 
 The intention of this post is not to explain the different testing techniques out there that we can use. I'm not going to tell you what the differences are between unit, integration, feature, or end-to-end testing.

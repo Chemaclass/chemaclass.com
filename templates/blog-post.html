@@ -1,0 +1,58 @@
+{% extends "simple-dev-blog/templates/blog-post.html" %}
+
+{% block content %}
+  <div class="post-title">
+    <h1>
+      {{ page.title }}
+      {% if page.extra.subtitle %}
+        <br>
+        <small style="margin-top: 0; color: #404040; font-size: 0.6em;">
+          {{ page.extra.subtitle }}
+        </small>
+      {% endif %}
+    </h1>
+
+    <small>
+      {{ page.date | date(format="%B %d, %Y") }}
+      {% if page.taxonomies.tags %}
+        - 
+        <span class="tags">
+          {% for tag in page.taxonomies.tags %}
+            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a>
+          {% endfor %}
+        </span>
+      {% endif %}
+    </small>
+  </div>
+
+  <div>
+    {{ page.content | safe }}
+  </div>
+
+  <hr class="footer-rule" />
+
+  {% if config.extra.footer_about %}
+    <div class="footer-about">
+      {{ config.extra.footer_about | markdown | safe }}
+    </div>
+  {% endif %}
+
+  <div class="related-container">
+
+    {% if page.earlier %}
+      <div class="link">
+        Previous <br />
+        <a href="{{ page.earlier.permalink }}">{{ page.earlier.title }}</a>
+      </div>
+    {% endif %}
+
+    {% if page.later %}
+      <div class="link">
+        Next <br />
+        <a href="{{ page.later.permalink }}">{{ page.later.title }}</a>
+      </div>
+    {% endif %}
+
+  </div>
+
+{% endblock content %}

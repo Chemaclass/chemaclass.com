@@ -2,9 +2,13 @@
 title = "Final classes in PHP|Java|Any"
 [taxonomies]
 tags = [ "final", "classes", "php", "java" ]
+[extra]
+subtitle = "Final, or not final, that’s the question"
 +++
 
-> TL;DR: Benefits of final classes: clear contracts, isolated side effects, testability, low complexity and cognitive load, code fluidity, and confidence in yourself.
+> Benefits of final classes: clear contracts, isolated side effects, testability, low complexity and cognitive load, code fluidity, and confidence in yourself.
+
+<!-- more -->
 
 ## Motivation
 

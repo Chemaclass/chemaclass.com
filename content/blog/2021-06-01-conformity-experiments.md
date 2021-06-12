@@ -1,10 +1,16 @@
 +++
 title = "Conformity experiments"
+slug = "conformity experiments"
 [taxonomies]
 tags = [ "experiment", "psychology", "people", "humanity" ]
+[extra]
+subtitle = "The uncomfortable truth about human nature"
 +++
 
-#### The uncomfortable truth about human nature
+> To what extent do social forces alter people’s opinions? 
+> Which aspect of the group influence is most important — the size of the majority, or the unanimity of opinion?
+
+<!-- more -->
 
 # The psychologist Solomon Asch
 

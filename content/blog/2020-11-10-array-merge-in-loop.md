@@ -2,9 +2,14 @@
 title = "Never use array_merge in a loop"
 [taxonomies]
 tags = [ "software", "php", "array", "performance" ]
+[extra]
+subtitle = "The spread operator to the rescue"
 +++
 
-> The spread operator to the rescue.
+> Using array_merge inside a loop is a performance killer.
+> The spread operator will help you to improve this by flatting the array.
+
+<!-- more -->
 
 # Flattening a one-level array
 

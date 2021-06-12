@@ -2,6 +2,8 @@
 title = "To mock or not to mock"
 [taxonomies]
 tags = [ "software", "mocking", "testing", "design" ]
+[extra]
+subtitle = "How to escape the mocking hell"
 +++
 
 #### How to escape the mocking hell

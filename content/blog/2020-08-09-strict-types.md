@@ -2,6 +2,8 @@
 title = "Strict Types in PHP"
 [taxonomies]
 tags = [ "software", "php", "strict-types" ]
+[extra]
+subtitle = "declare(strict_types=1);"
 +++
 
 In December 2015, PHP 7 introduced scalar type declarations and with it the strict types flag.

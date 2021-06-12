@@ -2,6 +2,8 @@
 title = "Sharing your git patches"
 [taxonomies]
 tags = [ "software", "sharing", "git", "team" ]
+[extra]
+subtitle = "Another way of sharing quick suggestions with your team"
 +++
 
 > Another way of sharing quick suggestions with your team

@@ -1,11 +1,11 @@
 # My personal website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b1b280e0-ac15-4750-9c17-cae54a3add7a/deploy-status)](https://app.netlify.com/sites/chemaclass/deploys)
+
 Something about me and my blog.
 
 ---
 
-This website is build using zola.
-The theme used is `simple-dev-blog`.
+This website is build using Zola. Theme `simple-dev-blog`.
 
-The posts are under content/blog directory.
-You build the public directory with `zola build`.
+You can find the blog posts in `content/blog/`.
