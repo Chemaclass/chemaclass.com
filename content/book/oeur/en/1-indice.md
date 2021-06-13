@@ -1,6 +1,6 @@
 +++
-title = "Index"
-slug = "index"
+title = "Chapters"
+slug = "chapters"
 weight = 1
 date = 2015-01-02
 [taxonomies]
