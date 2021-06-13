@@ -6,4 +6,3 @@ tags = [ "management", "teams", "agile" ]
 pages = "120"
 author = "Roman Pichler"
 +++
-

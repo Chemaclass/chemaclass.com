@@ -1,11 +1,9 @@
-{% extends "simple-dev-blog/templates/blog-post.html" %}
+{% extends "blog-post.html" %}
 
 {% block content %}
 <div class="post-title">
     <h1>{{ page.title }}</h1>
-    <small>
-        {{ page.date | date(format="%B %d, %Y") }}
-    </small>
+    {{ self::page_sub_header(page=page) }}
 </div>
 
 <div>

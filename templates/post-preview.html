@@ -2,31 +2,15 @@
 <div class="post-preview">
   <h3 class="post-title">
     <a href="{{ post.permalink }}">{{ post.title }}</a>
+    {% if post.extra.author %}
+      <small>{{ post.extra.author }}</small>
+    {% endif %}
   </h3>
   <small>
-    {% if post.word_count > 0 -%}
-      {{ post.date| date(format="%B %d, %Y") }} - {{ post.word_count }} words - {{ post.reading_time }} mins
-    {% else %}
-      {{ post.date| date(format="%B %d, %Y") }}
-    {%- endif %}
+    {{ self::date_and_words(post=post) }}
   </small>
   <div class="summary">
-    {{ self::summary_post(post=post, truncate_length=300) }}
-  </div>
-</div>
-{% endmacro %}
-
-{% macro readings_preview(post) %}
-<div class="post-preview">
-  <h3 class="post-title">
-    <a href="{{ post.permalink }}">{{ post.title }}</a>
-    <small>{{ post.extra.author }}</small>
-  </h3>
-  <small>
-    {{ post.date| date(format="%B %d, %Y") }}
-  </small>
-  <div class="summary">
-    {{ self::summary_post(post=post, truncate_length=300) }}
+    {{ self::summary(post=post) }}
   </div>
 </div>
 {% endmacro %}
@@ -37,18 +21,31 @@
     <a href="{{ post.permalink }}">{{ post.title }}</a>
   </h3>
   <small>
-    {{ post.date| date(format="%B %d, %Y") }} - {{ post.word_count }} words - {{ post.reading_time }} mins
+    {{ self::date_and_words(post=post) }}
   </small>
 </div>
 {% endmacro %}
 
-{% macro summary_post(post, truncate_length) %}
+{% macro date_and_words(post) %}
+  {% if post.word_count > 0 -%}
+    {{ post.date| date(format="%B %d, %Y") }} - {{ post.word_count }} words -
+    {% if post.reading_time == 1 %}
+      {{ post.reading_time }} min
+    {% else %}
+      {{ post.reading_time }} mins
+    {% endif %}
+  {% else %}
+    {{ post.date| date(format="%B %d, %Y") }}
+  {%- endif %}
+{% endmacro %}
+
+{% macro summary(post) %}
   {% if post.summary -%}
     {{ post.summary | safe  }}
   {% else %}
-    {{ post.content | safe | striptags | truncate(length=truncate_length) }}
+    {{ post.content | safe | striptags | truncate(length=300) }}
   {%- endif %}
-  {% if post.content | length > truncate_length -%}
+  {% if post.content | length > 300 -%}
     <a href="{{ post.permalink }}">read more</a>
   {%- endif %}
 {% endmacro %}

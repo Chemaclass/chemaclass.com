@@ -6,4 +6,3 @@ tags = [ "managment" ]
 pages = "255"
 author = "Camille Fournier"
 +++
-

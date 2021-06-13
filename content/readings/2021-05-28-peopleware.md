@@ -6,4 +6,3 @@ tags = [ "managment" ]
 pages = "230"
 author = "Tom DeMarco"
 +++
-

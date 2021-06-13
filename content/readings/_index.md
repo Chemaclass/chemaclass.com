@@ -1,5 +1,5 @@
 +++
-template = "readings.html"
+template = "blog.html"
 page_template = "readings-post.html"
 sort_by = "date"
 +++

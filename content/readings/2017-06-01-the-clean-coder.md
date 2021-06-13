@@ -6,4 +6,3 @@ tags = [ "book", "software", "clean-code" ]
 pages = "250"
 author = "Robert C. Martin"
 +++
-

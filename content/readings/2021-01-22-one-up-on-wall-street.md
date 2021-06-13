@@ -6,4 +6,3 @@ tags = [ "financial", "business" ]
 pages = "180"
 author = "Peter Lynch"
 +++
-

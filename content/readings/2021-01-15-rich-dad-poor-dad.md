@@ -7,4 +7,3 @@ pages = "180"
 author = "Robert T. Kiyosaki"
 recommended = "Yes"
 +++
-

@@ -11,21 +11,7 @@
         </small>
       {% endif %}
     </h1>
-
-    <small>
-      {{ page.date | date(format="%B %d, %Y") }}
-      {% if page.taxonomies.tags %}
-        - 
-        <span class="tags">
-          {% for tag in page.taxonomies.tags %}
-            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a>
-          {% endfor %}
-        </span>
-      {% endif %}
-
-      {% set url = config.extra.repo_content_url ~ page.relative_path %}
-      Found a typo? <a href="{{url}}">Edit me</a>
-    </small>
+    {{ self::page_sub_header(page=page) }}
   </div>
 
   <div>
@@ -59,3 +45,23 @@
   </div>
 
 {% endblock content %}
+
+{% macro page_sub_header(page) %}
+  <small>
+    {{ page.date | date(format="%B %d, %Y") }}
+    {% if page.taxonomies.tags %}
+      -
+      <span class="tags">
+        {% for tag in page.taxonomies.tags %}
+          <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a>
+        {% endfor %}
+      </span>
+    {% endif %}
+
+    <span class="found-a-typo" style="float: right">
+      {% set url = config.extra.repo_content_url ~ page.relative_path %}
+      Found a typo? <a href="{{url}}">Edit me</a>
+    </span>
+  </small>
+{% endmacro %}
+

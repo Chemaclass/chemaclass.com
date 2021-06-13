@@ -7,4 +7,3 @@ pages = "460"
 author = "Robert C. Martin"
 recommended = "Yes!"
 +++
-

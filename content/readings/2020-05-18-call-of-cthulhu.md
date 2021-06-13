@@ -6,4 +6,3 @@ tags = [ "fiction", "short-story", "novel" ]
 pages = "37"
 author = "H. P. Lovecraft"
 +++
-

@@ -7,4 +7,3 @@ pages = "230"
 author = "Andrew S. Grove"
 recommended = "Yes"
 +++
-

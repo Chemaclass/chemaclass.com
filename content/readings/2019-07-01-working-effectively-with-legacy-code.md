@@ -7,4 +7,3 @@ pages = "460"
 author = "Michael Feathers"
 recommended = "Yes"
 +++
-
