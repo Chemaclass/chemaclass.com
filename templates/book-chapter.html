@@ -1,0 +1,35 @@
+{% extends "simple-dev-blog/templates/blog-post.html" %}
+
+{% block content %}
+<div class="post-title">
+    <h1>{{ page.title }}</h1>
+    <small>
+        {{ page.date | date(format="%B %d, %Y") }}
+    </small>
+</div>
+
+<div>
+    {{ page.content | safe }}
+</div>
+
+<hr class="footer-rule" />
+
+<div class="related-container">
+
+    {% if page.lighter %}
+    <div class="link">
+        Previous <br />
+        <a href="{{ page.lighter.permalink }}">{{ page.lighter.title }}</a>
+    </div>
+    {% endif %}
+
+    {% if page.heavier %}
+    <div class="link">
+        Next <br />
+        <a href="{{ page.heavier.permalink }}">{{ page.heavier.title }}</a>
+    </div>
+    {% endif %}
+
+</div>
+
+{% endblock content %}

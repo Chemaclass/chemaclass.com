@@ -8,5 +8,5 @@ sort_by = "date"
 
 ### Ojos en un Recuerdo (2015 - 2017)
 
-- [Spanish](oeur/es)
 - [English](oeur/en)
+- [Español](oeur/es)
