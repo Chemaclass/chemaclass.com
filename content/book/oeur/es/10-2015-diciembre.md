@@ -1,5 +1,5 @@
 +++
-title = "2015 - Diciembre"
+title = "Capítulo 10: Diciembre, 2015"
 slug = "2015-diciembre"
 weight = 12
 date = 2015-12-01

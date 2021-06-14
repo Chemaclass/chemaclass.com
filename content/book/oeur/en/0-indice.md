@@ -29,27 +29,27 @@ tags = []
   - At time
   - Of concern
   - Each different path
-  - To death
+  - On the death
 - [Chapter 4: June](@/book/oeur/en/04-2015-junio.md)
-  - Big Brother
-  - Finishing 22
+  - Older brother
+  - The 22's end
   - Solitaire
   - There are
-  - Create
+  - To create
 - Chapter 5: July
-  - Acts and words
-  - Listen unnoticed
+  - Actions and words
+  - To listen unnoticed
   - What is clear
 - Chapter 6: August
-  - It's all stages
+  - Everything is stages
   - Whose world is it?
   - Your sense
-  - When I try I say
+  - To the intention, I say
 - Chapter 7: September
   - God exists: it's me, and you too
   - I needed to dream
-  - The art of thought
-  - Be Right
+  - The art of thinking
+  - Be right
 - Chapter 8: October
   - Above good and evil
   - What are we?
@@ -58,25 +58,25 @@ tags = []
 - Chapter 9: November
   - To the motive
   - My project, our project
-  - To the mediocrity needed
+  - To the needed mediocrity
   - Your last day
-  - Leave a mark
+  - Leaving a mark
 - Chapter 10: December
-  - The Art of Adaptation
+  - The art of adapting
   - We will die
   - Sudden emotions
-  - Not life
-  - The Christmas Problem 
+  - It's not life
+  - The problem with Christmas 
     
 ### 2016
 
 - Chapter 11: January
   - Ambition in a dream
-  - I renounce God
+  - I resign to God
   - My purposes
   - Sometimes
   - Eyes on a memory
-  - Where success begins
+  - Where success starts
   - Fed up
   - Ironies of life
   - What not to die
@@ -84,59 +84,59 @@ tags = []
   - My skin bristles
   - Necessary insecurity
   - Not enough
-  - I'm not
-  - To another level
+  - I am not
+  - On another level
   - Precisely
-  - Says a lot about you
+  - It says a lot about you
   - Whimsical fate
 - Chapter 12: February
-  - Travel to meet us
+  - Travel to our encounter
   - Unforgivable youth
   - Religion
   - Definitely
-  - Round and round
+  - Turns and rounds
   - So easy
 - Chapter 13: March
   - It becomes more noticeable
-  - It's when
+  - It is when
   - On the mountain
-  - Savor
-  - I hate God
+  - To taste
+  - Hatred towards God
   - And it won't be enough
-  - The complexity of the obligation
+  - The complexity of obligation
   - We will miss
 - Chapter 14: April
   - To pretend or to be
   - So many
   - Constants
-  - Let's talk again
-  - It's time for
+  - Let us talk again
+  - It is time to
   - What could it be?
 - Chapter 15: May
   - At the end
   - Having lost
   - Are we really?
-  - The story
+  - History
   - Numbers
-  - Trying to understand us
+  - Trying to understand ourselves
 - Chapter 16: June
-  - What if...?
+  - What if?
   - Who will remember us?
   - A matter of time
   - Starting the 23
 - Chapter 17: July
   - Understanding
   - Eternal return
-  - Provision
-  - As time goes by
+  - Disposition
+  - While time passes by
   - Some
-  - Hardest
+  - The hardest
 - Chapter 18: August
   - Being myself again
   - With different eyes
 - Chapter 19: September
   - You only live once
-  - Young and Innocent
+  - Young and innocent
   - Finishing to start
   - Tomorrow
 - Chapter 20: October
@@ -144,7 +144,7 @@ tags = []
   - The future
 - Chapter 21: November
   - Sweet Memories
-  - Even
+  - Even when
   - Our biggest mistake
 - Chapter 22: December
   - Slave of death
@@ -155,20 +155,20 @@ tags = []
 
 - Chapter 23: January
   - False freedom
-  - Live busy
+  - Living busy
   - The importance
 - Chapter 24: February
   - Our life
   - Habits
 - Chapter 25: March
   - The truth
-  - No end
+  - Endless
 - Chapter 26: April
-  - Value
+  - The value
 - Chapter 27: May
   - Masked mediocrity
   - Trend
 - Chapter 28: June
   - Perceptions
 - Chapter 29: July
-  - I'm not talking about self-help
+  - I am not talking about self-help
