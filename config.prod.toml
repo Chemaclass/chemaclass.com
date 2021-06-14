@@ -29,7 +29,7 @@ accent = "#05a081"
 accent_light = "#82d0c0"
 
 repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/content/"
-gtag = ""
+gtag = "G-7JRM0XS87B"
 
 footer_about = """
 Have you find this post useful? Do you want more?
