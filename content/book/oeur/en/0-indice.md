@@ -7,30 +7,30 @@ date = 2015-01-02
 tags = []
 +++
 
-- [Prologue](@/book/oeur/en/2-prologo.md)
+- [Prologue](@/book/oeur/en/0-prologo.md)
     - From the Author
     - By Jesús Valera Reales
     - By Francisco Javier
 
 ### 2015
 
-- [Chapter 1: March](@/book/oeur/en/3-2015-marzo.md)
+- [Chapter 1: March](@/book/oeur/en/01-2015-marzo.md)
   - In one drink
   - For music
   - The art of learning
   - We are a reflection
-- [Chapter 2: April](@/book/oeur/en/4-2015-abril.md)
+- [Chapter 2: April](@/book/oeur/en/02-2015-abril.md)
   - The art of writing
   - From a dream
   - Doubts
   - At the forefront
   - To the unexpected and necessary
-- [Chapter 3: May](@/book/oeur/en/5-2015-mayo.md)
+- [Chapter 3: May](@/book/oeur/en/03-2015-mayo.md)
   - At time
   - Of concern
   - Each different path
   - To death
-- Chapter 4: June
+- [Chapter 4: June](@/book/oeur/en/04-2015-junio.md)
   - Big Brother
   - Finishing 22
   - Solitaire
