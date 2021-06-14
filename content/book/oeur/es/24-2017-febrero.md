@@ -1,11 +1,13 @@
 +++
 title = "2017 - Febrero"
 slug = "2017-febrero"
-weight = 24
+weight = 26
 date = 2017-02-01
 [taxonomies]
 tags = []
 +++
+
+![book-chapter](/images/book/oeur/24.jpg)
 
 ## Nuestra vida
 
@@ -18,18 +20,19 @@ Considerar no pronunciarnos, no revelarnos ante nosotros, durante un excesivo pe
 No reflexionar sobre nuestras acciones, sobre la estela que estamos dejando —aunque sea de forma involuntaria—, sentenciará nuestro parecer, así como nuestro aprecio, a todo aquello que linde con su entorno. Todo lo que hagamos, por tanto, dejará un rastro: nuestro inmortal pasado, que es de forma inevitable parte de la causa, transformándonos de forma directa en la consecuencia en la que nos estamos convirtiendo.
 
 Pues la estimación de nuestros valores arbitrará la resolución de los mismos. Cercando nuestra cordura y puntualizando aquello que disponga nuestra disposición. Si no nos estimamos, nuestros valores quedarán mermados en la posible timidez de la cobardía. Si no nos estimamos no podremos ser personas cabales ni libres. De lo contrario, al menos tendremos la oportunidad de serlo en la medida de nuestras posibles consideraciones.
-
+```
 Me refiero al olvido de nosotros:
 a nuestro olvido por las mañanas al levantarnos,
 a nuestro olvido en cada momento,
 a nuestro olvido por las noches al acostarnos.
-
+```
 ¿Qué es haberlo perdido todo cuando aún nos queda el desconcierto de la incertidumbre por descubrir? O simplemente disfrutar.
 
 Reflexionar como método, como solución a la disconformidad diaria de la falta de sentimientos y no como hábito arbitrario sin responsabilidades y sin espera de frutos, pues ¿a quién le acabaría importando...?
 
 No dejemos de meditar, de observar, de diagnosticar nuestras impresiones, de disfrutar reflexionando y de resolver nuestras sensaciones para apreciar mejor todo aquello que merece nuestra atención, nuestra comprensión, así como nuestro empeño: nuestra vida.
 
+---
 
 ## Hábitos
 

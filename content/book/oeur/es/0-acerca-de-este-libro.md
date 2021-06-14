@@ -7,6 +7,8 @@ date = 2015-01-01
 tags = []
 +++
 
+![book-cover-index](/images/book/oeur/oeur-cover.jpg)
+
 Un recopilatorio de la evolución de los pensamientos de un joven en un formato parecido al de un diario.
 Un trabajo de más de dos años que ha derivado en una colección de reflexiones cada cual más personal que
 la anterior con el objetivo de entender una realidad que parecía descontrolarse cada día más. Una terapia

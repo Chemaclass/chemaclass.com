@@ -7,6 +7,8 @@ date = 2015-12-01
 tags = []
 +++
 
+![book-chapter](/images/book/oeur/10.jpg)
+
 ## El arte de la adaptación
 
 Tener miedo a la rutina y a la repetición.
@@ -31,9 +33,10 @@ No consiste en encontrar una felicidad intocable e infinita, sino en construirno
 
 No me fue posible sonreír hasta que decidí improvisar conmigo. Y ahora todo es posible.
 
+---
 
 ## Moriremos
-
+```
 Moriré. Todos moriremos.
 Llantos, recuerdos y anhelo,
 como efímeros sentimientos
@@ -68,7 +71,9 @@ La muerte como verdad absoluta.
 El tiempo como igualador divino.
 Nosotros… como simples mortales.
 Y luego yo. Es decir, tú.
+```
 
+---
 
 ## Emociones repentinas
 
@@ -94,6 +99,7 @@ Cada uno de nosotros desprenderá diferentes emociones. Hará vibrar de una u ot
 
 Somos tan únicos y valiosos, especialmente en nuestra diversidad de emociones repentinas.
 
+---
 
 ## No es vida
 
@@ -105,6 +111,7 @@ Y es que está en nuestra mano, en nuestro poder y en nuestra voluntad cambiar p
 
 De nada sirve una vida si en ella no hay pasión por ser vivida.
 
+---
 
 ## El problema de la Navidad
 

@@ -7,8 +7,10 @@ date = 2015-10-01
 tags = []
 +++
 
-## Por encima del bien y del mal
+![book-chapter](/images/book/oeur/08.jpg)
 
+## Por encima del bien y del mal
+```
 Por encima de todo lo posible y lo imposible.
 Por encima de lo real y lo fantástico.
 Por encima de los sueños, de la vida y de la muerte.
@@ -23,14 +25,17 @@ Por encima de la tristeza y de la alegría.
 Por encima del llanto y de la sonrisa.
 Por encima del cansancio y de la euforia.
 Por encima del tiempo, que nos consume a todos por igual.
-Por encima del aprendizaje, que, ligado a la superación, nos impulsa a seguir creciendo.
+Por encima del aprendizaje, que, ligado a la superación, 
+    nos impulsa a seguir creciendo.
 Por encima del bien y del mal.
 
 Por encima de cualquier pronóstico.
 Por encima de cualquier pensamiento, igual o distinto.
 Por encima de cualquier diferencia.
-Por encima de nosotros mismos, del bien y del mal. Allí estaré yo, y tú, si quieres, conmigo.
-
+Por encima de nosotros mismos, del bien y del mal. 
+    Allí estaré yo, y tú, si quieres, conmigo.
+```
+--- 
 
 ## ¿Qué somos?
 
@@ -46,12 +51,15 @@ Somos decisiones, responsabilidades, así como resultados finales. Todo importa 
 
 Somos el resultado final sin final… hasta que lo haya. Y entonces, ¿qué habremos sido?
 
-## Memorias de un recuerdo olvidado
+---
 
+## Memorias de un recuerdo olvidado
+```
 Apenas tengo recuerdos de mi infancia.
 Memorias que desvanecieron con el tiempo.
 Mención a momentos puntuales con nostalgia.
 Deseo de superar aquello llamado ego.
+```
 
 Empecemos por el final: estoy mejor que nunca.
 
@@ -73,6 +81,8 @@ El mundo está lleno de personas de todo tipo. En aquel momento no podía sonre�
 
 Terminemos por el principio: hoy estoy mejor que nunca.
 
+--- 
+
 ## Creo que pienso demasiado
 
 Pienso a cada momento. Creo, incluso, pensar a veces demasiado. Entiendo tantas obviedades como naturales que me extraño cuando percibo que no todos tenemos el mismo entendimiento de lo que es natural.
@@ -88,11 +98,12 @@ Desde temprana edad quise conocer alguna verdad que no se pudiera desmentir ni d
 Pienso disfrutar de esta verdad absoluta: la inexistencia de lo eterno. Así como disfrutar de todo aquello que exista, pues no hay nada más placentero que el aprender a disfrutar con todo, así como con nada.
 
 No creo en nada por encima del hombre, no creo en nada ni nadie por encima de nosotros. Que nadie tenga miedo a su libertad. Somos individuales y, a la vez, colectivos. Podemos ser todo y, con más facilidad incluso, ser nada. Todo queda a nuestra última elección y yo tengo claro cuál es la mía.
-
+```
 Adoro el anochecer temprano
 y su amanecer tardío,
 exaltado en sueño sin memoria
 como un recuerdo vacío.
+```
 
 Me gustaría mucho ser leído, ¿por qué, si no, escribiría? Quizá por el simple disfrute del pensar. Quizá por la dicha propia en uno mismo.
 

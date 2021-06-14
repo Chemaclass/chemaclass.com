@@ -6,7 +6,7 @@ sort_by = "weight"
 
 ## Ojos en un Recuerdo
 
-![book-cover-index](../oeur-cover.jpg)
+![book-cover-index](/images/book/oeur/oeur-cover.jpg)
 
 Solía tener un blog personal de WordPress por allá en 2015. Allí escribía principalmente sobre mis pensamientos y
 sentimientos con la principal motivación de leerlos más tarde y hacer retrospección para ayudarme a comprenderme a mí

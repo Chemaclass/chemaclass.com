@@ -7,6 +7,8 @@ date = 2015-09-01
 tags = []
 +++
 
+![book-chapter](/images/book/oeur/07.jpg)
+
 ## Dios existe: soy yo, y tú también
 
 Yo soy un no muerto. Soy un vivo —y vaya si vivo: ¡más vivo que nunca!—. Soy una persona que le gusta tener las cosas claras. Carácter, justo.
@@ -27,6 +29,8 @@ Dios existe: soy yo, y tú también lo serás si tu actitud así lo predispone. 
 
 Mis ánimos a toda aquella persona que quiera superarse. A toda aquella alma que quiera algún día superarse porque será todo vuestro, seréis Dios y la vida os pertenecerá realmente.
 
+---
+
 ## Necesitaba soñar
 
 Porque nada es para siempre, excepto aquello que nos propongamos que así sea. No será cuestión entonces de tener o no razón, de nada sirve aquí. Se trata de proponernos metas por encima de nuestras posibilidades. Es impresionante la capacidad de superación que podemos llegar a demostrarnos aparentemente de la nada. Así como trabajar otra actitud, cuanto más ejercitemos nuestra voluntad, mayor y más precisa será ésta.
@@ -36,6 +40,8 @@ Porque nada es para siempre, excepto aquello que nos propongamos que así sea. N
 Necesitaba soñar... y soñé, así como sigo soñando cada día, esperando seguir haciéndolo hasta mi último aliento. Tuve un sueño: ser yo.
 
 Haremos un antes y un después. Quién sabe a quién le puede llegar esto. Lo mejor del sentido de la vida es que tendrá el sentido que tú elijas.
+
+---
 
 ## El arte del pensamiento
 
@@ -48,6 +54,8 @@ No existe una verdad absoluta que regule la importancia y el valor de la misma, 
 Me atreveré a decir que, así como otras ramas fueron concebidas con el fin último de ser leídas, escritas y estudiadas, como, por ejemplo, ingenierías, la filosofía no nació para este mismo fin. La filosofía nació sobre todo para aprender y poner en práctica preguntas, para aprender a cuestionarnos si de verdad estamos haciendo las preguntas correctas.
 
 No nació la filosofía para quedar grabada en un papel o ser leída por otro. Nació de las necesidades básicas de nuestro ser más racional, de nuestra necesidad del saber. La filosofía no nació precisamente para ser contada, sino para ser vivida. ¡Sé tú el que la viva para después contarla!
+
+---
 
 ## Tener la razón
 

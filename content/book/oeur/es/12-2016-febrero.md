@@ -7,6 +7,8 @@ date = 2016-02-01
 tags = []
 +++
 
+![book-chapter](/images/book/oeur/12.jpg)
+
 ## Viajar a nuestro encuentro
 
 Un vacío continuo y cambiante. Repleto de todos y de nadas, y de confluencias, así como de carencias y, de vez en cuando, de esencias ordenadas.
@@ -19,6 +21,7 @@ Fronteras que no hacían más que aturdir nuestra visión, impedirnos ver más a
 
 Viajar nos ha abierto la mente más de lo que jamás pudimos pensar. Estudiar nos ha dado la llave para abrir las puertas que soñamos y soñaremos. Ser nosotros mismos nos ha permitido estar con quienes realmente quisimos y querremos. Soñar nos ha concedido vivir y vivir nos está permitiendo soñar.
 
+---
 
 ## Juventud imperdonable
 
@@ -33,6 +36,7 @@ Una juventud que no perdona es aquélla que, cobarde, se esconde delegando sus r
 
 ¿Cuándo nos hicimos mayores? ¿Cuándo dejamos de ser aquello que no recordamos? Deberíamos estar satisfechos con nuestras decisiones, especialmente si no hubieron otras intenciones que las de ser; respirando en consecuencia y, como resultado futuro, indultando nuestro pasado, efecto irreversible de nuestro presente en nuestra realidad consecuente.
 
+---
 
 ## Religión
 
@@ -58,6 +62,7 @@ La religión es la creencia de que nosotros ni fuimos ni somos. ¡Menudo dispara
 
 No existirá, por tanto, Dios ni destino alguno que nos pueda dirigir hacia la correcta conducta o verdad absoluta. Dentro de nuestras lógicas limitaciones somos seres ilimitados. Por encima de cualquier creencia estará siempre nuestra libertad, que dirigirá el rumbo de nuestro camino. Por encima de cualquier fatalidad, donde se hace presente la fugacidad de nuestras metas. Por encima de cualquier divinidad o creencia, estaremos nosotros como lo que realmente fuimos, dejando algún día de ser y descansando de tanto trastorno.
 
+---
 
 ## Definitivamente
 
@@ -75,6 +80,7 @@ No somos superhombres y, definitivamente, creer serlo tampoco nos convertiría e
 
 Es cuestión de un sincero sentimiento hacia lo que realmente decimos o pensamos, es decir, de lo que somos. Pues no decir ni pensar conlleva, inequívocamente, al no ser.
 
+---
 
 ## Vueltas y más vueltas
 
@@ -98,6 +104,7 @@ Todo está en su sitio, cada cual en su medida ordenada. Las preocupaciones apar
 
 Pero bien cierto es que la claridad puede tardar en hacerse presente y que, hasta entonces, es más que comprensible el sentirnos incomprendidos, alterados e incluso asustados. Sintámonos libres de sentirlo, de sentirnos como tales. Pero no olvidemos quiénes somos, por favor; escribamos si es preciso.
 
+---
 
 ## Tan fácil
 

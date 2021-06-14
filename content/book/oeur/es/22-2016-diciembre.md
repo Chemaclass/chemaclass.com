@@ -1,11 +1,13 @@
 +++
 title = "2016 - Diciembre"
 slug = "2016-diciembre"
-weight = 22
+weight = 24
 date = 2016-12-01
 [taxonomies]
 tags = []
 +++
+
+![book-chapter](/images/book/oeur/22.jpg)
 
 ## Esclavo de la muerte
 
@@ -25,6 +27,7 @@ Hambre de razón definida, de sentido lógico racional, de proyección consentid
 
 Miedo por esa esclavitud de aquello inevitable que terminará con toda oportunidad por ocurrir.
 
+---
 
 ## Singularidades
 
@@ -44,6 +47,7 @@ Creencia en la carencia más atrevida. Rezo al insulto mejor interiorizado por l
 
 La muerte como real juez determinante.
 
+---
 
 ## La educación
 

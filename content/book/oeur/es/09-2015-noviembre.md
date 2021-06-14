@@ -7,6 +7,8 @@ date = 2015-11-01
 tags = []
 +++
 
+![book-chapter](/images/book/oeur/09.jpg)
+
 ## Al motivo
 
 Siempre hubo una finalidad. Siempre la habrá. Algo que tener en mente. Causa y motivación para nuestros escritos. Nuestras acciones, así como decisiones, regidas e inspiradas en un motivo.
@@ -19,6 +21,8 @@ Ideas, ilusiones, tristezas, anhelos… Todo ello nacido de nuestra persona más
 
 Para mi motivo, mi motivación.
 
+---
+
 ## Mi proyecto, nuestro proyecto
 
 Nuestro proyecto no tiene por qué ser común ni tan siquiera compartido, pero estoy seguro de que a ambos nos gustaría una misma meta: alcanzarlo. Y es que no hay nada más satisfactorio que lograr nuestros objetivos, desde los que nos propusimos en antaño hasta los que nacieron hace escasos segundos. No importa el tiempo cuando se trata de crearse a uno mismo.
@@ -26,6 +30,8 @@ Nuestro proyecto no tiene por qué ser común ni tan siquiera compartido, pero e
 Cambiemos, respiremos y evolucionemos sin perder nuestra esencia, siendo nosotros los que decidamos. No habrá rezo ni credo alguno que nos dirija. Disfrutemos de nosotros y de nuestras decisiones, así como de nuestras equivocaciones; pero sobre todo aprendamos  de ellas —¡de nuestras decisiones!—. No nos detengamos, sigamos avanzando. Conseguiremos sorprendernos, no quepa la menor duda.
 
 La madurez no se alcanza con los años, sino con la experiencia.
+
+---
 
 ## A la mediocridad necesaria
 
@@ -36,6 +42,8 @@ A la mediocridad necesaria. El antes y un después.
 ¿Cómo podemos no estar tristes ni deprimidos con todo nuestro pasado? Es nuestro foco el único que tendrá la última palabra sobre nuestra actitud y persona. ¿Cómo podríamos sonreír hoy? Pensando en todo lo que aprendimos y estamos llevando a cabo ahora.
 
 El aprendizaje como anticipación. Anticiparse al error, pero sin miedo de que éste último ocurra, y de ocurrir, plantémosle cara sin miedo, pues no será más que una emoción e ilusión; y no habrá ninguna que no podamos controlar.
+
+---
 
 ## Tu último día
 
@@ -55,12 +63,14 @@ Conocer nuestros deberes, realizarlos y entenderlos para sentirnos realizados.
 
 ¡Transcendamos!
 
+---
 
 ## Dejar huella
 
+```
 No bastará con que deseemos
 y dejemos en días pasados.
-Quedará sólo si queremos,
+Quedará solo si queremos,
 así sigamos muy cansados.
 
 Sin fecha póstuma y a la espera,
@@ -70,7 +80,7 @@ Calma, pues nosotros seremos.
 
 Un poco más, no te retires,
 recuerda esos días soleados.
-Basta tan sólo con que mires:
+Basta tan solo con que mires:
 no más recuerdos borrados.
 
 Busca nuevos retos por hacer.
@@ -92,3 +102,4 @@ Concluiré como dijo un maestro:
 «El futuro es algo inevitable.
 Cuanto antes lo hagamos nuestro,
 antes se volverá amable».
+```

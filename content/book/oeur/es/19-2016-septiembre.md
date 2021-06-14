@@ -7,9 +7,11 @@ date = 2016-09-01
 tags = []
 +++
 
-## Sólo se vive una vez
+![book-chapter](/images/book/oeur/19.jpg)
 
-Sólo se vive una vez, o al menos hasta ahí es donde podemos leer. Todos tenemos problemas, en mayor o menor medida, en mayor o menor grado, de importancias tan relativas como los intereses e intenciones que pudieran tras los mismos esconderse.
+## Solo se vive una vez
+
+Solo se vive una vez, o al menos hasta ahí es donde podemos leer. Todos tenemos problemas, en mayor o menor medida, en mayor o menor grado, de importancias tan relativas como los intereses e intenciones que pudieran tras los mismos esconderse.
 
 Mentirnos sobre nuestros pensamientos o, simplemente, sobre aquello que nosotros creemos entender por realidad hará que ésta no sea más que un engaño desde y hacia nosotros.
 
@@ -23,6 +25,7 @@ De dificultades estuvo, está y por supuesto estará llena la vida. Pero, en con
 
 A nuestra aparente realidad no deberíamos rogarle ni tan siquiera confiar más de lo que nuestros ojos pudieran ver; pues en la duda de la misma existencia residirá, para todo aquél que la busque, la respuesta.
 
+---
 
 ## Jóvenes e inocentes
 
@@ -36,8 +39,9 @@ Aprender que entendernos no es algo fácil; no será, tampoco y en absoluto, alg
 
 Hoy nos deberíamos leer con otros ojos. Ojos renovados en el día de hoy, apuntando al triunfo del mañana incierto.
 
-Ha sido éste, verdaderamente, un camino hacia nuestra comprensión donde hemos aprendido muchas cosas juntos, recordado otras tantas y soñadas otras cuantas. Pero, sin duda alguna, una experiencia que merece no ser olvidada, al menos para nuestro recuerdo.
+Ha sido este, verdaderamente, un camino hacia nuestra comprensión donde hemos aprendido muchas cosas juntos, recordado otras tantas y soñadas otras cuantas. Pero, sin duda alguna, una experiencia que merece no ser olvidada, al menos para nuestro recuerdo.
 
+---
 
 ## Terminando para comenzar
 
@@ -55,6 +59,7 @@ Amar nuestra familia. Disfrutar, pero sobre todo aprovechar las oportunidades. L
 
 Como si fuera el último día de nuestras vidas. Seamos realmente nosotros.
 
+---
 
 ## El día de mañana
 

@@ -7,6 +7,8 @@ date = 2016-10-01
 tags = []
 +++
 
+![book-chapter](/images/book/oeur/20.jpg)
+
 ## Entropía
 
 Basta con un simple pensamiento para darnos cuenta de lo frágiles que pueden llegar a ser.
@@ -17,12 +19,13 @@ Todo será, al fin y al cabo, una lucha frente a una entropía que tiende a la c
 
 Todo sea para nuestro futuro, para cuando nos recordemos de nuevo en unos años con cariño y, por qué no, también con algo de anhelo. Desear sentirnos orgullosos de quiénes fuimos en días pasados. Sobre todo, sentirnos orgullosos de la estela que dejaremos frente a toda adversidad que nos provoque nuestra disimulada entropía.
 
+---
 
 ## El futuro
 
 El futuro no será para los que planean continuamente ni para los que no se atreven a dar un paso al frente y encararse contra su misma persona, especialmente cuando ésta esté abrumada y sin razón de buscar esa motivación que parece no haber sido encontrada.
 
-El futuro, por el contrario, será para aquéllos que desarrollan su presente. Porque la motivación va y viene, pero la pasión nace, progresa y crece con nosotros.
+El futuro, por el contrario, será para aquellos que desarrollan su presente. Porque la motivación va y viene, pero la pasión nace, progresa y crece con nosotros.
 
 El futuro no es más que nuestra recompensa por nuestro presente. Por supuesto que en la vida las sorpresas que ésta misma nos guarda dejan a veces mucho que desear, pero no nos estamos refiriendo a éstas en concreto. Es nuestra proyección lo que importa para el desarrollo de nuestro presente. Las influencias y perspectivas que nos hagan progresar como individuos serán las determinantes para nuestro crecimiento.
 

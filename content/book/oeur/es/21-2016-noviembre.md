@@ -1,11 +1,13 @@
 +++
 title = "2016 - Noviembre"
 slug = "2016-noviembre"
-weight = 21
+weight = 23
 date = 2016-11-01
 [taxonomies]
 tags = []
 +++
+
+![book-chapter](/images/book/oeur/21.jpg)
 
 ## Dulces recuerdos
 
@@ -21,6 +23,7 @@ No descuidar nuestras aspiraciones, aquellos deseos que tanto anhelamos, aquella
 
 Memorias aún a la espera de su nacimiento. Sed de reflexión, pero sobre todo deseo de llegar a construir la mejor versión de nosotros mismos. Hasta el fin de nuestros días. Deseando para entonces una amarga despedida, pero inevitables y abundantes dulces recuerdos.
 
+---
 
 ## Incluso
 
@@ -39,6 +42,7 @@ Discrepancia inevitable. Disconformidad frente a aquella situación que nos pare
 Adaptarnos frente a todo aquello que aún esté por llegar.
 «Quien tropieza y no cae, adelanta terreno».
 
+---
 
 ## Nuestro mayor error
 

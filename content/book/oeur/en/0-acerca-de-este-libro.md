@@ -7,6 +7,8 @@ date = 2015-01-01
 tags = []
 +++
 
+![book-cover-index](/images/book/oeur/oeur-cover.jpg)
+
 It's my self-published book written in Spanish. Structured like a diary.
 It's a compilation of all kinds of thoughts, as a result of moving to a new country and looking for new opportunities in life.
 
