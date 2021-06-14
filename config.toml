@@ -6,8 +6,11 @@ description = "Chema's website."
 generate_feed = true
 theme = "simple-dev-blog"
 taxonomies = [ { name = "tags" } ]
+compile_sass = true
 
 [extra]
+
+latest_text = "Check out my latest post:"
 
 nav = [
   { name = "About", path = "/about/" },

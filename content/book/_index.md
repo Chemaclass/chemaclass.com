@@ -6,5 +6,7 @@ sort_by = "date"
 
 ## Ojos en un Recuerdo _(2015 - 2017)_
 
-- [English](oeur/en)
-- [Español](oeur/es)
+![book-cover](/images/book/oeur/oeur-cover.jpg)
+
+### [English](oeur/en)
+### [Español](oeur/es)

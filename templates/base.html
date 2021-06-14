@@ -1,0 +1,6 @@
+{% extends "simple-dev-blog/templates/base.html" %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+{% endblock styles %}
