@@ -7,3 +7,7 @@ pages = "370"
 author = "Matthias Noback"
 recommended = "Yes!"
 +++
+
+[You can find the book in Leanpub](https://leanpub.com/web-application-architecture/)
+
+<!-- more -->

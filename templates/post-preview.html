@@ -14,6 +14,22 @@
 </div>
 {% endmacro %}
 
+{% macro pinned_reading_preview(post) %}
+<div class="reading-preview highlighted">
+  <h3 class="reading-title">
+    <a href="{{ post.permalink }}">{{ post.title }}</a>
+    {{ self::author(post=post) }}
+    {{ self::subtitle(post=post) }}
+  </h3>
+  <small>
+    {{ self::date_and_words(post=post) }}
+  </small>
+  <div class="summary">
+    {{ self::summary(post=post,read_more=false) }}
+  </div>
+</div>
+{% endmacro %}
+
 {% macro post_preview(post) %}
 <div class="post-preview">
   <h3 class="post-title">
@@ -36,10 +52,10 @@
     {{ self::author(post=post) }}
   </h3>
   <small>
-    {{ self::date_and_words(post=post) }}
+    {{ post.date| date(format="%B %d, %Y") }}
   </small>
   <div class="summary">
-    {{ self::summary(post=post) }}
+    {{ self::summary(post=post,read_more=false) }}
   </div>
 </div>
 {% endmacro %}
@@ -68,13 +84,14 @@
   {%- endif %}
 {% endmacro %}
 
-{% macro summary(post) %}
+{% macro summary(post,read_more=true) %}
   {% if post.summary -%}
     {{ post.summary | safe  }}
   {% else %}
     {{ post.content | safe | striptags | truncate(length=300) }}
   {%- endif %}
-  {% if post.content | length > 300 -%}
+
+  {% if read_more and post.content | length > 300 -%}
     <a href="{{ post.permalink }}">read more</a>
   {%- endif %}
 {% endmacro %}
@@ -91,5 +108,13 @@
     <small style="margin-top: 0; color: #404040; font-size: 0.8em;">
       {{ post.extra.subtitle }}
     </small>
+  {% endif %}
+{% endmacro %}
+
+{% macro footer() %}
+  {% if config.extra.footer_about %}
+    <div class="footer-about">
+      {{ config.extra.footer_about | markdown | safe }}
+    </div>
   {% endif %}
 {% endmacro %}

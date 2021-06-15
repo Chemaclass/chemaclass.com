@@ -5,7 +5,21 @@
 {% block content %}
   {{ section.content | safe }}
 
+  {% set pinned = section.pages | filter(attribute="extra.pin", value=true) %}
+
+  {% if pinned %}
+    <h4>Highlighted</h4>
+    {% for post in pinned %}
+      {{ post_macros::pinned_reading_preview(post=post) }}
+    {% endfor %}
+  {% endif %}
+  <hr>
   {% for post in section.pages %}
+    {%if post not in pinned %}
       {{ post_macros::reading_preview(post=post) }}
+      <hr>
+    {% endif %}
   {% endfor %}
+
+  {{ post_macros::footer() }}
 {% endblock %}

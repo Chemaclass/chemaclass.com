@@ -13,6 +13,13 @@
   }
 }
 
+.reading-preview {
+  min-height: 350px;
+  img {
+    float: left;
+  }
+}
+
 .book-preview {
   .book-title {
     margin-bottom: 0;
