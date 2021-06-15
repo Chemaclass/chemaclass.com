@@ -1,5 +1,5 @@
 +++
-title = "Final classes in PHP|Java|Any"
+title = "Final classes in PHP | Java | Any"
 [taxonomies]
 tags = [ "final", "classes", "php", "java" ]
 [extra]

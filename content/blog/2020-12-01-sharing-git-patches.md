@@ -6,7 +6,9 @@ tags = [ "software", "sharing", "git", "team" ]
 subtitle = "Another way of sharing quick suggestions with your team"
 +++
 
-> Another way of sharing quick suggestions with your team
+Discover another way of sharing suggestions with your development team.
+
+<!-- more -->
 
 ### Imagine this situation
 

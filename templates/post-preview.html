@@ -2,9 +2,8 @@
 <div class="post-preview">
   <h3 class="post-title">
     <a href="{{ post.permalink }}">{{ post.title }}</a>
-    {% if post.extra.author %}
-      <small>{{ post.extra.author }}</small>
-    {% endif %}
+    {{ self::author(post=post) }}
+    {{ self::subtitle(post=post) }}
   </h3>
   <small>
     {{ self::date_and_words(post=post) }}
@@ -48,4 +47,19 @@
   {% if post.content | length > 300 -%}
     <a href="{{ post.permalink }}">read more</a>
   {%- endif %}
+{% endmacro %}
+
+{% macro author(post) %}
+  {% if post.extra.author %}
+    <small>{{ post.extra.author }}</small>
+  {% endif %}
+{% endmacro %}
+
+{% macro subtitle(post) %}
+  {% if post.extra.subtitle %}
+    <br>
+    <small style="margin-top: 0; color: #404040; font-size: 0.8em;">
+      {{ post.extra.subtitle }}
+    </small>
+  {% endif %}
 {% endmacro %}

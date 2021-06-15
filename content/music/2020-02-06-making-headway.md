@@ -3,7 +3,7 @@ title = "Making headway"
 [taxonomies]
 tags = [ "music" ]
 [extra]
-subtitle = "Chema & Adri"
+subtitle = ""
 +++
 
 Adrian (guitar, drums) & Chema (bass).

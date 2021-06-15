@@ -3,17 +3,17 @@ title = "The process itself is the goal"
 [taxonomies]
 tags = [ "discipline", "habits", "process", "focus", "self-improvement" ]
 [extra]
-subtitle = ""
+subtitle = "How to focus and have self-discipline"
 +++
-
-## How to focus and have self-discipline
 
 No goal should be an achievement on its own, but the process itself that helps us to go in the direction of these goals.
 Goals, in business and in life in general, should be conceived as directions, where their real intention is to help us accomplish more in the way we planned or want.
 
+<!-- more -->
+
 > If we get rewarded only for results and not for processes, we will become pretty miserable.
 
-Society doesn't reward the journey, but the results. And that's exactly part of the problem when you are too focused on how society acts on you. Of course, it's important to listen to society, but it's more important to listen to ourselves in order to improve constantly. Continuous improvement doesn't apply to software only but to everything in life.
+Society doesn't reward the journey, but the results, and that's exactly part of the problem when you are too focused on how society acts on you. Of course, it's important to listen to society, but it's more important to listen to ourselves in order to improve constantly. Continuous improvement doesn't apply to software only but to everything in life.
 
 ## How do I keep myself focused?
 
@@ -21,7 +21,7 @@ This is a totally subjective topic that might be different from person to person
 
 ### Self-reflection
 
-I used to write my thoughts in a "diary" for some years. Back then, in 2015, when I moved to Germany, I didn't know many people here and the environment was completely new.
+I used to write my thoughts in a "diary" for some years. Back then, in 2015, when I moved to Germany, I didn't know many people here, and the environment was completely new.
 I decided to write my thoughts to myself in order to read them the day after and do some retrospection about it. Finally, after around 3 years, in December 2017, I published a book named "Ojos en un recuerdo". That book is the compilation of those thoughts. No story behind it. They are as they came. You can see the evolution of the topics and about what and how they were written.
 
 The exercise of self-reflection itself was more important than the book! The goal here wasn't writing a book at all. The goal was the self-projection to understand what was going on inside myself. Publishing those thoughts in a book was an accident. A beautiful accident, though.
@@ -48,8 +48,8 @@ I wish I would have read much more. Nowadays, with the number of distractions th
 
 - I keep my personal phone always in silence and vibration mode.
 - I used to spend hours on social media; a lot of time wasted. Not anymore. I reduced the social media noise to the minimum by removing the apps that prevent me from being as productive as I want. Some of them from my phone, others the account itself.
-- I used to play video games. Not anymore. Instead, I go to Github to work on my pet projects, contribute to an open-source project, or simply read a book.
-- When I go for a run, I enjoy it twice by listening to a 45 min podcast that I want to listen to since the very morning. The reward of listening to the podcast is linked with the act of going out and run. I conscientiously created that habit.
+- I used to play video games. Not anymore. Instead, I go to GitHub to work on my pet projects, contribute to an open-source project, or simply read a book.
+- When I go for a run, I enjoy it twice by listening to a 45-min podcast that I want to listen to since the very morning. The reward of listening to the podcast is linked with the act of going out and run. I conscientiously created that habit.
 
 > It's not about removing your old habits but replacing them with new ones.
 

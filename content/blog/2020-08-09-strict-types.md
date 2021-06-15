@@ -8,9 +8,11 @@ subtitle = "declare(strict_types=1);"
 
 In December 2015, PHP 7 introduced scalar type declarations and with it the strict types flag.
 
-> To enable the strict mode, a single declare directive must be placed at the top of the file. This means that the strictness of typing for scalars is configured on a per-file basis. This directive not only affects the type declarations of parameters, but also a function's return type.
-
 The good thing about declaring a PHP file as strict is that it actually applies to **ONLY the current file**. It ensures that this file has strict types, but it doesn't apply to any other file in the whole project. It allows you to do, step by step, this migration from non-strict code to strict code, especially for new files or projects.
+
+<!-- more -->
+
+> To enable the strict mode, a single declare directive must be placed at the top of the file. This means that the strictness of typing for scalars is configured on a per-file basis. This directive not only affects the type declarations of parameters, but also a function's return type.
 
 ## Strict types affect coercion types
 

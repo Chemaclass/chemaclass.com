@@ -3,7 +3,7 @@ title = "Silver lining"
 [taxonomies]
 tags = [ "music" ]
 [extra]
-subtitle = "Chema & Adri"
+subtitle = ""
 +++
 
 Adrian (guitar) & Chema (bass).

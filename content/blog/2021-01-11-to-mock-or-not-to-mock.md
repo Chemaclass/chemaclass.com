@@ -6,6 +6,10 @@ tags = [ "software", "mocking", "testing", "design" ]
 subtitle = "How to escape the mocking hell"
 +++
 
+Mocking is useful, but "what to mock" usually turns out to be a bit more complicated than expected if you don't treat this carefully. 
+
+<!-- more -->
+
 #### How to escape the mocking hell
 
 What is actually happening when we create a mock? Which types of mocks are there? Is mocking good or bad? Well, as always, everything depends on the context. And here we will consider some of the main situations about when to mock and when not to mock, but especially why.

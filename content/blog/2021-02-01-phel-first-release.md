@@ -6,6 +6,10 @@ tags = [ "software", "functional-programming", "lisp", "php" ]
 subtitle = "The new functional language. Fully interoperability with PHP 🚀"
 +++
 
+The new FP language build-in PHP. Check it out!
+
+<!-- more -->
+
 # The Phel Language
 
 Phel is a Functional Programming ([FP](https://en.wikipedia.org/wiki/Functional_programming)) language that compiles to PHP. It is a dialect of [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) inspired by Clojure and Janet.
@@ -27,7 +31,7 @@ Phel is a creation of Jens Haase, and as he mentions on the website, "it is the 
 - A LISP-inspired
 - Functional Programming language
 - That runs on cheap hosting providers
-- And is easy to write and debug
+- It is easy to write and debug
 
 From my point, it was ending May 2020 when I finished the book "[Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages](https://www.amazon.de/-/en/Bruce-Tate/dp/193435659X/)", in which I learned a bit of Prolog, Erlang, Clojure, Haskell… I even created a [repository in Github](https://github.com/Chemaclass/7LangIn7Weeks) to store my progress over the weeks with these learnings.
 

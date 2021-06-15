@@ -6,7 +6,9 @@ tags = [ "software", "php", "array", "generics" ]
 subtitle = "An alternative to the missing feature in PHP: Generics"
 +++
 
-## An alternative to the missing feature in PHP: Generics
+Argument unpacking, function variable argument list, and variadics function.
+
+<!-- more -->
 
 ### The perfect combination
 - Argument unpacking: Instead of passing the argument itself to the function, the elements it contains will be passed (as individual arguments).
