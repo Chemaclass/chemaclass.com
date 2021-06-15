@@ -1,5 +1,6 @@
 +++
 title = "Embrace the change"
+description = "Who moved my cheese?🧀"
 [taxonomies]
 tags = [ "books", "change", "management", "leadership" ]
 [extra]

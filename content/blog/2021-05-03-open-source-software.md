@@ -1,5 +1,6 @@
 +++
 title = "Open-Source Software"
+description = "The power of contributing to OSS 🖥"
 [taxonomies]
 tags = [ "open-source", "software", "git", "github", "knowledge-sharing" ]
 [extra]

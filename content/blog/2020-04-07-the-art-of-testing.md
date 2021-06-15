@@ -1,5 +1,6 @@
 +++
 title = "The Art of Testing: where design meets quality"
+description = "From a software developer's point of view"
 [taxonomies]
 tags = [ "software", "design", "testing", "quality"]
 [extra]

@@ -1,5 +1,6 @@
 +++
 title = "Strict Types in PHP"
+description = "declare(strict_types=1);"
 [taxonomies]
 tags = [ "software", "php", "strict-types" ]
 [extra]

@@ -1,6 +1,6 @@
 +++
 title = "Conformity experiments"
-slug = "conformity experiments"
+description = "The uncomfortable truth about human nature"
 [taxonomies]
 tags = [ "experiment", "psychology", "people", "humanity" ]
 [extra]

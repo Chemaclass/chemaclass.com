@@ -1,5 +1,6 @@
 +++
 title = "Typed arrays in PHP"
+description = "An alternative to the missing feature in PHP: Generics"
 [taxonomies]
 tags = [ "software", "php", "array", "generics" ]
 [extra]

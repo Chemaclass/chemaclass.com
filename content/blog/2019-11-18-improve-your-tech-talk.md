@@ -1,5 +1,6 @@
 +++
 title = "How to improve your tech-talk (or any other presentation)"
+description = "Some tips to improve your communication skills"
 [taxonomies]
 tags = [ "presentation", "soft-skills", "communication"]
 [extra]

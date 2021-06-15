@@ -1,5 +1,6 @@
 +++
 title = "Never use array_merge in a loop"
+description = "The spread operator to the rescue"
 [taxonomies]
 tags = [ "software", "php", "array", "performance" ]
 [extra]

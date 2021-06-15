@@ -1,5 +1,6 @@
 +++
 title = "The art of refactoring"
+description = "When, how, and why"
 [taxonomies]
 tags = [ "software", "refactoring", "testing" ]
 [extra]

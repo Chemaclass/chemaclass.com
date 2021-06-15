@@ -1,5 +1,6 @@
 +++
 title = "Final classes in PHP | Java | Any"
+description = "Final, or not final, that's the question"
 [taxonomies]
 tags = [ "final", "classes", "php", "java" ]
 [extra]

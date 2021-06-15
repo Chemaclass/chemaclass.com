@@ -1,5 +1,6 @@
 +++
 title = "Pull Requests vs Pair Programming"
+description = "Why choosing when you can have both?"
 [taxonomies]
 tags = [ "team-work", "pull-request", "pair-programming" ]
 [extra]

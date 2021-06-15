@@ -1,5 +1,6 @@
 +++
 title = "The process itself is the goal"
+description = "How to focus and have self-discipline"
 [taxonomies]
 tags = [ "discipline", "habits", "process", "focus", "self-improvement" ]
 [extra]
