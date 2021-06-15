@@ -6,6 +6,8 @@ tags = [ "books", "change", "management", "leadership" ]
 subtitle = "Who moved my cheese?🧀"
 +++
 
+![blog-cover](/images/blog/2021-03-01/cover.jpg)
+
 The book *Who moved my cheese?* presents a tale inside the main story that consists of 4 characters: two mice, **Sniff** and **Scurry**, and two little persons, **Hem** and **Haw**.
 
 <!-- more -->

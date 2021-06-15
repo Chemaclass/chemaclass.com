@@ -6,6 +6,8 @@ tags = [ "software", "php", "array", "generics" ]
 subtitle = "An alternative to the missing feature in PHP: Generics"
 +++
 
+![blog-cover](/images/blog/2020-10-13/cover.jpg)
+
 Argument unpacking, function variable argument list, and variadics function.
 
 <!-- more -->
@@ -130,9 +132,11 @@ createInvoiceForCustomers(new AnyOtherType());
 Argument unpacking is a great feature that, in combination with variadic functions, can help us to simulate typed arrays. With great power comes great responsibility, and this is no exception.
 We need to learn about our toolbox in order to use it wisely.
 
+![blog-cover](/images/blog/2020-10-13/footer.jpg)
+
 ---
 
-References
+#### References
 - [Argument unpacking](https://wiki.php.net/rfc/argument_unpacking)
 - [Function variable argument list](https://www.php.net/manual/en/functions.arguments.php#functions.variable-arg-list)
 - [Variadics function](https://wiki.php.net/rfc/variadics)

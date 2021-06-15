@@ -6,6 +6,8 @@ tags = [ "software", "sharing", "git", "team" ]
 subtitle = "Another way of sharing quick suggestions with your team"
 +++
 
+![blog-cover](/images/blog/2020-12-01/cover.jpg)
+
 Discover another way of sharing suggestions with your development team.
 
 <!-- more -->
@@ -14,7 +16,7 @@ Discover another way of sharing suggestions with your development team.
 
 You are reviewing a Pull Request (PR), and you see some minor improvements or suggestions that you would like to share with the author. You might write some comments, and usually, that would be sufficient.
 
-But imagine that in order to transmit your "whole idea" you would need to change some files because just communicating the full picture will end up in a huge comment which might be not as clear as it could be.
+Imagine that in order to transmit your "whole idea" you would need to change some files because just communicating the full picture will end up in a huge comment which might be not as clear as it could be.
 
 ## What possibilities are there apart from just comments in a PR?
 
@@ -65,6 +67,8 @@ $ ~/myProject git:(the-branch) ➜ git pull origin the-branch
 $ ~/myProject git:(the-branch) ➜ git apply ../your-diff.patch
 ```
 
+---
+
 #### References
 
-- https://git-scm.com/docs/git-apply
+- [docs/git-apply](https://git-scm.com/docs/git-apply)

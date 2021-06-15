@@ -6,6 +6,8 @@ tags = [ "software", "functional-programming", "lisp", "php" ]
 subtitle = "The new functional language. Fully interoperability with PHP 🚀"
 +++
 
+![blog-cover](/images/blog/2021-02-01/cover.jpg)
+
 The new FP language build-in PHP. Check it out!
 
 <!-- more -->

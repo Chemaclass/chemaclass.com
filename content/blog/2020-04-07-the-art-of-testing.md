@@ -6,7 +6,9 @@ tags = [ "software", "design", "testing", "quality"]
 subtitle = "From a software developer's point of view"
 +++
 
-I'm going to tell you why you should consider testing as part of your daily development habit and how it's directly linked to the software quality.
+![blog-cover](/images/blog/2020-04-07/cover.jpg)
+
+Why you should consider testing as part of your daily development habit and how it's directly linked to the software quality.
 
 <!-- more -->
 

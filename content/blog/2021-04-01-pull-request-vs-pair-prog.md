@@ -6,6 +6,8 @@ tags = [ "team-work", "pull-request", "pair-programming" ]
 subtitle = "Why choosing when you can have both?"
 +++
 
+![blog-cover](/images/blog/2021-04-01/cover.jpg)
+
 Let's talk about the benefits of Pull Requests and Pair Programming, and my thoughts on these after some years of experience with them. 
 
 <!-- more -->
@@ -96,3 +98,5 @@ If you still feel uncomfortable having another person next to you while you writ
 - Don't be afraid of coding while having eyes around you. Ask questions when something is unclear. Ask for help when you don't know how to solve something.
 
 > It's totally ok not knowing everything. The most important thing is to know how to work together.
+
+![blog-img](/images/blog/2021-04-01/footer.jpg)

@@ -7,6 +7,8 @@ tags = [ "experiment", "psychology", "people", "humanity" ]
 subtitle = "The uncomfortable truth about human nature"
 +++
 
+![blog-cover](/images/blog/2021-06-01/cover.jpg)
+
 To what extent do social forces alter people's opinions? 
 Which aspect of the group influence is most important — the size of the majority, or the unanimity of opinion?
 

@@ -6,12 +6,14 @@ tags = [ "software", "php", "array", "performance" ]
 subtitle = "The spread operator to the rescue"
 +++
 
+![blog-cover](/images/blog/2020-11-10/cover.jpg)
+
 Using array_merge inside a loop is a performance killer.
 The spread operator will help you to improve this by flatting the array.
 
 <!-- more -->
 
-# Flattening a one-level array
+## Flattening a one-level array
 
 I have seen people using the array_merge function in a loop like:
 
@@ -63,7 +65,7 @@ $merged = array_merge(...array_values($lists));
 In Functional Programming, this is known as flatting a list.
 No loops & no more performance problem.
 
-# Flatting a multilevel array
+## Flatting a multilevel array
 
 What if you wanted to flat a multilevel array like this one?
 ```php
@@ -101,7 +103,7 @@ $merged = iterator_to_array(
 // $merged === [1, 2, 3, 4, 5, 6, 7, 8];
 ```
 
-# Conclusion
+## Conclusion
 
 Usually, being aware of how to flat a "2 level" array might be sufficient:
 ```php
@@ -109,3 +111,11 @@ $flattenList = array_merge(...array_values($lists));
 ```
 
 Otherwise, the internal standard library will help you deal with it.
+
+---
+
+### References
+
+- [Spread_operator_for_array - Wikipedia](https://wiki.php.net/rfc/spread_operator_for_array)
+- [Flatten_a_list - Rosettacode](https://rosettacode.org/wiki/Flatten_a_list)
+- [Slow array function used in loop - Kalessil](https://kalessil.github.io/phpinspectionsea/docs/performance.html#slow-array-function-used-in-loop)

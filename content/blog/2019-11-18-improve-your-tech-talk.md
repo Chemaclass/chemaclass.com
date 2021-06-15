@@ -6,7 +6,10 @@ tags = [ "presentation", "soft-skills", "communication"]
 subtitle = "Some tips to improve your communication skills"
 +++
 
-We cannot negate that we've found ourselves attending one meeting that felt like we were wasting our time with a "monologue" that is either hard to follow or doesn't seem so interesting as it could.
+![blog-cover](/images/blog/2019-11-18/cover.jpg)
+
+We have found ourselves attending a meeting that felt like we were wasting our time with a "monologue" that is either hard to follow or doesn't seem so interesting as it could.
+Let's fix this.
 
 <!-- more -->
 
@@ -19,6 +22,8 @@ To explain how I think a good presentation should look like I will address three
 1. Content of the presentation: what message do you want to convey to whom and how?
 2. Design and Layout: how you can design an easy-to-follow presentation that supports your talk instead of taking away the attention from what you are actually trying to say.
 3. Lastly, I think also the audience is responsible for making a tech talk successful, so I will also add a reminder about the role and responsibilities of the listeners.
+
+![blog-img](/images/blog/2019-11-18/talking.jpg)
 
 ### Consider your audience
 
@@ -55,6 +60,8 @@ Summarize the main conclusion(s) in a concise way:
 * What are the learnings from this meeting?
 * What are the open questions or next steps?
 
+![blog-img](/images/blog/2019-11-18/books.jpg)
+
 ## Design and Layout
 
 ### Write less, talk more
@@ -69,7 +76,7 @@ Summarize the main conclusion(s) in a concise way:
 If you have some code to present, consider:
 
 * If it is a picture: use large fonts inside. I recommend using https://carbon.now.sh/ for simple snippets. Or just screenshots from your favorite IDE.
-* If you will code in live: prepare your editor in advance. Use the Presentation Mode of your IDE.
+* If you code in live: prepare your editor in advance. Use the Presentation Mode of your IDE.
 
 ## Role of the Audience
 
@@ -86,3 +93,5 @@ If you have some code to present, consider:
 * Do we regret the attendance of this meeting?
 
 At the end of the meeting, we should ask these questions in order to improve. Ask other people for their feedback, so we can grow further and together.
+
+![blog-img](/images/blog/2019-11-18/footer.jpg)

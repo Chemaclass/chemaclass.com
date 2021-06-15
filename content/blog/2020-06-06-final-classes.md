@@ -6,7 +6,9 @@ tags = [ "final", "classes", "php", "java" ]
 subtitle = "Final, or not final, that's the question"
 +++
 
-Benefits of final classes: clear contracts, isolated side effects, testability, low complexity and cognitive load, code fluidity, and confidence in yourself.
+![blog-cover](/images/blog/2020-06-06/cover.jpg)
+
+Clear contracts, isolated side effects, testability, low complexity and cognitive load, code fluidity, and confidence in yourself.
 
 <!-- more -->
 
@@ -58,3 +60,4 @@ If you need to represent a hierarchy of classes, where subclasses are proper sub
 
 > Interfaces -> Final classes -> Composition
 
+![blog-cover](/images/blog/2020-06-06/footer.jpg)

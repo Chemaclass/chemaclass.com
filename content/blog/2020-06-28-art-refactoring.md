@@ -6,6 +6,8 @@ tags = [ "software", "refactoring", "testing" ]
 subtitle = "When, how, and why"
 +++
 
+![blog-cover](/images/blog/2020-06-28/cover.jpg)
+
 If you see something, in the scope of your current task, that can be easily improved, improve it. And if you have any questions about it, ask.
 
 <!-- more -->
@@ -18,7 +20,7 @@ Refactoring is the action of showing that you care about what you do as a profes
 
 ## When and how should we refactor?
 
-Always in the scope of your current task unless it is an already planned task, something like "architecture refactoring" or similar, where the scope of the task is actually to do refactoring.
+Always. In the scope of your current task unless it is an already planned task, something like "architecture refactoring" or similar, where the scope of the task is actually to do refactoring.
 
 > Refactoring should be part of our daily job, not a separate task by default.
 
@@ -54,3 +56,5 @@ You can read more about how testing is related to quality here.
 Wouldn't you want to have a better system as time goes by?
 
 Software isn't like wine: it doesn't get better as time passes by. Therefore, if you want to have a better system you must work for it.
+
+![blog-img](/images/blog/2020-06-28/footer.jpg)

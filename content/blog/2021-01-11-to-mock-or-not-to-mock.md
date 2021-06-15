@@ -6,6 +6,8 @@ tags = [ "software", "mocking", "testing", "design" ]
 subtitle = "How to escape the mocking hell"
 +++
 
+![blog-cover](/images/blog/2021-01-11/cover.jpg)
+
 Mocking is useful, but "what to mock" usually turns out to be a bit more complicated than expected if you don't treat this carefully. 
 
 <!-- more -->
@@ -72,3 +74,16 @@ When you are writing a unit test:
 * Favor immutable state over a mutable state.
 * Make dependencies explicit.
 * Program to an interface, not to an implementation.
+
+![blog-img](/images/blog/2021-01-11/footer.jpg)
+
+---
+
+#### References
+
+- [Testing with Test Doubles?](https://jesusvalerareales.medium.com/testing-with-test-doubles-7c3abb9eb3f2) — Jesus Valera
+- [Mocking is a code smell](https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a) — Eric Elliott
+- [When to mock](https://blog.cleancoder.com/uncle-bob/2014/05/10/WhenToMock.html) & [Test Definitions](https://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html) — Uncle Bob 
+- [Final classes by default](https://matthiasnoback.nl/2018/09/final-classes-by-default-why/) — Matthias Noback
+- [The problem with mocks](https://www.seanh.cc/2017/03/17/the-problem-with-mocks/) — Sean Hammond
+- [A Set of Unit Testing Rules](https://www.artima.com/weblogs/viewpost.jsp?thread=126923) — Michael Feathers

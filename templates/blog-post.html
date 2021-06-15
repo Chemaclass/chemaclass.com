@@ -53,7 +53,7 @@
       -
       <span class="tags">
         {% for tag in page.taxonomies.tags %}
-          <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a>
+          <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">{{ tag }}</a>
         {% endfor %}
       </span>
     {% endif %}

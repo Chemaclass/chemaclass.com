@@ -7,10 +7,13 @@ pin = true
 subtitle = "How to focus and have self-discipline"
 +++
 
+![blog-cover](/images/blog/2020-09-08/cover.jpg)
+
 No goal should be an achievement on its own, but the process itself that helps us to go in the direction of these goals.
-Goals, in business and in life in general, should be conceived as directions, where their real intention is to help us accomplish more in the way we planned or want.
 
 <!-- more -->
+
+Goals, in business and in life in general, should be conceived as directions, where their real intention is to help us accomplish more in the way we planned or want.
 
 > If we get rewarded only for results and not for processes, we will become pretty miserable.
 
@@ -25,6 +28,8 @@ This is a totally subjective topic that might be different from person to person
 I used to write my thoughts in a "diary" for some years. Back then, in 2015, when I moved to Germany, I didn't know many people here, and the environment was completely new.
 I decided to write my thoughts to myself in order to read them the day after and do some retrospection about it. Finally, after around 3 years, in December 2017, I published a book named "Ojos en un recuerdo". That book is the compilation of those thoughts. No story behind it. They are as they came. You can see the evolution of the topics and about what and how they were written.
 
+![blog-img](/images/blog/2020-09-08/oeur-books.jpg)
+
 The exercise of self-reflection itself was more important than the book! The goal here wasn't writing a book at all. The goal was the self-projection to understand what was going on inside myself. Publishing those thoughts in a book was an accident. A beautiful accident, though.
 This habit of thinking about my actions and decisions (what do I do and why) helped me to develop who am I nowadays.
 
@@ -34,6 +39,8 @@ Exercise helps my mind to disconnect from the tech area. It keeps my body active
 
 > The specific sport itself is an irrelevant detail as far as you feel comfortable. The act of doing sport is the key here.
 
+![blog-img](/images/blog/2020-09-08/bjj-berlin-2020.jpg)
+
 ### Books
 
 I try to read tech throughout the day and non-tech during the night. For example, some days before going to work or after working time I might read a tech book. And some days before going to sleep I like to read a non-tech one. This way, I feed my brain with knowledge and I also provide it with non-tech space, so it can rest from code and enjoy other "universes" as well.
@@ -42,6 +49,8 @@ Some suggestions that helped me to understand how we behave, why we do what we d
 - The power of Habits, by Charles Duhigg.
 - Atomic Habits, by James Clear.
 - Scrum: Doing Twice the Work in Half the Time, by Jeff Sutherland.
+
+![blog-img](/images/blog/2020-09-08/atomic-habits.jpg)
 
 ## Personal tricks
 
@@ -53,6 +62,8 @@ I wish I would have read much more. Nowadays, with the number of distractions th
 - When I go for a run, I enjoy it twice by listening to a 45-min podcast that I want to listen to since the very morning. The reward of listening to the podcast is linked with the act of going out and run. I conscientiously created that habit.
 
 > It's not about removing your old habits but replacing them with new ones.
+
+![blog-img](/images/blog/2020-09-08/chema-jumping.jpg)
 
 ### How to improve your habits
 
@@ -70,6 +81,8 @@ Habits emerge without our consent. To save energy, the brain creates a habit loo
 - Like in Scrum, removing waste is fundamental to get better.
 
 > Repetition is the key. Make it easier to do what you want to do. Make it harder to do what you want to stop doing. Enjoy the process: that's the goal.
+
+![blog-img](/images/blog/2020-09-08/chema-next-turm.jpg)
 
 ## Interesting links
 
