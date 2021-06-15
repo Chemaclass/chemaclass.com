@@ -4,6 +4,7 @@ title = "Phel: the Lisp that compiles to PHP"
 tags = [ "software", "functional-programming", "lisp", "php" ]
 [extra]
 subtitle = "The new functional language. Fully interoperability with PHP 🚀"
+thumbnail = "/images/blog/2021-02-01/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2021-02-01/cover.jpg)

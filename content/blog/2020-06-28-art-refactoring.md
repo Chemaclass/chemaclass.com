@@ -4,6 +4,7 @@ title = "The art of refactoring"
 tags = [ "software", "refactoring", "testing" ]
 [extra]
 subtitle = "When, how, and why"
+thumbnail = "/images/blog/2020-06-28/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2020-06-28/cover.jpg)

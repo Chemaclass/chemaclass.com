@@ -4,6 +4,7 @@ title = "Typed arrays in PHP"
 tags = [ "software", "php", "array", "generics" ]
 [extra]
 subtitle = "An alternative to the missing feature in PHP: Generics"
+thumbnail = "/images/blog/2020-10-13/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2020-10-13/cover.jpg)

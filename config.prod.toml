@@ -1,6 +1,6 @@
 base_url = "https://chemaclass.es"
 name = "Chemaclass | Jose Maria Valera Reales"
-description = "Chema's website."
+description = "Check out my latest tech blog posts, and follow my journey on what I have being reading the last month."
 
 generate_feed = true
 theme = "simple-dev-blog"
@@ -8,7 +8,6 @@ taxonomies = [{ name = "tags" }]
 compile_sass = true
 
 [extra]
-
 latest_text = "Check out my latest post:"
 
 nav = [
@@ -23,6 +22,7 @@ blog_path = "blog"
 icon = "icon.png"
 profile_small = "icon.png"
 profile_large = "profile.jpg"
+default_og_image = "profile.jpg"
 
 accent = "#05a081"
 accent_light = "#82d0c0"

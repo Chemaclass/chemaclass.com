@@ -4,6 +4,7 @@ title = "The Art of Testing: where design meets quality"
 tags = [ "software", "design", "testing", "quality"]
 [extra]
 subtitle = "From a software developer's point of view"
+thumbnail = "/images/blog/2020-04-07/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2020-04-07/cover.jpg)

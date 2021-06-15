@@ -4,6 +4,7 @@ title = "How to improve your tech-talk (or any other presentation)"
 tags = [ "presentation", "soft-skills", "communication"]
 [extra]
 subtitle = "Some tips to improve your communication skills"
+thumbnail = "/images/blog/2019-11-18/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2019-11-18/cover.jpg)

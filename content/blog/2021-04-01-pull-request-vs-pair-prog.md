@@ -4,6 +4,7 @@ title = "Pull Requests vs Pair Programming"
 tags = [ "team-work", "pull-request", "pair-programming" ]
 [extra]
 subtitle = "Why choosing when you can have both?"
+thumbnail = "/images/blog/2021-04-01/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2021-04-01/cover.jpg)

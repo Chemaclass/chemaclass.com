@@ -5,6 +5,7 @@ slug = "conformity experiments"
 tags = [ "experiment", "psychology", "people", "humanity" ]
 [extra]
 subtitle = "The uncomfortable truth about human nature"
+thumbnail = "/images/blog/2021-06-01/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2021-06-01/cover.jpg)

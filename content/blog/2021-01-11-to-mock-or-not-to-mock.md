@@ -4,6 +4,7 @@ title = "To mock or not to mock"
 tags = [ "software", "mocking", "testing", "design" ]
 [extra]
 subtitle = "How to escape the mocking hell"
+thumbnail = "/images/blog/2021-01-11/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2021-01-11/cover.jpg)

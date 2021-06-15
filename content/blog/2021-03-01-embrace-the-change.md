@@ -4,6 +4,7 @@ title = "Embrace the change"
 tags = [ "books", "change", "management", "leadership" ]
 [extra]
 subtitle = "Who moved my cheese?🧀"
+thumbnail = "/images/blog/2021-03-01/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2021-03-01/cover.jpg)

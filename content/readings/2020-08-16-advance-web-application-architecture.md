@@ -8,6 +8,7 @@ author = "Matthias Noback"
 recommended = "Yes!"
 +++
 
-[You can find the book in Leanpub](https://leanpub.com/web-application-architecture/)
+[![](https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero?1620605116)](https://leanpub.com/web-application-architecture/)
 
 <!-- more -->
+

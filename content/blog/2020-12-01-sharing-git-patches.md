@@ -4,6 +4,7 @@ title = "Sharing your git patches"
 tags = [ "software", "sharing", "git", "team" ]
 [extra]
 subtitle = "Another way of sharing quick suggestions with your team"
+thumbnail = "/images/blog/2020-12-01/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2020-12-01/cover.jpg)

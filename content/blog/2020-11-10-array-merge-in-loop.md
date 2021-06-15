@@ -4,6 +4,7 @@ title = "Never use array_merge in a loop"
 tags = [ "software", "php", "array", "performance" ]
 [extra]
 subtitle = "The spread operator to the rescue"
+thumbnail = "/images/blog/2020-11-10/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2020-11-10/cover.jpg)

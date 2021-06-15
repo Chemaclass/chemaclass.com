@@ -4,6 +4,7 @@ title = "Strict Types in PHP"
 tags = [ "software", "php", "strict-types" ]
 [extra]
 subtitle = "declare(strict_types=1);"
+thumbnail = "/images/blog/2020-08-09/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2020-08-09/cover.jpg)
