@@ -1,0 +1,11 @@
+{% extends "blog.html" %}
+
+{% import "post-preview.html" as post_macros %}
+
+{% block content %}
+  {{ section.content | safe }}
+
+  {% for post in section.pages %}
+      {{ post_macros::reading_preview(post=post) }}
+  {% endfor %}
+{% endblock %}

@@ -18,7 +18,6 @@
 <div class="post-preview">
   <h3 class="post-title">
     <a href="{{ post.permalink }}">{{ post.title }}</a>
-    {{ self::author(post=post) }}
     {{ self::subtitle(post=post) }}
   </h3>
   <small>
@@ -30,9 +29,24 @@
 </div>
 {% endmacro %}
 
+{% macro reading_preview(post) %}
+<div class="reading-preview">
+  <h3 class="reading-title">
+    <a href="{{ post.permalink }}">{{ post.title }}</a>
+    {{ self::author(post=post) }}
+  </h3>
+  <small>
+    {{ self::date_and_words(post=post) }}
+  </small>
+  <div class="summary">
+    {{ self::summary(post=post) }}
+  </div>
+</div>
+{% endmacro %}
+
 {% macro book_preview(post) %}
-<div class="post-preview">
-  <h3 class="post-title">
+<div class="book-preview">
+  <h3 class="book-title">
     <a href="{{ post.permalink }}">{{ post.title }}</a>
   </h3>
   <small>

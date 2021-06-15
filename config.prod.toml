@@ -15,7 +15,6 @@ nav = [
     { name = "About", path = "/about/" },
     { name = "Blog", path = "/blog/" },
     { name = "Book", path = "/book/" },
-    { name = "Music", path = "/music/" },
     { name = "Readings", path = "/readings/" },
 ]
 

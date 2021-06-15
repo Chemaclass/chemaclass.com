@@ -13,6 +13,17 @@
   }
 }
 
+.book-preview {
+  .book-title {
+    margin-bottom: 0;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: 395px;
+}
+
 img[alt=book-cover] {
   max-width: 15%;
   float: left;
