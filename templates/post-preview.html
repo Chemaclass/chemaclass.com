@@ -1,5 +1,5 @@
 {% macro pinned_post_preview(post) %}
-<div class="post-preview highlighted">
+<div class="preview post-preview highlighted">
   <h3 class="post-title">
     <a href="{{ post.permalink }}">{{ post.title }}</a>
     {{ self::author(post=post) }}
@@ -15,14 +15,14 @@
 {% endmacro %}
 
 {% macro pinned_reading_preview(post) %}
-<div class="reading-preview highlighted">
+<div class="preview reading-preview-highlighted">
   <h3 class="reading-title">
     <a href="{{ post.permalink }}">{{ post.title }}</a>
     {{ self::author(post=post) }}
     {{ self::subtitle(post=post) }}
   </h3>
   <small>
-    {{ self::date_and_words(post=post) }}
+    {{ post.date| date(format="%B %d, %Y") }}
   </small>
   <div class="summary">
     {{ self::summary(post=post,read_more=false) }}
@@ -31,7 +31,7 @@
 {% endmacro %}
 
 {% macro post_preview(post) %}
-<div class="post-preview">
+<div class="preview post-preview">
   <h3 class="post-title">
     <a href="{{ post.permalink }}">{{ post.title }}</a>
     {{ self::subtitle(post=post) }}
@@ -47,21 +47,22 @@
 
 {% macro reading_preview(post) %}
 <div class="reading-preview">
-  <h3 class="reading-title">
-    <a href="{{ post.permalink }}">{{ post.title }}</a>
-    {{ self::author(post=post) }}
-  </h3>
-  <small>
+  <h4>
     {{ post.date| date(format="%B %d, %Y") }}
-  </small>
+  </h4>
   <div class="summary">
     {{ self::summary(post=post,read_more=false) }}
   </div>
+  <h3 class="reading-title">
+    <a href="{{ post.permalink }}">{{ post.title }}</a>
+    <br>
+    {{ self::author(post=post) }}
+  </h3>
 </div>
 {% endmacro %}
 
 {% macro book_preview(post) %}
-<div class="book-preview">
+<div class="preview book-preview">
   <h3 class="book-title">
     <a href="{{ post.permalink }}">{{ post.title }}</a>
   </h3>
@@ -98,7 +99,7 @@
 
 {% macro author(post) %}
   {% if post.extra.author %}
-    <small>{{ post.extra.author }}</small>
+    <small class="author">{{ post.extra.author }}</small>
   {% endif %}
 {% endmacro %}
 

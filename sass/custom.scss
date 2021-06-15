@@ -13,11 +13,31 @@
   }
 }
 
-.reading-preview {
-  min-height: 350px;
-  img {
-    float: left;
-  }
+.readings-previews {
+ .reading-preview{
+   text-align: center;
+   padding-bottom: 8px;
+   padding-left: 5px;
+   border-bottom: 1px gray solid;
+
+   overflow: hidden;
+   width: 49%;
+   float: left;
+   height: 470px;
+
+   img {
+     height: 280px;
+     width: auto;
+   }
+
+   &:nth-child(odd){}
+   .reading-title {
+     min-height: 100px;
+     .author{
+       font-size: 0.6em;
+     }
+   }
+ }
 }
 
 .book-preview {
@@ -44,7 +64,6 @@ img[alt=book-cover-index] {
 }
 
 @media (max-width: 700px) {
-
   img[alt=book-cover] {
     max-width: 65%;
     display: block;
@@ -63,4 +82,19 @@ img[alt=book-cover-index] {
     float: none;
   }
 
+  .readings-previews {
+    .reading-preview {
+      text-align: center;
+      width: 100%;
+      height: auto;
+      .reading-title {
+        min-height: auto;
+      }
+    }
+  }
+}
+
+footer {
+  clear: both;
+  padding-top: 12px;
 }
