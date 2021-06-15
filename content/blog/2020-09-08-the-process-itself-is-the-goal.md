@@ -3,6 +3,7 @@ title = "The process itself is the goal"
 [taxonomies]
 tags = [ "discipline", "habits", "process", "focus", "self-improvement" ]
 [extra]
+pin = true
 subtitle = "How to focus and have self-discipline"
 +++
 
