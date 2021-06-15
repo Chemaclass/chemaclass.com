@@ -5,7 +5,7 @@ description = "declare(strict_types=1);"
 tags = [ "software", "php", "strict-types" ]
 [extra]
 subtitle = "declare(strict_types=1);"
-thumbnail = "/images/blog/2020-08-09/cover.jpg"
+static_thumbnail = "/images/blog/2020-08-09/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2020-08-09/cover.jpg)

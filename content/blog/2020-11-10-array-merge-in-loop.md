@@ -5,7 +5,7 @@ description = "The spread operator to the rescue"
 tags = [ "software", "php", "array", "performance" ]
 [extra]
 subtitle = "The spread operator to the rescue"
-thumbnail = "/images/blog/2020-11-10/cover.jpg"
+static_thumbnail = "/images/blog/2020-11-10/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2020-11-10/cover.jpg)

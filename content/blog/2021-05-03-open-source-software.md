@@ -5,7 +5,7 @@ description = "The power of contributing to OSS 🖥"
 tags = [ "open-source", "software", "git", "github", "knowledge-sharing" ]
 [extra]
 subtitle = "The power of contributing to OSS 🖥"
-thumbnail = "/images/blog/2021-05-03/cover.jpg"
+static_thumbnail = "/images/blog/2021-05-03/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2021-05-03/cover.jpg)

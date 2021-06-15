@@ -5,7 +5,7 @@ description = "Who moved my cheese?🧀"
 tags = [ "books", "change", "management", "leadership" ]
 [extra]
 subtitle = "Who moved my cheese?🧀"
-thumbnail = "/images/blog/2021-03-01/cover.jpg"
+static_thumbnail = "/images/blog/2021-03-01/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2021-03-01/cover.jpg)

@@ -5,7 +5,7 @@ description = "How to escape the mocking hell"
 tags = [ "software", "mocking", "testing", "design" ]
 [extra]
 subtitle = "How to escape the mocking hell"
-thumbnail = "/images/blog/2021-01-11/cover.jpg"
+static_thumbnail = "/images/blog/2021-01-11/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2021-01-11/cover.jpg)

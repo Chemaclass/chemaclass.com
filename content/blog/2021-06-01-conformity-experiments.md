@@ -5,7 +5,7 @@ description = "The uncomfortable truth about human nature"
 tags = [ "experiment", "psychology", "people", "humanity" ]
 [extra]
 subtitle = "The uncomfortable truth about human nature"
-thumbnail = "/images/blog/2021-06-01/cover.jpg"
+static_thumbnail = "/images/blog/2021-06-01/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2021-06-01/cover.jpg)

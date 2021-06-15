@@ -5,7 +5,7 @@ description = "Final, or not final, that's the question"
 tags = [ "final", "classes", "php", "java" ]
 [extra]
 subtitle = "Final, or not final, that's the question"
-thumbnail = "/images/blog/2020-06-06/cover.jpg"
+static_thumbnail = "/images/blog/2020-06-06/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2020-06-06/cover.jpg)

@@ -6,7 +6,7 @@ tags = [ "discipline", "habits", "process", "focus", "self-improvement" ]
 [extra]
 pin = true
 subtitle = "How to focus and have self-discipline"
-thumbnail = "/images/blog/2020-09-08/cover.jpg"
+static_thumbnail = "/images/blog/2020-09-08/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2020-09-08/cover.jpg)

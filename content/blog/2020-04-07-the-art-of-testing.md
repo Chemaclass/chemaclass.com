@@ -5,7 +5,7 @@ description = "From a software developer's point of view"
 tags = [ "software", "design", "testing", "quality"]
 [extra]
 subtitle = "From a software developer's point of view"
-thumbnail = "/images/blog/2020-04-07/cover.jpg"
+static_thumbnail = "/images/blog/2020-04-07/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2020-04-07/cover.jpg)
