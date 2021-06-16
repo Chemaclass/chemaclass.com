@@ -1,6 +1,7 @@
 {% extends "blog/blog-post.html" %}
 
 {% block content %}
+<div class="reading-post">
   <div class="post-title">
     <h1>
       {{ page.title }}
@@ -18,19 +19,19 @@
     {{ page.content | safe }}
 
     {% if page.extra.pages %}
-    <div>
+    <div class="book-pages">
       {{ page.extra.pages }} pages
     </div>
-    {% endif %}
-
-    {% if page.extra.recommended %}
-      <div>
-        Recommended: {{ page.extra.recommended }}
-      </div>
     {% endif %}
   </div>
 
   <hr class="footer-rule" />
+
+  {% if config.extra.footer_about %}
+    <div class="footer-about">
+      {{ config.extra.footer_about | markdown | safe }}
+    </div>
+  {% endif %}
 
   <div class="related-container">
 
@@ -49,5 +50,5 @@
     {% endif %}
 
   </div>
-
+</div>
 {% endblock content %}

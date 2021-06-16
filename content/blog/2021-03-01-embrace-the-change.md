@@ -52,6 +52,6 @@ This book is full of lessons that apply to everyone no matter who they are or wh
 
 {{ youtube(id="OvYCLxqkfvY") }}
 
-Find the book in [Amazon.de](https://www.amazon.de/-/en/Dr-Spencer-Johnson/dp/0091816971/).
+Find the book in [Amazon.de](https://www.amazon.de/gp/product/0091816971/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=0091816971&linkCode=as2&tag=chemaclass-21&linkId=d010ee2a7ebb0c4cff714cde996a46eb).
 
 > "Life moves on and so should we" — Spencer Johnson
