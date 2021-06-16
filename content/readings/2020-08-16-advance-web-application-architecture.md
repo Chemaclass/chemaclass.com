@@ -6,6 +6,7 @@ tags = [ "book", "software" ]
 [extra]
 pages = "370"
 author = "Matthias Noback"
+static_thumbnail = "https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero?1620605116"
 +++
 
 [![](https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero?1620605116)](https://leanpub.com/web-application-architecture/)
