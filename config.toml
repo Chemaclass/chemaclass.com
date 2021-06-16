@@ -12,10 +12,10 @@ compile_sass = true
 latest_text = "Check out my latest post:"
 
 nav = [
-    { name = "About", path = "/about/" },
     { name = "Blog", path = "/blog/" },
-    { name = "Book", path = "/book/" },
     { name = "Readings", path = "/readings/" },
+    { name = "Book", path = "/book/" },
+    { name = "About", path = "/about/" },
 ]
 
 blog_path = "blog"
