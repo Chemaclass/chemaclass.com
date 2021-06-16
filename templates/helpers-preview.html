@@ -1,0 +1,38 @@
+{% macro date_and_words(post) %}
+  {% if post.word_count > 0 -%}
+    {{ post.date| date(format="%B %d, %Y") }} - {{ post.word_count }} words -
+    {% if post.reading_time == 1 %}
+      {{ post.reading_time }} min
+    {% else %}
+      {{ post.reading_time }} mins
+    {% endif %}
+  {% else %}
+    {{ post.date| date(format="%B %d, %Y") }}
+  {%- endif %}
+{% endmacro %}
+
+{% macro summary(post,read_more=true) %}
+  {% if post.summary -%}
+    {{ post.summary | safe  }}
+  {% else %}
+    {{ post.content | safe | striptags | truncate(length=300) }}
+  {%- endif %}
+
+  {% if read_more and post.content | length > 300 -%}
+    <a href="{{ post.permalink }}">read more</a>
+  {%- endif %}
+{% endmacro %}
+
+{% macro author(post) %}
+  {% if post.extra.author %}
+    <small class="author">{{ post.extra.author }}</small>
+  {% endif %}
+{% endmacro %}
+
+{% macro footer() %}
+  {% if config.extra.footer_about %}
+    <div class="footer-about">
+      {{ config.extra.footer_about | markdown | safe }}
+    </div>
+  {% endif %}
+{% endmacro %}

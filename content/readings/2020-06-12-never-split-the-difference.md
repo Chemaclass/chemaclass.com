@@ -1,9 +1,9 @@
 +++
 title = "Never split the difference"
+description = "Negotiating as if your life depended on it"
 [taxonomies]
 tags = [ "business", "carrier skills", "negotiation" ]
 [extra]
-subtitle = "Negotiating as if your life depended on it"
 pages = "280"
 author = "Chris Voss"
 recommended = "Yes!"

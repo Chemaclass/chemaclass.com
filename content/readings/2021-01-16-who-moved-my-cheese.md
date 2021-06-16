@@ -5,7 +5,7 @@ tags = [ "management", "financial" ]
 [extra]
 pages = "94"
 author = "Spencer Johnson"
-recommended = "Yes!"
+pin = true
 +++
 
 <a target="_blank"  href="https://www.amazon.de/gp/product/0091816971/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=0091816971&linkCode=as2&tag=chemaclass-21&linkId=d010ee2a7ebb0c4cff714cde996a46eb">
@@ -13,3 +13,5 @@ recommended = "Yes!"
 </a>
 
 <!-- more -->
+
+I wrote a blog post about this book: [Embrace the change](/blog/embrace-the-change/)

@@ -1,0 +1,19 @@
+{% extends "blog/index.html" %}
+
+{% import "helpers-preview.html" as helpers_preview %}
+
+{% block content %}
+  {{ section.content | safe }}
+
+  {% for post in section.pages %}
+    <div class="preview book-preview">
+      <h3 class="book-title">
+        <a href="{{ post.permalink }}">{{ post.title }}</a>
+      </h3>
+      <small>
+        {{ helpers_preview::date_and_words(post=post) }}
+      </small>
+    </div>
+  {% endfor %}
+
+{% endblock %}

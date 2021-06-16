@@ -4,9 +4,9 @@ description = "How to focus and have self-discipline"
 [taxonomies]
 tags = [ "discipline", "habits", "process", "focus", "self-improvement" ]
 [extra]
-pin = true
 subtitle = "How to focus and have self-discipline"
 static_thumbnail = "/images/blog/2020-09-08/cover.jpg"
+pin = true
 +++
 
 ![blog-cover](/images/blog/2020-09-08/cover.jpg)

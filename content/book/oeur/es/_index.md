@@ -1,6 +1,6 @@
 +++
-template = "book.html"
-page_template = "book-chapter.html"
+template = "book/index.html"
+page_template = "book/book-chapter.html"
 sort_by = "weight"
 +++
 
