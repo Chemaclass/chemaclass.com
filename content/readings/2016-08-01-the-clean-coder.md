@@ -13,3 +13,5 @@ author = "Robert C. Martin"
 </a>
 
 <!-- more -->
+
+https://dotnetsharing.wordpress.com/2018/09/26/clean-coder-summary/

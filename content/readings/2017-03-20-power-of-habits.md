@@ -13,3 +13,15 @@ author = "Charles Duhigg"
 </a>
 
 <!-- more -->
+
+## Takeaways
+
+1. All habits operate the same way
+2. Changing a habit means changing one key aspect...
+3. ...and changing one habit can change a lot of things
+4. Willpower is a muscle
+5. Practice, practice, practice
+
+---
+
+{{ youtube(id="Zq2LVa36ukk") }}

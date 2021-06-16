@@ -89,3 +89,4 @@ Habits emerge without our consent. To save energy, the brain creates a habit loo
 
 - [13 key insights from The Power of Habit](https://heleo.com/charles-duhigg-13-key-insights-charles-duhiggs-power-habit/2026/)
 - [The most interesting takeaways from Atomic Habits](https://medium.com/@saurinparikh/the-most-interesting-useful-takeaways-from-atomic-habits-9acc20bdc858)
+- [Atomic Habits in my readings](/readings/atomic-habits/)
