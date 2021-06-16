@@ -4,7 +4,6 @@ description = "Some tips to improve your communication skills"
 [taxonomies]
 tags = [ "presentation", "soft-skills", "communication"]
 [extra]
-subtitle = "Some tips to improve your communication skills"
 static_thumbnail = "/images/blog/2019-11-18/cover.jpg"
 +++
 

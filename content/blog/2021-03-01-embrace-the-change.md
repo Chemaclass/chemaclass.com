@@ -4,7 +4,6 @@ description = "Who moved my cheese?🧀"
 [taxonomies]
 tags = [ "books", "change", "management", "leadership" ]
 [extra]
-subtitle = "Who moved my cheese?🧀"
 static_thumbnail = "/images/blog/2021-03-01/cover.jpg"
 +++
 

@@ -1,6 +1,6 @@
 +++
 title = "Who moved my cheese?"
-redirect_to = "@/blog/embrace-the-change"
+description = "An Amazing Way to Deal With Change In Your Work and In Your Life"
 [taxonomies]
 tags = [ "management", "financial" ]
 [extra]

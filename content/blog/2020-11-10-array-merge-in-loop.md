@@ -4,7 +4,6 @@ description = "The spread operator to the rescue"
 [taxonomies]
 tags = [ "software", "php", "array", "performance" ]
 [extra]
-subtitle = "The spread operator to the rescue"
 static_thumbnail = "/images/blog/2020-11-10/cover.jpg"
 +++
 

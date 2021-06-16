@@ -1,5 +1,6 @@
 +++
 title = "Stock market investing"
+description = "Stock market investing for beginners"
 [taxonomies]
 tags = [ "financial" ]
 [extra]
@@ -13,4 +14,7 @@ author = "Mark Atwood"
 
 <!-- more -->
 
-Stock market investing for beginners
+- Stock Market Basics & Essentials
+- Fundamental, Industry and Company Research
+- Investment Styles Such as Value, Growth and Income Investing
+- Short Selling, Buying on Margin, Day Trading

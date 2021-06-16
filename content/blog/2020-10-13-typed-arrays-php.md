@@ -4,7 +4,6 @@ description = "An alternative to the missing feature in PHP: Generics"
 [taxonomies]
 tags = [ "software", "php", "array", "generics" ]
 [extra]
-subtitle = "An alternative to the missing feature in PHP: Generics"
 static_thumbnail = "/images/blog/2020-10-13/cover.jpg"
 +++
 

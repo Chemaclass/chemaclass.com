@@ -4,7 +4,6 @@ description = "declare(strict_types=1);"
 [taxonomies]
 tags = [ "software", "php", "strict-types" ]
 [extra]
-subtitle = "declare(strict_types=1);"
 static_thumbnail = "/images/blog/2020-08-09/cover.jpg"
 +++
 

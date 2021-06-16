@@ -1,5 +1,6 @@
 +++
 title = "97 Things Every Engineering Manager should know"
+description = "Collective Wisdom from the Experts"
 [taxonomies]
 tags = [ "managment" ]
 [extra]

@@ -4,7 +4,6 @@ description = "Final, or not final, that's the question"
 [taxonomies]
 tags = [ "final", "classes", "php", "java" ]
 [extra]
-subtitle = "Final, or not final, that's the question"
 static_thumbnail = "/images/blog/2020-06-06/cover.jpg"
 +++
 

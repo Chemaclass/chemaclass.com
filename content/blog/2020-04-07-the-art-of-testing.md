@@ -4,7 +4,6 @@ description = "From a software developer's point of view"
 [taxonomies]
 tags = [ "software", "design", "testing", "quality"]
 [extra]
-subtitle = "From a software developer's point of view"
 static_thumbnail = "/images/blog/2020-04-07/cover.jpg"
 +++
 

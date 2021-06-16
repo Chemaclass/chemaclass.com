@@ -1,5 +1,6 @@
 +++
 title = "One up on wall street"
+description = "How To Use What You Already Know To Make Money In The Market"
 [taxonomies]
 tags = [ "financial", "business" ]
 [extra]
@@ -12,3 +13,6 @@ author = "Peter Lynch"
 </a>
 
 <!-- more -->
+
+America’s most successful money manager tells how average investors can beat the pros by using what they know. According
+to Lynch, investment opportunities are everywhere. 

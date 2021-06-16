@@ -1,5 +1,6 @@
 +++
 title = "Clean Code"
+description = "A Handbook of Agile Software Craftsmanship"
 [taxonomies]
 tags = [ "book", "software", "clean-code" ]
 [extra]

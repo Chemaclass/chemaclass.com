@@ -1,5 +1,6 @@
 +++
 title = "The Art of Leadership"
+description = "Small Things, Done Well"
 [taxonomies]
 tags = [ "managment" ]
 [extra]

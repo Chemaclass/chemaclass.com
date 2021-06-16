@@ -4,7 +4,6 @@ description = "The new functional language. Fully interoperability with PHP 🚀
 [taxonomies]
 tags = [ "software", "functional-programming", "lisp", "php" ]
 [extra]
-subtitle = "The new functional language. Fully interoperability with PHP 🚀"
 static_thumbnail = "/images/blog/2021-02-01/cover.jpg"
 +++
 

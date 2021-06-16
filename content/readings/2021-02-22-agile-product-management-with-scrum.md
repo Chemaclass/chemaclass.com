@@ -1,5 +1,6 @@
 +++
 title = "Agile Product Management"
+description = "Creating Products that Customers Love"
 [taxonomies]
 tags = [ "management", "teams", "agile" ]
 [extra]
@@ -13,4 +14,11 @@ author = "Roman Pichler"
 
 <!-- more -->
 
-Agile Product Management with Scrum
+### Coverage includes
+
+- Understanding the product owner’s role
+- Envisioning the product
+- Grooming the product backlog
+- Planning the release
+- Collaborating in sprint meetings
+- Transitioning into product ownership

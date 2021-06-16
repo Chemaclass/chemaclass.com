@@ -1,11 +1,11 @@
 +++
 title = "Clean Agile"
+description = "Back to Basics"
 [taxonomies]
 tags = [ "book", "software", "agile" ]
 [extra]
 pages = "190"
 author = "Robert C. Martin"
-recommended = "Yes"
 +++
 
 <a target="_blank"  href="https://www.amazon.de/gp/product/0135781868/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=0135781868&linkCode=as2&tag=chemaclass-21&linkId=a77e0ed0cf097e62df0e6b3189579602">
@@ -14,4 +14,5 @@ recommended = "Yes"
 
 <!-- more -->
 
-Clean Agile: Back to Basics
+Nearly twenty years after the Agile Manifesto was first presented, the legendary Robert C. Martin (Uncle Bob)
+reintroduces Agile values and principles for a new generation of programmers and non-programmers alike.

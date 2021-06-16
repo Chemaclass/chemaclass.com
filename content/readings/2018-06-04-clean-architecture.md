@@ -1,5 +1,6 @@
 +++
 title = "Clean Architecture"
+description = "A Craftsman's Guide to Software Structure and Design"
 [taxonomies]
 tags = [ "book", "software", "clean-code" ]
 [extra]

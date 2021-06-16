@@ -4,7 +4,6 @@ description = "How to escape the mocking hell"
 [taxonomies]
 tags = [ "software", "mocking", "testing", "design" ]
 [extra]
-subtitle = "How to escape the mocking hell"
 static_thumbnail = "/images/blog/2021-01-11/cover.jpg"
 +++
 

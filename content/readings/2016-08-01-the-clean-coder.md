@@ -1,5 +1,6 @@
 +++
 title = "The Clean Coder"
+description = "A Code of Conduct for Professional Programmers"
 [taxonomies]
 tags = [ "book", "software", "clean-code" ]
 [extra]

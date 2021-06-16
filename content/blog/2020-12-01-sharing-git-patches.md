@@ -4,7 +4,6 @@ description = "Another way of sharing quick suggestions with your team"
 [taxonomies]
 tags = [ "software", "sharing", "git", "team" ]
 [extra]
-subtitle = "Another way of sharing quick suggestions with your team"
 static_thumbnail = "/images/blog/2020-12-01/cover.jpg"
 +++
 

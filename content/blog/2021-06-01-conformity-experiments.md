@@ -4,7 +4,6 @@ description = "The uncomfortable truth about human nature"
 [taxonomies]
 tags = [ "experiment", "psychology", "people", "humanity" ]
 [extra]
-subtitle = "The uncomfortable truth about human nature"
 static_thumbnail = "/images/blog/2021-06-01/cover.jpg"
 +++
 

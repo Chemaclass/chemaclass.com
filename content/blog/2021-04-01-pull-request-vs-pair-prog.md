@@ -4,7 +4,6 @@ description = "Why choosing when you can have both?"
 [taxonomies]
 tags = [ "team-work", "pull-request", "pair-programming" ]
 [extra]
-subtitle = "Why choosing when you can have both?"
 static_thumbnail = "/images/blog/2021-04-01/cover.jpg"
 +++
 

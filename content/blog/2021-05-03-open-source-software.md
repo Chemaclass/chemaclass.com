@@ -4,7 +4,6 @@ description = "The power of contributing to OSS 🖥"
 [taxonomies]
 tags = [ "open-source", "software", "git", "github", "knowledge-sharing" ]
 [extra]
-subtitle = "The power of contributing to OSS 🖥"
 static_thumbnail = "/images/blog/2021-05-03/cover.jpg"
 +++
 
