@@ -14,3 +14,30 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41as+WafrFL
 </a>
 
 <!-- more -->
+
+## Takeaways
+
+1. Don’t Repeat Yourself
+> “Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.”
+
+And
+
+> “DRY is about the duplication of knowledge, of intent. It’s about expressing the same thing in two different places, possibly in two totally different ways.”
+
+2. Mindset Is As Important as Knowledge
+
+Some important aspects of this mindset include:
+- Taking responsibility for your work by not making excuses or passing blame when things go wrong.
+- Writing software that’s “good enough.” This means not wasting time on things that are better than they need to be to make the product successful.
+- Not ignoring technical debt. The authors use the analogy of broken windows for this:
+> “Don’t leave ‘broken windows’’ (bad designs, wrong decisions, or poor code) unrepaired. Fix each one as soon as it is discovered. If there is insufficient time to fix it properly, then board it up. Perhaps you can comment out the offending code, or display a ‘Not Implemented’ message, or substitute dummy data instead.”
+
+3. Good Code Is Easy To Change
+
+> “Good Design Is Easier to Change Than Bad Design.”
+
+4. Choose Great Tools and Become Fluent With Them
+
+> “Tools amplify your talent.”
+
+
