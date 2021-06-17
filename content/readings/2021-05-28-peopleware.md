@@ -20,10 +20,10 @@ or tools. Not about fast computers, networks or internet access (although that s
 important in IT, more than people tend to think. Developing software is about people that communicate with their
 customers and stakeholders, are supported by their managers and collaborate in teams.
 
-### My favourite quotes from this book
+### Some of my favourite quotes from this book
 
 - Staying late or arriving early is a damaging indictment of the office environment.
-- Someone who can help a project to jell is worth two people who just do work.
+- Someone who can help a project to take solid form and progress is worth two people who just do work. 
 - People should be asking and wondering why things are getting done the way they are being done.
 - There must be always a trade between quality and quantity.
 
@@ -42,6 +42,20 @@ customers and stakeholders, are supported by their managers and collaborate in t
 Professionals want to develop themselves, and want to be happy at work. This book provides ideas in what managers and
 developers can do to address these and other similar topics. If you are concerned with people, and looking for ways to
 improve how you collaboratively develop and deliver software, then this book is for you.
+
+---
+
+> 21. The Whole Is Greater Than the Sum of the Parts
+> 
+> We tend to use the word team fairly loosely in the business world, calling any group of people assigned to work 
+> together a “team.” But many of these groups just don’t seem like teams. They don’t have a common definition 
+> of success or any identifiable team spirit. Something is missing. What is missing is a phenomenon we call jell.
+>
+> Concept of the Jelled Team
+>
+> A jelled team is a group of people so strongly knit that the whole is greater than the sum of the parts.
+> The production of such a team is greater than that of the same people working in unjelled form. Just as important, 
+> the enjoyment that people derive from their work is greater than what you’d expect given the nature of the work itself.
 
 ---
 
