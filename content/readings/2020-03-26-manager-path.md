@@ -15,5 +15,12 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51BHEtpF4eL
 
 <!-- more -->
 
-Managing people is difficult wherever you work. But in the tech industry, where management is also a technical discipline, the learning curve can be brutal; especially when there are few tools, texts, and frameworks to help you. 
-In this practical guide, author Camille Fournier (tech lead turned CTO) takes you through each stage in the journey from engineer to technical manager.
+## Key lessons
+
+1. One-on-one meetings with your manager are an essential feature of a good working relationship.
+2. A manager's job involves making it easy for her employees to get things done by creating fertile environments in
+   which work can happen.
+3. Mentoring new hires is critical.
+4. Feedback works best when you, as a manager, pair that feedback with coaching.
+5. It's unrealistic to think you can or should shield your team from everything.
+

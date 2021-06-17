@@ -15,4 +15,19 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41pXzmjz9KL
 
 <!-- more -->
 
-In this legendary business book and Silicon Valley staple, the former chairman and CEO of Intel shares his perspective on how to build and run a company. A practical handbook for navigating real-life business scenarios and a powerful management manifesto with the ability to revolutionize the way we work. 
+In this legendary business book and Silicon Valley staple, the former chairman and CEO of Intel shares his perspective
+on how to build and run a company. A practical handbook for navigating real-life business scenarios and a powerful
+management manifesto with the ability to revolutionize the way we work. 
+
+### Sections
+
+- Managerial Leverage
+- Training
+- Motivation
+- Meetings and Decisions
+- One-on-One Meetings
+- Delegation and Task-Relevant Maturity
+- KPIs
+- Performance Reviews
+- Interviews
+- Promotions and Recycling

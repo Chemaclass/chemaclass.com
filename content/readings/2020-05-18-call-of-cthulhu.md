@@ -14,3 +14,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41xOuZGh2NL
 </a>
 
 <!-- more -->
+
+The Call of Cthulu, the tale of a horrifying underwater monster coming to life and threatening mankind, spawning an
+entire mythology, with the power to strike terror into the hearts of even the Great Old Ones.

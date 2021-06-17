@@ -15,5 +15,5 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41VQ9-JOXLL
 
 <!-- more -->
 
-Nearly twenty years after the Agile Manifesto was first presented, the legendary Robert C. Martin (Uncle Bob)
-reintroduces Agile values and principles for a new generation of programmers and non-programmers alike.
+Clean Agile comes from Uncle Bob, one of the founding fathers of Agile, one of the seventeen people who authored the
+[Agile Manifesto](https://agilemanifesto.org/) back in 2001.
