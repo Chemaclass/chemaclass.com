@@ -1,7 +1,7 @@
 base_url = "https://chemaclass.es"
-name = "Chemaclass | Jose Maria Valera Reales"
-title = "Chemaclass | Jose Maria Valera Reales"
-description = "Check out my latest tech blog posts, and follow my journey on what I have being reading the last month."
+name = "Chema's website | Chemaclass"
+title = "Chema's website | Chemaclass"
+description = "Check out my latest tech blog posts, and follow my journey on what I have been reading the last month."
 
 generate_feed = true
 theme = "simple-dev-blog"
@@ -9,7 +9,7 @@ taxonomies = [{ name = "tags" }]
 compile_sass = true
 
 [extra]
-latest_text = "Check out my latest post:"
+latest_text = 'Check out my latest post:'
 
 nav = [
     { name = "Blog", path = "/blog/" },
@@ -33,9 +33,9 @@ gtag = ""
 
 footer_about = """
 Have you find this post useful? Do you want more?
-Follow me on [Twitter](https://twitter.com/Chemaclass) or just say "Hi!" :)
+Follow me on [<i class="fab fa-twitter"></i>](https://twitter.com/Chemaclass) or just say "Hi!" <i class="fab fa-smile"></i>
 """
 
 not_found_message = """
-This is not the page you're looking for... return back to [safety?](/)
+This is not the page you're looking for... return back to [safety?](/) <i class="fas fa-step-backward"></i>
 """

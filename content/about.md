@@ -2,6 +2,8 @@
 template = "page.html"
 +++
 
+# About
+
 ## Who is Chema?
 
 I just love what I do: Software Development. Especially algorithm designing, and resolution of logic problems.

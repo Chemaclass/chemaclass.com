@@ -1,5 +1,10 @@
 {% extends "simple-dev-blog/templates/base.html" %}
 
+{% block head %}
+  {{ super() }}
+  <script src="https://kit.fontawesome.com/fa8ac97011.js" crossorigin="anonymous"></script>
+{% endblock %}
+
 {% block styles %}
   {{ super() }}
   <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">

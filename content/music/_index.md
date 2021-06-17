@@ -4,6 +4,8 @@ page_template = "blog/blog-post.html"
 sort_by = "date"
 +++
 
-## Music
+# Music
 
 Original songs.
+
+---
