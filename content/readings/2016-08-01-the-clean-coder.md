@@ -35,7 +35,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lbNIP1YLL
 
 - Being a professional means taking full responsibility for one's actions.
 - First rule is not doing harm to the function nor the structure of the software.
-  - You will always make occasional mistakes, but you must learn from each.
 - You will always make occasional mistakes, but you must learn from each.
 - You should be certain about all code you release and firmly expect QA to find nothing wrong with it.
   - Test it and test it again.
@@ -71,7 +70,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lbNIP1YLL
 
 - Programming requires a level of focus that few other disciplines require.
 - "The zone" (flow) is not as good as people think: you will be locally productive, but will often lose the bigger
-  picture and possibly product no-so-good designs.
+  picture and possibly product not-so-good designs.
 - Interruptions are bad distractions.
   - Pair programming is helpful to cope with them.
   - TDD helps to make the pre-interruption context reproducible.
