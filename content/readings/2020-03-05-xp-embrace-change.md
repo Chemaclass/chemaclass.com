@@ -173,3 +173,9 @@ velocity, and amount of overtime worked.
 This is usually an outside consultant (or someone from elsewhere in your organization) who has used XP before and is
 included in your team to help mentor the other team members on the XP Practices and to help your team maintain your self
 discipline.
+
+---
+
+A 2 min summary video that I found in Youtube:
+
+{{ youtube(id="hbFOwqYIOcU") }}

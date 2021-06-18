@@ -17,3 +17,11 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41VQ9-JOXLL
 
 Clean Agile comes from Uncle Bob, one of the founding fathers of Agile, one of the seventeen people who authored the
 [Agile Manifesto](https://agilemanifesto.org/) back in 2001.
+
+---
+
+This talk is about Agile. What it was, what it is, and what it will be. This is a back-to-basics talk that covers the
+history of Agile, what motivated it, and what has happened to it since. The talk covers the basic practices of Agile,
+and compares and contrasts those practices with the current menagerie of Agile processes.
+
+{{ youtube(id="FedQ2NlgxMI") }}
