@@ -1,5 +1,7 @@
 {% extends "simple-dev-blog/templates/blog-post.html" %}
 
+{% import "helpers-preview.html" as helpers_preview %}
+
 {% block content %}
   <div class="post-title">
     <h1>
@@ -48,19 +50,20 @@
 
 {% macro page_sub_header(page) %}
   <small>
-    {{ page.date | date(format="%B %d, %Y") }}
+    {{ helpers_preview::date_and_words(post=page) }}
+
+    <span class="found-a-typo">
+      {% set url = config.extra.repo_content_url ~ page.relative_path %}
+      Found a typo? <a href="{{url}}">Edit me</a>
+    </span>
+
     {% if page.taxonomies.tags %}
-      -
+      <br>
       <span class="tags">
         {% for tag in page.taxonomies.tags %}
           <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">{{ tag }}</a>
         {% endfor %}
       </span>
     {% endif %}
-
-    <span class="found-a-typo" style="float: right">
-      {% set url = config.extra.repo_content_url ~ page.relative_path %}
-      Found a typo? <a href="{{url}}">Edit me</a>
-    </span>
   </small>
 {% endmacro %}

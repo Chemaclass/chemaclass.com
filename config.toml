@@ -32,8 +32,8 @@ repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/cont
 gtag = ""
 
 footer_about = """
-Have you find this post useful? Do you want more?
-Follow me on [<i class="fab fa-twitter"></i>](https://twitter.com/Chemaclass) or just say "Hi!" <i class="fab fa-smile"></i>
+Have you find this post useful? Do you want more?<br>
+Follow me on [Twitter](https://twitter.com/Chemaclass) or just say "Hi!" :)
 """
 
 not_found_message = """

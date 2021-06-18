@@ -2,7 +2,7 @@
 title = "Scrum: The art"
 description = "Scrum: The Art of Doing Twice the Work in Half the Time"
 [taxonomies]
-tags = [ "management", "teams", "business" ]
+tags = [ "book", "management", "teams", "business" ]
 [extra]
 pages = "250"
 author = "Jeff Sutherland"

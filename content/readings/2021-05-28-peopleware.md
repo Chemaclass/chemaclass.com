@@ -2,7 +2,7 @@
 title = "Peopleware"
 description = "Productive Projects and Teams"
 [taxonomies]
-tags = [ "managment" ]
+tags = [ "book", "management" ]
 [extra]
 pages = "230"
 author = "Tom DeMarco"

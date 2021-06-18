@@ -2,7 +2,7 @@
 title = "Who moved my cheese?"
 description = "An Amazing Way to Deal With Change In Your Work and In Your Life"
 [taxonomies]
-tags = [ "management", "financial" ]
+tags = [ "book", "management", "financial" ]
 [extra]
 pin = true
 pages = "94"

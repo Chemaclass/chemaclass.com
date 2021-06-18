@@ -2,7 +2,7 @@
 title = "Rich dad poor dad"
 description = "What the Rich Teach Their Kids about Money That the Poor and Middle Class Do Not!"
 [taxonomies]
-tags = [ "business", "financial" ]
+tags = [ "book", "business", "financial" ]
 [extra]
 pages = "180"
 author = "Robert T. Kiyosaki"

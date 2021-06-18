@@ -32,10 +32,10 @@ repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/cont
 gtag = "G-7JRM0XS87B"
 
 footer_about = """
-Have you find this post useful? Do you want more?
+Have you find this post useful? Do you want more?<br>
 Follow me on [Twitter](https://twitter.com/Chemaclass) or just say "Hi!" :)
 """
 
 not_found_message = """
-This is not the page you're looking for... return back to [safety?](/)
+This is not the page you're looking for... return back to [safety?](/) <i class="fas fa-step-backward"></i>
 """

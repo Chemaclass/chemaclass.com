@@ -2,7 +2,7 @@
 title = "Stock market investing"
 description = "Stock market investing for beginners"
 [taxonomies]
-tags = [ "financial" ]
+tags = [ "book", "financial" ]
 [extra]
 pages = "160"
 author = "Mark Atwood"

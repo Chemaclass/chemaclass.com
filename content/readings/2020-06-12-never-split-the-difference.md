@@ -2,7 +2,7 @@
 title = "Never split the difference"
 description = "Negotiating as if your life depended on it"
 [taxonomies]
-tags = [ "business", "carrier skills", "negotiation" ]
+tags = [ "book", "business", "carrier skills", "negotiation" ]
 [extra]
 pages = "280"
 author = "Chris Voss"
