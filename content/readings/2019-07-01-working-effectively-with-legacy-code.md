@@ -40,3 +40,7 @@ Another useful term is a "**seam**." A seam, in this context, is "**a place wher
 without editing in that place**". The analogy is to a seam in clothing, the place where two parts are stitched together.
 In software, **these places are generally places where there are well-defined interfaces**. This can be leveraged to change
 the implementation using techniques such as dependency injection or mocking interfaces in the case of writing tests.
+
+---
+
+{{ youtube(id="wRtJRkRIa2s") }}

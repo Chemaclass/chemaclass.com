@@ -74,25 +74,27 @@ A pet project is a playground to create software and train your professional ski
 
 #### Inactive
 
-- stock-ticker: get a notification with the news from your favorites Tickers.
-- jira-status-notifier: Notify when the JIRA tickets don't move along.
-- edifact-parser: a parser for a UN/EDIFACT file format in PHP.
+- [stock-ticker](https://github.com/Chemaclass/stock-ticker): get a notification with the news from your favorites Tickers.
+- [jira-status-notifier](https://github.com/Chemaclass/JiraStatusNotifier): Notify when the JIRA tickets don't move along.
+- [edifact-parser](https://github.com/Chemaclass/EdifactParser): a parser for a UN/EDIFACT file format in PHP.
 
 #### Abandoned
 
-- knob-mvc: a framework to create WordPress templates (2015/2017).
+- [knob-mvc](https://github.com/Chemaclass/knob-mvc): a framework to create WordPress templates (2015/2017).
 
 ## Some of Chema's OSS org contributions 🌚
 
 #### Active
 
-- [phel-lang](https://github.com/phel-lang/phel-lang): Phel is a functional programming language that compiles to PHP. It is a dialect of Lisp inspired by Clojure and Janet.
-  I already wrote a post about phel-lang: [Phel: A Lisp that compiles to PHP](https://chemaclass.medium.com/phel-the-lisp-that-compiles-to-php-544980605ebe)
-- [gacela-project](https://github.com/gacela-project/gacela): Gacela is a PHP framework that helps you to improve the design of your application by splitting the logic into different modules.
+- [phel-lang](https://github.com/phel-lang/phel-lang): Phel is a functional programming language that compiles to PHP.
+  It is a dialect of Lisp inspired by Clojure and Janet. I already wrote a post about
+  this: [Phel: A Lisp that compiles to PHP](/blog/phel-first-release/)
+- [gacela-project](https://github.com/gacela-project/gacela): Gacela is a PHP framework that helps you to improve the
+  design of your application by splitting the logic into different modules.
 
 #### Abandoned
 
-- nm_template: The base template for NuevaMetal (2013–2016).
+- [nm_template](https://github.com/NuevaMetal/nm_template): The base template for NuevaMetal (2013–2016).
 
 ## Knowledge sharing ✍🏼
 
