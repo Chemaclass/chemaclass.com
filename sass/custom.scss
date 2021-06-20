@@ -61,20 +61,21 @@ iframe {
   height: 395px;
 }
 
-img[alt=book-cover] {
+img[alt=book-index-cover] {
   max-width: 15%;
   float: left;
   margin-right: 20px;
+  height: 100px;
 }
 
-img[alt=book-cover-index] {
+img[alt=book-chapters-cover] {
   max-width: 22%;
   float: right;
   margin-left: 12px;
 }
 
 @media (max-width: 700px) {
-  img[alt=book-cover] {
+  img[alt=book-index-cover] {
     max-width: 65%;
     display: block;
     margin-left: auto;
@@ -83,7 +84,7 @@ img[alt=book-cover-index] {
     float: none;
   }
 
-  img[alt=book-cover-index] {
+  img[alt=book-chapters-cover] {
     max-width: 65%;
     display: block;
     margin-left: auto;
@@ -102,9 +103,4 @@ img[alt=book-cover-index] {
       }
     }
   }
-}
-
-footer {
-  clear: both;
-  padding-top: 12px;
 }

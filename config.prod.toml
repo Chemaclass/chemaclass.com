@@ -14,7 +14,6 @@ latest_text = "Check out my latest post:"
 nav = [
     { name = "Blog", path = "/blog/" },
     { name = "Readings", path = "/readings/" },
-    { name = "Book", path = "/book/" },
     { name = "About", path = "/about/" },
 ]
 

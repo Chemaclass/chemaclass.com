@@ -1,0 +1,11 @@
+{% extends "blog/index.html" %}
+
+{% import "helpers-preview.html" as helpers_preview %}
+
+{% block title %}
+  Books | Chemaclass
+{% endblock %}
+
+{% block content %}
+  {{ section.content | safe }}
+{% endblock %}
