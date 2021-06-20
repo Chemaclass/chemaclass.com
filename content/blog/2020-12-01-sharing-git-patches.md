@@ -32,7 +32,9 @@ What if you (as a reviewer) could share your idea without any single commit or c
 
 Well, that's actually possible and really easy. As you already know, the git diff command gives you the differences between any two branches.
 
-> git diff origin develop > ../my-origin-develop.patch
+```sh
+git diff origin develop > ../my-origin-develop.patch
+```
 
 What we are doing here is redirecting the output of the diff command into a file (aka: patch), so we can share that output with any other peer-team.
 
@@ -40,7 +42,9 @@ What we are doing here is redirecting the output of the diff command into a file
 
 Well, having that patch file, it's pretty easy to apply those changes in your local machine without doing any commit:
 
-> git apply ../my-origin-develop.patch
+```sh
+git apply ../my-origin-develop.patch
+```
 
 Applying this patch will simply change your local system in the same way the patch was created.
 
@@ -50,7 +54,7 @@ Let's divide the responsibilities into two: the creator of the patch and its use
 
 ### The patch creator: the person who will create the patch
 
-```
+```sh
 # Checkout that branch
 $ ~/myProject git:(the-branch) ➜ git pull origin the-branch
 # Do your suggestions and changes in the targeted branch
@@ -61,7 +65,7 @@ $ ~/myProject git:(the-branch) ➜ git diff > ../your-diff.patch
 
 ### The patch user: the person who will see the patch
 
-```
+```sh
 # Ensure you are in that branch
 $ ~/myProject git:(the-branch) ➜ git pull origin the-branch
 # Apply the patch file
@@ -72,4 +76,4 @@ $ ~/myProject git:(the-branch) ➜ git apply ../your-diff.patch
 
 #### References
 
-- [docs/git-apply](https://git-scm.com/docs/git-apply)
+- [Official documentation for "git apply"](https://git-scm.com/docs/git-apply)

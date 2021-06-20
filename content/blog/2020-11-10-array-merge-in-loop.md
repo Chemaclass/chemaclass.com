@@ -19,6 +19,7 @@ The spread operator will help you to improve this by flatting the array.
 I have seen people using the array_merge function in a loop like:
 
 ```php
+<?php
 $lists = [
   [1, 2],
   [3, 4],
@@ -35,6 +36,7 @@ This is a very bad practice because it's a (memory) performance killer!
 Instead, you should use the spread operator (in PHP since 5.6!):
 
 ```php
+<?php
 $lists = [
   [1, 2],
   [3, 4],
@@ -49,6 +51,7 @@ $merged = array_merge(...$lists);
 What if you had an assoc-array instead like this one?
 
 ```php
+<?php
 $lists = [
   'key-1' => [1, 2],
   'key-2' => [3, 4],
@@ -59,6 +62,7 @@ $lists = [
 In that case, you will need to unpack its values:
 
 ```php
+<?php
 $merged = array_merge(...array_values($lists));
 // === [1, 2, 3, 4, 5, 6];
 ```
@@ -70,12 +74,14 @@ No loops & no more performance problem.
 
 What if you wanted to flat a multilevel array like this one?
 ```php
+<?php
 $lists = [[1], 2, [[3, 4], 5], [[[]]], [[[6]]], 7, 8, []];
 ```
 
 Or like this one, even with key-values?
 
 ```php
+<?php
 $lists = [
     'key-1' => [
         1,
@@ -95,6 +101,7 @@ $lists = [
 In these cases, you might want to use the internal standard library:
 
 ```php
+<?php
 $merged = iterator_to_array(
     new RecursiveIteratorIterator(
         new RecursiveArrayIterator($lists)
@@ -108,6 +115,7 @@ $merged = iterator_to_array(
 
 Usually, being aware of how to flat a "2 level" array might be sufficient:
 ```php
+<?php
 $flattenList = array_merge(...array_values($lists));
 ```
 

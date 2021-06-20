@@ -7,6 +7,14 @@ generate_feed = true
 theme = "simple-dev-blog"
 taxonomies = [{ name = "tags" }]
 compile_sass = true
+extra_syntaxes = ["syntaxes"]
+
+[markdown]
+
+highlight_code = true
+highlight_theme = "demain"
+
+smart_punctuation = true
 
 [extra]
 latest_text = "Check out my latest post:"
@@ -32,7 +40,7 @@ gtag = "G-7JRM0XS87B"
 
 footer_about = """
 Have you find this useful? Do you want more?
-Follow me on [Twitter](https://twitter.com/Chemaclass) or [Github](https://github.com/Chemaclass).
+Follow me on [Twitter](https://twitter.com/Chemaclass) or [GitHub](https://github.com/Chemaclass).
 """
 
 footer_page = """

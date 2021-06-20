@@ -13,7 +13,7 @@ Let's talk about the benefits of Pull Requests and Pair Programming, and my thou
 
 <!-- more -->
 
-# Pull Requests
+## Pull Requests
 
 A Pull Request (PR) is basically a way of showing your suggested code changes such that they are easily comparable with the existing source code. This is part of a workflow that helps developers to share knowledge about the changes that are being done within the system.
 
@@ -24,7 +24,7 @@ Usually, it's also used:
 2. To spot potential bugs.
 3. For architectural or design discussions once the solution is done.
 
-## Pull Requests aren't the best tool for everything
+### Pull Requests aren't the best tool for everything
 
 The main problem with these topics above is that PR's are usually ready when the feature/bug is already being worked on and in the last stage of its development process. It's an "already change proposal to be merged into the current system", don't forget that.
 
@@ -38,12 +38,12 @@ Pull Requests are, indeed, one of the best tools that we have in our industry to
 
 Having an extra person looking at the changes that we have done for "designing decisions" might be beneficial, but we could have addressed "potential disagreements" in a sooner stage.
 
-## What should the purpose of a Pull Request be?
+### What should the purpose of a Pull Request be?
 
 1. Sharing knowledge about the proposed changes with the team.
 2. Ensuring the team aligns and agrees across the multiples changes that are getting submitted every day in order to keep a healthy direction for the project. Yes, this might include double-checking the outcome design, but… What if that is now too late? How could we solve all those issues?
 
-# Pair Programming
+## Pair Programming
 
 The concept of "Pair Programming" can be understood from different points of view. Pair thinking and pair programming, driver-navigator roles concepts, or pure live coding from one side. Actually, this is way easier than it looks like at first instance:
 - Either you watch and help the other person to write code,
@@ -54,7 +54,7 @@ The concept of "Pair Programming" can be understood from different points of vie
 Pair programming is the joy of working with an extra brain and another pair of eyes, where the key is to **build a context** where you two **share the same goal** in order to find the **best possible solution**. All of this while learning from each other every single second.
 Pair Programming is not about developing the best solution at the very beginning. It's about making it work, sharing ideas, and finding a better solution together. After that, you can refactor and clean the code.
 
-## Pair Programming is a continuous code review
+### Pair Programming is a continuous code review
 
 Pull Requests are an asynchronous way to share code changes, while Pair Programming is totally **synchronous** because it happens at the same time.
 
@@ -83,7 +83,7 @@ A personal rule of thumb, before starting tasks that might involve touching mult
 
 > Everything depends on a particular context and people: the developers, the pairs, the tasks, the mood.
 
-## Still uncomfortable with Pair Programming?
+### Still uncomfortable with Pair Programming?
 
 If you still feel uncomfortable having another person next to you while you write code, it might be because you aren't particularly happy with your own code, or the process that you follow in order to achieve some result. My favorite way to work on this is by exercising on your own and working on improving your skills as a software developer.
 - Create and play around with your own pet projects.
@@ -91,7 +91,7 @@ If you still feel uncomfortable having another person next to you while you writ
 
 > Practice makes the master.
 
-# Summary
+## Summary
 
 - Don't get me wrong, Pull Requests are great. Keep doing them.
 - Team collaboration is essential. Pair Programming aims for this.

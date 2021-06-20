@@ -22,12 +22,14 @@ We will use this snipped for our examples
 Having a class, `Customer`:
 
 ```php
+<?php
 /** 
  * @psalm-immutable 
  */
 final class Customer
 {
     // Using PHP 8 constructor property promotion
+    // https://wiki.php.net/rfc/constructor_promotion
     public function __construct(
         public string $name,
     ) {}
@@ -41,11 +43,12 @@ $customers = array_map(
 
 Whenever we want to manipulate a list of Customers, we can pass as an argument: `…$customers`.
 
-## How we use to do it
+## How we used to do it
 
 We define the array type using the PHPDoc param comment block above. But we cannot define the real type of the item. The code will still run without any problem passing any type on that argument `array $customers`:
 
 ```php
+<?php
 /** 
  * @param Customer[] 
  */
@@ -59,6 +62,7 @@ function createInvoiceForCustomers(array $customers): void
 
 The code below would work at "compile-time". But it might fail at "runtime".
 ```php
+<?php
 createInvoiceForCustomers($customers);
 createInvoiceForCustomers([new Customer('any name')]);
 createInvoiceForCustomers([new AnyOtherType()]);
@@ -67,6 +71,7 @@ createInvoiceForCustomers([new AnyOtherType()]);
 An alternative (recommended!) might be to extract that logic and ask for the particular type in order to "check it" at runtime in that particular moment, failing if one of the items wasn't really a Customer:
 
 ```php
+<?php
 /** 
  * @param Customer[] 
  */
@@ -85,6 +90,7 @@ function createInvoice(Customer $customer): void
 Everything here below would work at "compile-time". It will for sure break during "runtime" if the `createInvoice(Customer $customer)` receives something different than a Customer.
 
 ```php
+<?php
 createInvoiceForCustomers($customers);
 createInvoiceForCustomers([new Customer('any name')]);
 createInvoiceForCustomers([new AnyOtherType()]); // won't work
@@ -96,6 +102,7 @@ Well, that's actually what Generics are for, but sadly, they are not yet in PHP.
 Luckily, we have currently an alternative nowadays, but it's not that popular. It has its own "pros" and "cons", so let's take a look at an example first:
 
 ```php
+<?php
 function createInvoiceForCustomers(Customer ...$customers): void
 {
     foreach ($customers as $customer) {
@@ -107,6 +114,7 @@ function createInvoiceForCustomers(Customer ...$customers): void
 Everything here below would work at "compile-time". It will for sure break during "runtime" if the `createInvoice()` receives something different than a Customer.
 
 ```php
+<?php
 createInvoiceForCustomers(...$customers); // OK
 createInvoiceForCustomers(
     new Customer('any name'), 

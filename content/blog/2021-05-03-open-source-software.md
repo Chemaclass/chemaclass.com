@@ -49,7 +49,7 @@ OSS shares similarities with free software, but it's not the same. Free software
 
 > TL;DR: It can be a "constant kata" if you want to.
 
-## Github to the rescue 😃
+## GitHub to the rescue 😃
 
 Nowadays, it's really trivial to start contributing to OSS:
 - You can start your own project. A pet project fits here perfectly!
@@ -57,7 +57,7 @@ Nowadays, it's really trivial to start contributing to OSS:
 
 ## Pet projects 🐘
 
-A pet project is a playground to create software and train your professional skills. Creating pet projects in your public Github profile has all the benefits of contributing to OSS, plus you're your own boss:
+A pet project is a playground to create software and train your professional skills. Creating pet projects in your public GitHub profile has all the benefits of contributing to OSS, plus you're your own boss:
 - You dictate the roadmap.
 - You decide what to do and how.
 - You're your own boss.
@@ -116,7 +116,15 @@ Developing a sixth sense to smell patterns which you have already done and their
 
 > Open-Source Software offers you one of the best opportunities to start building your career path towards continuous improvement.
 
+---
+
+This is a (Spanish) talk that I did remotely on April 2021,
+for [PHPMad Madrid Community](https://www.meetup.com/phpmad/events/277733306/). I basically present all these ideas
+together with a live demo of how to contribute to a real OSS.
+
 {{ youtube(id="GE5wR_SC_P4") }}
+
+---
 
 ### References
 
