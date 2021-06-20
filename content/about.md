@@ -1,4 +1,5 @@
 +++
+title = "About | Chemaclass"
 template = "page.html"
 +++
 

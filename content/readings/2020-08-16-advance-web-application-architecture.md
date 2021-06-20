@@ -20,7 +20,7 @@ patterns resonate at a higher level with architectural concepts like layers, por
 architecture). The book finishes with a discussion of testing strategies and design trade-offs.
 
 > The best guide that brings your coding and architecture skills a level up. All the modern PHP features combined with the
-elegance of a well designed modular design.
+elegance of a well-designed modular design.
 
 ### What you'll learn
 

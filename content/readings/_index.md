@@ -1,4 +1,5 @@
 +++
+title = "Readings | Chemaclass"
 template = "readings/index.html"
 page_template = "readings/readings-post.html"
 sort_by = "date"

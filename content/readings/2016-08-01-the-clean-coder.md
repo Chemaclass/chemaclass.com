@@ -195,3 +195,19 @@ Uncle Bob, writing a comment is a sign of failure, since a good code must be abl
 Better Code.
 
 {{ youtube(id="2a_ytyt9sf8") }}
+
+---
+
+In this third lesson, Uncle Bob focuses on raising awareness, given the need to increase the level of criteria in code
+production. Pointing to the lack of preparation in most programmers, as one of the main reasons for the inefficiency in
+software development today.
+
+{{ youtube(id="Qjywrq2gM8o") }}
+
+---
+
+In this fourth lesson, Uncle Bob introduces us to a software development methodology oriented through testing. This is
+the Test-Driven Development (TDD), a practice with a long learning curve, but with significant results to generate a
+more robust, safer, more maintainable code and with greater development efficiency.
+
+{{ youtube(id="58jGpV2Cg50") }}

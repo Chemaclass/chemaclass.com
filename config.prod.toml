@@ -1,5 +1,5 @@
 base_url = "https://chemaclass.es"
-name = "Chema's website | Chemaclass"
+
 title = "Chema's website | Chemaclass"
 description = "Check out my latest tech blog posts, and follow my journey on what I have been reading the last month."
 
@@ -32,8 +32,12 @@ repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/cont
 gtag = "G-7JRM0XS87B"
 
 footer_about = """
-Have you find this post useful? Do you want more?<br>
-Follow me on [Twitter](https://twitter.com/Chemaclass) or just say "Hi!" :)
+Have you find this useful? Do you want more?
+Follow me on [Twitter](https://twitter.com/Chemaclass) or [Github](https://github.com/Chemaclass).
+"""
+
+footer_page = """
+© 2021, Chema - Jose Maria Valera Reales
 """
 
 not_found_message = """

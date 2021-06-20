@@ -1,8 +1,8 @@
 +++
-title = "Chema's website | Chemaclass"
+template = "homepage/index.html"
 +++
 
-# Chema's website
+# Chemaclass
 
 ## Blog & readings 
 
