@@ -31,3 +31,9 @@ management manifesto with the ability to revolutionize the way we work.
 - Performance Reviews
 - Interviews
 - Promotions and Recycling
+
+---
+
+A pretty nice overview from the takeaways by Marc Koenig:
+
+{{ youtube(id="Yi1PSs_bpQ0") }}
