@@ -1,6 +1,6 @@
 +++
 title = "Stock market investing"
-description = "Stock market investing for beginners"
+description = "25 Golden Stock Investing Lessons"
 [taxonomies]
 tags = [ "book", "financial" ]
 [extra]
