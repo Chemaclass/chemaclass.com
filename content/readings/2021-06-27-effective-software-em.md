@@ -14,11 +14,10 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL
     <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL._SX404_BO1,204,203,200_.jpg" >
 </a>
 
+<!-- more -->
+
 This book is a great compilation of all topics that are important in the management field. It covers 1:1s, performance
 reviews, hiring and laying off, workplace politics, remote work, and some others.
-
-
-<!-- more -->
 
 The book is divided into 3 parts: the first part covers things a new manager should know, the second and third parts go
 into topics that more experienced managers should master.
