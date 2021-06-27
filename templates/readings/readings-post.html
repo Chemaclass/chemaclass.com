@@ -5,9 +5,13 @@
   <div class="post-title">
     <h1>
       {{ page.title }}
+      {% if page.description %}
+        <small class="description">
+          {{ page.description }}
+        </small>
+      {% endif %}
       {% if page.extra.author %}
-        <br>
-        <small style="margin-top: 0; color: #404040; font-size: 0.6em;">
+        <small class="author">
           {{ page.extra.author }}
         </small>
       {% endif %}

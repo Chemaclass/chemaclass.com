@@ -21,6 +21,18 @@
   .book-pages {
     display: none;
   }
+
+  .description {
+    display: block;
+    font-size: .7em;
+    font-style: italic;
+  }
+
+  .author {
+    color: #404040;
+    font-size: 0.5em;
+    display: block;
+  }
 }
 
 .readings-previews {

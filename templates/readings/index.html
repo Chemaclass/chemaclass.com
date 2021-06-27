@@ -18,7 +18,7 @@
       {% for post in pinned_posts %}
         <div class="reading-preview">
           <h4>
-            {{ post.date| date(format="%B %d, %Y") }}
+            {{ post.date | date(format="%B %d, %Y") }}
           </h4>
           <div class="summary">
             {{ helpers_preview::summary(post=post,read_more=false) }}
