@@ -1,6 +1,6 @@
 +++
-title = "Unit Testing Effectively"
-description = "How to write proper unit tests to already written code"
+title = "Testing Effectively Legacy Code"
+description = "How to write proper tests to already written code"
 [taxonomies]
 tags = [ "software", "testing" ]
 [extra]
@@ -16,8 +16,8 @@ These tests are also known as Characterization tests.
 > A characterization test describes the actual behavior of an existing piece of software, and therefore protects existing
 > behavior of legacy code against unintended changes via automated testing. This term was coined by [Michael Feathers](/readings/working-effectively-with-legacy-code/).
 
-They enable and provide a safety net for extending and refactoring code that does not have adequate unit tests. A test
-can be written that asserts that the output of the legacy code matches the observed result for the given inputs.
+They enable and provide a safety net for extending and refactoring code that does not have adequate tests. A test can be
+written that asserts that the output of the legacy code matches the observed result for the given inputs.
 
 ## How to start?
 
@@ -27,10 +27,11 @@ different projects I've been working on since then.
 
 ### 1. What do you want to test?
 
-Find out the assertions. Create a unit test file for your class, and a testing method for the function that you want to
-test. Hint:
- - If you have the following method `applySomeLogic(): ReturnType`,
- - the test you could write is `test_apply_some_logic(): void`.
+Find out the assertions. Create a test file for your class, and a testing method for the function that you want to test.
+Hint:
+
+- If you have the following method `applySomeLogic(): ReturnType`,
+- the test you could write is `test_apply_some_logic(): void`.
 
 ```php
 final class MyBusinessLogic
