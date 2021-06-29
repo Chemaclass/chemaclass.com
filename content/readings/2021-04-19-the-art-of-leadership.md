@@ -4,7 +4,7 @@ description = "Small Things, Done Well"
 [taxonomies]
 tags = [ "book", "management" ]
 [extra]
-pin = true
+pin = false
 pages = "165"
 author = "Michael Lopp"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/31YOKF2IcBL._SX331_BO1,204,203,200_.jpg"
