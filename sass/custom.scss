@@ -45,11 +45,12 @@
    overflow: hidden;
    width: 49%;
    float: left;
-   height: 470px;
+   height: 450px;
 
    img {
      height: 280px;
      width: auto;
+     margin-top: -10px;
    }
 
    &:nth-child(odd){}
@@ -58,6 +59,20 @@
      .author{
        font-size: 0.6em;
      }
+   }
+
+   .reading-current{
+     border: 3px solid var(--accent-color-light);
+     border-radius: 30px;
+     font-family: "Rubik", "PT Serif", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+     padding: 5px;
+     background-color: var(--accent-color-light);
+     float: top;
+     z-index: 3000;
+     position: relative;
+     right: -70px;
+     top: -420px;
+     color: #404040;
    }
  }
 }
@@ -84,6 +99,16 @@ img[alt=book-chapters-cover] {
   max-width: 22%;
   float: right;
   margin-left: 12px;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 @media (max-width: 700px) {

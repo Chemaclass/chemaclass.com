@@ -27,6 +27,10 @@
       {{ page.extra.pages }} pages
     </div>
     {% endif %}
+
+    {% if page.extra.current_reading %}
+      <div class="reading-current">Reading currently...</div>
+    {% endif %}
   </div>
 
   <hr class="footer-rule" />
