@@ -2,7 +2,7 @@
 title = "Advanced Web Application Architecture"
 description = "The best guide that brings your coding and architecture skills a level up. All the modern PHP features combined with the elegance of a well designed modular design."
 [taxonomies]
-tags = [ "book", "software" ]
+tags = [ "book", "software", "web", "architecture" ]
 [extra]
 pages = "370"
 author = "Matthias Noback"
@@ -27,3 +27,9 @@ architecture). The book finishes with a discussion of testing strategies and des
 - Separating mixed code into core and infrastructure code by refactoring into patterns.
 - Dividing your code into layers, and making a clear distinction between an application's ports and adapters.
 - Testing decoupled applications.
+
+---
+
+### Design patterns for modernizing legacy code bases
+
+{{ youtube(id="WI1QY6OMglE") }}
