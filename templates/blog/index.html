@@ -10,6 +10,7 @@
   {{ section.content | safe }}
 
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
+
   {% for post in pinned_posts %}
     <div class="preview post-preview highlighted">
       <h3 class="post-title">

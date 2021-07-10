@@ -8,15 +8,19 @@ pin = true
 pages = "94"
 author = "Spencer Johnson"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QGl7HfNyL._SX314_BO1,204,203,200_.jpg"
+with_long_title = true
 +++
 
 <a target="_blank" href="https://amzn.to/3djaXcv">
     <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51QGl7HfNyL._SX314_BO1,204,203,200_.jpg" >
 </a>
 
-<!-- more -->
 
-This book is full of lessons that apply to everyone no matter who they are or when they read it.
+This book presents a tale inside the main story that consists of 4 characters: two mice, **Sniff** and **Scurry**, and two little persons, **Hem** and **Haw**.
+
+The tale is a beautiful metaphor of the different attitudes that people adopt as part of their identity in life when they have to confront any change.
+
+<!-- more -->
 
 ### My favorite lessons of the book
 1. Change happens.

@@ -16,46 +16,14 @@
     <div class="readings-previews-highlighted">
       <h4>Highlighted</h4>
       {% for post in pinned_posts %}
-        <div class="reading-preview">
-          <h4>
-            {{ post.date | date(format="%B %d, %Y") }}
-          </h4>
-          <div class="summary">
-            {{ helpers_preview::summary(post=post,read_more=false) }}
-          </div>
-          <h3 class="reading-title">
-            <a href="{{ post.permalink }}">{{ post.title }}</a>
-            <br>
-            {{ helpers_preview::author(post=post) }}
-          </h3>
-          {% if post.extra.current_read %}
-            <span class="reading-current no-select">Current read</span>
-          {% endif %}
-        </div>
+        {{ self::reading_preview(post=post)}}
       {% endfor %}
     </div>
     {% endif %}
 
-    <hr style="clear: both;">
-
     {% for post in section.pages %}
       {%if post not in pinned_posts %}
-        <div class="reading-preview">
-          <h4>
-            {{ post.date| date(format="%B %d, %Y") }}
-          </h4>
-          <div class="summary">
-            {{ helpers_preview::summary(post=post,read_more=false) }}
-          </div>
-          <h3 class="reading-title">
-            <a href="{{ post.permalink }}">{{ post.title }}</a>
-            <br>
-            {{ helpers_preview::author(post=post) }}
-          </h3>
-          {% if post.extra.current_read %}
-            <span class="reading-current no-select">Current read</span>
-          {% endif %}
-        </div>
+        {{ self::reading_preview(post=post)}}
       {% endif %}
     {% endfor %}
   </div>
@@ -64,3 +32,28 @@
     {{ helpers_preview::footer() }}
   </footer>
 {% endblock %}
+
+
+{% macro reading_preview(post) %}
+  <div class="reading-preview">
+    <h3 class="reading-title{% if post.extra.with_long_title %} reading-title_long{% endif %}">
+      <a href="{{ post.permalink }}">{{ post.title }}</a>
+      <br>
+      {{ helpers_preview::author(post=post) }}
+    </h3>
+    <span class="reading-date">
+      {{ post.date | date(format="%B %d, %Y") }}
+    </span>
+    <div class="summary">
+      {% if post.extra.with_long_title %}
+        {{ helpers_preview::summary(post=post,read_more=true) }}
+      {% else %}
+        {{ helpers_preview::summary(post=post,read_more=false) }}
+      {% endif %}
+    </div>
+
+    {% if post.extra.current_read %}
+    <span class="reading-current no-select">Current read</span>
+    {% endif %}
+  </div>
+{% endmacro %}

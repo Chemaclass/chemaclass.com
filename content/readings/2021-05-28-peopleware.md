@@ -7,17 +7,21 @@ tags = [ "book", "management" ]
 pages = "230"
 author = "Tom DeMarco"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51RuNCswX8L._SX341_BO1,204,203,200_.jpg"
+with_long_title = true
 +++
 
 <a target="_blank"  href="https://amzn.to/3qs5pBM">
     <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51RuNCswX8L._SX341_BO1,204,203,200_.jpg" >
 </a>
 
+Software development is about people: when, how and where they can best work together. Not about programming languages
+or tools. Not about fast computers, networks or internet access.
+
+Soft skills are truly important in IT, more than people tend to think.
+
 <!-- more -->
 
-Software development is about people: when, how and where they can best work together. Not about programming languages
-or tools. Not about fast computers, networks or internet access (although that surely helps). Soft skills are truly
-important in IT, more than people tend to think. Developing software is about people that communicate with their
+Developing software is about people that communicate with their
 customers and stakeholders, are supported by their managers and collaborate in teams.
 
 ### Some of my favourite quotes from this book

@@ -8,19 +8,20 @@ tags = [ "book", "management" ]
 pages = "350"
 author = "James Stanier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL._SX404_BO1,204,203,200_.jpg"
+with_long_title = true
 +++
 
 <a target="_blank" href="https://amzn.to/3xVEzEG">
     <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL._SX404_BO1,204,203,200_.jpg" >
 </a>
 
-<!-- more -->
-
-This book is a great compilation of all topics that are important in the management field. It covers 1:1s, performance
-reviews, hiring and laying off, workplace politics, remote work, and some others.
+A great compilation of all topics that are important for management: 1:1s, performance reviews, hiring and laying off,
+workplace politics, remote work, and others.
 
 The book is divided into 3 parts: the first part covers things a new manager should know, the second and third parts go
-into topics that more experienced managers should master.
+into topics that all managers should master.
+
+<!-- more -->
 
 Although I kept nodding along with the bits of advice, I sometimes felt it was too "wordy" or going into too many
 details that I wasn't interested in. That said, I kept moving forward, and I am glad that I finished it, gathering a lot
