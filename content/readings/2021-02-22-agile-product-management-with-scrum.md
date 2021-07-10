@@ -2,7 +2,7 @@
 title = "Agile Product Management"
 description = "Creating Products that Customers Love"
 [taxonomies]
-tags = [ "book", "management", "teams", "agile" ]
+tags = [ "management", "agile" ]
 [extra]
 pages = "120"
 author = "Roman Pichler"

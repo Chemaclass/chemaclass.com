@@ -2,7 +2,7 @@
 title = "One up on wall street"
 description = "How To Use What You Already Know To Make Money In The Market"
 [taxonomies]
-tags = [ "book", "financial", "business" ]
+tags = [ "financial", "investing" ]
 [extra]
 pages = "180"
 author = "Peter Lynch"

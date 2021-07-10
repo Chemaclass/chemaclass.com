@@ -3,12 +3,12 @@ title = "Become an Effective Software Engineering Manager"
 description = "How to Be the Leader Your Development Team Needs"
 slug = "Become an Effective Software Engineering Manager"
 [taxonomies]
-tags = [ "book", "management" ]
+tags = [ "software", "management" ]
 [extra]
 pages = "350"
 author = "James Stanier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL._SX404_BO1,204,203,200_.jpg"
-with_long_title = true
+expand_preview = true
 +++
 
 <a target="_blank" href="https://amzn.to/3xVEzEG">

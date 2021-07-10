@@ -52,11 +52,36 @@
   .author {
   }
 
-  .reading-title {
-    max-width: 200px;
+  .reading-tags {
+    display: none;
+
+    &.reading-tags__long {
+      font-size: 1em;
+      display: inline;
+      float: right;
+      font-style: italic;
+      list-style: none;
+    }
+
+    .reading-tag {
+      display: inline;
+
+      &:after {
+        content: ", ";
+      }
+
+      &:last-child:after {
+        content: "";
+      }
+    }
   }
 
-  .reading-title_long {
+  .reading-title {
+    max-width: 200px;
+    margin-bottom: 2px;
+  }
+
+  .reading-title__long {
     max-width: unset;
   }
 }

@@ -2,7 +2,7 @@
 title = "The Pragmatic Programmer"
 description = "The journey to mastery"
 [taxonomies]
-tags = [ "book", "software" ]
+tags = [ "software", "pragmatic" ]
 [extra]
 pages = "350"
 author = "Andrew Hunt, David Thomas"

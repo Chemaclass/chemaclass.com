@@ -2,7 +2,7 @@
 title = "Clean Architecture"
 description = "A Craftsman's Guide to Software Structure and Design"
 [taxonomies]
-tags = [ "book", "software", "clean-code" ]
+tags = [ "software", "architecture" ]
 [extra]
 pages = "400"
 author = "Robert C. Martin"

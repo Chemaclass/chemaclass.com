@@ -2,12 +2,12 @@
 title = "Advanced Web Application Architecture"
 description = "The best guide that brings your coding and architecture skills a level up. All the modern PHP features combined with the elegance of a well designed modular design."
 [taxonomies]
-tags = [ "book", "software", "web", "architecture" ]
+tags = [ "software", "architecture" ]
 [extra]
 pages = "370"
 author = "Matthias Noback"
 static_thumbnail = "https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero?1620605116"
-with_long_title = true
+expand_preview = true
 +++
 
 [![](https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero?1620605116)](https://leanpub.com/web-application-architecture/)

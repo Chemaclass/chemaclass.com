@@ -2,7 +2,7 @@
 title = "Extreme Programming Explained"
 description = "Embrace Change"
 [taxonomies]
-tags = [ "book", "software", "teams" ]
+tags = [ "software", "team-work" ]
 [extra]
 pages = "160"
 author = "Kent Beck"

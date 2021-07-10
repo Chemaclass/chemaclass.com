@@ -2,7 +2,7 @@
 title = "97 Things Every Programmer Should Know"
 description = ""
 [taxonomies]
-tags = [ "book", "software" ]
+tags = [ "software", "general wisdom" ]
 [extra]
 pages = "250"
 author = "Kevlin Henney"

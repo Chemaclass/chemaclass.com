@@ -2,7 +2,7 @@
 title = "The Art of Leadership"
 description = "Small Things, Done Well"
 [taxonomies]
-tags = [ "book", "management" ]
+tags = [ "leadership", "management" ]
 [extra]
 pin = false
 pages = "165"

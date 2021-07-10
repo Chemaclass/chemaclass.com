@@ -2,7 +2,7 @@
 title = "The Manager Path"
 description = "A Guide for Tech Leaders Navigating Growth and Change"
 [taxonomies]
-tags = [ "book", "management", "leadership" ]
+tags = [ "management", "leadership" ]
 [extra]
 pages = "220"
 author = "Camille Fournier"

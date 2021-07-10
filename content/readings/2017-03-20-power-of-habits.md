@@ -2,7 +2,7 @@
 title = "The Power of Habit"
 description = "Why We Do What We Do, and How to Change"
 [taxonomies]
-tags = [ "book", "habits" ]
+tags = [ "habits", "improvement" ]
 [extra]
 pages = "400"
 author = "Charles Duhigg"

@@ -2,7 +2,7 @@
 title = "Principles of package design"
 description = "Creating Reusable Software Components"
 [taxonomies]
-tags = [ "book", "software" ]
+tags = [ "software", "design" ]
 [extra]
 pages = "250"
 author = "Matthias Noback"

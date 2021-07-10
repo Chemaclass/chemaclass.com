@@ -2,7 +2,7 @@
 title = "High Output Management"
 description = "The essential skill of creating and maintaining new businesses—the art of the entrepreneur—can be summed up in a single word: managing"
 [taxonomies]
-tags = [ "management", "leadership", "business" ]
+tags = [ "management", "leadership" ]
 [extra]
 pages = "230"
 author = "Andrew S. Grove"

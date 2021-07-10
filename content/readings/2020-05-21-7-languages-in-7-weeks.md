@@ -2,7 +2,7 @@
 title = "7 languages in 7 weeks"
 description = "Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages"
 [taxonomies]
-tags = [ "book", "software" ]
+tags = [ "software", "programming" ]
 [extra]
 pages = "300"
 author = "Bruce Tate"

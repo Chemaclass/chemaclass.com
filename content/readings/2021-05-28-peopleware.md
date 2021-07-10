@@ -2,12 +2,12 @@
 title = "Peopleware"
 description = "Productive Projects and Teams"
 [taxonomies]
-tags = [ "book", "management" ]
+tags = [ "people", "management" ]
 [extra]
 pages = "230"
 author = "Tom DeMarco"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51RuNCswX8L._SX341_BO1,204,203,200_.jpg"
-with_long_title = true
+expand_preview = true
 +++
 
 <a target="_blank"  href="https://amzn.to/3qs5pBM">

@@ -2,7 +2,7 @@
 title = "Stock market investing"
 description = "25 Golden Stock Investing Lessons"
 [taxonomies]
-tags = [ "book", "financial" ]
+tags = [ "financial", "investing" ]
 [extra]
 pages = "160"
 author = "Mark Atwood"

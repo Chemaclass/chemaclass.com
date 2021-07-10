@@ -2,7 +2,7 @@
 title = "Clean Agile"
 description = "Back to Basics"
 [taxonomies]
-tags = [ "book", "software", "agile" ]
+tags = [ "software", "agile", "basics" ]
 [extra]
 pages = "190"
 author = "Robert C. Martin"

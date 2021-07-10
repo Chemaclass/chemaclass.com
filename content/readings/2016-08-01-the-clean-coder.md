@@ -2,7 +2,7 @@
 title = "The Clean Coder"
 description = "A Code of Conduct for Professional Programmers"
 [taxonomies]
-tags = [ "book", "software", "clean-code" ]
+tags = [ "software", "clean-code" ]
 [extra]
 pages = "250"
 author = "Robert C. Martin"

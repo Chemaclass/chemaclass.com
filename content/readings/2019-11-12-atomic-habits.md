@@ -2,7 +2,7 @@
 title = "Atomic Habits"
 description = "An Easy & Proven Way to Build Good Habits & Break Bad Ones"
 [taxonomies]
-tags = [ "book", "habits" ]
+tags = [ "habits", "improvement" ]
 [extra]
 pages = "320"
 author = "James Clear"
