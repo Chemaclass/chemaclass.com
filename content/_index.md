@@ -9,7 +9,11 @@ template = "homepage/index.html"
 My name is _Jose Maria Valera Reales_, but everyone knows me as **Chema**. 
 I live in Berlin since 2015, and I love good software, music, reading, and sport.
 
-I am a software developer at [Teufel Audio](http://teufel.de), and [Phel Lang](http://phel-lang.org).
+### Who am I?
+
+- Tech Lead at [Teufel Audio](http://teufel.de)
+- Contributor in [Phel Lang](http://phel-lang.org)
+- Creator of [Gacela Project](http://gacela-project.com/)
 
 You can find me here:
 
