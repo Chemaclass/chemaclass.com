@@ -25,6 +25,7 @@
 
 {% macro author(post) %}
   {% if post.extra.author %}
+    <br>
     <small class="author">{{ post.extra.author }}</small>
   {% endif %}
 {% endmacro %}
@@ -35,4 +36,37 @@
       {{ config.extra.footer_about | markdown | safe }}
     </div>
   {% endif %}
+{% endmacro %}
+
+{% macro reading_preview(post) %}
+<div class="reading-preview">
+  <h3 class="reading-title{% if post.extra.expand_preview %} reading-title__long{% endif %}">
+    <a href="{{ post.permalink }}">{{ post.title }}</a>
+    {{ helpers_preview::author(post=post) }}
+  </h3>
+
+  {% if post.taxonomies.tags %}
+    <span class="reading-tags {% if post.extra.expand_preview %} reading-tags__long{% endif %}">
+      {% for tag in post.taxonomies.tags %}
+        <span class="reading-tag">{{ tag }}</span>
+      {% endfor %}
+    </span>
+  {% endif %}
+
+  <span class="reading-date">
+    {{ post.date | date(format="%B %d, %Y") }}
+  </span>
+
+  <div class="summary">
+    {% if post.extra.expand_preview %}
+      {{ helpers_preview::summary(post=post,read_more=true) }}
+    {% else %}
+      {{ helpers_preview::summary(post=post,read_more=false) }}
+    {% endif %}
+  </div>
+
+  {% if post.extra.current_read %}
+    <span class="reading-current no-select">Current read</span>
+  {% endif %}
+</div>
 {% endmacro %}

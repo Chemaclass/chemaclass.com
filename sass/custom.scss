@@ -20,6 +20,14 @@
 }
 
 .reading-post {
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
   .book-pages {
     display: none;
   }
@@ -34,6 +42,31 @@
     color: #404040;
     font-size: 0.5em;
     display: block;
+  }
+}
+
+.taxonomy-container {
+  .reading-preview {
+    padding-bottom: 8px;
+    padding-left: 5px;
+    border-bottom: 1px gray solid;
+
+    overflow: hidden;
+    width: 45%;
+    float: left;
+    height: 430px;
+    word-wrap: break-word;
+
+    .reading-title {
+      max-width: unset;
+    }
+
+    img {
+      margin: 0 2px;
+      height: auto;
+      max-height: 245px;
+      width: auto;
+    }
   }
 }
 

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% import "helpers-preview.html" as helpers_preview %}
+
+{% block posthead %} 
+  {% for post in term.pages %}
+    <link rel="prerender" href="{{ post.permalink }}" />
+  {% endfor %}
+{% endblock posthead %}
+
+{% block content %}
+  <h1>{{ term.pages | length }} pages tagged with "{{ term.name }}"</h1>
+  <div class="taxonomy-container">
+    {% for post in term.pages %}
+      <div class="reading-preview">
+        <h3 class="reading-title reading-title__long">
+          <a href="{{ post.permalink }}">{{ post.title }}</a>
+        </h3>
+
+        <span class="reading-date">
+          {{ post.date | date(format="%B %d, %Y") }}
+        </span>
+
+        <div class="summary">
+          {{ helpers_preview::summary(post=post,read_more=false) }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock content %}
