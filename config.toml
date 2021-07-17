@@ -32,8 +32,8 @@ profile_small = "icon.png"
 profile_large = "profile.jpg"
 default_og_image = "profile.jpg"
 
-accent = "#05a081"
-accent_light = "#82d0c0"
+accent = "#3a5c88"
+accent_light = "#397fd8"
 
 repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/content/"
 gtag = ""
