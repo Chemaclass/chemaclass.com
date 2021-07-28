@@ -7,7 +7,7 @@ date = 2016-12-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/22.jpg)
+{{ youtube(id="tUAdMeowzi8") }}
 
 ## Esclavo de la muerte
 
@@ -58,3 +58,5 @@ Nuestra educación viene dada por la enseñanza de las repercusiones de nuestros
 La correcta educación es aquélla que enseña la grandeza de nuestros actos comenzando desde una perspectiva de superación personal: queriendo ser mejores que nosotros mismos día tras día.
 
 Nuestras acciones deberían tener una reacción igual a lo que hacemos; deberíamos actuar como nos gustaría que con nosotros el mundo se comportase. Deberíamos prosperar como a nosotros nos gustaría ver a los nuestros prosperar. Deberíamos ser como aquella persona que nos gustaría realmente conocer.
+
+![book-chapter](/images/books/oeur/22.jpg)

@@ -7,7 +7,7 @@ date = 2016-09-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/19.jpg)
+{{ youtube(id="TPko2Is166c") }}
 
 ## Solo se vive una vez
 
@@ -83,3 +83,5 @@ Extrañar no es ausencia de dolor.
 
 Vivir es tomarnos en serio el antes y el después de nuestros días.
 Querer crecer despertando para aprender a luchar nos permitirá dejar de extrañar vivir porque estaremos verdaderamente viviendo.
+
+![book-chapter](/images/books/oeur/19.jpg)

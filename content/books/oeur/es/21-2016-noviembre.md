@@ -7,7 +7,7 @@ date = 2016-11-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/21.jpg)
+{{ youtube(id="bfe-N9g4gO0") }}
 
 ## Dulces recuerdos
 
@@ -61,3 +61,5 @@ No estoy afirmando que tanto la política como la religión sean innecesarios si
 La política, al fin y al cabo, vela —o debería hacerlo— por nuestro bienestar como seres colectivos. Sin embargo, la religión ha abusado de la ignorancia, de aquéllos que quisieron como de aquéllos que no tuvieron otras opciones.
 
 Será, por tanto, nuestro mayor error cualquier creencia dispuesta —incluso predispuesta— en cualquier utopía.
+
+![book-chapter](/images/books/oeur/21.jpg)

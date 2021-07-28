@@ -7,7 +7,7 @@ date = 2015-11-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/09.jpg)
+{{ youtube(id="TO_mYtRJIFQ") }}
 
 ## Al motivo
 
@@ -103,3 +103,5 @@ Concluiré como dijo un maestro:
 Cuanto antes lo hagamos nuestro,
 antes se volverá amable».
 ```
+
+![book-chapter](/images/books/oeur/09.jpg)

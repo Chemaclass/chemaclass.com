@@ -7,7 +7,7 @@ date = 2015-09-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/07.jpg)
+{{ youtube(id="f6fkaLqE8pI") }}
 
 ## Dios existe: soy yo, y tú también
 
@@ -70,3 +70,5 @@ Existen tantas variantes y parámetros posibles… que por más que conozcamos, 
 Defendamos nuestros intereses, pero siempre con argumentos, y el día que éstos no sean verdaderos cimientos yo os propongo: destruirlos y volver a empezar. Pues edificar sobre algo podrido…, así quedará establecido.
 
 Una mente cerrada donde las ideas no pueden confluir es sinónimo de fracaso. Un lugar cerrado en el que las ideas no pueden converger está destinado al olvido.
+
+![book-chapter](/images/books/oeur/07.jpg)

@@ -7,7 +7,7 @@ date = 2016-10-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/20.jpg)
+{{ youtube(id="K6mxWaXrMn8") }}
 
 ## Entropía
 
@@ -32,3 +32,5 @@ El futuro no es más que nuestra recompensa por nuestro presente. Por supuesto q
 ¿Qué puede haber más importante sino nuestra plenitud en nuestro desarrollo sincero como personas?
 
 No dejemos que el mal tiempo nos impida ser nosotros. No dejemos de prosperar en la medida de nuestras posibilidades. Proyectemos hacia el mundo aquello que nosotros quisiéramos sentir; pues nosotros somos el mundo, pero, sobre todo, el futuro.
+
+![book-chapter](/images/books/oeur/20.jpg)

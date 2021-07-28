@@ -7,7 +7,7 @@ date = 2015-10-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/08.jpg)
+{{ youtube(id="psZ8Q1UoypQ") }}
 
 ## Por encima del bien y del mal
 ```
@@ -108,3 +108,5 @@ como un recuerdo vacío.
 Me gustaría mucho ser leído, ¿por qué, si no, escribiría? Quizá por el simple disfrute del pensar. Quizá por la dicha propia en uno mismo.
 
 Con nuestros sueños y en un sueño. Pensador como ninguno, mortal como todos.
+
+![book-chapter](/images/books/oeur/08.jpg)

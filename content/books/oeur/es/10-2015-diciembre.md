@@ -7,7 +7,7 @@ date = 2015-12-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/10.jpg)
+{{ youtube(id="q5BdYH_zAfQ") }}
 
 ## El arte de la adaptación
 
@@ -126,3 +126,5 @@ Todo viene de mucho más atrás: años y años de error sin corrección y sin un
 Pero más culpable que Dios y su inexistencia es la carencia que tienen algunos por su excesiva creencia. Más culpable que Dios son los humanos que abusan de él y lo utilizan: modifican a su antojo su significado y lo intentan inculcar como verdad absoluta a sus prójimos. Incompetentes y necios, encerrados en su maldita «fe» hipócrita y desleal. El contexto de nuestras palabras puede variar tanto nuestra intención real…
 
 El problema no es la Navidad en sí misma ni mucho menos su festividad ni la idea de una especial reunión familiar. Es el que engaña y el que se deja engañar. El problema no son las herramientas ni lo que disponemos, sino el uso que con ello hacemos, especialmente, a todos los que nos importan.
+
+![book-chapter](/images/books/oeur/10.jpg)

@@ -7,7 +7,7 @@ date = 2016-02-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/12.jpg)
+{{ youtube(id="eY03KCZue6s") }}
 
 ## Viajar a nuestro encuentro
 
@@ -125,3 +125,5 @@ El verdadero problema no son los problemas en sí mismos. La vida está llena de
 Es tan fácil dormirse deseando evadirnos de todo…, especialmente cuando la vida no parece estar con intenciones de tendernos la mano. Mantenernos vivos es, en ocasiones, tan difícil que cuesta de creer, pues allá donde miremos veremos comúnmente almas apagadas, sin rumbo, que no saben siquiera por dónde van ni hacia dónde se dirigen.
 
 Creo, por tanto, que éstas son y deberían ser siempre nuestras principales cuestiones. Dormir es sano, por supuesto, pero «dormirnos la vida» nos costará la misma. En este contexto, deberíamos permanecer despiertos, pero no es fácil. ¿Quién dijo acaso que lo fuera a ser?
+
+![book-chapter](/images/books/oeur/12.jpg)

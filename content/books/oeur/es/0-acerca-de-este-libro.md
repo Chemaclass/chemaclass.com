@@ -42,3 +42,7 @@ A Francisco Javier por haber dedicado su tiempo a ofrecerme ideas, sugerencias y
 
 > Un libro dedicado sólo a los valientes <br>
 > Para nadie y para todos
+
+## Audiolibro completo
+
+{{ youtube(id="e8K8CrL_W-0") }}
