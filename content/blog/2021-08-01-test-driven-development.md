@@ -67,7 +67,7 @@ The best way to learn Test-Driven is doing software katas. Try them alone and wi
 - With others: pair-programming is essential in our job. Katas are the best tools to train our communication skills and
   learn together from each other.
 
-### What's a Code Kata?
+### What's a Code Kata?
 
 Software developers don't practice enough. Most of our learning takes place on the job, which means that most of our
 mistakes get made there as well.
@@ -75,12 +75,12 @@ mistakes get made there as well.
 Other creative professions practice: musicians play technical pieces, poets constantly rewrite works. In karate, most of
 a student's time is spent learning and refining basic moves. These are katas.
 
-### What is the goal of a kata? What should we have at the end?
+### What is the goal of a kata? What should we have at the end?
 
 Katas exist to help developers get the same benefits as practicing in any other profession. There are simple, artificial
 exercises that let you experiment and learn without the pressure of a production environment.
 
-> There are no right or wrong answers in any software kata: the benefit comes from the process, not from the result.
+> There are no right or wrong answers in any software kata: the benefit comes from the process, not from the result.
 
 ### Tips
 
@@ -102,9 +102,15 @@ You can find a lot of katas on the Internet. For example:
 
 ### TDD is more as a workflow than a design
 
+> "TDD is a design tool." That’s what Sandro has said for years. But not anymore. After working with different teams and in different organisations, and also carefully inspecting how he works, Sandro changed his mind about the role of TDD in software design.
+
 {{ youtube(id="KyFVA4Spcgg") }}
 
-> "TDD is a design tool." That’s what Sandro has said for years. But not anymore. After working with different teams and in different organisations, and also carefully inspecting how he works, Sandro changed his mind about the role of TDD in software design.
+TDD in a nutshell; it's about the rhythm.
+
+1) Specify what you want.
+2) Make it work.
+3) Make it better.
 
 ---
 
