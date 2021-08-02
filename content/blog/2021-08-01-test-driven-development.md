@@ -5,7 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "tdd", "testing", "software" ]
 [extra]
-static_thumbnail = "/images/blog/2021-08-01/tdd-style.png"
+static_thumbnail = "/images/blog/2021-08-01/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2021-08-01/cover.jpg)
