@@ -1,6 +1,6 @@
 +++
 title = "Test-Driven (Development)"
-description = "Why it is so complicated?"
+description = "Why is it so complicated?"
 draft = false
 [taxonomies]
 tags = [ "tdd", "testing", "software" ]
