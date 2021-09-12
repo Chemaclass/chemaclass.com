@@ -7,7 +7,6 @@ tags = [ "novel", "fiction" ]
 pages = "220"
 author = "J. D. Salinger"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lprH3LF4L._SX323_BO1,204,203,200_.jpg"
-pin = true
 expand_preview = true
 +++
 
