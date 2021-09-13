@@ -5,7 +5,7 @@ description = "A True Story of Turning Followers into Leaders"
 tags = [ "leadership", "management" ]
 [extra]
 pages = "220"
-author = "J. D. Salinger"
+author = "L. David Marquet"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL._SX323_BO1,204,203,200_.jpg"
 expand_preview = true
 +++
