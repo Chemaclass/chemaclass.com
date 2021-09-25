@@ -1,5 +1,5 @@
 +++
-title = "About | Chemaclass"
+title = "Projects | Chemaclass"
 template = "page.html"
 +++
 

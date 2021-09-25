@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b1b280e0-ac15-4750-9c17-cae54a3add7a/deploy-status)](https://app.netlify.com/sites/chemaclass/deploys)
 
-Something about me and my blog.
+My blog, readings and projects. 
 
 ---
 
