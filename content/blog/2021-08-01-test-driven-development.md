@@ -10,8 +10,8 @@ static_thumbnail = "/images/blog/2021-08-01/cover.jpg"
 
 ![blog-cover](/images/blog/2021-08-01/cover.jpg)
 
-The complexity here is not about writing tests itself, but the habits that the developers have to change to create
-software that is easy to be tested.
+The complexity here is not about writing tests itself, but the habits that we have to change to create software that is
+easy to be tested.
 
 <!-- more -->
 
