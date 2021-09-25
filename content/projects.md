@@ -51,9 +51,21 @@ same happened to Knob-MVC once I realized how messy that one also was. I don't l
 - [php-best-practices](https://github.com/Chemaclass/php-best-practices): what I consider best practices for web-dev.
 - [php-scaffolding](https://github.com/Chemaclass/php-scaffolding): a basic PHP scaffolding with Docker.
 - [typed-arrays](https://github.com/Chemaclass/typed-arrays): generics replacement for PHP.
-- [stock-ticker](https://github.com/Chemaclass/stock-ticker): get a notification with the news from your favorites
-  Tickers.
-- [jira-status-notifier](https://github.com/Chemaclass/JiraStatusNotifier): Notify when the JIRA tickets don't move
-  along.
+- [stock-ticker](https://github.com/Chemaclass/stock-ticker): get an email with the news from your favorites Tickers.
+- [jira-status-notifier](https://github.com/Chemaclass/JiraStatusNotifier): notify when JIRA tickets don't move along.
 - [edifact-parser](https://github.com/Chemaclass/EdifactParser): a parser for a UN/EDIFACT file format in PHP.
 - [knob-mvc](https://github.com/Chemaclass/knob-mvc): a framework to create WordPress templates (2015/2017).
+
+---
+
+## Books
+
+### Ojos en un Recuerdo (2015 - 2017)
+
+[Read more](/books)
+
+I used to have a personal blog back in 2015. I wrote about my thoughts and feelings because I wanted to do some
+retrospectives later on, to help me understand myself better. I started in January 2015, and by December 2017, I
+published a book with all these reflections.
+
+There is an audiobook in Spanish as well: [https://youtu.be/e8K8CrL_W-0](https://youtu.be/e8K8CrL_W-0).
