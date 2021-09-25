@@ -36,7 +36,7 @@ tags = []
   - Solitaire
   - There are
   - To create
-- Chapter 5: July
+- [Chapter 5: July](@/books/oeur/en/05-2015-julio.md)
   - Actions and words
   - To listen unnoticed
   - What is clear
