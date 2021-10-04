@@ -26,7 +26,8 @@ Usually, it's also used:
 
 ### Pull Requests aren't the best tool for everything
 
-The main problem with these topics above is that PR's are usually ready when the feature/bug is already being worked on and in the last stage of its development process. It's an "already change proposal to be merged into the current system", don't forget that.
+The main problem with these topics above is that PR's are usually ready when the feature/bug is already being worked on and in the last stage of its development process.
+It [a PR] is an "already changed proposal [I have already worked on this change, here's the code] to be merged into the current system [someone please look it over]".
 
 The concept of "Draft PR" exists to make explicit that a PR is not ready to be merged, so it's still a "work in progress thing", but that's another topic.
 
