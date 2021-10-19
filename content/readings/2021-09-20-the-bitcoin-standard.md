@@ -1,7 +1,6 @@
 +++
 title = "The Bitcoin Standard"
 description = "The Decentralized Alternative to Central Banking"
-draft = true
 [taxonomies]
 tags = [ "financial" ]
 [extra]
