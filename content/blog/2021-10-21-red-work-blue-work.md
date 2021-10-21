@@ -4,7 +4,7 @@ description = "Managing the two kinds of work"
 [taxonomies]
 tags = [ "tdd", "testing", "software" ]
 [extra]
-static_thumbnail = "/images/blog/2021-09-25/cover.jpg"
+static_thumbnail = "/images/blog/2021-10-21/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2021-10-21/cover.jpg)
