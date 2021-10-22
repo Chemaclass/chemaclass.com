@@ -2,7 +2,7 @@
 title = "Red Work vs Blue Work"
 description = "Managing the two kinds of work"
 [taxonomies]
-tags = [ "tdd", "testing", "software" ]
+tags = [ "leadership", "people" ]
 [extra]
 static_thumbnail = "/images/blog/2021-10-21/cover.jpg"
 +++
@@ -70,6 +70,7 @@ them.
 
 ---
 
-### Extra
+### References
 
+- [Leadership is Language](/readings/leadership-is-language/) Book
 - [https://www.infoq.com/podcasts/david-marquet/](https://www.infoq.com/podcasts/david-marquet/)
