@@ -1,5 +1,5 @@
 +++
-title = "The Art of Testing: where design meets quality"
+title = "The art of testing: where design meets quality"
 description = "From a software developer's point of view"
 [taxonomies]
 tags = [ "software", "design", "testing", "quality"]
@@ -49,3 +49,5 @@ The art of testing is about being able to use testing itself to help and contrib
 Should we test everything? Well, that's the million $ question. In my opinion, everything depends on the context. We might encounter situations where tests might be not really useful. That said, we should write our code as if it could be tested anyway.
 
 Easily testable code tends to better design and therefore better quality.
+
+![blog-cover](/images/blog/2020-04-07/footer.jpg)
