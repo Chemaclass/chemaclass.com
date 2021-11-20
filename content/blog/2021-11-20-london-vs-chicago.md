@@ -9,9 +9,14 @@ static_thumbnail = "/images/blog/2021-11-20/cover.jpg"
 
 ![blog-cover](/images/blog/2021-11-20/cover.jpg)
 
-In TDD, there are two known schools: the mockist school (aka Outside-in) and the classicist school (aka Inside-out).
+There are two known schools in TDD: the mockist school (aka Outside-in) and the classicist school (aka Inside-out).
 
 <!-- more -->
+
+### Why London and Chicago?
+
+Two companies, one from London and another from Chicago, claimed to do TDD, but they were focused on different aspects.
+The London company was building software from outside-in, while the Chicago company from inside-out. Let's see them in more detail.
 
 ## Outside-in: London School
 
