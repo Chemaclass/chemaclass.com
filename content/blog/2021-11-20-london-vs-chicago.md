@@ -9,9 +9,9 @@ static_thumbnail = "/images/blog/2021-11-20/cover.jpg"
 
 ![blog-cover](/images/blog/2021-11-20/cover.jpg)
 
-### A little of context
-
 In TDD, there are two known schools: the mockist school (aka Outside-in) and the classicist school (aka Inside-out).
+
+<!-- more -->
 
 ## Outside-in: London School
 
