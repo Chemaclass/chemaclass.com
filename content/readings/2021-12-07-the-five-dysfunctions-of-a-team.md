@@ -36,6 +36,8 @@ and build a cohesive, effective team.
 
 ## The 5 dysfunction model
 
+{{ youtube(id="GCxct4CR-To") }}
+
 ### 1) Absence of trust
 
 The fear of being vulnerable prevents team members from building trust with each other.
@@ -70,9 +72,9 @@ peers on actions and behaviors that may seem counterproductive to the overall go
 
 The pursuit of individual goals and personal status erodes the team's focus on collective success.
 
-Team members naturally tend to put their own needs
-(ego, career development, recognition, etc.) ahead of the collective goals of the team when individuals aren't held
-accountable. If a team has lost sight of the need for achievement, the business ultimately suffers.
+Team members naturally tend to put their own needs (ego, career development, recognition, etc.) ahead of the collective
+goals of the team when individuals aren't held accountable. If a team has lost sight of the need for achievement, the
+business ultimately suffers.
 
 ![blog-cover](/images/readings/2021-12-07/the-model.jpg)
 
