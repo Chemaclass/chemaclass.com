@@ -7,17 +7,17 @@ tags = [ "leadership", "people" ]
 pages = "360"
 author = "Simon Sinek"
 static_thumbnail = "https://m.media-amazon.com/images/I/51ejdeSXFjL.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <a target="_blank" href="https://www.amazon.com/Leaders-Eat-Last-Together-Others-ebook/dp/B00DGZKQM8">
     <img border="0" src="https://m.media-amazon.com/images/I/51ejdeSXFjL.jpg" >
 </a>
 
+<!-- more -->
+
 A company's biggest strength doesn't lie in its products or services. It always lies in its people, and in their ability
 to cooperate closely and rally behind the organization, especially during a crisis.
-
-<!-- more -->
 
 However, loyalty and commitment must be earned. Today, work has become a contractual, transactional relationship in many
 organizations. Intense competition and layoffs are the norm. Hardly anyone believes in loyalty to a company anymore,
