@@ -1,6 +1,6 @@
 +++
-title = "Milgram's experiment"
-description = "The power of authority and obedience"
+title = "The power of authority and obedience"
+description = "Milgram's experiment"
 [taxonomies]
 tags = [ "experiment", "psychology", "people", "humanity" ]
 [extra]
@@ -9,7 +9,8 @@ static_thumbnail = "/images/blog/2021-11-20/cover.jpg"
 
 ![blog-cover](/images/blog/2022-01-24/cover.jpg)
 
-Milgram was interested in researching how far people would go in obeying an instruction if it involved harming another person, and how easily people could be influenced into committing atrocities. For example, Germans in WWII.
+Milgram was interested in researching how far people would go in obeying an instruction if it involved harming another
+person, and how easily people could be influenced into committing atrocities. For example, Germans in WWII.
 
 <!-- more -->
 
@@ -37,7 +38,6 @@ Milgram's confederate (pretending to be a real participant).
 The learner was taken into a room and had electrodes attached to his arms, and the teacher and researcher went into a
 room next door that contained an electric shock generator and a row of switches marked from 15 volts (slight shock) to
 300 volts (Danger: severe shock) to 450 volts (XXX).
-
 
 ![blog-footer](/images/blog/2022-01-24/video-fragment.jpg)
 
@@ -73,8 +73,8 @@ learned in a variety of situations, for example in the family, school, and work.
 
 ## Milgrams' agency theory
 
-Milgram explained the behaviour of the participants by suggesting that people have two states of behaviour when
-they are in a social situation:
+Milgram explained the behaviour of the participants by suggesting that people have two states of behaviour when they are
+in a social situation:
 
 - The autonomous state: people direct their own actions, and they take responsibility for the results of those actions.
 - The agentic state: people allow others to direct their actions and then pass off the responsibility for the
@@ -128,9 +128,8 @@ figure? According to Milgram, there are some situational factors that can explai
 Milgram's experiment has become a classic in psychology, demonstrating the dangers of obedience. The research suggested
 that situational variables have a stronger sway than personality factors in determining obedience.
 
-> Often it is not so much the kind of person a man is as the kind of situation in which he finds himself that determines
-how he will act.
-> 
+> Often it is not so much the kind of person a man is as the kind of situation in which he finds himself that determines how he will act.
+>
 > Stanley Milgram, 1974.
 
 ![blog-footer](/images/blog/2022-01-24/footer.jpg)
