@@ -1,9 +1,10 @@
 +++
 title = "The power of authority and obedience"
-description = "Milgram's experiment"
+description = "Milgram was interested in researching how far people would go in obeying an instruction if it involved harming another person, and how easily people could be influenced into committing atrocities. For example, Germans in WWII."
 [taxonomies]
 tags = [ "experiment", "psychology", "people", "humanity" ]
 [extra]
+subtitle = "Milgram's experiment"
 static_thumbnail = "/images/blog/2022-01-24/cover.jpg"
 +++
 

@@ -4,6 +4,7 @@ description = ""
 [taxonomies]
 tags = [ "software", "general wisdom" ]
 [extra]
+subtitle = ""
 pages = "250"
 author = "Kevlin Henney"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51AqVDUY13L._SX331_BO1,204,203,200_.jpg"

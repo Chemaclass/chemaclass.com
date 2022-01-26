@@ -1,9 +1,10 @@
 +++
 title = "Zombie Scrum Survival Guide"
-description = "A Journey to Recovery"
+description = ""
 [taxonomies]
 tags = [ "scrum", "agile", "recovery" ]
 [extra]
+subtitle = "A Journey to Recovery"
 pages = "250"
 author = "Christiaan Verwijs, Johannes Schartau, Barry Overeem"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/511aL5yxHVL._SX383_BO1,204,203,200_.jpg"

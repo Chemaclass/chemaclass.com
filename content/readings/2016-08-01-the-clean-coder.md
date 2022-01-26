@@ -4,6 +4,7 @@ description = "A Code of Conduct for Professional Programmers"
 [taxonomies]
 tags = [ "software", "clean-code" ]
 [extra]
+subtitle = "A Code of Conduct for Professional Programmers"
 pages = "250"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lbNIP1YLL._SX381_BO1,204,203,200_.jpg"

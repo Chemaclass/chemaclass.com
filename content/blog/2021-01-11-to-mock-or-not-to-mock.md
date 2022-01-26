@@ -1,9 +1,10 @@
 +++
 title = "To mock or not to mock"
-description = "How to escape the mocking hell"
+description = "Mocking is useful, but 'what to mock' usually turns out to be a bit more complicated than expected if you don't treat this carefully."
 [taxonomies]
 tags = [ "software", "mocking", "testing", "design" ]
 [extra]
+subtitle = "How to escape the mocking hell"
 static_thumbnail = "/images/blog/2021-01-11/cover.jpg"
 +++
 

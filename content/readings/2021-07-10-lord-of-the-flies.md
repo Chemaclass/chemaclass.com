@@ -4,6 +4,7 @@ description = ""
 [taxonomies]
 tags = [ "novel", "fiction" ]
 [extra]
+subtitle = ""
 pages = "220"
 author = "William Golding"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51de-lVnNCL._SX325_BO1,204,203,200_.jpg"

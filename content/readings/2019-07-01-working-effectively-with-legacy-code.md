@@ -4,6 +4,7 @@ description = "This book offers start-to-finish strategies for working more effe
 [taxonomies]
 tags = [ "software", "legacy", "testing" ]
 [extra]
+subtitle = "This book offers start-to-finish strategies for working more effectively with large, untested legacy code bases"
 pages = "460"
 author = "Michael Feathers"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41Fh9iUog4L._SX376_BO1,204,203,200_.jpg"

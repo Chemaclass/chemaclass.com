@@ -4,6 +4,7 @@ description = "The journey to mastery"
 [taxonomies]
 tags = [ "software", "pragmatic" ]
 [extra]
+subtitle = "The journey to mastery"
 pages = "350"
 author = "Andrew Hunt, David Thomas"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41as+WafrFL._SX258_BO1,204,203,200_.jpg"

@@ -1,9 +1,10 @@
 +++
 title = "Embrace the change"
-description = "Who moved my cheese?🧀"
+description = "The tale is a beautiful metaphor of the different attitudes that people adopt as part of their identity in life when they have to confront any change."
 [taxonomies]
 tags = [ "books", "change", "management", "leadership" ]
 [extra]
+subtitle = "Who moved my cheese?🧀"
 static_thumbnail = "/images/blog/2021-03-01/cover.jpg"
 +++
 

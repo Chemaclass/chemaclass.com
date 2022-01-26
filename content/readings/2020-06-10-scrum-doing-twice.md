@@ -4,6 +4,7 @@ description = "Scrum: The Art of Doing Twice the Work in Half the Time"
 [taxonomies]
 tags = [ "management", "business" ]
 [extra]
+subtitle = "Scrum: The Art of Doing Twice the Work in Half the Time"
 pages = "250"
 author = "Jeff Sutherland"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/515tsl4uoZL._SX324_BO1,204,203,200_.jpg"

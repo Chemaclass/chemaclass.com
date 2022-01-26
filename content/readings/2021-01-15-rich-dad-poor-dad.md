@@ -1,9 +1,10 @@
 +++
 title = "Rich dad poor dad"
-description = "What the Rich Teach Their Kids about Money That the Poor and Middle Class Do Not!"
+description = ""
 [taxonomies]
 tags = [ "business", "financial" ]
 [extra]
+subtitle = "What the Rich Teach Their Kids about Money That the Poor and Middle Class Do Not!"
 pages = "180"
 author = "Robert T. Kiyosaki"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51rgCls-voL._SX350_BO1,204,203,200_.jpg"

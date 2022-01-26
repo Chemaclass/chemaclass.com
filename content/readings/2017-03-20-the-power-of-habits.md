@@ -4,6 +4,7 @@ description = "Why We Do What We Do, and How to Change"
 [taxonomies]
 tags = [ "habits", "improvement" ]
 [extra]
+subtitle = "Why We Do What We Do, and How to Change"
 pages = "400"
 author = "Charles Duhigg"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41fQW9Q-L4L._SX324_BO1,204,203,200_.jpg"

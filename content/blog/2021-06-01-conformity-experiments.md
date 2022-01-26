@@ -1,16 +1,16 @@
 +++
 title = "Conformity experiments"
-description = "The uncomfortable truth about human nature"
+description = "To what extent do social forces alter people's opinions? Which aspect of the group influence is most important — the size of the majority, or the unanimity of opinion?"
 [taxonomies]
 tags = [ "experiment", "psychology", "people", "humanity" ]
 [extra]
+subtitle = "The uncomfortable truth about human nature"
 static_thumbnail = "/images/blog/2021-06-01/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2021-06-01/cover.jpg)
 
-To what extent do social forces alter people's opinions? 
-Which aspect of the group influence is most important — the size of the majority, or the unanimity of opinion?
+To what extent do social forces alter people's opinions? Which aspect of the group influence is most important — the size of the majority, or the unanimity of opinion?
 
 <!-- more -->
 

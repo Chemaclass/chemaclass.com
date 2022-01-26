@@ -1,9 +1,10 @@
 +++
 title = "Leadership is Language"
-description = "The hidden power of what you say, and what you don't"
+description = ""
 [taxonomies]
 tags = [ "leadership", "people" ]
 [extra]
+subtitle = "The hidden power of what you say, and what you don't"
 pages = "350"
 author = "L. David Marquet"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41rS+NphHwL._SX329_BO1,204,203,200_.jpg"

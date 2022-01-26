@@ -1,9 +1,10 @@
 +++
 title = "The Art of Leadership"
-description = "Small Things, Done Well"
+description = ""
 [taxonomies]
 tags = [ "leadership", "management" ]
 [extra]
+subtitle = "Small Things, Done Well"
 pin = false
 pages = "165"
 author = "Michael Lopp"

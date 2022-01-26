@@ -1,9 +1,10 @@
 +++
 title = "Agile Product Management"
-description = "Creating Products that Customers Love"
+description = ""
 [taxonomies]
 tags = [ "management", "agile" ]
 [extra]
+subtitle = "Creating Products that Customers Love"
 pages = "120"
 author = "Roman Pichler"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41NCrarVPVL._SX328_BO1,204,203,200_.jpg"

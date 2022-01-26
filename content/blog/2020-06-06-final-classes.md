@@ -1,9 +1,10 @@
 +++
 title = "Final classes in PHP | Java | Any"
-description = "Final, or not final, that's the question"
+description = "Clear contracts, isolated side effects, testability, low complexity and cognitive load, code fluidity, and confidence in yourself."
 [taxonomies]
 tags = [ "final", "classes", "php", "java" ]
 [extra]
+subtitle = "Final, or not final, that's the question"
 static_thumbnail = "/images/blog/2020-06-06/cover.jpg"
 +++
 

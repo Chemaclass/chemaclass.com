@@ -1,9 +1,10 @@
 +++
 title = "97 Things Every Engineering Manager should know"
-description = "Collective Wisdom from the Experts"
+description = ""
 [taxonomies]
 tags = [ "engineering", "management" ]
 [extra]
+subtitle = "Collective Wisdom from the Experts"
 pages = "255"
 author = "Camille Fournier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51pZKdYunNL._SX331_BO1,204,203,200_.jpg"

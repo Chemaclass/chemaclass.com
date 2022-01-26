@@ -1,9 +1,10 @@
 +++
 title = "The Five Dysfunctions of a Team"
-description = "A Leadership Fable"
+description = ""
 [taxonomies]
 tags = [ "leadership", "management" ]
 [extra]
+subtitle = "A Leadership Fable"
 pages = "240"
 author = "Patrick M. Lencioni"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QArmq8raL._SX328_BO1,204,203,200_.jpg"

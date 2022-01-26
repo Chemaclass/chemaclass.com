@@ -1,9 +1,10 @@
 +++
 title = "Start with Why"
-description = "How Great Leaders Inspire Everyone to Take Action"
+description = ""
 [taxonomies]
 tags = [ "leadership", "entrepreneurship" ]
 [extra]
+subtitle = "How Great Leaders Inspire Everyone to Take Action"
 pages = "250"
 author = "Simon Sinek"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51BlNddi+NL._SX330_BO1,204,203,200_.jpg"

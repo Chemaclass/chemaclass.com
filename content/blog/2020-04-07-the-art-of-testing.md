@@ -1,9 +1,10 @@
 +++
 title = "The art of testing: where design meets quality"
-description = "From a software developer's point of view"
+description = "Why you should consider testing as part of your daily development habit and how it's directly linked to the software quality."
 [taxonomies]
 tags = [ "software", "design", "testing", "quality"]
 [extra]
+subtitle = "From a software developer's point of view"
 static_thumbnail = "/images/blog/2020-04-07/cover.jpg"
 +++
 

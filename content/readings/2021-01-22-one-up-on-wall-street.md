@@ -1,9 +1,10 @@
 +++
 title = "One up on wall street"
-description = "How To Use What You Already Know To Make Money In The Market"
+description = ""
 [taxonomies]
 tags = [ "financial", "investing" ]
 [extra]
+subtitle = "How To Use What You Already Know To Make Money In The Market"
 pages = "180"
 author = "Peter Lynch"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51RWLY76LAL._SX324_BO1,204,203,200_.jpg"

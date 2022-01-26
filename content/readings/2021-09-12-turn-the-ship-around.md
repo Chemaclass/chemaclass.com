@@ -1,9 +1,10 @@
 +++
 title = "Turn the Ship Around!"
-description = "A True Story of Turning Followers into Leaders"
+description = ""
 [taxonomies]
 tags = [ "leadership", "management" ]
 [extra]
+subtitle = "A True Story of Turning Followers into Leaders"
 pages = "220"
 author = "L. David Marquet"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL._SX323_BO1,204,203,200_.jpg"

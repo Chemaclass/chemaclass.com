@@ -4,6 +4,7 @@ description = "Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Pro
 [taxonomies]
 tags = [ "software", "programming" ]
 [extra]
+subtitle = "Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages"
 pages = "300"
 author = "Bruce Tate"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51LZT+tSrTL._SX415_BO1,204,203,200_.jpg"

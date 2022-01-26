@@ -6,10 +6,10 @@
   <div class="post-title">
     <h1>
       {{ page.title }}
-      {% if page.description %}
+      {% if page.extra.subtitle %}
         <br>
         <small style="margin-top: 0; color: #404040; font-size: 0.6em;">
-          {{ page.description }}
+          {{ page.extra.subtitle }}
         </small>
       {% endif %}
     </h1>

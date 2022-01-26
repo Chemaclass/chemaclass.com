@@ -4,6 +4,7 @@ description = "Embrace Change"
 [taxonomies]
 tags = [ "software", "team-work" ]
 [extra]
+subtitle = "Embrace Change"
 pages = "160"
 author = "Kent Beck"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41b11Tipy0L._SX396_BO1,204,203,200_.jpg"

@@ -1,9 +1,10 @@
 +++
 title = "Leaders Eat Last"
-description = "Why Some Teams Pull Together and Others Don't"
+description = ""
 [taxonomies]
 tags = [ "leadership", "people" ]
 [extra]
+subtitle = "Why Some Teams Pull Together and Others Don't"
 pages = "360"
 author = "Simon Sinek"
 static_thumbnail = "https://m.media-amazon.com/images/I/51ejdeSXFjL.jpg"

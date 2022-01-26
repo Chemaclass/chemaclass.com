@@ -1,9 +1,10 @@
 +++
 title = "Stock market investing"
-description = "25 Golden Stock Investing Lessons"
+description = ""
 [taxonomies]
 tags = [ "financial", "investing" ]
 [extra]
+subtitle = "25 Golden Stock Investing Lessons"
 pages = "160"
 author = "Mark Atwood"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51Gnm7D+qIL._SX311_BO1,204,203,200_.jpg"

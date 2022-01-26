@@ -4,6 +4,7 @@ description = "A Guide for Tech Leaders Navigating Growth and Change"
 [taxonomies]
 tags = [ "management", "leadership" ]
 [extra]
+subtitle = "A Guide for Tech Leaders Navigating Growth and Change"
 pages = "220"
 author = "Camille Fournier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51BHEtpF4eL._SX331_BO1,204,203,200_.jpg"

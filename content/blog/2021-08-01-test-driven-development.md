@@ -1,10 +1,11 @@
 +++
 title = "Test-Driven (Development)"
-description = "What is challenging about it?"
+description = "The complexity here is not about writing tests itself, but the habits that we have to change to create software that is easy to be tested."
 draft = false
 [taxonomies]
 tags = [ "tdd", "testing", "software" ]
 [extra]
+subtitle = "What is challenging about it?"
 static_thumbnail = "/images/blog/2021-08-01/cover.jpg"
 +++
 

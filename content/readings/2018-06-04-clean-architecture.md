@@ -4,6 +4,7 @@ description = "A Craftsman's Guide to Software Structure and Design"
 [taxonomies]
 tags = [ "software", "architecture" ]
 [extra]
+subtitle = "A Craftsman's Guide to Software Structure and Design"
 pages = "400"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41TPrNDI50L._SX387_BO1,204,203,200_.jpg"

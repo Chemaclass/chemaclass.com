@@ -1,9 +1,10 @@
 +++
 title = "The Bitcoin Standard"
-description = "The Decentralized Alternative to Central Banking"
+description = ""
 [taxonomies]
 tags = [ "financial" ]
 [extra]
+subtitle = "The Decentralized Alternative to Central Banking"
 pages = "300"
 author = "Saifedean Ammous"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41x6NvXWekS._SX336_BO1,204,203,200_.jpg"

@@ -1,9 +1,10 @@
 +++
 title = "The art of refactoring"
-description = "When, how, and why"
+description = "If you see something, in the scope of your current task, that can be easily improved, improve it. And if you have any questions about it, ask."
 [taxonomies]
 tags = [ "software", "refactoring", "testing" ]
 [extra]
+subtitle = "When, how, and why"
 static_thumbnail = "/images/blog/2020-06-28/cover.jpg"
 +++
 

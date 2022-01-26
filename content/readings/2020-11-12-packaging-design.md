@@ -1,9 +1,10 @@
 +++
 title = "Principles of package design"
-description = "Creating Reusable Software Components"
+description = ""
 [taxonomies]
 tags = [ "software", "design" ]
 [extra]
+subtitle = "Creating Reusable Software Components"
 pages = "250"
 author = "Matthias Noback"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41MltJ4VMxL._SX348_BO1,204,203,200_.jpg"

@@ -1,10 +1,10 @@
 +++
 title = "Become an Effective Software Engineering Manager"
-description = "How to Be the Leader Your Development Team Needs"
-slug = "Become an Effective Software Engineering Manager"
+description = ""
 [taxonomies]
 tags = [ "software", "management" ]
 [extra]
+subtitle = "How to Be the Leader Your Development Team Needs"
 pages = "350"
 author = "James Stanier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL._SX404_BO1,204,203,200_.jpg"

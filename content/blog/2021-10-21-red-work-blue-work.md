@@ -1,9 +1,10 @@
 +++
 title = "Red Work vs Blue Work"
-description = "Managing the two kinds of work"
+description = "Blue Work and Red Work are concepts that David Marquet describes in his book 'Leadership is Language. Both require different mindsets and both have different languages."
 [taxonomies]
 tags = [ "leadership", "people" ]
 [extra]
+subtitle = "Managing the two kinds of work"
 static_thumbnail = "/images/blog/2021-10-21/cover.jpg"
 +++
 

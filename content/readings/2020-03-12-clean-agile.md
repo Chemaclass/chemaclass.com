@@ -4,6 +4,7 @@ description = "Back to Basics"
 [taxonomies]
 tags = [ "software", "agile", "basics" ]
 [extra]
+subtitle = "Back to Basics"
 pages = "190"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41VQ9-JOXLL._SX380_BO1,204,203,200_.jpg"

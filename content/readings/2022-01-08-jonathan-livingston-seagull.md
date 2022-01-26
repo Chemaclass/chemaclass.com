@@ -1,9 +1,10 @@
 +++
 title = "Jonathan Livingston Seagull"
-description = "A story"
+description = ""
 [taxonomies]
 tags = [ "spiritual", "self-help", "novel" ]
 [extra]
+subtitle = "A story"
 pages = "100"
 author = "Richard Bach"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/419VQmad1LL._SX374_BO1,204,203,200_.jpg"

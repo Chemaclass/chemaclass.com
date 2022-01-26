@@ -4,6 +4,7 @@ description = "An Easy & Proven Way to Build Good Habits & Break Bad Ones"
 [taxonomies]
 tags = [ "habits", "improvement" ]
 [extra]
+subtitle = "An Easy & Proven Way to Build Good Habits & Break Bad Ones"
 pages = "320"
 author = "James Clear"
 static_thumbnail = "https://m.media-amazon.com/images/I/51-nXsSRfZL.jpg"

@@ -1,9 +1,10 @@
 +++
 title = "Who moved my cheese?"
-description = "An Amazing Way to Deal With Change In Your Work and In Your Life"
+description = ""
 [taxonomies]
 tags = [ "management", "financial" ]
 [extra]
+subtitle = "An Amazing Way to Deal With Change In Your Work and In Your Life"
 pages = "94"
 author = "Spencer Johnson"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QGl7HfNyL._SX314_BO1,204,203,200_.jpg"

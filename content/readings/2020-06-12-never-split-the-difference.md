@@ -4,6 +4,7 @@ description = "Negotiating as if your life depended on it"
 [taxonomies]
 tags = [ "carrier skills", "negotiation" ]
 [extra]
+subtitle = "Negotiating as if your life depended on it"
 pages = "280"
 author = "Chris Voss"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51UM7MD1RlL._SX305_BO1,204,203,200_.jpg"

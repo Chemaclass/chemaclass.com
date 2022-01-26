@@ -4,6 +4,7 @@ description = ""
 [taxonomies]
 tags = [ "leadership", "people" ]
 [extra]
+subtitle = ""
 pages = "144"
 author = "Joel Beasley"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51GydOENM3L._SX331_BO1,204,203,200_.jpg"

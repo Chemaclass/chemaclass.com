@@ -4,6 +4,7 @@ description = "A Handbook of Agile Software Craftsmanship"
 [taxonomies]
 tags = [ "software", "clean-code" ]
 [extra]
+subtitle = "A Handbook of Agile Software Craftsmanship"
 pages = "460"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41yafGMO+rL._SX376_BO1,204,203,200_.jpg"

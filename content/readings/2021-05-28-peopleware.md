@@ -1,9 +1,10 @@
 +++
 title = "Peopleware"
-description = "Productive Projects and Teams"
+description = ""
 [taxonomies]
 tags = [ "people", "management" ]
 [extra]
+subtitle = "Productive Projects and Teams"
 pages = "230"
 author = "Tom DeMarco"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51RuNCswX8L._SX341_BO1,204,203,200_.jpg"
