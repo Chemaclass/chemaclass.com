@@ -1,10 +1,10 @@
 +++
 title = "High Output Management"
-description = "The essential skill of creating and maintaining new businesses—the art of the entrepreneur—can be summed up in a single word: managing"
+description = "The essential skill of creating and maintaining new businesses—the art of the entrepreneur—can be summed up in a single word: managing."
 [taxonomies]
 tags = [ "management", "leadership" ]
 [extra]
-subtitle = "The essential skill of creating and maintaining new businesses—the art of the entrepreneur—can be summed up in a single word: managing"
+subtitle = "The essential skill of creating and maintaining new businesses—the art of the entrepreneur—can be summed up in a single word: managing."
 pages = "230"
 author = "Andrew S. Grove"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41pXzmjz9KL._SX322_BO1,204,203,200_.jpg"

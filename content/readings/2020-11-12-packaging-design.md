@@ -1,6 +1,6 @@
 +++
 title = "Principles of package design"
-description = ""
+description = "Apply design principles to your classes, preparing them for reuse. You will use package design principles to create packages that are just right in terms of cohesion and coupling, and are user- and maintainer-friendly at the same time."
 [taxonomies]
 tags = [ "software", "design" ]
 [extra]

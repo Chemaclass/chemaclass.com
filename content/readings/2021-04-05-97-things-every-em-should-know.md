@@ -1,6 +1,6 @@
 +++
 title = "97 Things Every Engineering Manager should know"
-description = ""
+description = "As a manager your work is to create clarity, clarity, and more clarity."
 [taxonomies]
 tags = [ "engineering", "management" ]
 [extra]

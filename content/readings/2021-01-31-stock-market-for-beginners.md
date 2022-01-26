@@ -1,6 +1,6 @@
 +++
 title = "Stock market investing"
-description = ""
+description = "Stock market basics & essentials."
 [taxonomies]
 tags = [ "financial", "investing" ]
 [extra]

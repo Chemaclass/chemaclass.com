@@ -1,6 +1,6 @@
 +++
 title = "Agile Product Management"
-description = ""
+description = "Understanding the product owner’s role and envisioning the product."
 [taxonomies]
 tags = [ "management", "agile" ]
 [extra]

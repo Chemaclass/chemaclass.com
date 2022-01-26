@@ -1,6 +1,6 @@
 +++
 title = "Atomic Habits"
-description = "An Easy & Proven Way to Build Good Habits & Break Bad Ones"
+description = "People think that when you want to change your life, you need to think big. James Clear has discovered another way. He knows that real change comes from the compound effect of hundreds of small decisions. He calls them atomic habits."
 [taxonomies]
 tags = [ "habits", "improvement" ]
 [extra]

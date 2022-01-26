@@ -1,6 +1,6 @@
 +++
 title = "Scrum: The art"
-description = "Scrum: The Art of Doing Twice the Work in Half the Time"
+description = "Every organisation, whatever its size, constantly has to come to grips with delivering a product or service on time and on budget. Scrum shows you how. It explains how to define precisely what it is that you are seeking to achieve, how to set up the team to achieve it, and how to monitor progress until the project is successfully completed."
 [taxonomies]
 tags = [ "management", "business" ]
 [extra]

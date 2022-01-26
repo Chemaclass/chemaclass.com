@@ -1,6 +1,6 @@
 +++
 title = "Lord of the Flies"
-description = ""
+description = "Labeled a parable, an allegory, a myth, a morality tale, a parody, a political treatise, even a vision of the apocalypse. It has established itself as a true classic. The book focuses on a group of British boys stranded on an uninhabited island, and their disastrous attempt to govern themselves."
 [taxonomies]
 tags = [ "novel", "fiction" ]
 [extra]
@@ -19,7 +19,7 @@ Labeled a parable, an allegory, a myth, a morality tale, a parody, a political t
 apocalypse. It has established itself as a true classic.
 
 The book focuses on a group of British boys stranded on an uninhabited island, and their disastrous attempt to govern
-themselves. 
+themselves.
 
 <!-- more -->
 

@@ -1,6 +1,6 @@
 +++
 title = "Turn the Ship Around!"
-description = ""
+description = "The book is about his leadership theories to how he implemented a fresh leadership model. Including the limitations of a hierarchical top-down model, why/how he failed to empower his team earlier in his career, and how the circumstances for Santa Fe were ideal for him to experiment with the new leader-leader approach."
 [taxonomies]
 tags = [ "leadership", "management" ]
 [extra]
@@ -15,10 +15,9 @@ expand_preview = true
     <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL._SX323_BO1,204,203,200_.jpg" >
 </a>
 
-The book is about his leadership theories to how he implemented a fresh leadership model. 
-
-Including the limitations of a hierarchical top-down model, why/how he failed to empower his team earlier in his career,
-and how the circumstances for Santa Fe were ideal for him to experiment with the new leader-leader approach.
+The book is about his leadership theories to how he implemented a fresh leadership model. Including the limitations of a
+hierarchical top-down model, why/how he failed to empower his team earlier in his career, and how the circumstances for
+Santa Fe were ideal for him to experiment with the new leader-leader approach.
 
 <!-- more -->
 

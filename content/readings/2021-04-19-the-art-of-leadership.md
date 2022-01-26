@@ -1,6 +1,6 @@
 +++
 title = "The Art of Leadership"
-description = ""
+description = "Leadership practices are small things done repetitively over time. Managers tell you where you are, leaders tell you where you're going."
 [taxonomies]
 tags = [ "leadership", "management" ]
 [extra]
@@ -25,9 +25,9 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/31YOKF2IcBL
 - Asking for feedback can build trust and relationships.
 - Respond to feedback with a thank you and follow up comprehension questions.
 - Feedback is a gift.
-- It’s not personal, it’s professional.
+- It's not personal, it's professional.
 - Leadership is an outfit that you choose to wear for others to see.
-- Managers tell you where you are, leaders tell you where you’re going.
+- Managers tell you where you are, leaders tell you where you're going.
 - Your peers become your allies.
 
 ---

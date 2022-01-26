@@ -1,6 +1,6 @@
 +++
 title = "Jonathan Livingston Seagull"
-description = ""
+description = "A fable in novella form about a seagull who is trying to learn about life and flight, and a homily about self-perfection."
 [taxonomies]
 tags = [ "spiritual", "self-help", "novel" ]
 [extra]

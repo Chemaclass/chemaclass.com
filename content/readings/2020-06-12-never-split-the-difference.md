@@ -1,6 +1,6 @@
 +++
 title = "Never split the difference"
-description = "Negotiating as if your life depended on it"
+description = "From policing the rough streets of Kansas City, Missouri, to becoming the FBI's lead international kidnapping negotiator to teaching negotiation at leading universities, Chris Voss has tested the techniques in 'Never Split the Difference' across the full spectrum of human endeavor and proved their effectiveness."
 [taxonomies]
 tags = [ "carrier skills", "negotiation" ]
 [extra]

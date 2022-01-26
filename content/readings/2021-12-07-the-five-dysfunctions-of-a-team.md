@@ -1,6 +1,6 @@
 +++
 title = "The Five Dysfunctions of a Team"
-description = ""
+description = "This book is a leadership fable about a tech company that is struggling to get more customers. The C level is not working as a team, and they have a hard time coming to any agreements which result in negative morale. Until the new CEO, Catherine Petersen, joins the team, and she is able to recognize the problems and help the team overcome them by understanding the situation."
 [taxonomies]
 tags = [ "leadership", "management" ]
 [extra]

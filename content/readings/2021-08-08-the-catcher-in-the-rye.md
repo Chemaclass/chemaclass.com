@@ -1,6 +1,6 @@
 +++
 title = "The Catcher in the Rye"
-description = ""
+description = "The novel is a deeper reflection of Salinger's own youth, his complicated relationship with growing up and the generational trauma affected by World War II."
 [taxonomies]
 tags = [ "novel", "fiction" ]
 [extra]

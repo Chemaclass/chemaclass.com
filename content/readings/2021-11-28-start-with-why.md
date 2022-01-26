@@ -1,6 +1,6 @@
 +++
 title = "Start with Why"
-description = ""
+description = "Start with Why asks (and answers) the questions: why are some people and organizations more innovative, more influential, and more profitable than others? Why do some command greater loyalty from customers and employees alike? Even among the successful, why are so few able to repeat their success over and over?"
 [taxonomies]
 tags = [ "leadership", "entrepreneurship" ]
 [extra]
