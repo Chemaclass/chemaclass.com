@@ -4,7 +4,7 @@ description = "The best guide that brings your coding and architecture skills a 
 [taxonomies]
 tags = [ "software", "architecture" ]
 [extra]
-subtitle = "The best guide that brings your coding and architecture skills a level up. All the modern PHP features combined with the elegance of a well designed modular design."
+subtitle = "The best guide that brings your coding skills a level up."
 pages = "370"
 author = "Matthias Noback"
 static_thumbnail = "https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero?1620605116"

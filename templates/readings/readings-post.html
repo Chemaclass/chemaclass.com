@@ -5,15 +5,15 @@
   <div class="post-title">
     <h1>
       {{ page.title }}
-      {% if page.description %}
-        <small class="description">
-          {{ page.description }}
-        </small>
-      {% endif %}
       {% if page.extra.author %}
         <small class="author">
           {{ page.extra.author }}
         </small>
+      {% endif %}
+      {% if page.extra.subtitle %}
+        <h3 class="extra.subtitle">
+          {{ page.extra.subtitle }}
+        </h3>
       {% endif %}
     </h1>
     {{ self::page_sub_header(page=page) }}
