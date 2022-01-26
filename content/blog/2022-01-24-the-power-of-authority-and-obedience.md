@@ -4,7 +4,7 @@ description = "Milgram's experiment"
 [taxonomies]
 tags = [ "experiment", "psychology", "people", "humanity" ]
 [extra]
-static_thumbnail = "/images/blog/2021-11-20/cover.jpg"
+static_thumbnail = "/images/blog/2022-01-24/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2022-01-24/cover.jpg)
