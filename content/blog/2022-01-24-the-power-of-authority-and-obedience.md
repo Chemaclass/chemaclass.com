@@ -38,7 +38,7 @@ Milgram's confederate (pretending to be a real participant).
 
 The learner was taken into a room and had electrodes attached to his arms, and the teacher and researcher went into a
 room next door that contained an electric shock generator and a row of switches marked from 15 volts (slight shock) to
-300 volts (Danger: severe shock) to 450 volts (XXX).
+300 volts (severe shock) to 450 volts (XXX).
 
 ![blog-footer](/images/blog/2022-01-24/video-fragment.jpg)
 
@@ -47,12 +47,12 @@ shock. When the teacher refused to administer a shock, the researcher gave a ser
 
 1. "Please continue."
 2. "The experiment requires that you continue."
-3. "It is absolutely essential that you continue ."
+3. "It is absolutely essential that you continue."
 4. "You have no other choice; you must go on."
 
 ### Results
 
-65% of participants (teachers) continued to the highest level of 450 volts. All the participants continued to 300 volts.
+65% of participants (teachers) continued to the highest level of 450 volts. All participants continued to 300 volts.
 
 Milgram did more than just one experiment. He carried out 18 variations of this study. All he did was alter the
 situation to see how this affected obedience.
@@ -110,7 +110,7 @@ volts. The presence of others who are seen to disobey the authority figure reduc
 
 #### Absent experimenter condition
 
-When the researcher instructed and prompted the teacher by telephone from another room, obedience feel to 20.5%. Many
+When the researcher instructed and prompted the teacher by telephone from another room, obedience fell to 20.5%. Many
 participants cheated and missed out shocks or gave less voltage than ordered. The proximity of authority figure affects
 obedience.
 
