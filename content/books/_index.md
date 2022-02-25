@@ -10,7 +10,7 @@ sort_by = "date"
 
 ![book-index-cover](/images/books/oeur/oeur-cover.jpg)
 
-###  [English](oeur/en)
-###  [Español](oeur/es)
+###  [English](/books/oeur/en)
+###  [Español](/books/oeur/es)
 
 ---

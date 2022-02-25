@@ -25,11 +25,19 @@
 {% endblock posthead %}
 
 {% block content %}
-<div class="profile">
-  <div class="profile-container">
-    <img src="{{ resize_image(path=config.extra.profile_large, width=280, height=373, op="fill") }}" alt="profile picture">
+<div>
+  <nav class="nav-menu desktop-homepage-nav-menu">
+    {% for link in config.extra.nav %}
+    <a href="{{ link.path }}">{{ link.name }}</a>
+    {% endfor %}
+  </nav>
+  <div class="profile">
+    <div class="profile-container">
+      <img src="{{ resize_image(path=config.extra.profile_large, width=280, height=373, op="fill") }}" alt="profile picture">
+    </div>
   </div>
 </div>
+
 <div class="content">
   <h1 class="index-header">
     Chemaclass
@@ -51,7 +59,8 @@
     I love what I do: Software Development. Mainly algorithm designing and resolution of logic problems.
   </p>
   <p>
-    I am always looking for SOLID code and agile methodologies. I believe that clean code, testing, and refactoring are the best tools for every developer to achieve quality.
+    I am always looking for SOLID code and agile methodologies. I believe that clean code, testing, and refactoring are
+    the best tools for every developer to achieve quality.
   </p>
   <p>You can find me here:</p>
   <table class="social-links">
@@ -70,14 +79,9 @@
   {% set readings = get_section(path="readings" ~ "/_index.md") %}
   {% set latest_reading = readings.pages.0 %}
   <div class="latest-container">
-    Latest post: <a href="{{ latest_blog.permalink }}">{{ latest_blog.title }}</a><br>
-    Latest reading: <a href="{{ latest_reading.permalink }}">{{ latest_reading.title }}</a>
+    Latest post: <a href="{{ latest_blog.permalink }}" data-from="{{latest_blog.date}}">{{ latest_blog.title }}</a>
+    <br>
+    Latest reading: <a href="{{ latest_reading.permalink }}" data-from="{{latest_reading.date}}">{{ latest_reading.title }}</a>
   </div>
-
-  <nav class="lower">
-    {% for link in config.extra.nav %}
-    <a href="{{ link.path }}">{{ link.name }}</a>
-    {% endfor %}
-  </nav>
 </div>
 {% endblock content %}

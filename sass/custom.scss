@@ -158,16 +158,8 @@ img[alt=book-chapters-cover] {
 }
 
 @media (max-width: 700px) {
-  img[alt=book-index-cover] {
-    max-width: 65%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    float: none;
-  }
-
-  img[alt=book-chapters-cover] {
+  img[alt=book-chapters-cover], img[alt=book-index-cover] {
+    height: auto;
     max-width: 65%;
     display: block;
     margin-left: auto;
@@ -205,4 +197,19 @@ img[alt=book-chapters-cover] {
 h1 sup {
   top:-1.5em;
   font-size: small;
+}
+
+a:hover {
+  color: #1059b6;
+}
+
+.desktop-homepage-nav-menu {
+  display: none;
+}
+
+@media (min-width: 880px) {
+  .desktop-homepage-nav-menu {
+    margin-bottom: 30px;
+    display: flex;
+  }
 }
