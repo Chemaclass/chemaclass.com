@@ -187,3 +187,22 @@ img[alt=book-chapters-cover] {
     color: #404040;
   }
 }
+
+.social-links {
+  margin-bottom: 16px;
+  width: 100%;
+
+  li {
+    flex-flow: row wrap;
+    list-style: none;
+  }
+}
+
+.latest-container {
+  text-align: left !important;
+}
+
+.index-header:hover {
+  content: "Jose Maria Valera Reales";
+  cursor: default;
+}

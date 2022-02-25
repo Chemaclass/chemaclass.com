@@ -6,6 +6,7 @@
 
 {% block styles%}
 <link rel="stylesheet" href="{{ get_url(path="index.css") | safe }}">
+<link rel="stylesheet" href="{{ get_url(path="custom.css") | safe }}">
 {% endblock styles %}
 
 {% block posthead %}
@@ -30,10 +31,7 @@
   </div>
 </div>
 <div class="content">
-
-  <h1>Chemaclass</h1>
-
-  My name is <i>Jose Maria Valera Reales</i>, aka: Chema.
+  <h1 class="index-header">Chemaclass</h1>
 
   <h3>Who am I?</h3>
   <ul>
@@ -48,20 +46,24 @@
     I am always looking for SOLID code and agile methodologies. I believe that clean code, testing, and refactoring are the best tools for every developer to achieve quality.
   </p>
   <p>You can find me here:</p>
-  <ul class="social-links">
-    <li><i class="fab fa-github"></i> <a href=https://github.com/Chemaclass">GitHub</a></li>
-    <li><i class="fab fa-twitter"></i> <a href=https://twitter.com/Chemaclass">Twitter</a></li>
-    <li><i class="fab fa-linkedin"></i> <a href=https://www.linkedin.com/in/jose-maria-valera-reales/">LinkedIn</a></li>
-    <li><i class="fab fa-stack-overflow"></i> <a href="https://stackoverflow.com/users/3454593/chemaclass">StackOverflow</a></li>
-  </ul>
+  <table class="social-links">
+    <tr>
+      <td><i class="fab fa-github"></i> <a href=https://github.com/Chemaclass">GitHub</a></td>
+      <td><i class="fab fa-twitter"></i> <a href=https://twitter.com/Chemaclass">Twitter</a></td>
+    </tr>
+    <tr>
+      <td><i class="fab fa-linkedin"></i> <a href=https://www.linkedin.com/in/jose-maria-valera-reales/">LinkedIn</a></td>
+      <td><i class="fab fa-stack-overflow"></i> <a href="https://stackoverflow.com/users/3454593/chemaclass">StackOverflow</a></td>
+    </tr>
+  </table>
 
   {% set blogs = get_section(path="blog" ~ "/_index.md") %}
   {% set latest_blog = blogs.pages.0 %}
   {% set readings = get_section(path="readings" ~ "/_index.md") %}
   {% set latest_reading = readings.pages.0 %}
   <div class="latest-container">
-    Latest post: "<a href="{{ latest_blog.permalink }}">{{ latest_blog.title }}</a>"<br>
-    Latest reading: "<a href="{{ latest_reading.permalink }}">{{ latest_reading.title }}</a>"
+    Latest post: <a href="{{ latest_blog.permalink }}">{{ latest_blog.title }}</a><br>
+    Latest reading: <a href="{{ latest_reading.permalink }}">{{ latest_reading.title }}</a>
   </div>
 
   <nav class="lower">
