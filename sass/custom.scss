@@ -176,3 +176,14 @@ img[alt=book-chapters-cover] {
     float: none;
   }
 }
+
+.post-title {
+  small {
+    line-height: unset;
+  }
+
+  .post-subtitle {
+    margin-top: 0;
+    color: #404040;
+  }
+}

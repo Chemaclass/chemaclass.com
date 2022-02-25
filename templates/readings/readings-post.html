@@ -10,12 +10,12 @@
           {{ page.extra.author }}
         </small>
       {% endif %}
-      {% if page.extra.subtitle %}
-        <h3 class="extra.subtitle">
-          {{ page.extra.subtitle }}
-        </h3>
-      {% endif %}
     </h1>
+    {% if page.extra.subtitle %}
+    <h3 class="post-subtitle">
+      {{ page.extra.subtitle }}
+    </h3>
+    {% endif %}
     {{ self::page_sub_header(page=page) }}
   </div>
 
