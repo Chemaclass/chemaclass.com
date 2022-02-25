@@ -1,5 +1,73 @@
-{% extends "simple-dev-blog/templates/index.html" %}
+{% extends "base.html" %}
 
 {% block title %}
   Home | Chemaclass
 {% endblock %}
+
+{% block styles%}
+<link rel="stylesheet" href="{{ get_url(path="index.css") | safe }}">
+{% endblock styles %}
+
+{% block posthead %}
+  <link rel="prefetch" href="{{ resize_image(path=config.extra.profile_large, width=280, height=373, op="fill") }}">
+  {% if config.extra.latest_text %}
+    {% set blog_path = "blog" %}
+    {% if config.extra.blog_path %}
+      {% set_global blog_path = config.extra.blog_path %}
+    {% endif %}
+    {% set blogs = get_section(path=blog_path ~ "/_index.md") %}
+    {% set latest = blogs.pages.0 %}
+    {% if latest %}
+      <link rel="prerender" href="{{ latest.permalink }}" />
+    {% endif %}
+  {% endif %}
+{% endblock posthead %}
+
+{% block content %}
+<div class="profile">
+  <div class="profile-container">
+    <img src="{{ resize_image(path=config.extra.profile_large, width=280, height=373, op="fill") }}" alt="profile picture">
+  </div>
+</div>
+<div class="content">
+
+  <h1>Chemaclass</h1>
+
+  My name is <i>Jose Maria Valera Reales</i>, aka: Chema.
+
+  <h3>Who am I?</h3>
+  <ul>
+    <li>Tech Lead at <a href="http://teufel.de">Teufel Audio</a></li>
+    <li>Contributor in <a href="http://phel-lang.org">Phel Lang</a></li>
+    <li>Creator of <a href="http://gacela-project.com/">Gacela Project</a></li>
+  </ul>
+  <p>
+    I love what I do: Software Development. Mainly algorithm designing and resolution of logic problems.
+  </p>
+  <p>
+    I am always looking for SOLID code and agile methodologies. I believe that clean code, testing, and refactoring are the best tools for every developer to achieve quality.
+  </p>
+  <p>You can find me here:</p>
+  <ul class="social-links">
+    <li><i class="fab fa-github"></i> <a href=https://github.com/Chemaclass">GitHub</a></li>
+    <li><i class="fab fa-twitter"></i> <a href=https://twitter.com/Chemaclass">Twitter</a></li>
+    <li><i class="fab fa-linkedin"></i> <a href=https://www.linkedin.com/in/jose-maria-valera-reales/">LinkedIn</a></li>
+    <li><i class="fab fa-stack-overflow"></i> <a href="https://stackoverflow.com/users/3454593/chemaclass">StackOverflow</a></li>
+  </ul>
+
+  {% set blogs = get_section(path="blog" ~ "/_index.md") %}
+  {% set latest_blog = blogs.pages.0 %}
+  {% set readings = get_section(path="readings" ~ "/_index.md") %}
+  {% set latest_reading = readings.pages.0 %}
+  <div class="latest-container">
+    Latest post: "<a href="{{ latest_blog.permalink }}">{{ latest_blog.title }}</a>"<br>
+    Latest reading: "<a href="{{ latest_reading.permalink }}">{{ latest_reading.title }}</a>"
+  </div>
+
+  <nav class="lower">
+    {% for link in config.extra.nav %}
+    <a href="{{ link.path }}">{{ link.name }}</a>
+    {% endfor %}
+  </nav>
+</div>
+{% endblock content %}

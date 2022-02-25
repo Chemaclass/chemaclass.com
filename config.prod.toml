@@ -17,15 +17,11 @@ highlight_theme = "demain"
 smart_punctuation = true
 
 [extra]
-latest_text = "Check out my latest post:"
-
 nav = [
     { name = "Blog", path = "/blog/" },
     { name = "Readings", path = "/readings/" },
     { name = "Projects", path = "/projects/" },
 ]
-
-blog_path = "blog"
 
 icon = "icon.png"
 profile_small = "icon.png"
