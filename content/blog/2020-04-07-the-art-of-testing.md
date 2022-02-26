@@ -14,16 +14,16 @@ Why you should consider testing as part of your daily development habit and how 
 
 <!-- more -->
 
-The intention of this post is not to explain the different testing techniques out there that we can use. I'm not going to tell you what the differences are between unit, integration, feature, or end-to-end testing.
+This post intends not to explain the different testing techniques out there that we can use. I'm not going to tell you the differences between unit, integration, feature, or end-to-end testing.
 
-I'm still amazed by the lack of experience about testing in software in general. Common ignorance in this world about best testing practices for us as developers. Inexperience that you can easily see if you have already worked on some different projects and teams.
+I'm still amazed by the lack of experience with testing in software in general. Common ignorance in this world about best testing practices for us as developers. Inexperience that you can easily see if you have already worked on different projects and teams.
 
 ### Software testing
 
 Some horrible patterns I've seen (and done):
 
-* Testing for the sake of testing: testing every single file, sometimes wrongly considered as a unit.
-* Mocking every class that we intend to test, overriding the real implementation, and creating a fake-behavior, therefore providing a false coverage perception.
+* Testing for the sake of testing: testing every single file, sometimes wrongly considered a unit.
+* Mocking every class that we intend to test, overriding the actual implementation, and creating a fake behavior, providing a false coverage perception.
 * Coupling production code with tests everywhere, so it's impossible to change anything without breaking some tests, even if the feature itself it's working as intended.
 * Not testing at all because "why should we even test anything if the feature it's done, and it works? Why should we spend more time on this if it's done?".
 
@@ -37,18 +37,18 @@ Software design goes from algorithm to architecture design. Even when I believe 
 
 ### Software quality
 
-Is quality hard to measure out? Indeed. There are different measurement keys that we should take while considering quality for any piece of software, but I'm sure we could agree on this:
+Is quality hard to measure out? Indeed. There are different measurement keys that we should take while considering quality for any piece of software. Still, I'm sure we could agree on this:
 
-> If you aim for quality in your software, you better aim for a good design.
+> If you aim for quality in your software, you better seek a good design.
 
-Testing by itself means "proving", as we all know. That said... how difficult it sometimes turns to prove some logic, that we finally give up because of its complexity itself?
+Testing by itself means "proving," as we all know. That said... how difficult it sometimes turns to prove some logic that we finally give up because of its complexity itself?
 
-The art of testing is about being able to use testing itself to help and contribute to the final result. If we're able to use testing (of any kind) in our favor, depending on the context of what we want to prove, to encourage good design, it will certainly help us to increase the end quality of the product.
+The art of testing is about using testing itself to help and contribute to the final result. To encourage good design, suppose we're able to use testing (of any kind) in our favor, depending on the context of what we want to prove. In that case, it will undoubtedly help us increase the product's end quality.
 
-> Therefore, testing should be used not only to prove the behavior of our software but also to guide our software to a better design.
+Therefore, testing should be used not only to prove the behavior of our software but also to guide our software to a better design.
 
-Should we test everything? Well, that's the million $ question. In my opinion, everything depends on the context. We might encounter situations where tests might be not really useful. That said, we should write our code as if it could be tested anyway.
-
-Easily testable code tends to better design and therefore better quality.
+Should we test everything? Well, that's the million $ question. In my opinion, everything depends on the context. We might encounter situations where tests might not be beneficial. That said, we should write our code as if it could be tested anyway.
 
 ![blog-cover](/images/blog/2020-04-07/footer.jpg)
+
+> Easily testable code tends to better design and, therefore, better quality.

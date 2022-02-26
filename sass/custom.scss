@@ -204,9 +204,18 @@ a:hover {
   color: #1059b6;
 }
 
-.frontpage ul {
+ul {
   margin: 0;
   padding-left: 14px;
+}
+
+blockquote {
+  font-size: 1.25rem;
+  margin-left: unset;
+  p:before{
+    content: '';
+    font-style: normal;
+  }
 }
 
 .desktop-homepage-nav-menu {
