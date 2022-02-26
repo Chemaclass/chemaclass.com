@@ -192,6 +192,7 @@ img[alt=book-chapters-cover] {
 
 .latest-container {
   text-align: left !important;
+  font-size: unset !important;
 }
 
 h1 sup {
@@ -201,6 +202,11 @@ h1 sup {
 
 a:hover {
   color: #1059b6;
+}
+
+.frontpage ul {
+  margin: 0;
+  padding-left: 14px;
 }
 
 .desktop-homepage-nav-menu {

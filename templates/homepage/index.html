@@ -38,7 +38,7 @@
   </div>
 </div>
 
-<div class="content">
+<div class="frontpage">
   <h1 class="index-header">
     Chemaclass
     <sup title="Jose Maria Valera Reales">
@@ -55,12 +55,13 @@
     <li>Contributor in <a href="http://phel-lang.org">Phel Lang</a></li>
     <li>Creator of <a href="http://gacela-project.com/">Gacela Project</a></li>
   </ul>
-  <p>
-    I love what I do: Software Development. Mainly algorithm designing and resolution of logic problems.
+  <p title="Extreme Programming Values">
+    I love software development focus on communication, simplicity, feedback, courage, and respect.
   </p>
   <p>
-    I am always looking for SOLID code and agile methodologies. I believe that clean code, testing, and refactoring are
-    the best tools for every developer to achieve quality.
+    I believe that <span title="A Handbook of Agile Software Craftsmanship">clean code</span>,
+    <span title="Test-First & TDD">testing</span>, and refactoring are the best tools for every developer to achieve
+    <a href="/blog/the-art-of-testing/">quality</a>.
   </p>
   <p>You can find me here:</p>
   <table class="social-links">
@@ -79,9 +80,17 @@
   {% set readings = get_section(path="readings" ~ "/_index.md") %}
   {% set latest_reading = readings.pages.0 %}
   <div class="latest-container">
-    Latest post: <a href="{{ latest_blog.permalink }}" data-from="{{latest_blog.date}}">{{ latest_blog.title }}</a>
+    Latest post:
+    <a href="{{ latest_blog.permalink }}"
+       data-from="{{latest_blog.date}}"
+       title="{{ latest_blog.description }}"
+    >"{{ latest_blog.title }}."</a>
     <br>
-    Latest reading: <a href="{{ latest_reading.permalink }}" data-from="{{latest_reading.date}}">{{ latest_reading.title }}</a>
+    Latest reading:
+    <a href="{{ latest_reading.permalink }}"
+       data-from="{{latest_reading.date}}"
+       title="{{ latest_reading.description }}"
+    >"{{ latest_reading.title }}."</a>
   </div>
 </div>
 {% endblock content %}
