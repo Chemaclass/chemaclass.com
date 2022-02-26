@@ -30,11 +30,13 @@
   {% endif %}
 {% endmacro %}
 
-{% macro footer() %}
+{% macro footer_about() %}
   {% if config.extra.footer_about %}
-    <div class="footer-about">
-      {{ config.extra.footer_about | markdown | safe }}
-    </div>
+  <footer>
+      <div class="footer-about">
+        {{ config.extra.footer_about | markdown | safe }}
+      </div>
+  </footer>
   {% endif %}
 {% endmacro %}
 

@@ -9,3 +9,7 @@
   {{ super() }}
   <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
 {% endblock %}
+
+{% block footer %}
+  {% include "footer.html" %}
+{% endblock %}

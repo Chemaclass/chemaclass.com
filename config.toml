@@ -37,12 +37,8 @@ repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/cont
 gtag = ""
 
 footer_about = """
-Have you find this useful? Do you want more?
+Have you found this helpful? Do you want more?
 Follow me on [Twitter](https://twitter.com/Chemaclass) or [GitHub](https://github.com/Chemaclass).
-"""
-
-footer_page = """
-© 2021, Chema - Jose Maria Valera Reales
 """
 
 not_found_message = """
