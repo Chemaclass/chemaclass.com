@@ -71,20 +71,20 @@ It can be any FrontEnd, BackEnd, DevOps related. But I encourage also:
 
 ### How can I present a Tech Talk?
 
-I wrote this article with some tips about [how to improve your tech-talk](blog/improve-your-tech-talk/). Some key
+I wrote this article with some tips about [how to improve your tech-talk](/blog/improve-your-tech-talk/). Some key
 questions that might help you to find something on your own:
 
 - What have you learned recently (in the last X months)?
 - What valuable knowledge might be interesting to be shared with your peers?
 - Which aspect of yourself you'd like to improve professionally and/or personally?
 
-> There is just one rule: Be curious, and "[embrace the change](blog/embrace-the-change/)."
+> There is just one rule: Be curious, and "[embrace the change](/blog/embrace-the-change/)."
 
 
 ![blog-footer](/images/blog/2022-02-26/footer.jpg)
 
 ### Recommended readings
 
-- [Extreme Programming Explained](readings/xp-embrace-change/)
+- [Extreme Programming Explained](/readings/xp-embrace-change/)
 - [Who moved my cheese?](/readings/who-moved-my-cheese/)
-- [Clean Agile](readings/clean-agile/)
+- [Clean Agile](/readings/clean-agile/)
