@@ -104,7 +104,7 @@ A pet project is a playground to create software and train your professional ski
 - The art of refactoring; When, How, and Why
 - The art of testing: Where design meets quality
 
-> ... and many more on [https://chemaclass.es/blog/](https://chemaclass.es/blog/)
+> ... and many more on [https://chemaclass.com/blog/](https://chemaclass.com/blog/)
 
 ## The beauty of this 🧑‍🎓
 
