@@ -29,7 +29,7 @@ context: "the tests itself are reducing my speed".
 > In a domain context, if a piece of software logic is hard to be tested, the problem is not the test, but the code which wasn't well written.
 
 There are already hundreds of tutorials, books, and documentation about testing, but I can share my experience and how I
-do apply this great (and must) philosophy in my daily work.
+do apply this great (and mandatory) philosophy in my daily work.
 
 ### Test-Driven is based on this simple rule
 

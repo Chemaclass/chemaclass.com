@@ -30,7 +30,7 @@ Some horrible patterns I've seen (and done):
   providing a false coverage perception.
 * Coupling production code with tests everywhere, so it's impossible to change anything without breaking some tests,
   even if the feature itself it's working as intended.
-* Not testing at all because "why should we even test anything if the feature it's done, and it works? Why should we
+* Not testing at all because "why should we even test anything if the feature is done, and it works? Why should we
   spend more time on this if it's done?."
 
 One of the main reasons for software testing is actually verifying a suite of proofs for the expected behavior of the
