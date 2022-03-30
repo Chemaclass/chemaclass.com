@@ -17,12 +17,14 @@ highlight_theme = "demain"
 smart_punctuation = true
 
 [extra]
+
 nav = [
     { name = "Blog", path = "/blog/" },
     { name = "Readings", path = "/readings/" },
     { name = "Projects", path = "/projects/" },
 ]
 
+dark_mode = false
 icon = "icon.png"
 profile_small = "icon.png"
 profile_large = "profile.jpg"

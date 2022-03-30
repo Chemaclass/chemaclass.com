@@ -23,6 +23,7 @@ nav = [
     { name = "Projects", path = "/projects/" },
 ]
 
+dark_mode = false
 icon = "icon.png"
 profile_small = "icon.png"
 profile_large = "profile.jpg"
