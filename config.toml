@@ -24,8 +24,8 @@ nav = [
 ]
 
 dark_mode = false
-icon = "icon.png"
-profile_small = "icon.png"
+icon = "icon.jpg"
+profile_small = "icon.jpg"
 profile_large = "profile.jpg"
 default_og_image = "profile.jpg"
 
