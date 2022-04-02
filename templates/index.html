@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block styles%}
+  <link rel="stylesheet" href="{{ get_url(path="index.css") | safe }}">
+{% endblock styles %}
+
+{% block posthead %}
+{% set profile_image = resize_image(path=config.extra.profile_large, width=280, height=373, op="fill") %}
+  <link rel="prefetch" href="{{ profile_image.url }}">
+
+  {% if config.extra.latest_text %}
+    {% set blog_path = "blog" %}
+    {% if config.extra.blog_path %}
+      {% set_global blog_path = config.extra.blog_path %}
+    {% endif %}
+    {% set blogs = get_section(path=blog_path ~ "/_index.md") %}
+    {% set latest = blogs.pages.0 %}
+    {% if latest %}
+      <link rel="prerender" href="{{ latest.permalink }}" />
+    {% endif %}
+  {% endif %}
+{% endblock posthead %}
+
+
+{% block content %}
+{% set profile_image = resize_image(path=config.extra.profile_large, width=280, height=373, op="fill") %}
+  <div class="profile">
+    <div class="profile-container">
+      <img src="{{ profile_image.url }}" alt="profile picture">
+    </div>
+  </div>
+  <div class="content">
+    {{ section.content | safe }}
+
+    {% if config.extra.latest_text %}
+      {% set blog_path = "blog" %}
+      {% if config.extra.blog_path %}
+        {% set_global blog_path = config.extra.blog_path %}
+      {% endif %}
+      {% set blogs = get_section(path=blog_path ~ "/_index.md") %}
+      {% set latest = blogs.pages.0 %}
+      <div class="latest-container">
+        {% if latest %}
+        {{ config.extra.latest_text }} "<a href="{{ latest.permalink }}">{{ latest.title }}</a>"
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <nav class="lower">
+      {% for link in config.extra.nav %}
+        <a href="{{ link.path }}">{{ link.name }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+{% endblock content %}

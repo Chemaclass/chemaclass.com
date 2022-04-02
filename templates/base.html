@@ -1,15 +1,149 @@
-{% extends "simple-dev-blog/templates/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
 
-{% block head %}
-  {{ super() }}
-  <script src="https://kit.fontawesome.com/fa8ac97011.js" crossorigin="anonymous"></script>
-{% endblock %}
+    <style>
+      :root {
+        --accent-color: {{ config.extra.accent }};
+        --accent-color-light: {{ config.extra.accent_light }};
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      {% if config.extra.dark_mode %}
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      {% endif %}
+    </style>
 
-{% block styles %}
-  {{ super() }}
-  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
-{% endblock %}
+    <meta name="theme-color" content="{{ config.extra.accent }}" />
 
-{% block footer %}
-  {% include "footer.html" %}
-{% endblock %}
+    {% if config.extra.profile_small %}
+      {% set icon = resize_image(path=config.extra.profile_small, width=48, height=48, op="fill") -%}
+      <link rel="icon" href="{{ icon.url }}" />
+      {% for size in [48,72,96,144,192,256,384,512] -%}
+        {% set icon = resize_image(path=config.extra.profile_small, width=size, height=size, op="fill") -%}
+        <link rel="apple-touch-icon" sizes="{{size}}x{{size}}" href="{{ icon.url }}" />
+      {% endfor %}
+    {% endif %}
+
+    {% if config.extra.gtag %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.gtag }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ config.extra.gtag }}');
+      </script>
+    {% endif %}
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    {% if config.twitter %}
+      <meta name="twitter:creator" content="@{{ config.twitter }}">
+      <meta name="twitter:site" content="@{{ config.twitter }}">
+    {% endif %}
+
+    {% if page.extra.thumbnail %}
+      <meta property="og:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail) }}">
+    {% elif page.extra.static_thumbnail %}
+      {%if page.extra.static_thumbnail is matching("^http[s]?://") %}
+        <meta property="og:image" content="{{ page.extra.static_thumbnail | safe}}">
+      {% else %}
+        <meta property="og:image" content="{{ get_url(path=page.extra.static_thumbnail) }}">
+      {% endif %}
+    {% elif config.extra.default_og_image %}
+        <meta property="og:image" content="{{ get_url(path=config.extra.default_og_image) }}">
+    {% endif %}
+
+    {% block description %}
+      {% if page.description %}
+        <meta name="description" content="{{ page.description }}" />
+        <meta name="twitter:description" content="{{ page.description }}">
+      {% else %}
+        <meta name="description" content="{{ config.description }}" />
+        <meta name="twitter:description" content="{{ config.description}}">
+      {% endif %}
+    {% endblock description %}
+
+    {% if page.title %}
+      <meta name="twitter:title" content="{{ page.title }}">
+    {% else %}
+      <meta name="twitter:title" content="{{ config.title }}">
+    {% endif %}
+
+    {% for link in config.extra.nav %}
+      <link rel="prerender" href="{{ link.path }}" />
+    {% endfor %}
+
+    {% set icon = resize_image(path=config.extra.profile_small, width=50, height=50, op="fill") -%}
+    <link rel="prefetch" href="{{ icon.url }}" />
+
+    <title>
+      {% block title %}
+        {% if page.title %}
+          {{ page.title }}
+        {% else %}
+          {{ config.title }}
+        {% endif %}
+      {% endblock title %}
+    </title>
+
+    {% block head %}
+      <script src="https://kit.fontawesome.com/fa8ac97011.js" crossorigin="anonymous"></script>
+    {% endblock head %}
+    {% block styles %}
+      <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
+      <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+    {% endblock styles %}
+    {% block posthead %}{% endblock posthead %}
+  </head>
+  <body>
+    {% block header %}
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="{{ icon.url }}" alt="profile picture">
+        </a>
+        <nav>
+          {% for link in config.extra.nav %}
+            <a href="{{ link.path }}">{{ link.name }}</a>
+          {% endfor %}
+        </nav>
+      </header>
+    {% endblock header %}
+    <main>
+    {% block content %} {% endblock content %}
+    </main>
+    <footer class="footer-page">
+    {% block footer %}
+      {% include "footer.html" %}
+    {% endblock footer %}
+    </footer>
+  </body>
+</html>

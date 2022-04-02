@@ -4,7 +4,6 @@ title = "Chema's website | Chemaclass"
 description = "Check out my latest tech blog posts, and follow my journey on what I have been reading the last month."
 
 generate_feed = true
-theme = "simple-dev-blog"
 taxonomies = [{ name = "tags" }]
 compile_sass = true
 extra_syntaxes = ["syntaxes"]
