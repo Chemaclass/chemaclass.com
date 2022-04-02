@@ -39,7 +39,8 @@ to new conditions, and achieve fast and safe software delivery.
 
 - Who is in the team matters less than the team dynamics.
 - When measuring performance, teams matter more than individuals.
-- Team = group of 5-9 (Dunbar numbers) who work towards a shared goals as a unit.
+- Team = group of 5-9 who work towards a shared goals as a unit. 
+  - Check [Dunbar number](/blog/dunbar-number/).
 - Forming a team takes from 2 weeks to 3 months.
 - Cognitive load is the total amount of mental effort being used in the working memory.
 - 3 Types of cognitive load:
