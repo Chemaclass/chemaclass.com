@@ -2,7 +2,7 @@
 title = "The Bitcoin Standard"
 description = "The Bitcoin Standard analyzes the historical context to the rise of Bitcoin, the economic properties that have allowed it to grow quickly, and its likely economic, political, and social implications."
 [taxonomies]
-tags = [ "financial" ]
+tags = [ "financial", "bitcoin" ]
 [extra]
 subtitle = "The Decentralized Alternative to Central Banking"
 pages = "300"
