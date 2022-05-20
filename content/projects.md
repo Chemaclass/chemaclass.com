@@ -13,11 +13,10 @@ template = "page.html"
 
 [GitHub](https://github.com/gacela-project/gacela) | started on 2021
 
-Gacela is a PHP class resolver that helps you to improve the design of your application by splitting the logic into
-different modules.
+A PHP library that helps you to split the logic of your app into different modules.
 
-I created this one because I wanted to improve the internal structure of Phel by normalizing the communication between
-the modules that we have in Phel while applying all the learnings that I got after studying Spryker.
+I created this project because I wanted to improve the internal structure of [Phel Lang](https://phel-lang.org/) by
+normalizing the communication between the modules while applying all the learnings that I got after studying Spryker.
 
 ### Phel Lang
 
