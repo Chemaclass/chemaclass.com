@@ -9,6 +9,16 @@ template = "page.html"
 
 ## Some of OSS org contributions 🌚
 
+### Gacela Project
+
+[GitHub](https://github.com/gacela-project/gacela) | started on 2021
+
+Gacela is a PHP class resolver that helps you to improve the design of your application by splitting the logic into
+different modules.
+
+I created this one because I wanted to improve the internal structure of Phel by normalizing the communication between
+the modules that we have in Phel while applying all the learnings that I got after studying Spryker.
+
 ### Phel Lang
 
 [GitHub](https://github.com/phel-lang/phel-lang) | started on 2020
@@ -21,16 +31,6 @@ At the same time, I am part of a fun project with significant potential growth: 
 skills.
 
 I already wrote about this on *February 2021*: [Phel: A Lisp that compiles to PHP](/blog/phel-first-release/).
-
-### Gacela Project
-
-[GitHub](https://github.com/gacela-project/gacela) | started on 2021
-
-Gacela is a PHP class resolver that helps you to improve the design of your application by splitting the logic into
-different modules.
-
-I created this one because I wanted to improve the internal structure of Phel by normalizing the communication between
-the modules that we have in Phel while applying all the learnings that I got after studying Spryker.
 
 ### NuevaMetal (Abandoned)
 
