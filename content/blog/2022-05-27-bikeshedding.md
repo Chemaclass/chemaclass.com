@@ -19,7 +19,7 @@ People within an organization typically give disproportionate weight to trivial 
 ## Bikeshed +-ing
 
 The concept was first presented as a corollary of his broader "[Parkinson's law](https://en.wikipedia.org/wiki/Parkinson%27s_law)" 
-spoof of management. "Bikeshedding" is a dramatized form for the "[Law of triviality](https://en.wikipedia.org/wiki/Law_of_triviality)".
+spoof of management. "Bikeshedding" is a dramatized form of the "[Law of triviality](https://en.wikipedia.org/wiki/Law_of_triviality)".
 
 [C. Northcote Parkinson](https://en.wikipedia.org/wiki/C._Northcote_Parkinson) observed that a committee whose job is to **approve plans for a nuclear power plant** may spend the majority
 of its time on relatively unimportant but easy-to-grasp issues, such as what materials to use for the staff bikeshed
@@ -30,9 +30,9 @@ criticize constructively. As he put it:
 
 ### People within an organization typically give **disproportionate weight to trivial issues**
 
-This has been true in all companies where I've being working. From time to time, when you have important mixed with 
+This has been true in all companies where I've been working. From time to time, when you have important mixed with 
 not-so-important topics together (or even not important at all!), it's pretty common to see yourself "bikeshedding" 
-with your peers about the trivial topics instead of confront the important things that will brig real value soon to 
+with your peers about the trivial topics instead of confronting the important things that will bring real value soon to 
 the end customer/consumer.
 
 This is more common than we think, and it can happen to everyone. 
@@ -44,7 +44,7 @@ Create awareness about this problem with your team. Honest communication and tru
 Break down steps:
 
 - You need to be aware of this problem.
-- You see value in changing this team-behavior.
+- You see value in changing this team behavior.
 - You are able to point to the problem when you see it occurring.
 - You expect the same from your team members.
 
