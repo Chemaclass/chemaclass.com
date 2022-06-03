@@ -7,6 +7,13 @@ template = "page.html"
 
 > Never stop learning!
 
+## Speaker 🎤
+
+- [International PHP Conference (ICP)](https://phpconference.com/speaker/jose-maria-valera-reales/)
+- More to come...
+
+---
+
 ## Some of OSS org contributions 🌚
 
 ### Gacela Project
