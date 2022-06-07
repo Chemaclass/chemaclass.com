@@ -1,6 +1,6 @@
 +++
 title = "The path to seniority in software"
-description = "Unfortunately, the seniority level is more polluted by marketing and politics than in reality. I've always been surrounded by people who claimed been seniors when in the reality only a few I could consider as such."
+description = "The seniority in our software industry is more polluted by marketing and politics than in reality. What can we do about it?"
 [taxonomies]
 tags = [ "software", "tech-lead", "team-work", "knowledge-sharing" ]
 [extra]
