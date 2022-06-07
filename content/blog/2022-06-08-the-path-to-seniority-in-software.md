@@ -27,25 +27,25 @@ company, or you can start a new position as a "senior" in another company, easy,
 ## Marketing and polluted politics
 
 Unfortunately, the "seniority" level is more polluted by marketing and politics than in reality. First, what
-does "senior" in this context mean? In all companies (where I've been working for [if not all]) I've always been
-surrounded by people who claimed been "seniors" when in the reality only a few I could consider as such.
+does "senior" in this context mean? In all companies (where I've been working [if not all]) I've always been
+surrounded by people who claimed being "seniors" when in reality only a few I would consider as such.
 
-Our senior industry is falsified by companies' need of having experts on the paper more than the reality, and this is a
+Our senior industry is falsified by companies' need of having experts on paper more than in reality, and this is a
 problem we need to deal with and speak about.
 
-Seniority means more experience, but how do you calculate this? It's easy from a company's point of view: more years in
-the industry. But, is it really relevant the number of years you've been working in an industry which is in constantly
-changing and evolving trend? Actually, this wouldn't be a big issue if you have the software fundamentals well
-interiorized, but funny enough, I've seen these fundamentals just in ~10% of all seniors during my almost 10 years of
+Seniority generally means more experience, but how do you calculate this? It's easy from a company's point of view: 
+more years in the industry. But, is really relevant the number of years you've been working in an industry which is 
+in constantly changing and evolving trend? Actually, this wouldn't be a big issue if you have the software fundamentals
+well interiorized, but funny enough, I've seen these fundamentals just in ~10% of all seniors during my almost 10 years of
 experience and 7 companies I've worked with.
 
 The fact that you have been working 10 or more years in a company doesn't necessarily mean you are a "senior". What else
 can we measure in order to identify if you deserve indeed this title?
 
-### It's about the money
+### It's not all about the money
 
 Let's be honest, senior titles are better paid than junior or middle positions. If you have the chance to get more
-salary because you got the "senior" in your job title, it wouldn't be clever to reject it. But, independently from the
+salary because you got the "senior" in your job title, it wouldn't be clever to reject it. But, independently of the
 politics and marketing, we have to address some seniority fundamentals, to have a better understanding of what the word
 senior means.
 
