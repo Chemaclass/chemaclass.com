@@ -44,11 +44,5 @@
         {% endif %}
       </div>
     {% endif %}
-
-    <nav class="lower">
-      {% for link in config.extra.nav %}
-        <a href="{{ link.path }}">{{ link.name }}</a>
-      {% endfor %}
-    </nav>
   </div>
 {% endblock content %}
