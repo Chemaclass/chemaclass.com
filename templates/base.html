@@ -137,13 +137,13 @@
         </nav>
       </header>
     {% endblock header %}
+
     <main>
     {% block content %} {% endblock content %}
     </main>
-    <footer class="footer-page">
-    {% block footer %}
-      {% include "footer.html" %}
-    {% endblock footer %}
+
+    <footer id="footer-page">
+      © <time datetime="{{now() | date(format='%Y')}}">{{now() | date(format="%Y")}}</time>, Chema - Jose Maria Valera Reales
     </footer>
   </body>
 </html>

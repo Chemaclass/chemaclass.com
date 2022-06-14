@@ -112,6 +112,13 @@ header {
   display: none;
 }
 
+#footer-page {
+  text-align: center;
+  font-size: 0.9em;
+  margin: 16px auto;
+  padding-top: 12px;
+}
+
 @media (max-width: 880px) {
   body {
     justify-content: flex-start;

@@ -33,7 +33,7 @@
 {% macro footer_about() %}
   {% if config.extra.footer_about %}
   <footer>
-      <div class="footer-about">
+      <div id="footer-about">
         {{ config.extra.footer_about | markdown | safe }}
       </div>
   </footer>
