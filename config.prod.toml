@@ -35,8 +35,9 @@ repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/cont
 gtag = "G-6H5VWFE7HT"
 
 footer_about = """
-Have you found this helpful? Do you want more?
-Follow me on [Twitter](https://twitter.com/Chemaclass) or [GitHub](https://github.com/Chemaclass).
+Have you found this helpful? Do you want more?<br>
+Follow me on [Twitter](https://twitter.com/Chemaclass) and consider [buying me a coffee](https://www.buymeacoffee.com/chemaclass)
+or [leaving a tip](https://cointr.ee/chemaclass).
 """
 
 not_found_message = """
