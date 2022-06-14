@@ -36,9 +36,10 @@ gtag = ""
 
 footer_about = """
 Have you found this helpful? Do you want more?<br>
-Follow me on [Twitter](https://twitter.com/Chemaclass) and consider [buying me a coffee](https://www.buymeacoffee.com/chemaclass)
-or leaving a tip in [paypal](https://www.paypal.com/paypalme/chemaclass)
-or [crypto](https://cointr.ee/chemaclass).
+Follow me on [<i class="fa-brands fa-twitter"></i>](https://twitter.com/Chemaclass)
+and consider buying me a [<i class="fa-solid fa-mug-saucer"></i>](https://www.buymeacoffee.com/chemaclass)
+or leaving a tip in [<i class="fa-brands fa-paypal"></i>](https://www.paypal.com/paypalme/chemaclass)
+or [<i class="fa-solid fa-bitcoin-sign"></i>](https://cointr.ee/chemaclass)
 """
 
 not_found_message = """
