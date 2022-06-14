@@ -37,7 +37,8 @@ gtag = "G-6H5VWFE7HT"
 footer_about = """
 Have you found this helpful? Do you want more?<br>
 Follow me on [Twitter](https://twitter.com/Chemaclass) and consider [buying me a coffee](https://www.buymeacoffee.com/chemaclass)
-or [leaving a tip](https://cointr.ee/chemaclass).
+or leaving a tip in [paypal](https://www.paypal.com/paypalme/chemaclass)
+or [crypto](https://cointr.ee/chemaclass).
 """
 
 not_found_message = """
