@@ -16,14 +16,14 @@
 
     {% if page.lighter %}
     <div class="link">
-        Previous <br />
+        <span>Previous</span> <br />
         <a href="{{ page.lighter.permalink }}">{{ page.lighter.title }}</a>
     </div>
     {% endif %}
 
     {% if page.heavier %}
     <div class="link">
-        Next <br />
+        <span>Next</span> <br />
         <a href="{{ page.heavier.permalink }}">{{ page.heavier.title }}</a>
     </div>
     {% endif %}

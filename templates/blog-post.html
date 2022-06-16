@@ -101,14 +101,14 @@
 
     {% if page.earlier %}
       <div class="link">
-        Previous <br />
+        <span>Previous</span> <br />
         <a href="{{ page.earlier.permalink }}">{{ page.earlier.title }}</a>
       </div>
     {% endif %}
 
     {% if page.later %}
       <div class="link">
-        Next <br />
+        <span>Next</span> <br />
         <a href="{{ page.later.permalink }}">{{ page.later.title }}</a>
       </div>
     {% endif %}
