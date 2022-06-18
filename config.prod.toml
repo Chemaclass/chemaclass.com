@@ -43,5 +43,7 @@ or [<i class="fa-solid fa-bitcoin-sign"></i>](https://ud.me/chemaclass.wallet)
 """
 
 not_found_message = """
-This is not the page you're looking for... return back to [safety?](/) <i class="fas fa-step-backward"></i>
+It seems like this page does not exist… [return back to the homepage?](/)
+
+> Consider contacting me if you think something was wrong [<i class="fa-brands fa-twitter"></i>](https://twitter.com/Chemaclass).
 """
