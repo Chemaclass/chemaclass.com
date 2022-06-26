@@ -233,3 +233,24 @@ blockquote {
     font-size: 1.2em;
   }
 }
+
+#footer-about {
+  font-size: 1.2rem;
+}
+
+.phone-footer-about {
+  display: block;
+}
+
+.desktop-footer-about {
+  display: none;
+}
+
+@media (min-width: 465px) {
+  .phone-footer-about {
+    display: none;
+  }
+  .desktop-footer-about {
+    display: block;
+  }
+}

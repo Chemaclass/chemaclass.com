@@ -30,16 +30,6 @@
   {% endif %}
 {% endmacro %}
 
-{% macro footer_about() %}
-  {% if config.extra.footer_about %}
-  <footer>
-      <div id="footer-about">
-        {{ config.extra.footer_about | markdown | safe }}
-      </div>
-  </footer>
-  {% endif %}
-{% endmacro %}
-
 {% macro reading_preview(post) %}
 <div class="reading-preview">
   <h3 class="reading-title{% if post.extra.expand_preview %} reading-title__long{% endif %}">

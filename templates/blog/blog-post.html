@@ -21,11 +21,7 @@
 
   <hr class="footer-rule" />
 
-  {% if config.extra.footer_about %}
-    <div id="footer-about">
-      {{ config.extra.footer_about | markdown | safe }}
-    </div>
-  {% endif %}
+  {% include "footer-about.html" %}
 
   <div class="related-container">
 
