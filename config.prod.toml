@@ -36,9 +36,10 @@ gtag = "G-6H5VWFE7HT"
 
 footer_about = """
 Have you found this helpful? Do you want more?<br>
-Follow me on [<i class="fa-brands fa-twitter"></i>](https://twitter.com/Chemaclass)
-and consider leaving a tip in [<i class="fa-brands fa-paypal"></i>](https://www.paypal.com/paypalme/chemaclass)
-or [<i class="fa-solid fa-bitcoin-sign"></i>](https://ud.me/chemaclass.wallet)
+Follow me on [<i class="fa fa-brands fa-twitter"></i>](https://twitter.com/Chemaclass)
+and [<i class="fa fa-brands fa-github"></i>](https://github.com/Chemaclass) -
+Leave a tip via [<i class="fa fa-brands fa-paypal"></i>](https://www.paypal.com/paypalme/chemaclass)
+or [<i class="fa fa-solid fa-bitcoin-sign"></i>](https://ud.me/chemaclass.wallet)
 """
 
 not_found_message = """

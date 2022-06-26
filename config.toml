@@ -38,7 +38,7 @@ footer_about = """
 Have you found this helpful? Do you want more?<br>
 Follow me on [<i class="fa fa-brands fa-twitter"></i>](https://twitter.com/Chemaclass)
 and [<i class="fa fa-brands fa-github"></i>](https://github.com/Chemaclass) -
-Leave a tip in [<i class="fa fa-brands fa-paypal"></i>](https://www.paypal.com/paypalme/chemaclass)
+Leave a tip via [<i class="fa fa-brands fa-paypal"></i>](https://www.paypal.com/paypalme/chemaclass)
 or [<i class="fa fa-solid fa-bitcoin-sign"></i>](https://ud.me/chemaclass.wallet)
 """
 

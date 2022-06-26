@@ -91,7 +91,7 @@ measurement of seniority. But I argue that the "attitude factor" is equal or eve
 by many people who call themselves seniors with 3, 6, 10, and more years of "experience" but lacking attitude, and you
 could clearly see this problem on a daily basis.
 
-You need this combination to build yourself as a truly senior developer; time, experience, and most importantly:
+> You need this combination to build yourself as a truly senior developer; time, experience, and most importantly:
 attitude towards **improving your own skills and the ones that surround you**.
 
 ### Recommended readings
