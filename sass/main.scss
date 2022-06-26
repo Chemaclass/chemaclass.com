@@ -56,7 +56,7 @@ body {
 
 #footer-about {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 $max-width: 700px;
@@ -107,18 +107,18 @@ thead tr {
 
 table th,
 table td {
-    padding: 10px 12px;
+  padding: 10px 12px;
 }
 
 
 table tbody tr {
-    border-bottom: 1px solid var(--table-border-bottom);
+  border-bottom: 1px solid var(--table-border-bottom);
 }
 
 table tbody tr:nth-of-type(even) {
-    background-color: var(--table-bg-even);
+  background-color: var(--table-bg-even);
 }
 
 table tbody tr:last-of-type {
-    border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
 }

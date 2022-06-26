@@ -53,11 +53,13 @@ code {
   }
 }
 
-a,
-a:visited {
+a {
   color: var(--accent-color);
   text-decoration: none;
-  border-bottom: 1px solid var(--accent-color-light);
+
+  &:hover {
+    border-bottom: 1px solid var(--accent-color-light);
+  }
 }
 
 $max-width: 700px;
