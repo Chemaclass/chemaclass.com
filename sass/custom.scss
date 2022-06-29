@@ -234,8 +234,20 @@ blockquote {
   }
 }
 
+$max-width: 700px;
+
+#footer-page {
+  text-align: center;
+  font-size: 0.9em;
+  border-top: lightgray solid 1px;
+  max-width: $max-width;
+  margin: 16px auto;
+  padding-top: 12px;
+}
+
 #footer-about {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  text-align: center;
 }
 
 .phone-footer-about {
