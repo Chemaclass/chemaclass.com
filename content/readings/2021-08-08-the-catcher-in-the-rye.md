@@ -8,12 +8,14 @@ subtitle = ""
 pages = "220"
 author = "J. D. Salinger"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lprH3LF4L._SX323_BO1,204,203,200_.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <a target="_blank" href="https://amzn.to/3iuHD5D">
     <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51lprH3LF4L._SX323_BO1,204,203,200_.jpg" >
 </a>
+
+<!-- more -->
 
 It was originally intended for adults but is often read by adolescents for its themes of angst, alienation, and as a
 critique on superficiality in society.
@@ -21,7 +23,6 @@ critique on superficiality in society.
 The novel is a deeper reflection of Salinger's own youth, his complicated relationship with growing up and the
 generational trauma affected by World War II.
 
-<!-- more -->
 Undeniably autobiographical, Salinger drew on his personal experiences fighting in the war and his New York creating the
 character of **Holden Caulfield**.
 

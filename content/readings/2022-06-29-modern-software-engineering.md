@@ -8,17 +8,17 @@ subtitle = "Doing What Works to Build Better Software Faster"
 pages = "200"
 author = "David Farley"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51OFUgJAdaL._SX402_BO1,204,203,200_.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <a target="_blank" href="https://www.amazon.de/-/en/David-Farley/dp/0137314914/">
     <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51OFUgJAdaL._SX402_BO1,204,203,200_.jpg" >
 </a>
 
+<!-- more -->
+
 This book presents software development as an engineering practice at every level. 
 To master software engineering, we must become experts at learning and managing complexity.
-
-<!-- more -->
 
 ### Optimize for learning
 

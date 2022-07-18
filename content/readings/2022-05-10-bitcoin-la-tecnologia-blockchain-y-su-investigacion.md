@@ -1,5 +1,5 @@
 +++
-title = "Bitcoin: La tecnología Blockchain y su investigación"
+title = "Bitcoin: Blockchain y su investigación"
 description = "How is created Bitcoin address? How does it work the creation of the private & public keys and how are they known as wallets? And many other interesting questions."
 draft = true
 [taxonomies]
@@ -9,17 +9,17 @@ subtitle = "Published in 2017, most of the technology shown is already history"
 pages = "200"
 author = "Félix Brezo, Yaiza Rubio"
 static_thumbnail = "https://0xword.com/230-large_default/bitcoin-la-tecnologia-blockchain-y-su-investigacion.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <a target="_blank" href="https://0xword.com/es/libros/87-bitcoin-la-tecnologia-blockchain-y-su-investigacion.html">
     <img border="0" src="https://0xword.com/230-large_default/bitcoin-la-tecnologia-blockchain-y-su-investigacion.jpg" >
 </a>
+<!-- more -->
 
 This book was published in 2017, so most of the technology shown is already history. And that's precisely what I really
 like from the book itself, the "historical part" and the origin of the blockchain.
 
-<!-- more -->
 
 How is created Bitcoin address? How does it work the creation of the private & public keys and how are they known as
 wallets? And many other interesting questions.

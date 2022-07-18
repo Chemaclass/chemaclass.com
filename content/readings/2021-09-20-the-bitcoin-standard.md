@@ -8,17 +8,17 @@ subtitle = "The Decentralized Alternative to Central Banking"
 pages = "300"
 author = "Saifedean Ammous"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41x6NvXWekS._SX336_BO1,204,203,200_.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <a target="_blank" href="https://amzn.to/3Ewyhj0">
     <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41x6NvXWekS._SX336_BO1,204,203,200_.jpg" >
 </a>
 
+<!-- more -->
+
 The Bitcoin Standard analyzes the historical context to the rise of Bitcoin, the economic properties that have allowed
 it to grow quickly, and its likely economic, political, and social implications.
-
-<!-- more -->
 
 While Bitcoin is a new invention of the digital age, the problem it purports to solve is as old as human society itself:
 transferring value across time and space. Ammous takes the reader on an engaging journey through the history of

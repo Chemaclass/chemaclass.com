@@ -8,18 +8,18 @@ subtitle = "A True Story of Turning Followers into Leaders"
 pages = "220"
 author = "L. David Marquet"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL._SX323_BO1,204,203,200_.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <a target="_blank" href="https://amzn.to/3C4m8j7">
     <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL._SX323_BO1,204,203,200_.jpg" >
 </a>
 
+<!-- more -->
+
 The book is about his leadership theories to how he implemented a fresh leadership model. Including the limitations of a
 hierarchical top-down model, why/how he failed to empower his team earlier in his career, and how the circumstances for
 Santa Fe were ideal for him to experiment with the new leader-leader approach.
-
-<!-- more -->
 
 Most people unconsciously divide the world into **leaders vs followers**, and make assumptions about what each group
 can/can't do. Such assumptions influence our thoughts and actions that impact the performance of individual employees and
