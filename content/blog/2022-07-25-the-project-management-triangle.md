@@ -1,7 +1,6 @@
 +++
 title = "The Project Management Triangle"
 description = "A triangle of time, quality and cost. it's an indicator that these three parameters are interconnected. You can fix one or two of them, but not three."
-draft = true
 [taxonomies]
 tags = [ "management" ]
 [extra]
