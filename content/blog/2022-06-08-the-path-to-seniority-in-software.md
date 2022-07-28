@@ -44,10 +44,10 @@ What else can we measure in order to identify if you deserve indeed this title?
 
 ### It is not all about the money
 
-Let us be honest, senior titles are better paid than junior or middle positions. If you have the chance to get more
-salary because you got the "senior" in your job title, well, it wouldn't be clever to reject it. But, independently of 
-the politics and marketing, we have to address some seniority fundamentals, to have a better understanding of what the 
-word "senior" means in this context.
+Let us be honest, senior titles are better paid than junior or middle positions. If you have the chance to get a higher
+salary because you got the "senior" in your job title, well, it wouldn't be clever to reject it. But, independently of
+politics and marketing, we must address some seniority fundamentals to understand better what the word "senior" means in
+this context.
 
 > It is not all about the money, but also about the responsibilities that come with seniority.
 
@@ -92,7 +92,7 @@ by many people who call themselves seniors with 3, 6, 10, and more years of "exp
 could clearly see this problem on a daily basis.
 
 > You need this combination to build yourself as a truly senior developer; time, experience, and most importantly:
-attitude towards **improving your own skills and the ones that surround you**.
+> attitude towards **improving your own skills and the ones that surround you**.
 
 ### Recommended readings
 
