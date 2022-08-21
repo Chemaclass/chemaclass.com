@@ -9,11 +9,17 @@ template = "page.html"
 
 ## Speaker 🎤
 
-- IPC Berlin, June 2022: [Update Your Team to be More Extreme](https://phpconference.com/speaker/jose-maria-valera-reales/)
-- IPC Berlin, June 2022: [Ask Me Anything](https://phpconference.com/php-core-coding/ama-ask-me-anything-session-state-of-php/) (with Sebastian Bergmann)
-- Code Talks Hamburg, September 2022: [Update Your Team to be More Extreme](https://codetalks.de/speakers#speaker-985?event=7) 
-- IPC Munich, October 2022: [Update Your Team to be More Extreme](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/)
-- More to come...
+### 2022
+
+#### June
+- IPC **Berlin**: [Update Your Team to be More Extreme](https://phpconference.com/speaker/jose-maria-valera-reales/)
+- IPC **Berlin**: [Ask Me Anything](https://phpconference.com/php-core-coding/ama-ask-me-anything-session-state-of-php/) (with Sebastian Bergmann)
+
+#### September
+- Code Talks **Hamburg**: [Update Your Team to be More Extreme](https://codetalks.de/speakers#speaker-985?event=7)
+
+#### October
+- IPC **Munich**: [Update Your Team to be More Extreme](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/)
 
 ---
 
