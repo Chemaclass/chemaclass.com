@@ -7,9 +7,8 @@ sort_by = "date"
 
 # Readings
 
-I would like to keep track of what I read.
-Here you can see what I read. The datetime on each book says when I finished it.
+> The challenge is a book per month.
 
-> The challenge is simple: A book per month.
+I want to keep track of what I read and share it with everyone. Here you can see that. The datetime on each book said when I finished it.
 
 ---
