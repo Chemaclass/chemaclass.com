@@ -16,7 +16,13 @@ can we become leaders? And most importantly, why?
 
 <!-- more -->
 
-## What is *not* leadership?
+While researching this topic, I found ["What is leadership" by Kevin Kruse](https://www.forbes.com/sites/kevinkruse/2013/04/09/what-is-leadership/), which I liked particularly. I thought about
+sharing the key takeaways from that blog post as it expresses very well the general points about what *is* and what *is not*
+leadership.
+
+---
+
+## What is not leadership?
 
 Leadership has nothing to do with titles. Just because you have a C-level title, doesn't automatically make you a 
 "leader". You don't need a leading title to become a leader.
@@ -51,7 +57,7 @@ A manager has the power to fire team members, which provides a lot of influence.
 
 ### So, what about combining them all?
 
-> Leadership is a process of social influence, which maximizes the efforts of others toward the achievement of a goal.
+> "Leadership is a process of social influence, which maximizes the efforts of others toward the achievement of a goal." Kevin Kruse
 
 Key elements of this definition:
 
@@ -59,6 +65,10 @@ Key elements of this definition:
 - Leadership requires others, not necessarily direct reports
 - It includes a goal
 - No mention of a title or attributes of any kind
+
+*End from the key takeaways by ["What is leadership" by Kevin Kruse](https://www.forbes.com/sites/kevinkruse/2013/04/09/what-is-leadership/).*
+
+---
 
 ![blog-cover](/images/blog/2022-09-25/footer.jpg)
 
@@ -102,7 +112,3 @@ experiences outside your circle. For example listening to podcasts, ted-talks, b
 - [Turn the Ship Around!](/readings/turn-the-ship-around/), by L. David Marquet
 - [Leaders Eat Last](/readings/leaders-eat-last/), by Simon Sinek
 - [The Art of Leadership](/readings/the-art-of-leadership/), by Michael Lopp
-
-#### Other resources
-
-- [What is leadership?](https://www.forbes.com/sites/kevinkruse/2013/04/09/what-is-leadership/) | Forbes
