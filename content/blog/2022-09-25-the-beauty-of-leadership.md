@@ -5,7 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "leadership", "people", "management" ]
 [extra]
-subtitle = "What is leadership and what is not?"
+subtitle = "Team Lead? Tech Lead? What is leadership and what is not?"
 static_thumbnail = "/images/blog/2022-09-25/cover.jpg"
 +++
 
