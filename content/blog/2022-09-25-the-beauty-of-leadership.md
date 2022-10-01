@@ -112,4 +112,4 @@ experiences outside your circle. For example listening to podcasts, ted-talks, b
 - [Turn the Ship Around!](/readings/turn-the-ship-around/), by L. David Marquet
 - [Leaders Eat Last](/readings/leaders-eat-last/), by Simon Sinek
 - [The Art of Leadership](/readings/the-art-of-leadership/), by Michael Lopp
-- [Dear to lead](/readings/dear-to-lead/), by Brené Brown
+- [Dare to lead](/readings/dare-to-lead/), by Brené Brown
