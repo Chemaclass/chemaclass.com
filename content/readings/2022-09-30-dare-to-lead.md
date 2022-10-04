@@ -39,7 +39,7 @@ The modern workplace might feel like a “gladiator arena.” While it might not
 still requires bravery, and plenty of sweetness and tears, to the point that we can feel so overwhelmed that we are
 tempted to leave. So, according to Brené:
 
-“One of the most significant sources of motivation for sticking it out is to be crystal clear about our core values.”
+> "One of the most significant sources of motivation for sticking it out is to be crystal clear about our core values."
 
 Values are the **ideals** that we have that bring purpose to what we do in our life. They guide us and give us something to
 hold on to during dark and difficult times. Strong values guide us **to do what is correct** rather than easy.
@@ -65,12 +65,12 @@ In the long run, this is kinder and more productive.
 
 Expressed together with the acronym: *BRAVING*
 
-1. Setting **B**oundaries
+1. Setting **B**oundaries - respect one another's boundaries
 2. **R**eliability - which means to follow-up words with actions
 3. **A**ccountability - being responsible and acknowledging mistakes
 4. **V**ault - the ability to keep confidential information private
-5. **I**ntegrity - choosing courage instead of comfort
-6. **N**on-judgment
+5. **I**ntegrity - choosing courage over comfort
+6. **N**on-judgment - talk to one another without judgment
 7. **G**enerosity - assuming that people meet you with the best intentions
 
 ## Failure
