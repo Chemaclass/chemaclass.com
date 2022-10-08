@@ -11,8 +11,7 @@ static_thumbnail = "/images/blog/2022-10-08/cover.jpg"
 
 ![blog-cover](/images/blog/2022-10-08/cover.jpg)
 
-I recently got a great question on [Twitter](https://twitter.com/Chemaclass/status/1578425454562021376) which got
-me thinking for a while and I decided to share my thoughts about it.
+I recently got a great question on Twitter which got me thinking for a while and I decided to share my thoughts about it.
 
 <!-- more -->
 
@@ -73,9 +72,15 @@ opportunities to improve everywhere.
 If, after several months of (really) trying these ideas, none of them works, look for a new company that shares your
 beliefs. After all, you're the first and primary responsible person for taking care of your career path.
 
-> Original [twitter thread](https://twitter.com/Chemaclass/status/1578425454562021376)
+> Original [twitter thread](https://twitter.com/Chemaclass/status/1578425454562021376).
 
 ![blog-footer](/images/blog/2022-10-08/footer.jpg)
+
+### Related posts
+
+- [The art of testing: where design meets quality](/blog/the-art-of-testing/). <small>From a software developer's point of view</small>
+- [Understanding people](/blog/understanding-people/). <small>Misunderstandings, effective communication, and self-reflection</small>
+- [Update your team to be more extreme](/blog/the-art-of-testing/). <small>How can you help your peers to embrace the change?</small>
 
 ### Recommended readings
 
