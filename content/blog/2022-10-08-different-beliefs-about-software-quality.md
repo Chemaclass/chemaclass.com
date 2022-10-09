@@ -69,12 +69,33 @@ opportunities to improve everywhere.
 
 ### Your career path
 
-If, after several months of (really) trying these ideas, none of them works, look for a new company that shares your
+If, after several months of (really) trying these ideas, none of them work, look for a new company that shares your
 beliefs. After all, you're the first and primary responsible person for taking care of your career path.
 
 > Original [twitter thread](https://twitter.com/Chemaclass/status/1578425454562021376).
 
+---
+
 ![blog-footer](/images/blog/2022-10-08/footer.jpg)
+
+## Extra thoughts
+
+If **you want something to be different**, don't wait till it's changed automatically. Try to **change it**; if it's not 
+working, leave it. Maybe you don't belong in that place.
+
+On the other hand, it’s crucial to reflect if you see that pattern often repeating (changing companies too quickly). In
+such a case, maybe the problem isn’t the companies but yourself.
+
+Software development is not just about code but **business**. It's essential to be aware of finding a fair _trade-off_ 
+between speed, costs, and quality, depending on the situation. You might want to use some _tech debt_ to conquer the 
+market as soon as possible.
+
+It doesn't make sense to have "low quality" as part of the identity of any team. Every team has certain quality 
+expectations. Therefore, the **key** here is to **agree on what good quality is**.
+
+> Thanks to my former Engineer Manager, Evgenii Sokolov, who inspired me to write these extra lines after sharing the original post.
+
+---
 
 ### Related posts
 
