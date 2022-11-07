@@ -122,6 +122,9 @@
       <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
       <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
     {% endblock styles %}
+    {% block rss %}
+      <link rel="alternate" type="application/atom+xml" href="{{ get_url(path='atom.xml') | safe }}" title="Atom Feed">
+    {% endblock rss %}
     {% block posthead %}{% endblock posthead %}
   </head>
   <body>
