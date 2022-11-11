@@ -48,8 +48,10 @@ that is [Domain-Driven Design](https://en.wikipedia.org//wiki/Domain-driven_desi
 about *DDD* in books (like *[Domain-Driven Design Distilled](/readings/domain-driven-design-distilled)*) or in many
 blogs on the Internet.
 
-The key aspect here is not what requirements or impressions are *being resolved* but **how**. How could you work agile with 
-that doctor?
+However, the critical aspect here is not what requirements or impressions are *being resolved* but **how**.
+How could you work agile with that doctor?
+
+![Myself talking in the IPC Munich 2022 (2)](/images/blog/2022-11-11/middle.jpg)
 
 > Agile is about quick feedback. It's about effective communication and reducing waste while aiming for simplicity.
 
@@ -114,7 +116,7 @@ learns from their **mistakes**; there is no need for masks anymore.
 
 That's when the magic starts to happen, and suddenly you can work agile with any team, especially yours.
 
-![Myself talking in the IPC Munich 2022 (2)](/images/blog/2022-11-11/footer.jpg)
+![Myself talking in the IPC Munich 2022 (3)](/images/blog/2022-11-11/footer.jpg)
 
 ---
 
