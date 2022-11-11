@@ -1,6 +1,6 @@
 base_url = "https://chemaclass.com"
 
-title = "Chema's website | Chemaclass"
+title = "Chemaclass"
 description = "Check out my latest tech blog posts, and follow my journey on what I have been reading the last month."
 
 generate_feed = true
