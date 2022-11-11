@@ -1,7 +1,7 @@
 +++
 title = "Working agile with non-agile teams"
 description = "Let's assume you already know what the agile manifesto is. Let's consider that you apply most of the extreme programming values, principles, and practices. How can you work with other teams that aren't agile?"
-draft = true
+draft = false
 [taxonomies]
 tags = [ "software", "people", "agile" ]
 [extra]
@@ -41,12 +41,15 @@ How could you create a **bridge** between that doctor and your software team?
 
 If you need to work with that doctor is because he/she should be a domain expert. I suggest getting one or two of your
 team members to meet with that expert for 30/60 min, so they can talk and share their impressions. And then repeat this
-as much as possible to shorten the feedback loop. For example, once a week. 
+as much as possible to shorten the feedback loop. For example, once a week.
 
 Collecting those requirements and impressions from the experts and then driving the design of your software according to
-that is [Domain-Driven Design](https://en.wikipedia.org//wiki/Domain-driven_design), and that is another topic.
+that is [Domain-Driven Design](https://en.wikipedia.org//wiki/Domain-driven_design). You can find a lot of documentation
+about *DDD* in books (like *[Domain-Driven Design Distilled](/readings/domain-driven-design-distilled)*) or in many
+blogs on the Internet.
 
-The key here is not what requirements or impressions are being resolved but how. How could you work agile with that doctor?
+The key aspect here is not what requirements or impressions are *being resolved* but **how**. How could you work agile with 
+that doctor?
 
 > Agile is about quick feedback. It's about effective communication and reducing waste while aiming for simplicity.
 
