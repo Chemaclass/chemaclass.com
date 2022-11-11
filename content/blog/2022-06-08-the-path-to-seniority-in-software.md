@@ -8,7 +8,7 @@ subtitle = "How to become a Senior Software Developer?"
 static_thumbnail = "/images/blog/2022-06-08/cover.jpg"
 +++
 
-![blog-cover](/images/blog/2022-06-08/cover.jpg)
+![Myself talking in the IPC Berlin 2022](/images/blog/2022-06-08/cover.jpg)
 
 We all have been junior developers at some point. This is easy to know because it is at the very beginning of your
 carrier. Your responsibilities were narrowed down by other peers who were looking after you. Suddenly, at some point,

@@ -9,7 +9,7 @@ subtitle = "How can you work with other teams that aren't agile?"
 static_thumbnail = "/images/blog/2022-11-11/cover.jpg"
 +++
 
-![blog-cover](/images/blog/2022-11-11/cover.jpg)
+![Myself talking in the IPC Munich 2022 (1)](/images/blog/2022-11-11/cover.jpg)
 
 Let's assume you already know what the agile manifesto is. Let's consider that you apply most of the "extreme
 programming" values, principles, and practices. How can you work with other teams that aren't agile?
@@ -114,7 +114,7 @@ learns from their **mistakes**; there is no need for masks anymore.
 
 That's when the magic starts to happen, and suddenly you can work agile with any team, especially yours.
 
-![blog-cover](/images/blog/2022-11-11/footer.jpg)
+![Myself talking in the IPC Munich 2022 (2)](/images/blog/2022-11-11/footer.jpg)
 
 ---
 
