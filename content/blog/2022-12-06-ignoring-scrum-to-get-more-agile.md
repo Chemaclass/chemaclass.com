@@ -19,12 +19,12 @@ together, especially regarding meetings. These are my thoughts about this topic.
 > "Do you think it would make sense to just use agile and ignore scrum (sprints) completely in a product based
 > development company. I feel it's hard to be agile when you have 10 hours of meetings per week." Filip G.
 
-That is related to the essence core of Extreme Programming, which is the first value: Effective Communication.
+That is related to the essence core of [Extreme Programming](/readings/xp-embrace-change/), which is the first value: Effective Communication.
 
 > "Probably some companies just don't know how to properly use meetings and just have them out of habit." Filip G.
 
 I wouldn't say completely ignore Scrum. Scrum (when done well) is a great "Product Management" Framework. To improve
-your understanding of Scrum I recommend reading: [Scrum: The Art of Doing Twice the Work in Half the Time](/readings/scrum-doing-twice).
+your understanding of Scrum I recommend reading: [Scrum: The Art of Doing Twice the Work in Half the Time](/readings/scrum-the-art-of-doing-twice).
 
 The main issue with scrum nowadays is that management toke control over the whole thing, and developers are not really
 educated about how to practice Scrum properly (in a real Agile way), and that's where the problem starts. For this, I
@@ -37,7 +37,7 @@ the team processes from an agile point of view.
 ## Agile in a nutshell
 
 I recently wrote a blog post about agile fundamentals, which I recommend you to read to get into the
-details: [Working agile with non-agile teams](blog/working-agile-with-non-agile-teams/). But, the **tl;dr**:
+details: [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/). But, the **tl;dr**:
 <ins>Agile is about quick feedback. It's about effective communication and reducing waste while aiming for simplicity.</ins>
 
 Agile is about keeping these values always present:
@@ -125,6 +125,6 @@ working as it should.
 
 ### Related posts
 
-- [Working agile with non-agile teams](blog/working-agile-with-non-agile-teams/). <small>How can you work with other teams that aren't agile?</small>
+- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/). <small>How can you work with other teams that aren't agile?</small>
 - [Understanding people](/blog/understanding-people/). <small>Misunderstandings, effective communication, and self-reflection</small>
 - [The Project Management Triangle](/blog/the-project-management-triangle/). <small>The Iron Triangle</small>
