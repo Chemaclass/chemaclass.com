@@ -27,8 +27,8 @@ I wouldn't say completely ignore Scrum. Scrum (when done well) is a great "Produ
 your understanding of Scrum I recommend reading: [Scrum: The Art of Doing Twice the Work in Half the Time](/readings/scrum-the-art-of-doing-twice).
 
 The main issue with scrum nowadays is that management toke control over the whole thing, and developers are not really
-educated about how to practice Scrum properly (in a real Agile way), and that's where the problem starts. For this, I
-read a book which addresses pretty well the common issues that most Scrum teams face in a fun and easy reading book:
+educated about how to practice Scrum properly (in a real Agile way), and that's where the problem starts. For this, 
+I recommend a book that addresses pretty well the common issues that most Scrum teams face in a fun and easy-reading book
 [Zombie Scrum Survival Guide: A Journey to Recovery](/readings/zombie-scrum-survival-guide/).
 
 It's not about Agile yes, and Scrum no. They are totally compatible. The issue is to create awareness about how to focus
@@ -40,7 +40,7 @@ I recently wrote a blog post about agile fundamentals, which I recommend you to 
 details: [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/). But, the **tl;dr**:
 <ins>Agile is about quick feedback. It's about effective communication and reducing waste while aiming for simplicity.</ins>
 
-Agile is about keeping these values always present:
+[Agile](https://agilemanifesto.org/) is about keeping these values always present:
 
 - Individuals and interactions over processes and tools
 - Working software over comprehensive documentation
