@@ -9,7 +9,7 @@ subtitle = "How can you work with other teams that aren't agile?"
 static_thumbnail = "/images/blog/2022-11-11/cover.jpg"
 +++
 
-![Myself talking in the IPC Munich 2022 (1)](/images/blog/2022-11-11/cover.jpg)
+![blog-cover](/images/blog/2022-11-11/cover.jpg)
 
 Let's assume you already know what the agile manifesto is. Let's consider that you apply most of the "extreme
 programming" values, principles, and practices. How can you work with other teams that aren't agile?
@@ -51,7 +51,7 @@ blogs on the Internet.
 However, the critical aspect here is not what requirements or impressions are *being resolved* but **how**.
 How could you work agile with that doctor?
 
-![Myself talking in the IPC Munich 2022 (2)](/images/blog/2022-11-11/middle.jpg)
+![blog-middle](/images/blog/2022-11-11/middle.jpg)
 
 > Agile is about quick feedback. It's about effective communication and reducing waste while aiming for simplicity.
 
@@ -116,7 +116,7 @@ learns from their **mistakes**; there is no need for masks anymore.
 
 That's when the magic starts to happen, and suddenly you can work agile with any team, especially yours.
 
-![Myself talking in the IPC Munich 2022 (3)](/images/blog/2022-11-11/footer.jpg)
+![blog-footer](/images/blog/2022-11-11/footer.jpg)
 
 ---
 
