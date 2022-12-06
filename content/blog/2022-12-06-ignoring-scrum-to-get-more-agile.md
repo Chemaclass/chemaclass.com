@@ -125,5 +125,6 @@ working as it should.
 
 ### Related posts
 
-- [The Project Management Triangle](/blog/the-project-management-triangle/). <small>The Iron Triangle</small>
+- [Working agile with non-agile teams](blog/working-agile-with-non-agile-teams/). <small>How can you work with other teams that aren't agile?</small>
 - [Understanding people](/blog/understanding-people/). <small>Misunderstandings, effective communication, and self-reflection</small>
+- [The Project Management Triangle](/blog/the-project-management-triangle/). <small>The Iron Triangle</small>
