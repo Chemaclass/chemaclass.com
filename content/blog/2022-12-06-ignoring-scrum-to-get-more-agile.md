@@ -16,6 +16,14 @@ together, especially regarding meetings. These are my thoughts about this topic.
 
 <!-- more -->
 
+---
+
+**TL;DR**: People become slaves to systems that are supposed to help. Boring meetings are killing agile. Meetings
+require an active participation from everyone. Otherwise, you might not be essential to that meeting, and rather use
+your time with something else.
+
+---
+
 > "Do you think it would make sense to just use agile and ignore scrum (sprints) completely in a product based
 > development company. I feel it's hard to be agile when you have 10 hours of meetings per week." Filip G.
 
@@ -88,7 +96,7 @@ You were really forced, and you're really wasting your time, and there is no oth
 act on it, really?
 
 When something doesn't work the way I expect - which means I don't like the outcome, I think something is off, or there
-is room for any kind of improvement - before blaming and pushing away responsibilities to others, I like to reflect on
+is room for any kind of improvement - before blaming and pushing away responsibilities to others. I like to reflect on
 it as much as possible to identify the root of the issue, and what could I do to make the situation a bit better.
 
 ---
