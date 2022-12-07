@@ -59,10 +59,10 @@ details: [Working agile with non-agile teams](/blog/working-agile-with-non-agile
 
 ## Scrum in a nutshell
 
-Scrum is a framework for project management with emphasis on software development, although it is used in other fields
-like sales, marketing and more. It's design for teams of 5–9 people (see [Dunbar number](/blog/dunbar-number/)), who are
-totally autonomous and responsible to break down their work into small chunks that can be completed in a time-boxed
-iteration, called sprints, usually 1, 2 or 4 weeks.
+Scrum is a framework for project management emphasizing software development, although it is used in other fields like
+sales, marketing, and more. It’s designed for teams of 5–9 people (see [Dunbar number](/blog/dunbar-number/)) who are
+totally autonomous and responsible for breaking down their work into small chunks that can be completed in a time-boxed
+iteration, called sprints, usually 1, 2, or 4 weeks.
 
 It's common to find certain ceremonies/meetings like:
 
@@ -74,11 +74,11 @@ It's common to find certain ceremonies/meetings like:
 - **Demo/Review**: 2h? meeting to show the work done for the whole team, stakeholders and other interested people.
 - **Retrospective**: 2h? meeting intended to enable the team to reflect and improve.
 
-The key question is how your team organizes these meetings and, most important of all, how effective these are. These
-above are just some of the basic meetings that you have in any "Scrum Team" nowadays.
+The critical question is how your team organizes these meetings and, most important of all, how effective these are.
+These above are just some of the important meetings you have in any “Scrum Team” nowadays.
 
 Still, apart from those, you might encounter a lot of additional meetings that pile up, and suddenly your entire working
-day is gone, and you feel you didn't produce the value you expected. Unless your job is being in meetings every time,
+day is gone, and you feel you didn’t produce the value you expected. Unless your job is being in meetings every time,
 like coordinating projects and talking to people all the time, it seems something is wrong.
 
 ### Boring meetings
@@ -88,16 +88,16 @@ experienced that more than once. Who's to blame? That would be the very first qu
 Followed by, "_My boss, obviously, because he/she organized that meeting, to which I got invited, therefore I am forced 
 to attend, and this wasting time is their fault._"
 
-This is a tricky question, and I don't think that is an honest answer. However, there is an easy explanation for this
+This is a tricky question, and I don't think it is an honest answer. However, there is an easy explanation for this
 answer: pushing away responsibilities and blaming others rather than yourself is way easier.
 
-"_I am forced to attend, and this wasting time is their fault_", it could be, that that's actually the real fact.
-You were really forced, and you're really wasting your time, and there is no other way… but is there no other way to
-act on it, really?
+"_I am forced to attend, and this wasting time is their fault_" it could be that that's actually the actual fact.
+You were really forced, and you’re wasting your time, and there is no other way… but is there no way to act on it,
+really?
 
-When something doesn't work the way I expect - which means I don't like the outcome, I think something is off, or there
-is room for any kind of improvement - before blaming and pushing away responsibilities to others. I like to reflect on
-it as much as possible to identify the root of the issue, and what could I do to make the situation a bit better.
+When something doesn't work the way I expect (e.g., I don’t like the outcome, or I think something is off), before
+blaming and pushing away responsibilities to others, I want to reflect on it and identify the root of the issue. What
+could I do to make the situation a bit better?
 
 ---
 
@@ -106,17 +106,16 @@ it as much as possible to identify the root of the issue, and what could I do to
 Coming back to this context of "many meetings", if you see yourself in a meeting again that feels off or boring, try
 asking yourself:
 
-> Am I feeling bored? Why so? Can it be that I am not participating in the desired outcome of the meeting? And if so, is
-> my presence here in this meeting really necessary? Could I simply ask for a summary afterward and jump outside the
-> meeting to do something more productive?
+> Am I feeling bored? Why so? Is it possible that I am not participating in the desired outcome of the meeting? And if
+> so, is my presence here in this meeting really necessary? Could I simply ask for a summary afterward and jump outside
+> the meeting to do something more productive?
 > 
-> On the other side, is it OK to feel bored in this meeting? Or should I participate and engage with my peers to
+> Contrarily, is it OK to feel bored in this meeting? Or should I participate and engage with my peers to
 > contribute to the outcome of the meeting?
 
 In these situations, I encounter a pattern such as:
 
-- If the meeting is not boring, it is productive and will produce a rich outcome for you and hopefully for all
-  participants.
+- If the meeting is not boring, it is productive and will produce a rich outcome for you and, hopefully, all participants.
 - If the meeting is boring, then either A) it is OK to be boring, politely ask to leave, and you will get the summary
   afterward, or B) it is not OK to be boring. Your participation is necessary for the outcome of the meeting. Try being
   more engaging with your peers, and the meeting won't be boring.
