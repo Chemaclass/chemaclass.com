@@ -11,10 +11,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41gb4dgVhhL
 expand_preview = true
 +++
 
-<a target="_blank"  href="https://www.amazon.de/gp/product/1617296856/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=1617296856&linkCode=as2&tag=chemaclass-21&linkId=9ddbf59a5946ae965c8e34290e19fe16">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41gb4dgVhhL._SX397_BO1,204,203,200_.jpg" >
-</a>
-
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41gb4dgVhhL._SX397_BO1,204,203,200_.jpg" >
 
 Objects are the central concept of languages like Java, Python, C#. Applying best practices for object design means that
 your code will be easy to read, write, and maintain.

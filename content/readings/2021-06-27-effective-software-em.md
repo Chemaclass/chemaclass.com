@@ -11,9 +11,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL
 expand_preview = true
 +++
 
-<a target="_blank" href="https://amzn.to/3xVEzEG">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL._SX404_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL._SX404_BO1,204,203,200_.jpg" >
 
 A great compilation of all topics that are important for management: 1:1s, performance reviews, hiring and laying off,
 workplace politics, remote work, and others.

@@ -11,9 +11,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51AqVDUY13L
 expand_preview = true
 +++
 
-<a target="_blank"  href="https://amzn.to/3AbAK08">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51AqVDUY13L._SX331_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51AqVDUY13L._SX331_BO1,204,203,200_.jpg" >
 
 Tap into the wisdom of experts to learn what every programmer should know, no matter what language you use. With the 97
 short and extremely useful tips for programmers in this book, you'll expand your skills by adopting new approaches to

@@ -11,9 +11,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41O-IVvXtmS
 expand_preview = true
 +++
 
-<a target="_blank" href="https://www.amazon.de/-/en/Teresa-Torres/dp/1736633309/">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41O-IVvXtmS._SX331_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41O-IVvXtmS._SX331_BO1,204,203,200_.jpg" >
 
 This book explores how product managers and designers can keep making a positive impact on their customers' lives. 
 It explores an optimal decision-making process for product teams, so that they can continue to improve their offerings.

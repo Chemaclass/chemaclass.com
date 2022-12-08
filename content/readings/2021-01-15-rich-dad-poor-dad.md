@@ -10,9 +10,7 @@ author = "Robert T. Kiyosaki"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51rgCls-voL._SX350_BO1,204,203,200_.jpg"
 +++
 
-<a target="_blank"  href="https://amzn.to/3A0QxyB">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51rgCls-voL._SX350_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51rgCls-voL._SX350_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

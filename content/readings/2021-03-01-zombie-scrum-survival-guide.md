@@ -10,9 +10,7 @@ author = "Christiaan Verwijs, Johannes Schartau, Barry Overeem"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/511aL5yxHVL._SX383_BO1,204,203,200_.jpg"
 +++
 
-<a target="_blank"  href="https://amzn.to/2TbgScN">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/511aL5yxHVL._SX383_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/511aL5yxHVL._SX383_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

@@ -11,9 +11,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51OFUgJAdaL
 expand_preview = false
 +++
 
-<a target="_blank" href="https://www.amazon.de/-/en/David-Farley/dp/0137314914/">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51OFUgJAdaL._SX402_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51OFUgJAdaL._SX402_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

@@ -11,9 +11,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41rS+NphHwL
 expand_preview = true
 +++
 
-<a target="_blank" href="https://amzn.to/3m3eu3z">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41rS+NphHwL._SX329_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41rS+NphHwL._SX329_BO1,204,203,200_.jpg" >
 
 A radical playbook to empower your people and put your team on a path to continuous improvement. 
 

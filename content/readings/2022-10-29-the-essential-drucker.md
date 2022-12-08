@@ -11,9 +11,7 @@ static_thumbnail = "https://m.media-amazon.com/images/I/41gdosc0RaL.jpg"
 expand_preview = true
 +++
 
-<a target="_blank" href="https://www.amazon.de/-/en/Peter-F-Drucker/dp/0066210879">
-    <img border="0" src="https://m.media-amazon.com/images/I/41gdosc0RaL.jpg" >
-</a>
+<img border="0" src="https://m.media-amazon.com/images/I/41gdosc0RaL.jpg" >
 
 A twenty-six selections on management in the organization, management and the individual, and management and society.
 

@@ -11,9 +11,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41haL4XdXAL
 expand_preview = true
 +++
 
-<a target="_blank" href="https://www.amazon.de/-/en/Morgan-Housel/dp/0857199099/">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41haL4XdXAL._SX322_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41haL4XdXAL._SX322_BO1,204,203,200_.jpg" >
 
 Having more money will make you happier ONLY if that means you'll have more control over your time.
 

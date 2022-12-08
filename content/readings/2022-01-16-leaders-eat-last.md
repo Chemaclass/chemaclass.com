@@ -11,9 +11,7 @@ static_thumbnail = "https://m.media-amazon.com/images/I/51ejdeSXFjL.jpg"
 expand_preview = false
 +++
 
-<a target="_blank" href="https://www.amazon.com/Leaders-Eat-Last-Together-Others-ebook/dp/B00DGZKQM8">
-    <img border="0" src="https://m.media-amazon.com/images/I/51ejdeSXFjL.jpg" >
-</a>
+<img border="0" src="https://m.media-amazon.com/images/I/51ejdeSXFjL.jpg" >
 
 <!-- more -->
 

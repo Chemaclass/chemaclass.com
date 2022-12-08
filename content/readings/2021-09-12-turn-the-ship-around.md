@@ -11,9 +11,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL
 expand_preview = false
 +++
 
-<a target="_blank" href="https://amzn.to/3C4m8j7">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL._SX323_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL._SX323_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

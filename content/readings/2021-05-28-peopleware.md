@@ -11,9 +11,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51RuNCswX8L
 expand_preview = true
 +++
 
-<a target="_blank"  href="https://amzn.to/3qs5pBM">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51RuNCswX8L._SX341_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51RuNCswX8L._SX341_BO1,204,203,200_.jpg" >
 
 Software development is about people: when, how and where they can best work together. Not about programming languages
 or tools. Not about fast computers, networks or internet access.

@@ -11,9 +11,7 @@ static_thumbnail = "https://0xword.com/477-large_default/docker-secdevops.jpg"
 expand_preview = false
 +++
 
-<a target="_blank" href="https://0xword.com/es/libros/103-docker-secdevops.html">
-    <img border="0" src="https://0xword.com/477-large_default/docker-secdevops.jpg" >
-</a>
+<img border="0" src="https://0xword.com/477-large_default/docker-secdevops.jpg" >
 
 <!-- more -->
 

@@ -11,9 +11,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/412omfkKEFL
 expand_preview = false
 +++
 
-<a target="_blank" href="https://www.amazon.de/-/en/Robert-C-Martin/dp/013691571X/">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/412omfkKEFL._SX380_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/412omfkKEFL._SX380_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

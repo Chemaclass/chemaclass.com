@@ -11,10 +11,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51GydOENM3L
 expand_preview = false
 +++
 
-<a target="_blank" href="https://www.amazon.de/-/en/Joel-Beasley/dp/0692076069/">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51GydOENM3L._SX331_BO1,204,203,200_.jpg" >
-</a>
-
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51GydOENM3L._SX331_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

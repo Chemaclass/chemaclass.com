@@ -11,9 +11,7 @@ static_thumbnail = "https://matthiasnoback.nl/assets/books/recipes-for-decouplin
 expand_preview = true
 +++
 
-<a target="_blank" href="https://leanpub.com/recipes-for-decoupling">
-    <img border="0" src="https://matthiasnoback.nl/assets/books/recipes-for-decoupling.jpg" >
-</a>
+<img border="0" src="https://matthiasnoback.nl/assets/books/recipes-for-decoupling.jpg" >
 
 What is coupling, and why is it bad? What is decoupling, and how to do it efficiently? This book is a compilation of
 strategies to decouple your domain code from those infrastructure details, so you can enjoy a healthier system in the

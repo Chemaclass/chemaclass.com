@@ -11,9 +11,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41zoJiSUq4L
 expand_preview = true
 +++
 
-<a target="_blank" href="https://www.amazon.de/-/en/Matt-Mochary/dp/0578599287">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41zoJiSUq4L._SX331_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41zoJiSUq4L._SX331_BO1,204,203,200_.jpg" >
 
 Matt Mochary coaches the CEOs of many of the fastest-scaling technology companies in Silicon Valley. 
 He shares his highly effective leadership and business-operating tools with any CEO or manager in the world.

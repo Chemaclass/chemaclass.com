@@ -12,9 +12,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41T1ZmJ8BGL
 expand_preview = true
 +++
 
-<a target="_blank" href="https://www.amazon.de/-/en/Ori-Brafman/dp/1591841836">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41T1ZmJ8BGL._SX324_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41T1ZmJ8BGL._SX324_BO1,204,203,200_.jpg" >
 
 If you cut off a spider's head, it dies; if you cut off a starfish's leg it grows a new one, and that leg can grow into
 an entirely new starfish. Traditional top-down organizations are like spiders, but now starfish organizations are

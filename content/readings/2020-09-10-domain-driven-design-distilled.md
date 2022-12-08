@@ -11,9 +11,7 @@ static_thumbnail = "https://m.media-amazon.com/images/I/51yhBoDgkqL.jpg"
 expand_preview = true
 +++
 
-<a target="_blank"  href="https://www.amazon.de/-/en/Vaughn-Vernon/dp/0134434420/">
-    <img border="0" src="https://m.media-amazon.com/images/I/51yhBoDgkqL.jpg" >
-</a>
+<img border="0" src="https://m.media-amazon.com/images/I/51yhBoDgkqL.jpg" >
 
 Domain-Driven Design Distilled brings DDD to life. Whether you're a developer, consultant, or customer, it will help 
 you understand it, so you can benefit from its power.

@@ -60,7 +60,7 @@ details: [Working agile with non-agile teams](/blog/working-agile-with-non-agile
 ## Scrum in a nutshell
 
 Scrum is a framework for project management emphasizing software development, although it is used in other fields like
-sales, marketing, and more. It’s designed for teams of 5–9 people (see [Dunbar number](/blog/dunbar-number/)) who are
+sales, marketing, and more. It's designed for teams of 5–9 people (see [Dunbar number](/blog/dunbar-number/)) who are
 totally autonomous and responsible for breaking down their work into small chunks that can be completed in a time-boxed
 iteration, called sprints, usually 1, 2, or 4 weeks.
 
@@ -78,7 +78,7 @@ The critical question is how your team organizes these meetings and, most import
 These above are just some of the important meetings you have in any “Scrum Team” nowadays.
 
 Still, apart from those, you might encounter a lot of additional meetings that pile up, and suddenly your entire working
-day is gone, and you feel you didn’t produce the value you expected. Unless your job is being in meetings every time,
+day is gone, and you feel you didn't produce the value you expected. Unless your job is being in meetings every time,
 like coordinating projects and talking to people all the time, it seems something is wrong.
 
 ### Boring meetings
@@ -92,10 +92,10 @@ This is a tricky question, and I don't think it is an honest answer. However, th
 answer: pushing away responsibilities and blaming others rather than yourself is way easier.
 
 "_I am forced to attend, and this wasting time is their fault_" it could be that that's actually the actual fact.
-You were really forced, and you’re wasting your time, and there is no other way… but is there no way to act on it,
+You were really forced, and you're wasting your time, and there is no other way… but is there no way to act on it,
 really?
 
-When something doesn't work the way I expect (e.g., I don’t like the outcome, or I think something is off), before
+When something doesn't work the way I expect (e.g., I don't like the outcome, or I think something is off), before
 blaming and pushing away responsibilities to others, I want to reflect on it and identify the root of the issue. What
 could I do to make the situation a bit better?
 

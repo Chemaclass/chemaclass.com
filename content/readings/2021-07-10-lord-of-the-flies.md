@@ -11,9 +11,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51de-lVnNCL
 expand_preview = true
 +++
 
-<a target="_blank" href="https://amzn.to/3xqH1mZ">
-    <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51de-lVnNCL._SX325_BO1,204,203,200_.jpg" >
-</a>
+<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51de-lVnNCL._SX325_BO1,204,203,200_.jpg" >
 
 Labeled a parable, an allegory, a myth, a morality tale, a parody, a political treatise, even a vision of the
 apocalypse. It has established itself as a true classic.

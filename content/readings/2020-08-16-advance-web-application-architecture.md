@@ -11,7 +11,7 @@ static_thumbnail = "https://d2sofvawe08yqg.cloudfront.net/web-application-archit
 expand_preview = true
 +++
 
-[![](https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero?1620605116)](https://leanpub.com/web-application-architecture/)
+<img border="0" src="https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero" >
 
 This book helps you get your web applications back in shape. It contains many techniques for decoupling from
 infrastructure (like the framework or the database).
