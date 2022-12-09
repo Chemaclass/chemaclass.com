@@ -34,7 +34,7 @@ That is related to the essence core of [Extreme Programming](/readings/xp-embrac
 I wouldn't say completely ignore Scrum. Scrum (when done well) is a great "Product Management" Framework. To improve
 your understanding of Scrum I recommend reading: [Scrum: The Art of Doing Twice the Work in Half the Time](/readings/scrum-the-art-of-doing-twice).
 
-The main issue with scrum nowadays is that management toke control over the whole thing, and developers are not really
+The main issue with scrum nowadays is that management took control over the whole thing, and developers are not really
 educated about how to practice Scrum properly (in a real Agile way), and that's where the problem starts. For this, 
 I recommend a book that addresses pretty well the common issues that most Scrum teams face in a fun and easy-reading book
 [Zombie Scrum Survival Guide: A Journey to Recovery](/readings/zombie-scrum-survival-guide/).
