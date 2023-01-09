@@ -1,6 +1,6 @@
 +++
 title = "Interview about XP and Agile"
-description = "My interview with devmio regarding Agile and Extreme Programming. Agile is more about HOW you do certain things, rather than WHAT things you do."
+description = "My interview with devm.io regarding Agile and Extreme Programming. Agile is more about HOW you do certain things, rather than WHAT things you do."
 draft = false
 [taxonomies]
 tags = [ "agile", "people" ]
@@ -11,13 +11,13 @@ static_thumbnail = "/images/blog/2023-01-09/cover.jpg"
 
 ![cover](/images/blog/2023-01-09/cover.jpg)
 
-My interview with **devmio** regarding Agile and Extreme Programming.
+My interview with **devm.io** regarding Agile and Extreme Programming.
 
 <!-- more -->
 
 ---
 
-**devmio: We talked to Chema, a software developer and an Extreme Programming expert, about his favourite topic and his upcoming live event [Update Your Team To Be More Extreme](https://devm.io/update-your-team-to-be-more-extreme/).**
+**devm.io: We talked to Chema, a software developer and an Extreme Programming expert, about his favourite topic and his upcoming live event [Update Your Team To Be More Extreme](https://devm.io/update-your-team-to-be-more-extreme/).**
 
 **Could you tell us a little about yourself, who you are, and what you do?**
 
@@ -31,7 +31,7 @@ Extreme Programming is the most straightforward and pragmatic approach to embrac
 
 From my experience, the word "extreme" can be a bit misleading, but I see it as an opportunity to emphasise the difficulty of the fundamentals behind it. The critical point is realising that our "common sense" is not as "common" as we tend to think, nor the best practices for practical teamwork. Therefore, this is about pushing ourselves to extreme effectiveness, collaboration, and satisfaction while working with others.
 
-**You will host a live event on devmio on the topic on January 19th. Could you give us a sneak peek of what your audience can expect?**
+**You will host a live event on devm.io on the topic on January 19th. Could you give us a sneak peek of what your audience can expect?**
 
 We will explore how a software team works nowadays, the common issues we encounter, and what solutions we could apply to improve our team routines. We will look for the real meaning of Agile, focusing on Extreme Programming ideas.
 
