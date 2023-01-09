@@ -9,7 +9,7 @@ subtitle = "Killing agility with excessive meetings"
 static_thumbnail = "/images/blog/2022-12-06/cover.jpg"
 +++
 
-![cover](/images/blog/2022-12-06/cover.jpg)
+![blog-cover](/images/blog/2022-12-06/cover.jpg)
 
 Talking to a friend about agile, he asked me a fascinating question remarking how badly sometimes Agile and Scrum fit
 together, especially regarding meetings. These are my thoughts about this topic.
