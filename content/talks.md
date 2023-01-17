@@ -5,11 +5,17 @@ template = "page.html"
 
 # Talks
 
+Follow my speaker journey.
+
 ## Upcoming events 🎤
 
 #### May
 - 2023-05-23 | International PHP Conference **Berlin**
   - [Building modular applications in PHP with Gacela](https://phpconference.com/software-architecture/modular-applications-php-gacela/)
+
+#### March
+- 2023-03-30 | Spryker Digital User Group **Remote**
+  - [Gacela Framework 1.0](https://www.meetup.com/spryker-user-group/events/289944797/)
 
 #### February
 - 2023-02-08 | Symfony User Group **Berlin**
@@ -47,7 +53,7 @@ template = "page.html"
   - [Gacela Framework 0.1 (ES)](https://www.meetup.com/phpmad/events/284069182/)
 
 #### January
-- 2022-01-25 | Spryker Digital User Group - January 2022 Edition **Remote**
+- 2022-01-25 | Spryker Digital User Group **Remote**
   - [Gacela Framework 0.1](https://www.meetup.com/spryker-user-group/events/282267564/)
 
 ---
