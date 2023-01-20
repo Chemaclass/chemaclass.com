@@ -7,7 +7,7 @@ template = "page.html"
 
 Follow my speaker journey.
 
-## Upcoming events 🎤
+## Confirmed upcoming events 🎤
 
 #### May
 - 2023-05-23 | International PHP Conference **Berlin**
@@ -26,8 +26,6 @@ Follow my speaker journey.
   - [An introduction to Extreme Programming](https://devm.io/update-your-team-to-be-more-extreme/)
 
 ---
-
-## Pass events 🤙
 
 ### 2022
 
