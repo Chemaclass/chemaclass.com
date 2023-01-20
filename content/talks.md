@@ -7,7 +7,11 @@ template = "page.html"
 
 Follow my speaker journey.
 
-## Confirmed upcoming events 🎤
+## Upcoming events 🎤
+
+### 2023
+
+#### More to be confirmed...
 
 #### May
 - 2023-05-23 | International PHP Conference **Berlin**
