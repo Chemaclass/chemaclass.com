@@ -46,6 +46,8 @@ Follow my speaker journey.
   - [Update Your Team to be More Extreme](https://codetalks.de/speakers#speaker-985?event=7)
 
 #### June
+- 2022-06-23 | DesarrolloWeb **Remote**
+  - [Phel Language ¿Programación funcional para PHP?](https://www.youtube.com/live/9pElbTEcyGA?feature=share) 
 - 2022-06-26 | International PHP Conference **Berlin**
   - [Update Your Team to be More Extreme](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/)
   - [AMA (Ask me anything) session: State of PHP](https://phpconference.com/php-core-coding/ama-ask-me-anything-session-state-of-php/) (with Sebastian Bergmann)
