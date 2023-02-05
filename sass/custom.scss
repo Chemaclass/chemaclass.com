@@ -266,3 +266,25 @@ $max-width: 700px;
     display: block;
   }
 }
+
+@media (min-width: 880px) {
+  .desktop-homepage-nav-menu {
+    margin-bottom: 30px;
+    display: flex;
+    font-size: 1.2em;
+  }
+}
+
+.banner-image-phone {
+  display: none;
+  margin: 18px 0;
+  background-image: url("/banner.jpg");
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 880px) {
+  .banner-image-phone {
+    display: inline-block;
+  }
+}

@@ -23,15 +23,18 @@
   </nav>
   <div class="profile">
     <div class="profile-container">
-      <img src="{{ profile_image.url }}" alt="profile picture">
+      <img src="{{ profile_image.url }}" alt="profile picture"/>
     </div>
   </div>
 </div>
 
-<div class="frontpage">
+<div id="frontpage">
   <h1 class="index-header">
     Chemaclass
   </h1>
+
+  {% set banner_image_phone = resize_image(path="banner.jpg", height=300, width=800, op="fit_width") %}
+  <img class="banner-image-phone" src="{{ banner_image_phone.url }}" alt="banner picture"/>
 
   <h3>Who am I?</h3>
   <ul>
