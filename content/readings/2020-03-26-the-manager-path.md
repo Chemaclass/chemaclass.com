@@ -1,6 +1,7 @@
 +++
 title = "The Manager Path"
 description = "A Guide for Tech Leaders Navigating Growth and Change"
+aliases = [ "/readings/manager-path" ]
 [taxonomies]
 tags = [ "management", "leadership" ]
 [extra]
@@ -23,3 +24,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51BHEtpF4eL
 4. Feedback works best when you, as a manager, pair that feedback with coaching.
 5. It's unrealistic to think you can or should shield your team from everything.
 
+---
+
+{{ youtube(id="oxgfehnJ7GE") }}
