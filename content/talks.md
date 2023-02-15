@@ -25,7 +25,8 @@ Follow my speaker journey.
   - [Phel Language, a native LISP for PHP](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
 
 #### April
- - To be confirmed
+- 2023-04-19 | PHP Madrid Community [**Remote**] (ES)
+  - Phel Language, un LISP nativo para PHP
 
 #### March
 - 2023-03-30 | Spryker Digital User Group [**Remote**] (EN)
@@ -61,15 +62,15 @@ Follow my speaker journey.
   - [Update Your Team to be More Extreme](https://codetalks.de/speakers#speaker-985?event=7)
 
 #### June
-- 2022-06-23 | DesarrolloWeb [**Remote**] (ES)
-  - [Phel Language ¿Programación funcional para PHP?](https://www.youtube.com/live/9pElbTEcyGA) 
 - 2022-06-26 | International PHP Conference [**Berlin, Germany**] (EN)
   - [Update Your Team to be More Extreme](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/)
   - [AMA (Ask me anything) session: State of PHP](https://phpconference.com/php-core-coding/ama-ask-me-anything-session-state-of-php/) (with Sebastian Bergmann)
+- 2022-06-23 | DesarrolloWeb [**Remote**] (ES)
+  - [Phel Language ¿Programación funcional para PHP?](https://www.youtube.com/live/9pElbTEcyGA)
 
 #### February
 - 2022-02-24 | PHP Madrid Community [**Remote**] (ES)
-  - [Gacela Framework 0.1 (ES)](https://www.meetup.com/phpmad/events/284069182/)
+  - [Gacela Framework 0.1](https://www.meetup.com/phpmad/events/284069182/)
 
 #### January
 - 2022-01-25 | Spryker Digital User Group [**Remote**] (EN)
