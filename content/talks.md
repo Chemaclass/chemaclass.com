@@ -20,8 +20,9 @@ Follow my speaker journey.
 - To be confirmed
 
 #### May
-- 2023-05-23 | International PHP Conference [**Berlin, Germany**] (EN)
+- 2023-05-24/25 | International PHP Conference [**Berlin, Germany**] (EN)
   - [Building modular applications in PHP with Gacela](https://phpconference.com/software-architecture/modular-applications-php-gacela/)
+  - [Phel Language, a native LISP for PHP](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
 
 #### April
  - To be confirmed
