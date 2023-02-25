@@ -20,12 +20,19 @@
 }
 
 .reading-post {
-
   img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+  }
+
+  div > img:first-child {
+    width: 50%;
+  }
+
+  p > img {
+    width: 100%;
   }
 
   .book-pages {
