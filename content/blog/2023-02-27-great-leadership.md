@@ -144,3 +144,11 @@ Your primary responsibility is to help others improve, and this is only possible
 - Thomas H. Douglas: [Adapt or Die](/readings/adapt-or-die/)
 - Camille Fournier: [The Manager Path](/readings/manager-path/)
 - Michael Lopp: [The Art of Leadership](/readings/the-art-of-leadership/)
+
+## Extra: Leadership Guide for the Reluctant Leader
+
+Especially if you are a software developer, this video is for you.
+
+> "Leadership is for everybody. It is for all y'all."
+
+{{ youtube(id="3PcL8UkorEg") }}
