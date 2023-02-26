@@ -9,7 +9,7 @@ subtitle = "Agile is about HOW you do certain things"
 static_thumbnail = "/images/blog/2023-01-09/cover.jpg"
 +++
 
-![cover](/images/blog/2023-01-09/cover.jpg)
+![blog-cover](/images/blog/2023-01-09/cover.jpg)
 
 My interview with **devm.io** regarding Agile and Extreme Programming.
 

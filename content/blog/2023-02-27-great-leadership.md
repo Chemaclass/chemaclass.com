@@ -1,12 +1,12 @@
 +++
 title = "Great leadership"
 description = "Leadership starts within your own life and behaviour"
-draft = true
+draft = false
 [taxonomies]
 tags = [ "agile", "people" ]
 [extra]
 subtitle = "Leadership starts within your own life and behaviour"
-static_thumbnail = "/images/blog/2023-01-09/cover.jpg"
+static_thumbnail = "/images/blog/2023-02-27/cover.jpg"
 +++
 
 ![cover](/images/blog/2023-02-27/cover.jpg)

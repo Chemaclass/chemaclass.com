@@ -1,7 +1,7 @@
 +++
 title = "Adapt or die"
 description = "How to Create Innovation, Solve People Puzzles, and Win in Business"
-draft = true
+draft = false
 [taxonomies]
 tags = [ "leadership", "people" ]
 [extra]
