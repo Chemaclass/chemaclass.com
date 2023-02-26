@@ -1,6 +1,6 @@
 +++
 title = "Great leadership"
-description = "Leadership starts within your own life and behaviour"
+description = "As business scales, the leaders' primary focus must shift from customers to employees. Therefore, I would like to share what I consider critical points that any leader should address and focus on regularly."
 draft = false
 [taxonomies]
 tags = [ "agile", "people" ]
