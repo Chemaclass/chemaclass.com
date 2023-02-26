@@ -21,11 +21,6 @@ of them.
 
 <!-- more -->
 
-
-Containing twenty-six core selections, *The Essential Drucker* covers the basic principles and concerns of management
-and its problems, challenges, and opportunities, giving managers, executives, and professionals the tools to perform the
-tasks that the economy and society of tomorrow will demand of them.
-
 ---
 
 ## 4 Essential Principles Of Management
