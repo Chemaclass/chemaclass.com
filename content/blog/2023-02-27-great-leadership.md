@@ -130,3 +130,17 @@ However, these are the essential points to remember:
 Your primary responsibility is to help others improve, and this is only possible if you **embrace the change** and **start with yourself**.
 
 ![blog-footer](/images/blog/2023-02-27/footer.jpg)
+
+### All mentioned authors
+
+- Simon Sinek: [Start with Why](/readings/start-with-why/), [Leaders Eat Last](/readings/leaders-eat-last/), [The infinite game](/readings/the-infinite-game/)
+- L. David Marquet: [Turn the ship around!](/readings/turn-the-ship-around/), [Leadership is Language](/readings/leadership-is-language/)
+- Brené Brown: [Dare to lead](/readings/dare-to-lead/)
+- Chris Voss: [Never split the difference](/readings/never-split-the-difference/)
+- Patrick M. Lencioni: [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/)
+- Andrew S. Grove: [High Output Management](/readings/high-output-management/)
+- Peter F. Drucker: [The Essential Drucker](/readings/the-essential-drucker/)
+- Matt Mochary: [The Great CEO Within](/readings/the-great-ceo-within/)
+- Thomas H. Douglas: [Adapt or Die](/readings/adapt-or-die/)
+- Camille Fournier: [The Manager Path](/readings/manager-path/)
+- Michael Lopp: [The Art of Leadership](/readings/the-art-of-leadership/)
