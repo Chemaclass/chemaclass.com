@@ -28,6 +28,7 @@ I already wrote about the [beauty of leadership](/blog/the-beauty-of-leadership/
 To extend the previous post providing resources and examples, in this one, you will find books about the following topics:
 
 - Motivation
+- Leading through change
 - Empowering your people
 - Effective communication
 - Persuasion
@@ -51,6 +52,14 @@ You need to be aware that leadership is not about being the boss of anyone but *
 After reading the previous two books, if you are looking for more, the cherry on top is "[The infinite game](/readings/the-infinite-game/)", which is the third and last book (so far) by Simon Sinek. This book questions our daily mindset when confronting (business) problems. It's about the need of a _just cause, courageous leadership, trusting teams,_ and a _worthy rival._
 
 > "There is no such thing as the one "right" organization. There are only organizations, each of which has distinct strengths, distinct limitations, and specific applications. An organization is not absolute. It is a tool for making people productive in working together." -- The infinite game
+
+### Leading through change
+
+Leading through change is something you have to face in many moments in your life, whether you like it or not. "[Who moved my cheese?](/readings/who-moved-my-cheese/)" is a tale about the different attitudes people adopt as part of their identity when confronting change.
+
+How do you eliminate bad habits and start creating good ones? "[The Power of Habit](/readings/the-power-of-habits/)" and "[Atomic Habits](/readings/atomic-habits/)" are great books that help you understand that habits are like a muscle. You can train them.
+
+> "Change how you identify yourself. The environment is more important than being motivated. Reduce friction for good habits and increase friction for bad habits." -- Atomic Habits
 
 ### Empowering your people
 
@@ -134,6 +143,9 @@ Your primary responsibility is to help others improve, and this is only possible
 ### All mentioned authors
 
 - Simon Sinek: [Start with Why](/readings/start-with-why/), [Leaders Eat Last](/readings/leaders-eat-last/), [The infinite game](/readings/the-infinite-game/)
+- Spencer Johnson: [Who moved my cheese?](/readings/who-moved-my-cheese/)
+- Charles Duhigg: [The Power of Habit](/readings/the-power-of-habits/)
+- James Clear: [Atomic Habits](/readings/atomic-habits/)
 - L. David Marquet: [Turn the ship around!](/readings/turn-the-ship-around/), [Leadership is Language](/readings/leadership-is-language/)
 - Brené Brown: [Dare to lead](/readings/dare-to-lead/)
 - Chris Voss: [Never split the difference](/readings/never-split-the-difference/)
