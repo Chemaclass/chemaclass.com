@@ -7,15 +7,13 @@ template = "page.html"
 
 Follow my speaker journey.
 
+---
+
 ## Upcoming events 🎤
 
 ### 2023
 
 #### More to come
-
-#### July
-
-- To be confirmed
 
 #### June
 
