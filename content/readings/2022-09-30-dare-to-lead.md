@@ -8,16 +8,16 @@ subtitle = "Brave Work. Tough Conversations. Whole Hearts."
 pages = "320"
 author = "Brené Brown"
 static_thumbnail = "https://m.media-amazon.com/images/I/4108sPwaBfL.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <img border="0" src="https://m.media-amazon.com/images/I/4108sPwaBfL.jpg" >
 
+<!-- more -->
+
 Leadership is not about titles, status, and power over people. Leaders are people who hold themselves accountable for
 recognising the potential in people and ideas and developing that potential. This book is for everyone ready to choose
 courage over comfort, make a difference, and lead.
-
-<!-- more -->
 
 ## Courage and vulnerability
 

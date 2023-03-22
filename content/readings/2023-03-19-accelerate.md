@@ -3,7 +3,7 @@ title = "Accelerate"
 description = "The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations"
 draft = false
 [taxonomies]
-tags = [ "leadership", "people" ]
+tags = [ "agile", "software" ]
 [extra]
 subtitle = "Building and Scaling High Performing Technology Organizations"
 pages = "150"
