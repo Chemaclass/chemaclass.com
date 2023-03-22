@@ -19,17 +19,6 @@ Accelerate explores how software development teams using **Lean Software** and *
 <!-- more -->
 > Note: DevOps is about integrating and automating software development (Dev) and IT operations (Ops), focusing on improving (and shortening) the systems development life cycle.
 
-## Four Key Metrics
-
-- **Change Lead Time**
-    - Time to implement, test, and deliver code for a feature
-- **Deployment Frequency**
-    - Number of deployments in a given duration of time
-- **Change Failure Rate**
-    - Percentage of failed changes over all changes (regardless of success)
-- **Mean Time to Recovery**
-    - Time it takes to restore service after production failure
-
 ## Key Capabilities
 
 ### Continuous Delivery
@@ -57,7 +46,7 @@ Accelerate explores how software development teams using **Lean Software** and *
 - Have a Lightweight Change Approval Processes
 - Monitor across Application and Infrastructure to Inform Business Decisions
 - Check System Health Proactively
-- Improve Processes and Manage Work with Work-In-Process (WIP) Limits
+- Improve Processes and Manage Work with WIP (Work-In-Process) Limits
 - Visualize Work to Monitor Quality and Communicate throughout the Team
 
 ### Cultural
@@ -68,8 +57,15 @@ Accelerate explores how software development teams using **Lean Software** and *
 - Provide Resources and Tools that Make Work Meaningful
 - Support or Embody Transformational Leadership
 
---- 
+## Four Key Metrics
 
-## Summary
+- **Change Lead Time**
+  - Time to implement, test, and deliver code for a feature
+- **Deployment Frequency**
+  - Number of deployments in a given duration of time
+- **Change Failure Rate**
+  - Percentage of failed changes over all changes (regardless of success)
+- **Mean Time to Recovery**
+  - Time it takes to restore service after production failure
 
 {{ youtube(id="_d9cws_T9qk") }}
