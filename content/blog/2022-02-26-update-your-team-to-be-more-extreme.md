@@ -87,7 +87,7 @@ It's crucial to build trust with your team, so you all know everyone will use th
 
 Although, it would be nice that the team shares what they do during this time, mostly to create transparency among themselves. A verbal announcement to the peers the day before, with their intentions. Even the day after with the learnings key-takeaways.
 
-## Summary
+### Summary
 
 You can help your team to be more extreme by helping with a dedicated team space for growth and experimentation.
 
@@ -101,7 +101,7 @@ You can help your team to be more extreme by helping with a dedicated team space
 
 ## Tech Talk
 
-After writing this blog post, I was invited to do a [tech talk](/talks/) in different conferences about this topic.
+After writing this blog post (originally in Feb, 2022), I was invited to do a [tech talk](/talks/) in different conferences about this topic.
 
 - 2022-06-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Berlin, Germany] (EN)
 - 2022-09-16 | [Code Talks](https://codetalks.de/speakers#speaker-985?event=7) [Hamburg, Germany] (EN)
@@ -109,13 +109,15 @@ After writing this blog post, I was invited to do a [tech talk](/talks/) in diff
 - 2022-12-21 | IES Ginés Pérez Chirinos [Murcia, Spain] (ES)
 - 2023-01-19 | [devm.io](https://devm.io/update-your-team-to-be-more-extreme/) [Remote] (EN)
 
-This is the recording from the Hamburg code.talks Conference the 16, Sept 2022:
+This is the recording from the Hamburg code.talks Conference (Sept, 2022):
 
 {{ youtube(id="WhrvFrqYKQk") }}
 
 ### Recommended readings
 
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck.</small>
-- [Who moved my cheese?](/readings/who-moved-my-cheese/) <small>by Spencer Johnson.</small>
-- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin.</small>
+- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
+- [Who moved my cheese?](/readings/who-moved-my-cheese/) <small>by Spencer Johnson</small>
+- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
+- [Peopleware](/readings/peopleware) <small>by Tom DeMarco, Timothy Lister</small>
+- [The Pragmatic Programmer](/readings/the-pragmatic-programmer/) <small>by  David Thomas, Andrew Hunt</small>
 
