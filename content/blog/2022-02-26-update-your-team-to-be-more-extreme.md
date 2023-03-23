@@ -11,7 +11,7 @@ pin = true
 
 ![blog-cover](/images/blog/2022-02-26/cover.jpg)
 
-> Revisited: 2023-03-23
+> Revisited: <span class="post-revisited-date">2023-03-23</span>
 
 Our software profession is constantly evolving; it demands a non-stop learning process. We must embrace the change in our industry.
 
