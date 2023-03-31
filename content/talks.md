@@ -30,7 +30,7 @@ Follow my speaker journey.
 #### April
 
 - 2023-04-19 | PHP Madrid Community [**Remote**] (ES)
-    - Phel Language, un LISP nativo para PHP
+    - [Programación funcional en PHP (presentando Phel Lang)](https://www.meetup.com/phpmad/events/292576962)
 
 #### March
 
