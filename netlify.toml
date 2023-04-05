@@ -1,10 +1,3 @@
-[build]
-# This assumes that the Zola site is in a docs folder. If it isn't, you don't need
-# to have a `base` variable but you do need the `publish` and `command` variables.
-base    = "."
-publish = "public"
-command = "zola --config config.toml build"
-
 [build.environment]
 # Set the version name that you want to use and Netlify will automatically use it.
 ZOLA_VERSION = "0.14.0"
