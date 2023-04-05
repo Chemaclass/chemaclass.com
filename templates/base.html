@@ -51,13 +51,14 @@
       {% endfor %}
     {% endif %}
 
-    {% if config.extra.gtag %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.gtag }}"></script>
+    {% set gtag = get_env(name="GTAG", default=false) %}
+    {% if gtag %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ gtag }}"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', '{{ config.extra.gtag }}');
+        gtag('config', '{{ gtag }}');
       </script>
     {% endif %}
 

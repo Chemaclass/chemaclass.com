@@ -32,7 +32,6 @@ accent = "#3a5c88"
 accent_light = "#397fd8"
 
 repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/content/"
-gtag = ""
 
 not_found_message = """
 It seems like this page does not exist… [return back to the homepage?](/)
