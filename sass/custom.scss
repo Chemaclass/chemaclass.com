@@ -2,16 +2,20 @@
   display: block;
   min-height: 300px;
 
+  img[alt=blog-cover] {
+    max-width: 50%;
+    float: left;
+    margin-right: 20px;
+  }
+
   .highlighted {
     h3 a {
       font-size: 1.1em;
     }
   }
 
-  img[alt=blog-cover] {
-    max-width: 50%;
-    float: left;
-    margin-right: 20px;
+  .summary {
+    min-height: 230px;
   }
 }
 
