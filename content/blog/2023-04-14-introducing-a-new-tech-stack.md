@@ -1,7 +1,7 @@
 +++
 title = "Introducing a new tech stack"
-description = "Have you always been like this? Constantly reading books, writing blog posts, public speaker in conferences and meet-ups, learning in your private time, etc...? The short answer is: no, and let me tell you how I ended up in this situation."
-draft = true
+description = "To introduce a new tech stack for the entire team, it's important to bring \"why?\" and a strategy to make it happen among the team because it will affect everyone."
+draft = false
 [taxonomies]
 tags = [ "software", "people" ]
 [extra]
@@ -11,13 +11,11 @@ static_thumbnail = "/images/blog/2023-04-14/cover.jpg"
 
 ![cover](/images/blog/2023-04-14/cover.jpg)
 
-
 To introduce a new tech stack for the entire team, it's important to bring "why?" and a strategy to make it happen among the team because it will affect everyone.
 
 <!-- more -->
 
 ## Why that new tech stack?
-
 
 To decide whether to use a new tech stack or not, remember that it is a team decision, according to the standardization and maintainability of the project when introducing such a new tech stack. But, most importantly, what problem do you want to solve by introducing it? Is it because it is "cool"? Or is there an actual "necessity" that this tech helps you with?
 

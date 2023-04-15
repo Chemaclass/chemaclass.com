@@ -6,7 +6,7 @@ tags = [ "team", "work", "extreme", "programming" ]
 [extra]
 subtitle = "How can you help your peers to embrace the change?"
 static_thumbnail = "/images/blog/2022-02-26/cover.jpg"
-pin = true
+pin = false
 +++
 
 ![blog-cover](/images/blog/2022-02-26/cover.jpg)
