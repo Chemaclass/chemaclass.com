@@ -22,7 +22,7 @@ Follow my speaker journey.
 #### May
 
 - 2023-05-27 | PHPers Summit [**Poznan, Poland**] (EN)
-    - [Phel Language, a native LISP for PHP](https://summit.phpers.pl/en)
+    - [Phel Language, a native LISP for PHP](https://summit.phpers.pl/en/agenda)
 - 2023-05-24/25 | International PHP Conference [**Berlin, Germany**] (EN)
     - [Building modular applications in PHP with Gacela](https://phpconference.com/software-architecture/modular-applications-php-gacela/)
     - [Phel Language, a native LISP for PHP](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
