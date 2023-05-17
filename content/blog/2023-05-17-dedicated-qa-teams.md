@@ -43,7 +43,7 @@ If you don't know how to start, here is my favourite tip: you can always practic
 
 ## Nice theory, but… why bother?
 
-It's all about shoring the feedback loop. If you can write software to work in specific ways, can't you write automated tests to prove that the software you wrote behaves the way you expect?
+It's all about shorting the feedback loop. If you can write software to work in specific ways, can't you write automated tests to prove that the software you wrote behaves the way you expect?
 
 If you have covered with automated tests the behavior of your software at any level that makes sense, what's left for a dedicated QA person?
 
