@@ -15,7 +15,13 @@ Follow my speaker journey.
 
 #### More to come
 
-#### June
+#### October
+
+- 2023-10-24/26 | International PHP Conference [**Münich, Germany**] (EN)
+  - [Building modular applications in PHP with Gacela](https://phpconference.com/software-architecture/modular-applications-php-gacela/)
+  - [Introducing Functional Programming in PHP with Phel](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
+
+#### September
 
 - To be confirmed
 
