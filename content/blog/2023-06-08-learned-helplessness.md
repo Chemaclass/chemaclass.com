@@ -5,7 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "people", "psychology" ]
 [extra]
-subtitle = "La indefensión aprendida"
+subtitle = "An acceptance of powerlessness"
 static_thumbnail = "/images/blog/2023-06-08/cover.jpg"
 +++
 
