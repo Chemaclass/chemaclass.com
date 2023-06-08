@@ -3,10 +3,10 @@ title = "Agile Project Management"
 description = "Projects that followed a Waterfall methodology tended to exceed their expenses in the first initiative over time, while the product delivered was below standard and difficult to use. That situation originated that a group of developers signed a brief, 68-word manifesto in 2001."
 draft = false
 [taxonomies]
-tags = [ "remote", "software" ]
+tags = [ "agile", "management" ]
 [extra]
 subtitle = "A Beginner's Guide to Agile Implementation and Leadership"
-pages = "100"
+pages = "120"
 author = "Jeremy Savell"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1574715655i/48978620.jpg"
 expand_preview = true
@@ -86,11 +86,11 @@ These distinct yet similar solutions were decentralized, working independently o
 
 ## Related posts
 
-- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/)
-- [Ignoring Scrum to get more Agile?](/blog/ignoring-scrum-to-get-more-agile/)
-- [Interview about XP and Agile](/blog/interview-about-xp-and-agile/)
+- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small>| How can you work with other teams that aren't agile?</small>
+- [Ignoring Scrum to get more Agile?](/blog/ignoring-scrum-to-get-more-agile/) <small>| Killing agility with excessive meetings</small>
+- [Interview about XP and Agile](/blog/interview-about-xp-and-agile/) <small>| Agile is about HOW you do certain things</small>
 
 ## Related readings
 
-- [Clean Agile](/readings/clean-agile/)
-- [Agile Product Management with Scrum](/readings/agile-product-management-with-scrum/)
+- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
+- [Agile Product Management with Scrum](/readings/agile-product-management-with-scrum/) <small>by Roman Pichler</small>
