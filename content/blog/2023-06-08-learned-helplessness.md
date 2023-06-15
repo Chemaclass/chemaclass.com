@@ -58,3 +58,10 @@ Isolate the problem and don't extrapolate it to other areas. Stop generalizing f
 ### Español
 
 {{ youtube(id="E99XmEIPmf8") }}
+
+---
+
+### Related posts
+
+- [Have you always been like this?](/blog/have-you-always-been-like-this/) <small>How to find a balance of growth and happiness</small>
+- [The process itself is the goal](/blog/the-process-itself-is-the-goal/) <small>How to focus and have self-discipline</small>
