@@ -17,25 +17,28 @@ Learned helplessness is the behavior exhibited by a subject after enduring repea
 
 ## Experiments
 
-### Docking shocks and harnesses
-
-In 1967, the American psychologist Martin Seligman at the University of Pennsylvania researched docking shocks and harnesses.
-
-In Part 1 of this study, three groups of dogs were placed in harnesses. Group 1 dogs were put in a harness for some time and released later. Groups 2 and 3 consisted of "yoked pairs." Dogs in Group 2 were given electric shocks randomly, which the dog could end by pressing a lever. Each dog in Group 3 was paired with a Group 2 dog; whenever a Group 2 dog got a shock, its paired dog in Group 3 got a shock of the same intensity and duration, but its lever did not stop the shock. To a dog in Group 3, it seemed that the shock ended randomly because their paired dog in Group 2 was causing it to stop. Thus, for Group 3 dogs, the shock was "inescapable."
-
-In Part 2 of the experiment, the same three groups of dogs were tested in a shuttle-box apparatus (a chamber containing two rectangular compartments divided by a barrier a few inches high). The dogs could escape shocks on one side of the box by jumping over a low partition to the other. The dogs in Groups 1 and 2 quickly learned this task and escaped the shock. Most of the Group 3 dogs - which had previously "learned" that nothing they did affect the shocks - lay down passively and whined when shocked.
-
 ### A classroom with different assessments
-
-Even though this experiment was demonstrated with different types of animals, it also applies to people. This is visible in children when they integrate early failure to ask for help, frustration, giving up, poor motivation, and procrastination. And these points carry on as people age.
-
-Because, if you cannot do anything, why would you even try it?
-
-All this leads to anxiety and depression, and people think nothing can be done about their current situations and feelings.
 
 {{ youtube(id="gFmFOmprTt0") }}
 
 > Charisse Nixon, Ph.D Developmental Psychologist at Penn State Erie, The Behrend College and Director of Research and Evaluation for The Ophelia Project discusses the phenomenon of learned helplessness.
+
+
+### Original: Docking shocks and harnesses
+
+In 1967, the American psychologist Martin Seligman at the University of Pennsylvania researched docking shocks and harnesses.
+
+In **Part 1** of this study, three groups of dogs were placed in harnesses. Group 1 dogs were put in a harness for some time and released later. Groups 2 and 3 consisted of "yoked pairs." Dogs in Group 2 were given electric shocks randomly, which the dog could end by pressing a lever. Each dog in Group 3 was paired with a Group 2 dog; whenever a Group 2 dog got a shock, its paired dog in Group 3 got a shock of the same intensity and duration, but its lever did not stop the shock. To a dog in Group 3, it seemed that the shock ended randomly because their paired dog in Group 2 was causing it to stop. Thus, for Group 3 dogs, the shock was "inescapable."
+
+In **Part 2** of the experiment, the same three groups of dogs were tested in a shuttle-box apparatus (a chamber containing two rectangular compartments divided by a barrier a few inches high). The dogs could escape shocks on one side of the box by jumping over a low partition to the other. The dogs in Groups 1 and 2 quickly learned this task and escaped the shock. Most of the Group 3 dogs - which had previously "learned" that nothing they did affect the shocks - lay down passively and whined when shocked.
+
+---
+
+Even though this experiment was demonstrated with different types of animals, it also applies to people. This is visible in children when they integrate early failure to ask for help, frustration, giving up, poor motivation, and procrastination. And these points carry on as people age.
+
+> Because, if you "cannot do anything", why would you even try it?
+
+All this leads to anxiety and depression, and people think nothing can be done about their current situations and feelings.
 
 ## Learned optimism
 
