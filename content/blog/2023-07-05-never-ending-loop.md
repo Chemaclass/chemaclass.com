@@ -28,3 +28,10 @@ I can see some similarities nowadays. However, I no longer see the need to write
 Writing is one of my favorite ways to express myself, especially when I cannot sleep. It reminds me of those years, and I think greatly about the incredible evolution since then.
 
 ![cover](/images/blog/2023-07-05/footer.jpg)
+
+---
+
+### Related posts
+
+- [The process itself is the goal](/blog/the-process-itself-is-the-goal/) <small>How to focus and have self-discipline</small>
+- [Embrace the change](/blog/embrace-the-change/) <small>Who moved my cheese?</small>
