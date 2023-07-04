@@ -3,7 +3,7 @@ title = "Never ending loop"
 description = "It is hard sometimes to get to bed with the mind blank because, more often than not, I think about my next reading, learning, talk, or what I will write this or next month."
 draft = false
 [taxonomies]
-tags = [ "personal" ]
+tags = [ "personal", "habits", "self-improvement" ]
 [extra]
 subtitle = "Writing to help myself sleep"
 static_thumbnail = "/images/blog/2023-07-05/cover.jpg"
