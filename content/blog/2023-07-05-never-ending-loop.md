@@ -29,6 +29,8 @@ Writing is one of my favorite ways to express myself, especially when I cannot s
 
 ![cover](/images/blog/2023-07-05/footer.jpg)
 
+> Original photos from my trip to Tuscany, Italy, last month.
+
 ---
 
 ### Related posts
