@@ -27,7 +27,7 @@ Follow my speaker journey.
 
 #### July
 
-- 2023-07-27/28 | WeAreDevelopers World Congress [**Berlin, Germany**] (EN)
+- 2023-07-28 | WeAreDevelopers World Congress [**Berlin, Germany**] (EN)
   - [Phel, a native Lisp for PHP](https://www.wearedevelopers.com/world-congress)
 
 #### May
