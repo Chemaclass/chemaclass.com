@@ -34,7 +34,7 @@ But still, despite your effort to create a trustable and safe environment, you m
 
 > Don't be afraid of failure; instead, think that everything you do is an experiment from which you will learn something. And anything that brings you closer to a better state is better than nothing.
 
-The key here is to find a way to connect with people by understanding how they understand their potential so you can empower and help them grow.
+The key here is to find a way to connect with people by understanding how they understand their potential so you can empower them and help them grow.
 
 ![middle](/images/blog/2023-08-02/middle.jpg)
 
@@ -55,7 +55,7 @@ Here is an idea you could try:
 Any book would be fine. Still, if you are looking for great examples, these are my favourite three to start thriving a conversation:
 
 - **[Who moved my cheese?](/readings/who-moved-my-cheese/)** is a metaphor of the different attitudes that people adopt as part of their identity in life when they have to confront any change.
-- **[Extreme Programming Explained](/readings/extreme-programming-explained/)** is one of the best books because it contains a compilation of values, principles, and practices highly related to the human touch in our software industry. Focusing on the team aspect, collaboration with your peers, and creating a sense of mastery and purpose in our craft.
+- **[Extreme Programming Explained](/readings/extreme-programming-explained/)** contains a compilation of values, principles, and practices highly related to the human touch in our software industry. Focusing on the team aspect, collaboration with your peers, and creating a sense of mastery and purpose in our craft.
 - **[Start with Why](/readings/start-with-why/)** addresses the importance of starting with "Why?" in order to define a purpose for anything we do.
 
 Experiment with any book, timeframe, person, or group to create a shared understanding of the team’s foundational values and motivations. The goal is to engage in active knowledge-sharing while cultivating a team that feels they belong, fostering passion at work. This will help create trust, and you can start building on top of it.
@@ -64,7 +64,7 @@ Experiment with any book, timeframe, person, or group to create a shared underst
 
 ---
 
-You cannot force people to change. On the contrary, the more you try to force it, the harder they will make it for you. Instead, focus on understanding them by acknowledging what they feel and thinking about what they do, and look for a common ground of [understanding people](/blog/understanding-people).
+You cannot force people to change. On the contrary, the more you try to force it, the harder they will make it for you. Instead, focus on understanding them by acknowledging what they feel and thinking about what they do to create a common ground of [understanding each other](/blog/understanding-people).
 
 ![footer](/images/blog/2023-08-02/footer.jpg)
 
