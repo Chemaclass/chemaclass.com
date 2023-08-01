@@ -9,7 +9,7 @@ subtitle = "Writing to help myself sleep"
 static_thumbnail = "/images/blog/2023-07-05/cover.jpg"
 +++
 
-![cover](/images/blog/2023-07-05/cover.jpg)
+![blog-cover](/images/blog/2023-07-05/cover.jpg)
 
 It is hard sometimes to get to bed with the mind blank because, more often than not, I think about my next reading, learning, talk, or what I will write this or next month.
 
@@ -27,7 +27,7 @@ I can see some similarities nowadays. However, I no longer see the need to write
 
 Writing is one of my favorite ways to express myself, especially when I cannot sleep. It reminds me of those years, and I think greatly about the incredible evolution since then.
 
-![cover](/images/blog/2023-07-05/footer.jpg)
+![blog-footer](/images/blog/2023-07-05/footer.jpg)
 
 > Original photos from my trip to Tuscany, Italy, last month.
 
