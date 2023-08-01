@@ -27,3 +27,5 @@ The Book of Satoshi provides a convenient way to parse through what Bitcoin's cr
 Beginning on November 1st 2009 with the publication of the seminal paper describing Bitcoin, this public life ends at about the time PC World speculated as to a possible link between Bitcoin and WikiLeaks, the infamous website that publishes leaked classified materials. Was there a connection? You be the judge.
 
 Nakamoto's true identity may never be known. Therefore the writings reproduced here are probably all the world will ever hear from him concerning Bitcoin's creation, workings, and theoretical basis. Want to learn more about Bitcoin? Go directly to the source-the writings of the creator himself, Satoshi Nakamoto.
+
+{{ youtube(id="kaBmAV5DaXI") }}
