@@ -67,7 +67,7 @@ You cannot force people to change. On the contrary, the more you try to force it
 
 ![footer](/images/blog/2023-08-02/footer.jpg)
 
-> Photos from my talks at WeAreDevelopers World Congress in Berlin.
+> Photos from me at WeAreDevelopers World Congress, Berlin 2023.
 
 --- 
 
