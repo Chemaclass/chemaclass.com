@@ -1,8 +1,8 @@
 +++
-title = "How to get everyone on board?"
-description = "Last week, I was at the WeAreDevelopers World Congress, the biggest conference I've been giving a tech talk. With more than 12k attendees, 300 speakers, and ~10 tracks in parallel, I was invited to give not one but two talks. One is about my experience with Extreme Programming and the profound benefits of embracing change in your work and life."
+title = "How do you get everyone on board?"
+description = "I was invited to the WeAreDevelopers World Congress to give a tech talk about my experience with Extreme Programming and the profound benefits of embracing change in your work and life."
 draft = false
-aliases = [ "/blog/how-do-you-deal-with-hard-people/" ]
+aliases = [ "/blog/how-do-you-deal-with-hard-people", "/blog/how-to-get-everyone-on-board" ]
 [taxonomies]
 tags = [ "leadership", "people" ]
 [extra]
