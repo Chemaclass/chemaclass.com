@@ -1,7 +1,7 @@
 base_url = "https://chemaclass.com"
 
 title = "Chemaclass"
-description = "Check out my latest tech blog posts, and follow my journey on what I have been reading the last month."
+description = "Check out my latest blog posts, and follow my journey on what I have been reading the last month."
 
 generate_feed = true
 taxonomies = [{ name = "tags" }]
@@ -34,7 +34,5 @@ accent_light = "#397fd8"
 repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/content/"
 
 not_found_message = """
-It seems like this page does not exist… [return back to the homepage?](/)
-
-> Consider contacting me if you think something was wrong [<i class="fa-brands fa-twitter"></i>](https://twitter.com/Chemaclass).
+It seems like this page does not exist… Return back to the [homepage](/)
 """
