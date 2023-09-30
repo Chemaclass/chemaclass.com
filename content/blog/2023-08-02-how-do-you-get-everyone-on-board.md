@@ -10,7 +10,7 @@ subtitle = "How do you deal with people reluctant to change?"
 static_thumbnail = "/images/blog/2023-08-02/cover.jpg"
 +++
 
-![cover](/images/blog/2023-08-02/cover.jpg)
+![blog-cover](/images/blog/2023-08-02/cover.jpg)
 
 Last week, I was at the WeAreDevelopers World Congress, the biggest conference I've been giving a tech talk.
 
