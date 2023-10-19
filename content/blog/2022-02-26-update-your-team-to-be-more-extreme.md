@@ -122,3 +122,9 @@ After writing this blog post (originally in Feb, 2022), I was invited to do a [t
 - [Peopleware](/readings/peopleware) <small>by Tom DeMarco, Timothy Lister</small>
 - [The Pragmatic Programmer](/readings/the-pragmatic-programmer/) <small>by  David Thomas, Andrew Hunt</small>
 
+### Related posts
+
+- [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
+- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small>How can you work with other teams that aren't agile?</small>
+- [Interview about XP and Agile](/blog/interview-about-xp-and-agile/) <small>Agile is about HOW you do certain things</small>
+- [How do you get everyone on board?](/blog/how-do-you-get-everyone-on-board/) <small>How do you deal with people reluctant to change?</small>
