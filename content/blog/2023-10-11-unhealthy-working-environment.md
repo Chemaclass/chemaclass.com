@@ -9,7 +9,7 @@ subtitle = "Recognizing red flags of an unhealthy workplace"
 static_thumbnail = "/images/blog/2023-10-11/cover.jpg"
 +++
 
-![cover](/images/blog/2023-10-11/cover.jpg)
+![blog-cover](/images/blog/2023-10-11/cover.jpg)
 
 An unhealthy working environment can have various symptoms that negatively impact employees' physical and mental well-being.
 
