@@ -9,14 +9,15 @@ subtitle = "Building and Scaling High Performing Technology Organizations"
 pages = "150"
 author = "Nicole Forsgren, Jez Humble, Gene Kim"
 static_thumbnail = "https://m.media-amazon.com/images/I/41YpWJi9OoL.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <img border="0" src="https://m.media-amazon.com/images/I/41YpWJi9OoL.jpg" >
 
+<!-- more -->
+
 Accelerate explores how software development teams using **Lean Software** and **DevOps** can measure their performance and the performance of software engineering teams impacts the overall performance of an organization.
 
-<!-- more -->
 > Note: DevOps is about integrating and automating software development (Dev) and IT operations (Ops), focusing on improving (and shortening) the systems development life cycle.
 
 ## Key Capabilities

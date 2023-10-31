@@ -9,14 +9,14 @@ subtitle = "The battle for control over Bitcoin's protocol rules"
 pages = "240"
 author = "Jonathan Bier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615869542i/57429394.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615869542i/57429394.jpg" >
 
-This book covers Bitcoin's blocksize war, which was waged from August 2015 to November 2017. On the surface the battle was about the amount of data allowed in each Bitcoin block, however it exposed much deeper issues, such as who controls Bitcoin's protocol rules. 
-
 <!-- more -->
+
+This book covers Bitcoin's blocksize war, which was waged from August 2015 to November 2017. On the surface the battle was about the amount of data allowed in each Bitcoin block, however it exposed much deeper issues, such as who controls Bitcoin's protocol rules. 
 
 This book explores some of the major characters in the conflict and includes coverage, from both the front lines and behind the scenes, during some of the most acute phases of the struggle.
 

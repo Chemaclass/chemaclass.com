@@ -9,14 +9,14 @@ subtitle = "A Beginner's Guide to Agile Implementation and Leadership"
 pages = "120"
 author = "Jeremy Savell"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1574715655i/48978620.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1574715655i/48978620.jpg" >
 
-A basic and straightforward overview of what Agile is, presenting some framework examples that are well known today, such as Scrum or Kanban—everything condensed in a 100's pages book that you can read in a couple of hours.
-
 <!-- more -->
+
+A basic and straightforward overview of what Agile is, presenting some framework examples that are well known today, such as Scrum or Kanban—everything condensed in a 100's pages book that you can read in a couple of hours.
 
 ## Chapters
 

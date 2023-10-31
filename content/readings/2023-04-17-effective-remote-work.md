@@ -9,14 +9,14 @@ subtitle = "For Yourself, Your Team, and Your Company"
 pages = "300"
 author = "James Stanier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1634819208i/59425223.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1634819208i/59425223.jpg" >
 
-An effective remote work environment is about treating everyone as remote, with everyone in mind having the same level, equality, and information.
-
 <!-- more -->
+
+An effective remote work environment is about treating everyone as remote, with everyone in mind having the same level, equality, and information.
 
 ---
 
