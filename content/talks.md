@@ -17,7 +17,7 @@ Follow my speaker journey.
 
 #### November
 
-- To be confirmed
+- 2023-11-09 | Interview about [bashunit](https://bashunit.typeddevs.com) [**Remote**] (ES)
 
 #### October
 
