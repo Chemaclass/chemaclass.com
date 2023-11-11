@@ -17,7 +17,8 @@ Follow my speaker journey.
 
 #### November
 
-- 2023-11-09 | Interview about [bashunit](https://bashunit.typeddevs.com) [**Remote**] (ES)
+- 2023-11-14 | Live interview with CodelyTV [**Remote**] (ES)
+  - [Live coding with the team behind bashunit](https://bashunit.typeddevs.com)
 
 #### October
 
