@@ -3,7 +3,7 @@ title = "Crucial Conversations"
 description = "Crucial Conversations gives you the tools you need to step up to life's most difficult and important conversations, say what's on your mind, and achieve the positive resolutions you want."
 draft = false
 [taxonomies]
-tags = [ "leadership", "communication", "psychology" ]
+tags = [ "leadership", "communication" ]
 [extra]
 subtitle = "Tools for Talking When Stakes are High"
 pages = "200"
