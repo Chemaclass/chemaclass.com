@@ -9,8 +9,7 @@ subtitle = "Testing private methods. When and how?"
 static_thumbnail = "/images/blog/2023-10-20/cover.jpg"
 +++
 
-![cover](/images/blog/2023-10-20/cover.jpg)
-
+![blog-cover](/images/blog/2023-10-20/cover.jpg)
 
 This is a question that I have encountered with some frequency for a long time. So I thought I would put together my thoughts on the subject here.
 

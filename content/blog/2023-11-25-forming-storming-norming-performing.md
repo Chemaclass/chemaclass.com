@@ -1,5 +1,5 @@
 +++
-title = "Forming, Storming, Norming, Performing, Adjourning"
+title = "Forming, Storming, Norming and Performing"
 description = "Embarking on the path to high team performance involves understanding Tuckman's Model — a roadmap through the stages of forming, storming, norming, performing, and adjourning. In this blog post, we explore practical strategies for each stage, empowering leaders and team members to cultivate collaboration, manage conflicts, and achieve true synergy."
 draft = false
 [taxonomies]
@@ -11,9 +11,13 @@ static_thumbnail = "/images/blog/2023-11-25/cover.jpg"
 
 ![cover](/images/blog/2023-11-25/cover.jpg)
 
-Tuckman's Model, developed by psychologist Bruce Tuckman in 1965, describes the stages of group development and the process of forming and maturing into a cohesive and effective team. The model consists of five stages: forming, storming, norming, performing, and adjourning. It's important to note that teams may not always progress through these stages linearly, and they might revert to a previous stage under certain circumstances
+In 1965, the psychologist Bruce Tuckman developed a model (Tuckman's Model) which describes the stages of group development and the process of forming and maturing into a cohesive and effective team. 
+
+The model consisted originally of four stages: "_**forming**, **storming**, **norming**,_ and _**performing**_", adding one additional "_**adjourning**_" in 1977.
 
 <!-- more -->
+
+It's important to note that teams may not always progress through these stages linearly, and they might revert to a previous stage under certain circumstances.
 
 ## Forming
 
@@ -38,6 +42,8 @@ Conflict and disagreement emerge as team members start to express their individu
 - Facilitate conflict resolution
 - Acknowledge and address conflicts constructively
 - Encourage open and honest communication while guiding the team through the process of understanding and appreciating diverse perspectives
+
+![cover](/images/blog/2023-11-25/middle.jpg)
 
 ## Norming
 
@@ -75,15 +81,18 @@ This stage involves the completion of the task or project. Team members may expe
 - Recognize the team's accomplishments and express gratitude for individual contributions
 - Facilitate a reflective session to capture lessons learned and create a positive closure experience
 
-![cover](/images/blog/2023-11-25/middle.jpg)
 
-For nurturing a team to high performance using Tuckman's Model, leaders should be aware of the stages and adapt their leadership style accordingly. 
+![cover](/images/blog/2023-11-25/footer.jpg)
 
-This involves providing **guidance and structure** during the forming stage, **facilitating conflict resolution** during storming, **fostering collaboration and communication** during norming, **empowering autonomy** during performing, and **recognizing achievements** during adjourning. 
+To develop a team to a high-performance level using [Tuckman's Model](https://en.wikipedia.org/wiki/Tuckman's_stages_of_group_development), **leaders** should be aware of the stages and **adapt** their leadership style accordingly.
 
-> Regular communication, team-building activities, and addressing conflicts constructively are crucial throughout the process.
+This involves providing **guidance and structure** during the _forming_ stage, **facilitating conflict resolution** during _storming_, **fostering collaboration and communication** during _norming_, **empowering autonomy** during _performing_, and **recognizing achievements** during _adjourning_. 
+
+> Regular communication, team-building activities, and constructively addressing conflicts are crucial throughout the process.
 
 ---
+
+### Video summary
 
 {{ youtube(id="-RwkZxGPQb8") }}
 
@@ -100,4 +109,3 @@ This involves providing **guidance and structure** during the forming stage, **f
 - [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
 - [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
 
-![cover](/images/blog/2023-11-25/footer.jpg)
