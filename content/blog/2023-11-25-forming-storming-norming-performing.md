@@ -5,15 +5,15 @@ draft = false
 [taxonomies]
 tags = [ "leadership", "people" ]
 [extra]
-subtitle = "Tuckman's Model for Nurturing a Team to High Performance"
+subtitle = "Tuckman's Model to drive a team to high performance"
 static_thumbnail = "/images/blog/2023-11-25/cover.jpg"
 +++
 
 ![cover](/images/blog/2023-11-25/cover.jpg)
 
-In 1965, the psychologist Bruce Tuckman developed a model (Tuckman's Model) which describes the stages of group development and the process of forming and maturing into a cohesive and effective team. 
+In 1965, psychologist Bruce Tuckman developed a model (Tuckman's Model) that describes the stages of group development, forming and maturing into a cohesive and effective team. 
 
-The model consisted originally of four stages: "_**forming**, **storming**, **norming**,_ and _**performing**_", adding one additional "_**adjourning**_" in 1977.
+The model initially consisted of four stages: "_**forming**, **storming**, **norming**,_ and _**performing**_," adding one additional "_**adjourning**_" in 1977.
 
 <!-- more -->
 
