@@ -17,14 +17,19 @@ Follow my speaker journey.
 
 #### May
 
-- 2023-05-28/30 | International PHP Conference [**Berlin, Germany**] (EN)
-  - [Practical TDD Workshop: Collaborative Learning Through Pair Programming](https://phpconference.com/agile-culture/practical-tdd-workshop/)
+- 2024-05-28/30 | International PHP Conference [**Berlin, Germany**] (EN)
+  - [Practical TDD **Workshop**: Collaborative Learning Through Pair Programming](https://phpconference.com/agile-culture/practical-tdd-workshop/)
   - [Bashunit: Testing Your Bash Scripts, Inspired by PHPUnit](https://phpconference.com/devops-continuous-delivery/bashunit-testing-bash-scripts/)
-    - Together with [Emmanuel Valverde Ramos](https://emmanuelvalverde.dev/)
+    - Both together with [Emmanuel Valverde Ramos](https://emmanuelvalverde.dev/)
 
 ---
 
 ### 2023
+
+#### December
+
+- 2023-12-15 | Live interview with Manfred Awards [**Remote**] (ES)
+  - [Winner in the category of Side Project, 2023: bashunit](https://bashunit.typeddevs.com)
 
 #### November
 
