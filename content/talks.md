@@ -11,9 +11,20 @@ Follow my speaker journey.
 
 ## Upcoming events 🎤
 
-### 2023
+### 2024
 
 #### More to come
+
+#### May
+
+- 2023-05-28/30 | International PHP Conference [**Berlin, Germany**] (EN)
+  - [Practical TDD Workshop: Collaborative Learning Through Pair Programming](https://phpconference.com/agile-culture/practical-tdd-workshop/)
+  - [Bashunit: Testing Your Bash Scripts, Inspired by PHPUnit](https://phpconference.com/devops-continuous-delivery/bashunit-testing-bash-scripts/)
+    - Together with [Emmanuel Valverde Ramos](https://emmanuelvalverde.dev/)
+
+---
+
+### 2023
 
 #### November
 
