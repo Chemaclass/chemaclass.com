@@ -9,7 +9,7 @@ subtitle = "Tuckman's Model to drive a team to high performance"
 static_thumbnail = "/images/blog/2023-11-25/cover.jpg"
 +++
 
-![cover](/images/blog/2023-11-25/cover.jpg)
+![blog-cover](/images/blog/2023-11-25/cover.jpg)
 
 In 1965, psychologist Bruce Tuckman developed a model (Tuckman's Model) that describes the stages of group development, forming and maturing into a cohesive and effective team. 
 
