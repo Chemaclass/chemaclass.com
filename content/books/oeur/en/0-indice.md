@@ -45,12 +45,12 @@ tags = []
   - Whose world is it?
   - Your sense
   - To the intention, I say
-- Chapter 7: September
+- [Chapter 7: September](@/books/oeur/en/07-2015-septiembre.md)
   - God exists: it's me, and you too
   - I needed to dream
   - The art of thinking
   - Be right
-- Chapter 8: October
+- [Chapter 8: October](@/books/oeur/en/08-2015-octubre.md)
   - Above good and evil
   - What are we?
   - Memories of a forgotten memory
