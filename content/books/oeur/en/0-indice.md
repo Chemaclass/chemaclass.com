@@ -69,8 +69,7 @@ tags = []
   - The problem with Christmas 
     
 ### 2016
-
-- Chapter 11: January
+- [Chapter 11: January](@/books/oeur/en/11-2016-enero.md)
   - Ambition in a dream
   - I resign to God
   - My purposes
