@@ -40,7 +40,7 @@ tags = []
   - Actions and words
   - To listen unnoticed
   - What is clear
-- Chapter 6: August
+- [Chapter 6: August](@/books/oeur/en/06-2015-agosto.md)
   - Everything is stages
   - Whose world is it?
   - Your sense
