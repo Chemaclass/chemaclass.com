@@ -61,7 +61,7 @@ tags = []
   - To the needed mediocrity
   - Your last day
   - Leaving a mark
-- Chapter 10: December
+- [Chapter 10: December](@/books/oeur/en/10-2015-diciembre.md)
   - The art of adapting
   - We will die
   - Sudden emotions
