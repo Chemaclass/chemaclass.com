@@ -55,7 +55,7 @@ tags = []
   - What are we?
   - Memories of a forgotten memory
   - I believe I think too much
-- Chapter 9: November
+- [Chapter 9: November](@/books/oeur/en/09-2015-noviembre.md)
   - To the motive
   - My project, our project
   - To the needed mediocrity
