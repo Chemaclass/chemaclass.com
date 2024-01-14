@@ -88,7 +88,7 @@ tags = []
   - Precisely
   - It says a lot about you
   - Whimsical fate
-- Chapter 12: February
+- [Chapter 12: February](@/books/oeur/en/12-2016-febrero.md)
   - Travel to our encounter
   - Unforgivable youth
   - Religion
