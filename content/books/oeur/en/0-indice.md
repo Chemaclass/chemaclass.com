@@ -118,56 +118,57 @@ tags = []
   - History
   - Numbers
   - Trying to understand ourselves
-- Chapter 16: June
+- [Chapter 16: June](@/books/oeur/en/16-2016-junio.md)
   - What if?
   - Who will remember us?
   - A matter of time
   - Starting the 23
-- Chapter 17: July
+- [Chapter 17: July](@/books/oeur/en/17-2016-julio.md)
   - Understanding
   - Eternal return
   - Disposition
   - While time passes by
   - Some
   - The hardest
-- Chapter 18: August
+- [Chapter 18: August](@/books/oeur/en/18-2016-agosto.md)
   - Being myself again
   - With different eyes
-- Chapter 19: September
+- [Chapter 19: September](@/books/oeur/en/19-2016-septiembre.md)
   - You only live once
   - Young and innocent
   - Finishing to start
   - Tomorrow
-- Chapter 20: October
+- [Chapter 20: October](@/books/oeur/en/20-2016-octubre.md)
   - Entropy
   - The future
-- Chapter 21: November
+- [Chapter 21: November](@/books/oeur/en/21-2016-noviembre.md)
   - Sweet Memories
   - Even when
   - Our biggest mistake
-- Chapter 22: December
+- [Chapter 22: December](@/books/oeur/en/22-2016-diciembre.md)
   - Slave of death
   - Singularities
   - Education
 
 ### 2017
 
-- Chapter 23: January
+- [Chapter 23: January](@/books/oeur/en/23-2017-enero.md)
   - False freedom
   - Living busy
   - The importance
-- Chapter 24: February
+- [Chapter 24: February](@/books/oeur/en/24-2017-febrero.md)
   - Our life
   - Habits
-- Chapter 25: March
+- [Chapter 25: March](@/books/oeur/en/25-2017-marzo.md)
   - The truth
   - Endless
+- [Chapter 26: April](@/books/oeur/en/26-2017-abril.md)
 - Chapter 26: April
   - The value
-- Chapter 27: May
+- [Chapter 27: May](@/books/oeur/en/27-2017-mayo.md)
   - Masked mediocrity
   - Trend
-- Chapter 28: June
+- [Chapter 28: June](@/books/oeur/en/28-2017-junio.md)
   - Perceptions
-- Chapter 29: July
+- [Chapter 29: July](@/books/oeur/en/29-2017-julio.md)
   - I am not talking about self-help
