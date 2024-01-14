@@ -35,6 +35,7 @@ Above any difference.
 Above ourselves, Good, and Evil.
 There I will be, and you, if you want, with me.
 ```
+
 ---
 
 ## What are we?
@@ -43,42 +44,46 @@ Let me take this moment to remember... What do we want to be? A mere illusion of
 
 What is our life but a memory of lived moments, of our experiences that, along with our expectations, lead us to a constant illusion of desire: to desire and to be desired? What good is our memory if we cannot remember? What would our mind be for if it couldn't process? Let's teach ourselves to think. Let's create memories!
 
-A life is useless if not lived; no one will live for us. We must learn, therefore, to use our common sense, to live using the mind and reason.
+A life is useless if not lived; no one will live for us. We must learn, therefore, to use our common sense and to live using the mind and reason.
 
-Let's make mistakes! Let's make a lot of mistakes, but not in the same thing. Let's stumble with as many stones as we want, but let's not repeat, and if we repeat, let's do it with a clear head because, otherwise, we will be in an illusion. An illusion that once existed but never again. And there will be no longing or desire for what once was without being; in fact, no one will miss it.
+Let's make mistakes! Let's make a lot of mistakes, but not the same thing. Let's stumble with as many stones as we want, but let's not repeat, and if we repeat, let's do it with a clear head because, otherwise, we will be in an illusion. An illusion that once existed but never again. And there will be no longing or desire for what once was without being; in fact, no one will miss it.
 
-We are decisions, responsibilities, as well as final results. Everything matters even if there are always different situations, each with its different degree of importance; our obligation will be to conclude with an average above itself. Our commitment will be linked to our experience; our duty, only to us. It is also true that we owe everything to everyone, but especially to ourselves for our decisions, for being who we are and who we wanted to be.
+We are decisions, responsibilities, as well as final results. Everything matters even if there are always different situations, each with its different degree of importance; our obligation will be to conclude with an average above itself. Our commitment will be linked to our experience; our duty, only to us. It is also true that we owe everything to everyone, but especially to ourselves, for our decisions, for being who we are and who we want to be.
 
 We are the final result without end... until there is one. And then, what will we have been?
 
 ---
 
 ## Memories of a Forgotten Memory
+
 ```
 I barely have memories of my childhood.
 Memories that faded with time.
-Mention of specific moments with nostalgia.
+Mention specific moments with nostalgia.
 Desire to overcome that thing called ego.
 ```
+
 Let's start with the end: I am better than ever.
 
 I wouldn't want us to feel pity for those days of an unforgiving past, but that doesn't mean I don't feel remorse, sorrow for a lost youth, and, above all, for the number of desires that perished along the way.
 
-In those days, I learned a lot. I learned like no one should learn. I learned how things shouldn't be done. I learned that there are always different versions of the same situation. I wouldn't call them points of view, but rather, realities.
+In those days, I learned a lot. I learned like no one should learn. I learned how things shouldn't be done. I learned that there are always different versions of the same situation. I wouldn't call them points of view but rather realities.
 
 What is reality if not our illusion of understanding? Why should one situation be more real than another equally true? Reality is nothing more than our perception. Our truth, yes, the one we believe is unique and real, is just another conception of the world.
 
 And those were years that, luckily, disappeared. They vanished as much as possible, giving way to a new today where I now settle because my mind is wiser than I am and learned to forget all that without my permission. It's funny because, in part, I feel cared for by myself, and that makes me happy and relieved.
 
-After my eleventh, a tragedy I couldn't understand, but also couldn't foresee, came. And by the time I wanted to realize it, I was already thirteen in a basement where everything was too late: latches that prevented our movement and stairs that only went down... toward despair. Day after day filled with uncertainties, sorrow, and longing. Longing for a reality beyond promises and wasted time. Nothing seemed real. Appearances were deceptive.
+After my eleventh, a tragedy I couldn't understand but also couldn't foresee coming. And by the time I wanted to realize it, I was already thirteen in a basement where everything was too late: latches that prevented our movement and stairs that only went down... toward despair. Day after day filled with uncertainties, sorrow, and longing. Longing for a reality beyond promises and wasted time. Nothing seemed real. Appearances were deceptive.
 
-A constant and daily emptiness. Waiting for everything to change, to see some green sprout, it didn't matter where... Everything was insignificant, and that's how it managed to make me feel.
+A constant and daily emptiness. Waiting for everything to change, to see some green sprout, it didn't matter where... Everything was insignificant, and that's how it made me feel.
 
 "People don't change," as well as other unpleasant sentences that I still, "fortunately," remember.
 
 The world is full of people of all kinds. At that moment, I couldn't smile because with so much pressure on my back, sometimes it's difficult to discern. Let's keep in mind that we are talking about the period between fourteen and seventeen years old, approximately. I hardly remember anything. As I said before, my mind is wiser than I am. Hopefully, we never have to read this again.
 
-Let's finish with the beginning: today I am better than ever.
+Let's finish with the beginning: today, I am better than ever.
+
+---
 
 ## I Think Too Much
 
@@ -90,7 +95,7 @@ You won't be the last to read me or the first, but you will have had the luck to
 
 Nothing is eternal, especially when it is nothing more than a fruit of our illusion, like our dreams or hopes, as well as longings in our desires.
 
-From an early age, I wanted to know a truth that could not be denied or dismantled. Fed up with so much talk... Now I simply smile in my happiness for having found one of the most beautiful truths.
+From an early age, I wanted to know a truth that could not be denied or dismantled. Fed up with so much talk... Now, I simply smile with my happiness for having found one of the most beautiful truths.
 
 I plan to enjoy this absolute truth: the non-existence of the eternal. Just as I plan to enjoy everything that exists because there is nothing more pleasant than learning to enjoy everything, as well as nothing.
 
@@ -98,7 +103,7 @@ I don't believe in anything above man, I don't believe in anything or anyone abo
 ```
 I love early nights
 and late dawns,
-exalted in dream without memory
+exalted in a dream without memory
 like an empty memory.
 ```
 I would really like to be read, why else would I write? Perhaps for the simple enjoyment of thinking. Perhaps for the joy in oneself.

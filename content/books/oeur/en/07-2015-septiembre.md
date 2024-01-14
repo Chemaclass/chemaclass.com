@@ -9,11 +9,11 @@ tags = []
 
 ![book-chapter](/images/books/oeur/07.jpg)
 
-## God exists: it's me, and so are you 
+## God exists: it's me, and so are you
 
 I am an undead. I am alive—more alive than ever! I am a person who likes to have things clear. Character, fair.
 
-I am a life-loving person, embracing the moment and time, as well as my circumstances. I would never want to be a person idolized by masses that cannot see beyond their reality.
+I am a life-loving person, embracing the moment and time, as well as my circumstances. I would never want to be a person idolized by the masses who cannot see beyond their reality.
 
 I won't go into details about whether it's more or less correct to be faithful to one belief or another. Everyone can do what they want—that's our freedom—but freedom is linked to responsibility. Each becomes responsible for themselves; each one, guard your beliefs, and I will guard mine. Guarding mine means not staying silent when something bothers me, when something is not right in my eyes, or when I believe something doesn't make sense. Then, I will speak up to try to correct it.
 
@@ -27,7 +27,7 @@ To achieve success, we must have an attitude of personal improvement, not a rise
 
 God exists: it's me, and you will be too if your attitude predisposes it. Because God is nothing more than an idea, a philosophy, an attitude towards life. Believing in a God says a lot about you, says a lot to the world, and says a lot about your attitude.
 
-My encouragement to anyone who wants to surpass themselves. To every soul that wants to surpass itself one day because it will all be yours; you will be God, and life will truly belong to you.
+My encouragement to anyone who wants to surpass themselves. To every soul that wants to surpass itself one day because it will all be yours, you will be God, and life will truly belong to you.
 
 ---
 
@@ -35,11 +35,11 @@ My encouragement to anyone who wants to surpass themselves. To every soul that w
 
 I needed to dream because nothing is forever, except what we set out to make so. It won't be a question then of being right or not; it doesn't matter here. It's about setting goals beyond our possibilities. The capacity for self-improvement that we can seemingly demonstrate out of nowhere is impressive. Just as working on another attitude, the more we exercise our will, the greater and more precise it becomes.
 
-What is normality if not what is previously established by our environment and accepted by the majority as the norm? What is normality if not what predisposes us to what has not yet happened? What is normality if not what pigeonholes and limits us as beings free of will?
+What is normality if not what is previously established by our environment and accepted by the majority as the norm? What is normality? If not, what predisposes us to what has not yet happened? What is normality? If not, what pigeonholes and limits us as beings free of will?
 
 I needed to dream... and I dreamed, just as I continue to dream every day, hoping to keep doing so until my last breath. I had a dream: to be myself.
 
-We will make a before and an after. Who knows who this might reach. The best thing about the meaning of life is that it will have the meaning you choose.
+We will make a before and an after. Who knows who this might reach? The best thing about the meaning of life is that it will have the meaning you choose.
 
 ---
 
@@ -47,7 +47,7 @@ We will make a before and an after. Who knows who this might reach. The best thi
 
 We could understand philosophy as the purest and most abstract science based on subjectivism, which, instead of providing answers, seeks to find the right questions. To philosophize is to question.
 
-The purpose of this art should not end with being read. Philosophy should strive to be skeptical and pragmatic. Reading philosophy is healthy. Studying it, if we like or are passionate about it, can provide us with a rich cultural level, but that should never have been its ultimate purpose. The art of thinking did not arise to be read or written. Writing philosophy is useless if we do not contribute any questions. Reading philosophy is useless if we have not equipped ourselves—with new or existing tools—to continue building ourselves, because philosophy is useless in itself: we are the ones who will give it the value we consider.
+The purpose of this art should not end with being read. Philosophy should strive to be skeptical and pragmatic. Reading philosophy is healthy. Studying it, if we like or are passionate about it, can provide us with a rich cultural level, but that should never have been its ultimate purpose. The art of thinking did not arise to be read or written. Writing philosophy is useless if we do not contribute any questions. Reading philosophy is useless if we have not equipped ourselves—with new or existing tools—to continue building ourselves because philosophy is useless in itself: we are the ones who will give it the value we consider.
 
 There is no absolute truth that regulates its importance and value, because something so abstract, how could we quantify it? The value of doubt. There lies its true value: it is doubt itself!
 

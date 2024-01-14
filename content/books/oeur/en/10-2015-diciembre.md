@@ -29,13 +29,14 @@ We are bound to our past and destined to be to our future: hence the importance 
 
 We don't know when the last time will be, when we will dream, breathe, or desire. Let's make each moment ours without excuses, without possible tomorrows that never come, without "there will be other moments" or "I'm not sure." Self-assurance is our main key to happiness and our confidence, as well as its continuous pursuit.
 
-It's not about finding an untouchable and infinite happiness but about building ourselves to end up being what we truly desire in this place that no one decided, and apparently, we all find ourselves, under the bliss of a devastating yet sweet time.
+It's not about seeking unattainable and endless happiness. Instead, it's about shaping ourselves to become what we genuinely want in this place that no one chose, where we all exist, amidst the mix of challenging yet sweet moments.
 
 I couldn't smile until I decided to improvise with myself. And now, everything is possible.
 
 ---
 
 ## We Will Die
+
 ```
 I will die. We will all die.
 Cries, memories, and longing,
@@ -105,21 +106,23 @@ We are so unique and valuable, especially in our diversity of sudden emotions.
 
 Not everything has to be decided now. It's not about that, but it is about having a rewarding goal where we would really like to be. Something we would really like to achieve after an effort made. Something to think about that motivates us to work in our daily lives, to get up and study with more enthusiasm. To think beyond a routine, where things simply happen without apparently anyone needing to change them because, in the end, they seem to have always been that way.
 
-It's about motivating ourselves, incentivizing ourselves, cultivating ourselves, and not letting ourselves be carried away by a life without answers or questions, without real learnings or new experiences beyond the monotony of the boring.
+It's about motivating ourselves, incentivizing ourselves, cultivating ourselves, and not letting ourselves be carried away by life without answers or questions, without real learnings or new experiences beyond the monotony of the boring.
 
 And it's in our hands, in our power, and in our will to change for better or worse all of this. We are our own God, our guide. We are our last word.
 
 A life is useless if there is no passion for living it.
 
+---
+
 ## The Problem with Christmas
 
-The problem with Christmas lies behind its false values of forgiveness, love, and sincere family gathering. I am looking forward to the day when I can see this from another perspective, really, but nowadays, it is something impossible for me, at least in my case, and it's not precisely something that depends on me.
+The problem with Christmas lies behind its false values of forgiveness, love, and sincere family gatherings. I am looking forward to the day when I can see this from another perspective, really, but nowadays, it is something impossible for me, at least in my case, and it's not precisely something that depends on me.
 
 The problem with religion is, again, all the simulated values hidden behind it. Illusions in beautiful words that humanly end up being conveniently forgotten.
 
 Masks that constantly play without permission. Uninvited double standards. And you, unwilling to know exactly what's happening despite trying so hard without reward. "Hear, see, and be silent."
 
-Everything comes from much further back: years and years of error without correction and without hope for the future beyond an excess of confidence in a responsibility, in a non-existent and foolish God. Miserable.
+Everything comes from much further back: years and years of error without correction and without hope for the future beyond an excess of confidence in responsibility, in a non-existent and foolish God. Miserable.
 
 But more guilty than God and His non-existence is the deficiency that some have due to their excessive belief. More culpable than God are the humans who abuse Him and use Him: they modify His meaning at their whim and try to instill it as an absolute truth to their peers. Incompetent and foolish, locked in their damn hypocritical and disloyal "faith." The context of our words can so much vary our real intention...
 

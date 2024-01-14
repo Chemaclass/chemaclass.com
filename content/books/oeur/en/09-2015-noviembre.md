@@ -11,11 +11,11 @@ tags = []
 
 ## To the Motive
 
-There has always been a purpose. There always will be. Something to keep in mind. Cause and motivation for our writings. Our actions, as well as decisions, governed and inspired by a motive.
+There has always been a purpose. There always will be. Something to keep in mind. Cause and motivation for our writings. Our actions, as well as decisions, are governed and inspired by a motive.
 
-Motivation as a fundamental basis. Vital, I would even dare to say, because without motivation, one could not live, and I'm not talking about simple breathing. It is what inspires us to create, to smile, and to fight against the current if necessary. Our motivation is our inspiration, our muse, the one who gives us courage, who reminds us of the value of what we are carrying out, who dreams alongside us.
+Motivation as a fundamental basis. Vital, I would even dare to say, because without motivation, one could not live, and I'm not talking about simple breathing. It is what inspires us to create, to smile, and to fight against the current if necessary. Our motivation is our inspiration, our muse, the one who gives us courage, who reminds us of the value of what we are carrying out, and who dreams alongside us.
 
-Ideas, illusions, sorrows, aspirations... All born from our most emotional self, wanting to feel fulfilled always within the limits of our possibilities. For the motive and by itself. Cause and cause of its existence. For its elegance, I write to it: to motivation.
+Ideas, illusions, sorrows, aspirations... All are born from our most emotional selves, wanting to feel fulfilled always within the limits of our possibilities. For the motive and by itself. Cause and cause of its existence. For its elegance, I write to it: to motivation.
 
 Who else but she inspires me to write to you? I write to you, who suggest and give me more than enough reasons to express all this that I so eagerly want to convey. For my motivation, for herself. For knowing more than anyone what to desire and to what extent. For being mine. For questioning and helping me. For being me.
 
