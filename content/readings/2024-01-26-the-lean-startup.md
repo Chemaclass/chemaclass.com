@@ -33,6 +33,10 @@ Eric Ries defines a startup as an organization dedicated to creating something n
 
 {{ youtube(id="RSaIOCHbuYw") }}
 
+---
+
+{{ youtube(id="fEvKo90qBns") }}
+
 ### Recommended posts
 
 - [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
