@@ -33,7 +33,9 @@ Monitoring your live system is crucial to guarantee the health after each deploy
 
 In case of doubt, you could use feature flags to disable the feature you will deploy. Still, you prefer not to enable it during the weekend while keeping the option of adding value and deploying anytime always open.
 
-I believe frequent and small releases to production are key. Any time, any date, as far as it makes sense and there is a clear path to bringing value soon to the customer to get feedback as soon as possible.
+I believe **frequent** and **small releases** to production **are key**; any time, any date, as far as it makes sense, and there is a clear path to bringing value soon to the customer to get feedback ASAP.
+
+> Deliver quality value in small increments, as frequently as possible.
 
 ![cover](/images/blog/2024-03-03/footer.jpg)
 
