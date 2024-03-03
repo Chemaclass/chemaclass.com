@@ -39,6 +39,8 @@ I believe **frequent** and **small releases** to production **are key**; any tim
 
 > Deliver quality value in small increments, as frequently as possible.
 
+Being able to deploy on Fridays (if needed or wanted) impacts the team's confidence. Similarly, forbidding deployments on Fridays impacts the team's self-esteem as well.
+
 ![cover](/images/blog/2024-03-03/footer.jpg)
 
 ---
