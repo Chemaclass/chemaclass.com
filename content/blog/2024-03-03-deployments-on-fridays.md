@@ -23,6 +23,8 @@ Your Continuous Integration/Delivery pipelines, end-to-end and other types of te
 
 The goal is build a system where deployments to production should be as often, smooth and easy as possible; any time, any day. Being afraid of your system should not be the aim. On the contrary, it should be something to work towards to fix it.
 
+The team dynamics are also an essential factor here. If we establish fear of deployments on Fridays, and fear of our system, that will end up in lack of accountability by default. This reminds me of [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/).
+
 ![cover](/images/blog/2024-03-03/middle.jpg)
 
 If you deploy small and frequent changes as soon as they can guarantee 100% quality value success, why delay such an incremental improvement to your system?
@@ -31,7 +33,7 @@ Coming back to “Why should we not deploy on Fridays?” The only reason I can 
 
 Monitoring your live system is crucial to guarantee the health after each deployment. This is essential to ensure everything is working fine and smoothly. To build a resilience system, this should trigger alarms to notify someone responsible for addressing the issue, disable or revert the latest “broken” feature… there are many techniques to create awareness and act on them.
 
-In case of doubt, you could use feature flags to disable the feature you will deploy. Still, you prefer not to enable it during the weekend while keeping the option of adding value and deploying anytime always open.
+In case of doubt, you could use feature flags to disable the feature you will deploy. Still, you prefer not to enable it during the weekend while keeping the option of adding value and deploying anytime always open. 
 
 I believe **frequent** and **small releases** to production **are key**; any time, any date, as far as it makes sense, and there is a clear path to bringing value soon to the customer to get feedback ASAP.
 
@@ -46,3 +48,9 @@ I believe **frequent** and **small releases** to production **are key**; any tim
 - [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
 - [Different beliefs about software quality](/blog/different-beliefs-about-software-quality/) <small>Some thoughts about software quality</small>
 - [Dedicated QA Teams in software?](/blog/dedicated-qa-teams/) <small>How does it fit a dedicated QA person in your agile team?</small>
+
+### Recommended readings
+
+- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
+- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
+- [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/) <small>by Patrick M. Lencioni</small>
