@@ -22,6 +22,12 @@ Follow my speaker journey.
   - [Bashunit: Testing Your Bash Scripts, Inspired by PHPUnit](https://phpconference.com/devops-continuous-delivery/bashunit-testing-bash-scripts/)
     - Both together with [Emmanuel Valverde Ramos](https://emmanuelvalverde.dev/)
 
+#### March
+
+- 2024-03-14 | devm.io [**Remote**] (EN)
+  - [Test Driven Development: A Hands-on Crash Course](https://devm.io/live-events/test-driven-development-a-hands-on-crash-course/)
+    - Together with [Emmanuel Valverde Ramos](https://emmanuelvalverde.dev/)
+
 ---
 
 ### 2023
