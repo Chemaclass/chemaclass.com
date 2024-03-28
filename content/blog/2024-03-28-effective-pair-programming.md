@@ -51,7 +51,7 @@ Pair programming might become one of the best tools in your team toolbox for dai
 ### Different strategies for effective pairing
 
 - **Driver-Navigator**: One person is driving the code (with the keyboard), focusing on the detail aspect of the task itself. The other is a navigator (no keyboard), having a more abstract picture of the task in mind.
-- **Ping-Pong**: Frequent switching driver-navigator roles in small interactions, e.g., eevery N minutes, every N commits, etc.
+- **Ping-Pong**: Frequent switching driver-navigator roles in small interactions, e.g., every N minutes, every N commits, etc.
 - **Backseat driver**: The navigator engages actively with the driver.
 - **Tourist guide**: The navigator passively learns with the driver.
 
