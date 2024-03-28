@@ -22,21 +22,22 @@ Each person will have a role:
 
 > The pair could --and should-- switch roles occasionally; eg: every X commits pushed, every 10 mins, … up to them.
 
-Pair programing **should not** be just considered as a practice from "seniors" to juniors, but regardless of the level of experience from the team members.
+Pair programing should not be just considered as a practice from "seniors" to juniors, but regardless of the level of experience from the team members.
 
-It is about the collaboration flow, the quality communication, the absence of feeling judged, and the idea of welcoming vulnerability with your peers, knowing they will support and help you.
+It is about the **collaboration flow**, the quality communication, the absence of feeling judged, and the idea of welcoming vulnerability with your peers, knowing they will support and help you.
 
-It is about constantly challenging each other, seeking the most pragmatic solution while keeping it simple. Always looking for quick feedback when speaking to each other, but also on the solution you agreed to implement and its direction.
+It is about constantly challenging each other, seeking the most pragmatic solution while keeping it simple. Always looking for **quick feedback** when speaking to each other, but also on the solution you agreed to implement and its direction.
 
-It is about the short, quick, and immediate feedback loop while talking to your partner, who reviews your code on the fly. You can guide as a navigator or help the driver validate their ideas in a broader picture.
+It is about the short, quick, and immediate feedback loop while talking to your partner, who **reviews your code on the fly**. You can guide as a navigator or help the driver validate their ideas in a broader picture.
 
-It is about the constant sharing of knowledge atmosphere by default, reducing bus-factors and silo-knowledge areas to the maximum. Increasing the focus by having two minds working on the same task simultaneously.
+It is about the constant **sharing** of **knowledge** atmosphere by default, reducing bus-factors and silo-knowledge areas to the maximum. Increasing the focus by having two minds working on the same task simultaneously.
 
-It is about team cohesion and sharpening the feeling that we belong. When we understand each other's strengths and weaknesses, we will realize how much we can help each other grow.
+It is about **team cohesion** and sharpening the feeling that we belong. When we understand each other's strengths and weaknesses, we will realize how much we can help each other grow.
 
 ![cover](/images/blog/2024-03-28/footer.jpg)
 
-Pair programming can be done in many different ways: 
+Pair programming can be done in many different ways:
+
 - You can start and finish a task with pairing. You can time-box it to 30, 60, 90 minutes. Either way, it is recommended to have pauses in the middle - Pomodoro. 
 - You can start the task together and stop when one of your peers feels confident enough to continue alone. 
 
