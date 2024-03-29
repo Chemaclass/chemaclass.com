@@ -12,6 +12,8 @@ static_thumbnail = "/images/blog/2024-03-28/cover.jpg"
 
 ![cover](/images/blog/2024-03-28/cover.jpg)
 
+## What is pair programming?
+
 Let's first establish what pair programming is: Two people working together on the same problem at the same time. It is not about one person showing off their skills in front of another, nor one person afraid of making mistakes due to an impostor syndrome.
 
 <!-- more -->
@@ -22,7 +24,7 @@ Each person will have a role:
 
 > The pair could --and should-- switch roles occasionally; eg: every X commits pushed, every 10 mins, … up to them.
 
-Pair programing should not be just considered as a practice from "seniors" to juniors, but regardless of the level of experience from the team members.
+Pair programming should not be considered a practice only for "seniors" to juniors, but regardless of the team members' experience level.
 
 It is about the **collaboration flow**, the quality communication, the absence of feeling judged, and the idea of welcoming vulnerability with your peers, knowing they will support and help you.
 
@@ -36,20 +38,22 @@ It is about **team cohesion** and sharpening the feeling that we belong. When we
 
 ![cover](/images/blog/2024-03-28/footer.jpg)
 
-Pair programming can be done in many different ways:
+## How can you practice pair programming?
+
+Pair programming can be done in different ways:
 
 - You can start and finish a task with pairing. You can time-box it to 30, 60, 90 minutes. Either way, it is recommended to have pauses in the middle - Pomodoro. 
 - You can start the task together and stop when one of your peers feels confident enough to continue alone. 
 
 > It is up to the team --and the task in context-- to decide when and how to apply pairing to get the best out of it.
 
-This does not mean you must constantly work "no matter what" with a pair. This is not about creating rules; on the contrary, it is about embracing this practice to the point you feel confident to choose when and how to use it to get the best out of it.
+This does not mean you must constantly work "no matter what" in pair. This is not about creating rules; on the contrary, it is about embracing this practice to the point you feel confident to choose when and how to use it to get the best out of it.
 
 Pair programming might become one of the best tools in your team toolbox for daily interactions. Not because you read it somewhere but because of the benefits you and your team will find.
 
-## Common Patterns
+### Common Patterns
 
-### Different strategies for effective pairing
+#### Different strategies for effective pairing
 
 - **Driver-Navigator**: One person is driving the code (with the keyboard), focusing on the detail aspect of the task itself. The other is a navigator (no keyboard), having a more abstract picture of the task in mind.
 - **Ping-Pong**: Frequent switching driver-navigator roles in small interactions, e.g., every N minutes, every N commits, etc.
@@ -58,7 +62,7 @@ Pair programming might become one of the best tools in your team toolbox for dai
 
 ![cover](/images/blog/2024-03-28/good-pair-prog.jpg)
 
-### Anti-patterns while pairing
+#### Anti-patterns while pairing
 
 - **The silent partner**: The navigator is not participating, and they are being silent.
 - **The solo act**: The driver ignores all inputs from the navigator.
