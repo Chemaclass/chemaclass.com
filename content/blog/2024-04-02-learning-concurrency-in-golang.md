@@ -1,7 +1,7 @@
 +++
 title = "Learning concurrency in Golang"
 description = "I wanted to learn a new programming language, so after trying some, I ended up with Golang as one of my favorites, for its simplicity and capabilities. It has features that I haven’t used in years, like multithreading."
-draft = true
+draft = false
 [taxonomies]
 tags = [ "software", "golang" ]
 [extra]
@@ -41,58 +41,43 @@ I separated the code into four areas to help visualize it:
 
 ### Entry point
 
-You can spawn a new process using the keyword `go` when invoking any function.
-In this game, this is used 1) to render the board and 2) for each horse's movement.
-
-> Goal: keep the rendering and logic working concurrently.
+The struct `Horse` represents each Horse in the race. 
+The game consists of a list of lines, in which each Horse is running.
 
 ```go
 type Horse struct {
-  Name   string // The name of the horse
-  Position int  // The position in its line
-  Line   int    // The line number where it's compiting
-  IsWinner bool // A flag to know if it's the winner
+  Name     string // The name of the horse
+  Line     int    // The competition line
+  Position int    // The position in its line
+  IsWinner bool   // A flag to know if it's the winner
 }
+```
 
+You can spawn a new process using the keyword `go` when invoking any function.
+In this game, this is used 1) to render the board [`RenderGame()`] and 2) for each horse's movement [`StartRace()`]. The goal is to keep the rendering and logic working concurrently.
+
+```go
 func main() {
-  board := generateRaceBoard()
+  const lines, lineLength = 12, 30
+  board := NewRaceBoard(lines, lineLength)
+  RenderGame(board)
 
-  // render the game in another process
-  go func() {
-    for {
-      time.Sleep(milliDelay * time.Millisecond)
-      renderRaceBoard(board)
-    }
-  }()
-
-  var wg sync.WaitGroup
-  // use a channel with a flag to notify when a horse won
-  ch := make(chan bool)
   winner := Horse{}
+  StartRace(board, &winner)
 
-  for line := range board {
-    wg.Add(1)
-    // each horse will be moved in different processes
-    go moveHorse(&wg, board, line, ch, &winner)
-  }
-
-  wg.Wait() // wait until one horse reaches the end
-  // at this point, the winner horse should be defined
-
-  fmt.Println("Race finished!")
   fmt.Printf("# Winner: %s\n", winner)
 }
 ```
 
 ### Generating the board
 
-The race board is a bidimensional matrix of pointers to Horses. Each line will contain only one Horse and the rest will be pointers to `nil`.
+The race board is a bidimensional matrix of pointers to Horses. Each line "contains" only one Horse; aka only one pointer will point to an actual Horse, the rest will be pointers to `nil`. During the generation of the Board, we will create one Horse at the first position of each line.
 
 ```go
-func generateRaceBoard() [][]*Horse {
-  board := make([][]*Horse, rows)
+func NewRaceBoard(lines, lineLength int) [][]*Horse {
+  board := make([][]*Horse, lines)
   for line := range board {
-    board[line] = make([]*Horse, cols)
+    board[line] = make([]*Horse, lineLength)
     board[line][0] = &Horse{
       Name:     generateName(),
       Position: 0,
@@ -102,12 +87,13 @@ func generateRaceBoard() [][]*Horse {
   }
   return board
 }
+
 ```
 
-The names are randomly generated using `horseNames`.
+The names are randomly generated using `HorseNames`.
 
 ```go
-var horseNames = [20][2]string{
+var HorseNames = [][2]string{
   {"Alloping", "Giggles"},
   {"A-lot", "Gallop"},
   {"BoJack", "Jack"},
@@ -116,8 +102,8 @@ var horseNames = [20][2]string{
 }
 
 func generateName() string {
-  name := horseNames[rand.Intn(len(horseNames))][0]
-  surname := horseNames[rand.Intn(len(horseNames))][1]
+  name := HorseNames[rand.Intn(len(HorseNames))][0]
+  surname := HorseNames[rand.Intn(len(HorseNames))][1]
 
   return name + " " + surname
 }
@@ -125,30 +111,34 @@ func generateName() string {
 
 ### Rendering the game
 
-Then `renderRaceBoard()`, `renderRaceLine()` and `renderRaceLinePosition()` are separated to help focusing on each method responsibility identify what is the subject under "render".
+Then `RenderGame()`, `renderRaceBoard()`, `renderRaceLine()` and `renderRacePosition()` are separated to help focus on each method's responsibility --identifying what is the subject to be rendered.
+
+> `RenderGame()` is being executed in another process using `go`.
 
 ```go
+func RenderGame(board [][]*Horse) {
+  go func() {
+    for {
+      time.Sleep(milliDelay * time.Millisecond)
+      renderRaceBoard(board)
+    }
+  }()
+}
+
 func renderRaceBoard(board [][]*Horse) {
-  clearScreen()
   for line := range board {
     renderRaceLine(board, line)
   }
 }
 
-func clearScreen() {
-  cmd := exec.Command("clear")
-  cmd.Stdout = os.Stdout
-  cmd.Run()
-}
-
 func renderRaceLine(board [][]*Horse, line int) {
-  fmt.Printf("%.2d | ", line)
-  var horse Horse
+  fmt.Printf(" %.2d | ", line)
+  var current Horse
   for col := range board[line] {
-    renderRacePosition(board, line, col, &horse)
+    renderRacePosition(board, line, col, &current)
   }
-  fmt.Printf("| %s", horse.Name)
-  if horse.IsWinner {
+  fmt.Printf("| %s", current.Name)
+  if current.IsWinner {
     fmt.Print(" [Won!]")
   }
   fmt.Println()
@@ -163,69 +153,95 @@ func renderRacePosition(
     fmt.Printf(" ")
     return
   }
-  horse := board[line][col]
-  if horse.IsWinner {
-    removeChars(horse.Position + 1)
+
+  current.Clone(board[line][col])
+  if current.IsWinner {
+    removeChars(current.Position + 1)
     for range board[line] {
       fmt.Printf("-")
     }
   }
-  fmt.Print(horse.Letter())
-  current.Clone(horse)
-}
-
-func removeChars(n int) {
-  fmt.Printf("\033[%dD", n)
-  fmt.Printf("\033[K")
+  fmt.Print(current.Letter())
 }
 ```
 
 ### Moving the horses
 
-Each horse will run a loop until reaching the end of the line OR receiving (via the shared channel) the message that another horse already won the race. Until then, each horse will move independently by randomly sleeping milliseconds before moving to the next position in their line.
+In `StartRace(...)`, the `winner` argument is a pointer to a Horse which will be assigned by the first Horse reaching the last position in their line.
+
+Each Horse will run a loop until reaching the end of the line OR receiving (via the shared channel `won`) the message that another Horse already won the race. Until then, each horse will move independently by randomly sleeping milliseconds before moving to the next position in their line.
+
+> `startHorseRunning()` runs in another process using `go`.
 
 ```go
-func moveHorse(
+func StartRace(
+  board [][]*Horse,
+  winner *Horse,
+) {
+  var wg sync.WaitGroup
+  // use a channel with a flag to notify when a horse won
+  won := make(chan bool)
+
+  for line := range board {
+    wg.Add(1)
+    go startHorseRunning(&wg, board, line, won, winner)
+  }
+
+  wg.Wait() // wait until one horse reaches the end, 
+  // which is controlled by the shared channel `won`
+}
+
+func startHorseRunning(
   wg *sync.WaitGroup,
   board [][]*Horse,
   line int,
-  ch chan bool,
+  won chan bool,
   winner *Horse,
 ) {
   defer wg.Done()
   for {
     select {
-    case <-ch: // check if another horse finished
-      return // in such a case, then stop the for loop
+    case <-won: // check if another horse finished in
+      return    // such a case, then stop the for loop
     default:
-      // otherwise, sleep some random milliseconds
-      randomDuration := time.Duration(rand.Intn(milliDelay))
-      time.Sleep(time.Millisecond * randomDuration)
-      // and move the horse one column forward
-      for col := cols - 1; col > 0; col-- {
-        if board[line][col-1] == nil {
-          continue
-        }
-        // here we identify that there is a horse in
-        // the following position, so we move it to the
-        // current pos, and we set nil in the other one
-        board[line][col] = board[line][col-1]
-        board[line][col].Position++
-        board[line][col-1] = nil
-
-        // try to declare a winner
-        if board[line][col].Position+1 == finalPosition {
-          declareWinner(ch, board[line][col], winner)
-          return
-        }
-        break
+      sleepRandomMilliseconds()
+      moveHorseOnePosition(board, line, ch, winner)
+      if winner.IsFound() {
+        return
       }
     }
   }
 }
 
+func moveHorseOnePosition(
+  board [][]*Horse,
+  line int,
+  won chan bool,
+  winner *Horse,
+) {
+  cols := len(board[line])
+  for col := cols - 1; col > 0; col-- {
+    if board[line][col-1] == nil {
+      continue
+    }
+    // here we identify that there is a horse in
+    // the following position, so we move it to the
+    // current pos, and we set nil in the other one
+    board[line][col] = board[line][col-1]
+    board[line][col].Position++
+    board[line][col-1] = nil
+    // try to declare a winner
+    if board[line][col].Position+1 == cols {
+      declareWinner(won, board[line][col], winner)
+    }
+    break
+  }
+}
+
+var once sync.Once
+
 func declareWinner(
-  ch chan bool,
+  won chan bool,
   actual *Horse,
   winner *Horse,
 ) {
@@ -238,10 +254,20 @@ func declareWinner(
     // the winner will close the channel nofifying
     // all other goroutines, so they can stop their
     // loops and finalising the WaitGroup and the
-    // main program can also stop. See `racingHorses()`
-    close(ch)
+    // main program can also stop.
+    close(won)
   })
 }
 ```
 
-> Full code: [gist:Chemaclass/85b2bb49bc6736271cdde8f219dfc27e](https://gist.github.com/Chemaclass/85b2bb49bc6736271cdde8f219dfc27e)
+### Source code
+
+The code showed is not all, so if you would like to check the working source code, you can check the one file version (1), or the more complete project version (2).
+
+1. Code in a single file: [gist:Chemaclass/racing_horses.go](https://gist.github.com/Chemaclass/85b2bb49bc6736271cdde8f219dfc27e)
+2. Improved version repository: [Chemaclass/go-horse-racing](https://github.com/Chemaclass/go-horse-racing)
+    - using a string buffer for better displaying
+    - split in different files by responsibility
+    - adding unit tests
+    - among other improvements
+        - _further improvements (and refactorings) will be applied to this version_
