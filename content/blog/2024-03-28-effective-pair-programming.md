@@ -8,6 +8,7 @@ tags = [ "software", "team-work" ]
 [extra]
 subtitle = "Embracing quality practices in your engineering culture"
 static_thumbnail = "/images/blog/2024-03-28/cover.jpg"
+pin = true
 +++
 
 ![cover](/images/blog/2024-03-28/cover.jpg)
