@@ -11,24 +11,19 @@ static_thumbnail = "/images/blog/2024-04-02/cover.jpg"
 
 ![cover](/images/blog/2024-04-02/cover.jpg)
 
-I wanted to learn a new programming language, so after trying some, I ended up with Golang as one of my favorites, for its simplicity and capabilities. It has features that I haven’t used in years, like multithreading".
+I wanted to learn a new programming language, so after trying some, I ended up with Golang as one of my favorites, for its simplicity and capabilities. It has features that I haven’t used in years, like multithreading.
 
 <!-- more -->
 
-Go is not a multithreading language but concurrency. Although these terms may seem similar to a regular developer when working with them (as the APIs you will use are very similar), they are actually different concepts.
+[Golang](https://go.dev/) (or `Go`) supports concurrency through _**lightweight threads**_ called **_goroutines_**, different from traditional multithreading (like in Java*). While the usage may seem similar, Go's concurrency model provides efficient parallelism and asynchronous execution, managed at the language level for better scalability and resource utilization.
 
-- **Multithreading** is about multiple threads that run in parallel and can share the same resources running in a single process. Java has threads.
-- **Concurrency** is about running multiple processes simultaneously "practically (but not really)"—at least for the final user. These processes can share the same resources on runtime. Golang has goroutines.
-
-For both, things happen in unspecified order, and you can multitask as if doing multiple tasks simultaneously.
-
-![cover](/images/blog/2024-04-02/multithreading-vs-concurrency-processing.jpg)
+> *In traditional multithreading from Java, threads are heavyweight, managed by the OS, and can consume significant system resources. Developers must handle synchronization and coordination to manage shared resources safely. In contrast, Golang's goroutines are lightweight, managed by the Go runtime, and are cheaper to create and manage.
 
 ---
 
-I remember building a similar game in Java when I was learning multithreading ten years ago, and I thought it would be a great opportunity to do it again with the modern [Go language](https://go.dev/).
+I remember building a similar game in `Java` when I was learning multithreading ten years ago… let’s use this opportunity to do it again with modern `Go`.
 
-I built a terminal game emulator that mimics one horse racing. Each horse is a goroutine that runs in a shared bidimensional matrix. Once a horse reaches the end, it is notified to a shared channel between all other horses -running in different processes- and they all stop, showing in the terminal the winner of the race.
+I built a terminal game emulator that mimics one horse racing. Each horse is a goroutine that runs in a shared bidimensional matrix. Once a horse reaches the end, it notifies the shared channel between all other horses --running in different processes-- and they all stop, showing in the terminal the winner of the race.
 
 I separated the code into four areas to help visualize it:
 - Entry point
