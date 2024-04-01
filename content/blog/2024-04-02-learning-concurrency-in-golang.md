@@ -41,8 +41,22 @@ The game consists of a list of lines, in which each Horse is running.
 
 ```go
 type Horse struct {
-  Name string
-  Line int
+  Name string // The name of the horse
+  Line int    // The competition line
+}
+
+func (h *Horse) Letter() string {
+  return fmt.Sprintf("%c", h.Name[0])
+}
+
+func (h *Horse) Equals(other *Horse) bool {
+  return other != nil &&
+    h.Line == other.Line &&
+    h.Name == other.Name
+}
+
+func (h *Horse) String() string {
+  return fmt.Sprintf("%s (line:%d)", h.Name, h.Line)
 }
 ```
 
@@ -59,15 +73,16 @@ func main() {
   winnerChan := make(chan Horse)
   for line := range board {
     // each horse will be moved in different processes
-    go startRuningHorseInLine(board, line, winnerChan)
+    go startRunningHorseInLine(board, line, winnerChan)
   }
 
   // wait until one horse reaches the end
   winner := <-winnerChan
+  // render one last time to ensure the latest board state
   RenderRaceBoard(board, &winner)
 
   fmt.Println("Race finished!")
-  fmt.Printf("# Winner: %s\n", winner)
+  fmt.Printf("# Winner: %s\n", winner.String())
 }
 ```
 
@@ -130,7 +145,14 @@ func RenderRaceBoard(board [][]*Horse, winner *Horse) {
   for line := range board {
     renderRaceLine(board, line, &buffer, winner)
   }
+  clearScreen()
   fmt.Println(buffer.String())
+}
+
+func clearScreen() {
+  cmd := exec.Command("clear")
+  cmd.Stdout = os.Stdout
+  cmd.Run()
 }
 
 func renderRaceLine(
@@ -142,11 +164,14 @@ func renderRaceLine(
   buffer.WriteString(fmt.Sprintf(" %.2d | ", line))
   var current Horse
   for col := range board[line] {
-    renderRacePosition(board, line, col, &current, buffer, winner)
+    h := renderRacePosition(board, line, col, buffer, winner)
+    if h != nil {
+      current = *h
+    }
   }
   buffer.WriteString(fmt.Sprintf("| %s", current.Name))
 
-  if winner != nil && current.Name == winner.Name {
+  if current.Equals(winner) {
     buffer.WriteString(" [Won!]")
   }
   buffer.WriteString("\n")
@@ -155,18 +180,17 @@ func renderRaceLine(
 func renderRacePosition(
   board [][]*Horse,
   line, col int,
-  current *Horse,
   buffer *bytes.Buffer,
   winner *Horse,
-) {
+) *Horse {
   if board[line][col] == nil {
     buffer.WriteString(" ")
-    return
+    return nil
   }
 
-  current.Clone(board[line][col])
+  current := board[line][col]
 
-  if winner != nil && current.Name == winner.Name {
+  if current.Equals(winner) {
     removeChars(buffer, col+1)
     for range board[line] {
       buffer.WriteString("-")
@@ -174,6 +198,8 @@ func renderRacePosition(
   }
 
   buffer.WriteString(current.Letter())
+
+  return current
 }
 ```
 
@@ -198,7 +224,7 @@ func main() {
   //...
 }
 
-func startRuningHorseInLine(board [][]*Horse, line int, winnerChan chan Horse) {
+func startRunningHorseInLine(board [][]*Horse, line int, winnerChan chan Horse) {
   for {
     select {
     case <-winnerChan: // check if another horse finished
