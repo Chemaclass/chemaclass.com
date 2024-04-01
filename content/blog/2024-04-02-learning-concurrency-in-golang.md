@@ -19,7 +19,7 @@ I wanted to learn a new programming language, so after trying some, I ended up w
 
 > *In traditional multithreading from Java, threads are heavyweight, managed by the OS, and can consume significant system resources. Developers must handle synchronization and coordination to manage shared resources safely. In contrast, Golang's goroutines are lightweight, managed by the Go runtime, and are cheaper to create and manage.
 
----
+![cover](/images/blog/2024-04-02/concurrency-vs-multithreading.jpg)
 
 I remember building a similar game in `Java` when I was learning multithreading ten years ago… let’s use this opportunity to do it again with modern `Go`.
 
@@ -47,13 +47,13 @@ type Horse struct {
 ```
 
 You can spawn a new process using the keyword `go` when invoking any function.
-In this game, this is used 1) to render the board [`RenderGame()`] and 2) for each horse's movement [`startRuningHorseInLine()`]. The goal is to keep the rendering and logic working in parallel.
+In this game, this is used 1) to render the game `RenderGame()` and 2) for each horse's movement `startRuningHorseInLine()`. The goal is to keep the "rendering" and "movement logic" working in parallel.
 
 ```go
 func main() {
-  const linesCount, lineLength = 12, 30
+  const lines, lineLength = 12, 30
 
-  board := NewRaceBoard(linesCount, lineLength)
+  board := NewRaceBoard(lines, lineLength)
   go RenderGame(board)
 
   winnerChan := make(chan Horse)
@@ -62,7 +62,8 @@ func main() {
     go startRuningHorseInLine(board, line, winnerChan)
   }
 
-  winner := <-winnerChan // wait until a horse reaches the end
+  // wait until one horse reaches the end
+  winner := <-winnerChan
   RenderRaceBoard(board, &winner)
 
   fmt.Println("Race finished!")
@@ -192,9 +193,11 @@ func main() {
     // each horse will be moved in different processes
     go startHorseRunning(board, line, winnerChan)
   }
-  winner := <-winnerChan // wait until one horse reaches the end
+  // wait until one horse reaches the end
+  winner := <-winnerChan
   //...
 }
+
 func startRuningHorseInLine(board [][]*Horse, line int, winnerChan chan Horse) {
   for {
     select {
@@ -229,12 +232,8 @@ func moveHorseOnePos(board [][]*Horse, line int, winnerChan chan Horse) {
 
 ### Source code
 
-The code showed is not all, so if you would like to check the working source code, you can check the one file version (1), or the more complete project version (2).
+The code displayed in this post is a simplified version, so if you would like to check the working source, you can do it here: [Chemaclass/go-horse-racing](https://github.com/Chemaclass/go-horse-racing).
 
-1. Code in a single file: [gist:Chemaclass/racing_horses.go](https://gist.github.com/Chemaclass/85b2bb49bc6736271cdde8f219dfc27e)
-2. Improved version repository: [Chemaclass/go-horse-racing](https://github.com/Chemaclass/go-horse-racing)
-    - using a string buffer for better displaying
-    - split in different files by responsibility
-    - adding unit tests
-    - among other improvements
-        - _further improvements (and refactorings) will be applied to this version_
+> Thanks to my former Team Lead, Andrei Boar, who helped me review my first original solution and provided an [alternative solution](https://gist.github.com/zuzuleinen/79413aa7933d7d6c6d84ec6ba8c3910a) (simpler and better!), which I applied to my original code. The main learning was using a `chan Horse` to pass the winner Horse from `main()`, instead of using a `chan bool` and a `sync.WaitGroup` between all threads.
+
+
