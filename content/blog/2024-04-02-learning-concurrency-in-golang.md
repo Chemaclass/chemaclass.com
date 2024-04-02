@@ -43,17 +43,17 @@ type Horse struct {
   Line int    // The competition line
 }
 
-func (h *Horse) Letter() string {
+func (h Horse) Letter() string {
   return fmt.Sprintf("%c", h.Name[0])
 }
 
-func (h *Horse) Equals(other *Horse) bool {
+func (h Horse) Equals(other *Horse) bool {
   return other != nil &&
     h.Line == other.Line &&
     h.Name == other.Name
 }
 
-func (h *Horse) String() string {
+func (h Horse) String() string {
   return fmt.Sprintf("%s (line:%d)", h.Name, h.Line)
 }
 ```
@@ -80,7 +80,7 @@ func main() {
   RenderRaceBoard(board, &winner)
 
   fmt.Println("Race finished!")
-  fmt.Printf("# Winner: %s\n", winner.String())
+  fmt.Printf("# Winner: %s\n", winner)
 }
 ```
 
