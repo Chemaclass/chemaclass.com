@@ -15,9 +15,7 @@ I wanted to learn a new programming language, so after trying some, I ended up w
 
 <!-- more -->
 
-[Golang](https://go.dev/) (or `Go`) supports concurrency through _**lightweight threads**_ called **_goroutines_**, different from traditional multithreading (like in Java*). While the usage may seem similar, Go's concurrency model provides efficient parallelism and asynchronous execution, managed at the language level for better scalability and resource utilization.
-
-> *In traditional multithreading from Java, threads are heavyweight, managed by the OS, and can consume significant system resources. Developers must handle synchronization and coordination to manage shared resources safely. In contrast, Golang's goroutines are lightweight, managed by the Go runtime, and are cheaper to create and manage.
+[Golang](https://go.dev/) (or `Go`) supports concurrency through lightweight threads called goroutines. These are different from traditional multithreading—like in Java, where you have to handle sync and coordination to manage shared resources safely. In contrast, Go's goroutines are lightweight, managed by the Go runtime, and cheaper to create and manage.
 
 ![cover](/images/blog/2024-04-02/concurrency-vs-multithreading.jpg)
 
