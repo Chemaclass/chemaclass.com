@@ -242,7 +242,7 @@ func moveHorseOnePos(board [][]*Horse, line int, winnerChan chan Horse) {
     }
     // here we identify that there is a horse in
     // the following column, so we move it to the
-    // current column, and we set `nil`` the other one
+    // current column, and we set `nil` the other one
     board[line][col] = board[line][col-1]
     board[line][col-1] = nil
 
