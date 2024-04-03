@@ -17,6 +17,10 @@ I wanted to learn a new programming language, so after trying some, I ended up w
 
 [Golang](https://go.dev/) (or `Go`) supports concurrency through lightweight threads called goroutines. These are different from traditional multithreading—like in Java, where you have to handle sync and coordination to manage shared resources safely. In contrast, Go's goroutines are lightweight, managed by the Go runtime, and cheaper to create and manage.
 
+While parallelism is **doing** several things simultaneously, concurrency is about **dealing** with several things at the same time. When we talk about concurrency and parallelism, we don’t know the order of things. We don’t know what’s going to happen first or what’s going to end first. There is an undefined order of execution.
+
+> Imagine you cooking: preparing a soup, a salad and an omelet. You would be one single unit, but you are preparing different dishes. You might finish the salad first or the soup or the omelet… We cannot guarantee that! This would be concurrency, as you are alone dealing with several things. As soon as your partner comes and helps you cook, then we will be talking about parallelism.
+
 ![cover](/images/blog/2024-04-02/concurrency-vs-multithreading.jpg)
 
 I remember building a similar game in `Java` when I was learning multithreading ten years ago… let’s use this opportunity to do it again with modern `Go`.
