@@ -5,7 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "software", "golang" ]
 [extra]
-subtitle = "Horse racing emulator explained step by step"
+subtitle = "A horse racing emulator explained step by step"
 static_thumbnail = "/images/blog/2024-04-02/cover.jpg"
 +++
 
