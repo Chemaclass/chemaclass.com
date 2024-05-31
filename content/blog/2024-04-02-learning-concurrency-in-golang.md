@@ -9,7 +9,7 @@ subtitle = "A horse racing emulator explained step by step"
 static_thumbnail = "/images/blog/2024-04-02/cover.jpg"
 +++
 
-![cover](/images/blog/2024-04-02/cover.jpg)
+![blog-cover](/images/blog/2024-04-02/cover.jpg)
 
 I wanted to learn a new programming language, so after trying some, I ended up with Golang as one of my favorites for its simplicity and capabilities. It has features I haven’t used in years, like multithreading and concurrency.
 
