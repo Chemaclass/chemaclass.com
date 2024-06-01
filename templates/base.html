@@ -8,38 +8,6 @@
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
 
-    <style>
-      :root {
-        --accent-color: {{ config.extra.accent }};
-        --accent-color-light: {{ config.extra.accent_light }};
-        --accent-overlay-color: #fff;
-        --body-bg: #fff;
-        --body-color: #000;
-        --heading-color: #000;
-        --table-bg-even: #f3f3f3;
-        --table-border-bottom: #dddddd;
-      }
-      {% if config.extra.dark_mode %}
-        @media (prefers-color-scheme: dark) {
-          :root {
-            --accent-overlay-color: #dee2e6;
-            --body-bg: #212529;
-            --body-color: #abb2bf;
-            --heading-color: #dee2e6;
-            --table-bg-even: #2d3237;
-            --table-border-bottom: #697077;
-          }
-          img {
-            opacity: .75;
-            transition: opacity .5s ease-in-out;
-          }
-          img:hover {
-            opacity: 1;
-          }
-        }
-      {% endif %}
-    </style>
-
     <meta name="theme-color" content="{{ config.extra.accent }}" />
 
     {% if config.extra.profile_small %}
@@ -136,7 +104,7 @@
         </a>
         <nav>
           {% for link in config.extra.nav %}
-            <a href="{{ link.path }}">{{ link.name }}</a>
+            <a href="{{ link.path }}" {% if link.id %}id="{{ link.id }}"{% endif %}>{{ link.name }}</a>
           {% endfor %}
         </nav>
       </header>
@@ -152,6 +120,8 @@
       {{now() | date(format="%Y")}}</time>, Chema
       - Jose Maria Valera Reales
     </footer>
+
+    <script src="{{ get_url(path="js/theme.js") | safe }}"></script>
   </body>
   {% block js %}
   {% endblock js %}
