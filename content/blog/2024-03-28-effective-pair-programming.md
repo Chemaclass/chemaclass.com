@@ -8,10 +8,10 @@ tags = [ "software", "team-work" ]
 [extra]
 subtitle = "Embracing quality practices in your engineering culture"
 static_thumbnail = "/images/blog/2024-03-28/cover.jpg"
-pin = true
+pin = false
 +++
 
-![cover](/images/blog/2024-03-28/cover.jpg)
+![blog-cover](/images/blog/2024-03-28/cover.jpg)
 
 What is pair programming? Let's first establish what pair programming is: Two people working together on the same problem at the same time. It is not about one person showing off their skills in front of another, nor one person afraid of making mistakes due to an impostor syndrome.
 
