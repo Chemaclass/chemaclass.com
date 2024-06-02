@@ -8,15 +8,15 @@ subtitle = "Discover Products that Create Customer Value and Business Value"
 pages = "220"
 author = "Teresa Torres"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41O-IVvXtmS._SX331_BO1,204,203,200_.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41O-IVvXtmS._SX331_BO1,204,203,200_.jpg" >
 
+<!-- more -->
+
 This book explores how product managers and designers can keep making a positive impact on their customers' lives. 
 It explores an optimal decision-making process for product teams, so that they can continue to improve their offerings.
-
-<!-- more -->
 
 #### Part 1: What is continuous discovery?
 1. The What and Why of Continuous Discovery

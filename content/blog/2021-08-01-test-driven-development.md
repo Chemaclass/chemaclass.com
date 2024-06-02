@@ -128,4 +128,4 @@ TDD in a nutshell; it's about the rhythm.
 
 ---
 
-All graphics images in this post are originals from [Emmanuel Valverde Ramos](https://twitter.com/evrtrabajo).
+Images original by [Emmanuel Valverde Ramos](https://twitter.com/evrtrabajo).

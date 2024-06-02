@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block styles%}
-<link rel="stylesheet" href="{{ get_url(path="index.css") | safe }}">
-<link rel="stylesheet" href="{{ get_url(path="custom.css") | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path="index.css") | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path="custom.css") | safe }}">
 {% endblock styles %}
 
 {% block posthead %}
@@ -38,9 +38,14 @@
 
   <h3>Who am I?</h3>
   <ul>
-    <li>Tech Lead at <a href="https://teufel.de">Lautsprecher Teufel GmbH</a></li>
-    <li>Contributor in <a href="https://phel-lang.org">Phel Lang</a></li>
-    <li>Creator of <a href="https://gacela-project.com/">Gacela Project</a></li>
+    <li title="The most inspiring and personal fashion online shop in Europe">
+      Tech Lead at <a target="_blank" href="https://aboutyou.com/">About You</a>
+    </li>
+    <li>Contributor in
+      <a target="_blank" title="A testing library for bash scripts" href="https://bashunit.typeddevs.com/">bashunit</a>,
+      <a target="_blank" title="A Functional Programming language that transpiles to PHP" href="https://phel-lang.org">Phel</a> and
+      <a target="_blank" title="A library that helps you build modular PHP applications" href="https://gacela-project.com/">Gacela</a>
+    </li>
   </ul>
   <p title="Extreme Programming Values">
     I love software development focus on communication, simplicity, feedback, courage, and respect.
@@ -50,30 +55,35 @@
     <span title="Test-First & TDD">testing</span>, and refactoring are the best tools for every developer to achieve
     <a href="/blog/the-art-of-testing/">quality</a>.
   </p>
-  <p>You can find me here:</p>
   <table class="social-links">
     <tr>
-      <td><i class="fab fa-github"></i> <a href="https://github.com/Chemaclass">GitHub</a></td>
-      <td><i class="fab fa-twitter"></i> <a href="https://twitter.com/Chemaclass">Twitter</a></td>
-    </tr>
-    <tr>
-      <td><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/jose-maria-valera-reales/">LinkedIn</a></td>
-      <td><i class="fab fa-stack-overflow"></i> <a href="https://stackoverflow.com/users/3454593/chemaclass">StackOverflow</a></td>
+      <td>
+        <i class="fa fa-github"></i>
+        <a target="_blank" href="https://github.com/Chemaclass">GitHub</a>
+      </td>
+      <td>
+        <i class="fa fa-twitter"></i>
+        <a target="_blank" href="https://twitter.com/Chemaclass">Twitter</a>
+      </td>
+      <td>
+        <i class="fa fa-linkedin"></i>
+        <a target="_blank" href="https://www.linkedin.com/in/jose-maria-valera-reales/">LinkedIn</a>
+      </td>
     </tr>
   </table>
 
-  {% set blogs = get_section(path="blog" ~ "/_index.md") %}
-  {% set latest_blog = blogs.pages.0 %}
-  {% set readings = get_section(path="readings" ~ "/_index.md") %}
-  {% set latest_reading = readings.pages.0 %}
   <div class="latest-container">
-    Latest post:
+    Latest <b>post</b>:
+    {% set blogs = get_section(path="blog" ~ "/_index.md") %}
+    {% set latest_blog = blogs.pages.0 %}
     <a href="{{ latest_blog.permalink }}"
        data-from="{{latest_blog.date}}"
        title="{{ latest_blog.description }}"
     >"{{ latest_blog.title }}"</a>
     <br>
-    Latest reading:
+    {% set readings = get_section(path="readings" ~ "/_index.md") %}
+    {% set latest_reading = readings.pages.0 %}
+    Latest <b>reading</b>:
     <a href="{{ latest_reading.permalink }}"
        data-from="{{latest_reading.date}}"
        title="{{ latest_reading.description }}"

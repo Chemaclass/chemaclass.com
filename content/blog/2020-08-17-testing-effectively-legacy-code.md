@@ -203,9 +203,9 @@ Now you can refactor the production code that you covered with tests without tha
 
 ### All together
 
-{{ gist(url="https://gist.github.com/Chemaclass/07704606fcb337dbb0881c94197c329e") }}
+{{ gist(url="Chemaclass/07704606fcb337dbb0881c94197c329e") }}
 
-{{ gist(url="https://gist.github.com/Chemaclass/9f7f96242153b696b3f8da5c7fa80461") }}
+{{ gist(url="Chemaclass/9f7f96242153b696b3f8da5c7fa80461") }}
 
 ---
 

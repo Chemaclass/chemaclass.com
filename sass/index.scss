@@ -1,4 +1,4 @@
-@import "./normalize.scss", "./text.scss";
+@import "./normalize.scss", "./text.scss", "./variables.scss";
 
 @keyframes profile {
   0% {
@@ -116,7 +116,7 @@ header {
   text-align: center;
   font-size: 0.9em;
   margin: 16px auto;
-  padding-top: 12px;
+  padding-top: 26px;
 }
 
 .index-nav-link {

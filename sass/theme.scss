@@ -1,0 +1,34 @@
+:root:has(body.light) {
+    --accent-overlay-color: #fff;
+    --body-bg: #fff;
+    --body-color: #000;
+    --heading-color: #000;
+    --table-bg-even: #f3f3f3;
+    --table-border-bottom: #dddddd;
+
+    h3 small {
+        color: #404040;
+    }
+}
+
+:root:has(body.dark) {
+    --accent-overlay-color: #dee2e6;
+    --body-bg: #212529;
+    --body-color: #abb2bf;
+    --heading-color: #dee2e6;
+    --table-bg-even: #2d3237;
+    --table-border-bottom: #697077;
+    --link-color: deepskyblue;
+
+    * {
+        color: white;
+    }
+
+    hr {
+        background-color: white;
+    }
+
+    a {
+        color: var(--link-color);
+    }
+}

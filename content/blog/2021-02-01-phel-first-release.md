@@ -90,4 +90,4 @@ Check out the official website with all documentation: [https://phel-lang.org/](
 
 ### Also recommended
 
-- [Functional Programming with Phel - JesusValera](https://jesusvalerareales.medium.com/functional-programming-with-phel-5f32145eddb7)
+- [Functional Programming with Phel - JesusValera](https://jesusvalerareales.com/functional-programming-with-phel/)

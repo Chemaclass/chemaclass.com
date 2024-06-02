@@ -2,7 +2,7 @@
 title = "Animal Farm"
 description = "All animals are equal. But some animals are more equal than others."
 [taxonomies]
-tags = [ "fiction", "dystopia", "novel" ]
+tags = [  "novel", "fiction", "dystopia" ]
 [extra]
 subtitle = "All animals are equal. But some animals are more equal than others."
 pages = "90"

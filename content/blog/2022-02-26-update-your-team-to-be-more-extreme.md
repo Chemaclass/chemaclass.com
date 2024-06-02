@@ -6,31 +6,38 @@ tags = [ "team", "work", "extreme", "programming" ]
 [extra]
 subtitle = "How can you help your peers to embrace the change?"
 static_thumbnail = "/images/blog/2022-02-26/cover.jpg"
+pin = false
 +++
 
 ![blog-cover](/images/blog/2022-02-26/cover.jpg)
 
-Our profession is constantly evolving; therefore, it demands a non-stop learning process. Embracing the change is not optional in our software industry.
+> Revisited: <span class="post-revisited-date">2023-03-23</span>
+
+Our software profession is constantly evolving; it demands a non-stop learning process. We must embrace the change in our industry.
 
 <!-- more -->
 
 We need to create spaces to get out of our comfort zone, so our cognitive brain can train and improve how to adapt to our surroundings, which are constantly transforming.
 
-## Create learnings opportunities
+## Why code katas, tech talks or research Fridays?
+
+The goal is to help create an environment that aims for continuous improvement towards looking for learning everywhere, all the time, as the core attitude for the individuals and the group.
+
+### Create learnings opportunities
 
 > Schedule some time every X weeks for practicing together.
 
-At the end of each sprint, we celebrate and work on katas in pairs/groups for 1.5 hours. That space is also an opportunity to create an internal tech-talk presentation to share exciting knowledge with the team non-directly-related to our regular daily business.
+At the end of each iteration, or even 2 or 4 weeks, we celebrate and work on katas in pairs/mob for 2 hours. That space is also an opportunity to create an internal tech-talk presentation to share exciting knowledge with the team non-directly-related to our "regular daily business".
 
 The goal is to get out of our comfort zone, improving our recognition for change in general while learning other subjects regularly.
 
-## What's a code kata?
+## What is a code kata?
 
 As a group, software developers don't practice enough. Most of our learning takes place on the job, so most of our mistakes get made there as well.
 
 The term "kata" comes from the repetitive movements done in karate that help you improve your fighting skills.
 
-Katas exists to help developers get the same benefits as practicing in any other profession. There are simple, artificial exercises that let you experiment and learn without the pressure in a production environment.
+Code Katas exists to help developers get the same benefits as practicing in any other profession. There are simple, artificial exercises that let you experiment and learn without the pressure in a production environment.
 
 > There are no right or wrong answers in any software kata: the benefit comes from the process, not the result.
 
@@ -47,7 +54,7 @@ Katas exists to help developers get the same benefits as practicing in any other
 If you're interested in my thoughts about TDD and katas, I wrote a post about it not long ago:
 [Test-Driven Development](/blog/test-driven-development/).
 
-## What's a tech-talk?
+## What is a tech-talk?
 
 Tech talks allow us to share some knowledge related to our tech industry with our team members.
 
@@ -71,16 +78,53 @@ questions that might help you to find something on your own:
 
 > Just one rule: Be curious and "[embrace the change](/blog/embrace-the-change/)."
 
-## Why biweekly katas and tech talks?
+## Research and learning Fridays
 
-- To provide flexibility to do one or another thing.
-- It's up to the person and the team.
-- It's an opportunity for self-growth and learning at the same time.
+Block the last Friday of the month for research and learning purposes.
+The whole team will have a dedicated space for growth and experiment.
+
+It's crucial to build trust with your team, so you all know everyone will use this time as good as possible. Don't micromanage this time forcing keeping a record in a wikipage with what everyone does in detail. 
+
+Although, it would be nice that the team shares what they do during this time, mostly to create transparency among themselves. A verbal announcement to the peers the day before, with their intentions. Even the day after with the learnings key-takeaways.
+
+### Summary
+
+You can help your team to be more extreme by helping with a dedicated team space for growth and experimentation.
+
+- Provide flexibility to experiment with these ideas as they see fit.
+- It is an opportunity for self-growth and learning at the same time.
+- It is, ultimately, up to the person and the team.
+
+> Do not micromanage this dedicated time. Focus on the outcome. Help your team to grow, and they will enjoy growing with you.
 
 ![blog-footer](/images/blog/2022-02-26/footer.jpg)
 
+## Tech Talk
+
+After writing this blog post (originally in Feb, 2022), I was invited to do a [tech talk](/talks/) in different conferences about this topic.
+
+- 2022-06-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Berlin, Germany] (EN)
+- 2022-09-16 | [Code Talks](https://codetalks.de/speakers#speaker-985?event=7) [Hamburg, Germany] (EN)
+- 2022-10-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Munich, Germany] (EN)
+- 2022-12-21 | IES Ginés Pérez Chirinos [Murcia, Spain] (ES)
+- 2023-01-19 | [devm.io](https://devm.io/update-your-team-to-be-more-extreme/) [Remote] (EN)
+- 2023-07-28 | [WeAreDeveloper World Congress](https://www.wearedevelopers.com/world-congress) [Berlin, Germany] (EN)
+
+### WeAreDevelopers World Congress in Berlin (July 2023)
+
+{{ youtube(id="dqtAyl-SvaY") }}
+
 ### Recommended readings
 
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck.</small>
-- [Who moved my cheese?](/readings/who-moved-my-cheese/) <small>by Spencer Johnson.</small>
-- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin.</small>
+- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
+- [Who moved my cheese?](/readings/who-moved-my-cheese/) <small>by Spencer Johnson</small>
+- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
+- [Peopleware](/readings/peopleware) <small>by Tom DeMarco, Timothy Lister</small>
+- [The Pragmatic Programmer](/readings/the-pragmatic-programmer/) <small>by  David Thomas, Andrew Hunt</small>
+
+### Related posts
+
+- [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
+- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small>How can you work with other teams that aren't agile?</small>
+- [Interview about XP and Agile](/blog/interview-about-xp-and-agile/) <small>Agile is about HOW you do certain things</small>
+- [How do you get everyone on board?](/blog/how-do-you-get-everyone-on-board/) <small>How do you deal with people reluctant to change?</small>

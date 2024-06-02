@@ -8,18 +8,18 @@ subtitle = "The Best of Sixty Years of Peter Drucker's Essential Writings on Man
 pages = "360"
 author = "Peter F. Drucker"
 static_thumbnail = "https://m.media-amazon.com/images/I/41gdosc0RaL.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <img border="0" src="https://m.media-amazon.com/images/I/41gdosc0RaL.jpg" >
+
+<!-- more -->
 
 A twenty-six selections on management in the organization, management and the individual, and management and society.
 
 It covers the basic principles of management and its problems, challenges, and opportunities, giving managers, 
 executives, and professionals the tools to perform the tasks that the economy and society of tomorrow will demand 
 of them.
-
-<!-- more -->
 
 ---
 

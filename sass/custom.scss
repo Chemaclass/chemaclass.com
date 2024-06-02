@@ -1,6 +1,19 @@
+@import "./theme.scss";
+
+a img {
+  border: none;
+  vertical-align: top;
+}
+
 .post-preview {
   display: block;
   min-height: 300px;
+
+  img[alt=blog-cover] {
+    max-width: 50%;
+    float: left;
+    margin-right: 20px;
+  }
 
   .highlighted {
     h3 a {
@@ -8,10 +21,8 @@
     }
   }
 
-  img[alt=blog-cover] {
-    max-width: 50%;
-    float: left;
-    margin-right: 20px;
+  .summary {
+    min-height: 230px;
   }
 }
 
@@ -249,12 +260,17 @@ $max-width: 700px;
   border-top: lightgray solid 1px;
   max-width: $max-width;
   margin: 16px auto;
-  padding-top: 12px;
+  padding-top: 28px;
 }
 
-#footer-about {
+#footer-about, #sponsor {
   font-size: 1.1rem;
   text-align: center;
+  margin-bottom: 25px;
+
+  .do-not-hesitate{
+    margin: 28px 0;
+  }
 }
 
 .phone-footer-about {
@@ -294,6 +310,35 @@ $max-width: 700px;
   .banner-image-phone {
     display: inline-block;
   }
+}
+
+.post-revisited-date {
+  color: #1059b6;
+  font-weight: bold;
+}
+
+.fa-linkedin:hover {
+  color: mediumblue;
+}
+
+.fa-twitter:hover {
+  color: deepskyblue;
+}
+
+.fa-stream:hover {
+  color: purple;
+}
+
+.fa-paypal:hover {
+  color: dodgerblue;
+}
+
+.fa-bolt:hover {
+  color: orange;
+}
+
+.fa-btc:hover {
+  color: darkorange;
 }
 
 #all-terms {

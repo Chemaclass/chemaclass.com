@@ -2,7 +2,7 @@
 title = "Jonathan Livingston Seagull"
 description = "A fable in novella form about a seagull who is trying to learn about life and flight, and a homily about self-perfection."
 [taxonomies]
-tags = [ "spiritual", "self-help", "novel" ]
+tags = [ "novel", "self-help", "spiritual" ]
 [extra]
 subtitle = "A story"
 pages = "100"

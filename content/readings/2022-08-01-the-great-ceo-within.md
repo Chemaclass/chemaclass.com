@@ -8,15 +8,15 @@ subtitle = "The Tactical Guide to Company Building"
 pages = "200"
 author = "Matt Mochary"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41zoJiSUq4L._SX331_BO1,204,203,200_.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41zoJiSUq4L._SX331_BO1,204,203,200_.jpg" >
 
+<!-- more -->
+
 Matt Mochary coaches the CEOs of many of the fastest-scaling technology companies in Silicon Valley. 
 He shares his highly effective leadership and business-operating tools with any CEO or manager in the world.
-
-<!-- more -->
 
 Learn how to efficiently scale your business from startup to corporation by implementing a system of accountability,
 effective problem-solving, and transparent feedback.

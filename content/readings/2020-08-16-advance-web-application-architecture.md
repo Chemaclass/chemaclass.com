@@ -30,6 +30,8 @@ layers, ports and adapters (a.k.a. Hexagonal architecture). The book finishes wi
 - Dividing your code into layers, and making a clear distinction between an application's ports and adapters.
 - Testing decoupled applications.
 
+> Buy the book: [https://leanpub.com/web-application-architecture](https://leanpub.com/web-application-architecture)
+
 ---
 
 ### Design patterns for modernizing legacy code bases
