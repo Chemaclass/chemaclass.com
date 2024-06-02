@@ -5,6 +5,10 @@
     --heading-color: #000;
     --table-bg-even: #f3f3f3;
     --table-border-bottom: #dddddd;
+
+    h3 small {
+        color: #404040;
+    }
 }
 
 :root:has(body.dark) {
@@ -14,13 +18,13 @@
     --heading-color: #dee2e6;
     --table-bg-even: #2d3237;
     --table-border-bottom: #697077;
+    --link-color: deepskyblue;
 
-    img {
-        opacity: 1;
-        transition: opacity .5s ease-in-out;
+    * {
+        color: white;
     }
 
-    img:hover {
-        opacity: .75;
+    a {
+        color: var(--link-color);
     }
 }
