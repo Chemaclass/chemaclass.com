@@ -13,7 +13,7 @@ const bodyClass = document.body.classList;
 if (currentTheme === THEME_DARK) {
   bodyClass.add(THEME_DARK);
   bodyClass.remove(THEME_LIGHT);
-  toggleDiv.innerHTML = "🌑";
+  toggleDiv.innerHTML = "🌔";
 } else {
   bodyClass.add(THEME_LIGHT);
   bodyClass.remove(THEME_DARK);
@@ -30,7 +30,7 @@ function toggleTheme() {
     localStorage.setItem(THEME_KEY, THEME_DARK);
     bodyClass.add(THEME_DARK);
     bodyClass.remove(THEME_LIGHT);
-    toggleDiv.innerHTML = "🌑";
+    toggleDiv.innerHTML = "🌔";
   }
 }
 
