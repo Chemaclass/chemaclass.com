@@ -5,6 +5,11 @@
     --heading-color: #000;
     --table-bg-even: #f3f3f3;
     --table-border-bottom: #dddddd;
+    --muted-text: #404040;
+
+    small {
+        color: var(--muted-text);
+    }
 }
 
 :root:has(body.dark) {
@@ -14,6 +19,7 @@
     --heading-color: #dee2e6;
     --table-bg-even: #2d3237;
     --table-border-bottom: #697077;
+    --muted-text: #999999;
 
     img {
         opacity: 1;
@@ -22,5 +28,9 @@
 
     img:hover {
         opacity: .75;
+    }
+
+    small {
+        color: var(--muted-text);
     }
 }

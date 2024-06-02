@@ -57,7 +57,7 @@ a img {
   }
 
   .author {
-    color: #404040;
+    color: var(--muted-text);
     font-size: 0.5em;
     display: block;
     &::before {
@@ -198,7 +198,7 @@ img[alt=book-chapters-cover] {
 
   .post-subtitle {
     margin-top: 0;
-    color: #404040;
+    color: var(--muted-text);
   }
 }
 
