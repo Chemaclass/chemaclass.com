@@ -24,7 +24,7 @@
       "@id": "https://google.com/article"
     },
     "headline": "{{ page.title }}",
-    "image": [],
+    "image": [{% if page.extra.static_thumbnail %} "{{ config.base_url|safe }}{{ page.extra.static_thumbnail|safe }}" {% endif %},
     "datePublished": "{{ page.date | date(format="%+") }}",
     "dateModified": "{{ page.date | date(format="%+") }}"{% if config.extra.author %},
     "author": {
