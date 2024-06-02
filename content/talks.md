@@ -18,9 +18,8 @@ Follow my speaker journey.
 #### May
 
 - 2024-05-28/30 | International PHP Conference [**Berlin, Germany**] (EN)
-    - [Practical TDD **Workshop
-      **: Collaborative Learning Through Pair Programming](https://phpconference.com/agile-culture/practical-tdd-workshop/)
-    - [Bashunit: Testing Your Bash Scripts, Inspired by PHPUnit](https://phpconference.com/devops-continuous-delivery/bashunit-testing-bash-scripts/)
+    - [Practical TDD **Workshop**: Collaborative Pair Programming](https://phpconference.com/agile-culture/practical-tdd-workshop/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7200844992779567104/))
+    - [Bashunit: Testing Your Bash Scripts, Inspired by PHPUnit](https://phpconference.com/devops-continuous-delivery/bashunit-testing-bash-scripts/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7201174305655693312/))
       ![cover](/images/talks/2024-05-28/tdd-workshop-ipc-berin-24.jpg)
 
 #### March
@@ -45,14 +44,14 @@ Follow my speaker journey.
 #### October
 
 - 2023-10-24/26 | International PHP Conference [**Munich, Germany**] (EN)
-    - [Building modular applications in PHP with Gacela](https://phpconference.com/software-architecture/modular-applications-php-gacela/)
+    - [Building modular applications in PHP with Gacela](https://phpconference.com/software-architecture/modular-applications-php-gacela/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7127206712805056513/))
     - [Introducing Functional Programming in PHP with Phel](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
 
 #### July
 
 - 2023-07-28 | WeAreDevelopers World Congress [**Berlin, Germany**] (EN)
-    - [Phel, a native Lisp for PHP](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[Slides](https://docs.google.com/presentation/d/1Zc3zxz9VIujh43enXhgTgvm2kCz9aQKSU1nsrtL_HEs)]
-    - [An Introduction to Extreme Programming](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[Slides](https://docs.google.com/presentation/d/1l-Mxfb6Cc9scPaqiB6j7HORwxRdhv4lqCDWtK7biMzs)]
+    - [Phel, a native Lisp for PHP](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[Slides](https://docs.google.com/presentation/d/1Zc3zxz9VIujh43enXhgTgvm2kCz9aQKSU1nsrtL_HEs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
+    - [An Introduction to Extreme Programming](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[Slides](https://docs.google.com/presentation/d/1l-Mxfb6Cc9scPaqiB6j7HORwxRdhv4lqCDWtK7biMzs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
       ![cover](/images/talks/2023-07-28/phel-we-are-devs-23.jpg)
 
 #### May
@@ -74,13 +73,13 @@ Follow my speaker journey.
 - 2023-03-30 | Spryker Digital User Group [**Remote**] (EN)
     - [Gacela Framework 1.0](https://www.meetup.com/spryker-user-group/events/289944797/) ([Video](https://youtu.be/oM6CDyWz92o))
 - 2023-03-28 | Berlin Hack & Tell [**Berlin, Germany**] (EN)
-    - [Phel in 5 min](https://www.meetup.com/Berlin-Hack-and-Tell/events/292379070) ([Video](https://youtu.be/ZQTann9ItH8))
+    - [Phel in 5 min](https://www.meetup.com/Berlin-Hack-and-Tell/events/292379070) ([Video](https://youtu.be/ZQTann9ItH8)) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7046766759197999104/))
 
 #### February
 
 - 2023-02-08 | Symfony User Group [**Berlin, Germany**] (EN)
-    - [Lazy Objects by Nicolas Grekas & FP with PHP by Chema](https://www.meetup.com/sfugberlin/events/290735168/)
-      ![cover](/images/talks/2023-02-08/phel-hnt-23.jpg)
+    - [Lazy Objects by Nicolas Grekas & FP with PHP by Chema](https://www.meetup.com/sfugberlin/events/290735168/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7029831557389414401/))
+      ![cover](/images/talks/2023-02-08/phel-sf-group-23.jpg)
 
 #### January
 
@@ -109,7 +108,8 @@ Follow my speaker journey.
 #### September
 
 - 2022-09-16 | Code Talks [**Hamburg, Germany**] (EN)
-    - [Update Your Team to be More Extreme](https://codetalks.de/speakers#speaker-985?event=7)
+    - [Update Your Team to be More Extreme](https://codetalks.de/speakers#speaker-985?event=7) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:6976595953680015360/))
+      ![cover](/images/talks/2022-09-16/update-your-team-code-talks-22.jpg)
 
 #### June
 
