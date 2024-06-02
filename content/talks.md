@@ -20,7 +20,8 @@ Follow my speaker journey.
 - 2024-05-28/30 | International PHP Conference [**Berlin, Germany**] (EN)
     - [Practical TDD **Workshop**: Collaborative Pair Programming](https://phpconference.com/agile-culture/practical-tdd-workshop/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7200844992779567104/))
     - [Bashunit: Testing Your Bash Scripts, Inspired by PHPUnit](https://phpconference.com/devops-continuous-delivery/bashunit-testing-bash-scripts/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7201174305655693312/))
-      ![cover](/images/talks/2024-05-28/tdd-workshop-ipc-berin-24.jpg)
+
+![cover](/images/talks/2024-05-28/tdd-workshop-ipc-berin-24.jpg)
 
 #### March
 
@@ -52,7 +53,8 @@ Follow my speaker journey.
 - 2023-07-28 | WeAreDevelopers World Congress [**Berlin, Germany**] (EN)
     - [Phel, a native Lisp for PHP](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[Slides](https://docs.google.com/presentation/d/1Zc3zxz9VIujh43enXhgTgvm2kCz9aQKSU1nsrtL_HEs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
     - [An Introduction to Extreme Programming](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[Slides](https://docs.google.com/presentation/d/1l-Mxfb6Cc9scPaqiB6j7HORwxRdhv4lqCDWtK7biMzs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
-      ![cover](/images/talks/2023-07-28/phel-we-are-devs-23.jpg)
+
+![cover](/images/talks/2023-07-28/phel-we-are-devs-23.jpg)
 
 #### May
 
@@ -61,7 +63,8 @@ Follow my speaker journey.
 - 2023-05-24/25 | International PHP Conference [**Berlin, Germany**] (EN)
     - [Building modular applications in PHP with Gacela](https://phpconference.com/software-architecture/modular-applications-php-gacela/)
     - [Phel Language, a native LISP for PHP](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
-      ![cover](/images/talks/2023-05-24/gacela-ipc-berin-23.jpg)
+
+![cover](/images/talks/2023-05-24/gacela-ipc-berin-23.jpg)
 
 #### April
 
@@ -79,7 +82,8 @@ Follow my speaker journey.
 
 - 2023-02-08 | Symfony User Group [**Berlin, Germany**] (EN)
     - [Lazy Objects by Nicolas Grekas & FP with PHP by Chema](https://www.meetup.com/sfugberlin/events/290735168/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7029831557389414401/))
-      ![cover](/images/talks/2023-02-08/phel-sf-group-23.jpg)
+
+![cover](/images/talks/2023-02-08/phel-sf-group-23.jpg)
 
 #### January
 
@@ -109,7 +113,8 @@ Follow my speaker journey.
 
 - 2022-09-16 | Code Talks [**Hamburg, Germany**] (EN)
     - [Update Your Team to be More Extreme](https://codetalks.de/speakers#speaker-985?event=7) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:6976595953680015360/))
-      ![cover](/images/talks/2022-09-16/update-your-team-code-talks-22.jpg)
+
+![cover](/images/talks/2022-09-16/update-your-team-code-talks-22.jpg)
 
 #### June
 
