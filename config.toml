@@ -20,9 +20,9 @@ nav = [
     { name = "Blog", path = "/blog/" },
     { name = "Readings", path = "/readings/" },
     { name = "Talks", path = "/talks/" },
+    { name = "", path = "javascript:void(0)", id = "theme-toggle" },
 ]
 
-dark_mode = false
 icon = "icon.jpg"
 profile_small = "icon.jpg"
 profile_large = "profile.jpg"
