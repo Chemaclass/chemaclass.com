@@ -86,9 +86,9 @@ These distinct yet similar solutions were decentralized, working independently o
 
 ## Related posts
 
-- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small>| How can you work with other teams that aren't agile?</small>
-- [Ignoring Scrum to get more Agile?](/blog/ignoring-scrum-to-get-more-agile/) <small>| Killing agility with excessive meetings</small>
-- [Interview about XP and Agile](/blog/interview-about-xp-and-agile/) <small>| Agile is about HOW you do certain things</small>
+- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small>How can you work with other teams that aren't agile?</small>
+- [Ignoring Scrum to get more Agile?](/blog/ignoring-scrum-to-get-more-agile/) <small>Killing agility with excessive meetings</small>
+- [Interview about XP and Agile](/blog/interview-about-xp-and-agile/) <small>Agile is about HOW you do certain things</small>
 
 ## Related readings
 
