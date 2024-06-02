@@ -12,7 +12,7 @@
 {% endif %}
 
 {% for tag in page.taxonomies.tags %}
-<link rel="prerender"  href="{{ get_taxonomy_url(kind="tags", name=tag) }}">
+<link rel="prerender"  href='{{ get_taxonomy_url(kind="tags", name=tag) }}'>
 {% endfor %}
 
 <script type="application/ld+json">
@@ -44,32 +44,28 @@
   }
 </script>
 
+{% set len_ancestors = page.ancestors | length %}
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      {% set len = page.ancestors | length %}
-
-      {% for section_path in page.ancestors %}
-      {
-      {% set section = get_section(path=section_path) %}
+    "itemListElement": [ {% for section_path in page.ancestors %}
+      { {% set section = get_section(path=section_path) %}
         "@type": "ListItem",
         "position": {{ loop.index }},
         "name": "{{ section.title }}",
         "item": "{{ section.permalink | safe }}"
-      },
-      {% endfor %}
+      },{% endfor %}
       {
         "@type": "ListItem",
-        "position": {{ len + 1 }},
+        "position": {{ len_ancestors + 1 }},
         "name": "{{ page.title }}",
         "item": "{{ page.permalink | safe }}"
       }
     ]
   }
 </script>
-{% endblock %}
+{% endblock posthead %}
 
 {% block content %}
   <div class="post-title">

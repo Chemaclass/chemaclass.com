@@ -1,7 +1,0 @@
-{% extends "base.html" %}
-
-{% block posthead %}
-  {% for post in section.pages %}
-    <link rel="prerender" href="{{ post.permalink }}" />
-  {% endfor %}
-{% endblock posthead %}
