@@ -18,18 +18,15 @@ Follow my speaker journey.
 #### May
 
 - 2024-05-28/30 | International PHP Conference [**Berlin, Germany**] (EN)
-  - [Practical TDD **Workshop**: Collaborative Learning Through Pair Programming](https://phpconference.com/agile-culture/practical-tdd-workshop/)
-    ![cover](/images/talks/2024-05-28/tdd-workshop-ipc-berin-24.jpg)
-
-  - [Bashunit: Testing Your Bash Scripts, Inspired by PHPUnit](https://phpconference.com/devops-continuous-delivery/bashunit-testing-bash-scripts/)
-    ![cover](/images/talks/2024-05-28/bashunit-ipc-berin-24.jpg)
-    - Both together with [Emmanuel Valverde Ramos](https://emmanuelvalverde.dev/)
+    - [Practical TDD **Workshop
+      **: Collaborative Learning Through Pair Programming](https://phpconference.com/agile-culture/practical-tdd-workshop/)
+    - [Bashunit: Testing Your Bash Scripts, Inspired by PHPUnit](https://phpconference.com/devops-continuous-delivery/bashunit-testing-bash-scripts/)
+      ![cover](/images/talks/2024-05-28/tdd-workshop-ipc-berin-24.jpg)
 
 #### March
 
 - 2024-03-14 | devm.io [**Remote**] (EN)
-  - [Test Driven Development: A Hands-on Crash Course](https://devm.io/live-events/test-driven-development-a-hands-on-crash-course/)
-    - Together with [Emmanuel Valverde Ramos](https://emmanuelvalverde.dev/)
+    - [Test Driven Development: A Hands-on Crash Course](https://devm.io/live-events/test-driven-development-a-hands-on-crash-course/)
 
 ---
 
@@ -38,24 +35,25 @@ Follow my speaker journey.
 #### December
 
 - 2023-12-15 | Live interview with Manfred Awards [**Remote**] (ES)
-  - [Winner in the category of Side Project, 2023: bashunit](https://www.youtube.com/watch?v=X0FhUzX-aI4&t=995s)
+    - [Winner in the category of Side Project, 2023: bashunit](https://www.youtube.com/watch?v=X0FhUzX-aI4&t=995s)
 
 #### November
 
 - 2023-11-14 | Live interview with CodelyTV [**Remote**] (ES)
-  - [Live coding with the team behind bashunit](https://www.youtube.com/watch?v=6Bn8gbUurdk)
+    - [Live coding with the team behind bashunit](https://www.youtube.com/watch?v=6Bn8gbUurdk)
 
 #### October
 
 - 2023-10-24/26 | International PHP Conference [**Munich, Germany**] (EN)
-  - [Building modular applications in PHP with Gacela](https://phpconference.com/software-architecture/modular-applications-php-gacela/)
-  - [Introducing Functional Programming in PHP with Phel](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
+    - [Building modular applications in PHP with Gacela](https://phpconference.com/software-architecture/modular-applications-php-gacela/)
+    - [Introducing Functional Programming in PHP with Phel](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
 
 #### July
 
 - 2023-07-28 | WeAreDevelopers World Congress [**Berlin, Germany**] (EN)
-  - [Phel, a native Lisp for PHP](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[Slides](https://docs.google.com/presentation/d/1Zc3zxz9VIujh43enXhgTgvm2kCz9aQKSU1nsrtL_HEs)]
-  - [An Introduction to Extreme Programming](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[Slides](https://docs.google.com/presentation/d/1l-Mxfb6Cc9scPaqiB6j7HORwxRdhv4lqCDWtK7biMzs)]
+    - [Phel, a native Lisp for PHP](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[Slides](https://docs.google.com/presentation/d/1Zc3zxz9VIujh43enXhgTgvm2kCz9aQKSU1nsrtL_HEs)]
+    - [An Introduction to Extreme Programming](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[Slides](https://docs.google.com/presentation/d/1l-Mxfb6Cc9scPaqiB6j7HORwxRdhv4lqCDWtK7biMzs)]
+      ![cover](/images/talks/2023-07-28/phel-we-are-devs-23.jpg)
 
 #### May
 
@@ -64,6 +62,7 @@ Follow my speaker journey.
 - 2023-05-24/25 | International PHP Conference [**Berlin, Germany**] (EN)
     - [Building modular applications in PHP with Gacela](https://phpconference.com/software-architecture/modular-applications-php-gacela/)
     - [Phel Language, a native LISP for PHP](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
+      ![cover](/images/talks/2023-05-24/gacela-ipc-berin-23.jpg)
 
 #### April
 
@@ -77,11 +76,11 @@ Follow my speaker journey.
 - 2023-03-28 | Berlin Hack & Tell [**Berlin, Germany**] (EN)
     - [Phel in 5 min](https://www.meetup.com/Berlin-Hack-and-Tell/events/292379070) ([Video](https://youtu.be/ZQTann9ItH8))
 
-
 #### February
 
 - 2023-02-08 | Symfony User Group [**Berlin, Germany**] (EN)
     - [Lazy Objects by Nicolas Grekas & FP with PHP by Chema](https://www.meetup.com/sfugberlin/events/290735168/)
+      ![cover](/images/talks/2023-02-08/phel-hnt-23.jpg)
 
 #### January
 
