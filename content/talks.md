@@ -15,9 +15,14 @@ Follow my speaker journey.
 
 #### More to come
 
+#### June
+
+- 2024-06-18 | Internal talks at HeyJobs, invited by the CTO [**Remote**] (EN)
+  - How to improve your Tech Talk - Applies to any presentation [[slides](https://docs.google.com/presentation/d/1v-bMvFSR-cXtAi7MtafoTh-qEXBkH3_6wPId0ZNTv0s/view)]
+
 #### May
 
-- 2024-05-28/30 | International PHP Conference [**Berlin, Germany**] (EN)
+- 2024-05-27/30 | International PHP Conference [**Berlin, Germany**] (EN)
     - [Practical TDD **Workshop**: Collaborative Pair Programming](https://phpconference.com/agile-culture/practical-tdd-workshop/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7200844992779567104/))
     - [Bashunit: Testing Your Bash Scripts, Inspired by PHPUnit](https://phpconference.com/devops-continuous-delivery/bashunit-testing-bash-scripts/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7201174305655693312/))
 
@@ -51,8 +56,8 @@ Follow my speaker journey.
 #### July
 
 - 2023-07-28 | WeAreDevelopers World Congress [**Berlin, Germany**] (EN)
-    - [Phel, a native Lisp for PHP](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[Slides](https://docs.google.com/presentation/d/1Zc3zxz9VIujh43enXhgTgvm2kCz9aQKSU1nsrtL_HEs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
-    - [An Introduction to Extreme Programming](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[Slides](https://docs.google.com/presentation/d/1l-Mxfb6Cc9scPaqiB6j7HORwxRdhv4lqCDWtK7biMzs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
+    - [Phel, a native Lisp for PHP](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[slides](https://docs.google.com/presentation/d/1Zc3zxz9VIujh43enXhgTgvm2kCz9aQKSU1nsrtL_HEs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
+    - [An Introduction to Extreme Programming](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[slides](https://docs.google.com/presentation/d/1l-Mxfb6Cc9scPaqiB6j7HORwxRdhv4lqCDWtK7biMzs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
 
 ![cover](/images/talks/2023-07-28/phel-we-are-devs-23.jpg)
 
