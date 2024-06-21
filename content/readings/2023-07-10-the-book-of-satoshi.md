@@ -29,3 +29,11 @@ Beginning on November 1st 2009 with the publication of the seminal paper describ
 Nakamoto's true identity may never be known. Therefore the writings reproduced here are probably all the world will ever hear from him concerning Bitcoin's creation, workings, and theoretical basis. Want to learn more about Bitcoin? Go directly to the source-the writings of the creator himself, Satoshi Nakamoto.
 
 {{ youtube(id="kaBmAV5DaXI") }}
+
+---
+
+### Related readings
+
+- [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
+- [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>by Saifedean Ammous</small>
+- [The Blocksize War](/readings/the-blocksize-war/) <small>by Jonathan Bier</small>
