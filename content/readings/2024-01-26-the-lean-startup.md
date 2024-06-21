@@ -9,14 +9,14 @@ subtitle = "How Today's Entrepreneurs Use Continuous Innovation to Create Radica
 pages = "300"
 author = "Eric Ries"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629999184i/10127019.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629999184i/10127019.jpg" >
 
-Most startups fail. But many of those failures are preventable. The Lean Startup is a new approach being adopted across the globe, changing the way companies are built and new products are launched.
-
 <!-- more -->
+
+Most startups fail. But many of those failures are preventable. The Lean Startup is a new approach being adopted across the globe, changing the way companies are built and new products are launched.
 
 Eric Ries defines a startup as an organization dedicated to creating something new under conditions of extreme uncertainty. This is just as true for one person in a garage or a group of seasoned professionals in a Fortune 500 boardroom. What they have in common is a mission to penetrate that fog of uncertainty to discover a successful path to a sustainable business.
 

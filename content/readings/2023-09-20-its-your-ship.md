@@ -10,14 +10,14 @@ subtitle = "Management Techniques from the Best Damn Ship in the Navy"
 pages = "200"
 author = "D. Michael Abrashoff"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1435059869i/183392.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1435059869i/183392.jpg" >
 
-"It's Your Ship" is a leadership book written by D. Michael Abrashoff, a former commander of the USS Benfold, a guided missile destroyer. The book focuses on Abrashoff's experiences and the leadership principles he applied to transform the performance and culture of his ship.
-
 <!-- more -->
+
+"It's Your Ship" is a leadership book written by D. Michael Abrashoff, a former commander of the USS Benfold, a guided missile destroyer. The book focuses on Abrashoff's experiences and the leadership principles he applied to transform the performance and culture of his ship.
 
 ## Key takeaways
 

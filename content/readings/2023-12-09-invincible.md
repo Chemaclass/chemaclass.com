@@ -9,14 +9,15 @@ subtitle = "Achieve More, Suffer Less"
 pages = "180"
 author = "Marcos Vazquez"
 static_thumbnail = "https://m.media-amazon.com/images/I/71+1EHGiyRL._SL1500_.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <img border="0" src="https://m.media-amazon.com/images/I/71+1EHGiyRL._SL1500_.jpg" >
 
+<!-- more -->
+
 The quality of your life depends on the quality of your mind. Unfortunately, we spend little time improving our thoughts, and it is rarely taught at school. As a result, we go through life without really understanding how to use our mind. 
 
-<!-- more -->
 
 We have in our head the most sophisticated object in the world, but we barely know how it works. Most people are unable to direct their mental strength toward the goals they truly desire. They get distracted and frustrated. They can’t resist temptation or persevere in the face of adversity. In the end, they quit.
 

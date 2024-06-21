@@ -7,16 +7,16 @@ tags = [ "leadership", "communication" ]
 [extra]
 subtitle = "Tools for Talking When Stakes are High"
 pages = "200"
-author = "Kerry Patterson, Stephen R. Covey, Joseph Grenny, Ron McMillan, Al Switzler"
+author = "Patterson, Grenny, McMillan, Switzler"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1497193248i/15014.jpg"
-expand_preview = true
+expand_preview = false
 +++
 
 <img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1497193248i/15014.jpg" >
 
-When stakes are high, opinions vary, and emotions run strong, you have three choices: Avoid a crucial conversation and suffer the consequences; handle the conversation badly and suffer the consequences; or read Crucial Conversations and discover how to communicate best when it matters most.
-
 <!-- more -->
+
+When stakes are high, opinions vary, and emotions run strong, you have three choices: Avoid a crucial conversation and suffer the consequences; handle the conversation badly and suffer the consequences; or read Crucial Conversations and discover how to communicate best when it matters most.
 
 > If you don't talk it out, then you'll act it out.
 
