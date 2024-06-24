@@ -15,7 +15,7 @@
 {% endblock posthead %}
 
 {% block content %}
-<div>
+<div class="homepage-left-column">
   <nav class="nav-menu desktop-homepage-nav-menu">
     {% for link in config.extra.nav %}
     <a href="{{ link.path }}">{{ link.name }}</a>
@@ -26,37 +26,21 @@
       <img src="{{ profile_image.url }}" alt="profile picture"/>
     </div>
   </div>
+  <blockquote>
+    <p title="https://agilemanifesto.org/">
+      "Individuals and interactions over processes and
+      tools<a target="_blank" href="https://agilemanifesto.org/">."</a>
+    </p>
+  </blockquote>
 </div>
 
-<div id="frontpage">
+<div id="frontpage" class="homepage-right-column">
   <h1 class="index-header">
     Chemaclass
   </h1>
 
   {% set banner_image_phone = resize_image(path="banner.jpg", height=300, width=800, op="fit_width") %}
   <img class="banner-image-phone" src="{{ banner_image_phone.url }}" alt="banner picture"/>
-
-  <p>
-    <i title="https://agilemanifesto.org/">"Individuals and interactions over processes and
-      tools<a target="_blank" href="https://agilemanifesto.org/">."</a></i>
-  </p>
-
-  <table class="social-links">
-    <tr>
-      <td>
-        <i class="fa fa-github"></i>
-        <a target="_blank" href="https://github.com/Chemaclass">GitHub</a>
-      </td>
-      <td>
-        <i class="fa fa-twitter"></i>
-        <a target="_blank" href="https://twitter.com/Chemaclass">Twitter</a>
-      </td>
-      <td>
-        <i class="fa fa-linkedin"></i>
-        <a target="_blank" href="https://www.linkedin.com/in/jose-maria-valera-reales/">LinkedIn</a>
-      </td>
-    </tr>
-  </table>
 
   <ul>
     <li title="Over 10 years of experience with OOP, relational databases and ORMs">
@@ -86,6 +70,23 @@
     <a href="/blog/the-art-of-testing/">quality</a>.
   </p>
 
+  <table class="social-links">
+    <tr>
+      <td>
+        <i class="fa fa-github"></i>
+        <a target="_blank" href="https://github.com/Chemaclass">GitHub</a>
+      </td>
+      <td>
+        <i class="fa fa-twitter"></i>
+        <a target="_blank" href="https://twitter.com/Chemaclass">Twitter</a>
+      </td>
+      <td>
+        <i class="fa fa-linkedin"></i>
+        <a target="_blank" href="https://www.linkedin.com/in/jose-maria-valera-reales/">LinkedIn</a>
+      </td>
+    </tr>
+  </table>
+
   <div class="latest-container">
     Latest <b>post</b>:
     {% set blogs = get_section(path="blog" ~ "/_index.md") %}
@@ -103,5 +104,6 @@
        title="{{ latest_reading.description }}"
     >"{{ latest_reading.title }}"</a>
   </div>
+
 </div>
 {% endblock content %}

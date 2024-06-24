@@ -5,6 +5,17 @@ a img {
   vertical-align: top;
 }
 
+.homepage-left-column {
+  margin-top: 2.5em;
+  blockquote {
+    margin-top: -0.9em;
+  }
+}
+
+.homepage-right-column {
+  margin-top: -1em;
+}
+
 .post-preview {
   display: block;
   min-height: 300px;
@@ -287,14 +298,6 @@ $max-width: 700px;
   }
   .desktop-footer-about {
     display: block;
-  }
-}
-
-@media (min-width: 880px) {
-  .desktop-homepage-nav-menu {
-    margin-bottom: 30px;
-    display: flex;
-    font-size: 1.2em;
   }
 }
 
