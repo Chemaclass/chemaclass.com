@@ -340,3 +340,12 @@ $max-width: 700px;
 .fa-btc:hover {
   color: darkorange !important;
 }
+
+#all-terms {
+  li {
+    list-style: none;
+    float: left;
+    margin-left: 5px;
+    padding: 5px;
+  }
+}
