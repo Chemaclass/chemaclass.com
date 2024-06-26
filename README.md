@@ -8,6 +8,7 @@ I enjoy writing about topics that I find exciting and bring some value to my lif
 Visit my portfolio: https://chemaclass.com/
 
 ## Tech
+
 ### 📦 Prerequisites
 
 - Node.js (v16.13.2 or higher)
@@ -19,6 +20,7 @@ Follow these steps to set up and run this Zola project:
 ```
 git clone https://github.com/Chemaclass/chemaclass.com.git
 ```
+
 2. Start the project
 ```
 zola serve
