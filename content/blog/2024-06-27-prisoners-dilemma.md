@@ -51,6 +51,12 @@ This leads to four different possible outcomes for prisoners A and B:
 - If A and B testify against each other, 
   - they will **each serve two years**.
 
+#### The Iterated Prisoner's Dilemma
+
+It is just like the regular game except you play it multiple times with an opponent and add up the scores. But it can change the strategy and has more real world applications as it resembles a relationship.
+
+{{ youtube(id="BOvAbjfJ0x0") }}
+
 ---
 
 This is closely related to trust, human behavior, and social constructs in relationships that impact us both individually and collectively.
