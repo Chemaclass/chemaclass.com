@@ -5,6 +5,18 @@ a img {
   vertical-align: top;
 }
 
+blockquote.success {
+  border-left: 6px solid var(--success-color-light);
+}
+
+blockquote.info {
+  border-left: 6px solid var(--info-color-light);
+}
+
+blockquote.warning {
+  border-left: 6px solid var(--warning-color-light);
+}
+
 .homepage-left-column {
   margin-top: 2.5em;
   blockquote {
