@@ -9,11 +9,13 @@ subtitle = "The dilemma of trust and self-interest"
 static_thumbnail = "/images/blog/2024-06-27/cover.jpg"
 +++
 
-![cover](/images/blog/2024-06-27/cover.jpg)
+![blog-cover](/images/blog/2024-06-27/cover.jpg)
 
-The Prisoner's Dilemma is a hypothetical game set up showing a situation where people won't want to work together even when it's beneficial to do so. It's just a long way of saying people don't like to be taken advantage of. Is often game theory 101.
+The Prisoner's Dilemma is a hypothetical game set up showing a situation where people won't want to work together even when it's beneficial to do so. It's just a long way of saying people don't like to be taken advantage of.
 
 <!-- more -->
+
+It's often game theory 101.
 
 {{ youtube(id="t9Lo2fgxWHw") }}
 
