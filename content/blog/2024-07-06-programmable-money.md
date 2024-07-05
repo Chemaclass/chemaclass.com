@@ -276,6 +276,7 @@ Only Bitcoin's original developer could tell whether the dummy stack element was
 ## Follow-ups
 
 - [Bitcoin **IDE**](https://siminchen.github.io/bitcoinIDE/build/editor.html) is an online Bitcoin Script visual emulator. Great for learning purposes.
+- [Script **Editor**](https://coins.github.io/bitcoin-scripts/script-editor/) is product-driven research on Bitcoin scalability and usability.
 - [**Miniscript**](https://bitcoin.sipa.be/miniscript/) is a language for writing (a subset of) Bitcoin Scripts in a structured way, enabling analysis, composition, generic signing, and more.
 
 ### Related readings
