@@ -56,6 +56,16 @@ Transactions can include time-based conditions that prevent them from being spen
   - smart contracts
   - and ensuring that funds are not spent prematurely (eg: with [Lightning Network](https://en.bitcoin.it/wiki/Lightning_Network))
 
+### OP_Codes
+
+Script ([OP_Codes](https://en.bitcoin.it/wiki/Script#Opcodes)) perform different functions. Here are some of them:
+
+- `OP_DUP`: Duplicates the top stack item.
+- `OP_HASH160`: Hashes the top stack twice (SHA-256 followed by RIPEMD-160).
+- `OP_EQUALVERIFY`: Verifies that the top two items are equal and removes them.
+- `OP_CHECKSIG`: Verifies a signature against a public key.
+- [`OP_RETURN`](https://en.bitcoin.it/wiki/OP_RETURN): Marks the transaction output as invalid, often used to store data.
+
 ---
 
 ## Common Bitcoin address types
