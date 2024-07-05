@@ -68,3 +68,4 @@ Bitcoin did not appear out of nowhere. For decades prior to Satoshi Nakamoto’s
 - [The Blocksize War](/readings/the-blocksize-war/) <small>by Jonathan Bier</small>
 - [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>by Saifedean Ammous</small>
 - [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
+- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>

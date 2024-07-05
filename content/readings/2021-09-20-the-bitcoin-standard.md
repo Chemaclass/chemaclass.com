@@ -55,3 +55,4 @@ apolitical, free-market alternative to national central banks.
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
 - [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
 - [The Blocksize War](/readings/the-blocksize-war/) <small>by Jonathan Bier</small>
+- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>

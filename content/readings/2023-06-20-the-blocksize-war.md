@@ -57,3 +57,4 @@ The account in this book includes discussions with the key players from both sid
 - [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>by Saifedean Ammous</small>
 - [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
+- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>

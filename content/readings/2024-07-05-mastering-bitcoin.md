@@ -7,7 +7,7 @@ tags = [ "software", "bitcoin" ]
 [extra]
 subtitle = "Programming the Open Blockchain"
 pages = "400"
-author = " Andreas M. Antonopoulos, David A. Harding"
+author = "Andreas M. Antonopoulos, David A. Harding"
 static_thumbnail = "https://m.media-amazon.com/images/I/71JEv9rs7xL.jpg"
 expand_preview = true
 +++

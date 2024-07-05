@@ -37,3 +37,4 @@ Nakamoto's true identity may never be known. Therefore the writings reproduced h
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
 - [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>by Saifedean Ammous</small>
 - [The Blocksize War](/readings/the-blocksize-war/) <small>by Jonathan Bier</small>
+- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
