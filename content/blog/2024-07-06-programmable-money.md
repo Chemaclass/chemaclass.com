@@ -72,6 +72,7 @@ Script ([OP_Codes](https://en.bitcoin.it/wiki/Script#Opcodes)) perform different
 
 In Bitcoin, different address types correspond to various ways to script transactions. Here, we'll explore examples of Bitcoin Script for each major address type. Each address type has its own specific script format.
 
+- [**P2PK**](#p2pk-pay-to-pubkey-earliest-legacy-address-up): Legacy transactions using full public keys directly.
 - [**P2PKH**](#p2pkh-pay-to-pubkey-hash-legacy-address-up): Begins with `1`. Standard transactions using public key hashes.
 - [**P2SH**](#p2sh-pay-to-script-hash-up): Begins with `3`. Encapsulates complex scripts like multisig.
 - [**P2MS**](#p2ms-pay-to-multisig-up): It is typically a type of P2SH or P2WSH address.
@@ -81,10 +82,24 @@ In Bitcoin, different address types correspond to various ways to script transac
 
 > Using native SegWit (P2WPKH and P2WSH) is preferable when possible, as it maximizes the benefits of the SegWit upgrade, but P2SH-SegWit can be useful for compatibility with older systems.
 
+### P2PK (Pay-to-PubKey) - Earliest Legacy Address <small>[up](#common-bitcoin-address-types)</small>
+
+<div class="status info">
+Begins with "1" (e.g., 1A1zP1eP5QGefi2DMPTf...v7DivfNa)
+</div>
+
+Before P2PKH and P2SH became standard, Bitcoin addresses were not as flexible or feature-rich. Here are some considerations:
+
+- Format: Addresses starting with 1 but without hashing the public key.
+- Usage: Used in early Bitcoin transactions but not common in modern practice due to lack of privacy and efficiency.
+- Status: The P2PK format is largely obsolete in favor of (at least) P2PKH and other address types that provide additional features and security.
+
+---
+
 ### P2PKH (Pay-to-PubKey-Hash) - Legacy Address <small>[up](#common-bitcoin-address-types)</small>
 
 <div class="status info">
-Begins with "1" (e.g., 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa)
+Begins with "1" (e.g., 1A1zP1eP5QGefi2DMPTf...v7DivfNa)
 </div>
 
 A typical P2PKH script consists of two main parts:
@@ -114,7 +129,7 @@ OP_DUP OP_HASH160 <PubKeyHash> OP_EQUALVERIFY OP_CHECKSIG
 ### P2SH (Pay-to-Script-Hash) <small>[up](#common-bitcoin-address-types)</small>
 
 <div class="status info">
-Begins with "3" (e.g., 3J2BtwzN2GEr6FCPFPq94k81T2eiX8PVHh)
+Begins with "3" (e.g., 3J2BtwzN2GEr6FCP.....81T2eiX8PVHh)
 </div>
 
 P2SH scripts are used for more complex scripts. The primary feature is that the address itself encodes a hash of a script, which will be used in the transaction.
@@ -179,7 +194,7 @@ This script means that any 2 out of 3 provided public keys are required to sign 
 ### P2WPKH (Pay-to-Witness-Public-Key-Hash) - Segwit <small>[up](#common-bitcoin-address-types)</small>
 
 <div class="status info">
-Begins with "bc1q" (e.g., bc1qf0r2m0ck4psv6yrk9wyxdn0t3c3kw8v5rj7ph3)
+Begins with "bc1q" (e.g., bc1qf0r2m0ck4psv6yrk9w.....kw8v5rj7ph3)
 </div>
 
 P2WPKH is a Segregated Witness (SegWit) address type that uses a different scripting format compared to legacy and P2SH addresses. Simplifies transactions by reducing data size and fees compared to legacy formats.
@@ -210,7 +225,7 @@ For P2WPKH, the unlocking script is not required in the traditional sense (i.e.,
 ### P2WSH (Pay-to-Witness-Script-Hash) - Segwit <small>[up](#common-bitcoin-address-types)</small>
 
 <div class="status info">
-Begins with bc1q (e.g.: bc1q4a3h5sdg4cfkhftgd24tj9g2sgrnv06mvrytyj57jmfckhkrw5gslr9g59)
+Begins with bc1q (e.g.: bc1q4a3h5sdg4cfkhftgd24tj9g2sg...yj57jmfckhkrw5gslr9g59)
 </div>
 
 ##### ScriptPubKey (Locking Script)
@@ -237,7 +252,7 @@ OP_0 OP_PUSHBYTES_32 <ScriptHash>
 ### P2TR (Pay-to-Taproot) - Taproot <small>[up](#common-bitcoin-address-types)</small>
 
 <div class="status info">
-Begins with bc1p (e.g.: bc1pl9dfv7kvj4hj9s3a8l7jvxlw8heujgjstmrpjl09g8ks3ukds70q4r2j5h)
+Begins with bc1p (e.g.: bc1pl9dfv7kvj4hj9s3a8l.....gjstmrpjl09g8ks3ukds70q4r2j5h)
 </div>
 
 Taproot combines [Schnorr](https://en.bitcoin.it/wiki/Schnorr) signatures with [MAST](https://en.bitcoin.it/wiki/BIP_0114#Merkelized_Abstract_Syntax_Tree), enabling private, efficient spending conditions and making complex transactions **_appear standard_** unless conditions are revealed. It allows the efficient execution of complex transactions while hiding their details.
