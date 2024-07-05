@@ -31,11 +31,11 @@ This video includes examples of the most commonly used locking/unlocking scripts
 
 ## Key Features of Bitcoin's Script
 
-### Stack-Based Execution
+#### Stack-Based Execution
 
 Script operates on a stack-based execution model where commands and data are pushed onto a stack and processed in a Last-In-First-Out ([LIFO](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))) manner.
 
-### Conditional Spending
+#### Conditional Spending
 
 A transaction that can only be spent if certain data is provided or specific criteria are met. This can be used for:
   - escrow services
@@ -49,14 +49,14 @@ Transactions can be set up to require multiple signatures from different private
   - corporate funds
   - and enhancing security, as no single party can unilaterally spend the funds
 
-### Timelocking
+#### Timelocking
 
 Transactions can include time-based conditions that prevent them from being spent until a certain time or block height is reached. This feature is useful for various purposes:
   - delayed payments
   - smart contracts
   - and ensuring that funds are not spent prematurely (eg: with [Lightning Network](https://en.bitcoin.it/wiki/Lightning_Network))
 
-### OP_Codes
+#### OP_Codes
 
 Script ([OP_Codes](https://en.bitcoin.it/wiki/Script#Opcodes)) perform different functions. Here are some of them:
 
