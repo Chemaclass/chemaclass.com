@@ -19,13 +19,17 @@ Bitcoin is often referred to as "programmable money" because it allows for the e
 
 Programmable money refers to the ability to embed logic and conditions into financial transactions. This programmability allows for transactions to be executed automatically based on predefined rules, without the need for intermediaries or manual intervention. Essentially, it transforms money from a static medium of exchange into a dynamic tool capable of executing complex agreements and automating financial operations.
 
-## Bitcoin’s Script Language
+## Bitcoin's Script Language
 
-Bitcoin’s programmability is powered by its built-in scripting language, known as [Script](https://en.bitcoin.it/wiki/Script). Unlike traditional programming languages, Script is a stack-based, Forth-like language designed specifically for Bitcoin transactions.
+Bitcoin's programmability is powered by its built-in scripting language, known as [Script](https://en.bitcoin.it/wiki/Script). Unlike traditional programming languages, Script is a stack-based, Forth-like language designed specifically for Bitcoin transactions.
 
 It supports multi-signature, time-locked, and other conditional transfers that can be programmed into the Bitcoin transactions. It is intentionally not Turing-complete, without loops.
 
-## Key Features of Bitcoin’s Script
+This video includes examples of the most commonly used locking/unlocking scripts.
+
+{{ youtube(id="6Fa04MnURhw") }}
+
+## Key Features of Bitcoin's Script
 
 ### Stack-Based Execution
 
@@ -54,17 +58,15 @@ Transactions can include time-based conditions that prevent them from being spen
 
 ---
 
-{{ youtube(id="yU3Sr07Qnxg") }}
-
 ## Common Bitcoin address types
 
 In Bitcoin, different address types correspond to various ways to script transactions. Here, we'll explore examples of Bitcoin Script for each major address type. Each address type has its own specific script format.
 
-- P2PKH: Begins with `1`. Standard transactions using public key hashes.
-- P2SH: Begins with `3`. Encapsulates complex scripts like multisig.
-- P2WPKH: Begins with `bc1`. Native SegWit, more efficient transactions.
-- P2WSH: Begins with `bc1`. SegWit for complex scripts.
-- P2TR: Begins with `bc1p`. Taproot addresses, improving privacy and efficiency for complex transactions.
+- **P2PKH**: Begins with `1`. Standard transactions using public key hashes.
+- **P2SH**: Begins with `3`. Encapsulates complex scripts like multisig.
+- **P2WPKH**: Begins with `bc1`. Native SegWit, more efficient transactions.
+- **P2WSH**: Begins with `bc1`. SegWit for complex scripts.
+- **P2TR**: Begins with `bc1p`. Taproot addresses, improving privacy and efficiency for complex transactions.
 
 ---
 
@@ -157,8 +159,8 @@ This script means that any 2 out of 3 provided public keys are required to sign 
 - `<SerializedScript>`: The serialized script (the same as the locking script but without the `OP_M` and `OP_N`).
 
 <div class="status warning-orange">
-<b>NOTE</b>: There is an oddity in CHECKMULTISIG execution.
-<small>See note at the bottom.</small>
+<b>NOTE</b>: There is an oddity in CHECKMULTISIG execution. 
+<small><a href="#there-is-an-oddity-in-checkmultisig-execution">See note at the bottom.</a></small>
 </div>
 
 ---
@@ -246,6 +248,10 @@ OP_1 <x-only pubkey>
 
 ---
 
+{{ youtube(id="yU3Sr07Qnxg") }}
+
+---
+
 ### *There is an oddity in CHECKMULTISIG execution
 
 The implementation of `OP_CHECKMULTISIG` pops one more item than it should. The extra item is disregarded when checking the signatures, so it has no direct effect on the OP itself. It must be present because if `OP_CHECKMULTISIG` attempts to pop on an empty stack, it will cause a stack error and script failure.
@@ -264,13 +270,10 @@ Only Bitcoin's original developer could tell whether the dummy stack element was
 
 ---
 
-## Another simple yet full explanation of how the Script language in Bitcoin works
+## Follow-ups
 
-Includes examples of the most commonly used locking scripts (and unlocking scripts), with animations showing how they are run to unlock bitcoins for spending P2PK, P2PKH, P2MS, P2SH.
-
-{{ youtube(id="6Fa04MnURhw") }}
-
----
+- [Bitcoin **IDE**](https://siminchen.github.io/bitcoinIDE/build/editor.html) is an online Bitcoin Script visual emulator. Great for learning purposes.
+- [**Miniscript**](https://bitcoin.sipa.be/miniscript/) is a language for writing (a subset of) Bitcoin Scripts in a structured way, enabling analysis, composition, generic signing, and more.
 
 ### Related readings
 
