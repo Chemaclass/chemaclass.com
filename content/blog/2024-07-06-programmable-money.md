@@ -64,6 +64,7 @@ In Bitcoin, different address types correspond to various ways to script transac
 - P2SH: Begins with `3`. Encapsulates complex scripts like multisig.
 - P2WPKH: Begins with `bc1`. Native SegWit, more efficient transactions.
 - P2WSH: Begins with `bc1`. SegWit for complex scripts.
+- P2TR: Begins with `bc1p`. Taproot addresses, improving privacy and efficiency for complex transactions.
 
 ---
 
@@ -162,7 +163,7 @@ This script means that any 2 out of 3 provided public keys are required to sign 
 
 ---
 
-### P2WPKH (Pay-to-Witness-Public-Key-Hash)
+### P2WPKH (Pay-to-Witness-Public-Key-Hash) - Segwit
 
 <div class="status info">
 Begins with "bc1q" (e.g., bc1qf0r2m0ck4psv6yrk9wyxdn0t3c3kw8v5rj7ph3)
@@ -193,7 +194,7 @@ For P2WPKH, the unlocking script is not required in the traditional sense (i.e.,
 
 ---
 
-### P2WSH (Pay-to-Witness-Script-Hash)
+### P2WSH (Pay-to-Witness-Script-Hash) - Segwit
 
 <div class="status info">
 Begins with bc1q (e.g.: bc1q4a3h5sdg4cfkhftgd24tj9g2sgrnv06mvrytyj57jmfckhkrw5gslr9g59)
@@ -217,6 +218,31 @@ OP_0 OP_PUSHBYTES_32 <ScriptHash>
 
 - `<Signature1>, <Signature2>`: Signatures required to unlock the transaction.
 - `<RedeemScript>`: The actual script that matches the script hash. This script will be executed as part of the witness data.
+
+---
+
+### P2TR (Pay-to-Taproot) - Taproot
+
+<div class="status info">
+Begins with bc1p (e.g.: bc1pl9dfv7kvj4hj9s3a8l7jvxlw8heujgjstmrpjl09g8ks3ukds70q4r2j5h)
+</div>
+
+##### ScriptPubKey (Locking Script)
+
+```php
+OP_1 <x-only pubkey>
+```
+
+- `OP_1`: Indicates a witness version 1 (Taproot).
+- `<x-only pubkey>`: A 32-byte Schnorr public key without the y-coordinate (x-only).
+
+##### Witness Data
+
+```php
+<Signature>
+```
+
+- `<Signature>`: A Schnorr signature proving possession of the private key corresponding to the x-only pubkey.
 
 ---
 
