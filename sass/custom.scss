@@ -391,3 +391,7 @@ $max-width: 700px;
 .secondary {
   background-color: var(--color-secondary);
 }
+
+.dark pre {
+  background-color: #111 !important;
+}
