@@ -33,7 +33,7 @@ This video includes examples of the most commonly used locking/unlocking scripts
 
 ### Stack-Based Execution
 
-Script operates on a stack-based execution model where commands and data are pushed onto a stack and processed in a Last-In-First-Out (LIFO) manner. This model supports a variety of operations, enabling complex transaction conditions.
+Script operates on a stack-based execution model where commands and data are pushed onto a stack and processed in a Last-In-First-Out ([LIFO](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))) manner.
 
 ### Conditional Spending
 
@@ -54,7 +54,7 @@ Transactions can be set up to require multiple signatures from different private
 Transactions can include time-based conditions that prevent them from being spent until a certain time or block height is reached. This feature is useful for various purposes:
   - delayed payments
   - smart contracts
-  - and ensuring that funds are not spent prematurely (eg: with LN)
+  - and ensuring that funds are not spent prematurely (eg: with [Lightning Network](https://en.bitcoin.it/wiki/Lightning_Network))
 
 ---
 
