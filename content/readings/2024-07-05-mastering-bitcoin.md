@@ -64,7 +64,7 @@ The first edition of this book was published in December 2014. Ten years later, 
    - Script is a stack-based lang, processed from left to right. 
 1. Bitcoin is often referred to as "**programmable money**" because it allows: Multisignature, timelocking and conditional spending. 
    - Extends Bitcoin's functionality beyond simple value transfers.
-1. Common Bitcoin **address types**:
+1. Common Bitcoin [**address types**](/blog/programmable-money#common-bitcoin-address-types):
    - P2PKH: Begins with `1`. Standard transactions using public key hashes.
    - P2SH: Begins with `3`. Encapsulates complex scripts like multisig.
    - P2WPKH: Begins with `bc1`. Native SegWit, more efficient transactions.
