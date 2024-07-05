@@ -69,7 +69,9 @@ In Bitcoin, different address types correspond to various ways to script transac
 
 ### P2PKH (Pay-to-PubKey-Hash) - Legacy Address
 
-> Begins with "1" (e.g., 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa)
+<div class="status info">
+Begins with "1" (e.g., 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa)
+</div>
 
 A typical P2PKH script consists of two main parts:
 1. **ScriptPubKey**: The locking script (also known as the output script) that specifies how funds can be spent.
@@ -97,7 +99,9 @@ OP_DUP OP_HASH160 <PubKeyHash> OP_EQUALVERIFY OP_CHECKSIG
 
 ### Pay-to-Script-Hash (P2SH)
 
-> Begins with "3" (e.g., 3J2BtwzN2GEr6FCPFPq94k81T2eiX8PVHh)
+<div class="status info">
+Begins with "3" (e.g., 3J2BtwzN2GEr6FCPFPq94k81T2eiX8PVHh)
+</div>
 
 P2SH scripts are used for more complex scripts. The primary feature is that the address itself encodes a hash of a script, which will be used in the transaction.
 
@@ -151,13 +155,18 @@ This script means that any 2 out of 3 provided public keys are required to sign 
 - `<Signature1>, <Signature2>, ..., <SignatureN>`: The public keys.
 - `<SerializedScript>`: The serialized script (the same as the locking script but without the `OP_M` and `OP_N`).
 
-<blockquote class="warning">
-NOTE: There is an oddity* in CHECKMULTISIG execution. 
-</blockquote>
+<div class="status warning-orange">
+<b>NOTE</b>: There is an oddity in CHECKMULTISIG execution.
+<small>See note at the bottom.</small>
+</div>
+
+---
 
 ### Pay-to-Witness-Public-Key-Hash (P2WPKH)
 
-> Begins with "bc1q" (e.g., bc1qf0r2m0ck4psv6yrk9wyxdn0t3c3kw8v5rj7ph3)
+<div class="status info">
+Begins with "bc1q" (e.g., bc1qf0r2m0ck4psv6yrk9wyxdn0t3c3kw8v5rj7ph3)
+</div>
 
 P2WPKH is a Segregated Witness (SegWit) address type that uses a different scripting format compared to legacy and P2SH addresses. Simplifies transactions by reducing data size and fees compared to legacy formats.
 
@@ -186,7 +195,9 @@ For P2WPKH, the unlocking script is not required in the traditional sense (i.e.,
 
 ### P2WSH (Pay-to-Witness-Script-Hash)
 
-> Begins with bc1q (e.g.: bc1q4a3h5sdg4cfkhftgd24tj9g2sgrnv06mvrytyj57jmfckhkrw5gslr9g59)
+<div class="status info">
+Begins with bc1q (e.g.: bc1q4a3h5sdg4cfkhftgd24tj9g2sgrnv06mvrytyj57jmfckhkrw5gslr9g59)
+</div>
 
 ##### ScriptPubKey (Locking Script)
 
