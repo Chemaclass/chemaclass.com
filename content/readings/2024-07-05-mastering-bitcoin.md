@@ -48,6 +48,8 @@ The first edition of this book was published in December 2014. Ten years later, 
 
 ![blog-footer](/images/readings/2024-07-05/footer.jpg)
 
+> Full book also on [GitHub](https://github.com/bitcoinbook/bitcoinbook).
+
 ### Key takeaways
 
 1. Your wallet doesn't store any bitcoins, only the keys to access them. The coins are stored in the blockchain.
