@@ -64,6 +64,7 @@ In Bitcoin, different address types correspond to various ways to script transac
 
 - **P2PKH**: Begins with `1`. Standard transactions using public key hashes.
 - **P2SH**: Begins with `3`. Encapsulates complex scripts like multisig.
+- **P2MS**: It is typically a type of P2SH or P2WSH address.
 - **P2WPKH**: Begins with `bc1`. Native SegWit, more efficient transactions.
 - **P2WSH**: Begins with `bc1`. SegWit for complex scripts.
 - **P2TR**: Begins with `bc1p`. Taproot addresses, improving privacy and efficiency for complex transactions.
