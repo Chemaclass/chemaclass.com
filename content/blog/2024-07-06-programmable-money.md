@@ -97,7 +97,7 @@ OP_DUP OP_HASH160 <PubKeyHash> OP_EQUALVERIFY OP_CHECKSIG
 
 ---
 
-### Pay-to-Script-Hash (P2SH)
+### P2SH (Pay-to-Script-Hash)
 
 <div class="status info">
 Begins with "3" (e.g., 3J2BtwzN2GEr6FCPFPq94k81T2eiX8PVHh)
@@ -126,7 +126,7 @@ OP_HASH160 <ScriptHash> OP_EQUAL
 
 ---
 
-### Pay-to-Multisig (P2MS)
+### P2MS (Pay-to-Multisig)
 
 ##### Script Format
 
@@ -162,7 +162,7 @@ This script means that any 2 out of 3 provided public keys are required to sign 
 
 ---
 
-### Pay-to-Witness-Public-Key-Hash (P2WPKH)
+### P2WPKH (Pay-to-Witness-Public-Key-Hash)
 
 <div class="status info">
 Begins with "bc1q" (e.g., bc1qf0r2m0ck4psv6yrk9wyxdn0t3c3kw8v5rj7ph3)
