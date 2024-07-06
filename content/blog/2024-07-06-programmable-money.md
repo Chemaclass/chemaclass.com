@@ -57,15 +57,15 @@ Transactions can include time-based conditions that prevent them from being spen
   - smart contracts
   - and ensuring that funds are not spent prematurely (eg: with [Lightning Network](https://en.bitcoin.it/wiki/Lightning_Network))
 
-#### OP_Codes
+#### Operation Codes
 
-Script ([OP_Codes](https://en.bitcoin.it/wiki/Script#Opcodes)) perform different functions. Here are some of them:
+Bitcoin's Script performs specific operations within transactions with its [OP_Codes](https://en.bitcoin.it/wiki/Script#Opcodes). Here are some of them:
 
-- `OP_DUP`: Duplicates the top stack item.
-- `OP_HASH160`: Hashes the top stack twice (SHA-256 followed by RIPEMD-160).
-- `OP_EQUALVERIFY`: Verifies that the top two items are equal and removes them.
-- `OP_CHECKSIG`: Verifies a signature against a public key.
-- [`OP_RETURN`](https://en.bitcoin.it/wiki/OP_RETURN): Marks the transaction output as invalid, often used to store data.
+- `OP_DUP`: <small>Duplicates the top stack item.</small>
+- `OP_HASH160`: <small>Hashes the top stack item twice (SHA-256 followed by RIPEMD-160).</small>
+- `OP_EQUALVERIFY`: <small>Verifies that the top two items are equal and removes them.</small>
+- `OP_CHECKSIG`: <small>Verifies a signature against a public key.</small>
+- [`OP_RETURN`](https://en.bitcoin.it/wiki/OP_RETURN): <small>Marks the transaction output as invalid, often used to store data.</small>
 
 ---
 
@@ -170,11 +170,11 @@ OP_HASH160 <ScriptHash> OP_EQUAL
 ##### Script Format
 
 ```php
-OP_M <M> <PubK1> <PubK2> ... <PubKeyN> OP_N OP_CHECKMULTISIG
+OP_M <M> <PubK1> <PubK2> ... <PubKN> OP_N OP_CHECKMULTISIG
 ```
 
 - `OP_M`: The minimum number of signatures required.
-- `<PubK1>, <PubK2>, ..., <PubKeyN>`: The public keys involved in the multisignature scheme.
+- `<PubK1>, <PubK2>, ..., <PubKN>`: The public keys involved in the multisignature scheme.
 - `OP_N`: The total number of public keys provided.
 - `OP_CHECKMULTISIG`: The opcode that verifies the signatures against the provided public keys.
 
