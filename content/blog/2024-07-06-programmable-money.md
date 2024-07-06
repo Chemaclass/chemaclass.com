@@ -17,13 +17,14 @@ Bitcoin is often referred to as "programmable money" because it allows for the e
 
 ## Understanding Programmable Money
 
-Programmable money refers to the ability to embed logic and conditions into financial transactions. This programmability allows for transactions to be executed automatically based on predefined rules, without the need for intermediaries or manual intervention. Essentially, it transforms money from a static medium of exchange into a dynamic tool capable of executing complex agreements and automating financial operations.
+Programmable money is the ability to embed logic and conditions into financial transactions. This programmability allows transactions to be executed automatically based on predefined rules without intermediaries or manual intervention. It transforms money from a static medium of exchange into a dynamic tool capable of executing complex agreements and automating financial operations.
 
-## Bitcoin's Script Language
+## The Script Language
 
-Bitcoin's programmability is powered by its built-in scripting language, known as [Script](https://en.bitcoin.it/wiki/Script). Unlike traditional programming languages, Script is a stack-based, Forth-like language designed specifically for Bitcoin transactions.
 
-It supports multi-signature, time-locked, and other conditional transfers that can be programmed into the Bitcoin transactions. It is intentionally not Turing-complete, without loops.
+Bitcoin’s programmability is powered by its built-in scripting language, [**Script**](https://en.bitcoin.it/wiki/Script). Unlike traditional programming languages, Script is a stack-based, Forth-like language explicitly designed for Bitcoin transactions.
+
+It supports multi-signature, time-locked, and other conditional transfers that can be programmed into Bitcoin transactions. It is intentionally not Turing-complete, without loops.
 
 This video includes examples of the most commonly used locking/unlocking scripts.
 
@@ -268,7 +269,7 @@ OP_1 <x-only PubKey>
 ```
 
 - `OP_1`: Indicates a witness version 1 (Taproot).
-- `<x-only PubKey>`: A 32-byte Schnorr public key without the y-coordinate (x-only).
+- `<x-only PubKey>`: A 32-byte Schnorr public key (without the y-coordinate).
 
 ##### Witness Data
 
@@ -304,9 +305,10 @@ Only Bitcoin's original developer could tell whether the dummy stack element was
 
 ## Follow-ups
 
-- [Bitcoin **IDE**](https://siminchen.github.io/bitcoinIDE/build/editor.html) is an online Bitcoin Script visual emulator. Great for learning purposes.
-- [Script **Editor**](https://coins.github.io/bitcoin-scripts/script-editor/) is product-driven research on Bitcoin scalability and usability.
-- [**Miniscript**](https://bitcoin.sipa.be/miniscript/) is a language for writing (a subset of) Bitcoin Scripts in a structured way, enabling analysis, composition, generic signing, and more.
+- Official docs of [Script](https://en.bitcoin.it/wiki/Script) in the Bitcoin Wiki.
+- [Bitcoin IDE](https://siminchen.github.io/bitcoinIDE/build/editor.html) is an online Bitcoin Script visual emulator. Great for learning purposes.
+- [Script Editor](https://coins.github.io/bitcoin-scripts/script-editor/) is product-driven research on Bitcoin scalability and usability.
+- [Miniscript](https://bitcoin.sipa.be/miniscript/) is a language for writing (a subset of) Bitcoin Scripts in a structured way, enabling analysis, composition, generic signing, and more.
 
 ### Related readings
 
