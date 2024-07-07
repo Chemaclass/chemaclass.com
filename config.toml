@@ -1,7 +1,7 @@
 base_url = "https://chemaclass.com"
 
 title = "Chemaclass"
-description = "Check out my latest blog posts, and follow my journey on what I have been reading the last month."
+description = "Check out my latest blog posts and readings."
 
 generate_feeds = true
 taxonomies = [{ name = "tags" }]
