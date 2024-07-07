@@ -3,16 +3,15 @@ base_url = "https://chemaclass.com"
 title = "Chemaclass"
 description = "Check out my latest blog posts, and follow my journey on what I have been reading the last month."
 
-generate_feed = true
+generate_feeds = true
 taxonomies = [{ name = "tags" }]
 compile_sass = true
-extra_syntaxes = ["syntaxes"]
 
 [markdown]
 
 highlight_code = true
 highlight_theme = "demain"
-
+extra_syntaxes_and_themes = ["syntaxes"]
 smart_punctuation = true
 
 [extra]
