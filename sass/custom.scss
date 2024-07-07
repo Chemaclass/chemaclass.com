@@ -395,3 +395,70 @@ $max-width: 700px;
 .dark pre {
   background-color: #111 !important;
 }
+
+/****************************/
+
+a.tooltip:hover {
+  border-bottom: none;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip); /* Use the data-tooltip attribute for the content */
+  position: absolute; /* Position it absolutely relative to .tooltip */
+  background-color: var(--body-bg); /* Use CSS variable for background color */
+  color: var(--body-color); /* Use CSS variable for text color */
+  padding: 10px; /* Padding inside the box */
+  border-radius: 3px; /* Rounded corners */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for better visibility */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s; /* Smooth transition for the appearance */
+  white-space: nowrap; /* Prevents text from wrapping to multiple lines */
+  overflow: hidden; /* Hides overflow text */
+  text-overflow: ellipsis; /* Adds ellipsis (...) if text overflows */
+  visibility: hidden; /* Hide tooltip by default */
+  pointer-events: none; /* Prevent the tooltip from interfering with mouse events */
+  width: auto; /* Allows width to adjust automatically based on content */
+  max-width: 500px; /* Optional: Set a maximum width if needed */
+  z-index: 99;
+}
+
+/* Tooltip positioning */
+.tooltip[data-tooltip-pos="top"]::after {
+  bottom: 100%; /* Position above the text */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%) translateY(-10px); /* Adjust positioning */
+}
+
+.tooltip[data-tooltip-pos="bottom"]::after {
+  top: 100%; /* Position below the text */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%) translateY(10px); /* Adjust positioning */
+}
+
+.tooltip[data-tooltip-pos="right"]::after {
+  left: 100%; /* Position to the right of the text */
+  top: 50%; /* Vertically center */
+  transform: translateX(10px) translateY(-50%); /* Adjust positioning */
+}
+
+.tooltip[data-tooltip-pos="left"]::after {
+  right: 100%; /* Position to the left of the text */
+  top: 50%; /* Vertically center */
+  transform: translateX(-10px) translateY(-50%); /* Adjust positioning */
+}
+
+.tooltip:hover::after {
+  opacity: 1; /* Show the box on hover */
+  visibility: visible; /* Make the tooltip visible on hover */
+}
+
+@media (max-width: 1045px) {
+  .tooltip::after {
+    display: none;
+  }
+}
