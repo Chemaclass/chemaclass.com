@@ -43,7 +43,7 @@ A transaction that can only be spent if certain data is provided or specific cri
   - atomic swaps
   - and other complex financial arrangements
 
-### Multisignature
+#### Multisignature
 
 Transactions can be set up to require multiple signatures from different private keys before they can be spent. Useful for:
   - joint accounts
