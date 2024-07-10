@@ -117,8 +117,11 @@
     <footer id="footer-page">
       <a href="{{ get_url(path='atom.xml') | safe }}">RSS</a>
       © <time datetime="{{now() | date(format='%Y')}}">
-      {{now() | date(format="%Y")}}</time>, Chema
-      - Jose Maria Valera Reales
+      {{now() | date(format="%Y")}}</time>,
+      <span class="tooltip"
+        data-tooltip-pos="top"
+        data-tooltip="PGP: 56D5 D60B 0934 0999 199C  3750 E51B 5BF4 5F85 D160">Chema</span>
+      - Jose M. Valera Reales
     </footer>
 
     <script src="{{ get_url(path="js/theme.js") | safe }}"></script>
