@@ -11,7 +11,6 @@ Visit my portfolio: https://chemaclass.com/
 
 ### 📦 Prerequisites
 
-- Node.js (v16.13.2 or higher)
 - Zola (0.19.1 or higher) | [installation](https://www.getzola.org/documentation/getting-started/installation/)
 
 ### 🚀 Getting Started
