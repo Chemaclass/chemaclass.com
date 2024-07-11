@@ -2,7 +2,7 @@
 title = "Pretty Good Privacy"
 description = "PGP is an encryption program that ensures privacy and authentication for data communication. It is used for signing, encrypting, and decrypting texts, emails, files, directories, and whole disk partitions, enhancing the security of email communications."
 draft = false
-aliases = [ "/pgp", "/gpg" ]
+aliases = [ "/pgp", "/gpg", "/blog/pgp" ]
 [taxonomies]
 tags = [ "software", "security" ]
 [extra]
