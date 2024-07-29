@@ -9,7 +9,7 @@ subtitle = "The power of Bitcoin's Script"
 static_thumbnail = "/images/blog/2024-07-06/cover.jpg"
 +++
 
-![cover](/images/blog/2024-07-06/cover.jpg)
+![blog-cover](/images/blog/2024-07-06/cover.jpg)
 
 Bitcoin is often referred to as "programmable money" because it allows for the execution of programmable transactions through its scripting language.
 
