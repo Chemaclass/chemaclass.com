@@ -23,7 +23,7 @@ It usually follows a straightforward sequence like this:
 
 ## The reality of Waterfall
 
-Waterfall can be like communism in theory—seems perfect on paper, but doesn't  work out in the real world.
+Waterfall can be like communism in theory — it seems perfect on paper but doesn't work in the real world.
 
 - Clients often don't know exactly what they want.
 - Requirements are constantly changing.
@@ -71,7 +71,7 @@ As a developer, you can boost your agility by diving into [pair programming](/bl
 
 Together, these practices make your development process more flexible, collaborative, and high-quality, fitting right in with Agile’s focus on quick adjustments and continuous improvement. See more practices [here](/readings/extreme-programming-explained/#practices).
 
-> The key is collaboration, baby steps and quick feedback on everything you work on.
+> The key is collaboration, baby steps, and quick feedback on everything you work on.
 
 ## My experience with Agile
 
