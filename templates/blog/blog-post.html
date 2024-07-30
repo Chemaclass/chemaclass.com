@@ -3,16 +3,16 @@
 {% import "helpers-preview.html" as helpers_preview %}
 
 {% block posthead %}
-{% if page.earlier %}
-<link rel="prerender" href="{{ page.earlier.permalink }}">
+{% if page.lower %}
+<link rel="prerender" href="{{ page.lower.permalink }}">
 {% endif %}
 
-{% if page.later %}
-<link rel="prerender" href="{{ page.later.permalink }}">
+{% if page.higher %}
+<link rel="prerender" href="{{ page.higher.permalink }}">
 {% endif %}
 
 {% for tag in page.taxonomies.tags %}
-<link rel="prerender"  href='{{ get_taxonomy_url(kind="tags", name=tag) }}'>
+<link rel="prerender" href='{{ get_taxonomy_url(kind="tags", name=tag) }}'>
 {% endfor %}
 
 <script type="application/ld+json">
@@ -86,17 +86,17 @@
 
   <div class="related-container">
 
-    {% if page.earlier %}
+    {% if page.lower %}
       <div class="link">
         <span>Previous</span> <br />
-        <a href="{{ page.earlier.permalink }}">{{ page.earlier.title }}</a>
+        <a href="{{ page.lower.permalink }}">{{ page.lower.title }}</a>
       </div>
     {% endif %}
 
-    {% if page.later %}
+    {% if page.higher %}
       <div class="link">
         <span>Next</span> <br />
-        <a href="{{ page.later.permalink }}">{{ page.later.title }}</a>
+        <a href="{{ page.higher.permalink }}">{{ page.higher.title }}</a>
       </div>
     {% endif %}
 
