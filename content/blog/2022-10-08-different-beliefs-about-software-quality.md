@@ -72,7 +72,7 @@ opportunities to improve everywhere.
 If, after several months of (really) trying these ideas, none of them work, look for a new company that shares your
 beliefs. After all, you're the first and primary responsible person for taking care of your career path.
 
-> Original [twitter thread](https://twitter.com/Chemaclass/status/1578425454562021376).
+> Original [twitter thread](https://x.com/Chemaclass/status/1578425454562021376).
 
 ---
 

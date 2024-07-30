@@ -76,7 +76,7 @@ Pair programming might become one of the best tools in your team toolbox for dai
 
 ![cover](/images/blog/2024-03-28/learning-through-katas.jpg)
 
-> Thanks to my friend [Manu](https://twitter.com/evrtrabajo), who helped me with this post. We even share a [workshop](https://phpconference.com/agile-culture/practical-tdd-workshop/) on this topic.
+> Thanks to my friend [Manu](https://x.com/evrtrabajo), who helped me with this post. We even share a [workshop](https://phpconference.com/agile-culture/practical-tdd-workshop/) on this topic.
 
 ---
 

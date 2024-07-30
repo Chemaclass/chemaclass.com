@@ -49,7 +49,7 @@ I work with PHP for around 8 years so far, and I always try to combine OOP with 
 believe both paradigms are better combined; they are not necessarily exclusive), and a new dialect of Lisp fully written
 in native **PHP 7.4** sounded really exciting. I decided to take a look at it. I wanted to see the code.
 
-The fresh readings from [Mathias NoBack](https://twitter.com/matthiasnoback) books such
+The fresh readings from [Mathias NoBack](https://x.com/matthiasnoback) books such
 as [Object Design Style Guide](/readings/object-design-style-guide),
 and [Advanced Web Application Architecture](/readings/advance-web-application-architecture/), gave me the courage to try
 out what I learned and put it for real in a project. This was (and still is) a beautiful challenge, which helps me to
