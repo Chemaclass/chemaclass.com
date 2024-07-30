@@ -130,6 +130,8 @@ Follow my speaker journey.
 - 2022-06-23 | DesarrolloWeb [**Remote**] (ES)
     - [Phel Language ¿Programación funcional para PHP?](https://www.youtube.com/live/9pElbTEcyGA)
 
+![cover](/images/talks/2022-06-23/ama-state-of-php.jpg)
+
 #### February
 
 - 2022-02-24 | PHP Madrid Community [**Remote**] (ES)
