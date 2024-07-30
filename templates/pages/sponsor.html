@@ -78,5 +78,10 @@
     <div class="do-not-hesitate">
         Thanks for your support!
     </div>
+
+    <div>
+        {% set banner_image = resize_image(path="banner.jpg", height=300, width=800, op="fit_width") %}
+        <img class="banner-image-desktop" src="{{ banner_image.url }}" alt="banner picture"/>
+    </div>
 </div>
 {% endblock content %}

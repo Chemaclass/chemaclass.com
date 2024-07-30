@@ -39,8 +39,8 @@
     Chemaclass
   </h1>
 
-  {% set banner_image_phone = resize_image(path="banner.jpg", height=300, width=800, op="fit_width") %}
-  <img class="banner-image-phone" src="{{ banner_image_phone.url }}" alt="banner picture"/>
+  {% set banner = resize_image(path="banner.jpg", height=300, width=800, op="fit_width") %}
+  <img class="banner-image-phone" src="{{ banner.url }}" alt="banner picture"/>
 
   <ul>
     <li title="Over 10 years experience with OOP, relational databases and ORMs">
