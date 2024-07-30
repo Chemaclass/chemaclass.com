@@ -6,6 +6,4 @@ sort_by = "date"
 
 # Music
 
-Original songs.
-
 ---
