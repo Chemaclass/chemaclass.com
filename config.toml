@@ -24,8 +24,8 @@ nav = [
 
 icon = "icon.jpg"
 profile_small = "icon.jpg"
-profile_large = "profile.jpg"
-default_og_image = "profile.jpg"
+profile_large = "profile.jpeg"
+default_og_image = "profile.jpeg"
 
 accent = "#3a5c88"
 accent_light = "#397fd8"
