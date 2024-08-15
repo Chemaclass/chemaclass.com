@@ -12,22 +12,6 @@
 
 <hr class="footer-rule" />
 
-<div class="related-container">
-
-    {% if page.lighter %}
-    <div class="link">
-        <span>Previous</span> <br />
-        <a href="{{ page.lighter.permalink }}">{{ page.lighter.title }}</a>
-    </div>
-    {% endif %}
-
-    {% if page.heavier %}
-    <div class="link">
-        <span>Next</span> <br />
-        <a href="{{ page.heavier.permalink }}">{{ page.heavier.title }}</a>
-    </div>
-    {% endif %}
-
-</div>
+{{ related::container(page=page,orderDesc=false) }}
 
 {% endblock content %}

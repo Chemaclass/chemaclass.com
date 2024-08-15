@@ -1,0 +1,20 @@
+
+{% macro container(page,orderDesc=true) %}
+<div class="related-container">
+
+  {% if page.lower %}
+  <div class="link">
+    <span>{% if orderDesc %}Newer{% else %}Older{% endif %}</span> <br />
+    <a href="{{ page.lower.permalink }}">{{ page.lower.title }}</a>
+  </div>
+  {% endif %}
+
+  {% if page.higher %}
+  <div class="link">
+    <span>{% if orderDesc %}Older{% else %}Newer{% endif %}</span> <br />
+    <a href="{{ page.higher.permalink }}">{{ page.higher.title }}</a>
+  </div>
+  {% endif %}
+
+</div>
+{% endmacro %}

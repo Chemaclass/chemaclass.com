@@ -35,24 +35,7 @@
 
   <hr class="footer-rule" />
 
-
-  <div class="related-container">
-
-    {% if page.lower %}
-    <div class="link">
-      <span>Previous</span> <br />
-      <a href="{{ page.lower.permalink }}">{{ page.lower.title }}</a>
-    </div>
-    {% endif %}
-
-    {% if page.higher %}
-    <div class="link">
-      <span>Next</span> <br />
-      <a href="{{ page.higher.permalink }}">{{ page.higher.title }}</a>
-    </div>
-    {% endif %}
-
-  </div>
+  {{ related::container(page=page,orderDesc=true) }}
 
   {% include "footer-about.html" %}
 
