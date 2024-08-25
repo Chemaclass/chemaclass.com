@@ -13,7 +13,7 @@ Follow my speaker journey.
 
 ### 2024
 
-#### More to come
+Little break 🧱
 
 #### June
 
