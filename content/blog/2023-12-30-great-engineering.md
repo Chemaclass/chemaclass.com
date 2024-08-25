@@ -27,12 +27,13 @@ The result of a great team work is not equal as the sum of the individual parts,
 
 That's why a great engineer is a knowledgeable person about business, customer, product, and coding. Understanding these points have a strong impact on your daily work as it creates a difference between the average and the great engineer.
 
+--- 
+
+Image original by [Nicola Ballotta](https://hybridhacker.email).
+
 ---
 
 ### Related posts
 
 - [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
-
---- 
-
-Image original by [Nicola Ballotta](https://hybridhacker.email).
+- [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
