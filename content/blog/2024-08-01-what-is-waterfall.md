@@ -9,7 +9,7 @@ subtitle = "What makes Waterfall a poor fit for modern software development?"
 static_thumbnail = "/images/blog/2024-08-01/cover.jpg"
 +++
 
-![cover](/images/blog/2024-08-01/cover.jpg)
+![blog-cover](/images/blog/2024-08-01/cover.jpg)
 
 Waterfall is like following a straight path where you move from one step to the next in a defined order — like water flowing down a waterfall through different stages.
 
