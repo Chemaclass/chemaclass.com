@@ -336,8 +336,8 @@ $max-width: 700px;
   color: purple !important;
 }
 
-a i {
-  color: #00bfff !important;
+.dark a i {
+  color: var(--link-color) !important;
 }
 
 .fa-paypal:hover {
