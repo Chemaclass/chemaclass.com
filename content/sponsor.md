@@ -1,5 +1,5 @@
 +++
 title = "Sponsor | Chemaclass"
 template = "pages/sponsor.html"
-aliases = ["tips"]
+aliases = [ "tip", "tips", "funding" ]
 +++
