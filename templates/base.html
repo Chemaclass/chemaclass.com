@@ -115,10 +115,10 @@
     </main>
 
     <footer id="footer-page">
-      <a href="{{ get_url(path='atom.xml') | safe }}">RSS</a>
-      | <a href="/sponsor">Sponsor</a>
-      © <time datetime="{{now() | date(format='%Y')}}">
-      {{now() | date(format="%Y")}}</time>,
+      <a href="{{ get_url(path='atom.xml') | safe }}"><i class="fa fa-rss" aria-hidden="true"></i> RSS</a>
+      | <a href="/sponsor"><i class="fa fa-magic" aria-hidden="true"></i> Sponsor</a>
+      © <time datetime="{{now() | date(format='%Y')}}">{{now() | date(format="%Y")}}</time>
+      <div class="phone-footer-about"></div>
       <span class="tooltip"
         data-tooltip-pos="top"
         data-tooltip="PGP: E51B 5BF4 5F85 D160">Chema</span>
