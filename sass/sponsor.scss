@@ -179,4 +179,13 @@
       margin-bottom: 20px;
     }
   }
+  
+  @media (max-width: 768px) {
+    .contribution {
+      .donation-options {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
 }
