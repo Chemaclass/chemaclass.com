@@ -38,50 +38,63 @@
 }
 
 #section-tiers {
-  .tier-card {
-    border-radius: 8px;
-    padding: 24px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
-    margin-bottom: 1.5rem;
+  .tier-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
 
-    .tier-card-header {
-      text-align: start;
-      
-      h1 {
-        font-size: 1.875rem;
-        font-weight: 500;
-        margin-top: 0;
-        margin-bottom: 0;
+    .tier-card {
+      flex: 1;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
+      margin-bottom: 1.5rem;
+
+      .tier-card-header {
+        text-align: start;
+        
+        h1 {
+          font-size: 1.875rem;
+          font-weight: 500;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        
+        small {
+          opacity: 0.8;
+          display: block;
+          margin-top: 4px;
+          font-size: 0.875rem;
+        }
       }
-      
-      small {
-        opacity: 0.8;
-        display: block;
-        margin-top: 4px;
-        font-size: 0.875rem;
+
+
+      .tier-card-content {
+        text-align: start;
+
+        p {
+          font-size: 2.25rem;
+          font-weight: 500;
+          margin: 16px 0px;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+        }
       }
-    }
 
-
-    .tier-card-content {
-      text-align: start;
-
-      p {
-        font-size: 2.25rem;
-        font-weight: 500;
+      .tier-card-hr {
+        opacity: 0.5;
         margin: 16px 0px;
       }
-
-      ul {
-        list-style: none;
-        padding: 0;
-      }
     }
-
-    .tier-card-hr {
-      opacity: 0.5;
-      margin: 16px 0px;
+  }
+  @media (min-width:1024px) {
+    .tier-cards {
+      flex-direction: row;
     }
   }
 }
@@ -113,6 +126,7 @@
     
     .donation-options {
       display: flex;
+      flex-direction: column;
       gap: 20px;
       margin-top: 20px;
 
@@ -181,10 +195,10 @@
     }
   }
   
-  @media (max-width: 768px) {
+  @media (min-width: 1024px) {
     .contribution {
       .donation-options {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
       }
     }
