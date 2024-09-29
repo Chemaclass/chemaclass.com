@@ -29,90 +29,86 @@
             Sponsorship Tiers
           </h2>
           <div className="grid gap-6 lg:grid-cols-3">
-            <Card>
-              <CardHeader>
+            <div class= "card">
+              <div class= "cardHeader">
                 <h1 className="flex items-center gap-2">
                   ⭐ Silver Sponsor
                 </h1>
-                <CardDescription></CardDescription>
+                <small>
                 Perfect for small businesses, startups, or anyone who loves open-source.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-3xl font-bold">$0.99/month</p>
+                </small>
+              </div class= "cardHeader">
+              <hr class="cardHr">
+              <div class= "cardContent">
+                <p className="text-3xl font-bold">$2/month</p>
                 <ul className="mt-4 space-y-2">
-                  <li> A mention in my sponsors page 😊 </li>
-                  <li> The satisfaction of knowing you’re helping keep open-source alive and thriving.</li>
+                  <li> ⭕ A mention in my sponsors page 😊 </li>
+                  <li> ⭕ The satisfaction of knowing you’re helping keep open-source alive and thriving.</li>
                 </ul>
-              </CardContent>
-            </Card>
-            <Card className="border-primary">
-              <CardHeader>
+              </div class= "cardContent">
+            </div class= "card">
+
+            <div class="card" className="border-primary">
+              <div class="cardHeader">
                 <h1 className="flex items-center gap-2">
                   ⚡ Gold Sponsor
                 </h1>
-                <CardDescription>
+                <small>
                   For the slightly more generous folks who want to contribute a bit more.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-3xl font-bold">$4.99/month</p>
+                </small>
+              </div class="cardHeader">
+              <hr class="cardHr">
+              <div class="cardContent">
+                <p className="text-3xl font-bold">$4/month</p>
                 <ul className="mt-4 space-y-2">
-                  <li>No flashy logos or merchandise, but you’ll definitely have a spot in my heart (and maybe a mention in my next update)!
-                  </li>
+                  <li> ⭕ No flashy logos or merchandise, but you’ll definitely have a spot in my heart (and maybe a mention in my next update)! </li>
                 </ul>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
+              </div class="cardContent">
+            </div class="card">
+            <div class="card">
+              <div class="cardHeader">
                 <h1 className="flex items-center gap-2">
                   🏆 Platinum Sponsor
                 </h1>
-                <CardDescription>
+                <small>
                   For the truly heroic souls who believe in open-source greatness.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-3xl font-bold">$9.99/month</p>
+                </small>
+              </div class="cardHeader">
+              <hr class="cardHr">
+              <div class="cardContent">
+                <p className="text-3xl font-bold">$12/month</p>
                 <ul className="mt-4 space-y-2">
-                  <li>No free goodies, no stickers. Just the warm, fuzzy feeling of helping an open-source dev sleep a bit better at night.
-                  </li>
-                  <li>You’ll also earn a “Thank You!” in a blog post (if I remember). But seriously, you’re awesome!
-                  </li>
+                  <li> ⭕ No free goodies, no stickers. Just the warm, fuzzy feeling of helping an open-source dev sleep a bit better at night. </li>
+                  <li> ⭕ You’ll also earn a “Thank You!” in a blog post (if I remember). But seriously, you’re awesome! </li>
                 </ul>
-              </CardContent>
-            </Card>
+              </div class="cardContent">
+            </div class="card">
           </div>
         </div>
       </section>
 
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
         <div className="container px-4 md:px-6">
-          <h2
-            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12"
-          >
+          <h2>
             Why Become a Sponsor?
           </h2>
           <div className="grid gap-6 lg:grid-cols-3">
             <div className="flex flex-col items-center text-center">
-              <Heart className="w-12 h-12 mb-4 text-primary" />
-              <h3 className="text-xl font-bold mb-2">Support Open Source</h3>
+              <h3 className="text-xl font-bold mb-2">💓 Support Open Source</h3>
               <p>
                 Help us continue to develop and maintain this project for the
                 community.
               </p>
             </div>
             <div className="flex flex-col items-center text-center">
-              <Zap className="w-12 h-12 mb-4 text-primary" />
-              <h3 className="text-xl font-bold mb-2">Increase Visibility</h3>
+              <h3 className="text-xl font-bold mb-2">⚡ Increase Visibility</h3>
               <p>
                 Get your brand in front of thousands of developers and
                 decision-makers.
               </p>
             </div>
             <div className="flex flex-col items-center text-center">
-              <Star className="w-12 h-12 mb-4 text-primary" />
-              <h3 className="text-xl font-bold mb-2">Exclusive Benefits</h3>
+              <h3 className="text-xl font-bold mb-2">⭐Exclusive Benefits</h3>
               <p>
                 Enjoy perks like early access to new features and dedicated
                 support.
@@ -124,112 +120,70 @@
 
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
-          <h2
-            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12"
-          >
+          <h2>
             Our Current Sponsors
           </h2>
-          <div
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-center"
-          >
-            {[...Array(8)].map((_, i) => (
-            <image
-              key="{i}"
-              src="/placeholder-logo.svg"
-              alt="{`Sponsor"
-              ${i
-              +
-              1}`}
-              width="{150}"
-              height="{75}"
-              className="mx-auto"
-            />
-            ))}
+          <div>
+            ⭐ Jesus Valera Reales
           </div>
         </div>
       </section>
 
       <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-white">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center space-y-4 text-center">
-            <h2
-              className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
-            >
-              Ready to Become a Sponsor?
-            </h2>
+        <h2>
+          Become a Sponsor (Recurring Support)
+        </h2>
 
-            <table>
-              <tr>
-                <td>
-                  <a
-                    target="_blank"
-                    href="https://www.paypal.com/paypalme/chemaclass"
-                    title="PayPal"
-                  >
-                    <i class="fa fa-paypal"></i>
-                    PayPal
-                  </a>
-                </td>
-                <td>
-                  <a
-                    target="_blank"
-                    href="https://github.com/sponsors/Chemaclass"
-                    title="PayPal"
-                  >
-                    <i class="fa fa-github"></i>
-                    GitHub
-                  </a>
-                </td>
-                <td>
-                  <a
-                    target="_blank"
-                    href="https://getalby.com/p/chemaclass"
-                    title="Bitcoin Lightning Network"
-                  >
-                    <i class="fa-solid fa-bitcoin-sign"></i>
-                    Lightning
-                  </a>
-                </td>
-              </tr>
-            </table>
+        <table>
+          <tr>
+            <td>
+              <a
+                target="_blank"
+                href="https://github.com/sponsors/Chemaclass"
+                title="PayPal"
+              >
+                <i class="fa fa-github"></i>
+                GitHub
+              </a>
+            </td>
+          </tr>
+        </table>
 
-            <h3>Connect</h3>
-            <table>
-              <tr>
-                <td>
-                  <a
-                    target="_blank"
-                    href="https://x.com/Chemaclass"
-                    title="Twitter"
-                  >
-                    <i class="fa-brands fa-x-twitter"></i>
-                    Twitter
-                  </a>
-                </td>
-                <td>
-                  <a
-                    target="_blank"
-                    href="https://www.linkedin.com/in/jose-maria-valera-reales/"
-                    title="LinkedIn"
-                  >
-                    <i class="fa fa-linkedin"></i>
-                    LinkedIn
-                  </a>
-                </td>
-                <td>
-                  <a
-                    target="_blank"
-                    href="https://snort.social/p/npub1ch2gzhpxux8zc9upxvqy5mwm4x5k5hm6772682mqd5g65yz4z34qg4sxwx"
-                    title="Notes and Other Stuff Transmitted by Relays"
-                  >
-                    <i class="fa-solid fa-qrcode"></i>
-                    Nostr
-                  </a>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
+        <h2>One-Time Contribution</h2>
+        <table>
+          <tr>
+            <td>
+              <a
+                target="_blank"
+                href="https://www.paypal.com/paypalme/chemaclass"
+                title="PayPal"
+              >
+                <i class="fa fa-paypal"></i>
+                PayPal
+              </a>
+            </td>
+            <td>
+              <a
+                target="_blank"
+                href="https://github.com/sponsors/Chemaclass"
+                title="PayPal"
+              >
+                <i class="fa fa-github"></i>
+                GitHub
+              </a>
+            </td>
+            <td>
+              <a
+                target="_blank"
+                href="https://getalby.com/p/chemaclass"
+                title="Bitcoin Lightning Network"
+              >
+                <i class="fa-solid fa-bitcoin-sign"></i>
+                Lightning
+              </a>
+            </td>
+          </tr>
+        </table>
       </section>
     </main>
   </div>

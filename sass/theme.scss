@@ -9,6 +9,11 @@
     h3 small {
         color: #404040;
     }
+
+    .card {
+        background-color: #fafafa;
+        border: 1px solid #e5e7eb;
+    }
 }
 
 :root:has(body.dark) {
@@ -30,5 +35,10 @@
 
     a {
         color: var(--link-color);
+    }
+
+    .card {
+        background-color: #2f3236;
+        border: 1px solid #454545;
     }
 }
