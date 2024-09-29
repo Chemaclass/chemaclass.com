@@ -292,6 +292,23 @@ $max-width: 700px;
   height: auto;
 }
 
+.phone-footer-about {
+  display: block;
+}
+
+.desktop-footer-about {
+  display: none;
+}
+
+@media (min-width: 465px) {
+  .phone-footer-about {
+    display: none;
+  }
+  .desktop-footer-about {
+    display: block;
+  }
+}
+
 @media (max-width: 880px) {
   .banner-image-phone {
     display: inline-block;
