@@ -38,7 +38,9 @@
         @include card-a-colors-light;
     }
     .contribution {
-        @include card-b-colors-light;
+        // If there are currentSponsors include cardB, if not cardA
+        // @include card-b-colors-light;
+        @include card-a-colors-light;
         .btn-donate {
             border: 1px solid #d1d5db;
         }
@@ -93,7 +95,9 @@
         @include card-a-colors-dark;
     }
     .contribution {
-        @include card-b-colors-dark;
+        // If there are currentSponsors include cardB, if not cardA
+        // @include card-b-colors-dark;
+        @include card-a-colors-dark;
         .btn-donate {
             border: 1px solid #454545;
         }
