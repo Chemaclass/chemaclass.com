@@ -10,24 +10,35 @@
         color: #404040;
     }
 
-    // Sponsors
-    .card {
-        background-color: #fafafa;
-        border: 1px solid #e5e7eb;
-        &:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-        }
-    }
-    #section-reasons-sponsor {
+    @mixin card-a-colors-light {
         background-color: #e8e8e8;
         border: 4px solid #c8c8c8;
+    }
+    @mixin card-b-colors-light {
+        background-color: #fafafa;
+        border: 1px solid #e5e7eb;
+    }
+
+    // Sponsors
+    #section-reasons-sponsor {
+        @include card-a-colors-light;
         .sponsor-title, .sponsor-feature * {
             color: #343434;
         }
     }
+    
+    .card {
+        @include card-b-colors-light;
+        &:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    #section-current-sponsors {
+        @include card-a-colors-light;
+    }
     .contribution {
-        background-color: #fafafa;
-        border: 1px solid #e5e7eb;
+        @include card-b-colors-light;
         .btn-donate {
             border: 1px solid #d1d5db;
         }
@@ -56,24 +67,33 @@
         color: var(--link-color);
     }
 
-    // Sponsors
-    .card {
-        background-color: #2f3236;
-        border: 1px solid #454545;
-        &:hover {
-            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.07);
-        }
-    }
-    #section-reasons-sponsor {
+    @mixin card-a-colors-dark {
         background-color: #1f2226;
         border: 4px solid #343434;
+    }
+    @mixin card-b-colors-dark {
+        background-color: #2f3236;
+        border: 1px solid #454545;
+    }
+
+    // Sponsors
+    #section-reasons-sponsor {
+        @include card-a-colors-dark;
         .sponsor-title, .sponsor-feature * {
             color: #e0e0e0;
         }
     }
+    .card {
+        @include card-b-colors-dark;
+        &:hover {
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.07);
+        }
+    }
+    #section-current-sponsors {
+        @include card-a-colors-dark;
+    }
     .contribution {
-        background-color: #2f3236;
-        border: 1px solid #454545;
+        @include card-b-colors-dark;
         .btn-donate {
             border: 1px solid #454545;
         }
