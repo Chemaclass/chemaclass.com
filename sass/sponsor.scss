@@ -51,6 +51,27 @@
       transition: box-shadow 0.3s ease-in-out;
       margin-bottom: 1.5rem;
 
+      &.tier-card-silver {
+        border: 1px solid #C0C0C0;
+        hr.tier-card-hr {
+          background-color: #C0C0C0;
+        }
+      }
+
+      &.tier-card-gold {
+        border: 2px solid #FFD700;
+        hr.tier-card-hr {
+          background-color: #FFD700;
+        }
+      }
+
+      &.tier-card-platinum {
+        border: 3px solid  #E5E4E2;
+        hr.tier-card-hr {
+          background-color: #E5E4E2;
+        }
+      }
+
       .tier-card-header {
         text-align: start;
         
