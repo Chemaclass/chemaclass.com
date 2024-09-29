@@ -1,114 +1,104 @@
 {% extends "base.html" %} {% block content %}
 <div id="sponsor">
-  <div className="flex flex-col min-h-screen">
-    <main className="flex-1">
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-primary">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h1
-                className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white"
-              >
-                Become a Sponsor
-              </h1>
-              <p className="mx-auto max-w-[700px] text-gray-200 md:text-xl">
-                Support my work. Every contribution, no matter the size, makes a
-                huge difference. Choose a sponsorship tier that reflects your
-                level of support.
-              </p>
-            </div>
-          </div>
-        </div>
+  <div>
+    <main>
+      <section>
+        <h1>
+          Become a Sponsor
+        </h1>
+        <p>
+          Support my work. Every contribution, no matter the size, makes a
+          huge difference. Choose a sponsorship tier that reflects your
+          level of support.
+        </p>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
-          <h2
-            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12"
-          >
+      <section>
+        <div>
+          <h2>
             Sponsorship Tiers
           </h2>
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div>
             <div class= "card">
-              <div class= "cardHeader">
-                <h1 className="flex items-center gap-2">
+              <div class= "card-header">
+                <h1>
                   ⭐ Silver Sponsor
                 </h1>
                 <small>
                 Perfect for small businesses, startups, or anyone who loves open-source.
                 </small>
-              </div class= "cardHeader">
-              <hr class="cardHr">
-              <div class= "cardContent">
-                <p className="text-3xl font-bold">$2/month</p>
-                <ul className="mt-4 space-y-2">
+              </div class= "card-header">
+              <hr class="card-hr">
+              <div class= "card-content">
+                <p>$2/month</p>
+                <ul>
                   <li> ⭕ A mention in my sponsors page 😊 </li>
                   <li> ⭕ The satisfaction of knowing you’re helping keep open-source alive and thriving.</li>
                 </ul>
-              </div class= "cardContent">
+              </div class= "card-content">
             </div class= "card">
 
-            <div class="card" className="border-primary">
-              <div class="cardHeader">
-                <h1 className="flex items-center gap-2">
+            <div class="card">
+              <div class="card-header">
+                <h1>
                   ⚡ Gold Sponsor
                 </h1>
                 <small>
                   For the slightly more generous folks who want to contribute a bit more.
                 </small>
-              </div class="cardHeader">
-              <hr class="cardHr">
-              <div class="cardContent">
-                <p className="text-3xl font-bold">$4/month</p>
-                <ul className="mt-4 space-y-2">
+              </div class="card-header">
+              <hr class="card-hr">
+              <div class="card-content">
+                <p>$4/month</p>
+                <ul>
                   <li> ⭕ No flashy logos or merchandise, but you’ll definitely have a spot in my heart (and maybe a mention in my next update)! </li>
                 </ul>
-              </div class="cardContent">
+              </div class="card-content">
             </div class="card">
             <div class="card">
-              <div class="cardHeader">
-                <h1 className="flex items-center gap-2">
+              <div class="card-header">
+                <h1>
                   🏆 Platinum Sponsor
                 </h1>
                 <small>
                   For the truly heroic souls who believe in open-source greatness.
                 </small>
-              </div class="cardHeader">
-              <hr class="cardHr">
-              <div class="cardContent">
-                <p className="text-3xl font-bold">$12/month</p>
-                <ul className="mt-4 space-y-2">
+              </div class="card-header">
+              <hr class="card-hr">
+              <div class="card-content">
+                <p>$12/month</p>
+                <ul>
                   <li> ⭕ No free goodies, no stickers. Just the warm, fuzzy feeling of helping an open-source dev sleep a bit better at night. </li>
                   <li> ⭕ You’ll also earn a “Thank You!” in a blog post (if I remember). But seriously, you’re awesome! </li>
                 </ul>
-              </div class="cardContent">
+              </div class="card-content">
             </div class="card">
           </div>
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
-        <div className="container px-4 md:px-6">
+      <section id="sponsor-section">
+        <div>
           <h2>
             Why Become a Sponsor?
           </h2>
-          <div className="grid gap-6 lg:grid-cols-3">
-            <div className="flex flex-col items-center text-center">
-              <h3 className="text-xl font-bold mb-2">💓 Support Open Source</h3>
+          <div>
+            <div>
+              <h3>💓 Support Open Source</h3>
               <p>
                 Help us continue to develop and maintain this project for the
                 community.
               </p>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <h3 className="text-xl font-bold mb-2">⚡ Increase Visibility</h3>
+            <div>
+              <h3>⚡ Increase Visibility</h3>
               <p>
                 Get your brand in front of thousands of developers and
                 decision-makers.
               </p>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <h3 className="text-xl font-bold mb-2">⭐Exclusive Benefits</h3>
+            <div>
+              <h3>⭐Exclusive Benefits</h3>
               <p>
                 Enjoy perks like early access to new features and dedicated
                 support.
@@ -118,8 +108,8 @@
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
+      <section>
+        <div>
           <h2>
             Our Current Sponsors
           </h2>
@@ -129,7 +119,7 @@
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-white">
+      <section>
         <h2>
           Become a Sponsor (Recurring Support)
         </h2>

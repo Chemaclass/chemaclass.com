@@ -11,7 +11,7 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.cardHeader {
+.card-header {
   text-align: start;
   
   h1 {
@@ -30,7 +30,7 @@
 }
 
 
-.cardContent {
+.card-content {
   text-align: start;
 
   p {
@@ -52,23 +52,7 @@
   }
 }
 
-.cardHr {
+.card-hr {
   opacity: 0.5;
   margin: 16px 0px;
-}
-
-button {
-  background-color: #000;
-  color: white;
-  font-size: 1rem;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #374151;
 }
