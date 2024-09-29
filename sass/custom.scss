@@ -284,23 +284,6 @@ $max-width: 700px;
   }
 }
 
-.phone-footer-about {
-  display: block;
-}
-
-.desktop-footer-about {
-  display: none;
-}
-
-@media (min-width: 465px) {
-  .phone-footer-about {
-    display: none;
-  }
-  .desktop-footer-about {
-    display: block;
-  }
-}
-
 .banner-image-phone {
   display: none;
   margin: 18px 0;
@@ -320,35 +303,35 @@ $max-width: 700px;
   font-weight: bold;
 }
 
-.fa-linkedin:hover {
+.fa-linkedin-hover:hover {
   color: dodgerblue !important;
 }
 
-.fa-x-twitter:hover {
+.fa-x-twitter-hover:hover {
   color: deepskyblue !important;
 }
 
-.fa-github:hover {
+.fa-github-hover:hover {
   color: darkblue !important;
 }
 
-.fa-qrcode:hover {
+.fa-qrcode-hover:hover {
   color: purple !important;
 }
 
-.dark a i {
+.dark a i.dark-hover {
   color: var(--link-color) !important;
 }
 
-.fa-paypal:hover {
+.fa-paypal-hover:hover {
   color: dodgerblue !important;
 }
 
-.fa-bitcoin-sign:hover {
+.fa-bitcoin-sign-hover:hover {
   color: orange !important;
 }
 
-.fa-btc:hover {
+.fa-btc-hover:hover {
   color: darkorange !important;
 }
 
