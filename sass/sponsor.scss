@@ -48,7 +48,6 @@
       flex: 1;
       border-radius: 8px;
       padding: 24px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: box-shadow 0.3s ease-in-out;
       margin-bottom: 1.5rem;
 
@@ -92,9 +91,28 @@
       }
     }
   }
-  @media (min-width:1024px) {
+  @media (min-width: 1280px) {
     .tier-cards {
       flex-direction: row;
+      .tier-card {
+        .tier-card-header {
+          h1 {
+            font-size: 1.0rem;
+            margin-bottom: 0.65rem;
+          }
+          small {
+            font-size: 0.75rem;
+          }
+        }
+        .tier-card-content {
+          p {
+            font-size: 1.35rem;
+          }
+          li {
+            font-size: 0.85rem;
+          }
+        }
+      }
     }
   }
 }
@@ -195,7 +213,7 @@
     }
   }
   
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     .contribution {
       .donation-options {
         flex-direction: row;
