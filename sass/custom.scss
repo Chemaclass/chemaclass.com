@@ -284,23 +284,6 @@ $max-width: 700px;
   }
 }
 
-.phone-footer-about {
-  display: block;
-}
-
-.desktop-footer-about {
-  display: none;
-}
-
-@media (min-width: 465px) {
-  .phone-footer-about {
-    display: none;
-  }
-  .desktop-footer-about {
-    display: block;
-  }
-}
-
 .banner-image-phone {
   display: none;
   margin: 18px 0;
