@@ -10,6 +10,7 @@
         color: #404040;
     }
 
+    // Sponsors
     .card {
         background-color: #fafafa;
         border: 1px solid #e5e7eb;
@@ -24,6 +25,14 @@
             color: #343434;
         }
     }
+    .contribution {
+        background-color: #fafafa;
+        border: 1px solid #e5e7eb;
+        .btn-donate {
+            border: 1px solid #d1d5db;
+        }
+    }
+    // END: Sponsors
 }
 
 :root:has(body.dark) {
@@ -47,6 +56,7 @@
         color: var(--link-color);
     }
 
+    // Sponsors
     .card {
         background-color: #2f3236;
         border: 1px solid #454545;
@@ -61,4 +71,12 @@
             color: #e0e0e0;
         }
     }
+    .contribution {
+        background-color: #2f3236;
+        border: 1px solid #454545;
+        .btn-donate {
+            border: 1px solid #454545;
+        }
+    }
+    // END: Sponsors
 }
