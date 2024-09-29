@@ -4,55 +4,93 @@
   padding: 24px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
-  margin-bottom: 1rem;
-}
+  margin-bottom: 1.5rem;
 
-.card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.card-header {
-  text-align: start;
-  
-  h1 {
-    font-size: 1.875rem;
-    font-weight: 500;
-    margin-top: 0;
-    margin-bottom: 0;
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   }
-  
-  small {
-    opacity: 0.8;
-    display: block;
-    margin-top: 4px;
-    font-size: 0.875rem;
+
+  .card-header {
+    text-align: start;
+    
+    h1 {
+      font-size: 1.875rem;
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    
+    small {
+      opacity: 0.8;
+      display: block;
+      margin-top: 4px;
+      font-size: 0.875rem;
+    }
   }
-}
 
 
-.card-content {
-  text-align: start;
+  .card-content {
+    text-align: start;
 
-  p {
-    font-size: 2.25rem;
-    font-weight: 500;
-    color: #000;
+    p {
+      font-size: 2.25rem;
+      font-weight: 500;
+      margin: 16px 0px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+
+  .card-hr {
+    opacity: 0.5;
     margin: 16px 0px;
   }
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    font-size: 1rem;
-    color: #374151;
-    margin-bottom: 8px;
-  }
 }
 
-.card-hr {
-  opacity: 0.5;
-  margin: 16px 0px;
+#sponsor-section {
+  margin-bottom: 1rem;
+  padding: 20px 0;
+
+  .sponsor-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .sponsor-title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .sponsor-features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  // Individual feature card
+  .sponsor-feature {
+    flex: 1;
+    max-width: 320px;
+    text-align: center;
+    padding: 20px;
+
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .feature-description {
+      font-size: 1rem;
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+  }
 }
