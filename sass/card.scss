@@ -6,10 +6,6 @@
   transition: box-shadow 0.3s ease-in-out;
   margin-bottom: 1.5rem;
 
-  &:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
-
   .card-header {
     text-align: start;
     
@@ -50,15 +46,11 @@
   }
 }
 
-#sponsor-section {
+#section-reasons-sponsor {
   margin-bottom: 1rem;
-  padding: 20px 0;
-
-  .sponsor-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   .sponsor-title {
     font-size: 2rem;
@@ -72,25 +64,23 @@
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
-  }
 
-  // Individual feature card
-  .sponsor-feature {
-    flex: 1;
-    max-width: 320px;
-    text-align: center;
-    padding: 20px;
+    .sponsor-feature {
+      flex: 1;
+      min-width: 150px;
+      text-align: center;
+      padding: 10px;
 
-    .feature-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
+      .feature-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
 
-    .feature-description {
-      font-size: 1rem;
-      opacity: 0.8;
-      line-height: 1.6;
+      p {
+        font-size: 1rem;
+        opacity: 0.8;
+      }
     }
   }
 }
