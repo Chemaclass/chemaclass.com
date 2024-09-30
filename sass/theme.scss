@@ -27,7 +27,7 @@
         }
     }
     
-    .card {
+    .tier-card {
         @include card-b-colors-light;
         &:hover {
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -38,7 +38,9 @@
         @include card-a-colors-light;
     }
     .contribution {
-        @include card-b-colors-light;
+        // If there are currentSponsors include cardB, if not cardA
+        // @include card-b-colors-light;
+        @include card-a-colors-light;
         .btn-donate {
             border: 1px solid #d1d5db;
         }
@@ -83,7 +85,7 @@
             color: #e0e0e0;
         }
     }
-    .card {
+    .tier-card {
         @include card-b-colors-dark;
         &:hover {
             box-shadow: 0 8px 16px rgba(255, 255, 255, 0.07);
@@ -93,7 +95,9 @@
         @include card-a-colors-dark;
     }
     .contribution {
-        @include card-b-colors-dark;
+        // If there are currentSponsors include cardB, if not cardA
+        // @include card-b-colors-dark;
+        @include card-a-colors-dark;
         .btn-donate {
             border: 1px solid #454545;
         }
