@@ -13,7 +13,10 @@ Follow my speaker journey.
 
 ### 2024
 
-Little break 🧱
+#### October
+
+- 2024-10-29 | Berlin Hack & Tell [**Berlin, Germany**] (EN)
+  - [bashunit in 5 min](https://bhnt.c-base.org/2024-10-29-no100-annivercary) ([Video](https://youtu.be/SX7iNHaSsF0))
 
 #### June
 
