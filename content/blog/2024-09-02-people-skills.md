@@ -9,7 +9,7 @@ subtitle = "From code to collaboration"
 static_thumbnail = "/images/blog/2024-09-02/cover.jpg"
 +++
 
-![cover](/images/blog/2024-09-02/cover.jpg)
+![blog-cover](/images/blog/2024-09-02/cover.jpg)
 
 So, you're a software developer, and you've mastered coding languages, algorithms, and all the tech stuff. That's awesome! But here's the deal: technical skills alone won't get you as far as you might think. If you can't work well with others, it doesn't matter how great your code is — nobody will want to work with you.
 
@@ -27,7 +27,7 @@ In the long run, your people skills can boost your success as much, if not more,
 
 > People skills are as necessary as technical skills. No one will want to work with you if you are not a good team player.
 
-![cover](/images/blog/2024-09-02/middle.jpg)
+![middle](/images/blog/2024-09-02/middle.jpg)
 
 ## What are people skills?
 
