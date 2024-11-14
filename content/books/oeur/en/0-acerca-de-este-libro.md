@@ -19,7 +19,7 @@ This project wasn't possible at all without the help of three friends:
 
 I published the book only in Spanish. I think it's time for the EN version.
 
-#### Spanish edition: [Librería Diego Marín](https://www.diegomarin.com/9788417192471-ojos-en-un-recuerdo.html)
+#### Spanish edition: [Librería Diego Marín](https://www.diegomarin.com/catalog/product/view/id/159719)
 #### Spanish ebook: [Leanpub](https://leanpub.com/ojosenunrecuerdo) _(PDF|EPUB|MOBI)_
 
 ### Acknowledgments
