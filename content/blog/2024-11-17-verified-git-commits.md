@@ -38,7 +38,9 @@ Without signed commits, anyone could fake a commit using someone else's email. F
 
 By signing your commits, you show that the work is genuinely yours. It stops impersonation, builds trust in what you've done, and keeps everything transparent and accountable.
 
-> Note: For this demo, I used a public email address belonging to Linus Torvalds. After pushing the commit to this repository, GitHub recognized the email and linked it to his profile. This impersonation attempt is purely for demonstration purposes to highlight potential risks. Always use your own email for commits, and avoid impersonating others to maintain trust and integrity in your projects.
+> <small>Note: For this demo, I used a public email address belonging to Linus Torvalds. After pushing the commit to this repository, GitHub recognized the email and linked it to his profile. This impersonation is purely for demo purposes to highlight potential risks. Always use your own email for commits.</small>
+
+---
 
 ## How to get started with verified commits
 
