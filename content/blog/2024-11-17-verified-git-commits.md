@@ -20,7 +20,7 @@ Whether you're working on an open-source project or in a private company, verifi
 
 ## What are verified commits?
 
-A verified commit is basically a Git commit that's signed by the author using a digital signature. This signature proves that the commit actually came from the person who says they made it. Tools like GPG (GNU Privacy Guard) let you attach this signature to your commits.
+A verified commit is basically a Git commit that is signed by the author using a digital signature. This signature proves that the commit actually came from the person who says they made it. Tools like [GPG (GNU Privacy Guard)](https://gnupg.org/) let you attach this signature to your commits.
 
 If you're using platforms like GitHub, you'll notice a little "Verified" badge next to commits that are signed properly. It's a quick way to show that the commit is authentic.
 
@@ -34,7 +34,7 @@ Without signed commits, anyone could fake a commit using someone else's email. F
 
 ![cover](/images/blog/2024-11-17/impersonating-commit.jpg)
 
-![cover](/images/blog/2024-11-17/impersonating-commit3.jpg)
+![cover](/images/blog/2024-11-17/impersonating-commit4.jpg)
 
 By signing your commits, you show that the work is genuinely yours. It stops impersonation, builds trust in what you've done, and keeps everything transparent and accountable.
 
