@@ -73,6 +73,8 @@ Navigate to "Settings > SSH and GPG keys," and paste your key.
 - GitHub: [https://github.com/settings/keys](https://github.com/settings/keys)
 - GitLab: [https://gitlab.com/-/user_settings/gpg_keys](https://gitlab.com/-/user_settings/gpg_keys)
 
+![cover](/images/blog/2024-11-17/gpg-keys.jpg)
+
 ### Start signing commits
 
 From now on, Git will automatically sign your commits. 
@@ -85,6 +87,10 @@ You can **verify** the commit signature with:
 ```bash
 git log --show-signature
 ```
+
+And also when clicking on the "Verified" badge on GitHub directly.
+
+![cover](/images/blog/2024-11-17/gpg-verify.jpg)
 
 Verified commits might seem like a small step, but they make your code more trustworthy. It's an easy way to add an extra layer of protection to your work—and it's worth it. Give it a try!
 
