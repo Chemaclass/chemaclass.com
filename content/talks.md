@@ -13,6 +13,11 @@ Follow my speaker journey.
 
 ### 2024
 
+#### November
+
+- 2024-11-21 | Internal talks at Purpose Green [**Berlin, Germany**] (EN)
+  - How to improve your Tech Talk - Applies to any presentation
+
 #### October
 
 - 2024-10-29 | Berlin Hack & Tell [**Berlin, Germany**] (EN)
