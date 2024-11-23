@@ -47,10 +47,18 @@ body {
     padding: 1rem;
     box-sizing: border-box;
     width: 50%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
 
     span {
       font-style: italic;
       font-size: 1rem;
+    }
+    a {
+      text-wrap: balance;
     }
   }
 }

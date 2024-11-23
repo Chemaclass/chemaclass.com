@@ -4,15 +4,15 @@
 
   {% if page.higher %}
   <div class="link">
-    <span>{% if orderDesc %}Older{% else %}Newer{% endif %}</span> <br />
-    <a href="{{ page.higher.permalink }}">{{ page.higher.title }}</a>
+    <span>{% if orderDesc %}Older{% else %}Newer{% endif %}</span>
+    <a href="{{ page.higher.permalink }}" class="close-border">{{ page.higher.title }}</a>
   </div>
   {% endif %}
 
   {% if page.lower %}
   <div class="link">
-    <span>{% if orderDesc %}Newer{% else %}Older{% endif %}</span> <br />
-    <a href="{{ page.lower.permalink }}">{{ page.lower.title }}</a>
+    <span>{% if orderDesc %}Newer{% else %}Older{% endif %}</span>
+    <a href="{{ page.lower.permalink }}" class="close-border">{{ page.lower.title }}</a>
   </div>
   {% endif %}
 

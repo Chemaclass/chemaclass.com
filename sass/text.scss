@@ -60,6 +60,10 @@ a {
   &:hover {
     border-bottom: 1px solid var(--accent-color-light);
   }
+  &.close-border:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
 }
 
 $max-width: 700px;
