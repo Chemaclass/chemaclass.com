@@ -22,7 +22,7 @@ git clone https://github.com/Chemaclass/chemaclass.com.git
 
 2. Start the project
 ```
-zola serve
+npm start
 ```
 
 Open [http://localhost:1111/](http://localhost:1111/) to view it in your browser.
