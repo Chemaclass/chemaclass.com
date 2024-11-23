@@ -11,7 +11,7 @@ Visit my portfolio: https://chemaclass.com/
 
 ### 📦 Prerequisites
 
-- Zola (0.19.1 or higher) | [installation](https://www.getzola.org/documentation/getting-started/installation/)
+- Zola (0.19.2 or higher) | [installation](https://www.getzola.org/documentation/getting-started/installation/)
 
 ### 🚀 Getting Started
 Follow these steps to set up and run this Zola project:

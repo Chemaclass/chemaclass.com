@@ -2,6 +2,7 @@
 title = "Test-Driven (Development)"
 description = "The complexity here is not about writing tests itself, but the habits that we have to change to create software that is easy to be tested."
 draft = false
+aliases = [ "/inner-peace-katas", "blog/inner-peace-katas" ]
 [taxonomies]
 tags = [ "tdd", "testing", "software" ]
 [extra]

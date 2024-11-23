@@ -27,7 +27,7 @@ Este proyecto no hubiera sido posible sin la ayuda de tres amigos:
 
 El libro fué publicado solo en castellano.
 
-#### Físico: [Librería Diego Marín](https://www.diegomarin.com/9788417192471-ojos-en-un-recuerdo.html)
+#### Físico: [Librería Diego Marín](https://www.diegomarin.com/catalog/product/view/id/159719)
 #### Digital: [Leanpub](https://leanpub.com/ojosenunrecuerdo) _(PDF|EPUB|MOBI)_
 
 ## Agradecimientos
