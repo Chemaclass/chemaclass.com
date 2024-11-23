@@ -43,7 +43,7 @@ body {
   text-align: center;
 
   > .link {
-    flex-shrink: 0;
+    flex: 1;
     padding: 1rem;
     box-sizing: border-box;
     width: 50%;
