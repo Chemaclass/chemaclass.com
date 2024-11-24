@@ -1,5 +1,5 @@
-+++
-+++
+---
+---
 # 🔧 Zola Blog Scheduling
 This system allows you to schedule blog posts in Zola, automatically displaying today's date for posts scheduled in the future. You can also use 
 `draft=true` to test posts without publishing them.
