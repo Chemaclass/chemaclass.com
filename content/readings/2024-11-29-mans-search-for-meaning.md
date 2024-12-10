@@ -78,6 +78,12 @@ This approach helps you gain a broader perspective, allowing awareness of both y
 
 ---
 
+## Animated book summary
+
+{{ youtube(id="-srD1Deh9Xg?t=64") }}
+
+---
+
 ### Related posts
 
 - [Have you always been like this?](/blog/have-you-always-been-like-this/) <small>How to find a balance of growth and happiness</small>
