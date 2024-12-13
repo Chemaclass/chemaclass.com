@@ -11,6 +11,23 @@ Follow my speaker journey.
 
 ## Upcoming events 🎤
 
+### 2025
+
+#### July
+
+- to be confirmed
+
+#### June
+
+- 2025-05-03 | International PHP Conference [**Berlin, Germany**] (EN)
+  - [Solving a Testing & Refactoring Kata: Live Coding in Pair/Mob Programming](https://phpconference.com/slideless-pure-coding/testing-refactoring-kata-live-coding-pair-mob-programming/)
+
+#### March
+
+- to be confirmed
+
+---
+
 ### 2024
 
 #### November
