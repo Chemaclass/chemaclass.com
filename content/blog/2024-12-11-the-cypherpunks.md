@@ -84,10 +84,12 @@ Their advocacy has contributed to legal battles and policy discussions regarding
 
 ## Challenges and Criticisms
 
-Despite their contributions, Cypherpunks faced and continue to face criticism such as lack of accessibility and potential misuse.
+The Cypherpunks face these main criticisms:
 
-- The technical nature of their work meant that only a subset of the population could fully utilize the tools they championed.
-- There has always been a debate on whether strong encryption can be misused by criminals or terrorists, though Cypherpunks argue that privacy is a right and not just a privilege for the law-abiding.
+- **Accessibility**: Their tools are too complex for many people, so only tech-savvy individuals can use them, leaving others behind.
+- **Misuse Risk**: There's concern that their encryption tech could be used by bad actors. While Cypherpunks believe privacy is a right for all, this view conflicts with security concerns from authorities who fear these tools could hide illegal acts.
+
+This shows the ongoing struggle between promoting privacy and maintaining safety in the digital world.
 
 ## Bitcoin and the Cypherpunk Legacy
 
