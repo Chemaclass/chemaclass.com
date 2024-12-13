@@ -81,8 +81,6 @@ They've shifted public discourse around privacy, making encryption a household c
 
 Their advocacy has contributed to legal battles and policy discussions regarding encryption and privacy rights.
 
-![cover](/images/blog/2024-12-11/middle.jpg)
-
 ## Challenges and Criticisms
 
 The Cypherpunks face these main criticisms:
@@ -91,6 +89,8 @@ The Cypherpunks face these main criticisms:
 - **Misuse Risk**: There's concern that their encryption tech could be used by bad actors. While Cypherpunks believe privacy is a right for all, this view conflicts with security concerns from authorities who fear these tools could hide illegal acts.
 
 This shows the ongoing struggle between promoting privacy and maintaining safety in the digital world.
+
+![cover](/images/blog/2024-12-11/btc-p2p.jpg)
 
 ## Precursors to Bitcoin
 
