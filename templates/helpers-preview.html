@@ -23,6 +23,11 @@
   {%- endif %}
 {% endmacro %}
 
+{% macro summary_tags(post) %}
+  {{ post.summary | safe  }}
+  {{ post.content | safe | striptags | truncate(length=300) }}
+{% endmacro %}
+
 {% macro author(post) %}
   {% if post.extra.author %}
     <br>
