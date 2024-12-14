@@ -143,6 +143,7 @@ Their vision continues to influence the creation of technologies that allow indi
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
 - [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
 - [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
+- [Bitcoin: A Work in Progress](/readings/bitcoin-wip/) <small>by Sjors Provoost</small>
 
 ### Related links
 

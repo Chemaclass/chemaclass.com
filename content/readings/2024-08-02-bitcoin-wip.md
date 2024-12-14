@@ -1,6 +1,7 @@
 +++
 title = "Bitcoin: A Work in Progress"
-description = ""
+description = "With thousands of 'crypto' projects out there, they say Bitcoin is old and boring, but nothing could be further from the truth. This book will guide you through the latest developments in Bitcoin, as seen through the eyes of one of its many developers."
+aliases = [ "/readings/btc-wip", "/readings/btcwip" ]
 draft = false
 [taxonomies]
 tags = [ "software", "bitcoin" ]
@@ -75,8 +76,6 @@ The book links to more than two hundred articles, videos, podcasts, and even the
 
 ### Related readings
 
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
-- [The Blocksize War](/readings/the-blocksize-war/) <small>by Jonathan Bier</small>
-- [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>by Saifedean Ammous</small>
 - [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
+- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
