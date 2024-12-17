@@ -17,16 +17,16 @@ In the early '90s, with the internet on the rise, a group called the Cypherpunks
 <!-- more -->
 
 1. Who were the Cypherpunks?
-2. Philosophy and Goals
-3. Impact and Legacy
-4. Challenges and Criticisms
+2. Philosophy and goals
+3. Impact nowadays
+4. Challenges and criticisms
 5. Precursors to Bitcoin
-6. Bitcoin and the Cypherpunk Legacy
+6. Cypherpunk legacy
 7. Conclusion
 
 ## Who were the Cypherpunks?
 
-The term "Cypherpunk" melds "cipher," representing encryption technology, with "punk," capturing the group's rebellious spirit. 
+The term “Cypherpunk” combines “cipher”—a reference to encryption technology—with “punk”, reflecting the group's rebellious and anti-establishment spirit. 
 
 Far from being a formal organization, the Cypherpunks were a diverse assembly of visionaries, technologists, and activists bonded by shared principles. Some of them:
 
@@ -50,7 +50,7 @@ These individuals not only contributed to the ideological framework of the Cyphe
 
 ![cover](/images/blog/2024-12-11/manifesto.jpg)
 
-## Philosophy and Goals
+## Philosophy and goals
 
 The core philosophy of the Cypherpunks was centered around privacy, freedom of speech, and the potential of cryptography to protect these rights. Their main tenets included:
 
@@ -64,22 +64,19 @@ The core philosophy of the Cypherpunks was centered around privacy, freedom of s
 1. To educate the public on the importance of cryptography.
 1. To resist governmental and corporate efforts to control or monitor digital communications.
 
-## Impact and Legacy
-
-The impact of the Cypherpunks has been profound:
+## Impact nowadays
 
 ### Development of key technologies
 
-They were instrumental in the development of PGP (Pretty Good Privacy), one of the first widespread encryption tools for email. 
-They also influenced the creation of Bitcoin through the concept of digital cash and anonymity.
- 
-### Cultural Shift
+Cypherpunks were pioneers in developing tools that protect privacy. They created PGP (Pretty Good Privacy), one of the first widely used email encryption tools, making secure communication accessible to everyone. Their ideas on digital cash and anonymity also influenced the creation of Bitcoin, a decentralized currency that eliminates the need for trusted intermediaries.
 
-They've shifted public discourse around privacy, making encryption a household concept and pushing for broader acceptance of privacy tools.
+### Cultural shift
 
-### Legal and Policy Influence
+They changed how society views privacy. Before them, encryption was mostly for governments or experts. Today, it's a standard part of tools like messaging apps and web browsers. By promoting encryption and anonymity, they made privacy a priority and encouraged people to take control of their data.
 
-Their advocacy has contributed to legal battles and policy discussions regarding encryption and privacy rights.
+### Legal and policy influence
+
+The movement push on major debates on encryption and privacy laws. For example, their fight over restrictions on PGP in the 1990s highlighted the tension between privacy rights and government control. Cypherpunk ideas continue to shape discussions on surveillance, encryption bans, and the right to privacy in today's digital world.
 
 ## Challenges and Criticisms
 
@@ -112,7 +109,7 @@ Introduced by Adam Back in 1997, Hashcash was not a currency but a system to cou
 
 > These earlier projects and ideas, while not successful in creating a functional digital currency, were critical in laying the theoretical groundwork for Bitcoin. They tackled issues like double-spending, privacy, and decentralization, which were key problems Bitcoin aimed to solve.
 
-## Bitcoin and the Cypherpunk Legacy
+## Cypherpunk legacy
 
 Bitcoin has revolutionized our understanding of money, privacy, and security:
 
