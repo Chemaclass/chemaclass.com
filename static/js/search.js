@@ -118,12 +118,12 @@ function initSearch() {
                     }
                 );
         }
-        let res = await index;
-        return res;
+        return await index;
     }
 
     $searchInput.addEventListener("keyup", debounce(async function () {
         let term = $searchInput.value.trim();
+        console.log({term})
         if (term === currentTerm) {
             return;
         }

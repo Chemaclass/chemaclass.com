@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="{{ get_url(path='index.css') | safe }}">
   <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
   <link rel="stylesheet" href="{{ get_url(path='snow.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
 {% endblock styles %}
 
 {% block posthead %}
@@ -106,6 +107,13 @@
        data-from="{{latest_reading.date}}"
        title="{{ latest_reading.description }}"
     >"{{ latest_reading.title }}"</a>
+  </div>
+
+  <div class="search-container">
+    <input type="search" id="search" autocomplete="off" placeholder="Search...">
+    <div class="search-results">
+      <div class="search-results__items"></div>
+    </div>
   </div>
 
 </div>
