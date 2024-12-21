@@ -8,12 +8,15 @@ function setHeightVariables() {
     pageHeightVh = (100 * bodyHeightPx / window.innerHeight) - 5;
 }
 
-function showSnow() {
-    document.getElementById('snow').style.display = "block";
+function showSnow(isShowSnow) {
+    if (isShowSnow) {
+        document.getElementById('snow').style.display = "block";
+    } else {
+        document.getElementById('snow').style.display = "none";
+    }
 }
 
-// Creating snowflakes
-function generateSnow(snowDensity) {
+function generateSnowflakes(snowDensity) {
     snowDensity -= 1;
     const snowWrapper = document.getElementById('snow');
     snowWrapper.innerHTML = '';
@@ -94,11 +97,11 @@ function generateSnowCSS(snowDensity = 50) {
 }
 
 // Load the rules and execute after the DOM loads
-function createSnow() {
+function createSnow(isShowSnow) {
     setHeightVariables();
     generateSnowCSS(snowflakesCount);
-    generateSnow(snowflakesCount);
-    showSnow();
+    generateSnowflakes(snowflakesCount);
+    showSnow(isShowSnow);
 }
 
 function isChristmas() {
@@ -109,7 +112,40 @@ function isChristmas() {
     return (month === 12) || (month === 1 && day <= 15);
 }
 
-if (isChristmas()) {
-    window.addEventListener('resize', createSnow);
-    createSnow();
+// Enable / disable snowflakes from toggle button in menu
+const SNOW_KEY = 'snow';
+const ENABLE_SNOW = 'show';
+const DISABLE_SNOW = 'hide';
+
+const toggleSnow = document.getElementById('toggle-snow');
+
+if (isChristmas() === false) {
+    localStorage.removeItem(SNOW_KEY);
+    toggleSnow.style.display = "none";
+} else {
+    if (localStorage.getItem(SNOW_KEY) === ENABLE_SNOW) {
+        localStorage.setItem(SNOW_KEY, ENABLE_SNOW);
+    }
+
+    if (localStorage.getItem(SNOW_KEY) === ENABLE_SNOW) {
+        toggleSnow.innerHTML = "⛄️";
+        createSnow(true);
+    } else {
+        toggleSnow.innerHTML = "☃️";
+        createSnow(false);
+    }
 }
+
+function toggleSnowMethod() {
+    if (localStorage.getItem(SNOW_KEY) !== ENABLE_SNOW) {
+        localStorage.setItem(SNOW_KEY, ENABLE_SNOW);
+        toggleSnow.innerHTML = "⛄️";
+        createSnow(true);
+    } else {
+        localStorage.setItem(SNOW_KEY, DISABLE_SNOW);
+        toggleSnow.innerHTML = "☃️";
+        createSnow(false);
+    }
+}
+
+toggleSnow.addEventListener('click', toggleSnowMethod);
