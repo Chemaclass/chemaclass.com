@@ -41,3 +41,9 @@ The tale is a beautiful metaphor of the different attitudes that people adopt as
 {{ youtube(id="OvYCLxqkfvY") }}
 
 I wrote a blog post about this book: [Embrace the change](/blog/embrace-the-change/)
+
+---
+
+### Related posts
+
+- [Embrace the change](/blog/embrace-the-change//) <small>Who moved my cheese?🧀</small>
