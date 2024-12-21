@@ -118,8 +118,7 @@ function initSearch() {
                     }
                 );
         }
-        let res = await index;
-        return res;
+        return await index;
     }
 
     $searchInput.addEventListener("keyup", debounce(async function () {
@@ -286,7 +285,7 @@ function makeTeaser(body, terms) {
     let TERM_WEIGHT = 40;
     let NORMAL_WORD_WEIGHT = 2;
     let FIRST_WORD_WEIGHT = 8;
-    let TEASER_MAX_WORDS = 30;
+    let TEASER_MAX_WORDS = 25;
 
     let stemmedTerms = terms.map(function (w) {
         return elasticlunr.stemmer(w.toLowerCase());

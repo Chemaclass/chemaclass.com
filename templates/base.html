@@ -111,12 +111,14 @@
             <a href="{{ link.path }}" {% if link.id %}id="{{ link.id }}"{% endif %}>{{ link.name }}</a>
           {% endfor %}
 
+          {% block search %}
           <div class="search-container">
             <input type="search" id="search" autocomplete="off" placeholder="Search...">
             <div class="search-results">
               <div class="search-results__items"></div>
             </div>
           </div>
+          {% endblock search %}
         </nav>
 
       </header>
@@ -131,10 +133,7 @@
       | <a href="/sponsor"><i class="fa fa-magic dark-hover" aria-hidden="true"></i> Sponsor</a>
       © <time datetime="{{now() | date(format='%Y')}}">{{now() | date(format="%Y")}}</time>
       <div class="phone-footer-about"></div>
-      <span class="tooltip"
-        data-tooltip-pos="top"
-        data-tooltip="PGP: E51B 5BF4 5F85 D160">Chema</span>
-      - Jose M. Valera Reales
+      Chema - Jose M. Valera Reales
     </footer>
 
     <script type="text/javascript" src="{{ get_url(path='js/theme.js') | safe }}"></script>

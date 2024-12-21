@@ -1,3 +1,27 @@
+#frontpage {
+  .search-container {
+    display: inline-block;
+    margin-top: 29px;
+    width: 60%;
+  }
+  .search-results {
+    max-width: 470px;
+    max-height: 450px;
+    right: unset;
+    margin-left: -5px;
+  }
+
+  @media (max-width: 880px) {
+    .search-container {
+      width: 100%;
+    }
+    .search-results {
+      max-width: 400px;
+      padding: .5rem;
+    }
+  }
+}
+
 .search-container {
   display: inline-block;
   position: relative;
@@ -5,7 +29,7 @@
 
   input {
     width: 100%;
-    padding: 0.5rem;
+    padding: .6rem;
     color: var(--search-input-color) !important;
   }
 }
@@ -17,7 +41,7 @@
   color: black;
   padding: 1rem;
   box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-  max-height: 500px;
+  max-height: 450px;
   overflow: auto;
   width: 315%;
   right: 0;
