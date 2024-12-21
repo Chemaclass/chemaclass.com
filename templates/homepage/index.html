@@ -4,6 +4,9 @@
   Home | Chemaclass
 {% endblock %}
 
+{% block search %}
+{% endblock search %}
+
 {% block styles%}
   <link rel="stylesheet" href="{{ get_url(path='index.css') | safe }}">
   <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
@@ -70,6 +73,31 @@
     I love software development focusing on communication, simplicity, feedback, courage, and respect.
   </p>
 
+  <div class="search-container">
+    <input type="search" id="search" autocomplete="off" placeholder="Search...">
+    <div class="search-results">
+      <div class="search-results__items"></div>
+    </div>
+  </div>
+
+  <div class="latest-container">
+    Latest <b>post</b>:
+    {% set blogs = get_section(path="blog" ~ "/_index.md") %}
+    {% set latest_blog = blogs.pages.0 %}
+    <a href="{{ latest_blog.permalink }}"
+       data-from="{{latest_blog.date}}"
+       title="{{ latest_blog.description }}"
+    >"{{ latest_blog.title }}"</a>
+    <br>
+    {% set readings = get_section(path="readings" ~ "/_index.md") %}
+    {% set latest_reading = readings.pages.0 %}
+    Latest <b>reading</b>:
+    <a href="{{ latest_reading.permalink }}"
+       data-from="{{latest_reading.date}}"
+       title="{{ latest_reading.description }}"
+    >"{{ latest_reading.title }}"</a>
+  </div>
+
   <table class="social-links">
     <tr>
       <td>
@@ -90,31 +118,6 @@
       </td>
     </tr>
   </table>
-
-  <div class="latest-container">
-    Latest <b>post</b>:
-    {% set blogs = get_section(path="blog" ~ "/_index.md") %}
-    {% set latest_blog = blogs.pages.0 %}
-    <a href="{{ latest_blog.permalink }}"
-       data-from="{{latest_blog.date}}"
-       title="{{ latest_blog.description }}"
-    >"{{ latest_blog.title }}"</a>
-    <br>
-    {% set readings = get_section(path="readings" ~ "/_index.md") %}
-    {% set latest_reading = readings.pages.0 %}
-    Latest <b>reading</b>:
-    <a href="{{ latest_reading.permalink }}"
-       data-from="{{latest_reading.date}}"
-       title="{{ latest_reading.description }}"
-    >"{{ latest_reading.title }}"</a>
-  </div>
-
-  <div class="search-container">
-    <input type="search" id="search" autocomplete="off" placeholder="Search...">
-    <div class="search-results">
-      <div class="search-results__items"></div>
-    </div>
-  </div>
 
 </div>
 {% endblock content %}
