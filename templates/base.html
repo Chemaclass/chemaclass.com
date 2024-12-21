@@ -92,6 +92,7 @@
       <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
       <link rel="stylesheet" href="{{ get_url(path='sponsor.css') | safe }}">
       <link rel="stylesheet" href="{{ get_url(path='snow.css') | safe }}">
+      <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
     {% endblock styles %}
     {% block rss %}
       <link rel="alternate" type="application/atom+xml" href="{{ get_url(path='atom.xml') | safe }}" title="Atom Feed">
@@ -109,7 +110,16 @@
           {% for link in config.extra.nav %}
             <a href="{{ link.path }}" {% if link.id %}id="{{ link.id }}"{% endif %}>{{ link.name }}</a>
           {% endfor %}
+
+          <div class="search-container">
+            <input type="search" id="search" autocomplete="off" placeholder="Search...">
+
+            <div class="search-results">
+              <div class="search-results__items"></div>
+            </div>
+          </div>
         </nav>
+
       </header>
     {% endblock header %}
 
@@ -128,7 +138,9 @@
       - Jose M. Valera Reales
     </footer>
 
-    <script src="{{ get_url(path='js/theme.js') | safe }}"></script>
+    <script type="text/javascript" src="{{ get_url(path='js/theme.js') | safe }}"></script>
+    <script type="text/javascript" src="{{ get_url(path='elasticlunr.min.js') }}" defer></script>
+    <script type="text/javascript" src="{{ get_url(path='js/search.js') }}" defer></script>
     <script src="{{ get_url(path='js/snow.js') | safe }}" defer></script>
   </body>
   {% block js %}
