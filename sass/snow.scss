@@ -1,0 +1,25 @@
+#snow {
+  width: 100%;
+}
+
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(#eee, #ececec);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #c5c5c5);
+}
+
+:root:has(body.dark) {
+  .snowflake {
+    background: linear-gradient(#eee, #ececec);
+    filter: drop-shadow(0 0 10px #c5c5c5);
+  }
+}
+:root:has(body.light) {
+  .snowflake {
+    background: linear-gradient(#ec6708, #d95812);
+    filter: drop-shadow(0 0 10px #d74100);
+  }
+}

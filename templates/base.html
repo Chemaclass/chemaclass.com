@@ -91,6 +91,7 @@
       <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
       <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
       <link rel="stylesheet" href="{{ get_url(path='sponsor.css') | safe }}">
+      <link rel="stylesheet" href="{{ get_url(path='snow.css') | safe }}">
     {% endblock styles %}
     {% block rss %}
       <link rel="alternate" type="application/atom+xml" href="{{ get_url(path='atom.xml') | safe }}" title="Atom Feed">
@@ -98,6 +99,7 @@
     {% block posthead %}{% endblock posthead %}
   </head>
   <body>
+    <div id="snow"></div>
     {% block header %}
       <header>
         <a class="profile-icon" href="/">
@@ -126,7 +128,8 @@
       - Jose M. Valera Reales
     </footer>
 
-    <script src="{{ get_url(path="js/theme.js") | safe }}"></script>
+    <script src="{{ get_url(path='js/theme.js') | safe }}"></script>
+    <script src="{{ get_url(path='js/snow.js') | safe }}" defer></script>
   </body>
   {% block js %}
   {% endblock js %}
