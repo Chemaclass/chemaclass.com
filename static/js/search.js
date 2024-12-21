@@ -3,8 +3,93 @@ const UP_ARROW = "ArrowUp";
 const DOWN_ARROW = "ArrowDown";
 const ENTER_KEY = "Enter";
 
+let $searchInput = document.getElementById("search");
+let $searchResults = document.querySelector(".search-results");
+let $searchResultsItems = document.querySelector(".search-results__items");
+
 let searchItemSelected = null;
 let resultsItemsIndex = -1;
+
+////////////////////////////////////
+// Interaction with the search input
+////////////////////////////////////
+document.addEventListener("keyup", function (keyboardEvent) {
+    if (["s", "S", "/"].includes(keyboardEvent.key)) {
+        $searchInput.focus();
+    }
+});
+
+document.addEventListener("keydown", function (keyboardEvent) {
+    const len = $searchResultsItems.getElementsByTagName("li").length - 1;
+
+    if (keyboardEvent.key === DOWN_ARROW) {
+        downArrow(len);
+    } else if (keyboardEvent.key === UP_ARROW) {
+        upArrow(len);
+    } else if (keyboardEvent.key === ENTER_KEY) {
+        searchItemSelected.getElementsByTagName("a")[0].click();
+    }
+});
+
+function downArrow(len) {
+    resultsItemsIndex++;
+    console.log('down arrow '+resultsItemsIndex);
+
+    if (!searchItemSelected) {
+        resultsItemsIndex = 0;
+        searchItemSelected = $searchResultsItems.getElementsByTagName("li")[0];
+    } else {
+        removeClass(searchItemSelected, "selected");
+        const next = $searchResultsItems.getElementsByTagName("li")[resultsItemsIndex];
+
+        if (typeof next !== undefined && resultsItemsIndex <= len) {
+            searchItemSelected = next;
+        } else {
+            resultsItemsIndex = 0;
+            searchItemSelected = $searchResultsItems.getElementsByTagName("li")[0];
+        }
+    }
+
+    searchItemSelected.focus()
+    addClass(searchItemSelected, "selected");
+}
+
+function upArrow(len) {
+    console.log('up arrow '+resultsItemsIndex);
+    if (!searchItemSelected) {
+        resultsItemsIndex = -1;
+        searchItemSelected = $searchResultsItems.getElementsByTagName("li")[len];
+    } else {
+        removeClass(searchItemSelected, "selected");
+        resultsItemsIndex--;
+        const next = $searchResultsItems.getElementsByTagName("li")[resultsItemsIndex];
+
+        if (typeof next !== undefined && resultsItemsIndex >= 0) {
+            searchItemSelected = next;
+        } else {
+            resultsItemsIndex = len;
+            searchItemSelected = $searchResultsItems.getElementsByTagName("li")[len];
+        }
+    }
+    searchItemSelected.focus()
+    addClass(searchItemSelected, "selected");
+}
+
+function removeClass(el, className) {
+    if (el.classList) {
+        el.classList.remove(className);
+    } else {
+        el.className = el.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " ");
+    }
+}
+
+function addClass(el, className) {
+    if (el.classList) {
+        el.classList.add(className);
+    } else {
+        el.className += " " + className;
+    }
+}
 
 ///////////////////////////////
 // Autoload of the search input
@@ -16,9 +101,9 @@ if (document.readyState === "complete" || (document.readyState !== "loading" && 
 }
 
 function initSearch() {
-    const $searchInput = document.getElementById("search");
-    const $searchResults = document.querySelector(".search-results");
-    const $searchResultsItems = document.querySelector(".search-results__items");
+    $searchInput = document.getElementById("search");
+    $searchResults = document.querySelector(".search-results");
+    $searchResultsItems = document.querySelector(".search-results__items");
 
     const options = {
         bool: "AND",
@@ -34,7 +119,7 @@ function initSearch() {
         if (index === undefined) {
             index = fetch("/search_index.en.json")
                 .then(
-                    async function(response) {
+                    async function (response) {
                         return await elasticlunr.Index.load(await response.json());
                     }
                 );
@@ -43,7 +128,7 @@ function initSearch() {
         return res;
     }
 
-    $searchInput.addEventListener("keyup", debounce(async function() {
+    $searchInput.addEventListener("keyup", debounce(async function () {
         var term = $searchInput.value.trim();
         if (term === currentTerm) {
             return;
@@ -68,7 +153,7 @@ function initSearch() {
         }
     }, 150));
 
-    window.addEventListener('click', function(e) {
+    window.addEventListener('click', function (e) {
         if ($searchResults.style.display === "block" && !$searchResults.contains(e.target)) {
             $searchResults.style.display = "none";
         }
