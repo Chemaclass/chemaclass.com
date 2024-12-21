@@ -108,15 +108,15 @@
           {% for link in config.extra.nav %}
             <a href="{{ link.path }}" {% if link.id %}id="{{ link.id }}"{% endif %}>{{ link.name }}</a>
           {% endfor %}
-        </nav>
 
-        <div class="search-container">
-          <input type="search" id="search" autocomplete="off" placeholder="Search...">
+          <div class="search-container">
+            <input type="search" id="search" autocomplete="off" placeholder="Search...">
 
-          <div class="search-results">
-            <div class="search-results__items"></div>
+            <div class="search-results">
+              <div class="search-results__items"></div>
+            </div>
           </div>
-        </div>
+        </nav>
 
       </header>
     {% endblock header %}
