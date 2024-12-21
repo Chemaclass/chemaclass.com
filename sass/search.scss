@@ -6,7 +6,9 @@
   }
   .search-results {
     max-width: 470px;
-    max-height: 500px;
+    max-height: 450px;
+    right: unset;
+    margin-left: -5px;
   }
 
   @media (max-width: 880px) {
@@ -15,6 +17,7 @@
     }
     .search-results {
       max-width: 400px;
+      padding: .5rem;
     }
   }
 }
@@ -38,7 +41,7 @@
   color: black;
   padding: 1rem;
   box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-  max-height: 500px;
+  max-height: 450px;
   overflow: auto;
   width: 315%;
   right: 0;
