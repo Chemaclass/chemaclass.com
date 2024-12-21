@@ -1,9 +1,115 @@
+const MAX_ITEMS = 10;
+const UP_ARROW = "ArrowUp";
+const DOWN_ARROW = "ArrowDown";
+const ENTER_KEY = "Enter";
+
+let searchItemSelected = null;
+let resultsItemsIndex = -1;
+
+///////////////////////////////
+// Autoload of the search input
+///////////////////////////////
+if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
+    initSearch();
+} else {
+    document.addEventListener("DOMContentLoaded", initSearch);
+}
+
+function initSearch() {
+    const $searchInput = document.getElementById("search");
+    const $searchResults = document.querySelector(".search-results");
+    const $searchResultsItems = document.querySelector(".search-results__items");
+
+    const options = {
+        bool: "AND",
+        fields: {
+            title: {boost: 2},
+            body: {boost: 1},
+        }
+    };
+    let currentTerm = "";
+    let index;
+
+    const initIndex = async function () {
+        if (index === undefined) {
+            index = fetch("/search_index.en.json")
+                .then(
+                    async function(response) {
+                        return await elasticlunr.Index.load(await response.json());
+                    }
+                );
+        }
+        let res = await index;
+        return res;
+    }
+
+    $searchInput.addEventListener("keyup", debounce(async function() {
+        var term = $searchInput.value.trim();
+        if (term === currentTerm) {
+            return;
+        }
+        $searchResults.style.display = term === "" ? "none" : "block";
+        $searchResultsItems.innerHTML = "";
+        currentTerm = term;
+        if (term === "") {
+            return;
+        }
+
+        var results = (await initIndex()).search(term, options);
+        if (results.length === 0) {
+            $searchResults.style.display = "none";
+            return;
+        }
+
+        for (let i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
+            const item = document.createElement("li");
+            item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
+            $searchResultsItems.appendChild(item);
+        }
+    }, 150));
+
+    window.addEventListener('click', function(e) {
+        if ($searchResults.style.display === "block" && !$searchResults.contains(e.target)) {
+            $searchResults.style.display = "none";
+        }
+    });
+    $searchInput.addEventListener("keyup", function (keyboardEvent) {
+        if (keyboardEvent.key === DOWN_ARROW || keyboardEvent.key === UP_ARROW || keyboardEvent.key === ENTER_KEY) {
+            return;
+        }
+
+        searchItemSelected = null;
+        resultsItemsIndex = -1;
+        debounce(showResults(index), 150)();
+    });
+
+    // Hide results when user press on the "x" placed inside the search field
+    $searchInput.addEventListener("search", () => $searchResults.style.display = "");
+    $searchInput.addEventListener("focusin", function () {
+        if ($searchInput.value !== "") {
+            showResults(index)();
+        }
+    });
+
+    $searchInput.addEventListener("focusout", function () {
+        resultsItemsIndex = -1;
+    });
+
+    window.addEventListener("click", function (mouseEvent) {
+        if ($searchResults.style.display === "block") {
+            if (mouseEvent.target !== $searchInput) {
+                $searchResults.style.display = "";
+            }
+        }
+    });
+}
+
 function debounce(func, wait) {
-    var timeout;
+    let timeout;
 
     return function () {
-        var context = this;
-        var args = arguments;
+        const context = this;
+        const args = arguments;
         clearTimeout(timeout);
 
         timeout = setTimeout(function () {
@@ -11,6 +117,79 @@ function debounce(func, wait) {
             func.apply(context, args);
         }, wait);
     };
+}
+
+function showResults(index) {
+    return function () {
+        let $searchInput = window.$searchInput || null;
+        if ($searchInput === undefined || $searchInput === null) return;
+
+        const term = $searchInput.value.trim();
+        $searchResults.style.display = term === "" ? "" : "block";
+        $searchResultsItems.innerHTML = "";
+        if (term === "") {
+            $searchResults.style.display = "";
+            return;
+        }
+
+        const options = {
+            bool: "AND",
+            fields: {
+                title: {boost: 2},
+                body: {boost: 1},
+            },
+            expand: true
+        };
+
+        const emptyResult = {
+            title: "Nothing found",
+            body: "Try something else",
+            id: "#",
+        };
+
+        if (index === undefined || typeof index.search !== "function") {
+            createMenuItem(emptyResult, null);
+            return;
+        }
+
+        const results = index.search(term, options);
+        if (results.length === 0) {
+            createMenuItem(emptyResult, null);
+            return;
+        }
+
+        const numberOfResults = Math.min(results.length, MAX_ITEMS);
+        for (let i = 0; i < numberOfResults; i++) {
+            createMenuItem(results[i].doc, i);
+        }
+    }
+}
+
+function createMenuItem(result, index) {
+    const item = document.createElement("li");
+    item.innerHTML = formatSearchResultItem(result);
+    item.addEventListener("mouseenter", (mouseEvent) => {
+        removeSelectedClassFromSearchResult();
+        mouseEvent.target.classList.add("selected");
+        searchItemSelected = mouseEvent.target;
+        resultsItemsIndex = index;
+    })
+    item.addEventListener("click", () => $searchInput.value = "")
+    $searchResultsItems.appendChild(item);
+}
+
+function formatSearchResultItem(item, terms) {
+    return '<div class="search-results__item">'
+        + `<a href="${item.ref}">${item.doc.title}</a>`
+        + `<div>${makeTeaser(item.doc.body, terms)}</div>`
+        + '</div>';
+}
+
+function removeSelectedClassFromSearchResult() {
+    const $searchResultsItemChildren = $searchResultsItems.children;
+    for (let i = 0; i < $searchResultsItemChildren.length; i++) {
+        removeClass($searchResultsItemChildren[i], "selected")
+    }
 }
 
 // Taken from mdbook
@@ -119,81 +298,4 @@ function makeTeaser(body, terms) {
     }
     teaser.push("…");
     return teaser.join("");
-}
-
-function formatSearchResultItem(item, terms) {
-    return '<div class="search-results__item">'
-        + `<a href="${item.ref}">${item.doc.title}</a>`
-        + `<div>${makeTeaser(item.doc.body, terms)}</div>`
-        + '</div>';
-}
-
-function initSearch() {
-    var $searchInput = document.getElementById("search");
-    var $searchResults = document.querySelector(".search-results");
-    var $searchResultsItems = document.querySelector(".search-results__items");
-    var MAX_ITEMS = 10;
-
-    var options = {
-        bool: "AND",
-        fields: {
-            title: {boost: 2},
-            body: {boost: 1},
-        }
-    };
-    var currentTerm = "";
-    var index;
-
-    var initIndex = async function () {
-        if (index === undefined) {
-            index = fetch("/search_index.en.json")
-                .then(
-                    async function(response) {
-                        return await elasticlunr.Index.load(await response.json());
-                    }
-                );
-        }
-        let res = await index;
-        return res;
-    }
-
-    $searchInput.addEventListener("keyup", debounce(async function() {
-        var term = $searchInput.value.trim();
-        if (term === currentTerm) {
-            return;
-        }
-        $searchResults.style.display = term === "" ? "none" : "block";
-        $searchResultsItems.innerHTML = "";
-        currentTerm = term;
-        if (term === "") {
-            return;
-        }
-
-        var results = (await initIndex()).search(term, options);
-        if (results.length === 0) {
-            $searchResults.style.display = "none";
-            return;
-        }
-
-        for (var i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
-            var item = document.createElement("li");
-            item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
-            $searchResultsItems.appendChild(item);
-        }
-    }, 150));
-
-    window.addEventListener('click', function(e) {
-        if ($searchResults.style.display == "block" && !$searchResults.contains(e.target)) {
-            $searchResults.style.display = "none";
-        }
-    });
-}
-
-
-if (document.readyState === "complete" ||
-    (document.readyState !== "loading" && !document.documentElement.doScroll)
-) {
-    initSearch();
-} else {
-    document.addEventListener("DOMContentLoaded", initSearch);
 }
