@@ -7,7 +7,6 @@ generate_feeds = true
 taxonomies = [{ name = "tags" }]
 compile_sass = true
 build_search_index = true
-default_language = "en"
 
 [search]
 include_title = true
@@ -15,8 +14,7 @@ include_description = false
 include_date = false
 include_path = false
 include_content = true
-# truncate_content_length = 100
-index_format = "elasticlunr_javascript"
+index_format = "elasticlunr_json"
 
 [markdown]
 
