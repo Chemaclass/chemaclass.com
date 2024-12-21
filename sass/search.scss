@@ -26,7 +26,7 @@
     list-style: none;
   }
 
-  li.selected, li:hover {
+  li.selected {
     text-decoration: underline;
     background-color: var(--search-bg-selected-item);
   }
@@ -43,11 +43,19 @@
 
   &__item {
     margin-bottom: 1rem;
-
     a {
-      font-size: 1.2rem;
-      display: inline-block;
-      margin-bottom: 0.5rem;
+      color: var(--text-color);
     }
+  }
+
+  &__item-title {
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+  }
+
+  &__item-body {
+    margin-bottom: 0.5rem;
   }
 }

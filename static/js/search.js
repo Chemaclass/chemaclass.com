@@ -223,7 +223,6 @@ function showResults(index) {
         const emptyResult = {
             title: "Nothing found",
             body: "Try something else",
-            id: "#",
         };
 
         if (index === undefined || typeof index.search !== "function") {
@@ -259,8 +258,10 @@ function createMenuItem(result, index) {
 
 function formatSearchResultItem(item, terms) {
     return '<div class="search-results__item">'
-        + `<a href="${item.ref}">${item.doc.title}</a>`
-        + `<div>${makeTeaser(item.doc.body, terms)}</div>`
+        + `<a href="${item.ref}">`
+        + `<span class="search-results__item-title">${item.doc.title}</span>`
+        + `<div class="search-results__item-body">${makeTeaser(item.doc.body, terms)}</div>`
+        + `</a>`
         + '</div>';
 }
 
