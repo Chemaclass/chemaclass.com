@@ -6,13 +6,14 @@
   input {
     width: 100%;
     padding: 0.5rem;
+    color: var(--search-input-color) !important;
   }
 }
 
 .search-results {
   display: none;
   position: absolute;
-  background: white;
+  background: var(--search-bg-results);
   color: black;
   padding: 1rem;
   box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
@@ -23,6 +24,11 @@
 
   &__items {
     list-style: none;
+  }
+
+  li.selected, li:hover {
+    text-decoration: underline;
+    background-color: var(--search-bg-selected-item);
   }
 
   li {

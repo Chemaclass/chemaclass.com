@@ -1,12 +1,6 @@
 :root {
     --accent-color: #3a5c88;
     --accent-color-light: #397fd8;
-    --accent-overlay-color: #fff;
-    --body-bg: #fff;
-    --body-color: #000;
-    --heading-color: #000;
-    --table-bg-even: #f3f3f3;
-    --table-border-bottom: #dddddd;
 
     --color-info: #66b2ff; /* Lighter Light Blue */
     --color-success: #5dd77b; /* Lighter Green */
@@ -17,4 +11,31 @@
     --color-neutral: #a2abb3; /* Lighter Gray */
     --color-primary: #66b2ff; /* Lighter Blue */
     --color-secondary: #a2abb3; /* Lighter Dark Gray */
+}
+
+:root:has(body.light) {
+    --accent-overlay-color: #fff;
+    --body-bg: #fff;
+    --body-color: #000;
+    --heading-color: #000;
+    --table-bg-even: #f3f3f3;
+    --table-border-bottom: #dddddd;
+
+    --search-bg-results: white;
+    --search-input-color: #000;
+    --search-bg-selected-item: #F5F5F5;
+}
+
+:root:has(body.dark) {
+    --accent-overlay-color: #dee2e6;
+    --body-bg: #212529;
+    --body-color: #abb2bf;
+    --heading-color: #dee2e6;
+    --table-bg-even: #2d3237;
+    --table-border-bottom: #697077;
+    --link-color: deepskyblue;
+
+    --search-bg-selected-item: #697077;
+    --search-bg-results: var(--body-bg);
+    --search-input-color: #000;
 }
