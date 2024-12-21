@@ -33,7 +33,6 @@ document.addEventListener("keydown", function (keyboardEvent) {
 
 function downArrow(len) {
     resultsItemsIndex++;
-    console.log('down arrow '+resultsItemsIndex);
 
     if (!searchItemSelected) {
         resultsItemsIndex = 0;
@@ -55,7 +54,6 @@ function downArrow(len) {
 }
 
 function upArrow(len) {
-    console.log('up arrow '+resultsItemsIndex);
     if (!searchItemSelected) {
         resultsItemsIndex = -1;
         searchItemSelected = $searchResultsItems.getElementsByTagName("li")[len];
@@ -101,10 +99,6 @@ if (document.readyState === "complete" || (document.readyState !== "loading" && 
 }
 
 function initSearch() {
-    $searchInput = document.getElementById("search");
-    $searchResults = document.querySelector(".search-results");
-    $searchResultsItems = document.querySelector(".search-results__items");
-
     const options = {
         bool: "AND",
         fields: {
