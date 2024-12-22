@@ -28,6 +28,7 @@ nav = [
     { name = "Blog", path = "/blog/" },
     { name = "Readings", path = "/readings/" },
     { name = "Talks", path = "/talks/" },
+    { name = "", path = "javascript:void(0)", id = "toggle-snow" },
 ]
 
 icon = "icon.jpg"
