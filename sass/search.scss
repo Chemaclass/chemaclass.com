@@ -1,7 +1,7 @@
 #frontpage {
   .search-container {
     display: inline-block;
-    margin-top: 29px;
+    //margin-top: 29px;
     width: 60%;
   }
   .search-results {
@@ -12,9 +12,31 @@
   }
 
   @media (max-width: 880px) {
+    display: unset;
+    position: relative;
+    margin: 20px 0;
+
+    .search-container {
+      width: 100%;
+    }
     .search-results {
       max-width: calc(100vw - 30px);
       padding: .5rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 10px 0;
+
+    input {
+      margin-top: 8px;
+      margin-left: -55px;
+      width: calc(100vw - 30px);
+    }
+
+    .search-results {
+      max-width: calc(100vw - 80px);
+      padding: 10px 15px;
     }
   }
 }
@@ -38,7 +60,7 @@
 
     &:focus {
       border-color: var(--color-primary);
-      box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+      box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
       background-color: #fff;
     }
 

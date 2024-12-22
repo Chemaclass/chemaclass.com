@@ -151,3 +151,12 @@ header {
     flex-direction: column;
   }
 }
+
+@media (max-width: 600px) {
+  .homepage-left-column {
+    margin:0 !important;
+  }
+  .homepage-right-column{
+    margin:0 !important;
+  }
+}
