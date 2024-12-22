@@ -135,8 +135,13 @@ function initSearch() {
 
         let results = (await initIndex()).search(term, options);
         if (results.length === 0) {
-            $searchResults.style.display = "none";
-            return;
+            results.push({
+                ref: "",
+                doc: {
+                    title: "Nothing found",
+                    body: "Try something else",
+                }
+            })
         }
 
         for (let i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
@@ -219,25 +224,18 @@ function showResults(index) {
             expand: true
         };
 
-        const emptyResult = {
-            title: "Nothing found",
-            body: "Try something else",
-        };
-
         if (index === undefined || typeof index.search !== "function") {
-            createMenuItem(emptyResult, null);
             return;
         }
 
         const results = index.search(term, options);
         if (results.length === 0) {
-            createMenuItem(emptyResult, null);
             return;
         }
 
         const numberOfResults = Math.min(results.length, MAX_ITEMS);
         for (let i = 0; i < numberOfResults; i++) {
-            createMenuItem(results[i].doc, i);
+            createMenuItem(results[i], i);
         }
     }
 }
@@ -256,6 +254,13 @@ function createMenuItem(result, index) {
 }
 
 function formatSearchResultItem(item, terms) {
+    if (item.ref === "") {
+        return '<div class="search-results__item empty">'
+            + `<span class="search-results__item-title empty">${item.doc.title}</span>`
+            + `<div class="search-results__item-body empty">${makeTeaser(item.doc.body, terms)}</div>`
+            + '</div>';
+    }
+
     return '<div class="search-results__item">'
         + `<a href="${item.ref}">`
         + `<span class="search-results__item-title">${item.doc.title}</span>`

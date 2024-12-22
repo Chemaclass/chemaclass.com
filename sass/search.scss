@@ -120,6 +120,16 @@
     &:first-of-type {
       margin-top: 0;
     }
+
+    &:has(.search-results__item.empty) {
+      border-bottom: none;
+      margin: unset;
+      &:hover {
+        text-decoration: unset;
+        background-color: unset;
+        padding: unset;
+      }
+    }
   }
 
   &__item {

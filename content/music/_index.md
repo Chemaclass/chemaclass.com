@@ -7,3 +7,5 @@ sort_by = "date"
 # Music
 
 ---
+
+Some of my songs or covers where I play e-bass.
