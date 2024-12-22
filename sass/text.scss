@@ -136,6 +136,7 @@ a.profile-icon {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   margin-left: auto;
