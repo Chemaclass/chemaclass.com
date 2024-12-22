@@ -11,6 +11,7 @@
     --color-neutral: #a2abb3; /* Lighter Gray */
     --color-primary: #66b2ff; /* Lighter Blue */
     --color-secondary: #a2abb3; /* Lighter Dark Gray */
+    --color-subtitle: #404040;
 
     --accent-overlay-color: #fff;
     --body-bg: #fff;
@@ -21,7 +22,7 @@
 
     --search-bg-results: white;
     --search-input-color: #000;
-    --search-bg-selected-item: #F5F5F5;
+    --search-bg-selected-item: #fafafa;
 }
 
 .theme-dark {
@@ -35,8 +36,9 @@
     --table-bg-even: #2d3237;
     --table-border-bottom: #697077;
     --link-color: deepskyblue;
+    --color-subtitle: #d5dbed;
 
-    --search-bg-selected-item: #697077;
+    --search-bg-selected-item: #3c3c3c;
     --search-bg-results: var(--body-bg);
     --search-input-color: #000;
 }

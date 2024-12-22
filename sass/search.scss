@@ -1,7 +1,6 @@
 #frontpage {
   .search-container {
     display: inline-block;
-    //margin-top: 29px;
     width: 60%;
   }
   .search-results {
@@ -107,9 +106,10 @@
     list-style: none;
   }
 
-  li.selected {
+  li.selected, li:hover {
     text-decoration: underline;
     background-color: var(--search-bg-selected-item);
+    padding-left: 2px;
   }
 
   li {
