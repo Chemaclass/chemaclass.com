@@ -127,14 +127,16 @@ if (isChristmas() === false) {
         localStorage.setItem(SNOW_KEY, ENABLE_SNOW);
     }
 
-    if (localStorage.getItem(SNOW_KEY) === ENABLE_SNOW) {
-        // toggleSnow.innerHTML = "⛄️";
-        toggleSnow.innerHTML = "❅️";
-        createSnow(true);
-    } else {
-        // toggleSnow.innerHTML = "☃️";
-        toggleSnow.innerHTML = "❆";
-        createSnow(false);
+    if(toggleSnow !== null) {
+        if (localStorage.getItem(SNOW_KEY) === ENABLE_SNOW) {
+            // toggleSnow.innerHTML = "⛄️";
+            toggleSnow.innerHTML = "❅️";
+            createSnow(true);
+        } else {
+            // toggleSnow.innerHTML = "☃️";
+            toggleSnow.innerHTML = "❆";
+            createSnow(false);
+        }
     }
 }
 
@@ -152,4 +154,6 @@ function toggleSnowMethod() {
     }
 }
 
-toggleSnow.addEventListener('click', toggleSnowMethod);
+if(toggleSnow !== null) {
+    toggleSnow.addEventListener('click', toggleSnowMethod);
+}

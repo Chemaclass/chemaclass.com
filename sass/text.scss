@@ -58,6 +58,7 @@ a {
   text-decoration: none;
 
   &:hover {
+    color: var(--accent-overlay-color);
     border-bottom: 1px solid var(--accent-color-light);
   }
   &.close-border:hover {

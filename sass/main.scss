@@ -1,8 +1,14 @@
-@import "./normalize.scss", "./text.scss", "./variables.scss";
+@import "./normalize.scss";
+@import "./text.scss";
+@import "./variables.scss";
+@import "menu";
 
 body {
   background-color: var(--body-bg);
   color: var(--body-color);
+}
+nav button {
+  margin-right: 1.2rem
 }
 
 .post-preview {
@@ -47,7 +53,7 @@ body {
     padding: 1rem;
     box-sizing: border-box;
     width: 50%;
-    
+
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;

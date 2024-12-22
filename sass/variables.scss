@@ -11,9 +11,7 @@
     --color-neutral: #a2abb3; /* Lighter Gray */
     --color-primary: #66b2ff; /* Lighter Blue */
     --color-secondary: #a2abb3; /* Lighter Dark Gray */
-}
 
-:root:has(body.light) {
     --accent-overlay-color: #fff;
     --body-bg: #fff;
     --body-color: #000;
@@ -26,10 +24,13 @@
     --search-bg-selected-item: #F5F5F5;
 }
 
-:root:has(body.dark) {
+.theme-dark {
+    --accent-color: var(--link-color);
+    --accent-color-light: #fff;
+
     --accent-overlay-color: #dee2e6;
     --body-bg: #212529;
-    --body-color: #abb2bf;
+    --body-color: #fff;
     --heading-color: #dee2e6;
     --table-bg-even: #2d3237;
     --table-border-bottom: #697077;

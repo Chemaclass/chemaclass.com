@@ -1,0 +1,14 @@
+// Hide the "dark mode" & the "light mode" buttons
+#dark-mode, #light-mode {
+  display: none;
+}
+
+// And reveal the dark/light button depending on the color-theme parameter
+html[color-theme=dark] #dark-mode, html[color-theme=light] #light-mode {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  line-height: 0;
+}

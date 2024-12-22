@@ -1,4 +1,7 @@
-@import "./normalize.scss", "./text.scss", "./variables.scss";
+@import "./normalize.scss";
+@import "./text.scss";
+@import "./variables.scss";
+@import "menu";
 
 @keyframes profile {
   0% {
