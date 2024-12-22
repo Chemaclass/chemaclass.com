@@ -2,6 +2,7 @@ const MAX_ITEMS = 10;
 const UP_ARROW = "ArrowUp";
 const DOWN_ARROW = "ArrowDown";
 const ENTER_KEY = "Enter";
+const WAIT_TIME_MS = 150;
 
 let $searchInput = document.getElementById("search");
 let $searchResults = document.querySelector(".search-results");
@@ -149,7 +150,7 @@ function initSearch() {
             item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
             $searchResultsItems.appendChild(item);
         }
-    }, 150));
+    }, WAIT_TIME_MS));
 
     window.addEventListener('click', function (e) {
         if ($searchResults.style.display === "block" && !$searchResults.contains(e.target)) {
@@ -163,7 +164,7 @@ function initSearch() {
 
         searchItemSelected = null;
         resultsItemsIndex = -1;
-        debounce(showResults(index), 150)();
+        debounce(showResults(index), WAIT_TIME_MS)();
     });
 
     // Hide results when user press on the "x" placed inside the search field
@@ -203,6 +204,9 @@ function debounce(func, wait) {
 }
 
 function showResults(index) {
+    if (index === undefined || typeof index.search !== "function") {
+        return;
+    }
     return function () {
         let $searchInput = window.$searchInput || null;
         if ($searchInput === undefined || $searchInput === null) return;
@@ -219,14 +223,10 @@ function showResults(index) {
             bool: "AND",
             fields: {
                 title: {boost: 2},
-                body: {boost: 1},
+                body: {boost: 1}
             },
             expand: true
         };
-
-        if (index === undefined || typeof index.search !== "function") {
-            return;
-        }
 
         const results = index.search(term, options);
         if (results.length === 0) {
@@ -257,7 +257,7 @@ function formatSearchResultItem(item, terms) {
     if (item.ref === "") {
         return '<div class="search-results__item empty">'
             + `<span class="search-results__item-title empty">${item.doc.title}</span>`
-            + `<div class="search-results__item-body empty">${makeTeaser(item.doc.body, terms)}</div>`
+            + `<div class="search-results__item-body empty">${item.doc.body}</div>`
             + '</div>';
     }
 
