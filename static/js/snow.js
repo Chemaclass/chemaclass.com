@@ -1,4 +1,4 @@
-let snowflakesCount = 30;
+const snowflakesCount = 35;
 
 let bodyHeightPx = null;
 let pageHeightVh = null;
@@ -128,10 +128,12 @@ if (isChristmas() === false) {
     }
 
     if (localStorage.getItem(SNOW_KEY) === ENABLE_SNOW) {
-        toggleSnow.innerHTML = "⛄️";
+        // toggleSnow.innerHTML = "⛄️";
+        toggleSnow.innerHTML = "❅️";
         createSnow(true);
     } else {
-        toggleSnow.innerHTML = "☃️";
+        // toggleSnow.innerHTML = "☃️";
+        toggleSnow.innerHTML = "❆";
         createSnow(false);
     }
 }
@@ -139,11 +141,13 @@ if (isChristmas() === false) {
 function toggleSnowMethod() {
     if (localStorage.getItem(SNOW_KEY) !== ENABLE_SNOW) {
         localStorage.setItem(SNOW_KEY, ENABLE_SNOW);
-        toggleSnow.innerHTML = "⛄️";
+        // toggleSnow.innerHTML = "⛄️"
+        toggleSnow.innerHTML = "❅️";
         createSnow(true);
     } else {
         localStorage.setItem(SNOW_KEY, DISABLE_SNOW);
-        toggleSnow.innerHTML = "☃️";
+        // toggleSnow.innerHTML = "☃️";
+        toggleSnow.innerHTML = "❆";
         createSnow(false);
     }
 }

@@ -4,8 +4,8 @@
 
 .snowflake {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background: linear-gradient(#eee, #ececec);
   border-radius: 50%;
   filter: drop-shadow(0 0 10px #c5c5c5);
@@ -19,7 +19,7 @@
 }
 :root:has(body.light) {
   .snowflake {
-    background: linear-gradient(#ec6708, #d95812);
-    filter: drop-shadow(0 0 10px #d74100);
+    background: linear-gradient(#7e99f3, #4465ed);
+    filter: drop-shadow(0 0 10px #0e40e1);
   }
 }
