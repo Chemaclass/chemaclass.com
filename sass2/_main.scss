@@ -1,0 +1,14 @@
+// Main SCSS file containing shared styles used across all pages of the portfolio.
+// This file acts as the central repository for global styles and is imported by page-specific SCSS files.
+// For example:
+// - index.scss is imported by index.html and includes:
+//   1. This file (main.scss) for shared styles.
+//   2. Styles specific to index.scss.
+//
+// The common SCSS is divided in the next files, promoting SRP
+@import 'variables';
+@import 'normalize';
+@import 'responsive';
+@import 'search';
+@import 'snow';
+@import 'theme';
