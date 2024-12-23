@@ -73,13 +73,7 @@
   }
 
   @media (max-width: 600px) {
-    display: block;
-    position: absolute;
-    width: 100%;
-    padding: 10px 0;
-    margin-top: 65px;
-    margin-bottom: -40px;
-    margin-left: 55px;
+    width: 330px;
 
     .search-results {
       max-width: calc(100vw - 80px);
@@ -151,4 +145,8 @@
   h1 {
     margin-top: 1.2em;
   }
+}
+
+header.hidden {
+  transform: translateY(-100%);
 }

@@ -106,7 +106,7 @@
         <a class="profile-icon" href="/">
           <img src="{{ icon.url }}" alt="profile picture">
         </a>
-        <nav>
+        <nav class="navbar">
           {% for link in config.extra.nav %}
             <a href="{{ link.path }}" {% if link.id %}id="{{ link.id }}"{% endif %}>{{ link.name }}</a>
           {% endfor %}

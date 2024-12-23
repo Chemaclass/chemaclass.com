@@ -383,3 +383,20 @@ function makeTeaser(body, terms) {
     teaser.push("…");
     return teaser.join("");
 }
+
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+        // Scrolling down, hide the navbar
+        navbar.classList.add('hidden');
+    } else {
+        // Scrolling up, show the navbar
+        navbar.classList.remove('hidden');
+    }
+
+    lastScrollY = currentScrollY;
+});
