@@ -119,6 +119,11 @@ header {
   margin: auto;
   display: flex;
   flex-direction: row;
+  position: sticky;
+  top: 0;
+  background-color: var(--body-bg);
+  padding: 0.5rem 0.2rem;
+  z-index: 1000;
   nav {
     font-size: 1.3rem;
   }
