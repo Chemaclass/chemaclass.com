@@ -1,0 +1,4 @@
+@import 'main';
+
+// TODO: talks specific SCSS
+// Also if for example, you don't have any specific css in talks, you could just import 'main' in talks.html. But I think that just having the file even if it's just to import 'main.css' is a good idea, since it is good for the O/C Principle. Since if you want to make a change in css of talks.scss, you only have to edit this file. However if you are importing main there, you will have to take several steps (Creating this file, importing main here, in talks.html you will have to import talks.scss instead of main.scss). Having all your pages set up like this, with main.css for common styles, and specific styles in the respective scss page I believe it's a good idea to promote SRP, this was not written by chatgpt lol
