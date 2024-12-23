@@ -384,15 +384,23 @@ function makeTeaser(body, terms) {
     return teaser.join("");
 }
 
+//// todo: refactor move to header.js or similar
 let lastScrollY = window.scrollY;
 const navbar = document.querySelector('header');
+const scrollUpThreshold = 10;
 
 window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
+
     if (currentScrollY > lastScrollY) {
+        // Scrolling down
         navbar.classList.add('hidden');
-    } else {
+        navbar.classList.remove('show');
+    } else if (lastScrollY - currentScrollY > scrollUpThreshold) {
+        // Scrolling up past the threshold
         navbar.classList.remove('hidden');
+        navbar.classList.add('show');
     }
+
     lastScrollY = currentScrollY;
 });

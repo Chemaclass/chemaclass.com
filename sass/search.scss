@@ -146,5 +146,10 @@
 
 header.hidden {
   transform: translateY(-100%);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-out;
+}
+
+header.show {
+  transform: translateY(0%);
+  transition: transform 0.5s ease-in;
 }
