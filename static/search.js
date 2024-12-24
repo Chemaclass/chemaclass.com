@@ -28,6 +28,9 @@ document.addEventListener("keydown", function (keyboardEvent) {
     } else if (keyboardEvent.key === UP_ARROW) {
         upArrow(len);
     } else if (keyboardEvent.key === ENTER_KEY) {
+        if (searchItemSelected === null) {
+            searchItemSelected = $searchResultsItems.getElementsByTagName("li")[0];
+        }
         searchItemSelected.getElementsByTagName("a")[0].click();
     }
 });
