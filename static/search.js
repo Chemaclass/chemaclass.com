@@ -392,7 +392,6 @@ const topMargin = 80; // Always show the navbar within px of the top
 
 window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
-    console.log({currentScrollY});
     if (currentScrollY <= topMargin) {
         // Always show the navbar when near the top of the page
         navbar.classList.remove('hidden');

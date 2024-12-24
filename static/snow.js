@@ -139,12 +139,10 @@ function updateSnowToggle() {
     }
 }
 
-updateSnowToggle();
-
 if (isChristmas()) {
     if (localStorage.getItem('snow') === 'snow-on') {
-        createSnow(true);
+        window.toSnowOn();
     } else {
-        createSnow(false);
+        window.toSnowOff();
     }
 }
