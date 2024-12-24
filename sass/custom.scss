@@ -467,3 +467,12 @@ a.tooltip:hover {
     display: none;
   }
 }
+
+#all-terms {
+  li {
+    list-style: none;
+    float: left;
+    margin-left: 5px;
+    padding: 5px;
+  }
+}
