@@ -129,6 +129,12 @@ header {
   }
 }
 
+nav {
+  a {
+    border-bottom: none !important;
+  }
+}
+
 a.profile-icon {
   border: none;
   height: 50px;
