@@ -151,7 +151,14 @@ function initSearch() {
         }
 
         for (let i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
-            if (results[i].doc.title === "") continue;
+            const ref = results[i].ref;
+            const keywords = ["/blog/", "/readings/", "/talks"];
+            if (ref !== ""
+                && (results[i].doc.title === ""
+                    || !keywords.some(keyword => ref.includes(keyword)))
+            ) {
+                continue;
+            }
             const item = document.createElement("li");
             item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
             $searchResultsItems.appendChild(item);
