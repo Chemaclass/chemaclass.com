@@ -1,6 +1,7 @@
 :root {
     --accent-color: #3a5c88;
     --accent-color-light: #397fd8;
+    --link-color: var(--accent-color);
 
     --color-info: #66b2ff; /* Lighter Light Blue */
     --color-success: #5dd77b; /* Lighter Green */
@@ -13,7 +14,7 @@
     --color-secondary: #a2abb3; /* Lighter Dark Gray */
     --color-subtitle: #404040;
 
-    --accent-overlay-color: #fff;
+    --accent-overlay-color: var(--accent-color-light);
     --body-bg: #fff;
     --body-color: #000;
     --heading-color: #000;
@@ -26,16 +27,16 @@
 }
 
 .theme-dark {
-    --accent-color: var(--link-color);
+    --accent-color: deepskyblue;
     --accent-color-light: #fff;
-
     --accent-overlay-color: #dee2e6;
+
     --body-bg: #212529;
     --body-color: #fff;
     --heading-color: #dee2e6;
     --table-bg-even: #2d3237;
     --table-border-bottom: #697077;
-    --link-color: deepskyblue;
+
     --color-subtitle: #d5dbed;
 
     --search-bg-selected-item: #3c3c3c;

@@ -25,16 +25,18 @@
     {% for link in config.extra.nav %}
     <a href="{{ link.path }}">{{ link.name }}</a>
     {% endfor %}
-    <button id="light-mode" onclick="toDarkMode()" title="Switch to dark mode">
-      <svg width="20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path fill="#444" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
-      </svg>
-    </button>
-    <button id="dark-mode" onclick="toLightMode()" title="Switch to light mode">
-      <svg width="20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path fill="#ccc" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
-      </svg>
-    </button>
+    <div style="display: flex">
+      <button id="light-mode" onclick="toDarkMode()" title="Switch to dark mode">
+        <svg width="20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path fill="#444" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+        </svg>
+      </button>
+      <button id="dark-mode" onclick="toLightMode()" title="Switch to light mode">
+        <svg width="20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path fill="#ccc" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+        </svg>
+      </button>
+    </div>
   </nav>
   <div class="profile">
     <div class="profile-container">

@@ -4,7 +4,8 @@
 }
 
 // And reveal the dark/light button depending on the color-theme parameter
-html[color-theme=dark] #dark-mode, html[color-theme=light] #light-mode {
+html[color-theme=dark] #dark-mode,
+html[color-theme=light] #light-mode {
   display: block;
   background: none;
   border: none;
@@ -12,3 +13,17 @@ html[color-theme=dark] #dark-mode, html[color-theme=light] #light-mode {
   color: inherit;
   line-height: 0;
 }
+
+#snow-on, #snow-off {
+  display: none;
+}
+
+html[snow-toggle=snow-on] #snow-on,
+html[snow-toggle=snow-off] #snow-off {
+   display: block;
+   background: none;
+   border: none;
+   cursor: pointer;
+   color: inherit;
+   line-height: 0;
+ }

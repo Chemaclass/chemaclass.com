@@ -384,15 +384,27 @@ function makeTeaser(body, terms) {
     return teaser.join("");
 }
 
+//// todo: refactor move to header.js or similar
 let lastScrollY = window.scrollY;
 const navbar = document.querySelector('header');
+const scrollUpThreshold = 10;
+const topMargin = 80; // Always show the navbar within px of the top
 
 window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
-    if (currentScrollY > lastScrollY) {
-        navbar.classList.add('hidden');
-    } else {
+    if (currentScrollY <= topMargin) {
+        // Always show the navbar when near the top of the page
         navbar.classList.remove('hidden');
+        navbar.classList.add('show');
+    } else if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        navbar.classList.add('hidden');
+        navbar.classList.remove('show');
+    } else if (lastScrollY - currentScrollY > scrollUpThreshold) {
+        // Scrolling up past the threshold
+        navbar.classList.remove('hidden');
+        navbar.classList.add('show');
     }
+
     lastScrollY = currentScrollY;
 });

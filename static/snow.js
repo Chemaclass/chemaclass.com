@@ -113,47 +113,36 @@ function isChristmas() {
 }
 
 // Enable / disable snowflakes from toggle button in menu
-const SNOW_KEY = 'snow';
-const ENABLE_SNOW = 'show';
-const DISABLE_SNOW = 'hide';
+window.toSnowOn = function () {
+    localStorage.snow = "snow-on";
+    window.updateSnowToggle();
+    createSnow(true)
+}
 
-const toggleSnow = document.getElementById('toggle-snow');
+window.toSnowOff = function () {
+    localStorage.snow = "snow-off";
+    window.updateSnowToggle();
+    createSnow(false)
+}
 
-if (isChristmas() === false) {
-    localStorage.removeItem(SNOW_KEY);
-    toggleSnow.style.display = "none";
-} else {
-    if (localStorage.getItem(SNOW_KEY) === ENABLE_SNOW) {
-        localStorage.setItem(SNOW_KEY, ENABLE_SNOW);
-    }
+function updateSnowToggle() {
+    switch (localStorage.snow) {
+        case 'snow-on':
+            document.documentElement.classList.add('snow-off');
+            document.documentElement.setAttribute('snow-toggle', 'snow-off');
+            break;
 
-    if(toggleSnow !== null) {
-        if (localStorage.getItem(SNOW_KEY) === ENABLE_SNOW) {
-            toggleSnow.innerHTML = "⛄️";
-            // toggleSnow.innerHTML = "❅️";
-            createSnow(true);
-        } else {
-            toggleSnow.innerHTML = "☃️";
-            // toggleSnow.innerHTML = "❆";
-            createSnow(false);
-        }
+        default:
+            document.documentElement.classList.add('snow-on');
+            document.documentElement.setAttribute('snow-toggle', 'snow-on');
+            break;
     }
 }
 
-function toggleSnowMethod() {
-    if (localStorage.getItem(SNOW_KEY) !== ENABLE_SNOW) {
-        localStorage.setItem(SNOW_KEY, ENABLE_SNOW);
-        toggleSnow.innerHTML = "⛄️"
-        // toggleSnow.innerHTML = "❅️";
-        createSnow(true);
+if (isChristmas()) {
+    if (localStorage.getItem('snow') === 'snow-on') {
+        window.toSnowOn();
     } else {
-        localStorage.setItem(SNOW_KEY, DISABLE_SNOW);
-        toggleSnow.innerHTML = "☃️";
-        // toggleSnow.innerHTML = "❆";
-        createSnow(false);
+        window.toSnowOff();
     }
-}
-
-if(toggleSnow !== null) {
-    toggleSnow.addEventListener('click', toggleSnowMethod);
 }
