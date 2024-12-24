@@ -68,7 +68,7 @@ a img {
   }
 
   .author {
-    color: #404040;
+    color: var(--color-subtitle);
     font-size: 0.5em;
     display: block;
     &::before {

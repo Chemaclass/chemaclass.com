@@ -1,6 +1,6 @@
 :root:has(body.light) {
     h3 small {
-        color: #404040;
+        color: var(--color-subtitle);;
     }
 
     @mixin card-a-colors-light {

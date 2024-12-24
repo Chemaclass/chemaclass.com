@@ -10,11 +10,10 @@ build_search_index = true
 
 [search]
 include_title = true
-include_description = false
-include_date = false
 include_path = false
 include_content = true
 index_format = "elasticlunr_json"
+#truncate_content_length = 1000
 
 [markdown]
 
