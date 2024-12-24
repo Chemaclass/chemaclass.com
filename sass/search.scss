@@ -43,7 +43,7 @@
   display: inline-block;
   position: relative;
 
-  input {
+  input[type="search"] {
     width: 100%;
     padding: .8rem 1rem;
     font-size: 16px;
@@ -54,6 +54,7 @@
     transition: all 0.3s ease;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     background-color: #fff;
+    padding-right: 26px;; /* Add padding to make space for the number */
 
     &:focus {
       border-color: var(--color-primary);
@@ -73,7 +74,7 @@
     }
 
     .search-results {
-      max-width: calc(100vw - 80px);
+      max-width: calc(100vw - 125px);
       padding: 10px 15px;
     }
   }
@@ -82,6 +83,16 @@
     input {
       width: 330px;
     }
+  }
+
+  .result-count {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+    font-size: 14px;
+    pointer-events: none; /* Prevent interactions with the number */
   }
 }
 

@@ -7,6 +7,7 @@ const WAIT_TIME_MS = 150;
 let $searchInput = document.getElementById("search");
 let $searchResults = document.querySelector(".search-results");
 let $searchResultsItems = document.querySelector(".search-results__items");
+const resultCount = document.getElementsByClassName('result-count')[0];
 
 let searchItemSelected = null;
 let resultsItemsIndex = -1;
@@ -135,11 +136,14 @@ function initSearch() {
         $searchResultsItems.innerHTML = "";
         currentTerm = term;
         if (term === "") {
+            resultCount.textContent = "";
             return;
         }
 
         let results = (await initIndex()).search(term, options);
         const resultItems = filterResultItems(results, term);
+        resultCount.textContent = resultItems.length;
+
         if (resultItems.length === 0) {
             resultItems.push({
                 ref: "",
@@ -175,9 +179,9 @@ function initSearch() {
             }
 
             totalItems.push({item: results[i], ref: ref.split(" ")});
-            if (totalItems.length === MAX_ITEMS) {
-                break;
-            }
+            // if (totalItems.length === MAX_ITEMS) {
+            //     break; // disabled to be able to know the resultCount feature
+            // }
         }
         return totalItems;
     }
