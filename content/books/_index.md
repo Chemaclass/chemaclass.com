@@ -4,9 +4,9 @@ page_template = "blog/blog-post.html"
 sort_by = "date"
 +++
 
-# Books
+## Books
 
-## Ojos en un Recuerdo _(2015 - 2017)_
+### Ojos en un Recuerdo _(2015 - 2017)_
 
 ![book-index-cover](/images/books/oeur/oeur-cover.jpg)
 

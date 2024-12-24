@@ -12,6 +12,7 @@ build_search_index = true
 include_title = true
 include_path = false
 include_content = true
+include_description = true
 index_format = "elasticlunr_json"
 #truncate_content_length = 1000
 

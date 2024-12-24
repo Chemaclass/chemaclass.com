@@ -106,7 +106,8 @@ function initSearch() {
     const options = {
         bool: "AND",
         fields: {
-            title: {boost: 2},
+            title: {boost: 3},
+            description: {boost: 2},
             body: {boost: 1},
         }
     };
@@ -143,12 +144,14 @@ function initSearch() {
                 ref: "",
                 doc: {
                     title: "Nothing found",
+                    description: "",
                     body: "Try something else",
                 }
             })
         }
 
         for (let i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
+            if (results[i].doc.title === "") continue;
             const item = document.createElement("li");
             item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
             $searchResultsItems.appendChild(item);
@@ -225,7 +228,8 @@ function showResults(index) {
         const options = {
             bool: "AND",
             fields: {
-                title: {boost: 2},
+                title: {boost: 3},
+                description: {boost: 2},
                 body: {boost: 1}
             },
             expand: true
@@ -244,6 +248,8 @@ function showResults(index) {
 }
 
 function createMenuItem(result, index) {
+    // TODO: Check if this code is executed!
+    if (result.doc.title === "") return;
     const item = document.createElement("li");
     item.innerHTML = formatSearchResultItem(result);
     item.addEventListener("mouseenter", (mouseEvent) => {
