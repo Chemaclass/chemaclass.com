@@ -38,7 +38,7 @@ Phel is a creation of Jens Haase, and as he mentions on the website, "it is the 
 - It is easy to write and debug
 
 From my point, it was ending May 2020 when I finished the
-book [Seven Languages in Seven Weeks](/readings/7-languages-in-7-weeks/), in which I learned a bit of Prolog, Erlang,
+book [Seven Languages in Seven Weeks](/readings/7-languages-in-7-weeks/), in which I learned the basics of Prolog, Erlang,
 Clojure, Haskell… I even created a [repository in GitHub](https://github.com/Chemaclass/7LangIn7Weeks) to store my
 progress over the weeks with these learnings.
 
@@ -55,7 +55,8 @@ and [Advanced Web Application Architecture](/readings/advance-web-application-ar
 out what I learned and put it for real in a project. This was (and still is) a beautiful challenge, which helps me to
 test myself and grow professionally at the same time.
 
-My first commit was done on 6 June 2020, and since then I work on this project a bit (almost) every day in my free time.
+My first commit was done on 6 June 2020, and since then I've been dedicating a little time each day during my free
+hours to its development.
 It helps me to learn more about FP, languages internal design, and best practices on testing and software design
 architecture in general.
 

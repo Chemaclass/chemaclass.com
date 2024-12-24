@@ -46,7 +46,7 @@ Projects that followed a **Waterfall** methodology tended to exceed their expens
 
 That situation originated that a group of developers signed a brief, 68-word manifesto in 2001.
 
-#### A bit of history...
+#### A brief background
 
 During the 1960s, software got into a big crisis; creating software was complex but changing it later became pure chaos. **Waterfall** to the rescue.
 

@@ -29,7 +29,7 @@ What is the motivation for that tech, and why are you considering introducing it
 
 When adopting new technologies in our daily business, it's not rare that we tend to couple ourselves with them. This makes it harder later to roll back if, after a while, we regret that decision.
 
-Don't get me wrong, learning and experimenting with new technologies is great, but introducing it in your daily work is another story because it will affect the whole team. So we need to be a bit more careful with this.
+Don't get me wrong, learning and experimenting with new technologies is great, but introducing it in your daily work is another story because it will affect the whole team. So we need to be a more careful with this.
 
 ![blog-middle](/images/blog/2023-04-14/middle.jpg)
 

@@ -1,6 +1,6 @@
 +++
 title = "To mock or not to mock"
-description = "Mocking is useful, but 'what to mock' usually turns out to be a bit more complicated than expected if you don't treat this carefully."
+description = "Mocking is useful, but 'what to mock' usually turns out to be a more complicated than expected if you don't treat this carefully."
 [taxonomies]
 tags = [ "software", "mocking", "testing", "design" ]
 [extra]
@@ -10,7 +10,7 @@ static_thumbnail = "/images/blog/2021-01-11/cover.jpg"
 
 ![blog-cover](/images/blog/2021-01-11/cover.jpg)
 
-Mocking is useful, but "what to mock" usually turns out to be a bit more complicated than expected if you don't treat
+Mocking is useful, but "what to mock" usually turns out to be more complicated than expected if you don't treat
 this carefully.
 
 <!-- more -->
