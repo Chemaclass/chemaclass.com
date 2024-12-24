@@ -90,7 +90,6 @@
   position: absolute;
   background: var(--search-bg-results);
   color: var(--search-input-color);
-  padding: 1rem;
   box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
   max-height: 450px;
   overflow: auto;
@@ -99,21 +98,23 @@
 
   &__items {
     list-style: none;
+    margin: 0 12px ;
   }
 
   li.selected, li:hover {
-    text-decoration: underline;
+    text-decoration: unset;
     background-color: var(--search-bg-selected-item);
-    padding-left: 2px;
   }
 
   li {
-    margin-top: 1rem;
+    margin: 21px 8px;
+    //margin-top: 1rem;
+    //margin-left: 10px;
     border-bottom: 1px solid #ccc;
     font-size: 0.9rem;
 
     &:first-of-type {
-      margin-top: 0;
+      margin-top: 8px;
     }
 
     &:has(.search-results__item.empty) {

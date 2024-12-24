@@ -1,7 +1,7 @@
 :root {
-    --link-color: deepskyblue;
     --accent-color: #3a5c88;
     --accent-color-light: #397fd8;
+    --link-color: var(--accent-color);
 
     --color-info: #66b2ff; /* Lighter Light Blue */
     --color-success: #5dd77b; /* Lighter Green */
@@ -31,7 +31,6 @@
     --accent-color-light: #fff;
     --accent-overlay-color: #dee2e6;
 
-    --link-color: var(--accent-color);
     --body-bg: #212529;
     --body-color: #fff;
     --heading-color: #dee2e6;
