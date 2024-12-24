@@ -139,32 +139,48 @@ function initSearch() {
         }
 
         let results = (await initIndex()).search(term, options);
-        if (results.length === 0) {
-            results.push({
+        const resultItems = filterResultItems(results, term);
+        if (resultItems.length === 0) {
+            resultItems.push({
                 ref: "",
-                doc: {
-                    title: "Nothing found",
-                    description: "",
-                    body: "Try something else",
+                item: {
+                    ref: "",
+                    doc: {
+                        title: "Nothing found",
+                        description: "",
+                        body: "Try something else",
+                    }
                 }
             })
         }
 
-        for (let i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
-            const ref = results[i].ref;
-            const keywords = ["/blog/", "/readings/", "/talks"];
-            if (ref !== ""
-                && (results[i].doc.title === ""
-                    || !keywords.some(keyword => ref.includes(keyword)))
-            ) {
-                continue;
-            }
+        for (let i = 0; i < Math.min(resultItems.length, MAX_ITEMS); i++) {
             const item = document.createElement("li");
-            item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
+            item.innerHTML = formatSearchResultItem(resultItems[i].item, resultItems[i].ref);
             $searchResultsItems.appendChild(item);
         }
     }, WAIT_TIME_MS));
 
+    function filterResultItems(results, term){
+        const totalItems = [];
+        for (let i = 0; i < results.length; i++) {
+            const ref = results[i].ref;
+            const keywords = ["/blog/", "/readings/", "/talks"];
+            const isEmptyRef = ref === "";
+            const isKeywordCheckRequired = !term.startsWith("*");
+            const isKeywordMissing = !keywords.some(k => ref.includes(k));
+
+            if (!isEmptyRef && (isKeywordCheckRequired && isKeywordMissing)) {
+                continue;
+            }
+
+            totalItems.push({item: results[i], ref: ref.split(" ")});
+            if (totalItems.length === MAX_ITEMS) {
+                break;
+            }
+        }
+        return totalItems;
+    }
     window.addEventListener('click', function (e) {
         if ($searchResults.style.display === "block" && !$searchResults.contains(e.target)) {
             $searchResults.style.display = "none";
@@ -184,7 +200,10 @@ function initSearch() {
     $searchInput.addEventListener("search", () => $searchResults.style.display = "");
     $searchInput.addEventListener("focusin", function () {
         if ($searchInput.value !== "") {
-            showResults(index)();
+            const fn = showResults(index);
+            if (typeof fn === "function") {
+                fn();
+            }
         }
     });
 
