@@ -1,10 +1,9 @@
 +++
+title = "Eyes on a Memory | Book"
 template = "books/chapters.html"
 page_template = "books/book-chapter.html"
 sort_by = "weight"
 +++
-
-## Eyes on a Memory
 
 ![book-chapters-cover](/images/books/oeur/oeur-cover.jpg)
 

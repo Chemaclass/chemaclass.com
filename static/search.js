@@ -169,12 +169,13 @@ function initSearch() {
         const totalItems = [];
         for (let i = 0; i < results.length; i++) {
             const ref = results[i].ref;
+            const hasTitle = results[i].doc.title !== "";
             const keywords = ["/blog/", "/readings/", "/talks"];
             const isEmptyRef = ref === "";
             const isKeywordCheckRequired = !term.startsWith("*");
             const isKeywordMissing = !keywords.some(k => ref.includes(k));
 
-            if (!isEmptyRef && (isKeywordCheckRequired && isKeywordMissing)) {
+            if (!hasTitle || !isEmptyRef && isKeywordCheckRequired && isKeywordMissing) {
                 continue;
             }
 

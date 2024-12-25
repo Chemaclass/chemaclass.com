@@ -1,10 +1,9 @@
 +++
+title = "Ojos en un Recuerdo | Libro"
 template = "books/chapters.html"
 page_template = "books/book-chapter.html"
 sort_by = "weight"
 +++
-
-## Ojos en un Recuerdo
 
 ![book-chapters-cover](/images/books/oeur/oeur-cover.jpg)
 
