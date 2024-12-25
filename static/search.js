@@ -185,29 +185,10 @@ function initSearch() {
         }
         return totalItems;
     }
+
     window.addEventListener('click', function (e) {
         if ($searchResults.style.display === "block" && !$searchResults.contains(e.target)) {
             $searchResults.style.display = "none";
-        }
-    });
-    $searchInput.addEventListener("keyup", function (keyboardEvent) {
-        if (keyboardEvent.key === DOWN_ARROW || keyboardEvent.key === UP_ARROW || keyboardEvent.key === ENTER_KEY) {
-            return;
-        }
-
-        searchItemSelected = null;
-        resultsItemsIndex = -1;
-        debounce(showResults(index), WAIT_TIME_MS)();
-    });
-
-    // Hide results when user press on the "x" placed inside the search field
-    $searchInput.addEventListener("search", () => $searchResults.style.display = "");
-    $searchInput.addEventListener("focusin", function () {
-        if ($searchInput.value !== "") {
-            const fn = showResults(index);
-            if (typeof fn === "function") {
-                fn();
-            }
         }
     });
 
@@ -239,59 +220,6 @@ function debounce(func, wait) {
     };
 }
 
-function showResults(index) {
-    if (index === undefined || typeof index.search !== "function") {
-        return;
-    }
-    return function () {
-        let $searchInput = window.$searchInput || null;
-        if ($searchInput === undefined || $searchInput === null) return;
-
-        const term = $searchInput.value.trim();
-        $searchResults.style.display = term === "" ? "" : "block";
-        $searchResultsItems.innerHTML = "";
-        if (term === "") {
-            $searchResults.style.display = "";
-            return;
-        }
-
-        const options = {
-            bool: "AND",
-            fields: {
-                title: {boost: 3},
-                description: {boost: 2},
-                body: {boost: 1}
-            },
-            expand: true
-        };
-
-        const results = index.search(term, options);
-        if (results.length === 0) {
-            return;
-        }
-
-        const numberOfResults = Math.min(results.length, MAX_ITEMS);
-        for (let i = 0; i < numberOfResults; i++) {
-            createMenuItem(results[i], i);
-        }
-    }
-}
-
-function createMenuItem(result, index) {
-    // TODO: Check if this code is executed!
-    if (result.doc.title === "") return;
-    const item = document.createElement("li");
-    item.innerHTML = formatSearchResultItem(result);
-    item.addEventListener("mouseenter", (mouseEvent) => {
-        removeSelectedClassFromSearchResult();
-        mouseEvent.target.classList.add("selected");
-        searchItemSelected = mouseEvent.target;
-        resultsItemsIndex = index;
-    })
-    item.addEventListener("click", () => $searchInput.value = "")
-    $searchResultsItems.appendChild(item);
-}
-
 function formatSearchResultItem(item, terms) {
     if (item.ref === "") {
         return '<div class="search-results__item empty">'
@@ -306,13 +234,6 @@ function formatSearchResultItem(item, terms) {
         + `<div class="search-results__item-body">${makeTeaser(item.doc.body, terms)}</div>`
         + `</a>`
         + '</div>';
-}
-
-function removeSelectedClassFromSearchResult() {
-    const $searchResultsItemChildren = $searchResultsItems.children;
-    for (let i = 0; i < $searchResultsItemChildren.length; i++) {
-        removeClass($searchResultsItemChildren[i], "selected")
-    }
 }
 
 // Taken from mdbook
