@@ -24,6 +24,7 @@
     --search-bg-results: white;
     --search-input-color: #000;
     --search-bg-selected-item: #e6e6e6;
+    --search-category: #000;
 }
 
 .theme-dark {
@@ -42,4 +43,5 @@
     --search-bg-selected-item: #3c3c3c;
     --search-bg-results: var(--body-bg);
     --search-input-color: #000;
+    --search-category: #fff;
 }

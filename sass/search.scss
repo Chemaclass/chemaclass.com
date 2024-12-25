@@ -133,6 +133,23 @@
         padding: unset;
       }
     }
+    &:has(.search-results__item.category) {
+      display: flex;
+      align-items: center; /* Ensures vertical alignment for flex container */
+      justify-content: center; /* centers horizontally */
+      color: var(--search-category);
+      font-weight: bold;
+    }
+
+    &:has(.search-results__item.category)::before {
+      content: "─── ";
+      vertical-align: middle; /* Aligns with text */
+    }
+
+    &:has(.search-results__item.category)::after {
+      content: " ───";
+      vertical-align: middle; /* Aligns with text */
+    }
   }
 
   &__item {
@@ -143,7 +160,6 @@
     font-size: 1.2rem;
     display: inline-block;
     margin-bottom: .1rem;
-    color: var(--link-color) !important;
   }
 
   &__item-body {

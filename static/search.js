@@ -1,4 +1,4 @@
-const MAX_ITEMS = 10;
+const MAX_ITEMS = 3;
 const UP_ARROW = "ArrowUp";
 const DOWN_ARROW = "ArrowDown";
 const ENTER_KEY = "Enter";
@@ -149,6 +149,7 @@ function initSearch() {
                 ref: "",
                 item: {
                     ref: "",
+                    class: "empty",
                     doc: {
                         title: "Nothing found",
                         description: "",
@@ -158,31 +159,53 @@ function initSearch() {
             })
         }
 
-        for (let i = 0; i < Math.min(resultItems.length, MAX_ITEMS); i++) {
-            const item = document.createElement("li");
-            item.innerHTML = formatSearchResultItem(resultItems[i].item, resultItems[i].ref);
-            $searchResultsItems.appendChild(item);
-        }
+        appendSearchResults("/blog", "Blog", resultItems, MAX_ITEMS, $searchResultsItems);
+        appendSearchResults("/readings", "Readings", resultItems, MAX_ITEMS, $searchResultsItems);
     }, WAIT_TIME_MS));
+
+    function appendSearchResults(category, placeholder, results, maxItems, container) {
+        let count = 0;
+
+        // Add placeholder item if such results exist
+        if (results.some((result) => result.item.ref.includes(category))) {
+            const placeholderItem = document.createElement("li");
+            placeholderItem.innerHTML = formatSearchResultItem({
+                ref: "",
+                class: "empty category",
+                doc: { title: placeholder },
+            }, "");
+            container.appendChild(placeholderItem);
+        }
+        // Add category items
+        for (let i = 0; i < results.length; i++) {
+            if (results[i].item.ref.includes(category)) {
+                const item = document.createElement("li");
+                item.innerHTML = formatSearchResultItem(results[i].item, results[i].ref);
+                container.appendChild(item);
+                count++;
+                console.log({count, maxItems})
+                if (count >= maxItems) {
+                    break;
+                }
+            }
+        }
+    }
 
     function filterResultItems(results, term){
         const totalItems = [];
         for (let i = 0; i < results.length; i++) {
             const ref = results[i].ref;
             const hasTitle = results[i].doc.title !== "";
-            const keywords = ["/blog/", "/readings/", "/talks"];
+            const categories = ["/blog", "/readings", "/talks"];
             const isEmptyRef = ref === "";
-            const isKeywordCheckRequired = !term.startsWith("*");
-            const isKeywordMissing = !keywords.some(k => ref.includes(k));
+            const isCategoryCheckRequired = !term.startsWith("*");
+            const isCategoryMissing = !categories.some(c => ref.includes(c));
 
-            if (!hasTitle || !isEmptyRef && isKeywordCheckRequired && isKeywordMissing) {
+            if (!hasTitle || !isEmptyRef && isCategoryCheckRequired && isCategoryMissing) {
                 continue;
             }
 
             totalItems.push({item: results[i], ref: ref.split(" ")});
-            // if (totalItems.length === MAX_ITEMS) {
-            //     break; // disabled to be able to know the resultCount feature
-            // }
         }
         return totalItems;
     }
@@ -223,9 +246,9 @@ function debounce(func, wait) {
 
 function formatSearchResultItem(item, terms) {
     if (item.ref === "") {
-        return '<div class="search-results__item empty">'
-            + `<span class="search-results__item-title empty">${item.doc.title}</span>`
-            + `<div class="search-results__item-body empty">${item.doc.body}</div>`
+        return `<div class="search-results__item ${item.class}">`
+            + `<span class="search-results__item-title ${item.class}">${item.doc.title}</span>`
+            + (item.doc.body ? `<div class="search-results__item-body ${item.class}">${item.doc.body}</div>` : "")
             + '</div>';
     }
 
