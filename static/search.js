@@ -159,32 +159,29 @@ function initSearch() {
             })
         }
 
-        appendSearchResults("/blog", "Blog", resultItems, MAX_ITEMS, $searchResultsItems);
-        appendSearchResults("/readings", "Readings", resultItems, MAX_ITEMS, $searchResultsItems);
+        appendSearchResults((res) => res.item.ref.includes("/blog"), "Blogs", resultItems, MAX_ITEMS, $searchResultsItems);
+        appendSearchResults((res) => res.item.ref.includes("/readings"), "Readings", resultItems, MAX_ITEMS, $searchResultsItems);
+        appendSearchResults((res) => !res.item.ref.includes("/blog") && !res.item.ref.includes("/readings"), "Others", resultItems, MAX_ITEMS, $searchResultsItems);
     }, WAIT_TIME_MS));
 
-    function appendSearchResults(category, placeholder, results, maxItems, container) {
+    function appendSearchResults(filterFn, placeholder, results, maxItems, container) {
         let count = 0;
 
         // Add placeholder item if such results exist
-        if (results.some((result) => result.item.ref.includes(category))) {
+        if (results.some(filterFn)) {
             const placeholderItem = document.createElement("li");
             placeholderItem.innerHTML = formatSearchResultItem({
-                ref: "",
-                class: "empty category",
-                doc: { title: placeholder },
+                ref: "", class: "empty category", doc: {title: placeholder},
             }, "");
             container.appendChild(placeholderItem);
         }
         // Add category items
         for (let i = 0; i < results.length; i++) {
-            if (results[i].item.ref.includes(category)) {
+            if (filterFn(results[i])) {
                 const item = document.createElement("li");
                 item.innerHTML = formatSearchResultItem(results[i].item, results[i].ref);
                 container.appendChild(item);
-                count++;
-                console.log({count, maxItems})
-                if (count >= maxItems) {
+                if (++count >= maxItems) {
                     break;
                 }
             }
