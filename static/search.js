@@ -129,9 +129,6 @@ function initSearch() {
 
     $searchInput.addEventListener("keyup", debounce(async function () {
         let term = $searchInput.value.trim();
-        if (term === currentTerm) {
-            return;
-        }
         $searchResults.style.display = term === "" ? "none" : "block";
         $searchResultsItems.innerHTML = "";
         currentTerm = term;
@@ -159,57 +156,20 @@ function initSearch() {
             })
         }
 
-        appendSearchResults((res) => res.item.ref.includes("/blog"), "Blogs", resultItems, MAX_ITEMS, $searchResultsItems);
+        appendSearchResults((res) => res.item.ref.includes("/blog"), "Blog", resultItems, MAX_ITEMS, $searchResultsItems);
         appendSearchResults((res) => res.item.ref.includes("/readings"), "Readings", resultItems, MAX_ITEMS, $searchResultsItems);
         appendSearchResults((res) => !res.item.ref.includes("/blog") && !res.item.ref.includes("/readings"), "Others", resultItems, MAX_ITEMS, $searchResultsItems);
     }, WAIT_TIME_MS));
 
-    function appendSearchResults(filterFn, placeholder, results, maxItems, container) {
-        let count = 0;
-
-        // Add placeholder item if such results exist
-        if (results.some(filterFn)) {
-            const placeholderItem = document.createElement("li");
-            placeholderItem.innerHTML = formatSearchResultItem({
-                ref: "", class: "empty category", doc: {title: placeholder},
-            }, "");
-            container.appendChild(placeholderItem);
-        }
-        // Add category items
-        for (let i = 0; i < results.length; i++) {
-            if (filterFn(results[i])) {
-                const item = document.createElement("li");
-                item.innerHTML = formatSearchResultItem(results[i].item, results[i].ref);
-                container.appendChild(item);
-                if (++count >= maxItems) {
-                    break;
-                }
-            }
-        }
-    }
-
-    function filterResultItems(results, term){
-        const totalItems = [];
-        for (let i = 0; i < results.length; i++) {
-            const ref = results[i].ref;
-            const hasTitle = results[i].doc.title !== "";
-            const categories = ["/blog", "/readings", "/talks"];
-            const isEmptyRef = ref === "";
-            const isCategoryCheckRequired = !term.startsWith("*");
-            const isCategoryMissing = !categories.some(c => ref.includes(c));
-
-            if (!hasTitle || !isEmptyRef && isCategoryCheckRequired && isCategoryMissing) {
-                continue;
-            }
-
-            totalItems.push({item: results[i], ref: ref.split(" ")});
-        }
-        return totalItems;
-    }
-
     window.addEventListener('click', function (e) {
         if ($searchResults.style.display === "block" && !$searchResults.contains(e.target)) {
             $searchResults.style.display = "none";
+        }
+    });
+
+    $searchInput.addEventListener("focusin", function () {
+        if ($searchInput.value !== "") {
+            $searchInput.dispatchEvent(new KeyboardEvent("keyup"));
         }
     });
 
@@ -224,6 +184,49 @@ function initSearch() {
             }
         }
     });
+}
+
+function appendSearchResults(filterFn, placeholder, results, maxItems, container) {
+    let count = 0;
+
+    // Add placeholder item if such results exist
+    if (results.some(filterFn)) {
+        const placeholderItem = document.createElement("li");
+        placeholderItem.innerHTML = formatSearchResultItem({
+            ref: "", class: "empty category", doc: {title: placeholder},
+        }, "");
+        container.appendChild(placeholderItem);
+    }
+    // Add category items
+    for (let i = 0; i < results.length; i++) {
+        if (filterFn(results[i])) {
+            const item = document.createElement("li");
+            item.innerHTML = formatSearchResultItem(results[i].item, results[i].ref);
+            container.appendChild(item);
+            if (++count >= maxItems) {
+                break;
+            }
+        }
+    }
+}
+
+function filterResultItems(results, term){
+    const totalItems = [];
+    for (let i = 0; i < results.length; i++) {
+        const ref = results[i].ref;
+        const hasTitle = results[i].doc.title !== "";
+        const categories = ["/blog", "/readings", "/talks"];
+        const isEmptyRef = ref === "";
+        const isCategoryCheckRequired = !term.startsWith("*");
+        const isCategoryMissing = !categories.some(c => ref.includes(c));
+
+        if (!hasTitle || !isEmptyRef && isCategoryCheckRequired && isCategoryMissing) {
+            continue;
+        }
+
+        totalItems.push({item: results[i], ref: ref.split(" ")});
+    }
+    return totalItems;
 }
 
 function debounce(func, wait) {
