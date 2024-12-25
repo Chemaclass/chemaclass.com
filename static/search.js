@@ -142,7 +142,7 @@ function initSearch() {
 
         let results = (await initIndex()).search(term, options);
         const resultItems = filterResultItems(results, term);
-        resultCount.textContent = resultItems.length;
+        resultCount.textContent = `${resultItems.length} results found`;
 
         if (resultItems.length === 0) {
             resultItems.push({

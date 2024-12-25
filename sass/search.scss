@@ -54,7 +54,6 @@
     transition: all 0.3s ease;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     background-color: #fff;
-    padding-right: 26px;; /* Add padding to make space for the number */
 
     &:focus {
       border-color: var(--color-primary);
@@ -88,7 +87,7 @@
   .result-count {
     position: absolute;
     right: 10px;
-    top: 50%;
+    top: -20%;
     transform: translateY(-50%);
     color: #555;
     font-size: 14px;
