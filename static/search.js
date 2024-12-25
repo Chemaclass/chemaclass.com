@@ -4,10 +4,10 @@ const DOWN_ARROW = "ArrowDown";
 const ENTER_KEY = "Enter";
 const WAIT_TIME_MS = 150;
 
-let $searchInput = document.getElementById("search");
-let $searchResults = document.querySelector(".search-results");
-let $searchResultsItems = document.querySelector(".search-results__items");
 const resultCount = document.getElementsByClassName('result-count')[0];
+const searchInput = document.getElementById("search");
+const searchResults = document.querySelector(".search-results");
+const searchResultsItems = document.querySelector(".search-results__items");
 
 let searchItemSelected = null;
 let resultsItemsIndex = -1;
@@ -17,12 +17,12 @@ let resultsItemsIndex = -1;
 ////////////////////////////////////
 document.addEventListener("keyup", function (keyboardEvent) {
     if (["s", "S", "/"].includes(keyboardEvent.key)) {
-        $searchInput.focus();
+        searchInput.focus();
     }
 });
 
 document.addEventListener("keydown", function (keyboardEvent) {
-    const len = $searchResultsItems.getElementsByTagName("li").length - 1;
+    const len = searchResultsItems.getElementsByTagName("li").length - 1;
 
     if (keyboardEvent.key === DOWN_ARROW) {
         downArrow(len);
@@ -30,7 +30,7 @@ document.addEventListener("keydown", function (keyboardEvent) {
         upArrow(len);
     } else if (keyboardEvent.key === ENTER_KEY) {
         if (searchItemSelected === null) {
-            searchItemSelected = $searchResultsItems.getElementsByTagName("li")[0];
+            searchItemSelected = searchResultsItems.getElementsByTagName("li")[0];
         }
         searchItemSelected.getElementsByTagName("a")[0].click();
     }
@@ -41,16 +41,16 @@ function downArrow(len) {
 
     if (!searchItemSelected) {
         resultsItemsIndex = 0;
-        searchItemSelected = $searchResultsItems.getElementsByTagName("li")[0];
+        searchItemSelected = searchResultsItems.getElementsByTagName("li")[0];
     } else {
         removeClass(searchItemSelected, "selected");
-        const next = $searchResultsItems.getElementsByTagName("li")[resultsItemsIndex];
+        const next = searchResultsItems.getElementsByTagName("li")[resultsItemsIndex];
 
         if (typeof next !== undefined && resultsItemsIndex <= len) {
             searchItemSelected = next;
         } else {
             resultsItemsIndex = 0;
-            searchItemSelected = $searchResultsItems.getElementsByTagName("li")[0];
+            searchItemSelected = searchResultsItems.getElementsByTagName("li")[0];
         }
     }
 
@@ -61,17 +61,17 @@ function downArrow(len) {
 function upArrow(len) {
     if (!searchItemSelected) {
         resultsItemsIndex = -1;
-        searchItemSelected = $searchResultsItems.getElementsByTagName("li")[len];
+        searchItemSelected = searchResultsItems.getElementsByTagName("li")[len];
     } else {
         removeClass(searchItemSelected, "selected");
         resultsItemsIndex--;
-        const next = $searchResultsItems.getElementsByTagName("li")[resultsItemsIndex];
+        const next = searchResultsItems.getElementsByTagName("li")[resultsItemsIndex];
 
         if (typeof next !== undefined && resultsItemsIndex >= 0) {
             searchItemSelected = next;
         } else {
             resultsItemsIndex = len;
-            searchItemSelected = $searchResultsItems.getElementsByTagName("li")[len];
+            searchItemSelected = searchResultsItems.getElementsByTagName("li")[len];
         }
     }
     searchItemSelected.focus()
@@ -127,10 +127,15 @@ function initSearch() {
         return await index;
     }
 
-    $searchInput.addEventListener("keyup", debounce(async function () {
-        let term = $searchInput.value.trim();
-        $searchResults.style.display = term === "" ? "none" : "block";
-        $searchResultsItems.innerHTML = "";
+    searchInput.addEventListener("keyup", debounce(async function (keyboardEvent) {
+        let term = searchInput.value.trim();
+        if (currentTerm === term
+            && (keyboardEvent.key === DOWN_ARROW || keyboardEvent.key === UP_ARROW || keyboardEvent.key === ENTER_KEY)
+        ) {
+            return;
+        }
+        searchResults.style.display = term === "" ? "none" : "block";
+        searchResultsItems.innerHTML = "";
         currentTerm = term;
         if (term === "") {
             resultCount.textContent = "";
@@ -156,44 +161,45 @@ function initSearch() {
             })
         }
 
-        appendSearchResults((res) => res.item.ref.includes("/blog"), "Blog", resultItems, MAX_ITEMS, $searchResultsItems);
-        appendSearchResults((res) => res.item.ref.includes("/readings"), "Readings", resultItems, MAX_ITEMS, $searchResultsItems);
-        appendSearchResults((res) => !res.item.ref.includes("/blog") && !res.item.ref.includes("/readings"), "Others", resultItems, MAX_ITEMS, $searchResultsItems);
+        appendSearchResults((res) => res.item.ref.includes("/blog"), "Blog", resultItems, MAX_ITEMS, searchResultsItems);
+        appendSearchResults((res) => res.item.ref.includes("/readings"), "Readings", resultItems, MAX_ITEMS, searchResultsItems);
+        appendSearchResults((res) => !res.item.ref.includes("/blog") && !res.item.ref.includes("/readings"), "Others", resultItems, MAX_ITEMS, searchResultsItems);
     }, WAIT_TIME_MS));
 
     window.addEventListener('click', function (e) {
-        if ($searchResults.style.display === "block" && !$searchResults.contains(e.target)) {
-            $searchResults.style.display = "none";
+        if (searchResults.style.display === "block" && !searchResults.contains(e.target)) {
+            searchResults.style.display = "none";
         }
     });
 
-    $searchInput.addEventListener("focusin", function () {
-        if ($searchInput.value !== "") {
-            $searchInput.dispatchEvent(new KeyboardEvent("keyup"));
+    searchInput.addEventListener("focusin", function () {
+        if (searchInput.value !== "") {
+            searchInput.dispatchEvent(new KeyboardEvent("keyup"));
         }
     });
 
-    $searchInput.addEventListener("focusout", function () {
+    searchInput.addEventListener("focusout", function () {
         resultsItemsIndex = -1;
     });
 
     window.addEventListener("click", function (mouseEvent) {
-        if ($searchResults.style.display === "block") {
-            if (mouseEvent.target !== $searchInput) {
-                $searchResults.style.display = "";
+        if (searchResults.style.display === "block") {
+            if (mouseEvent.target !== searchInput) {
+                searchResults.style.display = "";
             }
         }
     });
 }
 
 function appendSearchResults(filterFn, placeholder, results, maxItems, container) {
-    let count = 0;
-
-    // Add placeholder item if such results exist
+    let totalAppendedItems = 0;
+    // Add category header item if such results exist
     if (results.some(filterFn)) {
         const placeholderItem = document.createElement("li");
         placeholderItem.innerHTML = formatSearchResultItem({
-            ref: "", class: "empty category", doc: {title: placeholder},
+            ref: "",
+            class: "empty category",
+            doc: {title: placeholder},
         }, "");
         container.appendChild(placeholderItem);
     }
@@ -203,7 +209,7 @@ function appendSearchResults(filterFn, placeholder, results, maxItems, container
             const item = document.createElement("li");
             item.innerHTML = formatSearchResultItem(results[i].item, results[i].ref);
             container.appendChild(item);
-            if (++count >= maxItems) {
+            if (++totalAppendedItems >= maxItems) {
                 break;
             }
         }
