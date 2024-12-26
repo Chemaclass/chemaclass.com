@@ -467,3 +467,21 @@ a.tooltip:hover {
     display: none;
   }
 }
+
+.only-desktop-visible, .only-phone-visible {
+  display: none;
+}
+
+/* Desktop Visibility */
+@media (min-width: 880px) {
+  .only-desktop-visible {
+    display: block !important; /* Or flex/inline-block as needed */
+  }
+}
+
+/* Phone Visibility */
+@media (max-width: 880px) {
+  .only-phone-visible {
+    display: block !important; /* Or flex/inline-block as needed */
+  }
+}

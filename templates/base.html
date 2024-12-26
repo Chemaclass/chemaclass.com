@@ -156,22 +156,29 @@
               </svg>
             </button>
           </div>
-          {% block search %}
-          <div class="search-container">
+          <div class="search-container only-desktop-visible">
             <input type="search" class="search" autocomplete="off" placeholder="Search...">
             <span class="result-count"></span>
             <div class="search-results">
               <div class="search-results__items"></div>
             </div>
           </div>
-          {% endblock search %}
         </nav>
 
       </header>
     {% endblock header %}
 
     <main>
-    {% block content %} {% endblock content %}
+      {% block search %}
+      <div class="search-container only-phone-visible">
+        <input type="search" class="search" autocomplete="off" placeholder="Search...">
+        <span class="result-count"></span>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </div>
+      {% endblock search %}
+      {% block content %} {% endblock content %}
     </main>
 
     <footer id="footer-page">
