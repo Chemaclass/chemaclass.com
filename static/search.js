@@ -2,7 +2,7 @@ const MAX_ITEMS = 4;
 const UP_ARROW = "ArrowUp";
 const DOWN_ARROW = "ArrowDown";
 const ENTER_KEY = "Enter";
-const WAIT_TIME_MS = 150;
+const WAIT_TIME_MS = 200;
 
 const resultCount = document.getElementsByClassName('result-count')[0];
 const searchInput = document.getElementById("search");
