@@ -97,7 +97,7 @@ really?
 
 When something doesn't work the way I expect (e.g., I don't like the outcome, or I think something is off), before
 blaming and pushing away responsibilities to others, I want to reflect on it and identify the root of the issue. What
-could I do to make the situation a bit better?
+could I do to make the situation better?
 
 ---
 

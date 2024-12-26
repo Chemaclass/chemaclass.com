@@ -1,6 +1,6 @@
 +++
 title = "Programmable Money"
-description = "Bitcoin is often referred to as programmable money because it allows for the execution of programmable transactions through its scripting language."
+description = "Bitcoin is often referred to as programmable money because it allows for the execution of programmable transactions through its scripting language, leveraging each bit for precision and functionality."
 draft = false
 [taxonomies]
 tags = [ "software", "bitcoin" ]
@@ -20,7 +20,6 @@ Bitcoin is often referred to as "programmable money" because it allows for the e
 Programmable money is the ability to embed logic and conditions into financial transactions. This programmability allows transactions to be executed automatically based on predefined rules without intermediaries or manual intervention. It transforms money from a static medium of exchange into a dynamic tool capable of executing complex agreements and automating financial operations.
 
 ## The Script Language
-
 
 Bitcoin’s programmability is powered by its built-in scripting language, [**Script**](https://en.bitcoin.it/wiki/Script). Unlike traditional programming languages, Script is a stack-based, Forth-like language explicitly designed for Bitcoin transactions.
 

@@ -29,7 +29,7 @@ I am currently a Tech Lead at [Lautsprecher Teufel GmbH](https://teufel.de/), wh
 
 Extreme Programming is the most straightforward and pragmatic approach to embracing Agile in your software team. It incorporates solutions based on values, principles, and practices. You don't have to use or do everything, but rather whatever fits you and your team in your context. However, these are helpful general solutions that work better when combined.
 
-From my experience, the word "extreme" can be a bit misleading, but I see it as an opportunity to emphasise the difficulty of the fundamentals behind it. The critical point is realising that our "common sense" is not as "common" as we tend to think, nor the best practices for practical teamwork. Therefore, this is about pushing ourselves to extreme effectiveness, collaboration, and satisfaction while working with others.
+From my experience, the word "extreme" can be misleading, but I see it as an opportunity to emphasise the difficulty of the fundamentals behind it. The critical point is realising that our "common sense" is not as "common" as we tend to think, nor the best practices for practical teamwork. Therefore, this is about pushing ourselves to extreme effectiveness, collaboration, and satisfaction while working with others.
 
 **You will host a live event on devm.io on the topic on January 19th. Could you give us a sneak peek of what your audience can expect?**
 
