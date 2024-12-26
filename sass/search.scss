@@ -135,8 +135,6 @@
     }
 
     &:has(.search-results__item.category) {
-      display: flex;
-      align-items: center;
       color: var(--search-category);
       font-weight: bold;
       margin-top: 10px;
@@ -158,6 +156,14 @@
 
   &__item-body {
     color: var(--body-color) !important;
+  }
+
+  .search-results__item-title.category {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 8px;
+    }
   }
 }
 
