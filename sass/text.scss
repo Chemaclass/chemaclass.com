@@ -121,7 +121,11 @@ header {
   flex-direction: row;
   position: sticky;
   top: 0;
-  background-color: var(--body-bg);
+  background: linear-gradient(
+    to bottom,
+    var(--body-bg) 50%,
+    rgba(var(--body-bg-rgb), 0.8) 100%
+  );
   padding: 0.5rem 0.2rem;
   z-index: 1000;
   nav {
