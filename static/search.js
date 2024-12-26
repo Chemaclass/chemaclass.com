@@ -70,6 +70,7 @@ function downArrow(len) {
     }
 
     searchItemSelected.focus();
+    searchItemSelected.scrollIntoView({ behavior: "smooth", block: "nearest" });
     addClass(searchItemSelected, "selected");
 }
 
@@ -105,6 +106,7 @@ function upArrow(len) {
     }
 
     searchItemSelected.focus();
+    searchItemSelected.scrollIntoView({ behavior: "smooth", block: "nearest" });
     addClass(searchItemSelected, "selected");
 }
 
