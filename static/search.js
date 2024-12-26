@@ -64,13 +64,13 @@ function downArrow(len) {
 
         // Reset to the first item if no suitable item is found
         if (!next || resultsItemsIndex > len) {
-            resultsItemsIndex = 0;
-            searchItemSelected = searchResultsItems.getElementsByTagName("li")[0];
+            resultsItemsIndex = 1;
+            searchItemSelected = searchResultsItems.getElementsByTagName("li")[1];
         }
     }
 
     searchItemSelected.focus();
-    searchItemSelected.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    searchItemSelected.scrollIntoView({ behavior: "smooth", block: "center" });
     addClass(searchItemSelected, "selected");
 }
 
@@ -106,7 +106,7 @@ function upArrow(len) {
     }
 
     searchItemSelected.focus();
-    searchItemSelected.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    searchItemSelected.scrollIntoView({ behavior: "smooth", block: "center" });
     addClass(searchItemSelected, "selected");
 }
 
