@@ -205,7 +205,10 @@ function initSearch() {
             return;
         }
 
-        let indexResults = (await initIndex()).search(term, options);
+        let indexResults = (await initIndex()).search(
+            term.startsWith('*') ? term.slice(1) : term,
+            options
+        );
         const items = filterResultItems(indexResults, term);
         resultCount.textContent = `${items.length} results`;
 
@@ -222,9 +225,9 @@ function initSearch() {
             return;
         }
 
-        appendSearchResults((res) => res.item.ref.includes("/blog"), "Blog", items, MAX_ITEMS);
-        appendSearchResults((res) => res.item.ref.includes("/readings"), "Readings", items, MAX_ITEMS);
-        appendSearchResults((res) => !res.item.ref.includes("/blog") && !res.item.ref.includes("/readings"), "Others", items, MAX_ITEMS);
+        appendSearchResults((res) => res.ref.includes("/blog"), "Blog", items, term);
+        appendSearchResults((res) => res.ref.includes("/readings"), "Readings", items, term);
+        appendSearchResults((res) => !res.ref.includes("/blog") && !res.ref.includes("/readings"), "Others", items, term);
     }, WAIT_TIME_MS));
 
     window.addEventListener('click', function (e) {
@@ -252,7 +255,7 @@ function initSearch() {
     });
 }
 
-function appendSearchResults(filterFn, placeholder, items, maxItems) {
+function appendSearchResults(filterFn, placeholder, items, term) {
     let totalItems = 0;
     // Add category header item if such items exist
     if (items.some(filterFn)) {
@@ -267,9 +270,9 @@ function appendSearchResults(filterFn, placeholder, items, maxItems) {
     for (let i = 0; i < items.length; i++) {
         if (filterFn(items[i])) {
             const item = document.createElement("li");
-            item.innerHTML = formatSearchResultItem(items[i].item, items[i].terms);
+            item.innerHTML = formatSearchResultItem(items[i], term.split(" "));
             searchResultsItems.appendChild(item);
-            if (++totalItems >= maxItems) {
+            if (!term.startsWith("*") && ++totalItems >= MAX_ITEMS) {
                 break;
             }
         }
@@ -277,7 +280,7 @@ function appendSearchResults(filterFn, placeholder, items, maxItems) {
 }
 
 function filterResultItems(results, term){
-    const totalItems = [];
+    const items = [];
     for (let i = 0; i < results.length; i++) {
         const ref = results[i].ref;
         const hasTitle = results[i].doc.title !== "";
@@ -290,9 +293,9 @@ function filterResultItems(results, term){
             continue;
         }
 
-        totalItems.push({item: results[i], terms: term.split(" ")});
+        items.push(results[i]);
     }
-    return totalItems;
+    return items;
 }
 
 function debounce(func, wait) {
@@ -316,6 +319,12 @@ function formatSearchResultItem(item, terms) {
             + `<span class="search-results__item-title ${item.class}">${item.doc.title}</span>`
             + (item.doc.body ? `<div class="search-results__item-body ${item.class}">${item.doc.body}</div>` : "")
             + '</div>';
+    }
+
+    if (terms.length > 0 && terms[0].startsWith('*')) {
+        // Remove '*' from the first element
+        terms = [terms[0].slice(1), ...terms.slice(1)]
+            .filter(term => term.trim() !== "");
     }
 
     return '<div class="search-results__item">'
