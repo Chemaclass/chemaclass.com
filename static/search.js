@@ -248,7 +248,7 @@ function initSearch() {
 
     window.addEventListener("click", function (mouseEvent) {
         if (searchResults.style.display === "block") {
-            if (mouseEvent.target !== searchInput) {
+            if (!searchResults.contains(mouseEvent.target)) {
                 searchResults.style.display = "";
             }
         }
