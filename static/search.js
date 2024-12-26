@@ -236,7 +236,7 @@ function initSearch() {
         resultCount.textContent = `${items.length} results`;
 
         if (items.length === 0) {
-            if (term === "btc") {
+            if (term.toLowerCase() === "btc") {
                 searchInput.value = "bitcoin";
                 searchInput.dispatchEvent(new KeyboardEvent("keyup"));
                 return
