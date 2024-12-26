@@ -267,7 +267,7 @@ function appendSearchResults(filterFn, placeholder, items, maxItems) {
     for (let i = 0; i < items.length; i++) {
         if (filterFn(items[i])) {
             const item = document.createElement("li");
-            item.innerHTML = formatSearchResultItem(items[i].item, items[i].ref);
+            item.innerHTML = formatSearchResultItem(items[i].item, items[i].terms);
             searchResultsItems.appendChild(item);
             if (++totalItems >= maxItems) {
                 break;
@@ -290,7 +290,7 @@ function filterResultItems(results, term){
             continue;
         }
 
-        totalItems.push({item: results[i], ref: ref.split(" ")});
+        totalItems.push({item: results[i], terms: term.split(" ")});
     }
     return totalItems;
 }
