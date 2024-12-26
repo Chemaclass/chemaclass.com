@@ -348,7 +348,7 @@ function formatSearchResultItem(item, terms) {
             .filter(term => term.trim() !== "");
     }
 
-    const term = terms.join(" ");
+    const term = terms.join("").trim().toLowerCase();
     const icon = (icons[term] !== undefined) ? icons[term] : "";
 
     return '<div class="search-results__item">'
