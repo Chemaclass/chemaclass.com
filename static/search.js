@@ -205,7 +205,8 @@ function initSearch() {
             resultCount.textContent = "";
             return;
         }
-        const specialMap = {
+
+        const customSearchMapCategories = {
             "home": "/",
             "blog": "/blog",
             "readings": "/readings",
@@ -213,10 +214,10 @@ function initSearch() {
             "music": "/music",
             "books": "/books"
         };
-        if (Object.keys(specialMap).includes(term)) {
+        if (Object.keys(customSearchMapCategories).includes(term)) {
             const item = document.createElement("li");
             item.innerHTML = formatSearchResultItem({
-                ref: specialMap[term],
+                ref: customSearchMapCategories[term],
                 doc: {
                     id: "#",
                     title: term.charAt(0).toUpperCase() + term.slice(1),
@@ -235,6 +236,12 @@ function initSearch() {
         resultCount.textContent = `${items.length} results`;
 
         if (items.length === 0) {
+            if (term === "btc") {
+                searchInput.value = "bitcoin";
+                searchInput.dispatchEvent(new KeyboardEvent("keyup"));
+                return
+            }
+
             const item = document.createElement("li");
             item.innerHTML = formatSearchResultItem({
                 class: "empty",
@@ -342,10 +349,10 @@ function formatSearchResultItem(item, terms) {
             + (item.doc.body ? `<div class="search-results__item-body ${item.class}">${item.doc.body}</div>` : "")
             + '</div>';
     }
+
+    // Remove '*' from the first element
     if (terms.length > 0 && terms[0].startsWith('*')) {
-        // Remove '*' from the first element
-        terms = [terms[0].slice(1), ...terms.slice(1)]
-            .filter(term => term.trim() !== "");
+        terms = [terms[0].slice(1), ...terms.slice(1)].filter(term => term.trim() !== "");
     }
 
     const term = terms.join("").trim().toLowerCase();
