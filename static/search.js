@@ -4,10 +4,16 @@ const DOWN_ARROW = "ArrowDown";
 const ENTER_KEY = "Enter";
 const WAIT_TIME_MS = 200;
 
-const resultCount = document.getElementsByClassName('result-count')[0];
-const searchInput = document.getElementById("search");
-const searchResults = document.querySelector(".search-results");
-const searchResultsItems = document.querySelector(".search-results__items");
+const searchContainer = Array.from(document.querySelectorAll(".search-container"))
+    .find(container => {
+        const input = container.querySelector('input[type="search"]');
+        return input && input.offsetParent !== null; // Check if input exists and is visible
+    });
+
+const resultCount = searchContainer.getElementsByClassName('result-count')[0];
+const searchInput = searchContainer.querySelectorAll('input[type="search"]')[0];
+const searchResults = searchContainer.querySelectorAll(".search-results")[0];
+const searchResultsItems = searchContainer.querySelectorAll(".search-results__items")[0];
 
 let searchItemSelected = null;
 let resultsItemsIndex = -1;
