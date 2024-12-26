@@ -138,13 +138,15 @@
       color: var(--search-category);
       font-weight: bold;
       margin-top: 10px;
+      cursor: unset;
+      user-select: none;
     }
   }
 
   &__item {
     padding: 8px 15px;
     &:not(:has(.category)) {
-      border-bottom: 1px solid #e8e8e8;
+      border-bottom: 1px solid var(--search-items-divider);
     }
   }
 
