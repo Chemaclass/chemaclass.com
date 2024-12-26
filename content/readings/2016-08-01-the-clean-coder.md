@@ -78,7 +78,7 @@ deeply about the practice of creating software. They treat it as a craft. They a
   - TDD helps to make the pre-interruption context reproducible.
     - Minimize time spent debugging
 - Coding is a **marathon**, not a sprint, so conserve the energy and creativity.
-- Go home when it's time, even in the middle of something important.
+- Leave when it's time, even in the middle of something important.
 - Continuously re-estimate your best/likely/worst completion time and speak up as soon as you recognize you will likely
   be late.
   - Do not allow anyone to rush you.

@@ -29,10 +29,16 @@ document.addEventListener("keydown", function (keyboardEvent) {
     } else if (keyboardEvent.key === UP_ARROW) {
         upArrow(len);
     } else if (keyboardEvent.key === ENTER_KEY) {
-        if (searchItemSelected === null) {
-            searchItemSelected = searchResultsItems.getElementsByTagName("li")[1];
+        if (!searchItemSelected || searchItemSelected.querySelector("div.empty")) {
+            searchItemSelected = searchResultsItems.getElementsByTagName("li")[1]
+                || searchResultsItems.getElementsByTagName("li")[0];
         }
-        searchItemSelected.getElementsByTagName("a")[0].click();
+        const link = searchItemSelected.getElementsByTagName("a")[0];
+        if (link) {
+            link.click();
+        } else {
+            console.log("nothing to click...");
+        }
     }
 });
 
@@ -175,6 +181,27 @@ function initSearch() {
         currentTerm = term;
         if (term === "") {
             resultCount.textContent = "";
+            return;
+        }
+        const specialMap = {
+            "home": "/",
+            "blog": "/blog",
+            "readings": "/readings",
+            "talks": "/talks",
+            "music": "/music",
+            "books": "/books"
+        };
+        if (Object.keys(specialMap).includes(term)) {
+            const item = document.createElement("li");
+            item.innerHTML = formatSearchResultItem({
+                ref: specialMap[term],
+                doc: {
+                    id: "#",
+                    title: term.charAt(0).toUpperCase() + term.slice(1),
+                    body: "",
+                }
+            }, []);
+            searchResultsItems.appendChild(item);
             return;
         }
 
