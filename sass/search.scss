@@ -137,24 +137,17 @@
     &:has(.search-results__item.category) {
       display: flex;
       align-items: center;
-      justify-content: center;
       color: var(--search-category);
       font-weight: bold;
-    }
-
-    &:has(.search-results__item.category)::before {
-      content: "─── ";
-      vertical-align: middle;
-    }
-
-    &:has(.search-results__item.category)::after {
-      content: " ───";
-      vertical-align: middle;
+      margin-top: 10px;
     }
   }
 
   &__item {
     padding: 8px 15px;
+    &:not(:has(.category)) {
+      border-bottom: 1px solid #e8e8e8;
+    }
   }
 
   &__item-title {
