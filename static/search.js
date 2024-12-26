@@ -1,4 +1,4 @@
-const MAX_ITEMS = 3;
+const MAX_ITEMS = 4;
 const UP_ARROW = "ArrowUp";
 const DOWN_ARROW = "ArrowDown";
 const ENTER_KEY = "Enter";
@@ -277,7 +277,7 @@ function makeTeaser(body, terms) {
     let TERM_WEIGHT = 40;
     let NORMAL_WORD_WEIGHT = 2;
     let FIRST_WORD_WEIGHT = 8;
-    let TEASER_MAX_WORDS = 25;
+    let TEASER_MAX_WORDS = 18;
 
     let stemmedTerms = terms.map(function (w) {
         return elasticlunr.stemmer(w.toLowerCase());

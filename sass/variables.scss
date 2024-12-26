@@ -1,7 +1,9 @@
 :root {
+    --link-color: var(--accent-color);
+
     --accent-color: #3a5c88;
     --accent-color-light: #397fd8;
-    --link-color: var(--accent-color);
+    --accent-overlay-color: #397fd8;
 
     --color-info: #66b2ff; /* Lighter Light Blue */
     --color-success: #5dd77b; /* Lighter Green */
@@ -14,7 +16,6 @@
     --color-secondary: #a2abb3; /* Lighter Dark Gray */
     --color-subtitle: #404040;
 
-    --accent-overlay-color: var(--accent-color-light);
     --body-bg: #fff;
     --body-color: #000;
     --heading-color: #000;
@@ -30,7 +31,7 @@
 .theme-dark {
     --accent-color: deepskyblue;
     --accent-color-light: #fff;
-    --accent-overlay-color: #dee2e6;
+    --accent-overlay-color: #66b2ff;
 
     --body-bg: #212529;
     --body-color: #fff;
