@@ -2,7 +2,7 @@
 title = "Open-Source Software"
 description = "What is Open-Source Software (OSS)? What are their benefits? How can you start contributing to any OSS? Pet projects? Knowledge sharing? Why all of these?"
 [taxonomies]
-tags = [ "software", "open-source", "git", "github", "knowledge-sharing" ]
+tags = [ "software", "open-source", "git", "knowledge-sharing" ]
 [extra]
 subtitle = "The power of contributing to OSS 🖥"
 static_thumbnail = "/images/blog/2021-05-03/cover.jpg"
@@ -10,10 +10,11 @@ static_thumbnail = "/images/blog/2021-05-03/cover.jpg"
 
 ![blog-cover](/images/blog/2021-05-03/cover.jpg)
 
-What is Open-Source Software (OSS)? 
-What are their benefits? 
-How can you start contributing to any OSS?
-Pet projects? Knowledge sharing? Why all of these?
+
+1. What is Open-Source Software (OSS)? 
+1. What are their benefits? 
+1. How can you start contributing to any OSS?
+1. Pet projects? Knowledge sharing? Why all of these?
 
 <!-- more -->
 

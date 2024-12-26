@@ -4,7 +4,7 @@ description = "Let's first establish what pair programming is: Two people workin
 draft = false
 aliases = [ "/pair-programming" ]
 [taxonomies]
-tags = [ "software", "team-work" ]
+tags = [ "software", "team-work", "pair-programming" ]
 [extra]
 subtitle = "Embracing quality practices in your engineering culture"
 static_thumbnail = "/images/blog/2024-03-28/cover.jpg"

@@ -2,7 +2,7 @@
 title = "Update your team to be more extreme"
 description = "Our profession is constantly evolving; therefore, it demands a non-stop learning process. Embracing the change is not optional in our software industry. We need to create spaces to get out of our comfort zone."
 [taxonomies]
-tags = [ "team", "work", "extreme", "programming" ]
+tags = [ "team-work", "software"]
 [extra]
 subtitle = "How can you help your peers to embrace the change?"
 static_thumbnail = "/images/blog/2022-02-26/cover.jpg"

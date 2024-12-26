@@ -2,7 +2,7 @@
 title = "Clean Agile"
 description = "This book is about Agile. What it was, what it is, and what it will be. This is a back-to-basics talk that covers the history of Agile, what motivated it, and what has happened to it since."
 [taxonomies]
-tags = [ "software", "agile", "basics" ]
+tags = [ "software", "agile" ]
 [extra]
 subtitle = "Back to Basics"
 pages = "190"

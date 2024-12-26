@@ -2,7 +2,7 @@
 title = "Zombie Scrum Survival Guide"
 description = "Zombie Scrum Survival Guide reveals why Scrum runs aground and shows how to supercharge your Scrum outcomes, while having a lot more fun along the way."
 [taxonomies]
-tags = [ "scrum", "agile", "recovery" ]
+tags = [ "scrum", "agile", "team-work" ]
 [extra]
 subtitle = "A Journey to Recovery"
 pages = "250"

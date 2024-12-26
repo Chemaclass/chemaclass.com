@@ -2,7 +2,7 @@
 title = "Typed arrays in PHP"
 description = "Argument unpacking, function variable argument list, and variadics function."
 [taxonomies]
-tags = [ "software", "php", "array", "generics" ]
+tags = [ "software", "php", "generics" ]
 [extra]
 subtitle = "An alternative to the missing feature in PHP: Generics"
 static_thumbnail = "/images/blog/2020-10-13/cover.jpg"

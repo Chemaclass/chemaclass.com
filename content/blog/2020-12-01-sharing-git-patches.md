@@ -2,7 +2,7 @@
 title = "Sharing your git patches"
 description = "Discover another way of sharing suggestions with your development team."
 [taxonomies]
-tags = [ "software", "sharing", "git", "team" ]
+tags = [ "software", "git", "team-work" ]
 [extra]
 subtitle = "Another way of sharing quick suggestions with your team"
 static_thumbnail = "/images/blog/2020-12-01/cover.jpg"

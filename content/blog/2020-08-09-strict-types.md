@@ -2,7 +2,7 @@
 title = "Strict Types in PHP"
 description = "`strict_types=1` is more for the reader than for the writer"
 [taxonomies]
-tags = [ "software", "php", "strict-types" ]
+tags = [ "software", "php" ]
 [extra]
 subtitle = "declare(strict_types=1);"
 static_thumbnail = "/images/blog/2020-08-09/cover.jpg"

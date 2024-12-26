@@ -3,7 +3,7 @@ title = "How to improve your tech-talk (or any other presentation)"
 description = "We have found ourselves attending a meeting that felt like we were wasting our time with a monologue that is either hard to follow or doesn't seem so interesting as it could. Let's fix this."
 aliases = [ "/tech-talk" ]
 [taxonomies]
-tags = [ "presentation", "soft-skills", "communication"]
+tags = [ "soft-skills", "communication"]
 [extra]
 subtitle = "Some tips to improve your communication skills"
 static_thumbnail = "/images/blog/2019-11-18/cover.jpg"

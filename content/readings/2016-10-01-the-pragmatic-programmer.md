@@ -2,7 +2,7 @@
 title = "The Pragmatic Programmer"
 description = "The journey to mastery"
 [taxonomies]
-tags = [ "software", "pragmatic" ]
+tags = [ "software", "soft-skills" ]
 [extra]
 subtitle = "The journey to mastery"
 pages = "350"
