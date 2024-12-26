@@ -11,11 +11,10 @@
   }
 
   @media (max-width: 880px) {
-    margin-top: 17px;
+    margin-top: unset;
 
     .search-container {
       width: 100%;
-      margin: 20px 0;
     }
     .search-results {
       max-width: calc(100vw - 30px);

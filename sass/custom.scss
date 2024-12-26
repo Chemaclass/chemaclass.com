@@ -5,6 +5,12 @@ a img {
   vertical-align: top;
 }
 
+@media (max-width: 880px) {
+  main {
+    margin-top: unset;
+  }
+}
+
 .homepage-left-column {
   margin-top: 1em;
   blockquote {
