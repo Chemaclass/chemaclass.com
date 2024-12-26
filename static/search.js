@@ -142,28 +142,26 @@ function initSearch() {
             return;
         }
 
-        let results = (await initIndex()).search(term, options);
-        const resultItems = filterResultItems(results, term);
-        resultCount.textContent = `${resultItems.length} results found`;
+        let indexResults = (await initIndex()).search(term, options);
+        const items = filterResultItems(indexResults, term);
+        resultCount.textContent = `${items.length} results found`;
 
-        if (resultItems.length === 0) {
-            resultItems.push({
-                ref: "",
-                item: {
-                    ref: "",
-                    class: "empty",
-                    doc: {
-                        title: "Nothing found",
-                        description: "",
-                        body: "Try something else",
-                    }
+        if (items.length === 0) {
+            const item = document.createElement("li");
+            item.innerHTML = formatSearchResultItem({
+                class: "empty",
+                doc: {
+                    title: "Nothing found",
+                    body: "Try something else",
                 }
-            })
+            }, "");
+            searchResultsItems.appendChild(item);
+            return;
         }
 
-        appendSearchResults((res) => res.item.ref.includes("/blog"), "Blog", resultItems, MAX_ITEMS, searchResultsItems);
-        appendSearchResults((res) => res.item.ref.includes("/readings"), "Readings", resultItems, MAX_ITEMS, searchResultsItems);
-        appendSearchResults((res) => !res.item.ref.includes("/blog") && !res.item.ref.includes("/readings"), "Others", resultItems, MAX_ITEMS, searchResultsItems);
+        appendSearchResults((res) => res.item.ref.includes("/blog"), "Blog", items, MAX_ITEMS);
+        appendSearchResults((res) => res.item.ref.includes("/readings"), "Readings", items, MAX_ITEMS);
+        appendSearchResults((res) => !res.item.ref.includes("/blog") && !res.item.ref.includes("/readings"), "Others", items, MAX_ITEMS);
     }, WAIT_TIME_MS));
 
     window.addEventListener('click', function (e) {
@@ -191,25 +189,24 @@ function initSearch() {
     });
 }
 
-function appendSearchResults(filterFn, placeholder, results, maxItems, container) {
-    let totalAppendedItems = 0;
-    // Add category header item if such results exist
-    if (results.some(filterFn)) {
+function appendSearchResults(filterFn, placeholder, items, maxItems) {
+    let totalItems = 0;
+    // Add category header item if such items exist
+    if (items.some(filterFn)) {
         const placeholderItem = document.createElement("li");
         placeholderItem.innerHTML = formatSearchResultItem({
-            ref: "",
-            class: "empty category",
+            class: "category empty",
             doc: {title: placeholder},
         }, "");
-        container.appendChild(placeholderItem);
+        searchResultsItems.appendChild(placeholderItem);
     }
     // Add category items
-    for (let i = 0; i < results.length; i++) {
-        if (filterFn(results[i])) {
+    for (let i = 0; i < items.length; i++) {
+        if (filterFn(items[i])) {
             const item = document.createElement("li");
-            item.innerHTML = formatSearchResultItem(results[i].item, results[i].ref);
-            container.appendChild(item);
-            if (++totalAppendedItems >= maxItems) {
+            item.innerHTML = formatSearchResultItem(items[i].item, items[i].ref);
+            searchResultsItems.appendChild(item);
+            if (++totalItems >= maxItems) {
                 break;
             }
         }
@@ -251,7 +248,7 @@ function debounce(func, wait) {
 }
 
 function formatSearchResultItem(item, terms) {
-    if (item.ref === "") {
+    if (item.ref === undefined || item.ref === "") {
         return `<div class="search-results__item ${item.class}">`
             + `<span class="search-results__item-title ${item.class}">${item.doc.title}</span>`
             + (item.doc.body ? `<div class="search-results__item-body ${item.class}">${item.doc.body}</div>` : "")
