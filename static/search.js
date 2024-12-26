@@ -30,7 +30,7 @@ document.addEventListener("keydown", function (keyboardEvent) {
         upArrow(len);
     } else if (keyboardEvent.key === ENTER_KEY) {
         if (searchItemSelected === null) {
-            searchItemSelected = searchResultsItems.getElementsByTagName("li")[0];
+            searchItemSelected = searchResultsItems.getElementsByTagName("li")[1];
         }
         searchItemSelected.getElementsByTagName("a")[0].click();
     }
@@ -144,7 +144,7 @@ function initSearch() {
 
         let indexResults = (await initIndex()).search(term, options);
         const items = filterResultItems(indexResults, term);
-        resultCount.textContent = `${items.length} results found`;
+        resultCount.textContent = `${items.length} results`;
 
         if (items.length === 0) {
             const item = document.createElement("li");
