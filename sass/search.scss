@@ -151,9 +151,10 @@
   }
 
   &__item-title {
+    display: flex;
+    align-items: center;
     font-size: 1.2rem;
-    display: inline-block;
-    margin-bottom: .1rem;
+    margin-bottom: 8px;
   }
 
   &__item-body {

@@ -30,7 +30,7 @@ const icons = {
         <path class="st0" d="M19,22c0,1.7-1.3,3-3,3c-4,0-5-3-5-3s3.3-3,5-3S19,20.3,19,22z"/>
     </svg>`,
     bitcoin: `<svg width="25px" viewBox="0 0 24 24" fill="none">
-        <path d="M10 6H15C16.6569 6 18 7.34315 18 9C18 10.6569 16.6569 12 15 12M10 6V12M10 6H7M10 6V3M15 12H10M15 12C16.6569 12 18 13.3431 18 15C18 16.6569 16.6569 18 15 18H10M10 12V18M10 18H7M10 18V21M13 6V3M13 21V18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 6H15C16.6569 6 18 7.34315 18 9C18 10.6569 16.6569 12 15 12M10 6V12M10 6H7M10 6V3M15 12H10M15 12C16.6569 12 18 13.3431 18 15C18 16.6569 16.6569 18 15 18H10M10 12V18M10 18H7M10 18V21M13 6V3M13 21V18"/>
     </svg>`
 };
 
@@ -342,16 +342,18 @@ function formatSearchResultItem(item, terms) {
             + (item.doc.body ? `<div class="search-results__item-body ${item.class}">${item.doc.body}</div>` : "")
             + '</div>';
     }
-
     if (terms.length > 0 && terms[0].startsWith('*')) {
         // Remove '*' from the first element
         terms = [terms[0].slice(1), ...terms.slice(1)]
             .filter(term => term.trim() !== "");
     }
 
+    const term = terms.join(" ");
+    const icon = (icons[term] !== undefined) ? icons[term] : "";
+
     return '<div class="search-results__item">'
         + `<a href="${item.ref}">`
-        + `<span class="search-results__item-title">${item.doc.title}</span>`
+        + `<span class="search-results__item-title">${icon} ${item.doc.title}</span>`
         + `<div class="search-results__item-body">${makeTeaser(item.doc.body, terms)}</div>`
         + `</a>`
         + '</div>';
