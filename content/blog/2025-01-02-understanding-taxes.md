@@ -26,23 +26,28 @@ Taxes are unavoidable —whether it's your paycheck, morning coffee, or the hous
 
 ## Tax journey 101
 
-1. **When you earn**:
-   - Income Tax (e.g., IRPF): From your salary before you even see it.
-   - Social security contributions: For healthcare and pensions.
-2. **When you spend**:
-   - Value-Added Tax (VAT): Extra (10%-25%) on almost everything you buy.
-   - Special taxes: Fuel, alcohol, and tobacco.
-3. **When you own**:
-   - Property Tax (e.g., IBI): Pay yearly for owning a house or land.
-   - Wealth tax: You might pay extra if you have significant assets.
-4. **When you transfer or inherit**:
-   - Transfer Tax (e.g., ITP): Buying a second-hand house? That's taxed.
-   - Inheritance/Gift tax: Inherit or get a big gift? The government takes a cut.
-5. **When you sell**:
-   - Capital gains tax: Sell property or investments? You owe Taxes on the gain.
-   - Plusvalía: The increased land value is taxed when you sell.
-6. **When you use services**:
-   - Local fees: Waste collection, car registration, building permits, etc.
+1. When you earn:
+   - Personal Income Tax: Deducted from your salary.
+   - Social Security Contributions: For healthcare, pensions, and unemployment.
+   - Self-Employment Tax: Covers taxes and social security for freelancers.
+2. When you spend:
+   - Value-Added Tax (VAT): Adds 10%-25% to most goods and services.
+   - Excise Tax: Extra charges on fuel, alcohol, tobacco, and luxury items.
+3. When you own:
+   - Property Tax: Paid annually on owned real estate.
+   - Wealth Tax: Charged on substantial assets in some countries.
+   - Road Tax: Annual fee for owning or operating a vehicle.
+4. When you transfer or inherit:
+   - Transfer Tax: Applied to purchases like second-hand properties.
+   - Inheritance/Gift Tax: Payable on inherited assets or large gifts.
+5. When you sell:
+   - Capital Gains Tax: On the profit when selling property, stocks, or investments.
+   - Land Value Increase Tax: On the increase in land value during ownership.
+6. When you use services:
+   - Local Fees: For waste collection, car registration, or building permits.
+   - Tourism/Travel Tax: For lodging or certain tourist-related services.
+7. When you win the lottery:
+   - Lottery Tax: A substantial portion of your winnings goes to the government.
 
 ---
 
