@@ -1,6 +1,8 @@
 +++
 title = "Talks | Chemaclass"
-template = "page.html"
+template = "blog/index.html"
+page_template = "blog/blog-post.html"
+sort_by = "weight"
 +++
 
 # Talks
