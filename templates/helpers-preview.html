@@ -1,5 +1,5 @@
 {% macro date_and_words(post) %}
-  {% if post.word_count > 0 -%}
+  {% if post.date and post.word_count > 0 -%}
     {{ post.date| date(format="%B %d, %Y") }} - {{ post.word_count }} words -
     {% if post.reading_time == 1 %}
       {{ post.reading_time }} min
@@ -7,7 +7,9 @@
       {{ post.reading_time }} mins
     {% endif %}
   {% else %}
-    {{ post.date| date(format="%B %d, %Y") }}
+    {% if post.date %}
+      {{ post.date| date(format="%B %d, %Y") }}
+    {%- endif %}
   {%- endif %}
 {% endmacro %}
 

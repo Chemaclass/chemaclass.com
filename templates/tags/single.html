@@ -16,11 +16,11 @@
         <h3 class="reading-title reading-title__long">
           <a href="{{ post.permalink }}">{{ post.title }}</a>
         </h3>
-
-        <span class="reading-date">
-          {{ post.date | date(format="%B %d, %Y") }}
-        </span>
-
+        {% if post.date %}
+          <span class="reading-date">
+            {{ post.date | date(format="%B %d, %Y") }}
+          </span>
+        {% endif %}
         <div class="summary">
           {{ helpers_preview::summary_tags(post=post) }}
         </div>
