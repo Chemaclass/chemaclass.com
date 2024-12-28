@@ -19,8 +19,7 @@
   {% else %}
     {{ post.content | safe | striptags | truncate(length=300) }}
   {%- endif %}
-
-  {% if read_more and post.content | length > 300 -%}
+  {%- if read_more and post.content | length > 300 -%}
     <a class="read-more" href="{{ post.permalink }}">read more</a>
   {%- endif %}
 {% endmacro %}

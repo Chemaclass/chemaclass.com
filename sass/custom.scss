@@ -23,7 +23,9 @@ a img {
 }
 
 .post-preview {
+  border-bottom: var(--preview-divider) 1px solid;
   display: block;
+  padding-bottom: 16px;
 
   img[alt=blog-cover] {
     width: 50%;
@@ -42,8 +44,6 @@ a img {
   .summary {
     min-height: 200px;
   }
-  padding-bottom: 10px;
-  border-bottom: var(--preview-divider) 1px solid;
 }
 
 .found-a-typo {
