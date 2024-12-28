@@ -1,9 +1,11 @@
 +++
-title = "Bashunit: Testing your bash scripts"
+title = "bashunit"
 aliases = [ "talks/bashunit" ]
 weight = 1
 [taxonomies]
 tags = [ "tech-talk" ]
+[extra]
+subtitle = "Testing your bash scripts"
 +++
 
 - 2024-10-29 | Berlin Hack & Tell [Berlin, Germany] (EN)
@@ -14,4 +16,7 @@ tags = [ "tech-talk" ]
   - [Winner in the category of Side Project, 2023: bashunit](https://www.youtube.com/watch?v=X0FhUzX-aI4&t=995s)
 - 2023-11-14 | Live interview with CodelyTV [Remote] (ES)
     - [Live coding with the team behind bashunit](https://www.youtube.com/watch?v=6Bn8gbUurdk)
-    
+
+---
+
+Read the **official docs** for the project: [https://bashunit.typeddevs.com/](https://bashunit.typeddevs.com/)
