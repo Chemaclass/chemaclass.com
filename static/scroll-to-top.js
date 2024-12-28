@@ -22,7 +22,7 @@ window.addEventListener('load', function () {
         }
 
         lastScrollY = currentScrollY;
-    }, 50));
+    }, 100));
 
     $scrollToTop.addEventListener('click', () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
