@@ -51,7 +51,7 @@ Follow my speaker journey.
 
 - 2024-05-27/30 | International PHP Conference [**Berlin, Germany**] (EN)
     - [Practical TDD **Workshop**: Collaborative Pair Programming](https://phpconference.com/agile-culture/practical-tdd-workshop/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7200844992779567104/))
-    - [Bashunit: Testing Your Bash Scripts, Inspired by PHPUnit](https://phpconference.com/devops-continuous-delivery/bashunit-testing-bash-scripts/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7201174305655693312/))
+    - [Bashunit: Testing your bash scripts, inspired by PHPUnit](https://phpconference.com/devops-continuous-delivery/bashunit-testing-bash-scripts/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7201174305655693312/))
 
 ![cover](/images/talks/2024-05-28/tdd-workshop-ipc-berin-24.jpg)
 
