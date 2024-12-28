@@ -493,7 +493,7 @@ a.tooltip:hover {
   }
 
   @media (min-width: 880px) {
-    right: calc((100vw - 700px) / 2 - 34px); /* Keep button closes to the <main> tag */
+    right: calc((100vw - 800px) / 2); /* Keep button closes to the <main> tag */
   }
 }
 
