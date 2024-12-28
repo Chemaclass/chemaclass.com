@@ -471,11 +471,11 @@ a.tooltip:hover {
 
 #scroll-to-top {
   position: fixed;
-  bottom: 4px;
-  right: 8px;
+  bottom: 16px;
+  right: 16px;
   z-index: 1000;
   border-radius: 9999px;
-  border: 2px solid var(--body-color);
+  border: 3px solid var(--body-color);
   width: 30px;
   height: 30px;
   display: grid;
@@ -493,7 +493,7 @@ a.tooltip:hover {
   }
 
   @media (min-width: 880px) {
-    right: calc((100vw - 800px) / 2); /* Keep button closes to the <main> tag */
+    right: calc((100vw - 850px) / 2); /* Keep button closes to the <main> tag */
   }
 }
 
