@@ -7,13 +7,18 @@ window.addEventListener('load', function () {
         return;
     }
 
-    let lastScrollY = window.scrollY;
-    const topMargin = 80; // Always show the navbar within px of the top
+    const scrollThreshold = 80;
 
+    if (window.scrollY >= scrollThreshold) {
+        $scrollToTop.classList.remove('hidden');
+        $scrollToTop.classList.add('show');
+    }
+
+    let lastScrollY = window.scrollY;
     // TODO: Extract `debounce` implementation to shared module or something
     window.addEventListener('scroll', debounce(() => {
         const currentScrollY = window.scrollY;
-        if (currentScrollY >= topMargin) {
+        if (currentScrollY >= scrollThreshold) {
             $scrollToTop.classList.remove('hidden');
             $scrollToTop.classList.add('show');
         } else {
