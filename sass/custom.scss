@@ -27,6 +27,10 @@ a img {
   display: block;
   padding-bottom: 16px;
 
+  img {
+    cursor: pointer;
+  }
+
   img[alt=blog-cover] {
     width: 50%;
     height: 160px;
@@ -121,6 +125,7 @@ a img {
     width: 180px;
     float: left;
     margin-right: 20px;
+    cursor: pointer;
   }
 
   .author {
