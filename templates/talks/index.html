@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% import "helpers-preview.html" as helpers_preview %}
+
+{% block title %}
+  Talks | Chemaclass
+{% endblock %}
+
+{% block posthead %}
+  {% for post in section.pages %}
+    <link rel="prerender" href="{{ post.permalink }}" />
+  {% endfor %}
+{% endblock posthead %}
+
+{% block content %}
+  {{ section.content | safe }}
+  {% include "footer-about.html" %}
+{% endblock content %}

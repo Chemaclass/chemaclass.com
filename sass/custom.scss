@@ -24,7 +24,6 @@ a img {
 
 .post-preview {
   display: block;
-  min-height: 300px;
 
   img[alt=blog-cover] {
     max-width: 50%;
@@ -36,10 +35,6 @@ a img {
     h3 a {
       font-size: 1.1em;
     }
-  }
-
-  .summary {
-    min-height: 230px;
   }
 }
 

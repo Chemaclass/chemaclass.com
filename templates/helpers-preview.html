@@ -21,7 +21,7 @@
   {%- endif %}
 
   {% if read_more and post.content | length > 300 -%}
-    <a href="{{ post.permalink }}">read more</a>
+    <a class="read-more" href="{{ post.permalink }}">read more</a>
   {%- endif %}
 {% endmacro %}
 

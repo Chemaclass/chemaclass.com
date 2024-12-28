@@ -1,13 +1,15 @@
 +++
 title = "Talks | Chemaclass"
-template = "blog/index.html"
-page_template = "blog/blog-post.html"
+template = "talks/index.html"
+page_template = "talks/single.html"
 sort_by = "weight"
 +++
 
 # Talks
 
 Follow my speaker journey.
+
+![cover](/images/talks/2022-06-23/ama-state-of-php.jpg)
 
 ---
 
@@ -157,8 +159,6 @@ Follow my speaker journey.
 - 2022-06-23 | DesarrolloWeb [**Remote**] (ES)
     - [Phel Language ¿Programación funcional para PHP?](https://www.youtube.com/live/9pElbTEcyGA)
 
-![cover](/images/talks/2022-06-23/ama-state-of-php.jpg)
-
 #### February
 
 - 2022-02-24 | PHP Madrid Community [**Remote**] (ES)
@@ -176,4 +176,4 @@ Follow my speaker journey.
 #### April
 
 - 2021-04-28 | PHP Madrid Community [**Remote**] (ES)
-    - [Open-Source Software - The power of contributing to OSS](https://www.meetup.com/phpmad/events/277733306/)
+  - [Open-Source Software - The power of contributing to OSS](https://www.meetup.com/phpmad/events/277733306/)

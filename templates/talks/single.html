@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block posthead %}
+  {% if page.lower %}
+  <link rel="prerender" href="{{ page.lower.permalink }}">
+  {% endif %}
+
+  {% if page.higher %}
+  <link rel="prerender" href="{{ page.higher.permalink }}">
+  {% endif %}
+
+  {% for tag in page.taxonomies.tags %}
+  <link rel="prerender" href='{{ get_taxonomy_url(kind="tags", name=tag) }}'>
+  {% endfor %}
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "{{ page.title }}",
+      "image": [{% if page.extra.static_thumbnail %} "{{ config.base_url|safe }}{{ page.extra.static_thumbnail|safe }}"{% endif %}]{% if page.date %},
+      "datePublished": "{{ page.date | date(format="%+") }}"{% endif %}{% if page.date %},
+      "dateModified": "{{ page.date | date(format="%+") }}"{% endif %}{% if config.extra.author %},
+      "author": {
+        "@type": "Person",
+        "name": "{{ config.extra.author }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ config.extra.author }}"{% if config.extra.icon %},
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ get_url(path=config.extra.icon) | safe }}"
+        }
+        {% endif %}
+      }
+      {% endif %}
+    }
+  </script>
+
+  {% set len_ancestors = page.ancestors | length %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [ {% for section_path in page.ancestors %}
+        { {% set section = get_section(path=section_path) %}
+          "@type": "ListItem",
+          "position": {{ loop.index }},
+          "name": "{{ section.title }}",
+          "item": "{{ section.permalink | safe }}"
+        },{% endfor %}
+        {
+          "@type": "ListItem",
+          "position": {{ len_ancestors + 1 }},
+          "name": "{{ page.title }}",
+          "item": "{{ page.permalink | safe }}"
+        }
+      ]
+    }
+  </script>
+{% endblock posthead %}
+
+{% block content %}
+  <div class="post-title">
+    <h1>{{ page.title }}</h1>
+    {% if page.extra.subtitle %}
+      <h3 class="post-subtitle">
+        {{ page.extra.subtitle }}
+      </h3>
+    {% endif %}
+  </div>
+
+  <div>
+    {{ page.content | safe }}
+  </div>
+
+  {% include "footer-about.html" %}
+{% endblock content %}
