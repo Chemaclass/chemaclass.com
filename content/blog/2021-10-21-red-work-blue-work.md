@@ -10,7 +10,9 @@ static_thumbnail = "/images/blog/2021-10-21/cover.jpg"
 
 ![blog-cover](/images/blog/2021-10-21/cover.jpg)
 
-"Blue Work" and "Red Work" are concepts that [David Marquet](https://x.com/ldavidmarquet) describes in his book [Leadership is Language](/readings/leadership-is-language/). "Red Work" focuses on execution and doing, requiring discipline and precision, while "Blue Work" is about thinking, planning, and reflecting, demanding creativity and openness—each requiring distinct mindsets and languages.
+"Blue Work" and "Red Work" are concepts that [David Marquet](https://x.com/ldavidmarquet)
+describes in his book [Leadership is Language](/readings/leadership-is-language/). Both require different mindsets and
+have different languages.
 
 <!-- more -->
 

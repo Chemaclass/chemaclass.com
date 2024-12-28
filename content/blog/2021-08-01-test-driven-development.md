@@ -12,7 +12,8 @@ static_thumbnail = "/images/blog/2021-08-01/cover.jpg"
 
 ![blog-cover](/images/blog/2021-08-01/cover.jpg)
 
-The complexity of TDD doesn't lie in writing tests themselves but in breaking old habits and adopting new ones to design software that is inherently easy to test and maintain.
+The complexity here is not about writing tests itself, but the habits that we have to change to create software that is
+easy to be tested.
 
 <!-- more -->
 
@@ -103,7 +104,7 @@ You can find a lot of katas on the Internet. For example:
 
 ### TDD is more as a workflow than a design
 
-> "TDD is a design tool." That's what Sandro has said for years. But not anymore. After working with different teams and in different organisations, and also carefully inspecting how he works, Sandro changed his mind about the role of TDD in software design.
+> "TDD is a design tool." That’s what Sandro has said for years. But not anymore. After working with different teams and in different organisations, and also carefully inspecting how he works, Sandro changed his mind about the role of TDD in software design.
 
 {{ youtube(id="KyFVA4Spcgg") }}
 

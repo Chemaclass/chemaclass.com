@@ -10,7 +10,7 @@ static_thumbnail = "/images/blog/2020-08-09/cover.jpg"
 
 ![blog-cover](/images/blog/2020-08-09/cover.jpg)
 
-In December 2015, PHP 7 introduced scalar type declarations and the strict types flag, bringing more precision and control to type handling in functions and methods.
+In December 2015, PHP 7 introduced scalar type declarations and with it the strict types flag. What is this new feature?
 
 <!-- more -->
 

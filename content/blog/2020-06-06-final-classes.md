@@ -10,9 +10,7 @@ static_thumbnail = "/images/blog/2020-06-06/cover.jpg"
 
 ![blog-cover](/images/blog/2020-06-06/cover.jpg)
 
-Focus on clear contracts, isolated side effects, testability, low complexity, and reduced cognitive load. 
-
-These principles contribute to code fluidity, enhance maintainability, and help you build confidence in your skills as a developer.
+Clear contracts, isolated side effects, testability, low complexity and cognitive load, code fluidity, and confidence in yourself.
 
 <!-- more -->
 

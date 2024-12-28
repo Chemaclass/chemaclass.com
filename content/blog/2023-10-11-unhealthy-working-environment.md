@@ -13,9 +13,9 @@ static_thumbnail = "/images/blog/2023-10-11/cover.jpg"
 
 An unhealthy working environment can have various symptoms that negatively impact employees' physical and mental well-being.
 
-While writing about The Peter Principle, I mentioned: _"Talk to each other. If you feel you can't, that's a **symptom of a non-healthy working environment**, and that's something more significant to deal with."_ But what are those symptoms?
-
 <!-- more -->
+
+While writing about [The Peter Principle](/blog/the-peter-principle), I mentioned: _"Talk to each other. If you feel you can’t, that’s a **symptom of a non-healthy working environment**, and that’s something more significant to deal with."_ But what are those symptoms?
 
 ## Symptoms
 
@@ -91,7 +91,3 @@ Prolonged exposure to a non-healthy work environment can lead to physical and em
 
 - [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
 - [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
-
-## Related links
-
-- [The Peter Principle](/blog/the-peter-principle)

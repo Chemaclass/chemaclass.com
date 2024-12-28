@@ -13,13 +13,11 @@ static_thumbnail = "/images/blog/2023-04-14/cover.jpg"
 
 To introduce a new tech stack for the entire team, it's important to bring "why?" and a strategy to make it happen among the team because it will affect everyone.
 
-To decide whether to use a new tech stack or not, remember that it is a team decision, according to the standardization and maintainability of the project when introducing such a new tech stack.
-
 <!-- more -->
 
 ## Why that new tech stack?
 
-Most importantly, what problem do you want to solve by introducing it? Is it because it is "cool"? Or is there an actual "necessity" that this tech helps you with?
+To decide whether to use a new tech stack or not, remember that it is a team decision, according to the standardization and maintainability of the project when introducing such a new tech stack. But, most importantly, what problem do you want to solve by introducing it? Is it because it is "cool"? Or is there an actual "necessity" that this tech helps you with?
 
 ### The direction of the technology
 

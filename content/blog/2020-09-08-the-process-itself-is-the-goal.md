@@ -13,9 +13,9 @@ pin = false
 
 No goal should be an achievement on its own, but the process itself that helps us to go in the direction of these goals.
 
-Goals, in business and in life in general, should be conceived as directions, where their real intention is to help us accomplish more in the way we planned or want.
-
 <!-- more -->
+
+Goals, in business and in life in general, should be conceived as directions, where their real intention is to help us accomplish more in the way we planned or want.
 
 > If we get rewarded only for results and not for processes, we will become pretty miserable.
 

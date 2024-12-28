@@ -10,7 +10,7 @@ static_thumbnail = "/images/blog/2020-10-13/cover.jpg"
 
 ![blog-cover](/images/blog/2020-10-13/cover.jpg)
 
-Explore the concepts of argument unpacking, function variable argument lists, and variadic functions to make your code more flexible and dynamic, enabling it to handle varying numbers of inputs effectively.
+Argument unpacking, function variable argument list, and variadics function.
 
 <!-- more -->
 

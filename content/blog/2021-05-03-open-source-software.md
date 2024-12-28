@@ -10,14 +10,13 @@ static_thumbnail = "/images/blog/2021-05-03/cover.jpg"
 
 ![blog-cover](/images/blog/2021-05-03/cover.jpg)
 
-OSS is all about sharing, collaborating, and growing together. This blog dives into what OSS is, why it's awesome, and how you can get started. For companies, OSS means trust, faster adoption, and staying ahead in tech. For individuals, it's a chance to learn, build confidence, and play around with cool projects without the stress of live environments.
-
-<!-- more -->
 
 1. What is Open-Source Software (OSS)? 
 1. What are their benefits? 
 1. How can you start contributing to any OSS?
 1. Pet projects? Knowledge sharing? Why all of these?
+
+<!-- more -->
 
 ## What is Open-Source Software (OSS)? 🤔
 

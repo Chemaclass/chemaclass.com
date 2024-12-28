@@ -13,9 +13,9 @@ static_thumbnail = "/images/blog/2024-02-25/cover.jpg"
 
 I have heard multiple times, from various people, the idea of panic towards deploying on Fridays. How good is that idea of banning the day before weekend from delivering new value to our clients or customers?
 
-The main argument in favor of NOT deploying on Friday is based on the idea that we "should be paranoid" with our software and that it could fail when we touch it. So, we "should assume" the worst whenever we deploy a new release version of our system.
-
 <!-- more -->
+
+The main argument in favor of NOT deploying on Friday is based on the idea that we "should be paranoid" with our software and that it could fail when we touch it. So, we "should assume" the worst whenever we deploy a new release version of our system.
 
 However, the critical factor here is Why? Why should we not deploy on Fridays? Is it OK to be afraid of our own software system, that we live in a constant panic of breaking it the day after we have done a deployment? How much impact should our releases have? How can we make sure the deployment won't break the live system?
 

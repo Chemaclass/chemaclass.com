@@ -10,7 +10,7 @@ static_thumbnail = "/images/blog/2021-03-01/cover.jpg"
 
 ![blog-cover](/images/blog/2021-03-01/cover.jpg)
 
-The book _Who Moved My Cheese?_ presents a story within the main narrative, featuring four characters: two mice, **Sniff** and **Scurry**, and two little people, **Hem** and **Haw**, each representing different approaches to change and adaptation.
+The book *Who moved my cheese?* presents a tale inside the main story that consists of 4 characters: two mice, **Sniff** and **Scurry**, and two little persons, **Hem** and **Haw**.
 
 <!-- more -->
 

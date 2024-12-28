@@ -10,7 +10,7 @@ static_thumbnail = "/images/blog/2020-06-28/cover.jpg"
 
 ![blog-cover](/images/blog/2020-06-28/cover.jpg)
 
-If you notice something within the scope of your current task that can be easily improved, take the initiative to improve it right away. Small changes can make a big difference, and if you have any questions or uncertainties about the improvement, don't hesitate to ask for clarification or guidance.
+If you see something, in the scope of your current task, that can be easily improved, improve it. And if you have any questions about it, ask.
 
 <!-- more -->
 

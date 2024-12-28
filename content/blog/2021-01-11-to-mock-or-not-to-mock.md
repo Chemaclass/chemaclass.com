@@ -10,13 +10,16 @@ static_thumbnail = "/images/blog/2021-01-11/cover.jpg"
 
 ![blog-cover](/images/blog/2021-01-11/cover.jpg)
 
-Mocking is a powerful tool, but deciding “what to mock” can quickly become more complicated than expected if not approached thoughtfully and with clear guidelines.
+Mocking is useful, but "what to mock" usually turns out to be more complicated than expected if you don't treat
+this carefully.
 
 <!-- more -->
 
 #### How to escape the mocking hell
 
-What is actually happening when we create a mock? Which types of mocks are there? Is mocking good or bad? Well, as always, everything depends on the context. And here we will consider some of the main situations about when to mock and when not to mock, but especially why.
+What is actually happening when we create a mock? Which types of mocks are there? Is mocking good or bad? Well, as
+always, everything depends on the context. And here we will consider some of the main situations about when to mock and
+when not to mock, but especially why.
 
 ## What happens when you mock something?
 

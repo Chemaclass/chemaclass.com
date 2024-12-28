@@ -13,10 +13,9 @@ static_thumbnail = "/images/blog/2023-06-08/cover.jpg"
 
 Learned helplessness is the behavior exhibited by a subject after enduring repeated aversive beyond their control. 
 
+<!-- more -->
 
 It was initially thought to be caused by the subject's acceptance of their powerlessness by discontinuing attempts to escape or avoid the aversive stimulus.
-
-<!-- more -->
 
 ## Experiments
 

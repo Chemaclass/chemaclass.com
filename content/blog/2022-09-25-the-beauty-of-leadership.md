@@ -11,9 +11,8 @@ static_thumbnail = "/images/blog/2022-09-25/cover.jpg"
 
 ![blog-cover](/images/blog/2022-09-25/cover.jpg)
 
-Leadership is not a synonym for management, it has nothing to do with titles or personal attributes. 
-
-What is leadership? How can we become leaders? And most importantly, why picking a good leadership strategy is crucial?
+Leadership is not a synonym for management, it has nothing to do with titles or personal attributes. So, what is it? How
+can we become leaders? And most importantly, why?
 
 <!-- more -->
 

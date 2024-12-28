@@ -10,9 +10,8 @@ static_thumbnail = "/images/blog/2022-01-24/cover.jpg"
 
 ![blog-cover](/images/blog/2022-01-24/cover.jpg)
 
-Milgram was interested in researching how far people would go in obeying an instruction if it involved harming another person, and how easily people could be influenced into committing atrocities, such as the actions of Germans during WWII under Nazi rule. 
-
-His famous experiment revealed the disturbing extent to which ordinary individuals might comply with authority figures, even when it conflicted with their moral beliefs.
+Milgram was interested in researching how far people would go in obeying an instruction if it involved harming another
+person, and how easily people could be influenced into committing atrocities. For example, Germans in WWII.
 
 <!-- more -->
 

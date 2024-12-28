@@ -13,11 +13,11 @@ static_thumbnail = "/images/blog/2023-03-16/cover.jpg"
 
 I've got this question recently, a couple of times, and this is a great topic to share.
 
-_"Have you always been like this? Reading books, writing blog posts, speaker in conferences and meet-ups, non-stop learning in your spare time?"_
+<!-- more -->
+
+> "Have you always been like this? Constantly reading books, writing blog posts, public speaker in conferences and meet-ups, learning in your private time, etc...?"
 
 The short answer is: no, and let me tell you how I ended up in this situation.
-
-<!-- more -->
 
 ---
 
