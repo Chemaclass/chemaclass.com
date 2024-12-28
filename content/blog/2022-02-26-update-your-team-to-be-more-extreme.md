@@ -101,18 +101,8 @@ You can help your team to be more extreme by helping with a dedicated team space
 
 ## Tech Talk
 
-After writing this blog post (originally in Feb, 2022), I was invited to do a [tech talk](/talks/) in different conferences about this topic.
-
-- 2022-06-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Berlin, Germany] (EN)
-- 2022-09-16 | [Code Talks](https://codetalks.de/speakers#speaker-985?event=7) [Hamburg, Germany] (EN)
-- 2022-10-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Munich, Germany] (EN)
-- 2022-12-21 | IES Ginés Pérez Chirinos [Murcia, Spain] (ES)
-- 2023-01-19 | [devm.io](https://devm.io/update-your-team-to-be-more-extreme/) [Remote] (EN)
-- 2023-07-28 | [WeAreDeveloper World Congress](https://www.wearedevelopers.com/world-congress) [Berlin, Germany] (EN)
-
-### WeAreDevelopers World Congress in Berlin (July 2023)
-
-{{ youtube(id="dqtAyl-SvaY") }}
+After writing this blog post (originally in Feb, 2022), I was invited to do 
+a [tech talk](/talks/update-your-team-to-be-more-extreme) in different conferences about this topic.
 
 ### Recommended readings
 
