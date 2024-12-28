@@ -24,6 +24,7 @@ extra_syntaxes_and_themes = ["syntaxes"]
 smart_punctuation = true
 
 [extra]
+author = "Chemaclass"
 nav = [
     { name = "Blog", path = "/blog/" },
     { name = "Readings", path = "/readings/" },
