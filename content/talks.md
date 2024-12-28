@@ -9,7 +9,7 @@ Follow my speaker journey.
 
 ---
 
-## Upcoming events 🎤
+## Upcoming events
 
 ### 2025
 

@@ -35,6 +35,24 @@ const icons = {
         <path class="st0" d="M23.2,14c1.8-0.1,3.5-0.9,4.6-2.4L29,10h-5"/>
         <path class="st0" d="M19,22c0,1.7-1.3,3-3,3c-4,0-5-3-5-3s3.3-3,5-3S19,20.3,19,22z"/>
     </svg>`,
+    talks: `<svg width="25px"  viewBox="0 0 512 512"  xml:space="preserve">
+        <style type="text/css">.st0{fill:#000000;}</style>
+        <g>
+        <rect x="19.564" y="447.635" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -285.559 842.3594)" class="st0" width="24.231" height="65.371"/>
+        <polygon class="st0" points="0.17,494.699 46.394,448.809 63.188,465.945 17.133,511.66 "/>
+        <path class="st0" d="M263.682,147.594L43.473,412.466l56.061,56.061l264.872-220.21L263.682,147.594z M99.534,468.528
+        l264.872-220.21"/>
+        <path class="st0" d="M43.642,412.297l220.223-264.551l100.371,100.738L99.549,468.203L43.642,412.297z"/>
+        <path class="st0" d="M273.211,120.521l118.268,118.268c29.522,0.34,59.073-10.42,82.226-31.882L305.092,38.295
+        C283.631,61.447,272.872,90.999,273.211,120.521z"/>
+        <path class="st0" d="M391.48,238.551l-118.1-118.199c-0.279-30.238,11.02-59.379,31.887-81.891l168.268,168.614
+        c-22.131,20.18-50.791,31.484-80.695,31.484L391.48,238.551z"/>
+        <path class="st0" d="M477.097,34.904C437.35-4.844,376.59-10.594,330.612,17.4L494.6,181.387
+        C522.594,135.409,516.844,74.65,477.097,34.904z"/>
+        <path class="st0" d="M330.783,17.23c18.611-10.984,40.072-16.992,62.018-16.992c31.787,0,61.664,12.371,84.127,34.832
+        c38.895,38.898,46.123,98.863,17.625,145.93L330.783,17.23z"/>
+        </g>
+    </svg>`,
     bitcoin: `<svg width="25px" viewBox="0 0 24 24" fill="none">
         <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 6H15C16.6569 6 18 7.34315 18 9C18 10.6569 16.6569 12 15 12M10 6V12M10 6H7M10 6V3M15 12H10M15 12C16.6569 12 18 13.3431 18 15C18 16.6569 16.6569 18 15 18H10M10 12V18M10 18H7M10 18V21M13 6V3M13 21V18"/>
     </svg>`
@@ -262,7 +280,10 @@ function initSearch() {
 
         appendSearchResults((res) => res.ref.includes("/blog"), icons.blog + " Blog", items, term);
         appendSearchResults((res) => res.ref.includes("/readings"), icons.readings + " Readings", items, term);
-        appendSearchResults((res) => !res.ref.includes("/blog") && !res.ref.includes("/readings"), icons.others + " Others", items, term);
+        appendSearchResults((res) => res.ref.includes("/talks"), icons.talks + " Talks", items, term);
+        appendSearchResults((res) => !res.ref.includes("/blog")
+            && !res.ref.includes("/readings")
+            && !res.ref.includes("/talks"), icons.others + " Others", items, term);
     }, WAIT_TIME_MS));
 
     window.addEventListener('click', function (e) {
