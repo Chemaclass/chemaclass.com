@@ -11,7 +11,9 @@ static_thumbnail = "/images/blog/2023-01-09/cover.jpg"
 
 ![blog-cover](/images/blog/2023-01-09/cover.jpg)
 
-My interview with **devm.io** regarding Agile and Extreme Programming.
+My written interview with **devm.io** regarding Agile and Extreme Programming. 
+
+Agile is more about HOW you do certain things, rather than WHAT things you do.
 
 <!-- more -->
 

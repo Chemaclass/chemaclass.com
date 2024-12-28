@@ -10,13 +10,11 @@ static_thumbnail = "/images/blog/2022-06-08/cover.jpg"
 
 ![blog-cover](/images/blog/2022-06-08/cover.jpg)
 
-We all have been junior developers at some point. This is easy to know because it is at the very beginning of your
-carrier. Your responsibilities were narrowed down by other peers who were looking after you. 
+We all have been junior developers at some point. This is easy to know because it is at the very beginning of your carrier. Your responsibilities were narrowed down by other peers who were looking after you. 
+
+Suddenly, at some point, after some months or years, you got your promotion or another job, where you weren't a junior anymore, but an intermediate.
 
 <!-- more -->
-
-Suddenly, at some point, after some months or years, you got your promotion or another job, where you weren't a junior
-anymore, but an intermediate.
 
 An intermediate (also known as middle) is something between junior and senior. You know now that you are not a junior 
 anymore, you know how to deliver value but yet you also have mixed feelings about seniority. You want to be a senior, 

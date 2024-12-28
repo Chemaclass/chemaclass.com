@@ -11,7 +11,10 @@ static_thumbnail = "/images/blog/2022-10-08/cover.jpg"
 
 ![blog-cover](/images/blog/2022-10-08/cover.jpg)
 
-I recently got a great question on Twitter which got me thinking for a while and I decided to share my thoughts about it.
+
+_"What to do when working on "bad software" and you can't improve it because it is against the beliefs of your peers? Should you change the company?"_
+
+I recently got a great question on X which got me thinking for a while and I decided to share my thoughts about it.
 
 <!-- more -->
 

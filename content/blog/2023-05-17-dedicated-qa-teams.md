@@ -13,11 +13,13 @@ static_thumbnail = "/images/blog/2023-05-17/cover.jpg"
 
 This will be controversial, but let's talk about the QA position. The hidden truth behind the lack of software quality and why this should concern you if you write software.
 
+As a software developer, when you write software, you are responsible for the quality of whatever you're writing. 
+
 <!-- more -->
 
 ## QA is a role, not a position
 
-As a software developer, when you write software, you are responsible for the quality of whatever you're writing. A third person acting like QA could find that your solution doesn't work like expected, but how come? You might argue they might catch edge cases, but how could that be possible if the software was already tested previously?
+A third person acting like QA could find that your solution doesn't work like expected, but how come? You might argue they might catch edge cases, but how could that be possible if the software was already tested previously?
 
 A software team's final goal is to make the QA position useless because they should find nothing but well-working software. But how do you get to that point? How can we ensure that the software we write is working as expected and there is no need for a QA person in our team?
 

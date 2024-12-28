@@ -10,7 +10,7 @@ static_thumbnail = "/images/blog/2021-11-20/cover.jpg"
 
 ![blog-cover](/images/blog/2021-11-20/cover.jpg)
 
-There are two known schools in TDD: the mockist school (aka Outside-in) and the classicist school (aka Inside-out).
+There are two well-known schools in TDD: the mockist school (Outside-in), which emphasizes interaction-based testing with mocks, and the classicist school (Inside-out), which focuses on state-based testing and minimal use of mocks.
 
 <!-- more -->
 

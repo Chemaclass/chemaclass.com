@@ -10,8 +10,7 @@ static_thumbnail = "/images/blog/2020-04-07/cover.jpg"
 
 ![blog-cover](/images/blog/2020-04-07/cover.jpg)
 
-Why you should consider testing as part of your daily development habit and how it's directly linked to the software
-quality.
+Discover why testing should be an essential part of your daily development routine and how it directly impacts the quality, reliability, and maintainability of your software.
 
 <!-- more -->
 

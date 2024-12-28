@@ -10,13 +10,10 @@ static_thumbnail = "/images/blog/2021-02-01/cover.jpg"
 
 ![blog-cover](/images/blog/2021-02-01/cover.jpg)
 
-The new Functional Programming language build-in PHP. Check it out!
+
+Phel is a Functional Programming ([FP](https://en.wikipedia.org/wiki/Functional_programming)) language that compiles to PHP. It is a dialect of [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) inspired by Clojure and Janet, built on PHP's ecosystem, lists, vectors, maps, macros, repl, etc.
 
 <!-- more -->
-
-# The Phel Language
-
-Phel is a Functional Programming ([FP](https://en.wikipedia.org/wiki/Functional_programming)) language that compiles to PHP. It is a dialect of [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) inspired by Clojure and Janet.
 
 ## Features
 
