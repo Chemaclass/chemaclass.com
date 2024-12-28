@@ -496,6 +496,10 @@ a.tooltip:hover {
     transform: translateY(0);
     transition: transform 0.5s ease-in;
   }
+
+  @media (min-width: 880px) {
+    right: calc((100vw - 700px) / 2); /* Keep button inside the <main> tag */
+  }
 }
 
 .only-desktop-visible, .only-phone-visible {
