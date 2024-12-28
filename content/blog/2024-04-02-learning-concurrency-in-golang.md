@@ -11,7 +11,7 @@ static_thumbnail = "/images/blog/2024-04-02/cover.jpg"
 
 ![blog-cover](/images/blog/2024-04-02/cover.jpg)
 
-I wanted to learn a new programming language, so after trying some, I ended up with Golang as one of my favorites for its simplicity and capabilities. It has features I haven’t used in years, like multithreading and concurrency.
+I wanted to learn a new language, so after trying some, I ended up with Golang as one of my favorites for its simplicity and capabilities. It has features I haven’t used in years, like multithreading and concurrency.
 
 <!-- more -->
 
@@ -263,5 +263,3 @@ func moveHorseOnePos(board [][]*Horse, line int, winnerChan chan Horse) {
 The code displayed in this post is a simplified version, so if you would like to check the working source, you can do it here: [Chemaclass/go-horse-racing](https://github.com/Chemaclass/go-horse-racing).
 
 > Thanks to my former Team Lead, Andrei Boar, who helped me review my first original solution and provided an [alternative solution](https://gist.github.com/zuzuleinen/79413aa7933d7d6c6d84ec6ba8c3910a) (simpler and better!), which I applied to my original code. The main learning was using a `chan Horse` to pass the winner Horse from `main()`, instead of using a `chan bool` and a `sync.WaitGroup` between all threads.
-
-

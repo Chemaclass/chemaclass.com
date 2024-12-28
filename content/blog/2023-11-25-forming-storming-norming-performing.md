@@ -13,9 +13,9 @@ static_thumbnail = "/images/blog/2023-11-25/cover.jpg"
 
 In 1965, psychologist Bruce Tuckman developed a model (Tuckman's Model) that describes the stages of group development, forming and maturing into a cohesive and effective team. 
 
-The model initially consisted of four stages: "_**forming**, **storming**, **norming**,_ and _**performing**_," adding one additional "_**adjourning**_" in 1977.
-
 <!-- more -->
+
+The model initially consisted of four stages: "_**forming**, **storming**, **norming**,_ and _**performing**_," adding one additional "_**adjourning**_" in 1977.
 
 It's important to note that teams may not always progress through these stages linearly, and they might revert to a previous stage under certain circumstances.
 
@@ -108,4 +108,3 @@ This involves providing **guidance and structure** during the _forming_ stage, *
 
 - [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
 - [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
-
