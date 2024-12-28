@@ -469,6 +469,34 @@ a.tooltip:hover {
   }
 }
 
+#scroll-to-top {
+  position: fixed;
+  bottom: 4px;
+  right: 8px;
+  z-index: 1000;
+  border-radius: 9999px;
+  border: 2px solid var(--body-color);
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  background-color: var(--body-bg);
+
+  &.hidden {
+    transform: translateY(150%);
+    transition: transform 0.5s ease-out;
+  }
+  &.show {
+    transform: translateY(0);
+    transition: transform 0.5s ease-in;
+  }
+
+  @media (min-width: 880px) {
+    right: calc((100vw - 700px) / 2 - 34px); /* Keep button closes to the <main> tag */
+  }
+}
+
 .only-desktop-visible, .only-phone-visible {
   display: none;
 }
