@@ -11,9 +11,11 @@ static_thumbnail = "/images/blog/2024-09-02/cover.jpg"
 
 ![blog-cover](/images/blog/2024-09-02/cover.jpg)
 
-So, you're a software developer, and you've mastered coding languages, algorithms, and all the tech stuff. That's awesome! But here's the deal: technical skills alone won't get you as far as you might think. If you can't work well with others, it doesn't matter how great your code is — nobody will want to work with you.
+So, you're a software developer, and you've mastered coding languages, algorithms, and all the tech stuff. That's awesome! But here's the deal: technical skills alone won't get you as far as you might think. 
 
 <!-- more -->
+
+If you can't work well with others, it doesn't matter how great your code is — nobody will want to work with you.
 
 In software development, collaboration is everything. Projects aren't just solo endeavors. You will be part of a team — with other developers, designers, or even non-tech folks like managers and clients. How you communicate, collaborate, and handle feedback can make or break your success.
 

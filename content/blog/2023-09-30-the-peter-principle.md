@@ -11,7 +11,7 @@ static_thumbnail = "/images/blog/2023-09-30/cover.jpg"
 
 ![blog-cover](/images/blog/2023-09-30/cover.jpg)
 
-The Peter principle states that a person who is competent at their job will earn a promotion to a position that requires different skills. If the promoted person lacks the skills required for the new role, they will be incompetent at the new level, and will not be promoted again.
+A person who is competent at their job will earn a promotion to a position that requires different skills. If the person lacks the skills for the new role, they will be incompetent at the new level, and will not be promoted again.
 
 <!-- more -->
 

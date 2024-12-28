@@ -103,3 +103,19 @@ If you still feel uncomfortable having another person next to you while you writ
 > It's totally ok not knowing everything. The most important thing is to know how to work together.
 
 ![blog-img](/images/blog/2021-04-01/footer.jpg)
+
+---
+
+### Related posts
+
+- [What kills agility?](/blog/what-kills-agility/) <small>Why Agile if you already do Scrum, Kanban, SAFe, or Waterfall?</small>
+- [Ignoring Scrum to get more Agile?](/blog/ignoring-scrum-to-get-more-agile/) <small>Killing agility with excessive meetings</small>
+- [Update your team to be more extreme](/blog/update-your-team-to-be-more-extreme/) <small>How can you help your peers to embrace the change?</small>
+- [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
+- [Test-Driven (Development)](/blog/test-driven-development/) <small>What is challenging about it?</small>
+
+### Related readings
+
+- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
+- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
+- [Peopleware](/readings/peopleware) <small>by Tom DeMarco, Timothy Lister</small>

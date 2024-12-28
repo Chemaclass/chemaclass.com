@@ -14,9 +14,9 @@ pin = false
 
 Dozens of documents and spreadsheets, meetings over meetings, and yet without much impact, result in team misalignments—realized too late.
 
-How we manage an organization defines its quality. Excellent management is crucial to avoid the Waterfall trap if we aim to build an Agile environment. But why would we want that? What's wrong with the way we already work?
-
 <!-- more -->
+
+How we manage an organization defines its quality. Excellent management is crucial to avoid the Waterfall trap if we aim to build an Agile environment. But why would we want that? What's wrong with the way we already work?
 
 If you are already happy with how you and your team work together, that's okay. However, what about reevaluating how you work to look for potential improvements?
 

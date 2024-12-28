@@ -1,6 +1,6 @@
 +++
 title = "Phel: the Lisp that compiles to PHP"
-description = "The new Functional Programming language build-in PHP."
+description = "The new Functional Programming language build-in for PHP."
 [taxonomies]
 tags = [ "software", "open-source", "functional-programming", "lisp", "php" ]
 [extra]
@@ -10,7 +10,7 @@ static_thumbnail = "/images/blog/2021-02-01/cover.jpg"
 
 ![blog-cover](/images/blog/2021-02-01/cover.jpg)
 
-The new Functional Programming language build-in PHP. Check it out!
+A new Functional Programming language build-in on the PHP ecosystem. 
 
 <!-- more -->
 

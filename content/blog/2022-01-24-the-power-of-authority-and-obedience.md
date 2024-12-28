@@ -11,7 +11,7 @@ static_thumbnail = "/images/blog/2022-01-24/cover.jpg"
 ![blog-cover](/images/blog/2022-01-24/cover.jpg)
 
 Milgram was interested in researching how far people would go in obeying an instruction if it involved harming another
-person, and how easily people could be influenced into committing atrocities. For example, Germans in WWII.
+person, and how easily people could be influenced into committing atrocities. Eg: Germans in WWII.
 
 <!-- more -->
 
