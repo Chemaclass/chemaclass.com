@@ -14,9 +14,9 @@ static_thumbnail = "/images/blog/2024-11-17/cover.jpg"
 
 When it comes to software development, trust and security are very important. One easy way to level up both is by using verified commits. 
 
-Whether you're working on an open-source project or in a private company, verified commits can make sure your contributions are legit. Let's break down what they are, why they're important, and how to start using them.
-
 <!-- more -->
+
+Whether you're working on an open-source project or in a private company, verified commits can make sure your contributions are legit. Let's break down what they are, why they're important, and how to start using them.
 
 ## What are verified commits?
 

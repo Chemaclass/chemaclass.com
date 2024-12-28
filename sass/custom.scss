@@ -116,9 +116,11 @@ a img {
 }
 
 .reading-preview {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--preview-divider);
   display: inline-block;
-  padding: 8px;
+  padding-bottom: 28px;
+  margin-top: 6px;
+  padding-left: 21px;
 
   img {
     height: 250px;

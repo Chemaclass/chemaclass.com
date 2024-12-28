@@ -13,15 +13,12 @@
   {%- endif %}
 {% endmacro %}
 
-{% macro summary(post,read_more=true) %}
-  {% if post.summary -%}
+{% macro summary(post) %}
+  {%- if post.summary -%}
     {{ post.summary | safe  }}
-  {% else %}
+  {%- else -%}
     {{ post.content | safe | striptags | truncate(length=300) }}
-  {%- endif %}
-  {%- if read_more and post.content | length > 300 -%}
-    <a class="read-more" href="{{ post.permalink }}">read more</a>
-  {%- endif %}
+  {%- endif -%}
 {% endmacro %}
 
 {% macro summary_tags(post) %}
@@ -56,11 +53,7 @@
   </span>
 
   <div class="summary">
-    {% if post.extra.expand_preview %}
-      {{ helpers_preview::summary(post=post,read_more=true) }}
-    {% else %}
-      {{ helpers_preview::summary(post=post,read_more=false) }}
-    {% endif %}
+    {{ helpers_preview::summary(post=post) }}
   </div>
 
   {% if post.extra.current_read %}
