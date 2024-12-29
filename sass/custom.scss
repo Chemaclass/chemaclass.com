@@ -23,7 +23,7 @@ a img {
 }
 
 .post-preview {
-  border-bottom: var(--preview-divider) 1px solid;
+  border-bottom: 1px solid var(--preview-divider-color);
   display: block;
   padding-bottom: 16px;
 
@@ -116,7 +116,7 @@ a img {
 }
 
 .reading-preview {
-  border-bottom: 1px solid var(--preview-divider);
+  border-bottom: 1px solid var(--preview-divider-color);
   display: inline-block;
   padding-bottom: 28px;
   margin-top: 6px;
