@@ -25,10 +25,19 @@ a img {
 .post-preview {
   border-bottom: 1px solid var(--preview-divider-color);
   display: block;
-  padding-bottom: 16px;
+  padding: 12px;
+  cursor: pointer;
+
+  h3.post-title {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background-color: var(--search-bg-selected-item);
+  }
 
   img {
-    cursor: pointer;
+    width: 99%;
   }
 
   img[alt=blog-cover] {
@@ -121,13 +130,17 @@ a img {
   padding-bottom: 28px;
   margin-top: 6px;
   padding-left: 21px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--search-bg-selected-item);
+  }
 
   img {
     height: 250px;
     width: 180px;
     float: left;
     margin-right: 20px;
-    cursor: pointer;
   }
 
   .author {
