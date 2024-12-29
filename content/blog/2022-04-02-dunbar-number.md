@@ -10,7 +10,7 @@ static_thumbnail = "/images/blog/2022-04-02/cover.jpg"
 
 ![blog-cover](/images/blog/2022-04-02/cover.jpg)
 
-A suggested cognitive limit to the number of people with whom one can maintain stable social relationships, in which an individual knows who each person is and how each person relates to every other person.
+A cognitive limit to the number of people with whom one can maintain stable social relationships, in which an individual knows who each person is and how each person relates to every other person.
 
 <!-- more -->
 

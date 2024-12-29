@@ -1,6 +1,7 @@
 +++
 title = "Update your team to be more extreme"
 description = "Our profession is constantly evolving; therefore, it demands a non-stop learning process. Embracing the change is not optional in our software industry. We need to create spaces to get out of our comfort zone."
+updated_at = "2023-03-23"
 [taxonomies]
 tags = [ "team-work", "software"]
 [extra]
@@ -10,8 +11,6 @@ pin = false
 +++
 
 ![blog-cover](/images/blog/2022-02-26/cover.jpg)
-
-> Revisited: <span class="post-revisited-date">2023-03-23</span>
 
 Our software profession is constantly evolving; it demands a non-stop learning process. We must embrace the change in our industry.
 
