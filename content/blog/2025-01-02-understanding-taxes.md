@@ -2,7 +2,7 @@
 title = "Understanding Taxes"
 aliases = [ "/blog/taxes" ]
 description = "Taxes are unavoidable —whether it's your paycheck, morning coffee, or the house you just bought, Taxes are everywhere. If you've ever wondered where your money goes after payday or why buying property comes with extra fees, this post is for you. I'll keep it simple without diving into complicated legal stuff."
-draft = true
+draft = false
 [taxonomies]
 tags = [ "financial", "taxes", "bitcoin" ]
 [extra]
