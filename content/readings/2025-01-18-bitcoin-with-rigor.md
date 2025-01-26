@@ -99,6 +99,10 @@ This book aims to equip readers with the tools to understand how Bitcoin works, 
 
 ---
 
+### Related links
+
+- Book website: [www.bitcoinconrigor.com](https://www.bitcoinconrigor.com)
+
 ### Related posts
 
 - [The Cypherpunks](/blog/the-cypherpunks) <small>Pioneers of privacy in the digital age</small>
