@@ -27,12 +27,69 @@ This book aims to equip readers with the tools to understand how Bitcoin works, 
 
 ## Content
 
-1. Basic computer concepts
-2. Basic cryptographic concepts
-3. The basics of Bitcoin and cryptocurrencies
-4. Bitcoin piece by piece
-5. Nodes and blockchain in detail
-6. Bitcoin updates and applications
+### 1. Basic Computer Concepts
+
+- Information and Communication
+- How Computers Work
+- Languages and Protocols
+- The OSI Model: The Onion of Computing
+- Logic Gates: Fundamental Computing Functions
+- Client-Server and P2P Networks
+
+### 2. Basic Cryptographic Concepts
+
+- Asymmetric Complexity
+- Ciphers, Keys, and Symmetric Cryptography
+- Asymmetric Cryptography
+- The Cypherpunk Movement
+- Cryptographic Hash Functions
+
+### 3. The Basics of Bitcoin and Cryptocurrencies
+
+- Key Generators and Randomness
+- Cryptographic Signatures
+- The Discrete Logarithm Problem
+- Elliptic Curve Cryptography
+- Merkle Tree
+- Traditional Digital Money
+- Distributed Consensus Algorithms
+- Proof of Work (PoW)
+
+### 4. Bitcoin Piece by Piece
+
+- Blockchain or Hashchain?
+- Block Synchronization
+- The Headerchain
+- Keys and Signatures in Bitcoin
+- Transactions and the UTXO Model
+- Bitcoin Script and Opcodes
+- P2PKH (Pay to Public Key Hash) and P2PK
+- Multi signatures and P2SH (Pay to Script Hash)
+
+### 5. Nodes and Blockchain in Detail
+
+- Transaction Size and Frequency
+- Initializing a Full Network Node
+- Databases and Pruning
+- How a Wallet Works
+- Wallets, SPV Nodes, and Others
+- From Mempool to Blockchain
+- Forks and Consensus Criticality
+- Hard Fork vs. Soft Fork
+
+### 6. Bitcoin Updates and Applications
+
+- Much Work Ahead
+- Transaction Malleability
+- Segregated Witness (SegWit)
+- P2WPKH and P2WSH
+- Unilateral Payment Channels
+- Lightning Channels
+- Multi-channel Payments and HTLCs
+- Lightning Network
+- Discreet Log Contracts (DLCs)
+- MAST, P2SMR, and P2CH
+- Taproot and Grafroot
 
 ---
 
