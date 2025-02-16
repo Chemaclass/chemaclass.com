@@ -17,14 +17,54 @@ In this guide, I'll show you how to set up a fully custodial Lightning Network (
 
 It supports both Lightning and Nostr addresses, enabling seamless connectivity across ecosystems, and integrates effortlessly with dozens of Bitcoin applications. With built-in Lightning Service Provider (LSP) services and the Alby Go mobile app, managing your node on the go has never been easier.
 
+---
+
+> Important: This is NOT a Bitcoin miner or a full node. It's simply a Raspberry Pi running on an SD card power-efficient and low-cost.
+
+⚠️ **Disclaimer**: I assume you:
+- **Understand Bitcoin** and its fundamental concepts.
+- Know **how the Lightning Network works** and its purpose.
+- Are **familiar with LN channels**, including key terms like inbound liquidity.
+
+---
+
 ## Content
 
+- Part 0: [What is the Lightning Network (LN)?](/blog/run-your-own-ln-node/#part-0)
 - Part 1: [Set up your Alby Hub](/blog/run-your-own-ln-node/#part-1)
 - Part 2: [Create GetAlby account](/blog/run-your-own-ln-node/#part-2)
 - Part 3: [Connect your GetAlby with Alby Hub](/blog/run-your-own-ln-node/#part-3)
 - Part 4: [Open your LN channels](/blog/run-your-own-ln-node/#part-4)
 - Part 5: [Receive sats](/blog/run-your-own-ln-node/#part-5)
 - Part 6: [Use your sats](/blog/run-your-own-ln-node/#part-6)
+
+---
+
+## Part 0
+
+### What is the Lightning Network (LN)? - [up](/blog/run-your-own-ln-node/#content)
+
+The LN is a second-layer solution built on top of Bitcoin to enable fast, cheap, and scalable transactions.
+
+#### Why?
+
+Bitcoin's base layer is secure but slow and expensive for small payments due to block size limits and fees.
+
+#### How?
+
+LN uses off-chain payment channels that allow users to transact instantly without waiting for blockchain confirmations.
+
+#### Key Concepts
+
+- **Payment Channels**: Users open a channel by making an on-chain transaction, then send unlimited instant payments within that channel.
+- **Routing**: You don't need a direct channel with someone —payments can be routed through multiple connected nodes.
+- **Low Fees**: Only opening/closing channels require on-chain fees; most transactions cost fractions of a cent.
+  
+#### Goal
+
+LN makes Bitcoin usable for everyday transactions, like buying coffee, without waiting 10+ minutes for confirmations.
+
+> In short: Lightning Network = Instant + Cheap Bitcoin payments, secured by Bitcoin's blockchain.
 
 ---
 
@@ -129,13 +169,17 @@ Wait another 2-3 mins and visit your host: [http://testhub.local/](http://testhu
 
 Your Alby hub is now running. Let's connect it to your GetAlby account!
 
+---
+
 ## Part 2
 
 ### Create your free GetAlby account - [up](/blog/run-your-own-ln-node/#content)
 
-[getalby.com/users/new](https://getalby.com/auth/users/new)
+🔗 [getalby.com/users/new](https://getalby.com/auth/users/new)
 
 ![tutorial](/images/blog/2025-02-17/tuto-15.jpg)
+
+---
 
 ##  Part 3
 
@@ -176,6 +220,8 @@ Unless you specify otherwise, set the default "Budget renewal: _Monthly 1M sats_
 ![tutorial](/images/blog/2025-02-17/tuto-24.jpg)
 ![tutorial](/images/blog/2025-02-17/tuto-25.jpg)
 
+---
+
 ##  Part 4
 
 ### Open your LN channels - [up](/blog/run-your-own-ln-node/#content)
@@ -196,6 +242,8 @@ After the payment, then you will see the channel open. It might take a couple of
 
 ![tutorial](/images/blog/2025-02-17/tuto-30.jpg)
 
+---
+
 ##  Part 5
 
 ### Receive sats - [up](/blog/run-your-own-ln-node/#content)
@@ -208,6 +256,8 @@ You can receive sats using your LN Address.
 ![tutorial](/images/blog/2025-02-17/tuto-33.jpg)
 
 > Optional: You can add ln funds to your wallet using GetAlby's third-party services: [getalby.com/topup](https://getalby.com/topup) - mind the KYC...
+
+---
 
 ##  Part 6
 
