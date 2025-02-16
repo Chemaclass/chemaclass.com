@@ -287,6 +287,7 @@ ssh testhub@testhub.local '/bin/bash -c "$(curl -fsSL https://getalby.com/instal
 
 ### Related link
 
+- [GetAlby - User Guide](https://guides.getalby.com/)
 - [Installing Alby Hub in a Raspberry Zero](https://guides.getalby.com/user-guide/alby-account-and-browser-extension/hidden-archives/raspberry-pi-zero)
 
 ### Related posts
