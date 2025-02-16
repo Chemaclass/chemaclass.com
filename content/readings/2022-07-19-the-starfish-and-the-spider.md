@@ -2,6 +2,7 @@
 title = "The Starfish and the Spider"
 description = "If you cut off a spider's head, it dies; if you cut off a starfish's leg it grows a new one, and that leg can grow into an entirely new starfish. Traditional top-down organizations are like spiders, but now starfish organizations are changing the face of business and the world."
 draft = false
+authors = [ "Ori Brafman", "Rod Beckstrom" ]
 [taxonomies]
 tags = [ "business", "leadership" ]
 [extra]

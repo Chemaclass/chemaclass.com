@@ -1,6 +1,7 @@
 +++
 title = "Recipes for Decoupling"
 description = "What is coupling, and why is it bad? What is decoupling, and how to do it efficiently? This book is a compilation of strategies to decouple your domain code from those infrastructure details, so you can enjoy a healthier system in the long run."
+authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "software", "design" ]
 [extra]

@@ -2,6 +2,7 @@
 title = "Adapt or die"
 description = "Told through the story of one bold company (People First IT), Adapt or Die takes readers through the unparalleled business system known as The Algorithm of Success that has the potential to inspire, ignite, and affect change for all aspects of an organization."
 draft = false
+authors = [ "Thomas H. Douglas" ]
 [taxonomies]
 tags = [ "leadership", "people" ]
 [extra]

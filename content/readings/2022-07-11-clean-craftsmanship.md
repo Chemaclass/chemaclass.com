@@ -1,6 +1,7 @@
 +++
 title = "Clean Craftsmanship"
 description = "Disciplines, Standards, and Ethics"
+authors = [ "Robert C. Martin" ]
 [taxonomies]
 tags = [ "software", "clean-code" ]
 [extra]

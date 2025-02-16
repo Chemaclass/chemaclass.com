@@ -2,6 +2,7 @@
 title = "Accelerate"
 description = "The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations"
 draft = false
+authors = [ "Nicole Forsgren", "Jez Humble", "Gene Kim" ]
 [taxonomies]
 tags = [ "agile", "software" ]
 [extra]

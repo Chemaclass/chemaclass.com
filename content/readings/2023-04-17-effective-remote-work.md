@@ -2,6 +2,7 @@
 title = "Effective Remote Work"
 description = "An effective remote work environment is about treating everyone as remote, with everyone in mind having the same level, equality, and information."
 draft = false
+authors = [ "James Stanier" ]
 [taxonomies]
 tags = [ "remote", "software" ]
 [extra]
