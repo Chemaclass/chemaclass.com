@@ -21,16 +21,17 @@ It supports both Lightning and Nostr addresses, enabling seamless connectivity a
 
 > Important: This is NOT a Bitcoin miner or a full node. It's simply a Raspberry Pi running on an SD card power-efficient and low-cost.
 
-⚠️ **Disclaimer**: I assume you:
-- **Understand Bitcoin** and its fundamental concepts.
-- Know **how the Lightning Network works** and its purpose.
-- Are **familiar with LN channels**, including key terms like inbound liquidity.
+⚠️ **Disclaimer** ⚠️
+- I assume you **understand [Bitcoin](https://bitcoin.org/)**'s fundamental concepts.
+- I assume you know **how the [Lightning Network](https://lightning.network/) (LN) works**.
+
+Anyway, I've included a brief recap of the Lightning Network basics in `Part 0`.
 
 ---
 
 ## Content
 
-- Part 0: [What is the Lightning Network (LN)?](/blog/run-your-own-ln-node/#part-0)
+- Part 0: [What is the LN?](/blog/run-your-own-ln-node/#part-0)
 - Part 1: [Set up your Alby Hub](/blog/run-your-own-ln-node/#part-1)
 - Part 2: [Create GetAlby account](/blog/run-your-own-ln-node/#part-2)
 - Part 3: [Connect your GetAlby with Alby Hub](/blog/run-your-own-ln-node/#part-3)
@@ -42,7 +43,7 @@ It supports both Lightning and Nostr addresses, enabling seamless connectivity a
 
 ## Part 0
 
-### What is the Lightning Network (LN)? - [up](/blog/run-your-own-ln-node/#content)
+### What is the LN? - [up](/blog/run-your-own-ln-node/#content)
 
 The LN is a second-layer solution built on top of Bitcoin to enable fast, cheap, and scalable transactions.
 
