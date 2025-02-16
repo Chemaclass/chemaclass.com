@@ -1,6 +1,7 @@
 +++
 title = "Clean Architecture"
 description = "A Craftsman's Guide to Software Structure and Design"
+authors = [ "Robert C. Martin" ]
 [taxonomies]
 tags = [ "software", "architecture" ]
 [extra]
@@ -65,5 +66,3 @@ We can identify four main layers, although the number may vary:
 - **Interface adapters**: Gateways, presenters and controllers. For example, this layer will contain the MVC
   architecture of the GUI and also objects that transform data between the format of the database and the use-cases.
 - **Frameworks and drivers**: web frameworks, database, the view of MVC.
-
-

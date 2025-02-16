@@ -1,6 +1,7 @@
 +++
 title = "Clean Agile"
 description = "This book is about Agile. What it was, what it is, and what it will be. This is a back-to-basics talk that covers the history of Agile, what motivated it, and what has happened to it since."
+authors = [ "Robert C. Martin" ]
 [taxonomies]
 tags = [ "software", "agile" ]
 [extra]

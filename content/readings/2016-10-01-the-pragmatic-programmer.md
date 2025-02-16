@@ -1,6 +1,7 @@
 +++
 title = "The Pragmatic Programmer"
 description = "The journey to mastery"
+authors = [ "Andrew Hunt", "David Thomas" ]
 [taxonomies]
 tags = [ "software", "soft-skills" ]
 [extra]

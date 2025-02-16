@@ -2,6 +2,7 @@
 title = "The Manager Path"
 description = "A Guide for Tech Leaders Navigating Growth and Change"
 aliases = [ "/readings/manager-path" ]
+authors = [ "Camille Fournier" ]
 [taxonomies]
 tags = [ "management", "leadership" ]
 [extra]
