@@ -107,6 +107,7 @@ Make sure you enable your WIFI, otherwise you will have to plug it to the router
 
 ![tutorial](/images/blog/2025-02-17/tuto-4.jpg)
 
+<span id="pi-enable-ssh"></span>
 On `Settings > Services`: make sure the access via SSH is enabled. We are going to need it to install Alby Hub.
 
 ![tutorial](/images/blog/2025-02-17/tuto-5.jpg)
@@ -144,7 +145,8 @@ It's normal if you don't get any answer at the beginning... until you do get thi
 
 ![tutorial](/images/blog/2025-02-17/tuto-11.jpg)
 
-Now you can install Alby Hub in your raspi using the SSH connection that you enabled earlier:
+<span id="pi-install-alby-hub"></span>
+Now you can **install Alby Hub** in your raspi **using the SSH connection** that you [enabled earlier](/blog/run-your-own-ln-node/#pi-enable-ssh):
 
 ```bash
 # Source code: https://github.com/getAlby/hub/tree/master/scripts/pi-aarch64
@@ -270,6 +272,16 @@ Your node is the ultimate source of truth. Connecting these apps to it will allo
 ![tutorial](/images/blog/2025-02-17/tuto-32.jpg)
 
 > **Disclaimer**: the testhub LN address was created only for testing and tutorial purposes. My real address is [chemaclass](https://getalby.com/p/chemaclass) ;)
+
+---
+
+### Extra: Updating a running instance
+
+Similar to the [installation process](/blog/run-your-own-ln-node/#pi-install-alby-hub), there's a script available to update your node. You can find it in the source repository: [GitHub - Alby Hub Update Script](https://github.com/getAlby/hub/tree/master/scripts/pi-aarch64)
+
+```bash
+ssh testhub@testhub.local '/bin/bash -c "$(curl -fsSL https://getalby.com/install/hub/pi-aarch64-update.sh)"'
+```
 
 ---
 
