@@ -1,6 +1,7 @@
 +++
 title = "Peopleware"
 description = "Software development is about people: when, how and where they can best work together. Not about programming languages or tools. Not about fast computers, networks or internet access."
+authors = [ "Tom DeMarco", "Timothy Lister" ]
 [taxonomies]
 tags = [ "people", "management" ]
 [extra]

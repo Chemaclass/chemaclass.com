@@ -1,6 +1,7 @@
 +++
 title = "Object design style guide"
 subtitle = "Powerful Techniques for Creating Flexible, Readable, and Maintainable Object-Oriented Code in Any Oo Language, from Python to PHP"
+authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "software", "design" ]
 [extra]

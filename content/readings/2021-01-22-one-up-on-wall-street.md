@@ -1,6 +1,7 @@
 +++
 title = "One up on wall street"
-description = ""
+description = "America's most successful money manager tells how average investors can beat the pros by using what they know. According to Lynch, investment opportunities are everywhere."
+authors = [ "Peter Lynch" ]
 [taxonomies]
 tags = [ "financial", "investing" ]
 [extra]
@@ -14,5 +15,4 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51RWLY76LAL
 
 <!-- more -->
 
-America’s most successful money manager tells how average investors can beat the pros by using what they know. According
-to Lynch, investment opportunities are everywhere. 
+America's most successful money manager tells how average investors can beat the pros by using what they know. According to Lynch, investment opportunities are everywhere. 

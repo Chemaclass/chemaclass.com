@@ -1,6 +1,7 @@
 +++
 title = "Rich dad poor dad"
 description = "Explodes the myth that you need to earn a high income to become rich."
+authors = [ "Robert T. Kiyosaki" ]
 [taxonomies]
 tags = [ "business", "financial" ]
 [extra]

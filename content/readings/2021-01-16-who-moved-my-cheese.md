@@ -1,6 +1,7 @@
 +++
 title = "Who moved my cheese?"
 description = "This book presents a tale inside the main story that consists of 4 characters: two mice, Sniff and Scurry, and two little persons, Hem and Haw."
+authors = [ "Spencer Johnson" ]
 [taxonomies]
 tags = [ "management", "financial" ]
 [extra]

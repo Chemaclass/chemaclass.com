@@ -1,6 +1,7 @@
 +++
 title = "Animal Farm"
 description = "All animals are equal. But some animals are more equal than others."
+authors = [ "George Orwell" ]
 [taxonomies]
 tags = [  "novel", "fiction", "dystopia" ]
 [extra]

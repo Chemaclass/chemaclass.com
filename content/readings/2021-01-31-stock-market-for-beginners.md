@@ -1,6 +1,7 @@
 +++
 title = "Stock market investing"
 description = "Stock market basics & essentials."
+authors = [ "Mark Atwood" ]
 [taxonomies]
 tags = [ "financial", "investing" ]
 [extra]

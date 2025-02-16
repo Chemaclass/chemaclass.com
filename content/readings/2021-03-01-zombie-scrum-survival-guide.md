@@ -1,6 +1,7 @@
 +++
 title = "Zombie Scrum Survival Guide"
 description = "Zombie Scrum Survival Guide reveals why Scrum runs aground and shows how to supercharge your Scrum outcomes, while having a lot more fun along the way."
+authors = [ "Christiaan Verwijs", "Johannes Schartau", "Barry Overeem" ]
 [taxonomies]
 tags = [ "scrum", "agile", "team-work" ]
 [extra]

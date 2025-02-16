@@ -1,6 +1,7 @@
 +++
 title = "Advanced Web Application Architecture"
 description = "The best guide that brings your coding and architecture skills a level up. All the modern PHP features combined with the elegance of a well designed modular design."
+authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "software", "architecture" ]
 [extra]
