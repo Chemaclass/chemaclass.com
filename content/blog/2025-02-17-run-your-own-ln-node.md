@@ -47,20 +47,15 @@ Anyway, I've included a brief recap of the Lightning Network basics in `Part 0`.
 
 The LN is a second-layer solution built on top of Bitcoin to enable fast, cheap, and scalable transactions.
 
-#### Why?
-
-Bitcoin's base layer is secure but slow and expensive for small payments due to block size limits and fees.
-
-#### How?
-
-LN uses off-chain payment channels that allow users to transact instantly without waiting for blockchain confirmations.
+- **Why?** Bitcoin's base layer is secure but slow and expensive for small payments due to block size limits and fees.
+- **How?** LN uses off-chain payment channels that allow users to transact instantly without waiting for blockchain confirmations.
 
 #### Key Concepts
 
 - **Payment Channels**: Users open a channel by making an on-chain transaction, then send unlimited instant payments within that channel.
-- **Routing**: You don't need a direct channel with someone —payments can be routed through multiple connected nodes.
+- **Routing**: You don't need a direct channel with everyone —payments can be routed through multiple connected nodes.
 - **Low Fees**: Only opening/closing channels require on-chain fees; most transactions cost fractions of a cent.
-  
+
 #### Goal
 
 LN makes Bitcoin usable for everyday transactions, like buying coffee, without waiting 10+ minutes for confirmations.
@@ -72,6 +67,8 @@ LN makes Bitcoin usable for everyday transactions, like buying coffee, without w
 ## Part 1
 
 ### Set up your Alby Hub - [up](/blog/run-your-own-ln-node/#content)
+
+[Alby Hub](https://albyhub.com/) is a free, open-source ([ideally private](https://guides.getalby.com/user-guide/alby-account-and-browser-extension/alby-hub/faq-alby-hub/should-i-open-a-private-or-public-channel)) Lightning Network node.
 
 #### Requirements
 
