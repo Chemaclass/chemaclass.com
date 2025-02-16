@@ -2,6 +2,7 @@ base_url = "https://chemaclass.com"
 
 title = "Chemaclass"
 description = "Check out my latest blog posts and readings."
+author = "Chemaclass"
 
 generate_feeds = true
 taxonomies = [{ name = "tags" }]
@@ -24,7 +25,6 @@ extra_syntaxes_and_themes = ["syntaxes"]
 smart_punctuation = true
 
 [extra]
-author = "Chemaclass"
 nav = [
     { name = "Blog", path = "/blog/" },
     { name = "Readings", path = "/readings/" },
