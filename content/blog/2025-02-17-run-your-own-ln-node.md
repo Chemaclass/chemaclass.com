@@ -227,9 +227,12 @@ Your node is the ultimate source of truth. Connecting these apps to it will allo
 
 ### Related link
 
-- [Installing Alby Hub in a Raspi Zero](https://guides.getalby.com/user-guide/alby-account-and-browser-extension/hidden-archives/raspberry-pi-zero)
+- [Installing Alby Hub in a Raspberry Zero](https://guides.getalby.com/user-guide/alby-account-and-browser-extension/hidden-archives/raspberry-pi-zero)
+
+### Related posts
+
+- [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>
 
 ### Related readings
 
-- [21 Lessons](/readings/21-lessons/) <small>"What I've learn from falling down the Bitcoin rabbit hole" by Gigi</small>
-- [The Genesis Book](/readings/the-genesis-book/) <small>"The story of the people and projects that inspired Bitcoin" by Aaron van Wirdum</small>
+- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
