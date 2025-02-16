@@ -2,6 +2,7 @@
 title = "Man's Search for Meaning"
 description = "In Man's Search for Meaning, Frankl not only shares his harrowing experiences from the Holocaust but also presents a profound philosophy on the human condition. This book is a testament to the resilience of the human spirit, exploring how even in the darkest of times, individuals can find purpose and meaning."
 draft = false
+authors = [ "Viktor E. Frankl" ]
 [taxonomies]
 tags = [ "psychology", "philosophy", "biography" ]
 [extra]

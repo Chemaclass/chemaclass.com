@@ -2,6 +2,7 @@
 title = "The Phoenix Project"
 description = "This is a story about an impossible project in which the people around are constantly playing politics, busy fixing critical bugs and wasting constant efforts on quick patches instead of helping the business thrive."
 draft = false
+authors = [ "Gene Kim", "Kevin Behr", "George Spafford" ]
 [taxonomies]
 tags = [ "software", "devops" ] 
 [extra]

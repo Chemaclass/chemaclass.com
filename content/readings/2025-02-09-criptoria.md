@@ -2,6 +2,7 @@
 title = "Criptoria"
 description = "A story about the evolutionary process that gave birth to computers, networks, cybersecurity and digital money. From Greece to Bitcoin, Cryptoria narrates a selection of milestones that occurred before and after Alan Turing. The book showcases a broad collection of people, organizations, concepts and inventions that evidence the deep historical and cultural relationship between mathematics, cryptography, computer science and the struggle for individual sovereignty. Cryptoria is addressed to all people convinced that, beyond inherited or imposed ways, there are other forms of social and economic organization that can and should be explored."
 draft = false
+authors = [ "Alfre Mancera" ]
 [taxonomies]
 tags = [ "history", "bitcoin" ]
 [extra]

@@ -2,6 +2,7 @@
 title = "The Lean Startup"
 description = "Most startups fail. But many of those failures are preventable. The Lean Startup is a new approach being adopted across the globe, changing the way companies are built and new products are launched."
 draft = false
+authors = [ "Eric Ries" ]
 [taxonomies]
 tags = [ "management", "leadership" ] 
 [extra]

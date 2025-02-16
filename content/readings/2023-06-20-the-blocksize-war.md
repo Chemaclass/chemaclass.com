@@ -2,6 +2,7 @@
 title = "The Blocksize War"
 description = "The battle for control over Bitcoin's protocol rules"
 draft = false
+authors = [ "Jonathan Bier" ]
 [taxonomies]
 tags = [ "financial", "bitcoin" ]
 [extra]

@@ -3,6 +3,7 @@ title = "Bitcoin: A Work in Progress"
 description = "With thousands of 'crypto' projects out there, they say Bitcoin is old and boring, but nothing could be further from the truth. This book will guide you through the latest developments in Bitcoin, as seen through the eyes of one of its many developers."
 aliases = [ "/readings/btc-wip", "/readings/btcwip" ]
 draft = false
+authors = [ "Sjors Provoost" ]
 [taxonomies]
 tags = [ "software", "bitcoin" ]
 [extra]

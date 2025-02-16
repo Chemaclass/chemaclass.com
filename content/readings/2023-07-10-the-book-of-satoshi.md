@@ -2,6 +2,7 @@
 title = "The Book Of Satoshi"
 description = "The Collected Writings of Bitcoin Creator Satoshi Nakamoto"
 draft = false
+authors = [ "Phil Champagne" ]
 [taxonomies]
 tags = [ "bitcoin", "history" ]
 [extra]

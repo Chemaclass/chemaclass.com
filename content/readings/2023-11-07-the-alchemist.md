@@ -2,6 +2,7 @@
 title = "The Alchemist"
 description = ""
 draft = false
+authors = [ "Paulo Coelho" ]
 [taxonomies]
 tags = [ "novel", "fantasy" ]
 [extra]

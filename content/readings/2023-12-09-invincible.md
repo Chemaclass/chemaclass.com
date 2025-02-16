@@ -2,6 +2,7 @@
 title = "Invincible"
 description = "Achieve More, Suffer Less"
 draft = false
+authors = [ "Marcos Vazquez" ]
 [taxonomies]
 tags = [ "discipline", "stoicism", "philosophy" ] 
 [extra]
