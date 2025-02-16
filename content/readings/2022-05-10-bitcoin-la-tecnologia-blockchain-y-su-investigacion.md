@@ -1,7 +1,8 @@
 +++
 title = "Bitcoin: Blockchain y su investigación"
 description = "How is created Bitcoin address? How does it work the creation of the private & public keys and how are they known as wallets? And many other interesting questions."
-draft = true
+draft = false
+authors = [ "Félix Brezo", "Yaiza Rubio" ]
 [taxonomies]
 tags = [ "bitcoin", "blockchain" ]
 [extra]

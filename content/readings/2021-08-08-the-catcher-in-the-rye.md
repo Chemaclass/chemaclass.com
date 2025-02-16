@@ -1,6 +1,7 @@
 +++
 title = "The Catcher in the Rye"
 description = "The novel is a deeper reflection of Salinger's own youth, his complicated relationship with growing up and the generational trauma affected by World War II."
+authors = [ "J. D. Salinger" ]
 [taxonomies]
 tags = [ "novel", "fiction" ]
 [extra]

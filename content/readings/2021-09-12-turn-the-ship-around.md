@@ -1,6 +1,7 @@
 +++
 title = "Turn the Ship Around!"
 description = "The book is about his leadership theories to how he implemented a fresh leadership model. Including the limitations of a hierarchical top-down model, why/how he failed to empower his team earlier in his career, and how the circumstances for Santa Fe were ideal for him to experiment with the new leader-leader approach."
+authors = [ "L. David Marquet" ]
 [taxonomies]
 tags = [ "leadership", "management" ]
 [extra]
