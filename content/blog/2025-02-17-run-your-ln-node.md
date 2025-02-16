@@ -1,6 +1,7 @@
 +++
-title = "Run your own LN node on a Raspberry Pi"
-description = "In this guide, I'll show you how to set up a fully custodial Lightning Network (LN) node using Alby Hub on a Raspberry Pi, giving you complete control over your own node. Alby Hub offers a DIY free version for a self-custodial Lightning wallet, ensuring full ownership of your funds while being 100% open-source."
+title = "Run your LN node on a Raspberry Pi"
+aliases = [ "/blog/run-your-ln-node" ]
+description = "In this guide, I'll show you how to set up a fully custodial Lightning Network (LN) node using Alby Hub on a Raspberry Pi, giving you complete control over your node. Alby Hub offers a DIY free version for a self-custodial Lightning wallet, ensuring full ownership of your funds while being 100% open-source."
 draft = false
 [taxonomies]
 tags = [ "open-source", "bitcoin", "lightning" ]
@@ -11,7 +12,7 @@ static_thumbnail = "/images/blog/2025-02-17/cover.jpg"
 
 ![cover](/images/blog/2025-02-17/cover.jpg)
 
-In this guide, I'll show you how to set up a fully custodial Lightning Network (LN) node using Alby Hub on a Raspberry Pi, giving you complete control over your own node. Alby Hub offers a DIY free version for a self-custodial Lightning wallet, ensuring full ownership of your funds while being 100% open-source. 
+In this guide, I'll show you how to set up a fully custodial Lightning Network (LN) node using Alby Hub on a Raspberry Pi, giving you complete control over your node. Alby Hub offers a DIY free version for a self-custodial Lightning wallet, ensuring full ownership of your funds while being 100% open-source. 
 
 <!-- more -->
 
@@ -31,19 +32,19 @@ Anyway, I've included a brief recap of the Lightning Network basics in `Part 0`.
 
 ## Content
 
-- Part 0: [What is the LN?](/blog/run-your-own-ln-node/#part-0)
-- Part 1: [Set up your Alby Hub](/blog/run-your-own-ln-node/#part-1)
-- Part 2: [Create GetAlby account](/blog/run-your-own-ln-node/#part-2)
-- Part 3: [Connect your GetAlby with Alby Hub](/blog/run-your-own-ln-node/#part-3)
-- Part 4: [Open your LN channels](/blog/run-your-own-ln-node/#part-4)
-- Part 5: [Receive sats](/blog/run-your-own-ln-node/#part-5)
-- Part 6: [Use your sats](/blog/run-your-own-ln-node/#part-6)
+- Part 0: [What is the LN?](/blog/run-your-ln-node/#part-0)
+- Part 1: [Set up your Alby Hub](/blog/run-your-ln-node/#part-1)
+- Part 2: [Create GetAlby account](/blog/run-your-ln-node/#part-2)
+- Part 3: [Connect your GetAlby with Alby Hub](/blog/run-your-ln-node/#part-3)
+- Part 4: [Open your LN channels](/blog/run-your-ln-node/#part-4)
+- Part 5: [Receive sats](/blog/run-your-ln-node/#part-5)
+- Part 6: [Use your sats](/blog/run-your-ln-node/#part-6)
 
 ---
 
 ## Part 0
 
-### What is the LN? - [up](/blog/run-your-own-ln-node/#content)
+### What is the LN? - [up](/blog/run-your-ln-node/#content)
 
 The LN is a second-layer solution built on top of Bitcoin to enable fast, cheap, and scalable transactions.
 
@@ -66,7 +67,7 @@ LN makes Bitcoin usable for everyday transactions, like buying coffee, without w
 
 ## Part 1
 
-### Set up your Alby Hub - [up](/blog/run-your-own-ln-node/#content)
+### Set up your Alby Hub - [up](/blog/run-your-ln-node/#content)
 
 [Alby Hub](https://albyhub.com/) is a free, open-source ([ideally private](https://guides.getalby.com/user-guide/alby-account-and-browser-extension/alby-hub/faq-alby-hub/should-i-open-a-private-or-public-channel)) Lightning Network node.
 
@@ -136,7 +137,7 @@ Once the SD is inserted, then plug in the power cable. It will turn on automatic
 
 #### 3. Alby Hub installation
 
-It will take ~5mins since you turned it on to be able to access to it. How can you make sure it's alive? Open the terminal and ping the hostname you defined while flashing the SD on [Settings > General](/blog/run-your-own-ln-node/#hostname-setup), remember it ended up with `.local`:
+It will take ~5mins since you turned it on to be able to access to it. How can you make sure it's alive? Open the terminal and ping the hostname you defined while flashing the SD on [Settings > General](/blog/run-your-ln-node/#hostname-setup), remember it ended up with `.local`:
 ```bash
 ping testhub.local
 ```
@@ -146,7 +147,7 @@ It's normal if you don't get any answer at the beginning... until you do get thi
 ![tutorial](/images/blog/2025-02-17/tuto-11.jpg)
 
 <span id="pi-install-alby-hub"></span>
-Now you can **install Alby Hub** in your raspi **using the SSH connection** that you [enabled earlier](/blog/run-your-own-ln-node/#pi-enable-ssh):
+Now you can **install Alby Hub** in your raspi **using the SSH connection** that you [enabled earlier](/blog/run-your-ln-node/#pi-enable-ssh):
 
 ```bash
 # Source code: https://github.com/getAlby/hub/tree/master/scripts/pi-aarch64
@@ -157,7 +158,7 @@ You will be asked to type the word "yes"; type it.
 
 ![tutorial](/images/blog/2025-02-17/tuto-12.jpg)
 
-Then, you will be asked to enter your password. Enter the password you chose in [Settings > General](/blog/run-your-own-ln-node/#hostname-setup) for the username.
+Then, you will be asked to enter your password. Enter the password you chose in [Settings > General](/blog/run-your-ln-node/#hostname-setup) for the username.
 
 ![tutorial](/images/blog/2025-02-17/tuto-13.jpg)
 
@@ -173,7 +174,7 @@ Your Alby hub is now running. Let's connect it to your GetAlby account!
 
 ## Part 2
 
-### Create your free GetAlby account - [up](/blog/run-your-own-ln-node/#content)
+### Create your free GetAlby account - [up](/blog/run-your-ln-node/#content)
 
 🔗 [getalby.com/users/new](https://getalby.com/auth/users/new)
 
@@ -183,7 +184,7 @@ Your Alby hub is now running. Let's connect it to your GetAlby account!
 
 ##  Part 3
 
-### Connect your GetAlby with Alby Hub - [up](/blog/run-your-own-ln-node/#content)
+### Connect your GetAlby with Alby Hub - [up](/blog/run-your-ln-node/#content)
 
 I created an account named testhub. 
 
@@ -224,7 +225,7 @@ Unless you specify otherwise, set the default "Budget renewal: _Monthly 1M sats_
 
 ##  Part 4
 
-### Open your LN channels - [up](/blog/run-your-own-ln-node/#content)
+### Open your LN channels - [up](/blog/run-your-ln-node/#content)
 
 I recommend following the **Initial Steps** to set up your Alby Hub.
 
@@ -246,7 +247,7 @@ After the payment, then you will see the channel open. It might take a couple of
 
 ##  Part 5
 
-### Receive sats - [up](/blog/run-your-own-ln-node/#content)
+### Receive sats - [up](/blog/run-your-ln-node/#content)
 
 You can receive sats using your LN Address.
 
@@ -261,7 +262,7 @@ You can receive sats using your LN Address.
 
 ##  Part 6
 
-### Use your sats - [up](/blog/run-your-own-ln-node/#content)
+### Use your sats - [up](/blog/run-your-ln-node/#content)
 
 After that, you will be able to use it via the [Alby Extension](https://getalby.com/products/browser-extension) or the [AlbyGo](https://albygo.com/).
 
@@ -277,7 +278,7 @@ Your node is the ultimate source of truth. Connecting these apps to it will allo
 
 ### Extra: Updating a running instance
 
-Similar to the [installation process](/blog/run-your-own-ln-node/#pi-install-alby-hub), there's a script available to update your node. You can find it in the source repository: [GitHub - Alby Hub Update Script](https://github.com/getAlby/hub/tree/master/scripts/pi-aarch64)
+Similar to the [installation process](/blog/run-your-ln-node/#pi-install-alby-hub), there's a script available to update your node. You can find it in the source repository: [GitHub - Alby Hub Update Script](https://github.com/getAlby/hub/tree/master/scripts/pi-aarch64)
 
 ```bash
 ssh testhub@testhub.local '/bin/bash -c "$(curl -fsSL https://getalby.com/install/hub/pi-aarch64-update.sh)"'
@@ -285,7 +286,7 @@ ssh testhub@testhub.local '/bin/bash -c "$(curl -fsSL https://getalby.com/instal
 
 ---
 
-### Related link
+### Related links
 
 - [GetAlby - User Guide](https://guides.getalby.com/)
 - [Installing Alby Hub in a Raspberry Zero](https://guides.getalby.com/user-guide/alby-account-and-browser-extension/hidden-archives/raspberry-pi-zero)
@@ -293,7 +294,3 @@ ssh testhub@testhub.local '/bin/bash -c "$(curl -fsSL https://getalby.com/instal
 ### Related posts
 
 - [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>
-
-### Related readings
-
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
