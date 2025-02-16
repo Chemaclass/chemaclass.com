@@ -21,7 +21,7 @@ In an era dominated by constant connectivity, the concept of digital minimalism 
 
 ---
 
-> TL;DR: Digital Minimalism is all about using technology with purpose instead of letting it take over your life. It suggests cutting out unnecessary digital clutter, being intentional with the apps and tools you use, and making sure tech serves you—not the other way around. One way to reset is by doing a 30-day digital declutter, where you take a break from non-essential digital tools and slowly bring back only the ones that truly add value. The benefits? More focus, less anxiety, better relationships, and higher productivity.
+> TL;DR: Digital Minimalism means using tech intentionally rather than letting it control your life. It encourages reducing unnecessary digital tools, being mindful of the apps you use, and ensuring technology serves you. It's about taking a break from non-essential tools and gradually reintroducing only those that add real value. The benefits? More focus, less stress, better relationships, and higher productivity.
 
 ## The Core Principles of Digital Minimalism
 
