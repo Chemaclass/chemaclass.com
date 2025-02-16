@@ -29,7 +29,7 @@
 {% macro author(post) %}
   {% if post.extra.author %}
     <br>
-    <small class="author">{{ post.extra.author }}</small>
+    <small class="author">by {{ post.extra.author }}</small>
   {% endif %}
 {% endmacro %}
 

@@ -6,9 +6,7 @@
     <h1>
       {{ page.title }}
       {% if page.extra.author %}
-        <small class="author">
-          {{ page.extra.author }}
-        </small>
+        <small class="author">by {{ page.extra.author }}</small>
       {% endif %}
     </h1>
     {% if page.extra.subtitle %}

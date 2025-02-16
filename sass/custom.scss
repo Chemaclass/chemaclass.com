@@ -93,9 +93,6 @@ a img {
     color: var(--color-subtitle);
     font-size: 0.5em;
     display: block;
-    &::before {
-      content: 'by ';
-    }
   }
 }
 
