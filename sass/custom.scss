@@ -98,25 +98,22 @@ a img {
 
 .taxonomy-container {
   .reading-preview {
-    padding-bottom: 8px;
+    margin: 8px;
     padding-left: 5px;
-    border-bottom: 1px gray solid;
 
-    overflow: hidden;
-    width: 45%;
-    float: left;
+    width: 47%;
     height: 430px;
     word-wrap: break-word;
 
-    .reading-title {
-      max-width: unset;
-    }
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
 
     img {
-      margin: 0 2px;
-      height: auto;
-      max-height: 245px;
-      width: auto;
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      margin: 0 4px;
     }
   }
 }
