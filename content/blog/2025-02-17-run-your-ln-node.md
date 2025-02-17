@@ -101,7 +101,7 @@ Once you click "Next", you will see different settings. Click to **Edit Settings
 
 ![tutorial](/images/blog/2025-02-17/tuto-3.jpg)
 
-On `Settings > General`: set your hostname, the username and passwd for your admin user.
+On `Settings > General`: set your hostname, the username and password for your admin user.
 Make sure you enable your WIFI, otherwise you will have to plug it to the router with an RJ-45.
 <span id="hostname-setup"></span>
 > For this tutorial, I am using `testhub` as hostname, you can use `albyhub` or whatever you prefer.
@@ -204,6 +204,7 @@ You get the auth code (**left**) that you need to insert it into your setup (**r
 
 ![tutorial](/images/blog/2025-02-17/tuto-19.jpg)
 
+<span id="alby-hub-password"></span>
 Create a **Password** for your Alby Hub installed in your raspi. It can be different from the password that you set up for your root user in the rapi itself.
 
 ![tutorial](/images/blog/2025-02-17/tuto-20.jpg)
@@ -276,13 +277,17 @@ Your node is the ultimate source of truth. Connecting these apps to it will allo
 
 ---
 
-### Extra: Updating a running instance
+### Extra 1: Updating a running instance
 
 Similar to the [installation process](/blog/run-your-ln-node/#pi-install-alby-hub), there's a script available to update your node. You can find it in the source repository: [GitHub - Alby Hub Update Script](https://github.com/getAlby/hub/tree/master/scripts/pi-aarch64)
 
 ```bash
 ssh testhub@testhub.local '/bin/bash -c "$(curl -fsSL https://getalby.com/install/hub/pi-aarch64-update.sh)"'
 ```
+
+### Extra 2: When the Raspberry Pi shuts down
+
+If the power goes out, the Raspberry Pi will turn off. Once power is restored, it will automatically restart, but Alby Hub will prompt you to enter the [password you set](/blog/run-your-ln-node/#alby-hub-password). 
 
 ---
 
