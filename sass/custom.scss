@@ -144,11 +144,12 @@ a img {
     display: none;
 
     &.reading-tags__long {
-      font-size: 1em;
       display: inline;
       float: right;
       font-style: italic;
       list-style: none;
+      margin-right: 0.6em;
+      font-size: medium;
     }
 
     .reading-tag {
