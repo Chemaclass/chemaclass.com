@@ -146,5 +146,6 @@ With its **fixed supply of 21 million** coins, Bitcoin cannot be inflated in thi
 
 ### Related readings
 
-- [21 Lessons](/readings/21-lessons/) <small>"What I've learn from falling down the Bitcoin rabbit hole" by Gigi</small>
-- [The Genesis Book](/readings/the-genesis-book/) <small>"The story of the people and projects that inspired Bitcoin" by Aaron van Wirdum</small>
+- [The Road to Serfdom](/readings/the-road-to-serfdom/) <small>How central planning can slowly erode freedom</small>
+- [21 Lessons](/readings/21-lessons/) <small>What I've learned from falling down the Bitcoin rabbit hole</small>
+- [The Genesis Book](/readings/the-genesis-book/) <small>The story of the people and projects that inspired Bitcoin</small>

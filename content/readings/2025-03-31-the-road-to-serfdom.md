@@ -72,3 +72,15 @@ Totally. While the world has changed, the tension between freedom and control is
 Sure, some government help is needed. But Hayek's warning? Too much control, even with good intentions, can lead us somewhere we don't want to go.
 
 {{ youtube(id="2oG2SLzNo-E") }}
+
+---
+
+### Related posts
+
+- [Understanding Taxes](/blog/understanding-taxes/) <small>Where your money goes and how to rethink the system</small>
+
+### Related readings
+
+- [Man's Search for Meaning](/readings/mans-search-for-meaning/)  <small>Purpose in despair: Frankl's holocaust insights</small>
+- [Invincible](/readings/invincible/)  <small>Achieve More, Suffer Less
+  </small>
