@@ -132,7 +132,8 @@ If you're tired of slow PR queues and over-engineered approvals, this might be w
 
 ### 📚 Related posts
 
-- [People skills](/blog/people-skills/) <small>From code to collaboration</small>
+- [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
 - [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
 - [Deployments on Fridays](/blog/deployments-on-fridays/) <small>Why "should we not" deploy to production on Fridays?</small>
 - [Great engineering](/blog/great-engineering/) <small>A great engineer is not just a great coder</small>  
+- [People skills](/blog/people-skills/) <small>From code to collaboration</small>
