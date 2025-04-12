@@ -18,7 +18,7 @@ The traditional approach to pull requests often slows things down. We wait hours
 
 <!-- more -->
 
-Originally described by Martin Fowler, this model offers a more flexible and thoughtful way to handle code changes. It's not just a branching strategy—it's a shift in how teams collaborate, trust, and take ownership.
+Originally described by [Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html), this model offers a more flexible and thoughtful way to handle code changes. It's not just a branching strategy—it's a shift in how teams collaborate, trust, and take ownership.
 
 ---
 
@@ -124,7 +124,7 @@ To me, it's about building a culture of **clarity, accountability, and trust**�
 
 If you're tired of slow PR queues and over-engineered approvals, this might be worth a try.
 
-> Curious to dive deeper? Check out Martin Fowler's article: [martinfowler.com/articles/ship-show-ask](https://martinfowler.com/articles/ship-show-ask.html)
+> Curious to dive deeper? Check out [Rouan Wilsenach's post](https://martinfowler.com/articles/ship-show-ask.html).
 
 ![footer](/images/blog/2025-04-12/footer.jpg)
 

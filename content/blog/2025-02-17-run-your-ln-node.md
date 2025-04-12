@@ -10,7 +10,7 @@ subtitle = "Take full control of your Lightning payments with Alby Hub"
 static_thumbnail = "/images/blog/2025-02-17/cover.jpg"
 +++
 
-![cover](/images/blog/2025-02-17/cover.jpg)
+![blog-cover](/images/blog/2025-02-17/cover.jpg)
 
 In this guide, I'll show you how to set up a fully custodial Lightning Network (LN) node using Alby Hub on a Raspberry Pi, giving you complete control over your node. Alby Hub offers a DIY free version for a self-custodial Lightning wallet, ensuring full ownership of your funds while being 100% open-source. 
 
