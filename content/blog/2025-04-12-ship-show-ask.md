@@ -59,6 +59,10 @@ I prefer to wait for a peer review when:
 - It introduces architectural or structural decisions that haven't been agreed on yet
 - It benefits from shared input or a second pair of eyes
 
+That said, **"Ask" doesn't mean over-engineering the process**. Often, one thoughtful reviewer is enough—especially if they're familiar with the domain. If the change touches a specific area, I'll ask for feedback from the person who owns (or best understands) that part of the code. It doesn't need to involve everyone.
+
+In small teams, requiring two approvals on every PR can quickly become a bottleneck and slow down the delivery of value. The goal is alignment and quality, not ceremony for its own sake.
+
 ### ⚡ I use Show for safe, low-impact changes
 
 I might merge immediately when:
@@ -111,7 +115,7 @@ A *Show* PR might be the right choice when:
 - **Clarify team expectations** for when to use Show vs Ask
 - **Always provide context** in your PR — even if merging immediately
 - **Write tests** for any new logic or behavior
-- **Welcome post-merge feedback** — review doesn’t stop at merge
+- **Welcome post-merge feedback** — review doesn't stop at merge
 - **Reflect regularly as a team** and adjust the approach as needed
 
 ---
