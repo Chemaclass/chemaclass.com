@@ -537,3 +537,12 @@ a.tooltip:hover {
     display: block !important; /* Or flex/inline-block as needed */
   }
 }
+
+#all-terms {
+  li {
+    list-style: none;
+    float: left;
+    margin-left: 5px;
+    padding: 5px;
+  }
+}
