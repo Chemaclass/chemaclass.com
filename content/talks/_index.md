@@ -17,6 +17,11 @@ Follow my speaker journey.
 
 ### 2025
 
+#### October
+
+- 2025-10-27 | International PHP Conference [**Munich, Germany**] (EN)
+  - [Full-day Workshop: Modernizing Legacy PHP with Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
+  
 #### June
 
 - 2025-05-03 | International PHP Conference [**Berlin, Germany**] (EN)
