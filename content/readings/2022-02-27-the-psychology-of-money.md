@@ -3,7 +3,7 @@ title = "The Psychology of Money"
 description = "There is no reason to risk what you have and need for what you don't have and don't need. Timeless lessons on wealth, greed, and happiness."
 authors = [ "Morgan Housel" ]
 [taxonomies]
-tags = [ "financial", "investing" ]
+tags = [ "finance", "investing" ]
 [extra]
 subtitle = "Timeless Lessons on Wealth, Greed, and Happiness by Morgan Housel"
 pages = "240"

@@ -3,7 +3,7 @@ title = "Rich dad poor dad"
 description = "Explodes the myth that you need to earn a high income to become rich."
 authors = [ "Robert T. Kiyosaki" ]
 [taxonomies]
-tags = [ "business", "financial" ]
+tags = [ "business", "finance" ]
 [extra]
 subtitle = "What the Rich Teach Their Kids about Money That the Poor and Middle Class Do Not!"
 pages = "180"
