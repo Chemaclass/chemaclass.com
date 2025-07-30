@@ -57,3 +57,4 @@ apolitical, free-market alternative to national central banks.
 - [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
 - [The Blocksize War](/readings/the-blocksize-war/) <small>by Jonathan Bier</small>
 - [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
+- [Principles of Economics](/readings/principles-of-economics/) <small>by Saifedean Ammous</small>
