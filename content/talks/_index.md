@@ -21,7 +21,15 @@ Follow my speaker journey.
 
 - 2025-10-27 | International PHP Conference [**Munich, Germany**] (EN)
   - [Full-day Workshop: Modernizing Legacy PHP with Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
-  
+  - [From $this to (this) — A Gentle Introduction to Phel](https://phpconference.com/web-development/phel-introduction-functional-programming-lisp/)
+
+#### August
+
+- 2025-08-21 | International PHP Conference [**Remote**] (EN)
+  - [Preview 1h: Refactoring Workshop](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
+- 2025-08-07 | Alby Community Call
+  - Satscribe
+
 #### June
 
 - 2025-05-03 | International PHP Conference [**Berlin, Germany**] (EN)
