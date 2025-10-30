@@ -23,6 +23,8 @@ Follow my speaker journey.
   - [Full-day Workshop: Modernizing Legacy PHP with Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
   - [From $this to (this) — A Gentle Introduction to Phel](https://phpconference.com/web-development/phel-introduction-functional-programming-lisp/)
 
+![workshop ipc munich 2025](/images/talks/2025-10-27/workshop-ipc-munich25.jpg)
+
 #### August
 
 - 2025-08-21 | International PHP Conference [**Remote**] (EN)
