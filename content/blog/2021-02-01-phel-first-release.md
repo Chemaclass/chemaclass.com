@@ -91,4 +91,6 @@ Check out the official website with all documentation: [https://phel-lang.org/](
 
 ### Also recommended
 
-- [Functional Programming with Phel - JesusValera](https://jesusvalerareales.com/functional-programming-with-phel/)
+
+
+- [Functional Programming with Phel - JesusValera](https://jesusvalera.dev/functional-programming-with-phel/)
