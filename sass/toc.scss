@@ -1,0 +1,112 @@
+// Table of Contents Styles
+$max-content-width: 700px;
+$toc-width: 240px;
+$toc-offset: 50px; // Space between content and TOC (increased to prevent overlap)
+$breakpoint-toc: 1200px; // Min width to show TOC (700px content + 240px TOC + margins)
+
+#toc-container {
+  display: none; // Hidden by default on small screens
+
+  @media (min-width: $breakpoint-toc) {
+    display: block;
+    position: fixed;
+    left: calc((100vw - #{$max-content-width}) / 2 - #{$toc-width} - #{$toc-offset});
+    top: 120px; // Below header
+    width: $toc-width;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    padding: 1.5rem;
+    padding-right: 1rem; // Padding for scrollbar
+    font-size: 0.9rem;
+
+    // Scrollbar styling (webkit browsers) - hidden by default
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: transparent; // Hidden by default
+      border-radius: 2px;
+      transition: background 0.2s ease;
+    }
+
+    // Show scrollbar on hover or when scrolling
+    &:hover::-webkit-scrollbar-thumb {
+      background: var(--color-subtitle);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--body-color);
+    }
+
+    // Firefox scrollbar styling
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent; // Hidden by default
+
+    &:hover {
+      scrollbar-color: var(--color-subtitle) transparent; // Show on hover
+    }
+  }
+}
+
+.toc-title {
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: var(--body-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.toc-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.toc-item {
+  margin-bottom: 0.5rem;
+
+  &.toc-h2 {
+    padding-left: 0;
+  }
+
+  &.toc-h3 {
+    padding-left: 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+.toc-link {
+  color: var(--color-subtitle);
+  text-decoration: none;
+  display: block;
+  padding: 0.25rem 0;
+  border-left: 2px solid transparent;
+  padding-left: 0.75rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: var(--accent-color);
+    border-left-color: var(--accent-color);
+  }
+
+  &.active {
+    color: var(--accent-color);
+    border-left-color: var(--accent-color);
+    font-weight: 500;
+  }
+}
+
+// Ensure main content doesn't get affected
+@media (min-width: $breakpoint-toc) {
+  main {
+    // Content stays centered, TOC floats beside it
+    position: relative;
+  }
+}

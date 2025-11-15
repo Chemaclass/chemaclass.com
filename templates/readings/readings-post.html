@@ -1,6 +1,9 @@
 {% extends "blog/blog-post.html" %}
 
 {% block content %}
+<!-- Table of Contents (floating sidebar) -->
+<nav id="toc-container"></nav>
+
 <div class="reading-post">
   <div class="post-title">
     <h1>
@@ -39,3 +42,7 @@
 
 </div>
 {% endblock content %}
+
+{% block js %}
+<script type="text/javascript" src="{{ get_url(path='toc.js') | safe }}" defer></script>
+{% endblock js %}
