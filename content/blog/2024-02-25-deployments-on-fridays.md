@@ -45,6 +45,7 @@ Being able to deploy on Fridays (if needed or wanted) impacts the team's confide
 
 ---
 
+## Related
 ### Related posts
 
 - [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>

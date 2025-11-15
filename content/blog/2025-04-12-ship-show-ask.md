@@ -108,6 +108,8 @@ If you're tired of slow PR queues and over-engineered approvals, this might be w
 
 ---
 
+## Related
+
 ### Related posts
 
 - [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>

@@ -56,6 +56,7 @@ This book is full of lessons that apply to everyone no matter who they are or wh
 
 ---
 
+## Related
 ### Related readings
 
 - [Who moved my cheese](/readings/who-moved-my-cheese/) <small>by Spencer Johnson</small>

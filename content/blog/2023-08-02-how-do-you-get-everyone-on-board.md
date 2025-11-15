@@ -72,6 +72,7 @@ You cannot force people to change. On the contrary, the more you try to force it
 
 --- 
 
+## Related
 ### Related posts
 
 - [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>

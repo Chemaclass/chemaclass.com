@@ -82,6 +82,7 @@ Pair programming might become one of the best tools in your team toolbox for dai
 
 ---
 
+## Related
 ### Related posts
 
 - [Test-Driven (Development)](/blog/test-driven-development/) <small>What is challenging about it?</small>

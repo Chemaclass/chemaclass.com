@@ -314,6 +314,7 @@ Only Bitcoin's original developer could tell whether the dummy stack element was
 - [Script Editor](https://coins.github.io/bitcoin-scripts/script-editor/) is product-driven research on Bitcoin scalability and usability.
 - [Miniscript](https://bitcoin.sipa.be/miniscript/) is a language for writing (a subset of) Bitcoin Scripts in a structured way, enabling analysis, composition, generic signing, and more.
 
+## Related
 ### Related readings
 
 - [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>

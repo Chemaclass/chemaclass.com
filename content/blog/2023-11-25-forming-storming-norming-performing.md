@@ -98,12 +98,14 @@ This involves providing **guidance and structure** during the _forming_ stage, *
 
 ---
 
+## Related
 ### Related readings
 
 - [Dare to lead](/readings/dare-to-lead/)<small> by Brené Brown</small>
 - [Turn the ship around!](/readings/turn-the-ship-around/)<small> by L. David Marquet</small>
 - [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/) <small>by Patrick M. Lencioni</small>
 
+## Related
 ### Related posts
 
 - [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>

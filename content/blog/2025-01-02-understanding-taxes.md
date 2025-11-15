@@ -144,6 +144,7 @@ With its **fixed supply of 21 million** coins, Bitcoin cannot be inflated in thi
 
 ---
 
+## Related
 ### Related readings
 
 - [The Road to Serfdom](/readings/the-road-to-serfdom/) <small>How central planning can slowly erode freedom</small>

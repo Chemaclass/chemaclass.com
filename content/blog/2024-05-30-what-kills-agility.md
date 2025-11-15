@@ -56,6 +56,7 @@ Learn the basics of Extreme Programming (XP) and Lean Software Development.
 
 ---
 
+## Related
 ### Related posts
 
 - [Unhealthy working environment](/blog/unhealthy-working-environment) <small>Recognizing red flags of an unhealthy workplace</small>

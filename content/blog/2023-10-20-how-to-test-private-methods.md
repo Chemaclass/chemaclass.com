@@ -29,6 +29,7 @@ Never ever.
 
 If you really want to test a private method, consider extracting that private method logic into a separate class, and write a unit test for that class' behavior.
 
+## Related
 ### Related posts
 
 - [Test-Driven (Development)](/blog/test-driven-development/) <small>What is challenging about it?</small>

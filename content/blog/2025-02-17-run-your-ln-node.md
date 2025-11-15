@@ -291,11 +291,13 @@ If the power goes out, the Raspberry Pi will turn off. Once power is restored, i
 
 ---
 
+## Related
 ### Related links
 
 - [GetAlby - User Guide](https://guides.getalby.com/)
 - [Installing Alby Hub in a Raspberry Zero](https://guides.getalby.com/user-guide/alby-account-and-browser-extension/hidden-archives/raspberry-pi-zero)
 
+## Related
 ### Related posts
 
 - [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>

@@ -106,6 +106,7 @@ If you still feel uncomfortable having another person next to you while you writ
 
 ---
 
+## Related
 ### Related posts
 
 - [What kills agility?](/blog/what-kills-agility/) <small>Why Agile if you already do Scrum, Kanban, SAFe, or Waterfall?</small>
@@ -114,6 +115,7 @@ If you still feel uncomfortable having another person next to you while you writ
 - [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
 - [Test-Driven (Development)](/blog/test-driven-development/) <small>What is challenging about it?</small>
 
+## Related
 ### Related readings
 
 - [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>

@@ -111,6 +111,7 @@ a [tech talk](/talks/update-your-team-to-be-more-extreme) in different conferenc
 - [Peopleware](/readings/peopleware) <small>by Tom DeMarco, Timothy Lister</small>
 - [The Pragmatic Programmer](/readings/the-pragmatic-programmer/) <small>by  David Thomas, Andrew Hunt</small>
 
+## Related
 ### Related posts
 
 - [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>

@@ -33,6 +33,7 @@ Writing is one of my favorite ways to express myself, especially when I cannot s
 
 ---
 
+## Related
 ### Related posts
 
 - [The process itself is the goal](/blog/the-process-itself-is-the-goal/) <small>How to focus and have self-discipline</small>

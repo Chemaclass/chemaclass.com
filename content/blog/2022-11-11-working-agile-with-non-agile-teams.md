@@ -120,6 +120,7 @@ That's when the magic starts to happen, and suddenly you can work agile with any
 
 ---
 
+## Related
 ### Related posts
 
 - [Update your team to be more extreme](/blog/update-your-team-to-be-more-extreme/). <small>How can you help your peers to embrace the change?</small>

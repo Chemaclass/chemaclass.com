@@ -60,6 +60,7 @@ Code never lies and never forgets; once it's written and automated in your pipel
 
 ---
 
+## Related
 ### Related posts
 
 - [TDD vs BDD](/blog/tdd-vs-bdd/) <small>Design or Workflow?</small>

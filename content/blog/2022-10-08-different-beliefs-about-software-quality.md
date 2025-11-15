@@ -97,6 +97,7 @@ expectations. Therefore, the **key** here is to **agree on what good quality is*
 
 ---
 
+## Related
 ### Related posts
 
 - [The art of testing: where design meets quality](/blog/the-art-of-testing/). <small>From a software developer's point of view</small>

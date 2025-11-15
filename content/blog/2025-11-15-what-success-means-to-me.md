@@ -82,6 +82,8 @@ That feels like success to me.
 
 ---
 
+## Related
+
 ### Related posts
 
 - [The process itself is the goal](/blog/the-process-itself-is-the-goal) <small>How to focus and have self-discipline</small>

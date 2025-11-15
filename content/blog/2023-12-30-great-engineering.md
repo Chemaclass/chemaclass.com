@@ -33,6 +33,7 @@ Image original by [Nicola Ballotta](https://hybridhacker.email).
 
 ---
 
+## Related
 ### Related posts
 
 - [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>

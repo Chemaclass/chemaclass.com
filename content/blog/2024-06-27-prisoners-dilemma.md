@@ -71,6 +71,7 @@ In the Prisoner's Dilemma, the best strategy is to start with cooperation, but t
 
 ---
 
+## Related
 ### Related posts
 
 - [Learned helplessness](/blog/learned-helplessness/) <small>An acceptance of powerlessness</small>

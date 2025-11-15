@@ -102,6 +102,7 @@ Verified commits might seem like a small step, but they make your code more trus
 
 ---
 
+## Related
 ### Related links
 
 - Learn more: [What is PGP encryption?](/pgp) <small>A 3-minute tutorial for beginners</small>
