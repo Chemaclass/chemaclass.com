@@ -61,6 +61,16 @@ const icons = {
 ////////////////////////////////////
 // Interaction with the search input
 ////////////////////////////////////
+document.addEventListener("keydown", function (keyboardEvent) {
+    // Cmd+K (Mac) or Ctrl+K (Windows/Linux) to focus search
+    if ((keyboardEvent.metaKey || keyboardEvent.ctrlKey) && keyboardEvent.key === 'k') {
+        keyboardEvent.preventDefault(); // Prevent browser default behavior
+        searchInput.focus();
+        searchInput.select(); // Select existing text for easy replacement
+        return;
+    }
+});
+
 document.addEventListener("keyup", function (keyboardEvent) {
     if (["s", "S", "/"].includes(keyboardEvent.key)) {
         searchInput.focus();
