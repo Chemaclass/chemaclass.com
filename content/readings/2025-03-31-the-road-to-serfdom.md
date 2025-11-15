@@ -75,6 +75,7 @@ Sure, some government help is needed. But Hayek's warning? Too much control, eve
 
 ---
 
+## Related
 ### Related posts
 
 - [Understanding Taxes](/blog/understanding-taxes/) <small>Where your money goes and how to rethink the system</small>

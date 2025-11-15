@@ -100,6 +100,7 @@ This book aims to equip readers with the tools to understand how Bitcoin works, 
 
 ---
 
+## Related
 ### Related links
 
 - Book website: [www.bitcoinconrigor.com](https://www.bitcoinconrigor.com)

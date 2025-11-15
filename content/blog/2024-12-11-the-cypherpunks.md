@@ -136,7 +136,6 @@ Their vision continues to influence the creation of technologies that allow indi
 
 - [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>
 
-## Related
 ### Related readings
 
 - [Criptoria](/readings/criptoria/) <small>by Alfre Mancera</small>
@@ -145,7 +144,6 @@ Their vision continues to influence the creation of technologies that allow indi
 - [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
 - [Bitcoin: A Work in Progress](/readings/bitcoin-wip/) <small>by Sjors Provoost</small>
 
-## Related
 ### Related links
 
 - Learn more: [What is PGP encryption?](/pgp) <small>A 3-minute tutorial for beginners</small>

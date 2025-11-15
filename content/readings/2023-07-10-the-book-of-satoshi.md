@@ -33,6 +33,7 @@ Nakamoto's true identity may never be known. Therefore the writings reproduced h
 
 ---
 
+## Related
 ### Related readings
 
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>

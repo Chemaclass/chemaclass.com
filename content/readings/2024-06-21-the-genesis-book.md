@@ -64,6 +64,7 @@ Bitcoin did not appear out of nowhere. For decades prior to Satoshi Nakamoto’s
 
 ---
 
+## Related
 ### Related readings
 
 - [The Blocksize War](/readings/the-blocksize-war/) <small>by Jonathan Bier</small>

@@ -65,6 +65,7 @@ The book links to more than two hundred articles, videos, podcasts, and even the
 
 ---
 
+## Related
 ### Related links
 
 - Book source code: [GitHub/Sjors](https://github.com/Sjors/nado-book/)

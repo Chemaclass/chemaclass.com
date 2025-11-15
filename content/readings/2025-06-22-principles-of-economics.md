@@ -86,6 +86,7 @@ You'll walk away with a new lens to see the world—why prices rise, why saving 
 
 ---
 
+## Related
 ### Related posts
 
 - [The Cypherpunks](/blog/the-cypherpunks) <small>Pioneers of privacy in the digital age</small>

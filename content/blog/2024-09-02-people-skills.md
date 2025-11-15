@@ -72,7 +72,6 @@ Humans bring their feelings, backgrounds, and routines into interactions, adding
 - [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
 - [Great engineering](/blog/great-engineering/) <small>A great engineer is not just a great coder</small>
 
-## Related
 ### Related readings
 
 - [Peopleware](/readings/peopleware) <small>by Tom DeMarco, Timothy Lister</small>

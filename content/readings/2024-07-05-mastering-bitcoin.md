@@ -89,6 +89,7 @@ The first edition of this book was published in December 2014. Ten years later, 
 
 ---
 
+## Related
 ### Related posts
 
 - [Programmable Money](/blog/programmable-money) <small>The power of Bitcoin's Script</small>

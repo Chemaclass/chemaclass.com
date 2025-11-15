@@ -49,7 +49,6 @@ If you are the one experiencing this in "first person," I would recommend you:
 - [Dare to lead](/readings/dare-to-lead/)<small> by Brené Brown</small>
 - [Turn the ship around!](/readings/turn-the-ship-around/)<small> by L. David Marquet</small>
 
-## Related
 ### Related posts
 
 - [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>

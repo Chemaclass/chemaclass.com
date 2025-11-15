@@ -51,6 +51,7 @@ apolitical, free-market alternative to national central banks.
 
 ---
 
+## Related
 ### Related readings
 
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>

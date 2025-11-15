@@ -78,6 +78,7 @@ Digital minimalism **is not about rejecting technology** altogether —**it's ab
 
 ---
 
+## Related
 ### Related posts
 
 - [The process itself is the goal](/blog/the-process-itself-is-the-goal/) <small>How to focus and have self-discipline</small>

@@ -85,6 +85,7 @@ This approach helps you gain a broader perspective, allowing awareness of both y
 
 ---
 
+## Related
 ### Related posts
 
 - [Have you always been like this?](/blog/have-you-always-been-like-this/) <small>How to find a balance of growth and happiness</small>

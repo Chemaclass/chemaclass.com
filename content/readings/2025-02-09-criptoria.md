@@ -198,6 +198,7 @@ Cryptoria is addressed to all people convinced that, beyond inherited or imposed
 
 ---
 
+## Related
 ### Related links
 
 - Book website: [www.prometeabtc.com/criptoria](https://www.prometeabtc.com/criptoria)

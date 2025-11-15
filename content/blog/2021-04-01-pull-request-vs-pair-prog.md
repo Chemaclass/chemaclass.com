@@ -115,7 +115,6 @@ If you still feel uncomfortable having another person next to you while you writ
 - [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
 - [Test-Driven (Development)](/blog/test-driven-development/) <small>What is challenging about it?</small>
 
-## Related
 ### Related readings
 
 - [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
