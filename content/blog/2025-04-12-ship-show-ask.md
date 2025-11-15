@@ -10,7 +10,7 @@ subtitle = "Culture-Driven Collaboration at the speed of code"
 static_thumbnail = "/images/blog/2025-04-12/cover.jpg"
 +++
 
-![cover](/images/blog/2025-04-12/cover.jpg)
+![blog-cover](/images/blog/2025-04-12/cover.jpg)
 
 In fast-moving teams, one of the biggest tensions we face is this: How do we keep shipping without compromising quality or collaboration?
 

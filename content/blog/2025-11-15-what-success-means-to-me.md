@@ -74,6 +74,8 @@ And be ready to [embrace the change](/blog/embrace-the-change) when your definit
 
 That feels like success to me.
 
+![cover](/images/blog/2025-11-15/footer.jpg)
+
 ---
 
 ### Related posts
