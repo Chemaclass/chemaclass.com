@@ -12,14 +12,14 @@ a img {
 }
 
 .homepage-left-column {
-  margin-top: 1em;
+  align-self: center;
   blockquote {
     margin-top: -0.9em;
   }
 }
 
 .homepage-right-column {
-  margin-top: -1em;
+  align-self: center;
 }
 
 .post-preview {
@@ -277,17 +277,17 @@ blockquote {
 }
 
 @media (min-width: 880px) {
-  .desktop-homepage-nav-menu {
+  nav.desktop-homepage-nav-menu {
     margin-bottom: 30px;
-    margin-top: -1.5em; // Move entire menu up
+    margin-top: -1.5em;
     display: flex;
     font-size: 1.2em;
-    align-items: flex-start; // Align to top
+    align-items: flex-start;
 
     a {
-      line-height: 1; // Reduce line height to move text up
-      padding-top: 0; // Remove top padding
-      margin-top: 0; // Remove top margin
+      line-height: 1;
+      padding-top: 0;
+      margin-top: 0;
     }
   }
 }

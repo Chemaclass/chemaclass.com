@@ -1,23 +1,22 @@
 // Table of Contents Styles
 $max-content-width: 700px;
 $toc-width: 240px;
-$toc-offset: 50px; // Space between content and TOC (increased to prevent overlap)
-$breakpoint-toc: 1200px; // Min width to show TOC (700px content + 240px TOC + margins)
+$toc-offset: 50px;
+$breakpoint-toc: 1200px;
 
 #toc-container {
-  display: none; // Hidden by default on small screens
+  display: none;
 
   @media (min-width: $breakpoint-toc) {
     display: block;
     position: fixed;
     left: calc((100vw - #{$max-content-width}) / 2 - #{$toc-width} - #{$toc-offset});
-    top: 120px; // Below header
+    top: 120px;
     width: $toc-width;
     max-height: calc(100vh - 140px);
     overflow-y: auto;
     padding: 1.5rem;
-    padding-right: 1rem; // Padding for scrollbar
-    font-size: 0.9rem;
+    padding-right: 1rem;
 
     // Scrollbar styling (webkit browsers) - hidden by default
     &::-webkit-scrollbar {
@@ -29,12 +28,11 @@ $breakpoint-toc: 1200px; // Min width to show TOC (700px content + 240px TOC + m
     }
 
     &::-webkit-scrollbar-thumb {
-      background: transparent; // Hidden by default
+      background: transparent;
       border-radius: 2px;
       transition: background 0.2s ease;
     }
 
-    // Show scrollbar on hover or when scrolling
     &:hover::-webkit-scrollbar-thumb {
       background: var(--color-subtitle);
     }
@@ -43,12 +41,11 @@ $breakpoint-toc: 1200px; // Min width to show TOC (700px content + 240px TOC + m
       background: var(--body-color);
     }
 
-    // Firefox scrollbar styling
     scrollbar-width: thin;
-    scrollbar-color: transparent transparent; // Hidden by default
+    scrollbar-color: transparent transparent;
 
     &:hover {
-      scrollbar-color: var(--color-subtitle) transparent; // Show on hover
+      scrollbar-color: var(--color-subtitle) transparent;
     }
   }
 }
@@ -57,7 +54,7 @@ $breakpoint-toc: 1200px; // Min width to show TOC (700px content + 240px TOC + m
   font-weight: bold;
   margin-bottom: 0.75rem;
   color: var(--body-color);
-  font-size: 1rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   display: block;
@@ -86,7 +83,7 @@ $breakpoint-toc: 1200px; // Min width to show TOC (700px content + 240px TOC + m
 
   &.toc-h3 {
     padding-left: 1rem;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -98,6 +95,7 @@ $breakpoint-toc: 1200px; // Min width to show TOC (700px content + 240px TOC + m
   border-left: 2px solid transparent;
   padding-left: 0.75rem;
   transition: all 0.2s ease;
+  font-size: 0.85rem;
 
   &:hover {
     color: var(--accent-color);
@@ -111,10 +109,8 @@ $breakpoint-toc: 1200px; // Min width to show TOC (700px content + 240px TOC + m
   }
 }
 
-// Ensure main content doesn't get affected
 @media (min-width: $breakpoint-toc) {
   main {
-    // Content stays centered, TOC floats beside it
     position: relative;
   }
 }
