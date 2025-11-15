@@ -22,18 +22,18 @@ Having more money will make you happier ONLY if that means you'll have more cont
 
 ## Money Misunderstandings
 
-#### Compounding
+### Compounding
 
 - Start investing with whatever you can afford, and stay invested.
 - Leverage the power of compounding.
 
-#### Volatility
+### Volatility
 
 - It's not possible to get high returns without volatility.
 - It's the emotional price you need to pay if you want good annual returns.
 - Embrace volatility. Volatility is a fee, not a fine.
 
-#### Tail investments
+### Tail investments
 
 - It's hard to predict what will be the "next big thing", therefore it's important to diversify.
 - A tail investment is single investment that massively outperform all others, and made up for several bad investments.

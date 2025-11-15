@@ -25,7 +25,7 @@ In this initial stage, team members are polite, tentative, and unsure about thei
 
 > **Goal**: Members are getting to know each other, and there is a focus on defining the team's purpose, goals, and roles.
 
-#### Leadership approach
+### Leadership approach
 
 - Provide clear direction and guidance
 - Clearly define team goals, roles, and expectations
@@ -37,7 +37,7 @@ Conflict and disagreement emerge as team members start to express their individu
 
 > **Goal**: The team clarifies its goals, members learn to resolve conflicts and address differences constructively.
 
-#### Leadership approach
+### Leadership approach
 
 - Facilitate conflict resolution
 - Acknowledge and address conflicts constructively
@@ -51,7 +51,7 @@ Cohesion begins to develop, and team members establish norms and values. Roles b
 
 > **Goal**: The team strives to establish norms, values, and a shared understanding. Members learn to appreciate each other's strengths and weaknesses.
 
-#### Leadership approach
+### Leadership approach
 
 - Foster collaboration and inclusivity
 - Encourage team members to establish norms and values collectively
@@ -63,7 +63,7 @@ The team is highly functional, with a focus on achieving its goals. Members work
 
 > **Goal**: The team is committed to its common purpose and operates at a high level of efficiency and effectiveness.
 
-#### Leadership approach
+### Leadership approach
 
 - Empower autonomy and trust
 - Provide opportunities for team members to take ownership of tasks and projects
@@ -75,7 +75,7 @@ This stage involves the completion of the task or project. Team members may expe
 
 > **Goal**: Acknowledge and celebrate the team's achievements, provide closure, and reflect on the overall experience.
 
-#### Leadership approach
+### Leadership approach
 
 - Acknowledge achievements and provide closure
 - Recognize the team's accomplishments and express gratitude for individual contributions

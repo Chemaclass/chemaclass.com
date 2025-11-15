@@ -94,21 +94,21 @@ take responsibility.
 
 Among many others, these are some of the variations:
 
-#### Uniform
+### Uniform
 
 When the role of the researcher was taken over by an "ordinary person without a uniform" (always a confederate), the
 obedience dropped to 20%.
 
-#### Change of location
+### Change of location
 
 Obedience dropped to 47.5% when the experiment was moved to a set of offices instead of the impressive Yale University.
 
-#### Social support condition
+### Social support condition
 
 Two other participants (confederates) were also teachers but refused to obey. One at 150 volts, and the other at 210
 volts. The presence of others who are seen to disobey the authority figure reduces the level of obedience to 10%.
 
-#### Absent experimenter condition
+### Absent experimenter condition
 
 When the researcher instructed and prompted the teacher by telephone from another room, obedience fell to 20.5%. Many
 participants cheated and missed out shocks or gave less voltage than ordered. The proximity of authority figure affects

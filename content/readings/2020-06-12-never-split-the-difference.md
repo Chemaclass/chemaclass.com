@@ -34,6 +34,6 @@ across the full spectrum of human endeavor and proved their effectiveness.
 5. "No" provides a great opportunity for you, and the other party to clarify what you really want by eliminating what you
    don't want.
 
-#### Summary video
+### Summary video
 
 {{ youtube(id="QIRk382yJm4") }}

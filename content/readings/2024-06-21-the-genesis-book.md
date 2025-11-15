@@ -23,7 +23,7 @@ Bitcoin did not appear out of nowhere. For decades prior to Satoshi Nakamoto’s
 
 ## Contents
 
-#### Part I: Foundations
+### Part I: Foundations
 
 1. Spontaneous Order
 2. Free and Open Source 
@@ -33,7 +33,7 @@ Bitcoin did not appear out of nowhere. For decades prior to Satoshi Nakamoto’s
 6. eCash (and Trustless Time-stamps)
 7. The Extropians
 
-#### Part II: Cypherpunks
+### Part II: Cypherpunks
 
 8. The Cypherpunk Movement
 9. Cypherpunk Currency
@@ -42,7 +42,7 @@ Bitcoin did not appear out of nowhere. For decades prior to Satoshi Nakamoto’s
 12. B-money (and BitTorrent)
 13. RPOW
 
-#### Part III: Bitcoin
+### Part III: Bitcoin
 
 14. Twenty-First Century Fiat
 15. The White Paper

@@ -43,19 +43,25 @@ In the long run, your people skills can boost your success as much, if not more,
 
 The competencies that enable you to interact effectively and smoothly with others.
 
+### Core Communication Skills
+
 - **Communication**: The ability to clearly convey ideas, listen actively, and engage in meaningful conversations. This includes both verbal and non-verbal communication.
 
 - **Empathy**: Understanding and being sensitive to the feelings, thoughts, and experiences of others. It involves seeing things from someone else's perspective.
+
+- **Emotional intelligence**: Recognizing and managing your own emotions and understanding and influencing the emotions of others.
+
+### Collaboration Skills
 
 - **Teamwork**: Working well with others to achieve common goals. This includes collaboration, sharing responsibilities, and supporting colleagues.
 
 - **Conflict resolution**: The ability to handle disagreements and disputes constructively, finding solutions that satisfy all parties involved.
 
-- **Adaptability**: Being flexible and open to change, adjusting your approach as needed to meet different situations or personalities.
-
-- **Emotional intelligence**: Recognizing and managing your own emotions and understanding and influencing the emotions of others.
-
 - **Negotiation**: Finding mutually acceptable solutions or compromises during discussions or disagreements.
+
+### Growth and Influence
+
+- **Adaptability**: Being flexible and open to change, adjusting your approach as needed to meet different situations or personalities.
 
 - **Leadership**: Inspiring and guiding others, providing direction, and fostering a positive environment.
 
@@ -63,9 +69,11 @@ The competencies that enable you to interact effectively and smoothly with other
 
 > These skills are essential in almost every job and help build strong relationships, enhance teamwork, and create a positive work environment.
 
+### Why They're Harder Than You Think
+
 These are often called interpersonal or soft skills, but mastering them can be surprisingly challenging — perhaps even more so than many technical skills. Unlike "hard skills," which are tangible and can often be learned through a few hours or days of study, people skills involve navigating the intricate web of human emotions, experiences, and expectations.
 
-While technical skills might require you to dive into documentation, run experiments, and refine your approach, understanding and relating to people is far more complex. 
+While technical skills might require you to dive into documentation, run experiments, and refine your approach, understanding and relating to people is far more complex.
 
 Humans bring their feelings, backgrounds, and routines into interactions, adding layers of complexity beyond machines' straightforward logic. These personal details shape the reality we perceive, making interpersonal skills an essential yet complex part of effective communication and collaboration.
 

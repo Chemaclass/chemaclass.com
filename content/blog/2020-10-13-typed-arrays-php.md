@@ -146,7 +146,7 @@ We need to learn about our toolbox in order to use it wisely.
 
 ---
 
-#### References
+### References
 - [Argument unpacking](https://wiki.php.net/rfc/argument_unpacking)
 - [Function variable argument list](https://www.php.net/manual/en/functions.arguments.php#functions.variable-arg-list)
 - [Variadics function](https://wiki.php.net/rfc/variadics)

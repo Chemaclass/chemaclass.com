@@ -30,7 +30,7 @@ Eric Ries defines a startup as an organization dedicated to creating something n
 - Embrace new accounting methods
 - Learn what is not working and apply changes immediately: stay lean
 
-#### Summary
+### Summary
 
 {{ youtube(id="RSaIOCHbuYw") }}
 
