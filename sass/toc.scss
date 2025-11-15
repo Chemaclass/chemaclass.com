@@ -60,6 +60,14 @@ $breakpoint-toc: 1200px; // Min width to show TOC (700px content + 240px TOC + m
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--accent-color);
+  }
 }
 
 .toc-list {

@@ -93,10 +93,15 @@
       return;
     }
 
-    // Add TOC title
-    const tocTitle = document.createElement('div');
+    // Add TOC title (clickable to scroll to top)
+    const tocTitle = document.createElement('a');
     tocTitle.className = 'toc-title';
     tocTitle.textContent = 'On this page';
+    tocTitle.href = '#';
+    tocTitle.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     // Clear and populate TOC container
     tocContainer.innerHTML = '';
