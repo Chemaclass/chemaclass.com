@@ -279,8 +279,16 @@ blockquote {
 @media (min-width: 880px) {
   .desktop-homepage-nav-menu {
     margin-bottom: 30px;
+    margin-top: -1.5em; // Move entire menu up
     display: flex;
     font-size: 1.2em;
+    align-items: flex-start; // Align to top
+
+    a {
+      line-height: 1; // Reduce line height to move text up
+      padding-top: 0; // Remove top padding
+      margin-top: 0; // Remove top margin
+    }
   }
 }
 

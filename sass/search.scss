@@ -2,6 +2,25 @@
   .search-container {
     display: inline-block;
     width: 60%;
+    vertical-align: middle; // Align container with navbar
+
+    input[type="search"] {
+      padding-left: 0; // Align text with left menu
+      padding-top: 0; // Remove top padding
+      padding-bottom: 0.2rem; // Small bottom padding for the underline
+      border-left: none; // Remove left border for cleaner alignment
+      border-right: none; // Remove right border
+      border-top: none; // Remove top border
+      border-radius: 0; // Remove border radius for alignment
+      border-bottom: 2px solid #ccc; // Keep only bottom border
+      box-shadow: none; // Remove box shadow for cleaner look
+      line-height: 1.5; // Match navbar text line height
+
+      &:focus {
+        border-bottom-color: var(--accent-color); // Highlight on focus
+        box-shadow: none; // Keep no shadow on focus
+      }
+    }
   }
   .search-results {
     max-width: 550px;
@@ -91,6 +110,42 @@
     font-size: 12px;
     pointer-events: none; /* Prevent interactions with the number */
   }
+}
+
+// Navbar search styling (non-homepage pages)
+header .search-container {
+  input[type="search"] {
+    padding-left: 0.5rem; // Minimal left padding
+    padding-top: 0; // Remove top padding
+    padding-bottom: 0.2rem; // Small bottom padding for the underline
+    padding-right: 2.5rem; // Space for result count
+    border-left: none; // Remove left border
+    border-right: none; // Remove right border
+    border-top: none; // Remove top border
+    border-radius: 0; // Remove border radius
+    border-bottom: 2px solid #ccc; // Keep only bottom border
+    box-shadow: none; // Remove box shadow
+    line-height: 1.5; // Match navbar text line height
+
+    &:focus {
+      border-bottom-color: var(--accent-color); // Highlight on focus
+      box-shadow: none; // Keep no shadow on focus
+    }
+  }
+
+  .result-count {
+    top: 50%; // Center vertically in navbar
+    transform: translateY(-50%);
+    font-size: 11px; // Slightly smaller for navbar
+    right: 12px;
+  }
+}
+
+// Homepage search result count alignment
+#frontpage .search-container .result-count {
+  top: 50%; // Align with input text baseline
+  transform: translateY(-50%);
+  right: 5px; // Closer to edge since no border
 }
 
 .search-results {
