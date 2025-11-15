@@ -17,6 +17,7 @@ $breakpoint-toc: 1200px;
     overflow-y: auto;
     padding: 1.5rem;
     padding-right: 1rem;
+    transition: top 0.5s ease-in-out;
 
     // Scrollbar styling (webkit browsers) - hidden by default
     &::-webkit-scrollbar {
@@ -113,4 +114,9 @@ $breakpoint-toc: 1200px;
   main {
     position: relative;
   }
+}
+
+#toc-container.toc-top {
+  top: 0px;
+  max-height: calc(100vh - 40px);
 }

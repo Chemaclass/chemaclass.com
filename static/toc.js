@@ -72,12 +72,36 @@
     // Remove all active classes
     tocLinks.forEach(link => link.classList.remove(CONFIG.activeClass));
 
-    // Add active class to current link
+    // Add active class to current link and scroll it into view
     if (currentHeading) {
       const activeLink = document.querySelector(`.toc-link[href="#${currentHeading.id}"]`);
       if (activeLink) {
         activeLink.classList.add(CONFIG.activeClass);
+
+        const tocContainer = document.querySelector(CONFIG.tocContainer);
+        if (tocContainer) {
+          const linkRect = activeLink.getBoundingClientRect();
+          const containerRect = tocContainer.getBoundingClientRect();
+
+          if (linkRect.top < containerRect.top || linkRect.bottom > containerRect.bottom) {
+            activeLink.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
       }
+    }
+  }
+
+  // Update TOC position based on scroll position
+  function updateTOCPosition() {
+    const tocContainer = document.querySelector(CONFIG.tocContainer);
+
+    if (!tocContainer) return;
+
+    if (window.scrollY === 0) {
+      tocContainer.classList.remove('toc-top');
+      tocContainer.scrollTop = 0;
+    } else {
+      tocContainer.classList.add('toc-top');
     }
   }
 
@@ -108,17 +132,15 @@
     tocContainer.appendChild(tocTitle);
     tocContainer.appendChild(tocList);
 
-    // Update active section on scroll
-    let scrollTimeout;
+    // Update active section and TOC position on scroll
     window.addEventListener('scroll', () => {
-      if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
-      }
-      scrollTimeout = setTimeout(updateActiveSection, 10);
-    });
+      updateActiveSection();
+      updateTOCPosition();
+    }, { passive: true });
 
-    // Initial active section update
+    // Initial updates
     updateActiveSection();
+    updateTOCPosition();
   }
 
   // Wait for DOM to be ready
