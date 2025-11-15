@@ -2,7 +2,7 @@ const MAX_ITEMS = 4;
 const UP_ARROW = "ArrowUp";
 const DOWN_ARROW = "ArrowDown";
 const ENTER_KEY = "Enter";
-const WAIT_TIME_MS = 200;
+const WAIT_TIME_MS = 150; // Reduced from 200ms to 150ms for faster response
 
 const searchContainer = Array.from(document.querySelectorAll(".search-container"))
     .find(container => {
@@ -187,28 +187,74 @@ function addClass(el, className) {
 ///////////////////////////////
 if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
     initSearch();
+    // Preload search index for faster first search
+    preloadSearchIndex();
 } else {
-    document.addEventListener("DOMContentLoaded", initSearch);
+    document.addEventListener("DOMContentLoaded", function() {
+        initSearch();
+        preloadSearchIndex();
+    });
+}
+
+// Preload the search index after page load for instant search
+function preloadSearchIndex() {
+    // Use requestIdleCallback to load during idle time, or setTimeout as fallback
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+            fetch("/search_index.en.json")
+                .then(async (response) => {
+                    const data = await response.json();
+                    // Store in a global variable for initSearch to use
+                    window.__searchIndexData = data;
+                })
+                .catch(() => {
+                    // Silently fail - regular search will still work
+                });
+        });
+    } else {
+        setTimeout(() => {
+            fetch("/search_index.en.json")
+                .then(async (response) => {
+                    const data = await response.json();
+                    window.__searchIndexData = data;
+                })
+                .catch(() => {});
+        }, 1000);
+    }
 }
 
 function initSearch() {
     const options = {
-        bool: "AND",
+        bool: "OR", // Changed from AND to OR for better recall
         fields: {
-            title: {boost: 3},
-            description: {boost: 2},
+            title: {boost: 5},      // Increased title boost for better ranking
+            description: {boost: 3}, // Increased description boost
             body: {boost: 1},
-        }
+        },
+        expand: true // Enable query expansion for better matching
     };
     let currentTerm = "";
     let index;
+    let indexCache = null; // Cache the loaded index
 
     const initIndex = async function () {
+        if (indexCache !== null) {
+            return indexCache; // Return cached index immediately
+        }
+
+        // Use preloaded data if available
+        if (window.__searchIndexData) {
+            indexCache = elasticlunr.Index.load(window.__searchIndexData);
+            return indexCache;
+        }
+
         if (index === undefined) {
             index = fetch("/search_index.en.json")
                 .then(
                     async function (response) {
-                        return await elasticlunr.Index.load(await response.json());
+                        const data = await response.json();
+                        indexCache = elasticlunr.Index.load(data);
+                        return indexCache;
                     }
                 );
         }
@@ -222,10 +268,10 @@ function initSearch() {
         ) {
             return;
         }
-        searchResults.style.display = term === "" ? "none" : "block";
+        searchResults.style.display = term === "" || term.length < 2 ? "none" : "block";
         searchResultsItems.innerHTML = "";
         currentTerm = term;
-        if (term === "") {
+        if (term === "" || term.length < 2) {
             resultCount.textContent = "";
             return;
         }
@@ -252,12 +298,23 @@ function initSearch() {
             return;
         }
 
-        let indexResults = (await initIndex()).search(
-            term.startsWith('*') ? term.slice(1) : term,
-            options
-        );
-        const items = filterResultItems(indexResults, term);
-        resultCount.textContent = `${items.length} results`;
+        // Prepare search query
+        const searchTerm = term.startsWith('*') ? term.slice(1) : term;
+
+        // Try exact match first
+        let indexResults = (await initIndex()).search(searchTerm, options);
+
+        // If no results and term is long enough, try fuzzy search with wildcard
+        if (indexResults.length === 0 && searchTerm.length >= 3) {
+            const fuzzyOptions = {...options, bool: "OR"};
+            indexResults = (await initIndex()).search(searchTerm + "*", fuzzyOptions);
+        }
+
+        // Sort results by score (relevance) in descending order
+        indexResults.sort((a, b) => b.score - a.score);
+
+        const items = filterAndRankResults(indexResults, term, searchTerm);
+        resultCount.textContent = `${items.length} result${items.length !== 1 ? 's' : ''}`;
 
         if (items.length === 0) {
             if (term.toLowerCase() === "btc") {
@@ -335,11 +392,14 @@ function appendSearchResults(filterFn, placeholder, items, term) {
     }
 }
 
-function filterResultItems(results, term){
+function filterAndRankResults(results, term, searchTerm){
     const items = [];
+    const lowerTerm = searchTerm.toLowerCase();
+
     for (let i = 0; i < results.length; i++) {
-        const ref = results[i].ref;
-        const hasTitle = results[i].doc.title !== "";
+        const result = results[i];
+        const ref = result.ref;
+        const hasTitle = result.doc.title !== "";
         const categories = ["/blog", "/readings", "/talks"];
         const isEmptyRef = ref === "";
         const isCategoryCheckRequired = !term.startsWith("*");
@@ -349,8 +409,22 @@ function filterResultItems(results, term){
             continue;
         }
 
-        items.push(results[i]);
+        // Boost score for exact title matches
+        const titleLower = result.doc.title.toLowerCase();
+        if (titleLower === lowerTerm) {
+            result.score *= 3; // Triple score for exact match
+        } else if (titleLower.includes(lowerTerm)) {
+            result.score *= 2; // Double score for partial match
+        } else if (titleLower.startsWith(lowerTerm)) {
+            result.score *= 2.5; // 2.5x score for prefix match
+        }
+
+        items.push(result);
     }
+
+    // Re-sort after boosting scores
+    items.sort((a, b) => b.score - a.score);
+
     return items;
 }
 

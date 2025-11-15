@@ -15,7 +15,7 @@ include_path = false
 include_content = true
 include_description = true
 index_format = "elasticlunr_json"
-#truncate_content_length = 1000
+truncate_content_length = 2000  # Limit content length for better performance
 
 [markdown]
 
