@@ -78,6 +78,10 @@ That feels like success to me.
 
 ---
 
+**Thanks** to my friend Toni, for [bringing up](https://x.com/Chemaclass/status/1989652323925377462) this question and inspiring this reflection.
+
+---
+
 ### Related posts
 
 - [The process itself is the goal](/blog/the-process-itself-is-the-goal) <small>How to focus and have self-discipline</small>
