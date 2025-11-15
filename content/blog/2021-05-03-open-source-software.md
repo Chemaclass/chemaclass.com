@@ -14,15 +14,7 @@ What is Open-Source Software (OSS)? What are their benefits? How can you start c
 
 <!-- more -->
 
----
-
-
-1. What is Open-Source Software (OSS)? 
-1. What are their benefits? 
-1. How can you start contributing to any OSS?
-1. Pet projects? Knowledge sharing? Why all of these?
-
-## What is Open-Source Software (OSS)? 🤔
+## What is OSS?
 
 OSS shares similarities with free software, but it's not the same. Free software is a form of OSS, but that doesn't necessarily mean that it has to be free. For example:
 
@@ -31,7 +23,9 @@ OSS shares similarities with free software, but it's not the same. Free software
 
 > OSS is basically software that is public, open to the world.
 
-## Benefits — for a company 🛕
+## Benefits
+
+### For Companies
 
 - Adoption: the easier the access, the easier the adoption.
 - Training and tutorials help the system to grow.
@@ -42,7 +36,7 @@ OSS shares similarities with free software, but it's not the same. Free software
 - Trust: the software is public and accessible.
   Everyone can check the quality of the software anytime.
 
-## Benefits — for you, as a single contributor 🤓
+### For Individual Contributors
 
 - Flexibility: decide on what you want to work on.
 - Self-confidence: the experience improves your skills.
@@ -55,13 +49,15 @@ OSS shares similarities with free software, but it's not the same. Free software
 
 > TL;DR: It can be a "constant kata" if you want to.
 
-## GitHub to the rescue 😃
+## Contributing to OSS
+
+### Getting Started with GitHub
 
 Nowadays, it's really trivial to start contributing to OSS:
 - You can start your own project. A pet project fits here perfectly!
 - You can contribute to an existing OSS project.
 
-## Pet projects 🐘
+### Pet Projects
 
 A pet project is a playground to create software and train your professional skills. Creating pet projects in your public GitHub profile has all the benefits of contributing to OSS, plus you're your own boss:
 - You dictate the roadmap.
@@ -71,38 +67,36 @@ A pet project is a playground to create software and train your professional ski
 > The project is there for you. <br>
 > You are responsible to play, explore and pass your limits.
 
-## Some Chema's Pet Projects 🦣
+### My Pet Projects
 
-#### Active
+**Active:**
 - [php-best-practices](https://github.com/Chemaclass/php-best-practices): what I consider best practices for web-dev.
 - [php-scaffolding](https://github.com/Chemaclass/php-scaffolding): a basic PHP scaffolding with Docker.
 - [typed-arrays](https://github.com/Chemaclass/typed-arrays): generics replacement for PHP.
 
-#### Inactive
-
+**Inactive:**
 - [stock-ticker](https://github.com/Chemaclass/stock-ticker): get a notification with the news from your favorites Tickers.
 - [jira-status-notifier](https://github.com/Chemaclass/JiraStatusNotifier): Notify when the JIRA tickets don't move along.
 - [edifact-parser](https://github.com/Chemaclass/EdifactParser): a parser for a UN/EDIFACT file format in PHP.
 
-#### Abandoned
-
+**Abandoned:**
 - [knob-mvc](https://github.com/Chemaclass/knob-mvc): a framework to create WordPress templates (2015/2017).
 
-## Some of Chema's OSS org contributions 🌚
+### My OSS Organization Contributions
 
-#### Active
-
+**Active:**
 - [phel-lang](https://github.com/phel-lang/phel-lang): Phel is a functional programming language that compiles to PHP.
   It is a dialect of Lisp inspired by Clojure and Janet. I already wrote a post about
   this: [Phel: A Lisp that compiles to PHP](/blog/phel-first-release/)
 - [gacela-project](https://github.com/gacela-project/gacela): Gacela is a PHP framework that helps you to improve the
   design of your application by splitting the logic into different modules.
 
-#### Abandoned
-
+**Abandoned:**
 - [nm_template](https://github.com/NuevaMetal/nm_template): The base template for NuevaMetal (2013–2016).
 
-## Knowledge sharing ✍🏼
+## Knowledge Sharing and Impact
+
+### Blog Posts
 
 - Pull Requests vs Pair Programming
 - The process itself is the goal
@@ -111,7 +105,7 @@ A pet project is a playground to create software and train your professional ski
 
 > ... and many more on [https://chemaclass.com/blog/](https://chemaclass.com/blog/)
 
-## The beauty of this 🧑‍🎓
+### The Beauty of OSS
 
 - Seeing the corrections that you constantly keep doing
 - Seeing how your own code gets old with time

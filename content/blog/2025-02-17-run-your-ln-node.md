@@ -26,38 +26,22 @@ It supports both Lightning and Nostr addresses, enabling seamless connectivity a
 - I assume you **understand [Bitcoin](https://bitcoin.org/)**'s fundamental concepts.
 - I assume you know **how the [Lightning Network](https://lightning.network/) (LN) works**.
 
-Anyway, I've included a brief recap of the Lightning Network basics in `Part 0`.
+Anyway, I've included a brief recap of the Lightning Network basics below.
 
----
-
-## Content
-
-- Part 0: [What is the LN?](/blog/run-your-ln-node/#part-0)
-- Part 1: [Set up your Alby Hub](/blog/run-your-ln-node/#part-1)
-- Part 2: [Create GetAlby account](/blog/run-your-ln-node/#part-2)
-- Part 3: [Connect your GetAlby with Alby Hub](/blog/run-your-ln-node/#part-3)
-- Part 4: [Open your LN channels](/blog/run-your-ln-node/#part-4)
-- Part 5: [Receive sats](/blog/run-your-ln-node/#part-5)
-- Part 6: [Use your sats](/blog/run-your-ln-node/#part-6)
-
----
-
-## Part 0
-
-### What is the LN? - [up](/blog/run-your-ln-node/#content)
+## What is the Lightning Network?
 
 The LN is a second-layer solution built on top of Bitcoin to enable fast, cheap, and scalable transactions.
 
 - **Why?** Bitcoin's base layer is secure but slow and expensive for small payments due to block size limits and fees.
 - **How?** LN uses off-chain payment channels that allow users to transact instantly without waiting for blockchain confirmations.
 
-#### Key Concepts
+### Key Concepts
 
 - **Payment Channels**: Users open a channel by making an on-chain transaction, then send unlimited instant payments within that channel.
 - **Routing**: You don't need a direct channel with everyone —payments can be routed through multiple connected nodes.
 - **Low Fees**: Only opening/closing channels require on-chain fees; most transactions cost fractions of a cent.
 
-#### Goal
+### Goal
 
 LN makes Bitcoin usable for everyday transactions, like buying coffee, without waiting 10+ minutes for confirmations.
 
@@ -65,13 +49,11 @@ LN makes Bitcoin usable for everyday transactions, like buying coffee, without w
 
 ---
 
-## Part 1
-
-### Set up your Alby Hub - [up](/blog/run-your-ln-node/#content)
+## Setting up Alby Hub
 
 [Alby Hub](https://albyhub.com/) is a free, open-source ([ideally private](https://guides.getalby.com/user-guide/alby-account-and-browser-extension/alby-hub/faq-alby-hub/should-i-open-a-private-or-public-channel)) Lightning Network node.
 
-#### Requirements
+### Requirements
 
 Before we begin, you are going to need the following things:
 
@@ -84,9 +66,9 @@ Before we begin, you are going to need the following things:
 
 ![tutorial](/images/blog/2025-02-17/requirements.jpg)
 
-#### Installation
+### Installation Steps
 
-#### 1. Flash a linux kernel into the SD card
+#### 1. Flash a Linux kernel into the SD card
 
 > Suggestion: You can use [RPI imager](https://www.raspberrypi.com/software/) on your computer.
 Use it to flash the recommended raspi OS for you
@@ -172,20 +154,14 @@ Your Alby hub is now running. Let's connect it to your GetAlby account!
 
 ---
 
-## Part 2
-
-### Create your free GetAlby account - [up](/blog/run-your-ln-node/#content)
-
+## Creating a GetAlby Account
 🔗 [getalby.com/users/new](https://getalby.com/auth/users/new)
 
 ![tutorial](/images/blog/2025-02-17/tuto-15.jpg)
 
 ---
 
-##  Part 3
-
-### Connect your GetAlby with Alby Hub - [up](/blog/run-your-ln-node/#content)
-
+## Connecting GetAlby with Alby Hub
 I created an account named testhub. 
 
 **Left**: the GetAlby account. **Right**: the node in the raspi.
@@ -224,10 +200,7 @@ Unless you specify otherwise, set the default "Budget renewal: _Monthly 1M sats_
 
 ---
 
-##  Part 4
-
-### Open your LN channels - [up](/blog/run-your-ln-node/#content)
-
+## Opening Lightning Channels
 I recommend following the **Initial Steps** to set up your Alby Hub.
 
 ![tutorial](/images/blog/2025-02-17/tuto-27.jpg)
@@ -246,10 +219,7 @@ After the payment, then you will see the channel open. It might take a couple of
 
 ---
 
-##  Part 5
-
-### Receive sats - [up](/blog/run-your-ln-node/#content)
-
+## Receiving Sats
 You can receive sats using your LN Address.
 
 **Left**: Public page linked to your [node](https://getalby.com/p/chemaclass).
@@ -261,10 +231,7 @@ You can receive sats using your LN Address.
 
 ---
 
-##  Part 6
-
-### Use your sats - [up](/blog/run-your-ln-node/#content)
-
+## Using Your Sats
 After that, you will be able to use it via the [Alby Extension](https://getalby.com/products/browser-extension) or the [AlbyGo](https://albygo.com/).
 
 ![tutorial](/images/blog/2025-02-17/tuto-31.jpg)
@@ -275,19 +242,19 @@ Your node is the ultimate source of truth. Connecting these apps to it will allo
 
 > **Disclaimer**: the testhub LN address was created only for testing and tutorial purposes. My real address is [chemaclass](https://getalby.com/p/chemaclass) ;)
 
----
+## Maintenance and Troubleshooting
 
-### Extra 1: Updating a running instance
+### Updating Your Node
 
-Similar to the [installation process](/blog/run-your-ln-node/#pi-install-alby-hub), there's a script available to update your node. You can find it in the source repository: [GitHub - Alby Hub Update Script](https://github.com/getAlby/hub/tree/master/scripts/pi-aarch64)
+Similar to the installation process, there's a script available to update your node. You can find it in the source repository: [GitHub - Alby Hub Update Script](https://github.com/getAlby/hub/tree/master/scripts/pi-aarch64)
 
 ```bash
 ssh testhub@testhub.local '/bin/bash -c "$(curl -fsSL https://getalby.com/install/hub/pi-aarch64-update.sh)"'
 ```
 
-### Extra 2: When the Raspberry Pi shuts down
+### Handling Power Outages
 
-If the power goes out, the Raspberry Pi will turn off. Once power is restored, it will automatically restart, but Alby Hub will prompt you to enter the [password you set](/blog/run-your-ln-node/#alby-hub-password). 
+If the power goes out, the Raspberry Pi will turn off. Once power is restored, it will automatically restart, but Alby Hub will prompt you to enter the password you set earlier. 
 
 ---
 
