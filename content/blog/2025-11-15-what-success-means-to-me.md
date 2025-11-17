@@ -106,8 +106,15 @@ That feels like success to me.
 ### Related posts
 
 - [The process itself is the goal](/blog/the-process-itself-is-the-goal) <small>How to focus and have self-discipline</small>
-- [Atomic Habits](/readings/atomic-habits/) <small>An Easy & Proven Way to Build Good Habits & Break Bad Ones</small>
 - [Embrace the change](/blog/embrace-the-change) <small>Who moved my cheese?</small>
 - [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
 - [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
 - [Have you always been like this?](/blog/have-you-always-been-like-this) <small>How to find a balance of growth and happiness</small>
+
+### Related readings
+
+- [Atomic Habits](/readings/atomic-habits/) <small>An Easy & Proven Way to Build Good Habits & Break Bad Ones</small>
+- [The Power of Habit](/readings/the-power-of-habits/) <small>Why We Do What We Do, and How to Change</small>
+- [Who moved my cheese?](/readings/who-moved-my-cheese/) <small>An Amazing Way to Deal With Change In Your Work and In Your Life</small>
+- [Man's Search for Meaning](/readings/mans-search-for-meaning/) <small>Purpose in despair: Frankl's holocaust insights</small>
+- [Digital Minimalism](/readings/digital-minimalism/) <small>Choosing a Focused Life in a Noisy World</small>
