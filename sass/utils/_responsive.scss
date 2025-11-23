@@ -1,0 +1,24 @@
+// Desktop Visibility
+@media (min-width: $breakpoint-tablet) {
+  .only-desktop-visible {
+    display: block !important;
+  }
+}
+
+// Phone Visibility
+@media (max-width: $breakpoint-tablet) {
+  .only-phone-visible {
+    display: block !important;
+  }
+}
+
+// Mobile responsiveness
+@media (max-width: $breakpoint-phone) {
+  body {
+    padding: 1rem;
+  }
+
+  main {
+    padding-top: 1rem;
+  }
+}

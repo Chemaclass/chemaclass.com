@@ -1,158 +1,56 @@
-@import "./normalize.scss";
-@import "./text.scss";
-@import "./variables.scss";
+// ==========================================================================
+// Main SCSS Entry Point
+// ==========================================================================
+
+// 1. Abstracts
+// Variables, mixins, functions - no CSS output
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// 2. Vendors
+// Third-party styles
+@import "normalize";
+@import "fonts";
+
+// 3. Base
+// Reset, global styles, typography
+@import "base/reset";
+@import "base/global";
+@import "base/typography";
+
+// 4. Layouts
+// Major layout components
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/post";
+@import "layouts/taxonomy";
+
+// 5. Components
+// Reusable UI components
 @import "menu";
-@import "./toc.scss";
+@import "toc";
+@import "search";
+@import "sponsor";
+@import "components/buttons";
+@import "components/tables";
+@import "components/lists";
+@import "components/tooltips";
+@import "components/status";
+@import "components/icons";
 
-body {
-  background-color: var(--body-bg);
-  color: var(--body-color);
-}
+// 6. Pages
+// Page-specific styles
+@import "pages/blog";
+@import "pages/readings";
 
-nav button {
-  margin-right: 1.2rem
-}
+// 7. Themes
+// Theme-specific overrides
+@import "themes/light";
+@import "themes/dark";
 
-.post-title {
+// 8. Utilities
+// Helper classes and responsive utilities
+@import "utils/responsive";
 
-  .tags {
-    > *:not(:last-child) {
-      margin-right: 0.25rem;
-    }
-  }
-
-  > h1 {
-    margin-bottom: 0.4rem;
-  }
-
-  margin-bottom: 3rem;
-}
-
-.footer-rule {
-  margin-top: 4rem;
-  border: 2px darkgrey dashed;
-}
-
-.related-container {
-  margin: 1rem auto;
-  display: flex;
-  text-align: center;
-
-  > .link {
-    flex: 1;
-    padding: 1rem;
-    box-sizing: border-box;
-    width: 50%;
-
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-
-    span {
-      font-style: italic;
-      font-size: 1rem;
-    }
-    a {
-      text-wrap: balance;
-    }
-  }
-}
-
-img {
-  max-width: 100%;
-  margin: auto;
-  border: solid rgba(0, 0, 0, 0.04);
-}
-
-.taxonomy-name {
-  text-transform: capitalize;
-}
-
-.taxonomy-container {
-  display: flex;
-  flex-wrap: wrap;
-
-  > .term:not(:last-child) {
-    margin-right: 1rem;
-    margin-bottom: 0.5rem;
-  }
-}
-
-table {
-  border-collapse: collapse;
-  margin: 25px auto;
-  font-size: 0.9em;
-  font-family: sans-serif;
-  min-width: 400px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-}
-
-thead tr {
-  background-color: var(--accent-color);
-  color: var(--accent-overlay-color);
-  text-align: left;
-}
-
-table th,
-table td {
-  padding: 10px 12px;
-}
-
-
-table tbody tr {
-  border-bottom: 1px solid var(--table-border-bottom);
-}
-
-table tbody tr:nth-of-type(even) {
-  background-color: var(--table-bg-even);
-}
-
-table tbody tr:last-of-type {
-  border-bottom: 2px solid var(--accent-color);
-}
-
-.list-group {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-.list-group-item {
-  position: relative;
-  display: block;
-  padding: 0.75rem 1.25rem;
-  margin-bottom: -1px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-}
-
-.list-group-item:first-child {
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-}
-
-.list-group-item:last-child {
-  margin-bottom: 0;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-}
-
-.list-group-item:hover {
-  text-decoration: none;
-  background-color: red;
-}
-
-.list-group-item.active {
-  z-index: 2;
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.list-group-item.active:hover {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
+// 9. Special effects (optional)
+@import "snow";

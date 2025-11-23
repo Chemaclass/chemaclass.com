@@ -1,0 +1,37 @@
+.post-preview {
+  border-bottom: 1px solid var(--preview-divider-color);
+  display: block;
+  padding: 12px;
+  cursor: pointer;
+
+  h3.post-title {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background-color: var(--search-bg-selected-item);
+  }
+
+  img {
+    width: 99%;
+  }
+
+  img[alt=blog-cover] {
+    width: 50%;
+    height: 160px;
+    object-fit: cover;
+    float: left;
+    margin-right: 20px;
+    display: block;
+  }
+
+  .highlighted {
+    h3 a {
+      font-size: 1.1em;
+    }
+  }
+
+  .summary {
+    min-height: 200px;
+  }
+}

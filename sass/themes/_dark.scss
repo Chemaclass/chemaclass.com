@@ -1,0 +1,45 @@
+@import "../abstracts/mixins";
+
+:root:has(body.dark) {
+  * {
+    color: white;
+  }
+
+  hr {
+    background-color: white;
+  }
+
+  a {
+    color: var(--link-color);
+  }
+
+  // Sponsors
+  #section-reasons-sponsor {
+    @include card-a-colors-dark;
+
+    .sponsor-title,
+    .sponsor-feature * {
+      color: #e0e0e0;
+    }
+  }
+
+  .tier-card {
+    @include card-b-colors-dark;
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(255, 255, 255, 0.07);
+    }
+  }
+
+  #section-current-sponsors {
+    @include card-a-colors-dark;
+  }
+
+  .contribution {
+    @include card-a-colors-dark;
+
+    .btn-donate {
+      border: 1px solid #454545;
+    }
+  }
+}

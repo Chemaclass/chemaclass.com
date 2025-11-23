@@ -1,0 +1,57 @@
+header {
+  width: 100%;
+  max-width: $max-width;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--body-bg) 50%,
+    rgba(var(--body-bg-rgb), 0.8) 100%
+  );
+  padding: 0.5rem 0.2rem;
+  z-index: 1000;
+
+  nav {
+    font-size: 1.3rem;
+  }
+
+  &.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-out;
+  }
+
+  &.show {
+    transform: translateY(0);
+    transition: transform 0.5s ease-in;
+  }
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+
+  a {
+    border-bottom: none !important;
+
+    &:not(:last-child) {
+      margin-right: 1.2rem;
+    }
+  }
+}
+
+a.profile-icon {
+  border: none;
+  height: 50px;
+  width: 50px;
+  position: relative;
+
+  img {
+    border-radius: 50%;
+  }
+}

@@ -1,3 +1,4 @@
+// Color Variables
 :root {
     --link-color: var(--accent-color);
 
@@ -5,15 +6,15 @@
     --accent-color-light: #397fd8;
     --accent-overlay-color: #397fd8;
 
-    --color-info: #66b2ff; /* Lighter Light Blue */
-    --color-success: #5dd77b; /* Lighter Green */
-    --color-warning-yellow: #ffdc75; /* Lighter Yellow */
-    --color-warning-orange: #ffab66; /* Lighter Orange */
-    --color-error: #e68794; /* Lighter Red */
-    --color-info-alt: #70d1e0; /* Lighter Cyan */
-    --color-neutral: #a2abb3; /* Lighter Gray */
-    --color-primary: #66b2ff; /* Lighter Blue */
-    --color-secondary: #a2abb3; /* Lighter Dark Gray */
+    --color-info: #66b2ff;
+    --color-success: #5dd77b;
+    --color-warning-yellow: #ffdc75;
+    --color-warning-orange: #ffab66;
+    --color-error: #e68794;
+    --color-info-alt: #70d1e0;
+    --color-neutral: #a2abb3;
+    --color-primary: #66b2ff;
+    --color-secondary: #a2abb3;
     --color-subtitle: #404040;
 
     --body-bg: #fff;
@@ -56,3 +57,19 @@
     --search-items-divider: #363636;
     --search-result-count: #bcbcbc;
 }
+
+// Layout Variables
+$max-width: 700px;
+$max-content-width: 700px;
+$footnote-space: 2rem;
+
+// TOC Variables
+$toc-width: 240px;
+$toc-offset: 50px;
+$breakpoint-toc: 1200px;
+
+// Breakpoints
+$breakpoint-tablet: 880px;
+$breakpoint-phone: 600px;
+$breakpoint-small-phone: 465px;
+$breakpoint-desktop: 1280px;

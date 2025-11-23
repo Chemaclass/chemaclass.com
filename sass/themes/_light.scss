@@ -1,0 +1,37 @@
+@import "../abstracts/mixins";
+
+:root:has(body.light) {
+  h3 small {
+    color: var(--color-subtitle);
+  }
+
+  // Sponsors
+  #section-reasons-sponsor {
+    @include card-a-colors-light;
+
+    .sponsor-title,
+    .sponsor-feature * {
+      color: #343434;
+    }
+  }
+
+  .tier-card {
+    @include card-b-colors-light;
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  #section-current-sponsors {
+    @include card-a-colors-light;
+  }
+
+  .contribution {
+    @include card-a-colors-light;
+
+    .btn-donate {
+      border: 1px solid #d1d5db;
+    }
+  }
+}

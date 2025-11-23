@@ -1,0 +1,37 @@
+#footer-page {
+  text-align: center;
+  font-size: 0.9em;
+  border-top: lightgray solid 1px;
+  max-width: $max-width;
+  margin: 16px auto;
+  padding-top: 28px;
+}
+
+#footer-about,
+#sponsor {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 25px;
+
+  .do-not-hesitate {
+    margin: 28px 0;
+  }
+}
+
+.phone-footer-about {
+  display: block;
+}
+
+.desktop-footer-about {
+  display: none;
+}
+
+@media (min-width: $breakpoint-small-phone) {
+  .phone-footer-about {
+    display: none;
+  }
+
+  .desktop-footer-about {
+    display: block;
+  }
+}

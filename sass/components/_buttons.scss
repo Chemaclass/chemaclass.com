@@ -1,0 +1,64 @@
+// Theme toggle buttons
+#dark-mode,
+#light-mode {
+  display: none;
+}
+
+html[color-theme=dark] #dark-mode,
+html[color-theme=light] #light-mode {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  line-height: 0;
+}
+
+#snow-on,
+#snow-off {
+  display: none;
+}
+
+html[snow-toggle=snow-on] #snow-on,
+html[snow-toggle=snow-off] #snow-off {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  line-height: 0;
+}
+
+nav button {
+  margin-right: 1.2rem;
+}
+
+// Scroll to top button
+#scroll-to-top {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+  border-radius: 9999px;
+  border: 3px solid var(--body-color);
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  background-color: var(--body-bg);
+
+  &.hidden {
+    transform: translateY(150%);
+    transition: transform 0.5s ease-out;
+  }
+
+  &.show {
+    transform: translateY(0);
+    transition: transform 0.5s ease-in;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    right: calc((100vw - 850px) / 2);
+  }
+}

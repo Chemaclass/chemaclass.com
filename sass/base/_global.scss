@@ -1,0 +1,34 @@
+body {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  margin: auto;
+  border: solid rgba(0, 0, 0, 0.04);
+}
+
+.content {
+  max-width: 100%;
+}
+
+main {
+  max-width: $max-width;
+  padding-top: 1rem;
+  margin: auto;
+}
+
+// Utility classes
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.only-desktop-visible,
+.only-phone-visible {
+  display: none;
+}

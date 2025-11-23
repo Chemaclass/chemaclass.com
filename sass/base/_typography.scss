@@ -1,0 +1,93 @@
+body {
+  font-family: "Rubik", "PT Serif", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  padding: 1.75rem;
+  min-height: 100vh;
+  background-color: var(--body-bg);
+  color: var(--body-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  color: var(--heading-color);
+}
+
+h1 sup {
+  top: -1.5em;
+  font-size: small;
+}
+
+h3 small {
+  line-height: unset;
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+blockquote {
+  border-left: 6px solid var(--accent-color-light);
+  padding-left: 1rem;
+  font-style: italic;
+  opacity: 0.9;
+  font-size: 1.25rem;
+  margin-left: unset;
+
+  p:before {
+    content: '';
+    font-style: normal;
+  }
+}
+
+code {
+  background: hsla(0, 0%, 0%, 0.04);
+  padding: 0.2em 0;
+
+  pre > & {
+    background: none;
+  }
+}
+
+pre {
+  overflow: auto;
+  padding: 1rem;
+  max-width: 100%;
+}
+
+.dark pre {
+  background-color: #111 !important;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--accent-overlay-color);
+    border-bottom: 1px solid var(--accent-color-light);
+  }
+
+  &.close-border:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+}
+
+hr {
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 14px;
+}
