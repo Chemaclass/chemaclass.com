@@ -6,8 +6,45 @@
   Readings | Chemaclass
 {% endblock %}
 
+{% block js %}
+<script type="application/javascript">
+  const allTags = [];
+  {% for post in section.pages -%}
+    {% if post.taxonomies.tags -%}
+      {% for tag in post.taxonomies.tags -%}
+      allTags.push("{{ tag }}");
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  let countTotals = [];
+  allTags.forEach(e => {
+    if(countTotals[e]) {
+      countTotals[e]++;
+    }else {
+      countTotals[e] = 1;
+    }
+  });
+
+  const ul = document.createElement('ul');
+  document.getElementById('all-terms').appendChild(ul);
+
+  console.log(countTotals);
+
+  Object.entries(countTotals).forEach(([key, value]) => {
+    const li = document.createElement('li');
+    ul.appendChild(li);
+    li.innerHTML = li.innerHTML + `${key}: ${value}` ;
+  });
+</script>
+{% endblock %}
+
 {% block content %}
   {{ section.content | safe }}
+
+  <div id="container-all-terms">
+    Tags
+    <div id="all-terms"></div>
+  </div>
 
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
 
