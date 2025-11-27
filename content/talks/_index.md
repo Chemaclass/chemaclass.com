@@ -13,11 +13,14 @@ Follow my speaker journey.
 
 ---
 
-## Upcoming events
+## 2025
 
-### 2025
+### November
 
-#### October
+- 2025-11-26 | Symfony User Group [**Berlin, Germany**] (EN)
+    - [bashunit: PHPUnit Meets Bash](https://www.meetup.com/sfugberlin/events/312045935/)
+
+### October
 
 - 2025-10-27 | International PHP Conference [**Munich, Germany**] (EN)
   - [Full-day Workshop: Modernizing Legacy PHP with Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
@@ -25,38 +28,38 @@ Follow my speaker journey.
 
 ![workshop ipc munich 2025](/images/talks/2025-10-27/workshop-ipc-munich25.jpg)
 
-#### August
+### August
 
 - 2025-08-21 | International PHP Conference [**Remote**] (EN)
   - [Preview 1h: Refactoring Workshop](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
 - 2025-08-07 | Alby Community Call
   - Satscribe
 
-#### June
+### June
 
 - 2025-05-03 | International PHP Conference [**Berlin, Germany**] (EN)
   - [Solving a Testing & Refactoring Kata: Live Coding in Pair/Mob Programming](https://phpconference.com/slideless-pure-coding/testing-refactoring-kata-live-coding-pair-mob-programming/)
 
 ---
 
-### 2024
+## 2024
 
-#### November
+### November
 
 - 2024-11-21 | Internal talks at Purpose Green [**Berlin, Germany**] (EN)
   - How to improve your Tech Talk - Applies to any presentation
 
-#### October
+### October
 
 - 2024-10-29 | Berlin Hack & Tell [**Berlin, Germany**] (EN)
   - [bashunit in 5 min](https://bhnt.c-base.org/2024-10-29-no100-annivercary) ([Video](https://youtu.be/SX7iNHaSsF0))
 
-#### June
+### June
 
 - 2024-06-18 | Internal talks at HeyJobs, invited by the CTO [**Remote**] (EN)
   - How to improve your Tech Talk - Applies to any presentation [[slides](https://docs.google.com/presentation/d/1v-bMvFSR-cXtAi7MtafoTh-qEXBkH3_6wPId0ZNTv0s/view)]
 
-#### May
+### May
 
 - 2024-05-27/30 | International PHP Conference [**Berlin, Germany**] (EN)
     - [Practical TDD **Workshop**: Collaborative Pair Programming](https://phpconference.com/agile-culture/practical-tdd-workshop/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7200844992779567104/))
@@ -64,32 +67,32 @@ Follow my speaker journey.
 
 ![cover](/images/talks/2024-05-28/tdd-workshop-ipc-berin-24.jpg)
 
-#### March
+### March
 
 - 2024-03-14 | devm.io [**Remote**] (EN)
     - [Test Driven Development: A Hands-on Crash Course](https://devm.io/live-events/test-driven-development-a-hands-on-crash-course/)
 
 ---
 
-### 2023
+## 2023
 
-#### December
+### December
 
 - 2023-12-15 | Live interview with Manfred Awards [**Remote**] (ES)
     - [Winner in the category of Side Project, 2023: bashunit](https://www.youtube.com/watch?v=X0FhUzX-aI4&t=995s)
 
-#### November
+### November
 
 - 2023-11-14 | Live interview with CodelyTV [**Remote**] (ES)
     - [Live coding with the team behind bashunit](https://www.youtube.com/watch?v=6Bn8gbUurdk)
 
-#### October
+### October
 
 - 2023-10-24/26 | International PHP Conference [**Munich, Germany**] (EN)
     - [Building modular applications in PHP with Gacela](https://phpconference.com/software-architecture/modular-applications-php-gacela/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7127206712805056513/))
     - [Introducing Functional Programming in PHP with Phel](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
 
-#### July
+### July
 
 - 2023-07-28 | WeAreDevelopers World Congress [**Berlin, Germany**] (EN)
     - [Phel, a native Lisp for PHP](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[slides](https://docs.google.com/presentation/d/1Zc3zxz9VIujh43enXhgTgvm2kCz9aQKSU1nsrtL_HEs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
@@ -97,7 +100,7 @@ Follow my speaker journey.
 
 ![cover](/images/talks/2023-07-28/phel-we-are-devs-23.jpg)
 
-#### May
+### May
 
 - 2023-05-27 | PHPers Summit [**Poznan, Poland**] (EN)
     - [Phel Language, a native LISP for PHP](https://summit.phpers.pl/en/agenda)
@@ -107,57 +110,57 @@ Follow my speaker journey.
 
 ![cover](/images/talks/2023-05-24/gacela-ipc-berin-23.jpg)
 
-#### April
+### April
 
 - 2023-04-19 | PHP Madrid Community [**Remote**] (ES)
     - [Programación funcional en PHP (presentando Phel Lang)](https://www.meetup.com/phpmad/events/292576962)
 
-#### March
+### March
 
 - 2023-03-30 | Spryker Digital User Group [**Remote**] (EN)
     - [Gacela Framework 1.0](https://www.meetup.com/spryker-user-group/events/289944797/) ([Video](https://youtu.be/oM6CDyWz92o))
 - 2023-03-28 | Berlin Hack & Tell [**Berlin, Germany**] (EN)
     - [Phel in 5 min](https://www.meetup.com/Berlin-Hack-and-Tell/events/292379070) ([Video](https://youtu.be/ZQTann9ItH8)) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7046766759197999104/))
 
-#### February
+### February
 
 - 2023-02-08 | Symfony User Group [**Berlin, Germany**] (EN)
     - [Lazy Objects by Nicolas Grekas & FP with PHP by Chema](https://www.meetup.com/sfugberlin/events/290735168/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7029831557389414401/))
 
 ![cover](/images/talks/2023-02-08/phel-sf-group-23.jpg)
 
-#### January
+### January
 
 - 2023-01-19 | devm.io [**Remote**] (EN)
     - [An introduction to Extreme Programming](https://devm.io/update-your-team-to-be-more-extreme/)
 
 ---
 
-### 2022
+## 2022
 
-#### December
+### December
 
 - 2022-12-21 | IES Ginés Pérez Chirinos [**Murcia, Spain**] (ES)
     - Actualiza tu equipo para ser más extremo
 
-#### November
+### November
 
 - 2022-11-10 | Software Crafters Madrid [**Remote**] (ES)
     - [Phel, a native LISP for PHP](https://www.meetup.com/madswcraft/events/289206891/)
 
-#### October
+### October
 
 - 2022-10-26 | International PHP Conference [**Munich, Germany**] (EN)
     - [Update Your Team to be More Extreme](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/)
 
-#### September
+### September
 
 - 2022-09-16 | Code Talks [**Hamburg, Germany**] (EN)
     - [Update Your Team to be More Extreme](https://codetalks.de/speakers#speaker-985?event=7) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:6976595953680015360/))
 
 ![cover](/images/talks/2022-09-16/update-your-team-code-talks-22.jpg)
 
-#### June
+### June
 
 - 2022-06-26 | International PHP Conference [**Berlin, Germany**] (EN)
     - [Update Your Team to be More Extreme](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/)
@@ -166,21 +169,21 @@ Follow my speaker journey.
 - 2022-06-23 | DesarrolloWeb [**Remote**] (ES)
     - [Phel Language ¿Programación funcional para PHP?](https://www.youtube.com/live/9pElbTEcyGA)
 
-#### February
+### February
 
 - 2022-02-24 | PHP Madrid Community [**Remote**] (ES)
     - [Gacela Framework 0.1](https://www.meetup.com/phpmad/events/284069182/)
 
-#### January
+### January
 
 - 2022-01-25 | Spryker Digital User Group [**Remote**] (EN)
     - [Gacela Framework 0.1](https://www.meetup.com/spryker-user-group/events/282267564/)
 
 ---
 
-### 2021
+## 2021
 
-#### April
+### April
 
 - 2021-04-28 | PHP Madrid Community [**Remote**] (ES)
   - [Open-Source Software - The power of contributing to OSS](https://www.meetup.com/phpmad/events/277733306/)
