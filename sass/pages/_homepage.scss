@@ -16,99 +16,6 @@ main {
   justify-content: center;
 }
 
-.homepage-header {
-  display: none;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background: var(--body-bg);
-  border-bottom: 1px solid var(--preview-divider-color);
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-
-  .homepage-header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.75rem 1rem;
-  }
-
-  .homepage-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    border: none !important;
-    text-decoration: none;
-
-    img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-    }
-
-    .homepage-logo-text {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--heading-color);
-    }
-  }
-
-  .homepage-header-controls {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    button, span {
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 6px;
-      transition: background-color 0.2s;
-
-      &:hover {
-        background-color: var(--preview-divider-color);
-      }
-
-      svg {
-        display: block;
-      }
-    }
-
-    .homepage-menu-toggle {
-      display: none;
-    }
-  }
-
-  .homepage-nav {
-    display: flex;
-    gap: 0.5rem;
-    padding: 0 1rem 0.75rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    a {
-      white-space: nowrap;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      border: none !important;
-      font-size: 1rem;
-      transition: background-color 0.2s;
-
-      &:hover {
-        background-color: var(--preview-divider-color);
-      }
-    }
-  }
-}
-
 .content .latest-container {
   text-align: center;
   font-size: 1rem;
@@ -240,38 +147,6 @@ header {
 }
 
 @media (max-width: $breakpoint-tablet) {
-  .homepage-header {
-    display: block !important;
-  }
-
-  .homepage-header .homepage-header-controls .homepage-menu-toggle {
-    display: flex;
-  }
-
-  .homepage-header .homepage-nav {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    padding: 0 1rem;
-    flex-direction: column;
-    gap: 0.25rem;
-
-    &.homepage-nav-open {
-      max-height: 400px;
-      padding: 0 1rem 0.75rem;
-    }
-
-    a {
-      padding: 0.75rem 1rem;
-      text-align: center;
-    }
-  }
-
-  // Hide the base header on homepage for small screens
-  body > header {
-    display: none !important;
-  }
-
   @media (max-width: $breakpoint-tablet) {
     main {
       margin-top: unset;
@@ -286,6 +161,11 @@ header {
     justify-content: flex-end;
   }
 
+  header {
+    display: flex;
+    margin: 0;
+  }
+
   .lower {
     display: none;
   }
@@ -296,13 +176,9 @@ header {
   }
 
   main {
-    margin-top: 1rem;
+    margin-top: 2rem;
     max-width: 100%;
     flex-direction: column;
-  }
-
-  .search-container {
-    margin-top: 1.5rem;
   }
 
   .banner-image-phone {
@@ -311,47 +187,11 @@ header {
 }
 
 @media (max-width: $breakpoint-phone) {
-  .homepage-header .homepage-logo-text {
-    display: none;
-  }
-
-  .homepage-header .homepage-header-controls {
-    gap: 0.25rem;
-
-    button, span {
-      padding: 0.4rem;
-    }
-  }
-
   .homepage-left-column {
     margin: 0 !important;
   }
 
   .homepage-right-column {
     margin: 0 !important;
-  }
-}
-
-@media (max-width: $breakpoint-small-phone) {
-  .homepage-header .homepage-header-top {
-    padding: 0.5rem;
-  }
-
-  .homepage-header .homepage-header-controls {
-    gap: 0.15rem;
-
-    button, span {
-      padding: 0.3rem;
-    }
-
-    svg {
-      width: 18px;
-      height: 18px;
-    }
-  }
-
-  .homepage-header .homepage-logo img {
-    width: 35px;
-    height: 35px;
   }
 }
