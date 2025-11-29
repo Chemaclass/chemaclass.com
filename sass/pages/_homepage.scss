@@ -248,8 +248,27 @@ main {
   h2 {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin: 0;
     color: var(--heading-color);
+  }
+}
+
+// Section header with view-all link
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.view-all {
+  font-size: 0.85rem;
+  color: var(--color-subtitle);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--accent-color);
   }
 }
 
@@ -299,6 +318,56 @@ main {
   }
 }
 
+// Skills Section
+.skills-section {
+  margin-top: 1rem;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: default;
+
+  &.lang {
+    background: rgba(58, 92, 136, 0.15);
+    color: var(--accent-color);
+    border: 1px solid rgba(58, 92, 136, 0.3);
+  }
+
+  &.tool {
+    background: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+    border: 1px solid rgba(34, 197, 94, 0.25);
+  }
+
+  &.practice {
+    background: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6;
+    border: 1px solid rgba(139, 92, 246, 0.25);
+  }
+
+  &.soft {
+    background: rgba(251, 146, 60, 0.1);
+    color: #ea580c;
+    border: 1px solid rgba(251, 146, 60, 0.25);
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
 // Projects Grid
 .projects-grid {
   display: flex;
@@ -330,8 +399,9 @@ main {
   text-align: center;
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12),
+                0 0 0 2px var(--accent-color-light);
     border-color: var(--accent-color);
   }
 
@@ -362,6 +432,25 @@ main {
     margin: 0;
     line-height: 1.3;
   }
+
+  .github-stars {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--color-subtitle);
+    margin-top: 0.5rem;
+
+    i {
+      color: #f59e0b;
+      font-size: 0.7rem;
+    }
+
+    .star-count:empty::after {
+      content: "...";
+      opacity: 0.5;
+    }
+  }
 }
 
 // Latest Content Grid
@@ -382,8 +471,9 @@ main {
   flex-direction: column;
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12),
+                0 0 0 2px var(--accent-color-light);
     border-color: var(--accent-color);
   }
 
