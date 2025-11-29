@@ -73,7 +73,8 @@ main:has(.homepage-container) #scroll-to-top {
     .hero-quotes {
       position: relative;
       min-height: 3em;
-      max-width: 280px;
+      width: 100%;
+      text-align: center;
     }
 
     .hero-quote {
@@ -549,6 +550,14 @@ main:has(.homepage-container) #scroll-to-top {
 
   .homepage-right {
     width: 100%;
+  }
+
+  .about-card {
+    padding-top: 1rem;
+
+    h2 {
+      margin-top: 0;
+    }
   }
 
   .profile .profile-container {
