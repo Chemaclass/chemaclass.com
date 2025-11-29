@@ -32,12 +32,10 @@ Home | Chemaclass
             </div>
             <div class="hero-text">
                 <h1>Chemaclass</h1>
-                <p class="tagline">Software Developer & Open Source Creator</p>
-                <blockquote>
-                    <p title="https://agilemanifesto.org/">
-                        "Individuals and interactions over processes and tools."
-                    </p>
-                </blockquote>
+                <p class="tagline">Programming is the art of simplifying routines.</p>
+                <div class="hero-quotes">
+                    <blockquote class="hero-quote active"><p></p></blockquote>
+                </div>
             </div>
         </section>
 
@@ -202,10 +200,49 @@ Home | Chemaclass
                 <span>Nostr</span>
             </a>
         </div>
+        <p class="lightning-address">
+            <i class="fa-solid fa-bolt"></i> chemaclass@getalby.com
+        </p>
     </section>
 </div>
 {% endblock content %}
 
 {% block js %}
 <script type="text/javascript" src="{{ get_url(path='github-stars.js') | safe }}" defer></script>
+<script>
+(function() {
+  const quotes = [
+    "Individuals and interactions over tools.",
+    "Open source everything.",
+    "The process itself is the goal.",
+    "Success is making people around me happier.",
+    "A great engineer is not just a great coder.",
+    "Nobody is perfect, but a team can be.",
+    "Move from maker mode to multiplier.",
+    "Practice makes the master.",
+    "Testable code leads to better design.",
+    "Refactoring is part of our daily job.",
+    "Easy to test means good design.",
+    "Making others happier compounds.",
+    "People skills matter as much as technical.",
+    "Change happens. Keep moving forward.",
+    "Enjoy the process: that's the goal."
+  ];
+  const el = document.querySelector('.hero-quote p');
+  if (!el) return;
+  let last = -1;
+  function showRandom() {
+    let idx;
+    do { idx = Math.floor(Math.random() * quotes.length); } while (idx === last);
+    last = idx;
+    el.style.opacity = 0;
+    setTimeout(() => {
+      el.textContent = '"' + quotes[idx] + '"';
+      el.style.opacity = 1;
+    }, 300);
+  }
+  showRandom();
+  setInterval(showRandom, 7000);
+})();
+</script>
 {% endblock js %}

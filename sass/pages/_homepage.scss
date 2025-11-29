@@ -56,7 +56,7 @@ main {
 
 // Left column: Hero content
 .hero-content {
-  flex: 0 0 auto;
+  flex: 0 0 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,16 +76,25 @@ main {
       margin: 0 0 0.75rem;
     }
 
-    blockquote {
+    .hero-quotes {
+      position: relative;
+      min-height: 2.5em;
+    }
+
+    .hero-quote {
       margin: 0;
       padding: 0;
       border: none;
       font-style: italic;
       font-size: 0.85rem;
-      opacity: 0.85;
+
+      &.active {
+        opacity: 0.85;
+      }
 
       p {
         margin: 0;
+        transition: opacity 0.3s ease;
       }
     }
   }
@@ -572,6 +581,16 @@ main {
       color: white;
       i { color: white; }
     }
+  }
+}
+
+.lightning-address {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  color: var(--color-subtitle);
+
+  i {
+    color: #f7931a;
   }
 }
 
