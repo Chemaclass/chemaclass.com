@@ -177,7 +177,7 @@ a.profile-icon {
   }
 
   #search-toggle {
-    display: flex;
+    display: none; // Hidden until mobile search is fully supported
   }
 
   .header-search {
