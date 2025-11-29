@@ -603,11 +603,18 @@ main {
 }
 
 .lightning-address {
+  display: inline-block;
   margin: 1rem 0 0;
   font-size: 0.85rem;
   color: var(--color-subtitle);
+  text-decoration: none;
+  transition: color 0.2s ease;
 
   i {
+    color: #f7931a;
+  }
+
+  &:hover {
     color: #f7931a;
   }
 }

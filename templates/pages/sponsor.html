@@ -1,175 +1,112 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+
+{% block content %}
 <div id="sponsor">
-  <div>
-    <main>
-      <h1>Become a Sponsor</h1>
+  <!-- Hero Section -->
+  <section class="sponsor-hero">
+    {% set profile_image = resize_image(path=config.extra.profile_large, width=120, height=160, op="fill") %}
+    <img src="{{ profile_image.url }}" alt="Chemaclass" class="sponsor-avatar">
+    <h1>Support My Work</h1>
+    <p class="sponsor-intro">
+      I believe in open source as a way of life – building in public,
+        sharing knowledge freely, and empowering others to grow.
+      <br>
+      Your support enables more time for open source and mentoring.
+    </p>
+    <div class="sponsor-quotes">
+      <blockquote class="sponsor-quote active"><p></p></blockquote>
+    </div>
+  </section>
 
-      <section id="section-contribution">
-        <!--        &lt;!&ndash; Recurring Support Section &ndash;&gt;-->
-        <!--        <div class="contribution">-->
-        <!--          <h2 class="contribution-title">-->
-        <!--            <i class="fa-solid fa-arrows-rotate"></i>&nbsp;&nbsp; Recurring Support-->
-        <!--          </h2>-->
-        <!--          <p class="contribution-subtitle">-->
-        <!--            Choose a sponsorship tier for ongoing support and maximum benefits.-->
-        <!--          </p>-->
-        <!--          <p class="contribution-description">-->
-        <!--            Recurring sponsorship helps me continue contributing voluntarily to the projects I'm passionate about.-->
-        <!--          </p>-->
-        <!--          <div class="donation-options">-->
-        <!--            <a-->
-        <!--              class="btn-donate github"-->
-        <!--              target="_blank"-->
-        <!--              href="https://github.com/sponsors/Chemaclass"-->
-        <!--              title="GitHub"-->
-        <!--            >-->
-        <!--              <i class="fa fa-github"></i> Sponsor on GitHub-->
-        <!--            </a>-->
-        <!--          </div>-->
-        <!--        </div>-->
+  <!-- Donation Options -->
+  <section class="sponsor-options">
+    <div class="sponsor-card">
+      <div class="sponsor-card-icon paypal">
+        <i class="fa fa-paypal"></i>
+      </div>
+      <h3>PayPal</h3>
+      <p>Quick and easy one-time contribution</p>
+      <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" class="sponsor-btn paypal">
+        Donate with PayPal
+      </a>
+    </div>
 
-        <!-- One-Time Contribution Section -->
-        <div class="contribution">
-          <h2 class="contribution-title">
-            <i class="fa fa-money-bill"></i>&nbsp;&nbsp; One-Time Contribution
-          </h2>
-          <p class="contribution-subtitle">
-            Make a single contribution to support this website.
-          </p>
-          <!--          <p class="contribution-description">-->
-          <!--            If you prefer to make a one-time donation, you can do so as well:-->
-          <!--          </p>-->
-          <div class="donation-options">
-            <a
-                    class="btn-donate paypal"
-                    target="_blank"
-                    href="https://www.paypal.com/paypalme/chemaclass"
-                    title="PayPal"
-            >
-              <i class="fa fa-paypal"></i> PayPal
-            </a>
-            <!--            <a-->
-            <!--              class="btn-donate github"-->
-            <!--              target="_blank"-->
-            <!--              href="https://github.com/sponsors/Chemaclass?frequency=one-time"-->
-            <!--              title="GitHub"-->
-            <!--            >-->
-            <!--              <i class="fa fa-github"></i> GitHub-->
-            <!--            </a>-->
-            <a
-                    class="btn-donate lightning"
-                    target="_blank"
-                    href="https://getalby.com/p/chemaclass"
-                    title="Bitcoin Lightning Network"
-            >
-              <i class="fa-solid fa-bolt"></i> Lightning
-            </a>
-          </div>
-        </div>
-      </section>
+    <div class="sponsor-card">
+      <div class="sponsor-card-icon lightning">
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+      <h3>Bitcoin Lightning</h3>
+      <p>Fast, low-fee Bitcoin payments</p>
+      <a href="https://getalby.com/p/chemaclass" target="_blank" class="sponsor-btn lightning">
+        Pay with Lightning
+      </a>
+    </div>
+  </section>
 
-      <hr class="common-hr">
+  <!-- Why Sponsor -->
+  <section class="sponsor-reasons">
+    <h2>Why Become a Sponsor?</h2>
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <span class="reason-icon">💓</span>
+        <h3>Support Open Source</h3>
+        <p>
+          Help maintain projects like
+          <a target="_blank" href="https://bashunit.typeddevs.com/">bashunit</a>,
+          <a target="_blank" href="https://phel-lang.org/">phel</a>
+          and <a target="_blank" href="https://gacela-project.com/">gacela</a>.
+        </p>
+      </div>
+      <div class="reason-card">
+        <span class="reason-icon">⚡</span>
+        <h3>Amplify Impact</h3>
+        <p>Your support drives the growth of developer tools and the open source community.</p>
+      </div>
+      <div class="reason-card">
+        <span class="reason-icon">⭐</span>
+        <h3>Enable More Content</h3>
+        <p>More time for blog posts, talks, and sharing knowledge with developers.</p>
+      </div>
+    </div>
+  </section>
 
-      <section id="section-reasons-sponsor">
-        <h2 class="sponsor-title">Why Become a Sponsor?</h2>
-        <div class="sponsor-features">
-          <div class="sponsor-feature">
-            <h1>💓</h1>
-            <h3 class="feature-title">Support Open Source</h3>
-            <p>
-              Help maintain projects like
-              <a target="_blank" href="https://bashunit.typeddevs.com/">bashunit</a>,
-              <a target="_blank" href="https://phel-lang.org/">phel</a>
-              and <a target="_blank" href="https://gacela-project.com/">gacela</a>.
-            </p>
-          </div>
-          <div class="sponsor-feature">
-            <h1>⚡</h1>
-            <h3 class="feature-title">Amplify Impact</h3>
-            <p>
-              Your support drives the growth of developer tools and the OS community.
-            </p>
-          </div>
-          <div class="sponsor-feature">
-            <h1>⭐</h1>
-            <h3 class="feature-title">Direct Access and Insights</h3>
-            <p>
-              Unlock a unique view into my projects and join their evolving journey.
-            </p>
-          </div>
-        </div>
-      </section>
-
-<!--      <section id="section-tiers">-->
-<!--        <div>-->
-<!--          <p> Choose a sponsorship tier that reflects your level of support. </p>-->
-<!--          <h2>-->
-<!--            Sponsorship Tiers-->
-<!--          </h2>-->
-<!--          <div class="tier-cards">-->
-<!--            <div class= "tier-card tier-card-silver">-->
-<!--              <div class= "tier-card-header">-->
-<!--                <h1>⭐ Silver Sponsor</h1>-->
-<!--                <small>-->
-<!--                  Perfect for single contributors and anyone who loves open-source.-->
-<!--                </small>-->
-<!--              </div>-->
-<!--              <hr class="tier-card-hr">-->
-<!--              <div class= "tier-card-content">-->
-<!--                <p>$2/month</p>-->
-<!--                <ul>-->
-<!--                  <li> ⭕ Get a Sponsor badge on your GitHub profile.</li>-->
-<!--                  <li> ⭕ The satisfaction of knowing you're helping keep open-source thriving.</li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </div>-->
-
-<!--            <div class="tier-card tier-card-gold">-->
-<!--              <div class="tier-card-header">-->
-<!--                <h1>⚡ Gold Sponsor</h1>-->
-<!--                <small>-->
-<!--                  For the slightly more generous folks who want to contribute a bit more.-->
-<!--                </small>-->
-<!--              </div>-->
-<!--              <hr class="tier-card-hr">-->
-<!--              <div class="tier-card-content">-->
-<!--                <p>$4/month</p>-->
-<!--                <ul>-->
-<!--                  <li> ⭕ A mention in my sponsors page 😊 </li>-->
-<!--                  <li> ⭕ No flashy logos or merchandise, but you'll definitely have a spot in my heart! </li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="tier-card tier-card-platinum">-->
-<!--              <div class="tier-card-header">-->
-<!--                <h1>🏆 Platinum Sponsor</h1>-->
-<!--                <small>-->
-<!--                  For the truly heroic souls who believe in open-source greatness.-->
-<!--                </small>-->
-<!--              </div>-->
-<!--              <hr class="tier-card-hr">-->
-<!--              <div class="tier-card-content">-->
-<!--                <p>$12/month</p>-->
-<!--                <ul>-->
-<!--                  <li> ⭕ A mention in my sponsors page ⭐️ </li>-->
-<!--                  <li> ⭕ No free goodies, no stickers. Just the warm, fuzzy feeling of helping an open-source dev sleep a bit better at night. </li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </section>-->
-
-<!--      <section id="section-current-sponsors">-->
-<!--        <h2>-->
-<!--          Current Sponsors-->
-<!--        </h2>-->
-<!--        <div>-->
-<!--          ⭐ Jesus Valera Reales-->
-<!--        </div>-->
-<!--      </section>-->
-
-    </main>
-  </div>
+  <!-- Thank You -->
+  <section class="sponsor-thanks">
+    <p>Every contribution, big or small, makes a difference. Thank you for your support!</p>
+  </section>
 </div>
+
+<script>
+(function() {
+  const quotes = [
+    "Open source everything.",
+    "The process itself is the goal.",
+    "Making others happier compounds.",
+    "Nobody is perfect, but a team can be.",
+    "Move from maker mode to multiplier.",
+    "A great engineer is not just a great coder.",
+    "People skills matter as much as technical.",
+    "Knowledge shared is knowledge multiplied.",
+    "Building in public accelerates growth.",
+    "Community over competition.",
+    "Small contributions create big impact.",
+    "Code is temporary, impact is lasting."
+  ];
+  const el = document.querySelector('.sponsor-quote p');
+  if (!el) return;
+  let last = -1;
+  function showRandom() {
+    let idx;
+    do { idx = Math.floor(Math.random() * quotes.length); } while (idx === last);
+    last = idx;
+    el.style.opacity = 0;
+    setTimeout(() => {
+      el.textContent = '"' + quotes[idx] + '"';
+      el.style.opacity = 1;
+    }, 300);
+  }
+  showRandom();
+  setInterval(showRandom, 7000);
+})();
+</script>
 {% endblock content %}
