@@ -89,7 +89,6 @@
       <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
       <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
       <link rel="stylesheet" href="{{ get_url(path='sponsor.css') | safe }}">
-      <link rel="stylesheet" href="{{ get_url(path='snow.css') | safe }}">
       <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
     {% endblock styles %}
     {% block rss %}
@@ -98,7 +97,6 @@
     {% block posthead %}{% endblock posthead %}
   </head>
   <body>
-    <div id="snow"></div>
     {% block header %}
       <header>
         <a class="profile-icon" href="/">
@@ -118,49 +116,16 @@
             <a href="{{ link.path }}" {% if link.id %}id="{{ link.id }}"{% endif %}>{{ link.name }}</a>
           {% endfor %}
 
-          <div style="display: flex; gap: 1rem; align-items: center;">
-            <span id="snow-on" onclick="toSnowOn()" style="cursor: pointer; display: flex; align-items: center;">
-              <svg width="18" viewBox="0 0 12 12">
-                <path style="stroke:#3d7dab; stroke-width:1" d="m10.33 5.377-1.625-.939V2.562M1.67 6.623l1.625.939v1.876m4.33-7.5L6 2.877l-1.625-.939m0 8.124L6 9.123l1.625.939M10.33 3.5l-1.625.938L1.67 8.5m1.625-5.938v1.876l-1.625.939m7.035 4.061V7.562l1.625-.939M6 1v10M1.67 3.5l1.625.938L10.33 8.5"/>
-              </svg>
-            </span>
-            <span id="snow-off" onclick="toSnowOff()" style="cursor: pointer; display: flex; align-items: center;">
-              <svg width="18" fill="var(--body-color)" viewBox="0 0 419.768 419.768" xml:space="preserve">
-              <g><path d="M3.524,229.542c1.385,2.718,3.791,4.774,6.693,5.717c2.896,0.942,6.057,0.694,8.773-0.689l91.625-46.685l76.615,24.895
-		l-47.352,65.176L38.315,294.04c-3.012,0.477-5.711,2.131-7.504,4.599c-1.793,2.469-2.533,5.546-2.055,8.56l0.781,4.938
-		c0.994,6.273,6.883,10.556,13.158,9.56l73.908-11.705l-25.729,35.413c-3.732,5.138-2.594,12.329,2.545,16.062l4.045,2.938
-		c2.469,1.794,5.549,2.532,8.559,2.056c3.014-0.478,5.713-2.131,7.506-4.6l25.729-35.412l11.705,73.908
-		c0.898,5.664,5.787,9.703,11.346,9.703c0.598,0,1.203-0.046,1.813-0.143l4.938-0.782c3.014-0.477,5.713-2.131,7.506-4.599
-		c1.793-2.469,2.531-5.546,2.055-8.56l-16.088-101.563l47.354-65.176l47.354,65.176l-16.088,101.562
-		c-0.994,6.273,3.285,12.164,9.56,13.157l4.938,0.782c3.012,0.477,6.093-0.264,8.56-2.056c2.467-1.793,4.121-4.491,4.598-7.505
-		l11.705-73.906l25.729,35.411c3.731,5.139,10.926,6.278,16.063,2.544l4.045-2.938c2.467-1.792,4.121-4.492,4.601-7.505
-		c0.477-3.012-0.263-6.091-2.056-8.559l-25.729-35.413l73.912,11.707c6.27,0.994,12.162-3.287,13.155-9.56l0.783-4.938
-		c0.478-3.013-0.262-6.091-2.055-8.56c-1.793-2.467-4.492-4.122-7.506-4.599l-101.564-16.086l-47.354-65.177l76.619-24.893
-		l91.62,46.684c5.66,2.885,12.587,0.633,15.468-5.025l2.27-4.455c1.385-2.717,1.635-5.874,0.691-8.773
-		c-0.941-2.901-2.998-5.309-5.717-6.693l-66.675-33.973l41.632-13.526c2.899-0.942,5.309-2.999,6.69-5.716
-		c1.385-2.717,1.635-5.874,0.691-8.774l-1.545-4.755c-0.941-2.901-2.998-5.308-5.718-6.693c-2.717-1.384-5.873-1.632-8.772-0.69
-		l-41.629,13.526l33.971-66.676c2.885-5.659,0.635-12.583-5.023-15.467l-4.454-2.271c-2.72-1.385-5.877-1.633-8.775-0.691
-		c-2.9,0.942-5.309,2.999-6.693,5.717l-46.684,91.624l-76.619,24.895v-80.562l72.713-72.711c2.156-2.157,3.367-5.082,3.367-8.132
-		c0-3.05-1.211-5.975-3.367-8.132l-3.537-3.536c-4.492-4.491-11.771-4.49-16.264,0l-52.912,52.913V22.217
-		c0-6.351-5.148-11.5-11.5-11.5h-5c-6.352,0-11.5,5.149-11.5,11.5v43.772l-52.914-52.913c-4.492-4.491-11.773-4.491-16.264,0
-		l-3.535,3.536c-2.156,2.157-3.369,5.082-3.369,8.132c0,3.05,1.213,5.975,3.369,8.132l72.713,72.711v80.562l-76.619-24.895
-		L72.584,69.631c-1.385-2.718-3.793-4.774-6.693-5.717c-2.902-0.941-6.057-0.694-8.775,0.691l-4.455,2.271
-		c-5.658,2.884-7.908,9.808-5.025,15.467l33.973,66.674l-41.633-13.526c-6.033-1.962-12.527,1.342-14.49,7.383l-1.545,4.755
-		c-1.963,6.041,1.344,12.528,7.383,14.491l41.631,13.527L6.281,209.62c-5.658,2.883-7.908,9.808-5.025,15.467L3.524,229.542z"/>
-</g>
-              </svg>
-            </span>
-            <button id="light-mode" onclick="toDarkMode()" title="Switch to dark mode" style="background: none; border: none; cursor: pointer; padding: 0; display: flex; align-items: center;">
-              <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="var(--body-color)" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
-              </svg>
-            </button>
-            <button id="dark-mode" onclick="toLightMode()" title="Switch to light mode" style="background: none; border: none; cursor: pointer; padding: 0; display: flex; align-items: center;">
-              <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="var(--body-color)" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
-              </svg>
-            </button>
-          </div>
+          <button id="light-mode" onclick="toDarkMode()" title="Switch to dark mode">
+            <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="var(--body-color)" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+            </svg>
+          </button>
+          <button id="dark-mode" onclick="toLightMode()" title="Switch to light mode">
+            <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="var(--body-color)" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+            </svg>
+          </button>
         </nav>
 
       </header>
@@ -195,7 +160,6 @@
     <script type="text/javascript" src="{{ get_url(path='dark-mode.js') | safe }}"></script>
     <script type="text/javascript" src="{{ get_url(path='elasticlunr.min.js') }}" defer></script>
     <script type="text/javascript" src="{{ get_url(path='search.js') }}" defer></script>
-    <script type="text/javascript" src="{{ get_url(path='snow.js') | safe }}" defer></script>
     <script type="text/javascript" src="{{ get_url(path='scroll.js') }}" defer></script>
     <script type="text/javascript" src="{{ get_url(path='preview.js') }}" defer></script>
   </body>

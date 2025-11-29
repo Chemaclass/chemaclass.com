@@ -8,7 +8,6 @@ Home | Chemaclass
 {% block styles%}
 <link rel="stylesheet" href="{{ get_url(path='index.css') | safe }}">
 <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
-<link rel="stylesheet" href="{{ get_url(path='snow.css') | safe }}">
 <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
 {% endblock styles %}
 
@@ -16,6 +15,8 @@ Home | Chemaclass
 {% set profile_image = resize_image(path=config.extra.profile_large, width=360, height=360, op="fill") %}
 <link rel="prefetch" href="{{ profile_image.url }}">
 {% endblock posthead %}
+
+{% block search %}{% endblock search %}
 
 {% block content %}
 <div class="homepage-container">
@@ -30,7 +31,7 @@ Home | Chemaclass
             </div>
             <div class="hero-text">
                 <h1>Chemaclass</h1>
-                <p class="subtitle">Programming is the art of simplifying routines.</p>
+                <p class="subtitle">Software Developer & Open Source Creator</p>
                 <div class="hero-quotes">
                     <blockquote class="hero-quote active"><p></p></blockquote>
                 </div>
@@ -74,21 +75,16 @@ Home | Chemaclass
             <span class="skill-tag lang">SQL</span>
             <span class="skill-tag tool">Laravel</span>
             <span class="skill-tag tool">Symfony</span>
-            <span class="skill-tag tool">Spryker</span>
             <span class="skill-tag tool">PHPUnit</span>
             <span class="skill-tag tool">Pest</span>
             <span class="skill-tag tool">PHPStan</span>
             <span class="skill-tag infra">Docker</span>
-            <span class="skill-tag infra">Kubernetes</span>
             <span class="skill-tag infra">AWS</span>
             <span class="skill-tag db">PostgreSQL</span>
             <span class="skill-tag db">Redis</span>
             <span class="skill-tag db">RabbitMQ</span>
-            <span class="skill-tag monitor">DataDog</span>
-            <span class="skill-tag monitor">Sentry</span>
             <span class="skill-tag practice">TDD</span>
             <span class="skill-tag practice">XP</span>
-            <span class="skill-tag practice">Scrum</span>
             <span class="skill-tag practice">Open Source</span>
             <span class="skill-tag soft">Team Leadership</span>
             <span class="skill-tag soft">Communication</span>

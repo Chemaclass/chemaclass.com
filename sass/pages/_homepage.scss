@@ -42,7 +42,7 @@ main {
 
 // Left column: Hero content
 .hero-content {
-  flex: 0 0 280px;
+  flex: 0 0 340px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,9 +59,9 @@ main {
 
     .subtitle {
       font-size: 0.95rem;
-      color: var(--color-subtitle);
+      color: var(--accent-color);
       margin: 0 0 1rem;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 1.5;
     }
 
@@ -231,7 +231,7 @@ main {
 
 // Skills Section
 .skills-section {
-  margin: 2rem 0 2.5rem;
+  margin: 0;
 }
 
 .skills-tags {
