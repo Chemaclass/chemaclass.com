@@ -341,11 +341,11 @@ main {
 
 .skill-tag {
   display: inline-block;
-  padding: 0.35rem 0.75rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 2rem;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
   cursor: default;
 
   &.lang {
@@ -370,6 +370,24 @@ main {
     background: rgba(251, 146, 60, 0.1);
     color: #ea580c;
     border: 1px solid rgba(251, 146, 60, 0.25);
+  }
+
+  &.infra {
+    background: rgba(14, 165, 233, 0.1);
+    color: #0284c7;
+    border: 1px solid rgba(14, 165, 233, 0.25);
+  }
+
+  &.db {
+    background: rgba(236, 72, 153, 0.1);
+    color: #db2777;
+    border: 1px solid rgba(236, 72, 153, 0.25);
+  }
+
+  &.monitor {
+    background: rgba(168, 85, 247, 0.1);
+    color: #9333ea;
+    border: 1px solid rgba(168, 85, 247, 0.25);
   }
 
   &:hover {
