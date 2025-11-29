@@ -171,6 +171,7 @@ main:has(.homepage-container) #scroll-to-top {
   text-decoration: none;
   transition: color 0.2s ease;
   font-weight: 500;
+  min-width: fit-content;
 
   &:hover {
     color: var(--accent-color);
@@ -240,6 +241,7 @@ main:has(.homepage-container) #scroll-to-top {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.6rem;
+  margin: 1rem 0;
 }
 
 .skill-tag {
@@ -572,25 +574,171 @@ main:has(.homepage-container) #scroll-to-top {
   }
 
   .homepage-top {
-    gap: 1rem;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+  }
+
+  .profile .profile-container {
+    width: 120px;
+    height: 120px;
+    border-width: 3px;
+  }
+
+  .profile {
+    margin-bottom: 1rem;
+  }
+
+  .hero-content {
+    flex: 0 0 auto;
+
+    .hero-text {
+      h1 {
+        font-size: 1.4rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .hero-quotes {
+        min-height: 2.5em;
+      }
+
+      .hero-quote {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .skills-section {
+    margin-top: 0.5rem;
+  }
+
+  .skills-tags {
+    gap: 0.4rem;
+  }
+
+  .skill-tag {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.7rem;
+  }
+
+  .about-card {
+    padding: 1rem;
+    border-radius: 12px;
+
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .about-list li {
+      padding: 0.4rem 0;
+      font-size: 0.85rem;
+      gap: 0.5rem;
+
+      .list-icon {
+        width: 18px;
+      }
+    }
+
+    .philosophy {
+      font-size: 0.8rem;
+      padding-top: 0.75rem;
+    }
+  }
+
+  .projects-section,
+  .latest-section,
+  .social-section {
+    margin: 1rem 0;
+
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .section-header {
+    margin-bottom: 0.75rem;
+  }
+
+  .view-all {
+    font-size: 0.8rem;
   }
 
   .projects-grid {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   .project-card {
-    flex: 0 1 calc(50% - 0.5rem);
-    min-width: 120px;
+    flex: 1 1 100%;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    gap: 1rem;
+
+    .project-icon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .project-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .project-title {
+      justify-content: flex-start;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    .github-stars {
+      font-size: 0.75rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
   }
 
   .latest-grid {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
-  .hero-content .hero-text h1 {
-    font-size: 1.5rem;
+  .latest-card {
+    padding: 0.85rem;
+    border-radius: 10px;
+
+    .latest-type {
+      font-size: 0.65rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .latest-preview {
+      font-size: 0.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .latest-date {
+      font-size: 0.75rem;
+    }
   }
 
   .social-links {
@@ -607,6 +755,39 @@ main:has(.homepage-container) #scroll-to-top {
 
     i {
       font-size: 1.25rem;
+    }
+  }
+
+  .lightning-address {
+    font-size: 0.8rem;
+    margin-top: 0.75rem;
+  }
+}
+
+// Extra small screens
+@media (max-width: 360px) {
+  .skill-tag {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.65rem;
+  }
+
+  .hero-content .hero-text h1 {
+    font-size: 1.25rem;
+  }
+
+  .about-card {
+    padding: 0.85rem;
+
+    .about-list li {
+      font-size: 0.8rem;
+    }
+  }
+
+  .project-card {
+    padding: 0.6rem 0.85rem;
+
+    .project-info p {
+      display: none;
     }
   }
 }
