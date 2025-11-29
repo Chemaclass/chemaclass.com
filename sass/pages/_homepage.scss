@@ -320,12 +320,13 @@ main {
 
 // Skills Section
 .skills-section {
-  margin-top: 1rem;
+  margin: 1rem 0 2rem;
 }
 
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -372,16 +373,7 @@ main {
 .projects-grid {
   display: flex;
   gap: 1rem;
-  overflow-x: auto;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-
-  // Hide scrollbar but keep functionality
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  padding: 0.5rem;
 }
 
 .project-card {
@@ -399,9 +391,8 @@ main {
   text-align: center;
 
   &:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12),
-                0 0 0 2px var(--accent-color-light);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     border-color: var(--accent-color);
   }
 
@@ -471,9 +462,8 @@ main {
   flex-direction: column;
 
   &:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12),
-                0 0 0 2px var(--accent-color-light);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     border-color: var(--accent-color);
   }
 
