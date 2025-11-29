@@ -1,48 +1,34 @@
 @import "../abstracts/mixins";
 
-@include profile-animation;
-@include front-animation;
-@include back-animation;
-
 // Homepage-specific body styles
 body {
   background-color: var(--body-bg);
   color: var(--body-color);
   box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  #scroll-to-top {
-    display: none;
-  }
-}
-
-header {
-  display: none;
 }
 
 main {
-  max-width: 900px;
+  max-width: 960px;
   width: 100%;
-  padding: 0 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0 2rem;
+  margin: 0 auto;
 }
 
 #footer-page {
   text-align: center;
-  font-size: 0.9em;
-  margin: 2rem auto;
-  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--color-subtitle);
+  margin: 3rem auto 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--preview-divider-color);
+  max-width: 960px;
+  width: 100%;
 }
 
 // Homepage container
 .homepage-container {
   width: 100%;
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -51,12 +37,12 @@ main {
   display: flex;
   gap: 3rem;
   align-items: flex-start;
-  padding: 2rem 0;
+  padding: 1.5rem 0 1rem;
 }
 
 // Left column: Hero content
 .hero-content {
-  flex: 0 0 350px;
+  flex: 0 0 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,22 +50,25 @@ main {
 
   .hero-text {
     h1 {
-      font-size: 2rem;
-      margin: 0 0 0.25rem;
+      font-size: 1.75rem;
+      margin: 0 0 0.5rem;
       font-weight: 700;
       letter-spacing: -0.02em;
+      color: var(--heading-color);
     }
 
     .subtitle {
-      font-size: 1rem;
-      color: var(--accent-color);
-      margin: 0 0 0.75rem;
-      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--color-subtitle);
+      margin: 0 0 1rem;
+      font-weight: 400;
+      line-height: 1.5;
     }
 
     .hero-quotes {
       position: relative;
-      min-height: 2.5em;
+      min-height: 3em;
+      max-width: 280px;
     }
 
     .hero-quote {
@@ -87,7 +76,8 @@ main {
       padding: 0;
       border: none;
       font-style: italic;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
+      color: var(--color-subtitle);
 
       &.active {
         opacity: 0.85;
@@ -107,19 +97,24 @@ main {
   min-width: 0;
 }
 
-// Profile with animated background
+// Remove custom navigation from homepage (using global header instead)
+.homepage-nav {
+  display: none;
+}
+
+// Profile with circular image
 .profile {
   flex-shrink: 0;
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem;
 
   .profile-container {
     width: 180px;
-    height: 240px;
-    animation: profile infinite 10s;
-    background: white;
-    border-radius: 4px;
+    height: 180px;
+    border-radius: 50%;
     overflow: hidden;
+    background: white;
+    border: 4px solid var(--preview-divider-color);
 
     img {
       width: 100%;
@@ -127,125 +122,18 @@ main {
       object-fit: cover;
     }
   }
-
-  &:after,
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--accent-color);
-    z-index: -1;
-    border-radius: 4px;
-  }
-
-  &:after {
-    animation: front infinite 10s;
-    opacity: 0.5;
-  }
-
-  &:before {
-    animation: back infinite 10s;
-    opacity: 0.25;
-  }
 }
 
-// Navigation (matching header nav style)
-.homepage-nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-
-  a {
-    border-bottom: none !important;
-    text-decoration: none;
-    color: var(--link-color);
-    margin-right: 1.2rem;
-
-    &:hover {
-      color: var(--accent-color-light);
-    }
-  }
-
-  .theme-toggle {
-    width: 20px;
-    height: 20px;
-    position: relative;
-
-    button {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: inherit;
-      line-height: 0;
-      padding: 0;
-    }
-  }
-
-  // Search inline in nav (matching header navbar search)
-  .homepage-search {
-    flex: 1;
-    margin-left: 1.2rem;
-    min-width: 150px;
-
-    input[type="search"] {
-      width: 100%;
-      padding-left: 0.5rem;
-      padding-top: 0;
-      padding-bottom: 0.2rem;
-      padding-right: 2.5rem;
-      border-left: none;
-      border-right: none;
-      border-top: none;
-      border-radius: 0;
-      border-bottom: 2px solid #ccc;
-      box-shadow: none;
-      line-height: 1.5;
-      font-size: 16px;
-      color: var(--search-input-color);
-      background-color: transparent;
-      outline: none;
-
-      &:focus {
-        border-bottom-color: var(--accent-color);
-        box-shadow: none;
-      }
-
-      &::placeholder {
-        color: #aaa;
-        font-style: italic;
-      }
-    }
-
-    .result-count {
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 11px;
-      right: 5px;
-    }
-
-    .search-results {
-      min-width: 510px;
-      right: 0;
-    }
-  }
-}
+// Navigation removed - using global header instead
 
 // Section headers
 .about-section {
   margin: 0;
 
   h2 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     color: var(--heading-color);
   }
 }
@@ -253,10 +141,10 @@ main {
 .projects-section,
 .latest-section,
 .social-section {
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin: 0;
     color: var(--heading-color);
@@ -268,14 +156,15 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .view-all {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--color-subtitle);
   text-decoration: none;
   transition: color 0.2s ease;
+  font-weight: 500;
 
   &:hover {
     color: var(--accent-color);
@@ -286,24 +175,28 @@ main {
 .about-card {
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 
   h2 {
     margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .about-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 1rem;
+    margin: 0 0 1.25rem;
 
     li {
       display: flex;
       align-items: flex-start;
       gap: 0.75rem;
-      padding: 0.5rem 0;
+      padding: 0.6rem 0;
       font-size: 0.95rem;
+      line-height: 1.5;
 
       .list-icon {
         color: var(--accent-color);
@@ -319,11 +212,13 @@ main {
     font-size: 0.9rem;
     color: var(--color-subtitle);
     margin: 0;
-    padding-top: 0.5rem;
+    padding-top: 1rem;
     border-top: 1px solid var(--preview-divider-color);
+    line-height: 1.6;
 
     strong {
       color: var(--accent-color);
+      font-weight: 600;
     }
 
     .xp-values {
@@ -336,78 +231,80 @@ main {
 
 // Skills Section
 .skills-section {
-  margin: 1rem 0 2rem;
+  margin: 2rem 0 2.5rem;
 }
 
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .skill-tag {
   display: inline-block;
-  padding: 0.25rem 0.5rem;
-  border-radius: 2rem;
-  font-size: 0.75rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
   font-weight: 500;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   cursor: default;
+  background: var(--search-bg-selected-item);
+  color: var(--body-color);
+  border: 1px solid var(--preview-divider-color);
 
   &.lang {
-    background: rgba(58, 92, 136, 0.15);
+    background: rgba(58, 92, 136, 0.12);
     color: var(--accent-color);
-    border: 1px solid rgba(58, 92, 136, 0.3);
+    border: 1px solid rgba(58, 92, 136, 0.25);
   }
 
   &.tool {
     background: rgba(34, 197, 94, 0.1);
     color: #16a34a;
-    border: 1px solid rgba(34, 197, 94, 0.25);
+    border: 1px solid rgba(34, 197, 94, 0.2);
   }
 
   &.practice {
     background: rgba(139, 92, 246, 0.1);
     color: #8b5cf6;
-    border: 1px solid rgba(139, 92, 246, 0.25);
+    border: 1px solid rgba(139, 92, 246, 0.2);
   }
 
   &.soft {
     background: rgba(251, 146, 60, 0.1);
     color: #ea580c;
-    border: 1px solid rgba(251, 146, 60, 0.25);
+    border: 1px solid rgba(251, 146, 60, 0.2);
   }
 
   &.infra {
     background: rgba(14, 165, 233, 0.1);
     color: #0284c7;
-    border: 1px solid rgba(14, 165, 233, 0.25);
+    border: 1px solid rgba(14, 165, 233, 0.2);
   }
 
   &.db {
     background: rgba(236, 72, 153, 0.1);
     color: #db2777;
-    border: 1px solid rgba(236, 72, 153, 0.25);
+    border: 1px solid rgba(236, 72, 153, 0.2);
   }
 
   &.monitor {
     background: rgba(168, 85, 247, 0.1);
     color: #9333ea;
-    border: 1px solid rgba(168, 85, 247, 0.25);
+    border: 1px solid rgba(168, 85, 247, 0.2);
   }
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 }
 
 // Projects Grid
 .projects-grid {
   display: flex;
-  gap: 1rem;
-  padding: 0.5rem;
+  gap: 1.25rem;
 }
 
 .project-card {
@@ -415,18 +312,19 @@ main {
   min-width: 140px;
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
-  border-radius: 12px;
-  padding: 1rem;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     border-color: var(--accent-color);
   }
 
@@ -434,9 +332,9 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
-    margin-bottom: 0.5rem;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 0.75rem;
 
     svg {
       width: 100%;
@@ -445,30 +343,30 @@ main {
   }
 
   h3 {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin: 0 0 0.2rem;
+    margin: 0 0 0.4rem;
     color: var(--heading-color);
   }
 
   p {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: var(--color-subtitle);
     margin: 0;
-    line-height: 1.3;
+    line-height: 1.4;
   }
 
   .github-stars {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
-    font-size: 0.75rem;
+    gap: 0.35rem;
+    font-size: 0.85rem;
     color: var(--color-subtitle);
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
 
     i {
       color: #f59e0b;
-      font-size: 0.7rem;
+      font-size: 0.75rem;
     }
 
     .star-count:empty::after {
@@ -482,67 +380,68 @@ main {
 .latest-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .latest-card {
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
-  border-radius: 12px;
-  padding: 1.25rem;
+  border-radius: 16px;
+  padding: 1.5rem;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     border-color: var(--accent-color);
   }
 
   .latest-type {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     color: var(--accent-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
 
   h3 {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: 600;
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.65rem;
     color: var(--heading-color);
     line-height: 1.4;
   }
 
   .latest-preview {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--color-subtitle);
-    line-height: 1.5;
-    margin: 0 0 0.75rem;
+    line-height: 1.6;
+    margin: 0 0 1rem;
     flex-grow: 1;
   }
 
   .latest-date {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--color-subtitle);
-    opacity: 0.8;
+    opacity: 0.75;
   }
 }
 
 // Social Links
 .social-section {
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 0;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 
@@ -550,17 +449,17 @@ main {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 0.85rem;
   border-radius: 2rem;
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
   text-decoration: none;
   color: var(--body-color);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: all 0.2s ease;
 
   i {
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: color 0.2s ease;
   }
 
@@ -646,26 +545,9 @@ main {
     width: 100%;
   }
 
-  .homepage-nav {
-    justify-content: center;
-    gap: 0.5rem;
-
-    a {
-      margin-right: 0.5rem;
-    }
-
-    .homepage-search {
-      flex: none;
-      width: 100%;
-      margin-left: 0;
-      margin-top: 0.75rem;
-      order: 10;
-    }
-  }
-
   .profile .profile-container {
     width: 150px;
-    height: 200px;
+    height: 150px;
   }
 }
 
@@ -690,11 +572,6 @@ main {
 
   .hero-content .hero-text h1 {
     font-size: 1.5rem;
-  }
-
-  .homepage-nav {
-    gap: 0.8rem;
-    font-size: 1.1rem;
   }
 
   .social-links {

@@ -13,6 +13,11 @@
     color: var(--link-color);
   }
 
+  // Dark mode specific overrides for homepage
+  .profile .profile-container {
+    border-color: var(--preview-divider-color);
+  }
+
   // Sponsors
   #section-reasons-sponsor {
     @include card-a-colors-dark;

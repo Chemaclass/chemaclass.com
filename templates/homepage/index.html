@@ -4,8 +4,6 @@
 Home | Chemaclass
 {% endblock %}
 
-{% block search %}
-{% endblock search %}
 
 {% block styles%}
 <link rel="stylesheet" href="{{ get_url(path='index.css') | safe }}">
@@ -15,7 +13,7 @@ Home | Chemaclass
 {% endblock styles %}
 
 {% block posthead %}
-{% set profile_image = resize_image(path=config.extra.profile_large, width=280, height=373, op="fill") %}
+{% set profile_image = resize_image(path=config.extra.profile_large, width=360, height=360, op="fill") %}
 <link rel="prefetch" href="{{ profile_image.url }}">
 {% endblock posthead %}
 
@@ -32,42 +30,15 @@ Home | Chemaclass
             </div>
             <div class="hero-text">
                 <h1>Chemaclass</h1>
-                <p class="subtitle">Software Developer & Open Source Creator</p>
+                <p class="subtitle">Programming is the art of simplifying routines.</p>
                 <div class="hero-quotes">
                     <blockquote class="hero-quote active"><p></p></blockquote>
                 </div>
             </div>
         </section>
 
-        <!-- Right Column: Nav + Search + About -->
+        <!-- Right Column: About -->
         <div class="homepage-right">
-            <nav class="homepage-nav">
-                {% for link in config.extra.nav %}
-                <a href="{{ link.path }}">{{ link.name }}</a>
-                {% endfor %}
-                <div class="theme-toggle">
-                    <button id="light-mode" onclick="toDarkMode()" title="Switch to dark mode">
-                        <svg width="20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#444"
-                                  d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
-                        </svg>
-                    </button>
-                    <button id="dark-mode" onclick="toLightMode()" title="Switch to light mode">
-                        <svg width="20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#ccc"
-                                  d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
-                        </svg>
-                    </button>
-                </div>
-                <div class="search-container homepage-search">
-                    <input type="search" id="search" autocomplete="off" placeholder="Search... (⌘K)">
-                    <span class="result-count"></span>
-                    <div class="search-results">
-                        <div class="search-results__items"></div>
-                    </div>
-                </div>
-            </nav>
-
             <section class="about-section">
                 <div class="about-card">
                     <h2>About</h2>
