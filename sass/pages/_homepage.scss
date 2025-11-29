@@ -70,10 +70,11 @@ main {
       letter-spacing: -0.02em;
     }
 
-    .tagline {
-      font-size: 0.95rem;
-      color: var(--color-subtitle);
+    .subtitle {
+      font-size: 1rem;
+      color: var(--accent-color);
       margin: 0 0 0.75rem;
+      font-weight: 500;
     }
 
     .hero-quotes {
@@ -323,6 +324,12 @@ main {
 
     strong {
       color: var(--accent-color);
+    }
+
+    .xp-values {
+      @media (min-width: $breakpoint-tablet) {
+        white-space: nowrap;
+      }
     }
   }
 }
