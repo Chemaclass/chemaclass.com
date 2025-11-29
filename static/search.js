@@ -4,19 +4,34 @@ const DOWN_ARROW = "ArrowDown";
 const ENTER_KEY = "Enter";
 const WAIT_TIME_MS = 150; // Reduced from 200ms to 150ms for faster response
 
-const searchContainer = Array.from(document.querySelectorAll(".search-container"))
-    .find(container => {
-        const input = container.querySelector('input[type="search"]');
-        return input && input.offsetParent !== null; // Check if input exists and is visible
-    });
+// Get all search containers and set up each one
+const allSearchContainers = Array.from(document.querySelectorAll(".search-container"));
 
-const resultCount = searchContainer.getElementsByClassName('result-count')[0];
-const searchInput = searchContainer.querySelectorAll('input[type="search"]')[0];
-const searchResults = searchContainer.querySelectorAll(".search-results")[0];
-const searchResultsItems = searchContainer.querySelectorAll(".search-results__items")[0];
+// Helper to get the currently visible/active search container
+function getActiveSearchContainer() {
+    return allSearchContainers.find(container => {
+        const input = container.querySelector('input[type="search"]');
+        return input && input.offsetParent !== null;
+    });
+}
+
+// Initialize with the first visible container (will be updated dynamically)
+let activeContainer = getActiveSearchContainer() || allSearchContainers[0];
+let resultCount = activeContainer?.getElementsByClassName('result-count')[0];
+let searchInput = activeContainer?.querySelector('input[type="search"]');
+let searchResults = activeContainer?.querySelector(".search-results");
+let searchResultsItems = activeContainer?.querySelector(".search-results__items");
 
 let searchItemSelected = null;
 let resultsItemsIndex = -1;
+
+// Update active container references (called when focusing on a search input)
+function updateActiveContainer(container) {
+    activeContainer = container;
+    resultCount = container.getElementsByClassName('result-count')[0];
+    searchResults = container.querySelector(".search-results");
+    searchResultsItems = container.querySelector(".search-results__items");
+}
 
 const icons = {
     blog: `<svg width="25px" viewBox="0 0 24 24" fill="none">
@@ -61,23 +76,37 @@ const icons = {
 ////////////////////////////////////
 // Interaction with the search input
 ////////////////////////////////////
+
+// Helper to get the currently visible search input
+function getVisibleSearchInput() {
+    const container = getActiveSearchContainer();
+    return container?.querySelector('input[type="search"]');
+}
+
 document.addEventListener("keydown", function (keyboardEvent) {
     // Cmd+K (Mac) or Ctrl+K (Windows/Linux) to focus search
     if ((keyboardEvent.metaKey || keyboardEvent.ctrlKey) && keyboardEvent.key === 'k') {
         keyboardEvent.preventDefault(); // Prevent browser default behavior
-        searchInput.focus();
-        searchInput.select(); // Select existing text for easy replacement
+        const input = getVisibleSearchInput();
+        if (input) {
+            input.focus();
+            input.select(); // Select existing text for easy replacement
+        }
         return;
     }
 });
 
 document.addEventListener("keyup", function (keyboardEvent) {
     if (["s", "S", "/"].includes(keyboardEvent.key)) {
-        searchInput.focus();
+        const input = getVisibleSearchInput();
+        if (input) {
+            input.focus();
+        }
     }
 });
 
 document.addEventListener("keydown", function (keyboardEvent) {
+    if (!searchResultsItems) return;
     const len = searchResultsItems.getElementsByTagName("li").length - 1;
 
     if (keyboardEvent.key === DOWN_ARROW) {
@@ -89,11 +118,11 @@ document.addEventListener("keydown", function (keyboardEvent) {
             searchItemSelected = searchResultsItems.getElementsByTagName("li")[1]
                 || searchResultsItems.getElementsByTagName("li")[0];
         }
-        const link = searchItemSelected.getElementsByTagName("a")[0];
-        if (link) {
-            link.click();
-        } else {
-            console.log("nothing to click...");
+        if (searchItemSelected) {
+            const link = searchItemSelected.getElementsByTagName("a")[0];
+            if (link) {
+                link.click();
+            }
         }
     }
 });
@@ -271,8 +300,15 @@ function initSearch() {
         return await index;
     }
 
-    searchInput.addEventListener("keyup", debounce(async function (keyboardEvent) {
-        let term = searchInput.value.trim();
+    // Create search handler function
+    const handleSearch = debounce(async function (keyboardEvent, input) {
+        // Update active container based on which input triggered the event
+        const container = input.closest('.search-container');
+        if (container) {
+            updateActiveContainer(container);
+        }
+
+        let term = input.value.trim();
         if (currentTerm === term
             && (keyboardEvent.key === DOWN_ARROW || keyboardEvent.key === UP_ARROW || keyboardEvent.key === ENTER_KEY)
         ) {
@@ -328,8 +364,8 @@ function initSearch() {
 
         if (items.length === 0) {
             if (term.toLowerCase() === "btc") {
-                searchInput.value = "bitcoin";
-                searchInput.dispatchEvent(new KeyboardEvent("keyup"));
+                input.value = "bitcoin";
+                input.dispatchEvent(new KeyboardEvent("keyup"));
                 return
             }
 
@@ -351,30 +387,36 @@ function initSearch() {
         appendSearchResults((res) => !res.ref.includes("/blog")
             && !res.ref.includes("/readings")
             && !res.ref.includes("/talks"), icons.others + " Others", items, term);
-    }, WAIT_TIME_MS));
+    }, WAIT_TIME_MS);
+
+    // Bind events to ALL search inputs
+    allSearchContainers.forEach(container => {
+        const input = container.querySelector('input[type="search"]');
+        if (!input) return;
+
+        input.addEventListener("keyup", function(e) {
+            handleSearch(e, input);
+        });
+
+        input.addEventListener("focusin", function () {
+            updateActiveContainer(container);
+            if (input.value !== "") {
+                input.dispatchEvent(new KeyboardEvent("keyup"));
+            }
+        });
+
+        input.addEventListener("focusout", function () {
+            resultsItemsIndex = -1;
+        });
+    });
 
     window.addEventListener('click', function (e) {
-        if (searchResults.style.display === "block" && !searchResults.contains(e.target)) {
-            searchResults.style.display = "none";
-        }
-    });
-
-    searchInput.addEventListener("focusin", function () {
-        if (searchInput.value !== "") {
-            searchInput.dispatchEvent(new KeyboardEvent("keyup"));
-        }
-    });
-
-    searchInput.addEventListener("focusout", function () {
-        resultsItemsIndex = -1;
-    });
-
-    window.addEventListener("click", function (mouseEvent) {
-        if (searchResults.style.display === "block") {
-            if (!searchResults.contains(mouseEvent.target)) {
-                searchResults.style.display = "";
+        allSearchContainers.forEach(container => {
+            const results = container.querySelector('.search-results');
+            if (results && results.style.display === "block" && !results.contains(e.target)) {
+                results.style.display = "none";
             }
-        }
+        });
     });
 }
 

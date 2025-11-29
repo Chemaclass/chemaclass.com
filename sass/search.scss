@@ -148,6 +148,41 @@ header .search-container {
   right: 5px; // Closer to edge since no border
 }
 
+// Mobile search (only-phone-visible) - use underline style
+main .search-container.only-phone-visible {
+  input[type="search"] {
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-top: 0;
+    padding-bottom: 0.2rem;
+    padding-right: 2.5rem;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0;
+    border-bottom: 2px solid #ccc;
+    box-shadow: none;
+    line-height: 1.5;
+
+    &:focus {
+      border-bottom-color: var(--accent-color);
+      box-shadow: none;
+    }
+  }
+
+  .result-count {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 11px;
+    right: 5px;
+  }
+
+  .search-results {
+    width: 100%;
+    max-width: calc(100vw - 2rem);
+  }
+}
+
 .search-results {
   display: none;
   position: absolute;
