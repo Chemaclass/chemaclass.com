@@ -222,7 +222,7 @@ main {
     }
 
     .search-results {
-      max-width: 400px;
+      min-width: 510px;
       right: 0;
     }
   }
@@ -301,19 +301,32 @@ main {
 
 // Projects Grid
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+
+  // Hide scrollbar but keep functionality
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .project-card {
+  flex: 1 1 0;
+  min-width: 140px;
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
   border-radius: 12px;
-  padding: 1.25rem;
+  padding: 1rem;
   text-decoration: none;
   transition: all 0.2s ease;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
   &:hover {
     transform: translateY(-3px);
@@ -325,27 +338,27 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background: var(--accent-color);
     color: white;
-    border-radius: 10px;
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.2rem;
     color: var(--heading-color);
   }
 
   p {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--color-subtitle);
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.3;
   }
 }
 
@@ -387,12 +400,20 @@ main {
     margin: 0 0 0.5rem;
     color: var(--heading-color);
     line-height: 1.4;
+  }
+
+  .latest-preview {
+    font-size: 0.85rem;
+    color: var(--color-subtitle);
+    line-height: 1.5;
+    margin: 0 0 0.75rem;
     flex-grow: 1;
   }
 
   .latest-date {
     font-size: 0.8rem;
     color: var(--color-subtitle);
+    opacity: 0.8;
   }
 }
 
@@ -486,7 +507,16 @@ main {
     padding: 0 1rem;
   }
 
-  .projects-grid,
+  .projects-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-card {
+    flex: 0 1 calc(50% - 0.5rem);
+    min-width: 120px;
+  }
+
   .latest-grid {
     grid-template-columns: 1fr;
   }

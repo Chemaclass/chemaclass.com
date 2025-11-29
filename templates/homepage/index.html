@@ -115,11 +115,6 @@ Home | Chemaclass
                 <h3>Gacela</h3>
                 <p>Build modular PHP applications</p>
             </a>
-            <a target="_blank" href="https://satscribe.chema.me/" class="project-card">
-                <span class="project-icon"><i class="fa-brands fa-bitcoin"></i></span>
-                <h3>Satscribe</h3>
-                <p>Describe Bitcoin with AI</p>
-            </a>
         </div>
     </section>
 
@@ -129,19 +124,19 @@ Home | Chemaclass
         <div class="latest-grid">
             {% set blogs = get_section(path="blog" ~ "/_index.md") %}
             {% set latest_blog = blogs.pages.0 %}
-            <a href="{{ latest_blog.permalink }}" class="latest-card" data-from="{{latest_blog.date}}"
-               title="{{ latest_blog.description }}">
+            <a href="{{ latest_blog.permalink }}" class="latest-card" data-from="{{latest_blog.date}}">
                 <span class="latest-type">Blog Post</span>
                 <h3>{{ latest_blog.title }}</h3>
+                <p class="latest-preview">{{ latest_blog.description | truncate(length=120) }}</p>
                 <span class="latest-date">{{ latest_blog.date | date(format="%B %d, %Y") }}</span>
             </a>
 
             {% set readings = get_section(path="readings" ~ "/_index.md") %}
             {% set latest_reading = readings.pages.0 %}
-            <a href="{{ latest_reading.permalink }}" class="latest-card" data-from="{{latest_reading.date}}"
-               title="{{ latest_reading.description }}">
+            <a href="{{ latest_reading.permalink }}" class="latest-card" data-from="{{latest_reading.date}}">
                 <span class="latest-type">Reading</span>
                 <h3>{{ latest_reading.title }}</h3>
+                <p class="latest-preview">{{ latest_reading.description | truncate(length=120) }}</p>
                 <span class="latest-date">{{ latest_reading.date | date(format="%B %d, %Y") }}</span>
             </a>
         </div>

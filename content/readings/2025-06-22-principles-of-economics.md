@@ -1,6 +1,6 @@
 +++
 title = "Principles of Economics"
-description = ""
+description = "If you've ever scratched your head at the economy, wondered why prices keep rising, or questioned why money seems to lose value over time, Principles of Economics by Saifedean Ammous might blow your mind. It's not your typical dry economics book. Instead, it's a bold, no-nonsense guide to understanding how the world really works—through the lens of Austrian economics. Here's what stood out to me."
 draft = false
 authors = [ "Saifedean Ammous" ]
 [taxonomies]

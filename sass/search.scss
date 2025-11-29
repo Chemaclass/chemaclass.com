@@ -191,8 +191,16 @@ main .search-container.only-phone-visible {
   box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
   max-height: 560px;
   overflow: auto;
-  width: 400px;
+  min-width: 500px;
   right: 0;
+
+  @media (max-width: 600px) {
+    min-width: unset;
+    width: calc(100vw - 2rem);
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   &__items {
     list-style: none;
