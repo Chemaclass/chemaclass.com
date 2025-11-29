@@ -447,16 +447,50 @@ main {
 
   i {
     font-size: 1.1rem;
-    color: var(--accent-color);
+    transition: color 0.2s ease;
   }
 
-  &:hover {
-    border-color: var(--accent-color);
-    background: var(--accent-color);
-    color: white;
-
-    i {
+  // GitHub - black/white based on theme
+  &[title="GitHub"] {
+    i { color: var(--heading-color); }
+    &:hover {
+      border-color: #333;
+      background: #333;
       color: white;
+      i { color: white; }
+    }
+  }
+
+  // Twitter/X - black
+  &[title="Twitter/X"] {
+    i { color: #000; }
+    &:hover {
+      border-color: #000;
+      background: #000;
+      color: white;
+      i { color: white; }
+    }
+  }
+
+  // LinkedIn - blue
+  &[title="LinkedIn"] {
+    i { color: #0a66c2; }
+    &:hover {
+      border-color: #0a66c2;
+      background: #0a66c2;
+      color: white;
+      i { color: white; }
+    }
+  }
+
+  // Nostr - purple
+  &[title="Nostr"] {
+    i { color: #8b5cf6; }
+    &:hover {
+      border-color: #8b5cf6;
+      background: #8b5cf6;
+      color: white;
+      i { color: white; }
     }
   }
 }
