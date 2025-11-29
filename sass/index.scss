@@ -14,15 +14,16 @@
 @import "base/reset";
 @import "base/typography";
 
-// 4. Components
-@import "menu";
+// 4. Layouts
+@import "layouts/header";
 
-// 5. Pages
+// 5. Components
+@import "menu";
+@import "components/buttons";
+
+// 6. Pages
 @import "pages/homepage";
 
-// 6. Themes
+// 7. Themes
 @import "themes/light";
 @import "themes/dark";
-
-// 7. Special effects
-@import "snow";

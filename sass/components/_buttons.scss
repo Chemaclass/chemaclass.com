@@ -2,31 +2,18 @@
 #dark-mode,
 #light-mode {
   display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: inherit;
+  line-height: 0;
+  align-items: center;
 }
 
 html[color-theme=dark] #dark-mode,
 html[color-theme=light] #light-mode {
-  display: block;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: inherit;
-  line-height: 0;
-}
-
-#snow-on,
-#snow-off {
-  display: none;
-}
-
-html[snow-toggle=snow-on] #snow-on,
-html[snow-toggle=snow-off] #snow-off {
-  display: block;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: inherit;
-  line-height: 0;
+  display: flex;
 }
 
 nav button {

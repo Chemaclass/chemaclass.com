@@ -1,2 +1,8 @@
 // Reset and normalization
 // Normalize.scss and fonts.scss are imported in main entry files
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

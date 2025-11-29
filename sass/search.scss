@@ -115,21 +115,17 @@
 // Navbar search styling (non-homepage pages)
 header .search-container {
   input[type="search"] {
-    padding-left: 0.5rem; // Minimal left padding
-    padding-top: 0; // Remove top padding
-    padding-bottom: 0.2rem; // Small bottom padding for the underline
-    padding-right: 2.5rem; // Space for result count
-    border-left: none; // Remove left border
-    border-right: none; // Remove right border
-    border-top: none; // Remove top border
-    border-radius: 0; // Remove border radius
-    border-bottom: 2px solid #ccc; // Keep only bottom border
-    box-shadow: none; // Remove box shadow
-    line-height: 1.5; // Match navbar text line height
+    padding-left: 0.5rem;
+    padding-top: 0;
+    padding-bottom: 0.2rem;
+    padding-right: 2.5rem;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    line-height: 1.5;
 
     &:focus {
-      border-bottom-color: var(--accent-color); // Highlight on focus
-      box-shadow: none; // Keep no shadow on focus
+      box-shadow: none;
     }
   }
 
