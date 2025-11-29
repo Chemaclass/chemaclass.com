@@ -32,6 +32,11 @@ main {
   margin: 0 auto;
 }
 
+// Hide scroll-to-top on homepage
+main:has(.homepage-container) #scroll-to-top {
+  display: none !important;
+}
+
 // Top row: two columns
 .homepage-top {
   display: flex;
@@ -42,7 +47,7 @@ main {
 
 // Left column: Hero content
 .hero-content {
-  flex: 0 0 340px;
+  flex: 0 0 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,7 +146,7 @@ main {
 .projects-section,
 .latest-section,
 .social-section {
-  margin: 2.5rem 0;
+  margin: 1.5rem 0;
 
   h2 {
     font-size: 1.5rem;
@@ -156,7 +161,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .view-all {
@@ -221,11 +226,6 @@ main {
       font-weight: 600;
     }
 
-    .xp-values {
-      @media (min-width: $breakpoint-tablet) {
-        white-space: nowrap;
-      }
-    }
   }
 }
 
@@ -304,7 +304,7 @@ main {
 // Projects Grid
 .projects-grid {
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .project-card {
@@ -312,8 +312,8 @@ main {
   min-width: 140px;
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
-  border-radius: 16px;
-  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  padding: 1rem 0.75rem;
   text-decoration: none;
   transition: all 0.25s ease;
   display: flex;
@@ -342,31 +342,30 @@ main {
     }
   }
 
+  .project-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
   h3 {
     font-size: 1.1rem;
     font-weight: 600;
-    margin: 0 0 0.4rem;
-    color: var(--heading-color);
-  }
-
-  p {
-    font-size: 0.85rem;
-    color: var(--color-subtitle);
     margin: 0;
-    line-height: 1.4;
+    color: var(--heading-color);
   }
 
   .github-stars {
     display: flex;
     align-items: center;
-    gap: 0.35rem;
-    font-size: 0.85rem;
+    gap: 0.25rem;
+    font-size: 0.8rem;
     color: var(--color-subtitle);
-    margin-top: 0.75rem;
 
     i {
       color: #f59e0b;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
     }
 
     .star-count:empty::after {
@@ -374,20 +373,27 @@ main {
       opacity: 0.5;
     }
   }
+
+  p {
+    font-size: 0.85rem;
+    color: var(--color-subtitle);
+    margin: 0.3rem 0 0;
+    line-height: 1.4;
+  }
 }
 
 // Latest Content Grid
 .latest-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .latest-card {
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
-  border-radius: 16px;
-  padding: 1.5rem;
+  border-radius: 12px;
+  padding: 1rem;
   text-decoration: none;
   transition: all 0.25s ease;
   display: flex;
@@ -529,8 +535,8 @@ main {
 @media (max-width: $breakpoint-tablet) {
   .homepage-top {
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem 0;
+    gap: 0rem;
+    padding: 0.5rem 0;
   }
 
   .hero-content {
@@ -554,6 +560,10 @@ main {
 @media (max-width: $breakpoint-phone) {
   main {
     padding: 0 1rem;
+  }
+
+  .homepage-top {
+    gap: 1rem;
   }
 
   .projects-grid {
