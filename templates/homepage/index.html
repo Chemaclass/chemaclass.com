@@ -20,117 +20,148 @@
 {% endblock posthead %}
 
 {% block content %}
-<div class="homepage-left-column">
-  <nav class="navbar nav-menu desktop-homepage-nav-menu">
-    {% for link in config.extra.nav %}
-    <a href="{{ link.path }}">{{ link.name }}</a>
-    {% endfor %}
-    <div style="display: flex">
-      <button id="light-mode" onclick="toDarkMode()" title="Switch to dark mode">
-        <svg width="20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path fill="#444" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
-        </svg>
-      </button>
-      <button id="dark-mode" onclick="toLightMode()" title="Switch to light mode">
-        <svg width="20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path fill="#ccc" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
-        </svg>
-      </button>
-    </div>
-  </nav>
-  <div class="profile">
-    <div class="profile-container">
-      <img src="{{ profile_image.url }}" alt="profile picture"/>
+<div class="homepage-container">
+  <!-- Top Row: Hero Left + Nav/Search/About Right -->
+  <div class="homepage-top">
+    <!-- Left Column: Hero -->
+    <section class="hero-content">
+      <div class="profile">
+        <div class="profile-container">
+          <img src="{{ profile_image.url }}" alt="profile picture"/>
+        </div>
+      </div>
+      <div class="hero-text">
+        <h1>Chemaclass</h1>
+        <p class="tagline">Software Developer & Open Source Creator</p>
+        <blockquote>
+          <p title="https://agilemanifesto.org/">
+            "Individuals and interactions over processes and tools."
+          </p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Right Column: Nav + Search + About -->
+    <div class="homepage-right">
+      <nav class="homepage-nav">
+        {% for link in config.extra.nav %}
+        <a href="{{ link.path }}">{{ link.name }}</a>
+        {% endfor %}
+        <div class="theme-toggle">
+          <button id="light-mode" onclick="toDarkMode()" title="Switch to dark mode">
+            <svg width="20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#444" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+            </svg>
+          </button>
+          <button id="dark-mode" onclick="toLightMode()" title="Switch to light mode">
+            <svg width="20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#ccc" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="search-container homepage-search">
+          <input type="search" id="search" autocomplete="off" placeholder="Search... (⌘K)">
+          <span class="result-count"></span>
+          <div class="search-results">
+            <div class="search-results__items"></div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="about-section">
+        <div class="about-card">
+          <h2>About</h2>
+          <ul class="about-list">
+            <li title="Over 10 years experience with OOP, relational databases and ORMs">
+              <span class="list-icon"><i class="fa-solid fa-code"></i></span>
+              Software developer since 2013
+            </li>
+            <li title="Specify what you want. Make it work. Make it better.">
+              <span class="list-icon"><i class="fa-solid fa-check-double"></i></span>
+              SOLID advocate & Test-Driven practitioner
+            </li>
+            <li title="Mentoring and helping individuals grow in a place where they feel they belong">
+              <span class="list-icon"><i class="fa-solid fa-users"></i></span>
+              Agile practices & knowledge sharing advocate
+            </li>
+          </ul>
+          <p class="philosophy" title="XP Values">
+            In love with software development, focusing on <strong>communication</strong>, <strong>simplicity</strong>, <strong>feedback</strong>, <strong>courage</strong>, and <strong>respect</strong>.
+          </p>
+        </div>
+      </section>
     </div>
   </div>
-  <blockquote>
-    <p title="https://agilemanifesto.org/">
-      "Individuals and interactions over processes and tools."
-    </p>
-  </blockquote>
-</div>
 
-<div id="frontpage" class="homepage-right-column">
-
-  <div class="search-container">
-    <input type="search" id="search" autocomplete="off" placeholder="Search... (⌘K)">
-    <span class="result-count"></span>
-    <div class="search-results">
-      <div class="search-results__items"></div>
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <h2>Open Source Projects</h2>
+    <div class="projects-grid">
+      <a target="_blank" href="https://bashunit.typeddevs.com/" class="project-card">
+        <span class="project-icon"><i class="fa-solid fa-terminal"></i></span>
+        <h3>bashunit</h3>
+        <p>A testing library for bash scripts</p>
+      </a>
+      <a target="_blank" href="https://satscribe.chema.me/" class="project-card">
+        <span class="project-icon"><i class="fa-brands fa-bitcoin"></i></span>
+        <h3>Satscribe</h3>
+        <p>Describe Bitcoin with AI</p>
+      </a>
+      <a target="_blank" href="https://gacela-project.com/" class="project-card">
+        <span class="project-icon"><i class="fa-solid fa-cubes"></i></span>
+        <h3>Gacela</h3>
+        <p>Build modular PHP applications</p>
+      </a>
+      <a target="_blank" href="https://phel-lang.org" class="project-card">
+        <span class="project-icon"><i class="fa-solid fa-language"></i></span>
+        <h3>Phel</h3>
+        <p>Functional Programming for PHP</p>
+      </a>
     </div>
-  </div>
+  </section>
 
-  <h1 class="index-header">
-    Chemaclass
-  </h1>
+  <!-- Latest Content Section -->
+  <section class="latest-section">
+    <h2>Latest Content</h2>
+    <div class="latest-grid">
+      {% set blogs = get_section(path="blog" ~ "/_index.md") %}
+      {% set latest_blog = blogs.pages.0 %}
+      <a href="{{ latest_blog.permalink }}" class="latest-card" data-from="{{latest_blog.date}}" title="{{ latest_blog.description }}">
+        <span class="latest-type">Blog Post</span>
+        <h3>{{ latest_blog.title }}</h3>
+        <span class="latest-date">{{ latest_blog.date | date(format="%B %d, %Y") }}</span>
+      </a>
 
-  {% set banner = resize_image(path="banner.jpg", height=300, width=800, op="fit_width") %}
-  <img class="banner-image-phone" src="{{ banner.url }}" alt="banner picture"/>
+      {% set readings = get_section(path="readings" ~ "/_index.md") %}
+      {% set latest_reading = readings.pages.0 %}
+      <a href="{{ latest_reading.permalink }}" class="latest-card" data-from="{{latest_reading.date}}" title="{{ latest_reading.description }}">
+        <span class="latest-type">Reading</span>
+        <h3>{{ latest_reading.title }}</h3>
+        <span class="latest-date">{{ latest_reading.date | date(format="%B %d, %Y") }}</span>
+      </a>
+    </div>
+  </section>
 
-  <ul>
-    <li title="Over 10 years experience with OOP, relational databases and ORMs">
-      Software developer since 2013.
-    </li>
-    <li>
-      Creator of
-      <a target="_blank" title="A testing library for bash scripts" href="https://bashunit.typeddevs.com/">bashunit</a>,
-      <a target="_blank" title="Describe Bitcoin with AI" href="https://satscribe.chema.me/">Satscribe</a>,
-      and <a target="_blank" title="A library that helps you build modular PHP applications" href="https://gacela-project.com/">Gacela</a>.
-    </li>
-    <li>
-      Contributor to the
-      <a target="_blank" title="A Functional Programming language that transpiles to PHP" href="https://phel-lang.org">Phel language</a>.
-    </li>
-    <li title="Specify what you want. Make it work. Make it better.">
-        SOLID advocate and Test-Driven practitioner.
-    </li>
-    <li title="Mentoring and helping individuals grow in a place where they feel they belong">
-        Advocate for Agile practices and knowledge sharing.
-    </li>
-  </ul>
-  <p title="XP Values">
-      In love with software development, focusing on communication, simplicity, feedback, courage, and respect.
-  </p>
-
-
-  <div class="latest-container">
-    Latest <b>post</b>:
-    {% set blogs = get_section(path="blog" ~ "/_index.md") %}
-    {% set latest_blog = blogs.pages.0 %}
-    <a href="{{ latest_blog.permalink }}"
-       data-from="{{latest_blog.date}}"
-       title="{{ latest_blog.description }}"
-    >"{{ latest_blog.title }}"</a>
-    <br>
-    {% set readings = get_section(path="readings" ~ "/_index.md") %}
-    {% set latest_reading = readings.pages.0 %}
-    Latest <b>reading</b>:
-    <a href="{{ latest_reading.permalink }}"
-       data-from="{{latest_reading.date}}"
-       title="{{ latest_reading.description }}"
-    >"{{ latest_reading.title }}"</a>
-  </div>
-
-  <table class="social-links">
-    <tr>
-      <td>
-        <i class="fa-brands fa-github fa-github-hover dark-hover"></i>
-        <a target="_blank" href="https://github.com/Chemaclass">GitHub</a>
-      </td>
-      <td>
-        <i class="fa-brands fa-x-twitter fa-x-twitter-hover dark-hover"></i>
-        <a target="_blank" href="https://x.com/Chemaclass">Twitter</a>
-      </td>
-      <td>
-        <i class="fa-brands fa-linkedin fa-linkedin-hover dark-hover"></i>
-        <a target="_blank" href="https://www.linkedin.com/in/jose-maria-valera-reales/">LinkedIn</a>
-      </td>
-      <td>
-        <i class="fa-solid fa-qrcode fa-qrcode-hover dark-hover"></i>
-        <a target="_blank" href="https://primal.net/chemaclass">Nostr</a>
-      </td>
-    </tr>
-  </table>
-
+  <!-- Social Links -->
+  <section class="social-section">
+    <div class="social-links">
+      <a target="_blank" href="https://github.com/Chemaclass" class="social-link" title="GitHub">
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub</span>
+      </a>
+      <a target="_blank" href="https://x.com/Chemaclass" class="social-link" title="Twitter/X">
+        <i class="fa-brands fa-x-twitter"></i>
+        <span>Twitter</span>
+      </a>
+      <a target="_blank" href="https://www.linkedin.com/in/jose-maria-valera-reales/" class="social-link" title="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+      <a target="_blank" href="https://primal.net/chemaclass" class="social-link" title="Nostr">
+        <i class="fa-solid fa-qrcode"></i>
+        <span>Nostr</span>
+      </a>
+    </div>
+  </section>
 </div>
 {% endblock content %}
