@@ -300,8 +300,15 @@ function initSearch() {
             return;
         }
 
-        // Prepare search query
-        const searchTerm = term.startsWith('*') ? term.slice(1) : term;
+        // Prepare search query - filter out single-character terms
+        let searchTerm = term.startsWith('*') ? term.slice(1) : term;
+        const searchWords = searchTerm.split(/\s+/).filter(word => word.length >= 2);
+        if (searchWords.length === 0) {
+            // All terms were too short
+            searchResults.style.display = "none";
+            return;
+        }
+        searchTerm = searchWords.join(' ');
 
         // Try exact match first
         let indexResults = (await initIndex()).search(searchTerm, options);
@@ -336,18 +343,29 @@ function initSearch() {
             return;
         }
 
-        // Update result count
-        const resultCount = activeContainer.querySelector('.search-results__count');
-        if (resultCount) {
-            const showing = Math.min(items.length, term.startsWith("*") ? items.length : 10);
-            resultCount.textContent = items.length === showing
-                ? `${items.length} result${items.length !== 1 ? 's' : ''}`
-                : `Showing ${showing} of ${items.length} results`;
+        // Count results by section
+        const sectionCounts = {};
+        for (const item of items) {
+            let path = item.ref;
+            try {
+                const url = new URL(item.ref, window.location.origin);
+                path = url.pathname;
+            } catch (e) {}
+            const section = path.replace(/^\//, '').split('/')[0] || 'other';
+            sectionCounts[section] = (sectionCounts[section] || 0) + 1;
         }
 
-        // Display results sorted by relevance (already sorted by elasticlunr score)
-        const maxResults = term.startsWith("*") ? items.length : 10;
-        for (let i = 0; i < Math.min(items.length, maxResults); i++) {
+        // Update result count with section breakdown
+        const resultCount = activeContainer.querySelector('.search-results__count');
+        if (resultCount) {
+            const sectionBreakdown = Object.entries(sectionCounts)
+                .map(([section, count]) => `${count} ${section}`)
+                .join(', ');
+            resultCount.textContent = `${items.length} result${items.length !== 1 ? 's' : ''}: ${sectionBreakdown}`;
+        }
+
+        // Display all results sorted by relevance
+        for (let i = 0; i < items.length; i++) {
             const li = document.createElement("li");
             li.innerHTML = formatSearchResultItem(items[i], term.split(" "));
             searchResultsItems.appendChild(li);
@@ -389,6 +407,14 @@ function filterAndRankResults(results, term, searchTerm){
     const items = [];
     const lowerTerm = searchTerm.toLowerCase();
 
+    // Section priority weights
+    const sectionWeights = {
+        'blog': 2.0,
+        'readings': 1.5,
+        'talks': 1.2,
+        'books': 1.0
+    };
+
     for (let i = 0; i < results.length; i++) {
         const result = results[i];
 
@@ -396,6 +422,18 @@ function filterAndRankResults(results, term, searchTerm){
         if (!result.doc.title || result.ref === "") {
             continue;
         }
+
+        // Extract section from URL
+        let path = result.ref;
+        try {
+            const url = new URL(result.ref, window.location.origin);
+            path = url.pathname;
+        } catch (e) {}
+        const section = path.replace(/^\//, '').split('/')[0] || '';
+
+        // Apply section weight
+        const sectionWeight = sectionWeights[section] || 1.0;
+        result.score *= sectionWeight;
 
         // Boost score for exact title matches
         const titleLower = result.doc.title.toLowerCase();
