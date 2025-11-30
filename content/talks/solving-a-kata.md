@@ -2,7 +2,7 @@
 title = "Solving a Testing & Refactoring Kata"
 weight = 1
 [taxonomies]
-tags = [ "tech-talk" ]
+tags = [ "live-coding", "refactoring", "pair-programming" ]
 [extra]
 subtitle = "Live Coding in Pair/Mob Programming"
 +++

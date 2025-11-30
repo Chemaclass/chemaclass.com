@@ -3,7 +3,7 @@ title = "Gacela Project"
 aliases = [ "talks/gacela-project" ]
 weight = 1
 [taxonomies]
-tags = [ "tech-talk" ]
+tags = [ "gacela", "php", "architecture", "modular" ]
 [extra]
 subtitle = "Build modular PHP applications"
 +++

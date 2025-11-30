@@ -2,7 +2,7 @@
 title = "Open-Source Software"
 weight = 1
 [taxonomies]
-tags = [ "tech-talk" ]
+tags = [ "open-source", "community" ]
 [extra]
 subtitle = "The power of contributing to OSS"
 +++
