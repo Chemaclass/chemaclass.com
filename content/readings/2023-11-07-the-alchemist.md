@@ -1,6 +1,6 @@
 +++
 title = "The Alchemist"
-description = ""
+description = "A classic novel about Santiago, a boy who embarks on a journey seeking treasure in Egypt, learning the true importance of self-improvement and what really matters in life."
 draft = false
 authors = [ "Paulo Coelho" ]
 [taxonomies]
