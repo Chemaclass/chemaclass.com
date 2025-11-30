@@ -243,14 +243,19 @@ a.profile-icon {
     max-width: none;
     width: auto;
     z-index: 1100;
-    background: var(--body-bg);
-    padding: 0.5rem;
-    border-radius: 24px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: transparent;
+    padding: 0;
 
     input[type="search"] {
       width: 100%;
       padding: 12px 16px 12px 40px;
+      background: var(--body-bg);
+      border: 1px solid var(--search-border-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .search-icon {
+      left: 14px;
     }
 
     .search-shortcut {
