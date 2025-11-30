@@ -2,7 +2,7 @@
 title = "Final classes in PHP | Java | Any"
 description = "Clear contracts, isolated side effects, testability, low complexity and cognitive load, code fluidity, and confidence in yourself."
 [taxonomies]
-tags = [ "software", "php", "java" ]
+tags = [ "php", "software-design", "clean-code", "testing"]
 [extra]
 subtitle = "Final, or not final, that's the question"
 static_thumbnail = "/images/blog/2020-06-06/cover.jpg"

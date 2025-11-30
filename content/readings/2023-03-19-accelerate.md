@@ -4,7 +4,7 @@ description = "The Science of Lean Software and DevOps: Building and Scaling Hig
 draft = false
 authors = [ "Nicole Forsgren", "Jez Humble", "Gene Kim" ]
 [taxonomies]
-tags = [ "agile", "software" ]
+tags = [ "devops", "software-design", "agile", "productivity" ]
 [extra]
 subtitle = "Building and Scaling High Performing Technology Organizations"
 pages = "150"

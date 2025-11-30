@@ -2,7 +2,7 @@
 title = "Dunbar number"
 description = "Dunbar's number is a suggested cognitive limit to the number of people with whom one can maintain stable social relationships."
 [taxonomies]
-tags = [ "psychology", "team-work", "management" ]
+tags = [ "psychology", "team-management", "communication" ]
 [extra]
 subtitle = ""
 static_thumbnail = "/images/blog/2022-04-02/cover.jpg"

@@ -3,7 +3,7 @@ title = "The beauty of leadership"
 description = "Leadership is not a synonym for management, it has nothing to do with titles or personal attributes. So, what is it? How can we become leaders? And most importantly, why?"
 draft = false
 [taxonomies]
-tags = [ "leadership", "people", "management" ]
+tags = [ "leadership", "team-management", "communication", "mentoring" ]
 [extra]
 subtitle = "Team Lead? Tech Lead? What is leadership and what is not?"
 static_thumbnail = "/images/blog/2022-09-25/cover.jpg"

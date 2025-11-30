@@ -2,7 +2,7 @@
 title = "The path to seniority in software"
 description = "The seniority in our software industry is more polluted by marketing and politics than in reality. What can we do about it?"
 [taxonomies]
-tags = [ "software", "tech-lead", "team-work", "knowledge-sharing" ]
+tags = [ "career", "mentoring", "clean-code", "tdd", "communication" ]
 [extra]
 subtitle = "How to become a Senior Software Developer?"
 static_thumbnail = "/images/blog/2022-06-08/cover.jpg"

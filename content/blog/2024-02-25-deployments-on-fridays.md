@@ -3,7 +3,7 @@ title = "Deployments on Fridays"
 description = "I have heard multiple times, from various people, the idea of panic towards deploying on Fridays. How good is that idea of banning the day before weekend from delivering new value to our clients or customers?"
 draft = false
 [taxonomies]
-tags = [ "software", "team-work" ]
+tags = ["agile", "xp", "leadership", "productivity"]
 [extra]
 subtitle = "Why \"should we not\" deploy to production on Fridays?"
 static_thumbnail = "/images/blog/2024-02-25/cover.jpg"

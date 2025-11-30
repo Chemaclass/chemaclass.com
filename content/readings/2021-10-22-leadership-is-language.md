@@ -3,7 +3,7 @@ title = "Leadership is Language"
 description = "In this book, the former submarine commander Captain L. David Marquet dives deep into one of the most investigated marine disasters, the sinking of the El Faro, and surfaces with new ideas on leadership and language."
 authors = [ "L. David Marquet" ]
 [taxonomies]
-tags = [ "leadership", "people" ]
+tags = [ "leadership", "communication", "team-management", "productivity" ]
 [extra]
 subtitle = "The hidden power of what you say, and what you don't"
 pages = "350"

@@ -2,7 +2,7 @@
 title = "The Project Management Triangle"
 description = "A triangle of time, quality and cost. it's an indicator that these three parameters are interconnected. You can fix one or two of them, but not three."
 [taxonomies]
-tags = [ "management" ]
+tags = [ "agile", "team-management", "productivity" ]
 [extra]
 subtitle = "The Iron Triangle"
 static_thumbnail = "/images/blog/2022-07-25/cover.jpg"

@@ -3,7 +3,7 @@ title = "Working Effectively with Legacy Code"
 description = "This book offers start-to-finish strategies for working more effectively with large, untested legacy code bases."
 authors = [ "Michael Feathers" ]
 [taxonomies]
-tags = [ "software", "legacy", "testing" ]
+tags = [ "refactoring", "testing", "tdd", "software-design" ]
 [extra]
 subtitle = "This book offers start-to-finish strategies for working more effectively with large, untested legacy code bases."
 pages = "460"

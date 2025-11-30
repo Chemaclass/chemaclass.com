@@ -3,7 +3,7 @@ title = "Understanding people"
 description = "One of the most complicated challenges for everyone is avoiding misunderstandings and being aware that other people don't think the same way as you do."
 draft = false
 [taxonomies]
-tags = [ "team-work", "people", "psychology" ]
+tags = [ "communication", "psychology", "team-management" ]
 [extra]
 subtitle = "Misunderstandings, effective communication, and self-reflection"
 static_thumbnail = "/images/blog/2022-08-22/cover.jpg"

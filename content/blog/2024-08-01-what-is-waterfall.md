@@ -3,7 +3,7 @@ title = "What is Waterfall?"
 description = "Waterfall is like following a straight path where you move from one step to the next in a defined order — like water flowing down a waterfall through different stages. The problem is that each step can take a lot of time and resources to complete. Plus, you don't get feedback until the entire stage is finished, which can lead to a lot of wasted time. This is especially tricky in software development, where things are always changing and evolving."
 draft = false
 [taxonomies]
-tags = [ "software", "management" ]
+tags = [ "agile", "software-design", "team-management", "productivity" ]
 [extra]
 subtitle = "What makes Waterfall a poor fit for modern software development?"
 static_thumbnail = "/images/blog/2024-08-01/cover.jpg"

@@ -4,7 +4,7 @@ description = "Projects that followed a Waterfall methodology tended to exceed t
 draft = false
 authors = [ "Jeremy Savell" ]
 [taxonomies]
-tags = [ "agile", "management" ]
+tags = [ "agile", "team-management", "scrum", "communication" ]
 [extra]
 subtitle = "A Beginner's Guide to Agile Implementation and Leadership"
 pages = "120"

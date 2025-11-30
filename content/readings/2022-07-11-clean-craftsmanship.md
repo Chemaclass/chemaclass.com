@@ -3,7 +3,7 @@ title = "Clean Craftsmanship"
 description = "Disciplines, Standards, and Ethics"
 authors = [ "Robert C. Martin" ]
 [taxonomies]
-tags = [ "software", "clean-code" ]
+tags = [ "clean-code", "tdd", "refactoring", "testing", "xp" ]
 [extra]
 subtitle = "Disciplines, Standards, and Ethics"
 pages = "380"

@@ -4,7 +4,7 @@ description = "The Collected Writings of Bitcoin Creator Satoshi Nakamoto"
 draft = false
 authors = [ "Phil Champagne" ]
 [taxonomies]
-tags = [ "bitcoin", "history" ]
+tags = [ "bitcoin", "economics", "philosophy" ]
 [extra]
 subtitle = "The Collected Writings of Bitcoin Creator Satoshi Nakamoto"
 pages = "350"

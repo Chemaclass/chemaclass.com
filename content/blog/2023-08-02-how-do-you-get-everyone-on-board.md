@@ -4,7 +4,7 @@ description = "I was invited to the WeAreDevelopers World Congress to give a tec
 draft = false
 aliases = [ "/blog/how-do-you-deal-with-hard-people", "/blog/how-to-get-everyone-on-board" ]
 [taxonomies]
-tags = [ "leadership", "people" ]
+tags = [ "leadership", "communication", "team-management", "mentoring", "xp" ]
 [extra]
 subtitle = "How do you deal with people reluctant to change?"
 static_thumbnail = "/images/blog/2023-08-02/cover.jpg"

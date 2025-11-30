@@ -4,7 +4,7 @@ description = "Most startups fail. But many of those failures are preventable. T
 draft = false
 authors = [ "Eric Ries" ]
 [taxonomies]
-tags = [ "management", "leadership" ] 
+tags = [ "leadership", "team-management", "productivity", "agile" ] 
 [extra]
 subtitle = "How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful"
 pages = "300"

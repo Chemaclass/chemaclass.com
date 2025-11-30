@@ -2,7 +2,7 @@
 title = "Pull Requests vs Pair Programming"
 description = "Let's talk about the benefits of Pull Requests and Pair Programming, and my thoughts on these after some years of experience with them."
 [taxonomies]
-tags = [ "team-work", "pull-request", "pair-programming" ]
+tags = [ "pair-programming", "code-review", "agile", "communication" ]
 [extra]
 subtitle = "Why choosing when you can have both?"
 static_thumbnail = "/images/blog/2021-04-01/cover.jpg"

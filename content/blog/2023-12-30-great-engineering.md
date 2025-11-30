@@ -3,7 +3,7 @@ title = "Great engineering"
 description = "Coding is not just another job. In the right environment, writing software can be really fun and, even more, it can be your personal hobby as well! So... you might be focused on coding, coding and more coding to level up your own career skills."
 draft = false
 [taxonomies]
-tags = [ "software", "team-work" ]
+tags = ["software-design", "career", "communication", "clean-code"]
 [extra]
 subtitle = "A great engineer is not just a great coder"
 static_thumbnail = "/images/blog/2023-12-30/cover.jpg"

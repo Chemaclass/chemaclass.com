@@ -4,7 +4,7 @@ description = "Crucial Conversations gives you the tools you need to step up to 
 draft = false
 authors = [ "Patterson", "Grenny", "McMillan", "Switzler" ]
 [taxonomies]
-tags = [ "leadership", "communication" ]
+tags = [ "communication", "leadership", "psychology", "team-management" ]
 [extra]
 subtitle = "Tools for Talking When Stakes are High"
 pages = "200"

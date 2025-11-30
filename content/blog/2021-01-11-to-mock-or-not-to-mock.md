@@ -2,7 +2,7 @@
 title = "To mock or not to mock"
 description = "Mocking is useful, but 'what to mock' usually turns out to be a more complicated than expected if you don't treat this carefully."
 [taxonomies]
-tags = [ "software", "testing" ]
+tags = [ "testing", "tdd", "software-design", "clean-code", "php" ]
 [extra]
 subtitle = "How to escape the mocking hell"
 static_thumbnail = "/images/blog/2021-01-11/cover.jpg"

@@ -3,7 +3,7 @@ title = "Great leadership"
 description = "As business scales, the leaders' primary focus must shift from customers to employees. Therefore, I would like to share what I consider critical points that any leader should address and focus on regularly."
 draft = false
 [taxonomies]
-tags = [ "leadership", "people" ]
+tags = [ "leadership", "communication", "team-management", "mentoring" ]
 [extra]
 subtitle = "Leadership starts within your own life and behaviour"
 static_thumbnail = "/images/blog/2023-02-27/cover.jpg"

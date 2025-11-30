@@ -3,7 +3,7 @@ title = "Interview about XP and Agile"
 description = "My interview with devm.io regarding Agile and Extreme Programming. Agile is more about HOW you do certain things, rather than WHAT things you do."
 draft = false
 [taxonomies]
-tags = [ "agile", "people" ]
+tags = [ "agile", "xp", "tdd", "communication" ]
 [extra]
 subtitle = "Agile is about HOW you do certain things"
 static_thumbnail = "/images/blog/2023-01-09/cover.jpg"

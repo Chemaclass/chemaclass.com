@@ -4,7 +4,7 @@ description = "A story about the evolutionary process that gave birth to compute
 draft = false
 authors = [ "Alfre Mancera" ]
 [taxonomies]
-tags = [ "history", "bitcoin" ]
+tags = [ "bitcoin", "privacy", "philosophy", "economics" ]
 [extra]
 subtitle = "From Turing to Nakamoto"
 pages = "250"

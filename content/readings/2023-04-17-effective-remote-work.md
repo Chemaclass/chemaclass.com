@@ -4,7 +4,7 @@ description = "An effective remote work environment is about treating everyone a
 draft = false
 authors = [ "James Stanier" ]
 [taxonomies]
-tags = [ "remote", "software" ]
+tags = [ "team-management", "communication", "productivity", "leadership" ]
 [extra]
 subtitle = "For Yourself, Your Team, and Your Company"
 pages = "300"

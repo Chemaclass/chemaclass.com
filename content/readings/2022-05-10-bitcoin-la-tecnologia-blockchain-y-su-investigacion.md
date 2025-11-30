@@ -4,7 +4,7 @@ description = "How is created Bitcoin address? How does it work the creation of 
 draft = false
 authors = [ "Félix Brezo", "Yaiza Rubio" ]
 [taxonomies]
-tags = [ "bitcoin", "blockchain" ]
+tags = [ "bitcoin", "economics", "philosophy" ]
 [extra]
 subtitle = "Published in 2017, most of the technology shown is already history"
 pages = "200"

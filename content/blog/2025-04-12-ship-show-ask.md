@@ -4,7 +4,7 @@ aliases = [ "/ship-show-ask" ]
 description = "In fast-moving teams, one of the biggest tensions we face is this: How do we keep shipping without compromising quality or collaboration? The traditional approach to pull requests often slows things down. We wait hours—or days—for approvals, even for trivial changes. But the alternative—just merging directly—can feel reckless or invisible to the rest of the team. That's where the Ship-Show-Ask strategy comes in."
 draft = false
 [taxonomies]
-tags = [ "software", "team-work" ]
+tags = [ "agile", "code-review", "team-management", "productivity" ]
 [extra]
 subtitle = "Culture-Driven Collaboration at the speed of code"
 static_thumbnail = "/images/blog/2025-04-12/cover.jpg"

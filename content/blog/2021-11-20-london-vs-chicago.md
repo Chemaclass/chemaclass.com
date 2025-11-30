@@ -2,7 +2,7 @@
 title = "London vs Chicago"
 description = "There are two known schools in TDD: the mockist school (aka Outside-in) and the classicist school (aka Inside-out)."
 [taxonomies]
-tags = [ "tdd", "software" ]
+tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
 subtitle = "It's an integration, not a choice"
 static_thumbnail = "/images/blog/2021-11-20/cover.jpg"

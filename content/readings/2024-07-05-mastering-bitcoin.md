@@ -4,7 +4,7 @@ description = "This book covers everything from the basics to the most profound 
 draft = false
 authors = [ "Andreas M. Antonopoulos", "David A. Harding" ]
 [taxonomies]
-tags = [ "software", "bitcoin" ]
+tags = [ "bitcoin", "architecture", "software-design", "privacy" ]
 [extra]
 subtitle = "Programming the Open Blockchain"
 pages = "400"

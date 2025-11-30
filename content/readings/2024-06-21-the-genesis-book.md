@@ -4,7 +4,7 @@ description = "Bitcoin did not appear out of nowhere. For decades prior to Satos
 draft = false
 authors = [ "Aaron van Wirdum" ]
 [taxonomies]
-tags = [ "history", "bitcoin" ]
+tags = [ "bitcoin", "privacy", "economics", "philosophy" ]
 [extra]
 subtitle = "The Story of the People and Projects That Inspired Bitcoin"
 pages = "300"

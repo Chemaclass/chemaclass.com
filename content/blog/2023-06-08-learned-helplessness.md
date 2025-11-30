@@ -3,7 +3,7 @@ title = "Learned helplessness"
 description = "Learned helplessness is the behavior exhibited by a subject after enduring repeated aversive beyond their control. It was initially thought to be caused by the subject's acceptance of their powerlessness by discontinuing attempts to escape or avoid the aversive stimulus."
 draft = false
 [taxonomies]
-tags = [ "people", "psychology" ]
+tags = [ "psychology", "productivity", "career", "philosophy" ]
 [extra]
 subtitle = "An acceptance of powerlessness"
 static_thumbnail = "/images/blog/2023-06-08/cover.jpg"

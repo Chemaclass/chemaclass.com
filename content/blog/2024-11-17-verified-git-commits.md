@@ -4,7 +4,7 @@ description = "Learn why verified Git commits are essential for secure software 
 draft = false
 aliases = [ "/blog/verified-commits" ]
 [taxonomies]
-tags = [ "software", "open-source", "git" ]
+tags = [ "git", "security", "cryptography", "open-source" ]
 [extra]
 subtitle = "Boosting trust and security in your codebase"
 static_thumbnail = "/images/blog/2024-11-17/cover.jpg"

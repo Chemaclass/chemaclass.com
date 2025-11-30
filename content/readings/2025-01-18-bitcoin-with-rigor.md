@@ -5,7 +5,7 @@ aliases = [ "/readings/bitcoin-con-rigor" ]
 draft = false
 authors = [ "Jose Sanchis" ]
 [taxonomies]
-tags = [ "software", "bitcoin" ]
+tags = [ "bitcoin", "architecture", "privacy", "software-design" ]
 [extra]
 subtitle = "A technical study about how Bitcoin works"
 pages = "520"

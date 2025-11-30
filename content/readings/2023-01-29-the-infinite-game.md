@@ -3,7 +3,7 @@ title = "The infinite game"
 description = "From the bestselling author of Start With Why and Leaders Eat Last, a bold framework for leadership in today's ever-changing world."
 authors = [ "Simon Sinek" ]
 [taxonomies]
-tags = [ "leadership", "people" ]
+tags = [ "leadership", "team-management", "philosophy", "communication" ]
 [extra]
 subtitle = "A bold framework for leadership in today's ever-changing world"
 pages = "270"

@@ -3,7 +3,7 @@ title = "Prisoner's Dilemma"
 description = "The Prisoner's Dilemma illustrates the complexities of strategic decision-making, where individuals must choose between cooperation and betrayal, often revealing insights into human behavior and the consequences of self-interest versus collective benefit."
 draft = false
 [taxonomies]
-tags = [ "people", "psychology" ]
+tags = ["psychology", "philosophy", "communication"]
 [extra]
 subtitle = "The dilemma of trust and self-interest"
 static_thumbnail = "/images/blog/2024-06-27/cover.jpg"

@@ -3,7 +3,7 @@ title = "Animal Farm"
 description = "All animals are equal. But some animals are more equal than others."
 authors = [ "George Orwell" ]
 [taxonomies]
-tags = [  "novel", "fiction", "dystopia" ]
+tags = [ "fiction", "dystopia", "philosophy", "psychology" ]
 [extra]
 subtitle = "All animals are equal. But some animals are more equal than others."
 pages = "90"

@@ -4,7 +4,7 @@ description = "Extreme Programming (XP) is an agile software development framewo
 aliases = [ "/readings/xp-embrace-change" ]
 authors = [ "Kent Beck" ]
 [taxonomies]
-tags = [ "software", "team-work" ]
+tags = [ "xp", "agile", "tdd", "pair-programming", "communication" ]
 [extra]
 subtitle = "Embrace Change"
 pages = "160"

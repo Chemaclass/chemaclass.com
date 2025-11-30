@@ -4,7 +4,7 @@ description = "If you've ever scratched your head at the economy, wondered why p
 draft = false
 authors = [ "Saifedean Ammous" ]
 [taxonomies]
-tags = [ "finance", "bitcoin" ]
+tags = [ "economics", "bitcoin", "philosophy", "career" ]
 [extra]
 subtitle = ""
 pages = "400"

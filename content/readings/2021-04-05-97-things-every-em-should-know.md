@@ -3,7 +3,7 @@ title = "97 Things Every Engineering Manager should know"
 description = "As a manager your work is to create clarity, clarity, and more clarity."
 authors = [ "Camille Fournier" ]
 [taxonomies]
-tags = [ "engineering", "management" ]
+tags = [ "leadership", "team-management", "communication", "mentoring" ]
 [extra]
 subtitle = "Collective Wisdom from the Experts"
 pages = "255"

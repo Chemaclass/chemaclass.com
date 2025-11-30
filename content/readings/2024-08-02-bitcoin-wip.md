@@ -5,7 +5,7 @@ aliases = [ "/readings/btc-wip", "/readings/btcwip" ]
 draft = false
 authors = [ "Sjors Provoost" ]
 [taxonomies]
-tags = [ "software", "bitcoin" ]
+tags = [ "bitcoin", "architecture", "privacy", "software-design" ]
 [extra]
 subtitle = "Technical innovations from the trenches"
 pages = "120"

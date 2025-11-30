@@ -3,7 +3,7 @@ title = "The metamorphosis"
 description = "The story begins with a traveling salesman, Gregor Samsa, waking to find himself transformed (metamorphosed) into a large, monstrous insect-like creature."
 authors = [ "Franz Kafka" ]
 [taxonomies]
-tags = [ "novel", "fiction" ]
+tags = [ "fiction", "philosophy", "psychology" ]
 [extra]
 subtitle = "The story begins with a traveling salesman, Gregor Samsa, waking to find himself transformed (metamorphosed) into a large, monstrous insect-like creature."
 pages = "65"

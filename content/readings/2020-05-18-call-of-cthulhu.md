@@ -3,7 +3,7 @@ title = "The call of Cthulhu"
 description = "The Call of Cthulu, the tale of a horrifying underwater monster coming to life and threatening mankind, spawning an entire mythology, with the power to strike terror into the hearts of even the Great Old Ones."
 authors = [ "H. P. Lovecraft" ]
 [taxonomies]
-tags = [ "novel", "fiction", "short-story" ]
+tags = [ "fiction", "horror" ]
 [extra]
 subtitle = "The Call of Cthulu, the tale of a horrifying underwater monster coming to life and threatening mankind, spawning an entire mythology, with the power to strike terror into the hearts of even the Great Old Ones."
 pages = "100"

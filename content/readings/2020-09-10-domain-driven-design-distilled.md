@@ -3,7 +3,7 @@ title = "Domain-Driven Design Distilled"
 description = "Domain-Driven Design Distilled brings DDD to life. Whether you're a developer, consultant, or customer, it will help you understand it, so you can benefit from its power."
 authors = [ "Vaughn Vernon" ]
 [taxonomies]
-tags = [ "software", "architecture" ]
+tags = [ "ddd", "architecture", "software-design" ]
 [extra]
 subtitle = ""
 pages = "160"

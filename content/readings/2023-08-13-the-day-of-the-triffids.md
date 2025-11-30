@@ -4,7 +4,7 @@ description = "This book is fantastic and frightening, but entirely plausible. I
 draft = false
 authors = [ "John Wyndham" ]
 [taxonomies]
-tags = [ "novel", "dystopia" ]
+tags = [ "fiction", "psychology" ]
 [extra]
 subtitle = ""
 pages = "270"

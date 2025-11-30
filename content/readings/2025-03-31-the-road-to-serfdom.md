@@ -4,7 +4,7 @@ description = "A quick and plain-English summary of Hayek's classic take on free
 draft = false
 authors = [ "Friedrich A. Hayek" ]
 [taxonomies]
-tags = [ "finance", "philosophy", "freedom" ]
+tags = [ "economics", "philosophy", "privacy", "bitcoin" ]
 [extra]
 subtitle = "How central planning can slowly erode freedom"
 pages = "266"

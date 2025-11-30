@@ -4,7 +4,7 @@ description = "In an era dominated by constant connectivity, the concept of digi
 draft = false
 authors = [ "Cal Newport" ]
 [taxonomies]
-tags = [ "productivity", "psychology", "habits" ]
+tags = [ "productivity", "psychology", "career", "philosophy" ]
 [extra]
 subtitle = "Choosing a Focused Life in a Noisy World"
 pages = "250"

@@ -3,7 +3,7 @@ title = "Different beliefs about software quality"
 description = "What to do when working on \"bad software\" and you can't improve it because it is against the beliefs of your peers? Should you change the company?"
 draft = false
 [taxonomies]
-tags = [ "software", "people" ]
+tags = [ "clean-code", "agile", "xp", "communication", "career" ]
 [extra]
 subtitle = "Some thoughts about software quality among your team"
 static_thumbnail = "/images/blog/2022-10-08/cover.jpg"

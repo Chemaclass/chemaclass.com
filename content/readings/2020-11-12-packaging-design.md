@@ -3,7 +3,7 @@ title = "Principles of package design"
 description = "Apply design principles to your classes, preparing them for reuse. You will use package design principles to create packages that are just right in terms of cohesion and coupling, and are user- and maintainer-friendly at the same time."
 authors = [ "Matthias Noback" ]
 [taxonomies]
-tags = [ "software", "design" ]
+tags = [ "software-design", "architecture", "clean-code" ]
 [extra]
 subtitle = "Creating Reusable Software Components"
 pages = "250"

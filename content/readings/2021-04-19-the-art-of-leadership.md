@@ -3,7 +3,7 @@ title = "The Art of Leadership"
 description = "Leadership practices are small things done repetitively over time. Managers tell you where you are, leaders tell you where you're going."
 authors = [ "Michael Loop" ]
 [taxonomies]
-tags = [ "leadership", "management" ]
+tags = [ "leadership", "communication", "mentoring", "team-management" ]
 [extra]
 subtitle = "Small Things, Done Well"
 pin = false

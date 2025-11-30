@@ -3,7 +3,7 @@ title = "How to test private methods?"
 description = "From time to time I have had to face this question: how to test private methods? I have put together in an article the techniques that I usually use."
 draft = false
 [taxonomies]
-tags = [ "testing", "software", "design" ]
+tags = ["testing", "tdd", "software-design", "clean-code"]
 [extra]
 subtitle = "Testing private methods. When and how?"
 static_thumbnail = "/images/blog/2023-10-20/cover.jpg"

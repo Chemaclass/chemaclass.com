@@ -3,7 +3,7 @@ title = "Dedicated QA Teams in software?"
 description = "This will be controversial, but let's talk about the QA position. The hidden truth behind the lack of software quality and why this should concern you if you write software."
 draft = false
 [taxonomies]
-tags = [ "software", "agile" ]
+tags = [ "testing", "tdd", "agile", "clean-code" ]
 [extra]
 subtitle = "How does it fit a dedicated QA person in your agile team?"
 static_thumbnail = "/images/blog/2023-05-17/cover.jpg"

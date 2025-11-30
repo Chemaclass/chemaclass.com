@@ -4,7 +4,7 @@ description = "Told through the story of one bold company (People First IT), Ada
 draft = false
 authors = [ "Thomas H. Douglas" ]
 [taxonomies]
-tags = [ "leadership", "people" ]
+tags = [ "leadership", "team-management", "communication", "productivity", "philosophy" ]
 [extra]
 subtitle = "How to Create Innovation, Solve People Puzzles, and Win in Business"
 pages = "270"

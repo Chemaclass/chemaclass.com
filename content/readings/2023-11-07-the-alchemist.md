@@ -4,7 +4,7 @@ description = "A classic novel about Santiago, a boy who embarks on a journey se
 draft = false
 authors = [ "Paulo Coelho" ]
 [taxonomies]
-tags = [ "novel", "fantasy" ]
+tags = [ "fiction", "philosophy", "career" ]
 [extra]
 subtitle = ""
 pages = "200"

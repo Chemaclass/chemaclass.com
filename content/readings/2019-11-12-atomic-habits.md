@@ -3,7 +3,7 @@ title = "Atomic Habits"
 description = "People think that when you want to change your life, you need to think big. James Clear has discovered another way. He knows that real change comes from the compound effect of hundreds of small decisions. He calls them atomic habits."
 authors = [ "James Clear" ]
 [taxonomies]
-tags = [ "habits", "improvement" ]
+tags = [ "psychology", "productivity", "career" ]
 [extra]
 subtitle = "An Easy & Proven Way to Build Good Habits & Break Bad Ones"
 pages = "320"

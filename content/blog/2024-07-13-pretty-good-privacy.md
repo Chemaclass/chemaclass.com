@@ -4,7 +4,7 @@ description = "PGP is an encryption program that ensures privacy and authenticat
 draft = true
 #aliases = [ "/pgp", "/gpg", "/blog/pgp" ]
 [taxonomies]
-tags = [ "software", "security" ]
+tags = [ "security", "privacy", "cryptography", "encryption" ]
 [extra]
 subtitle = "How PGP secures your digital communication"
 static_thumbnail = "/images/blog/2024-07-13/cover.jpg"

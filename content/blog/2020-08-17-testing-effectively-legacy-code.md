@@ -2,7 +2,7 @@
 title = "Testing Effectively Legacy Code"
 description = "These tests are also known as Characterization tests."
 [taxonomies]
-tags = [ "software", "testing" ]
+tags = [ "testing", "refactoring", "clean-code", "tdd"]
 [extra]
 subtitle = "How to write proper tests to already written code"
 static_thumbnail = "/images/blog/2021-01-11/cover.jpg"

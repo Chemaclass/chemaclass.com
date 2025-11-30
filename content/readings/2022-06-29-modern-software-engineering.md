@@ -3,7 +3,7 @@ title = "Modern Software Engineering"
 description = "This book presents software development as an engineering practice at every level. To master software engineering, we must become experts at learning and managing complexity."
 authors = [ "David Farley" ]
 [taxonomies]
-tags = [ "software", "engineering" ]
+tags = [ "software-design", "testing", "architecture", "agile" ]
 [extra]
 subtitle = "Doing What Works to Build Better Software Faster"
 pages = "200"

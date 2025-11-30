@@ -4,7 +4,7 @@ description = "This is a story about an impossible project in which the people a
 draft = false
 authors = [ "Gene Kim", "Kevin Behr", "George Spafford" ]
 [taxonomies]
-tags = [ "software", "devops" ] 
+tags = [ "devops", "leadership", "agile", "team-management" ] 
 [extra]
 subtitle = "A Novel About IT, DevOps, And Helping Your Business Win"
 pages = "430"

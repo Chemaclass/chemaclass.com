@@ -4,7 +4,7 @@ description = "Radical Candor is a management philosophy developed by Kim Scott,
 draft = false
 authors = [ "Kim Scott" ]
 [taxonomies]
-tags = [ "management", "leadership" ] 
+tags = [ "leadership", "communication", "team-management", "mentoring" ] 
 [extra]
 subtitle = "How to Get What You Want by Saying What You Mean"
 pages = "300"

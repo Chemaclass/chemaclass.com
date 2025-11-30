@@ -3,7 +3,7 @@ title = "The Pragmatic Programmer"
 description = "The journey to mastery"
 authors = [ "Andrew Hunt", "David Thomas" ]
 [taxonomies]
-tags = [ "software", "soft-skills" ]
+tags = [ "software-design", "clean-code", "refactoring", "career" ]
 [extra]
 subtitle = "The journey to mastery"
 pages = "350"

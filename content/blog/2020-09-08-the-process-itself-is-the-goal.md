@@ -2,7 +2,7 @@
 title = "The process itself is the goal"
 description = "No goal should be an achievement on its own, but the process itself that helps us to go in the direction of these goals."
 [taxonomies]
-tags = [ "discipline", "habits", "process", "focus", "self-improvement" ]
+tags = [ "productivity", "psychology", "career", "philosophy"]
 [extra]
 subtitle = "How to focus and have self-discipline"
 static_thumbnail = "/images/blog/2020-09-08/cover.jpg"

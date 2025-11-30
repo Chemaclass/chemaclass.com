@@ -4,7 +4,7 @@ description = "A Guide for Tech Leaders Navigating Growth and Change"
 aliases = [ "/readings/manager-path" ]
 authors = [ "Camille Fournier" ]
 [taxonomies]
-tags = [ "management", "leadership" ]
+tags = [ "leadership", "team-management", "mentoring", "communication" ]
 [extra]
 subtitle = "A Guide for Tech Leaders Navigating Growth and Change"
 pages = "220"

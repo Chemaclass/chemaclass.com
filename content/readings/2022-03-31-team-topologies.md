@@ -3,7 +3,7 @@ title = "Team Topologies"
 description = "Team Topologies focuses on how to set up dynamic team structures and interaction modes that can help teams adapt quickly to new conditions, and achieve fast and safe software delivery."
 authors = [ "Matthew Skelton", "Manuel Pais" ]
 [taxonomies]
-tags = [ "team-work", "management" ]
+tags = [ "team-management", "architecture", "devops", "agile" ]
 [extra]
 subtitle = "Organizing Business and Technology Teams for Fast Flow"
 pages = "240"

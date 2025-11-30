@@ -2,7 +2,7 @@
 title = "The art of refactoring"
 description = "If you see something, in the scope of your current task, that can be easily improved, improve it. And if you have any questions about it, ask."
 [taxonomies]
-tags = [ "software", "refactoring", "testing" ]
+tags = [ "refactoring", "clean-code", "testing", "software-design"]
 [extra]
 subtitle = "When, how, and why"
 static_thumbnail = "/images/blog/2020-06-28/cover.jpg"

@@ -3,7 +3,7 @@ title = "Dare to lead"
 description = "Leadership is not about titles, status and power over people. Leaders are people who hold themselves accountable for recognising the potential in people and ideas, and developing that potential. This is a book for everyone who is ready to choose courage over comfort, make a difference and lead."
 authors = [ "Brené Brown" ]
 [taxonomies]
-tags = [ "leadership", "people" ]
+tags = [ "leadership", "communication", "psychology", "mentoring" ]
 [extra]
 subtitle = "Brave Work. Tough Conversations. Whole Hearts."
 pages = "320"

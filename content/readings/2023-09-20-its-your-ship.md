@@ -5,7 +5,7 @@ draft = false
 aliases = [ "/readings/it-is-your-ship" ]
 authors = [ "D. Michael Abrashoff" ]
 [taxonomies]
-tags = [ "leadership", "management" ]
+tags = [ "leadership", "team-management", "communication", "mentoring" ]
 [extra]
 subtitle = "Management Techniques from the Best Damn Ship in the Navy"
 pages = "200"

@@ -4,7 +4,7 @@ description = "In Man's Search for Meaning, Frankl not only shares his harrowing
 draft = false
 authors = [ "Viktor E. Frankl" ]
 [taxonomies]
-tags = [ "psychology", "philosophy", "biography" ]
+tags = [ "psychology", "philosophy", "leadership", "career" ]
 [extra]
 subtitle = "Purpose in despair: Frankl's holocaust insights"
 pages = "120"

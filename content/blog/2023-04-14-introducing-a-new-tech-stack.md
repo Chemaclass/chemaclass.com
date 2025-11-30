@@ -3,7 +3,7 @@ title = "Introducing a new tech stack"
 description = "To introduce a new tech stack for the entire team, it's important to bring \"why?\" and a strategy to make it happen among the team because it will affect everyone."
 draft = false
 [taxonomies]
-tags = [ "software", "people" ]
+tags = [ "software-design", "architecture", "team-management", "communication" ]
 [extra]
 subtitle = "How to introduce new technologies in your team"
 static_thumbnail = "/images/blog/2023-04-14/cover.jpg"

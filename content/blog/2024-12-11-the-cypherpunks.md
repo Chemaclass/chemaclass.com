@@ -4,7 +4,7 @@ aliases = [ "/blog/cypherpunks" ]
 description = "In the early '90s, with the internet on the rise, a group called the Cypherpunks emerged to defend digital privacy. They pushed for encryption and privacy tech, shaping our digital world with their vision and ideals."
 draft = false
 [taxonomies]
-tags = [ "software", "open-source", "bitcoin" ]
+tags = [ "privacy", "bitcoin", "cryptography", "security", "philosophy" ]
 [extra]
 subtitle = "Pioneers of privacy in the digital age"
 static_thumbnail = "/images/blog/2024-12-11/cover.jpg"

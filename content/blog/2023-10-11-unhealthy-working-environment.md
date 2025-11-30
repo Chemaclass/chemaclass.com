@@ -3,7 +3,7 @@ title = "Unhealthy working environment"
 description = "An unhealthy working environment can have various symptoms that negatively impact both the physical and mental well-being of employees."
 draft = false
 [taxonomies]
-tags = [ "management", "leadership" ]
+tags = ["leadership", "team-management", "communication", "psychology"]
 [extra]
 subtitle = "Recognizing red flags of an unhealthy workplace"
 static_thumbnail = "/images/blog/2023-10-11/cover.jpg"

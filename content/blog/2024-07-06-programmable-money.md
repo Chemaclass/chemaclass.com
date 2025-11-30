@@ -3,7 +3,7 @@ title = "Programmable Money"
 description = "Bitcoin is often referred to as programmable money because it allows for the execution of programmable transactions through its scripting language, leveraging each bit for precision and functionality."
 draft = false
 [taxonomies]
-tags = [ "software", "bitcoin" ]
+tags = [ "bitcoin", "programming", "cryptography", "security" ]
 [extra]
 subtitle = "The power of Bitcoin's Script"
 static_thumbnail = "/images/blog/2024-07-06/cover.jpg"

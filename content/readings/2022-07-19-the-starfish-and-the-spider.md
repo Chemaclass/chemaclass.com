@@ -4,7 +4,7 @@ description = "If you cut off a spider's head, it dies; if you cut off a starfis
 draft = false
 authors = [ "Ori Brafman", "Rod Beckstrom" ]
 [taxonomies]
-tags = [ "business", "leadership" ]
+tags = [ "leadership", "team-management", "philosophy" ]
 [extra]
 subtitle = "The Unstoppable Power of Leaderless Organizations"
 pages = "240"

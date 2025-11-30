@@ -3,7 +3,7 @@ title = "What success means to me"
 description = "Success isn't about money, titles, or achievements. For me, it's something much simpler and more meaningful: waking up knowing that what I do makes the people around me—and myself—happier."
 draft = false
 [taxonomies]
-tags = [ "life", "reflection", "happiness" ]
+tags = [ "philosophy", "career", "productivity", "leadership" ]
 [extra]
 subtitle = "A simple definition that changed how I live"
 static_thumbnail = "/images/blog/2025-11-15/cover.jpg"

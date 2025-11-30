@@ -2,7 +2,7 @@
 title = "Bikeshedding"
 description = "People within an organization typically give disproportionate weight to trivial issues."
 [taxonomies]
-tags = [ "psychology", "team-work", "management" ]
+tags = [ "psychology", "team-management", "productivity", "communication" ]
 [extra]
 subtitle = "Also known as the Law of triviality"
 static_thumbnail = "/images/blog/2022-05-27/cover.jpg"

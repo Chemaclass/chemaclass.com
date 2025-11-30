@@ -3,7 +3,7 @@ title = "People skills"
 description = "So, you're a software developer, and you've mastered coding languages, algorithms, and all the tech stuff. That's awesome! But here's the deal: technical skills alone won't get you as far as you might think. If you can't work well with others, it doesn't matter how great your code is — nobody will want to work with you."
 draft = false
 [taxonomies]
-tags = [ "software", "team-work", "people" ]
+tags = [ "communication", "team-management", "career", "leadership" ]
 [extra]
 subtitle = "From code to collaboration"
 static_thumbnail = "/images/blog/2024-09-02/cover.jpg"

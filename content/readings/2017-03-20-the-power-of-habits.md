@@ -3,7 +3,7 @@ title = "The Power of Habit"
 description = "Why We Do What We Do, and How to Change"
 authors = [ "Charles Duhigg" ]
 [taxonomies]
-tags = [ "habits", "improvement" ]
+tags = [ "psychology", "productivity", "career" ]
 [extra]
 subtitle = "Why We Do What We Do, and How to Change"
 pages = "400"

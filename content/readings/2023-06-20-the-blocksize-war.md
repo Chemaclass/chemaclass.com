@@ -4,7 +4,7 @@ description = "The battle for control over Bitcoin's protocol rules"
 draft = false
 authors = [ "Jonathan Bier" ]
 [taxonomies]
-tags = [ "finance", "bitcoin" ]
+tags = [ "bitcoin", "economics", "leadership" ]
 [extra]
 subtitle = "The battle for control over Bitcoin's protocol rules"
 pages = "240"

@@ -4,7 +4,7 @@ description = "The complexity here is not about writing tests itself, but the ha
 draft = false
 aliases = [ "tdd", "/inner-peace-katas", "blog/inner-peace-katas" ]
 [taxonomies]
-tags = [ "tdd", "testing", "software" ]
+tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
 subtitle = "What is challenging about it?"
 static_thumbnail = "/images/blog/2021-08-01/cover.jpg"
