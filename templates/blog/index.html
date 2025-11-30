@@ -17,7 +17,7 @@
 
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
 
-  <div class="blog-list">
+  <div class="blog-list blog-list--featured">
     {% for post in pinned_posts %}
       {{ helpers::content_card(post=post, pinned=true) }}
     {% endfor %}
