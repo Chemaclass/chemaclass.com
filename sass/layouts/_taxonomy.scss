@@ -1,3 +1,248 @@
+// Tags list page
+.tags-page {
+  &__header {
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      color: var(--heading-color);
+    }
+  }
+
+  &__count {
+    font-size: 0.9rem;
+    color: var(--color-subtitle);
+    margin: 0;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  &__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--search-input-bg);
+    border: 1px solid var(--preview-divider-color) !important;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: var(--body-color);
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: var(--accent-color) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__tag-name {
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+
+  &__tag-count {
+    background: var(--preview-divider-color);
+    color: var(--color-subtitle);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 1rem;
+  }
+}
+
+// Single tag page
+.tag-single {
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-subtitle);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color);
+      border-bottom: none;
+    }
+
+    svg {
+      transition: transform 0.2s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(-3px);
+    }
+  }
+
+  &__header {
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0.5rem 0 0;
+      color: var(--heading-color);
+    }
+  }
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+
+    svg {
+      opacity: 0.9;
+    }
+  }
+
+  &__posts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__post {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--search-input-bg);
+    border: 1px solid var(--preview-divider-color) !important;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: var(--accent-color) !important;
+      transform: translateX(4px);
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+      color: var(--heading-color);
+      line-height: 1.4;
+    }
+  }
+
+  &__post-thumb {
+    flex-shrink: 0;
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__post-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.35rem;
+  }
+
+  &__post-type {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+
+    &--blog {
+      background: rgba(58, 92, 136, 0.15);
+      color: var(--accent-color);
+    }
+
+    &--reading {
+      background: rgba(34, 197, 94, 0.15);
+      color: #16a34a;
+    }
+
+    &--talk {
+      background: rgba(139, 92, 246, 0.15);
+      color: #8b5cf6;
+    }
+  }
+
+  &__post-desc {
+    font-size: 0.85rem;
+    color: var(--color-subtitle);
+    margin: 0.5rem 0 0;
+    line-height: 1.5;
+  }
+
+  &__post-date {
+    font-size: 0.75rem;
+    color: var(--color-subtitle);
+    white-space: nowrap;
+  }
+}
+
+// Responsive
+@media (max-width: 600px) {
+  .tags-page {
+    &__header h1 {
+      font-size: 1.5rem;
+    }
+
+    &__grid {
+      gap: 0.5rem;
+    }
+
+    &__tag {
+      padding: 0.4rem 0.8rem;
+    }
+
+    &__tag-name {
+      font-size: 0.85rem;
+    }
+  }
+
+  .tag-single {
+    &__post {
+      padding: 0.85rem;
+    }
+
+    &__post-thumb {
+      width: 60px;
+      height: 45px;
+    }
+
+    &__post-desc {
+      display: none;
+    }
+  }
+}
+
+// Legacy styles (keep for compatibility)
 .taxonomy-name {
   text-transform: capitalize;
 }

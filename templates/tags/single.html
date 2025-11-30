@@ -2,29 +2,64 @@
 
 {% import "helpers-preview.html" as helpers_preview %}
 
-{% block posthead %} 
+{% block posthead %}
   {% for post in term.pages %}
     <link rel="prerender" href="{{ post.permalink }}" />
   {% endfor %}
 {% endblock posthead %}
 
 {% block content %}
-  <h1>{{ term.pages | length }} pages tagged with "{{ term.name }}"</h1>
-  <div class="taxonomy-container">
+<div class="tag-single">
+  <a href="/tags/" class="tag-single__back">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    All Tags
+  </a>
+
+  <header class="tag-single__header">
+    <span class="tag-single__label">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+        <line x1="7" y1="7" x2="7.01" y2="7"></line>
+      </svg>
+      {{ term.name }}
+    </span>
+    <h1>{{ term.pages | length }} post{% if term.pages | length != 1 %}s{% endif %}</h1>
+  </header>
+
+  <div class="tag-single__posts">
     {% for post in term.pages %}
-      <div class="reading-preview">
-        <h3 class="reading-title reading-title__long">
-          <a href="{{ post.permalink }}">{{ post.title }}</a>
-        </h3>
-        {% if post.date %}
-          <span class="reading-date">
-            {{ post.date | date(format="%B %d, %Y") }}
-          </span>
-        {% endif %}
-        <div class="summary">
-          {{ helpers_preview::summary_tags(post=post) }}
-        </div>
+    <a href="{{ post.permalink }}" class="tag-single__post">
+      {% if post.extra.static_thumbnail %}
+      <div class="tag-single__post-thumb">
+        <img src="{{ post.extra.static_thumbnail }}" alt="{{ post.title }}" />
       </div>
+      {% elif post.extra.thumbnail %}
+      <div class="tag-single__post-thumb">
+        <img src="{{ get_url(path=post.path ~ post.extra.thumbnail) }}" alt="{{ post.title }}" />
+      </div>
+      {% endif %}
+      <div class="tag-single__post-content">
+        <div class="tag-single__post-meta">
+          {% if post.path is containing("blog/") %}
+          <span class="tag-single__post-type tag-single__post-type--blog">Blog</span>
+          {% elif post.path is containing("readings/") %}
+          <span class="tag-single__post-type tag-single__post-type--reading">Reading</span>
+          {% elif post.path is containing("talks/") %}
+          <span class="tag-single__post-type tag-single__post-type--talk">Talk</span>
+          {% endif %}
+          {% if post.date %}
+          <span class="tag-single__post-date">{{ post.date | date(format="%B %d, %Y") }}</span>
+          {% endif %}
+        </div>
+        <h3>{{ post.title }}</h3>
+        {% if post.description %}
+        <p class="tag-single__post-desc">{{ post.description | truncate(length=120) }}</p>
+        {% endif %}
+      </div>
+    </a>
     {% endfor %}
   </div>
+</div>
 {% endblock content %}

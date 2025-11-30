@@ -7,12 +7,19 @@
 {% endblock posthead %}
 
 {% block content %}
-<h1 class="taxonomy-name">{{ taxonomy.name }}</h1>
-<div class="taxonomy-container">
+<div class="tags-page">
+  <header class="tags-page__header">
+    <h1>Tags</h1>
+    <p class="tags-page__count">{{ terms | length }} tags</p>
+  </header>
+
+  <div class="tags-page__grid">
     {% for term in terms %}
-    <div class="term">
-        <a href="{{ term.permalink }}">{{ term.name }} ({{ term.pages | length }})</a>
-    </div>
+    <a href="{{ term.permalink }}" class="tags-page__tag">
+      <span class="tags-page__tag-name">{{ term.name }}</span>
+      <span class="tags-page__tag-count">{{ term.pages | length }}</span>
+    </a>
     {% endfor %}
+  </div>
 </div>
 {% endblock content %}
