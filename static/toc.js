@@ -4,7 +4,7 @@
 
   // Configuration
   const CONFIG = {
-    contentSelector: '.post-title ~ div, .reading-post .post-title ~ div', // Main content area (blog posts and readings)
+    contentSelector: '.blog-post__content, .post-title ~ div, .reading-post .post-title ~ div', // Main content area (blog posts and readings)
     tocContainer: '#toc-container',
     headingSelectors: 'h2, h3', // Which headings to include
     minHeadings: 2, // Minimum headings required to show TOC

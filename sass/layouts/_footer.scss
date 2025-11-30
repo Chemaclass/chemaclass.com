@@ -1,37 +1,142 @@
+// Site footer (post footer)
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--preview-divider-color);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    background: var(--search-input-bg);
+    border-radius: 12px;
+    border: 1px solid var(--preview-divider-color);
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-subtitle);
+
+    strong {
+      color: var(--heading-color);
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: var(--body-bg);
+    border: 1px solid var(--preview-divider-color);
+    color: var(--body-color);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+
+    i {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    // Twitter/X
+    &--twitter:hover {
+      border-color: #000;
+      color: #000;
+
+      .theme-dark & {
+        border-color: #fff;
+        color: #fff;
+      }
+    }
+
+    // LinkedIn
+    &--linkedin:hover {
+      border-color: #0077B5;
+      color: #0077B5;
+    }
+
+    // PayPal
+    &--paypal:hover {
+      border-color: #003087;
+      color: #003087;
+
+      .theme-dark & {
+        border-color: #00ABF0;
+        color: #00ABF0;
+      }
+    }
+
+    // Lightning/Bitcoin
+    &--lightning:hover {
+      border-color: #F7931A;
+      color: #F7931A;
+    }
+  }
+
+  &__divider {
+    width: 1px;
+    height: 50px;
+    background: var(--preview-divider-color);
+  }
+}
+
+// Responsive
+@media (max-width: 600px) {
+  .site-footer {
+    &__content {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1.25rem 1rem;
+    }
+
+    &__divider {
+      width: 80%;
+      height: 1px;
+    }
+
+    &__link {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+
+      span {
+        display: none;
+      }
+
+      i {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+// Page footer (copyright etc)
 #footer-page {
   text-align: center;
   font-size: 0.9em;
-  border-top: lightgray solid 1px;
+  border-top: 1px solid var(--preview-divider-color);
   max-width: $max-width;
   margin: 16px auto;
   padding-top: 28px;
-}
-
-#footer-about,
-#sponsor {
-  font-size: 1.1rem;
-  text-align: center;
-  margin-bottom: 25px;
-
-  .do-not-hesitate {
-    margin: 28px 0;
-  }
-}
-
-.phone-footer-about {
-  display: block;
-}
-
-.desktop-footer-about {
-  display: none;
-}
-
-@media (min-width: $breakpoint-small-phone) {
-  .phone-footer-about {
-    display: none;
-  }
-
-  .desktop-footer-about {
-    display: block;
-  }
 }
