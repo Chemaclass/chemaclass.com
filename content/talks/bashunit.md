@@ -13,6 +13,8 @@ Inspired by PHPUnit, Jest, and others, bashunit is a testing framework for bash 
 
 ---
 
+- 2025-11-26 | Symfony User Group [Berlin, Germany] (EN)
+  - [bashunit: PHPUnit Meets Bash](https://www.meetup.com/sfugberlin/events/312045935/)
 - 2024-10-29 | Berlin Hack & Tell [**Berlin, Germany**] (EN)
   - [bashunit in 5 min](https://bhnt.c-base.org/2024-10-29-no100-annivercary) ([Video](https://youtu.be/SX7iNHaSsF0))
 - 2024-05-27 | International PHP Conference [**Berlin, Germany**] (EN)

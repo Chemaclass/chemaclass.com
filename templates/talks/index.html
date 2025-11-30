@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-{% import "helpers-preview.html" as helpers_preview %}
-
 {% block title %}
   Talks | Chemaclass
 {% endblock %}
@@ -13,6 +11,47 @@
 {% endblock posthead %}
 
 {% block content %}
-  {{ section.content | safe }}
+  <div class="talks-page">
+    <div class="talks-header">
+      <h1>Talks</h1>
+      <p class="talks-intro">Follow my speaker journey.</p>
+    </div>
+
+    <!-- Featured Topics -->
+    {% if section.pages | length > 0 %}
+    <section class="talks-featured">
+      <h2 class="talks-section-title">Featured Topics</h2>
+      <div class="talks-grid">
+        {% for talk in section.pages %}
+        <a href="{{ talk.permalink }}" class="talk-card">
+          <div class="talk-card__content">
+            <h3 class="talk-card__title">{{ talk.title }}</h3>
+            {% if talk.extra.subtitle %}
+              <p class="talk-card__subtitle">{{ talk.extra.subtitle }}</p>
+            {% endif %}
+            <p class="talk-card__summary">{{ talk.summary | striptags | truncate(length=120) }}</p>
+            {% if talk.taxonomies.tags %}
+              <div class="talk-card__tags">
+                {% for tag in talk.taxonomies.tags %}
+                  <span class="talk-card__tag">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- Timeline -->
+    <section class="talks-timeline">
+      <h2 class="talks-section-title">Timeline</h2>
+      <div class="timeline-content">
+        {{ section.content | safe }}
+      </div>
+    </section>
+  </div>
+
   {% include "footer-about.html" %}
 {% endblock content %}

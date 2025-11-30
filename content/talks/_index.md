@@ -5,14 +5,6 @@ page_template = "talks/single.html"
 sort_by = "weight"
 +++
 
-# Talks
-
-Follow my speaker journey.
-
-![cover](/images/talks/2022-06-23/ama-state-of-php.jpg)
-
----
-
 ## 2025
 
 ### November

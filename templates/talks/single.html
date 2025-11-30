@@ -66,25 +66,53 @@
 {% endblock posthead %}
 
 {% block content %}
-  <!-- Table of Contents (floating sidebar) -->
-  <nav id="toc-container"></nav>
+  <article class="talk-single">
+    <!-- Back link -->
+    <a href="/talks/" class="talk-single__back">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      All Talks
+    </a>
 
-  <div class="post-title">
-    <h1>{{ page.title }}</h1>
-    {% if page.extra.subtitle %}
-      <h3 class="post-subtitle">
-        {{ page.extra.subtitle }}
-      </h3>
-    {% endif %}
-  </div>
+    <!-- Hero section -->
+    <header class="talk-single__hero">
+      <h1 class="talk-single__title">{{ page.title }}</h1>
+      {% if page.extra.subtitle %}
+        <p class="talk-single__subtitle">{{ page.extra.subtitle }}</p>
+      {% endif %}
+      {% if page.taxonomies.tags %}
+        <div class="talk-single__tags">
+          {% for tag in page.taxonomies.tags %}
+            <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="talk-single__tag">{{ tag }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </header>
 
-  <div>
-    {{ page.content | safe }}
-  </div>
+    <!-- Content (appearances list + images) -->
+    <section class="talk-single__content">
+      {{ page.content | safe }}
+    </section>
+
+    <!-- Navigation between talks -->
+    <nav class="talk-single__nav">
+      {% if page.lower %}
+        <a href="{{ page.lower.permalink }}" class="talk-single__nav-link talk-single__nav-link--prev">
+          <span class="talk-single__nav-label">Previous</span>
+          <span class="talk-single__nav-title">{{ page.lower.title }}</span>
+        </a>
+      {% else %}
+        <span></span>
+      {% endif %}
+      {% if page.higher %}
+        <a href="{{ page.higher.permalink }}" class="talk-single__nav-link talk-single__nav-link--next">
+          <span class="talk-single__nav-label">Next</span>
+          <span class="talk-single__nav-title">{{ page.higher.title }}</span>
+        </a>
+      {% endif %}
+    </nav>
+  </article>
 
   {% include "footer-about.html" %}
 {% endblock content %}
-
-{% block js %}
-<script type="text/javascript" src="{{ get_url(path='toc.js') | safe }}" defer></script>
-{% endblock js %}

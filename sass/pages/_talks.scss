@@ -1,0 +1,532 @@
+// Talks page
+.talks-page {
+  max-width: 100%;
+}
+
+.talks-header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .talks-intro {
+    color: var(--color-subtitle);
+    font-size: 1.1rem;
+    margin: 0;
+  }
+}
+
+.talks-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--heading-color);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+}
+
+// Featured Topics Grid
+.talks-featured {
+  margin-bottom: 3rem;
+}
+
+.talks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.talk-card {
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--preview-divider-color);
+  background: var(--search-input-bg);
+  transition: all 0.2s ease;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+    border-bottom: 1px solid var(--accent-color);
+  }
+
+  &__content {
+    padding: 1.25rem;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem;
+    color: var(--heading-color);
+    line-height: 1.3;
+  }
+
+  &__subtitle {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin: 0 0 0.5rem;
+    font-weight: 500;
+  }
+
+  &__summary {
+    font-size: 0.85rem;
+    color: var(--color-subtitle);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+  }
+
+  &__tag {
+    background: var(--search-bg-selected-item);
+    color: var(--body-color);
+    padding: 0.15rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+}
+
+// Timeline section
+.talks-timeline {
+  margin-top: 2rem;
+}
+
+.timeline-content {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--preview-divider-color);
+
+  // Year headers
+  h2 {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 2rem 0 1rem -1.5rem;
+    padding-left: 2rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      background: var(--accent-color);
+      border-radius: 50%;
+      border: 2px solid var(--body-background-color);
+    }
+  }
+
+  // First year (no top margin)
+  > h2:first-of-type {
+    margin-top: 0;
+  }
+
+  // Month headers
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin: 1.25rem 0 0.75rem 0;
+  }
+
+  // Talk entries (list items)
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      position: relative;
+      padding: 0.5rem 0;
+      padding-left: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -1.75rem;
+        top: 0.9rem;
+        width: 6px;
+        height: 6px;
+        background: var(--color-subtitle);
+        border-radius: 50%;
+      }
+
+      // Nested list items (individual talks)
+      ul {
+        margin-top: 0.25rem;
+        margin-left: 1rem;
+
+        li {
+          padding: 0.25rem 0;
+          font-size: 0.85rem;
+
+          &::before {
+            left: -1.25rem;
+            top: 0.65rem;
+            width: 4px;
+            height: 4px;
+            background: var(--preview-divider-color);
+          }
+        }
+      }
+    }
+  }
+
+  // Links
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Horizontal rules (year separators)
+  hr {
+    border: none;
+    border-top: 1px solid var(--preview-divider-color);
+    margin: 2rem 0;
+    margin-left: -1.5rem;
+  }
+
+  // Images in timeline
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  // Location badges
+  strong {
+    color: var(--heading-color);
+  }
+}
+
+// Responsive
+@media (max-width: 600px) {
+  .talks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-content {
+    padding-left: 1rem;
+
+    h2 {
+      margin-left: -1rem;
+      padding-left: 1.5rem;
+      font-size: 1.25rem;
+
+      &::before {
+        left: -0.4rem;
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    ul li::before {
+      left: -1.25rem;
+    }
+  }
+}
+
+// ===========================================
+// Single Talk Page
+// ===========================================
+
+.talk-single {
+  max-width: 100%;
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-subtitle);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color);
+      border-bottom: none;
+    }
+
+    svg {
+      transition: transform 0.2s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(-3px);
+    }
+  }
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--preview-divider-color);
+  }
+
+  &__title {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--heading-color);
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    display: block;
+    width: 100%;
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin: 0 0 1rem;
+    font-weight: 500;
+  }
+
+  &__tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__tag {
+    background: var(--search-bg-selected-item);
+    color: var(--body-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--accent-color);
+      color: white;
+      border-bottom: none;
+    }
+  }
+
+  &__description {
+    background: var(--search-input-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--accent-color);
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--body-color);
+    }
+  }
+
+  &__content {
+    // Horizontal rule separator
+    hr {
+      border: none;
+      border-top: 1px solid var(--preview-divider-color);
+      margin: 2rem 0;
+    }
+
+    // Section title for appearances
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--heading-color);
+      margin: 1.5rem 0 1rem;
+    }
+
+    // Appearances timeline
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      padding-left: 1.5rem;
+      border-left: 2px solid var(--preview-divider-color);
+
+      li {
+        position: relative;
+        padding: 0.75rem 0;
+        font-size: 0.9rem;
+        line-height: 1.6;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: -1.75rem;
+          top: 1rem;
+          width: 8px;
+          height: 8px;
+          background: var(--accent-color);
+          border-radius: 50%;
+          border: 2px solid var(--body-background-color);
+        }
+
+        // Nested list (talk details)
+        ul {
+          border-left: none;
+          padding-left: 1rem;
+          margin-top: 0.25rem;
+
+          li {
+            padding: 0.25rem 0;
+            font-size: 0.85rem;
+
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    // Links
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    // Location badges
+    strong {
+      color: var(--heading-color);
+    }
+
+    // Images gallery
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: scale(1.01);
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    // Multiple images side by side on larger screens
+    img + img {
+      margin-top: 1rem;
+    }
+  }
+
+  // Navigation between talks
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--preview-divider-color);
+  }
+
+  &__nav-link {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    border: 1px solid var(--preview-divider-color);
+    background: var(--search-input-bg);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    max-width: 45%;
+
+    &:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    &--prev {
+      align-items: flex-start;
+    }
+
+    &--next {
+      align-items: flex-end;
+      margin-left: auto;
+    }
+  }
+
+  &__nav-label {
+    font-size: 0.75rem;
+    color: var(--color-subtitle);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  &__nav-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    line-height: 1.3;
+  }
+}
+
+// Single talk responsive
+@media (max-width: 600px) {
+  .talk-single {
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+    }
+
+    &__hero {
+      padding: 1.5rem 0;
+    }
+
+    &__description {
+      padding: 1rem;
+    }
+
+    &__nav {
+      flex-direction: column;
+    }
+
+    &__nav-link {
+      max-width: 100%;
+
+      &--next {
+        align-items: flex-start;
+      }
+    }
+  }
+}
