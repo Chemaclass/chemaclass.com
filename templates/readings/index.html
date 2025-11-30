@@ -1,33 +1,34 @@
-{% extends "blog/index.html" %}
+{% extends "base.html" %}
 
-{% import "helpers-preview.html" as helpers_preview %}
+{% import "helpers-preview.html" as helpers %}
 
 {% block title %}
   Readings | Chemaclass
 {% endblock %}
+
+{% block posthead %}
+  {% for post in section.pages %}
+    <link rel="prerender" href="{{ post.permalink }}" />
+  {% endfor %}
+{% endblock posthead %}
 
 {% block content %}
   {{ section.content | safe }}
 
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
 
-  <div class="readings-previews">
-    {% if pinned_posts %}
-    <div class="readings-previews-highlighted">
-      <h4>Highlighted</h4>
-      {% for post in pinned_posts %}
-        {{ helpers_preview::reading_preview(post=post)}}
-      {% endfor %}
-    </div>
-    {% endif %}
+  <div class="blog-list">
+    {% for post in pinned_posts %}
+      {{ helpers::content_card(post=post, pinned=true) }}
+    {% endfor %}
 
     {% for post in section.pages %}
-      {%if post not in pinned_posts %}
-        {{ helpers_preview::reading_preview(post=post)}}
+      {% if post not in pinned_posts %}
+        {{ helpers::content_card(post=post) }}
       {% endif %}
     {% endfor %}
   </div>
 
   {% include "footer-about.html" %}
-{% endblock %}
+{% endblock content %}
 

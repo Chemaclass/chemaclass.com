@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% import "helpers-preview.html" as helpers_preview %}
+{% import "helpers-preview.html" as helpers %}
 
 {% block title %}
   Blog | Chemaclass
@@ -19,85 +19,12 @@
 
   <div class="blog-list">
     {% for post in pinned_posts %}
-      <article class="blog-card pinned {% if post.extra.thumbnail or post.extra.static_thumbnail %}has-thumbnail{% endif %}">
-        <a href="{{ post.permalink }}" class="blog-card__link">
-          {% if post.extra.thumbnail %}
-            <div class="blog-card__thumbnail">
-              <img src="{{ get_url(path=post.path ~ post.extra.thumbnail) }}" alt="{{ post.title }}" loading="lazy" />
-            </div>
-          {% elif post.extra.static_thumbnail %}
-            <div class="blog-card__thumbnail">
-              {% if post.extra.static_thumbnail is matching("^http[s]?://") %}
-                <img src="{{ post.extra.static_thumbnail | safe }}" alt="{{ post.title }}" loading="lazy" />
-              {% else %}
-                <img src="{{ get_url(path=post.extra.static_thumbnail) }}" alt="{{ post.title }}" loading="lazy" />
-              {% endif %}
-            </div>
-          {% endif %}
-          <div class="blog-card__content">
-            <div class="blog-card__meta">
-              <span class="blog-card__date">{{ post.date | date(format="%b %d, %Y") }}</span>
-              {% if post.reading_time %}
-                <span class="blog-card__reading-time">{{ post.reading_time }} min read</span>
-              {% endif %}
-              <span class="blog-card__pinned-badge">Pinned</span>
-            </div>
-            <h2 class="blog-card__title">{{ post.title }}</h2>
-            {% if post.extra.subtitle %}
-              <p class="blog-card__subtitle">{{ post.extra.subtitle }}</p>
-            {% endif %}
-            <p class="blog-card__summary">{{ post.description | default(value=post.summary | striptags | truncate(length=150)) }}</p>
-            {% if post.taxonomies.tags %}
-              <div class="blog-card__tags">
-                {% for tag in post.taxonomies.tags | slice(end=3) %}
-                  <span class="blog-card__tag">{{ tag }}</span>
-                {% endfor %}
-              </div>
-            {% endif %}
-          </div>
-        </a>
-      </article>
+      {{ helpers::content_card(post=post, pinned=true) }}
     {% endfor %}
 
     {% for post in section.pages %}
       {% if post not in pinned_posts %}
-        <article class="blog-card {% if post.extra.thumbnail or post.extra.static_thumbnail %}has-thumbnail{% endif %}">
-          <a href="{{ post.permalink }}" class="blog-card__link">
-            {% if post.extra.thumbnail %}
-              <div class="blog-card__thumbnail">
-                <img src="{{ get_url(path=post.path ~ post.extra.thumbnail) }}" alt="{{ post.title }}" loading="lazy" />
-              </div>
-            {% elif post.extra.static_thumbnail %}
-              <div class="blog-card__thumbnail">
-                {% if post.extra.static_thumbnail is matching("^http[s]?://") %}
-                  <img src="{{ post.extra.static_thumbnail | safe }}" alt="{{ post.title }}" loading="lazy" />
-                {% else %}
-                  <img src="{{ get_url(path=post.extra.static_thumbnail) }}" alt="{{ post.title }}" loading="lazy" />
-                {% endif %}
-              </div>
-            {% endif %}
-            <div class="blog-card__content">
-              <div class="blog-card__meta">
-                <span class="blog-card__date">{{ post.date | date(format="%b %d, %Y") }}</span>
-                {% if post.reading_time %}
-                  <span class="blog-card__reading-time">{{ post.reading_time }} min read</span>
-                {% endif %}
-              </div>
-              <h2 class="blog-card__title">{{ post.title }}</h2>
-              {% if post.extra.subtitle %}
-                <p class="blog-card__subtitle">{{ post.extra.subtitle }}</p>
-              {% endif %}
-              <p class="blog-card__summary">{{ post.description | default(value=post.summary | striptags | truncate(length=150)) }}</p>
-              {% if post.taxonomies.tags %}
-                <div class="blog-card__tags">
-                  {% for tag in post.taxonomies.tags | slice(end=3) %}
-                    <span class="blog-card__tag">{{ tag }}</span>
-                  {% endfor %}
-                </div>
-              {% endif %}
-            </div>
-          </a>
-        </article>
+        {{ helpers::content_card(post=post) }}
       {% endif %}
     {% endfor %}
   </div>
