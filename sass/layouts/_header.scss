@@ -1,8 +1,10 @@
 header {
   width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   position: sticky;
   top: 0;
@@ -10,7 +12,7 @@ header {
   padding: 1rem 2rem;
   z-index: 1000;
   box-shadow: 0 1px 0 var(--preview-divider-color);
-  gap: 2rem;
+  gap: 1rem;
 
   nav {
     font-size: 1.1rem;
@@ -102,6 +104,7 @@ nav {
   align-items: center;
   justify-content: flex-end;
   gap: 2rem;
+  margin-left: auto;
 
   a {
     border-bottom: none !important;
@@ -127,20 +130,24 @@ nav {
 
 a.profile-icon {
   border: none;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--heading-color);
   text-decoration: none;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
+  line-height: 0;
 
   &:hover {
-    color: var(--heading-color);
     opacity: 0.8;
   }
 
   img {
-    display: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--preview-divider-color);
+    transition: border-color 0.2s ease;
+  }
+
+  &:hover img {
+    border-color: var(--accent-color);
   }
 }
 
@@ -156,8 +163,9 @@ a.profile-icon {
     }
   }
 
-  a.profile-icon {
-    font-size: 1.3rem;
+  a.profile-icon img {
+    width: 32px;
+    height: 32px;
   }
 
   .header-search {
@@ -195,8 +203,9 @@ a.profile-icon {
     }
   }
 
-  a.profile-icon {
-    font-size: 1.2rem;
+  a.profile-icon img {
+    width: 30px;
+    height: 30px;
   }
 
   .header-search {

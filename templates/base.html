@@ -100,7 +100,8 @@
     {% block header %}
       <header>
         <a class="profile-icon" href="/">
-          Chemaclass
+          {% set nav_icon = resize_image(path=config.extra.profile_small, width=36, height=36, op="fill") %}
+          <img src="{{ nav_icon.url }}" alt="Chemaclass" />
         </a>
         
         <div class="search-container header-search">
