@@ -14,17 +14,6 @@ main {
   margin: 0 auto;
 }
 
-#footer-page {
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--color-subtitle);
-  margin: 3rem auto 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--preview-divider-color);
-  max-width: 960px;
-  width: 100%;
-}
-
 // Homepage container
 .homepage-container {
   width: 100%;
@@ -146,13 +135,13 @@ main:has(.homepage-container) #scroll-to-top {
 
 .projects-section,
 .latest-section,
-.social-section {
+.connect-section {
   margin: 1.5rem 0;
 
   h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    margin: 0;
+    margin: 0 0 1rem;
     color: var(--heading-color);
   }
 }
@@ -498,10 +487,9 @@ main:has(.homepage-container) #scroll-to-top {
   }
 }
 
-// Social Links
-.social-section {
+// Connect Section
+.connect-section {
   text-align: center;
-  padding-bottom: 0;
 }
 
 .social-links {
@@ -571,23 +559,6 @@ main:has(.homepage-container) #scroll-to-top {
       color: white;
       i { color: white; }
     }
-  }
-}
-
-.lightning-address {
-  display: inline-block;
-  margin: 1rem 0 0;
-  font-size: 0.85rem;
-  color: var(--color-subtitle);
-  text-decoration: none;
-  transition: color 0.2s ease;
-
-  i {
-    color: #f7931a;
-  }
-
-  &:hover {
-    color: #f7931a;
   }
 }
 
@@ -706,7 +677,7 @@ main:has(.homepage-container) #scroll-to-top {
 
   .projects-section,
   .latest-section,
-  .social-section {
+  .connect-section {
     margin: 1rem 0;
 
     h2 {
@@ -812,10 +783,6 @@ main:has(.homepage-container) #scroll-to-top {
     }
   }
 
-  .lightning-address {
-    font-size: 0.8rem;
-    margin-top: 0.75rem;
-  }
 }
 
 // Extra small screens

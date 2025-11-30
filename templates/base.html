@@ -153,12 +153,30 @@
       {% block content %} {% endblock content %}
     </main>
 
-    <footer id="footer-page">
-      <a href="{{ get_url(path='atom.xml') | safe }}"><i class="fa fa-rss dark-hover" aria-hidden="true"></i> RSS</a>
-      | <a href="/sponsor"><i class="fa fa-magic dark-hover" aria-hidden="true"></i> Sponsor</a>
-      © <time datetime="{{now() | date(format='%Y')}}">{{now() | date(format="%Y")}}</time>
-      <div class="phone-footer-about"></div>
-      Chema - Jose M. Valera Reales
+    <footer class="page-footer">
+      <div class="page-footer__content">
+        <div class="page-footer__links">
+          <a href="{{ get_url(path='atom.xml') | safe }}" class="page-footer__link">
+            <i class="fa fa-rss"></i>
+            <span>RSS</span>
+          </a>
+          <a href="/sponsor" class="page-footer__link">
+            <i class="fa fa-heart"></i>
+            <span>Sponsor</span>
+          </a>
+          <a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="page-footer__link">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+        <div class="page-footer__info">
+          <span class="page-footer__copyright">
+            © <time datetime="{{now() | date(format='%Y')}}">{{now() | date(format="%Y")}}</time> Chemaclass
+          </span>
+          <span class="page-footer__separator">·</span>
+          <span class="page-footer__name">Jose Maria Valera Reales</span>
+        </div>
+      </div>
     </footer>
 
     <script type="text/javascript" src="{{ get_url(path='dark-mode.js') | safe }}"></script>
