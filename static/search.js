@@ -364,10 +364,13 @@ function initSearch() {
             resultCount.textContent = `${items.length} result${items.length !== 1 ? 's' : ''}: ${sectionBreakdown}`;
         }
 
+        // Easter egg: check for bitcoin search
+        const isBitcoinSearch = searchTerm.toLowerCase().includes('bitcoin');
+
         // Display all results sorted by relevance
         for (let i = 0; i < items.length; i++) {
             const li = document.createElement("li");
-            li.innerHTML = formatSearchResultItem(items[i], term.split(" "));
+            li.innerHTML = formatSearchResultItem(items[i], term.split(" "), isBitcoinSearch);
             searchResultsItems.appendChild(li);
         }
     }, WAIT_TIME_MS);
@@ -469,10 +472,12 @@ function debounce(func, wait) {
     };
 }
 
-function formatSearchResultItem(item, terms) {
+function formatSearchResultItem(item, terms, isBitcoinSearch = false) {
+    const bitcoinIcon = isBitcoinSearch ? '₿ ' : '';
+
     if (item.ref === undefined || item.ref === "") {
         return `<div class="search-results__item ${item.class}">`
-            + `<span class="search-results__item-title ${item.class}">${item.doc.title}</span>`
+            + `<span class="search-results__item-title ${item.class}">${bitcoinIcon}${item.doc.title}</span>`
             + (item.doc.body ? `<div class="search-results__item-body ${item.class}">${item.doc.body}</div>` : "")
             + '</div>';
     }
@@ -507,7 +512,7 @@ function formatSearchResultItem(item, terms) {
         + (section ? `<span class="search-results__item-section">${section}</span>` : '')
         + (dateStr ? `<span class="search-results__item-date">${dateStr}</span>` : '')
         + `</div>`
-        + `<span class="search-results__item-title">${item.doc.title}</span>`
+        + `<span class="search-results__item-title">${bitcoinIcon}${item.doc.title}</span>`
         + `<div class="search-results__item-body">${makeTeaser(item.doc.body, terms)}</div>`
         + `</a>`
         + '</div>';
