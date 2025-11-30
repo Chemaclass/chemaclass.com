@@ -9,7 +9,7 @@ subtitle = "A simple definition that changed how I live"
 static_thumbnail = "/images/blog/2025-11-15/cover.jpg"
 +++
 
-![cover](/images/blog/2025-11-15/cover.jpg)
+![blog-cover](/images/blog/2025-11-15/cover.jpg)
 
 For the longest time, I thought success was about hitting certain milestones. Getting that promotion. Earning a specific salary. Building something that people would recognize.
 

@@ -69,26 +69,127 @@
 {% endblock posthead %}
 
 {% block content %}
+  <!-- Reading progress bar -->
+  <div id="reading-progress" class="reading-progress"></div>
+
   <!-- Table of Contents (floating sidebar) -->
   <nav id="toc-container"></nav>
 
-  <div class="post-title">
-    <h1>{{ page.title }}</h1>
-    {% if page.extra.subtitle %}
-      <h3 class="post-subtitle">
-        {{ page.extra.subtitle }}
-      </h3>
+  <article class="blog-post">
+    <!-- Back link -->
+    <a href="/blog/" class="blog-post__back">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      All Posts
+    </a>
+
+    <!-- Hero thumbnail -->
+    {% if page.extra.static_thumbnail %}
+    <div class="blog-post__hero">
+      <img src="{{ page.extra.static_thumbnail }}" alt="{{ page.title }}" />
+    </div>
+    {% elif page.extra.thumbnail %}
+    <div class="blog-post__hero">
+      <img src="{{ get_url(path=page.path ~ page.extra.thumbnail) }}" alt="{{ page.title }}" />
+    </div>
     {% endif %}
-    {{ self::page_sub_header(page=page) }}
-  </div>
 
-  <div>
-    {{ page.content | safe }}
-  </div>
+    <!-- Title -->
+    <h1 class="blog-post__title">{{ page.title }}</h1>
 
-  <hr class="footer-rule" />
+    <!-- Subtitle + Metadata + Tags -->
+    <div class="blog-post__meta-row">
+      {% if page.extra.subtitle %}
+        <p class="blog-post__subtitle">{{ page.extra.subtitle }}</p>
+      {% endif %}
+      <div class="blog-post__meta">
+        {% if page.date %}
+        <span class="blog-post__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          {{ page.date | date(format="%B %d, %Y") }}
+        </span>
+        {% endif %}
+        {% if page.reading_time %}
+        <span class="blog-post__reading-time">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          {{ page.reading_time }} min read
+        </span>
+        {% endif %}
+        {% if page.word_count %}
+        <span class="blog-post__word-count">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+          </svg>
+          {{ page.word_count }} words
+        </span>
+        {% endif %}
+        {% if page.taxonomies.tags %}
+        <span class="blog-post__tags">
+          {% for tag in page.taxonomies.tags %}
+            <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="blog-post__tag">{{ tag }}</a>
+          {% endfor %}
+        </span>
+        {% endif %}
+      </div>
+    </div>
 
-  {{ related::container(page=page,orderDesc=true) }}
+    <!-- Content -->
+    <div class="blog-post__content">
+      {{ page.content | safe }}
+    </div>
+
+    <!-- Footer -->
+    <footer class="blog-post__footer">
+      {% set url = config.extra.repo_content_url ~ page.relative_path %}
+      <a href="{{ url }}" class="blog-post__edit-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+        </svg>
+        Found a typo? Edit this page
+      </a>
+    </footer>
+
+    <!-- Navigation between posts -->
+    <nav class="blog-post__nav">
+      {% if page.higher %}
+        <a href="{{ page.higher.permalink }}" class="blog-post__nav-link blog-post__nav-link--prev">
+          <span class="blog-post__nav-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Older
+          </span>
+          <span class="blog-post__nav-title">{{ page.higher.title }}</span>
+        </a>
+      {% else %}
+        <span></span>
+      {% endif %}
+      {% if page.lower %}
+        <a href="{{ page.lower.permalink }}" class="blog-post__nav-link blog-post__nav-link--next">
+          <span class="blog-post__nav-label">
+            Newer
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </span>
+          <span class="blog-post__nav-title">{{ page.lower.title }}</span>
+        </a>
+      {% endif %}
+    </nav>
+  </article>
 
   {% include "footer-about.html" %}
 
@@ -96,6 +197,21 @@
 
 {% block js %}
 <script type="text/javascript" src="{{ get_url(path='toc.js') | safe }}" defer></script>
+<script>
+  // Reading progress bar
+  window.addEventListener('scroll', function() {
+    const article = document.querySelector('.blog-post__content');
+    if (!article) return;
+
+    const articleTop = article.offsetTop;
+    const articleHeight = article.offsetHeight;
+    const windowHeight = window.innerHeight;
+    const scrollTop = window.scrollY;
+
+    const progress = Math.min(Math.max((scrollTop - articleTop + windowHeight * 0.3) / articleHeight, 0), 1);
+    document.getElementById('reading-progress').style.width = (progress * 100) + '%';
+  });
+</script>
 {% endblock js %}
 
 {% macro page_sub_header(page) %}
