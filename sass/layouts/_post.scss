@@ -174,7 +174,7 @@
     flex-direction: column;
     padding: 1rem 1.25rem;
     border-radius: 12px;
-    border: 1px solid var(--preview-divider-color);
+    border: 1px solid var(--preview-divider-color) !important;
     background: var(--search-input-bg);
     text-decoration: none;
     color: inherit;
@@ -182,7 +182,7 @@
     max-width: 45%;
 
     &:hover {
-      border-color: var(--accent-color);
+      border: 1px solid var(--accent-color) !important;
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
