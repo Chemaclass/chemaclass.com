@@ -104,9 +104,16 @@
         </a>
         
         <div class="search-container header-search">
-          <input type="search" id="site-search" name="search" class="search" autocomplete="off" placeholder="Search... (⌘K)">
-          <span class="result-count"></span>
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input type="search" id="site-search" name="search" class="search" autocomplete="off" placeholder="Search...">
+          <kbd class="search-shortcut">/</kbd>
           <div class="search-results">
+            <div class="search-results__header">
+              <span class="search-results__count"></span>
+            </div>
             <div class="search-results__items"></div>
           </div>
         </div>
@@ -166,6 +173,19 @@
           searchContainer.querySelector('input').focus();
         }
       }
+
+      // Close search when clicking outside
+      document.addEventListener('click', function(e) {
+        const searchContainer = document.querySelector('.header-search');
+        const searchToggle = document.getElementById('search-toggle');
+
+        if (!searchContainer || !searchContainer.classList.contains('active')) return;
+
+        // Check if click is outside search container and toggle button
+        if (!searchContainer.contains(e.target) && !searchToggle.contains(e.target)) {
+          searchContainer.classList.remove('active');
+        }
+      });
     </script>
   </body>
   {% block js %}

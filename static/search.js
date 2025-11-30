@@ -1,4 +1,3 @@
-const MAX_ITEMS = 4;
 const UP_ARROW = "ArrowUp";
 const DOWN_ARROW = "ArrowDown";
 const ENTER_KEY = "Enter";
@@ -17,7 +16,6 @@ function getActiveSearchContainer() {
 
 // Initialize with the first visible container (will be updated dynamically)
 let activeContainer = getActiveSearchContainer() || allSearchContainers[0];
-let resultCount = activeContainer?.getElementsByClassName('result-count')[0];
 let searchInput = activeContainer?.querySelector('input[type="search"]');
 let searchResults = activeContainer?.querySelector(".search-results");
 let searchResultsItems = activeContainer?.querySelector(".search-results__items");
@@ -28,50 +26,9 @@ let resultsItemsIndex = -1;
 // Update active container references (called when focusing on a search input)
 function updateActiveContainer(container) {
     activeContainer = container;
-    resultCount = container.getElementsByClassName('result-count')[0];
     searchResults = container.querySelector(".search-results");
     searchResultsItems = container.querySelector(".search-results__items");
 }
-
-const icons = {
-    blog: `<svg width="25px" viewBox="0 0 24 24" fill="none">
-        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10.0002 4H7.2002C6.08009 4 5.51962 4 5.0918 4.21799C4.71547 4.40973 4.40973 4.71547 4.21799 5.0918C4 5.51962 4 6.08009 4 7.2002V16.8002C4 17.9203 4 18.4801 4.21799 18.9079C4.40973 19.2842 4.71547 19.5905 5.0918 19.7822C5.5192 20 6.07899 20 7.19691 20H16.8031C17.921 20 18.48 20 18.9074 19.7822C19.2837 19.5905 19.5905 19.2839 19.7822 18.9076C20 18.4802 20 17.921 20 16.8031V14M16 5L10 11V14H13L19 8M16 5L19 2L22 5L19 8M16 5L19 8"/>
-    </svg>`,
-    readings: `<svg width="25px" viewBox="0 0 24 24" fill="none">
-        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 19V6.2C4 5.0799 4 4.51984 4.21799 4.09202C4.40973 3.71569 4.71569 3.40973 5.09202 3.21799C5.51984 3 6.0799 3 7.2 3H16.8C17.9201 3 18.4802 3 18.908 3.21799C19.2843 3.40973 19.5903 3.71569 19.782 4.09202C20 4.51984 20 5.0799 20 6.2V17H6C4.89543 17 4 17.8954 4 19ZM4 19C4 20.1046 4.89543 21 6 21H20M9 7H15M9 11H15M19 17V21"/>
-    </svg>`,
-    others: `<svg width="25px" viewBox="0 0 32 32" fill="none">
-    <style type="text/css">
-        .st0{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-        .st1{fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
-    </style>
-        <path class="st0" d="M14.7,16c-1.6-1.1-2.7-2.9-2.7-5c0-3.5,3.1-6.4,6.7-6c2.6,0.3,4.8,2.4,5.2,5.1c0.4,2.7-1,5-3.1,6.2c2.6,0.8,4.5,3.4,4.1,6.4c-0.3,3.1-3.1,5.3-6.2,5.3L12,28c-3.3,0-6-2-7-6v-8l0.8,0.6C7.9,16.2,10.4,17,13,17h0"/>
-        <line class="st0" x1="20" y1="9" x2="20" y2="12"/>
-        <path class="st0" d="M23.2,14c1.8-0.1,3.5-0.9,4.6-2.4L29,10h-5"/>
-        <path class="st0" d="M19,22c0,1.7-1.3,3-3,3c-4,0-5-3-5-3s3.3-3,5-3S19,20.3,19,22z"/>
-    </svg>`,
-    talks: `<svg width="25px"  viewBox="0 0 512 512"  xml:space="preserve">
-        <style type="text/css">.st0{fill:#000000;}</style>
-        <g>
-        <rect x="19.564" y="447.635" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -285.559 842.3594)" class="st0" width="24.231" height="65.371"/>
-        <polygon class="st0" points="0.17,494.699 46.394,448.809 63.188,465.945 17.133,511.66 "/>
-        <path class="st0" d="M263.682,147.594L43.473,412.466l56.061,56.061l264.872-220.21L263.682,147.594z M99.534,468.528
-        l264.872-220.21"/>
-        <path class="st0" d="M43.642,412.297l220.223-264.551l100.371,100.738L99.549,468.203L43.642,412.297z"/>
-        <path class="st0" d="M273.211,120.521l118.268,118.268c29.522,0.34,59.073-10.42,82.226-31.882L305.092,38.295
-        C283.631,61.447,272.872,90.999,273.211,120.521z"/>
-        <path class="st0" d="M391.48,238.551l-118.1-118.199c-0.279-30.238,11.02-59.379,31.887-81.891l168.268,168.614
-        c-22.131,20.18-50.791,31.484-80.695,31.484L391.48,238.551z"/>
-        <path class="st0" d="M477.097,34.904C437.35-4.844,376.59-10.594,330.612,17.4L494.6,181.387
-        C522.594,135.409,516.844,74.65,477.097,34.904z"/>
-        <path class="st0" d="M330.783,17.23c18.611-10.984,40.072-16.992,62.018-16.992c31.787,0,61.664,12.371,84.127,34.832
-        c38.895,38.898,46.123,98.863,17.625,145.93L330.783,17.23z"/>
-        </g>
-    </svg>`,
-    bitcoin: `<svg width="25px" viewBox="0 0 24 24" fill="none">
-        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 6H15C16.6569 6 18 7.34315 18 9C18 10.6569 16.6569 12 15 12M10 6V12M10 6H7M10 6V3M15 12H10M15 12C16.6569 12 18 13.3431 18 15C18 16.6569 16.6569 18 15 18H10M10 12V18M10 18H7M10 18V21M13 6V3M13 21V18"/>
-    </svg>`
-};
 
 ////////////////////////////////////
 // Interaction with the search input
@@ -318,7 +275,6 @@ function initSearch() {
         searchResultsItems.innerHTML = "";
         currentTerm = term;
         if (term === "" || term.length < 2) {
-            resultCount.textContent = "";
             return;
         }
 
@@ -360,7 +316,6 @@ function initSearch() {
         indexResults.sort((a, b) => b.score - a.score);
 
         const items = filterAndRankResults(indexResults, term, searchTerm);
-        resultCount.textContent = `${items.length} result${items.length !== 1 ? 's' : ''}`;
 
         if (items.length === 0) {
             if (term.toLowerCase() === "btc") {
@@ -381,12 +336,22 @@ function initSearch() {
             return;
         }
 
-        appendSearchResults((res) => res.ref.includes("/blog"), icons.blog + " Blog", items, term);
-        appendSearchResults((res) => res.ref.includes("/readings"), icons.readings + " Readings", items, term);
-        appendSearchResults((res) => res.ref.includes("/talks"), icons.talks + " Talks", items, term);
-        appendSearchResults((res) => !res.ref.includes("/blog")
-            && !res.ref.includes("/readings")
-            && !res.ref.includes("/talks"), icons.others + " Others", items, term);
+        // Update result count
+        const resultCount = activeContainer.querySelector('.search-results__count');
+        if (resultCount) {
+            const showing = Math.min(items.length, term.startsWith("*") ? items.length : 10);
+            resultCount.textContent = items.length === showing
+                ? `${items.length} result${items.length !== 1 ? 's' : ''}`
+                : `Showing ${showing} of ${items.length} results`;
+        }
+
+        // Display results sorted by relevance (already sorted by elasticlunr score)
+        const maxResults = term.startsWith("*") ? items.length : 10;
+        for (let i = 0; i < Math.min(items.length, maxResults); i++) {
+            const li = document.createElement("li");
+            li.innerHTML = formatSearchResultItem(items[i], term.split(" "));
+            searchResultsItems.appendChild(li);
+        }
     }, WAIT_TIME_MS);
 
     // Bind events to ALL search inputs
@@ -420,44 +385,15 @@ function initSearch() {
     });
 }
 
-function appendSearchResults(filterFn, placeholder, items, term) {
-    let totalItems = 0;
-    // Add category header item if such items exist
-    if (items.some(filterFn)) {
-        const placeholderItem = document.createElement("li");
-        placeholderItem.innerHTML = formatSearchResultItem({
-            class: "category empty",
-            doc: {title: placeholder},
-        }, "");
-        searchResultsItems.appendChild(placeholderItem);
-    }
-    // Add category items
-    for (let i = 0; i < items.length; i++) {
-        if (filterFn(items[i])) {
-            const item = document.createElement("li");
-            item.innerHTML = formatSearchResultItem(items[i], term.split(" "));
-            searchResultsItems.appendChild(item);
-            if (!term.startsWith("*") && ++totalItems >= MAX_ITEMS) {
-                break;
-            }
-        }
-    }
-}
-
 function filterAndRankResults(results, term, searchTerm){
     const items = [];
     const lowerTerm = searchTerm.toLowerCase();
 
     for (let i = 0; i < results.length; i++) {
         const result = results[i];
-        const ref = result.ref;
-        const hasTitle = result.doc.title !== "";
-        const categories = ["/blog", "/readings", "/talks"];
-        const isEmptyRef = ref === "";
-        const isCategoryCheckRequired = !term.startsWith("*");
-        const isCategoryMissing = !categories.some(c => ref.includes(c));
 
-        if (!hasTitle || !isEmptyRef && isCategoryCheckRequired && isCategoryMissing) {
+        // Skip results without a title or ref
+        if (!result.doc.title || result.ref === "") {
             continue;
         }
 
@@ -508,12 +444,32 @@ function formatSearchResultItem(item, terms) {
         terms = [terms[0].slice(1), ...terms.slice(1)].filter(term => term.trim() !== "");
     }
 
-    const term = terms.join("").trim().toLowerCase();
-    const icon = (icons[term] !== undefined) ? icons[term] : "";
+    // Extract section from URL path (handle both full URLs and paths)
+    let path = item.ref;
+    try {
+        const url = new URL(item.ref, window.location.origin);
+        path = url.pathname;
+    } catch (e) {
+        // Already a path, use as-is
+    }
+    const pathParts = path.replace(/^\//, '').replace(/\/$/, '').split('/');
+    const section = pathParts[0] ? pathParts[0].charAt(0).toUpperCase() + pathParts[0].slice(1) : '';
+
+    // Format date if available
+    let dateStr = '';
+    if (item.doc.date) {
+        const [year, month, day] = item.doc.date.split('-');
+        const date = new Date(year, month - 1, day);
+        dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    }
 
     return '<div class="search-results__item">'
         + `<a href="${item.ref}">`
-        + `<span class="search-results__item-title">${icon} ${item.doc.title}</span>`
+        + `<div class="search-results__item-meta">`
+        + (section ? `<span class="search-results__item-section">${section}</span>` : '')
+        + (dateStr ? `<span class="search-results__item-date">${dateStr}</span>` : '')
+        + `</div>`
+        + `<span class="search-results__item-title">${item.doc.title}</span>`
         + `<div class="search-results__item-body">${makeTeaser(item.doc.body, terms)}</div>`
         + `</a>`
         + '</div>';
