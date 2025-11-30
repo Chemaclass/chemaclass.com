@@ -102,6 +102,28 @@ header .search-container {
   z-index: 1000;
   min-width: 400px;
 
+  // Custom scrollbar
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--search-scrollbar-thumb, rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    &:hover {
+      background: var(--search-scrollbar-thumb-hover, rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  // Firefox
+  scrollbar-width: thin;
+  scrollbar-color: var(--search-scrollbar-thumb, rgba(0, 0, 0, 0.15)) transparent;
+
   .theme-dark & {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   }
@@ -304,4 +326,6 @@ input[type="search"]::-webkit-search-results-decoration {
   --search-highlight-color: #fff;
   --search-divider-color: #3c3c3c;
   --search-count-color: #a0a0a0;
+  --search-scrollbar-thumb: rgba(255, 255, 255, 0.2);
+  --search-scrollbar-thumb-hover: rgba(255, 255, 255, 0.35);
 }
