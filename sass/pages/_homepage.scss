@@ -630,19 +630,17 @@ main:has(.homepage-container) #scroll-to-top {
     padding: 0 1rem;
   }
 
+  .homepage-container {
+    margin-top: 2rem;
+  }
+
   .homepage-top {
     gap: 0.5rem;
     padding: 0.25rem 0;
   }
 
-  .profile .profile-container {
-    width: 120px;
-    height: 120px;
-    border-width: 3px;
-  }
-
   .profile {
-    margin-bottom: 1rem;
+    display: none;
   }
 
   .hero-content {
@@ -650,8 +648,7 @@ main:has(.homepage-container) #scroll-to-top {
 
     .hero-text {
       h1 {
-        font-size: 1.4rem;
-        margin-bottom: 0.35rem;
+        display: none;
       }
 
       .subtitle {
