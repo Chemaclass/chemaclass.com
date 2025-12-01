@@ -1,48 +1,196 @@
-{% extends "blog/blog-post.html" %}
+{% extends "base.html" %}
+
+{% import "helpers-preview.html" as helpers_preview %}
+{% import "related-container.html" as related %}
+
+{% block posthead %}
+{% if page.lower %}
+<link rel="prerender" href="{{ page.lower.permalink }}">
+{% endif %}
+
+{% if page.higher %}
+<link rel="prerender" href="{{ page.higher.permalink }}">
+{% endif %}
+
+{% for tag in page.taxonomies.tags %}
+<link rel="prerender" href='{{ get_taxonomy_url(kind="tags", name=tag) }}'>
+{% endfor %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://google.com/article"
+    },
+    "headline": "{{ page.title }}",
+    "image": [{% if page.extra.static_thumbnail %} "{{ config.base_url|safe }}{{ page.extra.static_thumbnail|safe }}"{% endif %}]{% if page.date %},
+    "datePublished": "{{ page.date | date(format="%+") }}"{% endif %}{% if page.date %},
+    "dateModified": "{{ page.date | date(format="%+") }}"{% endif %}{% if config.extra.author %},
+    "author": {
+      "@type": "Person",
+      "name": "{{ config.extra.author }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ config.extra.author }}"{% if config.extra.icon %},
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ get_url(path=config.extra.icon) | safe }}"
+      }
+      {% endif %}
+    }
+    {% endif %}
+  }
+</script>
+{% endblock posthead %}
 
 {% block content %}
-<!-- Table of Contents (floating sidebar) -->
-<nav id="toc-container"></nav>
+  <!-- Reading progress bar -->
+  <div id="reading-progress" class="reading-progress"></div>
 
-<div class="reading-post">
-  <div class="post-title">
-    <h1>
+  <!-- Table of Contents (floating sidebar) -->
+  <nav id="toc-container"></nav>
+
+  <article class="blog-post">
+    <!-- Back link -->
+    <a href="/readings/" class="blog-post__back">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      All Readings
+    </a>
+
+    <!-- Title -->
+    <h1 class="blog-post__title">
       {{ page.title }}
       {% if page.extra.author %}
-        <small class="author">by {{ page.extra.author }}</small>
+        <small class="blog-post__author">by {{ page.extra.author }}</small>
       {% endif %}
     </h1>
-    {% if page.extra.subtitle %}
-    <h3 class="post-subtitle">
-      {{ page.extra.subtitle }}
-    </h3>
-    {% endif %}
-    {{ self::page_sub_header(page=page) }}
-  </div>
 
-  <div>
-    {{ page.content | safe }}
-
-    {% if page.extra.pages %}
-    <div class="book-pages">
-      {{ page.extra.pages }} pages
+    <!-- Subtitle + Metadata + Tags -->
+    <div class="blog-post__meta-row">
+      {% if page.extra.subtitle %}
+        <p class="blog-post__subtitle">{{ page.extra.subtitle }}</p>
+      {% endif %}
+      <div class="blog-post__meta">
+        {% if page.date %}
+        <span class="blog-post__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          {{ page.date | date(format="%B %d, %Y") }}
+        </span>
+        {% endif %}
+        {% if page.reading_time %}
+        <span class="blog-post__reading-time">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          {{ page.reading_time }} min read
+        </span>
+        {% endif %}
+        {% if page.extra.pages %}
+        <span class="blog-post__word-count">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+          {{ page.extra.pages }} pages
+        </span>
+        {% endif %}
+        {% if page.extra.current_read %}
+        <span class="blog-post__current-read">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          Currently reading
+        </span>
+        {% endif %}
+        {% if page.taxonomies.tags %}
+        <span class="blog-post__tags">
+          {% for tag in page.taxonomies.tags %}
+            <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="blog-post__tag">{{ tag }}</a>
+          {% endfor %}
+        </span>
+        {% endif %}
+      </div>
     </div>
-    {% endif %}
 
-    {% if page.extra.current_read %}
-      <div class="reading-current">Reading currently...</div>
-    {% endif %}
-  </div>
+    <!-- Content -->
+    <div class="blog-post__content reading-post">
+      {{ page.content | safe }}
+    </div>
 
-  <hr class="footer-rule" />
+    <!-- Footer -->
+    <footer class="blog-post__footer">
+      {% set url = config.extra.repo_content_url ~ page.relative_path %}
+      <a href="{{ url }}" class="blog-post__edit-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+        </svg>
+        Found a typo? Edit this page
+      </a>
+    </footer>
 
-  {{ related::container(page=page,orderDesc=true) }}
+    <!-- Navigation between posts -->
+    <nav class="blog-post__nav">
+      {% if page.higher %}
+        <a href="{{ page.higher.permalink }}" class="blog-post__nav-link blog-post__nav-link--prev">
+          <span class="blog-post__nav-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Older
+          </span>
+          <span class="blog-post__nav-title">{{ page.higher.title }}</span>
+        </a>
+      {% else %}
+        <span></span>
+      {% endif %}
+      {% if page.lower %}
+        <a href="{{ page.lower.permalink }}" class="blog-post__nav-link blog-post__nav-link--next">
+          <span class="blog-post__nav-label">
+            Newer
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </span>
+          <span class="blog-post__nav-title">{{ page.lower.title }}</span>
+        </a>
+      {% endif %}
+    </nav>
+  </article>
 
   {% include "footer-about.html" %}
 
-</div>
 {% endblock content %}
 
 {% block js %}
 <script type="text/javascript" src="{{ get_url(path='toc.js') | safe }}" defer></script>
+<script>
+  // Reading progress bar
+  window.addEventListener('scroll', function() {
+    const article = document.querySelector('.blog-post__content');
+    if (!article) return;
+
+    const pageFooter = document.querySelector('.page-footer');
+    const articleTop = article.offsetTop;
+    const endPoint = pageFooter ? (pageFooter.offsetTop - 420) : (articleTop + article.offsetHeight);
+    const totalHeight = endPoint - articleTop;
+    const windowHeight = window.innerHeight;
+    const scrollTop = window.scrollY;
+
+    const progress = Math.min(Math.max((scrollTop - articleTop + windowHeight * 0.5) / totalHeight, 0), 1);
+    document.getElementById('reading-progress').style.width = (progress * 100) + '%';
+  });
+</script>
 {% endblock js %}

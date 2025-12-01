@@ -15,7 +15,8 @@
   max-width: 100%;
 
   &__back {
-    display: inline-flex;
+    display: flex;
+    width: fit-content;
     align-items: center;
     gap: 0.5rem;
     color: var(--color-subtitle);
@@ -65,6 +66,14 @@
     color: var(--heading-color);
     line-height: 1.3;
     display: inline;
+  }
+
+  &__author {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-subtitle);
+    margin-top: 0.25rem;
   }
 
   &__tags {
@@ -119,7 +128,8 @@
 
   &__date,
   &__reading-time,
-  &__word-count {
+  &__word-count,
+  &__current-read {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
@@ -127,6 +137,21 @@
     svg {
       opacity: 0.7;
     }
+  }
+
+  &__current-read {
+    color: var(--accent-color);
+    font-weight: 500;
+
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &__meta-row {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--preview-divider-color);
   }
 
   &__content {
