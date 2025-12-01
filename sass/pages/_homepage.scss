@@ -200,7 +200,6 @@ main:has(.homepage-container) #scroll-to-top {
         padding: 0.75rem 0;
         font-size: 0.95rem;
         line-height: 1.5;
-        cursor: pointer;
         transition: color 0.2s ease;
 
         .list-icon {
@@ -212,6 +211,16 @@ main:has(.homepage-container) #scroll-to-top {
 
         .about-item-title {
           flex: 1;
+
+          .purpose-green-link {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+
+            &:hover {
+              color: #16a34a;
+            }
+          }
         }
       }
 
@@ -257,7 +266,6 @@ main:has(.homepage-container) #scroll-to-top {
     }
 
     .philosophy-main {
-      cursor: pointer;
       display: block;
     }
 
