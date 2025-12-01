@@ -1,54 +1,71 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div id="sponsor">
+<article class="sponsor-page">
+  <!-- Back link -->
+  <a href="/" class="sponsor-page__back">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Home
+  </a>
+
   <!-- Hero Section -->
   <section class="sponsor-hero">
-    {% set profile_image = resize_image(path=config.extra.profile_large, width=120, height=160, op="fill") %}
-    <img src="{{ profile_image.url }}" alt="Chemaclass" class="sponsor-avatar">
     <h1>Support My Work</h1>
-    <p class="sponsor-intro">
-      I believe in open source as a way of life – building in public,
-        sharing knowledge freely, and empowering others to grow.
-      <br>
+    <ul class="sponsor-hero__values">
+      <li>Building in public</li>
+      <li>Sharing knowledge freely</li>
+      <li>Empowering others to grow</li>
+    </ul>
+    <p class="sponsor-hero__subtitle">
       Your support enables more time for open source and mentoring.
     </p>
-    <div class="sponsor-quotes">
-      <blockquote class="sponsor-quote active"><p></p></blockquote>
-    </div>
   </section>
 
   <!-- Donation Options -->
   <section class="sponsor-options">
-    <div class="sponsor-card">
-      <div class="sponsor-card-icon paypal">
+    <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" class="sponsor-card sponsor-card--paypal">
+      <div class="sponsor-card__icon">
         <i class="fa fa-paypal"></i>
       </div>
-      <h3>PayPal</h3>
-      <p>Quick and easy one-time contribution</p>
-      <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" class="sponsor-btn paypal">
-        Donate with PayPal
-      </a>
-    </div>
+      <div class="sponsor-card__content">
+        <h3>PayPal</h3>
+        <p>Quick and easy one-time contribution</p>
+      </div>
+      <span class="sponsor-card__action">
+        Donate some fiat
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </span>
+    </a>
 
-    <div class="sponsor-card">
-      <div class="sponsor-card-icon lightning">
+    <a href="https://getalby.com/p/chemaclass" target="_blank" class="sponsor-card sponsor-card--lightning">
+      <div class="sponsor-card__icon">
         <i class="fa-solid fa-bolt"></i>
       </div>
-      <h3>Bitcoin Lightning</h3>
-      <p>Fast, low-fee Bitcoin payments</p>
-      <a href="https://getalby.com/p/chemaclass" target="_blank" class="sponsor-btn lightning">
-        Pay with Lightning
-      </a>
-    </div>
+      <div class="sponsor-card__content">
+        <h3>Bitcoin Lightning</h3>
+        <p>Fast, low-fee Bitcoin payments</p>
+      </div>
+      <span class="sponsor-card__action">
+        Donate some sats
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </span>
+    </a>
   </section>
 
   <!-- Why Sponsor -->
   <section class="sponsor-reasons">
     <h2>Why Become a Sponsor?</h2>
-    <div class="reasons-grid">
-      <div class="reason-card">
-        <span class="reason-icon">💓</span>
+    <div class="sponsor-reasons__grid">
+      <div class="sponsor-reason">
+        <div class="sponsor-reason__icon">
+          <i class="fa-solid fa-heart"></i>
+        </div>
         <h3>Support Open Source</h3>
         <p>
           Help maintain projects like
@@ -57,13 +74,17 @@
           and <a target="_blank" href="https://gacela-project.com/">gacela</a>.
         </p>
       </div>
-      <div class="reason-card">
-        <span class="reason-icon">⚡</span>
+      <div class="sponsor-reason">
+        <div class="sponsor-reason__icon">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
         <h3>Amplify Impact</h3>
         <p>Your support drives the growth of developer tools and the open source community.</p>
       </div>
-      <div class="reason-card">
-        <span class="reason-icon">⭐</span>
+      <div class="sponsor-reason">
+        <div class="sponsor-reason__icon">
+          <i class="fa-solid fa-pen-nib"></i>
+        </div>
         <h3>Enable More Content</h3>
         <p>More time for blog posts, talks, and sharing knowledge with developers.</p>
       </div>
@@ -71,42 +92,9 @@
   </section>
 
   <!-- Thank You -->
-  <section class="sponsor-thanks">
-    <p>Every contribution, big or small, makes a difference. Thank you for your support!</p>
-  </section>
-</div>
-
-<script>
-(function() {
-  const quotes = [
-    "Open source everything.",
-    "The process itself is the goal.",
-    "Making others happier compounds.",
-    "Nobody is perfect, but a team can be.",
-    "Move from maker mode to multiplier.",
-    "A great engineer is not just a great coder.",
-    "People skills matter as much as technical.",
-    "Knowledge shared is knowledge multiplied.",
-    "Building in public accelerates growth.",
-    "Community over competition.",
-    "Small contributions create big impact.",
-    "Code is temporary, impact is lasting."
-  ];
-  const el = document.querySelector('.sponsor-quote p');
-  if (!el) return;
-  let last = -1;
-  function showRandom() {
-    let idx;
-    do { idx = Math.floor(Math.random() * quotes.length); } while (idx === last);
-    last = idx;
-    el.style.opacity = 0;
-    setTimeout(() => {
-      el.textContent = '"' + quotes[idx] + '"';
-      el.style.opacity = 1;
-    }, 300);
-  }
-  showRandom();
-  setInterval(showRandom, 7000);
-})();
-</script>
+  <footer class="sponsor-thanks">
+    <i class="fa-solid fa-hands-clapping"></i>
+    <p>Every contribution, big or small, makes a difference.<br>Thank you for your support!</p>
+  </footer>
+</article>
 {% endblock content %}
