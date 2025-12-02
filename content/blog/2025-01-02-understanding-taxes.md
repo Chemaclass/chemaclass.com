@@ -16,6 +16,12 @@ Taxes are unavoidable —whether it's your paycheck, morning coffee, or the hous
 
 <!-- more -->
 
+<div class="tldr">
+
+Taxes fund public services but often feel unfair when governments waste money. Bitcoin offers an alternative: decentralized, transparent, and resistant to inflation. It gives people more control over their wealth.
+
+</div>
+
 1. Tax journey 101
 1. Types of Taxes
 1. How do they work?

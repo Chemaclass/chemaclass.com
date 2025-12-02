@@ -16,13 +16,11 @@ together, especially regarding meetings. These are my thoughts about this topic.
 
 <!-- more -->
 
----
+<div class="tldr">
 
-**TL;DR**: People become slaves to systems that are supposed to help. Boring meetings are killing agile. Meetings
-require an active participation from everyone. Otherwise, you might not be essential to that meeting, and rather use
-your time with something else.
+People become slaves to systems that are supposed to help. Boring meetings are killing agile. Meetings require active participation from everyone. Otherwise, you might not be essential to that meeting, and rather use your time with something else.
 
----
+</div>
 
 > "Do you think it would make sense to just use agile and ignore scrum (sprints) completely in a product based
 > development company. I feel it's hard to be agile when you have 10 hours of meetings per week." Filip G.

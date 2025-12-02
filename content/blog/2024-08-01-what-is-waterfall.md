@@ -15,6 +15,12 @@ Waterfall is like following a straight path where you move from one step to the 
 
 <!-- more -->
 
+<div class="tldr">
+
+Waterfall looks logical on paper but fails in practice. Requirements change, clients don't know what they want, and you don't get feedback until it's too late. Agile was created to fix this.
+
+</div>
+
 The problem is that each step can take a lot of time and resources to complete. Plus, you don't get feedback until the entire stage is finished, which can lead to a lot of wasted time. This is especially tricky in software development, where things are always changing and evolving.
 
 It usually follows a straightforward sequence like this:

@@ -16,6 +16,12 @@ In the early '90s, with the internet on the rise, a group called the Cypherpunks
 
 <!-- more -->
 
+<div class="tldr">
+
+The Cypherpunks were activists who believed privacy is a fundamental right. They built encryption tools like PGP and laid the groundwork for Bitcoin. Their legacy shapes how we think about digital privacy today.
+
+</div>
+
 1. Who were the Cypherpunks?
 2. Philosophy and goals
 3. Impact nowadays

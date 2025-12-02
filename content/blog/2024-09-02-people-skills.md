@@ -15,6 +15,12 @@ So, you're a software developer, and you've mastered coding languages, algorithm
 
 <!-- more -->
 
+<div class="tldr">
+
+Technical skills alone won't get you far. If you can't work well with others, nobody will want to work with you. People skills are as important as coding skills.
+
+</div>
+
 If you can't work well with others, it doesn't matter how great your code is — nobody will want to work with you.
 
 ## Why People Skills Matter in Software

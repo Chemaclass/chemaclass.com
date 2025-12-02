@@ -18,6 +18,12 @@ The traditional approach to pull requests often slows things down. We wait hours
 
 <!-- more -->
 
+<div class="tldr">
+
+Ship-Show-Ask lets you choose how much review each change needs. Default to Ask for risky work, use Show for safe changes you can merge immediately. It's about trust, ownership, and moving fast without compromising quality.
+
+</div>
+
 That's where the Ship-Show-Ask strategy comes in. Originally described by [Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html), this model offers a more flexible and thoughtful way to handle code changes. It's not just a branching strategy—it's a shift in how teams collaborate, trust, and take ownership.
 
 ## What is Ship, Show, Ask?

@@ -16,6 +16,12 @@ When it comes to software development, trust and security are very important. On
 
 <!-- more -->
 
+<div class="tldr">
+
+Sign your Git commits with GPG to prove they're really from you. Without signatures, anyone can fake commits using your email. It takes 5 minutes to set up and adds real trust to your codebase.
+
+</div>
+
 Whether you're working on an open-source project or in a private company, verified commits can make sure your contributions are legit. Let's break down what they are, why they're important, and how to start using them.
 
 ## What are verified commits?

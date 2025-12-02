@@ -15,6 +15,12 @@ You can fix one or two of them, but not three.
 
 <!-- more -->
 
+<div class="tldr">
+
+Deliver value constantly in short iterations. Why? Because this will help you to get feedback, and feedback is necessary to make the right decisions.
+
+</div>
+
 ### The triple constraint
 
 - Cheap and fast: the quality will suffer.
@@ -49,9 +55,6 @@ As you can see, one funny fact is that the waterfall and agile share an inverted
 parameters. Really interesting indeed.
 
 ![blog-cover](/images/blog/2022-07-25/footer.jpg)
-
-> TL;DR: Deliver value constantly in short iterations. Why? Because this will help you to get feedback, and feedback is
-necessary to make the right decisions.
 
 ## Reference
 

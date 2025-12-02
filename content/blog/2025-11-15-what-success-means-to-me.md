@@ -17,6 +17,12 @@ But I've realized that's not what gets me out of bed in the morning.
 
 <!-- more -->
 
+<div class="tldr">
+
+Success is waking up knowing that what you do makes the people around you, and yourself, happier. No complex formula. Just consistency over perfection, and building habits that align with what matters.
+
+</div>
+
 ## The real measure
 
 Success, for me, is straightforward now: **waking up knowing that what I do makes the people around me —and myself— happier**.
