@@ -15,6 +15,12 @@ But speed isn't quality.
 
 <!-- more -->
 
+<div class="tldr">
+
+AI writes code fast but doesn't care about quality. Learn to prompt well, never accept code you don't understand, and remember: you own every line you commit. Speed without direction is just chaos.
+
+</div>
+
 ## The vibe-coding trap
 
 AI models are excellent at imitating their surroundings. Give them context, and they'll do whatever it takes to complete the task. This has become known as _"vibe-coding"_: you describe what you want, and the AI produces something that works. Fast.

@@ -48,6 +48,32 @@ blockquote {
   }
 }
 
+.tldr {
+  background: var(--search-input-bg);
+  border: 1px solid var(--preview-divider-color);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+
+  &::before {
+    content: "TL;DR";
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+  }
+
+  p {
+    display: inline;
+    margin: 0;
+  }
+}
+
 code {
   background: hsla(0, 0%, 0%, 0.04);
   padding: 0.2em 0;
