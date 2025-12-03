@@ -115,6 +115,265 @@
   }
 }
 
+// Book chapter page styles
+.book-chapter {
+  max-width: 100%;
+
+  &__back {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-subtitle);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color);
+      border-bottom: none;
+    }
+
+    svg {
+      transition: transform 0.2s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(-3px);
+    }
+  }
+
+  &__header {
+    position: static;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--preview-divider-color);
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: var(--heading-color);
+    line-height: 1.3;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--color-subtitle);
+  }
+
+  &__date,
+  &__reading-time,
+  &__word-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+
+    svg {
+      opacity: 0.7;
+    }
+  }
+
+  &__content {
+    // Chapter image styling
+    img[alt="book-chapter"] {
+      display: block;
+      max-width: 70%;
+      margin: 2.5rem auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    // Section dividers
+    hr {
+      border: none;
+      border-top: 1px dashed var(--preview-divider-color);
+      margin: 2.5rem 0;
+    }
+
+    // Embedded videos
+    iframe {
+      display: block;
+      margin: 1.5rem auto 2rem;
+      border-radius: 8px;
+      max-width: 100%;
+    }
+  }
+
+  &__footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--preview-divider-color);
+  }
+
+  &__edit-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-subtitle);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color);
+      border-bottom: none;
+    }
+  }
+
+  // Chapter navigation
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid var(--preview-divider-color);
+  }
+
+  &__nav-link {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    border: 1px solid var(--preview-divider-color) !important;
+    background: var(--search-input-bg);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    max-width: 45%;
+
+    &:hover {
+      border: 1px solid var(--accent-color) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    &--prev {
+      align-items: flex-start;
+    }
+
+    &--next {
+      align-items: flex-end;
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+
+  &__nav-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    color: var(--color-subtitle);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  &__nav-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    line-height: 1.3;
+  }
+}
+
+// Image lightbox modal
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+
+    .lightbox__image {
+      transform: scale(1);
+    }
+  }
+
+  &__image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    line-height: 1;
+    padding: 0;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Responsive styles for book chapters
+@media (max-width: $breakpoint-phone) {
+  .book-chapter {
+    &__title {
+      font-size: 1.75rem;
+    }
+
+    &__meta {
+      gap: 0.75rem;
+    }
+
+    &__content {
+      img[alt="book-chapter"] {
+        max-width: 90%;
+      }
+    }
+
+    &__nav {
+      flex-direction: column;
+    }
+
+    &__nav-link {
+      max-width: 100%;
+
+      &--next {
+        align-items: flex-start;
+        text-align: left;
+      }
+    }
+  }
+}
+
 iframe {
   width: 100%;
   height: 395px;

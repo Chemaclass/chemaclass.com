@@ -1,17 +1,209 @@
-{% extends "blog/blog-post.html" %}
+{% extends "base.html" %}
+
+{% import "helpers-preview.html" as helpers_preview %}
+{% import "related-container.html" as related %}
+
+{% block posthead %}
+{% if page.lower %}
+<link rel="prerender" href="{{ page.lower.permalink }}">
+{% endif %}
+
+{% if page.higher %}
+<link rel="prerender" href="{{ page.higher.permalink }}">
+{% endif %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Chapter",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.permalink | safe }}"
+    },
+    "headline": "{{ page.title }}",
+    "image": [{% if page.extra.static_thumbnail %} "{{ config.base_url|safe }}{{ page.extra.static_thumbnail|safe }}"{% endif %}]{% if page.date %},
+    "datePublished": "{{ page.date | date(format="%+") }}"{% endif %}{% if page.date %},
+    "dateModified": "{{ page.date | date(format="%+") }}"{% endif %}{% if config.extra.author %},
+    "author": {
+      "@type": "Person",
+      "name": "{{ config.extra.author }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ config.extra.author }}"{% if config.extra.icon %},
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ get_url(path=config.extra.icon) | safe }}"
+      }
+      {% endif %}
+    }
+    {% endif %}
+  }
+</script>
+{% endblock posthead %}
 
 {% block content %}
-<div class="post-title">
-    <h1>{{ page.title }}</h1>
-    {{ self::page_sub_header(page=page) }}
-</div>
+  <!-- Reading progress bar -->
+  <div id="reading-progress" class="reading-progress"></div>
 
-<div>
-    {{ page.content | safe }}
-</div>
+  <!-- Table of Contents (floating sidebar) -->
+  <nav id="toc-container"></nav>
 
-<hr class="footer-rule" />
+  <article class="book-chapter">
+    <!-- Back to book link -->
+    {% set section = get_section(path=page.ancestors | last) %}
+    <a href="{{ section.permalink }}" class="book-chapter__back">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      {{ section.title | split(pat=" | ") | first }}
+    </a>
 
-{{ related::container(page=page,orderDesc=false) }}
+    <!-- Chapter header -->
+    <header class="book-chapter__header">
+      <h1 class="book-chapter__title">{{ page.title }}</h1>
+
+      <div class="book-chapter__meta">
+        {% if page.date %}
+        <span class="book-chapter__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          {{ page.date | date(format="%B %Y") }}
+        </span>
+        {% endif %}
+        {% if page.reading_time %}
+        <span class="book-chapter__reading-time">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          {{ page.reading_time }} min
+        </span>
+        {% endif %}
+        {% if page.word_count %}
+        <span class="book-chapter__word-count">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+          </svg>
+          {{ page.word_count }} words
+        </span>
+        {% endif %}
+      </div>
+    </header>
+
+    <!-- Chapter content -->
+    <div class="book-chapter__content">
+      {{ page.content | safe }}
+    </div>
+
+    <!-- Footer -->
+    <footer class="book-chapter__footer">
+      {% set url = config.extra.repo_content_url ~ page.relative_path %}
+      <a href="{{ url }}" class="book-chapter__edit-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+        </svg>
+        Found a typo? Edit this page
+      </a>
+    </footer>
+
+    <!-- Chapter navigation -->
+    <nav class="book-chapter__nav">
+      {% if page.lower %}
+        <a href="{{ page.lower.permalink }}" class="book-chapter__nav-link book-chapter__nav-link--prev">
+          <span class="book-chapter__nav-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Previous Chapter
+          </span>
+          <span class="book-chapter__nav-title">{{ page.lower.title }}</span>
+        </a>
+      {% else %}
+        <span></span>
+      {% endif %}
+      {% if page.higher %}
+        <a href="{{ page.higher.permalink }}" class="book-chapter__nav-link book-chapter__nav-link--next">
+          <span class="book-chapter__nav-label">
+            Next Chapter
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </span>
+          <span class="book-chapter__nav-title">{{ page.higher.title }}</span>
+        </a>
+      {% endif %}
+    </nav>
+  </article>
+
+  {% include "footer-about.html" %}
+
+  <!-- Image lightbox modal -->
+  <div id="image-lightbox" class="lightbox">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <img class="lightbox__image" src="" alt="">
+  </div>
 
 {% endblock content %}
+
+{% block js %}
+<script type="text/javascript" src="{{ get_url(path='toc.js') | safe }}" defer></script>
+<script>
+  // Reading progress bar
+  window.addEventListener('scroll', function() {
+    const article = document.querySelector('.book-chapter__content');
+    if (!article) return;
+
+    const pageFooter = document.querySelector('.page-footer');
+    const articleTop = article.offsetTop;
+    const endPoint = pageFooter ? (pageFooter.offsetTop - 420) : (articleTop + article.offsetHeight);
+    const totalHeight = endPoint - articleTop;
+    const windowHeight = window.innerHeight;
+    const scrollTop = window.scrollY;
+
+    const progress = Math.min(Math.max((scrollTop - articleTop + windowHeight * 0.5) / totalHeight, 0), 1);
+    document.getElementById('reading-progress').style.width = (progress * 100) + '%';
+  });
+
+  // Image lightbox
+  (function() {
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImg = lightbox.querySelector('.lightbox__image');
+    const lightboxClose = lightbox.querySelector('.lightbox__close');
+    const chapterImages = document.querySelectorAll('.book-chapter__content img');
+
+    chapterImages.forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function() {
+        lightboxImg.src = this.src;
+        lightboxImg.alt = this.alt;
+        lightbox.classList.add('lightbox--active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('lightbox--active');
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('lightbox--active')) {
+        closeLightbox();
+      }
+    });
+  })();
+</script>
+{% endblock js %}
