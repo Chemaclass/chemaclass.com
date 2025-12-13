@@ -1,11 +1,11 @@
 +++
 title = "Understanding Bitcoin"
-description = "A practical introduction to Bitcoin: why it matters as sound money, how it enables financial freedom, and how it works under the hood."
+description = "A practical introduction to Bitcoin: why it matters as sound money and how it enables financial freedom."
 draft = false
 [taxonomies]
-tags = [ "bitcoin", "cryptography", "philosophy", "tutorial" ]
+tags = [ "bitcoin", "philosophy" ]
 [extra]
-subtitle = "From sound money to cryptographic proof"
+subtitle = "Sound money and financial sovereignty"
 static_thumbnail = "/images/blog/2025-12-13/cover.jpg"
 +++
 
@@ -25,15 +25,9 @@ Bitcoin is digital money with a fixed supply of 21 million, secured by cryptogra
 
 </div>
 
-This post is split in two. The first half is for anyone curious about why Bitcoin matters. The second half is for those with a technical background who want to understand what's happening under the hood.
-
----
-
-## Why Bitcoin Matters
-
 *No technical background required. Just curiosity.*
 
-### A Brief History of Money
+## A Brief History of Money
 
 Money is a social agreement. A piece of paper, a gold coin, or a number on a screen has value because we all agree it does. This agreement is what makes trade possible.
 
@@ -57,7 +51,7 @@ What makes good money? These properties:
 
 Gold does well on most of these. Paper money is easy to move and divide but fails on being hard to create. Governments can print as much as they want. Bitcoin, as we'll see, does well on all of them.
 
-### What is Bitcoin?
+## What is Bitcoin?
 
 Bitcoin is digital money that works without banks, governments, or any central authority. It was created in 2009 by someone (or some group) using the fake name Satoshi Nakamoto. No one knows who this person really is. Bitcoin builds on decades of work by cryptographers and privacy activists. If you're curious about the people and ideas that led to Bitcoin, I wrote about [The Cypherpunks](/blog/the-cypherpunks/) and their vision for digital privacy.
 
@@ -69,9 +63,9 @@ At its core, Bitcoin is:
 
 There's no company behind Bitcoin. No CEO, no headquarters, no customer support. It's open-source software that anyone can run, inspect, or contribute to.
 
-### Sound Money
+## Sound Money
 
-#### Scarcity
+### Scarcity
 
 There will only ever be 21 million bitcoins. This is enforced by the protocol's code, verified by every node on the network. No government, no committee, no emergency meeting can change this.
 
@@ -81,7 +75,7 @@ Compare this to government money. Central banks can (and do) create money whenev
 
 Bitcoin is often called "digital gold" because it shares gold's scarcity while being easier to store, divide, and transfer. You can send a billion dollars worth of Bitcoin anywhere in the world in minutes, for a few dollars in fees. Try doing that with gold bars.
 
-#### Inflation Protection
+### Inflation Protection
 
 When governments print money, the value of existing money decreases. This is inflation. Your savings buy less over time, even while sitting untouched in your bank account.
 
@@ -89,9 +83,9 @@ Inflation is often called a "hidden tax" because it transfers wealth from savers
 
 Bitcoin's supply schedule is fixed and predictable. New bitcoins are created through mining at a rate that halves roughly every four years. By around 2140, all 21 million will have been created. No surprises, no government decisions to print more.
 
-### Freedom & Sovereignty
+## Freedom & Sovereignty
 
-#### Self-custody
+### Self-custody
 
 With Bitcoin, you can hold your own money. Not a promise from a bank, not a balance on someone else's books. Actual ownership, secured by cryptographic keys that only you control.
 
@@ -101,7 +95,7 @@ This phrase captures a fundamental truth. When you deposit money in a bank, you 
 
 With Bitcoin, there's no freeze button. No account to close. No terms of service to violate. You become your own bank.
 
-#### Permissionless & Borderless
+### Permissionless & Borderless
 
 Bitcoin doesn't care about borders, banking hours, or your credit score. You can send money to anyone with an internet connection, anywhere in the world, at any time.
 
@@ -117,7 +111,7 @@ Bitcoin:
 - Fees: Based on data size, not amount sent
 - Requirements: A Bitcoin address (free, instant, no ID)
 
-#### Censorship Resistance
+### Censorship Resistance
 
 No central authority controls Bitcoin. No single entity can stop a transaction or reverse a payment. Once confirmed, it's final.
 
@@ -125,7 +119,7 @@ This matters for people living under oppressive governments, facing political pr
 
 > Financial freedom isn't just about being rich. It's about having control over your own money, regardless of who you are or where you live.
 
-#### Real Stories
+### Real Stories
 
 These aren't edge cases:
 
@@ -134,110 +128,54 @@ These aren't edge cases:
 - **Nigeria**: The government banned crypto exchanges in 2021. Peer-to-peer Bitcoin trading exploded. You can't ban math.
 - **Remittances**: Migrant workers send $700 billion home annually. Traditional services take ~10% in fees. Bitcoin can do it for cents.
 
-### Common Objections
+## Common Objections
 
-Common objections, addressed honestly:
+- **"It's used for crime."** So is cash. The difference: Bitcoin leaves a permanent, traceable record. The blockchain is a forensic tool. Most criminals prefer dollars.
 
-**"It's used for crime."** So is cash. The difference: Bitcoin leaves a permanent, traceable record. The blockchain is a forensic tool. Most criminals prefer dollars.
+- **"It's too volatile."** True in the short term. Zoom out: Bitcoin has been the best-performing asset of the last decade. Volatility decreases as adoption grows. Don't invest money you need next month.
 
-**"It's too volatile."** True in the short term. Zoom out: Bitcoin has been the best-performing asset of the last decade. Volatility decreases as adoption grows. Don't invest money you need next month.
+- **"It wastes energy."** Bitcoin mining uses electricity to secure a trillion-dollar network. Much of it comes from stranded energy (gas flares, excess hydro) that would otherwise be wasted. The real question: is financial sovereignty worth the energy cost? Air conditioning uses more.
 
-**"It wastes energy."** Bitcoin mining uses electricity to secure a trillion-dollar network. Much of it comes from stranded energy (gas flares, excess hydro) that would otherwise be wasted. The real question: is financial sovereignty worth the energy cost? Air conditioning uses more.
+- **"It's too late to buy."** People said this at $100, $1,000, $10,000, and $100,000. If Bitcoin achieves even a fraction of gold's market cap, there's still room to grow.
 
-**"It's too late to buy."** People said this at $100, $1,000, $10,000, and $100,000. If Bitcoin achieves even a fraction of gold's market cap, there's still room to grow.
+## Honest Caveats
 
-### Bitcoin Today
+Bitcoin isn't perfect. Things to be aware of:
 
-This isn't just theory anymore:
+- **Self-custody requires responsibility.** Lose your seed phrase, lose your funds. No customer support.
+- **Irreversibility.** No chargebacks. Send to the wrong address? Gone.
+- **Learning curve.** Wallets, keys, fees, P2P trading. The more you learn, the more sovereignty you gain. KYC exchanges are easier but come with regulatory strings attached.
+- **Privacy takes effort.** The blockchain is transparent, not anonymous. True privacy requires learning how to use Bitcoin properly.
+- **Scaling tradeoffs.** Base layer is slow by design. Lightning adds speed but also complexity.
 
-- **El Salvador** made Bitcoin legal tender in 2021
+None of these are dealbreakers. They're tradeoffs. The more you learn, the fewer limitations you face.
+
+## Bitcoin Today
+
+This isn't just theory anymore.
+
+### Institutional adoption
+
 - **US Bitcoin ETFs** were approved in 2024, bringing billions in institutional money
-- **MicroStrategy** holds 650,000+ BTC as corporate treasury
-- **Lightning Network** processes millions of transactions monthly
-- **Tens of millions** of people worldwide own Bitcoin
+- **MicroStrategy** holds 650,000+ BTC as corporate treasury, inspiring others
+- **Major banks** now offer Bitcoin custody and trading services to clients
+- **Pension funds** and asset managers are adding Bitcoin to portfolios
+
+### Global adoption
+
+- **El Salvador** made Bitcoin legal tender in 2021 and mines BTC with volcanic energy
+- **Central African Republic** adopted Bitcoin as legal tender in 2022
+- **Switzerland** allows tax payments in Bitcoin in some cantons
+- **Emerging markets** lead in grassroots adoption: Vietnam, Philippines, Argentina
+
+### Real-world usage
+
+- **Lightning Network** processes millions of instant payments monthly ([see](https://lightning.network/))
+- **Merchants worldwide** accept Bitcoin, from small shops to major retailers ([see](https://btcmap.org/))
+- **Remittances** flow across borders faster and cheaper than traditional services
+- **Tens of millions** of people worldwide hold Bitcoin
 
 You can dismiss it, or you can understand it.
-
----
-
-## How Bitcoin Works
-
-*For the technically curious.*
-
-<div class="status info">
-
-The section above covers everything you need to understand *why* Bitcoin matters. What follows explains *how* it actually works: blockchain, cryptography, mining, and scaling. Feel free to stop here if the technical details aren't your thing.
-
-</div>
-
-### The Blockchain
-
-Bitcoin uses a blockchain: a shared record book that stores every transaction ever made. Think of it as a public accounting book that anyone can read but no one can change (except by following the rules).
-
-The blockchain is a chain of blocks. Each block contains:
-- A list of transactions
-- A reference to the previous block
-- A proof-of-work (more on this below)
-
-Before transactions get into a block, they wait in the mempool (memory pool). Miners pick transactions from this pool, prioritizing those with higher fees. You can watch this happen in real-time at [mempool.space](https://mempool.space/), a visual tool that shows pending transactions, recent blocks, and network activity.
-
-Every node (computer running Bitcoin software) keeps a complete copy of the blockchain. There's no single server to hack, no central database to corrupt. To change history, you'd need to rewrite the blockchain on the majority of nodes worldwide. Practically impossible.
-
-### Transactions & Cryptography
-
-Bitcoin transactions use public-key cryptography. You have two keys:
-
-- **Private key**: A secret number that proves ownership. Keep this safe.
-- **Public key**: Derived from the private key. Used to receive funds.
-
-When you send Bitcoin, you create a transaction that says "I'm sending X BTC from this address to that address" and sign it with your private key. This signature proves you own the funds without revealing your private key.
-
-For a deeper dive into how Bitcoin scripts work and the different address types, see [Programmable Money](/blog/programmable-money/). For background on cryptographic signatures, [Pretty Good Privacy](/blog/pretty-good-privacy/) covers the fundamentals.
-
-### Mining & Consensus
-
-How does a decentralized network agree on which transactions are valid? Through proof-of-work mining.
-
-Miners compete to solve computational puzzles. The first to find a valid solution gets to add the next block to the chain and receives newly created bitcoins as a reward. This process:
-
-1. **Secures the network**: Rewriting history requires redoing all the hash work
-2. **Issues new coins**: Following the predictable supply schedule
-3. **Processes transactions**: Including them in blocks for permanent record
-
-Every 2016 blocks (roughly every two weeks), the network automatically adjusts the puzzle difficulty to maintain ~10 minute block times. More miners join? Puzzles get harder. Miners leave? Puzzles get easier. No central authority needed. You can explore mining pools and hashrate distribution at [mempool.space/mining](https://mempool.space/mining).
-
-### Addresses & Wallets
-
-Bitcoin addresses are derived from public keys. Over time, different address formats have been developed to improve efficiency and functionality:
-
-- **P2PKH**: Legacy addresses starting with "1"
-- **P2SH**: Script addresses starting with "3"
-- **P2WPKH**: Native SegWit addresses starting with "bc1q"
-- **P2TR**: Taproot addresses starting with "bc1p"
-
-For technical details on each address type and how the scripting system works, see [Programmable Money](/blog/programmable-money/#common-bitcoin-address-types).
-
-A wallet is software that manages your keys and constructs transactions. The wallet doesn't hold your coins. The coins exist on the blockchain. The wallet holds the keys that prove you can spend them.
-
-Two types of wallets:
-- **Hot wallets**: Connected to the internet. Convenient for daily use, but more vulnerable to hacks. Examples: phone apps, browser extensions.
-- **Cold wallets**: Offline storage. More secure for long-term savings. Examples: hardware wallets (Ledger, Trezor), paper wallets.
-
-### Scaling: The Lightning Network
-
-Bitcoin's base layer processes about 7 transactions per second. That's by design: keeping things decentralized requires blocks small enough for anyone to verify. But this limits how many transactions it can handle.
-
-The Lightning Network solves this with a second layer built on top of Bitcoin. It enables:
-
-- **Instant payments**: No waiting for block confirmations
-- **Near-zero fees**: Fractions of a cent
-- **High capacity**: Millions of transactions per second
-
-Lightning works by opening "payment channels" between parties. Transactions within a channel happen off-chain, instantly. Only the opening and closing of channels require on-chain transactions. You can visualize the network topology and statistics at [mempool.space/lightning](https://mempool.space/lightning).
-
-> Bitcoin's base layer provides security and final settlement. Lightning provides speed and scale. Different tools for different jobs.
-
-If you want to run your own Lightning node and take full control of your payments, I wrote a guide on how to [Run your LN node on a Raspberry Pi](/blog/run-your-ln-node/).
 
 ---
 
@@ -264,6 +202,7 @@ You don't have to go all in. You just have to start.
 
 **Related posts**
 
+- [How Bitcoin Works](/blog/how-bitcoin-works/) <small>The technical deep-dive: blockchain, cryptography, mining</small>
 - [The Cypherpunks](/blog/the-cypherpunks/) <small>Pioneers of privacy in the digital age</small>
 - [Understanding Taxes](/blog/taxes/) <small>Where your money goes and how to rethink the system</small>
 - [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>
