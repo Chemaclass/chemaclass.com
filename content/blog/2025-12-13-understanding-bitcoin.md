@@ -123,10 +123,13 @@ This matters for people living under oppressive governments, facing political pr
 
 These aren't edge cases:
 
-- **Venezuela**: When inflation hit 1,000,000%, people who held Bitcoin preserved their savings. Those who didn't lost everything.
-- **Ukraine**: In the first weeks of war, the government received $100M+ in crypto donations. Fast, borderless, no intermediaries.
-- **Nigeria**: The government banned crypto exchanges in 2021. Peer-to-peer Bitcoin trading exploded. You can't ban math.
-- **Remittances**: Migrant workers send $700 billion home annually. Traditional services take ~10% in fees. Bitcoin can do it for cents.
+- **Venezuela**: When inflation hit [1,000,000%](https://www.ccn.com/education/crypto/venezuela-inflation-bitcoin-usdt-p2p-crypto-lifeline/), people who held Bitcoin preserved their savings. Those who didn't lost everything.
+- **Ukraine**: In the first weeks of war, the government received [$100M+ in crypto donations](https://www.coindesk.com/business/2022/03/09/ukraine-has-received-close-to-100-million-in-crypto-donations). Fast, borderless, no intermediaries.
+- **Nigeria**: The government banned crypto exchanges in 2021. [Peer-to-peer Bitcoin trading rose 27%](https://www.nasdaq.com/articles/bitcoin-peer-to-peer-trading-in-nigeria-rises-27-since-central-banks-ban-2021-04-23). You can't ban math.
+- **Canada 2022**: Government froze bank accounts of protest supporters. Bitcoin donations couldn't be stopped. A court later ruled the freeze [unconstitutional](https://fortune.com/2022/03/15/how-canada-protest-crypto-crackdown-made-the-case-for-bitcoin-self-custody-nick-neuman/).
+- **WikiLeaks 2010**: Visa, Mastercard, and PayPal [blocked all donations](https://www.cnbc.com/2017/10/16/wikileaks-julian-assange-bitcoin-50000-percent-return-thanks-to-us-government.html), destroying 95% of their revenue. Bitcoin kept them funded.
+- **Belarus 2020**: Regime froze bank accounts of protesters. A nonprofit used Bitcoin to send [$2M+ directly to dissidents](https://www.euronews.com/my-europe/2021/12/22/meet-the-ngo-turning-to-cryptocurrencies-to-help-desperate-belarusians).
+- **Remittances**: Migrant workers send $700 billion home annually. Traditional services [charge ~10% in fees](https://restofworld.org/2021/crypto-remittances/). Bitcoin can do it for cents.
 
 ## Common Objections
 
@@ -149,6 +152,8 @@ Bitcoin isn't perfect. Things to be aware of:
 - **Scaling tradeoffs.** Base layer is slow by design. Lightning adds speed but also complexity.
 
 None of these are dealbreakers. They're tradeoffs. The more you learn, the fewer limitations you face.
+
+![blog-cover](/images/blog/2025-12-13/footer.jpg)
 
 ## Bitcoin Today
 
@@ -176,8 +181,6 @@ This isn't just theory anymore.
 - **Tens of millions** of people worldwide hold Bitcoin
 
 You can dismiss it, or you can understand it.
-
----
 
 ## Getting Started
 
