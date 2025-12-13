@@ -1,8 +1,7 @@
 +++
 title = "Pretty Good Privacy"
 description = "PGP is an encryption program that ensures privacy and authentication for data communication. It is used for signing, encrypting, and decrypting texts, emails, files, directories, and whole disk partitions, enhancing the security of email communications."
-draft = true
-#aliases = [ "/pgp", "/gpg", "/blog/pgp" ]
+draft = false
 [taxonomies]
 tags = [ "security", "privacy", "cryptography", "encryption" ]
 [extra]
@@ -10,34 +9,42 @@ subtitle = "How PGP secures your digital communication"
 static_thumbnail = "/images/blog/2024-07-13/cover.jpg"
 +++
 
-![cover](/images/blog/2024-07-13/cover.jpg)
+![blog-cover](/images/blog/2024-07-13/cover.jpg)
 
-PGP (_Pretty Good Privacy_) is an encryption program that ensures privacy and authentication for data communication. It is used for signing, encrypting, and decrypting texts, emails, files, directories, and whole disk partitions, enhancing the security of email communications.
+PGP (_Pretty Good Privacy_) is an encryption program that ensures privacy and authentication for data communication. It is used for signing, encrypting, and decrypting texts, emails, files, directories, and whole disk partitions.
 
 <!-- more -->
 
-### History
+<div class="tldr">
+
+PGP lets you encrypt messages so only the intended recipient can read them, and sign messages to prove they came from you. Created in 1991 by Phil Zimmermann, it became a symbol of the fight for digital privacy during the [Crypto Wars](/blog/the-cypherpunks/#legal-and-policy-influence-the-crypto-wars).
+
+</div>
+
+## History
 
 PGP was developed by [Phil Zimmermann](https://en.wikipedia.org/wiki/Phil_Zimmermann) out of concern for the lack of privacy in digital communications. He aimed to provide individuals with strong encryption tools. In 1991, PGP was released to the public for free, marking the beginning of a new era in digital security.
 
-#### Legal Challenges
+### Legal Challenges
 
-- **U.S. Export Regulations**: In the early 1990s, strong encryption software like PGP was classified as a _munition under U.S. export regulations_. This meant that distributing PGP internationally was considered an illegal export of weapons. Zimmermann faced a criminal investigation by the U.S. government for allegedly violating these regulations.
+In the early 1990s, strong encryption was classified as a weapon under U.S. export law. When PGP spread globally via the internet, Zimmermann faced a criminal investigation for "exporting munitions."
 
-- **Zimmermann's Defense**: Zimmermann defended himself by publishing the source code of PGP in a book, which was then distributed internationally. This clever move leveraged free speech protections and ultimately led to the case being dropped in 1996.
+His defense was clever: he published the PGP source code in a book. Books are protected speech. The case was dropped in 1996, and encryption export restrictions were eventually relaxed in 2000.
 
 ---
 
 {{ youtube(id="1-MPcUHhXoc") }}
 
-### Key Features
+## Key Features
 
-- Encrypts and decrypts data to ensure secure communication.
-- Provides authentication to verify the identity of senders and receivers.
-- Generates public and private keys for secure key exchange.
-- Supports various encryption algorithms and hash functions.
+- Encrypts and decrypts data to ensure secure communication
+- Provides authentication to verify the identity of senders and receivers
+- Generates public and private keys for secure key exchange
+- Supports various encryption algorithms and hash functions
 
-### How it works
+Today, PGP lives on as **OpenPGP** (the standard) and **GPG** (GNU Privacy Guard, the free implementation). When you verify a software download or sign a git commit, you're often using GPG.
+
+## How it works
 
 PGP uses a combination of [public-key](https://en.wikipedia.org/wiki/Public-key_cryptography) and [symmetric-key](https://en.wikipedia.org/wiki/Symmetric-key_algorithm) to ensure secure data transmission. It generates a keypair consisting of a public key and a private key. The public key is shared with others, while the private key is kept secret. When data is encrypted, it is encrypted with the public key, and only the corresponding private key can decrypt it.
 
@@ -68,3 +75,16 @@ curl https://chemaclass.com/pgp.asc | gpg --import
 ### Download the .asc file
 
 <a href="/pgp.asc" id="download-link">Download public PGP key</a>
+
+---
+
+## Related
+
+### Related posts
+
+- [The Cypherpunks](/blog/the-cypherpunks/) <small>Pioneers of privacy in the digital age</small>
+- [Understanding Bitcoin](/blog/understanding-bitcoin/) <small>From sound money to cryptographic proof</small>
+
+### Related readings
+
+- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>

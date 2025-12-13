@@ -22,37 +22,29 @@ The Cypherpunks were activists who believed privacy is a fundamental right. They
 
 </div>
 
-1. Who were the Cypherpunks?
-2. Philosophy and goals
-3. Impact nowadays
-4. Challenges and criticisms
-5. Precursors to Bitcoin
-6. Cypherpunk legacy
-7. Conclusion
-
 ## Who were the Cypherpunks?
 
-The term “Cypherpunk” combines “cipher”—a reference to encryption technology—with “punk”, reflecting the group's rebellious and anti-establishment spirit. 
+The term "Cypherpunk" combines "cipher" (a reference to encryption) with "punk", reflecting the group's rebellious and anti-establishment spirit.
 
-Far from being a formal organization, the Cypherpunks were a diverse assembly of visionaries, technologists, and activists bonded by shared principles. Some of them:
+Far from being a formal organization, the Cypherpunks were a diverse assembly of visionaries, technologists, and activists bonded by shared principles. The movement started in 1992 when Eric Hughes, Timothy May, and John Gilmore founded the cypherpunks mailing list. Some key figures:
 
 - **Eric Hughes** who wrote "A Cypherpunk's Manifesto," laying out the philosophical foundation for the movement.
 - **Timothy C. May** authored "The Crypto Anarchist Manifesto," which imagined a society where cryptography could foster a new anarchistic order.
 - **John Gilmore**, a co-founder of the Electronic Frontier Foundation (EFF), was pivotal in early internet privacy advocacy.
 - **Julian Assange**, later known for WikiLeaks, participated in these discussions.
 - **Phil Zimmermann** revolutionized email privacy with his creation of PGP.
-- **Jude Milhon** (St. Jude), a hacker and writer, was instrumental in coining the term "cypherpunk" and starting the mailing list.
+- **Jude Milhon** (St. Jude), a hacker and writer, coined the term "cypherpunk" together with Eric Hughes.
 - **Nick Szabo** contributed significantly to digital contracts and currencies, conceptualizing "bit gold" before Bitcoin.
 - **Hal Finney**, an early Bitcoin developer, worked on cryptographic software including PGP, influencing the privacy tech landscape.
 - **Adam Back** introduced Hashcash, which later inspired Bitcoin's proof-of-work, while actively engaging in cypherpunk dialogues on privacy.
 - **Wei Dai** proposed "b-money," an early idea for anonymous digital cash systems, which influenced Bitcoin's development.
 - **Zooko Wilcox-O'Hearn**, with his work on Zcash, brought advanced privacy to cryptocurrencies, having roots in cypherpunk discussions.
-- **David Chaum** pioneered digital cash with DigiCash, one of the earliest attempts at electronic cash. Laying groundwork for electronic privacy.
+- **David Chaum**, often called the "godfather of cypherpunks", pioneered digital cash with DigiCash (1989). His work on electronic privacy predates and inspired the movement.
 - **Bram Cohen** developed BitTorrent, showcasing the cypherpunk ethos of decentralization in file sharing.
 
-They gathered online, often on the cypherpunks mailing list, to discuss, develop, and disseminate ideas and software aimed at enhancing personal privacy.
+Their work built on foundational cryptographic research by **Whitfield Diffie** and **Martin Hellman**, who invented public-key cryptography in 1976, making secure communication between strangers possible.
 
-These individuals not only contributed to the ideological framework of the Cypherpunk movement but also to the practical tools and technologies that have shaped the landscape of digital privacy and security. Their work has left an enduring legacy on how we think about and protect privacy in the digital age.
+They gathered online on the cypherpunks mailing list, which at its peak had around 2000 subscribers exchanging 30+ messages per day. Their motto: **"Cypherpunks write code."** They didn't just talk about privacy. They built it.
 
 ![cover](/images/blog/2024-12-11/manifesto.jpg)
 
@@ -74,15 +66,25 @@ The core philosophy of the Cypherpunks was centered around privacy, freedom of s
 
 ### Development of key technologies
 
-Cypherpunks were pioneers in developing tools that protect privacy. They created PGP (Pretty Good Privacy), one of the first widely used email encryption tools, making secure communication accessible to everyone. Their ideas on digital cash and anonymity also influenced the creation of Bitcoin, a decentralized currency that eliminates the need for trusted intermediaries.
+Cypherpunks built tools, not just theories:
+
+- **PGP** (1991): Email encryption for everyone
+- **Tor** (2002): Anonymous browsing through onion routing
+- **BitTorrent** (2001): Decentralized file sharing
+- **Bitcoin** (2009): Digital money without banks
+- **Signal Protocol**: The encryption behind Signal, WhatsApp, and other messengers
+
+When you send an encrypted message today, you're using cypherpunk technology.
 
 ### Cultural shift
 
 They changed how society views privacy. Before them, encryption was mostly for governments or experts. Today, it's a standard part of tools like messaging apps and web browsers. By promoting encryption and anonymity, they made privacy a priority and encouraged people to take control of their data.
 
-### Legal and policy influence
+### Legal and policy influence: The Crypto Wars
 
-The movement push on major debates on encryption and privacy laws. For example, their fight over restrictions on PGP in the 1990s highlighted the tension between privacy rights and government control. Cypherpunk ideas continue to shape discussions on surveillance, encryption bans, and the right to privacy in today's digital world.
+The 1990s saw a real battle between cypherpunks and governments, known as the "Crypto Wars." The US classified strong encryption as a weapon and banned its export. When Phil Zimmermann released PGP, he was investigated for "exporting munitions" because the software spread globally via the internet.
+
+The cypherpunks fought back creatively. They printed PGP source code in books, since books were protected speech. They wore t-shirts with encryption code. Eventually, they won. Export restrictions were relaxed in 2000. Today's encrypted messaging exists because of that fight.
 
 ## Challenges and Criticisms
 
@@ -123,13 +125,13 @@ Bitcoin has revolutionized our understanding of money, privacy, and security:
 - **Privacy**: While not completely anonymous, Bitcoin transactions use pseudonyms, offering some protection from financial oversight.
 - **Immutable Transactions**: Once a transaction is on the blockchain, it's nearly unchangeable, fostering trust in digital dealings.
 
-Bitcoin has brought cypherpunk ideals to life, sparking global discussions on financial privacy, money's nature, and cryptography's transformative power. With developments like the [Lightning Network](https://en.wikipedia.org/wiki/Lightning_Network) for faster, private transactions and [Taproot](/blog/programmable-money/#p2tr-pay-to-taproot-taproot-up)  for enhanced transaction privacy, Bitcoin continues to evolve.
+Bitcoin has brought cypherpunk ideals to life, sparking global discussions on financial privacy, money's nature, and cryptography's transformative power. With developments like the [Lightning Network](https://en.wikipedia.org/wiki/Lightning_Network) for faster, private transactions and [Taproot](/blog/programmable-money/#p2tr-pay-to-taproot-taproot-up) for enhanced transaction privacy, Bitcoin continues to evolve.
 
 ## Conclusion
 
-The Cypherpunks' legacy remains a guiding force for privacy advocates in today's digital landscape, where data equates to power. Their pioneering work in encryption and digital currency established the foundation for protecting personal freedom and privacy from centralized control. 
+The cypherpunks proved that a small group of people who write code can change the world. Every encrypted message you send, every Bitcoin transaction, every anonymous browse: their legacy.
 
-Their vision continues to influence the creation of technologies that allow individuals to maintain control over their digital identities, underscoring the ongoing importance of privacy in our interconnected world.
+Privacy isn't dead. They made sure of that.
 
 ---
 
@@ -140,6 +142,7 @@ Their vision continues to influence the creation of technologies that allow indi
 ## Related
 ### Related posts
 
+- [Understanding Bitcoin](/blog/understanding-bitcoin/) <small>From sound money to cryptographic proof</small>
 - [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>
 
 ### Related readings
