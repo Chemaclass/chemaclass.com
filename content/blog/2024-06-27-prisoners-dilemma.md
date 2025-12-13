@@ -71,8 +71,7 @@ In the Prisoner's Dilemma, the best strategy is to start with cooperation, but t
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [Learned helplessness](/blog/learned-helplessness/) <small>An acceptance of powerlessness</small>
 - [The power of authority and obedience](/blog/working-agile-with-non-agile-teams/) <small>Milgram's experiment</small>

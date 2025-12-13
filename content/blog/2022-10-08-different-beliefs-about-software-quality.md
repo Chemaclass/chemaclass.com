@@ -97,14 +97,13 @@ expectations. Therefore, the **key** here is to **agree on what good quality is*
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [The art of testing: where design meets quality](/blog/the-art-of-testing/). <small>From a software developer's point of view</small>
 - [Understanding people](/blog/understanding-people/). <small>Misunderstandings, effective communication, and self-reflection</small>
 - [Update your team to be more extreme](/blog/update-your-team-to-be-more-extreme/). <small>How can you help your peers to embrace the change?</small>
 
-### Recommended readings
+**Related readings**
 
 - [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
 - [Peopleware](/readings/peopleware) <small>by Tom DeMarco</small>

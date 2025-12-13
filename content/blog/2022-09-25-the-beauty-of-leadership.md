@@ -107,7 +107,7 @@ You can get inspiration from a lot of different sources. While it's true that yo
 and successes, and even from the people around you, I think it's very optimal to listen to the wisdom from other people's
 experiences outside your circle. For example listening to podcasts, ted-talks, books, or even audiobooks.
 
-### Recommended readings
+**Related readings**
 
 - [Turn the Ship Around!](/readings/turn-the-ship-around/), by L. David Marquet
 - [Leaders Eat Last](/readings/leaders-eat-last/), by Simon Sinek

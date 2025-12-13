@@ -82,14 +82,13 @@ Pair programming might become one of the best tools in your team toolbox for dai
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [Test-Driven (Development)](/blog/test-driven-development/) <small>What is challenging about it?</small>
 - [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
 - [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
 
-### Recommended readings
+**Related readings**
 
 - [The Clean Coder](/readings/the-clean-coder/) <small>by Robert C. Martin</small>
 - [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>

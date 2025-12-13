@@ -87,14 +87,13 @@ Humans bring their feelings, backgrounds, and routines into interactions, adding
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
 - [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
 - [Great engineering](/blog/great-engineering/) <small>A great engineer is not just a great coder</small>
 
-### Related readings
+**Related readings**
 
 - [Peopleware](/readings/peopleware) <small>by Tom DeMarco, Timothy Lister</small>
 - [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>

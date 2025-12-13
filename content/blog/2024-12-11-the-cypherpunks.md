@@ -139,13 +139,12 @@ Privacy isn't dead. They made sure of that.
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [Understanding Bitcoin](/blog/understanding-bitcoin/) <small>From sound money to cryptographic proof</small>
 - [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>
 
-### Related readings
+**Related readings**
 
 - [Criptoria](/readings/criptoria/) <small>by Alfre Mancera</small>
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
@@ -153,7 +152,7 @@ Privacy isn't dead. They made sure of that.
 - [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
 - [Bitcoin: A Work in Progress](/readings/bitcoin-wip/) <small>by Sjors Provoost</small>
 
-### Related links
+**Related links**
 
 - Learn more: [What is PGP encryption?](/pgp) <small>A 3-minute tutorial for beginners</small>
 - Wikipedia Article: [wikipedia.org/Cypherpunk](https://en.wikipedia.org/wiki/Cypherpunk)

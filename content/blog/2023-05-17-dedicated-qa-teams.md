@@ -60,8 +60,7 @@ Code never lies and never forgets; once it's written and automated in your pipel
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [TDD vs BDD](/blog/tdd-vs-bdd/) <small>Design or Workflow?</small>
 - [Test-Driven (Development)](/blog/test-driven-development/) <small>What is challenging about it?</small>

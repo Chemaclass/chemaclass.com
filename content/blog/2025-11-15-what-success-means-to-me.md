@@ -107,9 +107,7 @@ That feels like success to me.
 
 ---
 
-## Related
-
-### Related posts
+**Related posts**
 
 - [The process itself is the goal](/blog/the-process-itself-is-the-goal) <small>How to focus and have self-discipline</small>
 - [Embrace the change](/blog/embrace-the-change) <small>Who moved my cheese?</small>
@@ -117,7 +115,7 @@ That feels like success to me.
 - [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
 - [Have you always been like this?](/blog/have-you-always-been-like-this) <small>How to find a balance of growth and happiness</small>
 
-### Related readings
+**Related readings**
 
 - [Atomic Habits](/readings/atomic-habits/) <small>An Easy & Proven Way to Build Good Habits & Break Bad Ones</small>
 - [The Power of Habit](/readings/the-power-of-habits/) <small>Why We Do What We Do, and How to Change</small>

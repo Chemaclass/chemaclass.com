@@ -43,13 +43,12 @@ If you are the one experiencing this in "first person," I would recommend you:
 
 ---
 
-## Related
-### Related readings
+**Related readings**
 
 - [Dare to lead](/readings/dare-to-lead/)<small> by Brené Brown</small>
 - [Turn the ship around!](/readings/turn-the-ship-around/)<small> by L. David Marquet</small>
 
-### Related posts
+**Related posts**
 
 - [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
 - [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>

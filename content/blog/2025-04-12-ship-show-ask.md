@@ -114,9 +114,7 @@ If you're tired of slow PR queues and over-engineered approvals, this might be w
 
 ---
 
-## Related
-
-### Related posts
+**Related posts**
 
 - [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
 - [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>

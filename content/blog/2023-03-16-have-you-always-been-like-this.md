@@ -88,8 +88,7 @@ What keeps me moving is <u>the time I have left</u> and the idea of thinking, "*
 
 ---
 
-## Related
-### Related readings
+**Related readings**
 
 - [The power of habits](/readings/the-power-of-habits/)  <small>Why We Do What We Do, and How to Change</small>
 - [Atomic habits](/readings/atomic-habits/)  <small>An Easy & Proven Way to Build Good Habits & Break Bad Ones</small>

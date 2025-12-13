@@ -95,7 +95,7 @@ could clearly see this problem on a daily basis.
 > You need this combination to build yourself as a truly senior developer; time, experience, and most importantly:
 > attitude towards **improving your own skills and the ones that surround you**.
 
-### Recommended readings
+**Related readings**
 
 - [Who moved my cheese?](/readings/who-moved-my-cheese/) <small>by Spencer Johnson.</small>
 - [Leaders Eat Last](/readings/leaders-eat-last/) <small>by Simon Sinek.</small>

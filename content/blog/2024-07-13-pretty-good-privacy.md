@@ -78,13 +78,11 @@ curl https://chemaclass.com/pgp.asc | gpg --import
 
 ---
 
-## Related
-
-### Related posts
+**Related posts**
 
 - [The Cypherpunks](/blog/the-cypherpunks/) <small>Pioneers of privacy in the digital age</small>
 - [Understanding Bitcoin](/blog/understanding-bitcoin/) <small>From sound money to cryptographic proof</small>
 
-### Related readings
+**Related readings**
 
 - [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>

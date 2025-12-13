@@ -154,13 +154,12 @@ With its **fixed supply of 21 million** coins, Bitcoin cannot be inflated in thi
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [Understanding Bitcoin](/blog/understanding-bitcoin/) <small>From sound money to cryptographic proof</small>
 - [The Cypherpunks](/blog/the-cypherpunks/) <small>Pioneers of privacy in the digital age</small>
 
-### Related readings
+**Related readings**
 
 - [The Road to Serfdom](/readings/the-road-to-serfdom/) <small>How central planning can slowly erode freedom</small>
 - [21 Lessons](/readings/21-lessons/) <small>What I've learned from falling down the Bitcoin rabbit hole</small>

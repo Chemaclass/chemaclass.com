@@ -103,7 +103,7 @@ You can help your team to be more extreme by helping with a dedicated team space
 After writing this blog post (originally in Feb, 2022), I was invited to do 
 a [tech talk](/talks/update-your-team-to-be-more-extreme) in different conferences about this topic.
 
-### Recommended readings
+**Related readings**
 
 - [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
 - [Who moved my cheese?](/readings/who-moved-my-cheese/) <small>by Spencer Johnson</small>
@@ -111,8 +111,7 @@ a [tech talk](/talks/update-your-team-to-be-more-extreme) in different conferenc
 - [Peopleware](/readings/peopleware) <small>by Tom DeMarco, Timothy Lister</small>
 - [The Pragmatic Programmer](/readings/the-pragmatic-programmer/) <small>by  David Thomas, Andrew Hunt</small>
 
-## Related
-### Related posts
+**Related posts**
 
 - [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
 - [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small>How can you work with other teams that aren't agile?</small>

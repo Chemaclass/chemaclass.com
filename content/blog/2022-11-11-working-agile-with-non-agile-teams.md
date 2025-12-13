@@ -120,13 +120,12 @@ That's when the magic starts to happen, and suddenly you can work agile with any
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [Update your team to be more extreme](/blog/update-your-team-to-be-more-extreme/). <small>How can you help your peers to embrace the change?</small>
 - [Understanding people](/blog/understanding-people/). <small>Misunderstandings, effective communication, and self-reflection</small>
 
-### Recommended readings
+**Related readings**
 
 - [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
 - [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>

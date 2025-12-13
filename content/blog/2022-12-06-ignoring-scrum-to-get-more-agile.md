@@ -128,8 +128,7 @@ working as it should.
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/). <small>How can you work with other teams that aren't agile?</small>
 - [Understanding people](/blog/understanding-people/). <small>Misunderstandings, effective communication, and self-reflection</small>

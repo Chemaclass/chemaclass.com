@@ -45,14 +45,13 @@ Being able to deploy on Fridays (if needed or wanted) impacts the team's confide
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
 - [Different beliefs about software quality](/blog/different-beliefs-about-software-quality/) <small>Some thoughts about software quality</small>
 - [Dedicated QA Teams in software?](/blog/dedicated-qa-teams/) <small>How does it fit a dedicated QA person in your agile team?</small>
 
-### Recommended readings
+**Related readings**
 
 - [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
 - [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>

@@ -78,7 +78,7 @@ are surrounded by, **especially when dealing with people**.
 
 ![blog-cover](/images/blog/2022-08-22/footer.jpg)
 
-### Recommended readings
+**Related readings**
 
 - [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/) <small>by Patrick M. Lencioni</small>
 - [97 Things Every Engineering Manager should know](/readings/97-things-every-em-should-know/) <small>by Camille Fournier</small>

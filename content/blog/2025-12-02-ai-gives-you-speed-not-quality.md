@@ -89,15 +89,13 @@ And when that happens, there's no one else to blame.
 
 ---
 
-## Related
-
-### Related posts
+**Related posts**
 
 - [Different beliefs about software quality](/blog/different-beliefs-about-software-quality) <small>Thoughts about software quality among your team</small>
 - [The art of testing](/blog/the-art-of-testing/) <small>Where design meets quality</small>
 - [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
 
-### Related readings
+**Related readings**
 
 - [Clean Code](/readings/clean-code/) <small>A Handbook of Agile Software Craftsmanship</small>
 - [Clean Architecture](/readings/clean-architecture/) <small>A Craftsman's Guide to Software Structure and Design</small>
