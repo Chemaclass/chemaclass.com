@@ -11,8 +11,18 @@ header {
   background: var(--body-bg);
   padding: 1rem;
   z-index: 1000;
-  box-shadow: 0 1px 0 var(--preview-divider-color);
   gap: 1rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -25px;
+    height: 25px;
+    background: linear-gradient(to bottom, var(--body-bg), transparent);
+    pointer-events: none;
+  }
 
   nav {
     font-size: 1.1rem;

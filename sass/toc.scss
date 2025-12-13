@@ -86,6 +86,11 @@ $breakpoint-toc: 1200px;
     padding-left: 1rem;
     font-size: 0.75rem;
   }
+
+  &.toc-h4 {
+    padding-left: 2rem;
+    font-size: 0.7rem;
+  }
 }
 
 .toc-link {
@@ -116,7 +121,15 @@ $breakpoint-toc: 1200px;
   }
 }
 
+// When scrolled and navbar is hidden (scrolling down)
 #toc-container.toc-top {
-  top: 0px;
+  top: 20px;
   max-height: calc(100vh - 40px);
+  transition: top 0.3s ease-in-out;
+}
+
+// When scrolled and navbar is visible (scrolling up)
+#toc-container.toc-top.toc-navbar-visible {
+  top: 55px;
+  max-height: calc(100vh - 75px);
 }

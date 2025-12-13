@@ -6,7 +6,7 @@
   const CONFIG = {
     contentSelector: '.blog-post__content, .book-chapter__content, .post-title ~ div, .reading-post .post-title ~ div', // Main content area (blog posts, book chapters, and readings)
     tocContainer: '#toc-container',
-    headingSelectors: 'h2, h3', // Which headings to include
+    headingSelectors: 'h2, h3, h4', // Which headings to include
     minHeadings: 2, // Minimum headings required to show TOC
     activeClass: 'active',
     offset: 100 // Offset for scroll detection
@@ -37,10 +37,11 @@
       link.textContent = heading.textContent;
       link.className = 'toc-link';
 
-      // Smooth scroll on click
+      // Smooth scroll on click with offset
       link.addEventListener('click', (e) => {
         e.preventDefault();
-        heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const targetPosition = heading.offsetTop - 20;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         // Update URL without jumping
         history.pushState(null, null, `#${heading.id}`);
       });
@@ -91,17 +92,13 @@
     }
   }
 
-  // Update TOC position based on scroll position
+  // Reset TOC scroll position when at page top
   function updateTOCPosition() {
     const tocContainer = document.querySelector(CONFIG.tocContainer);
-
     if (!tocContainer) return;
 
     if (window.scrollY === 0) {
-      tocContainer.classList.remove('toc-top');
       tocContainer.scrollTop = 0;
-    } else {
-      tocContainer.classList.add('toc-top');
     }
   }
 

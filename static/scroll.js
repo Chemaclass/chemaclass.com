@@ -16,6 +16,7 @@ window.addEventListener('load', function () {
     // navbar
     //////////////////////////
     const $navbar = document.querySelector('header');
+    const $toc = document.getElementById('toc-container');
 
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
@@ -25,18 +26,27 @@ window.addEventListener('load', function () {
             $navbar.classList.add('show');
             $scrollToTop.classList.remove('show');
             $scrollToTop.classList.add('hidden');
+            if ($toc) $toc.classList.remove('toc-top');
         } else if (currentScrollY > lastScrollY) {
-            // Scrolling down
+            // Scrolling down - navbar hides, TOC moves to top
             $navbar.classList.add('hidden');
             $navbar.classList.remove('show');
             $scrollToTop.classList.remove('show');
             $scrollToTop.classList.add('hidden');
+            if ($toc) {
+                $toc.classList.add('toc-top');
+                $toc.classList.remove('toc-navbar-visible');
+            }
         } else if (lastScrollY - currentScrollY > SCROLL_UP_THRESHOLD) {
-            // Scrolling up past the threshold
+            // Scrolling up past the threshold - navbar shows, TOC moves down
             $navbar.classList.remove('hidden');
             $navbar.classList.add('show');
             $scrollToTop.classList.remove('hidden');
             $scrollToTop.classList.add('show');
+            if ($toc) {
+                $toc.classList.add('toc-top');
+                $toc.classList.add('toc-navbar-visible');
+            }
         }
 
         lastScrollY = currentScrollY;
