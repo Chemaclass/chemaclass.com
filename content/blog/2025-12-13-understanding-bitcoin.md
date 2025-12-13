@@ -21,7 +21,7 @@ Bitcoin exists because these things happen. Understanding it requires going back
 
 <div class="tldr">
 
-Bitcoin is digital money with a fixed supply of 21 million, secured by cryptography and a global network of computers. The first half of this post explains why Bitcoin matters (sound money, financial freedom). The second half covers how it works technically, linking to deeper dives in my other posts.
+Bitcoin is digital money with a fixed supply of 21 million, secured by cryptography and a global network of computers. No banks, no governments, no central authority. It offers sound money in a world of inflation, and financial sovereignty in a world of gatekeepers.
 
 </div>
 
@@ -30,6 +30,8 @@ This post is split in two. The first half is for anyone curious about why Bitcoi
 ---
 
 ## Why Bitcoin Matters
+
+*No technical background required. Just curiosity.*
 
 ### A Brief History of Money
 
@@ -160,7 +162,13 @@ You can dismiss it, or you can understand it.
 
 ## How Bitcoin Works
 
-If you're not interested in the technical details, feel free to stop here. The sections below are for those who want to understand the machinery.
+*For the technically curious.*
+
+<div class="status info">
+
+The section above covers everything you need to understand *why* Bitcoin matters. What follows explains *how* it actually works: blockchain, cryptography, mining, and scaling. Feel free to stop here if the technical details aren't your thing.
+
+</div>
 
 ### The Blockchain
 
@@ -170,6 +178,8 @@ The blockchain is a chain of blocks. Each block contains:
 - A list of transactions
 - A reference to the previous block
 - A proof-of-work (more on this below)
+
+Before transactions get into a block, they wait in the mempool (memory pool). Miners pick transactions from this pool, prioritizing those with higher fees. You can watch this happen in real-time at [mempool.space](https://mempool.space/), a visual tool that shows pending transactions, recent blocks, and network activity.
 
 Every node (computer running Bitcoin software) keeps a complete copy of the blockchain. There's no single server to hack, no central database to corrupt. To change history, you'd need to rewrite the blockchain on the majority of nodes worldwide. Practically impossible.
 
@@ -190,11 +200,11 @@ How does a decentralized network agree on which transactions are valid? Through 
 
 Miners compete to solve computational puzzles. The first to find a valid solution gets to add the next block to the chain and receives newly created bitcoins as a reward. This process:
 
-1. **Secures the network**: Rewriting history requires redoing all the computational work
+1. **Secures the network**: Rewriting history requires redoing all the hash work
 2. **Issues new coins**: Following the predictable supply schedule
 3. **Processes transactions**: Including them in blocks for permanent record
 
-Every 2016 blocks (roughly every two weeks), the network automatically adjusts the puzzle difficulty to maintain ~10 minute block times. More miners join? Puzzles get harder. Miners leave? Puzzles get easier. No central authority needed.
+Every 2016 blocks (roughly every two weeks), the network automatically adjusts the puzzle difficulty to maintain ~10 minute block times. More miners join? Puzzles get harder. Miners leave? Puzzles get easier. No central authority needed. You can explore mining pools and hashrate distribution at [mempool.space/mining](https://mempool.space/mining).
 
 ### Addresses & Wallets
 
@@ -223,7 +233,7 @@ The Lightning Network solves this with a second layer built on top of Bitcoin. I
 - **Near-zero fees**: Fractions of a cent
 - **High capacity**: Millions of transactions per second
 
-Lightning works by opening "payment channels" between parties. Transactions within a channel happen off-chain, instantly. Only the opening and closing of channels require on-chain transactions.
+Lightning works by opening "payment channels" between parties. Transactions within a channel happen off-chain, instantly. Only the opening and closing of channels require on-chain transactions. You can visualize the network topology and statistics at [mempool.space/lightning](https://mempool.space/lightning).
 
 > Bitcoin's base layer provides security and final settlement. Lightning provides speed and scale. Different tools for different jobs.
 
@@ -241,10 +251,12 @@ Understanding Bitcoin doesn't require believing it will change the world. It req
 
 The best way to understand Bitcoin is to use it:
 
-1. **Start small**: Buy a small amount on a reputable exchange (Kraken, Coinbase, Bitstamp)
-2. **Move it to your own wallet**: Download a mobile wallet like BlueWallet or Muun. Transfer your Bitcoin there. Feel what self-custody means.
-3. **Send a transaction**: Send some sats to a friend. Watch it confirm in ~10 minutes.
-4. **Try Lightning**: Send an instant, near-free payment. This is the future of everyday transactions.
+1. **Start small**: Buy a small amount on a trusted Bitcoin-only platform like:
+   - [21bitcoin](https://21bitcoin.app/) or [Relai](https://relai.app/): Simple apps for automatic Bitcoin savings
+   - [HodlHodl](https://hodlhodl.com/): Peer-to-peer trading, non-custodial
+2. **Move it to your own wallet**: Download a mobile wallet and transfer your Bitcoin there. Feel what self-custody means. Some wallets like [BlueWallet](https://bluewallet.io/), [Nunchuk](https://nunchuk.io/).
+3. **Send a transaction**: Send some sats to a friend. Watch it confirm in ~10 minutes. Get curious looking at your transaction in the [mempool](https://mempool.space/).
+4. **Try Lightning**: Send an instant, near-free payment. This is the future of everyday transactions. Some LN wallets like [Alby Go](https://getalby.com/alby-go), [Muun](https://muun.com/).
 
 You don't have to go all in. You just have to start.
 
