@@ -21,7 +21,7 @@ Bitcoin exists because these things happen. Understanding it requires going back
 
 <div class="tldr">
 
-Bitcoin is digital money with a fixed supply of 21 million, secured by cryptography and a global network of computers. No banks, no governments, no central authority. It offers sound money in a world of inflation, and financial sovereignty in a world of gatekeepers.
+What if your savings couldn't lose value to inflation? What if no one could freeze your account? Imagine money that can't be controlled by any government or bank. Bitcoin makes this possible: digital cash you truly own. Only 21 million will ever exist. No one can print more. It works 24/7 worldwide, secured by a global network instead of banks. Anyone can use it, anywhere, anytime. No permission needed. Your money, your rules.
 
 </div>
 
@@ -53,7 +53,11 @@ Gold does well on most of these. Paper money is easy to move and divide but fail
 
 ## What is Bitcoin?
 
-Bitcoin is digital money that works without banks, governments, or any central authority. It was created in 2009 by someone (or some group) using the fake name Satoshi Nakamoto. No one knows who this person really is. Bitcoin builds on decades of work by cryptographers and privacy activists. If you're curious about the people and ideas that led to Bitcoin, I wrote about [The Cypherpunks](/blog/the-cypherpunks/) and their vision for digital privacy.
+Bitcoin is digital money that works without banks, governments, or any central authority. It was created in 2009 by someone (or some group) using the pseudonym Satoshi Nakamoto. No one knows who this person really is.
+
+The first Bitcoin block (the Genesis Block) contains a hidden message: *"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks."* This headline from The Times newspaper referenced the 2008 financial crisis. It wasn't random. It was a timestamp and a statement of purpose. Bitcoin was created as a response to bank bailouts and monetary manipulation.
+
+Bitcoin builds on decades of work by cryptographers and privacy activists. If you're curious about the people and ideas that led to Bitcoin, I wrote about [The Cypherpunks](/blog/the-cypherpunks/) and their vision for digital privacy.
 
 At its core, Bitcoin is:
 
@@ -123,13 +127,174 @@ This matters for people living under oppressive governments, facing political pr
 
 These aren't edge cases:
 
-- **Venezuela**: When inflation hit [1,000,000%](https://www.ccn.com/education/crypto/venezuela-inflation-bitcoin-usdt-p2p-crypto-lifeline/), people who held Bitcoin preserved their savings. Those who didn't lost everything.
-- **Ukraine**: In the first weeks of war, the government received [$100M+ in crypto donations](https://www.coindesk.com/business/2022/03/09/ukraine-has-received-close-to-100-million-in-crypto-donations). Fast, borderless, no intermediaries.
-- **Nigeria**: The government banned crypto exchanges in 2021. [Peer-to-peer Bitcoin trading rose 27%](https://www.nasdaq.com/articles/bitcoin-peer-to-peer-trading-in-nigeria-rises-27-since-central-banks-ban-2021-04-23). You can't ban math.
-- **Canada 2022**: Government froze bank accounts of protest supporters. Bitcoin donations couldn't be stopped. A court later ruled the freeze [unconstitutional](https://fortune.com/2022/03/15/how-canada-protest-crypto-crackdown-made-the-case-for-bitcoin-self-custody-nick-neuman/).
-- **WikiLeaks 2010**: Visa, Mastercard, and PayPal [blocked all donations](https://www.cnbc.com/2017/10/16/wikileaks-julian-assange-bitcoin-50000-percent-return-thanks-to-us-government.html), destroying 95% of their revenue. Bitcoin kept them funded.
-- **Belarus 2020**: Regime froze bank accounts of protesters. A nonprofit used Bitcoin to send [$2M+ directly to dissidents](https://www.euronews.com/my-europe/2021/12/22/meet-the-ngo-turning-to-cryptocurrencies-to-help-desperate-belarusians).
-- **Remittances**: Migrant workers send $700 billion home annually. Traditional services [charge ~10% in fees](https://restofworld.org/2021/crypto-remittances/). Bitcoin can do it for cents.
+<div class="interactive-list" data-component="interactive-list" style="--interactive-list-nav-height: 450px;">
+  <div class="interactive-list__container">
+    <nav class="interactive-list__nav" role="tablist" aria-label="Real Stories">
+      <button class="interactive-list__tab active" role="tab" aria-selected="true" data-target="wikileaks">
+        <span class="interactive-list__label">WikiLeaks 2010</span>
+        <span class="interactive-list__summary">Payment blocked</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="cyprus">
+        <span class="interactive-list__label">Cyprus 2013</span>
+        <span class="interactive-list__summary">Bank bail-ins</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="greece">
+        <span class="interactive-list__label">Greece 2015</span>
+        <span class="interactive-list__summary">Capital controls</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="venezuela">
+        <span class="interactive-list__label">Venezuela 2016</span>
+        <span class="interactive-list__summary">1,000,000% inflation</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="lebanon">
+        <span class="interactive-list__label">Lebanon 2019</span>
+        <span class="interactive-list__summary">Banking collapse</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="hongkong">
+        <span class="interactive-list__label">Hong Kong 2019</span>
+        <span class="interactive-list__summary">Protest funding</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="belarus">
+        <span class="interactive-list__label">Belarus 2020</span>
+        <span class="interactive-list__summary">Regime resistance</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="nigeria">
+        <span class="interactive-list__label">Nigeria 2021</span>
+        <span class="interactive-list__summary">Ban failed</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="turkey">
+        <span class="interactive-list__label">Turkey 2021</span>
+        <span class="interactive-list__summary">Lira devaluation</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="elsalvador">
+        <span class="interactive-list__label">El Salvador 2021</span>
+        <span class="interactive-list__summary">Legal tender</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="afghanistan">
+        <span class="interactive-list__label">Afghanistan 2021</span>
+        <span class="interactive-list__summary">Women's savings</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="ukraine">
+        <span class="interactive-list__label">Ukraine 2022</span>
+        <span class="interactive-list__summary">$100M+ in donations</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="canada">
+        <span class="interactive-list__label">Canada 2022</span>
+        <span class="interactive-list__summary">Accounts frozen</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="russia">
+        <span class="interactive-list__label">Russia 2022</span>
+        <span class="interactive-list__summary">Sanctions escape</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="argentina">
+        <span class="interactive-list__label">Argentina 2023</span>
+        <span class="interactive-list__summary">100%+ inflation</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="remittances">
+        <span class="interactive-list__label">Remittances 2023</span>
+        <span class="interactive-list__summary">Cheaper transfers</span>
+      </button>
+    </nav>
+    <div class="interactive-list__panels">
+      <div class="interactive-list__panel active" role="tabpanel" id="panel-wikileaks">
+        <div class="interactive-list__content">
+          <p>In December 2010, WikiLeaks published classified U.S. diplomatic cables. Within days, Visa, Mastercard, PayPal, and Bank of America cut off all payment processing. <br> <br> WikiLeaks lost 95% of its revenue overnight. In 2011, they started accepting Bitcoin. It was one of the first major use cases for the cryptocurrency. The financial blockade meant to silence them instead proved Bitcoin's value as censorship-resistant money.</p>
+        </div>
+        <a href="https://www.cnbc.com/2017/10/16/wikileaks-julian-assange-bitcoin-50000-percent-return-thanks-to-us-government.html" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-cyprus">
+        <div class="interactive-list__content">
+          <p>In March 2013, Cyprus banks took 47.5% of all deposits over €100,000 to bail themselves out. No consent, no warning. Money in the bank was simply confiscated to save the banking system. <br> <br> Bitcoin's price doubled in the weeks following. The Cyprus bail-in was a wake-up call: your bank balance is an IOU, and when banks fail, you're the one who pays.</p>
+        </div>
+        <a href="https://www.reuters.com/article/us-eurozone-cyprus-deposit-idUSBRE92O0R120130325/" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-greece">
+        <div class="interactive-list__content">
+          <p>In June 2015, Greece closed its banks for three weeks. ATM withdrawals were capped at €60 per day. Citizens couldn't access their own money. The debt crisis showed Europeans that bank deposits aren't as safe as they assumed. <br> <br> Bitcoin interest spiked in Greece during the crisis. It was an early warning: even in "stable" countries, your access to money can be switched off overnight.</p>
+        </div>
+        <a href="https://www.theguardian.com/world/2015/jun/28/greek-crisis-capital-controls-imposed-banks-closed" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-venezuela">
+        <div class="interactive-list__content">
+          <p>Between 2016 and 2019, inflation reached 53,000,000%. Salaries became worthless within days. People couldn't buy food, medicine, or basic goods. Those who converted savings to Bitcoin before the collapse preserved their wealth. <br> <br> Those who trusted the banking system lost everything. Bitcoin became a lifeline. Not for speculation, but for survival.</p>
+        </div>
+        <a href="https://www.ccn.com/education/crypto/venezuela-inflation-bitcoin-usdt-p2p-crypto-lifeline/" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-lebanon">
+        <div class="interactive-list__content">
+          <p>In 2019, Lebanese banks began freezing deposits. By 2020, people couldn't access their own savings. The lira lost 90% of its value. ATM withdrawals were capped at tiny amounts. It wasn't a temporary measure. Banks simply didn't have the money. <br> <br>Those who had converted to Bitcoin before the collapse could still access their wealth. Those who trusted the banks discovered that "your money" wasn't really yours.</p>
+        </div>
+        <a href="https://www.cnbc.com/2021/06/20/bitcoin-cryptocurrency-is-banned-in-lebanon-but-its-use-is-soaring.html" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-hongkong">
+        <div class="interactive-list__content">
+          <p>During the 2019-2020 pro-democracy protests, Hong Kong activists faced financial surveillance. Banks could freeze accounts of known protesters. Donations through traditional channels could be traced. <br> <br>Bitcoin offered a way to fund the movement without leaving a trail for authorities. Protesters used crypto to receive international support while protecting their identities. Financial privacy became a tool of resistance.</p>
+        </div>
+        <a href="https://qz.com/1724748/bitcoin-donations-to-hong-kong-protesters-surge" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-belarus">
+        <div class="interactive-list__content">
+          <p>After the disputed 2020 election, Belarus erupted in protests. The Lukashenko regime responded with violence and financial repression. Bank accounts of activists, journalists, and NGOs were frozen. <br> <br>The KGB monitored all transfers. A solidarity fund called BYSOL raised over $2 million in Bitcoin and distributed it directly to protesters who lost jobs or faced persecution. The only payment method authorities couldn't control.</p>
+        </div>
+        <a href="https://www.euronews.com/my-europe/2021/12/22/meet-the-ngo-turning-to-cryptocurrencies-to-help-desperate-belarusians" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-nigeria">
+        <div class="interactive-list__content">
+          <p>The Central Bank banned crypto exchanges in February 2021 and ordered banks to close accounts of anyone dealing in cryptocurrency. The goal was to stop Bitcoin adoption. It backfired. <br> <br>Peer-to-peer trading surged 27% in the months following the ban. Nigerians simply moved to decentralized platforms. The naira continued losing value while Bitcoin kept working. You can't ban math.</p>
+        </div>
+        <a href="https://www.nasdaq.com/articles/bitcoin-peer-to-peer-trading-in-nigeria-rises-27-since-central-banks-ban-2021-04-23" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-turkey">
+        <div class="interactive-list__content">
+          <p>The Turkish lira has lost over 80% of its value against the dollar since 2018. Every currency crisis triggers a spike in Bitcoin trading. In 2021, Turkey banned crypto payments, but trading volumes only increased. <br> <br>The government can't stop people from protecting their savings. When the lira crashes, Bitcoin search trends surge. Turks aren't speculating. They're surviving.</p>
+        </div>
+        <a href="https://www.aljazeera.com/economy/2021/12/20/as-lira-tanks-turks-528bn-in-crypto-up-eleven-fold-this-year" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-elsalvador">
+        <div class="interactive-list__content">
+          <p>In September 2021, El Salvador became the first country to make Bitcoin legal tender. President Bukele's government built a national wallet (Chivo), installed Bitcoin ATMs nationwide, and even started mining BTC using geothermal energy from volcanoes. Critics predicted disaster. <br> <br>Instead, tourism increased, remittance costs dropped, and the country gained global attention. A small nation became a Bitcoin laboratory.</p>
+        </div>
+        <a href="https://www.bbc.com/news/world-latin-america-58579415" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-afghanistan">
+        <div class="interactive-list__content">
+          <p>When the Taliban took control in August 2021, banks froze. International transfers stopped. Women, banned from working, lost access to income. But some Afghan women had learned about Bitcoin before the collapse. <br> <br>They could receive payments from abroad, store value the regime couldn't seize, and maintain financial independence. In a country where women can't open bank accounts, Bitcoin became a tool of quiet resistance.</p>
+        </div>
+        <a href="https://www.forbes.com/sites/rogerhuang/2021/08/23/how-bitcoin-can-help-afghans-protect-their-life-savings/" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-ukraine">
+        <div class="interactive-list__content">
+          <p>When Russia invaded, traditional aid was too slow. Banks were overwhelmed, wire transfers took days. But within hours of posting Bitcoin addresses on Twitter, donations poured in from around the world. By March 2022, Ukraine received over $100 million in crypto. <br> <br>Funds went directly to bulletproof vests, medical supplies, and communication equipment. No bureaucracy, no intermediaries, no delays.</p>
+        </div>
+        <a href="https://www.coindesk.com/business/2022/03/09/ukraine-has-received-close-to-100-million-in-crypto-donations" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-canada">
+        <div class="interactive-list__content">
+          <p>In February 2022, the government invoked the Emergencies Act to freeze bank accounts of people who donated to trucker protests. No court order needed. Over 200 accounts were frozen overnight. But Bitcoin donations kept flowing. <br> <br>Organizers distributed 14+ BTC directly to protesters. The government couldn't touch those funds. In 2024, a court ruled the freezes unconstitutional. The lesson: custodial money can be weaponized.</p>
+        </div>
+        <a href="https://fortune.com/2022/03/15/how-canada-protest-crypto-crackdown-made-the-case-for-bitcoin-self-custody-nick-neuman/" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-russia">
+        <div class="interactive-list__content">
+          <p>After Russia invaded Ukraine in 2022, Western sanctions cut Russian banks from SWIFT. Suddenly, Russians abroad couldn't access their money. Many turned to crypto, not to evade sanctions, but to survive. <br> <br>Meanwhile, Ukrainians used Bitcoin to receive donations and preserve savings. The same technology served people on both sides of a conflict, based on their individual needs. Bitcoin doesn't pick sides.</p>
+        </div>
+        <a href="https://www.nytimes.com/2022/02/28/business/russia-sanctions-cryptocurrency.html" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-argentina">
+        <div class="interactive-list__content">
+          <p>Argentina has suffered recurring currency crises for decades. In 2023, inflation exceeded 140%. The peso lost over 50% of its value in a single year. Capital controls limit how many dollars citizens can buy. Bitcoin offers an escape: Argentines increasingly convert pesos to BTC to preserve purchasing power. <br> <br>Peer-to-peer trading volumes consistently rank among the highest in Latin America. When your currency is a melting ice cube, Bitcoin is a freezer.</p>
+        </div>
+        <a href="https://www.reuters.com/technology/argentines-turn-crypto-shield-savings-peso-plunges-2023-04-26/" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-remittances">
+        <div class="interactive-list__content">
+          <p>Migrant workers send $700 billion home every year. Traditional services like Western Union take 6-10% in fees. For a worker sending $200, that's $20 gone. Money their family desperately needs. <br> <br>Bitcoin and Lightning Network transfer value across borders for cents, settling in minutes instead of days. Companies like Bitso processed $8 billion in crypto remittances in 2023. Cheaper transfers mean more food on the table.</p>
+        </div>
+        <a href="https://restofworld.org/2021/crypto-remittances/" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Common Objections
 
@@ -161,26 +326,26 @@ This isn't just theory anymore.
 
 ### Institutional adoption
 
-- **US Bitcoin ETFs** were approved in 2024, bringing billions in institutional money
-- **MicroStrategy** holds 650,000+ BTC as corporate treasury, inspiring others
+- **US Bitcoin ETFs** approved in 2024, bringing billions in institutional money ([source](https://www.cnbc.com/2024/01/10/sec-approves-rule-changes-that-pave-the-way-for-bitcoin-etfs.html))
+- **Strategy** holds 660.000+ BTC as corporate treasury, inspiring others ([source](https://www.strategy.com/purchases))
 - **Major banks** now offer Bitcoin custody and trading services to clients
 - **Pension funds** and asset managers are adding Bitcoin to portfolios
 
 ### Global adoption
 
-- **El Salvador** made Bitcoin legal tender in 2021 and mines BTC with volcanic energy
-- **Central African Republic** adopted Bitcoin as legal tender in 2022
-- **Switzerland** allows tax payments in Bitcoin in some cantons
-- **Emerging markets** lead in grassroots adoption: Vietnam, Philippines, Argentina
+- **Central African Republic** adopted Bitcoin as legal tender in 2022 ([source](https://www.cnbc.com/2022/04/28/central-african-republic-adopts-bitcoin-as-legal-tender.html))
+- **Switzerland** allows tax payments in Bitcoin in Canton Zug since 2021 ([source](https://zg.ch/de/steuern-finanzen/steuern/steuerbezug/taxpaymentswithcryptocurrencies))
+- **Emerging markets** lead in grassroots adoption: Vietnam, Philippines, Nigeria
 
 ### Real-world usage
 
-- **Lightning Network** processes millions of instant payments monthly ([see](https://lightning.network/))
-- **Merchants worldwide** accept Bitcoin, from small shops to major retailers ([see](https://btcmap.org/))
-- **Remittances** flow across borders faster and cheaper than traditional services
-- **Tens of millions** of people worldwide hold Bitcoin
+- **Square** accepts Bitcoin payments since Nov. 2025 for 4M+ merchants ([source](https://squareup.com/us/en/press/block-to-roll-out-bitcoin-payments-on-square))
+- **Lightning Network** (LN) processes millions of instant payments monthly ([source](https://lightning.network/))
+- **Merchants worldwide** accept Bitcoin, from small shops to major retailers ([source](https://btcmap.org/))
 
 You can dismiss it, or you can understand it.
+
+---
 
 ## Getting Started
 
