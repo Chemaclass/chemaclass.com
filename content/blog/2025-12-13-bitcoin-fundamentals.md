@@ -1,11 +1,11 @@
 +++
-title = "Understanding Bitcoin"
-description = "A practical introduction to Bitcoin: why it matters as sound money and how it enables financial freedom."
+title = "Bitcoin Fundamentals"
+description = "A beginner's guide to Bitcoin: what it is, why it matters, and how to get started."
 draft = false
 [taxonomies]
 tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
 [extra]
-subtitle = "Sound money and financial sovereignty"
+subtitle = "A beginner's guide to sound money"
 static_thumbnail = "/images/blog/2025-12-13/cover.jpg"
 reading_time = 12
 +++

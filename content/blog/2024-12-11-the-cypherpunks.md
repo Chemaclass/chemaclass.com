@@ -141,7 +141,7 @@ Privacy isn't dead. They made sure of that.
 
 **Related posts**
 
-- [Understanding Bitcoin](/blog/understanding-bitcoin/) <small>From sound money to cryptographic proof</small>
+- [Bitcoin Fundamentals](/blog/bitcoin-fundamentals/) <small>From sound money to cryptographic proof</small>
 - [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>
 
 **Related readings**

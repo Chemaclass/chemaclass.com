@@ -11,13 +11,13 @@ static_thumbnail = "/images/blog/2025-12-13/cover.jpg"
 
 ![blog-cover](/images/blog/2025-12-13/cover.jpg)
 
-This post explains how Bitcoin works under the hood. If you're looking for why Bitcoin matters, start with [Understanding Bitcoin](/blog/understanding-bitcoin/).
+This post explains how Bitcoin works under the hood. If you're looking for why Bitcoin matters, start with [Bitcoin Fundamentals](/blog/bitcoin-fundamentals/).
 
 <!-- more -->
 
 <div class="tldr">
 
-Bitcoin is a decentralized network where transactions are verified by cryptography, grouped into blocks by miners, and stored in an immutable chain. No central authority needed.
+**How Bitcoin solves digital money:** Transactions are signed with cryptographic keys, grouped into blocks through proof-of-work mining, and chained together via hashes. The network of nodes enforces rules without any central authority. This post covers the blockchain, UTXO model, mining mechanics, wallet security, network architecture, confirmation depth, and Lightning Network. "Deep Dive" sections included for those who want the technical details.
 
 </div>
 
@@ -27,56 +27,197 @@ Bitcoin is a decentralized network where transactions are verified by cryptograp
 
 ## The Blockchain
 
-Bitcoin uses a blockchain: a shared record book that stores every transaction ever made. Think of it as a public accounting book that anyone can read but no one can change (except by following the rules).
+### The Double-Spend Problem
 
-The blockchain is a chain of blocks. Each block contains:
+Digital money has a fundamental problem: how do you prevent someone from copying their coins and spending them twice? Traditional systems solve this with a central authority (banks, PayPal) that tracks who owns what. Bitcoin's breakthrough was solving this without any central party.
+
+The solution: a shared ledger that everyone can verify but no one controls.
+
+### How It Works
+
+Bitcoin uses a blockchain: a chain of blocks where each block contains transactions and links to the previous block through cryptographic hashes.
+
+A **hash function** takes any input and produces a fixed-size fingerprint. Change one bit of input, and the output changes completely. This makes tampering obvious. Bitcoin uses SHA-256, which produces a 256-bit output.
+
+Each block contains:
 - A list of transactions
-- A reference to the previous block
-- A proof-of-work (more on this below)
+- A hash of the previous block header
+- A proof-of-work solution (more below)
 
-Before transactions get into a block, they wait in the mempool (memory pool). Miners pick transactions from this pool, prioritizing those with higher fees. You can watch this happen in real-time at [mempool.space](https://mempool.space/), a visual tool that shows pending transactions, recent blocks, and network activity.
+Before transactions get into a block, they wait in the mempool. Miners pick transactions from this pool, prioritizing those with higher fees. Watch this in real-time at [mempool.space](https://mempool.space/).
 
-Every node (computer running Bitcoin software) keeps a complete copy of the blockchain. There's no single server to hack, no central database to corrupt. To change history, you'd need to rewrite the blockchain on the majority of nodes worldwide. Practically impossible.
+Every node keeps a complete copy of the blockchain. No single server to hack, no central database to corrupt. To change history, you'd need to rewrite blocks on the majority of nodes worldwide.
+
+### Deep Dive: Block Structure
+
+A block has two parts: the **header** (80 bytes) and the **body** (transactions).
+
+The header contains:
+- **Version**: Protocol version
+- **Previous block hash**: Links to the chain
+- **Merkle root**: Hash of all transactions in the block
+- **Timestamp**: When the block was created
+- **Difficulty target**: How hard the puzzle was
+- **Nonce**: The solution miners found
+
+**Merkle trees** organize transactions efficiently. Each transaction is hashed, then pairs of hashes are combined and hashed again, building up to a single root hash. This allows proving a transaction exists in a block without downloading all transactions. Useful for lightweight wallets.
+
+Block weight is measured in virtual bytes (vB). The limit is 4 million weight units, roughly 1-1.5 MB of data per block.
 
 ## Transactions & Cryptography
 
-Bitcoin transactions use public-key cryptography. You have two keys:
+### The UTXO Model
 
-- **Private key**: A secret number that proves ownership. Keep this safe.
-- **Public key**: Derived from the private key. Used to receive funds.
+Bitcoin doesn't use accounts with balances. Instead, it tracks **Unspent Transaction Outputs (UTXOs)**. Think of them as digital coins of varying sizes.
 
-When you send Bitcoin, you create a transaction that says "I'm sending X BTC from this address to that address" and sign it with your private key. This signature proves you own the funds without revealing your private key.
+When you receive bitcoin, you get a UTXO. When you spend, you consume entire UTXOs as inputs and create new ones as outputs. If you have a 1 BTC UTXO and want to send 0.3 BTC, you spend the whole UTXO and create two outputs: 0.3 BTC to the recipient and ~0.7 BTC back to yourself (minus fees).
 
-For a deeper dive into how Bitcoin scripts work and the different address types, see [Programmable Money](/blog/programmable-money/). For background on cryptographic signatures, [Pretty Good Privacy](/blog/pretty-good-privacy/) covers the fundamentals.
+Your "balance" is the sum of all UTXOs you can spend.
+
+### Public-Key Cryptography
+
+Bitcoin transactions use public-key cryptography:
+
+- **Private key**: A secret 256-bit number. This proves ownership.
+- **Public key**: Derived mathematically from the private key. Shared publicly.
+
+When you send bitcoin, you sign the transaction with your private key. This signature proves you own the UTXOs being spent without revealing the private key. Anyone can verify the signature using your public key.
+
+For deeper coverage of Bitcoin's scripting system and address types, see [Programmable Money](/blog/programmable-money/). For cryptographic fundamentals, see [Pretty Good Privacy](/blog/pretty-good-privacy/).
+
+### Deep Dive: Elliptic Curve Cryptography
+
+Bitcoin uses **ECDSA** (Elliptic Curve Digital Signature Algorithm) with the **secp256k1** curve. This curve was chosen for efficiency and because it wasn't designed by any government agency (unlike NIST curves), reducing backdoor concerns.
+
+A private key is a random 256-bit integer. The public key is derived by multiplying this number by a generator point on the curve. Easy to compute forward, practically impossible to reverse.
+
+**Transaction signing** involves:
+1. Hashing the transaction data
+2. Creating a signature using the private key
+3. Including the signature and public key in the transaction
+
+**SIGHASH flags** control what parts of a transaction the signature covers:
+- `SIGHASH_ALL`: Signs all inputs and outputs (most common)
+- `SIGHASH_NONE`: Signs inputs only
+- `SIGHASH_SINGLE`: Signs one specific output
+- These can be combined with `ANYONECANPAY` for advanced use cases
 
 ## Mining & Consensus
 
 How does a decentralized network agree on which transactions are valid? Through proof-of-work mining.
 
-Miners compete to solve computational puzzles. The first to find a valid solution gets to add the next block to the chain and receives newly created bitcoins as a reward. This process:
+### The Puzzle
 
-1. **Secures the network**: Rewriting history requires redoing all the hash work
-2. **Issues new coins**: Following the predictable supply schedule
-3. **Processes transactions**: Including them in blocks for permanent record
+Miners race to find a number (the **nonce**) that, when combined with the block header and hashed, produces a result below a target value. It's like rolling dice until you get a number under 100, except with 2^256 possible outcomes.
 
-Every 2016 blocks (roughly every two weeks), the network automatically adjusts the puzzle difficulty to maintain ~10 minute block times. More miners join? Puzzles get harder. Miners leave? Puzzles get easier. No central authority needed. You can explore mining pools and hashrate distribution at [mempool.space/mining](https://mempool.space/mining).
+The work is:
+- **Hard to find**: Requires trillions of guesses
+- **Easy to verify**: One hash check proves the solution
+
+This asymmetry is key. Anyone can verify a block instantly, but creating one requires real computational work.
+
+### Why It Matters
+
+Mining serves three purposes:
+
+1. **Secures the network**: Rewriting history means redoing all hash work
+2. **Issues new coins**: Following a predictable schedule (halving every 210,000 blocks)
+3. **Processes transactions**: Including them in the permanent record
+
+Every 2016 blocks (~2 weeks), the network adjusts difficulty to maintain ~10 minute block times. More hashpower joins? Puzzles get harder. Hashpower leaves? Puzzles get easier.
+
+Explore mining pools and hashrate at [mempool.space/mining](https://mempool.space/mining).
+
+### Deep Dive: Difficulty and Game Theory
+
+**Difficulty calculation**: The target is a 256-bit number. A valid block hash must be below this target. Lower target = harder puzzle. The network adjusts every 2016 blocks based on how long those blocks actually took vs. the expected 20,160 minutes.
+
+**Hashrate and security**: Bitcoin's security comes from the cost to rewrite history. With ~500 EH/s (exahashes per second) of hashrate, attacking the network would require controlling majority hashpower. That means billions in hardware and electricity, plus the attack would crash the asset's value.
+
+**Economic incentives**: Miners spend real resources (electricity, hardware). They only profit if they play by the rules. A miner who creates invalid blocks wastes their work because nodes reject invalid blocks. This aligns individual profit motive with network security.
+
+**51% attacks**: If an attacker controlled majority hashrate, they could theoretically double-spend by mining an alternative chain. But the economics make this irrational for large values: the attack destroys the value of what you're stealing.
 
 ## Addresses & Wallets
 
-Bitcoin addresses are derived from public keys. Over time, different address formats have been developed to improve efficiency and functionality:
+Bitcoin addresses are derived from public keys. Different formats have evolved:
 
 - **P2PKH**: Legacy addresses starting with "1"
 - **P2SH**: Script addresses starting with "3"
 - **P2WPKH**: Native SegWit addresses starting with "bc1q"
 - **P2TR**: Taproot addresses starting with "bc1p"
 
-For technical details on each address type and how the scripting system works, see [Programmable Money](/blog/programmable-money/#common-bitcoin-address-types).
+For technical details on each type, see [Programmable Money](/blog/programmable-money/#common-bitcoin-address-types).
 
-A wallet is software that manages your keys and constructs transactions. The wallet doesn't hold your coins. The coins exist on the blockchain. The wallet holds the keys that prove you can spend them.
+### Wallets
 
-Two types of wallets:
-- **Hot wallets**: Connected to the internet. Convenient for daily use, but more vulnerable to hacks. Examples: phone apps, browser extensions.
-- **Cold wallets**: Offline storage. More secure for long-term savings. Examples: hardware wallets (Ledger, Trezor), paper wallets.
+A wallet manages your keys and constructs transactions. It doesn't hold your coins. Coins exist on the blockchain. The wallet holds keys that prove you can spend them.
+
+**Hot wallets** connect to the internet. Convenient for daily use, more vulnerable. Examples: phone apps, browser extensions.
+
+**Cold wallets** stay offline. More secure for savings. Examples: hardware wallets (Ledger, Trezor), paper wallets.
+
+### HD Wallets and Seed Phrases
+
+Modern wallets are **Hierarchical Deterministic (HD)**. One master seed generates unlimited keys in a tree structure. Back up the seed once, recover everything.
+
+**BIP-39** defines the 12 or 24-word seed phrase most wallets use. These words encode entropy that derives all your keys. Lose the phrase, lose access. Anyone with the phrase controls the funds.
+
+> Never store seed phrases digitally. Write them down. Store securely offline.
+
+## The Network
+
+Bitcoin is a peer-to-peer network. No central servers. Nodes connect to each other, share transactions and blocks, and enforce rules independently.
+
+### Node Types
+
+**Full nodes** download and validate every block and transaction. They enforce all consensus rules and don't trust anyone. Running a full node means you verify everything yourself.
+
+**SPV (light) clients** only download block headers. They trust that miners validated the transactions. Less security, but works on phones and low-power devices.
+
+**Mining nodes** are full nodes that also compete to create new blocks.
+
+### How Transactions Propagate
+
+When you broadcast a transaction:
+1. Your wallet sends it to connected nodes
+2. Each node validates and forwards to its peers
+3. Within seconds, the transaction reaches most of the network
+4. Miners include it in their candidate blocks
+
+Blocks propagate similarly. When a miner finds a valid block, it spreads across the network in seconds.
+
+### Deep Dive: Network Architecture
+
+**Peer discovery**: Nodes find each other through DNS seeds (hardcoded addresses that return active node IPs) and by sharing peer addresses with connected nodes.
+
+**Gossip protocol**: Information spreads through "inv" (inventory) messages. A node announces it has something new, peers request it if interested. This prevents bandwidth waste from duplicate data.
+
+**Compact blocks** (BIP-152) speed up block propagation. Since nodes already have most transactions in their mempool, blocks can be transmitted as just the header plus short transaction IDs.
+
+## Security & Confirmations
+
+### Why Confirmations Matter
+
+When a transaction is included in a block, it has 1 confirmation. Each subsequent block adds another confirmation.
+
+More confirmations = harder to reverse. To undo a confirmed transaction, an attacker would need to mine an alternative chain faster than the honest network. Each block makes this exponentially harder.
+
+**General guidelines:**
+- 0 confirmations: Transaction broadcast but not yet in a block. Can be double-spent.
+- 1 confirmation: In a block. Reversal requires significant hashpower.
+- 6 confirmations: Standard for large amounts. Reversal practically impossible.
+
+### Deep Dive: Confirmation Security
+
+Satoshi's whitepaper includes the probability calculation. With an attacker controlling fraction `q` of hashpower:
+
+- If `q < 0.5`: Probability of catching up decreases exponentially with each confirmation
+- At 6 confirmations with `q = 0.1` (10% hashpower): Success probability < 0.1%
+
+The "6 confirmations" rule assumes a well-funded attacker with substantial but minority hashpower. For smaller transactions, fewer confirmations are often acceptable.
+
+**Finality in Bitcoin** is probabilistic, not absolute. But after enough confirmations, the probability of reversal approaches zero for any realistic attacker.
 
 ## Scaling: The Lightning Network
 
@@ -94,11 +235,27 @@ Lightning works by opening "payment channels" between parties. Transactions with
 
 If you want to run your own Lightning node and take full control of your payments, I wrote a guide on how to [Run your LN node on a Raspberry Pi](/blog/run-your-ln-node/).
 
+### Deep Dive: How Lightning Works
+
+Payment channels use **2-of-2 multisig** addresses. Both parties must sign to move funds. This creates a shared account that neither can steal from.
+
+**HTLCs (Hash Time-Locked Contracts)** enable multi-hop payments. The mechanism:
+1. Alice wants to pay Carol through Bob
+2. Carol generates a secret and gives Alice the hash
+3. Alice creates an HTLC: "Bob gets paid if he reveals the secret within 24 hours"
+4. Bob creates a similar HTLC with Carol
+5. Carol reveals the secret to Bob, claiming payment
+6. Bob uses the same secret to claim from Alice
+
+If anyone fails to cooperate, the timelock expires and funds return. The secret travels backward, payments travel forward.
+
+**Watchtowers** monitor the blockchain for cheating attempts. If your counterparty tries to broadcast an old channel state, the watchtower can penalize them, even while you're offline.
+
 ---
 
 **Related posts**
 
-- [Understanding Bitcoin](/blog/understanding-bitcoin/) <small>Why Bitcoin matters: sound money and financial sovereignty</small>
+- [Bitcoin Fundamentals](/blog/bitcoin-fundamentals/) <small>Why Bitcoin matters: sound money and financial sovereignty</small>
 - [The Cypherpunks](/blog/the-cypherpunks/) <small>Pioneers of privacy in the digital age</small>
 - [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>
 - [Run your LN node on a Raspberry Pi](/blog/run-your-ln-node/) <small>Take full control of your Lightning payments</small>
@@ -106,6 +263,7 @@ If you want to run your own Lightning node and take full control of your payment
 
 **Related readings**
 
+- [Bitcoin Whitepaper](https://bitcoin.org/bitcoin.pdf) <small>The original 9-page paper by Satoshi Nakamoto</small>
 - [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
 - [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
