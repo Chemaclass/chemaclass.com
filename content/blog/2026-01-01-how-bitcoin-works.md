@@ -1,7 +1,7 @@
 +++
 title = "How Bitcoin Works"
 description = "A technical introduction to Bitcoin: blockchain, cryptography, mining, addresses, and the Lightning Network."
-draft = true
+draft = false
 [taxonomies]
 tags = [ "bitcoin", "cryptography", "tutorial" ]
 [extra]
@@ -48,7 +48,7 @@ Before transactions get into a block, they wait in the mempool. Miners pick tran
 
 Every node keeps a complete copy of the blockchain. No single server to hack, no central database to corrupt. To change history, you'd need to rewrite blocks on the majority of nodes worldwide.
 
-### Deep Dive: Block Structure
+{% deep_dive(title="Block Structure") %}
 
 A block has two parts: the **header** (80 bytes) and the **body** (transactions).
 
@@ -63,6 +63,8 @@ The header contains:
 **Merkle trees** organize transactions efficiently. Each transaction is hashed, then pairs of hashes are combined and hashed again, building up to a single root hash. This allows proving a transaction exists in a block without downloading all transactions. Useful for lightweight wallets.
 
 Block weight is measured in virtual bytes (vB). The limit is 4 million weight units, roughly 1-1.5 MB of data per block.
+
+{% end %}
 
 ## Transactions & Cryptography
 
@@ -85,7 +87,7 @@ When you send bitcoin, you sign the transaction with your private key. This sign
 
 For deeper coverage of Bitcoin's scripting system and address types, see [Programmable Money](/blog/programmable-money/). For cryptographic fundamentals, see [Pretty Good Privacy](/blog/pretty-good-privacy/).
 
-### Deep Dive: Elliptic Curve Cryptography
+{% deep_dive(title="Elliptic Curve Cryptography") %}
 
 Bitcoin uses **ECDSA** (Elliptic Curve Digital Signature Algorithm) with the **secp256k1** curve. This curve was chosen for efficiency and because it wasn't designed by any government agency (unlike NIST curves), reducing backdoor concerns.
 
@@ -101,6 +103,8 @@ A private key is a random 256-bit integer. The public key is derived by multiply
 - `SIGHASH_NONE`: Signs inputs only
 - `SIGHASH_SINGLE`: Signs one specific output
 - These can be combined with `ANYONECANPAY` for advanced use cases
+
+{% end %}
 
 ## Mining & Consensus
 
@@ -128,7 +132,7 @@ Every 2016 blocks (~2 weeks), the network adjusts difficulty to maintain ~10 min
 
 Explore mining pools and hashrate at [mempool.space/mining](https://mempool.space/mining).
 
-### Deep Dive: Difficulty and Game Theory
+{% deep_dive(title="Difficulty and Game Theory") %}
 
 **Difficulty calculation**: The target is a 256-bit number. A valid block hash must be below this target. Lower target = harder puzzle. The network adjusts every 2016 blocks based on how long those blocks actually took vs. the expected 20,160 minutes.
 
@@ -137,6 +141,8 @@ Explore mining pools and hashrate at [mempool.space/mining](https://mempool.spac
 **Economic incentives**: Miners spend real resources (electricity, hardware). They only profit if they play by the rules. A miner who creates invalid blocks wastes their work because nodes reject invalid blocks. This aligns individual profit motive with network security.
 
 **51% attacks**: If an attacker controlled majority hashrate, they could theoretically double-spend by mining an alternative chain. But the economics make this irrational for large values: the attack destroys the value of what you're stealing.
+
+{% end %}
 
 ## Addresses & Wallets
 
@@ -187,13 +193,15 @@ When you broadcast a transaction:
 
 Blocks propagate similarly. When a miner finds a valid block, it spreads across the network in seconds.
 
-### Deep Dive: Network Architecture
+{% deep_dive(title="Network Architecture") %}
 
 **Peer discovery**: Nodes find each other through DNS seeds (hardcoded addresses that return active node IPs) and by sharing peer addresses with connected nodes.
 
 **Gossip protocol**: Information spreads through "inv" (inventory) messages. A node announces it has something new, peers request it if interested. This prevents bandwidth waste from duplicate data.
 
 **Compact blocks** (BIP-152) speed up block propagation. Since nodes already have most transactions in their mempool, blocks can be transmitted as just the header plus short transaction IDs.
+
+{% end %}
 
 ## Security & Confirmations
 
@@ -208,7 +216,7 @@ More confirmations = harder to reverse. To undo a confirmed transaction, an atta
 - 1 confirmation: In a block. Reversal requires significant hashpower.
 - 6 confirmations: Standard for large amounts. Reversal practically impossible.
 
-### Deep Dive: Confirmation Security
+{% deep_dive(title="Confirmation Security") %}
 
 Satoshi's whitepaper includes the probability calculation. With an attacker controlling fraction `q` of hashpower:
 
@@ -218,6 +226,8 @@ Satoshi's whitepaper includes the probability calculation. With an attacker cont
 The "6 confirmations" rule assumes a well-funded attacker with substantial but minority hashpower. For smaller transactions, fewer confirmations are often acceptable.
 
 **Finality in Bitcoin** is probabilistic, not absolute. But after enough confirmations, the probability of reversal approaches zero for any realistic attacker.
+
+{% end %}
 
 ## Scaling: The Lightning Network
 
@@ -235,7 +245,7 @@ Lightning works by opening "payment channels" between parties. Transactions with
 
 If you want to run your own Lightning node and take full control of your payments, I wrote a guide on how to [Run your LN node on a Raspberry Pi](/blog/run-your-ln-node/).
 
-### Deep Dive: How Lightning Works
+{% deep_dive(title="How Lightning Works") %}
 
 Payment channels use **2-of-2 multisig** addresses. Both parties must sign to move funds. This creates a shared account that neither can steal from.
 
@@ -250,6 +260,8 @@ Payment channels use **2-of-2 multisig** addresses. Both parties must sign to mo
 If anyone fails to cooperate, the timelock expires and funds return. The secret travels backward, payments travel forward.
 
 **Watchtowers** monitor the blockchain for cheating attempts. If your counterparty tries to broadcast an old channel state, the watchtower can penalize them, even while you're offline.
+
+{% end %}
 
 ---
 

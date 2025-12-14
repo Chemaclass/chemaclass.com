@@ -1,0 +1,99 @@
+// Deep Dive Component
+// Collapsible sections for technical deep dives
+
+.deep-dive {
+  margin: 1.5rem 0;
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 8px;
+  background: rgba(var(--body-bg-rgb), 0.3);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: background 0.2s ease;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:hover {
+      background: rgba(var(--body-bg-rgb), 0.5);
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    transition: transform 0.2s ease;
+
+    &::before {
+      content: "▶";
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--heading-color);
+  }
+
+  &__content {
+    padding: 0 1.25rem 1.25rem;
+    border-top: 1px solid var(--preview-divider-color);
+    line-height: 1.7;
+    color: var(--body-color);
+
+    > *:first-child {
+      margin-top: 1.25rem;
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    strong {
+      color: var(--heading-color);
+    }
+
+    ul, ol {
+      margin: 0 0 1rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    code {
+      background: var(--search-input-bg);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+  }
+
+  // Open state
+  &[open] {
+    .deep-dive__icon {
+      transform: rotate(90deg);
+    }
+
+    .deep-dive__header {
+      background: rgba(var(--body-bg-rgb), 0.5);
+    }
+  }
+}

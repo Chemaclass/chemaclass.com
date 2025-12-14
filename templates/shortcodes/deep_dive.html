@@ -1,0 +1,9 @@
+<details class="deep-dive">
+  <summary class="deep-dive__header">
+    <span class="deep-dive__icon"></span>
+    <span class="deep-dive__title">Deep Dive: {{ title }}</span>
+  </summary>
+  <div class="deep-dive__content">
+    {{ body | markdown | safe }}
+  </div>
+</details>
