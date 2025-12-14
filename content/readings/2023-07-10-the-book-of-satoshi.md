@@ -33,8 +33,7 @@ Nakamoto's true identity may never be known. Therefore the writings reproduced h
 
 ---
 
-## Related
-### Related readings
+**Related readings**
 
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
 - [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>by Saifedean Ammous</small>

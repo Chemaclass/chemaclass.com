@@ -86,12 +86,11 @@ You'll walk away with a new lens to see the world—why prices rise, why saving 
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [The Cypherpunks](/blog/the-cypherpunks) <small>Pioneers of privacy in the digital age</small>
 
-### Related readings
+**Related readings**
 
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
 - [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>

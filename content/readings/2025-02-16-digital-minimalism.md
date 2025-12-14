@@ -78,13 +78,12 @@ Digital minimalism **is not about rejecting technology** altogether —**it's ab
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [The process itself is the goal](/blog/the-process-itself-is-the-goal/) <small>How to focus and have self-discipline</small>
 - [Have you always been like this?](/blog/have-you-always-been-like-this/) <small>How to find a balance of growth and happiness</small>
 
-### Related readings
+**Related readings**
 
 - [The power of habits](/readings/the-power-of-habits/)  <small>Why We Do What We Do, and How to Change</small>
 - [Atomic habits](/readings/atomic-habits/)  <small>An Easy & Proven Way to Build Good Habits & Break Bad Ones</small>

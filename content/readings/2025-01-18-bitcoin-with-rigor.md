@@ -100,17 +100,16 @@ This book aims to equip readers with the tools to understand how Bitcoin works, 
 
 ---
 
-## Related
-### Related links
+**Related links**
 
 - Book website: [www.bitcoinconrigor.com](https://www.bitcoinconrigor.com)
 
-### Related posts
+**Related posts**
 
 - [The Cypherpunks](/blog/the-cypherpunks) <small>Pioneers of privacy in the digital age</small>
 - [Programmable Money](/blog/programmable-money) <small>The power of Bitcoin's Script</small>
 
-### Related readings
+**Related readings**
 
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
 - [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>

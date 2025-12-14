@@ -45,7 +45,6 @@ I wrote a blog post about this book: [Embrace the change](/blog/embrace-the-chan
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [Embrace the change](/blog/embrace-the-change//) <small>Who moved my cheese?🧀</small>

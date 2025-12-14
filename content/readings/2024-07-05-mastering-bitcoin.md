@@ -89,12 +89,11 @@ The first edition of this book was published in December 2014. Ten years later, 
 
 ---
 
-## Related
-### Related posts
+**Related posts**
 
 - [Programmable Money](/blog/programmable-money) <small>The power of Bitcoin's Script</small>
 
-### Related readings
+**Related readings**
 
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
 - [The Blocksize War](/readings/the-blocksize-war/) <small>by Jonathan Bier</small>

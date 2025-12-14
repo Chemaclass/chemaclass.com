@@ -51,8 +51,7 @@ apolitical, free-market alternative to national central banks.
 
 ---
 
-## Related
-### Related readings
+**Related readings**
 
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
 - [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>

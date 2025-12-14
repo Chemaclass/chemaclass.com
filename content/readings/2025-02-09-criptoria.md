@@ -198,17 +198,16 @@ Cryptoria is addressed to all people convinced that, beyond inherited or imposed
 
 ---
 
-## Related
-### Related links
+**Related links**
 
 - Book website: [www.prometeabtc.com/criptoria](https://www.prometeabtc.com/criptoria)
 
-### Related posts
+**Related posts**
 
 - [The Cypherpunks](/blog/the-cypherpunks) <small>Pioneers of privacy in the digital age</small>
 - [Programmable Money](/blog/programmable-money) <small>The power of Bitcoin's Script</small>
 
-### Related readings
+**Related readings**
 
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
 - [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>

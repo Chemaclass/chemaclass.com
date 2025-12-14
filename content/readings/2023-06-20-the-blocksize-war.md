@@ -53,8 +53,7 @@ The account in this book includes discussions with the key players from both sid
 
 ---
 
-## Related
-### Related readings
+**Related readings**
 
 - [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>by Saifedean Ammous</small>
 - [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
