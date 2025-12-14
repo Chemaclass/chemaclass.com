@@ -89,28 +89,11 @@
       <script src="https://kit.fontawesome.com/cfd779d106.js" crossorigin="anonymous" defer></script>
     {% endblock head %}
     {% block styles %}
-      <!-- Critical CSS inlined for instant first paint -->
-      <style>
-        :root{--body-color:#1a1a2e;--body-bg:#f8f9fa;--accent:#3b82f6}
-        *,::before,::after{box-sizing:border-box}
-        body{margin:0;font-family:Rubik,system-ui,-apple-system,sans-serif;background:var(--body-bg);color:var(--body-color)}
-        header{display:flex;align-items:center;padding:1rem 2rem;gap:1rem}
-        .profile-icon img{width:36px;height:36px;border-radius:50%}
-        main{max-width:1200px;margin:0 auto;padding:0 1rem}
-        .navbar{display:flex;gap:1rem;margin-left:auto;align-items:center}
-        .navbar a{text-decoration:none;color:var(--body-color)}
-        .navbar button{background:none;border:none;cursor:pointer;padding:0.5rem}
-        .search-container{display:none}
-        @media(min-width:768px){.search-container.header-search{display:flex}}
-      </style>
-
-      <!-- Defer all CSS files -->
-      <link rel="preload" href="{{ get_url(path='main.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
       <link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <link rel="preload" href="{{ get_url(path='sponsor.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript>
-        <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
         <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
         <link rel="stylesheet" href="{{ get_url(path='sponsor.css') | safe }}">
         <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
