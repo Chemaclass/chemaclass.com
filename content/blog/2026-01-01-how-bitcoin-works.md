@@ -301,6 +301,26 @@ Every piece supports every other piece. Remove one, and the system weakens. Toge
 
 Whether that matters to you depends on where you live and how much you trust your institutions. But the option exists now. And no one can take it away.
 
+{% deep_dive(title="Rabbit Holes") %}
+
+Bitcoin's technical depth goes far beyond what fits in one post. Here are topics worth exploring if you want to go deeper:
+
+**[SegWit](https://bitcoinops.org/en/topics/segregated-witness/)** (Segregated Witness) was Bitcoin's 2017 upgrade that moved signature data outside the main transaction structure. This fixed transaction malleability (a bug that prevented Lightning), introduced block weight for more efficient space usage, and did it all while staying backwards-compatible with old nodes.
+
+**[Taproot & Schnorr](https://bitcoinops.org/en/topics/taproot/)** landed in 2021, upgrading Bitcoin's cryptography. Schnorr signatures are smaller and enable aggregation (multiple signatures become one). Taproot makes complex spending conditions look identical to simple payments on-chain, improving both privacy and efficiency.
+
+**[Soft forks vs hard forks](https://bitcoin.stackexchange.com/questions/30817/what-is-a-soft-fork)**: How does Bitcoin upgrade without a central authority? Soft forks add new rules that old nodes still accept. Hard forks change rules in ways old nodes reject. Understanding this distinction explains why Bitcoin evolves slowly and why contentious changes are rare.
+
+**[Fee mechanics](https://mempool.space/docs/faq#what-is-rbf)**: The fee market is more nuanced than "pay more, confirm faster." Replace-By-Fee (RBF) lets you bump a stuck transaction's fee. Child-Pays-For-Parent (CPFP) lets recipients accelerate incoming payments by spending them with high fees.
+
+**[Timelocks](https://bitcoinops.org/en/topics/timelocks/)**: Bitcoin can lock funds until conditions are met. `CLTV` (CheckLockTimeVerify) locks until a specific block height or timestamp. `CSV` (CheckSequenceVerify) locks for a relative time after confirmation. These primitives enable Lightning channels, inheritance schemes, and atomic swaps.
+
+**[Coinbase transactions](https://learnmeabitcoin.com/technical/mining/coinbase-transaction/)**: The only way new bitcoin enters circulation. Every block begins with a special transaction that pays the miner the block reward plus all fees. These newly minted coins can't be spent for 100 blocks, a rule that protects against chain reorganizations.
+
+The deeper you go, the more you find.
+
+{% end %}
+
 ---
 
 **Related posts**
