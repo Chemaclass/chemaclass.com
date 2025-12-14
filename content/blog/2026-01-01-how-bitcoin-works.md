@@ -1,7 +1,7 @@
 +++
 title = "How Bitcoin Works"
 description = "A technical introduction to Bitcoin: blockchain, cryptography, mining, addresses, and the Lightning Network."
-draft = false
+draft = true
 [taxonomies]
 tags = [ "bitcoin", "cryptography", "tutorial" ]
 [extra]

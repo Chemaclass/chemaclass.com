@@ -29,12 +29,31 @@
         heading.id = `heading-${index}`;
       }
 
+      // Store original text before adding anchor
+      const headingText = heading.textContent;
+
+      // Add anchor link to heading for copy functionality
+      const anchor = document.createElement('a');
+      anchor.href = `#${heading.id}`;
+      anchor.className = 'heading-anchor';
+      anchor.innerHTML = '#';
+      anchor.title = 'Copy link';
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault();
+        const url = window.location.href.split('#')[0] + `#${heading.id}`;
+        navigator.clipboard.writeText(url);
+        // Visual feedback
+        anchor.innerHTML = '✓';
+        setTimeout(() => { anchor.innerHTML = '#'; }, 1000);
+      });
+      heading.appendChild(anchor);
+
       const listItem = document.createElement('li');
       listItem.className = `toc-item toc-${heading.tagName.toLowerCase()}`;
 
       const link = document.createElement('a');
       link.href = `#${heading.id}`;
-      link.textContent = heading.textContent;
+      link.textContent = headingText;
       link.className = 'toc-link';
 
       // Smooth scroll on click with offset

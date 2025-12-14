@@ -23,6 +23,25 @@ h6 {
   &.active {
     color: var(--accent-color);
   }
+
+  .heading-anchor {
+    opacity: 0;
+    margin-left: 0.5rem;
+    color: var(--color-subtitle);
+    text-decoration: none;
+    transition: opacity 0.2s ease, color 0.2s ease;
+    font-weight: 400;
+    font-size: 0.85em;
+
+    &:hover {
+      color: var(--accent-color);
+      border-bottom: none;
+    }
+  }
+
+  &:hover .heading-anchor {
+    opacity: 1;
+  }
 }
 
 h1 sup {
