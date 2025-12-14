@@ -23,6 +23,8 @@ Bitcoin is a decentralized network where transactions are verified by cryptograp
 
 *For the technically curious.*
 
+{{ youtube(id="bBC-nXj3Ng4") }}
+
 ## The Blockchain
 
 Bitcoin uses a blockchain: a shared record book that stores every transaction ever made. Think of it as a public accounting book that anyone can read but no one can change (except by following the rules).
