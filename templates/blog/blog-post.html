@@ -115,13 +115,14 @@
           {{ page.date | date(format="%B %d, %Y") }}
         </span>
         {% endif %}
-        {% if page.reading_time %}
+        {% set reading_time = page.extra.reading_time | default(value=page.reading_time) %}
+        {% if reading_time %}
         <span class="blog-post__reading-time">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <polyline points="12 6 12 12 16 14"></polyline>
           </svg>
-          {{ page.reading_time }} min read
+          {{ reading_time }} min read
         </span>
         {% endif %}
         {% if page.word_count %}

@@ -1,10 +1,11 @@
 {% macro date_and_words(post) %}
+  {% set reading_time = post.extra.reading_time | default(value=post.reading_time) %}
   {% if post.date and post.word_count > 0 -%}
     {{ post.date| date(format="%B %d, %Y") }} - {{ post.word_count }} words -
-    {% if post.reading_time == 1 %}
-      {{ post.reading_time }} min
+    {% if reading_time == 1 %}
+      {{ reading_time }} min
     {% else %}
-      {{ post.reading_time }} mins
+      {{ reading_time }} mins
     {% endif %}
   {% else %}
     {% if post.date %}
@@ -81,8 +82,9 @@
     <div class="blog-card__content">
       <div class="blog-card__meta">
         <span class="blog-card__date">{{ post.date | date(format="%b %d, %Y") }}</span>
-        {% if post.reading_time %}
-          <span class="blog-card__reading-time">{{ post.reading_time }} min read</span>
+        {% set reading_time = post.extra.reading_time | default(value=post.reading_time) %}
+        {% if reading_time %}
+          <span class="blog-card__reading-time">{{ reading_time }} min read</span>
         {% endif %}
         {% if pinned %}
           <span class="blog-card__pinned-badge">Pinned</span>

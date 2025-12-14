@@ -3,10 +3,11 @@ title = "Understanding Bitcoin"
 description = "A practical introduction to Bitcoin: why it matters as sound money and how it enables financial freedom."
 draft = false
 [taxonomies]
-tags = [ "bitcoin", "philosophy" ]
+tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
 [extra]
 subtitle = "Sound money and financial sovereignty"
 static_thumbnail = "/images/blog/2025-12-13/cover.jpg"
+reading_time = 12
 +++
 
 ![blog-cover](/images/blog/2025-12-13/cover.jpg)
@@ -37,7 +38,7 @@ Throughout history, money has evolved:
 2. **Things used as money**: Shells, salt, cattle. Valuable because they were useful or hard to find.
 3. **Precious metals**: Gold and silver. Hard to find, long-lasting, easy to divide and carry.
 4. **Paper money backed by gold**: Receipts representing gold stored in vaults.
-5. **Government money**: Paper backed by nothing but a government's promise. Why does it work? Because governments require you to pay [taxes](/blog/taxes/) in their currency. This forces everyone to use it.
+5. **Government money**: Paper backed by nothing but a government's promise. Why does it work? Because governments require you to pay [taxes](/blog/understanding-taxes/) in their currency. This forces everyone to use it.
 
 > Money is a way to store and transfer value. The better it performs these functions, the better it serves as money.
 
@@ -298,13 +299,13 @@ These aren't edge cases:
 
 ## Common Objections
 
-- **"It's used for crime."** So is cash. The difference: Bitcoin leaves a permanent, traceable record. The blockchain is a forensic tool. Most criminals prefer dollars.
+- **"It's used for crime."** So is cash. The difference: Bitcoin leaves a permanent, traceable record. The blockchain is a [forensic tool](https://www.chainalysis.com/blog/2025-crypto-crime-report-introduction/). Most criminals prefer dollars.
 
-- **"It's too volatile."** True in the short term. Zoom out: Bitcoin has been the best-performing asset of the last decade. Volatility decreases as adoption grows. Don't invest money you need next month.
+- **"It's too volatile."** True in the short term. Zoom out: Bitcoin has been the [best-performing asset of the last decade](https://www.coingecko.com/research/publications/bitcoin-versus-traditional-assets-price-returns). Volatility decreases as adoption grows. Don't invest money you need next month.
 
-- **"It wastes energy."** Bitcoin mining uses electricity to secure a trillion-dollar network. Much of it comes from stranded energy (gas flares, excess hydro) that would otherwise be wasted. The real question: is financial sovereignty worth the energy cost? Air conditioning uses more.
+- **"It wastes energy."** Bitcoin mining uses electricity to secure a trillion-dollar network. Much of it comes from [stranded energy](https://k33.com/research/archive/articles/bitcoin-mining-using-stranded-natural-gas-is-the-most-cost-effective-way-to) (gas flares, excess hydro) that would otherwise be wasted. The real question: is financial sovereignty worth the energy cost? Air conditioning uses more.
 
-- **"It's too late to buy."** People said this at $100, $1,000, $10,000, and $100,000. If Bitcoin achieves even a fraction of gold's market cap, there's still room to grow.
+- **"It's too late to buy."** People said this at $100, $1,000, $10,000, and $100,000. If Bitcoin achieves even a fraction of [gold's market cap](https://8marketcap.com/), there's still room to grow.
 
 ## Honest Caveats
 
@@ -370,7 +371,6 @@ You don't have to go all in. You just have to start.
 
 **Related posts**
 
-- [How Bitcoin Works](/blog/how-bitcoin-works/) <small>The technical deep-dive: blockchain, cryptography, mining</small>
 - [The Cypherpunks](/blog/the-cypherpunks/) <small>Pioneers of privacy in the digital age</small>
 - [Understanding Taxes](/blog/taxes/) <small>Where your money goes and how to rethink the system</small>
 - [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>
