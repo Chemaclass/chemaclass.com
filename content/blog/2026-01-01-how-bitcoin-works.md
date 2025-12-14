@@ -17,7 +17,7 @@ This post explains how Bitcoin works under the hood. If you're looking for why B
 
 <div class="tldr">
 
-**How Bitcoin solves digital money:** Transactions are signed with cryptographic keys, grouped into blocks through proof-of-work mining, and chained together via hashes. The network of nodes enforces rules without any central authority. This post covers the blockchain, UTXO model, mining mechanics, wallet security, network architecture, confirmation depth, and Lightning Network. "Deep Dive" sections included for those who want the technical details.
+**How Bitcoin solves digital money:** Transactions are signed with cryptographic keys, grouped into blocks through proof-of-work mining, and chained together via hashes. The network of nodes enforces rules without any central authority. This post covers the blockchain, UTXO model, mining mechanics, wallet security, network architecture, confirmation depth, incentive alignment, and Lightning Network.
 
 </div>
 
@@ -136,6 +136,8 @@ Explore mining pools and hashrate at [mempool.space/mining](https://mempool.spac
 
 **Difficulty calculation**: The target is a 256-bit number. A valid block hash must be below this target. Lower target = harder puzzle. The network adjusts every 2016 blocks based on how long those blocks actually took vs. the expected 20,160 minutes.
 
+{{ youtube(id="S9JGmA5_unY") }}
+
 **Hashrate and security**: Bitcoin's security comes from the cost to rewrite history. With ~500 EH/s (exahashes per second) of hashrate, attacking the network would require controlling majority hashpower. That means billions in hardware and electricity, plus the attack would crash the asset's value.
 
 **Economic incentives**: Miners spend real resources (electricity, hardware). They only profit if they play by the rules. A miner who creates invalid blocks wastes their work because nodes reject invalid blocks. This aligns individual profit motive with network security.
@@ -229,6 +231,24 @@ The "6 confirmations" rule assumes a well-funded attacker with substantial but m
 
 {% end %}
 
+## Incentive Alignment
+
+Bitcoin isn't just a clever technology. It's a system where every participant's self-interest reinforces the network.
+
+- **Miners** invest in hardware and electricity. They only profit by producing valid blocks. Cheating wastes their investment because nodes reject invalid blocks instantly.
+
+- **Nodes** enforce the rules to protect their own holdings. A node operator who accepts invalid transactions devalues their own bitcoin. Self-interest makes them honest validators.
+
+- **Users** pay fees to get transactions processed. Higher fees mean faster confirmation. This creates demand for block space and funds network security.
+
+- **Developers** contribute to software they themselves use. Bugs hurt their own holdings. Improvements benefit everyone, including them.
+
+- **Holders** benefit from network security and adoption. The more secure and useful Bitcoin becomes, the more valuable their holdings. They're incentivized to support the ecosystem.
+
+No central coordinator. No trust required. Everyone acts in their own interest, and the system benefits everyone.
+
+> "Don't trust, verify." Anyone can run a node and verify every transaction, every block, every rule. You don't need to trust banks, governments, or even other Bitcoin users. The math proves itself.
+
 ## Scaling: The Lightning Network
 
 Bitcoin's base layer processes about 7 transactions per second. That's by design: keeping things decentralized requires blocks small enough for anyone to verify. But this limits how many transactions it can handle.
@@ -262,6 +282,18 @@ If anyone fails to cooperate, the timelock expires and funds return. The secret 
 **Watchtowers** monitor the blockchain for cheating attempts. If your counterparty tries to broadcast an old channel state, the watchtower can penalize them, even while you're offline.
 
 {% end %}
+
+## The Bigger Picture
+
+What makes Bitcoin remarkable isn't any single component. It's how they fit together into a self-reinforcing system.
+
+Cryptography proves ownership without trusted authorities. Proof-of-work makes history expensive to rewrite. Economic incentives turn individual greed into collective security. Decentralization removes single points of failure. And the fixed supply creates digital scarcity for the first time in history.
+
+Every piece supports every other piece. Remove one, and the system weakens. Together, they create something that has never existed before: money that can't be inflated, transactions that can't be censored, and property that can't be confiscated.
+
+> No banks. No governments. No trusted third parties. Just math, code, and a global network of nodes all enforcing the same rules.
+
+Whether that matters to you depends on where you live and how much you trust your institutions. But the option exists now. And no one can take it away.
 
 ---
 
