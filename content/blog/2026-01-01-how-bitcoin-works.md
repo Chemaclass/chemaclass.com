@@ -85,7 +85,13 @@ Bitcoin transactions use public-key cryptography:
 
 When you send bitcoin, you sign the transaction with your private key. This signature proves you own the UTXOs being spent without revealing the private key. Anyone can verify the signature using your public key.
 
-For deeper coverage of Bitcoin's scripting system and address types, see [Programmable Money](/blog/programmable-money/). For cryptographic fundamentals, see [Pretty Good Privacy](/blog/pretty-good-privacy/).
+### Programmable Money
+
+Bitcoin isn't just digital cash. It has its own programming language called **Script**. Every transaction includes a small program that defines the conditions for spending.
+
+Most transactions use simple scripts: "whoever can prove they own this public key can spend these coins." But Script enables much more: multi-signature wallets requiring multiple keys, time-locked transactions that can't be spent until a certain date, and complex conditions combining multiple requirements.
+
+This makes Bitcoin programmable money. For a deeper dive into Script and address types, see [Programmable Money](/blog/programmable-money/).
 
 {% deep_dive(title="Elliptic Curve Cryptography") %}
 
