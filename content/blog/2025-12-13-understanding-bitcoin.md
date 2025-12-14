@@ -68,6 +68,8 @@ At its core, Bitcoin is:
 
 There's no company behind Bitcoin. No CEO, no headquarters, no customer support. It's open-source software that anyone can run, inspect, or contribute to.
 
+{{ youtube(id="d7ID3fKAFQM") }}
+
 ## Sound Money
 
 ### Scarcity
@@ -213,7 +215,7 @@ These aren't edge cases:
         <div class="interactive-list__content">
           <p>In June 2015, Greece closed its banks for three weeks. ATM withdrawals were capped at €60 per day. Citizens couldn't access their own money. The debt crisis showed Europeans that bank deposits aren't as safe as they assumed. <br> <br> Bitcoin interest spiked in Greece during the crisis. It was an early warning: even in "stable" countries, your access to money can be switched off overnight.</p>
         </div>
-        <a href="https://www.theguardian.com/world/2015/jun/28/greek-crisis-capital-controls-imposed-banks-closed" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+        <a href="https://www.nbcnews.com/business/business-news/greece-crisis-banks-shut-week-restrictions-imposed-atms-n383606" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-venezuela">
         <div class="interactive-list__content">
@@ -225,13 +227,13 @@ These aren't edge cases:
         <div class="interactive-list__content">
           <p>In 2019, Lebanese banks began freezing deposits. By 2020, people couldn't access their own savings. The lira lost 90% of its value. ATM withdrawals were capped at tiny amounts. It wasn't a temporary measure. Banks simply didn't have the money. <br> <br>Those who had converted to Bitcoin before the collapse could still access their wealth. Those who trusted the banks discovered that "your money" wasn't really yours.</p>
         </div>
-        <a href="https://www.cnbc.com/2021/06/20/bitcoin-cryptocurrency-is-banned-in-lebanon-but-its-use-is-soaring.html" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+        <a href="https://www.cnbc.com/2022/11/05/-in-bankrupt-lebanon-locals-mine-bitcoin-and-buy-groceries-with-tether.html" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-hongkong">
         <div class="interactive-list__content">
           <p>During the 2019-2020 pro-democracy protests, Hong Kong activists faced financial surveillance. Banks could freeze accounts of known protesters. Donations through traditional channels could be traced. <br> <br>Bitcoin offered a way to fund the movement without leaving a trail for authorities. Protesters used crypto to receive international support while protecting their identities. Financial privacy became a tool of resistance.</p>
         </div>
-        <a href="https://qz.com/1724748/bitcoin-donations-to-hong-kong-protesters-surge" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+        <a href="https://cointelegraph.com/news/spotlight-on-bitcoin-as-hsbc-shuts-hong-kong-protest-linked-account" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-belarus">
         <div class="interactive-list__content">
@@ -249,19 +251,19 @@ These aren't edge cases:
         <div class="interactive-list__content">
           <p>The Turkish lira has lost over 80% of its value against the dollar since 2018. Every currency crisis triggers a spike in Bitcoin trading. In 2021, Turkey banned crypto payments, but trading volumes only increased. <br> <br>The government can't stop people from protecting their savings. When the lira crashes, Bitcoin search trends surge. Turks aren't speculating. They're surviving.</p>
         </div>
-        <a href="https://www.aljazeera.com/economy/2021/12/20/as-lira-tanks-turks-528bn-in-crypto-up-eleven-fold-this-year" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+        <a href="https://www.reuters.com/world/middle-east/turkeys-slumping-lira-adds-fuels-crypto-trading-boom-2021-03-31/" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-elsalvador">
         <div class="interactive-list__content">
-          <p>In September 2021, El Salvador became the first country to make Bitcoin legal tender. President Bukele's government built a national wallet (Chivo), installed Bitcoin ATMs nationwide, and even started mining BTC using geothermal energy from volcanoes. Critics predicted disaster. <br> <br>Instead, tourism increased, remittance costs dropped, and the country gained global attention. A small nation became a Bitcoin laboratory.</p>
+          <p>In September 2021, El Salvador became the first country to make Bitcoin legal tender. President Bukele's government installed Bitcoin ATMs nationwide, and even started mining BTC using geothermal energy from volcanoes. Critics predicted disaster. <br> <br>Instead, tourism increased, remittance costs dropped, and the country gained global attention. A small nation became a Bitcoin laboratory.</p>
         </div>
-        <a href="https://www.bbc.com/news/world-latin-america-58579415" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+        <a href="https://cointelegraph.com/news/el-salvador-bitcoin-holdings-unrealized-gains" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-afghanistan">
         <div class="interactive-list__content">
           <p>When the Taliban took control in August 2021, banks froze. International transfers stopped. Women, banned from working, lost access to income. But some Afghan women had learned about Bitcoin before the collapse. <br> <br>They could receive payments from abroad, store value the regime couldn't seize, and maintain financial independence. In a country where women can't open bank accounts, Bitcoin became a tool of quiet resistance.</p>
         </div>
-        <a href="https://www.forbes.com/sites/rogerhuang/2021/08/23/how-bitcoin-can-help-afghans-protect-their-life-savings/" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+        <a href="https://bitcoinmagazine.com/culture/bitcoin-financial-freedom-in-afghanistan" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-ukraine">
         <div class="interactive-list__content">
@@ -279,19 +281,19 @@ These aren't edge cases:
         <div class="interactive-list__content">
           <p>After Russia invaded Ukraine in 2022, Western sanctions cut Russian banks from SWIFT. Suddenly, Russians abroad couldn't access their money. Many turned to crypto, not to evade sanctions, but to survive. <br> <br>Meanwhile, Ukrainians used Bitcoin to receive donations and preserve savings. The same technology served people on both sides of a conflict, based on their individual needs. Bitcoin doesn't pick sides.</p>
         </div>
-        <a href="https://www.nytimes.com/2022/02/28/business/russia-sanctions-cryptocurrency.html" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+        <a href="https://us.boell.org/en/2022/04/08/crypto-both-sides-russia-ukraine-war" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-argentina">
         <div class="interactive-list__content">
           <p>Argentina has suffered recurring currency crises for decades. In 2023, inflation exceeded 140%. The peso lost over 50% of its value in a single year. Capital controls limit how many dollars citizens can buy. Bitcoin offers an escape: Argentines increasingly convert pesos to BTC to preserve purchasing power. <br> <br>Peer-to-peer trading volumes consistently rank among the highest in Latin America. When your currency is a melting ice cube, Bitcoin is a freezer.</p>
         </div>
-        <a href="https://www.reuters.com/technology/argentines-turn-crypto-shield-savings-peso-plunges-2023-04-26/" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+        <a href="https://cointelegraph.com/news/argentina-peso-us-offers-lifeline-bitcoiner-skeptical" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-remittances">
         <div class="interactive-list__content">
           <p>Migrant workers send $700 billion home every year. Traditional services like Western Union take 6-10% in fees. For a worker sending $200, that's $20 gone. Money their family desperately needs. <br> <br>Bitcoin and Lightning Network transfer value across borders for cents, settling in minutes instead of days. Companies like Bitso processed $8 billion in crypto remittances in 2023. Cheaper transfers mean more food on the table.</p>
         </div>
-        <a href="https://restofworld.org/2021/crypto-remittances/" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+        <a href="https://www.coindesk.com/consensus-magazine/2023/04/17/send-globally-crypto-remittance-service" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
     </div>
   </div>
@@ -365,7 +367,9 @@ The best way to understand Bitcoin is to use it:
 3. **Send a transaction**: Send some sats to a friend. Watch it confirm in ~10 minutes. Get curious looking at your transaction in the [mempool](https://mempool.space/).
 4. **Try Lightning**: Send an instant, near-free payment. This is the future of everyday transactions. Some LN wallets like [Alby Go](https://getalby.com/alby-go), [Muun](https://muun.com/).
 
-You don't have to go all in. You just have to start.
+You don't have to go all in. Start small and keep learning, one step at a time.
+
+{{ youtube(id="Pef22g53zsg") }}
 
 ---
 
