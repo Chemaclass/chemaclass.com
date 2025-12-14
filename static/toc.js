@@ -70,11 +70,13 @@
       }
     });
 
-    // Remove all active classes
+    // Remove all active classes from TOC links and headings
     tocLinks.forEach(link => link.classList.remove(CONFIG.activeClass));
+    headings.forEach(h => h.classList.remove(CONFIG.activeClass));
 
-    // Add active class to current link and scroll it into view
+    // Add active class to current heading and TOC link
     if (currentHeading) {
+      currentHeading.classList.add(CONFIG.activeClass);
       const activeLink = document.querySelector(`.toc-link[href="#${currentHeading.id}"]`);
       if (activeLink) {
         activeLink.classList.add(CONFIG.activeClass);

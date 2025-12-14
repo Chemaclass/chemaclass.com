@@ -18,6 +18,11 @@ h5,
 h6 {
   font-weight: 500;
   color: var(--heading-color);
+  transition: color 0.3s ease;
+
+  &.active {
+    color: var(--accent-color);
+  }
 }
 
 h1 sup {
