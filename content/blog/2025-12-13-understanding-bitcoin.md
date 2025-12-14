@@ -382,3 +382,8 @@ You don't have to go all in. You just have to start.
 - [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
 - [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
 - [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
+
+**Further reading**
+
+- [Bitcoin 101](https://cosmevalera.dev/blog/bitcoin-101/) <small>by Cosme - Another beginner-friendly introduction</small>
+- [How to Buy Bitcoin Securely](https://cosmevalera.dev/blog/bitcoin-102/) <small>by Cosme - Step-by-step guide</small>
