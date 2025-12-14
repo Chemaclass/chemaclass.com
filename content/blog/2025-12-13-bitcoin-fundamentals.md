@@ -38,7 +38,7 @@ Throughout history, money has evolved:
 2. **Things used as money**: Shells, salt, cattle. Valuable because they were useful or hard to find.
 3. **Precious metals**: Gold and silver. Hard to find, long-lasting, easy to divide and carry.
 4. **Paper money backed by gold**: Receipts representing gold stored in vaults.
-5. **Government money**: Paper backed by nothing but a government's promise. Why does it work? Because governments require you to pay [taxes](/blog/understanding-taxes/) in their currency. This forces everyone to use it.
+5. **Government money**: Paper backed by nothing but a government's promise. Why does it work? Because governments require you to pay taxes in their currency. This forces everyone to use it.
 
 > Money is a way to store and transfer value. The better it performs these functions, the better it serves as money.
 
@@ -54,9 +54,9 @@ Gold does well on most of these. Paper money is easy to move and divide but fail
 
 ## What is Bitcoin?
 
-Bitcoin is digital money that works without banks, governments, or any central authority. It was created in 2009 by someone (or some group) using the pseudonym Satoshi Nakamoto. No one knows who this person really is.
+Bitcoin is digital money that works without banks, governments, or any central authority. It was created in 2009 by someone (or some group) using the pseudonym [Satoshi Nakamoto](https://en.wikipedia.org/wiki/Satoshi_Nakamoto). No one knows who this person really is.
 
-The first Bitcoin block (the Genesis Block) contains a hidden message: *"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks."* This headline from The Times newspaper referenced the 2008 financial crisis. It wasn't random. It was a timestamp and a statement of purpose. Bitcoin was created as a response to bank bailouts and monetary manipulation.
+The first Bitcoin block (the [Genesis Block](https://en.bitcoin.it/wiki/Genesis_block)) contains a hidden message: *"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks."* This headline from The Times newspaper referenced the 2008 financial crisis. It wasn't random. It was a timestamp and a statement of purpose. Bitcoin was created as a response to bank bailouts and monetary manipulation.
 
 Bitcoin builds on decades of work by cryptographers and privacy activists. If you're curious about the people and ideas that led to Bitcoin, I wrote about [The Cypherpunks](/blog/the-cypherpunks/) and their vision for digital privacy.
 
@@ -86,7 +86,7 @@ Bitcoin is often called "digital gold" because it shares gold's scarcity while b
 
 When governments print money, the value of existing money decreases. This is inflation. Your savings buy less over time, even while sitting untouched in your bank account.
 
-Inflation is often called a "hidden tax" because it transfers wealth from savers to those who receive the new money first (usually governments and banks). I wrote more about this in [Understanding Taxes](/blog/taxes/).
+Inflation is often called a "hidden tax" because it transfers wealth from savers to those who receive the new money first (usually governments and banks). I wrote more about this in [Understanding Taxes](/blog/understanding-taxes/).
 
 Bitcoin's supply schedule is fixed and predictable. New bitcoins are created through mining at a rate that halves roughly every four years. By around 2140, all 21 million will have been created. No surprises, no government decisions to print more.
 
@@ -190,12 +190,28 @@ These aren't edge cases:
         <span class="interactive-list__summary">Sanctions escape</span>
       </button>
       <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="argentina">
-        <span class="interactive-list__label">Argentina 2023</span>
-        <span class="interactive-list__summary">100%+ inflation</span>
+        <span class="interactive-list__label">Argentina 2023-25</span>
+        <span class="interactive-list__summary">Inflation slashed</span>
       </button>
       <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="remittances">
         <span class="interactive-list__label">Remittances 2023</span>
         <span class="interactive-list__summary">Cheaper transfers</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="etfs">
+        <span class="interactive-list__label">Bitcoin ETFs 2024</span>
+        <span class="interactive-list__summary">Institutional legitimacy</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="gaza">
+        <span class="interactive-list__label">Gaza 2024</span>
+        <span class="interactive-list__summary">Humanitarian lifeline</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="usreserve">
+        <span class="interactive-list__label">US Reserve 2025</span>
+        <span class="interactive-list__summary">National strategy</span>
+      </button>
+      <button class="interactive-list__tab" role="tab" aria-selected="false" data-target="machado">
+        <span class="interactive-list__label">Venezuela 2025</span>
+        <span class="interactive-list__summary">Nobel resistance</span>
       </button>
     </nav>
     <div class="interactive-list__panels">
@@ -285,15 +301,39 @@ These aren't edge cases:
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-argentina">
         <div class="interactive-list__content">
-          <p>Argentina has suffered recurring currency crises for decades. In 2023, inflation exceeded 140%. The peso lost over 50% of its value in a single year. Capital controls limit how many dollars citizens can buy. Bitcoin offers an escape: Argentines increasingly convert pesos to BTC to preserve purchasing power. <br> <br>Peer-to-peer trading volumes consistently rank among the highest in Latin America. When your currency is a melting ice cube, Bitcoin is a freezer.</p>
+          <p>Argentina suffered 211% inflation in 2023 under decades of big-government policies. Then Javier Milei took office. He halved ministries, cut 40,000 government jobs, and ended monetary financing. Result: inflation dropped to 117% in 2024, then 31% by end of 2025—lowest in seven years. GDP grew 7.6% in Q2 2025, the strongest in two decades. <br> <br>Poverty fell from 57% to 32%. Smaller government, sound money principles. Bitcoin adoption remains high—Argentines learned not to trust any currency they can't verify themselves.</p>
         </div>
-        <a href="https://cointelegraph.com/news/argentina-peso-us-offers-lifeline-bitcoiner-skeptical" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+        <a href="https://www.aljazeera.com/economy/2025/7/25/milei-tames-inflation-but-argentines-still-struggle-to-afford-basics" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-remittances">
         <div class="interactive-list__content">
           <p>Migrant workers send $700 billion home every year. Traditional services like Western Union take 6-10% in fees. For a worker sending $200, that's $20 gone. Money their family desperately needs. <br> <br>Bitcoin and Lightning Network transfer value across borders for cents, settling in minutes instead of days. Companies like Bitso processed $8 billion in crypto remittances in 2023. Cheaper transfers mean more food on the table.</p>
         </div>
         <a href="https://www.coindesk.com/consensus-magazine/2023/04/17/send-globally-crypto-remittance-service" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-etfs">
+        <div class="interactive-list__content">
+          <p>In January 2024, the SEC approved Bitcoin ETFs for the first time. Within months, institutional investment surged 400%. By end of 2024, professional investors held $27.4 billion in Bitcoin ETFs—over 26% of total AUM. BlackRock's IBIT alone reached $50 billion. <br> <br>Bitcoin was no longer just for early adopters. Wall Street called it "year zero of institutional adoption." The asset that banks once dismissed now sits in pension funds.</p>
+        </div>
+        <a href="https://www.cnbc.com/2024/01/10/sec-approves-rule-changes-that-pave-the-way-for-bitcoin-etfs.html" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-gaza">
+        <div class="interactive-list__content">
+          <p>When cash imports into Gaza were blocked in 2024, banking infrastructure collapsed. Traditional transfers charged 30%+ fees—if they worked at all. Bitcoin became a lifeline. One volunteer sent $123,000 in BTC that bought food, water, and built shelters for displaced families. <br> <br>A taxi driver named Yusef received $48k in Bitcoin donations and built 100 tents. When banks fail, Bitcoin still works. No permission needed.</p>
+        </div>
+        <a href="https://bitcoinmagazine.com/culture/palestinian-taxi-driver-uses-bitcoin-to-save-civilians-in-gaza-" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-usreserve">
+        <div class="interactive-list__content">
+          <p>On March 6, 2025, President Trump signed an executive order establishing a Strategic Bitcoin Reserve—a "digital Fort Knox." The reserve holds ~200,000 BTC from seized assets, with a policy never to sell. <br> <br>The U.S. had lost $17 billion selling seized bitcoin too early. Now it's holding. Pakistan announced its own reserve weeks later. Nations that once dismissed Bitcoin now compete to accumulate it.</p>
+        </div>
+        <a href="https://www.whitehouse.gov/fact-sheets/2025/03/fact-sheet-president-donald-j-trump-establishes-the-strategic-bitcoin-reserve-and-u-s-digital-asset-stockpile/" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+      <div class="interactive-list__panel" role="tabpanel" id="panel-machado">
+        <div class="interactive-list__content">
+          <p>María Corina Machado won the 2025 Nobel Peace Prize for fighting Venezuela's dictatorship. Her campaign runs on Bitcoin because "bank wires get blocked, but bitcoin donations cannot be seized." With the bolívar down 98% in a decade and 8,000%+ inflation, Bitcoin became "a vital means of resistance." <br> <br>She promised a democratic Venezuela would embrace Bitcoin in its national reserves. Freedom money for a freedom fighter.</p>
+        </div>
+        <a href="https://cointelegraph.com/news/nobel-prize-maria-corina-machado-pro-bitcoin" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
     </div>
   </div>
