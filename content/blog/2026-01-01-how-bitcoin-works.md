@@ -6,10 +6,10 @@ draft = true
 tags = [ "bitcoin", "cryptography", "tutorial" ]
 [extra]
 subtitle = "Blockchain, cryptography, and consensus"
-static_thumbnail = "/images/blog/2025-12-13/cover.jpg"
+static_thumbnail = "/images/blog/2025-12-21/cover.jpg"
 +++
 
-![blog-cover](/images/blog/2025-12-13/cover.jpg)
+![blog-cover](/images/blog/2025-12-21/cover.jpg)
 
 This post explains how Bitcoin works under the hood. If you're looking for why Bitcoin matters, start with [Bitcoin Fundamentals](/blog/bitcoin-fundamentals/).
 
