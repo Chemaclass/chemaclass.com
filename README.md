@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b1b280e0-ac15-4750-9c17-cae54a3add7a/deploy-status)](https://app.netlify.com/sites/chemaclass/deploys)
 
-I enjoy writing about topics that I find exciting and bring some value to my life. That's why I created my [tech blog](https://chemaclass.com/blog/) and my [readings blog](https://chemaclass.com/readings/). There, I write a monthly post about tech, habits, and team behaviors, among other areas.
+I enjoy writing about topics that I find exciting and bring some value to my life. That's why I created my [tech blog](https://chemaclass.com/blog/) and my [readings blog](https://chemaclass.com/readings/). There, I write a monthly post about tech, habits, and team behaviors, among other areas. You can also explore my [projects](https://chemaclass.com/projects/) and [talks](https://chemaclass.com/talks/).
 
 ### 🔗 Link 
 Visit my portfolio: https://chemaclass.com/
@@ -11,7 +11,7 @@ Visit my portfolio: https://chemaclass.com/
 
 ### 📦 Prerequisites
 
-- Zola (0.19.2 or higher) | [installation](https://www.getzola.org/documentation/getting-started/installation/)
+- Zola (0.21.0 or higher) | [installation](https://www.getzola.org/documentation/getting-started/installation/)
 
 ### 🚀 Getting Started
 Follow these steps to set up and run this Zola project:
