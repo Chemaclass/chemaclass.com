@@ -6,7 +6,7 @@ template = "pages/projects.html"
 [extra]
 [[extra.headliners]]
 name = "bashunit"
-description = "A simple testing library for bash scripts. Simplify your testing workflow."
+description = "A simple testing library for bash scripts. Discover the most modern bash testing library."
 url = "https://bashunit.typeddevs.com/"
 github = "TypedDevs/bashunit"
 icon = "bashunit"
