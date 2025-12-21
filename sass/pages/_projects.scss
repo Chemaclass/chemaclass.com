@@ -190,10 +190,20 @@
 
   @media (max-width: $breakpoint-tablet) {
     grid-template-columns: repeat(2, 1fr);
+
+    // Hide last item if odd count to keep grid balanced
+    > a:last-child:nth-child(odd) {
+      display: none;
+    }
   }
 
   @media (max-width: $breakpoint-phone) {
     grid-template-columns: 1fr;
+
+    // Show all items on phone (single column)
+    > a:last-child:nth-child(odd) {
+      display: block;
+    }
   }
 }
 
@@ -267,6 +277,15 @@
     border-radius: 10px;
     font-size: 0.7rem;
     font-weight: 500;
+  }
+}
+
+// Highlighted project in More Projects (spans 2 columns)
+.project-card--highlight {
+  grid-column: span 2;
+
+  @media (max-width: $breakpoint-phone) {
+    grid-column: span 1;
   }
 }
 

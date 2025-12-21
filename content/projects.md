@@ -26,38 +26,47 @@ github = "gacela-project/gacela"
 icon = "gacela"
 
 [[extra.projects]]
-name = "website-windmuehle"
-description = "Static website for a local business built with Vitepress and modern web practices."
-github = "Chemaclass/website-windmuehle"
-tags = ["Vitepress", "Static Site"]
-
-[[extra.projects]]
-name = "create-pr"
-description = "CLI tool to streamline the pull request creation workflow from terminal."
-github = "Chemaclass/create-pr"
-tags = ["CLI", "Bash"]
+name = "php-best-practices"
+description = "What I consider the best practices for web and software development."
+github = "Chemaclass/php-best-practices"
+tags = ["PHP", "Best Practices"]
+featured = true
 
 [[extra.projects]]
 name = "edifact-parser"
-description = "A parser for UN/EDIFACT file format in PHP. Handle EDI messages with ease."
+description = "A parser for a UN/EDIFACT file in PHP."
 github = "Chemaclass/edifact-parser"
 tags = ["PHP", "Edifact"]
 
 [[extra.projects]]
 name = "phel-snake"
-description = "Classic Snake game implemented in Phel, demonstrating functional programming patterns."
+description = "The snake game using the CLI terminal written in Phel."
 github = "Chemaclass/phel-snake"
 tags = ["Phel", "Game"]
 
 [[extra.projects]]
-name = "satscribe"
-description = "Transcription tool leveraging AI for audio-to-text conversion."
-github = "Chemaclass/satscribe"
-tags = ["AI", "PHP"]
+name = "create-pr"
+description = "A bash script to create PR based on your branch and context."
+github = "Chemaclass/create-pr"
+tags = ["CLI", "Bash"]
 
 [[extra.projects]]
-name = "bashdep"
-description = "Dependency management tool for bash scripts and projects."
-github = "Chemaclass/bashdep"
-tags = ["Bash", "DevOps"]
+name = "satscribe"
+description = "Satscribe makes Bitcoin easier to understand."
+github = "Chemaclass/satscribe"
+tags = ["AI", "Bitcoin"]
+
+[[extra.projects]]
+name = "website-windmuehle"
+description = "Non-profit website dedicated to restoring and preserving the historic windmill of Tündern."
+github = "Chemaclass/website-windmuehle"
+tags = ["Vitepress", "Static Site"]
+featured = true
+
+[[extra.projects]]
+name = "go-horse-racing"
+description = "A horse racing emulator."
+github = "Chemaclass/go-horse-racing"
+tags = ["Go", "Simulation"]
+
 +++

@@ -67,7 +67,7 @@
     <div class="tab-panel" id="tab-more" role="tabpanel" aria-labelledby="btn-more">
       <div class="projects-personal__grid">
         {% for project in page.extra.projects %}
-        <a href="https://github.com/{{ project.github }}" target="_blank" rel="noopener noreferrer" class="project-card project-card--simple" data-repo="{{ project.github }}">
+        <a href="https://github.com/{{ project.github }}" target="_blank" rel="noopener noreferrer" class="project-card project-card--simple{% if project.featured %} project-card--highlight{% endif %}" data-repo="{{ project.github }}">
           <div class="project-card__header">
             <h3>{{ project.name }}</h3>
             <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count"></span></span>
