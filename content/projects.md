@@ -7,21 +7,18 @@ template = "pages/projects.html"
 [[extra.headliners]]
 name = "bashunit"
 description = "A simple testing library for bash scripts. Discover the most modern bash testing library."
-url = "https://bashunit.typeddevs.com/"
 github = "TypedDevs/bashunit"
 icon = "bashunit"
 
 [[extra.headliners]]
 name = "Phel"
 description = "A functional programming language that compiles to PHP. A Lisp dialect inspired by Clojure."
-url = "https://phel-lang.org"
 github = "phel-lang/phel-lang"
 icon = "phel"
 
 [[extra.projects]]
 name = "Gacela"
 description = "Gacela helps you to build modular applications. Splitting your project into different modules help in terms of maintainability and scalability. It encourages your modules to interact with each other in a unified way by following some rules."
-url = "https://gacela-project.com/"
 github = "gacela-project/gacela"
 tags = ["PHP", "Modular"]
 featured = true

@@ -98,8 +98,6 @@
   transition: all 0.25s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 
   &:hover {
@@ -109,13 +107,20 @@
     border-bottom-color: var(--accent-color);
   }
 
+  .project-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
   .project-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 64px;
-    height: 64px;
-    margin-bottom: 1rem;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
 
     svg {
       width: 100%;
@@ -126,9 +131,7 @@
   .project-title {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 0.5rem;
-    margin-bottom: 0.5rem;
   }
 
   h3 {
