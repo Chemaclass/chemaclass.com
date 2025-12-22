@@ -78,6 +78,43 @@ body:has(.service-page) header {
   }
 }
 
+// Included Section
+.service-included {
+  margin-bottom: 3rem;
+  text-align: center;
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 1.25rem;
+    color: var(--heading-color);
+  }
+}
+
+.included-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.included-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--search-input-bg);
+  border: 1px solid var(--preview-divider-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--body-color);
+
+  i {
+    color: var(--accent-color);
+    font-size: 0.8rem;
+  }
+}
+
 // Options Grid
 .service-options {
   display: grid;
