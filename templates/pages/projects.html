@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-{{ page.title }}
+{{ section.title }}
 {% endblock %}
 
 {% block posthead %}
@@ -32,7 +32,7 @@
     <!-- Featured Projects Tab -->
     <div class="tab-panel active" id="tab-featured" role="tabpanel" aria-labelledby="btn-featured">
       <div class="projects-featured__grid">
-        {% for project in page.extra.headliners %}
+        {% for project in section.extra.headliners %}
         <a href="https://github.com/{{ project.github }}" target="_blank" rel="noopener noreferrer" class="project-card project-card--featured" data-repo="{{ project.github }}">
           <div class="project-header">
             <span class="project-icon">
@@ -63,7 +63,7 @@
     <!-- More Projects Tab -->
     <div class="tab-panel" id="tab-more" role="tabpanel" aria-labelledby="btn-more">
       <div class="projects-personal__grid">
-        {% for project in page.extra.projects %}
+        {% for project in section.extra.projects %}
         <a href="https://github.com/{{ project.github }}" target="_blank" rel="noopener noreferrer" class="project-card project-card--simple{% if project.featured %} project-card--highlight{% endif %}{% if project.hide_on_tablet %} project-card--hiddable{% endif %}" data-repo="{{ project.github }}">
           <div class="project-card__header">
             <h3>{{ project.name }}</h3>
@@ -94,18 +94,19 @@
     </div>
 
     <div class="services-grid">
-      <div class="service-card">
+      <a href="/projects/web-development/" class="service-card service-card--link">
         <div class="service-card__icon">
           <i class="fa-solid fa-globe"></i>
         </div>
         <h3>Static Websites</h3>
         <p>Landing pages, portfolios, company sites. Fast, accessible, easy to maintain.</p>
         <div class="service-card__examples">
-          <a href="https://windmuehle-tuendern.de" target="_blank" rel="noopener noreferrer">windmuehle</a>
-          <a href="https://phel-lang.org" target="_blank" rel="noopener noreferrer">phel-lang</a>
-          <a href="https://gacela-project.com" target="_blank" rel="noopener noreferrer">gacela</a>
+          <span>windmuehle</span>
+          <span>phel-lang</span>
+          <span>gacela</span>
         </div>
-      </div>
+        <span class="service-card__more">Learn more <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
 
       <div class="service-card">
         <div class="service-card__icon">
@@ -178,9 +179,9 @@
   </section>
 
   <!-- Optional: Page content from markdown -->
-  {% if page.content %}
+  {% if section.content %}
   <section class="projects-content">
-    {{ page.content | safe }}
+    {{ section.content | safe }}
   </section>
   {% endif %}
 </article>

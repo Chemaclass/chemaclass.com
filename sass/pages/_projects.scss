@@ -388,7 +388,7 @@
     flex-wrap: wrap;
     gap: 0.5rem;
 
-    a {
+    a, span {
       font-size: 0.75rem;
       color: var(--accent-color);
       text-decoration: none;
@@ -396,11 +396,41 @@
       background: var(--search-bg-selected-item);
       border-radius: 4px;
       transition: all 0.15s ease;
+    }
 
-      &:hover {
-        background: var(--accent-color);
-        color: white;
-        border-bottom-color: transparent;
+    a:hover {
+      background: var(--accent-color);
+      color: white;
+      border-bottom-color: transparent;
+    }
+  }
+
+  &__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    margin-top: 0.75rem;
+
+    i {
+      font-size: 0.7rem;
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &--link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom-color: var(--accent-color);
+
+      .service-card__more i {
+        transform: translateX(3px);
       }
     }
   }

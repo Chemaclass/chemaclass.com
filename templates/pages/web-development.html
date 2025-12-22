@@ -1,0 +1,312 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ page.title }}
+{% endblock %}
+
+{% block content %}
+<article class="service-page">
+  <!-- Hero Section -->
+  <header class="service-hero">
+    <a href="/projects/" class="service-hero__back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to Projects
+    </a>
+    <h1>Web Development</h1>
+    <p class="service-hero__subtitle">Professional websites that work for your business</p>
+  </header>
+
+  <!-- Value Proposition -->
+  <section class="service-intro">
+    <p>Every business needs a website, but not every business needs the same kind. I help you choose the right approach based on your actual needs, not what's trendy or over-engineered.</p>
+    <p>I offer two types of websites, each designed for different situations. Understanding the difference will save you time, money, and frustration.</p>
+  </section>
+
+  <!-- Options Grid -->
+  <section class="service-options">
+    <div class="service-option">
+      <div class="service-option__header">
+        <div class="service-option__icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h2>Static Website</h2>
+        <span class="service-option__tag">Recommended for most businesses</span>
+      </div>
+
+      <p class="service-option__desc">A fast, secure website built once and ready to perform. Think of it as a digital brochure that never breaks.</p>
+
+      <div class="service-option__benefits">
+        <h3>What you get</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Lightning-fast loading (under 1 second)</li>
+          <li><i class="fa-solid fa-check"></i> Excellent security (virtually unhackable)</li>
+          <li><i class="fa-solid fa-check"></i> Very low hosting costs</li>
+          <li><i class="fa-solid fa-check"></i> Minimal ongoing maintenance</li>
+          <li><i class="fa-solid fa-check"></i> Works perfectly on all devices</li>
+        </ul>
+      </div>
+
+      <div class="service-option__ideal">
+        <h3>Ideal for</h3>
+        <ul>
+          <li>Company websites</li>
+          <li>Professional portfolios</li>
+          <li>Landing pages</li>
+          <li>Product showcases</li>
+        </ul>
+      </div>
+
+      <div class="service-option__consideration">
+        <strong>One thing to know:</strong> Content updates require a developer. For most businesses that update a few times per year, this is a minor trade-off for all the benefits.
+      </div>
+    </div>
+
+    <div class="service-option">
+      <div class="service-option__header">
+        <div class="service-option__icon service-option__icon--secondary">
+          <i class="fa-brands fa-wordpress"></i>
+        </div>
+        <h2>WordPress Website</h2>
+        <span class="service-option__tag service-option__tag--secondary">For frequent content updates</span>
+      </div>
+
+      <p class="service-option__desc">A flexible website you can edit yourself through a user-friendly dashboard. Full control over your content, anytime.</p>
+
+      <div class="service-option__benefits">
+        <h3>What you get</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Edit content without touching code</li>
+          <li><i class="fa-solid fa-check"></i> Add pages, posts, and images yourself</li>
+          <li><i class="fa-solid fa-check"></i> Multiple team members can contribute</li>
+          <li><i class="fa-solid fa-check"></i> Thousands of plugins available</li>
+          <li><i class="fa-solid fa-check"></i> Familiar interface</li>
+        </ul>
+      </div>
+
+      <div class="service-option__ideal">
+        <h3>Ideal for</h3>
+        <ul>
+          <li>Blogs and news sites</li>
+          <li>Sites with multiple editors</li>
+          <li>Frequent content updates</li>
+        </ul>
+      </div>
+
+      <div class="service-option__consideration">
+        <strong>One thing to know:</strong> More flexibility means more maintenance. WordPress needs regular updates and security attention, which translates to higher long-term costs.
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="service-comparison">
+    <h2>Quick Comparison</h2>
+    <div class="comparison-table">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th><i class="fa-solid fa-bolt"></i> Static</th>
+            <th><i class="fa-brands fa-wordpress"></i> WordPress</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Loading speed</td>
+            <td class="highlight">Very fast</td>
+            <td>Good</td>
+          </tr>
+          <tr>
+            <td>Security</td>
+            <td class="highlight">Excellent</td>
+            <td>Needs attention</td>
+          </tr>
+          <tr>
+            <td>Hosting cost</td>
+            <td class="highlight">Very low</td>
+            <td>Moderate</td>
+          </tr>
+          <tr>
+            <td>Maintenance</td>
+            <td class="highlight">Minimal</td>
+            <td>Regular updates</td>
+          </tr>
+          <tr>
+            <td>Self-editing</td>
+            <td>No</td>
+            <td class="highlight">Yes</td>
+          </tr>
+          <tr>
+            <td>Development cost</td>
+            <td class="highlight">Lower</td>
+            <td>Higher</td>
+          </tr>
+          <tr>
+            <td>Long-term cost</td>
+            <td class="highlight">Lower</td>
+            <td>Higher</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Decision Helper -->
+  <section class="service-decision">
+    <h2>Not sure which to choose?</h2>
+    <div class="decision-cards">
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-bolt"></i> Choose Static if...</h3>
+        <ul>
+          <li>Content rarely changes</li>
+          <li>Speed and security matter</li>
+          <li>You want low costs</li>
+        </ul>
+      </div>
+      <div class="decision-card">
+        <h3><i class="fa-brands fa-wordpress"></i> Choose WordPress if...</h3>
+        <ul>
+          <li>You update content often</li>
+          <li>Multiple editors needed</li>
+          <li>You need e-commerce</li>
+        </ul>
+      </div>
+    </div>
+    <p class="decision-tip">
+      <i class="fa-solid fa-lightbulb"></i>
+      <strong>My honest advice:</strong> When in doubt, start with static. It's easier to add complexity later than to simplify an over-engineered solution.
+    </p>
+  </section>
+
+  <!-- Process & Budget -->
+  <section class="service-process">
+    <h2>How I Work</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <span class="process-step__number">1</span>
+        <div class="process-step__content">
+          <h3>Discovery Call</h3>
+          <p>We discuss your goals, audience, and requirements. Free, no commitment.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">2</span>
+        <div class="process-step__content">
+          <h3>Proposal</h3>
+          <p>You receive a clear scope, timeline, and fixed price. No surprises.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">3</span>
+        <div class="process-step__content">
+          <h3>Development</h3>
+          <p>I build your site and share a preview link. You review, test, and give feedback at each stage.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">4</span>
+        <div class="process-step__content">
+          <h3>Launch</h3>
+          <p>Your site goes live. I handle deployment and initial support.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="budget-info">
+      <h3><i class="fa-solid fa-coins"></i> Budget Guidelines</h3>
+      <div class="budget-cards">
+        <div class="budget-card">
+          <span class="budget-card__type">Static Website</span>
+          <span class="budget-card__range">€1,200 - €2,500</span>
+          <span class="budget-card__note">Simple sites can start from €800</span>
+        </div>
+        <div class="budget-card">
+          <span class="budget-card__type">WordPress Website</span>
+          <span class="budget-card__range">€2,500 - €5,000</span>
+          <span class="budget-card__note">+ hosting & ongoing maintenance costs</span>
+          <span class="budget-card__subtext">Best for frequent updates and non-technical editors</span>
+        </div>
+      </div>
+      <p class="budget-helper"><i class="fa-solid fa-lightbulb"></i> Not sure which option fits your needs? I’ll recommend the simplest solution that meets your goals.</p>
+
+      <details class="ongoing-costs">
+        <summary class="ongoing-costs__toggle">
+          <h4>Ongoing Costs (yearly)</h4>
+          <i class="fa-solid fa-chevron-down ongoing-costs__icon"></i>
+        </summary>
+        <div class="ongoing-costs__content">
+          <p class="ongoing-costs__intro">Domain registration: €10–15/year (same for both options)</p>
+          <div class="ongoing-costs__comparison">
+            <div class="ongoing-costs__column ongoing-costs__column--static">
+              <h5><i class="fa-solid fa-bolt"></i> Static</h5>
+              <div class="ongoing-costs__row">
+                <span class="ongoing-costs__label">Hosting</span>
+                <span class="ongoing-costs__value ongoing-costs__value--highlight">Minimal</span>
+                <span class="ongoing-costs__note">Typically under €20/year with modern platforms</span>
+              </div>
+              <div class="ongoing-costs__row">
+                <span class="ongoing-costs__label">Maintenance</span>
+                <span class="ongoing-costs__value ongoing-costs__value--highlight">On request</span>
+                <span class="ongoing-costs__note">No recurring fees — maintenance when needed</span>
+              </div>
+            </div>
+            <div class="ongoing-costs__column ongoing-costs__column--wordpress">
+              <h5><i class="fa-brands fa-wordpress"></i> WordPress</h5>
+              <div class="ongoing-costs__row">
+                <span class="ongoing-costs__label">Hosting</span>
+                <span class="ongoing-costs__value">€50-150</span>
+                <span class="ongoing-costs__note">Managed hosting recommended for security</span>
+              </div>
+              <div class="ongoing-costs__row">
+                <span class="ongoing-costs__label">Maintenance</span>
+                <span class="ongoing-costs__value">€200-500</span>
+                <span class="ongoing-costs__note">Regular updates, security patches, and backups</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+      <p class="budget-disclaimer">Prices exclude VAT. Final pricing depends on complexity, number of pages, and custom features. <br>A detailed quote is provided after the discovery call.</p>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="service-portfolio">
+    <h2>Recent Work</h2>
+    <p>Here are some static websites I've helped build:</p>
+    <div class="portfolio-grid">
+      <a href="https://windmuehle-tuendern.de" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+        <span class="portfolio-item__name">windmuehle-tuendern.de</span>
+        <span class="portfolio-item__type">Non-profit</span>
+      </a>
+      <a href="https://gacela-project.com" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+        <span class="portfolio-item__name">gacela-project.com</span>
+        <span class="portfolio-item__type">Open Source</span>
+      </a>
+      <a href="https://phel-lang.org" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+        <span class="portfolio-item__name">phel-lang.org</span>
+        <span class="portfolio-item__type">Open Source</span>
+      </a>
+      <a href="https://chemaclass.com" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+        <span class="portfolio-item__name">chemaclass.com</span>
+        <span class="portfolio-item__type">Personal</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="service-cta">
+    <h2>Let's discuss your project</h2>
+    <p>Book a free 30-minute call to discuss your project. You'll get a clear recommendation on the best approach for your situation — no pressure, no jargon.</p>
+    <div class="service-cta__buttons">
+      <a href="mailto:me@chemaclass.es" class="service-cta__btn service-cta__btn--secondary">
+        <i class="fa-solid fa-envelope"></i> Email Me
+      </a>
+    </div>
+  </section>
+</article>
+
+{% include "footer-about.html" %}
+{% endblock content %}
