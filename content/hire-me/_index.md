@@ -1,7 +1,8 @@
 +++
-title = "Projects | Chemaclass"
-description = "Open source projects, developer tools, and software I've built or contributed to."
+title = "Hire me | Chemaclass"
+description = "14+ years in software development, 4+ in leadership. I build modular, maintainable systems using SOLID principles and TDD."
 template = "pages/projects.html"
+aliases = ["/projects/"]
 
 [extra]
 [[extra.headliners]]

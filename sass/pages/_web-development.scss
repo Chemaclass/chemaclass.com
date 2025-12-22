@@ -31,34 +31,10 @@ body:has(.service-page) header {
   padding: 0;
   margin-bottom: 4rem;
   background: transparent;
+  text-align: center;
 
   &::after {
     display: none;
-  }
-
-  &__back {
-    display: flex;
-    width: fit-content;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--color-subtitle);
-    text-decoration: none;
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: var(--accent-color);
-      border-bottom: none;
-    }
-
-    svg {
-      transition: transform 0.2s ease;
-    }
-
-    &:hover svg {
-      transform: translateX(-3px);
-    }
   }
 
   h1 {
@@ -102,32 +78,6 @@ body:has(.service-page) header {
   }
 }
 
-// Top CTA (inline)
-.service-hero__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1.25rem;
-  padding: 0.6rem 1.25rem;
-  background: var(--accent-color);
-  color: white;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: all 0.2s ease;
-
-  &:hover {
-    filter: brightness(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-bottom: none;
-  }
-
-  i {
-    font-size: 0.85rem;
-  }
-}
-
 // Intro Section
 .service-intro {
   text-align: center;
@@ -139,9 +89,30 @@ body:has(.service-page) header {
     line-height: 1.7;
     margin: 0 0 1rem;
     color: var(--body-color);
+  }
 
-    &:last-child {
-      margin-bottom: 0;
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      filter: brightness(1.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-bottom: none;
+    }
+
+    i {
+      font-size: 0.9rem;
     }
   }
 }
@@ -557,6 +528,35 @@ body:has(.service-page) header {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative;
+
+  // Connecting line to next step
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 18px; // Half of number height
+    left: calc(50% + 24px); // Start after the number circle
+    width: calc(100% - 12px); // Span to next step
+    height: 2px;
+    background: var(--preview-divider-color);
+
+    @media (max-width: $breakpoint-tablet) {
+      // Hide on 2-column layout for odd items (2nd, 4th)
+      display: none;
+    }
+  }
+
+  // Show vertical line on mobile
+  @media (max-width: $breakpoint-phone) {
+    &:not(:last-child)::after {
+      display: block;
+      top: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: calc(100% - 20px);
+    }
+  }
 
   &__number {
     width: 36px;
@@ -570,6 +570,8 @@ body:has(.service-page) header {
     align-items: center;
     justify-content: center;
     margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
   }
 
   &__content {

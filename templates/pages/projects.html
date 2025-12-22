@@ -12,10 +12,73 @@
 <article class="projects-page">
   <!-- Hero Section -->
   <section class="projects-hero">
-    <h1>Projects</h1>
+    <h1>Hire me</h1>
     <p class="projects-hero__subtitle">
-      Open source tools and software I've built or actively contribute to.
+      14+ years in software development, 4+ in leadership. I build modular, maintainable systems using SOLID principles and TDD. I'm passionate about mentoring, growing teams where people belong, and fostering collaboration through Agile practices.
     </p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="projects-services" id="services">
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card__header">
+          <div class="service-card__icon">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <a href="/hire-me/web-development/" class="service-card__more">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <h3>Static Websites</h3>
+        <p>Landing pages, portfolios, company sites. Fast, accessible, easy to maintain.</p>
+        <div class="service-card__examples">
+          <a href="https://windmuehle-tuendern.de" target="_blank" rel="noopener noreferrer">windmuehle</a>
+          <a href="https://phel-lang.org" target="_blank" rel="noopener noreferrer">phel-lang</a>
+          <a href="https://postcardfromtheroad.eu" target="_blank" rel="noopener noreferrer">postcard</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h3>Team Workshops</h3>
+        <p>Team sessions on TDD, refactoring, and pair programming through katas.</p>
+        <div class="service-card__examples">
+          <a href="/talks/hands-on-refactoring-tdd/">workshops</a>
+          <a href="/blog/effective-pair-programming/">pair prog</a>
+          <a href="/blog/great-engineering/">great engineering</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="services-sessions">
+      <div class="sessions-content">
+        <h3><i class="fa-solid fa-comments"></i> 1:1 Sessions</h3>
+        <p>Want to go deeper? Book a call to discuss any topic from my blog posts or explore ideas together.</p>
+      </div>
+      <div class="sessions-tags">
+        <a href="/tags/leadership/">leadership</a>
+        <a href="/tags/agile/">agile</a>
+        <a href="/tags/testing/">testing</a>
+        <a href="/tags/clean-code/">clean code</a>
+        <a href="/tags/refactoring/">refactoring</a>
+        <a href="/tags/pair-programming/">pair-prog</a>
+        <a href="/tags/communication/">communication</a>
+        <a href="/tags/bitcoin/">bitcoin</a>
+      </div>
+      <div class="sessions-actions">
+        <a href="https://cal.com/chemaclass" target="_blank" rel="noopener noreferrer" class="sessions-cta">
+          <i class="fa-solid fa-calendar"></i> Book a session
+        </a>
+        <a href="mailto:me@chemaclass.es" class="sessions-cta sessions-cta--secondary">
+          <i class="fa-solid fa-envelope"></i> Email me
+        </a>
+        <a href="/tags/" class="sessions-cta sessions-cta--secondary">
+          <i class="fa-solid fa-tags"></i> All topics
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Tabs -->
@@ -131,103 +194,6 @@
           </div>
         </a>
         {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <!-- Working Together Section -->
-  <section class="projects-services" id="services">
-    <div class="services-header">
-      <h2>Working Together</h2>
-      <blockquote class="services-quote">
-        "Individuals and interactions over processes and tools"
-      </blockquote>
-      <p>14+ years in software development, 4+ in leadership. I build modular, maintainable systems using SOLID principles and TDD. I'm passionate about mentoring, growing teams where people belong, and fostering collaboration through Agile practices.</p>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-card__header">
-          <div class="service-card__icon">
-            <i class="fa-solid fa-globe"></i>
-          </div>
-          <a href="/projects/web-development/" class="service-card__more">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <h3>Static Websites</h3>
-        <p>Landing pages, portfolios, company sites. Fast, accessible, easy to maintain.</p>
-        <div class="service-card__examples">
-          <a href="https://windmuehle-tuendern.de" target="_blank" rel="noopener noreferrer">windmuehle</a>
-          <a href="https://phel-lang.org" target="_blank" rel="noopener noreferrer">phel-lang</a>
-          <a href="https://postcardfromtheroad.eu" target="_blank" rel="noopener noreferrer">postcard</a>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card__icon">
-          <i class="fa-solid fa-cubes"></i>
-        </div>
-        <h3>Modular Architecture</h3>
-        <p>Refactor codebases into maintainable modular monoliths with clear boundaries.</p>
-        <div class="service-card__examples">
-          <a href="https://github.com/phel-lang/phel-lang/tree/main/src/php" target="_blank" rel="noopener noreferrer">example</a>
-          <a href="/blog/final-classes/">final classes</a>
-          <a href="/blog/the-art-of-refactoring/">refactoring</a>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card__icon">
-          <i class="fa-solid fa-users"></i>
-        </div>
-        <h3>Agile Coaching</h3>
-        <p>Help teams adopt practices that actually work for them, not textbook rituals.</p>
-        <div class="service-card__examples">
-          <a href="/blog/what-kills-agility/">kills agility</a>
-          <a href="/blog/unhealthy-working-environment/">unhealthy env</a>
-          <a href="/blog/working-agile-with-non-agile-teams/">non-agile teams</a>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card__icon">
-          <i class="fa-solid fa-code"></i>
-        </div>
-        <h3>Code Workshops</h3>
-        <p>Team sessions on TDD, refactoring, and pair programming through katas.</p>
-        <div class="service-card__examples">
-          <a href="/talks/hands-on-refactoring-tdd/">workshops</a>
-          <a href="/blog/effective-pair-programming/">pair prog</a>
-          <a href="/blog/great-engineering/">great engineering</a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="services-sessions">
-      <div class="sessions-content">
-        <h3><i class="fa-solid fa-comments"></i> 1:1 Sessions</h3>
-        <p>Want to go deeper? Book a call to discuss any topic from my blog posts or explore ideas together.</p>
-      </div>
-      <div class="sessions-tags">
-        <a href="/tags/leadership/">leadership</a>
-        <a href="/tags/agile/">agile</a>
-        <a href="/tags/testing/">testing</a>
-        <a href="/tags/clean-code/">clean code</a>
-        <a href="/tags/refactoring/">refactoring</a>
-        <a href="/tags/pair-programming/">pair-prog</a>
-        <a href="/tags/communication/">communication</a>
-        <a href="/tags/bitcoin/">bitcoin</a>
-      </div>
-      <div class="sessions-actions">
-        <a href="https://cal.com/chemaclass" target="_blank" rel="noopener noreferrer" class="sessions-cta">
-          <i class="fa-solid fa-calendar"></i> Book a session
-        </a>
-        <a href="mailto:me@chemaclass.es" class="sessions-cta sessions-cta--secondary">
-          <i class="fa-solid fa-envelope"></i> Email me
-        </a>
-        <a href="/tags/" class="sessions-cta sessions-cta--secondary">
-          <i class="fa-solid fa-tags"></i> All topics
-        </a>
       </div>
     </div>
   </section>
