@@ -115,14 +115,23 @@ body:has(.service-page) header {
   }
 }
 
-// Options Grid
+// Options Grid - breaks out of container on larger screens
 .service-options {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-bottom: 3rem;
 
-  @media (max-width: $breakpoint-tablet) {
+  // Break out of container, responsive with max 1100px
+  @media (min-width: 800px) {
+    width: calc(100vw - 3rem);
+    max-width: 1100px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  // Single column on smaller screens
+  @media (max-width: 799px) {
     grid-template-columns: 1fr;
   }
 }
@@ -155,6 +164,10 @@ body:has(.service-page) header {
     &--secondary {
       background: #21759b; // WordPress blue
     }
+
+    &--tertiary {
+      background: #6b46c1; // Purple for SSG
+    }
   }
 
   h2 {
@@ -176,6 +189,11 @@ body:has(.service-page) header {
     &--secondary {
       color: #21759b;
       background: rgba(33, 117, 155, 0.1);
+    }
+
+    &--tertiary {
+      color: #6b46c1;
+      background: rgba(107, 70, 193, 0.1);
     }
   }
 
@@ -325,11 +343,20 @@ body:has(.service-page) header {
 
 .decision-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-bottom: 1.5rem;
 
-  @media (max-width: $breakpoint-phone) {
+  // Break out of container, responsive with max 1100px
+  @media (min-width: 800px) {
+    width: calc(100vw - 3rem);
+    max-width: 1100px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  // Single column on smaller screens
+  @media (max-width: 799px) {
     grid-template-columns: 1fr;
   }
 }
@@ -476,11 +503,11 @@ body:has(.service-page) header {
 
 .budget-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-bottom: 1rem;
 
-  @media (max-width: $breakpoint-phone) {
+  @media (max-width: $breakpoint-tablet) {
     grid-template-columns: 1fr;
   }
 }
@@ -602,10 +629,10 @@ body:has(.service-page) header {
 
   &__comparison {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 
-    @media (max-width: $breakpoint-phone) {
+    @media (max-width: $breakpoint-tablet) {
       grid-template-columns: 1fr;
     }
   }
@@ -632,6 +659,10 @@ body:has(.service-page) header {
 
     &--static h5 i {
       color: var(--accent-color);
+    }
+
+    &--ssg h5 i {
+      color: #6b46c1;
     }
 
     &--wordpress h5 i {

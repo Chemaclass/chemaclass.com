@@ -21,7 +21,7 @@
   <!-- Value Proposition -->
   <section class="service-intro">
     <p>Every business needs a website, but not every business needs the same kind. I help you choose the right approach based on your actual needs, not what's trendy or over-engineered.</p>
-    <p>I offer two types of websites, each designed for different situations. Understanding the difference will save you time, money, and frustration.</p>
+    <p>I offer three types of websites, each designed for different situations. Understanding the difference will save you time, money, and frustration.</p>
   </section>
 
   <!-- What's Included -->
@@ -71,7 +71,7 @@
       <div class="service-option__benefits">
         <h3>What you get</h3>
         <ul>
-          <li><i class="fa-solid fa-check"></i> Lightning-fast loading (under 1 second)</li>
+          <li><i class="fa-solid fa-check"></i> Lightning-fast loading (< 1 sec)</li>
           <li><i class="fa-solid fa-check"></i> Excellent security (virtually unhackable)</li>
           <li><i class="fa-solid fa-check"></i> Very low hosting costs</li>
           <li><i class="fa-solid fa-check"></i> Minimal ongoing maintenance</li>
@@ -84,13 +84,48 @@
         <ul>
           <li>Company websites</li>
           <li>Professional portfolios</li>
-          <li>Landing pages</li>
           <li>Product showcases</li>
         </ul>
       </div>
 
       <div class="service-option__consideration">
         <strong>One thing to know:</strong> Content updates require a developer. For most businesses that update a few times per year, this is a minor trade-off for all the benefits.
+      </div>
+    </div>
+
+    <div class="service-option">
+      <div class="service-option__header">
+        <div class="service-option__icon service-option__icon--tertiary">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h2>Static Site + Blog</h2>
+        <span class="service-option__tag service-option__tag--tertiary">Best of both worlds</span>
+      </div>
+
+      <p class="service-option__desc">A flexible blog-like website built with tools like Zola or VitePress. The speed of static sites with the structure of WP.</p>
+
+      <div class="service-option__benefits">
+        <h3>What you get</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Same fast loading as static sites</li>
+          <li><i class="fa-solid fa-check"></i> Blog posts, pages, and custom templates</li>
+          <li><i class="fa-solid fa-check"></i> Markdown-based content (text files)</li>
+          <li><i class="fa-solid fa-check"></i> Version control for all content changes</li>
+          <li><i class="fa-solid fa-check"></i> No database or security vulnerabilities</li>
+        </ul>
+      </div>
+
+      <div class="service-option__ideal">
+        <h3>Ideal for</h3>
+        <ul>
+          <li>Business blogs and news</li>
+          <li>Portfolio with case studies</li>
+          <li>Monthly content updates</li>
+        </ul>
+      </div>
+
+      <div class="service-option__consideration">
+        <strong>One thing to know:</strong> Content updates are simple but require a quick training session. Alternatively, I can handle monthly updates for you at a minimal cost.
       </div>
     </div>
 
@@ -103,7 +138,7 @@
         <span class="service-option__tag service-option__tag--secondary">For frequent content updates</span>
       </div>
 
-      <p class="service-option__desc">A flexible website you can edit yourself through a user-friendly dashboard. Full control over your content, anytime.</p>
+      <p class="service-option__desc">A flexible website you can edit yourself through a user-friendly dashboard. Full control over your content.</p>
 
       <div class="service-option__benefits">
         <h3>What you get</h3>
@@ -140,6 +175,7 @@
           <tr>
             <th></th>
             <th><i class="fa-solid fa-bolt"></i> Static</th>
+            <th><i class="fa-solid fa-code"></i> SSG</th>
             <th><i class="fa-brands fa-wordpress"></i> WordPress</th>
           </tr>
         </thead>
@@ -147,36 +183,49 @@
           <tr>
             <td>Loading speed</td>
             <td class="highlight">Very fast</td>
+            <td class="highlight">Very fast</td>
             <td>Good</td>
           </tr>
           <tr>
             <td>Security</td>
+            <td class="highlight">Excellent</td>
             <td class="highlight">Excellent</td>
             <td>Needs attention</td>
           </tr>
           <tr>
             <td>Hosting cost</td>
             <td class="highlight">Very low</td>
+            <td class="highlight">Very low</td>
             <td>Moderate</td>
           </tr>
           <tr>
             <td>Maintenance</td>
             <td class="highlight">Minimal</td>
+            <td class="highlight">Minimal</td>
             <td>Regular updates</td>
           </tr>
           <tr>
-            <td>Self-editing</td>
+            <td>Blog/content structure</td>
+            <td>No</td>
+            <td class="highlight">Yes</td>
+            <td class="highlight">Yes</td>
+          </tr>
+          <tr>
+            <td>Non-technical editing</td>
+            <td>No</td>
             <td>No</td>
             <td class="highlight">Yes</td>
           </tr>
           <tr>
             <td>Development cost</td>
-            <td class="highlight">Lower</td>
+            <td class="highlight">Lowest</td>
+            <td>Medium</td>
             <td>Higher</td>
           </tr>
           <tr>
             <td>Long-term cost</td>
-            <td class="highlight">Lower</td>
+            <td class="highlight">Lowest</td>
+            <td class="highlight">Low</td>
             <td>Higher</td>
           </tr>
         </tbody>
@@ -193,15 +242,23 @@
         <ul>
           <li>Content rarely changes</li>
           <li>Speed and security matter</li>
-          <li>You want low costs</li>
+          <li>You want lowest costs</li>
+        </ul>
+      </div>
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-code"></i> Choose Static + Blog if...</h3>
+        <ul>
+          <li>You want a blog or news section</li>
+          <li>Updates are occasional (monthly)</li>
+          <li>You want static site benefits</li>
         </ul>
       </div>
       <div class="decision-card">
         <h3><i class="fa-brands fa-wordpress"></i> Choose WordPress if...</h3>
         <ul>
-          <li>You update content often</li>
-          <li>Multiple editors needed</li>
+          <li>Non-technical editors needed</li>
           <li>You need e-commerce</li>
+          <li>Plugin ecosystem matters</li>
         </ul>
       </div>
     </div>
@@ -250,14 +307,18 @@
       <div class="budget-cards">
         <div class="budget-card">
           <span class="budget-card__type">Static Website</span>
-          <span class="budget-card__range">€1,200 - €2,500</span>
-          <span class="budget-card__note">Simple sites can start from €800</span>
+          <span class="budget-card__range">€1,200 – €2,500</span>
+          <span class="budget-card__note">Sites can start from €800</span>
+        </div>
+        <div class="budget-card">
+          <span class="budget-card__type">Static Site + Blog</span>
+          <span class="budget-card__range">€1,500 – €3,000</span>
+          <span class="budget-card__note">Custom + blog setup</span>
         </div>
         <div class="budget-card">
           <span class="budget-card__type">WordPress Website</span>
-          <span class="budget-card__range">€2,500 - €5,000</span>
-          <span class="budget-card__note">+ hosting & ongoing maintenance costs</span>
-          <span class="budget-card__subtext">Best for frequent updates and non-technical editors</span>
+          <span class="budget-card__range">€2,500 – €5,000</span>
+          <span class="budget-card__note">+ hosting & maintenance</span>
         </div>
       </div>
       <p class="budget-helper"><i class="fa-solid fa-lightbulb"></i> Not sure which option fits your needs? I'll recommend the simplest solution for you.</p>
@@ -268,7 +329,7 @@
           <i class="fa-solid fa-chevron-down ongoing-costs__icon"></i>
         </summary>
         <div class="ongoing-costs__content">
-          <p class="ongoing-costs__intro">Domain registration: €10–15/year (same for both options)</p>
+          <p class="ongoing-costs__intro">Domain registration: €10–15/year (same for all options)</p>
           <div class="ongoing-costs__comparison">
             <div class="ongoing-costs__column ongoing-costs__column--static">
               <h5><i class="fa-solid fa-bolt"></i> Static</h5>
@@ -276,6 +337,19 @@
                 <span class="ongoing-costs__label">Hosting</span>
                 <span class="ongoing-costs__value ongoing-costs__value--highlight">Minimal</span>
                 <span class="ongoing-costs__note">Typically under €20/year with modern platforms</span>
+              </div>
+              <div class="ongoing-costs__row">
+                <span class="ongoing-costs__label">Maintenance</span>
+                <span class="ongoing-costs__value ongoing-costs__value--highlight">On request</span>
+                <span class="ongoing-costs__note">No recurring fees — maintenance when needed</span>
+              </div>
+            </div>
+            <div class="ongoing-costs__column ongoing-costs__column--ssg">
+              <h5><i class="fa-solid fa-code"></i> SSG</h5>
+              <div class="ongoing-costs__row">
+                <span class="ongoing-costs__label">Hosting</span>
+                <span class="ongoing-costs__value ongoing-costs__value--highlight">Minimal</span>
+                <span class="ongoing-costs__note">Same as static — under €20/year</span>
               </div>
               <div class="ongoing-costs__row">
                 <span class="ongoing-costs__label">Maintenance</span>
@@ -330,7 +404,7 @@
   <!-- CTA -->
   <section class="service-cta">
     <h2>Let's discuss your project</h2>
-    <p>Book a free 30-minute call to discuss your project. You'll get a clear recommendation on the best approach for your situation — no pressure, no jargon.</p>
+    <p>Book a free 30-minute call to talk through what you need. I'll help you figure out the simplest, most sensible way forward. No pressure, no jargon.</p>
     <div class="service-cta__buttons">
       <a href="mailto:me@chemaclass.es" class="service-cta__btn service-cta__btn--secondary">
         <i class="fa-solid fa-envelope"></i> Email Me
