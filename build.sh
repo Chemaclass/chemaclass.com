@@ -5,7 +5,18 @@ ZOLA_VERSION=${ZOLA_VERSION:-0.21.0}
 
 # Download zola if not installed
 if ! command -v zola &> /dev/null; then
-  GH_URL="https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-aarch64-unknown-linux-gnu.tar.gz"
+  # Detect architecture
+  ARCH=$(uname -m)
+  if [ "$ARCH" = "x86_64" ]; then
+    ZOLA_ARCH="x86_64-unknown-linux-gnu"
+  elif [ "$ARCH" = "aarch64" ] || [ "$ARCH" = "arm64" ]; then
+    ZOLA_ARCH="aarch64-unknown-linux-gnu"
+  else
+    echo "Unsupported architecture: $ARCH"
+    exit 1
+  fi
+
+  GH_URL="https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-${ZOLA_ARCH}.tar.gz"
   echo "Downloading zola from $GH_URL"
   curl -sSL -o zola.tar.gz "$GH_URL"
   tar -xzf zola.tar.gz
