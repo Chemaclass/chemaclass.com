@@ -1,0 +1,420 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ page.title }}
+{% endblock %}
+
+{% block content %}
+<article class="service-page">
+  <!-- Hero Section -->
+  <header class="service-hero">
+    <a href="/projects/" class="service-hero__back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Volver a Proyectos
+    </a>
+    <div class="service-hero__lang">
+      <a href="/projects/web-development/" class="lang-switch" title="English version">EN</a>
+    </div>
+    <h1>Desarrollo Web</h1>
+    <p class="service-hero__subtitle">Sitios web profesionales que trabajan para tu negocio</p>
+  </header>
+
+  <!-- Value Proposition -->
+  <section class="service-intro">
+    <p>Toda empresa necesita una web, pero no todas necesitan el mismo tipo. Te ayudo a elegir el enfoque adecuado basado en tus necesidades reales, no en lo que está de moda o es innecesariamente complejo.</p>
+    <p>Ofrezco tres tipos de sitios web, cada uno diseñado para diferentes situaciones. Entender la diferencia te ahorrará tiempo, dinero y frustraciones.</p>
+  </section>
+
+  <!-- What's Included -->
+  <section class="service-included">
+    <h2>Todos los sitios web incluyen</h2>
+    <div class="included-grid">
+      <div class="included-item">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <span>Diseño responsive</span>
+      </div>
+      <div class="included-item">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>SEO básico</span>
+      </div>
+      <div class="included-item">
+        <i class="fa-solid fa-lock"></i>
+        <span>Seguridad HTTPS</span>
+      </div>
+      <div class="included-item">
+        <i class="fa-solid fa-gauge-high"></i>
+        <span>Optimizado para velocidad</span>
+      </div>
+      <div class="included-item">
+        <i class="fa-solid fa-chart-simple"></i>
+        <span>Analytics integrado</span>
+      </div>
+      <div class="included-item">
+        <i class="fa-solid fa-universal-access"></i>
+        <span>Accesibilidad básica</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Options Grid -->
+  <section class="service-options">
+    <div class="service-option">
+      <div class="service-option__header">
+        <div class="service-option__icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h2>Web Estática</h2>
+        <span class="service-option__tag">Recomendado para la mayoría</span>
+      </div>
+
+      <p class="service-option__desc">Un sitio web rápido y seguro, construido una vez y listo para funcionar. Piensa en él como un folleto digital que nunca falla.</p>
+
+      <div class="service-option__benefits">
+        <h3>Qué obtienes</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Carga ultrarrápida (< 1 seg)</li>
+          <li><i class="fa-solid fa-check"></i> Seguridad excelente</li>
+          <li><i class="fa-solid fa-check"></i> Costes de hosting muy bajos</li>
+          <li><i class="fa-solid fa-check"></i> Mantenimiento mínimo</li>
+          <li><i class="fa-solid fa-check"></i> Funciona en todos los dispositivos</li>
+        </ul>
+      </div>
+
+      <div class="service-option__ideal">
+        <h3>Ideal para</h3>
+        <ul>
+          <li>Webs corporativas</li>
+          <li>Portfolios profesionales</li>
+          <li>Catálogos de productos</li>
+        </ul>
+      </div>
+
+      <div class="service-option__consideration">
+        <strong>A tener en cuenta:</strong> Las actualizaciones de contenido requieren un desarrollador. Para la mayoría de empresas que actualizan pocas veces al año, es un pequeño compromiso a cambio de todos los beneficios.
+      </div>
+    </div>
+
+    <div class="service-option">
+      <div class="service-option__header">
+        <div class="service-option__icon service-option__icon--tertiary">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h2>Web Estática + Blog</h2>
+        <span class="service-option__tag service-option__tag--tertiary">Lo mejor de ambos mundos</span>
+      </div>
+
+      <p class="service-option__desc">Un sitio web flexible tipo blog construido con herramientas como Zola o VitePress. La velocidad de los sitios estáticos con la estructura de WP.</p>
+
+      <div class="service-option__benefits">
+        <h3>Qué obtienes</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Misma velocidad que webs estáticas</li>
+          <li><i class="fa-solid fa-check"></i> Posts, páginas y plantillas</li>
+          <li><i class="fa-solid fa-check"></i> Contenido en Markdown</li>
+          <li><i class="fa-solid fa-check"></i> Control de versiones incluido</li>
+          <li><i class="fa-solid fa-check"></i> Sin base de datos ni vulnerabilidades</li>
+        </ul>
+      </div>
+
+      <div class="service-option__ideal">
+        <h3>Ideal para</h3>
+        <ul>
+          <li>Blogs y noticias de empresa</li>
+          <li>Portfolio con casos de estudio</li>
+          <li>Actualizaciones mensuales de contenido</li>
+        </ul>
+      </div>
+
+      <div class="service-option__consideration">
+        <strong>A tener en cuenta:</strong> Las actualizaciones son sencillas pero requieren una breve sesión de formación. Alternativamente, puedo gestionar las actualizaciones mensuales por un coste mínimo.
+      </div>
+    </div>
+
+    <div class="service-option">
+      <div class="service-option__header">
+        <div class="service-option__icon service-option__icon--secondary">
+          <i class="fa-brands fa-wordpress"></i>
+        </div>
+        <h2>Web WordPress</h2>
+        <span class="service-option__tag service-option__tag--secondary">Para actualizaciones frecuentes</span>
+      </div>
+
+      <p class="service-option__desc">Un sitio web flexible que puedes editar tú mismo a través de un panel intuitivo. Control total sobre tu contenido.</p>
+
+      <div class="service-option__benefits">
+        <h3>Qué obtienes</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Edita contenido sin tocar código</li>
+          <li><i class="fa-solid fa-check"></i> Añade páginas, posts e imágenes</li>
+          <li><i class="fa-solid fa-check"></i> Múltiples editores en el equipo</li>
+          <li><i class="fa-solid fa-check"></i> Miles de plugins disponibles</li>
+          <li><i class="fa-solid fa-check"></i> Interfaz familiar</li>
+        </ul>
+      </div>
+
+      <div class="service-option__ideal">
+        <h3>Ideal para</h3>
+        <ul>
+          <li>Blogs y sitios de noticias</li>
+          <li>Sitios con múltiples editores</li>
+          <li>Actualizaciones frecuentes de contenido</li>
+        </ul>
+      </div>
+
+      <div class="service-option__consideration">
+        <strong>A tener en cuenta:</strong> Más flexibilidad significa más mantenimiento. WordPress necesita actualizaciones regulares y atención de seguridad, lo que se traduce en mayores costes a largo plazo.
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="service-comparison">
+    <h2>Comparativa Rápida</h2>
+    <div class="comparison-table">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th><i class="fa-solid fa-bolt"></i>Estática</th>
+            <th><i class="fa-solid fa-code"></i>Est.+Blog</th>
+            <th><i class="fa-brands fa-wordpress"></i>WordPress</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Velocidad de carga</td>
+            <td class="highlight">Muy rápida</td>
+            <td class="highlight">Muy rápida</td>
+            <td>Buena</td>
+          </tr>
+          <tr>
+            <td>Seguridad</td>
+            <td class="highlight">Excelente</td>
+            <td class="highlight">Excelente</td>
+            <td>Requiere atención</td>
+          </tr>
+          <tr>
+            <td>Coste de hosting</td>
+            <td class="highlight">Muy bajo</td>
+            <td class="highlight">Muy bajo</td>
+            <td>Moderado</td>
+          </tr>
+          <tr>
+            <td>Mantenimiento</td>
+            <td class="highlight">Mínimo</td>
+            <td class="highlight">Mínimo</td>
+            <td>Actualizaciones regulares</td>
+          </tr>
+          <tr>
+            <td>Blog/estructura de contenido</td>
+            <td>No</td>
+            <td class="highlight">Sí</td>
+            <td class="highlight">Sí</td>
+          </tr>
+          <tr>
+            <td>Edición sin conocimientos técnicos</td>
+            <td>No</td>
+            <td>No</td>
+            <td class="highlight">Sí</td>
+          </tr>
+          <tr>
+            <td>Coste de desarrollo</td>
+            <td class="highlight">Más bajo</td>
+            <td>Medio</td>
+            <td>Más alto</td>
+          </tr>
+          <tr>
+            <td>Coste a largo plazo</td>
+            <td class="highlight">Más bajo</td>
+            <td class="highlight">Bajo</td>
+            <td>Más alto</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Decision Helper -->
+  <section class="service-decision">
+    <h2>¿No sabes cuál elegir?</h2>
+    <div class="decision-cards">
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-bolt"></i> Elige Estática si...</h3>
+        <ul>
+          <li>El contenido cambia raramente</li>
+          <li>La velocidad y seguridad importan</li>
+          <li>Quieres los costes más bajos</li>
+        </ul>
+      </div>
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-code"></i> Elige Estática + Blog si...</h3>
+        <ul>
+          <li>Quieres un blog o sección de noticias</li>
+          <li>Las actualizaciones son ocasionales (mensuales)</li>
+          <li>Quieres los beneficios de un sitio estático</li>
+        </ul>
+      </div>
+      <div class="decision-card">
+        <h3><i class="fa-brands fa-wordpress"></i> Elige WordPress si...</h3>
+        <ul>
+          <li>Necesitas editores no técnicos</li>
+          <li>Necesitas e-commerce</li>
+          <li>El ecosistema de plugins importa</li>
+        </ul>
+      </div>
+    </div>
+    <p class="decision-tip">
+      <i class="fa-solid fa-lightbulb"></i>
+      <strong>Mi consejo sincero:</strong> En caso de duda, empieza con estática. Es más fácil añadir complejidad después que simplificar una solución sobredimensionada.
+    </p>
+  </section>
+
+  <!-- Process & Budget -->
+  <section class="service-process">
+    <h2>Cómo Trabajo</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <span class="process-step__number">1</span>
+        <div class="process-step__content">
+          <h3>Llamada de Descubrimiento</h3>
+          <p>Hablamos de tus objetivos, audiencia y requisitos. Gratis, sin compromiso.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">2</span>
+        <div class="process-step__content">
+          <h3>Propuesta</h3>
+          <p>Recibes un alcance claro, plazo y precio cerrado. Sin sorpresas.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">3</span>
+        <div class="process-step__content">
+          <h3>Desarrollo</h3>
+          <p>Construyo tu web y comparto un enlace de vista previa. Revisas, pruebas y das feedback en cada fase.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">4</span>
+        <div class="process-step__content">
+          <h3>Lanzamiento</h3>
+          <p>Tu web sale en producción. Me encargo del despliegue y soporte inicial.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="budget-info">
+      <h3><i class="fa-solid fa-coins"></i> Guía de Presupuestos</h3>
+      <div class="budget-cards">
+        <div class="budget-card">
+          <span class="budget-card__type">Web Estática</span>
+          <span class="budget-card__range">€1.200 – €2.500</span>
+          <span class="budget-card__note">Los sitios pueden empezar desde €800</span>
+        </div>
+        <div class="budget-card">
+          <span class="budget-card__type">Web Estática + Blog</span>
+          <span class="budget-card__range">€1.500 – €3.000</span>
+          <span class="budget-card__note">Personalizado + configuración de blog</span>
+        </div>
+        <div class="budget-card">
+          <span class="budget-card__type">Web WordPress</span>
+          <span class="budget-card__range">€2.500 – €5.000</span>
+          <span class="budget-card__note">+ hosting y mantenimiento</span>
+        </div>
+      </div>
+      <p class="budget-helper"><i class="fa-solid fa-lightbulb"></i> ¿No sabes qué opción se adapta a tus necesidades? Te recomendaré la solución más sencilla para ti.</p>
+
+      <details class="ongoing-costs">
+        <summary class="ongoing-costs__toggle">
+          <h4>Costes Recurrentes (anuales)</h4>
+          <i class="fa-solid fa-chevron-down ongoing-costs__icon"></i>
+        </summary>
+        <div class="ongoing-costs__content">
+          <p class="ongoing-costs__intro">Registro de dominio: €10–15/año (igual para todas las opciones)</p>
+          <div class="ongoing-costs__comparison">
+            <div class="ongoing-costs__column ongoing-costs__column--static">
+              <h5><i class="fa-solid fa-bolt"></i> Estática</h5>
+              <div class="ongoing-costs__row">
+                <span class="ongoing-costs__label">Hosting</span>
+                <span class="ongoing-costs__value ongoing-costs__value--highlight">Mínimo</span>
+                <span class="ongoing-costs__note">Normalmente menos de €20/año con plataformas modernas</span>
+              </div>
+              <div class="ongoing-costs__row">
+                <span class="ongoing-costs__label">Mantenimiento</span>
+                <span class="ongoing-costs__value ongoing-costs__value--highlight">Bajo demanda</span>
+                <span class="ongoing-costs__note">Sin cuotas recurrentes — mantenimiento cuando se necesite</span>
+              </div>
+            </div>
+            <div class="ongoing-costs__column ongoing-costs__column--ssg">
+              <h5><i class="fa-solid fa-code"></i> Est.+Blog</h5>
+              <div class="ongoing-costs__row">
+                <span class="ongoing-costs__label">Hosting</span>
+                <span class="ongoing-costs__value ongoing-costs__value--highlight">Mínimo</span>
+                <span class="ongoing-costs__note">Igual que estática — menos de €20/año</span>
+              </div>
+              <div class="ongoing-costs__row">
+                <span class="ongoing-costs__label">Mantenimiento</span>
+                <span class="ongoing-costs__value ongoing-costs__value--highlight">Bajo demanda</span>
+                <span class="ongoing-costs__note">Sin cuotas recurrentes — mantenimiento cuando se necesite</span>
+              </div>
+            </div>
+            <div class="ongoing-costs__column ongoing-costs__column--wordpress">
+              <h5><i class="fa-brands fa-wordpress"></i> WordPress</h5>
+              <div class="ongoing-costs__row">
+                <span class="ongoing-costs__label">Hosting</span>
+                <span class="ongoing-costs__value">€50-150</span>
+                <span class="ongoing-costs__note">Hosting gestionado recomendado por seguridad</span>
+              </div>
+              <div class="ongoing-costs__row">
+                <span class="ongoing-costs__label">Mantenimiento</span>
+                <span class="ongoing-costs__value">€200-500</span>
+                <span class="ongoing-costs__note">Actualizaciones regulares, parches de seguridad y backups</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+      <p class="budget-disclaimer">Precios sin IVA. El precio final depende de la complejidad, número de páginas y funcionalidades personalizadas. <br>Se proporciona un presupuesto detallado después de la llamada de descubrimiento.</p>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="service-portfolio">
+    <h2>Trabajos Recientes</h2>
+    <p>Aquí hay algunos sitios web estáticos que he ayudado a construir:</p>
+    <div class="portfolio-grid">
+      <a href="https://windmuehle-tuendern.de" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+        <span class="portfolio-item__name">windmuehle-tuendern.de</span>
+        <span class="portfolio-item__type">Sin ánimo de lucro</span>
+      </a>
+      <a href="https://gacela-project.com" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+        <span class="portfolio-item__name">gacela-project.com</span>
+        <span class="portfolio-item__type">Open Source</span>
+      </a>
+      <a href="https://phel-lang.org" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+        <span class="portfolio-item__name">phel-lang.org</span>
+        <span class="portfolio-item__type">Open Source</span>
+      </a>
+      <a href="https://chemaclass.com" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+        <span class="portfolio-item__name">chemaclass.com</span>
+        <span class="portfolio-item__type">Personal</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="service-cta">
+    <h2>Hablemos de tu proyecto</h2>
+    <p>Reserva una llamada gratuita de 30 minutos para hablar de lo que necesitas. Te ayudaré a encontrar el camino más sencillo y sensato. Sin presión, sin tecnicismos.</p>
+    <div class="service-cta__buttons">
+      <a href="mailto:me@chemaclass.es" class="service-cta__btn service-cta__btn--secondary">
+        <i class="fa-solid fa-envelope"></i> Escríbeme
+      </a>
+    </div>
+  </section>
+</article>
+
+{% include "footer-about.html" %}
+{% endblock content %}

@@ -14,7 +14,7 @@ body:has(.service-page) header {
 // Hero Section
 .service-hero {
   display: block;
-  position: static;
+  position: relative;
   max-width: 100%;
   padding: 0;
   margin-bottom: 2.5rem;
@@ -59,6 +59,34 @@ body:has(.service-page) header {
     color: var(--color-subtitle);
     font-size: 1.1rem;
     margin: 0;
+  }
+
+  &__lang {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      background: var(--search-input-bg);
+      border: 1px solid var(--preview-divider-color);
+      color: var(--color-subtitle);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+        border-bottom: 1px solid var(--accent-color);
+      }
+    }
   }
 }
 
