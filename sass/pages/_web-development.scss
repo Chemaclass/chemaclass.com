@@ -269,8 +269,8 @@ body:has(.service-page) header {
     font-size: 0.9rem;
   }
 
-  thead {
-    background: var(--search-input-bg);
+  thead tr {
+    background: var(--body-bg);
   }
 
   th {

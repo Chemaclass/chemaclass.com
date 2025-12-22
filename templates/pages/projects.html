@@ -19,7 +19,7 @@
   </section>
 
   <!-- Projects Tabs -->
-  <section class="projects-tabs">
+  <section class="projects-tabs" id="projects">
     <div class="tabs-nav" role="tablist" aria-label="Project categories">
       <button class="tab-btn active" data-tab="featured" role="tab" aria-selected="true" aria-controls="tab-featured" id="btn-featured" tabindex="0">
         <i class="fa-solid fa-star"></i> Featured
@@ -30,7 +30,7 @@
     </div>
 
     <!-- Featured Projects Tab -->
-    <div class="tab-panel active" id="tab-featured" role="tabpanel" aria-labelledby="btn-featured">
+    <div class="tab-panel active" id="featured" role="tabpanel" aria-labelledby="btn-featured">
       <div class="projects-featured__grid">
         {% for project in section.extra.headliners %}
         <a href="https://github.com/{{ project.github }}" target="_blank" rel="noopener noreferrer" class="project-card project-card--featured" data-repo="{{ project.github }}">
@@ -50,6 +50,41 @@
             </div>
           </div>
           <p>{{ project.description }}</p>
+          <div class="project-meta">
+            {% if project.tech %}
+            <div class="tech-badges">
+              {% for tech in project.tech %}
+              <span class="tech-badge tech-badge--{{ tech | lower }}">
+                {% if tech == "PHP" %}<i class="fa-brands fa-php"></i>
+                {% elif tech == "Bash" %}<i class="fa-solid fa-terminal"></i>
+                {% elif tech == "Lisp" %}<i class="fa-solid fa-code"></i>
+                {% elif tech == "Python" %}<i class="fa-brands fa-python"></i>
+                {% elif tech == "Vue" %}<i class="fa-brands fa-vuejs"></i>
+                {% elif tech == "Go" %}<i class="fa-brands fa-golang"></i>
+                {% elif tech == "TypeScript" %}<i class="fa-brands fa-js"></i>
+                {% elif tech == "Phel" %}<i class="fa-solid fa-code"></i>
+                {% else %}<i class="fa-solid fa-code"></i>{% endif %}
+                {{ tech }}
+              </span>
+              {% endfor %}
+            </div>
+            {% endif %}
+            {% if project.type %}
+            <span class="project-type">
+              {% if project.type == "library" %}<i class="fa-solid fa-cube"></i>
+              {% elif project.type == "tool" %}<i class="fa-solid fa-wrench"></i>
+              {% elif project.type == "app" %}<i class="fa-solid fa-rocket"></i>
+              {% elif project.type == "website" %}<i class="fa-solid fa-globe"></i>
+              {% elif project.type == "language" %}<i class="fa-solid fa-language"></i>
+              {% elif project.type == "docs" %}<i class="fa-solid fa-book"></i>
+              {% endif %}
+              {{ project.type }}
+            </span>
+            {% endif %}
+            {% if project.status %}
+            <span class="project-status project-status--{{ project.status | lower }}">{{ project.status }}</span>
+            {% endif %}
+          </div>
           <div class="project-links">
             <span class="project-link">
               <i class="fa-brands fa-github"></i> View on GitHub
@@ -61,22 +96,44 @@
     </div>
 
     <!-- More Projects Tab -->
-    <div class="tab-panel" id="tab-more" role="tabpanel" aria-labelledby="btn-more">
+    <div class="tab-panel" id="more" role="tabpanel" aria-labelledby="btn-more">
       <div class="projects-personal__grid">
         {% for project in section.extra.projects %}
         <a href="https://github.com/{{ project.github }}" target="_blank" rel="noopener noreferrer" class="project-card project-card--simple{% if project.featured %} project-card--highlight{% endif %}{% if project.hide_on_tablet %} project-card--hiddable{% endif %}" data-repo="{{ project.github }}">
           <div class="project-card__header">
             <h3>{{ project.name }}</h3>
-            <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count"></span></span>
+            <div class="project-card__meta">
+              {% if project.status %}
+              <span class="project-status project-status--small project-status--{{ project.status | lower }}">{{ project.status }}</span>
+              {% endif %}
+              <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count"></span></span>
+            </div>
           </div>
           <p>{{ project.description }}</p>
-          {% if project.tags %}
-          <div class="project-card__tags">
-            {% for tag in project.tags %}
-            <span class="project-tag">{{ tag }}</span>
-            {% endfor %}
+          <div class="project-card__footer">
+            {% if project.tech %}
+            <div class="tech-badges tech-badges--small">
+              {% for tech in project.tech %}
+              <span class="tech-badge tech-badge--{{ tech | lower }}">
+                {% if tech == "PHP" %}<i class="fa-brands fa-php"></i>
+                {% elif tech == "Bash" %}<i class="fa-solid fa-terminal"></i>
+                {% elif tech == "Python" %}<i class="fa-brands fa-python"></i>
+                {% elif tech == "Vue" %}<i class="fa-brands fa-vuejs"></i>
+                {% elif tech == "Go" %}<i class="fa-brands fa-golang"></i>
+                {% elif tech == "Phel" %}<i class="fa-solid fa-code"></i>
+                {% else %}<i class="fa-solid fa-code"></i>{% endif %}
+              </span>
+              {% endfor %}
+            </div>
+            {% endif %}
+            {% if project.tags %}
+            <div class="project-card__tags">
+              {% for tag in project.tags %}
+              <span class="project-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
           </div>
-          {% endif %}
         </a>
         {% endfor %}
       </div>
@@ -84,7 +141,7 @@
   </section>
 
   <!-- Working Together Section -->
-  <section class="projects-services">
+  <section class="projects-services" id="services">
     <div class="services-header">
       <h2>Working Together</h2>
       <blockquote class="services-quote">
@@ -207,7 +264,7 @@ function switchTab(newTab) {
   newTab.setAttribute('aria-selected', 'true');
   newTab.setAttribute('tabindex', '0');
   newTab.focus();
-  document.getElementById('tab-' + newTab.dataset.tab).classList.add('active');
+  document.getElementById(newTab.dataset.tab).classList.add('active');
 }
 
 tabs.forEach(btn => {

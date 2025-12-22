@@ -167,6 +167,14 @@
     flex-grow: 1;
   }
 
+  .project-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
   .project-links {
     display: flex;
     gap: 1rem;
@@ -182,6 +190,107 @@
         font-size: 0.75rem;
       }
     }
+  }
+}
+
+// Tech Badges
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  &--small {
+    gap: 0.3rem;
+
+    .tech-badge {
+      padding: 0.15rem 0.4rem;
+      font-size: 0.7rem;
+
+      i {
+        font-size: 0.65rem;
+      }
+    }
+  }
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--search-bg-selected-item);
+  color: var(--body-color);
+
+  i {
+    font-size: 0.7rem;
+  }
+
+  &--php i { color: #777BB4; }
+  &--bash i { color: #4EAA25; }
+  &--python i { color: #3776AB; }
+  &--vue i { color: #4FC08D; }
+  &--go i { color: #00ADD8; }
+  &--typescript i { color: #3178C6; }
+  &--phel i { color: #512da8; }
+  &--lisp i { color: #512da8; }
+}
+
+// Project Type Badge
+.project-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--color-subtitle);
+  text-transform: capitalize;
+
+  i {
+    font-size: 0.7rem;
+    color: var(--accent-color);
+  }
+
+  &--small {
+    font-size: 0;
+
+    i {
+      font-size: 0.8rem;
+      color: var(--color-subtitle);
+    }
+  }
+}
+
+// Project Status Badge
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  &--active {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+  }
+
+  &--maintained {
+    background: rgba(59, 130, 246, 0.15);
+    color: #3b82f6;
+  }
+
+  &--stable {
+    background: rgba(156, 163, 175, 0.15);
+    color: #9ca3af;
+  }
+
+  &--small {
+    padding: 0.1rem 0.4rem;
+    font-size: 0.6rem;
   }
 }
 
@@ -238,6 +347,12 @@
       color: var(--heading-color);
     }
 
+    .project-card__meta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
     .github-stars {
       display: flex;
       align-items: center;
@@ -262,6 +377,14 @@
     color: var(--color-subtitle);
     margin: 0 0 0.75rem;
     line-height: 1.5;
+  }
+
+  .project-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
   .project-card__tags {
