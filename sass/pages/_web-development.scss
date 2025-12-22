@@ -376,7 +376,6 @@ body:has(.service-page) header {
       text-align: left;
       font-weight: 600;
       color: var(--heading-color);
-      background: var(--body-bg);
     }
 
     i {
@@ -415,7 +414,7 @@ body:has(.service-page) header {
     border-bottom: none;
   }
 
-  tbody tr:nth-child(even) td:not(:first-child) {
+  tbody tr:nth-child(even) td {
     background: rgba(0, 0, 0, 0.02);
 
     html[color-theme=dark] & {
@@ -546,15 +545,10 @@ body:has(.service-page) header {
     }
   }
 
-  // Show vertical line on mobile
+  // Hide lines on mobile
   @media (max-width: $breakpoint-phone) {
     &:not(:last-child)::after {
-      display: block;
-      top: 36px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 2px;
-      height: calc(100% - 20px);
+      display: none;
     }
   }
 
@@ -593,7 +587,7 @@ body:has(.service-page) header {
 
 // Budget Section
 .budget-section {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .budget-header {
@@ -718,11 +712,16 @@ body:has(.service-page) header {
   }
 }
 
-// Tooltip component
-.tooltip {
+// Tooltip component (scoped to service page to avoid conflicts with global tooltip)
+.service-page .tooltip {
   position: relative;
   cursor: help;
   border-bottom: 1px dashed var(--color-subtitle);
+
+  // Override global tooltip ::after
+  &::after {
+    display: none !important;
+  }
 
   .tooltip__text {
     visibility: hidden;
@@ -765,6 +764,10 @@ body:has(.service-page) header {
   // Touch-friendly: stay visible on focus
   &:focus {
     outline: none;
+  }
+
+  &:hover {
+    border-bottom: 1px dashed var(--color-subtitle);
   }
 }
 

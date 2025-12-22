@@ -13,7 +13,7 @@
 // Hero Section
 .projects-hero {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
 
   h1 {
     margin-bottom: 0.5rem;
@@ -28,7 +28,7 @@
 
 // Tabs
 .projects-tabs {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .tabs-nav {
@@ -199,14 +199,14 @@
   gap: 0.4rem;
 
   &--small {
-    gap: 0.3rem;
+    gap: 0.35rem;
 
     .tech-badge {
-      padding: 0.15rem 0.4rem;
-      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.75rem;
 
       i {
-        font-size: 0.65rem;
+        font-size: 0.9rem;
       }
     }
   }
@@ -412,7 +412,7 @@
 
 // Services Section
 .projects-services {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .services-header {
@@ -454,7 +454,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   @media (max-width: $breakpoint-phone) {
     grid-template-columns: 1fr;
