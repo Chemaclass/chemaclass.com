@@ -784,12 +784,27 @@ body:has(.service-page) header {
   &__name {
     font-weight: 600;
     color: var(--heading-color);
+  }
+
+  &__url {
+    font-size: 0.75rem;
+    color: var(--accent-color);
     margin-bottom: 0.25rem;
   }
 
   &__type {
     font-size: 0.8rem;
     color: var(--color-subtitle);
+  }
+
+  &__tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    background: rgba(58, 92, 136, 0.1);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    margin-top: 0.25rem;
   }
 }
 
