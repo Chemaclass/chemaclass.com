@@ -8,6 +8,19 @@ body:has(.service-page) header {
 }
 
 .service-page {
+  // Consistent section spacing
+  section {
+    margin-bottom: 4rem;
+  }
+
+  // Centered section headers
+  section > h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 2rem;
+    color: var(--heading-color);
+  }
 }
 
 // Hero Section
@@ -16,7 +29,7 @@ body:has(.service-page) header {
   position: relative;
   max-width: 100%;
   padding: 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
   background: transparent;
 
   &::after {
@@ -117,10 +130,12 @@ body:has(.service-page) header {
 
 // Intro Section
 .service-intro {
-  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
 
   p {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.7;
     margin: 0 0 1rem;
     color: var(--body-color);
@@ -133,15 +148,7 @@ body:has(.service-page) header {
 
 // Included Section
 .service-included {
-  margin-bottom: 3rem;
   text-align: center;
-
-  h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 0 0 1.25rem;
-    color: var(--heading-color);
-  }
 }
 
 .included-grid {
@@ -327,14 +334,6 @@ body:has(.service-page) header {
 
 // Comparison Section
 .service-comparison {
-  margin-bottom: 3rem;
-
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0 0 1.5rem;
-    color: var(--heading-color);
-  }
 }
 
 .comparison-table {
@@ -464,14 +463,6 @@ body:has(.service-page) header {
 
 // Decision Section
 .service-decision {
-  margin-bottom: 3rem;
-
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0 0 1.5rem;
-    color: var(--heading-color);
-  }
 }
 
 .decision-cards {
@@ -544,14 +535,6 @@ body:has(.service-page) header {
 
 // Process Section
 .service-process {
-  margin-bottom: 3rem;
-
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0 0 1.5rem;
-    color: var(--heading-color);
-  }
 }
 
 .process-steps {
@@ -606,30 +589,34 @@ body:has(.service-page) header {
   }
 }
 
-.budget-info {
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 12px;
-  padding: 1.5rem;
+// Budget Section
+.budget-section {
+  margin-top: 3rem;
+}
+
+.budget-header {
+  text-align: center;
+  margin-bottom: 2rem;
 
   h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 0 0 1rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
     color: var(--heading-color);
+  }
 
-    i {
-      margin-right: 0.5rem;
-      color: var(--accent-color);
-    }
+  p {
+    font-size: 1rem;
+    color: var(--color-subtitle);
+    margin: 0;
   }
 }
 
 .budget-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 
   @media (max-width: $breakpoint-tablet) {
     grid-template-columns: 1fr;
@@ -637,220 +624,162 @@ body:has(.service-page) header {
 }
 
 .budget-card {
-  background: var(--body-bg);
+  position: relative;
+  background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
-  border-radius: 8px;
-  padding: 1rem;
+  border-radius: 12px;
+  padding: 2rem 1.5rem 1.5rem;
   text-align: center;
+
+  &--recommended {
+    border: 2px solid var(--accent-color);
+  }
+
+  &__badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: white;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
 
   &__type {
     display: block;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 700;
     color: var(--heading-color);
-    margin-bottom: 0.35rem;
+    margin-bottom: 1rem;
   }
 
   &__range {
     display: block;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: 700;
-    color: var(--accent-color);
-    margin-bottom: 0.35rem;
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
   }
 
   &__note {
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: var(--color-subtitle);
+    margin-bottom: 1.5rem;
   }
 
-  &__subtext {
+  &__yearly {
+    background: var(--search-bg-selected-item);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  &__yearly-title {
     display: block;
     font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: var(--color-subtitle);
-    font-style: italic;
-    margin-top: 0.5rem;
-    padding-top: 0.5rem;
-    border-top: 1px dashed var(--preview-divider-color);
+    margin-bottom: 0.75rem;
+  }
+
+  &__yearly-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--preview-divider-color);
+    }
+  }
+
+  &__yearly-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--heading-color);
+    flex-shrink: 0;
+  }
+
+  &__yearly-value {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    text-align: right;
+  }
+}
+
+// Tooltip component
+.tooltip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dashed var(--color-subtitle);
+
+  .tooltip__text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--heading-color);
+    color: var(--body-bg);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 100;
+    margin-bottom: 8px;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    // Arrow
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: var(--heading-color);
+    }
+  }
+
+  // Show on hover
+  &:hover .tooltip__text,
+  &:focus .tooltip__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  // Touch-friendly: stay visible on focus
+  &:focus {
+    outline: none;
   }
 }
 
 .budget-disclaimer {
   font-size: 0.85rem;
   color: var(--color-subtitle);
-  margin: 1.5rem 0 0;
+  margin: 0;
   text-align: center;
-}
-
-.budget-helper {
-  background: var(--search-bg-selected-item);
-  border-left: 3px solid var(--accent-color);
-  border-radius: 0 6px 6px 0;
-  padding: 0.75rem 1rem;
-  margin: 0 0 1.5rem;
-  font-size: 0.9rem;
-  color: var(--body-color);
-
-  i {
-    color: var(--accent-color);
-    margin-right: 0.5rem;
-  }
-}
-
-.ongoing-costs {
-  border-top: 1px solid var(--preview-divider-color);
-  padding-top: 1.25rem;
-
-  &__toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    list-style: none;
-    padding: 0.75rem 1rem;
-    margin: 0 -0.5rem;
-    border-radius: 8px;
-    background: var(--search-bg-selected-item);
-    border: 1px dashed var(--preview-divider-color);
-    transition: all 0.2s ease;
-
-    &::-webkit-details-marker {
-      display: none;
-    }
-
-    &:hover {
-      border-color: var(--accent-color);
-      border-style: solid;
-    }
-
-    h4 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin: 0;
-      color: var(--accent-color);
-    }
-  }
-
-  &__icon {
-    font-size: 0.7rem;
-    color: var(--color-subtitle);
-    transition: transform 0.2s ease;
-  }
-
-  &[open] &__icon {
-    transform: rotate(180deg);
-  }
-
-  &__content {
-    padding-top: 1rem;
-  }
-
-  &__intro {
-    font-size: 0.85rem;
-    color: var(--color-subtitle);
-    text-align: center;
-    margin: 0 0 1rem;
-  }
-
-  &__comparison {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-
-    @media (max-width: $breakpoint-tablet) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  &__column {
-    background: var(--body-bg);
-    border-radius: 8px;
-    padding: 1rem;
-    border: 1px solid var(--preview-divider-color);
-
-    h5 {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin: 0 0 0.75rem;
-      color: var(--heading-color);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-
-      i {
-        font-size: 0.85rem;
-      }
-    }
-
-    &--static h5 i {
-      color: var(--accent-color);
-    }
-
-    &--ssg h5 i {
-      color: #6b46c1;
-    }
-
-    &--wordpress h5 i {
-      color: #21759b;
-    }
-  }
-
-  &__row {
-    padding: 0.5rem 0;
-    border-bottom: 1px dashed var(--preview-divider-color);
-
-    &:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-  }
-
-  &__label {
-    display: block;
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--color-subtitle);
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    margin-bottom: 0.15rem;
-  }
-
-  &__value {
-    display: block;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--heading-color);
-    margin-bottom: 0.15rem;
-
-    &--highlight {
-      color: var(--accent-color);
-    }
-  }
-
-  &__note {
-    display: block;
-    font-size: 0.75rem;
-    color: var(--color-subtitle);
-    line-height: 1.4;
-  }
+  line-height: 1.6;
 }
 
 // Portfolio Section
 .service-portfolio {
-  margin-bottom: 3rem;
-
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0 0 0.5rem;
-    color: var(--heading-color);
-  }
-
   > p {
+    text-align: center;
     color: var(--color-subtitle);
-    margin: 0 0 1.25rem;
+    margin: -1rem 0 2rem;
   }
 }
 
@@ -919,9 +848,8 @@ body:has(.service-page) header {
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
   border-radius: 12px;
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
-  margin-bottom: 3rem;
 
   h2 {
     font-size: 1.5rem;

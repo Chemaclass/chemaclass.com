@@ -304,78 +304,67 @@
       </div>
     </div>
 
-    <div class="budget-info">
-      <h3><i class="fa-solid fa-coins"></i> Guía de Presupuestos</h3>
+    <div class="budget-section">
+      <div class="budget-header">
+        <h3>Guía de Presupuestos</h3>
+        <p>¿No sabes qué opción se adapta a tus necesidades? Te recomendaré la solución más sencilla para ti.</p>
+      </div>
+
       <div class="budget-cards">
         <div class="budget-card">
           <span class="budget-card__type">Web Estática</span>
           <span class="budget-card__range">€1.200 – €2.500</span>
           <span class="budget-card__note">Los sitios pueden empezar desde €800</span>
+          <div class="budget-card__yearly">
+            <span class="budget-card__yearly-title">Costes anuales</span>
+            <div class="budget-card__yearly-row">
+              <span class="budget-card__yearly-label">Hosting</span>
+              <span class="budget-card__yearly-value">&lt; €20</span>
+            </div>
+            <div class="budget-card__yearly-row">
+              <span class="budget-card__yearly-label">Mantenimiento</span>
+              <span class="budget-card__yearly-value tooltip" tabindex="0">Bajo demanda<span class="tooltip__text">Sin cuotas fijas</span></span>
+            </div>
+          </div>
         </div>
-        <div class="budget-card">
+
+        <div class="budget-card budget-card--recommended">
+          <span class="budget-card__badge">Recomendado</span>
           <span class="budget-card__type">Web Estática + Blog</span>
           <span class="budget-card__range">€1.500 – €3.000</span>
           <span class="budget-card__note">Personalizado + configuración de blog</span>
+          <div class="budget-card__yearly">
+            <span class="budget-card__yearly-title">Costes anuales</span>
+            <div class="budget-card__yearly-row">
+              <span class="budget-card__yearly-label">Hosting</span>
+              <span class="budget-card__yearly-value">&lt; €20</span>
+            </div>
+            <div class="budget-card__yearly-row">
+              <span class="budget-card__yearly-label">Mantenimiento</span>
+              <span class="budget-card__yearly-value tooltip" tabindex="0">Bajo demanda<span class="tooltip__text">Sin cuotas fijas</span></span>
+            </div>
+          </div>
         </div>
+
         <div class="budget-card">
           <span class="budget-card__type">Web WordPress</span>
           <span class="budget-card__range">€2.500 – €5.000</span>
           <span class="budget-card__note">+ hosting y mantenimiento</span>
-        </div>
-      </div>
-      <p class="budget-helper"><i class="fa-solid fa-lightbulb"></i> ¿No sabes qué opción se adapta a tus necesidades? Te recomendaré la solución más sencilla para ti.</p>
-
-      <details class="ongoing-costs">
-        <summary class="ongoing-costs__toggle">
-          <h4>Costes Recurrentes (anuales)</h4>
-          <i class="fa-solid fa-chevron-down ongoing-costs__icon"></i>
-        </summary>
-        <div class="ongoing-costs__content">
-          <p class="ongoing-costs__intro">Registro de dominio: €10–15/año (igual para todas las opciones)</p>
-          <div class="ongoing-costs__comparison">
-            <div class="ongoing-costs__column ongoing-costs__column--static">
-              <h5><i class="fa-solid fa-bolt"></i> Estática</h5>
-              <div class="ongoing-costs__row">
-                <span class="ongoing-costs__label">Hosting</span>
-                <span class="ongoing-costs__value ongoing-costs__value--highlight">Mínimo</span>
-                <span class="ongoing-costs__note">Normalmente menos de €20/año con plataformas modernas</span>
-              </div>
-              <div class="ongoing-costs__row">
-                <span class="ongoing-costs__label">Mantenimiento</span>
-                <span class="ongoing-costs__value ongoing-costs__value--highlight">Bajo demanda</span>
-                <span class="ongoing-costs__note">Sin cuotas recurrentes — mantenimiento cuando se necesite</span>
-              </div>
+          <div class="budget-card__yearly">
+            <span class="budget-card__yearly-title">Costes anuales</span>
+            <div class="budget-card__yearly-row">
+              <span class="budget-card__yearly-label">Hosting</span>
+              <span class="budget-card__yearly-value tooltip" tabindex="0">€50–150<span class="tooltip__text">Hosting gestionado recomendado</span></span>
             </div>
-            <div class="ongoing-costs__column ongoing-costs__column--ssg">
-              <h5><i class="fa-solid fa-code"></i> Est.+Blog</h5>
-              <div class="ongoing-costs__row">
-                <span class="ongoing-costs__label">Hosting</span>
-                <span class="ongoing-costs__value ongoing-costs__value--highlight">Mínimo</span>
-                <span class="ongoing-costs__note">Igual que estática — menos de €20/año</span>
-              </div>
-              <div class="ongoing-costs__row">
-                <span class="ongoing-costs__label">Mantenimiento</span>
-                <span class="ongoing-costs__value ongoing-costs__value--highlight">Bajo demanda</span>
-                <span class="ongoing-costs__note">Sin cuotas recurrentes — mantenimiento cuando se necesite</span>
-              </div>
-            </div>
-            <div class="ongoing-costs__column ongoing-costs__column--wordpress">
-              <h5><i class="fa-brands fa-wordpress"></i> WordPress</h5>
-              <div class="ongoing-costs__row">
-                <span class="ongoing-costs__label">Hosting</span>
-                <span class="ongoing-costs__value">€50-150</span>
-                <span class="ongoing-costs__note">Hosting gestionado recomendado por seguridad</span>
-              </div>
-              <div class="ongoing-costs__row">
-                <span class="ongoing-costs__label">Mantenimiento</span>
-                <span class="ongoing-costs__value">€200-500</span>
-                <span class="ongoing-costs__note">Actualizaciones regulares, parches de seguridad y backups</span>
-              </div>
+            <div class="budget-card__yearly-row">
+              <span class="budget-card__yearly-label">Mantenimiento</span>
+              <span class="budget-card__yearly-value tooltip" tabindex="0">€200–500<span class="tooltip__text">Actualizaciones, seguridad, backups</span></span>
             </div>
           </div>
         </div>
-      </details>
-      <p class="budget-disclaimer">Precios sin IVA. El precio final depende de la complejidad, número de páginas y funcionalidades personalizadas. <br>Se proporciona un presupuesto detallado después de la llamada de descubrimiento.</p>
+      </div>
+
+      <p class="budget-disclaimer">Precios sin IVA. El precio final depende de la complejidad, número de páginas y funcionalidades personalizadas.<br>Registro de dominio: €10–15/año (igual para todas las opciones). Se proporciona un presupuesto detallado después de la llamada de descubrimiento.</p>
     </div>
   </section>
 
