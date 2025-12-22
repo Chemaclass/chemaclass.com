@@ -339,39 +339,38 @@ body:has(.service-page) header {
 
 .comparison-table {
   overflow-x: auto;
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 12px;
+  -webkit-overflow-scrolling: touch;
 
   table {
     width: 100%;
-    border-collapse: collapse;
+    min-width: 600px;
+    border-collapse: separate;
+    border-spacing: 0;
     font-size: 0.9rem;
+    background: var(--search-input-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--preview-divider-color);
   }
 
-  thead tr {
-    background: var(--search-bg-selected-item);
-  }
-
-  th {
-    text-align: center;
-    padding: 1rem 1rem;
+  thead th {
+    padding: 1.25rem 1.5rem;
     font-weight: 600;
     color: var(--heading-color);
+    background: var(--search-bg-selected-item);
     border-bottom: 2px solid var(--preview-divider-color);
-    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
 
     &:first-child {
       text-align: left;
-      border-radius: 12px 0 0 0;
-    }
-
-    &:last-child {
-      border-radius: 0 12px 0 0;
+      width: 180px;
     }
 
     i {
-      margin-right: 0.35rem;
+      display: block;
+      font-size: 1.25rem;
+      margin-bottom: 0.35rem;
     }
 
     &.col-static i {
@@ -395,24 +394,23 @@ body:has(.service-page) header {
     }
   }
 
-  td {
-    padding: 0.85rem 1rem;
-    border-bottom: 1px solid var(--preview-divider-color);
+  tbody td {
+    padding: 1rem 1.5rem;
     text-align: center;
     color: var(--body-color);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--preview-divider-color);
+    vertical-align: middle;
 
     &:first-child {
       text-align: left;
-      font-weight: 500;
+      font-weight: 600;
       color: var(--heading-color);
-      background: var(--search-bg-selected-item);
-      position: sticky;
-      left: 0;
+      background: var(--body-bg);
     }
 
     i {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
 
     &.highlight {
@@ -441,38 +439,24 @@ body:has(.service-page) header {
       }
     }
 
-    &.neutral {
-      color: var(--color-subtitle);
-
-      i {
-        color: inherit;
-        opacity: 0.6;
-      }
-    }
   }
 
-  tr:last-child td {
+  tbody tr:last-child td {
     border-bottom: none;
+  }
 
-    &:first-child {
-      border-radius: 0 0 0 12px;
+  tbody tr:nth-child(even) td:not(:first-child) {
+    background: rgba(0, 0, 0, 0.02);
+
+    html[color-theme=dark] & {
+      background: rgba(255, 255, 255, 0.02);
     }
   }
 
-  // Alternating row colors for better readability
-  tbody tr:nth-child(odd) {
-    background: var(--body-bg);
-  }
-
-  tbody tr:nth-child(even) {
-    background: transparent;
-  }
-
-  // Hover effect
   tbody tr {
     transition: background-color 0.15s ease;
 
-    &:hover {
+    &:hover td {
       background: var(--search-bg-selected-item);
     }
   }
@@ -496,16 +480,7 @@ body:has(.service-page) header {
   gap: 1rem;
   margin-bottom: 1.5rem;
 
-  // Break out of container, responsive with max 1100px
-  @media (min-width: 800px) {
-    width: calc(100vw - 3rem);
-    max-width: 1100px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
-
-  // Single column on smaller screens
-  @media (max-width: 799px) {
+  @media (max-width: $breakpoint-tablet) {
     grid-template-columns: 1fr;
   }
 }
@@ -946,6 +921,7 @@ body:has(.service-page) header {
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
+  margin-bottom: 3rem;
 
   h2 {
     font-size: 1.5rem;
@@ -1021,10 +997,19 @@ body:has(.service-page) header {
   }
 
   .comparison-table {
-    font-size: 0.8rem;
+    thead th {
+      padding: 0.75rem 0.75rem;
+      font-size: 0.8rem;
 
-    th, td {
-      padding: 0.6rem 0.5rem;
+      i {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    tbody td {
+      padding: 0.75rem 0.75rem;
+      font-size: 0.8rem;
     }
   }
 
