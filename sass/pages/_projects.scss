@@ -80,7 +80,7 @@
 // Featured Projects Grid
 .projects-featured__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 
   @media (max-width: $breakpoint-phone) {
@@ -190,20 +190,17 @@
 
   @media (max-width: $breakpoint-tablet) {
     grid-template-columns: repeat(2, 1fr);
-
-    // Hide last item if odd count to keep grid balanced
-    > a:last-child:nth-child(odd) {
-      display: none;
-    }
   }
 
   @media (max-width: $breakpoint-phone) {
     grid-template-columns: 1fr;
+  }
+}
 
-    // Show all items on phone (single column)
-    > a:last-child:nth-child(odd) {
-      display: block;
-    }
+// Hiddable projects (hidden on tablet to balance grid)
+.project-card--simple.project-card--hiddable {
+  @media (max-width: 900px) and (min-width: #{$breakpoint-phone + 1}) {
+    display: none;
   }
 }
 

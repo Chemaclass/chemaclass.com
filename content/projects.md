@@ -18,19 +18,19 @@ url = "https://phel-lang.org"
 github = "phel-lang/phel-lang"
 icon = "phel"
 
-[[extra.headliners]]
+[[extra.projects]]
 name = "Gacela"
-description = "A PHP library to help you build modular applications with clear module boundaries."
+description = "Gacela helps you to build modular applications. Splitting your project into different modules help in terms of maintainability and scalability. It encourages your modules to interact with each other in a unified way by following some rules."
 url = "https://gacela-project.com/"
 github = "gacela-project/gacela"
-icon = "gacela"
+tags = ["PHP", "Modular"]
+featured = true
 
 [[extra.projects]]
 name = "php-best-practices"
 description = "What I consider the best practices for web and software development."
 github = "Chemaclass/php-best-practices"
 tags = ["PHP", "Best Practices"]
-featured = true
 
 [[extra.projects]]
 name = "edifact-parser"
@@ -55,6 +55,7 @@ name = "satscribe"
 description = "Satscribe makes Bitcoin easier to understand."
 github = "Chemaclass/satscribe"
 tags = ["AI", "Bitcoin"]
+hide_on_tablet = true
 
 [[extra.projects]]
 name = "website-windmuehle"
@@ -62,11 +63,5 @@ description = "Non-profit website dedicated to restoring and preserving the hist
 github = "Chemaclass/website-windmuehle"
 tags = ["Vitepress", "Static Site"]
 featured = true
-
-[[extra.projects]]
-name = "go-horse-racing"
-description = "A horse racing emulator."
-github = "Chemaclass/go-horse-racing"
-tags = ["Go", "Simulation"]
 
 +++
