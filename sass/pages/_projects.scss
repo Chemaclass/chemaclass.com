@@ -101,7 +101,6 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 
   &:hover {
-    transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     border-color: var(--accent-color);
     border-bottom-color: var(--accent-color);
@@ -330,7 +329,6 @@
   &:hover {
     border-color: var(--accent-color);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    transform: translateY(-3px);
     border-bottom-color: var(--accent-color);
   }
 
@@ -473,7 +471,21 @@
   &:hover {
     border-color: var(--accent-color);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    transform: translateY(-3px);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+
+    .service-card__icon {
+      margin-bottom: 0;
+    }
+
+    .service-card__more {
+      font-size: 0.8rem;
+    }
   }
 
   &__icon {
@@ -609,12 +621,13 @@
       border-radius: 4px;
       font-size: 0.75rem;
       text-decoration: none;
+      border-bottom: 1px solid transparent;
       transition: all 0.15s ease;
 
       &:hover {
         background: var(--accent-color);
         color: white;
-        border-bottom-color: transparent;
+        border-bottom: 1px solid transparent;
       }
     }
 
@@ -642,7 +655,6 @@
 
     &:hover {
       filter: brightness(1.1);
-      transform: translateY(-3px);
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
       border-bottom-color: transparent;
     }
