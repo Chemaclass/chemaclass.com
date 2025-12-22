@@ -13,7 +13,11 @@
 {% endblock posthead %}
 
 {% block content %}
-  {{ section.content | safe }}
+  <div class="readings-index">
+    <div class="readings-header">
+      <h1>Readings</h1>
+      <p class="readings-intro">I want to keep track of what I read and share it with everyone.</p>
+    </div>
 
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
 
@@ -27,6 +31,7 @@
         {{ helpers::content_card(post=post) }}
       {% endif %}
     {% endfor %}
+  </div>
   </div>
 
   {% include "footer-about.html" %}

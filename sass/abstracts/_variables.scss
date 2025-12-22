@@ -59,13 +59,14 @@
 }
 
 // Layout Variables
-$max-width: 700px;
-$max-content-width: 700px;
+$max-width: 960px;
+$max-content-width: 960px;
 $footnote-space: 2rem;
 
 // TOC Variables
 $toc-width: 240px;
 $toc-offset: 50px;
+$toc-content-width: 700px; // narrower content for pages with TOC
 $breakpoint-toc: 1200px;
 
 // Breakpoints

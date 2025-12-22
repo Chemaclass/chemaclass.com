@@ -58,7 +58,4 @@ nav button {
     transition: transform 0.5s ease-in;
   }
 
-  @media (min-width: $breakpoint-tablet) {
-    right: calc((100vw - 850px) / 2);
-  }
 }

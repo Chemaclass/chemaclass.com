@@ -13,7 +13,11 @@
 {% endblock posthead %}
 
 {% block content %}
-  {{ section.content | safe }}
+  <div class="blog-index">
+    <div class="blog-header">
+      <h1>Blog</h1>
+      <p class="blog-intro">I enjoy writing about topics that I find exciting and bring some value to my life.</p>
+    </div>
 
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
 
@@ -27,6 +31,7 @@
         {{ helpers::content_card(post=post) }}
       {% endif %}
     {% endfor %}
+  </div>
   </div>
 
   {% include "footer-about.html" %}

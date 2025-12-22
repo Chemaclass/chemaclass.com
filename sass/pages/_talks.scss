@@ -1,6 +1,5 @@
 // Talks page
 .talks-page {
-  max-width: 100%;
 }
 
 .talks-header {
@@ -254,8 +253,6 @@
 // ===========================================
 
 .talk-single {
-  max-width: 100%;
-
   &__back {
     display: inline-flex;
     align-items: center;

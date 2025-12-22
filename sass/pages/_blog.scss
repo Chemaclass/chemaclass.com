@@ -1,3 +1,22 @@
+// Blog index header
+.blog-index {
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-intro {
+    color: var(--color-subtitle);
+    font-size: 1.1rem;
+    margin: 0;
+  }
+}
+
 // Blog list
 .blog-list {
   display: flex;

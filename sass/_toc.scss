@@ -1,8 +1,12 @@
 // Table of Contents Styles
-$max-content-width: 700px;
-$toc-width: 240px;
-$toc-offset: 50px;
-$breakpoint-toc: 1200px;
+// Uses variables from _variables.scss
+
+// On wide screens, constrain blog posts to narrower width to make room for TOC
+@media (min-width: $breakpoint-toc) {
+  main:has(.blog-post) {
+    max-width: $toc-content-width;
+  }
+}
 
 #toc-container {
   display: none;
@@ -10,7 +14,7 @@ $breakpoint-toc: 1200px;
   @media (min-width: $breakpoint-toc) {
     display: block;
     position: fixed;
-    left: calc((100vw - #{$max-content-width}) / 2 - #{$toc-width} - #{$toc-offset});
+    left: calc((100vw - 700px) / 2 - 160px - 50px);
     top: 120px;
     width: $toc-width;
     max-height: calc(100vh - 140px);
