@@ -130,7 +130,8 @@
   .project-title {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: space-between;
+    flex: 1;
   }
 
   h3 {
@@ -215,16 +216,16 @@
 .tech-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
-  padding: 0.2rem 0.5rem;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 4px;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 500;
   background: var(--search-bg-selected-item);
   color: var(--body-color);
 
   i {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 
   &--php i { color: #777BB4; }

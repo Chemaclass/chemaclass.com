@@ -90,6 +90,32 @@ body:has(.service-page) header {
   }
 }
 
+// Top CTA (inline)
+.service-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.6rem 1.25rem;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+  }
+
+  i {
+    font-size: 0.85rem;
+  }
+}
+
 // Intro Section
 .service-intro {
   margin-bottom: 3rem;
@@ -210,18 +236,24 @@ body:has(.service-page) header {
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--accent-color);
-    background: rgba(58, 92, 136, 0.1);
+    background: var(--search-bg-selected-item);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
 
     &--secondary {
       color: #21759b;
-      background: rgba(33, 117, 155, 0.1);
+
+      html[color-theme=dark] & {
+        color: #5ba8d1;
+      }
     }
 
     &--tertiary {
       color: #6b46c1;
-      background: rgba(107, 70, 193, 0.1);
+
+      html[color-theme=dark] & {
+        color: #9f7aea;
+      }
     }
   }
 
@@ -308,6 +340,9 @@ body:has(.service-page) header {
 
 .comparison-table {
   overflow-x: auto;
+  background: var(--search-input-bg);
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 12px;
 
   table {
     width: 100%;
@@ -316,22 +351,48 @@ body:has(.service-page) header {
   }
 
   thead tr {
-    background: var(--body-bg);
+    background: var(--search-bg-selected-item);
   }
 
   th {
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 1rem;
     font-weight: 600;
     color: var(--heading-color);
     border-bottom: 2px solid var(--preview-divider-color);
+    white-space: nowrap;
 
     &:first-child {
       text-align: left;
+      border-radius: 12px 0 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 12px 0 0;
     }
 
     i {
       margin-right: 0.35rem;
+    }
+
+    &.col-static i {
+      color: var(--accent-color);
+    }
+
+    &.col-ssg i {
+      color: #6b46c1;
+
+      html[color-theme=dark] & {
+        color: #9f7aea;
+      }
+    }
+
+    &.col-wp i {
+      color: #21759b;
+
+      html[color-theme=dark] & {
+        color: #5ba8d1;
+      }
     }
   }
 
@@ -339,21 +400,82 @@ body:has(.service-page) header {
     padding: 0.85rem 1rem;
     border-bottom: 1px solid var(--preview-divider-color);
     text-align: center;
+    color: var(--body-color);
+    font-size: 0.85rem;
 
     &:first-child {
       text-align: left;
       font-weight: 500;
       color: var(--heading-color);
+      background: var(--search-bg-selected-item);
+      position: sticky;
+      left: 0;
+    }
+
+    i {
+      font-size: 0.8rem;
     }
 
     &.highlight {
-      color: var(--accent-color);
+      color: #16a34a;
       font-weight: 600;
+
+      html[color-theme=dark] & {
+        color: #4ade80;
+      }
+
+      i {
+        color: inherit;
+      }
+    }
+
+    &.caution {
+      color: #d97706;
+      font-weight: 500;
+
+      html[color-theme=dark] & {
+        color: #fbbf24;
+      }
+
+      i {
+        color: inherit;
+      }
+    }
+
+    &.neutral {
+      color: var(--color-subtitle);
+
+      i {
+        color: inherit;
+        opacity: 0.6;
+      }
     }
   }
 
   tr:last-child td {
     border-bottom: none;
+
+    &:first-child {
+      border-radius: 0 0 0 12px;
+    }
+  }
+
+  // Alternating row colors for better readability
+  tbody tr:nth-child(odd) {
+    background: var(--body-bg);
+  }
+
+  tbody tr:nth-child(even) {
+    background: transparent;
+  }
+
+  // Hover effect
+  tbody tr {
+    transition: background-color 0.15s ease;
+
+    &:hover {
+      background: var(--search-bg-selected-item);
+    }
   }
 }
 
@@ -613,24 +735,27 @@ body:has(.service-page) header {
     gap: 0.5rem;
     cursor: pointer;
     list-style: none;
-    padding: 0.5rem;
+    padding: 0.75rem 1rem;
     margin: 0 -0.5rem;
-    border-radius: 6px;
-    transition: background-color 0.2s ease;
+    border-radius: 8px;
+    background: var(--search-bg-selected-item);
+    border: 1px dashed var(--preview-divider-color);
+    transition: all 0.2s ease;
 
     &::-webkit-details-marker {
       display: none;
     }
 
     &:hover {
-      background: var(--search-bg-selected-item);
+      border-color: var(--accent-color);
+      border-style: solid;
     }
 
     h4 {
       font-size: 0.95rem;
       font-weight: 600;
       margin: 0;
-      color: var(--heading-color);
+      color: var(--accent-color);
     }
   }
 
@@ -770,41 +895,48 @@ body:has(.service-page) header {
   flex-direction: column;
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
-  border-radius: 10px;
-  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
   text-decoration: none;
   transition: all 0.2s ease;
+  position: relative;
 
   &:hover {
     border-color: var(--accent-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   }
 
   &__name {
+    font-size: 1.05rem;
     font-weight: 600;
     color: var(--heading-color);
-  }
-
-  &__url {
-    font-size: 0.75rem;
-    color: var(--accent-color);
     margin-bottom: 0.25rem;
   }
 
-  &__type {
+  &__url {
     font-size: 0.8rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    font-family: monospace;
+  }
+
+  &__type {
+    font-size: 0.85rem;
     color: var(--color-subtitle);
+    line-height: 1.5;
+    flex-grow: 1;
   }
 
   &__tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     font-size: 0.7rem;
     font-weight: 600;
     color: var(--accent-color);
-    background: rgba(58, 92, 136, 0.1);
-    padding: 0.15rem 0.5rem;
+    background: var(--search-bg-selected-item);
+    padding: 0.2rem 0.6rem;
     border-radius: 4px;
-    margin-top: 0.25rem;
   }
 }
 

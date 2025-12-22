@@ -24,17 +24,29 @@ nav button {
 // Scroll to top button
 #scroll-to-top {
   position: fixed;
-  bottom: 16px;
-  right: 16px;
+  bottom: 20px;
+  right: 20px;
   z-index: 1000;
   border-radius: 9999px;
-  border: 3px solid var(--body-color);
-  width: 30px;
-  height: 30px;
+  border: 2px solid var(--body-color);
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
   cursor: pointer;
   background-color: var(--body-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 
   &.hidden {
     transform: translateY(150%);

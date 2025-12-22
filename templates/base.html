@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      // Apply theme immediately to prevent flash
+      (function() {
+        if (localStorage.theme === 'dark') {
+          document.documentElement.classList.add('theme-dark');
+          document.documentElement.setAttribute('color-theme', 'dark');
+        }
+      })();
+    </script>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta
@@ -20,7 +29,10 @@
     {% endif %}
 
     <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload fonts to prevent FOUT -->
+    <link rel="preload" href="/fonts/rubik-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/rubik-500.woff2" as="font" type="font/woff2" crossorigin>
 
     {% set rum_key = get_env(name="RUM_KEY", default=false) %}
     {% if rum_key %}
