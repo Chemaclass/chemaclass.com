@@ -1,0 +1,249 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ page.title }}
+{% endblock %}
+
+{% block content %}
+<article class="service-page">
+  <!-- Hero Section -->
+  <header class="service-hero">
+    <h1>Team Workshops</h1>
+    <p class="service-hero__subtitle">Hands-on coding sessions that level up your team</p>
+  </header>
+
+  <!-- Value Proposition -->
+  <section class="service-intro">
+    <p>Spend a full day coding, testing, and refactoring. This workshop is all about practical, hands-on learning: you'll work through a series of independent code katas designed to help you build strong habits around testing, test-driven development (TDD), and refactoring. Language-agnostic principles, adaptable to your team's stack.</p>
+    <a href="mailto:me@chemaclass.es?subject=Team%20Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20booking%20a%20team%20workshop.%0A%0ATeam%20size%3A%0APreferred%20dates%3A%0A%0AThanks!" class="service-intro__cta">
+      <i class="fa-solid fa-envelope"></i> Book a workshop
+    </a>
+  </section>
+
+  <!-- Workshop Schedule -->
+  <section class="service-options service-options-2">
+    <div class="service-option">
+      <div class="service-option__header">
+        <div class="service-option__icon">
+          <i class="fa-solid fa-sun"></i>
+        </div>
+        <h2>Morning Session</h2>
+        <span class="service-option__tag">Testing & TDD</span>
+      </div>
+
+      <p class="service-option__desc">We focus on testing techniques that make change safe, from golden tests that capture existing behavior to TDD exercises that guide better design.</p>
+
+      <div class="service-option__benefits">
+        <h3>Topics covered</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Golden master testing</li>
+          <li><i class="fa-solid fa-check"></i> Approval testing patterns</li>
+          <li><i class="fa-solid fa-check"></i> Test-driven development cycle</li>
+          <li><i class="fa-solid fa-check"></i> Writing tests that guide design</li>
+          <li><i class="fa-solid fa-check"></i> Understanding test doubles</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-option">
+      <div class="service-option__header">
+        <div class="service-option__icon service-option__icon--secondary">
+          <i class="fa-solid fa-moon"></i>
+        </div>
+        <h2>Afternoon Session</h2>
+        <span class="service-option__tag service-option__tag--secondary">Refactoring</span>
+      </div>
+
+      <p class="service-option__desc">We switch gears to refactoring: applying small, focused changes to improve messy, legacy-style code without breaking it.</p>
+
+      <div class="service-option__benefits">
+        <h3>Topics covered</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Safe refactoring techniques</li>
+          <li><i class="fa-solid fa-check"></i> Extract method & class patterns</li>
+          <li><i class="fa-solid fa-check"></i> Working with legacy code</li>
+          <li><i class="fa-solid fa-check"></i> Code smells identification</li>
+          <li><i class="fa-solid fa-check"></i> Incremental improvement strategies</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- What you'll learn -->
+  <section class="service-decision">
+    <h2>What your team will gain</h2>
+    <div class="decision-cards">
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-flask-vial"></i> Testing confidence</h3>
+        <ul>
+          <li>Write meaningful tests</li>
+          <li>Test legacy code safely</li>
+          <li>Build a testing habit</li>
+        </ul>
+      </div>
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-code-branch"></i> TDD mindset</h3>
+        <ul>
+          <li>Red-green-refactor cycle</li>
+          <li>Design through tests</li>
+          <li>Smaller, focused commits</li>
+        </ul>
+      </div>
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Refactoring skills</h3>
+        <ul>
+          <li>Improve code safely</li>
+          <li>Tackle technical debt</li>
+          <li>Clean code patterns</li>
+        </ul>
+      </div>
+    </div>
+    <p class="decision-tip">
+      <i class="fa-solid fa-lightbulb"></i>
+      <strong>Key outcome:</strong> Your team walks away with a proven toolkit for writing better code, improving existing codebases, and collaborating effectively through pair programming.
+    </p>
+  </section>
+
+  <!-- How it works -->
+  <section class="service-process">
+    <h2>How I Work</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <span class="process-step__number">1</span>
+        <div class="process-step__content">
+          <h3>Discovery Call</h3>
+          <p>We discuss your team's experience level and specific challenges you want to address.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">2</span>
+        <div class="process-step__content">
+          <h3>Customization</h3>
+          <p>I tailor the katas and exercises to match your team's tech stack and goals.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">3</span>
+        <div class="process-step__content">
+          <h3>Workshop Day</h3>
+          <p>Full day of hands-on coding, pair programming, and collaborative learning.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">4</span>
+        <div class="process-step__content">
+          <h3>Follow-up</h3>
+          <p>Materials, code samples, and resources to continue practicing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="budget-section">
+      <div class="budget-header">
+        <h3>Investment</h3>
+        <p>€350 per person. Groups of 3-8 participants.</p>
+      </div>
+
+      <div class="budget-cards">
+        <div class="budget-card">
+          <span class="budget-card__type">3 people</span>
+          <span class="budget-card__range">€1,050</span>
+          <span class="budget-card__note">Minimum group size</span>
+          <div class="budget-card__yearly">
+            <span class="budget-card__yearly-title">Includes</span>
+            <div class="budget-card__yearly-row">
+              <span class="budget-card__yearly-label">Duration</span>
+              <span class="budget-card__yearly-value">6 hours</span>
+            </div>
+            <div class="budget-card__yearly-row">
+              <span class="budget-card__yearly-label">Materials</span>
+              <span class="budget-card__yearly-value">Included</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="budget-card budget-card--recommended">
+          <span class="budget-card__badge">Recommended</span>
+          <span class="budget-card__type">5-6 people</span>
+          <span class="budget-card__range">€1,750 – €2,100</span>
+          <span class="budget-card__note">Ideal group size</span>
+          <div class="budget-card__yearly">
+            <span class="budget-card__yearly-title">Includes</span>
+            <div class="budget-card__yearly-row">
+              <span class="budget-card__yearly-label">Duration</span>
+              <span class="budget-card__yearly-value">6 hours</span>
+            </div>
+            <div class="budget-card__yearly-row">
+              <span class="budget-card__yearly-label">Follow-up</span>
+              <span class="budget-card__yearly-value">Resources & code</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="budget-card">
+          <span class="budget-card__type">8 people</span>
+          <span class="budget-card__range">€2,800</span>
+          <span class="budget-card__note">Maximum group size</span>
+          <div class="budget-card__yearly">
+            <span class="budget-card__yearly-title">Includes</span>
+            <div class="budget-card__yearly-row">
+              <span class="budget-card__yearly-label">Duration</span>
+              <span class="budget-card__yearly-value">6 hours</span>
+            </div>
+            <div class="budget-card__yearly-row">
+              <span class="budget-card__yearly-label">Custom katas</span>
+              <span class="budget-card__yearly-value">Included</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="budget-disclaimer">Prices exclude VAT and travel expenses for on-site workshops outside Germany.<br>Remote workshops available. A detailed quote is provided after the discovery call.</p>
+    </div>
+  </section>
+
+  <!-- Previous workshops -->
+  <section class="service-portfolio">
+    <h2>Workshop Resources</h2>
+    <p>Materials and talks related to my workshop content:</p>
+    <div class="portfolio-grid">
+      <a href="/blog/test-driven-development/" class="portfolio-item">
+        <span class="portfolio-item__name">Test-Driven Development</span>
+        <span class="portfolio-item__url">Blog post</span>
+        <span class="portfolio-item__type">Understanding TDD principles and practices</span>
+        <span class="portfolio-item__tag">Article</span>
+      </a>
+      <a href="/blog/effective-pair-programming/" class="portfolio-item">
+        <span class="portfolio-item__name">Effective Pair Programming</span>
+        <span class="portfolio-item__url">Blog post</span>
+        <span class="portfolio-item__type">Techniques for collaborative coding</span>
+        <span class="portfolio-item__tag">Article</span>
+      </a>
+      <a href="/blog/the-art-of-refactoring/" class="portfolio-item">
+        <span class="portfolio-item__name">The Art of Refactoring</span>
+        <span class="portfolio-item__url">Blog post</span>
+        <span class="portfolio-item__type">Principles and patterns for clean code</span>
+        <span class="portfolio-item__tag">Article</span>
+      </a>
+      <a href="/blog/great-engineering/" class="portfolio-item">
+        <span class="portfolio-item__name">Great Engineering</span>
+        <span class="portfolio-item__url">Blog post</span>
+        <span class="portfolio-item__type">What makes engineering teams excel</span>
+        <span class="portfolio-item__tag">Article</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="service-cta">
+    <h2>Ready to level up your team?</h2>
+    <p>Let's discuss how a workshop can help your team write better code, work together more effectively, and tackle that legacy codebase with confidence.</p>
+    <div class="service-cta__buttons">
+      <a href="mailto:me@chemaclass.es?subject=Team%20Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20booking%20a%20team%20workshop.%0A%0ATeam%20size%3A%0APreferred%20dates%3A%0ALocation%20(on-site%2Fremote)%3A%0A%0AThanks!" class="service-cta__btn service-cta__btn--secondary">
+        <i class="fa-solid fa-envelope"></i> Get in touch
+      </a>
+    </div>
+  </section>
+</article>
+
+{% endblock content %}

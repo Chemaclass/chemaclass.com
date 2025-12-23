@@ -146,14 +146,17 @@ body:has(.service-page) header {
   }
 }
 
-// Options Grid - breaks out of container on larger screens
+// Options Grid base styles
 .service-options {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-bottom: 3rem;
+}
 
-  // Break out of container, responsive with max 1100px
+// 3-column variant - breaks out of container
+.service-options-3 {
+  grid-template-columns: repeat(3, 1fr);
+
   @media (min-width: 800px) {
     width: calc(100vw - 3rem);
     max-width: 1100px;
@@ -161,8 +164,16 @@ body:has(.service-page) header {
     transform: translateX(-50%);
   }
 
-  // Single column on smaller screens
   @media (max-width: 799px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// 2-column variant - full width within container
+.service-options-2 {
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: $breakpoint-phone) {
     grid-template-columns: 1fr;
   }
 }
@@ -616,6 +627,13 @@ body:has(.service-page) header {
 
   @media (max-width: $breakpoint-tablet) {
     grid-template-columns: 1fr;
+  }
+
+  &--single {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
