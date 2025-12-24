@@ -1029,3 +1029,80 @@ body:has(.service-page) header {
     }
   }
 }
+
+// Budget Breakdown (collapsible details)
+.budget-breakdown {
+  margin-top: 1.25rem;
+  border-top: 1px solid var(--preview-divider-color);
+  padding-top: 1rem;
+
+  summary {
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: "▸";
+      font-size: 0.7rem;
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &[open] summary::before {
+    transform: rotate(90deg);
+  }
+}
+
+.breakdown-table {
+  width: 100%;
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 0.4rem 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--preview-divider-color);
+  }
+
+  th {
+    font-weight: 600;
+    color: var(--color-subtitle);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  td:nth-child(2),
+  td:nth-child(3),
+  th:nth-child(2),
+  th:nth-child(3) {
+    text-align: right;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  tfoot {
+    td {
+      font-weight: 700;
+      border-top: 2px solid var(--preview-divider-color);
+      padding-top: 0.6rem;
+      color: var(--heading-color);
+    }
+  }
+}
