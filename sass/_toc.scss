@@ -14,7 +14,7 @@
   @media (min-width: $breakpoint-toc) {
     display: block;
     position: fixed;
-    left: calc((100vw - 700px) / 2 - 160px - 50px);
+    left: calc((100vw - 730px) / 2 - 160px - 50px);
     top: 120px;
     width: $toc-width;
     max-height: calc(100vh - 140px);
