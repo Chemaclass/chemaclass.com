@@ -10,51 +10,64 @@
 
 {% block content %}
 <article class="projects-page service-page">
-  <nav class="service-nav service-nav--end">
-    <a href="/servicios/" class="lang-switch" title="Versión en español">ES</a>
-  </nav>
-
   <!-- Hero Section -->
   <header class="projects-hero service-hero">
+    {% if lang == "es" %}
+    <h1>Servicios</h1>
+    <p class="projects-hero__subtitle service-hero__subtitle">
+      Con más de 14 años en desarrollo de software, ayudo a empresas y particulares a estar online con sitios web rápidos y profesionales, y ayudo a equipos de desarrollo a mejorar con talleres prácticos de testing y refactoring. Si necesitas presencia web o quieres potenciar tus habilidades, puedo ayudarte.
+    </p>
+    {% else %}
     <h1>Services</h1>
     <p class="projects-hero__subtitle service-hero__subtitle">
       With 14+ years in software development, I help businesses and individuals get online with fast, professional websites and help dev teams level up through hands-on workshops on testing and refactoring. Whether you need a web presence or want to sharpen your skills, I can help.
     </p>
+    {% endif %}
   </header>
 
   <!-- Services Section -->
   <section class="projects-services" id="services">
     <div class="services-grid">
-      <a href="/services/web-development/" class="service-card">
+      <a href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}" class="service-card">
         <div class="service-card__header">
           <div class="service-card__icon">
             <i class="fa-solid fa-globe"></i>
           </div>
-          <span class="service-card__more">Learn more <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="service-card__more">{% if lang == "es" %}Más información{% else %}Learn more{% endif %} <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-        <h3>Static Websites</h3>
-        <p>Landing pages, portfolios, company sites. Fast, accessible, easy to maintain.</p>
+        <h3>{% if lang == "es" %}Desarrollo Web{% else %}Static Websites{% endif %}</h3>
+        <p>{% if lang == "es" %}Landing pages, portfolios, sitios corporativos. Rápidos, accesibles, fáciles de mantener.{% else %}Landing pages, portfolios, company sites. Fast, accessible, easy to maintain.{% endif %}</p>
       </a>
 
-      <a href="/services/team-workshops/" class="service-card">
+      <a href="{% if lang == 'es' %}/es/services/team-workshops/{% else %}/services/team-workshops/{% endif %}" class="service-card">
         <div class="service-card__header">
           <div class="service-card__icon">
             <i class="fa-solid fa-code"></i>
           </div>
-          <span class="service-card__more">Learn more <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="service-card__more">{% if lang == "es" %}Más información{% else %}Learn more{% endif %} <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-        <h3>Team Workshops</h3>
-        <p>Team sessions on TDD, refactoring, and pair programming through katas.</p>
+        <h3>{% if lang == "es" %}Talleres de Equipo{% else %}Team Workshops{% endif %}</h3>
+        <p>{% if lang == "es" %}Sesiones de equipo sobre TDD, refactoring y pair programming a través de katas.{% else %}Team sessions on TDD, refactoring, and pair programming through katas.{% endif %}</p>
       </a>
 
     </div>
 
     <div class="services-sessions">
       <div class="sessions-content">
-        <h3><i class="fa-solid fa-comments"></i> 1:1 Sessions</h3>
-        <p>Want to go deeper? Book a call to discuss any topic from my blog posts or explore ideas together.</p>
+        <h3><i class="fa-solid fa-comments"></i> {% if lang == "es" %}Sesiones 1:1{% else %}1:1 Sessions{% endif %}</h3>
+        <p>{% if lang == "es" %}¿Quieres profundizar más? Reserva una llamada para hablar de cualquier tema de mis posts o explorar ideas juntos.{% else %}Want to go deeper? Book a call to discuss any topic from my blog posts or explore ideas together.{% endif %}</p>
       </div>
       <div class="sessions-tags">
+        {% if lang == "es" %}
+        <a href="/es/tags/leadership/">liderazgo</a>
+        <a href="/es/tags/agile/">agile</a>
+        <a href="/es/tags/testing/">testing</a>
+        <a href="/es/tags/clean-code/">clean code</a>
+        <a href="/es/tags/refactoring/">refactoring</a>
+        <a href="/es/tags/pair-programming/">pair-prog</a>
+        <a href="/es/tags/communication/">comunicación</a>
+        <a href="/es/tags/bitcoin/">bitcoin</a>
+        {% else %}
         <a href="/tags/leadership/">leadership</a>
         <a href="/tags/agile/">agile</a>
         <a href="/tags/testing/">testing</a>
@@ -63,25 +76,26 @@
         <a href="/tags/pair-programming/">pair-prog</a>
         <a href="/tags/communication/">communication</a>
         <a href="/tags/bitcoin/">bitcoin</a>
+        {% endif %}
       </div>
       <div class="sessions-actions">
         <a href="mailto:me@chemaclass.es" class="sessions-cta">
-          <i class="fa-solid fa-envelope"></i> Email me
+          <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Escríbeme{% else %}Email me{% endif %}
         </a>
-        <a href="/tags/" class="sessions-cta sessions-cta--secondary">
-          <i class="fa-solid fa-tags"></i> All topics
+        <a href="{% if lang == 'es' %}/es/tags/{% else %}/tags/{% endif %}" class="sessions-cta sessions-cta--secondary">
+          <i class="fa-solid fa-tags"></i> {% if lang == "es" %}Todos los temas{% else %}All topics{% endif %}
         </a>
       </div>
     </div>
 
     <div class="services-sessions">
       <div class="sessions-content">
-        <h3><i class="fa-solid fa-gift"></i> Gift Vouchers</h3>
-        <p>Know someone who needs a website? Gift them a voucher for partial or full price. Ideal for Christmas!</p>
+        <h3><i class="fa-solid fa-gift"></i> {% if lang == "es" %}Vales Regalo{% else %}Gift Vouchers{% endif %}</h3>
+        <p>{% if lang == "es" %}¿Conoces a alguien que necesita una web? Regálale un vale parcial o total. Ideal para Navidad!{% else %}Know someone who needs a website? Gift them a voucher for partial or full price. Ideal for Christmas!{% endif %}</p>
       </div>
       <div class="sessions-actions">
-        <a href="mailto:me@chemaclass.es?subject=Gift%20Voucher%20Inquiry" class="sessions-cta">
-          <i class="fa-solid fa-envelope"></i> Request a voucher
+        <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Vale%20Regalo{% else %}Gift%20Voucher%20Inquiry{% endif %}" class="sessions-cta">
+          <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Solicitar un vale{% else %}Request a voucher{% endif %}
         </a>
       </div>
     </div>
@@ -89,12 +103,12 @@
 
   <!-- Projects Tabs -->
   <section class="projects-tabs" id="projects">
-    <div class="tabs-nav" role="tablist" aria-label="Project categories">
+    <div class="tabs-nav" role="tablist" aria-label="{% if lang == 'es' %}Categorías de proyectos{% else %}Project categories{% endif %}">
       <button class="tab-btn active" data-tab="featured" role="tab" aria-selected="true" aria-controls="tab-featured" id="btn-featured" tabindex="0">
-        <i class="fa-solid fa-star"></i> Featured
+        <i class="fa-solid fa-star"></i> {% if lang == "es" %}Destacados{% else %}Featured{% endif %}
       </button>
       <button class="tab-btn" data-tab="more" role="tab" aria-selected="false" aria-controls="tab-more" id="btn-more" tabindex="-1">
-        <i class="fa-solid fa-code"></i> More Projects
+        <i class="fa-solid fa-code"></i> {% if lang == "es" %}Más Proyectos{% else %}More Projects{% endif %}
       </button>
     </div>
 
