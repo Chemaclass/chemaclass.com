@@ -579,6 +579,10 @@
   text-align: center;
   transition: all 0.2s ease;
 
+  & + & {
+    margin-top: 3rem;
+  }
+
   &:hover {
     border-color: var(--accent-color);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -668,6 +672,92 @@
         filter: none;
         border-color: var(--accent-color);
         color: var(--accent-color);
+      }
+    }
+  }
+}
+
+// Gift Voucher Section
+.gift-voucher {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, var(--search-input-bg) 0%, var(--search-bg-selected-item) 100%);
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    i {
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__content {
+    flex: 1;
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      color: var(--heading-color);
+    }
+
+    p {
+      margin: 0 0 1rem;
+      color: var(--color-subtitle);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+
+    &:hover {
+      filter: brightness(1.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      border: none;
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    flex-direction: column;
+    text-align: center;
+
+    &__content {
+      p {
+        margin-bottom: 1rem;
       }
     }
   }

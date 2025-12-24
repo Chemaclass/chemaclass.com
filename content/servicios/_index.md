@@ -1,6 +1,6 @@
 +++
 title = "Servicios | Chemaclass"
-description = "Sitios web profesionales y talleres de equipo. Ayudo a empresas a estar online y a equipos de desarrollo a mejorar."
+description = "Sitios web profesionales y talleres de equipo. Ayudo a empresas y particulares a estar online y a equipos de desarrollo a mejorar."
 template = "pages/servicios.html"
 aliases = ["/contratame/"]
 
