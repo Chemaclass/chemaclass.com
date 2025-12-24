@@ -67,7 +67,7 @@ name = "satscribe"
 description = "Satscribe makes Bitcoin easier to understand."
 github = "Chemaclass/satscribe"
 tags = ["AI", "Bitcoin"]
-tech = ["Python"]
+tech = ["PHP", "AI"]
 type = "app"
 hide_on_tablet = true
 
