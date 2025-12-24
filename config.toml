@@ -1,4 +1,5 @@
 base_url = "https://chemaclass.com"
+default_language = "en"
 
 title = "Chemaclass"
 description = "Check out my latest blog posts and readings."
@@ -24,6 +25,22 @@ highlight_theme = "demain"
 extra_syntaxes_and_themes = ["syntaxes"]
 smart_punctuation = true
 
+[translations]
+read_more = "Read more"
+published = "Published"
+tags = "Tags"
+related_posts = "Related posts"
+related_readings = "Related readings"
+all_posts = "All posts"
+all_readings = "All readings"
+minutes_read = "min read"
+table_of_contents = "Table of Contents"
+nav_blog = "Blog"
+nav_readings = "Readings"
+nav_services = "Services"
+nav_talks = "Talks"
+not_found_message = "It seems like this page does not exist… Return back to the homepage"
+
 [extra]
 nav = [
     { name = "Blog", path = "/blog/" },
@@ -45,3 +62,27 @@ repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/cont
 not_found_message = """
 It seems like this page does not exist… Return back to the [homepage](/)
 """
+
+# Spanish language configuration
+[languages.es]
+title = "Chemaclass"
+description = "Mira mis últimos artículos y lecturas."
+generate_feeds = true
+build_search_index = true
+taxonomies = [{ name = "tags" }]
+
+[languages.es.translations]
+read_more = "Leer más"
+published = "Publicado"
+tags = "Etiquetas"
+related_posts = "Artículos relacionados"
+related_readings = "Lecturas relacionadas"
+all_posts = "Todos los artículos"
+all_readings = "Todas las lecturas"
+minutes_read = "min de lectura"
+table_of_contents = "Índice"
+nav_blog = "Blog"
+nav_readings = "Lecturas"
+nav_services = "Servicios"
+nav_talks = "Charlas"
+not_found_message = "Parece que esta página no existe… Vuelve a la página principal"

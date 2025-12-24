@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
   <head>
     <script>
       // Apply theme immediately to prevent flash
@@ -119,7 +119,7 @@
   <body>
     {% block header %}
       <header>
-        <a class="profile-icon" href="/">
+        <a class="profile-icon" href="{% if lang == 'es' %}/es/{% else %}/{% endif %}">
           {% set nav_icon = resize_image(path=config.extra.profile_small, width=36, height=36, op="fill") %}
           <img src="{{ nav_icon.url }}" alt="Chemaclass" />
         </a>
@@ -140,9 +140,17 @@
         </div>
 
         <nav class="navbar">
-          {% for link in config.extra.nav %}
-            <a href="{{ link.path }}" {% if link.id %}id="{{ link.id }}"{% endif %}>{{ link.name }}</a>
-          {% endfor %}
+          {% if lang == "es" %}
+            <a href="/es/blog/">{{ trans(key="nav_blog") }}</a>
+            <a href="/es/readings/">{{ trans(key="nav_readings") }}</a>
+            <a href="/es/services/">{{ trans(key="nav_services") }}</a>
+            <a href="/es/talks/">{{ trans(key="nav_talks") }}</a>
+          {% else %}
+            <a href="/blog/">{{ trans(key="nav_blog") }}</a>
+            <a href="/readings/">{{ trans(key="nav_readings") }}</a>
+            <a href="/services/">{{ trans(key="nav_services") }}</a>
+            <a href="/talks/">{{ trans(key="nav_talks") }}</a>
+          {% endif %}
 
           <button id="search-toggle" onclick="toggleSearch()" title="Search">
             <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -159,6 +167,19 @@
               <path fill="var(--body-color)" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
             </svg>
           </button>
+          {% if current_path is defined %}
+            {% if lang == "es" %}
+              <a href="{{ current_path | replace(from='/es/', to='/') }}" class="lang-switch" title="English version">EN</a>
+            {% else %}
+              <a href="/es{{ current_path }}" class="lang-switch" title="Versión en español">ES</a>
+            {% endif %}
+          {% else %}
+            {% if lang == "es" %}
+              <a href="/" class="lang-switch" title="English version">EN</a>
+            {% else %}
+              <a href="/es/" class="lang-switch" title="Versión en español">ES</a>
+            {% endif %}
+          {% endif %}
         </nav>
 
       </header>
