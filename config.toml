@@ -28,7 +28,7 @@ smart_punctuation = true
 nav = [
     { name = "Blog", path = "/blog/" },
     { name = "Readings", path = "/readings/" },
-    { name = "Hire me", path = "/hire-me/" },
+    { name = "Services", path = "/services/" },
     { name = "Talks", path = "/talks/" },
 ]
 

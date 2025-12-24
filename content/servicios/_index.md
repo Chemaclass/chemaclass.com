@@ -1,7 +1,8 @@
 +++
-title = "Contrátame | Chemaclass"
-description = "Con más de 14 años en desarrollo de software, ayudo a empresas a estar online con sitios web rápidos y profesionales, y ayudo a equipos de desarrollo a mejorar sus habilidades."
-template = "pages/contratame.html"
+title = "Servicios | Chemaclass"
+description = "Sitios web profesionales y talleres de equipo. Ayudo a empresas a estar online y a equipos de desarrollo a mejorar."
+template = "pages/servicios.html"
+aliases = ["/contratame/"]
 
 [extra]
 [[extra.headliners]]

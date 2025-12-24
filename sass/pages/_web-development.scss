@@ -54,25 +54,39 @@ body:has(.service-page) header {
     top: 0;
     right: 0;
 
+    @media (max-width: 600px) {
+      position: static;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0.75rem;
+    }
+
     .lang-switch {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 32px;
-      height: 32px;
+      min-width: 36px;
+      height: 36px;
+      padding: 0 0.5rem;
       border-radius: 6px;
       background: var(--search-input-bg);
       border: 1px solid var(--preview-divider-color);
       color: var(--color-subtitle);
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.2s ease;
 
+      @media (max-width: 600px) {
+        min-width: 44px;
+        height: 44px;
+        font-size: 0.85rem;
+      }
+
       &:hover {
         border-color: var(--accent-color);
         color: var(--accent-color);
-        border-bottom: 1px solid var(--accent-color);
+        background: var(--search-bg-selected-item);
       }
     }
   }
