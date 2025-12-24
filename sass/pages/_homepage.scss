@@ -201,6 +201,7 @@ main:has(.homepage-container) #scroll-to-top {
         font-size: 0.95rem;
         line-height: 1.5;
         transition: color 0.2s ease;
+        cursor: pointer;
 
         .list-icon {
           color: var(--accent-color);
@@ -222,6 +223,13 @@ main:has(.homepage-container) #scroll-to-top {
             }
           }
         }
+
+        .expand-arrow {
+          color: var(--color-subtitle);
+          font-size: 0.7rem;
+          transition: transform 0.3s ease;
+          flex-shrink: 0;
+        }
       }
 
       .about-item-content {
@@ -239,14 +247,18 @@ main:has(.homepage-container) #scroll-to-top {
         }
       }
 
-      &:hover {
-        .about-item-header {
-          color: var(--accent-color);
-        }
+      &:hover .about-item-header {
+        color: var(--accent-color);
+      }
 
+      &.expanded {
         .about-item-content {
           max-height: 200px;
           opacity: 1;
+        }
+
+        .expand-arrow {
+          transform: rotate(180deg);
         }
       }
     }
@@ -259,6 +271,7 @@ main:has(.homepage-container) #scroll-to-top {
     padding-top: 1rem;
     border-top: 1px solid var(--preview-divider-color);
     line-height: 1.6;
+    cursor: pointer;
 
     strong {
       color: var(--accent-color);
@@ -277,7 +290,7 @@ main:has(.homepage-container) #scroll-to-top {
       transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
     }
 
-    &:hover .philosophy-subtitle {
+    &.expanded .philosophy-subtitle {
       max-height: 50px;
       opacity: 1;
       margin-top: 0.5rem;

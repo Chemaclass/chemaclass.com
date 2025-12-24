@@ -50,6 +50,7 @@ Home | Chemaclass
                             <div class="about-item-header">
                                 <span class="list-icon"><i class="fa-solid fa-seedling"></i></span>
                                 <span class="about-item-title">Tech Lead at <a target="_blank" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a></span>
+                                <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
                             </div>
                             <div class="about-item-content">
                                 <p>Hands-on role writing code daily while mentoring developers. Driving small, frequent releases that deliver customer value.</p>
@@ -59,6 +60,7 @@ Home | Chemaclass
                             <div class="about-item-header">
                                 <span class="list-icon"><i class="fa-solid fa-code"></i></span>
                                 <span class="about-item-title">13+ years in software, 4+ in leadership</span>
+                                <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
                             </div>
                             <div class="about-item-content">
                                 <p>The best code is often the code you don't write. Simplicity over complexity, always.</p>
@@ -68,6 +70,7 @@ Home | Chemaclass
                             <div class="about-item-header">
                                 <span class="list-icon"><i class="fa-solid fa-check-double"></i></span>
                                 <span class="about-item-title">TDD & SOLID for maintainable systems</span>
+                                <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
                             </div>
                             <div class="about-item-content">
                                 <p>Testable code leads to better design. Tests first forces you to think about interfaces upfront.</p>
@@ -77,6 +80,7 @@ Home | Chemaclass
                             <div class="about-item-header">
                                 <span class="list-icon"><i class="fa-solid fa-users"></i></span>
                                 <span class="about-item-title">Making people around me happier compounds</span>
+                                <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
                             </div>
                             <div class="about-item-content">
                                 <p>A great engineer is not just a great coder. Psychological safety and growth mindset make teams thrive.</p>
@@ -192,6 +196,23 @@ Home | Chemaclass
 
 {% block js %}
 <script type="text/javascript" src="{{ get_url(path='github-stars.js') | safe }}" defer></script>
+<script>
+// Expandable about items
+document.querySelectorAll('.about-list li.expandable').forEach(item => {
+  item.addEventListener('click', (e) => {
+    if (e.target.closest('a')) return;
+    item.classList.toggle('expanded');
+  });
+});
+
+// Philosophy section
+const philosophy = document.querySelector('.philosophy');
+if (philosophy) {
+  philosophy.addEventListener('click', () => {
+    philosophy.classList.toggle('expanded');
+  });
+}
+</script>
 <script>
 (function() {
   const quotes = [
