@@ -141,15 +141,15 @@
 
         <nav class="navbar">
           {% if lang == "es" %}
-            <a href="/es/blog/">{{ trans(key="nav_blog") }}</a>
-            <a href="/es/readings/">{{ trans(key="nav_readings") }}</a>
-            <a href="/es/services/">{{ trans(key="nav_services") }}</a>
-            <a href="/es/talks/">{{ trans(key="nav_talks") }}</a>
+            <a href="/es/blog/">{{ trans(key="nav_blog", lang="es") }}</a>
+            <a href="/es/readings/">{{ trans(key="nav_readings", lang="es") }}</a>
+            <a href="/es/services/">{{ trans(key="nav_services", lang="es") }}</a>
+            <a href="/es/talks/">{{ trans(key="nav_talks", lang="es") }}</a>
           {% else %}
-            <a href="/blog/">{{ trans(key="nav_blog") }}</a>
-            <a href="/readings/">{{ trans(key="nav_readings") }}</a>
-            <a href="/services/">{{ trans(key="nav_services") }}</a>
-            <a href="/talks/">{{ trans(key="nav_talks") }}</a>
+            <a href="/blog/">{{ trans(key="nav_blog", lang="en") }}</a>
+            <a href="/readings/">{{ trans(key="nav_readings", lang="en") }}</a>
+            <a href="/services/">{{ trans(key="nav_services", lang="en") }}</a>
+            <a href="/talks/">{{ trans(key="nav_talks", lang="en") }}</a>
           {% endif %}
 
           <button id="search-toggle" onclick="toggleSearch()" title="Search">

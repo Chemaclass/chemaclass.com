@@ -33,7 +33,7 @@ Home | Chemaclass
             </div>
             <div class="hero-text">
                 <h1>Chemaclass</h1>
-                <p class="subtitle">Software Developer & Open Source Creator</p>
+                <p class="subtitle">{{ trans(key="home_subtitle", lang=lang) }}</p>
                 <div class="hero-quotes">
                     <blockquote class="hero-quote active"><p></p></blockquote>
                 </div>
@@ -44,52 +44,52 @@ Home | Chemaclass
         <div class="homepage-right">
             <section class="about-section">
                 <div class="about-card">
-                    <h2>About</h2>
+                    <h2>{{ trans(key="home_about", lang=lang) }}</h2>
                     <ul class="about-list">
                         <li class="expandable">
                             <div class="about-item-header">
                                 <span class="list-icon"><i class="fa-solid fa-seedling"></i></span>
-                                <span class="about-item-title">Tech Lead at <a target="_blank" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a></span>
+                                <span class="about-item-title">{% if lang == "es" %}Tech Lead en <a target="_blank" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>{% else %}Tech Lead at <a target="_blank" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>{% endif %}</span>
                                 <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
                             </div>
                             <div class="about-item-content">
-                                <p>Hands-on role writing code daily while mentoring developers. Driving small, frequent releases that deliver customer value.</p>
+                                <p>{{ trans(key="home_about_1_desc", lang=lang) }}</p>
                             </div>
                         </li>
                         <li class="expandable">
                             <div class="about-item-header">
                                 <span class="list-icon"><i class="fa-solid fa-code"></i></span>
-                                <span class="about-item-title">13+ years in software, 4+ in leadership</span>
+                                <span class="about-item-title">{{ trans(key="home_about_2_title", lang=lang) }}</span>
                                 <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
                             </div>
                             <div class="about-item-content">
-                                <p>The best code is often the code you don't write. Simplicity over complexity, always.</p>
+                                <p>{{ trans(key="home_about_2_desc", lang=lang) }}</p>
                             </div>
                         </li>
                         <li class="expandable">
                             <div class="about-item-header">
                                 <span class="list-icon"><i class="fa-solid fa-check-double"></i></span>
-                                <span class="about-item-title">TDD & SOLID for maintainable systems</span>
+                                <span class="about-item-title">{{ trans(key="home_about_3_title", lang=lang) }}</span>
                                 <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
                             </div>
                             <div class="about-item-content">
-                                <p>Testable code leads to better design. Tests first forces you to think about interfaces upfront.</p>
+                                <p>{{ trans(key="home_about_3_desc", lang=lang) }}</p>
                             </div>
                         </li>
                         <li class="expandable">
                             <div class="about-item-header">
                                 <span class="list-icon"><i class="fa-solid fa-users"></i></span>
-                                <span class="about-item-title">Making people around me happier compounds</span>
+                                <span class="about-item-title">{{ trans(key="home_about_4_title", lang=lang) }}</span>
                                 <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
                             </div>
                             <div class="about-item-content">
-                                <p>A great engineer is not just a great coder. Psychological safety and growth mindset make teams thrive.</p>
+                                <p>{{ trans(key="home_about_4_desc", lang=lang) }}</p>
                             </div>
                         </li>
                     </ul>
                     <p class="philosophy">
-                        <span class="philosophy-main">Practicing <strong>knowledge sharing</strong> and <strong>continuous improvement</strong>.</span>
-                        <span class="philosophy-subtitle">Driven by <strong>communication</strong>, <strong>simplicity</strong>, <strong>feedback</strong>, <strong>courage</strong>, and <strong>respect</strong>.</span>
+                        <span class="philosophy-main">{{ trans(key="home_philosophy_main", lang=lang) | safe }}</span>
+                        <span class="philosophy-subtitle">{{ trans(key="home_philosophy_sub", lang=lang) | safe }}</span>
                     </p>
                 </div>
             </section>
@@ -122,8 +122,8 @@ Home | Chemaclass
     <!-- Projects Section -->
     <section class="projects-section">
         <div class="section-header">
-            <h2>Open Source Projects</h2>
-            <a href="https://github.com/Chemaclass" target="_blank" class="view-all">View all →</a>
+            <h2>{{ trans(key="home_projects", lang=lang) }}</h2>
+            <a href="https://github.com/Chemaclass" target="_blank" class="view-all">{{ trans(key="home_view_all", lang=lang) }}</a>
         </div>
         <div class="projects-grid">
             <a target="_blank" href="https://bashunit.typeddevs.com/" class="project-card" data-repo="TypedDevs/bashunit">
@@ -168,26 +168,26 @@ Home | Chemaclass
     <!-- Latest Content Section -->
     <section class="latest-section">
         <div class="section-header">
-            <h2>Latest Content</h2>
-            <a href="/blog/" class="view-all">View all →</a>
+            <h2>{{ trans(key="home_latest", lang=lang) }}</h2>
+            <a href="{% if lang == 'es' %}/es/blog/{% else %}/blog/{% endif %}" class="view-all">{{ trans(key="home_view_all", lang=lang) }}</a>
         </div>
         <div class="latest-grid">
-            {% set blogs = get_section(path="blog" ~ "/_index.md") %}
+            {% set blogs = get_section(path="blog/_index.md", lang=lang) %}
             {% set latest_blog = blogs.pages.0 %}
             <a href="{{ latest_blog.permalink }}" class="latest-card" data-from="{{latest_blog.date}}">
-                <span class="latest-type">Blog Post</span>
+                <span class="latest-type">{{ trans(key="nav_blog", lang=lang) }}</span>
                 <h3>{{ latest_blog.title }}</h3>
                 <p class="latest-preview">{{ latest_blog.description | truncate(length=120) }}</p>
-                <span class="latest-date">{{ latest_blog.date | date(format="%B %d, %Y") }}</span>
+                <span class="latest-date">{% if lang == "es" %}{{ latest_blog.date | date(format="%d/%m/%Y") }}{% else %}{{ latest_blog.date | date(format="%B %d, %Y") }}{% endif %}</span>
             </a>
 
-            {% set readings = get_section(path="readings" ~ "/_index.md") %}
+            {% set readings = get_section(path="readings/_index.md", lang=lang) %}
             {% set latest_reading = readings.pages.0 %}
             <a href="{{ latest_reading.permalink }}" class="latest-card" data-from="{{latest_reading.date}}">
-                <span class="latest-type">Reading</span>
+                <span class="latest-type">{{ trans(key="nav_readings", lang=lang) }}</span>
                 <h3>{{ latest_reading.title }}</h3>
                 <p class="latest-preview">{{ latest_reading.description | truncate(length=120) }}</p>
-                <span class="latest-date">{{ latest_reading.date | date(format="%B %d, %Y") }}</span>
+                <span class="latest-date">{% if lang == "es" %}{{ latest_reading.date | date(format="%d/%m/%Y") }}{% else %}{{ latest_reading.date | date(format="%B %d, %Y") }}{% endif %}</span>
             </a>
         </div>
     </section>
@@ -215,7 +215,8 @@ if (philosophy) {
 </script>
 <script>
 (function() {
-  const quotes = [
+  const lang = '{{ lang }}';
+  const quotesEn = [
     "Programming is the art of simplifying routines.",
     "Individuals and interactions over tools.",
     "Open source everything.",
@@ -233,6 +234,25 @@ if (philosophy) {
     "Change happens. Keep moving forward.",
     "Enjoy the process: that's the goal."
   ];
+  const quotesEs = [
+    "Programar es el arte de simplificar rutinas.",
+    "Individuos e interacciones sobre herramientas.",
+    "Open source para todo.",
+    "El proceso en sí es el objetivo.",
+    "El éxito es hacer más feliz a la gente a mi alrededor.",
+    "Un gran ingeniero no es solo un gran programador.",
+    "Nadie es perfecto, pero un equipo puede serlo.",
+    "Pasar de modo creador a multiplicador.",
+    "La práctica hace al maestro.",
+    "El código testeable lleva a mejor diseño.",
+    "Refactorizar es parte de nuestro trabajo diario.",
+    "Fácil de testear significa buen diseño.",
+    "Hacer feliz a los demás se multiplica.",
+    "Las habilidades sociales importan tanto como las técnicas.",
+    "El cambio ocurre. Sigue adelante.",
+    "Disfruta el proceso: ese es el objetivo."
+  ];
+  const quotes = lang === 'es' ? quotesEs : quotesEn;
   const el = document.querySelector('.hero-quote p');
   if (!el) return;
   let last = -1;

@@ -3,7 +3,7 @@
 {% import "helpers-preview.html" as helpers %}
 
 {% block title %}
-  Readings | Chemaclass
+  {{ trans(key="readings_title", lang=lang) }} | Chemaclass
 {% endblock %}
 
 {% block posthead %}
@@ -15,20 +15,20 @@
 {% block content %}
   <div class="readings-index">
     <div class="readings-header">
-      <h1>Readings</h1>
-      <p class="readings-intro">I want to keep track of what I read and share it with everyone.</p>
+      <h1>{{ trans(key="readings_title", lang=lang) }}</h1>
+      <p class="readings-intro">{{ trans(key="readings_intro", lang=lang) }}</p>
     </div>
 
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
 
   <div class="blog-list">
     {% for post in pinned_posts %}
-      {{ helpers::content_card(post=post, pinned=true) }}
+      {{ helpers::content_card(post=post, pinned=true, lang=lang) }}
     {% endfor %}
 
     {% for post in section.pages %}
       {% if post not in pinned_posts %}
-        {{ helpers::content_card(post=post) }}
+        {{ helpers::content_card(post=post, lang=lang) }}
       {% endif %}
     {% endfor %}
   </div>

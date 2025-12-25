@@ -10,11 +10,11 @@
 
 {% block content %}
 <div class="tag-single">
-  <a href="/tags/" class="tag-single__back">
+  <a href="{% if lang == 'es' %}/es/tags/{% else %}/tags/{% endif %}" class="tag-single__back">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M19 12H5M12 19l-7-7 7-7"/>
     </svg>
-    All Tags
+    {{ trans(key="all_tags", lang=lang) }}
   </a>
 
   <header class="tag-single__header">
@@ -25,7 +25,7 @@
       </svg>
       {{ term.name }}
     </span>
-    <h1>{{ term.pages | length }} post{% if term.pages | length != 1 %}s{% endif %}</h1>
+    <h1>{{ term.pages | length }} {% if term.pages | length == 1 %}{{ trans(key="post", lang=lang) }}{% else %}{{ trans(key="posts", lang=lang) }}{% endif %}</h1>
   </header>
 
   <div class="tag-single__posts">
@@ -43,14 +43,14 @@
       <div class="tag-single__post-content">
         <div class="tag-single__post-meta">
           {% if post.path is containing("blog/") %}
-          <span class="tag-single__post-type tag-single__post-type--blog">Blog</span>
+          <span class="tag-single__post-type tag-single__post-type--blog">{{ trans(key="nav_blog", lang=lang) }}</span>
           {% elif post.path is containing("readings/") %}
-          <span class="tag-single__post-type tag-single__post-type--reading">Reading</span>
+          <span class="tag-single__post-type tag-single__post-type--reading">{{ trans(key="nav_readings", lang=lang) }}</span>
           {% elif post.path is containing("talks/") %}
-          <span class="tag-single__post-type tag-single__post-type--talk">Talk</span>
+          <span class="tag-single__post-type tag-single__post-type--talk">{{ trans(key="nav_talks", lang=lang) }}</span>
           {% endif %}
           {% if post.date %}
-          <span class="tag-single__post-date">{{ post.date | date(format="%B %d, %Y") }}</span>
+          <span class="tag-single__post-date">{% if lang == "es" %}{{ post.date | date(format="%d/%m/%Y") }}{% else %}{{ post.date | date(format="%B %d, %Y") }}{% endif %}</span>
           {% endif %}
         </div>
         <h3>{{ post.title }}</h3>
