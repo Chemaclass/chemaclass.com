@@ -180,12 +180,16 @@
       return;
     }
 
-    // Add TOC title (clickable to scroll to top)
+    // Add TOC title (static label, not clickable)
     const tocTitleText = tocContainerRef.dataset.title || 'On this page';
     const tocCloseLabel = tocContainerRef.dataset.closeLabel || 'Hide table of contents';
 
     const tocHeader = document.createElement('div');
     tocHeader.className = 'toc-header';
+
+    const tocTitle = document.createElement('span');
+    tocTitle.className = 'toc-title';
+    tocTitle.textContent = tocTitleText;
 
     const tocCloseButton = document.createElement('button');
     tocCloseButton.type = 'button';
@@ -198,20 +202,11 @@
     `;
     tocCloseButton.addEventListener('click', () => setTOCState(true));
 
-    const tocTitle = document.createElement('a');
-    tocTitle.className = 'toc-title';
-    tocTitle.textContent = tocTitleText;
-    tocTitle.href = '#';
-    tocTitle.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
     tocHeader.appendChild(tocTitle);
+    tocHeader.appendChild(tocCloseButton);
 
     // Clear and populate TOC container
     tocContainerRef.innerHTML = '';
-    tocContainerRef.appendChild(tocCloseButton);
     tocContainerRef.appendChild(tocHeader);
     tocContainerRef.appendChild(tocList);
 

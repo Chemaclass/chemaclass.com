@@ -18,15 +18,18 @@
   #toc-container {
     width: 260px;
     flex-shrink: 0;
-    background: var(--search-bg-results);
+    background: rgba(var(--body-bg-rgb), 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--preview-divider-color);
     border-radius: 12px;
-    padding: 1.25rem;
+    padding: 1rem 1.25rem;
     max-height: calc(100vh - 140px);
     overflow-y: auto;
     position: sticky;
     top: 10px;
-    transition: top 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out, opacity 0.2s ease, transform 0.2s ease;
+    text-align: left;
 
     @media (max-width: 1024px) {
       display: none;
@@ -62,53 +65,50 @@
 }
 
 .toc-title {
-  font-weight: bold;
-  color: var(--body-color);
-  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-subtitle);
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  display: block;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: var(--accent-color);
-  }
+  cursor: default;
+  user-select: none;
+  flex: 1;
 }
 
 .toc-header {
   display: flex;
   align-items: center;
-  margin-bottom: 0.35rem;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--preview-divider-color);
 }
 
 .toc-close {
+  margin-left: auto;
   border: 1px solid transparent;
-  background: var(--search-bg-selected-item);
+  background: transparent;
   color: var(--color-subtitle);
   cursor: pointer;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-  position: absolute;
-  top: 1.1rem;
-  left: 1rem;
+  transition: color 0.2s ease, background 0.2s ease;
+  flex-shrink: 0;
 
   &:hover,
   &:focus-visible {
     color: var(--accent-color);
-    border-color: var(--accent-color);
-    background: transparent;
+    background: var(--search-bg-selected-item);
   }
 
   svg {
-    width: 0.85rem;
-    height: 0.85rem;
+    width: 0.75rem;
+    height: 0.75rem;
   }
 }
 
@@ -118,6 +118,7 @@
   margin: 0;
   padding-top: 0.2rem;
   line-height: 1.45;
+  text-align: left;
 }
 
 .toc-item {
@@ -147,6 +148,7 @@
   padding-left: 0.75rem;
   transition: all 0.2s ease;
   font-size: 0.9rem;
+  text-align: left;
 
   &:hover {
     color: var(--accent-color);
