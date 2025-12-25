@@ -11,6 +11,39 @@
     activeClass: 'active',
     offset: 100 // Offset for scroll detection
   };
+  const tocToggle = document.getElementById('toc-toggle');
+  const tocLayout = document.querySelector('.blog-post-layout');
+  const tocPrefKey = 'tocHiddenPreference';
+  const compactMediaQuery = window.matchMedia('(max-width: 1024px)');
+  let tocContainerRef = null;
+
+  function getSavedPreference() {
+    try {
+      return localStorage.getItem(tocPrefKey) === 'true';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function setTOCState(hidden, persist = true) {
+    if (!tocContainerRef) return;
+    tocContainerRef.dataset.hideToc = hidden ? 'true' : 'false';
+    if (tocLayout) {
+      tocLayout.dataset.tocHidden = hidden ? 'true' : 'false';
+    }
+    if (tocToggle) {
+      const label = hidden ? tocToggle.dataset.showText : tocToggle.dataset.hideText;
+      tocToggle.textContent = label;
+      tocToggle.setAttribute('aria-pressed', hidden ? 'true' : 'false');
+    }
+    if (persist) {
+      try {
+        localStorage.setItem(tocPrefKey, hidden ? 'true' : 'false');
+      } catch (e) {
+        // ignore
+      }
+    }
+  }
 
   // Generate TOC from page headings
   function generateTOC() {
@@ -100,7 +133,7 @@
       if (activeLink) {
         activeLink.classList.add(CONFIG.activeClass);
 
-        const tocContainer = document.querySelector(CONFIG.tocContainer);
+        const tocContainer = tocContainerRef;
         if (tocContainer) {
           const linkRect = activeLink.getBoundingClientRect();
           const containerRect = tocContainer.getBoundingClientRect();
@@ -115,7 +148,7 @@
 
   // Reset TOC scroll position when at page top
   function updateTOCPosition() {
-    const tocContainer = document.querySelector(CONFIG.tocContainer);
+    const tocContainer = tocContainerRef;
     if (!tocContainer) return;
 
     if (window.scrollY === 0) {
@@ -125,30 +158,73 @@
 
   // Initialize TOC
   function initTOC() {
-    const tocContainer = document.querySelector(CONFIG.tocContainer);
-    if (!tocContainer) return;
+    tocContainerRef = document.querySelector(CONFIG.tocContainer);
+    if (!tocContainerRef) return;
+
+    if (compactMediaQuery.matches) {
+      tocContainerRef.style.display = 'none';
+      setTOCState(true, false);
+      if (tocToggle) {
+        tocToggle.classList.add('toc-toggle--hidden');
+      }
+      return;
+    }
 
     const tocList = generateTOC();
     if (!tocList) {
-      // Hide TOC if not enough headings
-      tocContainer.style.display = 'none';
+      tocContainerRef.style.display = 'none';
+      setTOCState(true, false);
+      if (tocToggle) {
+        tocToggle.classList.add('toc-toggle--hidden');
+      }
       return;
     }
 
     // Add TOC title (clickable to scroll to top)
+    const tocTitleText = tocContainerRef.dataset.title || 'On this page';
+    const tocCloseLabel = tocContainerRef.dataset.closeLabel || 'Hide table of contents';
+
+    const tocHeader = document.createElement('div');
+    tocHeader.className = 'toc-header';
+
+    const tocCloseButton = document.createElement('button');
+    tocCloseButton.type = 'button';
+    tocCloseButton.className = 'toc-close';
+    tocCloseButton.setAttribute('aria-label', tocCloseLabel);
+    tocCloseButton.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+        <path d="M4 4l8 8m0-8L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+      </svg>
+    `;
+    tocCloseButton.addEventListener('click', () => setTOCState(true));
+
     const tocTitle = document.createElement('a');
     tocTitle.className = 'toc-title';
-    tocTitle.textContent = 'On this page';
+    tocTitle.textContent = tocTitleText;
     tocTitle.href = '#';
     tocTitle.addEventListener('click', (e) => {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    tocHeader.appendChild(tocTitle);
+
     // Clear and populate TOC container
-    tocContainer.innerHTML = '';
-    tocContainer.appendChild(tocTitle);
-    tocContainer.appendChild(tocList);
+    tocContainerRef.innerHTML = '';
+    tocContainerRef.appendChild(tocCloseButton);
+    tocContainerRef.appendChild(tocHeader);
+    tocContainerRef.appendChild(tocList);
+
+    const savedPref = getSavedPreference();
+    setTOCState(savedPref, false);
+
+    if (tocToggle) {
+      tocToggle.classList.remove('toc-toggle--hidden');
+      tocToggle.addEventListener('click', () => {
+        const currentlyHidden = tocContainerRef.dataset.hideToc === 'true';
+        setTOCState(!currentlyHidden);
+      });
+    }
 
     // Update active section and TOC position on scroll
     window.addEventListener('scroll', () => {

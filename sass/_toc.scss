@@ -1,63 +1,56 @@
-// Table of Contents Styles
-// Uses variables from _variables.scss
+.blog-post-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: $max-width;
+  margin: 0 auto;
 
-// On wide screens, constrain blog posts to narrower width to make room for TOC
-@media (min-width: $breakpoint-toc) {
-  main:has(.blog-post) {
-    max-width: $toc-content-width;
+  @media (max-width: 1024px) {
+    flex-direction: column;
   }
-}
 
-#toc-container {
-  display: none;
-
-  @media (min-width: $breakpoint-toc) {
-    display: block;
-    position: fixed;
-    left: calc((100vw - 730px) / 2 - 160px - 50px);
-    top: 120px;
-    width: $toc-width;
+  #toc-container {
+    width: 260px;
+    flex-shrink: 0;
+    background: var(--search-bg-results);
+    border: 1px solid var(--preview-divider-color);
+    border-radius: 12px;
+    padding: 1.25rem;
     max-height: calc(100vh - 140px);
     overflow-y: auto;
-    padding: 1.5rem;
-    padding-right: 1rem;
-    transition: top 0.5s ease-in-out;
+    position: sticky;
+    top: 10px;
+    transition: top 0.3s ease-in-out;
 
-    // Scrollbar styling (webkit browsers) - hidden by default
-    &::-webkit-scrollbar {
-      width: 4px;
+    @media (max-width: 1024px) {
+      display: none;
     }
 
-    &::-webkit-scrollbar-track {
-      background: transparent;
+    &.toc-top {
+      top: 20px;
     }
 
-    &::-webkit-scrollbar-thumb {
-      background: transparent;
-      border-radius: 2px;
-      transition: background 0.2s ease;
+    &.toc-top.toc-navbar-visible {
+      top: 80px;
     }
+  }
 
-    &:hover::-webkit-scrollbar-thumb {
-      background: var(--color-subtitle);
+  &[data-toc-hidden="true"] {
+    #toc-container {
+      display: none;
     }
+  }
 
-    &::-webkit-scrollbar-thumb:hover {
-      background: var(--body-color);
-    }
-
-    scrollbar-width: thin;
-    scrollbar-color: transparent transparent;
-
-    &:hover {
-      scrollbar-color: var(--color-subtitle) transparent;
-    }
+  .blog-post-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 }
 
 .toc-title {
   font-weight: bold;
-  margin-bottom: 0.75rem;
   color: var(--body-color);
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -72,15 +65,51 @@
   }
 }
 
+.toc-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.toc-close {
+  border: 1px solid transparent;
+  background: var(--search-bg-selected-item);
+  color: var(--color-subtitle);
+  cursor: pointer;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  position: absolute;
+  top: 1.1rem;
+  left: 1rem;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    background: transparent;
+  }
+
+  svg {
+    width: 0.85rem;
+    height: 0.85rem;
+  }
+}
+
 .toc-list {
   list-style: none;
   padding-left: 0;
   margin: 0;
-  line-height: 1.6;
+  padding-top: 0.2rem;
+  line-height: 1.45;
 }
 
 .toc-item {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 
   &.toc-h2 {
     padding-left: 0;
@@ -88,12 +117,12 @@
 
   &.toc-h3 {
     padding-left: 1rem;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 
   &.toc-h4 {
     padding-left: 2rem;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -105,7 +134,7 @@
   border-left: 2px solid transparent;
   padding-left: 0.75rem;
   transition: all 0.2s ease;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 
   &:hover {
     color: var(--accent-color);
@@ -117,23 +146,4 @@
     border-left-color: var(--accent-color);
     font-weight: 500;
   }
-}
-
-@media (min-width: $breakpoint-toc) {
-  main {
-    position: relative;
-  }
-}
-
-// When scrolled and navbar is hidden (scrolling down)
-#toc-container.toc-top {
-  top: 20px;
-  max-height: calc(100vh - 40px);
-  transition: top 0.3s ease-in-out;
-}
-
-// When scrolled and navbar is visible (scrolling up)
-#toc-container.toc-top.toc-navbar-visible {
-  top: 55px;
-  max-height: calc(100vh - 75px);
 }
