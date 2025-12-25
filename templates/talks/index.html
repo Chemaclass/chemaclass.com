@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-  Talks | Chemaclass
+  {{ trans(key="talks_title", lang=lang) }} | Chemaclass
 {% endblock %}
 
 {% block posthead %}
@@ -13,14 +13,14 @@
 {% block content %}
   <div class="talks-page">
     <div class="talks-header">
-      <h1>Talks</h1>
-      <p class="talks-intro">Follow my speaker journey.</p>
+      <h1>{{ trans(key="talks_title", lang=lang) }}</h1>
+      <p class="talks-intro">{{ trans(key="talks_intro", lang=lang) }}</p>
     </div>
 
     <!-- Featured Topics -->
     {% if section.pages | length > 0 %}
     <section class="talks-featured">
-      <h2 class="talks-section-title">Featured Topics</h2>
+      <h2 class="talks-section-title">{{ trans(key="talks_featured", lang=lang) }}</h2>
       <div class="talks-grid">
         {% for talk in section.pages %}
         <a href="{{ talk.permalink }}" class="talk-card">
@@ -46,7 +46,7 @@
 
     <!-- Timeline -->
     <section class="talks-timeline">
-      <h2 class="talks-section-title">Timeline</h2>
+      <h2 class="talks-section-title">{{ trans(key="talks_timeline", lang=lang) }}</h2>
       <div class="timeline-content">
         {{ section.content | safe }}
       </div>

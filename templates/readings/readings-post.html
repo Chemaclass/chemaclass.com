@@ -55,11 +55,11 @@
 
   <article class="blog-post">
     <!-- Back link -->
-    <a href="/readings/" class="blog-post__back">
+    <a href="{% if lang == 'es' %}/es/readings/{% else %}/readings/{% endif %}" class="blog-post__back">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M19 12H5M12 19l-7-7 7-7"/>
       </svg>
-      All Readings
+      {{ trans(key="all_readings", lang=lang) }}
     </a>
 
     <!-- Title -->
@@ -84,7 +84,7 @@
             <line x1="8" y1="2" x2="8" y2="6"></line>
             <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
-          {{ page.date | date(format="%B %d, %Y") }}
+          {% if lang == "es" %}{{ page.date | date(format="%d/%m/%Y") }}{% else %}{{ page.date | date(format="%B %d, %Y") }}{% endif %}
         </span>
         {% endif %}
         {% if page.reading_time %}
@@ -93,7 +93,7 @@
             <circle cx="12" cy="12" r="10"></circle>
             <polyline points="12 6 12 12 16 14"></polyline>
           </svg>
-          {{ page.reading_time }} min read
+          {{ page.reading_time }} {{ trans(key="minutes_read", lang=lang) }}
         </span>
         {% endif %}
         {% if page.extra.pages %}
@@ -102,7 +102,7 @@
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
           </svg>
-          {{ page.extra.pages }} pages
+          {{ page.extra.pages }} {{ trans(key="pages", lang=lang) }}
         </span>
         {% endif %}
         {% if page.extra.current_read %}
@@ -111,7 +111,7 @@
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
           </svg>
-          Currently reading
+          {{ trans(key="currently_reading", lang=lang) }}
         </span>
         {% endif %}
         {% if page.taxonomies.tags %}
@@ -137,7 +137,7 @@
           <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
           <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
         </svg>
-        Found a typo? Edit this page
+        {{ trans(key="found_typo", lang=lang) }}
       </a>
     </footer>
 
@@ -149,7 +149,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 12H5M12 19l-7-7 7-7"/>
             </svg>
-            Older
+            {{ trans(key="older", lang=lang) }}
           </span>
           <span class="blog-post__nav-title">{{ page.higher.title }}</span>
         </a>
@@ -159,7 +159,7 @@
       {% if page.lower %}
         <a href="{{ page.lower.permalink }}" class="blog-post__nav-link blog-post__nav-link--next">
           <span class="blog-post__nav-label">
-            Newer
+            {{ trans(key="newer", lang=lang) }}
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
