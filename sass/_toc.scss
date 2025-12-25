@@ -2,11 +2,17 @@
   display: flex;
   gap: 2rem;
   align-items: flex-start;
+  width: 100%;
   max-width: $max-width;
   margin: 0 auto;
 
   @media (max-width: 1024px) {
     flex-direction: column;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    display: block;
+    max-width: 100%;
   }
 
   #toc-container {
@@ -43,9 +49,15 @@
 
   .blog-post-main {
     flex: 1;
+    min-width: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @media (max-width: $breakpoint-phone) {
+      display: block;
+    }
   }
 }
 

@@ -13,7 +13,10 @@
 // Blog post article
 .blog-post {
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
   flex: 1;
+  overflow-wrap: break-word;
 
   &__top-row {
     display: flex;
@@ -196,15 +199,14 @@
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    margin-top: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    border-top: 1px solid var(--preview-divider-color);
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
   }
 
   &__nav-link {
     display: flex;
     flex-direction: column;
+    gap: 0.35rem;
     padding: 1rem 1.25rem;
     border-radius: 12px;
     border: 1px solid var(--preview-divider-color) !important;
@@ -212,22 +214,38 @@
     text-decoration: none;
     color: inherit;
     transition: all 0.2s ease;
-    max-width: 45%;
+    max-width: 48%;
+    flex: 1;
 
     &:hover {
       border: 1px solid var(--accent-color) !important;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      background: var(--search-bg-selected-item);
+    }
+
+    &:hover &-label {
+      color: var(--accent-color);
+    }
+
+    &:hover &-title {
+      color: var(--accent-color);
     }
 
     &--prev {
       align-items: flex-start;
+
+      &:hover svg {
+        transform: translateX(-3px);
+      }
     }
 
     &--next {
       align-items: flex-end;
       margin-left: auto;
       text-align: right;
+
+      &:hover svg {
+        transform: translateX(3px);
+      }
     }
   }
 
@@ -235,25 +253,32 @@
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--color-subtitle);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 0.25rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+
+    svg {
+      transition: transform 0.2s ease;
+    }
   }
 
   &__nav-title {
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-weight: 500;
     color: var(--heading-color);
-    line-height: 1.3;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 
-.blog-post-layout {
-  width: 100%;
-  max-width: 100%;
-}
+// .blog-post-layout styles are in _toc.scss
 
 .blog-post-bottom {
   width: 100%;
@@ -324,16 +349,21 @@
     }
 
     &__nav {
-      flex-direction: column;
+      gap: 0.5rem;
     }
 
     &__nav-link {
-      max-width: 100%;
+      max-width: 50%;
+      padding: 0.75rem;
+    }
 
-      &--next {
-        align-items: flex-start;
-        text-align: left;
-      }
+    &__nav-label {
+      font-size: 0.65rem;
+    }
+
+    &__nav-title {
+      font-size: 0.8rem;
+      -webkit-line-clamp: 2;
     }
   }
 }

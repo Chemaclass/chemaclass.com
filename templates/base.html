@@ -140,17 +140,24 @@
         </div>
 
         <nav class="navbar">
-          {% if lang == "es" %}
-            <a href="/es/blog/">{{ trans(key="nav_blog", lang=lang) }}</a>
-            <a href="/es/readings/">{{ trans(key="nav_readings", lang=lang) }}</a>
-            <a href="/es/services/">{{ trans(key="nav_services", lang=lang) }}</a>
-            <a href="/es/talks/">{{ trans(key="nav_talks", lang=lang) }}</a>
-          {% else %}
-            <a href="/blog/">{{ trans(key="nav_blog", lang=lang) }}</a>
-            <a href="/readings/">{{ trans(key="nav_readings", lang=lang) }}</a>
-            <a href="/services/">{{ trans(key="nav_services", lang=lang) }}</a>
-            <a href="/talks/">{{ trans(key="nav_talks", lang=lang) }}</a>
-          {% endif %}
+          <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-links">
+            {% if lang == "es" %}
+              <a href="/es/blog/">{{ trans(key="nav_blog", lang=lang) }}</a>
+              <a href="/es/readings/">{{ trans(key="nav_readings", lang=lang) }}</a>
+              <a href="/es/services/">{{ trans(key="nav_services", lang=lang) }}</a>
+              <a href="/es/talks/">{{ trans(key="nav_talks", lang=lang) }}</a>
+            {% else %}
+              <a href="/blog/">{{ trans(key="nav_blog", lang=lang) }}</a>
+              <a href="/readings/">{{ trans(key="nav_readings", lang=lang) }}</a>
+              <a href="/services/">{{ trans(key="nav_services", lang=lang) }}</a>
+              <a href="/talks/">{{ trans(key="nav_talks", lang=lang) }}</a>
+            {% endif %}
+          </div>
 
           <button id="search-toggle" onclick="toggleSearch()" title="{{ trans(key="search_toggle_title", lang=lang) }}">
             <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -245,6 +252,21 @@
         if (!searchContainer.contains(e.target) && !searchToggle.contains(e.target)) {
           searchContainer.classList.remove('active');
         }
+      });
+
+      window.toggleMobileMenu = function() {
+        const navbar = document.querySelector('.navbar');
+        const hamburger = document.querySelector('.hamburger');
+        navbar.classList.toggle('open');
+        hamburger.classList.toggle('open');
+      }
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.querySelector('.navbar').classList.remove('open');
+          document.querySelector('.hamburger').classList.remove('open');
+        });
       });
     </script>
   </body>

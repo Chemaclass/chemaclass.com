@@ -204,7 +204,7 @@ a.profile-icon {
 @media (max-width: $breakpoint-phone) {
   .site-header {
     position: relative;
-    padding: 0.5rem;
+    padding: 0.5rem 0.75rem;
     flex-wrap: wrap;
     gap: 1rem;
 
@@ -293,5 +293,76 @@ a.profile-icon {
 
   #search-toggle {
     display: flex;
+  }
+}
+
+// Hamburger menu styles
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 5px;
+
+  span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--body-color);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  &.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+// Mobile menu behavior
+@media (max-width: $breakpoint-phone) {
+  .hamburger {
+    display: flex;
+    order: -1;
+  }
+
+  .navbar {
+    position: static;
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: var(--body-bg);
+      padding: 1rem;
+      gap: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    &.open .nav-links {
+      display: flex;
+    }
   }
 }

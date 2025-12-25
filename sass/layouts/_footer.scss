@@ -101,26 +101,39 @@
 // Responsive
 @media (max-width: 600px) {
   .site-footer {
+    padding: 1.5rem 0;
+
     &__content {
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1.25rem;
+    }
+
+    &__section {
+      width: 100%;
+      gap: 0.5rem;
+    }
+
+    &__text {
+      font-size: 0.85rem;
     }
 
     &__divider {
-      width: 60px;
-      height: 1px;
+      display: none;
+    }
+
+    &__links {
+      width: 100%;
+      justify-content: center;
     }
 
     &__link {
-      padding: 0.5rem 0.75rem;
+      flex: 1;
+      justify-content: center;
+      padding: 0.65rem 1rem;
       font-size: 0.8rem;
 
-      span {
-        display: none;
-      }
-
       i {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
     }
   }
