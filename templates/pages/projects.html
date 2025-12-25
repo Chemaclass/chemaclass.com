@@ -52,7 +52,7 @@
 
     </div>
 
-    <div class="services-sessions">
+    <div class="services-sessions" id="voucher">
       <div class="sessions-content">
         <h3><i class="fa-solid fa-comments"></i> {% if lang == "es" %}Sesiones 1:1{% else %}1:1 Sessions{% endif %}</h3>
         <p>{% if lang == "es" %}¿Quieres profundizar más? Reserva una llamada para hablar de cualquier tema de mis posts o explorar ideas juntos.{% else %}Want to go deeper? Book a call to discuss any topic from my blog posts or explore ideas together.{% endif %}</p>
@@ -91,7 +91,7 @@
     <div class="services-sessions">
       <div class="sessions-content">
         <h3><i class="fa-solid fa-gift"></i> {% if lang == "es" %}Vales Regalo{% else %}Gift Vouchers{% endif %}</h3>
-        <p>{% if lang == "es" %}¿Conoces a alguien que necesita una web? Regálale un vale parcial o total. Ideal para Navidad!{% else %}Know someone who needs a website? Gift them a voucher for partial or full price. Ideal for Christmas!{% endif %}</p>
+        <p>{% if lang == "es" %}¿Conoces a alguien que <a href="/services/web-development/#everywebsite">necesita una web</a>? Regálale un vale parcial o total. Ideal para Navidad!{% else %}Know someone who <a href="/services/web-development/#everywebsite">needs a website</a>? Gift them a voucher for partial or full price. Ideal for Christmas!{% endif %}</p>
       </div>
       <div class="sessions-actions">
         <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Vale%20Regalo{% else %}Gift%20Voucher%20Inquiry{% endif %}" class="sessions-cta">
