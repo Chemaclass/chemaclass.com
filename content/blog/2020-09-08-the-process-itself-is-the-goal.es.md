@@ -28,7 +28,7 @@ Este es un tema totalmente subjetivo que puede ser diferente de persona a person
 ### Auto-reflexión
 
 Solía escribir mis pensamientos en un "diario" durante algunos años. En aquel entonces, en 2015, cuando me mudé a Alemania, no conocía a mucha gente aquí, y el entorno era completamente nuevo.
-Decidí escribir mis pensamientos para leerlos al día siguiente y hacer algo de retrospección sobre ello. Finalmente, después de unos 3 años, en diciembre de 2017, publiqué un libro llamado "Ojos en un recuerdo". Ese libro es la compilación de esos pensamientos. Sin historia detrás. Son tal como vinieron. Puedes ver la evolución de los temas y sobre qué y cómo fueron escritos.
+Decidí escribir mis pensamientos para leerlos al día siguiente y hacer algo de retrospección sobre ello. Finalmente, después de unos 3 años, en diciembre de 2017, publiqué un libro llamado ["Ojos en un recuerdo"](http://ojosenunrecuerdo.es/). Ese libro es la compilación de esos pensamientos. Sin historia detrás. Son tal como vinieron. Puedes ver la evolución de los temas y sobre qué y cómo fueron escritos.
 
 ![blog-img](/images/blog/2020-09-08/oeur-books.jpg)
 

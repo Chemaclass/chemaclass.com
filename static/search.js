@@ -6,6 +6,43 @@ const DOCUMENT_LANG = (document.documentElement.getAttribute("lang") || "en").to
 const IS_SPANISH = DOCUMENT_LANG.startsWith("es");
 const LANG_PREFIX = IS_SPANISH ? "/es" : "";
 const SEARCH_INDEX_PATH = IS_SPANISH ? "/search_index.es.json" : "/search_index.en.json";
+const SERVICE_SEARCH_CONTENT = {
+    en: {
+        "/services/": "Services overview for Chemaclass: custom web development, fast static websites, static+blog hybrids, WordPress builds, and hands-on team workshops focused on XP, TDD, and refactoring. Hire me to ship reliable websites or train your engineering team.",
+        "/services/web-development/": "Web Development service: responsive design, SEO fundamentals, HTTPS, analytics, static websites, static site plus blog using Zola or VitePress, and WordPress builds. Highlights speed, security, low hosting costs, and options for content updates.",
+        "/services/team-workshops/": "Team Workshops service: full-day coding sessions covering testing, golden master techniques, test-driven development, refactoring, pair programming, and safe improvements to legacy code. Morning session on tests, afternoon on refactoring, investment €350 per person for 3-8 developers."
+    },
+    es: {
+        "/services/": "Servicios profesionales: desarrollo web a medida, sitios estáticos rápidos, soluciones WordPress, talleres para equipos sobre TDD y refactorización. Contrata a Chemaclass para lanzar tu web o para formar a tu equipo de ingeniería.",
+        "/services/web-development/": "Servicio de Desarrollo Web: diseño responsive, SEO básico, HTTPS, analítica, sitios estáticos ultrarrápidos, blogs generados estáticamente y sitios WordPress editables. Explica qué opción conviene según el negocio y los costes de mantenimiento.",
+        "/services/team-workshops/": "Servicio de Team Workshops: un día completo de coding katas enfocados en testing, golden master, TDD, refactorización y trabajo en código legado. Incluye sesiones de mañana y tarde, pair programming y precio de 350 € por persona para grupos de 3 a 8."
+    }
+};
+const SEARCH_RESULT_LABELS = {
+    en: { singular: "result", plural: "results", separator: ":" },
+    es: { singular: "resultado", plural: "resultados", separator: ":" }
+};
+const SEARCH_SECTION_LABELS = {
+    en: {
+        blog: "blog",
+        readings: "readings",
+        talks: "talks",
+        services: "services",
+        other: "other"
+    },
+    es: {
+        blog: "blog",
+        readings: "lecturas",
+        talks: "charlas",
+        services: "servicios",
+        other: "otros"
+    }
+};
+const normalizeForSearch = (str) => (str || "")
+    .toString()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
 
 (function registerSpanishSearchPipeline() {
     if (typeof elasticlunr === "undefined") {
@@ -121,6 +158,21 @@ function buildLocalizedHref(ref) {
         finalPath = "/";
     }
     return `${finalPath}${search}${hash}`;
+}
+
+function getNormalizedServicePath(path) {
+    const segments = stripLangFromPath(path);
+    if (segments.length === 0) {
+        return "/";
+    }
+    const joined = segments.join("/");
+    return `/${joined.replace(/\/+$/, "")}/`;
+}
+
+function getServiceSearchText(path) {
+    const langKey = IS_SPANISH ? "es" : "en";
+    const map = SERVICE_SEARCH_CONTENT[langKey] || {};
+    return map[path];
 }
 
 // Get all search containers and set up each one
@@ -340,13 +392,10 @@ function preloadSearchIndex() {
 }
 
 function initSearch() {
+    const fieldBoosts = { title: { boost: 5 }, body: { boost: 1 } };
     const options = {
         bool: "OR", // Changed from AND to OR for better recall
-        fields: {
-            title: {boost: 5},      // Increased title boost for better ranking
-            description: {boost: 3}, // Increased description boost
-            body: {boost: 1},
-        },
+        fields: fieldBoosts,
         expand: true // Enable query expansion for better matching
     };
     let currentTerm = "";
@@ -431,7 +480,7 @@ function initSearch() {
 
         // Prepare search query - filter out single-character terms
         let searchTerm = term.startsWith('*') ? term.slice(1) : term;
-        const searchWords = searchTerm.split(/\s+/).filter(word => word.length >= 2);
+        const searchWords = searchTerm.split(/\s+/).filter(word => word.length >= 2 || word.length === currentTerm.length);
         if (searchWords.length === 0) {
             // All terms were too short
             searchResults.style.display = "none";
@@ -440,24 +489,47 @@ function initSearch() {
         searchTerm = searchWords.join(' ');
 
         // Try exact match first
-        let indexResults = (await initIndex()).search(searchTerm, options);
+        const currentIndex = await initIndex();
+        const availableFields = currentIndex._fields || [];
+        const filteredFields = {};
+        Object.keys(fieldBoosts).forEach((fieldKey) => {
+            if (availableFields.includes(fieldKey)) {
+                filteredFields[fieldKey] = fieldBoosts[fieldKey];
+            }
+        });
+        const effectiveOptions = { ...options, fields: filteredFields };
+
+        let indexResults = currentIndex.search(searchTerm, effectiveOptions);
 
         // If no results and term is long enough, try fuzzy search with wildcard
         if (indexResults.length === 0 && searchTerm.length >= 3) {
-            const fuzzyOptions = {...options, bool: "OR"};
-            indexResults = (await initIndex()).search(searchTerm + "*", fuzzyOptions);
+            const fuzzyOptions = {...effectiveOptions, bool: "OR"};
+            indexResults = currentIndex.search(searchTerm + "*", fuzzyOptions);
+        }
+        if (indexResults.length === 0 && searchTerm.length >= 4) {
+            const relaxedOptions = {...effectiveOptions, bool: "OR"};
+            let truncated = searchTerm;
+            while (indexResults.length === 0 && truncated.length >= 4) {
+                truncated = truncated.slice(0, -1);
+                indexResults = currentIndex.search(truncated + "*", relaxedOptions);
+            }
         }
 
         // Sort results by score (relevance) in descending order
         indexResults.sort((a, b) => b.score - a.score);
 
         const items = filterAndRankResults(indexResults, term, searchTerm);
+        const resultCount = activeContainer.querySelector('.search-results__count');
 
         if (items.length === 0) {
             if (term.toLowerCase() === "btc") {
                 input.value = "bitcoin";
                 input.dispatchEvent(new KeyboardEvent("keyup"));
                 return
+            }
+
+            if (resultCount) {
+                resultCount.textContent = '';
             }
 
             const item = document.createElement("li");
@@ -474,19 +546,23 @@ function initSearch() {
 
         // Count results by section
         const sectionCounts = {};
+        const sectionLabels = SEARCH_SECTION_LABELS[IS_SPANISH ? "es" : "en"] || SEARCH_SECTION_LABELS.en;
         for (const item of items) {
             const parsed = item._parsedPath || parseRef(item.ref);
-            const section = getSectionFromPath(parsed.path) || 'other';
-            sectionCounts[section] = (sectionCounts[section] || 0) + 1;
+            const rawSection = getSectionFromPath(parsed.path) || 'other';
+            const label = sectionLabels[rawSection] || sectionLabels.other || rawSection;
+            sectionCounts[label] = (sectionCounts[label] || 0) + 1;
         }
 
         // Update result count with section breakdown
-        const resultCount = activeContainer.querySelector('.search-results__count');
         if (resultCount) {
+            const resultLabelSet = SEARCH_RESULT_LABELS[IS_SPANISH ? "es" : "en"] || SEARCH_RESULT_LABELS.en;
+            const resultWord = items.length === 1 ? resultLabelSet.singular : resultLabelSet.plural;
+            const separator = resultLabelSet.separator || ":";
             const sectionBreakdown = Object.entries(sectionCounts)
                 .map(([section, count]) => `${count} ${section}`)
                 .join(', ');
-            resultCount.textContent = `${items.length} result${items.length !== 1 ? 's' : ''}: ${sectionBreakdown}`;
+            resultCount.textContent = `${items.length} ${resultWord}${sectionBreakdown ? `${separator} ${sectionBreakdown}` : ""}`;
         }
 
         // Easter egg: check for bitcoin search
@@ -495,7 +571,13 @@ function initSearch() {
         // Display all results sorted by relevance
         for (let i = 0; i < items.length; i++) {
             const li = document.createElement("li");
-            li.innerHTML = formatSearchResultItem(items[i], term.split(" "), isBitcoinSearch);
+            try {
+                li.innerHTML = formatSearchResultItem(items[i], term.split(" "), isBitcoinSearch);
+            } catch (error) {
+                console.error("Failed to render search result item", error, items[i]);
+                const safeDoc = items[i].doc || {};
+                li.innerHTML = `<div class="search-results__item"><a href="${buildLocalizedHref(items[i].ref || '#')}"><span class="search-results__item-title">${safeDoc.title || items[i].ref || 'Result'}</span></a></div>`;
+            }
             searchResultsItems.appendChild(li);
         }
     }, WAIT_TIME_MS);
@@ -534,6 +616,10 @@ function initSearch() {
 function filterAndRankResults(results, term, searchTerm){
     const items = [];
     const lowerTerm = searchTerm.toLowerCase();
+    const normalizedQueryTokens = searchTerm
+        .split(/\s+/)
+        .filter(Boolean)
+        .map(token => normalizeForSearch(token));
 
     // Section priority weights
     const sectionWeights = {
@@ -558,6 +644,26 @@ function filterAndRankResults(results, term, searchTerm){
         result._parsedPath = parsedRef;
 
         const sectionKey = getSectionFromPath(parsedRef.path).toLowerCase();
+        if (sectionKey === "books") {
+            continue;
+        }
+
+        const lookupPath = getNormalizedServicePath(parsedRef.path);
+        const serviceText = getServiceSearchText(lookupPath);
+
+        let combinedContent = [result.doc.title, result.doc.body, result.doc.description].join(" ");
+        if ((!result.doc.body || result.doc.body.length === 0) && serviceText) {
+            result.doc.body = serviceText;
+            combinedContent += ` ${serviceText}`;
+        } else if (serviceText && combinedContent.indexOf(serviceText) === -1) {
+            combinedContent += ` ${serviceText}`;
+        }
+
+        const docContentNormalized = normalizeForSearch(combinedContent);
+        const matchesAllTokens = normalizedQueryTokens.every(token => token === "" || docContentNormalized.includes(token));
+        if (!matchesAllTokens) {
+            continue;
+        }
 
         // Apply section weight
         const sectionWeight = sectionWeights[sectionKey] || 1.0;
@@ -625,6 +731,19 @@ function formatSearchResultItem(item, terms, isBitcoinSearch = false) {
         dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     }
 
+    const snippetSource = (typeof item.doc.body === "string" && item.doc.body.length > 0)
+        ? item.doc.body
+        : (typeof item.doc.description === "string" ? item.doc.description : "");
+    let teaser = "";
+    if (snippetSource) {
+        try {
+            teaser = makeTeaser(snippetSource, terms);
+        } catch (error) {
+            console.warn("Teaser generation failed, falling back to raw excerpt:", error);
+            teaser = snippetSource.slice(0, 180) + (snippetSource.length > 180 ? "…" : "");
+        }
+    }
+
     return '<div class="search-results__item">'
         + `<a href="${href}">`
         + `<div class="search-results__item-meta">`
@@ -632,7 +751,7 @@ function formatSearchResultItem(item, terms, isBitcoinSearch = false) {
         + (dateStr ? `<span class="search-results__item-date">${dateStr}</span>` : '')
         + `</div>`
         + `<span class="search-results__item-title">${bitcoinIcon}${item.doc.title}</span>`
-        + `<div class="search-results__item-body">${makeTeaser(item.doc.body, terms)}</div>`
+        + (teaser ? `<div class="search-results__item-body">${teaser}</div>` : '')
         + `</a>`
         + '</div>';
 }

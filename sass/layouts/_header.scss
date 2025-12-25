@@ -1,4 +1,4 @@
-header {
+.site-header {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
@@ -6,11 +6,9 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  position: sticky;
-  top: 0;
-  background: var(--body-bg);
+    background: var(--body-bg);
   padding: 1rem;
-  z-index: 1000;
+  z-index: 2000;
   gap: 1rem;
 
   &::after {
@@ -45,6 +43,7 @@ header {
   position: relative;
   display: flex;
   align-items: center;
+  z-index: 1300;
 
   .search-icon {
     position: absolute;
@@ -103,7 +102,7 @@ header {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     max-height: 70vh;
     overflow-y: auto;
-    z-index: 1001;
+    z-index: 4000;
     min-width: 400px;
   }
 }
@@ -163,7 +162,7 @@ a.profile-icon {
 
 // Responsive styles
 @media (max-width: $breakpoint-tablet) {
-  header {
+  .site-header {
     padding: 0.75rem;
     gap: 1.5rem;
 
@@ -201,7 +200,7 @@ a.profile-icon {
 }
 
 @media (max-width: $breakpoint-phone) {
-  header {
+  .site-header {
     position: relative;
     padding: 0.5rem;
     flex-wrap: wrap;
@@ -247,13 +246,13 @@ a.profile-icon {
 // Small screens - hide search, show toggle
 @media (max-width: 650px) {
   .header-search,
-  header .search-container {
+  .site-header .search-container {
     display: none;
   }
 
   // Show search when toggle is active
   .header-search.active,
-  header .search-container.active {
+  .site-header .search-container.active {
     display: flex !important;
     position: fixed;
     top: 70px;

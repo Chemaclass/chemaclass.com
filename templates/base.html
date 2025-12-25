@@ -118,7 +118,7 @@
   </head>
   <body>
     {% block header %}
-      <header>
+      <header class="site-header">
         <a class="profile-icon" href="{% if lang == 'es' %}/es/{% else %}/{% endif %}">
           {% set nav_icon = resize_image(path=config.extra.profile_small, width=36, height=36, op="fill") %}
           <img src="{{ nav_icon.url }}" alt="Chemaclass" />

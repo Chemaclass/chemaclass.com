@@ -28,7 +28,7 @@ This is a totally subjective topic that might be different from person to person
 ### Self-reflection
 
 I used to write my thoughts in a "diary" for some years. Back then, in 2015, when I moved to Germany, I didn't know many people here, and the environment was completely new.
-I decided to write my thoughts to myself in order to read them the day after and do some retrospection about it. Finally, after around 3 years, in December 2017, I published a book named "Ojos en un recuerdo". That book is the compilation of those thoughts. No story behind it. They are as they came. You can see the evolution of the topics and about what and how they were written.
+I decided to write my thoughts to myself in order to read them the day after and do some retrospection about it. Finally, after around 3 years, in December 2017, I published a book named ["Ojos en un recuerdo"](http://ojosenunrecuerdo.es/). That book is the compilation of those thoughts. No story behind it. They are as they came. You can see the evolution of the topics and about what and how they were written.
 
 ![blog-img](/images/blog/2020-09-08/oeur-books.jpg)
 
