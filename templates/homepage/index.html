@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-Home | Chemaclass
+{{ trans(key="home_title_tag", lang=lang) }}
 {% endblock %}
 
 
@@ -28,7 +28,7 @@ Home | Chemaclass
         <section class="hero-content">
             <div class="profile">
                 <div class="profile-container">
-                    <img src="{{ profile_image.url }}" alt="profile picture"/>
+                    <img src="{{ profile_image.url }}" alt="{{ trans(key="home_profile_alt", lang=lang) }}"/>
                 </div>
             </div>
             <div class="hero-text">
@@ -113,9 +113,9 @@ Home | Chemaclass
             <span class="skill-tag db">Redis</span>
             <span class="skill-tag practice">TDD</span>
             <span class="skill-tag practice">XP</span>
-            <span class="skill-tag practice">Open Source</span>
-            <span class="skill-tag soft">Leadership</span>
-            <span class="skill-tag soft">Communication</span>
+            <span class="skill-tag practice">{{ trans(key="home_skill_open_source", lang=lang) }}</span>
+            <span class="skill-tag soft">{{ trans(key="home_skill_leadership", lang=lang) }}</span>
+            <span class="skill-tag soft">{{ trans(key="home_skill_communication", lang=lang) }}</span>
         </div>
     </section>
 
@@ -135,7 +135,7 @@ Home | Chemaclass
                         <h3>bashunit</h3>
                         <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count"></span></span>
                     </div>
-                    <p>A testing library for bash scripts</p>
+                    <p>{{ trans(key="home_project_bashunit_desc", lang=lang) }}</p>
                 </div>
             </a>
             <a target="_blank" href="https://phel-lang.org" class="project-card" data-repo="phel-lang/phel-lang">
@@ -147,7 +147,7 @@ Home | Chemaclass
                         <h3>Phel</h3>
                         <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count"></span></span>
                     </div>
-                    <p>Functional Programming for PHP</p>
+                    <p>{{ trans(key="home_project_phel_desc", lang=lang) }}</p>
                 </div>
             </a>
             <a target="_blank" href="https://gacela-project.com/" class="project-card" data-repo="gacela-project/gacela">
@@ -159,7 +159,7 @@ Home | Chemaclass
                         <h3>Gacela</h3>
                         <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count"></span></span>
                     </div>
-                    <p>Build modular PHP applications</p>
+                    <p>{{ trans(key="home_project_gacela_desc", lang=lang) }}</p>
                 </div>
             </a>
         </div>
