@@ -123,7 +123,8 @@
           {% set nav_icon = resize_image(path=config.extra.profile_small, width=36, height=36, op="fill") %}
           <img src="{{ nav_icon.url }}" alt="Chemaclass" />
         </a>
-        
+        <span class="site-title">Chemaclass</span>
+
         <div class="search-container header-search">
           <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="11" cy="11" r="8"></circle>
@@ -140,6 +141,11 @@
         </div>
 
         <nav class="navbar">
+          <button id="search-toggle" onclick="toggleSearch()" title="{{ trans(key="search_toggle_title", lang=lang) }}">
+            <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="var(--body-color)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+            </svg>
+          </button>
           <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
             <span></span>
             <span></span>
@@ -157,36 +163,32 @@
               <a href="/services/">{{ trans(key="nav_services", lang=lang) }}</a>
               <a href="/talks/">{{ trans(key="nav_talks", lang=lang) }}</a>
             {% endif %}
+            <div class="nav-utilities">
+              <button id="light-mode" onclick="toDarkMode()" title="{{ trans(key="search_light_title", lang=lang) }}">
+                <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="var(--body-color)" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+                </svg>
+              </button>
+              <button id="dark-mode" onclick="toLightMode()" title="{{ trans(key="search_dark_title", lang=lang) }}">
+                <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="var(--body-color)" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+                </svg>
+              </button>
+              {% if current_path is defined %}
+                {% if lang == "es" %}
+                  <a href="{{ current_path | replace(from='/es/', to='/') }}" class="lang-switch" title="{{ trans(key="lang_switch_en_title", lang=lang) }}">EN</a>
+                {% else %}
+                  <a href="/es{{ current_path }}" class="lang-switch" title="{{ trans(key="lang_switch_es_title", lang=lang) }}">ES</a>
+                {% endif %}
+              {% else %}
+                {% if lang == "es" %}
+                  <a href="/" class="lang-switch" title="{{ trans(key="lang_switch_en_title", lang=lang) }}">EN</a>
+                {% else %}
+                  <a href="/es/" class="lang-switch" title="{{ trans(key="lang_switch_es_title", lang=lang) }}">ES</a>
+                {% endif %}
+              {% endif %}
+            </div>
           </div>
-
-          <button id="search-toggle" onclick="toggleSearch()" title="{{ trans(key="search_toggle_title", lang=lang) }}">
-            <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path fill="var(--body-color)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
-            </svg>
-          </button>
-          <button id="light-mode" onclick="toDarkMode()" title="{{ trans(key="search_light_title", lang=lang) }}">
-            <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path fill="var(--body-color)" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
-            </svg>
-          </button>
-          <button id="dark-mode" onclick="toLightMode()" title="{{ trans(key="search_dark_title", lang=lang) }}">
-            <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path fill="var(--body-color)" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
-            </svg>
-          </button>
-          {% if current_path is defined %}
-            {% if lang == "es" %}
-              <a href="{{ current_path | replace(from='/es/', to='/') }}" class="lang-switch" title="{{ trans(key="lang_switch_en_title", lang=lang) }}">EN</a>
-            {% else %}
-              <a href="/es{{ current_path }}" class="lang-switch" title="{{ trans(key="lang_switch_es_title", lang=lang) }}">ES</a>
-            {% endif %}
-          {% else %}
-            {% if lang == "es" %}
-              <a href="/" class="lang-switch" title="{{ trans(key="lang_switch_en_title", lang=lang) }}">EN</a>
-            {% else %}
-              <a href="/es/" class="lang-switch" title="{{ trans(key="lang_switch_es_title", lang=lang) }}">ES</a>
-            {% endif %}
-          {% endif %}
         </nav>
 
       </header>
