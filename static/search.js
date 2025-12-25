@@ -2,6 +2,126 @@ const UP_ARROW = "ArrowUp";
 const DOWN_ARROW = "ArrowDown";
 const ENTER_KEY = "Enter";
 const WAIT_TIME_MS = 150; // Reduced from 200ms to 150ms for faster response
+const DOCUMENT_LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
+const IS_SPANISH = DOCUMENT_LANG.startsWith("es");
+const LANG_PREFIX = IS_SPANISH ? "/es" : "";
+const SEARCH_INDEX_PATH = IS_SPANISH ? "/search_index.es.json" : "/search_index.en.json";
+
+(function registerSpanishSearchPipeline() {
+    if (typeof elasticlunr === "undefined") {
+        return;
+    }
+    const registerIfMissing = (fn, label) => {
+        if (!elasticlunr.Pipeline.getRegisteredFunction(label)) {
+            fn.label = label;
+            elasticlunr.Pipeline.registerFunction(fn, label);
+        }
+    };
+
+    const spanishTrimmer = function(token) {
+        if (!token) return token;
+        return token
+            .replace(/^[^0-9A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+/, "")
+            .replace(/[^0-9A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+$/, "");
+    };
+
+    const SPANISH_STOP_WORDS = [
+        "a","acá","ahí","al","algo","algunas","algunos","allá","allí","ante","antes","aquel","aquella","aquellas","aquellos","aquí",
+        "así","aún","aunque","bajo","bien","cada","casi","como","con","cual","cuando","de","del","desde","donde","dos","el","ella",
+        "ellas","ellos","en","entonces","entre","era","eran","es","esa","esas","ese","eso","esos","esta","estaba","estaban","estar",
+        "este","esto","estos","etc","fuera","fueron","gran","ha","haber","hace","hacia","han","hasta","hay","la","las","le","les",
+        "lo","los","más","me","mi","mis","mucho","muy","nos","nosotros","nuestra","nuestro","o","otra","otras","otro","otros","para",
+        "pero","poco","por","porque","que","quien","quién","se","sea","según","ser","si","siempre","siendo","sin","sobre","su","sus",
+        "también","tan","tanto","te","tendrá","tener","tiene","tienen","todo","todos","tu","un","una","unas","uno","unos","usted","y","ya"
+    ];
+    const spanishStopWordsSet = new Set(SPANISH_STOP_WORDS);
+    const spanishStopWordFilter = function(token) {
+        if (!token) return token;
+        return spanishStopWordsSet.has(token.toLowerCase()) ? null : token;
+    };
+
+    const spanishStemmer = function(word) {
+        if (!word) return word;
+        if (typeof elasticlunr.stemmer === "function") {
+            return elasticlunr.stemmer(word);
+        }
+        return word;
+    };
+
+    registerIfMissing(spanishTrimmer, "trimmer-es");
+    registerIfMissing(spanishStopWordFilter, "stopWordFilter-es");
+    registerIfMissing(spanishStemmer, "stemmer-es");
+})();
+
+function parseRef(ref) {
+    let path = ref || "/";
+    let search = "";
+    let hash = "";
+    try {
+        const url = new URL(ref, window.location.origin);
+        path = url.pathname || "/";
+        search = url.search || "";
+        hash = url.hash || "";
+    } catch (e) {
+        const hashIndex = path.indexOf("#");
+        if (hashIndex >= 0) {
+            hash = path.slice(hashIndex);
+            path = path.slice(0, hashIndex);
+        }
+        const searchIndex = path.indexOf("?");
+        if (searchIndex >= 0) {
+            search = path.slice(searchIndex);
+            path = path.slice(0, searchIndex);
+        }
+    }
+    return { path: path || "/", search, hash };
+}
+
+function matchesCurrentLang(path) {
+    const normalized = path.replace(/^\/+/, "");
+    if (IS_SPANISH) {
+        if (normalized === "") {
+            return false;
+        }
+        return normalized === "es" || normalized.startsWith("es/");
+    }
+    if (normalized === "") {
+        return true;
+    }
+    if (normalized === "es" || normalized.startsWith("es/")) {
+        return false;
+    }
+    return true;
+}
+
+function stripLangFromPath(path) {
+    const segments = path.replace(/^\/+/, "").split("/");
+    if (segments[0] && segments[0].toLowerCase() === "es") {
+        segments.shift();
+    }
+    return segments;
+}
+
+function getSectionFromPath(path) {
+    const segments = stripLangFromPath(path);
+    return segments[0] || "";
+}
+
+function buildLocalizedHref(ref) {
+    const { path, search, hash } = parseRef(ref);
+    let finalPath = path;
+    if (IS_SPANISH) {
+        if (!finalPath.startsWith("/es")) {
+            finalPath = `${LANG_PREFIX}${finalPath.startsWith("/") ? finalPath : `/${finalPath}`}`;
+        }
+    } else if (finalPath.startsWith("/es/")) {
+        finalPath = finalPath.replace(/^\/es/, "") || "/";
+    }
+    if (finalPath === "") {
+        finalPath = "/";
+    }
+    return `${finalPath}${search}${hash}`;
+}
 
 // Get all search containers and set up each one
 const allSearchContainers = Array.from(document.querySelectorAll(".search-container"));
@@ -197,7 +317,7 @@ function preloadSearchIndex() {
     // Use requestIdleCallback to load during idle time, or setTimeout as fallback
     if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
-            fetch("/search_index.en.json")
+            fetch(SEARCH_INDEX_PATH)
                 .then(async (response) => {
                     const data = await response.json();
                     // Store in a global variable for initSearch to use
@@ -209,7 +329,7 @@ function preloadSearchIndex() {
         });
     } else {
         setTimeout(() => {
-            fetch("/search_index.en.json")
+            fetch(SEARCH_INDEX_PATH)
                 .then(async (response) => {
                     const data = await response.json();
                     window.__searchIndexData = data;
@@ -245,7 +365,7 @@ function initSearch() {
         }
 
         if (index === undefined) {
-            index = fetch("/search_index.en.json")
+            index = fetch(SEARCH_INDEX_PATH)
                 .then(
                     async function (response) {
                         const data = await response.json();
@@ -278,7 +398,7 @@ function initSearch() {
             return;
         }
 
-        const customSearchMapCategories = {
+        const baseCategoryMap = {
             "home": "/",
             "blog": "/blog",
             "readings": "/readings",
@@ -286,6 +406,15 @@ function initSearch() {
             "music": "/music",
             "books": "/books"
         };
+        const customSearchMapCategories = {};
+        Object.entries(baseCategoryMap).forEach(([keyword, targetPath]) => {
+            const normalizedTarget = targetPath === "/" ? "/" : `/${targetPath.replace(/^\/+/, "")}`;
+            if (IS_SPANISH) {
+                customSearchMapCategories[keyword] = `${LANG_PREFIX}${normalizedTarget}`;
+            } else {
+                customSearchMapCategories[keyword] = normalizedTarget;
+            }
+        });
         if (Object.keys(customSearchMapCategories).includes(term)) {
             const item = document.createElement("li");
             item.innerHTML = formatSearchResultItem({
@@ -346,12 +475,8 @@ function initSearch() {
         // Count results by section
         const sectionCounts = {};
         for (const item of items) {
-            let path = item.ref;
-            try {
-                const url = new URL(item.ref, window.location.origin);
-                path = url.pathname;
-            } catch (e) {}
-            const section = path.replace(/^\//, '').split('/')[0] || 'other';
+            const parsed = item._parsedPath || parseRef(item.ref);
+            const section = getSectionFromPath(parsed.path) || 'other';
             sectionCounts[section] = (sectionCounts[section] || 0) + 1;
         }
 
@@ -426,16 +551,16 @@ function filterAndRankResults(results, term, searchTerm){
             continue;
         }
 
-        // Extract section from URL
-        let path = result.ref;
-        try {
-            const url = new URL(result.ref, window.location.origin);
-            path = url.pathname;
-        } catch (e) {}
-        const section = path.replace(/^\//, '').split('/')[0] || '';
+        const parsedRef = parseRef(result.ref);
+        if (!matchesCurrentLang(parsedRef.path)) {
+            continue;
+        }
+        result._parsedPath = parsedRef;
+
+        const sectionKey = getSectionFromPath(parsedRef.path).toLowerCase();
 
         // Apply section weight
-        const sectionWeight = sectionWeights[section] || 1.0;
+        const sectionWeight = sectionWeights[sectionKey] || 1.0;
         result.score *= sectionWeight;
 
         // Boost score for exact title matches
@@ -487,16 +612,10 @@ function formatSearchResultItem(item, terms, isBitcoinSearch = false) {
         terms = [terms[0].slice(1), ...terms.slice(1)].filter(term => term.trim() !== "");
     }
 
-    // Extract section from URL path (handle both full URLs and paths)
-    let path = item.ref;
-    try {
-        const url = new URL(item.ref, window.location.origin);
-        path = url.pathname;
-    } catch (e) {
-        // Already a path, use as-is
-    }
-    const pathParts = path.replace(/^\//, '').replace(/\/$/, '').split('/');
-    const section = pathParts[0] ? pathParts[0].charAt(0).toUpperCase() + pathParts[0].slice(1) : '';
+    const parsed = item._parsedPath || parseRef(item.ref);
+    const sectionBase = getSectionFromPath(parsed.path);
+    const section = sectionBase ? sectionBase.charAt(0).toUpperCase() + sectionBase.slice(1) : '';
+    const href = buildLocalizedHref(item.ref);
 
     // Format date if available
     let dateStr = '';
@@ -507,7 +626,7 @@ function formatSearchResultItem(item, terms, isBitcoinSearch = false) {
     }
 
     return '<div class="search-results__item">'
-        + `<a href="${item.ref}">`
+        + `<a href="${href}">`
         + `<div class="search-results__item-meta">`
         + (section ? `<span class="search-results__item-section">${section}</span>` : '')
         + (dateStr ? `<span class="search-results__item-date">${dateStr}</span>` : '')
