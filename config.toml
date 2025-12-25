@@ -137,7 +137,7 @@ default_og_image = "profile.jpg"
 accent = "#3a5c88"
 accent_light = "#397fd8"
 
-repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/content/"
+repo_content_url = "https://github.com/Chemaclass/chemaclass.es/edit/master/content/"
 
 not_found_message = """
 It seems like this page does not exist… Return back to the [homepage](/)
