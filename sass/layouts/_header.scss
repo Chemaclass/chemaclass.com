@@ -159,14 +159,20 @@ nav {
   }
 }
 
-a.profile-icon {
-  border: none;
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   text-decoration: none;
-  line-height: 0;
+  border: none;
 
   &:hover {
-    opacity: 0.8;
+    border: none;
   }
+}
+
+.profile-icon {
+  line-height: 0;
 
   img {
     width: 36px;
@@ -177,22 +183,19 @@ a.profile-icon {
     transition: border-color 0.2s ease;
   }
 
-  &:hover img {
+  .header-left:hover & img {
     border-color: var(--accent-color);
   }
 }
 
-a.site-title {
+.site-title {
   display: none;
   font-weight: 600;
   font-size: 1.1rem;
   color: var(--heading-color);
-  text-decoration: none;
-  border: none;
 
-  &:hover {
+  .header-left:hover & {
     color: var(--accent-color);
-    border: none;
   }
 }
 
@@ -208,7 +211,7 @@ a.site-title {
     }
   }
 
-  a.profile-icon img {
+  .profile-icon img {
     width: 32px;
     height: 32px;
   }
@@ -247,8 +250,8 @@ a.site-title {
     left: 0;
     right: 0;
     padding: 0.5rem 0.75rem;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-wrap: nowrap;
+    gap: 0;
 
     nav {
       font-size: 0.95rem;
@@ -261,7 +264,7 @@ a.site-title {
     margin-top: 68px;
   }
 
-  a.profile-icon img {
+  .profile-icon img {
     width: 30px;
     height: 30px;
   }
@@ -337,9 +340,16 @@ a.site-title {
 
 // Mobile menu behavior
 @media (max-width: $breakpoint-phone) {
-  a.site-title {
+  .site-header {
+    justify-content: space-between;
+  }
+
+  .header-left {
+    flex: 0 0 50%;
+  }
+
+  .site-title {
     display: block;
-    flex: 1;
   }
 
   .hamburger {
@@ -347,7 +357,11 @@ a.site-title {
   }
 
   .navbar {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: flex-end;
     position: static;
+    cursor: pointer;
 
     .nav-links {
       display: none;

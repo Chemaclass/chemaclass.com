@@ -143,14 +143,16 @@
   <body>
     {% block header %}
       <header class="site-header">
-        <a class="profile-icon" href="{% if lang == 'es' %}/es/{% else %}/{% endif %}">
-          {% set nav_icon = resize_image(path=config.extra.profile_small, width=36, height=36, op="fill") %}
-          <img src="{{ nav_icon.url }}" alt="Chemaclass" />
+        <a class="header-left" href="{% if lang == 'es' %}/es/{% else %}/{% endif %}">
+          <span class="profile-icon">
+            {% set nav_icon = resize_image(path=config.extra.profile_small, width=36, height=36, op="fill") %}
+            <img src="{{ nav_icon.url }}" alt="Chemaclass" />
+          </span>
+          <span class="site-title">Chemaclass</span>
         </a>
-        <a href="{% if lang == 'es' %}/es/{% else %}/{% endif %}" class="site-title">Chemaclass</a>
 
-        <nav class="navbar">
-          <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+        <nav class="navbar" onclick="toggleMobileMenu()">
+          <button class="hamburger" aria-label="Menu">
             <span></span>
             <span></span>
             <span></span>
@@ -343,16 +345,20 @@
         }
       });
 
-      window.toggleMobileMenu = function() {
-        const navbar = document.querySelector('.navbar');
+      window.toggleMobileMenu = function(e) {
+        // Only toggle on mobile (when hamburger is visible)
         const hamburger = document.querySelector('.hamburger');
+        if (window.getComputedStyle(hamburger).display === 'none') return;
+
+        const navbar = document.querySelector('.navbar');
         navbar.classList.toggle('open');
         hamburger.classList.toggle('open');
       }
 
-      // Close mobile menu when clicking a link
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
+      // Close mobile menu when clicking a link and stop propagation
+      document.querySelectorAll('.nav-links a, .nav-links button').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.stopPropagation();
           document.querySelector('.navbar').classList.remove('open');
           document.querySelector('.hamburger').classList.remove('open');
         });
