@@ -5,6 +5,7 @@ body {
   background-color: var(--body-bg);
   color: var(--body-color);
   box-sizing: border-box;
+  padding: 1rem;
 }
 
 main {
@@ -229,6 +230,7 @@ main:has(.homepage-container) #scroll-to-top {
           font-size: 0.7rem;
           transition: transform 0.3s ease;
           flex-shrink: 0;
+          margin-right: 10px;
         }
       }
 
@@ -614,7 +616,7 @@ main:has(.homepage-container) #scroll-to-top {
 
 @media (max-width: $breakpoint-phone) {
   main {
-    padding: 0 1rem;
+    padding: 1rem;
     margin-top: 68px; // Account for fixed header
   }
 
@@ -635,7 +637,7 @@ main:has(.homepage-container) #scroll-to-top {
       }
 
       .subtitle {
-        font-size: 0.85rem;
+        font-size: 1.2rem;
         margin-bottom: 0.75rem;
       }
 
@@ -644,7 +646,7 @@ main:has(.homepage-container) #scroll-to-top {
       }
 
       .hero-quote {
-        font-size: 0.75rem;
+        font-size: 1.1rem;
       }
     }
   }
