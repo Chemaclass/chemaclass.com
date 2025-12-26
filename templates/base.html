@@ -7,6 +7,8 @@
         if (localStorage.theme === 'dark') {
           document.documentElement.classList.add('theme-dark');
           document.documentElement.setAttribute('color-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('color-theme', 'light');
         }
       })();
     </script>
@@ -29,9 +31,31 @@
     {% endif %}
 
 
-    <!-- Preload fonts to prevent FOUT -->
+    <!-- Preload critical fonts -->
     <link rel="preload" href="/fonts/rubik-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/rubik-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/fontawesome/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/fontawesome/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Inline critical font-face to prevent FOUT -->
+    <style>
+      @font-face {
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 400;
+        font-display: optional;
+        src: local("Rubik"), url("/fonts/rubik-regular.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 500;
+        font-display: optional;
+        src: local("Rubik Medium"), url("/fonts/rubik-500.woff2") format("woff2");
+      }
+      /* Reserve navbar height to prevent layout shift */
+      .site-header { min-height: 68px; }
+    </style>
 
     {% set rum_key = get_env(name="RUM_KEY", default=false) %}
     {% if rum_key %}
@@ -97,7 +121,8 @@
     </title>
 
     {% block head %}
-      <link rel="stylesheet" href="/css/fontawesome.min.css">
+      <link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="/css/fontawesome.min.css"></noscript>
     {% endblock head %}
     {% block styles %}
       <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
@@ -230,13 +255,57 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="{{ get_url(path='dark-mode.js') | safe }}"></script>
-    <script type="text/javascript" src="{{ get_url(path='elasticlunr.min.js') }}" defer></script>
-    <script type="text/javascript" src="{{ get_url(path='search.js') }}" defer></script>
+    <script>
+      // Inline dark-mode.js to eliminate network request
+      window.toDarkMode = function() {
+        localStorage.theme = "dark";
+        localStorage.setItem('preference-theme', "theme-dark");
+        window.updateTheme();
+      }
+      window.toLightMode = function() {
+        localStorage.theme = "light";
+        localStorage.setItem('preference-theme', "theme-light");
+        window.updateTheme();
+      }
+      function updateTheme() {
+        if (localStorage.theme === 'dark') {
+          document.documentElement.classList.add('theme-dark');
+          document.documentElement.setAttribute('color-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('theme-dark');
+          document.documentElement.setAttribute('color-theme', 'light');
+        }
+      }
+      updateTheme();
+    </script>
     <script type="text/javascript" src="{{ get_url(path='scroll.js') }}" defer></script>
     <script type="text/javascript" src="{{ get_url(path='preview.js') }}" defer></script>
     <script>
+      // Lazy-load search scripts only when search is focused
+      let searchLoaded = false;
+      function loadSearch() {
+        if (searchLoaded) return;
+        searchLoaded = true;
+        const el = document.createElement('script');
+        el.src = "{{ get_url(path='elasticlunr.min.js') }}";
+        el.onload = function() {
+          const s = document.createElement('script');
+          s.src = "{{ get_url(path='search.js') }}";
+          document.body.appendChild(s);
+        };
+        document.body.appendChild(el);
+      }
+      document.getElementById('site-search')?.addEventListener('focus', loadSearch, {once: true});
+      // Also load on / keypress
+      document.addEventListener('keydown', function(e) {
+        if (e.key === '/' && !['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) {
+          loadSearch();
+        }
+      }, {once: true});
+    </script>
+    <script>
       window.toggleSearch = function() {
+        loadSearch(); // Load search when toggle clicked
         const searchContainer = document.querySelector('.header-search');
         searchContainer.classList.toggle('active');
         if (searchContainer.classList.contains('active')) {

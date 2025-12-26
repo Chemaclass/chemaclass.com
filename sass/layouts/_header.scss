@@ -12,6 +12,10 @@
   padding: 1rem;
   z-index: 2000;
   gap: 1rem;
+  // Stable dimensions prevent layout shift
+  min-height: 68px;
+  box-sizing: border-box;
+  contain: layout style;
 
   &::after {
     content: '';
@@ -342,12 +346,32 @@ a.profile-icon {
   display: flex;
   align-items: center;
   gap: 2rem;
+
+  // Prevent text reflow on font load
+  > a {
+    white-space: nowrap;
+    min-width: max-content;
+  }
 }
 
 .nav-utilities {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+
+  // Fixed size for icon buttons to prevent layout shift
+  button {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lang-switch {
+    min-width: 24px;
+    text-align: center;
+  }
 }
 
 // Mobile menu behavior
