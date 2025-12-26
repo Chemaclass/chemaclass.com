@@ -147,29 +147,9 @@
           {% set nav_icon = resize_image(path=config.extra.profile_small, width=36, height=36, op="fill") %}
           <img src="{{ nav_icon.url }}" alt="Chemaclass" />
         </a>
-        <span class="site-title">Chemaclass</span>
-
-        <div class="search-container header-search">
-          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.35-4.35"></path>
-          </svg>
-          <input type="search" id="site-search" name="search" class="search" autocomplete="off" placeholder="{{ trans(key="search_placeholder", lang=lang) }}">
-          <kbd class="search-shortcut">/</kbd>
-          <div class="search-results">
-            <div class="search-results__header">
-              <span class="search-results__count"></span>
-            </div>
-            <div class="search-results__items"></div>
-          </div>
-        </div>
+        <a href="{% if lang == 'es' %}/es/{% else %}/{% endif %}" class="site-title">Chemaclass</a>
 
         <nav class="navbar">
-          <button id="search-toggle" onclick="toggleSearch()" title="{{ trans(key="search_toggle_title", lang=lang) }}">
-            <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path fill="var(--body-color)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
-            </svg>
-          </button>
           <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
             <span></span>
             <span></span>
@@ -188,6 +168,11 @@
               <a href="/talks/">{{ trans(key="nav_talks", lang=lang) }}</a>
             {% endif %}
             <div class="nav-utilities">
+              <button id="search-toggle" onclick="toggleSearch()" title="{{ trans(key="search_toggle_title", lang=lang) }}">
+                <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="var(--body-color)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                </svg>
+              </button>
               <button id="light-mode" onclick="toDarkMode()" title="{{ trans(key="search_light_title", lang=lang) }}">
                 <svg width="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path fill="var(--body-color)" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
@@ -214,6 +199,30 @@
             </div>
           </div>
         </nav>
+
+        <!-- Search overlay -->
+        <div id="search-overlay" class="search-overlay">
+          <div class="search-overlay__container search-container">
+            <div class="search-overlay__input-wrapper">
+              <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+              <input type="search" id="site-search" name="search" class="search" autocomplete="off" placeholder="{{ trans(key="search_placeholder", lang=lang) }}">
+              <button class="search-overlay__close" onclick="closeSearch()" aria-label="Close search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="search-results">
+              <div class="search-results__header">
+                <span class="search-results__count"></span>
+              </div>
+              <div class="search-results__items"></div>
+            </div>
+          </div>
+        </div>
 
       </header>
     {% endblock header %}
@@ -296,33 +305,41 @@
         document.body.appendChild(el);
       }
       document.getElementById('site-search')?.addEventListener('focus', loadSearch, {once: true});
-      // Also load on / keypress
-      document.addEventListener('keydown', function(e) {
-        if (e.key === '/' && !['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) {
-          loadSearch();
-        }
-      }, {once: true});
     </script>
     <script>
       window.toggleSearch = function() {
-        loadSearch(); // Load search when toggle clicked
-        const searchContainer = document.querySelector('.header-search');
-        searchContainer.classList.toggle('active');
-        if (searchContainer.classList.contains('active')) {
-          searchContainer.querySelector('input').focus();
+        loadSearch();
+        const overlay = document.getElementById('search-overlay');
+        const isActive = overlay.classList.toggle('active');
+        if (isActive) {
+          setTimeout(() => document.getElementById('site-search').focus(), 50);
         }
       }
 
-      // Close search when clicking outside
+      window.closeSearch = function() {
+        const overlay = document.getElementById('search-overlay');
+        overlay.classList.remove('active');
+        document.getElementById('site-search').value = '';
+        const results = document.querySelector('.search-results');
+        if (results) results.style.display = 'none';
+      }
+
+      // Close on Escape key, open on /
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeSearch();
+        if (e.key === '/' && !['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) {
+          e.preventDefault();
+          toggleSearch();
+        }
+      });
+
+      // Close when clicking outside
       document.addEventListener('click', function(e) {
-        const searchContainer = document.querySelector('.header-search');
-        const searchToggle = document.getElementById('search-toggle');
-
-        if (!searchContainer || !searchContainer.classList.contains('active')) return;
-
-        // Check if click is outside search container and toggle button
-        if (!searchContainer.contains(e.target) && !searchToggle.contains(e.target)) {
-          searchContainer.classList.remove('active');
+        const overlay = document.getElementById('search-overlay');
+        const toggle = document.getElementById('search-toggle');
+        if (!overlay?.classList.contains('active')) return;
+        if (!overlay.contains(e.target) && !toggle.contains(e.target)) {
+          closeSearch();
         }
       });
 
@@ -339,6 +356,17 @@
           document.querySelector('.navbar').classList.remove('open');
           document.querySelector('.hamburger').classList.remove('open');
         });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(e) {
+        const navbar = document.querySelector('.navbar');
+        const hamburger = document.querySelector('.hamburger');
+        if (!navbar?.classList.contains('open')) return;
+        if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+          navbar.classList.remove('open');
+          hamburger.classList.remove('open');
+        }
       });
     </script>
   </body>
