@@ -196,6 +196,19 @@
   &__name {
     opacity: 0.8;
   }
+
+  &__legal {
+    color: var(--color-subtitle);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color);
+      text-decoration: none;
+      border-bottom: none;
+    }
+  }
 }
 
 // Responsive

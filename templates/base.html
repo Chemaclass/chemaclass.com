@@ -28,7 +28,6 @@
       {% endfor %}
     {% endif %}
 
-    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
 
     <!-- Preload fonts to prevent FOUT -->
     <link rel="preload" href="/fonts/rubik-regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -98,7 +97,7 @@
     </title>
 
     {% block head %}
-      <script src="https://kit.fontawesome.com/cfd779d106.js" crossorigin="anonymous" defer></script>
+      <link rel="stylesheet" href="/css/fontawesome.min.css">
     {% endblock head %}
     {% block styles %}
       <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
@@ -225,6 +224,8 @@
           </span>
           <span class="page-footer__separator">·</span>
           <span class="page-footer__name">Jose Maria Valera Reales</span>
+          <span class="page-footer__separator">·</span>
+          <a href="{% if lang == 'es' %}/es/legal/{% else %}/legal/{% endif %}" class="page-footer__legal">{{ trans(key="nav_legal", lang=lang) }}</a>
         </div>
       </div>
     </footer>
