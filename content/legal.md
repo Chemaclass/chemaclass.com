@@ -4,20 +4,9 @@ description = "Legal information and privacy policy for chemaclass.com"
 template = "page.html"
 +++
 
-<style>
-.legal-content { max-width: 700px; margin: 2rem auto; padding: 0 1rem; }
-.legal-content h1 { margin-bottom: 0.5rem; }
-.legal-content h2 { margin-top: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
-.legal-content p, .legal-content li { line-height: 1.7; }
-.legal-content ul { padding-left: 1.5rem; }
-.legal-updated { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; }
-</style>
-
-<div class="legal-content">
-
 # Legal Notice & Privacy
 
-<p class="legal-updated">Last updated: December 2025</p>
+<p style="color: var(--color-subtitle); font-size: 0.9rem; margin-bottom: 2rem;">Last updated: December 2025</p>
 
 ## Site Owner
 
@@ -76,5 +65,3 @@ I am not responsible for the content of external websites linked from this site.
 ## Open Source
 
 This website's source code is available on [GitHub](https://github.com/Chemaclass/chemaclass.com).
-
-</div>
