@@ -31,7 +31,7 @@ main:has(.homepage-container) #scroll-to-top {
   display: flex;
   gap: 3rem;
   align-items: flex-start;
-  padding: 1.5rem 0 1rem;
+  padding: 0;
 }
 
 // Left column: Hero content
@@ -584,7 +584,6 @@ main:has(.homepage-container) #scroll-to-top {
   .homepage-top {
     flex-direction: column;
     gap: 0rem;
-    padding: 0.5rem 0;
   }
 
   .hero-content {
@@ -616,15 +615,11 @@ main:has(.homepage-container) #scroll-to-top {
 @media (max-width: $breakpoint-phone) {
   main {
     padding: 0 1rem;
-  }
-
-  .homepage-container {
-    margin-top: 2rem;
+    margin-top: 68px; // Account for fixed header
   }
 
   .homepage-top {
     gap: 0.5rem;
-    padding: 0.25rem 0;
   }
 
   .profile {

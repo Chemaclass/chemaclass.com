@@ -243,7 +243,9 @@ a.site-title {
 
 @media (max-width: $breakpoint-phone) {
   .site-header {
-    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
     padding: 0.5rem 0.75rem;
     flex-wrap: wrap;
     gap: 1rem;
@@ -252,6 +254,11 @@ a.site-title {
       font-size: 0.95rem;
       gap: 1rem;
     }
+  }
+
+  // Add top margin to main to account for fixed header
+  main {
+    margin-top: 68px;
   }
 
   a.profile-icon img {

@@ -2,10 +2,12 @@
 // Web Development Service Page Styles
 // ==========================================================================
 
-// Disable sticky header on service pages
-body:has(.service-page) .site-header {
-  position: relative;
-  z-index: 2000;
+// Disable sticky header on service pages (desktop only, keep fixed on mobile)
+@media (min-width: $breakpoint-phone + 1) {
+  body:has(.service-page) .site-header {
+    position: relative;
+    z-index: 2000;
+  }
 }
 
 .service-page {

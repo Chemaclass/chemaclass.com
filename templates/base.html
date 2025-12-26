@@ -240,11 +240,11 @@
       <div class="page-footer__content">
         <div class="page-footer__links">
           <a href="{% if lang == 'es' %}{{ get_url(path='es/atom.xml') | safe }}{% else %}{{ get_url(path='atom.xml') | safe }}{% endif %}" class="page-footer__link">
-            <i class="fa fa-rss"></i>
+            <i class="fa-solid fa-rss"></i>
             <span>{{ trans(key="nav_rss", lang=lang) }}</span>
           </a>
           <a href="{% if lang == 'es' %}/es/sponsor/{% else %}/sponsor/{% endif %}" class="page-footer__link">
-            <i class="fa fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
             <span>{{ trans(key="nav_sponsor_cta", lang=lang) }}</span>
           </a>
           <a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="page-footer__link">
