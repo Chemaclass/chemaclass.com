@@ -383,31 +383,46 @@
   <!-- Portfolio -->
   <section class="service-portfolio">
     <h2>{% if lang == "es" %}Trabajos Recientes{% else %}Recent Work{% endif %}</h2>
-    <p>{% if lang == "es" %}Aquí hay algunos sitios web estáticos que he ayudado a construir:{% else %}Here are some static websites I've helped build:{% endif %}</p>
     <div class="portfolio-grid">
       <a href="https://fco-sandoval-gomez.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
-        <span class="portfolio-item__name">Fco Sandoval Gómez</span>
-        <span class="portfolio-item__url">fco-sandoval-gomez.es</span>
-        <span class="portfolio-item__type">{% if lang == "es" %}Arquitectura y conservación del patrimonio{% else %}Architecture and heritage conservation{% endif %}</span>
-        <span class="portfolio-item__tag">{% if lang == "es" %}Web Estática + Blog{% else %}Static Site + Blog{% endif %}</span>
+        <div class="portfolio-item__image">
+          <img src="/images/portfolio/fco-sandoval-gomez-sample.jpg" alt="Fco Sandoval Gómez website" loading="lazy">
+        </div>
+        <div class="portfolio-item__content">
+          <span class="portfolio-item__tag">{% if lang == "es" %}Estática + Blog{% else %}Static + Blog{% endif %}</span>
+          <h3 class="portfolio-item__name">Fco Sandoval Gómez <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+          <p class="portfolio-item__desc">{% if lang == "es" %}Portfolio profesional para un arquitecto especializado en conservación del patrimonio.{% else %}Professional portfolio for an architect specializing in heritage conservation.{% endif %}</p>
+        </div>
       </a>
       <a href="https://windmuehle-tuendern.de" target="_blank" rel="noopener noreferrer" class="portfolio-item">
-        <span class="portfolio-item__name">Windmuehle Tündern</span>
-        <span class="portfolio-item__url">windmuehle-tuendern.de</span>
-        <span class="portfolio-item__type">{% if lang == "es" %}Patrimonio histórico de molino{% else %}Historic windmill heritage site{% endif %}</span>
-        <span class="portfolio-item__tag">{% if lang == "es" %}Web Estática + Blog{% else %}Static Site + Blog{% endif %}</span>
+        <div class="portfolio-item__image">
+          <img src="/images/portfolio/windmuelle-tuendern-sample.jpg" alt="Windmuehle Tündern website" loading="lazy">
+        </div>
+        <div class="portfolio-item__content">
+          <span class="portfolio-item__tag">{% if lang == "es" %}Estática + Blog{% else %}Static + Blog{% endif %}</span>
+          <h3 class="portfolio-item__name">Windmuehle Tündern <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+          <p class="portfolio-item__desc">{% if lang == "es" %}Web sin ánimo de lucro para la restauración de un molino histórico en Alemania.{% else %}Non-profit site for the restoration of a historic windmill in Germany.{% endif %}</p>
+        </div>
       </a>
       <a href="https://phel-lang.org" target="_blank" rel="noopener noreferrer" class="portfolio-item">
-        <span class="portfolio-item__name">Phel Lang</span>
-        <span class="portfolio-item__url">phel-lang.org</span>
-        <span class="portfolio-item__type">{% if lang == "es" %}Dialecto Lisp para PHP{% else %}Lisp dialect for PHP{% endif %}</span>
-        <span class="portfolio-item__tag">{% if lang == "es" %}Web Estática + Blog{% else %}Static Site + Blog{% endif %}</span>
+        <div class="portfolio-item__image">
+          <img src="/images/portfolio/phel-lang-sample.jpg" alt="Phel Lang website" loading="lazy">
+        </div>
+        <div class="portfolio-item__content">
+          <span class="portfolio-item__tag">{% if lang == "es" %}Estática + Blog{% else %}Static + Blog{% endif %}</span>
+          <h3 class="portfolio-item__name">Phel Lang <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+          <p class="portfolio-item__desc">{% if lang == "es" %}Documentación y web oficial para un lenguaje de programación funcional.{% else %}Documentation and official site for a functional programming language.{% endif %}</p>
+        </div>
       </a>
       <a href="https://postcardfromtheroad.eu" target="_blank" rel="noopener noreferrer" class="portfolio-item">
-        <span class="portfolio-item__name">Postcard from the Road</span>
-        <span class="portfolio-item__url">postcardfromtheroad.eu</span>
-        <span class="portfolio-item__type">{% if lang == "es" %}Historias de viaje y fotografía{% else %}Travel stories and photography{% endif %}</span>
-        <span class="portfolio-item__tag">WordPress</span>
+        <div class="portfolio-item__image">
+          <img src="/images/portfolio/postcardfromtheroad-sample.jpg" alt="Postcard from the Road website" loading="lazy">
+        </div>
+        <div class="portfolio-item__content">
+          <span class="portfolio-item__tag">WordPress</span>
+          <h3 class="portfolio-item__name">Postcard from the Road <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+          <p class="portfolio-item__desc">{% if lang == "es" %}Blog de viajes con galería fotográfica y narrativas personales.{% else %}Travel blog with photo gallery and personal narratives.{% endif %}</p>
+        </div>
       </a>
     </div>
   </section>

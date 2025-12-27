@@ -861,20 +861,17 @@
 
 // Portfolio Section
 .service-portfolio {
-  > p {
-    text-align: center;
-    color: var(--color-subtitle);
-    margin: -1rem 0 2rem;
-  }
 }
 
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
 
-  @media (max-width: $breakpoint-phone) {
+  @media (max-width: $breakpoint-tablet) {
     grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
@@ -884,47 +881,77 @@
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
   border-radius: 12px;
-  padding: 1.25rem 1.5rem;
+  overflow: hidden;
   text-decoration: none;
   transition: all 0.2s ease;
-  position: relative;
 
   &:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    .portfolio-item__image img {
+      transform: scale(1.03);
+    }
+
+    .portfolio-item__name i {
+      opacity: 1;
+      transform: translateX(2px);
+    }
   }
 
-  &__name {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--heading-color);
-    margin-bottom: 0.25rem;
+  &__image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--preview-divider-color);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.3s ease;
+    }
   }
 
-  &__url {
-    font-size: 0.8rem;
-    color: var(--accent-color);
-    margin-bottom: 0.5rem;
-    font-family: monospace;
-  }
-
-  &__type {
-    font-size: 0.85rem;
-    color: var(--color-subtitle);
-    line-height: 1.5;
-    flex-grow: 1;
+  &__content {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   &__tag {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    align-self: flex-start;
     font-size: 0.7rem;
     font-weight: 600;
     color: var(--accent-color);
     background: var(--search-bg-selected-item);
-    padding: 0.2rem 0.6rem;
+    padding: 0.25rem 0.6rem;
     border-radius: 4px;
+  }
+
+  &__name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    i {
+      font-size: 0.75rem;
+      opacity: 0.5;
+      transition: all 0.2s ease;
+    }
+  }
+
+  &__desc {
+    font-size: 0.9rem;
+    color: var(--color-subtitle);
+    line-height: 1.5;
+    margin: 0;
   }
 }
 
