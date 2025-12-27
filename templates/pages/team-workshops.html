@@ -7,25 +7,25 @@
 {% block content %}
 <article class="service-page">
   <nav class="service-nav">
-    <a href="/services/" class="blog-post__back">
+    <a href="{% if lang == 'es' %}/es/services/{% else %}/services/{% endif %}" class="blog-post__back">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M19 12H5M12 19l-7-7 7-7"/>
       </svg>
-      All Services
+      {% if lang == "es" %}Todos los Servicios{% else %}All Services{% endif %}
     </a>
   </nav>
 
   <!-- Hero Section -->
   <header class="service-hero">
-    <h1>Team Workshops</h1>
-    <p class="service-hero__subtitle">Hands-on coding sessions that level up your team</p>
+    <h1>{% if lang == "es" %}Talleres de Equipo{% else %}Team Workshops{% endif %}</h1>
+    <p class="service-hero__subtitle">{% if lang == "es" %}Sesiones prácticas de código que potencian a tu equipo{% else %}Hands-on coding sessions that level up your team{% endif %}</p>
   </header>
 
   <!-- Value Proposition -->
   <section class="service-intro">
-    <p>Spend a full day coding, testing, and refactoring. This workshop is all about practical, hands-on learning: you'll work through a series of independent code katas designed to help you build strong habits around testing, test-driven development (TDD), and refactoring. Language-agnostic principles, adaptable to your team's stack.</p>
-    <a href="mailto:me@chemaclass.es?subject=Team%20Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20booking%20a%20team%20workshop.%0A%0ATeam%20size%3A%0APreferred%20dates%3A%0A%0AThanks!" class="service-intro__cta">
-      <i class="fa-solid fa-envelope"></i> Book a workshop
+    <p>{% if lang == "es" %}Pasa un día completo programando, testeando y refactorizando. Este taller es 100% práctico: trabajarás con una serie de katas de código independientes diseñadas para crear hábitos sólidos en testing, desarrollo guiado por tests (TDD) y refactoring. Principios agnósticos del lenguaje, adaptables al stack de tu equipo.{% else %}Spend a full day coding, testing, and refactoring. This workshop is all about practical, hands-on learning: you'll work through a series of independent code katas designed to help you build strong habits around testing, test-driven development (TDD), and refactoring. Language-agnostic principles, adaptable to your team's stack.{% endif %}</p>
+    <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Taller%20de%20Equipo&body=Hola%20Chema%2C%0A%0AEstoy%20interesado%20en%20reservar%20un%20taller%20de%20equipo.%0A%0ATamaño%20del%20equipo%3A%0AFechas%20preferidas%3A%0A%0AGracias!{% else %}Team%20Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20booking%20a%20team%20workshop.%0A%0ATeam%20size%3A%0APreferred%20dates%3A%0A%0AThanks!{% endif %}" class="service-intro__cta">
+      <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Reservar taller{% else %}Book a workshop{% endif %}
     </a>
   </section>
 
@@ -36,20 +36,20 @@
         <div class="service-option__icon">
           <i class="fa-solid fa-sun"></i>
         </div>
-        <h2>Morning Session</h2>
+        <h2>{% if lang == "es" %}Sesión de Mañana{% else %}Morning Session{% endif %}</h2>
         <span class="service-option__tag">Testing & TDD</span>
       </div>
 
-      <p class="service-option__desc">We focus on testing techniques that make change safe, from golden tests that capture existing behavior to TDD exercises that guide better design.</p>
+      <p class="service-option__desc">{% if lang == "es" %}Nos enfocamos en técnicas de testing que hacen el cambio seguro, desde tests golden master que capturan el comportamiento existente hasta ejercicios TDD que guían mejor diseño.{% else %}We focus on testing techniques that make change safe, from golden tests that capture existing behavior to TDD exercises that guide better design.{% endif %}</p>
 
       <div class="service-option__benefits">
-        <h3>Topics covered</h3>
+        <h3>{% if lang == "es" %}Temas cubiertos{% else %}Topics covered{% endif %}</h3>
         <ul>
-          <li><i class="fa-solid fa-check"></i> Golden master testing</li>
-          <li><i class="fa-solid fa-check"></i> Approval testing patterns</li>
-          <li><i class="fa-solid fa-check"></i> Test-driven development cycle</li>
-          <li><i class="fa-solid fa-check"></i> Writing tests that guide design</li>
-          <li><i class="fa-solid fa-check"></i> Understanding test doubles</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Testing golden master{% else %}Golden master testing{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Patrones de approval testing{% else %}Approval testing patterns{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Ciclo de desarrollo guiado por tests{% else %}Test-driven development cycle{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Escribir tests que guían el diseño{% else %}Writing tests that guide design{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Entendiendo los test doubles{% else %}Understanding test doubles{% endif %}</li>
         </ul>
       </div>
     </div>
@@ -59,20 +59,20 @@
         <div class="service-option__icon service-option__icon--secondary">
           <i class="fa-solid fa-moon"></i>
         </div>
-        <h2>Afternoon Session</h2>
+        <h2>{% if lang == "es" %}Sesión de Tarde{% else %}Afternoon Session{% endif %}</h2>
         <span class="service-option__tag service-option__tag--secondary">Refactoring</span>
       </div>
 
-      <p class="service-option__desc">We switch gears to refactoring: applying small, focused changes to improve messy, legacy-style code without breaking it.</p>
+      <p class="service-option__desc">{% if lang == "es" %}Cambiamos el enfoque al refactoring: aplicando cambios pequeños y focalizados para mejorar código legacy sin romperlo.{% else %}We switch gears to refactoring: applying small, focused changes to improve messy, legacy-style code without breaking it.{% endif %}</p>
 
       <div class="service-option__benefits">
-        <h3>Topics covered</h3>
+        <h3>{% if lang == "es" %}Temas cubiertos{% else %}Topics covered{% endif %}</h3>
         <ul>
-          <li><i class="fa-solid fa-check"></i> Safe refactoring techniques</li>
-          <li><i class="fa-solid fa-check"></i> Extract method & class patterns</li>
-          <li><i class="fa-solid fa-check"></i> Working with legacy code</li>
-          <li><i class="fa-solid fa-check"></i> Code smells identification</li>
-          <li><i class="fa-solid fa-check"></i> Incremental improvement strategies</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Técnicas de refactoring seguro{% else %}Safe refactoring techniques{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Patrones extract method & class{% else %}Extract method & class patterns{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Trabajar con código legacy{% else %}Working with legacy code{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Identificación de code smells{% else %}Code smells identification{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Estrategias de mejora incremental{% else %}Incremental improvement strategies{% endif %}</li>
         </ul>
       </div>
     </div>
@@ -80,176 +80,176 @@
 
   <!-- What you'll learn -->
   <section class="service-decision">
-    <h2>What your team will gain</h2>
+    <h2>{% if lang == "es" %}Qué ganará tu equipo{% else %}What your team will gain{% endif %}</h2>
     <div class="decision-cards">
       <div class="decision-card">
-        <h3><i class="fa-solid fa-flask-vial"></i> Testing confidence</h3>
+        <h3><i class="fa-solid fa-flask-vial"></i> {% if lang == "es" %}Confianza en testing{% else %}Testing confidence{% endif %}</h3>
         <ul>
-          <li>Write meaningful tests</li>
-          <li>Test legacy code safely</li>
-          <li>Build a testing habit</li>
+          <li>{% if lang == "es" %}Escribir tests significativos{% else %}Write meaningful tests{% endif %}</li>
+          <li>{% if lang == "es" %}Testear código legacy con seguridad{% else %}Test legacy code safely{% endif %}</li>
+          <li>{% if lang == "es" %}Crear el hábito de testear{% else %}Build a testing habit{% endif %}</li>
         </ul>
       </div>
       <div class="decision-card">
-        <h3><i class="fa-solid fa-code-branch"></i> TDD mindset</h3>
+        <h3><i class="fa-solid fa-code-branch"></i> {% if lang == "es" %}Mentalidad TDD{% else %}TDD mindset{% endif %}</h3>
         <ul>
-          <li>Red-green-refactor cycle</li>
-          <li>Design through tests</li>
-          <li>Smaller, focused commits</li>
+          <li>{% if lang == "es" %}Ciclo red-green-refactor{% else %}Red-green-refactor cycle{% endif %}</li>
+          <li>{% if lang == "es" %}Diseñar a través de tests{% else %}Design through tests{% endif %}</li>
+          <li>{% if lang == "es" %}Commits más pequeños y focalizados{% else %}Smaller, focused commits{% endif %}</li>
         </ul>
       </div>
       <div class="decision-card">
-        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Refactoring skills</h3>
+        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> {% if lang == "es" %}Habilidades de refactoring{% else %}Refactoring skills{% endif %}</h3>
         <ul>
-          <li>Improve code safely</li>
-          <li>Tackle technical debt</li>
-          <li>Clean code patterns</li>
+          <li>{% if lang == "es" %}Mejorar código con seguridad{% else %}Improve code safely{% endif %}</li>
+          <li>{% if lang == "es" %}Abordar deuda técnica{% else %}Tackle technical debt{% endif %}</li>
+          <li>{% if lang == "es" %}Patrones de código limpio{% else %}Clean code patterns{% endif %}</li>
         </ul>
       </div>
     </div>
     <p class="decision-tip">
       <i class="fa-solid fa-lightbulb"></i>
-      <strong>Key outcome:</strong> Your team walks away with a proven toolkit for writing better code, improving existing codebases, and collaborating effectively through pair programming.
+      <strong>{% if lang == "es" %}Resultado clave:{% else %}Key outcome:{% endif %}</strong> {% if lang == "es" %}Tu equipo sale con un toolkit probado para escribir mejor código, mejorar codebases existentes y colaborar efectivamente mediante pair programming.{% else %}Your team walks away with a proven toolkit for writing better code, improving existing codebases, and collaborating effectively through pair programming.{% endif %}
     </p>
   </section>
 
   <!-- How it works -->
   <section class="service-process">
-    <h2>How I Work</h2>
+    <h2>{% if lang == "es" %}Cómo Trabajo{% else %}How I Work{% endif %}</h2>
     <div class="process-steps">
       <div class="process-step">
         <span class="process-step__number">1</span>
         <div class="process-step__content">
-          <h3>Discovery Call</h3>
-          <p>We discuss your team's experience level and specific challenges you want to address.</p>
+          <h3>{% if lang == "es" %}Llamada de Descubrimiento{% else %}Discovery Call{% endif %}</h3>
+          <p>{% if lang == "es" %}Hablamos del nivel de experiencia de tu equipo y los retos específicos que quieres abordar.{% else %}We discuss your team's experience level and specific challenges you want to address.{% endif %}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">2</span>
         <div class="process-step__content">
-          <h3>Customization</h3>
-          <p>I tailor the katas and exercises to match your team's tech stack and goals.</p>
+          <h3>{% if lang == "es" %}Personalización{% else %}Customization{% endif %}</h3>
+          <p>{% if lang == "es" %}Adapto las katas y ejercicios al stack tecnológico y objetivos de tu equipo.{% else %}I tailor the katas and exercises to match your team's tech stack and goals.{% endif %}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">3</span>
         <div class="process-step__content">
-          <h3>Workshop Day</h3>
-          <p>Full day of hands-on coding, pair programming, and collaborative learning.</p>
+          <h3>{% if lang == "es" %}Día del Taller{% else %}Workshop Day{% endif %}</h3>
+          <p>{% if lang == "es" %}Día completo de programación práctica, pair programming y aprendizaje colaborativo.{% else %}Full day of hands-on coding, pair programming, and collaborative learning.{% endif %}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">4</span>
         <div class="process-step__content">
-          <h3>Follow-up</h3>
-          <p>Materials, code samples, and resources to continue practicing.</p>
+          <h3>{% if lang == "es" %}Seguimiento{% else %}Follow-up{% endif %}</h3>
+          <p>{% if lang == "es" %}Materiales, ejemplos de código y recursos para seguir practicando.{% else %}Materials, code samples, and resources to continue practicing.{% endif %}</p>
         </div>
       </div>
     </div>
 
     <div class="budget-section">
       <div class="budget-header">
-        <h3>Investment</h3>
-        <p>€350 per person. Groups of 3-8 participants.</p>
+        <h3>{% if lang == "es" %}Inversión{% else %}Investment{% endif %}</h3>
+        <p>{% if lang == "es" %}€350 por persona. Grupos de 3-8 participantes.{% else %}€350 per person. Groups of 3-8 participants.{% endif %}</p>
       </div>
 
       <div class="budget-cards">
         <div class="budget-card">
-          <span class="budget-card__type">3 people</span>
-          <span class="budget-card__range">€1,050</span>
-          <span class="budget-card__note">Minimum group size</span>
+          <span class="budget-card__type">{% if lang == "es" %}3 personas{% else %}3 people{% endif %}</span>
+          <span class="budget-card__range">€1{% if lang == "es" %}.{% else %},{% endif %}050</span>
+          <span class="budget-card__note">{% if lang == "es" %}Tamaño mínimo de grupo{% else %}Minimum group size{% endif %}</span>
           <div class="budget-card__yearly">
-            <span class="budget-card__yearly-title">Includes</span>
+            <span class="budget-card__yearly-title">{% if lang == "es" %}Incluye{% else %}Includes{% endif %}</span>
             <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">Duration</span>
-              <span class="budget-card__yearly-value">6 hours</span>
+              <span class="budget-card__yearly-label">{% if lang == "es" %}Duración{% else %}Duration{% endif %}</span>
+              <span class="budget-card__yearly-value">6 {% if lang == "es" %}horas{% else %}hours{% endif %}</span>
             </div>
             <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">Materials</span>
-              <span class="budget-card__yearly-value">Included</span>
+              <span class="budget-card__yearly-label">{% if lang == "es" %}Materiales{% else %}Materials{% endif %}</span>
+              <span class="budget-card__yearly-value">{% if lang == "es" %}Incluidos{% else %}Included{% endif %}</span>
             </div>
           </div>
         </div>
 
         <div class="budget-card budget-card--recommended">
-          <span class="budget-card__badge">Recommended</span>
-          <span class="budget-card__type">4-6 people</span>
-          <span class="budget-card__range">€1,400 – €2,100</span>
-          <span class="budget-card__note">Ideal group size</span>
+          <span class="budget-card__badge">{% if lang == "es" %}Recomendado{% else %}Recommended{% endif %}</span>
+          <span class="budget-card__type">{% if lang == "es" %}4-6 personas{% else %}4-6 people{% endif %}</span>
+          <span class="budget-card__range">€1{% if lang == "es" %}.{% else %},{% endif %}400 – €2{% if lang == "es" %}.{% else %},{% endif %}100</span>
+          <span class="budget-card__note">{% if lang == "es" %}Tamaño ideal de grupo{% else %}Ideal group size{% endif %}</span>
           <div class="budget-card__yearly">
-            <span class="budget-card__yearly-title">Includes</span>
+            <span class="budget-card__yearly-title">{% if lang == "es" %}Incluye{% else %}Includes{% endif %}</span>
             <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">Duration</span>
-              <span class="budget-card__yearly-value">6 hours</span>
+              <span class="budget-card__yearly-label">{% if lang == "es" %}Duración{% else %}Duration{% endif %}</span>
+              <span class="budget-card__yearly-value">6 {% if lang == "es" %}horas{% else %}hours{% endif %}</span>
             </div>
             <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">Follow-up</span>
-              <span class="budget-card__yearly-value">Resources & code</span>
+              <span class="budget-card__yearly-label">{% if lang == "es" %}Seguimiento{% else %}Follow-up{% endif %}</span>
+              <span class="budget-card__yearly-value">{% if lang == "es" %}Recursos{% else %}Resources & code{% endif %}</span>
             </div>
           </div>
         </div>
 
         <div class="budget-card">
-          <span class="budget-card__type">8 people</span>
-          <span class="budget-card__range">€2,800</span>
-          <span class="budget-card__note">Maximum group size</span>
+          <span class="budget-card__type">{% if lang == "es" %}8 personas{% else %}8 people{% endif %}</span>
+          <span class="budget-card__range">€2{% if lang == "es" %}.{% else %},{% endif %}800</span>
+          <span class="budget-card__note">{% if lang == "es" %}Tamaño máximo de grupo{% else %}Maximum group size{% endif %}</span>
           <div class="budget-card__yearly">
-            <span class="budget-card__yearly-title">Includes</span>
+            <span class="budget-card__yearly-title">{% if lang == "es" %}Incluye{% else %}Includes{% endif %}</span>
             <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">Duration</span>
-              <span class="budget-card__yearly-value">6 hours</span>
+              <span class="budget-card__yearly-label">{% if lang == "es" %}Duración{% else %}Duration{% endif %}</span>
+              <span class="budget-card__yearly-value">6 {% if lang == "es" %}horas{% else %}hours{% endif %}</span>
             </div>
             <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">Custom katas</span>
-              <span class="budget-card__yearly-value">Included</span>
+              <span class="budget-card__yearly-label">{% if lang == "es" %}Katas personalizadas{% else %}Custom katas{% endif %}</span>
+              <span class="budget-card__yearly-value">{% if lang == "es" %}Incluidas{% else %}Included{% endif %}</span>
             </div>
           </div>
         </div>
       </div>
 
-      <p class="budget-disclaimer">Prices exclude VAT. On-site workshops available in Berlin, otherwise remote. A detailed quote is provided after the discovery call.</p>
+      <p class="budget-disclaimer">{% if lang == "es" %}Precios sin IVA. Talleres presenciales disponibles en Berlín, en otro caso remotos. Se proporciona un presupuesto detallado después de la llamada de descubrimiento.{% else %}Prices exclude VAT. On-site workshops available in Berlin, otherwise remote. A detailed quote is provided after the discovery call.{% endif %}</p>
     </div>
   </section>
 
   <!-- Previous workshops -->
   <section class="service-portfolio">
-    <h2>Workshop Resources</h2>
-    <p>Materials and talks related to my workshop content:</p>
+    <h2>{% if lang == "es" %}Recursos del Taller{% else %}Workshop Resources{% endif %}</h2>
+    <p>{% if lang == "es" %}Materiales y charlas relacionadas con el contenido del taller:{% else %}Materials and talks related to my workshop content:{% endif %}</p>
     <div class="portfolio-grid">
-      <a href="/blog/test-driven-development/" class="portfolio-item">
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/test-driven-development/" class="portfolio-item">
         <span class="portfolio-item__name">Test-Driven Development</span>
-        <span class="portfolio-item__url">Blog post</span>
-        <span class="portfolio-item__type">Understanding TDD principles and practices</span>
-        <span class="portfolio-item__tag">Article</span>
+        <span class="portfolio-item__url">{% if lang == "es" %}Artículo del blog{% else %}Blog post{% endif %}</span>
+        <span class="portfolio-item__type">{% if lang == "es" %}Entendiendo los principios y prácticas de TDD{% else %}Understanding TDD principles and practices{% endif %}</span>
+        <span class="portfolio-item__tag">{% if lang == "es" %}Artículo{% else %}Article{% endif %}</span>
       </a>
-      <a href="/blog/effective-pair-programming/" class="portfolio-item">
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/effective-pair-programming/" class="portfolio-item">
         <span class="portfolio-item__name">Effective Pair Programming</span>
-        <span class="portfolio-item__url">Blog post</span>
-        <span class="portfolio-item__type">Techniques for collaborative coding</span>
-        <span class="portfolio-item__tag">Article</span>
+        <span class="portfolio-item__url">{% if lang == "es" %}Artículo del blog{% else %}Blog post{% endif %}</span>
+        <span class="portfolio-item__type">{% if lang == "es" %}Técnicas para programación colaborativa{% else %}Techniques for collaborative coding{% endif %}</span>
+        <span class="portfolio-item__tag">{% if lang == "es" %}Artículo{% else %}Article{% endif %}</span>
       </a>
-      <a href="/blog/the-art-of-refactoring/" class="portfolio-item">
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/the-art-of-refactoring/" class="portfolio-item">
         <span class="portfolio-item__name">The Art of Refactoring</span>
-        <span class="portfolio-item__url">Blog post</span>
-        <span class="portfolio-item__type">Principles and patterns for clean code</span>
-        <span class="portfolio-item__tag">Article</span>
+        <span class="portfolio-item__url">{% if lang == "es" %}Artículo del blog{% else %}Blog post{% endif %}</span>
+        <span class="portfolio-item__type">{% if lang == "es" %}Principios y patrones para código limpio{% else %}Principles and patterns for clean code{% endif %}</span>
+        <span class="portfolio-item__tag">{% if lang == "es" %}Artículo{% else %}Article{% endif %}</span>
       </a>
-      <a href="/blog/great-engineering/" class="portfolio-item">
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/great-engineering/" class="portfolio-item">
         <span class="portfolio-item__name">Great Engineering</span>
-        <span class="portfolio-item__url">Blog post</span>
-        <span class="portfolio-item__type">What makes engineering teams excel</span>
-        <span class="portfolio-item__tag">Article</span>
+        <span class="portfolio-item__url">{% if lang == "es" %}Artículo del blog{% else %}Blog post{% endif %}</span>
+        <span class="portfolio-item__type">{% if lang == "es" %}Qué hace que los equipos de ingeniería destaquen{% else %}What makes engineering teams excel{% endif %}</span>
+        <span class="portfolio-item__tag">{% if lang == "es" %}Artículo{% else %}Article{% endif %}</span>
       </a>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="service-cta">
-    <h2>Ready to level up your team?</h2>
-    <p>Let's discuss how a workshop can help your team write better code, work together more effectively, and tackle that legacy codebase with confidence.</p>
+    <h2>{% if lang == "es" %}¿Listo para potenciar a tu equipo?{% else %}Ready to level up your team?{% endif %}</h2>
+    <p>{% if lang == "es" %}Hablemos de cómo un taller puede ayudar a tu equipo a escribir mejor código, trabajar juntos de forma más efectiva y abordar ese codebase legacy con confianza.{% else %}Let's discuss how a workshop can help your team write better code, work together more effectively, and tackle that legacy codebase with confidence.{% endif %}</p>
     <div class="service-cta__buttons">
-      <a href="mailto:me@chemaclass.es?subject=Team%20Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20booking%20a%20team%20workshop.%0A%0ATeam%20size%3A%0APreferred%20dates%3A%0ALocation%20(on-site%2Fremote)%3A%0A%0AThanks!" class="service-cta__btn service-cta__btn--secondary">
-        <i class="fa-solid fa-envelope"></i> Get in touch
+      <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Taller%20de%20Equipo&body=Hola%20Chema%2C%0A%0AEstoy%20interesado%20en%20reservar%20un%20taller%20de%20equipo.%0A%0ATamaño%20del%20equipo%3A%0AFechas%20preferidas%3A%0AUbicación%20(presencial%2Fremoto)%3A%0A%0AGracias!{% else %}Team%20Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20booking%20a%20team%20workshop.%0A%0ATeam%20size%3A%0APreferred%20dates%3A%0ALocation%20(on-site%2Fremote)%3A%0A%0AThanks!{% endif %}" class="service-cta__btn service-cta__btn--secondary">
+        <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Contactar{% else %}Get in touch{% endif %}
       </a>
     </div>
   </section>

@@ -79,7 +79,7 @@
         {% endif %}
       </div>
       <div class="sessions-actions">
-        <a href="mailto:me@chemaclass.es" class="sessions-cta">
+        <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Sesión%201:1&body=Hola%20Chema,%0A%0AMe%20gustaría%20reservar%20una%20sesión%201:1.%0A%0ATema%20que%20me%20interesa:%0A%0AGracias!{% else %}1:1%20Session%20Inquiry&body=Hi%20Chema,%0A%0AI'd%20like%20to%20book%20a%201:1%20session.%0A%0ATopic%20I'm%20interested%20in:%0A%0AThanks!{% endif %}" class="sessions-cta">
           <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Escríbeme{% else %}Email me{% endif %}
         </a>
         <a href="{% if lang == 'es' %}/es/tags/{% else %}/tags/{% endif %}" class="sessions-cta sessions-cta--secondary">
@@ -94,7 +94,7 @@
         <p>{% if lang == "es" %}¿Conoces a alguien que <a href="/services/web-development/#everywebsite">necesita una web</a>? Regálale un vale parcial o total. Ideal para Navidad!{% else %}Know someone who <a href="/services/web-development/#everywebsite">needs a website</a>? Gift them a voucher for partial or full price. Ideal for Christmas!{% endif %}</p>
       </div>
       <div class="sessions-actions">
-        <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Vale%20Regalo{% else %}Gift%20Voucher%20Inquiry{% endif %}" class="sessions-cta">
+        <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Vale%20Regalo&body=Hola%20Chema,%0A%0AMe%20gustaría%20solicitar%20un%20vale%20regalo.%0A%0ATipo%20de%20vale:%0ANombre%20del%20destinatario:%0A%0AGracias!{% else %}Gift%20Voucher%20Inquiry&body=Hi%20Chema,%0A%0AI'd%20like%20to%20request%20a%20gift%20voucher.%0A%0AType%20of%20voucher:%0ARecipient%20name:%0A%0AThanks!{% endif %}" class="sessions-cta">
           <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Solicitar un vale{% else %}Request a voucher{% endif %}
         </a>
       </div>

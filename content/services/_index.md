@@ -1,7 +1,7 @@
 +++
 title = "Services | Chemaclass"
 description = "Professional websites and team workshops. I help businesses and individuals get online and dev teams level up."
-template = "pages/projects.html"
+template = "pages/services.html"
 aliases = ["/projects/", "/hire-me/"]
 
 [extra]
