@@ -674,6 +674,10 @@
     font-size: 1rem;
     color: var(--color-subtitle);
     margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
   }
 }
 
