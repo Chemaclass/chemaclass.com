@@ -5,6 +5,16 @@ page_template = "talks/single.html"
 sort_by = "weight"
 +++
 
+## 2026
+
+### Junio
+
+- 2026-06-08/10 | International PHP Conference [**Berlín, Alemania**] (EN)
+  - [Taller de día completo: Modernizando PHP Legacy con Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
+  - [Escribiendo Lisp en PHP: Un viaje con Phel](https://phpconference.com/php-core-coding/lisp-in-php-phel/)
+
+---
+
 ## 2025
 
 ### Noviembre

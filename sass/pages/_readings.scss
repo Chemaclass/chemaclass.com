@@ -13,7 +13,15 @@
   .readings-intro {
     color: var(--color-subtitle);
     font-size: 1.1rem;
-    margin: 0;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .readings-header .readings-intro {
+    font-size: 1rem;
   }
 }
 
