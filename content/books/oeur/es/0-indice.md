@@ -12,7 +12,7 @@ tags = []
     - De Jesús Valera Reales
     - De Francisco Javier
 
-### 2015
+## 2015
 
 - [Capítulo 1: Marzo](@/books/oeur/es/01-2015-marzo.md)
     - De un trago
@@ -151,7 +151,7 @@ tags = []
     - Singularidades
     - La educación
 
-### 2017
+## 2017
 
 - [Capítulo 23: Enero](@/books/oeur/es/23-2017-enero.md)
     - Falsa libertad

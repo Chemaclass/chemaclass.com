@@ -38,7 +38,7 @@
         </div>
         <h3>{% if lang == "es" %}Desarrollo Web{% else %}Static Websites{% endif %}</h3>
         <p>{% if lang == "es" %}Landing pages, portfolios, sitios corporativos. Rápidos, accesibles, fáciles de mantener.{% else %}Landing pages, portfolios, company sites. Fast, accessible, easy to maintain.{% endif %}</p>
-        <span class="service-card__price">{% if lang == "es" %}Desde{% else %}From{% endif %} €{{ macros::price(value=config.extra.pricing.web_dev_starting, lang=lang) }}</span>
+        <span class="service-card__price">{% if lang == "es" %}Desde{% else %}From{% endif %} €{{ macros::price(value=config.extra.pricing_web_dev_starting, lang=lang) }}</span>
       </a>
 
       <a href="{% if lang == 'es' %}/es/services/team-workshops/{% else %}/services/team-workshops/{% endif %}" class="service-card">
@@ -50,7 +50,7 @@
         </div>
         <h3>{% if lang == "es" %}Talleres de Equipo{% else %}Team Workshops{% endif %}</h3>
         <p>{% if lang == "es" %}Sesiones de equipo sobre TDD, refactoring y pair programming a través de katas.{% else %}Team sessions on TDD, refactoring, and pair programming through katas.{% endif %}</p>
-        <span class="service-card__price">{% if lang == "es" %}Desde €{{ config.extra.pricing.workshop_per_person }}/persona{% else %}From €{{ config.extra.pricing.workshop_per_person }}/person{% endif %}</span>
+        <span class="service-card__price">{% if lang == "es" %}Desde €{{ config.extra.pricing_workshop_per_person }}/persona{% else %}From €{{ config.extra.pricing_workshop_per_person }}/person{% endif %}</span>
       </a>
 
     </div>
@@ -141,7 +141,7 @@
           <i class="fa-solid fa-chevron-down"></i>
         </button>
         <div class="services-faq__answer">
-          {% if lang == "es" %}Sí. Los sitios estáticos necesitan mantenimiento mínimo (€{{ config.extra.pricing.static_maintenance_min }}-{{ config.extra.pricing.static_maintenance_max }}/año). WordPress requiere actualizaciones regulares (€{{ config.extra.pricing.wordpress_maintenance }}/año). También ayudo con cambios puntuales.{% else %}Yes. Static sites need minimal maintenance (€{{ config.extra.pricing.static_maintenance_min }}-{{ config.extra.pricing.static_maintenance_max }}/year). WordPress requires regular updates (€{{ config.extra.pricing.wordpress_maintenance }}/year). I also help with one-off changes.{% endif %}
+          {% if lang == "es" %}Sí. Los sitios estáticos necesitan mantenimiento mínimo (€{{ config.extra.pricing_static_maintenance_min }}-{{ config.extra.pricing_static_maintenance_max }}/año). WordPress requiere actualizaciones regulares (€{{ config.extra.pricing_wordpress_maintenance }}/año). También ayudo con cambios puntuales.{% else %}Yes. Static sites need minimal maintenance (€{{ config.extra.pricing_static_maintenance_min }}-{{ config.extra.pricing_static_maintenance_max }}/year). WordPress requires regular updates (€{{ config.extra.pricing_wordpress_maintenance }}/year). I also help with one-off changes.{% endif %}
         </div>
       </div>
     </div>

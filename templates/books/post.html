@@ -21,81 +21,99 @@
   <!-- Reading progress bar -->
   <div id="reading-progress" class="reading-progress"></div>
 
-  <!-- Table of Contents (floating sidebar) -->
-  <nav id="toc-container"></nav>
+  <div class="blog-post-layout" data-toc-hidden="false">
+    <!-- Table of Contents -->
+    <nav
+      id="toc-container"
+      data-hide-toc="false"
+      data-title="{{ trans(key='toc_header_title', lang=lang) }}"
+      data-close-label="{{ trans(key='toc_close_label', lang=lang) }}"></nav>
 
-  <article class="book-chapter">
-    <!-- Back to book link -->
-    {% set section = get_section(path=page.ancestors | last) %}
-    <a href="{{ section.permalink }}" class="book-chapter__back">
-      {{ macros::back_arrow() }}
-      {{ section.title | split(pat=" | ") | first }}
-    </a>
+    <div class="blog-post-main">
+      <article class="book-chapter">
+        <!-- Back to book link -->
+        {% set section = get_section(path=page.ancestors | last) %}
+        <div class="blog-post__top-row">
+          <a href="{{ section.permalink }}" class="book-chapter__back">
+            {{ macros::back_arrow() }}
+            {{ section.title | split(pat=" | ") | first }}
+          </a>
+          <button id="toc-toggle"
+                  class="toc-toggle"
+                  type="button"
+                  aria-pressed="false"
+                  data-show-text="{{ trans(key='toc_toggle_show', lang=lang) }}"
+                  data-hide-text="{{ trans(key='toc_toggle_hide', lang=lang) }}">
+            {{ trans(key='toc_toggle_hide', lang=lang) }}
+          </button>
+        </div>
 
-    <!-- Chapter header -->
-    <header class="book-chapter__header">
-      <h1 class="book-chapter__title">{{ page.title }}</h1>
+        <!-- Chapter header -->
+        <header class="book-chapter__header">
+          <h1 class="book-chapter__title">{{ page.title }}</h1>
 
-      <div class="book-chapter__meta">
-        {% if page.date %}
-        <span class="book-chapter__date">
-          {{ macros::calendar_icon() }}
-          {{ page.date | date(format="%B %Y") }}
-        </span>
-        {% endif %}
-        {% if page.reading_time %}
-        <span class="book-chapter__reading-time">
-          {{ macros::clock_icon() }}
-          {{ page.reading_time }} {{ trans(key="minutes_read", lang=lang) }}
-        </span>
-        {% endif %}
-        {% if page.word_count %}
-        <span class="book-chapter__word-count">
-          {{ macros::document_icon() }}
-          {{ page.word_count }} {{ trans(key="words", lang=lang) }}
-        </span>
-        {% endif %}
-      </div>
-    </header>
+          <div class="book-chapter__meta">
+            {% if page.date %}
+            <span class="book-chapter__date">
+              {{ macros::calendar_icon() }}
+              {{ page.date | date(format="%B %Y") }}
+            </span>
+            {% endif %}
+            {% if page.reading_time %}
+            <span class="book-chapter__reading-time">
+              {{ macros::clock_icon() }}
+              {{ page.reading_time }} {{ trans(key="minutes_read", lang=lang) }}
+            </span>
+            {% endif %}
+            {% if page.word_count %}
+            <span class="book-chapter__word-count">
+              {{ macros::document_icon() }}
+              {{ page.word_count }} {{ trans(key="words", lang=lang) }}
+            </span>
+            {% endif %}
+          </div>
+        </header>
 
-    <!-- Chapter content -->
-    <div class="book-chapter__content">
-      {{ page.content | safe }}
+        <!-- Chapter content -->
+        <div class="book-chapter__content">
+          {{ page.content | safe }}
+        </div>
+
+        <!-- Footer -->
+        <footer class="book-chapter__footer">
+          {% set url = config.extra.repo_content_url ~ page.relative_path %}
+          <a href="{{ url }}" class="book-chapter__edit-link">
+            {{ macros::edit_icon() }}
+            {{ trans(key="found_typo", lang=lang) }}
+          </a>
+        </footer>
+
+        <!-- Chapter navigation -->
+        <nav class="book-chapter__nav">
+          {% if page.lower %}
+            <a href="{{ page.lower.permalink }}" class="book-chapter__nav-link book-chapter__nav-link--prev">
+              <span class="book-chapter__nav-label">
+                {{ macros::nav_arrow_left() }}
+                {{ trans(key="previous_chapter", lang=lang) }}
+              </span>
+              <span class="book-chapter__nav-title">{{ page.lower.title }}</span>
+            </a>
+          {% else %}
+            <span></span>
+          {% endif %}
+          {% if page.higher %}
+            <a href="{{ page.higher.permalink }}" class="book-chapter__nav-link book-chapter__nav-link--next">
+              <span class="book-chapter__nav-label">
+                {{ trans(key="next_chapter", lang=lang) }}
+                {{ macros::nav_arrow_right() }}
+              </span>
+              <span class="book-chapter__nav-title">{{ page.higher.title }}</span>
+            </a>
+          {% endif %}
+        </nav>
+      </article>
     </div>
-
-    <!-- Footer -->
-    <footer class="book-chapter__footer">
-      {% set url = config.extra.repo_content_url ~ page.relative_path %}
-      <a href="{{ url }}" class="book-chapter__edit-link">
-        {{ macros::edit_icon() }}
-        {{ trans(key="found_typo", lang=lang) }}
-      </a>
-    </footer>
-
-    <!-- Chapter navigation -->
-    <nav class="book-chapter__nav">
-      {% if page.lower %}
-        <a href="{{ page.lower.permalink }}" class="book-chapter__nav-link book-chapter__nav-link--prev">
-          <span class="book-chapter__nav-label">
-            {{ macros::nav_arrow_left() }}
-            {{ trans(key="previous_chapter", lang=lang) }}
-          </span>
-          <span class="book-chapter__nav-title">{{ page.lower.title }}</span>
-        </a>
-      {% else %}
-        <span></span>
-      {% endif %}
-      {% if page.higher %}
-        <a href="{{ page.higher.permalink }}" class="book-chapter__nav-link book-chapter__nav-link--next">
-          <span class="book-chapter__nav-label">
-            {{ trans(key="next_chapter", lang=lang) }}
-            {{ macros::nav_arrow_right() }}
-          </span>
-          <span class="book-chapter__nav-title">{{ page.higher.title }}</span>
-        </a>
-      {% endif %}
-    </nav>
-  </article>
+  </div>
 
   {% include "partials/footer-about.html" %}
 
