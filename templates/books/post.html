@@ -2,6 +2,7 @@
 
 {% import "partials/helpers-preview.html" as helpers_preview %}
 {% import "partials/related-container.html" as related %}
+{% import "partials/macros.html" as macros %}
 
 {% block posthead %}
 {% if page.lower %}
@@ -12,34 +13,8 @@
 <link rel="prerender" href="{{ page.higher.permalink }}">
 {% endif %}
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Chapter",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "{{ page.permalink | safe }}"
-    },
-    "headline": "{{ page.title }}",
-    "image": [{% if page.extra.static_thumbnail %} "{{ config.base_url|safe }}{{ page.extra.static_thumbnail|safe }}"{% endif %}]{% if page.date %},
-    "datePublished": "{{ page.date | date(format="%+") }}"{% endif %}{% if page.date %},
-    "dateModified": "{{ page.date | date(format="%+") }}"{% endif %}{% if config.extra.author %},
-    "author": {
-      "@type": "Person",
-      "name": "{{ config.extra.author }}"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "{{ config.extra.author }}"{% if config.extra.icon %},
-      "logo": {
-        "@type": "ImageObject",
-        "url": "{{ get_url(path=config.extra.icon) | safe }}"
-      }
-      {% endif %}
-    }
-    {% endif %}
-  }
-</script>
+{% set schema_type = "Chapter" %}
+{% include "partials/post-schema.html" %}
 {% endblock posthead %}
 
 {% block content %}
@@ -53,9 +28,7 @@
     <!-- Back to book link -->
     {% set section = get_section(path=page.ancestors | last) %}
     <a href="{{ section.permalink }}" class="book-chapter__back">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M19 12H5M12 19l-7-7 7-7"/>
-      </svg>
+      {{ macros::back_arrow() }}
       {{ section.title | split(pat=" | ") | first }}
     </a>
 
@@ -66,33 +39,20 @@
       <div class="book-chapter__meta">
         {% if page.date %}
         <span class="book-chapter__date">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-            <line x1="16" y1="2" x2="16" y2="6"></line>
-            <line x1="8" y1="2" x2="8" y2="6"></line>
-            <line x1="3" y1="10" x2="21" y2="10"></line>
-          </svg>
+          {{ macros::calendar_icon() }}
           {{ page.date | date(format="%B %Y") }}
         </span>
         {% endif %}
         {% if page.reading_time %}
         <span class="book-chapter__reading-time">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-          {{ page.reading_time }} min
+          {{ macros::clock_icon() }}
+          {{ page.reading_time }} {{ trans(key="minutes_read", lang=lang) }}
         </span>
         {% endif %}
         {% if page.word_count %}
         <span class="book-chapter__word-count">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="16" y1="13" x2="8" y2="13"></line>
-            <line x1="16" y1="17" x2="8" y2="17"></line>
-          </svg>
-          {{ page.word_count }} words
+          {{ macros::document_icon() }}
+          {{ page.word_count }} {{ trans(key="words", lang=lang) }}
         </span>
         {% endif %}
       </div>
@@ -107,11 +67,8 @@
     <footer class="book-chapter__footer">
       {% set url = config.extra.repo_content_url ~ page.relative_path %}
       <a href="{{ url }}" class="book-chapter__edit-link">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-        </svg>
-        Found a typo? Edit this page
+        {{ macros::edit_icon() }}
+        {{ trans(key="found_typo", lang=lang) }}
       </a>
     </footer>
 
@@ -120,10 +77,8 @@
       {% if page.lower %}
         <a href="{{ page.lower.permalink }}" class="book-chapter__nav-link book-chapter__nav-link--prev">
           <span class="book-chapter__nav-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M19 12H5M12 19l-7-7 7-7"/>
-            </svg>
-            Previous Chapter
+            {{ macros::nav_arrow_left() }}
+            {{ trans(key="previous_chapter", lang=lang) }}
           </span>
           <span class="book-chapter__nav-title">{{ page.lower.title }}</span>
         </a>
@@ -133,10 +88,8 @@
       {% if page.higher %}
         <a href="{{ page.higher.permalink }}" class="book-chapter__nav-link book-chapter__nav-link--next">
           <span class="book-chapter__nav-label">
-            Next Chapter
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
+            {{ trans(key="next_chapter", lang=lang) }}
+            {{ macros::nav_arrow_right() }}
           </span>
           <span class="book-chapter__nav-title">{{ page.higher.title }}</span>
         </a>

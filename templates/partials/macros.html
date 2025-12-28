@@ -1,0 +1,81 @@
+{# ==========================================================================
+   Shared Macros for Template Reuse
+   ========================================================================== #}
+
+{# Format date based on language (ES: dd/mm/yyyy, EN: Month dd, yyyy) #}
+{% macro format_date(date, lang) %}
+{% if lang == "es" %}{{ date | date(format="%d/%m/%Y") }}{% else %}{{ date | date(format="%B %d, %Y") }}{% endif %}
+{% endmacro %}
+
+{# Build language-aware path #}
+{% macro lang_path(path, lang) %}
+{% if lang == "es" %}/es{{ path }}{% else %}{{ path }}{% endif %}
+{% endmacro %}
+
+{# Back arrow SVG icon (16x16) #}
+{% macro back_arrow() %}
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M19 12H5M12 19l-7-7 7-7"/>
+</svg>
+{% endmacro %}
+
+{# Navigation arrow left (14x14) #}
+{% macro nav_arrow_left() %}
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M19 12H5M12 19l-7-7 7-7"/>
+</svg>
+{% endmacro %}
+
+{# Navigation arrow right (14x14) #}
+{% macro nav_arrow_right() %}
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 12h14M12 5l7 7-7 7"/>
+</svg>
+{% endmacro %}
+
+{# Edit/pencil icon (14x14) #}
+{% macro edit_icon() %}
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+</svg>
+{% endmacro %}
+
+{# Calendar icon (14x14) #}
+{% macro calendar_icon() %}
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+  <line x1="16" y1="2" x2="16" y2="6"></line>
+  <line x1="8" y1="2" x2="8" y2="6"></line>
+  <line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+{% endmacro %}
+
+{# Clock icon (14x14) #}
+{% macro clock_icon() %}
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"></circle>
+  <polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+{% endmacro %}
+
+{# Document icon (14x14) #}
+{% macro document_icon() %}
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+  <polyline points="14 2 14 8 20 8"></polyline>
+  <line x1="16" y1="13" x2="8" y2="13"></line>
+  <line x1="16" y1="17" x2="8" y2="17"></line>
+</svg>
+{% endmacro %}
+
+{# Tech badge icon based on technology name #}
+{% macro tech_icon(tech) %}
+{% if tech == "PHP" %}<i class="fa-brands fa-php"></i>
+{% elif tech == "Bash" %}<i class="fa-solid fa-terminal"></i>
+{% elif tech == "Lisp" or tech == "Phel" %}<i class="fa-solid fa-code"></i>
+{% elif tech == "Vue" %}<i class="fa-brands fa-vuejs"></i>
+{% elif tech == "AI" %}<i class="fa-solid fa-robot"></i>
+{% else %}<i class="fa-solid fa-code"></i>
+{% endif %}
+{% endmacro %}

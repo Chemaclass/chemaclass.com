@@ -1,0 +1,60 @@
+{# ==========================================================================
+   JSON-LD Schema Markup for Posts
+   Usage: {% include "partials/post-schema.html" %}
+   Requires: page, config
+   Optional: schema_type (default: "Article")
+   ========================================================================== #}
+{% set schema_type = schema_type | default(value="Article") %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "{{ schema_type }}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.permalink | safe }}"
+    },
+    "headline": "{{ page.title }}",
+    "image": [{% if page.extra.static_thumbnail %} "{{ config.base_url | safe }}{{ page.extra.static_thumbnail | safe }}"{% endif %}]{% if page.date %},
+    "datePublished": "{{ page.date | date(format="%+") }}"{% endif %}{% if page.date %},
+    "dateModified": "{{ page.date | date(format="%+") }}"{% endif %}{% if config.extra.author %},
+    "author": {
+      "@type": "Person",
+      "name": "{{ config.extra.author }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ config.extra.author }}"{% if config.extra.icon %},
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ get_url(path=config.extra.icon) | safe }}"
+      }
+      {% endif %}
+    }
+    {% endif %}
+  }
+</script>
+
+{% if page.ancestors %}
+{% set len_ancestors = page.ancestors | length %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [ {% for section_path in page.ancestors %}
+      { {% set section = get_section(path=section_path) %}
+        "@type": "ListItem",
+        "position": {{ loop.index }},
+        "name": "{{ section.title }}",
+        "item": "{{ section.permalink | safe }}"
+      },{% endfor %}
+      {
+        "@type": "ListItem",
+        "position": {{ len_ancestors + 1 }},
+        "name": "{{ page.title }}",
+        "item": "{{ page.permalink | safe }}"
+      }
+    ]
+  }
+</script>
+{% endif %}

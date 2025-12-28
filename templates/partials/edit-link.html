@@ -1,0 +1,14 @@
+{# ==========================================================================
+   Edit Link Footer
+   Usage: {% include "partials/edit-link.html" %}
+   Requires: page.relative_path, config.extra.repo_content_url, lang
+   ========================================================================== #}
+{% import "partials/macros.html" as macros %}
+
+<footer class="blog-post__footer">
+  {% set url = config.extra.repo_content_url ~ page.relative_path %}
+  <a href="{{ url }}" class="blog-post__edit-link">
+    {{ macros::edit_icon() }}
+    {{ trans(key="found_typo", lang=lang) }}
+  </a>
+</footer>

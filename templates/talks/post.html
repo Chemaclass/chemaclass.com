@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% import "partials/macros.html" as macros %}
+
 {% block posthead %}
   {% if page.lower %}
   <link rel="prerender" href="{{ page.lower.permalink }}">
@@ -13,66 +15,16 @@
   <link rel="prerender" href='{{ get_taxonomy_url(kind="tags", name=tag) }}'>
   {% endfor %}
 
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://google.com/article"
-      },
-      "headline": "{{ page.title }}",
-      "image": [{% if page.extra.static_thumbnail %} "{{ config.base_url|safe }}{{ page.extra.static_thumbnail|safe }}"{% endif %}]{% if page.date %},
-      "datePublished": "{{ page.date | date(format="%+") }}"{% endif %}{% if page.date %},
-      "dateModified": "{{ page.date | date(format="%+") }}"{% endif %}{% if config.extra.author %},
-      "author": {
-        "@type": "Person",
-        "name": "{{ config.extra.author }}"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "{{ config.extra.author }}"{% if config.extra.icon %},
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{ get_url(path=config.extra.icon) | safe }}"
-        }
-        {% endif %}
-      }
-      {% endif %}
-    }
-  </script>
-
-  {% set len_ancestors = page.ancestors | length %}
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [ {% for section_path in page.ancestors %}
-        { {% set section = get_section(path=section_path) %}
-          "@type": "ListItem",
-          "position": {{ loop.index }},
-          "name": "{{ section.title }}",
-          "item": "{{ section.permalink | safe }}"
-        },{% endfor %}
-        {
-          "@type": "ListItem",
-          "position": {{ len_ancestors + 1 }},
-          "name": "{{ page.title }}",
-          "item": "{{ page.permalink | safe }}"
-        }
-      ]
-    }
-  </script>
+  {% set schema_type = "NewsArticle" %}
+  {% include "partials/post-schema.html" %}
 {% endblock posthead %}
 
 {% block content %}
   <article class="talk-single">
     <!-- Back link -->
-    <a href="/talks/" class="talk-single__back">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M19 12H5M12 19l-7-7 7-7"/>
-      </svg>
-      All Talks
+    <a href="{{ macros::lang_path(path='/talks/', lang=lang) }}" class="talk-single__back">
+      {{ macros::back_arrow() }}
+      {{ trans(key="all_talks", lang=lang) }}
     </a>
 
     <!-- Hero section -->
@@ -99,7 +51,7 @@
     <nav class="talk-single__nav">
       {% if page.lower %}
         <a href="{{ page.lower.permalink }}" class="talk-single__nav-link talk-single__nav-link--prev">
-          <span class="talk-single__nav-label">Previous</span>
+          <span class="talk-single__nav-label">{{ trans(key="previous", lang=lang) }}</span>
           <span class="talk-single__nav-title">{{ page.lower.title }}</span>
         </a>
       {% else %}
@@ -107,7 +59,7 @@
       {% endif %}
       {% if page.higher %}
         <a href="{{ page.higher.permalink }}" class="talk-single__nav-link talk-single__nav-link--next">
-          <span class="talk-single__nav-label">Next</span>
+          <span class="talk-single__nav-label">{{ trans(key="next", lang=lang) }}</span>
           <span class="talk-single__nav-title">{{ page.higher.title }}</span>
         </a>
       {% endif %}

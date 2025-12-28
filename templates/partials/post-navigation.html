@@ -1,0 +1,29 @@
+{# ==========================================================================
+   Post Navigation (Previous/Next)
+   Usage: {% include "partials/post-navigation.html" %}
+   Requires: page.higher, page.lower, lang
+   ========================================================================== #}
+{% import "partials/macros.html" as macros %}
+
+<nav class="blog-post__nav">
+  {% if page.higher %}
+    <a href="{{ page.higher.permalink }}" class="blog-post__nav-link blog-post__nav-link--prev">
+      <span class="blog-post__nav-label">
+        {{ macros::nav_arrow_left() }}
+        {{ trans(key="older", lang=lang) }}
+      </span>
+      <span class="blog-post__nav-title">{{ page.higher.title }}</span>
+    </a>
+  {% else %}
+    <span></span>
+  {% endif %}
+  {% if page.lower %}
+    <a href="{{ page.lower.permalink }}" class="blog-post__nav-link blog-post__nav-link--next">
+      <span class="blog-post__nav-label">
+        {{ trans(key="newer", lang=lang) }}
+        {{ macros::nav_arrow_right() }}
+      </span>
+      <span class="blog-post__nav-title">{{ page.lower.title }}</span>
+    </a>
+  {% endif %}
+</nav>
