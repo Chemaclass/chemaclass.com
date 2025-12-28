@@ -1,7 +1,7 @@
 +++
 title = "Eyes on a Memory | Book"
 template = "books/chapters.html"
-page_template = "books/book-chapter.html"
+page_template = "books/post.html"
 sort_by = "weight"
 +++
 

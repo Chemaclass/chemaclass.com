@@ -1,5 +1,5 @@
 +++
 title = "Talleres de Equipo | Chemaclass"
-template = "pages/team-workshops.html"
+template = "services/team-workshops.html"
 [extra]
 +++

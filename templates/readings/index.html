@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% import "helpers-preview.html" as helpers %}
+{% import "partials/helpers-preview.html" as helpers %}
 
 {% block title %}
   {{ trans(key="readings_title", lang=lang) }} | Chemaclass
@@ -34,6 +34,6 @@
   </div>
   </div>
 
-  {% include "footer-about.html" %}
+  {% include "partials/footer-about.html" %}
 {% endblock content %}
 

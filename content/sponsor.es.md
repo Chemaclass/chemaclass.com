@@ -1,5 +1,5 @@
 +++
 title = "Patrocinar | Chemaclass"
-template = "pages/sponsor.html"
+template = "sponsor.html"
 aliases = [ "patrocinar" ]
 +++

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
-{% import "helpers-preview.html" as helpers_preview %}
-{% import "related-container.html" as related %}
+{% import "partials/helpers-preview.html" as helpers_preview %}
+{% import "partials/related-container.html" as related %}
 
 {% block posthead %}
 {% if page.lower %}
@@ -209,7 +209,7 @@
     </div>
   </div>
 
-  {% include "footer-about.html" %}
+  {% include "partials/footer-about.html" %}
 
 {% endblock content %}
 

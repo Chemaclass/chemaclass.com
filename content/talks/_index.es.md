@@ -1,7 +1,7 @@
 +++
 title = "Charlas | Chemaclass"
 template = "talks/index.html"
-page_template = "talks/single.html"
+page_template = "talks/post.html"
 sort_by = "weight"
 +++
 

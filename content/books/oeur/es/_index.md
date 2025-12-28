@@ -1,7 +1,7 @@
 +++
 title = "Ojos en un Recuerdo | Libro"
 template = "books/chapters.html"
-page_template = "books/book-chapter.html"
+page_template = "books/post.html"
 sort_by = "weight"
 +++
 
