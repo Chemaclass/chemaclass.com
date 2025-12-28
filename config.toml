@@ -151,6 +151,32 @@ not_found_message = """
 It seems like this page does not exist… Return back to the [homepage](/)
 """
 
+# Centralized pricing (all values in EUR)
+[extra.pricing]
+# Web Development - one-time costs
+web_dev_starting = 1000
+static_simple_min = 1000
+static_simple_max = 2000
+static_simple_note = 800
+static_pro_min = 1500
+static_pro_max = 2500
+wordpress_min = 2000
+wordpress_max = 4000
+# Yearly recurring costs
+domain = 15
+static_hosting = 25
+wordpress_hosting = 100
+static_maintenance_min = 50
+static_maintenance_max = 100
+static_pro_maintenance = 100
+wordpress_maintenance = 500
+# Team Workshops
+workshop_per_person = 350
+workshop_3_people = 1050
+workshop_4_6_min = 1400
+workshop_4_6_max = 2100
+workshop_8_people = 2800
+
 # Spanish language configuration
 [languages.es]
 title = "Chemaclass"

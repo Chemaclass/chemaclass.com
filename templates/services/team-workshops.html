@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "partials/macros.html" as macros %}
 
 {% block title %}
 {{ page.title }}
@@ -150,13 +151,13 @@
     <div class="budget-section">
       <div class="budget-header">
         <h3>{% if lang == "es" %}Inversión{% else %}Investment{% endif %}</h3>
-        <p>{% if lang == "es" %}€350 por persona. Grupos de 3-8 participantes.{% else %}€350 per person. Groups of 3-8 participants.{% endif %}</p>
+        <p>{% if lang == "es" %}€{{ config.extra.pricing.workshop_per_person }} por persona. Grupos de 3-8 participantes.{% else %}€{{ config.extra.pricing.workshop_per_person }} per person. Groups of 3-8 participants.{% endif %}</p>
       </div>
 
       <div class="budget-cards">
         <div class="budget-card">
           <span class="budget-card__type">{% if lang == "es" %}3 personas{% else %}3 people{% endif %}</span>
-          <span class="budget-card__range">€1{% if lang == "es" %}.{% else %},{% endif %}050</span>
+          <span class="budget-card__range">€{{ macros::price(value=config.extra.pricing.workshop_3_people, lang=lang) }}</span>
           <span class="budget-card__note">{% if lang == "es" %}Tamaño mínimo de grupo{% else %}Minimum group size{% endif %}</span>
           <div class="budget-card__yearly">
             <span class="budget-card__yearly-title">{% if lang == "es" %}Incluye{% else %}Includes{% endif %}</span>
@@ -174,7 +175,7 @@
         <div class="budget-card budget-card--recommended">
           <span class="budget-card__badge">{% if lang == "es" %}Recomendado{% else %}Recommended{% endif %}</span>
           <span class="budget-card__type">{% if lang == "es" %}4-6 personas{% else %}4-6 people{% endif %}</span>
-          <span class="budget-card__range">€1{% if lang == "es" %}.{% else %},{% endif %}400 – €2{% if lang == "es" %}.{% else %},{% endif %}100</span>
+          <span class="budget-card__range">€{{ macros::price(value=config.extra.pricing.workshop_4_6_min, lang=lang) }} – €{{ macros::price(value=config.extra.pricing.workshop_4_6_max, lang=lang) }}</span>
           <span class="budget-card__note">{% if lang == "es" %}Tamaño ideal de grupo{% else %}Ideal group size{% endif %}</span>
           <div class="budget-card__yearly">
             <span class="budget-card__yearly-title">{% if lang == "es" %}Incluye{% else %}Includes{% endif %}</span>
@@ -191,7 +192,7 @@
 
         <div class="budget-card">
           <span class="budget-card__type">{% if lang == "es" %}8 personas{% else %}8 people{% endif %}</span>
-          <span class="budget-card__range">€2{% if lang == "es" %}.{% else %},{% endif %}800</span>
+          <span class="budget-card__range">€{{ macros::price(value=config.extra.pricing.workshop_8_people, lang=lang) }}</span>
           <span class="budget-card__note">{% if lang == "es" %}Tamaño máximo de grupo{% else %}Maximum group size{% endif %}</span>
           <div class="budget-card__yearly">
             <span class="budget-card__yearly-title">{% if lang == "es" %}Incluye{% else %}Includes{% endif %}</span>

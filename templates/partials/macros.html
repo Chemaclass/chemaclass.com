@@ -79,3 +79,29 @@
 {% else %}<i class="fa-solid fa-code"></i>
 {% endif %}
 {% endmacro %}
+
+{# Format price with thousand separator based on language (ES: 1.000, EN: 1,000) #}
+{# Note: Only works correctly for values 1000-9999 with remainders of 0, 50, or 100 #}
+{% macro price(value, lang) %}
+{%- if value >= 1000 -%}
+{%- set thousands = value / 1000 | round(method="floor") | int -%}
+{%- set remainder = value - thousands * 1000 -%}
+{%- if remainder == 0 -%}
+{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}000
+{%- elif remainder == 50 -%}
+{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}050
+{%- elif remainder == 100 -%}
+{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}100
+{%- elif remainder == 400 -%}
+{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}400
+{%- elif remainder == 500 -%}
+{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}500
+{%- elif remainder == 800 -%}
+{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}800
+{%- else -%}
+{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}{{ remainder }}
+{%- endif -%}
+{%- else -%}
+{{ value }}
+{%- endif -%}
+{% endmacro %}
