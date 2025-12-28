@@ -1,0 +1,530 @@
+// ==========================================================================
+// Books Page Styles
+// ==========================================================================
+
+.book-chapters {
+  &__intro {
+    margin-bottom: 2rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem;
+
+    @media (max-width: $breakpoint-phone) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  &__year-section {
+    grid-column: 1 / -1;
+    margin-top: 1.5rem;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin: 0 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--preview-divider-color);
+    }
+  }
+}
+
+// Chapter Card
+.chapter-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--search-input-bg);
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+
+  &:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+
+    .chapter-card__image img {
+      transform: scale(1.05);
+    }
+  }
+
+  &__image {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--search-bg-selected-item);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    // Placeholder for chapters without images
+    &--placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--search-input-bg) 0%, var(--search-bg-selected-item) 100%);
+
+      i {
+        font-size: 2.5rem;
+        color: var(--preview-divider-color);
+      }
+    }
+  }
+
+  &__number {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background: var(--accent-color);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    min-width: 2rem;
+    text-align: center;
+  }
+
+  &__content {
+    padding: 0.875rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem;
+    color: var(--heading-color);
+    line-height: 1.3;
+  }
+
+  &__month {
+    font-size: 0.75rem;
+    color: var(--color-subtitle);
+    text-transform: capitalize;
+  }
+
+  &__poems {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    font-size: 0.7rem;
+    color: var(--color-subtitle);
+
+    i {
+      margin-right: 0.25rem;
+      color: var(--accent-color);
+    }
+  }
+}
+
+// Special styling for prologue/index cards
+.chapter-card--special {
+  .chapter-card__image--placeholder {
+    background: linear-gradient(135deg, var(--accent-color) 0%, color-mix(in srgb, var(--accent-color) 70%, black) 100%);
+
+    i {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .chapter-card__number {
+    background: var(--heading-color);
+  }
+}
+
+// December cards (year-end chapters) - subtle highlight
+.chapter-card--december {
+  border-color: color-mix(in srgb, var(--accent-color) 30%, var(--preview-divider-color));
+
+  &:hover {
+    border-color: var(--accent-color);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: $breakpoint-phone) {
+  .chapter-card {
+    &__content {
+      padding: 0.75rem;
+    }
+
+    &__title {
+      font-size: 0.8rem;
+    }
+
+    &__number {
+      font-size: 0.65rem;
+      padding: 0.2rem 0.4rem;
+    }
+  }
+}
+
+// Book preview in list view (fallback/alternative)
+.book-preview {
+  &__image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 0.75rem;
+  }
+}
+
+// ==========================================================================
+// Book About Page
+// ==========================================================================
+
+.book-about {
+  max-width: 900px;
+  margin: 0 auto;
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-subtitle);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  // Hero Section
+  &__hero {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    align-items: start;
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: $breakpoint-phone) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  &__cover {
+    position: sticky;
+    top: 100px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-4px) rotate(-1deg);
+        box-shadow: 0 16px 50px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    @media (max-width: $breakpoint-phone) {
+      position: static;
+      max-width: 200px;
+      margin: 0 auto;
+    }
+  }
+
+  &__intro {
+    @media (max-width: $breakpoint-phone) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--heading-color);
+    line-height: 1.2;
+
+    @media (max-width: $breakpoint-phone) {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    font-style: italic;
+    margin: 0 0 1.25rem;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: var(--body-color);
+    line-height: 1.7;
+    margin: 0 0 1.5rem;
+  }
+
+  // Action buttons
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+
+    @media (max-width: $breakpoint-phone) {
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+
+    i {
+      font-size: 1rem;
+    }
+
+    &--primary {
+      background: var(--accent-color);
+      color: white;
+
+      &:hover {
+        filter: brightness(1.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        transform: translateY(-1px);
+      }
+    }
+
+    &--secondary {
+      background: var(--search-input-bg);
+      color: var(--body-color);
+      border: 1px solid var(--preview-divider-color);
+
+      &:hover {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+      }
+    }
+
+    &-formats {
+      font-size: 0.7rem;
+      font-weight: 400;
+      opacity: 0.7;
+      margin-left: 0.25rem;
+    }
+  }
+
+  &__language-note {
+    font-size: 0.85rem;
+    color: var(--color-subtitle);
+    margin: 0;
+
+    i {
+      margin-right: 0.35rem;
+      color: var(--accent-color);
+    }
+  }
+
+  // Quote
+  &__quote {
+    background: linear-gradient(135deg, var(--search-input-bg) 0%, var(--search-bg-selected-item) 100%);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0 12px 12px 0;
+    padding: 2rem 2.5rem;
+    margin: 0 0 3rem;
+    text-align: center;
+
+    p {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--heading-color);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: $breakpoint-phone) {
+      padding: 1.5rem;
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  // Sections
+  &__section {
+    margin-bottom: 2.5rem;
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--heading-color);
+      margin: 0 0 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+
+      i {
+        color: var(--accent-color);
+        font-size: 1rem;
+      }
+    }
+
+    &--acknowledgments {
+      .book-about__acknowledgments {
+        background: var(--search-input-bg);
+        border-radius: 12px;
+        padding: 1.5rem;
+
+        p {
+          margin: 0 0 1rem;
+          line-height: 1.7;
+          color: var(--body-color);
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__author {
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--body-color);
+      margin: 0;
+    }
+  }
+
+  // Team grid
+  &__team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  &__team-member {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--search-input-bg);
+    border: 1px solid var(--preview-divider-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: var(--accent-color);
+    }
+  }
+
+  &__team-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    i {
+      color: white;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__team-info {
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 0.25rem;
+      color: var(--heading-color);
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: var(--color-subtitle);
+      margin: 0;
+    }
+  }
+
+  // Audiobook
+  &__audiobook {
+    .youtube-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      background: var(--search-input-bg);
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    }
+  }
+
+  // CTA Section
+  &__cta {
+    text-align: center;
+    background: linear-gradient(135deg, var(--search-input-bg) 0%, var(--search-bg-selected-item) 100%);
+    border: 1px solid var(--preview-divider-color);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-top: 3rem;
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--heading-color);
+      margin: 0 0 1.25rem;
+    }
+
+    .book-about__btn {
+      padding: 0.875rem 2rem;
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% import "partials/macros.html" as macros %}
+
+{% block posthead %}
+{% set schema_type = "Book" %}
+<meta property="og:image" content="{{ get_url(path='/images/books/oeur/oeur-cover.jpg') }}">
+{% endblock posthead %}
+
+{% block content %}
+<article class="book-about">
+  <!-- Back link -->
+  {% set section = get_section(path=page.ancestors | last) %}
+  <a href="{{ section.permalink }}" class="book-about__back">
+    {{ macros::back_arrow() }}
+    {{ section.title | split(pat=" | ") | first }}
+  </a>
+
+  <!-- Hero Section -->
+  <section class="book-about__hero">
+    <div class="book-about__cover">
+      <img src="/images/books/oeur/oeur-cover.jpg" alt="Ojos en un Recuerdo - Book Cover" />
+    </div>
+    <div class="book-about__intro">
+      <h1 class="book-about__title">Ojos en un Recuerdo</h1>
+      <p class="book-about__subtitle">
+        {% if lang == "es" %}
+          Un viaje introspectivo a través de reflexiones personales
+        {% else %}
+          An introspective journey through personal reflections
+        {% endif %}
+      </p>
+      <p class="book-about__description">
+        {% if lang == "es" %}
+          Un recopilatorio de la evolución de los pensamientos de un joven en un formato parecido al de un diario. Un trabajo de más de dos años que ha derivado en una colección de reflexiones cada cual más personal que la anterior.
+        {% else %}
+          A compilation of thoughts structured like a diary. It's the result of moving to a new country and looking for new opportunities in life, spanning over two years of personal reflections.
+        {% endif %}
+      </p>
+
+      <!-- Purchase buttons -->
+      <div class="book-about__actions">
+        <a href="https://www.diegomarin.com/catalog/product/view/id/159719" class="book-about__btn book-about__btn--primary" target="_blank" rel="noopener">
+          <i class="fa-solid fa-book"></i>
+          {% if lang == "es" %}Comprar libro físico{% else %}Buy Physical Book{% endif %}
+        </a>
+        <a href="https://leanpub.com/ojosenunrecuerdo" class="book-about__btn book-about__btn--secondary" target="_blank" rel="noopener">
+          <i class="fa-solid fa-tablet-screen-button"></i>
+          {% if lang == "es" %}Ebook{% else %}Ebook{% endif %}
+          <span class="book-about__btn-formats">PDF · EPUB · MOBI</span>
+        </a>
+      </div>
+
+      <p class="book-about__language-note">
+        <i class="fa-solid fa-language"></i>
+        {% if lang == "es" %}
+          Publicado en papel únicamente en castellano
+        {% else %}
+          Published in paper in Spanish only
+        {% endif %}
+      </p>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <blockquote class="book-about__quote">
+    <p>
+      {% if lang == "es" %}
+        Un libro dedicado sólo a los valientes<br>Para nadie y para todos
+      {% else %}
+        A book dedicated only to the brave<br>For no one and for everyone
+      {% endif %}
+    </p>
+  </blockquote>
+
+  <!-- About the Author -->
+  <section class="book-about__section">
+    <h2>
+      <i class="fa-solid fa-user-pen"></i>
+      {% if lang == "es" %}Sobre el autor{% else %}About the Author{% endif %}
+    </h2>
+    <div class="book-about__author">
+      <p>
+        {% if lang == "es" %}
+          José María Valera Reales es el segundo de ocho hermanos. Nacido en 1993 en Caravaca de la Cruz, Región de Murcia, España. Huérfano de madre a los once años. Desde 2015 vive y trabaja en Alemania como programador informático.
+        {% else %}
+          José María Valera Reales is the second of eight siblings. Born in 1993 in Caravaca de la Cruz, Region of Murcia, Spain. Orphaned of his mother at eleven years old. Since 2015, he lives and works in Germany as a software developer.
+        {% endif %}
+      </p>
+    </div>
+  </section>
+
+  <!-- Team / Credits -->
+  <section class="book-about__section">
+    <h2>
+      <i class="fa-solid fa-users"></i>
+      {% if lang == "es" %}Equipo{% else %}Team{% endif %}
+    </h2>
+    <div class="book-about__team">
+      <div class="book-about__team-member">
+        <div class="book-about__team-icon">
+          <i class="fa-solid fa-pen-fancy"></i>
+        </div>
+        <div class="book-about__team-info">
+          <h3>Francisco Javier & Jesús Valera</h3>
+          <p>{% if lang == "es" %}Edición y corrección de textos{% else %}Editing and proofreading{% endif %}</p>
+        </div>
+      </div>
+      <div class="book-about__team-member">
+        <div class="book-about__team-icon">
+          <i class="fa-solid fa-palette"></i>
+        </div>
+        <div class="book-about__team-info">
+          <h3>Jesús Robles</h3>
+          <p>{% if lang == "es" %}Diseño de portada e ilustraciones{% else %}Cover design and illustrations{% endif %}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Acknowledgments -->
+  <section class="book-about__section book-about__section--acknowledgments">
+    <h2>
+      <i class="fa-solid fa-heart"></i>
+      {% if lang == "es" %}Agradecimientos{% else %}Acknowledgments{% endif %}
+    </h2>
+    <div class="book-about__acknowledgments">
+      {% if lang == "es" %}
+        <p>A mis hermanos —a todos ellos— por ser fuente de mi inspiración a pesar de no vernos tanto como quisiéramos. Especial mención a Jesús por ayudarme en la edición de este presente libro.</p>
+        <p>A mis tíos por el enorme apoyo que durante todos estos años han significado tanto para mí como para mis hermanos.</p>
+        <p>A Jesús Robles por el gran trabajo que ha hecho dándole vida al texto con sus ilustraciones.</p>
+        <p>A Francisco Javier por haber dedicado su tiempo a ofrecerme ideas, sugerencias y correcciones para hacer de este libro algo aún más especial.</p>
+      {% else %}
+        <p>To all my siblings for being the source of my inspiration despite not seeing each other as much as we would want to. A special mention to my brother Jesús for helping me with this book's edition.</p>
+        <p>To my uncles, who provided my siblings and me with constant support for many years.</p>
+        <p>To Jesús Robles for his great work in giving life to the text through his illustrations.</p>
+        <p>To Francisco Javier for dedicating his time to offer me ideas, suggestions, and corrections to make this book even more special.</p>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- Audiobook (Spanish only) -->
+  {% if lang == "es" %}
+  <section class="book-about__section">
+    <h2>
+      <i class="fa-solid fa-headphones"></i>
+      Audiolibro completo
+    </h2>
+    <div class="book-about__audiobook">
+      <div class="youtube-container">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/e8K8CrL_W-0"
+          title="Ojos en un Recuerdo - Audiolibro"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- CTA to start reading -->
+  <section class="book-about__cta">
+    <h3>{% if lang == "es" %}¿Listo para empezar?{% else %}Ready to start reading?{% endif %}</h3>
+    <a href="{{ section.permalink }}indice/" class="book-about__btn book-about__btn--primary">
+      <i class="fa-solid fa-book-open"></i>
+      {% if lang == "es" %}Ver todos los capítulos{% else %}View All Chapters{% endif %}
+    </a>
+  </section>
+</article>
+
+{% include "partials/footer-about.html" %}
+{% endblock content %}

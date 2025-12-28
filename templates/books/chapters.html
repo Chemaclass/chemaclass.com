@@ -7,17 +7,68 @@
 {% endblock %}
 
 {% block content %}
-  {{ section.content | safe }}
-
-  {% for post in section.pages %}
-    <div class="preview book-preview">
-      <h3 class="book-title">
-        <a href="{{ post.permalink }}">{{ post.title }}</a>
-      </h3>
-      <small>
-        {{ helpers_preview::date_and_words(post=post) }}
-      </small>
+  <div class="book-chapters">
+    <div class="book-chapters__intro">
+      {{ section.content | safe }}
     </div>
-  {% endfor %}
 
+    <div class="book-chapters__grid">
+      {% set current_year = "" %}
+      {% for post in section.pages %}
+        {% set filename = post.relative_path | split(pat="/") | last | replace(from=".md", to="") | replace(from=".es", to="") %}
+        {% set chapter_num = filename | split(pat="-") | first %}
+
+        {# Extract year from filename (e.g., "01-2015-marzo" -> "2015") #}
+        {% set parts = filename | split(pat="-") %}
+        {% if parts | length >= 2 %}
+          {% set year = parts[1] %}
+        {% else %}
+          {% set year = "" %}
+        {% endif %}
+
+        {# Year section header #}
+        {% if year != current_year and year is matching("^20[0-9]{2}$") %}
+          {% set_global current_year = year %}
+          <div class="book-chapters__year-section">
+            <h2>{{ year }}</h2>
+          </div>
+        {% endif %}
+
+        {# Determine if this is a December chapter #}
+        {% set is_december = "diciembre" in post.slug %}
+
+        {# Determine if this is a special chapter (prologue/index) #}
+        {% set is_special = chapter_num == "0" %}
+
+        <a href="{{ post.permalink }}" class="chapter-card{% if is_december %} chapter-card--december{% endif %}{% if is_special %} chapter-card--special{% endif %}">
+          <div class="chapter-card__image{% if chapter_num == '0' %} chapter-card__image--placeholder{% endif %}">
+            {% if chapter_num != "0" %}
+              <img src="/images/books/oeur/{{ chapter_num }}.jpg" alt="{{ post.title }}" loading="lazy" />
+            {% else %}
+              <i class="fa-solid fa-book-open"></i>
+            {% endif %}
+            <span class="chapter-card__number">
+              {% if chapter_num == "0" %}
+                {% if lang == "es" %}Prólogo{% else %}Prologue{% endif %}
+              {% else %}
+                {{ chapter_num | int }}
+              {% endif %}
+            </span>
+          </div>
+          <div class="chapter-card__content">
+            <h3 class="chapter-card__title">{{ post.title }}</h3>
+            {% if parts | length >= 3 %}
+              <span class="chapter-card__month">{{ parts[2] | capitalize }}</span>
+            {% endif %}
+            {% if post.word_count %}
+              <span class="chapter-card__poems">
+                <i class="fa-solid fa-feather"></i>
+                {{ post.word_count }} {% if lang == "es" %}palabras{% else %}words{% endif %}
+              </span>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
 {% endblock %}
