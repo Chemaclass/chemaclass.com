@@ -37,6 +37,7 @@
         </div>
         <h3>{% if lang == "es" %}Desarrollo Web{% else %}Static Websites{% endif %}</h3>
         <p>{% if lang == "es" %}Landing pages, portfolios, sitios corporativos. Rápidos, accesibles, fáciles de mantener.{% else %}Landing pages, portfolios, company sites. Fast, accessible, easy to maintain.{% endif %}</p>
+        <span class="service-card__price">{% if lang == "es" %}Desde €1.000{% else %}From €1,000{% endif %}</span>
       </a>
 
       <a href="{% if lang == 'es' %}/es/services/team-workshops/{% else %}/services/team-workshops/{% endif %}" class="service-card">
@@ -48,6 +49,7 @@
         </div>
         <h3>{% if lang == "es" %}Talleres de Equipo{% else %}Team Workshops{% endif %}</h3>
         <p>{% if lang == "es" %}Sesiones de equipo sobre TDD, refactoring y pair programming a través de katas.{% else %}Team sessions on TDD, refactoring, and pair programming through katas.{% endif %}</p>
+        <span class="service-card__price">{% if lang == "es" %}Desde €350/persona{% else %}From €350/person{% endif %}</span>
       </a>
 
     </div>
@@ -80,7 +82,7 @@
       </div>
       <div class="sessions-actions">
         <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Sesión%201:1&body=Hola%20Chema,%0A%0AMe%20gustaría%20reservar%20una%20sesión%201:1.%0A%0ATema%20que%20me%20interesa:%0A%0AGracias!{% else %}1:1%20Session%20Inquiry&body=Hi%20Chema,%0A%0AI'd%20like%20to%20book%20a%201:1%20session.%0A%0ATopic%20I'm%20interested%20in:%0A%0AThanks!{% endif %}" class="sessions-cta">
-          <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Escríbeme{% else %}Email me{% endif %}
+          <i class="fa-solid fa-calendar-check"></i> {% if lang == "es" %}Reserva una llamada{% else %}Book a free call{% endif %}
         </a>
         <a href="{% if lang == 'es' %}/es/tags/{% else %}/tags/{% endif %}" class="sessions-cta sessions-cta--secondary">
           <i class="fa-solid fa-tags"></i> {% if lang == "es" %}Todos los temas{% else %}All topics{% endif %}
@@ -91,12 +93,55 @@
     <div class="services-sessions">
       <div class="sessions-content">
         <h3><i class="fa-solid fa-gift"></i> {% if lang == "es" %}Vales Regalo{% else %}Gift Vouchers{% endif %}</h3>
-        <p>{% if lang == "es" %}¿Conoces a alguien que <a href="/services/web-development/#everywebsite">necesita una web</a>? Regálale un vale parcial o total. Ideal para Navidad!{% else %}Know someone who <a href="/services/web-development/#everywebsite">needs a website</a>? Gift them a voucher for partial or full price. Ideal for Christmas!{% endif %}</p>
+        <p>{% if lang == "es" %}¿Conoces a alguien que <a href="/services/web-development/#everywebsite">necesita una web</a>? Regálale un vale parcial o total.{% else %}Know someone who <a href="/services/web-development/#everywebsite">needs a website</a>? Gift them a voucher for partial or full price.{% endif %}</p>
       </div>
       <div class="sessions-actions">
         <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Vale%20Regalo&body=Hola%20Chema,%0A%0AMe%20gustaría%20solicitar%20un%20vale%20regalo.%0A%0ATipo%20de%20vale:%0ANombre%20del%20destinatario:%0A%0AGracias!{% else %}Gift%20Voucher%20Inquiry&body=Hi%20Chema,%0A%0AI'd%20like%20to%20request%20a%20gift%20voucher.%0A%0AType%20of%20voucher:%0ARecipient%20name:%0A%0AThanks!{% endif %}" class="sessions-cta">
           <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Solicitar un vale{% else %}Request a voucher{% endif %}
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="services-faq" id="faq">
+    <h2 class="services-faq__title">{% if lang == "es" %}Preguntas Frecuentes{% else %}Frequently Asked Questions{% endif %}</h2>
+    <div class="services-faq__list">
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('open')">
+          {% if lang == "es" %}¿Cuánto tiempo tarda un sitio web?{% else %}How long does a website take?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}Normalmente 2-4 semanas desde el primer contacto hasta el lanzamiento. Sitios más complejos con contenido personalizado pueden tardar un poco más.{% else %}Typically 2-4 weeks from first contact to launch. More complex sites with custom content may take a bit longer.{% endif %}
+        </div>
+      </div>
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('open')">
+          {% if lang == "es" %}¿Puedo editar el contenido yo mismo?{% else %}Can I edit the content myself?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}Sí. Los sitios estáticos usan archivos Markdown simples que puedes editar. WordPress incluye un panel de control completo. Te enseño a usar ambos.{% else %}Yes. Static sites use simple Markdown files you can edit. WordPress includes a full dashboard. I'll teach you to use either.{% endif %}
+        </div>
+      </div>
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('open')">
+          {% if lang == "es" %}¿Qué incluye el precio?{% else %}What's included in the price?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}4-5 páginas (inicio, sobre mí, contacto y un par de páginas personalizadas), diseño responsive, SEO básico, seguridad HTTPS, optimización de rendimiento y analíticas. Sin costes ocultos.{% else %}4-5 pages (homepage, about, contact, and a couple of custom pages), responsive design, SEO fundamentals, HTTPS security, performance optimization, and analytics. No hidden fees.{% endif %}
+        </div>
+      </div>
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('open')">
+          {% if lang == "es" %}¿Ofreces mantenimiento continuo?{% else %}Do you offer ongoing maintenance?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}Sí. Los sitios estáticos necesitan mantenimiento mínimo (€50-100/año). WordPress requiere actualizaciones regulares (€300/año). También ayudo con cambios puntuales.{% else %}Yes. Static sites need minimal maintenance (€50-100/year). WordPress requires regular updates (€300/year). I also help with one-off changes.{% endif %}
+        </div>
       </div>
     </div>
   </section>

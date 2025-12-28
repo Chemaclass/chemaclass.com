@@ -555,6 +555,17 @@
     }
   }
 
+  &__price {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    background: var(--search-bg-selected-item);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+  }
+
   &--link {
     display: block;
     text-decoration: none;
@@ -768,6 +779,78 @@
   margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--preview-divider-color);
+}
+
+// FAQ Section
+.services-faq {
+  margin-top: 4rem;
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1.5rem;
+    text-align: center;
+    color: var(--heading-color);
+  }
+
+  &__list {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    border: 1px solid var(--preview-divider-color);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: var(--accent-color);
+    }
+  }
+
+  &__question {
+    width: 100%;
+    background: var(--search-input-bg);
+    border: none;
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    &:hover {
+      background: var(--search-bg-selected-item);
+    }
+
+    i {
+      font-size: 0.8rem;
+      color: var(--accent-color);
+      transition: transform 0.2s ease;
+    }
+
+    &[aria-expanded="true"] i {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__answer {
+    display: none;
+    padding: 0 1.25rem 1rem;
+    font-size: 0.9rem;
+    color: var(--color-subtitle);
+    line-height: 1.6;
+
+    &.open {
+      display: block;
+    }
+  }
 }
 
 // Responsive adjustments
