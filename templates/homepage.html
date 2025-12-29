@@ -33,7 +33,9 @@
             </div>
             <div class="hero-text">
                 <h1>Chemaclass</h1>
-                <p class="subtitle">{{ trans(key="home_subtitle", lang=lang) }}</p>
+                <p class="subtitle">
+                    {{ trans(key="home_subtitle", lang=lang) }} · <a href="{% if lang == 'es' %}/es/services/{% else %}/services/{% endif %}" class="hero-cta">{{ trans(key="home_services_cta", lang=lang) }}</a>
+                </p>
                 <div class="hero-quotes">
                     <blockquote class="hero-quote active"><p></p></blockquote>
                 </div>
@@ -188,6 +190,31 @@
                 <h3>{{ latest_reading.title }}</h3>
                 <p class="latest-preview">{{ latest_reading.description | truncate(length=120) }}</p>
                 <span class="latest-date">{% if lang == "es" %}{{ latest_reading.date | date(format="%d/%m/%Y") }}{% else %}{{ latest_reading.date | date(format="%B %d, %Y") }}{% endif %}</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section class="connect-section">
+        <div class="section-header">
+            <h2>{{ trans(key="home_connect", lang=lang) }}</h2>
+        </div>
+        <div class="connect-grid">
+            <a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="connect-card">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://x.com/Chemaclass" target="_blank" rel="noopener" class="connect-card">
+                <i class="fa-brands fa-x-twitter"></i>
+                <span>Twitter</span>
+            </a>
+            <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="noopener" class="connect-card">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="mailto:me@chemaclass.es" class="connect-card">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
             </a>
         </div>
     </section>

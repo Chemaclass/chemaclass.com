@@ -31,7 +31,7 @@ main:has(.homepage-container) #scroll-to-top {
 .homepage-top {
   display: flex;
   gap: 3rem;
-  align-items: flex-start;
+  align-items: stretch;
   padding: 0;
 }
 
@@ -60,6 +60,17 @@ main:has(.homepage-container) #scroll-to-top {
       line-height: 1.5;
     }
 
+    .hero-cta {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
     .hero-quotes {
       position: relative;
       min-height: 3em;
@@ -72,7 +83,7 @@ main:has(.homepage-container) #scroll-to-top {
       padding: 0;
       border: none;
       font-style: italic;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--color-subtitle);
 
       &.active {
@@ -111,11 +122,21 @@ main:has(.homepage-container) #scroll-to-top {
     overflow: hidden;
     background: white;
     border: 4px solid var(--preview-divider-color);
+    transition: border-color 0.3s ease;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      border-color: var(--accent-color);
+
+      img {
+        transform: scale(1.05);
+      }
     }
   }
 }
@@ -137,7 +158,7 @@ main:has(.homepage-container) #scroll-to-top {
 .projects-section,
 .latest-section,
 .connect-section {
-  margin: 1.5rem 0;
+  margin: 2rem 0;
 
   h2 {
     font-size: 1.5rem;
@@ -309,7 +330,7 @@ main:has(.homepage-container) #scroll-to-top {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 0.75rem;
   margin: 1rem 0;
 }
 
@@ -319,8 +340,13 @@ main:has(.homepage-container) #scroll-to-top {
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   cursor: default;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
   background: var(--search-bg-selected-item);
   color: var(--body-color);
   border: 1px solid var(--preview-divider-color);
@@ -372,7 +398,7 @@ main:has(.homepage-container) #scroll-to-top {
 // Projects Grid
 .projects-grid {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .project-card {
@@ -825,4 +851,111 @@ main:has(.homepage-container) #scroll-to-top {
       display: none;
     }
   }
+}
+
+// ==========================================================================
+// Connect Section
+// ==========================================================================
+
+.connect-section {
+  margin-top: 2.5rem;
+
+  .section-header {
+    margin-bottom: 1rem;
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--heading-color);
+      margin: 0;
+    }
+  }
+}
+
+.connect-grid {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.connect-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--search-input-bg);
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--body-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  i {
+    font-size: 1.1rem;
+    color: var(--color-subtitle);
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  &:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    i {
+      color: var(--accent-color);
+      transform: rotate(-8deg);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .connect-grid {
+    gap: 0.5rem;
+  }
+
+  .connect-card {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+
+    i {
+      font-size: 1rem;
+    }
+  }
+}
+
+// ==========================================================================
+// Focus States (Accessibility)
+// ==========================================================================
+
+.hero-cta:focus-visible,
+.project-card:focus-visible,
+.latest-card:focus-visible,
+.connect-card:focus-visible,
+.view-all:focus-visible,
+.social-link:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.skill-tag:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.about-list li.expandable .about-item-header:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: -2px;
+  border-radius: 4px;
+}
+
+.philosophy:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
