@@ -151,95 +151,56 @@
     <div class="budget-section">
       <div class="budget-header">
         <h3>{% if lang == "es" %}Inversión{% else %}Investment{% endif %}</h3>
-        <p>{% if lang == "es" %}€{{ config.extra.pricing_workshop_per_person }} por persona. Grupos de 3-8 participantes.{% else %}€{{ config.extra.pricing_workshop_per_person }} per person. Groups of 3-8 participants.{% endif %}</p>
+        <p>{% if lang == "es" %}Grupos de 3-8 participantes. Talleres presenciales en Berlín, remotos en otras ubicaciones.{% else %}Groups of 3-8 participants. On-site workshops in Berlin, remote for other locations.{% endif %}</p>
       </div>
 
-      <div class="budget-cards">
-        <div class="budget-card">
-          <span class="budget-card__type">{% if lang == "es" %}3 personas{% else %}3 people{% endif %}</span>
-          <span class="budget-card__range">€{{ macros::price(value=config.extra.pricing_workshop_3_people, lang=lang) }}</span>
-          <span class="budget-card__note">{% if lang == "es" %}Tamaño mínimo de grupo{% else %}Minimum group size{% endif %}</span>
-          <div class="budget-card__yearly">
-            <span class="budget-card__yearly-title">{% if lang == "es" %}Incluye{% else %}Includes{% endif %}</span>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">{% if lang == "es" %}Duración{% else %}Duration{% endif %}</span>
-              <span class="budget-card__yearly-value">6 {% if lang == "es" %}horas{% else %}hours{% endif %}</span>
-            </div>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">{% if lang == "es" %}Materiales{% else %}Materials{% endif %}</span>
-              <span class="budget-card__yearly-value">{% if lang == "es" %}Incluidos{% else %}Included{% endif %}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="budget-card budget-card--recommended">
-          <span class="budget-card__badge">{% if lang == "es" %}Recomendado{% else %}Recommended{% endif %}</span>
-          <span class="budget-card__type">{% if lang == "es" %}4-6 personas{% else %}4-6 people{% endif %}</span>
-          <span class="budget-card__range">€{{ macros::price(value=config.extra.pricing_workshop_4_6_min, lang=lang) }} – €{{ macros::price(value=config.extra.pricing_workshop_4_6_max, lang=lang) }}</span>
-          <span class="budget-card__note">{% if lang == "es" %}Tamaño ideal de grupo{% else %}Ideal group size{% endif %}</span>
-          <div class="budget-card__yearly">
-            <span class="budget-card__yearly-title">{% if lang == "es" %}Incluye{% else %}Includes{% endif %}</span>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">{% if lang == "es" %}Duración{% else %}Duration{% endif %}</span>
-              <span class="budget-card__yearly-value">6 {% if lang == "es" %}horas{% else %}hours{% endif %}</span>
-            </div>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">{% if lang == "es" %}Seguimiento{% else %}Follow-up{% endif %}</span>
-              <span class="budget-card__yearly-value">{% if lang == "es" %}Recursos{% else %}Resources & code{% endif %}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="budget-card">
-          <span class="budget-card__type">{% if lang == "es" %}8 personas{% else %}8 people{% endif %}</span>
-          <span class="budget-card__range">€{{ macros::price(value=config.extra.pricing_workshop_8_people, lang=lang) }}</span>
-          <span class="budget-card__note">{% if lang == "es" %}Tamaño máximo de grupo{% else %}Maximum group size{% endif %}</span>
-          <div class="budget-card__yearly">
-            <span class="budget-card__yearly-title">{% if lang == "es" %}Incluye{% else %}Includes{% endif %}</span>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">{% if lang == "es" %}Duración{% else %}Duration{% endif %}</span>
-              <span class="budget-card__yearly-value">6 {% if lang == "es" %}horas{% else %}hours{% endif %}</span>
-            </div>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">{% if lang == "es" %}Katas personalizadas{% else %}Custom katas{% endif %}</span>
-              <span class="budget-card__yearly-value">{% if lang == "es" %}Incluidas{% else %}Included{% endif %}</span>
-            </div>
-          </div>
-        </div>
+      <div class="quote-cta">
+        <p class="quote-cta__text">{% if lang == "es" %}Cada equipo tiene necesidades diferentes. Contacta conmigo para discutir el enfoque y recibir un presupuesto personalizado.{% else %}Every team has different needs. Contact me to discuss the approach and get a personalized quote.{% endif %}</p>
+        <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Taller&body=Hola%20Chema%2C%0A%0AEstoy%20interesado%20en%20un%20taller%20para%20mi%20equipo.%0A%0ATamaño%20del%20equipo%3A%0ATema%20de%20interés%3A%0A%0AGracias!{% else %}Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20a%20workshop%20for%20my%20team.%0A%0ATeam%20size%3A%0ATopic%20of%20interest%3A%0A%0AThanks!{% endif %}" class="quote-cta__btn">
+          <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Solicitar información{% else %}Request Information{% endif %}
+        </a>
       </div>
 
-      <p class="budget-disclaimer">{% if lang == "es" %}Precios sin IVA. Talleres presenciales disponibles en Berlín, en otro caso remotos. Se proporciona un presupuesto detallado después de la llamada de descubrimiento.{% else %}Prices exclude VAT. On-site workshops available in Berlin, otherwise remote. A detailed quote is provided after the discovery call.{% endif %}</p>
+      <p class="budget-disclaimer">{% if lang == "es" %}Presupuesto personalizado después de la llamada de descubrimiento.{% else %}Personalized quote after discovery call.{% endif %}</p>
     </div>
   </section>
 
-  <!-- Previous workshops -->
-  <section class="service-portfolio">
+  <!-- Workshop Resources -->
+  <section class="service-resources">
     <h2>{% if lang == "es" %}Recursos del Taller{% else %}Workshop Resources{% endif %}</h2>
-    <p>{% if lang == "es" %}Materiales y charlas relacionadas con el contenido del taller:{% else %}Materials and talks related to my workshop content:{% endif %}</p>
-    <div class="portfolio-grid">
-      <a href="{% if lang == 'es' %}/es{% endif %}/blog/test-driven-development/" class="portfolio-item">
-        <span class="portfolio-item__name">Test-Driven Development</span>
-        <span class="portfolio-item__url">{% if lang == "es" %}Artículo del blog{% else %}Blog post{% endif %}</span>
-        <span class="portfolio-item__type">{% if lang == "es" %}Entendiendo los principios y prácticas de TDD{% else %}Understanding TDD principles and practices{% endif %}</span>
-        <span class="portfolio-item__tag">{% if lang == "es" %}Artículo{% else %}Article{% endif %}</span>
+    <p class="service-resources__intro">{% if lang == "es" %}Materiales y charlas relacionadas con el contenido del taller:{% else %}Materials and talks related to my workshop content:{% endif %}</p>
+    <div class="resources-grid">
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/test-driven-development/" class="resource-card">
+        <div class="resource-card__icon"><i class="fa-solid fa-flask"></i></div>
+        <div class="resource-card__content">
+          <h3>Test-Driven Development</h3>
+          <p>{% if lang == "es" %}Entendiendo los principios y prácticas de TDD{% else %}Understanding TDD principles and practices{% endif %}</p>
+        </div>
+        <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
-      <a href="{% if lang == 'es' %}/es{% endif %}/blog/effective-pair-programming/" class="portfolio-item">
-        <span class="portfolio-item__name">Effective Pair Programming</span>
-        <span class="portfolio-item__url">{% if lang == "es" %}Artículo del blog{% else %}Blog post{% endif %}</span>
-        <span class="portfolio-item__type">{% if lang == "es" %}Técnicas para programación colaborativa{% else %}Techniques for collaborative coding{% endif %}</span>
-        <span class="portfolio-item__tag">{% if lang == "es" %}Artículo{% else %}Article{% endif %}</span>
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/effective-pair-programming/" class="resource-card">
+        <div class="resource-card__icon"><i class="fa-solid fa-users"></i></div>
+        <div class="resource-card__content">
+          <h3>Effective Pair Programming</h3>
+          <p>{% if lang == "es" %}Técnicas para programación colaborativa{% else %}Techniques for collaborative coding{% endif %}</p>
+        </div>
+        <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
-      <a href="{% if lang == 'es' %}/es{% endif %}/blog/the-art-of-refactoring/" class="portfolio-item">
-        <span class="portfolio-item__name">The Art of Refactoring</span>
-        <span class="portfolio-item__url">{% if lang == "es" %}Artículo del blog{% else %}Blog post{% endif %}</span>
-        <span class="portfolio-item__type">{% if lang == "es" %}Principios y patrones para código limpio{% else %}Principles and patterns for clean code{% endif %}</span>
-        <span class="portfolio-item__tag">{% if lang == "es" %}Artículo{% else %}Article{% endif %}</span>
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/update-your-team-to-be-more-extreme/" class="resource-card">
+        <div class="resource-card__icon"><i class="fa-solid fa-bolt"></i></div>
+        <div class="resource-card__content">
+          <h3>Extreme Programming Values</h3>
+          <p>{% if lang == "es" %}Los 5 valores que hacen equipos efectivos{% else %}The 5 values that make teams effective{% endif %}</p>
+        </div>
+        <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
-      <a href="{% if lang == 'es' %}/es{% endif %}/blog/great-engineering/" class="portfolio-item">
-        <span class="portfolio-item__name">Great Engineering</span>
-        <span class="portfolio-item__url">{% if lang == "es" %}Artículo del blog{% else %}Blog post{% endif %}</span>
-        <span class="portfolio-item__type">{% if lang == "es" %}Qué hace que los equipos de ingeniería destaquen{% else %}What makes engineering teams excel{% endif %}</span>
-        <span class="portfolio-item__tag">{% if lang == "es" %}Artículo{% else %}Article{% endif %}</span>
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/great-engineering/" class="resource-card">
+        <div class="resource-card__icon"><i class="fa-solid fa-rocket"></i></div>
+        <div class="resource-card__content">
+          <h3>Great Engineering</h3>
+          <p>{% if lang == "es" %}Qué hace que los equipos de ingeniería destaquen{% else %}What makes engineering teams excel{% endif %}</p>
+        </div>
+        <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
     </div>
   </section>

@@ -197,9 +197,9 @@
           </tr>
           <tr>
             <td>{% if lang == "es" %}Coste de hosting{% else %}Hosting cost{% endif %}</td>
-            <td class="highlight">€{{ config.extra.pricing_static_hosting }}/{% if lang == "es" %}año{% else %}year{% endif %}</td>
-            <td class="highlight">€{{ config.extra.pricing_static_hosting }}/{% if lang == "es" %}año{% else %}year{% endif %}</td>
-            <td>€{{ config.extra.pricing_wordpress_hosting }}/{% if lang == "es" %}año{% else %}year{% endif %}</td>
+            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {% if lang == "es" %}Muy bajo{% else %}Very low{% endif %}</td>
+            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {% if lang == "es" %}Muy bajo{% else %}Very low{% endif %}</td>
+            <td>{% if lang == "es" %}Moderado{% else %}Moderate{% endif %}</td>
           </tr>
           <tr>
             <td>{% if lang == "es" %}Mantenimiento{% else %}Maintenance{% endif %}</td>
@@ -221,9 +221,9 @@
           </tr>
           <tr>
             <td>{% if lang == "es" %}Coste de desarrollo{% else %}Development cost{% endif %}</td>
-            <td class="highlight">€{{ macros::price(value=config.extra.pricing_static_simple_min, lang=lang) }}–{{ macros::price(value=config.extra.pricing_static_simple_max, lang=lang) }}</td>
-            <td>€{{ macros::price(value=config.extra.pricing_static_pro_min, lang=lang) }}–{{ macros::price(value=config.extra.pricing_static_pro_max, lang=lang) }}</td>
-            <td>€{{ macros::price(value=config.extra.pricing_wordpress_min, lang=lang) }}–{{ macros::price(value=config.extra.pricing_wordpress_max, lang=lang) }}</td>
+            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {% if lang == "es" %}Más bajo{% else %}Lowest{% endif %}</td>
+            <td>{% if lang == "es" %}Medio{% else %}Medium{% endif %}</td>
+            <td><i class="fa-solid fa-arrow-up"></i> {% if lang == "es" %}Más alto{% else %}Higher{% endif %}</td>
           </tr>
           <tr>
             <td>{% if lang == "es" %}Coste a largo plazo{% else %}Long-term cost{% endif %}</td>
@@ -311,73 +311,14 @@
         <p>{% if lang == "es" %}Trabajo directo contigo, sin intermediarios. Calidad senior, precios competitivos, entrega en menos de un mes. Vista previa desde el primer día, feedback diario, iteraciones cortas.{% else %}I work directly with you, no middlemen. Senior quality, competitive rates, delivery in less than a month. Preview from day one, daily feedback, short iterations.{% endif %}</p>
       </div>
 
-      <div class="budget-cards">
-        <div class="budget-card">
-          <span class="budget-card__type">{% if lang == "es" %}Web Estática{% else %}Static Website{% endif %}</span>
-          <span class="budget-card__range">€{{ macros::price(value=config.extra.pricing_static_simple_min, lang=lang) }} – €{{ macros::price(value=config.extra.pricing_static_simple_max, lang=lang) }}</span>
-          <span class="budget-card__note">{% if lang == "es" %}Sitios simples desde €{{ config.extra.pricing_static_simple_note }}{% else %}Simple sites from €{{ config.extra.pricing_static_simple_note }}{% endif %}</span>
-          <div class="budget-card__yearly">
-            <span class="budget-card__yearly-title">{% if lang == "es" %}Costes anuales{% else %}Yearly costs{% endif %}</span>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">Hosting</span>
-              <span class="budget-card__yearly-value tooltip" tabindex="0">€{{ config.extra.pricing_static_hosting }}<span class="tooltip__text">{% if lang == "es" %}Repositorio privado{% else %}Private repository hosting{% endif %}</span></span>
-            </div>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">{% if lang == "es" %}Mantenimiento{% else %}Maintenance{% endif %}</span>
-              <span class="budget-card__yearly-value tooltip" tabindex="0">€{{ config.extra.pricing_static_maintenance_min }}<span class="tooltip__text">{% if lang == "es" %}Incluye ~2h de soporte para cambios{% else %}Includes ~2h support for changes{% endif %}</span></span>
-            </div>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">{% if lang == "es" %}Dominio{% else %}Domain{% endif %}</span>
-              <span class="budget-card__yearly-value">€{{ config.extra.pricing_domain }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="budget-card budget-card--recommended">
-          <span class="budget-card__badge">{% if lang == "es" %}Recomendado{% else %}Recommended{% endif %}</span>
-          <span class="budget-card__type">{% if lang == "es" %}Web Estática + Blog{% else %}Static Site + Blog{% endif %}</span>
-          <span class="budget-card__range">€{{ macros::price(value=config.extra.pricing_static_pro_min, lang=lang) }} – €{{ macros::price(value=config.extra.pricing_static_pro_max, lang=lang) }}</span>
-          <span class="budget-card__note">{% if lang == "es" %}Personalizado + configuración blog{% else %}Custom + blog setup{% endif %}</span>
-          <div class="budget-card__yearly">
-            <span class="budget-card__yearly-title">{% if lang == "es" %}Costes anuales{% else %}Yearly costs{% endif %}</span>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">Hosting</span>
-              <span class="budget-card__yearly-value tooltip" tabindex="0">€{{ config.extra.pricing_static_hosting }}<span class="tooltip__text">{% if lang == "es" %}Repositorio privado{% else %}Private repository hosting{% endif %}</span></span>
-            </div>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">{% if lang == "es" %}Mantenimiento{% else %}Maintenance{% endif %}</span>
-              <span class="budget-card__yearly-value tooltip" tabindex="0">€{{ config.extra.pricing_static_pro_maintenance }}<span class="tooltip__text">{% if lang == "es" %}Incluye ~5h de soporte para cambios{% else %}Includes ~5h support for changes{% endif %}</span></span>
-            </div>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">{% if lang == "es" %}Dominio{% else %}Domain{% endif %}</span>
-              <span class="budget-card__yearly-value">€{{ config.extra.pricing_domain }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="budget-card">
-          <span class="budget-card__type">{% if lang == "es" %}Web WordPress{% else %}WordPress Website{% endif %}</span>
-          <span class="budget-card__range">€{{ macros::price(value=config.extra.pricing_wordpress_min, lang=lang) }} – €{{ macros::price(value=config.extra.pricing_wordpress_max, lang=lang) }}</span>
-          <span class="budget-card__note">{% if lang == "es" %}+ hosting y mantenimiento{% else %}+ hosting & maintenance{% endif %}</span>
-          <div class="budget-card__yearly">
-            <span class="budget-card__yearly-title">{% if lang == "es" %}Costes anuales{% else %}Yearly costs{% endif %}</span>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">Hosting</span>
-              <span class="budget-card__yearly-value tooltip" tabindex="0">€{{ config.extra.pricing_wordpress_hosting }}<span class="tooltip__text">{% if lang == "es" %}Servidor virtual privado{% else %}Private virtual server{% endif %}</span></span>
-            </div>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">{% if lang == "es" %}Mantenimiento{% else %}Maintenance{% endif %}</span>
-              <span class="budget-card__yearly-value tooltip" tabindex="0">€{{ config.extra.pricing_wordpress_maintenance }}<span class="tooltip__text">{% if lang == "es" %}Incluye ~15h de soporte para cambios, actualizaciones y backups{% else %}Includes ~15h support for changes, updates & backups{% endif %}</span></span>
-            </div>
-            <div class="budget-card__yearly-row">
-              <span class="budget-card__yearly-label">{% if lang == "es" %}Dominio{% else %}Domain{% endif %}</span>
-              <span class="budget-card__yearly-value">€{{ config.extra.pricing_domain }}</span>
-            </div>
-          </div>
-        </div>
+      <div class="quote-cta">
+        <p class="quote-cta__text">{% if lang == "es" %}Cada proyecto es diferente. Contacta conmigo para hablar de tus necesidades y recibir un presupuesto personalizado.{% else %}Every project is different. Contact me to discuss your needs and get a personalized quote.{% endif %}</p>
+        <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Solicitud%20de%20Presupuesto&body=Hola%20Chema%2C%0A%0AMe%20gustaría%20recibir%20un%20presupuesto%20para%20mi%20proyecto%20web.%0A%0ADescripción%3A%0A%0AGracias!{% else %}Quote%20Request&body=Hi%20Chema%2C%0A%0AI'd%20like%20to%20get%20a%20quote%20for%20my%20web%20project.%0A%0ADescription%3A%0A%0AThanks!{% endif %}" class="quote-cta__btn">
+          <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Solicitar presupuesto{% else %}Request a Quote{% endif %}
+        </a>
       </div>
 
-      <p class="budget-disclaimer">{% if lang == "es" %}Precios sin IVA. El precio final depende del número de páginas, funcionalidades extras y complejidad del diseño. Presupuesto detallado tras la llamada inicial.{% else %}Prices exclude VAT. Final price depends on number of pages, extra features, and design complexity. Detailed quote after initial call.{% endif %}</p>
+      <p class="budget-disclaimer">{% if lang == "es" %}Precios personalizados según el número de páginas, funcionalidades y complejidad del diseño.{% else %}Pricing customized based on number of pages, features, and design complexity.{% endif %}</p>
     </div>
   </section>
 
