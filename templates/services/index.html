@@ -57,42 +57,6 @@
 
     <div class="services-sessions" id="voucher">
       <div class="sessions-content">
-        <h3><i class="fa-solid fa-comments"></i> {% if lang == "es" %}Sesiones 1:1{% else %}1:1 Sessions{% endif %}</h3>
-        <p>{% if lang == "es" %}¿Quieres profundizar más? Reserva una llamada para hablar de cualquier tema de mis posts o explorar ideas juntos.{% else %}Want to go deeper? Book a call to discuss any topic from my blog posts or explore ideas together.{% endif %}</p>
-      </div>
-      <div class="sessions-tags">
-        {% if lang == "es" %}
-        <a href="/es/tags/leadership/">liderazgo</a>
-        <a href="/es/tags/agile/">agile</a>
-        <a href="/es/tags/testing/">testing</a>
-        <a href="/es/tags/clean-code/">clean code</a>
-        <a href="/es/tags/refactoring/">refactoring</a>
-        <a href="/es/tags/pair-programming/">pair-prog</a>
-        <a href="/es/tags/communication/">comunicación</a>
-        <a href="/es/tags/bitcoin/">bitcoin</a>
-        {% else %}
-        <a href="/tags/leadership/">leadership</a>
-        <a href="/tags/agile/">agile</a>
-        <a href="/tags/testing/">testing</a>
-        <a href="/tags/clean-code/">clean code</a>
-        <a href="/tags/refactoring/">refactoring</a>
-        <a href="/tags/pair-programming/">pair-prog</a>
-        <a href="/tags/communication/">communication</a>
-        <a href="/tags/bitcoin/">bitcoin</a>
-        {% endif %}
-      </div>
-      <div class="sessions-actions">
-        <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Sesión%201:1&body=Hola%20Chema,%0A%0AMe%20gustaría%20reservar%20una%20sesión%201:1.%0A%0ATema%20que%20me%20interesa:%0A%0AGracias!{% else %}1:1%20Session%20Inquiry&body=Hi%20Chema,%0A%0AI'd%20like%20to%20book%20a%201:1%20session.%0A%0ATopic%20I'm%20interested%20in:%0A%0AThanks!{% endif %}" class="sessions-cta">
-          <i class="fa-solid fa-calendar-check"></i> {% if lang == "es" %}Reserva una llamada{% else %}Book a free call{% endif %}
-        </a>
-        <a href="{% if lang == 'es' %}/es/tags/{% else %}/tags/{% endif %}" class="sessions-cta sessions-cta--secondary">
-          <i class="fa-solid fa-tags"></i> {% if lang == "es" %}Todos los temas{% else %}All topics{% endif %}
-        </a>
-      </div>
-    </div>
-
-    <div class="services-sessions">
-      <div class="sessions-content">
         <h3><i class="fa-solid fa-gift"></i> {% if lang == "es" %}Regalos para Equipos{% else %}Team Gifts{% endif %}</h3>
         <p>{% if lang == "es" %}¿Conoces a alguien que <a href="/services/web-development/#everywebsite">necesita una web</a> o un equipo que se beneficiaría de un taller? Contáctame para opciones.{% else %}Know someone who <a href="/services/web-development/#everywebsite">needs a website</a> or a team that would benefit from a workshop? Contact me to discuss options.{% endif %}</p>
       </div>

@@ -154,6 +154,11 @@
     text-decoration: none;
     transition: all 0.2s ease;
 
+    &:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+
     &:hover {
       color: white;
       filter: brightness(1.1);
@@ -704,6 +709,11 @@
     font-size: 1rem;
     transition: all 0.2s ease;
 
+    &:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+
     &:hover {
       color: white;
       filter: brightness(1.1);
@@ -921,6 +931,11 @@
   text-decoration: none;
   transition: all 0.2s ease;
 
+  &:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+
   &:hover {
     border-color: var(--accent-color);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -1034,6 +1049,11 @@
     text-decoration: none;
     transition: all 0.2s ease;
 
+    &:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+
     &:hover {
       color: white;
       filter: brightness(1.1);
@@ -1046,6 +1066,11 @@
       background: transparent;
       border: 1px solid var(--preview-divider-color);
       color: var(--body-color);
+
+      &:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
+      }
 
       &:hover {
         filter: none;
@@ -1213,6 +1238,11 @@
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.2s ease;
+
+  &:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
 
   &:hover {
     border-color: var(--accent-color);

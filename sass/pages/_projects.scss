@@ -467,10 +467,15 @@
   border-radius: 12px;
   padding: 1.25rem;
   transition: all 0.2s ease;
+  text-decoration: none;
 
   &:hover {
     border-color: var(--accent-color);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+
+    .service-card__more i {
+      transform: translateX(4px);
+    }
   }
 
   &__header {
@@ -829,6 +834,11 @@
       background: var(--search-bg-selected-item);
     }
 
+    &:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: -2px;
+    }
+
     i {
       font-size: 0.8rem;
       color: var(--accent-color);
@@ -872,7 +882,8 @@
   outline-offset: 2px;
 }
 
-.project-card:focus-visible {
+.project-card:focus-visible,
+.service-card:focus-visible {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
 }
