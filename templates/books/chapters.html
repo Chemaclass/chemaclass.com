@@ -47,17 +47,14 @@
             {% else %}
               <i class="fa-solid fa-book-open"></i>
             {% endif %}
-            <span class="chapter-card__number">
-              {% if chapter_num == "0" %}
-                {% if lang == "es" %}Prólogo{% else %}Prologue{% endif %}
-              {% else %}
-                {{ chapter_num | int }}
-              {% endif %}
-            </span>
+            {% if chapter_num != "0" %}
+              <span class="chapter-card__number">{{ chapter_num | int }}</span>
+            {% endif %}
           </div>
           <div class="chapter-card__content">
             <h3 class="chapter-card__title">{{ post.title }}</h3>
-            {% if parts | length >= 3 %}
+            {# Only show month for regular chapters (not special pages) #}
+            {% if chapter_num != "0" and parts | length >= 3 %}
               <span class="chapter-card__month">{{ parts[2] | capitalize }}</span>
             {% endif %}
             {% if post.word_count %}

@@ -140,12 +140,9 @@
     background: linear-gradient(135deg, var(--accent-color) 0%, color-mix(in srgb, var(--accent-color) 70%, black) 100%);
 
     i {
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 3rem;
     }
-  }
-
-  .chapter-card__number {
-    background: var(--heading-color);
   }
 }
 

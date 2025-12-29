@@ -187,9 +187,15 @@
     const tocHeader = document.createElement('div');
     tocHeader.className = 'toc-header';
 
-    const tocTitle = document.createElement('span');
+    const tocTitle = document.createElement('a');
     tocTitle.className = 'toc-title';
+    tocTitle.href = '#';
     tocTitle.textContent = tocTitleText;
+    tocTitle.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      history.pushState(null, null, window.location.pathname);
+    });
 
     const tocCloseButton = document.createElement('button');
     tocCloseButton.type = 'button';
