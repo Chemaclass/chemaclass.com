@@ -13,17 +13,10 @@
 <article class="projects-page service-page">
   <!-- Hero Section -->
   <header class="projects-hero service-hero">
-    {% if lang == "es" %}
-    <h1>Servicios</h1>
+    <h1>{{ trans(key="svc_services") }}</h1>
     <p class="projects-hero__subtitle service-hero__subtitle">
-      Con más de 14 años en desarrollo de software, ayudo a empresas y particulares a estar online con sitios web rápidos y profesionales, y ayudo a equipos de desarrollo a mejorar con talleres prácticos de testing y refactoring. Si necesitas presencia web o quieres potenciar tus habilidades, puedo ayudarte.
+      {% if lang == "es" %}Con más de 14 años en desarrollo de software, ayudo a empresas y particulares a estar online con sitios web rápidos y profesionales, y ayudo a equipos de desarrollo a mejorar con talleres prácticos de testing y refactoring. Si necesitas presencia web o quieres potenciar tus habilidades, puedo ayudarte.{% else %}With 14+ years in software development, I help businesses and individuals get online with fast, professional websites and help dev teams level up through hands-on workshops on testing and refactoring. Whether you need a web presence or want to sharpen your skills, I can help.{% endif %}
     </p>
-    {% else %}
-    <h1>Services</h1>
-    <p class="projects-hero__subtitle service-hero__subtitle">
-      With 14+ years in software development, I help businesses and individuals get online with fast, professional websites and help dev teams level up through hands-on workshops on testing and refactoring. Whether you need a web presence or want to sharpen your skills, I can help.
-    </p>
-    {% endif %}
   </header>
 
   <!-- Services Section -->
@@ -34,11 +27,11 @@
           <div class="service-card__icon">
             <i class="fa-solid fa-globe"></i>
           </div>
-          <span class="service-card__more">{% if lang == "es" %}Más información{% else %}Learn more{% endif %} <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="service-card__more">{{ trans(key="svc_learn_more") }} <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-        <h3>{% if lang == "es" %}Desarrollo Web{% else %}Static Websites{% endif %}</h3>
+        <h3>{{ trans(key="svc_static_websites") }}</h3>
         <p>{% if lang == "es" %}Landing pages, portfolios, sitios corporativos. Rápidos, accesibles, fáciles de mantener.{% else %}Landing pages, portfolios, company sites. Fast, accessible, easy to maintain.{% endif %}</p>
-        <span class="service-card__price">{% if lang == "es" %}Solicita presupuesto{% else %}Request a quote{% endif %}</span>
+        <span class="service-card__price">{{ trans(key="svc_request_quote") }}</span>
       </a>
 
       <a href="{% if lang == 'es' %}/es/services/team-workshops/{% else %}/services/team-workshops/{% endif %}" class="service-card">
@@ -46,23 +39,23 @@
           <div class="service-card__icon">
             <i class="fa-solid fa-code"></i>
           </div>
-          <span class="service-card__more">{% if lang == "es" %}Más información{% else %}Learn more{% endif %} <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="service-card__more">{{ trans(key="svc_learn_more") }} <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-        <h3>{% if lang == "es" %}Talleres de Equipo{% else %}Team Workshops{% endif %}</h3>
+        <h3>{{ trans(key="svc_workshops") }}</h3>
         <p>{% if lang == "es" %}Sesiones de equipo sobre TDD, refactoring y pair programming a través de katas.{% else %}Team sessions on TDD, refactoring, and pair programming through katas.{% endif %}</p>
-        <span class="service-card__price">{% if lang == "es" %}Solicita información{% else %}Request information{% endif %}</span>
+        <span class="service-card__price">{{ trans(key="svc_request_info") }}</span>
       </a>
 
     </div>
 
     <div class="services-sessions" id="voucher">
       <div class="sessions-content">
-        <h3><i class="fa-solid fa-gift"></i> {% if lang == "es" %}Regalos para Equipos{% else %}Team Gifts{% endif %}</h3>
+        <h3><i class="fa-solid fa-gift"></i> {{ trans(key="svc_team_gifts") }}</h3>
         <p>{% if lang == "es" %}¿Conoces a alguien que <a href="/services/web-development/#everywebsite">necesita una web</a> o un equipo que se beneficiaría de un taller? Contáctame para opciones.{% else %}Know someone who <a href="/services/web-development/#everywebsite">needs a website</a> or a team that would benefit from a workshop? Contact me to discuss options.{% endif %}</p>
       </div>
       <div class="sessions-actions">
         <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Vale%20Regalo&body=Hola%20Chema,%0A%0AMe%20gustaría%20solicitar%20un%20vale%20regalo.%0A%0ATipo%20de%20vale:%0ANombre%20del%20destinatario:%0A%0AGracias!{% else %}Gift%20Voucher%20Inquiry&body=Hi%20Chema,%0A%0AI'd%20like%20to%20request%20a%20gift%20voucher.%0A%0AType%20of%20voucher:%0ARecipient%20name:%0A%0AThanks!{% endif %}" class="sessions-cta">
-          <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Solicitar un vale{% else %}Request a voucher{% endif %}
+          <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_request_voucher") }}
         </a>
       </div>
     </div>
@@ -70,7 +63,7 @@
 
   <!-- FAQ Section -->
   <section class="services-faq" id="faq">
-    <h2 class="services-faq__title">{% if lang == "es" %}Preguntas Frecuentes{% else %}Frequently Asked Questions{% endif %}</h2>
+    <h2 class="services-faq__title">{{ trans(key="svc_faq") }}</h2>
     <div class="services-faq__list">
       <div class="services-faq__item">
         <button class="services-faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('open')">
@@ -115,10 +108,10 @@
   <section class="projects-tabs" id="projects">
     <div class="tabs-nav" role="tablist" aria-label="{% if lang == 'es' %}Categorías de proyectos{% else %}Project categories{% endif %}">
       <button class="tab-btn active" data-tab="featured" role="tab" aria-selected="true" aria-controls="tab-featured" id="btn-featured" tabindex="0">
-        <i class="fa-solid fa-star"></i> {% if lang == "es" %}Destacados{% else %}Featured{% endif %}
+        <i class="fa-solid fa-star"></i> {{ trans(key="svc_featured") }}
       </button>
       <button class="tab-btn" data-tab="more" role="tab" aria-selected="false" aria-controls="tab-more" id="btn-more" tabindex="-1">
-        <i class="fa-solid fa-code"></i> {% if lang == "es" %}Más Proyectos{% else %}More Projects{% endif %}
+        <i class="fa-solid fa-code"></i> {{ trans(key="svc_more_projects") }}
       </button>
     </div>
 

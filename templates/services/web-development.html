@@ -12,14 +12,14 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M19 12H5M12 19l-7-7 7-7"/>
       </svg>
-      {% if lang == "es" %}Todos los Servicios{% else %}All Services{% endif %}
+      {{ trans(key="svc_all_services") }}
     </a>
   </nav>
 
   <!-- Hero Section -->
   <header class="service-hero">
-    <h1>{% if lang == "es" %}Desarrollo Web{% else %}Web Development{% endif %}</h1>
-    <p class="service-hero__subtitle">{% if lang == "es" %}Sitios web profesionales que trabajan para tu negocio{% else %}Professional websites that work for your business{% endif %}</p>
+    <h1>{{ trans(key="svc_web_dev") }}</h1>
+    <p class="service-hero__subtitle">{{ trans(key="svc_web_dev_subtitle") }}</p>
   </header>
 
   <!-- Value Proposition -->
@@ -27,29 +27,29 @@
     <p>{% if lang == "es" %}Toda empresa necesita una web, pero no todas necesitan el mismo tipo. Te ayudo a elegir el enfoque adecuado basado en tus necesidades reales, no en lo que está de moda o es innecesariamente complejo.{% else %}Every business needs a website, but not the same kind. I help you choose what actually fits your needs, not what's trendy or over-engineered.{% endif %}</p>
     <p>{% if lang == "es" %}Ofrezco tres tipos de sitios web, cada uno diseñado para diferentes situaciones. Entender la diferencia te ahorrará tiempo, dinero y frustraciones.{% else %}I offer three types of websites, each for a different situation. Knowing the difference saves you time, money, and frustration.{% endif %}</p>
     <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Desarrollo%20Web&body=Hola%20Chema%2C%0A%0AEstoy%20interesado%20en%20tus%20servicios%20de%20desarrollo%20web.%0A%0AMi%20proyecto%3A%0A%0AGracias!{% else %}Web%20Development%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20your%20web%20development%20services.%0A%0AMy%20project%3A%0A%0AThanks!{% endif %}" class="service-intro__cta">
-      <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Contactar{% else %}Get in touch{% endif %}
+      <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_contact") }}
     </a>
   </section>
 
   <!-- What's Included -->
   <section class="service-included" id="everywebsite">
-    <h2>{% if lang == "es" %}Todos los sitios web incluyen{% else %}Every website includes{% endif %}</h2>
+    <h2>{{ trans(key="svc_every_site_includes") }}</h2>
     <div class="included-grid">
       <div class="included-item">
         <i class="fa-solid fa-mobile-screen"></i>
-        <span>{% if lang == "es" %}Diseño responsive{% else %}Responsive design{% endif %}</span>
+        <span>{{ trans(key="svc_responsive") }}</span>
       </div>
       <div class="included-item">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <span>{% if lang == "es" %}SEO básico{% else %}SEO fundamentals{% endif %}</span>
+        <span>{{ trans(key="svc_seo") }}</span>
       </div>
       <div class="included-item">
         <i class="fa-solid fa-lock"></i>
-        <span>{% if lang == "es" %}Seguridad HTTPS{% else %}HTTPS security{% endif %}</span>
+        <span>{{ trans(key="svc_https") }}</span>
       </div>
       <div class="included-item">
         <i class="fa-solid fa-gauge-high"></i>
-        <span>{% if lang == "es" %}Optimizado para velocidad{% else %}Performance optimized{% endif %}</span>
+        <span>{{ trans(key="svc_performance") }}</span>
       </div>
       <div class="included-item">
         <i class="fa-solid fa-chart-simple"></i>
@@ -65,14 +65,14 @@
         <div class="service-option__icon">
           <i class="fa-solid fa-bolt"></i>
         </div>
-        <h2>{% if lang == "es" %}Web Estática{% else %}Static Website{% endif %}</h2>
-        <span class="service-option__tag">{% if lang == "es" %}Recomendado para la mayoría{% else %}Recommended for most businesses{% endif %}</span>
+        <h2>{{ trans(key="svc_static") }}</h2>
+        <span class="service-option__tag">{{ trans(key="svc_static_tag") }}</span>
       </div>
 
       <p class="service-option__desc">{% if lang == "es" %}Un sitio web rápido y seguro, construido una vez y listo para funcionar. Piensa en él como un folleto digital que nunca falla.{% else %}A fast, secure website built once and ready to perform. Think of it as a digital brochure that never breaks.{% endif %}</p>
 
       <div class="service-option__benefits">
-        <h3>{% if lang == "es" %}Qué obtienes{% else %}What you get{% endif %}</h3>
+        <h3>{{ trans(key="svc_what_you_get") }}</h3>
         <ul>
           <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Carga ultrarrápida (< 1 seg){% else %}Lightning-fast loading (< 1 sec){% endif %}</li>
           <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Seguridad excelente{% else %}Excellent security (virtually unhackable){% endif %}</li>
@@ -83,7 +83,7 @@
       </div>
 
       <div class="service-option__ideal">
-        <h3>{% if lang == "es" %}Ideal para{% else %}Ideal for{% endif %}</h3>
+        <h3>{{ trans(key="svc_ideal_for") }}</h3>
         <ul>
           <li>{% if lang == "es" %}Webs corporativas{% else %}Company websites{% endif %}</li>
           <li>{% if lang == "es" %}Portfolios profesionales{% else %}Professional portfolios{% endif %}</li>
@@ -92,7 +92,7 @@
       </div>
 
       <div class="service-option__consideration">
-        <strong>{% if lang == "es" %}A tener en cuenta:{% else %}One thing to know:{% endif %}</strong> {% if lang == "es" %}Las actualizaciones de contenido requieren un desarrollador. Para la mayoría de empresas que actualizan pocas veces al año, es un pequeño compromiso a cambio de todos los beneficios.{% else %}Content updates require a developer. For most businesses that update a few times per year, this is a minor trade-off for all the benefits.{% endif %}
+        <strong>{{ trans(key="svc_one_thing") }}</strong> {% if lang == "es" %}Las actualizaciones de contenido requieren un desarrollador. Para la mayoría de empresas que actualizan pocas veces al año, es un pequeño compromiso a cambio de todos los beneficios.{% else %}Content updates require a developer. For most businesses that update a few times per year, this is a minor trade-off for all the benefits.{% endif %}
       </div>
     </div>
 
@@ -101,14 +101,14 @@
         <div class="service-option__icon service-option__icon--tertiary">
           <i class="fa-solid fa-code"></i>
         </div>
-        <h2>{% if lang == "es" %}Web Estática + Blog{% else %}Static Site + Blog{% endif %}</h2>
-        <span class="service-option__tag service-option__tag--tertiary">{% if lang == "es" %}Lo mejor de ambos mundos{% else %}Best of both worlds{% endif %}</span>
+        <h2>{{ trans(key="svc_static_blog") }}</h2>
+        <span class="service-option__tag service-option__tag--tertiary">{{ trans(key="svc_static_blog_tag") }}</span>
       </div>
 
       <p class="service-option__desc">{% if lang == "es" %}Un sitio web flexible tipo blog construido con herramientas como Zola o VitePress. La velocidad de los sitios estáticos con la estructura de WP.{% else %}A flexible blog-like website built with tools like Zola or VitePress. The speed of static sites with the structure of WP.{% endif %}</p>
 
       <div class="service-option__benefits">
-        <h3>{% if lang == "es" %}Qué obtienes{% else %}What you get{% endif %}</h3>
+        <h3>{{ trans(key="svc_what_you_get") }}</h3>
         <ul>
           <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Misma velocidad que webs estáticas{% else %}Same fast loading as static sites{% endif %}</li>
           <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Posts, páginas y plantillas{% else %}Blog posts, pages, and custom templates{% endif %}</li>
@@ -119,7 +119,7 @@
       </div>
 
       <div class="service-option__ideal">
-        <h3>{% if lang == "es" %}Ideal para{% else %}Ideal for{% endif %}</h3>
+        <h3>{{ trans(key="svc_ideal_for") }}</h3>
         <ul>
           <li>{% if lang == "es" %}Blogs y noticias de empresa{% else %}Business blogs and news{% endif %}</li>
           <li>{% if lang == "es" %}Portfolio con casos de estudio{% else %}Portfolio with case studies{% endif %}</li>
@@ -128,7 +128,7 @@
       </div>
 
       <div class="service-option__consideration">
-        <strong>{% if lang == "es" %}A tener en cuenta:{% else %}One thing to know:{% endif %}</strong> {% if lang == "es" %}Las actualizaciones son sencillas pero requieren una breve sesión de formación. Alternativamente, puedo gestionar las actualizaciones mensuales por un coste mínimo.{% else %}Content updates are simple but require a quick training session. Alternatively, I can handle monthly updates for you at a minimal cost.{% endif %}
+        <strong>{{ trans(key="svc_one_thing") }}</strong> {% if lang == "es" %}Las actualizaciones son sencillas pero requieren una breve sesión de formación. Alternativamente, puedo gestionar las actualizaciones mensuales por un coste mínimo.{% else %}Content updates are simple but require a quick training session. Alternatively, I can handle monthly updates for you at a minimal cost.{% endif %}
       </div>
     </div>
 
@@ -137,14 +137,14 @@
         <div class="service-option__icon service-option__icon--secondary">
           <i class="fa-brands fa-wordpress"></i>
         </div>
-        <h2>{% if lang == "es" %}Web WordPress{% else %}WordPress Website{% endif %}</h2>
-        <span class="service-option__tag service-option__tag--secondary">{% if lang == "es" %}Para actualizaciones frecuentes{% else %}For frequent content updates{% endif %}</span>
+        <h2>{{ trans(key="svc_wordpress") }}</h2>
+        <span class="service-option__tag service-option__tag--secondary">{{ trans(key="svc_wordpress_tag") }}</span>
       </div>
 
       <p class="service-option__desc">{% if lang == "es" %}Un sitio web flexible que puedes editar tú mismo a través de un panel intuitivo. Control total sobre tu contenido.{% else %}A flexible website you can edit yourself through a user-friendly dashboard. Full control over your content.{% endif %}</p>
 
       <div class="service-option__benefits">
-        <h3>{% if lang == "es" %}Qué obtienes{% else %}What you get{% endif %}</h3>
+        <h3>{{ trans(key="svc_what_you_get") }}</h3>
         <ul>
           <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Edita contenido sin tocar código{% else %}Edit content without touching code{% endif %}</li>
           <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Añade páginas, posts e imágenes{% else %}Add pages, posts, and images yourself{% endif %}</li>
@@ -155,7 +155,7 @@
       </div>
 
       <div class="service-option__ideal">
-        <h3>{% if lang == "es" %}Ideal para{% else %}Ideal for{% endif %}</h3>
+        <h3>{{ trans(key="svc_ideal_for") }}</h3>
         <ul>
           <li>{% if lang == "es" %}Blogs y sitios de noticias{% else %}Blogs and news sites{% endif %}</li>
           <li>{% if lang == "es" %}Sitios con múltiples editores{% else %}Sites with multiple editors{% endif %}</li>
@@ -164,72 +164,72 @@
       </div>
 
       <div class="service-option__consideration">
-        <strong>{% if lang == "es" %}A tener en cuenta:{% else %}One thing to know:{% endif %}</strong> {% if lang == "es" %}Más flexibilidad significa más mantenimiento. WordPress necesita actualizaciones regulares y atención de seguridad, lo que se traduce en mayores costes a largo plazo.{% else %}More flexibility means more maintenance. WordPress needs regular updates and security attention, which translates to higher long-term costs.{% endif %}
+        <strong>{{ trans(key="svc_one_thing") }}</strong> {% if lang == "es" %}Más flexibilidad significa más mantenimiento. WordPress necesita actualizaciones regulares y atención de seguridad, lo que se traduce en mayores costes a largo plazo.{% else %}More flexibility means more maintenance. WordPress needs regular updates and security attention, which translates to higher long-term costs.{% endif %}
       </div>
     </div>
   </section>
 
   <!-- Comparison Table -->
   <section class="service-comparison">
-    <h2>{% if lang == "es" %}Comparativa Rápida{% else %}Quick Comparison{% endif %}</h2>
+    <h2>{{ trans(key="svc_quick_comparison") }}</h2>
     <div class="comparison-table">
       <table>
         <thead>
           <tr>
             <th></th>
-            <th class="col-static"><i class="fa-solid fa-bolt"></i>{% if lang == "es" %}Estática{% else %}Static{% endif %}</th>
-            <th class="col-ssg"><i class="fa-solid fa-code"></i>{% if lang == "es" %}Est.+Blog{% else %}Static+Blog{% endif %}</th>
+            <th class="col-static"><i class="fa-solid fa-bolt"></i>{{ trans(key="svc_static") }}</th>
+            <th class="col-ssg"><i class="fa-solid fa-code"></i>{{ trans(key="svc_static_blog") }}</th>
             <th class="col-wp"><i class="fa-brands fa-wordpress"></i>WordPress</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>{% if lang == "es" %}Velocidad de carga{% else %}Loading speed{% endif %}</td>
-            <td class="highlight"><i class="fa-solid fa-gauge-high"></i> {% if lang == "es" %}Muy rápida{% else %}Very fast{% endif %}</td>
-            <td class="highlight"><i class="fa-solid fa-gauge-high"></i> {% if lang == "es" %}Muy rápida{% else %}Very fast{% endif %}</td>
-            <td>{% if lang == "es" %}Buena{% else %}Good{% endif %}</td>
+            <td>{{ trans(key="svc_loading_speed") }}</td>
+            <td class="highlight"><i class="fa-solid fa-gauge-high"></i> {{ trans(key="svc_very_fast") }}</td>
+            <td class="highlight"><i class="fa-solid fa-gauge-high"></i> {{ trans(key="svc_very_fast") }}</td>
+            <td>{{ trans(key="svc_good") }}</td>
           </tr>
           <tr>
-            <td>{% if lang == "es" %}Seguridad{% else %}Security{% endif %}</td>
-            <td class="highlight"><i class="fa-solid fa-shield-halved"></i> {% if lang == "es" %}Excelente{% else %}Excellent{% endif %}</td>
-            <td class="highlight"><i class="fa-solid fa-shield-halved"></i> {% if lang == "es" %}Excelente{% else %}Excellent{% endif %}</td>
-            <td class="caution"><i class="fa-solid fa-triangle-exclamation"></i> {% if lang == "es" %}Requiere atención{% else %}Needs attention{% endif %}</td>
+            <td>{{ trans(key="svc_security") }}</td>
+            <td class="highlight"><i class="fa-solid fa-shield-halved"></i> {{ trans(key="svc_excellent") }}</td>
+            <td class="highlight"><i class="fa-solid fa-shield-halved"></i> {{ trans(key="svc_excellent") }}</td>
+            <td class="caution"><i class="fa-solid fa-triangle-exclamation"></i> {{ trans(key="svc_needs_attention") }}</td>
           </tr>
           <tr>
-            <td>{% if lang == "es" %}Coste de hosting{% else %}Hosting cost{% endif %}</td>
-            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {% if lang == "es" %}Muy bajo{% else %}Very low{% endif %}</td>
-            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {% if lang == "es" %}Muy bajo{% else %}Very low{% endif %}</td>
-            <td>{% if lang == "es" %}Moderado{% else %}Moderate{% endif %}</td>
+            <td>{{ trans(key="svc_hosting_cost") }}</td>
+            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_very_low") }}</td>
+            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_very_low") }}</td>
+            <td>{{ trans(key="svc_moderate") }}</td>
           </tr>
           <tr>
-            <td>{% if lang == "es" %}Mantenimiento{% else %}Maintenance{% endif %}</td>
-            <td class="highlight">{% if lang == "es" %}Mínimo{% else %}Minimal{% endif %}</td>
-            <td class="highlight">{% if lang == "es" %}Mínimo{% else %}Minimal{% endif %}</td>
-            <td class="caution">{% if lang == "es" %}Actualizaciones regulares{% else %}Regular updates{% endif %}</td>
+            <td>{{ trans(key="svc_maintenance") }}</td>
+            <td class="highlight">{{ trans(key="svc_minimal") }}</td>
+            <td class="highlight">{{ trans(key="svc_minimal") }}</td>
+            <td class="caution">{{ trans(key="svc_regular_updates") }}</td>
           </tr>
           <tr>
-            <td>{% if lang == "es" %}Soporte de blog{% else %}Blog support{% endif %}</td>
+            <td>{{ trans(key="svc_blog_support") }}</td>
             <td><i class="fa-solid fa-xmark"></i></td>
             <td class="highlight"><i class="fa-solid fa-check"></i></td>
             <td class="highlight"><i class="fa-solid fa-check"></i></td>
           </tr>
           <tr>
-            <td>{% if lang == "es" %}Edición sin técnicos{% else %}Non-technical editing{% endif %}</td>
+            <td>{{ trans(key="svc_non_tech_editing") }}</td>
             <td><i class="fa-solid fa-xmark"></i></td>
             <td><i class="fa-solid fa-check" style="opacity: 0.4"></i></td>
             <td class="highlight"><i class="fa-solid fa-check"></i></td>
           </tr>
           <tr>
-            <td>{% if lang == "es" %}Coste de desarrollo{% else %}Development cost{% endif %}</td>
-            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {% if lang == "es" %}Más bajo{% else %}Lowest{% endif %}</td>
-            <td>{% if lang == "es" %}Medio{% else %}Medium{% endif %}</td>
-            <td><i class="fa-solid fa-arrow-up"></i> {% if lang == "es" %}Más alto{% else %}Higher{% endif %}</td>
+            <td>{{ trans(key="svc_dev_cost") }}</td>
+            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_lowest") }}</td>
+            <td>{{ trans(key="svc_medium") }}</td>
+            <td><i class="fa-solid fa-arrow-up"></i> {{ trans(key="svc_higher") }}</td>
           </tr>
           <tr>
-            <td>{% if lang == "es" %}Coste a largo plazo{% else %}Long-term cost{% endif %}</td>
-            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {% if lang == "es" %}Más bajo{% else %}Lowest{% endif %}</td>
-            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {% if lang == "es" %}Bajo{% else %}Low{% endif %}</td>
-            <td><i class="fa-solid fa-arrow-up"></i> {% if lang == "es" %}Más alto{% else %}Higher{% endif %}</td>
+            <td>{{ trans(key="svc_long_term_cost") }}</td>
+            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_lowest") }}</td>
+            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_low") }}</td>
+            <td><i class="fa-solid fa-arrow-up"></i> {{ trans(key="svc_higher") }}</td>
           </tr>
         </tbody>
       </table>
@@ -238,10 +238,10 @@
 
   <!-- Decision Helper -->
   <section class="service-decision">
-    <h2>{% if lang == "es" %}¿No sabes cuál elegir?{% else %}Not sure which to choose?{% endif %}</h2>
+    <h2>{{ trans(key="svc_not_sure") }}</h2>
     <div class="decision-cards">
       <div class="decision-card">
-        <h3><i class="fa-solid fa-bolt"></i> {% if lang == "es" %}Elige Estática si...{% else %}Choose Static if...{% endif %}</h3>
+        <h3><i class="fa-solid fa-bolt"></i> {{ trans(key="svc_choose_static") }}</h3>
         <ul>
           <li>{% if lang == "es" %}El contenido cambia raramente{% else %}Content rarely changes{% endif %}</li>
           <li>{% if lang == "es" %}La velocidad y seguridad importan{% else %}Speed and security matter{% endif %}</li>
@@ -249,7 +249,7 @@
         </ul>
       </div>
       <div class="decision-card">
-        <h3><i class="fa-solid fa-code"></i> {% if lang == "es" %}Elige Estática + Blog si...{% else %}Choose Static + Blog if...{% endif %}</h3>
+        <h3><i class="fa-solid fa-code"></i> {{ trans(key="svc_choose_static_blog") }}</h3>
         <ul>
           <li>{% if lang == "es" %}Quieres un blog o sección de noticias{% else %}You want a blog or news section{% endif %}</li>
           <li>{% if lang == "es" %}Las actualizaciones son ocasionales (mensuales){% else %}Updates are occasional (monthly){% endif %}</li>
@@ -257,7 +257,7 @@
         </ul>
       </div>
       <div class="decision-card">
-        <h3><i class="fa-brands fa-wordpress"></i> {% if lang == "es" %}Elige WordPress si...{% else %}Choose WordPress if...{% endif %}</h3>
+        <h3><i class="fa-brands fa-wordpress"></i> {{ trans(key="svc_choose_wordpress") }}</h3>
         <ul>
           <li>{% if lang == "es" %}Necesitas editores no técnicos{% else %}Non-technical editors needed{% endif %}</li>
           <li>{% if lang == "es" %}Necesitas e-commerce{% else %}You need e-commerce{% endif %}</li>
@@ -267,39 +267,39 @@
     </div>
     <p class="decision-tip">
       <i class="fa-solid fa-lightbulb"></i>
-      <strong>{% if lang == "es" %}Mi consejo sincero:{% else %}My honest advice:{% endif %}</strong> {% if lang == "es" %}En caso de duda, empieza con estática. Es más fácil añadir complejidad después que simplificar una solución sobredimensionada.{% else %}When in doubt, start with static. It's easier to add complexity later than to simplify an over-engineered solution.{% endif %}
+      <strong>{{ trans(key="svc_honest_advice") }}</strong> {% if lang == "es" %}En caso de duda, empieza con estática. Es más fácil añadir complejidad después que simplificar una solución sobredimensionada.{% else %}When in doubt, start with static. It's easier to add complexity later than to simplify an over-engineered solution.{% endif %}
     </p>
   </section>
 
   <!-- Process & Budget -->
   <section class="service-process">
-    <h2>{% if lang == "es" %}Cómo Trabajo{% else %}How I Work{% endif %}</h2>
+    <h2>{{ trans(key="svc_how_i_work") }}</h2>
     <div class="process-steps">
       <div class="process-step">
         <span class="process-step__number">1</span>
         <div class="process-step__content">
-          <h3>{% if lang == "es" %}Llamada de Descubrimiento{% else %}Discovery Call{% endif %}</h3>
+          <h3>{{ trans(key="svc_discovery") }}</h3>
           <p>{% if lang == "es" %}Hablamos de tus objetivos, audiencia y requisitos. Gratis, sin compromiso.{% else %}We discuss your goals, audience, and requirements. Free, no commitment.{% endif %}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">2</span>
         <div class="process-step__content">
-          <h3>{% if lang == "es" %}Propuesta{% else %}Proposal{% endif %}</h3>
+          <h3>{{ trans(key="svc_proposal") }}</h3>
           <p>{% if lang == "es" %}Recibes un alcance claro, plazo y precio cerrado. Sin sorpresas.{% else %}You receive a clear scope, timeline, and fixed price. No surprises.{% endif %}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">3</span>
         <div class="process-step__content">
-          <h3>{% if lang == "es" %}Desarrollo{% else %}Development{% endif %}</h3>
+          <h3>{{ trans(key="svc_development") }}</h3>
           <p>{% if lang == "es" %}Construyo tu web y comparto un enlace de vista previa. Revisas, pruebas y das feedback en cada fase.{% else %}I build your site and share a preview link. You review, test, and give feedback at each stage.{% endif %}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">4</span>
         <div class="process-step__content">
-          <h3>{% if lang == "es" %}Lanzamiento{% else %}Launch{% endif %}</h3>
+          <h3>{{ trans(key="svc_launch") }}</h3>
           <p>{% if lang == "es" %}Tu web sale en producción. Me encargo del despliegue y soporte inicial.{% else %}Your site goes live. I handle deployment and initial support.{% endif %}</p>
         </div>
       </div>
@@ -307,14 +307,14 @@
 
     <div class="budget-section">
       <div class="budget-header">
-        <h3>{% if lang == "es" %}Presupuesto{% else %}Budget{% endif %}</h3>
+        <h3>{{ trans(key="svc_budget") }}</h3>
         <p>{% if lang == "es" %}Trabajo directo contigo, sin intermediarios. Calidad senior, precios competitivos, entrega en menos de un mes. Vista previa desde el primer día, feedback diario, iteraciones cortas.{% else %}I work directly with you, no middlemen. Senior quality, competitive rates, delivery in less than a month. Preview from day one, daily feedback, short iterations.{% endif %}</p>
       </div>
 
       <div class="quote-cta">
         <p class="quote-cta__text">{% if lang == "es" %}Cada proyecto es diferente. Contacta conmigo para hablar de tus necesidades y recibir un presupuesto personalizado.{% else %}Every project is different. Contact me to discuss your needs and get a personalized quote.{% endif %}</p>
         <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Solicitud%20de%20Presupuesto&body=Hola%20Chema%2C%0A%0AMe%20gustaría%20recibir%20un%20presupuesto%20para%20mi%20proyecto%20web.%0A%0ADescripción%3A%0A%0AGracias!{% else %}Quote%20Request&body=Hi%20Chema%2C%0A%0AI'd%20like%20to%20get%20a%20quote%20for%20my%20web%20project.%0A%0ADescription%3A%0A%0AThanks!{% endif %}" class="quote-cta__btn">
-          <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Solicitar presupuesto{% else %}Request a Quote{% endif %}
+          <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_request_quote") }}
         </a>
       </div>
 
@@ -324,26 +324,16 @@
 
   <!-- Portfolio -->
   <section class="service-portfolio">
-    <h2>{% if lang == "es" %}Trabajos Recientes{% else %}Recent Work{% endif %}</h2>
+    <h2>{{ trans(key="svc_recent_work") }}</h2>
     <div class="portfolio-grid">
       <a href="https://fco-sandoval-gomez.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
         <div class="portfolio-item__image">
           <img src="/images/portfolio/fco-sandoval-gomez-sample.jpg" alt="Fco Sandoval Gómez website" loading="lazy">
         </div>
         <div class="portfolio-item__content">
-          <span class="portfolio-item__tag">{% if lang == "es" %}Estática + Blog{% else %}Static + Blog{% endif %}</span>
+          <span class="portfolio-item__tag">{{ trans(key="svc_static_blog") }}</span>
           <h3 class="portfolio-item__name">Fco Sandoval Gómez <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
           <p class="portfolio-item__desc">{% if lang == "es" %}Portfolio profesional para un arquitecto especializado en conservación del patrimonio.{% else %}Professional portfolio for an architect specializing in heritage conservation.{% endif %}</p>
-        </div>
-      </a>
-      <a href="https://windmuehle-tuendern.de" target="_blank" rel="noopener noreferrer" class="portfolio-item">
-        <div class="portfolio-item__image">
-          <img src="/images/portfolio/windmuelle-tuendern-sample.jpg" alt="Windmuehle Tündern website" loading="lazy">
-        </div>
-        <div class="portfolio-item__content">
-          <span class="portfolio-item__tag">{% if lang == "es" %}Estática + Blog{% else %}Static + Blog{% endif %}</span>
-          <h3 class="portfolio-item__name">Windmuehle Tündern <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
-          <p class="portfolio-item__desc">{% if lang == "es" %}Web sin ánimo de lucro para la restauración de un molino histórico en Alemania.{% else %}Non-profit site for the restoration of a historic windmill in Germany.{% endif %}</p>
         </div>
       </a>
       <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
@@ -351,9 +341,19 @@
           <img src="/images/portfolio/dkrisna-sample.jpg" alt="D'Krisna website" loading="lazy">
         </div>
         <div class="portfolio-item__content">
-          <span class="portfolio-item__tag">{% if lang == "es" %}Estática{% else %}Static{% endif %}</span>
+          <span class="portfolio-item__tag">{{ trans(key="svc_static") }}</span>
           <h3 class="portfolio-item__name">D'Krisna <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
           <p class="portfolio-item__desc">{% if lang == "es" %}Centro de belleza y bienestar en Murcia.{% else %}Beauty and wellness salon in Murcia.{% endif %}</p>
+        </div>
+      </a>
+      <a href="https://windmuehle-tuendern.de" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+        <div class="portfolio-item__image">
+          <img src="/images/portfolio/windmuelle-tuendern-sample.jpg" alt="Windmuehle Tündern website" loading="lazy">
+        </div>
+        <div class="portfolio-item__content">
+          <span class="portfolio-item__tag">{{ trans(key="svc_static_blog") }}</span>
+          <h3 class="portfolio-item__name">Windmuehle Tündern <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+          <p class="portfolio-item__desc">{% if lang == "es" %}Web sin ánimo de lucro para la restauración de un molino histórico en Alemania.{% else %}Non-profit site for the restoration of a historic windmill in Germany.{% endif %}</p>
         </div>
       </a>
       <a href="https://postcardfromtheroad.eu" target="_blank" rel="noopener noreferrer" class="portfolio-item">
@@ -371,11 +371,11 @@
 
   <!-- CTA -->
   <section class="service-cta">
-    <h2>{% if lang == "es" %}Hablemos de tu proyecto{% else %}Let's discuss your project{% endif %}</h2>
+    <h2>{{ trans(key="svc_lets_discuss") }}</h2>
     <p>{% if lang == "es" %}Reserva una llamada gratuita de 30 minutos para hablar de lo que necesitas. Te ayudaré a encontrar el camino más sencillo y sensato. Sin presión, sin tecnicismos.{% else %}Book a free 30-minute call to talk through what you need. I'll help you figure out the simplest, most sensible way forward. No pressure, no jargon.{% endif %}</p>
     <div class="service-cta__buttons">
       <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Desarrollo%20Web&body=Hola%20Chema%2C%0A%0AEstoy%20interesado%20en%20tus%20servicios%20de%20desarrollo%20web.%0A%0AMi%20proyecto%3A%0A%0AGracias!{% else %}Web%20Development%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20your%20web%20development%20services.%0A%0AMy%20project%3A%0A%0AThanks!{% endif %}" class="service-cta__btn service-cta__btn--secondary">
-        <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Escríbeme{% else %}Email Me{% endif %}
+        <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_email_me") }}
       </a>
     </div>
   </section>
