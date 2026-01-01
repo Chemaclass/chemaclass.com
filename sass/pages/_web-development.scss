@@ -1004,6 +1004,31 @@
     line-height: 1.5;
     margin: 0;
   }
+
+  &__features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.feature-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--color-subtitle);
+  background: var(--search-bg-selected-item);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+
+  i {
+    font-size: 0.6rem;
+    color: var(--accent-color);
+  }
 }
 
 // CTA Section
