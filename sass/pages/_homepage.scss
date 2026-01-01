@@ -862,6 +862,7 @@ main:has(.homepage-container) #scroll-to-top {
 
   .section-header {
     margin-bottom: 1rem;
+    text-align: center;
 
     h2 {
       font-size: 1.1rem;
@@ -872,57 +873,86 @@ main:has(.homepage-container) #scroll-to-top {
   }
 }
 
-.connect-grid {
+.connect-links {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.connect-card {
+.connect-link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 1rem;
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
-  border-radius: 8px;
+  border-radius: 2rem;
   text-decoration: none;
-  color: var(--body-color);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
+  color: var(--body-color);
   transition: all 0.2s ease;
 
   i {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--color-subtitle);
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: color 0.2s ease;
   }
 
   &:hover {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
 
-    i {
-      color: var(--accent-color);
-      transform: rotate(-8deg);
-    }
+  // Brand-specific hover colors
+  &--github:hover {
+    border-color: #333;
+    background: #333;
+    color: white;
+    i { color: white; }
+  }
+
+  &--twitter:hover {
+    border-color: #000;
+    background: #000;
+    color: white;
+    i { color: white; }
+  }
+
+  &--linkedin:hover {
+    border-color: #0077b5;
+    background: #0077b5;
+    color: white;
+    i { color: white; }
+  }
+
+  &--email:hover {
+    border-color: var(--accent-color);
+    background: var(--accent-color);
+    color: white;
+    i { color: white; }
+  }
+
+  &--rss:hover {
+    border-color: #f26522;
+    background: #f26522;
+    color: white;
+    i { color: white; }
   }
 }
 
 @media (max-width: $breakpoint-phone) {
-  .connect-grid {
+  .connect-links {
     gap: 0.5rem;
   }
 
-  .connect-card {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.8rem;
+  .connect-link {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.85rem;
 
     i {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
 }
@@ -934,7 +964,7 @@ main:has(.homepage-container) #scroll-to-top {
 .hero-cta:focus-visible,
 .project-card:focus-visible,
 .latest-card:focus-visible,
-.connect-card:focus-visible,
+.connect-link:focus-visible,
 .view-all:focus-visible,
 .social-link:focus-visible {
   outline: 2px solid var(--accent-color);
