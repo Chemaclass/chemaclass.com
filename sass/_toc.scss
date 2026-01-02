@@ -16,6 +16,7 @@
   }
 
   #toc-container {
+    --toc-progress: 0%;
     width: 240px;
     flex-shrink: 0;
     background: var(--search-input-bg);
@@ -26,7 +27,7 @@
     overflow-y: auto;
     position: sticky;
     top: 10px;
-    transition: top 0.3s ease-in-out, opacity 0.2s ease, transform 0.2s ease;
+    transition: top 0.3s ease-in-out;
     text-align: left;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 
@@ -128,10 +129,58 @@
   }
 }
 
+// TOC List with progress indicator
 .toc-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  position: relative;
+  padding-left: 12px;
+
+  // Progress track (gray line)
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: var(--preview-divider-color);
+    border-radius: 2px;
+  }
+
+  // Progress fill (accent color)
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 2px;
+    height: var(--toc-progress);
+    max-height: calc(100% - 8px);
+    background: var(--accent-color);
+    border-radius: 2px;
+    transition: height 0.15s ease-out;
+  }
+}
+
+// Animated indicator dot
+.toc-indicator {
+  position: absolute;
+  left: -1px;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  transform: translateY(0);
+  transition: transform 0.2s ease-out, opacity 0.2s ease;
+  opacity: 0;
+  z-index: 1;
+  box-shadow: 0 0 0 3px rgba(58, 92, 136, 0.15);
+
+  &.visible {
+    opacity: 1;
+  }
 }
 
 .toc-item {
@@ -150,17 +199,22 @@
     }
   }
 
+  // Nested items with subtle hierarchy
   &.toc-h3 {
     .toc-link {
-      padding-left: 1.25rem;
+      padding-left: 0.75rem;
       font-size: 0.8rem;
+      color: var(--color-subtitle);
+      opacity: 0.9;
     }
   }
 
   &.toc-h4 {
     .toc-link {
-      padding-left: 2rem;
+      padding-left: 1.5rem;
       font-size: 0.75rem;
+      color: var(--color-subtitle);
+      opacity: 0.8;
     }
   }
 }
@@ -169,7 +223,7 @@
   color: var(--color-subtitle);
   text-decoration: none;
   display: block;
-  padding: 0.35rem 0.75rem;
+  padding: 0.4rem 0.6rem;
   border-radius: 6px;
   transition: all 0.15s ease;
   font-size: 0.85rem;
@@ -178,11 +232,31 @@
   &:hover {
     color: var(--body-color);
     background: var(--search-bg-selected-item);
+    transform: translateX(2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 1px;
   }
 
   &.active {
     color: var(--accent-color);
-    background: rgba(58, 92, 136, 0.08);
+    background: rgba(58, 92, 136, 0.1);
     font-weight: 500;
+
+    // Reset opacity for active nested items
+    opacity: 1 !important;
+  }
+}
+
+// When there's an active item, slightly fade others
+.toc-list:has(.toc-link.active) {
+  .toc-link:not(.active) {
+    opacity: 0.75;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }

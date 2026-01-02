@@ -4,18 +4,22 @@
 
   // Configuration
   const CONFIG = {
-    contentSelector: '.blog-post__content, .book-chapter__content, .post-title ~ div, .reading-post .post-title ~ div', // Main content area (blog posts, book chapters, and readings)
+    contentSelector: '.blog-post__content, .book-chapter__content, .post-title ~ div, .reading-post .post-title ~ div',
     tocContainer: '#toc-container',
-    headingSelectors: 'h2, h3, h4', // Which headings to include
-    minHeadings: 2, // Minimum headings required to show TOC
+    headingSelectors: 'h2, h3, h4',
+    minHeadings: 2,
     activeClass: 'active',
-    offset: 100 // Offset for scroll detection
+    offset: 100
   };
+
   const tocToggle = document.getElementById('toc-toggle');
   const tocLayout = document.querySelector('.blog-post-layout');
   const tocPrefKey = 'tocHiddenPreference';
   const compactMediaQuery = window.matchMedia('(max-width: 1024px)');
   let tocContainerRef = null;
+  let tocIndicator = null;
+  let tocListRef = null;
+  let contentRef = null;
 
   function getSavedPreference() {
     try {
@@ -45,27 +49,63 @@
     }
   }
 
+  // Calculate and update reading progress
+  function updateProgress() {
+    if (!contentRef || !tocContainerRef) return;
+
+    const contentRect = contentRef.getBoundingClientRect();
+    const contentTop = contentRef.offsetTop;
+    const contentHeight = contentRef.offsetHeight;
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    // Calculate progress (0 to 100)
+    const start = contentTop - windowHeight / 2;
+    const end = contentTop + contentHeight - windowHeight / 2;
+    const current = scrollY;
+    let progress = ((current - start) / (end - start)) * 100;
+    progress = Math.max(0, Math.min(100, progress));
+
+    tocContainerRef.style.setProperty('--toc-progress', `${progress}%`);
+  }
+
+  // Update the animated indicator position
+  function updateIndicator(activeLink) {
+    if (!tocIndicator || !tocListRef) return;
+
+    if (!activeLink) {
+      tocIndicator.classList.remove('visible');
+      return;
+    }
+
+    const listRect = tocListRef.getBoundingClientRect();
+    const linkRect = activeLink.getBoundingClientRect();
+    const offsetY = linkRect.top - listRect.top + (linkRect.height / 2) - 4;
+
+    tocIndicator.style.transform = `translateY(${offsetY}px)`;
+    tocIndicator.classList.add('visible');
+  }
+
   // Generate TOC from page headings
   function generateTOC() {
-    const content = document.querySelector(CONFIG.contentSelector);
-    if (!content) return null;
+    contentRef = document.querySelector(CONFIG.contentSelector);
+    if (!contentRef) return null;
 
-    const headings = content.querySelectorAll(CONFIG.headingSelectors);
+    const headings = contentRef.querySelectorAll(CONFIG.headingSelectors);
     if (headings.length < CONFIG.minHeadings) return null;
 
     const tocList = document.createElement('ul');
     tocList.className = 'toc-list';
+    tocList.setAttribute('role', 'list');
 
     headings.forEach((heading, index) => {
-      // Add ID to heading if it doesn't have one
       if (!heading.id) {
         heading.id = `heading-${index}`;
       }
 
-      // Store original text before adding anchor
       const headingText = heading.textContent;
 
-      // Add anchor link to heading for copy functionality
+      // Add anchor link to heading
       const anchor = document.createElement('a');
       anchor.href = `#${heading.id}`;
       anchor.className = 'heading-anchor';
@@ -75,7 +115,6 @@
         e.preventDefault();
         const url = window.location.href.split('#')[0] + `#${heading.id}`;
         navigator.clipboard.writeText(url);
-        // Visual feedback
         anchor.innerHTML = '✓';
         setTimeout(() => { anchor.innerHTML = '#'; }, 1000);
       });
@@ -89,12 +128,11 @@
       link.textContent = headingText;
       link.className = 'toc-link';
 
-      // Smooth scroll on click with offset
+      // Smooth scroll on click
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetPosition = heading.offsetTop - 20;
         window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-        // Update URL without jumping
         history.pushState(null, null, `#${heading.id}`);
       });
 
@@ -102,6 +140,13 @@
       tocList.appendChild(listItem);
     });
 
+    // Create animated indicator dot
+    tocIndicator = document.createElement('div');
+    tocIndicator.className = 'toc-indicator';
+    tocIndicator.setAttribute('aria-hidden', 'true');
+    tocList.appendChild(tocIndicator);
+
+    tocListRef = tocList;
     return tocList;
   }
 
@@ -114,7 +159,6 @@
 
     const scrollPosition = window.scrollY + CONFIG.offset;
 
-    // Find the current heading
     let currentHeading = null;
     headings.forEach((heading) => {
       if (heading.offsetTop <= scrollPosition) {
@@ -122,17 +166,23 @@
       }
     });
 
-    // Remove all active classes from TOC links and headings
-    tocLinks.forEach(link => link.classList.remove(CONFIG.activeClass));
+    // Remove active states and aria-current
+    tocLinks.forEach(link => {
+      link.classList.remove(CONFIG.activeClass);
+      link.removeAttribute('aria-current');
+    });
     headings.forEach(h => h.classList.remove(CONFIG.activeClass));
 
-    // Add active class to current heading and TOC link
+    // Add active state to current
+    let activeLink = null;
     if (currentHeading) {
       currentHeading.classList.add(CONFIG.activeClass);
-      const activeLink = document.querySelector(`.toc-link[href="#${currentHeading.id}"]`);
+      activeLink = document.querySelector(`.toc-link[href="#${currentHeading.id}"]`);
       if (activeLink) {
         activeLink.classList.add(CONFIG.activeClass);
+        activeLink.setAttribute('aria-current', 'location');
 
+        // Auto-scroll TOC if active item is out of view
         const tocContainer = tocContainerRef;
         if (tocContainer) {
           const linkRect = activeLink.getBoundingClientRect();
@@ -144,16 +194,50 @@
         }
       }
     }
+
+    // Update indicator position
+    updateIndicator(activeLink);
   }
 
   // Reset TOC scroll position when at page top
   function updateTOCPosition() {
-    const tocContainer = tocContainerRef;
-    if (!tocContainer) return;
-
+    if (!tocContainerRef) return;
     if (window.scrollY === 0) {
-      tocContainer.scrollTop = 0;
+      tocContainerRef.scrollTop = 0;
     }
+  }
+
+  // Keyboard navigation for TOC
+  function handleKeydown(e) {
+    const tocLinks = Array.from(document.querySelectorAll('.toc-link'));
+    const currentIndex = tocLinks.indexOf(document.activeElement);
+
+    if (currentIndex === -1) return;
+
+    let nextIndex = currentIndex;
+
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        nextIndex = Math.min(currentIndex + 1, tocLinks.length - 1);
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        nextIndex = Math.max(currentIndex - 1, 0);
+        break;
+      case 'Home':
+        e.preventDefault();
+        nextIndex = 0;
+        break;
+      case 'End':
+        e.preventDefault();
+        nextIndex = tocLinks.length - 1;
+        break;
+      default:
+        return;
+    }
+
+    tocLinks[nextIndex].focus();
   }
 
   // Initialize TOC
@@ -180,7 +264,7 @@
       return;
     }
 
-    // Add TOC title (static label, not clickable)
+    // Build TOC header
     const tocTitleText = tocContainerRef.dataset.title || 'On this page';
     const tocCloseLabel = tocContainerRef.dataset.closeLabel || 'Hide table of contents';
 
@@ -211,14 +295,17 @@
     tocHeader.appendChild(tocTitle);
     tocHeader.appendChild(tocCloseButton);
 
-    // Clear and populate TOC container
+    // Set up container with ARIA
     tocContainerRef.innerHTML = '';
+    tocContainerRef.setAttribute('aria-label', 'Table of contents');
     tocContainerRef.appendChild(tocHeader);
     tocContainerRef.appendChild(tocList);
 
+    // Restore saved preference
     const savedPref = getSavedPreference();
     setTOCState(savedPref, false);
 
+    // Toggle button
     if (tocToggle) {
       tocToggle.classList.remove('toc-toggle--hidden');
       tocToggle.addEventListener('click', () => {
@@ -227,14 +314,26 @@
       });
     }
 
-    // Update active section and TOC position on scroll
+    // Add keyboard navigation
+    tocContainerRef.addEventListener('keydown', handleKeydown);
+
+    // Scroll handler with throttling
+    let ticking = false;
     window.addEventListener('scroll', () => {
-      updateActiveSection();
-      updateTOCPosition();
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateActiveSection();
+          updateProgress();
+          updateTOCPosition();
+          ticking = false;
+        });
+        ticking = true;
+      }
     }, { passive: true });
 
     // Initial updates
     updateActiveSection();
+    updateProgress();
     updateTOCPosition();
   }
 

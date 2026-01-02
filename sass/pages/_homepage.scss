@@ -906,13 +906,6 @@ main:has(.homepage-container) #scroll-to-top {
   }
 
   // Brand-specific hover colors
-  &--github:hover {
-    border-color: #333;
-    background: #333;
-    color: white;
-    i { color: white; }
-  }
-
   &--twitter:hover {
     border-color: #000;
     background: #000;
