@@ -933,13 +933,6 @@ main:has(.homepage-container) #scroll-to-top {
     color: white;
     i { color: white; }
   }
-
-  &--rss:hover {
-    border-color: #f26522;
-    background: #f26522;
-    color: white;
-    i { color: white; }
-  }
 }
 
 @media (max-width: $breakpoint-phone) {
