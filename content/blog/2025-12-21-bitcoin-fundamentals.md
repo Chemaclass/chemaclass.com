@@ -6,11 +6,11 @@ draft = false
 tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
 [extra]
 subtitle = "A beginner's guide to sound money"
-static_thumbnail = "/images/blog/2025-12-21/cover.jpg"
+static_thumbnail = "/images/blog/2025-12-21/footer.jpg"
 reading_time = 12
 +++
 
-![blog-cover](/images/blog/2025-12-21/cover.jpg)
+![blog-cover](/images/blog/2025-12-21/footer.jpg)
 
 What would you do if your bank account was frozen tomorrow? No warning, no explanation, no access to your own money.
 

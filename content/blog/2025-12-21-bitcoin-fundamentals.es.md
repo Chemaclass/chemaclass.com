@@ -6,11 +6,11 @@ draft = false
 tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
 [extra]
 subtitle = "Una guía para principiantes sobre dinero sólido"
-static_thumbnail = "/images/blog/2025-12-21/cover.jpg"
+static_thumbnail = "/images/blog/2025-12-21/footer.jpg"
 reading_time = 12
 +++
 
-![blog-cover](/images/blog/2025-12-21/cover.jpg)
+![blog-cover](/images/blog/2025-12-21/footer.jpg)
 
 ¿Qué harías si tu cuenta bancaria fuera congelada mañana? Sin aviso, sin explicación, sin acceso a tu propio dinero.
 
