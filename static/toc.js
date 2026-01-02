@@ -17,9 +17,6 @@
   const tocPrefKey = 'tocHiddenPreference';
   const compactMediaQuery = window.matchMedia('(max-width: 1024px)');
   let tocContainerRef = null;
-  let tocIndicator = null;
-  let tocListRef = null;
-  let contentRef = null;
 
   function getSavedPreference() {
     try {
@@ -49,49 +46,12 @@
     }
   }
 
-  // Calculate and update reading progress
-  function updateProgress() {
-    if (!contentRef || !tocContainerRef) return;
-
-    const contentRect = contentRef.getBoundingClientRect();
-    const contentTop = contentRef.offsetTop;
-    const contentHeight = contentRef.offsetHeight;
-    const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
-
-    // Calculate progress (0 to 100)
-    const start = contentTop - windowHeight / 2;
-    const end = contentTop + contentHeight - windowHeight / 2;
-    const current = scrollY;
-    let progress = ((current - start) / (end - start)) * 100;
-    progress = Math.max(0, Math.min(100, progress));
-
-    tocContainerRef.style.setProperty('--toc-progress', `${progress}%`);
-  }
-
-  // Update the animated indicator position
-  function updateIndicator(activeLink) {
-    if (!tocIndicator || !tocListRef) return;
-
-    if (!activeLink) {
-      tocIndicator.classList.remove('visible');
-      return;
-    }
-
-    const listRect = tocListRef.getBoundingClientRect();
-    const linkRect = activeLink.getBoundingClientRect();
-    const offsetY = linkRect.top - listRect.top + (linkRect.height / 2) - 4;
-
-    tocIndicator.style.transform = `translateY(${offsetY}px)`;
-    tocIndicator.classList.add('visible');
-  }
-
   // Generate TOC from page headings
   function generateTOC() {
-    contentRef = document.querySelector(CONFIG.contentSelector);
-    if (!contentRef) return null;
+    const content = document.querySelector(CONFIG.contentSelector);
+    if (!content) return null;
 
-    const headings = contentRef.querySelectorAll(CONFIG.headingSelectors);
+    const headings = content.querySelectorAll(CONFIG.headingSelectors);
     if (headings.length < CONFIG.minHeadings) return null;
 
     const tocList = document.createElement('ul');
@@ -140,13 +100,6 @@
       tocList.appendChild(listItem);
     });
 
-    // Create animated indicator dot
-    tocIndicator = document.createElement('div');
-    tocIndicator.className = 'toc-indicator';
-    tocIndicator.setAttribute('aria-hidden', 'true');
-    tocList.appendChild(tocIndicator);
-
-    tocListRef = tocList;
     return tocList;
   }
 
@@ -194,9 +147,6 @@
         }
       }
     }
-
-    // Update indicator position
-    updateIndicator(activeLink);
   }
 
   // Reset TOC scroll position when at page top
@@ -323,7 +273,6 @@
       if (!ticking) {
         requestAnimationFrame(() => {
           updateActiveSection();
-          updateProgress();
           updateTOCPosition();
           ticking = false;
         });
@@ -333,7 +282,6 @@
 
     // Initial updates
     updateActiveSection();
-    updateProgress();
     updateTOCPosition();
   }
 

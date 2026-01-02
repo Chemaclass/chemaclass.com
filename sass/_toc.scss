@@ -16,7 +16,6 @@
   }
 
   #toc-container {
-    --toc-progress: 0%;
     width: 240px;
     flex-shrink: 0;
     background: var(--search-input-bg);
@@ -129,58 +128,10 @@
   }
 }
 
-// TOC List with progress indicator
 .toc-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  position: relative;
-  padding-left: 12px;
-
-  // Progress track (gray line)
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 4px;
-    bottom: 4px;
-    width: 2px;
-    background: var(--preview-divider-color);
-    border-radius: 2px;
-  }
-
-  // Progress fill (accent color)
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 4px;
-    width: 2px;
-    height: var(--toc-progress);
-    max-height: calc(100% - 8px);
-    background: var(--accent-color);
-    border-radius: 2px;
-    transition: height 0.15s ease-out;
-  }
-}
-
-// Animated indicator dot
-.toc-indicator {
-  position: absolute;
-  left: -1px;
-  width: 8px;
-  height: 8px;
-  background: var(--accent-color);
-  border-radius: 50%;
-  transform: translateY(0);
-  transition: transform 0.2s ease-out, opacity 0.2s ease;
-  opacity: 0;
-  z-index: 1;
-  box-shadow: 0 0 0 3px rgba(58, 92, 136, 0.15);
-
-  &.visible {
-    opacity: 1;
-  }
 }
 
 .toc-item {
