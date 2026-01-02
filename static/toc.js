@@ -20,7 +20,10 @@
 
   function getSavedPreference() {
     try {
-      return localStorage.getItem(tocPrefKey) === 'true';
+      const saved = localStorage.getItem(tocPrefKey);
+      // Default to showing TOC (full-width reading OFF) when no preference saved
+      if (saved === null) return false;
+      return saved === 'true';
     } catch (e) {
       return false;
     }
@@ -135,14 +138,15 @@
         activeLink.classList.add(CONFIG.activeClass);
         activeLink.setAttribute('aria-current', 'location');
 
-        // Auto-scroll TOC if active item is out of view
+        // Auto-scroll TOC if active item is out of view (instant, no smooth to avoid scroll conflicts)
         const tocContainer = tocContainerRef;
         if (tocContainer) {
           const linkRect = activeLink.getBoundingClientRect();
           const containerRect = tocContainer.getBoundingClientRect();
 
           if (linkRect.top < containerRect.top || linkRect.bottom > containerRect.bottom) {
-            activeLink.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const scrollOffset = activeLink.offsetTop - tocContainer.offsetTop - (containerRect.height / 2) + (linkRect.height / 2);
+            tocContainer.scrollTop = scrollOffset;
           }
         }
       }

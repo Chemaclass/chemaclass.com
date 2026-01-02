@@ -52,12 +52,16 @@
       display: none;
     }
 
+    // Scrolling down: navbar hidden, more vertical space available
     &.toc-top {
       top: 20px;
+      max-height: calc(100vh - 40px);
     }
 
+    // Scrolling up: navbar visible, reduce height to account for navbar
     &.toc-top.toc-navbar-visible {
       top: 80px;
+      max-height: calc(100vh - 120px);
     }
   }
 
