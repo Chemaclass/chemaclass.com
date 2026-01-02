@@ -194,6 +194,16 @@ nav {
   font-size: 1.1rem;
   color: var(--heading-color);
 
+  // Show on large screens (> tablet)
+  @media (min-width: #{$breakpoint-tablet + 1}) {
+    display: block;
+  }
+
+  // Show on phone screens (with burger menu)
+  @media (max-width: $breakpoint-phone) {
+    display: block;
+  }
+
   .header-left:hover & {
     color: var(--accent-color);
   }
@@ -346,10 +356,6 @@ nav {
 
   .header-left {
     flex: 0 0 50%;
-  }
-
-  .site-title {
-    display: block;
   }
 
   .hamburger {
