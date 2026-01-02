@@ -30,7 +30,7 @@
     text-align: left;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 
-    // Custom scrollbar
+    // Custom scrollbar - hidden by default, visible on hover/scroll
     &::-webkit-scrollbar {
       width: 4px;
     }
@@ -40,12 +40,28 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background: var(--preview-divider-color);
+      background: transparent;
       border-radius: 4px;
+      transition: background 0.2s ease;
+    }
+
+    &:hover::-webkit-scrollbar-thumb,
+    &:active::-webkit-scrollbar-thumb,
+    &.scrolling::-webkit-scrollbar-thumb {
+      background: var(--preview-divider-color);
     }
 
     &::-webkit-scrollbar-thumb:hover {
       background: var(--color-subtitle);
+    }
+
+    // Firefox
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+
+    &:hover,
+    &.scrolling {
+      scrollbar-color: var(--preview-divider-color) transparent;
     }
 
     @media (max-width: 1024px) {

@@ -271,6 +271,16 @@
     // Add keyboard navigation
     tocContainerRef.addEventListener('keydown', handleKeydown);
 
+    // Show scrollbar when scrolling TOC
+    let scrollTimeout;
+    tocContainerRef.addEventListener('scroll', () => {
+      tocContainerRef.classList.add('scrolling');
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        tocContainerRef.classList.remove('scrolling');
+      }, 1000);
+    }, { passive: true });
+
     // Scroll handler with throttling
     let ticking = false;
     window.addEventListener('scroll', () => {
