@@ -3,7 +3,7 @@ title = "Capítulo 30: Diciembre, 2025"
 slug = "2025-diciembre"
 draft = false
 weight = 32
-date = 2025-12-20
+date = 2025-12-09
 [taxonomies]
 tags = []
 +++
