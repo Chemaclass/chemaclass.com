@@ -1032,10 +1032,20 @@
     font-weight: 600;
     margin: 0 0 0.75rem;
     color: var(--heading-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
 
     i {
-      margin-right: 0.4rem;
       color: var(--accent-color);
+      width: 1.2em;
+      height: 1.2em;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1em;
     }
   }
 

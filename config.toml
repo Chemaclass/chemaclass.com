@@ -238,8 +238,8 @@ It seems like this page does not exist… Return back to the [homepage](/)
 """
 
 # Centralized pricing (all values in EUR)
-pricing_web_dev_starting = 1000
-pricing_static_simple_min = 1000
+pricing_web_dev_starting = 800
+pricing_static_simple_min = 800
 pricing_static_simple_max = 2000
 pricing_static_simple_note = 800
 pricing_static_pro_min = 1500
