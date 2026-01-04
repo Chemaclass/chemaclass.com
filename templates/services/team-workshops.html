@@ -154,6 +154,35 @@
         <p>{% if lang == "es" %}Grupos de 3-8 participantes. Talleres presenciales en Berlín, remotos en otras ubicaciones.{% else %}Groups of 3-8 participants. On-site workshops in Berlin, remote for other locations.{% endif %}</p>
       </div>
 
+      <!-- Pricing details (hidden by default, shown with ?prices=1) -->
+      <div class="pricing-details" style="display: none;">
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h4><i class="fa-solid fa-user"></i> {% if lang == "es" %}Por persona{% else %}Per person{% endif %}</h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_workshop_per_person | default(value=350) }}</div>
+            <ul class="pricing-card__details">
+              <li>{% if lang == "es" %}Día completo de taller{% else %}Full day workshop{% endif %}</li>
+              <li>{% if lang == "es" %}Materiales incluidos{% else %}Materials included{% endif %}</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h4><i class="fa-solid fa-users"></i> 3 {% if lang == "es" %}personas{% else %}people{% endif %}</h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_workshop_3_people | default(value=1050) }}</div>
+            <ul class="pricing-card__details">
+              <li>{% if lang == "es" %}Mínimo recomendado{% else %}Recommended minimum{% endif %}</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h4><i class="fa-solid fa-user-group"></i> 4-6 {% if lang == "es" %}personas{% else %}people{% endif %}</h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_workshop_4_6_min | default(value=1400) }} - €{{ config.extra.pricing_workshop_4_6_max | default(value=2100) }}</div>
+            <ul class="pricing-card__details">
+              <li>{% if lang == "es" %}Tamaño ideal{% else %}Ideal size{% endif %}</li>
+            </ul>
+          </div>
+        </div>
+        <p class="pricing-note">{% if lang == "es" %}* Máximo 8 participantes por taller. Precios presenciales en Berlín, contacta para tarifas remotas.{% else %}* Maximum 8 participants per workshop. On-site prices for Berlin, contact for remote rates.{% endif %}</p>
+      </div>
+
       <div class="quote-cta">
         <p class="quote-cta__text">{% if lang == "es" %}Cada equipo tiene necesidades diferentes. Contacta conmigo para discutir el enfoque y recibir un presupuesto personalizado.{% else %}Every team has different needs. Contact me to discuss the approach and get a personalized quote.{% endif %}</p>
         <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Taller&body=Hola%20Chema%2C%0A%0AEstoy%20interesado%20en%20un%20taller%20para%20mi%20equipo.%0A%0ATamaño%20del%20equipo%3A%0ATema%20de%20interés%3A%0A%0AGracias!{% else %}Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20a%20workshop%20for%20my%20team.%0A%0ATeam%20size%3A%0ATopic%20of%20interest%3A%0A%0AThanks!{% endif %}" class="quote-cta__btn">
@@ -218,3 +247,12 @@
 </article>
 
 {% endblock content %}
+
+{% block js %}
+<script>
+// Show pricing details if ?prices=1 is in URL
+if (new URLSearchParams(window.location.search).get('prices') === '1') {
+  document.querySelectorAll('.pricing-details').forEach(el => el.style.display = 'block');
+}
+</script>
+{% endblock js %}

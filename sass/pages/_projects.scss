@@ -1003,3 +1003,66 @@
   outline-offset: 1px;
   border-radius: 2px;
 }
+
+// Pricing section (hidden by default, shown with ?with-prices=1)
+.pricing-details {
+  margin: 1.5rem 0;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pricing-card {
+  background: var(--search-input-bg);
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: center;
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+    color: var(--heading-color);
+
+    i {
+      margin-right: 0.4rem;
+      color: var(--accent-color);
+    }
+  }
+
+  &__price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
+  }
+
+  &__details {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    color: var(--color-subtitle);
+
+    li {
+      padding: 0.25rem 0;
+    }
+  }
+}
+
+.pricing-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-subtitle);
+  margin: 0;
+  font-style: italic;
+}

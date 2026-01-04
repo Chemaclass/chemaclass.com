@@ -311,6 +311,37 @@
         <p>{% if lang == "es" %}Trabajo directo contigo, sin intermediarios. Calidad senior, precios competitivos, entrega en menos de un mes. Vista previa desde el primer día, feedback diario, iteraciones cortas.{% else %}I work directly with you, no middlemen. Senior quality, competitive rates, delivery in less than a month. Preview from day one, daily feedback, short iterations.{% endif %}</p>
       </div>
 
+      <!-- Pricing details (hidden by default, shown with ?prices=1) -->
+      <div class="pricing-details" style="display: none;">
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h4><i class="fa-solid fa-bolt"></i> {{ trans(key="svc_static", lang=lang) }}</h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_static_simple_min | default(value=1000) }} - €{{ config.extra.pricing_static_simple_max | default(value=2000) }}</div>
+            <ul class="pricing-card__details">
+              <li>{% if lang == "es" %}Hosting: €{{ config.extra.pricing_static_hosting | default(value=25) }}/año{% else %}Hosting: €{{ config.extra.pricing_static_hosting | default(value=25) }}/year{% endif %}</li>
+              <li>{% if lang == "es" %}Mantenimiento: €{{ config.extra.pricing_static_maintenance_min | default(value=50) }}-{{ config.extra.pricing_static_maintenance_max | default(value=120) }}/año{% else %}Maintenance: €{{ config.extra.pricing_static_maintenance_min | default(value=50) }}-{{ config.extra.pricing_static_maintenance_max | default(value=120) }}/year{% endif %}</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h4><i class="fa-solid fa-code"></i> {{ trans(key="svc_static_blog", lang=lang) }}</h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_static_pro_min | default(value=1500) }} - €{{ config.extra.pricing_static_pro_max | default(value=2500) }}</div>
+            <ul class="pricing-card__details">
+              <li>{% if lang == "es" %}Hosting: €{{ config.extra.pricing_static_hosting | default(value=25) }}/año{% else %}Hosting: €{{ config.extra.pricing_static_hosting | default(value=25) }}/year{% endif %}</li>
+              <li>{% if lang == "es" %}Mantenimiento: €{{ config.extra.pricing_static_pro_maintenance | default(value=120) }}/año{% else %}Maintenance: €{{ config.extra.pricing_static_pro_maintenance | default(value=120) }}/year{% endif %}</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h4><i class="fa-brands fa-wordpress"></i> WordPress</h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_wordpress_min | default(value=2000) }} - €{{ config.extra.pricing_wordpress_max | default(value=4000) }}</div>
+            <ul class="pricing-card__details">
+              <li>{% if lang == "es" %}Hosting: €{{ config.extra.pricing_wordpress_hosting | default(value=100) }}/año{% else %}Hosting: €{{ config.extra.pricing_wordpress_hosting | default(value=100) }}/year{% endif %}</li>
+              <li>{% if lang == "es" %}Mantenimiento: €{{ config.extra.pricing_wordpress_maintenance | default(value=500) }}/año{% else %}Maintenance: €{{ config.extra.pricing_wordpress_maintenance | default(value=500) }}/year{% endif %}</li>
+            </ul>
+          </div>
+        </div>
+        <p class="pricing-note">{% if lang == "es" %}* Dominio: €{{ config.extra.pricing_domain | default(value=15) }}/año. Precios orientativos, el presupuesto final depende de la complejidad.{% else %}* Domain: €{{ config.extra.pricing_domain | default(value=15) }}/year. Indicative prices, final quote depends on complexity.{% endif %}</p>
+      </div>
+
       <div class="quote-cta">
         <p class="quote-cta__text">{% if lang == "es" %}Cada proyecto es diferente. Contacta conmigo para hablar de tus necesidades y recibir un presupuesto personalizado.{% else %}Every project is different. Contact me to discuss your needs and get a personalized quote.{% endif %}</p>
         <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Solicitud%20de%20Presupuesto&body=Hola%20Chema%2C%0A%0AMe%20gustaría%20recibir%20un%20presupuesto%20para%20mi%20proyecto%20web.%0A%0ADescripción%3A%0A%0AGracias!{% else %}Quote%20Request&body=Hi%20Chema%2C%0A%0AI'd%20like%20to%20get%20a%20quote%20for%20my%20web%20project.%0A%0ADescription%3A%0A%0AThanks!{% endif %}" class="quote-cta__btn">
@@ -406,3 +437,12 @@
 </article>
 
 {% endblock content %}
+
+{% block js %}
+<script>
+// Show pricing details if ?prices=1 is in URL
+if (new URLSearchParams(window.location.search).get('prices') === '1') {
+  document.querySelectorAll('.pricing-details').forEach(el => el.style.display = 'block');
+}
+</script>
+{% endblock js %}
