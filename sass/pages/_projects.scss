@@ -37,6 +37,17 @@
   margin-bottom: 1.5rem;
   border-bottom: 2px solid var(--preview-divider-color);
   padding-bottom: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    gap: 0.25rem;
+  }
 }
 
 .tab-btn {
@@ -53,6 +64,8 @@
   border-bottom: 2px solid transparent;
   margin-bottom: -2px;
   transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
 
   i {
     font-size: 0.85rem;
@@ -65,6 +78,16 @@
   &.active {
     color: var(--accent-color);
     border-bottom-color: var(--accent-color);
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem;
+    gap: 0.4rem;
+
+    i {
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -208,6 +231,20 @@
       i {
         font-size: 1rem;
       }
+
+      @media (max-width: $breakpoint-phone) {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.75rem;
+        gap: 0.25rem;
+
+        i {
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint-phone) {
+      gap: 0.3rem;
     }
   }
 }
@@ -328,6 +365,11 @@
   color: inherit;
   transition: all 0.2s ease;
 
+  @media (max-width: $breakpoint-phone) {
+    padding: 0.875rem 1rem;
+    border-radius: 10px;
+  }
+
   &:hover {
     border-color: var(--accent-color);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
@@ -339,18 +381,27 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0.5rem;
+    gap: 0.5rem;
 
     h3 {
       font-size: 1rem;
       font-weight: 600;
       margin: 0;
       color: var(--heading-color);
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @media (max-width: $breakpoint-phone) {
+        font-size: 0.95rem;
+      }
     }
 
     .project-card__meta {
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      flex-shrink: 0;
     }
 
     .github-stars {
@@ -385,6 +436,10 @@
     justify-content: space-between;
     gap: 0.5rem;
     flex-wrap: wrap;
+
+    @media (max-width: $breakpoint-phone) {
+      gap: 0.4rem;
+    }
   }
 
   .project-card__tags {
@@ -400,6 +455,18 @@
     border-radius: 10px;
     font-size: 0.7rem;
     font-weight: 500;
+
+    @media (max-width: $breakpoint-phone) {
+      font-size: 0.65rem;
+      padding: 0.125rem 0.4rem;
+    }
+  }
+
+  p {
+    @media (max-width: $breakpoint-phone) {
+      font-size: 0.8rem;
+      margin-bottom: 0.6rem;
+    }
   }
 }
 
