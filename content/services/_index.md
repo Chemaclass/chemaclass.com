@@ -25,10 +25,9 @@ type = "language"
 name = "Gacela"
 description = "Gacela helps you to build modular applications. Splitting your project into different modules help in terms of maintainability and scalability."
 github = "gacela-project/gacela"
-tags = ["109k+ downloads"]
+tags = ["Modular"]
 tech = ["PHP"]
 type = "library"
-featured = true
 
 [[extra.projects]]
 name = "php-best-practices"
@@ -71,13 +70,25 @@ tech = ["PHP", "AI"]
 type = "app"
 hide_on_tablet = true
 
-[[extra.projects]]
-name = "website-windmuehle"
-description = "Non-profit website dedicated to restoring and preserving the historic windmill of Tündern."
+[[extra.websites]]
+name = "Fco. Sandoval Gómez"
+description = "Architecture and heritage conservation portfolio showcasing professional work in Spain."
+github = "Chemaclass/fco-sandoval-gomez.es"
+url = "https://fco-sandoval-gomez.es"
+tech = ["Zola", "SCSS"]
+
+[[extra.websites]]
+name = "D'Krisna"
+description = "Beauty and wellness center in Murcia Region, Spain. Multilingual with automated Booksy integration."
+github = "Chemaclass/dkrisna.es"
+url = "https://dkrisna.es"
+tech = ["Zola", "SCSS"]
+
+[[extra.websites]]
+name = "Windmühle Tündern"
+description = "Non-profit website dedicated to restoring and preserving the historic windmill of Tündern, Germany."
 github = "Chemaclass/website-windmuehle"
-tags = ["Static Site"]
-tech = ["Vue"]
-type = "website"
-featured = true
+url = "https://windmuehle-tuendern.de"
+tech = ["Vue", "Zola"]
 
 +++

@@ -213,6 +213,7 @@ svc_request_voucher = "Request a voucher"
 svc_faq = "Frequently Asked Questions"
 svc_featured = "Featured"
 svc_more_projects = "More Projects"
+svc_websites = "Websites"
 
 [extra]
 nav = [
@@ -454,3 +455,4 @@ svc_request_voucher = "Solicitar un vale"
 svc_faq = "Preguntas Frecuentes"
 svc_featured = "Destacados"
 svc_more_projects = "Más Proyectos"
+svc_websites = "Sitios Web"

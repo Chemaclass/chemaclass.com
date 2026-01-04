@@ -235,6 +235,8 @@
   &--typescript i { color: #3178C6; }
   &--phel i { color: #512da8; }
   &--lisp i { color: #512da8; }
+  &--zola i { color: #f59e0b; }
+  &--scss i { color: #cf649a; }
 }
 
 // Project Type Badge
@@ -407,6 +409,41 @@
 
   @media (max-width: $breakpoint-phone) {
     grid-column: span 1;
+  }
+}
+
+// GitHub icon link in project cards (clickable within card)
+.project-card__github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  color: var(--color-subtitle);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--search-bg-selected-item);
+    color: var(--heading-color);
+  }
+
+  i {
+    font-size: 0.95rem;
+  }
+}
+
+// Live tag for websites
+.project-tag--live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+
+  i {
+    font-size: 0.4rem;
   }
 }
 
