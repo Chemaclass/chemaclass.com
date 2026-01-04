@@ -12,21 +12,21 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M19 12H5M12 19l-7-7 7-7"/>
       </svg>
-      {{ trans(key="svc_all_services") }}
+      {{ trans(key="svc_all_services", lang=lang) }}
     </a>
   </nav>
 
   <!-- Hero Section -->
   <header class="service-hero">
-    <h1>{{ trans(key="svc_workshops") }}</h1>
-    <p class="service-hero__subtitle">{{ trans(key="svc_workshops_subtitle") }}</p>
+    <h1>{{ trans(key="svc_workshops", lang=lang) }}</h1>
+    <p class="service-hero__subtitle">{{ trans(key="svc_workshops_subtitle", lang=lang) }}</p>
   </header>
 
   <!-- Value Proposition -->
   <section class="service-intro">
     <p>{% if lang == "es" %}Pasa un día completo programando, testeando y refactorizando. Este taller es 100% práctico: trabajarás con una serie de katas de código independientes diseñadas para crear hábitos sólidos en testing, desarrollo guiado por tests (TDD) y refactoring. Principios agnósticos del lenguaje, adaptables al stack de tu equipo.{% else %}Spend a full day coding, testing, and refactoring. This workshop is all about practical, hands-on learning: you'll work through a series of independent code katas designed to help you build strong habits around testing, test-driven development (TDD), and refactoring. Language-agnostic principles, adaptable to your team's stack.{% endif %}</p>
     <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Taller%20de%20Equipo&body=Hola%20Chema%2C%0A%0AEstoy%20interesado%20en%20reservar%20un%20taller%20de%20equipo.%0A%0ATamaño%20del%20equipo%3A%0AFechas%20preferidas%3A%0A%0AGracias!{% else %}Team%20Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20booking%20a%20team%20workshop.%0A%0ATeam%20size%3A%0APreferred%20dates%3A%0A%0AThanks!{% endif %}" class="service-intro__cta">
-      <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_book_workshop") }}
+      <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_book_workshop", lang=lang) }}
     </a>
   </section>
 
@@ -37,14 +37,14 @@
         <div class="service-option__icon">
           <i class="fa-solid fa-sun"></i>
         </div>
-        <h2>{{ trans(key="svc_morning_session") }}</h2>
+        <h2>{{ trans(key="svc_morning_session", lang=lang) }}</h2>
         <span class="service-option__tag">Testing & TDD</span>
       </div>
 
       <p class="service-option__desc">{% if lang == "es" %}Nos enfocamos en técnicas de testing que hacen el cambio seguro, desde tests golden master que capturan el comportamiento existente hasta ejercicios TDD que guían mejor diseño.{% else %}We focus on testing techniques that make change safe, from golden tests that capture existing behavior to TDD exercises that guide better design.{% endif %}</p>
 
       <div class="service-option__benefits">
-        <h3>{{ trans(key="svc_topics_covered") }}</h3>
+        <h3>{{ trans(key="svc_topics_covered", lang=lang) }}</h3>
         <ul>
           <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Testing golden master{% else %}Golden master testing{% endif %}</li>
           <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Patrones de approval testing{% else %}Approval testing patterns{% endif %}</li>
@@ -60,14 +60,14 @@
         <div class="service-option__icon service-option__icon--secondary">
           <i class="fa-solid fa-moon"></i>
         </div>
-        <h2>{{ trans(key="svc_afternoon_session") }}</h2>
+        <h2>{{ trans(key="svc_afternoon_session", lang=lang) }}</h2>
         <span class="service-option__tag service-option__tag--secondary">Refactoring</span>
       </div>
 
       <p class="service-option__desc">{% if lang == "es" %}Cambiamos el enfoque al refactoring: aplicando cambios pequeños y focalizados para mejorar código legacy sin romperlo.{% else %}We switch gears to refactoring: applying small, focused changes to improve messy, legacy-style code without breaking it.{% endif %}</p>
 
       <div class="service-option__benefits">
-        <h3>{{ trans(key="svc_topics_covered") }}</h3>
+        <h3>{{ trans(key="svc_topics_covered", lang=lang) }}</h3>
         <ul>
           <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Técnicas de refactoring seguro{% else %}Safe refactoring techniques{% endif %}</li>
           <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Patrones extract method & class{% else %}Extract method & class patterns{% endif %}</li>
@@ -81,10 +81,10 @@
 
   <!-- What you'll learn -->
   <section class="service-decision">
-    <h2>{{ trans(key="svc_team_gains") }}</h2>
+    <h2>{{ trans(key="svc_team_gains", lang=lang) }}</h2>
     <div class="decision-cards">
       <div class="decision-card">
-        <h3><i class="fa-solid fa-flask-vial"></i> {{ trans(key="svc_testing_confidence") }}</h3>
+        <h3><i class="fa-solid fa-flask-vial"></i> {{ trans(key="svc_testing_confidence", lang=lang) }}</h3>
         <ul>
           <li>{% if lang == "es" %}Escribir tests significativos{% else %}Write meaningful tests{% endif %}</li>
           <li>{% if lang == "es" %}Testear código legacy con seguridad{% else %}Test legacy code safely{% endif %}</li>
@@ -92,7 +92,7 @@
         </ul>
       </div>
       <div class="decision-card">
-        <h3><i class="fa-solid fa-code-branch"></i> {{ trans(key="svc_tdd_mindset") }}</h3>
+        <h3><i class="fa-solid fa-code-branch"></i> {{ trans(key="svc_tdd_mindset", lang=lang) }}</h3>
         <ul>
           <li>{% if lang == "es" %}Ciclo red-green-refactor{% else %}Red-green-refactor cycle{% endif %}</li>
           <li>{% if lang == "es" %}Diseñar a través de tests{% else %}Design through tests{% endif %}</li>
@@ -100,7 +100,7 @@
         </ul>
       </div>
       <div class="decision-card">
-        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> {{ trans(key="svc_refactoring_skills") }}</h3>
+        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> {{ trans(key="svc_refactoring_skills", lang=lang) }}</h3>
         <ul>
           <li>{% if lang == "es" %}Mejorar código con seguridad{% else %}Improve code safely{% endif %}</li>
           <li>{% if lang == "es" %}Abordar deuda técnica{% else %}Tackle technical debt{% endif %}</li>
@@ -110,39 +110,39 @@
     </div>
     <p class="decision-tip">
       <i class="fa-solid fa-lightbulb"></i>
-      <strong>{{ trans(key="svc_key_outcome") }}</strong> {% if lang == "es" %}Tu equipo sale con un toolkit probado para escribir mejor código, mejorar codebases existentes y colaborar efectivamente mediante pair programming.{% else %}Your team walks away with a proven toolkit for writing better code, improving existing codebases, and collaborating effectively through pair programming.{% endif %}
+      <strong>{{ trans(key="svc_key_outcome", lang=lang) }}</strong> {% if lang == "es" %}Tu equipo sale con un toolkit probado para escribir mejor código, mejorar codebases existentes y colaborar efectivamente mediante pair programming.{% else %}Your team walks away with a proven toolkit for writing better code, improving existing codebases, and collaborating effectively through pair programming.{% endif %}
     </p>
   </section>
 
   <!-- How it works -->
   <section class="service-process">
-    <h2>{{ trans(key="svc_how_i_work") }}</h2>
+    <h2>{{ trans(key="svc_how_i_work", lang=lang) }}</h2>
     <div class="process-steps">
       <div class="process-step">
         <span class="process-step__number">1</span>
         <div class="process-step__content">
-          <h3>{{ trans(key="svc_discovery") }}</h3>
+          <h3>{{ trans(key="svc_discovery", lang=lang) }}</h3>
           <p>{% if lang == "es" %}Hablamos del nivel de experiencia de tu equipo y los retos específicos que quieres abordar.{% else %}We discuss your team's experience level and specific challenges you want to address.{% endif %}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">2</span>
         <div class="process-step__content">
-          <h3>{{ trans(key="svc_customization") }}</h3>
+          <h3>{{ trans(key="svc_customization", lang=lang) }}</h3>
           <p>{% if lang == "es" %}Adapto las katas y ejercicios al stack tecnológico y objetivos de tu equipo.{% else %}I tailor the katas and exercises to match your team's tech stack and goals.{% endif %}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">3</span>
         <div class="process-step__content">
-          <h3>{{ trans(key="svc_workshop_day") }}</h3>
+          <h3>{{ trans(key="svc_workshop_day", lang=lang) }}</h3>
           <p>{% if lang == "es" %}Día completo de programación práctica, pair programming y aprendizaje colaborativo.{% else %}Full day of hands-on coding, pair programming, and collaborative learning.{% endif %}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">4</span>
         <div class="process-step__content">
-          <h3>{{ trans(key="svc_followup") }}</h3>
+          <h3>{{ trans(key="svc_followup", lang=lang) }}</h3>
           <p>{% if lang == "es" %}Materiales, ejemplos de código y recursos para seguir practicando.{% else %}Materials, code samples, and resources to continue practicing.{% endif %}</p>
         </div>
       </div>
@@ -150,14 +150,14 @@
 
     <div class="budget-section">
       <div class="budget-header">
-        <h3>{{ trans(key="svc_investment") }}</h3>
+        <h3>{{ trans(key="svc_investment", lang=lang) }}</h3>
         <p>{% if lang == "es" %}Grupos de 3-8 participantes. Talleres presenciales en Berlín, remotos en otras ubicaciones.{% else %}Groups of 3-8 participants. On-site workshops in Berlin, remote for other locations.{% endif %}</p>
       </div>
 
       <div class="quote-cta">
         <p class="quote-cta__text">{% if lang == "es" %}Cada equipo tiene necesidades diferentes. Contacta conmigo para discutir el enfoque y recibir un presupuesto personalizado.{% else %}Every team has different needs. Contact me to discuss the approach and get a personalized quote.{% endif %}</p>
         <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Taller&body=Hola%20Chema%2C%0A%0AEstoy%20interesado%20en%20un%20taller%20para%20mi%20equipo.%0A%0ATamaño%20del%20equipo%3A%0ATema%20de%20interés%3A%0A%0AGracias!{% else %}Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20a%20workshop%20for%20my%20team.%0A%0ATeam%20size%3A%0ATopic%20of%20interest%3A%0A%0AThanks!{% endif %}" class="quote-cta__btn">
-          <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_request_info") }}
+          <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_request_info", lang=lang) }}
         </a>
       </div>
 
@@ -167,7 +167,7 @@
 
   <!-- Workshop Resources -->
   <section class="service-resources">
-    <h2>{{ trans(key="svc_workshop_resources") }}</h2>
+    <h2>{{ trans(key="svc_workshop_resources", lang=lang) }}</h2>
     <p class="service-resources__intro">{% if lang == "es" %}Materiales y charlas relacionadas con el contenido del taller:{% else %}Materials and talks related to my workshop content:{% endif %}</p>
     <div class="resources-grid">
       <a href="{% if lang == 'es' %}/es{% endif %}/blog/test-driven-development/" class="resource-card">
@@ -207,11 +207,11 @@
 
   <!-- CTA -->
   <section class="service-cta">
-    <h2>{{ trans(key="svc_ready_level_up") }}</h2>
+    <h2>{{ trans(key="svc_ready_level_up", lang=lang) }}</h2>
     <p>{% if lang == "es" %}Hablemos de cómo un taller puede ayudar a tu equipo a escribir mejor código, trabajar juntos de forma más efectiva y abordar ese codebase legacy con confianza.{% else %}Let's discuss how a workshop can help your team write better code, work together more effectively, and tackle that legacy codebase with confidence.{% endif %}</p>
     <div class="service-cta__buttons">
       <a href="mailto:me@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Taller%20de%20Equipo&body=Hola%20Chema%2C%0A%0AEstoy%20interesado%20en%20reservar%20un%20taller%20de%20equipo.%0A%0ATamaño%20del%20equipo%3A%0AFechas%20preferidas%3A%0AUbicación%20(presencial%2Fremoto)%3A%0A%0AGracias!{% else %}Team%20Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20booking%20a%20team%20workshop.%0A%0ATeam%20size%3A%0APreferred%20dates%3A%0ALocation%20(on-site%2Fremote)%3A%0A%0AThanks!{% endif %}" class="service-cta__btn service-cta__btn--secondary">
-        <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_contact") }}
+        <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_contact", lang=lang) }}
       </a>
     </div>
   </section>
