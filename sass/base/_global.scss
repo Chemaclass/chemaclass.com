@@ -1,3 +1,14 @@
+// Fix FontAwesome icons disappearing on window resize
+// Override font-display: optional to swap for reliable rendering
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-display: swap;
+}
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-display: swap;
+}
+
 body {
   box-sizing: border-box;
 }
