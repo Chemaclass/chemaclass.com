@@ -288,6 +288,17 @@
         }
       }
       updateTheme();
+
+      // Keyboard shortcut: D to toggle theme
+      document.addEventListener('keydown', function(e) {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+        if (e.key === 'd' || e.key === 'D') {
+          e.preventDefault();
+          const isDark = document.documentElement.classList.contains('theme-dark');
+          isDark ? toLightMode() : toDarkMode();
+        }
+      });
     </script>
     <script type="text/javascript" src="{{ get_url(path='scroll.js') }}" defer></script>
     <script type="text/javascript" src="{{ get_url(path='preview.js') }}" defer></script>

@@ -29,12 +29,51 @@ window.toggleMobileMenu = function(e) {
   hamburger.classList.toggle('open');
 };
 
-// Keyboard shortcuts: Escape closes, "/" opens search
+// Keyboard shortcuts: Escape closes, "/" opens search, L toggles language, J/K navigates posts
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeSearch();
-  if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+
+  // Skip shortcuts when typing in inputs
+  const isTyping = ['INPUT', 'TEXTAREA'].includes(e.target.tagName) || e.target.isContentEditable;
+  if (isTyping) return;
+
+  // Skip if modifier keys are pressed
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+  // "/" or "S" - Toggle search
+  if (e.key === '/' || e.key === 's' || e.key === 'S') {
     e.preventDefault();
     toggleSearch();
+  }
+
+  // "L" - Toggle language (EN <-> ES)
+  if (e.key === 'l' || e.key === 'L') {
+    e.preventDefault();
+    const currentPath = window.location.pathname;
+    const isSpanish = currentPath.startsWith('/es/');
+    if (isSpanish) {
+      window.location.href = currentPath.replace(/^\/es\//, '/');
+    } else {
+      window.location.href = '/es' + currentPath;
+    }
+  }
+
+  // "J" - Next post (newer)
+  if (e.key === 'j' || e.key === 'J') {
+    const nextLink = document.querySelector('.blog-post__nav-link--next');
+    if (nextLink) {
+      e.preventDefault();
+      window.location.href = nextLink.href;
+    }
+  }
+
+  // "K" - Previous post (older)
+  if (e.key === 'k' || e.key === 'K') {
+    const prevLink = document.querySelector('.blog-post__nav-link--prev');
+    if (prevLink) {
+      e.preventDefault();
+      window.location.href = prevLink.href;
+    }
   }
 });
 

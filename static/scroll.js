@@ -8,6 +8,28 @@ window.addEventListener('load', function () {
     //////////////////////////
     const $scrollToTop = document.getElementById('scroll-to-top');
 
+    // Keyboard shortcut: G G (vim-style double-tap) to scroll to top
+    let lastKeyTime = 0;
+    let lastKey = '';
+    document.addEventListener('keydown', function(e) {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+        const now = Date.now();
+        if (e.key === 'g' || e.key === 'G') {
+            if (lastKey === 'g' && (now - lastKeyTime) < 500) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                lastKey = '';
+            } else {
+                lastKey = 'g';
+                lastKeyTime = now;
+            }
+        } else {
+            lastKey = '';
+        }
+    });
+
     $scrollToTop.addEventListener('click', () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
     });
