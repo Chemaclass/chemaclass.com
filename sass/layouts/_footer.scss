@@ -210,43 +210,6 @@
     }
   }
 
-  // Keyboard shortcuts hint - subtle, geeky
-  &__shortcuts {
-    text-align: center;
-    margin-top: 1.5rem;
-    padding-top: 1rem;
-    border-top: 1px dashed var(--preview-divider-color);
-    opacity: 0.4;
-    transition: opacity 0.3s ease;
-
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-
-  &__shortcuts-hint {
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.7rem;
-    color: var(--color-subtitle);
-    letter-spacing: 0.02em;
-
-    kbd {
-      display: inline-block;
-      padding: 0.1rem 0.3rem;
-      margin-right: 0.15rem;
-      font-family: inherit;
-      font-size: 0.65rem;
-      background: var(--preview-divider-color);
-      border-radius: 3px;
-      border: 1px solid rgba(128, 128, 128, 0.2);
-    }
-
-    // Add spacing between shortcut groups
-    kbd:first-of-type,
-    kbd + kbd + kbd:not(:last-of-type) {
-      margin-left: 0.6rem;
-    }
-  }
 }
 
 // Responsive
@@ -268,11 +231,6 @@
     }
 
     &__separator {
-      display: none;
-    }
-
-    // Hide keyboard shortcuts on mobile (not useful for touch)
-    &__shortcuts {
       display: none;
     }
   }
