@@ -41,10 +41,18 @@
           <button id="toc-toggle"
                   class="toc-toggle"
                   type="button"
-                  aria-pressed="false"
-                  data-show-text="{{ trans(key='toc_toggle_show', lang=lang) }}"
-                  data-hide-text="{{ trans(key='toc_toggle_hide', lang=lang) }}">
-            {{ trans(key='toc_toggle_hide', lang=lang) }}
+                  role="switch"
+                  aria-checked="true"
+                  aria-label="Toggle table of contents">
+            <svg class="toc-toggle__icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="1" y="2" width="5" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M9 4h6M9 8h6M9 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span class="toc-toggle__label">TOC</span>
+            <span class="toc-toggle__switch">
+              <span class="toc-toggle__knob"></span>
+            </span>
+            <kbd class="toc-toggle__shortcut">T</kbd>
           </button>
         </div>
 

@@ -36,9 +36,8 @@
       tocLayout.dataset.tocHidden = hidden ? 'true' : 'false';
     }
     if (tocToggle) {
-      const label = hidden ? tocToggle.dataset.showText : tocToggle.dataset.hideText;
-      tocToggle.textContent = label;
-      tocToggle.setAttribute('aria-pressed', hidden ? 'true' : 'false');
+      // Toggle switch: aria-checked="true" means TOC is visible
+      tocToggle.setAttribute('aria-checked', hidden ? 'false' : 'true');
     }
     if (persist) {
       try {
@@ -293,6 +292,19 @@
         ticking = true;
       }
     }, { passive: true });
+
+    // Keyboard shortcut: 'T' to toggle TOC
+    document.addEventListener('keydown', (e) => {
+      // Ignore if typing in input/textarea or using modifier keys
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+      if (e.key === 't' || e.key === 'T') {
+        e.preventDefault();
+        const currentlyHidden = tocContainerRef.dataset.hideToc === 'true';
+        setTOCState(!currentlyHidden);
+      }
+    });
 
     // Initial updates
     updateActiveSection();
