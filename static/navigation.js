@@ -58,21 +58,21 @@ document.addEventListener('keydown', function(e) {
     }
   }
 
-  // "J" - Next post (newer)
+  // "J" - Previous/older post (left on keyboard = left on screen)
   if (e.key === 'j' || e.key === 'J') {
-    const nextLink = document.querySelector('.blog-post__nav-link--next');
-    if (nextLink) {
-      e.preventDefault();
-      window.location.href = nextLink.href;
-    }
-  }
-
-  // "K" - Previous post (older)
-  if (e.key === 'k' || e.key === 'K') {
     const prevLink = document.querySelector('.blog-post__nav-link--prev');
     if (prevLink) {
       e.preventDefault();
       window.location.href = prevLink.href;
+    }
+  }
+
+  // "K" - Next/newer post (right on keyboard = right on screen)
+  if (e.key === 'k' || e.key === 'K') {
+    const nextLink = document.querySelector('.blog-post__nav-link--next');
+    if (nextLink) {
+      e.preventDefault();
+      window.location.href = nextLink.href;
     }
   }
 });
