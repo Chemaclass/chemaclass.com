@@ -542,12 +542,6 @@
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px dashed var(--preview-divider-color);
-  opacity: 0.35;
-  transition: opacity 0.3s ease;
-
-  &:hover {
-    opacity: 0.7;
-  }
 }
 
 .post-shortcuts__hint {
