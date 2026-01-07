@@ -31,7 +31,10 @@ window.toggleMobileMenu = function(e) {
 
 // Keyboard shortcuts: Escape closes, "/" opens search, L toggles language, J/K navigates posts
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeSearch();
+  if (e.key === 'Escape') {
+    closeSearch();
+    closeShortcutsModal();
+  }
 
   // Skip shortcuts when typing in inputs
   const isTyping = ['INPUT', 'TEXTAREA'].includes(e.target.tagName) || e.target.isContentEditable;
@@ -75,6 +78,99 @@ document.addEventListener('keydown', function(e) {
       window.location.href = nextLink.href;
     }
   }
+
+  // Get language prefix for navigation
+  const langPrefix = document.documentElement.lang === 'es' ? '/es' : '';
+
+  // "H" - Go home
+  if (e.key === 'h' || e.key === 'H') {
+    e.preventDefault();
+    window.location.href = langPrefix + '/';
+  }
+
+  // "B" - Go to blog
+  if (e.key === 'b' || e.key === 'B') {
+    e.preventDefault();
+    window.location.href = langPrefix + '/blog/';
+  }
+
+  // "R" - Go to readings
+  if (e.key === 'r' || e.key === 'R') {
+    e.preventDefault();
+    window.location.href = langPrefix + '/readings/';
+  }
+
+  // "C" - Copy URL to clipboard
+  if (e.key === 'c' || e.key === 'C') {
+    e.preventDefault();
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      showToast('URL copied!');
+    });
+  }
+
+  // "?" - Show keyboard shortcuts help
+  if (e.key === '?') {
+    e.preventDefault();
+    toggleShortcutsModal();
+  }
+});
+
+// Toast notification
+function showToast(message) {
+  let toast = document.getElementById('toast-notification');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'toast-notification';
+    toast.className = 'toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+// Shortcuts dialog (native HTML dialog element)
+function openShortcutsModal() {
+  const dialog = document.getElementById('shortcuts-dialog');
+  if (dialog && !dialog.open) {
+    dialog.showModal();
+    document.body.classList.add('modal-open');
+  }
+}
+
+function closeShortcutsModal() {
+  const dialog = document.getElementById('shortcuts-dialog');
+  if (dialog) {
+    dialog.close();
+    document.body.classList.remove('modal-open');
+  }
+}
+
+function toggleShortcutsModal() {
+  const dialog = document.getElementById('shortcuts-dialog');
+  if (dialog && dialog.open) {
+    closeShortcutsModal();
+  } else {
+    openShortcutsModal();
+  }
+}
+
+// Setup dialog event listeners
+document.addEventListener('DOMContentLoaded', function() {
+  const dialog = document.getElementById('shortcuts-dialog');
+  if (!dialog) return;
+
+  // Close on backdrop click
+  dialog.addEventListener('click', function(e) {
+    if (e.target === dialog) {
+      closeShortcutsModal();
+    }
+  });
+
+  // Cleanup when dialog closes (handles Escape key too)
+  dialog.addEventListener('close', function() {
+    document.body.classList.remove('modal-open');
+  });
 });
 
 // Close search when clicking outside

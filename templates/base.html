@@ -320,6 +320,45 @@
       document.getElementById('site-search')?.addEventListener('focus', loadSearch, {once: true});
     </script>
     <script type="text/javascript" src="{{ get_url(path='navigation.js') }}" defer></script>
+
+    <!-- Keyboard shortcuts help modal (native dialog) -->
+    <dialog id="shortcuts-dialog" class="shortcuts-dialog">
+      <div class="shortcuts-dialog__header">
+        <h3>{{ trans(key="shortcuts_title", lang=lang) }}</h3>
+        <button class="shortcuts-dialog__close" onclick="closeShortcutsModal()" aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 6L6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="shortcuts-dialog__body">
+        <div class="shortcuts-dialog__group">
+          <h4>{{ trans(key="shortcuts_navigation", lang=lang) }}</h4>
+          <div class="shortcuts-dialog__item"><kbd>H</kbd><span>{{ trans(key="shortcuts_home", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>B</kbd><span>{{ trans(key="shortcuts_blog", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>R</kbd><span>{{ trans(key="shortcuts_readings", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>L</kbd><span>{{ trans(key="shortcuts_lang", lang=lang) }}</span></div>
+        </div>
+        <div class="shortcuts-dialog__group">
+          <h4>{{ trans(key="shortcuts_actions", lang=lang) }}</h4>
+          <div class="shortcuts-dialog__item"><kbd>S</kbd><span>{{ trans(key="shortcuts_search", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>D</kbd><span>{{ trans(key="shortcuts_theme", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>C</kbd><span>{{ trans(key="shortcuts_copy", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>G</kbd><kbd>G</kbd><span>{{ trans(key="shortcuts_top", lang=lang) }}</span></div>
+        </div>
+        <div class="shortcuts-dialog__group">
+          <h4>{{ trans(key="shortcuts_posts", lang=lang) }}</h4>
+          <div class="shortcuts-dialog__item"><kbd>J</kbd><span>{{ trans(key="shortcuts_older", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>K</kbd><span>{{ trans(key="shortcuts_newer", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>T</kbd><span>{{ trans(key="shortcuts_toc", lang=lang) }}</span></div>
+        </div>
+        <div class="shortcuts-dialog__group">
+          <h4>{{ trans(key="shortcuts_general", lang=lang) }}</h4>
+          <div class="shortcuts-dialog__item"><kbd>?</kbd><span>{{ trans(key="shortcuts_help", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>Esc</kbd><span>{{ trans(key="shortcuts_close", lang=lang) }}</span></div>
+        </div>
+      </div>
+    </dialog>
   </body>
   {% block js %}
   {% endblock js %}
