@@ -192,10 +192,36 @@
     }
   }
 
-  // Nested items with subtle hierarchy
+  // Nested items with vertical guide line
+  &.toc-h3,
+  &.toc-h4 {
+    position: relative;
+    margin-left: 0.5rem;
+
+    // Vertical guide line
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--preview-divider-color);
+      transition: background 0.15s ease;
+    }
+
+    // Highlight guide line when item is active
+    &:has(.toc-link.active)::before {
+      background: var(--accent-color);
+    }
+
+    .toc-link {
+      margin-left: 0.75rem;
+    }
+  }
+
   &.toc-h3 {
     .toc-link {
-      padding-left: 0.75rem;
       font-size: 0.8rem;
       color: var(--color-subtitle);
       opacity: 0.9;
@@ -203,8 +229,9 @@
   }
 
   &.toc-h4 {
+    margin-left: 1.25rem;
+
     .toc-link {
-      padding-left: 1.5rem;
       font-size: 0.75rem;
       color: var(--color-subtitle);
       opacity: 0.8;

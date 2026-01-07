@@ -107,7 +107,10 @@
 
   // Highlight active section based on scroll position
   function updateActiveSection() {
-    const headings = document.querySelectorAll(CONFIG.headingSelectors);
+    const content = document.querySelector(CONFIG.contentSelector);
+    if (!content) return;
+
+    const headings = content.querySelectorAll(CONFIG.headingSelectors);
     const tocLinks = document.querySelectorAll('.toc-link');
 
     if (!headings.length || !tocLinks.length) return;
