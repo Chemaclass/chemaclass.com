@@ -9,7 +9,7 @@ subtitle = "Why context is the real superpower in AI-assisted development"
 static_thumbnail = "/images/blog/2026-01-11/cover.jpg"
 +++
 
-Modern AI coding assistants are remarkably good at understanding context. Models like Claude Opus can hold your entire project in mind, reason about architecture, and maintain coherence across long conversations.
+Modern AI coding assistants are remarkably good at understanding context. Models like Claude Opus with large context windows (~200k tokens) can hold substantial portions of your codebase in mind, reason about architecture, and maintain coherence across long conversations. Not the entire project for large codebases, but enough to work effectively.
 
 But understanding isn't the same as access.
 
@@ -23,7 +23,7 @@ That's where MCP comes in.
 
 Modern AI can understand your codebase when you share it. But understanding and acting are different things.
 
-Without MCP, the AI can only work with what you paste into the conversation. It can reason about your database schema, but it can't query it. It can suggest file changes, but it can't read the current state of your project. It can discuss your git history, but it can't see it.
+Many IDE-integrated assistants like VS Code Copilot or Cursor already access your project files through their own indexing. So file access itself isn't new. What MCP brings is standardization. Instead of each tool building its own integration, MCP provides a common protocol. You configure a server once, and any MCP-compatible client can use it. It's portable, configurable, and extends beyond just files to databases, APIs, and custom tools.
 
 > MCP turns AI from a conversation partner into an active participant in your development environment.
 
@@ -33,9 +33,9 @@ With MCP, you give the AI direct access to tools and resources. It can read file
 
 MCP is a protocol, not a product. It's an open standard that defines how AI agents can connect to external data sources and tools. Think of it as a bridge between the AI model and your development environment.
 
-The architecture is simple: MCP servers expose capabilities, and AI clients consume them. Many tools already support MCP. Claude Desktop, Claude Code, Cursor, and others can connect to MCP servers you configure.
+The architecture is simple: MCP servers expose capabilities, and AI clients consume them. Claude Desktop and Claude Code officially support MCP, with more tools adopting the protocol as it matures.
 
-For example, in Claude Code you can add servers to your project's `.mcp.json`:
+For example, in Claude Code you can add servers to a `.mcp.json` file at your project root. Claude Code reads this file when you open the project and starts the configured servers automatically:
 
 ```json
 {

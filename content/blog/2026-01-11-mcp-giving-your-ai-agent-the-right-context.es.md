@@ -9,7 +9,7 @@ subtitle = "Por qué el contexto es el verdadero superpoder en el desarrollo asi
 static_thumbnail = "/images/blog/2026-01-11/cover.jpg"
 +++
 
-Los asistentes de código con IA modernos son extraordinariamente buenos entendiendo contexto. Modelos como Claude Opus pueden mantener tu proyecto entero en mente, razonar sobre arquitectura, y mantener coherencia en conversaciones largas.
+Los asistentes de código con IA modernos son extraordinariamente buenos entendiendo contexto. Modelos como Claude Opus con ventanas de contexto amplias (~200k tokens) pueden mantener porciones sustanciales de tu código en mente, razonar sobre arquitectura, y mantener coherencia en conversaciones largas. No el proyecto entero en codebases grandes, pero sí lo suficiente para trabajar de forma efectiva.
 
 Pero entender no es lo mismo que acceder.
 
@@ -23,7 +23,7 @@ Ahí es donde entra MCP.
 
 La IA moderna puede entender tu código cuando lo compartes. Pero entender y actuar son cosas diferentes.
 
-Sin MCP, la IA solo puede trabajar con lo que pegas en la conversación. Puede razonar sobre el esquema de tu base de datos, pero no puede consultarla. Puede sugerir cambios en archivos, pero no puede leer el estado actual de tu proyecto. Puede discutir tu historial de git, pero no puede verlo.
+Muchos asistentes integrados en IDEs como VS Code Copilot o Cursor ya acceden a los archivos de tu proyecto a través de su propio indexado. Así que el acceso a archivos en sí no es nuevo. Lo que MCP aporta es estandarización. En lugar de que cada herramienta construya su propia integración, MCP proporciona un protocolo común. Configuras un servidor una vez, y cualquier cliente compatible con MCP puede usarlo. Es portable, configurable, y se extiende más allá de archivos a bases de datos, APIs, y herramientas personalizadas.
 
 > MCP transforma a la IA de un interlocutor a un participante activo en tu entorno de desarrollo.
 
@@ -33,9 +33,9 @@ Con MCP, le das a la IA acceso directo a herramientas y recursos. Puede leer arc
 
 MCP es un protocolo, no un producto. Es un estándar abierto que define cómo los agentes de IA pueden conectarse a fuentes de datos y herramientas externas. Piensa en ello como un puente entre el modelo de IA y tu entorno de desarrollo.
 
-La arquitectura es simple: los servidores MCP exponen capacidades, y los clientes de IA las consumen. Muchas herramientas ya soportan MCP. Claude Desktop, Claude Code, Cursor, y otras pueden conectarse a los servidores MCP que configures.
+La arquitectura es simple: los servidores MCP exponen capacidades, y los clientes de IA las consumen. Claude Desktop y Claude Code soportan MCP oficialmente, con más herramientas adoptando el protocolo a medida que madura.
 
-Por ejemplo, en Claude Code puedes añadir servidores al `.mcp.json` de tu proyecto:
+Por ejemplo, en Claude Code puedes añadir servidores a un archivo `.mcp.json` en la raíz de tu proyecto. Claude Code lee este archivo cuando abres el proyecto e inicia los servidores configurados automáticamente:
 
 ```json
 {
