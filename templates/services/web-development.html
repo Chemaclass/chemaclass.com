@@ -486,21 +486,21 @@ if (new URLSearchParams(window.location.search).get('prices') === '1') {
   let currentIndex = 0;
   let itemsPerView = window.innerWidth <= 768 ? 1 : 2;
 
-  // Calculate total pages
-  function getTotalPages() {
-    return Math.ceil(totalItems / itemsPerView);
+  // Calculate total positions (one dot per position)
+  function getTotalPositions() {
+    return totalItems - itemsPerView + 1;
   }
 
   // Create dots
   function createDots() {
     dotsContainer.innerHTML = '';
-    const totalPages = getTotalPages();
-    for (let i = 0; i < totalPages; i++) {
+    const totalPositions = getTotalPositions();
+    for (let i = 0; i < totalPositions; i++) {
       const dot = document.createElement('button');
       dot.classList.add('portfolio-carousel__dot');
       dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
       if (i === 0) dot.classList.add('portfolio-carousel__dot--active');
-      dot.addEventListener('click', () => goToSlide(i * itemsPerView));
+      dot.addEventListener('click', () => goToSlide(i));
       dotsContainer.appendChild(dot);
     }
   }
@@ -508,12 +508,8 @@ if (new URLSearchParams(window.location.search).get('prices') === '1') {
   // Update dots
   function updateDots() {
     const dots = dotsContainer.querySelectorAll('.portfolio-carousel__dot');
-    const maxIndex = totalItems - itemsPerView;
-    const totalPages = getTotalPages();
-    // If at max index, activate last dot; otherwise calculate normally
-    const currentPage = currentIndex >= maxIndex ? totalPages - 1 : Math.floor(currentIndex / itemsPerView);
     dots.forEach((dot, i) => {
-      dot.classList.toggle('portfolio-carousel__dot--active', i === currentPage);
+      dot.classList.toggle('portfolio-carousel__dot--active', i === currentIndex);
     });
   }
 
@@ -530,13 +526,13 @@ if (new URLSearchParams(window.location.search).get('prices') === '1') {
     updateDots();
   }
 
-  // Navigate with looping
+  // Navigate with looping (one item at a time)
   function goNext() {
     const maxIndex = totalItems - itemsPerView;
     if (currentIndex >= maxIndex) {
       goToSlide(0); // Loop to first
     } else {
-      goToSlide(currentIndex + itemsPerView);
+      goToSlide(currentIndex + 1);
     }
   }
 
@@ -545,7 +541,7 @@ if (new URLSearchParams(window.location.search).get('prices') === '1') {
     if (currentIndex <= 0) {
       goToSlide(maxIndex); // Loop to last
     } else {
-      goToSlide(currentIndex - itemsPerView);
+      goToSlide(currentIndex - 1);
     }
   }
 
