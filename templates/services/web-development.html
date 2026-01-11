@@ -356,87 +356,98 @@
   <!-- Portfolio -->
   <section class="service-portfolio">
     <h2>{{ trans(key="svc_recent_work", lang=lang) }}</h2>
-    <div class="portfolio-grid">
-      <a href="https://fco-sandoval-gomez.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
-        <div class="portfolio-item__image">
-          <img src="/images/portfolio/fco-sandoval-gomez-sample.jpg" alt="Fco Sandoval Gómez website" loading="lazy">
+    <div class="portfolio-carousel">
+      <button class="portfolio-carousel__btn portfolio-carousel__btn--prev" aria-label="Previous">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="portfolio-carousel__track-container">
+        <div class="portfolio-carousel__track">
+          <a href="https://fco-sandoval-gomez.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+            <div class="portfolio-item__image">
+              <img src="/images/portfolio/fco-sandoval-gomez-sample.jpg" alt="Fco Sandoval Gómez website" loading="lazy">
+            </div>
+            <div class="portfolio-item__content">
+              <span class="portfolio-item__tag">{{ trans(key="svc_static_blog", lang=lang) }}</span>
+              <h3 class="portfolio-item__name">Fco Sandoval Gómez <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+              <p class="portfolio-item__desc">{% if lang == "es" %}Portfolio profesional para un arquitecto especializado en conservación del patrimonio.{% else %}Professional portfolio for an architect specializing in heritage conservation.{% endif %}</p>
+              <div class="portfolio-item__features">
+                <span class="feature-badge"><i class="fa-solid fa-language"></i> 3 {% if lang == "es" %}idiomas{% else %}languages{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-magnifying-glass"></i> {% if lang == "es" %}Búsqueda{% else %}Search{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-images"></i> {% if lang == "es" %}Galería{% else %}Gallery{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-newspaper"></i> Blog</span>
+              </div>
+            </div>
+          </a>
+          <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+            <div class="portfolio-item__image">
+              <img src="/images/portfolio/dkrisna-sample.jpg" alt="D'Krisna website" loading="lazy">
+            </div>
+            <div class="portfolio-item__content">
+              <span class="portfolio-item__tag">{{ trans(key="svc_static", lang=lang) }}</span>
+              <h3 class="portfolio-item__name">D'Krisna <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+              <p class="portfolio-item__desc">{% if lang == "es" %}Centro de belleza y bienestar en Murcia.{% else %}Beauty and wellness salon in Murcia.{% endif %}</p>
+              <div class="portfolio-item__features">
+                <span class="feature-badge"><i class="fa-solid fa-language"></i> 2 {% if lang == "es" %}idiomas{% else %}languages{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-calendar-check"></i> {% if lang == "es" %}Reservas{% else %}Booking{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-star"></i> {% if lang == "es" %}Reseñas{% else %}Reviews{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-file"></i> 6 {% if lang == "es" %}páginas{% else %}pages{% endif %}</span>
+              </div>
+            </div>
+          </a>
+          <a href="https://windmuehle-tuendern.de" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+            <div class="portfolio-item__image">
+              <img src="/images/portfolio/windmuelle-tuendern-sample.jpg" alt="Windmuehle Tündern website" loading="lazy">
+            </div>
+            <div class="portfolio-item__content">
+              <span class="portfolio-item__tag">{{ trans(key="svc_static_blog", lang=lang) }}</span>
+              <h3 class="portfolio-item__name">Windmuehle Tündern <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+              <p class="portfolio-item__desc">{% if lang == "es" %}Web sin ánimo de lucro para la restauración de un molino histórico en Alemania.{% else %}Non-profit site for the restoration of a historic windmill in Germany.{% endif %}</p>
+              <div class="portfolio-item__features">
+                <span class="feature-badge"><i class="fa-solid fa-language"></i> 3 {% if lang == "es" %}idiomas{% else %}languages{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-hand-holding-heart"></i> {% if lang == "es" %}Donaciones{% else %}Donations{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-newspaper"></i> {% if lang == "es" %}Noticias{% else %}News{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-images"></i> {% if lang == "es" %}Galería{% else %}Gallery{% endif %}</span>
+              </div>
+            </div>
+          </a>
+          <a href="https://postcardfromtheroad.eu" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+            <div class="portfolio-item__image">
+              <img src="/images/portfolio/postcardfromtheroad-sample.jpg" alt="Postcard from the Road website" loading="lazy">
+            </div>
+            <div class="portfolio-item__content">
+              <span class="portfolio-item__tag">WordPress</span>
+              <h3 class="portfolio-item__name">Postcard from the Road <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+              <p class="portfolio-item__desc">{% if lang == "es" %}Blog de viajes con galería fotográfica y narrativas personales.{% else %}Travel blog with photo gallery and personal narratives.{% endif %}</p>
+              <div class="portfolio-item__features">
+                <span class="feature-badge"><i class="fa-solid fa-folder"></i> 18+ {% if lang == "es" %}categorías{% else %}categories{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-magnifying-glass"></i> {% if lang == "es" %}Búsqueda{% else %}Search{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-images"></i> {% if lang == "es" %}Galerías{% else %}Galleries{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-pen"></i> 50+ posts</span>
+              </div>
+            </div>
+          </a>
+          <a href="https://dinamita-gym.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+            <div class="portfolio-item__image">
+              <img src="/images/portfolio/dinamitagym-sample.jpg" alt="Dinamita Gym website" loading="lazy">
+            </div>
+            <div class="portfolio-item__content">
+              <span class="portfolio-item__tag">{{ trans(key="svc_static", lang=lang) }}</span>
+              <h3 class="portfolio-item__name">Dinamita Gym <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+              <p class="portfolio-item__desc">{% if lang == "es" %}Centro de entrenamiento funcional y fuerza en Caravaca de la Cruz.{% else %}Functional fitness and strength training center in Caravaca de la Cruz.{% endif %}</p>
+              <div class="portfolio-item__features">
+                <span class="feature-badge"><i class="fa-solid fa-dumbbell"></i> {% if lang == "es" %}Fitness{% else %}Fitness{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-user"></i> {% if lang == "es" %}Personal{% else %}Personal{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-file"></i> 1 {% if lang == "es" %}página{% else %}page{% endif %}</span>
+              </div>
+            </div>
+          </a>
         </div>
-        <div class="portfolio-item__content">
-          <span class="portfolio-item__tag">{{ trans(key="svc_static_blog", lang=lang) }}</span>
-          <h3 class="portfolio-item__name">Fco Sandoval Gómez <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
-          <p class="portfolio-item__desc">{% if lang == "es" %}Portfolio profesional para un arquitecto especializado en conservación del patrimonio.{% else %}Professional portfolio for an architect specializing in heritage conservation.{% endif %}</p>
-          <div class="portfolio-item__features">
-            <span class="feature-badge"><i class="fa-solid fa-language"></i> 3 {% if lang == "es" %}idiomas{% else %}languages{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-magnifying-glass"></i> {% if lang == "es" %}Búsqueda{% else %}Search{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-images"></i> {% if lang == "es" %}Galería{% else %}Gallery{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-newspaper"></i> Blog</span>
-          </div>
-        </div>
-      </a>
-      <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
-        <div class="portfolio-item__image">
-          <img src="/images/portfolio/dkrisna-sample.jpg" alt="D'Krisna website" loading="lazy">
-        </div>
-        <div class="portfolio-item__content">
-          <span class="portfolio-item__tag">{{ trans(key="svc_static", lang=lang) }}</span>
-          <h3 class="portfolio-item__name">D'Krisna <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
-          <p class="portfolio-item__desc">{% if lang == "es" %}Centro de belleza y bienestar en Murcia.{% else %}Beauty and wellness salon in Murcia.{% endif %}</p>
-          <div class="portfolio-item__features">
-            <span class="feature-badge"><i class="fa-solid fa-language"></i> 2 {% if lang == "es" %}idiomas{% else %}languages{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-calendar-check"></i> {% if lang == "es" %}Reservas{% else %}Booking{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-star"></i> {% if lang == "es" %}Reseñas{% else %}Reviews{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-file"></i> 6 {% if lang == "es" %}páginas{% else %}pages{% endif %}</span>
-          </div>
-        </div>
-      </a>
-      <a href="https://windmuehle-tuendern.de" target="_blank" rel="noopener noreferrer" class="portfolio-item">
-        <div class="portfolio-item__image">
-          <img src="/images/portfolio/windmuelle-tuendern-sample.jpg" alt="Windmuehle Tündern website" loading="lazy">
-        </div>
-        <div class="portfolio-item__content">
-          <span class="portfolio-item__tag">{{ trans(key="svc_static_blog", lang=lang) }}</span>
-          <h3 class="portfolio-item__name">Windmuehle Tündern <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
-          <p class="portfolio-item__desc">{% if lang == "es" %}Web sin ánimo de lucro para la restauración de un molino histórico en Alemania.{% else %}Non-profit site for the restoration of a historic windmill in Germany.{% endif %}</p>
-          <div class="portfolio-item__features">
-            <span class="feature-badge"><i class="fa-solid fa-language"></i> 3 {% if lang == "es" %}idiomas{% else %}languages{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-hand-holding-heart"></i> {% if lang == "es" %}Donaciones{% else %}Donations{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-newspaper"></i> {% if lang == "es" %}Noticias{% else %}News{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-images"></i> {% if lang == "es" %}Galería{% else %}Gallery{% endif %}</span>
-          </div>
-        </div>
-      </a>
-      <a href="https://postcardfromtheroad.eu" target="_blank" rel="noopener noreferrer" class="portfolio-item">
-        <div class="portfolio-item__image">
-          <img src="/images/portfolio/postcardfromtheroad-sample.jpg" alt="Postcard from the Road website" loading="lazy">
-        </div>
-        <div class="portfolio-item__content">
-          <span class="portfolio-item__tag">WordPress</span>
-          <h3 class="portfolio-item__name">Postcard from the Road <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
-          <p class="portfolio-item__desc">{% if lang == "es" %}Blog de viajes con galería fotográfica y narrativas personales.{% else %}Travel blog with photo gallery and personal narratives.{% endif %}</p>
-          <div class="portfolio-item__features">
-            <span class="feature-badge"><i class="fa-solid fa-folder"></i> 18+ {% if lang == "es" %}categorías{% else %}categories{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-magnifying-glass"></i> {% if lang == "es" %}Búsqueda{% else %}Search{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-images"></i> {% if lang == "es" %}Galerías{% else %}Galleries{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-pen"></i> 50+ posts</span>
-          </div>
-        </div>
-      </a>
-      <a href="https://dinamita-gym.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
-        <div class="portfolio-item__image">
-          <img src="/images/portfolio/dinamita-gym-sample.jpg" alt="Dinamita Gym website" loading="lazy">
-        </div>
-        <div class="portfolio-item__content">
-          <span class="portfolio-item__tag">{{ trans(key="svc_static", lang=lang) }}</span>
-          <h3 class="portfolio-item__name">Dinamita Gym <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
-          <p class="portfolio-item__desc">{% if lang == "es" %}Centro de entrenamiento funcional y fuerza en Caravaca de la Cruz.{% else %}Functional fitness and strength training center in Caravaca de la Cruz.{% endif %}</p>
-          <div class="portfolio-item__features">
-            <span class="feature-badge"><i class="fa-solid fa-dumbbell"></i> {% if lang == "es" %}Fitness{% else %}Fitness{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-user"></i> {% if lang == "es" %}Personal{% else %}Personal{% endif %}</span>
-            <span class="feature-badge"><i class="fa-solid fa-file"></i> 1 {% if lang == "es" %}página{% else %}page{% endif %}</span>
-          </div>
-        </div>
-      </a>
+      </div>
+      <button class="portfolio-carousel__btn portfolio-carousel__btn--next" aria-label="Next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
     </div>
+    <div class="portfolio-carousel__dots"></div>
   </section>
 
   <!-- CTA -->
@@ -459,5 +470,126 @@
 if (new URLSearchParams(window.location.search).get('prices') === '1') {
   document.querySelectorAll('.pricing-details').forEach(el => el.style.display = 'block');
 }
+
+// Portfolio Carousel
+(function() {
+  const carousel = document.querySelector('.portfolio-carousel');
+  if (!carousel) return;
+
+  const track = carousel.querySelector('.portfolio-carousel__track');
+  const items = track.querySelectorAll('.portfolio-item');
+  const prevBtn = carousel.querySelector('.portfolio-carousel__btn--prev');
+  const nextBtn = carousel.querySelector('.portfolio-carousel__btn--next');
+  const dotsContainer = document.querySelector('.portfolio-carousel__dots');
+
+  const totalItems = items.length;
+  let currentIndex = 0;
+  let itemsPerView = window.innerWidth <= 768 ? 1 : 2;
+
+  // Calculate total pages
+  function getTotalPages() {
+    return Math.ceil(totalItems / itemsPerView);
+  }
+
+  // Create dots
+  function createDots() {
+    dotsContainer.innerHTML = '';
+    const totalPages = getTotalPages();
+    for (let i = 0; i < totalPages; i++) {
+      const dot = document.createElement('button');
+      dot.classList.add('portfolio-carousel__dot');
+      dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      if (i === 0) dot.classList.add('portfolio-carousel__dot--active');
+      dot.addEventListener('click', () => goToSlide(i * itemsPerView));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  // Update dots
+  function updateDots() {
+    const dots = dotsContainer.querySelectorAll('.portfolio-carousel__dot');
+    const maxIndex = totalItems - itemsPerView;
+    const totalPages = getTotalPages();
+    // If at max index, activate last dot; otherwise calculate normally
+    const currentPage = currentIndex >= maxIndex ? totalPages - 1 : Math.floor(currentIndex / itemsPerView);
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('portfolio-carousel__dot--active', i === currentPage);
+    });
+  }
+
+  // Go to slide
+  function goToSlide(index) {
+    const maxIndex = totalItems - itemsPerView;
+    currentIndex = Math.max(0, Math.min(index, maxIndex));
+
+    const gap = 24; // 1.5rem in pixels
+    const itemWidth = items[0].offsetWidth;
+    const offset = currentIndex * (itemWidth + gap);
+
+    track.style.transform = `translateX(-${offset}px)`;
+    updateDots();
+  }
+
+  // Navigate with looping
+  function goNext() {
+    const maxIndex = totalItems - itemsPerView;
+    if (currentIndex >= maxIndex) {
+      goToSlide(0); // Loop to first
+    } else {
+      goToSlide(currentIndex + itemsPerView);
+    }
+  }
+
+  function goPrev() {
+    const maxIndex = totalItems - itemsPerView;
+    if (currentIndex <= 0) {
+      goToSlide(maxIndex); // Loop to last
+    } else {
+      goToSlide(currentIndex - itemsPerView);
+    }
+  }
+
+  // Event listeners
+  prevBtn.addEventListener('click', goPrev);
+  nextBtn.addEventListener('click', goNext);
+
+  // Handle resize
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      const newItemsPerView = window.innerWidth <= 768 ? 1 : 2;
+      if (newItemsPerView !== itemsPerView) {
+        itemsPerView = newItemsPerView;
+        currentIndex = 0;
+        createDots();
+      }
+      goToSlide(currentIndex);
+    }, 100);
+  });
+
+  // Touch/swipe support
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        goNext();
+      } else {
+        goPrev();
+      }
+    }
+  }, { passive: true });
+
+  // Initialize
+  createDots();
+})();
 </script>
 {% endblock js %}

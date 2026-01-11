@@ -909,6 +909,99 @@
 .service-portfolio {
 }
 
+// Portfolio Carousel
+.portfolio-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  &__track-container {
+    overflow: hidden;
+    flex: 1;
+  }
+
+  &__track {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.4s ease;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--preview-divider-color);
+    background: var(--search-input-bg);
+    color: var(--body-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 2;
+
+    &:hover {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+      background: var(--search-bg-selected-item);
+    }
+
+    i {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: $breakpoint-phone) {
+      width: 36px;
+      height: 36px;
+
+      i {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: var(--preview-divider-color);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--color-subtitle);
+    }
+
+    &--active {
+      background: var(--accent-color);
+      width: 24px;
+      border-radius: 4px;
+    }
+  }
+
+  .portfolio-item {
+    flex: 0 0 calc(50% - 0.75rem);
+    min-width: calc(50% - 0.75rem);
+
+    @media (max-width: $breakpoint-tablet) {
+      flex: 0 0 100%;
+      min-width: 100%;
+    }
+  }
+}
+
+// Legacy grid fallback (kept for reference, can be removed)
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
