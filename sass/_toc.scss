@@ -127,15 +127,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .toc-title {
-  font-weight: 600;
-  color: var(--heading-color);
+  font-weight: 500;
+  color: var(--body-color);
   font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
   text-decoration: none;
   transition: color 0.2s ease;
 
@@ -149,24 +148,25 @@
   background: transparent;
   color: var(--color-subtitle);
   cursor: pointer;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 6px;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   flex-shrink: 0;
+  opacity: 0.4;
 
   &:hover,
   &:focus-visible {
-    color: var(--accent-color);
-    background: var(--search-bg-selected-item);
+    opacity: 1;
+    color: var(--heading-color);
   }
 
   svg {
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 0.6rem;
+    height: 0.6rem;
   }
 }
 

@@ -19,11 +19,11 @@ index_format = "elasticlunr_json"
 truncate_content_length = 2000  # Limit content length for better performance
 
 [markdown]
-
-highlight_code = true
-highlight_theme = "demain"
-extra_syntaxes_and_themes = ["syntaxes"]
 smart_punctuation = true
+
+[markdown.highlighting]
+light_theme = "github-light"
+dark_theme = "github-dark"
 
 [translations]
 read_more = "Read more"
