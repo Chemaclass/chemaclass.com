@@ -43,14 +43,28 @@ For example, in Claude Code you can add servers to your project's `.mcp.json`:
     "filesystem": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "./"]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": { "GITHUB_TOKEN": "your-token" }
+    },
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": { "DATABASE_URL": "postgresql://localhost/mydb" }
     }
   }
 }
 ```
 
-This tells Claude Code to spawn a filesystem server pointing to your project root. Now the AI can read and navigate your files directly.
+Each server gives the AI different capabilities:
 
-Different tools, same protocol. That's the point. You configure once, and any MCP-compatible client can use it.
+- **filesystem**: Read and navigate your project files. The AI can explore your codebase, check existing patterns, and understand your directory structure before suggesting changes.
+- **github**: Access issues, pull requests, and repository metadata. Ask the AI to summarize open issues, check PR comments, or understand what your team is working on.
+- **postgres**: Query your database directly. The AI can inspect your schema, run read queries, and understand your data model without you copying table definitions.
+
+Different tools, same protocol. You configure once, and any MCP-compatible client can use these servers.
 
 ## Where MCP shines
 
@@ -95,15 +109,19 @@ Security matters too. Be intentional about what you expose. MCP servers can acce
 
 ## What comes next
 
-MCP is still evolving. New servers appear regularly. Capabilities expand. The ecosystem is young but growing.
+MCP is the foundation. But the ecosystem is building on top of it.
 
-What interests me is the shift in thinking. We've spent years learning to prompt well. Now we're learning to provide context well. It's a different skill.
+**Agentic workflows.** Tools like Claude Code and Cursor now run in "agent mode" where the AI autonomously plans and executes multi-step tasks. It reads files, makes changes, runs tests, fixes errors. MCP servers are the hands. The agent loop is the brain deciding what to do next.
 
-> We've moved from asking "how do I phrase this prompt?" to "what does the AI need to know?" That's progress.
+**Skills and custom commands.** Claude Code introduced skills. Custom slash commands that chain MCP tools into reusable workflows. `/deploy`, `/test`, `/review`. You define them once, and they become part of your development toolkit.
 
-As AI agents become more autonomous, context becomes even more critical. It's not just about giving information, it's about setting boundaries. What should the AI see? What should it ignore? What patterns should it follow?
+**A2A Protocol.** Google's Agent-to-Agent protocol. While MCP connects AI to tools, A2A connects AI agents to each other. Multiple specialized agents collaborating on complex tasks. One agent writes code, another reviews it, a third runs tests.
 
-Human judgment doesn't disappear. It moves upstream. Instead of reviewing every line the AI writes, we design the context that shapes what it produces.
+The pattern is clear: AI is moving from assistant to collaborator. From answering questions to executing workflows. MCP gave AI access to your environment. What's next is AI that knows how to use that access autonomously.
+
+> The question is shifting from "what can AI access?" to "what should AI decide on its own?"
+
+Human judgment doesn't disappear. It moves upstream. Instead of reviewing every line the AI writes, we design the context and boundaries that shape what it produces.
 
 That's still our job. And it's a job worth doing well.
 

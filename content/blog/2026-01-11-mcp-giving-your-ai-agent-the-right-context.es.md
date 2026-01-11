@@ -43,14 +43,28 @@ Por ejemplo, en Claude Code puedes añadir servidores al `.mcp.json` de tu proye
     "filesystem": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "./"]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": { "GITHUB_TOKEN": "tu-token" }
+    },
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": { "DATABASE_URL": "postgresql://localhost/mydb" }
     }
   }
 }
 ```
 
-Esto le dice a Claude Code que inicie un servidor de sistema de archivos apuntando a la raíz de tu proyecto. Ahora la IA puede leer y navegar tus archivos directamente.
+Cada servidor le da a la IA diferentes capacidades:
 
-Diferentes herramientas, mismo protocolo. Ese es el punto. Configuras una vez, y cualquier cliente compatible con MCP puede usarlo.
+- **filesystem**: Leer y navegar los archivos de tu proyecto. La IA puede explorar tu código, verificar patrones existentes, y entender la estructura de directorios antes de sugerir cambios.
+- **github**: Acceder a issues, pull requests, y metadatos del repositorio. Pídele a la IA que resuma los issues abiertos, revise comentarios de PRs, o entienda en qué está trabajando tu equipo.
+- **postgres**: Consultar tu base de datos directamente. La IA puede inspeccionar tu esquema, ejecutar consultas de lectura, y entender tu modelo de datos sin que copies definiciones de tablas.
+
+Diferentes herramientas, mismo protocolo. Configuras una vez, y cualquier cliente compatible con MCP puede usar estos servidores.
 
 ## Dónde destaca MCP
 
@@ -95,15 +109,19 @@ La seguridad también importa. Sé intencional sobre lo que expones. Los servido
 
 ## Qué viene después
 
-MCP sigue evolucionando. Nuevos servidores aparecen regularmente. Las capacidades se expanden. El ecosistema es joven pero está creciendo.
+MCP es la base. Pero el ecosistema está construyendo encima.
 
-Lo que me interesa es el cambio de mentalidad. Hemos pasado años aprendiendo a hacer buenos prompts. Ahora estamos aprendiendo a proporcionar buen contexto. Es una habilidad diferente.
+**Flujos de trabajo agénticos.** Herramientas como Claude Code y Cursor ahora funcionan en "modo agente" donde la IA planifica y ejecuta tareas de múltiples pasos de forma autónoma. Lee archivos, hace cambios, ejecuta tests, corrige errores. Los servidores MCP son las manos. El bucle del agente es el cerebro que decide qué hacer.
 
-> Hemos pasado de preguntarnos "¿cómo formulo este prompt?" a "¿qué necesita saber la IA?" Eso es progreso.
+**Skills y comandos personalizados.** Claude Code introdujo skills. Comandos slash personalizados que encadenan herramientas MCP en flujos reutilizables. `/deploy`, `/test`, `/review`. Los defines una vez, y se convierten en parte de tu toolkit de desarrollo.
 
-A medida que los agentes de IA se vuelven más autónomos, el contexto se vuelve aún más crítico. No se trata solo de dar información, se trata de establecer límites. ¿Qué debería ver la IA? ¿Qué debería ignorar? ¿Qué patrones debería seguir?
+**Protocolo A2A.** El protocolo Agent-to-Agent de Google. Mientras MCP conecta IA con herramientas, A2A conecta agentes de IA entre sí. Múltiples agentes especializados colaborando en tareas complejas. Un agente escribe código, otro lo revisa, un tercero ejecuta tests.
 
-El juicio humano no desaparece. Se mueve hacia arriba. En lugar de revisar cada línea que escribe la IA, diseñamos el contexto que moldea lo que produce.
+El patrón es claro: la IA está pasando de asistente a colaborador. De responder preguntas a ejecutar flujos de trabajo. MCP le dio a la IA acceso a tu entorno. Lo que viene es IA que sabe usar ese acceso de forma autónoma.
+
+> La pregunta está cambiando de "¿a qué puede acceder la IA?" a "¿qué debería decidir la IA por su cuenta?"
+
+El juicio humano no desaparece. Se mueve hacia arriba. En lugar de revisar cada línea que escribe la IA, diseñamos el contexto y los límites que moldean lo que produce.
 
 Ese sigue siendo nuestro trabajo. Y es un trabajo que vale la pena hacer bien.
 
