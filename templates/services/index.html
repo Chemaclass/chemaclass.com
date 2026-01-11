@@ -227,7 +227,7 @@
     <div class="tab-panel" id="websites" role="tabpanel" aria-labelledby="btn-websites">
       <div class="projects-personal__grid">
         {% for website in section.extra.websites %}
-        <a href="{{ website.url }}" target="_blank" rel="noopener noreferrer" class="project-card project-card--simple">
+        <a href="{{ website.url }}" target="_blank" rel="noopener noreferrer" class="project-card project-card--simple{% if website.hide_on_tablet %} project-card--hiddable{% endif %}">
           <div class="project-card__header">
             <h3>{{ website.name }}</h3>
             <div class="project-card__meta">

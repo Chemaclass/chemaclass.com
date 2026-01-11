@@ -89,5 +89,6 @@ description = "Sitio web sin ánimo de lucro dedicado a restaurar y preservar el
 github = "Chemaclass/website-windmuehle"
 url = "https://windmuehle-tuendern.de"
 tech = ["Vue", "Zola"]
+hide_on_tablet = true  
 
 +++

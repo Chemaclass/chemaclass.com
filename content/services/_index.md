@@ -62,13 +62,12 @@ tech = ["Bash"]
 type = "tool"
 
 [[extra.projects]]
-name = "satscribe"
-description = "Satscribe makes Bitcoin easier to understand."
-github = "Chemaclass/satscribe"
-tags = ["AI", "Bitcoin"]
-tech = ["PHP", "AI"]
-type = "app"
-hide_on_tablet = true
+name = "Unspent"
+description = "A bookkeeping library using the UTXO model. Track value like physical cash with complete audit trails."
+github = "Chemaclass/unspent"
+tags = ["UTXO", "Accounting"]
+tech = ["PHP"]
+type = "library"
 
 [[extra.websites]]
 name = "Fco. Sandoval Gómez"
@@ -90,5 +89,6 @@ description = "Non-profit website dedicated to restoring and preserving the hist
 github = "Chemaclass/website-windmuehle"
 url = "https://windmuehle-tuendern.de"
 tech = ["Vue", "Zola"]
+hide_on_tablet = true  
 
 +++
