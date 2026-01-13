@@ -16,12 +16,6 @@ In this guide, I'll show you how to set up a fully custodial Lightning Network (
 
 <!-- more -->
 
-<div class="tldr">
-
-Set up a self-custodial Lightning node on a Raspberry Pi using Alby Hub. Full control of your funds, 100% open-source, and easy to manage with the Alby Go mobile app.
-
-</div>
-
 It supports both Lightning and Nostr addresses, enabling seamless connectivity across ecosystems, and integrates effortlessly with dozens of Bitcoin applications. With built-in Lightning Service Provider (LSP) services and the Alby Go mobile app, managing your node on the go has never been easier.
 
 ---

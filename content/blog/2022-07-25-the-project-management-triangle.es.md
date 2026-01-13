@@ -1,6 +1,6 @@
 +++
 title = "El Triángulo de Gestión de Proyectos"
-description = "Un triángulo de tiempo, calidad y coste. Es un indicador de que estos tres parámetros están interconectados. Puedes fijar uno o dos de ellos, pero no los tres."
+description = "Entrega valor constantemente en iteraciones cortas. ¿Por qué? Porque esto te ayudará a obtener feedback, y el feedback es necesario para tomar las decisiones correctas."
 [taxonomies]
 tags = [ "agile", "team-management", "productivity" ]
 [extra]
@@ -14,12 +14,6 @@ Un triángulo de tiempo, calidad y coste. Es un indicador de que estos tres par�
 Puedes fijar uno o dos de ellos, pero no los tres.
 
 <!-- more -->
-
-<div class="tldr">
-
-Entrega valor constantemente en iteraciones cortas. ¿Por qué? Porque esto te ayudará a obtener feedback, y el feedback es necesario para tomar las decisiones correctas.
-
-</div>
 
 ### La triple restricción
 

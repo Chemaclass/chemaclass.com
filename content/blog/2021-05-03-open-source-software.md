@@ -14,12 +14,6 @@ What is Open-Source Software (OSS)? What are their benefits? How can you start c
 
 <!-- more -->
 
-<div class="tldr">
-
-Contributing to OSS can be a constant kata. It improves your skills, builds your career, and helps the community around you.
-
-</div>
-
 ## What is OSS?
 
 OSS shares similarities with free software, but it's not the same. Free software is a form of OSS, but that doesn't necessarily mean that it has to be free. For example:

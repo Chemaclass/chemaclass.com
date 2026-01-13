@@ -130,17 +130,6 @@
   margin-bottom: 0.5rem;
 }
 
-.toc-description {
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: var(--color-subtitle);
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
-  background: var(--search-bg-selected-item);
-  border-radius: 8px;
-  border-left: 3px solid var(--accent-color);
-}
-
 .toc-title {
   font-weight: 500;
   color: var(--body-color);
@@ -184,6 +173,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: left;
 }
 
 .toc-item {
@@ -263,6 +253,7 @@
     color: var(--body-color);
     background: var(--search-bg-selected-item);
     transform: translateX(2px);
+    border-bottom: none;
   }
 
   &:focus-visible {
@@ -274,19 +265,6 @@
     color: var(--accent-color);
     background: rgba(58, 92, 136, 0.1);
     font-weight: 500;
-
-    // Reset opacity for active nested items
-    opacity: 1 !important;
   }
 }
 
-// When there's an active item, slightly fade others
-.toc-list:has(.toc-link.active) {
-  .toc-link:not(.active) {
-    opacity: 0.75;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-}

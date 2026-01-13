@@ -256,15 +256,6 @@
     tocContainerRef.setAttribute('aria-label', 'Table of contents');
     tocContainerRef.appendChild(tocHeader);
 
-    // Add description to TOC if available
-    const description = tocContainerRef.dataset.description;
-    if (description) {
-      const tocDescription = document.createElement('div');
-      tocDescription.className = 'toc-description';
-      tocDescription.textContent = description;
-      tocContainerRef.appendChild(tocDescription);
-    }
-
     tocContainerRef.appendChild(tocList);
 
     // Restore saved preference

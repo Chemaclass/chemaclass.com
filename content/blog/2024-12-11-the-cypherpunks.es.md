@@ -15,12 +15,6 @@ A principios de los 90, con el auge de internet, surgió un grupo llamado los Cy
 
 <!-- more -->
 
-<div class="tldr">
-
-Los Cypherpunks eran activistas que creían que la privacidad es un derecho fundamental. Construyeron herramientas de cifrado como PGP y sentaron las bases para Bitcoin. Su legado moldea cómo pensamos sobre la privacidad digital hoy.
-
-</div>
-
 ## ¿Quiénes eran los Cypherpunks?
 
 El término "Cypherpunk" combina "cipher" (una referencia al cifrado) con "punk", reflejando el espíritu rebelde y anti-establishment del grupo.

@@ -1,6 +1,6 @@
 +++
 title = "La IA te da velocidad, no calidad"
-description = "Los asistentes de codificación IA son herramientas poderosas para la velocidad, pero sin disciplina humana, producen código desordenado e imposible de mantener. La velocidad sin dirección lleva al caos."
+description = "La IA escribe código rápido pero no le importa la calidad. Aprende a hacer buenos prompts, nunca aceptes código que no entiendas, y recuerda: eres dueño de cada línea que commiteas. La velocidad sin dirección es solo caos."
 draft = false
 [taxonomies]
 tags = [ "ai", "software-architecture", "craftsmanship", "leadership" ]
@@ -14,12 +14,6 @@ He estado usando asistentes de codificación IA extensivamente: ChatGPT, Codex, 
 Pero la velocidad no es calidad.
 
 <!-- more -->
-
-<div class="tldr">
-
-La IA escribe código rápido pero no le importa la calidad. Aprende a hacer buenos prompts, nunca aceptes código que no entiendas, y recuerda: eres dueño de cada línea que commiteas. La velocidad sin dirección es solo caos.
-
-</div>
 
 ## La trampa del vibe-coding
 

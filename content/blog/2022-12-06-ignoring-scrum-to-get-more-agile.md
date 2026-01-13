@@ -1,6 +1,6 @@
 +++
 title = "Ignoring Scrum to get more Agile?"
-description = "Talking to a friend about agile, he asked me a fascinating question remarking how badly sometimes Agile and Scrum fit together, especially regarding meetings. These are my thoughts about this topic."
+description = "People become slaves to systems that are supposed to help. Boring meetings are killing agile. Meetings require active participation from everyone. Otherwise, you might not be essential to that meeting, and rather use your time with something else."
 draft = false
 [taxonomies]
 tags = [ "agile", "scrum", "communication", "productivity" ]
@@ -15,12 +15,6 @@ Talking to a friend about agile, he asked me a fascinating question remarking ho
 together, especially regarding meetings. These are my thoughts about this topic.
 
 <!-- more -->
-
-<div class="tldr">
-
-People become slaves to systems that are supposed to help. Boring meetings are killing agile. Meetings require active participation from everyone. Otherwise, you might not be essential to that meeting, and rather use your time with something else.
-
-</div>
 
 > "Do you think it would make sense to just use agile and ignore scrum (sprints) completely in a product based
 > development company. I feel it's hard to be agile when you have 10 hours of meetings per week." Filip G.

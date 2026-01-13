@@ -15,12 +15,6 @@ PGP (_Pretty Good Privacy_) is an encryption program that ensures privacy and au
 
 <!-- more -->
 
-<div class="tldr">
-
-PGP lets you encrypt messages so only the intended recipient can read them, and sign messages to prove they came from you. Created in 1991 by Phil Zimmermann, it became a symbol of the fight for digital privacy during the [Crypto Wars](/blog/the-cypherpunks/#legal-and-policy-influence-the-crypto-wars).
-
-</div>
-
 ## History
 
 PGP was developed by [Phil Zimmermann](https://en.wikipedia.org/wiki/Phil_Zimmermann) out of concern for the lack of privacy in digital communications. He aimed to provide individuals with strong encryption tools. In 1991, PGP was released to the public for free, marking the beginning of a new era in digital security.

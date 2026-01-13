@@ -1,6 +1,6 @@
 +++
 title = "What success means to me"
-description = "Success isn't about money, titles, or achievements. For me, it's something much simpler and more meaningful: waking up knowing that what I do makes the people around me—and myself—happier."
+description = "Success is waking up knowing that what you do makes the people around you, and yourself, happier. No complex formula. Just consistency over perfection, and building habits that align with what matters."
 draft = false
 [taxonomies]
 tags = [ "philosophy", "career", "productivity", "leadership" ]
@@ -16,12 +16,6 @@ For the longest time, I thought success was about hitting certain milestones. Ge
 But I've realized that's not what gets me out of bed in the morning.
 
 <!-- more -->
-
-<div class="tldr">
-
-Success is waking up knowing that what you do makes the people around you, and yourself, happier. No complex formula. Just consistency over perfection, and building habits that align with what matters.
-
-</div>
 
 ## The real measure
 

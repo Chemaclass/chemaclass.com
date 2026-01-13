@@ -1,6 +1,6 @@
 +++
 title = "Pretty Good Privacy"
-description = "PGP es un programa de cifrado que garantiza la privacidad y autenticación para la comunicación de datos. Se utiliza para firmar, cifrar y descifrar textos, correos electrónicos, archivos, directorios y particiones de disco completas, mejorando la seguridad de las comunicaciones por correo electrónico."
+description = "PGP te permite cifrar mensajes para que solo el destinatario previsto pueda leerlos, y firmar mensajes para demostrar que provienen de ti. Creado en 1991 por Phil Zimmermann, se convirtió en un símbolo de la lucha por la privacidad digital durante las Crypto Wars."
 draft = false
 [taxonomies]
 tags = [ "security", "privacy", "cryptography", "encryption" ]
@@ -14,12 +14,6 @@ static_thumbnail = "/images/blog/2024-07-13/cover.jpg"
 PGP (_Pretty Good Privacy_) es un programa de cifrado que garantiza la privacidad y autenticación para la comunicación de datos. Se utiliza para firmar, cifrar y descifrar textos, correos electrónicos, archivos, directorios y particiones de disco completas.
 
 <!-- more -->
-
-<div class="tldr">
-
-PGP te permite cifrar mensajes para que solo el destinatario previsto pueda leerlos, y firmar mensajes para demostrar que provienen de ti. Creado en 1991 por Phil Zimmermann, se convirtió en un símbolo de la lucha por la privacidad digital durante las [Crypto Wars](/es/blog/the-cypherpunks/#legal-and-policy-influence-the-crypto-wars).
-
-</div>
 
 ## Historia
 

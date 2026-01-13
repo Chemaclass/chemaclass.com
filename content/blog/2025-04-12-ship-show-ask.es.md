@@ -17,12 +17,6 @@ El enfoque tradicional de pull requests a menudo ralentiza las cosas. Esperamos 
 
 <!-- more -->
 
-<div class="tldr">
-
-Ship-Show-Ask te permite elegir cuánta revisión necesita cada cambio. Por defecto Ask para trabajo arriesgado, usa Show para cambios seguros que puedes mergear inmediatamente. Se trata de confianza, propiedad y moverse rápido sin comprometer la calidad.
-
-</div>
-
 Ahí es donde entra la estrategia Ship-Show-Ask. Originalmente descrita por [Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html), este modelo ofrece una forma más flexible y reflexiva de manejar cambios de código. No es solo una estrategia de branching—es un cambio en cómo los equipos colaboran, confían y toman propiedad.
 
 ## ¿Qué es Ship, Show, Ask?

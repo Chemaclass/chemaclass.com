@@ -15,12 +15,6 @@ Waterfall es como seguir un camino recto donde te mueves de un paso al siguiente
 
 <!-- more -->
 
-<div class="tldr">
-
-Waterfall parece lógico en papel pero falla en la práctica. Los requisitos cambian, los clientes no saben lo que quieren, y no recibes feedback hasta que es demasiado tarde. Agile fue creado para solucionar esto.
-
-</div>
-
 El problema es que cada paso puede llevar mucho tiempo y recursos para completarse. Además, no recibes feedback hasta que toda la etapa está terminada, lo que puede llevar a mucho tiempo desperdiciado. Esto es especialmente complicado en el desarrollo de software, donde las cosas siempre están cambiando y evolucionando.
 
 Usualmente sigue una secuencia directa como esta:

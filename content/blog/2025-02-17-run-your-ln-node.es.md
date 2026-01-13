@@ -15,12 +15,6 @@ En esta guía, te mostraré cómo configurar un nodo de Lightning Network (LN) c
 
 <!-- more -->
 
-<div class="tldr">
-
-Configura un nodo Lightning auto-custodiado en una Raspberry Pi usando Alby Hub. Control total de tus fondos, 100% open-source, y fácil de gestionar con la app móvil Alby Go.
-
-</div>
-
 Soporta tanto direcciones Lightning como Nostr, permitiendo conectividad fluida entre ecosistemas, y se integra sin esfuerzo con docenas de aplicaciones Bitcoin. Con servicios integrados de Lightning Service Provider (LSP) y la app móvil Alby Go, gestionar tu nodo sobre la marcha nunca ha sido más fácil.
 
 ---

@@ -1,6 +1,6 @@
 +++
 title = "Lo que el éxito significa para mí"
-description = "El éxito no se trata de dinero, títulos o logros. Para mí, es algo mucho más simple y significativo: despertar sabiendo que lo que hago hace más felices a las personas a mi alrededor—y a mí mismo."
+description = "El éxito es despertar sabiendo que lo que haces hace más felices a las personas a tu alrededor, y a ti mismo. Sin fórmula complicada. Solo consistencia sobre perfección, y construir hábitos que se alineen con lo que importa."
 draft = false
 [taxonomies]
 tags = [ "philosophy", "career", "productivity", "leadership" ]
@@ -16,12 +16,6 @@ Durante mucho tiempo, pensé que el éxito se trataba de alcanzar ciertos hitos.
 Pero me he dado cuenta de que eso no es lo que me hace levantarme por las mañanas.
 
 <!-- more -->
-
-<div class="tldr">
-
-El éxito es despertar sabiendo que lo que haces hace más felices a las personas a tu alrededor, y a ti mismo. Sin fórmula complicada. Solo consistencia sobre perfección, y construir hábitos que se alineen con lo que importa.
-
-</div>
 
 ## La verdadera medida
 

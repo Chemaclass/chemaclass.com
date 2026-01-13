@@ -15,12 +15,6 @@ Los impuestos son inevitables. Ya sea tu sueldo, el café de la mañana o la cas
 
 <!-- more -->
 
-<div class="tldr">
-
-Los impuestos financian servicios públicos pero a menudo se sienten injustos cuando los gobiernos desperdician dinero. Bitcoin ofrece una alternativa: descentralizado, transparente y resistente a la inflación. Da a las personas más control sobre su riqueza.
-
-</div>
-
 1. Impuestos 101
 1. Tipos de impuestos
 1. ¿Cómo funcionan?

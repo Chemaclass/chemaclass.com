@@ -31,8 +31,7 @@
       id="toc-container"
       data-hide-toc="false"
       data-title="{{ trans(key='toc_header_title', lang=lang) }}"
-      data-close-label="{{ trans(key='toc_close_label', lang=lang) }}"
-      data-description="{{ page.description }}"></nav>
+      data-close-label="{{ trans(key='toc_close_label', lang=lang) }}"></nav>
 
     <div class="blog-post-main">
       <article class="blog-post">
@@ -110,6 +109,9 @@
 
         <!-- Content -->
         <div class="blog-post__content">
+          {% if page.description %}
+          <div class="tldr">{{ page.description }}</div>
+          {% endif %}
           {{ page.content | safe }}
         </div>
       </article>

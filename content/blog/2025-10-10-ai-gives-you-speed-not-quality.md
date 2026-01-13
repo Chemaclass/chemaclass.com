@@ -1,6 +1,6 @@
 +++
 title = "AI gives you speed, not quality"
-description = "AI coding assistants are powerful tools for velocity, but without human discipline, they produce messy, unmaintainable code. Speed without direction leads to chaos."
+description = "AI writes code fast but doesn't care about quality. Learn to prompt well, never accept code you don't understand, and remember: you own every line you commit. Speed without direction is just chaos."
 draft = false
 [taxonomies]
 tags = [ "ai", "software-architecture", "craftsmanship", "leadership" ]
@@ -14,12 +14,6 @@ I've been using AI coding assistants extensively: ChatGPT, Codex, Claude with So
 But speed isn't quality.
 
 <!-- more -->
-
-<div class="tldr">
-
-AI writes code fast but doesn't care about quality. Learn to prompt well, never accept code you don't understand, and remember: you own every line you commit. Speed without direction is just chaos.
-
-</div>
 
 ## The vibe-coding trap
 

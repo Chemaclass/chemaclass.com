@@ -15,12 +15,6 @@ Así que eres desarrollador de software, y has dominado lenguajes de programaci�
 
 <!-- more -->
 
-<div class="tldr">
-
-Las habilidades técnicas por sí solas no te llevarán lejos. Si no puedes trabajar bien con otros, nadie querrá trabajar contigo. Las habilidades interpersonales son tan importantes como las habilidades de programación.
-
-</div>
-
 Si no puedes trabajar bien con otros, no importa lo bueno que sea tu código — nadie querrá trabajar contigo.
 
 ## Por qué las habilidades interpersonales importan en software

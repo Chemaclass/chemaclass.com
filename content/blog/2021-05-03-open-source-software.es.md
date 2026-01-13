@@ -14,12 +14,6 @@ static_thumbnail = "/images/blog/2021-05-03/cover.jpg"
 
 <!-- more -->
 
-<div class="tldr">
-
-Contribuir a OSS puede ser una kata constante. Mejora tus habilidades, construye tu carrera y ayuda a la comunidad a tu alrededor.
-
-</div>
-
 ## ¿Qué es OSS?
 
 OSS comparte similitudes con el software libre, pero no es lo mismo. El software libre es una forma de OSS, pero eso no significa necesariamente que tenga que ser gratis. Por ejemplo:

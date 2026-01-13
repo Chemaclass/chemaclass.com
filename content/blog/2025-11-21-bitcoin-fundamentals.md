@@ -1,6 +1,6 @@
 +++
 title = "Bitcoin Fundamentals"
-description = "A beginner's guide to Bitcoin: what it is, why it matters, and how to get started."
+description = "What if your savings couldn't lose value to inflation? What if no one could freeze your account? Imagine money that can't be controlled by any government or bank. Bitcoin makes this possible: digital cash you truly own. Only 21 million will ever exist. No one can print more. It works 24/7 worldwide, secured by a global network instead of banks. Anyone can use it, anywhere, anytime. No permission needed. Your money, your rules."
 draft = false
 [taxonomies]
 tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
@@ -19,12 +19,6 @@ This isn't hypothetical. In 2022, Canada froze bank accounts of people who donat
 Bitcoin exists because these things happen. Understanding it requires going back to basics: what is money, why does it matter, and how does Bitcoin fit into that picture.
 
 <!-- more -->
-
-<div class="tldr">
-
-What if your savings couldn't lose value to inflation? What if no one could freeze your account? Imagine money that can't be controlled by any government or bank. Bitcoin makes this possible: digital cash you truly own. Only 21 million will ever exist. No one can print more. It works 24/7 worldwide, secured by a global network instead of banks. Anyone can use it, anywhere, anytime. No permission needed. Your money, your rules.
-
-</div>
 
 *No technical background required. Just curiosity.*
 

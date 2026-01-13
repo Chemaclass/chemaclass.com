@@ -1,6 +1,6 @@
 +++
 title = "Fundamentos de Bitcoin"
-description = "Una guía para principiantes sobre Bitcoin: qué es, por qué importa y cómo empezar."
+description = "¿Qué pasaría si tus ahorros no pudieran perder valor por la inflación? ¿Qué si nadie pudiera congelar tu cuenta? Imagina dinero que no puede ser controlado por ningún gobierno o banco. Bitcoin hace esto posible: efectivo digital que realmente posees. Solo existirán 21 millones. Nadie puede imprimir más. Funciona 24/7 en todo el mundo, asegurado por una red global en lugar de bancos. Cualquiera puede usarlo, en cualquier lugar, en cualquier momento. Sin permiso necesario. Tu dinero, tus reglas."
 draft = false
 [taxonomies]
 tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
@@ -19,12 +19,6 @@ Esto no es hipotético. En 2022, Canadá congeló cuentas bancarias de personas 
 Bitcoin existe porque estas cosas pasan. Entenderlo requiere volver a lo básico: qué es el dinero, por qué importa, y cómo encaja Bitcoin en ese panorama.
 
 <!-- more -->
-
-<div class="tldr">
-
-¿Qué pasaría si tus ahorros no pudieran perder valor por la inflación? ¿Qué si nadie pudiera congelar tu cuenta? Imagina dinero que no puede ser controlado por ningún gobierno o banco. Bitcoin hace esto posible: efectivo digital que realmente posees. Solo existirán 21 millones. Nadie puede imprimir más. Funciona 24/7 en todo el mundo, asegurado por una red global en lugar de bancos. Cualquiera puede usarlo, en cualquier lugar, en cualquier momento. Sin permiso necesario. Tu dinero, tus reglas.
-
-</div>
 
 *No se requiere conocimiento técnico. Solo curiosidad.*
 

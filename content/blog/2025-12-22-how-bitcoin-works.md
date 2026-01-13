@@ -1,6 +1,6 @@
 +++
 title = "How Bitcoin Works"
-description = "A technical introduction to Bitcoin: blockchain, cryptography, mining, addresses, and the Lightning Network."
+description = "How Bitcoin solves digital money: Transactions are signed with cryptographic keys, grouped into blocks through proof-of-work mining, and chained together via hashes. The network of nodes enforces rules without any central authority. This post covers the blockchain, UTXO model, mining mechanics, wallet security, network architecture, confirmation depth, incentive alignment, and Lightning Network."
 [taxonomies]
 tags = [ "bitcoin", "cryptography", "tutorial" ]
 [extra]
@@ -13,12 +13,6 @@ static_thumbnail = "/images/blog/2025-12-21/cover.jpg"
 This post explains how Bitcoin works under the hood. If you're looking for why Bitcoin matters, start with [Bitcoin Fundamentals](/blog/bitcoin-fundamentals/).
 
 <!-- more -->
-
-<div class="tldr">
-
-**How Bitcoin solves digital money:** Transactions are signed with cryptographic keys, grouped into blocks through proof-of-work mining, and chained together via hashes. The network of nodes enforces rules without any central authority. This post covers the blockchain, UTXO model, mining mechanics, wallet security, network architecture, confirmation depth, incentive alignment, and Lightning Network.
-
-</div>
 
 *For the technically curious.*
 

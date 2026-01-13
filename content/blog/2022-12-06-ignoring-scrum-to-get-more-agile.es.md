@@ -1,6 +1,6 @@
 +++
 title = "¿Ignorar Scrum para ser más Agile?"
-description = "Hablando con un amigo sobre agile, me hizo una pregunta fascinante señalando lo mal que a veces encajan Agile y Scrum, especialmente respecto a las reuniones. Estos son mis pensamientos sobre este tema."
+description = "Las personas se vuelven esclavas de sistemas que se supone que ayudan. Las reuniones aburridas están matando el agile. Las reuniones requieren participación activa de todos. De lo contrario, podrías no ser esencial para esa reunión, y mejor usar tu tiempo con algo más."
 draft = false
 [taxonomies]
 tags = [ "agile", "scrum", "communication", "productivity" ]
@@ -14,12 +14,6 @@ static_thumbnail = "/images/blog/2022-12-06/cover.jpg"
 Hablando con un amigo sobre agile, me hizo una pregunta fascinante señalando lo mal que a veces encajan Agile y Scrum, especialmente respecto a las reuniones. Estos son mis pensamientos sobre este tema.
 
 <!-- more -->
-
-<div class="tldr">
-
-Las personas se vuelven esclavas de sistemas que se supone que ayudan. Las reuniones aburridas están matando el agile. Las reuniones requieren participación activa de todos. De lo contrario, podrías no ser esencial para esa reunión, y mejor usar tu tiempo con algo más.
-
-</div>
 
 > "¿Crees que tendría sentido simplemente usar agile e ignorar scrum (sprints) completamente en una empresa basada en producto? Siento que es difícil ser agile cuando tienes 10 horas de reuniones por semana." Filip G.
 

@@ -1,6 +1,6 @@
 +++
 title = "Commits de git verificados"
-description = "Aprende por qué los commits de Git verificados son esenciales para el desarrollo de software seguro y cómo configurarlos paso a paso."
+description = "Firma tus commits de Git con GPG para demostrar que realmente son tuyos. Sin firmas, cualquiera puede falsificar commits usando tu email. Toma 5 minutos configurarlo y añade confianza real a tu código."
 draft = false
 [taxonomies]
 tags = [ "git", "security", "cryptography", "open-source" ]
@@ -14,12 +14,6 @@ static_thumbnail = "/images/blog/2024-11-17/cover.jpg"
 Cuando se trata de desarrollo de software, la confianza y la seguridad son muy importantes. Una forma fácil de mejorar ambas es usando commits verificados.
 
 <!-- more -->
-
-<div class="tldr">
-
-Firma tus commits de Git con GPG para demostrar que realmente son tuyos. Sin firmas, cualquiera puede falsificar commits usando tu email. Toma 5 minutos configurarlo y añade confianza real a tu código.
-
-</div>
 
 Ya sea que estés trabajando en un proyecto open-source o en una empresa privada, los commits verificados pueden asegurar que tus contribuciones son legítimas. Vamos a desglosar qué son, por qué son importantes y cómo empezar a usarlos.
 

@@ -15,12 +15,6 @@ You can fix one or two of them, but not three.
 
 <!-- more -->
 
-<div class="tldr">
-
-Deliver value constantly in short iterations. Why? Because this will help you to get feedback, and feedback is necessary to make the right decisions.
-
-</div>
-
 ### The triple constraint
 
 - Cheap and fast: the quality will suffer.

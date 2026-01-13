@@ -1,6 +1,6 @@
 +++
 title = "Verified git commits"
-description = "Learn why verified Git commits are essential for secure software development and how to set them up step by step."
+description = "Sign your Git commits with GPG to prove they're really from you. Without signatures, anyone can fake commits using your email. It takes 5 minutes to set up and adds real trust to your codebase."
 draft = false
 aliases = [ "/blog/verified-commits" ]
 [taxonomies]
@@ -15,12 +15,6 @@ static_thumbnail = "/images/blog/2024-11-17/cover.jpg"
 When it comes to software development, trust and security are very important. One easy way to level up both is by using verified commits. 
 
 <!-- more -->
-
-<div class="tldr">
-
-Sign your Git commits with GPG to prove they're really from you. Without signatures, anyone can fake commits using your email. It takes 5 minutes to set up and adds real trust to your codebase.
-
-</div>
 
 Whether you're working on an open-source project or in a private company, verified commits can make sure your contributions are legit. Let's break down what they are, why they're important, and how to start using them.
 
