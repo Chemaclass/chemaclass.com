@@ -128,7 +128,17 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.5rem;
-  padding-bottom: 0.5rem;
+}
+
+.toc-description {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--color-subtitle);
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: var(--search-bg-selected-item);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-color);
 }
 
 .toc-title {
