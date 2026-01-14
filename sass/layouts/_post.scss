@@ -169,7 +169,8 @@
     // Content styles inherited from global typography
 
     // First image after hero shouldn't show (it's usually the same)
-    > p:first-child img[alt="blog-cover"] {
+    // Use first-of-type to match even when .tldr div comes before it
+    > p:first-of-type img[alt="blog-cover"] {
       display: none;
     }
   }
