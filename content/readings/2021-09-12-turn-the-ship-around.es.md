@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL._SX323_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 El libro trata sobre sus teorías de liderazgo y cómo implementó un modelo de liderazgo fresco. Incluyendo las limitaciones de un

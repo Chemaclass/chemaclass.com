@@ -11,8 +11,6 @@ author = "Chris Voss"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51UM7MD1RlL._SX305_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51UM7MD1RlL._SX305_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 Desde patrullar las calles difíciles de Kansas City, Missouri, hasta convertirse en el principal negociador de secuestros internacionales del FBI,

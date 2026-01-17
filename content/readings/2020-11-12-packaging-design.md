@@ -11,8 +11,6 @@ author = "Matthias Noback"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41MltJ4VMxL._SX348_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41MltJ4VMxL._SX348_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 Apply design principles to your classes, preparing them for reuse. You will use package design principles to create

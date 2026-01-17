@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51RuNCswX8L
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51RuNCswX8L._SX341_BO1,204,203,200_.jpg" >
-
 El desarrollo de software trata sobre personas: cuándo, cómo y dónde pueden trabajar mejor juntas. No sobre lenguajes de programación
 o herramientas. No sobre ordenadores rápidos, redes o acceso a internet.
 

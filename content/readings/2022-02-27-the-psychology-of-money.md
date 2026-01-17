@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41haL4XdXAL
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41haL4XdXAL._SX322_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 Having more money will make you happier ONLY if that means you'll have more control over your time.

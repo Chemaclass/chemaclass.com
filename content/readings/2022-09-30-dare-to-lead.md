@@ -12,8 +12,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/4108sPwaBfL.jpg"
 expand_preview = false
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/4108sPwaBfL.jpg" >
-
 <!-- more -->
 
 Leadership is not about titles, status, and power over people. Leaders are people who hold themselves accountable for

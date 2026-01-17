@@ -11,8 +11,6 @@ author = "Christiaan Verwijs, Johannes Schartau, Barry Overeem"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/511aL5yxHVL._SX383_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/511aL5yxHVL._SX383_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 I really enjoy the ideas and experiments presented in the book. It points out a lot of "big elephants in many rooms" for

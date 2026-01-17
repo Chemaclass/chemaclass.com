@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lbNIP1YLL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51lbNIP1YLL._SX381_BO1,204,203,200_.jpg" >
-
 Programmers who endure and succeed amidst swirling uncertainty and nonstop pressure share a common attribute: They care
 deeply about the practice of creating software. They treat it as a craft. They are professionals.
 

@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51AqVDUY13L
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51AqVDUY13L._SX331_BO1,204,203,200_.jpg" >
-
 Aprovecha la sabiduría de expertos para aprender lo que todo programador debería saber, sin importar qué lenguaje uses. Con los 97 consejos cortos y extremadamente útiles para programadores en este libro, expandirás tus habilidades adoptando nuevos enfoques para viejos problemas, aprendiendo las mejores prácticas apropiadas y perfeccionando tu oficio a través de consejos sólidos.
 
 <!-- more -->

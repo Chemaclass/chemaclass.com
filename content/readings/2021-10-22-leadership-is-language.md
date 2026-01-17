@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41rS+NphHwL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41rS+NphHwL._SX329_BO1,204,203,200_.jpg" >
-
 A radical playbook to empower your people and put your team on a path to continuous improvement. 
 
 In this book, the former submarine commander Captain [L. David Marquet](https://x.com/ldavidmarquet) dives deep into one of the most investigated

@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51BlNddi+NL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51BlNddi+NL._SX330_BO1,204,203,200_.jpg" >
-
 *Start with Why* pregunta (y responde) las preguntas: ¿por qué algunas personas y organizaciones son más innovadoras, más
 influyentes y más rentables que otras? ¿Por qué algunas comandan mayor lealtad de clientes y empleados por igual?
 Incluso entre las exitosas, ¿por qué tan pocas son capaces de repetir su éxito una y otra vez?

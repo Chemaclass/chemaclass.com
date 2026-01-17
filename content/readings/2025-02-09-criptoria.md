@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1736371979i/223396846.jpg" >
-
 Cryptoria is a story about the evolutionary process that gave birth to computers, networks, cybersecurity and digital money. 
 
 From Greece to Bitcoin, Cryptoria narrates a selection of milestones that occurred before and after Alan Turing. The book showcases a broad collection of people, organizations, concepts and inventions that evidence the deep historical and cultural relationship between mathematics, cryptography, computer science and the struggle for individual sovereignty. 

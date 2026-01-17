@@ -12,9 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QGl7HfNyL
 expand_preview = true
 +++
 
- <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51QGl7HfNyL._SX314_BO1,204,203,200_.jpg" >
-
-
 Este libro presenta un cuento dentro de la historia principal que consiste en 4 personajes: dos ratones, **Fisgón** y **Escurridizo**, y dos personitas, **Hem** y **Haw**.
 
 El cuento es una hermosa metáfora de las diferentes actitudes que las personas adoptan como parte de su identidad en la vida cuando tienen que enfrentar cualquier cambio.

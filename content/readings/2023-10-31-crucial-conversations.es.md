@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1497193248i/15014.jpg" >
-
 <!-- more -->
 
 Cuando lo que está en juego es alto, las opiniones varían y las emociones son fuertes, tienes tres opciones: Evitar una conversación crucial y sufrir las consecuencias; manejar mal la conversación y sufrir las consecuencias; o leer Crucial Conversations y descubrir cómo comunicarte mejor cuando más importa.

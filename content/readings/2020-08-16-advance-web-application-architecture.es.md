@@ -12,8 +12,6 @@ static_thumbnail = "https://d2sofvawe08yqg.cloudfront.net/web-application-archit
 expand_preview = true
 +++
 
-<img border="0" src="https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero" >
-
 Este libro te ayuda a poner tus aplicaciones web en forma. Contiene muchas técnicas para desacoplar de
 la infraestructura (como el framework o la base de datos).
 

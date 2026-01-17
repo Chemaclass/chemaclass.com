@@ -12,8 +12,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/41r53pSrB4L.jpg"
 expand_preview = true
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/41r53pSrB4L.jpg" >
-
 ¿Cómo ganamos un juego que no tiene fin? Los juegos finitos, como el fútbol o el ajedrez, tienen jugadores conocidos, reglas fijas y un punto final claro. Los ganadores y perdedores se identifican fácilmente. Los juegos infinitos, juegos sin línea de meta, como los negocios o la política, o la vida misma, tienen jugadores que van y vienen. Las reglas de un juego infinito son cambiables mientras que los juegos infinitos no tienen un punto final definido. No hay ganadores ni perdedores—solo adelante y atrás.
 
 <!-- more -->

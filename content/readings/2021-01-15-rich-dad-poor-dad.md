@@ -11,8 +11,6 @@ author = "Robert T. Kiyosaki"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51rgCls-voL._SX350_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51rgCls-voL._SX350_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 - Explodes the myth that you need to earn a high income to become rich

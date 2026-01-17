@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41zoJiSUq4L
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41zoJiSUq4L._SX331_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 Matt Mochary hace coaching a los CEOs de muchas de las empresas tecnológicas de más rápido crecimiento en Silicon Valley.

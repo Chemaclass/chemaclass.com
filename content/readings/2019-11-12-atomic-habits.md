@@ -11,8 +11,6 @@ author = "James Clear"
 static_thumbnail = "https://m.media-amazon.com/images/I/51-nXsSRfZL.jpg"
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/51-nXsSRfZL.jpg" >
-
 <!-- more -->
 
 People think that when you want to change your life, you need to think big. James Clear has discovered another way. He

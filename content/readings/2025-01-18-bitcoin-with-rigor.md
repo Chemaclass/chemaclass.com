@@ -14,8 +14,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1705890863i/205759549.jpg" >
-
 Bitcoin with Rigor goes beyond a basic explanation of Bitcoin, offering a detailed analysis of how Bitcoin works. It breaks down its components clearly, helping readers understand both the parts and the system as a whole. This deep dive explores Bitcoin’s potential and risks, recognizing it as a decade-old monetary experiment that hasn’t yet stood the test of time like gold or silver. Despite this, its innovative design makes it a promising system for the present and future.
 
 <!-- more -->

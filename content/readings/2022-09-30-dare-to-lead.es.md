@@ -12,8 +12,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/4108sPwaBfL.jpg"
 expand_preview = false
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/4108sPwaBfL.jpg" >
-
 <!-- more -->
 
 El liderazgo no se trata de títulos, estatus y poder sobre las personas. Los líderes son personas que se hacen responsables

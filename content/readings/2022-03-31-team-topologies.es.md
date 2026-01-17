@@ -12,8 +12,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/81vdbXuZ0NL._AC_UL640_FM
 expand_preview = false
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/81vdbXuZ0NL._AC_UL640_FMwebp_QL65_.jpg" >
-
 <!-- more -->
 
 Team Topologies se enfoca en cómo configurar estructuras de equipo dinámicas y modos de interacción que pueden ayudar a los equipos a adaptarse rápidamente a nuevas condiciones, y lograr una entrega de software rápida y segura.

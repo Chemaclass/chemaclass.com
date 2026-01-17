@@ -12,9 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QGl7HfNyL
 expand_preview = true
 +++
 
- <img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51QGl7HfNyL._SX314_BO1,204,203,200_.jpg" >
-
-
 This book presents a tale inside the main story that consists of 4 characters: two mice, **Sniff** and **Scurry**, and two little persons, **Hem** and **Haw**.
 
 The tale is a beautiful metaphor of the different attitudes that people adopt as part of their identity in life when they have to confront any change.

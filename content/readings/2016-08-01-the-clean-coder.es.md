@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lbNIP1YLL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51lbNIP1YLL._SX381_BO1,204,203,200_.jpg" >
-
 Los programadores que perduran y tienen éxito en medio de la incertidumbre y la presión constante comparten un atributo común: Se preocupan profundamente por la práctica de crear software. Lo tratan como un oficio. Son profesionales.
 
 <!-- more -->

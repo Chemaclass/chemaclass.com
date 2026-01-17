@@ -12,8 +12,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/51ejdeSXFjL.jpg"
 expand_preview = false
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/51ejdeSXFjL.jpg" >
-
 <!-- more -->
 
 La mayor fortaleza de una empresa no radica en sus productos o servicios. Siempre radica en su gente, y en su capacidad

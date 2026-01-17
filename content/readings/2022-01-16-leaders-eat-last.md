@@ -12,8 +12,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/51ejdeSXFjL.jpg"
 expand_preview = false
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/51ejdeSXFjL.jpg" >
-
 <!-- more -->
 
 A company's biggest strength doesn't lie in its products or services. It always lies in its people, and in their ability

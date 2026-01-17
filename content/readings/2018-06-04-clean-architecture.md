@@ -11,8 +11,6 @@ author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41TPrNDI50L._SX387_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41TPrNDI50L._SX387_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 ### Code design principles (SOLID)

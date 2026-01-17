@@ -13,8 +13,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/71qELZ2wR9L._SL1500_.jpg
 expand_preview = false
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/71qELZ2wR9L._SL1500_.jpg" >
-
 <!-- more -->
 
 Radical Candor es una filosofía de gestión desarrollada por Kim Scott, ex líder de Google. Es un curso intensivo sobre cómo ser un gran manager, enfocándose en ser empático y orientado a resultados. La idea central es crear un entorno libre de estrés donde las personas se sientan seguras para expresar lo que piensan, hacer su trabajo y sentirse respetadas.

@@ -11,8 +11,6 @@ author = "Mark Atwood"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51Gnm7D+qIL._SX311_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51Gnm7D+qIL._SX311_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 - Stock Market Basics & Essentials

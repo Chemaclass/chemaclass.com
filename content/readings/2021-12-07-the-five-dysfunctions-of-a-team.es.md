@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QArmq8raL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51QArmq8raL._SX328_BO1,204,203,200_.jpg" >
-
 Este libro es una fábula de liderazgo sobre una empresa tecnológica que tiene dificultades para conseguir más clientes. El nivel C no está
 trabajando como equipo, y les cuesta llegar a acuerdos, lo que resulta en una moral negativa. Hasta que la nueva
 CEO, Catherine Petersen, se une al equipo, y es capaz de reconocer los problemas y ayudar al equipo a superarlos

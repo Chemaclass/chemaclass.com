@@ -11,8 +11,6 @@ author = "Matthias Noback"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41MltJ4VMxL._SX348_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41MltJ4VMxL._SX348_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 Aplica principios de diseño a tus clases, preparándolas para su reutilización. Usarás principios de diseño de paquetes para crear

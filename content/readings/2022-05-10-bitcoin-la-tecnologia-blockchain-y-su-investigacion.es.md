@@ -13,8 +13,6 @@ static_thumbnail = "https://0xword.com/230-large_default/bitcoin-la-tecnologia-b
 expand_preview = false
 +++
 
-<img border="0" src="https://0xword.com/230-large_default/bitcoin-la-tecnologia-blockchain-y-su-investigacion.jpg" >
-
 <!-- more -->
 
 Este libro fue publicado en 2017, así que la mayor parte de la tecnología mostrada ya es historia. Y eso es precisamente lo que realmente

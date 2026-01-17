@@ -11,8 +11,6 @@ author = "Camille Fournier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51pZKdYunNL._SX331_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51pZKdYunNL._SX331_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 ### The main takeaway

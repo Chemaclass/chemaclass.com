@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41Le0J5QuNL
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41Le0J5QuNL._SX331_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 The text is composed of 13 chapters, each of which is devoted to one aspect of warfare. It is commonly thought of as a

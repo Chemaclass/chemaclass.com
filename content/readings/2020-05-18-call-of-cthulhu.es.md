@@ -11,8 +11,6 @@ author = "H. P. Lovecraft"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41xOuZGh2NL._SX331_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41xOuZGh2NL._SX331_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 La Llamada de Cthulhu, el relato de un horripilante monstruo submarino que cobra vida y amenaza a la humanidad, generando

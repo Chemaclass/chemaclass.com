@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41yafGMO+rL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41yafGMO+rL._SX376_BO1,204,203,200_.jpg" >
-
 Incluso el código malo puede funcionar. Pero si el código no está limpio, puede llevar a una organización de desarrollo a la ruina. Cada año, se pierden incontables horas y recursos significativos debido a código mal escrito. Pero no tiene que ser así.
 
 <!-- more -->

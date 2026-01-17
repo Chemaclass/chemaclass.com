@@ -13,8 +13,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/71OdiXckU3L._SY522_.jpg"
 expand_preview = true
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/71OdiXckU3L._SY522_.jpg" >
-
 If you've ever scratched your head at the economy, wondered why prices keep rising, or questioned why money seems to lose value over time, Principles of Economics by Saifedean Ammous might blow your mind.
 
 It's not your typical dry economics book. Instead, it's a bold, no-nonsense guide to understanding how the world really works—through the lens of Austrian economics. Here's what stood out to me.

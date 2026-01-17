@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1549433350i/40672036.jpg" >
-
 In an era dominated by constant connectivity, the concept of digital minimalism emerges as a refreshing antidote. Coined by Cal Newport, this philosophy isn't about rejecting technology but rather about using it with greater intention and care. By implementing digital minimalism, individuals can reclaim focus, reduce anxiety, and cultivate deeper, more meaningful relationships.
 
 <!-- more -->

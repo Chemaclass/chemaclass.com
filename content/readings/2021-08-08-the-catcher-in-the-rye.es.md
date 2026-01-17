@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lprH3LF4L
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51lprH3LF4L._SX323_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 Originalmente estaba destinada para adultos pero es a menudo leída por adolescentes por sus temas de angustia, alienación, y como una

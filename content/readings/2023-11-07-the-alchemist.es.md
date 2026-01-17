@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1551938818i/44295818.jpg" >
-
 <!-- more -->
 
 El Alquimista es una novela clásica en la que un niño llamado Santiago emprende un viaje buscando un tesoro en las pirámides egipcias después de tener un sueño recurrente sobre ello. En el camino conoce mentores, se enamora, y lo más importante, aprende la verdadera importancia de quién es y cómo mejorarse a sí mismo y enfocarse en lo que realmente importa en la vida.

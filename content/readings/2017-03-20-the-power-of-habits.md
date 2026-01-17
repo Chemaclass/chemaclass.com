@@ -11,8 +11,6 @@ author = "Charles Duhigg"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41fQW9Q-L4L._SX324_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41fQW9Q-L4L._SX324_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 ## Takeaways

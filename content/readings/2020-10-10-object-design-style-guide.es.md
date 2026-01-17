@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41gb4dgVhhL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41gb4dgVhhL._SX397_BO1,204,203,200_.jpg" >
-
 Los objetos son el concepto central de lenguajes como Java, Python, C#. Aplicar las mejores prácticas para el diseño de objetos significa que
 tu código será fácil de leer, escribir y mantener.
 

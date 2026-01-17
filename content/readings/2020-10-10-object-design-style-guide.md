@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41gb4dgVhhL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41gb4dgVhhL._SX397_BO1,204,203,200_.jpg" >
-
 Objects are the central concept of languages like Java, Python, C#. Applying best practices for object design means that
 your code will be easy to read, write, and maintain.
 

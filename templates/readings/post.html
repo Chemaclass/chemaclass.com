@@ -58,6 +58,17 @@
           </button>
         </div>
 
+        <!-- Hero thumbnail -->
+        {% if page.extra.static_thumbnail %}
+        <div class="blog-post__hero blog-post__hero--reading">
+          <img src="{{ page.extra.static_thumbnail }}" alt="{{ page.title }}" />
+        </div>
+        {% elif page.extra.thumbnail %}
+        <div class="blog-post__hero blog-post__hero--reading">
+          <img src="{{ get_url(path=page.path ~ page.extra.thumbnail) }}" alt="{{ page.title }}" />
+        </div>
+        {% endif %}
+
       <!-- Title -->
       <h1 class="blog-post__title">
         {{ page.title }}

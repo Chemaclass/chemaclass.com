@@ -13,8 +13,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/81ZMvLDtmIL._SL1500_.jpg
 expand_preview = true
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/81ZMvLDtmIL._SL1500_.jpg" >
-
 This is a story about an impossible project in which the people around are constantly playing politics, busy fixing critical bugs and wasting constant efforts on quick patches instead of helping the business thrive.
 
 <!-- more -->

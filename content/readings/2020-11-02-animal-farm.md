@@ -11,8 +11,6 @@ author = "George Orwell"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/515KWRPPnYL._SX305_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/515KWRPPnYL._SX305_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 Mr Jones of Manor Farm is so lazy and drunken that one day he forgets to feed his livestock. The ensuing rebellion under

@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1703246002i/204250558.jpg" >
-
 Bitcoin did not appear out of nowhere. For decades prior to Satoshi Nakamoto’s invention, a diverse group of computer scientists, privacy activists, and heterodox economists tried to create a digital form of money that could operate independently of government control. The Genesis Book tells the story of the people and projects that inspired the invention of the world’s first successful peer-to-peer electronic cash system.
 
 <!-- more -->

@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41yafGMO+rL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41yafGMO+rL._SX376_BO1,204,203,200_.jpg" >
-
 Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year,
 countless hours and significant resources are lost because of poorly written code. But it doesn't have to be that way.
 

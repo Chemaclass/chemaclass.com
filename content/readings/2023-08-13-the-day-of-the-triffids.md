@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320530145i/530965.jpg" >
-
 This book is fantastic and frightening but entirely plausible. It doesn't seem scientifically possible, but its characters are living people shaken out of the civilization they know into the horror of a world dominated by "triffids".
 
 <!-- more -->

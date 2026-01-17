@@ -12,8 +12,6 @@ static_thumbnail = "https://0xword.com/477-large_default/docker-secdevops.jpg"
 expand_preview = false
 +++
 
-<img border="0" src="https://0xword.com/477-large_default/docker-secdevops.jpg" >
-
 <!-- more -->
 
 Un gran libro sobre Docker, desde introducción hasta conceptos avanzados, todo cubierto por ejemplos fáciles de seguir.

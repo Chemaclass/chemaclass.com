@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1435059869i/183392.jpg" >
-
 <!-- more -->
 
 "It's Your Ship" es un libro de liderazgo escrito por D. Michael Abrashoff, ex comandante del USS Benfold, un destructor de misiles guiados. El libro se centra en las experiencias de Abrashoff y los principios de liderazgo que aplicó para transformar el rendimiento y la cultura de su barco.

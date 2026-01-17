@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/419VQmad1LL
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/419VQmad1LL._SX374_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 Una fábula en forma de novela corta sobre una gaviota que intenta aprender sobre la vida y el vuelo, y una homilía sobre la autoperfección.
 

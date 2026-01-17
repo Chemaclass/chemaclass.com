@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1404481980i/22619661.jpg" >
-
 <!-- more -->
 
 Have you, like the rest of the world, speculated as to the identity of Satoshi Nakamoto, anonymous creator of Bitcoin?

@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615869542i/57429394.jpg" >
-
 <!-- more -->
 
 This book covers Bitcoin's blocksize war, which was waged from August 2015 to November 2017. On the surface the battle was about the amount of data allowed in each Bitcoin block, however it exposed much deeper issues, such as who controls Bitcoin's protocol rules. 

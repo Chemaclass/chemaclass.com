@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653013359i/61132070.jpg" >
-
 Told through the story of one bold company (People First IT), Adapt or Die takes readers through the unparalleled business system known as The Algorithm of Success that has the potential to inspire, ignite, and affect change for all aspects of an organization.
 
 <!-- more -->

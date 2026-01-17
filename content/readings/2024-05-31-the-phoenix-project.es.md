@@ -13,8 +13,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/81ZMvLDtmIL._SL1500_.jpg
 expand_preview = true
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/81ZMvLDtmIL._SL1500_.jpg" >
-
 Esta es una historia sobre un proyecto imposible en el que las personas alrededor están constantemente jugando a la política, ocupados arreglando bugs críticos y desperdiciando esfuerzos constantes en parches rápidos en lugar de ayudar al negocio a prosperar.
 
 <!-- more -->

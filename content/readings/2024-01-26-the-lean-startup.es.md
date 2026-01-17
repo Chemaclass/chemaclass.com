@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629999184i/10127019.jpg" >
-
 <!-- more -->
 
 La mayoría de las startups fracasan. Pero muchos de esos fracasos son prevenibles. The Lean Startup es un nuevo enfoque que se está adoptando en todo el mundo, cambiando la forma en que se construyen las empresas y se lanzan nuevos productos.

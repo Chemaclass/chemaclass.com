@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51BlNddi+NL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51BlNddi+NL._SX330_BO1,204,203,200_.jpg" >
-
 *Start with Why* asks (and answers) the questions: why are some people and organizations more innovative, more
 influential, and more profitable than others? Why do some command greater loyalty from customers and employees alike?
 Even among the successful, why are so few able to repeat their success over and over?

@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1736371979i/223396846.jpg" >
-
 Criptoria es una historia sobre el proceso evolutivo que dio origen a las computadoras, redes, ciberseguridad y dinero digital.
 
 Desde Grecia hasta Bitcoin, Criptoria narra una selección de hitos que ocurrieron antes y después de Alan Turing. El libro muestra una amplia colección de personas, organizaciones, conceptos e invenciones que evidencian la profunda relación histórica y cultural entre matemáticas, criptografía, ciencias de la computación y la lucha por la soberanía individual.

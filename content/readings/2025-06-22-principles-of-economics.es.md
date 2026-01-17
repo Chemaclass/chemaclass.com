@@ -13,8 +13,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/71OdiXckU3L._SY522_.jpg"
 expand_preview = true
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/71OdiXckU3L._SY522_.jpg" >
-
 Si alguna vez te has rascado la cabeza con la economía, te has preguntado por qué los precios siguen subiendo, o cuestionado por qué el dinero parece perder valor con el tiempo, Principles of Economics de Saifedean Ammous podría volarte la cabeza.
 
 No es tu típico libro de economía aburrido. En cambio, es una guía audaz y directa para entender cómo funciona realmente el mundo—a través de la lente de la economía austriaca. Esto es lo que más me llamó la atención.

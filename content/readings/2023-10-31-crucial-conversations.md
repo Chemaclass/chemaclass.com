@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1497193248i/15014.jpg" >
-
 <!-- more -->
 
 When stakes are high, opinions vary, and emotions run strong, you have three choices: Avoid a crucial conversation and suffer the consequences; handle the conversation badly and suffer the consequences; or read Crucial Conversations and discover how to communicate best when it matters most.

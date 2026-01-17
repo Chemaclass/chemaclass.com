@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41x6NvXWekS
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41x6NvXWekS._SX336_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 The Bitcoin Standard analiza el contexto histórico del surgimiento de Bitcoin, las propiedades económicas que le han permitido

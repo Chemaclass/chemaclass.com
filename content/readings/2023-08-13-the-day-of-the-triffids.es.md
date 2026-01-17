@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320530145i/530965.jpg" >
-
 Este libro es fantástico y aterrador pero completamente plausible. No parece científicamente posible, pero sus personajes son personas vivas sacudidas de la civilización que conocen hacia el horror de un mundo dominado por los "trífidos".
 
 <!-- more -->

@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327787673i/299215.jpg" >
-
 First published in 1944, The Road to Serfdom is still making waves today. Friedrich Hayek, an Austrian economist, wrote it during World War II to warn against something he saw as really dangerous: central economic planning.
 
 His message? Even well-meaning government control over the economy can quietly take away our freedom—and possibly lead us toward dictatorship.

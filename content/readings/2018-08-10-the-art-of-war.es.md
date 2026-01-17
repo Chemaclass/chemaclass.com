@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41Le0J5QuNL
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41Le0J5QuNL._SX331_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 El texto está compuesto por 13 capítulos, cada uno dedicado a un aspecto de la guerra. Se considera comúnmente como una obra

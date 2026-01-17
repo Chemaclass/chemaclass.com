@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41T1ZmJ8BGL
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41T1ZmJ8BGL._SX324_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 If you cut off a spider's head, it dies; if you cut off a starfish's leg it grows a new one, and that leg can grow into

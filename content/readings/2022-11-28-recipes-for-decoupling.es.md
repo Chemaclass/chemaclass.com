@@ -12,8 +12,6 @@ static_thumbnail = "https://matthiasnoback.nl/assets/books/recipes-for-decouplin
 expand_preview = false
 +++
 
-<img border="0" src="https://matthiasnoback.nl/assets/books/recipes-for-decoupling.jpg" >
-
 <!-- more -->
 
 ¿Qué es el acoplamiento y por qué es malo? ¿Qué es el desacoplamiento y cómo hacerlo eficientemente? Este libro es una compilación de

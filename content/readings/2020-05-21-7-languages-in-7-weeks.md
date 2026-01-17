@@ -11,8 +11,6 @@ author = "Bruce Tate"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51LZT+tSrTL._SX415_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51LZT+tSrTL._SX415_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 You should learn a programming language every year, as recommended by The Pragmatic Programmer. But if one per year is

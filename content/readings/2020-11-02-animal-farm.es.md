@@ -11,8 +11,6 @@ author = "George Orwell"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/515KWRPPnYL._SX305_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/515KWRPPnYL._SX305_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 El Sr. Jones de la Granja Manor es tan perezoso y borracho que un día olvida alimentar a su ganado. La rebelión resultante bajo

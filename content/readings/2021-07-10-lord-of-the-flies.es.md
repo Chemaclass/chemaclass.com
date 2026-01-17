@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51de-lVnNCL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51de-lVnNCL._SX325_BO1,204,203,200_.jpg" >
-
 Etiquetada como parábola, alegoría, mito, cuento moral, parodia, tratado político, incluso una visión del
 apocalipsis. Se ha establecido como un verdadero clásico.
 

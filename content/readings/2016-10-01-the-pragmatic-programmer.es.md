@@ -11,8 +11,6 @@ author = "Andrew Hunt, David Thomas"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41as+WafrFL._SX258_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41as+WafrFL._SX258_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 ### Aprendizajes

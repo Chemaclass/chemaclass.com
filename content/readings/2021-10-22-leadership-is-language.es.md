@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41rS+NphHwL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41rS+NphHwL._SX329_BO1,204,203,200_.jpg" >
-
 Un manual radical para empoderar a tu gente y poner a tu equipo en un camino de mejora continua.
 
 En este libro, el ex comandante de submarino Capitán [L. David Marquet](https://x.com/ldavidmarquet) profundiza en uno de los desastres marinos más investigados,

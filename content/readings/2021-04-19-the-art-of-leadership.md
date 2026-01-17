@@ -12,8 +12,6 @@ author = "Michael Lopp"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/31YOKF2IcBL._SX331_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/31YOKF2IcBL._SX331_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 ### Some nice keynotes

@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/412omfkKEFL
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/412omfkKEFL._SX380_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 The book is divided into three parts: the disciplines, the standards, and the ethics.

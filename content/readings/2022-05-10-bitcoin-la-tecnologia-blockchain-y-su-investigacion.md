@@ -13,8 +13,6 @@ static_thumbnail = "https://0xword.com/230-large_default/bitcoin-la-tecnologia-b
 expand_preview = false
 +++
 
-<img border="0" src="https://0xword.com/230-large_default/bitcoin-la-tecnologia-blockchain-y-su-investigacion.jpg" >
-
 <!-- more -->
 
 This book was published in 2017, so most of the technology shown is already history. And that's precisely what I really

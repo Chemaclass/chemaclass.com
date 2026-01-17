@@ -13,8 +13,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/41YpWJi9OoL.jpg"
 expand_preview = false
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/41YpWJi9OoL.jpg" >
-
 <!-- more -->
 
 Accelerate explores how software development teams using **Lean Software** and **DevOps** can measure their performance and the performance of software engineering teams impacts the overall performance of an organization.

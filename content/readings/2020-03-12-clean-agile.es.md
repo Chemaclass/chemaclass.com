@@ -11,8 +11,6 @@ author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41VQ9-JOXLL._SX380_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41VQ9-JOXLL._SX380_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 Clean Agile viene de Uncle Bob, uno de los padres fundadores de Agile, una de las diecisiete personas que escribieron el

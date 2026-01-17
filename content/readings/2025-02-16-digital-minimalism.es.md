@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1549433350i/40672036.jpg" >
-
 En una era dominada por la conectividad constante, el concepto de minimalismo digital emerge como un antídoto refrescante. Acuñado por Cal Newport, esta filosofía no trata de rechazar la tecnología sino de usarla con mayor intención y cuidado. Al implementar el minimalismo digital, los individuos pueden recuperar el enfoque, reducir la ansiedad y cultivar relaciones más profundas y significativas.
 
 <!-- more -->

@@ -11,8 +11,6 @@ author = "Chris Voss"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51UM7MD1RlL._SX305_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51UM7MD1RlL._SX305_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 From policing the rough streets of Kansas City, Missouri, to becoming the FBI's lead international kidnapping negotiator

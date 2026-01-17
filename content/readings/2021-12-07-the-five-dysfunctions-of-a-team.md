@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QArmq8raL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51QArmq8raL._SX328_BO1,204,203,200_.jpg" >
-
 This book is a leadership fable about a tech company that is struggling to get more customers. The C level is not
 working as a team, and they have a hard time coming to any agreements which result in negative morale. Until the new
 CEO, Catherine Petersen, joins the team, and she is able to recognize the problems and help the team overcome them by

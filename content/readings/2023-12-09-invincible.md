@@ -13,8 +13,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/71+1EHGiyRL._SL1500_.jpg
 expand_preview = false
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/71+1EHGiyRL._SL1500_.jpg" >
-
 <!-- more -->
 
 The quality of your life depends on the quality of your mind. Unfortunately, we spend little time improving our thoughts, and it is rarely taught at school. As a result, we go through life without really understanding how to use our mind. 

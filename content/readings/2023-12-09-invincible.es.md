@@ -13,8 +13,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/71+1EHGiyRL._SL1500_.jpg
 expand_preview = false
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/71+1EHGiyRL._SL1500_.jpg" >
-
 <!-- more -->
 
 La calidad de tu vida depende de la calidad de tu mente. Desafortunadamente, pasamos poco tiempo mejorando nuestros pensamientos, y rara vez se enseña en la escuela. Como resultado, pasamos por la vida sin realmente entender cómo usar nuestra mente.

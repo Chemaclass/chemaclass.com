@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41O-IVvXtmS
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41O-IVvXtmS._SX331_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 Este libro explora cómo los product managers y diseñadores pueden seguir generando un impacto positivo en la vida de sus clientes.

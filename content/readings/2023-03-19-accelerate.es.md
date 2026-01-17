@@ -13,8 +13,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/41YpWJi9OoL.jpg"
 expand_preview = false
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/41YpWJi9OoL.jpg" >
-
 <!-- more -->
 
 Accelerate explora cómo los equipos de desarrollo de software que usan **Lean Software** y **DevOps** pueden medir su rendimiento y cómo el rendimiento de los equipos de ingeniería de software impacta el rendimiento general de una organización.

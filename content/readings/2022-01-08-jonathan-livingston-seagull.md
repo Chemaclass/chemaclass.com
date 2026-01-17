@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/419VQmad1LL
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/419VQmad1LL._SX374_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 A fable in novella form about a seagull who is trying to learn about life and flight, and a homily about self-perfection.
 

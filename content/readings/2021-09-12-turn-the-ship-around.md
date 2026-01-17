@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL._SX323_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 The book is about his leadership theories to how he implemented a fresh leadership model. Including the limitations of a

@@ -62,6 +62,24 @@
       object-fit: cover;
       display: block;
     }
+
+    // Book cover styling for reading posts
+    &--reading {
+      display: flex;
+      justify-content: center;
+      border-radius: 0;
+      overflow: visible;
+
+      img {
+        width: auto;
+        max-width: 280px;
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+        border-radius: 4px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+    }
   }
 
   // Line 1: Title + Tags

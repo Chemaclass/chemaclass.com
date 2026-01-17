@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1574715655i/48978620.jpg" >
-
 <!-- more -->
 
 Una visión general básica y directa de lo que es Agile, presentando algunos ejemplos de frameworks bien conocidos hoy, como Scrum o Kanban—todo condensado en un libro de unas 100 páginas que puedes leer en un par de horas.

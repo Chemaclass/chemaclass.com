@@ -12,8 +12,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/51yhBoDgkqL.jpg"
 expand_preview = true
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/51yhBoDgkqL.jpg" >
-
 Domain-Driven Design Distilled da vida a DDD. Ya seas desarrollador, consultor o cliente, te ayudará
 a entenderlo para que puedas beneficiarte de su poder.
 

@@ -12,8 +12,6 @@ static_thumbnail = "https://matthiasnoback.nl/assets/books/recipes-for-decouplin
 expand_preview = false
 +++
 
-<img border="0" src="https://matthiasnoback.nl/assets/books/recipes-for-decoupling.jpg" >
-
 <!-- more -->
 
 What is coupling, and why is it bad? What is decoupling, and how to do it efficiently? This book is a compilation of

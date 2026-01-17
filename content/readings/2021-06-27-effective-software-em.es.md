@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL._SX404_BO1,204,203,200_.jpg" >
-
 Una gran recopilación de todos los temas importantes para la gestión: 1:1s, evaluaciones de desempeño, contratación y despidos,
 política laboral, trabajo remoto y otros.
 

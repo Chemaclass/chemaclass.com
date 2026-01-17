@@ -13,8 +13,6 @@ static_thumbnail = "https://www.btcwip.com/front.jpg"
 expand_preview = true
 +++
 
-<img border="0" src="https://www.btcwip.com/front.jpg" >
-
 Con miles de proyectos "cripto" por ahí, dicen que Bitcoin es viejo y aburrido, pero nada podría estar más lejos de la verdad. Este libro te guiará a través de los últimos desarrollos en Bitcoin, vistos a través de los ojos de uno de sus muchos desarrolladores.
 
 <!-- more -->

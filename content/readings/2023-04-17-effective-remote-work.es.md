@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1634819208i/59425223.jpg" >
-
 <!-- more -->
 
 Un entorno de trabajo remoto efectivo se trata de tratar a todos como remotos, con todos en mente teniendo el mismo nivel, igualdad e información.

@@ -12,8 +12,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/41gdosc0RaL.jpg"
 expand_preview = false
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/41gdosc0RaL.jpg" >
-
 <!-- more -->
 
 A twenty-six selections on management in the organization, management and the individual, and management and society.

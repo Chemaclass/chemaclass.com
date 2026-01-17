@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51OFUgJAdaL
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51OFUgJAdaL._SX402_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 Este libro presenta el desarrollo de software como una práctica de ingeniería en todos los niveles.

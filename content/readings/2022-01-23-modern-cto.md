@@ -12,8 +12,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51GydOENM3L
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51GydOENM3L._SX331_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 Developers are not CTOs, but developers can learn how to be CTOs.

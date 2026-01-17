@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = false
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615869542i/57429394.jpg" >
-
 <!-- more -->
 
 Este libro cubre la guerra del tamaño de bloque de Bitcoin, que se libró desde agosto de 2015 hasta noviembre de 2017. En la superficie, la batalla era sobre la cantidad de datos permitidos en cada bloque de Bitcoin, sin embargo expuso problemas mucho más profundos, como quién controla las reglas del protocolo de Bitcoin.

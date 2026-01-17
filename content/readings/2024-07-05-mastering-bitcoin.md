@@ -13,8 +13,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/71JEv9rs7xL.jpg"
 expand_preview = true
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/71JEv9rs7xL.jpg" >
-
 This book covers everything from the basics to the most profound technical aspects of Bitcoin. It is an excellent guide through this complex world, providing the knowledge you need to participate in the Internet of money.
 
 <!-- more -->

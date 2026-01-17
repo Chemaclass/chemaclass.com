@@ -12,8 +12,6 @@ static_thumbnail = "https://m.media-amazon.com/images/I/41gdosc0RaL.jpg"
 expand_preview = false
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/41gdosc0RaL.jpg" >
-
 <!-- more -->
 
 Una selección de veintiséis textos sobre gestión en la organización, gestión y el individuo, y gestión y sociedad.

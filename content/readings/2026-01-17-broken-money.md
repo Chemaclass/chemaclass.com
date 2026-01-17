@@ -13,8 +13,6 @@ static_thumbnail = "https://m.media-amazon.com/images/S/compressed.photo.goodrea
 expand_preview = true
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1692701772i/197566578.jpg" >
-
 A deep dive into monetary history through a technological lens. Lyn Alden traces how innovations shaped money across centuries, examining commodity-based systems, modern fiat currencies, and emerging alternatives like Bitcoin.
 
 <!-- more -->

@@ -11,8 +11,6 @@ author = "Andrew S. Grove"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41pXzmjz9KL._SX322_BO1,204,203,200_.jpg"
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41pXzmjz9KL._SX322_BO1,204,203,200_.jpg" >
-
 <!-- more -->
 
 En este legendario libro de negocios y clásico de Silicon Valley, el ex presidente y CEO de Intel comparte su perspectiva

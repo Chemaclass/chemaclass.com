@@ -13,8 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1535419394i/4069.jpg" >
-
 In "Man's Search for Meaning," Frankl not only shares his harrowing experiences from the Holocaust but also presents a profound philosophy on the human condition. This book is a testament to the resilience of the human spirit, exploring how even in the darkest of times, individuals can find purpose and meaning. 
 
 <!-- more -->
