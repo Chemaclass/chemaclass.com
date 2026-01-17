@@ -114,6 +114,9 @@
 
         <!-- Content -->
         <div class="blog-post__content reading-post">
+          {% if page.description %}
+          <div class="tldr">{{ page.description }}</div>
+          {% endif %}
           {{ page.content | safe }}
         </div>
       </article>

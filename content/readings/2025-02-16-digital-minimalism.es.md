@@ -19,10 +19,6 @@ En una era dominada por la conectividad constante, el concepto de minimalismo di
 
 <!-- more -->
 
----
-
-> TL;DR: El Minimalismo Digital significa usar la tecnología intencionalmente en lugar de dejar que controle tu vida. Fomenta reducir herramientas digitales innecesarias, ser consciente de las apps que usas, y asegurar que la tecnología te sirva a ti. Se trata de tomar un descanso de herramientas no esenciales y reintroducir gradualmente solo aquellas que añaden valor real. ¿Los beneficios? Más enfoque, menos estrés, mejores relaciones y mayor productividad.
-
 ## Los Principios Fundamentales del Minimalismo Digital
 
 El enfoque de Newport hacia el minimalismo digital se basa en tres ideas fundamentales:

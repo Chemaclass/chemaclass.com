@@ -51,14 +51,6 @@ Su análisis está fundamentado en principios de ingeniería: ¿Cuáles son las 
 
 Ya sea que termines convencido por sus conclusiones o no, saldrás con una comprensión mucho más profunda de los sistemas monetarios y por qué importan.
 
-### TL;DR
-
-- El dinero es una tecnología que evoluciona con el tiempo
-- Nuestro sistema fiat actual es un experimento de 50 años con serios defectos
-- Las crisis monetarias alrededor del mundo muestran qué pasa cuando el dinero se rompe
-- Los efectos de red determinan qué formas de dinero tienen éxito
-- Bitcoin aborda muchos problemas monetarios históricos
-
 ---
 
 **Lecturas relacionadas**

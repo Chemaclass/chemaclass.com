@@ -71,15 +71,6 @@ It's digital, limited, and no one can mess with it. Bitcoin is the return of sou
 
 You'll walk away with a new lens to see the world—why prices rise, why saving matters, and why the kind of money we use shapes everything.
 
-
-### TL;DR
-
-- People act with a purpose.
-- Thinking long-term builds great things.
-- Sound money matters.
-- Free markets beat central planning.
-- Bitcoin fixes a lot of problems.
-
 ## Austrian Economics vs Keynesian Economics
 
 {{ youtube(id="GUvTJ0xy74c") }}

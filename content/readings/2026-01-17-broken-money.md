@@ -51,14 +51,6 @@ Her analysis is grounded in engineering principles: What are Bitcoin's actual pr
 
 Whether you end up convinced by her conclusions or not, you'll come away with a much deeper understanding of monetary systems and why they matter.
 
-### TL;DR
-
-- Money is a technology that evolves over time
-- Our current fiat system is a 50-year experiment with serious flaws
-- Currency crises around the world show what happens when money breaks
-- Network effects determine which forms of money succeed
-- Bitcoin addresses many historical monetary problems
-
 ---
 
 **Related readings**

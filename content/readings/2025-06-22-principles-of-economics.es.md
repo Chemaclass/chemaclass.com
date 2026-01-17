@@ -71,15 +71,6 @@ Es digital, limitado, y nadie puede manipularlo. Bitcoin es el retorno del diner
 
 Saldrás con una nueva lente para ver el mundo—por qué suben los precios, por qué importa ahorrar, y por qué el tipo de dinero que usamos da forma a todo.
 
-
-### TL;DR
-
-- Las personas actúan con un propósito.
-- Pensar a largo plazo construye grandes cosas.
-- El dinero sólido importa.
-- Los mercados libres superan a la planificación central.
-- Bitcoin arregla muchos problemas.
-
 ## Economía Austriaca vs Economía Keynesiana
 
 {{ youtube(id="GUvTJ0xy74c") }}
