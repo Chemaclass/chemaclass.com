@@ -6,8 +6,6 @@ template = "page.html"
 
 # Aviso Legal y Privacidad
 
-<p style="color: var(--color-subtitle); font-size: 0.9rem; margin-bottom: 2rem;">Última actualización: Diciembre 2025</p>
-
 ## Titular del Sitio
 
 Este sitio web está operado por **Jose Maria Valera Reales** (Chemaclass).

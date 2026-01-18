@@ -6,8 +6,6 @@ template = "page.html"
 
 # Legal Notice & Privacy
 
-<p style="color: var(--color-subtitle); font-size: 0.9rem; margin-bottom: 2rem;">Last updated: December 2025</p>
-
 ## Site Owner
 
 This website is operated by **Jose Maria Valera Reales** (Chemaclass).
