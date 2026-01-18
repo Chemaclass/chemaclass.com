@@ -61,7 +61,7 @@
                         <li class="expandable">
                             <div class="about-item-header">
                                 <span class="list-icon"><i class="fa-solid fa-code"></i></span>
-                                <span class="about-item-title">{{ trans(key="home_about_2_title", lang=lang) }}</span>
+                                <span class="about-item-title">{% if lang == "es" %}{{ config.extra.years_software }}+ años en software, {{ config.extra.years_leadership }}+ en liderazgo{% else %}{{ config.extra.years_software }}+ years in software, {{ config.extra.years_leadership }}+ in leadership{% endif %}</span>
                                 <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
                             </div>
                             <div class="about-item-content">

@@ -15,7 +15,7 @@
   <header class="projects-hero service-hero">
     <h1>{{ trans(key="svc_services", lang=lang) }}</h1>
     <p class="projects-hero__subtitle service-hero__subtitle">
-      {% if lang == "es" %}Con más de 14 años en desarrollo de software, ayudo a empresas y particulares a estar online con sitios web rápidos y profesionales, y ayudo a equipos de desarrollo a mejorar con talleres prácticos de testing y refactoring. Si necesitas presencia web o quieres potenciar tus habilidades, puedo ayudarte.{% else %}With 14+ years in software development, I help businesses and individuals get online with fast, professional websites and help dev teams level up through hands-on workshops on testing and refactoring. Whether you need a web presence or want to sharpen your skills, I can help.{% endif %}
+      {% if lang == "es" %}Con más de {{ config.extra.years_software }} años en desarrollo de software, ayudo a empresas y particulares a estar online con sitios web rápidos y profesionales, y ayudo a equipos de desarrollo a mejorar con talleres prácticos de testing y refactoring. Si necesitas presencia web o quieres potenciar tus habilidades, puedo ayudarte.{% else %}With {{ config.extra.years_software }}+ years in software development, I help businesses and individuals get online with fast, professional websites and help dev teams level up through hands-on workshops on testing and refactoring. Whether you need a web presence or want to sharpen your skills, I can help.{% endif %}
     </p>
   </header>
 
