@@ -991,8 +991,8 @@
   }
 
   .portfolio-item {
-    flex: 0 0 calc(50% - 0.75rem);
-    min-width: calc(50% - 0.75rem);
+    flex: 0 0 calc(33.333% - 1rem);
+    min-width: calc(33.333% - 1rem);
 
     @media (max-width: $breakpoint-tablet) {
       flex: 0 0 100%;

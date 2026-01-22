@@ -362,6 +362,22 @@
       </button>
       <div class="portfolio-carousel__track-container">
         <div class="portfolio-carousel__track">
+          <a href="https://teina.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+            <div class="portfolio-item__image">
+              <img src="/images/portfolio/teina-sample.jpg" alt="Teína website" loading="lazy">
+            </div>
+            <div class="portfolio-item__content">
+              <span class="portfolio-item__tag">{{ trans(key="svc_static", lang=lang) }}</span>
+              <h3 class="portfolio-item__name">Teína <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+              <p class="portfolio-item__desc">{% if lang == "es" %}Banda de indie pop rock de Calasparra, Murcia. 6 miembros, versiones y temas propios.{% else %}Indie pop rock band from Calasparra, Murcia. 6 members, covers and original songs.{% endif %}</p>
+              <div class="portfolio-item__features">
+                <span class="feature-badge"><i class="fa-solid fa-language"></i> 2 {% if lang == "es" %}idiomas{% else %}languages{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-images"></i> {% if lang == "es" %}Galería{% else %}Gallery{% endif %}</span>
+                <span class="feature-badge"><i class="fa-brands fa-youtube"></i> {% if lang == "es" %}Vídeos{% else %}Videos{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-file"></i> 5 {% if lang == "es" %}páginas{% else %}pages{% endif %}</span>
+              </div>
+            </div>
+          </a>
           <a href="https://fco-sandoval-gomez.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
             <div class="portfolio-item__image">
               <img src="/images/portfolio/fco-sandoval-gomez-sample.jpg" alt="Fco Sandoval Gómez website" loading="lazy">
@@ -484,7 +500,7 @@ if (new URLSearchParams(window.location.search).get('prices') === '1') {
 
   const totalItems = items.length;
   let currentIndex = 0;
-  let itemsPerView = window.innerWidth <= 768 ? 1 : 2;
+  let itemsPerView = window.innerWidth <= 768 ? 1 : 3;
 
   // Calculate total positions (one dot per position)
   function getTotalPositions() {
@@ -554,7 +570,7 @@ if (new URLSearchParams(window.location.search).get('prices') === '1') {
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
-      const newItemsPerView = window.innerWidth <= 768 ? 1 : 2;
+      const newItemsPerView = window.innerWidth <= 768 ? 1 : 3;
       if (newItemsPerView !== itemsPerView) {
         itemsPerView = newItemsPerView;
         currentIndex = 0;
