@@ -18,11 +18,8 @@
       <div class="terminal-content" id="terminal-content"></div>
       <div class="terminal-input-line" id="terminal-input-line" style="display: none;">
         <span class="terminal-prompt">$ </span>
-        <span class="terminal-input-wrapper">
-          <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal input">
-          <span class="terminal-suggestion" id="terminal-suggestion"></span>
-        </span>
-        <span class="terminal-cursor" id="terminal-cursor">█</span>
+        <span class="terminal-text" id="terminal-text"></span><span class="terminal-cursor" id="terminal-cursor">█</span>
+        <input type="text" id="terminal-input" class="terminal-input-hidden" autocomplete="off" spellcheck="false" aria-label="Terminal input">
       </div>
     </div>
   </div>
@@ -96,7 +93,7 @@ window.disableGlobalShortcuts = true;
   const terminalContent = document.getElementById('terminal-content');
   const terminalInputLine = document.getElementById('terminal-input-line');
   const terminalInput = document.getElementById('terminal-input');
-  const terminalSuggestion = document.getElementById('terminal-suggestion');
+  const terminalText = document.getElementById('terminal-text');
   const terminalCursor = document.getElementById('terminal-cursor');
   const terminalNav = document.getElementById('terminal-nav');
   const terminalBody = document.getElementById('terminal-body');
@@ -198,29 +195,12 @@ window.disableGlobalShortcuts = true;
     });
   }
 
-  function getSuggestion(input) {
-    if (!input) return '';
-    const inputLower = input.toLowerCase();
-    for (const cmd in COMMANDS) {
-      if (cmd.startsWith(inputLower) && cmd !== inputLower) {
-        return cmd.substring(input.length);
-      }
-    }
-    return '';
-  }
-
-  function handleInput() {
-    const value = terminalInput.value;
-    const suggestion = getSuggestion(value);
-    terminalSuggestion.textContent = suggestion;
+  function syncText() {
+    terminalText.textContent = terminalInput.value;
   }
 
   function handleKeydown(e) {
-    if (e.key === 'Tab' && terminalSuggestion.textContent) {
-      e.preventDefault();
-      terminalInput.value += terminalSuggestion.textContent;
-      terminalSuggestion.textContent = '';
-    } else if (e.key === 'Enter') {
+    if (e.key === 'Enter') {
       const value = terminalInput.value.trim().toLowerCase();
       if (COMMANDS[value]) {
         window.location.href = COMMANDS[value];
@@ -228,13 +208,13 @@ window.disableGlobalShortcuts = true;
         const errorLine = createLine('error', 'bash: ' + value + ': command not found');
         terminalContent.appendChild(errorLine);
         terminalInput.value = '';
-        terminalSuggestion.textContent = '';
+        terminalText.textContent = '';
         scrollToBottom();
       }
     }
   }
 
-  terminalInput.addEventListener('input', handleInput);
+  terminalInput.addEventListener('input', syncText);
   terminalInput.addEventListener('keydown', handleKeydown);
 
   terminalInput.addEventListener('focus', function() {

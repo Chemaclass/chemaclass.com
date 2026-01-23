@@ -104,6 +104,7 @@
 
 // Terminal Input
 .terminal-input-line {
+  position: relative;
   display: flex;
   align-items: center;
   margin-top: 0.25rem;
@@ -114,33 +115,19 @@
   user-select: none;
 }
 
-.terminal-input-wrapper {
-  position: relative;
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
-.terminal-input {
-  background: transparent;
-  border: none;
-  outline: none;
+.terminal-text {
   color: var(--body-color);
-  font-family: inherit;
-  font-size: inherit;
-  width: 100%;
-  padding: 0;
-  caret-color: transparent;
-
-  &::placeholder {
-    color: var(--color-subtitle);
-  }
+  white-space: pre;
+  margin-left: 1ch;
 }
 
-.terminal-suggestion {
-  color: var(--color-subtitle);
-  opacity: 0.5;
-  pointer-events: none;
+.terminal-input-hidden {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  border: none;
+  background: transparent;
 }
 
 .terminal-cursor {
