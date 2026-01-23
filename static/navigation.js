@@ -43,6 +43,9 @@ document.addEventListener('keydown', function(e) {
   // Skip if modifier keys are pressed
   if (e.metaKey || e.ctrlKey || e.altKey) return;
 
+  // Skip if global shortcuts are disabled (e.g., 404 page)
+  if (window.disableGlobalShortcuts) return;
+
   // "/" or "S" - Toggle search
   if (e.key === '/' || e.key === 's' || e.key === 'S') {
     e.preventDefault();

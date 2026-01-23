@@ -1,8 +1,257 @@
 {% extends "base.html" %}
 
+{% block title %}404 - Page Not Found{% endblock title %}
+
+
 {% block content %}
-<h1>404</h1>
-{% if config.extra.not_found_message %}
-  {{ config.extra.not_found_message | markdown | safe }}
-{% endif %}
+<div class="not-found-container">
+  <div class="terminal-window">
+    <div class="terminal-header">
+      <div class="terminal-buttons">
+        <span class="terminal-btn terminal-btn--red"></span>
+        <span class="terminal-btn terminal-btn--yellow"></span>
+        <span class="terminal-btn terminal-btn--green"></span>
+      </div>
+      <span class="terminal-title">terminal — bash</span>
+    </div>
+    <div class="terminal-body" id="terminal-body">
+      <div class="terminal-content" id="terminal-content"></div>
+      <div class="terminal-input-line" id="terminal-input-line" style="display: none;">
+        <span class="terminal-prompt">$ </span>
+        <span class="terminal-input-wrapper">
+          <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal input">
+          <span class="terminal-suggestion" id="terminal-suggestion"></span>
+        </span>
+        <span class="terminal-cursor" id="terminal-cursor">█</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="terminal-nav" id="terminal-nav" style="opacity: 0;">
+    <p class="terminal-helper">Press <kbd>1</kbd>-<kbd>5</kbd> to navigate, or type a command above</p>
+    <div class="terminal-links">
+      <a href="{% if lang == 'es' %}/es/{% else %}/{% endif %}" class="terminal-link">
+        <span class="terminal-link-key">1</span>
+        <span class="terminal-link-cmd">cd</span>
+        <span class="terminal-link-path">/home</span>
+      </a>
+      <a href="{% if lang == 'es' %}/es/blog/{% else %}/blog/{% endif %}" class="terminal-link">
+        <span class="terminal-link-key">2</span>
+        <span class="terminal-link-cmd">cd</span>
+        <span class="terminal-link-path">/blog</span>
+      </a>
+      <a href="{% if lang == 'es' %}/es/readings/{% else %}/readings/{% endif %}" class="terminal-link">
+        <span class="terminal-link-key">3</span>
+        <span class="terminal-link-cmd">cd</span>
+        <span class="terminal-link-path">/readings</span>
+      </a>
+      <a href="{% if lang == 'es' %}/es/services/{% else %}/services/{% endif %}" class="terminal-link">
+        <span class="terminal-link-key">4</span>
+        <span class="terminal-link-cmd">cd</span>
+        <span class="terminal-link-path">/services</span>
+      </a>
+      <a href="{% if lang == 'es' %}/es/talks/{% else %}/talks/{% endif %}" class="terminal-link">
+        <span class="terminal-link-key">5</span>
+        <span class="terminal-link-cmd">cd</span>
+        <span class="terminal-link-path">/talks</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+// Disable global shortcuts on 404 page
+window.disableGlobalShortcuts = true;
+
+(function() {
+  const TYPING_SPEED = {
+    character: { min: 30, variance: 20 },
+    lineDelay: 300,
+    outputDelay: 150,
+    emptyLineDelay: 100
+  };
+
+  const CURSOR_BLINK_INTERVAL = 530;
+
+  const INITIAL_LINES = [
+    { type: 'command', text: '$ cd /requested-page' },
+    { type: 'error', text: 'bash: cd: /requested-page: No such file or directory' },
+    { type: 'empty', text: '' },
+    { type: 'command', text: '$ cat error.log' },
+    { type: 'output', text: 'Error 404: Page not found' },
+    { type: 'output', text: 'The page you\'re looking for doesn\'t exist or has been moved.' },
+    { type: 'empty', text: '' },
+    { type: 'command', text: '$ suggest --fix' },
+    { type: 'output', text: 'Available paths:' }
+  ];
+
+  const COMMANDS = {
+    'cd /home': '{% if lang == "es" %}/es/{% else %}/{% endif %}',
+    'cd /blog': '{% if lang == "es" %}/es/blog/{% else %}/blog/{% endif %}',
+    'cd /readings': '{% if lang == "es" %}/es/readings/{% else %}/readings/{% endif %}',
+    'cd /talks': '{% if lang == "es" %}/es/talks/{% else %}/talks/{% endif %}',
+    'cd /services': '{% if lang == "es" %}/es/services/{% else %}/services/{% endif %}'
+  };
+
+  const terminalContent = document.getElementById('terminal-content');
+  const terminalInputLine = document.getElementById('terminal-input-line');
+  const terminalInput = document.getElementById('terminal-input');
+  const terminalSuggestion = document.getElementById('terminal-suggestion');
+  const terminalCursor = document.getElementById('terminal-cursor');
+  const terminalNav = document.getElementById('terminal-nav');
+  const terminalBody = document.getElementById('terminal-body');
+
+  let currentLineIndex = 0;
+  let currentCharIndex = 0;
+  let isTypingComplete = false;
+  let cursorVisible = true;
+
+  function createLine(type, text) {
+    const line = document.createElement('div');
+    line.className = 'terminal-line terminal-line--' + type;
+    line.textContent = text || '\u00A0';
+    return line;
+  }
+
+  function getCharDelay() {
+    return TYPING_SPEED.character.min + Math.random() * TYPING_SPEED.character.variance;
+  }
+
+  function typeCharacter() {
+    if (currentLineIndex >= INITIAL_LINES.length) {
+      completeTyping();
+      return;
+    }
+
+    const currentLine = INITIAL_LINES[currentLineIndex];
+
+    if (currentLine.type !== 'command') {
+      terminalContent.appendChild(createLine(currentLine.type, currentLine.text));
+      currentLineIndex++;
+      currentCharIndex = 0;
+      scrollToBottom();
+
+      const delay = currentLine.type === 'empty' ? TYPING_SPEED.emptyLineDelay : TYPING_SPEED.outputDelay;
+      setTimeout(typeCharacter, delay);
+      return;
+    }
+
+    if (currentCharIndex === 0) {
+      const lineEl = createLine('command', '');
+      lineEl.id = 'typing-line-' + currentLineIndex;
+      terminalContent.appendChild(lineEl);
+    }
+
+    const lineEl = document.getElementById('typing-line-' + currentLineIndex);
+    const text = currentLine.text;
+
+    if (currentCharIndex < text.length) {
+      lineEl.textContent = text.substring(0, currentCharIndex + 1);
+      currentCharIndex++;
+      scrollToBottom();
+      setTimeout(typeCharacter, getCharDelay());
+    } else {
+      currentLineIndex++;
+      currentCharIndex = 0;
+      setTimeout(typeCharacter, TYPING_SPEED.lineDelay);
+    }
+  }
+
+  function scrollToBottom() {
+    terminalBody.scrollTop = terminalBody.scrollHeight;
+  }
+
+  function completeTyping() {
+    isTypingComplete = true;
+    terminalInputLine.style.display = 'flex';
+    terminalNav.style.opacity = '1';
+    terminalInput.focus();
+    startCursorBlink();
+    setupKeyboardShortcuts();
+  }
+
+  function startCursorBlink() {
+    setInterval(function() {
+      cursorVisible = !cursorVisible;
+      terminalCursor.style.opacity = cursorVisible ? '1' : '0';
+    }, CURSOR_BLINK_INTERVAL);
+  }
+
+  function setupKeyboardShortcuts() {
+    const shortcuts = {
+      '1': '{% if lang == "es" %}/es/{% else %}/{% endif %}',
+      '2': '{% if lang == "es" %}/es/blog/{% else %}/blog/{% endif %}',
+      '3': '{% if lang == "es" %}/es/readings/{% else %}/readings/{% endif %}',
+      '4': '{% if lang == "es" %}/es/services/{% else %}/services/{% endif %}',
+      '5': '{% if lang == "es" %}/es/talks/{% else %}/talks/{% endif %}'
+    };
+
+    document.addEventListener('keydown', function(e) {
+      if (!isTypingComplete) return;
+      if (e.target === terminalInput) return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+      if (shortcuts[e.key]) {
+        e.preventDefault();
+        window.location.href = shortcuts[e.key];
+      }
+    });
+  }
+
+  function getSuggestion(input) {
+    if (!input) return '';
+    const inputLower = input.toLowerCase();
+    for (const cmd in COMMANDS) {
+      if (cmd.startsWith(inputLower) && cmd !== inputLower) {
+        return cmd.substring(input.length);
+      }
+    }
+    return '';
+  }
+
+  function handleInput() {
+    const value = terminalInput.value;
+    const suggestion = getSuggestion(value);
+    terminalSuggestion.textContent = suggestion;
+  }
+
+  function handleKeydown(e) {
+    if (e.key === 'Tab' && terminalSuggestion.textContent) {
+      e.preventDefault();
+      terminalInput.value += terminalSuggestion.textContent;
+      terminalSuggestion.textContent = '';
+    } else if (e.key === 'Enter') {
+      const value = terminalInput.value.trim().toLowerCase();
+      if (COMMANDS[value]) {
+        window.location.href = COMMANDS[value];
+      } else if (value) {
+        const errorLine = createLine('error', 'bash: ' + value + ': command not found');
+        terminalContent.appendChild(errorLine);
+        terminalInput.value = '';
+        terminalSuggestion.textContent = '';
+        scrollToBottom();
+      }
+    }
+  }
+
+  terminalInput.addEventListener('input', handleInput);
+  terminalInput.addEventListener('keydown', handleKeydown);
+
+  terminalInput.addEventListener('focus', function() {
+    terminalCursor.classList.add('terminal-cursor--active');
+  });
+
+  terminalInput.addEventListener('blur', function() {
+    terminalCursor.classList.remove('terminal-cursor--active');
+  });
+
+  document.querySelector('.terminal-body').addEventListener('click', function() {
+    if (isTypingComplete) {
+      terminalInput.focus();
+    }
+  });
+
+  setTimeout(typeCharacter, 500);
+})();
+</script>
 {% endblock content %}
