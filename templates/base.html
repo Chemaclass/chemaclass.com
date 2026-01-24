@@ -120,6 +120,17 @@
       {% endblock title %}
     </title>
 
+    {% if page.permalink %}
+      <link rel="canonical" href="{{ page.permalink | safe }}" />
+      <meta property="og:url" content="{{ page.permalink | safe }}" />
+    {% elif section.permalink %}
+      <link rel="canonical" href="{{ section.permalink | safe }}" />
+      <meta property="og:url" content="{{ section.permalink | safe }}" />
+    {% else %}
+      <link rel="canonical" href="{{ config.base_url | safe }}" />
+      <meta property="og:url" content="{{ config.base_url | safe }}" />
+    {% endif %}
+
     {% block head %}
       <link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript><link rel="stylesheet" href="/css/fontawesome.min.css"></noscript>
