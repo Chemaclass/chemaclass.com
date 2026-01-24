@@ -74,29 +74,28 @@ def build_url_to_date_map(content_dir):
     return url_to_date
 
 def enrich_search_index(public_dir, url_to_date):
-    """Add dates to the search index."""
-    index_path = public_dir / 'search_index.en.json'
+    """Add dates to search indices for all languages."""
+    total_enriched = 0
 
-    if not index_path.exists():
-        print(f"Search index not found at {index_path}")
-        return False
+    for index_file in public_dir.glob('search_index.*.json'):
+        with open(index_file, 'r', encoding='utf-8') as f:
+            search_index = json.load(f)
 
-    with open(index_path, 'r', encoding='utf-8') as f:
-        search_index = json.load(f)
+        docs = search_index.get('documentStore', {}).get('docs', {})
 
-    docs = search_index.get('documentStore', {}).get('docs', {})
+        enriched_count = 0
+        for url, doc in docs.items():
+            if url in url_to_date:
+                doc['date'] = url_to_date[url]
+                enriched_count += 1
 
-    enriched_count = 0
-    for url, doc in docs.items():
-        if url in url_to_date:
-            doc['date'] = url_to_date[url]
-            enriched_count += 1
+        with open(index_file, 'w', encoding='utf-8') as f:
+            json.dump(search_index, f, ensure_ascii=False, separators=(',', ':'))
 
-    with open(index_path, 'w', encoding='utf-8') as f:
-        json.dump(search_index, f, ensure_ascii=False)
+        print(f"  {index_file.name}: {enriched_count} documents")
+        total_enriched += enriched_count
 
-    print(f"Enriched {enriched_count} documents with dates")
-    return True
+    return total_enriched > 0
 
 def main():
     # Determine paths relative to script location
@@ -109,9 +108,8 @@ def main():
     url_to_date = build_url_to_date_map(content_dir)
     print(f"Found {len(url_to_date)} dated documents")
 
-    print("Enriching search index...")
+    print("Enriching search indices...")
     enrich_search_index(public_dir, url_to_date)
-    print("Done!")
 
 if __name__ == '__main__':
     main()
