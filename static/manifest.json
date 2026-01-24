@@ -1,0 +1,16 @@
+{
+  "name": "Chemaclass",
+  "short_name": "Chemaclass",
+  "description": "Check out my latest blog posts and readings.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3a5c88",
+  "icons": [
+    {
+      "src": "/icon.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

@@ -20,6 +20,7 @@
     />
 
     <meta name="theme-color" content="{{ config.extra.accent }}" />
+    <link rel="manifest" href="/manifest.json" />
 
     {% if config.extra.profile_small %}
       {% set icon = resize_image(path=config.extra.profile_small, width=48, height=48, op="fill") -%}

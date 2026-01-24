@@ -17,14 +17,14 @@
     "headline": "{{ page.title }}",
     "image": [{% if page.extra.static_thumbnail %} "{{ config.base_url | safe }}{{ page.extra.static_thumbnail | safe }}"{% endif %}]{% if page.date %},
     "datePublished": "{{ page.date | date(format="%+") }}"{% endif %}{% if page.date %},
-    "dateModified": "{{ page.date | date(format="%+") }}"{% endif %}{% if config.extra.author %},
+    "dateModified": "{{ page.date | date(format="%+") }}"{% endif %}{% if config.author %},
     "author": {
       "@type": "Person",
-      "name": "{{ config.extra.author }}"
+      "name": "{{ config.author }}"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "{{ config.extra.author }}"{% if config.extra.icon %},
+      "name": "{{ config.author }}"{% if config.extra.icon %},
       "logo": {
         "@type": "ImageObject",
         "url": "{{ get_url(path=config.extra.icon) | safe }}"
