@@ -30,7 +30,6 @@ jobs:
       - name: Build site
         run: ./build.sh
         env:
-          ZOLA_VERSION: "0.22.0"
           RUM_KEY: ${{ secrets.RUM_KEY }}
 
       - name: Upload artifact

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ZOLA_VERSION=${ZOLA_VERSION:-0.21.0}
+ZOLA_VERSION="${ZOLA_VERSION:-0.22.0}"
 
 # Download zola if not installed
 if ! command -v zola &> /dev/null; then
@@ -20,9 +20,12 @@ if ! command -v zola &> /dev/null; then
   echo "Downloading zola from $GH_URL"
   curl -sSL -o zola.tar.gz "$GH_URL"
   tar -xzf zola.tar.gz
+  rm zola.tar.gz
   chmod +x zola
   export PATH="$PWD:$PATH"
 fi
+
+echo "Using Zola $(zola --version)"
 
 echo "Building site..."
 zola build "$@"
