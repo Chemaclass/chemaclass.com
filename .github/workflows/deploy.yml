@@ -28,7 +28,10 @@ jobs:
           tool: zola@0.22.0
 
       - name: Build site
-        run: zola build
+        run: ./build.sh
+        env:
+          ZOLA_VERSION: "0.22.0"
+          RUM_KEY: ${{ secrets.RUM_KEY }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
