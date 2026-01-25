@@ -25,6 +25,11 @@
         {%- if page.extra.subtitle %}
         <subtitle>{{ page.extra.subtitle }}</subtitle>
         {%- endif %}
+        {%- if page.taxonomies.tags %}
+        {%- for tag in page.taxonomies.tags %}
+        <category term="{{ tag }}"/>
+        {%- endfor %}
+        {%- endif %}
         <published>{{ page.date | date(format="%+") }}</published>
         <updated>{{ page.updated | default(value=page.date) | date(format="%+") }}</updated>
         {% for author in page.authors %}
