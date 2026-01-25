@@ -5,7 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "software-architecture", "developer-tools", "craftsmanship" ]
 [extra]
-subtitle = "Why context is the real superpower in AI-assisted development"
+subtitle = "Why context is the real superpower"
 static_thumbnail = "/images/blog/2026-01-11/cover.jpg"
 +++
 
