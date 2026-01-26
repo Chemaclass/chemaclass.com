@@ -290,6 +290,14 @@ generate_feeds = true
 build_search_index = true
 taxonomies = [{ name = "tags" }]
 
+[languages.es.search]
+include_title = true
+include_path = false
+include_content = true
+include_description = true
+index_format = "elasticlunr_json"
+truncate_content_length = 2000
+
 [languages.es.translations]
 read_more = "Leer más"
 published = "Publicado"
