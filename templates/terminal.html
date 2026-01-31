@@ -12,8 +12,18 @@
     <link rel="icon" href="{{ icon.url }}" />
   {% endif %}
 
+  <!-- Cronitor RUM -->
+  {% set rum_key = get_env(name="RUM_KEY", default=false) %}
+  {% if rum_key %}
+  <script async src="https://rum.cronitor.io/script.js"></script>
+  <script>
+    window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+    cronitor('config', { clientKey: '{{rum_key}}' });
+  </script>
+  {% endif %}
+
   <!-- jQuery Terminal CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.41.2/css/jquery.terminal.min.css">
+  <link rel="stylesheet" href="/vendor/jquery.terminal/jquery.terminal.min.css">
 
   <style>
     :root {
@@ -114,13 +124,13 @@
   <div id="terminal"></div>
 
   <!-- jQuery -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="/vendor/jquery.min.js"></script>
   <!-- jQuery Terminal -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.41.2/js/jquery.terminal.min.js"></script>
+  <script src="/vendor/jquery.terminal/jquery.terminal.min.js"></script>
   <!-- Unix formatting extension -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.41.2/js/unix_formatting.js"></script>
+  <script src="/vendor/jquery.terminal/unix_formatting.js"></script>
   <!-- Less plugin for pager functionality -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.41.2/js/less.js"></script>
+  <script src="/vendor/jquery.terminal/less.js"></script>
 
   <script src="{{ get_url(path='terminal.js') | safe }}"></script>
 </body>

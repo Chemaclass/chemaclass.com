@@ -38,7 +38,7 @@
     tree           Show directory structure
 
   [[b;#3fb950;]Reading:]
-    cat <file>     Read a post (with pager)
+    cat <file>     Read a post (inline output)
     less <file>    Read a post (with pager)
     head <file>    Show first 20 lines
     grep <pattern> Search content
@@ -50,7 +50,7 @@
     clear          Clear the screen
     help           Show this help
 
-  [[b;#3fb950;]Pager controls (cat/less):]
+  [[b;#3fb950;]Pager controls (less):]
     Space/PgDn     Next page
     b/PgUp         Previous page
     j/↓            Scroll down
@@ -167,14 +167,7 @@ https://chemaclass.com`;
         return `[[;#f85149;]cat: ${args[0]}: Is a directory]`;
       }
 
-      const content = formatPost(target);
-      // Use pager for long content
-      term.less(content, {
-        onExit: function() {
-          term.set_command('');
-        }
-      });
-      return '';
+      return formatPost(target);
     },
 
     less: function(args) {
