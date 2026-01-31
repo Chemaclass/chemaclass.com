@@ -390,6 +390,12 @@ ${portrait}
         return (text.match(regex) || []).length;
       }
 
+      function highlight(text, term) {
+        const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`(${escaped})`, 'gi');
+        return text.replace(regex, '[[b;#d29922;]$1]');
+      }
+
       function searchDir(dir, path) {
         const entries = dir.children || dir;
         for (const [name, entry] of Object.entries(entries)) {
@@ -435,8 +441,8 @@ ${portrait}
       for (const r of results) {
         const date = r.date ? `[[;#d29922;]${r.date}]  ` : '';
         output += `${date}[[b;#58a6ff;]${r.path}]\n`;
-        if (r.title) output += `  [[b;#ffffff;]${r.title}]\n`;
-        if (r.description) output += `[[;#6e7681;]  ${truncate(r.description, 65)}]\n`;
+        if (r.title) output += `  ${highlight(r.title, query)}\n`;
+        if (r.description) output += `[[;#6e7681;]  ${highlight(truncate(r.description, 65), query)}]\n`;
         output += '\n';
       }
 
