@@ -629,40 +629,27 @@ ${portrait}
       countContent(fs);
 
       const uptime = 'since 2015';
-      const logo = `[[b;#3fb950;]   _____ _                         ]
+
+      return `
+[[b;#3fb950;]   _____ _                         ]
 [[b;#3fb950;]  / ____| |                        ]
 [[b;#3fb950;] | |    | |__   ___ _ __ ___   __ _]
 [[b;#3fb950;] | |    | '_ \\ / _ \\ '_ \` _ \\ / _\`|]
 [[b;#3fb950;] | |____| | | |  __/ | | | | | (_| |]
-[[b;#3fb950;]  \\_____|_| |_|\\___|_| |_| |_|\\__,_|]`;
+[[b;#3fb950;]  \\_____|_| |_|\\___|_| |_| |_|\\__,_|]
 
-      const info = `
 [[b;#58a6ff;]chemaclass@web]
-[[;#6e7681;]──────────────────────────]
+[[;#6e7681;]──────────────────────────────────]
 [[b;#3fb950;]OS:]      [[;#c9d1d9;]Zola Static Site]
 [[b;#3fb950;]Host:]    [[;#c9d1d9;]chemaclass.com]
 [[b;#3fb950;]Uptime:]  [[;#c9d1d9;]${uptime}]
 [[b;#3fb950;]Posts:]   [[;#c9d1d9;]${postCount}]
 [[b;#3fb950;]Tags:]    [[;#c9d1d9;]${allTags.size}]
 [[b;#3fb950;]Shell:]   [[;#c9d1d9;]jquery.terminal 2.41.2]
-[[b;#3fb950;]Theme:]   [[;#c9d1d9;]GitHub Dark]
+[[b;#3fb950;]Theme:]   [[;#c9d1d9;]${currentTheme}]
 
-[[;#f85149;]●  [[;#d29922;]●  [[;#3fb950;]●  [[;#58a6ff;]●  [[;#a371f7;]●  [[;#39c5cf;]●  [[;#c9d1d9;]●]`;
-
-      // Combine logo and info side by side
-      const logoLines = logo.split('\n');
-      const infoLines = info.split('\n');
-      let output = '';
-
-      const maxLines = Math.max(logoLines.length, infoLines.length);
-      for (let i = 0; i < maxLines; i++) {
-        const logoLine = logoLines[i] || '';
-        const infoLine = infoLines[i] || '';
-        // Pad logo to consistent width (account for formatting codes)
-        output += logoLine.padEnd(50) + infoLine + '\n';
-      }
-
-      return output;
+[[;#f85149;]●  [[;#d29922;]●  [[;#3fb950;]●  [[;#58a6ff;]●  [[;#a371f7;]●  [[;#39c5cf;]●  [[;#c9d1d9;]●]
+`;
     },
 
     matrix: function() {
