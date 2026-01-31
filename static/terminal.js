@@ -38,7 +38,8 @@
     tree           Show directory structure
 
   [[b;#3fb950;]Reading:]
-    cat <file>     Read a post/page
+    cat <file>     Read a post (with pager)
+    less <file>    Read a post (with pager)
     head <file>    Show first 20 lines
     grep <pattern> Search content
 
@@ -47,6 +48,13 @@
     history        Show command history
     clear          Clear the screen
     help           Show this help
+
+  [[b;#3fb950;]Pager controls (cat/less):]
+    Space/PgDn     Next page
+    b/PgUp         Previous page
+    j/↓            Scroll down
+    k/↑            Scroll up
+    q              Quit pager
 
   [[b;#3fb950;]Tips:]
     - Use Tab for autocomplete
@@ -158,7 +166,38 @@ https://chemaclass.com`;
         return `[[;#f85149;]cat: ${args[0]}: Is a directory]`;
       }
 
-      return formatPost(target);
+      const content = formatPost(target);
+      // Use pager for long content
+      term.less(content, {
+        onExit: function() {
+          term.set_command('');
+        }
+      });
+      return '';
+    },
+
+    less: function(args) {
+      if (!args[0]) {
+        return `[[;#f85149;]less: missing file operand]`;
+      }
+
+      const target = resolvePath(args[0]);
+
+      if (!target) {
+        return `[[;#f85149;]less: ${args[0]}: No such file or directory]`;
+      }
+
+      if (target.type === 'dir') {
+        return `[[;#f85149;]less: ${args[0]}: Is a directory]`;
+      }
+
+      const content = formatPost(target);
+      term.less(content, {
+        onExit: function() {
+          term.set_command('');
+        }
+      });
+      return '';
     },
 
     head: function(args) {
@@ -444,18 +483,37 @@ https://chemaclass.com`;
   }
 
   // Get all completions for current context
-  function getCompletions() {
-    // Command names
-    const cmdNames = Object.keys(commands);
+  function getCompletions(input) {
+    // Check if input looks like a path (contains /)
+    const hasSlash = input.includes('/');
 
-    // Files in current directory
+    if (hasSlash) {
+      // Path completion
+      const lastSlash = input.lastIndexOf('/');
+      const prefix = input.substring(0, lastSlash + 1);
+      const searchTerm = input.substring(lastSlash + 1);
+      const dirPath = input.substring(0, lastSlash) || '/';
+      const searchDir = resolvePath(dirPath);
+
+      if (!searchDir) return [];
+
+      const entries = searchDir.children || searchDir;
+      return Object.keys(entries)
+        .filter(name => name.toLowerCase().startsWith(searchTerm.toLowerCase()))
+        .map(name => {
+          const entry = entries[name];
+          return prefix + name + (entry.type === 'dir' ? '/' : '');
+        });
+    }
+
+    // Command + file completion (no slash)
+    const cmdNames = Object.keys(commands);
     const dir = resolvePath(cwd);
     const entries = dir ? (dir.children || dir) : {};
     const fileNames = Object.keys(entries).map(name => {
       const entry = entries[name];
       return name + (entry.type === 'dir' ? '/' : '');
     });
-
     return [...cmdNames, ...fileNames];
   }
 
@@ -499,7 +557,7 @@ https://chemaclass.com`;
         return `[[;#3fb950;]chemaclass]:[[;#58a6ff;]${path}]$ `;
       },
       completion: function(string, callback) {
-        callback(getCompletions());
+        callback(getCompletions(string));
       },
       checkArity: false,
       processArguments: false,
