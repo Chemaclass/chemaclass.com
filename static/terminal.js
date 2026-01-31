@@ -62,6 +62,7 @@
     help           Show this help
 
   [[b;#3fb950;]Discovery:]
+    recent [n]     Show n most recent posts (default 5)
     random         Open a random post
 
   [[b;#3fb950;]Fun:]
@@ -412,6 +413,40 @@ https://chemaclass.com`;
       }
 
       return `[[;#f85149;]open: cannot determine URL for ${args[0]}]`;
+    },
+
+    recent: function(args) {
+      const count = parseInt(args[0]) || 5;
+      const posts = [];
+
+      function collectPosts(dir, path) {
+        const entries = dir.children || dir;
+        for (const [name, entry] of Object.entries(entries)) {
+          if (entry.type === 'dir') {
+            collectPosts(entry, path + name + '/');
+          } else if (entry.date) {
+            posts.push({ name, path: path + name, entry });
+          }
+        }
+      }
+      collectPosts(fs, '/');
+
+      // Sort by date descending
+      posts.sort((a, b) => (b.entry.date || '').localeCompare(a.entry.date || ''));
+
+      const recent = posts.slice(0, count);
+
+      if (recent.length === 0) {
+        return `[[;#6e7681;]No posts found]`;
+      }
+
+      let output = `[[b;#58a6ff;]Recent posts:]\n\n`;
+      for (const post of recent) {
+        output += `[[;#d29922;]${post.entry.date}]  [[b;#ffffff;]${post.entry.title || post.name}]\n`;
+        output += `[[;#6e7681;]  ${post.path}]\n`;
+      }
+
+      return output.trim();
     },
 
     random: function() {
