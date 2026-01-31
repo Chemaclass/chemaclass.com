@@ -45,6 +45,7 @@
 
   [[b;#3fb950;]Info:]
     whoami         About this site
+    thanks         Support my work
     history        Show command history
     clear          Clear the screen
     help           Show this help
@@ -334,6 +335,44 @@ https://chemaclass.com`;
     exit: function() {
       window.location.href = '/';
       return '[[;#6e7681;]Redirecting to homepage...]';
+    },
+
+    thanks: function() {
+      return `
+[[b;#f7931a;]  _____ _                 _        __]
+[[b;#f7931a;] |_   _| |__   __ _ _ __ | | _____ \\ \\]
+[[b;#f7931a;]   | | | '_ \\ / _\` | '_ \\| |/ / __|  > >]
+[[b;#f7931a;]   | | | | | | (_| | | | |   <\\__ \\ / /]
+[[b;#f7931a;]   |_| |_| |_|\\__,_|_| |_|_|\\_\\___//_/]
+
+[[;#c9d1d9;]If you find my work useful, consider supporting it!]
+
+[[b;#3fb950;]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━]
+
+  [[b;#0070ba;]⦿ PayPal][[;#6e7681;] ─────────────────────────────────────]
+    [[;#58a6ff;]https://paypal.me/chemaclass]
+
+  [[b;#f7931a;]⚡ Lightning Network (Bitcoin)][[;#6e7681;] ───────────────]
+    [[;#58a6ff;]https://getalby.com/p/chemaclass]
+    [[;#6e7681;]Lightning Address:] [[;#f7931a;]chemaclass@getalby.com]
+
+[[b;#3fb950;]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━]
+
+[[;#6e7681;]Your support helps me maintain open source projects like:]
+  [[;#a371f7;]→] bashunit  [[;#6e7681;]https://bashunit.typeddevs.com]
+  [[;#a371f7;]→] phel      [[;#6e7681;]https://phel-lang.org]
+  [[;#a371f7;]→] gacela    [[;#6e7681;]https://gacela-project.com]
+
+[[;#d29922;]Thank you for being awesome! 🙏]
+`;
+    },
+
+    sponsor: function() {
+      return commands.thanks();
+    },
+
+    donate: function() {
+      return commands.thanks();
     },
 
     open: function(args) {
