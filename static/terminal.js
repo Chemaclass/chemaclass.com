@@ -62,6 +62,7 @@
     help           Show this help
 
   [[b;#3fb950;]Fun:]
+    neofetch       System info with ASCII art
     matrix         Enter the Matrix
 
   [[b;#3fb950;]Pager controls (less):]
@@ -408,6 +409,63 @@ https://chemaclass.com`;
       }
 
       return `[[;#f85149;]open: cannot determine URL for ${args[0]}]`;
+    },
+
+    neofetch: function() {
+      // Count posts and collect tags
+      let postCount = 0;
+      let allTags = new Set();
+
+      function countContent(dir) {
+        const entries = dir.children || dir;
+        for (const [name, entry] of Object.entries(entries)) {
+          if (entry.type === 'dir') {
+            countContent(entry);
+          } else {
+            postCount++;
+            if (entry.tags) {
+              entry.tags.forEach(tag => allTags.add(tag));
+            }
+          }
+        }
+      }
+      countContent(fs);
+
+      const uptime = 'since 2015';
+      const logo = `[[b;#3fb950;]   _____ _                         ]
+[[b;#3fb950;]  / ____| |                        ]
+[[b;#3fb950;] | |    | |__   ___ _ __ ___   __ _]
+[[b;#3fb950;] | |    | '_ \\ / _ \\ '_ \` _ \\ / _\`|]
+[[b;#3fb950;] | |____| | | |  __/ | | | | | (_| |]
+[[b;#3fb950;]  \\_____|_| |_|\\___|_| |_| |_|\\__,_|]`;
+
+      const info = `
+[[b;#58a6ff;]chemaclass@web]
+[[;#6e7681;]──────────────────────────]
+[[b;#3fb950;]OS:]      [[;#c9d1d9;]Zola Static Site]
+[[b;#3fb950;]Host:]    [[;#c9d1d9;]chemaclass.com]
+[[b;#3fb950;]Uptime:]  [[;#c9d1d9;]${uptime}]
+[[b;#3fb950;]Posts:]   [[;#c9d1d9;]${postCount}]
+[[b;#3fb950;]Tags:]    [[;#c9d1d9;]${allTags.size}]
+[[b;#3fb950;]Shell:]   [[;#c9d1d9;]jquery.terminal 2.41.2]
+[[b;#3fb950;]Theme:]   [[;#c9d1d9;]GitHub Dark]
+
+[[;#f85149;]●  [[;#d29922;]●  [[;#3fb950;]●  [[;#58a6ff;]●  [[;#a371f7;]●  [[;#39c5cf;]●  [[;#c9d1d9;]●]`;
+
+      // Combine logo and info side by side
+      const logoLines = logo.split('\n');
+      const infoLines = info.split('\n');
+      let output = '';
+
+      const maxLines = Math.max(logoLines.length, infoLines.length);
+      for (let i = 0; i < maxLines; i++) {
+        const logoLine = logoLines[i] || '';
+        const infoLine = infoLines[i] || '';
+        // Pad logo to consistent width (account for formatting codes)
+        output += logoLine.padEnd(50) + infoLine + '\n';
+      }
+
+      return output;
     },
 
     matrix: function() {
