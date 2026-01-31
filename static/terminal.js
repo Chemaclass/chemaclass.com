@@ -61,6 +61,9 @@
     clear          Clear the screen
     help           Show this help
 
+  [[b;#3fb950;]Fun:]
+    matrix         Enter the Matrix
+
   [[b;#3fb950;]Pager controls (less):]
     Space/PgDn     Next page
     b/PgUp         Previous page
@@ -405,6 +408,60 @@ https://chemaclass.com`;
       }
 
       return `[[;#f85149;]open: cannot determine URL for ${args[0]}]`;
+    },
+
+    matrix: function() {
+      // Create canvas overlay for matrix effect
+      const canvas = document.createElement('canvas');
+      canvas.id = 'matrix-canvas';
+      canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:#000;';
+      document.body.appendChild(canvas);
+
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      const fontSize = 14;
+      const columns = Math.floor(canvas.width / fontSize);
+      const drops = Array(columns).fill(1);
+
+      function draw() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#0f0';
+        ctx.font = fontSize + 'px monospace';
+
+        for (let i = 0; i < drops.length; i++) {
+          const char = chars[Math.floor(Math.random() * chars.length)];
+          ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
+          }
+          drops[i]++;
+        }
+      }
+
+      const interval = setInterval(draw, 33);
+
+      // Exit instructions
+      const exitMsg = document.createElement('div');
+      exitMsg.style.cssText = 'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);color:#0f0;font-family:monospace;z-index:10000;';
+      exitMsg.textContent = 'Press ESC or Q to exit';
+      document.body.appendChild(exitMsg);
+
+      function cleanup(e) {
+        if (e.key === 'Escape' || e.key === 'q' || e.key === 'Q') {
+          clearInterval(interval);
+          canvas.remove();
+          exitMsg.remove();
+          document.removeEventListener('keydown', cleanup);
+          term.focus();
+        }
+      }
+      document.addEventListener('keydown', cleanup);
+
+      return '[[;#3fb950;]Entering the Matrix...]';
     }
   };
 
