@@ -93,14 +93,14 @@ https://chemaclass.com`;
         }
       }
 
-      // Sort: directories first, then files by date (newest first)
+      // Sort: directories first, then files by date (oldest first)
       items.sort((a, b) => {
         if (a.isDir && !b.isDir) return -1;
         if (!a.isDir && b.isDir) return 1;
         if (!a.isDir && !b.isDir) {
           const dateA = a.entry.date || '';
           const dateB = b.entry.date || '';
-          return dateB.localeCompare(dateA);
+          return dateA.localeCompare(dateB);
         }
         return a.name.localeCompare(b.name);
       });
@@ -443,39 +443,20 @@ https://chemaclass.com`;
     return output;
   }
 
-  // Tab completion
-  function completion(input, callback) {
-    const parts = input.split(' ');
-    const cmd = parts[0];
-    const arg = parts.slice(1).join(' ');
+  // Get all completions for current context
+  function getCompletions() {
+    // Command names
+    const cmdNames = Object.keys(commands);
 
-    if (parts.length === 1) {
-      // Complete command names
-      const cmdNames = Object.keys(commands);
-      callback(cmdNames.filter(c => c.startsWith(cmd)));
-    } else {
-      // Complete paths
-      const pathParts = arg.split('/');
-      const searchDir = pathParts.slice(0, -1).join('/') || (arg.startsWith('/') ? '/' : '');
-      const searchTerm = pathParts[pathParts.length - 1].toLowerCase();
+    // Files in current directory
+    const dir = resolvePath(cwd);
+    const entries = dir ? (dir.children || dir) : {};
+    const fileNames = Object.keys(entries).map(name => {
+      const entry = entries[name];
+      return name + (entry.type === 'dir' ? '/' : '');
+    });
 
-      const dir = resolvePath(searchDir || cwd);
-      if (!dir) {
-        callback([]);
-        return;
-      }
-
-      const entries = dir.children || dir;
-      const matches = Object.keys(entries)
-        .filter(name => name.toLowerCase().startsWith(searchTerm))
-        .map(name => {
-          const entry = entries[name];
-          const prefix = searchDir ? searchDir + '/' : '';
-          return cmd + ' ' + prefix + name + (entry.type === 'dir' ? '/' : '');
-        });
-
-      callback(matches);
-    }
+    return [...cmdNames, ...fileNames];
   }
 
   // Initialize terminal
@@ -517,7 +498,9 @@ https://chemaclass.com`;
         const path = cwd === '/' ? '~' : '~' + cwd;
         return `[[;#3fb950;]chemaclass]:[[;#58a6ff;]${path}]$ `;
       },
-      completion: completion,
+      completion: function(string, callback) {
+        callback(getCompletions());
+      },
       checkArity: false,
       processArguments: false,
       historySize: 100,
@@ -525,6 +508,17 @@ https://chemaclass.com`;
       wrap: true
     });
   }
+
+  // Keyboard shortcuts
+  $(document).on('keydown', function(e) {
+    // Cmd+K (Mac) or Ctrl+K (Windows/Linux) to clear
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      if (term) {
+        term.clear();
+      }
+    }
+  });
 
   // Start when DOM is ready
   $(document).ready(init);

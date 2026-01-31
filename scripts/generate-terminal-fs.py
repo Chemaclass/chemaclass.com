@@ -198,12 +198,15 @@ def main():
 
     print(f"Found {total_files} files across {len([k for k, v in fs.items() if v.get('type') == 'dir'])} directories")
 
-    # Write JSON file
-    output_path = public_dir / 'terminal-fs.json'
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(fs, f, ensure_ascii=False, indent=2)
+    # Write JSON file to static/ (for zola serve) and public/ (for builds)
+    static_dir = project_root / 'static'
 
-    print(f"Written to {output_path}")
+    for output_dir in [static_dir, public_dir]:
+        output_dir.mkdir(exist_ok=True)
+        output_path = output_dir / 'terminal-fs.json'
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(fs, f, ensure_ascii=False, indent=2)
+        print(f"Written to {output_path}")
 
 
 if __name__ == '__main__':
