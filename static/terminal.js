@@ -153,7 +153,6 @@ ${portrait}
 [[b;#a371f7;]Open Source Projects:]
   [[;#3fb950;]→] bashunit   [[;#6e7681;]- Testing framework for Bash]
   [[;#3fb950;]→] phel-lang  [[;#6e7681;]- Lisp dialect that compiles to PHP]
-  [[;#3fb950;]→] gacela     [[;#6e7681;]- PHP framework for modularity]
 
 [[;#6e7681;]Type 'thanks' to see how you can support my work.]
 `;
