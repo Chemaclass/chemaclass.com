@@ -11,6 +11,31 @@
   let cwd = '/';
   let commandHistory = [];
   let term = null;
+  let currentTheme = 'default';
+
+  // Color themes
+  const themes = {
+    default: {
+      bg: '#0d1117', fg: '#c9d1d9', green: '#3fb950', blue: '#58a6ff',
+      yellow: '#d29922', red: '#f85149', cyan: '#39c5cf', purple: '#a371f7'
+    },
+    matrix: {
+      bg: '#000000', fg: '#00ff00', green: '#00ff00', blue: '#00aa00',
+      yellow: '#00dd00', red: '#00ff00', cyan: '#00ee00', purple: '#00cc00'
+    },
+    dracula: {
+      bg: '#282a36', fg: '#f8f8f2', green: '#50fa7b', blue: '#8be9fd',
+      yellow: '#f1fa8c', red: '#ff5555', cyan: '#8be9fd', purple: '#bd93f9'
+    },
+    solarized: {
+      bg: '#002b36', fg: '#839496', green: '#859900', blue: '#268bd2',
+      yellow: '#b58900', red: '#dc322f', cyan: '#2aa198', purple: '#6c71c4'
+    },
+    amber: {
+      bg: '#1a1200', fg: '#ffb000', green: '#ffb000', blue: '#ffc000',
+      yellow: '#ffd000', red: '#ff8000', cyan: '#ffb000', purple: '#ffa000'
+    }
+  };
 
   // ASCII art banners (full and mobile)
   const BANNER_FULL = `
@@ -65,6 +90,9 @@
     tags           List all tags with post counts
     recent [n]     Show n most recent posts (default 5)
     random         Open a random post
+
+  [[b;#3fb950;]Customize:]
+    theme [name]   Change color scheme
 
   [[b;#3fb950;]Fun:]
     neofetch       System info with ASCII art
@@ -414,6 +442,42 @@ https://chemaclass.com`;
       }
 
       return `[[;#f85149;]open: cannot determine URL for ${args[0]}]`;
+    },
+
+    theme: function(args) {
+      const themeName = args[0]?.toLowerCase();
+
+      if (!themeName) {
+        let output = `[[b;#58a6ff;]Available themes:]\n\n`;
+        for (const name of Object.keys(themes)) {
+          const marker = name === currentTheme ? ' [[;#3fb950;](active)]' : '';
+          output += `  ${name}${marker}\n`;
+        }
+        output += `\n[[;#6e7681;]Usage: theme <name>]`;
+        return output;
+      }
+
+      if (!themes[themeName]) {
+        return `[[;#f85149;]Unknown theme: ${themeName}. Type 'theme' for available themes.]`;
+      }
+
+      const t = themes[themeName];
+      const root = document.documentElement;
+      root.style.setProperty('--term-bg', t.bg);
+      root.style.setProperty('--term-fg', t.fg);
+      root.style.setProperty('--term-green', t.green);
+      root.style.setProperty('--term-blue', t.blue);
+      root.style.setProperty('--term-yellow', t.yellow);
+      root.style.setProperty('--term-red', t.red);
+      root.style.setProperty('--term-cyan', t.cyan);
+      root.style.setProperty('--term-purple', t.purple);
+
+      // Update terminal background
+      document.body.style.background = t.bg;
+      document.querySelector('.terminal').style.background = t.bg;
+
+      currentTheme = themeName;
+      return `[[;#3fb950;]Theme changed to ${themeName}]`;
     },
 
     tags: function() {
