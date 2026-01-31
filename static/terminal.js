@@ -12,8 +12,8 @@
   let commandHistory = [];
   let term = null;
 
-  // ASCII art banner
-  const BANNER = `
+  // ASCII art banners (full and mobile)
+  const BANNER_FULL = `
 [[b;#3fb950;]   _____ _                               _               ]
 [[b;#3fb950;]  / ____| |                             | |              ]
 [[b;#3fb950;] | |    | |__   ___ _ __ ___   __ _  ___| | __ _ ___ ___ ]
@@ -24,6 +24,17 @@
 [[;#6e7681;]Welcome to the terminal interface of chemaclass.com]
 [[;#6e7681;]Type 'help' for available commands or 'ls' to explore.]
 `;
+
+  const BANNER_MOBILE = `
+[[b;#3fb950;]> Chemaclass]
+
+[[;#6e7681;]Welcome to chemaclass.com]
+[[;#6e7681;]Type 'help' for commands.]
+`;
+
+  function getBanner() {
+    return window.innerWidth < 500 ? BANNER_MOBILE : BANNER_FULL;
+  }
 
   // Command implementations
   const commands = {
@@ -583,7 +594,7 @@ https://chemaclass.com`;
         this.echo(`[[;#f85149;]${cmd}: command not found. Type 'help' for available commands.]`);
       }
     }, {
-      greetings: BANNER,
+      greetings: getBanner(),
       prompt: function() {
         const path = cwd === '/' ? '~' : '~' + cwd;
         return `[[;#3fb950;]chemaclass]:[[;#58a6ff;]${path}]$ `;
