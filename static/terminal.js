@@ -61,6 +61,9 @@
     clear          Clear the screen
     help           Show this help
 
+  [[b;#3fb950;]Discovery:]
+    random         Open a random post
+
   [[b;#3fb950;]Fun:]
     neofetch       System info with ASCII art
     matrix         Enter the Matrix
@@ -409,6 +412,33 @@ https://chemaclass.com`;
       }
 
       return `[[;#f85149;]open: cannot determine URL for ${args[0]}]`;
+    },
+
+    random: function() {
+      // Collect all posts
+      const posts = [];
+
+      function collectPosts(dir, path) {
+        const entries = dir.children || dir;
+        for (const [name, entry] of Object.entries(entries)) {
+          if (entry.type === 'dir') {
+            collectPosts(entry, path + name + '/');
+          } else {
+            posts.push({ name, path: path + name, entry });
+          }
+        }
+      }
+      collectPosts(fs, '/');
+
+      if (posts.length === 0) {
+        return `[[;#f85149;]No posts found]`;
+      }
+
+      const post = posts[Math.floor(Math.random() * posts.length)];
+      const urlPath = post.path.replace(/^\//, '/').replace(/\/?$/, '/');
+
+      window.open(urlPath, '_blank');
+      return `[[;#3fb950;]Opening random post:] ${post.entry.title || post.name}`;
     },
 
     neofetch: function() {
