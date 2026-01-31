@@ -1,0 +1,16 @@
+// ==========================================================================
+// Terminal Page Styles
+// ==========================================================================
+// Full viewport terminal interface with retro styling
+
+.terminal-page {
+  // Override any body styles from base
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    background: #0d1117;
+  }
+}
+
+// These styles are primarily in the template's inline styles
+// This file is kept for consistency and potential future expansion

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal | Chemaclass</title>
+  <meta name="description" content="Interactive terminal interface for chemaclass.com">
+  <meta name="theme-color" content="#0d1117">
+
+  {% if config.extra.profile_small %}
+    {% set icon = resize_image(path=config.extra.profile_small, width=48, height=48, op="fill") -%}
+    <link rel="icon" href="{{ icon.url }}" />
+  {% endif %}
+
+  <!-- jQuery Terminal CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.41.2/css/jquery.terminal.min.css">
+
+  <style>
+    :root {
+      --term-bg: #0d1117;
+      --term-fg: #c9d1d9;
+      --term-green: #3fb950;
+      --term-blue: #58a6ff;
+      --term-yellow: #d29922;
+      --term-red: #f85149;
+      --term-cyan: #39c5cf;
+      --term-purple: #a371f7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: var(--term-bg);
+    }
+
+    #terminal {
+      height: 100vh;
+      width: 100vw;
+      font-size: 14px;
+    }
+
+    /* jQuery Terminal customization */
+    .terminal {
+      --background: var(--term-bg);
+      --color: var(--term-fg);
+      background: var(--term-bg) !important;
+    }
+
+    .terminal .terminal-output,
+    .terminal .terminal-output > div,
+    .terminal .terminal-output > div > div {
+      background: var(--term-bg) !important;
+    }
+
+    .terminal .cmd {
+      background: var(--term-bg) !important;
+    }
+
+    .terminal .cmd .cmd-prompt {
+      color: var(--term-green);
+    }
+
+    .terminal .cmd .cmd-cursor-line {
+      background: var(--term-bg);
+    }
+
+    /* Custom colors */
+    .terminal .dir { color: var(--term-blue); font-weight: bold; }
+    .terminal .file { color: var(--term-fg); }
+    .terminal .date { color: var(--term-yellow); }
+    .terminal .tag { color: var(--term-purple); }
+    .terminal .error { color: var(--term-red); }
+    .terminal .success { color: var(--term-green); }
+    .terminal .info { color: var(--term-cyan); }
+    .terminal .title { color: var(--term-fg); font-weight: bold; }
+    .terminal .muted { color: #6e7681; }
+
+    /* ASCII art styling */
+    .terminal .ascii-art {
+      color: var(--term-green);
+      line-height: 1.2;
+    }
+
+    /* Links */
+    .terminal a {
+      color: var(--term-blue);
+      text-decoration: underline;
+    }
+
+    .terminal a:hover {
+      color: var(--term-cyan);
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      #terminal {
+        font-size: 12px;
+      }
+    }
+
+    /* Hide mobile keyboard helper on load */
+    .terminal-wrapper {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal"></div>
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <!-- jQuery Terminal -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.41.2/js/jquery.terminal.min.js"></script>
+  <!-- Unix formatting extension -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.41.2/js/unix_formatting.js"></script>
+
+  <script src="{{ get_url(path='terminal.js') | safe }}"></script>
+</body>
+</html>

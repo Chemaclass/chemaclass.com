@@ -33,4 +33,10 @@ zola build "$@"
 echo "Enriching search index with dates..."
 python3 scripts/enrich-search-index.py
 
+echo "Generating terminal filesystem..."
+python3 scripts/generate-terminal-fs.py
+
+echo "Generating plain text pages..."
+python3 scripts/generate-txt-pages.py
+
 echo "Build complete!"
