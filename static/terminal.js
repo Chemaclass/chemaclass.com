@@ -89,7 +89,7 @@
   [[b;#3fb950;]Discovery:]
     tags           List all tags with post counts
     recent [n]     Show n most recent posts (default 5)
-    random         Open a random post
+    random [section]  Open random post (blog/readings/talks/services)
 
   [[b;#3fb950;]Customize:]
     theme [name]   Change color scheme
@@ -580,9 +580,18 @@ ${portrait}
       return output.trim();
     },
 
-    random: function() {
-      // Collect all posts
+    random: function(args) {
+      const validSections = ['blog', 'readings', 'services', 'talks'];
+      const section = args[0]?.replace(/\/$/, '');
+
+      if (section && !validSections.includes(section)) {
+        return `[[;#f85149;]Invalid section: ${section}]\n[[;#6e7681;]Valid sections: ${validSections.join(', ')}]`;
+      }
+
+      // Collect posts from specified section or all
       const posts = [];
+      const startDir = section ? (fs[section] || {}) : fs;
+      const startPath = section ? '/' + section + '/' : '/';
 
       function collectPosts(dir, path) {
         const entries = dir.children || dir;
@@ -594,10 +603,10 @@ ${portrait}
           }
         }
       }
-      collectPosts(fs, '/');
+      collectPosts(startDir, startPath);
 
       if (posts.length === 0) {
-        return `[[;#f85149;]No posts found]`;
+        return `[[;#f85149;]No posts found${section ? ' in ' + section : ''}]`;
       }
 
       const post = posts[Math.floor(Math.random() * posts.length)];
