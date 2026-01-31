@@ -62,6 +62,7 @@
     help           Show this help
 
   [[b;#3fb950;]Discovery:]
+    tags           List all tags with post counts
     recent [n]     Show n most recent posts (default 5)
     random         Open a random post
 
@@ -413,6 +414,39 @@ https://chemaclass.com`;
       }
 
       return `[[;#f85149;]open: cannot determine URL for ${args[0]}]`;
+    },
+
+    tags: function() {
+      const tagCounts = {};
+
+      function collectTags(dir) {
+        const entries = dir.children || dir;
+        for (const [name, entry] of Object.entries(entries)) {
+          if (entry.type === 'dir') {
+            collectTags(entry);
+          } else if (entry.tags) {
+            entry.tags.forEach(tag => {
+              tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+            });
+          }
+        }
+      }
+      collectTags(fs);
+
+      const sorted = Object.entries(tagCounts)
+        .sort((a, b) => b[1] - a[1]);
+
+      if (sorted.length === 0) {
+        return `[[;#6e7681;]No tags found]`;
+      }
+
+      let output = `[[b;#58a6ff;]Tags (${sorted.length} total):]\n\n`;
+      for (const [tag, count] of sorted) {
+        const bar = '█'.repeat(Math.min(count, 20));
+        output += `[[;#a371f7;]${tag.padEnd(20)}] [[;#3fb950;]${bar}] ${count}\n`;
+      }
+
+      return output.trim();
     },
 
     recent: function(args) {
