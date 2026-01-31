@@ -78,6 +78,7 @@
     less <file>    Read a post (with pager)
     head <file>    Show first 20 lines
     grep <pattern> Search content
+    search <term>  Search posts by relevance
 
   [[b;#3fb950;]Info:]
     whoami [-v]    About me (use -v for detailed info)
@@ -369,6 +370,72 @@ ${portrait}
       for (const r of results) {
         output += `[[b;#58a6ff;]${r.path}]\n`;
         if (r.title) output += `  ${r.title}\n`;
+        if (r.description) output += `[[;#6e7681;]  ${truncate(r.description, 65)}]\n`;
+        output += '\n';
+      }
+
+      return output.trim();
+    },
+
+    search: function(args) {
+      if (!args[0]) {
+        return `[[;#f85149;]search: missing search term]`;
+      }
+
+      const query = args.join(' ').toLowerCase();
+      const results = [];
+
+      function countMatches(text, term) {
+        const regex = new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+        return (text.match(regex) || []).length;
+      }
+
+      function searchDir(dir, path) {
+        const entries = dir.children || dir;
+        for (const [name, entry] of Object.entries(entries)) {
+          if (entry.type === 'dir') {
+            searchDir(entry, path + name + '/');
+          } else {
+            const title = entry.title || '';
+            const description = entry.description || '';
+            const content = entry.content || '';
+            const tags = (entry.tags || []).join(' ');
+
+            // Weight: title matches are worth more
+            const titleMatches = countMatches(title, query) * 10;
+            const descMatches = countMatches(description, query) * 5;
+            const tagMatches = countMatches(tags, query) * 3;
+            const contentMatches = countMatches(content, query);
+
+            const score = titleMatches + descMatches + tagMatches + contentMatches;
+
+            if (score > 0) {
+              results.push({
+                path: path + name,
+                title: title,
+                description: description,
+                date: entry.date,
+                score: score
+              });
+            }
+          }
+        }
+      }
+
+      searchDir(fs, '/');
+
+      if (results.length === 0) {
+        return `[[;#6e7681;]No results found for '${query}']`;
+      }
+
+      // Sort by score descending
+      results.sort((a, b) => b.score - a.score);
+
+      let output = `[[;#3fb950;]Found ${results.length} result${results.length > 1 ? 's' : ''} for '${query}':]\n\n`;
+      for (const r of results) {
+        const date = r.date ? `[[;#d29922;]${r.date}]  ` : '';
+        output += `${date}[[b;#58a6ff;]${r.path}]\n`;
+        if (r.title) output += `  [[b;#ffffff;]${r.title}]\n`;
         if (r.description) output += `[[;#6e7681;]  ${truncate(r.description, 65)}]\n`;
         output += '\n';
       }
