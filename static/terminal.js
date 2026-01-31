@@ -582,10 +582,13 @@ ${portrait}
 
     random: function(args) {
       const validSections = ['blog', 'readings', 'services', 'talks'];
-      const section = args[0]?.replace(/\/$/, '');
+      let section = args[0]?.replace(/\/$/, '');
+
+      // Alias: "post" -> "blog"
+      if (section === 'post') section = 'blog';
 
       if (section && !validSections.includes(section)) {
-        return `[[;#f85149;]Invalid section: ${section}]\n[[;#6e7681;]Valid sections: ${validSections.join(', ')}]`;
+        return `[[;#f85149;]Invalid section: ${section}]\n[[;#6e7681;]Valid sections: ${validSections.join(', ')}, post]`;
       }
 
       // Collect posts from specified section or all
