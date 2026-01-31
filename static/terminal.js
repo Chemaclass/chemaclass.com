@@ -80,7 +80,7 @@
     grep <pattern> Search content
 
   [[b;#3fb950;]Info:]
-    whoami         About this site
+    whoami [-v]    About me (use -v for detailed info)
     thanks         Support my work
     history        Show command history
     clear          Clear the screen
@@ -116,14 +116,48 @@
       return cwd;
     },
 
-    whoami: function() {
-      const aboutFile = fs['about.txt'];
-      if (aboutFile) {
-        return aboutFile.content;
-      }
-      return `Jose Maria Valera Reales (Chemaclass)
+    whoami: function(args) {
+      const verbose = args.includes('--verbose') || args.includes('-v');
+
+      if (!verbose) {
+        const aboutFile = fs['about.txt'];
+        if (aboutFile) {
+          return aboutFile.content;
+        }
+        return `Jose Maria Valera Reales (Chemaclass)
 Software Developer | Tech Lead | Speaker
 https://chemaclass.com`;
+      }
+
+      // Verbose mode with ASCII portrait
+      const portrait = `[[;#58a6ff;]        .---.        ]
+[[;#58a6ff;]       /     \\       ]
+[[;#58a6ff;]      | () () |      ]
+[[;#58a6ff;]       \\  ^  /       ]
+[[;#58a6ff;]        |||||        ]
+[[;#58a6ff;]        |||||        ]`;
+
+      return `
+${portrait}
+
+[[b;#3fb950;]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━]
+[[b;#ffffff;]Jose Maria Valera Reales (Chemaclass)]
+[[;#6e7681;]Software Developer | Tech Lead | Speaker]
+[[b;#3fb950;]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━]
+
+[[b;#58a6ff;]Location:]   [[;#c9d1d9;]Berlin, Germany]
+[[b;#58a6ff;]Focus:]      [[;#c9d1d9;]PHP, TypeScript, Clojure, Rust]
+[[b;#58a6ff;]Website:]    [[;#39c5cf;]https://chemaclass.com]
+[[b;#58a6ff;]GitHub:]     [[;#39c5cf;]https://github.com/Chemaclass]
+[[b;#58a6ff;]LinkedIn:]   [[;#39c5cf;]https://linkedin.com/in/chemaclass]
+
+[[b;#a371f7;]Open Source Projects:]
+  [[;#3fb950;]→] bashunit   [[;#6e7681;]- Testing framework for Bash]
+  [[;#3fb950;]→] phel-lang  [[;#6e7681;]- Lisp dialect that compiles to PHP]
+  [[;#3fb950;]→] gacela     [[;#6e7681;]- PHP framework for modularity]
+
+[[;#6e7681;]Type 'thanks' to see how you can support my work.]
+`;
     },
 
     ls: function(args) {
