@@ -420,6 +420,7 @@ ${portrait}
                 path: path + name,
                 title: title,
                 description: description,
+                content: content,
                 date: entry.date,
                 score: score
               });
@@ -437,12 +438,35 @@ ${portrait}
       // Sort by score descending
       results.sort((a, b) => b.score - a.score);
 
+      // Extract snippet around match
+      function getSnippet(text, term, length = 120) {
+        const lower = text.toLowerCase();
+        const idx = lower.indexOf(term.toLowerCase());
+        if (idx === -1) return null;
+
+        const start = Math.max(0, idx - 40);
+        const end = Math.min(text.length, idx + term.length + length - 40);
+        let snippet = text.substring(start, end).replace(/\s+/g, ' ').trim();
+
+        if (start > 0) snippet = '...' + snippet;
+        if (end < text.length) snippet = snippet + '...';
+
+        return snippet;
+      }
+
       let output = `[[;#3fb950;]Found ${results.length} result${results.length > 1 ? 's' : ''} for '${query}':]\n\n`;
       for (const r of results) {
         const date = r.date ? `[[;#d29922;]${r.date}]  ` : '';
         output += `${date}[[b;#58a6ff;]${r.path}]\n`;
         if (r.title) output += `  ${highlight(r.title, query)}\n`;
-        if (r.description) output += `[[;#6e7681;]  ${highlight(truncate(r.description, 65), query)}]\n`;
+        if (r.description) output += `[[;#6e7681;]  ${highlight(truncate(r.description, 100), query)}]\n`;
+
+        // Show content snippet if match is in content
+        const snippet = getSnippet(r.content, query);
+        if (snippet) {
+          output += `[[;#39c5cf;]  "${highlight(snippet, query)}"]\n`;
+        }
+
         output += '\n';
       }
 
