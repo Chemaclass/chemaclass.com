@@ -1,5 +1,44 @@
 {% extends "base.html" %}
 
+{% block posthead %}
+<!-- WebPage schema for sponsor page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "url": "{{ page.permalink | safe }}",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Jose Maria Valera Reales",
+    "alternateName": "Chemaclass",
+    "url": "{{ config.base_url | safe }}"
+  },
+  "potentialAction": [
+    {
+      "@type": "DonateAction",
+      "name": "PayPal",
+      "recipient": {
+        "@type": "Person",
+        "name": "Chemaclass"
+      },
+      "target": "https://www.paypal.com/paypalme/chemaclass"
+    },
+    {
+      "@type": "DonateAction",
+      "name": "Bitcoin Lightning",
+      "recipient": {
+        "@type": "Person",
+        "name": "Chemaclass"
+      },
+      "target": "https://getalby.com/p/chemaclass"
+    }
+  ]
+}
+</script>
+{% endblock posthead %}
+
 {% block content %}
 <article class="sponsor-page">
   <!-- Back link -->
@@ -40,7 +79,7 @@
 
   <!-- Donation Options -->
   <section class="sponsor-options">
-    <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" class="sponsor-card sponsor-card--paypal">
+    <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--paypal">
       <div class="sponsor-card__icon">
         <i class="fa-brands fa-paypal"></i>
       </div>
@@ -56,7 +95,7 @@
       </span>
     </a>
 
-    <a href="https://getalby.com/p/chemaclass" target="_blank" class="sponsor-card sponsor-card--lightning">
+    <a href="https://getalby.com/p/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--lightning">
       <div class="sponsor-card__icon">
         <i class="fa-solid fa-bolt"></i>
       </div>
@@ -84,9 +123,9 @@
         <h3>{{ trans(key="sponsor_reason_1_title", lang=lang) }}</h3>
         <p>
           {{ trans(key="sponsor_reason_1_desc", lang=lang) }}
-          <a target="_blank" href="https://bashunit.typeddevs.com/">bashunit</a>,
-          <a target="_blank" href="https://phel-lang.org/">phel</a>
-          {{ trans(key="sponsor_reason_list_conjunction", lang=lang) }} <a target="_blank" href="https://gacela-project.com/">gacela</a>.
+          <a target="_blank" rel="noopener" href="https://bashunit.typeddevs.com/">bashunit</a>,
+          <a target="_blank" rel="noopener" href="https://phel-lang.org/">phel</a>
+          {{ trans(key="sponsor_reason_list_conjunction", lang=lang) }} <a target="_blank" rel="noopener" href="https://gacela-project.com/">gacela</a>.
         </p>
       </div>
       <div class="sponsor-reason">
