@@ -1,6 +1,6 @@
 +++
-title = "The Five Dysfunctions of a Team"
-description = "Este libro es una fábula de liderazgo sobre una empresa tecnológica que tiene dificultades para conseguir más clientes. El nivel C no está trabajando como equipo, y les cuesta llegar a acuerdos, lo que resulta en una moral negativa. Hasta que la nueva CEO, Catherine Petersen, se une al equipo, y es capaz de reconocer los problemas y ayudar al equipo a superarlos entendiendo la situación."
+title = "Las cinco disfunciones de un equipo"
+description = "Una fábula sobre una empresa tech donde el equipo directivo no funciona. La nueva CEO, Kathryn Petersen, identifica los problemas y ayuda al equipo a superarlos."
 authors = [ "Patrick M. Lencioni" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "communication", "psychology" ]
@@ -12,25 +12,17 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QArmq8raL
 expand_preview = true
 +++
 
-Este libro es una fábula de liderazgo sobre una empresa tecnológica que tiene dificultades para conseguir más clientes. El nivel C no está
-trabajando como equipo, y les cuesta llegar a acuerdos, lo que resulta en una moral negativa. Hasta que la nueva
-CEO, Catherine Petersen, se une al equipo, y es capaz de reconocer los problemas y ayudar al equipo a superarlos
-entendiendo la situación.
+Una fábula de liderazgo sobre una empresa tech que no consigue crecer. El equipo directivo no trabaja como equipo, les cuesta llegar a acuerdos y la moral está por los suelos. Hasta que llega la nueva CEO, Kathryn Petersen, que identifica los problemas y ayuda al equipo a superarlos.
 
 <!-- more -->
 
-Este es el primer libro que leo del autor Patrick Lencioni, quien es un escritor estadounidense que escribe libros sobre gestión
-empresarial. Es el fundador y presidente de The Table Group, una consultoría de gestión enfocada en la salud
-organizacional.
+Es el primer libro que leo de Patrick Lencioni, escritor estadounidense especializado en gestión empresarial. Es fundador y presidente de The Table Group, una consultoría enfocada en salud organizacional.
 
 ## Resumen del libro
 
-Kathryn Petersen, CEO de Decision Tech, enfrenta la crisis de liderazgo definitiva: Unir a un equipo en tal desorden que
-amenaza con hundir toda la empresa. ¿Tendrá éxito? ¿Será despedida? ¿Fracasará la empresa?
+Kathryn Petersen, CEO de Decision Tech, enfrenta la crisis de liderazgo definitiva: unir a un equipo tan disfuncional que amenaza con hundir la empresa. ¿Lo logrará? ¿La despedirán? ¿Fracasará la empresa?
 
-A lo largo de la historia, Lencioni revela las cinco disfunciones que van al corazón de por qué los equipos, incluso los mejores,
-a menudo tienen dificultades. Describe un modelo poderoso y pasos accionables que se pueden usar para superar estos obstáculos comunes
-y construir un equipo cohesivo y efectivo.
+A lo largo de la historia, Lencioni revela las cinco disfunciones que explican por qué incluso los mejores equipos tienen problemas. Presenta un modelo claro y pasos concretos para superar estos obstáculos y construir un equipo cohesivo.
 
 ## El modelo de las 5 disfunciones
 
@@ -38,41 +30,33 @@ y construir un equipo cohesivo y efectivo.
 
 ### 1) Ausencia de confianza
 
-El miedo a ser vulnerable impide que los miembros del equipo construyan confianza entre sí.
+El miedo a ser vulnerable impide que el equipo construya confianza.
 
-Esto ocurre cuando los miembros del equipo son reacios a ser vulnerables entre sí y no están dispuestos a admitir sus errores,
-debilidades o necesidad de ayuda. Sin un cierto nivel de comodidad entre los miembros del equipo, una base de confianza es imposible.
+Pasa cuando nadie quiere mostrarse vulnerable ni admitir errores, debilidades o que necesita ayuda. Sin ese nivel de comodidad, no hay base de confianza posible.
 
 ### 2) Miedo al conflicto
 
-El deseo de preservar la armonía artificial sofoca el conflicto ideológico productivo dentro del equipo.
+El deseo de mantener una armonía artificial ahoga el debate productivo.
 
-Los equipos que carecen de confianza son incapaces de participar en debates apasionados y sin filtros sobre temas clave, causando
-situaciones donde el conflicto de equipo puede fácilmente convertirse en discusiones veladas y comentarios por lo bajo. En un entorno laboral
-donde los miembros del equipo no expresan abiertamente sus opiniones, las decisiones inferiores son el resultado.
+Los equipos sin confianza no pueden tener debates apasionados sobre temas importantes. El conflicto se convierte en comentarios velados y murmullos. Cuando la gente no expresa sus opiniones abiertamente, las decisiones son peores.
 
 ### 3) Falta de compromiso
 
-La falta de claridad y/o aceptación impide que los miembros del equipo tomen decisiones a las que se adhieran.
+Sin claridad ni aceptación, el equipo no toma decisiones firmes.
 
-Sin conflicto, es difícil para los miembros del equipo comprometerse con las decisiones, creando un ambiente donde la ambigüedad
-prevalece. La falta de dirección y compromiso puede hacer que los empleados, particularmente los empleados estrella, se sientan descontentos.
+Sin debate real, cuesta comprometerse con las decisiones. La ambigüedad domina. La falta de dirección y compromiso hace que los empleados, sobre todo los mejores, se sientan descontentos.
 
 ### 4) Evasión de responsabilidad
 
-La necesidad de evitar la incomodidad interpersonal impide que los miembros del equipo se exijan mutuamente responsabilidad por sus comportamientos
-y rendimiento.
+Nadie quiere la incomodidad de exigir cuentas a los demás.
 
-Cuando los equipos no se comprometen con un plan de acción claro, incluso los individuos más enfocados y motivados dudan en llamar la atención a sus
-compañeros sobre acciones y comportamientos que pueden parecer contraproducentes para el bien general del equipo.
+Cuando no hay compromiso claro con un plan, incluso los más motivados dudan en señalar comportamientos contraproducentes de sus compañeros.
 
 ### 5) Desatención a los resultados
 
-La persecución de metas individuales y estatus personal erosiona el enfoque del equipo en el éxito colectivo.
+Las metas individuales y el estatus personal erosionan el enfoque en el éxito colectivo.
 
-Los miembros del equipo naturalmente tienden a poner sus propias necesidades (ego, desarrollo profesional, reconocimiento, etc.) por delante de las metas colectivas
-del equipo cuando los individuos no son responsabilizados. Si un equipo ha perdido de vista la necesidad de logros, el
-negocio finalmente sufre.
+Cuando no hay rendición de cuentas, la gente pone sus necesidades (ego, carrera, reconocimiento) por encima de las metas del equipo. Si el equipo pierde de vista los logros, el negocio sufre.
 
 ![blog-cover](/images/readings/2021-12-07/the-model.jpg)
 

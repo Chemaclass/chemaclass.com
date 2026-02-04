@@ -1,6 +1,6 @@
 +++
-title = "Who moved my cheese?"
-description = "Este libro presenta un cuento dentro de la historia principal que consiste en 4 personajes: dos ratones, Fisgón y Escurridizo, y dos personitas, Hem y Haw."
+title = "¿Quién se ha llevado mi queso?"
+description = "Una fábula con cuatro personajes: dos ratones y dos personitas. Una metáfora brillante sobre cómo afrontamos el cambio."
 authors = [ "Spencer Johnson" ]
 [taxonomies]
 tags = [ "psychology", "career", "productivity" ]
@@ -12,9 +12,9 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QGl7HfNyL
 expand_preview = true
 +++
 
-Este libro presenta un cuento dentro de la historia principal que consiste en 4 personajes: dos ratones, **Fisgón** y **Escurridizo**, y dos personitas, **Hem** y **Haw**.
+El libro cuenta una fábula con cuatro personajes: dos ratones, **Fisgón** y **Escurridizo**, y dos personitas, **Hem** y **Haw**.
 
-El cuento es una hermosa metáfora de las diferentes actitudes que las personas adoptan como parte de su identidad en la vida cuando tienen que enfrentar cualquier cambio.
+Es una metáfora brillante sobre las diferentes actitudes que adoptamos cuando nos toca enfrentar un cambio.
 
 <!-- more -->
 

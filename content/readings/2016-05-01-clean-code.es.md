@@ -1,6 +1,6 @@
 +++
-title = "Clean Code"
-description = "Incluso el código malo puede funcionar. Pero si el código no está limpio, puede llevar a una organización de desarrollo a la ruina. Cada año, se pierden incontables horas y recursos significativos debido a código mal escrito. Pero no tiene que ser así."
+title = "Código Limpio"
+description = "El código malo funciona, pero puede hundir a una empresa. Cada año se pierden horas y recursos por código mal escrito. Este libro te enseña a evitarlo."
 authors = [ "Robert C. Martin" ]
 [taxonomies]
 tags = [ "clean-code", "software-design", "testing", "tdd", "refactoring" ]
@@ -12,7 +12,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41yafGMO+rL
 expand_preview = true
 +++
 
-Incluso el código malo puede funcionar. Pero si el código no está limpio, puede llevar a una organización de desarrollo a la ruina. Cada año, se pierden incontables horas y recursos significativos debido a código mal escrito. Pero no tiene que ser así.
+El código malo puede funcionar, pero si no está limpio, puede hundir a una empresa. Cada año se pierden horas y recursos por culpa de código mal escrito. No tiene por qué ser así.
 
 <!-- more -->
 
@@ -22,11 +22,11 @@ Incluso el código malo puede funcionar. Pero si el código no está limpio, pue
 
 ### Capítulo 1: ¿Qué es el código limpio?
 
-- El código puede medirse con "bueno" o "malo" en la revisión de código o por cuántos minutos te lleva hablar de él.
-- Un código limpio debe ser elegante, eficiente, legible, simple, sin duplicaciones y bien escrito.
-- Deberías añadir valor al negocio con tu código.
-- El código limpio ofrece calidad y comprensión cuando abrimos el archivo fuente.
-- Es necesario que tu código sea limpio y legible para que cualquiera lo encuentre y entienda fácilmente. Evita hacer perder tiempo a otros.
+- El código se puede medir como "bueno" o "malo" en una revisión, o por cuánto tiempo tardas en explicarlo.
+- El código limpio es elegante, eficiente, legible, simple, sin duplicaciones y bien escrito.
+- Tu código debe añadir valor al negocio.
+- Al abrir un archivo fuente, el código limpio transmite calidad y se entiende fácilmente.
+- Haz tu código limpio y legible para que cualquiera pueda entenderlo rápido. No hagas perder tiempo a otros.
 
 ### Capítulo 2: Nombres significativos
 
@@ -38,37 +38,36 @@ Incluso el código malo puede funcionar. Pero si el código no está limpio, pue
 ### Capítulo 3: Funciones
 
 - Los métodos deben ser fáciles de leer y entender.
-- Los métodos deben transmitir su intención.
-- Los métodos deben ser pequeños.
-- Deben tener hasta 20 líneas.
-- Los métodos deben hacer solo una cosa.
-- Deberías usar nombres con palabras que digan lo que realmente hace.
-- El número óptimo de parámetros de un método es cero, después uno y dos.
-- Tres debe evitarse, pero si crees que debe usarse, ten una justificación.
-- `Boolean` como parámetro ya indica que hace más de una cosa.
+- Deben transmitir su intención.
+- Deben ser pequeños: hasta 20 líneas.
+- Deben hacer solo una cosa.
+- Usa nombres que digan claramente qué hace el método.
+- El número ideal de parámetros es cero, luego uno, luego dos.
+- Evita tres parámetros; si los usas, justifícalo.
+- Un `Boolean` como parámetro indica que el método hace más de una cosa.
 - Evita la duplicación.
 
 ### Capítulo 4: Comentarios
 
-- Una de las razones comunes para los comentarios es porque el código es malo.
-- Si estás pensando en escribir un comentario, entonces el código debería ser refactorizado.
-- Los comentarios no salvan un código malo.
-- Intenta explicar qué causa el código que suceda.
-- Los comentarios pueden ser útiles cuando se colocan en ciertos lugares.
-- No expliques tu código con comentarios. Usa nombres informativos de variables/métodos.
-- Los comentarios pueden usarse para expresar la importancia de ciertos puntos.
-- No escribas comentarios con información redundante, inútil o falsa.
-- No deberían usarse para indicar quién cambió o por qué, usa versionado.
-- No comentes código que no se usará. Elimínalo en su lugar.
+- Cuando necesitas comentarios suele ser porque el código es malo.
+- Si piensas escribir un comentario, mejor refactoriza el código.
+- Los comentarios no salvan el código malo.
+- El código debe explicarse por sí mismo.
+- A veces los comentarios son útiles en ciertos lugares específicos.
+- No expliques el código con comentarios. Usa nombres descriptivos de variables y métodos.
+- Los comentarios pueden destacar la importancia de ciertos puntos.
+- No escribas comentarios redundantes, inútiles o falsos.
+- Para saber quién cambió qué y por qué, usa control de versiones.
+- No comentes código sin usar. Elimínalo.
 
 ### Capítulo 5: Formato
 
-- El formato debería indicar cosas importantes ya que es una forma de comunicación del desarrollador.
-- Un código desordenado es difícil de leer.
-- La legibilidad del código tendrá efecto en todos los cambios que se hagan.
-- Las clases más pequeñas son más fáciles de entender.
-- Establece un límite de caracteres por línea de código. Por ejemplo 120.
-- Intenta mantener los conceptos más relacionados verticalmente cercanos para crear un flujo de código.
+- El formato es una forma de comunicación entre desarrolladores.
+- El código desordenado es difícil de leer.
+- La legibilidad afecta a todos los cambios futuros.
+- Las clases pequeñas son más fáciles de entender.
+- Pon un límite de caracteres por línea (por ejemplo, 120).
+- Mantén los conceptos relacionados cerca verticalmente para crear un flujo natural.
 - Usa espacios entre operadores, parámetros y comas.
 
 ### Capítulo 6: Objetos y estructuras de datos
@@ -83,54 +82,53 @@ Incluso el código malo puede funcionar. Pero si el código no está limpio, pue
 
 ### Capítulo 7: Manejo de errores
 
-- El manejo de errores debe planificarse cuidadosamente por todos los programadores.
-- Cuando ocurren cosas incorrectas, tenemos que hacer que haga las cosas correctas.
-- Da preferencia a lanzar una excepción que a tratarla solo para ocultarla.
-- Crea mensajes con información sobre el error.
-- Menciona que falló. ¿Dónde fue este fallo? Si es posible, menciona por qué falló.
-- Mira las reglas de negocio separadas para errores y manejo de errores.
-- Evita devolver `NULL` en métodos, preferiblemente devuelve un objeto vacío.
-- Evita pasar `NULL` a los métodos; esto puede generar `NullPointerExceptions`.
+- Planifica el manejo de errores con cuidado.
+- Cuando algo falla, hay que hacer que el sistema responda correctamente.
+- Lanza excepciones en lugar de ocultarlas.
+- Crea mensajes de error informativos: qué falló, dónde y, si es posible, por qué.
+- Separa las reglas de negocio del manejo de errores.
+- Evita devolver `NULL`; devuelve un objeto vacío.
+- Evita pasar `NULL` a los métodos; puede causar `NullPointerExceptions`.
 
 ### Capítulo 8: Límites
 
-- En código de terceros, para evitar pasar objetos, las APIs miran hacia adelante para mantener las cosas en la misma clase.
-- Realiza tests en las APIs de terceros.
-- Estudia la documentación y prueba la API de terceros antes de empezar a usarla.
-- Revisa bien las características que usarás.
+- Al usar código de terceros, encapsula las APIs para no exponer objetos externos.
+- Haz tests de las APIs de terceros.
+- Estudia la documentación y prueba la API antes de usarla.
+- Conoce bien las características que vas a usar.
 
 ### Capítulo 9: Tests unitarios
 
-- Asegúrate de que cada pieza de código hace lo que esperas que haga.
+- Asegúrate de que cada pieza de código hace lo que esperas.
 - Sigue las [leyes de TDD](https://en.wikipedia.org/wiki/Test-driven_development):
-  - No crees código antes de tener un test que falle.
-  - No crees más tests de los necesarios para fallar.
-  - No puedes escribir más código del suficiente para pasar el test que está fallando.
+  - No escribas código sin tener primero un test que falle.
+  - No escribas más tests de los necesarios para fallar.
+  - No escribas más código del necesario para pasar el test.
 - Mantén tus tests limpios.
-- Los tests deben sufrir cambios de la misma manera que el código.
-- Cuanto más sucio el código, más difícil será mantener el test.
-- Usa la regla F.I.R.S.T para testing:
-  - El test es de ejecución rápida.
-  - Los tests son independientes de otros.
-  - El test es repetible en varios entornos.
-  - El test es auto-validante.
-  - El test es oportuno.
-- El test es tan importante como el código de producción.
+- Los tests evolucionan junto con el código.
+- Código sucio = tests difíciles de mantener.
+- Usa la regla F.I.R.S.T:
+  - **F**ast: ejecución rápida.
+  - **I**ndependent: independientes entre sí.
+  - **R**epeatable: repetibles en cualquier entorno.
+  - **S**elf-validating: auto-validantes.
+  - **T**imely: escritos a tiempo.
+- Los tests son tan importantes como el código de producción.
 
 ### Capítulo 10: Clases
 
-- Por defecto, las clases deberían empezar con las variables:
-  - Estáticas y constantes públicas.
-  - Estáticas y variables privadas.
-  - Instancias y variables privadas.
-  - Luego vienen las funciones.
-  - El nombre de la clase debe representar su responsabilidad.
-- La clase debe tener solo [una responsabilidad](https://en.wikipedia.org/wiki/Single-responsibility_principle): una razón para cambiar.
-- Deberías intentar hacer una breve descripción de la clase.
-- Los métodos deben ser pequeños y de una sola responsabilidad.
+- Organiza las clases así:
+  - Constantes públicas estáticas.
+  - Variables privadas estáticas.
+  - Variables de instancia privadas.
+  - Luego los métodos.
+- El nombre de la clase debe reflejar su responsabilidad.
+- Cada clase debe tener [una sola responsabilidad](https://en.wikipedia.org/wiki/Single-responsibility_principle): una razón para cambiar.
+- Intenta describir la clase en una frase breve.
+- Los métodos deben ser pequeños y con una sola responsabilidad.
 
 ---
 
-Esta entrevista está basada en el libro de Uncle Bob "Clean Code". Cubren algunas guías existentes que pueden ayudarte a convertirte en un mejor programador y exploran cómo los libros y las tendencias actuales están moldeando el panorama del software.
+Esta entrevista se basa en el libro de Uncle Bob "Código Limpio". Repasan algunas guías que te ayudarán a ser mejor programador y exploran cómo los libros y tendencias actuales están moldeando el mundo del software.
 
 {{ youtube(id="QnmRpHFoYLk") }}

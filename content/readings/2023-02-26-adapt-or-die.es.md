@@ -1,6 +1,6 @@
 +++
 title = "Adapt or die"
-description = "Contado a través de la historia de una empresa audaz (People First IT), Adapt or Die lleva a los lectores a través del sistema de negocios sin igual conocido como El Algoritmo del Éxito que tiene el potencial de inspirar, encender y afectar el cambio en todos los aspectos de una organización."
+description = "A través de la historia de People First IT, este libro presenta El Algoritmo del Éxito: un sistema para transformar organizaciones poniendo a las personas primero."
 draft = false
 authors = [ "Thomas H. Douglas" ]
 [taxonomies]
@@ -13,36 +13,36 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-Contado a través de la historia de una empresa audaz (People First IT), Adapt or Die lleva a los lectores a través del sistema de negocios sin igual conocido como El Algoritmo del Éxito que tiene el potencial de inspirar, encender y afectar el cambio en todos los aspectos de una organización.
+A través de la historia de People First IT, este libro presenta El Algoritmo del Éxito: un sistema con potencial para transformar todos los aspectos de una organización.
 
 <!-- more -->
 
-Cada capítulo revela más de la fórmula ganadora que todas las pequeñas y medianas empresas absolutamente deben tener para tener éxito. A través de ejemplos reales, investigación y herramientas prácticas, Adapt or Die desempaqueta exactamente cómo crear innovación, resolver puzzles de personas y ganar en los negocios.
+Cada capítulo revela parte de la fórmula que las pequeñas y medianas empresas necesitan para triunfar. Con ejemplos reales, investigación y herramientas prácticas, el libro explica cómo crear innovación, resolver problemas de personas y ganar en los negocios.
 
-> "El liderazgo se trata de ayudar a las personas a adaptarse y liderar a través del cambio para que el negocio y su gente puedan prosperar."
+> "El liderazgo consiste en ayudar a las personas a adaptarse al cambio para que el negocio y su gente prosperen."
 
 ## ¿Por qué fracasan los negocios?
 
 Los negocios fracasan porque...
 
-- son incapaces o no están dispuestos a tener conversaciones valientes
-- se enfocan en el dinero demasiado o demasiado pronto en lugar de en las personas
-- pueden proporcionar el valor ellos mismos pero no pueden hacerlo escalar
-- fallan en enfocarse en las personas como su responsabilidad principal
-- se enfocan en las personas, pero no tienen las habilidades necesarias para marcar la diferencia
-- escuchan para responder en lugar de escuchar para oír
-- piensan que porque su idea es única y específica, también lo son sus problemas
-- viven en el negocio y no pasan tiempo en el negocio
-- esperan que las cosas sucedan sin verdaderamente liderar a través del cambio
-- fallan en enamorarse de la verdad y luchan contra la verdad en su lugar
+- no pueden o no quieren tener conversaciones valientes
+- se enfocan en el dinero demasiado pronto, olvidando a las personas
+- saben crear valor pero no escalarlo
+- no priorizan a las personas como responsabilidad principal
+- se enfocan en las personas pero carecen de las habilidades para marcar diferencia
+- escuchan para responder, no para entender
+- creen que sus problemas son únicos porque su idea lo es
+- viven dentro del negocio sin trabajar sobre el negocio
+- esperan que las cosas pasen sin liderar el cambio
+- luchan contra la verdad en lugar de abrazarla
 
-## Cómo ayudar a crecer tu trabajo en equipo
+## ¿Cómo hacer crecer tu equipo?
 
-> "A medida que un negocio escala, el enfoque principal del dueño y el liderazgo debe cambiar de enfocarse en los clientes a enfocarse en los empleados."
+> "Cuando un negocio escala, el foco del dueño y el liderazgo debe pasar de los clientes a los empleados."
 
-Teniendo conversaciones valientes sobre el espectro completo de habilidades requeridas para llegar al siguiente nivel, enfocándose en mejorar la experiencia de carrera personal y profesional para esa persona y las personas a su alrededor.
+La clave está en tener conversaciones valientes sobre las habilidades necesarias para el siguiente nivel. El objetivo: mejorar la experiencia profesional de cada persona y de quienes la rodean.
 
-Estos son los puntos principales que todos podrían desarrollar:
+Puntos clave que todos podrían desarrollar:
 
 - Buenas comunicaciones
 - Enfoque y lograr metas y resultados
@@ -52,11 +52,11 @@ Estos son los puntos principales que todos podrían desarrollar:
 - Organización clara y buena
 - El conflicto constructivo impulsa la innovación
 
-> "Las personas usualmente no son el problema raíz. La taxonomía es 3Ps: producto, proceso o personas. Y 'personas' es el paso final porque los líderes necesitan mirar primero producto y proceso. En otras palabras, 'las personas primero' cuando se trata de valores, pero 'las personas al último' cuando se trata de culpa."
+> "Las personas no suelen ser el problema raíz. La taxonomía es 3Ps: producto, proceso o personas. 'Personas' va al final porque los líderes deben revisar primero producto y proceso. Es decir: las personas primero en valores, pero al último en culpa."
 
 ## El Algoritmo del Éxito
 
-Como puedes ver en el diagrama, todo esto viene bajo el liderazgo. Si el liderazgo se trata de ayudar a otros a adaptarse al cambio, entonces debe ser central en nuestras organizaciones.
+Como muestra el diagrama, todo esto depende del liderazgo. Si liderar es ayudar a otros a adaptarse al cambio, debe ser central en nuestras organizaciones.
 
 ![blog-cover](/images/readings/2023-02-26/aos-leadership.jpg)
 

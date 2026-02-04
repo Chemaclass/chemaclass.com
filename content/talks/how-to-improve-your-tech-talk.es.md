@@ -7,11 +7,11 @@ tags = [ "speaking", "presentations" ]
 subtitle = "Aplica a cualquier presentación"
 +++
 
-¿Cómo puedes empezar a subir a un escenario y hablar ante 5, 50, 500, o incluso más personas?
+¿Cómo empezar a subir a un escenario y hablar ante 5, 50, 500 o más personas?
 
-Como parte de tu identidad, compartir conocimiento es una herramienta poderosa para mejorar tus habilidades. Por esta razón, busqué oportunidades para descubrir qué se requiere para que una persona se levante y hable frente a cientos de personas como un ponente habitual en cualquier conferencia.
+Compartir conocimiento es una herramienta poderosa para mejorar tus habilidades. Por eso busqué entender qué hace falta para hablar frente a cientos de personas como ponente habitual.
 
-Después de algunos años hablando en diferentes eventos, reuniones remotas y presenciales, meetups, y conferencias internacionales en otros países, quiero compartir mis aprendizajes.
+Tras varios años dando charlas en meetups, eventos remotos y presenciales, y conferencias internacionales, quiero compartir lo que he aprendido.
 
 <!-- more -->
 

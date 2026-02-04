@@ -15,23 +15,23 @@ El liderazgo no es sinónimo de gestión, no tiene nada que ver con títulos o a
 
 <!-- more -->
 
-Mientras investigaba este tema, encontré ["What is leadership" por Kevin Kruse](https://www.forbes.com/sites/kevinkruse/2013/04/09/what-is-leadership/), que me gustó particularmente. Pensé en compartir los puntos clave de ese post ya que expresa muy bien los puntos generales sobre qué *es* y qué *no es* liderazgo.
+Investigando este tema, encontré ["What is leadership" de Kevin Kruse](https://www.forbes.com/sites/kevinkruse/2013/04/09/what-is-leadership/), que me gustó mucho. Quiero compartir los puntos clave de ese post porque explica muy bien qué *es* y qué *no es* liderazgo.
 
 ---
 
 ## ¿Qué no es liderazgo?
 
-El liderazgo no tiene nada que ver con títulos. Solo porque tengas un título de nivel C, no te convierte automáticamente en un "líder". No necesitas un título de liderazgo para convertirte en líder.
+El liderazgo no tiene nada que ver con títulos. Tener un cargo de nivel C no te convierte automáticamente en líder. No necesitas un título para serlo.
 
-El liderazgo no tiene nada que ver con tus atributos personales. El liderazgo no es un adjetivo. No tienes que ser una persona extrovertida carismática para practicar el liderazgo.
+Tampoco tiene que ver con atributos personales. No hace falta ser extrovertido ni carismático para practicar el liderazgo.
 
-El liderazgo y la gestión no son sinónimos. La gestión necesita planificar, medir, monitorear, coordinar, resolver, contratar, despedir, etc. Los managers gestionan *cosas*. Los líderes lideran **personas**.
+Liderazgo y gestión no son lo mismo. Gestionar implica planificar, medir, monitorear, coordinar, resolver, contratar, despedir... Los managers gestionan *cosas*. Los líderes lideran **personas**.
 
 ## ¿Qué es liderazgo?
 
 > "Un líder es alguien que tiene seguidores." Peter Drucker.
 
-Esta definición es demasiado simplista y puede ser peligrosa. Solo porque tengas "bajo ti" algunas personas que hacen lo que dices simplemente "siguiendo órdenes" no significa que seas un líder. Podrías ser un comandante, pero no necesariamente un líder.
+Esta definición es demasiado simplista y puede ser peligrosa. Que tengas personas "bajo ti" haciendo lo que dices porque "siguen órdenes" no te convierte en líder. Podrías ser un comandante, pero no necesariamente un líder.
 
 > "La capacidad de traducir la visión en realidad." Warren Bennis.
 
@@ -43,7 +43,7 @@ Empoderar a otros es esencial, pero falta la visión u objetivo común.
 
 > "El liderazgo es influencia." John Maxwell.
 
-Un manager tiene el poder de despedir miembros del equipo, lo que proporciona mucha influencia. Lo mismo que un ladrón con una pistola que tiene "influencia" sobre sus víctimas. Nos falta la fuente de influencia.
+Un manager tiene el poder de despedir miembros del equipo, lo que da mucha influencia. Igual que un ladrón con pistola tiene "influencia" sobre sus víctimas. Nos falta la fuente de esa influencia.
 
 ### Entonces, ¿qué tal combinarlas todas?
 
@@ -64,19 +64,19 @@ Elementos clave de esta definición:
 
 ## ¿Por qué alguien querría convertirse en líder?
 
-Necesitamos dejar claro que hay dos concepciones diferentes al hacer esa pregunta, y necesitamos separarlas desde el principio.
+Hay dos concepciones diferentes en esta pregunta, y conviene separarlas desde el principio.
 
-Está el aspecto del "título de líder", que usualmente está asociado con la posición de gestión. **No** estoy hablando de ese. Puedes ser un gran manager y un pésimo líder.
+Por un lado está el "título de líder", asociado normalmente con puestos de gestión. **No** me refiero a eso. Puedes ser un gran manager y un pésimo líder.
 
-Un líder es una persona con la actitud de factor **multiplicador** que quiere desarrollar habilidades específicas (relacionadas con su influencia social) para impulsar aún más el valor que producen.
+Un líder es alguien con actitud de **multiplicador**. Busca desarrollar habilidades (relacionadas con su influencia social) para potenciar el valor que genera.
 
-Entonces, ¿puede cualquiera convertirse en líder? ¿Cuáles son esas *habilidades* que necesitas para ser un líder?
+Entonces, ¿puede cualquiera convertirse en líder? ¿Cuáles son esas *habilidades* necesarias?
 
 ## ¿Puede todo el mundo convertirse en líder?
 
-Ahora que hemos encontrado una definición de liderazgo, podemos acordar que esta definición podría tener diferentes grados aplicados dependiendo del tipo de persona y responsabilidades que quieran.
+Con esta definición clara, podemos ver que el liderazgo tiene distintos grados según la persona y las responsabilidades que quiera asumir.
 
-Sin embargo, para convertirte en líder, necesitas habilidades específicas. Estas son las que encuentro más importantes:
+Para convertirte en líder necesitas habilidades específicas. Estas son las que considero más importantes:
 
 - Excelente **comunicación**, dando apoyo y habilitando a las personas a tu alrededor
 - Liderar con el **ejemplo**, especialmente para convertirte en una mejor versión de ti mismo
@@ -84,11 +84,11 @@ Sin embargo, para convertirte en líder, necesitas habilidades específicas. Est
 
 > El liderazgo comienza dentro de tu propia vida y comportamiento.
 
-Soy consciente de que no todo el mundo podría querer aceptar los cambios necesarios para convertirse en líder, pero verdaderamente creo que todos pueden desarrollar ciertas habilidades de liderazgo hasta cierto punto, lo que también significa **inspirar** a las personas a tu alrededor.
+Sé que no todos quieren aceptar los cambios necesarios para convertirse en líder. Pero creo de verdad que cualquiera puede desarrollar ciertas habilidades de liderazgo, lo que también significa **inspirar** a quienes te rodean.
 
 ## ¿Cómo convertirse en un mejor líder?
 
-Puedes obtener inspiración de muchas fuentes diferentes. Si bien es cierto que puedes aprender mucho de tus propios errores y éxitos, e incluso de las personas a tu alrededor, creo que es muy óptimo escuchar la sabiduría de las experiencias de otras personas fuera de tu círculo. Por ejemplo escuchando podcasts, ted-talks, libros, o incluso audiolibros.
+Puedes inspirarte en muchas fuentes. Aprendes de tus errores y éxitos, y de quienes te rodean. Pero también es muy útil escuchar la sabiduría de gente fuera de tu círculo: podcasts, charlas TED, libros, audiolibros...
 
 **Lecturas relacionadas**
 

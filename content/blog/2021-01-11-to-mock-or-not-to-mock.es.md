@@ -16,9 +16,7 @@ Mockear es útil, pero "qué mockear" suele resultar más complicado de lo esper
 
 #### Cómo escapar del infierno del mocking
 
-¿Qué está pasando realmente cuando creamos un mock? ¿Qué tipos de mocks hay? ¿Mockear es bueno o malo? Bueno, como
-siempre, todo depende del contexto. Y aquí consideraremos algunas de las principales situaciones sobre cuándo mockear y
-cuándo no mockear, pero especialmente por qué.
+¿Qué pasa realmente cuando creamos un mock? ¿Qué tipos hay? ¿Es bueno o malo mockear? Como siempre, depende del contexto. Aquí veremos las situaciones principales: cuándo mockear, cuándo no hacerlo, y sobre todo por qué.
 
 ## ¿Qué pasa cuando mockeas algo?
 
@@ -26,31 +24,24 @@ Primero, deberíamos definir qué es un mock:
 
 > En un test unitario, los objetos mock pueden simular el comportamiento de objetos reales complejos y por lo tanto son útiles cuando es impracticable o imposible incorporar un objeto real en un test unitario.
 
-Mockear tiene sentido en un contexto de *testing unitario*. Un test de integración debería pasar por la implementación real comprobando
-la integración entre múltiples unidades, que incluso tienen permitido hablar con la BD o File IO: código de infraestructura.
-Por lo tanto deberíamos estar de acuerdo en que *un test unitario es un test rápido y determinista que no depende de dependencias externas
-y no requiere ningún contexto especial para ejecutarse*.
+Mockear tiene sentido en *testing unitario*. Un test de integración pasa por la implementación real, verificando cómo interactúan varias unidades. Estos tests sí pueden hablar con la BD o el sistema de archivos.
+Partimos de esta base: *un test unitario es rápido, determinista, no depende de recursos externos y no requiere contexto especial para ejecutarse*.
 
-Los objetos mock cumplen los requisitos de la *interfaz*. En consecuencia, nos permiten escribir y testear unitariamente funcionalidad
-sin llamar a clases subyacentes o colaboradoras complejas.
+Los mocks cumplen el contrato de la *interfaz*. Nos permiten testear funcionalidad sin invocar clases colaboradoras complejas.
 
-Un mock es un doble de test que sustituye al código de implementación real durante el proceso de testing unitario. También es capaz
-de producir aserciones sobre cómo fue manipulado por el sujeto de test durante la ejecución del test.
+Un mock es un doble de test que sustituye la implementación real. Además, puede verificar cómo el código bajo test lo utilizó durante la ejecución.
 
 > Recomiendo encarecidamente que leas este post si quieres entrar en los detalles de por qué [Mockear es un code smell](https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a) (Temas como estos: ¿Qué es un mock? ¿Qué es un test unitario? ¿Qué es la cobertura de tests? ¿Qué es el acoplamiento fuerte? ¿Qué causa el acoplamiento fuerte? ¿Qué tiene que ver la composición con el mocking? ¿Cómo eliminamos el acoplamiento? ¡y más!)
 
 ## El problema con mockear
 
-Cuando mockeas estás anulando la lógica de la clase mockeada. La lógica real se oculta tras bambalinas y
-ahí es precisamente donde los bugs les encanta vivir. Considera que:
+Cuando mockeas, anulas la lógica de la clase mockeada. La lógica real queda oculta, y ahí es donde los bugs se esconden. Ten en cuenta que:
 
 * El mock puede tener atributos, métodos o argumentos que el objeto real no tiene.
 
-* Los *valores de retorno del mock pueden diferir de los valores de retorno de los objetos reales*. Por ejemplo, puede devolver un tipo diferente
-  de objeto que tiene diferentes atributos.
+* Los *valores de retorno del mock pueden diferir de los reales*. Por ejemplo, puede devolver un tipo distinto con atributos diferentes.
 
-* Los *efectos secundarios y el comportamiento del mock pueden diferir de los de los objetos reales*. Por ejemplo, quizás el mock no
-  lanza una excepción cuando el objeto real la lanzaría.
+* Los *efectos secundarios y comportamiento del mock pueden diferir del objeto real*. Quizás el mock no lanza una excepcion que el objeto real sí lanzaría.
 
 ## Alternativas a mockear
 
@@ -65,12 +56,10 @@ Depende de lo que estés "anulando".
 
 ¿Es parte de tu lógica de dominio de negocio? Entonces no deberías mockearla sino instanciarla.
 
-¿Es parte de alguna dependencia de infraestructura como conexión a BD, sistema de archivos IO, Red, o cualquier servicio externo que
-no tiene nada que ver directamente con tu dominio de negocio? Entonces *mockéala usando abstracciones/interfaces*.
+¿Es una dependencia de infraestructura como conexión a BD, sistema de archivos, red, o cualquier servicio externo que no tiene que ver con tu dominio de negocio? Entonces *mockéala usando abstracciones/interfaces*.
 
-La interfaz debería ser el *contrato entre tu lógica de dominio de negocio y sus dependencias de infraestructura externas*.
-Imagina qué fácil sería testear unitariamente tu lógica de dominio instanciándola y llamando a sus métodos con diferentes
-argumentos esperando diferentes entradas bajo tu control total.
+La interfaz es el *contrato entre tu lógica de dominio y sus dependencias de infraestructura*.
+Imagina lo fácil que es testear tu dominio instanciándolo y llamando a sus métodos con diferentes argumentos, todo bajo tu control total.
 
 ## Algunos trucos
 

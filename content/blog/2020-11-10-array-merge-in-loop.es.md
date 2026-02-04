@@ -17,7 +17,7 @@ El operador spread te ayudará a mejorar esto aplanando el array.
 
 ## Aplanando un array de un nivel
 
-He visto gente usando la función array_merge en un bucle como:
+He visto a gente usar array_merge dentro de un bucle así:
 
 ```php
 <?php
@@ -33,8 +33,8 @@ foreach($lists as $list) {
 // $merged === [1, 2, 3, 4, 5, 6];
 ```
 
-¡Esta es una muy mala práctica porque mata el rendimiento (de memoria)!
-En su lugar, deberías usar el operador spread (¡en PHP desde 5.6!):
+Esto es mala práctica porque destroza el rendimiento de memoria.
+Mejor usa el operador spread (disponible desde PHP 5.6):
 
 ```php
 <?php
@@ -68,8 +68,8 @@ $merged = array_merge(...array_values($lists));
 // === [1, 2, 3, 4, 5, 6];
 ```
 
-En Programación Funcional, esto se conoce como aplanar una lista.
-Sin bucles y sin más problemas de rendimiento.
+En programación funcional, esto se conoce como aplanar una lista.
+Sin bucles ni problemas de rendimiento.
 
 ## Aplanando un array multinivel
 
@@ -99,7 +99,7 @@ $lists = [
 ];
 ```
 
-En estos casos, podrías querer usar la librería estándar interna:
+Para estos casos, puedes usar la librería estándar de PHP:
 
 ```php
 <?php
@@ -114,13 +114,13 @@ $merged = iterator_to_array(
 
 ## Conclusión
 
-Normalmente, ser consciente de cómo aplanar un array de "2 niveles" puede ser suficiente:
+Normalmente, saber aplanar un array de dos niveles suele ser suficiente:
 ```php
 <?php
 $flattenList = array_merge(...array_values($lists));
 ```
 
-De lo contrario, la librería estándar interna te ayudará a lidiar con ello.
+Para casos más complejos, la librería estándar de PHP te saca del apuro.
 
 ---
 

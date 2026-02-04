@@ -16,7 +16,7 @@ Hablemos de los beneficios de los Pull Requests y el Pair Programming, y mis ref
 
 ## Pull Requests
 
-Un Pull Request (PR) es básicamente una forma de mostrar tus cambios de código sugeridos de manera que sean fácilmente comparables con el código fuente existente. Esto es parte de un flujo de trabajo que ayuda a los desarrolladores a compartir conocimiento sobre los cambios que se están haciendo dentro del sistema.
+Un Pull Request (PR) es una forma de mostrar tus cambios de código para que se comparen fácilmente con el código existente. Es parte de un flujo de trabajo que ayuda a compartir conocimiento sobre los cambios que se hacen en el sistema.
 
 > Un Pull Request es el momento donde pides a tus compañeros que revisen y examinen tus cambios de código.
 
@@ -27,42 +27,42 @@ Normalmente, también se usa:
 
 ### Los Pull Requests no son la mejor herramienta para todo
 
-El principal problema con estos temas de arriba es que los PR's normalmente están listos cuando la funcionalidad/bug ya se ha trabajado y está en la última etapa de su proceso de desarrollo.
-Es [un PR] una "propuesta de cambio ya hecha [ya he trabajado en este cambio, aquí está el código] para fusionar en el sistema actual [alguien por favor revísalo]".
+El problema es que los PRs suelen estar listos cuando la funcionalidad o bug ya está terminado, en la última etapa del desarrollo.
+Un PR es una "propuesta de cambio ya hecha para fusionar en el sistema actual".
 
-El concepto de "Draft PR" existe para hacer explícito que un PR no está listo para fusionar, así que sigue siendo una "cosa en progreso", pero ese es otro tema.
+El concepto de "Draft PR" existe para indicar que el PR aún no está listo para fusionar, pero ese es otro tema.
 
-Los Pull Requests son, de hecho, una de las mejores herramientas que tenemos en nuestra industria para compartir conocimiento sobre los cambios que estamos haciendo en el sistema, pero a veces pueden ser mal utilizados, como por ejemplo:
+Los Pull Requests son una de las mejores herramientas para compartir conocimiento sobre cambios en el sistema, pero a veces se usan mal:
 
-1. **Discusiones sobre estilo de código**. El estilo de código no debería discutirse en un PR. Ya debería haber un CI ejecutando un comprobador de estilo de código, eso es todo. Si quieres hablar sobre estilo de código, solicita un cambio en tu comprobador de estilo de código, pero no en un PR aleatorio.
-2. **Detectar bugs**. Los bugs y el comportamiento deseado deberían estar cubiertos por tests automatizados. El desarrollador es la primera persona responsable de este tema.
-3. **Discusiones de arquitectura o diseño**. Una vez que una solución particular está desarrollada y lista para revisión, normalmente es muy difícil "deshacer" esa idea y reescribirla de nuevo. Porque "¿por qué harías eso? ¿Por alguna opinión subjetiva? Ya está hecho. Y parece funcionar bien."
+1. **Discusiones sobre estilo de codigo**. El estilo no debería discutirse en un PR. Ya debería haber un CI ejecutando un linter. Si quieres cambiar algo, proponlo en el linter, no en un PR aleatorio.
+2. **Detectar bugs**. Los bugs y comportamiento esperado deberían cubrirse con tests automatizados. El desarrollador es el primer responsable.
+3. **Discusiones de arquitectura o diseno**. Cuando una solución está desarrollada y lista para revisión, es difícil "deshacerla" y reescribirla. "¿Por qué lo harías? Ya está hecho y funciona."
 
-Tener una persona extra mirando los cambios que hemos hecho para "decisiones de diseño" puede ser beneficioso, pero podríamos haber abordado "posibles desacuerdos" en una etapa más temprana.
+Tener a alguien extra revisando decisiones de diseño puede ayudar, pero podríamos haber resuelto posibles desacuerdos antes.
 
 ### ¿Cuál debería ser el propósito de un Pull Request?
 
 1. Compartir conocimiento sobre los cambios propuestos con el equipo.
-2. Asegurar que el equipo se alinea y está de acuerdo a través de los múltiples cambios que se envían cada día para mantener una dirección saludable para el proyecto. Sí, esto puede incluir verificar el resultado del diseño, pero... ¿Y si ahora es demasiado tarde? ¿Cómo podríamos resolver todos esos problemas?
+2. Asegurar que el equipo está alineado con los múltiples cambios que se envían cada día. Sí, puede incluir verificar el diseño, pero... ¿y si ya es demasiado tarde?
 
 ## Pair Programming
 
-El concepto de "Pair Programming" puede entenderse desde diferentes puntos de vista. Pair thinking y pair programming, conceptos de roles conductor-navegador, o puro live coding por un lado. En realidad, esto es mucho más fácil de lo que parece a primera instancia:
-- O miras y ayudas a la otra persona a escribir código,
-- O escribes mientras tienes otro par de ojos mirando y ayudándote.
+El "Pair Programming" puede entenderse de varias formas: pair thinking, roles conductor-navegador, live coding... En realidad es más sencillo de lo que parece:
+- Miras y ayudas a la otra persona a escribir código, o
+- Escribes mientras tienes otro par de ojos mirándote y ayudándote.
 
 > El Pair Programming ayuda al equipo a trabajar juntos.
 
-El pair programming es la alegría de trabajar con un cerebro extra y otro par de ojos, donde la clave es **construir un contexto** donde los dos **compartan el mismo objetivo** para encontrar la **mejor solución posible**. Todo esto mientras aprenden el uno del otro cada segundo.
-El Pair Programming no se trata de desarrollar la mejor solución desde el principio. Se trata de hacerlo funcionar, compartir ideas y encontrar una mejor solución juntos. Después de eso, puedes refactorizar y limpiar el código.
+El pair programming es trabajar con un cerebro extra y otro par de ojos. La clave es **construir un contexto** donde ambos **compartan el mismo objetivo** para encontrar la **mejor solución posible**, aprendiendo el uno del otro.
+No se trata de dar con la mejor solución desde el principio. Se trata de hacerlo funcionar, compartir ideas y mejorar juntos. Luego ya refactorizas y limpias el código.
 
 ### El Pair Programming es una revisión de código continua
 
 Los Pull Requests son una forma asíncrona de compartir cambios de código, mientras que el Pair Programming es totalmente **síncrono** porque sucede al mismo tiempo.
 
-Dicho esto, los Pull Requests y el Pair Programming no son mutuamente excluyentes, pueden coexistir. Son herramientas, y deberíamos elegirlas sabiamente para lograr nuestros objetivos.
+Los Pull Requests y el Pair Programming no son excluyentes, pueden coexistir. Son herramientas, y hay que elegirlas con criterio según nuestros objetivos.
 
-El miedo más común que vi al animar a hacer Pair Programming es que algunas personas son tímidas y no les gusta tener otros ojos a su alrededor mientras programan debido a:
+El miedo más común que he visto al animar a hacer Pair Programming es la timidez. A algunas personas no les gusta tener ojos encima mientras programan:
 - Miedo a no saber qué programar o por dónde empezar.
 - Miedo a que otros se rían de sus soluciones.
 - Miedo a no tener éxito en público.
@@ -73,21 +73,21 @@ El miedo más común que vi al animar a hacer Pair Programming es que algunas pe
 
 ## Después de varios años de experiencia en este tema
 
-El patrón que rechaza el Pair Programming es básicamente "miedo", y estar fuera de tu zona de confort. Y esto se debe a la incomprensión de las raíces del concepto real del Pair Programming.
+El patrón que rechaza el Pair Programming es básicamente el miedo a salir de tu zona de confort. Y viene de no entender qué es realmente el Pair Programming.
 
-El Pair Programming no es "presumir delante de tus colegas" o "ser juzgado por tus compañeros", sino ser transparente (mostrando tus habilidades tal como realmente son) y mejorar como equipo levantándose mutuamente.
+No se trata de presumir ni de ser juzgado, sino de ser transparente (mostrar tus habilidades tal como son) y mejorar como equipo.
 
-Programar es un proceso iterativo que necesita un refactoring continuo de nuestra forma de pensar para lograr mejores soluciones, día a día. Por lo tanto, programar con otra persona a tu lado (con una forma diferente de pensar) ayudará al equipo a sacar lo mejor de cada uno mientras descarta el desperdicio o los malos hábitos si es necesario.
+Programar es un proceso iterativo que requiere refactorizar continuamente nuestra forma de pensar. Programar con otra persona (con otra forma de pensar) ayuda al equipo a sacar lo mejor de cada uno y a descartar malos hábitos.
 
-El Pair Programming no necesita estar siempre configurado para todo. Como herramienta, es flexible, y podemos elegir cómo, cuándo y por qué razón.
+El Pair Programming no tiene que usarse siempre ni para todo. Es una herramienta flexible: puedes elegir cómo, cuándo y por qué.
 
-Una regla personal, antes de empezar tareas que podrían involucrar tocar múltiples módulos o reglas de negocio complejas, piensa en un Pair Thinking/Programming rápido con otro colega más experimentado en ese campo.
+Una regla personal: antes de empezar tareas que tocan múltiples módulos o reglas de negocio complejas, haz un Pair Thinking rápido con un colega más experimentado en ese área.
 
 > Todo depende de un contexto y personas particulares: los desarrolladores, las parejas, las tareas, el estado de ánimo.
 
 ### ¿Todavía incómodo con el Pair Programming?
 
-Si todavía te sientes incómodo teniendo a otra persona a tu lado mientras escribes código, podría ser porque no estás particularmente contento con tu propio código, o el proceso que sigues para lograr algún resultado. Mi forma favorita de trabajar en esto es ejercitando por mi cuenta y trabajando en mejorar mis habilidades como desarrollador de software.
+Si aún te sientes incómodo con alguien a tu lado mientras programas, quizás no estés contento con tu propio código o con el proceso que sigues. Mi forma favorita de trabajar esto es practicar por mi cuenta y mejorar mis habilidades como desarrollador.
 - Crea y juega con tus propios proyectos personales.
 - Trabaja en katas de código por tu cuenta y con otros.
 

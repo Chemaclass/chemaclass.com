@@ -1,6 +1,6 @@
 +++
-title = "The Bitcoin Standard"
-description = "The Bitcoin Standard analiza el contexto histórico del surgimiento de Bitcoin, las propiedades económicas que le han permitido crecer rápidamente, y sus probables implicaciones económicas, políticas y sociales."
+title = "El patrón Bitcoin"
+description = "Un análisis del contexto histórico de Bitcoin, las propiedades económicas que lo hicieron crecer tan rápido, y sus posibles implicaciones económicas, políticas y sociales."
 authors = [ "Saifedean Ammous" ]
 [taxonomies]
 tags = [ "bitcoin", "economics", "philosophy" ]
@@ -14,28 +14,20 @@ expand_preview = false
 
 <!-- more -->
 
-The Bitcoin Standard analiza el contexto histórico del surgimiento de Bitcoin, las propiedades económicas que le han permitido
-crecer rápidamente, y sus probables implicaciones económicas, políticas y sociales.
+El libro analiza el contexto histórico de Bitcoin, las propiedades económicas que lo hicieron crecer tan rápido, y sus posibles implicaciones económicas, políticas y sociales.
 
-Mientras que Bitcoin es un nuevo invento de la era digital, el problema que pretende resolver es tan antiguo como la sociedad humana misma:
-transferir valor a través del tiempo y el espacio. Ammous lleva al lector en un viaje atractivo a través de la historia de
-las tecnologías que realizan las funciones del dinero, desde sistemas primitivos de comercio de piedras calizas y conchas, hasta metales,
-monedas, el patrón oro, y la deuda gubernamental moderna.
+Bitcoin es un invento de la era digital, pero el problema que resuelve es tan antiguo como la humanidad: transferir valor a través del tiempo y el espacio. Ammous nos lleva por la historia de las tecnologías que han funcionado como dinero. Desde piedras y conchas, pasando por metales y monedas, hasta el patrón oro y la deuda gubernamental moderna.
 
-Con este trasfondo en su lugar, el libro pasa a explicar el funcionamiento de Bitcoin de una manera funcional e intuitiva.
-Bitcoin es una pieza de software descentralizada y distribuida que convierte electricidad y poder de procesamiento en
-registros indiscutiblemente precisos, permitiendo así a sus usuarios utilizar Internet para realizar las funciones tradicionales del
-dinero sin tener que depender de, o confiar en, ninguna autoridad o infraestructura en el mundo físico.
+Con ese contexto, el libro explica cómo funciona Bitcoin de forma clara e intuitiva. Es un software descentralizado y distribuido que convierte electricidad y poder de procesamiento en registros precisos e indiscutibles. Permite usar Internet para las funciones tradicionales del dinero sin depender de ninguna autoridad o infraestructura física.
 
-El capítulo final del libro explora algunas de las preguntas más comunes sobre Bitcoin:
+El capítulo final responde las preguntas más comunes sobre Bitcoin:
 
-- ¿Es la minería de Bitcoin un desperdicio de energía?
-- ¿Es Bitcoin para criminales?
-- ¿Quién controla Bitcoin, y pueden cambiarlo si quieren?
-- ¿Cómo puede matarse Bitcoin?
+- ¿La minería de Bitcoin desperdicia energía?
+- ¿Bitcoin es para criminales?
+- ¿Quién controla Bitcoin y pueden cambiarlo?
+- ¿Cómo se puede matar a Bitcoin?
 
-The Bitcoin Standard es el recurso esencial para una comprensión clara del surgimiento de la alternativa descentralizada,
-apolítica y de libre mercado de Internet a los bancos centrales nacionales.
+El patrón Bitcoin es el recurso esencial para entender esta alternativa descentralizada, apolítica y de libre mercado frente a los bancos centrales.
 
 ---
 

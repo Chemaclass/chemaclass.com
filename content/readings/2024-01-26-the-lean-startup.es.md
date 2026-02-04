@@ -1,6 +1,6 @@
 +++
-title = "The Lean Startup"
-description = "La mayoría de las startups fracasan. Pero muchos de esos fracasos son prevenibles. The Lean Startup es un nuevo enfoque que se está adoptando en todo el mundo, cambiando la forma en que se construyen las empresas y se lanzan nuevos productos."
+title = "El método Lean Startup"
+description = "La mayoría de las startups fracasan, pero muchos de esos fracasos se pueden evitar. El método Lean Startup es un enfoque que está cambiando cómo se crean empresas y se lanzan productos en todo el mundo."
 draft = false
 authors = [ "Eric Ries" ]
 [taxonomies]
@@ -15,18 +15,18 @@ expand_preview = false
 
 <!-- more -->
 
-La mayoría de las startups fracasan. Pero muchos de esos fracasos son prevenibles. The Lean Startup es un nuevo enfoque que se está adoptando en todo el mundo, cambiando la forma en que se construyen las empresas y se lanzan nuevos productos.
+La mayoría de las startups fracasan, pero muchos de esos fracasos se pueden evitar. El método Lean Startup es un enfoque que está cambiando cómo se crean empresas y se lanzan productos en todo el mundo.
 
-Eric Ries define una startup como una organización dedicada a crear algo nuevo bajo condiciones de extrema incertidumbre. Esto es igual de cierto para una persona en un garaje como para un grupo de profesionales experimentados en una sala de juntas de una empresa Fortune 500. Lo que tienen en común es una misión de penetrar esa niebla de incertidumbre para descubrir un camino exitoso hacia un negocio sostenible.
+Eric Ries define una startup como una organización que crea algo nuevo bajo condiciones de extrema incertidumbre. Da igual si es una persona en un garaje o un grupo de profesionales en una sala de juntas de una empresa Fortune 500. Lo que comparten es la misión de atravesar esa niebla de incertidumbre para encontrar un camino hacia un negocio sostenible.
 
 ## Puntos Clave
 
-- Prueba frecuentemente y aprende rápidamente
+- Prueba a menudo y aprende rápido
 - Observa y mide el comportamiento real del cliente
-- Enfócate exclusivamente en capturar Métricas accionables
-- Siéntete cómodo pivotando basándote en aprendizajes clave
+- Enfócate solo en métricas accionables
+- Aprende a pivotar según lo que descubras
 - Adopta nuevos métodos de contabilidad
-- Aprende qué no está funcionando y aplica cambios inmediatamente: mantente lean
+- Detecta qué no funciona y cambia de inmediato: mantente lean
 
 ### Resumen
 

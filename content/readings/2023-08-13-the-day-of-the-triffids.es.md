@@ -1,6 +1,6 @@
 +++
-title = "The Day of the Triffids"
-description = "Este libro es fantástico y aterrador, pero completamente plausible. No solo parece científicamente posible, sino que sus personajes son personas vivas sacudidas de la civilización que conocen hacia el horror de un mundo dominado por los trífidos."
+title = "El Día de los Trífidos"
+description = "Fantástico, aterrador y plausible a partes iguales. Los personajes son personas reales, arrancadas de su civilización y lanzadas al horror de un mundo dominado por plantas asesinas."
 draft = false
 authors = [ "John Wyndham" ]
 [taxonomies]
@@ -13,11 +13,11 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-Este libro es fantástico y aterrador pero completamente plausible. No parece científicamente posible, pero sus personajes son personas vivas sacudidas de la civilización que conocen hacia el horror de un mundo dominado por los "trífidos".
+Fantástico, aterrador y plausible a partes iguales. Los personajes son personas reales, arrancadas de su civilización y lanzadas al horror de un mundo dominado por los "trífidos".
 
 <!-- more -->
 
-Los trífidos son plantas grotescas y peligrosas, de más de dos metros de altura, originalmente cultivadas por su rendimiento de aceite de alta calidad. Mientras las condiciones den dominio a sus directores humanos, son un activo valioso para la humanidad. Pero cuando un desastre universal repentino pone esas condiciones patas arriba, los trífidos, aprovechando su oportunidad, se convierten en una amenaza activa y terrible.
+Los trífidos son plantas grotescas y peligrosas de más de dos metros. Se cultivaban por su aceite de alta calidad. Mientras los humanos mantenían el control, eran un recurso valioso. Pero un desastre global lo cambia todo. Los trífidos aprovechan su oportunidad y se convierten en una amenaza terrible.
 
 ### Resumen
 

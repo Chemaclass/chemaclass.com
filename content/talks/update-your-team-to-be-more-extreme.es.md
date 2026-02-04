@@ -7,7 +7,9 @@ tags = [ "agile", "xp", "team-culture" ]
 subtitle = "¿Cómo puedes ayudar a tus compañeros a abrazar el cambio?"
 +++
 
-Nuestra profesión está en constante evolución; por lo tanto, exige un proceso de aprendizaje continuo. Abrazar el cambio no es opcional en la industria del software. Necesitamos crear espacios para salir de nuestra zona de confort, para que nuestro cerebro cognitivo pueda entrenar y mejorar cómo adaptarse a nuestro entorno, que está en constante transformación. Una solución para esto podría ser integrar charlas técnicas internas o katas, que proporcionan al equipo una gran oportunidad de divertirse mientras aprenden y comparten conocimiento entre los miembros del equipo.
+Nuestra profesión evoluciona constantemente y exige aprendizaje continuo. En software, abrazar el cambio no es opcional.
+
+Hay que crear espacios para salir de la zona de confort y entrenar nuestra capacidad de adaptación. Una forma de hacerlo es integrar charlas técnicas internas o katas. El equipo se divierte mientras aprende y comparte conocimiento.
 
 <!-- more -->
 

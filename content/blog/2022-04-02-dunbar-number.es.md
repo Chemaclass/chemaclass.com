@@ -1,6 +1,6 @@
 +++
-title = "El número de Dunbar"
-description = "El número de Dunbar es un límite cognitivo sugerido para el número de personas con las que uno puede mantener relaciones sociales estables."
+title = "El numero de Dunbar"
+description = "El numero de Dunbar es el limite cognitivo de personas con las que podemos mantener relaciones sociales estables."
 [taxonomies]
 tags = [ "psychology", "team-management", "communication" ]
 [extra]
@@ -10,42 +10,41 @@ static_thumbnail = "/images/blog/2022-04-02/cover.jpg"
 
 ![blog-cover](/images/blog/2022-04-02/cover.jpg)
 
-Un límite cognitivo para el número de personas con las que uno puede mantener relaciones sociales estables, en las que un individuo sabe quién es cada persona y cómo cada persona se relaciona con todas las demás.
+Un limite cognitivo de cuantas relaciones sociales estables podemos mantener. Saber quien es cada persona y como se relaciona con las demas.
 
 <!-- more -->
 
 El estudio muestra que:
-- Relación cercana: 5 personas.
-- Compartir confianza profunda: 15 personas.
+- Relacion cercana: 5 personas.
+- Confianza profunda: 15 personas.
 - Relaciones significativas: 50 personas.
 - Contactos activos: 150 personas.
 
-## ¿Por qué este límite es 150?
+## ¿Por que este limite es 150?
 
-Esto se debe al límite de nuestra capacidad cognitiva. Esta es nuestra capacidad para razonar, resolver problemas y comprender ideas complejas. A medida que aumenta el tamaño del equipo, la carga cognitiva del equipo también aumenta y la comunicación sufre, rompiendo así el beneficio de un equipo grande.
+Por nuestra capacidad cognitiva limitada. Nuestra capacidad para razonar, resolver problemas y entender ideas complejas tiene un tope. Al crecer el equipo, aumenta la carga cognitiva y la comunicacion sufre. Por eso un equipo muy grande pierde sus beneficios.
 
 ### Origen
 
-En la década de 1990, el antropólogo británico Robin Dunbar encontró una correlación entre el tamaño del cerebro de los primates y el tamaño promedio del grupo social. Usando el tamaño promedio del cerebro humano y extrapolando de los resultados de los primates, propuso que los humanos pueden mantener cómodamente 150 relaciones estables. Dunbar teorizó que:
+En los 90, el antropologo Robin Dunbar encontro una correlacion entre el tamano del cerebro de los primates y el tamano de su grupo social. Extrapolo los resultados al cerebro humano y propuso que podemos mantener unas 150 relaciones estables. Dunbar teorizo que:
 
-> "este límite es una función directa del tamaño relativo del neocórtex, y que esto, a su vez, limita el tamaño del grupo [...]
-> el límite impuesto por la capacidad de procesamiento neocortical es simplemente sobre el número de individuos con los que se puede mantener una relación interpersonal estable".
+> "Este limite depende directamente del tamano del neocortex, que a su vez limita el tamano del grupo [...] El limite impuesto por la capacidad de procesamiento neocortical es simplemente el numero de personas con las que se puede mantener una relacion estable."
 
-El número también incluye colegas pasados, como amigos de la escuela secundaria, con los que una persona querría reencontrarse si se encontraran de nuevo.
+Este numero incluye tambien colegas del pasado, como amigos del instituto, con los que querrias reencontrarte si os volvierais a ver.
 
-## ¿Cómo se relaciona esto con los Equipos?
+## ¿Como se aplica esto a los equipos?
 
 - Equipos individuales: 5-9 personas.
-  - Hay confianza compartida entre los miembros del equipo.
+  - Confianza compartida entre los miembros.
   - La confianza se construye con el tiempo.
-  - Por lo tanto, deben ser un equipo a largo plazo.
+  - Deben ser equipos a largo plazo.
 - Grupo: 50 personas.
-  - Pueden tener relaciones significativas.
+  - Relaciones significativas.
   - Comparten un dominio o subdominio.
-  - Entienden los desafíos y se ayudan mutuamente.
-- División: 150 personas
+  - Entienden los retos y se ayudan mutuamente.
+- Division: 150 personas.
 
 ### Referencias
 
 - [Robin Dunbar](https://en.wikipedia.org/wiki/Robin_Dunbar)
-- [Número de Dunbar](https://en.wikipedia.org/wiki/Dunbar%27s_number)
+- [Numero de Dunbar](https://en.wikipedia.org/wiki/Dunbar%27s_number)

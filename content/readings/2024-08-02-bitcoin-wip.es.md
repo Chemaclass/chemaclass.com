@@ -1,6 +1,6 @@
 +++
 title = "Bitcoin: A Work in Progress"
-description = "Con miles de proyectos 'cripto' por ahí, dicen que Bitcoin es viejo y aburrido, pero nada podría estar más lejos de la verdad. Este libro te guiará a través de los últimos desarrollos en Bitcoin, vistos a través de los ojos de uno de sus muchos desarrolladores."
+description = "Con miles de proyectos cripto por ahí, dicen que Bitcoin es viejo y aburrido. Nada más lejos de la realidad. Este libro te guía por los últimos desarrollos de Bitcoin desde la perspectiva de uno de sus desarrolladores."
 draft = false
 authors = [ "Sjors Provoost" ]
 [taxonomies]
@@ -13,13 +13,13 @@ static_thumbnail = "https://www.btcwip.com/front.jpg"
 expand_preview = true
 +++
 
-Con miles de proyectos "cripto" por ahí, dicen que Bitcoin es viejo y aburrido, pero nada podría estar más lejos de la verdad. Este libro te guiará a través de los últimos desarrollos en Bitcoin, vistos a través de los ojos de uno de sus muchos desarrolladores.
+Con miles de proyectos cripto por ahí, dicen que Bitcoin es viejo y aburrido. Nada más lejos de la realidad. Este libro te guía por los últimos desarrollos de Bitcoin desde la perspectiva de uno de sus desarrolladores.
 
 <!-- more -->
 
-Aprenderás sobre el último soft fork conocido como Taproot, los desafíos de mantener el software de código abierto libre de bugs que roban dinero y malware, nuevas formas de proteger nodos contra malhechores en internet, cómo lidiar con la blockchain en constante crecimiento, ¡y más!
+Aprenderás sobre Taproot (el último soft fork), los retos de mantener software open source libre de bugs y malware, nuevas formas de proteger nodos contra atacantes, cómo gestionar una blockchain que no para de crecer, y mucho más.
 
-El libro enlaza a más de doscientos artículos, videos, podcasts, e incluso el código fuente. Y gracias a un pequeño código QR junto a cada enlace, nunca tendrás que escribir URLs largas.
+El libro enlaza a más de doscientos artículos, videos, podcasts e incluso código fuente. Y gracias a los códigos QR junto a cada enlace, nunca tendrás que escribir URLs largas.
 
 ---
 

@@ -1,6 +1,6 @@
 +++
 title = "Habilidades interpersonales"
-description = "Así que eres desarrollador de software, y has dominado lenguajes de programación, algoritmos y todo lo técnico. ¡Genial! Pero aquí está el asunto: las habilidades técnicas por sí solas no te llevarán tan lejos como podrías pensar. Si no puedes trabajar bien con otros, no importa lo bueno que sea tu código — nadie querrá trabajar contigo."
+description = "Dominas lenguajes de programacion, algoritmos y todo lo tecnico. Genial. Pero las habilidades tecnicas solas no te llevaran tan lejos. Si no sabes trabajar con otros, da igual lo bueno que sea tu codigo."
 draft = false
 [taxonomies]
 tags = [ "communication", "team-management", "career", "leadership" ]
@@ -11,71 +11,71 @@ static_thumbnail = "/images/blog/2024-09-02/cover.jpg"
 
 ![blog-cover](/images/blog/2024-09-02/cover.jpg)
 
-Así que eres desarrollador de software, y has dominado lenguajes de programación, algoritmos y todo lo técnico. ¡Genial! Pero aquí está el asunto: las habilidades técnicas por sí solas no te llevarán tan lejos como podrías pensar.
+Dominas lenguajes de programacion, algoritmos y todo lo tecnico. Genial. Pero las habilidades tecnicas solas no te llevaran tan lejos como crees.
 
 <!-- more -->
 
-Si no puedes trabajar bien con otros, no importa lo bueno que sea tu código — nadie querrá trabajar contigo.
+Si no sabes trabajar con otros, da igual lo bueno que sea tu codigo. Nadie querra trabajar contigo.
 
-## Por qué las habilidades interpersonales importan en software
+## Por que importan las habilidades interpersonales en software
 
-En el desarrollo de software, la colaboración lo es todo. Los proyectos no son solo esfuerzos en solitario. Serás parte de un equipo — con otros desarrolladores, diseñadores, o incluso personas no técnicas como gerentes y clientes. Cómo comunicas, colaboras y manejas el feedback puede determinar tu éxito.
+En desarrollo de software, la colaboracion lo es todo. Trabajaras en equipo con otros desarrolladores, disenadores, o gente no tecnica como managers y clientes. Como comunicas, colaboras y manejas el feedback puede determinar tu exito.
 
-### El compañero brillante pero difícil
+### El companero brillante pero dificil
 
-Piénsalo. ¿Alguna vez has tenido ese compañero de equipo que es brillante pero difícil o casi imposible de trabajar con él? Quizás no escucha, se lleva todo el crédito, o hace todo más complicado de lo necesario. A nadie le gusta trabajar con esa persona, ¿verdad? Es lo mismo para ti. Si no puedes llevarte bien con tu equipo, no importa lo bueno que sea tu código.
+Piensalo. ¿Has tenido algun companero brillante pero imposible de aguantar? No escucha, se lleva todo el merito, o complica las cosas sin necesidad. Nadie quiere trabajar con esa persona. Lo mismo aplica para ti: si no te llevas bien con tu equipo, tu codigo no importa.
 
-### Qué significa ser un buen compañero de equipo
+### Que significa ser buen companero de equipo
 
-Ser un buen compañero de equipo significa escuchar a los demás, estar abierto al feedback, compartir ideas, y lo más importante, ser respetuoso y considerado. Quieres que la gente disfrute trabajando contigo, no que lo eviten.
+Significa escuchar, estar abierto al feedback, compartir ideas, y sobre todo, ser respetuoso. Quieres que la gente disfrute trabajando contigo, no que te evite.
 
-Las buenas habilidades interpersonales te ayudan a construir relaciones de trabajo sólidas, resolver problemas más rápido y crear un mejor ambiente de trabajo para todos. No solo aspires a ser un experto en programación — asegúrate de que también seas genial para trabajar.
+Buenas habilidades interpersonales te ayudan a construir relaciones solidas, resolver problemas mas rapido y crear un mejor ambiente de trabajo. No aspires solo a ser experto en programacion. Asegurate tambien de que sea un placer trabajar contigo.
 
 ### El impacto a largo plazo
 
-A largo plazo, tus habilidades interpersonales pueden impulsar tu éxito tanto, si no más, que tus habilidades técnicas. Juegan un papel vital en el éxito de un equipo y hacen que la experiencia de trabajo sea agradable para todos los involucrados.
+A la larga, tus habilidades interpersonales pueden impulsar tu exito tanto o mas que las tecnicas. Son vitales para el exito del equipo y hacen que trabajar sea agradable para todos.
 
-> Las habilidades interpersonales son tan necesarias como las habilidades técnicas. Nadie querrá trabajar contigo si no eres un buen compañero de equipo.
+> Las habilidades interpersonales son tan necesarias como las tecnicas. Nadie querra trabajar contigo si no eres buen companero.
 
 ![middle](/images/blog/2024-09-02/middle.jpg)
 
-## ¿Qué son las habilidades interpersonales?
+## ¿Que son las habilidades interpersonales?
 
-Las competencias que te permiten interactuar efectiva y fluidamente con otros.
+Son las competencias que te permiten interactuar bien con otros.
 
-### Habilidades de comunicación fundamentales
+### Comunicacion basica
 
-- **Comunicación**: La capacidad de transmitir ideas claramente, escuchar activamente y participar en conversaciones significativas. Esto incluye tanto la comunicación verbal como la no verbal.
+- **Comunicacion**: Transmitir ideas con claridad, escuchar de verdad y mantener conversaciones con sentido. Verbal y no verbal.
 
-- **Empatía**: Entender y ser sensible a los sentimientos, pensamientos y experiencias de otros. Implica ver las cosas desde la perspectiva de otra persona.
+- **Empatia**: Entender los sentimientos, pensamientos y experiencias de otros. Ver las cosas desde su punto de vista.
 
-- **Inteligencia emocional**: Reconocer y gestionar tus propias emociones y entender e influir en las emociones de otros.
+- **Inteligencia emocional**: Reconocer y gestionar tus emociones. Entender e influir en las de los demas.
 
-### Habilidades de colaboración
+### Colaboracion
 
-- **Trabajo en equipo**: Trabajar bien con otros para lograr objetivos comunes. Esto incluye colaboración, compartir responsabilidades y apoyar a los colegas.
+- **Trabajo en equipo**: Trabajar bien con otros para lograr objetivos comunes. Colaborar, compartir responsabilidades, apoyar a tus companeros.
 
-- **Resolución de conflictos**: La capacidad de manejar desacuerdos y disputas de manera constructiva, encontrando soluciones que satisfagan a todas las partes involucradas.
+- **Resolucion de conflictos**: Manejar desacuerdos de forma constructiva. Encontrar soluciones que funcionen para todos.
 
-- **Negociación**: Encontrar soluciones o compromisos mutuamente aceptables durante discusiones o desacuerdos.
+- **Negociacion**: Llegar a compromisos aceptables cuando hay diferencias.
 
 ### Crecimiento e influencia
 
-- **Adaptabilidad**: Ser flexible y abierto al cambio, ajustando tu enfoque según sea necesario para enfrentar diferentes situaciones o personalidades.
+- **Adaptabilidad**: Ser flexible ante el cambio. Ajustar tu enfoque segun la situacion o la persona.
 
-- **Liderazgo**: Inspirar y guiar a otros, proporcionar dirección y fomentar un ambiente positivo.
+- **Liderazgo**: Inspirar y guiar a otros. Dar direccion y crear un ambiente positivo.
 
-- **Networking**: Construir y mantener relaciones profesionales que puedan proporcionar apoyo, oportunidades y recursos.
+- **Networking**: Construir y mantener relaciones profesionales que aporten apoyo, oportunidades y recursos.
 
-> Estas habilidades son esenciales en casi cualquier trabajo y ayudan a construir relaciones sólidas, mejorar el trabajo en equipo y crear un ambiente de trabajo positivo.
+> Estas habilidades son esenciales en casi cualquier trabajo. Ayudan a construir relaciones solidas, mejorar el trabajo en equipo y crear un buen ambiente.
 
-### Por qué son más difíciles de lo que piensas
+### Por que son mas dificiles de lo que crees
 
-A menudo se les llama habilidades interpersonales o blandas, pero dominarlas puede ser sorprendentemente desafiante — quizás incluso más que muchas habilidades técnicas. A diferencia de las "habilidades duras", que son tangibles y a menudo se pueden aprender a través de unas pocas horas o días de estudio, las habilidades interpersonales implican navegar la intrincada red de emociones, experiencias y expectativas humanas.
+Las llamamos habilidades "blandas", pero dominarlas puede ser mas dificil que muchas habilidades tecnicas. Las habilidades duras son tangibles y puedes aprenderlas en horas o dias de estudio. Las interpersonales requieren navegar emociones, experiencias y expectativas humanas.
 
-Mientras que las habilidades técnicas pueden requerir que te sumerjas en documentación, ejecutes experimentos y refines tu enfoque, entender y relacionarte con las personas es mucho más complejo.
+Las habilidades tecnicas piden leer documentacion, experimentar y refinar tu enfoque. Entender a las personas es mucho mas complejo.
 
-Los humanos traen sus sentimientos, antecedentes y rutinas a las interacciones, añadiendo capas de complejidad más allá de la lógica directa de las máquinas. Estos detalles personales moldean la realidad que percibimos, haciendo que las habilidades interpersonales sean una parte esencial pero compleja de la comunicación y colaboración efectiva.
+Los humanos traemos sentimientos, bagaje y rutinas a cada interaccion. Eso anade capas de complejidad que las maquinas no tienen. Estos detalles moldean la realidad que percibimos. Por eso las habilidades interpersonales son tan importantes y tan complicadas.
 
 ![cover](/images/blog/2024-09-02/footer.jpg)
 

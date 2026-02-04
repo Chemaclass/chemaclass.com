@@ -1,6 +1,6 @@
 +++
 title = "Pretty Good Privacy"
-description = "PGP te permite cifrar mensajes para que solo el destinatario previsto pueda leerlos, y firmar mensajes para demostrar que provienen de ti. Creado en 1991 por Phil Zimmermann, se convirtió en un símbolo de la lucha por la privacidad digital durante las Crypto Wars."
+description = "PGP te permite cifrar mensajes para que solo el destinatario pueda leerlos, y firmarlos para demostrar que son tuyos. Creado en 1991 por Phil Zimmermann."
 draft = false
 [taxonomies]
 tags = [ "security", "privacy", "cryptography", "encryption" ]
@@ -11,42 +11,42 @@ static_thumbnail = "/images/blog/2024-07-13/cover.jpg"
 
 ![blog-cover](/images/blog/2024-07-13/cover.jpg)
 
-PGP (_Pretty Good Privacy_) es un programa de cifrado que garantiza la privacidad y autenticación para la comunicación de datos. Se utiliza para firmar, cifrar y descifrar textos, correos electrónicos, archivos, directorios y particiones de disco completas.
+PGP (_Pretty Good Privacy_) es un programa de cifrado para proteger tu privacidad y autenticar comunicaciones. Sirve para firmar, cifrar y descifrar textos, correos, archivos, directorios y particiones de disco.
 
 <!-- more -->
 
 ## Historia
 
-PGP fue desarrollado por [Phil Zimmermann](https://en.wikipedia.org/wiki/Phil_Zimmermann) debido a su preocupación por la falta de privacidad en las comunicaciones digitales. Su objetivo era proporcionar a las personas herramientas de cifrado fuertes. En 1991, PGP fue lanzado al público de forma gratuita, marcando el comienzo de una nueva era en la seguridad digital.
+[Phil Zimmermann](https://en.wikipedia.org/wiki/Phil_Zimmermann) creo PGP porque le preocupaba la falta de privacidad en las comunicaciones digitales. Queria dar a la gente herramientas de cifrado potentes. En 1991 lanzo PGP gratis, abriendo una nueva era en la seguridad digital.
 
-### Desafíos legales
+### Desafios legales
 
-A principios de los años 90, el cifrado fuerte estaba clasificado como arma bajo la ley de exportación de EE.UU. Cuando PGP se extendió globalmente a través de internet, Zimmermann enfrentó una investigación criminal por "exportar municiones".
+A principios de los 90, el cifrado fuerte estaba clasificado como arma segun la ley de exportacion de EE.UU. Cuando PGP se extendio por internet, Zimmermann fue investigado por "exportar municiones".
 
-Su defensa fue ingeniosa: publicó el código fuente de PGP en un libro. Los libros son discurso protegido. El caso fue archivado en 1996, y las restricciones de exportación de cifrado finalmente se relajaron en 2000.
+Su defensa fue ingeniosa: publico el codigo fuente de PGP en un libro. Los libros son libertad de expresion protegida. El caso se archivo en 1996 y las restricciones de exportacion se relajaron en 2000.
 
 ---
 
 {{ youtube(id="1-MPcUHhXoc") }}
 
-## Características principales
+## Caracteristicas principales
 
-- Cifra y descifra datos para garantizar comunicación segura
-- Proporciona autenticación para verificar la identidad de remitentes y receptores
-- Genera claves públicas y privadas para intercambio seguro de claves
+- Cifra y descifra datos para comunicacion segura
+- Verifica la identidad de quien envia y recibe
+- Genera pares de claves publica/privada para intercambio seguro
 - Soporta varios algoritmos de cifrado y funciones hash
 
-Hoy, PGP continúa como **OpenPGP** (el estándar) y **GPG** (GNU Privacy Guard, la implementación libre). Cuando verificas una descarga de software o firmas un commit de git, a menudo estás usando GPG.
+Hoy PGP sigue vivo como **OpenPGP** (el estandar) y **GPG** (GNU Privacy Guard, la implementacion libre). Cuando verificas una descarga de software o firmas un commit de git, probablemente estas usando GPG.
 
-## Cómo funciona
+## Como funciona
 
-PGP utiliza una combinación de [criptografía de clave pública](https://en.wikipedia.org/wiki/Public-key_cryptography) y [criptografía de clave simétrica](https://en.wikipedia.org/wiki/Symmetric-key_algorithm) para garantizar la transmisión segura de datos. Genera un par de claves que consiste en una clave pública y una clave privada. La clave pública se comparte con otros, mientras que la clave privada se mantiene en secreto. Cuando los datos se cifran, se cifran con la clave pública, y solo la clave privada correspondiente puede descifrarlos.
+PGP combina [criptografia de clave publica](https://en.wikipedia.org/wiki/Public-key_cryptography) y [criptografia de clave simetrica](https://en.wikipedia.org/wiki/Symmetric-key_algorithm). Genera un par de claves: una publica que compartes y una privada que guardas en secreto. Los datos se cifran con la clave publica y solo la privada puede descifrarlos.
 
-- **Cifrado de clave simétrica**: PGP genera una clave de sesión única de un solo uso para cifrar el mensaje. Este método es rápido y eficiente pero requiere que el remitente y el destinatario compartan la misma clave de forma segura.
+- **Cifrado simetrico**: PGP genera una clave de sesion unica para cifrar el mensaje. Es rapido y eficiente, pero necesita que ambas partes compartan la clave de forma segura.
 
-- **Cifrado de clave asimétrica**: PGP resuelve el problema del intercambio de claves con cifrado asimétrico. Cada usuario tiene una clave pública y una clave privada. La clave de sesión se cifra con la clave pública del destinatario y solo puede ser descifrada por la clave privada del destinatario.
+- **Cifrado asimetrico**: Resuelve el problema del intercambio de claves. Cada usuario tiene su par de claves. La clave de sesion se cifra con la clave publica del destinatario, y solo su clave privada puede descifrarla.
 
-- **Firmas digitales**: PGP proporciona autenticación a través de firmas digitales. El remitente firma el mensaje con su clave privada, permitiendo al destinatario verificar la identidad del remitente usando la clave pública del remitente, asegurando que el mensaje no ha sido manipulado.
+- **Firmas digitales**: El remitente firma el mensaje con su clave privada. El destinatario verifica la firma con la clave publica del remitente, confirmando quien lo envio y que el mensaje no se ha alterado.
 
 {{ youtube(id="Lq-yKJFHJpk") }}
 

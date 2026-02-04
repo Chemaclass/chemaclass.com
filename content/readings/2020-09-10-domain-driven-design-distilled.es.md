@@ -1,36 +1,31 @@
 +++
 title = "Domain-Driven Design Distilled"
-description = "Domain-Driven Design Distilled da vida a DDD. Ya seas desarrollador, consultor o cliente, te ayudará a entenderlo para que puedas beneficiarte de su poder."
+description = "Una introducción accesible a DDD para desarrolladores, consultores y cualquiera que quiera entender el diseño guiado por dominio"
 authors = [ "Vaughn Vernon" ]
 [taxonomies]
 tags = [ "ddd", "architecture", "software-design" ]
 [extra]
-subtitle = ""
+subtitle = "DDD explicado de forma clara y práctica"
 pages = "160"
 author = "Vaughn Vernon"
 static_thumbnail = "https://m.media-amazon.com/images/I/51yhBoDgkqL.jpg"
 expand_preview = true
 +++
 
-Domain-Driven Design Distilled da vida a DDD. Ya seas desarrollador, consultor o cliente, te ayudará
-a entenderlo para que puedas beneficiarte de su poder.
+Este libro hace que DDD cobre vida. Da igual si eres desarrollador, consultor o cliente: te ayuda a entenderlo y sacarle provecho.
 
 <!-- more -->
 ---
 
-Este libro ofrece resultados poderosos en la práctica, por eso desarrolladores de todo el mundo están adoptándolo rápidamente.
-Esta es una guía accesible a lo básico:
+Desarrolladores de todo el mundo lo están adoptando porque da resultados reales. Es una guía accesible que responde:
 
 - ¿Qué es DDD?
 - ¿Qué problemas resuelve?
 - ¿Cómo funciona?
-- ¿Cómo obtener valor rápidamente de él?
+- ¿Cómo sacarle valor rápido?
 
-Aprenderás a segregar modelos de dominio usando el poderoso patrón de **Contextos Acotados** (Bounded Contexts), a desarrollar un **Lenguaje
-Ubicuo** dentro de un contexto explícitamente acotado y ayudar a que **expertos de dominio** y **desarrolladores trabajen juntos** para crear
-ese lenguaje.
+Aprenderás a separar modelos de dominio con **Contextos Acotados** (Bounded Contexts), a desarrollar un **Lenguaje Ubicuo** dentro de cada contexto, y a lograr que **expertos de dominio** y **desarrolladores** colaboren para crear ese lenguaje.
 
-Cómo usar Subdominios para manejar sistemas legacy e integrar múltiples Contextos Acotados para definir relaciones de equipo y
-mecanismos técnicos.
+También cubre cómo usar Subdominios para manejar sistemas legacy e integrar varios Contextos Acotados definiendo relaciones entre equipos.
 
 > Domain-Driven Design Distilled da vida a **DDD**.

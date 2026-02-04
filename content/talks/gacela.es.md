@@ -7,7 +7,7 @@ tags = [ "gacela", "php", "architecture", "modular" ]
 subtitle = "Construye aplicaciones PHP modulares"
 +++
 
-La visión de Gacela es simplificar la comunicación de tus diferentes módulos en tu aplicación web, normalizando el punto de entrada de un módulo, sin interferir con tu lógica de dominio-negocio. Anima a que tus módulos interactúen entre sí de manera unificada siguiendo unas pocas reglas simples.
+Gacela simplifica la comunicación entre módulos en tu aplicación web. Normaliza el punto de entrada de cada módulo sin meterse en tu lógica de negocio. Con unas pocas reglas simples, tus módulos pueden interactuar de forma unificada.
 
 <!-- more -->
 

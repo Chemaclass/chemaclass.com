@@ -1,6 +1,6 @@
 +++
 title = "Radical Candor"
-description = "Radical Candor es una filosofía de gestión desarrollada por Kim Scott, ex líder de Google. Es un curso intensivo sobre cómo ser un gran manager, enfocándose en ser empático y orientado a resultados. La idea central es crear un entorno libre de estrés donde las personas se sientan seguras para expresar lo que piensan, hacer su trabajo y sentirse respetadas."
+description = "Kim Scott, ex líder de Google, desarrolló esta filosofía de gestión. Es un curso intensivo sobre cómo ser un gran manager: empático y orientado a resultados. La clave está en crear un entorno donde la gente se sienta segura para decir lo que piensa y hacer su trabajo con respeto."
 draft = false
 authors = [ "Kim Scott" ]
 [taxonomies]
@@ -15,34 +15,34 @@ expand_preview = false
 
 <!-- more -->
 
-Radical Candor es una filosofía de gestión desarrollada por Kim Scott, ex líder de Google. Es un curso intensivo sobre cómo ser un gran manager, enfocándose en ser empático y orientado a resultados. La idea central es crear un entorno libre de estrés donde las personas se sientan seguras para expresar lo que piensan, hacer su trabajo y sentirse respetadas.
+Kim Scott, ex líder de Google, desarrolló esta filosofía de gestión. Es un curso intensivo sobre cómo ser un gran manager: empático y orientado a resultados. La clave está en crear un entorno donde la gente se sienta segura para decir lo que piensa y hacer su trabajo con respeto.
 
-### Perspectivas Clave
+### Ideas clave
 
-- El comando y control puede obstaculizar la innovación y dañar la eficiencia de un equipo. La colaboración y la innovación florecen cuando las relaciones humanas reemplazan el acoso y la burocracia.
-- El objetivo de Radical Candor es ayudar a los managers y líderes a lograr colaborativamente lo que no pueden lograr individualmente, preocupándose por las personas con las que trabajan.
-- Radical Candor se trata de ser radicalmente honesto y abierto, mientras se sigue siendo amable y respetuoso.
+- El estilo de mando y control frena la innovación y daña la eficiencia del equipo. La colaboración florece cuando las relaciones humanas sustituyen al acoso y la burocracia.
+- Radical Candor busca que managers y líderes logren juntos lo que no pueden lograr solos, preocupándose de verdad por su gente.
+- Se trata de ser radicalmente honesto y abierto, sin dejar de ser amable y respetuoso.
 
-### Las Dos Dimensiones de Radical Candor
+### Las dos dimensiones
 
-- **Preocuparse Personalmente**: Esta dimensión implica mostrar interés genuino en las vidas, bienestar y metas de las personas. Se trata de ser humano y empático.
-- **Desafiar Directamente**: Esta dimensión implica dar retroalimentación específica, oportuna y accionable que sea tanto amable como clara. Se trata de ser directo y orientado a resultados.
+- **Preocuparse personalmente**: Mostrar interés genuino en la vida, bienestar y metas de las personas. Ser humano y empático.
+- **Desafiar directamente**: Dar feedback específico, oportuno y útil, que sea amable y claro a la vez. Ser directo y orientado a resultados.
 
-### Evitando los Tres Comportamientos
+### Los tres comportamientos a evitar
 
-1. **Agresión Desagradable**: Ser excesivamente crítico o agresivo.
-2. **Empatía Ruinosa**: Ser excesivamente comprensivo o permisivo.
-3. **Insinceridad Manipuladora**: Ser insincero o manipulador en tu retroalimentación.
+1. **Agresión desagradable**: Ser demasiado crítico o agresivo.
+2. **Empatía ruinosa**: Ser demasiado comprensivo o permisivo.
+3. **Insinceridad manipuladora**: Ser falso o manipulador en tu feedback.
 
 
-### Radical Candor en Acción
+### Radical Candor en acción
 
-- Da elogios específicos y sinceros y críticas amables y claras.
-- Crea un entorno libre de estrés donde las personas se sientan seguras para expresar lo que piensan.
-- Enfócate en la colaboración y la innovación, en lugar del comando y control.
-- Preocúpate por las personas con las que trabajas y desafíalas a hacer su mejor trabajo.
+- Da elogios específicos y sinceros. Las críticas, amables pero claras.
+- Crea un entorno donde la gente se sienta segura para hablar con libertad.
+- Prioriza la colaboración y la innovación sobre el mando y control.
+- Preocúpate por tu equipo y desafíales a dar lo mejor de sí.
 
-Al aplicar Radical Candor, los managers y líderes pueden construir relaciones sólidas, motivar a sus equipos y lograr mejores resultados.
+Al aplicar Radical Candor, managers y líderes construyen relaciones sólidas, motivan a sus equipos y logran mejores resultados.
 
 ---
 

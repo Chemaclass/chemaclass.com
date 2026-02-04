@@ -1,6 +1,6 @@
 +++
 title = "Ejecuta tu nodo LN en una Raspberry Pi"
-description = "En esta guía, te mostraré cómo configurar un nodo de Lightning Network (LN) completamente custodial usando Alby Hub en una Raspberry Pi, dándote control total sobre tu nodo. Alby Hub ofrece una versión DIY gratuita para una wallet Lightning auto-custodiada, asegurando la propiedad total de tus fondos siendo 100% open-source."
+description = "En esta guía te muestro cómo configurar un nodo de Lightning Network (LN) con Alby Hub en una Raspberry Pi. Tendrás control total sobre tu nodo. Alby Hub ofrece una versión DIY gratuita para una wallet Lightning auto-custodiada: tus fondos son tuyos, y el código es 100% open-source."
 draft = false
 [taxonomies]
 tags = [ "bitcoin", "open-source", "privacy", "tutorial" ]
@@ -11,11 +11,11 @@ static_thumbnail = "/images/blog/2025-02-17/cover.jpg"
 
 ![blog-cover](/images/blog/2025-02-17/cover.jpg)
 
-En esta guía, te mostraré cómo configurar un nodo de Lightning Network (LN) completamente custodial usando Alby Hub en una Raspberry Pi, dándote control total sobre tu nodo. Alby Hub ofrece una versión DIY gratuita para una wallet Lightning auto-custodiada, asegurando la propiedad total de tus fondos siendo 100% open-source.
+En esta guía te muestro cómo configurar un nodo de Lightning Network (LN) con Alby Hub en una Raspberry Pi. Tendrás control total sobre tu nodo. Alby Hub ofrece una versión DIY gratuita para una wallet Lightning auto-custodiada: tus fondos son tuyos, y el código es 100% open-source.
 
 <!-- more -->
 
-Soporta tanto direcciones Lightning como Nostr, permitiendo conectividad fluida entre ecosistemas, y se integra sin esfuerzo con docenas de aplicaciones Bitcoin. Con servicios integrados de Lightning Service Provider (LSP) y la app móvil Alby Go, gestionar tu nodo sobre la marcha nunca ha sido más fácil.
+Soporta direcciones Lightning y Nostr, conectando ambos ecosistemas sin problemas. Se integra con docenas de aplicaciones Bitcoin. Con los servicios LSP (Lightning Service Provider) integrados y la app Alby Go, gestionar tu nodo desde el móvil es muy fácil.
 
 ---
 
@@ -29,20 +29,20 @@ De todos modos, he incluido un breve repaso de los fundamentos de Lightning Netw
 
 ## ¿Qué es la Lightning Network?
 
-La LN es una solución de segunda capa construida sobre Bitcoin para permitir transacciones rápidas, baratas y escalables.
+La LN es una capa construida sobre Bitcoin que permite transacciones rápidas, baratas y escalables.
 
-- **¿Por qué?** La capa base de Bitcoin es segura pero lenta y cara para pequeños pagos debido a los límites de tamaño de bloque y las comisiones.
-- **¿Cómo?** LN usa canales de pago fuera de la cadena que permiten a los usuarios transaccionar instantáneamente sin esperar confirmaciones de blockchain.
+- **¿Por qué?** La capa base de Bitcoin es segura pero lenta y cara para pagos pequeños, por los límites de bloque y las comisiones.
+- **¿Cómo?** LN usa canales de pago fuera de la cadena. Puedes enviar pagos al instante sin esperar confirmaciones en la blockchain.
 
 ### Conceptos clave
 
-- **Canales de pago**: Los usuarios abren un canal haciendo una transacción on-chain, luego envían pagos instantáneos ilimitados dentro de ese canal.
-- **Enrutamiento**: No necesitas un canal directo con todos — los pagos pueden enrutarse a través de múltiples nodos conectados.
-- **Comisiones bajas**: Solo abrir/cerrar canales requiere comisiones on-chain; la mayoría de transacciones cuestan fracciones de céntimo.
+- **Canales de pago**: Abres un canal con una transacción on-chain. Después puedes enviar pagos instantáneos e ilimitados dentro de ese canal.
+- **Enrutamiento**: No necesitas canal directo con todos. Los pagos se enrutan a través de múltiples nodos conectados.
+- **Comisiones bajas**: Solo abrir y cerrar canales requiere comisiones on-chain. El resto cuesta fracciones de céntimo.
 
 ### Objetivo
 
-LN hace Bitcoin usable para transacciones cotidianas, como comprar café, sin esperar más de 10 minutos por confirmaciones.
+LN hace Bitcoin usable para el día a día. Puedes comprar un café sin esperar 10 minutos por confirmaciones.
 
 > En resumen: Lightning Network = Pagos Bitcoin instantáneos + baratos, asegurados por la blockchain de Bitcoin.
 
@@ -235,7 +235,7 @@ Después de eso, podrás usarlos a través de la [Extensión Alby](https://getal
 
 ![tutorial](/images/blog/2025-02-17/tuto-31.jpg)
 
-Tu nodo es la fuente definitiva de verdad. Conectar estas apps a él te permitirá usar tus sats sin problemas en diferentes plataformas.
+Tu nodo es la fuente de verdad. Conecta estas apps y podrás usar tus sats en cualquier plataforma sin problemas.
 
 ![tutorial](/images/blog/2025-02-17/tuto-32.jpg)
 
@@ -245,7 +245,7 @@ Tu nodo es la fuente definitiva de verdad. Conectar estas apps a él te permitir
 
 ### Actualizando tu nodo
 
-Similar al proceso de instalación, hay un script disponible para actualizar tu nodo. Puedes encontrarlo en el repositorio fuente: [GitHub - Script de actualización Alby Hub](https://github.com/getAlby/hub/tree/master/scripts/pi-aarch64)
+Como en la instalación, hay un script para actualizar tu nodo. Lo encuentras en el repositorio: [GitHub - Script de actualización Alby Hub](https://github.com/getAlby/hub/tree/master/scripts/pi-aarch64)
 
 ```bash
 ssh testhub@testhub.local '/bin/bash -c "$(curl -fsSL https://getalby.com/install/hub/pi-aarch64-update.sh)"'
@@ -253,7 +253,7 @@ ssh testhub@testhub.local '/bin/bash -c "$(curl -fsSL https://getalby.com/instal
 
 ### Manejando cortes de energía
 
-Si se va la luz, la Raspberry Pi se apagará. Una vez se restaure la energía, se reiniciará automáticamente, pero Alby Hub te pedirá que introduzcas la contraseña que configuraste antes.
+Si se va la luz, la Raspberry Pi se apaga. Cuando vuelva, se reinicia sola. Alby Hub te pedirá la contraseña que configuraste antes.
 
 ---
 

@@ -15,17 +15,17 @@ Quería aprender un nuevo lenguaje, así que después de probar algunos, termin�
 
 <!-- more -->
 
-[Golang](https://go.dev/) (o `Go`) soporta concurrencia a través de hilos ligeros llamados goroutines. Estos son diferentes del multithreading tradicional—como en Java, donde tienes que manejar sincronización y coordinación para gestionar recursos compartidos de forma segura. En contraste, las goroutines de Go son ligeras, gestionadas por el runtime de Go, y más baratas de crear y gestionar.
+[Golang](https://go.dev/) (o `Go`) soporta concurrencia mediante hilos ligeros llamados goroutines. Son diferentes del multithreading tradicional de Java, donde hay que manejar sincronizacion y coordinacion para gestionar recursos compartidos de forma segura. Las goroutines son ligeras, las gestiona el runtime de Go, y son mas baratas de crear y manejar.
 
-Mientras que el paralelismo es **hacer** varias cosas simultáneamente, la concurrencia es sobre **lidiar** con varias cosas al mismo tiempo. Cuando hablamos de concurrencia y paralelismo, no conocemos el orden de las cosas. No sabemos qué va a pasar primero o qué va a terminar primero. Hay un orden de ejecución indefinido.
+El paralelismo es **hacer** varias cosas simultaneamente. La concurrencia es **lidiar** con varias cosas a la vez. En ambos casos, no conocemos el orden de ejecucion: no sabemos que pasara primero ni que terminara antes.
 
-> Imagina que estás cocinando: preparando una sopa, una ensalada y una tortilla. Serías una sola unidad, pero estás preparando diferentes platos. Podrías terminar la ensalada primero o la sopa o la tortilla... ¡No podemos garantizar eso! Esto sería concurrencia, ya que estás solo lidiando con varias cosas. Tan pronto como tu pareja venga y te ayude a cocinar, entonces estaremos hablando de paralelismo.
+> Imagina que cocinas: preparas una sopa, una ensalada y una tortilla. Eres una sola persona, pero preparas varios platos. Podrias terminar primero la ensalada, la sopa o la tortilla... no hay garantia. Esto es concurrencia: lidias con varias cosas a la vez. Cuando tu pareja viene a ayudarte, eso ya es paralelismo.
 
 ![cover](/images/blog/2024-04-02/concurrency-vs-multithreading.jpg)
 
-Recuerdo construir un juego similar en `Java` cuando estaba aprendiendo multithreading hace diez años... aprovechemos esta oportunidad para hacerlo de nuevo con `Go` moderno.
+Recuerdo haber construido un juego similar en `Java` cuando aprendia multithreading hace diez anos. Aprovecho esta oportunidad para hacerlo de nuevo con `Go` moderno.
 
-Construí un juego emulador de terminal que imita una carrera de caballos. Cada caballo es una goroutine que corre en una matriz bidimensional compartida. Una vez que un caballo llega al final, notifica al canal compartido entre todos los otros caballos --corriendo en diferentes procesos-- y todos se detienen, mostrando en la terminal al ganador de la carrera.
+Construi un juego de terminal que simula una carrera de caballos. Cada caballo es una goroutine que corre en una matriz bidimensional compartida. Cuando un caballo llega al final, notifica al canal compartido con los demas caballos (que corren en diferentes procesos) y todos se detienen, mostrando al ganador.
 
 Separé el código en cuatro áreas para ayudar a visualizarlo:
 - Punto de entrada
@@ -90,7 +90,7 @@ func main() {
 
 ### Generando el tablero
 
-El tablero de carreras es una matriz bidimensional de punteros a Horses. Cada línea "contiene" solo un Caballo; es decir, solo un puntero apuntará a un Caballo real, el resto serán punteros a `nil`. Durante la generación del Tablero, crearemos un Caballo en la primera posición de cada línea.
+El tablero de carreras es una matriz bidimensional de punteros a Horses. Cada linea "contiene" un solo Caballo: solo un puntero apunta a un Caballo real, el resto son `nil`. Al generar el Tablero, creamos un Caballo en la primera posicion de cada linea.
 
 ```go
 func NewRaceBoard(lines, lineLength int) [][]*Horse {
@@ -127,7 +127,7 @@ func generateHorseName() string {
 
 ### Renderizando el juego
 
-Luego `RenderGame()`, `renderRaceBoard()`, `renderRaceLine()` y `renderRacePosition()` están separados para ayudar a enfocarse en la responsabilidad de cada método --identificando cuál es el sujeto a renderizar.
+Los metodos `RenderGame()`, `renderRaceBoard()`, `renderRaceLine()` y `renderRacePosition()` estan separados para que cada uno tenga una responsabilidad clara: renderizar su sujeto correspondiente.
 
 > `RenderGame()` se está ejecutando en otro proceso usando `go`.
 
@@ -207,9 +207,9 @@ func renderRacePosition(
 
 ### Moviendo los caballos
 
-En `main(...)`, el `winnerChan` es un canal compartido que será usado por el primer Caballo que llegue a la última posición en su línea.
+En `main(...)`, el `winnerChan` es un canal compartido que usara el primer Caballo que llegue a la ultima posicion de su linea.
 
-Cada Caballo ejecutará un bucle hasta llegar al final de la línea O recibir (a través del canal compartido `winnerChan`) el mensaje de que otro Caballo ya ganó la carrera. Hasta entonces, cada caballo se moverá independientemente durmiendo aleatoriamente milisegundos antes de moverse a la siguiente posición en su línea.
+Cada Caballo ejecuta un bucle hasta llegar al final de la linea o recibir (via `winnerChan`) el mensaje de que otro Caballo ya gano. Hasta entonces, cada caballo se mueve de forma independiente, durmiendo milisegundos aleatorios antes de avanzar a la siguiente posicion.
 
 > `startRuningHorseInLine()` se ejecuta en otro proceso usando `go`.
 
@@ -260,6 +260,6 @@ func moveHorseOnePos(board [][]*Horse, line int, winnerChan chan Horse) {
 
 ### Código fuente
 
-El código mostrado en este post es una versión simplificada, así que si te gustaría revisar el código funcionando, puedes hacerlo aquí: [Chemaclass/go-horse-racing](https://github.com/Chemaclass/go-horse-racing).
+El codigo de este post es una version simplificada. Si quieres ver el codigo completo funcionando, esta aqui: [Chemaclass/go-horse-racing](https://github.com/Chemaclass/go-horse-racing).
 
-> Gracias a mi antiguo Team Lead, Andrei Boar, quien me ayudó a revisar mi primera solución original y proporcionó una [solución alternativa](https://gist.github.com/zuzuleinen/79413aa7933d7d6c6d84ec6ba8c3910a) (¡más simple y mejor!), que apliqué a mi código original. El principal aprendizaje fue usar un `chan Horse` para pasar el Caballo ganador desde `main()`, en lugar de usar un `chan bool` y un `sync.WaitGroup` entre todos los hilos.
+> Gracias a mi antiguo Team Lead, Andrei Boar, que me ayudo a revisar mi solucion original y proporciono una [solucion alternativa](https://gist.github.com/zuzuleinen/79413aa7933d7d6c6d84ec6ba8c3910a) (mas simple y mejor) que aplique a mi codigo. Lo principal que aprendi fue usar un `chan Horse` para pasar el Caballo ganador desde `main()`, en vez de usar un `chan bool` y un `sync.WaitGroup` entre todos los hilos.

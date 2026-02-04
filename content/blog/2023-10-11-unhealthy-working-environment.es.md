@@ -1,6 +1,6 @@
 +++
 title = "Ambiente de trabajo no saludable"
-description = "Un ambiente de trabajo no saludable puede tener varios síntomas que impactan negativamente tanto el bienestar físico como mental de los empleados."
+description = "Un ambiente de trabajo tóxico tiene varios síntomas que afectan el bienestar físico y mental. Aprende a reconocerlos."
 draft = false
 [taxonomies]
 tags = ["leadership", "team-management", "communication", "psychology"]
@@ -11,69 +11,69 @@ static_thumbnail = "/images/blog/2023-10-11/cover.jpg"
 
 ![blog-cover](/images/blog/2023-10-11/cover.jpg)
 
-Un ambiente de trabajo no saludable puede tener varios síntomas que impactan negativamente el bienestar físico y mental de los empleados.
+Un ambiente de trabajo no saludable tiene varios síntomas que afectan el bienestar físico y mental de las personas.
 
 <!-- more -->
 
-Mientras escribía sobre [El Principio de Peter](/es/blog/the-peter-principle), mencioné: _"Hablen entre ustedes. Si sientes que no puedes, eso es un **síntoma de un ambiente de trabajo no saludable**, y eso es algo más significativo con lo que lidiar."_ Pero, ¿cuáles son esos síntomas?
+Cuando escribía sobre [El Principio de Peter](/es/blog/the-peter-principle/), mencioné: _"Hablad entre vosotros. Si sientes que no puedes, eso es **síntoma de un ambiente de trabajo no saludable**, y es un problema mayor."_ Pero, ¿cuáles son esos síntomas?
 
 ## Síntomas
 
-De todos los posibles síntomas, estos son los que destacaría: Alto estrés, mala comunicación, falta de reconocimiento, microgestión, falta de equilibrio trabajo-vida, trato injusto, falta de oportunidades de crecimiento, conflictos no saludables entre colegas, falta de objetivos y expectativas claros, altas tasas de rotación, baja moral y motivación, y cansancio físico o emocional constante.
+De todos los posibles, estos son los que destacaría: alto estrés, mala comunicación, falta de reconocimiento, microgestión, falta de equilibrio trabajo-vida, trato injusto, pocas oportunidades de crecimiento, conflictos tóxicos entre compañeros, falta de objetivos claros, alta rotación, baja moral y cansancio constante.
 
 Vamos uno por uno.
 
 ### Alto estrés
 
-Estrés y presión excesivos. Esto puede deberse a cargas de trabajo pesadas, expectativas poco realistas o falta de apoyo.
+Estrés y presión excesivos. Puede venir de cargas de trabajo pesadas, expectativas irreales o falta de apoyo.
 
 ### Mala comunicación
 
-La comunicación inefectiva, ya sea entre colegas, equipos o entre la gestión y los empleados, puede llevar a malentendidos, frustración y conflictos no saludables.
+La comunicación ineficaz (entre compañeros, equipos o con los jefes) lleva a malentendidos, frustración y conflictos.
 
 ### Falta de reconocimiento
 
-Cuando los empleados sienten que sus esfuerzos no son reconocidos o recompensados, puede llevar a sentimientos de desmotivación y reducción de la satisfacción laboral.
+Cuando sientes que tu esfuerzo no se reconoce ni recompensa, te desmotivas y tu satisfacción laboral baja.
 
 ### Microgestión
 
-Los estilos de gestión excesivamente controladores pueden sofocar la creatividad y la autonomía, llevando a frustración y disminución de la satisfacción laboral.
+Los jefes excesivamente controladores asfixian la creatividad y la autonomía. Eso frustra y reduce la satisfacción en el trabajo.
 
 ### Falta de equilibrio trabajo-vida
 
-Un equilibrio saludable entre trabajo y vida es esencial para el bienestar de los empleados. Largas horas de trabajo, horas extra excesivas o expectativas poco realistas pueden llevar al agotamiento y reducción de la productividad.
+Un equilibrio sano entre trabajo y vida personal es esencial. Jornadas largas, horas extra excesivas o expectativas irreales llevan al agotamiento y bajan la productividad.
 
 ### Trato injusto
 
-La discriminación, el favoritismo o las oportunidades desiguales pueden crear una atmósfera tóxica y divisiva entre los empleados.
+La discriminación, el favoritismo o las oportunidades desiguales crean una atmósfera tóxica y divisiva.
 
 ### Falta de oportunidades de crecimiento
 
-Cuando los empleados sienten que no hay espacio para el avance o crecimiento profesional, pueden desvincularse y sentirse insatisfechos en sus roles.
+Cuando sientes que no hay espacio para avanzar profesionalmente, te desconectas y te sientes insatisfecho con tu rol.
 
 ![blog-cover](/images/blog/2023-10-11/middle.jpg)
 
-### Conflictos no saludables entre colegas
+### Conflictos tóxicos entre compañeros
 
-Desacuerdos constantes, conflictos o una atmósfera hostil entre colegas pueden crear un ambiente de trabajo tóxico.
+Desacuerdos constantes o una atmósfera hostil entre compañeros crean un ambiente tóxico.
 
-### Falta de objetivos y expectativas claros
+### Falta de objetivos claros
 
-Los empleados necesitan orientación clara sobre sus roles, responsabilidades y expectativas de rendimiento. Objetivos poco claros o constantemente cambiantes pueden llevar a confusión y frustración.
+Necesitas orientación clara sobre tu rol, responsabilidades y lo que se espera de ti. Objetivos difusos o que cambian constantemente generan confusión y frustración.
 
-### Altas tasas de rotación
+### Alta rotación
 
-Si hay una corriente constante de empleados dejando la empresa, puede ser una señal de que el ambiente de trabajo no es propicio para el empleo a largo plazo.
+Si la gente se va constantemente, es señal de que el ambiente no funciona para retener talento a largo plazo.
 
 ### Baja moral y motivación
 
-Cuando los empleados están consistentemente desmotivados o tienen baja moral, puede llevar a disminución de la productividad y una atmósfera negativa.
+Cuando la gente está desmotivada de forma constante, la productividad baja y el ambiente se vuelve negativo.
 
 ### Cansancio físico o emocional constante
 
-La exposición prolongada a un ambiente de trabajo no saludable puede llevar al agotamiento físico y emocional o incluso problemas de salud mental.
+Exponerse mucho tiempo a un ambiente así lleva al agotamiento físico y emocional, incluso a problemas de salud mental.
 
-> Es importante notar que estos síntomas pueden variar de un lugar de trabajo a otro. Abordar estos problemas de manera rápida y efectiva es crucial para crear un ambiente saludable y productivo.
+> Estos síntomas varían de un sitio a otro. Abordarlos rápido es clave para crear un ambiente sano y productivo.
 
 
 ![blog-cover](/images/blog/2023-10-11/footer.jpg)

@@ -1,6 +1,6 @@
 +++
 title = "Dinero Programable"
-description = "Bitcoin a menudo se denomina dinero programable porque permite la ejecución de transacciones programables a través de su lenguaje de scripting, aprovechando cada bit para precisión y funcionalidad."
+description = "Bitcoin se conoce como dinero programable porque permite ejecutar transacciones con condiciones mediante su lenguaje de scripting."
 draft = false
 [taxonomies]
 tags = [ "bitcoin", "programming", "cryptography", "security" ]
@@ -11,54 +11,54 @@ static_thumbnail = "/images/blog/2024-07-06/cover.jpg"
 
 ![blog-cover](/images/blog/2024-07-06/cover.jpg)
 
-Bitcoin a menudo se denomina "dinero programable" porque permite la ejecución de transacciones programables a través de su lenguaje de scripting.
+A Bitcoin se le llama "dinero programable" porque permite ejecutar transacciones con condiciones mediante su lenguaje de scripting.
 
 <!-- more -->
 
-## Entendiendo el Dinero Programable
+## Qué es el dinero programable
 
-El dinero programable es la capacidad de incrustar lógica y condiciones en las transacciones financieras. Esta programabilidad permite que las transacciones se ejecuten automáticamente basándose en reglas predefinidas sin intermediarios o intervención manual. Transforma el dinero de un medio de intercambio estático en una herramienta dinámica capaz de ejecutar acuerdos complejos y automatizar operaciones financieras.
+Dinero programable significa poder meter lógica y condiciones dentro de las transacciones financieras. Las transacciones se ejecutan solas siguiendo reglas predefinidas, sin intermediarios ni intervención manual. El dinero deja de ser algo estático y se convierte en una herramienta capaz de ejecutar acuerdos y automatizar operaciones.
 
-## El Lenguaje Script
+## El lenguaje Script
 
-La programabilidad de Bitcoin está impulsada por su lenguaje de scripting incorporado, [**Script**](https://en.bitcoin.it/wiki/Script). A diferencia de los lenguajes de programación tradicionales, Script es un lenguaje basado en pila, similar a Forth, diseñado explícitamente para transacciones de Bitcoin.
+La programabilidad de Bitcoin viene de su lenguaje incorporado: [**Script**](https://en.bitcoin.it/wiki/Script). Es un lenguaje basado en pila, parecido a Forth, creado específicamente para transacciones de Bitcoin.
 
-Soporta multi-firma, transferencias bloqueadas por tiempo y otras transferencias condicionales que pueden programarse en transacciones de Bitcoin. Es intencionalmente no Turing-completo, sin bucles.
+Soporta multi-firma, transferencias bloqueadas por tiempo y otras transferencias condicionales. Es intencionalmente limitado: no es Turing-completo y no tiene bucles.
 
-Este video incluye ejemplos de los scripts de bloqueo/desbloqueo más comúnmente usados.
+Este video muestra ejemplos de los scripts de bloqueo/desbloqueo más comunes.
 
 {{ youtube(id="6Fa04MnURhw") }}
 
-## Características Clave del Script de Bitcoin
+## Características clave del Script de Bitcoin
 
-### Ejecución Basada en Pila
+### Ejecución basada en pila
 
-Script opera en un modelo de ejecución basado en pila donde los comandos y datos se empujan a una pila y se procesan de manera Last-In-First-Out ([LIFO](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))).
+Script funciona con un modelo de pila: los comandos y datos se apilan y se procesan en orden Last-In-First-Out ([LIFO](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))).
 
-### Gasto Condicional
+### Gasto condicional
 
-Una transacción que solo puede gastarse si se proporcionan ciertos datos o se cumplen criterios específicos. Esto puede usarse para:
+Una transaccion que solo se puede gastar si se cumplen ciertos criterios o se proporcionan datos especificos. Sirve para:
   - servicios de custodia
-  - intercambios atómicos
-  - y otros arreglos financieros complejos
+  - intercambios atomicos
+  - otros arreglos financieros
 
 ### Multifirma
 
-Las transacciones pueden configurarse para requerir múltiples firmas de diferentes claves privadas antes de poder gastarse. Útil para:
+Puedes configurar transacciones que requieran varias firmas de diferentes claves privadas. Util para:
   - cuentas conjuntas
   - fondos corporativos
-  - y mejorar la seguridad, ya que ninguna parte puede gastar los fondos unilateralmente
+  - mayor seguridad (nadie puede gastar los fondos por su cuenta)
 
-### Bloqueo Temporal
+### Bloqueo temporal
 
-Las transacciones pueden incluir condiciones basadas en tiempo que previenen que se gasten hasta que se alcance cierto tiempo o altura de bloque. Esta característica es útil para varios propósitos:
+Las transacciones pueden tener condiciones de tiempo: no se pueden gastar hasta cierta fecha o altura de bloque. Util para:
   - pagos diferidos
   - contratos inteligentes
-  - y asegurar que los fondos no se gasten prematuramente (ej: con [Lightning Network](https://en.bitcoin.it/wiki/Lightning_Network))
+  - evitar gastos prematuros (ej: [Lightning Network](https://en.bitcoin.it/wiki/Lightning_Network))
 
-### Códigos de Operación
+### Codigos de operacion
 
-El Script de Bitcoin realiza operaciones específicas dentro de las transacciones con sus [OP_Codes](https://en.bitcoin.it/wiki/Script#Opcodes). Aquí hay algunos de ellos:
+El Script de Bitcoin usa [OP_Codes](https://en.bitcoin.it/wiki/Script#Opcodes) para realizar operaciones especificas. Algunos ejemplos:
 
 - `OP_DUP`: <small>Duplica el elemento superior de la pila.</small>
 - `OP_HASH160`: <small>Hashea el elemento superior de la pila dos veces (SHA-256 seguido de RIPEMD-160).</small>
@@ -70,7 +70,7 @@ El Script de Bitcoin realiza operaciones específicas dentro de las transaccione
 
 ## Tipos comunes de direcciones Bitcoin
 
-En Bitcoin, diferentes tipos de direcciones corresponden a varias formas de hacer scripts de transacciones. Aquí, exploraremos ejemplos de Script de Bitcoin para cada tipo de dirección principal. Cada tipo de dirección tiene su propio formato de script específico.
+Cada tipo de direccion corresponde a una forma distinta de hacer scripts. Veamos ejemplos para cada tipo principal.
 
 - **P2PK**: Las primeras transacciones legacy usando claves públicas completas directamente.
 - **P2PKH**: Comienza con `1`. Transacciones **Legacy** usando hashes de claves públicas.
@@ -82,17 +82,17 @@ En Bitcoin, diferentes tipos de direcciones corresponden a varias formas de hace
 
 > Usar SegWit nativo (P2WPKH y P2WSH) es preferible cuando es posible, ya que maximiza los beneficios de la actualización SegWit, pero P2SH-SegWit puede ser útil para compatibilidad con sistemas más antiguos.
 
-### P2PK (Pay-to-PubKey) - Dirección Legacy más antigua <small>[arriba](#tipos-comunes-de-direcciones-bitcoin)</small>
+### P2PK (Pay-to-PubKey) - Direccion Legacy antigua <small>[arriba](#tipos-comunes-de-direcciones-bitcoin)</small>
 
 <div class="status info">
 Comienza con "1" (ej., 1A1zP1eP5QGefi2DMPTf...v7DivfNa)
 </div>
 
-Antes de que P2PKH y P2SH se convirtieran en estándar, las direcciones de Bitcoin no eran tan flexibles o ricas en características. Aquí hay algunas consideraciones:
+Antes de P2PKH y P2SH, las direcciones de Bitcoin eran mas limitadas:
 
-- Direcciones que comienzan con 1 pero sin hashear la clave pública.
-- No común en la práctica moderna debido a falta de privacidad y eficiencia.
-- El formato P2PK está en gran parte **obsoleto** en favor de (como mínimo) P2PKH.
+- Empiezan con 1 pero sin hashear la clave publica.
+- Poco usadas hoy por falta de privacidad y eficiencia.
+- Formato **obsoleto** en favor de P2PKH como minimo.
 
 ---
 
@@ -206,7 +206,7 @@ Este script significa que se requieren 2 de 3 claves públicas proporcionadas pa
 Comienza con "bc1q" (ej., bc1qf0r2m0ck4psv6yrk9w.....kw8v5rj7ph3)
 </div>
 
-P2WPKH es un tipo de dirección Segregated Witness (SegWit) que usa un formato de scripting diferente comparado con direcciones legacy y P2SH. Simplifica las transacciones reduciendo el tamaño de datos y las comisiones comparado con formatos legacy.
+P2WPKH es una direccion Segregated Witness (SegWit) con un formato de scripting distinto. Simplifica las transacciones: menos datos y menos comisiones que los formatos legacy.
 
 ### ScriptPubKey (Script de Bloqueo)
 
@@ -220,7 +220,7 @@ OP_0 OP_PUSHBYTES_20 <PubKHash>
 
 ### Datos del Testigo
 
-Para P2WPKH, el script de desbloqueo no es requerido en el sentido tradicional (es decir, dentro del script de desbloqueo explícitamente incluido en la entrada de la transacción). En cambio, la información de desbloqueo se proporciona como parte de los datos del testigo en el formato de transacción SegWit.
+En P2WPKH no hace falta un script de desbloqueo tradicional. La informacion de desbloqueo va como parte de los datos del testigo en el formato SegWit.
 
 ```php
 <sig> <PubK>
@@ -264,7 +264,7 @@ OP_0 OP_PUSHBYTES_32 <ScriptHash>
 Comienza con bc1p (ej.: bc1pl9dfv7kvj4hj9s3a8l.....gjstmrpjl09g8ks3ukds70q4r2j5h)
 </div>
 
-Taproot combina firmas [Schnorr](https://en.bitcoin.it/wiki/Schnorr) con [MAST](https://en.bitcoin.it/wiki/BIP_0114#Merkelized_Abstract_Syntax_Tree), permitiendo condiciones de gasto privadas y eficientes y haciendo que transacciones complejas **_parezcan estándar_** a menos que se revelen las condiciones. Permite la ejecución eficiente de transacciones complejas mientras oculta sus detalles.
+Taproot combina firmas [Schnorr](https://en.bitcoin.it/wiki/Schnorr) con [MAST](https://en.bitcoin.it/wiki/BIP_0114#Merkelized_Abstract_Syntax_Tree). Permite condiciones de gasto privadas y eficientes. Las transacciones complejas **_parecen estandar_** a menos que se revelen las condiciones.
 
 ### ScriptPubKey (Script de Bloqueo)
 
@@ -291,7 +291,7 @@ OP_1 <x-only PubK>
 
 ### *Hay una rareza en la ejecución de CHECKMULTISIG <small>[arriba](#scriptsig-script-de-desbloqueo-2)</small>
 
-La implementación de `OP_CHECKMULTISIG` saca un elemento más de lo que debería. El elemento extra es ignorado al verificar las firmas, así que no tiene efecto directo en el OP mismo. Debe estar presente porque si `OP_CHECKMULTISIG` intenta sacar de una pila vacía, causará un error de pila y fallo del script.
+`OP_CHECKMULTISIG` saca un elemento de mas de la pila. Ese elemento extra se ignora al verificar firmas, asi que no afecta directamente. Pero tiene que estar porque si intenta sacar de una pila vacia, el script falla.
 
 ```php
 OP_0 <sig2> <sig3> 2 <PubK1> <PubK2> <PubK3> 3 OP_CHECKMULTISIG
@@ -299,20 +299,20 @@ OP_0 <sig2> <sig3> 2 <PubK1> <PubK2> <PubK3> 3 OP_CHECKMULTISIG
 
 El script de entrada en este multisig no es `<sig2> <sig3>` sino `OP_0 <sig2> <sig3>`.
 
-Es porque la costumbre al principio era usar `OP_0` que luego se convirtió en una regla de política de relay y eventualmente una regla de consenso ([BIP147](https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki)).
+Al principio se usaba `OP_0` por convencion. Luego se convirtio en regla de relay y finalmente en regla de consenso ([BIP147](https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki)).
 
-Es posible que el desarrollador original agregara el elemento extra en la versión original de Bitcoin, para poder agregar una característica para permitir pasar un mapa en un soft fork posterior (por razones de rendimiento). Sin embargo, esa característica nunca se implementó, y la actualización BIP147 a las reglas de consenso en 2017 hace imposible agregar esa característica en el futuro.
+Puede que el desarrollador original lo pusiera pensando en anadir una funcion de mapa en un soft fork futuro (por rendimiento). Esa funcion nunca se implemento, y BIP147 en 2017 lo hace imposible ya.
 
-Solo el desarrollador original de Bitcoin podría decir si el elemento ficticio de la pila fue el resultado de un bug o un plan para una actualización futura. De ahora en adelante, si ves un script multisig, deberías esperar ver un `OP_O` extra al principio, cuyo único propósito es como solución alternativa a una rareza en las reglas de consenso.
+Solo el creador de Bitcoin podria decir si fue un bug o un plan. Si ves un script multisig, espera encontrar un `OP_0` extra al principio. Es un parche para esta rareza del consenso.
 
 ---
 
-## Seguimientos
+## Para seguir aprendiendo
 
-- Documentación oficial de [Script](https://en.bitcoin.it/wiki/Script) en el Bitcoin Wiki.
-- [Bitcoin IDE](https://siminchen.github.io/bitcoinIDE/build/editor.html) es un emulador visual de Script de Bitcoin online. Genial para propósitos de aprendizaje.
-- [Script Editor](https://coins.github.io/bitcoin-scripts/script-editor/) es investigación orientada a producto sobre escalabilidad y usabilidad de Bitcoin.
-- [Miniscript](https://bitcoin.sipa.be/miniscript/) es un lenguaje para escribir (un subconjunto de) Scripts de Bitcoin de manera estructurada, permitiendo análisis, composición, firma genérica, y más.
+- Documentacion oficial de [Script](https://en.bitcoin.it/wiki/Script) en el Bitcoin Wiki.
+- [Bitcoin IDE](https://siminchen.github.io/bitcoinIDE/build/editor.html): emulador visual de Script online, genial para aprender.
+- [Script Editor](https://coins.github.io/bitcoin-scripts/script-editor/): investigacion sobre escalabilidad y usabilidad de Bitcoin.
+- [Miniscript](https://bitcoin.sipa.be/miniscript/): lenguaje para escribir Scripts de Bitcoin de forma estructurada, con analisis, composicion y firma generica.
 
 **Lecturas relacionadas**
 

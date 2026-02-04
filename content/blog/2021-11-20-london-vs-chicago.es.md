@@ -16,31 +16,31 @@ Hay dos escuelas conocidas en TDD: la escuela mockista (también conocida como O
 
 ### ¿Por qué London y Chicago?
 
-Dos empresas, una de Londres y otra de Chicago, afirmaban hacer TDD, pero se enfocaban en aspectos diferentes. La empresa de Londres construía software de afuera hacia adentro, mientras que la de Chicago de adentro hacia afuera. Veámoslas en más detalle.
+Dos empresas, una de Londres y otra de Chicago, afirmaban hacer TDD pero con enfoques diferentes. La de Londres construía software de afuera hacia adentro; la de Chicago, de adentro hacia afuera. Veamos cada una.
 
 ## Outside-in: Escuela de Londres
 
-Proporciona un enfoque guiado por comportamiento para TDD. Comenzando desde el exterior de la aplicación y trabajando hacia adentro moviéndose a capas inferiores. Por ejemplo, comenzando desde la API/Controladores hacia abajo hasta las capas de aplicación o dominio.
+Un enfoque guiado por comportamiento para TDD. Empiezas desde el exterior de la aplicación y vas hacia adentro, bajando a capas inferiores. Por ejemplo, desde la API/Controladores hacia las capas de aplicación o dominio.
 
 ### PROS
 
-- **Enfocado en Comportamiento**: esto requiere muchos dobles de test porque testearás muchas abstracciones que aún no existen ya que estás creando lógica de alto nivel primero. No escribirás código muerto pero será fácil crear tests altamente acoplados a la lógica y por lo tanto hacer del refactoring una tarea difícil.
+- **Enfocado en Comportamiento**: requiere muchos dobles de test porque testeas abstracciones que aún no existen (creas lógica de alto nivel primero). No escribirás código muerto, pero es fácil crear tests muy acoplados a la lógica, lo que dificulta el refactoring.
 - **Separación Comando-Consulta**: es una disciplina para gestionar efectos secundarios. O realizas una acción (comando) o pides un valor (consulta).
 
 ### CONTRAS
 
-- **Tests Frágiles**: tiende a crear tests que se rompen fácilmente porque usualmente están demasiado acoplados al código de producción.
-- **Refactoring Difícil**: por la misma razón que "Tests Frágiles", tener tests acoplados al código de producción hace el refactoring continuo muy difícil y consume mucho tiempo.
+- **Tests Frágiles**: tiende a crear tests que se rompen fácilmente porque suelen estar muy acoplados al código de producción.
+- **Refactoring Difícil**: por la misma razón, tener tests acoplados hace que el refactoring continuo sea lento y complicado.
 
 ## Inside-out: Escuela de Chicago
 
-Es un enfoque informal, exploratorio, basado en estado de TDD. Comenzando desde el interior de la aplicación (usualmente el dominio) y trabajando hacia afuera hacia las APIs.
+Un enfoque informal, exploratorio, basado en estado. Empiezas desde el interior de la aplicación (normalmente el dominio) y vas hacia afuera, hacia las APIs.
 
 ### PROS
 
-- **Red de Seguridad Fuerte**: tiende a producir tests que están desacoplados de la implementación. Permitiéndote adoptar un estilo más experimental de cambiar software sin miedo a romperlo. Esto es deseable para el refactoring continuo.
-- **Alta Cohesión**: a medida que los tests se vuelven más generales, el código de producción se vuelve más específico. Esto promueve alta cohesión, y con alta cohesión viene bajo acoplamiento. Algo que promueve alta calidad de código: extensibilidad, mantenibilidad y testeabilidad.
-- **Minimiza Dobles de Test**: construir de adentro hacia afuera requiere menos dobles de test ya que estás construyendo sobre los tests previamente escritos. Esto ayuda a desarrollar tests menos frágiles.
+- **Red de Seguridad Fuerte**: produce tests desacoplados de la implementación. Puedes cambiar el software sin miedo a romperlo, ideal para el refactoring continuo.
+- **Alta Cohesión**: a medida que los tests se vuelven más generales, el código de producción se vuelve más específico. Alta cohesión lleva a bajo acoplamiento, lo que mejora extensibilidad, mantenibilidad y testeabilidad.
+- **Minimiza Dobles de Test**: construir de adentro hacia afuera requiere menos dobles porque construyes sobre tests previamente escritos. Esto ayuda a tener tests menos frágiles.
 
 ### CONTRAS
 
@@ -48,7 +48,7 @@ Es un enfoque informal, exploratorio, basado en estado de TDD. Comenzando desde 
 
 ## Conclusión
 
-No se trata de elegir uno sobre el otro. Se trata de entender tu contexto e impulsar la optimización hacia esas cualidades que necesitan ser optimizadas. London y Chicago tienen cada una sus pros y contras. El mejor enfoque para TDD es una adopción integrada de estas dos escuelas.
+No se trata de elegir uno u otro. Se trata de entender tu contexto y optimizar las cualidades que lo necesitan. London y Chicago tienen sus pros y contras. El mejor enfoque para TDD es integrar ambas escuelas.
 
 {{ youtube(id="rbSDGr-_UwY") }}
 

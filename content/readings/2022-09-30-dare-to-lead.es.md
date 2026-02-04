@@ -1,6 +1,6 @@
 +++
-title = "Dare to lead"
-description = "El liderazgo no se trata de títulos, estatus y poder sobre las personas. Los líderes son personas que se hacen responsables de reconocer el potencial en las personas e ideas, y desarrollar ese potencial. Este es un libro para todos los que están listos para elegir el coraje sobre la comodidad, marcar la diferencia y liderar."
+title = "Atrévete a liderar"
+description = "El liderazgo no va de títulos ni de poder. Va de reconocer el potencial en las personas y ayudarlas a desarrollarlo. Un libro para quienes prefieren el coraje a la comodidad."
 authors = [ "Brené Brown" ]
 [taxonomies]
 tags = [ "leadership", "communication", "psychology", "mentoring" ]
@@ -14,9 +14,7 @@ expand_preview = false
 
 <!-- more -->
 
-El liderazgo no se trata de títulos, estatus y poder sobre las personas. Los líderes son personas que se hacen responsables
-de reconocer el potencial en las personas e ideas y desarrollar ese potencial. Este libro es para todos los que están listos
-para elegir el coraje sobre la comodidad, marcar la diferencia y liderar.
+El liderazgo no va de títulos, estatus ni poder sobre los demás. Los líderes reconocen el potencial en las personas y las ideas, y se comprometen a desarrollarlo. Este libro es para quienes están listos para elegir el coraje sobre la comodidad y marcar la diferencia.
 
 ## Coraje y vulnerabilidad
 

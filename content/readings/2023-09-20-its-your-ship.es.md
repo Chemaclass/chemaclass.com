@@ -1,6 +1,6 @@
 +++
-title = "It's Your Ship"
-description = "It's Your Ship es un libro de liderazgo escrito por D. Michael Abrashoff, ex comandante del USS Benfold, un destructor de misiles guiados. El libro se centra en las experiencias de Abrashoff y los principios de liderazgo que aplicó para transformar el rendimiento y la cultura de su barco."
+title = "Es Tu Barco"
+description = "Un ex comandante de la Marina cuenta cómo transformó la cultura de su destructor aplicando principios de liderazgo centrados en la gente."
 draft = false
 authors = [ "D. Michael Abrashoff" ]
 [taxonomies]
@@ -15,32 +15,30 @@ expand_preview = false
 
 <!-- more -->
 
-"It's Your Ship" es un libro de liderazgo escrito por D. Michael Abrashoff, ex comandante del USS Benfold, un destructor de misiles guiados. El libro se centra en las experiencias de Abrashoff y los principios de liderazgo que aplicó para transformar el rendimiento y la cultura de su barco.
+D. Michael Abrashoff comandó el USS Benfold, un destructor de misiles guiados. En este libro cuenta cómo transformó el rendimiento y la cultura de su barco aplicando principios de liderazgo centrados en las personas.
 
 ## Puntos clave
 
-- **Empoderamiento**: Abrashoff enfatiza la importancia de empoderar a los miembros del equipo. Cree que cuando las personas se sienten confiadas y empoderadas, toman posesión de su trabajo y rinden a un nivel más alto.
+- **Dar poder al equipo**: Cuando la gente siente que confían en ella, se apropia de su trabajo y rinde mejor.
 
-- **Escuchar y Comunicar**: Destaca la importancia de la escucha activa y la comunicación abierta. Hizo un esfuerzo por escuchar a los miembros de su tripulación, buscar su opinión y abordar sus preocupaciones. Esto ayudó a construir confianza y fomentó una cultura de diálogo abierto.
+- **Escuchar y comunicar**: La escucha activa y la comunicación abierta construyen confianza. Abrashoff se esforzó por conocer las opiniones y preocupaciones de su tripulación.
 
-- **Liderar con el Ejemplo**: Los líderes deben establecer el estándar a través de sus propias acciones. Trabajó duro para ser un modelo a seguir positivo para su tripulación, demostrando el comportamiento y la ética de trabajo que esperaba de ellos.
+- **Liderar con el ejemplo**: Los líderes marcan el estándar con sus acciones. Abrashoff trabajó para ser el modelo que esperaba de los demás.
 
-- **Delegar Responsabilidad**: Abrashoff anima a los líderes a delegar autoridad y responsabilidad. Al dar a los miembros de su tripulación más control sobre sus áreas de experiencia, les permitió tomar posesión de sus roles.
+- **Delegar responsabilidad**: Dar control a la gente sobre sus áreas de experiencia les permite apropiarse de sus roles.
 
-- **Fomentar una Cultura de Innovación**: Abrashoff promovió una cultura de mejora continua e innovación. Animó a su tripulación a sugerir e implementar cambios que mejorarían la eficiencia y efectividad.
+- **Fomentar la innovación**: Abrashoff animaba a su tripulación a proponer e implementar mejoras en eficiencia y efectividad.
 
-- **Celebrar los Logros**: Es importante reconocer y celebrar los logros y contribuciones de los miembros del equipo. Este reconocimiento sirve como refuerzo positivo y motiva a los individuos a continuar rindiendo a un alto nivel.
+- **Celebrar los logros**: Reconocer las contribuciones del equipo motiva a seguir rindiendo al máximo.
 
-- **Tomar Riesgos Calculados**: Abrashoff no tenía miedo de tomar riesgos calculados para lograr mejores resultados. Estaba dispuesto a desafiar procedimientos y normas establecidas cuando creía que llevaría a mejoras.
+- **Asumir riesgos calculados**: Abrashoff no dudaba en desafiar procedimientos establecidos si creía que llevaría a mejoras.
 
-- **Construir Confianza y Respeto**: La confianza y el respeto son elementos fundamentales del liderazgo efectivo. Abrashoff trabajó para construir relaciones sólidas con los miembros de su tripulación, lo que creó un sentido de camaradería y confianza mutua.
+- **Construir confianza y respeto**: Las relaciones sólidas crean camaradería y confianza mutua, pilares del liderazgo efectivo.
 
-- **Adaptabilidad y Flexibilidad**: En un entorno que cambia rápidamente, los líderes necesitan ser adaptables y flexibles. Ser capaz de ajustarse a nuevas circunstancias y tomar decisiones rápidas es crucial para el éxito.
+- **Ser adaptable**: En entornos cambiantes, hay que ajustarse rápido a nuevas circunstancias.
 
-- **Aprendizaje y Mejora Continua**: Una mentalidad de aprendizaje y mejora continua es crucial. Animó a su tripulación a buscar oportunidades de desarrollo profesional y a siempre esforzarse por la excelencia.
+- **Mejorar continuamente**: Animó a su tripulación a buscar desarrollo profesional y aspirar siempre a la excelencia.
 
-En general, "It's Your Ship" proporciona valiosas perspectivas sobre principios de liderazgo que pueden aplicarse en varios entornos organizacionales.
-
-El enfoque de Abrashoff enfatiza la importancia de empoderar y valorar a los miembros del equipo, fomentar la comunicación abierta y buscar constantemente formas de mejorar el rendimiento.
+El libro ofrece perspectivas valiosas sobre liderazgo aplicables a cualquier organización. El enfoque de Abrashoff se centra en empoderar al equipo, fomentar la comunicación abierta y buscar siempre formas de mejorar.
 
 {{ youtube(id="A-mZW2VZZgY") }}

@@ -1,6 +1,6 @@
 +++
 title = "Modern CTO"
-description = "En Modern CTO, Joel Beasley proporciona a los lectores una hoja de ruta detallada sobre cómo navegar exitosamente la transición inexplorada y accidentada entre estos dos roles. Basándose en la experiencia personal, Joel ofrece una perspectiva refrescante sobre los desafíos, lecciones y cosas a evitar en este viaje."
+description = "Joel Beasley ofrece una guía práctica para pasar de desarrollador a CTO. Comparte desde su experiencia los retos, las lecciones aprendidas y los errores típicos en este camino."
 authors = [ "Joel Beasley" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "software-design", "communication" ]
@@ -14,11 +14,9 @@ expand_preview = false
 
 <!-- more -->
 
-Los desarrolladores no son CTOs, pero los desarrolladores pueden aprender a ser CTOs.
+Los desarrolladores no son CTOs, pero pueden aprender a serlo.
 
-En Modern CTO, Joel Beasley proporciona a los lectores una hoja de ruta detallada sobre cómo navegar exitosamente la transición
-inexplorada y accidentada entre estos dos roles. Basándose en la experiencia personal, Joel ofrece una perspectiva refrescante sobre los
-desafíos, lecciones y cosas a evitar en este viaje.
+Joel Beasley ofrece una guía práctica para pasar de desarrollador a CTO. Comparte desde su experiencia los retos, las lecciones aprendidas y los errores típicos en este camino.
 
 Estos son los temas que encontrarás en el libro:
 
@@ -46,7 +44,7 @@ Estos son los temas que encontrarás en el libro:
 
 > Si me apoyo en logros pasados, nunca creceré.
 
-> APROVECHA LA EXPERIENCIA DE OTROS. Los libros condensan toda una vida de experiencia en unas pocas horas de lectura. ¿Poderoso, verdad?
+> APROVECHA LA EXPERIENCIA DE OTROS. Los libros condensan toda una vida de experiencia en unas pocas horas de lectura.
 
 > Solo hay dos razones por las que escribes mal código:
 >
@@ -55,14 +53,12 @@ Estos son los temas que encontrarás en el libro:
 
 > Como CTO, debes tener un enfoque de negocio.
 
-> Siempre vuelve a tus metas principales. [...] Me aseguro de que cada meta principal tenga un "por qué" claramente definido detrás, de esta manera
-> si alguna vez me pierdo, vuelvo a mi "por qué."
+> Siempre vuelve a tus metas principales. [...] Me aseguro de que cada meta tenga un "por qué" claro detrás. Así, cuando me pierdo, vuelvo a mi "por qué".
 
--- Referencia a "[Start with Why](/es/readings/start-with-why)" de Simon Sinek.
+-- Referencia a "[Empieza con el Por Qué](/es/readings/start-with-why)" de Simon Sinek.
 
 > Cuando eres el jefe, recuerda esta regla de oro: Pregunta a la gente qué piensa en lugar de decirles qué hacer.
 
-> Si no puedo evaluar el componente humano, no puedo liderar un equipo. [...] La composición del equipo tiene tanto o quizás incluso
-> más peso que la experiencia en programación.
+> Si no puedo evaluar el componente humano, no puedo liderar un equipo. [...] La composición del equipo pesa tanto o más que la experiencia técnica.
 
 > Como CTO, si no puedes explicar el valor de forma simple, significa que no entiendes el valor de negocio detrás de tu tecnología.

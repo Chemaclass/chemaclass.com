@@ -1,6 +1,6 @@
 +++
 title = "Recipes for Decoupling"
-description = "¿Qué es el acoplamiento y por qué es malo? ¿Qué es el desacoplamiento y cómo hacerlo eficientemente? Este libro es una compilación de estrategias para desacoplar tu código de dominio de esos detalles de infraestructura, para que puedas disfrutar de un sistema más saludable a largo plazo."
+description = "¿Qué es el acoplamiento y por qué nos perjudica? Este libro recopila estrategias prácticas para separar tu código de dominio de la infraestructura y mantener un sistema sano a largo plazo."
 authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "php", "software-design", "architecture", "clean-code" ]
@@ -14,12 +14,9 @@ expand_preview = false
 
 <!-- more -->
 
-¿Qué es el acoplamiento y por qué es malo? ¿Qué es el desacoplamiento y cómo hacerlo eficientemente? Este libro es una compilación de
-estrategias para desacoplar tu código de dominio de esos detalles de infraestructura, para que puedas disfrutar de un sistema más saludable
-a largo plazo.
+¿Qué es el acoplamiento y por qué nos perjudica? ¿Cómo desacoplar de forma eficiente? Este libro recopila estrategias para separar tu código de dominio de los detalles de infraestructura. El resultado: un sistema más sano a largo plazo.
 
-Este libro te enseñará cómo crear reglas de [**PHPStan**](https://phpstan.org/) desde cero, y luego te
-guiará a través de muchas oportunidades de desacoplamiento como, por ejemplo:
+Aprenderás a crear reglas de [**PHPStan**](https://phpstan.org/) desde cero. Además, el libro te guía por múltiples oportunidades de desacoplamiento:
 - framework web
 - frameworks cli
 - validación de formularios

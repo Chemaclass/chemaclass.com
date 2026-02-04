@@ -1,11 +1,11 @@
 +++
-title = "Atomic Habits"
-description = "La gente piensa que cuando quieres cambiar tu vida, necesitas pensar en grande. James Clear ha descubierto otra forma. Él sabe que el cambio real viene del efecto compuesto de cientos de pequeñas decisiones. Las llama hábitos atómicos."
+title = "Hábitos Atómicos"
+description = "Solemos creer que para cambiar nuestra vida hay que pensar en grande. James Clear propone otra cosa: el cambio real viene del efecto acumulado de cientos de pequeñas decisiones."
 authors = [ "James Clear" ]
 [taxonomies]
 tags = [ "psychology", "productivity", "career" ]
 [extra]
-subtitle = "Una forma fácil y probada de construir buenos hábitos y romper los malos"
+subtitle = "Una forma sencilla y probada de construir buenos hábitos y dejar los malos"
 pages = "320"
 author = "James Clear"
 static_thumbnail = "https://m.media-amazon.com/images/I/51-nXsSRfZL.jpg"
@@ -13,8 +13,7 @@ static_thumbnail = "https://m.media-amazon.com/images/I/51-nXsSRfZL.jpg"
 
 <!-- more -->
 
-La gente piensa que cuando quieres cambiar tu vida, necesitas pensar en grande. James Clear ha descubierto otra forma. Él
-sabe que el cambio real viene del efecto compuesto de cientos de pequeñas decisiones. Las llama hábitos atómicos.
+Solemos creer que para cambiar nuestra vida hay que pensar en grande. James Clear propone otra cosa: el cambio real viene del efecto acumulado de cientos de pequeñas decisiones. Las llama hábitos atómicos.
 
 ### Aprendizajes
 

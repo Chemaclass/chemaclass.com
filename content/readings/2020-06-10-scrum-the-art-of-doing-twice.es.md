@@ -1,6 +1,6 @@
 +++
 title = "Scrum"
-description = "Toda organización, sin importar su tamaño, tiene que lidiar constantemente con entregar un producto o servicio a tiempo y dentro del presupuesto. Scrum te muestra cómo. Explica cómo definir con precisión lo que estás buscando lograr, cómo configurar el equipo para lograrlo y cómo monitorear el progreso hasta que el proyecto se complete exitosamente."
+description = "Cómo entregar proyectos a tiempo y dentro del presupuesto usando un marco de trabajo ágil que realmente funciona"
 authors = [ "Jeff Sutherland" ]
 [taxonomies]
 tags = [ "scrum", "agile", "team-management", "productivity" ]
@@ -13,7 +13,6 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/515tsl4uoZL
 
 <!-- more -->
 
+Toda organización tiene que lidiar con entregar productos a tiempo y dentro del presupuesto. Da igual el tamaño.
 
-Toda organización, sin importar su tamaño, tiene que lidiar constantemente con entregar un producto o servicio a tiempo y
-dentro del presupuesto. Scrum te muestra cómo. Explica cómo definir con precisión lo que estás buscando lograr, cómo
-configurar el equipo para lograrlo y cómo monitorear el progreso hasta que el proyecto se complete exitosamente.
+Scrum te muestra cómo hacerlo. Te explica cómo definir lo que quieres lograr, cómo armar el equipo adecuado y cómo seguir el progreso hasta completar el proyecto con éxito.

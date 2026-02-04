@@ -1,6 +1,6 @@
 +++
-title = "The Phoenix Project"
-description = "Esta es una historia sobre un proyecto imposible en el que las personas alrededor están constantemente jugando a la política, ocupados arreglando bugs críticos y desperdiciando esfuerzos constantes en parches rápidos en lugar de ayudar al negocio a prosperar."
+title = "El proyecto Fénix"
+description = "Una historia sobre un proyecto imposible donde todos juegan a la política, arreglan bugs críticos sin parar y desperdician esfuerzos en parches rápidos en vez de ayudar al negocio a prosperar."
 draft = false
 authors = [ "Gene Kim", "Kevin Behr", "George Spafford" ]
 [taxonomies]
@@ -13,28 +13,28 @@ static_thumbnail = "https://m.media-amazon.com/images/I/81ZMvLDtmIL._SL1500_.jpg
 expand_preview = true
 +++
 
-Esta es una historia sobre un proyecto imposible en el que las personas alrededor están constantemente jugando a la política, ocupados arreglando bugs críticos y desperdiciando esfuerzos constantes en parches rápidos en lugar de ayudar al negocio a prosperar.
+Una historia sobre un proyecto imposible donde todos juegan a la política, arreglan bugs críticos sin parar y desperdician esfuerzos en parches rápidos en vez de ayudar al negocio a prosperar.
 
 <!-- more -->
 
 > Si IT falla, el negocio falla.
 
-**Principios DevOps**: Flujo, Retroalimentación, y Aprendizaje Continuo y Experimentación. Estos conceptos guía promueven avances en capacidad de respuesta, confiabilidad y trabajo en equipo.
+**Principios DevOps**: Flujo, Feedback, Aprendizaje Continuo y Experimentación. Estos conceptos impulsan mejoras en capacidad de respuesta, fiabilidad y trabajo en equipo.
 
 #### Resumen
 
-El libro comienza con la promoción de Bill como VP de IT, y con eso la responsabilidad de entregar un proyecto imposible (Phoenix). El CEO le advierte que si el proyecto no se entrega a tiempo, entonces todo el departamento de IT será externalizado y los empleados actuales de IT serán despedidos.
+El libro empieza con la promoción de Bill a VP de IT y la responsabilidad de entregar un proyecto imposible (Phoenix). El CEO le advierte: si no se entrega a tiempo, externalizarán todo IT y despedirán a todos.
 
-Bill intenta entender el status quo, y descubre que las personas están demasiado ocupadas apagando fuegos constantemente y lidiando con demasiadas responsabilidades (además, tienen falta de personal). Todo es urgente y necesita hacerse lo antes posible. El deadline ya fue establecido desde arriba, y no hay planificación ni discusiones con otros departamentos. TL;DR: Caos corporativo, política y reuniones sangrientas.
+Bill intenta entender la situación y descubre que todos apagan fuegos sin parar, con demasiadas responsabilidades y poco personal. Todo es urgente, todo para ayer. La fecha límite viene de arriba, sin planificación ni conversaciones con otros departamentos. En resumen: caos corporativo, política y reuniones infernales.
 
-Sin embargo, Bill conoce a una persona en la empresa que le ayuda a mejorar el status quo, no diciéndole qué hacer sino haciéndole preguntas para ayudar a encontrar la solución.
+Bill conoce a alguien en la empresa que le ayuda a mejorar las cosas. No le dice qué hacer, sino que le hace preguntas para que encuentre la solución por sí mismo.
 
-Por ejemplo, la primera pregunta: "¿Cuáles son los cuatro tipos de trabajo que hace IT?" que no se responde inmediatamente sino durante la historia:
+Por ejemplo, la primera pregunta: "¿Cuáles son los cuatro tipos de trabajo en IT?" La respuesta no llega de golpe, sino a lo largo de la historia:
 
-1. **Proyectos de negocio**: estos son los proyectos que afectan directamente los objetivos del negocio. Generan ingresos y entregan valor a los clientes.
-2. **Proyectos internos**: estas son tareas regulares que mantienen el sistema funcionando. Como actualizaciones de sistema, parches de seguridad, etc. Tiende a ser invisible y puede convertirse en un cuello de botella para los departamentos de IT.
-3. **Cambios**: el resultado de los proyectos de negocio e internos anteriores, para saber qué cambiar con y dentro de ellos.
-4. **Trabajo no planificado**: este es el verdadero asesino de productividad. Esto está relacionado con todos los problemas operacionales resultantes de los tres tipos de trabajo anteriores.
+1. **Proyectos de negocio**: afectan directamente los objetivos del negocio. Generan ingresos y dan valor a los clientes.
+2. **Proyectos internos**: tareas regulares que mantienen el sistema funcionando (actualizaciones, parches de seguridad...). Suelen ser invisibles y pueden convertirse en cuello de botella.
+3. **Cambios**: resultado de los proyectos anteriores. Hay que saber qué cambiar y dentro de qué.
+4. **Trabajo no planificado**: el verdadero asesino de la productividad. Son todos los problemas operacionales que surgen de los otros tres tipos de trabajo.
 
 ---
 

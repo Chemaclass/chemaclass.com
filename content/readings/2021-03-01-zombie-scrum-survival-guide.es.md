@@ -1,6 +1,6 @@
 +++
-title = "Zombie Scrum Survival Guide"
-description = "La guía de supervivencia de Zombie Scrum revela por qué Scrum encalla y muestra cómo potenciar tus resultados de Scrum, mientras te diviertes mucho más en el camino."
+title = "Guía de supervivencia Zombie Scrum"
+description = "Por qué Scrum se estanca y cómo mejorar tus resultados divirtiéndote en el proceso."
 authors = [ "Christiaan Verwijs", "Johannes Schartau", "Barry Overeem" ]
 [taxonomies]
 tags = [ "scrum", "agile", "team-management", "productivity" ]
@@ -13,27 +13,22 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/511aL5yxHVL
 
 <!-- more -->
 
-Realmente disfruto las ideas y experimentos presentados en el libro. Señala muchos "elefantes grandes en muchas habitaciones" para
-muchos equipos que afirman hacer Scrum o Agile de una manera realmente cuestionable, también conocido como: Zombie Scrum.
+Disfruté mucho las ideas y experimentos del libro. Pone el dedo en la llaga sobre muchos equipos que dicen hacer Scrum o Agile de forma cuestionable. A eso lo llaman Zombie Scrum.
 
 ### Resumen
 
-La guía de supervivencia de Zombie Scrum revela por qué Scrum encalla y muestra cómo potenciar tus resultados de Scrum, mientras
-te diviertes mucho más en el camino. Humorístico, visual y extremadamente identificable, ofrece enfoques prácticos,
-ejercicios y herramientas para escapar del Zombie Scrum. Incluso si estás rodeado de escépticos, este libro será el antídoto para
-ayudarte a construir más de lo que los usuarios necesitan, entregar más rápido, mejorar más continuamente, interactuar más exitosamente en cualquier equipo,
-y sentirte mucho mejor con lo que estás haciendo. De repente, un día pronto, recordarás: ¡por eso adoptamos Scrum
-en primer lugar!
+El libro explica por qué Scrum se estanca y cómo mejorar tus resultados divirtiéndote en el proceso. Con humor y ejemplos muy reconocibles, ofrece enfoques prácticos, ejercicios y herramientas para escapar del Zombie Scrum.
 
-- Aprende cómo el Zombie Scrum te infecta, por qué se propaga y cómo inocularte.
-- Acércate más a tus stakeholders y despierta a su comprensión del valor.
-- Descubre por qué los equipos Zombie no pueden aprender y qué hacer al respecto.
-- Despeja los obstáculos específicos para la verdadera mejora continua.
-- Haz que los equipos autogestionados sean reales para que las personas puedan comportarse como humanos, no como Zombies.
+Aunque estés rodeado de escépticos, este libro te ayudará a construir lo que los usuarios realmente necesitan, entregar más rápido, mejorar continuamente y sentirte mejor con tu trabajo. Un día recordarás: para esto adoptamos Scrum.
+
+- Cómo te infecta el Zombie Scrum, por qué se propaga y cómo prevenirlo
+- Acércate a tus stakeholders y hazles entender el valor
+- Por qué los equipos Zombie no aprenden y qué hacer al respecto
+- Elimina los obstáculos para la mejora continua
+- Logra equipos autogestionados donde la gente actúe como humanos, no como zombies
 
 ---
 
-Este es un buen webinar, donde ofrecen una perspectiva fresca sobre Zombie Scrum, comparten ideas clave del libro y
-discuten sus últimos hallazgos sobre la investigación en curso incesante.
+Un buen webinar donde comparten ideas clave del libro y discuten sus hallazgos más recientes.
 
 {{ youtube(id="ylGfrsXXQMs") }}

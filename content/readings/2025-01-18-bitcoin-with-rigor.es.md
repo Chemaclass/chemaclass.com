@@ -1,6 +1,6 @@
 +++
-title = "Bitcoin with Rigor"
-description = "Bitcoin with Rigor va más allá de una explicación básica de Bitcoin, ofreciendo un análisis detallado de cómo funciona Bitcoin. Desglosa sus componentes claramente, ayudando a los lectores a entender tanto las partes como el sistema en su conjunto. Esta inmersión profunda explora el potencial y los riesgos de Bitcoin, reconociéndolo como un experimento monetario de una década que aún no ha resistido la prueba del tiempo como el oro o la plata. A pesar de esto, su diseño innovador lo convierte en un sistema prometedor para el presente y el futuro."
+title = "Bitcoin con Rigor"
+description = "Un análisis detallado de cómo funciona Bitcoin, desglosando sus componentes de forma clara. Explora su potencial y riesgos como experimento monetario que, aunque no ha superado la prueba del tiempo como el oro, tiene un diseño prometedor para el presente y futuro."
 draft = false
 authors = [ "Jose Sanchis" ]
 [taxonomies]
@@ -13,13 +13,13 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-Bitcoin with Rigor va más allá de una explicación básica de Bitcoin, ofreciendo un análisis detallado de cómo funciona Bitcoin. Desglosa sus componentes claramente, ayudando a los lectores a entender tanto las partes como el sistema en su conjunto. Esta inmersión profunda explora el potencial y los riesgos de Bitcoin, reconociéndolo como un experimento monetario de una década que aún no ha resistido la prueba del tiempo como el oro o la plata. A pesar de esto, su diseño innovador lo convierte en un sistema prometedor para el presente y el futuro.
+Un análisis detallado de cómo funciona Bitcoin, desglosando sus componentes de forma clara para entender tanto las partes como el sistema completo. Explora su potencial y riesgos como experimento monetario que, aunque no ha superado la prueba del tiempo como el oro, tiene un diseño prometedor.
 
 <!-- more -->
 
-La novedad de Bitcoin hace que sea difícil comprenderlo completamente. Requiere conocimientos de computación, economía y finanzas mientras también es un activo digital sin precedente histórico que guíe su comprensión. Sin embargo, al igual que Internet—también relativamente joven pero innegablemente transformador—Bitcoin tiene el potencial de redefinir sistemas y dejar un impacto duradero.
+Bitcoin es difícil de entender del todo. Requiere conocimientos de computación, economía y finanzas, y además es un activo digital sin precedente histórico que sirva de guía. Pero igual que Internet (también joven pero innegablemente transformador), Bitcoin tiene el potencial de redefinir sistemas y dejar un impacto duradero.
 
-Este libro tiene como objetivo equipar a los lectores con las herramientas para entender cómo funciona Bitcoin, empoderándolos para formar sus propias opiniones bien informadas sobre su papel en la sociedad o, si lo eligen, comenzar un viaje profesional en este sector en evolución. Escrito con rigor pero sin tecnicismos excesivos, el contenido está diseñado para ser conciso, accesible y atractivo, proporcionando la base necesaria para comprender verdaderamente Bitcoin.
+Este libro busca darte las herramientas para entender cómo funciona Bitcoin. Así podrás formar tu propia opinión informada sobre su papel en la sociedad o, si lo decides, empezar una carrera profesional en este sector. Está escrito con rigor pero sin tecnicismos excesivos: conciso, accesible y pensado para que comprendas Bitcoin de verdad.
 
 ---
 

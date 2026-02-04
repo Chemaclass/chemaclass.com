@@ -1,6 +1,6 @@
 +++
 title = "Leadership is Language"
-description = "En este libro, el ex comandante de submarino Capitán L. David Marquet profundiza en uno de los desastres marinos más investigados, el hundimiento del El Faro, y emerge con nuevas ideas sobre liderazgo y lenguaje."
+description = "Marquet analiza el hundimiento del El Faro, uno de los desastres marinos más investigados, y extrae ideas sobre cómo el lenguaje que usamos define nuestro liderazgo."
 authors = [ "L. David Marquet" ]
 [taxonomies]
 tags = [ "leadership", "communication", "team-management", "productivity" ]
@@ -14,35 +14,26 @@ expand_preview = true
 
 Un manual radical para empoderar a tu gente y poner a tu equipo en un camino de mejora continua.
 
-En este libro, el ex comandante de submarino Capitán [L. David Marquet](https://x.com/ldavidmarquet) profundiza en uno de los desastres marinos más investigados,
-el hundimiento del El Faro, y emerge con nuevas ideas sobre liderazgo y lenguaje.
+El ex comandante de submarino [L. David Marquet](https://x.com/ldavidmarquet) analiza el hundimiento del El Faro, uno de los desastres marinos más investigados. De ahí extrae ideas clave sobre liderazgo y lenguaje.
 
 <!-- more -->
 
 ---
 
-Podrías imaginar que un líder efectivo es alguien que toma decisiones rápidas e inteligentes, da discursos inspiradores,
-y emite órdenes claras a su equipo, para que puedan ejecutar un plan para lograr los objetivos de tu organización. Desafortunadamente,
-ese es un modelo de liderazgo obsoleto que ya no funciona.
+Quizás piensas que un líder efectivo toma decisiones rápidas, da discursos inspiradores y emite órdenes claras para que su equipo ejecute el plan. Ese modelo de liderazgo está obsoleto.
 
 > Tus palabras importan más de lo que crees.
 
-David presenta seis jugadas que todos los líderes deberían usar para mejorar cómo operan sus equipos. Dice que un gran problema con los líderes
-hoy es que están atrapados en un manual de la era industrial. En la era industrial los líderes daban órdenes y los empleados
-las seguían, y eso era todo. Pero esa forma de liderar ya no es efectiva, está obsoleta.
+David presenta seis jugadas que todo líder debería usar para mejorar cómo opera su equipo. El problema de muchos líderes hoy es que siguen usando el manual de la era industrial. Antes el líder daba órdenes, los empleados las seguían, y ya. Esa forma de liderar ya no funciona.
 
 ### Las seis jugadas
 
-- Controla el reloj, no obedezcas el reloj--Pre-planifica puntos de decisión y da a tu gente las herramientas que necesitan para
-  pausar un plan de acción si notan algo mal.
-- Colabora, no coacciones–Como líder, deberías ser el último en ofrecer tu opinión.
-- Comprométete, no cumplas–En lugar de esperar que tu equipo cumpla con direcciones específicas, explica tus metas generales, y
-  obtén su compromiso para lograrlas pieza por pieza.
-- Completa, no continúes–Si cada día se siente como una repetición del último, estás haciendo algo mal.
-- Mejora, no demuestres–Pide a tu gente que mejore los planes y procesos, en lugar de demostrar que pueden cumplir metas o
-  plazos fijos.
-- Conecta, no conformes–Aplana las jerarquías en tu organización y conecta con tu gente para animarlos a
-  contribuir a la toma de decisiones
+- **Controla el reloj, no lo obedezcas.** Planifica puntos de decisión y da a tu gente las herramientas para pausar si ven algo mal.
+- **Colabora, no coacciones.** Como líder, sé el último en dar tu opinión.
+- **Comprométete, no solo cumplas.** En vez de esperar que sigan instrucciones específicas, explica las metas generales y consigue su compromiso para lograrlas paso a paso.
+- **Completa, no continúes.** Si cada día se siente igual que el anterior, algo estás haciendo mal.
+- **Mejora, no demuestres.** Pide a tu gente que mejore los planes y procesos, no que demuestren que pueden cumplir metas fijas.
+- **Conecta, no conformes.** Aplana las jerarquías y conecta con tu gente para que contribuyan a las decisiones.
 
 ---
 

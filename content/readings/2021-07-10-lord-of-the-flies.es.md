@@ -1,6 +1,6 @@
 +++
-title = "Lord of the Flies"
-description = "Etiquetada como parábola, alegoría, mito, cuento moral, parodia, tratado político, incluso una visión del apocalipsis. Se ha establecido como un verdadero clásico. El libro se centra en un grupo de niños británicos varados en una isla deshabitada, y su desastroso intento de gobernarse a sí mismos."
+title = "El señor de las moscas"
+description = "Un clásico que mezcla parábola, alegoría y cuento moral. Un grupo de niños británicos acaba varado en una isla desierta. Su intento de gobernarse a sí mismos termina en desastre."
 authors = [ "William Golding" ]
 [taxonomies]
 tags = [ "fiction", "psychology", "leadership", "philosophy" ]
@@ -12,18 +12,14 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51de-lVnNCL
 expand_preview = true
 +++
 
-Etiquetada como parábola, alegoría, mito, cuento moral, parodia, tratado político, incluso una visión del
-apocalipsis. Se ha establecido como un verdadero clásico.
+Un clásico que mezcla parábola, alegoría, mito, cuento moral y hasta parodia política.
 
-El libro se centra en un grupo de niños británicos varados en una isla deshabitada, y su desastroso intento de gobernarse
-a sí mismos.
+Un grupo de niños británicos acaba varado en una isla desierta. Su intento de gobernarse a sí mismos termina en desastre.
 
 <!-- more -->
 
-Los temas incluyen la tensión entre el pensamiento grupal y la individualidad, entre las reacciones racionales y emocionales,
-y entre la moralidad y la inmoralidad.
+El libro explora la tensión entre lo grupal y lo individual, entre la razón y la emoción, entre lo moral y lo inmoral.
 
-Los primeros capítulos comienzan lentamente, pero son necesarios para construir el contexto de la historia, que escala bastante
-rápido después.
+Los primeros capítulos van lentos, pero construyen el contexto necesario. Después la historia escala rápido.
 
 {{ youtube(id="NnnZ6y1HPqI") }}

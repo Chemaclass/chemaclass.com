@@ -1,6 +1,6 @@
 +++
 title = "Abraza el cambio"
-description = "El cuento es una hermosa metáfora de las diferentes actitudes que las personas adoptan como parte de su identidad en la vida cuando tienen que enfrentar cualquier cambio."
+description = "El cuento es una metáfora de las diferentes actitudes que adoptamos cuando tenemos que enfrentar cambios en la vida."
 [taxonomies]
 tags = [ "leadership", "psychology", "career", "philosophy" ]
 [extra]
@@ -14,23 +14,23 @@ El libro *¿Quién se ha llevado mi queso?* presenta un cuento dentro de la hist
 
 <!-- more -->
 
-Publicado en 1998, y lo acabo de leer a principios de 2021. Mejor tarde que nunca. De hecho, gracias a mi hermano Jesús, que me lo recomendó.
+Se publicó en 1998 y lo leí a principios de 2021. Mejor tarde que nunca. Mi hermano Jesús me lo recomendó.
 
-> Viven en un Laberinto (que representa el entorno de uno) y para sobrevivir necesitan salir de su zona de confort y buscar queso (que representa la felicidad y el éxito).
+> Viven en un Laberinto (que representa nuestro entorno) y para sobrevivir necesitan salir de su zona de confort y buscar queso (que representa la felicidad y el éxito).
 >
-> El cuento empieza cuando ambos grupos terminan en la "Estación de Queso C", llena de queso. Los humanos establecieron rutinas mientras los ratones mantuvieron sus instintos activos.
+> El cuento empieza cuando ambos grupos llegan a la "Estacion de Queso C", llena de queso. Los humanos establecen rutinas; los ratones mantienen sus instintos activos.
 >
-> Un día los ratones llegan a la "Estación de Queso C" y encuentran que no queda queso. Así que salen a buscar más queso en otro lugar. Por el contrario, cuando Hem y Haw ven que no queda queso, empiezan a quejarse. Hem, enfadado y molesto, exige "¡¿Quién se ha llevado mi queso?!". Ambos humanos contaban con que el suministro de queso sería constante e infinito, así que no estaban preparados para eso inesperado. La principal diferencia aquí es cómo Haw y Hem reaccionan a esta situación.
+> Un día los ratones llegan y no queda queso. Salen a buscar más en otro lugar. Hem y Haw, en cambio, se quejan. Hem, enfadado, exige "Quien se ha llevado mi queso?!". Ambos contaban con que el queso sería eterno, así que no estaban preparados. La diferencia clave es cómo reaccionan.
 >
-> Hem se niega a alejarse de la "Estación de Queso C", así que sigue yendo allí cada día esperando encontrar queso sin éxito, estando más débil, y con miedo continuo de hacer algo diferente. Haw, por otro lado, decide reírse de la situación, vence su miedo, y sale a buscar más queso.
+> Hem se niega a marcharse de la "Estacion de Queso C". Sigue yendo cada día esperando encontrar queso, cada vez mas debil y con miedo de hacer algo diferente. Haw, en cambio, decide reírse de la situación, vence su miedo y sale a buscar más queso.
 >
-> ... Dejaré el resto del cuento para ti.
+> ... Te dejo el resto del cuento para ti.
 
-El cuento es una hermosa metáfora de las diferentes actitudes que las personas adoptan como parte de su identidad en la vida cuando tienen que enfrentar cualquier cambio.
+El cuento es una metáfora de las diferentes actitudes que adoptamos cuando tenemos que enfrentar cambios.
 
 > Notar pequeños cambios temprano te ayuda a adaptarte a los cambios más grandes que están por venir.
 
-Este libro está lleno de lecciones que aplican a todos sin importar quiénes sean o cuándo lo lean. Lo recomiendo totalmente.
+El libro está lleno de lecciones aplicables a cualquiera, sin importar quién seas o cuándo lo leas. Lo recomiendo.
 
 ### Mis lecciones favoritas del libro
 1. El cambio sucede.
@@ -48,7 +48,7 @@ Este libro está lleno de lecciones que aplican a todos sin importar quiénes se
 7. Prepárate para cambiar rápidamente y disfrutarlo de nuevo.
    Siguen moviendo el queso.
 
-> "Todos saben que no todo cambio es bueno o incluso necesario. Pero en un mundo que está cambiando constantemente, es ventajoso para nosotros aprender cómo adaptarnos y disfrutar de algo mejor. No es lo que está en la historia de '¿Quién se ha llevado mi queso?' sino cómo lo interpretas y lo aplicas a tu propia situación lo que le da el valor." - Ken Blanchard.
+> "Todos saben que no todo cambio es bueno o necesario. Pero en un mundo en constante cambio, nos conviene aprender a adaptarnos y disfrutar de algo mejor. No es lo que dice la historia de '¿Quién se ha llevado mi queso?', sino cómo la interpretas y aplicas a tu situación lo que le da valor." - Ken Blanchard.
 
 {{ youtube(id="OvYCLxqkfvY") }}
 

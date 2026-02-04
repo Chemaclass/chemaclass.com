@@ -1,6 +1,6 @@
 +++
-title = "97 Things Every Programmer Should Know"
-description = "Aprovecha la sabiduría de expertos para aprender lo que todo programador debería saber, sin importar qué lenguaje uses. Con los 97 consejos cortos y extremadamente útiles para programadores en este libro, expandirás tus habilidades adoptando nuevos enfoques para viejos problemas, aprendiendo las mejores prácticas apropiadas y perfeccionando tu oficio a través de consejos sólidos."
+title = "97 cosas que todo programador debería saber"
+description = "97 consejos cortos y prácticos para mejorar como programador. Da igual qué lenguaje uses: aquí encontrarás nuevos enfoques, buenas prácticas y consejos sólidos de expertos."
 authors = [ "Kevlin Henney" ]
 [taxonomies]
 tags = [ "software-design", "clean-code", "career", "productivity" ]
@@ -12,7 +12,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51AqVDUY13L
 expand_preview = true
 +++
 
-Aprovecha la sabiduría de expertos para aprender lo que todo programador debería saber, sin importar qué lenguaje uses. Con los 97 consejos cortos y extremadamente útiles para programadores en este libro, expandirás tus habilidades adoptando nuevos enfoques para viejos problemas, aprendiendo las mejores prácticas apropiadas y perfeccionando tu oficio a través de consejos sólidos.
+97 consejos cortos y útiles para programadores. Da igual qué lenguaje uses: aquí encontrarás nuevos enfoques para viejos problemas, buenas prácticas y consejos de expertos para mejorar tu oficio.
 
 <!-- more -->
 
@@ -44,8 +44,8 @@ Aprovecha la sabiduría de expertos para aprender lo que todo programador deber�
 
 15.- Objetos **inmutables** siempre que sea relevante. Cada variable debería tener el menor alcance posible. Nunca incluyas más de cuatro argumentos de función.
 
-18.- Toma **responsabilidad** de tu propia educación y nunca dejes de aprender.
-- Eso puede hacerse con solo un poco de tiempo cada semana y hay muchas formas de hacerlo (ej. podcasts, lecciones, libros, etc.).
+18.- Toma **responsabilidad** de tu propia educación. Nunca dejes de aprender.
+- Basta con dedicar un poco de tiempo cada semana: podcasts, cursos, libros...
 
 19.- Al diseñar una API, apunta a hacerla **fácil de usar**, no conveniente de codificar.
 
@@ -79,8 +79,8 @@ Aprovecha la sabiduría de expertos para aprender lo que todo programador deber�
 
 36.- Da el **contexto** adecuado cuando pidas ayuda, porque la gente no puede adivinar lo que está pasando.
 
-37.- No se trata de las largas horas – aprende a **trabajar efectivamente**.
-- Dedica tiempo al aprendizaje continuo y a pensar en lo que estás haciendo.
+37.- No se trata de echar muchas horas. Aprende a **trabajar con eficacia**.
+- Dedica tiempo a aprender y a pensar en lo que haces.
 
 38.- Escribe **reportes de bugs** apropiados:
 - Precisamente cómo reproducir el bug,
@@ -92,12 +92,12 @@ Aprovecha la sabiduría de expertos para aprender lo que todo programador deber�
 - Solo escribe código que añada valor y se necesite ahora mismo.
 - **Elimina código muerto**.
 
-41.- La principal causa de retrasos en el tiempo de respuesta de la aplicación es un alto número de comunicaciones remotas **entre procesos**, no el algoritmo.
-- Conexiones a BD, por ejemplo.
+41.- La causa principal de lentitud en aplicaciones suele ser el exceso de llamadas remotas **entre procesos**, no el algoritmo.
+- Por ejemplo, conexiones a base de datos.
 
-42.- Si aparece una advertencia del compilador en tu build, arréglalo.
-- No lo dejes para después. Incluso si no va a ser un problema en producción.
-- Compilador == cualquier análisis de código estático para lenguajes no compilados.
+42.- Si aparece una advertencia del compilador, arréglala.
+- No lo dejes para después, aunque no vaya a ser problema en producción.
+- "Compilador" incluye cualquier análisis estático en lenguajes no compilados.
 
 43.- Aprender a usar herramientas de **línea de comandos** es una experiencia educativa valiosa, y podrías terminar prefiriéndolas.
 
@@ -108,20 +108,20 @@ Aprovecha la sabiduría de expertos para aprender lo que todo programador deber�
 
 46.- Conoce y trabaja con tus limitaciones: presupuesto, recursos, tiempo, etc.
 
-47.- Trabaja en **tareas pequeñas**, no tengas miedo de descartar cambios.
-- Aún tendrás el conocimiento que ganaste de la experiencia.
-- Sabe lo que necesitas lograr de antemano.
+47.- Trabaja en **tareas pequeñas**. No tengas miedo de descartar cambios.
+- El conocimiento adquirido no se pierde.
+- Ten claro qué quieres lograr antes de empezar.
 
 48.- Usa una BD relacional si tu aplicación va a manejar un conjunto grande, persistente e interconectado de datos.
 
-49.- Aprende a **comunicar** bien en muchos "lenguajes": no solo a tu máquina, sino también a socios de negocio – y quizás incluso aprende un idioma extranjero también.
-- Es bueno para conexiones y para la vida.
+49.- Aprende a **comunicar** bien: no solo con tu máquina, también con negocio. Y quizás otro idioma.
+- Es bueno para las conexiones y para la vida.
 
 54.- Piensa dos veces antes de implementar "soluciones temporales".
 
-55.- Haz la **GUI** fácil de usar correctamente y difícil de usar incorrectamente.
-- Anticipa errores y encuentra formas de prevenirlos.
-- Se trata de la experiencia del usuario, no la tuya propia.
+55.- Haz la **GUI** fácil de usar bien y difícil de usar mal.
+- Anticipa errores y busca cómo prevenirlos.
+- Se trata de la experiencia del usuario, no de la tuya.
 
 56.- En proyectos, encuentra formas de hacer **lo invisible visible**.
 
@@ -129,7 +129,7 @@ Aprovecha la sabiduría de expertos para aprender lo que todo programador deber�
 
 58.- Escribe código que otras personas puedan **entender** fácilmente.
 
-59.- Usar **polimorfismo** en tus clases y objetos reduce la necesidad de declaraciones if/else, lo que resulta en código más pequeño y seguro.
+59.- El **polimorfismo** reduce la necesidad de if/else, lo que produce código más corto y seguro.
 
 60.- QA es tu amigo, no tu enemigo.
 
@@ -158,8 +158,8 @@ Aprovecha la sabiduría de expertos para aprender lo que todo programador deber�
 
 76.- Aplica el Principio de Responsabilidad Única (**SRP**).
 
-77.- Si un cliente o miembro del equipo solicita un cambio de producto, no lo descartes directamente aunque no estés de acuerdo. Pregunta por qué.
-- Eso llevará a una conversación más productiva y mejores resultados.
+77.- Si alguien pide un cambio de producto, no lo descartes aunque no estés de acuerdo. Pregunta por qué.
+- Llegarás a conversaciones más productivas y mejores resultados.
 
 78.- Si estás haciendo lo mismo una y otra vez, intenta encontrar una forma de **automatizarlo**.
 
@@ -195,4 +195,4 @@ Aprovecha la sabiduría de expertos para aprender lo que todo programador deber�
 
 96. Para ser un buen programador, tienes que preocuparte por la **calidad** del código.
 
-97. Realmente, realmente **discute las cosas** con tus clientes antes de asumir que entiendes lo que quieren.
+97.- **Habla con tus clientes** antes de asumir que entiendes lo que quieren. De verdad.

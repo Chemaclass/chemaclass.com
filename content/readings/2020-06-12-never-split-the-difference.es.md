@@ -1,6 +1,6 @@
 +++
-title = "Never split the difference"
-description = "Desde patrullar las calles difíciles de Kansas City, Missouri, hasta convertirse en el principal negociador de secuestros internacionales del FBI, hasta enseñar negociación en universidades líderes, Chris Voss ha probado las técnicas en 'Rompe la barrera del No' a través de todo el espectro del esfuerzo humano y demostrado su efectividad."
+title = "Rompe la barrera del No"
+description = "Técnicas de negociación probadas por el principal negociador de secuestros del FBI"
 authors = [ "Chris Voss" ]
 [taxonomies]
 tags = [ "communication", "psychology", "leadership" ]
@@ -13,24 +13,21 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51UM7MD1RlL
 
 <!-- more -->
 
-Desde patrullar las calles difíciles de Kansas City, Missouri, hasta convertirse en el principal negociador de secuestros internacionales del FBI,
-hasta enseñar negociación en universidades líderes, Chris Voss ha probado las técnicas en _Rompe la barrera del No_
-a través de todo el espectro del esfuerzo humano y demostrado su efectividad.
+Chris Voss pasó de patrullar las calles de Kansas City a ser el negociador principal de secuestros internacionales del FBI. Ahora enseña negociación en universidades de élite. Las técnicas de este libro las ha probado en todo tipo de situaciones y funcionan.
 
 ---
 
 ## Aprendizajes
 
-1. La negociación comienza con escuchar, haciendo que se trate de la otra persona, validando sus emociones, y creando suficiente
-   confianza y seguridad para que una conversación real pueda comenzar.
-2. Usa espejos para animar a la otra parte a empatizar y conectar contigo, mantener a la gente hablando, ganar tiempo para tu lado para
-   reagruparse, y animar a tus contrapartes a revelar su estrategia.
-3. La empatía táctica lleva nuestra atención tanto a los obstáculos emocionales como a las posibles vías para conseguir un
-   acuerdo.
-4. Dar un nombre a la emoción de alguien, también conocido como etiquetar, te acerca a alguien sin preguntar sobre factores externos
-   de los que no sabes nada.
-5. "No" proporciona una gran oportunidad para ti y la otra parte de clarificar lo que realmente quieres eliminando lo que
-   no quieres.
+1. Negociar empieza por escuchar. Hay que hacer que la conversación gire en torno al otro, validar sus emociones y crear la confianza necesaria para hablar de verdad.
+
+2. Usa el "espejo" (repetir las últimas palabras del otro) para generar empatía, mantener la conversación viva, ganar tiempo y hacer que el otro revele su estrategia.
+
+3. La empatía táctica te ayuda a ver tanto los obstáculos emocionales como los caminos posibles hacia un acuerdo.
+
+4. Etiquetar emociones (ponerles nombre) te acerca al otro sin necesidad de preguntar por cosas que desconoces.
+
+5. Un "no" es una oportunidad. Te permite a ti y al otro aclarar qué quieren realmente, descartando lo que no.
 
 ### Video resumen
 

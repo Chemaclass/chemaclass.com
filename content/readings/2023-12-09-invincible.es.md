@@ -15,17 +15,17 @@ expand_preview = false
 
 <!-- more -->
 
-La calidad de tu vida depende de la calidad de tu mente. Desafortunadamente, pasamos poco tiempo mejorando nuestros pensamientos, y rara vez se enseña en la escuela. Como resultado, pasamos por la vida sin realmente entender cómo usar nuestra mente.
+La calidad de tu vida depende de la calidad de tu mente. Por desgracia, dedicamos poco tiempo a mejorar nuestros pensamientos, y en la escuela casi nunca nos lo enseñan. Así que pasamos por la vida sin entender realmente cómo usar nuestra mente.
 
-Tenemos en nuestra cabeza el objeto más sofisticado del mundo, pero apenas sabemos cómo funciona. La mayoría de las personas son incapaces de dirigir su fuerza mental hacia las metas que verdaderamente desean. Se distraen y se frustran. No pueden resistir la tentación o perseverar ante la adversidad. Al final, abandonan.
+Tenemos en la cabeza el objeto más sofisticado del mundo, pero apenas sabemos cómo funciona. La mayoría no consigue dirigir su fuerza mental hacia las metas que realmente desea. Se distraen, se frustran. No resisten la tentación ni perseveran ante la adversidad. Al final, abandonan.
 
-Afortunadamente, nuestra mente puede ser entrenada, y este libro te mostrará cómo. Combina **filosofía estoica** con **psicología moderna**, y proporciona las herramientas para ayudarte a visualizar con claridad, actuar con determinación y resistir con disciplina.
+La buena noticia es que la mente se puede entrenar, y este libro te muestra cómo. Combina **filosofía estoica** con **psicología moderna** y te da herramientas para visualizar con claridad, actuar con determinación y resistir con disciplina.
 
 > "No sufrimos por los eventos en nuestras vidas, sino por nuestro juicio sobre ellos." Epicteto.
 
-Cualquier cambio externo requiere un cambio interno primero. Si quieres transformar tu cuerpo, debes empezar desde dentro. Una mente débil nunca creará un cuerpo fuerte.
+Todo cambio externo empieza por dentro. Si quieres transformar tu cuerpo, primero hay que trabajar la mente. Una mente débil nunca creará un cuerpo fuerte.
 
-Este libro te ayudará a usar tu mente para mejorar tu cuerpo, pero en realidad va mucho más allá. No es una simple guía para optimizar tus hábitos diarios, sino que apunta a guiar tu propia filosofía de vida. Las herramientas que desarrollarás te ayudarán con cualquier cosa que quieras lograr. La vida siempre es más simple con claridad, determinación y disciplina.
+Este libro te ayuda a usar tu mente para mejorar tu cuerpo, pero va mucho más allá. No es una simple guía para optimizar hábitos diarios, sino una brújula para tu propia filosofía de vida. Las herramientas que desarrolles te servirán para cualquier cosa que quieras lograr. La vida siempre es más simple con claridad, determinación y disciplina.
 
 #### La filosofía del Estoicismo
 

@@ -1,23 +1,21 @@
 +++
-title = "Object design style guide"
-subtitle = "Técnicas poderosas para crear código orientado a objetos flexible, legible y mantenible en cualquier lenguaje OO, desde Python hasta PHP"
+title = "Guía de estilo para diseño de objetos"
+subtitle = "Técnicas para escribir código orientado a objetos flexible, legible y mantenible"
 authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "software-design", "clean-code", "php" ]
 [extra]
-description = "Técnicas poderosas para crear código orientado a objetos flexible, legible y mantenible en cualquier lenguaje OO, desde Python hasta PHP"
+description = "Técnicas para escribir código orientado a objetos flexible, legible y mantenible en cualquier lenguaje OO"
 pages = "240"
 author = "Matthias Noback"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41gb4dgVhhL._SX397_BO1,204,203,200_.jpg"
 expand_preview = true
 +++
 
-Los objetos son el concepto central de lenguajes como Java, Python, C#. Aplicar las mejores prácticas para el diseño de objetos significa que
-tu código será fácil de leer, escribir y mantener.
+Los objetos son el corazón de lenguajes como Java, Python y C#. Si aplicas buenas prácticas de diseño, tu código será más fácil de leer, escribir y mantener.
 
-Este libro captura docenas de técnicas para crear código OO de calidad profesional que puede resistir
-la prueba del tiempo.
+Este libro reúne docenas de técnicas para crear código OO profesional que aguanta el paso del tiempo.
 
 <!-- more -->
 
-Los ejemplos están en un pseudocódigo instantáneamente familiar, enseñando técnicas que puedes aplicar a cualquier lenguaje OO, desde C++ hasta PHP.
+Los ejemplos usan pseudocódigo fácil de entender. Las técnicas aplican a cualquier lenguaje OO, desde C++ hasta PHP.

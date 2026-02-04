@@ -7,7 +7,9 @@ tags = [ "bashunit", "bash", "testing", "open-source" ]
 subtitle = "Testeando tus scripts bash"
 +++
 
-Inspirado en PHPUnit, Jest, y otros, bashunit es un framework de testing para scripts bash. Todo desarrollador, en algún momento, ha necesitado crear un script bash, incluso los scripts en nuestros pipelines. Ahora puedes escribir tests automatizados para ellos. Sin embargo, esta charla no es simplemente sobre bash, sino sobre construir un proyecto con estándares, documentación sólida y una hoja de ruta abierta, siempre manteniendo la calidad en mente. Podemos pasar de una simple función a un proyecto OSS completo en semanas, gracias al poder de la colaboración desinteresada.
+bashunit es un framework de testing para scripts bash, inspirado en PHPUnit, Jest y otros. Todo desarrollador ha necesitado crear un script bash en algún momento, incluso para los pipelines. Ahora puedes escribir tests automatizados para ellos.
+
+Pero esta charla va más allá del bash. Es sobre cómo construir un proyecto con estándares, buena documentación y una hoja de ruta abierta, sin perder la calidad. Pasamos de una simple función a un proyecto OSS completo en semanas, gracias a la colaboración desinteresada.
 
 <!-- more -->
 

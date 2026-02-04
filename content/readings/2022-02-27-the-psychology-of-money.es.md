@@ -1,11 +1,11 @@
 +++
-title = "The Psychology of Money"
-description = "No hay razón para arriesgar lo que tienes y necesitas por lo que no tienes y no necesitas. Lecciones atemporales sobre riqueza, codicia y felicidad."
+title = "La Psicología del Dinero"
+description = "No tiene sentido arriesgar lo que tienes y necesitas por lo que no tienes ni necesitas. Lecciones sobre riqueza, codicia y felicidad."
 authors = [ "Morgan Housel" ]
 [taxonomies]
 tags = [ "psychology", "economics", "philosophy" ]
 [extra]
-subtitle = "Lecciones atemporales sobre riqueza, codicia y felicidad por Morgan Housel"
+subtitle = "Lecciones sobre riqueza, codicia y felicidad"
 pages = "240"
 author = "Morgan Housel"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41haL4XdXAL._SX322_BO1,204,203,200_.jpg"
@@ -14,7 +14,7 @@ expand_preview = false
 
 <!-- more -->
 
-Tener más dinero te hará más feliz SOLO si eso significa que tendrás más control sobre tu tiempo.
+Tener más dinero te hará más feliz SOLO si significa tener más control sobre tu tiempo.
 
 > "No tenía la intención de hacerme rico. Solo quería ser independiente." Charlie Munger.
 
@@ -22,32 +22,32 @@ Tener más dinero te hará más feliz SOLO si eso significa que tendrás más co
 
 ### Interés compuesto
 
-- Empieza a invertir con lo que puedas permitirte, y mantente invertido.
+- Empieza a invertir con lo que puedas y mantente invertido.
 - Aprovecha el poder del interés compuesto.
 
 ### Volatilidad
 
-- No es posible obtener altos rendimientos sin volatilidad.
-- Es el precio emocional que necesitas pagar si quieres buenos rendimientos anuales.
-- Acepta la volatilidad. La volatilidad es una tarifa, no una multa.
+- No hay altos rendimientos sin volatilidad.
+- Es el precio emocional que pagas por buenos rendimientos anuales.
+- Acepta la volatilidad. Es una tarifa, no una multa.
 
 ### Inversiones de cola
 
-- Es difícil predecir cuál será "lo próximo grande", por lo tanto es importante diversificar.
-- Una inversión de cola es una única inversión que supera masivamente a todas las demás, y compensa varias malas inversiones.
-- Haz muchas inversiones diversificadas para beneficiarte de algunas inversiones de cola.
+- Predecir "lo próximo grande" es difícil, así que diversifica.
+- Una inversión de cola es esa única inversión que supera a todas las demás y compensa varias malas decisiones.
+- Diversifica para aumentar tus chances de pillar alguna inversión de cola.
 
 ## Citas
 
-> "No hay razón para arriesgar lo que tienes y necesitas por lo que no tienes y no necesitas."
+> "No tiene sentido arriesgar lo que tienes y necesitas por lo que no tienes ni necesitas."
 
-> "Las colas largas – los extremos más lejanos de una distribución de resultados – tienen tremenda influencia en las finanzas, donde un pequeño número de eventos puede representar la mayoría de los resultados."
+> "Las colas largas (los extremos más alejados de una distribución) tienen enorme influencia en las finanzas. Un puñado de eventos puede representar la mayoría de los resultados."
 
-> "La capacidad de hacer lo que quieras, cuando quieras, con quien quieras, durante el tiempo que quieras, no tiene precio. Es el dividendo más alto que paga el dinero."
+> "Poder hacer lo que quieras, cuando quieras, con quien quieras, el tiempo que quieras, no tiene precio. Es el mejor dividendo que paga el dinero."
 
-> "Como todo lo demás que vale la pena, invertir con éxito exige un precio. Pero su moneda no son dólares y centavos. Es volatilidad, miedo, duda, incertidumbre y arrepentimiento – todo lo cual es fácil de pasar por alto hasta que lo estás enfrentando en tiempo real."
+> "Como todo lo que vale la pena, invertir bien tiene un precio. Pero no se paga en euros, sino en volatilidad, miedo, duda, incertidumbre y arrepentimiento. Todo eso es fácil de ignorar hasta que lo vives en tiempo real."
 
-> "Pocas cosas importan más con el dinero que entender tu propio horizonte temporal y no dejarte persuadir por las acciones y comportamientos de personas jugando juegos diferentes a los tuyos."
+> "Pocas cosas importan más con el dinero que entender tu horizonte temporal y no dejarte influir por gente que juega un juego diferente al tuyo."
 
 ---
 

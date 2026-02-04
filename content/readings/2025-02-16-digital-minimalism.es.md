@@ -1,6 +1,6 @@
 +++
-title = "Digital Minimalism"
-description = "En una era dominada por la conectividad constante, el concepto de minimalismo digital emerge como un antídoto refrescante. Acuñado por Cal Newport, esta filosofía no trata de rechazar la tecnología sino de usarla con mayor intención y cuidado. Al implementar el minimalismo digital, los individuos pueden recuperar el enfoque, reducir la ansiedad y cultivar relaciones más profundas y significativas."
+title = "Minimalismo digital"
+description = "Cal Newport propone usar la tecnología con intención, no rechazarla. Una guía práctica para recuperar tu atención, reducir la ansiedad y construir relaciones más auténticas."
 draft = false
 authors = [ "Cal Newport" ]
 [taxonomies]
@@ -13,52 +13,52 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-En una era dominada por la conectividad constante, el concepto de minimalismo digital emerge como un antídoto refrescante. Acuñado por Cal Newport, esta filosofía no trata de rechazar la tecnología sino de usarla con mayor intención y cuidado. Al implementar el minimalismo digital, los individuos pueden recuperar el enfoque, reducir la ansiedad y cultivar relaciones más profundas y significativas.
+Vivimos conectados todo el tiempo. El minimalismo digital de Cal Newport no propone rechazar la tecnología, sino usarla con intención. El resultado: recuperas tu enfoque, reduces la ansiedad y construyes relaciones más profundas.
 
 <!-- more -->
 
-## Los Principios Fundamentales del Minimalismo Digital
+## Los tres principios del minimalismo digital
 
-El enfoque de Newport hacia el minimalismo digital se basa en tres ideas fundamentales:
+Newport basa su enfoque en tres ideas:
 
-- **El Desorden es Costoso** – Las distracciones digitales innecesarias fragmentan nuestra atención y drenan nuestra energía mental. Al ordenar nuestras vidas digitales, recuperamos el control sobre nuestro enfoque y tiempo.
+- **El desorden cuesta caro** – Las distracciones digitales fragmentan tu atención y agotan tu energía mental. Ordenar tu vida digital te devuelve el control.
 
-- **La Optimización es Esencial** – En lugar de aceptar sin pensar cada nueva app o plataforma, los minimalistas digitales curan cuidadosamente su uso de tecnología para alinearlo con sus valores y metas.
+- **Optimizar es esencial** – No aceptes cada app o plataforma sin pensar. Elige solo las que encajan con tus valores y metas.
 
-- **La Intencionalidad es Clave** – Los minimalistas digitales no solo reducen el tiempo de pantalla; eligen deliberadamente cómo y cuándo interactuar con la tecnología para maximizar sus beneficios mientras minimizan sus desventajas.
+- **La intención lo es todo** – No se trata solo de reducir el tiempo de pantalla. Se trata de decidir cuándo y cómo usas la tecnología.
 
-## El Declutter Digital de 30 Días
+## El detox digital de 30 días
 
-Una de las estrategias más accionables de Newport es el declutter digital de 30 días. La idea es simple:
+Una de las estrategias más prácticas de Newport:
 
-- Toma un **descanso de 30 días** de todas las herramientas digitales no esenciales.
-- Durante este período, **explora actividades alternativas offline** que traigan satisfacción.
-- Después de 30 días, **reintroduce solo** las herramientas digitales que **añadan valor a tu vida**.
+- **Descanso de 30 días** de todas las herramientas digitales no esenciales.
+- **Explora actividades offline** que te satisfagan de verdad.
+- **Reintroduce solo** lo que añada valor real a tu vida.
 
-Este método sirve como un reinicio, permitiendo a los individuos evaluar qué tecnologías realmente mejoran sus vidas en lugar de simplemente consumir su tiempo.
+Es un reinicio. Te ayuda a ver qué tecnologías mejoran tu vida y cuáles solo te roban tiempo.
 
-## Los Beneficios del Minimalismo Digital
+## Qué ganas con el minimalismo digital
 
-Quienes adoptan el minimalismo digital a menudo reportan:
+Quienes lo adoptan notan:
 
-- **Mejor Enfoque** – Con menos distracciones, el trabajo profundo y los proyectos significativos se vuelven más fáciles de lograr.
-- **Menos Ansiedad** – Menos exposición a redes sociales y notificaciones infinitas resulta en una mentalidad más tranquila y presente.
-- **Relaciones Más Ricas** – Al priorizar las interacciones cara a cara, los minimalistas digitales cultivan conexiones personales más fuertes y significativas.
-- **Mayor Productividad** – Menos distracciones digitales se traducen en mayor eficiencia y mayor producción creativa.
+- **Mejor enfoque** – Menos distracciones significa trabajo profundo más accesible.
+- **Menos ansiedad** – Sin redes sociales ni notificaciones constantes, tu mente se calma.
+- **Relaciones más ricas** – Priorizar lo presencial fortalece los vínculos reales.
+- **Mayor productividad** – Menos ruido digital, más eficiencia y creatividad.
 
-## Pasos Prácticos para Empezar
+## Cómo empezar
 
-Si estás listo para experimentar con el minimalismo digital, aquí hay algunos pasos simples para comenzar:
+Algunos pasos concretos:
 
-- **Audita Tu Vida Digital** – Identifica qué apps, plataformas y dispositivos consumen más tiempo sin ofrecer beneficios significativos.
-- **Establece Límites de Tiempo de Pantalla** – Usa herramientas incorporadas en tu teléfono o computadora para limitar el tiempo gastado en ciertas apps.
-- **Establece Zonas Libres de Tecnología** – Designa áreas como el dormitorio o la mesa del comedor como espacios sin pantallas.
-- **Prioriza Actividades Analógicas** – Reemplaza las distracciones digitales con libros, hobbies e interacciones en persona.
-- **Programa Horas "Offline"** – Establece horarios intencionales durante el día cuando te desconectas completamente de los dispositivos digitales.
+- **Audita tu vida digital** – ¿Qué apps te quitan tiempo sin darte nada a cambio?
+- **Pon límites de pantalla** – Usa las herramientas del móvil para restringir ciertas apps.
+- **Crea zonas libres de tecnología** – El dormitorio o la mesa del comedor, por ejemplo.
+- **Vuelve a lo analógico** – Libros, hobbies, conversaciones cara a cara.
+- **Programa horas offline** – Momentos del día donde te desconectas del todo.
 
-## Pensamientos Finales
+## Para cerrar
 
-El minimalismo digital **no se trata de rechazar la tecnología** por completo —**se trata de usarla de una manera que mejore** en lugar de disminuir **nuestra calidad de vida**. Al adoptar un enfoque más consciente hacia nuestros [hábitos](/tags/habits/) digitales, podemos recuperar nuestro tiempo, mejorar nuestro bienestar y reenfocar en lo que realmente importa.
+El minimalismo digital **no rechaza la tecnología**. La usa **de forma que mejore tu vida**, no que la consuma. Con un enfoque más consciente de tus [hábitos](/tags/habits/) digitales, recuperas tiempo, bienestar y atención para lo que de verdad importa.
 
 ---
 

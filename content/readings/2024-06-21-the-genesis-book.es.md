@@ -1,6 +1,6 @@
 +++
 title = "The Genesis Book"
-description = "Bitcoin no apareció de la nada. Durante décadas antes de la invención de Satoshi Nakamoto, un grupo diverso de científicos informáticos, activistas de la privacidad y economistas heterodoxos intentaron crear una forma digital de dinero que pudiera operar independientemente del control gubernamental. The Genesis Book cuenta la historia de las personas y proyectos que inspiraron la invención del primer sistema de efectivo electrónico peer-to-peer exitoso del mundo."
+description = "Bitcoin no surgió de la nada. Durante décadas, científicos informáticos, activistas de la privacidad y economistas heterodoxos intentaron crear dinero digital que funcionara sin control gubernamental. Este libro cuenta la historia de las personas y proyectos que inspiraron el primer sistema de efectivo electrónico P2P exitoso del mundo."
 draft = false
 authors = [ "Aaron van Wirdum" ]
 [taxonomies]
@@ -13,7 +13,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-Bitcoin no apareció de la nada. Durante décadas antes de la invención de Satoshi Nakamoto, un grupo diverso de científicos informáticos, activistas de la privacidad y economistas heterodoxos intentaron crear una forma digital de dinero que pudiera operar independientemente del control gubernamental. The Genesis Book cuenta la historia de las personas y proyectos que inspiraron la invención del primer sistema de efectivo electrónico peer-to-peer exitoso del mundo.
+Bitcoin no surgió de la nada. Durante décadas antes de Satoshi Nakamoto, científicos informáticos, activistas de la privacidad y economistas heterodoxos intentaron crear dinero digital que funcionara sin control gubernamental. Este libro cuenta la historia de las personas y proyectos que inspiraron el primer sistema de efectivo electrónico P2P exitoso del mundo.
 
 <!-- more -->
 
@@ -48,11 +48,11 @@ Bitcoin no apareció de la nada. Durante décadas antes de la invención de Sato
 
 ---
 
-> El banco central declaró a la aseguradora "demasiado grande para caer", y, junto con el Tesoro de EE.UU., la rescató con una inyección de $68 mil millones (más otros $112 mil millones en garantías).
+> El banco central declaró a la aseguradora "demasiado grande para caer" y, junto con el Tesoro de EE.UU., la rescató con una inyección de 68 mil millones de dólares (más otros 112 mil millones en garantías).
 
-> Si el análisis de Friedrich Hayek sobre la economía monetaria al principio de su carrera era correcto, Bitcoin podría ayudar a arreglar la economía. Como una moneda sin respaldo que operaba sin un banco central, bitcoin era una forma de dinero completamente homogénea. Cualquiera podía controlar sus propias monedas, y no había ratios de reserva de qué preocuparse. Y, como bitcoin existía en internet, también era sin fronteras. Cualquiera con conexión a internet, en cualquier parte del mundo, podía descargar el software y empezar a enviar y recibir transacciones a cualquier otra persona. Esta combinación --un tipo de dinero homogéneo, sin fronteras y con suministro fijo-- es lo que Hayek una vez describió como dinero neutral.
+> Si el análisis de Hayek sobre economía monetaria era correcto, Bitcoin podría ayudar a arreglar la economía. Como moneda sin respaldo que operaba sin banco central, bitcoin era dinero completamente homogéneo. Cualquiera podía controlar sus propias monedas, sin preocuparse por ratios de reserva. Y como existía en internet, no tenía fronteras. Cualquiera con conexión podía descargar el software y enviar o recibir transacciones. Esta combinación (dinero homogéneo, sin fronteras y con suministro fijo) es lo que Hayek describió como dinero neutral.
 
-> Bitcoin también facilitaría el comercio internacional de una manera mucho más directa, donde solo el comprador y el vendedor y (los precios de) sus respectivos productos se ven afectados --no los niveles de precios en todos sus países.
+> Bitcoin facilitaría el comercio internacional de forma más directa: solo el comprador, el vendedor y los precios de sus productos se ven afectados, no los niveles de precios de sus países.
 
 > En Bitcoin, nadie está a cargo... y todos están a cargo.
 

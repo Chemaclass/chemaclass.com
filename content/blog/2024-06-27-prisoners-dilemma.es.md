@@ -1,6 +1,6 @@
 +++
 title = "El Dilema del Prisionero"
-description = "El Dilema del Prisionero ilustra las complejidades de la toma de decisiones estratégicas, donde los individuos deben elegir entre cooperación y traición, a menudo revelando ideas sobre el comportamiento humano y las consecuencias del interés propio versus el beneficio colectivo."
+description = "Un experimento mental sobre confianza, cooperación y traición. Muestra por qué a veces no colaboramos aunque nos convenga hacerlo."
 draft = false
 [taxonomies]
 tags = ["psychology", "philosophy", "communication"]
@@ -11,15 +11,15 @@ static_thumbnail = "/images/blog/2024-06-27/cover.jpg"
 
 ![blog-cover](/images/blog/2024-06-27/cover.jpg)
 
-El Dilema del Prisionero es un juego hipotético que muestra una situación donde las personas no querrán trabajar juntas incluso cuando es beneficioso hacerlo.
+El Dilema del Prisionero es un experimento mental que muestra por que a veces no colaboramos, aunque nos convenga hacerlo.
 
 <!-- more -->
 
-Es solo una forma larga de decir que a la gente no le gusta que se aprovechen de ella. A menudo es la teoría de juegos 101.
+Dicho de otra forma: a nadie le gusta que se aprovechen de uno. Es teoría de juegos básica.
 
 {{ youtube(id="t9Lo2fgxWHw") }}
 
-El Dilema del Prisionero ilustra las complejidades de la toma de decisiones estratégicas, donde los individuos deben elegir entre cooperación y traición, a menudo revelando ideas sobre el comportamiento humano y las consecuencias del interés propio versus el beneficio colectivo.
+El dilema plantea una decisión difícil: cooperar o traicionar. Y revela mucho sobre cómo sopesamos el interés propio frente al beneficio colectivo.
 
 ## Premisa
 
@@ -55,15 +55,15 @@ Esto lleva a cuatro posibles resultados diferentes para los prisioneros A y B:
 
 ### El Dilema del Prisionero Iterado
 
-Es igual que el juego regular excepto que lo juegas múltiples veces con un oponente y sumas las puntuaciones. Pero puede cambiar la estrategia y tiene más aplicaciones del mundo real ya que se asemeja a una relación.
+Es igual que el juego normal, pero lo juegas varias veces con el mismo oponente y sumas las puntuaciones. Puedes cambiar de estrategia entre rondas. Tiene aplicaciones reales porque se parece a cualquier relación continuada.
 
 {{ youtube(id="BOvAbjfJ0x0") }}
 
 ---
 
-Esto está estrechamente relacionado con la confianza, el comportamiento humano y los constructos sociales en las relaciones que nos impactan tanto individual como colectivamente.
+Todo esto tiene que ver con la confianza, cómo nos comportamos y las normas sociales que influyen en nuestras relaciones.
 
-En el Dilema del Prisionero, la mejor estrategia es empezar con cooperación, pero luego imitar la acción previa del otro jugador en las rondas siguientes – recompensando la cooperación y castigando la traición.
+La mejor estrategia en el Dilema del Prisionero iterado es empezar cooperando y luego imitar lo que hizo el otro en la ronda anterior. Así recompensas la cooperación y castigas la traición.
 
 {{ youtube(id="S0SQLQMLi8Q") }}
 

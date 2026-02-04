@@ -1,6 +1,6 @@
 +++
-title = "The Art of Leadership"
-description = "Las prácticas de liderazgo son pequeñas cosas hechas repetitivamente a lo largo del tiempo. Los managers te dicen dónde estás, los líderes te dicen hacia dónde vas."
+title = "El arte del liderazgo"
+description = "Liderar son pequeñas cosas hechas de forma consistente. Los managers te dicen dónde estás; los líderes, hacia dónde vas."
 authors = [ "Michael Loop" ]
 [taxonomies]
 tags = [ "leadership", "communication", "mentoring", "team-management" ]
@@ -14,17 +14,17 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/31YOKF2IcBL
 
 <!-- more -->
 
-### Algunas notas destacadas
+### Notas destacadas
 
-- Las prácticas de liderazgo son pequeñas cosas hechas repetitivamente a lo largo del tiempo.
-- La empatía es un conjunto de habilidades poderoso.
-- La práctica de los uno a uno es importante para conectar con un equipo.
-- Pedir retroalimentación puede construir confianza y relaciones.
-- Responde a la retroalimentación con un gracias y preguntas de seguimiento para comprender.
-- La retroalimentación es un regalo.
+- Liderar son pequeñas cosas hechas de forma consistente.
+- La empatía es una habilidad poderosa.
+- Los uno a uno son clave para conectar con el equipo.
+- Pedir feedback genera confianza y fortalece relaciones.
+- Ante el feedback, da las gracias y haz preguntas para entender mejor.
+- El feedback es un regalo.
 - No es personal, es profesional.
-- El liderazgo es un traje que eliges vestir para que otros lo vean.
-- Los managers te dicen dónde estás, los líderes te dicen hacia dónde vas.
+- El liderazgo es un traje que eliges ponerte para que otros lo vean.
+- Los managers te dicen dónde estás; los líderes, hacia dónde vas.
 - Tus compañeros se convierten en tus aliados.
 
 ---

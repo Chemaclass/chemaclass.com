@@ -1,6 +1,6 @@
 +++
-title = "Effective Remote Work"
-description = "Un entorno de trabajo remoto efectivo se trata de tratar a todos como remotos, con todos en mente teniendo el mismo nivel, igualdad e información."
+title = "Trabajo Remoto Efectivo"
+description = "Un buen entorno remoto trata a todos por igual: mismo acceso, misma información, sin importar dónde estés."
 draft = false
 authors = [ "James Stanier" ]
 [taxonomies]
@@ -15,13 +15,13 @@ expand_preview = false
 
 <!-- more -->
 
-Un entorno de trabajo remoto efectivo se trata de tratar a todos como remotos, con todos en mente teniendo el mismo nivel, igualdad e información.
+Un buen entorno de trabajo remoto trata a todos por igual: mismo acceso, misma información, sin importar dónde estés.
 
 ---
 
 ## Parte 1 - Orientándose para el trabajo remoto
 
-Cubre la base para un posible entorno de trabajo remoto. Parece un poco de sentido común hoy en día, especialmente después de que el covid golpeó, donde no tuvimos otra opción que trabajar remotamente durante más de un año. Pero creo que sigue siendo bueno ver este conocimiento fundamental escrito para pulir suposiciones en los siguientes capítulos del libro.
+Establece las bases del trabajo remoto. Hoy parece sentido común, sobre todo tras el covid, cuando no tuvimos más remedio que trabajar desde casa durante más de un año. Aun así, viene bien tener estos fundamentos por escrito para cuestionar suposiciones en los siguientes capítulos.
 
 ### Capítulos
 
@@ -30,11 +30,11 @@ Cubre la base para un posible entorno de trabajo remoto. Parece un poco de senti
 
 ## Parte 2 - Construyendo equipos remotos efectivos
 
-Lo más probable es que todos hayamos tenido la experiencia del trabajo remoto casual (antes de que el trabajo remoto fuera incluso una tendencia) cuando sentimos que estábamos apartados de la dinámica del equipo cuando hacíamos trabajo remoto por alguna razón. Esto es precisamente por qué "tratar a todos como remotos" es tan importante - cuando al menos una persona trabaja remotamente.
+Seguro que alguna vez trabajaste desde casa antes de que fuera tendencia y te sentiste apartado de la dinámica del equipo. Por eso "tratar a todos como remotos" es tan importante cuando al menos una persona trabaja en remoto.
 
-Hay diferentes formas de comunicar dependiendo de la urgencia, intención, y qué tan largo y fácilmente accesible debería ser ese mensaje. Se trata de comunicación síncrona/asíncrona con nuestros compañeros.
+La forma de comunicar depende de la urgencia, la intención y cuánto debe durar el mensaje. Es la diferencia entre comunicación síncrona y asíncrona.
 
-Altamente relacionado con el párrafo anterior, la calidad de nuestros mensajes debería considerarse cuando apuntamos a una comunicación efectiva. Necesitamos considerar las herramientas correctas. Una llamada telefónica es diferente de un mensaje de chat o un email. Usa las herramientas correctas para los mensajes correctos dentro del contexto adecuado.
+La calidad de los mensajes importa tanto como el canal. Una llamada no es lo mismo que un chat o un email. Usa la herramienta adecuada para cada mensaje y contexto.
 
 ### Capítulos
 
@@ -48,9 +48,9 @@ Altamente relacionado con el párrafo anterior, la calidad de nuestros mensajes 
 - **Gestionando equipos**: La ecuación de output revisitada. Reduciendo el factor de escala. Potenciando el factor de escala. Hora de subir de nivel.
 
 
-## Parte 3 - Creando una cultura remota de clase mundial
+## Parte 3 - Creando una cultura remota de primer nivel
 
-Aunque una empresa completamente remota puede no ser posible por algunas razones fuera de nuestro control, si la empresa afirma ser amigable con el trabajo remoto, hay algunos aspectos que podemos considerar:
+Puede que una empresa 100% remota no sea posible por razones que escapan a nuestro control. Pero si la empresa dice ser "remote-friendly", hay aspectos que vale la pena evaluar:
 
 1. ¿Tratas a todos como remotos?
 2. ¿Proporcionas configuración de espacio de trabajo remoto?
@@ -65,7 +65,7 @@ Aunque una empresa completamente remota puede no ser posible por algunas razones
 11. ¿Apoyas a las familias así como a los empleados?
 12. ¿Devuelves algo a la comunidad local del empleado?
 
-> Este es un "Test de Joel versión para entorno de trabajo remoto". El Test de Joel se originó en el año 2000, durante la burbuja punto-com; un test para calificar la calidad de los equipos con preguntas de "sí/no". Si un equipo puede responder cada pregunta con un sí, probablemente son un equipo productivo. [Lee más sobre el Test de Joel original](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/).
+> Un "Test de Joel" adaptado al trabajo remoto. El original nació en el año 2000, durante la burbuja punto-com: preguntas de sí/no para medir la calidad de un equipo. Si respondes "sí" a todo, probablemente el equipo funciona bien. [Más sobre el Test de Joel original](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/).
 
 ### Capítulos
 

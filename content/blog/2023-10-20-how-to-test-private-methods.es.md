@@ -11,7 +11,7 @@ static_thumbnail = "/images/blog/2023-10-20/cover.jpg"
 
 ![blog-cover](/images/blog/2023-10-20/cover.jpg)
 
-Esta es una pregunta que he encontrado con cierta frecuencia durante mucho tiempo. Así que pensé en reunir mis pensamientos sobre el tema aquí.
+Esta pregunta me la han hecho muchas veces a lo largo de los años. Aquí recopilo mis ideas al respecto.
 
 <!-- more -->
 

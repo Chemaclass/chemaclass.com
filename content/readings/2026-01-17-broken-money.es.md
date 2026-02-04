@@ -1,6 +1,6 @@
 +++
-title = "Broken Money"
-description = "Una inmersión profunda en la historia monetaria desde una perspectiva tecnológica. Lyn Alden traza cómo las innovaciones han moldeado el dinero a lo largo de los siglos, examinando sistemas basados en commodities, monedas fiat modernas y alternativas emergentes como Bitcoin. Lectura esencial para entender por qué nuestro sistema financiero está fallando y qué podemos hacer al respecto."
+title = "Dinero roto"
+description = "Lyn Alden cuenta la historia del dinero desde una mirada tecnológica. Del oro al fiat y de ahí a Bitcoin: por qué el sistema financiero falla y qué alternativas tenemos."
 draft = false
 authors = [ "Lyn Alden" ]
 [taxonomies]
@@ -13,41 +13,41 @@ static_thumbnail = "https://m.media-amazon.com/images/S/compressed.photo.goodrea
 expand_preview = true
 +++
 
-Una inmersión profunda en la historia monetaria desde una perspectiva tecnológica. Lyn Alden traza cómo las innovaciones han moldeado el dinero a lo largo de los siglos, examinando sistemas basados en commodities, monedas fiat modernas y alternativas emergentes como Bitcoin.
+Lyn Alden cuenta la historia del dinero desde una mirada tecnológica. Analiza desde sistemas basados en materias primas hasta monedas fiat modernas y alternativas como Bitcoin.
 
 <!-- more -->
 
 ## ¿Qué hace que el dinero funcione?
 
-Alden comienza con los fundamentos: ¿qué hace realmente que algo sea dinero? Lo desglosa en propiedades clave—durabilidad, divisibilidad, portabilidad, escasez—y muestra cómo diferentes formas de dinero a lo largo de la historia han sobresalido o fallado en estas características.
+Alden empieza por lo básico: ¿qué convierte algo en dinero? Lo descompone en propiedades clave: durabilidad, divisibilidad, portabilidad, escasez. Y muestra cómo distintas formas de dinero han destacado o fallado en cada una.
 
-¿La idea clave? El dinero es una tecnología, y como todas las tecnologías, evoluciona. Lo que funcionó para las civilizaciones antiguas no necesariamente funciona en un mundo digital globalmente conectado.
+La idea central: el dinero es tecnología. Y como toda tecnología, evoluciona. Lo que funcionó en civilizaciones antiguas no necesariamente sirve en un mundo digital y conectado.
 
 ## El experimento fiat
 
-Una de las secciones más reveladoras cubre cómo terminamos con nuestro sistema fiat actual. Alden documenta la transición de monedas respaldadas por oro a dinero puramente emitido por gobiernos, explicando por qué este experimento—de solo unos 50 años—ha llevado a inflación persistente e inestabilidad monetaria.
+Una de las secciones más reveladoras explica cómo llegamos al sistema fiat actual. Alden documenta la transición del oro al dinero emitido por gobiernos. Un experimento de apenas 50 años que ha traído inflación persistente e inestabilidad monetaria.
 
-> "Muchas monedas se diluyen rápidamente, lo que continuamente devalúa los ahorros y salarios de los miles de millones de personas que viven y trabajan dentro de esas jurisdicciones."
+> "Muchas monedas se diluyen rápidamente, lo que devalúa los ahorros y salarios de miles de millones de personas."
 
-Respalda esto con ejemplos del mundo real de Nigeria, Egipto, Brasil y otras naciones que experimentan crisis monetarias. Para las personas en economías desarrolladas, estas historias sirven como advertencia de a dónde puede llevar la expansión monetaria descontrolada.
+Lo ilustra con ejemplos reales: Nigeria, Egipto, Brasil y otras naciones en crisis monetaria. Para quienes viven en economías desarrolladas, estas historias son una advertencia de a dónde puede llevar la expansión monetaria sin control.
 
 ## Los efectos de red del dinero
 
-Alden aporta una perspectiva única como ingeniera convertida en analista financiera. Aplica la teoría de redes para explicar por qué ciertas formas de dinero ganan sobre otras. El dinero, como internet, se beneficia de los efectos de red—cuanta más gente lo usa, más útil se vuelve.
+Alden trae una perspectiva única: es ingeniera convertida en analista financiera. Usa la teoría de redes para explicar por qué ciertas formas de dinero ganan sobre otras. El dinero, como internet, se beneficia de los efectos de red. Cuanta más gente lo usa, más útil se vuelve.
 
-Este marco ayuda a explicar tanto por qué el dólar domina el comercio global como por qué Bitcoin ha crecido tan rápidamente a pesar de empezar desde cero.
+Esto explica por qué el dólar domina el comercio global y también por qué Bitcoin ha crecido tan rápido partiendo de cero.
 
 ## Bitcoin como solución
 
-El libro construye lógicamente hacia Bitcoin como una posible solución para los sistemas monetarios rotos. Pero a diferencia de muchos libros sobre Bitcoin, Alden no solo hace cheerleading. Evalúa Bitcoin contra el oro y otras criptomonedas, reconociendo compensaciones y limitaciones.
+El libro construye lógicamente hacia Bitcoin como posible solución a los sistemas monetarios rotos. Pero Alden no hace promoción ciega. Evalúa Bitcoin frente al oro y otras criptomonedas, reconociendo sus limitaciones.
 
-Su análisis está fundamentado en principios de ingeniería: ¿Cuáles son las propiedades reales de Bitcoin? ¿Cómo se compara con formas históricas de dinero sólido? ¿Qué problemas resuelve y qué problemas permanecen?
+Su análisis tiene base ingenieril: ¿Cuáles son las propiedades reales de Bitcoin? ¿Cómo se compara con formas históricas de dinero sólido? ¿Qué problemas resuelve y cuáles quedan pendientes?
 
-## Reflexiones finales
+## Para cerrar
 
-"Broken Money" destaca porque no asume que ya estás de acuerdo con la premisa. Alden construye metódicamente el caso de que algo está mal con cómo funciona el dinero hoy, traza las raíces históricas de estos problemas y luego evalúa posibles soluciones.
+"Dinero roto" destaca porque no asume que ya compartes su premisa. Alden construye el caso paso a paso: algo falla en cómo funciona el dinero hoy. Traza las raíces históricas del problema y evalúa posibles soluciones.
 
-Ya sea que termines convencido por sus conclusiones o no, saldrás con una comprensión mucho más profunda de los sistemas monetarios y por qué importan.
+Aunque no termines convencido, saldrás entendiendo mucho mejor los sistemas monetarios y por qué importan.
 
 ---
 

@@ -1,12 +1,12 @@
 +++
-title = "The Blocksize War"
-description = "La batalla por el control de las reglas del protocolo de Bitcoin"
+title = "La Guerra del Tamaño de Bloque"
+description = "La batalla por el control del protocolo de Bitcoin"
 draft = false
 authors = [ "Jonathan Bier" ]
 [taxonomies]
 tags = [ "bitcoin", "economics", "leadership" ]
 [extra]
-subtitle = "La batalla por el control de las reglas del protocolo de Bitcoin"
+subtitle = "La batalla por el control del protocolo de Bitcoin"
 pages = "240"
 author = "Jonathan Bier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615869542i/57429394.jpg"
@@ -15,11 +15,11 @@ expand_preview = false
 
 <!-- more -->
 
-Este libro cubre la guerra del tamaño de bloque de Bitcoin, que se libró desde agosto de 2015 hasta noviembre de 2017. En la superficie, la batalla era sobre la cantidad de datos permitidos en cada bloque de Bitcoin, sin embargo expuso problemas mucho más profundos, como quién controla las reglas del protocolo de Bitcoin.
+Este libro cuenta la guerra del tamaño de bloque de Bitcoin, que duró desde agosto de 2015 hasta noviembre de 2017. En apariencia, la batalla giraba en torno a cuántos datos podía contener cada bloque. Pero el conflicto destapó algo más profundo: quién controla las reglas del protocolo de Bitcoin.
 
-Este libro explora algunos de los personajes principales en el conflicto e incluye cobertura, tanto desde las líneas del frente como detrás de escenas, durante algunas de las fases más agudas de la lucha.
+El autor explora a los personajes principales del conflicto. Ofrece cobertura desde las trincheras y también tras bastidores, durante las fases más intensas de la lucha.
 
-El relato en este libro incluye discusiones con los actores clave de ambos lados durante la guerra, explorando sus motivaciones, estrategia y procesos de pensamiento mientras la agotadora campaña progresaba y se desarrollaba.
+El relato incluye conversaciones con actores clave de ambos bandos. Descubrimos sus motivaciones, estrategias y formas de pensar mientras la agotadora campaña avanzaba.
 
 ## Capítulos
 

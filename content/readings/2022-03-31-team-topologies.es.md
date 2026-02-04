@@ -1,6 +1,6 @@
 +++
-title = "Team Topologies"
-description = "Team Topologies se enfoca en cómo configurar estructuras de equipo dinámicas y modos de interacción que pueden ayudar a los equipos a adaptarse rápidamente a nuevas condiciones, y lograr una entrega de software rápida y segura."
+title = "Topologías de Equipos"
+description = "Cómo estructurar equipos dinámicos e interacciones que permitan adaptarse rápido a nuevas condiciones y entregar software de forma ágil y segura."
 authors = [ "Matthew Skelton", "Manuel Pais" ]
 [taxonomies]
 tags = [ "team-management", "architecture", "devops", "agile" ]
@@ -14,44 +14,44 @@ expand_preview = false
 
 <!-- more -->
 
-Team Topologies se enfoca en cómo configurar estructuras de equipo dinámicas y modos de interacción que pueden ayudar a los equipos a adaptarse rápidamente a nuevas condiciones, y lograr una entrega de software rápida y segura.
+El libro explica cómo estructurar equipos dinámicos y sus interacciones para adaptarse rápido a nuevas condiciones y entregar software de forma ágil y segura.
 
 ## Estructura de equipo
 
-- Alta cohesión: Agrupa las cosas relacionadas.
-- Bajo acoplamiento: Debe haber límites claros entre los equipos.
-- Carga cognitiva: Es como la RAM del equipo. El equipo puede quemarse si lo cargas con más de lo que puede manejar.
+- Alta cohesión: agrupa las cosas relacionadas.
+- Bajo acoplamiento: límites claros entre equipos.
+- Carga cognitiva: es como la RAM del equipo. Si lo sobrecargas, se quema.
 
-> Para evitar equipos cuello de botella, necesitas asegurarte de que su carga cognitiva no sea muy alta.
+> Para evitar cuellos de botella, asegúrate de que la carga cognitiva del equipo no sea excesiva.
 
 ## Ley de Conway
 
-- La estructura organizacional influenciará la arquitectura del equipo.
-- La Ley de Conway dice que las organizaciones diseñarán sistemas que copian su estructura de comunicación.
-- En otras palabras, no habrá enfoque en la arquitectura óptima para el proyecto.
-- Primero necesitas definir la arquitectura del proyecto, y luego formar los equipos.
+- La estructura organizacional influye en la arquitectura del software.
+- Las organizaciones diseñan sistemas que copian su estructura de comunicación.
+- Resultado: nadie se enfoca en la arquitectura óptima para el proyecto.
+- Primero define la arquitectura, luego forma los equipos.
 
-## Pensamiento primero el equipo
+## El equipo primero
 
-- Quién está en el equipo importa menos que la dinámica del equipo.
-- Al medir el rendimiento, los equipos importan más que los individuos.
-- Equipo = grupo de 5-9 que trabajan hacia metas compartidas como una unidad.
-  - Revisa el [número de Dunbar](/es/blog/dunbar-number/).
+- Quién está en el equipo importa menos que su dinámica.
+- Al medir rendimiento, el equipo importa más que las personas individuales.
+- Equipo = grupo de 5-9 personas trabajando hacia metas compartidas.
+  - Ver el [número de Dunbar](/es/blog/dunbar-number/).
 - Formar un equipo toma de 2 semanas a 3 meses.
-- La carga cognitiva es la cantidad total de esfuerzo mental que se usa en la memoria de trabajo.
-- 3 Tipos de carga cognitiva:
-    - Intrínseca: Fundamentos del espacio del problema. Ejemplo: lenguaje de programación.
-    - Extrínseca: Relacionada con el entorno. Ejemplo: cómo desplegar.
-    - Germane: Se requiere atención especial. Ejemplo: dominio de negocio.
+- La carga cognitiva es el esfuerzo mental total usado en la memoria de trabajo.
+- 3 tipos de carga cognitiva:
+    - Intrínseca: fundamentos del problema. Ej: lenguaje de programación.
+    - Extrínseca: relacionada con el entorno. Ej: cómo desplegar.
+    - Germane: requiere atención especial. Ej: dominio de negocio.
 - Heurísticas:
-    - 3 tipos de dominio: Simple, complicado, complejo.
-    - Si el dominio es demasiado grande, divídelo en subdominios.
-    - Un equipo, ya sea:
+    - 3 tipos de dominio: simple, complicado, complejo.
+    - Si el dominio es muy grande, divídelo en subdominios.
+    - Un equipo puede manejar:
         - 2-3 dominios simples.
         - 1 dominio complejo.
-        - Evita 2 dominios complicados, mejor divide el equipo.
+        - Evita 2 dominios complicados; mejor divide el equipo.
 - Define una API de equipo:
-    - Código: endpoints, librerías, clientes, ...
+    - Código: endpoints, librerías, clientes...
     - Versionado.
     - Documentación.
     - Prácticas y principios.
@@ -59,19 +59,19 @@ Team Topologies se enfoca en cómo configurar estructuras de equipo dinámicas y
 
 ## Topologías de equipo
 
-> En lugar de estructurar equipos según el know-how o actividades, organiza equipos según áreas de dominio de negocio.
+> Organiza equipos por áreas de dominio de negocio, no por conocimiento técnico o actividades.
 
-- El éxito de la topología depende tanto de los miembros del equipo como del entorno circundante, equipos e interacciones.
-- Divide las responsabilidades para romper los silos.
-- Tipos de dependencias: Conocimiento, tarea y recurso.
+- El éxito depende tanto de los miembros como del entorno, otros equipos e interacciones.
+- Divide responsabilidades para romper silos.
+- Tipos de dependencias: conocimiento, tarea y recurso.
 - Cuatro tipos de equipos:
-    - Stream-aligned: entregar funcionalidades, proyectos, productos al mercado lo antes posible.
-    - Enabling: hacer crecer las capacidades para el/los equipo(s) stream-aligned.
-    - Complicated-subsystem: reducir la carga cognitiva del/los equipo(s) stream-aligned.
-    - Platform: hacer autónomos al/los equipo(s) stream-aligned.
+    - Stream-aligned: entregar funcionalidades y productos al mercado cuanto antes.
+    - Enabling: desarrollar capacidades para los equipos stream-aligned.
+    - Complicated-subsystem: reducir la carga cognitiva de los equipos stream-aligned.
+    - Platform: dar autonomía a los equipos stream-aligned.
 
 ## Interacciones de equipo
 
-- Colaboración. Trabajar estrechamente entre equipos con diferentes conjuntos de habilidades.
-- X-as-a-Service. Propiedad clara, baja carga cognitiva.
-- Facilitación. Ayudar a eliminar impedimentos, enfocarse en interacciones de calidad entre otros equipos.
+- Colaboración: trabajo cercano entre equipos con distintas habilidades.
+- X-as-a-Service: propiedad clara, baja carga cognitiva.
+- Facilitación: eliminar impedimentos y mejorar la calidad de las interacciones entre equipos.

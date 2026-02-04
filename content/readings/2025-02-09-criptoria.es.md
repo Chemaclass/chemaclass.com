@@ -1,6 +1,6 @@
 +++
 title = "Criptoria"
-description = "Una historia sobre el proceso evolutivo que dio origen a las computadoras, redes, ciberseguridad y dinero digital. Desde Grecia hasta Bitcoin, Criptoria narra una selección de hitos que ocurrieron antes y después de Alan Turing. El libro muestra una amplia colección de personas, organizaciones, conceptos e invenciones que evidencian la profunda relación histórica y cultural entre matemáticas, criptografía, ciencias de la computación y la lucha por la soberanía individual. Criptoria está dirigido a todas las personas convencidas de que, más allá de formas heredadas o impuestas, hay otras formas de organización social y económica que pueden y deben ser exploradas."
+description = "De Grecia a Bitcoin: cómo nacieron las computadoras, las redes y el dinero digital. Un viaje por los hitos que conectan matemáticas, criptografía y la lucha por la soberanía individual."
 draft = false
 authors = [ "Alfre Mancera" ]
 [taxonomies]
@@ -13,13 +13,13 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.
 expand_preview = true
 +++
 
-Criptoria es una historia sobre el proceso evolutivo que dio origen a las computadoras, redes, ciberseguridad y dinero digital.
+¿Cómo llegamos de la Grecia antigua a Bitcoin? Criptoria cuenta esa historia: el nacimiento de las computadoras, las redes y el dinero digital.
 
-Desde Grecia hasta Bitcoin, Criptoria narra una selección de hitos que ocurrieron antes y después de Alan Turing. El libro muestra una amplia colección de personas, organizaciones, conceptos e invenciones que evidencian la profunda relación histórica y cultural entre matemáticas, criptografía, ciencias de la computación y la lucha por la soberanía individual.
+El libro recorre los hitos antes y después de Alan Turing. Personas, organizaciones e inventos que revelan el vínculo profundo entre matemáticas, criptografía y la búsqueda de soberanía individual.
 
 <!-- more -->
 
-Criptoria está dirigido a todas las personas convencidas de que, más allá de formas heredadas o impuestas, hay otras formas de organización social y económica que pueden y deben ser exploradas.
+Un libro para quienes creen que hay formas de organización social y económica más allá de las heredadas o impuestas.
 
 ---
 

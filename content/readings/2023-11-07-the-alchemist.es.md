@@ -1,6 +1,6 @@
 +++
-title = "The Alchemist"
-description = "Una novela clásica sobre Santiago, un niño que emprende un viaje buscando un tesoro en Egipto, aprendiendo la verdadera importancia de la superación personal y lo que realmente importa en la vida."
+title = "El Alquimista"
+description = "Santiago, un joven pastor, emprende un viaje hacia las pirámides de Egipto persiguiendo un sueño. En el camino descubre qué es lo que realmente importa en la vida."
 draft = false
 authors = [ "Paulo Coelho" ]
 [taxonomies]
@@ -15,7 +15,7 @@ expand_preview = false
 
 <!-- more -->
 
-El Alquimista es una novela clásica en la que un niño llamado Santiago emprende un viaje buscando un tesoro en las pirámides egipcias después de tener un sueño recurrente sobre ello. En el camino conoce mentores, se enamora, y lo más importante, aprende la verdadera importancia de quién es y cómo mejorarse a sí mismo y enfocarse en lo que realmente importa en la vida.
+Santiago es un joven pastor que tiene un sueño recurrente: hay un tesoro esperándole en las pirámides de Egipto. Decide ir a buscarlo. Por el camino encuentra mentores, se enamora y, sobre todo, aprende quién es realmente y qué es lo que importa de verdad en la vida.
 
 #### Resumen en Video
 

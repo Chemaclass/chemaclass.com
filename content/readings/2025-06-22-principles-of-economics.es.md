@@ -1,6 +1,6 @@
 +++
-title = "Principles of Economics"
-description = "Si alguna vez te has rascado la cabeza con la economía, te has preguntado por qué los precios siguen subiendo, o cuestionado por qué el dinero parece perder valor con el tiempo, Principles of Economics de Saifedean Ammous podría volarte la cabeza. No es tu típico libro de economía aburrido. En cambio, es una guía audaz y directa para entender cómo funciona realmente el mundo—a través de la lente de la economía austriaca. Esto es lo que más me llamó la atención."
+title = "Principios de Economía"
+description = "¿Por qué los precios suben y el dinero pierde valor? Saifedean Ammous lo explica desde la economía austriaca. Un libro directo que cambia cómo ves el mundo."
 draft = false
 authors = [ "Saifedean Ammous" ]
 [taxonomies]
@@ -13,61 +13,61 @@ static_thumbnail = "https://m.media-amazon.com/images/I/71OdiXckU3L._SY522_.jpg"
 expand_preview = true
 +++
 
-Si alguna vez te has rascado la cabeza con la economía, te has preguntado por qué los precios siguen subiendo, o cuestionado por qué el dinero parece perder valor con el tiempo, Principles of Economics de Saifedean Ammous podría volarte la cabeza.
+¿Te has preguntado alguna vez por qué los precios suben o por qué el dinero pierde valor? Principios de Economía de Saifedean Ammous puede cambiarte la perspectiva.
 
-No es tu típico libro de economía aburrido. En cambio, es una guía audaz y directa para entender cómo funciona realmente el mundo—a través de la lente de la economía austriaca. Esto es lo que más me llamó la atención.
+No es el típico libro de economía aburrido. Es una guía directa para entender cómo funciona el mundo desde la economía austriaca. Esto es lo que más me marcó.
 
 <!-- more -->
 
-## 1. Economía = Acción Humana
+## 1. Economía = acción humana
 
-Ammous empieza con algo super simple pero poderoso: la economía es simplemente personas tomando decisiones. Cada vez que elegimos hacer una cosa sobre otra, eso es economía en acción.
+Ammous arranca con algo simple pero potente: la economía son personas tomando decisiones. Cada vez que eliges una cosa sobre otra, eso es economía en acción.
 
-Olvida todos los gráficos y ecuaciones que puedas haber visto en la escuela—la economía real comienza contigo tratando de mejorar la vida, una decisión a la vez.
+Olvídate de gráficos y ecuaciones. La economía real empieza contigo tratando de mejorar tu vida, una decisión a la vez.
 
-## 2. Preferencia Temporal = Cuánto Valoras el Futuro
+## 2. Preferencia temporal = cuánto valoras el futuro
 
-Esta idea fue un cambio de juego: tu preferencia temporal es cuánto valoras las cosas ahora vs. después.
-- Si gastas todo hoy, tienes una preferencia temporal alta.
-- Si ahorras y planificas para mañana, tienes una preferencia temporal baja.
+Esta idea me cambió la forma de ver las cosas: tu preferencia temporal es cuánto valoras el ahora frente al después.
+- Si gastas todo hoy, tienes preferencia temporal alta.
+- Si ahorras y planificas, tienes preferencia temporal baja.
 
-La preferencia temporal baja lleva a construir cosas geniales. Como negocios, familias, rascacielos, o incluso civilizaciones. ¿Preferencia temporal alta? Eso es comida rápida, compras impulsivas y pensamiento a corto plazo.
+La preferencia temporal baja construye cosas grandes: negocios, familias, rascacielos, civilizaciones. La alta es comida rápida, compras impulsivas, pensamiento cortoplacista.
 
-## 3. Buen Dinero = Sociedad Fuerte
+## 3. Buen dinero = sociedad fuerte
 
-La calidad del dinero de una sociedad afecta todo. Si tu dinero constantemente pierde valor (_hola, inflación_), las personas dejan de ahorrar y empiezan a vivir para hoy.
+La calidad del dinero afecta todo. Si tu dinero pierde valor constantemente (_hola, inflación_), la gente deja de ahorrar y vive solo para hoy.
 
-Él argumenta que el dinero "fiat" controlado por el gobierno es el problema—y necesitamos un retorno al "dinero duro" (como el oro o [Bitcoin](/tags/bitcoin/)) que mantenga su valor con el tiempo. El buen dinero ayuda a las personas a planificar, ahorrar y hacer crecer la riqueza a través de generaciones.
+Ammous señala al dinero fiat controlado por gobiernos como el problema. Y defiende volver al "dinero duro" (oro o [Bitcoin](/tags/bitcoin/)) que mantiene su valor. El buen dinero permite planificar, ahorrar y crear riqueza a largo plazo.
 
-## 4. Producir Cosas Toma Tiempo—y Eso Importa
+## 4. Producir lleva tiempo, y eso importa
 
-Hacer cosas no es instantáneo. Toma tiempo, herramientas y planificación. Ammous explica cómo las economías avanzadas solo existen porque las personas invierten en producción a largo plazo: fábricas, máquinas, cadenas de suministro.
+Hacer cosas no es instantáneo. Requiere tiempo, herramientas y planificación. Ammous explica que las economías avanzadas existen porque la gente invierte a largo plazo: fábricas, máquinas, cadenas de suministro.
 
-Eso solo es posible cuando las personas confían en su dinero y su futuro. Así que de nuevo, la preferencia temporal baja es clave.
+Eso solo ocurre cuando confías en tu dinero y en tu futuro. De nuevo, la preferencia temporal baja es clave.
 
-## 5. Los Emprendedores, No los Gobiernos, Impulsan el Progreso
+## 5. Los emprendedores impulsan el progreso, no los gobiernos
 
-Si hay un héroe en este libro, es **el emprendedor**—la persona que **toma riesgos**, construye negocios y **crea valor**.
+El héroe de este libro es **el emprendedor**: quien **toma riesgos**, construye negocios y **crea valor**.
 
-Ammous no tiene ningún amor por los planificadores centrales, las regulaciones o los rescates gubernamentales. Está totalmente a favor de los mercados libres y dejar que las personas inteligentes resuelvan problemas sin interferencia. Cuando los precios son honestos y el dinero es sólido, las personas se las arreglan por sí solas.
+Ammous no tiene simpatía por planificadores centrales, regulaciones ni rescates gubernamentales. Defiende mercados libres donde la gente resuelva problemas sin interferencias. Con precios honestos y dinero sólido, la gente se las arregla sola.
 
-## 6. ¿Inflación y Planificación Central? Grandes Señales de Alerta
+## 6. Inflación y planificación central: señales de alarma
 
-Ammous no se anda con rodeos. Es muy crítico con cómo los gobiernos gestionan el dinero y la economía.
+Ammous no se anda con rodeos. Critica duramente cómo los gobiernos gestionan el dinero.
 
-Ve la inflación como una forma furtiva de robo y cree que la constante intervención (como imprimir dinero o fijar tasas de interés) solo empeora las cosas. Incluso critica campos enteros como la economía climática y ESG como siendo más sobre política que economía real.
+Ve la inflación como robo encubierto. Y cree que la intervención constante (imprimir dinero, fijar tasas de interés) solo empeora las cosas. También cuestiona campos como la economía climática y ESG, que considera más políticos que económicos.
 
-## 7. Bitcoin: El Gran Final
+## 7. Bitcoin: el gran final
 
-Aunque este libro no es solo sobre Bitcoin, claramente lleva hacia allí. Después de explicar por qué nuestro sistema monetario actual está roto, Ammous señala a Bitcoin como la mejor solución que hemos visto en más de un siglo.
+El libro no trata solo de Bitcoin, pero claramente lleva hacia allí. Tras explicar por qué el sistema monetario actual está roto, Ammous presenta Bitcoin como la mejor solución en más de un siglo.
 
-Es digital, limitado, y nadie puede manipularlo. Bitcoin es el retorno del dinero sólido, y una oportunidad de arreglar mucho de lo que está mal hoy.
+Es digital, limitado y nadie puede manipularlo. Bitcoin representa el regreso del dinero sólido. Una oportunidad de arreglar mucho de lo que hoy está mal.
 
-## Pensamientos Finales: Un Curso Intensivo de Economía Real
+## Un curso intensivo de economía real
 
-"Principles of Economics" es como una píldora roja de economía. Es directo, audaz, y a veces brutal. Pero si estás cansado de las tonterías financieras habituales, este libro te golpeará como un soplo de aire fresco.
+"Principios de Economía" es una píldora roja. Directo, audaz y a veces brutal. Si estás cansado de las tonterías financieras habituales, este libro es aire fresco.
 
-Saldrás con una nueva lente para ver el mundo—por qué suben los precios, por qué importa ahorrar, y por qué el tipo de dinero que usamos da forma a todo.
+Sales con una lente nueva para ver el mundo: por qué suben los precios, por qué importa ahorrar y por qué el tipo de dinero que usamos lo moldea todo.
 
 ## Economía Austriaca vs Economía Keynesiana
 

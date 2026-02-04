@@ -1,11 +1,11 @@
 +++
-title = "The Essential Drucker"
-description = "The Essential Drucker contiene veintiséis selecciones sobre gestión en la organización, gestión y el individuo, y gestión y sociedad. Cubre los principios básicos y preocupaciones de la gestión y sus problemas, desafíos y oportunidades, dando a managers, ejecutivos y profesionales las herramientas para realizar las tareas que la economía y la sociedad del mañana exigirán de ellos."
+title = "Lo esencial de Drucker"
+description = "Veintiséis textos esenciales sobre gestión: cómo liderar organizaciones, desarrollar personas y entender el papel de las empresas en la sociedad."
 authors = [ "Peter F. Drucker" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "philosophy" ]
 [extra]
-subtitle = "Lo Mejor de Sesenta Años de Escritos Esenciales de Peter Drucker sobre Gestión"
+subtitle = "Lo Mejor de Sesenta Años de Escritos de Peter Drucker sobre Gestión"
 pages = "360"
 author = "Peter F. Drucker"
 static_thumbnail = "https://m.media-amazon.com/images/I/41gdosc0RaL.jpg"
@@ -14,11 +14,9 @@ expand_preview = false
 
 <!-- more -->
 
-Una selección de veintiséis textos sobre gestión en la organización, gestión y el individuo, y gestión y sociedad.
+Una selección de veintiséis textos sobre gestión organizacional, el individuo y la sociedad.
 
-Cubre los principios básicos de la gestión y sus problemas, desafíos y oportunidades, dando a managers,
-ejecutivos y profesionales las herramientas para realizar las tareas que la economía y la sociedad del mañana exigirán
-de ellos.
+El libro cubre los principios básicos de la gestión junto con sus problemas, desafíos y oportunidades. Ofrece a managers, ejecutivos y profesionales las herramientas necesarias para afrontar lo que la economía y la sociedad del mañana les exigirán.
 
 ---
 

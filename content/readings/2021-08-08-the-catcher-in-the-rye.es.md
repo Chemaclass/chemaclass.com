@@ -1,6 +1,6 @@
 +++
-title = "The Catcher in the Rye"
-description = "La novela es una reflexión más profunda de la propia juventud de Salinger, su complicada relación con crecer y el trauma generacional afectado por la Segunda Guerra Mundial."
+title = "El guardián entre el centeno"
+description = "Salinger refleja su propia juventud, su relación complicada con crecer y el trauma de la Segunda Guerra Mundial. Una novela que se convirtió en icono de la rebeldía adolescente."
 authors = [ "J. D. Salinger" ]
 [taxonomies]
 tags = [ "fiction", "psychology", "philosophy" ]
@@ -14,17 +14,13 @@ expand_preview = false
 
 <!-- more -->
 
-Originalmente estaba destinada para adultos pero es a menudo leída por adolescentes por sus temas de angustia, alienación, y como una
-crítica a la superficialidad en la sociedad.
+Aunque fue escrita para adultos, los adolescentes la adoptaron por sus temas de angustia, alienación y crítica a lo superficial.
 
-La novela es una reflexión más profunda de la propia juventud de Salinger, su complicada relación con crecer y el
-trauma generacional afectado por la Segunda Guerra Mundial.
+Salinger refleja su propia juventud, su relación complicada con crecer y el trauma de haber vivido la Segunda Guerra Mundial.
 
-Innegablemente autobiográfica, Salinger se basó en sus experiencias personales luchando en la guerra y su Nueva York creando el
-personaje de **Holden Caulfield**.
+Es una novela claramente autobiográfica. Salinger usó sus experiencias en la guerra y su Nueva York natal para crear a **Holden Caulfield**.
 
-El protagonista de la novela se ha convertido en un icono de la rebelión adolescente. La novela también trata temas complejos de inocencia,
-identidad, pertenencia, pérdida, conexión, sexo y depresión.
+El protagonista se convirtió en icono de la rebeldía adolescente. La novela toca temas como la inocencia, la identidad, la pertenencia, la pérdida, el sexo y la depresión.
 
 Del capítulo 22:
 

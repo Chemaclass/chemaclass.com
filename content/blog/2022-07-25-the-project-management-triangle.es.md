@@ -1,47 +1,47 @@
 +++
-title = "El Triángulo de Gestión de Proyectos"
-description = "Entrega valor constantemente en iteraciones cortas. ¿Por qué? Porque esto te ayudará a obtener feedback, y el feedback es necesario para tomar las decisiones correctas."
+title = "El Triangulo de Gestion de Proyectos"
+description = "Entrega valor constantemente en iteraciones cortas. ¿Por que? Porque asi obtendras feedback, y el feedback es clave para tomar buenas decisiones."
 [taxonomies]
 tags = [ "agile", "team-management", "productivity" ]
 [extra]
-subtitle = "El Triángulo de Hierro"
+subtitle = "El Triangulo de Hierro"
 static_thumbnail = "/images/blog/2022-07-25/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2022-07-25/cover.jpg)
 
-Un triángulo de tiempo, calidad y coste. Es un indicador de que estos tres parámetros están interconectados.
-Puedes fijar uno o dos de ellos, pero no los tres.
+Un triangulo de tiempo, calidad y coste. Estos tres parametros estan interconectados.
+Puedes fijar uno o dos, pero no los tres.
 
 <!-- more -->
 
-### La triple restricción
+### La triple restriccion
 
-- Barato y rápido: la calidad sufrirá.
-- Barato y bueno: llevará más tiempo.
-- Rápido y bueno: subirá el precio.
+- Barato y rapido: la calidad sufre.
+- Barato y bueno: lleva mas tiempo.
+- Rapido y bueno: sube el precio.
 
 ## Waterfall vs Agile
 
-En metodologías de software, puedes adaptar esta idea cambiando **calidad** por **alcance**:
+En metodologias de software, puedes adaptar esta idea cambiando **calidad** por **alcance**:
 
 ![blog-cover](/images/blog/2022-07-25/middle.jpg)
 
 ### Waterfall
 
-En proyectos waterfall, el alcance está fijado, mientras que el tiempo y el dinero serán más variables. Dependiendo de si es más importante terminar a tiempo o dentro del presupuesto.
+En proyectos waterfall, el alcance esta fijado. El tiempo y el dinero son mas variables, dependiendo de si es mas importante terminar a tiempo o dentro del presupuesto.
 
 ### Agile
 
-Por otro lado, en un entorno agile normalmente trabajamos en iteraciones de pocas semanas, así que esta es la parte fija: el tiempo, para entregar valor lo antes posible, y así obtener feedback y recalibrar una y otra vez.
+En agile trabajamos en iteraciones de pocas semanas. El tiempo esta fijado para entregar valor lo antes posible, obtener feedback y recalibrar.
 
-Los costes en un equipo de software también están fijados por las personas que pertenecen a él.
+Los costes en un equipo de software tambien estan fijados por las personas que lo forman.
 
-> El tiempo está fijado, el coste está fijado, así que por la regla del triángulo de hierro, el alcance debe ser variable.
+> El tiempo esta fijado, el coste esta fijado, asi que el alcance debe ser variable.
 
-Un equipo agile no puede predecir el alcance de su trabajo en un proyecto de un año, sin embargo, no necesitan hacerlo. Su **enfoque debería estar en entregar constantemente valor tanto como sea posible**, o al menos al final de cada iteración, reflejando sus aprendizajes y recalibrando sus prioridades una y otra vez.
+Un equipo agile no puede predecir el alcance de un proyecto de un ano. Pero no lo necesita. Su **enfoque es entregar valor constantemente**, al menos al final de cada iteracion. Asi pueden reflejar sus aprendizajes y recalibrar prioridades una y otra vez.
 
-Como puedes ver, un dato curioso es que waterfall y agile comparten un triángulo invertido con sus parámetros fijos y variables. Realmente interesante.
+Un dato curioso: waterfall y agile comparten un triangulo invertido con sus parametros fijos y variables.
 
 ![blog-cover](/images/blog/2022-07-25/footer.jpg)
 

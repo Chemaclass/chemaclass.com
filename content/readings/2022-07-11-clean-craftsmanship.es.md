@@ -1,6 +1,6 @@
 +++
-title = "Clean Craftsmanship"
-description = "Disciplinas, Estándares y Ética"
+title = "Artesanía Limpia"
+description = "Disciplinas, estándares y ética del desarrollo de software profesional."
 authors = [ "Robert C. Martin" ]
 [taxonomies]
 tags = [ "clean-code", "tdd", "refactoring", "testing", "xp" ]
@@ -14,28 +14,25 @@ expand_preview = false
 
 <!-- more -->
 
-El libro está dividido en tres partes: las disciplinas, los estándares y la ética.
+El libro tiene tres partes: disciplinas, estándares y ética.
 
-La 1ª parte es la más técnica. Te guía con ejemplos de TDD, mostrando cómo el testing puede ayudarte a diseñar tu código.
+La primera es la más técnica. Te guía con ejemplos de TDD y muestra cómo el testing te ayuda a diseñar tu código.
 
-La 2ª parte trata sobre productividad, calidad y coraje.
+La segunda trata sobre productividad, calidad y coraje.
 
-La 3ª parte trata sobre cómo llegamos aquí en términos de personas que desarrollan software, y nuestra responsabilidad dentro de
-nuestra ética sobre no hacer daño, integridad y trabajo en equipo.
+La tercera explica cómo hemos llegado hasta aquí como profesionales del software y nuestra responsabilidad ética: no hacer daño, integridad y trabajo en equipo.
 
 ---
 
 Una de mis partes favoritas del libro:
 
-> Nuestra industria del software es tremendamente dinámica y cambiante; por lo tanto, todos debemos ser aprendices continuamente agresivos.
+> Nuestra industria es dinámica y cambia constantemente. Hay que aprender de forma continua y agresiva.
 >
-> ¿Cómo y cuándo haces este aprendizaje? Si tu empleador te proporciona el tiempo y el espacio para hacer este tipo de aprendizaje, entonces
-aprovéchalo tanto como puedas. Si tu empleador no es de ayuda, entonces tendrás que aprender en tu propio tiempo.
+> ¿Cómo y cuándo aprendes? Si tu empresa te da tiempo para ello, aprovéchalo al máximo. Si no, tendrás que hacerlo por tu cuenta.
 >
-> Prepárate para dedicar varias horas al mes. Asegúrate de tener el tiempo personal reservado para ello.
+> Prepárate para dedicar varias horas al mes. Reserva ese tiempo.
 >
-> Sí, sé que tienes obligaciones familiares, facturas que pagar, aviones que coger, y tienes una vida. Vale, pero también tienes una
-profesión. Y las profesiones necesitan cuidado y mantenimiento. Espero que todos seamos aprendices continuos y agresivos.
+> Sí, ya sé: familia, facturas, viajes, la vida. Pero también tienes una profesión. Y las profesiones requieren cuidado y mantenimiento. Aprendamos de forma continua y agresiva.
 >
 > `Capítulo 11. Coraje - Aprendizaje Agresivo Continuo`
 
@@ -147,7 +144,7 @@ profesión. Y las profesiones necesitan cuidado y mantenimiento. Espero que todo
 
 ---
 
-Encontré esta charla en YouTube donde Uncle Bob habla sobre la mayoría de los temas de su libro **Clean Craftsmanship**.
+Charla de Uncle Bob donde cubre la mayoría de los temas del libro.
 
 {{ youtube(id="sPXk11hrWTM") }}
 ```

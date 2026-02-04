@@ -1,24 +1,24 @@
 +++
-title = "The infinite game"
-description = "Del autor bestseller de Start With Why y Leaders Eat Last, un marco audaz para el liderazgo en el mundo siempre cambiante de hoy."
+title = "El juego infinito"
+description = "¿Cómo lideramos cuando el juego no tiene fin? Simon Sinek propone un marco para pensar a largo plazo en negocios, política y la vida misma."
 authors = [ "Simon Sinek" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "philosophy", "communication" ]
 [extra]
-subtitle = "Un marco audaz para el liderazgo en el mundo siempre cambiante de hoy"
+subtitle = "Un marco para el liderazgo en un mundo que cambia constantemente"
 pages = "270"
 author = "Simon Sinek"
 static_thumbnail = "https://m.media-amazon.com/images/I/41r53pSrB4L.jpg"
 expand_preview = true
 +++
 
-¿Cómo ganamos un juego que no tiene fin? Los juegos finitos, como el fútbol o el ajedrez, tienen jugadores conocidos, reglas fijas y un punto final claro. Los ganadores y perdedores se identifican fácilmente. Los juegos infinitos, juegos sin línea de meta, como los negocios o la política, o la vida misma, tienen jugadores que van y vienen. Las reglas de un juego infinito son cambiables mientras que los juegos infinitos no tienen un punto final definido. No hay ganadores ni perdedores—solo adelante y atrás.
+¿Cómo ganamos un juego que no tiene fin? Los juegos finitos (fútbol, ajedrez) tienen jugadores conocidos, reglas fijas y un final claro. Los juegos infinitos (negocios, política, la vida misma) son diferentes: los jugadores van y vienen, las reglas cambian y no hay línea de meta. No hay ganadores ni perdedores, solo avances y retrocesos.
 
 <!-- more -->
 
-> Los líderes con mentalidad infinita entienden que "el mejor" no es un estado permanente. En cambio, se esfuerzan por ser "mejores". "Mejor" sugiere un viaje de mejora constante y nos hace sentir que estamos siendo invitados a contribuir nuestros talentos y energías para avanzar en ese viaje.
+> Los líderes con mentalidad infinita entienden que "el mejor" no es un estado permanente. Se esfuerzan por ser "mejores". Esa palabra sugiere un viaje de mejora constante y nos invita a contribuir con nuestros talentos y energía.
 
-La pregunta es, ¿cómo jugamos para tener éxito en el juego en el que estamos? En este libro, Simon Sinek ofrece un marco para liderar con una mentalidad infinita:
+La pregunta clave es: ¿cómo jugamos para tener éxito en el juego en el que estamos? Simon Sinek ofrece un marco para liderar con mentalidad infinita:
 
 1. Causa Justa
 2. Liderazgo valiente
@@ -27,45 +27,44 @@ La pregunta es, ¿cómo jugamos para tener éxito en el juego en el que estamos?
 
 ---
 
-## #1 Tienes que tener una Causa Justa
+## #1 Necesitas una Causa Justa
 
-Una Causa Justa es la respuesta a _¿Por qué existe tu organización?_
+Una Causa Justa responde a: _¿Por qué existe tu organización?_
 
-Una causa tan justa que las personas estarán dispuestas a sacrificarse para ver el avance de esa causa. Ej: trabajar más horas, dar tus mejores ideas, o rechazar otra oferta de trabajo y quedarte aquí porque crees en lo que estás haciendo.
+Tiene que ser una causa por la que la gente esté dispuesta a sacrificarse. Trabajar más horas, dar sus mejores ideas, rechazar otras ofertas porque creen en lo que hacen.
 
-Para ser felices, necesitamos un sentido de propósito o significado; los negocios no son diferentes.
-Cuando buscamos desarrollar una Causa Justa, hay algunas cosas que necesitamos articular. Primero, debemos defender algo que sea inclusivo, y que exista principalmente para el beneficio de otros.
+Para ser felices necesitamos propósito. Los negocios no son diferentes. Al desarrollar una Causa Justa, hay que defender algo inclusivo que exista principalmente para beneficio de otros.
 
-En resumen, una Causa Justa es una visión de un futuro convincente, que hace que las personas quieran ser parte de construir ese futuro, aunque puede que nunca lo vean completado.
+En resumen: una Causa Justa es una visión de futuro tan convincente que la gente quiere construirlo, aunque quizá nunca lo vea terminado.
 
-## #2 Tienes que tener liderazgo valiente
+## #2 Necesitas liderazgo valiente
 
-Los líderes valientes son aquellos que están dispuestos a sacrificar el corto plazo para avanzar en el largo plazo.
+Los líderes valientes sacrifican el corto plazo para avanzar en el largo plazo.
 
-El liderazgo es la aceptación de la responsabilidad de crear un ambiente en el que las personas puedan trabajar en su mejor momento natural.
+Liderar significa aceptar la responsabilidad de crear un ambiente donde las personas puedan dar lo mejor de sí.
 
-Las personas más senior en una organización no son responsables del resultado. Son responsables de las personas que son responsables del resultado.
+Los más senior en una organización no son responsables del resultado. Son responsables de las personas que producen ese resultado.
 
-## #3 Tienes que tener equipos de confianza
+## #3 Necesitas equipos de confianza
 
-Un equipo de confianza es un ambiente en el que las personas se sienten seguras para levantar la mano y decir "Cometí un error. No me siento calificado para hacer el trabajo que me pediste. Necesito más formación. Necesito ayuda. Tengo miedo." Sin ningún miedo de humillación o castigo, en absoluto.
+Un equipo de confianza es un ambiente donde la gente puede levantar la mano y decir "Me equivoqué. No me siento preparado para este trabajo. Necesito formación. Necesito ayuda. Tengo miedo." Sin miedo a humillación ni castigo.
 
-Si no tienes equipos de confianza, tienes un grupo de personas que trabajan juntas mintiendo y fingiendo, y les estás forzando a ello. No es su culpa. Estás creando un ambiente en el que las personas no compartirán errores porque piensan que les meterá en problemas. Lo que significa que eventualmente las cosas se acumularán y romperán.
+Sin equipos de confianza, tienes un grupo de personas mintiendo y fingiendo. Y les estás forzando a ello. No es su culpa. Has creado un ambiente donde nadie comparte errores porque teme meterse en problemas. Al final, todo se acumula y explota.
 
-Es responsabilidad del líder conseguir que el ambiente esté bien. Consigue el ambiente correcto, tendrás equipos de confianza. Consigue el ambiente incorrecto, estarás forzando a las personas a protegerse de ti.
+El líder es responsable del ambiente. Si el ambiente es correcto, tendrás equipos de confianza. Si no, estarás forzando a la gente a protegerse de ti.
 
-## #4 Tienes que tener un rival digno
+## #4 Necesitas un rival digno
 
-Aunque el único verdadero competidor en un juego infinito eres tú mismo, lo que la competencia hace es ayudar a revelar tus debilidades.
+Tu único competidor real en un juego infinito eres tú mismo. Pero la competencia ayuda a revelar tus debilidades.
 
-El objetivo no es ser el número uno en el juego infinito, porque no existe tal cosa. Se trata de construir una base sólida. Se trata de mirar a largo plazo.
+El objetivo no es ser el número uno (eso no existe en un juego infinito). Se trata de construir una base sólida y mirar a largo plazo.
 
 El dinero es un resultado, no un propósito.
 
-> No existe tal cosa como la organización "correcta". Solo hay organizaciones, cada una de las cuales tiene fortalezas distintas, limitaciones distintas y aplicaciones específicas. Una organización no es absoluta. Es una herramienta para hacer que las personas sean productivas al trabajar juntas.
+> No existe la organización "correcta". Solo hay organizaciones, cada una con fortalezas, limitaciones y aplicaciones distintas. Una organización no es absoluta. Es una herramienta para que las personas sean productivas trabajando juntas.
 
 ---
 
-Los líderes que abrazan una mentalidad infinita construyen organizaciones más fuertes, más innovadoras, más inspiradoras. En última instancia, son ellos los que nos lideran hacia el futuro.
+Los líderes con mentalidad infinita construyen organizaciones más fuertes, innovadoras e inspiradoras. Son ellos quienes nos lideran hacia el futuro.
 
 {{ youtube(id="tye525dkfi8") }}

@@ -1,6 +1,6 @@
 +++
-title = "The Pragmatic Programmer"
-description = "El camino hacia la maestría"
+title = "El Programador Pragmático"
+description = "Un clásico sobre cómo convertirse en mejor desarrollador. Mentalidad, herramientas y buenas prácticas para dominar el oficio."
 authors = [ "Andrew Hunt", "David Thomas" ]
 [taxonomies]
 tags = [ "software-design", "clean-code", "refactoring", "career" ]
@@ -15,26 +15,26 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41as+WafrFL
 
 ### Aprendizajes
 
-- No Te Repitas.
-- La mentalidad es tan importante como el conocimiento.
+- No te repitas.
+- La mentalidad importa tanto como el conocimiento.
 - El buen código es más fácil de cambiar que el mal diseño.
-- Elige grandes herramientas y vuélvete fluido con ellas.
+- Elige buenas herramientas y domínalas.
 
 ---
 
 #### No Te Repitas (DRY)
 
-- Cada pieza de conocimiento debe tener una única representación, inequívoca y autoritativa dentro de un sistema.
-- DRY es sobre la duplicación de conocimiento, de intención. Se trata de expresar lo mismo en dos lugares diferentes, posiblemente de dos formas totalmente diferentes.
+- Cada pieza de conocimiento debe tener una única representación clara dentro del sistema.
+- DRY trata sobre la duplicación de conocimiento, de intención. Es expresar lo mismo en dos lugares, quizás de formas diferentes.
 
-#### La mentalidad es tan importante como el conocimiento
+#### La mentalidad importa tanto como el conocimiento
 
-Algunos aspectos importantes de esta mentalidad incluyen:
+Aspectos clave:
 
-- Tomar responsabilidad por tu trabajo sin poner excusas ni culpar cuando las cosas salen mal.
-- Escribir software que sea lo suficientemente bueno. Esto significa no perder tiempo en cosas que son mejores de lo que necesitan ser para hacer que el producto sea exitoso.
-- No ignorar la deuda técnica. Los autores usan la analogía de las ventanas rotas:
+- Asume la responsabilidad de tu trabajo. Sin excusas ni culpas cuando algo sale mal.
+- Escribe software "suficientemente bueno". No pierdas tiempo perfeccionando lo que ya funciona para el producto.
+- No ignores la deuda técnica. Los autores usan la analogía de las ventanas rotas:
 
 > No dejes "ventanas rotas" (malos diseños, decisiones incorrectas o código pobre) sin reparar.
-> Arregla cada una tan pronto como se descubra. Si no hay tiempo suficiente para arreglarlo correctamente, entonces tápalas.
-> Quizás puedas comentar el código ofensivo, o mostrar un mensaje de "No Implementado", o sustituir con datos ficticios en su lugar.
+> Arregla cada una cuando la descubras. Si no hay tiempo, al menos tápalas.
+> Comenta el código problemático, muestra un mensaje de "No Implementado" o usa datos ficticios temporalmente.

@@ -1,12 +1,12 @@
 +++
-title = "The Book Of Satoshi"
-description = "Los Escritos Recopilados del Creador de Bitcoin Satoshi Nakamoto"
+title = "El Libro de Satoshi"
+description = "Los escritos del creador anónimo de Bitcoin, recopilados por primera vez"
 draft = false
 authors = [ "Phil Champagne" ]
 [taxonomies]
 tags = [ "bitcoin", "economics", "philosophy" ]
 [extra]
-subtitle = "Los Escritos Recopilados del Creador de Bitcoin Satoshi Nakamoto"
+subtitle = "Los escritos del creador anónimo de Bitcoin, recopilados por primera vez"
 pages = "350"
 author = "Phil Champagne"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1404481980i/22619661.jpg"
@@ -15,17 +15,17 @@ expand_preview = false
 
 <!-- more -->
 
-¿Has especulado, como el resto del mundo, sobre la identidad de Satoshi Nakamoto, el creador anónimo de Bitcoin?
+¿Te has preguntado alguna vez quién es Satoshi Nakamoto, el creador anónimo de Bitcoin?
 
-La primera criptomoneda del mundo, Bitcoin, entró en línea en 2009 y desde entonces ha revolucionado nuestros conceptos de moneda y dinero. Sin el respaldo de ningún gobierno o banco central, completamente electrónico, Bitcoin es una moneda virtual basada en sistemas criptográficos avanzados.
+Bitcoin nació en 2009 y revolucionó nuestra forma de entender el dinero. Sin gobierno ni banco central detrás, completamente electrónico, funciona gracias a sistemas criptográficos avanzados.
 
-Como la moneda que creó, la identidad del creador de Bitcoin, Satoshi Nakamoto, es virtual, existiendo solo en línea. La persona de Nakamoto, que puede representar a un individuo o un grupo, existe solo en las publicaciones en línea que introdujeron y explicaron Bitcoin durante sus primeros días. Aquí, recopilados y publicados profesionalmente por primera vez, están los escritos esenciales que detallan la creación de Bitcoin.
+La identidad de Satoshi es tan virtual como la moneda que creó. Solo existe en las publicaciones online donde presentó y explicó Bitcoin en sus primeros días. Puede ser una persona o un grupo, nadie lo sabe. Este libro recopila por primera vez esos escritos esenciales.
 
-The Book of Satoshi proporciona una forma conveniente de analizar lo que el creador de Bitcoin escribió durante los dos años que constituyeron su "vida pública" antes de que desapareciera de Internet... al menos bajo el nombre de Satoshi Nakamoto.
+El Libro de Satoshi permite analizar lo que su creador escribió durante los dos años de su "vida pública", antes de desaparecer de Internet... al menos bajo ese nombre.
 
-Comenzando el 1 de noviembre de 2009 con la publicación del paper seminal que describe Bitcoin, esta vida pública termina aproximadamente en el momento en que PC World especuló sobre una posible conexión entre Bitcoin y WikiLeaks, el infame sitio web que publica materiales clasificados filtrados. ¿Hubo una conexión? Tú decides.
+Su actividad pública comenzó el 1 de noviembre de 2009 con la publicación del paper fundacional. Terminó más o menos cuando PC World especuló sobre una posible conexión entre Bitcoin y WikiLeaks. ¿Existía esa conexión? Tú decides.
 
-La verdadera identidad de Nakamoto puede que nunca se conozca. Por lo tanto, los escritos reproducidos aquí son probablemente todo lo que el mundo escuchará de él sobre la creación, funcionamiento y base teórica de Bitcoin. ¿Quieres aprender más sobre Bitcoin? Ve directamente a la fuente—los escritos del propio creador, Satoshi Nakamoto.
+Probablemente nunca sabremos quién es Nakamoto. Estos escritos son todo lo que el mundo tendrá de él sobre la creación, funcionamiento y teoría detrás de Bitcoin. Si quieres aprender sobre Bitcoin, ve directo a la fuente: las palabras de su propio creador.
 
 {{ youtube(id="kaBmAV5DaXI") }}
 

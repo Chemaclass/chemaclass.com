@@ -1,11 +1,11 @@
 +++
-title = "The Power of Habit"
-description = "Por qué hacemos lo que hacemos, y cómo cambiar"
+title = "El poder de los hábitos"
+description = "Por qué hacemos lo que hacemos y cómo cambiarlo. Entiende cómo funcionan los hábitos y aprende a modificarlos."
 authors = [ "Charles Duhigg" ]
 [taxonomies]
 tags = [ "psychology", "productivity", "career" ]
 [extra]
-subtitle = "Por qué hacemos lo que hacemos, y cómo cambiar"
+subtitle = "Por qué hacemos lo que hacemos y cómo cambiarlo"
 pages = "400"
 author = "Charles Duhigg"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41fQW9Q-L4L._SX324_BO1,204,203,200_.jpg"

@@ -16,7 +16,7 @@ reading_time = 12
 
 Esto no es hipotético. En 2022, Canadá congeló cuentas bancarias de personas que donaron a una protesta. En 2015, los griegos solo podían retirar 60€ por día de los cajeros. En Argentina, Turquía y Líbano, la gente vio sus ahorros perder la mitad de su valor en meses.
 
-Bitcoin existe porque estas cosas pasan. Entenderlo requiere volver a lo básico: qué es el dinero, por qué importa, y cómo encaja Bitcoin en ese panorama.
+Bitcoin existe porque estas cosas pasan. Para entenderlo hay que volver a lo básico: qué es el dinero, por qué importa, y cómo encaja Bitcoin en todo esto.
 
 <!-- more -->
 
@@ -24,7 +24,7 @@ Bitcoin existe porque estas cosas pasan. Entenderlo requiere volver a lo básico
 
 ## Una breve historia del dinero
 
-El dinero es un acuerdo social. Un trozo de papel, una moneda de oro, o un número en una pantalla tiene valor porque todos acordamos que lo tiene. Este acuerdo es lo que hace posible el comercio.
+El dinero es un acuerdo social. Un trozo de papel, una moneda de oro o un número en una pantalla tiene valor porque todos aceptamos que lo tiene. Ese acuerdo es lo que hace posible el comercio.
 
 A lo largo de la historia, el dinero ha evolucionado:
 
@@ -32,7 +32,7 @@ A lo largo de la historia, el dinero ha evolucionado:
 2. **Cosas usadas como dinero**: Conchas, sal, ganado. Valiosas porque eran útiles o difíciles de encontrar.
 3. **Metales preciosos**: Oro y plata. Difíciles de encontrar, duraderos, fáciles de dividir y transportar.
 4. **Papel moneda respaldado por oro**: Recibos representando oro almacenado en bóvedas.
-5. **Dinero del gobierno**: Papel respaldado por nada más que una promesa del gobierno. ¿Por qué funciona? Porque los gobiernos te exigen pagar impuestos en su moneda. Esto obliga a todos a usarlo.
+5. **Dinero del gobierno**: Papel respaldado solo por una promesa del gobierno. ¿Por qué funciona? Porque los gobiernos te exigen pagar impuestos en su moneda, y eso obliga a todos a usarlo.
 
 > El dinero es una forma de almacenar y transferir valor. Cuanto mejor realice estas funciones, mejor sirve como dinero.
 
@@ -44,15 +44,15 @@ A lo largo de la historia, el dinero ha evolucionado:
 - **Fácil de mover**: Simple de transportar y enviar
 - **Fácil de verificar**: Simple de comprobar si es real
 
-El oro cumple bien con la mayoría. El papel moneda es fácil de mover y dividir pero falla en ser difícil de crear. Los gobiernos pueden imprimir tanto como quieran. Bitcoin, como veremos, cumple bien con todas.
+El oro cumple bien con la mayoría. El papel moneda es fácil de mover y dividir, pero falla en ser difícil de crear: los gobiernos pueden imprimir tanto como quieran. Bitcoin, como veremos, cumple con todas.
 
 ## ¿Qué es Bitcoin?
 
-Bitcoin es dinero digital que funciona sin bancos, gobiernos, o cualquier autoridad central. Fue creado en 2009 por alguien (o algún grupo) usando el seudónimo [Satoshi Nakamoto](https://es.wikipedia.org/wiki/Satoshi_Nakamoto). Nadie sabe quién es realmente esta persona.
+Bitcoin es dinero digital que funciona sin bancos, gobiernos ni ninguna autoridad central. Lo creó en 2009 alguien (o algún grupo) bajo el seudónimo [Satoshi Nakamoto](https://es.wikipedia.org/wiki/Satoshi_Nakamoto). Nadie sabe quién es realmente.
 
-El primer bloque de Bitcoin (el [Bloque Génesis](https://en.bitcoin.it/wiki/Genesis_block)) contiene un mensaje oculto: *"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks."* Este titular del periódico The Times hacía referencia a la crisis financiera de 2008. No fue aleatorio. Era una marca de tiempo y una declaración de propósito. Bitcoin fue creado como respuesta a los rescates bancarios y la manipulación monetaria.
+El primer bloque de Bitcoin (el [Bloque Génesis](https://en.bitcoin.it/wiki/Genesis_block)) contiene un mensaje oculto: *"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks."* Este titular del periódico The Times hacía referencia a la crisis financiera de 2008. No fue aleatorio: era una marca de tiempo y una declaración de propósito. Bitcoin nació como respuesta a los rescates bancarios y la manipulación monetaria.
 
-Bitcoin se construye sobre décadas de trabajo de criptógrafos y activistas de la privacidad. Si tienes curiosidad sobre las personas e ideas que llevaron a Bitcoin, escribí sobre [Los Cypherpunks](/es/blog/the-cypherpunks/) y su visión para la privacidad digital.
+Bitcoin se construye sobre décadas de trabajo de criptógrafos y activistas de la privacidad. Si te interesa conocer a las personas e ideas que lo hicieron posible, escribí sobre [Los Cypherpunks](/es/blog/the-cypherpunks/) y su visión de la privacidad digital.
 
 En su núcleo, Bitcoin es:
 
@@ -60,7 +60,7 @@ En su núcleo, Bitcoin es:
 - **Una red**: Miles de computadoras en todo el mundo ejecutando el software de Bitcoin
 - **Una moneda**: Unidades de cuenta llamadas bitcoins (BTC), divisibles hasta 8 decimales
 
-No hay empresa detrás de Bitcoin. Sin CEO, sin oficinas centrales, sin soporte al cliente. Es software de código abierto que cualquiera puede ejecutar, inspeccionar o contribuir.
+No hay ninguna empresa detrás de Bitcoin. Sin CEO, sin oficinas centrales, sin soporte al cliente. Es software de código abierto que cualquiera puede ejecutar, inspeccionar o mejorar.
 
 {{ youtube(id="d7ID3fKAFQM") }}
 
@@ -68,37 +68,37 @@ No hay empresa detrás de Bitcoin. Sin CEO, sin oficinas centrales, sin soporte 
 
 ### Escasez
 
-Solo habrá 21 millones de bitcoins. Esto es aplicado por el código del protocolo, verificado por cada nodo en la red. Ningún gobierno, ningún comité, ninguna reunión de emergencia puede cambiar esto.
+Solo habrá 21 millones de bitcoins. Lo garantiza el código del protocolo, verificado por cada nodo en la red. Ningún gobierno, ningún comité, ninguna reunión de emergencia puede cambiar esto.
 
-Compara esto con el dinero del gobierno. Los bancos centrales pueden (y lo hacen) crear dinero cuando quieren. El dólar estadounidense ha perdido más del 95% de su poder de compra desde 1913. El Euro, la Libra, el Yen: todos siguen el mismo patrón de perder valor lentamente.
+Compáralo con el dinero del gobierno. Los bancos centrales pueden (y lo hacen) crear dinero cuando quieren. El dólar estadounidense ha perdido más del 95% de su poder adquisitivo desde 1913. El Euro, la Libra, el Yen: todos siguen el mismo patrón de perder valor poco a poco.
 
 > En un mundo de impresión de dinero infinita, un límite máximo matemáticamente aplicado es revolucionario.
 
-Bitcoin a menudo se llama "oro digital" porque comparte la escasez del oro mientras es más fácil de almacenar, dividir y transferir. Puedes enviar mil millones de dólares en Bitcoin a cualquier parte del mundo en minutos, por unos pocos dólares en comisiones. Intenta hacer eso con lingotes de oro.
+A Bitcoin le llaman "oro digital" porque comparte la escasez del oro, pero es más fácil de almacenar, dividir y transferir. Puedes enviar mil millones de dólares en Bitcoin a cualquier parte del mundo en minutos, por unos pocos dólares en comisiones. Intenta hacer eso con lingotes de oro.
 
 ### Protección contra la inflación
 
-Cuando los gobiernos imprimen dinero, el valor del dinero existente disminuye. Esto es inflación. Tus ahorros compran menos con el tiempo, incluso mientras están intactos en tu cuenta bancaria.
+Cuando los gobiernos imprimen dinero, el valor del dinero existente disminuye. Eso es la inflación. Tus ahorros compran menos con el tiempo, aunque sigan intactos en tu cuenta bancaria.
 
-La inflación a menudo se llama un "impuesto oculto" porque transfiere riqueza de los ahorradores a aquellos que reciben el nuevo dinero primero (usualmente gobiernos y bancos). Escribí más sobre esto en [Entendiendo los Impuestos](/es/blog/understanding-taxes/).
+A la inflación le llaman "impuesto oculto" porque transfiere riqueza de los ahorradores a quienes reciben el dinero nuevo primero (normalmente gobiernos y bancos). Escribí más sobre esto en [Entendiendo los Impuestos](/es/blog/understanding-taxes/).
 
-El calendario de emisión de Bitcoin es fijo y predecible. Los nuevos bitcoins se crean a través de la minería a una tasa que se reduce a la mitad aproximadamente cada cuatro años. Alrededor del 2140, los 21 millones habrán sido creados. Sin sorpresas, sin decisiones del gobierno de imprimir más.
+El calendario de emisión de Bitcoin es fijo y predecible. Los nuevos bitcoins se crean mediante minería, a un ritmo que se reduce a la mitad cada cuatro años aproximadamente. Alrededor del 2140 se habrán creado los 21 millones. Sin sorpresas, sin decisiones políticas de imprimir más.
 
 ## Libertad y soberanía
 
 ### Auto-custodia
 
-Con Bitcoin, puedes mantener tu propio dinero. No una promesa de un banco, no un balance en los libros de otro. Propiedad real, asegurada por claves criptográficas que solo tú controlas.
+Con Bitcoin puedes guardar tu propio dinero. No una promesa de un banco, no un saldo en los libros de otro. Propiedad real, asegurada por claves criptográficas que solo tú controlas.
 
 > "No tus llaves, no tus monedas."
 
-Esta frase captura una verdad fundamental. Cuando depositas dinero en un banco, ya no posees ese dinero. Posees un derecho contra el banco. Si el banco congela tu cuenta, quiebra, o decide que violaste sus términos de servicio, tu acceso desaparece.
+Esta frase captura una verdad fundamental. Cuando depositas dinero en un banco, ya no lo posees. Tienes un derecho contra el banco. Si el banco congela tu cuenta, quiebra o decide que violaste sus términos de servicio, tu acceso desaparece.
 
 Con Bitcoin, no hay botón de congelar. No hay cuenta que cerrar. No hay términos de servicio que violar. Te conviertes en tu propio banco.
 
 ### Sin permisos y sin fronteras
 
-A Bitcoin no le importan las fronteras, los horarios bancarios, o tu puntuación de crédito. Puedes enviar dinero a cualquiera con conexión a internet, en cualquier parte del mundo, en cualquier momento.
+A Bitcoin no le importan las fronteras, los horarios bancarios ni tu historial crediticio. Puedes enviar dinero a cualquiera con conexión a internet, en cualquier parte del mundo, a cualquier hora.
 
 Banca tradicional:
 - Horario: Lunes-Viernes, 9-5 (quizás)
@@ -114,11 +114,11 @@ Bitcoin:
 
 ### Resistencia a la censura
 
-Ninguna autoridad central controla Bitcoin. Ninguna entidad puede detener una transacción o revertir un pago. Una vez confirmada, es final.
+Ninguna autoridad central controla Bitcoin. Ninguna entidad puede detener una transacción ni revertir un pago. Una vez confirmada, es definitiva.
 
-Esto importa para personas viviendo bajo gobiernos opresivos, enfrentando presión política, o simplemente queriendo privacidad financiera. Importa para donaciones a causas controversiales, para periodistas protegiendo fuentes, para cualquiera que valore la libertad financiera.
+Esto importa para quienes viven bajo gobiernos opresivos, enfrentan presión política o simplemente quieren privacidad financiera. Importa para donaciones a causas controversiales, para periodistas que protegen sus fuentes, para cualquiera que valore la libertad financiera.
 
-> La libertad financiera no se trata solo de ser rico. Se trata de tener control sobre tu propio dinero, sin importar quién seas o dónde vivas.
+> La libertad financiera no es solo ser rico. Es tener control sobre tu propio dinero, sin importar quién seas o dónde vivas.
 
 ### Historias reales
 
@@ -335,31 +335,31 @@ Estos no son casos extremos:
 
 ## Objeciones comunes
 
-- **"Se usa para el crimen."** También el efectivo. La diferencia: Bitcoin deja un registro permanente y rastreable. La blockchain es una [herramienta forense](https://www.chainalysis.com/blog/2025-crypto-crime-report-introduction/). La mayoría de criminales prefieren dólares.
+- **"Se usa para el crimen."** También el efectivo. La diferencia: Bitcoin deja un registro permanente y rastreable. La blockchain es una [herramienta forense](https://www.chainalysis.com/blog/2025-crypto-crime-report-introduction/). La mayoría de los criminales prefieren dólares.
 
-- **"Es demasiado volátil."** Cierto a corto plazo. Amplía el zoom: Bitcoin ha sido el [activo con mejor rendimiento de la última década](https://www.coingecko.com/research/publications/bitcoin-versus-traditional-assets-price-returns). La volatilidad disminuye conforme crece la adopción. No inviertas dinero que necesites el próximo mes.
+- **"Es demasiado volátil."** Cierto a corto plazo. Pero si amplías el zoom, Bitcoin ha sido el [activo con mejor rendimiento de la última década](https://www.coingecko.com/research/publications/bitcoin-versus-traditional-assets-price-returns). La volatilidad baja conforme crece la adopción. No inviertas dinero que necesites el mes que viene.
 
-- **"Desperdicia energía."** La minería de Bitcoin usa electricidad para asegurar una red de un billón de dólares. Mucha de ella viene de [energía varada](https://k33.com/research/archive/articles/bitcoin-mining-using-stranded-natural-gas-is-the-most-cost-effective-way-to) (quema de gas, exceso hidro) que de otra forma se desperdiciaría. La pregunta real: ¿vale la pena el coste energético para la soberanía financiera? El aire acondicionado usa más.
+- **"Desperdicia energía."** La minería de Bitcoin usa electricidad para asegurar una red de un billón de dólares. Mucha viene de [energía varada](https://k33.com/research/archive/articles/bitcoin-mining-using-stranded-natural-gas-is-the-most-cost-effective-way-to) (quema de gas, exceso hidro) que de otra forma se desperdiciaría. La pregunta real: ¿vale la pena ese coste energético a cambio de soberanía financiera? El aire acondicionado usa más.
 
-- **"Es demasiado tarde para comprar."** La gente dijo esto a $100, $1.000, $10.000 y $100.000. Si Bitcoin alcanza aunque sea una fracción de la [capitalización de mercado del oro](https://8marketcap.com/), aún hay margen de crecimiento.
+- **"Es demasiado tarde para comprar."** La gente decía esto a $100, $1.000, $10.000 y $100.000. Si Bitcoin alcanza aunque sea una fracción de la [capitalización de mercado del oro](https://8marketcap.com/), aún hay margen de crecimiento.
 
 ## Advertencias honestas
 
-Bitcoin no es perfecto. Cosas a tener en cuenta:
+Bitcoin no es perfecto. Ten en cuenta:
 
 - **La auto-custodia requiere responsabilidad.** Pierde tu frase semilla, pierde tus fondos. Sin soporte al cliente.
 - **Irreversibilidad.** Sin contracargos. ¿Enviaste a la dirección equivocada? Perdido.
-- **Curva de aprendizaje.** Wallets, claves, comisiones, trading P2P. Cuanto más aprendes, más soberanía ganas. Los exchanges KYC son más fáciles pero vienen con condiciones regulatorias.
+- **Curva de aprendizaje.** Wallets, claves, comisiones, trading P2P. Cuanto más aprendes, más soberanía ganas. Los exchanges con KYC son más fáciles, pero vienen con condiciones regulatorias.
 - **La privacidad requiere esfuerzo.** La blockchain es transparente, no anónima. La verdadera privacidad requiere aprender a usar Bitcoin correctamente.
 - **Compensaciones de escalabilidad.** La capa base es lenta por diseño. Lightning añade velocidad pero también complejidad.
 
-Ninguna de estas son obstáculos insuperables. Son compensaciones. Cuanto más aprendes, menos limitaciones enfrentas.
+Ninguno de estos son obstáculos insuperables. Son compensaciones. Cuanto más aprendes, menos limitaciones enfrentas.
 
 ![blog-cover](/images/blog/2025-12-21/footer.jpg)
 
 ## Bitcoin hoy
 
-Esto ya no es solo teoría.
+Ya no es solo teoría.
 
 ### Adopción institucional
 
@@ -386,9 +386,9 @@ Puedes descartarlo, o puedes entenderlo.
 
 ## Empezando
 
-Bitcoin es dinero que nadie controla y todos pueden verificar. Es escaso en un mundo de impresión de dinero infinita. Es sin permisos en un mundo de guardianes financieros. Es programable de formas que apenas estamos empezando a explorar.
+Bitcoin es dinero que nadie controla y todos pueden verificar. Escaso en un mundo de impresión monetaria infinita. Sin permisos en un mundo de guardianes financieros. Programable de formas que apenas empezamos a explorar.
 
-Entender Bitcoin no requiere creer que cambiará el mundo. Requiere entender qué es el dinero, cómo evolucionó, y por qué importan estas propiedades. Desde ahí, puedes formar tus propias conclusiones.
+Entender Bitcoin no requiere creer que cambiará el mundo. Requiere entender qué es el dinero, cómo evolucionó y por qué importan estas propiedades. A partir de ahí, puedes sacar tus propias conclusiones.
 
 ### ¿Quieres probarlo?
 

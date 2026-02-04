@@ -1,38 +1,33 @@
 +++
 title = "Advanced Web Application Architecture"
-description = "La mejor guía que eleva tus habilidades de código y arquitectura un nivel. Todas las características modernas de PHP combinadas con la elegancia de un diseño modular bien pensado."
+description = "Cómo desacoplar tu aplicación del framework y la base de datos con PHP moderno y diseño modular"
 authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "architecture", "php", "software-design", "refactoring" ]
 [extra]
-subtitle = "La mejor guía que eleva tus habilidades de código un nivel."
+subtitle = "La guía que lleva tus habilidades de código al siguiente nivel"
 pages = "370"
 author = "Matthias Noback"
 static_thumbnail = "https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero?1620605116"
 expand_preview = true
 +++
 
-Este libro te ayuda a poner tus aplicaciones web en forma. Contiene muchas técnicas para desacoplar de
-la infraestructura (como el framework o la base de datos).
-
-"La mejor guía que eleva tus habilidades de código y arquitectura un nivel. Todas las características modernas de PHP combinadas con la elegancia de un diseño modular bien pensado."
+Este libro te ayuda a poner en forma tus aplicaciones web. Trae muchas técnicas para desacoplar tu código de la infraestructura (el framework, la base de datos, etc.).
 
 <!-- more -->
 
-En la Parte 1 desbloqueamos una colección de patrones de diseño que te ayudan a establecer una separación limpia entre código
-core e infraestructura. La Parte 2 muestra cómo estos patrones de diseño resuenan a un nivel más alto con conceptos arquitectónicos como
-capas, puertos y adaptadores (también conocido como arquitectura Hexagonal). El libro termina con una discusión de estrategias de testing y trade-offs de diseño.
+La Parte 1 presenta patrones de diseño para separar código de negocio e infraestructura. La Parte 2 muestra cómo estos patrones encajan con conceptos arquitectónicos como capas, puertos y adaptadores (arquitectura Hexagonal). El libro cierra con estrategias de testing y decisiones de diseño.
 
 ### Lo que aprenderás
 
-- Separar código mezclado en código core e infraestructura refactorizando hacia patrones.
-- Dividir tu código en capas, y hacer una distinción clara entre los puertos y adaptadores de una aplicación.
-- Probar aplicaciones desacopladas.
+- Separar código mezclado en código de negocio e infraestructura usando patrones.
+- Dividir tu código en capas con una distinción clara entre puertos y adaptadores.
+- Testear aplicaciones desacopladas.
 
 > Compra el libro: [https://leanpub.com/web-application-architecture](https://leanpub.com/web-application-architecture)
 
 ---
 
-### Patrones de diseño para modernizar bases de código legacy
+### Patrones de diseño para modernizar código legacy
 
 {{ youtube(id="WI1QY6OMglE") }}

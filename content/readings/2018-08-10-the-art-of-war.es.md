@@ -1,6 +1,6 @@
 +++
-title = "The Art of War"
-description = "El Arte de la Guerra es un antiguo tratado militar chino atribuido a Sun Tzu, un general militar de alto rango, estratega y táctico, y afín a la Realpolitik de su tiempo, denominada en China como Legalismo."
+title = "El Arte de la Guerra"
+description = "Antiguo tratado militar chino de Sun Tzu. Estrategia, táctica y sabiduría aplicable mucho más allá del campo de batalla."
 authors = [ "Sun Tzu" ]
 [taxonomies]
 tags = [ "philosophy", "psychology", "leadership" ]
@@ -14,38 +14,37 @@ expand_preview = false
 
 <!-- more -->
 
-El texto está compuesto por 13 capítulos, cada uno dedicado a un aspecto de la guerra. Se considera comúnmente como una obra
-definitiva sobre estrategia y tácticas militares.
+El texto tiene 13 capítulos, cada uno dedicado a un aspecto de la guerra. Se considera una obra definitiva sobre estrategia y táctica militar.
 
-Ha sido el más famoso e influyente de los Siete Clásicos Militares de China, y "durante los últimos dos mil años ha permanecido como el tratado militar más importante de Asia, donde incluso la gente común lo conocía por su nombre."
+Es el más famoso de los Siete Clásicos Militares de China. Durante dos mil años ha sido el tratado militar más importante de Asia.
 
-Ha tenido influencia en el pensamiento militar oriental y occidental, tácticas de negocios, estrategia legal y más allá.
+Ha influido en el pensamiento militar de Oriente y Occidente, en tácticas de negocios, estrategia legal y mucho más.
 
 
 ### Citas
 
-- Aparenta debilidad cuando eres fuerte, y fortaleza cuando eres débil.
-- Si es superior en fuerza, evítalo.
-- Atácalo donde no esté preparado. Aparece donde no te esperan.
+- Aparenta debilidad cuando seas fuerte, y fortaleza cuando seas débil.
+- Si el enemigo es superior en fuerza, evítalo.
+- Ataca donde no esté preparado. Aparece donde no te esperen.
 - El general que pierde una batalla hace pocas consideraciones de antemano.
-- No hay ejemplo de un país que se haya beneficiado de una guerra prolongada.
-- La excelencia suprema consiste en romper la resistencia del enemigo sin luchar.
-- Si conoces al enemigo y te conoces a ti mismo, no debes temer el resultado de cien batallas. Si te conoces a ti mismo, pero no al enemigo, por cada victoria obtenida también sufrirás una derrota. Si no conoces ni al enemigo ni a ti mismo, sucumbirás en cada batalla.
-- Uno puede saber cómo conquistar sin ser capaz de hacerlo.
-- En la guerra, el estratega victorioso solo busca la batalla después de que la victoria ha sido ganada.
-- En la batalla, no hay más de dos métodos de ataque: el directo y el indirecto.
-- Un ejército puede marchar grandes distancias sin angustia si marcha por territorio donde el enemigo no está.
-- Puedes estar seguro de tener éxito en tus ataques si solo atacas lugares que no están defendidos.
-- Las tácticas militares son como el agua. Porque el agua, en su curso natural, huye de los lugares altos y se precipita hacia abajo. Así, en la guerra, el camino es evitar lo que es fuerte y golpear lo que es débil.
-- Deja que tus planes sean oscuros e impenetrables como la noche, y cuando te muevas cae como un rayo.
-- Reflexiona y delibera antes de hacer un movimiento.
-- Un general inteligente, por lo tanto, evita un ejército cuando su espíritu está alto, pero lo ataca cuando está aletargado e inclinado a regresar.
-- Es un axioma militar no avanzar cuesta arriba contra el enemigo ni oponerse a él cuando baja.
-- El arte de la guerra nos enseña a no confiar en la probabilidad de que el enemigo no venga, sino en nuestra preparación para recibirlo.
-- Abre tu camino por rutas inesperadas y ataca puntos desguarnecidos.
-- Si enfrentan la muerte, no hay nada que no logren.
-- El principio para dirigir un ejército es establecer un estándar de coraje que todos deben alcanzar.
-- Si es ventajoso para ti, avanza. Si no, quédate donde estás.
+- No hay país que se haya beneficiado de una guerra prolongada.
+- La excelencia suprema es romper la resistencia del enemigo sin luchar.
+- Si conoces al enemigo y te conoces a ti mismo, no temas cien batallas. Si te conoces pero no al enemigo, por cada victoria sufrirás una derrota. Si no conoces ni al enemigo ni a ti mismo, perderás siempre.
+- Puedes saber cómo conquistar sin ser capaz de hacerlo.
+- El estratega victorioso busca la batalla solo después de haber asegurado la victoria.
+- En la batalla solo hay dos métodos de ataque: el directo y el indirecto.
+- Un ejército puede marchar grandes distancias sin sufrir si va por territorio donde el enemigo no está.
+- Tendrás éxito si solo atacas lugares sin defensa.
+- Las tácticas militares son como el agua: el agua huye de lo alto y corre hacia abajo. En la guerra, evita lo fuerte y golpea lo débil.
+- Que tus planes sean oscuros como la noche. Cuando te muevas, cae como un rayo.
+- Reflexiona y delibera antes de actuar.
+- El general inteligente evita al ejército cuando su moral está alta y lo ataca cuando está cansado y quiere volver.
+- No avances cuesta arriba contra el enemigo ni te opongas cuando baja.
+- El arte de la guerra enseña a no confiar en que el enemigo no venga, sino en estar preparado para recibirlo.
+- Abre camino por rutas inesperadas. Ataca puntos desguarnecidos.
+- Quienes enfrentan la muerte pueden lograr cualquier cosa.
+- Para dirigir un ejército, establece un estándar de coraje que todos deban alcanzar.
+- Si es ventajoso, avanza. Si no, quédate donde estás.
 
 ---
 

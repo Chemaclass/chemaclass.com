@@ -7,7 +7,9 @@ tags = [ "phel", "php", "functional-programming", "lisp" ]
 subtitle = "Un Lisp nativo para PHP"
 +++
 
-Phel es un lenguaje de programación funcional que compila a PHP. Es un dialecto de Lisp inspirado en Clojure y construido sobre el ecosistema de PHP. Entre otras características, tiene estructuras de datos persistentes (Listas, Vectores, Maps y Sets), macros, funciones recursivas y un REPL. Chemaclass quiere hablar sobre los fundamentos de Phel y hacer una demo de live coding mostrando su potencial.
+Phel es un lenguaje funcional que compila a PHP. Un dialecto de Lisp inspirado en Clojure, construido sobre el ecosistema PHP. Incluye estructuras de datos persistentes (Listas, Vectores, Maps y Sets), macros, funciones recursivas y un REPL.
+
+En esta charla explico los fundamentos de Phel y hago una demo de live coding mostrando su potencial.
 
 <!-- more -->
 

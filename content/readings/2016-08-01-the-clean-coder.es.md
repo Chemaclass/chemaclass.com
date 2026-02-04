@@ -1,6 +1,6 @@
 +++
-title = "The Clean Coder"
-description = "Un código de conducta para programadores profesionales"
+title = "El Programador Limpio"
+description = "Guía de conducta para programadores profesionales"
 authors = [ "Robert C. Martin" ]
 [taxonomies]
 tags = [ "clean-code", "career", "tdd", "communication", "professionalism" ]
@@ -12,21 +12,21 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lbNIP1YLL
 expand_preview = true
 +++
 
-Los programadores que perduran y tienen éxito en medio de la incertidumbre y la presión constante comparten un atributo común: Se preocupan profundamente por la práctica de crear software. Lo tratan como un oficio. Son profesionales.
+Los programadores que triunfan bajo presión e incertidumbre comparten algo: les importa de verdad crear buen software. Lo tratan como un oficio. Son profesionales.
 
 <!-- more -->
 
-### Los lectores aprenderán
+### Aprenderás
 
-- Qué significa comportarse como un verdadero artesano del software
-- Cómo lidiar con conflictos, plazos ajustados y gerentes irrazonables
-- Cómo entrar en el flujo de codificación y superar el bloqueo del escritor
-- Cómo manejar la presión implacable y evitar el agotamiento
-- Cómo combinar actitudes duraderas con nuevos paradigmas de desarrollo
-- Cómo gestionar tu tiempo y evitar callejones sin salida, pantanos y lodazales
-- Cómo fomentar entornos donde programadores y equipos puedan prosperar
-- Cuándo decir **No** y cómo decirlo
-- Cuándo decir **Sí** y qué significa realmente sí
+- Qué significa ser un verdadero artesano del software
+- Cómo lidiar con conflictos, plazos ajustados y jefes difíciles
+- Cómo entrar en flujo y superar el bloqueo
+- Cómo manejar la presión y evitar el agotamiento
+- Cómo combinar actitudes clásicas con nuevos paradigmas de desarrollo
+- Cómo gestionar tu tiempo y evitar atascos
+- Cómo crear entornos donde los programadores y equipos prosperen
+- Cuándo decir **No** y cómo hacerlo
+- Cuándo decir **Sí** y qué implica realmente
 
 ---
 
@@ -34,26 +34,26 @@ Los programadores que perduran y tienen éxito en medio de la incertidumbre y la
 
 ### Capítulo 1: Profesionalismo
 
-- Ser profesional significa asumir la responsabilidad total de las propias acciones.
-- La primera regla es no hacer daño ni a la función ni a la estructura del software.
-- Siempre cometerás errores ocasionales, pero debes aprender de cada uno.
-- Deberías estar seguro de todo el código que liberas y esperar firmemente que QA no encuentre nada malo.
-  - Pruébalo y pruébalo de nuevo.
+- Ser profesional significa asumir responsabilidad total de tus acciones.
+- Primera regla: no dañes ni la función ni la estructura del software.
+- Siempre cometerás errores, pero aprende de cada uno.
+- Confía en el código que liberas. Espera que QA no encuentre nada.
+  - Prueba una y otra vez.
   - Automatiza tus tests.
-  - Diseña tu código para que sea fácil de probar.
-- Deberías seguir la regla del Boy Scout y siempre dejar un módulo un poco más limpio de lo que lo encontraste para que sea más fácil de cambiar con el tiempo, no más difícil.
-- Tu carrera es **tu responsabilidad**, no la de tu jefe ni la de tus empleadores.
-  - Dedicar 20 horas a la semana más allá de tu trabajo normal para mejorar tus conocimientos y habilidades.
-  - Lee, experimenta, practica (kata), habla con otros, colabora, mira por encima de la valla, mentoriza.
-  - Debería ser divertido.
-- También, conoce tu dominio, identifícate con tu cliente (nunca "nosotros vs. ellos").
+  - Diseña el código para que sea fácil de probar.
+- Sigue la regla del Boy Scout: deja el código un poco más limpio de como lo encontraste.
+- Tu carrera es **tu responsabilidad**, no la de tu jefe.
+  - Dedica 20 horas semanales extra a mejorar tus habilidades.
+  - Lee, experimenta, practica (katas), habla con otros, colabora, mentoriza.
+  - Que sea divertido.
+- Conoce tu dominio e identifícate con tu cliente (nunca "nosotros vs. ellos").
 
 ### Capítulo 2: Decir No
 
-- Los profesionales tienen el coraje de decir no a sus gerentes.
-- Los gerentes y desarrolladores tienen roles que a menudo son adversarios, porque a corto plazo, sus objetivos tienden a entrar en conflicto.
-- Cuanto más alto es el riesgo, más valioso se vuelve un "no", y más difícil de decir.
-- Los buenos equipos trabajarán exitosamente hacia un sí, pero solo un sí correcto, que luego funcionará en la práctica.
+- Los profesionales tienen el coraje de decir no a sus jefes.
+- Managers y desarrolladores a menudo chocan porque sus objetivos a corto plazo entran en conflicto.
+- Cuanto mayor el riesgo, más valioso es un "no" y más difícil de decir.
+- Los buenos equipos trabajan hacia un sí, pero solo un sí correcto que funcione en la práctica.
 
 ### Capítulo 3: Decir Sí
 
@@ -66,19 +66,19 @@ Los programadores que perduran y tienen éxito en medio de la incertidumbre y la
 
 ### Capítulo 4: Codificación
 
-- La programación requiere un nivel de concentración que pocas otras disciplinas requieren.
-- "La zona" (o "flujo") no es tan bueno como la gente piensa: serás localmente productivo, pero a menudo perderás la imagen más grande y posiblemente producirás diseños no tan buenos.
+- Programar requiere un nivel de concentración que pocas disciplinas exigen.
+- "La zona" (o flujo) no es tan buena como parece: serás productivo localmente, pero puedes perder la visión global y producir diseños mediocres.
 - Las interrupciones son malas distracciones.
-  - El pair programming es útil para lidiar con ellas.
-  - TDD ayuda a hacer el contexto pre-interrupción reproducible.
-    - Minimiza el tiempo de depuración
-- Codificar es una **maratón**, no un sprint, así que conserva la energía y creatividad.
-- Vete cuando sea hora, incluso en medio de algo importante.
-- Reestima continuamente tu mejor/probable/peor tiempo de finalización y habla tan pronto como reconozcas que probablemente llegarás tarde.
-  - No permitas que nadie te apure.
-  - Usa una definición adecuada de "terminado", con requisitos de calidad suficientemente altos.
-- La programación es demasiado difícil para cualquiera, así que obtén ayuda y proporciona ayuda a otros, en particular (pero no solo) en estilo de mentoría.
-  - No seas tímido para preguntar.
+  - El pair programming ayuda a gestionarlas.
+  - TDD hace que el contexto pre-interrupción sea reproducible.
+    - Minimiza el tiempo de depuración.
+- Programar es una **maratón**, no un sprint. Conserva energía y creatividad.
+- Vete cuando sea hora, aunque estés en medio de algo importante.
+- Reestima continuamente tu tiempo de finalización y avisa en cuanto veas que llegarás tarde.
+  - No dejes que nadie te meta prisa.
+  - Define bien qué significa "terminado", con requisitos de calidad altos.
+- Programar es difícil para todos. Pide ayuda y ofrécela, especialmente como mentor.
+  - No tengas vergüenza de preguntar.
 
 ### Capítulo 5: Test-Driven Development
 
@@ -99,90 +99,89 @@ Los programadores que perduran y tienen éxito en medio de la incertidumbre y la
 
 ### Capítulo 7: Tests de Aceptación
 
-- Evita basura entra, basura sale. Asegúrate de entender los requisitos.
-  - Crear este entendimiento significa eliminar ambigüedad.
-- La mejor forma de hacer esto es definir tests de aceptación:
-  - Todas las condiciones del cliente necesitan ser cumplidas por tests automatizados para probar el comportamiento esperado del software.
-  - El éxito de esos tests constituye la definición de "Terminado".
-- La implementación del código debería empezar solo cuando los tests estén completos.
-- A diferencia de los tests unitarios (que son solo para programadores), la audiencia de los tests de aceptación son ambos: negocio y desarrolladores.
-- Ejecuta todos los tests en integración continua y arregla cualquier fallo inmediatamente.
+- Evita "basura entra, basura sale". Asegúrate de entender los requisitos.
+  - Entenderlos bien significa eliminar ambigüedad.
+- La mejor forma es definir tests de aceptación:
+  - Los tests automatizados verifican que el software cumple las condiciones del cliente.
+  - Pasar esos tests define "Terminado".
+- Empieza a implementar solo cuando los tests estén definidos.
+- Los tests unitarios son para programadores. Los tests de aceptación son para negocio y desarrolladores.
+- Ejecuta todos los tests en integración continua y arregla los fallos de inmediato.
 
 ### Capítulo 8: Estrategias de Testing
 
-- Considera a QA parte del equipo. Actúan como especificadores: escribiendo tests de aceptación, incluyendo los casos de fallo y casos límite, y realizan testing exploratorio.
+- QA es parte del equipo. Escriben tests de aceptación, casos de fallo, casos límite y hacen testing exploratorio.
 - Pirámide de testing:
-  - La mayoría de tests son tests unitarios. Por desarrolladores y para desarrolladores.
-  - Muchos tests son tests de componentes o integración. Por QA o Negocio asistidos por Desarrolladores. Para Negocio y Desarrolladores.
+  - La mayoría son tests unitarios: por y para desarrolladores.
+  - Muchos son tests de componentes o integración: por QA/Negocio con ayuda de desarrolladores, para ambos.
 
 ### Capítulo 9: Gestión del tiempo
 
-- Los roles de gestión en desarrollo de software requieren buena gestión del tiempo.
-- Las reuniones son necesarias pero también son a menudo grandes pérdidas de tiempo, así que evita reuniones que no tengan un beneficio claro <- esto es una obligación profesional.
-- Las reuniones deben tener una agenda y un objetivo claro.
-  - Las reuniones de pie ágiles pueden ser un formato eficiente.
-  - La planificación de iteración debería tomar el 5% de la iteración.
-- La concentración (enfoque) es un recurso escaso.
-  - Úsalo bien cuando esté presente y recarga con tareas más simples (reuniones) y descansos entre medio.
-  - ¿Cómo mejorar?
-    - Deporte.
-    - Entrada creativa.
-    - Descansos cortos cada 45 minutos.
+- En desarrollo de software, gestionar bien el tiempo es esencial.
+- Las reuniones son necesarias pero a menudo una pérdida de tiempo. Evita las que no aporten valor claro: es una obligación profesional.
+- Las reuniones deben tener agenda y objetivo claro.
+  - Las dailies ágiles son un formato eficiente.
+  - La planificación de iteración debería ocupar el 5% de la iteración.
+- La concentración es un recurso escaso.
+  - Úsala cuando la tengas y recarga con tareas simples y descansos.
+  - Para mejorarla:
+    - Haz deporte.
+    - Busca estímulos creativos.
+    - Toma descansos cortos cada 45 minutos.
 
 ### Capítulo 10: Estimación
 
-- La estimación es la fuente de la mayor desconfianza entre la gente de negocio y los desarrolladores porque los últimos proporcionan estimaciones que los primeros tratan como compromisos.
-  - Ambos son insuficientemente conscientes de que la estimación realmente es una distribución de probabilidad, no un número fijo.
+- Las estimaciones son la mayor fuente de desconfianza entre negocio y desarrolladores. Los desarrolladores dan estimaciones que negocio trata como compromisos.
+  - Ambos olvidan que una estimación es una distribución de probabilidad, no un número fijo.
 
 ### Capítulo 11: Presión
 
-- El desarrollador profesional está calmado y decidido bajo presión, adhiriéndose a su entrenamiento y disciplinas, sabiendo que son la mejor forma de cumplir plazos y compromisos apremiantes.
-- Evita situaciones que causen presión mediante:
-  - hacer solo compromisos que puedas cumplir
-  - mantener tu código limpio
-  - trabajar de tal manera que no necesites cambiarlo cuando estés en crisis
-- No entres en pánico. Habla con tu equipo. No te apresures. Confía en tus disciplinas.
-- Ofrece hacer pairing a otros en crisis.
+- El profesional mantiene la calma bajo presión. Sigue sus disciplinas porque sabe que es la mejor forma de cumplir plazos.
+- Evita situaciones de presión:
+  - Haz solo compromisos que puedas cumplir.
+  - Mantén tu código limpio.
+  - Trabaja de forma que no necesites cambiar de método en crisis.
+- No entres en pánico. Habla con tu equipo. No te aceleres. Confía en tus disciplinas.
+- Ofrece hacer pairing a compañeros en crisis.
 
 ### Capítulo 12: Colaboración
 
-- No todos pero la mayoría de programadores les gusta trabajar solos. Pero necesitamos entender los objetivos de las personas que nos rodean, incluyendo la gente de negocio.
-  - Esto requiere **comunicación**.
-- Igualmente, dentro del equipo de desarrollo: solo la propiedad colectiva del código y el pairing producen un buen nivel de comunicación.
-  - La programación se trata de **comunicación**.
+- A la mayoría de programadores les gusta trabajar solos. Pero hay que entender los objetivos de quienes nos rodean, incluido negocio.
+  - Eso requiere **comunicación**.
+- Dentro del equipo: solo la propiedad colectiva del código y el pairing producen buena comunicación.
+  - Programar es **comunicarse**.
 
 ### Capítulo 13: Equipos y proyectos
 
-- Los equipos necesitan tiempo (meses) para consolidarse, para realmente conocerse y aprender a trabajar juntos de verdad.
-  - Asignar personas fraccionarias a diferentes proyectos es una mala idea, al igual que romper un buen equipo al final de un proyecto.
-  - En cambio, asignar varios proyectos a un equipo puede funcionar bien.
+- Los equipos necesitan meses para consolidarse, conocerse y aprender a trabajar juntos.
+  - Asignar personas a varios proyectos a la vez es mala idea. Romper un buen equipo también.
+  - Mejor asignar varios proyectos a un mismo equipo.
 
 ### Capítulo 14: Mentoría, aprendizaje y artesanía
 
-- Los programadores jóvenes necesitan mentoría.
-  - La mentoría puede ser implícita o explícita.
-- Dado que confiamos el software con todos los aspectos de nuestras vidas, un período razonable de entrenamiento y práctica supervisada sería apropiado.
+- Los programadores jóvenes necesitan mentoría, ya sea implícita o explícita.
+- El software controla todos los aspectos de nuestras vidas. Un período de entrenamiento y práctica supervisada es más que apropiado.
 
 ---
 
-En esta lección, Uncle Bob demuestra la necesidad de escribir código limpio y establece las bases para lograrlo, siendo estas bases de naturaleza social y científica. Dejando claro que el futuro de la programación se basa en un código ético y educado.
+En esta lección, Uncle Bob explica por qué es necesario escribir código limpio y establece las bases para lograrlo, tanto sociales como técnicas. El futuro de la programación se basa en un código ético y bien educado.
 
 {{ youtube(id="7EmboKQH8lM") }}
 
 ---
 
-En esta segunda lección, Uncle Bob nos enseña el propósito de los comentarios en el código, rompiendo el paradigma de que comentar es algo que "tengo que hacer" por el simple hecho de que erróneamente consideramos que comentar es una buena práctica. Para Uncle Bob, escribir un comentario es una señal de fracaso, ya que un buen código debe poder explicarse por sí mismo: Menos Comentarios = Mejor Código.
+En esta segunda lección, Uncle Bob habla del propósito de los comentarios. Rompe la idea de que comentar es algo que "hay que hacer" por ser supuestamente buena práctica. Para él, escribir un comentario es señal de fracaso: el buen código se explica solo. Menos comentarios = mejor código.
 
 {{ youtube(id="2a_ytyt9sf8") }}
 
 ---
 
-En esta tercera lección, Uncle Bob se enfoca en crear conciencia, dada la necesidad de aumentar el nivel de criterio en la producción de código. Señalando la falta de preparación en la mayoría de programadores, como una de las principales razones de la ineficiencia en el desarrollo de software actual.
+En esta tercera lección, Uncle Bob quiere crear conciencia sobre la necesidad de elevar el criterio al producir código. Señala la falta de preparación de muchos programadores como una de las principales causas de la ineficiencia en el desarrollo de software actual.
 
 {{ youtube(id="Qjywrq2gM8o") }}
 
 ---
 
-En esta cuarta lección, Uncle Bob nos introduce a una metodología de desarrollo de software orientada a través de testing. Este es el Test-Driven Development (TDD), una práctica con una larga curva de aprendizaje, pero con resultados significativos para generar un código más robusto, seguro, más mantenible y con mayor eficiencia de desarrollo.
+En esta cuarta lección, Uncle Bob introduce el Test-Driven Development (TDD). Es una práctica con curva de aprendizaje larga, pero produce código más robusto, seguro, mantenible y desarrollado con mayor eficiencia.
 
 {{ youtube(id="58jGpV2Cg50") }}

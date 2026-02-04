@@ -1,6 +1,6 @@
 +++
 title = "Bitcoin: Blockchain y su investigación"
-description = "¿Cómo se crea una dirección Bitcoin? ¿Cómo funciona la creación de las claves privadas y públicas y cómo se conocen como wallets? Y muchas otras preguntas interesantes."
+description = "¿Cómo se crea una dirección Bitcoin? ¿Cómo funcionan las claves privadas y públicas? ¿Qué son las wallets? El libro responde estas y otras preguntas."
 draft = false
 authors = [ "Félix Brezo", "Yaiza Rubio" ]
 [taxonomies]
@@ -15,20 +15,15 @@ expand_preview = false
 
 <!-- more -->
 
-Este libro fue publicado en 2017, así que la mayor parte de la tecnología mostrada ya es historia. Y eso es precisamente lo que realmente
-me gusta del libro en sí, la "parte histórica" y el origen de la blockchain.
+El libro se publicó en 2017, así que mucha de la tecnología ya es historia. Y eso es justo lo que más me gusta: la parte histórica y el origen de la blockchain.
 
+¿Cómo se crea una dirección Bitcoin? ¿Cómo funcionan las claves privadas y públicas? ¿Qué son las wallets? El libro responde estas y otras preguntas.
 
-¿Cómo se crea una dirección Bitcoin? ¿Cómo funciona la creación de las claves privadas y públicas y cómo se conocen como
-wallets? Y muchas otras preguntas interesantes.
+En aquella época, algunos sitios web y servicios ya usaban Bitcoin como método de pago. Se veía venir una tendencia interesante.
 
-En aquel entonces, teníamos algunos sitios web y servicios que estaban usando Bitcoin como método de pago, y había una tendencia bonita.
+- La **primera mitad del libro** es la mejor parte. Sigue siendo relevante porque explica los orígenes de la tecnología.
+- La **segunda mitad** es más opcional, para curiosos. No hay grandes aprendizajes, más allá de ver qué tendencias había en 2016/2017. Hoy la tecnología (y los proyectos blockchain) ha evolucionado muchísimo.
 
-- La **primera mitad del libro** es la mejor parte, y diría que sigue siendo relevante debido al origen de esta tecnología.
-- La **segunda mitad**, por otro lado, diría que es "más opcional" y para gente curiosa. No hay aprendizajes
-  de esta parte, además de la tendencia que puedes ver que ya teníamos en 2016/2017. Hoy en 2022 la tecnología (y
-  los proyectos usando blockchain) ha evolucionado mucho.
-
-Me gustaría mucho leer un nuevo libro con una investigación actualizada 5 años después de la primera edición.
+Me encantaría leer una versión actualizada, cinco años después de la primera edición.
 
 > El libro está disponible solo en español: [0xWord](https://0xword.com/es/libros/87-bitcoin-la-tecnologia-blockchain-y-su-investigacion.html)

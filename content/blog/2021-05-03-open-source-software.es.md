@@ -16,7 +16,7 @@ static_thumbnail = "/images/blog/2021-05-03/cover.jpg"
 
 ## ¿Qué es OSS?
 
-OSS comparte similitudes con el software libre, pero no es lo mismo. El software libre es una forma de OSS, pero eso no significa necesariamente que tenga que ser gratis. Por ejemplo:
+OSS tiene similitudes con el software libre, pero no es lo mismo. El software libre es una forma de OSS, aunque eso no significa que tenga que ser gratis. Por ejemplo:
 
 - [PHPUnit](https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE) es un ejemplo de OSS que es gratuito.
 - [Spryker](https://github.com/spryker/spryker-core/blob/master/LICENSE) es un ejemplo de OSS que no es gratuito.
@@ -28,24 +28,18 @@ OSS comparte similitudes con el software libre, pero no es lo mismo. El software
 ### Para Empresas
 
 - Adopción: cuanto más fácil el acceso, más fácil la adopción.
-- La formación y los tutoriales ayudan a que el sistema crezca.
-- Tecnología: a menudo en la vanguardia de la tecnología.
-  La tecnología se mueve rápido. Se volverán obsoletos si no lo hacen.
-- Comunidad: la gente alrededor quiere mejorar a medida que crece.
-  Los canales públicos permiten un acceso fácil y la construcción de comunidad.
-- Confianza: el software es público y accesible.
-  Todos pueden verificar la calidad del software en cualquier momento.
+- La formación y los tutoriales ayudan al crecimiento del sistema.
+- Tecnología: suelen estar en la vanguardia. La tecnología avanza rápido y quedarse atrás significa volverse obsoleto.
+- Comunidad: la gente quiere mejorar a medida que el proyecto crece. Los canales públicos facilitan el acceso y construyen comunidad.
+- Confianza: el software es público y accesible. Cualquiera puede verificar su calidad en cualquier momento.
 
 ### Para Contribuidores Individuales
 
-- Flexibilidad: decide en qué quieres trabajar.
+- Flexibilidad: decides en qué trabajar.
 - Autoconfianza: la experiencia mejora tus habilidades.
-- Formación: sin la presión de un entorno de PROD.
-- Tecnología: juega con las últimas características de tu tecnología.
-  ¡Prueba las próximas versiones de tu lenguaje de programación, o incluso prueba nuevos!
-- Habilidades blandas: mejora tus habilidades de comunicación.
-  La buena comunicación en el proyecto es importante.
-  Especialmente cuando enfrentas desacuerdos.
+- Formación: sin la presión de un entorno de producción.
+- Tecnología: puedes jugar con las últimas novedades. Prueba nuevas versiones de tu lenguaje o incluso lenguajes nuevos.
+- Habilidades blandas: mejoras tu comunicación. Esto importa mucho, especialmente cuando hay desacuerdos.
 
 ## Contribuyendo a OSS
 
@@ -57,7 +51,7 @@ Hoy en día, es realmente trivial empezar a contribuir a OSS:
 
 ### Proyectos Personales
 
-Un proyecto personal es un playground para crear software y entrenar tus habilidades profesionales. Crear proyectos personales en tu perfil público de GitHub tiene todos los beneficios de contribuir a OSS, además de que eres tu propio jefe:
+Un proyecto personal es un terreno de juego para crear software y entrenar tus habilidades. Tener proyectos personales en tu perfil público de GitHub tiene todos los beneficios de contribuir a OSS, y además eres tu propio jefe:
 - Tú dictas la hoja de ruta.
 - Tú decides qué hacer y cómo.
 - Eres tu propio jefe.
@@ -110,7 +104,7 @@ Un proyecto personal es un playground para crear software y entrenar tus habilid
 - Ver los muchos errores que has cometido
 - Ver cómo estás mejorando en programación con el tiempo
 
-Desarrollando un sexto sentido para oler patrones que ya has hecho y sus experiencias positivas y negativas.
+Vas desarrollando un sexto sentido para detectar patrones que ya has visto, con sus experiencias buenas y malas.
 
 **Mostrando tus habilidades y ayudando a la comunidad a tu alrededor.**
 

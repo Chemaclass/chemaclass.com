@@ -1,6 +1,6 @@
 +++
-title = "The Starfish and the Spider"
-description = "Si cortas la cabeza de una araña, muere; si cortas la pata de una estrella de mar, le crece una nueva, y esa pata puede convertirse en una estrella de mar completamente nueva. Las organizaciones tradicionales de arriba hacia abajo son como arañas, pero ahora las organizaciones estrella de mar están cambiando la cara de los negocios y el mundo."
+title = "La Estrella de Mar y la Araña"
+description = "Si cortas la cabeza a una araña, muere. Si cortas una pata a una estrella de mar, le crece otra y esa pata puede convertirse en una estrella nueva. Las organizaciones descentralizadas están cambiando los negocios y el mundo."
 draft = false
 authors = [ "Ori Brafman", "Rod Beckstrom" ]
 [taxonomies]
@@ -15,21 +15,14 @@ expand_preview = false
 
 <!-- more -->
 
-Si cortas la cabeza de una araña, muere; si cortas la pata de una estrella de mar, le crece una nueva, y esa pata puede convertirse en
-una estrella de mar completamente nueva. Las organizaciones tradicionales de arriba hacia abajo son como arañas, pero ahora las organizaciones estrella de mar están
-cambiando la cara de los negocios y el mundo.
+Si cortas la cabeza a una araña, muere. Si cortas una pata a una estrella de mar, le crece otra y esa pata puede convertirse en una estrella nueva. Las organizaciones jerárquicas tradicionales son como arañas. Las organizaciones descentralizadas son como estrellas de mar, y están cambiando los negocios y el mundo.
 
-¿Cuál es el poder oculto detrás del éxito de Wikipedia, craigslist y Skype? ¿Qué tienen en común eBay y General Electric
-con los movimientos abolicionistas y de derechos de la mujer? ¿Qué elección fundamental puso a General Motors y Toyota en
-caminos muy diferentes?
+¿Qué hay detrás del éxito de Wikipedia, Craigslist y Skype? ¿Qué tienen en común eBay y General Electric con los movimientos abolicionistas y de derechos de la mujer? ¿Qué decisión puso a General Motors y Toyota en caminos tan diferentes?
 
-Ori Brafman y Rod Beckstrom han descubierto algunas respuestas inesperadas, historias cautivadoras y un tapiz de conexiones
-improbables. The Starfish and the Spider explora lo que sucede cuando las estrellas de mar se enfrentan a las arañas y revela cómo empresas establecidas
-e instituciones, desde IBM hasta Intuit y el gobierno de EE.UU., también están aprendiendo a incorporar principios de estrella de mar
-para lograr el éxito.
+Ori Brafman y Rod Beckstrom ofrecen respuestas sorprendentes, historias fascinantes y conexiones inesperadas. El libro explora qué pasa cuando las estrellas de mar se enfrentan a las arañas. Muestra cómo empresas e instituciones (IBM, Intuit, el gobierno de EE.UU.) están adoptando principios de estrella de mar para tener éxito.
 
 ---
 
-En esta charla, Rod Beckstrom, hace un gran resumen de las ideas principales de su libro:
+Rod Beckstrom resume las ideas principales del libro en esta charla:
 
 {{ youtube(id="fumQ0s7DCEY") }}

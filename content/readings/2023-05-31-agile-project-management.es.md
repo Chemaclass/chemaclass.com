@@ -1,6 +1,6 @@
 +++
-title = "Agile Project Management"
-description = "Los proyectos que seguían una metodología Waterfall tendían a exceder sus gastos en la primera iniciativa con el tiempo, mientras que el producto entregado estaba por debajo del estándar y era difícil de usar. Esa situación originó que un grupo de desarrolladores firmara un breve manifiesto de 68 palabras en 2001."
+title = "Gestión Ágil de Proyectos"
+description = "Los proyectos Waterfall solían pasarse de presupuesto y entregar software mediocre. En 2001, un grupo de desarrolladores firmó un manifiesto de 68 palabras que cambiaría todo."
 draft = false
 authors = [ "Jeremy Savell" ]
 [taxonomies]

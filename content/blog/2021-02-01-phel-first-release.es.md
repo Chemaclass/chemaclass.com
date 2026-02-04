@@ -30,39 +30,25 @@ Phel es un lenguaje de Programación Funcional ([FP](https://en.wikipedia.org/wi
 
 ## ¿Por qué Phel?
 
-Phel es una creación de Jens Haase, y como menciona en el sitio web, "es el resultado de muchos [intentos fallidos de hacer programación funcional en PHP](https://phel-lang.org/blog/functional-programming-in-php)". Estaba buscando algo con estas características:
+Phel lo creó Jens Haase. Como menciona en el sitio web, "es el resultado de muchos [intentos fallidos de hacer programación funcional en PHP](https://phel-lang.org/blog/functional-programming-in-php)". Buscaba algo con estas características:
 
 - Inspirado en LISP
 - Lenguaje de Programación Funcional
 - Que funcione en proveedores de hosting baratos
 - Sea fácil de escribir y depurar
 
-Desde mi punto de vista, fue a finales de mayo de 2020 cuando terminé el
-libro [Seven Languages in Seven Weeks](/readings/7-languages-in-7-weeks/), en el que aprendí los fundamentos de Prolog, Erlang,
-Clojure, Haskell… Incluso creé un [repositorio en GitHub](https://github.com/Chemaclass/7LangIn7Weeks) para almacenar mi
-progreso durante las semanas con estos aprendizajes.
+A finales de mayo de 2020 terminé el libro [Seven Languages in Seven Weeks](/readings/7-languages-in-7-weeks/), donde aprendí los fundamentos de Prolog, Erlang, Clojure, Haskell... Incluso creé un [repositorio en GitHub](https://github.com/Chemaclass/7LangIn7Weeks) para guardar mi progreso.
 
-De repente, un día a principios de junio de 2020, vi un post en el canal oficial de PHP de Reddit, con un mensaje de alguien
-mencionando este proyecto "**Phel**", afirmando ser un **"lenguaje de programación funcional" escrito en PHP**!
+A principios de junio de 2020, vi un post en el canal de PHP de Reddit mencionando este proyecto "**Phel**": un **lenguaje de programación funcional escrito en PHP**.
 
-Trabajo con PHP desde hace unos 8 años, y siempre intento combinar OOP con FP tanto como sea posible (porque creo que
-ambos paradigmas son mejores combinados; no son necesariamente excluyentes), y un nuevo dialecto de Lisp completamente escrito
-en **PHP 7.4** nativo sonaba realmente emocionante. Decidí echarle un vistazo. Quería ver el código.
+Llevo unos 8 años trabajando con PHP, y siempre intento combinar OOP con FP (creo que ambos paradigmas funcionan mejor juntos; no son excluyentes). Un nuevo dialecto de Lisp escrito en **PHP 7.4** nativo sonaba emocionante. Decidí echarle un vistazo al código.
 
-Las lecturas frescas de los libros de [Mathias NoBack](https://x.com/matthiasnoback) como
-[Object Design Style Guide](/readings/object-design-style-guide),
-y [Advanced Web Application Architecture](/readings/advance-web-application-architecture/), me dieron el valor para probar
-lo que aprendí y ponerlo de verdad en un proyecto. Este fue (y sigue siendo) un hermoso desafío, que me ayuda a
-probarme a mí mismo y crecer profesionalmente al mismo tiempo.
+Las lecturas recientes de [Mathias NoBack](https://x.com/matthiasnoback), como [Object Design Style Guide](/readings/object-design-style-guide) y [Advanced Web Application Architecture](/readings/advance-web-application-architecture/), me dieron el empuje para aplicar lo aprendido en un proyecto real. Este fue (y sigue siendo) un desafío que me ayuda a crecer profesionalmente.
 
-Mi primer commit fue hecho el 6 de junio de 2020, y desde entonces he estado dedicando un poco de tiempo cada día durante mis horas
-libres a su desarrollo.
-Me ayuda a aprender más sobre FP, diseño interno de lenguajes, y mejores prácticas en testing y arquitectura de diseño de software
-en general.
+Mi primer commit fue el 6 de junio de 2020. Desde entonces dedico un poco de tiempo cada día en mis horas libres.
+Me ayuda a aprender sobre FP, diseño interno de lenguajes, testing y arquitectura de software en general.
 
-Empecé aplicando cambios menores hasta que acabé refactorizando toda la estructura del compilador (entre otras cosas) para
-hacer los módulos más fáciles de leer y entender. Psalm, tipos estrictos, buena cobertura de tests, unificando el estilo de código… Estos fueron
-algunos de mis temas favoritos.
+Empecé con cambios menores hasta que acabé refactorizando toda la estructura del compilador para hacer los módulos más legibles. Psalm, tipos estrictos, buena cobertura de tests, estilo de código unificado... Estos fueron algunos de mis temas favoritos.
 
 ## Ejemplo de código Phel
 

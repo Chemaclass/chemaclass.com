@@ -16,9 +16,9 @@ static_thumbnail = "/images/blog/2021-06-01/cover.jpg"
 
 # El psicólogo Solomon Asch
 
-Durante los primeros años de la Segunda Guerra Mundial, cuando Hitler estaba en la cúspide del poder, Solomon Asch comenzó a estudiar el impacto de la propaganda y el adoctrinamiento mientras era profesor en el departamento de psicología del Brooklyn College. También fue profesor durante 19 años en Swarthmore College.
+Durante los primeros años de la Segunda Guerra Mundial, cuando Hitler estaba en la cúspide del poder, Solomon Asch empezó a estudiar el impacto de la propaganda y el adoctrinamiento. Era profesor en el departamento de psicología del Brooklyn College y luego estuvo 19 años en Swarthmore College.
 
-Durante los años 50, Asch se hizo famoso por su serie de experimentos que demostraban los efectos de la presión social sobre la conformidad. ¿Hasta dónde llegarían las personas para conformarse con otros en un grupo? La investigación de Asch demostró que los participantes eran sorprendentemente propensos a conformarse con un grupo, incluso cuando personalmente creían que el grupo estaba equivocado.
+En los años 50, Asch se hizo famoso por sus experimentos sobre la presión social y la conformidad. ¿Hasta dónde llega la gente para encajar con otros en un grupo? Su investigación mostró que los participantes tendían a conformarse con el grupo, incluso cuando creían que estaba equivocado.
 
 ## Asch preguntó
 
@@ -29,31 +29,31 @@ Durante los años 50, Asch se hizo famoso por su serie de experimentos que demos
 
 ## El experimento de Asch
 
-Asch usó un experimento para estudiar la conformidad basado en un "simple test de visión".
+Asch diseñó un experimento basado en un "simple test de visión".
 
-Usando una tarea de juicio de líneas, Asch puso a un participante ingenuo en una sala con otros cómplices/actores. Los cómplices habían acordado de antemano cuáles serían sus respuestas cuando se les presentara la tarea de las líneas. Dando intencionalmente la misma respuesta incorrecta la mayoría de las veces.
+Metió a un participante en una sala con otros actores (cómplices). Los actores habían acordado dar respuestas incorrectas a propósito la mayoría de las veces.
 
-El participante real no sabía esto y fue llevado a creer que las otras personas también eran participantes reales como él.
+El participante real no lo sabía. Creía que todos eran participantes como él.
 
-Cada persona en la sala tenía que decir en voz alta qué línea de comparación (A, B, o C) era más parecida a la línea objetivo. La respuesta siempre era obvia. El participante real se sentaba al final de la fila y daba su respuesta en último lugar.
+Cada persona en la sala decía en voz alta qué línea (A, B o C) se parecía más a la línea objetivo. La respuesta siempre era obvia. El participante real se sentaba al final y respondía en último lugar.
 
-Asch estaba interesado en ver si el participante real se conformaría con la opinión de la mayoría. Los cómplices daban la respuesta incorrecta la mayoría de las veces (conocidas como pruebas críticas).
+Asch quería ver si el participante se conformaría con la mayoría. Los actores daban la respuesta incorrecta la mayoría de las veces (las llamadas pruebas críticas).
 
 ## Hallazgos
 
 Casi el 75% de los participantes en los experimentos de conformidad siguieron al resto del grupo al menos una vez.
 
-Asch también descubrió que tener a uno de los cómplices dando la respuesta correcta mientras el resto de los cómplices daban la respuesta incorrecta disminuía dramáticamente la conformidad, lo que significa que tener apoyo social es una herramienta importante para combatir la conformidad.
+Asch también descubrió algo clave: cuando uno de los actores daba la respuesta correcta mientras el resto se equivocaba, la conformidad bajaba drásticamente. El apoyo social es una herramienta poderosa para resistir la presión del grupo.
 
 > Después de combinar las pruebas, los resultados indicaron que los participantes se conformaban con la respuesta incorrecta del grupo aproximadamente un tercio de las veces.
 
 ## Conclusión
 
-¿Por qué los participantes se conformaron tan fácilmente? Cuando fueron entrevistados después del experimento, la mayoría de ellos dijeron que realmente no creían en sus respuestas conformistas, pero habían seguido al grupo por miedo a ser ridiculizados.
+¿Por qué los participantes se conformaron tan fácilmente? En las entrevistas posteriores, la mayoría admitió que no creían en sus respuestas conformistas. Simplemente siguieron al grupo por miedo a quedar en ridículo.
 
-Unos pocos de ellos dijeron que realmente creían que las respuestas del grupo eran correctas.
+Unos pocos sí creían que las respuestas del grupo eran correctas.
 
-Aparentemente, las personas se conforman por dos razones principales: porque quieren encajar con el grupo (influencia normativa) y porque creen que el grupo está mejor informado que ellos (influencia informativa).
+La gente se conforma por dos razones principales: quieren encajar (influencia normativa) o creen que el grupo sabe más que ellos (influencia informativa).
 
 > La conformidad puede ser influenciada tanto por una necesidad de encajar como por una creencia de que otras personas son más inteligentes o están mejor informadas.
 
@@ -61,12 +61,12 @@ Aparentemente, las personas se conforman por dos razones principales: porque qui
 
 ## Factores que influyen en la conformidad
 
-Asch continuó realizando más experimentos para determinar qué factores influían, y cómo y cuándo las personas se conforman. Encontró que:
+Asch siguió experimentando para entender qué factores influyen en la conformidad. Descubrió que:
 
-- La conformidad tiende a aumentar cuando hay más personas presentes.
-- La conformidad también aumenta cuando la tarea se vuelve más difícil.
-- La conformidad aumenta cuando otros miembros del grupo son de un estatus social más alto.
-- La conformidad tiende a disminuir, sin embargo, cuando las personas pueden responder en privado (es decir, cuando el grupo no puede conocer las respuestas de los participantes ingenuos).
+- Aumenta cuando hay más personas presentes.
+- Aumenta cuando la tarea es más difícil.
+- Aumenta cuando los otros miembros tienen un estatus social más alto.
+- Disminuye cuando la gente puede responder en privado (cuando nadie ve su respuesta).
 
 ---
 

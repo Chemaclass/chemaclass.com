@@ -1,11 +1,11 @@
 +++
-title = "Principles of package design"
-description = "Aplica principios de diseño a tus clases, preparándolas para su reutilización. Usarás principios de diseño de paquetes para crear paquetes que tengan la cohesión y acoplamiento justos, y sean amigables para usuarios y mantenedores al mismo tiempo."
+title = "Principios de diseño de paquetes"
+description = "Cómo crear paquetes con la cohesión y el acoplamiento justos, útiles tanto para usuarios como mantenedores"
 authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "software-design", "architecture", "clean-code" ]
 [extra]
-subtitle = "Creando componentes de software reutilizables"
+subtitle = "Cómo crear componentes de software reutilizables"
 pages = "250"
 author = "Matthias Noback"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41MltJ4VMxL._SX348_BO1,204,203,200_.jpg"
@@ -13,18 +13,14 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41MltJ4VMxL
 
 <!-- more -->
 
-Aplica principios de diseño a tus clases, preparándolas para su reutilización. Usarás principios de diseño de paquetes para crear
-paquetes que tengan la cohesión y acoplamiento justos, y sean amigables para usuarios y mantenedores al mismo tiempo.
+Aprende a aplicar principios de diseño a tus clases para que sean reutilizables. El libro te enseña a crear paquetes con la cohesión y acoplamiento adecuados, pensados para usuarios y mantenedores.
 
-La primera parte de este libro te guía a través de los cinco principios SOLID que te ayudarán a mejorar el diseño de tus
-clases. La segunda parte te introduce a las mejores prácticas del diseño de paquetes, y cubre tanto los principios de cohesión
-de paquetes como los principios de acoplamiento de paquetes. Los principios de cohesión te muestran qué clases deben ir juntas en un
-paquete, cuándo dividir paquetes, y si una combinación de clases puede considerarse un "paquete" en primer lugar.
-Los principios de acoplamiento de paquetes te ayudan a elegir las dependencias correctas y prevenir direcciones incorrectas en el grafo de dependencias
-de tus paquetes.
+La primera parte cubre los cinco principios SOLID para mejorar el diseño de clases. La segunda parte entra en las mejores prácticas de diseño de paquetes: principios de cohesión y de acoplamiento.
+
+Los principios de cohesión te dicen qué clases van juntas, cuándo dividir un paquete, y cuándo un grupo de clases puede llamarse "paquete". Los de acoplamiento te ayudan a elegir bien las dependencias y evitar ciclos en el grafo de dependencias.
 
 ### Lo que aprenderás
 
-- Aplicar los principios SOLID de diseño de clases
-- Determinar si las clases pertenecen al mismo paquete
-- Saber si es seguro que los paquetes dependan unos de otros
+- Aplicar los principios SOLID
+- Decidir si las clases pertenecen al mismo paquete
+- Saber cuándo un paquete puede depender de otro

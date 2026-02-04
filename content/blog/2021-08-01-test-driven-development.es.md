@@ -17,13 +17,13 @@ La complejidad aquí no está en escribir tests en sí, sino en los hábitos que
 
 ## La raíz del problema
 
-Sin experiencia (sólida) en testing, los desarrolladores pueden tenerlo difícil al intentar aplicar testing en general como parte de su trabajo diario. No es simplemente por la complejidad del tema, sino **porque están acostumbrados a escribir código que es difícil de testear.**
+Sin experiencia sólida en testing, los desarrolladores lo pasan mal al intentar aplicar tests en su trabajo diario. No es solo por la complejidad del tema, sino **porque están acostumbrados a escribir código difícil de testear.**
 
-Escribir tests para software que ya funciona (principalmente cuando se hizo sin considerar el testing en absoluto) se traduce como algo aburrido, casi inútil, normalmente acompañado de falta de motivación, culpando al sujeto equivocado en este contexto: "los tests en sí están reduciendo mi velocidad".
+Escribir tests para software que ya funciona (sobre todo cuando se hizo sin pensar en testing) se siente aburrido y casi inútil. Viene acompañado de falta de motivación, culpando al sujeto equivocado: "los tests me hacen ir más lento".
 
 > En un contexto de dominio, si una pieza de lógica de software es difícil de testear, el problema no es el test, sino el código que no estaba bien escrito.
 
-Ya hay cientos de tutoriales, libros y documentación sobre testing, pero puedo compartir mi experiencia y cómo aplico esta gran (y obligatoria) filosofía en mi trabajo diario.
+Ya hay cientos de tutoriales, libros y documentación sobre testing. Aquí comparto mi experiencia y cómo aplico esta filosofía en mi trabajo diario.
 
 ### Test-Driven se basa en esta simple regla
 
@@ -35,13 +35,13 @@ Ya hay cientos de tutoriales, libros y documentación sobre testing, pero puedo 
 
 ![tdd-style](/images/blog/2021-08-01/tdd-style.png)
 
-La idea de guiar tu código por testing puede entenderse dependiendo del nivel de abstracción de lo que estás escribiendo en el momento. No quieres crear un acoplamiento incorrecto entre los tests y el código testeado. Quieres testear el comportamiento de tu lógica.
+La idea de guiar tu código con tests depende del nivel de abstracción de lo que estés escribiendo. No quieres acoplar mal los tests con el código testeado. Quieres testear el comportamiento de tu lógica.
 
-TDD se basa en un bucle de pequeños pasos que te ayuda a encontrar **patrones** y guiar tu diseño de software cada pequeña iteración con **refactorizaciones constantes**. Es la mejor opción si quieres asegurar el comportamiento esperado de todos los caminos posibles de tu lógica.
+TDD se basa en un bucle de pequeños pasos que te ayuda a encontrar **patrones** y guiar tu diseño de software con **refactorizaciones constantes**. Es la mejor opción si quieres asegurar el comportamiento esperado de todos los caminos posibles de tu lógica.
 
-La belleza de esto es que no necesitas conocer el algoritmo completo desde el principio. En cambio, estás **descubriendo** cómo debería ser tu lógica expresando la implementación deseada, paso a paso, en tests automatizados.
+Lo bonito es que no necesitas conocer el algoritmo completo desde el principio. Vas **descubriendo** cómo debería ser tu lógica expresando la implementación deseada, paso a paso, en tests automatizados.
 
-Considerar escribir tests para tu software al mismo tiempo que lo escribes, te **obligará irremediablemente a escribir mejor software**. Porque quieres escribir software que sea fácil de testear, y por lo tanto acabará con mayor calidad.
+Escribir tests al mismo tiempo que escribes el código te **obliga a escribir mejor software**. Porque quieres que sea fácil de testear, y eso lleva a mayor calidad.
 
 > Ya escribí otro post sobre la relación entre **calidad y testing** del software: [El Arte del Testing: donde el diseño se encuentra con la calidad](/es/blog/the-art-of-testing/).
 
@@ -56,23 +56,23 @@ La mejor manera de aprender Test-Driven es haciendo katas de software. Pruébala
 
 ### ¿Qué es una Code Kata?
 
-Los desarrolladores de software no practican lo suficiente. La mayor parte de nuestro aprendizaje tiene lugar en el trabajo, lo que significa que la mayoría de nuestros errores también se cometen allí.
+Los desarrolladores no practicamos lo suficiente. La mayor parte de nuestro aprendizaje ocurre en el trabajo, y ahí es donde cometemos la mayoría de nuestros errores.
 
-Otras profesiones creativas practican: los músicos tocan piezas técnicas, los poetas constantemente reescriben obras. En karate, la mayor parte del tiempo de un estudiante se dedica a aprender y perfeccionar movimientos básicos. Estas son las katas.
+Otras profesiones creativas sí practican: los músicos tocan piezas técnicas, los poetas reescriben obras constantemente. En karate, un estudiante dedica la mayor parte del tiempo a aprender y perfeccionar movimientos básicos. Esas son las katas.
 
 ### ¿Cuál es el objetivo de una kata? ¿Qué deberíamos tener al final?
 
-Las katas existen para ayudar a los desarrolladores a obtener los mismos beneficios que practicar en cualquier otra profesión. Son ejercicios simples y artificiales que te permiten experimentar y aprender sin la presión de un entorno de producción.
+Las katas existen para que los desarrolladores obtengamos los mismos beneficios que practicar en otras profesiones. Son ejercicios simples y artificiales que permiten experimentar y aprender sin la presión de producción.
 
 > No hay respuestas correctas o incorrectas en ninguna kata de software: el beneficio viene del proceso, no del resultado.
 
 ### Consejos
 
-- Una vez que has resuelto una kata, inténtala de nuevo en unas semanas o meses.
-- Intenta explorar nuevas soluciones. Sé creativo en el proceso y no te apresures.
-- Cuando las hagas en grupos, no son una competición para ver quién logrará más del ejercicio.
-- El enfoque debería estar en el proceso, nunca en el resultado.
-- El verdadero resultado valioso de cualquier kata son los aprendizajes que tú (y tu equipo) obtendréis después de hablar sobre ello y compartir vuestras experiencias.
+- Cuando resuelvas una kata, vuelve a intentarla en unas semanas o meses.
+- Explora nuevas soluciones. Sé creativo y no te apresures.
+- En grupo, no es una competición para ver quién logra más.
+- El foco debe estar en el proceso, nunca en el resultado.
+- El verdadero valor de cualquier kata son los aprendizajes que obtendréis después de hablar y compartir experiencias.
 
 Puedes encontrar muchas katas en Internet. Por ejemplo:
 
@@ -85,7 +85,7 @@ Puedes encontrar muchas katas en Internet. Por ejemplo:
 
 ### TDD es más un flujo de trabajo que un diseño
 
-> "TDD es una herramienta de diseño." Eso es lo que Sandro ha dicho durante años. Pero ya no. Después de trabajar con diferentes equipos y en diferentes organizaciones, y también inspeccionando cuidadosamente cómo trabaja, Sandro cambió de opinión sobre el rol de TDD en el diseño de software.
+> "TDD es una herramienta de diseño." Eso es lo que Sandro dijo durante años. Pero ya no. Tras trabajar con diferentes equipos y organizaciones, y observar cómo trabaja él mismo, Sandro cambió de opinión sobre el rol de TDD en el diseño de software.
 
 {{ youtube(id="KyFVA4Spcgg") }}
 

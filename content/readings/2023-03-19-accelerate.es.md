@@ -1,6 +1,6 @@
 +++
 title = "Accelerate"
-description = "La Ciencia de Lean Software y DevOps: Construyendo y Escalando Organizaciones Tecnológicas de Alto Rendimiento"
+description = "Cómo medir el rendimiento de equipos de software y cómo ese rendimiento impacta a toda la organización. La ciencia detrás de Lean Software y DevOps."
 draft = false
 authors = [ "Nicole Forsgren", "Jez Humble", "Gene Kim" ]
 [taxonomies]
@@ -15,9 +15,9 @@ expand_preview = false
 
 <!-- more -->
 
-Accelerate explora cómo los equipos de desarrollo de software que usan **Lean Software** y **DevOps** pueden medir su rendimiento y cómo el rendimiento de los equipos de ingeniería de software impacta el rendimiento general de una organización.
+Accelerate explora cómo los equipos que usan **Lean Software** y **DevOps** pueden medir su rendimiento. También muestra cómo el rendimiento de ingeniería impacta a toda la organización.
 
-> Nota: DevOps trata de integrar y automatizar el desarrollo de software (Dev) y las operaciones de TI (Ops), enfocándose en mejorar (y acortar) el ciclo de vida de desarrollo de sistemas.
+> Nota: DevOps integra y automatiza el desarrollo de software (Dev) con las operaciones de TI (Ops). El foco: mejorar y acortar el ciclo de vida de desarrollo.
 
 ## Capacidades Clave
 

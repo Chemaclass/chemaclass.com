@@ -1,6 +1,6 @@
 +++
-title = "Become an Effective Software Engineering Manager"
-description = "Una gran recopilación de todos los temas importantes para la gestión: 1:1s, evaluaciones de desempeño, contratación y despidos, política laboral, trabajo remoto y otros."
+title = "Cómo ser un Engineering Manager efectivo"
+description = "Una recopilación completa de temas clave: 1:1s, evaluaciones, contratación, despidos, política laboral y trabajo remoto."
 authors = [ "James Stanier" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "career", "communication" ]
@@ -12,41 +12,36 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL
 expand_preview = true
 +++
 
-Una gran recopilación de todos los temas importantes para la gestión: 1:1s, evaluaciones de desempeño, contratación y despidos,
-política laboral, trabajo remoto y otros.
+Una recopilación completa de temas clave para la gestión: 1:1s, evaluaciones de desempeño, contratación, despidos, política laboral y trabajo remoto.
 
-El libro está dividido en 3 partes: la primera parte cubre cosas que un nuevo manager debería saber, la segunda y tercera partes profundizan
-en temas que todos los managers deberían dominar.
+El libro tiene 3 partes: la primera cubre lo que un manager nuevo debería saber; la segunda y tercera profundizan en temas que todo manager debería dominar.
 
 <!-- more -->
 
-Aunque asentía con los consejos, a veces sentía que era demasiado "verboso" o entraba en demasiados
-detalles que no me interesaban. Dicho esto, seguí avanzando y me alegro de haberlo terminado, recogiendo muchos
-consejos útiles.
+Aunque asentía con los consejos, a veces sentía que era demasiado extenso o entraba en detalles que no me interesaban. Aun así, me alegro de haberlo terminado. Saqué muchos consejos útiles.
 
 ---
 
 Mis aprendizajes de este libro:
 
-## Parte 1 - Orientándose
+## Parte 1 - Orientarse
 
 ### Capítulo 01: Una nueva aventura
 
-- Consejos prácticos sobre cosas que hacer la primera semana y encontrar señales de desalineación en tu primera semana.
+- Consejos prácticos para tu primera semana y cómo detectar señales de desalineación.
 
-### Capítulo 02: Gestiónate primero a ti mismo
+### Capítulo 02: Gestiónate a ti mismo primero
 
-- Un buen recordatorio de cómo poner tus cosas en orden es lo primero - esto es un prerrequisito para ser eficiente como
-  manager.
+- Buen recordatorio de que ordenar tus propias cosas es lo primero. Es prerrequisito para ser eficiente como manager.
 
-> "Tu calendario es tanto para ti como para que otras personas lo usen. Mantenlo ordenado y significativo. Te representa. Hacer las reuniones públicas por defecto puede ayudar a otros a razonar mejor sobre cómo programar tiempo contigo."
+> "Tu calendario es para ti y para los demás. Mantenlo ordenado y con sentido. Te representa. Hacer las reuniones públicas por defecto ayuda a otros a entender cómo agendar tiempo contigo."
 
-## Parte 2 - Trabajando con individuos
+## Parte 2 - Trabajar con personas
 
-### Capítulo 03: Interfaz con humanos
+### Capítulo 03: Comunicarte con humanos
 
-- Este capítulo cubre mucho terreno sobre cómo comunicarte con otros.
-- Piensa dos veces antes de transmitir información.
+- Mucho terreno sobre cómo comunicarte con otros.
+- Piénsalo dos veces antes de compartir información.
 - Sé consistente en tu estilo de comunicación.
 
 > "No comuniques cuando quieras, sino cuando necesites."
@@ -55,82 +50,79 @@ Mis aprendizajes de este libro:
 
 - Es su reunión, no la tuya.
 
-> "Intenta que tus reportes directos hablen el 70% del tiempo. Si sientes ganas de resolver su problema por ellos, no lo hagas. Haz otra pregunta y déjalos llegar a la conclusión por sí mismos. Este es un arte que requiere algo de práctica."
+> "Intenta que hablen el 70% del tiempo. Si quieres resolverles el problema, no lo hagas. Haz otra pregunta y deja que lleguen solos a la conclusión. Es un arte que requiere práctica."
 
-### Capítulo 05: El trabajo adecuado para la persona
+### Capítulo 05: El trabajo adecuado para cada persona
 
-- Motivación y la jerarquía de necesidades. Desarrollar habilidades con algunos ejemplos prácticos de cómo hacerlo.
+- Motivación y jerarquía de necesidades. Ejemplos prácticos de cómo desarrollar habilidades.
 
-> "Sin embargo, como su manager, puedes trabajar con ellos para colocar estos logros de carrera en la parte inferior de su árbol de habilidades, y luego planificar los hitos a lo largo del camino hacia los que pueden apuntar para hacer un progreso medible. Así empujando la frontera de su zona de desarrollo próximo cada vez más lejos."
+> "Como manager, puedes trabajar con ellos para situar sus metas de carrera en la base de su árbol de habilidades. Luego planificar hitos intermedios con progreso medible, empujando la frontera de su zona de desarrollo cada vez más lejos."
 
-### Capítulo 06: La época más maravillosa del año (Evaluaciones de desempeño)
+### Capítulo 06: Evaluaciones de desempeño
 
-- Prepararse para las evaluaciones de desempeño con antelación. Obtener retroalimentación de compañeros, y hacer esto por email, por ejemplo.
+- Prepáralas con antelación. Recoge feedback de compañeros, por ejemplo por email.
 
-### Capítulo 07: ¡Únete a nosotros! (Contratación)
+### Capítulo 07: Contratación
 
-- El caso de no necesitar al candidato más senior.
-- Encaje cultural.
-- Configurar un proceso de entrevistas.
+- No siempre necesitas al candidato más senior.
+- El encaje cultural importa.
+- Cómo montar un proceso de entrevistas.
 
-### Capítulo 08: Game Over (Rotación)
+### Capítulo 08: Rotación
 
-- La gente que se va es normal.
-- Renuncias voluntarias que son:
-    - "buenas razones", es decir, no podrías haber hecho mucho al respecto.
-    - "malas razones", es decir, podrías haber detectado (y abordado) cosas temprano como conflicto con compañeros, falta de
-      desafío, compensación.
+- Que la gente se vaya es normal.
+- Renuncias voluntarias:
+    - "Buenas razones": no podrías haber hecho mucho.
+    - "Malas razones": podrías haber detectado y abordado cosas antes (conflictos, falta de reto, salario).
 
-> "Como manager, estás condenado al fracaso si piensas que vas a mantener a todos en tu equipo actual indefinidamente. [...]
-> Nunca debes luchar por mantener al personal si no puedes proporcionar realmente las condiciones bajo las cuales puedan ser más felices de lo que ya son. Solo diferirás su partida."
+> "Estás condenado al fracaso si crees que vas a retener a todos indefinidamente. [...] No luches por retener a alguien si no puedes ofrecer las condiciones para que sea más feliz. Solo retrasarás su partida."
 
-### Capítulo 09: Cómo ganar amigos e influir en la gente (Estar bien conectado)
+### Capítulo 09: Construir tu red
 
-- Construir tu red. Hacer presentaciones, mantenerse en contacto con otros.
+- Hacer presentaciones, mantenerte en contacto.
 - Coaching y mentoría.
 
 ## Parte 3 - El panorama general
 
-### Capítulo 10: Los humanos son difíciles
+### Capítulo 10: Las personas son difíciles
 
-- Trabajar más duro o más rápido no es en lo que deberías enfocarte. En cambio, deberías estar creando las condiciones que
-  hagan feliz y productivo a tu personal nutriendo su autonomía, maestría y propósito.
+- No te centres en trabajar más duro o más rápido. Crea las condiciones para que tu equipo sea feliz y productivo: autonomía, maestría y propósito.
 
-> "En niveles más senior, durante los malos tiempos, recibirás los dedos apuntándote ya que eres fundamentalmente responsable, aunque puede que no haya sido tu culpa."
+> "En niveles senior, cuando las cosas van mal, te señalarán a ti. Eres el responsable aunque no sea tu culpa."
 
 ### Capítulo 11: Los proyectos son difíciles
 
-- "El ojo de Sauron" - trabajar en proyectos de alto riesgo.
-- Las cosas se ralentizan a medida que el equipo crece. Más código (legacy), más problemas que manejar.
-- Equilibrio de alcance, recursos y tiempo.
+- "El ojo de Sauron": trabajar en proyectos de alto riesgo.
+- Todo se ralentiza cuando el equipo crece. Más código legacy, más problemas.
+- Equilibrio entre alcance, recursos y tiempo.
 
-> "Lidera desde el frente: Como líder, necesitas dar el ejemplo para el resto del equipo. Pon el trabajo. Los proyectos más difíciles pueden convertirse en momentos definitorios de carrera. Adueñátelos y estate ahí."
+> "Lidera desde el frente. Da el ejemplo. Pon el trabajo. Los proyectos difíciles pueden definir tu carrera. Adueñátelos y estate ahí."
 
 ### Capítulo 12: La bolsa de información
 
 - Espías y guardianes.
 
-> "Como manager, se te requerirá tomar decisiones regulares sobre cuánto debes compartir con otro personal y cuándo."
+> "Como manager, deberás decidir constantemente cuánto compartes y cuándo."
 
 - Política laboral.
 
-> "En la política laboral, tu red de compañeros es importante ya que te permite estar más ampliamente informado sobre cómo el negocio más amplio percibe tus propias iniciativas y prioridades."
+> "Tu red de compañeros te permite saber cómo el resto del negocio percibe tus iniciativas y prioridades."
 
 ### Capítulo 13: Soltar el control
 
-- Elimina distracciones y recarga adecuadamente fuera del trabajo.
-- Usa el 10% de tu tiempo cada semana para no hacer nada y dejar que tus pensamientos emerjan.
+- Elimina distracciones y recarga fuera del trabajo.
+- Dedica el 10% de tu semana a no hacer nada y dejar que tus pensamientos fluyan.
 
-> "Suelta los resultados que no puedes controlar. Acepta hacer lo mejor que puedas, y fomenta el mismo comportamiento en tu personal. Los resultados impredecibles son normales. El fracaso es aceptable. Mientras estés haciendo lo mejor que puedas, y estés permitiendo que tu equipo haga lo mejor que pueda, entonces no tienes nada de qué preocuparte."
+> "Suelta los resultados que no puedes controlar. Haz lo mejor que puedas y fomenta lo mismo en tu equipo. Los resultados impredecibles son normales. El fracaso es aceptable. Si haces lo mejor que puedes, no tienes de qué preocuparte."
 
 ### Capítulo 14: Buen mantenimiento
 
-- Convierte los problemas en oportunidades de aprendizaje.
-- Trabaja en mejorar la comunicación del equipo.
+- Convierte problemas en oportunidades de aprendizaje.
+- Mejora la comunicación del equipo.
 
 ### Capítulo 15: Escaleras duales
 
-- Diseñar una trayectoria de Contribuidor Individual y Manager es vital para una cultura de organización de ingeniería saludable.
+- Diseñar trayectorias de Contribuidor Individual y Manager es vital para una cultura de ingeniería sana.
 
 ### Capítulo 16: El lugar de trabajo moderno
 
@@ -140,16 +132,16 @@ Mis aprendizajes de este libro:
 
 ### Capítulo 17: Startups
 
-- Gestión no significa burocracia.
-- La buena gestión es un toque ligero y colaboración continua.
+- Gestión no es burocracia.
+- La buena gestión es toque ligero y colaboración continua.
 
-> "Recuerda que la experiencia en startups es muy buscada porque ser impactante en ese entorno implica ser emprendedor, automotivado, colaborativo y rápido para aprender. Incluso si la startup en sí no funciona, tu próximo trabajo será mucho mejor por ello."
+> "La experiencia en startups es muy valorada porque implica ser emprendedor, automotivado, colaborativo y rápido aprendiendo. Aunque la startup fracase, tu siguiente trabajo será mejor por ello."
 
 ### Capítulo 18: La bola de cristal
 
-- Tu visión de carrera. Mirando atrás, mirando adelante.
+- Tu visión de carrera. Mirar atrás, mirar adelante.
 
-> "Una parte importante de una vida larga y satisfactoria es el propósito. El propósito no se trata de estatus económico o sentirse bien. Se trata de una vida que vale la pena vivir."
+> "Una parte importante de una vida larga y satisfactoria es el propósito. No se trata de estatus ni de sentirse bien. Se trata de una vida que valga la pena vivir."
 
 ---
 

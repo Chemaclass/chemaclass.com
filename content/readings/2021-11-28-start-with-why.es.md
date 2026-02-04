@@ -1,6 +1,6 @@
 +++
-title = "Start with Why"
-description = "Start with Why pregunta (y responde) las preguntas: ¿por qué algunas personas y organizaciones son más innovadoras, más influyentes y más rentables que otras? ¿Por qué algunas comandan mayor lealtad de clientes y empleados por igual? Incluso entre las exitosas, ¿por qué tan pocas son capaces de repetir su éxito una y otra vez?"
+title = "Empieza con el porqué"
+description = "¿Por qué algunas personas y organizaciones son más innovadoras, influyentes y rentables? ¿Por qué algunas consiguen más lealtad de clientes y empleados? ¿Por qué tan pocas pueden repetir su éxito?"
 authors = [ "Simon Sinek" ]
 [taxonomies]
 tags = [ "leadership", "communication", "philosophy", "career" ]
@@ -12,32 +12,25 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51BlNddi+NL
 expand_preview = true
 +++
 
-*Start with Why* pregunta (y responde) las preguntas: ¿por qué algunas personas y organizaciones son más innovadoras, más
-influyentes y más rentables que otras? ¿Por qué algunas comandan mayor lealtad de clientes y empleados por igual?
-Incluso entre las exitosas, ¿por qué tan pocas son capaces de repetir su éxito una y otra vez?
+¿Por qué algunas personas y organizaciones son más innovadoras, influyentes y rentables que otras? ¿Por qué algunas consiguen mayor lealtad de clientes y empleados? Incluso entre las exitosas, ¿por qué tan pocas pueden repetir su éxito?
 
 <!-- more -->
 
 ---
 
-La capacidad de inspirar a quienes te rodean y lograr cosas notables comienza con el POR QUÉ. Aquellos que empiezan con el POR QUÉ nunca
-manipulan, inspiran.
+La capacidad de inspirar y lograr cosas notables empieza con el POR QUÉ. Quienes empiezan con el POR QUÉ no manipulan, inspiran.
 
-Personas como Martin Luther King Jr., Steve Jobs y los hermanos Wright tenían poco en común, pero todos comenzaron con
-el POR QUÉ. Se dieron cuenta de que la gente no comprará verdaderamente un producto, servicio, movimiento o idea hasta que entiendan el POR QUÉ
-detrás de él.
+Martin Luther King Jr., Steve Jobs y los hermanos Wright tenían poco en común. Pero todos empezaron con el POR QUÉ. Entendieron que la gente no compra un producto, servicio o idea hasta que entiende el POR QUÉ detrás.
 
-- La capacidad de inspirar a quienes te rodean y lograr cosas notables comienza con el POR QUÉ.
-- Cualquier organización puede explicar lo que hace; algunas pueden explicar cómo lo hacen; pero muy pocas pueden articular claramente por qué.
+- Inspirar y lograr cosas notables empieza con el POR QUÉ.
+- Cualquier organización puede explicar qué hace. Algunas pueden explicar cómo lo hacen. Muy pocas articulan claramente por qué.
 - Tu POR QUÉ es tu propósito, causa o creencia.
-- Cada líder y organización inspiradora, independientemente del tamaño o industria, comienza con el POR QUÉ.
-- Cuando tu POR QUÉ se vuelve borroso, se hace mucho más difícil mantener el crecimiento, la lealtad y la inspiración que ayudaron
-  a impulsar tu éxito original.
+- Todo líder y organización inspiradora, sin importar tamaño o industria, empieza con el POR QUÉ.
+- Cuando tu POR QUÉ se vuelve borroso, cuesta mantener el crecimiento, la lealtad y la inspiración que impulsaron tu éxito original.
 
 > La gente no compra LO QUE haces, compra POR QUÉ lo haces.
 
-Los grandes líderes son capaces de inspirar a la gente a actuar. Y aquellos que son capaces de inspirar dan a la gente un sentido de propósito o
-pertenencia que tiene poco que ver con cualquier incentivo externo o beneficio a obtener.
+Los grandes líderes inspiran a la gente a actuar. Quienes inspiran dan un sentido de propósito o pertenencia que tiene poco que ver con incentivos externos.
 
 ---
 

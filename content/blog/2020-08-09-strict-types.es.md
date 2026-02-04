@@ -10,37 +10,37 @@ static_thumbnail = "/images/blog/2020-08-09/cover.jpg"
 
 ![blog-cover](/images/blog/2020-08-09/cover.jpg)
 
-En diciembre de 2015, PHP 7 introdujo las declaraciones de tipos escalares y con ello la bandera strict types. ¿Qué es esta nueva característica?
+En diciembre de 2015, PHP 7 introdujo las declaraciones de tipos escalares y la bandera strict types. ¿Qué es esto?
 
 <!-- more -->
 
-Lo bueno de declarar un archivo PHP como estricto es que realmente se aplica **SOLO al archivo actual**. Asegura que este archivo tiene tipos estrictos, pero no se aplica a ningún otro archivo en todo el proyecto. Te permite hacer, paso a paso, esta migración de código no estricto a código estricto, especialmente para archivos o proyectos nuevos.
+Lo bueno de declarar un archivo PHP como estricto es que se aplica **solo al archivo actual**. Asegura tipos estrictos en ese archivo, pero no afecta al resto del proyecto. Puedes migrar de código no estricto a estricto paso a paso, especialmente en archivos o proyectos nuevos.
 
-> Para habilitar el modo estricto, se debe colocar una única directiva declare al principio del archivo. Esto significa que la estrictez de tipado para escalares se configura por archivo. Esta directiva no solo afecta las declaraciones de tipo de parámetros, sino también el tipo de retorno de una función.
+> Para habilitar el modo estricto, coloca una directiva declare al principio del archivo. La estrictez de tipado para escalares se configura por archivo. Esta directiva afecta tanto a los parámetros como al tipo de retorno de las funciones.
 
-## Los tipos estrictos afectan a la coerción de tipos
+## Strict types afecta la coerción de tipos
 
-Usar type hints sin `strict_types` puede llevar a bugs sutiles.
+Usar type hints sin `strict_types` puede causar bugs sutiles.
 
-Sin esto, `int $x` significaba `$x debe tener un valor coercionable a int`. Cualquier valor que pudiera ser coercionado a int pasaría el type hint, incluyendo:
+Sin strict types, `int $x` significa "$x debe ser coercionable a int". Cualquier valor coercionable a int pasaría:
 
-- un `int` propio (ejemplo: 42 -> 42)
-- un `float` (ejemplo: 13.1459 -> 13)
-- un `bool` (ejemplo: true -> 1)
-- un `null` (ejemplo: null -> 0)
-- un `string` con dígitos iniciales (ejemplo: "15 Trees" -> 15)
+- un `int` (42 -> 42)
+- un `float` (13.1459 -> 13)
+- un `bool` (true -> 1)
+- un `null` (null -> 0)
+- un `string` con dígitos al inicio ("15 Trees" -> 15)
 
-Al establecer `strict_types=1`, le dices al motor que int $x significa que $x debe ser solo un int propio, sin coerción de tipos permitida. Tienes la gran seguridad de que estás obteniendo exactamente y solo lo que se dio, sin ninguna conversión o pérdida potencial.
+Con `strict_types=1`, le dices al motor que `int $x` significa que $x debe ser un int real, sin coerción. Tienes la seguridad de que recibes exactamente lo que se pasó, sin conversiones ni pérdida de datos.
 
-## ¿A quién debería importarle esta línea de "strict type"?
+## ¿A quién le importa esta línea?
 
-En realidad, declare(strict_types=1); es más para el lector que para el escritor. ¿Por qué? Porque le dirá explícitamente al lector:
+`declare(strict_types=1);` es más para el lector que para el escritor. Le dice explícitamente:
 
-- Los tipos en este ámbito actual (archivo/clase) se tratan de forma estricta.
+- Los tipos en este archivo se tratan de forma estricta.
 
 > 'strict_types=1' es más para el lector que para el escritor
 
-El escritor solo necesita mantener tal estrictez mientras escribe el comportamiento esperado. Dicho esto, como escritor, deberías preocuparte por tus lectores, lo que también incluye a tu yo futuro. Porque vas a ser uno de ellos.
+El escritor solo necesita mantener esa estrictez mientras escribe. Pero como escritor, deberías preocuparte por tus lectores. Eso incluye a tu yo futuro.
 
 ![blog-img](/images/blog/2020-08-09/footer.jpg)
 

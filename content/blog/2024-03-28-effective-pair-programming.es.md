@@ -24,17 +24,17 @@ Cada persona tendrá un rol:
 
 > La pareja podría --y debería-- intercambiar roles ocasionalmente; ej: cada X commits pusheados, cada 10 min,... depende de ellos.
 
-El pair programming no debería considerarse una práctica solo para "seniors" hacia juniors, sino independientemente del nivel de experiencia de los miembros del equipo.
+El pair programming no es solo para que los seniors ensenyen a los juniors. Funciona independientemente del nivel de experiencia de los miembros del equipo.
 
-Se trata del **flujo de colaboración**, la comunicación de calidad, la ausencia de sentirse juzgado y la idea de dar la bienvenida a la vulnerabilidad con tus compañeros, sabiendo que te apoyarán y ayudarán.
+Se trata del **flujo de colaboracion**, de comunicarse bien, de no sentirse juzgado y de aceptar la vulnerabilidad con tus companeros, sabiendo que te apoyaran y ayudaran.
 
-Se trata de desafiarse constantemente mutuamente, buscando la solución más pragmática mientras se mantiene simple. Siempre buscando **feedback rápido** al hablar entre ustedes, pero también sobre la solución que acordaron implementar y su dirección.
+Se trata de desafiarse mutuamente, buscando la solucion mas pragmatica y simple. Siempre buscando **feedback rapido** al hablar entre vosotros, tanto sobre la solucion acordada como sobre su direccion.
 
-Se trata del bucle de feedback corto, rápido e inmediato mientras hablas con tu compañero, quien **revisa tu código sobre la marcha**. Puedes guiar como navegador o ayudar al conductor a validar sus ideas en un panorama más amplio.
+Se trata del bucle de feedback corto e inmediato mientras hablas con tu companero, quien **revisa tu codigo sobre la marcha**. Puedes guiar como navegador o ayudar al conductor a validar sus ideas en un contexto mas amplio.
 
-Se trata de la atmósfera constante de **compartir conocimiento** por defecto, reduciendo bus-factors y áreas de conocimiento aislado al máximo. Aumentando el enfoque al tener dos mentes trabajando en la misma tarea simultáneamente.
+Se trata de **compartir conocimiento** por defecto, reduciendo bus-factors y areas de conocimiento aislado. Tener dos mentes en la misma tarea aumenta el enfoque.
 
-Se trata de **cohesión de equipo** y afilar el sentimiento de que pertenecemos. Cuando entendemos las fortalezas y debilidades de cada uno, nos daremos cuenta de cuánto podemos ayudarnos a crecer mutuamente.
+Se trata de **cohesion de equipo** y del sentimiento de pertenencia. Al entender las fortalezas y debilidades de cada uno, vemos cuanto podemos ayudarnos a crecer.
 
 ![cover](/images/blog/2024-03-28/footer.jpg)
 
@@ -42,21 +42,21 @@ Se trata de **cohesión de equipo** y afilar el sentimiento de que pertenecemos.
 
 El pair programming puede hacerse de diferentes maneras:
 
-- Puedes empezar y terminar una tarea con pairing. Puedes limitarlo a 30, 60, 90 minutos. De cualquier manera, se recomienda tener pausas en el medio - Pomodoro.
-- Puedes empezar la tarea juntos y parar cuando uno de tus compañeros se sienta lo suficientemente confiado para continuar solo.
+- Puedes empezar y terminar una tarea en pareja. Limitalo a 30, 60, 90 minutos. En cualquier caso, haz pausas: usa Pomodoro.
+- Puedes empezar la tarea juntos y parar cuando uno se sienta seguro para continuar solo.
 
 > Depende del equipo --y la tarea en contexto-- decidir cuándo y cómo aplicar pairing para sacar lo mejor de ello.
 
-Esto no significa que debas trabajar constantemente "sin importar qué" en pareja. No se trata de crear reglas; por el contrario, se trata de abrazar esta práctica hasta el punto de que te sientas confiado para elegir cuándo y cómo usarla para sacar lo mejor de ella.
+No significa que debas trabajar siempre en pareja "pase lo que pase". No se trata de crear reglas, sino de adoptar esta practica hasta que te sientas seguro para elegir cuando y como usarla mejor.
 
-El pair programming podría convertirse en una de las mejores herramientas en la caja de herramientas de tu equipo para las interacciones diarias. No porque lo hayas leído en algún lugar, sino por los beneficios que tú y tu equipo encontrarán.
+El pair programming puede convertirse en una de las mejores herramientas de tu equipo para el dia a dia. No porque lo hayas leido en algun sitio, sino por los beneficios que tu y tu equipo descubrireis.
 
 ### Patrones Comunes
 
 #### Diferentes estrategias para pairing efectivo
 
-- **Driver-Navigator**: Una persona está conduciendo el código (con el teclado), enfocándose en el aspecto de detalle de la tarea en sí. La otra es navegadora (sin teclado), teniendo una imagen más abstracta de la tarea en mente.
-- **Ping-Pong**: Cambio frecuente de roles driver-navigator en pequeñas interacciones, ej: cada N minutos, cada N commits, etc.
+- **Driver-Navigator**: Una persona conduce el codigo (con el teclado), enfocada en los detalles. La otra navega (sin teclado), con una vision mas abstracta de la tarea.
+- **Ping-Pong**: Cambio frecuente de roles driver-navigator en intervalos cortos: cada N minutos, cada N commits, etc.
 - **Backseat driver**: El navegador se involucra activamente con el conductor.
 - **Tourist guide**: El navegador aprende pasivamente con el conductor.
 
@@ -68,8 +68,8 @@ El pair programming podría convertirse en una de las mejores herramientas en la
 - **The solo act**: El conductor ignora todas las aportaciones del navegador.
 - **Distracted pair**: La pareja no se enfoca en el problema a resolver.
 - **The Dictator**: Una persona está diciendo qué hacer, ignorando las aportaciones del otro.
-- **Philosophical pair**: La pareja está haciendo [bikeshedding](/es/blog/bikeshedding/) en temas irrelevantes.
-- **The code war**: La pareja no llega a un acuerdo y comienza una guerra innecesaria, que desperdicia tiempo y esfuerzo.
+- **Philosophical pair**: La pareja hace [bikeshedding](/es/blog/bikeshedding/) sobre temas irrelevantes.
+- **The code war**: La pareja no llega a un acuerdo y entra en una guerra innecesaria que desperdicia tiempo y esfuerzo.
 
 ![cover](/images/blog/2024-03-28/anti-pair-prog.jpg)
 

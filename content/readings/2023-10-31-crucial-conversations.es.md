@@ -1,6 +1,6 @@
 +++
-title = "Crucial Conversations"
-description = "Crucial Conversations te da las herramientas que necesitas para afrontar las conversaciones más difíciles e importantes de la vida, decir lo que piensas y lograr las resoluciones positivas que deseas."
+title = "Conversaciones Cruciales"
+description = "Herramientas para afrontar las conversaciones más difíciles, decir lo que piensas y lograr los resultados que buscas."
 draft = false
 authors = [ "Patterson", "Grenny", "McMillan", "Switzler" ]
 [taxonomies]
@@ -15,9 +15,9 @@ expand_preview = false
 
 <!-- more -->
 
-Cuando lo que está en juego es alto, las opiniones varían y las emociones son fuertes, tienes tres opciones: Evitar una conversación crucial y sufrir las consecuencias; manejar mal la conversación y sufrir las consecuencias; o leer Crucial Conversations y descubrir cómo comunicarte mejor cuando más importa.
+Cuando hay mucho en juego, las opiniones difieren y las emociones se disparan, tienes tres opciones: evitar la conversación y sufrir las consecuencias, manejarla mal y sufrir las consecuencias, o leer este libro y aprender a comunicarte mejor cuando más importa.
 
-> Si no lo hablas, entonces lo actuarás.
+> Si no lo hablas, lo actuarás.
 
 ---
 
@@ -33,51 +33,51 @@ Cuando lo que está en juego es alto, las opiniones varían y las emociones son 
 
 ## Puntos clave
 
-Una conversación crucial es una confrontación que necesitas manejar con cuidado, que usualmente se caracteriza por tres factores:
-1. Lo que está en juego es alto
-2. Las opiniones varían
-3. Las partes involucradas tienen emociones fuertes
+Una conversación crucial es una confrontación delicada con tres características:
+1. Hay mucho en juego
+2. Las opiniones difieren
+3. Las emociones son fuertes
 
 Ejemplos:
 
-- Llamar a un cliente que no pagó sus facturas
-- Hablar con tu jefe sobre un ascenso prometido que se está retrasando
-- Confrontar a un compañero de equipo que no está haciendo su parte del proyecto
-- Hablar con tus hermanos sobre la herencia de tus padres
+- Llamar a un cliente que no ha pagado
+- Hablar con tu jefe sobre un ascenso que se retrasa
+- Confrontar a un compañero que no cumple con su parte
+- Discutir la herencia familiar con tus hermanos
 
-Navegar a través de una conversación crucial es como desactivar una bomba. Toca el botón equivocado o el cable incorrecto, y creas una explosión de emociones. La clave es tener un diálogo honesto y productivo para resolver la situación.
+Navegar una conversación crucial es como desactivar una bomba. Un movimiento en falso y las emociones explotan. La clave está en mantener un diálogo honesto y productivo.
 
-Estas son conversaciones no planificadas, y tendemos a evitarlas porque creemos que vamos a empeorarlas. Tendemos a reaccionar negativamente porque somos humanos, y los seres humanos "se comportan peor en los momentos más críticos."
+Son conversaciones no planificadas. Las evitamos porque creemos que las empeoraremos. Reaccionamos mal porque somos humanos, y los humanos "se comportan peor en los momentos más críticos".
 
 ### La "Historia"
 
-Todos entran a una conversación crucial con una historia. Ejemplos:
+Todos llegamos a una conversación crucial con una historia ya armada:
 
-- Mi compañero no le importa el proyecto porque no viene a las reuniones
-- A mi jefe no le importa mi carrera porque no me ha dado un ascenso
+- "A mi compañero no le importa el proyecto porque no viene a las reuniones"
+- "A mi jefe no le importa mi carrera porque no me ha ascendido"
 
-Si te acercas a una conversación crucial con una historia en mente, no hay espacio para el diálogo, porque tu mente ya lo decidió.
+Si entras con esa historia en mente, no hay espacio para el diálogo. Tu mente ya decidió.
 
 #### Framework Cuando... Yo...
 
-Para crear el espacio para un diálogo, necesitas comenzar asumiendo que no conoces toda la historia, y que **necesitas la ayuda de la persona** con la que estás hablando. Puedes usar: `Cuando... Yo...` Ejemplo:
+Para abrir espacio al diálogo, asume que no conoces toda la historia. **Necesitas la ayuda de la otra persona**. Usa este formato:
 
-> **Cuando** [no apareces a las reuniones del equipo],
+> **Cuando** [no vienes a las reuniones del equipo],
 > **Yo** [temo que no te importe este proyecto].
 
-Invítalos a compartir su propio `Cuando...Yo...`, para que puedan descubrir juntos cuál puede ser el problema, malentendido o desalineación entre ustedes dos.
+Invita a la otra persona a compartir su propio "Cuando... Yo...". Así pueden descubrir juntos el problema, malentendido o desalineación que existe.
 
-La clave es evitar ser pasivo/agresivo, sino más bien asertivo y honesto con los hechos. Esto ayudará a reducir la posibilidad de estar a la defensiva y dispuesto a ayudar a aclarar la situación.
+La clave es ser asertivo y honesto con los hechos, no pasivo-agresivo. Esto reduce la actitud defensiva y facilita aclarar la situación.
 
 ### Objetivo común
 
-Para evitar un golpe de confrontación y volver a un diálogo productivo, necesitas convencer a la persona con la que estás hablando de que no eres su oponente o enemigo, estás del mismo lado. Para hacer esto, debes comunicar un objetivo, valor o propósito común.
+Para evitar el choque y volver a un diálogo productivo, convence a la otra persona de que no eres su enemigo. Estáis del mismo lado. Comunica un objetivo, valor o propósito compartido:
 
-> No quiero pelear. Solo quiero encontrar una manera para que ambos obtengamos [objetivo/propósito común].
+> "No quiero pelear. Solo busco una forma de que ambos consigamos [objetivo común]."
 
-> Sé que a ambos nos importa [valor común], veamos si podemos obtener lo que ambos queremos.
+> "Sé que a los dos nos importa [valor común]. Veamos cómo conseguir lo que ambos queremos."
 
-Haz una suposición de buena fe. Cuanto más te involucres en un diálogo productivo, más posibilidades tendrás de encontrar **acuerdos**, y más probable será que **trabajen juntos** para resolver el problema en el corazón de una conversación crucial.
+Asume buena fe. Cuanto más te involucres en un diálogo productivo, más fácil será encontrar **acuerdos** y **trabajar juntos** para resolver el problema de fondo.
 
 ---
 

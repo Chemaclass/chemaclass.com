@@ -1,6 +1,6 @@
 +++
-title = "Jonathan Livingston Seagull"
-description = "Una fábula en forma de novela corta sobre una gaviota que intenta aprender sobre la vida y el vuelo, y una homilía sobre la autoperfección."
+title = "Juan Salvador Gaviota"
+description = "Una fábula sobre una gaviota que quiere aprender sobre la vida y el vuelo. Una reflexión sobre la autoperfección y seguir tu propio camino."
 authors = [ "Richard Bach" ]
 [taxonomies]
 tags = [ "fiction", "philosophy", "psychology", "career" ]
@@ -13,27 +13,17 @@ expand_preview = false
 +++
 
 <!-- more -->
-Una fábula en forma de novela corta sobre una gaviota que intenta aprender sobre la vida y el vuelo, y una homilía sobre la autoperfección.
+Una fábula corta sobre una gaviota que quiere aprender sobre la vida y el vuelo. Una reflexión sobre la autoperfección.
 
 ## Trama
 
-El libro cuenta la historia de Jonathan Livingston Seagull, una gaviota que está aburrida de las peleas diarias por la comida. Poseído
-por una pasión por el vuelo, se esfuerza y aprende todo lo que puede sobre volar. Su creciente falta de voluntad para
-conformarse finalmente resulta en su expulsión de la bandada. Ahora un marginado, continúa aprendiendo, volviéndose cada vez más
-satisfecho con sus habilidades mientras lleva una vida pacífica y feliz.
+Jonathan Livingston Seagull es una gaviota aburrida de las peleas diarias por comida. Le apasiona volar y se esfuerza por aprender todo lo posible. Su negativa a conformarse termina en su expulsión de la bandada. Como marginado, sigue aprendiendo y se vuelve cada vez más satisfecho con sus habilidades mientras lleva una vida pacífica y feliz.
 
-Un día Jonathan conoce a dos gaviotas que lo llevan a un "plano superior de existencia" en el que no hay cielo, sino un mundo mejor
-encontrado a través de la perfección del conocimiento. Allí conoce a otra gaviota que ama volar. Descubre que su
-pura tenacidad y deseo de aprender lo convierten en "prácticamente un pájaro entre un millón". En este nuevo lugar, Jonathan se hace amigo
-de la gaviota más sabia, Chiang, quien lo lleva más allá de su autoeducación anterior, y le enseña cómo moverse instantáneamente
-a cualquier lugar del universo. El secreto, dice Chiang, es "empezar sabiendo que ya has llegado".
+Un día conoce a dos gaviotas que lo llevan a un "plano superior de existencia". No hay cielo, sino un mundo mejor que se alcanza perfeccionando el conocimiento. Allí conoce a otra gaviota que también ama volar. Descubre que su tenacidad y deseo de aprender lo hacen "prácticamente un pájaro entre un millón". En ese nuevo lugar, Jonathan se hace amigo de Chiang, la gaviota más sabia. Chiang lo lleva más allá de lo que había aprendido solo y le enseña a moverse instantáneamente a cualquier lugar del universo. El secreto: "empezar sabiendo que ya has llegado".
 
-Pero, insatisfecho con su nueva vida, Jonathan regresa a la Tierra para encontrar a otros como él y contarles lo que había aprendido
-y difundir su amor por el vuelo. Su misión es exitosa, y Jonathan reúne a su alrededor una bandada de otras gaviotas
-que han sido marginadas por no conformarse. El primero de sus estudiantes, Fletcher Lynd Seagull, eventualmente se convierte en un
-maestro por derecho propio, y Jonathan se va a enseñar a otras bandadas.
+Pero Jonathan no está satisfecho con su nueva vida. Regresa a la Tierra para encontrar a otros como él, compartir lo aprendido y difundir su amor por el vuelo. Su misión tiene éxito. Reúne a su alrededor una bandada de gaviotas marginadas por no conformarse. Su primer estudiante, Fletcher Lynd Seagull, acaba convirtiéndose en maestro. Jonathan se va a enseñar a otras bandadas.
 
-> Esta novela corta ha sido traducida a más de treinta idiomas.
+> Esta novela corta se ha traducido a más de treinta idiomas.
 
 ---
 

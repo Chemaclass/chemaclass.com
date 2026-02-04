@@ -1,6 +1,6 @@
 +++
-title = "Agile Product Management with Scrum"
-description = "Entendiendo el rol del product owner y visualizando el producto."
+title = "Gestión ágil de productos con Scrum"
+description = "Cómo entender el rol del product owner y dar forma al producto."
 authors = [ "Roman Pichler" ]
 [taxonomies]
 tags = [ "agile", "scrum", "management", "product-management" ]
@@ -13,11 +13,11 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41NCrarVPVL
 
 <!-- more -->
 
-### Contenido cubierto
+### Temas principales
 
-- Entendiendo el rol del product owner
-- Visualizando el producto
-- Refinando el product backlog
-- Planificando la release
-- Colaborando en reuniones de sprint
-- Transicionando hacia el product ownership
+- El rol del product owner
+- Cómo visualizar el producto
+- Refinamiento del product backlog
+- Planificación de releases
+- Colaboración en las reuniones de sprint
+- La transición hacia el product ownership

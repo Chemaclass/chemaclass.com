@@ -1,6 +1,6 @@
 +++
-title = "Stock market investing"
-description = "Conceptos básicos y esenciales del mercado de valores."
+title = "Invertir en bolsa para principiantes"
+description = "Los conceptos básicos del mercado de valores explicados de forma clara."
 authors = [ "Mark Atwood" ]
 [taxonomies]
 tags = [ "finance", "investing", "economics" ]
@@ -13,7 +13,7 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51Gnm7D+qIL
 
 <!-- more -->
 
-- Conceptos Básicos y Esenciales del Mercado de Valores
-- Investigación Fundamental, de Industria y de Empresas
-- Estilos de Inversión como Valor, Crecimiento e Inversión de Ingresos
-- Venta en Corto, Compra con Margen, Trading Diario
+- Conceptos básicos del mercado de valores
+- Análisis fundamental, de industria y de empresas
+- Estilos de inversión: valor, crecimiento e ingresos
+- Venta en corto, compra con margen, day trading

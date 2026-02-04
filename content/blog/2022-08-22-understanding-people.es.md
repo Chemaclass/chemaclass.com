@@ -1,67 +1,67 @@
 +++
 title = "Entendiendo a las personas"
-description = "Uno de los desafíos más complicados para todos es evitar malentendidos y ser consciente de que otras personas no piensan de la misma manera que tú."
+description = "Uno de los mayores retos es evitar malentendidos y aceptar que los demas no piensan igual que tu."
 draft = false
 [taxonomies]
 tags = [ "communication", "psychology", "team-management" ]
 [extra]
-subtitle = "Malentendidos, comunicación efectiva y autorreflexión"
+subtitle = "Malentendidos, comunicacion efectiva y autorreflexion"
 static_thumbnail = "/images/blog/2022-08-22/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2022-08-22/cover.jpg)
 
-Uno de los desafíos más complicados para todos es evitar malentendidos y ser consciente de que otras personas no piensan de la misma manera que tú.
+Uno de los mayores retos es evitar malentendidos y aceptar que los demas no piensan igual que tu.
 
 <!-- more -->
 
-## Diferentes percepciones
+## Percepciones diferentes
 
-Las personas tienen diferentes experiencias y antecedentes, y todos tenemos diferentes percepciones de la realidad. Esta es la primera cosa de la que debemos ser conscientes si queremos crear autoconciencia de nuestro rol en la comunicación con otros o empatía.
+Cada persona tiene experiencias y antecedentes distintos. Todos percibimos la realidad de forma diferente. Ser consciente de esto es el primer paso para entender tu rol en la comunicacion con otros, y para desarrollar empatia.
 
-Muy a menudo, el verdadero problema detrás de la fricción en un equipo se debe a la mala comunicación. A veces nadie sabe cómo o por qué dos o más miembros del equipo ya no se agradan, pero el conflicto es obvio.
+Muchas veces, el verdadero problema detras de la friccion en un equipo es la mala comunicacion. A veces nadie sabe como ni por que dos miembros del equipo ya no se llevan bien. Pero el conflicto es obvio.
 
-Esto puede ser un problema porque impide que el equipo trabaje tan efectivamente como sea posible. A menudo, la razón de esa fricción es por su **incapacidad para entender las motivaciones y problemas del otro**.
+El problema es que impide al equipo trabajar con eficacia. La razon suele ser la **incapacidad de entender las motivaciones y problemas del otro**.
 
-Y esta disfunción a menudo lleva a malentendidos.
+Y eso lleva a malentendidos.
 
 ## Malentendidos
 
-Nuestra comprensión de una conversación puede diferir de lo que la otra persona percibe, lo cual podría (y a menudo lo hará) causar un problema. Esto puede convertirse en un problema serio relacionado con la dirección de la relación entre ambas partes.
+Lo que tu entiendes de una conversacion puede diferir de lo que percibe la otra persona. Eso causa problemas. Y puede convertirse en algo serio que afecte la relacion entre ambas partes.
 
-## ¿Cómo resolver esto?
+## ¿Como resolverlo?
 
-Evitar malentendidos no siempre es fácil, pero mejorando tus habilidades de comunicación, puedes mejorar en esto paso a paso.
+Evitar malentendidos no es facil, pero puedes mejorar paso a paso trabajando tus habilidades de comunicacion.
 
-### Empatía
+### Empatia
 
-La empatía es la capacidad de entender lo que otras personas sienten, ver las cosas desde su punto de vista e imaginarte en su lugar. Esencialmente, es ponerte en la posición de otra persona.
+Empatia es la capacidad de entender lo que sienten otras personas. Ver las cosas desde su punto de vista e imaginarte en su lugar. Ponerte en su posicion.
 
-### Comunicación efectiva
+### Comunicacion efectiva
 
-En la mayoría de los casos, la solución no empieza por arreglar a la otra persona. En cambio, ayuda trabajar en **hacerte más explícito**. Por ejemplo:
+La solucion no suele empezar por arreglar a la otra persona. Lo que ayuda es trabajar en **ser mas explicito**. Por ejemplo:
 
-- Trabaja en clarificar las expectativas alrededor del objetivo común
-  - Crea una conversación abierta y honesta sobre tus expectativas
+- Clarifica las expectativas sobre el objetivo comun
+  - Crea conversaciones abiertas y honestas sobre lo que esperas
   - Las suposiciones son peligrosas
-- Proporciona tanto contexto como sea necesario
-  - Incluso si parece evidente para ti a primera instancia
-- Cada pequeño detalle cuenta
-  - Más información siempre es mejor que menos
+- Da tanto contexto como sea necesario
+  - Aunque te parezca evidente
+- Cada detalle cuenta
+  - Mas informacion siempre es mejor que menos
 
-Mientras apuntamos a una comunicación efectiva, necesitamos **reducir el riesgo de malentendidos al mínimo**.
+Para comunicarnos bien, hay que **reducir el riesgo de malentendidos al minimo**.
 
-### Autorreflexión
+### Autorreflexion
 
-Los conflictos saludables son esperados y aceptables. No deberíamos tener miedo de los desacuerdos. Está bien cambiar de opinión al descubrir nuevas posibilidades; cuanto antes, mejor.
+Los conflictos saludables son normales y aceptables. No hay que tener miedo a los desacuerdos. Esta bien cambiar de opinion al descubrir nuevas posibilidades. Cuanto antes, mejor.
 
-En mi experiencia, entender a las personas es complicado por múltiples razones, pero especialmente por los malentendidos que generamos debido a la falta de contexto, más que por desacuerdos.
+En mi experiencia, entender a las personas es complicado por muchas razones. Pero sobre todo por los malentendidos que generamos por falta de contexto, mas que por desacuerdos reales.
 
-Si algo no funciona como se esperaba, empieza mirándote a ti mismo, no culpando a otros cuando tratas con personas. ¿Qué podrías haber dicho para crear más claridad? ¿Qué harías diferente?
+Si algo no funciona como esperabas, empieza mirandote a ti mismo. No culpes a otros. ¿Que podrias haber dicho para crear mas claridad? ¿Que harias diferente?
 
-La autorreflexión es esencial para mejorar y corregir tu actitud, adaptándote a la evolución del cambio constante que nos rodea, **especialmente cuando tratas con personas**.
+La autorreflexion es esencial para mejorar y corregir tu actitud. Para adaptarte al cambio constante que nos rodea, **especialmente cuando tratas con personas**.
 
-> Mira sobre tu área de alcance, comparte tus pensamientos y no te avergüences de tus errores siempre que los tomes como oportunidades de aprendizaje.
+> Mira mas alla de tu area de influencia. Comparte tus ideas y no te averguences de tus errores si los tomas como oportunidades de aprendizaje.
 
 ![blog-cover](/images/blog/2022-08-22/footer.jpg)
 

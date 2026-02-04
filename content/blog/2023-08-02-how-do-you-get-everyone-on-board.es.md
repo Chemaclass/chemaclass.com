@@ -1,6 +1,6 @@
 +++
 title = "¿Cómo consigues que todos se sumen?"
-description = "Fui invitado al WeAreDevelopers World Congress para dar una charla técnica sobre mi experiencia con Extreme Programming y los profundos beneficios de abrazar el cambio en tu trabajo y vida."
+description = "Me invitaron al WeAreDevelopers World Congress a dar una charla sobre mi experiencia con Extreme Programming y los beneficios de abrazar el cambio en tu trabajo y vida."
 draft = false
 [taxonomies]
 tags = [ "leadership", "communication", "team-management", "mentoring", "xp" ]
@@ -11,59 +11,59 @@ static_thumbnail = "/images/blog/2023-08-02/cover.jpg"
 
 ![blog-cover](/images/blog/2023-08-02/cover.jpg)
 
-Fui invitado al WeAreDevelopers World Congress para dar una charla técnica sobre mi experiencia con XP y los profundos beneficios de abrazar el cambio en tu trabajo y vida.
+Me invitaron al WeAreDevelopers World Congress a dar una charla sobre mi experiencia con XP y los beneficios de abrazar el cambio en tu trabajo y vida.
 
 <!-- more -->
 
-Con más de 12k asistentes, 300 speakers y ~10 tracks en paralelo, fui invitado a dar no una sino dos charlas. Una es sobre mi experiencia con Extreme Programming y los profundos beneficios de abrazar el cambio en tu trabajo y vida.
+Con más de 12.000 asistentes, 300 speakers y unos 10 tracks en paralelo, di no una sino dos charlas. Una sobre mi experiencia con Extreme Programming y los beneficios de abrazar el cambio.
 
-Disfruté especialmente la participación de la audiencia y el feedback que me dieron después de cada charla. En particular, una pregunta que había enfrentado muchas veces durante mi carrera: "**¿Cómo tratas con personas reacias al cambio?**"
+Disfruté mucho la participación del público y el feedback después de cada charla. En particular, una pregunta que me han hecho muchas veces durante mi carrera: "**¿Cómo tratas con personas reacias al cambio?**"
 
 ---
 
-Este es uno de los temas más complejos que afecta a cualquier equipo, independientemente de su profesión. Pero, especialmente en nuestra industria del software en constante cambio, si eres reacio a abrazar el cambio, harás más daño que bien a tu equipo, carrera y a ti mismo.
+Este es uno de los temas más difíciles que afecta a cualquier equipo, sin importar la profesión. En nuestra industria del software, donde todo cambia constantemente, si te resistes al cambio harás más daño que bien a tu equipo, tu carrera y a ti mismo.
 
-Como se indica en [Peopleware](/es/readings/peopleware/), "*nuestra profesión del software es menos sobre computadoras y más sobre humanos y sus interacciones*". Este es usualmente el problema raíz para las personas; es un problema humano primero.
+Como dice [Peopleware](/es/readings/peopleware/): "*nuestra profesión del software va menos de ordenadores y más de humanos y sus interacciones*". El problema suele estar ahí: es un problema humano primero.
 
-Para convertirte en verdaderamente agile, debes tener una buena base de **confianza** entre tus compañeros. Sin confianza, [no hay equipo](/es/readings/the-five-dysfunctions-of-a-team/), y la responsabilidad principal de un [buen líder](/es/blog/great-leadership/) es ayudar a crear un ambiente de confianza sin miedo a conflictos saludables. Todos sienten que pueden hablar y expresarse libremente en un ambiente seguro.
+Para ser verdaderamente agile, necesitas una buena base de **confianza** entre compañeros. Sin confianza [no hay equipo](/es/readings/the-five-dysfunctions-of-a-team/). La responsabilidad principal de un [buen líder](/es/blog/great-leadership/) es crear un ambiente de confianza donde no haya miedo a los conflictos sanos. Donde todos sientan que pueden hablar y expresarse libremente.
 
-Un **ambiente seguro** significa que no necesitas llevar una armadura todo el día para protegerte de otros, así que tendrás más energía para impulsar la excelencia en tu lugar de trabajo.
+Un **ambiente seguro** significa que no necesitas llevar armadura todo el día para protegerte de los demás. Así tendrás más energía para impulsar la excelencia en tu trabajo.
 
-Pero aún así, a pesar de tu esfuerzo por crear un ambiente de confianza y seguro, podrías encontrar personas reacias al cambio. Para esas, podrías necesitar probar diferentes enfoques. ¿Cómo puedes ayudar a crear confianza entre todos?
+Aun así, a pesar de crear ese ambiente de confianza, encontrarás personas reacias al cambio. Con ellas puede que necesites probar otros enfoques. ¿Cómo puedes generar confianza entre todos?
 
-> No tengas miedo al fracaso; en cambio, piensa que todo lo que haces es un experimento del que aprenderás algo. Y cualquier cosa que te acerque a un mejor estado es mejor que nada.
+> No tengas miedo al fracaso. Piensa que todo lo que haces es un experimento del que aprenderás algo. Cualquier cosa que te acerque a un mejor estado es mejor que nada.
 
-La clave aquí es encontrar una manera de conectar con las personas entendiendo cómo entienden su potencial para que puedas empoderarlas y ayudarlas a crecer.
+La clave está en conectar con las personas. Entiende cómo ven su potencial para poder empoderarlas y ayudarlas a crecer.
 
 ![middle](/images/blog/2023-08-02/middle.jpg)
 
-### Concede tiempo para leer
+### Da tiempo para leer
 
-Las reuniones 1:1 son ideales para establecer conexiones personales con tus compañeros. Sin embargo, podrías sentir que la situación requiere un empujón adicional, especialmente si tienes a alguien a quien no le gusta hablar de sí mismo, y es difícil saber qué piensan sobre lo que está pasando.
+Los 1:1 son ideales para conectar con tus compañeros. Pero a veces la situación requiere algo más, sobre todo si tienes a alguien que no habla mucho de sí mismo y es difícil saber qué piensa.
 
-Aquí hay una idea que podrías probar:
+Una idea que puedes probar:
 
-- Dales un libro que contenga ideas o conocimiento que podría beneficiar a todos.
-- Permite leer este libro durante el tiempo de trabajo -- ej: los viernes después del almuerzo. Esta es una inversión de la empresa para el desarrollo de tu equipo.
-- El libro debería leerse en 3-4 horas -- o un par de viernes, dependiendo del número de páginas.
-- No esperes hasta que el libro esté terminado para hablar sobre él. Sigue el progreso.
-- Tendrás grandes temas para discutir durante tu próximo 1:1.
+- Dales un libro con ideas que puedan beneficiar a todos.
+- Permite leerlo en horario laboral (por ejemplo, los viernes después de comer). Es una inversión de la empresa en el desarrollo del equipo.
+- Elige libros que se lean en 3-4 horas, o un par de viernes según las páginas.
+- No esperes a que lo terminen para hablar de él. Haz seguimiento.
+- Tendrás temas interesantes para el próximo 1:1.
 
-### Podrías usar cualquier libro para este ejercicio
+### Cualquier libro sirve para este ejercicio
 
-Cualquier libro estaría bien. Aún así, si estás buscando grandes ejemplos, estos son mis tres favoritos para empezar a impulsar una conversación:
+Puedes usar cualquier libro. Si buscas buenos ejemplos, estos son mis tres favoritos para arrancar conversaciones:
 
-- **[Who moved my cheese?](/es/readings/who-moved-my-cheese/)** es una metáfora de las diferentes actitudes que las personas adoptan como parte de su identidad en la vida cuando tienen que confrontar cualquier cambio.
-- **[Extreme Programming Explained](/es/readings/extreme-programming-explained/)** contiene una compilación de valores, principios y prácticas altamente relacionados con el toque humano en nuestra industria del software. Enfocándose en el aspecto del equipo, colaboración con tus compañeros y creando un sentido de maestría y propósito en nuestro oficio.
-- **[Start with Why](/es/readings/start-with-why/)** aborda la importancia de empezar con "¿Por qué?" para definir un propósito para todo lo que hacemos.
+- **[¿Quién se ha llevado mi queso?](/es/readings/who-moved-my-cheese/)** es una metáfora de las distintas actitudes que adoptamos cuando tenemos que enfrentar un cambio.
+- **[Extreme Programming Explained](/es/readings/extreme-programming-explained/)** recopila valores, principios y prácticas muy relacionados con el factor humano en software. Se centra en el equipo, la colaboración y crear sentido de maestría y propósito en nuestro oficio.
+- **[Empieza con el porqué](/es/readings/start-with-why/)** trata la importancia de empezar con el "¿Por qué?" para definir un propósito en todo lo que hacemos.
 
-Experimenta con cualquier libro, marco de tiempo, persona o grupo para crear un entendimiento compartido de los valores y motivaciones fundamentales del equipo. El objetivo es participar en el intercambio activo de conocimiento mientras cultivas un equipo que siente que pertenece, fomentando la pasión en el trabajo. Esto ayudará a crear confianza, y puedes empezar a construir sobre ella.
+Experimenta con cualquier libro, tiempo, persona o grupo para crear un entendimiento compartido de los valores del equipo. El objetivo es intercambiar conocimiento activamente mientras cultivas un equipo que siente que pertenece y fomentas la pasión por el trabajo. Esto genera confianza, y sobre ella puedes construir.
 
-> Si estás buscando libros para ayudar a escalar tus habilidades de liderazgo, aquí tienes: "[Gran Liderazgo](/es/blog/great-leadership)".
+> Si buscas libros para mejorar tus habilidades de liderazgo: "[Gran Liderazgo](/es/blog/great-leadership)".
 
 ---
 
-No puedes forzar a las personas a cambiar. Por el contrario, cuanto más intentes forzarlo, más difícil te lo pondrán. En cambio, enfócate en entenderlas reconociendo lo que sienten y pensando sobre lo que hacen para crear un terreno común de [entendimiento mutuo](/es/blog/understanding-people).
+No puedes forzar a la gente a cambiar. Cuanto más lo intentes, más se resistirán. Céntrate en entenderlas: reconoce lo que sienten y piensa en lo que hacen para crear un terreno común de [entendimiento mutuo](/es/blog/understanding-people).
 
 ![footer](/images/blog/2023-08-02/footer.jpg)
 

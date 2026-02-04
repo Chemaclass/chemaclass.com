@@ -15,12 +15,12 @@ Desempaquetado de argumentos, lista de argumentos variables de función, y funci
 <!-- more -->
 
 ### La combinación perfecta
-- Desempaquetado de argumentos: En lugar de pasar el argumento en sí a la función, los elementos que contiene serán pasados (como argumentos individuales).
-- Lista de argumentos variables de función: Los argumentos serán pasados a la variable dada como un array.
-- Función variádica: Los tipos pueden verificarse con un type-hint.
+- **Desempaquetado de argumentos**: pasa los elementos de un array como argumentos individuales a una función.
+- **Lista de argumentos variables**: la función recibe los argumentos como un array.
+- **Función variádica**: permite verificar los tipos con un type-hint.
 
-Usaremos este snippet para nuestros ejemplos
-Teniendo una clase, `Customer`:
+Usaremos este snippet para nuestros ejemplos.
+Tenemos una clase `Customer`:
 
 ```php
 <?php
@@ -46,7 +46,7 @@ Siempre que queramos manipular una lista de Customers, podemos pasar como argume
 
 ## Cómo solíamos hacerlo
 
-Definimos el tipo del array usando el bloque de comentarios PHPDoc param arriba. Pero no podemos definir el tipo real del elemento. El código seguirá ejecutándose sin ningún problema pasando cualquier tipo en ese argumento `array $customers`:
+Definimos el tipo del array con PHPDoc, pero no podemos forzar el tipo real de cada elemento. El código se ejecuta sin problemas aunque pases cualquier tipo en `array $customers`:
 
 ```php
 <?php
@@ -69,7 +69,7 @@ createInvoiceForCustomers([new Customer('any name')]);
 createInvoiceForCustomers([new AnyOtherType()]);
 ```
 
-¡Una alternativa (recomendada!) podría ser extraer esa lógica y pedir el tipo particular para "verificarlo" en tiempo de ejecución en ese momento particular, fallando si uno de los elementos no era realmente un Customer:
+Una alternativa recomendada: extraer la lógica y pedir el tipo concreto para verificarlo en tiempo de ejecución. Fallará si alguno de los elementos no es un Customer:
 
 ```php
 <?php
@@ -97,10 +97,9 @@ createInvoiceForCustomers([new Customer('any name')]);
 createInvoiceForCustomers([new AnyOtherType()]); // no funcionará
 ```
 
-Al hacer ese `createInvoice(Customer $customer)` estamos asegurando el tipo del argumento, ¡lo cual es bueno! Pero, ¿qué tal dar un paso más? ¿Podríamos verificar los tipos de los elementos al llamar a la función `createInvoiceForCustomers(array $customers)`, incluso haciendo que el IDE se queje cuando los tipos no son correctos?
+Con `createInvoice(Customer $customer)` aseguramos el tipo del argumento. Pero, ¿podemos ir un paso más allá? ¿Podríamos verificar los tipos al llamar a `createInvoiceForCustomers(array $customers)`, y que el IDE se queje si los tipos no son correctos?
 
-Bueno, eso es realmente para lo que son los Generics, pero tristemente, aún no están en PHP. Ni siquiera en el próximo PHP 8. Esperemos que en un futuro cercano, pero no podemos predecir eso por ahora.
-Afortunadamente, tenemos actualmente una alternativa hoy en día, pero no es tan popular. Tiene sus propios "pros" y "contras", así que echemos un vistazo a un ejemplo primero:
+Eso es precisamente para lo que sirven los Generics, pero aún no existen en PHP. Ni siquiera en PHP 8. Quizás lleguen pronto, pero por ahora hay una alternativa menos conocida con sus pros y contras. Veamos un ejemplo:
 
 ```php
 <?php
@@ -127,20 +126,20 @@ createInvoiceForCustomers(new AnyOtherType());
 ```
 
 ### PROS
-- Podemos tipar fácilmente una lista de cualquier tipo concreto.
+- Podemos tipar una lista de cualquier tipo concreto de forma sencilla.
 
 ### CONTRAS
-- Es mejor definir nuestras funciones con uno o dos argumentos máximo. De lo contrario, sería demasiado complicado de leer.
+- Mejor limitar las funciones a uno o dos argumentos. De lo contrario, se complica la lectura.
 
 ### Observaciones importantes
-- Necesita ser el último argumento tomado de una función.
-- Ayuda a minimizar el número de argumentos que usamos en una función.
+- Debe ser el último argumento de la función.
+- Ayuda a minimizar el número de argumentos.
 
 
 ## Conclusiones
 
-El desempaquetado de argumentos es una gran característica que, en combinación con funciones variádicas, puede ayudarnos a simular arrays tipados. Un gran poder conlleva una gran responsabilidad, y esto no es una excepción.
-Necesitamos aprender sobre nuestra caja de herramientas para usarla sabiamente.
+El desempaquetado de argumentos, combinado con funciones variádicas, nos permite simular arrays tipados. Un gran poder conlleva una gran responsabilidad.
+Hay que conocer bien nuestras herramientas para usarlas con criterio.
 
 ![blog-cover](/images/blog/2020-10-13/footer.jpg)
 

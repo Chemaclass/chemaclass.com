@@ -11,7 +11,7 @@ static_thumbnail = "/images/blog/2023-03-16/cover.jpg"
 
 ![blog-cover](/images/blog/2023-03-16/cover.jpg)
 
-He recibido esta pregunta recientemente, un par de veces, y este es un gran tema para compartir.
+Me han hecho esta pregunta varias veces últimamente. Es un buen tema para compartir.
 
 <!-- more -->
 
@@ -23,66 +23,66 @@ La respuesta corta es: no, y déjame contarte cómo terminé en esta situación.
 
 ## Solía ser introvertido
 
-Solía ser introvertido, pero con trabajo y esfuerzo, logré dominar algunas habilidades de hablar en público.
+Era introvertido, pero con trabajo y esfuerzo logré dominar algunas habilidades de hablar en público.
 
-> Compartir conocimiento es difícil porque primero, necesitas tenerlo.
+> Compartir conocimiento es difícil porque primero hay que tenerlo.
 
-Solía no gustarme leer; siempre preferí otras fuentes para obtener información y aprender cosas nuevas. De todas ellas, leer era la más aburrida.
+Antes no me gustaba leer. Siempre preferí otras fuentes para aprender cosas nuevas. De todas, leer era la más aburrida.
 
-> Leer es difícil, porque necesita toda tu atención.
+> Leer es difícil porque requiere toda tu atención.
 
-Sin embargo, siempre he disfrutado escribir desde que era niño. Por circunstancias personales, escribir era una forma de expresarme y reflexionar sobre mí, haciendo retrospectivas regulares sobre las ideas en mi cabeza.
+Lo que siempre he disfrutado es escribir, desde niño. Por circunstancias personales, escribir era mi forma de expresarme y reflexionar, haciendo retrospectivas de las ideas en mi cabeza.
 
 ### Escribir al rescate
 
 > Combinando "compartir conocimiento" y "leer" de y para mí mismo.
 
-Escribir era (y sigue siendo) una forma de ordenar mis pensamientos, especialmente durante tiempos difíciles; escribir era una forma de escapar del mundo. Me ayudó a entenderme mejor al día siguiente. Y funcionó.
+Escribir era (y sigue siendo) una forma de ordenar mis pensamientos, especialmente en tiempos difíciles. Era una forma de escapar del mundo. Me ayudó a entenderme mejor al día siguiente. Y funcionó.
 
-Conocer tus limitaciones puede ayudarte a entender tu realidad y luchar contra ella. La vida es lo suficientemente difícil como para aceptar lo que "está ahí", incluso si no estás satisfecho con ello - especialmente si tienes una razón para ello.
+Conocer tus limitaciones ayuda a entender tu realidad y luchar contra ella. La vida es demasiado corta para aceptar lo que "está ahí" si no estás satisfecho, especialmente si tienes razones para cambiarlo.
 
-Aprendí que no quiero desperdiciar mi tiempo en una vida de la que me arrepentiré cuando muera. Por esa razón, empecé a buscar oportunidades para crecer en todo lo que hago todo el tiempo.
+Aprendí que no quiero desperdiciar mi tiempo en una vida de la que me arrepienta al morir. Por eso empecé a buscar oportunidades de crecimiento en todo lo que hago.
 
 ### ¿Siempre seré así?
 
 > "¿Estás todo el tiempo al 100% aprendiendo y siendo productivo?"
 
-No puedes ser 100% productivo todo el tiempo. Eso es imposible debido a nuestra naturaleza humana. La vida se trata de constantes "subidas y bajadas", que también es parte de su belleza. Es tu responsabilidad entenderte a ti mismo; quiero decir, entender verdaderamente tus emociones y tu persona.
+No puedes ser 100% productivo todo el tiempo. Eso es imposible por nuestra naturaleza humana. La vida tiene constantes "subidas y bajadas", y eso es parte de su belleza. Tu responsabilidad es entenderte de verdad: tus emociones y tu persona.
 
-Estas son preguntas que pueden ayudarte a mantener el enfoque mientras te construyes a ti mismo. Al hacer este tipo de preguntas, intenta mirar desde un punto de vista racional y externo. Deja fuera las emociones y los sentimientos personales.
+Estas preguntas pueden ayudarte a mantener el foco mientras te construyes. Al hacerlas, intenta verlo desde fuera, de forma racional. Deja a un lado las emociones.
 
 - ¿Quién eres "tú"?
-- ¿Qué te diferencia "a ti" de otras personas?
+- ¿Qué te diferencia de otras personas?
 - ¿Qué diferencia al "tú de hoy" del "tú de hace un año"?
-- ¿Qué hay de tu "tú" en 1 año?
+- ¿Cómo será tu "tú" en un año?
 
 ---
 
-Dentro de tu contexto y posibilidades, eres lo que eliges ser. Y eso es lo que te diferencia de tu pasado y tu futuro. Las acciones que haces, la forma en que te comunicas e interactúas con otros, las decisiones que eliges, etc..., te diferencian. Eso es lo que te diferencia de ti mismo en otro punto en el tiempo.
+Dentro de tu contexto y posibilidades, eres lo que eliges ser. Y eso te diferencia de tu pasado y tu futuro. Tus acciones, cómo te comunicas e interactúas con otros, las decisiones que tomas... todo eso te diferencia de ti mismo en otro momento.
 
-Esta es la razón por la que disfruto leer – o escuchar un libro – por mes. Esta es la razón por la que disfruto aprender en cualquier momento, todo el tiempo. Esta es la razón por la que me gusta compartir lo que sé con otros. Esto es lo que elijo ser.
+Por eso disfruto leer (o escuchar) un libro al mes. Por eso disfruto aprender en cualquier momento. Por eso me gusta compartir lo que sé con otros. Esto es lo que elijo ser.
 
-Hace unos años, escribí sobre [el proceso en sí mismo como objetivo](/es/blog/the-process-itself-is-the-goal/), que dice básicamente: "_La repetición es la clave. Haz que sea más fácil hacer lo que quieres hacer. Haz que sea más difícil hacer lo que quieres dejar de hacer. Disfruta el proceso: ese es el objetivo._"
+Hace unos años escribí sobre [el proceso en sí mismo como objetivo](/es/blog/the-process-itself-is-the-goal/): "_La repetición es la clave. Facilita hacer lo que quieres hacer. Dificulta hacer lo que quieres dejar de hacer. Disfruta el proceso: ese es el objetivo._"
 
 ![blog-middle](/images/blog/2023-03-16/middle.jpg)
 
 ## ¿Cuánto tiempo tengo?
 
-Me gusta demostrarme que estoy equivocado y desafiar el statu quo. Incluso decidí investigar, por ejemplo, cómo podría ser un [speaker](https://chemaclass.com/talks/) en una conferencia internacional el año pasado. El paso más difícil siempre es el primero; una vez que estás ahí, es más divertido de lo que inicialmente pensabas. Podría escribir un post dedicado sobre este tema de "hablar en público". Por ahora, puedes revisar algunos consejos que escribí sobre [mejorar tus charlas públicas](/es/blog/improve-your-tech-talk/).
+Me gusta demostrarme que estoy equivocado y desafiar el statu quo. Por ejemplo, el año pasado investigué cómo ser [speaker](https://chemaclass.com/talks/) en una conferencia internacional. El paso más difícil siempre es el primero; una vez que estás ahí, es más divertido de lo que pensabas. Podría escribir un post sobre "hablar en público". Por ahora, puedes ver algunos consejos que escribí sobre [mejorar tus charlas públicas](/es/blog/improve-your-tech-talk/).
 
-Respecto a leer, necesito alrededor de 4 a 6 horas (en promedio) para terminar un libro. Un día de trabajo típico puede dividirse en 3 bloques de 8h; 8 dormir, 8 trabajo, 8 ocio (u otras obligaciones). No trabajo el fin de semana, así que esos días son 16h cada uno de ocio/obligaciones. Entonces, asumiendo que trabajo 5 días por semana, esto significa _5 días x 8 horas (días laborables) + 2 días x 16 horas (fin de semana) = 72 horas_ de tiempo de ocio/obligaciones dentro de una semana!
+Sobre leer: necesito unas 4-6 horas de media para terminar un libro. Un día laboral se divide en 3 bloques de 8h: 8 dormir, 8 trabajo, 8 ocio (u obligaciones). No trabajo el fin de semana, así que esos días son 16h de ocio/obligaciones. Trabajando 5 días por semana, eso significa _5 días x 8 horas + 2 días x 16 horas = 72 horas_ de ocio/obligaciones por semana.
 
 ### El tiempo no es el problema
 
-Dentro de un mes, tengo **72 horas x 4 semanas = 288 horas** de tiempo de ocio/obligaciones para pasar con mi novia, hablando con mi familia, tocando música, de fiesta o relajándome con amigos, yendo al gimnasio, caminando en un parque, viajando a otras ciudades..., pero también ir al supermercado, lavar los platos, preparar las cenas, limpiar el apartamento, ir al trabajo..., todo esto también requiere tiempo.
+En un mes tengo **72 horas x 4 semanas = 288 horas** de ocio/obligaciones para estar con mi novia, hablar con mi familia, tocar música, salir o relajarme con amigos, ir al gimnasio, pasear por un parque, viajar... Pero también ir al supermercado, fregar los platos, preparar cenas, limpiar el apartamento, ir al trabajo... Todo requiere tiempo.
 
-El problema no es el tiempo sino las prioridades que defino. Dentro de un mes, realmente puedo hacer muchas cosas. El problema que usualmente encuentro es no tener un objetivo claro sobre lo que quiero alcanzar en el medio-largo plazo para mí mismo.
+El problema no es el tiempo sino las prioridades. En un mes puedo hacer muchas cosas. Lo que suelo encontrar es falta de claridad sobre qué quiero lograr a medio-largo plazo.
 
-Puede haber otros, pero [The power of habits](/es/readings/the-power-of-habits/) y [Atomic habits](/es/readings/atomic-habits/) fueron los libros que leí hasta ahora sobre hábitos que más me impactaron, y creo que podrían ayudarte si estás luchando con hábitos que te gustaría cambiar de alguna manera. Todo empieza por entenderte a ti mismo dentro de tu contexto.
+Hay más libros, pero [El poder de los hábitos](/es/readings/the-power-of-habits/) y [Hábitos atómicos](/es/readings/atomic-habits/) son los que más me han impactado. Pueden ayudarte si luchas con hábitos que quieres cambiar. Todo empieza por entenderte a ti mismo en tu contexto.
 
-No espero que las cosas cambien de un día para otro. Disfruto experimentando, combinando hábitos e intentando diferentes enfoques para mejorar y sacar lo mejor de ellos con el tiempo. Perder el miedo al fracaso y buscar mejora constante y continua es una mentalidad que cambia la vida.
+No espero que las cosas cambien de un día para otro. Disfruto experimentando, combinando hábitos y probando enfoques diferentes para mejorar con el tiempo. Perder el miedo al fracaso y buscar mejora continua es una mentalidad que cambia la vida.
 
-Lo que me mantiene en movimiento es <u>el tiempo que me queda</u> y la idea de pensar, "**¿qué me habría gustado haber cambiado?**" Y en tal caso, "**¿Por qué no lo hice?**"
+Lo que me mantiene en movimiento es <u>el tiempo que me queda</u> y pensar: "**¿Qué me habría gustado haber cambiado?**" Y si es así, "**¿Por qué no lo hice?**"
 
 ![blog-footer](/images/blog/2023-03-16/footer.jpg)
 

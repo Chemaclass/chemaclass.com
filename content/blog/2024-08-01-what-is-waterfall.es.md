@@ -1,6 +1,6 @@
 +++
 title = "¿Qué es Waterfall?"
-description = "Waterfall es como seguir un camino recto donde te mueves de un paso al siguiente en un orden definido — como el agua fluyendo por una cascada a través de diferentes etapas. El problema es que cada paso puede llevar mucho tiempo y recursos para completarse. Además, no recibes feedback hasta que toda la etapa está terminada, lo que puede llevar a mucho tiempo desperdiciado. Esto es especialmente complicado en el desarrollo de software, donde las cosas siempre están cambiando y evolucionando."
+description = "Waterfall es avanzar paso a paso en orden fijo, como el agua cayendo por una cascada. El problema: no recibes feedback hasta terminar cada etapa, lo que puede desperdiciar mucho tiempo."
 draft = false
 [taxonomies]
 tags = [ "agile", "software-design", "team-management", "productivity" ]
@@ -11,71 +11,71 @@ static_thumbnail = "/images/blog/2024-08-01/cover.jpg"
 
 ![blog-cover](/images/blog/2024-08-01/cover.jpg)
 
-Waterfall es como seguir un camino recto donde te mueves de un paso al siguiente en un orden definido — como el agua fluyendo por una cascada a través de diferentes etapas.
+Waterfall es avanzar paso a paso en orden fijo, como el agua cayendo por una cascada.
 
 <!-- more -->
 
-El problema es que cada paso puede llevar mucho tiempo y recursos para completarse. Además, no recibes feedback hasta que toda la etapa está terminada, lo que puede llevar a mucho tiempo desperdiciado. Esto es especialmente complicado en el desarrollo de software, donde las cosas siempre están cambiando y evolucionando.
+El problema es que cada paso puede llevar mucho tiempo y recursos. No recibes feedback hasta terminar cada etapa, lo que puede desperdiciar mucho esfuerzo. En desarrollo de software, donde todo cambia constantemente, esto es un problema gordo.
 
-Usualmente sigue una secuencia directa como esta:
+Normalmente sigue esta secuencia:
 
 ![Waterfall img from Comic Agile](/images/blog/2024-08-01/waterfall.jpg)
 
 ## La realidad de Waterfall
 
-Waterfall puede ser como el comunismo en teoría — parece perfecto en papel pero no funciona en el mundo real.
+Waterfall es como el comunismo en teoria: parece perfecto en papel pero no funciona en el mundo real.
 
-- Los clientes a menudo no saben exactamente lo que quieren.
-- Los requisitos están constantemente cambiando.
-- Los negocios necesitan adaptarse rápidamente a los cambios del mercado y las necesidades de los clientes.
-- El software necesita ser flexible para mantenerse al día con estos cambios.
+- Los clientes casi nunca saben exactamente lo que quieren.
+- Los requisitos cambian todo el rato.
+- Los negocios necesitan adaptarse rapido al mercado y a los clientes.
+- El software tiene que ser flexible para seguir el ritmo.
 
-Entonces, en un mundo en constante cambio, Waterfall puede realmente perjudicar a un negocio. Tiende a frustrar a los desarrolladores y equipos, y también puede molestar a los clientes y a los negocios que pagan por el software. Esto usualmente lleva a retrasos y costos adicionales.
+En un mundo que cambia constantemente, Waterfall puede hacer dano a un negocio. Frustra a desarrolladores y equipos. Molesta a clientes y a quienes pagan por el software. El resultado: retrasos y costes extra.
 
-## Por qué las empresas aún usan Waterfall
+## Por qué las empresas siguen usando Waterfall
 
-Incluso con sus problemas, muchas empresas aún usan Waterfall porque parece directo y lógico. Esto les hace reacios a tomarse el tiempo de aprender Agile. Además, conseguir que la dirección acepte cambiar a Agile puede ser difícil de vender, especialmente ya que requiere una inversión en tiempo y aprendizaje.
+A pesar de sus problemas, muchas empresas usan Waterfall porque parece simple y logico. No quieren invertir tiempo en aprender Agile. Ademas, convencer a direccion de cambiar es dificil: requiere inversion en tiempo y formacion.
 
-El gran problema es cuando los superiores dictan exactamente cómo deben trabajar los equipos, llevando a la microgestión. Esto arruina la flexibilidad que Agile aporta. Por lo que he visto, esto es un problema común.
+El gran problema aparece cuando los jefes dictan exactamente como deben trabajar los equipos. Eso lleva a la microgestion y mata la flexibilidad que Agile aporta. Lo he visto muchas veces.
 
-> Mirando hacia atrás, cambiar a Agile podría haber solucionado muchos problemas.
+> Mirando atras, cambiar a Agile habria solucionado muchos problemas.
 
 ---
 
 ![footer](/images/blog/2024-08-01/footer.jpg)
 
-## Por qué se creó Agile
+## Por qué se creo Agile
 
-Agile fue creado para superar las limitaciones del método Waterfall. Se enfoca en la interacción constante con clientes y equipos.
+Agile nacio para superar las limitaciones de Waterfall. Se centra en la interaccion constante con clientes y equipos.
 
-Agile construye equipos autónomos y responsables que manejan tareas de principio a fin, reduciendo tiempo y recursos desperdiciados. Enfatiza la flexibilidad, la colaboración y el feedback del cliente.
+Agile crea equipos autonomos y responsables que llevan las tareas de principio a fin. Menos tiempo y recursos desperdiciados. Flexibilidad, colaboracion y feedback del cliente son la clave.
 
-A diferencia de Waterfall, Agile usa desarrollo iterativo, dividiendo proyectos en pequeños sprints o iteraciones manejables que duran de 1 a 4 semanas. Cada ciclo incluye planificación, desarrollo, pruebas y revisión, con el objetivo de entregar valor rápidamente y recopilar feedback para mejorar.
+A diferencia de Waterfall, Agile usa desarrollo iterativo. Divide los proyectos en sprints de 1 a 4 semanas. Cada ciclo incluye planificacion, desarrollo, pruebas y revision. El objetivo: entregar valor rapido y recoger feedback para mejorar.
 
 ### Aspectos clave de Agile
 
-- **Desarrollo iterativo**: Trabaja en pequeños fragmentos y ajusta sobre la marcha.
-- **Colaboración con el cliente**: Mantén la comunicación con los clientes para asegurar que están satisfechos.
-- **Equipos multifuncionales**: Equipos con diferentes habilidades trabajando juntos.
-- **Planificación adaptativa**: Mantente flexible y ajusta los planes basándote en el feedback.
-- **Mejora continua**: Siempre busca formas de mejorar.
+- **Desarrollo iterativo**: Trabaja en trozos pequenos y ajusta sobre la marcha.
+- **Colaboracion con el cliente**: Manten la comunicacion para asegurar que estan contentos.
+- **Equipos multifuncionales**: Gente con diferentes habilidades trabajando juntos.
+- **Planificacion adaptativa**: Sé flexible y ajusta los planes segun el feedback.
+- **Mejora continua**: Busca siempre formas de mejorar.
 
 > Lee el [Manifiesto Agile](https://agilemanifesto.org/) original.
 
-### ¿Por dónde puedes empezar?
+### ¿Por donde empezar?
 
-Como desarrollador, puedes impulsar tu agilidad sumergiéndote en [pair programming](/es/blog/effective-pair-programming/) y [TDD](/es/blog/test-driven-development/).
+Como desarrollador, puedes mejorar tu agilidad con [pair programming](/es/blog/effective-pair-programming/) y [TDD](/es/blog/test-driven-development/).
 
-- Con pair programming, dos desarrolladores trabajan lado a lado, lo que significa que obtienes feedback instantáneo y resolución de problemas compartida, llevando a mejor código.
-- TDD, por otro lado, implica escribir tests antes del código, lo que ayuda a especificar lo que quieres hacer, enfocándote en pequeños pasos.
+- En pair programming, dos desarrolladores trabajan juntos. Feedback instantaneo y resolucion de problemas compartida. Mejor codigo.
+- TDD significa escribir tests antes del codigo. Te obliga a especificar lo que quieres hacer, en pasos pequenos.
 
-Juntas, estas prácticas hacen tu proceso de desarrollo más flexible, colaborativo y de alta calidad, encajando perfectamente con el enfoque de Agile en ajustes rápidos y mejora continua. Ve más prácticas [aquí](/es/readings/extreme-programming-explained/#practices).
+Estas practicas hacen tu desarrollo mas flexible, colaborativo y de calidad. Encajan perfecto con Agile: ajustes rapidos y mejora continua. Mas practicas [aqui](/es/readings/extreme-programming-explained/#practices).
 
-> La clave es colaboración, pequeños pasos y feedback rápido en todo lo que trabajas.
+> La clave: colaboracion, pasos pequenos y feedback rapido en todo lo que haces.
 
 ## Mi experiencia con Agile
 
-He [hablado](/es/talks/) sobre Agile en varios eventos tecnológicos y lo he explorado en profundidad porque me apasiona cómo puede potenciar a los equipos de software. Cuando se hace bien, Agile puede cambiar completamente cómo trabajan los equipos, haciéndolos más rápidos, más eficientes y mejores en entregar lo que los clientes y negocios realmente necesitan.
+He [hablado](/es/talks/) sobre Agile en varios eventos. Me apasiona porque, bien hecho, puede transformar equipos: mas rapidos, mas eficientes, y mejores entregando lo que clientes y negocios realmente necesitan.
 
 - 2022-06-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Berlín, Alemania] (EN)
 - 2022-09-16 | [Code Talks](https://codetalks.de/speakers#speaker-985?event=7) [Hamburgo, Alemania] (EN)

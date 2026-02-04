@@ -1,6 +1,6 @@
 +++
 title = "El poder de la autoridad y la obediencia"
-description = "Milgram estaba interesado en investigar hasta dónde llegarían las personas al obedecer una instrucción si implicaba dañar a otra persona, y cuán fácilmente podían ser influenciadas para cometer atrocidades. Por ejemplo, los alemanes en la Segunda Guerra Mundial."
+description = "Milgram quiso investigar hasta dónde llegaría la gente obedeciendo una orden que implicara dañar a otra persona. Por ejemplo, los alemanes en la Segunda Guerra Mundial."
 [taxonomies]
 tags = [ "psychology", "leadership", "communication" ]
 [extra]
@@ -10,30 +10,30 @@ static_thumbnail = "/images/blog/2022-01-24/cover.jpg"
 
 ![blog-cover](/images/blog/2022-01-24/cover.jpg)
 
-Milgram estaba interesado en investigar hasta dónde llegarían las personas al obedecer una instrucción si implicaba dañar a otra persona, y cuán fácilmente podían ser influenciadas para cometer atrocidades. Por ejemplo: los alemanes en la Segunda Guerra Mundial.
+Milgram quiso investigar hasta dónde llegaría la gente obedeciendo una orden que implicara dañar a otra persona. Y qué tan fácil era influenciarles para cometer atrocidades, como ocurrió con los alemanes en la Segunda Guerra Mundial.
 
 <!-- more -->
 
 ## El experimento
 
-Durante la década de 1960, el psicólogo Stanley Milgram realizó una serie de experimentos de obediencia directamente relacionados con el poder de la autoridad y la obediencia, incluso cuando podrían terminar en un final fatal.
+En los anos 60, el psicologo Stanley Milgram hizo una serie de experimentos sobre obediencia. Queria entender el poder de la autoridad, incluso cuando las ordenes podian tener consecuencias fatales.
 
-Milgram examinó las justificaciones de actos de genocidio ofrecidas por los acusados en los juicios de crímenes de guerra de Núremberg de la Segunda Guerra Mundial. Su defensa a menudo se basaba en la "obediencia" - que solo estaban siguiendo órdenes de sus superiores. Milgram ideó el experimento para responder esta pregunta:
+Milgram estudio las justificaciones de los acusados en los juicios de Nuremberg. Su defensa era simple: solo seguian ordenes de sus superiores. El experimento buscaba responder esta pregunta:
 
 > ¿Podría ser que Eichmann y sus millones de cómplices en el Holocausto solo estaban siguiendo órdenes?
 > ¿Podríamos llamarlos a todos cómplices?
 
 ### El procedimiento
 
-Los participantes seleccionados para su experimento fueron reclutados mediante anuncios en periódicos para participar en un estudio sobre aprendizaje en la Universidad de Yale; se reclutaron 40 hombres, y a cambio de su participación, cada persona recibió $4.50.
+Reclutaron a 40 hombres mediante anuncios en periodicos para un "estudio sobre aprendizaje" en Yale. A cada uno le pagaron $4.50.
 
-El participante fue emparejado con otra persona y sacaron papeletas para determinar quién sería el "aprendiz" y quién sería el "maestro". El sorteo estaba amañado, de modo que el participante siempre era el maestro, y el aprendiz era uno de los cómplices de Milgram (fingiendo ser un participante real).
+Cada participante fue emparejado con otra persona. Un sorteo (amanado) decidia quien era el "aprendiz" y quien el "maestro". El participante real siempre era el maestro. El aprendiz era un complice de Milgram fingiendo ser participante.
 
-El aprendiz fue llevado a una habitación y le conectaron electrodos en los brazos, y el maestro y el investigador fueron a una habitación contigua que contenía un generador de descargas eléctricas y una fila de interruptores marcados desde 15 voltios (descarga leve) hasta 300 voltios (descarga severa) hasta 450 voltios (XXX).
+Al aprendiz lo llevaron a una habitacion y le conectaron electrodos. El maestro y el investigador fueron a otra habitacion con un generador de descargas. Los interruptores iban desde 15 voltios (descarga leve) hasta 450 voltios (XXX).
 
 ![blog-footer](/images/blog/2022-01-24/video-fragment.jpg)
 
-El aprendiz daba principalmente respuestas incorrectas (a propósito), y por cada una de estas, el maestro tenía que darle una descarga eléctrica. Cuando el maestro se negaba a administrar una descarga, el investigador daba una serie de órdenes para asegurar que continuaran:
+El aprendiz daba respuestas incorrectas a proposito. Por cada error, el maestro debia darle una descarga. Cuando el maestro se negaba, el investigador le presionaba con estas ordenes:
 
 1. "Por favor, continúe."
 2. "El experimento requiere que continúe."
@@ -42,69 +42,69 @@ El aprendiz daba principalmente respuestas incorrectas (a propósito), y por cad
 
 ### Resultados
 
-El 65% de los participantes (maestros) continuaron hasta el nivel más alto de 450 voltios. Todos los participantes continuaron hasta 300 voltios.
+El 65% de los maestros llego hasta el nivel maximo de 450 voltios. Todos llegaron al menos a 300 voltios.
 
-Milgram hizo más que un solo experimento. Realizó 18 variaciones de este estudio. Todo lo que hizo fue alterar la situación para ver cómo esto afectaba la obediencia.
+Milgram hizo 18 variaciones del experimento. Alteraba la situacion para ver como afectaba la obediencia.
 
-### Conclusión
+### Conclusion
 
-La explicación simple sería que había algo en ellos como personas que les hizo obedecer, pero una explicación más realista es que la situación en la que estaban les hizo comportarse de la manera en que lo hicieron.
+La explicacion facil seria que habia algo mal en esas personas. Pero la explicacion real es que la situacion les hizo comportarse asi.
 
-Algunos de los aspectos de la situación que pueden haber influido en su comportamiento incluyen la ubicación, el comportamiento del investigador y el hecho de que era un experimento para el cual se habían ofrecido voluntariamente y se les había pagado.
+Varios factores influyeron: la ubicacion, el comportamiento del investigador, y el hecho de haberse ofrecido voluntarios y recibir pago.
 
-Las personas tienden a obedecer órdenes de otras personas si reconocen su autoridad. Esta respuesta a la autoridad legítima se aprende en una variedad de situaciones, por ejemplo en la familia, la escuela y el trabajo.
+La gente tiende a obedecer si reconoce la autoridad del otro. Esta respuesta se aprende en la familia, la escuela y el trabajo.
 
 {{ youtube(id="rdrKCilEhC0") }}
 
 ---
 
-## La teoría de agencia de Milgram
+## La teoria de agencia de Milgram
 
-Milgram explicó el comportamiento de los participantes sugiriendo que las personas tienen dos estados de comportamiento cuando están en una situación social:
+Milgram explico que las personas tienen dos estados de comportamiento en situaciones sociales:
 
-- El estado autónomo: las personas dirigen sus propias acciones y asumen la responsabilidad de los resultados de esas acciones.
-- El estado agéntico: las personas permiten que otros dirijan sus acciones y luego transfieren la responsabilidad de las consecuencias a la persona que da las órdenes. Actúan como agentes de la voluntad de otra persona.
+- **Estado autonomo:** diriges tus acciones y asumes responsabilidad por los resultados.
+- **Estado agentivo:** dejas que otros dirijan tus acciones y transfieres la responsabilidad a quien da las ordenes. Actuas como agente de la voluntad de otro.
 
-Dos cosas deben estar presentes para que una persona entre en el estado agéntico:
+Para entrar en estado agentivo hacen falta dos cosas:
 
-1. La persona que da las órdenes es percibida como legítima para hacerlo.
-2. La persona que recibe la orden cree que la autoridad aceptará la responsabilidad de lo que suceda.
+1. Percibir que quien da las ordenes tiene autoridad legitima.
+2. Creer que la autoridad aceptara la responsabilidad de lo que pase.
 
-Por ejemplo, cuando a los participantes se les recordó que tenían responsabilidad por sus propias acciones, casi ninguno de ellos estuvo dispuesto a obedecer. En contraste, muchos participantes que se negaron a continuar lo hicieron si el investigador decía que él asumiría la responsabilidad.
+Cuando a los participantes se les recordaba que eran responsables de sus acciones, casi ninguno obedecia. En cambio, muchos que se negaban a continuar lo hacian si el investigador decia que el asumia la responsabilidad.
 
-## Variaciones del experimento de Milgram
+## Variaciones del experimento
 
-Entre muchas otras, estas son algunas de las variaciones:
+Algunas de las variaciones mas interesantes:
 
 ### Uniforme
 
-Cuando el rol del investigador fue asumido por una "persona ordinaria sin uniforme" (siempre un cómplice), la obediencia cayó al 20%.
+Cuando una "persona comun sin uniforme" asumia el rol de investigador, la obediencia bajo al 20%.
 
-### Cambio de ubicación
+### Cambio de ubicacion
 
-La obediencia cayó al 47.5% cuando el experimento se trasladó a un conjunto de oficinas en lugar de la impresionante Universidad de Yale.
+La obediencia bajo al 47.5% cuando el experimento se hizo en unas oficinas normales en vez de la prestigiosa Universidad de Yale.
 
-### Condición de apoyo social
+### Apoyo social
 
-Otros dos participantes (cómplices) también eran maestros pero se negaron a obedecer. Uno a 150 voltios, y el otro a 210 voltios. La presencia de otros que se ven desobedecer a la figura de autoridad reduce el nivel de obediencia al 10%.
+Otros dos participantes (complices) eran tambien maestros pero se negaron a obedecer: uno a 150 voltios, el otro a 210. Ver a otros desobedecer a la autoridad redujo la obediencia al 10%.
 
-### Condición de experimentador ausente
+### Experimentador ausente
 
-Cuando el investigador instruyó y motivó al maestro por teléfono desde otra habitación, la obediencia cayó al 20.5%. Muchos participantes hicieron trampa y omitieron descargas o dieron menos voltaje del ordenado. La proximidad de la figura de autoridad afecta la obediencia.
+Cuando el investigador daba instrucciones por telefono desde otra habitacion, la obediencia bajo al 20.5%. Muchos participantes hicieron trampa: omitian descargas o daban menos voltaje. La proximidad de la autoridad afecta la obediencia.
 
-### Las cuestiones morales que Milgram planteó
+### Las cuestiones morales
 
-¿Por qué tantos participantes en este experimento realizaron un acto aparentemente sádico cuando fueron instruidos por una figura de autoridad? Según Milgram, hay algunos factores situacionales que pueden explicar niveles tan altos de obediencia:
+¿Por que tantos participantes hicieron algo aparentemente sadico al recibir ordenes de una autoridad? Segun Milgram, varios factores situacionales lo explican:
 
-- La presencia física de una figura de autoridad aumentó el cumplimiento.
-- El hecho de que Yale (una institución académica de confianza) patrocinara el estudio llevó a muchos participantes a creer que el experimento debía ser seguro.
-- La selección del estado de maestro y aprendiz parecía aleatoria.
-- Los participantes asumieron que el investigador era un experto competente.
-- Se dijo que las descargas eran dolorosas, no peligrosas.
+- La presencia fisica de una autoridad aumento el cumplimiento.
+- Yale es una institucion de confianza, asi que el experimento parecia seguro.
+- La seleccion de maestro y aprendiz parecia aleatoria.
+- Los participantes asumian que el investigador era un experto.
+- Les dijeron que las descargas eran dolorosas, no peligrosas.
 
-El experimento de Milgram se ha convertido en un clásico de la psicología, demostrando los peligros de la obediencia. La investigación sugirió que las variables situacionales tienen mayor influencia que los factores de personalidad para determinar la obediencia.
+El experimento de Milgram se convirtio en un clasico de la psicologia. Demostro los peligros de la obediencia. La situacion influye mas que la personalidad a la hora de obedecer.
 
-> A menudo no es tanto el tipo de persona que un hombre es, sino el tipo de situación en la que se encuentra lo que determina cómo actuará.
+> A menudo no es tanto el tipo de persona que uno es, sino la situacion en la que se encuentra, lo que determina como actuara.
 >
 > Stanley Milgram, 1974.
 

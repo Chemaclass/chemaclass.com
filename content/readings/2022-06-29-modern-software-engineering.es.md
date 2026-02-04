@@ -1,6 +1,6 @@
 +++
-title = "Modern Software Engineering"
-description = "Este libro presenta el desarrollo de software como una práctica de ingeniería en todos los niveles. Para dominar la ingeniería de software, debemos convertirnos en expertos en aprender y gestionar la complejidad."
+title = "Ingeniería de Software Moderna"
+description = "El desarrollo de software como práctica de ingeniería real. Para dominarlo hay que ser experto en aprender y gestionar la complejidad."
 authors = [ "David Farley" ]
 [taxonomies]
 tags = [ "software-design", "testing", "architecture", "agile" ]
@@ -14,24 +14,23 @@ expand_preview = false
 
 <!-- more -->
 
-Este libro presenta el desarrollo de software como una práctica de ingeniería en todos los niveles.
-Para dominar la ingeniería de software, debemos convertirnos en expertos en aprender y gestionar la complejidad.
+El libro presenta el desarrollo de software como una práctica de ingeniería real. Para dominarlo hay que ser experto en aprender y gestionar la complejidad.
 
 ### Optimizar para aprender
 
-Para optimizar el aprendizaje, el libro presenta cinco comportamientos a considerar:
+El libro presenta cinco comportamientos clave para aprender mejor:
 
-- Trabajar iterativamente
-- Retroalimentación
+- Trabajar de forma iterativa
+- Buscar feedback
 - Incrementalismo
 - Empirismo
 - Ser experimental
 
-La idea principal es trabajar en pequeños pasos, recoger retroalimentación y ajustar.
+La idea central: trabajar en pasos pequeños, recoger feedback y ajustar.
 
 ### Optimizar para gestionar la complejidad
 
-El libro presenta otras cinco ideas para gestionar la complejidad:
+Cinco ideas para manejar la complejidad:
 
 - Modularidad
 - Cohesión
@@ -39,19 +38,19 @@ El libro presenta otras cinco ideas para gestionar la complejidad:
 - Ocultación de información y abstracción
 - Gestión del acoplamiento
 
-Necesitamos gestionar la complejidad de nuestros sistemas.
+Gestionar la complejidad de nuestros sistemas es fundamental.
 
-### Herramientas para apoyar la ingeniería en software
+### Herramientas para apoyar la ingeniería
 
-Profundizando en algunas ideas que ya se discutieron en el libro, como:
+El libro profundiza en ideas como:
 
 - Testeabilidad
 - Desplegabilidad
-- Controlar las variables
+- Control de variables
 - Entrega continua
 
 ---
 
-Un gran video explicando las ideas principales detrás de este libro por su autor:
+Un vídeo donde el autor explica las ideas principales del libro:
 
 {{ youtube(id="TRqYQnCfgH8") }}

@@ -1,6 +1,6 @@
 +++
-title = "One up on wall street"
-description = "El gestor de dinero más exitoso de América cuenta cómo los inversores promedio pueden vencer a los profesionales usando lo que saben. Según Lynch, las oportunidades de inversión están en todas partes."
+title = "Un paso por delante de Wall Street"
+description = "Peter Lynch explica cómo el inversor común puede ganarle a los profesionales usando lo que ya sabe. Las oportunidades de inversión están en todas partes."
 authors = [ "Peter Lynch" ]
 [taxonomies]
 tags = [ "finance", "investing", "economics" ]
@@ -13,4 +13,4 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51RWLY76LAL
 
 <!-- more -->
 
-El gestor de dinero más exitoso de América cuenta cómo los inversores promedio pueden vencer a los profesionales usando lo que saben. Según Lynch, las oportunidades de inversión están en todas partes.
+Peter Lynch, uno de los gestores de fondos más exitosos de Estados Unidos, explica cómo el inversor común puede ganarle a los profesionales usando lo que ya sabe. Las oportunidades de inversión están en todas partes.

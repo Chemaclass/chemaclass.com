@@ -1,11 +1,11 @@
 +++
-title = "The call of Cthulhu"
-description = "La Llamada de Cthulhu, el relato de un horripilante monstruo submarino que cobra vida y amenaza a la humanidad, generando toda una mitología, con el poder de sembrar el terror en los corazones incluso de los Grandes Antiguos."
+title = "La Llamada de Cthulhu"
+description = "Un monstruo submarino despierta y amenaza a la humanidad. El relato que dio origen a toda una mitología del horror."
 authors = [ "H. P. Lovecraft" ]
 [taxonomies]
 tags = [ "fiction", "horror" ]
 [extra]
-subtitle = "La Llamada de Cthulhu, el relato de un horripilante monstruo submarino que cobra vida y amenaza a la humanidad, generando toda una mitología, con el poder de sembrar el terror en los corazones incluso de los Grandes Antiguos."
+subtitle = "El relato que dio origen a los Mitos de Cthulhu"
 pages = "100"
 author = "H. P. Lovecraft"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41xOuZGh2NL._SX331_BO1,204,203,200_.jpg"
@@ -13,5 +13,4 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41xOuZGh2NL
 
 <!-- more -->
 
-La Llamada de Cthulhu, el relato de un horripilante monstruo submarino que cobra vida y amenaza a la humanidad, generando
-toda una mitología, con el poder de sembrar el terror en los corazones incluso de los Grandes Antiguos.
+Un horripilante monstruo submarino despierta y amenaza a la humanidad. Este relato dio origen a toda una mitología: los Mitos de Cthulhu, con el poder de sembrar terror incluso en los corazones de los Grandes Antiguos.

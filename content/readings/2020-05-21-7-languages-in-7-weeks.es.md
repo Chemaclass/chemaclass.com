@@ -1,11 +1,11 @@
 +++
-title = "7 languages in 7 weeks"
-description = "Siete lenguajes en siete semanas: Una guía pragmática para aprender lenguajes de programación"
+title = "Siete lenguajes en siete semanas"
+description = "Una guía práctica para expandir tu mente como programador explorando paradigmas diferentes"
 authors = [ "Bruce Tate" ]
 [taxonomies]
 tags = [ "software-design", "programming", "career" ]
 [extra]
-subtitle = "Siete lenguajes en siete semanas: Una guía pragmática para aprender lenguajes de programación"
+subtitle = "Una guía práctica para aprender lenguajes de programación"
 pages = "300"
 author = "Bruce Tate"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51LZT+tSrTL._SX415_BO1,204,203,200_.jpg"
@@ -13,13 +13,10 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51LZT+tSrTL
 
 <!-- more -->
 
-Deberías aprender un lenguaje de programación cada año, como recomienda The Pragmatic Programmer. Pero si uno por año es
-bueno, ¿qué tal Siete Lenguajes en Siete Semanas? En este libro obtendrás un tour práctico de Clojure, Haskell, Io, Prolog,
-Scala, Erlang y Ruby. Ya sea que tu lenguaje favorito esté en esa lista, ampliarás tu perspectiva de
-la programación examinando estos lenguajes lado a lado. Aprenderás algo nuevo de cada uno, y lo mejor de todo, aprenderás
-cómo aprender un lenguaje rápidamente.
+El Programador Pragmático recomienda aprender un lenguaje nuevo cada año. Pero si uno por año está bien, ¿por qué no siete en siete semanas?
+
+Este libro te lleva de paseo por Clojure, Haskell, Io, Prolog, Scala, Erlang y Ruby. Aunque tu lenguaje favorito no esté en la lista, vas a ampliar tu forma de pensar al ver estos lenguajes lado a lado. Aprenderás algo valioso de cada uno. Y lo mejor: aprenderás a aprender lenguajes rápido.
 
 ---
 
-Creé este repositorio con todos mis aprendizajes mientras leía y experimentaba con los lenguajes de este libro
-[https://github.com/Chemaclass/7LangIn7Weeks](https://github.com/Chemaclass/7LangIn7Weeks)
+Creé este repositorio con todo lo que fui aprendiendo mientras leía y experimentaba con los lenguajes del libro: [https://github.com/Chemaclass/7LangIn7Weeks](https://github.com/Chemaclass/7LangIn7Weeks)

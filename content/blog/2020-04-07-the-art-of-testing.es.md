@@ -10,44 +10,44 @@ static_thumbnail = "/images/blog/2020-04-07/cover.jpg"
 
 ![blog-cover](/images/blog/2020-04-07/cover.jpg)
 
-Por qué deberías considerar el testing como parte de tu hábito diario de desarrollo y cómo está directamente vinculado a la calidad del software.
+¿Por qué considerar el testing parte de tu desarrollo diario? Porque está directamente vinculado a la calidad del software.
 
 <!-- more -->
 
-Este post no pretende explicar las diferentes técnicas de testing que podemos usar. No voy a contarte las diferencias entre testing unitario, de integración, de funcionalidad o end-to-end.
+No voy a explicar las diferentes técnicas de testing ni las diferencias entre tests unitarios, de integración, funcionales o end-to-end.
 
-Todavía me sorprende la falta de experiencia con testing en software en general. Una ignorancia común en este mundo sobre las mejores prácticas de testing para nosotros como desarrolladores. Una inexperiencia que puedes ver fácilmente si ya has trabajado en diferentes proyectos y equipos.
+Me sigue sorprendiendo la falta de experiencia con testing en el mundo del software. Hay una ignorancia generalizada sobre buenas prácticas. Si has trabajado en varios proyectos y equipos, seguro que lo has visto.
 
 ### Testing de software
 
 Algunos patrones horribles que he visto (y hecho):
 
-* Testear por testear: testear cada archivo individual, a veces considerado erróneamente una unidad.
-* Mockear cada clase que pretendemos testear, anulando la implementación real y creando un comportamiento falso, proporcionando una falsa percepción de cobertura.
-* Acoplar el código de producción con los tests en todas partes, haciendo imposible cambiar algo sin romper algunos tests, incluso si la funcionalidad en sí funciona como se esperaba.
-* No testear en absoluto porque "¿por qué deberíamos testear algo si la funcionalidad está hecha y funciona? ¿Por qué deberíamos gastar más tiempo en esto si ya está terminado?"
+* Testear por testear: testear cada archivo individual, confundiéndolo con una "unidad".
+* Mockear cada clase, anulando la implementación real y creando comportamiento falso. Esto da una falsa sensación de cobertura.
+* Acoplar código de producción con tests por todas partes. Imposible cambiar nada sin romper tests, aunque la funcionalidad siga funcionando.
+* No testear nada porque "ya funciona, ¿para qué perder más tiempo?"
 
-Una de las principales razones del testing de software es verificar un conjunto de pruebas del comportamiento esperado de la pieza final de software. Sin embargo, el testing puede (y debería) ser más que eso.
+Una razón principal del testing es verificar el comportamiento esperado del software. Pero el testing puede (y debería) ser mucho más que eso.
 
 ### Diseño de software
 
-El diseño de software va desde el diseño de algoritmos hasta el diseño de arquitectura. Aunque creo que estos dos niveles de componentes tienen diferentes necesidades y requisitos, todavía comparten algunos patrones comunes. Por ejemplo, el testing, y de esto es de lo que vamos a hablar ahora:
+El diseño de software abarca desde algoritmos hasta arquitectura. Aunque estos dos niveles tienen necesidades distintas, comparten patrones comunes. Por ejemplo, el testing:
 
 > Si es fácil de testear, probablemente será debido a un buen diseño.
 
 ### Calidad del software
 
-¿Es difícil medir la calidad? Sin duda. Hay diferentes claves de medición que deberíamos tener en cuenta al considerar la calidad de cualquier pieza de software. Aún así, estoy seguro de que podríamos estar de acuerdo en esto:
+Medir la calidad es difícil. Hay muchas métricas a considerar. Aun así, seguro que podemos estar de acuerdo en esto:
 
 > Si aspiras a la calidad en tu software, mejor busca un buen diseño.
 
-Testear por sí mismo significa "probar", como todos sabemos. Dicho esto... ¿qué difícil resulta a veces probar alguna lógica que finalmente abandonamos debido a su complejidad?
+Testear significa "probar". ¿Cuántas veces hemos abandonado tests por la complejidad de probar cierta lógica?
 
-El arte del testing consiste en usar el testing mismo para ayudar y contribuir al resultado final. Para fomentar el buen diseño, supongamos que somos capaces de usar el testing (de cualquier tipo) a nuestro favor, dependiendo del contexto de lo que queremos probar. En ese caso, sin duda nos ayudará a aumentar la calidad final del producto.
+El arte del testing consiste en usar los tests para contribuir al resultado final. Si usamos el testing a nuestro favor, según el contexto, mejoraremos la calidad del producto.
 
-Por lo tanto, el testing debería usarse no solo para probar el comportamiento de nuestro software, sino también para guiar nuestro software hacia un mejor diseño.
+Por tanto, el testing no solo verifica comportamiento. También guía el software hacia un mejor diseño.
 
-¿Deberíamos testear todo? Bueno, esa es la pregunta del millón. En mi opinión, todo depende del contexto. Podemos encontrarnos situaciones donde los tests podrían no ser beneficiosos. Incluso en esas situaciones, deberíamos escribir nuestro código como si pudiera ser testeado de todos modos.
+¿Deberíamos testear todo? Depende del contexto. Habrá situaciones donde los tests no aporten beneficio. Aun así, escribe código como si fuera a ser testeado.
 
 ![blog-cover](/images/blog/2020-04-07/footer.jpg)
 

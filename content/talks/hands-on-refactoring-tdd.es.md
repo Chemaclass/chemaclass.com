@@ -7,7 +7,9 @@ tags = [ "tdd", "refactoring", "live-coding", "pair-programming", "workshop" ]
 subtitle = "Live Coding en Pair/Mob Programming"
 +++
 
-¿Qué son las katas de código? ¿Alguna vez te has preguntado cómo es realmente una sesión de pair/mob programming? Únete a esta sesión de live coding que profundiza en el desarrollo test-first y técnicas de refactoring, donde presenciarás la resolución colaborativa de problemas de primera mano. Juntos, abordaremos una kata de código desde cero, navegando los desafíos y recompensas de construir código más limpio y robusto como equipo.
+¿Qué son las katas de código? ¿Te has preguntado cómo es una sesión real de pair/mob programming?
+
+En esta sesión de live coding exploramos desarrollo test-first y técnicas de refactoring. Verás resolución de problemas colaborativa en directo. Juntos abordamos una kata desde cero, con sus desafíos y recompensas de construir código más limpio como equipo.
 
 <!-- more -->
 
