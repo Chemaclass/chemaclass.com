@@ -206,7 +206,7 @@ main:has(.homepage-container) #scroll-to-top {
   .about-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 1.25rem;
+    margin: 0;
 
     li.expandable {
       border-bottom: 1px solid var(--preview-divider-color);
