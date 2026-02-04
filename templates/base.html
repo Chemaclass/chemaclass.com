@@ -22,6 +22,10 @@
     <meta name="theme-color" content="{{ config.extra.accent }}" />
     <link rel="manifest" href="/manifest.json" />
 
+    <!-- Search Engine Verification - uncomment and add tokens when available -->
+    <!-- <meta name="google-site-verification" content="YOUR_GOOGLE_TOKEN"> -->
+    <!-- <meta name="msvalidate.01" content="YOUR_BING_TOKEN"> -->
+
     {% if config.extra.profile_small %}
       {% set icon = resize_image(path=config.extra.profile_small, width=48, height=48, op="fill") -%}
       <link rel="icon" href="{{ icon.url }}" />
@@ -67,7 +71,31 @@
     </script>
     {% endif %}
 
+    {% if page %}
+    <meta property="og:type" content="article">
+    {% else %}
     <meta property="og:type" content="website">
+    {% endif %}
+
+    <!-- Open Graph title and description -->
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}">
+    {% else %}
+    <meta property="og:title" content="{{ config.title }}">
+    {% endif %}
+    {% if page.description %}
+    <meta property="og:description" content="{{ page.description }}">
+    {% else %}
+    <meta property="og:description" content="{{ config.description }}">
+    {% endif %}
+
+    <!-- Open Graph locale -->
+    <meta property="og:locale" content="{% if lang == 'es' %}es_ES{% else %}en_US{% endif %}">
+    {% if lang == 'es' %}
+    <meta property="og:locale:alternate" content="en_US">
+    {% else %}
+    <meta property="og:locale:alternate" content="es_ES">
+    {% endif %}
 
     <meta name="twitter:card" content="summary">
 
@@ -78,14 +106,18 @@
 
     {% if page.extra.thumbnail %}
       <meta property="og:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail) }}">
+      <meta name="twitter:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail) }}">
     {% elif page.extra.static_thumbnail %}
       {%if page.extra.static_thumbnail is matching("^http[s]?://") %}
         <meta property="og:image" content="{{ page.extra.static_thumbnail | safe}}">
+        <meta name="twitter:image" content="{{ page.extra.static_thumbnail | safe}}">
       {% else %}
         <meta property="og:image" content="{{ get_url(path=page.extra.static_thumbnail) }}">
+        <meta name="twitter:image" content="{{ get_url(path=page.extra.static_thumbnail) }}">
       {% endif %}
     {% elif config.extra.default_og_image %}
         <meta property="og:image" content="{{ get_url(path=config.extra.default_og_image) }}">
+        <meta name="twitter:image" content="{{ get_url(path=config.extra.default_og_image) }}">
     {% endif %}
 
     {% block description %}
@@ -130,6 +162,29 @@
     {% else %}
       <link rel="canonical" href="{{ config.base_url | safe }}" />
       <meta property="og:url" content="{{ config.base_url | safe }}" />
+    {% endif %}
+
+    <!-- Hreflang for multilingual support -->
+    {% if page.permalink %}
+      {% if lang == "es" %}
+        <link rel="alternate" hreflang="es" href="{{ page.permalink | safe }}" />
+        <link rel="alternate" hreflang="en" href="{{ page.permalink | replace(from="/es/", to="/") | safe }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ page.permalink | replace(from="/es/", to="/") | safe }}" />
+      {% else %}
+        <link rel="alternate" hreflang="en" href="{{ page.permalink | safe }}" />
+        <link rel="alternate" hreflang="es" href="{{ page.permalink | replace(from="chemaclass.com/", to="chemaclass.com/es/") | safe }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ page.permalink | safe }}" />
+      {% endif %}
+    {% elif section.permalink %}
+      {% if lang == "es" %}
+        <link rel="alternate" hreflang="es" href="{{ section.permalink | safe }}" />
+        <link rel="alternate" hreflang="en" href="{{ section.permalink | replace(from="/es/", to="/") | safe }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ section.permalink | replace(from="/es/", to="/") | safe }}" />
+      {% else %}
+        <link rel="alternate" hreflang="en" href="{{ section.permalink | safe }}" />
+        <link rel="alternate" hreflang="es" href="{{ section.permalink | replace(from="chemaclass.com/", to="chemaclass.com/es/") | safe }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ section.permalink | safe }}" />
+      {% endif %}
     {% endif %}
 
     {% block head %}

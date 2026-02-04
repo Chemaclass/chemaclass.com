@@ -6,6 +6,7 @@ description = "Check out my latest blog posts and readings."
 author = "Chemaclass"
 
 generate_feeds = true
+generate_sitemap = true
 taxonomies = [{ name = "tags" }]
 compile_sass = true
 build_search_index = true

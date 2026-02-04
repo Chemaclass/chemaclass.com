@@ -18,6 +18,25 @@
 {% block posthead %}
 {% set profile_image = resize_image(path=config.extra.profile_large, width=360, height=360, op="fill") %}
 <link rel="prefetch" href="{{ profile_image.url }}">
+
+<!-- Person Schema for homepage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jose Maria Valera Reales",
+  "alternateName": "Chemaclass",
+  "url": "{{ config.base_url | safe }}",
+  "image": "{{ get_url(path=config.extra.default_og_image) | safe }}",
+  "jobTitle": "Software Engineer",
+  "description": "{{ config.description }}",
+  "sameAs": [
+    "https://x.com/Chemaclass",
+    "https://github.com/Chemaclass",
+    "https://www.linkedin.com/in/jose-maria-valera-reales/"
+  ]
+}
+</script>
 {% endblock posthead %}
 
 {% block content %}
