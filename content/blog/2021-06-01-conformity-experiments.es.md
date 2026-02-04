@@ -73,5 +73,3 @@ Asch siguió experimentando para entender qué factores influyen en la conformid
 ### Recursos
 
 - [Solomon Asch | Wikipedia](https://en.wikipedia.org/wiki/Solomon_Asch)
-- [Solomon Asch - Biografía | VeryWellMind](https://www.verywellmind.com/solomon-asch-biography)
-- [Los experimentos de conformidad de Asch | VeryWellMind](https://www.verywellmind.com/the-asch-conformity-experiments)

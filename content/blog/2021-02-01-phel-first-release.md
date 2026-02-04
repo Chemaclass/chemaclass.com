@@ -80,7 +80,7 @@ The following example gives a short impression of how Phel looks like:
 ```
 
 ## Current status of Phel
-- We have an open [Gitter Community](https://gitter.im/phel-lang/community) where we help each other
+
 - We prepared an easy [Getting Started Guide](https://phel-lang.org/documentation/getting-started/)
 - We prepared an easy GitHub Repository with a [Phel Scaffolding Template](https://github.com/phel-lang/phel-scaffolding)
 - We just released the first official version: [0.1.0](https://github.com/phel-lang/phel-lang/tags)

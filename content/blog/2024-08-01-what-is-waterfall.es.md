@@ -78,7 +78,7 @@ Estas practicas hacen tu desarrollo mas flexible, colaborativo y de calidad. Enc
 He [hablado](/es/talks/) sobre Agile en varios eventos. Me apasiona porque, bien hecho, puede transformar equipos: mas rapidos, mas eficientes, y mejores entregando lo que clientes y negocios realmente necesitan.
 
 - 2022-06-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Berlín, Alemania] (EN)
-- 2022-09-16 | [Code Talks](https://codetalks.de/speakers#speaker-985?event=7) [Hamburgo, Alemania] (EN)
+- 2022-09-16 | [Code Talks](https://codetalks.de/) [Hamburgo, Alemania] (EN)
 - 2022-10-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Múnich, Alemania] (EN)
 - 2022-12-21 | IES Ginés Pérez Chirinos [Murcia, España] (ES)
 - 2023-01-19 | [devm.io](https://devm.io/update-your-team-to-be-more-extreme/) [Remoto] (EN)

@@ -78,7 +78,7 @@ Together, these practices make your development process more flexible, collabora
 I’ve [talked](/talks/) about Agile at various tech events and explored it in depth because I’m passionate about how it can supercharge software teams. When done right, Agile can completely change how teams work, making them faster, more efficient, and better at delivering what clients and businesses really need.
 
 - 2022-06-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Berlin, Germany] (EN)
-- 2022-09-16 | [Code Talks](https://codetalks.de/speakers#speaker-985?event=7) [Hamburg, Germany] (EN)
+- 2022-09-16 | [Code Talks](https://codetalks.de/) [Hamburg, Germany] (EN)
 - 2022-10-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Munich, Germany] (EN)
 - 2022-12-21 | IES Ginés Pérez Chirinos [Murcia, Spain] (ES)
 - 2023-01-19 | [devm.io](https://devm.io/update-your-team-to-be-more-extreme/) [Remote] (EN)

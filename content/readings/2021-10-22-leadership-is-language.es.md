@@ -41,6 +41,3 @@ David presenta seis jugadas que todo líder debería usar para mejorar cómo ope
 
 {{ youtube(id="CQfao96j1fo") }}
 
-### Referencias
-
-- [https://davidmarquet.com/leadership-is-language-book/](https://davidmarquet.com/leadership-is-language-book/)

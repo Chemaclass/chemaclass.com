@@ -50,6 +50,3 @@ followed, and that was it. But that way of leading is no longer effective, it is
 
 {{ youtube(id="CQfao96j1fo") }}
 
-### References
-
-- [https://davidmarquet.com/leadership-is-language-book/](https://davidmarquet.com/leadership-is-language-book/)

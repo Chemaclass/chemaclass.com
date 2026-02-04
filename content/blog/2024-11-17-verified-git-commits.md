@@ -65,7 +65,7 @@ Make signing commits the default:
 git config --global commit.gpgsign true
 ```
 
-### Add your key to [GitHub](https://github.com/settings/keys)/[GitLab](https://gitlab.com/-/user_settings/gpg_keys)
+### Add your key to [GitHub](https://github.com/settings/keys)/[GitLab](https://docs.gitlab.com/user/project/repository/signed_commits/gpg/)
 
 Export your public key:
 ```bash

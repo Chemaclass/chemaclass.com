@@ -64,7 +64,6 @@ Un proyecto personal es un terreno de juego para crear software y entrenar tus h
 **Activos:**
 - [php-best-practices](https://github.com/Chemaclass/php-best-practices): lo que considero mejores prácticas para desarrollo web.
 - [php-scaffolding](https://github.com/Chemaclass/php-scaffolding): un scaffolding básico de PHP con Docker.
-- [typed-arrays](https://github.com/Chemaclass/typed-arrays): reemplazo de genéricos para PHP.
 
 **Inactivos:**
 - [stock-ticker](https://github.com/Chemaclass/stock-ticker): recibe una notificación con las noticias de tus Tickers favoritos.
@@ -120,6 +119,3 @@ junto con una demo en vivo de cómo contribuir a un OSS real.
 
 ---
 
-### Referencias
-
-- [Getting started with Open Source Software](https://jesusvalerareales.medium.com/getting-started-with-open-source-software-e6c177b68b39)

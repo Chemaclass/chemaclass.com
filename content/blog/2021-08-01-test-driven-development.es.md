@@ -78,7 +78,6 @@ Puedes encontrar muchas katas en Internet. Por ejemplo:
 
 - [http://codekata.com](http://codekata.com)
 - [https://codingdojo.org/kata](https://codingdojo.org/kata)
-- [https://katalyst.codurance.com/browse](https://katalyst.codurance.com/browse)
 - [https://github.com/gamontal/awesome-katas](https://github.com/gamontal/awesome-katas)
 
 ---

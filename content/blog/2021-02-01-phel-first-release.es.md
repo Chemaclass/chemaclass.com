@@ -66,7 +66,7 @@ El siguiente ejemplo da una breve impresión de cómo se ve Phel:
 ```
 
 ## Estado actual de Phel
-- Tenemos una [Comunidad Gitter](https://gitter.im/phel-lang/community) abierta donde nos ayudamos mutuamente
+
 - Preparamos una fácil [Guía de Inicio](https://phel-lang.org/documentation/getting-started/)
 - Preparamos un Repositorio GitHub fácil con una [Plantilla de Scaffolding de Phel](https://github.com/phel-lang/phel-scaffolding)
 - Acabamos de lanzar la primera versión oficial: [0.1.0](https://github.com/phel-lang/phel-lang/tags)

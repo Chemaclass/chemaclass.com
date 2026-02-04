@@ -155,7 +155,7 @@ Your Alby hub is now running. Let's connect it to your GetAlby account!
 ---
 
 ## Creating a GetAlby Account
-🔗 [getalby.com/users/new](https://getalby.com/auth/users/new)
+🔗 [getalby.com](https://getalby.com/)
 
 ![tutorial](/images/blog/2025-02-17/tuto-15.jpg)
 
@@ -232,7 +232,7 @@ You can receive sats using your LN Address.
 ---
 
 ## Using Your Sats
-After that, you will be able to use it via the [Alby Extension](https://getalby.com/products/browser-extension) or the [AlbyGo](https://albygo.com/).
+After that, you will be able to use it via the [Alby Extension](https://getalby.com/) or the [AlbyGo](https://albygo.com/).
 
 ![tutorial](/images/blog/2025-02-17/tuto-31.jpg)
 

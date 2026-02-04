@@ -97,15 +97,15 @@ sort_by = "weight"
 ### Julio
 
 - 2023-07-28 | WeAreDevelopers World Congress [**Berlín, Alemania**] (EN)
-    - [Phel, un Lisp nativo para PHP](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[slides](https://docs.google.com/presentation/d/1Zc3zxz9VIujh43enXhgTgvm2kCz9aQKSU1nsrtL_HEs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
-    - [Una Introducción a Extreme Programming](https://www.wearedevelopers.com/world-congress/program#sz-tab-45135) [[slides](https://docs.google.com/presentation/d/1l-Mxfb6Cc9scPaqiB6j7HORwxRdhv4lqCDWtK7biMzs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
+    - [Phel, un Lisp nativo para PHP](https://www.wearedevelopers.com/world-congress) [[slides](https://docs.google.com/presentation/d/1Zc3zxz9VIujh43enXhgTgvm2kCz9aQKSU1nsrtL_HEs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
+    - [Una Introducción a Extreme Programming](https://www.wearedevelopers.com/world-congress) [[slides](https://docs.google.com/presentation/d/1l-Mxfb6Cc9scPaqiB6j7HORwxRdhv4lqCDWtK7biMzs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
 
 ![cover](/images/talks/2023-07-28/phel-we-are-devs-23.jpg)
 
 ### Mayo
 
 - 2023-05-27 | PHPers Summit [**Poznan, Polonia**] (EN)
-    - [Phel Language, un LISP nativo para PHP](https://summit.phpers.pl/en/agenda)
+    - [Phel Language, un LISP nativo para PHP](https://phpers.pl/)
 - 2023-05-24/25 | International PHP Conference [**Berlín, Alemania**] (EN)
     - [Construyendo aplicaciones modulares en PHP con Gacela](https://phpconference.com/software-architecture/modular-applications-php-gacela/)
     - [Phel Language, un LISP nativo para PHP](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
@@ -158,7 +158,7 @@ sort_by = "weight"
 ### Septiembre
 
 - 2022-09-16 | Code Talks [**Hamburgo, Alemania**] (EN)
-    - [Actualiza tu equipo para ser más extremo](https://codetalks.de/speakers#speaker-985?event=7) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:6976595953680015360/))
+    - [Actualiza tu equipo para ser más extremo](https://codetalks.de/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:6976595953680015360/))
 
 ![cover](/images/talks/2022-09-16/update-your-team-code-talks-22.jpg)
 

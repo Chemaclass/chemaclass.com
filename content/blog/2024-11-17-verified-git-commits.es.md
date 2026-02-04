@@ -64,7 +64,7 @@ Haz que firmar commits sea el valor por defecto:
 git config --global commit.gpgsign true
 ```
 
-### Añade tu clave a [GitHub](https://github.com/settings/keys)/[GitLab](https://gitlab.com/-/user_settings/gpg_keys)
+### Añade tu clave a [GitHub](https://github.com/settings/keys)/[GitLab](https://docs.gitlab.com/user/project/repository/signed_commits/gpg/)
 
 Exporta tu clave pública:
 ```bash

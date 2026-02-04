@@ -128,4 +128,3 @@ Para casos más complejos, la librería estándar de PHP te saca del apuro.
 
 - [Spread_operator_for_array - Wikipedia](https://wiki.php.net/rfc/spread_operator_for_array)
 - [Flatten_a_list - Rosettacode](https://rosettacode.org/wiki/Flatten_a_list)
-- [Slow array function used in loop - Kalessil](https://kalessil.github.io/phpinspectionsea/docs/performance.html#slow-array-function-used-in-loop)

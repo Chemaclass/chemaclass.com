@@ -70,7 +70,6 @@ A pet project is a playground to create software and train your professional ski
 **Active:**
 - [php-best-practices](https://github.com/Chemaclass/php-best-practices): what I consider best practices for web-dev.
 - [php-scaffolding](https://github.com/Chemaclass/php-scaffolding): a basic PHP scaffolding with Docker.
-- [typed-arrays](https://github.com/Chemaclass/typed-arrays): generics replacement for PHP.
 
 **Inactive:**
 - [stock-ticker](https://github.com/Chemaclass/stock-ticker): get a notification with the news from your favorites Tickers.
@@ -126,6 +125,3 @@ together with a live demo of how to contribute to a real OSS.
 
 ---
 
-### References
-
-- [Getting started with Open Source Software](https://jesusvalerareales.medium.com/getting-started-with-open-source-software-e6c177b68b39)

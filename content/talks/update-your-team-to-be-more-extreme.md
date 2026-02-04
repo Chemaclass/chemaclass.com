@@ -22,7 +22,7 @@ Our profession is constantly evolving; therefore, it demands a non-stop learning
 - 2022-10-26 | International PHP Conference [**Munich, Germany**] (EN)
   - [Update Your Team to be More Extreme](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/)
 - 2022-09-16 | Code Talks [**Hamburg, Germany**] (EN)
-  - [Update Your Team to be More Extreme](https://codetalks.de/speakers#speaker-985?event=7)
+  - [Update Your Team to be More Extreme](https://codetalks.de/)
 - 2022-06-26 | International PHP Conference [**Berlin, Germany**] (EN)
   - [Update Your Team to be More Extreme](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/)
 
