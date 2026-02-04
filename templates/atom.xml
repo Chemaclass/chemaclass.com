@@ -53,8 +53,8 @@
         <id>{{ page.permalink | safe }}</id>
         {% if page.summary %}
         <summary type="html">{{ page.summary }}</summary>
-        {% else %}
-        <content type="html" xml:base="{{ page.permalink | escape_xml | safe }}">{{ page.content }}</content>
+        {% elif page.description %}
+        <summary type="html">{{ page.description }}</summary>
         {% endif %}
     </entry>
     {%- endfor %}
