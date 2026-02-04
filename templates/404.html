@@ -70,16 +70,23 @@ window.disableGlobalShortcuts = true;
 
   const CURSOR_BLINK_INTERVAL = 530;
 
+  const requestedPath = window.location.pathname;
   const INITIAL_LINES = [
-    { type: 'command', text: '$ cd /requested-page' },
-    { type: 'error', text: 'bash: cd: /requested-page: No such file or directory' },
+    { type: 'command', text: '$ cd ' + requestedPath },
+    { type: 'error', text: requestedPath + ': Not found' },
     { type: 'empty', text: '' },
     { type: 'command', text: '$ cat error.log' },
     { type: 'output', text: 'Error 404: Page not found' },
     { type: 'output', text: 'The page you\'re looking for doesn\'t exist or has been moved.' },
     { type: 'empty', text: '' },
-    { type: 'command', text: '$ suggest --fix' },
-    { type: 'output', text: 'Available paths:' }
+    { type: 'command', text: '$ ls /valid-paths' },
+    { type: 'output', text: '  /home      - Main page' },
+    { type: 'output', text: '  /blog      - Blog posts' },
+    { type: 'output', text: '  /readings  - Book notes' },
+    { type: 'output', text: '  /services  - Services' },
+    { type: 'output', text: '  /talks     - Talks' },
+    { type: 'empty', text: '' },
+    { type: 'output', text: 'Type "cd /path" or press 1-5 to navigate' }
   ];
 
   const COMMANDS = {

@@ -64,9 +64,30 @@
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   font-size: 0.875rem;
   min-height: 300px;
-  max-height: 400px;
+  max-height: 450px;
   overflow-y: auto;
   cursor: text;
+
+  // Dark scrollbar
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 128, 128, 0.4) transparent;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.4);
+    border-radius: 4px;
+
+    &:hover {
+      background: rgba(128, 128, 128, 0.6);
+    }
+  }
 }
 
 .terminal-content {
