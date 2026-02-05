@@ -1,6 +1,6 @@
 +++
 title = "Cómo mejorar tu charla técnica (o cualquier otra presentación)"
-description = "Nos hemos encontrado asistiendo a reuniones que parecían una pérdida de tiempo con un monólogo difícil de seguir o que no parecía tan interesante como podría ser. Vamos a arreglar esto."
+description = "A todos nos ha pasado estar en reuniones que parecían una pérdida de tiempo, con un monólogo difícil de seguir o menos interesante de lo que podría ser. Vamos a arreglar esto."
 [taxonomies]
 tags = [ "communication", "leadership", "productivity", "career"]
 [extra]
@@ -10,20 +10,20 @@ static_thumbnail = "/images/blog/2019-11-18/cover.jpg"
 
 ![blog-cover](/images/blog/2019-11-18/cover.jpg)
 
-Todos hemos asistido a reuniones que parecían una pérdida de tiempo. Monólogos difíciles de seguir o que no enganchaban como podrían.
+A todos nos ha pasado estar en reuniones que parecían una pérdida de tiempo, con un "monólogo" difícil de seguir o menos interesante de lo que podría ser.
 Vamos a arreglar esto.
 
 <!-- more -->
 
-Pensando en cómo mejorar la calidad de las presentaciones, llegué a algunas claves. Aplican a cualquier presentación, pero especialmente a charlas técnicas donde los ingenieros solemos participar.
+Por eso estuve pensando en ello e intenté obtener algunas claves para mejorar su calidad general. Se aplica a todas las presentaciones, pero también a las charlas técnicas y otras presentaciones técnicas en las que los ingenieros suelen estar involucrados.
 
 ## Estructura de la charla
 
-Para explicar cómo debería ser una buena presentación, voy a cubrir tres temas:
+Para explicar cómo creo que debería ser una buena presentación, abordaré tres temas principales relevantes para estructurar y diseñar tu presentación.
 
-1. **Contenido**: ¿qué mensaje quieres transmitir, a quién y cómo?
-2. **Diseño**: cómo crear diapositivas que apoyen tu charla sin distraer.
-3. **La audiencia**: el público también tiene responsabilidad en que una charla funcione.
+1. Contenido de la presentación: ¿qué mensaje quieres transmitir, a quién y cómo?
+2. Diseño y maquetación: cómo puedes diseñar una presentación fácil de seguir que apoye tu charla en lugar de desviar la atención de lo que realmente intentas decir.
+3. Por último, creo que la audiencia también es responsable de que una charla técnica sea exitosa, así que añadiré un recordatorio sobre el rol y las responsabilidades de los oyentes.
 
 ![blog-img](/images/blog/2019-11-18/talking.jpg)
 
@@ -46,13 +46,13 @@ Crea algo de atmósfera. Intenta responder estas preguntas:
 * ¿Qué habrán aprendido al final de la charla?
 * ¿Cuál es tu mensaje principal?
 
-Cada reunión debería tener un resultado concreto. Tenlo en mente.
+Cada reunión debería tener un resultado tangible y un objetivo claro. Tenlo en mente.
 
-### Crea un hilo conductor
+### Crea una línea argumental
 
-* Piensa en una línea argumental que conecte tus ideas. Facilita que te sigan.
-* Limítate a lo necesario para explicar tu concepto.
-* Deja fuera todo lo que no sea relevante para tu mensaje principal.
+* Al preparar el contenido principal de tu charla, piensa en una línea argumental que conecte tus argumentos. Esto facilita que la audiencia te siga.
+* Limítate a los mensajes necesarios para explicar tu idea o concepto.
+* Deja fuera cualquier información innecesaria que no sea relevante para el núcleo de tu mensaje.
 
 ### Construye una conclusión
 
@@ -68,10 +68,10 @@ Resume la(s) conclusión(es) principal(es) de forma concisa:
 
 ### Escribe menos, habla más
 
-* Una charla técnica va de aprender ideas y conceptos nuevos.
-* Las diapositivas apoyan tu charla, no la reemplazan.
-* A más palabras en pantalla, menos se recuerdan.
-* Usa visuales y gráficos en lugar de texto.
+* Una charla técnica trata sobre aprender nuevas ideas y conceptos.
+* Una presentación debería apoyar tu charla, no reemplazar o replicar lo que has dicho.
+* Cuantas más palabras en la diapositiva, menos se recordarán.
+* Usa visuales/gráficos que apoyen tu charla en lugar de texto adicional.
 
 ### Fuentes grandes
 
@@ -84,16 +84,16 @@ Si tienes código que presentar, considera:
 
 ### Responsabilidades del asistente
 
-* Nada de móvil: ni Twitter, ni Instagram, ni WhatsApp.
-* Guarda las preguntas para el final, salvo que el presentador diga lo contrario. Mejor no interrumpir el hilo.
-* Muestra interés. El presentador ha dedicado tiempo a preparar esto para ti.
-* Pon de tu parte. El interés es responsabilidad de ambos: quien presenta y quien escucha.
+* Nada de uso innecesario del móvil, como Twitter, Instagram, Facebook, WhatsApp, Telegram, etc.
+* Guarda tus preguntas para el tiempo de preguntas, a menos que el presentador mencione al principio que puedes preguntar en cualquier momento. Normalmente es mejor no interrumpir el tema, así que podemos hacer las preguntas al final.
+* Muestra interés en el tema. El presentador ha dedicado tiempo a preparar las diapositivas para ti.
+* Comparte el entusiasmo del presentador por el tema. Esto también es responsabilidad del presentador: ambos deberíais tener ganas de aprender más sobre el tema.
 
 ### Preguntas internas
 
 * ¿Valió la pena el tiempo que todos pasamos en esta sala?
 * ¿Nos arrepentimos de haber asistido a esta reunión?
 
-Al final, hazte estas preguntas para mejorar. Pide opiniones a otros: crecer juntos es crecer mejor.
+Al final de la reunión, deberíamos hacernos estas preguntas para mejorar. Pide opiniones a otras personas para que podamos crecer más y juntos.
 
 ![blog-img](/images/blog/2019-11-18/footer.jpg)

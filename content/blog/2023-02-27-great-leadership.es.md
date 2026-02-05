@@ -79,7 +79,7 @@ Es importante reconocer nuestras emociones y no dejar que controlen nuestras acc
 
 "[Dare to lead](/es/readings/dare-to-lead/)" (Atrévete a liderar) plantea que los líderes necesitan ser más vulnerables. Los valores sólidos te guían a hacer lo correcto en lugar de lo fácil. La confianza y las conversaciones difíciles importan, aunque te hagan sentir incómodo.
 
-> "Los grandes líderes deben ser valientes y siempre atreverse a proporcionar feedback constructivo, decir la verdad y ser claros sobre sus expectativas." -- Dare to lead
+> "Los grandes líderes deben ser valientes y siempre atreverse a dar retroalimentación constructiva, decir la verdad y ser claros sobre sus expectativas." -- Dare to lead
 
 ### Persuasión
 

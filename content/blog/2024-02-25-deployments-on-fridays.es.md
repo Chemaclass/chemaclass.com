@@ -15,31 +15,31 @@ He escuchado múltiples veces, de varias personas, la idea de pánico hacia desp
 
 <!-- more -->
 
-El argumento principal para NO desplegar el viernes se basa en que "hay que ser paranoicos" con nuestro software porque podria fallar al tocarlo. Segun esta logica, hay que asumir lo peor cada vez que desplegamos una nueva version.
+El argumento principal a favor de NO desplegar el viernes se basa en la idea de que "deberíamos ser paranoicos" con nuestro software y que podría fallar cuando lo tocamos. Entonces, "deberíamos asumir" lo peor cada vez que desplegamos una nueva versión de nuestro sistema.
 
-Pero la pregunta clave es: ¿por que? ¿Esta bien tener miedo de nuestro propio sistema, viviendo en panico constante de romperlo tras cada despliegue? ¿Cuanto impacto deberian tener nuestras releases? ¿Como aseguramos que un despliegue no rompa el sistema en produccion?
+Sin embargo, el factor crítico aquí es ¿Por qué? ¿Por qué no deberíamos desplegar los viernes? ¿Está bien tener miedo de nuestro propio sistema de software, que vivimos en un pánico constante de romperlo el día después de haber hecho un despliegue? ¿Cuánto impacto deberían tener nuestras releases? ¿Cómo podemos asegurar que el despliegue no romperá el sistema en vivo?
 
-Tus pipelines de CI/CD, pruebas end-to-end, tests automatizados, politicas de escalado automatico, un entorno de staging para pruebas manuales... todo esto determina la seguridad y confianza de tus releases. La calidad de estas practicas define cuanta confianza tienes para decidir como, cuando y por que desplegar a produccion.
+Tus pipelines de Integración Continua/Entrega Continua, pruebas end-to-end y otros tipos de tests implementados, políticas de escalado automático, un sandbox de staging previo para realizar incluso pruebas manuales si es necesario, etc., determinarán la seguridad y confianza para cualquiera de tus releases. Sin embargo, la calidad de estos temas es un factor decisivo para tener suficiente confianza sobre cómo, cuándo y por qué tendría sentido hacer release a producción.
 
-El objetivo es construir un sistema donde los despliegues a produccion sean frecuentes, suaves y faciles; en cualquier momento, cualquier dia. Tener miedo de tu sistema no es el objetivo. Al contrario: si lo tienes, hay que trabajar para solucionarlo.
+El objetivo es construir un sistema donde los despliegues a producción sean tan frecuentes, suaves y fáciles como sea posible; en cualquier momento, cualquier día. Tener miedo de tu sistema no debería ser el objetivo. Por el contrario, debería ser algo hacia lo que trabajar para solucionarlo.
 
-Las dinamicas del equipo tambien importan. Si establecemos miedo a los despliegues los viernes y miedo al sistema, acabaremos con falta de responsabilidad por defecto. Me recuerda a [Las cinco disfunciones de un equipo](/es/readings/the-five-dysfunctions-of-a-team/).
+Las dinámicas del equipo también son un factor esencial aquí. Si establecemos miedo a los despliegues los viernes, y miedo a nuestro sistema, eso terminará en falta de responsabilidad por defecto. Esto me recuerda a [The Five Dysfunctions of a Team](/es/readings/the-five-dysfunctions-of-a-team/).
 
 ![cover](/images/blog/2024-02-25/middle.jpg)
 
-Si despliegas cambios pequenos y frecuentes que garantizan calidad y valor, ¿por que retrasar esa mejora incremental?
+Si despliegas cambios pequeños y frecuentes tan pronto como pueden garantizar 100% de calidad y éxito de valor, ¿por qué retrasar tal mejora incremental a tu sistema?
 
-Volviendo a "¿Por que no desplegar los viernes?": la unica razon que se me ocurre es el miedo a trabajar el sabado arreglando lo que rompimos el viernes. Pero me pregunto si no habia forma de detectar ese problema durante el propio viernes laboral.
+Volviendo a "¿Por qué no deberíamos desplegar los viernes?" La única razón que se me ocurre es tener miedo de que tengamos que trabajar el sábado en la cosa rota que entregamos el viernes. Sin embargo, me pregunto si había alguna opción disponible, para que pudiéramos haber identificado tal cosa rota durante el propio viernes laborable.
 
-Monitorear tu sistema en produccion es clave tras cada despliegue. Un sistema resistente debe activar alarmas que notifiquen al responsable para actuar: deshabilitar o revertir la ultima funcionalidad rota. Hay muchas tecnicas para detectar problemas y actuar rapido.
+Monitorear tu sistema en vivo es crucial para garantizar la salud después de cada despliegue. Esto es esencial para asegurar que todo funciona bien y sin problemas. Para construir un sistema resistente, esto debería activar alarmas para notificar a alguien responsable de abordar el problema, deshabilitar o revertir la última característica "rota"... hay muchas técnicas para crear conciencia y actuar sobre ellas.
 
-En caso de duda, puedes usar feature flags para deshabilitar la funcionalidad que vas a desplegar. Asi, no la habilitas durante el fin de semana pero mantienes la opcion de agregar valor y desplegar en cualquier momento.
+En caso de duda, podrías usar feature flags para deshabilitar la característica que desplegarás. Aún así, prefieres no habilitarla durante el fin de semana mientras mantienes la opción de agregar valor y desplegar en cualquier momento siempre abierta.
 
-Las **releases frecuentes** y **pequenas** a produccion **son clave**: cualquier momento, cualquier dia, siempre que tenga sentido y haya un camino claro para entregar valor al cliente y obtener feedback cuanto antes.
+Creo que las **releases frecuentes** y **pequeñas** a producción **son clave**; en cualquier momento, cualquier fecha, mientras tenga sentido, y haya un camino claro para traer valor pronto al cliente para obtener retroalimentación lo antes posible.
 
 > Entrega valor de calidad en pequeños incrementos, tan frecuentemente como sea posible.
 
-Poder desplegar los viernes (si es necesario o deseado) refuerza la confianza del equipo. Prohibirlo tambien impacta la autoestima del equipo.
+Poder desplegar los viernes (si es necesario o deseado) impacta la confianza del equipo. De manera similar, prohibir los despliegues los viernes impacta la autoestima del equipo también.
 
 ![cover](/images/blog/2024-02-25/footer.jpg)
 

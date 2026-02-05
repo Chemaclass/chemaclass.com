@@ -17,7 +17,7 @@ El enfoque tradicional de pull requests a menudo ralentiza las cosas. Esperamos 
 
 <!-- more -->
 
-Ahí entra Ship-Show-Ask. [Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html) describió este modelo que ofrece una forma más flexible de manejar cambios de código. No es solo una estrategia de branching. Es un cambio en cómo los equipos colaboran, confían y asumen responsabilidad.
+Ahí es donde entra la estrategia Ship-Show-Ask. Originalmente descrita por [Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html), este modelo ofrece una forma más flexible y reflexiva de manejar cambios de código. No es solo una estrategia de branching—es un cambio en cómo los equipos colaboran, confían y toman propiedad.
 
 ## ¿Qué es Ship, Show, Ask?
 
@@ -27,11 +27,11 @@ Es un modelo que clasifica los cambios basándose en cuánta revisión requieren
 - **Show** – Abrir un pull request, pero mergearlo inmediatamente
 - **Ask** – Abrir un pull request y esperar revisión
 
-La idea es usar Ask por defecto para la mayoría del trabajo, recurrir a Show cuando el contexto lo permite, y evitar Ship (o reservarlo para casos triviales).
+La idea clave es usar Ask como el default para la mayoría del trabajo, recurrir a Show cuando el contexto lo hace seguro, y evitar Ship (o reservarlo para casos extremadamente triviales, si se usa).
 
 ## Por qué prefiero Ask y Show
 
-Por experiencia, ayuda tratar cada cambio como algo que vale la pena compartir, incluso los pequeños. Siempre creo una rama y abro un PR. Da visibilidad, construye un historial compartido y crea espacio para feedback opcional o asíncrono.
+En mi experiencia, ayuda tratar cada cambio—incluso los pequeños—como algo que vale la pena compartir. Siempre creo una rama y abro un PR. Proporciona visibilidad, construye un historial compartido, y crea un espacio para opiniones opcionales o asíncronas.
 
 Pero no todos los PRs necesitan seguir el mismo proceso de revisión.
 
@@ -44,9 +44,9 @@ Prefiero esperar una revisión de un compañero cuando:
 - Introduce decisiones arquitectónicas o estructurales que no se han acordado aún
 - Se beneficia de input compartido o un segundo par de ojos
 
-Eso sí, **Ask no significa complicar el proceso**. Muchas veces basta un revisor que conozca el dominio. Si el cambio toca un área específica, pido feedback a la persona que mejor la conoce. No hace falta involucrar a todos.
+Dicho esto, **Ask no significa sobre-ingeniar el proceso**. A menudo, un revisor reflexivo es suficiente—especialmente si está familiarizado con el dominio. Si el cambio toca un área específica, pediré la opinión de la persona que posee (o mejor entiende) esa parte del código. No necesita involucrar a todos.
 
-> En equipos pequeños, exigir dos aprobaciones en cada PR se convierte rápido en un cuello de botella. El objetivo es alineamiento y calidad, no ceremonia por sí misma.
+> En equipos pequeños, requerir dos aprobaciones en cada PR puede convertirse rápidamente en un cuello de botella y ralentizar la entrega de valor. El objetivo es alineamiento y calidad, no ceremonia por sí misma.
 
 ### Uso Show para cambios seguros y de bajo impacto
 
@@ -60,46 +60,46 @@ Podría mergear inmediatamente cuando:
 - Hago ajustes no funcionales (formato, logs, comentarios)
 - Aplico ajustes de UI o estilo sin cambio de lógica
 
-El principio clave: **Show es opcional, nunca obligatorio**. Lo uso solo si el cambio es de bajo riesgo y encaja con las expectativas del equipo. Cuando hago Show, asumo la responsabilidad del resultado.
+El principio clave: **Show es opcional—nunca obligatorio**. Elijo Show solo si el cambio es de bajo riesgo y encaja con las expectativas del equipo. Cuando uso Show, me hago responsable del resultado. La responsabilidad es mía.
 
 ## Por qué este enfoque funciona para mí
 
 Este modelo me ayuda a:
 
-- Entregar más rápido sin sacrificar calidad
-- Trabajar con más autonomía
-- Evitar cuellos de botella, sobre todo en equipos pequeños o asíncronos
-- Fomentar confianza, responsabilidad y decisiones reflexivas
+- Entregar más rápido sin comprometer la calidad
+- Trabajar con mayor autonomía y propiedad
+- Evitar cuellos de botella, especialmente en equipos pequeños o async
+- Fomentar una mentalidad de confianza, responsabilidad y toma de decisiones reflexiva
 
-> El objetivo deja de ser obtener aprobación. Pasa a compartir intención y hacerte dueño del resultado.
+> Cambia el objetivo de simplemente obtener aprobación a compartir intención y ser dueño del resultado.
 
 ## ¿Qué hace un buen "Show"?
 
-Un PR Show puede ser buena opción cuando:
+Un PR Show podría ser la elección correcta cuando:
 
-- El cambio es trivial y está en mi área de responsabilidad
-- Nadie puede revisar y esperar bloquearía el progreso
+- El cambio es trivial y dentro de mi área de responsabilidad
+- Nadie está disponible para revisar, y esperar bloquearía el progreso
 - El PR incluye contexto y razonamiento claro
-- Estoy abierto a feedback después del merge
-- Puedo hacer ajustes de seguimiento si hace falta
+- Estoy abierto a comentarios post-merge
+- Estoy listo para hacer ajustes de seguimiento si es necesario
 
 ## Consejos para que funcione
 
-Algunos consejos prácticos:
+Algunos consejos prácticos de la experiencia:
 
-- Aclara con el equipo cuándo usar Show vs Ask
-- Siempre da contexto en tu PR, aunque lo mergees de inmediato
-- Escribe tests para lógica o comportamiento nuevo
-- Acepta feedback después del merge. La revisión no termina ahí
-- Revisa periódicamente como equipo y ajusta el enfoque
+- Clarifica las expectativas del equipo sobre cuándo usar Show vs Ask
+- Siempre proporciona contexto en tu PR—incluso si mergeas inmediatamente
+- Escribe tests para cualquier lógica o comportamiento nuevo
+- Da la bienvenida a los comentarios post-merge—la revisión no termina en el merge
+- Reflexiona regularmente como equipo y ajusta el enfoque según sea necesario
 
 ---
 
 Ship, Show, Ask es más que higiene de branching.
 
-Para mí, se trata de construir una cultura de claridad, responsabilidad y confianza. Los desarrolladores pueden moverse rápido sin dejar de pensar bien las cosas.
+Para mí, se trata de construir una cultura de claridad, responsabilidad y confianza—donde los desarrolladores están empoderados para moverse rápido mientras permanecen reflexivos.
 
-Si estás harto de colas lentas de PR y procesos de aprobación excesivos, quizá valga la pena probarlo.
+Si estás cansado de colas lentas de PR y aprobaciones sobre-ingeniadas, esto podría valer la pena intentarlo.
 
 > ¿Curioso por profundizar? Mira el [post de Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html).
 

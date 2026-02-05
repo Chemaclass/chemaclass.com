@@ -9,7 +9,7 @@ subtitle = "El factor humano en la era del vibe-coding"
 static_thumbnail = "/images/blog/2025-12-02/cover.jpg"
 +++
 
-Llevo tiempo usando asistentes de codificación con IA: ChatGPT, Codex, Claude con Sonnet y Opus. Son muy útiles. Te dan una velocidad que no consigues de otra forma.
+He estado usando asistentes de codificación IA extensivamente: ChatGPT, Codex, Claude con Sonnet y Opus. Son increíblemente útiles. Te dan velocidad como nada más.
 
 Pero la velocidad no es calidad.
 
@@ -17,65 +17,65 @@ Pero la velocidad no es calidad.
 
 ## La trampa del vibe-coding
 
-Los modelos de IA son excelentes imitando su entorno. Dales contexto y harán lo necesario para completar la tarea. A esto lo llaman _"vibe-coding"_: describes lo que quieres y la IA produce algo que funciona. Rápido.
+Los modelos de IA son excelentes imitando su entorno. Dales contexto, y harán lo que sea necesario para completar la tarea. Esto se ha conocido como _"vibe-coding"_: describes lo que quieres, y la IA produce algo que funciona. Rápido.
 
-¿El problema? La IA genera código desordenado sin pestañear si eso cumple la tarea. No le importa la mantenibilidad. No piensa en qué pasa cuando cambien los requisitos el mes que viene. Solo produce output.
+¿El problema? La IA felizmente generará código desordenado si eso es lo que hace el trabajo. No le importa la mantenibilidad. No piensa en qué pasa cuando los requisitos cambien el próximo mes. Solo produce output.
 
 > La IA es un espejo que refleja el contexto que le das. Si tu codebase está desordenado, generará más desorden. Si tus prompts son vagos, hará suposiciones.
 
-Sin guía cuidadosa, acabas con parches sobre parches. Código legacy recién creado. Una codebase donde cada cambio se siente arriesgado y el equipo pasa más tiempo luchando contra el código que construyendo funcionalidades.
+Sin guía cuidadosa, terminas con parches sobre parches. Código legacy recién creado. Una codebase donde cada cambio se siente arriesgado y el equipo pasa más tiempo luchando contra el código que construyendo features.
 
 ## El arte de preguntar
 
 ¿Recuerdas Stack Overflow? ¿Las búsquedas en Google que te llevaban a hilos de foros de 2011 donde alguien tenía exactamente el mismo problema?
 
-Hace diez años, ser desarrollador significaba aprender a hacer buenas preguntas. Elaborabas tu post de Stack Overflow con cuidado: describe el problema, muestra lo que intentaste, explica lo que esperabas versus lo que pasó. Si tu pregunta era vaga o perezosa, la comunidad te lo hacía saber. A veces con dureza.
+Hace diez años, ser desarrollador significaba aprender a hacer buenas preguntas. Elaborabas tu post de Stack Overflow cuidadosamente: describe el problema, muestra lo que intentaste, explica lo que esperabas versus lo que pasó. Si tu pregunta era vaga o perezosa, la comunidad te lo hacía saber. A veces duramente.
 
-Pero esa fricción nos enseñó algo valioso: **la calidad de la respuesta depende de la calidad de la pregunta**.
+Pero esa fricción nos enseñó algo valioso: **la calidad de tu respuesta depende de la calidad de tu pregunta**.
 
-Lo mismo pasa con la IA. Un prompt vago da una respuesta vaga. Un prompt bien estructurado con contexto claro, restricciones y ejemplos da algo útil. Saber formular buenas preguntas no quedó obsoleto. Se volvió más importante.
+El mismo principio aplica a la IA. Un prompt vago obtiene una respuesta vaga. Un prompt bien estructurado con contexto claro, restricciones y ejemplos obtiene algo útil. La habilidad de formular buenas preguntas no se volvió obsoleta. Se volvió más importante.
 
-> Aprender a hacer buenos prompts es el equivalente moderno de aprender a buscar en Google y preguntar en Stack Overflow. Quien lo domine, obtendrá mejores resultados.
+> Aprender a hacer prompts a la IA efectivamente es el equivalente moderno de aprender a buscar en Google y preguntar en Stack Overflow. Los desarrolladores que dominen esto obtendrán mejores resultados.
 
-Aunque la IA te dé una respuesta rápida e impresionante, **nunca aceptes código que no entiendas del todo**. Es tentador. La respuesta aparece en segundos, parece profesional, puede que hasta funcione. Pero si no puedes explicar qué hace y por qué, estás plantando una bomba de tiempo en tu codebase. Y cuando explote a las 2am, estarás debuggeando código que no escribiste, sin modelo mental de por qué existe.
+Incluso cuando la IA te da una respuesta rápida e impresionante, **nunca aceptes código que no entiendas completamente**. Es tentador. La respuesta aparece en segundos, se ve profesional, incluso podría funcionar. Pero si no puedes explicar qué hace y por qué, estás plantando una bomba de tiempo en tu codebase. Y cuando explote a las 2am, estarás debuggeando código que no escribiste sin modelo mental de por qué existe.
 
-Cuestiona el output. Pregunta: _"¿Puedes simplificar esto?"_ o _"¿Hay boilerplate aquí que podamos eliminar?"_ La IA tiende a añadir, no a mejorar. Generará abstracciones, funciones helper y patrones que no pediste. No refactorizará a menos que se lo digas. Empuja de vuelta.
+Cuestiona el resultado. Pregunta: _"¿Puedes simplificar esto?"_ o _"¿Hay código repetitivo aquí que podamos eliminar?"_ La IA por defecto añade, no mejora. Generará abstracciones, funciones auxiliares y patrones que no pediste. No refactorizará a menos que se lo digas. Cuestiónala.
 
-Con los tests es crítico. Pide a la IA que genere tests y muchas veces obtendrás tests que reflejan detalles de implementación, no comportamiento. Se romperán en cuanto refactorices, aunque la lógica siga igual. Si quieres tests que verifiquen comportamiento, tienes que pedirlo explícitamente. La IA no hará esa elección por ti.
+Esto es especialmente crítico con los tests. Pide a la IA que genere tests y a menudo obtendrás tests que reflejan detalles de implementación en lugar de comportamiento. Se romperán en el momento que refactorices, incluso si la lógica permanece igual. Si quieres tests que verifiquen comportamiento, necesitas decirlo explícitamente. La IA no hará esa elección por ti.
 
 > No te dejes seducir por la velocidad. A veces, una respuesta rápida que no entiendes es peor que una respuesta lenta que sí entiendes.
 
 ## El factor humano
 
-La IA escribe código rápido, pero no entiende la arquitectura general. No sabe por qué se tomaron ciertas decisiones hace meses. No ve hacia dónde va el producto. Solo ve lo que le muestras, toma decisiones locales sin entender las implicaciones globales. Ese es nuestro trabajo.
+La IA puede escribir código rápido, pero no puede entender la arquitectura general. No sabe por qué ciertas decisiones se tomaron hace meses. No puede ver el panorama general de hacia dónde va el producto. Solo ve lo que le muestras, tomando decisiones locales sin entender las implicaciones globales. Ese es nuestro trabajo.
 
-Como exploré en [diferentes creencias sobre la calidad del software](/es/blog/different-beliefs-about-software-quality), los equipos suelen tener estándares distintos sobre qué significa _"suficientemente bueno"_. Al añadir IA a la ecuación, mantener ese entendimiento compartido se vuelve aún más crítico. La IA no comparte los valores de tu equipo. Solo genera código.
+Como exploré en [diferentes creencias sobre la calidad del software](/es/blog/different-beliefs-about-software-quality), los equipos a menudo tienen estándares variables sobre qué significa _"suficientemente bueno"_. Cuando añades IA a la mezcla, mantener ese entendimiento compartido se vuelve aún más crítico. La IA no comparte los valores de tu equipo. Solo genera código.
 
 > La disciplina para mantener arquitectura limpia, para decir _"no"_ a hacks rápidos, para refactorizar antes de que las cosas empeoren. Eso es únicamente humano.
 
-Libros como [Código limpio](/es/readings/clean-code/) y [Arquitectura limpia](/es/readings/clean-architecture/) no son menos relevantes en la era de la IA. Son más relevantes. Te ayudan a detectar cuándo la IA va en la dirección equivocada.
+Libros como [Clean Code](/es/readings/clean-code/) y [Clean Architecture](/es/readings/clean-architecture/) no son menos relevantes en la era de la IA. Son más relevantes. Te ayudan a detectar cuando la IA va en la dirección equivocada.
 
 ## Colaboración sobre automatización
 
 Hay algo más que la IA no puede reemplazar: el equipo.
 
-Una conversación con un colega sobre _"¿deberíamos extraer esto en un servicio?"_ a menudo lleva a conclusiones que ningún prompt de IA descubriría. Ese ida y vuelta, el empujar de vuelta, el _"¿y si probamos esto otro?"_. Ahí es donde ocurre el entendimiento real.
+Una conversación con un colega sobre _"¿deberíamos extraer esto en un servicio?"_ a menudo lleva a insights que ningún prompt de IA sacaría a la luz. Ese ida y vuelta, el cuestionar, el _"¿qué si intentamos esto en su lugar?"_. Ahí es donde ocurre el entendimiento real.
 
-[Extreme Programming Explained](/es/readings/extreme-programming-explained/) enfatiza prácticas como pair programming y propiedad colectiva del código por buenas razones. No son ineficiencias a automatizar. Son la forma en que los equipos construyen calidad en su proceso.
+[Extreme Programming Explained](/es/readings/extreme-programming-explained/) enfatiza prácticas como pair programming y propiedad colectiva del código por buenas razones. Estas no son ineficiencias para automatizar. Son cómo los equipos construyen calidad en su proceso.
 
-Cuando te saltas la discusión humana y solo dejas que la IA genere soluciones, pierdes la oportunidad de aprender, de cuestionar suposiciones y de crecer como equipo.
+Cuando saltas la discusión humana y solo dejas que la IA genere soluciones, pierdes la oportunidad de aprender, de desafiar suposiciones y de crecer como equipo.
 
 ## Tú eres dueño del código
 
-Cuando la IA escribe código y tú lo commiteas, revisas, apruebas, mergeas y deployeas, **es tu código**. No puedes culpar a la IA cuando algo se rompe en producción. No puedes señalar a Claude o Copilot cuando la arquitectura se vuelve imposible de mantener.
+Cuando la IA escribe código y tú lo commiteas, lo revisas, lo apruebas, lo mergeas y lo deployeas, **es tu código**. No puedes culpar a la IA cuando algo se rompe en producción. No puedes señalar a Claude o Copilot cuando la arquitectura se vuelve imposible de mantener.
 
 Como escribí sobre [el arte del testing](/es/blog/the-art-of-testing/), la calidad es una elección que hacemos en cada paso. Cada commit es una decisión. Cada revisión es una oportunidad de detectar problemas. Cada merge es un respaldo de la calidad del código.
 
 > Somos la última parte responsable del código que la IA escribe. El commit, la revisión, la aprobación, el merge, el deploy. Todo eso somos nosotros.
 
-Moverse rápido en la dirección equivocada solo te lleva a perderte antes. Ver líneas de código aparecer en pantalla no es progreso. El valor que aportamos como desarrolladores no es velocidad de tipeo. Nuestro valor está en entender hacia dónde vamos, mantener disciplina sobre el caos y asegurar que el código de hoy no se convierta en la pesadilla de mañana.
+Moverse rápido en la dirección equivocada solo te lleva a perderte más rápido. Las líneas de código apareciendo en pantalla no es progreso. El valor que aportamos como desarrolladores no es velocidad de tipeo. Nuestro valor está en entender hacia dónde vamos, mantener disciplina sobre el caos, y asegurar que el código que entregamos hoy no se convierta en la pesadilla de mañana.
 
-Usa la IA. Aprovecha la velocidad. Pero nunca olvides: **tú conduces**. Si sueltas el volante, acabarás con una pila de código imposible de mantener antes de lo que crees.
+Usa la IA. Abraza la velocidad. Pero nunca olvides: **tú eres quien conduce**. Si sueltas el volante, terminarás en una pila de código imposible de mantener más rápido de lo que esperabas.
 
 Y cuando eso pase, no hay nadie más a quien culpar.
 

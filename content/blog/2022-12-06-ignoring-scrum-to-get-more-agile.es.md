@@ -30,7 +30,7 @@ No es "Agile sí, Scrum no". Son compatibles. El reto es enfocar los procesos de
 ## Agile en pocas palabras
 
 Recientemente escribí un post sobre fundamentos agile, que te recomiendo leer para entrar en los detalles: [Trabajando agile con equipos no agile](/es/blog/working-agile-with-non-agile-teams/). Pero, el **tl;dr**:
-<ins>Agile es sobre feedback rápido. Es sobre comunicación efectiva y reducir desperdicio mientras se apunta a la simplicidad.</ins>
+<ins>Agile es sobre retroalimentación rápida. Es sobre comunicación efectiva y reducir desperdicio mientras se apunta a la simplicidad.</ins>
 
 [Agile](https://agilemanifesto.org/) es sobre mantener estos valores siempre presentes:
 

@@ -1,6 +1,6 @@
 +++
 title = "¿Equipos de QA dedicados en software?"
-description = "Esto va a ser controvertido, pero hablemos del rol de QA. La verdad detrás de la falta de calidad del software y por qué debería importarte si escribes código."
+description = "Esto será controvertido, pero hablemos de la posición de QA. La verdad oculta detrás de la falta de calidad del software y por qué esto debería preocuparte si escribes software."
 draft = false
 [taxonomies]
 tags = [ "testing", "tdd", "agile", "clean-code" ]
@@ -11,49 +11,49 @@ static_thumbnail = "/images/blog/2023-05-17/cover.jpg"
 
 ![blog-cover](/images/blog/2023-05-17/cover.jpg)
 
-Esto va a ser controvertido, pero hablemos del rol de QA. La verdad detrás de la falta de calidad del software y por qué debería importarte si escribes código.
+Esto será controvertido, pero hablemos de la posición de QA. La verdad oculta detrás de la falta de calidad del software y por qué esto debería preocuparte si escribes software.
 
 <!-- more -->
 
-## QA es un rol, no un puesto
+## QA es un rol, no una posición
 
-Cuando escribes software, eres responsable de su calidad. Si alguien de QA encuentra que tu solución no funciona como debería... ¿cómo es posible? Dirás que podrían encontrar casos límite, pero ¿cómo, si el software ya estaba testeado?
+Como desarrollador de software, cuando escribes software, eres responsable de la calidad de lo que sea que estés escribiendo. Una tercera persona actuando como QA podría encontrar que tu solución no funciona como se esperaba, pero ¿cómo es posible? Podrías argumentar que podrían encontrar casos límite, pero ¿cómo podría ser posible si el software ya fue testeado previamente?
 
-El objetivo de un equipo de software debería ser hacer que el puesto de QA sea innecesario. Que no encuentren nada más que software funcionando bien. Pero ¿cómo llegas ahí? ¿Cómo aseguras que lo que escribes funciona como esperas sin necesitar a alguien de QA en tu equipo?
+El objetivo final de un equipo de software es hacer la posición de QA inútil porque no deberían encontrar nada más que software bien funcionando. Pero ¿cómo llegas a ese punto? ¿Cómo podemos asegurar que el software que escribimos funciona como se espera y no hay necesidad de una persona QA en nuestro equipo?
 
-## La verdad detrás de la falta de calidad
+## La verdad oculta detrás de la falta de calidad del software
 
-Por desgracia, en nuestra industria la demanda de proyectos "rápido, rápido y sucio" ha terminado en MVPs mal desarrollados. Parches sobre parches, código sobre código, con testing manual que solo comprueba caminos felices. A veces ni siquiera se miran los casos límite.
+Desafortunadamente, en nuestra industria del software, la demanda de proyectos "rápidos, rápidos y sucios" terminó en MVPs pobremente desarrollados simplemente aplicando parches y código sobre código con solo testing manual comprobando caminos felices - a veces incluso ignorando casos límite.
 
-> "La fecha límite es en una semana, asi que mejor termínalo a tiempo!"
+> "La fecha límite es en una semana, ¡así que mejor termínalo a tiempo!"
 
-No aprendemos lo que el testing automatizado puede aportar a nuestro día a día. No lo tomamos en serio y no lo practicamos lo suficiente. Y precisamente porque no lo practicamos, no sabemos hacerlo bien. Sí, hablo de escribir tests automatizados que prueban el comportamiento de tu software.
+No aprendemos la importancia de lo que el testing automatizado puede aportar a nuestro trabajo diario, así que no lo tomamos en serio, y por lo tanto, no lo practicamos lo suficiente. Y, por esa misma razón, porque no lo practicamos, no sabemos cómo realizarlo correctamente - ¡sí, estoy hablando de escribir tests automatizados que prueban el comportamiento de tu software!
 
-Nuestra incapacidad para escribir código testeable produce software difícil de testear. Y entonces delegamos el testing a terceros, pasándoles la responsabilidad de la calidad final.
+Nuestra incapacidad para escribir código testeable resulta en software que es difícil de testear, y por lo tanto delegamos el testing a terceros trasladando la responsabilidad de la calidad final general del producto o servicio que escribimos.
 
 ## La práctica hace al maestro
 
-Hay que aprender y aplicar técnicas de testing cuando tengan sentido. ¿Cómo y cuándo usar dobles de test? ¿Tests solitarios o sociables? ¿Qué compromisos hay detrás de cada decisión en tu estrategia de testing?
+Debes aprender y aplicar técnicas de testing apropiadas cuando tengan sentido. ¿Cómo y cuándo usar efectivamente dobles de test, preparar tests solitarios o sociables, qué compromisos y razones respaldan tu mente al elegir uno u otro camino hacia tus estrategias de testing?
 
-Eres el principal responsable de tu conocimiento. Invierte en ti mismo porque nadie lo hará por ti.
+Eres la última y principal persona responsable de tu conocimiento, así que mejor invierte en ti mismo porque nadie más lo hará por ti.
 
-Mira todo lo que haces como una oportunidad de aprender. Practica y mejora en todo lo que hagas.
+Mira todo lo que haces como una oportunidad de aprendizaje. Practica y mejora por defecto en todo lo que haces.
 
-Si no sabes cómo empezar, aquí va mi consejo favorito: practica tus habilidades de testing con katas de código. Lee más sobre esto [aquí](/es/blog/test-driven-development/).
+Si no sabes cómo empezar, aquí está mi consejo favorito: siempre puedes practicar y mejorar tus habilidades de testing usando katas de código. Lee más sobre este tema [aquí](/es/blog/test-driven-development/).
 
 ## Buena teoría, pero... ¿para qué molestarse?
 
-El testing manual es necesario, claro. Es otra estrategia de testing que no estoy atacando. Puede que necesitemos a alguien dedicado a descubrir qué funcionalidades nuevas queremos para satisfacer a nuestros clientes. Pero este post no va de eso.
+El testing manual es, por supuesto, necesario. Es otra estrategia de testing que no estoy culpando o atacando. Aún podríamos necesitar una persona dedicada a cargo de descubrir qué nuevas funcionalidades queremos construir para satisfacer a nuestros clientes. Pero este post no es sobre esa posición.
 
-Va de acortar el bucle de feedback. Si puedes escribir software que funcione de formas específicas, ¿no puedes escribir tests automatizados que prueben que se comporta como esperas?
+Se trata de acortar el bucle de retroalimentación. Si puedes escribir software para que funcione de maneras específicas, ¿no puedes escribir tests automatizados para probar que el software que escribiste se comporta de la manera que esperas?
 
-Si has cubierto el comportamiento de tu software con tests automatizados a cualquier nivel que tenga sentido, ¿qué queda para una persona QA dedicada?
+Si has cubierto con tests automatizados el comportamiento de tu software a cualquier nivel que tenga sentido, ¿qué queda para una persona QA dedicada?
 
-La próxima vez que pienses "Necesitamos a alguien de QA para testear esto", prueba a pensar: "¿Cómo puedo escribir un test automatizado que verifique lo que esperaría si alguien de QA lo estuviera comprobando?"
+La próxima vez que pienses "Necesitamos una persona QA para testear esto", intenta el ejercicio de pensar en cambio, "¿Cómo puedo escribir un test automatizado que verifique lo que esperaría si una persona QA estuviera comprobando esto?"
 
-Así es como pasas de "puesto de QA a tiempo completo" a "mentalidad de calidad para todos los que escriben software".
+Y así es como cambias la "posición de QA a tiempo completo" en una "mentalidad de rol para todos los que escriben software."
 
-El código nunca miente y nunca olvida. Una vez escrito y automatizado en tu pipeline, puedes ejecutarlo cuando quieras sin coste.
+El código nunca miente y nunca olvida; una vez que está escrito y automatizado en tu pipeline, puedes ejecutarlo en cualquier momento sin coste.
 
 ![blog-footer](/images/blog/2023-05-17/footer.jpg)
 

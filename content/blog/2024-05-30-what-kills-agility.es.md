@@ -12,45 +12,45 @@ pin = false
 
 ![blog-cover](/images/blog/2024-05-30/cover.jpg)
 
-Docenas de documentos y hojas de calculo, reunion tras reunion, y sin embargo poco impacto. El resultado: desalineaciones del equipo que se descubren demasiado tarde.
+Docenas de documentos y hojas de cálculo, reuniones tras reuniones, y sin embargo sin mucho impacto, resultan en desalineaciones del equipo—descubiertas demasiado tarde.
 
 <!-- more -->
 
-La forma en que gestionamos una organizacion define su calidad. Una buena gestion es clave para evitar caer en Waterfall si queremos un entorno Agile. Pero ¿por que querriamos eso? ¿Que tiene de malo como ya trabajamos?
+Cómo gestionamos una organización define su calidad. Una excelente gestión es crucial para evitar la trampa del Waterfall si buscamos construir un entorno Agile. Pero ¿por qué querríamos eso? ¿Qué hay de malo en la forma en que ya trabajamos?
 
-Si ya estas contento con como trabajais juntos, perfecto. Pero ¿que tal reevaluar vuestra forma de trabajo para buscar posibles mejoras?
+Si ya estás feliz con cómo tú y tu equipo trabajan juntos, está bien. Sin embargo, ¿qué hay de reevaluar cómo trabajas para buscar mejoras potenciales?
 
-Me refiero a evaluar tu sistema y como actuais dentro de el. Lo que funciono hace meses o anos puede ser distinto a lo que descubririais hoy, como parte de la mejora continua.
+Me refiero a evaluar tu sistema y cómo tú y las personas a tu alrededor actúan dentro de él. Lo que funcionó hace meses o años podría diferir de lo que podríamos descubrir hoy—como parte de la mejora continua.
 
-No me gusta la politica en el trabajo, donde cada equipo mira solo por si mismo en vez de tener una direccion compartida. El resultado: trabajo diario lleno de miedo que baja desde arriba, manteniendo un [ambiente de trabajo toxico](/es/blog/unhealthy-working-environment). Game of Thrones esta genial como ficcion, pero no es algo que quieras en tu dia a dia.
+No me gusta la política en el lugar de trabajo, donde cada equipo va a lo suyo en lugar de tener una dirección compartida más grande. Esto resulta en trabajo diario lleno de miedo desde arriba, pasado a las personas de abajo, manteniendo un [ambiente de trabajo no saludable](/es/blog/unhealthy-working-environment). Game of Thrones es genial como serie de ficción, pero no algo con lo que lidiar en el negocio diario.
 
-Agile nacio precisamente como respuesta al desperdicio que genera la politica y la microgestion organizacional.
+Agile nació precisamente como respuesta al desperdicio excesivo generado por la política y la microgestión organizacional.
 
-El control y el "rendimiento lento" necesitaban un enfoque mas flexible. Cuando las personas adoptan una mentalidad fija, resisten el cambio, temen al fracaso y priorizan procesos rigidos y jerarquias. Esto choca con las ideas centrales de Agile: abrazar el cambio, entrega continua, desarrollo iterativo, planificacion flexible y fomentar la colaboracion e innovacion.
+Controlar y el "rendimiento lento" necesitaba un enfoque más flexible. Cuando las personas adoptan una mentalidad fija, resisten el cambio, temen al fracaso y priorizan procesos rígidos y jerarquías. Esto entra en conflicto con las ideas centrales de Agile de abrazar el cambio, entrega continua con desarrollo iterativo, planificación flexible y fomentar la colaboración e innovación.
 
-Una mentalidad fija genera miedo a experimentar y reticencia a desafiar el statu quo. Esto reduce el progreso y el potencial de aprendizaje y crecimiento.
+Una mentalidad fija lleva al miedo a la experimentación y una reticencia a desafiar el statu quo, reduciendo el progreso y el potencial de aprendizaje y crecimiento.
 
 ---
 
 ## ¿Qué mata la agilidad?
 
-- **Mentalidad fija**: Resistencia al cambio, miedo al fracaso y priorizar procesos rigidos sobre aprendizaje y adaptacion. Esto estrangula la innovacion y flexibilidad.
-- **Burocracia excesiva**: Procesos complejos y demasiada documentacion ralentizan la toma de decisiones y la capacidad de respuesta.
+- **Mentalidad fija**: Resistencia al cambio, miedo al fracaso y priorizar procesos rígidos sobre aprendizaje y adaptación estrangula la innovación y flexibilidad.
+- **Burocracia excesiva**: Procesos complejos y documentación excesiva ralentizan la toma de decisiones y la capacidad de respuesta.
 - **Microgestión**: Liderazgo demasiado controlador socava la autonomía del equipo.
 - **Falta de colaboración**: Mala comunicación y trabajo en equipo dificultan el progreso.
-- **Bucles de feedback inefectivos**: Impiden ajustes y mejora continua.
-- **Miedo a experimentar**: Una cultura que castiga el fracaso desalienta la experimentacion y aprender de los errores.
-- **Procesos inflexibles**: Seguir las reglas al pie de la letra sin adaptarse a las necesidades del proyecto.
+- **Bucles de retroalimentación inefectivos**: Impiden ajustes y mejora continua.
+- **Miedo a la experimentación**: Una cultura que castiga el fracaso desalienta la experimentación y el aprendizaje de errores.
+- **Procesos inflexibles**: Adherencia estricta sin adaptarse a las necesidades del proyecto.
 - **Objetivos desalineados**: Prioridades conflictivas reducen la eficiencia.
-- **Falta de apoyo del liderazgo**: Sin respaldo de la alta direccion, las iniciativas Agile no consiguen los recursos ni el compromiso necesarios.
-- **Malas practicas tecnicas**: Descuidar la excelencia tecnica y el buen diseno lleva a una base de codigo fragil, dificil de adaptar y extender.
+- **Falta de apoyo del liderazgo**: Sin respaldo de la alta dirección, las iniciativas Agile pueden tener dificultades para obtener los recursos y el compromiso necesarios.
+- **Malas prácticas técnicas**: Descuidar la excelencia técnica y el buen diseño puede llevar a una base de código frágil que es difícil de adaptar y extender.
 
 ### ¿Qué puedes hacer al respecto?
 
 Aprende los básicos de Extreme Programming (XP) y Lean Software Development.
 
-- **XP**: Se centra en practicas de desarrollo de software y excelencia tecnica, con practicas concretas como pair programming y Test-Driven Development (TDD).
-- **Lean**: Tiene un enfoque mas amplio: eliminar desperdicio, optimizar flujo y mejorar procesos en toda la organizacion.
+- **XP**: Enfocado en prácticas de desarrollo de software y excelencia técnica, con prácticas específicas como pair programming y Test-Driven Development (TDD).
+- **Lean**: Toma un enfoque más amplio, enfocándose en eliminar desperdicio, optimizar flujo y mejorar procesos en toda la organización.
 
 ![blog-cover](/images/blog/2024-05-30/footer.jpg)
 

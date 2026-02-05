@@ -1,69 +1,69 @@
 +++
 title = "El camino a la seniority en software"
-description = "La seniority en software esta mas contaminada por marketing y politica que por realidad. ¿Que podemos hacer al respecto?"
+description = "La seniority en nuestra industria del software está más contaminada por marketing y política que en la realidad. ¿Qué podemos hacer al respecto?"
 [taxonomies]
 tags = [ "career", "mentoring", "clean-code", "tdd", "communication" ]
 [extra]
-subtitle = "¿Como convertirse en Desarrollador de Software Senior?"
+subtitle = "¿Cómo convertirse en un Desarrollador de Software Senior?"
 static_thumbnail = "/images/blog/2022-06-08/cover.jpg"
 +++
 
 ![blog-cover](/images/blog/2022-06-08/cover.jpg)
 
-Todos hemos sido juniors en algun momento. Es facil saberlo porque es al principio de tu carrera. Tus responsabilidades las delimitaban otros companeros que cuidaban de ti.
+Todos hemos sido desarrolladores junior en algún momento. Esto es fácil de saber porque es al principio de tu carrera. Tus responsabilidades fueron delimitadas por otros compañeros que cuidaban de ti.
 
 <!-- more -->
 
-De repente, tras algunos meses o anos, conseguiste tu promocion u otro trabajo. Ya no eras junior, sino intermedio.
+De repente, en algún momento, después de algunos meses o años, conseguiste tu promoción u otro trabajo, donde ya no eras junior, sino intermedio.
 
-Un intermedio (o middle) esta entre junior y senior. Sabes que ya no eres junior, sabes entregar valor, pero tienes sentimientos encontrados sobre la seniority. Quieres ser senior, pero no sabes como. No hay un camino claro.
+Un intermedio (también conocido como middle) es algo entre junior y senior. Ahora sabes que ya no eres junior, sabes cómo entregar valor pero aún tienes sentimientos encontrados sobre la seniority. Quieres ser senior, pero no sabes cómo. No hay un camino claro para alcanzar este objetivo.
 
-Espera... en realidad hay dos formas faciles de conseguir el titulo de senior. Te pueden promover en tu empresa, o puedes empezar en otra empresa como "senior". ¿Facil, no?
+Espera un segundo... ¡en realidad hay dos formas fáciles de conseguir el título de senior! Puedes ser promovido como tal en tu empresa, o puedes empezar una nueva posición como "senior" en otra empresa, ¿fácil no?
 
-## Marketing y politica
+## Marketing y política
 
-Por desgracia, el nivel de seniority esta muy contaminado por marketing y politica. Para empezar, ¿que significa "senior" en este contexto? En todas las empresas donde he trabajado siempre me he encontrado gente que decia ser "senior" cuando en realidad solo a unos pocos los consideraria como tales.
+Desafortunadamente, el nivel de "seniority" está muy contaminado por marketing y política. Primero, ¿qué significa "senior" en este contexto? En todas las empresas donde he trabajado (si no todas) siempre he estado rodeado de personas que afirmaban ser "seniors" cuando en realidad solo a unos pocos los consideraría como tales.
 
-Nuestra industria esta falsificada por la necesidad de las empresas de tener expertos en papel mas que en la realidad. Es un problema del que hay que hablar.
+Nuestra industria senior está falsificada por la necesidad de las empresas de tener expertos en papel más que en la realidad, y esto es un problema con el que debemos lidiar y hablar.
 
-Seniority suele significar mas experiencia. Pero ¿como la calculas? Para una empresa es facil: mas anos en la industria. Pero ¿son relevantes los anos en una industria que cambia constantemente? No seria un gran problema si tuvieras los fundamentos bien interiorizados. Lo curioso es que solo he visto estos fundamentos en un 10% de los seniors durante mis casi 10 anos de experiencia y 7 empresas.
+Seniority generalmente significa más experiencia, pero ¿cómo calculas esto? Es fácil desde el punto de vista de una empresa: más años en la industria. Pero, ¿es realmente relevante el número de años que has estado trabajando en una industria que está en constante cambio y evolución? En realidad, esto no sería un gran problema si tienes los fundamentos del software bien interiorizados, pero curiosamente, he visto estos fundamentos solo en ~10% de todos los seniors durante mis casi 10 años de experiencia y 7 empresas con las que he trabajado.
 
-Que lleves 10 o mas anos trabajando no significa que seas "senior" de verdad. ¿Que mas podemos medir para saber si mereces ese titulo?
+El hecho de que hayas estado trabajando durante 10 o más años no significa necesariamente que seas un "senior" con el software. ¿Qué más podemos medir para identificar si realmente mereces este título?
 
-### No todo es dinero
+### No todo se trata del dinero
 
-Seamos honestos: los titulos senior estan mejor pagados que las posiciones junior o middle. Si puedes conseguir un salario mas alto por tener "senior" en tu titulo, seria tonto rechazarlo. Pero mas alla del marketing y la politica, hay que hablar de los fundamentos de la seniority para entender que significa realmente "senior".
+Seamos honestos, los títulos senior están mejor pagados que las posiciones junior o middle. Si tienes la oportunidad de conseguir un salario más alto porque tienes "senior" en tu título de trabajo, bueno, no sería inteligente rechazarlo. Pero, independientemente de la política y el marketing, debemos abordar algunos fundamentos de seniority para entender mejor qué significa la palabra "senior" en este contexto.
 
-> No todo es dinero. Tambien vienen responsabilidades con la seniority.
+> No todo se trata del dinero, sino también de las responsabilidades que vienen con la seniority.
 
 ## Fundamentos de la seniority
 
-Ser senior en software no va de "anos de experiencia". Va de:
+Ser senior en nuestra industria del software no se trata del "número de años de experiencia" sino:
 
-- ¿Sabes **transmitir tu conocimiento** a otros? Compartir lo que sabes es clave para un senior.
-- ¿Sabes **colaborar** con otras personas? Con el PM/PO, con otros equipos. La colaboracion crea un bucle de feedback constante.
-- ¿Sabes **trabajar en pareja** con tus companeros? El pair-programming mejora la cohesion del equipo.
-- ¿Como son tus habilidades de **testing**? El testing esta muy ligado a la calidad de tu trabajo. Un senior apunta al diseno incremental.
-- ¿Entiendes la importancia de **entregar valor constantemente** en partes pequenas? Cuanto antes entregues valor, antes tendras feedback.
-- ¿Como es tu **conocimiento tecnico** de software de calidad? Principios SOLID, codigo limpio, TDD, refactoring diario, bajo acoplamiento, alta cohesion, estructuras de datos adecuadas, elegir la solucion correcta (KISS, YAGNI...).
-- ¿Sabes **adaptarte y lidiar con los cambios**? El cambio es inevitable. Hay que aprender a manejarlo, sobre todo el que no controlamos.
-- ¿Tienes **pensamiento emprendedor**? Mantener los objetivos de la organizacion siempre en mente.
+- ¿Qué tan bien puedes **transmitir tu conocimiento** a otros? Compartir tu conocimiento es una tarea importante para una persona senior.
+- ¿Qué tan bien puedes **colaborar** con otras personas? Incluyendo el PM/PO y otros equipos. La colaboración es crucial para crear un bucle de retroalimentación constante.
+- ¿Qué tan bien puedes **trabajar en conjunto** con tus compañeros? El pair-programming abraza la cohesión del equipo y ayuda al equipo a mejorar.
+- ¿Qué tan buenas son tus habilidades de **testing**? El testing está altamente relacionado con la calidad de tu trabajo, y un senior debería apuntar a un diseño incremental.
+- ¿Qué tan bien entiendes **entregar valor constantemente** en pequeñas partes? Cuanto antes entregues valor, antes obtendrás retroalimentación sobre ello.
+- ¿Qué tan bueno es tu **conocimiento técnico** relacionado con software de calidad y los trade-offs para llegar allí? Principios SOLID, código limpio, TDD, refactoring como parte de tu trabajo diario, bajo acoplamiento, alta cohesión, estructuras de datos apropiadas y elegir la solución correcta (KISS, YAGNI...).
+- ¿Qué tan bien eres capaz de adaptarte y **lidiar con los cambios**? El cambio es inevitable, y por lo tanto debemos aprender a lidiar con los cambios, especialmente los que no podemos controlar.
+- ¿Qué tan desarrollado está tu **pensamiento emprendedor**? Siempre manteniendo los objetivos de la organización en mente.
 
-Como ves, no menciono tecnologias concretas ni anos de experiencia. ¿Por que? Porque la tecnologia es un "detalle de implementacion". La experiencia viene de practicar y de la actitud, no de dejar pasar el tiempo.
+Como puedes ver, no hay mención de tecnología concreta o años de experiencia. ¿Por qué? Porque la tecnología es solo un "detalle de implementación", y la experiencia viene de practicar y la actitud, no de dejar pasar el tiempo.
 
-### La actitud importa
+### La actitud es importante
 
-Imagina dos personas:
+Tenemos dos personas:
 
-A) Lleva 15 anos trabajando, hace mas o menos lo mismo cada dia, y no se preocupa por mejorar sus habilidades. Hace lo que le dicen.
+A) una persona que trabaja desde hace 15 años, haciendo relativamente lo mismo cada día, y sin preocuparse por sus propias habilidades. Simplemente hace lo que otros le dicen que haga.
 
-B) Lleva 5 anos, se desafia cada semana, prueba diferentes enfoques ante los problemas, y afila sus habilidades constantemente.
+B) una persona que trabaja desde hace 5 años, desafiándose a sí misma cada semana, probando diferentes enfoques al lidiar con problemas, y afilando sus propias habilidades constantemente.
 
-¿Ves la diferencia principal? No son los 10 anos de "experiencia" entre ellos. Es su **actitud**.
+¿Puedes ver la diferencia principal? No, no son los 10 años de diferencia de "experiencia" entre ellos, sino su **actitud**.
 
-Asumimos que un ano de experiencia trae aprendizaje y conocimiento, y por eso usamos el tiempo como medida de seniority. Pero la actitud es igual o mas importante. He conocido muchos "seniors" de 3, 6, 10 y mas anos de "experiencia" sin actitud. El problema se notaba a diario.
+Entendemos erróneamente que _un año de experiencia debe venir con aprendizaje y conocimiento_, así que tendemos a usar el tiempo como medida de seniority. Pero argumento que el "factor actitud" es igual o incluso más importante. He estado rodeado de muchas personas que se llaman a sí mismas seniors con 3, 6, 10 y más años de "experiencia" pero sin actitud, y podías ver claramente este problema a diario.
 
-> Para ser un senior de verdad necesitas tiempo, experiencia, y sobre todo: actitud para **mejorar tus habilidades y las de quienes te rodean**.
+> Necesitas esta combinación para construirte como un desarrollador verdaderamente senior; tiempo, experiencia, y lo más importante: actitud hacia **mejorar tus propias habilidades y las de quienes te rodean**.
 
 **Lecturas relacionadas**
 

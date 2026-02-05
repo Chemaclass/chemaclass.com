@@ -16,32 +16,32 @@ Descubre otra forma de compartir sugerencias con tu equipo de desarrollo.
 
 ### Imagina esta situación
 
-Estás revisando un Pull Request (PR) y ves mejoras menores que te gustaría sugerir al autor. Podrías dejar comentarios, y normalmente eso basta.
+Estás revisando un Pull Request (PR), y ves algunas mejoras menores o sugerencias que te gustaría compartir con el autor. Podrías escribir algunos comentarios, y normalmente, eso sería suficiente.
 
-Pero a veces, para transmitir tu idea completa, necesitas tocar varios archivos. Explicarlo todo en un comentario acabaría siendo un texto enorme y poco claro.
+Imagina que para transmitir tu "idea completa" necesitarías cambiar algunos archivos porque simplemente comunicar la imagen completa acabará en un comentario enorme que podría no ser tan claro como podría ser.
 
 ## ¿Qué posibilidades hay aparte de solo comentarios en un PR?
 
-Hay varias opciones. La clave es conocerlas y elegir según la prioridad de la tarea:
-- Escribir un comentario como feedback suele ser la opción por defecto, pero no la única.
-- Hacer pair-thinking o hablar directamente siempre ayuda a aclarar dudas.
-- Compartir tus parches de git es otra buena alternativa.
+Bueno, hay múltiples opciones. La clave es ser consciente de ellas y usarlas sabiamente dependiendo de la prioridad de la tarea y los cambios en sí:
+- Como ya se mencionó, escribir un comentario como retroalimentación es una buena idea por defecto, pero no la única.
+- Siempre podemos hacer algo de pair-thinking, hablar en cualquier momento. La comunicación siempre es buena para aclarar la posible incertidumbre.
+- Compartir tus parches de git es otra buena opción.
 
 # ¡Git diff al rescate!
 
-Como revisor, puedes compartir tu idea sin hacer commits ni comentarios en el PR. Solo tienes que enviar los cambios directamente al autor.
+¿Y si tú (como revisor) pudieras compartir tu idea sin ningún commit o comentario en el PR, pero compartiendo tus cambios directamente con el autor?
 
-Es muy fácil. El comando git diff te da las diferencias entre dos ramas.
+Bueno, eso es realmente posible y muy fácil. Como ya sabes, el comando git diff te da las diferencias entre dos ramas cualesquiera.
 
 ```sh
 git diff origin develop > ../my-origin-develop.patch
 ```
 
-Redirigimos la salida del diff a un archivo (el parche), que luego podemos compartir con cualquier compañero.
+Lo que estamos haciendo aquí es redirigir la salida del comando diff a un archivo (también conocido como: parche), para poder compartir esa salida con cualquier otro compañero de equipo.
 
 ## ¿Y ahora qué?
 
-Con el archivo de parche, aplicar los cambios en tu máquina local es muy sencillo y no requiere ningún commit:
+Bueno, teniendo ese archivo de parche, es bastante fácil aplicar esos cambios en tu máquina local sin hacer ningún commit:
 
 ```sh
 git apply ../my-origin-develop.patch
