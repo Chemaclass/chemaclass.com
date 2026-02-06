@@ -142,14 +142,6 @@
         </div>
     </div>
 
-    <!-- Now Section -->
-    {% set now = get_section(path="now/_index.md") %}
-    <section class="now-section">
-        <h2>{{ trans(key="home_now", lang=lang) }}</h2>
-        <div class="now-content">{{ now.content | safe }}</div>
-        <span class="now-updated">{{ trans(key="home_now_updated", lang=lang) }}: {% if lang == "es" %}{{ now.extra.updated_es }}{% else %}{{ now.extra.updated }}{% endif %}</span>
-    </section>
-
     <!-- Skills Section -->
     <section class="skills-section">
         <div class="skills-tags">
