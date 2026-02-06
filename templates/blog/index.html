@@ -19,6 +19,23 @@
       <p class="blog-intro">{{ trans(key="blog_intro", lang=lang) }}</p>
     </div>
 
+  {% if config.extra.start_here_posts %}
+  <section class="start-here">
+    <h2 class="start-here__heading"><i class="fa-solid fa-compass"></i> {{ trans(key="blog_start_here", lang=lang) }}</h2>
+    <div class="start-here__grid">
+      {% for path in config.extra.start_here_posts %}
+        {% set post = get_page(path=path) %}
+        <a href="{{ post.permalink }}" class="start-here__card">
+          <h3>{{ post.title }}</h3>
+          {% if post.extra.subtitle %}
+            <p class="start-here__subtitle">{{ post.extra.subtitle }}</p>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
 
   <div class="blog-list blog-list--featured">
