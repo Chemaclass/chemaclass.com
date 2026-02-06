@@ -12,21 +12,35 @@
   <div class="topics-page__groups">
     {% for topic in config.extra.topics %}
     <section class="topics-page__group">
-      <div class="topics-page__group-header">
-        <h2>{% if lang == "es" %}{{ topic.title_es }}{% else %}{{ topic.title }}{% endif %}</h2>
-        <p class="topics-page__group-desc">{% if lang == "es" %}{{ topic.description_es }}{% else %}{{ topic.description }}{% endif %}</p>
+      {# Collect matching tags with counts first so we can show total #}
+      {% set_global matched_tags = [] %}
+      {% set_global topic_total = 0 %}
+      {% for tag_name in topic.tags %}
+        {% for item in taxonomy.items %}
+          {% if item.name == tag_name %}
+            {% set_global matched_tags = matched_tags | concat(with=[item]) %}
+            {% set count = item.pages | length %}
+            {% set_global topic_total = topic_total + count %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+
+      <div class="topics-page__group-header" onclick="this.parentElement.classList.toggle('expanded')">
+        <div class="topics-page__group-info">
+          <div class="topics-page__group-title-row">
+            <h2>{% if lang == "es" %}{{ topic.title_es }}{% else %}{{ topic.title }}{% endif %}</h2>
+            <span class="topics-page__group-count">{{ topic_total }}</span>
+          </div>
+          <p class="topics-page__group-desc">{% if lang == "es" %}{{ topic.description_es }}{% else %}{{ topic.description }}{% endif %}</p>
+        </div>
+        <span class="topics-page__toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </span>
       </div>
 
       <div class="topics-page__tags">
-        {# Collect matching tags with counts, then render sorted by count #}
-        {% set_global matched_tags = [] %}
-        {% for tag_name in topic.tags %}
-          {% for item in taxonomy.items %}
-            {% if item.name == tag_name %}
-              {% set_global matched_tags = matched_tags | concat(with=[item]) %}
-            {% endif %}
-          {% endfor %}
-        {% endfor %}
         {% for item in matched_tags | sort(attribute="pages") | reverse %}
           {% set count = item.pages | length %}
           <a href="{{ item.permalink }}" class="topics-page__tag{% if count >= 15 %} topics-page__tag--popular{% endif %}">
