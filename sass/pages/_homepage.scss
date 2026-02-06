@@ -590,68 +590,6 @@ main:has(.homepage-container) #scroll-to-top {
   }
 }
 
-// Homepage Newsletter (compact inline version)
-.homepage-newsletter {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  margin: 2rem 0;
-  padding: 1.25rem 1.5rem;
-  border-top: 1px solid var(--preview-divider-color);
-  border-bottom: 1px solid var(--preview-divider-color);
-
-  &__text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
-
-    strong {
-      font-size: 0.95rem;
-      color: var(--heading-color);
-    }
-
-    span {
-      font-size: 0.8rem;
-      color: var(--color-subtitle);
-    }
-  }
-
-  &__button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1.15rem;
-    border-radius: 8px;
-    background: var(--accent-color);
-    color: #fff;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-    white-space: nowrap;
-
-    &:hover {
-      opacity: 0.85;
-      border-bottom: none;
-    }
-
-    i {
-      font-size: 0.85rem;
-    }
-  }
-}
-
-@media (max-width: $breakpoint-phone) {
-  .homepage-newsletter {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem 0;
-    text-align: center;
-  }
-}
-
 // Connect Section
 .connect-section {
   text-align: center;
