@@ -127,6 +127,11 @@ home_skill_leadership = "Leadership"
 home_skill_communication = "Communication"
 home_services_cta = "Work with me"
 home_connect = "Connect"
+# Newsletter
+newsletter_title = "Stay in the loop"
+newsletter_description = "Get notified when I publish new posts. No spam, unsubscribe anytime."
+newsletter_placeholder = "Your email address"
+newsletter_button = "Subscribe"
 # Sponsor page
 sponsor_title = "Sponsor"
 sponsor_back = "Home"
@@ -400,6 +405,11 @@ home_skill_leadership = "Liderazgo"
 home_skill_communication = "Comunicación"
 home_services_cta = "Trabaja conmigo"
 home_connect = "Conecta"
+# Newsletter
+newsletter_title = "Mantente al día"
+newsletter_description = "Recibe una notificación cuando publique nuevos artículos. Sin spam, cancela cuando quieras."
+newsletter_placeholder = "Tu correo electrónico"
+newsletter_button = "Suscribirse"
 # Sponsor page
 sponsor_title = "Colabora"
 sponsor_back = "Inicio"

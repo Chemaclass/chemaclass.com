@@ -1,0 +1,16 @@
+<section class="newsletter" id="newsletter">
+  <h2 class="newsletter__title">{{ trans(key="newsletter_title", lang=lang) }}</h2>
+  <p class="newsletter__description">{{ trans(key="newsletter_description", lang=lang) }}</p>
+  <form class="newsletter__form" action="#" method="post">
+    <input
+      type="email"
+      class="newsletter__input"
+      placeholder="{{ trans(key="newsletter_placeholder", lang=lang) }}"
+      required
+      aria-label="{{ trans(key="newsletter_placeholder", lang=lang) }}"
+    />
+    <button type="submit" class="newsletter__button">
+      {{ trans(key="newsletter_button", lang=lang) }}
+    </button>
+  </form>
+</section>
