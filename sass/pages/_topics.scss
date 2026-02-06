@@ -145,25 +145,15 @@
     border-radius: 2rem;
     text-decoration: none;
     color: var(--body-color);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    transition: border-color 0.2s ease;
 
     &:hover {
       border-color: var(--accent-color);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     &--popular {
-      border-color: var(--accent-color);
-
       .topics-page__tag-name {
         font-weight: 600;
-        color: var(--heading-color);
-      }
-
-      .topics-page__tag-count {
-        background: var(--accent-color);
-        color: white;
       }
     }
   }

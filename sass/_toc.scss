@@ -29,20 +29,10 @@
     top: 10px;
     text-align: left;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    // Smooth transition for showing/hiding TOC
     opacity: 1;
     transform: translateX(0);
     visibility: visible;
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s ease,
-      visibility 0.3s ease,
-      width 0.3s ease,
-      padding 0.3s ease,
-      margin 0.3s ease,
-      border-width 0.3s ease,
-      top 0.3s ease-in-out,
-      max-height 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out, max-height 0.3s ease-in-out;
 
     // Custom scrollbar - hidden by default, visible on hover/scroll
     &::-webkit-scrollbar {
@@ -98,12 +88,11 @@
   &[data-toc-hidden="true"] {
     #toc-container {
       opacity: 0;
-      transform: translateX(-20px);
       visibility: hidden;
       pointer-events: none;
       width: 0;
       padding: 0;
-      margin-right: -2rem; // Compensate for flex gap
+      margin-right: -2rem;
       border-width: 0;
     }
   }
@@ -115,8 +104,6 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    // Smooth expansion when TOC is hidden
-    transition: flex 0.3s ease;
 
     @media (max-width: $breakpoint-phone) {
       display: block;

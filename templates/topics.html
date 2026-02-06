@@ -11,7 +11,7 @@
 
   <div class="topics-page__groups">
     {% for topic in config.extra.topics %}
-    <section class="topics-page__group">
+    <section class="topics-page__group" data-tags="{{ topic.tags | join(sep=',') }}">
       {# Collect matching tags and count unique posts across all tags #}
       {% set_global matched_tags = [] %}
       {% set_global topic_total = 0 %}
@@ -68,4 +68,19 @@
     </a>
   </div>
 </div>
+<script>
+(function() {
+  var tag = location.hash.slice(1);
+  if (!tag) return;
+  var groups = document.querySelectorAll('.topics-page__group');
+  for (var i = 0; i < groups.length; i++) {
+    var tags = groups[i].getAttribute('data-tags');
+    if (tags && tags.split(',').indexOf(tag) !== -1) {
+      groups[i].classList.add('expanded');
+      groups[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      break;
+    }
+  }
+})();
+</script>
 {% endblock content %}
