@@ -97,6 +97,12 @@
     find <tag>     Find all posts with a given tag
     diff <f1> <f2> Compare two posts side by side
 
+  [[b;#3fb950;]Stats:]
+    wc [section]     Word count stats for posts
+    cal [year]       Calendar heatmap of posts
+    streak           Show writing streaks
+    similar <file>   Find posts with similar tags
+
   [[b;#3fb950;]Customize:]
     theme [name]   Change color scheme
 
@@ -1009,6 +1015,374 @@ ${portrait}
       output += '[[;#6e7681;]' + '─'.repeat(w) + '──┴──' + '─'.repeat(w) + ']';
 
       return output;
+    },
+
+    wc: function(args) {
+      const section = args[0]?.replace(/\/$/, '');
+      const validSections = ['blog', 'readings', 'talks', 'services'];
+
+      if (section && !validSections.includes(section)) {
+        return `[[;#f85149;]Invalid section: ${section}]\n[[;#6e7681;]Valid sections: ${validSections.join(', ')}]`;
+      }
+
+      const posts = [];
+
+      function collectPosts(dir, path) {
+        const entries = dir.children || dir;
+        for (const [name, entry] of Object.entries(entries)) {
+          if (entry.type === 'dir') {
+            collectPosts(entry, path + name + '/');
+          } else if (entry.content) {
+            const words = entry.content.trim().split(/\s+/).length;
+            posts.push({ name, path: path + name, entry, words });
+          }
+        }
+      }
+
+      if (section) {
+        const dir = fs[section];
+        if (!dir) return `[[;#f85149;]Section '${section}' not found]`;
+        collectPosts(dir, '/' + section + '/');
+      } else {
+        collectPosts(fs, '/');
+      }
+
+      if (posts.length === 0) {
+        return `[[;#6e7681;]No posts found]`;
+      }
+
+      posts.sort((a, b) => b.words - a.words);
+
+      const totalWords = posts.reduce((sum, p) => sum + p.words, 0);
+      const avgWords = Math.round(totalWords / posts.length);
+      const longest = posts[0];
+      const shortest = posts[posts.length - 1];
+
+      const label = section || 'all sections';
+      let output = `[[b;#58a6ff;]Word count stats for ${label}:]\n\n`;
+      output += `  [[;#3fb950;]Total posts:]     ${posts.length}\n`;
+      output += `  [[;#3fb950;]Total words:]     ${totalWords.toLocaleString()}\n`;
+      output += `  [[;#3fb950;]Average length:]  ${avgWords.toLocaleString()} words\n`;
+      output += `  [[;#3fb950;]Longest post:]    ${longest.words.toLocaleString()} words\n`;
+      output += `    [[;#58a6ff;]${longest.path}]\n`;
+      output += `    ${longest.entry.title || longest.name}\n`;
+      output += `  [[;#3fb950;]Shortest post:]   ${shortest.words.toLocaleString()} words\n`;
+      output += `    [[;#58a6ff;]${shortest.path}]\n`;
+      output += `    ${shortest.entry.title || shortest.name}\n`;
+
+      // Distribution histogram
+      const brackets = [
+        { label: '< 500', min: 0, max: 500 },
+        { label: '500-1k', min: 500, max: 1000 },
+        { label: '1k-2k', min: 1000, max: 2000 },
+        { label: '2k-3k', min: 2000, max: 3000 },
+        { label: '3k-5k', min: 3000, max: 5000 },
+        { label: '5k+', min: 5000, max: Infinity }
+      ];
+
+      output += `\n[[b;#58a6ff;]Length distribution:]\n\n`;
+      const maxCount = Math.max(...brackets.map(b =>
+        posts.filter(p => p.words >= b.min && p.words < b.max).length
+      ));
+
+      for (const b of brackets) {
+        const count = posts.filter(p => p.words >= b.min && p.words < b.max).length;
+        const barLen = maxCount > 0 ? Math.round((count / maxCount) * 25) : 0;
+        const bar = '█'.repeat(barLen);
+        output += `  [[;#d29922;]${b.label.padEnd(7)}] [[;#3fb950;]${bar}] ${count}\n`;
+      }
+
+      return output.trim();
+    },
+
+    cal: function(args) {
+      const posts = [];
+
+      function collectPosts(dir, path) {
+        const entries = dir.children || dir;
+        for (const [name, entry] of Object.entries(entries)) {
+          if (entry.type === 'dir') {
+            collectPosts(entry, path + name + '/');
+          } else if (entry.date) {
+            posts.push({ name, path: path + name, entry });
+          }
+        }
+      }
+      collectPosts(fs, '/');
+
+      if (posts.length === 0) {
+        return `[[;#6e7681;]No posts found]`;
+      }
+
+      // Build set of post dates
+      const postDates = new Set(posts.map(p => p.entry.date));
+
+      // Determine year
+      const allYears = [...new Set(posts.map(p => parseInt(p.entry.date.substring(0, 4))))].sort();
+      const targetYear = args[0] ? parseInt(args[0]) : allYears[allYears.length - 1];
+
+      if (isNaN(targetYear)) {
+        return `[[;#f85149;]cal: invalid year '${args[0]}']`;
+      }
+
+      const yearPosts = posts.filter(p => p.entry.date.startsWith(String(targetYear)));
+      const months = ['January', 'February', 'March', 'April', 'May', 'June',
+                       'July', 'August', 'September', 'October', 'November', 'December'];
+      const days = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
+
+      let output = `[[b;#58a6ff;]Calendar ${targetYear}] [[;#6e7681;](${yearPosts.length} posts)]\n`;
+      output += `[[;#6e7681;]Years with posts: ${allYears.join(', ')}]\n\n`;
+
+      for (let m = 0; m < 12; m++) {
+        const monthPosts = yearPosts.filter(p => parseInt(p.entry.date.substring(5, 7)) === m + 1);
+        if (monthPosts.length === 0 && m > 0) continue; // skip empty months except Jan
+
+        output += `  [[b;#ffffff;]${months[m]}]\n`;
+        output += `  [[;#6e7681;]${days.join(' ')}]\n  `;
+
+        const firstDay = new Date(targetYear, m, 1).getDay();
+        // Convert Sunday=0 to Monday-based (Mo=0, Su=6)
+        const startOffset = firstDay === 0 ? 6 : firstDay - 1;
+        const daysInMonth = new Date(targetYear, m + 1, 0).getDate();
+
+        // Leading spaces
+        output += '   '.repeat(startOffset);
+
+        for (let d = 1; d <= daysInMonth; d++) {
+          const dateStr = `${targetYear}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+          const dayStr = String(d).padStart(2, ' ');
+
+          if (postDates.has(dateStr)) {
+            output += `[[b;#3fb950;]${dayStr}]`;
+          } else {
+            output += dayStr;
+          }
+
+          const dayOfWeek = (startOffset + d - 1) % 7;
+          if (dayOfWeek === 6 && d < daysInMonth) {
+            output += '\n  ';
+          } else {
+            output += ' ';
+          }
+        }
+        output += '\n\n';
+      }
+
+      output += `  [[b;#3fb950;]██] = post published`;
+
+      return output.trim();
+    },
+
+    streak: function() {
+      const posts = [];
+
+      function collectPosts(dir, path) {
+        const entries = dir.children || dir;
+        for (const [name, entry] of Object.entries(entries)) {
+          if (entry.type === 'dir') {
+            collectPosts(entry, path + name + '/');
+          } else if (entry.date) {
+            posts.push({ name, path: path + name, entry });
+          }
+        }
+      }
+      collectPosts(fs, '/');
+
+      if (posts.length === 0) {
+        return `[[;#6e7681;]No posts found]`;
+      }
+
+      // Sort by date ascending
+      posts.sort((a, b) => a.entry.date.localeCompare(b.entry.date));
+
+      // Unique dates sorted
+      const dates = [...new Set(posts.map(p => p.entry.date))].sort();
+
+      // Helper: days between two date strings
+      function daysBetween(d1, d2) {
+        const t1 = new Date(d1).getTime();
+        const t2 = new Date(d2).getTime();
+        return Math.round((t2 - t1) / (1000 * 60 * 60 * 24));
+      }
+
+      // Calculate monthly streaks (months with at least one post)
+      function getMonthKey(dateStr) {
+        return dateStr.substring(0, 7); // "YYYY-MM"
+      }
+
+      const postMonths = [...new Set(dates.map(getMonthKey))].sort();
+
+      let longestMonthStreak = 0;
+      let currentMonthStreak = 0;
+      let longestMonthStreakStart = '';
+      let longestMonthStreakEnd = '';
+      let currentMonthStreakStart = '';
+
+      for (let i = 0; i < postMonths.length; i++) {
+        if (i === 0) {
+          currentMonthStreak = 1;
+          currentMonthStreakStart = postMonths[i];
+        } else {
+          const [prevY, prevM] = postMonths[i - 1].split('-').map(Number);
+          const [curY, curM] = postMonths[i].split('-').map(Number);
+          const monthDiff = (curY - prevY) * 12 + (curM - prevM);
+
+          if (monthDiff === 1) {
+            currentMonthStreak++;
+          } else {
+            if (currentMonthStreak > longestMonthStreak) {
+              longestMonthStreak = currentMonthStreak;
+              longestMonthStreakStart = currentMonthStreakStart;
+              longestMonthStreakEnd = postMonths[i - 1];
+            }
+            currentMonthStreak = 1;
+            currentMonthStreakStart = postMonths[i];
+          }
+        }
+      }
+      // Check final streak
+      if (currentMonthStreak > longestMonthStreak) {
+        longestMonthStreak = currentMonthStreak;
+        longestMonthStreakStart = currentMonthStreakStart;
+        longestMonthStreakEnd = postMonths[postMonths.length - 1];
+      }
+
+      // Current month streak (from most recent backwards)
+      let activeMonthStreak = 0;
+      for (let i = postMonths.length - 1; i >= 0; i--) {
+        if (i === postMonths.length - 1) {
+          activeMonthStreak = 1;
+        } else {
+          const [curY, curM] = postMonths[i + 1].split('-').map(Number);
+          const [prevY, prevM] = postMonths[i].split('-').map(Number);
+          const monthDiff = (curY - prevY) * 12 + (curM - prevM);
+
+          if (monthDiff === 1) {
+            activeMonthStreak++;
+          } else {
+            break;
+          }
+        }
+      }
+
+      // Shortest gap between posts
+      let shortestGap = Infinity;
+      let longestGap = 0;
+      let shortestGapPair = [];
+      let longestGapPair = [];
+
+      for (let i = 1; i < dates.length; i++) {
+        const gap = daysBetween(dates[i - 1], dates[i]);
+        if (gap > 0 && gap < shortestGap) {
+          shortestGap = gap;
+          shortestGapPair = [dates[i - 1], dates[i]];
+        }
+        if (gap > longestGap) {
+          longestGap = gap;
+          longestGapPair = [dates[i - 1], dates[i]];
+        }
+      }
+
+      // Posts per month average
+      const firstDate = dates[0];
+      const lastDate = dates[dates.length - 1];
+      const totalMonths = Math.max(1, Math.round(daysBetween(firstDate, lastDate) / 30.44));
+      const postsPerMonth = (posts.length / totalMonths).toFixed(1);
+
+      let output = `[[b;#58a6ff;]Writing Streaks]\n\n`;
+      output += `  [[;#3fb950;]Total posts:]          ${posts.length}\n`;
+      output += `  [[;#3fb950;]Date range:]           ${firstDate} to ${lastDate}\n`;
+      output += `  [[;#3fb950;]Avg posts/month:]      ${postsPerMonth}\n\n`;
+
+      output += `[[b;#d29922;]Monthly Streaks] [[;#6e7681;](consecutive months with posts)]\n\n`;
+      output += `  [[;#3fb950;]Longest streak:]       ${longestMonthStreak} months\n`;
+      output += `    [[;#6e7681;]${longestMonthStreakStart} to ${longestMonthStreakEnd}]\n`;
+      output += `  [[;#3fb950;]Current streak:]       ${activeMonthStreak} months\n`;
+      output += `    [[;#6e7681;]from ${postMonths[postMonths.length - activeMonthStreak]}]\n\n`;
+
+      output += `[[b;#d29922;]Gaps]\n\n`;
+      if (shortestGap < Infinity) {
+        output += `  [[;#3fb950;]Shortest gap:]         ${shortestGap} day${shortestGap !== 1 ? 's' : ''}\n`;
+        output += `    [[;#6e7681;]${shortestGapPair[0]} → ${shortestGapPair[1]}]\n`;
+      }
+      output += `  [[;#3fb950;]Longest gap:]          ${longestGap} days\n`;
+      output += `    [[;#6e7681;]${longestGapPair[0]} → ${longestGapPair[1]}]\n`;
+
+      return output.trim();
+    },
+
+    similar: function(args) {
+      if (!args[0]) {
+        return `[[;#f85149;]similar: missing file operand]\n[[;#6e7681;]Usage: similar <file>]`;
+      }
+
+      const target = resolvePath(args[0]);
+      if (!target) {
+        return `[[;#f85149;]similar: ${args[0]}: No such file or directory]`;
+      }
+      if (target.type === 'dir') {
+        return `[[;#f85149;]similar: ${args[0]}: Is a directory]`;
+      }
+
+      const targetTags = new Set(target.tags || []);
+      if (targetTags.size === 0) {
+        return `[[;#6e7681;]${args[0]} has no tags — cannot compute similarity]`;
+      }
+
+      const resolvedPath = normalizePath(args[0]);
+      const results = [];
+
+      function collectPosts(dir, path) {
+        const entries = dir.children || dir;
+        for (const [name, entry] of Object.entries(entries)) {
+          if (entry.type === 'dir') {
+            collectPosts(entry, path + name + '/');
+          } else if (entry.tags && entry.tags.length > 0) {
+            const fullPath = path + name;
+            if (fullPath === resolvedPath) continue; // skip self
+
+            const entryTags = new Set(entry.tags);
+            const shared = [...targetTags].filter(t => entryTags.has(t));
+
+            if (shared.length > 0) {
+              // Jaccard similarity: intersection / union
+              const union = new Set([...targetTags, ...entryTags]);
+              const score = shared.length / union.size;
+              results.push({ name, path: fullPath, entry, shared, score });
+            }
+          }
+        }
+      }
+      collectPosts(fs, '/');
+
+      if (results.length === 0) {
+        return `[[;#6e7681;]No similar posts found for ${args[0]}]`;
+      }
+
+      // Sort by score descending
+      results.sort((a, b) => b.score - a.score);
+
+      const top = results.slice(0, 10);
+
+      let output = `[[b;#58a6ff;]Posts similar to] [[b;#ffffff;]${target.title || args[0]}]\n`;
+      output += `[[;#6e7681;]Tags: ${[...targetTags].join(', ')}]\n\n`;
+
+      for (const r of top) {
+        const pct = Math.round(r.score * 100);
+        const barLen = Math.round(r.score * 20);
+        const bar = '█'.repeat(barLen) + '░'.repeat(20 - barLen);
+        const date = r.entry.date ? `[[;#d29922;]${r.entry.date}]  ` : '';
+
+        output += `  [[;#3fb950;]${bar}] ${pct}%  ${date}[[;#58a6ff;]${r.path}]\n`;
+        output += `    ${r.entry.title || r.name}\n`;
+        output += `    [[;#6e7681;]shared: ${r.shared.join(', ')}]\n\n`;
+      }
+
+      if (results.length > 10) {
+        output += `[[;#6e7681;]  ... and ${results.length - 10} more]`;
+      }
+
+      return output.trim();
     },
 
     matrix: function() {
