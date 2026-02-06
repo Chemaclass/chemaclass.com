@@ -89,8 +89,13 @@
 
   [[b;#3fb950;]Discovery:]
     tags           List all tags with post counts
+    top-tags [n]   Show top N tags (default 10)
     recent [n]     Show n most recent posts (default 5)
     random [section]  Open random post (blog/readings/talks/services)
+    related <file> Show related posts and readings
+    timeline [year]  Show post frequency over time
+    find <tag>     Find all posts with a given tag
+    diff <f1> <f2> Compare two posts side by side
 
   [[b;#3fb950;]Customize:]
     theme [name]   Change color scheme
@@ -713,6 +718,297 @@ ${portrait}
 
       window.open(urlPath, '_blank');
       return `[[;#3fb950;]Opening random post:] ${post.entry.title || post.name}`;
+    },
+
+    related: function(args) {
+      if (!args[0]) {
+        return `[[;#f85149;]related: missing file operand]\n[[;#6e7681;]Usage: related <file>]`;
+      }
+
+      const target = resolvePath(args[0]);
+      if (!target) {
+        return `[[;#f85149;]related: ${args[0]}: No such file or directory]`;
+      }
+      if (target.type === 'dir') {
+        return `[[;#f85149;]related: ${args[0]}: Is a directory]`;
+      }
+
+      const relatedPosts = target.related_posts || [];
+      const relatedReadings = target.related_readings || [];
+
+      if (relatedPosts.length === 0 && relatedReadings.length === 0) {
+        return `[[;#6e7681;]No related items found for ${args[0]}]`;
+      }
+
+      function resolveRelated(refPath) {
+        // refPath is like "blog/2021-08-01-test-driven-development.md"
+        const parts = refPath.replace(/\.md$/, '').split('/');
+        if (parts.length < 2) return null;
+        const section = parts[0];
+        const filename = parts.slice(1).join('/');
+        // Extract slug from filename (remove date prefix)
+        const slug = filename.replace(/^\d{4}-\d{2}-\d{2}-/, '');
+        const dir = fs[section];
+        if (!dir || !dir.children) return null;
+        const entry = dir.children[slug];
+        if (!entry) return null;
+        return { path: '/' + section + '/' + slug, entry };
+      }
+
+      let output = `[[b;#58a6ff;]Related items for] [[b;#ffffff;]${target.title || args[0]}]\n\n`;
+
+      if (relatedPosts.length > 0) {
+        output += `[[b;#3fb950;]Related Posts:]\n`;
+        for (const ref of relatedPosts) {
+          const resolved = resolveRelated(ref);
+          if (resolved) {
+            const date = resolved.entry.date ? `[[;#d29922;]${resolved.entry.date}]  ` : '';
+            output += `  ${date}[[;#58a6ff;]${resolved.path}]\n`;
+            output += `    ${resolved.entry.title}\n`;
+          } else {
+            output += `  [[;#6e7681;]${ref} (not found)]\n`;
+          }
+        }
+        output += '\n';
+      }
+
+      if (relatedReadings.length > 0) {
+        output += `[[b;#3fb950;]Related Readings:]\n`;
+        for (const ref of relatedReadings) {
+          const resolved = resolveRelated(ref);
+          if (resolved) {
+            const date = resolved.entry.date ? `[[;#d29922;]${resolved.entry.date}]  ` : '';
+            output += `  ${date}[[;#58a6ff;]${resolved.path}]\n`;
+            output += `    ${resolved.entry.title}\n`;
+          } else {
+            output += `  [[;#6e7681;]${ref} (not found)]\n`;
+          }
+        }
+      }
+
+      return output.trim();
+    },
+
+    timeline: function(args) {
+      const yearFilter = args[0] ? parseInt(args[0]) : null;
+      const posts = [];
+
+      function collectPosts(dir, path) {
+        const entries = dir.children || dir;
+        for (const [name, entry] of Object.entries(entries)) {
+          if (entry.type === 'dir') {
+            collectPosts(entry, path + name + '/');
+          } else if (entry.date) {
+            posts.push({ name, path: path + name, entry });
+          }
+        }
+      }
+      collectPosts(fs, '/');
+
+      if (posts.length === 0) {
+        return `[[;#6e7681;]No posts found]`;
+      }
+
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+      if (yearFilter) {
+        // Show month-by-month for a specific year
+        const monthCounts = {};
+        for (let i = 0; i < 12; i++) monthCounts[i] = 0;
+
+        let total = 0;
+        for (const post of posts) {
+          const date = post.entry.date;
+          const year = parseInt(date.substring(0, 4));
+          if (year === yearFilter) {
+            const month = parseInt(date.substring(5, 7)) - 1;
+            monthCounts[month]++;
+            total++;
+          }
+        }
+
+        if (total === 0) {
+          return `[[;#6e7681;]No posts found for ${yearFilter}]`;
+        }
+
+        const maxCount = Math.max(...Object.values(monthCounts));
+        const maxBar = 30;
+
+        let output = `[[b;#58a6ff;]Timeline for ${yearFilter}] [[;#6e7681;](${total} posts)]\n\n`;
+        for (let i = 0; i < 12; i++) {
+          const count = monthCounts[i];
+          const barLen = maxCount > 0 ? Math.round((count / maxCount) * maxBar) : 0;
+          const bar = '█'.repeat(barLen);
+          const label = months[i];
+          output += `  [[;#d29922;]${label}]  [[;#3fb950;]${bar}] ${count}\n`;
+        }
+        return output.trim();
+      }
+
+      // Show year-by-year overview
+      const yearCounts = {};
+      for (const post of posts) {
+        const year = post.entry.date.substring(0, 4);
+        yearCounts[year] = (yearCounts[year] || 0) + 1;
+      }
+
+      const years = Object.keys(yearCounts).sort();
+      const maxCount = Math.max(...Object.values(yearCounts));
+      const maxBar = 30;
+
+      let output = `[[b;#58a6ff;]Timeline] [[;#6e7681;](${posts.length} posts, ${years[0]}-${years[years.length - 1]})]\n\n`;
+      for (const year of years) {
+        const count = yearCounts[year];
+        const barLen = maxCount > 0 ? Math.round((count / maxCount) * maxBar) : 0;
+        const bar = '█'.repeat(barLen);
+        output += `  [[;#d29922;]${year}]  [[;#3fb950;]${bar}] ${count}\n`;
+      }
+
+      return output.trim();
+    },
+
+    'top-tags': function(args) {
+      const n = parseInt(args[0]) || 10;
+      const tagCounts = {};
+
+      function collectTags(dir) {
+        const entries = dir.children || dir;
+        for (const [name, entry] of Object.entries(entries)) {
+          if (entry.type === 'dir') {
+            collectTags(entry);
+          } else if (entry.tags) {
+            entry.tags.forEach(tag => {
+              tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+            });
+          }
+        }
+      }
+      collectTags(fs);
+
+      const sorted = Object.entries(tagCounts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, n);
+
+      if (sorted.length === 0) {
+        return `[[;#6e7681;]No tags found]`;
+      }
+
+      let output = `[[b;#58a6ff;]Top ${sorted.length} tags:]\n\n`;
+      for (const [tag, count] of sorted) {
+        const bar = '█'.repeat(Math.min(count, 20));
+        output += `[[;#a371f7;]${tag.padEnd(20)}] [[;#3fb950;]${bar}] ${count}\n`;
+      }
+
+      return output.trim();
+    },
+
+    find: function(args) {
+      if (!args[0]) {
+        return `[[;#f85149;]find: missing tag argument]\n[[;#6e7681;]Usage: find <tag>]`;
+      }
+
+      const searchTag = args.join(' ').toLowerCase();
+      const results = [];
+
+      function collectPosts(dir, path) {
+        const entries = dir.children || dir;
+        for (const [name, entry] of Object.entries(entries)) {
+          if (entry.type === 'dir') {
+            collectPosts(entry, path + name + '/');
+          } else if (entry.tags) {
+            const hasTag = entry.tags.some(t => t.toLowerCase() === searchTag);
+            if (hasTag) {
+              results.push({ name, path: path + name, entry });
+            }
+          }
+        }
+      }
+      collectPosts(fs, '/');
+
+      if (results.length === 0) {
+        return `[[;#6e7681;]No posts found with tag '${searchTag}']`;
+      }
+
+      // Sort by date descending
+      results.sort((a, b) => (b.entry.date || '').localeCompare(a.entry.date || ''));
+
+      let output = `[[b;#58a6ff;]Posts tagged '${searchTag}'] [[;#6e7681;](${results.length} found)]\n\n`;
+      for (const r of results) {
+        const date = r.entry.date ? `[[;#d29922;]${r.entry.date}]  ` : '';
+        output += `${date}[[;#58a6ff;]${r.path}]\n`;
+        output += `  ${r.entry.title || r.name}\n`;
+      }
+
+      return output.trim();
+    },
+
+    diff: function(args) {
+      if (!args[0] || !args[1]) {
+        return `[[;#f85149;]diff: requires two files]\n[[;#6e7681;]Usage: diff <file1> <file2>]`;
+      }
+
+      const target1 = resolvePath(args[0]);
+      const target2 = resolvePath(args[1]);
+
+      if (!target1) return `[[;#f85149;]diff: ${args[0]}: No such file or directory]`;
+      if (!target2) return `[[;#f85149;]diff: ${args[1]}: No such file or directory]`;
+      if (target1.type === 'dir') return `[[;#f85149;]diff: ${args[0]}: Is a directory]`;
+      if (target2.type === 'dir') return `[[;#f85149;]diff: ${args[1]}: Is a directory]`;
+
+      const tags1 = new Set(target1.tags || []);
+      const tags2 = new Set(target2.tags || []);
+      const commonTags = [...tags1].filter(t => tags2.has(t));
+      const onlyIn1 = [...tags1].filter(t => !tags2.has(t));
+      const onlyIn2 = [...tags2].filter(t => !tags1.has(t));
+
+      const w = 35; // column width
+      const divider = '  │  ';
+
+      function pad(str, len) {
+        if (str.length > len) return str.substring(0, len - 3) + '...';
+        return str + ' '.repeat(len - str.length);
+      }
+
+      let output = `[[b;#58a6ff;]Comparing two posts:]\n`;
+      output += '[[;#6e7681;]' + '─'.repeat(w) + '──┬──' + '─'.repeat(w) + ']\n';
+
+      // Titles
+      const t1 = target1.title || args[0];
+      const t2 = target2.title || args[1];
+      output += `[[b;#ffffff;]${pad(t1, w)}]${divider}[[b;#ffffff;]${pad(t2, w)}]\n`;
+
+      // Dates
+      const d1 = target1.date || 'N/A';
+      const d2 = target2.date || 'N/A';
+      output += `[[;#d29922;]${pad(d1, w)}]${divider}[[;#d29922;]${pad(d2, w)}]\n`;
+
+      output += '[[;#6e7681;]' + '─'.repeat(w) + '──┼──' + '─'.repeat(w) + ']\n';
+
+      // Descriptions
+      const desc1 = truncate(target1.description || 'N/A', w);
+      const desc2 = truncate(target2.description || 'N/A', w);
+      output += `${pad(desc1, w)}${divider}${pad(desc2, w)}\n`;
+
+      output += '[[;#6e7681;]' + '─'.repeat(w) + '──┼──' + '─'.repeat(w) + ']\n';
+
+      // Tags comparison
+      output += `[[b;#a371f7;]Tags:]\n`;
+      if (commonTags.length > 0) {
+        output += `  [[;#3fb950;]Common:] ${commonTags.join(', ')}\n`;
+      }
+      if (onlyIn1.length > 0) {
+        output += `  [[;#d29922;]Only in ${truncate(t1, 20)}:] ${onlyIn1.join(', ')}\n`;
+      }
+      if (onlyIn2.length > 0) {
+        output += `  [[;#d29922;]Only in ${truncate(t2, 20)}:] ${onlyIn2.join(', ')}\n`;
+      }
+      if (commonTags.length === 0 && onlyIn1.length === 0 && onlyIn2.length === 0) {
+        output += `  [[;#6e7681;]No tags on either post]\n`;
+      }
+
+      output += '[[;#6e7681;]' + '─'.repeat(w) + '──┴──' + '─'.repeat(w) + ']';
+
+      return output;
     },
 
     matrix: function() {

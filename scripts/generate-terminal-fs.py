@@ -46,6 +46,20 @@ def extract_frontmatter(content):
         if subtitle_match:
             frontmatter['subtitle'] = subtitle_match.group(1)
 
+        # Extract related_posts
+        related_posts_match = re.search(r'related_posts\s*=\s*\[(.*?)\]', fm_text, re.DOTALL)
+        if related_posts_match:
+            related_posts_str = related_posts_match.group(1)
+            related_posts = re.findall(r'"([^"]*)"', related_posts_str)
+            frontmatter['related_posts'] = related_posts
+
+        # Extract related_readings
+        related_readings_match = re.search(r'related_readings\s*=\s*\[(.*?)\]', fm_text, re.DOTALL)
+        if related_readings_match:
+            related_readings_str = related_readings_match.group(1)
+            related_readings = re.findall(r'"([^"]*)"', related_readings_str)
+            frontmatter['related_readings'] = related_readings
+
     return frontmatter
 
 
@@ -88,6 +102,8 @@ def process_markdown_file(filepath):
             'description': frontmatter.get('description', ''),
             'tags': frontmatter.get('tags', []),
             'subtitle': frontmatter.get('subtitle', ''),
+            'related_posts': frontmatter.get('related_posts', []),
+            'related_readings': frontmatter.get('related_readings', []),
             'content': body
         }
     except Exception as e:
