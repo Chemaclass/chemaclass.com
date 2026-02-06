@@ -7,6 +7,15 @@ tags = ["leadership", "team-management", "psychology", "communication"]
 [extra]
 subtitle = "El Modelo de Tuckman para llevar a un equipo a alto rendimiento"
 static_thumbnail = "/images/blog/2023-11-25/cover.jpg"
+related_posts = [
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-02-27-great-leadership.md",
+]
+related_readings = [
+  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-11-25/cover.jpg)
@@ -95,16 +104,3 @@ Esto significa dar **orientacion y estructura** en _forming_, **facilitar la res
 ### Resumen en video
 
 {{ youtube(id="-RwkZxGPQb8") }}
-
----
-
-**Lecturas relacionadas**
-
-- [Dare to lead](/es/readings/dare-to-lead/)<small> por Brené Brown</small>
-- [Turn the ship around!](/es/readings/turn-the-ship-around/)<small> por L. David Marquet</small>
-- [The Five Dysfunctions of a Team](/es/readings/the-five-dysfunctions-of-a-team/) <small>por Patrick M. Lencioni</small>
-
-**Posts relacionados**
-
-- [Gran liderazgo](/es/blog/great-leadership) <small>El liderazgo comienza dentro de tu propia vida y comportamiento</small>
-- [Entendiendo a las personas](/es/blog/understanding-people) <small>Malentendidos, comunicación efectiva y autorreflexión</small>

@@ -7,6 +7,19 @@ tags = [ "ai", "software-architecture", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "El factor humano en la era del vibe-coding"
 static_thumbnail = "/images/blog/2025-12-02/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2022-10-08-different-beliefs-about-software-quality.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+  "readings/2020-09-10-domain-driven-design-distilled.md",
+  "readings/2020-10-10-object-design-style-guide.md",
+]
 +++
 
 He estado usando asistentes de codificación IA extensivamente: ChatGPT, Codex, Claude con Sonnet y Opus. Son increíblemente útiles. Te dan velocidad como nada más.
@@ -80,20 +93,3 @@ Usa la IA. Abraza la velocidad. Pero nunca olvides: **tú eres quien conduce**. 
 Y cuando eso pase, no hay nadie más a quien culpar.
 
 ![cover](/images/blog/2025-12-02/footer.jpg)
-
----
-
-**Posts relacionados**
-
-- [Diferentes creencias sobre la calidad del software](/es/blog/different-beliefs-about-software-quality) <small>Reflexiones sobre la calidad del software en tu equipo</small>
-- [El arte del testing](/es/blog/the-art-of-testing/) <small>Donde el diseño se encuentra con la calidad</small>
-- [Pair programming efectivo](/es/blog/effective-pair-programming/) <small>Abrazando prácticas de calidad en tu cultura de ingeniería</small>
-
-**Lecturas relacionadas**
-
-- [Clean Code](/es/readings/clean-code/) <small>Manual de artesanía ágil de software</small>
-- [Clean Architecture](/es/readings/clean-architecture/) <small>Guía del artesano para estructura y diseño de software</small>
-- [Object Design Style Guide](/es/readings/object-design-style-guide/) <small>Técnicas poderosas para crear código flexible y mantenible</small>
-- [Advanced Web Application Architecture](/es/readings/advance-web-application-architecture/) <small>Domain-Driven Design en PHP</small>
-- [Extreme Programming Explained](/es/readings/extreme-programming-explained/) <small>Abraza el cambio</small>
-- [Domain-Driven Design Distilled](/es/readings/domain-driven-design-distilled/) <small>Patrones estratégicos y tácticos para dominios complejos</small>

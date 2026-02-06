@@ -7,6 +7,10 @@ tags = ["software-design", "career", "communication", "clean-code"]
 [extra]
 subtitle = "Un gran ingeniero no es solo un gran programador"
 static_thumbnail = "/images/blog/2023-12-30/cover.jpg"
+related_posts = [
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-12-30/cover.jpg)
@@ -30,10 +34,3 @@ Por eso un gran ingeniero conoce de negocio, cliente, producto y programacion. E
 ---
 
 Imagen original de [Nicola Ballotta](https://hybridhacker.email).
-
----
-
-**Posts relacionados**
-
-- [El camino a la seniority en software](/es/blog/the-path-to-seniority-in-software/) <small>¿Cómo convertirse en un Desarrollador de Software Senior?</small>
-- [Pair programming efectivo](/es/blog/effective-pair-programming/) <small>Abrazando prácticas de calidad en tu cultura de ingeniería</small>

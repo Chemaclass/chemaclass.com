@@ -11,8 +11,7 @@ pages = "120"
 author = "Sjors Provoost"
 static_thumbnail = "https://www.btcwip.com/front.jpg"
 expand_preview = true
-related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]
-+++
+related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]+++
 
 Con miles de proyectos cripto por ahí, dicen que Bitcoin es viejo y aburrido. Nada más lejos de la realidad. Este libro te guía por los últimos desarrollos de Bitcoin desde la perspectiva de uno de sus desarrolladores.
 

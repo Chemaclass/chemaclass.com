@@ -9,6 +9,18 @@ tags = ["pair-programming", "xp", "tdd", "communication", "clean-code"]
 subtitle = "Embracing quality practices in your engineering culture"
 static_thumbnail = "/images/blog/2024-03-28/cover.jpg"
 pin = false
+related_posts = [
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2022-05-27-bikeshedding.md",
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2022-08-22-understanding-people.md",
+]
+related_readings = [
+  "readings/2016-08-01-the-clean-coder.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+  "readings/2020-10-10-object-design-style-guide.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-03-28/cover.jpg)
@@ -79,18 +91,3 @@ Pair programming might become one of the best tools in your team toolbox for dai
 ![cover](/images/blog/2024-03-28/learning-through-katas.jpg)
 
 > Thanks to my friend [Manu](https://x.com/evrtrabajo), who helped me with this post. We even share a [workshop](https://phpconference.com/agile-culture/practical-tdd-workshop/) on this topic.
-
----
-
-**Related posts**
-
-- [Test-Driven (Development)](/blog/test-driven-development/) <small>What is challenging about it?</small>
-- [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
-- [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
-
-**Related readings**
-
-- [The Clean Coder](/readings/the-clean-coder/) <small>by Robert C. Martin</small>
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
-- [Object Design Style Guide](/readings/object-design-style-guide) <small>by Matthias Noback</small>
-- [Advanced Web Application Architecture](/readings/advance-web-application-architecture/) <small>by Matthias Noback</small>

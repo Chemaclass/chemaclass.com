@@ -6,6 +6,9 @@ tags = [ "leadership", "psychology", "career", "philosophy" ]
 [extra]
 subtitle = "Who moved my cheese?🧀"
 static_thumbnail = "/images/blog/2021-03-01/cover.jpg"
+related_readings = [
+  "readings/2021-01-16-who-moved-my-cheese.md",
+]
 +++
 
 ![blog-cover](/images/blog/2021-03-01/cover.jpg)
@@ -53,9 +56,3 @@ This book is full of lessons that apply to everyone no matter who they are or wh
 {{ youtube(id="OvYCLxqkfvY") }}
 
 > "Life moves on and so should we" — Spencer Johnson
-
----
-
-**Related readings**
-
-- [Who moved my cheese](/readings/who-moved-my-cheese/) <small>by Spencer Johnson</small>

@@ -11,8 +11,7 @@ pages = "120"
 author = "Viktor E. Frankl"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1535419394i/4069.jpg"
 expand_preview = true
-related_posts = ["blog/2023-03-16-have-you-always-been-like-this.md", "blog/2020-09-08-the-process-itself-is-the-goal.md"]
-+++
+related_posts = ["blog/2023-03-16-have-you-always-been-like-this.md", "blog/2020-09-08-the-process-itself-is-the-goal.md"]+++
 
 In "Man's Search for Meaning," Frankl not only shares his harrowing experiences from the Holocaust but also presents a profound philosophy on the human condition. This book is a testament to the resilience of the human spirit, exploring how even in the darkest of times, individuals can find purpose and meaning. 
 

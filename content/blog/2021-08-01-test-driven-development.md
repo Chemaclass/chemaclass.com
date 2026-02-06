@@ -8,6 +8,9 @@ tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
 subtitle = "What is challenging about it?"
 static_thumbnail = "/images/blog/2021-08-01/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+]
 +++
 
 ![blog-cover](/images/blog/2021-08-01/cover.jpg)

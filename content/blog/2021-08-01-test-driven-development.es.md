@@ -7,6 +7,9 @@ tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
 subtitle = "¿Qué tiene de desafiante?"
 static_thumbnail = "/images/blog/2021-08-01/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+]
 +++
 
 ![blog-cover](/images/blog/2021-08-01/cover.jpg)

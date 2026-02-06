@@ -10,6 +10,17 @@ subtitle = "Pioneers of privacy in the digital age"
 static_thumbnail = "/images/blog/2024-12-11/cover.jpg"
 series = "bitcoin"
 series_order = 2
+related_posts = [
+  "blog/2024-07-06-programmable-money.md",
+  "blog/2025-11-21-bitcoin-fundamentals.md",
+]
+related_readings = [
+  "readings/2023-07-10-the-book-of-satoshi.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+  "readings/2024-08-02-bitcoin-wip.md",
+  "readings/2025-02-09-criptoria.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-12-11/cover.jpg)
@@ -132,22 +143,6 @@ Privacy isn't dead. They made sure of that.
 ---
 
 {{ youtube(id="9vM0oIEhMag") }}
-
----
-
-**Related posts**
-
-- [Bitcoin Fundamentals](/blog/bitcoin-fundamentals/) <small>From sound money to cryptographic proof</small>
-- [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>
-
-**Related readings**
-
-- [Criptoria](/readings/criptoria/) <small>by Alfre Mancera</small>
-- [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
-- [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
-- [Bitcoin: A Work in Progress](/readings/bitcoin-wip/) <small>by Sjors Provoost</small>
-
 **Related links**
 
 - Learn more: [What is PGP encryption?](/pgp) <small>A 3-minute tutorial for beginners</small>

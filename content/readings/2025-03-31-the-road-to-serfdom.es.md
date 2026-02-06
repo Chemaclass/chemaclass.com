@@ -11,8 +11,7 @@ pages = "266"
 author = "Friedrich A. Hayek"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327787673i/299215.jpg"
 expand_preview = true
-related_posts = ["blog/2025-01-02-understanding-taxes.md"]
-+++
+related_posts = ["blog/2025-01-02-understanding-taxes.md"]+++
 
 Publicado en 1944, Camino de servidumbre sigue vigente. Friedrich Hayek, economista austriaco, lo escribió durante la Segunda Guerra Mundial para advertir sobre algo que veía como peligroso: la planificación económica central.
 

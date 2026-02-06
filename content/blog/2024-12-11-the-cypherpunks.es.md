@@ -7,6 +7,17 @@ tags = [ "privacy", "bitcoin", "cryptography", "security", "philosophy" ]
 [extra]
 subtitle = "Pioneros de la privacidad en la era digital"
 static_thumbnail = "/images/blog/2024-12-11/cover.jpg"
+related_posts = [
+  "blog/2024-07-06-programmable-money.md",
+  "blog/2025-11-21-bitcoin-fundamentals.md",
+]
+related_readings = [
+  "readings/2023-07-10-the-book-of-satoshi.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+  "readings/2024-08-02-bitcoin-wip.md",
+  "readings/2025-02-09-criptoria.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-12-11/cover.jpg)
@@ -129,22 +140,6 @@ La privacidad no está muerta. Ellos se aseguraron de eso.
 ---
 
 {{ youtube(id="9vM0oIEhMag") }}
-
----
-
-**Posts relacionados**
-
-- [Fundamentos de Bitcoin](/es/blog/bitcoin-fundamentals/) <small>Del dinero sólido a la prueba criptográfica</small>
-- [Dinero programable](/es/blog/programmable-money/) <small>El poder del Script de Bitcoin</small>
-
-**Lecturas relacionadas**
-
-- [Criptoria](/es/readings/criptoria/) <small>por Alfre Mancera</small>
-- [The Genesis Book](/es/readings/the-genesis-book/) <small>por Aaron van Wirdum</small>
-- [The Book Of Satoshi](/es/readings/the-book-of-satoshi/) <small>por Phil Champagne</small>
-- [Mastering Bitcoin](/es/readings/mastering-bitcoin/) <small>por Andreas M. Antonopoulos, David A. Harding</small>
-- [Bitcoin: A Work in Progress](/es/readings/bitcoin-wip/) <small>por Sjors Provoost</small>
-
 **Enlaces relacionados**
 
 - Aprende más: [¿Qué es el cifrado PGP?](/pgp) <small>Un tutorial de 3 minutos para principiantes</small>

@@ -7,6 +7,14 @@ tags = [ "career", "productivity", "philosophy", "self-improvement" ]
 [extra]
 subtitle = "How to find a balance of growth and happiness"
 static_thumbnail = "/images/blog/2023-03-16/cover.jpg"
+related_posts = [
+  "blog/2019-11-18-improve-your-tech-talk.md",
+  "blog/2020-09-08-the-process-itself-is-the-goal.md",
+]
+related_readings = [
+  "readings/2017-03-20-the-power-of-habits.md",
+  "readings/2019-11-12-atomic-habits.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-03-16/cover.jpg)
@@ -85,10 +93,3 @@ I don't expect things to change from one day to another. I enjoy experimenting, 
 What keeps me moving is <u>the time I have left</u> and the idea of thinking, "**what would I like to have changed?**" And in such a case, "**Why didn't I?**"
 
 ![blog-footer](/images/blog/2023-03-16/footer.jpg)
-
----
-
-**Related readings**
-
-- [The power of habits](/readings/the-power-of-habits/)  <small>Why We Do What We Do, and How to Change</small>
-- [Atomic habits](/readings/atomic-habits/)  <small>An Easy & Proven Way to Build Good Habits & Break Bad Ones</small>

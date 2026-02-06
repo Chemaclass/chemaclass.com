@@ -7,6 +7,17 @@ tags = [ "agile", "scrum", "communication", "productivity" ]
 [extra]
 subtitle = "Matando la agilidad con reuniones excesivas"
 static_thumbnail = "/images/blog/2022-12-06/cover.jpg"
+related_posts = [
+  "blog/2022-04-02-dunbar-number.md",
+  "blog/2022-07-25-the-project-management-triangle.md",
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2022-11-11-working-agile-with-non-agile-teams.md",
+]
+related_readings = [
+  "readings/2020-06-10-scrum-the-art-of-doing-twice.md",
+  "readings/2021-03-01-zombie-scrum-survival-guide.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-12-06/cover.jpg)
@@ -87,11 +98,3 @@ Hay muchas estrategias. Depende de ti actuar cuando veas algo mejorable.
 Está bien señalar el "_elefante en la habitación_" y pedir ayuda para mejorar cualquier situación que sientas que no funciona como debería.
 
 ![blog-footer](/images/blog/2022-12-06/footer.jpg)
-
----
-
-**Posts relacionados**
-
-- [Trabajando agile con equipos no agile](/es/blog/working-agile-with-non-agile-teams/). <small>¿Cómo puedes trabajar con otros equipos que no son agile?</small>
-- [Entendiendo a las personas](/es/blog/understanding-people/). <small>Malentendidos, comunicación efectiva y autorreflexión</small>
-- [El Triángulo de Gestión de Proyectos](/es/blog/the-project-management-triangle/). <small>El Triángulo de Hierro</small>

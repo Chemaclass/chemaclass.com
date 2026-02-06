@@ -6,6 +6,12 @@ tags = [ "testing", "refactoring", "clean-code", "tdd"]
 [extra]
 subtitle = "Cómo escribir tests adecuados para código ya escrito"
 static_thumbnail = "/images/blog/2021-01-11/cover.jpg"
+related_posts = [
+  "blog/2020-06-06-final-classes.md",
+]
+related_readings = [
+  "readings/2019-07-01-working-effectively-with-legacy-code.md",
+]
 +++
 
 ![blog-cover](/images/blog/2020-08-17/cover.jpg)

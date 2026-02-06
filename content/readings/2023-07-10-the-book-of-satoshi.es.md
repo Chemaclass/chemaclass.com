@@ -11,6 +11,12 @@ pages = "350"
 author = "Phil Champagne"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1404481980i/22619661.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2023-06-20-the-blocksize-war.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
 +++
 
 <!-- more -->
@@ -28,12 +34,3 @@ Su actividad pública comenzó el 1 de noviembre de 2009 con la publicación del
 Probablemente nunca sabremos quién es Nakamoto. Estos escritos son todo lo que el mundo tendrá de él sobre la creación, funcionamiento y teoría detrás de Bitcoin. Si quieres aprender sobre Bitcoin, ve directo a la fuente: las palabras de su propio creador.
 
 {{ youtube(id="kaBmAV5DaXI") }}
-
----
-
-**Lecturas relacionadas**
-
-- [The Genesis Book](/es/readings/the-genesis-book/) <small>por Aaron van Wirdum</small>
-- [The Bitcoin Standard](/es/readings/the-bitcoin-standard/) <small>por Saifedean Ammous</small>
-- [The Blocksize War](/es/readings/the-blocksize-war/) <small>por Jonathan Bier</small>
-- [Mastering Bitcoin](/es/readings/mastering-bitcoin/) <small>por Andreas M. Antonopoulos, David A. Harding</small>

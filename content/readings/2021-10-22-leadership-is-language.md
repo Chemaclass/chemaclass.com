@@ -49,4 +49,3 @@ followed, and that was it. But that way of leading is no longer effective, it is
 ## Video Summary
 
 {{ youtube(id="CQfao96j1fo") }}
-

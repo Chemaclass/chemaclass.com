@@ -7,6 +7,19 @@ tags = [ "ai", "software-architecture", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "The human factor in the age of vibe-coding"
 static_thumbnail = "/images/blog/2025-12-02/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2022-10-08-different-beliefs-about-software-quality.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+  "readings/2020-09-10-domain-driven-design-distilled.md",
+  "readings/2020-10-10-object-design-style-guide.md",
+]
 +++
 
 I've been using AI coding assistants extensively: ChatGPT, Codex, Claude with Sonnet and Opus. They're incredibly helpful. They give you speed like nothing else.
@@ -80,20 +93,3 @@ Use AI. Embrace the speed. But never forget: **you're the one steering**. If you
 And when that happens, there's no one else to blame.
 
 ![cover](/images/blog/2025-12-02/footer.jpg)
-
----
-
-**Related posts**
-
-- [Different beliefs about software quality](/blog/different-beliefs-about-software-quality) <small>Thoughts about software quality among your team</small>
-- [The art of testing](/blog/the-art-of-testing/) <small>Where design meets quality</small>
-- [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
-
-**Related readings**
-
-- [Clean Code](/readings/clean-code/) <small>A Handbook of Agile Software Craftsmanship</small>
-- [Clean Architecture](/readings/clean-architecture/) <small>A Craftsman's Guide to Software Structure and Design</small>
-- [Object Design Style Guide](/readings/object-design-style-guide/) <small>Powerful techniques for creating flexible and maintainable code</small>
-- [Advanced Web Application Architecture](/readings/advance-web-application-architecture/) <small>Domain-Driven Design in PHP</small>
-- [Extreme Programming Explained](/readings/extreme-programming-explained/) <small>Embrace Change</small>
-- [Domain-Driven Design Distilled](/readings/domain-driven-design-distilled/) <small>Strategic and tactical patterns for complex domains</small>

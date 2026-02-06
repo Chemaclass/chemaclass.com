@@ -8,6 +8,9 @@ tags = [ "bitcoin", "open-source", "privacy", "tutorial" ]
 [extra]
 subtitle = "Take full control of your Lightning payments with Alby Hub"
 static_thumbnail = "/images/blog/2025-02-17/cover.jpg"
+related_posts = [
+  "blog/2024-07-06-programmable-money.md",
+]
 +++
 
 ![blog-cover](/images/blog/2025-02-17/cover.jpg)
@@ -262,7 +265,3 @@ If the power goes out, the Raspberry Pi will turn off. Once power is restored, i
 
 - [GetAlby - User Guide](https://guides.getalby.com/)
 - [Installing Alby Hub in a Raspberry Zero](https://guides.getalby.com/user-guide/alby-account-and-browser-extension/hidden-archives/raspberry-pi-zero)
-
-**Related posts**
-
-- [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>

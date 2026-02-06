@@ -7,6 +7,15 @@ tags = [ "communication", "team-management", "career", "leadership" ]
 [extra]
 subtitle = "Del código a la colaboración"
 static_thumbnail = "/images/blog/2024-09-02/cover.jpg"
+related_posts = [
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-12-30-great-engineering.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-05-28-peopleware.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-09-02/cover.jpg)
@@ -78,16 +87,3 @@ Mientras que las habilidades técnicas pueden requerir que te sumerjas en docume
 Los humanos traen sus sentimientos, antecedentes y rutinas a las interacciones, añadiendo capas de complejidad más allá de la lógica directa de las máquinas. Estos detalles personales moldean la realidad que percibimos, haciendo que las habilidades interpersonales sean una parte esencial pero compleja de la comunicación y colaboración efectiva.
 
 ![cover](/images/blog/2024-09-02/footer.jpg)
-
----
-
-**Posts relacionados**
-
-- [Entendiendo a las personas](/es/blog/understanding-people) <small>Malentendidos, comunicación efectiva y autorreflexión</small>
-- [Pair programming efectivo](/es/blog/effective-pair-programming/) <small>Abrazando prácticas de calidad en tu cultura de ingeniería</small>
-- [Gran ingeniería](/es/blog/great-engineering/) <small>Un gran ingeniero no es solo un gran programador</small>
-
-**Lecturas relacionadas**
-
-- [Peopleware](/es/readings/peopleware) <small>por Tom DeMarco, Timothy Lister</small>
-- [Clean Agile](/es/readings/clean-agile/) <small>por Robert C. Martin</small>

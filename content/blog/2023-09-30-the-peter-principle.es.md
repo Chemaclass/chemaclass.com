@@ -7,6 +7,15 @@ tags = ["leadership", "career", "team-management", "psychology"]
 [extra]
 subtitle = "El ascenso a un nivel de incompetencia"
 static_thumbnail = "/images/blog/2023-09-30/cover.jpg"
+related_posts = [
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-02-27-great-leadership.md",
+  "blog/2023-10-11-unhealthy-working-environment.md",
+]
+related_readings = [
+  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-09-30/cover.jpg)
@@ -40,15 +49,3 @@ Si eres tú quien lo está viviendo en primera persona, te recomiendo:
 - Habla con tu manager. Pide formación, mentoría o lo que necesites para adquirir las habilidades que te faltan: confianza, comunicación, o lo que ayude a tu nuevo rol. Quizás no recibiste la formación adecuada para un trabajo que requiere habilidades diferentes.
 
 - Considera volver a donde eras bueno y seguir dominando eso. Ayuda e inspira a quienes están a tu lado. No todo el mundo tiene que ascender siempre.
-
----
-
-**Lecturas relacionadas**
-
-- [Dare to lead](/es/readings/dare-to-lead/)<small> por Brené Brown</small>
-- [Turn the ship around!](/es/readings/turn-the-ship-around/)<small> por L. David Marquet</small>
-
-**Posts relacionados**
-
-- [Gran liderazgo](/es/blog/great-leadership) <small>El liderazgo comienza dentro de tu propia vida y comportamiento</small>
-- [Entendiendo a las personas](/es/blog/understanding-people) <small>Malentendidos, comunicación efectiva y autorreflexión</small>

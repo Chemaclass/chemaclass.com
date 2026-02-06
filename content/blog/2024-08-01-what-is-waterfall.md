@@ -7,6 +7,18 @@ tags = [ "agile", "software-design", "team-management", "productivity" ]
 [extra]
 subtitle = "What makes Waterfall a poor fit for modern software development?"
 static_thumbnail = "/images/blog/2024-08-01/cover.jpg"
+related_posts = [
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
+  "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+  "blog/2024-05-30-what-kills-agility.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-05-28-peopleware.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-08-01/cover.jpg)
@@ -87,19 +99,3 @@ I’ve [talked](/talks/) about Agile at various tech events and explored it in d
 ### WeAreDevelopers World Congress in Berlin
 
 {{ youtube(id="dqtAyl-SvaY") }}
-
----
-
-**Related posts**
-
-- [What kills agility?](/blog/what-kills-agility/) <small>Why Agile if you already do Scrum, Kanban, SAFe, or Waterfall?</small>
-- [Ignoring Scrum to get more Agile?](/blog/ignoring-scrum-to-get-more-agile/) <small>Killing agility with excessive meetings</small>
-- [Update your team to be more extreme](/blog/update-your-team-to-be-more-extreme/) <small>How can you help your peers to embrace the change?</small>
-- [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
-- [Test-Driven (Development)](/blog/test-driven-development/) <small>What is challenging about it?</small>
-
-**Related readings**
-
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
-- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
-- [Peopleware](/readings/peopleware) <small>by Tom DeMarco, Timothy Lister</small>

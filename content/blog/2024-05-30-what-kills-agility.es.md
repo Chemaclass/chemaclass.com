@@ -8,6 +8,16 @@ tags = ["agile", "xp", "leadership", "team-management", "communication"]
 subtitle = "¿Por qué Agile si ya haces Scrum, Kanban, SAFe o Waterfall?"
 static_thumbnail = "/images/blog/2024-05-30/cover.jpg"
 pin = false
+related_posts = [
+  "blog/2022-11-11-working-agile-with-non-agile-teams.md",
+  "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md",
+  "blog/2023-01-09-interview-about-xp-and-agile.md",
+  "blog/2023-10-11-unhealthy-working-environment.md",
+]
+related_readings = [
+  "readings/2016-08-01-the-clean-coder.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-05-30/cover.jpg)
@@ -53,17 +63,3 @@ Aprende los básicos de Extreme Programming (XP) y Lean Software Development.
 - **Lean**: Toma un enfoque más amplio, enfocándose en eliminar desperdicio, optimizar flujo y mejorar procesos en toda la organización.
 
 ![blog-cover](/images/blog/2024-05-30/footer.jpg)
-
----
-
-**Posts relacionados**
-
-- [Ambiente de trabajo no saludable](/es/blog/unhealthy-working-environment) <small>Reconociendo señales de alerta de un lugar de trabajo no saludable</small>
-- [Trabajando agile con equipos no agile](/es/blog/working-agile-with-non-agile-teams/) <small>¿Cómo puedes trabajar con otros equipos que no son agile?</small>
-- [¿Ignorar Scrum para ser más Agile?](/es/blog/ignoring-scrum-to-get-more-agile/) <small>Matando la agilidad con reuniones excesivas</small>
-- [Entrevista sobre XP y Agile](/es/blog/interview-about-xp-and-agile/) <small>Agile es sobre CÓMO haces ciertas cosas</small>
-
-**Lecturas relacionadas**
-
-- [The Clean Coder](/es/readings/the-clean-coder/) <small>por Robert C. Martin</small>
-- [Extreme Programming Explained](/es/readings/xp-embrace-change/) <small>por Kent Beck</small>

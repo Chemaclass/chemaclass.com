@@ -10,6 +10,13 @@ pages = "300"
 author = "Saifedean Ammous"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41x6NvXWekS._SX336_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2023-06-20-the-blocksize-war.md",
+  "readings/2023-07-10-the-book-of-satoshi.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+  "readings/2025-06-22-principles-of-economics.md",
+]
 +++
 
 <!-- more -->
@@ -46,13 +53,3 @@ apolitical, free-market alternative to national central banks.
 > Extra: Lex Fridman Podcast with the author of this book
 
 {{ youtube(id="gp4U5aH_T6A") }}
-
----
-
-**Related readings**
-
-- [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
-- [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
-- [The Blocksize War](/readings/the-blocksize-war/) <small>by Jonathan Bier</small>
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
-- [Principles of Economics](/readings/principles-of-economics/) <small>by Saifedean Ammous</small>

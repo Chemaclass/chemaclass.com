@@ -7,6 +7,18 @@ tags = [ "leadership", "communication", "team-management", "mentoring", "xp" ]
 [extra]
 subtitle = "¿Cómo tratas con personas reacias al cambio?"
 static_thumbnail = "/images/blog/2023-08-02/cover.jpg"
+related_posts = [
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2022-11-11-working-agile-with-non-agile-teams.md",
+  "blog/2023-02-27-great-leadership.md",
+]
+related_readings = [
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2021-01-16-who-moved-my-cheese.md",
+  "readings/2021-05-28-peopleware.md",
+  "readings/2021-11-28-start-with-why.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-08-02/cover.jpg)
@@ -68,11 +80,3 @@ No puedes forzar a las personas a cambiar. Por el contrario, cuanto más intente
 ![footer](/images/blog/2023-08-02/footer.jpg)
 
 > Fotos mías en WeAreDevelopers World Congress, Berlín 2023.
-
----
-
-**Posts relacionados**
-
-- [Gran liderazgo](/es/blog/great-leadership) <small>El liderazgo comienza dentro de tu propia vida y comportamiento</small>
-- [Entendiendo a las personas](/es/blog/understanding-people) <small>Malentendidos, comunicación efectiva y autorreflexión</small>
-- [Trabajando agile con equipos no agile](/es/blog/working-agile-with-non-agile-teams/) <small>¿Cómo puedes trabajar con otros equipos que no son agile?</small>

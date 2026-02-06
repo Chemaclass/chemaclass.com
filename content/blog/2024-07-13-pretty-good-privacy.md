@@ -9,6 +9,13 @@ subtitle = "How PGP secures your digital communication"
 static_thumbnail = "/images/blog/2024-07-13/cover.jpg"
 series = "bitcoin"
 series_order = 1
+related_posts = [
+  "blog/2024-12-11-the-cypherpunks.md",
+  "blog/2025-11-21-bitcoin-fundamentals.md",
+]
+related_readings = [
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-07-13/cover.jpg)
@@ -71,14 +78,3 @@ curl https://chemaclass.com/pgp.asc | gpg --import
 ### Download the .asc file
 
 <a href="/pgp.asc" id="download-link">Download public PGP key</a>
-
----
-
-**Related posts**
-
-- [The Cypherpunks](/blog/the-cypherpunks/) <small>Pioneers of privacy in the digital age</small>
-- [Bitcoin Fundamentals](/blog/bitcoin-fundamentals/) <small>From sound money to cryptographic proof</small>
-
-**Related readings**
-
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>

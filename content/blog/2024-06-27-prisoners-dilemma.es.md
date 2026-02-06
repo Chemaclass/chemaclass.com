@@ -7,6 +7,10 @@ tags = ["psychology", "philosophy", "communication"]
 [extra]
 subtitle = "El dilema de la confianza y el interés propio"
 static_thumbnail = "/images/blog/2024-06-27/cover.jpg"
+related_posts = [
+  "blog/2022-11-11-working-agile-with-non-agile-teams.md",
+  "blog/2023-06-08-learned-helplessness.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-06-27/cover.jpg)
@@ -68,10 +72,3 @@ La mejor estrategia en el Dilema del Prisionero iterado es empezar cooperando y 
 {{ youtube(id="S0SQLQMLi8Q") }}
 
 > No confíes, verifica.
-
----
-
-**Posts relacionados**
-
-- [Indefensión aprendida](/es/blog/learned-helplessness/) <small>Una aceptación de impotencia</small>
-- [El poder de la autoridad y la obediencia](/es/blog/the-power-of-authority-and-obedience/) <small>El experimento de Milgram</small>

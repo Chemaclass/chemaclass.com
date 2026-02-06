@@ -33,4 +33,4 @@ that language.
 How to use Subdomains to handle legacy systems and integrate multiple Bounded Contexts to define team relationships and
 technical mechanisms.
 
-> Domain-Driven Design Distilled brings **DDD** to life. 
+> Domain-Driven Design Distilled brings **DDD** to life.

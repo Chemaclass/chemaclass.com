@@ -7,6 +7,16 @@ tags = [ "clean-code", "agile", "xp", "communication", "career" ]
 [extra]
 subtitle = "Algunas reflexiones sobre la calidad del software en tu equipo"
 static_thumbnail = "/images/blog/2022-10-08/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
+  "blog/2022-08-22-understanding-people.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-05-28-peopleware.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-10-08/cover.jpg)
@@ -78,17 +88,3 @@ El desarrollo de software no es solo código, es **negocio**. Hay que encontrar 
 Ningún equipo debería tener "baja calidad" como parte de su identidad. Cada equipo tiene expectativas de calidad. La **clave** está en **acordar qué es buena calidad**.
 
 > Gracias a mi anterior Engineering Manager, Evgenii Sokolov, quien me inspiró a escribir estas líneas adicionales después de compartir el post original.
-
----
-
-**Posts relacionados**
-
-- [El arte del testing: donde el diseño se encuentra con la calidad](/es/blog/the-art-of-testing/). <small>Desde el punto de vista de un desarrollador de software</small>
-- [Entendiendo a las personas](/es/blog/understanding-people/). <small>Malentendidos, comunicación efectiva y autorreflexión</small>
-- [Actualiza tu equipo para ser más extreme](/es/blog/update-your-team-to-be-more-extreme/). <small>¿Cómo puedes ayudar a tus compañeros a abrazar el cambio?</small>
-
-**Lecturas relacionadas**
-
-- [Extreme Programming Explained](/es/readings/xp-embrace-change/) <small>por Kent Beck</small>
-- [Peopleware](/es/readings/peopleware) <small>por Tom DeMarco</small>
-- [Clean Agile](/es/readings/clean-agile/) <small>por Robert C. Martin</small>

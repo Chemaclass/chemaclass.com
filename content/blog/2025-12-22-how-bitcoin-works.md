@@ -8,6 +8,18 @@ subtitle = "Blockchain, cryptography, and consensus"
 static_thumbnail = "/images/blog/2025-12-21/cover.jpg"
 series = "bitcoin"
 series_order = 6
+related_posts = [
+  "blog/2024-07-06-programmable-money.md",
+  "blog/2024-07-13-pretty-good-privacy.md",
+  "blog/2024-12-11-the-cypherpunks.md",
+  "blog/2025-02-17-run-your-ln-node.md",
+  "blog/2025-11-21-bitcoin-fundamentals.md",
+]
+related_readings = [
+  "readings/2023-07-10-the-book-of-satoshi.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
 +++
 
 ![blog-cover](/images/blog/2025-12-21/cover.jpg)
@@ -315,20 +327,3 @@ Bitcoin's technical depth goes far beyond what fits in one post. Here are topics
 The deeper you go, the more you find.
 
 {% end %}
-
----
-
-**Related posts**
-
-- [Bitcoin Fundamentals](/blog/bitcoin-fundamentals/) <small>Why Bitcoin matters: sound money and financial sovereignty</small>
-- [The Cypherpunks](/blog/the-cypherpunks/) <small>Pioneers of privacy in the digital age</small>
-- [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>
-- [Run your LN node on a Raspberry Pi](/blog/run-your-ln-node/) <small>Take full control of your Lightning payments</small>
-- [Pretty Good Privacy](/blog/pretty-good-privacy/) <small>A beginner's guide to encryption</small>
-
-**Related readings**
-
-- [Bitcoin Whitepaper](https://bitcoin.org/bitcoin.pdf) <small>The original 9-page paper by Satoshi Nakamoto</small>
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
-- [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
-- [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>

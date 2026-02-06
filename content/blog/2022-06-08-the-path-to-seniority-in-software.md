@@ -6,6 +6,12 @@ tags = [ "career", "mentoring", "clean-code", "tdd", "communication" ]
 [extra]
 subtitle = "How to become a Senior Software Developer?"
 static_thumbnail = "/images/blog/2022-06-08/cover.jpg"
+related_readings = [
+  "readings/2021-01-16-who-moved-my-cheese.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2020-03-26-the-manager-path.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-06-08/cover.jpg)
@@ -94,10 +100,3 @@ could clearly see this problem on a daily basis.
 
 > You need this combination to build yourself as a truly senior developer; time, experience, and most importantly:
 > attitude towards **improving your own skills and the ones that surround you**.
-
-**Related readings**
-
-- [Who moved my cheese?](/readings/who-moved-my-cheese/) <small>by Spencer Johnson.</small>
-- [Leaders Eat Last](/readings/leaders-eat-last/) <small>by Simon Sinek.</small>
-- [The Manager Path](/readings/manager-path/) <small>by Camille Fournier.</small>
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck.</small>

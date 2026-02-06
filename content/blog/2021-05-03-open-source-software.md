@@ -6,6 +6,9 @@ tags = [ "open-source", "git", "career", "productivity" ]
 [extra]
 subtitle = "The power of contributing to OSS 🖥"
 static_thumbnail = "/images/blog/2021-05-03/cover.jpg"
+related_posts = [
+  "blog/2021-02-01-phel-first-release.md",
+]
 +++
 
 ![blog-cover](/images/blog/2021-05-03/cover.jpg)
@@ -124,4 +127,3 @@ together with a live demo of how to contribute to a real OSS.
 {{ youtube(id="GE5wR_SC_P4") }}
 
 ---
-

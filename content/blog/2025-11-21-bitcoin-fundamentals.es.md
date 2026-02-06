@@ -8,6 +8,18 @@ tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
 subtitle = "Una guía para principiantes sobre dinero sólido"
 static_thumbnail = "/images/blog/2025-12-21/footer.jpg"
 reading_time = 12
+related_posts = [
+  "blog/2024-07-06-programmable-money.md",
+  "blog/2024-07-13-pretty-good-privacy.md",
+  "blog/2024-12-11-the-cypherpunks.md",
+  "blog/2025-01-02-understanding-taxes.md",
+  "blog/2025-02-17-run-your-ln-node.md",
+]
+related_readings = [
+  "readings/2023-07-10-the-book-of-satoshi.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
 +++
 
 ![blog-cover](/images/blog/2025-12-21/footer.jpg)
@@ -404,23 +416,6 @@ La mejor forma de entender Bitcoin es usarlo:
 No tienes que ir all in. Empieza pequeño y sigue aprendiendo, un paso a la vez.
 
 {{ youtube(id="Pef22g53zsg") }}
-
----
-
-**Posts relacionados**
-
-- [Los Cypherpunks](/es/blog/the-cypherpunks/) <small>Pioneros de la privacidad en la era digital</small>
-- [Entendiendo los impuestos](/es/blog/understanding-taxes/) <small>A dónde va tu dinero y cómo repensar el sistema</small>
-- [Dinero programable](/es/blog/programmable-money/) <small>El poder del Script de Bitcoin</small>
-- [Ejecuta tu nodo LN en una Raspberry Pi](/es/blog/run-your-ln-node/) <small>Toma el control total de tus pagos Lightning</small>
-- [Pretty Good Privacy](/es/blog/pretty-good-privacy/) <small>Una guía para principiantes sobre cifrado</small>
-
-**Lecturas relacionadas**
-
-- [Mastering Bitcoin](/es/readings/mastering-bitcoin/) <small>por Andreas M. Antonopoulos, David A. Harding</small>
-- [The Genesis Book](/es/readings/the-genesis-book/) <small>por Aaron van Wirdum</small>
-- [The Book Of Satoshi](/es/readings/the-book-of-satoshi/) <small>por Phil Champagne</small>
-
 **Lectura adicional**
 
 - [Bitcoin 101](https://cosmevalera.dev/blog/bitcoin-101/) <small>por Cosme - Otra introducción amigable para principiantes</small>

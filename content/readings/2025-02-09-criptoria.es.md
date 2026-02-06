@@ -11,8 +11,7 @@ pages = "250"
 author = "Alfre Mancera"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1736371979i/223396846.jpg"
 expand_preview = true
-related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]
-+++
+related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]+++
 
 ¿Cómo llegamos de la Grecia antigua a Bitcoin? Criptoria cuenta esa historia: el nacimiento de las computadoras, las redes y el dinero digital.
 

@@ -58,4 +58,3 @@ Agile is a highly collaborative working process at any level, which might have a
 Team building and embracing agility, starting with asking "why?" We need to challenge the status quo more often and ask ourselves why we work the way we do and how and what we could do differently to keep improving and never stop learning.
 
 > You can also read the interview from the original link: [https://devm.io/agile/extreme-programming-agile](https://devm.io/agile/extreme-programming-agile).
-

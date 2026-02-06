@@ -7,6 +7,12 @@ tags = [ "leadership", "team-management", "communication", "mentoring" ]
 [extra]
 subtitle = "Team Lead? Tech Lead? What is leadership and what is not?"
 static_thumbnail = "/images/blog/2022-09-25/cover.jpg"
+related_readings = [
+  "readings/2021-04-19-the-art-of-leadership.md",
+  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-09-25/cover.jpg)
@@ -106,10 +112,3 @@ everyone can grow certain leadership skills to some extent, which also means **i
 You can get inspiration from a lot of different sources. While it's true that you can learn a lot from your own mistakes
 and successes, and even from the people around you, I think it's very optimal to listen to the wisdom from other people's
 experiences outside your circle. For example listening to podcasts, ted-talks, books, or even audiobooks.
-
-**Related readings**
-
-- [Turn the Ship Around!](/readings/turn-the-ship-around/), by L. David Marquet
-- [Leaders Eat Last](/readings/leaders-eat-last/), by Simon Sinek
-- [The Art of Leadership](/readings/the-art-of-leadership/), by Michael Lopp
-- [Dare to lead](/readings/dare-to-lead/), by Brené Brown

@@ -11,6 +11,12 @@ pages = "300"
 author = "Aaron van Wirdum"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1703246002i/204250558.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2023-06-20-the-blocksize-war.md",
+  "readings/2023-07-10-the-book-of-satoshi.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
 +++
 
 Bitcoin did not appear out of nowhere. For decades prior to Satoshi Nakamoto’s invention, a diverse group of computer scientists, privacy activists, and heterodox economists tried to create a digital form of money that could operate independently of government control. The Genesis Book tells the story of the people and projects that inspired the invention of the world’s first successful peer-to-peer electronic cash system.
@@ -59,12 +65,3 @@ Bitcoin did not appear out of nowhere. For decades prior to Satoshi Nakamoto’s
 ---
 
 {{ youtube(id="TXs3maguye4") }}
-
----
-
-**Related readings**
-
-- [The Blocksize War](/readings/the-blocksize-war/) <small>by Jonathan Bier</small>
-- [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>by Saifedean Ammous</small>
-- [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>

@@ -9,6 +9,9 @@ subtitle = "The power of Bitcoin's Script"
 static_thumbnail = "/images/blog/2024-07-06/cover.jpg"
 series = "bitcoin"
 series_order = 3
+related_readings = [
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-07-06/cover.jpg)
@@ -315,7 +318,3 @@ Only Bitcoin's original developer could tell whether the dummy stack element was
 - [Bitcoin IDE](https://siminchen.github.io/bitcoinIDE/build/editor.html) is an online Bitcoin Script visual emulator. Great for learning purposes.
 - [Script Editor](https://coins.github.io/bitcoin-scripts/script-editor/) is product-driven research on Bitcoin scalability and usability.
 - [Miniscript](https://bitcoin.sipa.be/miniscript/) is a language for writing (a subset of) Bitcoin Scripts in a structured way, enabling analysis, composition, generic signing, and more.
-
-**Related readings**
-
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>

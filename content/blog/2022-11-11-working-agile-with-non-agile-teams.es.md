@@ -7,6 +7,16 @@ tags = [ "agile", "xp", "communication", "team-management" ]
 [extra]
 subtitle = "¿Cómo puedes trabajar con otros equipos que no son agile?"
 static_thumbnail = "/images/blog/2022-11-11/cover.jpg"
+related_posts = [
+  "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
+  "blog/2022-08-22-understanding-people.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2020-09-10-domain-driven-design-distilled.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-11-11/cover.jpg)
@@ -96,16 +106,3 @@ Todos se preocupan y asumen plena responsabilidad de mantener al equipo saludabl
 Es entonces cuando la magia empieza a suceder, y de repente puedes trabajar agile con cualquier equipo, especialmente el tuyo.
 
 ![blog-footer](/images/blog/2022-11-11/footer.jpg)
-
----
-
-**Posts relacionados**
-
-- [Actualiza tu equipo para ser más extreme](/es/blog/update-your-team-to-be-more-extreme/). <small>¿Cómo puedes ayudar a tus compañeros a abrazar el cambio?</small>
-- [Entendiendo a las personas](/es/blog/understanding-people/). <small>Malentendidos, comunicación efectiva y autorreflexión</small>
-
-**Lecturas relacionadas**
-
-- [Clean Agile](/es/readings/clean-agile/) <small>por Robert C. Martin</small>
-- [Extreme Programming Explained](/es/readings/xp-embrace-change/) <small>por Kent Beck</small>
-- [The Five Dysfunctions of a Team](/es/readings/the-five-dysfunctions-of-a-team/) <small>por Patrick M. Lencioni</small>

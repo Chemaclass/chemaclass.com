@@ -7,6 +7,20 @@ tags = [ "philosophy", "career", "productivity", "leadership" ]
 [extra]
 subtitle = "A simple definition that changed how I live"
 static_thumbnail = "/images/blog/2025-11-15/cover.jpg"
+related_posts = [
+  "blog/2020-09-08-the-process-itself-is-the-goal.md",
+  "blog/2021-03-01-embrace-the-change.md",
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-02-27-great-leadership.md",
+  "blog/2023-03-16-have-you-always-been-like-this.md",
+]
+related_readings = [
+  "readings/2017-03-20-the-power-of-habits.md",
+  "readings/2019-11-12-atomic-habits.md",
+  "readings/2021-01-16-who-moved-my-cheese.md",
+  "readings/2024-11-29-mans-search-for-meaning.md",
+  "readings/2025-02-16-digital-minimalism.md",
+]
 +++
 
 ![blog-cover](/images/blog/2025-11-15/cover.jpg)
@@ -98,21 +112,3 @@ That feels like success to me.
 ---
 
 **Thanks** to my friend Toni, for [bringing up](https://x.com/Chemaclass/status/1989652323925377462) this question and inspiring this reflection.
-
----
-
-**Related posts**
-
-- [The process itself is the goal](/blog/the-process-itself-is-the-goal) <small>How to focus and have self-discipline</small>
-- [Embrace the change](/blog/embrace-the-change) <small>Who moved my cheese?</small>
-- [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
-- [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
-- [Have you always been like this?](/blog/have-you-always-been-like-this) <small>How to find a balance of growth and happiness</small>
-
-**Related readings**
-
-- [Atomic Habits](/readings/atomic-habits/) <small>An Easy & Proven Way to Build Good Habits & Break Bad Ones</small>
-- [The Power of Habit](/readings/the-power-of-habits/) <small>Why We Do What We Do, and How to Change</small>
-- [Who moved my cheese?](/readings/who-moved-my-cheese/) <small>An Amazing Way to Deal With Change In Your Work and In Your Life</small>
-- [Man's Search for Meaning](/readings/mans-search-for-meaning/) <small>Purpose in despair: Frankl's holocaust insights</small>
-- [Digital Minimalism](/readings/digital-minimalism/) <small>Choosing a Focused Life in a Noisy World</small>

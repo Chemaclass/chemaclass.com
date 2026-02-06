@@ -7,6 +7,10 @@ tags = [ "psychology", "productivity", "career", "philosophy" ]
 [extra]
 subtitle = "Una aceptación de impotencia"
 static_thumbnail = "/images/blog/2023-06-08/cover.jpg"
+related_posts = [
+  "blog/2020-09-08-the-process-itself-is-the-goal.md",
+  "blog/2023-03-16-have-you-always-been-like-this.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-06-08/cover.jpg)
@@ -63,10 +67,3 @@ Aísla el problema y no lo extrapoles a otras áreas. Deja de generalizar el fra
 ### Español
 
 {{ youtube(id="E99XmEIPmf8") }}
-
----
-
-**Posts relacionados**
-
-- [¿Siempre has sido así?](/es/blog/have-you-always-been-like-this/) <small>Cómo encontrar un equilibrio entre crecimiento y felicidad</small>
-- [El proceso en sí mismo es el objetivo](/es/blog/the-process-itself-is-the-goal/) <small>Cómo enfocarse y tener autodisciplina</small>

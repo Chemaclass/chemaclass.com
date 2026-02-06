@@ -7,6 +7,12 @@ tags = [ "leadership", "team-management", "communication", "mentoring" ]
 [extra]
 subtitle = "¿Team Lead? ¿Tech Lead? ¿Qué es el liderazgo y qué no lo es?"
 static_thumbnail = "/images/blog/2022-09-25/cover.jpg"
+related_readings = [
+  "readings/2021-04-19-the-art-of-leadership.md",
+  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-09-25/cover.jpg)
@@ -89,10 +95,3 @@ Sé que no todos quieren aceptar los cambios necesarios para convertirse en líd
 ## ¿Cómo convertirse en un mejor líder?
 
 Puedes inspirarte en muchas fuentes. Aprendes de tus errores y éxitos, y de quienes te rodean. Pero también es muy útil escuchar la sabiduría de gente fuera de tu círculo: podcasts, charlas TED, libros, audiolibros...
-
-**Lecturas relacionadas**
-
-- [Turn the Ship Around!](/es/readings/turn-the-ship-around/), por L. David Marquet
-- [Leaders Eat Last](/es/readings/leaders-eat-last/), por Simon Sinek
-- [The Art of Leadership](/es/readings/the-art-of-leadership/), por Michael Lopp
-- [Dare to lead](/es/readings/dare-to-lead/), por Brené Brown

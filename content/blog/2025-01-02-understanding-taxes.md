@@ -10,6 +10,15 @@ subtitle = "Where your money goes and how to rethink the system"
 static_thumbnail = "/images/blog/2025-01-02/cover.jpg"
 series = "bitcoin"
 series_order = 4
+related_posts = [
+  "blog/2024-12-11-the-cypherpunks.md",
+  "blog/2025-11-21-bitcoin-fundamentals.md",
+]
+related_readings = [
+  "readings/2023-03-11-21-lessons.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2025-03-31-the-road-to-serfdom.md",
+]
 +++
 
 ![blog-cover](/images/blog/2025-01-02/cover.jpg)
@@ -147,16 +156,3 @@ With its **fixed supply of 21 million** coins, Bitcoin cannot be inflated in thi
 **Bitcoin** doesn't eliminate taxes or public services but **challenges how we think about money and power**. It gives people more **control over their wealth** and shows how financial systems work without needing large, often corrupt institutions. It's **a step toward a world where individuals have more freedom** and governments focus on being small, efficient, and fair.
 
 ![cover](/images/blog/2025-01-02/footer.jpg)
-
----
-
-**Related posts**
-
-- [Bitcoin Fundamentals](/blog/bitcoin-fundamentals/) <small>From sound money to cryptographic proof</small>
-- [The Cypherpunks](/blog/the-cypherpunks/) <small>Pioneers of privacy in the digital age</small>
-
-**Related readings**
-
-- [The Road to Serfdom](/readings/the-road-to-serfdom/) <small>How central planning can slowly erode freedom</small>
-- [21 Lessons](/readings/21-lessons/) <small>What I've learned from falling down the Bitcoin rabbit hole</small>
-- [The Genesis Book](/readings/the-genesis-book/) <small>The story of the people and projects that inspired Bitcoin</small>

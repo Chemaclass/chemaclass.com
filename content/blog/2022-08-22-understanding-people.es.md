@@ -7,6 +7,11 @@ tags = [ "communication", "psychology", "team-management" ]
 [extra]
 subtitle = "Malentendidos, comunicacion efectiva y autorreflexion"
 static_thumbnail = "/images/blog/2022-08-22/cover.jpg"
+related_readings = [
+  "readings/2021-04-05-97-things-every-em-should-know.md",
+  "readings/2021-10-22-leadership-is-language.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-08-22/cover.jpg)
@@ -64,9 +69,3 @@ La autorreflexion es esencial para mejorar y corregir tu actitud. Para adaptarte
 > Mira mas alla de tu area de influencia. Comparte tus ideas y no te averguences de tus errores si los tomas como oportunidades de aprendizaje.
 
 ![blog-cover](/images/blog/2022-08-22/footer.jpg)
-
-**Lecturas relacionadas**
-
-- [The Five Dysfunctions of a Team](/es/readings/the-five-dysfunctions-of-a-team/) <small>por Patrick M. Lencioni</small>
-- [97 Things Every Engineering Manager should know](/es/readings/97-things-every-em-should-know/) <small>por Camille Fournier</small>
-- [Leadership is Language](/es/readings/leadership-is-language/) <small>por L. David Marquet</small>

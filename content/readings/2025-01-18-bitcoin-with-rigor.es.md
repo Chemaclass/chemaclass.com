@@ -11,8 +11,7 @@ pages = "520"
 author = "Jose Sanchis"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1705890863i/205759549.jpg"
 expand_preview = true
-related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]
-+++
+related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]+++
 
 Un análisis detallado de cómo funciona Bitcoin, desglosando sus componentes de forma clara para entender tanto las partes como el sistema completo. Explora su potencial y riesgos como experimento monetario que, aunque no ha superado la prueba del tiempo como el oro, tiene un diseño prometedor.
 

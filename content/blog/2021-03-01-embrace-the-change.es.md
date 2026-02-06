@@ -6,6 +6,9 @@ tags = [ "leadership", "psychology", "career", "philosophy" ]
 [extra]
 subtitle = "¿Quién se ha llevado mi queso?"
 static_thumbnail = "/images/blog/2021-03-01/cover.jpg"
+related_readings = [
+  "readings/2021-01-16-who-moved-my-cheese.md",
+]
 +++
 
 ![blog-cover](/images/blog/2021-03-01/cover.jpg)
@@ -53,9 +56,3 @@ El libro está lleno de lecciones aplicables a cualquiera, sin importar quién s
 {{ youtube(id="OvYCLxqkfvY") }}
 
 > "La vida sigue adelante y nosotros también deberíamos" — Spencer Johnson
-
----
-
-**Lecturas relacionadas**
-
-- [Who moved my cheese](/es/readings/who-moved-my-cheese/) <small>de Spencer Johnson</small>

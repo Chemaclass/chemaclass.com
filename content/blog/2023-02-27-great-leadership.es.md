@@ -7,6 +7,28 @@ tags = [ "leadership", "communication", "team-management", "mentoring" ]
 [extra]
 subtitle = "El liderazgo comienza dentro de tu propia vida y comportamiento"
 static_thumbnail = "/images/blog/2023-02-27/cover.jpg"
+related_posts = [
+  "blog/2022-09-25-the-beauty-of-leadership.md",
+]
+related_readings = [
+  "readings/2017-03-20-the-power-of-habits.md",
+  "readings/2019-11-12-atomic-habits.md",
+  "readings/2020-04-03-high-output-management.md",
+  "readings/2020-06-12-never-split-the-difference.md",
+  "readings/2021-01-16-who-moved-my-cheese.md",
+  "readings/2021-04-19-the-art-of-leadership.md",
+  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/2021-10-22-leadership-is-language.md",
+  "readings/2021-11-28-start-with-why.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2022-08-01-the-great-ceo-within.md",
+  "readings/2022-09-30-dare-to-lead.md",
+  "readings/2022-10-29-the-essential-drucker.md",
+  "readings/2023-01-29-the-infinite-game.md",
+  "readings/2023-02-26-adapt-or-die.md",
+  "readings/2020-03-26-the-manager-path.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-02-27/cover.jpg)

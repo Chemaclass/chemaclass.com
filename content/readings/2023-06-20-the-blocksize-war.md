@@ -11,6 +11,12 @@ pages = "240"
 author = "Jonathan Bier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615869542i/57429394.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2023-07-10-the-book-of-satoshi.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
 +++
 
 <!-- more -->
@@ -48,12 +54,3 @@ The account in this book includes discussions with the key players from both sid
 ### Summary
 
 {{ youtube(id="6YtS5ZNuuTw") }}
-
----
-
-**Related readings**
-
-- [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>by Saifedean Ammous</small>
-- [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
-- [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>

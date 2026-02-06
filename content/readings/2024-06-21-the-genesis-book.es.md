@@ -11,6 +11,12 @@ pages = "300"
 author = "Aaron van Wirdum"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1703246002i/204250558.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2023-06-20-the-blocksize-war.md",
+  "readings/2023-07-10-the-book-of-satoshi.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
 +++
 
 Bitcoin no surgió de la nada. Durante décadas antes de Satoshi Nakamoto, científicos informáticos, activistas de la privacidad y economistas heterodoxos intentaron crear dinero digital que funcionara sin control gubernamental. Este libro cuenta la historia de las personas y proyectos que inspiraron el primer sistema de efectivo electrónico P2P exitoso del mundo.
@@ -59,12 +65,3 @@ Bitcoin no surgió de la nada. Durante décadas antes de Satoshi Nakamoto, cient
 ---
 
 {{ youtube(id="TXs3maguye4") }}
-
----
-
-**Lecturas relacionadas**
-
-- [The Blocksize War](/es/readings/the-blocksize-war/) <small>por Jonathan Bier</small>
-- [The Bitcoin Standard](/es/readings/the-bitcoin-standard/) <small>por Saifedean Ammous</small>
-- [The Book Of Satoshi](/es/readings/the-book-of-satoshi/) <small>por Phil Champagne</small>
-- [Mastering Bitcoin](/es/readings/mastering-bitcoin/) <small>por Andreas M. Antonopoulos, David A. Harding</small>

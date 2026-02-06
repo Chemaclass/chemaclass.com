@@ -7,6 +7,15 @@ tags = ["leadership", "team-management", "psychology", "communication"]
 [extra]
 subtitle = "Tuckman's Model to drive a team to high performance"
 static_thumbnail = "/images/blog/2023-11-25/cover.jpg"
+related_posts = [
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-02-27-great-leadership.md",
+]
+related_readings = [
+  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-11-25/cover.jpg)
@@ -95,16 +104,3 @@ This involves providing **guidance and structure** during the _forming_ stage, *
 ### Video summary
 
 {{ youtube(id="-RwkZxGPQb8") }}
-
----
-
-**Related readings**
-
-- [Dare to lead](/readings/dare-to-lead/)<small> by Brené Brown</small>
-- [Turn the ship around!](/readings/turn-the-ship-around/)<small> by L. David Marquet</small>
-- [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/) <small>by Patrick M. Lencioni</small>
-
-**Related posts**
-
-- [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
-- [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>

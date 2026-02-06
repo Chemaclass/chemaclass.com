@@ -7,6 +7,16 @@ tags = ["agile", "xp", "leadership", "productivity"]
 [extra]
 subtitle = "Why \"should we not\" deploy to production on Fridays?"
 static_thumbnail = "/images/blog/2024-02-25/cover.jpg"
+related_posts = [
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2022-10-08-different-beliefs-about-software-quality.md",
+  "blog/2023-05-17-dedicated-qa-teams.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-02-25/cover.jpg)
@@ -42,17 +52,3 @@ I believe **frequent** and **small releases** to production **are key**; any tim
 Being able to deploy on Fridays (if needed or wanted) impacts the team's confidence. Similarly, forbidding deployments on Fridays impacts the team's self-esteem as well.
 
 ![cover](/images/blog/2024-02-25/footer.jpg)
-
----
-
-**Related posts**
-
-- [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
-- [Different beliefs about software quality](/blog/different-beliefs-about-software-quality/) <small>Some thoughts about software quality</small>
-- [Dedicated QA Teams in software?](/blog/dedicated-qa-teams/) <small>How does it fit a dedicated QA person in your agile team?</small>
-
-**Related readings**
-
-- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
-- [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/) <small>by Patrick M. Lencioni</small>

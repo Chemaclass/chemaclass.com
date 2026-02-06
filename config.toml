@@ -250,8 +250,7 @@ svc_websites = "Websites"
 [extra]
 start_here_posts = [
   "blog/2022-06-08-the-path-to-seniority-in-software.md",
-  "blog/2020-04-07-the-art-of-testing.md",
-  "blog/2023-12-30-great-engineering.md",
+  "blog/2024-03-28-effective-pair-programming.md",
   "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
   "blog/2022-09-25-the-beauty-of-leadership.md",
 ]

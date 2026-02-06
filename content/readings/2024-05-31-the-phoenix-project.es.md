@@ -11,8 +11,7 @@ pages = "430"
 author = "Gene Kim, Kevin Behr, George Spafford"
 static_thumbnail = "https://m.media-amazon.com/images/I/81ZMvLDtmIL._SL1500_.jpg"
 expand_preview = true
-related_posts = ["blog/2023-12-30-great-engineering.md", "blog/2023-10-11-unhealthy-working-environment.md", "blog/2024-02-25-deployments-on-fridays.md"]
-+++
+related_posts = ["blog/2023-12-30-great-engineering.md", "blog/2023-10-11-unhealthy-working-environment.md", "blog/2024-02-25-deployments-on-fridays.md"]+++
 
 Una historia sobre un proyecto imposible donde todos juegan a la política, arreglan bugs críticos sin parar y desperdician esfuerzos en parches rápidos en vez de ayudar al negocio a prosperar.
 

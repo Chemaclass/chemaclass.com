@@ -7,6 +7,11 @@ tags = [ "communication", "psychology", "team-management" ]
 [extra]
 subtitle = "Misunderstandings, effective communication, and self-reflection"
 static_thumbnail = "/images/blog/2022-08-22/cover.jpg"
+related_readings = [
+  "readings/2021-04-05-97-things-every-em-should-know.md",
+  "readings/2021-10-22-leadership-is-language.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-08-22/cover.jpg)
@@ -77,9 +82,3 @@ are surrounded by, **especially when dealing with people**.
 > learning opportunities.
 
 ![blog-cover](/images/blog/2022-08-22/footer.jpg)
-
-**Related readings**
-
-- [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/) <small>by Patrick M. Lencioni</small>
-- [97 Things Every Engineering Manager should know](/readings/97-things-every-em-should-know/) <small>by Camille Fournier</small>
-- [Leadership is Language](/readings/leadership-is-language/) <small>by L. David Marquet</small>

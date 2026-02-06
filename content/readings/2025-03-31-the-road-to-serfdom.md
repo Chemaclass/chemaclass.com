@@ -11,8 +11,7 @@ pages = "266"
 author = "Friedrich A. Hayek"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327787673i/299215.jpg"
 expand_preview = true
-related_posts = ["blog/2025-01-02-understanding-taxes.md"]
-+++
+related_posts = ["blog/2025-01-02-understanding-taxes.md"]+++
 
 First published in 1944, The Road to Serfdom is still making waves today. Friedrich Hayek, an Austrian economist, wrote it during World War II to warn against something he saw as really dangerous: central economic planning.
 

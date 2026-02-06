@@ -7,6 +7,13 @@ tags = [ "agile", "code-review", "team-management", "productivity" ]
 [extra]
 subtitle = "Colaboración impulsada por la cultura a la velocidad del código"
 static_thumbnail = "/images/blog/2025-04-12/cover.jpg"
+related_posts = [
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2023-12-30-great-engineering.md",
+  "blog/2024-02-25-deployments-on-fridays.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+  "blog/2024-09-02-people-skills.md",
+]
 +++
 
 ![blog-cover](/images/blog/2025-04-12/cover.jpg)
@@ -104,13 +111,3 @@ Si estás cansado de colas lentas de PR y aprobaciones sobre-ingeniadas, esto po
 > ¿Curioso por profundizar? Mira el [post de Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html).
 
 ![footer](/images/blog/2025-04-12/footer.jpg)
-
----
-
-**Posts relacionados**
-
-- [Pair programming efectivo](/es/blog/effective-pair-programming/) <small>Abrazando prácticas de calidad en tu cultura de ingeniería</small>
-- [El camino a la seniority en software](/es/blog/the-path-to-seniority-in-software/) <small>¿Cómo convertirse en un Desarrollador de Software Senior?</small>
-- [Deploys en viernes](/es/blog/deployments-on-fridays/) <small>¿Por qué "no deberíamos" deployar a producción los viernes?</small>
-- [Gran ingeniería](/es/blog/great-engineering/) <small>Un gran ingeniero no es solo un gran programador</small>
-- [Habilidades interpersonales](/es/blog/people-skills/) <small>Del código a la colaboración</small>

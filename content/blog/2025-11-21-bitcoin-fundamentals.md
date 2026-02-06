@@ -10,6 +10,18 @@ static_thumbnail = "/images/blog/2025-12-21/footer.jpg"
 reading_time = 12
 series = "bitcoin"
 series_order = 5
+related_posts = [
+  "blog/2024-07-06-programmable-money.md",
+  "blog/2024-07-13-pretty-good-privacy.md",
+  "blog/2024-12-11-the-cypherpunks.md",
+  "blog/2025-01-02-understanding-taxes.md",
+  "blog/2025-02-17-run-your-ln-node.md",
+]
+related_readings = [
+  "readings/2023-07-10-the-book-of-satoshi.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
 +++
 
 ![blog-cover](/images/blog/2025-12-21/footer.jpg)
@@ -406,23 +418,6 @@ The best way to understand Bitcoin is to use it:
 You don't have to go all in. Start small and keep learning, one step at a time.
 
 {{ youtube(id="Pef22g53zsg") }}
-
----
-
-**Related posts**
-
-- [The Cypherpunks](/blog/the-cypherpunks/) <small>Pioneers of privacy in the digital age</small>
-- [Understanding Taxes](/blog/taxes/) <small>Where your money goes and how to rethink the system</small>
-- [Programmable Money](/blog/programmable-money/) <small>The power of Bitcoin's Script</small>
-- [Run your LN node on a Raspberry Pi](/blog/run-your-ln-node/) <small>Take full control of your Lightning payments</small>
-- [Pretty Good Privacy](/blog/pretty-good-privacy/) <small>A beginner's guide to encryption</small>
-
-**Related readings**
-
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
-- [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
-- [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
-
 **Further reading**
 
 - [Bitcoin 101](https://cosmevalera.dev/blog/bitcoin-101/) <small>by Cosme - Another beginner-friendly introduction</small>

@@ -7,6 +7,10 @@ tags = [ "career", "philosophy", "productivity" ]
 [extra]
 subtitle = "Writing to help myself sleep"
 static_thumbnail = "/images/blog/2023-07-05/cover.jpg"
+related_posts = [
+  "blog/2020-09-08-the-process-itself-is-the-goal.md",
+  "blog/2021-03-01-embrace-the-change.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-07-05/cover.jpg)
@@ -30,10 +34,3 @@ Writing is one of my favorite ways to express myself, especially when I cannot s
 ![blog-footer](/images/blog/2023-07-05/footer.jpg)
 
 > Original photos from my trip to Tuscany, Italy, last month.
-
----
-
-**Related posts**
-
-- [The process itself is the goal](/blog/the-process-itself-is-the-goal/) <small>How to focus and have self-discipline</small>
-- [Embrace the change](/blog/embrace-the-change/) <small>Who moved my cheese?</small>

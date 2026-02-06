@@ -7,6 +7,9 @@ tags = [ "productivity", "psychology", "career", "philosophy"]
 subtitle = "Cómo enfocarte y tener autodisciplina"
 static_thumbnail = "/images/blog/2020-09-08/cover.jpg"
 pin = false
+related_readings = [
+  "readings/2019-11-12-atomic-habits.md",
+]
 +++
 
 ![blog-cover](/images/blog/2020-09-08/cover.jpg)

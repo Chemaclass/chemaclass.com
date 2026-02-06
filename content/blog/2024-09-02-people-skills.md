@@ -7,6 +7,15 @@ tags = [ "communication", "team-management", "career", "leadership" ]
 [extra]
 subtitle = "From code to collaboration"
 static_thumbnail = "/images/blog/2024-09-02/cover.jpg"
+related_posts = [
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-12-30-great-engineering.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-05-28-peopleware.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-09-02/cover.jpg)
@@ -78,16 +87,3 @@ While technical skills might require you to dive into documentation, run experim
 Humans bring their feelings, backgrounds, and routines into interactions, adding layers of complexity beyond machines' straightforward logic. These personal details shape the reality we perceive, making interpersonal skills an essential yet complex part of effective communication and collaboration.
 
 ![cover](/images/blog/2024-09-02/footer.jpg)
-
----
-
-**Related posts**
-
-- [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
-- [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
-- [Great engineering](/blog/great-engineering/) <small>A great engineer is not just a great coder</small>
-
-**Related readings**
-
-- [Peopleware](/readings/peopleware) <small>by Tom DeMarco, Timothy Lister</small>
-- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>

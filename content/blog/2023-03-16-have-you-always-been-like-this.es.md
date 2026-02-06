@@ -7,6 +7,14 @@ tags = [ "career", "productivity", "philosophy", "self-improvement" ]
 [extra]
 subtitle = "Cómo encontrar un equilibrio entre crecimiento y felicidad"
 static_thumbnail = "/images/blog/2023-03-16/cover.jpg"
+related_posts = [
+  "blog/2019-11-18-improve-your-tech-talk.md",
+  "blog/2020-09-08-the-process-itself-is-the-goal.md",
+]
+related_readings = [
+  "readings/2017-03-20-the-power-of-habits.md",
+  "readings/2019-11-12-atomic-habits.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-03-16/cover.jpg)
@@ -85,10 +93,3 @@ No espero que las cosas cambien de un día para otro. Disfruto experimentando, c
 Lo que me mantiene en movimiento es <u>el tiempo que me queda</u> y pensar: "**¿Qué me habría gustado haber cambiado?**" Y si es así, "**¿Por qué no lo hice?**"
 
 ![blog-footer](/images/blog/2023-03-16/footer.jpg)
-
----
-
-**Lecturas relacionadas**
-
-- [The power of habits](/es/readings/the-power-of-habits/)  <small>Por qué hacemos lo que hacemos, y cómo cambiar</small>
-- [Atomic habits](/es/readings/atomic-habits/)  <small>Una manera fácil y probada de construir buenos hábitos y romper los malos</small>

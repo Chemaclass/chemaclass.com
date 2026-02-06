@@ -8,6 +8,18 @@ tags = [ "leadership", "communication", "team-management", "mentoring", "xp" ]
 [extra]
 subtitle = "How do you deal with people reluctant to change?"
 static_thumbnail = "/images/blog/2023-08-02/cover.jpg"
+related_posts = [
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2022-11-11-working-agile-with-non-agile-teams.md",
+  "blog/2023-02-27-great-leadership.md",
+]
+related_readings = [
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2021-01-16-who-moved-my-cheese.md",
+  "readings/2021-05-28-peopleware.md",
+  "readings/2021-11-28-start-with-why.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-08-02/cover.jpg)
@@ -69,11 +81,3 @@ You cannot force people to change. On the contrary, the more you try to force it
 ![footer](/images/blog/2023-08-02/footer.jpg)
 
 > Photos from me at WeAreDevelopers World Congress, Berlin 2023.
-
---- 
-
-**Related posts**
-
-- [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
-- [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
-- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small> How can you work with other teams that aren't agile?</small>

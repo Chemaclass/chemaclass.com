@@ -7,6 +7,14 @@ tags = ["leadership", "team-management", "communication", "psychology"]
 [extra]
 subtitle = "Recognizing red flags of an unhealthy workplace"
 static_thumbnail = "/images/blog/2023-10-11/cover.jpg"
+related_posts = [
+  "blog/2020-09-08-the-process-itself-is-the-goal.md",
+  "blog/2021-03-01-embrace-the-change.md",
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-02-27-great-leadership.md",
+  "blog/2023-03-16-have-you-always-been-like-this.md",
+  "blog/2023-09-30-the-peter-principle.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-10-11/cover.jpg)

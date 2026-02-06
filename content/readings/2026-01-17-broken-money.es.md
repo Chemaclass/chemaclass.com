@@ -11,6 +11,12 @@ pages = "538"
 author = "Lyn Alden"
 static_thumbnail = "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1692701772i/197566578.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+  "readings/2025-06-22-principles-of-economics.md",
+]
 +++
 
 Lyn Alden cuenta la historia del dinero desde una mirada tecnológica. Analiza desde sistemas basados en materias primas hasta monedas fiat modernas y alternativas como Bitcoin.
@@ -48,12 +54,3 @@ Su análisis tiene base ingenieril: ¿Cuáles son las propiedades reales de Bitc
 "Dinero roto" destaca porque no asume que ya compartes su premisa. Alden construye el caso paso a paso: algo falla en cómo funciona el dinero hoy. Traza las raíces históricas del problema y evalúa posibles soluciones.
 
 Aunque no termines convencido, saldrás entendiendo mucho mejor los sistemas monetarios y por qué importan.
-
----
-
-**Lecturas relacionadas**
-
-- [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>de Saifedean Ammous</small>
-- [Principles of Economics](/readings/principles-of-economics/) <small>de Saifedean Ammous</small>
-- [The Genesis Book](/readings/the-genesis-book/) <small>de Aaron van Wirdum</small>
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>de Andreas M. Antonopoulos, David A. Harding</small>

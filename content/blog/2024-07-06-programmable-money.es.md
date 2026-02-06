@@ -7,6 +7,9 @@ tags = [ "bitcoin", "programming", "cryptography", "security" ]
 [extra]
 subtitle = "El poder del Script de Bitcoin"
 static_thumbnail = "/images/blog/2024-07-06/cover.jpg"
+related_readings = [
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-07-06/cover.jpg)
@@ -313,7 +316,3 @@ Solo el creador de Bitcoin podria decir si fue un bug o un plan. Si ves un scrip
 - [Bitcoin IDE](https://siminchen.github.io/bitcoinIDE/build/editor.html): emulador visual de Script online, genial para aprender.
 - [Script Editor](https://coins.github.io/bitcoin-scripts/script-editor/): investigacion sobre escalabilidad y usabilidad de Bitcoin.
 - [Miniscript](https://bitcoin.sipa.be/miniscript/): lenguaje para escribir Scripts de Bitcoin de forma estructurada, con analisis, composicion y firma generica.
-
-**Lecturas relacionadas**
-
-- [Mastering Bitcoin](/es/readings/mastering-bitcoin/) <small>por Andreas M. Antonopoulos, David A. Harding</small>

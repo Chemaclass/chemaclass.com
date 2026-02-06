@@ -7,6 +7,11 @@ tags = [ "testing", "tdd", "agile", "clean-code" ]
 [extra]
 subtitle = "¿Cómo encaja una persona QA dedicada en tu equipo agile?"
 static_thumbnail = "/images/blog/2023-05-17/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2021-09-25-tdd-vs-bdd.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-05-17/cover.jpg)
@@ -56,12 +61,3 @@ Y así es como cambias la "posición de QA a tiempo completo" en una "mentalidad
 El código nunca miente y nunca olvida; una vez que está escrito y automatizado en tu pipeline, puedes ejecutarlo en cualquier momento sin coste.
 
 ![blog-footer](/images/blog/2023-05-17/footer.jpg)
-
-
----
-
-**Posts relacionados**
-
-- [TDD vs BDD](/es/blog/tdd-vs-bdd/) <small>¿Diseño o Flujo de trabajo?</small>
-- [Test-Driven (Development)](/es/blog/test-driven-development/) <small>¿Qué tiene de desafiante?</small>
-- [Donde el diseño se encuentra con la calidad](/es/blog/the-art-of-testing/) <small>Desde el punto de vista de un desarrollador de software</small>

@@ -7,6 +7,12 @@ tags = ["testing", "tdd", "software-design", "clean-code"]
 [extra]
 subtitle = "Testeando métodos privados. ¿Cuándo y cómo?"
 static_thumbnail = "/images/blog/2023-10-20/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2022-10-08-different-beliefs-about-software-quality.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-10-20/cover.jpg)
@@ -28,12 +34,4 @@ Nunca jamás.
 ## ¿Y si...?
 
 Si realmente quieres testear un método privado, considera extraer esa lógica del método privado en una clase separada, y escribe un test unitario para el comportamiento de esa clase.
-
-**Posts relacionados**
-
-- [Test-Driven (Development)](/es/blog/test-driven-development/) <small>¿Qué tiene de desafiante?</small>
-- [Diferentes creencias sobre la calidad del software](/es/blog/different-beliefs-about-software-quality/) <small>Algunas reflexiones sobre la calidad del software</small>
-- [El arte del testing: donde el diseño se encuentra con la calidad](/es/blog/the-art-of-testing/) <small>Desde el punto de vista de un desarrollador de software</small>
-- [El camino a la seniority en software](/es/blog/the-path-to-seniority-in-software/) <small>¿Cómo convertirse en un Desarrollador de Software Senior?</small>
-
 > Para este, me inspiré en el [post original](https://franiglesias.github.io/test-private-methods/) de Fran Iglesias.

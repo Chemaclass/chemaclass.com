@@ -11,8 +11,7 @@ pages = "250"
 author = "Cal Newport"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1549433350i/40672036.jpg"
 expand_preview = true
-related_posts = ["blog/2020-09-08-the-process-itself-is-the-goal.md", "blog/2023-03-16-have-you-always-been-like-this.md"]
-+++
+related_posts = ["blog/2020-09-08-the-process-itself-is-the-goal.md", "blog/2023-03-16-have-you-always-been-like-this.md"]+++
 
 In an era dominated by constant connectivity, the concept of digital minimalism emerges as a refreshing antidote. Coined by Cal Newport, this philosophy isn't about rejecting technology but rather about using it with greater intention and care. By implementing digital minimalism, individuals can reclaim focus, reduce anxiety, and cultivate deeper, more meaningful relationships.
 

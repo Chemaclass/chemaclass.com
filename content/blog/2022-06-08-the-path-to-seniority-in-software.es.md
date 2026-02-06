@@ -4,8 +4,14 @@ description = "La seniority en nuestra industria del software está más contami
 [taxonomies]
 tags = [ "career", "mentoring", "clean-code", "tdd", "communication" ]
 [extra]
-subtitle = "¿Cómo convertirse en un Desarrollador de Software Senior?"
+subtitle = "¿Cómo convertirse en un Desarrollador Senior?"
 static_thumbnail = "/images/blog/2022-06-08/cover.jpg"
+related_readings = [
+  "readings/2021-01-16-who-moved-my-cheese.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2020-03-26-the-manager-path.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-06-08/cover.jpg)
@@ -64,10 +70,3 @@ B) una persona que trabaja desde hace 5 años, desafiándose a sí misma cada se
 Entendemos erróneamente que _un año de experiencia debe venir con aprendizaje y conocimiento_, así que tendemos a usar el tiempo como medida de seniority. Pero argumento que el "factor actitud" es igual o incluso más importante. He estado rodeado de muchas personas que se llaman a sí mismas seniors con 3, 6, 10 y más años de "experiencia" pero sin actitud, y podías ver claramente este problema a diario.
 
 > Necesitas esta combinación para construirte como un desarrollador verdaderamente senior; tiempo, experiencia, y lo más importante: actitud hacia **mejorar tus propias habilidades y las de quienes te rodean**.
-
-**Lecturas relacionadas**
-
-- [Who moved my cheese?](/es/readings/who-moved-my-cheese/) <small>por Spencer Johnson.</small>
-- [Leaders Eat Last](/es/readings/leaders-eat-last/) <small>por Simon Sinek.</small>
-- [The Manager Path](/es/readings/manager-path/) <small>por Camille Fournier.</small>
-- [Extreme Programming Explained](/es/readings/xp-embrace-change/) <small>por Kent Beck.</small>

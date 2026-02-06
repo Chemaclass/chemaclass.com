@@ -9,6 +9,9 @@ subtitle = "Una forma sencilla y probada de construir buenos hábitos y dejar lo
 pages = "320"
 author = "James Clear"
 static_thumbnail = "https://m.media-amazon.com/images/I/51-nXsSRfZL.jpg"
+related_posts = [
+  "blog/2020-09-08-the-process-itself-is-the-goal.md",
+]
 +++
 
 <!-- more -->

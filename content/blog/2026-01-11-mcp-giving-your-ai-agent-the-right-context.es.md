@@ -7,6 +7,15 @@ tags = [ "ai", "software-architecture", "developer-tools", "craftsmanship" ]
 [extra]
 subtitle = "Por qué el contexto es el verdadero superpoder"
 static_thumbnail = "/images/blog/2026-01-11/cover.jpg"
+related_posts = [
+  "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
+  "blog/2022-10-08-different-beliefs-about-software-quality.md",
+  "blog/2023-04-14-introducing-a-new-tech-stack.md",
+]
+related_readings = [
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 Los asistentes de código con IA modernos son muy buenos entendiendo contexto. Modelos como Claude Opus con ventanas de contexto amplias (unos 200k tokens) pueden tener porciones sustanciales de tu código en mente, razonar sobre arquitectura y mantener coherencia en conversaciones largas. No el proyecto entero en codebases grandes, pero sí lo suficiente para trabajar bien.
@@ -126,18 +135,3 @@ El juicio humano no desaparece. Se mueve hacia arriba. En lugar de revisar cada 
 Ese sigue siendo nuestro trabajo. Y vale la pena hacerlo bien.
 
 ![cover](/images/blog/2026-01-11/footer.jpg)
-
----
-
-## Relacionado
-
-### Posts relacionados
-
-- [La IA te da velocidad, no calidad](/blog/ai-gives-you-speed-not-quality) <small>El factor humano en la era del vibe-coding</small>
-- [Diferentes creencias sobre la calidad del software](/blog/different-beliefs-about-software-quality) <small>Pensamientos sobre la calidad del software en tu equipo</small>
-- [Introduciendo un nuevo stack tecnológico](/blog/introducing-a-new-tech-stack) <small>Cómo introducir nuevas tecnologías en tu equipo</small>
-
-### Lecturas relacionadas
-
-- [Clean Architecture](/readings/clean-architecture/) <small>A Craftsman's Guide to Software Structure and Design</small>
-- [Extreme Programming Explained](/readings/extreme-programming-explained/) <small>Embrace Change</small>

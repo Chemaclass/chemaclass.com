@@ -11,8 +11,7 @@ pages = "400"
 author = "Saifedean Ammous"
 static_thumbnail = "https://m.media-amazon.com/images/I/71OdiXckU3L._SY522_.jpg"
 expand_preview = true
-related_posts = ["blog/2024-12-11-the-cypherpunks.md"]
-+++
+related_posts = ["blog/2024-12-11-the-cypherpunks.md"]+++
 
 If you've ever scratched your head at the economy, wondered why prices keep rising, or questioned why money seems to lose value over time, Principles of Economics by Saifedean Ammous might blow your mind.
 

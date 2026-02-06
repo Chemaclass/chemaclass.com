@@ -11,8 +11,7 @@ pages = "250"
 author = "Cal Newport"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1549433350i/40672036.jpg"
 expand_preview = true
-related_posts = ["blog/2020-09-08-the-process-itself-is-the-goal.md", "blog/2023-03-16-have-you-always-been-like-this.md"]
-+++
+related_posts = ["blog/2020-09-08-the-process-itself-is-the-goal.md", "blog/2023-03-16-have-you-always-been-like-this.md"]+++
 
 Vivimos conectados todo el tiempo. El minimalismo digital de Cal Newport no propone rechazar la tecnología, sino usarla con intención. El resultado: recuperas tu enfoque, reduces la ansiedad y construyes relaciones más profundas.
 

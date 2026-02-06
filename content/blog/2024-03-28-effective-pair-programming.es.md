@@ -8,6 +8,18 @@ tags = ["pair-programming", "xp", "tdd", "communication", "clean-code"]
 subtitle = "Abrazando prácticas de calidad en tu cultura de ingeniería"
 static_thumbnail = "/images/blog/2024-03-28/cover.jpg"
 pin = false
+related_posts = [
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2022-05-27-bikeshedding.md",
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2022-08-22-understanding-people.md",
+]
+related_readings = [
+  "readings/2016-08-01-the-clean-coder.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+  "readings/2020-10-10-object-design-style-guide.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-03-28/cover.jpg)
@@ -78,18 +90,3 @@ El pair programming podría convertirse en una de las mejores herramientas en la
 ![cover](/images/blog/2024-03-28/learning-through-katas.jpg)
 
 > Gracias a mi amigo [Manu](https://x.com/evrtrabajo), quien me ayudó con este post. Incluso compartimos un [taller](https://phpconference.com/agile-culture/practical-tdd-workshop/) sobre este tema.
-
----
-
-**Posts relacionados**
-
-- [Test-Driven (Development)](/es/blog/test-driven-development/) <small>¿Qué tiene de desafiante?</small>
-- [El camino a la seniority en software](/es/blog/the-path-to-seniority-in-software/) <small>¿Cómo convertirse en un Desarrollador de Software Senior?</small>
-- [Entendiendo a las personas](/es/blog/understanding-people) <small>Malentendidos, comunicación efectiva y autorreflexión</small>
-
-**Lecturas relacionadas**
-
-- [The Clean Coder](/es/readings/the-clean-coder/) <small>por Robert C. Martin</small>
-- [Extreme Programming Explained](/es/readings/xp-embrace-change/) <small>por Kent Beck</small>
-- [Object Design Style Guide](/es/readings/object-design-style-guide) <small>por Matthias Noback</small>
-- [Advanced Web Application Architecture](/es/readings/advance-web-application-architecture/) <small>por Matthias Noback</small>

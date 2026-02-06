@@ -6,6 +6,18 @@ tags = [ "pair-programming", "code-review", "agile", "communication" ]
 [extra]
 subtitle = "¿Por qué elegir cuando puedes tener ambos?"
 static_thumbnail = "/images/blog/2021-04-01/cover.jpg"
+related_posts = [
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
+  "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+  "blog/2024-05-30-what-kills-agility.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-05-28-peopleware.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 ![blog-cover](/images/blog/2021-04-01/cover.jpg)
@@ -103,19 +115,3 @@ Si aún te sientes incómodo con alguien a tu lado mientras programas, quizás n
 > Está totalmente bien no saber todo. Lo más importante es saber cómo trabajar juntos.
 
 ![blog-img](/images/blog/2021-04-01/footer.jpg)
-
----
-
-**Posts relacionados**
-
-- [¿Qué mata la agilidad?](/es/blog/what-kills-agility/) <small>¿Por qué Agile si ya haces Scrum, Kanban, SAFe, o Waterfall?</small>
-- [¿Ignorar Scrum para ser más ágil?](/es/blog/ignoring-scrum-to-get-more-agile/) <small>Matando la agilidad con reuniones excesivas</small>
-- [Actualiza tu equipo para ser más extremo](/es/blog/update-your-team-to-be-more-extreme/) <small>¿Cómo puedes ayudar a tus compañeros a abrazar el cambio?</small>
-- [Pair programming efectivo](/es/blog/effective-pair-programming/) <small>Abrazando prácticas de calidad en tu cultura de ingeniería</small>
-- [Test-Driven (Development)](/es/blog/test-driven-development/) <small>¿Qué tiene de desafiante?</small>
-
-**Lecturas relacionadas**
-
-- [Extreme Programming Explained](/es/readings/xp-embrace-change/) <small>de Kent Beck</small>
-- [Clean Agile](/es/readings/clean-agile/) <small>de Robert C. Martin</small>
-- [Peopleware](/es/readings/peopleware) <small>de Tom DeMarco, Timothy Lister</small>

@@ -7,6 +7,11 @@ tags = [ "testing", "tdd", "agile", "clean-code" ]
 [extra]
 subtitle = "How does it fit a dedicated QA person in your agile team?"
 static_thumbnail = "/images/blog/2023-05-17/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2021-09-25-tdd-vs-bdd.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-05-17/cover.jpg)
@@ -56,12 +61,3 @@ And that's how you change the "full-time QA position" into a "role mentality for
 Code never lies and never forgets; once it's written and automated in your pipeline, you can run it anytime at zero cost.
 
 ![blog-footer](/images/blog/2023-05-17/footer.jpg)
-
-
----
-
-**Related posts**
-
-- [TDD vs BDD](/blog/tdd-vs-bdd/) <small>Design or Workflow?</small>
-- [Test-Driven (Development)](/blog/test-driven-development/) <small>What is challenging about it?</small>
-- [Where design meets quality](/blog/the-art-of-testing/) <small>From a software developer's point of view</small>

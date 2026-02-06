@@ -7,6 +7,16 @@ tags = [ "agile", "xp", "communication", "team-management" ]
 [extra]
 subtitle = "How can you work with other teams that aren't agile?"
 static_thumbnail = "/images/blog/2022-11-11/cover.jpg"
+related_posts = [
+  "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
+  "blog/2022-08-22-understanding-people.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2020-09-10-domain-driven-design-distilled.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-11-11/cover.jpg)
@@ -117,16 +127,3 @@ learns from their **mistakes**; there is no need for masks anymore.
 That's when the magic starts to happen, and suddenly you can work agile with any team, especially yours.
 
 ![blog-footer](/images/blog/2022-11-11/footer.jpg)
-
----
-
-**Related posts**
-
-- [Update your team to be more extreme](/blog/update-your-team-to-be-more-extreme/). <small>How can you help your peers to embrace the change?</small>
-- [Understanding people](/blog/understanding-people/). <small>Misunderstandings, effective communication, and self-reflection</small>
-
-**Related readings**
-
-- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
-- [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/) <small>by Patrick M. Lencioni</small>

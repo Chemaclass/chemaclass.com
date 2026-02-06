@@ -7,6 +7,15 @@ tags = [ "bitcoin", "philosophy", "economics", "privacy" ]
 [extra]
 subtitle = "A dónde va tu dinero y cómo repensar el sistema"
 static_thumbnail = "/images/blog/2025-01-02/cover.jpg"
+related_posts = [
+  "blog/2024-12-11-the-cypherpunks.md",
+  "blog/2025-11-21-bitcoin-fundamentals.md",
+]
+related_readings = [
+  "readings/2023-03-11-21-lessons.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2025-03-31-the-road-to-serfdom.md",
+]
 +++
 
 ![blog-cover](/images/blog/2025-01-02/cover.jpg)
@@ -144,16 +153,3 @@ Bitcoin tiene una **oferta fija de 21 millones** de monedas. No se puede inflar.
 **Bitcoin** no elimina los impuestos ni los servicios públicos, pero **cuestiona cómo pensamos sobre el dinero y el poder**. Da a la gente más **control sobre su riqueza** y demuestra que los sistemas financieros pueden funcionar sin grandes instituciones (a menudo corruptas). Es **un paso hacia un mundo con más libertad individual** y gobiernos pequeños, eficientes y justos.
 
 ![cover](/images/blog/2025-01-02/footer.jpg)
-
----
-
-**Posts relacionados**
-
-- [Fundamentos de Bitcoin](/es/blog/bitcoin-fundamentals/) <small>Del dinero sólido a la prueba criptográfica</small>
-- [Los Cypherpunks](/es/blog/the-cypherpunks/) <small>Pioneros de la privacidad en la era digital</small>
-
-**Lecturas relacionadas**
-
-- [The Road to Serfdom](/es/readings/the-road-to-serfdom/) <small>Cómo la planificación central puede erosionar lentamente la libertad</small>
-- [21 Lessons](/es/readings/21-lessons/) <small>Lo que he aprendido al caer en la madriguera de Bitcoin</small>
-- [The Genesis Book](/es/readings/the-genesis-book/) <small>La historia de las personas y proyectos que inspiraron Bitcoin</small>

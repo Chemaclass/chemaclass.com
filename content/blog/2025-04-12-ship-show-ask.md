@@ -8,6 +8,13 @@ tags = [ "agile", "code-review", "team-management", "productivity" ]
 [extra]
 subtitle = "Culture-Driven Collaboration at the speed of code"
 static_thumbnail = "/images/blog/2025-04-12/cover.jpg"
+related_posts = [
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2023-12-30-great-engineering.md",
+  "blog/2024-02-25-deployments-on-fridays.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+  "blog/2024-09-02-people-skills.md",
+]
 +++
 
 ![blog-cover](/images/blog/2025-04-12/cover.jpg)
@@ -105,13 +112,3 @@ If you're tired of slow PR queues and over-engineered approvals, this might be w
 > Curious to dive deeper? Check out [Rouan Wilsenach's post](https://martinfowler.com/articles/ship-show-ask.html).
 
 ![footer](/images/blog/2025-04-12/footer.jpg)
-
----
-
-**Related posts**
-
-- [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
-- [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
-- [Deployments on Fridays](/blog/deployments-on-fridays/) <small>Why "should we not" deploy to production on Fridays?</small>
-- [Great engineering](/blog/great-engineering/) <small>A great engineer is not just a great coder</small>
-- [People skills](/blog/people-skills/) <small>From code to collaboration</small>

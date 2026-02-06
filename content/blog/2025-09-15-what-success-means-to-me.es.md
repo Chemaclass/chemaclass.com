@@ -7,6 +7,20 @@ tags = [ "philosophy", "career", "productivity", "leadership" ]
 [extra]
 subtitle = "Una definición simple que cambió cómo vivo"
 static_thumbnail = "/images/blog/2025-11-15/cover.jpg"
+related_posts = [
+  "blog/2020-09-08-the-process-itself-is-the-goal.md",
+  "blog/2021-03-01-embrace-the-change.md",
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-02-27-great-leadership.md",
+  "blog/2023-03-16-have-you-always-been-like-this.md",
+]
+related_readings = [
+  "readings/2017-03-20-the-power-of-habits.md",
+  "readings/2019-11-12-atomic-habits.md",
+  "readings/2021-01-16-who-moved-my-cheese.md",
+  "readings/2024-11-29-mans-search-for-meaning.md",
+  "readings/2025-02-16-digital-minimalism.md",
+]
 +++
 
 ![blog-cover](/images/blog/2025-11-15/cover.jpg)
@@ -98,21 +112,3 @@ Eso se siente como éxito para mí.
 ---
 
 **Gracias** a mi amigo Toni, por [plantear](https://x.com/Chemaclass/status/1989652323925377462) esta pregunta e inspirar esta reflexión.
-
----
-
-**Posts relacionados**
-
-- [El proceso mismo es el objetivo](/es/blog/the-process-itself-is-the-goal) <small>Cómo enfocarse y tener autodisciplina</small>
-- [Abraza el cambio](/es/blog/embrace-the-change) <small>¿Quién se ha llevado mi queso?</small>
-- [Entendiendo a las personas](/es/blog/understanding-people) <small>Malentendidos, comunicación efectiva y autorreflexión</small>
-- [Gran liderazgo](/es/blog/great-leadership) <small>El liderazgo empieza en tu propia vida y comportamiento</small>
-- [¿Siempre has sido así?](/es/blog/have-you-always-been-like-this) <small>Cómo encontrar un equilibrio entre crecimiento y felicidad</small>
-
-**Lecturas relacionadas**
-
-- [Hábitos Atómicos](/es/readings/atomic-habits/) <small>Una forma fácil y probada de construir buenos hábitos y romper los malos</small>
-- [El poder de los hábitos](/es/readings/the-power-of-habits/) <small>Por qué hacemos lo que hacemos, y cómo cambiar</small>
-- [¿Quién se ha llevado mi queso?](/es/readings/who-moved-my-cheese/) <small>Una forma asombrosa de lidiar con el cambio en tu trabajo y en tu vida</small>
-- [El hombre en busca de sentido](/es/readings/mans-search-for-meaning/) <small>Propósito en la desesperación: perspectivas del holocausto de Frankl</small>
-- [Minimalismo Digital](/es/readings/digital-minimalism/) <small>Eligiendo una vida enfocada en un mundo ruidoso</small>

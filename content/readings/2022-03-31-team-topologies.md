@@ -10,6 +10,9 @@ pages = "240"
 author = "Matthew Skelton, Manuel Pais"
 static_thumbnail = "https://m.media-amazon.com/images/I/81vdbXuZ0NL._AC_UL640_FMwebp_QL65_.jpg"
 expand_preview = false
+related_posts = [
+  "blog/2022-04-02-dunbar-number.md",
+]
 +++
 
 <!-- more -->

@@ -11,6 +11,12 @@ pages = "240"
 author = "Jonathan Bier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615869542i/57429394.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2023-07-10-the-book-of-satoshi.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
 +++
 
 <!-- more -->
@@ -48,12 +54,3 @@ El relato incluye conversaciones con actores clave de ambos bandos. Descubrimos 
 ### Resumen
 
 {{ youtube(id="6YtS5ZNuuTw") }}
-
----
-
-**Lecturas relacionadas**
-
-- [The Bitcoin Standard](/es/readings/the-bitcoin-standard/) <small>por Saifedean Ammous</small>
-- [The Book Of Satoshi](/es/readings/the-book-of-satoshi/) <small>por Phil Champagne</small>
-- [The Genesis Book](/es/readings/the-genesis-book/) <small>por Aaron van Wirdum</small>
-- [Mastering Bitcoin](/es/readings/mastering-bitcoin/) <small>por Andreas M. Antonopoulos, David A. Harding</small>

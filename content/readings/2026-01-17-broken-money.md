@@ -11,6 +11,12 @@ pages = "538"
 author = "Lyn Alden"
 static_thumbnail = "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1692701772i/197566578.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+  "readings/2025-06-22-principles-of-economics.md",
+]
 +++
 
 A deep dive into monetary history through a technological lens. Lyn Alden traces how innovations shaped money across centuries, examining commodity-based systems, modern fiat currencies, and emerging alternatives like Bitcoin.
@@ -48,12 +54,3 @@ Her analysis is grounded in engineering principles: What are Bitcoin's actual pr
 "Broken Money" stands out because it doesn't assume you already agree with the premise. Alden methodically builds the case that something is wrong with how money works today, traces the historical roots of these problems, and then evaluates potential solutions.
 
 Whether you end up convinced by her conclusions or not, you'll come away with a much deeper understanding of monetary systems and why they matter.
-
----
-
-**Related readings**
-
-- [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>by Saifedean Ammous</small>
-- [Principles of Economics](/readings/principles-of-economics/) <small>by Saifedean Ammous</small>
-- [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>

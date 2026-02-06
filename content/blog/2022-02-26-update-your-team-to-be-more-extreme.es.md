@@ -8,6 +8,22 @@ tags = [ "xp", "agile", "team-management", "mentoring", "tdd" ]
 subtitle = "¿Cómo puedes ayudar a tus compañeros a abrazar el cambio?"
 static_thumbnail = "/images/blog/2022-02-26/cover.jpg"
 pin = false
+related_posts = [
+  "blog/2019-11-18-improve-your-tech-talk.md",
+  "blog/2021-03-01-embrace-the-change.md",
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2022-11-11-working-agile-with-non-agile-teams.md",
+  "blog/2023-01-09-interview-about-xp-and-agile.md",
+  "blog/2023-08-02-how-do-you-get-everyone-on-board.md",
+]
+related_readings = [
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-01-16-who-moved-my-cheese.md",
+  "readings/2021-05-28-peopleware.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-02-26/cover.jpg)
@@ -98,18 +114,3 @@ Puedes ayudar a tu equipo a ser mas extreme creando un espacio dedicado al creci
 ## Charla Tecnica
 
 Tras escribir este post (originalmente en febrero de 2022), me invitaron a dar una [charla tecnica](/es/talks/update-your-team-to-be-more-extreme) sobre este tema en varias conferencias.
-
-**Lecturas relacionadas**
-
-- [Extreme Programming Explained](/es/readings/xp-embrace-change/) <small>por Kent Beck</small>
-- [Who moved my cheese?](/es/readings/who-moved-my-cheese/) <small>por Spencer Johnson</small>
-- [Clean Agile](/es/readings/clean-agile/) <small>por Robert C. Martin</small>
-- [Peopleware](/es/readings/peopleware) <small>por Tom DeMarco, Timothy Lister</small>
-- [The Pragmatic Programmer](/es/readings/the-pragmatic-programmer/) <small>por David Thomas, Andrew Hunt</small>
-
-**Posts relacionados**
-
-- [El camino a la seniority en software](/es/blog/the-path-to-seniority-in-software/) <small>¿Cómo convertirse en un Desarrollador de Software Senior?</small>
-- [Trabajando agile con equipos no agile](/es/blog/working-agile-with-non-agile-teams/) <small>¿Cómo puedes trabajar con otros equipos que no son agile?</small>
-- [Entrevista sobre XP y Agile](/es/blog/interview-about-xp-and-agile/) <small>Agile es sobre CÓMO haces ciertas cosas</small>
-- [¿Cómo consigues que todos se sumen?](/es/blog/how-do-you-get-everyone-on-board/) <small>¿Cómo tratas con personas reacias al cambio?</small>

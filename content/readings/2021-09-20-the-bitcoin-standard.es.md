@@ -10,6 +10,13 @@ pages = "300"
 author = "Saifedean Ammous"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41x6NvXWekS._SX336_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2023-06-20-the-blocksize-war.md",
+  "readings/2023-07-10-the-book-of-satoshi.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+  "readings/2025-06-22-principles-of-economics.md",
+]
 +++
 
 <!-- more -->
@@ -38,13 +45,3 @@ El patrón Bitcoin es el recurso esencial para entender esta alternativa descent
 > Extra: Podcast de Lex Fridman con el autor de este libro
 
 {{ youtube(id="gp4U5aH_T6A") }}
-
----
-
-**Lecturas relacionadas**
-
-- [The Genesis Book](/es/readings/the-genesis-book/) <small>por Aaron van Wirdum</small>
-- [The Book Of Satoshi](/es/readings/the-book-of-satoshi/) <small>por Phil Champagne</small>
-- [The Blocksize War](/es/readings/the-blocksize-war/) <small>por Jonathan Bier</small>
-- [Mastering Bitcoin](/es/readings/mastering-bitcoin/) <small>por Andreas M. Antonopoulos, David A. Harding</small>
-- [Principles of Economics](/es/readings/principles-of-economics/) <small>por Saifedean Ammous</small>

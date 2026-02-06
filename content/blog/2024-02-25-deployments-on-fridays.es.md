@@ -7,6 +7,16 @@ tags = ["agile", "xp", "leadership", "productivity"]
 [extra]
 subtitle = "¿Por qué \"no deberíamos\" desplegar a producción los viernes?"
 static_thumbnail = "/images/blog/2024-02-25/cover.jpg"
+related_posts = [
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2022-10-08-different-beliefs-about-software-quality.md",
+  "blog/2023-05-17-dedicated-qa-teams.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-02-25/cover.jpg)
@@ -42,17 +52,3 @@ Creo que las **releases frecuentes** y **pequeñas** a producción **son clave**
 Poder desplegar los viernes (si es necesario o deseado) impacta la confianza del equipo. De manera similar, prohibir los despliegues los viernes impacta la autoestima del equipo también.
 
 ![cover](/images/blog/2024-02-25/footer.jpg)
-
----
-
-**Posts relacionados**
-
-- [El camino a la seniority en software](/es/blog/the-path-to-seniority-in-software/) <small>¿Cómo convertirse en un Desarrollador de Software Senior?</small>
-- [Diferentes creencias sobre la calidad del software](/es/blog/different-beliefs-about-software-quality/) <small>Algunas reflexiones sobre la calidad del software</small>
-- [¿Equipos de QA dedicados en software?](/es/blog/dedicated-qa-teams/) <small>¿Cómo encaja una persona QA dedicada en tu equipo agile?</small>
-
-**Lecturas relacionadas**
-
-- [Clean Agile](/es/readings/clean-agile/) <small>por Robert C. Martin</small>
-- [Extreme Programming Explained](/es/readings/xp-embrace-change/) <small>por Kent Beck</small>
-- [The Five Dysfunctions of a Team](/es/readings/the-five-dysfunctions-of-a-team/) <small>por Patrick M. Lencioni</small>

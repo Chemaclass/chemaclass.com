@@ -7,6 +7,13 @@ tags = [ "security", "privacy", "cryptography", "encryption" ]
 [extra]
 subtitle = "Cómo PGP protege tu comunicación digital"
 static_thumbnail = "/images/blog/2024-07-13/cover.jpg"
+related_posts = [
+  "blog/2024-12-11-the-cypherpunks.md",
+  "blog/2025-11-21-bitcoin-fundamentals.md",
+]
+related_readings = [
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-07-13/cover.jpg)
@@ -69,14 +76,3 @@ curl https://chemaclass.com/pgp.asc | gpg --import
 ### Descargar el archivo .asc
 
 <a href="/pgp.asc" id="download-link">Descargar clave PGP pública</a>
-
----
-
-**Posts relacionados**
-
-- [Los Cypherpunks](/es/blog/the-cypherpunks/) <small>Pioneros de la privacidad en la era digital</small>
-- [Fundamentos de Bitcoin](/es/blog/bitcoin-fundamentals/) <small>Del dinero sólido a la prueba criptográfica</small>
-
-**Lecturas relacionadas**
-
-- [Mastering Bitcoin](/es/readings/mastering-bitcoin/) <small>por Andreas M. Antonopoulos, David A. Harding</small>

@@ -7,6 +7,10 @@ tags = [ "career", "philosophy", "productivity" ]
 [extra]
 subtitle = "Escribiendo para ayudarme a dormir"
 static_thumbnail = "/images/blog/2023-07-05/cover.jpg"
+related_posts = [
+  "blog/2020-09-08-the-process-itself-is-the-goal.md",
+  "blog/2021-03-01-embrace-the-change.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-07-05/cover.jpg)
@@ -30,10 +34,3 @@ Escribir es una de mis formas favoritas de expresarme, especialmente cuando no p
 ![blog-footer](/images/blog/2023-07-05/footer.jpg)
 
 > Fotos originales de mi viaje a la Toscana, Italia, el mes pasado.
-
----
-
-**Posts relacionados**
-
-- [El proceso en sí mismo es el objetivo](/es/blog/the-process-itself-is-the-goal/) <small>Cómo enfocarse y tener autodisciplina</small>
-- [Abraza el cambio](/es/blog/embrace-the-change/) <small>¿Quién se ha llevado mi queso?</small>

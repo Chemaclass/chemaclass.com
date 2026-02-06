@@ -7,6 +7,10 @@ tags = ["psychology", "philosophy", "communication"]
 [extra]
 subtitle = "The dilemma of trust and self-interest"
 static_thumbnail = "/images/blog/2024-06-27/cover.jpg"
+related_posts = [
+  "blog/2022-11-11-working-agile-with-non-agile-teams.md",
+  "blog/2023-06-08-learned-helplessness.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-06-27/cover.jpg)
@@ -68,10 +72,3 @@ In the Prisoner's Dilemma, the best strategy is to start with cooperation, but t
 {{ youtube(id="S0SQLQMLi8Q") }}
 
 > Don't trust, verify.
-
----
-
-**Related posts**
-
-- [Learned helplessness](/blog/learned-helplessness/) <small>An acceptance of powerlessness</small>
-- [The power of authority and obedience](/blog/working-agile-with-non-agile-teams/) <small>Milgram's experiment</small>

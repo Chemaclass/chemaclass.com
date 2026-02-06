@@ -6,6 +6,11 @@ tags = [ "php", "open-source", "software-design" ]
 [extra]
 subtitle = "Un nuevo lenguaje funcional con interoperabilidad total con PHP"
 static_thumbnail = "/images/blog/2021-02-01/cover.jpg"
+related_readings = [
+  "readings/2020-05-21-7-languages-in-7-weeks.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+  "readings/2020-10-10-object-design-style-guide.md",
+]
 +++
 
 ![blog-cover](/images/blog/2021-02-01/cover.jpg)

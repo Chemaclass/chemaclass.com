@@ -7,6 +7,10 @@ tags = ["software-design", "career", "communication", "clean-code"]
 [extra]
 subtitle = "A great engineer is not just a great coder"
 static_thumbnail = "/images/blog/2023-12-30/cover.jpg"
+related_posts = [
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-12-30/cover.jpg)
@@ -30,10 +34,3 @@ That's why a great engineer is a knowledgeable person about business, customer, 
 --- 
 
 Image original by [Nicola Ballotta](https://hybridhacker.email).
-
----
-
-**Related posts**
-
-- [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
-- [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
