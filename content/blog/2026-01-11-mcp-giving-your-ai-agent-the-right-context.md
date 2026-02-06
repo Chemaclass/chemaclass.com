@@ -7,6 +7,15 @@ tags = [ "ai", "software-architecture", "developer-tools", "craftsmanship" ]
 [extra]
 subtitle = "Why context is the real superpower"
 static_thumbnail = "/images/blog/2026-01-11/cover.jpg"
+related_posts = [
+  "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
+  "blog/2022-10-08-different-beliefs-about-software-quality.md",
+  "blog/2023-04-14-introducing-a-new-tech-stack.md",
+]
+related_readings = [
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 Modern AI coding assistants are remarkably good at understanding context. Models like Claude Opus with large context windows (~200k tokens) can hold substantial portions of your codebase in mind, reason about architecture, and maintain coherence across long conversations. Not the entire project for large codebases, but enough to work effectively.
@@ -127,17 +136,3 @@ That's still our job. And it's a job worth doing well.
 
 ![cover](/images/blog/2026-01-11/footer.jpg)
 
----
-
-## Related
-
-### Related posts
-
-- [AI gives you speed, not quality](/blog/ai-gives-you-speed-not-quality) <small>The human factor in the age of vibe-coding</small>
-- [Different beliefs about software quality](/blog/different-beliefs-about-software-quality) <small>Thoughts about software quality among your team</small>
-- [Introducing a new tech stack](/blog/introducing-a-new-tech-stack) <small>How to introduce new technologies in your team</small>
-
-### Related readings
-
-- [Clean Architecture](/readings/clean-architecture/) <small>A Craftsman's Guide to Software Structure and Design</small>
-- [Extreme Programming Explained](/readings/extreme-programming-explained/) <small>Embrace Change</small>

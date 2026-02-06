@@ -1,0 +1,43 @@
+{% if page.extra.related_posts or page.extra.related_readings %}
+<aside class="related-content">
+  {% if page.extra.related_posts %}
+  <div class="related-content__section">
+    <h2 class="related-content__heading">{{ trans(key="related_posts", lang=lang) }}</h2>
+    <div class="related-content__cards">
+      {% for path in page.extra.related_posts %}
+        {% set related = get_page(path=path) %}
+        <a href="{{ related.permalink }}" class="related-card">
+          <span class="related-card__date">{% if lang == "es" %}{{ related.date | date(format="%d/%m/%Y") }}{% else %}{{ related.date | date(format="%b %d, %Y") }}{% endif %}</span>
+          <h3 class="related-card__title">{{ related.title }}</h3>
+          {% if related.extra.subtitle %}
+            <p class="related-card__subtitle">{{ related.extra.subtitle }}</p>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.extra.related_readings %}
+  <div class="related-content__section">
+    <h2 class="related-content__heading">{{ trans(key="related_readings", lang=lang) }}</h2>
+    <ul class="related-content__list">
+      {% for path in page.extra.related_readings %}
+        {% set related = get_page(path=path) %}
+        <li class="related-reading">
+          <a href="{{ related.permalink }}">
+            <span class="related-reading__icon"><i class="fa-solid fa-book"></i></span>
+            <span class="related-reading__info">
+              <span class="related-reading__title">{{ related.title }}</span>
+              {% if related.extra.author %}
+                <span class="related-reading__author">by {{ related.extra.author }}</span>
+              {% endif %}
+            </span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</aside>
+{% endif %}
