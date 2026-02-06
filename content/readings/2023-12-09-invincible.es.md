@@ -11,6 +11,7 @@ pages = "180"
 author = "Marcos Vazquez"
 static_thumbnail = "https://m.media-amazon.com/images/I/71+1EHGiyRL._SL1500_.jpg"
 expand_preview = false
+related_posts = ["blog/2023-07-05-never-ending-loop.md", "blog/2023-03-16-have-you-always-been-like-this.md", "blog/2020-09-08-the-process-itself-is-the-goal.md"]
 +++
 
 <!-- more -->
@@ -31,8 +32,3 @@ Este libro te ayuda a usar tu mente para mejorar tu cuerpo, pero va mucho más a
 
 {{ youtube(id="R9OCA6UFE-0") }}
 
-### Artículos recomendados
-
-- [Bucle sin fin](/es/blog/never-ending-loop/)<small> Escribiendo para ayudarme a dormir</small>
-- [¿Siempre has sido así?](/es/blog/have-you-always-been-like-this/)<small> Cómo encontrar un equilibrio entre crecimiento y felicidad</small>
-- [El proceso en sí es la meta](/es/blog/the-process-itself-is-the-goal/)<small> Cómo enfocarse y tener autodisciplina</small>

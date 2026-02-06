@@ -11,6 +11,7 @@ pages = "400"
 author = "Saifedean Ammous"
 static_thumbnail = "https://m.media-amazon.com/images/I/71OdiXckU3L._SY522_.jpg"
 expand_preview = true
+related_posts = ["blog/2024-12-11-the-cypherpunks.md"]
 +++
 
 ¿Te has preguntado alguna vez por qué los precios suben o por qué el dinero pierde valor? Principios de Economía de Saifedean Ammous puede cambiarte la perspectiva.
@@ -73,14 +74,3 @@ Sales con una lente nueva para ver el mundo: por qué suben los precios, por qu�
 
 {{ youtube(id="GUvTJ0xy74c") }}
 
----
-
-**Artículos relacionados**
-
-- [Los Cypherpunks](/es/blog/the-cypherpunks) <small>Pioneros de la privacidad en la era digital</small>
-
-**Lecturas relacionadas**
-
-- [The Genesis Book](/es/readings/the-genesis-book/) <small>por Aaron van Wirdum</small>
-- [The Book Of Satoshi](/es/readings/the-book-of-satoshi/) <small>por Phil Champagne</small>
-- [The Bitcoin Standard](/es/readings/the-bitcoin-standard/) <small>por Saifedean Ammous</small>

@@ -11,6 +11,7 @@ pages = "400"
 author = "Andreas M. Antonopoulos, David A. Harding"
 static_thumbnail = "https://m.media-amazon.com/images/I/71JEv9rs7xL.jpg"
 expand_preview = true
+related_posts = ["blog/2024-07-06-programmable-money.md"]
 +++
 
 Este libro cubre desde los conceptos básicos hasta los aspectos técnicos más profundos de Bitcoin. Una guía excelente para entender este mundo y participar en el Internet del dinero.
@@ -85,15 +86,3 @@ La primera edición se publicó en diciembre de 2014. Diez años después, ya te
    - Asegura el sistema y permite que emerja consenso a nivel de red sin autoridad central.
 1. Un **soft-fork** es un cambio compatible hacia adelante en las reglas de consenso. Los clientes no actualizados pueden seguir operando con las nuevas reglas.
 
----
-
-**Artículos relacionados**
-
-- [Dinero Programable](/es/blog/programmable-money) <small>El poder del Script de Bitcoin</small>
-
-**Lecturas relacionadas**
-
-- [The Genesis Book](/es/readings/the-genesis-book/) <small>por Aaron van Wirdum</small>
-- [The Blocksize War](/es/readings/the-blocksize-war/) <small>por Jonathan Bier</small>
-- [The Bitcoin Standard](/es/readings/the-bitcoin-standard/) <small>por Saifedean Ammous</small>
-- [The Book Of Satoshi](/es/readings/the-book-of-satoshi/) <small>por Phil Champagne</small>

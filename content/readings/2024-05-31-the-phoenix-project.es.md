@@ -11,6 +11,7 @@ pages = "430"
 author = "Gene Kim, Kevin Behr, George Spafford"
 static_thumbnail = "https://m.media-amazon.com/images/I/81ZMvLDtmIL._SL1500_.jpg"
 expand_preview = true
+related_posts = ["blog/2023-12-30-great-engineering.md", "blog/2023-10-11-unhealthy-working-environment.md", "blog/2024-02-25-deployments-on-fridays.md"]
 +++
 
 Una historia sobre un proyecto imposible donde todos juegan a la política, arreglan bugs críticos sin parar y desperdician esfuerzos en parches rápidos en vez de ayudar al negocio a prosperar.
@@ -39,9 +40,3 @@ Por ejemplo, la primera pregunta: "¿Cuáles son los cuatro tipos de trabajo en 
 ---
 
 {{ youtube(id="6QNdL1I7OTM") }}
-
-### Artículos recomendados
-
-- [Gran ingeniería](/es/blog/great-engineering) <small>Un gran ingeniero no es solo un gran programador</small>
-- [Entorno laboral poco saludable](/es/blog/unhealthy-working-environment) <small>Reconociendo señales de alerta de un lugar de trabajo poco saludable</small>
-- [Despliegues los viernes](/es/blog/deployments-on-fridays) <small>¿Por qué "no deberíamos" desplegar a producción los viernes?</small>

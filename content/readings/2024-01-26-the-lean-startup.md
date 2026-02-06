@@ -11,6 +11,7 @@ pages = "300"
 author = "Eric Ries"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629999184i/10127019.jpg"
 expand_preview = false
+related_posts = ["blog/2023-02-27-great-leadership.md", "blog/2022-08-22-understanding-people.md", "blog/2023-10-11-unhealthy-working-environment.md", "blog/2022-11-11-working-agile-with-non-agile-teams.md"]
 +++
 
 <!-- more -->
@@ -35,10 +36,3 @@ Eric Ries defines a startup as an organization dedicated to creating something n
 ---
 
 {{ youtube(id="fEvKo90qBns") }}
-
-### Recommended posts
-
-- [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
-- [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
-- [Unhealthy working environment](/blog/unhealthy-working-environment/)<small> Recognizing red flags of an unhealthy workplace</small>
-- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small> How can you work with other teams that aren't agile?</small>

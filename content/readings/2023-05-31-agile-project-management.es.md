@@ -11,6 +11,7 @@ pages = "120"
 author = "Jeremy Savell"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1574715655i/48978620.jpg"
 expand_preview = false
+related_posts = ["blog/2022-11-11-working-agile-with-non-agile-teams.md", "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md", "blog/2023-01-09-interview-about-xp-and-agile.md"]
 +++
 
 <!-- more -->
@@ -81,15 +82,3 @@ Estas soluciones distintas pero similares estaban descentralizadas, trabajando i
 
 > Es decir, aunque hay valor en los elementos de la derecha, valoramos más los elementos de la izquierda.
 
----
-
-**Artículos relacionados**
-
-- [Trabajando ágil con equipos no ágiles](/es/blog/working-agile-with-non-agile-teams/) <small>¿Cómo puedes trabajar con otros equipos que no son ágiles?</small>
-- [¿Ignorando Scrum para ser más Ágil?](/es/blog/ignoring-scrum-to-get-more-agile/) <small>Matando la agilidad con reuniones excesivas</small>
-- [Entrevista sobre XP y Agile](/es/blog/interview-about-xp-and-agile/) <small>Agile trata sobre CÓMO haces ciertas cosas</small>
-
-**Lecturas relacionadas**
-
-- [Clean Agile](/es/readings/clean-agile/) <small>por Robert C. Martin</small>
-- [Agile Product Management with Scrum](/es/readings/agile-product-management-with-scrum/) <small>por Roman Pichler</small>

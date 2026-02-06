@@ -12,6 +12,7 @@ pages = "120"
 author = "Sjors Provoost"
 static_thumbnail = "https://www.btcwip.com/front.jpg"
 expand_preview = true
+related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]
 +++
 
 With thousands of "crypto" projects out there, they say Bitcoin is old and boring, but nothing could be further from the truth. This book will guide you through the latest developments in Bitcoin, as seen through the eyes of one of its many developers.
@@ -68,13 +69,3 @@ The book links to more than two hundred articles, videos, podcasts, and even the
 - Book source code: [GitHub/Sjors](https://github.com/Sjors/nado-book/)
 - Book website: [www.btcwip.com](https://www.btcwip.com/)
 
-**Related posts**
-
-- [The Cypherpunks](/blog/the-cypherpunks) <small>Pioneers of privacy in the digital age</small>
-- [Programmable Money](/blog/programmable-money) <small>The power of Bitcoin's Script</small>
-
-**Related readings**
-
-- [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
-- [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>

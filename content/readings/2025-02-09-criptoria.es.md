@@ -11,6 +11,7 @@ pages = "250"
 author = "Alfre Mancera"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1736371979i/223396846.jpg"
 expand_preview = true
+related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]
 +++
 
 ¿Cómo llegamos de la Grecia antigua a Bitcoin? Criptoria cuenta esa historia: el nacimiento de las computadoras, las redes y el dinero digital.
@@ -200,14 +201,3 @@ Un libro para quienes creen que hay formas de organización social y económica 
 
 - Sitio web del libro: [www.prometeabtc.com/criptoria](https://www.prometeabtc.com/criptoria)
 
-**Artículos relacionados**
-
-- [Los Cypherpunks](/es/blog/the-cypherpunks) <small>Pioneros de la privacidad en la era digital</small>
-- [Dinero Programable](/es/blog/programmable-money) <small>El poder del Script de Bitcoin</small>
-
-**Lecturas relacionadas**
-
-- [The Genesis Book](/es/readings/the-genesis-book/) <small>por Aaron van Wirdum</small>
-- [The Book Of Satoshi](/es/readings/the-book-of-satoshi/) <small>por Phil Champagne</small>
-- [Mastering Bitcoin](/es/readings/mastering-bitcoin/) <small>por Andreas M. Antonopoulos, David A. Harding</small>
-- [Bitcoin: A Work in Progress](/es/readings/bitcoin-wip/) <small>por Sjors Provoost</small>

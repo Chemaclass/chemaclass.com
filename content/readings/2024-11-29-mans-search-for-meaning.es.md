@@ -11,6 +11,7 @@ pages = "120"
 author = "Viktor E. Frankl"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1535419394i/4069.jpg"
 expand_preview = true
+related_posts = ["blog/2023-03-16-have-you-always-been-like-this.md", "blog/2020-09-08-the-process-itself-is-the-goal.md"]
 +++
 
 Frankl comparte sus desgarradoras experiencias del Holocausto y presenta una filosofía profunda sobre la condición humana. Un testimonio de la resiliencia del espíritu humano: incluso en los momentos más oscuros, uno puede encontrar propósito y sentido.
@@ -81,9 +82,3 @@ Este enfoque ayuda a ganar perspectiva: ser consciente de tus limitaciones y de 
 
 {{ youtube(id="-srD1Deh9Xg?t=64") }}
 
----
-
-**Artículos relacionados**
-
-- [¿Siempre has sido así?](/es/blog/have-you-always-been-like-this/) <small>Cómo encontrar un equilibrio entre crecimiento y felicidad</small>
-- [El proceso en sí es la meta](/es/blog/the-process-itself-is-the-goal/) <small>Cómo enfocarse y tener autodisciplina</small>

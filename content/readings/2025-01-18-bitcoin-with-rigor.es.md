@@ -11,6 +11,7 @@ pages = "520"
 author = "Jose Sanchis"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1705890863i/205759549.jpg"
 expand_preview = true
+related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]
 +++
 
 Un análisis detallado de cómo funciona Bitcoin, desglosando sus componentes de forma clara para entender tanto las partes como el sistema completo. Explora su potencial y riesgos como experimento monetario que, aunque no ha superado la prueba del tiempo como el oro, tiene un diseño prometedor.
@@ -101,14 +102,3 @@ Este libro busca darte las herramientas para entender cómo funciona Bitcoin. As
 
 - Sitio web del libro: [www.bitcoinconrigor.com](https://www.bitcoinconrigor.com)
 
-**Artículos relacionados**
-
-- [Los Cypherpunks](/es/blog/the-cypherpunks) <small>Pioneros de la privacidad en la era digital</small>
-- [Dinero Programable](/es/blog/programmable-money) <small>El poder del Script de Bitcoin</small>
-
-**Lecturas relacionadas**
-
-- [The Genesis Book](/es/readings/the-genesis-book/) <small>por Aaron van Wirdum</small>
-- [The Book Of Satoshi](/es/readings/the-book-of-satoshi/) <small>por Phil Champagne</small>
-- [Mastering Bitcoin](/es/readings/mastering-bitcoin/) <small>por Andreas M. Antonopoulos, David A. Harding</small>
-- [Bitcoin: A Work in Progress](/es/readings/bitcoin-wip/) <small>por Sjors Provoost</small>

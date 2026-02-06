@@ -11,6 +11,7 @@ pages = "250"
 author = "Alfre Mancera"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1736371979i/223396846.jpg"
 expand_preview = true
+related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]
 +++
 
 Cryptoria is a story about the evolutionary process that gave birth to computers, networks, cybersecurity and digital money. 
@@ -200,14 +201,3 @@ Cryptoria is addressed to all people convinced that, beyond inherited or imposed
 
 - Book website: [www.prometeabtc.com/criptoria](https://www.prometeabtc.com/criptoria)
 
-**Related posts**
-
-- [The Cypherpunks](/blog/the-cypherpunks) <small>Pioneers of privacy in the digital age</small>
-- [Programmable Money](/blog/programmable-money) <small>The power of Bitcoin's Script</small>
-
-**Related readings**
-
-- [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
-- [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>
-- [Bitcoin: A Work in Progress](/readings/bitcoin-wip/) <small>by Sjors Provoost</small>

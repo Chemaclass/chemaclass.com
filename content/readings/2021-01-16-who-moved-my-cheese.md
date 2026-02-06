@@ -10,6 +10,7 @@ pages = "94"
 author = "Spencer Johnson"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QGl7HfNyL._SX314_BO1,204,203,200_.jpg"
 expand_preview = true
+related_posts = ["blog/2021-03-01-embrace-the-change.md"]
 +++
 
 This book presents a tale inside the main story that consists of 4 characters: two mice, **Sniff** and **Scurry**, and two little persons, **Hem** and **Haw**.
@@ -39,9 +40,3 @@ The tale is a beautiful metaphor of the different attitudes that people adopt as
 {{ youtube(id="OvYCLxqkfvY") }}
 
 I wrote a blog post about this book: [Embrace the change](/blog/embrace-the-change/)
-
----
-
-**Related posts**
-
-- [Embrace the change](/blog/embrace-the-change//) <small>Who moved my cheese?🧀</small>

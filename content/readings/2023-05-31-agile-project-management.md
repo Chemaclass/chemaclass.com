@@ -11,6 +11,7 @@ pages = "120"
 author = "Jeremy Savell"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1574715655i/48978620.jpg"
 expand_preview = false
+related_posts = ["blog/2022-11-11-working-agile-with-non-agile-teams.md", "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md", "blog/2023-01-09-interview-about-xp-and-agile.md"]
 +++
 
 <!-- more -->
@@ -81,15 +82,3 @@ These distinct yet similar solutions were decentralized, working independently o
 
 > That is, while there is value in the items on the rights, we value the items on the left more.
 
----
-
-**Related posts**
-
-- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small>How can you work with other teams that aren't agile?</small>
-- [Ignoring Scrum to get more Agile?](/blog/ignoring-scrum-to-get-more-agile/) <small>Killing agility with excessive meetings</small>
-- [Interview about XP and Agile](/blog/interview-about-xp-and-agile/) <small>Agile is about HOW you do certain things</small>
-
-**Related readings**
-
-- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
-- [Agile Product Management with Scrum](/readings/agile-product-management-with-scrum/) <small>by Roman Pichler</small>

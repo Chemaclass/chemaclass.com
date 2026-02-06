@@ -11,6 +11,7 @@ pages = "400"
 author = "Saifedean Ammous"
 static_thumbnail = "https://m.media-amazon.com/images/I/71OdiXckU3L._SY522_.jpg"
 expand_preview = true
+related_posts = ["blog/2024-12-11-the-cypherpunks.md"]
 +++
 
 If you've ever scratched your head at the economy, wondered why prices keep rising, or questioned why money seems to lose value over time, Principles of Economics by Saifedean Ammous might blow your mind.
@@ -73,14 +74,3 @@ You'll walk away with a new lens to see the world—why prices rise, why saving 
 
 {{ youtube(id="GUvTJ0xy74c") }}
 
----
-
-**Related posts**
-
-- [The Cypherpunks](/blog/the-cypherpunks) <small>Pioneers of privacy in the digital age</small>
-
-**Related readings**
-
-- [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
-- [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>
-- [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>by Saifedean Ammous</small>
