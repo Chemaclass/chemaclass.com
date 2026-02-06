@@ -21,22 +21,15 @@
   {% if page.extra.related_readings %}
   <div class="related-content__section">
     <h2 class="related-content__heading">{{ trans(key="related_readings", lang=lang) }}</h2>
-    <ul class="related-content__list">
+    <div class="related-content__inline">
       {% for path in page.extra.related_readings %}
         {% set related = get_page(path=path) %}
-        <li class="related-reading">
-          <a href="{{ related.permalink }}">
-            <span class="related-reading__icon"><i class="fa-solid fa-book"></i></span>
-            <span class="related-reading__info">
-              <span class="related-reading__title">{{ related.title }}</span>
-              {% if related.extra.author %}
-                <span class="related-reading__author">by {{ related.extra.author }}</span>
-              {% endif %}
-            </span>
-          </a>
-        </li>
+        <a href="{{ related.permalink }}" class="related-inline">
+          <i class="fa-solid fa-book"></i>
+          <span>{{ related.title }}{% if related.extra.author %} <span class="related-inline__author">by {{ related.extra.author }}</span>{% endif %}</span>
+        </a>
       {% endfor %}
-    </ul>
+    </div>
   </div>
   {% endif %}
 </aside>
