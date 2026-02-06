@@ -253,7 +253,13 @@
                 <span class="latest-type">{{ trans(key="nav_readings", lang=lang) }}</span>
                 <h3>{{ latest_reading.title }}</h3>
                 <p class="latest-preview">{{ latest_reading.description | truncate(length=120) }}</p>
-                <span class="latest-date">{% if lang == "es" %}{{ latest_reading.date | date(format="%d/%m/%Y") }}{% else %}{{ latest_reading.date | date(format="%B %d, %Y") }}{% endif %}</span>
+                <span class="latest-date">
+                    {% if lang == "es" %}{{ latest_reading.date | date(format="%d/%m/%Y") }}{% else %}{{ latest_reading.date | date(format="%B %d, %Y") }}{% endif %}
+                    {% set reading_time = latest_reading.extra.reading_time | default(value=latest_reading.reading_time) %}
+                    {% if reading_time %}
+                        <span class="latest-reading-time">· {{ reading_time }} {{ trans(key="minutes_read", lang=lang) }}</span>
+                    {% endif %}
+                </span>
             </a>
         </div>
     </section>
