@@ -55,7 +55,14 @@
         </div>
         <h3>{{ post.title }}</h3>
         {% if post.description %}
-        <p class="tag-single__post-desc">{{ post.description | truncate(length=120) }}</p>
+        <p class="tag-single__post-desc">{{ post.description | truncate(length=220) }}</p>
+        {% endif %}
+        {% if post.taxonomies.tags %}
+        <div class="tag-single__post-tags">
+          {% for tag in post.taxonomies.tags %}
+          <span class="tag-single__post-tag{% if tag == term.name %} tag-single__post-tag--active{% endif %}">{{ tag }}</span>
+          {% endfor %}
+        </div>
         {% endif %}
       </div>
     </a>

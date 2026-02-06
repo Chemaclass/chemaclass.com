@@ -184,8 +184,8 @@
 
   &__post-thumb {
     flex-shrink: 0;
-    width: 80px;
-    height: 60px;
+    width: 160px;
+    height: 130px;
     border-radius: 8px;
     overflow: hidden;
 
@@ -239,6 +239,26 @@
     line-height: 1.5;
   }
 
+  &__post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.5rem;
+  }
+
+  &__post-tag {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 1rem;
+    background: var(--preview-divider-color);
+    color: var(--color-subtitle);
+
+    &--active {
+      background: var(--accent-color);
+      color: white;
+    }
+  }
+
   &__post-date {
     font-size: 0.75rem;
     color: var(--color-subtitle);
@@ -276,8 +296,8 @@
     }
 
     &__post-thumb {
-      width: 60px;
-      height: 45px;
+      width: 100px;
+      height: 65px;
     }
 
     &__post-desc {
