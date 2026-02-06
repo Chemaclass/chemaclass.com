@@ -10,6 +10,11 @@ pages = "460"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41yafGMO+rL._SX376_BO1,204,203,200_.jpg"
 expand_preview = true
+related_posts = [
+  "blog/2020-06-28-the-art-of-refactoring.md",
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
+]
 +++
 
 Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year,

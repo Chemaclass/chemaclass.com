@@ -17,6 +17,11 @@ related_readings = [
   "readings/2024-07-05-mastering-bitcoin.md",
   "readings/2025-06-22-principles-of-economics.md",
 ]
+related_posts = [
+  "blog/2025-11-21-bitcoin-fundamentals.md",
+  "blog/2025-12-22-how-bitcoin-works.md",
+  "blog/2024-07-06-programmable-money.md",
+]
 +++
 
 <!-- more -->

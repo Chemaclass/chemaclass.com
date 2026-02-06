@@ -9,6 +9,11 @@ subtitle = "A Craftsman's Guide to Software Structure and Design"
 pages = "400"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41TPrNDI50L._SX387_BO1,204,203,200_.jpg"
+related_posts = [
+  "blog/2023-12-30-great-engineering.md",
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2023-04-14-introducing-a-new-tech-stack.md",
+]
 +++
 
 <!-- more -->

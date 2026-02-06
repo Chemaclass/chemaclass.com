@@ -10,6 +10,11 @@ pages = "380"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/412omfkKEFL._SX380_BO1,204,203,200_.jpg"
 expand_preview = false
+related_posts = [
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+  "blog/2022-10-08-different-beliefs-about-software-quality.md",
+]
 +++
 
 <!-- more -->
