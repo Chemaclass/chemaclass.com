@@ -51,13 +51,20 @@
     padding: 1rem;
     border-radius: 10px;
     border-left: 3px solid var(--accent-color);
-    background: var(--search-input-bg);
-    border-top: 1px solid var(--preview-divider-color);
-    border-right: 1px solid var(--preview-divider-color);
-    border-bottom: 1px solid var(--preview-divider-color);
+    background: rgba(58, 92, 136, 0.04);
+    border-top: 1px solid rgba(58, 92, 136, 0.15);
+    border-right: 1px solid rgba(58, 92, 136, 0.15);
+    border-bottom: 1px solid rgba(58, 92, 136, 0.15);
     text-decoration: none;
     color: inherit;
     transition: all 0.2s ease;
+
+    .theme-dark & {
+      background: rgba(58, 92, 136, 0.08);
+      border-top-color: rgba(58, 92, 136, 0.25);
+      border-right-color: rgba(58, 92, 136, 0.25);
+      border-bottom-color: rgba(58, 92, 136, 0.25);
+    }
 
     &:hover {
       transform: translateY(-2px);
