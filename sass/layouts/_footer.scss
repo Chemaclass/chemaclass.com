@@ -18,6 +18,13 @@
     gap: 0.75rem;
   }
 
+  &__heading {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
   &__text {
     margin: 0;
     font-size: 0.9rem;
@@ -26,6 +33,33 @@
     strong {
       color: var(--heading-color);
     }
+  }
+
+  &__subscribe-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.25rem;
+    border-radius: 8px;
+    background: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.85;
+      border-bottom: none;
+    }
+
+    i {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__section--primary {
+    gap: 0.5rem;
   }
 
   &__links {
