@@ -165,20 +165,6 @@
         </div>
     </section>
 
-    <!-- Now Section -->
-    {% set now_section = get_section(path="now/_index.md", lang=lang) %}
-    <section class="now-section">
-      <div class="section-header">
-        <h2>{{ trans(key="home_now", lang=lang) }}</h2>
-        {% if now_section.extra.updated %}
-          <span class="now-updated">{{ trans(key="home_now_updated", lang=lang) }}: {% if lang == "es" %}{{ now_section.extra.updated_es }}{% else %}{{ now_section.extra.updated }}{% endif %}</span>
-        {% endif %}
-      </div>
-      <div class="now-content">
-        {{ now_section.content | safe }}
-      </div>
-    </section>
-
     <!-- Projects Section -->
     <section class="projects-section">
         <div class="section-header">
@@ -263,8 +249,6 @@
             </a>
         </div>
     </section>
-
-    {% include "partials/newsletter-signup.html" %}
 
     <!-- Connect Section -->
     <section class="connect-section">

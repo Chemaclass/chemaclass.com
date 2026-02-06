@@ -532,53 +532,6 @@ main:has(.homepage-container) #scroll-to-top {
   }
 }
 
-// Now Section
-.now-section {
-  .now-updated {
-    font-size: 0.8rem;
-    color: var(--color-subtitle);
-    font-weight: 400;
-  }
-}
-
-.now-content {
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 12px;
-  padding: 1rem 1.25rem;
-
-  ul {
-    margin: 0;
-    padding-left: 1.25rem;
-    list-style: none;
-
-    li {
-      position: relative;
-      padding: 0.3rem 0;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: var(--body-color);
-
-      &::before {
-        content: "→";
-        position: absolute;
-        left: -1.25rem;
-        color: var(--accent-color);
-        font-weight: 600;
-      }
-
-      a {
-        color: var(--accent-color);
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
-
 // Connect Section
 .connect-section {
   text-align: center;
@@ -764,20 +717,11 @@ main:has(.homepage-container) #scroll-to-top {
 
   .projects-section,
   .latest-section,
-  .now-section,
   .connect-section {
     margin: 1rem 0;
 
     h2 {
       font-size: 1.25rem;
-    }
-  }
-
-  .now-content {
-    padding: 0.85rem 1rem;
-
-    ul li {
-      font-size: 0.85rem;
     }
   }
 
