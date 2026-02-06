@@ -563,6 +563,13 @@ description_es = "Crecer como líder, construir equipos y el lado humano del sof
 tags = ["leadership", "management", "team-management", "team-culture", "mentoring", "communication", "career", "professionalism", "self-improvement"]
 
 [[extra.topics]]
+title = "Mind & Knowledge"
+title_es = "Mente y Conocimiento"
+description = "Philosophy, psychology, productivity, and the pursuit of understanding."
+description_es = "Filosofía, psicología, productividad y la búsqueda del entendimiento."
+tags = ["philosophy", "psychology", "productivity", "fiction", "dystopia", "horror", "music"]
+
+[[extra.topics]]
 title = "Bitcoin & Economics"
 title_es = "Bitcoin y Economía"
 description = "Sound money, Austrian economics, privacy, and the technology behind Bitcoin."
@@ -575,13 +582,6 @@ title_es = "Lenguajes y Herramientas"
 description = "Hands-on content about specific languages, frameworks, and developer tooling."
 description_es = "Contenido práctico sobre lenguajes, frameworks y herramientas de desarrollo."
 tags = ["php", "golang", "lisp", "bash", "symfony", "docker", "git", "devops", "developer-tools", "bashunit", "gacela", "phel", "functional-programming"]
-
-[[extra.topics]]
-title = "Mind & Knowledge"
-title_es = "Mente y Conocimiento"
-description = "Philosophy, psychology, productivity, and the pursuit of understanding."
-description_es = "Filosofía, psicología, productividad y la búsqueda del entendimiento."
-tags = ["philosophy", "psychology", "productivity", "fiction", "dystopia", "horror", "music"]
 
 [[extra.topics]]
 title = "Speaking & Teaching"
