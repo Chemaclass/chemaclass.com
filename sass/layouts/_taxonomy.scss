@@ -150,6 +150,14 @@
     }
   }
 
+  &__description {
+    font-size: 0.9rem;
+    color: var(--color-subtitle);
+    line-height: 1.6;
+    margin: 0.75rem 0 0;
+    max-width: 600px;
+  }
+
   &__posts {
     display: flex;
     flex-direction: column;

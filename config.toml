@@ -104,6 +104,9 @@ footer_support = "Support my work"
 all_tags = "All tags"
 post = "post"
 posts = "posts"
+nav_topics = "Topics"
+topics_title = "Topics"
+topics_intro = "Explore content by theme. Each topic groups related tags to help you find what interests you most."
 # Homepage
 home_title_tag = "Home | Chemaclass"
 home_subtitle = "Software Developer"
@@ -260,6 +263,7 @@ years_leadership = 5
 nav = [
     { name = "Blog", path = "/blog/" },
     { name = "Readings", path = "/readings/" },
+    { name = "Topics", path = "/topics/" },
     { name = "Services", path = "/services/" },
     { name = "Talks", path = "/talks/" },
 ]
@@ -394,6 +398,9 @@ footer_support = "Apoya mi trabajo"
 all_tags = "Todas las etiquetas"
 post = "artículo"
 posts = "artículos"
+nav_topics = "Temas"
+topics_title = "Temas"
+topics_intro = "Explora contenido por temática. Cada tema agrupa etiquetas relacionadas para que encuentres lo que más te interesa."
 # Homepage
 home_title_tag = "Inicio | Chemaclass"
 home_subtitle = "Software Developer"
@@ -540,3 +547,120 @@ svc_websites = "Sitios Web"
 [extra.series.bitcoin]
 title = "Bitcoin Series"
 title_es = "Serie Bitcoin"
+
+[[extra.topics]]
+title = "Software Craft & Testing"
+title_es = "Artesanía del Software y Testing"
+description = "Practices for writing better software: TDD, clean code, refactoring, and design."
+description_es = "Prácticas para escribir mejor software: TDD, código limpio, refactoring y diseño."
+tags = ["testing", "tdd", "clean-code", "refactoring", "code-review", "architecture", "software-design", "software-architecture", "ddd", "pair-programming", "xp", "agile"]
+
+[[extra.topics]]
+title = "Leadership & People"
+title_es = "Liderazgo y Personas"
+description = "Growing as a leader, building great teams, and the human side of software."
+description_es = "Crecer como líder, construir equipos y el lado humano del software."
+tags = ["leadership", "management", "team-management", "team-culture", "mentoring", "communication", "career", "professionalism", "self-improvement"]
+
+[[extra.topics]]
+title = "Bitcoin & Economics"
+title_es = "Bitcoin y Economía"
+description = "Sound money, Austrian economics, privacy, and the technology behind Bitcoin."
+description_es = "Dinero sólido, economía austriaca, privacidad y la tecnología detrás de Bitcoin."
+tags = ["bitcoin", "economics", "money", "finance", "investing", "cryptography", "privacy", "security", "encryption"]
+
+[[extra.topics]]
+title = "Programming Languages & Tools"
+title_es = "Lenguajes y Herramientas"
+description = "Hands-on content about specific languages, frameworks, and developer tooling."
+description_es = "Contenido práctico sobre lenguajes, frameworks y herramientas de desarrollo."
+tags = ["php", "golang", "lisp", "bash", "symfony", "docker", "git", "devops", "developer-tools", "bashunit", "gacela", "phel", "functional-programming"]
+
+[[extra.topics]]
+title = "Mind & Knowledge"
+title_es = "Mente y Conocimiento"
+description = "Philosophy, psychology, productivity, and the pursuit of understanding."
+description_es = "Filosofía, psicología, productividad y la búsqueda del entendimiento."
+tags = ["philosophy", "psychology", "productivity", "fiction", "dystopia", "horror", "music"]
+
+[[extra.topics]]
+title = "Speaking & Teaching"
+title_es = "Charlas y Enseñanza"
+description = "Conference talks, workshops, live coding, and sharing knowledge."
+description_es = "Charlas, talleres, live coding y compartir conocimiento."
+tags = ["speaking", "presentations", "live-coding", "tutorial", "workshop", "open-source"]
+
+[[extra.tag_descriptions]]
+name = "testing"
+desc = "Software testing strategies, frameworks, and testing culture."
+desc_es = "Estrategias de testing, frameworks y cultura de pruebas."
+
+[[extra.tag_descriptions]]
+name = "tdd"
+desc = "Test-Driven Development: writing tests first to drive better design."
+desc_es = "Desarrollo Guiado por Tests: escribir tests primero para mejor diseño."
+
+[[extra.tag_descriptions]]
+name = "leadership"
+desc = "Leading teams, making decisions, and growing as a technical leader."
+desc_es = "Liderar equipos, tomar decisiones y crecer como líder técnico."
+
+[[extra.tag_descriptions]]
+name = "self-improvement"
+desc = "Personal growth, habits, and becoming a better professional."
+desc_es = "Crecimiento personal, hábitos y convertirse en mejor profesional."
+
+[[extra.tag_descriptions]]
+name = "bitcoin"
+desc = "Bitcoin technology, monetary theory, and the future of money."
+desc_es = "Tecnología Bitcoin, teoría monetaria y el futuro del dinero."
+
+[[extra.tag_descriptions]]
+name = "clean-code"
+desc = "Writing code that is readable, maintainable, and expressive."
+desc_es = "Escribir código legible, mantenible y expresivo."
+
+[[extra.tag_descriptions]]
+name = "philosophy"
+desc = "Philosophical ideas and their application to software and life."
+desc_es = "Ideas filosóficas y su aplicación al software y la vida."
+
+[[extra.tag_descriptions]]
+name = "communication"
+desc = "The art of clear communication in teams and beyond."
+desc_es = "El arte de la comunicación clara en equipos y más allá."
+
+[[extra.tag_descriptions]]
+name = "pair-programming"
+desc = "Working together at one keyboard: practices, benefits, and challenges."
+desc_es = "Trabajar juntos en un teclado: prácticas, beneficios y desafíos."
+
+[[extra.tag_descriptions]]
+name = "career"
+desc = "Career development, growth paths, and professional transitions."
+desc_es = "Desarrollo profesional, caminos de crecimiento y transiciones."
+
+[[extra.tag_descriptions]]
+name = "architecture"
+desc = "Software architecture patterns, decisions, and trade-offs."
+desc_es = "Patrones de arquitectura de software, decisiones y compromisos."
+
+[[extra.tag_descriptions]]
+name = "refactoring"
+desc = "Improving code structure without changing its behavior."
+desc_es = "Mejorar la estructura del código sin cambiar su comportamiento."
+
+[[extra.tag_descriptions]]
+name = "management"
+desc = "Team management, organizational dynamics, and engineering management."
+desc_es = "Gestión de equipos, dinámicas organizacionales y gestión de ingeniería."
+
+[[extra.tag_descriptions]]
+name = "psychology"
+desc = "Understanding human behavior, motivation, and cognitive patterns."
+desc_es = "Entender el comportamiento humano, motivación y patrones cognitivos."
+
+[[extra.tag_descriptions]]
+name = "economics"
+desc = "Economic theory, monetary policy, and financial systems."
+desc_es = "Teoría económica, política monetaria y sistemas financieros."

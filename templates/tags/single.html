@@ -26,6 +26,13 @@
       {{ term.name }}
     </span>
     <h1>{{ term.pages | length }} {% if term.pages | length == 1 %}{{ trans(key="post", lang=lang) }}{% else %}{{ trans(key="posts", lang=lang) }}{% endif %}</h1>
+    {% for td in config.extra.tag_descriptions %}
+      {% if td.name == term.name %}
+        <p class="tag-single__description">
+          {% if lang == "es" %}{{ td.desc_es }}{% else %}{{ td.desc }}{% endif %}
+        </p>
+      {% endif %}
+    {% endfor %}
   </header>
 
   <div class="tag-single__posts">

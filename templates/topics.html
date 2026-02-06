@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set taxonomy = get_taxonomy(kind="tags", lang=lang) %}
+
+<div class="topics-page">
+  <div class="topics-header">
+    <h1>{{ trans(key="topics_title", lang=lang) }}</h1>
+    <p class="topics-intro">{{ trans(key="topics_intro", lang=lang) }}</p>
+  </div>
+
+  <div class="topics-page__groups">
+    {% for topic in config.extra.topics %}
+    <section class="topics-page__group">
+      <div class="topics-page__group-header">
+        <h2>{% if lang == "es" %}{{ topic.title_es }}{% else %}{{ topic.title }}{% endif %}</h2>
+        <p class="topics-page__group-desc">{% if lang == "es" %}{{ topic.description_es }}{% else %}{{ topic.description }}{% endif %}</p>
+      </div>
+
+      <div class="topics-page__tags">
+        {# Collect matching tags with counts, then render sorted by count #}
+        {% set_global matched_tags = [] %}
+        {% for tag_name in topic.tags %}
+          {% for item in taxonomy.items %}
+            {% if item.name == tag_name %}
+              {% set_global matched_tags = matched_tags | concat(with=[item]) %}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+        {% for item in matched_tags | sort(attribute="pages") | reverse %}
+          {% set count = item.pages | length %}
+          <a href="{{ item.permalink }}" class="topics-page__tag{% if count >= 15 %} topics-page__tag--popular{% endif %}">
+            <span class="topics-page__tag-name">{{ item.name }}</span>
+            <span class="topics-page__tag-count">{{ count }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+
+  <div class="topics-page__footer">
+    <a href="{% if lang == 'es' %}/es/tags/{% else %}/tags/{% endif %}" class="topics-page__all-tags">
+      {{ trans(key="all_tags", lang=lang) }}
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+</div>
+{% endblock content %}
