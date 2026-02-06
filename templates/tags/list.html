@@ -9,16 +9,32 @@
 {% block content %}
 <div class="tags-page">
   <header class="tags-page__header">
-    <h1>Tags</h1>
+    <h1>{{ trans(key="all_tags", lang=lang) }}</h1>
     <p class="tags-page__count">{{ terms | length }} tags</p>
   </header>
 
-  <div class="tags-page__grid">
-    {% for term in terms %}
-    <a href="{{ term.permalink }}" class="tags-page__tag">
-      <span class="tags-page__tag-name">{{ term.name }}</span>
-      <span class="tags-page__tag-count">{{ term.pages | length }}</span>
-    </a>
+  {% set_global max_count = 0 %}
+  {% for term in terms %}
+    {% set count = term.pages | length %}
+    {% if count > max_count %}
+      {% set_global max_count = count %}
+    {% endif %}
+  {% endfor %}
+
+  <div class="tags-page__cloud">
+    {% for term in terms | sort(attribute="pages") | reverse %}
+      {% set count = term.pages | length %}
+      {% if count >= max_count / 2 %}
+        {% set size = "lg" %}
+      {% elif count >= max_count / 4 %}
+        {% set size = "md" %}
+      {% else %}
+        {% set size = "sm" %}
+      {% endif %}
+      <a href="{{ term.permalink }}" class="tags-page__tag tags-page__tag--{{ size }}">
+        <span class="tags-page__tag-name">{{ term.name }}</span>
+        <span class="tags-page__tag-count">{{ count }}</span>
+      </a>
     {% endfor %}
   </div>
 </div>
