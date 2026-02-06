@@ -11,6 +11,10 @@ related_posts = [
   "blog/2022-11-11-working-agile-with-non-agile-teams.md",
   "blog/2023-06-08-learned-helplessness.md",
 ]
+related_readings = [
+  "readings/2024-11-29-mans-search-for-meaning.md",
+  "readings/2020-06-12-never-split-the-difference.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-06-27/cover.jpg)

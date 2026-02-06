@@ -6,6 +6,11 @@ tags = [ "leadership", "team-management", "productivity", "agile" ]
 [extra]
 subtitle = "Gestionando los dos tipos de trabajo"
 static_thumbnail = "/images/blog/2021-10-21/cover.jpg"
+related_posts = [
+  "blog/2022-09-25-the-beauty-of-leadership.md",
+  "blog/2023-02-27-great-leadership.md",
+  "blog/2021-06-01-conformity-experiments.md",
+]
 related_readings = [
   "readings/2021-10-22-leadership-is-language.md",
 ]

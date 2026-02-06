@@ -12,6 +12,11 @@ related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2021-09-25-tdd-vs-bdd.md",
 ]
+related_readings = [
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-05-17/cover.jpg)

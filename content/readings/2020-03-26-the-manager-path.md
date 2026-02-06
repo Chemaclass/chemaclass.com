@@ -15,6 +15,11 @@ related_posts = [
   "blog/2023-02-27-great-leadership.md",
   "blog/2022-09-25-the-beauty-of-leadership.md",
 ]
+related_readings = [
+  "readings/2020-04-03-high-output-management.md",
+  "readings/2021-06-27-effective-software-em.md",
+  "readings/2022-01-23-modern-cto.md",
+]
 +++
 
 <!-- more -->

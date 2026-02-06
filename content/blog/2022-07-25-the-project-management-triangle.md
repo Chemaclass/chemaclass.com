@@ -6,6 +6,16 @@ tags = [ "agile", "team-management", "productivity" ]
 [extra]
 subtitle = "The Iron Triangle"
 static_thumbnail = "/images/blog/2022-07-25/cover.jpg"
+related_posts = [
+  "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md",
+  "blog/2024-08-01-what-is-waterfall.md",
+  "blog/2022-05-27-bikeshedding.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2020-06-10-scrum-the-art-of-doing-twice.md",
+  "readings/2023-03-19-accelerate.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-07-25/cover.jpg)

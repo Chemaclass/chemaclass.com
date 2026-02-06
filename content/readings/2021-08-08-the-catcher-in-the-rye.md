@@ -10,6 +10,11 @@ pages = "220"
 author = "J. D. Salinger"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lprH3LF4L._SX323_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2026-02-04-notes-from-underground.md",
+  "readings/2021-07-10-lord-of-the-flies.md",
+  "readings/2023-11-07-the-alchemist.md",
+]
 +++
 
 <!-- more -->

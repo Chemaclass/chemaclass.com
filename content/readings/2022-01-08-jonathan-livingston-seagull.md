@@ -10,6 +10,11 @@ pages = "100"
 author = "Richard Bach"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/419VQmad1LL._SX374_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2023-11-07-the-alchemist.md",
+  "readings/2022-12-17-momo.md",
+  "readings/2024-11-29-mans-search-for-meaning.md",
+]
 +++
 
 <!-- more -->

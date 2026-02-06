@@ -13,6 +13,10 @@ related_posts = [
   "blog/2022-06-08-the-path-to-seniority-in-software.md",
   "blog/2022-10-08-different-beliefs-about-software-quality.md",
 ]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-10-20/cover.jpg)

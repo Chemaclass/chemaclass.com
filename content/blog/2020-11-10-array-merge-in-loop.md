@@ -6,6 +6,15 @@ tags = [ "php", "clean-code", "refactoring"]
 [extra]
 subtitle = "The spread operator to the rescue"
 static_thumbnail = "/images/blog/2020-11-10/cover.jpg"
+related_posts = [
+  "blog/2020-10-13-typed-arrays-php.md",
+  "blog/2020-06-28-the-art-of-refactoring.md",
+  "blog/2021-01-11-to-mock-or-not-to-mock.md",
+]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+]
 +++
 
 ![blog-cover](/images/blog/2020-11-10/cover.jpg)

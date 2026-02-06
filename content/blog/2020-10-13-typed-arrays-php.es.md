@@ -6,6 +6,15 @@ tags = [ "php", "software-design", "clean-code"]
 [extra]
 subtitle = "Una alternativa a la característica que falta en PHP: Generics"
 static_thumbnail = "/images/blog/2020-10-13/cover.jpg"
+related_posts = [
+  "blog/2020-11-10-array-merge-in-loop.md",
+  "blog/2021-01-11-to-mock-or-not-to-mock.md",
+  "blog/2021-02-01-phel-first-release.md",
+]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2020-10-10-object-design-style-guide.md",
+]
 +++
 
 ![blog-cover](/images/blog/2020-10-13/cover.jpg)

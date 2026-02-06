@@ -11,6 +11,10 @@ related_posts = [
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
   "blog/2021-03-01-embrace-the-change.md",
 ]
+related_readings = [
+  "readings/2019-11-12-atomic-habits.md",
+  "readings/2025-02-16-digital-minimalism.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-07-05/cover.jpg)

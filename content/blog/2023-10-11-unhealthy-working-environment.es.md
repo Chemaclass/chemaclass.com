@@ -15,6 +15,11 @@ related_posts = [
   "blog/2023-03-16-have-you-always-been-like-this.md",
   "blog/2023-09-30-the-peter-principle.md",
 ]
+related_readings = [
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2021-10-22-leadership-is-language.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-10-11/cover.jpg)

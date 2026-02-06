@@ -7,6 +7,15 @@ tags = [ "software-design", "architecture", "team-management", "communication" ]
 [extra]
 subtitle = "Cómo introducir nuevas tecnologías en tu equipo"
 static_thumbnail = "/images/blog/2023-04-14/cover.jpg"
+related_posts = [
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2022-11-11-working-agile-with-non-agile-teams.md",
+  "blog/2023-12-30-great-engineering.md",
+]
+related_readings = [
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2022-11-28-recipes-for-decoupling.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-04-14/cover.jpg)

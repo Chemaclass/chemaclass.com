@@ -9,6 +9,11 @@ subtitle = "Soy un hombre enfermo... Soy un hombre rencoroso."
 pages = "136"
 author = "Fiódor Dostoyevski"
 static_thumbnail = "https://m.media-amazon.com/images/I/61To6c2uwtL._SL1491_.jpg"
+related_readings = [
+  "readings/2024-11-29-mans-search-for-meaning.md",
+  "readings/2020-05-16-metamorphosis.md",
+  "readings/2021-08-08-the-catcher-in-the-rye.md",
+]
 +++
 
 <!-- more -->

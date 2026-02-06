@@ -10,6 +10,11 @@ pages = "270"
 author = "Simon Sinek"
 static_thumbnail = "https://m.media-amazon.com/images/I/41r53pSrB4L.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2021-11-28-start-with-why.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2023-02-26-adapt-or-die.md",
+]
 +++
 
 ¿Cómo ganamos un juego que no tiene fin? Los juegos finitos (fútbol, ajedrez) tienen jugadores conocidos, reglas fijas y un final claro. Los juegos infinitos (negocios, política, la vida misma) son diferentes: los jugadores van y vienen, las reglas cambian y no hay línea de meta. No hay ganadores ni perdedores, solo avances y retrocesos.

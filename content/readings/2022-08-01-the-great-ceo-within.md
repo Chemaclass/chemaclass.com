@@ -10,6 +10,11 @@ pages = "200"
 author = "Matt Mochary"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41zoJiSUq4L._SX331_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2020-04-03-high-output-management.md",
+  "readings/2022-10-29-the-essential-drucker.md",
+  "readings/2020-03-26-the-manager-path.md",
+]
 +++
 
 <!-- more -->

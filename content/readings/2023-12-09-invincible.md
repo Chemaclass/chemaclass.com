@@ -11,7 +11,12 @@ pages = "180"
 author = "Marcos Vazquez"
 static_thumbnail = "https://m.media-amazon.com/images/I/71+1EHGiyRL._SL1500_.jpg"
 expand_preview = false
-related_posts = ["blog/2023-07-05-never-ending-loop.md", "blog/2023-03-16-have-you-always-been-like-this.md", "blog/2020-09-08-the-process-itself-is-the-goal.md"]+++
+related_posts = ["blog/2023-07-05-never-ending-loop.md", "blog/2023-03-16-have-you-always-been-like-this.md", "blog/2020-09-08-the-process-itself-is-the-goal.md"]
+related_readings = [
+  "readings/2023-08-13-the-day-of-the-triffids.md",
+  "readings/2020-05-18-call-of-cthulhu.md",
+]
++++
 
 <!-- more -->
 

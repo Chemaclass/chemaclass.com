@@ -10,6 +10,11 @@ pages = "300"
 author = "Saifedean Ammous"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41x6NvXWekS._SX336_BO1,204,203,200_.jpg"
 expand_preview = false
+related_posts = [
+  "blog/2025-11-21-bitcoin-fundamentals.md",
+  "blog/2025-12-22-how-bitcoin-works.md",
+  "blog/2024-07-06-programmable-money.md",
+]
 related_readings = [
   "readings/2023-06-20-the-blocksize-war.md",
   "readings/2023-07-10-the-book-of-satoshi.md",

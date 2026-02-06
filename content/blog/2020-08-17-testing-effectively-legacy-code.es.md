@@ -8,9 +8,12 @@ subtitle = "Cómo escribir tests adecuados para código ya escrito"
 static_thumbnail = "/images/blog/2021-01-11/cover.jpg"
 related_posts = [
   "blog/2020-06-06-final-classes.md",
+  "blog/2020-06-28-the-art-of-refactoring.md",
+  "blog/2020-04-07-the-art-of-testing.md",
 ]
 related_readings = [
   "readings/2019-07-01-working-effectively-with-legacy-code.md",
+  "readings/2016-05-01-clean-code.md",
 ]
 +++
 

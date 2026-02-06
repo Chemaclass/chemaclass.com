@@ -11,6 +11,11 @@ pages = "240"
 author = "Ori Brafman, Rod Beckstrom"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41T1ZmJ8BGL._SX324_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2022-08-01-the-great-ceo-within.md",
+  "readings/2022-10-29-the-essential-drucker.md",
+  "readings/2021-11-28-start-with-why.md",
+]
 +++
 
 <!-- more -->

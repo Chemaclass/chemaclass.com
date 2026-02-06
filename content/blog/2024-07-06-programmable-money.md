@@ -9,8 +9,13 @@ subtitle = "The power of Bitcoin's Script"
 static_thumbnail = "/images/blog/2024-07-06/cover.jpg"
 series = "bitcoin"
 series_order = 3
+related_posts = [
+  "blog/2024-12-11-the-cypherpunks.md",
+  "blog/2025-12-22-how-bitcoin-works.md",
+]
 related_readings = [
   "readings/2024-07-05-mastering-bitcoin.md",
+  "readings/2023-03-11-21-lessons.md",
 ]
 +++
 

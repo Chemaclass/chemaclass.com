@@ -6,6 +6,16 @@ tags = [ "testing", "tdd", "software-design", "clean-code", "php" ]
 [extra]
 subtitle = "How to escape the mocking hell"
 static_thumbnail = "/images/blog/2021-01-11/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2021-09-25-tdd-vs-bdd.md",
+  "blog/2023-10-20-how-to-test-private-methods.md",
+]
+related_readings = [
+  "readings/2022-07-11-clean-craftsmanship.md",
+  "readings/2022-06-29-modern-software-engineering.md",
+]
 +++
 
 ![blog-cover](/images/blog/2021-01-11/cover.jpg)

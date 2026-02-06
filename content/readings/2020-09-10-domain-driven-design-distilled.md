@@ -10,6 +10,11 @@ pages = "160"
 author = "Vaughn Vernon"
 static_thumbnail = "https://m.media-amazon.com/images/I/51yhBoDgkqL.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2022-11-28-recipes-for-decoupling.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+]
 +++
 
 Domain-Driven Design Distilled brings DDD to life. Whether you're a developer, consultant, or customer, it will help 

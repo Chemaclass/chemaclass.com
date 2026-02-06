@@ -10,6 +10,11 @@ pages = "200"
 author = "David Farley"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51OFUgJAdaL._SX402_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2022-07-11-clean-craftsmanship.md",
+  "readings/2023-03-19-accelerate.md",
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+]
 +++
 
 <!-- more -->

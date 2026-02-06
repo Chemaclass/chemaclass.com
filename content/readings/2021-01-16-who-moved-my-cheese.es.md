@@ -10,7 +10,13 @@ pages = "94"
 author = "Spencer Johnson"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QGl7HfNyL._SX314_BO1,204,203,200_.jpg"
 expand_preview = true
-related_posts = ["blog/2021-03-01-embrace-the-change.md"]+++
+related_posts = ["blog/2021-03-01-embrace-the-change.md"]
+related_readings = [
+  "readings/2019-11-12-atomic-habits.md",
+  "readings/2023-02-26-adapt-or-die.md",
+  "readings/2017-03-20-the-power-of-habits.md",
+]
++++
 
 El libro cuenta una fábula con cuatro personajes: dos ratones, **Fisgón** y **Escurridizo**, y dos personitas, **Hem** y **Haw**.
 

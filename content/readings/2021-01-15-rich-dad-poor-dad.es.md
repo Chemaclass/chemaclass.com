@@ -9,6 +9,11 @@ subtitle = "Lo que los ricos enseñan a sus hijos sobre el dinero (y los pobres 
 pages = "180"
 author = "Robert T. Kiyosaki"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51rgCls-voL._SX350_BO1,204,203,200_.jpg"
+related_readings = [
+  "readings/2022-02-27-the-psychology-of-money.md",
+  "readings/2021-01-22-one-up-on-wall-street.md",
+  "readings/2021-01-31-stock-market-for-beginners.md",
+]
 +++
 
 <!-- more -->

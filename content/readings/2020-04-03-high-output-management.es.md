@@ -9,6 +9,11 @@ subtitle = "El arte del emprendedor puede resumirse en una palabra: gestionar"
 pages = "230"
 author = "Andrew S. Grove"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41pXzmjz9KL._SX322_BO1,204,203,200_.jpg"
+related_readings = [
+  "readings/2020-03-26-the-manager-path.md",
+  "readings/2022-10-29-the-essential-drucker.md",
+  "readings/2022-08-01-the-great-ceo-within.md",
+]
 +++
 
 <!-- more -->

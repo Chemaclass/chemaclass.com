@@ -9,6 +9,11 @@ subtitle = "The Art of Doing Twice the Work in Half the Time"
 pages = "250"
 author = "Jeff Sutherland"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/515tsl4uoZL._SX324_BO1,204,203,200_.jpg"
+related_readings = [
+  "readings/2021-03-01-zombie-scrum-survival-guide.md",
+  "readings/2021-02-22-agile-product-management-with-scrum.md",
+  "readings/2020-03-12-clean-agile.md",
+]
 +++
 
 <!-- more -->

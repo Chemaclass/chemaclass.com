@@ -11,7 +11,13 @@ pages = "400"
 author = "Saifedean Ammous"
 static_thumbnail = "https://m.media-amazon.com/images/I/71OdiXckU3L._SY522_.jpg"
 expand_preview = true
-related_posts = ["blog/2024-12-11-the-cypherpunks.md"]+++
+related_posts = ["blog/2024-12-11-the-cypherpunks.md"]
+related_readings = [
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2026-01-17-broken-money.md",
+  "readings/2025-03-31-the-road-to-serfdom.md",
+]
++++
 
 ¿Te has preguntado alguna vez por qué los precios suben o por qué el dinero pierde valor? Principios de Economía de Saifedean Ammous puede cambiarte la perspectiva.
 

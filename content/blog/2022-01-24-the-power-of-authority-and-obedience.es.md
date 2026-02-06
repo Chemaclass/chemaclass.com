@@ -6,6 +6,15 @@ tags = [ "psychology", "leadership", "communication" ]
 [extra]
 subtitle = "El experimento de Milgram"
 static_thumbnail = "/images/blog/2022-01-24/cover.jpg"
+related_posts = [
+  "blog/2021-06-01-conformity-experiments.md",
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-10-11-unhealthy-working-environment.md",
+]
+related_readings = [
+  "readings/2021-10-22-leadership-is-language.md",
+  "readings/2024-11-29-mans-search-for-meaning.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-01-24/cover.jpg)

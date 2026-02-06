@@ -10,6 +10,11 @@ pages = "250"
 author = "Simon Sinek"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51BlNddi+NL._SX330_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2023-01-29-the-infinite-game.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2021-04-19-the-art-of-leadership.md",
+]
 +++
 
 ¿Por qué algunas personas y organizaciones son más innovadoras, influyentes y rentables que otras? ¿Por qué algunas consiguen mayor lealtad de clientes y empleados? Incluso entre las exitosas, ¿por qué tan pocas pueden repetir su éxito?

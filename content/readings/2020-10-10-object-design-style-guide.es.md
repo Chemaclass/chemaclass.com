@@ -10,6 +10,11 @@ pages = "240"
 author = "Matthias Noback"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41gb4dgVhhL._SX397_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2020-09-10-domain-driven-design-distilled.md",
+  "readings/2018-06-04-clean-architecture.md",
+]
 +++
 
 Los objetos son el corazón de lenguajes como Java, Python y C#. Si aplicas buenas prácticas de diseño, tu código será más fácil de leer, escribir y mantener.

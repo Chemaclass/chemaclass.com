@@ -6,6 +6,15 @@ tags = [ "psychology", "team-management", "productivity", "communication" ]
 [extra]
 subtitle = "Also known as the Law of triviality"
 static_thumbnail = "/images/blog/2022-05-27/cover.jpg"
+related_posts = [
+  "blog/2022-04-02-dunbar-number.md",
+  "blog/2022-07-25-the-project-management-triangle.md",
+  "blog/2022-08-22-understanding-people.md",
+]
+related_readings = [
+  "readings/2021-05-28-peopleware.md",
+  "readings/2023-10-31-crucial-conversations.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-05-27/cover.jpg)

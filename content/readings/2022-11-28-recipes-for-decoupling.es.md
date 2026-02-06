@@ -10,6 +10,11 @@ pages = "280"
 author = "Matthias Noback"
 static_thumbnail = "https://matthiasnoback.nl/assets/books/recipes-for-decoupling.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2020-09-10-domain-driven-design-distilled.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+]
 +++
 
 <!-- more -->

@@ -6,6 +6,13 @@ tags = [ "git", "code-review", "communication", "pair-programming"]
 [extra]
 subtitle = "Another way of sharing quick suggestions with your team"
 static_thumbnail = "/images/blog/2020-12-01/cover.jpg"
+related_posts = [
+  "blog/2021-04-01-pull-request-vs-pair-prog.md",
+  "blog/2025-04-12-ship-show-ask.md",
+]
+related_readings = [
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
 ![blog-cover](/images/blog/2020-12-01/cover.jpg)

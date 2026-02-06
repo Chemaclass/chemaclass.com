@@ -11,6 +11,11 @@ pages = "200"
 author = "Félix Brezo, Yaiza Rubio"
 static_thumbnail = "https://0xword.com/230-large_default/bitcoin-la-tecnologia-blockchain-y-su-investigacion.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+  "readings/2023-07-10-the-book-of-satoshi.md",
+]
 +++
 
 <!-- more -->

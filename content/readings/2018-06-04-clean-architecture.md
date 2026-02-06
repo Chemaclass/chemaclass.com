@@ -14,6 +14,11 @@ related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2023-04-14-introducing-a-new-tech-stack.md",
 ]
+related_readings = [
+  "readings/2020-09-10-domain-driven-design-distilled.md",
+  "readings/2022-11-28-recipes-for-decoupling.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+]
 +++
 
 <!-- more -->

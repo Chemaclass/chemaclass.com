@@ -11,6 +11,11 @@ pages = "200"
 author = "D. Michael Abrashoff"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1435059869i/183392.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/2021-10-22-leadership-is-language.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+]
 +++
 
 <!-- more -->

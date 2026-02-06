@@ -8,6 +8,11 @@ subtitle = "El poder de contribuir a OSS"
 static_thumbnail = "/images/blog/2021-05-03/cover.jpg"
 related_posts = [
   "blog/2021-02-01-phel-first-release.md",
+  "blog/2024-04-02-learning-concurrency-in-golang.md",
+]
+related_readings = [
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+  "readings/2022-06-29-modern-software-engineering.md",
 ]
 +++
 

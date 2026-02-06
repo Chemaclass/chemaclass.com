@@ -6,6 +6,15 @@ tags = [ "communication", "leadership", "productivity", "career"]
 [extra]
 subtitle = "Algunos consejos para mejorar tus habilidades de comunicación"
 static_thumbnail = "/images/blog/2019-11-18/cover.jpg"
+related_posts = [
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2024-09-02-people-skills.md",
+  "blog/2023-03-16-have-you-always-been-like-this.md",
+]
+related_readings = [
+  "readings/2023-10-31-crucial-conversations.md",
+  "readings/2020-06-12-never-split-the-difference.md",
+]
 +++
 
 ![blog-cover](/images/blog/2019-11-18/cover.jpg)

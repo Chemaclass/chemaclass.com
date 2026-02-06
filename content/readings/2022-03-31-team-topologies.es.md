@@ -13,6 +13,11 @@ expand_preview = false
 related_posts = [
   "blog/2022-04-02-dunbar-number.md",
 ]
+related_readings = [
+  "readings/2021-05-28-peopleware.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2023-03-19-accelerate.md",
+]
 +++
 
 <!-- more -->

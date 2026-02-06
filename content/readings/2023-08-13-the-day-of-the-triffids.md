@@ -11,6 +11,11 @@ pages = "270"
 author = "John Wyndham"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320530145i/530965.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2020-05-18-call-of-cthulhu.md",
+  "readings/2023-12-09-invincible.md",
+  "readings/2021-07-10-lord-of-the-flies.md",
+]
 +++
 
 This book is fantastic and frightening but entirely plausible. It doesn't seem scientifically possible, but its characters are living people shaken out of the civilization they know into the horror of a world dominated by "triffids".

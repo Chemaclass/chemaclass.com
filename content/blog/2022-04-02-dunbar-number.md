@@ -6,6 +6,15 @@ tags = [ "psychology", "team-management", "communication" ]
 [extra]
 subtitle = ""
 static_thumbnail = "/images/blog/2022-04-02/cover.jpg"
+related_posts = [
+  "blog/2022-05-27-bikeshedding.md",
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-11-25-forming-storming-norming-performing.md",
+]
+related_readings = [
+  "readings/2021-05-28-peopleware.md",
+  "readings/2022-03-31-team-topologies.md",
+]
 +++
 
 ![blog-cover](/images/blog/2022-04-02/cover.jpg)

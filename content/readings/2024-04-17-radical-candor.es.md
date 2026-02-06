@@ -11,6 +11,11 @@ pages = "300"
 author = "Kim Scott"
 static_thumbnail = "https://m.media-amazon.com/images/I/71qELZ2wR9L._SL1500_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2023-10-31-crucial-conversations.md",
+  "readings/2020-06-12-never-split-the-difference.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
 +++
 
 <!-- more -->

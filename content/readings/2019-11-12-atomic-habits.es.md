@@ -11,6 +11,12 @@ author = "James Clear"
 static_thumbnail = "https://m.media-amazon.com/images/I/51-nXsSRfZL.jpg"
 related_posts = [
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+]
+related_readings = [
+  "readings/2017-03-20-the-power-of-habits.md",
+  "readings/2025-02-16-digital-minimalism.md",
+  "readings/2021-01-16-who-moved-my-cheese.md",
 ]
 +++
 

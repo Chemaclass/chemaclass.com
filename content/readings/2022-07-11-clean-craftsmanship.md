@@ -15,6 +15,11 @@ related_posts = [
   "blog/2024-03-28-effective-pair-programming.md",
   "blog/2022-10-08-different-beliefs-about-software-quality.md",
 ]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2022-06-29-modern-software-engineering.md",
+]
 +++
 
 <!-- more -->

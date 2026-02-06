@@ -9,6 +9,16 @@ subtitle = "Guía del artesano para la estructura y diseño de software"
 pages = "400"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41TPrNDI50L._SX387_BO1,204,203,200_.jpg"
+related_posts = [
+  "blog/2023-12-30-great-engineering.md",
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2023-04-14-introducing-a-new-tech-stack.md",
+]
+related_readings = [
+  "readings/2020-09-10-domain-driven-design-distilled.md",
+  "readings/2022-11-28-recipes-for-decoupling.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+]
 +++
 
 <!-- more -->

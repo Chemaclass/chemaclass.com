@@ -11,6 +11,11 @@ pages = "270"
 author = "Thomas H. Douglas"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653013359i/61132070.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2021-01-16-who-moved-my-cheese.md",
+  "readings/2023-01-29-the-infinite-game.md",
+  "readings/2019-11-12-atomic-habits.md",
+]
 +++
 
 A través de la historia de People First IT, este libro presenta El Algoritmo del Éxito: un sistema con potencial para transformar todos los aspectos de una organización.

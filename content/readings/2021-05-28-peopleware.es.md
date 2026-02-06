@@ -10,6 +10,11 @@ pages = "230"
 author = "Tom DeMarco"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51RuNCswX8L._SX341_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2022-03-31-team-topologies.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2023-04-17-effective-remote-work.md",
+]
 +++
 
 El desarrollo de software va de personas: cuándo, cómo y dónde trabajan mejor juntas. No de lenguajes de programación ni herramientas. No de ordenadores rápidos, redes o internet.

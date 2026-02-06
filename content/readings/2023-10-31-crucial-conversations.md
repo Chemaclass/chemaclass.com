@@ -11,6 +11,11 @@ pages = "200"
 author = "Patterson, Grenny, McMillan, Switzler"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1497193248i/15014.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2020-06-12-never-split-the-difference.md",
+  "readings/2024-04-17-radical-candor.md",
+  "readings/2021-10-22-leadership-is-language.md",
+]
 +++
 
 <!-- more -->

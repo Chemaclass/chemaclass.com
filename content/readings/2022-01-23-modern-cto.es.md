@@ -12,6 +12,9 @@ static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51GydOENM3L
 expand_preview = false
 related_readings = [
   "readings/2021-11-28-start-with-why.md",
+  "readings/2020-03-26-the-manager-path.md",
+  "readings/2022-08-01-the-great-ceo-within.md",
+  "readings/2021-06-27-effective-software-em.md",
 ]
 +++
 

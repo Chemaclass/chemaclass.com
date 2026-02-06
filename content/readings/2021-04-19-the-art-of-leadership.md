@@ -15,6 +15,11 @@ related_posts = [
   "blog/2022-09-25-the-beauty-of-leadership.md",
   "blog/2024-09-02-people-skills.md",
 ]
+related_readings = [
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
 +++
 
 <!-- more -->

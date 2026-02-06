@@ -11,6 +11,11 @@ pages = "150"
 author = "Nicole Forsgren, Jez Humble, Gene Kim"
 static_thumbnail = "https://m.media-amazon.com/images/I/41YpWJi9OoL.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2024-05-31-the-phoenix-project.md",
+  "readings/2022-03-31-team-topologies.md",
+  "readings/2022-06-29-modern-software-engineering.md",
+]
 +++
 
 <!-- more -->

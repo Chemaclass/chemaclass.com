@@ -6,6 +6,11 @@ tags = [ "leadership", "psychology", "career", "philosophy" ]
 [extra]
 subtitle = "Who moved my cheese?🧀"
 static_thumbnail = "/images/blog/2021-03-01/cover.jpg"
+related_posts = [
+  "blog/2020-09-08-the-process-itself-is-the-goal.md",
+  "blog/2023-03-16-have-you-always-been-like-this.md",
+  "blog/2023-07-05-never-ending-loop.md",
+]
 related_readings = [
   "readings/2021-01-16-who-moved-my-cheese.md",
 ]

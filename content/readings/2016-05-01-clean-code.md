@@ -15,6 +15,11 @@ related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
   "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
 ]
+related_readings = [
+  "readings/2016-08-01-the-clean-coder.md",
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+]
 +++
 
 Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year,

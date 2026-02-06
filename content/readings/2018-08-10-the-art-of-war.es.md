@@ -10,6 +10,11 @@ pages = "100"
 author = "Sun Tzu"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41Le0J5QuNL._SX331_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-04-19-the-art-of-leadership.md",
+  "readings/2021-11-28-start-with-why.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
 +++
 
 <!-- more -->

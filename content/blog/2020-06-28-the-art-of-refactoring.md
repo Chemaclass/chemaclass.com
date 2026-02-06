@@ -6,6 +6,16 @@ tags = [ "refactoring", "clean-code", "testing", "software-design"]
 [extra]
 subtitle = "When, how, and why"
 static_thumbnail = "/images/blog/2020-06-28/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2020-08-17-testing-effectively-legacy-code.md",
+  "blog/2021-08-01-test-driven-development.md",
+]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2019-07-01-working-effectively-with-legacy-code.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+]
 +++
 
 ![blog-cover](/images/blog/2020-06-28/cover.jpg)

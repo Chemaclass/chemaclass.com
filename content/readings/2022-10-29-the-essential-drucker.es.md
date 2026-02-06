@@ -10,6 +10,11 @@ pages = "360"
 author = "Peter F. Drucker"
 static_thumbnail = "https://m.media-amazon.com/images/I/41gdosc0RaL.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2020-04-03-high-output-management.md",
+  "readings/2022-08-01-the-great-ceo-within.md",
+  "readings/2022-07-19-the-starfish-and-the-spider.md",
+]
 +++
 
 <!-- more -->

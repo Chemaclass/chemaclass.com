@@ -15,6 +15,11 @@ related_posts = [
   "blog/2023-01-09-interview-about-xp-and-agile.md",
   "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
 ]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+  "readings/2023-03-19-accelerate.md",
+]
 +++
 
 <!-- more -->

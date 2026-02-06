@@ -11,7 +11,13 @@ pages = "120"
 author = "Jeremy Savell"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1574715655i/48978620.jpg"
 expand_preview = false
-related_posts = ["blog/2022-11-11-working-agile-with-non-agile-teams.md", "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md", "blog/2023-01-09-interview-about-xp-and-agile.md"]+++
+related_posts = ["blog/2022-11-11-working-agile-with-non-agile-teams.md", "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md", "blog/2023-01-09-interview-about-xp-and-agile.md"]
+related_readings = [
+  "readings/2020-06-10-scrum-the-art-of-doing-twice.md",
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-02-22-agile-product-management-with-scrum.md",
+]
++++
 
 <!-- more -->
 

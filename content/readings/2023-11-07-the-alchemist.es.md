@@ -11,6 +11,11 @@ pages = "200"
 author = "Paulo Coelho"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1551938818i/44295818.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2022-01-08-jonathan-livingston-seagull.md",
+  "readings/2022-12-17-momo.md",
+  "readings/2024-11-29-mans-search-for-meaning.md",
+]
 +++
 
 <!-- more -->

@@ -6,6 +6,17 @@ tags = [ "testing", "software-design", "clean-code", "tdd"]
 [extra]
 subtitle = "From a software developer's point of view"
 static_thumbnail = "/images/blog/2020-04-07/cover.jpg"
+related_posts = [
+  "blog/2020-06-28-the-art-of-refactoring.md",
+  "blog/2021-01-11-to-mock-or-not-to-mock.md",
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2023-10-20-how-to-test-private-methods.md",
+]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+  "readings/2019-07-01-working-effectively-with-legacy-code.md",
+]
 +++
 
 ![blog-cover](/images/blog/2020-04-07/cover.jpg)

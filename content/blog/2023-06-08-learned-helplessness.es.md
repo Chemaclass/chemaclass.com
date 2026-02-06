@@ -11,6 +11,11 @@ related_posts = [
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
   "blog/2023-03-16-have-you-always-been-like-this.md",
 ]
+related_readings = [
+  "readings/2019-11-12-atomic-habits.md",
+  "readings/2021-01-16-who-moved-my-cheese.md",
+  "readings/2024-11-29-mans-search-for-meaning.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-06-08/cover.jpg)

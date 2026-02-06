@@ -9,6 +9,11 @@ subtitle = "How To Use What You Already Know To Make Money In The Market"
 pages = "180"
 author = "Peter Lynch"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51RWLY76LAL._SX324_BO1,204,203,200_.jpg"
+related_readings = [
+  "readings/2021-01-31-stock-market-for-beginners.md",
+  "readings/2021-01-15-rich-dad-poor-dad.md",
+  "readings/2022-02-27-the-psychology-of-money.md",
+]
 +++
 
 <!-- more -->

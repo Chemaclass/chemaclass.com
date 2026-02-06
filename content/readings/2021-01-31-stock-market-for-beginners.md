@@ -9,6 +9,11 @@ subtitle = "25 Golden Stock Investing Lessons"
 pages = "160"
 author = "Mark Atwood"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51Gnm7D+qIL._SX311_BO1,204,203,200_.jpg"
+related_readings = [
+  "readings/2021-01-22-one-up-on-wall-street.md",
+  "readings/2021-01-15-rich-dad-poor-dad.md",
+  "readings/2022-02-27-the-psychology-of-money.md",
+]
 +++
 
 <!-- more -->

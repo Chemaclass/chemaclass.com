@@ -10,6 +10,11 @@ pages = "370"
 author = "Matthias Noback"
 static_thumbnail = "https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero?1620605116"
 expand_preview = true
+related_readings = [
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2020-09-10-domain-driven-design-distilled.md",
+  "readings/2022-11-28-recipes-for-decoupling.md",
+]
 +++
 
 This book helps you get your web applications back in shape. It contains many techniques for decoupling from

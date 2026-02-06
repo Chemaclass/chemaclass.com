@@ -7,6 +7,11 @@ tags = [ "leadership", "team-management", "communication", "mentoring" ]
 [extra]
 subtitle = "¿Team Lead? ¿Tech Lead? ¿Qué es el liderazgo y qué no lo es?"
 static_thumbnail = "/images/blog/2022-09-25/cover.jpg"
+related_posts = [
+  "blog/2023-02-27-great-leadership.md",
+  "blog/2021-07-01-tech-lead.md",
+  "blog/2023-11-25-forming-storming-norming-performing.md",
+]
 related_readings = [
   "readings/2021-04-19-the-art-of-leadership.md",
   "readings/2021-09-12-turn-the-ship-around.md",

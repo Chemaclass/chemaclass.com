@@ -8,6 +8,15 @@ tags = [ "git", "security", "cryptography", "open-source" ]
 [extra]
 subtitle = "Boosting trust and security in your codebase"
 static_thumbnail = "/images/blog/2024-11-17/cover.jpg"
+related_posts = [
+  "blog/2024-07-13-pretty-good-privacy.md",
+  "blog/2021-05-03-open-source-software.md",
+  "blog/2024-12-11-the-cypherpunks.md",
+]
+related_readings = [
+  "readings/2024-07-05-mastering-bitcoin.md",
+  "readings/2024-06-21-the-genesis-book.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-11-17/cover.jpg)

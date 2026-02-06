@@ -10,6 +10,11 @@ pages = "350"
 author = "L. David Marquet"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41rS+NphHwL._SX329_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/2024-04-17-radical-candor.md",
+  "readings/2023-10-31-crucial-conversations.md",
+]
 +++
 
 A radical playbook to empower your people and put your team on a path to continuous improvement. 

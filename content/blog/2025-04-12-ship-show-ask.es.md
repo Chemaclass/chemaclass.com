@@ -14,6 +14,11 @@ related_posts = [
   "blog/2024-03-28-effective-pair-programming.md",
   "blog/2024-09-02-people-skills.md",
 ]
+related_readings = [
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2023-03-19-accelerate.md",
+  "readings/2020-03-12-clean-agile.md",
+]
 +++
 
 ![blog-cover](/images/blog/2025-04-12/cover.jpg)

@@ -10,6 +10,16 @@ pages = "460"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41yafGMO+rL._SX376_BO1,204,203,200_.jpg"
 expand_preview = true
+related_posts = [
+  "blog/2020-06-28-the-art-of-refactoring.md",
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
+]
+related_readings = [
+  "readings/2016-08-01-the-clean-coder.md",
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+]
 +++
 
 El código malo puede funcionar, pero si no está limpio, puede hundir a una empresa. Cada año se pierden horas y recursos por culpa de código mal escrito. No tiene por qué ser así.

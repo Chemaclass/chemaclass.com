@@ -10,6 +10,11 @@ pages = "350"
 author = "James Stanier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL._SX404_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2020-03-26-the-manager-path.md",
+  "readings/2020-04-03-high-output-management.md",
+  "readings/2021-04-05-97-things-every-em-should-know.md",
+]
 +++
 
 Una recopilación completa de temas clave para la gestión: 1:1s, evaluaciones de desempeño, contratación, despidos, política laboral y trabajo remoto.

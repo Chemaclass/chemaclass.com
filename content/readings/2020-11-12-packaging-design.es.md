@@ -9,6 +9,11 @@ subtitle = "Cómo crear componentes de software reutilizables"
 pages = "250"
 author = "Matthias Noback"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41MltJ4VMxL._SX348_BO1,204,203,200_.jpg"
+related_readings = [
+  "readings/2016-09-01-sprint.md",
+  "readings/2022-08-21-continuous-discovery-habits.md",
+  "readings/2018-06-04-clean-architecture.md",
+]
 +++
 
 <!-- more -->

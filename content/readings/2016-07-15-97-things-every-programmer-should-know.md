@@ -10,6 +10,11 @@ pages = "250"
 author = "Kevlin Henney"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51AqVDUY13L._SX331_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+  "readings/2016-05-01-clean-code.md",
+  "readings/2016-08-01-the-clean-coder.md",
+]
 +++
 
 Tap into the wisdom of experts to learn what every programmer should know, no matter what language you use. With the 97

@@ -10,6 +10,11 @@ pages = "240"
 author = "Patrick M. Lencioni"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QArmq8raL._SX328_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2021-05-28-peopleware.md",
+  "readings/2022-03-31-team-topologies.md",
+  "readings/2023-09-20-its-your-ship.md",
+]
 +++
 
 This book is a leadership fable about a tech company that is struggling to get more customers. The C level is not

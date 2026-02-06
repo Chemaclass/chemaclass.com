@@ -10,6 +10,11 @@ pages = "240"
 author = "Patrick M. Lencioni"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QArmq8raL._SX328_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2021-05-28-peopleware.md",
+  "readings/2022-03-31-team-topologies.md",
+  "readings/2023-09-20-its-your-ship.md",
+]
 +++
 
 Una fábula de liderazgo sobre una empresa tech que no consigue crecer. El equipo directivo no trabaja como equipo, les cuesta llegar a acuerdos y la moral está por los suelos. Hasta que llega la nueva CEO, Kathryn Petersen, que identifica los problemas y ayuda al equipo a superarlos.

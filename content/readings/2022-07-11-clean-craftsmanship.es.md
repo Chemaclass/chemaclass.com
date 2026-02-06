@@ -10,6 +10,16 @@ pages = "380"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/412omfkKEFL._SX380_BO1,204,203,200_.jpg"
 expand_preview = false
+related_posts = [
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+  "blog/2022-10-08-different-beliefs-about-software-quality.md",
+]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2022-06-29-modern-software-engineering.md",
+]
 +++
 
 <!-- more -->

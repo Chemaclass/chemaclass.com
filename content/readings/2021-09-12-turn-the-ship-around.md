@@ -10,6 +10,11 @@ pages = "220"
 author = "L. David Marquet"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL._SX323_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-10-22-leadership-is-language.md",
+  "readings/2023-09-20-its-your-ship.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+]
 +++
 
 <!-- more -->

@@ -11,7 +11,13 @@ pages = "250"
 author = "Alfre Mancera"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1736371979i/223396846.jpg"
 expand_preview = true
-related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]+++
+related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]
+related_readings = [
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2023-07-10-the-book-of-satoshi.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
++++
 
 Cryptoria is a story about the evolutionary process that gave birth to computers, networks, cybersecurity and digital money. 
 

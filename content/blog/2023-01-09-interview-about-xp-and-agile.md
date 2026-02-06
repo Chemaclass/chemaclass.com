@@ -7,6 +7,15 @@ tags = [ "agile", "xp", "tdd", "communication" ]
 [extra]
 subtitle = "Agile is about HOW you do certain things"
 static_thumbnail = "/images/blog/2023-01-09/cover.jpg"
+related_posts = [
+  "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
+  "blog/2024-05-30-what-kills-agility.md",
+  "blog/2022-11-11-working-agile-with-non-agile-teams.md",
+]
+related_readings = [
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2020-03-12-clean-agile.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-01-09/cover.jpg)

@@ -10,6 +10,11 @@ pages = "220"
 author = "Teresa Torres"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41O-IVvXtmS._SX331_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2024-01-26-the-lean-startup.md",
+  "readings/2016-09-01-sprint.md",
+  "readings/2023-05-31-agile-project-management.md",
+]
 +++
 
 <!-- more -->

@@ -6,6 +6,14 @@ tags = [ "php", "clean-code", "software-design"]
 [extra]
 subtitle = "declare(strict_types=1);"
 static_thumbnail = "/images/blog/2020-08-09/cover.jpg"
+related_posts = [
+  "blog/2020-06-06-final-classes.md",
+  "blog/2020-10-13-typed-arrays-php.md",
+]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2020-10-10-object-design-style-guide.md",
+]
 +++
 
 ![blog-cover](/images/blog/2020-08-09/cover.jpg)

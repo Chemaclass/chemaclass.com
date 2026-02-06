@@ -10,6 +10,11 @@ pages = "200"
 author = "Fran Ramírez, Elías Grande, Rafael Troncoso"
 static_thumbnail = "https://0xword.com/477-large_default/docker-secdevops.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2024-05-31-the-phoenix-project.md",
+  "readings/2023-03-19-accelerate.md",
+  "readings/2022-03-31-team-topologies.md",
+]
 +++
 
 <!-- more -->

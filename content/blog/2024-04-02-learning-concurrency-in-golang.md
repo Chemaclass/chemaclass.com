@@ -7,6 +7,14 @@ tags = ["golang", "software-design", "clean-code"]
 [extra]
 subtitle = "A horse racing emulator explained step by step"
 static_thumbnail = "/images/blog/2024-04-02/cover.jpg"
+related_posts = [
+  "blog/2023-12-30-great-engineering.md",
+  "blog/2020-04-07-the-art-of-testing.md",
+]
+related_readings = [
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+  "readings/2022-06-29-modern-software-engineering.md",
+]
 +++
 
 ![blog-cover](/images/blog/2024-04-02/cover.jpg)

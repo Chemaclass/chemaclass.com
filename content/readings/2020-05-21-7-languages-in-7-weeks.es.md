@@ -9,6 +9,11 @@ subtitle = "Una guía práctica para aprender lenguajes de programación"
 pages = "300"
 author = "Bruce Tate"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51LZT+tSrTL._SX415_BO1,204,203,200_.jpg"
+related_readings = [
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+  "readings/2022-06-29-modern-software-engineering.md",
+  "readings/2016-05-01-clean-code.md",
+]
 +++
 
 <!-- more -->

@@ -9,6 +9,11 @@ subtitle = "Negotiating as if your life depended on it"
 pages = "280"
 author = "Chris Voss"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51UM7MD1RlL._SX305_BO1,204,203,200_.jpg"
+related_readings = [
+  "readings/2023-10-31-crucial-conversations.md",
+  "readings/2024-04-17-radical-candor.md",
+  "readings/2021-10-22-leadership-is-language.md",
+]
 +++
 
 <!-- more -->

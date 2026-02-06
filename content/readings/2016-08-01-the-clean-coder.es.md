@@ -10,6 +10,11 @@ pages = "250"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lbNIP1YLL._SX381_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+  "readings/2018-06-04-clean-architecture.md",
+]
 +++
 
 Los programadores que triunfan bajo presión e incertidumbre comparten algo: les importa de verdad crear buen software. Lo tratan como un oficio. Son profesionales.

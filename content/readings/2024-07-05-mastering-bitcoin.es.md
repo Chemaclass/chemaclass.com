@@ -11,7 +11,13 @@ pages = "400"
 author = "Andreas M. Antonopoulos, David A. Harding"
 static_thumbnail = "https://m.media-amazon.com/images/I/71JEv9rs7xL.jpg"
 expand_preview = true
-related_posts = ["blog/2024-07-06-programmable-money.md"]+++
+related_posts = ["blog/2024-07-06-programmable-money.md"]
+related_readings = [
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2023-03-11-21-lessons.md",
+]
++++
 
 Este libro cubre desde los conceptos básicos hasta los aspectos técnicos más profundos de Bitcoin. Una guía excelente para entender este mundo y participar en el Internet del dinero.
 

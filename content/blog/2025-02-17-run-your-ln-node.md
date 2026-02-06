@@ -10,6 +10,13 @@ subtitle = "Take full control of your Lightning payments with Alby Hub"
 static_thumbnail = "/images/blog/2025-02-17/cover.jpg"
 related_posts = [
   "blog/2024-07-06-programmable-money.md",
+  "blog/2025-11-21-bitcoin-fundamentals.md",
+  "blog/2024-12-11-the-cypherpunks.md",
+]
+related_readings = [
+  "readings/2024-07-05-mastering-bitcoin.md",
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2023-07-10-the-book-of-satoshi.md",
 ]
 +++
 

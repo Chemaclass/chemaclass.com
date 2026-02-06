@@ -11,6 +11,11 @@ related_posts = [
   "blog/2022-06-08-the-path-to-seniority-in-software.md",
   "blog/2024-03-28-effective-pair-programming.md",
 ]
+related_readings = [
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+  "readings/2016-08-01-the-clean-coder.md",
+  "readings/2022-06-29-modern-software-engineering.md",
+]
 +++
 
 ![blog-cover](/images/blog/2023-12-30/cover.jpg)

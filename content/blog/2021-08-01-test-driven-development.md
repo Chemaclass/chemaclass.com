@@ -11,6 +11,11 @@ static_thumbnail = "/images/blog/2021-08-01/cover.jpg"
 related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
 ]
+related_readings = [
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+  "readings/2016-05-01-clean-code.md",
+]
 +++
 
 ![blog-cover](/images/blog/2021-08-01/cover.jpg)

@@ -11,6 +11,11 @@ pages = "270"
 author = "Thomas H. Douglas"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653013359i/61132070.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2021-01-16-who-moved-my-cheese.md",
+  "readings/2023-01-29-the-infinite-game.md",
+  "readings/2019-11-12-atomic-habits.md",
+]
 +++
 
 Told through the story of one bold company (People First IT), Adapt or Die takes readers through the unparalleled business system known as The Algorithm of Success that has the potential to inspire, ignite, and affect change for all aspects of an organization.

@@ -10,6 +10,11 @@ pages = "320"
 author = "Brené Brown"
 static_thumbnail = "https://m.media-amazon.com/images/I/4108sPwaBfL.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2024-04-17-radical-candor.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2021-04-19-the-art-of-leadership.md",
+]
 +++
 
 <!-- more -->
