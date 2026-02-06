@@ -12,15 +12,21 @@
   <div class="topics-page__groups">
     {% for topic in config.extra.topics %}
     <section class="topics-page__group">
-      {# Collect matching tags with counts first so we can show total #}
+      {# Collect matching tags and count unique posts across all tags #}
       {% set_global matched_tags = [] %}
       {% set_global topic_total = 0 %}
+      {% set_global seen_pages = "" %}
       {% for tag_name in topic.tags %}
         {% for item in taxonomy.items %}
           {% if item.name == tag_name %}
             {% set_global matched_tags = matched_tags | concat(with=[item]) %}
-            {% set count = item.pages | length %}
-            {% set_global topic_total = topic_total + count %}
+            {% for page in item.pages %}
+              {% set marker = "|" ~ page.permalink ~ "|" %}
+              {% if seen_pages is not containing(marker) %}
+                {% set_global seen_pages = seen_pages ~ marker %}
+                {% set_global topic_total = topic_total + 1 %}
+              {% endif %}
+            {% endfor %}
           {% endif %}
         {% endfor %}
       {% endfor %}
