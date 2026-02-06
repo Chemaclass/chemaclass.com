@@ -321,6 +321,64 @@ main:has(.homepage-container) #scroll-to-top {
   }
 }
 
+// Now Section
+.now-section {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  background: var(--search-input-bg);
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 12px;
+
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+    color: var(--heading-color);
+  }
+
+  .now-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--body-color);
+
+    ul {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+
+    p {
+      margin: 0 0 0.5rem;
+    }
+  }
+
+  .now-updated {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--color-subtitle);
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .now-section {
+    padding: 1rem;
+    margin: 1rem 0;
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    .now-content {
+      font-size: 0.85rem;
+    }
+  }
+}
+
 // Skills Section
 .skills-section {
   margin: 0;
