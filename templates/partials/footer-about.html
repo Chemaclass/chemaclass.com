@@ -3,7 +3,7 @@
     <div class="site-footer__section site-footer__section--primary">
       <p class="site-footer__heading">{{ trans(key="footer_subscribe", lang=lang) }}</p>
       <p class="site-footer__text">{{ trans(key="footer_subscribe_desc", lang=lang) }}</p>
-      <a href="#newsletter" class="site-footer__subscribe-btn">
+      <a href="mailto:subscribe@chemaclass.com?subject={{ trans(key='newsletter_mail_subject', lang=lang) }}" class="site-footer__subscribe-btn">
         <i class="fa-solid fa-envelope"></i>
         {{ trans(key="newsletter_button", lang=lang) }}
       </a>

@@ -254,24 +254,14 @@
 
     <!-- Newsletter CTA (compact) -->
     <section class="homepage-newsletter" id="newsletter">
-      <form class="homepage-newsletter__form" action="#" method="post">
-        <div class="homepage-newsletter__text">
-          <strong>{{ trans(key="newsletter_title", lang=lang) }}</strong>
-          <span>{{ trans(key="newsletter_description", lang=lang) }}</span>
-        </div>
-        <div class="homepage-newsletter__fields">
-          <input
-            type="email"
-            class="homepage-newsletter__input"
-            placeholder="{{ trans(key="newsletter_placeholder", lang=lang) }}"
-            required
-            aria-label="{{ trans(key="newsletter_placeholder", lang=lang) }}"
-          />
-          <button type="submit" class="homepage-newsletter__button">
-            {{ trans(key="newsletter_button", lang=lang) }}
-          </button>
-        </div>
-      </form>
+      <div class="homepage-newsletter__text">
+        <strong>{{ trans(key="newsletter_title", lang=lang) }}</strong>
+        <span>{{ trans(key="newsletter_description", lang=lang) }}</span>
+      </div>
+      <a href="mailto:subscribe@chemaclass.com?subject={{ trans(key='newsletter_mail_subject', lang=lang) }}" class="homepage-newsletter__button">
+        <i class="fa-solid fa-envelope"></i>
+        {{ trans(key="newsletter_button", lang=lang) }}
+      </a>
     </section>
 
     <!-- Connect Section -->

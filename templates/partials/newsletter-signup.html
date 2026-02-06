@@ -1,16 +1,8 @@
 <section class="newsletter" id="newsletter">
   <h2 class="newsletter__title">{{ trans(key="newsletter_title", lang=lang) }}</h2>
   <p class="newsletter__description">{{ trans(key="newsletter_description", lang=lang) }}</p>
-  <form class="newsletter__form" action="#" method="post">
-    <input
-      type="email"
-      class="newsletter__input"
-      placeholder="{{ trans(key="newsletter_placeholder", lang=lang) }}"
-      required
-      aria-label="{{ trans(key="newsletter_placeholder", lang=lang) }}"
-    />
-    <button type="submit" class="newsletter__button">
-      {{ trans(key="newsletter_button", lang=lang) }}
-    </button>
-  </form>
+  <a href="mailto:subscribe@chemaclass.com?subject={{ trans(key='newsletter_mail_subject', lang=lang) }}" class="newsletter__button">
+    <i class="fa-solid fa-envelope"></i>
+    {{ trans(key="newsletter_button", lang=lang) }}
+  </a>
 </section>
