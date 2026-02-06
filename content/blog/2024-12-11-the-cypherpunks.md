@@ -8,6 +8,8 @@ tags = [ "privacy", "bitcoin", "cryptography", "security", "philosophy" ]
 [extra]
 subtitle = "Pioneers of privacy in the digital age"
 static_thumbnail = "/images/blog/2024-12-11/cover.jpg"
+series = "bitcoin"
+series_order = 2
 +++
 
 ![blog-cover](/images/blog/2024-12-11/cover.jpg)

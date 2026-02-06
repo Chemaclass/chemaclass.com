@@ -8,6 +8,8 @@ tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
 subtitle = "A beginner's guide to sound money"
 static_thumbnail = "/images/blog/2025-12-21/footer.jpg"
 reading_time = 12
+series = "bitcoin"
+series_order = 5
 +++
 
 ![blog-cover](/images/blog/2025-12-21/footer.jpg)

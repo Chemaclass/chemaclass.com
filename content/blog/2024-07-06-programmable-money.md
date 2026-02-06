@@ -7,6 +7,8 @@ tags = [ "bitcoin", "programming", "cryptography", "security" ]
 [extra]
 subtitle = "The power of Bitcoin's Script"
 static_thumbnail = "/images/blog/2024-07-06/cover.jpg"
+series = "bitcoin"
+series_order = 3
 +++
 
 ![blog-cover](/images/blog/2024-07-06/cover.jpg)

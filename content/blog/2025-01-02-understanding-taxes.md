@@ -8,6 +8,8 @@ tags = [ "bitcoin", "philosophy", "economics", "privacy" ]
 [extra]
 subtitle = "Where your money goes and how to rethink the system"
 static_thumbnail = "/images/blog/2025-01-02/cover.jpg"
+series = "bitcoin"
+series_order = 4
 +++
 
 ![blog-cover](/images/blog/2025-01-02/cover.jpg)

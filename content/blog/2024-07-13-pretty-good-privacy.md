@@ -7,6 +7,8 @@ tags = [ "security", "privacy", "cryptography", "encryption" ]
 [extra]
 subtitle = "How PGP secures your digital communication"
 static_thumbnail = "/images/blog/2024-07-13/cover.jpg"
+series = "bitcoin"
+series_order = 1
 +++
 
 ![blog-cover](/images/blog/2024-07-13/cover.jpg)

@@ -129,6 +129,8 @@ home_services_cta = "Work with me"
 home_connect = "Connect"
 # Newsletter
 blog_start_here = "Start Here"
+series_part = "Part"
+series_of = "of"
 newsletter_title = "Stay in the loop"
 newsletter_description = "Get notified when I publish new posts. No spam, unsubscribe anytime."
 newsletter_placeholder = "Your email address"
@@ -249,8 +251,6 @@ start_here_posts = [
   "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
   "blog/2022-09-25-the-beauty-of-leadership.md",
 ]
-
-# Experience years
 years_software = 15
 years_leadership = 5
 
@@ -416,6 +416,8 @@ home_services_cta = "Trabaja conmigo"
 home_connect = "Conecta"
 # Newsletter
 blog_start_here = "Empieza aquí"
+series_part = "Parte"
+series_of = "de"
 newsletter_title = "Mantente al día"
 newsletter_description = "Recibe una notificación cuando publique nuevos artículos. Sin spam, cancela cuando quieras."
 newsletter_placeholder = "Tu correo electrónico"
@@ -527,3 +529,7 @@ svc_faq = "Preguntas Frecuentes"
 svc_featured = "Destacados"
 svc_more_projects = "Más Proyectos"
 svc_websites = "Sitios Web"
+
+[extra.series.bitcoin]
+title = "Bitcoin Series"
+title_es = "Serie Bitcoin"

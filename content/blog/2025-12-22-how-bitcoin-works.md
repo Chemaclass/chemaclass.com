@@ -6,6 +6,8 @@ tags = [ "bitcoin", "cryptography", "tutorial" ]
 [extra]
 subtitle = "Blockchain, cryptography, and consensus"
 static_thumbnail = "/images/blog/2025-12-21/cover.jpg"
+series = "bitcoin"
+series_order = 6
 +++
 
 ![blog-cover](/images/blog/2025-12-21/cover.jpg)
