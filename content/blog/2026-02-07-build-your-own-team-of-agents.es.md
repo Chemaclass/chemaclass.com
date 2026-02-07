@@ -75,6 +75,8 @@ Los comandos slash personalizados en `.claude/commands/` convierten estos flujos
 
 La idea clave: los comandos convierten conocimiento tribal en instrucciones ejecutables. Lo que antes era "pregúntale a Sara cómo creamos un módulo nuevo" se convierte en un comando que cualquiera puede ejecutar, humano o agente.
 
+![blog-middle](/images/blog/2026-02-07/middle.jpg)
+
 ## Especialistas, no generalistas
 
 Los comandos son _tus_ procedimientos. Codifican cómo hace las cosas tu equipo. Pero hay otra capa: skills y agentes.
@@ -134,7 +136,7 @@ Tras la implementación, los agentes de revisión toman el relevo. En lugar de u
 
 Por muy bien configurados que estén, los agentes trabajan para ti. Tú estableces los estándares, defines los procedimientos, escribes las reglas, revisas los planes y apruebas el resultado antes de que salga.
 
-Como escribí en [La IA te da velocidad, no calidad](/blog/ai-gives-you-speed-not-quality/), el código que produce el agente es tu responsabilidad. Más paralelismo sin supervisión es solo más caos, más rápido.
+El código que produce el agente es tu responsabilidad. Más paralelismo sin supervisión es solo más caos, más rápido.
 
 ### Puertas de calidad
 
@@ -145,3 +147,5 @@ Los hooks y git hooks actúan como la última red de seguridad. En mi setup, nad
 Los agentes te ayudarán a llegar más rápido, pero ese "allí" tiene que estar bien definido. Si no sabes cómo es la arquitectura hexagonal, los agentes no la van a descubrir por ti. La inversión está en la base: define tu arquitectura, escribe tus reglas, codifica tus estándares. Después deja que los agentes ejecuten a velocidad sin comprometer la calidad que definiste.
 
 > No solo estás usando IA. Estás construyendo un equipo. Y como cualquier equipo, la calidad de su resultado refleja la calidad de su liderazgo.
+
+![blog-footer](/images/blog/2026-02-07/footer.jpg)

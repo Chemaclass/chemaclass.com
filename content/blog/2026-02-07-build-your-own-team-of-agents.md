@@ -75,6 +75,8 @@ Custom slash commands in `.claude/commands/` turn these workflows into executabl
 
 The key insight: commands turn tribal knowledge into executable instructions. What used to be "ask Sarah how we set up a new module" becomes a command anyone can run, human or agent.
 
+![blog-middle](/images/blog/2026-02-07/middle.jpg)
+
 ## Specialists, not generalists
 
 Commands are _your_ procedures. They encode how your team does things. But there's another layer: skills and agents.
@@ -136,7 +138,7 @@ After implementation, the review agents take over. Instead of one reviewer catch
 
 No matter how well configured, the agents work for you. You set the standards, define the procedures, write the rules, review the plans, and approve the output before it ships.
 
-As I wrote in [AI gives you speed, not quality](/blog/ai-gives-you-speed-not-quality/), the code the agent produces is your responsibility. More parallelism without oversight is just more chaos, faster.
+The code the agent produces is your responsibility. More parallelism without oversight is just more chaos, faster.
 
 ### Quality gates
 
@@ -147,3 +149,5 @@ Hooks and git hooks act as the final safety net. Before any commit goes through,
 The agents will help you get there faster, but "there" has to be well-defined. If you don't know what hexagonal architecture looks like, agents won't discover it for you. If you don't understand TDD, no command will make your tests meaningful. The investment is in the foundation: define your architecture, write your rules, encode your standards, build your commands. Then let the agents execute at speed without compromising the quality you defined.
 
 > You're not just using AI. You're building a team. And like any team, the quality of its output reflects the quality of its leadership.
+
+![blog-footer](/images/blog/2026-02-07/footer.jpg)
