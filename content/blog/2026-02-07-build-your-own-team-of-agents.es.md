@@ -136,11 +136,19 @@ Tras la implementación, los agentes de revisión toman el relevo. En lugar de u
 
 Por muy bien configurados que estén, los agentes trabajan para ti. Tú estableces los estándares, defines los procedimientos, escribes las reglas, revisas los planes y apruebas el resultado antes de que salga.
 
-El código que produce el agente es tu responsabilidad. Más paralelismo sin supervisión es solo más caos, más rápido.
+Como escribí en [La IA te da velocidad, no calidad](/blog/ai-gives-you-speed-not-quality/), el código que produce el agente es tu responsabilidad. Más paralelismo sin supervisión es solo más caos, más rápido.
 
 ### Puertas de calidad
 
 Los hooks y git hooks actúan como la última red de seguridad. En mi setup, nada se commitea a menos que los linters pasen, el análisis estático esté limpio, los tests sean verdes y la cobertura supere el 90%. El agente no puede saltarse esto. Nadie puede.
+
+{% deep_dive(title="Hooks, permisos y barandillas") %}
+
+Los git hooks ejecutan linters, análisis estático y tests antes de cada commit. Pero Claude Code también tiene sus propios hooks (`.claude/hooks/`): comandos shell que se disparan ante eventos del agente como llamadas a herramientas o escritura de archivos. Son las políticas automatizadas que todo miembro del equipo debe cumplir.
+
+Además, `.claude/settings.json` controla lo que los agentes _pueden_ hacer. Puedes autorizar herramientas y comandos específicos, y denegar operaciones destructivas como `rm -rf` o `sudo`. Esto significa que controlas no solo lo que los agentes saben (reglas, skills) sino lo que pueden ejecutar (permisos). Las reglas definen la cultura. Los permisos definen los límites.
+
+{% end %}
 
 ### La base importa
 

@@ -138,11 +138,19 @@ After implementation, the review agents take over. Instead of one reviewer catch
 
 No matter how well configured, the agents work for you. You set the standards, define the procedures, write the rules, review the plans, and approve the output before it ships.
 
-The code the agent produces is your responsibility. More parallelism without oversight is just more chaos, faster.
+As I wrote in [AI gives you speed, not quality](/blog/ai-gives-you-speed-not-quality/), the code the agent produces is your responsibility. More parallelism without oversight is just more chaos, faster.
 
 ### Quality gates
 
-Hooks and git hooks act as the final safety net. Before any commit goes through, linters run, static analysis checks pass, tests execute, and code coverage stays above your threshold. In my setup, nothing gets committed unless the full suite is green and coverage is above 90%. The agent doesn't get to skip this. Neither does anyone else. All automated, all enforced, all reporting back to you.
+Hooks and git hooks act as the final safety net. In my setup, nothing gets committed unless the full suite is green and coverage is above 90%. The agent doesn't get to skip this. Neither does anyone else.
+
+{% deep_dive(title="Hooks, permissions, and guardrails") %}
+
+Git hooks run linters, static analysis, and tests before every commit. But Claude Code also has its own hooks (`.claude/hooks/`): shell commands that trigger on agent events like tool calls or file writes. They're the automated policies every team member must follow.
+
+On top of that, `.claude/settings.json` controls what agents are _allowed_ to do. You can whitelist specific tools and commands, and deny destructive operations like `rm -rf` or `sudo`. This means you control not just what agents know (rules, skills) but what they can execute (permissions). Rules set the culture. Permissions set the boundaries.
+
+{% end %}
 
 ### The foundation matters
 
