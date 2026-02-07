@@ -78,6 +78,7 @@ static_thumbnail = "/images/blog/YYYY-MM-DD/cover.jpg"
 - `/check-links` - Verify internal links
 - `/list-posts` - List blog posts with metadata
 - `/translate <file>` - Translate content EN↔ES
+- `/add-image <path> [post-date] [cover|middle|footer]` - Add image to blog post
 
 ## Before Writing Content
 
