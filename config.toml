@@ -549,13 +549,6 @@ title = "Bitcoin Series"
 title_es = "Serie Bitcoin"
 
 [[extra.topics]]
-title = "Software Craft & Testing"
-title_es = "Artesanía del Software y Testing"
-description = "Practices for writing better software: TDD, clean code, refactoring, and design."
-description_es = "Prácticas para escribir mejor software: TDD, código limpio, refactoring y diseño."
-tags = ["testing", "tdd", "clean-code", "refactoring", "code-review", "architecture", "software-design", "software-architecture", "ddd", "pair-programming", "xp", "agile"]
-
-[[extra.topics]]
 title = "Leadership & People"
 title_es = "Liderazgo y Personas"
 description = "Growing as a leader, building great teams, and the human side of software."
@@ -568,6 +561,13 @@ title_es = "Mente y Conocimiento"
 description = "Philosophy, psychology, productivity, and the pursuit of understanding."
 description_es = "Filosofía, psicología, productividad y la búsqueda del entendimiento."
 tags = ["philosophy", "psychology", "productivity", "fiction", "dystopia", "horror", "music"]
+
+[[extra.topics]]
+title = "Software Craft & Testing"
+title_es = "Artesanía del Software y Testing"
+description = "Practices for writing better software: TDD, clean code, refactoring, and design."
+description_es = "Prácticas para escribir mejor software: TDD, código limpio, refactoring y diseño."
+tags = ["testing", "tdd", "clean-code", "refactoring", "code-review", "architecture", "software-design", "software-architecture", "ddd", "pair-programming", "xp", "agile"]
 
 [[extra.topics]]
 title = "Bitcoin & Economics"
