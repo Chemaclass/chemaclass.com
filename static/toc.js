@@ -67,6 +67,9 @@
 
       const headingText = heading.textContent;
 
+      // Skip "Related" section from TOC (by design)
+      if (headingText.trim().toLowerCase() === 'related') return;
+
       // Add anchor link to heading
       const anchor = document.createElement('a');
       anchor.href = `#${heading.id}`;
