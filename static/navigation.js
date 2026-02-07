@@ -103,6 +103,18 @@ document.addEventListener('keydown', function(e) {
     window.location.href = langPrefix + '/readings/';
   }
 
+  // "P" - Go to topics
+  if (e.key === 'p' || e.key === 'P') {
+    e.preventDefault();
+    window.location.href = langPrefix + '/topics/';
+  }
+
+  // "A" - Go to talks
+  if (e.key === 'a' || e.key === 'A') {
+    e.preventDefault();
+    window.location.href = langPrefix + '/talks/';
+  }
+
   // "C" - Copy URL to clipboard
   if (e.key === 'c' || e.key === 'C') {
     e.preventDefault();
