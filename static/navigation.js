@@ -109,6 +109,12 @@ document.addEventListener('keydown', function(e) {
     window.location.href = langPrefix + '/topics/';
   }
 
+  // "E" - Go to services
+  if (e.key === 'e' || e.key === 'E') {
+    e.preventDefault();
+    window.location.href = langPrefix + '/services/';
+  }
+
   // "A" - Go to talks
   if (e.key === 'a' || e.key === 'A') {
     e.preventDefault();
@@ -216,3 +222,103 @@ document.addEventListener('click', function(e) {
     hamburger.classList.remove('open');
   }
 });
+
+// ==========================================================================
+// Shortcut Hints Overlay: Hold Shift for 2s to show badges on UI elements
+// ==========================================================================
+(function() {
+  if (window.matchMedia('(max-width: 600px)').matches) return;
+
+  const HOLD_DELAY = 1000;
+  const SHORTCUT_MAP = [
+    { key: 'H',  selector: '.header-left' },
+    { key: 'B',  selector: '.nav-links a[href$="/blog/"]' },
+    { key: 'R',  selector: '.nav-links a[href$="/readings/"]' },
+    { key: 'P',  selector: '.nav-links a[href$="/topics/"]' },
+    { key: 'E',  selector: '.nav-links a[href$="/services/"]' },
+    { key: 'A',  selector: '.nav-links a[href$="/talks/"]' },
+    { key: 'S',  selector: '#search-toggle' },
+    { key: 'D',  selector: '#light-mode, #dark-mode' },
+    { key: 'L',  selector: '.lang-switch' },
+    { key: 'T',  selector: '#toc-toggle' },
+    { key: 'GG', selector: '#scroll-to-top' },
+  ];
+
+  let timer = null;
+  let badges = [];
+  let isShowing = false;
+
+  function isVisible(el) {
+    if (!el) return false;
+    const style = getComputedStyle(el);
+    if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') return false;
+    const rect = el.getBoundingClientRect();
+    return rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < window.innerHeight;
+  }
+
+  function showBadges() {
+    isShowing = true;
+    SHORTCUT_MAP.forEach(function(item) {
+      const els = document.querySelectorAll(item.selector);
+      let target = null;
+      els.forEach(function(el) { if (isVisible(el)) target = el; });
+      if (!target) return;
+
+      const rect = target.getBoundingClientRect();
+      const badge = document.createElement('kbd');
+      badge.className = 'shortcut-hint';
+      badge.textContent = item.key;
+      badge.style.position = 'fixed';
+      badge.style.top = (rect.top + rect.height / 2) + 'px';
+      badge.style.left = (rect.left + rect.width / 2) + 'px';
+      document.body.appendChild(badge);
+      badges.push(badge);
+
+      // Trigger fade-in on next frame
+      requestAnimationFrame(function() {
+        badge.classList.add('visible');
+      });
+    });
+  }
+
+  function removeBadges() {
+    isShowing = false;
+    badges.forEach(function(badge) {
+      badge.classList.remove('visible');
+      badge.addEventListener('transitionend', function() {
+        badge.remove();
+      });
+      // Fallback removal
+      setTimeout(function() { badge.remove(); }, 300);
+    });
+    badges = [];
+  }
+
+  function cancelTimer() {
+    if (timer) { clearTimeout(timer); timer = null; }
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key !== 'Shift') {
+      cancelTimer();
+      return;
+    }
+    if (timer || isShowing) return;
+    timer = setTimeout(function() {
+      timer = null;
+      showBadges();
+    }, HOLD_DELAY);
+  });
+
+  document.addEventListener('keyup', function(e) {
+    if (e.key === 'Shift') {
+      cancelTimer();
+      if (isShowing) removeBadges();
+    }
+  });
+
+  window.addEventListener('blur', function() {
+    cancelTimer();
+    if (isShowing) removeBadges();
+  });
+})();
