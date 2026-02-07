@@ -64,21 +64,21 @@ document.addEventListener('keydown', function(e) {
     }
   }
 
-  // "J" - Previous/older post (left on keyboard = left on screen)
+  // "J" - Next/newer post (vim: j = down = forward)
   if (e.key === 'j' || e.key === 'J') {
-    const prevLink = document.querySelector('.blog-post__nav-link--prev');
-    if (prevLink) {
-      e.preventDefault();
-      window.location.href = prevLink.href;
-    }
-  }
-
-  // "K" - Next/newer post (right on keyboard = right on screen)
-  if (e.key === 'k' || e.key === 'K') {
     const nextLink = document.querySelector('.blog-post__nav-link--next');
     if (nextLink) {
       e.preventDefault();
       window.location.href = nextLink.href;
+    }
+  }
+
+  // "K" - Previous/older post (vim: k = up = back)
+  if (e.key === 'k' || e.key === 'K') {
+    const prevLink = document.querySelector('.blog-post__nav-link--prev');
+    if (prevLink) {
+      e.preventDefault();
+      window.location.href = prevLink.href;
     }
   }
 

@@ -39,7 +39,7 @@ dialog.shortcuts-dialog {
   margin: auto;
   width: 100%;
   max-width: 560px;
-  max-height: 480px;
+  max-height: 490px;
   background: var(--body-bg);
   border-radius: 14px;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
@@ -106,6 +106,21 @@ dialog.shortcuts-dialog::backdrop {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px 24px;
+
+  :root:has(body.dark) & {
+    scrollbar-color: #555 #2a2a2a;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #2a2a2a;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #555;
+      border-radius: 4px;
+    }
+  }
 }
 
 .shortcuts-dialog__group {
