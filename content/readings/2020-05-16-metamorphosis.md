@@ -1,11 +1,11 @@
 +++
 title = "The metamorphosis"
-description = "The story begins with a traveling salesman, Gregor Samsa, waking to find himself transformed (metamorphosed) into a large, monstrous insect-like creature."
+description = "Kafka's iconic novella about alienation and identity. Gregor Samsa wakes as a monstrous insect and must confront his family's revulsion and his own fading humanity."
 authors = [ "Franz Kafka" ]
 [taxonomies]
 tags = [ "fiction", "philosophy", "psychology" ]
 [extra]
-subtitle = "The story begins with a traveling salesman, Gregor Samsa, waking to find himself transformed (metamorphosed) into a large, monstrous insect-like creature."
+subtitle = "A novella about alienation, identity, and transformation"
 pages = "65"
 author = " Franz Kafka"
 static_thumbnail = "https://images-eu.ssl-images-amazon.com/images/I/51bQzldipYL._SY264_BO1,204,203,200_QL40_ML2_.jpg"

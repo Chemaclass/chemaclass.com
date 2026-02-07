@@ -1,6 +1,6 @@
 +++
 title = "Invincible"
-description = "Achieve More, Suffer Less"
+description = "Marcos Vazquez combines stoic philosophy with modern psychology to train your mind for clarity, determination, and discipline in the face of adversity."
 draft = false
 authors = [ "Marcos Vazquez" ]
 [taxonomies]

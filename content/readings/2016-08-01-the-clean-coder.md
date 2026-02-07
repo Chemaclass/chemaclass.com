@@ -1,6 +1,6 @@
 +++
 title = "The Clean Coder"
-description = "A Code of Conduct for Professional Programmers"
+description = "Robert C. Martin's guide to professional behavior in software development, covering time management, pressure handling, TDD practices, and what it truly means to be a software craftsman."
 authors = [ "Robert C. Martin" ]
 [taxonomies]
 tags = [ "clean-code", "career", "tdd", "communication", "professionalism" ]

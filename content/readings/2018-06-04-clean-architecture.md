@@ -1,6 +1,6 @@
 +++
 title = "Clean Architecture"
-description = "A Craftsman's Guide to Software Structure and Design"
+description = "Robert C. Martin's guide to SOLID principles, component design, and architectural boundaries that keep software systems flexible, testable, and maintainable over time."
 authors = [ "Robert C. Martin" ]
 [taxonomies]
 tags = [ "architecture", "software-design", "clean-code", "ddd" ]

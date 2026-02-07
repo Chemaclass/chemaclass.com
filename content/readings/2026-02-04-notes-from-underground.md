@@ -51,7 +51,7 @@ This is Dostoevsky at his most uncomfortable. The gap between what we say and wh
 - The desire for control and the fear of vulnerability can destroy meaningful relationships.
 - Suffering isn't always something to be eliminated. Sometimes people cling to it as proof of their existence.
 
-This book is not easy or pleasant. But it gets under your skin. It anticipates existentialism by decades and challenges the comfortable belief that progress and reason will save us.
+This book is not easy or pleasant. But it gets under your skin. It anticipates exstentialism by decades and challenges the comfortable belief that progress and reason will save us.
 
 ---
 

@@ -1,6 +1,6 @@
 +++
 title = "7 languages in 7 weeks"
-description = "Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages"
+description = "A hands-on tour of Clojure, Haskell, Io, Prolog, Scala, Erlang, and Ruby. Learn how each language thinks differently and broaden your perspective on programming."
 authors = [ "Bruce Tate" ]
 [taxonomies]
 tags = [ "software-design", "programming", "career" ]

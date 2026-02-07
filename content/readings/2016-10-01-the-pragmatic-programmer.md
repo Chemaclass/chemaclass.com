@@ -1,6 +1,6 @@
 +++
 title = "The Pragmatic Programmer"
-description = "The journey to mastery"
+description = "Key takeaways from Hunt and Thomas's classic on pragmatic software development, including DRY principles, the right mindset, and how to choose and master your tools."
 authors = [ "Andrew Hunt", "David Thomas" ]
 [taxonomies]
 tags = [ "software-design", "clean-code", "refactoring", "career" ]

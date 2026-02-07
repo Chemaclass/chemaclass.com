@@ -1,6 +1,6 @@
 +++
 title = "Clean Craftsmanship"
-description = "Disciplines, Standards, and Ethics"
+description = "Robert C. Martin covers the three pillars of software craftsmanship: TDD disciplines with practical examples, professional standards for teams, and the ethical responsibilities of programmers."
 authors = [ "Robert C. Martin" ]
 [taxonomies]
 tags = [ "clean-code", "tdd", "refactoring", "testing", "xp" ]

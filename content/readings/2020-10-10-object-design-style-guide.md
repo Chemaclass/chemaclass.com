@@ -1,11 +1,11 @@
 +++
 title = "Object design style guide"
-subtitle = "Powerful Techniques for Creating Flexible, Readable, and Maintainable Object-Oriented Code in Any Oo Language, from Python to PHP"
+description = "Matthias Noback's practical guide to writing flexible, readable, and maintainable object-oriented code, with techniques applicable to any OO language from Python to PHP."
 authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "software-design", "clean-code", "php" ]
 [extra]
-description = "Powerful Techniques for Creating Flexible, Readable, and Maintainable Object-Oriented Code in Any Oo Language, from Python to PHP"
+subtitle = "Powerful Techniques for Creating Flexible, Readable, and Maintainable Object-Oriented Code in Any OO Language"
 pages = "240"
 author = "Matthias Noback"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41gb4dgVhhL._SX397_BO1,204,203,200_.jpg"

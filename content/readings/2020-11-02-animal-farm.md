@@ -1,6 +1,6 @@
 +++
 title = "Animal Farm"
-description = "All animals are equal. But some animals are more equal than others."
+description = "Orwell's political allegory about a farmyard rebellion that descends into tyranny, exposing how power corrupts even the most idealistic revolutions."
 authors = [ "George Orwell" ]
 [taxonomies]
 tags = [ "fiction", "dystopia", "philosophy", "psychology" ]

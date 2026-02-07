@@ -1,6 +1,6 @@
 +++
 title = "Rebelión en la granja"
-description = "Todos los animales son iguales. Pero algunos son más iguales que otros."
+description = "La alegoría política de Orwell sobre una rebelión en una granja que degenera en tiranía, mostrando cómo el poder corrompe incluso las revoluciones más idealistas."
 authors = [ "George Orwell" ]
 [taxonomies]
 tags = [ "fiction", "dystopia", "philosophy", "psychology" ]
