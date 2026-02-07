@@ -1,5 +1,5 @@
 +++
-title = "Open-Source Software"
+title = "Open-source software"
 description = "What is Open-Source Software (OSS)? What are their benefits? How can you start contributing to any OSS? Pet projects? Knowledge sharing? Why all of these?"
 [taxonomies]
 tags = [ "open-source", "git", "career", "productivity" ]

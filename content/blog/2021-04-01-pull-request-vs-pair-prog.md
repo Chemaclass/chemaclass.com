@@ -1,5 +1,5 @@
 +++
-title = "Pull Requests vs Pair Programming"
+title = "Pull requests vs pair programming"
 description = "Let's talk about the benefits of Pull Requests and Pair Programming, and my thoughts on these after some years of experience with them."
 [taxonomies]
 tags = [ "pair-programming", "code-review", "agile", "communication" ]

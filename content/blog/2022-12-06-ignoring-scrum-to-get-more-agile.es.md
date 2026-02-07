@@ -1,5 +1,5 @@
 +++
-title = "¿Ignorar Scrum para ser más Agile?"
+title = "¿Ignorar Scrum para ser más agile?"
 description = "Las personas se vuelven esclavas de sistemas que se supone que ayudan. Las reuniones aburridas están matando el agile. Las reuniones requieren participación activa de todos. De lo contrario, podrías no ser esencial para esa reunión, y mejor usar tu tiempo con algo más."
 draft = false
 [taxonomies]

@@ -1,5 +1,5 @@
 +++
-title = "How Bitcoin Works"
+title = "How Bitcoin works"
 description = "How Bitcoin solves digital money: Transactions are signed with cryptographic keys, grouped into blocks through proof-of-work mining, and chained together via hashes. The network of nodes enforces rules without any central authority. This post covers the blockchain, UTXO model, mining mechanics, wallet security, network architecture, confirmation depth, incentive alignment, and Lightning Network."
 [taxonomies]
 tags = [ "bitcoin", "cryptography", "tutorial" ]

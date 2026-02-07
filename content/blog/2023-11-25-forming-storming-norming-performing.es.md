@@ -1,5 +1,5 @@
 +++
-title = "Forming, Storming, Norming y Performing"
+title = "Forming, storming, norming y performing"
 description = "Para que un equipo alcance alto rendimiento, hay que entender el Modelo de Tuckman: forming, storming, norming, performing y adjourning. Aquí exploro estrategias prácticas para cada etapa."
 draft = false
 [taxonomies]

@@ -1,5 +1,5 @@
 +++
-title = "Los Cypherpunks"
+title = "Los cypherpunks"
 description = "A principios de los 90, con el auge de internet, surgió un grupo llamado los Cypherpunks para defender la privacidad digital. Impulsaron el cifrado y la tecnología de privacidad, moldeando nuestro mundo digital con su visión e ideales."
 draft = false
 [taxonomies]

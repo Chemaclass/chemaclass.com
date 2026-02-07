@@ -1,5 +1,5 @@
 +++
-title = "Programmable Money"
+title = "Programmable money"
 description = "Bitcoin is often referred to as programmable money because it allows for the execution of programmable transactions through its scripting language, leveraging each bit for precision and functionality."
 draft = false
 [taxonomies]

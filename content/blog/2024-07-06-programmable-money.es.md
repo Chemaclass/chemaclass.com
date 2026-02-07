@@ -1,5 +1,5 @@
 +++
-title = "Dinero Programable"
+title = "Dinero programable"
 description = "Bitcoin se conoce como dinero programable porque permite ejecutar transacciones con condiciones mediante su lenguaje de scripting."
 draft = false
 [taxonomies]

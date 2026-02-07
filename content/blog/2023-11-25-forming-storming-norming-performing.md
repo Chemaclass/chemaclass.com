@@ -1,5 +1,5 @@
 +++
-title = "Forming, Storming, Norming and Performing"
+title = "Forming, storming, norming and performing"
 description = "Embarking on the path to high team performance involves understanding Tuckman's Model — a roadmap through the stages of forming, storming, norming, performing, and adjourning. In this blog post, we explore practical strategies for each stage, empowering leaders and team members to cultivate collaboration, manage conflicts, and achieve true synergy."
 draft = false
 [taxonomies]

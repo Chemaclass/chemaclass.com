@@ -1,5 +1,5 @@
 +++
-title = "Strict Types en PHP"
+title = "Strict types en PHP"
 description = "`strict_types=1` es más para el lector que para el escritor"
 [taxonomies]
 tags = [ "php", "clean-code", "software-design"]

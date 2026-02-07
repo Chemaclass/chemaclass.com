@@ -1,5 +1,5 @@
 +++
-title = "El Triángulo de Gestión de Proyectos"
+title = "El triángulo de gestión de proyectos"
 description = "Entrega valor constantemente en iteraciones cortas. ¿Por qué? Porque esto te ayudará a obtener retroalimentación, y la retroalimentación es necesaria para tomar las decisiones correctas."
 [taxonomies]
 tags = [ "agile", "team-management", "productivity" ]

@@ -1,5 +1,5 @@
 +++
-title = "Test-Driven (Development)"
+title = "Test-driven (development)"
 description = "La complejidad aquí no está en escribir tests en sí, sino en los hábitos que tenemos que cambiar para crear software que sea fácil de testear."
 draft = false
 [taxonomies]
