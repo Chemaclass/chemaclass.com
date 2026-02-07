@@ -16,7 +16,13 @@ window.addEventListener('load', function () {
         if (e.metaKey || e.ctrlKey || e.altKey) return;
 
         const now = Date.now();
-        if (e.key === 'g' || e.key === 'G') {
+        if (e.key === 'G') {
+            // Shift+G: scroll to bottom (vim-style)
+            e.preventDefault();
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            lastKey = '';
+        } else if (e.key === 'g') {
+            // gg: scroll to top (vim-style double-tap)
             if (lastKey === 'g' && (now - lastKeyTime) < 500) {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });

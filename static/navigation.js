@@ -29,7 +29,7 @@ window.toggleMobileMenu = function(e) {
   hamburger.classList.toggle('open');
 };
 
-// Keyboard shortcuts: Escape closes, "/" opens search, L toggles language, J/K navigates posts
+// Keyboard shortcuts: Escape closes, "/" opens search, L toggles language, j/k scroll, J/K navigates posts
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
     closeSearch();
@@ -64,8 +64,20 @@ document.addEventListener('keydown', function(e) {
     }
   }
 
-  // "J" - Next/newer post (vim: j = down = forward)
-  if (e.key === 'j' || e.key === 'J') {
+  // "j" (no shift) - Scroll down (vim-style)
+  if (e.key === 'j') {
+    e.preventDefault();
+    window.scrollBy({ top: 150, behavior: 'smooth' });
+  }
+
+  // "k" (no shift) - Scroll up (vim-style)
+  if (e.key === 'k') {
+    e.preventDefault();
+    window.scrollBy({ top: -150, behavior: 'smooth' });
+  }
+
+  // "J" (shift) - Next/newer post
+  if (e.key === 'J') {
     const nextLink = document.querySelector('.blog-post__nav-link--next');
     if (nextLink) {
       e.preventDefault();
@@ -73,8 +85,8 @@ document.addEventListener('keydown', function(e) {
     }
   }
 
-  // "K" - Previous/older post (vim: k = up = back)
-  if (e.key === 'k' || e.key === 'K') {
+  // "K" (shift) - Previous/older post
+  if (e.key === 'K') {
     const prevLink = document.querySelector('.blog-post__nav-link--prev');
     if (prevLink) {
       e.preventDefault();
@@ -241,7 +253,9 @@ document.addEventListener('click', function(e) {
     { key: 'D',  selector: '#light-mode, #dark-mode' },
     { key: 'L',  selector: '.lang-switch' },
     { key: 'T',  selector: '#toc-toggle' },
-    { key: 'GG', selector: '#scroll-to-top' },
+    { key: 'gg', selector: '#scroll-to-top' },
+    { key: 'J',  selector: '.blog-post__nav-link--next' },
+    { key: 'K',  selector: '.blog-post__nav-link--prev' },
   ];
 
   let timer = null;
