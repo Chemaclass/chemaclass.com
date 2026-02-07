@@ -3,7 +3,7 @@ title = "Build Your Own Team of Agents"
 description = "Most people use AI as a single assistant. The real leverage comes when you organize it into a team: onboarding docs, standard procedures, specialists, and parallel execution."
 draft = false
 [taxonomies]
-tags = [ "ai", "developer-tools", "craftsmanship" ]
+tags = [ "ai", "software", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "From solo assistant to coordinated workforce"
 static_thumbnail = "/images/blog/2026-02-07/cover.jpg"
@@ -33,7 +33,7 @@ Every good team starts with onboarding. AI agents need the same.
 
 In Claude Code, the `CLAUDE.md` file at the root of your project is the onboarding doc. The agent reads it every time it starts working: project structure, coding conventions, style guides, tool configurations.
 
-But `CLAUDE.md` is just the entry point. You can split rules into focused files under `.claude/rules/`, each targeting specific parts of your codebase via glob patterns. The agent doesn't just know your conventions, it's constrained by them. Layer boundaries, naming patterns, dependency directions. All versioned alongside the code they protect.
+But `CLAUDE.md` is just the entry point. You can split rules into focused files under `.claude/rules/`, each targeting specific parts of your codebase via glob patterns. The agent doesn't just know your conventions, it's constrained by them. Layer boundaries, naming patterns, dependency directions. All versioned alongside the code they protect. And since `.claude/` lives in the repo, every human teammate gets the same setup when they join the project.
 
 {% deep_dive(title="Glob-targeted rules in practice") %}
 
@@ -138,7 +138,7 @@ After implementation, the review agents take over. Instead of one reviewer catch
 
 No matter how well configured, the agents work for you. You set the standards, define the procedures, write the rules, review the plans, and approve the output before it ships.
 
-As I wrote in [AI gives you speed, not quality](/blog/ai-gives-you-speed-not-quality/), the code the agent produces is your responsibility. More parallelism without oversight is just more chaos, faster.
+As I wrote in [AI gives you speed, not quality](/blog/ai-gives-you-speed-not-quality/), the code the agent produces is your responsibility. Agents still make mistakes, context windows have limits, and coordination isn't perfect. More parallelism without oversight is just more chaos, faster.
 
 ### Quality gates
 
@@ -154,7 +154,11 @@ On top of that, `.claude/settings.json` controls what agents are _allowed_ to do
 
 ### The foundation matters
 
-The agents will help you get there faster, but "there" has to be well-defined. If you don't know what hexagonal architecture looks like, agents won't discover it for you. If you don't understand TDD, no command will make your tests meaningful. The investment is in the foundation: define your architecture, write your rules, encode your standards, build your commands. Then let the agents execute at speed without compromising the quality you defined.
+The agents will help you get there faster, but "there" has to be well-defined. If you don't know what hexagonal architecture looks like, agents won't discover it for you. If you don't understand TDD, no command will make your tests meaningful.
+
+You don't build all of this on day one. You start with a `CLAUDE.md`. Then you notice you're repeating instructions, so you write a command. An agent breaks a convention, so you add a rule. Reviews take too long, so you create a reviewer agent. The setup grows organically from real friction, not from upfront design. Each addition solves a problem you actually had.
+
+If you want a starting point, I put together [laravel-claude-toolkit](https://github.com/Chemaclass/laravel-claude-toolkit): a Laravel starter kit with rules, commands, skills, agents, hooks, and permissions already configured. Use it as a reference or fork it for your own setup.
 
 > You're not just using AI. You're building a team. And like any team, the quality of its output reflects the quality of its leadership.
 

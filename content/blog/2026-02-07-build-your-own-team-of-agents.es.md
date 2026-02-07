@@ -3,7 +3,7 @@ title = "Construye tu propio equipo de agentes"
 description = "La mayoría usa la IA como un solo asistente. La verdadera ventaja viene cuando la organizas como un equipo: documentación de onboarding, procedimientos estándar, especialistas y ejecución en paralelo."
 draft = false
 [taxonomies]
-tags = [ "ai", "developer-tools", "craftsmanship" ]
+tags = [ "ai", "software", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "De asistente individual a equipo coordinado"
 static_thumbnail = "/images/blog/2026-02-07/cover.jpg"
@@ -33,7 +33,7 @@ Todo buen equipo empieza con onboarding. Los agentes de IA necesitan lo mismo.
 
 En Claude Code, el archivo `CLAUDE.md` en la raíz de tu proyecto es el documento de onboarding. El agente lo lee cada vez que empieza a trabajar: estructura del proyecto, convenciones de código, guías de estilo, configuración de herramientas.
 
-Pero `CLAUDE.md` es solo el punto de entrada. Puedes dividir las reglas en archivos enfocados bajo `.claude/rules/`, cada uno apuntando a partes específicas de tu código mediante patrones glob. El agente no solo conoce tus convenciones, está limitado por ellas. Límites de capas, patrones de nomenclatura, dirección de dependencias. Todo versionado junto al código que protegen.
+Pero `CLAUDE.md` es solo el punto de entrada. Puedes dividir las reglas en archivos enfocados bajo `.claude/rules/`, cada uno apuntando a partes específicas de tu código mediante patrones glob. El agente no solo conoce tus convenciones, está limitado por ellas. Límites de capas, patrones de nomenclatura, dirección de dependencias. Todo versionado junto al código que protegen. Y como `.claude/` vive en el repo, cada nuevo miembro del equipo humano recibe el mismo setup al incorporarse al proyecto.
 
 {% deep_dive(title="Reglas con glob en la práctica") %}
 
@@ -136,7 +136,7 @@ Tras la implementación, los agentes de revisión toman el relevo. En lugar de u
 
 Por muy bien configurados que estén, los agentes trabajan para ti. Tú estableces los estándares, defines los procedimientos, escribes las reglas, revisas los planes y apruebas el resultado antes de que salga.
 
-Como escribí en [La IA te da velocidad, no calidad](/blog/ai-gives-you-speed-not-quality/), el código que produce el agente es tu responsabilidad. Más paralelismo sin supervisión es solo más caos, más rápido.
+Como escribí en [La IA te da velocidad, no calidad](/blog/ai-gives-you-speed-not-quality/), el código que produce el agente es tu responsabilidad. Los agentes siguen cometiendo errores, las ventanas de contexto tienen límites y la coordinación no es perfecta. Más paralelismo sin supervisión es solo más caos, más rápido.
 
 ### Puertas de calidad
 
@@ -152,7 +152,11 @@ Además, `.claude/settings.json` controla lo que los agentes _pueden_ hacer. Pue
 
 ### La base importa
 
-Los agentes te ayudarán a llegar más rápido, pero ese "allí" tiene que estar bien definido. Si no sabes cómo es la arquitectura hexagonal, los agentes no la van a descubrir por ti. La inversión está en la base: define tu arquitectura, escribe tus reglas, codifica tus estándares. Después deja que los agentes ejecuten a velocidad sin comprometer la calidad que definiste.
+Los agentes te ayudarán a llegar más rápido, pero ese "allí" tiene que estar bien definido. Si no sabes cómo es la arquitectura hexagonal, los agentes no la van a descubrir por ti.
+
+No construyes todo esto el primer día. Empiezas con un `CLAUDE.md`. Luego notas que repites instrucciones, y escribes un comando. Un agente rompe una convención, y añades una regla. Las revisiones tardan demasiado, y creas un agente revisor. El setup crece orgánicamente a partir de fricción real, no de diseño anticipado. Cada adición resuelve un problema que realmente tuviste.
+
+Si quieres un punto de partida, preparé [laravel-claude-toolkit](https://github.com/Chemaclass/laravel-claude-toolkit): un starter kit de Laravel con reglas, comandos, skills, agentes, hooks y permisos ya configurados. Úsalo como referencia o haz fork para tu propio setup.
 
 > No solo estás usando IA. Estás construyendo un equipo. Y como cualquier equipo, la calidad de su resultado refleja la calidad de su liderazgo.
 
