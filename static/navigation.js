@@ -179,19 +179,6 @@ window.toggleMobileMenu = function(e) {
       return;
     }
 
-    // "i" - Toggle language (i18n)
-    if (e.key === 'i' || e.key === 'I') {
-      e.preventDefault();
-      var currentPath = window.location.pathname;
-      var isSpanish = currentPath.startsWith('/es/');
-      if (isSpanish) {
-        window.location.href = currentPath.replace(/^\/es\//, '/');
-      } else {
-        window.location.href = '/es' + currentPath;
-      }
-      return;
-    }
-
     // "j" - Scroll down (vim: down)
     if (e.key === 'j') {
       e.preventDefault();
@@ -347,7 +334,6 @@ document.addEventListener('click', function(e) {
     { key: 'ga', selector: '.nav-links a[href$="/talks/"]' },
     { key: '/',  selector: '#search-toggle' },
     { key: 'd',  selector: '#light-mode, #dark-mode' },
-    { key: 'i',  selector: '.lang-switch' },
     { key: 't',  selector: '#toc-toggle' },
     { key: 'gg', selector: '#scroll-to-top' },
     { key: 'h',  selector: '.blog-post__nav-link--prev' },
