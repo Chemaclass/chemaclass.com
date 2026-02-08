@@ -255,6 +255,13 @@ window.toggleMobileMenu = function(e) {
       return;
     }
 
+    // "H" (Shift+H) - Go back (browser history)
+    if (e.key === 'H') {
+      e.preventDefault();
+      history.back();
+      return;
+    }
+
     // "h" - Previous post (vim: left)
     if (e.key === 'h') {
       var prevLink = document.querySelector('.blog-post__nav-link--prev');

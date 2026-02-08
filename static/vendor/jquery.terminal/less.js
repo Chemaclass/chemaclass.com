@@ -175,7 +175,8 @@
             term.find('.terminal-output').css('visibilty', 'hidden');
             term.clear();
             if (lines.length - pos > rows - 1) {
-                prompt = ':';
+                var pct = Math.round(((pos + rows - 1) / lines.length) * 100);
+                prompt = ':' + pct + '%';
             } else {
                 prompt = '[[;;;cmd-inverted](END)]';
             }
