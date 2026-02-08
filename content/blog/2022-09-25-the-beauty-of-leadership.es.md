@@ -1,5 +1,5 @@
 +++
-title = "La belleza del liderazgo"
+title = "La Belleza del Liderazgo"
 description = "El liderazgo no es sinónimo de gestión, no tiene nada que ver con títulos o atributos personales. Entonces, ¿qué es? ¿Cómo podemos convertirnos en líderes? Y lo más importante, ¿por qué?"
 draft = false
 [taxonomies]

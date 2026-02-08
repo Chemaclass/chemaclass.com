@@ -1,5 +1,5 @@
 +++
-title = "Construye tu propio equipo de agentes"
+title = "Construye tu Propio Equipo de Agentes"
 description = "La mayoría usa la IA como un solo asistente. La verdadera ventaja viene cuando la organizas como un equipo: documentación de onboarding, procedimientos estándar, especialistas y ejecución en paralelo."
 draft = false
 [taxonomies]

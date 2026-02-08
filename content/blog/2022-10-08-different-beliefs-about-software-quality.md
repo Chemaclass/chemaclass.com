@@ -1,5 +1,5 @@
 +++
-title = "Different beliefs about software quality"
+title = "Different Beliefs About Software Quality"
 description = "What to do when working on \"bad software\" and you can't improve it because it is against the beliefs of your peers? Should you change the company?"
 draft = false
 [taxonomies]

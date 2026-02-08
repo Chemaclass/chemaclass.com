@@ -1,5 +1,5 @@
 +++
-title = "¿Cómo consigues que todos se sumen?"
+title = "¿Cómo Consigues que Todos se Sumen?"
 description = "Fui invitado al WeAreDevelopers World Congress para dar una charla técnica sobre mi experiencia con Extreme Programming y los profundos beneficios de abrazar el cambio en tu trabajo y vida."
 draft = false
 [taxonomies]

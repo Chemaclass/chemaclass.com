@@ -1,5 +1,5 @@
 +++
-title = "AI gives you speed, not quality"
+title = "AI Gives You Speed, Not Quality"
 description = "AI writes code fast but doesn't care about quality. Learn to prompt well, never accept code you don't understand, and remember: you own every line you commit. Speed without direction is just chaos."
 draft = false
 [taxonomies]

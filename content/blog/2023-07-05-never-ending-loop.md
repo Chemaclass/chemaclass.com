@@ -1,5 +1,5 @@
 +++
-title = "Never ending loop"
+title = "Never Ending Loop"
 description = "It is hard sometimes to get to bed with the mind blank because, more often than not, I think about my next reading, learning, talk, or what I will write this or next month."
 draft = false
 [taxonomies]

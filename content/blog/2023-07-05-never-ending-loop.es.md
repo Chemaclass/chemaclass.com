@@ -1,5 +1,5 @@
 +++
-title = "Bucle sin fin"
+title = "Bucle sin Fin"
 description = "A veces me cuesta irme a la cama con la mente en blanco porque muy a menudo pienso en mi próxima lectura, aprendizaje, charla, o qué escribiré este mes o el siguiente."
 draft = false
 [taxonomies]

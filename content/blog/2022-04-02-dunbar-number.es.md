@@ -1,5 +1,5 @@
 +++
-title = "El numero de Dunbar"
+title = "El Número de Dunbar"
 description = "El numero de Dunbar es el limite cognitivo de personas con las que podemos mantener relaciones sociales estables."
 [taxonomies]
 tags = [ "psychology", "team-management", "communication" ]

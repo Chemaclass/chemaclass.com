@@ -1,5 +1,5 @@
 +++
-title = "Software de código abierto"
+title = "Software de Código Abierto"
 description = "¿Qué es el Software de Código Abierto (OSS)? ¿Cuáles son sus beneficios? ¿Cómo puedes empezar a contribuir a cualquier OSS? ¿Proyectos personales? ¿Compartir conocimiento? ¿Por qué todo esto?"
 [taxonomies]
 tags = [ "open-source", "git", "career", "productivity" ]

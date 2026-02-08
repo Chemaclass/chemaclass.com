@@ -1,5 +1,5 @@
 +++
-title = "Entendiendo los impuestos"
+title = "Entendiendo los Impuestos"
 description = "Los impuestos son inevitables. Ya sea tu sueldo, el café de la mañana o la casa que acabas de comprar, los impuestos están en todas partes. Si alguna vez te has preguntado a dónde va tu dinero después del día de pago o por qué comprar una propiedad viene con tasas adicionales, este post es para ti."
 draft = false
 [taxonomies]

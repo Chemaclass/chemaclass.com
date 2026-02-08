@@ -1,5 +1,5 @@
 +++
-title = "Trabajando agile con equipos no agile"
+title = "Trabajando Agile con Equipos No Agile"
 description = "Asumamos que ya sabes qué es el manifiesto agile. Consideremos que aplicas la mayoría de los valores, principios y prácticas de extreme programming. ¿Cómo puedes trabajar con otros equipos que no son agile?"
 draft = false
 [taxonomies]

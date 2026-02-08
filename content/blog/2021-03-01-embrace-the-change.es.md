@@ -1,5 +1,5 @@
 +++
-title = "Abraza el cambio"
+title = "Abraza el Cambio"
 description = "El cuento es una metáfora de las diferentes actitudes que adoptamos cuando tenemos que enfrentar cambios en la vida."
 [taxonomies]
 tags = [ "leadership", "psychology", "career", "philosophy" ]

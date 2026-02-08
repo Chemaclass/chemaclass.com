@@ -1,5 +1,5 @@
 +++
-title = "Arrays tipados en PHP"
+title = "Arrays Tipados en PHP"
 description = "Desempaquetado de argumentos, lista de argumentos variables de función, y funciones variádicas."
 [taxonomies]
 tags = [ "php", "software-design", "clean-code"]

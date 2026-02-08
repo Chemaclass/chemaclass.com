@@ -1,5 +1,5 @@
 +++
-title = "Gran liderazgo"
+title = "Gran Liderazgo"
 description = "A medida que el negocio escala, el enfoque principal de los líderes debe cambiar de los clientes a los empleados. Por lo tanto, me gustaría compartir lo que considero puntos críticos que cualquier líder debería abordar y en los que enfocarse regularmente."
 draft = false
 [taxonomies]

@@ -1,5 +1,5 @@
 +++
-title = "Testeando código legacy de forma efectiva"
+title = "Testeando Código Legacy de Forma Efectiva"
 description = "Estos tests también se conocen como tests de caracterización."
 [taxonomies]
 tags = [ "testing", "refactoring", "clean-code", "tdd"]

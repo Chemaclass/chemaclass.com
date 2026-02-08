@@ -1,5 +1,5 @@
 +++
-title = "Understanding people"
+title = "Understanding People"
 description = "One of the most complicated challenges for everyone is avoiding misunderstandings and being aware that other people don't think the same way as you do."
 draft = false
 [taxonomies]

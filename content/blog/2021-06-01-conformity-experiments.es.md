@@ -1,5 +1,5 @@
 +++
-title = "Experimentos de conformidad"
+title = "Experimentos de Conformidad"
 description = "¿Hasta qué punto las fuerzas sociales alteran las opiniones de las personas? ¿Qué aspecto de la influencia del grupo es más importante — el tamaño de la mayoría, o la unanimidad de opinión?"
 [taxonomies]
 tags = [ "psychology", "leadership", "communication" ]

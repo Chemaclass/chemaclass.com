@@ -1,5 +1,5 @@
 +++
-title = "El proceso en sí es la meta"
+title = "El Proceso en Sí Es la Meta"
 description = "Ninguna meta debería ser un logro en sí misma, sino el proceso que nos ayuda a ir en la dirección de esas metas."
 [taxonomies]
 tags = [ "productivity", "psychology", "career", "philosophy"]

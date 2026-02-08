@@ -1,5 +1,5 @@
 +++
-title = "The art of testing: where design meets quality"
+title = "The Art of Testing: Where Design Meets Quality"
 description = "Why you should consider testing as part of your daily development habit and how it's directly linked to the software quality."
 [taxonomies]
 tags = [ "testing", "software-design", "clean-code", "tdd"]

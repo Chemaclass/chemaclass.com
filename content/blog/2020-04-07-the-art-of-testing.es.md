@@ -1,5 +1,5 @@
 +++
-title = "El arte del testing: donde el diseño se encuentra con la calidad"
+title = "El Arte del Testing: Donde el Diseño se Encuentra con la Calidad"
 description = "Por qué deberías considerar el testing como parte de tu hábito diario de desarrollo y cómo está directamente vinculado a la calidad del software."
 [taxonomies]
 tags = [ "testing", "software-design", "clean-code", "tdd"]

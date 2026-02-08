@@ -1,5 +1,5 @@
 +++
-title = "Dedicated QA teams in software?"
+title = "Dedicated QA Teams in Software?"
 description = "This will be controversial, but let's talk about the QA position. The hidden truth behind the lack of software quality and why this should concern you if you write software."
 draft = false
 [taxonomies]

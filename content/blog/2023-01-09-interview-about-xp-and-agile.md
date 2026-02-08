@@ -1,5 +1,5 @@
 +++
-title = "Interview about XP and agile"
+title = "Interview About XP and Agile"
 description = "My interview with devm.io regarding Agile and Extreme Programming. Agile is more about HOW you do certain things, rather than WHAT things you do."
 draft = false
 [taxonomies]

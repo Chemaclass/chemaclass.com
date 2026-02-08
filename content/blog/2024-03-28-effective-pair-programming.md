@@ -1,5 +1,5 @@
 +++
-title = "Effective pair programming"
+title = "Effective Pair Programming"
 description = "Let's first establish what pair programming is: Two people working together on the same problem at the same time. It is not about one person showing off their skills in front of another, nor one person afraid of making mistakes due to an impostor syndrome."
 draft = false
 aliases = [ "/pair-programming" ]

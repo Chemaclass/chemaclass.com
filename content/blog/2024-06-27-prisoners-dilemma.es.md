@@ -1,5 +1,5 @@
 +++
-title = "El dilema del prisionero"
+title = "El Dilema del Prisionero"
 description = "Un experimento mental sobre confianza, cooperación y traición. Muestra por qué a veces no colaboramos aunque nos convenga hacerlo."
 draft = false
 [taxonomies]

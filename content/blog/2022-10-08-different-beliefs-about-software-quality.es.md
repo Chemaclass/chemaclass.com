@@ -1,5 +1,5 @@
 +++
-title = "Diferentes creencias sobre la calidad del software"
+title = "Diferentes Creencias sobre la Calidad del Software"
 description = "¿Qué hacer cuando trabajas en \"software malo\" y no puedes mejorarlo porque va en contra de las creencias de tus compañeros? ¿Deberías cambiar de empresa?"
 draft = false
 [taxonomies]

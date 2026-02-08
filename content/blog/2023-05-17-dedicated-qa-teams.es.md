@@ -1,5 +1,5 @@
 +++
-title = "¿Equipos de QA dedicados en software?"
+title = "¿Equipos de QA Dedicados en Software?"
 description = "Esto será controvertido, pero hablemos de la posición de QA. La verdad oculta detrás de la falta de calidad del software y por qué esto debería preocuparte si escribes software."
 draft = false
 [taxonomies]

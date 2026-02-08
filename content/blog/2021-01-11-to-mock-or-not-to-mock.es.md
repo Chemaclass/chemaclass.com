@@ -1,5 +1,5 @@
 +++
-title = "Mockear o no mockear"
+title = "Mockear o No Mockear"
 description = "Mockear es útil, pero 'qué mockear' suele resultar más complicado de lo esperado si no tratas esto con cuidado."
 [taxonomies]
 tags = [ "testing", "tdd", "software-design", "clean-code", "php" ]

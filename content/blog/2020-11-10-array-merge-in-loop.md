@@ -1,5 +1,5 @@
 +++
-title = "Never use array_merge in a loop"
+title = "Never Use array_merge in a Loop"
 description = "Using array_merge inside a loop is a performance killer. The spread operator will help you to improve this by flatting the array."
 [taxonomies]
 tags = [ "php", "clean-code", "refactoring"]

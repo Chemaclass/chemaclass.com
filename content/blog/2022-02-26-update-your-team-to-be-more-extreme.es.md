@@ -1,5 +1,5 @@
 +++
-title = "Actualiza tu equipo para ser más extreme"
+title = "Actualiza tu Equipo para Ser Más Extreme"
 description = "Nuestra profesión está en constante evolución y exige aprendizaje continuo. Abrazar el cambio no es opcional en software. Hay que crear espacios para salir de nuestra zona de confort."
 updated_at = "2023-03-23"
 [taxonomies]

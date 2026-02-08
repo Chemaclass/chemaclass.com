@@ -1,5 +1,5 @@
 +++
-title = "Build your own team of agents"
+title = "Build Your Own Team of Agents"
 description = "Most people use AI as a single assistant. The real leverage comes when you organize it into a team: onboarding docs, standard procedures, specialists, and parallel execution."
 draft = false
 [taxonomies]

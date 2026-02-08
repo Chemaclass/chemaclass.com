@@ -1,5 +1,5 @@
 +++
-title = "Ambiente de trabajo no saludable"
+title = "Ambiente de Trabajo No Saludable"
 description = "Un ambiente de trabajo tóxico tiene varios síntomas que afectan el bienestar físico y mental. Aprende a reconocerlos."
 draft = false
 [taxonomies]

@@ -1,5 +1,5 @@
 +++
-title = "The cypherpunks"
+title = "The Cypherpunks"
 aliases = [ "/blog/cypherpunks" ]
 description = "In the early '90s, with the internet on the rise, a group called the Cypherpunks emerged to defend digital privacy. They pushed for encryption and privacy tech, shaping our digital world with their vision and ideals."
 draft = false

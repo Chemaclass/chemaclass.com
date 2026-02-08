@@ -1,5 +1,5 @@
 +++
-title = "The path to seniority in software"
+title = "The Path to Seniority in Software"
 description = "The seniority in our software industry is more polluted by marketing and politics than in reality. What can we do about it?"
 [taxonomies]
 tags = [ "career", "mentoring", "clean-code", "tdd", "communication" ]

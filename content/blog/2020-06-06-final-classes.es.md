@@ -1,5 +1,5 @@
 +++
-title = "Clases final en PHP | Java | Cualquiera"
+title = "Clases Final en PHP | Java | Cualquiera"
 description = "Contratos claros, efectos secundarios aislados, testeabilidad, baja complejidad y carga cognitiva, fluidez del código y confianza en ti mismo."
 [taxonomies]
 tags = [ "php", "software-design", "clean-code", "testing"]

@@ -1,5 +1,5 @@
 +++
-title = "Prisoner's dilemma"
+title = "Prisoner's Dilemma"
 description = "The Prisoner's Dilemma illustrates the complexities of strategic decision-making, where individuals must choose between cooperation and betrayal, often revealing insights into human behavior and the consequences of self-interest versus collective benefit."
 draft = false
 [taxonomies]

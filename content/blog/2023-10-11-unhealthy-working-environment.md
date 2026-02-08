@@ -1,5 +1,5 @@
 +++
-title = "Unhealthy working environment"
+title = "Unhealthy Working Environment"
 description = "An unhealthy working environment can have various symptoms that negatively impact both the physical and mental well-being of employees."
 draft = false
 [taxonomies]

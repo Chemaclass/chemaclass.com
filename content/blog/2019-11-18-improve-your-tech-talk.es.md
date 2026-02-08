@@ -1,5 +1,5 @@
 +++
-title = "Cómo mejorar tu charla técnica (o cualquier otra presentación)"
+title = "Cómo Mejorar tu Charla Técnica (o Cualquier Otra Presentación)"
 description = "A todos nos ha pasado estar en reuniones que parecían una pérdida de tiempo, con un monólogo difícil de seguir o menos interesante de lo que podría ser. Vamos a arreglar esto."
 [taxonomies]
 tags = [ "communication", "leadership", "productivity", "career"]

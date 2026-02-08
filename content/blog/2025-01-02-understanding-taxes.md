@@ -1,5 +1,5 @@
 +++
-title = "Understanding taxes"
+title = "Understanding Taxes"
 aliases = [ "/blog/taxes" ]
 description = "Taxes are unavoidable. Whether it's your paycheck, morning coffee, or the house you just bought, taxes are everywhere. If you've ever wondered where your money goes after payday or why buying property comes with extra fees, this post is for you."
 draft = false

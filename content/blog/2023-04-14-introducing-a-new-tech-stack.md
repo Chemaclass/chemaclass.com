@@ -1,5 +1,5 @@
 +++
-title = "Introducing a new tech stack"
+title = "Introducing a New Tech Stack"
 description = "To introduce a new tech stack for the entire team, it's important to bring \"why?\" and a strategy to make it happen among the team because it will affect everyone."
 draft = false
 [taxonomies]

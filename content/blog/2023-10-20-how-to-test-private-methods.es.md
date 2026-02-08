@@ -1,5 +1,5 @@
 +++
-title = "¿Cómo testear métodos privados?"
+title = "¿Cómo Testear Métodos Privados?"
 description = "De vez en cuando he tenido que enfrentar esta pregunta: ¿cómo testear métodos privados? He recopilado en un artículo las técnicas que suelo usar."
 draft = false
 [taxonomies]

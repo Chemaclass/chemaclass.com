@@ -1,5 +1,5 @@
 +++
-title = "Entendiendo a las personas"
+title = "Entendiendo a las Personas"
 description = "Uno de los mayores retos es evitar malentendidos y aceptar que los demas no piensan igual que tu."
 draft = false
 [taxonomies]

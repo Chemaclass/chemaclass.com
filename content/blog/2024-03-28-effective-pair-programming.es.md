@@ -1,5 +1,5 @@
 +++
-title = "Pair programming efectivo"
+title = "Pair Programming Efectivo"
 description = "Primero establezcamos qué es el pair programming: Dos personas trabajando juntas en el mismo problema al mismo tiempo. No se trata de que una persona muestre sus habilidades frente a otra, ni de que una persona tenga miedo de cometer errores debido al síndrome del impostor."
 draft = false
 [taxonomies]

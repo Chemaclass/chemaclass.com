@@ -1,5 +1,5 @@
 +++
-title = "The process itself is the goal"
+title = "The Process Itself Is the Goal"
 description = "No goal should be an achievement on its own, but the process itself that helps us to go in the direction of these goals."
 [taxonomies]
 tags = [ "productivity", "psychology", "career", "philosophy"]

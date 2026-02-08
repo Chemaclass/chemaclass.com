@@ -1,5 +1,5 @@
 +++
-title = "Phel: el Lisp que compila a PHP"
+title = "Phel: el Lisp que Compila a PHP"
 description = "El nuevo lenguaje de Programación Funcional construido para PHP."
 [taxonomies]
 tags = [ "php", "open-source", "software-design" ]

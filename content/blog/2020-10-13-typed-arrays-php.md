@@ -1,5 +1,5 @@
 +++
-title = "Typed arrays in PHP"
+title = "Typed Arrays in PHP"
 description = "Argument unpacking, function variable argument list, and variadics function."
 [taxonomies]
 tags = [ "php", "software-design", "clean-code"]

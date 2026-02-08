@@ -1,5 +1,5 @@
 +++
-title = "How to test private methods?"
+title = "How to Test Private Methods?"
 description = "From time to time I have had to face this question: how to test private methods? I have put together in an article the techniques that I usually use."
 draft = false
 [taxonomies]

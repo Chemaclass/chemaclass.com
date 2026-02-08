@@ -1,5 +1,5 @@
 +++
-title = "The art of refactoring"
+title = "The Art of Refactoring"
 description = "If you see something, in the scope of your current task, that can be easily improved, improve it. And if you have any questions about it, ask."
 [taxonomies]
 tags = [ "refactoring", "clean-code", "testing", "software-design"]

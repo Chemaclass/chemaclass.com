@@ -1,5 +1,5 @@
 +++
-title = "MCP: Giving your AI agent the right context"
+title = "MCP: Giving Your AI Agent the Right Context"
 description = "Model Context Protocol is reshaping how AI coding agents interact with your development environment. Understanding why it matters helps you use AI tools more effectively."
 draft = false
 [taxonomies]

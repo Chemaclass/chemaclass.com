@@ -1,5 +1,5 @@
 +++
-title = "¿Siempre has sido así?"
+title = "¿Siempre Has Sido Así?"
 description = "¿Siempre has sido así? ¿Constantemente leyendo libros, escribiendo posts de blog, speaker público en conferencias y meet-ups, aprendiendo en tu tiempo libre, etc...? La respuesta corta es: no, y déjame contarte cómo terminé en esta situación."
 draft = false
 [taxonomies]

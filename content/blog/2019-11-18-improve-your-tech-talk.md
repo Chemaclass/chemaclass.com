@@ -1,5 +1,5 @@
 +++
-title = "How to improve your tech-talk (or any other presentation)"
+title = "How to Improve Your Tech-Talk (or Any Other Presentation)"
 description = "We have found ourselves attending a meeting that felt like we were wasting our time with a monologue that is either hard to follow or doesn't seem so interesting as it could. Let's fix this."
 aliases = [ "/tech-talk" ]
 [taxonomies]

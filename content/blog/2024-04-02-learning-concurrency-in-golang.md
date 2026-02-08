@@ -1,5 +1,5 @@
 +++
-title = "Learning concurrency in Golang"
+title = "Learning Concurrency in Golang"
 description = "I wanted to learn a new programming language, so after trying some, I ended up with Golang as one of my favorites for its simplicity and capabilities. It has features I haven’t used in years, like multithreading and concurrency."
 draft = false
 [taxonomies]

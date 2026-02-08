@@ -1,5 +1,5 @@
 +++
-title = "Nunca uses array_merge en un bucle"
+title = "Nunca Uses array_merge en un Bucle"
 description = "Usar array_merge dentro de un bucle mata el rendimiento. El operador spread te ayudará a mejorar esto aplanando el array."
 [taxonomies]
 tags = [ "php", "clean-code", "refactoring"]

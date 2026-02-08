@@ -1,5 +1,5 @@
 +++
-title = "Dunbar number"
+title = "Dunbar Number"
 description = "Dunbar's number is a suggested cognitive limit to the number of people with whom one can maintain stable social relationships."
 [taxonomies]
 tags = [ "psychology", "team-management", "communication" ]

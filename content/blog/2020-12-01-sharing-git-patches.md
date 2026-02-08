@@ -1,5 +1,5 @@
 +++
-title = "Sharing your git patches"
+title = "Sharing Your Git Patches"
 description = "Discover another way of sharing suggestions with your development team."
 [taxonomies]
 tags = [ "git", "code-review", "communication", "pair-programming"]

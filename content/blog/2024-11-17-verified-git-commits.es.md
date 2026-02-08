@@ -1,5 +1,5 @@
 +++
-title = "Commits de git verificados"
+title = "Commits de Git Verificados"
 description = "Firma tus commits de Git con GPG para demostrar que son tuyos. Sin firmas, cualquiera puede falsificar commits con tu email. Se configura en 5 minutos."
 draft = false
 [taxonomies]

@@ -1,5 +1,5 @@
 +++
-title = "Ignoring Scrum to get more agile?"
+title = "Ignoring Scrum to Get More Agile?"
 description = "People become slaves to systems that are supposed to help. Boring meetings are killing agile. Meetings require active participation from everyone. Otherwise, you might not be essential to that meeting, and rather use your time with something else."
 draft = false
 [taxonomies]

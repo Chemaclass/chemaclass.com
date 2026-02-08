@@ -1,5 +1,5 @@
 +++
-title = "¿Qué mata la agilidad?"
+title = "¿Qué Mata la Agilidad?"
 description = "¿Por qué Agile, si ya haces Scrum, Kanban, SAFe o Waterfall? Cómo gestionamos una organización define su calidad. Una excelente gestión es crucial para evitar la trampa del Waterfall si buscamos construir un entorno Agile. Pero ¿por qué querríamos eso? ¿Qué hay de malo en la forma en que ya trabajamos?"
 draft = false
 [taxonomies]

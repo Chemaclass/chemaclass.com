@@ -1,5 +1,5 @@
 +++
-title = "Embrace the change"
+title = "Embrace the Change"
 description = "The tale is a beautiful metaphor of the different attitudes that people adopt as part of their identity in life when they have to confront any change."
 [taxonomies]
 tags = [ "leadership", "psychology", "career", "philosophy" ]

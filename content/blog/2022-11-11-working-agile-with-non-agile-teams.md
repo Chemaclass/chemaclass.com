@@ -1,5 +1,5 @@
 +++
-title = "Working agile with non-agile teams"
+title = "Working Agile with Non-Agile Teams"
 description = "Let's assume you already know what the agile manifesto is. Let's consider that you apply most of the extreme programming values, principles, and practices. How can you work with other teams that aren't agile?"
 draft = false
 [taxonomies]

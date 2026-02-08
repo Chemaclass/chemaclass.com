@@ -1,5 +1,5 @@
 +++
-title = "To mock or not to mock"
+title = "To Mock or Not to Mock"
 description = "Mocking is useful, but 'what to mock' usually turns out to be a more complicated than expected if you don't treat this carefully."
 [taxonomies]
 tags = [ "testing", "tdd", "software-design", "clean-code", "php" ]

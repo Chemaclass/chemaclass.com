@@ -1,5 +1,5 @@
 +++
-title = "¿Qué es Waterfall?"
+title = "¿Qué Es Waterfall?"
 description = "Waterfall es como seguir un camino recto donde te mueves de un paso al siguiente en un orden definido — como el agua fluyendo por una cascada a través de diferentes etapas. El problema es que cada paso puede llevar mucho tiempo y recursos para completarse. Además, no recibes retroalimentación hasta que toda la etapa está terminada, lo que puede llevar a mucho tiempo desperdiciado. Esto es especialmente complicado en el desarrollo de software, donde las cosas siempre están cambiando y evolucionando."
 draft = false
 [taxonomies]

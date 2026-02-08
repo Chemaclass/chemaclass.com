@@ -1,5 +1,5 @@
 +++
-title = "What success means to me"
+title = "What Success Means to Me"
 description = "Success is waking up knowing that what you do makes the people around you, and yourself, happier. No complex formula. Just consistency over perfection, and building habits that align with what matters."
 draft = false
 [taxonomies]

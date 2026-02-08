@@ -1,5 +1,5 @@
 +++
-title = "Lo que el éxito significa para mí"
+title = "Lo que el Éxito Significa para Mí"
 description = "El éxito es despertar sabiendo que lo que haces hace más felices a las personas a tu alrededor, y a ti mismo. Sin fórmula complicada. Solo consistencia sobre perfección, y construir hábitos que se alineen con lo que importa."
 draft = false
 [taxonomies]
