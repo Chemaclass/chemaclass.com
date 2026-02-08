@@ -43,6 +43,28 @@ window.toggleMobileMenu = function(e) {
   var hintBadges = [];
   var hintInput = '';
 
+  // Heading navigation state (n/N keys on blog posts)
+  var headings = document.querySelectorAll('.blog-post__content h2, .blog-post__content h3');
+  var HEADING_OFFSET = 20;
+
+  function findCurrentHeadingIndex() {
+    var scrollTop = window.scrollY + HEADING_OFFSET + 10;
+    var current = -1;
+    for (var i = 0; i < headings.length; i++) {
+      if (headings[i].getBoundingClientRect().top + window.scrollY <= scrollTop) {
+        current = i;
+      }
+    }
+    return current;
+  }
+
+  function scrollToHeading(index) {
+    if (index < 0 || index >= headings.length) return;
+    var top = headings[index].getBoundingClientRect().top + window.scrollY - HEADING_OFFSET;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+    showToast((index + 1) + ' / ' + headings.length);
+  }
+
   function selectCard(index) {
     if (cards.length === 0) return;
     index = Math.max(0, Math.min(index, cards.length - 1));
@@ -303,6 +325,33 @@ window.toggleMobileMenu = function(e) {
     if (e.key === 'f') {
       e.preventDefault();
       enterHintMode();
+      return;
+    }
+
+    // "n" - Next heading (blog posts only)
+    if (e.key === 'n' && headings.length > 0) {
+      e.preventDefault();
+      var current = findCurrentHeadingIndex();
+      var next = current + 1;
+      if (next < headings.length) scrollToHeading(next);
+      return;
+    }
+
+    // "N" - Previous heading (blog posts only)
+    if (e.key === 'N' && headings.length > 0) {
+      e.preventDefault();
+      var current = findCurrentHeadingIndex();
+      var prev = current - 1;
+      if (prev >= 0) {
+        scrollToHeading(prev);
+      } else {
+        // Scroll to top of article
+        var article = document.querySelector('.blog-post__content');
+        if (article) {
+          window.scrollTo({ top: article.getBoundingClientRect().top + window.scrollY - HEADING_OFFSET, behavior: 'smooth' });
+          showToast('Top');
+        }
+      }
       return;
     }
 
