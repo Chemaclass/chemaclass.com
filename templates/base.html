@@ -273,19 +273,6 @@
                   <path fill="var(--body-color)" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
                 </svg>
               </button>
-              {% if current_path is defined %}
-                {% if lang == "es" %}
-                  <a href="{{ current_path | replace(from='/es/', to='/') }}" class="lang-switch" title="{{ trans(key="lang_switch_en_title", lang=lang) }}">EN</a>
-                {% else %}
-                  <a href="/es{{ current_path }}" class="lang-switch" title="{{ trans(key="lang_switch_es_title", lang=lang) }}">ES</a>
-                {% endif %}
-              {% else %}
-                {% if lang == "es" %}
-                  <a href="/" class="lang-switch" title="{{ trans(key="lang_switch_en_title", lang=lang) }}">EN</a>
-                {% else %}
-                  <a href="/es/" class="lang-switch" title="{{ trans(key="lang_switch_es_title", lang=lang) }}">ES</a>
-                {% endif %}
-              {% endif %}
             </div>
           </div>
         </nav>
@@ -444,6 +431,7 @@
           <div class="shortcuts-dialog__item"><kbd>y</kbd><span>{{ trans(key="shortcuts_yank", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">vim yank</small></div>
           <div class="shortcuts-dialog__item"><kbd>d</kbd><span>{{ trans(key="shortcuts_theme", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">dark mode</small></div>
           <div class="shortcuts-dialog__item"><kbd>t</kbd><span>{{ trans(key="shortcuts_toc", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">table of contents</small></div>
+          <div class="shortcuts-dialog__item"><kbd>i</kbd><span>{{ trans(key="shortcuts_lang", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">i18n</small></div>
         </div>
         <div class="shortcuts-dialog__group">
           <h4>{{ trans(key="shortcuts_general", lang=lang) }}</h4>

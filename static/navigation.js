@@ -179,6 +179,19 @@ window.toggleMobileMenu = function(e) {
       return;
     }
 
+    // "i" - Toggle language (i18n)
+    if (e.key === 'i' || e.key === 'I') {
+      e.preventDefault();
+      var currentPath = window.location.pathname;
+      var isSpanish = currentPath.startsWith('/es/');
+      if (isSpanish) {
+        window.location.href = currentPath.replace(/^\/es\//, '/');
+      } else {
+        window.location.href = '/es' + currentPath;
+      }
+      return;
+    }
+
     // "j" - Scroll down (vim: down)
     if (e.key === 'j') {
       e.preventDefault();
