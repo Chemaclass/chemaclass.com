@@ -48,6 +48,7 @@
 
 [[;#6e7681;]Welcome to the terminal interface of chemaclass.com]
 [[;#6e7681;]Type 'help' for available commands or 'ls' to explore.]
+[[;#6e7681;]Press Esc to return to the website.]
 `;
 
   const BANNER_MOBILE = `
@@ -55,6 +56,7 @@
 
 [[;#6e7681;]Welcome to chemaclass.com]
 [[;#6e7681;]Type 'help' for commands.]
+[[;#6e7681;]Press Esc to return to the website.]
 `;
 
   function getBanner() {
@@ -1654,6 +1656,35 @@ ${portrait}
       e.preventDefault();
       if (term) {
         term.clear();
+      }
+    }
+    // Ctrl+L - clear screen (standard terminal)
+    if (e.ctrlKey && e.key === 'l') {
+      e.preventDefault();
+      if (term) {
+        term.clear();
+      }
+    }
+    // Ctrl+C - echo ^C and clear current input
+    if (e.ctrlKey && e.key === 'c') {
+      if (term && term.level() <= 1) {
+        e.preventDefault();
+        term.echo(term.get_prompt() + term.get_command() + '^C');
+        term.set_command('');
+      }
+    }
+    // Ctrl+D - exit to website (standard shell EOF)
+    if (e.ctrlKey && e.key === 'd') {
+      if (term && term.level() <= 1) {
+        e.preventDefault();
+        window.location.href = '/';
+      }
+    }
+    // Esc - return to website (only when not in pager)
+    if (e.key === 'Escape') {
+      if (term && term.level() <= 1) {
+        e.preventDefault();
+        window.location.href = '/';
       }
     }
   });
