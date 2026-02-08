@@ -421,33 +421,30 @@
       </div>
       <div class="shortcuts-dialog__body">
         <div class="shortcuts-dialog__group">
-          <h4>{{ trans(key="shortcuts_navigation", lang=lang) }}</h4>
-          <div class="shortcuts-dialog__item"><kbd>H</kbd><span>{{ trans(key="shortcuts_home", lang=lang) }}</span></div>
-          <div class="shortcuts-dialog__item"><kbd>B</kbd><span>{{ trans(key="shortcuts_blog", lang=lang) }}</span></div>
-          <div class="shortcuts-dialog__item"><kbd>R</kbd><span>{{ trans(key="shortcuts_readings", lang=lang) }}</span></div>
-          <div class="shortcuts-dialog__item"><kbd>P</kbd><span>{{ trans(key="shortcuts_topics", lang=lang) }}</span></div>
-          <div class="shortcuts-dialog__item"><kbd>E</kbd><span>{{ trans(key="shortcuts_services", lang=lang) }}</span></div>
-          <div class="shortcuts-dialog__item"><kbd>A</kbd><span>{{ trans(key="shortcuts_talks", lang=lang) }}</span></div>
-          <div class="shortcuts-dialog__item"><kbd>L</kbd><span>{{ trans(key="shortcuts_lang", lang=lang) }}</span></div>
+          <h4>{{ trans(key="shortcuts_movement", lang=lang) }} <small class="shortcuts-dialog__subtitle">vim hjkl</small></h4>
+          <div class="shortcuts-dialog__item"><kbd>h</kbd><span>{{ trans(key="shortcuts_prev_post", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">← left</small></div>
+          <div class="shortcuts-dialog__item"><kbd>j</kbd><span>{{ trans(key="shortcuts_scroll_down", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">↓ down</small></div>
+          <div class="shortcuts-dialog__item"><kbd>k</kbd><span>{{ trans(key="shortcuts_scroll_up", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">↑ up</small></div>
+          <div class="shortcuts-dialog__item"><kbd>l</kbd><span>{{ trans(key="shortcuts_next_post", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">→ right</small></div>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>g</kbd><span>{{ trans(key="shortcuts_top", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>G</kbd><span>{{ trans(key="shortcuts_bottom", lang=lang) }}</span></div>
+        </div>
+        <div class="shortcuts-dialog__group">
+          <h4>{{ trans(key="shortcuts_goto", lang=lang) }} <small class="shortcuts-dialog__subtitle">g = go</small></h4>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>h</kbd><span>{{ trans(key="shortcuts_home", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go home</small></div>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>b</kbd><span>{{ trans(key="shortcuts_blog", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go blog</small></div>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>r</kbd><span>{{ trans(key="shortcuts_readings", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go readings</small></div>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>p</kbd><span>{{ trans(key="shortcuts_topics", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go topics</small></div>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>e</kbd><span>{{ trans(key="shortcuts_services", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go services</small></div>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>a</kbd><span>{{ trans(key="shortcuts_talks", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go talks</small></div>
         </div>
         <div class="shortcuts-dialog__group">
           <h4>{{ trans(key="shortcuts_actions", lang=lang) }}</h4>
-          <div class="shortcuts-dialog__item"><kbd>S</kbd><span>{{ trans(key="shortcuts_search", lang=lang) }}</span></div>
-          <div class="shortcuts-dialog__item"><kbd>D</kbd><span>{{ trans(key="shortcuts_theme", lang=lang) }}</span></div>
-          <div class="shortcuts-dialog__item"><kbd>C</kbd><span>{{ trans(key="shortcuts_copy", lang=lang) }}</span></div>
-          <div class="shortcuts-dialog__item"><kbd>T</kbd><span>{{ trans(key="shortcuts_toc", lang=lang) }}</span></div>
-        </div>
-        <div class="shortcuts-dialog__group">
-          <h4>{{ trans(key="shortcuts_scroll", lang=lang) }}</h4>
-          <div class="shortcuts-dialog__item"><kbd>j</kbd><span>{{ trans(key="shortcuts_scroll_down", lang=lang) }}</span></div>
-          <div class="shortcuts-dialog__item"><kbd>k</kbd><span>{{ trans(key="shortcuts_scroll_up", lang=lang) }}</span></div>
-          <div class="shortcuts-dialog__item"><kbd>G</kbd><span>{{ trans(key="shortcuts_bottom", lang=lang) }}</span></div>
-          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>g</kbd><span>{{ trans(key="shortcuts_top", lang=lang) }}</span></div>
-        </div>
-        <div class="shortcuts-dialog__group">
-          <h4>{{ trans(key="shortcuts_posts", lang=lang) }}</h4>
-          <div class="shortcuts-dialog__item"><kbd>J</kbd><span>{{ trans(key="shortcuts_newer", lang=lang) }}</span></div>
-          <div class="shortcuts-dialog__item"><kbd>K</kbd><span>{{ trans(key="shortcuts_older", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>/</kbd><span>{{ trans(key="shortcuts_search", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">vim search</small></div>
+          <div class="shortcuts-dialog__item"><kbd>y</kbd><span>{{ trans(key="shortcuts_yank", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">vim yank</small></div>
+          <div class="shortcuts-dialog__item"><kbd>d</kbd><span>{{ trans(key="shortcuts_theme", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">dark mode</small></div>
+          <div class="shortcuts-dialog__item"><kbd>t</kbd><span>{{ trans(key="shortcuts_toc", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">table of contents</small></div>
+          <div class="shortcuts-dialog__item"><kbd>i</kbd><span>{{ trans(key="shortcuts_lang", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">i18n</small></div>
         </div>
         <div class="shortcuts-dialog__group">
           <h4>{{ trans(key="shortcuts_general", lang=lang) }}</h4>

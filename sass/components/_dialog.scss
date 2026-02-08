@@ -38,8 +38,8 @@ dialog.shortcuts-dialog {
   padding: 0;
   margin: auto;
   width: 100%;
-  max-width: 560px;
-  max-height: 490px;
+  max-width: 600px;
+  max-height: 520px;
   background: var(--body-bg);
   border-radius: 14px;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
@@ -148,6 +148,22 @@ dialog.shortcuts-dialog::backdrop {
 .shortcuts-dialog__item span {
   flex: 1;
   color: var(--color-subtitle);
+}
+
+.shortcuts-dialog__subtitle {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 10px;
+  color: var(--color-subtitle);
+  opacity: 0.7;
+}
+
+.shortcuts-dialog__mnemonic {
+  font-size: 10px;
+  color: var(--color-subtitle);
+  opacity: 0.5;
+  white-space: nowrap;
 }
 
 .shortcuts-dialog__item kbd {
