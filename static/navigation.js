@@ -34,6 +34,27 @@ window.toggleMobileMenu = function(e) {
   var gPending = false;
   var gTimer = null;
   var gBadges = [];
+  var cards = document.querySelectorAll('.blog-card');
+  var selectedIndex = -1;
+
+  function selectCard(index) {
+    if (cards.length === 0) return;
+    index = Math.max(0, Math.min(index, cards.length - 1));
+    if (selectedIndex >= 0 && cards[selectedIndex]) {
+      cards[selectedIndex].classList.remove('blog-card--active');
+    }
+    selectedIndex = index;
+    cards[selectedIndex].classList.add('blog-card--active');
+    cards[selectedIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    showToast((selectedIndex + 1) + ' / ' + cards.length);
+  }
+
+  function clearCardSelection() {
+    if (selectedIndex >= 0 && cards[selectedIndex]) {
+      cards[selectedIndex].classList.remove('blog-card--active');
+    }
+    selectedIndex = -1;
+  }
 
   var G_PREFIX_MAP = [
     { key: 'h', selector: '.header-left' },
@@ -100,6 +121,7 @@ window.toggleMobileMenu = function(e) {
       closeSearch();
       closeShortcutsModal();
       cancelG();
+      clearCardSelection();
       return;
     }
 
@@ -119,9 +141,14 @@ window.toggleMobileMenu = function(e) {
       cancelG();
       var langPrefix = getLangPrefix();
       switch (e.key) {
-        case 'g': // gg - scroll to top (vim)
+        case 'g': // gg - scroll to top / select first card
           e.preventDefault();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          if (cards.length > 0) {
+            selectCard(0);
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            showToast('Top');
+          }
           return;
         case 'h': // gh - go home
           e.preventDefault();
@@ -165,10 +192,15 @@ window.toggleMobileMenu = function(e) {
       return;
     }
 
-    // "G" (Shift+G) - Scroll to bottom (vim)
+    // "G" (Shift+G) - Scroll to bottom / select last card
     if (e.key === 'G') {
       e.preventDefault();
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      if (cards.length > 0) {
+        selectCard(cards.length - 1);
+      } else {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        showToast('Bottom');
+      }
       return;
     }
 
@@ -192,17 +224,34 @@ window.toggleMobileMenu = function(e) {
       return;
     }
 
-    // "j" - Scroll down (vim: down)
+    // "j" - Scroll down / next card (vim: down)
     if (e.key === 'j') {
       e.preventDefault();
-      window.scrollBy({ top: 150, behavior: 'smooth' });
+      if (cards.length > 0) {
+        selectCard(selectedIndex + 1);
+      } else {
+        window.scrollBy({ top: 150, behavior: 'smooth' });
+      }
       return;
     }
 
-    // "k" - Scroll up (vim: up)
+    // "k" - Scroll up / previous card (vim: up)
     if (e.key === 'k') {
       e.preventDefault();
-      window.scrollBy({ top: -150, behavior: 'smooth' });
+      if (cards.length > 0) {
+        selectCard(selectedIndex - 1);
+      } else {
+        window.scrollBy({ top: -150, behavior: 'smooth' });
+      }
+      return;
+    }
+
+    // "Enter" - Open selected card
+    if (e.key === 'Enter') {
+      if (selectedIndex >= 0 && cards[selectedIndex]) {
+        var link = cards[selectedIndex].querySelector('.blog-card__link');
+        if (link) window.location.href = link.href;
+      }
       return;
     }
 
@@ -212,16 +261,26 @@ window.toggleMobileMenu = function(e) {
       if (prevLink) {
         e.preventDefault();
         window.location.href = prevLink.href;
+      } else if (document.querySelector('.blog-post__nav')) {
+        showToast('No older post');
       }
       return;
     }
 
-    // "l" - Next post (vim: right)
+    // "l" - Next post / open selected card (vim: right)
     if (e.key === 'l') {
+      if (selectedIndex >= 0 && cards[selectedIndex]) {
+        e.preventDefault();
+        var link = cards[selectedIndex].querySelector('.blog-card__link');
+        if (link) window.location.href = link.href;
+        return;
+      }
       var nextLink = document.querySelector('.blog-post__nav-link--next');
       if (nextLink) {
         e.preventDefault();
         window.location.href = nextLink.href;
+      } else if (document.querySelector('.blog-post__nav')) {
+        showToast('No newer post');
       }
       return;
     }
@@ -263,7 +322,7 @@ function showToast(message) {
   }
   toast.textContent = message;
   toast.classList.add('show');
-  setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  setTimeout(function() { toast.classList.remove('show'); }, 1500);
 }
 
 // Shortcuts dialog (native HTML dialog element)
@@ -345,7 +404,7 @@ document.addEventListener('click', function(e) {
 (function() {
   if (window.matchMedia('(max-width: 600px)').matches) return;
 
-  var HOLD_DELAY = 1000;
+  var HOLD_DELAY = 400;
   var SHORTCUT_MAP = [
     { key: 'gh', selector: '.header-left' },
     { key: 'gb', selector: '.nav-links a[href$="/blog/"]' },
