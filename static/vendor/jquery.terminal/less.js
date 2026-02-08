@@ -490,26 +490,35 @@
                             print();
                             // scroll
                         }
+                    } else if (e.key === 'G') {
+                        // G - go to bottom (vim/less)
+                        pos = Math.max(0, lines.length - rows + 1);
+                        print();
+                    } else if (e.key === 'g') {
+                        // g - go to top (less-style)
+                        pos = 0;
+                        print();
                     } else if (lines.length > rows) {
-                        if (key === 'ARROWUP') { //up
+                        if (key === 'ARROWUP' || e.key === 'k') { //up / k (vim)
                             if (pos > 0) {
                                 --pos;
                                 print();
                             }
-                        } else if (key === 'ARROWDOWN') { //down
+                        } else if (key === 'ARROWDOWN' || e.key === 'j') { //down / j (vim)
                             if (pos <= lines.length - rows) {
                                 ++pos;
                                 print();
                             }
-                        } else if (key === 'PAGEDOWN') {
+                        } else if (key === 'PAGEDOWN' || e.key === ' ') {
+                            // PageDown / Space - next page
                             pos += rows - 1;
                             var limit = lines.length - rows + 1;
                             if (pos > limit) {
                                 pos = limit;
                             }
                             print();
-                        } else if (key === 'PAGEUP') {
-                            //Page Down
+                        } else if (key === 'PAGEUP' || e.key === 'b') {
+                            // PageUp / b - previous page (less-style)
                             pos -= rows - 1;
                             if (pos < 0) {
                                 pos = 0;

@@ -109,17 +109,22 @@
   [[b;#3fb950;]Fun:]
     matrix         Enter the Matrix
 
-  [[b;#3fb950;]Pager controls (less):]
-    Space/PgDn     Next page
-    b/PgUp         Previous page
-    j/↓            Scroll down
-    k/↑            Scroll up
+  [[b;#3fb950;]Pager controls (less):] [[;#6e7681;]vim-style]
+    j / ↓          Scroll down
+    k / ↑          Scroll up
+    Space / PgDn   Next page
+    b / PgUp       Previous page
+    g              Go to top
+    G              Go to bottom
+    /              Search in content
+    n / p          Next / previous match
     q              Quit pager
 
   [[b;#3fb950;]Tips:]
     - Use Tab for autocomplete
     - Paths work like Unix: cd blog, cd .., cd /
     - Files don't need .md extension
+    - Press : from the website to get here
 `;
     },
 
