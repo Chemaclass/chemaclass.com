@@ -85,6 +85,7 @@
   [[b;#3fb950;]Info:]
     whoami [-v]    About me (use -v for detailed info)
     thanks         Support my work
+    shortcuts      Website keyboard shortcuts
     history        Show command history
     clear          Clear the screen
     help           Show this help
@@ -127,6 +128,7 @@
     - Paths work like Unix: cd blog, cd .., cd /
     - Files don't need .md extension
     - Press : from the website to get here
+    - Type 'shortcuts' to see website keyboard shortcuts
 `;
     },
 
@@ -501,6 +503,38 @@ ${portrait}
     clear: function() {
       term.clear();
       return '';
+    },
+
+    shortcuts: function() {
+      return `
+[[b;#58a6ff;]Website Keyboard Shortcuts]
+[[;#6e7681;]These work on the main website (not in this terminal).]
+[[;#6e7681;]Press Esc to return to the website first.]
+
+  [[b;#3fb950;]Movement:]                        [[b;#3fb950;]Go to (g + key):]
+    h        Previous post (← left)       gh       Home
+    j        Scroll down (↓ down)          gb       Blog
+    k        Scroll up (↑ up)              gr       Readings
+    l        Next post (→ right)           gp       Topics
+    gg       Scroll to top                 ge       Services
+    G        Scroll to bottom              ga       Talks
+    n        Next section heading
+    N        Previous section heading
+
+  [[b;#3fb950;]Actions:]                          [[b;#3fb950;]General:]
+    /        Search                         ?       Show shortcuts help
+    y        Yank (copy) URL                Shift   Hold to show hints
+    d        Toggle dark/light theme        Esc     Close / cancel
+    t        Toggle table of contents       :       Open terminal
+    i        Switch language (i18n)
+    f        Follow link (hint labels)
+    m + key  Set mark (a-z bookmark)
+    ' + key  Jump to mark
+`;
+    },
+
+    keys: function() {
+      return commands.shortcuts();
     },
 
     // Easter eggs
