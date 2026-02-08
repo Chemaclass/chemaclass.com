@@ -33,10 +33,62 @@ window.toggleMobileMenu = function(e) {
 (function() {
   var gPending = false;
   var gTimer = null;
+  var gBadges = [];
+
+  var G_PREFIX_MAP = [
+    { key: 'h', selector: '.header-left' },
+    { key: 'b', selector: '.nav-links a[href$="/blog/"]' },
+    { key: 'r', selector: '.nav-links a[href$="/readings/"]' },
+    { key: 'p', selector: '.nav-links a[href$="/topics/"]' },
+    { key: 'e', selector: '.nav-links a[href$="/services/"]' },
+    { key: 'a', selector: '.nav-links a[href$="/talks/"]' },
+    { key: 'g', selector: '#scroll-to-top' },
+  ];
+
+  function isElVisible(el) {
+    if (!el) return false;
+    var style = getComputedStyle(el);
+    if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') return false;
+    var rect = el.getBoundingClientRect();
+    return rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < window.innerHeight;
+  }
+
+  function showGBadges() {
+    G_PREFIX_MAP.forEach(function(item) {
+      var els = document.querySelectorAll(item.selector);
+      var target = null;
+      els.forEach(function(el) { if (isElVisible(el)) target = el; });
+      if (!target) return;
+
+      var rect = target.getBoundingClientRect();
+      var badge = document.createElement('kbd');
+      badge.className = 'shortcut-hint';
+      badge.textContent = item.key;
+      badge.style.position = 'fixed';
+      badge.style.top = (rect.top + rect.height / 2) + 'px';
+      badge.style.left = (rect.left + rect.width / 2) + 'px';
+      document.body.appendChild(badge);
+      gBadges.push(badge);
+
+      requestAnimationFrame(function() {
+        badge.classList.add('visible');
+      });
+    });
+  }
+
+  function removeGBadges() {
+    gBadges.forEach(function(badge) {
+      badge.classList.remove('visible');
+      badge.addEventListener('transitionend', function() { badge.remove(); });
+      setTimeout(function() { badge.remove(); }, 300);
+    });
+    gBadges = [];
+  }
 
   function cancelG() {
     gPending = false;
     if (gTimer) { clearTimeout(gTimer); gTimer = null; }
+    removeGBadges();
   }
 
   function getLangPrefix() {
@@ -99,12 +151,14 @@ window.toggleMobileMenu = function(e) {
       }
     }
 
-    // "g" - Start g-prefix mode
+    // "g" - Start g-prefix mode and show hint badges
     if (e.key === 'g') {
       gPending = true;
+      showGBadges();
       gTimer = setTimeout(function() {
         gPending = false;
         gTimer = null;
+        removeGBadges();
       }, 500);
       return;
     }
