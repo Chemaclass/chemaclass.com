@@ -59,30 +59,6 @@ window.toggleMobileMenu = function(e) {
     if (apostropheTimer) { clearTimeout(apostropheTimer); apostropheTimer = null; }
   }
 
-  // Reading progress toast for j/k on blog posts
-  var blogContent = document.querySelector('.blog-post__content');
-
-  function showReadingProgress() {
-    if (!blogContent) return;
-    var pageFooter = document.querySelector('.page-footer');
-    var articleTop = blogContent.offsetTop;
-    var endPoint = pageFooter ? (pageFooter.offsetTop - 420) : (articleTop + blogContent.offsetHeight);
-    var totalHeight = endPoint - articleTop;
-    var scrollTop = window.scrollY;
-    var progress = Math.min(Math.max((scrollTop - articleTop + window.innerHeight * 0.5) / totalHeight, 0), 1);
-    var percent = Math.round(progress * 100);
-    var toast = document.getElementById('toast-notification');
-    if (!toast) {
-      toast = document.createElement('div');
-      toast.id = 'toast-notification';
-      toast.className = 'toast';
-      document.body.appendChild(toast);
-    }
-    toast.textContent = percent + '%';
-    toast.classList.add('show');
-    setTimeout(function() { toast.classList.remove('show'); }, 800);
-  }
-
   // Heading navigation state (n/N keys on blog posts)
   var headings = document.querySelectorAll('.blog-post__content h2, .blog-post__content h3');
   var HEADING_OFFSET = 20;
@@ -485,7 +461,6 @@ window.toggleMobileMenu = function(e) {
         selectCard(selectedIndex + 1);
       } else {
         window.scrollBy({ top: 150, behavior: 'smooth' });
-        if (blogContent) setTimeout(showReadingProgress, 200);
       }
       return;
     }
@@ -497,7 +472,6 @@ window.toggleMobileMenu = function(e) {
         selectCard(selectedIndex - 1);
       } else {
         window.scrollBy({ top: -150, behavior: 'smooth' });
-        if (blogContent) setTimeout(showReadingProgress, 200);
       }
       return;
     }

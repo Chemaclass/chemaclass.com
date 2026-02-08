@@ -107,7 +107,7 @@ dialog.shortcuts-dialog::backdrop {
   grid-template-columns: 1fr 1fr;
   gap: 16px 24px;
 
-  :root:has(body.dark) & {
+  .theme-dark & {
     scrollbar-color: #555 #2a2a2a;
 
     &::-webkit-scrollbar {
