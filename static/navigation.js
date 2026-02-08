@@ -115,6 +115,7 @@ window.toggleMobileMenu = function(e) {
 
     // Handle g-prefix commands (gg, gh, gb, gr, gp, ge, ga)
     if (gPending) {
+      if (e.repeat) return;
       cancelG();
       var langPrefix = getLangPrefix();
       switch (e.key) {
@@ -153,6 +154,7 @@ window.toggleMobileMenu = function(e) {
 
     // "g" - Start g-prefix mode and show hint badges
     if (e.key === 'g') {
+      if (e.repeat) return;
       gPending = true;
       showGBadges();
       gTimer = setTimeout(function() {
