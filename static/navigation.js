@@ -235,6 +235,14 @@ window.toggleMobileMenu = function(e) {
       return;
     }
 
+    // ":" - Open terminal (vim: command mode)
+    if (e.key === ':') {
+      e.preventDefault();
+      var langPrefix = getLangPrefix();
+      window.location.href = langPrefix + '/terminal/';
+      return;
+    }
+
     // "?" - Show keyboard shortcuts help
     if (e.key === '?') {
       e.preventDefault();
