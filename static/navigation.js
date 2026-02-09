@@ -103,11 +103,20 @@ window.toggleMobileMenu = function(e) {
   }
 
   function showGBadges() {
+    var currentPath = window.location.pathname;
     G_PREFIX_MAP.forEach(function(item) {
       var els = document.querySelectorAll(item.selector);
       var target = null;
       els.forEach(function(el) { if (isElVisible(el)) target = el; });
       if (!target) return;
+
+      // Skip showing badge if it's a link to the current page
+      if (target.tagName === 'A' && target.getAttribute('href')) {
+        var targetPath = target.getAttribute('href');
+        if (currentPath === targetPath || currentPath === targetPath + '/' || currentPath + '/' === targetPath) {
+          return;
+        }
+      }
 
       var rect = target.getBoundingClientRect();
       var badge = document.createElement('kbd');
