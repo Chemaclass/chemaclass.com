@@ -75,8 +75,6 @@ Custom slash commands in `.claude/commands/` turn these workflows into executabl
 
 The key insight: commands turn tribal knowledge into executable instructions. What used to be "ask Sarah how we set up a new module" becomes a command anyone can run, human or agent.
 
-![blog-middle](/images/blog/2026-02-07/middle.jpg)
-
 ## Specialists, not generalists
 
 Commands are _your_ procedures. They encode how your team does things. But there's another layer: skills and agents.
@@ -107,15 +105,52 @@ This is where the team metaphor gets concrete. Instead of one generalist, you de
 
 This is where the team metaphor becomes literal. A single agent following instructions is useful. Multiple agents working from a shared plan is a team.
 
+### Subagents vs agent teams
+
+Not all multi-agent setups are the same. There are two distinct coordination models, and choosing the right one matters.
+
+**Subagents** run within a single session. They do focused work and report results back to the main agent. Think of them as quick workers you dispatch for a specific task: research a library, verify a pattern, run a check. They can't talk to each other. The main agent manages everything.
+
+**Agent teams** are fundamentally different. Each teammate is a fully independent Claude Code session with its own context window. They communicate directly through a shared mailbox, claim tasks from a shared task list, and coordinate without going through a central bottleneck.
+
+The architecture has four components:
+
+- **Team lead**: the main session that creates the team and orchestrates work
+- **Teammates**: separate Claude Code instances, each owning specific tasks
+- **Task list**: shared work items with dependency tracking — blocked tasks automatically unblock when dependencies complete
+- **Mailbox**: direct messaging between agents, including broadcasts to the entire team
+
+> Subagents are workers that report back. Agent teams are collaborators that think together.
+
+Use subagents when only the result matters. Use agent teams when teammates need to share findings, challenge each other, and coordinate on their own. Agent teams use more tokens, so they're worth the overhead only when parallel exploration adds real value.
+
+![blog-middle](/images/blog/2026-02-07/middle.jpg)
+
 ### Plan first, execute after
 
 Good teams don't just start coding. They discuss the approach, identify dependencies, agree on a plan. Claude Code's plan mode works the same way.
 
-Think of it as a technical refinement session. You describe the feature or the problem. The agent explores the codebase, reads relevant files, maps dependencies, and proposes an approach before changing anything. You approve, modify, or reject it. Think first, code second. No more "I changed 15 files and hope it works."
+Think of it as a technical refinement session. You describe the feature or the problem. The agent explores the codebase, reads relevant files, maps dependencies, and proposes an approach before changing anything. You approve, modify, or reject it. Think first, code second.
 
-### Parallel execution
+With agent teams, this gets more powerful. **Plan approval** lets you require teammates to design their approach before implementing. The teammate works in read-only mode until the lead approves their plan. If rejected, the teammate revises based on feedback and resubmits. You can shape the lead's judgment with criteria like _"only approve plans that include test coverage"_ or _"reject plans that modify the database schema."_
 
-Once there's a plan, independent tasks can run in parallel. Break the work down, assign it, let agents work without blocking each other.
+**Delegate mode** takes this further by restricting the lead to coordination only — spawning, messaging, shutting down teammates, and managing tasks. Without it, the lead sometimes starts implementing tasks itself instead of waiting for teammates. Delegate mode keeps the lead focused on orchestration, not execution.
+
+### Competing hypotheses
+
+This is the most compelling agent-team pattern for debugging. When the root cause is unclear, a single agent tends to find one plausible explanation and stop looking. Agent teams fight this by making teammates adversarial — each one investigates its own theory while actively trying to disprove the others.
+
+Sequential investigation suffers from anchoring: once one theory is explored, subsequent investigation is biased toward it. With multiple independent investigators challenging each other, the theory that survives is much more likely to be the actual root cause.
+
+### Size tasks for parallel work
+
+Not all work benefits from parallelism. The key question: can the teammates work independently?
+
+- **Too small**: coordination overhead exceeds the benefit
+- **Too large**: teammates work too long without check-ins, increasing wasted effort
+- **Just right**: self-contained units that produce a clear deliverable — a function, a test file, a review
+
+Having 5-6 tasks per teammate keeps everyone productive. Break the work so each teammate owns a different set of files — two teammates editing the same file leads to overwrites. Clear ownership, no conflicts.
 
 {% deep_dive(title="Backend + Frontend in parallel") %}
 
@@ -144,6 +179,8 @@ As I wrote in [AI gives you speed, not quality](/blog/ai-gives-you-speed-not-qua
 
 Hooks and git hooks act as the final safety net. In my setup, nothing gets committed unless the full suite is green and coverage is above 90%. The agent doesn't get to skip this. Neither does anyone else.
 
+Agent teams add their own quality hooks: `TeammateIdle` runs when a teammate is about to go idle (exit with code 2 to send feedback and keep them working), and `TaskCompleted` runs when a task is being marked complete (exit with code 2 to prevent completion and send feedback). These are automated policies no team member can bypass.
+
 {% deep_dive(title="Hooks, permissions, and guardrails") %}
 
 Git hooks run linters, static analysis, and tests before every commit. But Claude Code also has its own hooks (`.claude/hooks/`): shell commands that trigger on agent events like tool calls or file writes. They're the automated policies every team member must follow.
@@ -161,5 +198,9 @@ You don't build all of this on day one. You start with a `CLAUDE.md`. Then you n
 If you want a starting point, I put together [laravel-claude-toolkit](https://github.com/Chemaclass/laravel-claude-toolkit): a Laravel starter kit with rules, commands, skills, agents, hooks, and permissions already configured. Use it as a reference or fork it for your own setup.
 
 > You're not just using AI. You're building a team. And like any team, the quality of its output reflects the quality of its leadership.
+
+## Resources
+
+- [Claude Code: Agent Teams](https://code.claude.com/docs/en/agent-teams) — the official docs on orchestrating teams of Claude Code sessions with shared tasks, inter-agent messaging, and centralized management
 
 ![blog-footer](/images/blog/2026-02-07/footer.jpg)

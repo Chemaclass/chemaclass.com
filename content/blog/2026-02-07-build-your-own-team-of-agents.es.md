@@ -75,8 +75,6 @@ Los comandos slash personalizados en `.claude/commands/` convierten estos flujos
 
 La idea clave: los comandos convierten conocimiento tribal en instrucciones ejecutables. Lo que antes era "pregúntale a Sara cómo creamos un módulo nuevo" se convierte en un comando que cualquiera puede ejecutar, humano o agente.
 
-![blog-middle](/images/blog/2026-02-07/middle.jpg)
-
 ## Especialistas, no generalistas
 
 Los comandos son _tus_ procedimientos. Codifican cómo hace las cosas tu equipo. Pero hay otra capa: skills y agentes.
@@ -107,13 +105,50 @@ Aquí es donde la metáfora del equipo se concreta. En lugar de un generalista, 
 
 Aquí la metáfora del equipo se vuelve literal. Un solo agente es útil. Múltiples agentes desde un plan compartido es un equipo.
 
+### Subagentes vs equipos de agentes
+
+No todas las configuraciones multi-agente son iguales. Hay dos modelos de coordinación distintos, y elegir el correcto importa.
+
+Los **subagentes** se ejecutan dentro de una misma sesión. Hacen trabajo enfocado y devuelven resultados al agente principal. Piensa en ellos como trabajadores que despachas para una tarea concreta: investigar una librería, verificar un patrón, ejecutar una comprobación. No pueden hablar entre sí. El agente principal lo gestiona todo.
+
+Los **equipos de agentes** son fundamentalmente diferentes. Cada miembro es una sesión de Claude Code totalmente independiente con su propia ventana de contexto. Se comunican directamente a través de un buzón compartido, reclaman tareas de una lista compartida y se coordinan sin pasar por un cuello de botella central.
+
+La arquitectura tiene cuatro componentes:
+
+- **Team lead**: la sesión principal que crea el equipo y orquesta el trabajo
+- **Teammates**: instancias separadas de Claude Code, cada una con tareas específicas
+- **Lista de tareas**: elementos de trabajo compartidos con seguimiento de dependencias — las tareas bloqueadas se desbloquean automáticamente cuando sus dependencias se completan
+- **Buzón**: mensajería directa entre agentes, incluyendo broadcasts a todo el equipo
+
+> Los subagentes son trabajadores que reportan. Los equipos de agentes son colaboradores que piensan juntos.
+
+Usa subagentes cuando solo importa el resultado. Usa equipos de agentes cuando los miembros necesitan compartir hallazgos, cuestionar al resto y coordinarse por su cuenta. Los equipos consumen más tokens, así que solo merecen la pena cuando la exploración en paralelo aporta valor real.
+
+![blog-middle](/images/blog/2026-02-07/middle.jpg)
+
 ### Primero planificar, después ejecutar
 
 Los buenos equipos no se ponen a programar directamente. Discuten el enfoque, identifican dependencias, acuerdan un plan. El modo plan de Claude Code funciona igual: describes el problema, el agente explora el código, mapea dependencias y propone un enfoque antes de cambiar nada. Lo apruebas, modificas o rechazas. Pensar primero, programar después.
 
-### Ejecución en paralelo
+Con equipos de agentes, esto se vuelve más potente. La **aprobación de plan** permite exigir que los miembros diseñen su enfoque antes de implementar. El agente trabaja en modo solo lectura hasta que el lead aprueba su plan. Si lo rechaza, el agente revisa según el feedback y reenvía. Puedes moldear el criterio del lead con instrucciones como _"solo aprueba planes que incluyan cobertura de tests"_ o _"rechaza planes que modifiquen el esquema de base de datos."_
 
-Una vez hay plan, las tareas independientes pueden ejecutarse en paralelo. Dividir el trabajo, asignarlo y dejar que los agentes trabajen sin bloquearse mutuamente.
+El **modo delegado** va un paso más allá: restringe al lead a solo coordinación — crear agentes, enviar mensajes, cerrar sesiones y gestionar tareas. Sin él, el lead a veces empieza a implementar tareas en lugar de esperar a los miembros. El modo delegado mantiene al lead centrado en la orquestación, no en la ejecución.
+
+### Hipótesis competitivas
+
+Este es el patrón más potente de los equipos de agentes para debugging. Cuando la causa raíz no está clara, un solo agente tiende a encontrar una explicación plausible y dejar de buscar. Los equipos de agentes combaten esto haciendo que los miembros sean adversarios — cada uno investiga su propia teoría mientras intenta activamente refutar las de los demás.
+
+La investigación secuencial sufre de anclaje: una vez que se explora una teoría, la investigación posterior está sesgada hacia ella. Con múltiples investigadores independientes cuestionándose mutuamente, la teoría que sobrevive tiene muchas más probabilidades de ser la causa raíz real.
+
+### Dimensiona las tareas para trabajo en paralelo
+
+No todo el trabajo se beneficia del paralelismo. La pregunta clave: ¿pueden los miembros trabajar de forma independiente?
+
+- **Demasiado pequeñas**: el overhead de coordinación supera el beneficio
+- **Demasiado grandes**: los miembros trabajan demasiado tiempo sin revisión, aumentando el esfuerzo desperdiciado
+- **El punto justo**: unidades autocontenidas que producen un entregable claro — una función, un archivo de tests, una revisión
+
+Tener 5-6 tareas por miembro mantiene a todos productivos. Divide el trabajo para que cada miembro sea dueño de un conjunto diferente de archivos — dos miembros editando el mismo archivo lleva a sobreescrituras. Propiedad clara, sin conflictos.
 
 {% deep_dive(title="Backend + Frontend en paralelo") %}
 
@@ -128,7 +163,7 @@ No se pisan porque el plan ya definió los límites. El agente de backend trabaj
 
 ### Revisión tras la ejecución
 
-Tras la implementación, los agentes de revisión toman el relevo. En lugar de un revisor que lo pilla todo, tienes especialistas: revisor de código limpio para violaciones SOLID, revisor de React para patrones de componentes, coach de TDD para calidad de tests, arquitecto de dominio para límites de módulos.
+Tras la implementación, los agentes de revisión toman el relevo. En lugar de un revisor que lo pille todo, tienes especialistas: revisor de código limpio para violaciones SOLID, revisor de React para patrones de componentes, coach de TDD para calidad de tests, arquitecto de dominio para límites de módulos.
 
 > Un solo agente es un asistente. Múltiples agentes trabajando desde un plan compartido es un equipo.
 
@@ -141,6 +176,8 @@ Como escribí en [La IA te da velocidad, no calidad](/blog/ai-gives-you-speed-no
 ### Puertas de calidad
 
 Los hooks y git hooks actúan como la última red de seguridad. En mi setup, nada se commitea a menos que los linters pasen, el análisis estático esté limpio, los tests sean verdes y la cobertura supere el 90%. El agente no puede saltarse esto. Nadie puede.
+
+Los equipos de agentes añaden sus propios hooks de calidad: `TeammateIdle` se ejecuta cuando un miembro está a punto de quedarse inactivo (salir con código 2 para enviar feedback y mantenerlo trabajando), y `TaskCompleted` se ejecuta cuando una tarea se marca como completada (salir con código 2 para impedir la finalización y enviar feedback). Son políticas automatizadas que ningún miembro del equipo puede saltarse.
 
 {% deep_dive(title="Hooks, permisos y barandillas") %}
 
@@ -159,5 +196,9 @@ No construyes todo esto el primer día. Empiezas con un `CLAUDE.md`. Luego notas
 Si quieres un punto de partida, preparé [laravel-claude-toolkit](https://github.com/Chemaclass/laravel-claude-toolkit): un starter kit de Laravel con reglas, comandos, skills, agentes, hooks y permisos ya configurados. Úsalo como referencia o haz fork para tu propio setup.
 
 > No solo estás usando IA. Estás construyendo un equipo. Y como cualquier equipo, la calidad de su resultado refleja la calidad de su liderazgo.
+
+## Recursos
+
+- [Claude Code: Agent Teams](https://code.claude.com/docs/en/agent-teams) — la documentación oficial sobre orquestación de equipos de sesiones Claude Code con tareas compartidas, mensajería entre agentes y gestión centralizada
 
 ![blog-footer](/images/blog/2026-02-07/footer.jpg)
