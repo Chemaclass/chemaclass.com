@@ -3,7 +3,7 @@ title = "Invertir en bolsa para principiantes"
 description = "Los conceptos básicos del mercado de valores explicados de forma clara."
 authors = [ "Mark Atwood" ]
 [taxonomies]
-tags = [ "finance", "investing", "economics" ]
+tags = [ "economics" ]
 [extra]
 subtitle = "25 lecciones doradas de inversión en acciones"
 pages = "160"

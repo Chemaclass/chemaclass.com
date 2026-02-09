@@ -4,7 +4,7 @@ description = "Lyn Alden cuenta la historia del dinero desde una mirada tecnoló
 draft = false
 authors = [ "Lyn Alden" ]
 [taxonomies]
-tags = [ "bitcoin", "economics", "money", "philosophy" ]
+tags = [ "bitcoin", "economics", "philosophy" ]
 [extra]
 subtitle = "Por qué nuestro sistema financiero nos está fallando y cómo podemos mejorarlo"
 pages = "538"

@@ -3,7 +3,7 @@ title = "Agile Product Management with Scrum"
 description = "Understanding the product owner’s role and envisioning the product."
 authors = [ "Roman Pichler" ]
 [taxonomies]
-tags = [ "agile", "scrum", "management", "product-management" ]
+tags = [ "agile", "scrum", "management" ]
 [extra]
 subtitle = "Creating Products that Customers Love"
 pages = "120"

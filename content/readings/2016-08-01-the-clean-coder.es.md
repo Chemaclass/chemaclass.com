@@ -3,7 +3,7 @@ title = "El Programador Limpio"
 description = "Guía de conducta para programadores profesionales"
 authors = [ "Robert C. Martin" ]
 [taxonomies]
-tags = [ "clean-code", "career", "tdd", "communication", "professionalism" ]
+tags = [ "clean-code", "career", "tdd", "communication" ]
 [extra]
 subtitle = "Un código de conducta para programadores profesionales"
 pages = "250"

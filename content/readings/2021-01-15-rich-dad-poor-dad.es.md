@@ -3,7 +3,7 @@ title = "Padre rico, padre pobre"
 description = "Por qué no necesitas un sueldo alto para volverte rico"
 authors = [ "Robert T. Kiyosaki" ]
 [taxonomies]
-tags = [ "finance", "economics", "investing" ]
+tags = [ "economics" ]
 [extra]
 subtitle = "Lo que los ricos enseñan a sus hijos sobre el dinero (y los pobres y la clase media no)"
 pages = "180"

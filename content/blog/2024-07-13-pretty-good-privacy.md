@@ -3,7 +3,7 @@ title = "Pretty Good Privacy"
 description = "PGP is an encryption program that ensures privacy and authentication for data communication. It is used for signing, encrypting, and decrypting texts, emails, files, directories, and whole disk partitions, enhancing the security of email communications."
 draft = false
 [taxonomies]
-tags = [ "security", "privacy", "cryptography", "encryption" ]
+tags = [ "security", "privacy", "cryptography" ]
 [extra]
 subtitle = "How PGP secures your digital communication"
 static_thumbnail = "/images/blog/2024-07-13/cover.jpg"

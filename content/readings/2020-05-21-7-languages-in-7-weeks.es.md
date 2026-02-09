@@ -3,7 +3,7 @@ title = "Siete lenguajes en siete semanas"
 description = "Una guía práctica para expandir tu mente como programador explorando paradigmas diferentes"
 authors = [ "Bruce Tate" ]
 [taxonomies]
-tags = [ "software-design", "programming", "career" ]
+tags = [ "software-design", "software", "career" ]
 [extra]
 subtitle = "Una guía práctica para aprender lenguajes de programación"
 pages = "300"

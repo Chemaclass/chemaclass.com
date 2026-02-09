@@ -3,7 +3,7 @@ title = "One up on wall street"
 description = "America's most successful money manager tells how average investors can beat the pros by using what they know. According to Lynch, investment opportunities are everywhere."
 authors = [ "Peter Lynch" ]
 [taxonomies]
-tags = [ "finance", "investing", "economics" ]
+tags = [ "economics" ]
 [extra]
 subtitle = "How To Use What You Already Know To Make Money In The Market"
 pages = "180"

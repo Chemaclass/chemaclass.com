@@ -4,7 +4,7 @@ description = "A deep dive into monetary history through a technological lens. L
 draft = false
 authors = [ "Lyn Alden" ]
 [taxonomies]
-tags = [ "bitcoin", "economics", "money", "philosophy" ]
+tags = [ "bitcoin", "economics", "philosophy" ]
 [extra]
 subtitle = "Why Our Financial System is Failing Us and How We Can Make it Better"
 pages = "538"

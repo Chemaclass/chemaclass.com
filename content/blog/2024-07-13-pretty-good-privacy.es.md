@@ -3,7 +3,7 @@ title = "Pretty Good Privacy"
 description = "PGP te permite cifrar mensajes para que solo el destinatario pueda leerlos, y firmarlos para demostrar que son tuyos. Creado en 1991 por Phil Zimmermann."
 draft = false
 [taxonomies]
-tags = [ "security", "privacy", "cryptography", "encryption" ]
+tags = [ "security", "privacy", "cryptography" ]
 [extra]
 subtitle = "Cómo PGP protege tu comunicación digital"
 static_thumbnail = "/images/blog/2024-07-13/cover.jpg"

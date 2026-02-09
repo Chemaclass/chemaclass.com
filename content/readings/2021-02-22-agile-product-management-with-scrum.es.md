@@ -3,7 +3,7 @@ title = "Gestión ágil de productos con Scrum"
 description = "Cómo entender el rol del product owner y dar forma al producto."
 authors = [ "Roman Pichler" ]
 [taxonomies]
-tags = [ "agile", "scrum", "management", "product-management" ]
+tags = [ "agile", "scrum", "management" ]
 [extra]
 subtitle = "Creando productos que los clientes aman"
 pages = "120"

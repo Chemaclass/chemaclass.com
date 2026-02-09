@@ -3,7 +3,7 @@ title = "Dinero Programable"
 description = "Bitcoin se conoce como dinero programable porque permite ejecutar transacciones con condiciones mediante su lenguaje de scripting."
 draft = false
 [taxonomies]
-tags = [ "bitcoin", "programming", "cryptography", "security" ]
+tags = [ "bitcoin", "software", "cryptography", "security" ]
 [extra]
 subtitle = "El poder del Script de Bitcoin"
 static_thumbnail = "/images/blog/2024-07-06/cover.jpg"

@@ -3,7 +3,7 @@ title = "Un paso por delante de Wall Street"
 description = "Peter Lynch explica cómo el inversor común puede ganarle a los profesionales usando lo que ya sabe. Las oportunidades de inversión están en todas partes."
 authors = [ "Peter Lynch" ]
 [taxonomies]
-tags = [ "finance", "investing", "economics" ]
+tags = [ "economics" ]
 [extra]
 subtitle = "Cómo usar lo que ya sabes para ganar dinero en el mercado"
 pages = "180"
