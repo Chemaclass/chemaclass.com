@@ -43,22 +43,6 @@ window.toggleMobileMenu = function(e) {
   var hintBadges = [];
   var hintInput = '';
 
-  // Marks state (m to set, ' to jump)
-  var mPending = false;
-  var mTimer = null;
-  var apostrophePending = false;
-  var apostropheTimer = null;
-
-  function cancelMark() {
-    mPending = false;
-    if (mTimer) { clearTimeout(mTimer); mTimer = null; }
-  }
-
-  function cancelApostrophe() {
-    apostrophePending = false;
-    if (apostropheTimer) { clearTimeout(apostropheTimer); apostropheTimer = null; }
-  }
-
   // Heading navigation state (n/N keys on blog posts)
   var headings = document.querySelectorAll('.blog-post__content h2, .blog-post__content h3');
   var HEADING_OFFSET = 20;
@@ -219,8 +203,6 @@ window.toggleMobileMenu = function(e) {
       closeSearch();
       closeShortcutsModal();
       cancelG();
-      cancelMark();
-      cancelApostrophe();
       clearCardSelection();
       if (hintMode) exitHintMode();
       return;
@@ -269,47 +251,6 @@ window.toggleMobileMenu = function(e) {
 
     // Skip if global shortcuts are disabled (e.g., 404 page)
     if (window.disableGlobalShortcuts) return;
-
-    // Handle mark-set mode (m + letter)
-    if (mPending) {
-      if (e.repeat) return;
-      cancelMark();
-      var key = e.key.toLowerCase();
-      if (key.length === 1 && key >= 'a' && key <= 'z') {
-        e.preventDefault();
-        var marks = {};
-        try { marks = JSON.parse(localStorage.getItem('vimMarks') || '{}'); } catch(ex) {}
-        marks[key] = { url: window.location.pathname, scrollY: window.scrollY };
-        localStorage.setItem('vimMarks', JSON.stringify(marks));
-        showToast("Mark '" + key + "' set");
-      }
-      return;
-    }
-
-    // Handle mark-jump mode (' + letter)
-    if (apostrophePending) {
-      if (e.repeat) return;
-      cancelApostrophe();
-      var key = e.key.toLowerCase();
-      if (key.length === 1 && key >= 'a' && key <= 'z') {
-        e.preventDefault();
-        var marks = {};
-        try { marks = JSON.parse(localStorage.getItem('vimMarks') || '{}'); } catch(ex) {}
-        var mark = marks[key];
-        if (mark) {
-          if (mark.url === window.location.pathname) {
-            window.scrollTo({ top: mark.scrollY, behavior: 'smooth' });
-            showToast("Jump to '" + key + "'");
-          } else {
-            sessionStorage.setItem('vimMarkScrollTo', mark.scrollY);
-            window.location.href = mark.url;
-          }
-        } else {
-          showToast("Mark '" + key + "' not found");
-        }
-      }
-      return;
-    }
 
     // Handle g-prefix commands (gg, gh, gb, gr, gp, ge, ga)
     if (gPending) {
@@ -384,26 +325,6 @@ window.toggleMobileMenu = function(e) {
     if (e.key === 'f') {
       e.preventDefault();
       enterHintMode();
-      return;
-    }
-
-    // "m" - Start mark-set mode
-    if (e.key === 'm') {
-      if (e.repeat) return;
-      e.preventDefault();
-      mPending = true;
-      showToast("Mark...");
-      mTimer = setTimeout(function() { mPending = false; mTimer = null; }, 2000);
-      return;
-    }
-
-    // "'" - Start mark-jump mode
-    if (e.key === "'") {
-      if (e.repeat) return;
-      e.preventDefault();
-      apostrophePending = true;
-      showToast("Go to mark...");
-      apostropheTimer = setTimeout(function() { apostrophePending = false; apostropheTimer = null; }, 2000);
       return;
     }
 
@@ -547,12 +468,6 @@ window.toggleMobileMenu = function(e) {
     }
   });
 
-  // Restore scroll position from vim mark navigation
-  var markScrollTo = sessionStorage.getItem('vimMarkScrollTo');
-  if (markScrollTo) {
-    sessionStorage.removeItem('vimMarkScrollTo');
-    window.scrollTo({ top: parseInt(markScrollTo, 10) });
-  }
 })();
 
 // Toast notification

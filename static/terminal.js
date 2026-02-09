@@ -528,8 +528,6 @@ ${portrait}
     t        Toggle table of contents       :       Open terminal
     i        Switch language (i18n)
     f        Follow link (hint labels)
-    m + key  Set mark (a-z bookmark)
-    ' + key  Jump to mark
 `;
     },
 
