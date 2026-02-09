@@ -572,6 +572,7 @@ document.addEventListener('click', function(e) {
     { key: 'ge', selector: '.nav-links a[href$="/services/"]' },
     { key: 'ga', selector: '.nav-links a[href$="/talks/"]' },
     { key: '/',  selector: '#search-toggle' },
+    { key: 'i',  selector: '.lang-switch' },
     { key: 'd',  selector: '#light-mode, #dark-mode' },
     { key: 't',  selector: '#toc-toggle' },
     { key: 'gg', selector: '#scroll-to-top' },
