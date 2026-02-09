@@ -19,9 +19,9 @@ related_readings = [
 
 Most people use AI coding assistants as a single conversation partner. You open a chat, describe what you need, and get an answer. It works. But it's like hiring one generalist to handle everything: frontend, backend, testing, documentation, deployment. No real team works that way.
 
-The real leverage comes when you stop treating AI as one assistant and start organizing it as a team. A team with an onboarding doc that sets expectations, standard procedures for recurring tasks, specialists for different domains, and the ability to work on multiple things in parallel.
+The real leverage comes when you organize AI as a team: onboarding, standard procedures, specialists, and parallel execution.
 
-In the [MCP post](/blog/mcp-giving-your-ai-agent-the-right-context/), I covered how to give your AI agent access to your environment. In [AI gives you speed, not quality](/blog/ai-gives-you-speed-not-quality/), I covered why human judgment still matters. This post covers the missing piece: how to organize that access into a coordinated workflow.
+In the [MCP post](/blog/mcp-giving-your-ai-agent-the-right-context/), I covered how to give your AI agent access to your environment. In [AI gives you speed, not quality](/blog/ai-gives-you-speed-not-quality/), why human judgment still matters. This post covers the missing piece: how to organize that access into a coordinated workflow.
 
 <!-- more -->
 
@@ -37,11 +37,11 @@ But `CLAUDE.md` is just the entry point. You can split rules into focused files 
 
 {% deep_dive(title="Glob-targeted rules in practice") %}
 
-- **`modules/*/Domain/**/*.php`**: Domain layer stays pure: no framework imports, no infrastructure dependencies, only plain PHP.
+- **`modules/*/Domain/**/*.php`**: No framework imports, no infrastructure dependencies, only plain PHP.
 - **`modules/*/Infrastructure/**/*.php`**: Controllers stay thin, Eloquent models stay in their place.
-- **`resources/js/**/*.tsx`**: React component conventions, TypeScript strictness, styling patterns.
+- **`resources/js/**/*.tsx`**: Component conventions, TypeScript strictness, styling patterns.
 
-Each rule file is scoped to the files it cares about. Domain rules don't fire when editing a controller. Frontend rules don't fire when writing a use case handler.
+Each rule file is scoped to the files it cares about. Domain rules don't fire when editing a controller.
 
 {% end %}
 
@@ -55,21 +55,21 @@ There's also a global `~/.claude/CLAUDE.md` that applies across all your project
 
 Every team has recurring workflows that live in wikis, runbooks, or someone's head. When they live in someone's head, they're fragile.
 
-Custom slash commands in `.claude/commands/` turn these workflows into executable instructions. Each command is a markdown file describing a multi-step procedure the agent follows. In one of my projects, every creation command starts with tests. TDD is baked into the procedure, not left to discipline. The full workflow, from ticket to PR, can happen in a single command.
+Custom slash commands in `.claude/commands/` turn these workflows into executable instructions. Each command is a markdown file describing a multi-step procedure. In one of my projects, every creation command starts with tests. TDD is baked into the procedure, not left to discipline.
 
 {% deep_dive(title="Commands from a real project") %}
 
 **Creation (TDD-first):**
-- **`/create-module`**: Scaffolds a full hexagonal module with domain, application, and infrastructure layers.
-- **`/create-entity`**: Generates domain entities with their value objects and test files.
-- **`/create-use-case`**: Builds command/query handlers with proper mocked tests.
-- **`/create-page`**: Creates React pages with factories and co-located smoke tests.
+- **`/create-module`**: Scaffolds a hexagonal module with domain, application, and infrastructure layers.
+- **`/create-entity`**: Domain entities with value objects and test files.
+- **`/create-use-case`**: Command/query handlers with mocked tests.
+- **`/create-page`**: React pages with factories and smoke tests.
 
 **Quality & workflow:**
-- **`/refactor-check`**: Analyzes code against SOLID principles and clean code patterns.
+- **`/refactor-check`**: Analyzes code against SOLID principles.
 - **`/test`**: Runs the suite with module filtering.
 - **`/fix`**: Auto-applies linting and static analysis corrections.
-- **`/gh-issue`**: Fetches an issue from GitHub, plans the implementation, executes it, and moves the card through the project board.
+- **`/gh-issue`**: From GitHub issue to implementation to PR in one command.
 
 {% end %}
 
@@ -81,13 +81,13 @@ Commands are _your_ procedures. They encode how your team does things. But there
 
 ### Skills as knowledge bases
 
-Skills are structured knowledge the agent can draw from. The reference documentation a specialist carries in their head. In one of my projects, I have skills for SOLID principles, hexagonal architecture, TDD workflows, and React/Inertia patterns.
+Skills are structured knowledge the agent can draw from. In one of my projects, I have skills for SOLID principles, hexagonal architecture, TDD workflows, and React/Inertia patterns.
 
 Rules constrain: "don't do this, always do that." Skills teach: "here's the pattern, here's why, here are the common mistakes." Rules are guardrails. Skills are expertise.
 
 ### Agents as specialized roles
 
-This is where the team metaphor gets concrete. Instead of one generalist, you define specialized agents, each with a clear role, specific tools, and even a different model based on the complexity of their job. You don't need your most senior architect to rename a variable. And you don't want an intern designing your module boundaries.
+Instead of one generalist, you define specialized agents with a clear role, specific tools, and even a different model based on the complexity of their job. You don't need your most senior architect to rename a variable.
 
 {% deep_dive(title="Agent roles from a real project") %}
 
@@ -109,20 +109,22 @@ This is where the team metaphor becomes literal. A single agent following instru
 
 Not all multi-agent setups are the same. There are two distinct coordination models, and choosing the right one matters.
 
-**Subagents** run within a single session. They do focused work and report results back to the main agent. Think of them as quick workers you dispatch for a specific task: research a library, verify a pattern, run a check. They can't talk to each other. The main agent manages everything.
+**Subagents** run within a single session. They do focused work and report results back to the main agent. They can't talk to each other. The main agent manages everything.
 
-**Agent teams** are fundamentally different. Each teammate is a fully independent Claude Code session with its own context window. They communicate directly through a shared mailbox, claim tasks from a shared task list, and coordinate without going through a central bottleneck.
+**Agent teams** are different. Each teammate is a fully independent Claude Code session with its own context window. They communicate through a shared mailbox, claim tasks from a shared task list, and coordinate without going through a central bottleneck.
 
 The architecture has four components:
 
 - **Team lead**: the main session that creates the team and orchestrates work
 - **Teammates**: separate Claude Code instances, each owning specific tasks
-- **Task list**: shared work items with dependency tracking — blocked tasks automatically unblock when dependencies complete
+- **Task list**: shared work items with dependency tracking. Blocked tasks automatically unblock when dependencies complete
 - **Mailbox**: direct messaging between agents, including broadcasts to the entire team
 
 > Subagents are workers that report back. Agent teams are collaborators that think together.
 
 Use subagents when only the result matters. Use agent teams when teammates need to share findings, challenge each other, and coordinate on their own. Agent teams use more tokens, so they're worth the overhead only when parallel exploration adds real value.
+
+Teammates load your project context automatically (`CLAUDE.md`, MCP servers, skills) but don't inherit the lead's conversation history. When spawning a teammate, be specific about which files to focus on and what constraints apply. A vague spawn prompt produces vague work.
 
 ![blog-middle](/images/blog/2026-02-07/middle.jpg)
 
@@ -130,15 +132,15 @@ Use subagents when only the result matters. Use agent teams when teammates need 
 
 Good teams don't just start coding. They discuss the approach, identify dependencies, agree on a plan. Claude Code's plan mode works the same way.
 
-Think of it as a technical refinement session. You describe the feature or the problem. The agent explores the codebase, reads relevant files, maps dependencies, and proposes an approach before changing anything. You approve, modify, or reject it. Think first, code second.
+You describe the problem. The agent explores the codebase, maps dependencies, and proposes an approach before changing anything. You approve, modify, or reject. Think first, code second.
 
-With agent teams, this gets more powerful. **Plan approval** lets you require teammates to design their approach before implementing. The teammate works in read-only mode until the lead approves their plan. If rejected, the teammate revises based on feedback and resubmits. You can shape the lead's judgment with criteria like _"only approve plans that include test coverage"_ or _"reject plans that modify the database schema."_
+With agent teams, **plan approval** lets you require teammates to design their approach before implementing. The teammate works in read-only mode until the lead approves. You can shape the lead's criteria: _"only approve plans that include test coverage"_ or _"reject plans that modify the database schema."_
 
-**Delegate mode** takes this further by restricting the lead to coordination only — spawning, messaging, shutting down teammates, and managing tasks. Without it, the lead sometimes starts implementing tasks itself instead of waiting for teammates. Delegate mode keeps the lead focused on orchestration, not execution.
+**Delegate mode** restricts the lead to coordination only. Without it, the lead sometimes starts implementing instead of waiting for teammates. Delegate mode keeps it focused on orchestration, not execution.
 
 ### Competing hypotheses
 
-This is the most compelling agent-team pattern for debugging. When the root cause is unclear, a single agent tends to find one plausible explanation and stop looking. Agent teams fight this by making teammates adversarial — each one investigates its own theory while actively trying to disprove the others.
+This is the most compelling agent-team pattern for debugging. When the root cause is unclear, a single agent tends to find one plausible explanation and stop looking. Agent teams fight this by making teammates adversarial. Each one investigates its own theory while actively trying to disprove the others.
 
 Sequential investigation suffers from anchoring: once one theory is explored, subsequent investigation is biased toward it. With multiple independent investigators challenging each other, the theory that survives is much more likely to be the actual root cause.
 
@@ -148,9 +150,9 @@ Not all work benefits from parallelism. The key question: can the teammates work
 
 - **Too small**: coordination overhead exceeds the benefit
 - **Too large**: teammates work too long without check-ins, increasing wasted effort
-- **Just right**: self-contained units that produce a clear deliverable — a function, a test file, a review
+- **Just right**: self-contained units that produce a clear deliverable. A function, a test file, a review
 
-Having 5-6 tasks per teammate keeps everyone productive. Break the work so each teammate owns a different set of files — two teammates editing the same file leads to overwrites. Clear ownership, no conflicts.
+Having 5-6 tasks per teammate keeps everyone productive. Break the work so each teammate owns a different set of files. Two teammates editing the same file leads to overwrites. Clear ownership, no conflicts.
 
 {% deep_dive(title="Backend + Frontend in parallel") %}
 
@@ -159,19 +161,19 @@ Say you're building a new feature that touches both backend and frontend. After 
 - A **backend agent** scaffolds the domain layer: entities, value objects, repository interfaces, use case handlers. All following hexagonal architecture, all test-first.
 - A **frontend agent** builds the React page, components, hooks, and factories. Each follows its own rules, draws from its own skills, and operates independently.
 
-They don't step on each other because the plan already defined the boundaries. The backend agent works within `modules/*/Domain/` and `modules/*/Application/`. The frontend agent works within `resources/js/pages/`. Clear ownership. No merge conflicts. No waiting.
+They don't step on each other because the plan already defined the boundaries. Clear ownership. No merge conflicts. No waiting.
 
 {% end %}
 
 ### Review after execution
 
-After implementation, the review agents take over. Instead of one reviewer catching everything, you have specialists: clean code reviewer for SOLID violations, React reviewer for component patterns, TDD coach for test quality, domain architect for module boundaries.
+After implementation, review agents take over. Instead of one reviewer catching everything, you have specialists: SOLID violations, component patterns, test quality, module boundaries.
 
 > A single agent is an assistant. Multiple agents working from a shared plan is a team.
 
 ## You are still the lead
 
-No matter how well configured, the agents work for you. You set the standards, define the procedures, write the rules, review the plans, and approve the output before it ships.
+No matter how well configured, the agents work for you. You set the standards, write the rules, review the plans, and approve the output before it ships. You can message any teammate mid-work to redirect their approach or add constraints. If someone's heading down the wrong path, you intervene directly.
 
 As I wrote in [AI gives you speed, not quality](/blog/ai-gives-you-speed-not-quality/), the code the agent produces is your responsibility. Agents still make mistakes, context windows have limits, and coordination isn't perfect. More parallelism without oversight is just more chaos, faster.
 
@@ -179,21 +181,21 @@ As I wrote in [AI gives you speed, not quality](/blog/ai-gives-you-speed-not-qua
 
 Hooks and git hooks act as the final safety net. In my setup, nothing gets committed unless the full suite is green and coverage is above 90%. The agent doesn't get to skip this. Neither does anyone else.
 
-Agent teams add their own quality hooks: `TeammateIdle` runs when a teammate is about to go idle (exit with code 2 to send feedback and keep them working), and `TaskCompleted` runs when a task is being marked complete (exit with code 2 to prevent completion and send feedback). These are automated policies no team member can bypass.
+Agent teams add their own hooks: `TeammateIdle` keeps idle teammates working, `TaskCompleted` prevents premature task completion. Automated policies no team member can bypass.
 
 {% deep_dive(title="Hooks, permissions, and guardrails") %}
 
-Git hooks run linters, static analysis, and tests before every commit. But Claude Code also has its own hooks (`.claude/hooks/`): shell commands that trigger on agent events like tool calls or file writes. They're the automated policies every team member must follow.
+Git hooks run linters, static analysis, and tests before every commit. Claude Code adds its own hooks (`.claude/hooks/`): shell commands that trigger on agent events like tool calls or file writes.
 
-On top of that, `.claude/settings.json` controls what agents are _allowed_ to do. You can whitelist specific tools and commands, and deny destructive operations like `rm -rf` or `sudo`. This means you control not just what agents know (rules, skills) but what they can execute (permissions). Rules set the culture. Permissions set the boundaries.
+`.claude/settings.json` controls what agents can execute. Whitelist specific tools and commands, deny destructive operations. You control not just what agents know (rules, skills) but what they can do (permissions). Rules set the culture. Permissions set the boundaries.
 
 {% end %}
 
 ### The foundation matters
 
-The agents will help you get there faster, but "there" has to be well-defined. If you don't know what hexagonal architecture looks like, agents won't discover it for you. If you don't understand TDD, no command will make your tests meaningful.
+The agents will help you get there faster, but "there" has to be well-defined. If you don't know what hexagonal architecture looks like, agents won't discover it for you.
 
-You don't build all of this on day one. You start with a `CLAUDE.md`. Then you notice you're repeating instructions, so you write a command. An agent breaks a convention, so you add a rule. Reviews take too long, so you create a reviewer agent. The setup grows organically from real friction, not from upfront design. Each addition solves a problem you actually had.
+You don't build all of this on day one. You start with a `CLAUDE.md`. Then you notice you're repeating instructions, so you write a command. An agent breaks a convention, so you add a rule. Reviews take too long, so you create a reviewer agent. The setup grows organically from real friction, not from upfront design. Each addition solves a problem you actually had. Same with agent teams: start with tasks that don't require writing code. Review a PR from multiple angles, research a library, investigate a bug. Learn the coordination model before throwing parallel implementation at it.
 
 If you want a starting point, I put together [laravel-claude-toolkit](https://github.com/Chemaclass/laravel-claude-toolkit): a Laravel starter kit with rules, commands, skills, agents, hooks, and permissions already configured. Use it as a reference or fork it for your own setup.
 
@@ -201,6 +203,6 @@ If you want a starting point, I put together [laravel-claude-toolkit](https://gi
 
 ## Resources
 
-- [Claude Code: Agent Teams](https://code.claude.com/docs/en/agent-teams) — the official docs on orchestrating teams of Claude Code sessions with shared tasks, inter-agent messaging, and centralized management
+- [Claude Code: Agent Teams](https://code.claude.com/docs/en/agent-teams)
 
 ![blog-footer](/images/blog/2026-02-07/footer.jpg)
