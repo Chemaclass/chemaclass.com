@@ -122,7 +122,25 @@ The architecture has four components:
 
 > Subagents are workers that report back. Agent teams are collaborators that think together.
 
-Use subagents when only the result matters. Use agent teams when teammates need to share findings, challenge each other, and coordinate on their own. Agent teams use more tokens, so they're worth the overhead only when parallel exploration adds real value.
+Use subagents when only the result matters. Use agent teams when teammates need to share findings, challenge each other, and coordinate on their own.
+
+### Getting started with agent teams
+
+Agent teams are still experimental. Enable them by adding this to `~/.claude/settings.json`:
+
+```json
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  }
+}
+```
+
+Creating a team is conversational. Describe what you want: _"Create an agent team to refactor the auth module. Spawn three teammates: one for backend API changes, one for frontend components, one for writing tests."_ Claude sets up the task list, spawns the teammates, and coordinates their work.
+
+You can view the team in-process (single terminal, navigate with Shift+Up/Down) or split across panes (each teammate in a separate tmux or iTerm2 window). Use Shift+Tab to activate delegate mode, which restricts the lead to coordination only.
+
+**Token consumption warning.** Agent teams burn through tokens fast. Each teammate has its own context window, and every message between agents adds up. Start with research and review tasks before moving to implementation. Three teammates exploring in parallel costs roughly 3x. Make sure the parallelism pays for itself.
 
 Teammates load your project context automatically (`CLAUDE.md`, MCP servers, skills) but don't inherit the lead's conversation history. When spawning a teammate, be specific about which files to focus on and what constraints apply. A vague spawn prompt produces vague work.
 
@@ -204,5 +222,6 @@ If you want a starting point, I put together [laravel-claude-toolkit](https://gi
 ## Resources
 
 - [Claude Code: Agent Teams](https://code.claude.com/docs/en/agent-teams)
+- [Claude Code Tips: Workflow Boosters](https://lacsw.github.io/rfrolov.me/en/blog/claude-code-tips)
 
 ![blog-footer](/images/blog/2026-02-07/footer.jpg)

@@ -122,7 +122,25 @@ La arquitectura tiene cuatro componentes:
 
 > Los subagentes son trabajadores que reportan. Los equipos de agentes son colaboradores que piensan juntos.
 
-Usa subagentes cuando solo importa el resultado. Usa equipos de agentes cuando los miembros necesitan compartir hallazgos, cuestionar al resto y coordinarse por su cuenta. Los equipos consumen más tokens, así que solo merecen la pena cuando la exploración en paralelo aporta valor real.
+Usa subagentes cuando solo importa el resultado. Usa equipos de agentes cuando los miembros necesitan compartir hallazgos, cuestionar al resto y coordinarse por su cuenta.
+
+### Empezando con equipos de agentes
+
+Los equipos de agentes son aún experimentales. Actívalos añadiendo esto a `~/.claude/settings.json`:
+
+```json
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  }
+}
+```
+
+Crear un equipo es conversacional. Describes lo que quieres: _"Crea un equipo de agentes para refactorizar el módulo de auth. Genera tres miembros: uno para cambios de API backend, uno para componentes frontend, uno para escribir tests."_ Claude configura la lista de tareas, genera los miembros y coordina el trabajo.
+
+Puedes ver el equipo en un mismo proceso (un terminal, navega con Shift+Up/Down) o dividido en paneles (cada miembro en una ventana tmux o iTerm2 separada). Usa Shift+Tab para activar el modo delegado, que restringe al lead a solo coordinación.
+
+**Advertencia sobre consumo de tokens.** Los equipos de agentes queman tokens rápidamente. Cada miembro tiene su propia ventana de contexto, y cada mensaje entre agentes suma. Empieza con tareas de investigación y revisión antes de pasar a implementación. Tres miembros explorando en paralelo cuesta aproximadamente 3x. Asegúrate de que el paralelismo se paga a sí mismo.
 
 Los miembros cargan automáticamente el contexto del proyecto (`CLAUDE.md`, servidores MCP, skills) pero no heredan el historial de conversación del lead. Al crear un miembro, sé específico sobre qué archivos revisar y qué restricciones aplican. Un prompt de creación vago produce trabajo vago.
 
@@ -202,5 +220,6 @@ Si quieres un punto de partida, preparé [laravel-claude-toolkit](https://github
 ## Recursos
 
 - [Claude Code: Agent Teams](https://code.claude.com/docs/en/agent-teams)
+- [Claude Code Tips: Workflow Boosters](https://lacsw.github.io/rfrolov.me/en/blog/claude-code-tips)
 
 ![blog-footer](/images/blog/2026-02-07/footer.jpg)
