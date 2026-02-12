@@ -219,7 +219,7 @@ Si quieres un punto de partida, preparé [laravel-claude-toolkit](https://github
 
 ## Recursos
 
-- [Claude Code: Agent Teams](https://code.claude.com/docs/en/agent-teams)
-- [Claude Code Tips: Workflow Boosters](https://lacsw.github.io/rfrolov.me/en/blog/claude-code-tips)
+- [Claude Code: Agent Teams](https://code.claude.com/docs/en/agent-teams) | claude.com
+- [Claude Code Tips: Workflow Boosters](https://rfrolov.me/en/blog/claude-code-tips) | rfrolov.me
 
 ![blog-footer](/images/blog/2026-02-07/footer.jpg)
