@@ -408,6 +408,7 @@
       document.getElementById('site-search')?.addEventListener('focus', loadSearch, {once: true});
     </script>
     <script type="text/javascript" src="{{ get_url(path='navigation.js') }}" defer></script>
+    <script type="text/javascript" src="{{ get_url(path='highlights.js') }}" defer></script>
 
     <!-- Keyboard shortcuts help modal (native dialog) -->
     <dialog id="shortcuts-dialog" class="shortcuts-dialog">
@@ -448,6 +449,7 @@
           <div class="shortcuts-dialog__item"><kbd>t</kbd><span>{{ trans(key="shortcuts_toc", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">table of contents</small></div>
           <div class="shortcuts-dialog__item"><kbd>i</kbd><span>{{ trans(key="shortcuts_lang", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">i18n</small></div>
           <div class="shortcuts-dialog__item"><kbd>f</kbd><span>{{ trans(key="shortcuts_follow", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">follow link</small></div>
+          <div class="shortcuts-dialog__item"><kbd>m</kbd><span>{{ trans(key="shortcuts_highlight", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">mark text</small></div>
         </div>
         <div class="shortcuts-dialog__group">
           <h4>{{ trans(key="shortcuts_general", lang=lang) }}</h4>

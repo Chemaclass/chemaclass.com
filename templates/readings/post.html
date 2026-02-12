@@ -124,7 +124,15 @@
       </div>
 
         <!-- Content -->
-        <div class="blog-post__content reading-post">
+        <div class="blog-post__content reading-post"
+             data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
+             data-hl-remove="{{ trans(key='highlight_remove', lang=lang) }}"
+             data-hl-share-x="{{ trans(key='highlight_share_x', lang=lang) }}"
+             data-hl-share-linkedin="{{ trans(key='highlight_share_linkedin', lang=lang) }}"
+             data-hl-copy-quote="{{ trans(key='highlight_copy_quote', lang=lang) }}"
+             data-hl-copied="{{ trans(key='highlight_copied', lang=lang) }}"
+             data-hl-saved="{{ trans(key='highlight_saved', lang=lang) }}"
+             data-hl-removed="{{ trans(key='highlight_removed', lang=lang) }}">
           {% if page.description %}
           <div class="tldr">{{ page.description }}</div>
           {% endif %}

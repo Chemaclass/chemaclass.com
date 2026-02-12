@@ -1,0 +1,155 @@
+// ==========================================================================
+// Text Highlighting & Sharing
+// ==========================================================================
+
+// Highlight marks — realistic highlighter pen effect
+.user-highlight {
+  background: linear-gradient(
+    168deg,
+    rgba(255, 213, 79, 0.08) 0%,
+    rgba(255, 213, 79, 0.45) 6%,
+    rgba(255, 213, 79, 0.5) 50%,
+    rgba(255, 213, 79, 0.42) 94%,
+    rgba(255, 213, 79, 0.08) 100%
+  );
+  padding: 0.1em 2px;
+  margin: 0 -2px;
+  border-radius: 3px 5px 2px 6px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  cursor: pointer;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: linear-gradient(
+      168deg,
+      rgba(255, 213, 79, 0.12) 0%,
+      rgba(255, 213, 79, 0.6) 6%,
+      rgba(255, 213, 79, 0.65) 50%,
+      rgba(255, 213, 79, 0.55) 94%,
+      rgba(255, 213, 79, 0.1) 100%
+    );
+  }
+
+  .theme-dark & {
+    background: linear-gradient(
+      168deg,
+      rgba(255, 179, 0, 0.03) 0%,
+      rgba(255, 179, 0, 0.32) 6%,
+      rgba(255, 179, 0, 0.38) 50%,
+      rgba(255, 179, 0, 0.3) 94%,
+      rgba(255, 179, 0, 0.03) 100%
+    );
+    color: #ffe0a0;
+
+    &:hover {
+      background: linear-gradient(
+        168deg,
+        rgba(255, 179, 0, 0.06) 0%,
+        rgba(255, 179, 0, 0.45) 6%,
+        rgba(255, 179, 0, 0.5) 50%,
+        rgba(255, 179, 0, 0.42) 94%,
+        rgba(255, 179, 0, 0.06) 100%
+      );
+    }
+  }
+}
+
+// Floating toolbar
+.highlight-toolbar {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 6px;
+  background: var(--body-color, #1a1a2e);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  z-index: 9500;
+  transform: translate(-50%, 0);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  // Arrow
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid var(--body-color, #1a1a2e);
+  }
+
+  .theme-dark & {
+    background: #2a2a3e;
+
+    &::after {
+      border-top-color: #2a2a3e;
+    }
+  }
+}
+
+// Toolbar buttons
+.highlight-toolbar__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--body-bg, #f0f0f5);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  .theme-dark & {
+    color: #e0e0e8;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+  }
+}
+
+// Separator
+.highlight-toolbar__sep {
+  width: 1px;
+  height: 20px;
+  margin: 0 2px;
+  background: rgba(255, 255, 255, 0.2);
+
+  .theme-dark & {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+// Mobile: larger touch targets
+@media (max-width: 600px) {
+  .highlight-toolbar {
+    padding: 4px 8px;
+    gap: 4px;
+  }
+
+  .highlight-toolbar__btn {
+    width: 40px;
+    height: 40px;
+  }
+}
