@@ -60,15 +60,41 @@
     tocList.className = 'toc-list';
     tocList.setAttribute('role', 'list');
 
+    let relatedAdded = false;
+
     headings.forEach((heading, index) => {
       if (!heading.id) {
         heading.id = `heading-${index}`;
       }
 
       const headingText = heading.textContent;
+      const insideRelated = heading.closest('.related-content');
 
-      // Skip "Related" section from TOC (by design)
-      if (headingText.trim().toLowerCase() === 'related') return;
+      // Skip any heading inside the related-content section entirely
+      if (insideRelated) {
+        if (!relatedAdded) {
+          relatedAdded = true;
+          // Add a single flat "Related" TOC entry pointing to the first related heading
+          const listItem = document.createElement('li');
+          listItem.className = 'toc-item toc-h2';
+
+          const link = document.createElement('a');
+          link.href = `#${heading.id}`;
+          link.textContent = 'Related';
+          link.className = 'toc-link';
+
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetPosition = heading.offsetTop - 20;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            history.pushState(null, null, `#${heading.id}`);
+          });
+
+          listItem.appendChild(link);
+          tocList.appendChild(listItem);
+        }
+        return;
+      }
 
       // Add anchor link to heading
       const anchor = document.createElement('a');
