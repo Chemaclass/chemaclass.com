@@ -4,7 +4,7 @@ description = "Un análisis detallado de cómo funciona Bitcoin, desglosando sus
 draft = false
 authors = [ "Jose Sanchis" ]
 [taxonomies]
-tags = [ "bitcoin", "architecture", "privacy", "software-design" ]
+tags = [ "bitcoin", "privacy", "software-design" ]
 [extra]
 subtitle = "Un estudio técnico sobre cómo funciona Bitcoin"
 pages = "520"
@@ -106,4 +106,3 @@ Este libro busca darte las herramientas para entender cómo funciona Bitcoin. As
 **Enlaces relacionados**
 
 - Sitio web del libro: [www.bitcoinconrigor.com](https://www.bitcoinconrigor.com)
-

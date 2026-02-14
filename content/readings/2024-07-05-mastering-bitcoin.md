@@ -4,7 +4,7 @@ description = "This book covers everything from the basics to the most profound 
 draft = false
 authors = [ "Andreas M. Antonopoulos", "David A. Harding" ]
 [taxonomies]
-tags = [ "bitcoin", "architecture", "software-design", "privacy" ]
+tags = [ "bitcoin", "software-design", "privacy" ]
 [extra]
 subtitle = "Programming the Open Blockchain"
 pages = "400"
@@ -90,4 +90,3 @@ The first edition of this book was published in December 2014. Ten years later, 
 1. Mining is one of the inventions that make Bitcoin special, a **decentralized consensus** mechanism that is the basis for P2P digital cash.
    - It secures the Bitcoin system and enables the emergence of network-wide consensus without a central authority.
 1. A **soft-fork** is a forward-compatible change to the consensus rules that allows unupgraded clients to continue to operate in consensus with the new rules.
-

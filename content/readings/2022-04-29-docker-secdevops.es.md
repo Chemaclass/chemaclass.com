@@ -3,7 +3,7 @@ title = "Docker: SecDevOps"
 description = "Un libro muy completo sobre Docker, desde lo básico hasta conceptos avanzados, con ejemplos fáciles de seguir."
 authors = [ "Fran Ramírez", "Elías Grande", "Rafael Troncoso" ]
 [taxonomies]
-tags = [ "docker", "devops", "architecture" ]
+tags = [ "docker", "devops" ]
 [extra]
 subtitle = "Desde introducción hasta conceptos avanzados"
 pages = "200"

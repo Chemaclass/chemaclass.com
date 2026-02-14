@@ -5,7 +5,7 @@ aliases = [ "/readings/btc-wip", "/readings/btcwip" ]
 draft = false
 authors = [ "Sjors Provoost" ]
 [taxonomies]
-tags = [ "bitcoin", "architecture", "privacy", "software-design" ]
+tags = [ "bitcoin", "privacy", "software-design" ]
 [extra]
 subtitle = "Technical innovations from the trenches"
 pages = "120"
@@ -73,4 +73,3 @@ The book links to more than two hundred articles, videos, podcasts, and even the
 
 - Book source code: [GitHub/Sjors](https://github.com/Sjors/nado-book/)
 - Book website: [www.btcwip.com](https://www.btcwip.com/)
-

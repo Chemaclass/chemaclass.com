@@ -4,7 +4,7 @@ description = "Con miles de proyectos cripto por ahí, dicen que Bitcoin es viej
 draft = false
 authors = [ "Sjors Provoost" ]
 [taxonomies]
-tags = [ "bitcoin", "architecture", "privacy", "software-design" ]
+tags = [ "bitcoin", "privacy", "software-design" ]
 [extra]
 subtitle = "Innovaciones técnicas desde las trincheras"
 pages = "120"
@@ -72,4 +72,3 @@ El libro enlaza a más de doscientos artículos, videos, podcasts e incluso cód
 
 - Código fuente del libro: [GitHub/Sjors](https://github.com/Sjors/nado-book/)
 - Sitio web del libro: [www.btcwip.com](https://www.btcwip.com/)
-

@@ -4,7 +4,7 @@ description = "Este libro cubre desde los conceptos básicos hasta los aspectos 
 draft = false
 authors = [ "Andreas M. Antonopoulos", "David A. Harding" ]
 [taxonomies]
-tags = [ "bitcoin", "architecture", "software-design", "privacy" ]
+tags = [ "bitcoin", "software-design", "privacy" ]
 [extra]
 subtitle = "Programando la Blockchain Abierta"
 pages = "400"
@@ -90,4 +90,3 @@ La primera edición se publicó en diciembre de 2014. Diez años después, ya te
 1. La minería es una de las invenciones que hacen especial a Bitcoin: un mecanismo de **consenso descentralizado** que es la base del efectivo digital P2P.
    - Asegura el sistema y permite que emerja consenso a nivel de red sin autoridad central.
 1. Un **soft-fork** es un cambio compatible hacia adelante en las reglas de consenso. Los clientes no actualizados pueden seguir operando con las nuevas reglas.
-

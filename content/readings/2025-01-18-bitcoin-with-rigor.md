@@ -5,7 +5,7 @@ aliases = [ "/readings/bitcoin-con-rigor" ]
 draft = false
 authors = [ "Jose Sanchis" ]
 [taxonomies]
-tags = [ "bitcoin", "architecture", "privacy", "software-design" ]
+tags = [ "bitcoin", "privacy", "software-design" ]
 [extra]
 subtitle = "A technical study about how Bitcoin works"
 pages = "520"
@@ -107,4 +107,3 @@ This book aims to equip readers with the tools to understand how Bitcoin works, 
 **Related links**
 
 - Book website: [www.bitcoinconrigor.com](https://www.bitcoinconrigor.com)
-
