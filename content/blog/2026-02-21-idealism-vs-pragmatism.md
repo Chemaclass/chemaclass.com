@@ -1,7 +1,7 @@
 +++
 title = "Idealism vs Pragmatism"
 description = "The tension between doing things right and getting things done shapes every decision in software and in life. TDD, pair programming, AI adoption: the best results come from holding both ends of the rope."
-draft = false
+draft = true
 [taxonomies]
 tags = [ "ai", "software", "craftsmanship", "leadership" ]
 [extra]
