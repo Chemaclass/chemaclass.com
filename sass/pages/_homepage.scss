@@ -323,6 +323,17 @@ main:has(.homepage-container) #scroll-to-top {
 }
 
 // Skills Section
+@keyframes skill-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .skills-section {
   margin: 0;
 }
@@ -335,19 +346,29 @@ main:has(.homepage-container) #scroll-to-top {
   margin: 1rem 0;
 }
 
-a.skill-tag {
-  text-decoration: none;
-  cursor: pointer;
-}
-
 .skill-tag {
-  display: inline-block;
-  padding: 0.4rem 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
   transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo);
   cursor: default;
+  opacity: 0;
+  animation: skill-fade-in 0.35s ease forwards;
+
+  @for $i from 1 through 17 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.04}s;
+    }
+  }
+
+  i {
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
 
   &:hover {
     transform: translateY(-1px);
@@ -392,13 +413,6 @@ a.skill-tag {
     color: #db2777;
     border: 1px solid rgba(236, 72, 153, 0.2);
   }
-
-  &.monitor {
-    background: rgba(168, 85, 247, 0.1);
-    color: #9333ea;
-    border: 1px solid rgba(168, 85, 247, 0.2);
-  }
-
 }
 
 // Projects Grid
@@ -709,6 +723,10 @@ a.skill-tag {
   .skill-tag {
     padding: 0.3rem 0.7rem;
     font-size: 0.7rem;
+
+    i {
+      font-size: 0.65rem;
+    }
   }
 
   .about-card {
@@ -851,6 +869,10 @@ a.skill-tag {
   .skill-tag {
     padding: 0.25rem 0.6rem;
     font-size: 0.65rem;
+
+    i {
+      font-size: 0.6rem;
+    }
   }
 
   .hero-content .hero-text h1 {
