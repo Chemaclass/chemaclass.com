@@ -78,7 +78,7 @@
         <section class="hero-content">
             <div class="profile">
                 <div class="profile-container">
-                    <img src="{{ profile_image.url }}" alt="{{ trans(key="home_profile_alt", lang=lang) }}" width="360" height="360"/>
+                    <img src="{{ profile_image.url }}" alt="{{ trans(key="home_profile_alt", lang=lang) }}" width="360" height="360" decoding="async"/>
                 </div>
             </div>
             <div class="hero-text">
@@ -99,7 +99,7 @@
                     <h2>{{ trans(key="home_about", lang=lang) }}</h2>
                     <ul class="about-list">
                         <li class="expandable">
-                            <div class="about-item-header">
+                            <div class="about-item-header" tabindex="0" role="button" aria-expanded="false">
                                 <span class="list-icon"><i class="fa-solid fa-seedling"></i></span>
                                 <span class="about-item-title">{% if lang == "es" %}Tech Lead en <a target="_blank" rel="noopener" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>{% else %}Tech Lead at <a target="_blank" rel="noopener" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>{% endif %}</span>
                                 <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
@@ -109,7 +109,7 @@
                             </div>
                         </li>
                         <li class="expandable">
-                            <div class="about-item-header">
+                            <div class="about-item-header" tabindex="0" role="button" aria-expanded="false">
                                 <span class="list-icon"><i class="fa-solid fa-code"></i></span>
                                 <span class="about-item-title">{% if lang == "es" %}{{ config.extra.years_software }}+ años en software, {{ config.extra.years_leadership }}+ en liderazgo{% else %}{{ config.extra.years_software }}+ years in software, {{ config.extra.years_leadership }}+ in leadership{% endif %}</span>
                                 <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
@@ -119,7 +119,7 @@
                             </div>
                         </li>
                         <li class="expandable">
-                            <div class="about-item-header">
+                            <div class="about-item-header" tabindex="0" role="button" aria-expanded="false">
                                 <span class="list-icon"><i class="fa-solid fa-check-double"></i></span>
                                 <span class="about-item-title">{{ trans(key="home_about_3_title", lang=lang) }}</span>
                                 <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
@@ -129,7 +129,7 @@
                             </div>
                         </li>
                         <li class="expandable">
-                            <div class="about-item-header">
+                            <div class="about-item-header" tabindex="0" role="button" aria-expanded="false">
                                 <span class="list-icon"><i class="fa-solid fa-users"></i></span>
                                 <span class="about-item-title">{{ trans(key="home_about_4_title", lang=lang) }}</span>
                                 <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
@@ -151,8 +151,8 @@
     <!-- Skills Section -->
     <section class="skills-section">
         <div class="skills-tags">
-            <span class="skill-tag lang">PHP</span>
-            <span class="skill-tag lang">Bash</span>
+            <a href="/blog/tags/php/" class="skill-tag lang">PHP</a>
+            <a href="/blog/tags/bash/" class="skill-tag lang">Bash</a>
             <span class="skill-tag lang">Lisp</span>
             <span class="skill-tag tool">Laravel</span>
             <span class="skill-tag tool">Symfony</span>
@@ -163,11 +163,11 @@
             <span class="skill-tag db">PostgreSQL</span>
             <span class="skill-tag db">MySQL</span>
             <span class="skill-tag db">Redis</span>
-            <span class="skill-tag practice">TDD</span>
-            <span class="skill-tag practice">XP</span>
-            <span class="skill-tag practice">{{ trans(key="home_skill_open_source", lang=lang) }}</span>
-            <span class="skill-tag soft">{{ trans(key="home_skill_leadership", lang=lang) }}</span>
-            <span class="skill-tag soft">{{ trans(key="home_skill_communication", lang=lang) }}</span>
+            <a href="/blog/tags/tdd/" class="skill-tag practice">TDD</a>
+            <a href="/blog/tags/xp/" class="skill-tag practice">XP</a>
+            <a href="/blog/tags/open-source/" class="skill-tag practice">{{ trans(key="home_skill_open_source", lang=lang) }}</a>
+            <a href="/blog/tags/leadership/" class="skill-tag soft">{{ trans(key="home_skill_leadership", lang=lang) }}</a>
+            <a href="/blog/tags/communication/" class="skill-tag soft">{{ trans(key="home_skill_communication", lang=lang) }}</a>
         </div>
     </section>
 
@@ -227,6 +227,21 @@
             {% set blogs = get_section(path="blog/_index.md", lang=lang) %}
             {% set latest_blog = blogs.pages.0 %}
             <a href="{{ latest_blog.permalink }}" class="latest-card" data-from="{{latest_blog.date}}">
+                {% if latest_blog.extra.static_thumbnail %}
+                <div class="latest-card__thumb">
+                    {% if latest_blog.extra.static_thumbnail is matching("^http[s]?://") %}
+                        <img src="{{ latest_blog.extra.static_thumbnail | safe }}" alt="{{ latest_blog.title }}" loading="lazy" decoding="async" />
+                    {% else %}
+                        {% set thumb_path = latest_blog.extra.static_thumbnail | trim_start_matches(pat="/") %}
+                        {% set thumb_webp = resize_image(path=thumb_path, width=400, height=225, op="fill", quality=75, format="webp") %}
+                        {% set thumb_fb = resize_image(path=thumb_path, width=400, height=225, op="fill", quality=80) %}
+                        <picture>
+                            <source type="image/webp" srcset="{{ thumb_webp.url }}" />
+                            <img src="{{ thumb_fb.url }}" alt="{{ latest_blog.title }}" width="{{ thumb_fb.width }}" height="{{ thumb_fb.height }}" loading="lazy" decoding="async" />
+                        </picture>
+                    {% endif %}
+                </div>
+                {% endif %}
                 <span class="latest-type">{{ trans(key="nav_blog", lang=lang) }}</span>
                 <h3>{{ latest_blog.title }}</h3>
                 <p class="latest-preview">{{ latest_blog.description | truncate(length=120) }}</p>
@@ -242,6 +257,21 @@
             {% set readings = get_section(path="readings/_index.md", lang=lang) %}
             {% set latest_reading = readings.pages.0 %}
             <a href="{{ latest_reading.permalink }}" class="latest-card" data-from="{{latest_reading.date}}">
+                {% if latest_reading.extra.static_thumbnail %}
+                <div class="latest-card__thumb">
+                    {% if latest_reading.extra.static_thumbnail is matching("^http[s]?://") %}
+                        <img src="{{ latest_reading.extra.static_thumbnail | safe }}" alt="{{ latest_reading.title }}" loading="lazy" decoding="async" />
+                    {% else %}
+                        {% set thumb_path = latest_reading.extra.static_thumbnail | trim_start_matches(pat="/") %}
+                        {% set thumb_webp = resize_image(path=thumb_path, width=400, height=225, op="fill", quality=75, format="webp") %}
+                        {% set thumb_fb = resize_image(path=thumb_path, width=400, height=225, op="fill", quality=80) %}
+                        <picture>
+                            <source type="image/webp" srcset="{{ thumb_webp.url }}" />
+                            <img src="{{ thumb_fb.url }}" alt="{{ latest_reading.title }}" width="{{ thumb_fb.width }}" height="{{ thumb_fb.height }}" loading="lazy" decoding="async" />
+                        </picture>
+                    {% endif %}
+                </div>
+                {% endif %}
                 <span class="latest-type">{{ trans(key="nav_readings", lang=lang) }}</span>
                 <h3>{{ latest_reading.title }}</h3>
                 <p class="latest-preview">{{ latest_reading.description | truncate(length=120) }}</p>
@@ -253,6 +283,7 @@
                     {% endif %}
                 </span>
             </a>
+
         </div>
     </section>
 
@@ -262,15 +293,19 @@
             <h2>{{ trans(key="home_connect", lang=lang) }}</h2>
         </div>
         <div class="connect-links">
-            <a href="https://x.com/Chemaclass" target="_blank" rel="noopener" class="connect-link connect-link--twitter">
+            <a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="connect-link connect-link--github" aria-label="GitHub profile">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://x.com/Chemaclass" target="_blank" rel="noopener" class="connect-link connect-link--twitter" aria-label="Twitter profile">
                 <i class="fa-brands fa-x-twitter"></i>
                 <span>Twitter</span>
             </a>
-            <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="noopener" class="connect-link connect-link--linkedin">
+            <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="noopener" class="connect-link connect-link--linkedin" aria-label="LinkedIn profile">
                 <i class="fa-brands fa-linkedin"></i>
                 <span>LinkedIn</span>
             </a>
-            <a href="mailto:me@chemaclass.es" class="connect-link connect-link--email">
+            <a href="mailto:me@chemaclass.es" class="connect-link connect-link--email" aria-label="Send email">
                 <i class="fa-solid fa-envelope"></i>
                 <span>Email</span>
             </a>
@@ -284,9 +319,18 @@
 <script>
 // Expandable about items
 document.querySelectorAll('.about-list li.expandable').forEach(item => {
-  item.addEventListener('click', (e) => {
+  const header = item.querySelector('.about-item-header');
+  function toggle(e) {
     if (e.target.closest('a')) return;
-    item.classList.toggle('expanded');
+    const expanded = item.classList.toggle('expanded');
+    header.setAttribute('aria-expanded', expanded);
+  }
+  item.addEventListener('click', toggle);
+  header.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle(e);
+    }
   });
 });
 

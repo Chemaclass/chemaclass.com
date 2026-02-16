@@ -335,6 +335,11 @@ main:has(.homepage-container) #scroll-to-top {
   margin: 1rem 0;
 }
 
+a.skill-tag {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .skill-tag {
   display: inline-block;
   padding: 0.4rem 0.9rem;
@@ -499,6 +504,20 @@ main:has(.homepage-container) #scroll-to-top {
     transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
     border-color: var(--accent-color);
+  }
+
+  .latest-card__thumb {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+
+    img, picture {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
   }
 
   .latest-type {
@@ -907,6 +926,13 @@ main:has(.homepage-container) #scroll-to-top {
   }
 
   // Brand-specific hover colors
+  &--github:hover {
+    border-color: #333;
+    background: #333;
+    color: white;
+    i { color: white; }
+  }
+
   &--twitter:hover {
     border-color: #000;
     background: #000;
