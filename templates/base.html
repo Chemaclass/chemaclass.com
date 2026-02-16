@@ -93,9 +93,20 @@
 
     {% if page %}
     <meta property="og:type" content="article">
+    {% if page.date %}
+    <meta property="article:published_time" content="{{ page.date | date(format='%+') }}">
+    <meta property="article:modified_time" content="{% if page.updated %}{{ page.updated | date(format='%+') }}{% else %}{{ page.date | date(format='%+') }}{% endif %}">
+    {% endif %}
+    <meta property="article:author" content="{{ config.base_url | safe }}">
+    {% if page.taxonomies.tags %}
+    {% for tag in page.taxonomies.tags %}
+    <meta property="article:tag" content="{{ tag }}">
+    {% endfor %}
+    {% endif %}
     {% else %}
     <meta property="og:type" content="website">
     {% endif %}
+    <meta property="og:site_name" content="{{ config.title }}">
 
     <!-- Open Graph title and description -->
     {% if page.title %}

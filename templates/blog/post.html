@@ -61,11 +61,11 @@
         <!-- Hero thumbnail -->
         {% if page.extra.static_thumbnail %}
         <div class="blog-post__hero">
-          <img src="{{ page.extra.static_thumbnail }}" alt="{{ page.title }}" />
+          <img src="{{ page.extra.static_thumbnail }}" alt="{{ page.title }}" width="960" height="540" fetchpriority="high" />
         </div>
         {% elif page.extra.thumbnail %}
         <div class="blog-post__hero">
-          <img src="{{ get_url(path=page.path ~ page.extra.thumbnail) }}" alt="{{ page.title }}" />
+          <img src="{{ get_url(path=page.path ~ page.extra.thumbnail) }}" alt="{{ page.title }}" width="960" height="540" fetchpriority="high" />
         </div>
         {% endif %}
 
@@ -143,6 +143,13 @@
 <script type="text/javascript" src="{{ get_url(path='toc.js') | safe }}" defer></script>
 <script type="text/javascript" src="{{ get_url(path='interactive-list.js') | safe }}" defer></script>
 {% include "partials/reading-progress.html" %}
+<script>
+  // Add lazy loading to markdown content images
+  document.querySelectorAll('.blog-post__content img').forEach(function(img) {
+    img.setAttribute('loading', 'lazy');
+    img.setAttribute('decoding', 'async');
+  });
+</script>
 {% endblock js %}
 
 {% macro page_sub_header(page) %}

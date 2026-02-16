@@ -56,12 +56,18 @@
   "author": {
     "@type": "Person",
     "name": "Jose Maria Valera Reales"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ config.base_url | safe }}/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
   }
 }
 </script>
 
-<!-- og:site_name for better social branding -->
-<meta property="og:site_name" content="Chemaclass">
 {% endblock posthead %}
 
 {% block content %}

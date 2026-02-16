@@ -3,11 +3,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 3px;
-  background: var(--accent-color);
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-color-light));
   width: 0;
   z-index: 9999;
-  transition: width 0.1s ease-out;
+  transition: width 0.15s ease-out;
 }
 
 // Blog post article
@@ -232,13 +232,15 @@
     background: var(--search-input-bg);
     text-decoration: none;
     color: inherit;
-    transition: all 0.2s ease;
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo), border-color 0.2s ease, background 0.2s ease;
     max-width: 48%;
     flex: 1;
+    box-shadow: var(--shadow-sm);
 
     &:hover {
       border: 1px solid var(--accent-color) !important;
       background: var(--search-bg-selected-item);
+      box-shadow: var(--shadow-md);
     }
 
     &:hover &-label {

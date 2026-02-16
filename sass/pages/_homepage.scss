@@ -195,7 +195,8 @@ main:has(.homepage-container) #scroll-to-top {
   border: 1px solid var(--preview-divider-color);
   border-radius: 16px;
   padding: 1.75rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease;
 
   h2 {
     margin-top: 0;
@@ -340,21 +341,21 @@ main:has(.homepage-container) #scroll-to-top {
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
-  transition: all 0.2s ease;
+  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo);
   cursor: default;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
   }
   background: var(--search-bg-selected-item);
   color: var(--body-color);
   border: 1px solid var(--preview-divider-color);
 
   &.lang {
-    background: rgba(58, 92, 136, 0.12);
+    background: rgba(45, 90, 142, 0.1);
     color: var(--accent-color);
-    border: 1px solid rgba(58, 92, 136, 0.25);
+    border: 1px solid rgba(45, 90, 142, 0.2);
   }
 
   &.tool {
@@ -409,16 +410,16 @@ main:has(.homepage-container) #scroll-to-top {
   border-radius: 12px;
   padding: 1rem 0.75rem;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo), border-color 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
     border-color: var(--accent-color);
   }
 
@@ -489,14 +490,14 @@ main:has(.homepage-container) #scroll-to-top {
   border-radius: 12px;
   padding: 1rem;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo), border-color 0.2s ease;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
     border-color: var(--accent-color);
   }
 
@@ -892,7 +893,7 @@ main:has(.homepage-container) #scroll-to-top {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--body-color);
-  transition: all 0.2s ease;
+  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo), background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 
   i {
     font-size: 1rem;
@@ -902,7 +903,7 @@ main:has(.homepage-container) #scroll-to-top {
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
   }
 
   // Brand-specific hover colors

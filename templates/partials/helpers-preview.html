@@ -64,14 +64,14 @@
   <a href="{{ post.permalink }}" class="blog-card__link">
     {% if post.extra.thumbnail %}
       <div class="blog-card__thumbnail">
-        <img src="{{ get_url(path=post.path ~ post.extra.thumbnail) }}" alt="{{ post.title }}" loading="lazy" />
+        <img src="{{ get_url(path=post.path ~ post.extra.thumbnail) }}" alt="{{ post.title }}" width="480" height="270" loading="lazy" decoding="async" />
       </div>
     {% elif post.extra.static_thumbnail %}
       <div class="blog-card__thumbnail">
         {% if post.extra.static_thumbnail is matching("^http[s]?://") %}
-          <img src="{{ post.extra.static_thumbnail | safe }}" alt="{{ post.title }}" loading="lazy" />
+          <img src="{{ post.extra.static_thumbnail | safe }}" alt="{{ post.title }}" width="480" height="270" loading="lazy" decoding="async" />
         {% else %}
-          <img src="{{ get_url(path=post.extra.static_thumbnail) }}" alt="{{ post.title }}" loading="lazy" />
+          <img src="{{ get_url(path=post.extra.static_thumbnail) }}" alt="{{ post.title }}" width="480" height="270" loading="lazy" decoding="async" />
         {% endif %}
       </div>
     {% endif %}
