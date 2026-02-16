@@ -60,6 +60,11 @@
 // Disable global shortcuts on 404 page
 window.disableGlobalShortcuts = true;
 
+// Track 404 page hits
+if (window.cronitor) {
+  cronitor('track', 'PageNotFound', { path: window.location.pathname });
+}
+
 (function() {
   const TYPING_SPEED = {
     character: { min: 30, variance: 20 },

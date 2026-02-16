@@ -67,7 +67,27 @@
     <script async src="https://rum.cronitor.io/script.js"></script>
     <script>
       window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
-      cronitor('config', { clientKey: '{{rum_key}}' });
+      if (!localStorage.getItem('cronitor_exclude')) {
+        cronitor('config', { clientKey: '{{rum_key}}' });
+      }
+
+      // Track outbound link clicks
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[href]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        if (href && href.startsWith('http') && !href.includes(location.hostname)) {
+          cronitor('track', 'OutboundClick', { url: href });
+        }
+      });
+
+      // Track language switches
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a.lang-switch');
+        if (!link) return;
+        var target = link.textContent.trim();
+        cronitor('track', 'LanguageSwitch', { to: target });
+      });
     </script>
     {% endif %}
 
