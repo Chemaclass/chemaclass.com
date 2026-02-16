@@ -61,11 +61,21 @@
         <!-- Hero thumbnail -->
         {% if page.extra.static_thumbnail %}
         <div class="blog-post__hero blog-post__hero--reading">
-          <img src="{{ page.extra.static_thumbnail }}" alt="{{ page.title }}" width="960" height="540" fetchpriority="high" />
+          {% if page.extra.static_thumbnail is matching("^http[s]?://") %}
+            <img src="{{ page.extra.static_thumbnail | safe }}" alt="{{ page.title }}" width="280" height="420" fetchpriority="high" />
+          {% else %}
+            {% set hero_path = page.extra.static_thumbnail | trim_start_matches(pat="/") %}
+            {% set hero_sm = resize_image(path=hero_path, width=280, height=420, op="fill", quality=80, format="webp") %}
+            {% set hero_fb = resize_image(path=hero_path, width=280, height=420, op="fill", quality=85) %}
+            <picture>
+              <source type="image/webp" srcset="{{ hero_sm.url }}" />
+              <img src="{{ hero_fb.url }}" alt="{{ page.title }}" width="{{ hero_fb.width }}" height="{{ hero_fb.height }}" fetchpriority="high" />
+            </picture>
+          {% endif %}
         </div>
         {% elif page.extra.thumbnail %}
         <div class="blog-post__hero blog-post__hero--reading">
-          <img src="{{ get_url(path=page.path ~ page.extra.thumbnail) }}" alt="{{ page.title }}" width="960" height="540" fetchpriority="high" />
+          <img src="{{ get_url(path=page.path ~ page.extra.thumbnail) }}" alt="{{ page.title }}" width="280" height="420" fetchpriority="high" />
         </div>
         {% endif %}
 

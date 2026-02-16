@@ -149,6 +149,10 @@
     &:hover {
       color: var(--accent-color);
     }
+
+    &.nav-active {
+      color: var(--accent-color);
+    }
   }
 
   button, span[onclick] {

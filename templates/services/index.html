@@ -7,6 +7,48 @@
 
 {% block posthead %}
 <link rel="preload" href="{{ get_url(path='github-stars.js') | safe }}" as="script">
+
+<!-- FAQPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "{% if lang == 'es' %}¿Cuánto tiempo tarda un sitio web?{% else %}How long does a website take?{% endif %}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{% if lang == 'es' %}Normalmente 2-4 semanas desde el primer contacto hasta el lanzamiento. Sitios más complejos con contenido personalizado pueden tardar un poco más.{% else %}Typically 2-4 weeks from first contact to launch. More complex sites with custom content may take a bit longer.{% endif %}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{% if lang == 'es' %}¿Puedo editar el contenido yo mismo?{% else %}Can I edit the content myself?{% endif %}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{% if lang == 'es' %}Sí. Los sitios estáticos usan archivos Markdown simples que puedes editar. WordPress incluye un panel de control completo. Te enseño a usar ambos.{% else %}Yes. Static sites use simple Markdown files you can edit. WordPress includes a full dashboard. I'll teach you to use either.{% endif %}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{% if lang == 'es' %}¿Qué incluye un sitio web típico?{% else %}What's included in a typical website?{% endif %}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{% if lang == 'es' %}4-5 páginas (inicio, sobre mí, contacto y un par de páginas personalizadas), diseño responsive, SEO básico, seguridad HTTPS, optimización de rendimiento y analíticas.{% else %}4-5 pages (homepage, about, contact, and a couple of custom pages), responsive design, SEO fundamentals, HTTPS security, performance optimization, and analytics.{% endif %}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{% if lang == 'es' %}¿Ofreces mantenimiento continuo?{% else %}Do you offer ongoing maintenance?{% endif %}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{% if lang == 'es' %}Sí. Los sitios estáticos necesitan mantenimiento mínimo. WordPress requiere actualizaciones regulares. También ayudo con cambios puntuales.{% else %}Yes. Static sites need minimal maintenance. WordPress requires regular updates. I also help with one-off changes.{% endif %}"
+      }
+    }
+  ]
+}
+</script>
 {% endblock posthead %}
 
 {% block content %}

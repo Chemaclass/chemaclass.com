@@ -71,7 +71,13 @@
         {% if post.extra.static_thumbnail is matching("^http[s]?://") %}
           <img src="{{ post.extra.static_thumbnail | safe }}" alt="{{ post.title }}" width="480" height="270" loading="lazy" decoding="async" />
         {% else %}
-          <img src="{{ get_url(path=post.extra.static_thumbnail) }}" alt="{{ post.title }}" width="480" height="270" loading="lazy" decoding="async" />
+          {% set card_path = post.extra.static_thumbnail | trim_start_matches(pat="/") %}
+          {% set card_webp = resize_image(path=card_path, width=480, height=270, op="fill", quality=75, format="webp") %}
+          {% set card_fb = resize_image(path=card_path, width=480, height=270, op="fill", quality=80) %}
+          <picture>
+            <source type="image/webp" srcset="{{ card_webp.url }}" />
+            <img src="{{ card_fb.url }}" alt="{{ post.title }}" width="{{ card_fb.width }}" height="{{ card_fb.height }}" loading="lazy" decoding="async" />
+          </picture>
         {% endif %}
       </div>
     {% endif %}

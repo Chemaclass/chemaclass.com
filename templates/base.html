@@ -91,6 +91,26 @@
     </script>
     {% endif %}
 
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Chemaclass",
+      "url": "{{ config.base_url | safe }}",
+      "logo": "{{ get_url(path=config.extra.icon) | safe }}",
+      "founder": {
+        "@type": "Person",
+        "name": "Jose Maria Valera Reales"
+      },
+      "sameAs": [
+        "https://x.com/Chemaclass",
+        "https://github.com/Chemaclass",
+        "https://www.linkedin.com/in/jose-maria-valera-reales/"
+      ]
+    }
+    </script>
+
     {% if page %}
     <meta property="og:type" content="article">
     {% if page.date %}
@@ -275,18 +295,19 @@
             <span></span>
           </button>
           <div class="nav-links">
+            {% set cp = current_path | default(value="/") %}
             {% if lang == "es" %}
-              <a href="/es/blog/">{{ trans(key="nav_blog", lang=lang) }}</a>
-              <a href="/es/readings/">{{ trans(key="nav_readings", lang=lang) }}</a>
-              <a href="/es/topics/">{{ trans(key="nav_topics", lang=lang) }}</a>
-              <a href="/es/services/">{{ trans(key="nav_services", lang=lang) }}</a>
-              <a href="/es/talks/">{{ trans(key="nav_talks", lang=lang) }}</a>
+              <a href="/es/blog/"{% if cp is starting_with("/es/blog/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_blog", lang=lang) }}</a>
+              <a href="/es/readings/"{% if cp is starting_with("/es/readings/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_readings", lang=lang) }}</a>
+              <a href="/es/topics/"{% if cp is starting_with("/es/topics/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_topics", lang=lang) }}</a>
+              <a href="/es/services/"{% if cp is starting_with("/es/services/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_services", lang=lang) }}</a>
+              <a href="/es/talks/"{% if cp is starting_with("/es/talks/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_talks", lang=lang) }}</a>
             {% else %}
-              <a href="/blog/">{{ trans(key="nav_blog", lang=lang) }}</a>
-              <a href="/readings/">{{ trans(key="nav_readings", lang=lang) }}</a>
-              <a href="/topics/">{{ trans(key="nav_topics", lang=lang) }}</a>
-              <a href="/services/">{{ trans(key="nav_services", lang=lang) }}</a>
-              <a href="/talks/">{{ trans(key="nav_talks", lang=lang) }}</a>
+              <a href="/blog/"{% if cp is starting_with("/blog/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_blog", lang=lang) }}</a>
+              <a href="/readings/"{% if cp is starting_with("/readings/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_readings", lang=lang) }}</a>
+              <a href="/topics/"{% if cp is starting_with("/topics/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_topics", lang=lang) }}</a>
+              <a href="/services/"{% if cp is starting_with("/services/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_services", lang=lang) }}</a>
+              <a href="/talks/"{% if cp is starting_with("/talks/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_talks", lang=lang) }}</a>
             {% endif %}
             <div class="nav-utilities">
               <button id="search-toggle" onclick="toggleSearch()" title="{{ trans(key="search_toggle_title", lang=lang) }}">
