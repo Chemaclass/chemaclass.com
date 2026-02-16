@@ -670,8 +670,9 @@ a.skill-tag {
     gap: 0.5rem;
   }
 
-  .profile {
-    display: none;
+  .profile .profile-container {
+    width: 120px;
+    height: 120px;
   }
 
   .hero-content {
@@ -679,7 +680,7 @@ a.skill-tag {
 
     .hero-text {
       h1 {
-        display: none;
+        font-size: 1.5rem;
       }
 
       .subtitle {
@@ -894,17 +895,17 @@ a.skill-tag {
 }
 
 .connect-links {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.75rem;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .connect-link {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.65rem 1rem;
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
   border-radius: 2rem;
@@ -955,8 +956,15 @@ a.skill-tag {
   }
 }
 
+@media (max-width: $breakpoint-tablet) {
+  .connect-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: $breakpoint-phone) {
   .connect-links {
+    grid-template-columns: 1fr;
     gap: 0.5rem;
   }
 
