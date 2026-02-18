@@ -91,7 +91,15 @@
              data-hl-copy-quote="{{ trans(key='highlight_copy_quote', lang=lang) }}"
              data-hl-copied="{{ trans(key='highlight_copied', lang=lang) }}"
              data-hl-saved="{{ trans(key='highlight_saved', lang=lang) }}"
-             data-hl-removed="{{ trans(key='highlight_removed', lang=lang) }}">
+             data-hl-removed="{{ trans(key='highlight_removed', lang=lang) }}"
+             data-hl-add-note="{{ trans(key='highlight_add_note', lang=lang) }}"
+             data-hl-edit-note="{{ trans(key='highlight_edit_note', lang=lang) }}"
+             data-hl-note-saved="{{ trans(key='highlight_note_saved', lang=lang) }}"
+             data-hl-note-removed="{{ trans(key='highlight_note_removed', lang=lang) }}"
+             data-hl-note-placeholder="{{ trans(key='highlight_note_placeholder', lang=lang) }}"
+             data-hl-clear-all="{{ trans(key='highlight_clear_all', lang=lang) }}"
+             data-hl-clear-confirm="{{ trans(key='highlight_clear_confirm', lang=lang) }}"
+             data-hl-clear-done="{{ trans(key='highlight_clear_done', lang=lang) }}">
           {{ page.content | safe }}
         </div>
 
@@ -102,6 +110,7 @@
             {{ macros::edit_icon() }}
             {{ trans(key="found_typo", lang=lang) }}
           </a>
+          <span id="highlight-clear-slot"></span>
         </footer>
 
         <!-- Chapter navigation -->

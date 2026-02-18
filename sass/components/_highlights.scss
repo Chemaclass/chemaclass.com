@@ -31,6 +31,19 @@
     );
   }
 
+  // Active state — stronger highlight when its note is focused
+  &--active {
+    background: linear-gradient(
+      168deg,
+      rgba(255, 179, 0, 0.15) 0%,
+      rgba(255, 179, 0, 0.65) 6%,
+      rgba(255, 179, 0, 0.7) 50%,
+      rgba(255, 179, 0, 0.6) 94%,
+      rgba(255, 179, 0, 0.12) 100%
+    );
+    box-shadow: 0 1px 3px rgba(255, 179, 0, 0.25);
+  }
+
   .theme-dark & {
     background: linear-gradient(
       168deg,
@@ -51,6 +64,18 @@
         rgba(255, 179, 0, 0.42) 94%,
         rgba(255, 179, 0, 0.06) 100%
       );
+    }
+
+    &.user-highlight--active {
+      background: linear-gradient(
+        168deg,
+        rgba(255, 179, 0, 0.1) 0%,
+        rgba(255, 179, 0, 0.55) 6%,
+        rgba(255, 179, 0, 0.6) 50%,
+        rgba(255, 179, 0, 0.5) 94%,
+        rgba(255, 179, 0, 0.08) 100%
+      );
+      box-shadow: 0 1px 3px rgba(255, 179, 0, 0.35);
     }
   }
 }
@@ -141,6 +166,280 @@
   }
 }
 
+// Noted indicator — dashed underline on highlights with notes
+.user-highlight--noted {
+  text-decoration: underline dashed rgba(255, 179, 0, 0.6) 1.5px;
+  text-underline-offset: 3px;
+
+  .theme-dark & {
+    text-decoration-color: rgba(255, 179, 0, 0.5);
+  }
+}
+
+// ==========================================================================
+// Note annotation — inline block by default, floats in right margin on wide screens
+// ==========================================================================
+
+// Content containers need position: relative for margin-mode notes
+.blog-post__content,
+.book-chapter__content,
+.talk-single__content {
+  position: relative;
+}
+
+.highlight-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+  padding: 0.4rem 0.6rem;
+  margin: 0.5rem 0 0.5rem 1rem;
+  max-width: 400px;
+  border-left: 2px solid rgba(255, 179, 0, 0.45);
+  background: var(--body-bg, #f8f8fc);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--color-subtitle);
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    background: rgba(255, 213, 79, 0.12);
+    border-left-color: rgba(255, 179, 0, 0.7);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  // Floating margin mode (applied by JS when enough right-margin space)
+  &--margin {
+    position: absolute;
+    left: calc(100% + 1rem);
+    margin: 0;
+    max-width: none;
+    z-index: 100;
+  }
+
+  // Active state — note is being viewed/edited
+  &--active {
+    border-left-color: rgba(255, 179, 0, 0.8);
+    background: rgba(255, 213, 79, 0.12);
+    box-shadow: 0 2px 8px rgba(255, 179, 0, 0.15);
+  }
+
+  .theme-dark & {
+    background: var(--body-bg, #1a1a2e);
+    border-left-color: rgba(255, 179, 0, 0.35);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background: rgba(255, 179, 0, 0.1);
+      border-left-color: rgba(255, 179, 0, 0.6);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.highlight-note__text {
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.highlight-note__edit {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--color-subtitle);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, background 0.15s ease;
+
+  .highlight-note:hover & {
+    opacity: 0.6;
+  }
+
+  &:hover {
+    opacity: 1 !important;
+    background: rgba(255, 213, 79, 0.15);
+  }
+
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+// Inline editor (replaces text when editing)
+.highlight-note__editor {
+  flex: 1;
+  min-width: 0;
+}
+
+.highlight-note__textarea {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  padding: 0.3rem 0.4rem;
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 4px;
+  background: var(--search-input-bg);
+  color: var(--body-color);
+  font-family: inherit;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  resize: vertical;
+
+  &::placeholder {
+    color: var(--color-subtitle);
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: rgba(255, 179, 0, 0.5);
+  }
+}
+
+.highlight-note__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+}
+
+.highlight-note__save,
+.highlight-note__cancel {
+  padding: 0.15rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.highlight-note__save {
+  background: rgba(255, 213, 79, 0.2);
+  color: var(--body-color);
+
+  &:hover {
+    background: rgba(255, 213, 79, 0.35);
+  }
+
+  .theme-dark & {
+    background: rgba(255, 179, 0, 0.15);
+    &:hover { background: rgba(255, 179, 0, 0.3); }
+  }
+}
+
+.highlight-note__cancel {
+  background: transparent;
+  color: var(--color-subtitle);
+
+  &:hover {
+    background: var(--search-bg-selected-item);
+  }
+}
+
+// ==========================================================================
+// Note popover — floating panel for first-time note creation
+// ==========================================================================
+.highlight-note-popover {
+  position: absolute;
+  z-index: 9501;
+  width: 280px;
+  padding: 10px;
+  background: var(--body-color, #1a1a2e);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, 0);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .theme-dark & {
+    background: #2a2a3e;
+  }
+}
+
+.highlight-note-popover__textarea {
+  display: block;
+  width: 100%;
+  min-height: 80px;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--body-bg, #f0f0f5);
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  resize: vertical;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: rgba(255, 213, 79, 0.5);
+  }
+
+  .theme-dark & {
+    color: #e0e0e8;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+
+    &:focus {
+      border-color: rgba(255, 179, 0, 0.5);
+    }
+  }
+}
+
+.highlight-note-popover__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.highlight-note-popover__save {
+  padding: 4px 14px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 213, 79, 0.25);
+  color: var(--body-bg, #f0f0f5);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: rgba(255, 213, 79, 0.4);
+  }
+
+  .theme-dark & {
+    background: rgba(255, 179, 0, 0.2);
+    color: #e0e0e8;
+
+    &:hover {
+      background: rgba(255, 179, 0, 0.35);
+    }
+  }
+}
+
 // Mobile: larger touch targets
 @media (max-width: 600px) {
   .highlight-toolbar {
@@ -152,4 +451,43 @@
     width: 40px;
     height: 40px;
   }
+
+  .highlight-note-popover {
+    width: 260px;
+  }
 }
+
+// Clear all highlights button
+.highlight-clear-all {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px dashed var(--preview-divider-color);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-subtitle);
+  font-size: 0.75rem;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+    border-color: #e53935;
+    color: #e53935;
+  }
+
+  svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .theme-dark &:hover {
+    border-color: #ef5350;
+    color: #ef5350;
+  }
+}
+
+// Mobile: notes show inline (not enough margin space for floating)
+// The dashed underline indicator on the highlight also shows
