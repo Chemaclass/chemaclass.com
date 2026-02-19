@@ -482,7 +482,7 @@
       showToast(t('saved', 'Highlight saved'));
     }
 
-    updateClearButton();
+    updateFooterActions();
     return { id: id, rect: markRect };
   }
 
@@ -506,7 +506,7 @@
       delete noteElements[id];
     }
     hideToolbar();
-    updateClearButton();
+    updateFooterActions();
     showToast(t('removed', 'Highlight removed'));
   }
 
@@ -544,6 +544,7 @@
     for (var i = 0; i < arr.length; i++) {
       if (arr[i].id === id) {
         arr[i].note = noteText || '';
+        arr[i].noteUpdatedAt = noteText ? Date.now() : null;
         found = true;
         break;
       }
@@ -562,7 +563,8 @@
     });
 
     // Update or create the inline annotation
-    renderNoteAnnotation(id, noteText);
+    var ts = noteText ? Date.now() : null;
+    renderNoteAnnotation(id, noteText, ts);
 
     if (noteText) {
       showToast(t('note-saved', 'Note saved'));
@@ -665,8 +667,20 @@
     repositionAllNotes();
   }
 
+  function formatNoteDate(ts) {
+    if (!ts) return '';
+    var d = new Date(ts);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var h = d.getHours();
+    var m = d.getMinutes();
+    var ampm = h >= 12 ? 'PM' : 'AM';
+    h = h % 12 || 12;
+    var mm = m < 10 ? '0' + m : m;
+    return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() + ' ' + h + ':' + mm + ' ' + ampm;
+  }
+
   // Render (or remove) the annotation for a highlight
-  function renderNoteAnnotation(id, noteText) {
+  function renderNoteAnnotation(id, noteText, timestamp) {
     var existing = noteElements[id];
 
     if (!noteText) {
@@ -680,6 +694,8 @@
     if (existing) {
       var textEl = existing.querySelector('.highlight-note__text');
       if (textEl) textEl.textContent = noteText;
+      var dateEl = existing.querySelector('.highlight-note__date');
+      if (dateEl && timestamp) dateEl.textContent = formatNoteDate(timestamp);
       positionNote(existing);
       return;
     }
@@ -691,10 +707,22 @@
     note.className = 'highlight-note';
     note.setAttribute('data-note-for', id);
 
+    var body = document.createElement('div');
+    body.className = 'highlight-note__body';
+
     var noteText_ = document.createElement('span');
     noteText_.className = 'highlight-note__text';
     noteText_.textContent = noteText;
-    note.appendChild(noteText_);
+    body.appendChild(noteText_);
+
+    if (timestamp) {
+      var dateSpan = document.createElement('time');
+      dateSpan.className = 'highlight-note__date';
+      dateSpan.textContent = formatNoteDate(timestamp);
+      body.appendChild(dateSpan);
+    }
+
+    note.appendChild(body);
 
     var editBtn = document.createElement('button');
     editBtn.type = 'button';
@@ -735,11 +763,12 @@
     // Prevent double-opening
     if (noteEl.querySelector('textarea')) return;
 
+    var bodyEl = noteEl.querySelector('.highlight-note__body');
     var textEl = noteEl.querySelector('.highlight-note__text');
     var editBtn = noteEl.querySelector('.highlight-note__edit');
-    var currentText = textEl.textContent;
+    var currentText = textEl ? textEl.textContent : '';
 
-    textEl.style.display = 'none';
+    if (bodyEl) bodyEl.style.display = 'none';
     if (editBtn) editBtn.style.display = 'none';
 
     var form = document.createElement('div');
@@ -777,7 +806,7 @@
     function doSave() {
       var text = textarea.value.trim();
       form.remove();
-      textEl.style.display = '';
+      if (bodyEl) bodyEl.style.display = '';
       if (editBtn) editBtn.style.display = '';
       deactivateHighlight();
       saveNote(id, text);
@@ -786,7 +815,7 @@
 
     function doCancel() {
       form.remove();
-      textEl.style.display = '';
+      if (bodyEl) bodyEl.style.display = '';
       if (editBtn) editBtn.style.display = '';
       deactivateHighlight();
     }
@@ -905,7 +934,7 @@
     var highlights = loadHighlights();
     highlights.forEach(function(h) {
       if (h.note) {
-        renderNoteAnnotation(h.id, h.note);
+        renderNoteAnnotation(h.id, h.note, h.noteUpdatedAt || h.createdAt);
       }
     });
   }
@@ -1033,6 +1062,50 @@
   });
 
   // ========================================================================
+  // Mobile note toggle — show/hide note below the tapped highlight
+  // ========================================================================
+  var MOBILE_BP = 768;
+  var visibleMobileNote = null;
+
+  function isMobile() {
+    return window.innerWidth <= MOBILE_BP;
+  }
+
+  function hideMobileNote() {
+    if (visibleMobileNote) {
+      visibleMobileNote.classList.remove('highlight-note--visible');
+      visibleMobileNote.style.top = '';
+      visibleMobileNote = null;
+    }
+  }
+
+  function showMobileNote(id, mark) {
+    var noteEl = noteElements[id]
+      || content.querySelector('.highlight-note[data-note-for="' + id + '"]');
+    if (!noteEl) return false;
+
+    // If same note is visible, toggle off
+    if (visibleMobileNote === noteEl) {
+      hideMobileNote();
+      return true;
+    }
+
+    hideMobileNote();
+
+    // Position below the tapped mark
+    var markRect = mark.getBoundingClientRect();
+    var contentRect = content.getBoundingClientRect();
+    var scrollY = window.scrollY || document.documentElement.scrollTop;
+    var top = markRect.bottom + scrollY - contentRect.top - scrollY + 6;
+
+    noteEl.style.top = (markRect.bottom - contentRect.top + 6) + 'px';
+    noteEl.classList.add('highlight-note--visible');
+    visibleMobileNote = noteEl;
+    activateHighlight(id);
+    return true;
+  }
+
+  // ========================================================================
   // Event: click on existing highlight mark
   // ========================================================================
   content.addEventListener('click', function(e) {
@@ -1044,6 +1117,14 @@
     if (sel && !sel.isCollapsed) return;
 
     e.preventDefault();
+
+    var id = mark.getAttribute('data-highlight-id');
+
+    // On mobile, if highlight has a note, show it floating below
+    if (isMobile() && mark.classList.contains('user-highlight--noted') && id) {
+      if (showMobileNote(id, mark)) return;
+    }
+
     showHighlightToolbar(mark);
   });
 
@@ -1091,6 +1172,7 @@
     if (e.target.closest('.highlight-note')) return;
     hideToolbar();
     hideNotePopover();
+    hideMobileNote();
     deactivateHighlight();
   });
 
@@ -1127,14 +1209,28 @@
   });
 
   // ========================================================================
-  // Clear all highlights button — only visible when highlights exist
+  // Footer actions — only visible when highlights exist
   // ========================================================================
+  var exportBtn = null;
   var clearBtn = null;
 
-  function createClearButton() {
-    if (clearBtn) return;
+  function createFooterActions() {
     var slot = document.getElementById('highlight-clear-slot');
     if (!slot) return;
+
+    // Export button
+    exportBtn = document.createElement('button');
+    exportBtn.type = 'button';
+    exportBtn.className = 'highlight-export';
+    exportBtn.innerHTML = ICON.copy + ' <span>' + t('export', 'Copy all notes') + '</span>';
+    exportBtn.style.display = 'none';
+    exportBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      exportHighlights();
+    });
+    slot.appendChild(exportBtn);
+
+    // Clear button
     clearBtn = document.createElement('button');
     clearBtn.type = 'button';
     clearBtn.className = 'highlight-clear-all';
@@ -1146,6 +1242,71 @@
       clearAllHighlights();
     });
     slot.appendChild(clearBtn);
+  }
+
+  function formatDate(ts) {
+    var d = new Date(ts);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+  }
+
+  function getHeadingText(headingId) {
+    if (!headingId) return '';
+    var el = document.getElementById(headingId);
+    return el ? el.textContent.trim() : '';
+  }
+
+  function exportHighlights() {
+    var highlights = loadHighlights();
+    if (!highlights.length) return;
+
+    var title = document.title;
+    var url = window.location.href;
+    var noteCount = highlights.filter(function(h) { return h.note; }).length;
+    var lines = ['# ' + title, '', '*Source: [' + title + '](' + url + ')*'];
+
+    // Summary
+    var summary = highlights.length + ' highlight' + (highlights.length > 1 ? 's' : '');
+    if (noteCount) {
+      summary += ' \u00b7 ' + noteCount + ' note' + (noteCount > 1 ? 's' : '');
+    }
+    lines.push('*' + summary + '*', '');
+
+    // Group by section
+    var currentSection = null;
+    highlights.forEach(function(h) {
+      var section = getHeadingText(h.nearestHeadingId);
+
+      if (section && section !== currentSection) {
+        currentSection = section;
+        lines.push('### ' + section, '');
+      }
+
+      var quoted = h.text.split('\n').map(function(l) { return '> ' + l; }).join('\n');
+      lines.push(quoted);
+
+      if (h.note) {
+        lines.push('>');
+        lines.push('> **Note:** ' + h.note);
+      }
+
+      // Metadata line
+      var meta = [];
+      if (h.createdAt) meta.push(formatDate(h.createdAt));
+      if (meta.length) {
+        lines.push('>');
+        lines.push('> *' + meta.join(' \u00b7 ') + '*');
+      }
+
+      lines.push('');
+    });
+
+    lines.push('---');
+
+    var text = lines.join('\n').trimEnd();
+    navigator.clipboard.writeText(text).then(function() {
+      showToast(t('export-done', 'Notes copied to clipboard'));
+    });
   }
 
   function clearAllHighlights() {
@@ -1173,14 +1334,15 @@
     hideToolbar();
     hideNotePopover();
     deactivateHighlight();
-    updateClearButton();
+    updateFooterActions();
     showToast(t('clear-done', 'All highlights cleared'));
   }
 
-  function updateClearButton() {
-    if (!clearBtn) return;
+  function updateFooterActions() {
     var count = loadHighlights().length;
-    clearBtn.style.display = count > 0 ? '' : 'none';
+    var visible = count > 0;
+    if (exportBtn) exportBtn.style.display = visible ? '' : 'none';
+    if (clearBtn) clearBtn.style.display = visible ? '' : 'none';
   }
 
   // ========================================================================
@@ -1197,6 +1359,6 @@
   // ========================================================================
   restoreHighlights();
   restoreNoteAnnotations();
-  createClearButton();
-  updateClearButton();
+  createFooterActions();
+  updateFooterActions();
 })();

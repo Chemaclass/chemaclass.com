@@ -239,11 +239,23 @@
   }
 }
 
-.highlight-note__text {
+.highlight-note__body {
   flex: 1;
   min-width: 0;
+}
+
+.highlight-note__text {
+  display: block;
   word-break: break-word;
   white-space: pre-wrap;
+}
+
+.highlight-note__date {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.65rem;
+  color: var(--color-subtitle);
+  opacity: 0.6;
 }
 
 .highlight-note__edit {
@@ -457,7 +469,47 @@
   }
 }
 
-// Clear all highlights button
+// Mobile: notes hidden by default, shown on tap via --visible class
+@media (max-width: 768px) {
+  .highlight-note {
+    display: none;
+    margin: 0;
+    max-width: 100%;
+
+    &--visible {
+      display: flex;
+      position: absolute;
+      z-index: 9500;
+      left: 0;
+      right: 0;
+      margin: 0 1rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      animation: note-fade-in 0.15s ease;
+
+      // Edit button always visible on mobile (no hover)
+      .highlight-note__edit {
+        opacity: 0.6;
+      }
+    }
+
+    // Margin mode shouldn't apply on mobile
+    &--margin {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 1rem;
+      width: auto;
+    }
+  }
+
+  @keyframes note-fade-in {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+// Footer action buttons (export + clear)
+.highlight-export,
 .highlight-clear-all {
   display: flex;
   align-items: center;
@@ -472,21 +524,33 @@
   opacity: 0.5;
   transition: opacity 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 
-  &:hover {
-    opacity: 1;
-    border-color: #e53935;
-    color: #e53935;
-  }
-
   svg {
     width: 13px;
     height: 13px;
   }
+}
 
-  .theme-dark &:hover {
+.highlight-export:hover {
+  opacity: 1;
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.highlight-clear-all:hover {
+  opacity: 1;
+  border-color: #e53935;
+  color: #e53935;
+
+  .theme-dark & {
     border-color: #ef5350;
     color: #ef5350;
   }
+}
+
+#highlight-clear-slot {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 // Mobile: notes show inline (not enough margin space for floating)
