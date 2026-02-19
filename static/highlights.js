@@ -696,7 +696,6 @@
       if (textEl) textEl.textContent = noteText;
       var dateEl = existing.querySelector('.highlight-note__date');
       if (dateEl && timestamp) dateEl.textContent = formatNoteDate(timestamp);
-      positionNote(existing);
       return;
     }
 
@@ -1064,7 +1063,7 @@
   // ========================================================================
   // Mobile note toggle — show/hide note below the tapped highlight
   // ========================================================================
-  var MOBILE_BP = 768;
+  var MOBILE_BP = 1024;
   var visibleMobileNote = null;
 
   function isMobile() {
@@ -1075,6 +1074,7 @@
     if (visibleMobileNote) {
       visibleMobileNote.classList.remove('highlight-note--visible');
       visibleMobileNote.style.top = '';
+      visibleMobileNote.style.left = '';
       visibleMobileNote = null;
     }
   }
@@ -1092,13 +1092,19 @@
 
     hideMobileNote();
 
-    // Position below the tapped mark
+    // Position below the tapped highlighted text
     var markRect = mark.getBoundingClientRect();
     var contentRect = content.getBoundingClientRect();
-    var scrollY = window.scrollY || document.documentElement.scrollTop;
-    var top = markRect.bottom + scrollY - contentRect.top - scrollY + 6;
 
     noteEl.style.top = (markRect.bottom - contentRect.top + 6) + 'px';
+
+    // Center horizontally on the mark, clamped within the content area
+    var markCenter = markRect.left + markRect.width / 2 - contentRect.left;
+    var noteWidth = Math.min(window.innerWidth - 32, 320); // matches CSS calc(100vw - 2rem) / max-width
+    var left = markCenter - noteWidth / 2;
+    left = Math.max(0, Math.min(left, contentRect.width - noteWidth));
+    noteEl.style.left = left + 'px';
+
     noteEl.classList.add('highlight-note--visible');
     visibleMobileNote = noteEl;
     activateHighlight(id);

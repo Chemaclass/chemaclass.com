@@ -469,22 +469,44 @@
   }
 }
 
-// Mobile: notes hidden by default, shown on tap via --visible class
-@media (max-width: 768px) {
+// Mobile/tablet: notes hidden by default, shown floating on tap
+@media (max-width: 1024px) {
   .highlight-note {
     display: none;
     margin: 0;
-    max-width: 100%;
 
+    // Floating popover — positioned by JS below the tapped highlight
     &--visible {
       display: flex;
       position: absolute;
       z-index: 9500;
-      left: 0;
-      right: 0;
-      margin: 0 1rem;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      width: calc(100vw - 2rem);
+      max-width: 320px;
+      margin: 0;
+      // Opaque backgrounds so text is readable over content
+      background: #f8f8fc;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
       animation: note-fade-in 0.15s ease;
+
+      &:hover {
+        background: #fdf6e3;
+      }
+
+      &.highlight-note--active {
+        background: #fdf6e3;
+      }
+
+      .theme-dark & {
+        background: #1a1a2e;
+
+        &:hover {
+          background: #2a2518;
+        }
+
+        &.highlight-note--active {
+          background: #2a2518;
+        }
+      }
 
       // Edit button always visible on mobile (no hover)
       .highlight-note__edit {
@@ -495,9 +517,7 @@
     // Margin mode shouldn't apply on mobile
     &--margin {
       position: absolute;
-      left: 0;
-      right: 0;
-      margin: 0 1rem;
+      left: auto;
       width: auto;
     }
   }
