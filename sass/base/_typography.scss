@@ -27,6 +27,7 @@ h6 {
   color: var(--heading-color);
   transition: color 0.3s ease;
   letter-spacing: -0.01em;
+  scroll-margin-top: 100px;
 
   &.active {
     color: var(--accent-color);

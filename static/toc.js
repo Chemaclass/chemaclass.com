@@ -85,7 +85,7 @@
 
           link.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetPosition = heading.offsetTop - 20;
+            const targetPosition = heading.getBoundingClientRect().top + window.scrollY - CONFIG.offset;
             window.scrollTo({ top: targetPosition, behavior: 'smooth' });
             history.pushState(null, null, `#${heading.id}`);
           });
@@ -122,7 +122,7 @@
       // Smooth scroll on click
       link.addEventListener('click', (e) => {
         e.preventDefault();
-        const targetPosition = heading.offsetTop - 20;
+        const targetPosition = heading.getBoundingClientRect().top + window.scrollY - CONFIG.offset;
         window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         history.pushState(null, null, `#${heading.id}`);
       });
