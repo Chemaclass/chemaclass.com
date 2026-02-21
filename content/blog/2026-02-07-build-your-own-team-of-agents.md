@@ -170,7 +170,7 @@ Not all work benefits from parallelism. The key question: can the teammates work
 - **Too large**: teammates work too long without check-ins, increasing wasted effort
 - **Just right**: self-contained units that produce a clear deliverable. A function, a test file, a review
 
-Having 5-6 tasks per teammate keeps everyone productive. Break the work so each teammate owns a different set of files. Two teammates editing the same file leads to overwrites. Clear ownership, no conflicts.
+Having 5-6 tasks per teammate keeps everyone productive. Break the work so each teammate owns a different set of files. Without isolation, two teammates editing the same file leads to overwrites. Worktrees change this.
 
 {% deep_dive(title="Backend + Frontend in parallel") %}
 
@@ -182,6 +182,30 @@ Say you're building a new feature that touches both backend and frontend. After 
 They don't step on each other because the plan already defined the boundaries. Clear ownership. No merge conflicts. No waiting.
 
 {% end %}
+
+### Worktree isolation
+
+The biggest friction with parallel agents was file conflicts. Two agents editing the same file meant overwrites and lost work. Git worktrees eliminate this by giving each agent its own working copy of the repository.
+
+Start Claude Code with `--worktree` to run in an isolated worktree. Multiple sessions, same repo, no clobbering. Add `--tmux` to launch it in its own tmux session.
+
+```bash
+claude --worktree --tmux
+```
+
+Subagents support worktrees too. Ask Claude to use worktrees for its agents, or set `isolation: worktree` in your custom agent frontmatter to make it the default.
+
+```yaml
+---
+isolation: worktree
+---
+```
+
+The Desktop app has the same feature: enable worktree mode in the Code tab.
+
+For non-git source control (Mercurial, Perforce, SVN), define worktree hooks to get the same isolation benefits without switching to git.
+
+> Worktrees turn "clear file ownership" from a planning constraint into an infrastructure guarantee. Agents can overlap on the same files without stepping on each other.
 
 ### Review after execution
 
@@ -221,6 +245,7 @@ If you want a starting point, I put together [laravel-claude-toolkit](https://gi
 
 ## Resources
 
+- [Claude Code](https://claude.com/product/claude-code) | claude.com
 - [Claude Code: Agent Teams](https://code.claude.com/docs/en/agent-teams) | claude.com
 - [Claude Code Tips: Workflow Boosters](https://rfrolov.me/en/blog/claude-code-tips) | rfrolov.me
 

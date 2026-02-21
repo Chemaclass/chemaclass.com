@@ -168,7 +168,7 @@ No todo el trabajo se beneficia del paralelismo. La pregunta clave: ¿pueden los
 - **Demasiado grandes**: los miembros trabajan demasiado tiempo sin revisión, aumentando el esfuerzo desperdiciado
 - **El punto justo**: unidades autocontenidas que producen un entregable claro. Una función, un archivo de tests, una revisión
 
-Tener 5-6 tareas por miembro mantiene a todos productivos. Que cada miembro sea dueño de archivos diferentes. Dos editando el mismo archivo lleva a sobreescrituras.
+Tener 5-6 tareas por miembro mantiene a todos productivos. Que cada miembro sea dueño de archivos diferentes. Sin aislamiento, dos editando el mismo archivo lleva a sobreescrituras. Los worktrees cambian esto.
 
 {% deep_dive(title="Backend + Frontend en paralelo") %}
 
@@ -180,6 +180,30 @@ Imagina una funcionalidad que toca backend y frontend. Después de planificar:
 No se pisan porque el plan ya definió los límites. Propiedad clara. Sin conflictos de merge. Sin esperas.
 
 {% end %}
+
+### Aislamiento con worktrees
+
+La mayor fricción con agentes en paralelo eran los conflictos de archivos. Dos agentes editando el mismo archivo significaba sobreescrituras y trabajo perdido. Los git worktrees eliminan esto dándole a cada agente su propia copia de trabajo del repositorio.
+
+Inicia Claude Code con `--worktree` para ejecutarlo en un worktree aislado. Múltiples sesiones, mismo repositorio, sin pisarse. Añade `--tmux` para lanzarlo en su propia sesión tmux.
+
+```bash
+claude --worktree --tmux
+```
+
+Los subagentes también soportan worktrees. Pídele a Claude que use worktrees para sus agentes, o añade `isolation: worktree` en el frontmatter de tu agente personalizado para que sea el comportamiento por defecto.
+
+```yaml
+---
+isolation: worktree
+---
+```
+
+La app de escritorio tiene la misma funcionalidad: activa el modo worktree en la pestaña Code.
+
+Para control de versiones no-git (Mercurial, Perforce, SVN), puedes definir worktree hooks para obtener los mismos beneficios de aislamiento sin necesidad de usar git.
+
+> Los worktrees convierten "propiedad clara de archivos" de una restricción de planificación en una garantía de infraestructura. Los agentes pueden solaparse en los mismos archivos sin pisarse.
 
 ### Revisión tras la ejecución
 
@@ -219,6 +243,7 @@ Si quieres un punto de partida, preparé [laravel-claude-toolkit](https://github
 
 ## Recursos
 
+- [Claude Code](https://claude.com/product/claude-code) | claude.com
 - [Claude Code: Agent Teams](https://code.claude.com/docs/en/agent-teams) | claude.com
 - [Claude Code Tips: Workflow Boosters](https://rfrolov.me/en/blog/claude-code-tips) | rfrolov.me
 
