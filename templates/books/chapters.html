@@ -8,11 +8,24 @@
 
 {% block content %}
   <div class="book-chapters">
+    <div class="book-chapters__header">
+      <h1>{{ section.title | split(pat=" | ") | first }}</h1>
+    </div>
+
     <div class="book-chapters__intro">
-      {{ section.content | safe }}
+      <div class="book-chapters__text">
+        {{ section.content | safe }}
+      </div>
     </div>
 
     <div class="book-chapters__grid">
+      {% if section.extra.cover %}
+      <div class="chapter-card chapter-card--cover">
+        <div class="chapter-card__image">
+          <img src="{{ section.extra.cover }}" alt="{{ section.title | split(pat=' | ') | first }}" />
+        </div>
+      </div>
+      {% endif %}
       {% set current_year = "" %}
       {% for post in section.pages %}
         {% set filename = post.relative_path | split(pat="/") | last | replace(from=".md", to="") | replace(from=".es", to="") %}
@@ -53,6 +66,9 @@
           </div>
           <div class="chapter-card__content">
             <h3 class="chapter-card__title">{{ post.title }}</h3>
+            {% if is_special and post.extra.subtitle %}
+              <span class="chapter-card__subtitle">{{ post.extra.subtitle }}</span>
+            {% endif %}
             {# Only show month for regular chapters (not special pages) #}
             {% if chapter_num != "0" and parts | length >= 3 %}
               <span class="chapter-card__month">{{ parts[2] | capitalize }}</span>

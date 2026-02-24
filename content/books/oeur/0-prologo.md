@@ -5,6 +5,8 @@ weight = 2
 date = 2015-02-01
 [taxonomies]
 tags = []
+[extra]
+subtitle = "Words from the author, his brother Jesús, and his friend Francisco Javier"
 +++
 
 ## By the Author

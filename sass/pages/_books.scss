@@ -222,8 +222,28 @@
 // ==========================================================================
 
 .book-chapters {
+  &__header {
+    margin-bottom: 1rem;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--heading-color);
+    }
+  }
+
   &__intro {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--color-subtitle);
+      margin: 0;
+    }
   }
 
   &__grid {
@@ -334,6 +354,14 @@
     line-height: 1.3;
   }
 
+  &__subtitle {
+    font-size: 0.78rem;
+    color: var(--color-subtitle);
+    line-height: 1.4;
+    display: block;
+    margin-top: 0.25rem;
+  }
+
   &__month {
     font-size: 0.75rem;
     color: var(--color-subtitle);
@@ -349,6 +377,20 @@
     i {
       margin-right: 0.25rem;
       color: var(--accent-color);
+    }
+  }
+}
+
+// Cover card (book cover as first grid item)
+.chapter-card--cover {
+  pointer-events: none;
+
+  .chapter-card__image {
+    aspect-ratio: auto;
+
+    img {
+      border-radius: 4px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     }
   }
 }

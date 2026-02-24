@@ -5,6 +5,8 @@ weight = 2
 date = 2015-01-03
 [taxonomies]
 tags = []
+[extra]
+subtitle = "Palabras del autor, su hermano Jesús y su amigo Francisco Javier"
 +++
 
 ### Del Autor

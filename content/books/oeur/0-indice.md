@@ -5,6 +5,8 @@ weight = 1
 date = 2015-01-02
 [taxonomies]
 tags = []
+[extra]
+subtitle = "Full table of contents with all 30 chapters spanning three years"
 +++
 
 - [Prologue](@/books/oeur/0-prologo.md)

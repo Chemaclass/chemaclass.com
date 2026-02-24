@@ -5,6 +5,8 @@ weight = 1
 date = 2015-01-02
 [taxonomies]
 tags = []
+[extra]
+subtitle = "Índice completo con los 30 capítulos a lo largo de tres años"
 +++
 
 - [Prólogo](@/books/oeur/0-prologo.es.md)
