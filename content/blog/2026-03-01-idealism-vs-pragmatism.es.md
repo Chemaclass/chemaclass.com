@@ -1,12 +1,12 @@
 +++
 title = "Idealismo vs Pragmatismo"
 description = "La tensión entre hacer las cosas bien y sacar las cosas adelante marca cada decisión en el software y en la vida. TDD, pair programming, adopción de IA: los mejores resultados vienen de sostener ambos extremos de la cuerda."
-draft = true
+draft = false
 [taxonomies]
 tags = [ "ai", "software", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "Sosteniendo ambos extremos de la cuerda"
-static_thumbnail = "/images/blog/2026-02-21/cover.jpg"
+static_thumbnail = "/images/blog/2026-03-01/cover.jpg"
 related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2024-03-28-effective-pair-programming.md",
@@ -90,7 +90,7 @@ Las [pull requests y el pair programming](/blog/pull-request-vs-pair-prog/) no s
 
 > El objetivo del pairing no es hacer pairing. Es construir entendimiento compartido y detectar errores pronto. Si otro enfoque lo consigue en tu contexto, úsalo.
 
-![blog-middle](/images/blog/2026-02-21/middle.jpg)
+![blog-middle](/images/blog/2026-03-01/middle.jpg)
 
 ## IA: de escéptico a líder de escuadrón
 
@@ -150,4 +150,4 @@ Cada práctica en este post sigue el mismo patrón. La versión ideal existe en 
 
 > La próxima vez que estés subiendo ese fix a las 11 de la noche, sabrás qué atajos tomaste y por qué. Ese es el juego completo. No la perfección. No la velocidad. Saber cuál debe liderar.
 
-![blog-footer](/images/blog/2026-02-21/footer.jpg)
+![blog-footer](/images/blog/2026-03-01/footer.jpg)

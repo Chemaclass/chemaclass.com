@@ -1,12 +1,12 @@
 +++
 title = "Idealism vs Pragmatism"
 description = "The tension between doing things right and getting things done shapes every decision in software and in life. TDD, pair programming, AI adoption: the best results come from holding both ends of the rope."
-draft = true
+draft = false
 [taxonomies]
 tags = [ "ai", "software", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "Holding both ends of the rope"
-static_thumbnail = "/images/blog/2026-02-21/cover.jpg"
+static_thumbnail = "/images/blog/2026-03-01/cover.jpg"
 related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2024-03-28-effective-pair-programming.md",
@@ -90,7 +90,7 @@ Pairing works best when both people are engaged, the problem benefits from two p
 
 > The goal of pairing isn't to pair. It's to build shared understanding and catch mistakes early. If another approach achieves that in your context, use it.
 
-![blog-middle](/images/blog/2026-02-21/middle.jpg)
+![blog-middle](/images/blog/2026-03-01/middle.jpg)
 
 ## AI: from skeptic to squad leader
 
@@ -150,4 +150,4 @@ Every practice in this post follows the same pattern. The ideal version exists i
 
 > Next time you're shipping that 11pm fix, you'll know which corners you cut and why. That's the whole game. Not perfection. Not speed. Knowing which one should lead.
 
-![blog-footer](/images/blog/2026-02-21/footer.jpg)
+![blog-footer](/images/blog/2026-03-01/footer.jpg)

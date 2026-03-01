@@ -59,7 +59,7 @@
 </div>
 {% endmacro %}
 
-{% macro content_card(post, pinned=false, lang="en") %}
+{% macro content_card(post, pinned=false, featured=false, lang="en") %}
 <article class="blog-card {% if pinned %}pinned{% endif %} {% if post.extra.thumbnail or post.extra.static_thumbnail %}has-thumbnail{% endif %}">
   <a href="{{ post.permalink }}" class="blog-card__link">
     {% if post.extra.thumbnail %}
@@ -72,8 +72,13 @@
           <img src="{{ post.extra.static_thumbnail | safe }}" alt="{{ post.title }}" width="480" height="270" loading="lazy" decoding="async" />
         {% else %}
           {% set card_path = post.extra.static_thumbnail | trim_start_matches(pat="/") %}
-          {% set card_webp = resize_image(path=card_path, width=480, height=270, op="fill", quality=75, format="webp") %}
-          {% set card_fb = resize_image(path=card_path, width=480, height=270, op="fill", quality=80) %}
+          {% if featured %}
+            {% set card_webp = resize_image(path=card_path, width=960, height=540, op="fill", quality=100, format="webp") %}
+            {% set card_fb = resize_image(path=card_path, width=960, height=540, op="fill", quality=100) %}
+          {% else %}
+            {% set card_webp = resize_image(path=card_path, width=480, height=270, op="fill", quality=75, format="webp") %}
+            {% set card_fb = resize_image(path=card_path, width=480, height=270, op="fill", quality=80) %}
+          {% endif %}
           <picture>
             <source type="image/webp" srcset="{{ card_webp.url }}" />
             <img src="{{ card_fb.url }}" alt="{{ post.title }}" width="{{ card_fb.width }}" height="{{ card_fb.height }}" loading="lazy" decoding="async" />
