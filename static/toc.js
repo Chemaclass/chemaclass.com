@@ -9,7 +9,7 @@
     headingSelectors: 'h2, h3, h4',
     minHeadings: 2,
     activeClass: 'active',
-    offset: 100
+    offset: 200
   };
 
   const tocToggle = document.getElementById('toc-toggle');
@@ -144,11 +144,9 @@
 
     if (!headings.length || !tocLinks.length) return;
 
-    const scrollPosition = window.scrollY + CONFIG.offset;
-
     let currentHeading = null;
     headings.forEach((heading) => {
-      if (heading.offsetTop <= scrollPosition) {
+      if (heading.getBoundingClientRect().top <= CONFIG.offset) {
         currentHeading = heading;
       }
     });
