@@ -1,12 +1,12 @@
-// Reading progress bar
+// Reading progress bar (inside TOC)
 .reading-progress {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 2px;
   background: linear-gradient(90deg, var(--accent-color), var(--accent-color-light));
   width: 0;
-  z-index: 9999;
+  border-radius: 12px 12px 0 0;
   transition: width 0.15s ease-out;
 }
 

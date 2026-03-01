@@ -280,11 +280,19 @@
     tocHeader.appendChild(tocTitle);
     tocHeader.appendChild(tocCloseButton);
 
+    // Preserve reading progress bar before clearing
+    const progressBar = tocContainerRef.querySelector('#reading-progress');
+
     // Set up container with ARIA
     tocContainerRef.innerHTML = '';
     tocContainerRef.setAttribute('aria-label', 'Table of contents');
-    tocContainerRef.appendChild(tocHeader);
 
+    // Re-insert reading progress bar
+    if (progressBar) {
+      tocContainerRef.appendChild(progressBar);
+    }
+
+    tocContainerRef.appendChild(tocHeader);
     tocContainerRef.appendChild(tocList);
 
     // Restore saved preference
