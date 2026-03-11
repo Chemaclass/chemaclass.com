@@ -7,6 +7,8 @@ tags = [ "ai", "software", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "De asistente individual a equipo coordinado"
 static_thumbnail = "/images/blog/2026-02-07/cover.jpg"
+series = "ai"
+series_order = 3
 related_posts = [
   "blog/2026-01-11-mcp-giving-your-ai-agent-the-right-context.md",
   "blog/2025-10-10-ai-gives-you-speed-not-quality.md",

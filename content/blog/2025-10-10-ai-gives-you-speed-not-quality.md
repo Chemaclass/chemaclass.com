@@ -7,6 +7,8 @@ tags = [ "ai", "software-architecture", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "The human factor in the age of vibe-coding"
 static_thumbnail = "/images/blog/2025-12-02/cover.jpg"
+series = "ai"
+series_order = 1
 related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
   "blog/2022-10-08-different-beliefs-about-software-quality.md",

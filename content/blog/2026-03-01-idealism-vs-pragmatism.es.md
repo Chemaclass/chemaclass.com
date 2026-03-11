@@ -7,6 +7,8 @@ tags = [ "ai", "software", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "Sosteniendo ambos extremos de la cuerda"
 static_thumbnail = "/images/blog/2026-03-01/cover.jpg"
+series = "ai"
+series_order = 4
 related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2024-03-28-effective-pair-programming.md",

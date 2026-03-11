@@ -7,6 +7,8 @@ tags = [ "bitcoin", "software", "cryptography", "security" ]
 [extra]
 subtitle = "El poder del Script de Bitcoin"
 static_thumbnail = "/images/blog/2024-07-06/cover.jpg"
+series = "bitcoin"
+series_order = 3
 related_posts = [
   "blog/2024-12-11-the-cypherpunks.md",
   "blog/2025-12-22-how-bitcoin-works.md",

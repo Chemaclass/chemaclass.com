@@ -7,6 +7,8 @@ tags = [ "privacy", "bitcoin", "cryptography", "security", "philosophy" ]
 [extra]
 subtitle = "Pioneros de la privacidad en la era digital"
 static_thumbnail = "/images/blog/2024-12-11/cover.jpg"
+series = "bitcoin"
+series_order = 2
 related_posts = [
   "blog/2024-07-06-programmable-money.md",
   "blog/2025-11-21-bitcoin-fundamentals.md",

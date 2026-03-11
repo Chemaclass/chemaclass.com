@@ -620,6 +620,10 @@ svc_websites = "Sitios Web"
 title = "Bitcoin Series"
 title_es = "Serie Bitcoin"
 
+[extra.series.ai]
+title = "AI Series"
+title_es = "Serie IA"
+
 [[extra.topics]]
 title = "Leadership & People"
 title_es = "Liderazgo y Personas"

@@ -7,6 +7,8 @@ tags = [ "bitcoin", "philosophy", "economics", "privacy" ]
 [extra]
 subtitle = "A dónde va tu dinero y cómo repensar el sistema"
 static_thumbnail = "/images/blog/2025-01-02/cover.jpg"
+series = "bitcoin"
+series_order = 4
 related_posts = [
   "blog/2024-12-11-the-cypherpunks.md",
   "blog/2025-11-21-bitcoin-fundamentals.md",

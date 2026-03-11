@@ -6,6 +6,8 @@ tags = [ "bitcoin", "cryptography", "tutorial" ]
 [extra]
 subtitle = "Blockchain, criptografía y consenso"
 static_thumbnail = "/images/blog/2025-12-21/cover.jpg"
+series = "bitcoin"
+series_order = 6
 related_posts = [
   "blog/2024-07-06-programmable-money.md",
   "blog/2024-07-13-pretty-good-privacy.md",

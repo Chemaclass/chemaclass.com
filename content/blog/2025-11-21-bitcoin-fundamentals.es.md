@@ -8,6 +8,8 @@ tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
 subtitle = "Una guía para principiantes sobre dinero sólido"
 static_thumbnail = "/images/blog/2025-12-21/footer.jpg"
 reading_time = 12
+series = "bitcoin"
+series_order = 5
 related_posts = [
   "blog/2024-07-06-programmable-money.md",
   "blog/2024-07-13-pretty-good-privacy.md",
