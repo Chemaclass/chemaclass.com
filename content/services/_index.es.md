@@ -67,13 +67,21 @@ github = "Chemaclass/satscribe"
 tags = ["AI", "Bitcoin"]
 tech = ["PHP", "AI"]
 type = "app"
-hide_on_tablet = true
+
+[[extra.websites]]
+name = "Teína"
+description = "Banda de indie pop rock de Calasparra, Murcia. Web multilingüe con galería y vídeos."
+github = "Chemaclass/teina.es"
+url = "https://teina.es"
+image = "/images/portfolio/teina-sample.jpg"
+tech = ["Zola", "SCSS"]
 
 [[extra.websites]]
 name = "Fco. Sandoval Gómez"
 description = "Portfolio de arquitectura y conservación del patrimonio. Trabajo profesional en España."
 github = "Chemaclass/fco-sandoval-gomez.es"
 url = "https://fco-sandoval-gomez.es"
+image = "/images/portfolio/fco-sandoval-gomez-sample.jpg"
 tech = ["Zola", "SCSS"]
 
 [[extra.websites]]
@@ -81,6 +89,7 @@ name = "D'Krisna"
 description = "Centro de belleza y bienestar en Murcia. Multilingüe con reservas automáticas vía Booksy."
 github = "Chemaclass/dkrisna.es"
 url = "https://dkrisna.es"
+image = "/images/portfolio/dkrisna-sample.jpg"
 tech = ["Zola", "SCSS"]
 
 [[extra.websites]]
@@ -88,7 +97,7 @@ name = "Windmühle Tündern"
 description = "Web sin ánimo de lucro para restaurar y preservar el molino histórico de Tündern, Alemania."
 github = "Chemaclass/website-windmuehle"
 url = "https://windmuehle-tuendern.de"
+image = "/images/portfolio/windmuelle-tuendern-sample.jpg"
 tech = ["Vue", "Zola"]
-hide_on_tablet = true  
 
 +++

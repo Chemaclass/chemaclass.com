@@ -347,6 +347,18 @@
   }
 }
 
+.projects-personal__grid--websites {
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    grid-template-columns: 1fr;
+  }
+}
+
 // Hiddable projects (hidden on tablet to balance grid)
 .project-card--simple.project-card--hiddable {
   @media (max-width: 900px) and (min-width: #{$breakpoint-phone + 1}) {
@@ -467,6 +479,44 @@
       font-size: 0.8rem;
       margin-bottom: 0.6rem;
     }
+  }
+}
+
+// Project card with cover image (used in Websites tab)
+.project-card--with-image {
+  padding: 0;
+  overflow: hidden;
+
+  .project-card__image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:hover .project-card__image img {
+    transform: scale(1.03);
+  }
+
+  .project-card__header,
+  p,
+  .project-card__footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .project-card__header {
+    padding-top: 0.75rem;
+  }
+
+  .project-card__footer {
+    padding-bottom: 1rem;
   }
 }
 
