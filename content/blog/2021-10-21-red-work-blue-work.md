@@ -14,6 +14,8 @@ related_posts = [
 related_readings = [
   "readings/2021-10-22-leadership-is-language.md",
 ]
+series = "leadership"
+series_order = 2
 +++
 
 ![blog-cover](/images/blog/2021-10-21/cover.jpg)

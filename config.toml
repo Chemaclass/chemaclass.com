@@ -624,6 +624,18 @@ title_es = "Serie Bitcoin"
 title = "AI Series"
 title_es = "Serie IA"
 
+[extra.series.craftsmanship]
+title = "Software Craftsmanship Series"
+title_es = "Serie Artesanía del Software"
+
+[extra.series.leadership]
+title = "Leadership & Teams Series"
+title_es = "Serie Liderazgo y Equipos"
+
+[extra.series.agile]
+title = "Agile & XP Series"
+title_es = "Serie Agile y XP"
+
 [[extra.topics]]
 title = "Leadership & People"
 title_es = "Liderazgo y Personas"

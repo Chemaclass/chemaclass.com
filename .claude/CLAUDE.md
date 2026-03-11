@@ -37,14 +37,6 @@ The site supports English (default) and Spanish:
 
 ## Blog Writing
 
-When creating or editing blog posts, **always follow the writing style guide** at `.claude/blog-writing-style.md`.
-
-### Key Points
-- Direct, authentic tone (not performatively casual)
-- Use block quotes for emphasis on key insights
-- Reference related posts naturally within content
-- Check the style guide for specific do's and don'ts
-
 ### Blog Post Structure
 
 Files: `/content/blog/YYYY-MM-DD-slug.md`
@@ -67,8 +59,26 @@ tags = [ "tag1", "tag2" ]
 [extra]
 subtitle = "A complementary subtitle"
 static_thumbnail = "/images/blog/YYYY-MM-DD/cover.jpg"
+series = "series-key"       # optional, see Series section below
+series_order = 1            # optional, position within the series
 +++
 ```
+
+### Series
+
+Series group related posts with navigation (title, "Part X of Y", prev/next links). When creating a new post, check if it fits an existing series and add `series` + `series_order` to `[extra]` in both EN and ES files.
+
+Defined in `config.toml` under `[extra.series.<key>]`:
+
+| Key | Title | Posts |
+|-----|-------|-------|
+| `bitcoin` | Bitcoin Series | PGP, Cypherpunks, Programmable Money, Taxes, Fundamentals, How It Works |
+| `ai` | AI Series | Speed Not Quality, MCP Context, Team of Agents, Idealism vs Pragmatism |
+| `craftsmanship` | Software Craftsmanship Series | Art of Testing, Mock or Not, TDD, TDD vs BDD, London vs Chicago, Test Private Methods |
+| `leadership` | Leadership & Teams Series | Tech Lead, Red vs Blue Work, Beauty of Leadership, Great Leadership, Everyone on Board, FSNP |
+| `agile` | Agile & XP Series | Extreme Teams, Agile with Non-Agile, Ignoring Scrum, Friday Deploys, What Kills Agility, Ship Show Ask |
+
+To add a new series: add `[extra.series.<key>]` with `title` and `title_es` in `config.toml`.
 
 ## Custom Commands Available
 
@@ -79,12 +89,6 @@ static_thumbnail = "/images/blog/YYYY-MM-DD/cover.jpg"
 - `/list-posts` - List blog posts with metadata
 - `/translate <file>` - Translate content EN↔ES
 - `/add-image <path> [post-date] [cover|middle|footer]` - Add image to blog post
-
-## Before Writing Content
-
-Review these reference files:
-1. `.claude/blog-writing-style.md` - Writing style guidelines
-2. Example posts in `/content/blog/` for tone reference
 
 ## Code Style
 

@@ -18,6 +18,8 @@ related_readings = [
   "readings/2021-03-01-zombie-scrum-survival-guide.md",
   "readings/2020-03-05-extreme-programming-explained.md",
 ]
+series = "agile"
+series_order = 3
 +++
 
 ![blog-cover](/images/blog/2022-12-06/cover.jpg)

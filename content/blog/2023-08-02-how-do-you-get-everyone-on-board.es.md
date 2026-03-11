@@ -19,6 +19,8 @@ related_readings = [
   "readings/2021-11-28-start-with-why.md",
   "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
 ]
+series = "leadership"
+series_order = 5
 +++
 
 ![blog-cover](/images/blog/2023-08-02/cover.jpg)

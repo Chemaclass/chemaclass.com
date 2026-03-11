@@ -24,6 +24,8 @@ related_readings = [
   "readings/2021-05-28-peopleware.md",
   "readings/2020-03-05-extreme-programming-explained.md",
 ]
+series = "agile"
+series_order = 1
 +++
 
 ![blog-cover](/images/blog/2022-02-26/cover.jpg)

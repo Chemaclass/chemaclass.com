@@ -18,6 +18,8 @@ related_readings = [
   "readings/2016-08-01-the-clean-coder.md",
   "readings/2020-03-05-extreme-programming-explained.md",
 ]
+series = "agile"
+series_order = 5
 +++
 
 ![blog-cover](/images/blog/2024-05-30/cover.jpg)

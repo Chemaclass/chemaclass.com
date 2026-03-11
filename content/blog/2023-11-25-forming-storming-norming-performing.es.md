@@ -16,6 +16,8 @@ related_readings = [
   "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
   "readings/2022-09-30-dare-to-lead.md",
 ]
+series = "leadership"
+series_order = 6
 +++
 
 ![blog-cover](/images/blog/2023-11-25/cover.jpg)

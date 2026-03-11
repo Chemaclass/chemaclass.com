@@ -17,6 +17,8 @@ related_readings = [
   "readings/2022-07-11-clean-craftsmanship.md",
   "readings/2019-07-01-working-effectively-with-legacy-code.md",
 ]
+series = "craftsmanship"
+series_order = 1
 +++
 
 ![blog-cover](/images/blog/2020-04-07/cover.jpg)

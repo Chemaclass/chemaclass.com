@@ -16,6 +16,8 @@ related_readings = [
   "readings/2022-07-11-clean-craftsmanship.md",
   "readings/2022-06-29-modern-software-engineering.md",
 ]
+series = "craftsmanship"
+series_order = 2
 +++
 
 ![blog-cover](/images/blog/2021-01-11/cover.jpg)

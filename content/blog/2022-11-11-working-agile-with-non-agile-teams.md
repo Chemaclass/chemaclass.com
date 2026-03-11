@@ -17,6 +17,8 @@ related_readings = [
   "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
   "readings/2020-03-05-extreme-programming-explained.md",
 ]
+series = "agile"
+series_order = 2
 +++
 
 ![blog-cover](/images/blog/2022-11-11/cover.jpg)

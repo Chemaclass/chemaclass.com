@@ -20,6 +20,8 @@ related_readings = [
   "readings/2023-03-19-accelerate.md",
   "readings/2020-03-12-clean-agile.md",
 ]
+series = "agile"
+series_order = 6
 +++
 
 ![blog-cover](/images/blog/2025-04-12/cover.jpg)

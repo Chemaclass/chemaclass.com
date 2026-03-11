@@ -18,6 +18,8 @@ related_readings = [
   "readings/2022-01-16-leaders-eat-last.md",
   "readings/2022-09-30-dare-to-lead.md",
 ]
+series = "leadership"
+series_order = 3
 +++
 
 ![blog-cover](/images/blog/2022-09-25/cover.jpg)

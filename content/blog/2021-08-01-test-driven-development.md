@@ -16,6 +16,8 @@ related_readings = [
   "readings/2022-07-11-clean-craftsmanship.md",
   "readings/2016-05-01-clean-code.md",
 ]
+series = "craftsmanship"
+series_order = 3
 +++
 
 ![blog-cover](/images/blog/2021-08-01/cover.jpg)

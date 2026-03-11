@@ -29,6 +29,8 @@ related_readings = [
   "readings/2023-02-26-adapt-or-die.md",
   "readings/2020-03-26-the-manager-path.md",
 ]
+series = "leadership"
+series_order = 4
 +++
 
 ![blog-cover](/images/blog/2023-02-27/cover.jpg)
