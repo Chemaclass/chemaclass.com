@@ -40,7 +40,7 @@ El idealismo sin pragmatismo produce código bonito que nadie usa. El pragmatism
 
 ## TDD: el beneficio y el coste
 
-Creo en el [desarrollo guiado por tests](/blog/test-driven-development/). Red, green, refactor. El ritmo te obliga a pensar antes de programar, a especificar lo que quieres antes de construirlo. Produce mejores diseños, ciclos de feedback más cortos y código que puedes refactorizar con confianza.
+Creo en el [desarrollo guiado por tests](/es/blog/test-driven-development/). Red, green, refactor. El ritmo te obliga a pensar antes de programar, a especificar lo que quieres antes de construirlo. Produce mejores diseños, ciclos de feedback más cortos y código que puedes refactorizar con confianza.
 
 Ese es el ideal. Y no es solo una sensación. Un [estudio en cuatro equipos de Microsoft e IBM](https://www.microsoft.com/en-us/research/wp-content/uploads/2009/10/Realizing-Quality-Improvement-Through-Test-Driven-Development-Results-and-Experiences-of-Four-Industrial-Teams-nagappan_tdd.pdf) encontró que TDD redujo la densidad de defectos entre un 40% y un 90%, con un incremento del 15-35% en tiempo de desarrollo. Ambos lados de la tensión, medidos.
 
@@ -62,7 +62,7 @@ Hay una diferencia entre _"sé lo que esto debe hacer y lo especificaré primero
 
 La clave es lo que pasa después del descubrimiento. Una vez que entiendes el problema, vuelve y escribe los tests. Codifica lo que aprendiste. El desvío pragmático no significa abandonar el ideal; significa llegar a él por otro camino.
 
-Como comenté en [TDD vs BDD](/blog/tdd-vs-bdd/), el poder de TDD es su ciclo de feedback. Pero un ciclo de feedback requiere saber qué feedback estás buscando. Cuando aún lo estás averiguando, forzar el ciclo puede frenarte más de lo que ayuda.
+Como comenté en [TDD vs BDD](/es/blog/tdd-vs-bdd/), el poder de TDD es su ciclo de feedback. Pero un ciclo de feedback requiere saber qué feedback estás buscando. Cuando aún lo estás averiguando, forzar el ciclo puede frenarte más de lo que ayuda.
 
 {% end %}
 
@@ -72,7 +72,7 @@ El error no es elegir test-first o test-last. El error es convertirlo en una dec
 
 ## Pair programming: el ideal y el overhead
 
-El [pair programming efectivo](/blog/effective-pair-programming/) es una de las mejores prácticas que un equipo puede adoptar. Dos personas, un problema, revisión de código continua. El conocimiento se propaga, el diseño mejora, los puntos ciegos se reducen.
+El [pair programming efectivo](/es/blog/effective-pair-programming/) es una de las mejores prácticas que un equipo puede adoptar. Dos personas, un problema, revisión de código continua. El conocimiento se propaga, el diseño mejora, los puntos ciegos se reducen.
 
 Ese es el ideal. Y en muchos contextos, es la decisión correcta.
 
@@ -86,7 +86,7 @@ Los anti-patrones también importan. El Socio Silencioso que deja que el otro ha
 
 El pairing funciona mejor cuando ambas personas están involucradas, el problema se beneficia de dos perspectivas y la sesión tiene un alcance claro. Cuando falta alguna de esas condiciones, el pairing se convierte en un ritual en lugar de una práctica. Y los rituales sin propósito son solo overhead.
 
-Las [pull requests y el pair programming](/blog/pull-request-vs-pair-prog/) no son excluyentes. Sirven necesidades diferentes. A veces la revisión asíncrona es suficiente. A veces necesitas el ida y vuelta en tiempo real. La elección pragmática depende del problema, las personas y el momento.
+Las [pull requests y el pair programming](/es/blog/pull-request-vs-pair-prog/) no son excluyentes. Sirven necesidades diferentes. A veces la revisión asíncrona es suficiente. A veces necesitas el ida y vuelta en tiempo real. La elección pragmática depende del problema, las personas y el momento.
 
 {% end %}
 
@@ -96,7 +96,7 @@ Las [pull requests y el pair programming](/blog/pull-request-vs-pair-prog/) no s
 
 ## IA: de escéptico a líder de escuadrón
 
-Hace un año, era escéptico con los asistentes de código con IA. Mi preocupación: una IA que no entiende la arquitectura, no le importa la mantenibilidad y prioriza velocidad por encima de calidad producirá código que impresiona pero se deteriora rápido. Escribí sobre esto en [La IA te da velocidad, no calidad](/blog/ai-gives-you-speed-not-quality/), y mantengo el mensaje central.
+Hace un año, era escéptico con los asistentes de código con IA. Mi preocupación: una IA que no entiende la arquitectura, no le importa la mantenibilidad y prioriza velocidad por encima de calidad producirá código que impresiona pero se deteriora rápido. Escribí sobre esto en [La IA te da velocidad, no calidad](/es/blog/ai-gives-you-speed-not-quality/), y mantengo el mensaje central.
 
 Mi preocupación no cambió. Lo que cambió es cómo los uso, y de lo que son capaces ahora.
 
@@ -106,11 +106,11 @@ Las reacciones de otros ingenieros me sorprenden más que la tecnología. Miedo,
 
 ### Un equipo, no un asistente
 
-La mayoría de los ingenieros tratan a los agentes de IA como autocompletado con esteroides. Un asistente, un chat, un flujo de código generado. Yo empecé a tratarlos como un equipo. No un asistente parlanchín. Un escuadrón real. Uno piensa arquitectura. Otro escribe el primer borrador. Otro revisa y detecta bugs. Otro escribe tests. Cuando [colaboran](/blog/build-your-own-team-of-agents/), el resultado no es solo más rápido. Es estructuralmente mejor.
+La mayoría de los ingenieros tratan a los agentes de IA como autocompletado con esteroides. Un asistente, un chat, un flujo de código generado. Yo empecé a tratarlos como un equipo. No un asistente parlanchín. Un escuadrón real. Uno piensa arquitectura. Otro escribe el primer borrador. Otro revisa y detecta bugs. Otro escribe tests. Cuando [colaboran](/es/blog/build-your-own-team-of-agents/), el resultado no es solo más rápido. Es estructuralmente mejor.
 
 La velocidad es la parte fácil, y todo el mundo está obsesionado con ella. La IA puede escupir toneladas de código en segundos. Sigue sin importarle la legibilidad, los casos borde o cómo se verá el código en seis meses. Tú sigues siendo quien tiene que apropiárselo, entenderlo y sentirse bien al subirlo a producción.
 
-Antes pensaba que la IA no podía escribir código limpio. Luego lo probé en mis términos: [contexto adecuado](/blog/mcp-giving-your-ai-agent-the-right-context/), reglas, convenciones, roles especializados, puertas de calidad. Con la configuración correcta, la IA puede escribir código realmente bueno. A veces necesita varias iteraciones, pero nosotros también.
+Antes pensaba que la IA no podía escribir código limpio. Luego lo probé en mis términos: [contexto adecuado](/es/blog/mcp-giving-your-ai-agent-the-right-context/), reglas, convenciones, roles especializados, puertas de calidad. Con la configuración correcta, la IA puede escribir código realmente bueno. A veces necesita varias iteraciones, pero nosotros también.
 
 La diferencia es que la IA llega más rápido y no se cansa entre iteraciones. Con buen contexto y restricciones claras, los resultados han sido mejores de lo que esperaba. A menudo mejores que lo que yo produciría solo bajo presión de tiempo.
 
@@ -122,7 +122,7 @@ Seguimos siendo los responsables de mantener el sistema en buen estado. La IA no
 
 La IA me hizo más idealista, no menos. Las prácticas que describí antes, TDD y pair programming, solían competir con los deadlines. Ahora ya no tienen por qué.
 
-Me gusta practicar TDD, pero recientemente experimenté con un agente dedicado para ayudarme con tests, y es sorprendentemente bueno. Un [coach de TDD](/blog/build-your-own-team-of-agents/) que guía el ciclo red-green-refactor. Un explorer que lee el código antes de que yo lo toque. Un revisor de código limpio, un arquitecto de dominio, un revisor de React, un mantenedor de documentación. Cada uno especializado, cada uno apoyando mi forma de pensar y mi ritmo. Si se añade lógica nueva sin cobertura, el agente de TDD lo detecta. 100% de cobertura de código solía ser el tipo de objetivo que pondrías en una retro y abandonarías silenciosamente para el tercer sprint. Con un agente dedicado aplicándolo, es simplemente cómo funciona el proyecto.
+Me gusta practicar TDD, pero recientemente experimenté con un agente dedicado para ayudarme con tests, y es sorprendentemente bueno. Un [coach de TDD](/es/blog/build-your-own-team-of-agents/) que guía el ciclo red-green-refactor. Un explorer que lee el código antes de que yo lo toque. Un revisor de código limpio, un arquitecto de dominio, un revisor de React, un mantenedor de documentación. Cada uno especializado, cada uno apoyando mi forma de pensar y mi ritmo. Si se añade lógica nueva sin cobertura, el agente de TDD lo detecta. 100% de cobertura de código solía ser el tipo de objetivo que pondrías en una retro y abandonarías silenciosamente para el tercer sprint. Con un agente dedicado aplicándolo, es simplemente cómo funciona el proyecto.
 
 Sigo practicando pair programming con personas reales para temas complejos. El ida y vuelta humano tiene una profundidad que la IA no alcanza, especialmente cuando navegas trade-offs que requieren experiencia y juicio. Pero en el día a día, siempre tengo un agente pair buddy conmigo. Le lanzo ideas, cuestiono un enfoque, discuto casos borde, exploro un diseño antes de comprometerme con él. Apoya mis pensamientos, acelera el progreso y mantiene el listón de calidad donde yo lo quiero.
 

@@ -23,7 +23,7 @@ La mayoría usa asistentes de código con IA como un único interlocutor. Abres 
 
 La verdadera ventaja viene cuando organizas la IA como un equipo: onboarding, procedimientos estándar, especialistas y ejecución en paralelo.
 
-En el [post sobre MCP](/blog/mcp-giving-your-ai-agent-the-right-context/) cubrí cómo darle acceso a tu entorno. En [La IA te da velocidad, no calidad](/blog/ai-gives-you-speed-not-quality/), por qué el juicio humano sigue siendo esencial. Este post cubre la pieza que falta: organizar ese acceso en un flujo coordinado.
+En el [post sobre MCP](/es/blog/mcp-giving-your-ai-agent-the-right-context/) cubrí cómo darle acceso a tu entorno. En [La IA te da velocidad, no calidad](/es/blog/ai-gives-you-speed-not-quality/), por qué el juicio humano sigue siendo esencial. Este post cubre la pieza que falta: organizar ese acceso en un flujo coordinado.
 
 <!-- more -->
 
@@ -217,7 +217,7 @@ Tras la implementación, los agentes de revisión toman el relevo. En lugar de u
 
 Por muy bien configurados que estén, los agentes trabajan para ti. Tú estableces los estándares, escribes las reglas, revisas los planes y apruebas el resultado antes de que salga. Puedes enviar un mensaje a cualquier miembro mientras trabaja para redirigir su enfoque o añadir restricciones. Si alguien va por mal camino, intervienes directamente.
 
-Como escribí en [La IA te da velocidad, no calidad](/blog/ai-gives-you-speed-not-quality/), el código que produce el agente es tu responsabilidad. Más paralelismo sin supervisión es solo más caos, más rápido.
+Como escribí en [La IA te da velocidad, no calidad](/es/blog/ai-gives-you-speed-not-quality/), el código que produce el agente es tu responsabilidad. Más paralelismo sin supervisión es solo más caos, más rápido.
 
 ### Puertas de calidad
 

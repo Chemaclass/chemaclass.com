@@ -24,7 +24,7 @@ Estos tests también se conocen como tests de caracterización.
 <!-- more -->
 
 > Un test de caracterización describe el comportamiento real de una pieza de software existente, y por lo tanto protege el
-> comportamiento existente del código legacy contra cambios no intencionados mediante testing automatizado. Este término fue acuñado por [Michael Feathers](/readings/working-effectively-with-legacy-code/).
+> comportamiento existente del código legacy contra cambios no intencionados mediante testing automatizado. Este término fue acuñado por [Michael Feathers](/es/readings/working-effectively-with-legacy-code/).
 
 Permiten y proporcionan una red de seguridad para extender y refactorizar código que no tiene tests adecuados. Se puede
 escribir un test que afirme que la salida del código legacy coincide con el resultado observado para las entradas dadas.
@@ -32,7 +32,7 @@ escribir un test que afirme que la salida del código legacy coincide con el res
 ## ¿Cómo empezar?
 
 Estos son mis aprendizajes un año después de
-leer [Working Effectively with Legacy Code](/readings/working-effectively-with-legacy-code/) y aplicarlo a los
+leer [Working Effectively with Legacy Code](/es/readings/working-effectively-with-legacy-code/) y aplicarlo a los
 diferentes proyectos en los que he trabajado desde entonces.
 
 ### 1. ¿Qué quieres testear?
@@ -83,7 +83,7 @@ final class MyBusinessLogicTest extends TestCase
 ### 2. Instancia la clase concreta/final que quieres testear.
 
 No mockees tus clases concretas. Especialmente tu dominio de negocio. Mockea solo interfaces. De lo contrario, puedes estar ocultando
-bugs sin querer (¡con tests verdes/pasando!). Trata tus [clases de dominio de negocio como finales](/blog/final-classes).
+bugs sin querer (¡con tests verdes/pasando!). Trata tus [clases de dominio de negocio como finales](/es/blog/final-classes).
 
 O mockea la interfaz o instancia una clase anónima si quieres crear un Stub:
 
@@ -223,7 +223,7 @@ Ahora puedes refactorizar el código de producción que cubriste con tests sin e
 ![blog-cover](/images/blog/2020-08-17/footer.jpg)
 
 Por supuesto, hay mucho más que aprender
-sobre [testing y trabajo con código legacy](/readings/working-effectively-with-legacy-code/). De hecho, especialmente cuando
+sobre [testing y trabajo con código legacy](/es/readings/working-effectively-with-legacy-code/). De hecho, especialmente cuando
 tratamos con código legacy, encontrarás situaciones donde el código está acoplado de alguna manera que podrías querer mockear
 tus clases concretas porque no hay interfaz (todavía) para ello.
 

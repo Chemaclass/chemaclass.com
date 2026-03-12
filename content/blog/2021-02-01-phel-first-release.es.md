@@ -42,13 +42,13 @@ Phel lo creó Jens Haase. Como menciona en el sitio web, "es el resultado de muc
 - Que funcione en proveedores de hosting baratos
 - Sea fácil de escribir y depurar
 
-A finales de mayo de 2020 terminé el libro [Seven Languages in Seven Weeks](/readings/7-languages-in-7-weeks/), donde aprendí los fundamentos de Prolog, Erlang, Clojure, Haskell... Incluso creé un [repositorio en GitHub](https://github.com/Chemaclass/7LangIn7Weeks) para guardar mi progreso.
+A finales de mayo de 2020 terminé el libro [Seven Languages in Seven Weeks](/es/readings/7-languages-in-7-weeks/), donde aprendí los fundamentos de Prolog, Erlang, Clojure, Haskell... Incluso creé un [repositorio en GitHub](https://github.com/Chemaclass/7LangIn7Weeks) para guardar mi progreso.
 
 A principios de junio de 2020, vi un post en el canal de PHP de Reddit mencionando este proyecto "**Phel**": un **lenguaje de programación funcional escrito en PHP**.
 
 Llevo unos 8 años trabajando con PHP, y siempre intento combinar OOP con FP (creo que ambos paradigmas funcionan mejor juntos; no son excluyentes). Un nuevo dialecto de Lisp escrito en **PHP 7.4** nativo sonaba emocionante. Decidí echarle un vistazo al código.
 
-Las lecturas recientes de [Mathias NoBack](https://x.com/matthiasnoback), como [Object Design Style Guide](/readings/object-design-style-guide) y [Advanced Web Application Architecture](/readings/advance-web-application-architecture/), me dieron el empuje para aplicar lo aprendido en un proyecto real. Este fue (y sigue siendo) un desafío que me ayuda a crecer profesionalmente.
+Las lecturas recientes de [Mathias NoBack](https://x.com/matthiasnoback), como [Object Design Style Guide](/es/readings/object-design-style-guide) y [Advanced Web Application Architecture](/es/readings/advance-web-application-architecture/), me dieron el empuje para aplicar lo aprendido en un proyecto real. Este fue (y sigue siendo) un desafío que me ayuda a crecer profesionalmente.
 
 Mi primer commit fue el 6 de junio de 2020. Desde entonces dedico un poco de tiempo cada día en mis horas libres.
 Me ayuda a aprender sobre FP, diseño interno de lenguajes, testing y arquitectura de software en general.

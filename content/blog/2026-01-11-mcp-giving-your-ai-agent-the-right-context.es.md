@@ -105,7 +105,7 @@ Las integraciones personalizadas te permiten conectar herramientas internas espe
 
 MCP amplifica lo que conectes. Si tu documentación está desactualizada, la IA usará información desactualizada. Si tu código es desordenado, la IA aprenderá patrones desordenados.
 
-Es el efecto espejo que mencioné en [La IA te da velocidad, no calidad](/blog/ai-gives-you-speed-not-quality). La IA refleja el contexto que le das. Buen contexto da resultados útiles. Mal contexto produce basura que suena convincente.
+Es el efecto espejo que mencioné en [La IA te da velocidad, no calidad](/es/blog/ai-gives-you-speed-not-quality). La IA refleja el contexto que le das. Buen contexto da resultados útiles. Mal contexto produce basura que suena convincente.
 
 > Darle a la IA acceso a tu código no reemplaza tu responsabilidad de mantenerlo. Hace que la buena higiene sea más valiosa.
 
