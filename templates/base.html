@@ -398,12 +398,23 @@
             <span>{{ trans(key="nav_rss", lang=lang) }}</span>
           </a>
         </div>
+        <div class="page-footer__social">
+          <a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="page-footer__social-link" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://x.com/Chemaclass" target="_blank" rel="noopener" class="page-footer__social-link" aria-label="X / Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="noopener" class="page-footer__social-link" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
         <div class="page-footer__info">
           <span class="page-footer__copyright">
             © <time datetime="{{now() | date(format='%Y')}}">{{now() | date(format="%Y")}}</time> Chemaclass
           </span>
           <span class="page-footer__separator">·</span>
-          <span class="page-footer__name">Jose Maria Valera Reales</span>
+          <span class="page-footer__name">Jose M. Valera Reales</span>
           <span class="page-footer__separator">·</span>
           <a href="{% if lang == 'es' %}/es/legal/{% else %}/legal/{% endif %}" class="page-footer__legal">{{ trans(key="nav_legal", lang=lang) }}</a>
         </div>

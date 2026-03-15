@@ -47,6 +47,11 @@
     margin: 0 0 0.2rem;
   }
 
+  &__subtitle {
+    color: var(--color-subtitle);
+    font-weight: 400;
+  }
+
   &__location {
     color: var(--color-subtitle);
     font-size: 0.85rem;
@@ -589,7 +594,7 @@ a.cv-project {
   .cv-recommendations--more:not(.cv-recommendations--visible) { display: none !important; }
 
   // Reset page
-  @page { margin: 0.7cm 1cm; }
+  @page { margin: 1cm 1.2cm; }
   body { background: #fff !important; color: #000 !important; margin: 0; padding: 0; font-size: 11px; }
   main { padding: 0 !important; margin: 0 !important; }
   .cv-page { max-width: 100%; padding: 0; margin: 0; }
@@ -660,7 +665,7 @@ a.cv-project {
 
     &__group:nth-child(5) { grid-column: span 2; .cv-skills__items { gap: 0.2rem 0.5rem; } }
     &__group:nth-child(6) { grid-column: span 2; .cv-skills__items { gap: 0.2rem 0.5rem; } }
-    &__label { font-size: 0.55rem; padding-bottom: 0.2rem; }
+    &__label { display: none; }
     &__items { gap: 0.2rem; }
   }
   .cv-skill { font-size: 0.6rem; padding: 0.1rem 0.35rem; i { font-size: 0.55rem; } }
