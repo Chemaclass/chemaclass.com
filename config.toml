@@ -45,6 +45,7 @@ nav_blog = "Blog"
 nav_readings = "Readings"
 nav_services = "Services"
 nav_talks = "Talks"
+nav_cv = "CV"
 toc_header_title = "On this page"
 toc_close_label = "Hide table of contents"
 toc_toggle_show = "Show table of contents"
@@ -79,6 +80,7 @@ shortcuts_readings = "Readings"
 shortcuts_topics = "Topics"
 shortcuts_services = "Services"
 shortcuts_talks = "Talks"
+shortcuts_cv = "CV"
 shortcuts_search = "Search"
 shortcuts_yank = "Yank URL"
 shortcuts_theme = "Toggle theme"
@@ -301,9 +303,7 @@ years_leadership = 5
 nav = [
     { name = "Blog", path = "/blog/" },
     { name = "Readings", path = "/readings/" },
-    { name = "Topics", path = "/topics/" },
-    { name = "Services", path = "/services/" },
-    { name = "Talks", path = "/talks/" },
+    { name = "CV", path = "/cv/" },
 ]
 
 icon = "icon.jpg"
@@ -377,6 +377,7 @@ nav_blog = "Blog"
 nav_readings = "Lecturas"
 nav_services = "Servicios"
 nav_talks = "Charlas"
+nav_cv = "CV"
 toc_header_title = "En esta página"
 toc_close_label = "Ocultar índice"
 toc_toggle_show = "Mostrar índice"
@@ -411,6 +412,7 @@ shortcuts_readings = "Lecturas"
 shortcuts_topics = "Temas"
 shortcuts_services = "Servicios"
 shortcuts_talks = "Charlas"
+shortcuts_cv = "CV"
 shortcuts_search = "Buscar"
 shortcuts_yank = "Copiar URL"
 shortcuts_theme = "Cambiar tema"

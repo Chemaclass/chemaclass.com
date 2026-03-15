@@ -17,6 +17,9 @@
     <div class="blog-header">
       <h1>{{ trans(key="blog_title", lang=lang) }}</h1>
       <p class="blog-intro">{{ trans(key="blog_intro", lang=lang) }}</p>
+      <a href="{% if lang == 'es' %}/es/topics/{% else %}/topics/{% endif %}" class="blog-header__topics-link">
+        <i class="fa-solid fa-tags"></i> {{ trans(key="nav_topics", lang=lang) }}
+      </a>
     </div>
 
   {% if config.extra.start_here_posts %}

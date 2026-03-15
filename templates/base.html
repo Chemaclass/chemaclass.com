@@ -59,7 +59,7 @@
         src: local("Rubik Medium"), url("/fonts/rubik-500.woff2") format("woff2");
       }
       /* Reserve navbar height to prevent layout shift */
-      .site-header { min-height: 68px; }
+      .site-header { min-height: 56px; }
     </style>
 
     {% set rum_key = get_env(name="RUM_KEY", default=false) %}
@@ -299,15 +299,11 @@
             {% if lang == "es" %}
               <a href="/es/blog/"{% if cp is starting_with("/es/blog/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_blog", lang=lang) }}</a>
               <a href="/es/readings/"{% if cp is starting_with("/es/readings/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_readings", lang=lang) }}</a>
-              <a href="/es/topics/"{% if cp is starting_with("/es/topics/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_topics", lang=lang) }}</a>
-              <a href="/es/services/"{% if cp is starting_with("/es/services/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_services", lang=lang) }}</a>
-              <a href="/es/talks/"{% if cp is starting_with("/es/talks/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_talks", lang=lang) }}</a>
+              <a href="/es/cv/"{% if cp is starting_with("/es/cv/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_cv", lang=lang) }}</a>
             {% else %}
               <a href="/blog/"{% if cp is starting_with("/blog/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_blog", lang=lang) }}</a>
               <a href="/readings/"{% if cp is starting_with("/readings/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_readings", lang=lang) }}</a>
-              <a href="/topics/"{% if cp is starting_with("/topics/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_topics", lang=lang) }}</a>
-              <a href="/services/"{% if cp is starting_with("/services/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_services", lang=lang) }}</a>
-              <a href="/talks/"{% if cp is starting_with("/talks/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_talks", lang=lang) }}</a>
+              <a href="/cv/"{% if cp is starting_with("/cv/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_cv", lang=lang) }}</a>
             {% endif %}
             <div class="nav-utilities">
               <button id="search-toggle" onclick="toggleSearch()" title="{{ trans(key="search_toggle_title", lang=lang) }}">
@@ -381,6 +377,18 @@
     <footer class="page-footer">
       <div class="page-footer__content">
         <div class="page-footer__links">
+          <a href="{% if lang == 'es' %}/es/topics/{% else %}/topics/{% endif %}" class="page-footer__link">
+            <i class="fa-solid fa-tags"></i>
+            <span>{{ trans(key="nav_topics", lang=lang) }}</span>
+          </a>
+          <a href="{% if lang == 'es' %}/es/talks/{% else %}/talks/{% endif %}" class="page-footer__link">
+            <i class="fa-solid fa-microphone"></i>
+            <span>{{ trans(key="nav_talks", lang=lang) }}</span>
+          </a>
+          <a href="{% if lang == 'es' %}/es/services/{% else %}/services/{% endif %}" class="page-footer__link">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>{{ trans(key="nav_services", lang=lang) }}</span>
+          </a>
           <a href="{% if lang == 'es' %}{{ get_url(path='es/atom.xml') | safe }}{% else %}{{ get_url(path='atom.xml') | safe }}{% endif %}" class="page-footer__link">
             <i class="fa-solid fa-rss"></i>
             <span>{{ trans(key="nav_rss", lang=lang) }}</span>
@@ -491,6 +499,8 @@
           <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>r</kbd><span>{{ trans(key="shortcuts_readings", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go readings</small></div>
           <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>p</kbd><span>{{ trans(key="shortcuts_topics", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go topics</small></div>
           <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>e</kbd><span>{{ trans(key="shortcuts_services", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go services</small></div>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>c</kbd><span>{{ trans(key="shortcuts_cv", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go cv</small></div>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>p</kbd><span>{{ trans(key="shortcuts_topics", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go topics</small></div>
           <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>a</kbd><span>{{ trans(key="shortcuts_talks", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go talks</small></div>
         </div>
         <div class="shortcuts-dialog__group">

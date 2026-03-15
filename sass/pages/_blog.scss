@@ -17,6 +17,28 @@
     margin: 0 auto;
     max-width: 700px;
   }
+
+  &__topics-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    padding: 0.3rem 0.85rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(45, 90, 142, 0.2);
+    transition: background 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      background: rgba(45, 90, 142, 0.08);
+      border-color: rgba(45, 90, 142, 0.35);
+    }
+
+    i {
+      margin-right: 0.25rem;
+      font-size: 0.8rem;
+    }
+  }
 }
 
 @media (max-width: $breakpoint-phone) {

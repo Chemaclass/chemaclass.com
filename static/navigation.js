@@ -88,9 +88,10 @@ window.toggleMobileMenu = function(e) {
     { key: 'h', selector: '.header-left' },
     { key: 'b', selector: '.nav-links a[href$="/blog/"]' },
     { key: 'r', selector: '.nav-links a[href$="/readings/"]' },
-    { key: 'p', selector: '.nav-links a[href$="/topics/"]' },
-    { key: 'e', selector: '.nav-links a[href$="/services/"]' },
-    { key: 'a', selector: '.nav-links a[href$="/talks/"]' },
+    { key: 'e', selector: '.page-footer__link[href$="/services/"]' },
+    { key: 'c', selector: '.nav-links a[href$="/cv/"]' },
+    { key: 'p', selector: '.page-footer__link[href$="/topics/"]' },
+    { key: 'a', selector: '.page-footer__link[href$="/talks/"]' },
     { key: 'g', selector: '#scroll-to-top' },
   ];
 
@@ -295,6 +296,10 @@ window.toggleMobileMenu = function(e) {
         case 'e': // ge - go services
           e.preventDefault();
           window.location.href = langPrefix + '/services/';
+          return;
+        case 'c': // gc - go cv
+          e.preventDefault();
+          window.location.href = langPrefix + '/cv/';
           return;
         case 'a': // ga - go talks
           e.preventDefault();
