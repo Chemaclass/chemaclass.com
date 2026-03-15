@@ -1,0 +1,513 @@
+{% extends "base.html" %}
+
+{% block title %}CV | Chemaclass{% endblock %}
+
+{% block content %}
+{% set profile_image = resize_image(path=config.extra.profile_large, width=150, height=150, op="fill") %}
+
+<article class="cv-page">
+  <!-- Header -->
+  <header class="cv-header">
+    <div class="cv-header__photo">
+      <img src="{{ profile_image.url }}" alt="Jose Maria Valera Reales" width="150" height="150" />
+    </div>
+    <div class="cv-header__info">
+      <h1>Jose Maria Valera Reales</h1>
+      <p class="cv-header__title">Tech Lead</p>
+      <p class="cv-header__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany</p>
+      <div class="cv-header__links">
+        <a href="https://github.com/Chemaclass" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto:hi@chemaclass.es"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="javascript:void(0)" onclick="window.print()" class="cv-header__pdf"><i class="fa-solid fa-file-pdf"></i> {% if lang == "es" %}Descargar PDF{% else %}Download PDF{% endif %}</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="cv-section">
+    <h2><i class="fa-solid fa-user"></i> {% if lang == "es" %}Sobre mí{% else %}About{% endif %}</h2>
+    {{ page.content | safe }}
+  </section>
+
+  <!-- Experience -->
+  <section class="cv-section">
+    <h2><i class="fa-solid fa-briefcase"></i> {% if lang == "es" %}Experiencia{% else %}Experience{% endif %}</h2>
+
+    <div class="cv-timeline">
+      <!-- Purpose Green -->
+      <div class="cv-job">
+        <div class="cv-job__header">
+          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://purpose-green.com&size=128" alt="Purpose Green" loading="lazy" />
+          <div>
+            <h3><a href="https://www.purpose-green.com/" target="_blank" rel="noopener">Purpose Green</a></h3>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany</p>
+          </div>
+        </div>
+        <div class="cv-job__body">
+          <div class="cv-job__role">
+            <h4>Tech Lead</h4>
+            <span class="cv-job__dates">Mar 2025 &ndash; {% if lang == "es" %}Presente{% else %}Present{% endif %}</span>
+          </div>
+          <p>{% if lang == "es" %}Liderazgo técnico práctico combinando ingeniería de software diaria con crecimiento del equipo. Escribo código en producción mientras ayudo a los desarrolladores a construir una cultura de ownership, maestría y propósito. Mentoría, valores de Extreme Programming, code katas mensuales. Diseño e implementación de sistemas backend escalables (Laravel modular monolith) apoyando la misión de descarbonizar cada edificio europeo.{% else %}Hands-on technical leadership combining daily software engineering with team growth. Writing production code while helping developers build a culture of ownership, mastery, and purpose. Mentoring, Extreme Programming values, monthly code katas. Designing and implementing scalable backend systems (Laravel modular monolith) supporting the mission of decarbonizing every European building.{% endif %}</p>
+          <div class="cv-job__role">
+            <h4>Software Developer</h4>
+            <span class="cv-job__dates">Aug 2024 &ndash; Mar 2025</span>
+          </div>
+          <p>{% if lang == "es" %}Ingeniero backend senior. Integración del sistema de pagos con Stripe. Promoción de valores, principios y prácticas de Extreme Programming. Code katas mensuales, enfoque en excelencia individual y de equipo.{% else %}Senior Backend Engineer. Payment system integration with Stripe. Promoting Extreme Programming values, principles, and practices. Monthly code katas, focus on individual and team excellence.{% endif %}</p>
+          <div class="cv-tags cv-tags--small">
+            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP 8.4</span>
+            <span class="cv-tag"><i class="fa-brands fa-laravel"></i> Laravel 12</span>
+            <span class="cv-tag">🐛 Pest</span>
+            <span class="cv-tag"><i class="fa-solid fa-shield"></i> PHPStan</span>
+            <span class="cv-tag">🐘 PostgreSQL</span>
+            <span class="cv-tag"><i class="fa-brands fa-docker"></i> Docker</span>
+            <span class="cv-tag"><i class="fa-brands fa-aws"></i> AWS EC2, S3, RDS</span>
+            <span class="cv-tag">🐕 DataDog</span>
+            <span class="cv-tag">🔴 Sentry</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABOUT YOU -->
+      <div class="cv-job">
+        <div class="cv-job__header">
+          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://aboutyou.com&size=128" alt="ABOUT YOU" loading="lazy" />
+          <div>
+            <h3><a href="https://aboutyou.com" target="_blank" rel="noopener">ABOUT YOU</a></h3>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany · Remote</p>
+          </div>
+        </div>
+        <div class="cv-job__body">
+          <div class="cv-job__role">
+            <h4>Tech Lead</h4>
+            <span class="cv-job__dates">Aug 2023 &ndash; Jul 2024</span>
+          </div>
+          <p>{% if lang == "es" %}Lead Developer del equipo SDK implementando una nueva API de pagos. Mentoría y coaching de equipos. Entrevistas y contratación.{% else %}Lead Developer for the SDK team implementing a new payments API. Mentoring and coaching software teams. Interviewing and hiring.{% endif %}</p>
+          <div class="cv-tags cv-tags--small">
+            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP 8.3</span>
+            <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
+            <span class="cv-tag"><i class="fa-solid fa-vial"></i> PHPUnit</span>
+            <span class="cv-tag">🐘 PostgreSQL</span>
+            <span class="cv-tag">⚡ Redis</span>
+            <span class="cv-tag">🐇 RabbitMQ</span>
+            <span class="cv-tag">⎈ K8s</span>
+            <span class="cv-tag"><i class="fa-brands fa-aws"></i> AWS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teufel -->
+      <div class="cv-job">
+        <div class="cv-job__header">
+          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://teufel.de&size=128" alt="Teufel" loading="lazy" />
+          <div>
+            <h3><a href="https://www.teufel.de" target="_blank" rel="noopener">Lautsprecher Teufel</a></h3>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany</p>
+          </div>
+        </div>
+        <div class="cv-job__body">
+          <div class="cv-job__role">
+            <h4>Tech Lead</h4>
+            <span class="cv-job__dates">Jul 2021 &ndash; Jul 2023</span>
+          </div>
+          <p>{% if lang == "es" %}Lead del equipo Web-IT. Coaching de desarrolladores en su camino al siguiente nivel, cultivando una cultura de ownership, customer centricity, maestría y propósito.{% else %}Lead of the Web-IT team. Coaching developers on their journey to the next level, while cultivating a culture of ownership, customer centricity, mastery, and purpose.{% endif %}</p>
+          <div class="cv-job__role">
+            <h4>Software Developer</h4>
+            <span class="cv-job__dates">Jun 2020 &ndash; Jul 2021</span>
+          </div>
+          <p>{% if lang == "es" %}Responsable del desarrollo del Webshop en diferentes países. Promoción de Extreme Programming con Pair-Programming y TDD.{% else %}Responsible for the development of the Webshop across different countries. Promoting Extreme Programming with Pair-Programming and TDD.{% endif %}</p>
+          <div class="cv-tags cv-tags--small">
+            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP 8.2</span>
+            <span class="cv-tag">🔷 Spryker</span>
+            <span class="cv-tag"><i class="fa-solid fa-vial"></i> PHPUnit</span>
+            <span class="cv-tag"><i class="fa-solid fa-shield"></i> PHPStan</span>
+            <span class="cv-tag">🐘 PostgreSQL</span>
+            <span class="cv-tag">⚡ Redis</span>
+            <span class="cv-tag">🔍 ElasticSearch</span>
+            <span class="cv-tag">🐇 RabbitMQ</span>
+            <span class="cv-tag">⎈ K8s</span>
+            <span class="cv-tag"><i class="fa-brands fa-aws"></i> AWS EC2</span>
+            <span class="cv-tag"><i class="fa-brands fa-docker"></i> Docker</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seven Senders -->
+      <div class="cv-job">
+        <div class="cv-job__header">
+          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://sevensenders.com&size=128" alt="Seven Senders" loading="lazy" />
+          <div>
+            <h3><a href="https://www.sevensenders.com/" target="_blank" rel="noopener">Seven Senders</a></h3>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany</p>
+          </div>
+        </div>
+        <div class="cv-job__body">
+          <div class="cv-job__role">
+            <h4>Software Developer</h4>
+            <span class="cv-job__dates">Sep 2017 &ndash; May 2020</span>
+          </div>
+          <p>{% if lang == "es" %}Parte del equipo de Analytics, enfocado en el servicio API backend para la solución de seguimiento de paquetes.{% else %}Part of the Analytics Team, focused on the Backend API service for the parcel tracking solution.{% endif %}</p>
+          <div class="cv-tags cv-tags--small">
+            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP 7.4</span>
+            <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
+            <span class="cv-tag"><i class="fa-brands fa-golang"></i> Go</span>
+            <span class="cv-tag"><i class="fa-brands fa-java"></i> Java</span>
+            <span class="cv-tag">🐬 MySQL</span>
+            <span class="cv-tag">🔍 ElasticSearch</span>
+            <span class="cv-tag"><i class="fa-brands fa-docker"></i> Docker</span>
+            <span class="cv-tag"><i class="fa-brands fa-aws"></i> AWS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Move24 -->
+      <div class="cv-job">
+        <div class="cv-job__header">
+          <img class="cv-job__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%232d5a8e'/%3E%3Ctext x='32' y='40' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='22' font-weight='600'%3EM24%3C/text%3E%3C/svg%3E" alt="Move24" />
+          <div>
+            <h3>Move24</h3>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany</p>
+          </div>
+        </div>
+        <div class="cv-job__body">
+          <div class="cv-job__role">
+            <h4>Software Developer</h4>
+            <span class="cv-job__dates">Jan 2017 &ndash; Jul 2017</span>
+          </div>
+          <p>{% if lang == "es" %}Responsable de la homepage y búsqueda.{% else %}Responsible for the homepage and search.{% endif %}</p>
+          <div class="cv-tags cv-tags--small">
+            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
+            <span class="cv-tag"><i class="fa-brands fa-laravel"></i> Laravel</span>
+            <span class="cv-tag"><i class="fa-brands fa-golang"></i> Go</span>
+            <span class="cv-tag">🐘 PostgreSQL</span>
+            <span class="cv-tag">⚡ Redis</span>
+            <span class="cv-tag"><i class="fa-brands fa-docker"></i> Docker</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Webgears -->
+      <div class="cv-job">
+        <div class="cv-job__header">
+          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://webgears-group.com&size=128" alt="Webgears" loading="lazy" />
+          <div>
+            <h3><a href="https://www.webgears-group.com/" target="_blank" rel="noopener">Webgears</a></h3>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany</p>
+          </div>
+        </div>
+        <div class="cv-job__body">
+          <div class="cv-job__role">
+            <h4>Software Developer</h4>
+            <span class="cv-job__dates">Sep 2015 &ndash; Dec 2016</span>
+          </div>
+          <p>{% if lang == "es" %}Backend de la aplicación web y herramientas internas.{% else %}Backend of the web application and internal tools.{% endif %}</p>
+          <div class="cv-tags cv-tags--small">
+            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
+            <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
+            <span class="cv-tag">🐬 MariaDB</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Falk -->
+      <div class="cv-job">
+        <div class="cv-job__header">
+          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://falk-meddv.de&size=128" alt="Falk" loading="lazy" />
+          <div>
+            <h3><a href="https://www.falk-meddv.de/" target="_blank" rel="noopener">Falk medizinische Datenverarbeitung</a></h3>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> {% if lang == "es" %}Lübeck, Alemania{% else %}Lübeck, Germany{% endif %}</p>
+          </div>
+        </div>
+        <div class="cv-job__body">
+          <div class="cv-job__role">
+            <h4>Software Developer</h4>
+            <span class="cv-job__dates">Dec 2014 &ndash; Aug 2015</span>
+          </div>
+          <p>{% if lang == "es" %}Desarrollo de la aplicación web para la aplicación médica de escritorio.{% else %}Built the web app for the desktop medical application.{% endif %}</p>
+          <div class="cv-tags cv-tags--small">
+            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
+            <span class="cv-tag">🔹 Delphi</span>
+            <span class="cv-tag">🐬 MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- miLeyenda -->
+      <div class="cv-job">
+        <div class="cv-job__header">
+          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://leverade.com&size=128" alt="LEVERADE" loading="lazy" />
+          <div>
+            <h3><a href="https://belegends.com/" target="_blank" rel="noopener">LEVERADE</a></h3>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Murcia, Spain</p>
+          </div>
+        </div>
+        <div class="cv-job__body">
+          <div class="cv-job__role">
+            <h4>Software Developer</h4>
+            <span class="cv-job__dates">Jan 2014 &ndash; Aug 2014</span>
+          </div>
+          <p>{% if lang == "es" %}Desarrollador full stack, parte del equipo de desarrollo de la aplicación web.{% else %}Full stack developer, part of the web development application team.{% endif %}</p>
+          <div class="cv-tags cv-tags--small">
+            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
+            <span class="cv-tag"><i class="fa-brands fa-laravel"></i> Laravel</span>
+            <span class="cv-tag"><i class="fa-brands fa-android"></i> Android</span>
+            <span class="cv-tag">🐬 MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tecnoavanza -->
+      <div class="cv-job">
+        <div class="cv-job__header">
+          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://tecnoavanza.com&size=128" alt="Tecnoavanza" loading="lazy" />
+          <div>
+            <h3><a href="http://www.tecnoavanza.com/" target="_blank" rel="noopener">Tecnoavanza</a></h3>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Murcia, Spain</p>
+          </div>
+        </div>
+        <div class="cv-job__body">
+          <div class="cv-job__role">
+            <h4>Software Developer <span class="cv-job__type">{% if lang == "es" %}Prácticas{% else %}Internship{% endif %}</span></h4>
+            <span class="cv-job__dates">Mar 2013 &ndash; Jun 2013</span>
+          </div>
+          <p>{% if lang == "es" %}Desarrollo de software para plataformas móviles. Primer contacto con Symfony en entorno profesional.{% else %}Software development for mobile platforms. First contact with Symfony in a professional environment.{% endif %}</p>
+          <div class="cv-tags cv-tags--small">
+            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
+            <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
+            <span class="cv-tag">🐬 MySQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendations -->
+  <section class="cv-section">
+    <h2><i class="fa-solid fa-quote-left"></i> {% if lang == "es" %}Recomendaciones{% else %}Recommendations{% endif %}</h2>
+    <div class="cv-recommendations">
+      <blockquote class="cv-rec">
+        <p>"Chema is a great engineer and knows how to create value from get go. He was proactive, resourceful, and knew how to navigate extreme complexity, demonstrating clear leadership skills. He not only adhered to agile principles, but also lifted his co-workers by coaching them."</p>
+        <footer><span class="cv-rec__avatar" style="background:#2d5a8e">EL</span> <a href="https://www.linkedin.com/in/elofca" target="_blank" rel="noopener"><strong>Engin Lofça</strong></a> · Product Leadership in Payments <span class="cv-rec__date">May 2025</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
+        <p>"Chema is a great leader, speaker, and impactful contributor! He always balances clean code, testing, and software design with pragmatism while delivering value to the customer. With a truly agile mindset, he is capable of helping your tech organization reach the next level."</p>
+        <footer><span class="cv-rec__avatar" style="background:#16a34a">BD</span> <a href="https://www.linkedin.com/in/borisdiebold" target="_blank" rel="noopener"><strong>Boris Diebold</strong></a> · CTO at HeyJobs <span class="cv-rec__date">May 2024</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
+        <p>"Chema is an impressive person to work with and to be inspired by. His coding skills were already outstanding when I hired him, principles like SOLID or approaches like TDD were mastered and embraced by heart already. This turned out to even be surpassed by his incredible learning mindset. One of a kind, a perfect addition to any a-team."</p>
+        <footer><span class="cv-rec__avatar" style="background:#8b5cf6">CK</span> <a href="https://www.linkedin.com/in/christian-kuennemann-berlin" target="_blank" rel="noopener"><strong>Christian Künnemann</strong></a> · Director Software Engineering <span class="cv-rec__date">Apr 2024</span></footer>
+      </blockquote>
+    </div>
+    <div class="cv-recommendations cv-recommendations--more">
+      <blockquote class="cv-rec">
+        <p>"Working with Chema for the last three years was a powerful experience. Driven by curiosity he always challenged himself, me and the team. Trying new ways and improving long existing processes was a daily manner for him. I know his new team will be in good hands!"</p>
+        <footer><span class="cv-rec__avatar" style="background:#db2777">KB</span> <a href="https://www.linkedin.com/in/kimberley-bechinie-17a1336a" target="_blank" rel="noopener"><strong>Kimberley Bechinie</strong></a> · Head of E-Commerce PM <span class="cv-rec__date">Aug 2023</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
+        <p>"Chema is a highly motivated and capable developer with a keen eye for detail and is always striving to improve himself, the projects he works on and the colleagues he works with. He drives change when it's needed, is a keen collaborator and a delight to work with."</p>
+        <footer><span class="cv-rec__avatar" style="background:#ea580c">RP</span> <a href="https://www.linkedin.com/in/rick-peacock-b4722717" target="_blank" rel="noopener"><strong>Rick Peacock</strong></a> · Owner at Audiodog <span class="cv-rec__date">Jul 2023</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
+        <p>"Chema has a great passion for testing and refactoring. He is easy to approach, always ready to help and listen, very patient and nice. He is also happy to be your rubber duck when you want to practice a talk or a coding demo. If you feel tired or stressed, Chema makes you see the fun side of coding again."</p>
+        <footer><span class="cv-rec__avatar" style="background:#0284c7">AJ</span> <a href="https://www.linkedin.com/in/alexandrajulius" target="_blank" rel="noopener"><strong>Alexandra Julius</strong></a> · Senior Software Engineer <span class="cv-rec__date">Apr 2022</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
+        <p>"He was the 'Tony Stark' of our team. He is smart, reliable, and best known for building flawless solutions."</p>
+        <footer><span class="cv-rec__avatar" style="background:#8b5cf6">RN</span> <a href="https://www.linkedin.com/in/raj-navakoti-529880b1" target="_blank" rel="noopener"><strong>Raj Navakoti</strong></a> · Principal Engineer <span class="cv-rec__date">Jun 2020</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
+        <p>"When he decided to leave, I knew it'll be a big loss for the team since he's been always keen on delivering quality work, learning, adapting and teaching others, maintaining a proper test suite, and delivering on time. Very good guy ;)"</p>
+        <footer><span class="cv-rec__avatar" style="background:#16a34a">AF</span> <a href="https://www.linkedin.com/in/fulopattila122" target="_blank" rel="noopener"><strong>Attila Fulop</strong></a> · Founder at Vanilo E-commerce <span class="cv-rec__date">May 2020</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
+        <p>"Working with Jose is a pleasure not only in technical side but also in every-day life. Cheerful, open, convivial person. Knows and follows modern best practices, understands the pillars of Software development."</p>
+        <footer><span class="cv-rec__avatar" style="background:#2d5a8e">OD</span> <a href="https://www.linkedin.com/in/oleksii-dubinin-81447a5b" target="_blank" rel="noopener"><strong>Oleksii Dubinin</strong></a> · Lead Software Engineer <span class="cv-rec__date">Dec 2017</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
+        <p>"Whoever hires Jose will not only get a programmer with strong technical skills, but also a great colleague with good sense of humor and great interpersonal skills. What impressed me the most was his enthusiasm to improve himself."</p>
+        <footer><span class="cv-rec__avatar" style="background:#0284c7">AB</span> <a href="https://www.linkedin.com/in/andrei-boar" target="_blank" rel="noopener"><strong>Andrei Boar</strong></a> · Senior Golang Software Engineer <span class="cv-rec__date">Jun 2017</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
+        <p>"He is a very valuable member of the team with strong passion for work and a really hands-on 'get things done' approach. He writes very clean code, effectively applies best practices, can dig into very complex problems and simplify them."</p>
+        <footer><span class="cv-rec__avatar" style="background:#db2777">VM</span> <a href="https://www.linkedin.com/in/vladimir-minakov-98844311" target="_blank" rel="noopener"><strong>Vladimir Minakov</strong></a> · CTO at FORMEL Skin <span class="cv-rec__date">Jun 2017</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
+        <p>"José always produced top-line quality work. He worked well with all the other developers, and carried out his responsibilities efficiently. Always ready with a smile."</p>
+        <footer><span class="cv-rec__avatar" style="background:#ea580c">JP</span> <a href="https://www.linkedin.com/in/jonathan-poischen-2a99b087" target="_blank" rel="noopener"><strong>Jonathan Poischen</strong></a> · QA Engineer at Datasite <span class="cv-rec__date">Jun 2017</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
+        <p>"I was impressed by Jose Maria's ability to acquire the knowledge of the different subjects. His ambition and productivity was the reason why he was my partner for the final project."</p>
+        <footer><span class="cv-rec__avatar" style="background:#8b5cf6">FE</span> <a href="https://www.linkedin.com/in/francisco-javier-espejo-g%C3%B3mez-5a81879a" target="_blank" rel="noopener"><strong>Francisco Javier Espejo Gómez</strong></a> · IT Support Specialist <span class="cv-rec__date">Dec 2016</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
+        <p>"He is a really professional and nice guy, loyal and faithful. He worked always hard and concentrated. He is an enrichment, professional and personal."</p>
+        <footer><span class="cv-rec__avatar" style="background:#16a34a">AC</span> <a href="https://www.linkedin.com/in/annemarschner" target="_blank" rel="noopener"><strong>Anne Christiansen</strong></a> · Marketing &amp; Communications <span class="cv-rec__date">Nov 2016</span></footer>
+      </blockquote>
+    </div>
+    <button class="cv-rec-toggle" onclick="this.previousElementSibling.classList.toggle('cv-recommendations--visible'); this.textContent = this.previousElementSibling.classList.contains('cv-recommendations--visible') ? '{% if lang == "es" %}Ver menos{% else %}Show less{% endif %}' : '{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (11)'">{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (11)</button>
+  </section>
+
+  <!-- Skills -->
+  <section class="cv-section">
+    <h2><i class="fa-solid fa-code"></i> {% if lang == "es" %}Habilidades{% else %}Skills{% endif %}</h2>
+    <div class="cv-skills">
+      <div class="cv-skills__group">
+        <h3 class="cv-skills__label cv-skills__label--lang">{% if lang == "es" %}Lenguajes{% else %}Languages{% endif %}</h3>
+        <div class="cv-skills__items">
+          <span class="cv-skill cv-skill--lang"><i class="fa-brands fa-php"></i> PHP</span>
+          <span class="cv-skill cv-skill--lang"><i class="fa-solid fa-terminal"></i> Bash</span>
+          <span class="cv-skill cv-skill--lang"><i class="fa-solid fa-code"></i> Lisp</span>
+          <span class="cv-skill cv-skill--lang"><i class="fa-brands fa-golang"></i> Go</span>
+          <span class="cv-skill cv-skill--lang"><i class="fa-brands fa-java"></i> Java</span>
+          <span class="cv-skill cv-skill--lang"><i class="fa-brands fa-python"></i> Python</span>
+        </div>
+      </div>
+      <div class="cv-skills__group">
+        <h3 class="cv-skills__label cv-skills__label--tool">Frameworks & Tools</h3>
+        <div class="cv-skills__items">
+          <span class="cv-skill cv-skill--tool"><i class="fa-brands fa-laravel"></i> Laravel</span>
+          <span class="cv-skill cv-skill--tool"><i class="fa-brands fa-symfony"></i> Symfony</span>
+          <span class="cv-skill cv-skill--tool"><i class="fa-solid fa-vial"></i> PHPUnit</span>
+          <span class="cv-skill cv-skill--tool"><i class="fa-solid fa-shield"></i> PHPStan</span>
+        </div>
+      </div>
+      <div class="cv-skills__group">
+        <h3 class="cv-skills__label cv-skills__label--practice">{% if lang == "es" %}Prácticas{% else %}Practices{% endif %}</h3>
+        <div class="cv-skills__items">
+          <span class="cv-skill cv-skill--practice"><i class="fa-solid fa-vial-circle-check"></i> TDD</span>
+          <span class="cv-skill cv-skill--practice"><i class="fa-solid fa-arrows-rotate"></i> XP</span>
+          <span class="cv-skill cv-skill--practice"><i class="fa-brands fa-osi"></i> {{ trans(key="home_skill_open_source", lang=lang) }}</span>
+        </div>
+      </div>
+      <div class="cv-skills__group">
+        <h3 class="cv-skills__label cv-skills__label--infra">{% if lang == "es" %}Infraestructura{% else %}Infrastructure{% endif %}</h3>
+        <div class="cv-skills__items">
+          <span class="cv-skill cv-skill--infra"><i class="fa-brands fa-docker"></i> Docker</span>
+          <span class="cv-skill cv-skill--infra"><i class="fa-brands fa-aws"></i> AWS</span>
+          <span class="cv-skill cv-skill--infra">⎈ K8s</span>
+        </div>
+      </div>
+      <div class="cv-skills__group">
+        <h3 class="cv-skills__label cv-skills__label--db">Data</h3>
+        <div class="cv-skills__items">
+          <span class="cv-skill cv-skill--db"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+          <span class="cv-skill cv-skill--db"><i class="fa-solid fa-bolt"></i> Redis</span>
+          <span class="cv-skill cv-skill--db"><i class="fa-solid fa-database"></i> MySQL</span>
+          <span class="cv-skill cv-skill--db"><i class="fa-solid fa-magnifying-glass"></i> ElasticSearch</span>
+        </div>
+      </div>
+      <div class="cv-skills__group">
+        <h3 class="cv-skills__label cv-skills__label--soft">{% if lang == "es" %}Soft Skills{% else %}Soft Skills{% endif %}</h3>
+        <div class="cv-skills__items">
+          <span class="cv-skill cv-skill--soft"><i class="fa-solid fa-compass"></i> {{ trans(key="home_skill_leadership", lang=lang) }}</span>
+          <span class="cv-skill cv-skill--soft"><i class="fa-solid fa-people-arrows"></i> Mentoring</span>
+          <span class="cv-skill cv-skill--soft"><i class="fa-solid fa-comments"></i> {{ trans(key="home_skill_communication", lang=lang) }}</span>
+        </div>
+      </div>
+      <div class="cv-skills__group">
+        <h3 class="cv-skills__label cv-skills__label--ai">AI</h3>
+        <div class="cv-skills__items">
+          <span class="cv-skill cv-skill--ai"><i class="fa-solid fa-robot"></i> Claude</span>
+          <span class="cv-skill cv-skill--ai"><i class="fa-solid fa-brain"></i> OpenClaw</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="cv-section">
+    <h2><i class="fa-solid fa-graduation-cap"></i> {% if lang == "es" %}Educación{% else %}Education{% endif %}</h2>
+    <div class="cv-timeline">
+      <div class="cv-edu">
+        <h3>🏫 CIFP Carlos III</h3>
+        <p class="cv-edu__location">Cartagena, Murcia, Spain</p>
+        <p class="cv-edu__degree">{% if lang == "es" %}Técnico Superior en Desarrollo de Aplicaciones Web{% else %}Higher Technician in Web Applications Development{% endif %}</p>
+        <span class="cv-job__dates">2013 &ndash; 2014</span>
+        <p class="cv-edu__focus"><i class="fa-brands fa-php"></i> PHP · 🐬 MySQL · <i class="fa-brands fa-js"></i> Javascript</p>
+      </div>
+      <div class="cv-edu">
+        <h3>🏫 IES Ginés Pérez Chirinos</h3>
+        <p class="cv-edu__location">Caravaca de la Cruz, Murcia, Spain</p>
+        <p class="cv-edu__degree">{% if lang == "es" %}Técnico Superior en Desarrollo de Aplicaciones Multiplataforma{% else %}Higher Technician in Multi-platform Applications Development{% endif %}</p>
+        <span class="cv-job__dates">2011 &ndash; 2013</span>
+        <p class="cv-edu__focus"><i class="fa-brands fa-java"></i> Java · <i class="fa-solid fa-database"></i> Oracle SQL · <i class="fa-brands fa-android"></i> Android</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="cv-section">
+    <h2><i class="fa-solid fa-certificate"></i> {% if lang == "es" %}Certificaciones{% else %}Certifications{% endif %}</h2>
+    <div class="cv-timeline">
+      <div class="cv-edu">
+        <h3>📜 Spryker Certified Foundations Developer</h3>
+        <span class="cv-job__dates">Jul 2021</span>
+      </div>
+      <div class="cv-edu">
+        <h3>🇪🇺 Erasmus+ Programme</h3>
+        <p class="cv-edu__location">ENAE Business School</p>
+        <span class="cv-job__dates">Dec 2014 &ndash; Jun 2015</span>
+        <p class="cv-edu__focus">{% if lang == "es" %}Lübeck, Alemania{% else %}Lübeck, Germany{% endif %}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section class="cv-section">
+    <h2><i class="fa-solid fa-trophy"></i> {% if lang == "es" %}Reconocimientos{% else %}Awards{% endif %}</h2>
+    <div class="cv-timeline">
+      <div class="cv-edu">
+        <h3>🏆 bashunit: Side Project of the Year</h3>
+        <p class="cv-edu__location">{% if lang == "es" %}Otorgado por{% else %}Issued by{% endif %} <a href="https://x.com/getmanfred" target="_blank" rel="noopener">Manfred</a> · Dec 2023</p>
+        <p class="cv-edu__degree">{% if lang == "es" %}Ganadores del Side Project del Año, 2023.{% else %}Winners of the Side Project of the Year, 2023.{% endif %}</p>
+      </div>
+      <div class="cv-edu">
+        <h3>🥇 {% if lang == "es" %}Primer premio como estudiante{% else %}First award as student{% endif %}</h3>
+        <p class="cv-edu__location">{% if lang == "es" %}Otorgado por{% else %}Issued by{% endif %} Fundación Robles Chillida · Nov 2013</p>
+        <p class="cv-edu__degree">{% if lang == "es" %}Primer premio de ayudas al estudio al mejor expediente en la categoría de Alumnos de Grado Superior en Desarrollo de Aplicaciones Multiplataforma, Caravaca de la Cruz.{% else %}First award of study aids for the best result in the Higher Level category of Multi-platform Applications Development, Caravaca de la Cruz.{% endif %}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages -->
+  <section class="cv-section">
+    <h2><i class="fa-solid fa-language"></i> {% if lang == "es" %}Idiomas{% else %}Languages{% endif %}</h2>
+    <div class="cv-languages">
+      <div class="cv-lang">
+        <span class="cv-lang__name">🇪🇸 {% if lang == "es" %}Español{% else %}Spanish{% endif %}</span>
+        <span class="cv-lang__level">{% if lang == "es" %}Nativo{% else %}Native{% endif %}</span>
+      </div>
+      <div class="cv-lang">
+        <span class="cv-lang__name">🇬🇧 {% if lang == "es" %}Inglés{% else %}English{% endif %}</span>
+        <span class="cv-lang__level">{% if lang == "es" %}Profesional completo{% else %}Full professional{% endif %}</span>
+      </div>
+      <div class="cv-lang">
+        <span class="cv-lang__name">🇩🇪 {% if lang == "es" %}Alemán{% else %}German{% endif %}</span>
+        <span class="cv-lang__level">{% if lang == "es" %}Nivel básico laboral{% else %}Limited working{% endif %}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Source -->
+  <section class="cv-section">
+    <h2><i class="fa-brands fa-osi"></i> Open Source</h2>
+    <div class="cv-projects">
+      <div class="cv-project">
+        <h3>
+          <svg class="cv-project__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.8 362.8"><path d="M317.5 0H45.4C20.3 0 0 20.3 0 45.4v272.1c0 25 20.3 45.4 45.4 45.4h272.1c25 0 45.4-20.3 45.4-45.4V45.4C362.8 20.3 342.5 0 317.5 0z" fill="#2e3436"/><path d="M259.3 317.5c11.2-4 21.6-10.1 30.5-17.9 4.9 10.9 15.7 17.9 27.6 17.9h-58.1zM226.8 45.3h-90.7C86 45.3 45.3 86 45.3 136.1v38.3c12.5-34.8 43.9-59.4 80.7-63.3.6-17.5 2.8-35 6.8-52.1a5.68 5.68 0 0 1 4.5-4.3c3.1-.5 6 1.5 6.6 4.6 3 16.8 10.6 32.5 22 45.2 1.6 1.8 2.9 3.9 3.9 6.1h5.4c2.4-21.3 12.9-40.9 29.3-54.6 1.3-1.1 3-1.5 4.6-1.2 3.1.6 5.1 3.5 4.6 6.6-3 16.8-1.2 34.2 5.2 50 .4.9.7 1.9.9 2.9 19.5 7.7 32.3 26.5 32.3 47.5v29.8c0 15.6-12.7 28.3-28.3 28.3h-78c-1.6 0-2.8-1.3-2.8-2.8 0-1.6 1.3-2.8 2.8-2.8h78c12.5 0 22.7-10.2 22.7-22.7v-29.8c0-25-20.3-45.4-45.3-45.4H136c-50.1 0-90.7 40.6-90.7 90.7v19.8c0 50.1 40.6 90.7 90.7 90.7h90.7c50.1 0 90.7-40.6 90.7-90.7v-90.7c.1-50.2-40.5-90.9-90.6-90.9zm-78 119.8c0-13.5 11-24.4 24.5-24.4s24.4 11 24.4 24.5-11 24.4-24.5 24.4c-13.4 0-24.4-11-24.4-24.5z" fill="#eceeee"/><path d="M161.7 108.3c-12.1-13.5-20.2-30.1-23.4-48-4.5 19.5-6.8 39.5-6.8 59.6a17.31 17.31 0 0 0 17.3 17.3 17.31 17.31 0 0 0 17.3-17.3c0-4.4-1.6-8.5-4.4-11.6zm51.5 3.7c-6.3-16.5-8.1-34.3-5-51.7C193.1 73 183.3 91 181 110.6h20.3c4 0 8 .4 11.9 1.4z" fill="#8ae234"/></svg>
+          <a href="https://bashunit.typeddevs.com/" target="_blank" rel="noopener">bashunit</a>
+        </h3>
+        <p>{% if lang == "es" %}Librería de testing para scripts bash. Premiada como Side Project del Año, 2023.{% else %}Testing library for bash scripts. Awarded Side Project of the Year, 2023.{% endif %}</p>
+      </div>
+      <div class="cv-project">
+        <h3>
+          <svg class="cv-project__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.3 167.7"><path d="M6 66l95 96h36V93l-36-74H42L6 56v106h36l24-35" fill="none" stroke="#512da8" stroke-width="8"/><path d="M137 93l58-3-12-58-32-26h-34l-16 13-23 9-12 22 46 52z" fill="none" stroke="#512da8" stroke-width="8"/><path d="M195 90l-12 57h-13l-2-56m2 56l-13-11h12" fill="none" stroke="#512da8" stroke-width="8"/></svg>
+          <a href="https://phel-lang.org" target="_blank" rel="noopener">Phel Lang</a>
+        </h3>
+        <p>{% if lang == "es" %}Lenguaje de programación funcional que compila a PHP. Dialecto de Lisp inspirado en Clojure.{% else %}Functional programming language that compiles to PHP. A Lisp dialect inspired by Clojure.{% endif %}</p>
+      </div>
+    </div>
+  </section>
+</article>
+{% endblock content %}
