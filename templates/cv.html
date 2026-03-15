@@ -2,6 +2,16 @@
 
 {% block title %}CV | Chemaclass{% endblock %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='page.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
 {% block content %}
 {% set profile_image = resize_image(path=config.extra.profile_large, width=150, height=150, op="fill") %}
 
@@ -62,7 +72,7 @@
             <span class="cv-tag"><i class="fa-solid fa-shield"></i> PHPStan</span>
             <span class="cv-tag"><i class="fa-solid fa-database"></i> PostgreSQL</span>
             <span class="cv-tag"><i class="fa-brands fa-docker"></i> Docker</span>
-            <span class="cv-tag"><i class="fa-brands fa-aws"></i> AWS EC2, S3, RDS</span>
+            <span class="cv-tag"><i class="fa-brands fa-aws"></i> EC2, S3, RDS</span>
             <span class="cv-tag"><i class="fa-solid fa-dog"></i> DataDog</span>
             <span class="cv-tag"><i class="fa-solid fa-tower-broadcast"></i> Sentry</span>
           </div>

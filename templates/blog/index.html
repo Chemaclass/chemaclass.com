@@ -6,6 +6,16 @@
   {{ trans(key="blog_title", lang=lang) }} | Chemaclass
 {% endblock %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='listing.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
 {% block posthead %}{% endblock posthead %}
 
 {% block content %}
