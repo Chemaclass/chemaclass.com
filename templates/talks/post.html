@@ -88,3 +88,7 @@
 
   {% include "partials/footer-about.html" %}
 {% endblock content %}
+
+{% block highlights %}
+<script type="text/javascript" src="{{ get_url(path='highlights.js') }}" defer></script>
+{% endblock highlights %}

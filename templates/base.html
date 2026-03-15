@@ -36,11 +36,10 @@
     {% endif %}
 
 
-    <!-- Preload critical fonts -->
+    <!-- Preload critical fonts (brands deferred: only used below the fold) -->
     <link rel="preload" href="/fonts/rubik-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/rubik-500.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/fontawesome/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/fontawesome/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Inline critical font-face to prevent FOUT -->
     <style>
@@ -475,7 +474,7 @@
       document.getElementById('site-search')?.addEventListener('focus', loadSearch, {once: true});
     </script>
     <script type="text/javascript" src="{{ get_url(path='navigation.js') }}" defer></script>
-    <script type="text/javascript" src="{{ get_url(path='highlights.js') }}" defer></script>
+    {% block highlights %}{% endblock highlights %}
 
     <!-- Keyboard shortcuts help modal (native dialog) -->
     <dialog id="shortcuts-dialog" class="shortcuts-dialog">

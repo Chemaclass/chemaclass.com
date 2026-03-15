@@ -173,6 +173,10 @@
 </script>
 {% endblock js %}
 
+{% block highlights %}
+<script type="text/javascript" src="{{ get_url(path='highlights.js') }}" defer></script>
+{% endblock highlights %}
+
 {% macro page_sub_header(page) %}
   <small>
     {{ helpers_preview::date_and_words(post=page) }}

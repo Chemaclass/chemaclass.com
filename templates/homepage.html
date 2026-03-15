@@ -17,7 +17,7 @@
 
 {% block posthead %}
 {% set profile_image = resize_image(path=config.extra.profile_large, width=360, height=360, op="fill") %}
-<link rel="prefetch" href="{{ profile_image.url }}">
+<link rel="preload" href="{{ profile_image.url }}" as="image">
 
 <!-- Person Schema for homepage -->
 <script type="application/ld+json">
@@ -78,7 +78,7 @@
         <section class="hero-content">
             <div class="profile">
                 <div class="profile-container">
-                    <img src="{{ profile_image.url }}" alt="{{ trans(key="home_profile_alt", lang=lang) }}" width="360" height="360" decoding="async"/>
+                    <img src="{{ profile_image.url }}" alt="{{ trans(key="home_profile_alt", lang=lang) }}" width="360" height="360" decoding="async" fetchpriority="high"/>
                 </div>
             </div>
             <div class="hero-text">
