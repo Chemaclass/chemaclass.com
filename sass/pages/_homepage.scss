@@ -406,6 +406,11 @@ main:has(.homepage-container) #scroll-to-top {
 .projects-grid {
   display: flex;
   gap: 1.25rem;
+
+  &--featured {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .project-card {
@@ -480,6 +485,74 @@ main:has(.homepage-container) #scroll-to-top {
     color: var(--color-subtitle);
     margin: 0.3rem 0 0;
     line-height: 1.4;
+  }
+}
+
+// Showcase project cards with code snippets
+.project-card--showcase {
+  align-items: stretch;
+  text-align: left;
+  padding: 1.25rem;
+
+  .project-card__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+
+    .project-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .project-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .project-title {
+      justify-content: flex-start;
+    }
+
+    .project-tagline {
+      font-size: 0.8rem;
+      color: var(--accent-color);
+      margin: 0.15rem 0 0;
+      font-weight: 500;
+    }
+  }
+
+  .project-card__snippet {
+    background: #1e1e2e;
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.75rem;
+    overflow-x: auto;
+
+    code {
+      display: block;
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+      font-size: 0.78rem;
+      line-height: 1.6;
+      color: #cdd6f4;
+      white-space: pre;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sn-kw { color: #cba6f7; }
+    .sn-fn { color: #89b4fa; }
+    .sn-str { color: #a6e3a1; }
+  }
+
+  .project-card__desc {
+    font-size: 0.85rem;
+    color: var(--color-subtitle);
+    margin: 0;
+    line-height: 1.5;
+    flex-grow: 1;
   }
 }
 
@@ -762,6 +835,10 @@ main:has(.homepage-container) #scroll-to-top {
   .projects-grid {
     flex-direction: column;
     gap: 0.75rem;
+
+    &--featured {
+      grid-template-columns: 1fr;
+    }
   }
 
   .project-card {
@@ -800,6 +877,16 @@ main:has(.homepage-container) #scroll-to-top {
     p {
       font-size: 0.8rem;
       margin-top: 0.25rem;
+    }
+  }
+
+  .project-card--showcase {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+
+    .project-card__snippet code {
+      font-size: 0.72rem;
     }
   }
 
