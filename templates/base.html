@@ -36,10 +36,11 @@
     {% endif %}
 
 
-    <!-- Preload critical fonts (brands deferred: only used below the fold) -->
+    <!-- Preload critical fonts -->
     <link rel="preload" href="/fonts/rubik-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/rubik-500.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/fontawesome/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/fontawesome/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Inline critical font-face to prevent FOUT -->
     <style>
@@ -204,6 +205,10 @@
     {% else %}
       <meta name="twitter:title" content="{{ config.title }}">
     {% endif %}
+
+    {% for link in config.extra.nav %}
+      <link rel="prefetch" href="{{ link.path }}" />
+    {% endfor %}
 
     {% set icon = resize_image(path=config.extra.profile_small, width=50, height=50, op="fill") -%}
     <link rel="prefetch" href="{{ icon.url }}" />
