@@ -87,7 +87,11 @@
       }
     }
   }
+
+  &__title-url { display: none; }
 }
+
+.cv-print-only { display: none; }
 
 // Sections
 .cv-section {
@@ -412,6 +416,12 @@
   gap: 1rem;
 }
 
+a.cv-project {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .cv-project {
   padding: 1.25rem;
   border-radius: 10px;
@@ -570,30 +580,111 @@
 
 // Print / PDF optimized view
 @media print {
-  // Hide site chrome
+  // Hide site chrome & non-print elements
   .site-header,
   .page-footer,
   .cv-header__pdf,
   .cv-rec-toggle,
+  #scroll-to-top,
   .cv-recommendations--more:not(.cv-recommendations--visible) { display: none !important; }
 
-  // Reset page margins
-  @page { margin: 1cm; }
-  body { background: #fff !important; color: #000 !important; margin: 0; padding: 0; }
+  // Reset page
+  @page { margin: 0.7cm 1cm; }
+  body { background: #fff !important; color: #000 !important; margin: 0; padding: 0; font-size: 11px; }
   main { padding: 0 !important; margin: 0 !important; }
   .cv-page { max-width: 100%; padding: 0; margin: 0; }
 
-  // Remove decorative borders/shadows
-  .cv-header { border: none; background: none; padding: 0 0 1rem; }
-  .cv-section { border-bottom: 1px solid #ddd; page-break-inside: avoid; padding: 1rem 0; }
-  .cv-rec { box-shadow: none; border: 1px solid #ddd; page-break-inside: avoid; }
-  .cv-job { page-break-inside: avoid; }
-  .cv-project { box-shadow: none; }
+  // Compact header
+  .cv-header {
+    border: none; background: none; padding: 0 0 0.5rem; gap: 1rem;
 
-  // Ensure links print readable
+    &__photo img { width: 80px; height: 80px; border-width: 2px; box-shadow: none; }
+    &__info h1 { font-size: 1.3rem; margin: 0; }
+    &__title { font-size: 0.85rem; margin: 0; }
+    &__location { font-size: 0.7rem; margin: 0 0 0.3rem; }
+    &__links a { font-size: 0.65rem; padding: 0.2rem 0.5rem; text-decoration: none; }
+    &__title-url { display: inline; font-weight: 400; font-size: 0.8rem; color: #555; }
+  }
+  .cv-print-hide { display: none !important; }
+  .cv-print-only { display: revert !important; }
+
+  // Compact sections
+  .cv-section {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 0;
+
+    > h2 { font-size: 0.85rem; margin: 0 0 0.5rem; }
+    > p, > blockquote { font-size: 0.78rem; margin: 0 0 0.3rem; line-height: 1.45; }
+
+    &--page-break { page-break-before: always; }
+  }
+
+  // Compact jobs
+  .cv-job {
+    page-break-inside: avoid;
+
+    &__logo { width: 28px; height: 28px; border-radius: 6px; padding: 3px; }
+    &__header { gap: 0.5rem; margin-bottom: 0; h3 { font-size: 0.85rem; } }
+    &__location { font-size: 0.65rem; }
+    &__body { padding-left: 2.2rem; margin-top: 0.15rem; }
+    &__body > p { font-size: 0.75rem; line-height: 1.4; margin: 0.15rem 0 0; }
+    &__role { margin-top: 0.3rem; gap: 0.4rem; h4 { font-size: 0.78rem; } }
+    &__dates { font-size: 0.65rem; padding: 0 0.35rem; }
+    &__type { font-size: 0.6rem; padding: 0 0.3rem; }
+  }
+
+  // Compact tech tags
+  .cv-tags--small { margin-top: 0.2rem; }
+  .cv-tag { font-size: 0.6rem; padding: 0.1rem 0.3rem; gap: 0.15rem; }
+
+  // Compact recommendations - show only 2, single column
+  .cv-recommendations {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+
+    > .cv-rec:nth-child(n+3) { display: none !important; }
+  }
+  .cv-rec {
+    box-shadow: none; border: 1px solid #ddd; border-left: 2px solid #333;
+    padding: 0.5rem 0.75rem; page-break-inside: avoid;
+
+    p { font-size: 0.72rem; line-height: 1.4; margin: 0 0 0.4rem; }
+    footer { font-size: 0.65rem; }
+    &__avatar { width: 20px; height: 20px; font-size: 0.5rem; }
+  }
+
+  // Compact skills - 3 fixed columns; Soft Skills spans 2, AI in 3rd
+  .cv-skills {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+
+    &__group:nth-child(5) { grid-column: span 2; .cv-skills__items { gap: 0.2rem 0.5rem; } }
+    &__group:nth-child(6) { grid-column: span 2; .cv-skills__items { gap: 0.2rem 0.5rem; } }
+    &__label { font-size: 0.55rem; padding-bottom: 0.2rem; }
+    &__items { gap: 0.2rem; }
+  }
+  .cv-skill { font-size: 0.6rem; padding: 0.1rem 0.35rem; i { font-size: 0.55rem; } }
+
+  // Compact education, certs, awards
+  .cv-edu {
+    padding-left: 0.6rem; border-left-width: 1px;
+
+    h3 { font-size: 0.8rem; }
+    &__location { font-size: 0.65rem; }
+    &__degree { font-size: 0.72rem; margin: 0.1rem 0 0; }
+    &__focus { font-size: 0.65rem; margin: 0.1rem 0 0; }
+  }
+
+  // Compact languages
+  .cv-lang { padding: 0.4rem 0.75rem; min-width: auto; &__name { font-size: 0.78rem; } &__level { font-size: 0.65rem; } }
+
+  // Compact projects
+  .cv-project { box-shadow: none; padding: 0.5rem 0.75rem; h3 { font-size: 0.8rem; } p { font-size: 0.7rem; } }
+
+  // Compact timeline spacing
+  .cv-timeline { gap: 0.6rem; }
+
+  // Links readable
   a { color: inherit !important; text-decoration: underline; }
   .cv-header__links a { text-decoration: none; }
-
-  // Compact spacing
-  .cv-timeline { gap: 1.25rem; }
 }
