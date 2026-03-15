@@ -323,17 +323,6 @@ main:has(.homepage-container) #scroll-to-top {
 }
 
 // Skills Section
-@keyframes skill-fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .skills-section {
   margin: 0;
 }
@@ -356,14 +345,6 @@ main:has(.homepage-container) #scroll-to-top {
   font-weight: 500;
   transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo);
   cursor: default;
-  opacity: 0;
-  animation: skill-fade-in 0.35s ease forwards;
-
-  @for $i from 1 through 17 {
-    &:nth-child(#{$i}) {
-      animation-delay: #{$i * 0.04}s;
-    }
-  }
 
   i {
     font-size: 0.75rem;
@@ -412,6 +393,12 @@ main:has(.homepage-container) #scroll-to-top {
     background: rgba(236, 72, 153, 0.1);
     color: #db2777;
     border: 1px solid rgba(236, 72, 153, 0.2);
+  }
+
+  &.ai {
+    background: rgba(202, 168, 24, 0.1);
+    color: #a38b10;
+    border: 1px solid rgba(202, 168, 24, 0.25);
   }
 }
 
