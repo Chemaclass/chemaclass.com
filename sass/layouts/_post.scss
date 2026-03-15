@@ -561,7 +561,7 @@
   }
 }
 
-// Keyboard shortcuts hint - subtle, geeky (blog/readings posts only)
+// Keyboard shortcuts hint - single subtle line
 .post-shortcuts {
   text-align: center;
   margin-top: 2rem;
@@ -570,26 +570,18 @@
 }
 
 .post-shortcuts__hint {
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: var(--color-subtitle);
-  letter-spacing: 0.02em;
+  opacity: 0.5;
 
   kbd {
     display: inline-block;
-    padding: 0.1rem 0.3rem;
-    margin-right: 0.15rem;
-    font-family: inherit;
-    font-size: 0.65rem;
+    padding: 0.1rem 0.35rem;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.7rem;
     background: var(--preview-divider-color);
     border-radius: 3px;
     border: 1px solid rgba(128, 128, 128, 0.2);
-  }
-
-  // Add spacing between shortcut groups
-  kbd:first-of-type,
-  kbd + kbd + kbd:not(:last-of-type) {
-    margin-left: 0.6rem;
   }
 }
 
