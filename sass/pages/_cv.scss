@@ -386,6 +386,14 @@
 }
 
 // Languages
+.cv-flag {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+  vertical-align: -1px;
+  display: inline-block;
+}
+
 .cv-languages {
   display: flex;
   gap: 1rem;
