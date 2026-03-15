@@ -6,11 +6,7 @@
   {{ trans(key="blog_title", lang=lang) }} | Chemaclass
 {% endblock %}
 
-{% block posthead %}
-  {% for post in section.pages %}
-    <link rel="prerender" href="{{ post.permalink }}" />
-  {% endfor %}
-{% endblock posthead %}
+{% block posthead %}{% endblock posthead %}
 
 {% block content %}
   <div class="blog-index">

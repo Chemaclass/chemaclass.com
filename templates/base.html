@@ -205,10 +205,6 @@
       <meta name="twitter:title" content="{{ config.title }}">
     {% endif %}
 
-    {% for link in config.extra.nav %}
-      <link rel="prerender" href="{{ link.path }}" />
-    {% endfor %}
-
     {% set icon = resize_image(path=config.extra.profile_small, width=50, height=50, op="fill") -%}
     <link rel="prefetch" href="{{ icon.url }}" />
 
