@@ -1,0 +1,46 @@
+# Chemaclass
+
+> Personal website of Jose Maria Valera Reales (Chemaclass). Tech Lead, software engineer, and open source contributor sharing practical insights on software craftsmanship, TDD, leadership, Bitcoin, and AI.
+
+## About
+
+Jose Maria Valera Reales is a Tech Lead at Purpose Green with 15+ years in software engineering and 5+ in leadership. He writes about software craftsmanship, testing, leadership, Bitcoin, and AI. The site is available in English and Spanish.
+
+## Sections
+
+- [Blog](https://chemaclass.com/blog/): Articles on software development, testing, leadership, and team building
+- [Readings](https://chemaclass.com/readings/): Book summaries and reading notes across software, psychology, and philosophy
+- [Talks](https://chemaclass.com/talks/): Conference talks and workshops on testing, refactoring, and software craftsmanship
+- [Services](https://chemaclass.com/services/): Web development and team workshops
+- [CV](https://chemaclass.com/cv/): Professional experience and skills
+
+## Series
+
+- Bitcoin Series: PGP, Cypherpunks, Programmable Money, Taxes, Fundamentals, How It Works
+- AI Series: Speed Not Quality, MCP Context, Team of Agents, Idealism vs Pragmatism
+- Software Craftsmanship Series: Art of Testing, Mock or Not, TDD, TDD vs BDD, London vs Chicago, Test Private Methods
+- Leadership & Teams Series: Tech Lead, Red vs Blue Work, Beauty of Leadership, Great Leadership, Everyone on Board, FSNP
+- Agile & XP Series: Extreme Teams, Agile with Non-Agile, Ignoring Scrum, Friday Deploys, What Kills Agility, Ship Show Ask
+
+## Topics
+
+- Leadership & People: Growing as a leader, building great teams, and the human side of software
+- Mind & Knowledge: Philosophy, psychology, productivity, and the pursuit of understanding
+- Software Craft & Testing: TDD, clean code, refactoring, and design practices
+- Bitcoin & Economics: Sound money, Austrian economics, privacy, and Bitcoin technology
+- Programming Languages & Tools: PHP, Bash, Lisp, Symfony, Docker, Git
+- Speaking & Teaching: Conference talks, workshops, live coding
+
+## Open Source
+
+- [bashunit](https://bashunit.typeddevs.com/): Testing framework for Bash scripts
+- [Phel](https://phel-lang.org): A Lisp that compiles to PHP
+
+## Feeds
+
+- Atom (EN): https://chemaclass.com/atom.xml
+- Atom (ES): https://chemaclass.com/es/atom.xml
+
+## Full Content
+
+For a complete listing of all articles with descriptions, see: https://chemaclass.com/llms-full.txt
