@@ -16,14 +16,15 @@
     },
     "headline": "{{ page.title }}",
     {% if page.description %}"description": "{{ page.description }}",{% endif %}
-    "image": [{% if page.extra.static_thumbnail %} "{{ config.base_url | safe }}{{ page.extra.static_thumbnail | safe }}"{% endif %}]{% if page.date %},
+    "image": [{% if page.extra.static_thumbnail %} "{{ config.base_url | safe }}{{ page.extra.static_thumbnail | safe }}"{% elif config.extra.default_og_image %} "{{ get_url(path=config.extra.default_og_image) | safe }}"{% endif %}]{% if page.date %},
     "datePublished": "{{ page.date | date(format="%+") }}",
     "dateModified": "{% if page.updated %}{{ page.updated | date(format="%+") }}{% else %}{{ page.date | date(format="%+") }}{% endif %}"{% endif %}{% if page.word_count %},
     "wordCount": {{ page.word_count }}{% endif %}{% if lang %},
     "inLanguage": "{{ lang }}"{% endif %}{% if config.author %},
     "author": {
       "@type": "Person",
-      "name": "{{ config.author }}"
+      "name": "{{ config.author }}",
+      "url": "{{ config.base_url | safe }}"
     },
     "publisher": {
       "@type": "Organization",
