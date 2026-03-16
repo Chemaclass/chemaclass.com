@@ -1,5 +1,6 @@
 +++
 title = "Talks | Chemaclass"
+description = "Conference talks and workshops on TDD, refactoring, and software craftsmanship. From live coding sessions to full-day pair programming workshops."
 template = "talks/index.html"
 page_template = "talks/post.html"
 sort_by = "weight"

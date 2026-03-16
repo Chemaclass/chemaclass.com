@@ -12,6 +12,22 @@
 </noscript>
 {% endblock styles %}
 
+{% block description %}
+  {% set tag_desc = "" %}
+  {% for td in config.extra.tag_descriptions %}
+    {% if td.name == term.name %}
+      {% if lang == "es" %}{% set_global tag_desc = td.desc_es %}{% else %}{% set_global tag_desc = td.desc %}{% endif %}
+    {% endif %}
+  {% endfor %}
+  {% if tag_desc %}
+    <meta name="description" content="{{ tag_desc }}" />
+    <meta name="twitter:description" content="{{ tag_desc }}">
+  {% else %}
+    <meta name="description" content="{{ term.pages | length }} {% if lang == 'es' %}artículos sobre{% else %}posts about{% endif %} {{ term.name }}" />
+    <meta name="twitter:description" content="{{ term.pages | length }} {% if lang == 'es' %}artículos sobre{% else %}posts about{% endif %} {{ term.name }}">
+  {% endif %}
+{% endblock description %}
+
 {% block posthead %}
   {% for post in term.pages %}
     <link rel="prerender" href="{{ post.permalink }}" />

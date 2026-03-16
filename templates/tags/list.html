@@ -10,6 +10,16 @@
 </noscript>
 {% endblock styles %}
 
+{% block description %}
+  {% if lang == "es" %}
+    <meta name="description" content="Explora {{ terms | length }} etiquetas sobre desarrollo de software, liderazgo, testing y más." />
+    <meta name="twitter:description" content="Explora {{ terms | length }} etiquetas sobre desarrollo de software, liderazgo, testing y más.">
+  {% else %}
+    <meta name="description" content="Browse {{ terms | length }} tags covering software development, leadership, testing, and more." />
+    <meta name="twitter:description" content="Browse {{ terms | length }} tags covering software development, leadership, testing, and more.">
+  {% endif %}
+{% endblock description %}
+
 {% block posthead %}
 {% for term in terms %}
 <link rel="prerender" href="{{ term.permalink }}" />

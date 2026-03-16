@@ -1,5 +1,6 @@
 +++
 title = "Readings | Chemaclass"
+description = "Book summaries and notes on software craftsmanship, psychology, philosophy, and personal development. Key takeaways and reflections from each read."
 template = "readings/index.html"
 page_template = "readings/post.html"
 sort_by = "date"

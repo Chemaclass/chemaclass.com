@@ -1,5 +1,6 @@
 +++
 title = "Charlas | Chemaclass"
+description = "Charlas y talleres sobre TDD, refactoring y artesanía del software. Desde sesiones de live coding hasta talleres de pair programming de día completo."
 template = "talks/index.html"
 page_template = "talks/post.html"
 sort_by = "weight"
