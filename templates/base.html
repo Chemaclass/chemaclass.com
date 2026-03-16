@@ -22,9 +22,12 @@
     <meta name="theme-color" content="{{ config.extra.accent }}" />
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- Search Engine Verification - uncomment and add tokens when available -->
-    <!-- <meta name="google-site-verification" content="YOUR_GOOGLE_TOKEN"> -->
-    <!-- <meta name="msvalidate.01" content="YOUR_BING_TOKEN"> -->
+    {% if config.extra.google_site_verification %}
+    <meta name="google-site-verification" content="{{ config.extra.google_site_verification }}">
+    {% endif %}
+    {% if config.extra.bing_site_verification %}
+    <meta name="msvalidate.01" content="{{ config.extra.bing_site_verification }}">
+    {% endif %}
 
     {% if config.extra.profile_small %}
       {% set icon = resize_image(path=config.extra.profile_small, width=48, height=48, op="fill") -%}
@@ -64,6 +67,7 @@
 
     {% set rum_key = get_env(name="RUM_KEY", default=false) %}
     {% if rum_key %}
+    <link rel="preconnect" href="https://rum.cronitor.io" crossorigin>
     <script async src="https://rum.cronitor.io/script.js"></script>
     <script>
       window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };

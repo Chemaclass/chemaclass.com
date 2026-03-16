@@ -306,6 +306,10 @@ nav = [
     { name = "CV", path = "/cv/" },
 ]
 
+# Search engine verification (add your tokens here)
+google_site_verification = ""
+bing_site_verification = ""
+
 icon = "icon.jpg"
 profile_small = "icon.jpg"
 profile_large = "profile.jpg"

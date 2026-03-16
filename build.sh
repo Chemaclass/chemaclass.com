@@ -2,6 +2,7 @@
 set -euo pipefail
 
 ZOLA_VERSION="${ZOLA_VERSION:-0.22.0}"
+MINIFY_VERSION="${MINIFY_VERSION:-2.21.3}"
 
 # Download zola if not installed
 if ! command -v zola &> /dev/null; then
@@ -25,6 +26,27 @@ if ! command -v zola &> /dev/null; then
   export PATH="$PWD:$PATH"
 fi
 
+# Download minify if not installed
+if ! command -v minify &> /dev/null; then
+  ARCH=$(uname -m)
+  if [ "$ARCH" = "x86_64" ]; then
+    MINIFY_ARCH="amd64"
+  elif [ "$ARCH" = "aarch64" ] || [ "$ARCH" = "arm64" ]; then
+    MINIFY_ARCH="arm64"
+  else
+    echo "Unsupported architecture for minify: $ARCH"
+    exit 1
+  fi
+
+  MINIFY_URL="https://github.com/tdewolff/minify/releases/download/v${MINIFY_VERSION}/minify_linux_${MINIFY_ARCH}.tar.gz"
+  echo "Downloading minify from $MINIFY_URL"
+  curl -sSL -o minify.tar.gz "$MINIFY_URL"
+  tar -xzf minify.tar.gz minify
+  rm minify.tar.gz
+  chmod +x minify
+  export PATH="$PWD:$PATH"
+fi
+
 echo "Using Zola $(zola --version)"
 
 echo "Building site..."
@@ -38,5 +60,11 @@ python3 scripts/generate-terminal-fs.py
 
 echo "Generating plain text pages..."
 python3 scripts/generate-txt-pages.py
+
+echo "Enriching sitemap with last-modified dates..."
+python3 scripts/enrich-sitemap.py
+
+echo "Minifying HTML, CSS, JS, SVG, and XML..."
+minify -r -o public/ public/
 
 echo "Build complete!"
