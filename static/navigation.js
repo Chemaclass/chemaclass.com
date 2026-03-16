@@ -88,10 +88,7 @@ window.toggleMobileMenu = function(e) {
     { key: 'h', selector: '.header-left' },
     { key: 'b', selector: '.nav-links a[href$="/blog/"]' },
     { key: 'r', selector: '.nav-links a[href$="/readings/"]' },
-    { key: 'e', selector: '.page-footer__link[href$="/services/"]' },
     { key: 'c', selector: '.nav-links a[href$="/cv/"]' },
-    { key: 'p', selector: '.page-footer__link[href$="/topics/"]' },
-    { key: 'a', selector: '.page-footer__link[href$="/talks/"]' },
     { key: 'g', selector: '#scroll-to-top' },
   ];
 
@@ -289,21 +286,9 @@ window.toggleMobileMenu = function(e) {
           e.preventDefault();
           window.location.href = langPrefix + '/readings/';
           return;
-        case 'p': // gp - go topics
-          e.preventDefault();
-          window.location.href = langPrefix + '/topics/';
-          return;
-        case 'e': // ge - go services
-          e.preventDefault();
-          window.location.href = langPrefix + '/services/';
-          return;
         case 'c': // gc - go cv
           e.preventDefault();
           window.location.href = langPrefix + '/cv/';
-          return;
-        case 'a': // ga - go talks
-          e.preventDefault();
-          window.location.href = langPrefix + '/talks/';
           return;
         default:
           return;
@@ -369,15 +354,15 @@ window.toggleMobileMenu = function(e) {
       return;
     }
 
-    // "/" or "s" - Toggle search (vim: / to search)
-    if (e.key === '/' || e.key === 's' || e.key === 'S') {
+    // "/" - Toggle search (vim: / to search)
+    if (e.key === '/') {
       e.preventDefault();
       toggleSearch();
       return;
     }
 
     // "i" - Toggle language (i18n)
-    if (e.key === 'i' || e.key === 'I') {
+    if (e.key === 'i') {
       e.preventDefault();
       var currentPath = window.location.pathname;
       var isSpanish = currentPath.startsWith('/es/');
@@ -420,13 +405,6 @@ window.toggleMobileMenu = function(e) {
       return;
     }
 
-    // "H" (Shift+H) - Go back (browser history)
-    if (e.key === 'H') {
-      e.preventDefault();
-      history.back();
-      return;
-    }
-
     // "h" - Previous post (vim: left)
     if (e.key === 'h') {
       var prevLink = document.querySelector('.blog-post__nav-link--prev');
@@ -458,7 +436,7 @@ window.toggleMobileMenu = function(e) {
     }
 
     // "y" - Yank (copy) URL to clipboard (vim: yank = copy)
-    if (e.key === 'y' || e.key === 'Y') {
+    if (e.key === 'y') {
       e.preventDefault();
       navigator.clipboard.writeText(window.location.href).then(function() {
         showToast('URL copied!');
@@ -582,9 +560,7 @@ document.addEventListener('click', function(e) {
     { key: 'gh', selector: '.header-left' },
     { key: 'gb', selector: '.nav-links a[href$="/blog/"]' },
     { key: 'gr', selector: '.nav-links a[href$="/readings/"]' },
-    { key: 'gp', selector: '.nav-links a[href$="/topics/"]' },
-    { key: 'ge', selector: '.nav-links a[href$="/services/"]' },
-    { key: 'ga', selector: '.nav-links a[href$="/talks/"]' },
+    { key: 'gc', selector: '.nav-links a[href$="/cv/"]' },
     { key: '/',  selector: '#search-toggle' },
     { key: 'i',  selector: '.lang-switch' },
     { key: 'd',  selector: '#light-mode, #dark-mode' },
