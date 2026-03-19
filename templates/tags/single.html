@@ -66,11 +66,21 @@
     <a href="{{ post.permalink }}" class="tag-single__post">
       {% if post.extra.static_thumbnail %}
       <div class="tag-single__post-thumb">
-        <img src="{{ post.extra.static_thumbnail }}" alt="{{ post.title }}" />
+        {% if post.extra.static_thumbnail is matching("^http[s]?://") %}
+          <img src="{{ post.extra.static_thumbnail | safe }}" alt="{{ post.title }}" width="480" height="270" loading="lazy" decoding="async" />
+        {% else %}
+          {% set thumb_path = post.extra.static_thumbnail | trim_start_matches(pat="/") %}
+          {% set thumb_webp = resize_image(path=thumb_path, width=480, height=270, op="fill", quality=75, format="webp") %}
+          {% set thumb_fb = resize_image(path=thumb_path, width=480, height=270, op="fill", quality=80) %}
+          <picture>
+            <source type="image/webp" srcset="{{ thumb_webp.url }}" />
+            <img src="{{ thumb_fb.url }}" alt="{{ post.title }}" width="{{ thumb_fb.width }}" height="{{ thumb_fb.height }}" loading="lazy" decoding="async" />
+          </picture>
+        {% endif %}
       </div>
       {% elif post.extra.thumbnail %}
       <div class="tag-single__post-thumb">
-        <img src="{{ get_url(path=post.path ~ post.extra.thumbnail) }}" alt="{{ post.title }}" />
+        <img src="{{ get_url(path=post.path ~ post.extra.thumbnail) }}" alt="{{ post.title }}" width="480" height="270" loading="lazy" decoding="async" />
       </div>
       {% endif %}
       <div class="tag-single__post-content">
