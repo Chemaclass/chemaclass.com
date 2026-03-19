@@ -551,6 +551,25 @@
   }
 }
 
+.service-option--unavailable {
+  opacity: 0.5;
+
+  .service-option__badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-subtitle);
+    background: var(--preview-divider-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+}
+
+.decision-card--unavailable {
+  opacity: 0.5;
+}
+
 .decision-tip {
   background: var(--search-input-bg);
   border-left: 4px solid var(--accent-color);

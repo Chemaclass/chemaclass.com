@@ -35,7 +35,7 @@
   <!-- Value Proposition -->
   <section class="service-intro">
     <p>{% if lang == "es" %}Toda empresa necesita una web, pero no todas necesitan el mismo tipo. Te ayudo a elegir el enfoque adecuado basado en tus necesidades reales, no en lo que está de moda o es innecesariamente complejo.{% else %}Every business needs a website, but not the same kind. I help you choose what actually fits your needs, not what's trendy or over-engineered.{% endif %}</p>
-    <p>{% if lang == "es" %}Ofrezco tres tipos de sitios web, cada uno diseñado para diferentes situaciones. Entender la diferencia te ahorrará tiempo, dinero y frustraciones.{% else %}I offer three types of websites, each for a different situation. Knowing the difference saves you time, money, and frustration.{% endif %}</p>
+    <p>{% if lang == "es" %}Ofrezco dos tipos de sitios web, cada uno diseñado para diferentes situaciones. Entender la diferencia te ahorrará tiempo, dinero y frustraciones.{% else %}I offer two types of websites, each for a different situation. Knowing the difference saves you time, money, and frustration.{% endif %}</p>
     <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="noopener" class="service-intro__cta">
       <i class="fa-brands fa-linkedin"></i> {{ trans(key="svc_contact", lang=lang) }}
     </a>
@@ -142,13 +142,13 @@
       </div>
     </div>
 
-    <div class="service-option">
+    <div class="service-option service-option--unavailable">
       <div class="service-option__header">
         <div class="service-option__icon service-option__icon--secondary">
           <i class="fa-brands fa-wordpress"></i>
         </div>
         <h2>{{ trans(key="svc_wordpress", lang=lang) }}</h2>
-        <span class="service-option__tag service-option__tag--secondary">{{ trans(key="svc_wordpress_tag", lang=lang) }}</span>
+        <span class="service-option__badge">{% if lang == "es" %}No disponible{% else %}Unavailable{% endif %}</span>
       </div>
 
       <p class="service-option__desc">{% if lang == "es" %}Un sitio web flexible que puedes editar tú mismo a través de un panel intuitivo. Control total sobre tu contenido.{% else %}A flexible website you can edit yourself through a user-friendly dashboard. Full control over your content.{% endif %}</p>
@@ -266,7 +266,7 @@
           <li>{% if lang == "es" %}Quieres los beneficios de un sitio estático{% else %}You want static site benefits{% endif %}</li>
         </ul>
       </div>
-      <div class="decision-card">
+      <div class="decision-card decision-card--unavailable">
         <h3><i class="fa-brands fa-wordpress"></i> {{ trans(key="svc_choose_wordpress", lang=lang) }}</h3>
         <ul>
           <li>{% if lang == "es" %}Necesitas editores no técnicos{% else %}Non-technical editors needed{% endif %}</li>

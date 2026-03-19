@@ -741,6 +741,23 @@
   }
 }
 
+.service-card--unavailable {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+
+  .service-card__badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-subtitle);
+    background: var(--preview-divider-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+}
+
 .services-sessions {
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
