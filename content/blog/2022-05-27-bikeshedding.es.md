@@ -1,6 +1,6 @@
 +++
 title = "Bikeshedding"
-description = "La gente en las organizaciones suele dar demasiada importancia a los asuntos triviales."
+description = "El bikeshedding explica por qué los equipos pierden tiempo en decisiones triviales mientras ignoran las complejas e importantes. Aprende a reconocerlo y evitarlo."
 [taxonomies]
 tags = [ "psychology", "team-management", "productivity", "communication" ]
 [extra]

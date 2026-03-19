@@ -231,7 +231,9 @@
     <title>
       {% block title %}
         {% if page.title %}
-          {{ page.title }}
+          {{ page.title }} | {{ config.title }}
+        {% elif section.title %}
+          {{ section.title }}
         {% else %}
           {{ config.title }}
         {% endif %}

@@ -1,6 +1,6 @@
 +++
 title = "Strict Types en PHP"
-description = "`strict_types=1` es más para el lector que para el escritor"
+description = "Por qué declarar strict_types en PHP mejora la legibilidad del código y previene errores silenciosos de coerción de tipos."
 [taxonomies]
 tags = [ "php", "clean-code", "software-design"]
 [extra]

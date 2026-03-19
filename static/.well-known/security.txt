@@ -1,0 +1,4 @@
+Contact: mailto:chemaclass@outlook.es
+Preferred-Languages: en, es
+Canonical: https://chemaclass.com/.well-known/security.txt
+Expires: 2027-03-19T00:00:00.000Z

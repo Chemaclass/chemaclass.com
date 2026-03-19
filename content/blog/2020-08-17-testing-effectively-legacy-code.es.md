@@ -1,6 +1,6 @@
 +++
 title = "Testeando Código Legacy de Forma Efectiva"
-description = "Estos tests también se conocen como tests de caracterización."
+description = "Cómo escribir tests de caracterización para código legacy y refactorizar de forma segura sin romper el comportamiento existente."
 [taxonomies]
 tags = [ "testing", "refactoring", "clean-code", "tdd"]
 [extra]

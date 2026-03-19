@@ -1,6 +1,6 @@
 +++
 title = "Bikeshedding"
-description = "People within an organization typically give disproportionate weight to trivial issues."
+description = "Bikeshedding explains why teams waste time on trivial decisions while ignoring complex, important ones. Learn to recognize and avoid it."
 [taxonomies]
 tags = [ "psychology", "team-management", "productivity", "communication" ]
 [extra]

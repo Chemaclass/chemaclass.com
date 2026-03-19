@@ -2,7 +2,7 @@ base_url = "https://chemaclass.com"
 default_language = "en"
 
 title = "Chemaclass"
-description = "Check out my latest blog posts and readings."
+description = "Tech Lead sharing practical insights on software craftsmanship, TDD, leadership, Bitcoin, and AI. Blog posts, book summaries, and conference talks."
 author = "Chemaclass"
 
 generate_feeds = true
@@ -347,7 +347,7 @@ pricing_workshop_8_people = 3800
 # Spanish language configuration
 [languages.es]
 title = "Chemaclass"
-description = "Mira mis últimos artículos y lecturas."
+description = "Tech Lead compartiendo ideas prácticas sobre artesanía del software, TDD, liderazgo, Bitcoin e IA. Artículos, resúmenes de libros y charlas."
 generate_feeds = true
 build_search_index = true
 taxonomies = [{ name = "tags" }]

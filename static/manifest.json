@@ -1,7 +1,7 @@
 {
   "name": "Chemaclass",
   "short_name": "Chemaclass",
-  "description": "Check out my latest blog posts and readings.",
+  "description": "Tech Lead sharing practical insights on software craftsmanship, TDD, leadership, Bitcoin, and AI. Blog posts, book summaries, and conference talks.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

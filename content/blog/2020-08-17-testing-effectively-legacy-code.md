@@ -1,6 +1,6 @@
 +++
 title = "Testing Effectively Legacy Code"
-description = "These tests are also known as Characterization tests."
+description = "How to write characterization tests for legacy code to safely refactor without breaking existing behavior."
 [taxonomies]
 tags = [ "testing", "refactoring", "clean-code", "tdd"]
 [extra]

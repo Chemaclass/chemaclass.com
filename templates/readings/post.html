@@ -29,6 +29,23 @@
 
 {% set schema_type = "Article" %}
 {% include "partials/post-schema.html" %}
+
+{% if page.extra.author %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Book",
+    "name": "{{ page.title }}",
+    "author": { "@type": "Person", "name": "{{ page.extra.author }}" }
+    {% if page.extra.pages %}, "numberOfPages": {{ page.extra.pages }}{% endif %}
+  },
+  "author": { "@type": "Person", "name": "Jose Maria Valera Reales" },
+  "reviewBody": "{{ page.description | default(value='') }}"
+}
+</script>
+{% endif %}
 {% endblock posthead %}
 
 {% block content %}

@@ -1,6 +1,6 @@
 +++
 title = "Open-Source Software"
-description = "What is Open-Source Software (OSS)? What are their benefits? How can you start contributing to any OSS? Pet projects? Knowledge sharing? Why all of these?"
+description = "A practical guide to open-source software: its benefits, how to start contributing, and why sharing code accelerates your career growth."
 [taxonomies]
 tags = [ "open-source", "git", "career", "productivity" ]
 [extra]
