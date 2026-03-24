@@ -24,3 +24,8 @@ Intro
 ## Header
 
 Content
+
+## Related
+
+- [@internal-link Blog Post Title](@/blog/YYYY-MM-DD-slug.md)
+- [@internal-link Reading Title](@/readings/YYYY-MM-DD-slug.md)
