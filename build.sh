@@ -4,10 +4,17 @@ set -euo pipefail
 ZOLA_VERSION="${ZOLA_VERSION:-0.22.0}"
 MINIFY_VERSION="${MINIFY_VERSION:-2.21.3}"
 
+# Detect OS and architecture
+OS=$(uname -s)
+ARCH=$(uname -m)
+
 # Download zola if not installed
 if ! command -v zola &> /dev/null; then
-  # Detect architecture
-  ARCH=$(uname -m)
+  if [ "$OS" = "Darwin" ]; then
+    echo "zola not found. Install it with: brew install zola"
+    exit 1
+  fi
+
   if [ "$ARCH" = "x86_64" ]; then
     ZOLA_ARCH="x86_64-unknown-linux-gnu"
   elif [ "$ARCH" = "aarch64" ] || [ "$ARCH" = "arm64" ]; then
@@ -28,7 +35,11 @@ fi
 
 # Download minify if not installed
 if ! command -v minify &> /dev/null; then
-  ARCH=$(uname -m)
+  if [ "$OS" = "Darwin" ]; then
+    echo "minify not found. Install it with: brew install tdewolff/tap/minify"
+    exit 1
+  fi
+
   if [ "$ARCH" = "x86_64" ]; then
     MINIFY_ARCH="amd64"
   elif [ "$ARCH" = "aarch64" ] || [ "$ARCH" = "arm64" ]; then
