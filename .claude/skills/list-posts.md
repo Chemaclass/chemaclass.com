@@ -1,3 +1,9 @@
+---
+description: "List blog posts with title, date, tags, and draft status"
+allowed-tools: Glob, Read, Grep
+argument-hint: "[tag or year]"
+---
+
 # List Blog Posts
 
 List all blog posts with their metadata.

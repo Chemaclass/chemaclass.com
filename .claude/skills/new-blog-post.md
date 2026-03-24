@@ -1,3 +1,9 @@
+---
+description: "Create a new blog post from the project template"
+allowed-tools: Read, Write, Glob
+argument-hint: "<topic>"
+---
+
 # Create New Blog Post
 
 Create a new blog post using the project template.

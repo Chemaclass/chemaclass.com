@@ -1,3 +1,9 @@
+---
+description: "Translate content between English and Spanish"
+allowed-tools: Read, Write, Glob
+argument-hint: "<file-path>"
+---
+
 # Translate Content
 
 Translate the specified content file to Spanish (or from Spanish to English).

@@ -1,3 +1,9 @@
+---
+description: "Add an image to a blog post (cover, middle, or footer)"
+allowed-tools: Read, Write, Edit, Glob, Bash(cp *), Bash(rm *), Bash(mkdir *), Bash(zola build)
+argument-hint: "<image-path> [post-date] [cover|middle|footer]"
+---
+
 # Add Image to Blog Post
 
 Move an image to the correct location and insert it into a blog post.

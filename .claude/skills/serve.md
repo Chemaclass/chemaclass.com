@@ -1,3 +1,8 @@
+---
+description: "Start the Zola dev server for local preview"
+allowed-tools: Bash(zola *)
+---
+
 # Serve Zola Site Locally
 
 Start the Zola development server in the background.
