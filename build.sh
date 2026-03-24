@@ -58,6 +58,12 @@ if ! command -v minify &> /dev/null; then
   export PATH="$PWD:$PATH"
 fi
 
+# Verify python3 is available (scripts use only stdlib: json, os, re, subprocess, pathlib)
+if ! command -v python3 &> /dev/null; then
+  echo "python3 not found. Install Python 3 to run post-build scripts."
+  exit 1
+fi
+
 echo "Using Zola $(zola --version)"
 
 echo "Building site..."
