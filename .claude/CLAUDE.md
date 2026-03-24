@@ -80,15 +80,16 @@ Defined in `config.toml` under `[extra.series.<key>]`:
 
 To add a new series: add `[extra.series.<key>]` with `title` and `title_es` in `config.toml`.
 
-## Custom Commands Available
+## Skills Available
 
-- `/new-blog-post <topic>` - Create a new blog post
+- `/new-blog-post <topic>` - Create a new blog post (uses `.claude/templates/blog-post.md`)
 - `/build` - Build the site
 - `/serve` - Start dev server
 - `/check-links` - Verify internal links
 - `/list-posts` - List blog posts with metadata
 - `/translate <file>` - Translate content EN↔ES
 - `/add-image <path> [post-date] [cover|middle|footer]` - Add image to blog post
+- `/optimize-ui [target]` - Analyze and improve visual design
 
 ## Code Style
 
