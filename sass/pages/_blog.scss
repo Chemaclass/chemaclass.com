@@ -140,6 +140,7 @@
       width: 100%;
       height: 360px;
       min-height: auto;
+      aspect-ratio: 16 / 9;
     }
 
     &.has-thumbnail .blog-card__content {
@@ -187,10 +188,16 @@
     flex-shrink: 0;
     width: 200px;
     min-height: 160px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--preview-divider-color);
 
-    img {
+    img, picture {
       width: 100%;
       height: 100%;
+    }
+
+    img {
       object-fit: cover;
     }
   }
