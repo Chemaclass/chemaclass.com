@@ -83,6 +83,7 @@ To add a new series: add `[extra.series.<key>]` with `title` and `title_es` in `
 ## Skills Available
 
 - `/new-blog-post <topic>` - Create a new blog post (uses `.claude/templates/blog-post.md`)
+- `/new-reading <title> by <author>` - Create a new reading note (uses `.claude/templates/reading.md`)
 - `/build` - Build the site
 - `/serve` - Start dev server
 - `/check-links` - Verify internal links
@@ -90,6 +91,8 @@ To add a new series: add `[extra.series.<key>]` with `title` and `title_es` in `
 - `/translate <file>` - Translate content EN↔ES
 - `/add-image <path> [post-date] [cover|middle|footer]` - Add image to blog post
 - `/optimize-ui [target]` - Analyze and improve visual design
+- `/check-translations [blog|readings|talks]` - Find content missing Spanish translations
+- `/validate-posts [file]` - Lint front matter, structure, and asset references
 
 ## Code Style
 
