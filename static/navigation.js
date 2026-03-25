@@ -462,6 +462,34 @@ window.toggleMobileMenu = function(e) {
 
 })();
 
+// Konami code easter egg
+(function() {
+  var KONAMI = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+  var pos = 0;
+  var timer = null;
+  document.addEventListener('keydown', function(e) {
+    if (e.key === KONAMI[pos]) {
+      pos++;
+      clearTimeout(timer);
+      timer = setTimeout(function() { pos = 0; }, 2000);
+      if (pos === KONAMI.length) {
+        pos = 0;
+        clearTimeout(timer);
+        if (typeof window.startSpaceInvaders === 'function') {
+          window.startSpaceInvaders();
+        } else {
+          var s = document.createElement('script');
+          s.src = document.querySelector('script[src*="navigation"]').src.replace('navigation.js', 'space-invaders.js');
+          s.onload = function() { window.startSpaceInvaders(); };
+          document.body.appendChild(s);
+        }
+      }
+    } else {
+      pos = 0;
+    }
+  });
+})();
+
 // Toast notification
 function showToast(message) {
   var toast = document.getElementById('toast-notification');
