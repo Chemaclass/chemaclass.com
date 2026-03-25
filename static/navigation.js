@@ -37,12 +37,6 @@ window.toggleMobileMenu = function(e) {
   var cards = document.querySelectorAll('.blog-card');
   var selectedIndex = -1;
 
-  // Hint mode state (f key - vimium-style link following)
-  var hintMode = false;
-  var hintLinks = [];
-  var hintBadges = [];
-  var hintInput = '';
-
   // Heading navigation state (n/N keys on blog posts)
   var headings = document.querySelectorAll('.blog-post__content h2, .blog-post__content h3');
   var HEADING_OFFSET = 20;
@@ -151,101 +145,12 @@ window.toggleMobileMenu = function(e) {
     return document.documentElement.lang === 'es' ? '/es' : '';
   }
 
-  function generateHintLabels(count) {
-    var labels = [];
-    var chars = 'abcdefghijklmnopqrstuvwxyz';
-    if (count <= 26) {
-      for (var i = 0; i < count; i++) labels.push(chars[i]);
-    } else {
-      for (var i = 0; i < chars.length; i++) {
-        for (var j = 0; j < chars.length; j++) {
-          labels.push(chars[i] + chars[j]);
-          if (labels.length >= count) return labels;
-        }
-      }
-    }
-    return labels;
-  }
-
-  function enterHintMode() {
-    var elements = document.querySelectorAll('a, button');
-    hintLinks = [];
-    elements.forEach(function(el) { if (isElVisible(el)) hintLinks.push(el); });
-    if (hintLinks.length === 0) return;
-
-    hintMode = true;
-    hintInput = '';
-    var labels = generateHintLabels(hintLinks.length);
-
-    hintLinks.forEach(function(el, i) {
-      var rect = el.getBoundingClientRect();
-      var badge = document.createElement('kbd');
-      badge.className = 'shortcut-hint';
-      badge.textContent = labels[i];
-      badge.dataset.label = labels[i];
-      badge.style.position = 'fixed';
-      badge.style.top = (rect.top + rect.height / 2) + 'px';
-      badge.style.left = (rect.left) + 'px';
-      badge.style.zIndex = '10000';
-      document.body.appendChild(badge);
-      hintBadges.push(badge);
-      requestAnimationFrame(function() { badge.classList.add('visible'); });
-    });
-  }
-
-  function exitHintMode() {
-    hintMode = false;
-    hintInput = '';
-    hintBadges.forEach(function(badge) {
-      badge.classList.remove('visible');
-      badge.addEventListener('transitionend', function() { badge.remove(); });
-      setTimeout(function() { badge.remove(); }, 300);
-    });
-    hintBadges = [];
-    hintLinks = [];
-  }
-
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
       closeSearch();
       closeShortcutsModal();
       cancelG();
       clearCardSelection();
-      if (hintMode) exitHintMode();
-      return;
-    }
-
-    // Handle hint mode input
-    if (hintMode) {
-      e.preventDefault();
-      var key = e.key.toLowerCase();
-      if (key.length !== 1 || key < 'a' || key > 'z') {
-        exitHintMode();
-        return;
-      }
-      hintInput += key;
-      // Filter visible badges
-      var matches = [];
-      var matchIndex = -1;
-      hintBadges.forEach(function(badge, i) {
-        var label = badge.dataset.label;
-        if (label === hintInput) {
-          matchIndex = i;
-        }
-        if (label.indexOf(hintInput) === 0) {
-          matches.push(i);
-          badge.style.opacity = '1';
-        } else {
-          badge.style.opacity = '0.2';
-        }
-      });
-      if (matchIndex >= 0) {
-        var target = hintLinks[matchIndex];
-        exitHintMode();
-        target.click();
-      } else if (matches.length === 0) {
-        exitHintMode();
-      }
       return;
     }
 
@@ -317,13 +222,6 @@ window.toggleMobileMenu = function(e) {
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         showToast('Bottom');
       }
-      return;
-    }
-
-    // "f" - Enter hint mode (vimium-style link following)
-    if (e.key === 'f') {
-      e.preventDefault();
-      enterHintMode();
       return;
     }
 
