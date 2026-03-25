@@ -1476,6 +1476,27 @@ ${portrait}
       document.addEventListener('keydown', cleanup);
 
       return '[[;#3fb950;]Entering the Matrix...]';
+    },
+
+    sudo: function(args) {
+      if (args.length === 0) {
+        return '[[;#f85149;]usage: sudo <command>]';
+      }
+      const cmd = args[0].toLowerCase();
+      const sudoResponses = [
+        '[[;#3fb950;]OK, you\'re the boss now.] But nothing changed.',
+        '[[;#d29922;]With great power comes great responsibility...]\n[[;#6e7681;]Permission granted. Just kidding.]',
+        '[[;#f85149;]sudo: nice try.] This incident will be reported.',
+        '[[;#39c5cf;]root@chemaclass]:~# ] [[;#6e7681;]Just kidding, you\'re still a visitor.]',
+        '[[;#a371f7;]sudo: I appreciate the confidence, but no.]'
+      ];
+      if (cmd === 'rm' && args.includes('-rf') && (args.includes('/') || args.includes('/*'))) {
+        return '[[;#f85149;]sudo: ABSOLUTELY NOT.] [[;#6e7681;]Nice try though.]]';
+      }
+      if (cmd === 'make' && args[1] === 'me' && args[2] === 'a' && args[3] === 'sandwich') {
+        return '[[;#3fb950;]OK.] \uD83E\uDD6A';
+      }
+      return sudoResponses[Math.floor(Math.random() * sudoResponses.length)];
     }
   };
 
