@@ -435,15 +435,6 @@ window.toggleMobileMenu = function(e) {
       return;
     }
 
-    // "y" - Yank (copy) URL to clipboard (vim: yank = copy)
-    if (e.key === 'y') {
-      e.preventDefault();
-      navigator.clipboard.writeText(window.location.href).then(function() {
-        showToast('URL copied!');
-      });
-      return;
-    }
-
     // ":" - Open terminal (vim: command mode)
     if (e.key === ':') {
       e.preventDefault();
