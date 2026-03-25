@@ -351,6 +351,28 @@ window.toggleMobileMenu = function(e) {
 
 })();
 
+// "42" easter egg — The Hitchhiker's Guide
+(function() {
+  var buf = '';
+  var timer = null;
+  document.addEventListener('keydown', function(e) {
+    if (['INPUT', 'TEXTAREA'].includes(e.target.tagName) || e.target.isContentEditable) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.key === '4' || e.key === '2') {
+      buf += e.key;
+      clearTimeout(timer);
+      timer = setTimeout(function() { buf = ''; }, 1000);
+      if (buf === '42') {
+        buf = '';
+        clearTimeout(timer);
+        showToast('The answer to life, the universe, and everything.');
+      }
+    } else {
+      buf = '';
+    }
+  });
+})();
+
 // Konami code easter egg
 (function() {
   var KONAMI = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
