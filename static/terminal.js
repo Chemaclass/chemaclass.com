@@ -1679,7 +1679,33 @@ ${portrait}
       const cmd = parts[0].toLowerCase();
       const args = parts.slice(1);
 
-      if (commands[cmd]) {
+      // Vim-style : commands
+      if (cmd.startsWith(':')) {
+        const vcmd = cmd.slice(1);
+        const self = this;
+        const vimCommands = {
+          'q': function() { window.history.length > 1 ? window.history.back() : (window.location.href = '/'); },
+          'q!': function() { window.location.href = '/'; },
+          'wq': function() { self.echo('[[;#3fb950;]Buffer saved.] [[;#6e7681;](just kidding, nothing to save)]'); setTimeout(function() { window.location.href = '/'; }, 1000); },
+          'w': function() { return '[[;#d29922;]E212: Can\'t open file for writing] [[;#6e7681;](this is a read-only universe)]'; },
+          'x': function() { self.echo('[[;#3fb950;]Buffer saved.] [[;#6e7681;](just kidding)]'); setTimeout(function() { window.location.href = '/'; }, 1000); },
+          'help': function() { return '[[;#58a6ff;]VIM - Vi IMproved]\n\n[[;#6e7681;]This is not Vim. But I appreciate the muscle memory.]\n[[;#6e7681;]Type \'help\' (without :) for actual commands.]'; },
+          'set nu': function() { return '[[;#6e7681;]Line numbers? In a terminal? You rebel.]'; },
+          'set nonumber': function() { return '[[;#6e7681;]Line numbers were never on. Well played.]'; },
+          '%s/bug/feature/g': function() { return '[[;#3fb950;]42 substitutions on 42 lines.] [[;#6e7681;]All bugs are now features.]'; },
+          'visual': function() { return '[[;#d29922;]VISUAL mode] [[;#6e7681;]— just kidding, select text with your mouse like everyone else.]'; }
+        };
+        const fullVcmd = vcmd + (args.length ? ' ' + args.join(' ') : '');
+        if (vimCommands[fullVcmd]) {
+          const result = vimCommands[fullVcmd]();
+          if (result) this.echo(result);
+        } else if (vimCommands[vcmd]) {
+          const result = vimCommands[vcmd]();
+          if (result) this.echo(result);
+        } else {
+          this.echo(`[[;#f85149;]E492: Not an editor command: ${vcmd}]`);
+        }
+      } else if (commands[cmd]) {
         const result = commands[cmd](args);
         if (result) this.echo(result);
       } else {
