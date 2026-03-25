@@ -548,10 +548,6 @@ ${portrait}
       return `[[;#f85149;]Nice try! This is a read-only filesystem.]`;
     },
 
-    sudo: function() {
-      return `[[;#f85149;]${term.get_prompt().replace(/\$\s*$/, '')} is not in the sudoers file. This incident will be reported.]`;
-    },
-
     exit: function() {
       window.location.href = '/';
       return '[[;#6e7681;]Redirecting to homepage...]';
@@ -1493,8 +1489,19 @@ ${portrait}
       if (cmd === 'rm' && args.includes('-rf') && (args.includes('/') || args.includes('/*'))) {
         return '[[;#f85149;]sudo: ABSOLUTELY NOT.] [[;#6e7681;]Nice try though.]]';
       }
-      if (cmd === 'make' && args[1] === 'me' && args[2] === 'a' && args[3] === 'sandwich') {
-        return '[[;#3fb950;]OK.] \uD83E\uDD6A';
+      const restArgs = args.slice(1).join(' ');
+      if (cmd === 'make') {
+        const makeTargets = {
+          'me a sandwich': '[[;#3fb950;]OK.] \uD83E\uDD6A',
+          'a sandwich':    '[[;#3fb950;]OK.] \uD83E\uDD6A',
+          'sandwich':      '[[;#3fb950;]OK.] \uD83E\uDD6A',
+          'love':          '[[;#a371f7;]Not war?] [[;#6e7681;]make: *** No rule to make target \'war\'. Stop.]',
+          'money':         '[[;#f85149;]Error:] capitalism requires root privileges.',
+          'coffee':        '[[;#d29922;]418 I\'m a teapot.] \u2615',
+          'sense':         '[[;#f85149;]make: *** No rule to make target \'sense\'. Stop.]',
+          'friends':       '[[;#f85149;]make:] [[;#6e7681;]social compilation failed. Missing dependency: touching grass.]'
+        };
+        if (makeTargets[restArgs]) return makeTargets[restArgs];
       }
       return sudoResponses[Math.floor(Math.random() * sudoResponses.length)];
     }
