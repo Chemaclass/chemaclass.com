@@ -548,6 +548,21 @@ ${portrait}
       return `[[;#f85149;]Nice try! This is a read-only filesystem.]`;
     },
 
+    make: function(args) {
+      const target = args.join(' ');
+      const makeTargets = {
+        'me a sandwich': '[[;#f85149;]What? Make it yourself.]',
+        'a sandwich':    '[[;#f85149;]What? Make it yourself.]',
+        'sandwich':      '[[;#f85149;]What? Make it yourself.]',
+        'love':          '[[;#a371f7;]Not war?] [[;#6e7681;]make: *** No rule to make target \'war\'. Stop.]',
+        'money':         '[[;#f85149;]Error:] capitalism requires root privileges.',
+        'coffee':        '[[;#d29922;]418 I\'m a teapot.] \u2615',
+        'sense':         '[[;#f85149;]make: *** No rule to make target \'sense\'. Stop.]',
+        'friends':       '[[;#f85149;]make:] [[;#6e7681;]social compilation failed. Missing dependency: touching grass.]'
+      };
+      return makeTargets[target] || `[[;#f85149;]make: *** No rule to make target '${target || 'nothing'}'. Stop.]`;
+    },
+
     exit: function() {
       window.location.href = '/';
       return '[[;#6e7681;]Redirecting to homepage...]';
@@ -1161,46 +1176,75 @@ ${portrait}
       }
 
       const yearPosts = posts.filter(p => p.entry.date.startsWith(String(targetYear)));
-      const months = ['January', 'February', 'March', 'April', 'May', 'June',
-                       'July', 'August', 'September', 'October', 'November', 'December'];
-      const days = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
+      const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                           'July', 'August', 'September', 'October', 'November', 'December'];
+      const dayHeaders = 'Mo Tu We Th Fr Sa Su';
+      const monthWidth = 20;
+      const gap = '    ';
 
-      let output = `[[b;#58a6ff;]Calendar ${targetYear}] [[;#6e7681;](${yearPosts.length} posts)]\n`;
-      output += `[[;#6e7681;]Years with posts: ${allYears.join(', ')}]\n\n`;
+      // Strip jQuery Terminal formatting to get visual length
+      function visualLength(str) {
+        return str.replace(/\[\[[^\]]*\]([^\]]*)\]/g, '$1').length;
+      }
+      function padLine(str, width) {
+        const vlen = visualLength(str);
+        return vlen < width ? str + ' '.repeat(width - vlen) : str;
+      }
 
-      for (let m = 0; m < 12; m++) {
-        const monthPosts = yearPosts.filter(p => parseInt(p.entry.date.substring(5, 7)) === m + 1);
-        if (monthPosts.length === 0 && m > 0) continue; // skip empty months except Jan
-
-        output += `  [[b;#ffffff;]${months[m]}]\n`;
-        output += `  [[;#6e7681;]${days.join(' ')}]\n  `;
+      // Render a single month as an array of fixed-height lines
+      function renderMonth(m) {
+        const lines = [];
+        const name = monthNames[m];
+        const padLeft = Math.floor((monthWidth - name.length) / 2);
+        lines.push(' '.repeat(padLeft) + `[[b;#ffffff;]${name}]`);
+        lines.push(`[[;#6e7681;]${dayHeaders}]`);
 
         const firstDay = new Date(targetYear, m, 1).getDay();
-        // Convert Sunday=0 to Monday-based (Mo=0, Su=6)
         const startOffset = firstDay === 0 ? 6 : firstDay - 1;
         const daysInMonth = new Date(targetYear, m + 1, 0).getDate();
 
-        // Leading spaces
-        output += '   '.repeat(startOffset);
-
+        let line = '   '.repeat(startOffset);
         for (let d = 1; d <= daysInMonth; d++) {
           const dateStr = `${targetYear}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
           const dayStr = String(d).padStart(2, ' ');
 
           if (postDates.has(dateStr)) {
-            output += `[[b;#3fb950;]${dayStr}]`;
+            line += `[[b;#3fb950;]${dayStr}]`;
           } else {
-            output += dayStr;
+            line += dayStr;
           }
 
           const dayOfWeek = (startOffset + d - 1) % 7;
-          if (dayOfWeek === 6 && d < daysInMonth) {
-            output += '\n  ';
-          } else {
-            output += ' ';
+          if (dayOfWeek === 6) {
+            lines.push(line);
+            if (d < daysInMonth) line = '';
+          } else if (d < daysInMonth) {
+            line += ' ';
           }
         }
-        output += '\n\n';
+        if ((startOffset + daysInMonth - 1) % 7 !== 6) lines.push(line);
+
+        // Pad to 8 lines (header + day header + up to 6 week rows)
+        while (lines.length < 8) lines.push('');
+        return lines;
+      }
+
+      // Determine how many months fit per row
+      const termCols = term.cols ? term.cols() : 80;
+      const monthsPerRow = Math.max(1, Math.floor((termCols + gap.length) / (monthWidth + gap.length)));
+
+      let output = `[[b;#58a6ff;]Calendar ${targetYear}] [[;#6e7681;](${yearPosts.length} posts)]\n`;
+      output += `[[;#6e7681;]Years with posts: ${allYears.join(', ')}]\n\n`;
+
+      for (let row = 0; row < 12; row += monthsPerRow) {
+        const rowMonths = [];
+        for (let i = row; i < Math.min(row + monthsPerRow, 12); i++) {
+          rowMonths.push(renderMonth(i));
+        }
+        for (let line = 0; line < 8; line++) {
+          output += rowMonths.map(m => padLine(m[line], monthWidth)).join(gap) + '\n';
+        }
+        output += '\n';
       }
 
       output += `  [[b;#3fb950;]██] = post published`;
