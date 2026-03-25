@@ -373,6 +373,61 @@ window.toggleMobileMenu = function(e) {
   });
 })();
 
+// Bitcoin block height ticker — type "btc"
+(function() {
+  var SEQ = ['b', 't', 'c'];
+  var pos = 0;
+  var timer = null;
+  var ticker = null;
+
+  function removeTicker() {
+    if (ticker) {
+      ticker.classList.remove('show');
+      setTimeout(function() { if (ticker) { ticker.remove(); ticker = null; } }, 400);
+    }
+  }
+
+  function showTicker() {
+    if (ticker) { removeTicker(); return; }
+
+    ticker = document.createElement('div');
+    ticker.id = 'btc-ticker';
+    ticker.style.cssText = 'position:fixed;bottom:16px;right:16px;background:rgba(0,0,0,0.85);color:#f7931a;font-family:monospace;font-size:13px;padding:8px 14px;border-radius:6px;border:1px solid #f7931a33;z-index:9999;opacity:0;transition:opacity 0.3s;cursor:pointer;';
+    ticker.textContent = '\u20BF loading...';
+    ticker.onclick = removeTicker;
+    document.body.appendChild(ticker);
+    requestAnimationFrame(function() { ticker.style.opacity = '1'; ticker.classList.add('show'); });
+
+    fetch('https://mempool.space/api/blocks/tip/height')
+      .then(function(r) { return r.text(); })
+      .then(function(height) {
+        if (ticker) ticker.textContent = '\u20BF block ' + Number(height).toLocaleString();
+      })
+      .catch(function() {
+        if (ticker) ticker.textContent = '\u20BF unable to reach mempool';
+      });
+
+    setTimeout(removeTicker, 15000);
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (['INPUT', 'TEXTAREA'].includes(e.target.tagName) || e.target.isContentEditable) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.key === SEQ[pos]) {
+      pos++;
+      clearTimeout(timer);
+      timer = setTimeout(function() { pos = 0; }, 1000);
+      if (pos === SEQ.length) {
+        pos = 0;
+        clearTimeout(timer);
+        showTicker();
+      }
+    } else {
+      pos = 0;
+    }
+  });
+})();
+
 // Konami code easter egg
 (function() {
   var KONAMI = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
