@@ -28,6 +28,14 @@
       </div>
     </div>
 
+    <div class="book-chapters__search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" id="chapter-search"
+             placeholder="{% if lang == 'es' %}Buscar capítulos por título o contenido...{% else %}Search chapters by title or content...{% endif %}"
+             autocomplete="off" />
+      <span class="book-chapters__search-count" id="chapter-search-count"></span>
+    </div>
+
     <div class="book-chapters__grid">
       {% if section.extra.cover %}
       <div class="chapter-card chapter-card--cover">
@@ -63,7 +71,9 @@
         {# Determine if this is a special chapter (prologue/index) #}
         {% set is_special = chapter_num == "0" %}
 
-        <a href="{{ post.permalink }}" class="chapter-card{% if is_december %} chapter-card--december{% endif %}{% if is_special %} chapter-card--special{% endif %}">
+        <a href="{{ post.permalink }}"
+           class="chapter-card{% if is_december %} chapter-card--december{% endif %}{% if is_special %} chapter-card--special{% endif %}"
+           data-search-text="{{ post.title }} {{ post.content | striptags }}">
           <div class="chapter-card__image{% if chapter_num == '0' %} chapter-card__image--placeholder{% endif %}">
             {% if chapter_num != "0" %}
               <img src="/images/books/oeur/{{ chapter_num }}.jpg" alt="{{ post.title }}" loading="lazy" />
@@ -92,6 +102,140 @@
           </div>
         </a>
       {% endfor %}
+
+      <div class="book-chapters__no-results" id="chapter-no-results" style="display:none">
+        {% if lang == "es" %}No se encontraron capítulos{% else %}No chapters found{% endif %}
+      </div>
     </div>
   </div>
+
+  <script>
+  (function() {
+    var input = document.getElementById('chapter-search');
+    if (!input) return;
+
+    var grid = document.querySelector('.book-chapters__grid');
+    var cards = Array.from(grid.querySelectorAll('a.chapter-card'));
+    var yearSections = Array.from(grid.querySelectorAll('.book-chapters__year-section'));
+    var noResults = document.getElementById('chapter-no-results');
+    var countEl = document.getElementById('chapter-search-count');
+    var totalChapters = cards.length;
+
+    function normalize(str) {
+      return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
+    var cardData = cards.map(function(card) {
+      var fullText = card.dataset.searchText || '';
+      var title = (card.querySelector('.chapter-card__title') || {}).textContent || '';
+      var body = fullText.substring(title.length).trim();
+      return {
+        el: card,
+        text: normalize(fullText),
+        body: body,
+        normalizedBody: normalize(body),
+        contentEl: card.querySelector('.chapter-card__content')
+      };
+    });
+
+    function getSnippet(body, normalizedBody, tokens) {
+      if (!body) return '';
+
+      var hasBodyMatch = tokens.some(function(t) { return normalizedBody.includes(t); });
+      if (!hasBodyMatch) return '';
+
+      // Find earliest token match position
+      var bestIdx = normalizedBody.length;
+      tokens.forEach(function(t) {
+        var idx = normalizedBody.indexOf(t);
+        if (idx !== -1 && idx < bestIdx) bestIdx = idx;
+      });
+
+      // Extract a window around the match (position mapping is ~1:1 for Spanish text)
+      var start = Math.max(0, bestIdx - 50);
+      var end = Math.min(body.length, bestIdx + 80);
+
+      // Snap to word boundaries
+      if (start > 0) {
+        var ws = body.indexOf(' ', start);
+        if (ws !== -1 && ws - start < 15) start = ws + 1;
+      }
+      if (end < body.length) {
+        var ws = body.lastIndexOf(' ', end);
+        if (ws !== -1 && end - ws < 15) end = ws;
+      }
+
+      var snippet = body.substring(start, end).trim().replace(/^[,;:\s]+/, '');
+      var prefix = start > 0 ? '…' : '';
+      var suffix = end < body.length ? '…' : '';
+
+      // Highlight words that contain a matched token
+      snippet = snippet.replace(/\S+/g, function(word) {
+        var nWord = normalize(word);
+        var matched = tokens.some(function(t) { return nWord.includes(t); });
+        return matched ? '<b>' + word + '</b>' : word;
+      });
+
+      return prefix + snippet + suffix;
+    }
+
+    function clearSnippets() {
+      cardData.forEach(function(item) {
+        var el = item.contentEl.querySelector('.chapter-card__snippet');
+        if (el) el.remove();
+      });
+    }
+
+    input.addEventListener('input', function() {
+      var raw = this.value.trim();
+      var query = normalize(raw);
+
+      clearSnippets();
+
+      if (!query) {
+        cards.forEach(function(c) { c.style.display = ''; });
+        yearSections.forEach(function(y) { y.style.display = ''; });
+        noResults.style.display = 'none';
+        countEl.textContent = '';
+        return;
+      }
+
+      var tokens = query.split(/\s+/).filter(Boolean);
+      var visible = 0;
+
+      cardData.forEach(function(item) {
+        var match = tokens.every(function(t) { return item.text.includes(t); });
+        item.el.style.display = match ? '' : 'none';
+        if (match) {
+          visible++;
+          var snippet = getSnippet(item.body, item.normalizedBody, tokens);
+          if (snippet) {
+            var el = document.createElement('div');
+            el.className = 'chapter-card__snippet';
+            el.innerHTML = snippet;
+            item.contentEl.appendChild(el);
+          }
+        }
+      });
+
+      yearSections.forEach(function(section) {
+        var next = section.nextElementSibling;
+        var hasVisible = false;
+        while (next && !next.classList.contains('book-chapters__year-section') && next.id !== 'chapter-no-results') {
+          if (next.tagName === 'A' && next.classList.contains('chapter-card') && next.style.display !== 'none') {
+            hasVisible = true;
+            break;
+          }
+          next = next.nextElementSibling;
+        }
+        section.style.display = hasVisible ? '' : 'none';
+      });
+
+      noResults.style.display = visible === 0 ? '' : 'none';
+      countEl.textContent = visible > 0 && visible < totalChapters
+        ? visible + ' / ' + totalChapters
+        : '';
+    });
+  })();
+  </script>
 {% endblock %}
