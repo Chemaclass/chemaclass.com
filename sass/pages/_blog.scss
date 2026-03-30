@@ -183,8 +183,8 @@
   flex-direction: column;
   gap: 1rem;
 
-  // Featured first post (only on blog page with --featured modifier)
-  &--featured > .blog-card:first-child {
+  // Featured first post (latest post, rendered larger)
+  > .blog-card.featured {
     &.has-thumbnail .blog-card__link {
       flex-direction: column;
       gap: 0;
