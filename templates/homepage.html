@@ -97,48 +97,11 @@
             <section class="about-section">
                 <div class="about-card">
                     <h2>{{ trans(key="home_about", lang=lang) }}</h2>
-                    <ul class="about-list">
-                        <li class="expandable">
-                            <div class="about-item-header" tabindex="0" role="button" aria-expanded="false">
-                                <span class="list-icon"><i class="fa-solid fa-seedling"></i></span>
-                                <span class="about-item-title">{% if lang == "es" %}Tech Lead en <a target="_blank" rel="noopener" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>{% else %}Tech Lead at <a target="_blank" rel="noopener" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>{% endif %}</span>
-                                <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
-                            </div>
-                            <div class="about-item-content">
-                                <p>{{ trans(key="home_about_1_desc", lang=lang) }}</p>
-                            </div>
-                        </li>
-                        <li class="expandable">
-                            <div class="about-item-header" tabindex="0" role="button" aria-expanded="false">
-                                <span class="list-icon"><i class="fa-solid fa-code"></i></span>
-                                <span class="about-item-title">{% if lang == "es" %}{{ config.extra.years_software }}+ años en software, {{ config.extra.years_leadership }}+ en liderazgo{% else %}{{ config.extra.years_software }}+ years in software, {{ config.extra.years_leadership }}+ in leadership{% endif %}</span>
-                                <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
-                            </div>
-                            <div class="about-item-content">
-                                <p>{{ trans(key="home_about_2_desc", lang=lang) }}</p>
-                            </div>
-                        </li>
-                        <li class="expandable">
-                            <div class="about-item-header" tabindex="0" role="button" aria-expanded="false">
-                                <span class="list-icon"><i class="fa-solid fa-check-double"></i></span>
-                                <span class="about-item-title">{{ trans(key="home_about_3_title", lang=lang) }}</span>
-                                <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
-                            </div>
-                            <div class="about-item-content">
-                                <p>{{ trans(key="home_about_3_desc", lang=lang) }}</p>
-                            </div>
-                        </li>
-                        <li class="expandable">
-                            <div class="about-item-header" tabindex="0" role="button" aria-expanded="false">
-                                <span class="list-icon"><i class="fa-solid fa-users"></i></span>
-                                <span class="about-item-title">{{ trans(key="home_about_4_title", lang=lang) }}</span>
-                                <span class="expand-arrow"><i class="fa-solid fa-chevron-down"></i></span>
-                            </div>
-                            <div class="about-item-content">
-                                <p>{{ trans(key="home_about_4_desc", lang=lang) }}</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="about-paragraphs">
+                        <p>{% if lang == "es" %}Tech Lead en <a target="_blank" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>. Rol práctico escribiendo código diariamente mientras mentorizo desarrolladores. Releases pequeños y frecuentes que aportan valor al cliente.{% else %}Tech Lead at <a target="_blank" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>. Hands-on role writing code daily while mentoring developers. Small, frequent releases that deliver customer value.{% endif %}</p>
+                        <p>{{ trans(key="home_about_p2", lang=lang) }}</p>
+                        <p>{{ trans(key="home_about_p3", lang=lang) }}</p>
+                    </div>
                     <p class="philosophy">
                         <span class="philosophy-main">{{ trans(key="home_philosophy_main", lang=lang) | safe }}</span>
                         <span class="philosophy-subtitle">{{ trans(key="home_philosophy_sub", lang=lang) | safe }}</span>
@@ -297,23 +260,6 @@
 {% block js %}
 <script type="text/javascript" src="{{ get_url(path='github-stars.js') | safe }}" defer></script>
 <script>
-// Expandable about items
-document.querySelectorAll('.about-list li.expandable').forEach(item => {
-  const header = item.querySelector('.about-item-header');
-  function toggle(e) {
-    if (e.target.closest('a')) return;
-    const expanded = item.classList.toggle('expanded');
-    header.setAttribute('aria-expanded', expanded);
-  }
-  item.addEventListener('click', toggle);
-  header.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      toggle(e);
-    }
-  });
-});
-
 // Philosophy section
 const philosophy = document.querySelector('.philosophy');
 if (philosophy) {
