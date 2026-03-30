@@ -45,73 +45,11 @@
   </section>
   {% endif %}
 
-  {# Collect all unique tags from posts #}
-  {% set_global all_tags = [] %}
-  {% for post in section.pages %}
-    {% if post.taxonomies.tags %}
-      {% for tag in post.taxonomies.tags %}
-        {% if tag not in all_tags %}
-          {% set_global all_tags = all_tags | concat(with=tag) %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-  {% set_global all_tags = all_tags | sort %}
-
-  {# Tag filters #}
-  <div class="blog-filters">
-    <button class="blog-filter active" data-tag="all">{{ trans(key="blog_filter_all", lang=lang) }}</button>
-    {% for tag in all_tags %}
-      <button class="blog-filter" data-tag="{{ tag }}">{{ tag }}</button>
-    {% endfor %}
-  </div>
-
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
 
-  <div class="blog-list blog-list--featured" id="blog-list">
-    {# Pinned posts first #}
+  <div class="blog-list blog-list--featured">
     {% for post in pinned_posts %}
-      {% set post_tags = post.taxonomies.tags | default(value=[]) | join(sep=",") %}
-      {% set post_year = post.date | date(format="%Y") %}
-      <article class="blog-card pinned {% if post.extra.thumbnail or post.extra.static_thumbnail %}has-thumbnail{% endif %}" data-tags="{{ post_tags }}" data-year="{{ post_year }}" data-pinned="true">
-        <a href="{{ post.permalink }}" class="blog-card__link">
-          {% if post.extra.thumbnail %}
-            <div class="blog-card__thumbnail">
-              <img src="{{ get_url(path=post.path ~ post.extra.thumbnail) }}" alt="{{ post.title }}" loading="lazy" />
-            </div>
-          {% elif post.extra.static_thumbnail %}
-            <div class="blog-card__thumbnail">
-              {% if post.extra.static_thumbnail is matching("^http[s]?://") %}
-                <img src="{{ post.extra.static_thumbnail | safe }}" alt="{{ post.title }}" loading="lazy" />
-              {% else %}
-                <img src="{{ get_url(path=post.extra.static_thumbnail) }}" alt="{{ post.title }}" loading="lazy" />
-              {% endif %}
-            </div>
-          {% endif %}
-          <div class="blog-card__content">
-            <div class="blog-card__meta">
-              <span class="blog-card__date">{% if lang == "es" %}{{ post.date | date(format="%d/%m/%Y") }}{% else %}{{ post.date | date(format="%b %d, %Y") }}{% endif %}</span>
-              {% set reading_time = post.extra.reading_time | default(value=post.reading_time) %}
-              {% if reading_time %}
-                <span class="blog-card__reading-time">{{ reading_time }} {{ trans(key="minutes_read", lang=lang) }}</span>
-              {% endif %}
-              <span class="blog-card__pinned-badge">{{ trans(key="pinned", lang=lang) }}</span>
-            </div>
-            <h2 class="blog-card__title">{{ post.title }}</h2>
-            {% if post.extra.subtitle %}
-              <p class="blog-card__subtitle">{{ post.extra.subtitle }}</p>
-            {% endif %}
-            <p class="blog-card__summary">{{ post.description | default(value=post.summary | striptags | truncate(length=150)) }}</p>
-            {% if post.taxonomies.tags %}
-              <div class="blog-card__tags">
-                {% for tag in post.taxonomies.tags | slice(end=3) %}
-                  <span class="blog-card__tag">{{ tag }}</span>
-                {% endfor %}
-              </div>
-            {% endif %}
-          </div>
-        </a>
-      </article>
+      {{ helpers::content_card(post=post, pinned=true, lang=lang) }}
     {% endfor %}
 
     {# Non-pinned posts grouped by year #}
@@ -121,80 +59,11 @@
         {% set post_year = post.date | date(format="%Y") %}
         {% if post_year != current_year %}
           {% set_global current_year = post_year %}
-          <h3 class="blog-year-header" data-year="{{ post_year }}">{{ post_year }}</h3>
+          <h3 class="blog-year-header">{{ post_year }}</h3>
         {% endif %}
-        {% set post_tags = post.taxonomies.tags | default(value=[]) | join(sep=",") %}
-        <div class="blog-card-wrapper" data-tags="{{ post_tags }}" data-year="{{ post_year }}">
-          {{ helpers::content_card(post=post, lang=lang) }}
-        </div>
+        {{ helpers::content_card(post=post, lang=lang) }}
       {% endif %}
     {% endfor %}
   </div>
   </div>
-
-  <script>
-  (function() {
-    var filters = document.querySelectorAll('.blog-filter');
-    var pinnedCards = document.querySelectorAll('#blog-list > .blog-card[data-pinned]');
-    var wrappers = document.querySelectorAll('#blog-list > .blog-card-wrapper');
-    var yearHeaders = document.querySelectorAll('#blog-list .blog-year-header');
-
-    function filterByTag(tag) {
-      filters.forEach(function(btn) {
-        btn.classList.toggle('active', btn.getAttribute('data-tag') === tag);
-      });
-
-      // Show/hide pinned cards
-      pinnedCards.forEach(function(card) {
-        if (tag === 'all') {
-          card.classList.remove('hidden');
-        } else {
-          var tags = (card.getAttribute('data-tags') || '').split(',');
-          card.classList.toggle('hidden', tags.indexOf(tag) === -1);
-        }
-      });
-
-      // Show/hide wrapped cards
-      wrappers.forEach(function(wrapper) {
-        if (tag === 'all') {
-          wrapper.classList.remove('hidden');
-        } else {
-          var tags = (wrapper.getAttribute('data-tags') || '').split(',');
-          wrapper.classList.toggle('hidden', tags.indexOf(tag) === -1);
-        }
-      });
-
-      // Show/hide year headers based on visible posts
-      yearHeaders.forEach(function(header) {
-        var year = header.getAttribute('data-year');
-        var hasVisible = false;
-        wrappers.forEach(function(wrapper) {
-          if (wrapper.getAttribute('data-year') === year && !wrapper.classList.contains('hidden')) {
-            hasVisible = true;
-          }
-        });
-        header.classList.toggle('hidden', !hasVisible);
-      });
-    }
-
-    filters.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var tag = this.getAttribute('data-tag');
-        filterByTag(tag);
-        if (tag === 'all') {
-          history.replaceState(null, '', window.location.pathname);
-        } else {
-          history.replaceState(null, '', '#tag=' + encodeURIComponent(tag));
-        }
-      });
-    });
-
-    // Apply filter from URL hash on load
-    var hash = window.location.hash;
-    if (hash && hash.indexOf('#tag=') === 0) {
-      var tag = decodeURIComponent(hash.substring(5));
-      filterByTag(tag);
-    }
-  })();
-  </script>
 {% endblock content %}
