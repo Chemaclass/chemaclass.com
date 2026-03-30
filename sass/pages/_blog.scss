@@ -123,6 +123,60 @@
   }
 }
 
+// Blog filters
+.blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.blog-filter {
+  background: var(--search-bg-selected-item);
+  color: var(--body-color);
+  border: 1px solid var(--preview-divider-color);
+  padding: 0.35rem 0.9rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+
+  &:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+
+  &.active {
+    background: var(--accent-color);
+    color: #fff;
+    border-color: var(--accent-color);
+  }
+}
+
+// Year headers
+.blog-year-header {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin: 1.5rem 0 0.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--preview-divider-color);
+
+  &.hidden {
+    display: none;
+  }
+}
+
+// Card wrapper for filterable items
+.blog-card-wrapper {
+  &.hidden {
+    display: none;
+  }
+}
+
 // Blog list
 .blog-list {
   display: flex;
@@ -176,6 +230,10 @@
   &.pinned {
     border-color: var(--accent-color);
     border-width: 2px;
+  }
+
+  &.hidden {
+    display: none;
   }
 
   &.has-thumbnail &__link {
