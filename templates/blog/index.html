@@ -52,28 +52,20 @@
       {{ helpers::content_card(post=post, pinned=true, lang=lang) }}
     {% endfor %}
 
-    {# First non-pinned post rendered as featured (larger) #}
+    {# Non-pinned posts grouped by year, first one featured #}
+    {% set_global current_year = "" %}
     {% set_global featured_shown = false %}
     {% for post in section.pages %}
-      {% if post not in pinned_posts and not featured_shown %}
-        {{ helpers::content_card(post=post, featured=true, lang=lang) }}
-        {% set_global featured_shown = true %}
-      {% endif %}
-    {% endfor %}
-
-    {# Remaining posts grouped by year #}
-    {% set_global current_year = "" %}
-    {% set_global first_skipped = false %}
-    {% for post in section.pages %}
       {% if post not in pinned_posts %}
-        {% if not first_skipped %}
-          {% set_global first_skipped = true %}
+        {% set post_year = post.date | date(format="%Y") %}
+        {% if post_year != current_year %}
+          {% set_global current_year = post_year %}
+          <h3 class="blog-year-header">{{ post_year }}</h3>
+        {% endif %}
+        {% if not featured_shown %}
+          {{ helpers::content_card(post=post, featured=true, lang=lang) }}
+          {% set_global featured_shown = true %}
         {% else %}
-          {% set post_year = post.date | date(format="%Y") %}
-          {% if post_year != current_year %}
-            {% set_global current_year = post_year %}
-            <h3 class="blog-year-header">{{ post_year }}</h3>
-          {% endif %}
           {{ helpers::content_card(post=post, lang=lang) }}
         {% endif %}
       {% endif %}
