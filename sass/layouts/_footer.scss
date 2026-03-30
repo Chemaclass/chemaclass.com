@@ -1,8 +1,10 @@
-// Site footer (post footer)
+// Blog post footer - follow & support
 .site-footer {
-  margin-top: 1rem;
-  padding: 2rem 0;
-  border-top: 1px solid var(--preview-divider-color);
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--search-input-bg);
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 12px;
 
   &__content {
     display: flex;
@@ -12,10 +14,7 @@
   }
 
   &__section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
+    text-align: center;
   }
 
   &__heading {
@@ -26,9 +25,9 @@
   }
 
   &__text {
-    margin: 0;
     font-size: 0.9rem;
     color: var(--color-subtitle);
+    margin: 0 0 0.75rem;
 
     strong {
       color: var(--heading-color);
@@ -62,6 +61,12 @@
     gap: 0.5rem;
   }
 
+  &__divider {
+    width: 1px;
+    height: 60px;
+    background: var(--preview-divider-color);
+  }
+
   &__links {
     display: flex;
     gap: 0.75rem;
@@ -72,22 +77,19 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    border-radius: 8px;
-    background: var(--search-input-bg);
+    border-radius: 2rem;
+    background: var(--body-bg);
     border: 1px solid var(--preview-divider-color) !important;
-    color: var(--body-color);
     text-decoration: none;
-    font-size: 0.85rem;
+    color: var(--body-color);
+    font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.2s ease;
-
-    i {
-      font-size: 1rem;
-    }
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 
     &:hover {
-      transform: translateY(-2px);
+      transform: translateY(-1px);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-color: var(--accent-color);
     }
 
     // X
@@ -101,74 +103,27 @@
       }
     }
 
-    // LinkedIn
-    &--linkedin:hover {
-      border-color: #0077B5;
-      color: #0077B5;
+    i {
+      font-size: 1.1rem;
     }
 
-    // PayPal
-    &--paypal:hover {
-      border-color: #003087;
-      color: #003087;
-
-      .theme-dark & {
-        border-color: #00ABF0;
-        color: #00ABF0;
-      }
-    }
-
-    // Lightning/Bitcoin
-    &--lightning:hover {
-      border-color: #F7931A;
-      color: #F7931A;
-    }
-  }
-
-  &__divider {
-    width: 1px;
-    height: 40px;
-    background: var(--preview-divider-color);
+    &--paypal i { color: #003087; }
+    &--lightning i { color: #f7931a; }
+    &--twitter i { color: var(--body-color); }
+    &--linkedin i { color: #0a66c2; }
   }
 }
 
-// Responsive
 @media (max-width: 600px) {
   .site-footer {
-    padding: 1.5rem 0;
-
     &__content {
       flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    &__section {
-      width: 100%;
-      gap: 0.5rem;
-    }
-
-    &__text {
-      font-size: 0.85rem;
+      gap: 1rem;
     }
 
     &__divider {
-      display: none;
-    }
-
-    &__links {
-      width: 100%;
-      justify-content: center;
-    }
-
-    &__link {
-      flex: 1;
-      justify-content: center;
-      padding: 0.65rem 1rem;
-      font-size: 0.8rem;
-
-      i {
-        font-size: 1rem;
-      }
+      width: 80%;
+      height: 1px;
     }
   }
 }
