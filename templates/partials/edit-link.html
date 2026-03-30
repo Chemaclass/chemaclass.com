@@ -11,9 +11,7 @@
     {{ macros::edit_icon() }}
     {{ trans(key="found_typo", lang=lang) }}
   </a>
-  {% set raw_base = config.extra.repo_content_url | replace(from="/edit/", to="/blob/") %}
-  {% set raw_url = raw_base ~ page.relative_path %}
-  <a href="{{ raw_url }}" class="blog-post__edit-link">
+  <a href="{{ page.permalink }}index.md" class="blog-post__edit-link">
     {{ macros::markdown_icon() }}
     {{ trans(key="view_markdown", lang=lang) }}
   </a>

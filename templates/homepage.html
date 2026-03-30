@@ -98,7 +98,7 @@
                 <div class="about-card">
                     <h2>{{ trans(key="home_about", lang=lang) }}</h2>
                     <div class="about-paragraphs">
-                        <p>{% if lang == "es" %}Tech Lead en <a target="_blank" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>. {{ trans(key="home_about_p1", lang=lang) }}{% else %}Tech Lead at <a target="_blank" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>. {{ trans(key="home_about_p1", lang=lang) }}{% endif %}</p>
+                        <p>{{ trans(key="home_about_p1", lang=lang) | safe }}</p>
                         <p>{{ trans(key="home_about_p2", lang=lang) }}</p>
                         <p>{{ trans(key="home_about_p3", lang=lang) }}</p>
                     </div>
