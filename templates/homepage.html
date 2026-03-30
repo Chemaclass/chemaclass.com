@@ -251,6 +251,31 @@
                 </div>
                 <p class="project-card__desc">{{ trans(key="home_project_bashunit_long", lang=lang) }}</p>
             </a>
+            <a target="_blank" rel="noopener" href="https://sauronbot.github.io/" class="project-card project-card--showcase" data-repo="SauronBot/forge">
+                <div class="project-card__header">
+                    <span class="project-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2d5a8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </span>
+                    <div class="project-info">
+                        <div class="project-title">
+                            <h3>Forge</h3>
+                            <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count"></span></span>
+                        </div>
+                        <p class="project-tagline">{{ trans(key="home_project_forge_desc", lang=lang) }}</p>
+                    </div>
+                </div>
+                <div class="project-card__snippet">
+                    <code><span class="sn-fn">forge</span> <span class="sn-fn">dispatch</span> \
+  <span class="sn-kw">--task</span> <span class="sn-str">"Refactor auth module"</span> \
+  <span class="sn-kw">--agent</span> <span class="sn-fn">sauron</span> \
+  <span class="sn-kw">--priority</span> <span class="sn-str">high</span></code>
+                </div>
+                <p class="project-card__desc">{{ trans(key="home_project_forge_long", lang=lang) }}</p>
+            </a>
         </div>
     </section>
 
