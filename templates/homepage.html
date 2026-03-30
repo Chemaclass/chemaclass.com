@@ -98,14 +98,9 @@
                 <div class="about-card">
                     <h2>{{ trans(key="home_about", lang=lang) }}</h2>
                     <div class="about-paragraphs">
-                        <p>{% if lang == "es" %}Tech Lead en <a target="_blank" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>. Rol práctico escribiendo código diariamente mientras mentorizo desarrolladores. Releases pequeños y frecuentes que aportan valor al cliente.{% else %}Tech Lead at <a target="_blank" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>. Hands-on role writing code daily while mentoring developers. Small, frequent releases that deliver customer value.{% endif %}</p>
+                        <p>{% if lang == "es" %}Tech Lead en <a target="_blank" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>. {{ trans(key="home_about_p1", lang=lang) }}{% else %}Tech Lead at <a target="_blank" href="https://www.purpose-green.com/" class="purpose-green-link">Purpose Green</a>. {{ trans(key="home_about_p1", lang=lang) }}{% endif %}</p>
                         <p>{{ trans(key="home_about_p2", lang=lang) }}</p>
-                        <p>{{ trans(key="home_about_p3", lang=lang) }}</p>
                     </div>
-                    <p class="philosophy">
-                        <span class="philosophy-main">{{ trans(key="home_philosophy_main", lang=lang) | safe }}</span>
-                        <span class="philosophy-subtitle">{{ trans(key="home_philosophy_sub", lang=lang) | safe }}</span>
-                    </p>
                 </div>
             </section>
         </div>
@@ -259,15 +254,6 @@
 
 {% block js %}
 <script type="text/javascript" src="{{ get_url(path='github-stars.js') | safe }}" defer></script>
-<script>
-// Philosophy section
-const philosophy = document.querySelector('.philosophy');
-if (philosophy) {
-  philosophy.addEventListener('click', () => {
-    philosophy.classList.toggle('expanded');
-  });
-}
-</script>
 <script>
 (function() {
   const lang = '{{ lang }}';
