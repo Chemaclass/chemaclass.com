@@ -1,6 +1,6 @@
 +++
 title = "Fundamentos de Bitcoin"
-description = "¿Qué pasaría si tus ahorros no pudieran perder valor por la inflación? ¿Qué si nadie pudiera congelar tu cuenta? Imagina dinero que no puede ser controlado por ningún gobierno o banco. Bitcoin hace esto posible: efectivo digital que realmente posees. Solo existirán 21 millones. Nadie puede imprimir más. Funciona 24/7 en todo el mundo, asegurado por una red global en lugar de bancos. Cualquiera puede usarlo, en cualquier lugar, en cualquier momento. Sin permiso necesario. Tu dinero, tus reglas."
+description = "Límite de 21 millones, sin autoridad central, sin permisos y resistente a la censura. Bitcoin es dinero digital que realmente posees."
 draft = false
 [taxonomies]
 tags = [ "bitcoin", "economics", "privacy", "philosophy" ]

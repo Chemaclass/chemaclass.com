@@ -1,6 +1,6 @@
 +++
 title = "La Belleza del Liderazgo"
-description = "El liderazgo no es sinónimo de gestión, no tiene nada que ver con títulos o atributos personales. Entonces, ¿qué es? ¿Cómo podemos convertirnos en líderes? Y lo más importante, ¿por qué?"
+description = "El liderazgo es acción, no un título. No tiene nada que ver con gestión o jerarquía. Qué significa realmente y cómo cualquiera puede liderar."
 draft = false
 [taxonomies]
 tags = [ "leadership", "team-management", "communication", "mentoring" ]

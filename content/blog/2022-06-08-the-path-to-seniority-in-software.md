@@ -1,6 +1,6 @@
 +++
 title = "The Path to Seniority in Software"
-description = "The seniority in our software industry is more polluted by marketing and politics than in reality. What can we do about it?"
+description = "Real seniority goes beyond job titles. It's about impact, mentoring others, owning outcomes, and raising the bar for your entire team."
 [taxonomies]
 tags = [ "career", "mentoring", "clean-code", "tdd", "communication" ]
 [extra]

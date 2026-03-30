@@ -1,6 +1,6 @@
 +++
 title = "Cómo Funciona Bitcoin"
-description = "Cómo Bitcoin resuelve el dinero digital: Las transacciones se firman con claves criptográficas, se agrupan en bloques a través de minería proof-of-work, y se encadenan mediante hashes. La red de nodos hace cumplir las reglas sin ninguna autoridad central. Este post cubre la blockchain, el modelo UTXO, la mecánica de minería, seguridad de wallets, arquitectura de red, profundidad de confirmación, alineación de incentivos y Lightning Network."
+description = "Transacciones, bloques, minería, el modelo UTXO y Lightning Network -- cómo funciona Bitcoin por dentro, explicado en términos simples."
 [taxonomies]
 tags = [ "bitcoin", "cryptography", "tutorial" ]
 [extra]

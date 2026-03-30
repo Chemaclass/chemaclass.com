@@ -1,6 +1,6 @@
 +++
 title = "MCP: Dándole a tu Agente IA el Contexto Adecuado"
-description = "El Model Context Protocol está cambiando cómo los agentes de IA interactúan con tu entorno de desarrollo. Entender por qué importa te ayuda a usar mejor estas herramientas."
+description = "MCP conecta agentes de IA con tus herramientas, bases de datos y APIs mediante un protocolo estándar. Dale el contexto que necesita."
 draft = false
 [taxonomies]
 tags = [ "ai", "software-architecture", "developer-tools", "craftsmanship" ]

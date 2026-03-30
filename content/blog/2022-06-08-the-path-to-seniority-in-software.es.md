@@ -1,6 +1,6 @@
 +++
 title = "El Camino a la Seniority en Software"
-description = "La seniority en nuestra industria del software está más contaminada por marketing y política que en la realidad. ¿Qué podemos hacer al respecto?"
+description = "La verdadera seniority va más allá de los títulos. Se trata de impacto, mentoría, asumir resultados y elevar el nivel de todo tu equipo."
 [taxonomies]
 tags = [ "career", "mentoring", "clean-code", "tdd", "communication" ]
 [extra]

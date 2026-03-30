@@ -1,6 +1,6 @@
 +++
 title = "Great Leadership"
-description = "As business scales, the leaders' primary focus must shift from customers to employees. Therefore, I would like to share what I consider critical points that any leader should address and focus on regularly."
+description = "As organizations grow, leaders must shift focus from customers to employees. Key principles for scaling leadership effectively."
 draft = false
 [taxonomies]
 tags = [ "leadership", "communication", "team-management", "mentoring" ]

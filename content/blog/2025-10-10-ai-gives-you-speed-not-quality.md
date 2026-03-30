@@ -1,6 +1,6 @@
 +++
 title = "AI Gives You Speed, Not Quality"
-description = "AI writes code fast but doesn't care about quality. Learn to prompt well, never accept code you don't understand, and remember: you own every line you commit. Speed without direction is just chaos."
+description = "AI accelerates your output but doesn't ensure quality. You're responsible for every line you commit. Speed without direction is chaos."
 draft = false
 [taxonomies]
 tags = [ "ai", "software-architecture", "craftsmanship", "leadership" ]

@@ -1,6 +1,6 @@
 +++
 title = "La IA te Da Velocidad, No Calidad"
-description = "La IA escribe código rápido pero no le importa la calidad. Aprende a hacer buenos prompts, nunca aceptes código que no entiendas, y recuerda: eres dueño de cada línea que commiteas. La velocidad sin dirección es solo caos."
+description = "La IA acelera tu producción pero no garantiza calidad. Eres responsable de cada línea que commiteas. Velocidad sin dirección es caos."
 draft = false
 [taxonomies]
 tags = [ "ai", "software-architecture", "craftsmanship", "leadership" ]

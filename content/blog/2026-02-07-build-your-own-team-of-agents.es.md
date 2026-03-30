@@ -1,6 +1,6 @@
 +++
 title = "Construye tu Propio Equipo de Agentes"
-description = "La mayoría usa la IA como un solo asistente. La verdadera ventaja viene cuando la organizas como un equipo: documentación de onboarding, procedimientos estándar, especialistas y ejecución en paralelo."
+description = "Deja de usar la IA como un solo asistente. Organiza agentes en equipos especializados con roles, docs y ejecución en paralelo."
 draft = false
 [taxonomies]
 tags = [ "ai", "software", "craftsmanship", "leadership" ]

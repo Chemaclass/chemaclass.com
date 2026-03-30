@@ -1,6 +1,6 @@
 +++
 title = "Test-Driven (Development)"
-description = "La complejidad aquí no está en escribir tests en sí, sino en los hábitos que tenemos que cambiar para crear software que sea fácil de testear."
+description = "TDD es una práctica de diseño, no solo una técnica de testing. Escribir tests primero cambia cómo piensas sobre el código y su estructura."
 draft = false
 [taxonomies]
 tags = [ "tdd", "testing", "software-design", "refactoring" ]

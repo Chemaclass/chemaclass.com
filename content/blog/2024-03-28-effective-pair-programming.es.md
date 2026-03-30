@@ -1,6 +1,6 @@
 +++
 title = "Pair Programming Efectivo"
-description = "Primero establezcamos qué es el pair programming: Dos personas trabajando juntas en el mismo problema al mismo tiempo. No se trata de que una persona muestre sus habilidades frente a otra, ni de que una persona tenga miedo de cometer errores debido al síndrome del impostor."
+description = "Guía práctica de pair programming que funciona: roles, rotación, cuándo hacerlo, errores comunes y cómo hacer sesiones productivas."
 draft = false
 [taxonomies]
 tags = ["pair-programming", "xp", "tdd", "communication", "clean-code"]

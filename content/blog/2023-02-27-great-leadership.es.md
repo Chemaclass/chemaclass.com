@@ -1,6 +1,6 @@
 +++
 title = "Gran Liderazgo"
-description = "A medida que el negocio escala, el enfoque principal de los líderes debe cambiar de los clientes a los empleados. Por lo tanto, me gustaría compartir lo que considero puntos críticos que cualquier líder debería abordar y en los que enfocarse regularmente."
+description = "A medida que las organizaciones crecen, los líderes deben cambiar el foco de clientes a empleados. Principios clave para escalar el liderazgo."
 draft = false
 [taxonomies]
 tags = [ "leadership", "communication", "team-management", "mentoring" ]

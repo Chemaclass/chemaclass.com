@@ -1,6 +1,6 @@
 +++
 title = "Build Your Own Team of Agents"
-description = "Most people use AI as a single assistant. The real leverage comes when you organize it into a team: onboarding docs, standard procedures, specialists, and parallel execution."
+description = "Stop using AI as a single assistant. Organize agents into specialized teams with roles, docs, and parallel execution for real leverage."
 draft = false
 [taxonomies]
 tags = [ "ai", "software", "craftsmanship", "leadership" ]

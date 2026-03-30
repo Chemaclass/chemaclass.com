@@ -1,6 +1,6 @@
 +++
 title = "The Beauty of Leadership"
-description = "Leadership is not a synonym for management, it has nothing to do with titles or personal attributes. So, what is it? How can we become leaders? And most importantly, why?"
+description = "Leadership is action, not a title. It has nothing to do with management or hierarchy. What it really means and how anyone can lead."
 draft = false
 [taxonomies]
 tags = [ "leadership", "team-management", "communication", "mentoring" ]

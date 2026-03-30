@@ -1,6 +1,6 @@
 +++
 title = "Test-Driven (Development)"
-description = "The complexity here is not about writing tests itself, but the habits that we have to change to create software that is easy to be tested."
+description = "TDD is a design practice, not just a testing technique. Writing tests first changes how you think about code and shape its structure."
 draft = false
 aliases = [ "tdd", "/inner-peace-katas", "blog/inner-peace-katas" ]
 [taxonomies]

@@ -1,6 +1,6 @@
 +++
 title = "Bitcoin Fundamentals"
-description = "What if your savings couldn't lose value to inflation? What if no one could freeze your account? Imagine money that can't be controlled by any government or bank. Bitcoin makes this possible: digital cash you truly own. Only 21 million will ever exist. No one can print more. It works 24/7 worldwide, secured by a global network instead of banks. Anyone can use it, anywhere, anytime. No permission needed. Your money, your rules."
+description = "21 million cap, no central authority, permissionless and censorship-resistant. Bitcoin is digital money you truly own. No bank required."
 draft = false
 [taxonomies]
 tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
