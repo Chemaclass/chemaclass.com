@@ -78,6 +78,9 @@ python3 scripts/generate-terminal-fs.py
 echo "Generating plain text pages..."
 python3 scripts/generate-txt-pages.py
 
+echo "Generating markdown pages..."
+python3 scripts/generate-md-pages.py
+
 echo "Generating llms-full.txt..."
 python3 scripts/generate-llms-txt.py
 

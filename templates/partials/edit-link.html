@@ -11,5 +11,9 @@
     {{ macros::edit_icon() }}
     {{ trans(key="found_typo", lang=lang) }}
   </a>
+  <a href="{{ page.path }}index.md" class="blog-post__edit-link">
+    {{ macros::markdown_icon() }}
+    {{ trans(key="view_markdown", lang=lang) }}
+  </a>
   <span id="highlight-clear-slot"></span>
 </footer>
