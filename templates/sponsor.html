@@ -64,103 +64,140 @@
   <!-- Hero Section -->
   <section class="sponsor-hero">
     <h1>{{ trans(key="sponsor_hero_title", lang=lang) }}</h1>
-    <ul class="sponsor-hero__values">
-      <li class="sponsor-value">
-        <span class="sponsor-value__icon">
-          <i class="fa-solid fa-seedling"></i>
-        </span>
-        <span class="sponsor-value__text">{{ trans(key="sponsor_hero_1", lang=lang) }}</span>
-      </li>
-      <li class="sponsor-value">
-        <span class="sponsor-value__icon">
-          <i class="fa-solid fa-book-open"></i>
-        </span>
-        <span class="sponsor-value__text">{{ trans(key="sponsor_hero_2", lang=lang) }}</span>
-      </li>
-      <li class="sponsor-value">
-        <span class="sponsor-value__icon">
-          <i class="fa-solid fa-users"></i>
-        </span>
-        <span class="sponsor-value__text">{{ trans(key="sponsor_hero_3", lang=lang) }}</span>
-      </li>
-    </ul>
     <p class="sponsor-hero__subtitle">
       {{ trans(key="sponsor_hero_subtitle", lang=lang) }}
     </p>
   </section>
 
-  <!-- Donation Options -->
-  <section class="sponsor-options">
-    <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--paypal">
-      <div class="sponsor-card__icon">
-        <i class="fa-brands fa-paypal"></i>
-      </div>
-      <div class="sponsor-card__content">
-        <h3>{{ trans(key="sponsor_paypal_title", lang=lang) }}</h3>
-        <p>{{ trans(key="sponsor_paypal_desc", lang=lang) }}</p>
-      </div>
-      <span class="sponsor-card__action">
-        {{ trans(key="sponsor_paypal_action", lang=lang) }}
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </span>
+  <!-- Impact Stats -->
+  <section class="sponsor-stats">
+    <a href="{% if lang == 'es' %}/es/blog/{% else %}/blog/{% endif %}" class="sponsor-stat">
+      <span class="sponsor-stat__number">60+</span>
+      <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_articles", lang=lang) }}</span>
     </a>
-
-    <a href="https://getalby.com/p/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--lightning">
-      <div class="sponsor-card__icon">
-        <i class="fa-solid fa-bolt"></i>
-      </div>
-      <div class="sponsor-card__content">
-        <h3>{{ trans(key="sponsor_lightning_title", lang=lang) }}</h3>
-        <p>{{ trans(key="sponsor_lightning_desc", lang=lang) }}</p>
-      </div>
-      <span class="sponsor-card__action">
-        {{ trans(key="sponsor_lightning_action", lang=lang) }}
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </span>
+    <a href="{% if lang == 'es' %}/es/readings/{% else %}/readings/{% endif %}" class="sponsor-stat">
+      <span class="sponsor-stat__number">80+</span>
+      <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_readings", lang=lang) }}</span>
+    </a>
+    <a href="{% if lang == 'es' %}/es/talks/{% else %}/talks/{% endif %}" class="sponsor-stat">
+      <span class="sponsor-stat__number">+7</span>
+      <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_talks", lang=lang) }}</span>
+    </a>
+    <a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="sponsor-stat">
+      <span class="sponsor-stat__number">+3</span>
+      <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_projects", lang=lang) }}</span>
     </a>
   </section>
 
-  <!-- Why Sponsor -->
-  <section class="sponsor-reasons">
-    <h2>{{ trans(key="sponsor_why_title", lang=lang) }}</h2>
-    <div class="sponsor-reasons__grid">
-      <div class="sponsor-reason">
-        <div class="sponsor-reason__icon">
-          <i class="fa-solid fa-heart"></i>
+  <!-- Topic Strip -->
+  <section class="sponsor-topics">
+    <div class="sponsor-topics__list">
+      {% for topic in config.extra.topics %}
+        {% if topic.title != "Speaking & Teaching" %}
+        <a href="{% if lang == 'es' %}/es/topics/{% else %}/topics/{% endif %}#{{ topic.title | slugify }}" class="sponsor-topic">
+          {% if lang == "es" and topic.title_es %}{{ topic.title_es }}{% else %}{{ topic.title }}{% endif %}
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Open Source Projects -->
+  <section class="sponsor-projects">
+    <h2>{{ trans(key="sponsor_projects_title", lang=lang) }}</h2>
+    <div class="sponsor-projects__grid">
+      <a href="https://bashunit.typeddevs.com/" target="_blank" rel="noopener" class="sponsor-project sponsor-project--bashunit">
+        <div class="sponsor-project__header">
+          <span class="sponsor-project__icon">
+            <i class="fa-solid fa-terminal"></i>
+          </span>
+          <span class="sponsor-project__name">bashunit</span>
         </div>
-        <h3>{{ trans(key="sponsor_reason_1_title", lang=lang) }}</h3>
-        <p>
-          {{ trans(key="sponsor_reason_1_desc", lang=lang) }}
-          <a target="_blank" rel="noopener" href="https://bashunit.typeddevs.com/">bashunit</a>,
-          <a target="_blank" rel="noopener" href="https://phel-lang.org/">phel</a>
-          {{ trans(key="sponsor_reason_list_conjunction", lang=lang) }} <a target="_blank" rel="noopener" href="https://gacela-project.com/">gacela</a>.
-        </p>
-      </div>
-      <div class="sponsor-reason">
-        <div class="sponsor-reason__icon">
-          <i class="fa-solid fa-rocket"></i>
+        <p class="sponsor-project__desc">{{ trans(key="sponsor_project_bashunit", lang=lang) }}</p>
+        <span class="sponsor-project__link">
+          {{ trans(key="sponsor_project_visit", lang=lang) }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M7 7h10v10"/>
+          </svg>
+        </span>
+      </a>
+
+      <a href="https://phel-lang.org/" target="_blank" rel="noopener" class="sponsor-project sponsor-project--phel">
+        <div class="sponsor-project__header">
+          <span class="sponsor-project__icon">
+            <i class="fa-solid fa-code"></i>
+          </span>
+          <span class="sponsor-project__name">Phel</span>
         </div>
-        <h3>{{ trans(key="sponsor_reason_2_title", lang=lang) }}</h3>
-        <p>{{ trans(key="sponsor_reason_2_desc", lang=lang) }}</p>
-      </div>
-      <div class="sponsor-reason">
-        <div class="sponsor-reason__icon">
-          <i class="fa-solid fa-pen-nib"></i>
+        <p class="sponsor-project__desc">{{ trans(key="sponsor_project_phel", lang=lang) }}</p>
+        <span class="sponsor-project__link">
+          {{ trans(key="sponsor_project_visit", lang=lang) }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M7 7h10v10"/>
+          </svg>
+        </span>
+      </a>
+
+      <a href="https://sauronbot.github.io/" target="_blank" rel="noopener" class="sponsor-project sponsor-project--sauron">
+        <div class="sponsor-project__header">
+          <span class="sponsor-project__icon">
+            <i class="fa-solid fa-eye"></i>
+          </span>
+          <span class="sponsor-project__name">Sauron</span>
         </div>
-        <h3>{{ trans(key="sponsor_reason_3_title", lang=lang) }}</h3>
-        <p>{{ trans(key="sponsor_reason_3_desc", lang=lang) }}</p>
-      </div>
+        <p class="sponsor-project__desc">{{ trans(key="sponsor_project_sauron", lang=lang) }}</p>
+        <span class="sponsor-project__link">
+          {{ trans(key="sponsor_project_visit", lang=lang) }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M7 7h10v10"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Donation Options -->
+  <section class="sponsor-options">
+    <h2>{{ trans(key="sponsor_donate_title", lang=lang) }}</h2>
+    <div class="sponsor-options__grid">
+      <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--paypal">
+        <div class="sponsor-card__icon">
+          <i class="fa-brands fa-paypal"></i>
+        </div>
+        <div class="sponsor-card__content">
+          <h3>{{ trans(key="sponsor_paypal_title", lang=lang) }}</h3>
+          <p>{{ trans(key="sponsor_paypal_desc", lang=lang) }}</p>
+        </div>
+        <span class="sponsor-card__action">
+          {{ trans(key="sponsor_paypal_action", lang=lang) }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </a>
+
+      <a href="https://getalby.com/p/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--lightning">
+        <div class="sponsor-card__icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <div class="sponsor-card__content">
+          <h3>{{ trans(key="sponsor_lightning_title", lang=lang) }}</h3>
+          <p>{{ trans(key="sponsor_lightning_desc", lang=lang) }}</p>
+        </div>
+        <span class="sponsor-card__action">
+          {{ trans(key="sponsor_lightning_action", lang=lang) }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </a>
     </div>
   </section>
 
   <!-- Thank You -->
   <footer class="sponsor-thanks">
-    <i class="fa-solid fa-hands-clapping"></i>
-    <p>{{ trans(key="sponsor_thanks", lang=lang) | safe }}</p>
+    <p class="sponsor-thanks__message">{{ trans(key="sponsor_thanks", lang=lang) | safe }}</p>
+    <p class="sponsor-thanks__cta">{{ trans(key="sponsor_thanks_cta", lang=lang) }}</p>
   </footer>
 </article>
 {% endblock content %}
