@@ -158,40 +158,30 @@
 
   <!-- Donation Options -->
   <section class="sponsor-options">
-    <h2>{{ trans(key="sponsor_donate_title", lang=lang) }}</h2>
-    <div class="sponsor-options__grid">
-      <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--paypal">
-        <div class="sponsor-card__icon">
-          <i class="fa-brands fa-paypal"></i>
-        </div>
-        <div class="sponsor-card__content">
-          <h3>{{ trans(key="sponsor_paypal_title", lang=lang) }}</h3>
-          <p>{{ trans(key="sponsor_paypal_desc", lang=lang) }}</p>
-        </div>
-        <span class="sponsor-card__action">
-          {{ trans(key="sponsor_paypal_action", lang=lang) }}
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </span>
-      </a>
-
-      <a href="https://getalby.com/p/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--lightning">
-        <div class="sponsor-card__icon">
-          <i class="fa-solid fa-bolt"></i>
-        </div>
-        <div class="sponsor-card__content">
-          <h3>{{ trans(key="sponsor_lightning_title", lang=lang) }}</h3>
-          <p>{{ trans(key="sponsor_lightning_desc", lang=lang) }}</p>
-        </div>
-        <span class="sponsor-card__action">
-          {{ trans(key="sponsor_lightning_action", lang=lang) }}
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </span>
-      </a>
-    </div>
+    <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--paypal">
+      <div class="sponsor-card__icon">
+        <i class="fa-brands fa-paypal"></i>
+      </div>
+      <span class="sponsor-card__label">PayPal</span>
+      <span class="sponsor-card__action">
+        {{ trans(key="sponsor_paypal_action", lang=lang) }}
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </span>
+    </a>
+    <a href="https://getalby.com/p/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--lightning">
+      <div class="sponsor-card__icon">
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+      <span class="sponsor-card__label">Lightning</span>
+      <span class="sponsor-card__action">
+        {{ trans(key="sponsor_lightning_action", lang=lang) }}
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </span>
+    </a>
   </section>
 
   <!-- Thank You -->
