@@ -1,5 +1,5 @@
 +++
-title = "Construimos un juego en dos días con IA"
+title = "Construyendo un juego en dos días"
 description = "Un mensaje casual por Telegram se convirtió en un juego de navegador del Señor de los Anillos con nueve niveles. Cada línea de código escrita por un agente de IA. Cada decisión creativa tomada por un humano que creció en la Tierra Media."
 draft = false
 [taxonomies]
