@@ -50,6 +50,8 @@ I asked Sauron to draw them properly. Frodo got curly hair and hobbit feet. The 
 
 All drawn with canvas calls. No image files. Every pixel computed at runtime.
 
+![The Pelennor Fields chapter complete](/images/blog/2026-04-04/gameplay-pelennor.png)
+
 ## Nine levels, nine chapters
 
 Originally the game had three levels. Then I asked for all nine chapters of the journey.
@@ -63,10 +65,6 @@ Originally the game had three levels. Then I asked for all nine chapters of the 
 7. **Minas Morgul**: undead city, the Eye never closes
 8. **Pelennor Fields**: the Eye distracted by war, catapults, eagles overhead
 9. **Mount Doom**: ash rain, lava eruptions, the Ring pulling you toward the edge
-
-![Minas Morgul: the Eye sees you](/images/blog/2026-04-04/gameplay-morgul.png)
-
-![The Pelennor Fields chapter complete](/images/blog/2026-04-04/gameplay-pelennor.png)
 
 Each level lives and breathes. Pollen drifts across the Shire. Dust motes float through Moria. Petals fall in Lothlórien. Embers rise over Pelennor. Ash rains on Mount Doom.
 
@@ -95,6 +93,9 @@ Sam and Gandalf speak during the game. Not in dialogue boxes. Small whispers tha
 Near the goal, Sam says: *"I can see it, Mr. Frodo. Just a bit further."* One life left, Gandalf says: *"Fly, you fool."*
 
 They drift in and out like background voices on a long walk. Companions who speak when the moment calls for it, not when the script says to.
+
+![Minas Morgul: the Eye sees you](/images/blog/2026-04-04/gameplay-morgul.png)
+
 
 ## Who made this
 

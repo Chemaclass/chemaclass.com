@@ -50,6 +50,8 @@ Le pedí a Sauron que los dibujara en condiciones. Frodo recibió cabello rizado
 
 Todo dibujado con llamadas de canvas. Sin archivos de imagen. Cada píxel calculado en tiempo de ejecución.
 
+![Los Campos del Pelennor, capítulo completado](/images/blog/2026-04-04/gameplay-pelennor.png)
+
 ## Nueve niveles, nueve capítulos
 
 Originalmente el juego tenía tres niveles. Luego pedí los nueve capítulos del viaje.
@@ -63,10 +65,6 @@ Originalmente el juego tenía tres niveles. Luego pedí los nueve capítulos del
 7. **Minas Morgul**: ciudad de los muertos, el Ojo nunca se cierra
 8. **Los Campos del Pelennor**: el Ojo distraído por la guerra, catapultas, águilas
 9. **Monte del Destino**: lluvia de cenizas, erupciones de lava, el Anillo tirando de ti hacia el borde
-
-![Minas Morgul: el Ojo te ve](/images/blog/2026-04-04/gameplay-morgul.png)
-
-![Los Campos del Pelennor, capítulo completado](/images/blog/2026-04-04/gameplay-pelennor.png)
 
 Cada nivel vive y respira. Polen flotando por la Comarca. Motas de polvo en Moria. Pétalos cayendo en Lothlórien. Brasas sobre el Pelennor. Ceniza sobre el Monte del Destino.
 
@@ -95,6 +93,9 @@ Sam y Gandalf te hablan durante el juego. No en cuadros de diálogo. Pequeños s
 Cerca de la meta, Sam dice: *"Puedo verlo, señor Frodo. Solo un poco más."* Con una vida, Gandalf dice: *"¡Huye, insensato!"*
 
 Aparecen y desaparecen como voces de fondo en un largo camino. Compañeros que hablan cuando el momento lo pide, no cuando el guión dice que toca.
+
+![Minas Morgul: el Ojo te ve](/images/blog/2026-04-04/gameplay-morgul.png)
+
 
 ## Quién hizo esto
 
