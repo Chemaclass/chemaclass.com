@@ -99,6 +99,8 @@ def format_md_page(frontmatter, body, url):
 def generate_index_md(section, files, base_url):
     """Generate an index.md for a section listing all files."""
     title = section.capitalize()
+    # Derive path prefix from base_url (e.g. '' or '/es')
+    path_prefix = base_url.replace('https://chemaclass.com', '')
 
     output = f'# {title}\n\n'
     output += f'[{base_url}/{section}/]({base_url}/{section}/)\n\n'
@@ -113,7 +115,7 @@ def generate_index_md(section, files, base_url):
         desc = f.get('description', '')
 
         date_prefix = f'`{date}` ' if date else ''
-        output += f'- {date_prefix}[{file_title}](/{section}/{slug}/index.md)\n'
+        output += f'- {date_prefix}[{file_title}]({path_prefix}/{section}/{slug}/index.md)\n'
         if desc:
             output += f'  {desc}\n'
 
@@ -172,19 +174,23 @@ def main():
             continue
 
         section_files = []
+        es_section_files = []
 
         for filepath in sorted(section_path.glob('*.md')):
-            # Skip index files and non-English versions
-            if filepath.name == '_index.md':
+            if filepath.name.startswith('_index'):
                 continue
-            if '.es.md' in filepath.name:
-                continue
+
+            is_spanish = '.es.md' in filepath.name
 
             result = process_markdown_file(filepath, section, base_url)
             if result:
-                section_files.append(result)
+                if is_spanish:
+                    es_section_files.append(result)
+                    output_dir = public_dir / 'es' / section / result['slug']
+                else:
+                    section_files.append(result)
+                    output_dir = public_dir / section / result['slug']
 
-                output_dir = public_dir / section / result['slug']
                 output_dir.mkdir(parents=True, exist_ok=True)
 
                 md_path = output_dir / 'index.md'
@@ -193,7 +199,7 @@ def main():
 
                 total_files += 1
 
-        # Generate section index.md
+        # Generate section index.md (EN)
         if section_files:
             index_content = generate_index_md(section, section_files, base_url)
             index_dir = public_dir / section
@@ -203,7 +209,18 @@ def main():
             with open(index_path, 'w', encoding='utf-8') as f:
                 f.write(index_content)
 
-            print(f'  {section}/: {len(section_files)} files + index.md')
+        # Generate section index.md (ES)
+        if es_section_files:
+            index_content = generate_index_md(section, es_section_files, f'{base_url}/es')
+            index_dir = public_dir / 'es' / section
+            index_dir.mkdir(parents=True, exist_ok=True)
+
+            index_path = index_dir / 'index.md'
+            with open(index_path, 'w', encoding='utf-8') as f:
+                f.write(index_content)
+
+        if section_files or es_section_files:
+            print(f'  {section}/: {len(section_files)} EN + {len(es_section_files)} ES files')
 
     print(f'Generated {total_files} .md files')
 
