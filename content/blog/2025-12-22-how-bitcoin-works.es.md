@@ -186,6 +186,8 @@ Las wallets modernas son **Deterministas Jerárquicas (HD)**. Una semilla maestr
 
 > Nunca almacenes frases semilla digitalmente. Escríbelas. Guárdalas de forma segura offline.
 
+¿Cómo de grande es el espacio de claves de BIP-39 en realidad? He construido [seed-hunter](https://github.com/Chemaclass/seed-hunter), una herramienta educativa de código abierto en Go que intenta hacer fuerza bruta sobre una semilla de 12 palabras contra la red real de Bitcoin. Registra cada intento y muestra el progreso en vivo con ETAs que abarcan de 10²⁹ a 10³⁹ años. Un ladrón comprobando un billón de frases semilla por segundo desde el Big Bang habría completado el 0.000_000_008% de la búsqueda hasta ahora. La idea no es romper Bitcoin, sino hacer las matemáticas viscerales y obvias: la termodinámica, no solo la computación, prohíbe el ataque.
+
 ## La red
 
 Bitcoin es una red peer-to-peer, sin servidores centrales. Los nodos se conectan entre sí, comparten transacciones y bloques, y hacen cumplir las reglas de forma independiente.

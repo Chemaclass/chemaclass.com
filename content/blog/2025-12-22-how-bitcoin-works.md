@@ -186,6 +186,8 @@ Modern wallets are **Hierarchical Deterministic (HD)**. One master seed generate
 
 > Never store seed phrases digitally. Write them down. Store securely offline.
 
+How big is the BIP-39 keyspace, really? I built [seed-hunter](https://github.com/Chemaclass/seed-hunter), an open-source educational Go CLI that tries to brute-force a 12-word seed against the real Bitcoin network. It logs every attempt and shows live progress with ETAs spanning 10²⁹ to 10³⁹ years. A burglar checking one trillion seed phrases per second since the Big Bang would have completed 0.000_000_008% of the search by now. The point isn't to break Bitcoin, it's to make the math viscerally obvious: thermodynamics, not just computation, forbids the attack.
+
 ## The Network
 
 Bitcoin is a peer-to-peer network. No central servers. Nodes connect to each other, share transactions and blocks, and enforce rules independently.
