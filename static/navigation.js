@@ -27,6 +27,7 @@ window.toggleMobileMenu = function(e) {
   const navbar = document.querySelector('.navbar');
   navbar.classList.toggle('open');
   hamburger.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', navbar.classList.contains('open'));
 };
 
 // Keyboard shortcuts: vim-style with g-prefix commands
@@ -528,7 +529,9 @@ document.addEventListener('click', function(e) {
 document.querySelectorAll('.nav-links a').forEach(function(el) {
   el.addEventListener('click', function() {
     document.querySelector('.navbar').classList.remove('open');
-    document.querySelector('.hamburger').classList.remove('open');
+    var hamburger = document.querySelector('.hamburger');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
   });
 });
 
@@ -540,6 +543,7 @@ document.addEventListener('click', function(e) {
   if (!hamburger.contains(e.target)) {
     navbar.classList.remove('open');
     hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
   }
 });
 

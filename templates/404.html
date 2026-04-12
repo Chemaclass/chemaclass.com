@@ -65,6 +65,19 @@
   </div>
 </div>
 
+<noscript>
+  <div style="padding: 2rem; text-align: center;">
+    <h1>404 - Page Not Found</h1>
+    <p>The page you're looking for doesn't exist or has been moved.</p>
+    <nav>
+      <a href="{% if lang == 'es' %}/es/{% else %}/{% endif %}">Home</a> &middot;
+      <a href="{% if lang == 'es' %}/es/blog/{% else %}/blog/{% endif %}">Blog</a> &middot;
+      <a href="{% if lang == 'es' %}/es/readings/{% else %}/readings/{% endif %}">Readings</a> &middot;
+      <a href="{% if lang == 'es' %}/es/talks/{% else %}/talks/{% endif %}">Talks</a>
+    </nav>
+  </div>
+</noscript>
+
 <script>
 // Disable global shortcuts on 404 page
 window.disableGlobalShortcuts = true;
