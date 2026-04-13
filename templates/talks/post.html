@@ -52,6 +52,32 @@
       {% endif %}
     </header>
 
+    <!-- Description card -->
+    {% if page.summary %}
+    <div class="talk-single__description">
+      {{ page.summary | safe }}
+    </div>
+    {% endif %}
+
+    <!-- Project link -->
+    {% if page.extra.project_url %}
+    <div class="talk-single__project">
+      <a href="{{ page.extra.project_url }}" target="_blank" rel="noopener" class="talk-single__project-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        {{ trans(key="talks_view_project", lang=lang) }}
+      </a>
+    </div>
+    {% endif %}
+
+    <!-- Appearances section -->
+    <div class="talk-single__section-header">
+      <h2>{{ trans(key="talks_appearances", lang=lang) }}</h2>
+    </div>
+
     <!-- Content (appearances list + images) -->
     <section class="talk-single__content"
              data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
@@ -72,7 +98,11 @@
              data-hl-clear-done="{{ trans(key='highlight_clear_done', lang=lang) }}"
              data-hl-export="{{ trans(key='highlight_export', lang=lang) }}"
              data-hl-export-done="{{ trans(key='highlight_export_done', lang=lang) }}">
-      {{ page.content | safe }}
+      {% if page.summary %}
+        {{ page.content | replace(from=page.summary, to="") | safe }}
+      {% else %}
+        {{ page.content | safe }}
+      {% endif %}
     </section>
 
     <div id="highlight-clear-slot" style="text-align:right"></div>

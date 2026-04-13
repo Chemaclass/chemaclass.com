@@ -5,6 +5,7 @@ weight = 1
 tags = [ "bashunit", "bash", "testing", "open-source" ]
 [extra]
 subtitle = "Testeando tus scripts bash"
+project_url = "https://bashunit.typeddevs.com/"
 +++
 
 bashunit es un framework de testing para scripts bash, inspirado en PHPUnit, Jest y otros. Todo desarrollador ha necesitado crear un script bash en algún momento, incluso para los pipelines. Ahora puedes escribir tests automatizados para ellos.
@@ -25,7 +26,3 @@ Pero esta charla va más allá del bash. Es sobre cómo construir un proyecto co
   - [Ganador en la categoría de Side Project, 2023: bashunit](https://www.youtube.com/watch?v=X0FhUzX-aI4&t=995s)
 - 2023-11-14 | Entrevista en directo con CodelyTV [**Remoto**] (ES)
   - [Live coding con el equipo detrás de bashunit](https://www.youtube.com/watch?v=6Bn8gbUurdk)
-
----
-
-Lee la **documentación oficial** del proyecto: [https://bashunit.typeddevs.com/](https://bashunit.typeddevs.com/)
