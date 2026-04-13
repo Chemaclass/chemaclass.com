@@ -1,8 +1,8 @@
 +++
 title = "Music"
 description = "Songs and covers where I play electric bass. A creative side beyond code."
-template = "blog/index.html"
-page_template = "blog/post.html"
+template = "music/index.html"
+page_template = "music/page.html"
 sort_by = "date"
 +++
 
