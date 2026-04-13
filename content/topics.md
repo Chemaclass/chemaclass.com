@@ -1,5 +1,5 @@
 +++
 title = "Topics | Chemaclass"
-description = "Explore content by theme."
+description = "Browse all content by topic: software craftsmanship, TDD, leadership, Bitcoin, AI, and more."
 template = "topics.html"
 +++

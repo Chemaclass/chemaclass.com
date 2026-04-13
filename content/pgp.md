@@ -1,5 +1,6 @@
 +++
 title = "PGP | Chemaclass"
+description = "Public PGP key for Chemaclass. Verify signatures, encrypt messages, or import the key directly."
 template = "page.html"
 aliases = [ "/gpg" ]
 +++

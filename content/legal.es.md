@@ -1,6 +1,6 @@
 +++
 title = "Aviso Legal y Privacidad"
-description = "Información legal y política de privacidad de chemaclass.com"
+description = "Política de privacidad, derechos RGPD, detalles de analíticas y servicios de terceros usados en chemaclass.com."
 template = "page.html"
 +++
 

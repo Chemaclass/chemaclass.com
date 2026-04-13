@@ -1,6 +1,6 @@
 +++
 title = "Legal Notice & Privacy"
-description = "Legal information and privacy policy for chemaclass.com"
+description = "Privacy policy, GDPR rights, analytics details, and third-party services used on chemaclass.com."
 template = "page.html"
 +++
 
