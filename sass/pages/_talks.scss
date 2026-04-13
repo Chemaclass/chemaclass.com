@@ -87,6 +87,10 @@
     color: var(--color-subtitle);
     margin: 0;
     line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__tags {
@@ -146,13 +150,15 @@
 
   // Month headers
   h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--heading-color);
-    margin: 1.25rem 0 0.75rem 0;
+    margin: 1.5rem 0 0.75rem 0;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
   }
 
-  // Talk entries (list items)
+  // Event entries (list items)
   ul {
     list-style: none;
     padding: 0;
@@ -160,7 +166,7 @@
 
     li {
       position: relative;
-      padding: 0.5rem 0;
+      padding: 0.75rem 0;
       padding-left: 0.5rem;
       font-size: 0.9rem;
       line-height: 1.6;
@@ -169,7 +175,7 @@
         content: "";
         position: absolute;
         left: -1.75rem;
-        top: 0.9rem;
+        top: 1rem;
         width: 6px;
         height: 6px;
         background: var(--color-subtitle);
@@ -182,17 +188,35 @@
         margin-left: 1rem;
 
         li {
-          padding: 0.25rem 0;
+          padding: 0.4rem 0;
           font-size: 0.85rem;
 
           &::before {
             left: -1.25rem;
-            top: 0.65rem;
+            top: 0.7rem;
             width: 4px;
             height: 4px;
             background: var(--preview-divider-color);
           }
+
+          // Talk abstracts (italic text after talk links)
+          em {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--color-subtitle);
+            margin-top: 0.15rem;
+            line-height: 1.5;
+          }
         }
+      }
+
+      // Abstracts on non-nested talk entries
+      > em {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--color-subtitle);
+        margin-top: 0.15rem;
+        line-height: 1.5;
       }
     }
   }
@@ -251,8 +275,14 @@
       }
     }
 
-    ul li::before {
-      left: -1.25rem;
+    ul li {
+      &::before {
+        left: -1.25rem;
+      }
+
+      em {
+        font-size: 0.78rem;
+      }
     }
   }
 }

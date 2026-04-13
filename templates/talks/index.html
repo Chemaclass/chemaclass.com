@@ -33,22 +33,24 @@
       <h2 class="talks-section-title">{{ trans(key="talks_featured", lang=lang) }}</h2>
       <div class="talks-grid">
         {% for talk in section.pages %}
+        {% if talk.slug == "bashunit" or talk.slug == "phel" or talk.slug == "hands-on-refactoring-tdd" %}
         <a href="{{ talk.permalink }}" class="talk-card">
           <div class="talk-card__content">
             <h3 class="talk-card__title">{{ talk.title }}</h3>
             {% if talk.extra.subtitle %}
               <p class="talk-card__subtitle">{{ talk.extra.subtitle }}</p>
             {% endif %}
-            <p class="talk-card__summary">{{ talk.summary | striptags | truncate(length=120) }}</p>
+            <p class="talk-card__summary">{{ talk.summary | striptags }}</p>
             {% if talk.taxonomies.tags %}
               <div class="talk-card__tags">
-                {% for tag in talk.taxonomies.tags %}
+                {% for tag in talk.taxonomies.tags | slice(end=3) %}
                   <span class="talk-card__tag">{{ tag }}</span>
                 {% endfor %}
               </div>
             {% endif %}
           </div>
         </a>
+        {% endif %}
         {% endfor %}
       </div>
     </section>
