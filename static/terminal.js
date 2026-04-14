@@ -523,9 +523,9 @@ ${portrait}
 
   [[b;#3fb950;]Actions:]                          [[b;#3fb950;]General:]
     /        Search                         ?       Show shortcuts help
-    y        Yank (copy) URL                Shift   Hold to show hints
-    d        Toggle dark/light theme        Esc     Close / cancel
-    t        Toggle table of contents       :       Open terminal
+    y        Yank (copy) URL                Esc     Close / cancel
+    d        Toggle dark/light theme        :       Open terminal
+    t        Toggle table of contents
     i        Switch language (i18n)
     f        Follow link (hint labels)
 `;
