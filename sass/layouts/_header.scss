@@ -359,7 +359,7 @@
   border-left: 1px solid var(--preview-divider-color);
 
   // Uniform sizing for all utility items
-  button, .lang-switch {
+  button, .lang-switch, .profile-link {
     width: 36px;
     height: 36px;
     display: flex;
@@ -386,6 +386,23 @@
     font-weight: 600;
     text-decoration: none;
     color: var(--body-color);
+  }
+
+  .profile-link {
+    text-decoration: none;
+    color: var(--body-color);
+
+    &:hover {
+      border-bottom: none;
+    }
+
+    &.nav-active {
+      background: rgba(45, 90, 142, 0.12);
+
+      svg {
+        stroke: var(--accent-color);
+      }
+    }
   }
 }
 
