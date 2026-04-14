@@ -8,7 +8,7 @@ tags = [ "ai", "software", "leadership" ]
 subtitle = "When you become the slowest part of the system"
 static_thumbnail = "https://placehold.co/960x540?text=The+Human+Bottleneck"
 series = "ai"
-series_order = 5
+series_order = 6
 related_posts = [
   "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
   "blog/2026-02-07-build-your-own-team-of-agents.md",
