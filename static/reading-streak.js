@@ -28,12 +28,9 @@
   }
 
   function markReadLinks() {
-    // Fast path: if the page has no listing cards AND no counter widget, we
-    // have nothing to paint and nothing to count for — bail before scanning
-    // every anchor. Covers post pages, CV, 404, etc.
-    var hasCards = document.querySelector('.blog-card, .latest-card');
-    var hasCounter = document.querySelector('[data-read-counter]');
-    if (!hasCards && !hasCounter) return;
+    // Fast path: if the page has no listing cards, nothing to paint — bail
+    // before scanning every anchor. Covers post pages, CV, 404, etc.
+    if (!document.querySelector('.blog-card, .latest-card')) return;
 
     var read = loadRead();
     // Scope anchor scan to the containers that can host post links. On a
@@ -43,9 +40,6 @@
                 document.querySelector('.latest-grid') ||
                 document;
     var anchors = scope.querySelectorAll('a[href]');
-    var seenPaths = {};
-    var total = 0;
-    var doneCount = 0;
 
     for (var i = 0; i < anchors.length; i++) {
       var a = anchors[i];
@@ -59,55 +53,11 @@
       if (url.origin !== location.origin) continue;
       if (!POST_PATH_RE.test(url.pathname)) continue;
 
-      var key = normalize(url.pathname);
-      // De-dupe: same post linked multiple times counts once.
-      if (!seenPaths[key]) {
-        seenPaths[key] = true;
-        total++;
-        if (read[key]) doneCount++;
-      }
-
-      if (!read[key]) continue;
+      if (!read[normalize(url.pathname)]) continue;
       var target = a.closest('.blog-card') ||
                    a.closest('.latest-card') ||
                    a;
       target.classList.add('is-read');
-    }
-
-    renderCounter(doneCount, total);
-  }
-
-  function renderCounter(done, total) {
-    var nodes = document.querySelectorAll('[data-read-counter]');
-    if (!nodes.length) return;
-    var pct = total > 0 ? Math.round((done / total) * 100) : 0;
-    var complete = total > 0 && done >= total;
-
-    for (var i = 0; i < nodes.length; i++) {
-      var el = nodes[i];
-      if (total < 2) {
-        el.hidden = true;
-        continue;
-      }
-      el.hidden = false;
-      el.classList.toggle('is-complete', complete);
-      el.classList.toggle('is-empty', done === 0);
-      el.style.setProperty('--read-pct', pct + '%');
-      el.setAttribute('title', done + ' of ' + total + ' read (' + pct + '%)');
-      el.innerHTML =
-        '<span class="read-counter__badge" aria-hidden="true">' +
-          '<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">' +
-            '<polyline points="20 6 9 17 4 12"/>' +
-          '</svg>' +
-        '</span>' +
-        '<span class="read-counter__main">' +
-          '<span class="read-counter__primary">' + done + '</span>' +
-          '<span class="read-counter__sep">/</span>' +
-          '<span class="read-counter__total">' + total + '</span>' +
-          '<span class="read-counter__label">' + (complete ? 'complete' : 'read') + '</span>' +
-        '</span>' +
-        '<span class="read-counter__pct">' + pct + '%</span>' +
-        '<span class="read-counter__bar" aria-hidden="true"></span>';
     }
   }
 

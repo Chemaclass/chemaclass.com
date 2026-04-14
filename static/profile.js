@@ -37,9 +37,6 @@
     reset: 'Borrar mis datos',
     resetConfirm: '¿Seguro? Esto borra tus posts leídos y favoritos guardados en este navegador.',
     export: 'Exportar',
-    import: 'Importar',
-    importPrompt: 'Pega aquí el JSON exportado previamente:',
-    importBad: 'Eso no parece un export válido.',
     of: 'de',
     posts: 'posts',
     read: 'leídos',
@@ -51,7 +48,7 @@
     noSeries: 'Sin series aún.',
     topTags: 'Etiquetas que más lees',
     noTags: 'Cuando marques posts como leídos, sus etiquetas aparecerán aquí.',
-    dataLocal: 'Todos tus datos están en este navegador. Puedes exportarlos, importarlos o borrarlos.',
+    dataLocal: 'Todos tus datos están en este navegador. Puedes exportarlos o borrarlos.',
     tools: 'Herramientas'
   } : {
     overall: 'Overall progress',
@@ -70,9 +67,6 @@
     reset: 'Clear my data',
     resetConfirm: "Sure? This clears the posts you've read and the favorites you've saved in this browser.",
     export: 'Export',
-    import: 'Import',
-    importPrompt: 'Paste the JSON you exported earlier:',
-    importBad: "That doesn't look like a valid export.",
     of: 'of',
     posts: 'posts',
     read: 'read',
@@ -84,7 +78,7 @@
     noSeries: 'No series yet.',
     topTags: 'Tags you read most',
     noTags: 'As you mark posts as read, their tags will show up here.',
-    dataLocal: 'All your data lives in this browser. You can export, import, or clear it.',
+    dataLocal: 'All your data lives in this browser. You can export or clear it.',
     tools: 'Tools'
   };
 
@@ -256,8 +250,11 @@
       for (var j = 0; j < items.length; j++) if (read[items[j]._key]) done++;
       var p = pct(done, total);
       var titleRaw = (payload.series[key] && payload.series[key].title) || key;
+      var firstHref = items[0] && items[0].permalink;
 
-      var row = el('div', 'profile-series__row');
+      var row = document.createElement('a');
+      row.className = 'profile-series__row';
+      row.href = firstHref || '#';
       row.style.setProperty('--profile-pct', p + '%');
       row.innerHTML =
         '<div class="profile-series__head">' +
@@ -435,22 +432,6 @@
       URL.revokeObjectURL(url);
     });
     row.appendChild(exportBtn);
-
-    var importBtn = el('button', 'profile-btn', escapeHTML(t.import));
-    importBtn.type = 'button';
-    importBtn.addEventListener('click', function () {
-      var raw = window.prompt(t.importPrompt);
-      if (!raw) return;
-      try {
-        var parsed = JSON.parse(raw);
-        if (parsed && typeof parsed.read === 'object') saveJSON(READ_KEY, parsed.read);
-        if (parsed && typeof parsed.favorites === 'object') saveJSON(FAV_KEY, parsed.favorites);
-        render();
-      } catch (e) {
-        window.alert(t.importBad);
-      }
-    });
-    row.appendChild(importBtn);
 
     var resetBtn = el('button', 'profile-btn profile-btn--danger', escapeHTML(t.reset));
     resetBtn.type = 'button';
