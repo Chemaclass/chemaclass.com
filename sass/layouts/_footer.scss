@@ -131,7 +131,7 @@
 // Page footer (site-wide multi-column)
 .page-footer {
   margin-top: 4rem;
-  padding: 3rem 1.25rem 1.5rem;
+  padding: 3rem 0 1.5rem;
   border-top: 1px solid var(--preview-divider-color);
   background: linear-gradient(
     to bottom,
@@ -142,6 +142,8 @@
   &__container {
     max-width: $max-width-navbar;
     margin: 0 auto;
+    padding: 0.75rem 1.25rem;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: minmax(240px, 1.4fr) repeat(3, minmax(140px, 1fr));
     gap: 3rem 2.5rem;
@@ -264,7 +266,8 @@
   &__bottom {
     max-width: $max-width-navbar;
     margin: 2.5rem auto 0;
-    padding-top: 1.5rem;
+    padding: 1.5rem 1.25rem 0.75rem;
+    box-sizing: border-box;
     border-top: 1px solid var(--preview-divider-color);
     display: flex;
     justify-content: space-between;
@@ -309,11 +312,17 @@
 
 @media (max-width: 560px) {
   .page-footer {
-    padding: 2.5rem 1rem 1.25rem;
+    padding: 2.5rem 0 1.25rem;
 
     &__container {
+      padding: 0 1rem;
       grid-template-columns: 1fr 1fr;
       gap: 2rem 1.25rem;
+    }
+
+    &__bottom {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
     &__brand {
