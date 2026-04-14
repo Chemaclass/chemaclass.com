@@ -1,0 +1,65 @@
+// 3D tilt effect for pointer-tracked cards.
+// Paired with static/tilt.js which sets --tilt-rx, --tilt-ry, --tilt-mx, --tilt-my.
+// Apply with @include tilt-3d on a card-like element; the JS binds via [data-tilt].
+
+@mixin tilt-3d($spotlight: false) {
+  --tilt-rx: 0deg;
+  --tilt-ry: 0deg;
+  --tilt-mx: 50%;
+  --tilt-my: 50%;
+
+  transform-style: preserve-3d;
+  transform:
+    perspective(900px)
+    rotateX(var(--tilt-rx))
+    rotateY(var(--tilt-ry));
+  transition: transform 0.5s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)),
+              box-shadow 0.3s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)),
+              border-color 0.2s ease;
+  will-change: transform;
+
+  &.is-tilting {
+    // Faster response while actively tilting; slower ease on release.
+    transition: transform 0.08s linear,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+  }
+
+  @if $spotlight {
+    position: relative;
+    isolation: isolate;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background: radial-gradient(
+        circle at var(--tilt-mx) var(--tilt-my),
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0) 55%
+      );
+      z-index: 1;
+    }
+
+    &.is-tilting::after {
+      opacity: 1;
+    }
+  }
+}
+
+// Honor user preference: disable the effect entirely.
+@media (prefers-reduced-motion: reduce) {
+  [data-tilt] {
+    --tilt-rx: 0deg !important;
+    --tilt-ry: 0deg !important;
+    transform: none !important;
+
+    &::after {
+      display: none !important;
+    }
+  }
+}

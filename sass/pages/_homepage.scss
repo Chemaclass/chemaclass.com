@@ -1,4 +1,5 @@
 @import "../abstracts/mixins";
+@import "../abstracts/tilt";
 
 // Homepage-specific body styles
 body {
@@ -435,6 +436,18 @@ main:has(.homepage-container) #scroll-to-top {
   align-items: stretch;
   text-align: left;
   padding: 1.25rem;
+
+  &[data-tilt] {
+    @include tilt-3d;
+
+    // Tilt takes over the hover feedback; cancel the base translateY.
+    &:hover {
+      transform:
+        perspective(900px)
+        rotateX(var(--tilt-rx))
+        rotateY(var(--tilt-ry));
+    }
+  }
 
   .project-card__header {
     display: flex;

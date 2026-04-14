@@ -1,0 +1,433 @@
+// /profile — client-side reading dashboard.
+// Visual language:
+//   - Same "card" motif as topics/readings (soft background, 1px divider border,
+//     12px radius, subtle shadow on hover).
+//   - Two accent colors: reading-streak green for progress, favorites amber for stars.
+//   - No chrome when data is empty — just honest empty-state copy.
+
+$profile-green: #22c55e;
+$profile-amber: #f59e0b;
+$profile-max-width: 920px;
+
+.profile-page {
+  max-width: $profile-max-width;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  &__header {
+    text-align: center;
+    margin: 1rem 0 2rem;
+
+    h1 {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__intro {
+    color: var(--color-subtitle);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  &__noscript {
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem auto;
+    border: 1px dashed var(--preview-divider-color);
+    border-radius: 10px;
+    color: var(--color-subtitle);
+  }
+}
+
+.profile-app {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  // Skeleton shown before JS takes over.
+  &__skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.profile-skeleton-card {
+  height: 120px;
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    var(--search-input-bg) 0%,
+    var(--preview-divider-color) 50%,
+    var(--search-input-bg) 100%
+  );
+  background-size: 200% 100%;
+  animation: profile-skeleton 1.4s ease-in-out infinite;
+  opacity: 0.55;
+}
+
+@keyframes profile-skeleton {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}
+
+// ---- Cards ----
+.profile-card {
+  background: var(--search-input-bg);
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+
+  &__title {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+
+    svg { color: $profile-amber; }
+  }
+
+  &__hint {
+    margin: -0.25rem 0 0.9rem;
+    color: var(--color-subtitle);
+    font-size: 0.9rem;
+  }
+}
+
+.profile-empty {
+  color: var(--color-subtitle);
+  font-size: 0.95rem;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+// ---- Overall tiles: blog + readings side-by-side ----
+.profile-overall__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.profile-tile {
+  --profile-pct: 0%;
+  background: var(--body-background);
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.3s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)),
+              box-shadow 0.3s ease,
+              border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-color);
+  }
+
+  &__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  &__label {
+    font-weight: 600;
+    color: var(--heading-color);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.8rem;
+  }
+
+  &__pct {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    color: $profile-green;
+  }
+
+  &__bar {
+    height: 6px;
+    border-radius: 999px;
+    background: var(--preview-divider-color);
+    overflow: hidden;
+  }
+
+  &__fill {
+    display: block;
+    width: var(--profile-pct);
+    height: 100%;
+    background: linear-gradient(90deg, $profile-green, color-mix(in srgb, $profile-green 70%, white));
+    transition: width 0.6s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
+  }
+
+  &__meta {
+    color: var(--color-subtitle);
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+
+    strong {
+      color: var(--heading-color);
+    }
+  }
+}
+
+// ---- By series: compact progress rows ----
+.profile-series {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.profile-series__row {
+  --profile-pct: 0%;
+}
+
+.profile-series__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.profile-series__title {
+  color: var(--heading-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.profile-series__count {
+  color: var(--color-subtitle);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+}
+
+.profile-series__bar {
+  height: 4px;
+  border-radius: 999px;
+  background: var(--preview-divider-color);
+  overflow: hidden;
+}
+
+.profile-series__fill {
+  display: block;
+  width: var(--profile-pct);
+  height: 100%;
+  background: $profile-green;
+  transition: width 0.6s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
+}
+
+// ---- Tag cloud ----
+// Pill design mirrors .skill-tag on the homepage: 20px radius, soft bg, 1px
+// semi-transparent border, subtle translateY on hover. The count hangs off
+// the right side as a contrast "badge" so the tag name and the number read
+// as one chip with two segments.
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.6rem;
+}
+
+.profile-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.5rem 0.35rem 0.85rem;
+  border-radius: 20px;
+  background: var(--search-bg-selected-item);
+  border: 1px solid var(--preview-divider-color);
+  color: var(--body-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.2;
+  transition: transform 0.3s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)),
+              box-shadow 0.3s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)),
+              border-color 0.2s ease,
+              color 0.2s ease;
+
+  &__name {
+    // Tag name stays the dominant visual — same weight/size across the cloud.
+  }
+
+  &__count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.4em;
+    padding: 0.05rem 0.4rem;
+    border-radius: 999px;
+    background: var(--body-background);
+    color: var(--color-subtitle);
+    font-size: 0.72em;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+
+    .profile-tag__count {
+      color: var(--accent-color);
+    }
+  }
+}
+
+// ---- Recently read + favorites ----
+.profile-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  &__item {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--preview-divider-color);
+    background: var(--body-background);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      border-color: var(--accent-color);
+      transform: translateX(2px);
+    }
+  }
+
+  &__link {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.6rem 0.85rem;
+    color: inherit;
+    text-decoration: none;
+    min-width: 0;
+
+    &:hover { border-bottom: none; }
+  }
+
+  &__title {
+    font-weight: 600;
+    color: var(--heading-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__meta {
+    display: inline-flex;
+    gap: 0.5rem;
+    color: var(--color-subtitle);
+    font-size: 0.8rem;
+  }
+
+  &__section {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+
+  &__date {
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__remove {
+    flex-shrink: 0;
+    align-self: stretch;
+    padding: 0 0.8rem;
+    background: transparent;
+    border: 0;
+    border-left: 1px solid var(--preview-divider-color);
+    color: var(--color-subtitle);
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease;
+
+    &:hover {
+      color: #ef4444;
+      background: rgba(239, 68, 68, 0.06);
+    }
+  }
+
+  // Favorites list gets a subtle amber left-edge accent.
+  &--favs .profile-list__item {
+    box-shadow: inset 3px 0 0 0 rgba(245, 158, 11, 0.5);
+  }
+}
+
+// ---- Tools footer ----
+.profile-card--tools {
+  background: transparent;
+  border-style: dashed;
+  box-shadow: none;
+}
+
+.profile-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.profile-btn {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--preview-divider-color);
+  background: var(--body-background);
+  color: var(--body-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+
+  &--danger:hover {
+    border-color: #ef4444;
+    color: #ef4444;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-skeleton-card,
+  .profile-tile__fill,
+  .profile-series__fill,
+  .profile-list__item,
+  .profile-tag,
+  .profile-btn {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .profile-page {
+    padding: 0 0.75rem;
+  }
+
+  .profile-card {
+    padding: 1rem 1.1rem;
+  }
+
+  .profile-list__meta {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+}

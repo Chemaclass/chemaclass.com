@@ -1,5 +1,8 @@
 // ==========================================================================
-// Post Entry Point (blog + readings posts)
+// Profile Entry Point (/profile — client-side reading dashboard)
+//
+// Dedicated bundle so the ~11KB of profile styling doesn't ride along on
+// every other page's main.css. Mirrors the structure of page.scss/listing.scss.
 // ==========================================================================
 
 // 1. Abstracts
@@ -18,30 +21,14 @@
 // 4. Layouts
 @import "layouts/header";
 @import "layouts/footer";
-@import "layouts/post";
 
 // 5. Components
 @import "menu";
-@import "toc";
-@import "search";
 @import "components/buttons";
 @import "components/dialog";
-@import "components/tables";
-@import "components/lists";
-@import "components/tooltips";
-@import "components/status";
-@import "components/icons";
-@import "components/interactive-list";
-@import "components/deep-dive";
-@import "components/newsletter";
-@import "components/related-posts";
-@import "components/series-nav";
-@import "components/highlights";
-@import "components/favorites";
 
 // 6. Pages
-@import "pages/blog";
-@import "pages/readings";
+@import "pages/profile";
 
 // 7. Themes
 @import "themes/light";

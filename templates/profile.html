@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {% if lang == "es" %}Tu perfil de lectura{% else %}Your reading profile{% endif %} | Chemaclass
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='profile.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
+{% block content %}
+{#
+  Emit every blog post + reading post as a tiny JSON record the profile.js can
+  read. We keep the payload minimal — just what the dashboard needs — so the
+  page stays lean.
+#}
+{% set blog = get_section(path="blog/_index.md", lang=lang) %}
+{% set readings = get_section(path="readings/_index.md", lang=lang) %}
+
+<script id="profile-data" type="application/json">
+{
+  "lang": "{{ lang }}",
+  "series": {
+    {% for key, s in config.extra.series %}
+      {% if lang == 'es' %}{% set title = s.title_es %}{% else %}{% set title = s.title %}{% endif %}
+      "{{ key }}": { "title": {{ title | json_encode | safe }} }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  },
+  "posts": [
+    {% set_global first = true %}
+    {% for post in blog.pages %}
+      {%- if not first %},{% endif %}{% set_global first = false -%}
+      {
+        "permalink": "{{ post.permalink | safe }}",
+        "title": {{ post.title | json_encode | safe }},
+        "section": "blog",
+        "date": "{{ post.date }}",
+        "tags": {{ post.taxonomies.tags | default(value=[]) | json_encode | safe }},
+        "series": "{{ post.extra.series | default(value='') }}",
+        "series_order": {{ post.extra.series_order | default(value=0) }}
+      }
+    {% endfor %}
+    {% for post in readings.pages %}
+      {%- if not first %},{% endif %}{% set_global first = false -%}
+      {
+        "permalink": "{{ post.permalink | safe }}",
+        "title": {{ post.title | json_encode | safe }},
+        "section": "readings",
+        "date": "{{ post.date }}",
+        "tags": {{ post.taxonomies.tags | default(value=[]) | json_encode | safe }},
+        "series": "{{ post.extra.series | default(value='') }}",
+        "series_order": {{ post.extra.series_order | default(value=0) }}
+      }
+    {% endfor %}
+  ]
+}
+</script>
+
+<div class="profile-page">
+  <header class="profile-page__header">
+    <h1>{% if lang == "es" %}Tu perfil de lectura{% else %}Your reading profile{% endif %}</h1>
+    <p class="profile-page__intro">
+      {% if lang == "es" %}
+        Todo lo que ves aquí vive en tu navegador. Nada sale de tu dispositivo,
+        nada se sincroniza con un servidor. Borra tus datos del sitio y el perfil se vacía.
+      {% else %}
+        Everything you see here lives in your browser. Nothing leaves your device,
+        nothing syncs to a server. Clear site data and the profile empties.
+      {% endif %}
+    </p>
+  </header>
+
+  <noscript>
+    <p class="profile-page__noscript">
+      {% if lang == "es" %}
+        Esta página necesita JavaScript para leer tus datos locales y mostrar tu progreso.
+      {% else %}
+        This page needs JavaScript to read your local data and render your progress.
+      {% endif %}
+    </p>
+  </noscript>
+
+  <div id="profile-app" class="profile-app" data-lang="{{ lang }}">
+    {# profile.js takes over here. Skeleton stays if JS is disabled. #}
+    <div class="profile-app__skeleton">
+      <div class="profile-skeleton-card"></div>
+      <div class="profile-skeleton-card"></div>
+      <div class="profile-skeleton-card"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="{{ get_url(path='profile.js') }}" defer></script>
+{% endblock content %}

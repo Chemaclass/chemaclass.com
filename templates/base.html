@@ -411,6 +411,10 @@
             <i class="fa-solid fa-heart"></i>
             <span>{{ trans(key="nav_sponsor_cta", lang=lang) }}</span>
           </a>
+          <a href="{% if lang == 'es' %}/es/profile/{% else %}/profile/{% endif %}" class="page-footer__link">
+            <i class="fa-solid fa-user"></i>
+            <span>{% if lang == 'es' %}Mi perfil{% else %}My profile{% endif %}</span>
+          </a>
           <a href="{% if lang == 'es' %}{{ get_url(path='es/atom.xml') | safe }}{% else %}{{ get_url(path='atom.xml') | safe }}{% endif %}" class="page-footer__link">
             <i class="fa-solid fa-rss"></i>
             <span>{{ trans(key="nav_rss", lang=lang) }}</span>
@@ -475,6 +479,9 @@
     </script>
     <script type="text/javascript" src="{{ get_url(path='scroll.js') }}" defer></script>
     <script type="text/javascript" src="{{ get_url(path='preview.js') }}" defer></script>
+    <script type="text/javascript" src="{{ get_url(path='tilt.js') }}" defer></script>
+    <script type="text/javascript" src="{{ get_url(path='reading-streak.js') }}" defer></script>
+    <script type="text/javascript" src="{{ get_url(path='favorites.js') }}" defer></script>
     <script>
       // Lazy-load search scripts (uses template URLs, must stay inline)
       let searchLoaded = false;
