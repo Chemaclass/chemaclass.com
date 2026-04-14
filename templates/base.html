@@ -318,10 +318,12 @@
               <a href="/es/blog/"{% if cp is starting_with("/es/blog/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_blog", lang=lang) }}</a>
               <a href="/es/readings/"{% if cp is starting_with("/es/readings/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_readings", lang=lang) }}</a>
               <a href="/es/cv/"{% if cp is starting_with("/es/cv/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_cv", lang=lang) }}</a>
+              <a href="/es/profile/"{% if cp is starting_with("/es/profile/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_profile", lang=lang) }}</a>
             {% else %}
               <a href="/blog/"{% if cp is starting_with("/blog/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_blog", lang=lang) }}</a>
               <a href="/readings/"{% if cp is starting_with("/readings/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_readings", lang=lang) }}</a>
               <a href="/cv/"{% if cp is starting_with("/cv/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_cv", lang=lang) }}</a>
+              <a href="/profile/"{% if cp is starting_with("/profile/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_profile", lang=lang) }}</a>
             {% endif %}
             <div class="nav-utilities">
               <button id="search-toggle" onclick="toggleSearch()" title="{{ trans(key="search_toggle_title", lang=lang) }}">
@@ -426,16 +428,16 @@
               <li><a href="{{ lp }}/blog/">{{ trans(key="nav_blog", lang=lang) }}</a></li>
               <li><a href="{{ lp }}/readings/">{{ trans(key="nav_readings", lang=lang) }}</a></li>
               <li><a href="{{ lp }}/topics/">{{ trans(key="nav_topics", lang=lang) }}</a></li>
-              <li><a href="{{ lp }}/talks/">{{ trans(key="nav_talks", lang=lang) }}</a></li>
+              <li><a href="{{ lp }}/profile/">{{ trans(key="nav_profile", lang=lang) }}</a></li>
             </ul>
           </div>
 
           <div class="page-footer__col">
             <h3 class="page-footer__col-title">{{ trans(key="footer_col_creative", lang=lang) }}</h3>
             <ul class="page-footer__list">
+              <li><a href="{{ lp }}/talks/">{{ trans(key="nav_talks", lang=lang) }}</a></li>
               <li><a href="{{ lp }}/books/">{{ trans(key="nav_books", lang=lang) }}</a></li>
               {% if lang != 'es' %}<li><a href="/music/">{{ trans(key="nav_music", lang=lang) }}</a></li>{% endif %}
-              <li><a href="{{ lp }}/profile/">{{ trans(key="nav_profile", lang=lang) }}</a></li>
             </ul>
           </div>
 
