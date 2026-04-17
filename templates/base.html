@@ -21,7 +21,11 @@
 
     <meta name="theme-color" content="{{ config.extra.accent }}" />
     <meta name="author" content="{{ config.author }}">
+    {% if paginator and paginator.current_index and paginator.current_index > 1 %}
+    <meta name="robots" content="noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    {% else %}
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    {% endif %}
     <link rel="manifest" href="/manifest.json" />
 
     {% if config.extra.google_site_verification %}

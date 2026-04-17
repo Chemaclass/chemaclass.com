@@ -4,6 +4,10 @@
   {% if lang == "es" %}Tu perfil de lectura{% else %}Your reading profile{% endif %} | Chemaclass
 {% endblock %}
 
+{% block posthead %}
+<meta name="robots" content="noindex, nofollow">
+{% endblock posthead %}
+
 {% block styles %}
 <link rel="stylesheet" href="{{ get_url(path='profile.css') | safe }}">
 <link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">

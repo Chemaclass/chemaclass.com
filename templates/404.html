@@ -2,6 +2,10 @@
 
 {% block title %}404 - Page Not Found{% endblock title %}
 
+{% block posthead %}
+<meta name="robots" content="noindex, follow">
+{% endblock posthead %}
+
 {% block styles %}
 <link rel="stylesheet" href="{{ get_url(path='page.css') | safe }}">
 <link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
