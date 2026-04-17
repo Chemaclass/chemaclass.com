@@ -388,12 +388,16 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     {% block header %}
       <header class="site-header">
-        <a class="header-left" href="{% if lang == 'es' %}/es/{% else %}/{% endif %}">
+        {% set cp_home = current_path | default(value="") %}
+        {% set is_home = cp_home == "/" or cp_home == "/es/" %}
+        <a class="header-left{% if is_home %} header-left--no-avatar{% endif %}" href="{% if lang == 'es' %}/es/{% else %}/{% endif %}">
+          {% if not is_home %}
           <span class="profile-icon">
             {% set nav_icon = resize_image(path=config.extra.profile_small, width=36, height=36, op="fill") %}
             <img src="{{ nav_icon.url }}" alt="Chemaclass" />
           </span>
           <span class="site-title">Chemaclass</span>
+          {% endif %}
         </a>
 
         <nav class="navbar">
