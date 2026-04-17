@@ -1,0 +1,43 @@
+# Chemaclass
+
+> Sitio personal de Jose Maria Valera Reales (Chemaclass). Tech Lead, ingeniero de software y contribuidor open source que comparte ideas prácticas sobre artesanía del software, TDD, liderazgo, Bitcoin e IA.
+
+## Sobre
+
+Jose Maria Valera Reales es Tech Lead en Purpose Green con más de 15 años en ingeniería de software y más de 5 liderando equipos. Escribe sobre artesanía del software, testing, liderazgo, Bitcoin e IA. El sitio está disponible en inglés y español.
+
+## Secciones
+
+- [Blog](https://chemaclass.com/es/blog/): Artículos sobre desarrollo de software, testing, liderazgo y equipos
+- [Lecturas](https://chemaclass.com/es/readings/): Resúmenes y notas de libros sobre software, psicología y filosofía
+- [Charlas](https://chemaclass.com/es/talks/): Charlas y talleres sobre testing, refactoring y artesanía del software
+- [Servicios](https://chemaclass.com/es/services/): Desarrollo web y talleres de equipo
+- [CV](https://chemaclass.com/es/cv/): Experiencia profesional y habilidades
+
+## Series
+
+- Serie Bitcoin: PGP, Cypherpunks, Dinero Programable, Impuestos, Fundamentos, Cómo Funciona
+- Serie IA: Velocidad no Calidad, Contexto MCP, Equipo de Agentes, Idealismo vs Pragmatismo
+- Serie Artesanía del Software: Arte del Testing, Mock o No, TDD, TDD vs BDD, London vs Chicago, Testear Métodos Privados
+- Serie Liderazgo y Equipos: Tech Lead, Red vs Blue Work, Belleza del Liderazgo, Gran Liderazgo, Todos a Bordo, FSNP
+- Serie Agile y XP: Equipos Extremos, Agile con No-Agile, Ignorar Scrum, Deploys en Viernes, Qué Mata la Agilidad, Ship Show Ask
+
+## Temas
+
+- Liderazgo y Personas: Crecer como líder, construir equipos y el lado humano del software
+- Mente y Conocimiento: Filosofía, psicología, productividad y la búsqueda del entendimiento
+- Artesanía del Software y Testing: TDD, código limpio, refactoring y prácticas de diseño
+- Bitcoin y Economía: Dinero sólido, economía austriaca, privacidad y tecnología Bitcoin
+- Lenguajes y Herramientas: PHP, Bash, Lisp, Symfony, Docker, Git
+- Charlas y Enseñanza: Charlas, talleres, live coding
+
+## Open Source
+
+- [bashunit](https://bashunit.typeddevs.com/): Framework de testing para scripts Bash
+- [Phel](https://phel-lang.org): Un Lisp que compila a PHP
+
+## Feeds
+
+- Atom (EN): https://chemaclass.com/atom.xml
+- Atom (ES): https://chemaclass.com/es/atom.xml
+- Sitemap: https://chemaclass.com/sitemap.xml

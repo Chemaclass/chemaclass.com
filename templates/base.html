@@ -45,6 +45,12 @@
     {% endif %}
 
 
+    <!-- DNS prefetch + preconnect for outbound link targets -->
+    <link rel="dns-prefetch" href="https://github.com">
+    <link rel="dns-prefetch" href="https://x.com">
+    <link rel="dns-prefetch" href="https://www.linkedin.com">
+    <link rel="dns-prefetch" href="https://www.youtube-nocookie.com">
+
     <!-- Preload critical fonts -->
     <link rel="preload" href="/fonts/rubik-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/rubik-500.woff2" as="font" type="font/woff2" crossorigin>
@@ -108,7 +114,11 @@
       "@type": "Organization",
       "name": "Chemaclass",
       "url": "{{ config.base_url | safe }}",
-      "logo": "{{ get_url(path=config.extra.icon) | safe }}",
+      "description": "{{ config.description }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ get_url(path=config.extra.icon) | safe }}"
+      },
       "founder": {
         "@type": "Person",
         "name": "Jose Maria Valera Reales"
@@ -498,13 +508,13 @@
           </a>
           <p class="page-footer__tagline">{{ trans(key="footer_tagline", lang=lang) }}</p>
           <div class="page-footer__social">
-            <a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="page-footer__social-link" aria-label="GitHub">
+            <a href="https://github.com/Chemaclass" target="_blank" rel="me noopener" class="page-footer__social-link" aria-label="GitHub">
               <i class="fa-brands fa-github"></i>
             </a>
-            <a href="https://x.com/Chemaclass" target="_blank" rel="noopener" class="page-footer__social-link" aria-label="X">
+            <a href="https://x.com/Chemaclass" target="_blank" rel="me noopener" class="page-footer__social-link" aria-label="X">
               <i class="fa-brands fa-x-twitter"></i>
             </a>
-            <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="noopener" class="page-footer__social-link" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="me noopener" class="page-footer__social-link" aria-label="LinkedIn">
               <i class="fa-brands fa-linkedin"></i>
             </a>
             <a href="{% if lang == 'es' %}{{ get_url(path='es/atom.xml') | safe }}{% else %}{{ get_url(path='atom.xml') | safe }}{% endif %}" class="page-footer__social-link" aria-label="RSS">

@@ -14,6 +14,8 @@
       "@type": "WebPage",
       "@id": "{{ page.permalink | safe }}"
     },
+    "url": "{{ page.permalink | safe }}",
+    "isAccessibleForFree": true,
     "headline": "{{ page.title }}",
     {% if page.description %}"description": "{{ page.description }}",{% endif %}
     "image": [{% if page.extra.static_thumbnail %} "{{ config.base_url | safe }}{{ page.extra.static_thumbnail | safe }}"{% elif config.extra.default_og_image %} "{{ get_url(path=config.extra.default_og_image) | safe }}"{% endif %}]{% if page.date %},
