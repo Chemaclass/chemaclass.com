@@ -1,9 +1,9 @@
 +++
 title = "Skills Over Agents"
-description = "Coding agents are general-purpose by design. What makes an agent excel isn't intelligence. It's the domain knowledge you give it. Skills are that knowledge."
+description = "Coding agents are general-purpose by design. What makes one excel isn't the model. It's the domain knowledge you give it. Skills encode that."
 draft = true
 [taxonomies]
-tags = [ "ai", "software", "craftsmanship" ]
+tags = [ "ai", "software", "craftsmanship", "productivity", "developer-tools" ]
 [extra]
 subtitle = "Intelligence without expertise is entertainment"
 static_thumbnail = "/images/blog/placeholder.jpg"

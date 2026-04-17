@@ -3,7 +3,7 @@ title = "Inside the .claude Folder"
 description = "A hands-on tour of Claude Code's project folder. What rules, skills, agents, hooks, and settings each do, and how they fit together."
 draft = false
 [taxonomies]
-tags = [ "ai", "software", "tutorial", "craftsmanship" ]
+tags = [ "ai", "software", "tutorial", "craftsmanship", "developer-tools", "productivity" ]
 [extra]
 subtitle = "A tutorial through rules, skills, agents, hooks, and settings"
 static_thumbnail = "/images/blog/2026-04-17/cover.jpg"

@@ -3,7 +3,7 @@ title = "Dentro de la Carpeta .claude"
 description = "Un recorrido práctico por la carpeta de proyecto de Claude Code. Qué hacen rules, skills, agents, hooks y settings, y cómo encajan entre sí."
 draft = false
 [taxonomies]
-tags = [ "ai", "software", "tutorial", "craftsmanship" ]
+tags = [ "ai", "software", "tutorial", "craftsmanship", "developer-tools", "productivity" ]
 [extra]
 subtitle = "Un tutorial sobre rules, skills, agents, hooks y settings"
 static_thumbnail = "/images/blog/2026-04-17/cover.jpg"

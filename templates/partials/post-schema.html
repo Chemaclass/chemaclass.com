@@ -19,16 +19,25 @@
     "image": [{% if page.extra.static_thumbnail %} "{{ config.base_url | safe }}{{ page.extra.static_thumbnail | safe }}"{% elif config.extra.default_og_image %} "{{ get_url(path=config.extra.default_og_image) | safe }}"{% endif %}]{% if page.date %},
     "datePublished": "{{ page.date | date(format="%+") }}",
     "dateModified": "{% if page.updated %}{{ page.updated | date(format="%+") }}{% else %}{{ page.date | date(format="%+") }}{% endif %}"{% endif %}{% if page.word_count %},
-    "wordCount": {{ page.word_count }}{% endif %}{% if lang %},
+    "wordCount": {{ page.word_count }}{% endif %}{% set reading_time = page.extra.reading_time | default(value=page.reading_time) %}{% if reading_time %},
+    "timeRequired": "PT{{ reading_time }}M"{% endif %}{% if page.taxonomies.tags %},
+    "keywords": "{{ page.taxonomies.tags | join(sep=', ') }}",
+    "articleSection": "{{ page.taxonomies.tags.0 }}"{% endif %}{% if lang %},
     "inLanguage": "{{ lang }}"{% endif %}{% if config.author %},
     "author": {
       "@type": "Person",
       "name": "{{ config.author }}",
-      "url": "{{ config.base_url | safe }}"
+      "url": "{{ config.base_url | safe }}",
+      "sameAs": [
+        "https://x.com/Chemaclass",
+        "https://github.com/Chemaclass",
+        "https://www.linkedin.com/in/jose-maria-valera-reales/"
+      ]
     },
     "publisher": {
       "@type": "Organization",
-      "name": "{{ config.author }}"{% if config.extra.icon %},
+      "name": "{{ config.author }}",
+      "url": "{{ config.base_url | safe }}"{% if config.extra.icon %},
       "logo": {
         "@type": "ImageObject",
         "url": "{{ get_url(path=config.extra.icon) | safe }}"
