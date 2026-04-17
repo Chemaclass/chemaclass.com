@@ -119,17 +119,33 @@
     reset: function () { save({}); return {}; }
   };
 
-  // List pages (/blog/, /readings/) render a card per post. Mark the cards the
-  // reader has saved so the bookmark indicator is visible without opening the
-  // post. Cards expose their canonical path via data-post-path.
+  // List pages (/blog/, /readings/) render a .blog-card per post; the homepage
+  // renders a .latest-card anchor. Mark saved cards on both so the bookmark
+  // indicator is visible without opening the post. Blog-cards expose path via
+  // data-post-path; latest-cards expose it via the anchor href.
+  function pathFromCard(card) {
+    var raw = card.getAttribute('data-post-path');
+    if (raw) return normalize(raw);
+    var href = card.getAttribute('href');
+    if (!href) return '';
+    try {
+      var url = new URL(href, location.href);
+      if (url.origin !== location.origin) return '';
+      if (!POST_PATH_RE.test(url.pathname)) return '';
+      return normalize(url.pathname);
+    } catch (e) { return ''; }
+  }
+
   function decorateCards() {
-    var cards = document.querySelectorAll('.blog-card[data-post-path]');
+    var cards = document.querySelectorAll(
+      '.blog-card[data-post-path], .latest-card'
+    );
     if (!cards.length) return;
     var map = load();
     for (var i = 0; i < cards.length; i++) {
       var card = cards[i];
-      var path = normalize(card.getAttribute('data-post-path'));
-      if (!map[path]) continue;
+      var path = pathFromCard(card);
+      if (!path || !map[path]) continue;
       if (card.querySelector('.blog-card__favorite')) continue;
       card.classList.add('is-saved');
       var badge = document.createElement('span');

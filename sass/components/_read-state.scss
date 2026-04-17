@@ -45,8 +45,8 @@ $read-accent-bg: rgba(34, 197, 94, 0.12);
   .blog-card__title,
   .blog-card__subtitle,
   .blog-card__summary,
-  .latest-title,
-  .latest-excerpt {
+  h3,
+  .latest-preview {
     opacity: 0.72;
     transition: opacity 0.25s ease;
   }
@@ -63,8 +63,8 @@ $read-accent-bg: rgba(34, 197, 94, 0.12);
     .blog-card__title,
     .blog-card__subtitle,
     .blog-card__summary,
-    .latest-title,
-    .latest-excerpt {
+    h3,
+    .latest-preview {
       opacity: 1;
     }
 
@@ -74,6 +74,21 @@ $read-accent-bg: rgba(34, 197, 94, 0.12);
     .latest-card__thumb picture {
       filter: none;
     }
+  }
+}
+
+// Latest-card has no meta flex-row of its own, so build one inline on read:
+// pill pushes to the right of the date.
+.latest-card.is-read {
+  .latest-date {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .blog-card__read {
+    margin-left: auto;
   }
 }
 

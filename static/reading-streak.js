@@ -92,14 +92,10 @@
 
       // Inject labeled pill at end of meta row so unread/read cards share the
       // same left-to-right rhythm (date, reading-time, [read]) — idempotent.
-      var meta = target.querySelector('.blog-card__meta');
+      var meta = target.querySelector('.blog-card__meta') ||
+                 target.querySelector('.latest-date');
       if (meta && !meta.querySelector('.blog-card__read')) {
         meta.appendChild(buildReadPill(readAt));
-      } else if (!meta) {
-        var type = target.querySelector('.latest-type');
-        if (type && !type.querySelector('.blog-card__read')) {
-          type.appendChild(buildReadPill(readAt));
-        }
       }
     }
   }
