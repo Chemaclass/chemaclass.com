@@ -1,45 +1,73 @@
 // Reading streak: visual state for cards whose linked post has already been read.
-// Driven by static/reading-streak.js, which adds .is-read to .blog-card / .latest-card.
-// Goal: a quiet, readable "you've already been through this" signal — not a scolding,
-// not a floating badge over unrelated text.
+// Driven by static/reading-streak.js, which adds .is-read to .blog-card / .latest-card
+// and injects a labeled .blog-card__read pill into the meta row.
+// Goal: a quiet, readable "you've already been through this" signal that surfaces
+// the when (via tooltip) without scolding the reader.
 
-// Shared colors
-$read-accent: #22c55e;            // green
-$read-accent-soft: rgba(34, 197, 94, 0.7);
+$read-accent: #22c55e;
+$read-accent-bg: rgba(34, 197, 94, 0.12);
 
-// Inline check chip used in card meta rows.
-@mixin read-chip($size: 14px, $icon: 9px) {
-  content: "";
-  display: inline-block;
-  width: $size;
-  height: $size;
-  border-radius: 50%;
-  background:
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") center/#{$icon} no-repeat,
-    #{$read-accent};
+// Labeled pill surfaced in the card meta row.
+.blog-card__read {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: $read-accent-bg;
+  color: $read-accent;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: help;
   flex-shrink: 0;
-  vertical-align: middle;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    stroke: currentColor;
+    flex-shrink: 0;
+  }
+
+  &-label {
+    display: inline-block;
+  }
 }
 
 .blog-card.is-read,
 .latest-card.is-read {
   position: relative;
 
-  // Soft left-edge accent stripe — reads as "visited" at a glance,
-  // doesn't compete with text, survives any card shape (thumb or no thumb).
-  box-shadow: inset 3px 0 0 0 $read-accent-soft, var(--shadow-sm);
+  // Dim title + summary so read cards sit in the background of the list.
+  // Thumbnail stays desaturated. All restored on hover so re-visiting is inviting.
+  .blog-card__title,
+  .blog-card__subtitle,
+  .blog-card__summary,
+  .latest-title,
+  .latest-excerpt {
+    opacity: 0.72;
+    transition: opacity 0.25s ease;
+  }
 
-  // Light desaturation on the image — subtle enough to still look alive.
-  // Fully restored on hover so the post never feels discouraged.
   .blog-card__thumbnail img,
   .blog-card__thumbnail picture,
   .latest-card__thumb img,
   .latest-card__thumb picture {
-    filter: saturate(0.7);
+    filter: saturate(0.65);
     transition: filter 0.35s ease;
   }
 
   &:hover {
+    .blog-card__title,
+    .blog-card__subtitle,
+    .blog-card__summary,
+    .latest-title,
+    .latest-excerpt {
+      opacity: 1;
+    }
+
     .blog-card__thumbnail img,
     .blog-card__thumbnail picture,
     .latest-card__thumb img,
@@ -49,19 +77,9 @@ $read-accent-soft: rgba(34, 197, 94, 0.7);
   }
 }
 
-// Inline chip prepended to the blog-card meta row: sits alongside date + reading-time.
-.blog-card.is-read .blog-card__meta::before {
-  @include read-chip;
-  margin-right: 0.4rem;
-}
-
-// Inline chip prepended to the "type" label of the homepage latest-card.
-.latest-card.is-read .latest-type::before {
-  @include read-chip(12px, 8px);
-  margin-right: 0.35rem;
-}
-
-// Pinned blog cards keep their accent border; shadow stripe layers cleanly on top.
-.blog-card.is-read.pinned {
-  box-shadow: inset 3px 0 0 0 $read-accent-soft, var(--shadow-sm);
+@media (prefers-reduced-motion: reduce) {
+  .blog-card.is-read *,
+  .latest-card.is-read * {
+    transition: none !important;
+  }
 }

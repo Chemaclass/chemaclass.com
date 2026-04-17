@@ -11,6 +11,36 @@
   // Matches /blog/slug/, /es/blog/slug/, /readings/slug/, /es/readings/slug/
   var POST_PATH_RE = /^\/(?:es\/)?(?:blog|readings)\/[^\/]+\/?$/;
 
+  var IS_ES = (document.documentElement.lang || '').toLowerCase().indexOf('es') === 0;
+  var LABEL_READ = IS_ES ? 'Leído' : 'Read';
+  var LABEL_READ_ON = IS_ES ? 'Leído el' : 'Read on';
+
+  var READ_ICON_SVG =
+    '<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" ' +
+         'stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<polyline points="20 6 9 17 4 12"/>' +
+    '</svg>';
+
+  function formatDate(ts) {
+    if (!ts) return '';
+    try {
+      var d = new Date(ts);
+      return d.toLocaleDateString(IS_ES ? 'es-ES' : 'en-US', {
+        year: 'numeric', month: 'short', day: 'numeric'
+      });
+    } catch (e) { return ''; }
+  }
+
+  function buildReadPill(timestamp) {
+    var pill = document.createElement('span');
+    pill.className = 'blog-card__read';
+    var when = formatDate(timestamp);
+    pill.setAttribute('title', when ? LABEL_READ_ON + ' ' + when : LABEL_READ);
+    pill.setAttribute('aria-label', when ? LABEL_READ_ON + ' ' + when : LABEL_READ);
+    pill.innerHTML = READ_ICON_SVG + '<span class="blog-card__read-label">' + LABEL_READ + '</span>';
+    return pill;
+  }
+
   function loadRead() {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
     catch (e) { return {}; }
@@ -53,11 +83,24 @@
       if (url.origin !== location.origin) continue;
       if (!POST_PATH_RE.test(url.pathname)) continue;
 
-      if (!read[normalize(url.pathname)]) continue;
+      var readAt = read[normalize(url.pathname)];
+      if (!readAt) continue;
       var target = a.closest('.blog-card') ||
                    a.closest('.latest-card') ||
                    a;
       target.classList.add('is-read');
+
+      // Inject labeled pill at end of meta row so unread/read cards share the
+      // same left-to-right rhythm (date, reading-time, [read]) — idempotent.
+      var meta = target.querySelector('.blog-card__meta');
+      if (meta && !meta.querySelector('.blog-card__read')) {
+        meta.appendChild(buildReadPill(readAt));
+      } else if (!meta) {
+        var type = target.querySelector('.latest-type');
+        if (type && !type.querySelector('.blog-card__read')) {
+          type.appendChild(buildReadPill(readAt));
+        }
+      }
     }
   }
 
