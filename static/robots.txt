@@ -9,4 +9,3 @@ Sitemap: https://chemaclass.com/es/sitemap.xml
 
 # AI/LLM crawler information
 # See https://chemaclass.com/llms.txt for a structured summary
-# See https://chemaclass.com/llms-full.txt for full content listing

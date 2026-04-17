@@ -117,6 +117,53 @@
     }
     </script>
 
+    <!-- WebSite Schema with SearchAction (enables sitelinks search box) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "{{ config.title }}",
+      "url": "{{ config.base_url | safe }}",
+      "inLanguage": ["en", "es"],
+      "description": "{{ config.description }}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Chemaclass",
+        "url": "{{ config.base_url | safe }}"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "{{ config.base_url | safe }}/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Person Schema (author identity) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jose Maria Valera Reales",
+      "alternateName": "Chemaclass",
+      "url": "{{ config.base_url | safe }}",
+      "image": "{{ get_url(path=config.extra.icon) | safe }}",
+      "jobTitle": "Tech Lead",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Purpose Green"
+      },
+      "sameAs": [
+        "https://x.com/Chemaclass",
+        "https://github.com/Chemaclass",
+        "https://www.linkedin.com/in/jose-maria-valera-reales/"
+      ]
+    }
+    </script>
+
     {% if page %}
     <meta property="og:type" content="article">
     {% if page.date %}
@@ -258,14 +305,37 @@
     {% endif %}
 
     <!-- Hreflang for multilingual support -->
-    {% if page.permalink %}
+    {% if page.translations %}
+      <link rel="alternate" hreflang="{{ lang }}" href="{{ page.permalink | safe }}" />
+      {% for t in page.translations %}
+        <link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.permalink | safe }}" />
+      {% endfor %}
+      {% if lang == "en" %}
+        <link rel="alternate" hreflang="x-default" href="{{ page.permalink | safe }}" />
+      {% else %}
+        {% for t in page.translations %}{% if t.lang == "en" %}
+          <link rel="alternate" hreflang="x-default" href="{{ t.permalink | safe }}" />
+        {% endif %}{% endfor %}
+      {% endif %}
+    {% elif section.translations %}
+      <link rel="alternate" hreflang="{{ lang }}" href="{{ section.permalink | safe }}" />
+      {% for t in section.translations %}
+        <link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.permalink | safe }}" />
+      {% endfor %}
+      {% if lang == "en" %}
+        <link rel="alternate" hreflang="x-default" href="{{ section.permalink | safe }}" />
+      {% else %}
+        {% for t in section.translations %}{% if t.lang == "en" %}
+          <link rel="alternate" hreflang="x-default" href="{{ t.permalink | safe }}" />
+        {% endif %}{% endfor %}
+      {% endif %}
+    {% elif page.permalink %}
       {% if lang == "es" %}
         <link rel="alternate" hreflang="es" href="{{ page.permalink | safe }}" />
         <link rel="alternate" hreflang="en" href="{{ page.permalink | replace(from="/es/", to="/") | safe }}" />
         <link rel="alternate" hreflang="x-default" href="{{ page.permalink | replace(from="/es/", to="/") | safe }}" />
       {% else %}
         <link rel="alternate" hreflang="en" href="{{ page.permalink | safe }}" />
-        <link rel="alternate" hreflang="es" href="{{ page.permalink | replace(from="chemaclass.com/", to="chemaclass.com/es/") | safe }}" />
         <link rel="alternate" hreflang="x-default" href="{{ page.permalink | safe }}" />
       {% endif %}
     {% elif section.permalink %}
@@ -275,7 +345,6 @@
         <link rel="alternate" hreflang="x-default" href="{{ section.permalink | replace(from="/es/", to="/") | safe }}" />
       {% else %}
         <link rel="alternate" hreflang="en" href="{{ section.permalink | safe }}" />
-        <link rel="alternate" hreflang="es" href="{{ section.permalink | replace(from="chemaclass.com/", to="chemaclass.com/es/") | safe }}" />
         <link rel="alternate" hreflang="x-default" href="{{ section.permalink | safe }}" />
       {% endif %}
     {% endif %}
@@ -296,7 +365,8 @@
       </noscript>
     {% endblock styles %}
     {% block rss %}
-      <link rel="alternate" type="application/atom+xml" href="{{ get_url(path='atom.xml') | safe }}" title="Atom Feed">
+      <link rel="alternate" type="application/atom+xml" hreflang="en" href="{{ get_url(path='atom.xml') | safe }}" title="Atom Feed (EN)">
+      <link rel="alternate" type="application/atom+xml" hreflang="es" href="{{ get_url(path='es/atom.xml') | safe }}" title="Atom Feed (ES)">
     {% endblock rss %}
     {% block posthead %}{% endblock posthead %}
   </head>
