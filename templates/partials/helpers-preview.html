@@ -60,7 +60,7 @@
 {% endmacro %}
 
 {% macro content_card(post, pinned=false, featured=false, lang="en") %}
-<article class="blog-card {% if pinned %}pinned{% endif %} {% if featured %}featured{% endif %} {% if post.extra.thumbnail or post.extra.static_thumbnail %}has-thumbnail{% endif %}">
+<article class="blog-card {% if pinned %}pinned{% endif %} {% if featured %}featured{% endif %} {% if post.extra.thumbnail or post.extra.static_thumbnail %}has-thumbnail{% endif %}" data-post-path="{{ post.path }}">
   <a href="{{ post.permalink }}" class="blog-card__link">
     {% if post.extra.thumbnail %}
       <div class="blog-card__thumbnail">

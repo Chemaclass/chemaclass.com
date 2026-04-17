@@ -1,28 +1,34 @@
-// Favorite (★) toggle injected by static/favorites.js into .blog-post__top-row.
+// Bookmark toggle injected by static/favorites.js into .blog-post__top-row.
 // Shape mirrors .toc-toggle pill so the three controls in that row feel like
-// one family — back link / favorite / toc toggle.
+// one family — back link / save / toc toggle.
 
-$fav-accent: #f59e0b; // amber — warmer than the green "read" stripe, reads as "saved"
+$fav-accent: #f59e0b; // amber — reads as "saved"
 $fav-accent-soft: rgba(245, 158, 11, 0.18);
 
+// Icon-only ghost button so it sits quietly next to the TOC toggle.
 .favorite-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.4rem 0.7rem;
-  border-radius: 999px;
-  border: 1px solid var(--preview-divider-color);
-  background: var(--search-bg-selected-item);
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: transparent;
   color: var(--color-subtitle);
-  font-size: 0.8rem;
-  font-weight: 500;
   cursor: pointer;
   user-select: none;
   transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 
   &:hover {
-    border-color: $fav-accent;
     color: $fav-accent;
+    background: $fav-accent-soft;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $fav-accent;
+    outline-offset: 2px;
   }
 
   &__icon {
@@ -30,15 +36,9 @@ $fav-accent-soft: rgba(245, 158, 11, 0.18);
     transition: fill 0.2s ease, stroke 0.2s ease, transform 0.3s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
   }
 
-  &__label {
-    letter-spacing: 0.03em;
-  }
-
-  // Saved state: filled amber star, soft tinted background.
-  &.is-starred {
+  // Saved state: filled amber bookmark, no background chrome.
+  &.is-saved {
     color: $fav-accent;
-    border-color: $fav-accent;
-    background: $fav-accent-soft;
 
     .favorite-toggle__icon {
       fill: $fav-accent;
@@ -46,8 +46,8 @@ $fav-accent-soft: rgba(245, 158, 11, 0.18);
     }
   }
 
-  // Tiny pop when the user stars — confirms the action without a toast.
-  &.just-starred .favorite-toggle__icon {
+  // Tiny pop when the reader saves — confirms the action without a toast.
+  &.just-saved .favorite-toggle__icon {
     animation: favorite-pop 0.55s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
   }
 }
@@ -67,14 +67,25 @@ $fav-accent-soft: rgba(245, 158, 11, 0.18);
   }
 }
 
-// On phones the top row wraps; the star stays compact.
-@media (max-width: $breakpoint-phone) {
-  .favorite-toggle {
-    padding: 0.35rem 0.55rem;
 
-    &__label {
-      // Icon-only on narrow screens — the star is universal.
-      display: none;
-    }
+// List-card badge: shown on .blog-card when the reader has saved that post.
+// Rendered as a small bookmark tab hanging from the top edge of the card.
+.blog-card__favorite {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  z-index: 2;
+  display: block;
+  width: 18px;
+  height: 24px;
+  color: $fav-accent;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
   }
 }

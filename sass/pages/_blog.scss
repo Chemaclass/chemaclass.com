@@ -213,6 +213,7 @@
 
 // Blog card
 .blog-card {
+  position: relative;
   border-radius: 12px;
   border: 1px solid var(--preview-divider-color);
   background: var(--search-input-bg);
