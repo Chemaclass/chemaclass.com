@@ -387,39 +387,102 @@
 
 // Languages
 .cv-flag {
-  width: 20px;
-  height: 14px;
-  border-radius: 2px;
-  vertical-align: -1px;
-  display: inline-block;
+  width: 36px;
+  height: 26px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
 .cv-languages {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .cv-lang {
   display: flex;
-  flex-direction: column;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10px;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem 1.15rem;
+  border-radius: 12px;
   background: var(--table-bg-even);
   border: 1px solid var(--preview-divider-color);
-  min-width: 130px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-sm);
+  }
+
+  &__body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
   &__name {
-    font-weight: 500;
+    font-weight: 600;
     color: var(--heading-color);
     font-size: 0.95rem;
   }
 
-  &__level {
-    font-size: 0.78rem;
-    color: var(--color-subtitle);
-    margin-top: 0.15rem;
+  &__code {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    background: rgba(45, 90, 142, 0.08);
+    color: var(--accent-color);
+
+    .theme-dark & {
+      background: rgba(93, 168, 229, 0.12);
+    }
   }
+
+  &__level {
+    font-size: 0.75rem;
+    color: var(--color-subtitle);
+  }
+
+  &__bar {
+    position: relative;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.08);
+    margin-top: 0.2rem;
+    overflow: hidden;
+
+    .theme-dark & {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    > span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 70%, transparent));
+      transition: width 0.3s ease;
+    }
+  }
+
+  &[data-level="1"] &__bar > span { width: 20%; }
+  &[data-level="2"] &__bar > span { width: 40%; }
+  &[data-level="3"] &__bar > span { width: 60%; }
+  &[data-level="4"] &__bar > span { width: 80%; }
+  &[data-level="5"] &__bar > span { width: 100%; }
 }
 
 // Projects
@@ -517,10 +580,32 @@ a.cv-project {
     line-height: 1.6;
     color: var(--body-color);
     font-style: italic;
+  }
+
+  &__text {
     flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    overflow: hidden;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--expanded &__text {
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+
+    p:last-child {
+      margin-bottom: 0.85rem;
+    }
   }
 
   footer {
+    margin-top: auto;
     font-size: 0.78rem;
     color: var(--color-subtitle);
     display: flex;
@@ -553,6 +638,24 @@ a.cv-project {
     opacity: 0.65;
     font-size: 0.72rem;
     white-space: nowrap;
+  }
+
+  &__inline-toggle {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+    padding: 0;
+    margin: 0 0 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 

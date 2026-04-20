@@ -297,6 +297,13 @@
     <h2><i class="fa-solid fa-quote-left"></i> {% if lang == "es" %}Recomendaciones{% else %}Recommendations{% endif %}</h2>
     <div class="cv-recommendations">
       <blockquote class="cv-rec">
+        <p>"I've worked with Chema twice, first at Seven Senders (2017-2019), and again at Purpose Green as my counterpart on the tech side.</p>
+        <p>What makes Chema rare is that he doesn't hide behind roadmaps or architecture diagrams. He gets into the details when it matters and refuses to use process as an excuse to slow things down. Agile isn't a methodology to him, it's how he works, which makes him unusually easy to build with from a product seat.</p>
+        <p>He's also well ahead of the curve on AI. While most teams are still debating where to start, Chema already has multiple agents running in production.</p>
+        <p>If you want a tech lead who pairs sharp engineering instincts with a real appetite for what's next, Chema is the one."</p>
+        <footer><span class="cv-rec__avatar" style="background:#0891b2">LL</span> <a href="https://www.linkedin.com/in/leon-laakmann-672325b7/" target="_blank" rel="noopener"><strong>Leon Laakmann</strong></a> · Product Lead at Purpose Green <span class="cv-rec__date">Apr 2026</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
         <p>"Chema is a great engineer and knows how to create value from get go. He was proactive, resourceful, and knew how to navigate extreme complexity, demonstrating clear leadership skills. He not only adhered to agile principles, but also lifted his co-workers by coaching them."</p>
         <footer><span class="cv-rec__avatar" style="background:#2d5a8e">EL</span> <a href="https://www.linkedin.com/in/elofca" target="_blank" rel="noopener"><strong>Engin Lofça</strong></a> · Product Leadership in Payments <span class="cv-rec__date">May 2025</span></footer>
       </blockquote>
@@ -304,12 +311,12 @@
         <p>"Chema is a great leader, speaker, and impactful contributor! He always balances clean code, testing, and software design with pragmatism while delivering value to the customer. With a truly agile mindset, he is capable of helping your tech organization reach the next level."</p>
         <footer><span class="cv-rec__avatar" style="background:#16a34a">BD</span> <a href="https://www.linkedin.com/in/borisdiebold" target="_blank" rel="noopener"><strong>Boris Diebold</strong></a> · CTO at HeyJobs <span class="cv-rec__date">May 2024</span></footer>
       </blockquote>
+    </div>
+    <div class="cv-recommendations cv-recommendations--more">
       <blockquote class="cv-rec">
         <p>"Chema is an impressive person to work with and to be inspired by. His coding skills were already outstanding when I hired him, principles like SOLID or approaches like TDD were mastered and embraced by heart already. This turned out to even be surpassed by his incredible learning mindset. One of a kind, a perfect addition to any a-team."</p>
         <footer><span class="cv-rec__avatar" style="background:#8b5cf6">CK</span> <a href="https://www.linkedin.com/in/christian-kuennemann-berlin" target="_blank" rel="noopener"><strong>Christian Künnemann</strong></a> · Director Software Engineering <span class="cv-rec__date">Apr 2024</span></footer>
       </blockquote>
-    </div>
-    <div class="cv-recommendations cv-recommendations--more">
       <blockquote class="cv-rec">
         <p>"Working with Chema for the last three years was a powerful experience. Driven by curiosity he always challenged himself, me and the team. Trying new ways and improving long existing processes was a daily manner for him. I know his new team will be in good hands!"</p>
         <footer><span class="cv-rec__avatar" style="background:#db2777">KB</span> <a href="https://www.linkedin.com/in/kimberley-bechinie-17a1336a" target="_blank" rel="noopener"><strong>Kimberley Bechinie</strong></a> · Head of E-Commerce PM <span class="cv-rec__date">Aug 2023</span></footer>
@@ -355,7 +362,7 @@
         <footer><span class="cv-rec__avatar" style="background:#16a34a">AC</span> <a href="https://www.linkedin.com/in/annemarschner" target="_blank" rel="noopener"><strong>Anne Christiansen</strong></a> · Marketing &amp; Communications <span class="cv-rec__date">Nov 2016</span></footer>
       </blockquote>
     </div>
-    <button class="cv-rec-toggle" onclick="this.previousElementSibling.classList.toggle('cv-recommendations--visible'); this.textContent = this.previousElementSibling.classList.contains('cv-recommendations--visible') ? '{% if lang == "es" %}Ver menos{% else %}Show less{% endif %}' : '{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (11)'">{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (11)</button>
+    <button class="cv-rec-toggle" onclick="this.previousElementSibling.classList.toggle('cv-recommendations--visible'); this.textContent = this.previousElementSibling.classList.contains('cv-recommendations--visible') ? '{% if lang == "es" %}Ver menos{% else %}Show less{% endif %}' : '{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (12)'">{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (12)</button>
   </section>
 
   <!-- Skills -->
@@ -451,7 +458,7 @@
     <h2><i class="fa-solid fa-certificate"></i> {% if lang == "es" %}Certificaciones{% else %}Certifications{% endif %}</h2>
     <div class="cv-timeline">
       <div class="cv-edu">
-        <h3><i class="fa-solid fa-scroll"></i> Spryker Certified Foundations Developer</h3>
+        <h3><i class="fa-solid fa-scroll"></i> <a href="https://www.credential.net/b7210ffc-ffb5-48e0-a829-d5107ba8536f#acc.uRNlvVIU" target="_blank" rel="noopener">Spryker Certified Foundations Developer</a></h3>
         <span class="cv-job__dates">Jul 2021</span>
       </div>
       <div class="cv-edu">
@@ -475,7 +482,7 @@
       <div class="cv-edu">
         <h3><i class="fa-solid fa-medal"></i> {% if lang == "es" %}Primer premio como estudiante{% else %}First award as student{% endif %}</h3>
         <p class="cv-edu__location">{% if lang == "es" %}Otorgado por{% else %}Issued by{% endif %} Fundación Robles Chillida · Nov 2013</p>
-        <p class="cv-edu__degree">{% if lang == "es" %}Primer premio de ayudas al estudio al mejor expediente en la categoría de Alumnos de Grado Superior en Desarrollo de Aplicaciones Multiplataforma, Caravaca de la Cruz.{% else %}First award of study aids for the best result in the Higher Level category of Multi-platform Applications Development, Caravaca de la Cruz.{% endif %}</p>
+        <p class="cv-edu__degree">{% if lang == "es" %}Primer premio de ayudas al estudio al mejor expediente en la categoría de Alumnos de Grado Superior en Desarrollo de Aplicaciones Multiplataforma.{% else %}First award of study aids for the best result in the Higher Level category of Multi-platform Applications Development.{% endif %}</p>
       </div>
     </div>
   </section>
@@ -484,17 +491,38 @@
   <section class="cv-section">
     <h2><i class="fa-solid fa-language"></i> {% if lang == "es" %}Idiomas{% else %}Languages{% endif %}</h2>
     <div class="cv-languages">
-      <div class="cv-lang">
-        <span class="cv-lang__name"><svg class="cv-flag" viewBox="0 0 20 14"><rect width="20" height="14" fill="#c60b1e"/><rect y="3.5" width="20" height="7" fill="#ffc400"/></svg>{% if lang == "es" %}Español{% else %}Spanish{% endif %}</span>
-        <span class="cv-lang__level">{% if lang == "es" %}Nativo{% else %}Native{% endif %}</span>
+      <div class="cv-lang" data-level="5">
+        <svg class="cv-flag" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#c60b1e"/><rect y="3.5" width="20" height="7" fill="#ffc400"/></svg>
+        <div class="cv-lang__body">
+          <div class="cv-lang__row">
+            <span class="cv-lang__name">{% if lang == "es" %}Español{% else %}Spanish{% endif %}</span>
+            <span class="cv-lang__code">C2</span>
+          </div>
+          <span class="cv-lang__level">{% if lang == "es" %}Nativo{% else %}Native{% endif %}</span>
+          <div class="cv-lang__bar" aria-hidden="true"><span></span></div>
+        </div>
       </div>
-      <div class="cv-lang">
-        <span class="cv-lang__name"><svg class="cv-flag" viewBox="0 0 20 14"><rect width="20" height="14" fill="#012169"/><path d="M0 0l20 14M20 0L0 14" stroke="#fff" stroke-width="2.8"/><path d="M0 0l20 14M20 0L0 14" stroke="#c8102e" stroke-width="1.6"/><path d="M10 0v14M0 7h20" stroke="#fff" stroke-width="4.5"/><path d="M10 0v14M0 7h20" stroke="#c8102e" stroke-width="2.5"/></svg>{% if lang == "es" %}Inglés{% else %}English{% endif %}</span>
-        <span class="cv-lang__level">{% if lang == "es" %}Profesional completo{% else %}Full professional{% endif %}</span>
+      <div class="cv-lang" data-level="4">
+        <svg class="cv-flag" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#012169"/><path d="M0 0l20 14M20 0L0 14" stroke="#fff" stroke-width="2.8"/><path d="M0 0l20 14M20 0L0 14" stroke="#c8102e" stroke-width="1.6"/><path d="M10 0v14M0 7h20" stroke="#fff" stroke-width="4.5"/><path d="M10 0v14M0 7h20" stroke="#c8102e" stroke-width="2.5"/></svg>
+        <div class="cv-lang__body">
+          <div class="cv-lang__row">
+            <span class="cv-lang__name">{% if lang == "es" %}Inglés{% else %}English{% endif %}</span>
+            <span class="cv-lang__code">C1</span>
+          </div>
+          <span class="cv-lang__level">{% if lang == "es" %}Profesional completo{% else %}Full professional{% endif %}</span>
+          <div class="cv-lang__bar" aria-hidden="true"><span></span></div>
+        </div>
       </div>
-      <div class="cv-lang">
-        <span class="cv-lang__name"><svg class="cv-flag" viewBox="0 0 20 14"><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/><rect y="9.33" width="20" height="4.67" fill="#ffcc00"/></svg>{% if lang == "es" %}Alemán{% else %}German{% endif %}</span>
-        <span class="cv-lang__level">{% if lang == "es" %}Nivel básico laboral{% else %}Limited working{% endif %}</span>
+      <div class="cv-lang" data-level="2">
+        <svg class="cv-flag" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/><rect y="9.33" width="20" height="4.67" fill="#ffcc00"/></svg>
+        <div class="cv-lang__body">
+          <div class="cv-lang__row">
+            <span class="cv-lang__name">{% if lang == "es" %}Alemán{% else %}German{% endif %}</span>
+            <span class="cv-lang__code">B1</span>
+          </div>
+          <span class="cv-lang__level">{% if lang == "es" %}Nivel básico laboral{% else %}Limited working{% endif %}</span>
+          <div class="cv-lang__bar" aria-hidden="true"><span></span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -528,4 +556,40 @@
     </div>
   </section>
 </article>
+
+<script>
+(function () {
+  var isES = document.documentElement.lang === 'es';
+  var labels = isES
+    ? { more: 'Leer más', less: 'Ver menos' }
+    : { more: 'Read more', less: 'Show less' };
+
+  document.querySelectorAll('.cv-rec').forEach(function (rec) {
+    if (rec.querySelector('.cv-rec__text')) return;
+    var paragraphs = Array.prototype.filter.call(rec.children, function (el) {
+      return el.tagName === 'P';
+    });
+    if (!paragraphs.length) return;
+
+    var wrap = document.createElement('div');
+    wrap.className = 'cv-rec__text';
+    paragraphs.forEach(function (p) { wrap.appendChild(p); });
+
+    var footer = rec.querySelector('footer');
+    rec.insertBefore(wrap, footer);
+
+    if (wrap.scrollHeight <= wrap.clientHeight + 1) return;
+
+    var btn = document.createElement('button');
+    btn.className = 'cv-rec__inline-toggle';
+    btn.type = 'button';
+    btn.textContent = labels.more;
+    btn.addEventListener('click', function () {
+      var expanded = rec.classList.toggle('cv-rec--expanded');
+      btn.textContent = expanded ? labels.less : labels.more;
+    });
+    rec.insertBefore(btn, footer);
+  });
+})();
+</script>
 {% endblock content %}
