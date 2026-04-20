@@ -52,7 +52,7 @@ This was the big shift, and not because the models were smarter. The unit of wor
 
 Claude Code needs almost no setup. No editor lock-in. Point it at your repo, drop a `.claude` folder with rules and conventions, and it adapts. I covered that in [Inside the .claude Folder](https://chemaclass.com/blog/inside-the-claude-folder/).
 
-The model you pick matters more than before. Claude Opus 4.7 and OpenAI's frontier models are way ahead of 2024. The gap between *"can draft a function"* and *"can refactor a module with judgment"* closed faster than expected, and it keeps closing as Claude, Codex, and Gemini push each other forward every month. Prices are getting closer too, which is a polite way of saying everyone copies whoever figures out the sustainable version first.
+The model you pick matters more than before. Today's frontier models are way ahead of where they were a year ago or so. The gap between *"can draft a function"* and *"can refactor a module with judgment"* closed faster than expected, and it keeps closing as Claude, Codex, and Gemini push each other forward every month. Prices are getting closer too, which is a polite way of saying everyone copies whoever figures out the sustainable version first.
 
 ## Agents with their own home
 
@@ -74,7 +74,7 @@ AI coding was the loudest story because developers are loud. The bigger story is
 
 Lovable, v0, Canva, and Figma itself are all under pressure to rethink their positioning. Whether Claude Design "kills" any of them is the wrong question. The right one is what happens when making a usable prototype drops from *"hire a designer"* to *"describe it out loud."*
 
-The companies feeling this first aren't the design tools. They're the small businesses that couldn't afford design work, the founders building a pitch deck at midnight, the PMs testing an idea before booking a meeting. AI didn't replace the designer there. It filled a space where no designer was ever going to exist.
+The companies feeling this first aren't the design tools. They're the small businesses that couldn't afford design work, the founders building a pitch deck at midnight, the PMs testing an idea before booking a meeting. There's a minority of cases where someone would have paid a designer and now won't, and that cost is real. But in most of them, AI didn't replace anyone: it filled a space where no designer was ever going to exist.
 
 ![Small library with wooden bookshelves and stacks of books](/images/blog/2026-05-01/middle.jpg)
 
@@ -111,6 +111,8 @@ At this level, quality depends less on the model and more on the context around 
 Instead of one assistant, you get a squad: a TDD coach, a clean code reviewer, a domain architect, a docs maintainer. Outside engineering, the same idea applies with research, design, and ops agents. I covered the developer side in [Build Your Own Team of Agents](https://chemaclass.com/blog/build-your-own-team-of-agents/), and the leverage is real.
 
 Humans stop competing with AI on speed and start directing it. You review, decide, and set the bar. Agents do the typing and more and more of the thinking. Pair programming with a person still wins on complex trade-offs, but an agent pair is always there for the rest.
+
+At the company level, the org chart, roles, and processes are still the same. What changes is that each person produces a lot more, and the team's output reflects it. Level 4 multiplies output inside the existing structure. Level 5 changes the structure.
 
 ### Level 5: AI-native workflows
 

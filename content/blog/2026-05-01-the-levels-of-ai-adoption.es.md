@@ -52,7 +52,7 @@ Este fue el gran salto, y no porque los modelos fueran más listos. Lo que cambi
 
 Claude Code casi no necesita setup. Sin *lock-in* de editor. Apúntalo a tu repo, suelta una carpeta `.claude` con reglas y convenciones, y se adapta. Lo conté en [Dentro de la Carpeta .claude](https://chemaclass.com/blog/inside-the-claude-folder/).
 
-El modelo que eliges importa más que antes. Claude Opus 4.7 y los modelos frontera de OpenAI están muy por delante de los de 2024. La distancia entre *"puede esbozar una función"* y *"puede refactorizar un módulo con criterio"* se cerró más rápido de lo esperado, y sigue cerrándose mientras Claude, Codex y Gemini se empujan mutuamente cada mes. Los precios también se están acercando, lo cual es una forma educada de decir que todos copian al primero que acierta con la versión sostenible.
+El modelo que eliges importa más que antes. Los modelos frontera de hoy están muy por delante de los de hace un año más o menos. La distancia entre *"puede esbozar una función"* y *"puede refactorizar un módulo con criterio"* se cerró más rápido de lo esperado, y sigue cerrándose mientras Claude, Codex y Gemini se empujan mutuamente cada mes. Los precios también se están acercando, lo cual es una forma educada de decir que todos copian al primero que acierta con la versión sostenible.
 
 ## Agentes con casa propia
 
@@ -74,7 +74,7 @@ La IA para programar fue la historia más ruidosa porque los desarrolladores hab
 
 Lovable, v0, Canva y la propia Figma están bajo presión para repensar su posicionamiento. Si Claude Design "mata" a alguno es la pregunta equivocada. La correcta es qué pasa cuando hacer un prototipo usable baja de *"contrata un diseñador"* a *"descríbelo en voz alta."*
 
-Las empresas que lo sienten primero no son las herramientas de diseño. Son los negocios pequeños que no podían pagar diseño, los *founders* montando un *pitch deck* a las tantas de la noche, los PMs probando una idea antes de convocar una reunión. La IA no reemplazó al diseñador ahí. Rellenó un hueco donde nunca iba a haber uno.
+Las empresas que lo sienten primero no son las herramientas de diseño. Son los negocios pequeños que no podían pagar diseño, los *founders* montando un *pitch deck* a las tantas de la noche, los PMs probando una idea antes de convocar una reunión. Habrá una minoría de casos donde alguien sí hubiera pagado a un diseñador y ahora no lo hace, y ese coste es real. Pero en la mayoría, la IA no reemplazó a nadie: rellenó un hueco donde nunca iba a haber uno.
 
 ![Pequeña biblioteca con estanterías de madera y pilas de libros](/images/blog/2026-05-01/middle.jpg)
 
@@ -111,6 +111,8 @@ A este nivel, la calidad depende menos del modelo y más del contexto que lo rod
 En vez de un asistente, tienes un escuadrón: un *coach* de TDD, un revisor de *clean code*, un arquitecto de dominio, alguien que mantiene la documentación. Fuera de ingeniería, la misma idea aplica con agentes de *research*, diseño y *ops*. Cubrí el lado de desarrollo en [Construye tu Propio Equipo de Agentes](https://chemaclass.com/blog/build-your-own-team-of-agents/), y el *leverage* es real.
 
 Los humanos dejan de competir con la IA en velocidad y empiezan a dirigirla. Revisas, decides y marcas el listón. Los agentes escriben y cada vez piensan más. El *pair programming* con una persona sigue ganando en los *trade-offs* complejos, pero siempre tienes un agente disponible para el resto.
+
+A nivel empresa, el organigrama, los roles y los procesos siguen siendo los de antes. Lo que cambia es que cada persona produce mucho más, y eso se nota en los resultados del equipo. El Nivel 4 multiplica el *output* dentro de la estructura existente. El Nivel 5 cambia la estructura.
 
 ### Nivel 5: Flujos nativos de IA
 
@@ -164,6 +166,6 @@ Más arriba, la pregunta se invierte. Dejas de preguntarte *"¿cómo uso mejor l
 
 La IA puede ejecutar, pero no sabe a dónde vas. Puede producir, pero no sabe qué vale la pena producir. Esa parte sigue siendo nuestra. La velocidad es un regalo, la dirección es una responsabilidad. Del ingeniero en solitario del Nivel 1 a la organización nativa de IA del Nivel 5, la misma verdad se mantiene: el humano supervisa, entiende y da sentido. La máquina hace el resto.
 
-Cuando se pose el *hype* (y se posará), la pregunta no va a ser *"¿usaste IA?"*, todo el mundo lo habrá hecho. La pregunta va a ser *"¿a qué nivel, y con qué dirección?"*
+Cuando se relaje el *hype* (y se relajará), la pregunta no va a ser *"¿usaste IA?"*, todo el mundo lo habrá hecho. La pregunta va a ser *"¿a qué nivel, y con qué dirección?"*
 
 ![Sala de lectura con un libro abierto sobre una mesa de madera](/images/blog/2026-05-01/footer.jpg)
