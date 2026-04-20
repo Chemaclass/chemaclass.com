@@ -641,21 +641,32 @@ a.cv-project {
   }
 
   &__inline-toggle {
-    align-self: flex-start;
+    align-self: flex-end;
     background: none;
     border: none;
     color: var(--accent-color);
     cursor: pointer;
     padding: 0;
-    margin: 0 0 0.85rem;
-    font-size: 0.8rem;
+    margin: 0;
+    font-size: 0.78rem;
     font-weight: 500;
-    text-decoration: underline;
-    text-underline-offset: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    i {
+      font-size: 0.6rem;
+      transition: transform 0.2s ease;
+    }
 
     &:hover {
-      opacity: 0.8;
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
+  }
+
+  &--expanded &__inline-toggle i {
+    transform: rotate(180deg);
   }
 }
 

@@ -583,10 +583,11 @@
     var btn = document.createElement('button');
     btn.className = 'cv-rec__inline-toggle';
     btn.type = 'button';
-    btn.textContent = labels.more;
+    btn.innerHTML = '<span>' + labels.more + '</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i>';
+    var labelEl = btn.querySelector('span');
     btn.addEventListener('click', function () {
       var expanded = rec.classList.toggle('cv-rec--expanded');
-      btn.textContent = expanded ? labels.less : labels.more;
+      labelEl.textContent = expanded ? labels.less : labels.more;
     });
     rec.insertBefore(btn, footer);
   });
