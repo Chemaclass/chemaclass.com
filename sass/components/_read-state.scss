@@ -39,42 +39,7 @@ $read-accent-bg: rgba(34, 197, 94, 0.12);
 .blog-card.is-read,
 .latest-card.is-read {
   position: relative;
-
-  // Dim title + summary so read cards sit in the background of the list.
-  // Thumbnail stays desaturated. All restored on hover so re-visiting is inviting.
-  .blog-card__title,
-  .blog-card__subtitle,
-  .blog-card__summary,
-  h3,
-  .latest-preview {
-    opacity: 0.72;
-    transition: opacity 0.25s ease;
-  }
-
-  .blog-card__thumbnail img,
-  .blog-card__thumbnail picture,
-  .latest-card__thumb img,
-  .latest-card__thumb picture {
-    filter: saturate(0.65);
-    transition: filter 0.35s ease;
-  }
-
-  &:hover {
-    .blog-card__title,
-    .blog-card__subtitle,
-    .blog-card__summary,
-    h3,
-    .latest-preview {
-      opacity: 1;
-    }
-
-    .blog-card__thumbnail img,
-    .blog-card__thumbnail picture,
-    .latest-card__thumb img,
-    .latest-card__thumb picture {
-      filter: none;
-    }
-  }
+  // Read state signalled only by the .blog-card__read pill; keep thumbnails and text at full fidelity.
 }
 
 // Latest-card has no meta flex-row of its own, so build one inline on read:
@@ -92,9 +57,3 @@ $read-accent-bg: rgba(34, 197, 94, 0.12);
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .blog-card.is-read *,
-  .latest-card.is-read * {
-    transition: none !important;
-  }
-}

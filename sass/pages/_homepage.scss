@@ -371,7 +371,6 @@ main:has(.homepage-container) #scroll-to-top {
   box-shadow: var(--shadow-sm);
 
   &:hover {
-    transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
     border-color: var(--accent-color);
   }
@@ -518,7 +517,6 @@ main:has(.homepage-container) #scroll-to-top {
   box-shadow: var(--shadow-sm);
 
   &:hover {
-    transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
     border-color: var(--accent-color);
   }

@@ -79,7 +79,6 @@
   transition: transform 0.25s var(--ease-out-expo), box-shadow 0.25s var(--ease-out-expo), border-color 0.25s ease;
 
   &:hover {
-    transform: translateY(-2px);
     box-shadow: var(--shadow-md);
     border-color: var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
@@ -182,7 +181,6 @@
   }
 
   &:hover {
-    transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
     border-bottom: 1px solid var(--preview-divider-color);
 
@@ -314,7 +312,6 @@
   transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo), border-color 0.3s ease;
 
   &:hover {
-    transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
     border-bottom: 2px solid var(--preview-divider-color);
   }
