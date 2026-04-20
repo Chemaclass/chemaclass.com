@@ -278,7 +278,7 @@
 
 @media (max-width: $breakpoint-phone) {
   .site-header {
-    position: static;
+    position: relative;
     padding: 0.5rem 0.75rem;
     flex-wrap: nowrap;
     gap: 0;

@@ -679,7 +679,6 @@ main:has(.homepage-container) #scroll-to-top {
 @media (max-width: $breakpoint-phone) {
   main {
     padding: 1rem;
-    margin-top: 68px; // Account for fixed header
   }
 
   .homepage-top {
