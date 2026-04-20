@@ -278,9 +278,7 @@
 
 @media (max-width: $breakpoint-phone) {
   .site-header {
-    position: fixed;
-    left: 0;
-    right: 0;
+    position: static;
     padding: 0.5rem 0.75rem;
     flex-wrap: nowrap;
     gap: 0;
@@ -289,11 +287,6 @@
       font-size: 0.95rem;
       gap: 1rem;
     }
-  }
-
-  // Add top margin to main to account for fixed header
-  main {
-    margin-top: 56px;
   }
 
   .profile-icon img {
