@@ -8,7 +8,7 @@ tags = [ "ai", "software", "craftsmanship", "productivity", "developer-tools" ]
 subtitle = "Intelligence without expertise is entertainment"
 static_thumbnail = "/images/blog/placeholder.jpg"
 series = "ai"
-series_order = 6
+series_order = 7
 related_posts = [
   "blog/2026-04-17-inside-the-claude-folder.md",
   "blog/2026-02-07-build-your-own-team-of-agents.md",

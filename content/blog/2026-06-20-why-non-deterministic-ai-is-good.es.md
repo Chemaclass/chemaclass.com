@@ -8,7 +8,7 @@ tags = [ "ai", "engineering", "mindset" ]
 subtitle = "La aleatoriedad es el precio de la creatividad"
 static_thumbnail = "/images/blog/placeholder.jpg"
 series = "ai"
-series_order = 7
+series_order = 9
 related_posts = [
   "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
   "blog/2026-03-01-idealism-vs-pragmatism.md",
