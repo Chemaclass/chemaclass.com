@@ -1,7 +1,7 @@
 +++
 title = "Los Niveles de Adopción de la IA"
 description = "Una escalera de seis niveles para la adopción de la IA, de prompts copiados a equipos de agentes y flujos nativos de IA. Dónde se atascan las empresas y cómo subir."
-draft = true
+draft = false
 [taxonomies]
 tags = [ "ai", "software", "leadership", "craftsmanship", "productivity", "developer-tools" ]
 [extra]
@@ -52,7 +52,7 @@ Este fue el gran salto, y no porque los modelos fueran más listos. Lo que cambi
 
 Claude Code casi no necesita setup. Sin *lock-in* de editor. Apúntalo a tu repo, suelta una carpeta `.claude` con reglas y convenciones, y se adapta. Lo conté en [Dentro de la Carpeta .claude](https://chemaclass.com/blog/inside-the-claude-folder/).
 
-El modelo que eliges importa más que antes. Los modelos frontera de hoy están muy por delante de los de hace un año más o menos. La distancia entre *"puede esbozar una función"* y *"puede refactorizar un módulo con criterio"* se cerró más rápido de lo esperado, y sigue cerrándose mientras Claude, Codex y Gemini se empujan mutuamente cada mes. Los precios también se están acercando, lo cual es una forma educada de decir que todos copian al primero que acierta con la versión sostenible.
+El modelo que eliges importa más que antes. Los modelos frontera de hoy están muy por delante de los de hace un año. La distancia entre *"puede esbozar una función"* y *"puede refactorizar un módulo con criterio"* se cerró más rápido de lo esperado, y sigue cerrándose mientras Claude, Codex y Gemini se empujan mutuamente cada mes. Los precios también se están acercando, lo cual es una forma educada de decir que todos copian al primero que acierta con la versión sostenible.
 
 ## Agentes con casa propia
 
@@ -70,7 +70,7 @@ Los proveedores cambian planes y límites más rápido de lo que nadie puede seg
 
 La IA para programar fue la historia más ruidosa porque los desarrolladores hablamos alto. La historia más grande es que las herramientas agénticas están llegando a gente que nunca escribió una línea de código.
 
-[El modo agente de ChatGPT](https://openai.com/index/introducing-chatgpt-agent/) y [Cowork de Claude](https://claude.com/product/cowork) son los ejemplos obvios: una IA que lee tus documentos, rellena tus hojas de cálculo, redacta tus slides y corre código por ti en segundo plano. [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) salió el 17 de abril y [tumbó la acción de Figma más de un 7% el día del lanzamiento](https://sherwood.news/tech/anthropic-launches-claude-design-sending-shares-of-figma-down/), sobre otra caída parecida a comienzos de esa misma semana [cuando el CPO de Anthropic dejó el consejo de Figma](https://www.theglobeandmail.com/investing/markets/stocks/FIG-N/pressreleases/1339976/figma-announces-resignation-of-board-member-mike-krieger/). El pitch es sencillo: describe lo que quieres, consigue un prototipo que funciona y pásaselo a Claude Code para llevarlo a producción. Un flujo que antes necesitaba un diseñador, un PM, un ingeniero de frontend y tres rondas de revisión queda comprimido en una conversación.
+[El modo agente de ChatGPT](https://openai.com/index/introducing-chatgpt-agent/) y [Cowork de Claude](https://claude.com/product/cowork) son los ejemplos obvios: una IA que lee tus documentos, rellena tus hojas de cálculo, redacta tus slides y corre código por ti en segundo plano. [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) salió el 17 de abril y [tumbó la acción de Figma más de un 7% el día del lanzamiento](https://sherwood.news/tech/anthropic-launches-claude-design-sending-shares-of-figma-down/). El pitch es sencillo: describe lo que quieres, consigue un prototipo que funciona y pásaselo a Claude Code para llevarlo a producción. Un flujo que antes necesitaba un diseñador, un PM, un ingeniero de frontend y tres rondas de revisión queda comprimido en una conversación.
 
 Lovable, v0, Canva y la propia Figma están bajo presión para repensar su posicionamiento. Si Claude Design "mata" a alguno es la pregunta equivocada. La correcta es qué pasa cuando hacer un prototipo usable baja de *"contrata un diseñador"* a *"descríbelo en voz alta."*
 
@@ -84,13 +84,13 @@ Cada empresa con la que hablo está en algún punto de esta escalera. Los nivele
 
 ### Nivel 0: Negación
 
-Nada de IA, oficialmente. Algunas personas usan ChatGPT en su portátil personal y no lo mencionan. A la dirección le preocupan las fugas de propiedad intelectual, o no lo ha puesto como prioridad. La conversación se queda en *"deberíamos mirarlo algún día."*
+*Postura a nivel empresa.* Nada de IA, oficialmente. Algunas personas usan ChatGPT en su portátil personal y no lo mencionan. A la dirección le preocupan las fugas de propiedad intelectual, o no lo ha puesto como prioridad. La conversación se queda en *"deberíamos mirarlo algún día."*
 
 El riesgo aquí no es la tecnología, es el tiempo. Cada mes en el Nivel 0 es un mes en el que tu competencia aumenta su ventaja.
 
 ### Nivel 1: Productividad personal
 
-La IA se tolera, quizá hasta se anima. Cada uno la usa a su manera: ChatGPT en una pestaña, Copilot en el IDE, Claude para lo más peliagudo, una herramienta de diseño para los mockups. La producción sube, pero el *know-how* se queda dentro de cada cabeza. Dos ingenieros, dos PMs o dos diseñadores del mismo equipo sacan resultados muy distintos porque promptean distinto.
+*Adopción individual.* La IA se tolera, quizá hasta se anima. Cada uno la usa a su manera: ChatGPT en una pestaña, Copilot en el IDE, Claude para lo más peliagudo, una herramienta de diseño para los mockups. La producción sube, pero el *know-how* se queda dentro de cada cabeza. Dos ingenieros, dos PMs o dos diseñadores del mismo equipo sacan resultados muy distintos porque promptean distinto.
 
 La mayoría de empresas están aquí a principios de 2026. Es una mejora real frente al Nivel 0, y es donde nace el mito de *"la IA te da velocidad"*. Como ya [defendí antes](https://chemaclass.com/blog/ai-gives-you-speed-not-quality/), velocidad sin dirección compartida es caos más rápido.
 
@@ -110,7 +110,7 @@ A este nivel, la calidad depende menos del modelo y más del contexto que lo rod
 
 En vez de un asistente, tienes un escuadrón: un *coach* de TDD, un revisor de *clean code*, un arquitecto de dominio, alguien que mantiene la documentación. Fuera de ingeniería, la misma idea aplica con agentes de *research*, diseño y *ops*. Cubrí el lado de desarrollo en [Construye tu Propio Equipo de Agentes](https://chemaclass.com/blog/build-your-own-team-of-agents/), y el *leverage* es real.
 
-Los humanos dejan de competir con la IA en velocidad y empiezan a dirigirla. Revisas, decides y marcas el listón. Los agentes escriben y cada vez piensan más. El *pair programming* con una persona sigue ganando en los *trade-offs* complejos, pero siempre tienes un agente disponible para el resto.
+Los humanos dejan de competir con la IA en velocidad y empiezan a dirigirla. Revisas, decides y marcas el listón. Los agentes se encargan de teclear, y cada vez más de pensar. El *pair programming* con una persona sigue ganando en los *trade-offs* complejos, pero siempre tienes un agente disponible para el resto.
 
 A nivel empresa, el organigrama, los roles y los procesos siguen siendo los de antes. Lo que cambia es que cada persona produce mucho más, y eso se nota en los resultados del equipo. El Nivel 4 multiplica el *output* dentro de la estructura existente. El Nivel 5 cambia la estructura.
 
@@ -143,8 +143,6 @@ Dejas de pensar primero en los detalles y empiezas a pensar en la dirección: qu
 Esto suena a buenas noticias para quien prefiera la arquitectura a teclear, y lo es. Pero hay una trampa: solo puedes trabajar en el nivel alto si conoces el nivel bajo lo bastante bien como para pillar las desviaciones. Cuando el agente produce algo sutilmente mal (un test que pasa por la razón equivocada, un refactor que cambia el comportamiento bajo carga, un diseño que se rompe en móvil), necesitas verlo al instante. Si no puedes, no estás dirigiendo. Estás dando el visto bueno a lo que aparezca.
 
 > La IA te deja dedicar más tiempo a la dirección, pero solo si ya te ganaste el derecho a ignorar los detalles. Ese derecho se gana dominándolos antes.
-
-Las preocupaciones de calidad no desaparecen cuando la IA escribe el código. Se vuelven constantes, a lo largo de toda la vida del producto, no solo en los momentos en que un humano tocó el archivo. Por eso del Nivel 3 en adelante se toma tan en serio reglas, convenciones y revisiones: convierten la calidad en algo incorporado, no en algo que esperas que pase.
 
 ## Por qué importa la escalera
 

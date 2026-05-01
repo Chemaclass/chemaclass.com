@@ -1,7 +1,7 @@
 +++
 title = "The Levels of AI Adoption"
 description = "A six-level ladder of AI adoption, from copy-paste prompts to agentic teams and AI-native workflows. Where most companies stall, and how to climb."
-draft = true
+draft = false
 [taxonomies]
 tags = [ "ai", "software", "leadership", "craftsmanship", "productivity", "developer-tools" ]
 [extra]
@@ -52,7 +52,7 @@ This was the big shift, and not because the models were smarter. The unit of wor
 
 Claude Code needs almost no setup. No editor lock-in. Point it at your repo, drop a `.claude` folder with rules and conventions, and it adapts. I covered that in [Inside the .claude Folder](https://chemaclass.com/blog/inside-the-claude-folder/).
 
-The model you pick matters more than before. Today's frontier models are way ahead of where they were a year ago or so. The gap between *"can draft a function"* and *"can refactor a module with judgment"* closed faster than expected, and it keeps closing as Claude, Codex, and Gemini push each other forward every month. Prices are getting closer too, which is a polite way of saying everyone copies whoever figures out the sustainable version first.
+The model you pick matters more than before. Today's frontier models are way ahead of where they were a year ago. The gap between *"can draft a function"* and *"can refactor a module with judgment"* closed faster than expected, and it keeps closing as Claude, Codex, and Gemini push each other forward every month. Prices are getting closer too, which is a polite way of saying everyone copies whoever figures out the sustainable version first.
 
 ## Agents with their own home
 
@@ -70,7 +70,7 @@ Providers change their plans and limits faster than anyone tracks, so people bui
 
 AI coding was the loudest story because developers are loud. The bigger story is agentic tools reaching people who never wrote a line of code.
 
-[ChatGPT agent mode](https://openai.com/index/introducing-chatgpt-agent/) and [Claude's Cowork](https://claude.com/product/cowork) are the obvious examples: an AI that reads your documents, fills your spreadsheets, drafts your slides, and runs code for you in the background. [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) launched on April 17 and [dropped Figma's stock over 7% on launch day](https://sherwood.news/tech/anthropic-launches-claude-design-sending-shares-of-figma-down/), on top of a similar drop earlier that week [when Anthropic's CPO resigned from Figma's board](https://www.theglobeandmail.com/investing/markets/stocks/FIG-N/pressreleases/1339976/figma-announces-resignation-of-board-member-mike-krieger/). The pitch is simple: describe what you want, get a working prototype, hand it to Claude Code to ship. A workflow that used to need a designer, a PM, a frontend engineer, and three review rounds is squeezed into one conversation.
+[ChatGPT agent mode](https://openai.com/index/introducing-chatgpt-agent/) and [Claude's Cowork](https://claude.com/product/cowork) are the obvious examples: an AI that reads your documents, fills your spreadsheets, drafts your slides, and runs code for you in the background. [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) launched on April 17 and [dropped Figma's stock over 7% on launch day](https://sherwood.news/tech/anthropic-launches-claude-design-sending-shares-of-figma-down/). The pitch is simple: describe what you want, get a working prototype, hand it to Claude Code to ship. A workflow that used to need a designer, a PM, a frontend engineer, and three review rounds is squeezed into one conversation.
 
 Lovable, v0, Canva, and Figma itself are all under pressure to rethink their positioning. Whether Claude Design "kills" any of them is the wrong question. The right one is what happens when making a usable prototype drops from *"hire a designer"* to *"describe it out loud."*
 
@@ -84,13 +84,13 @@ Every company I talk to sits somewhere on this ladder. The levels aren't about h
 
 ### Level 0: Denial
 
-No AI, officially. Some people use ChatGPT on personal laptops and don't mention it. Leadership worries about IP leaks, or hasn't made it a priority. The conversation stays at *"we should look into this someday."*
+*A company-level stance.* No AI, officially. Some people use ChatGPT on personal laptops and don't mention it. Leadership worries about IP leaks, or hasn't made it a priority. The conversation stays at *"we should look into this someday."*
 
 The risk here isn't technology, it's time. Every month at Level 0 is a month your competitors grow their lead.
 
 ### Level 1: Personal productivity
 
-AI is allowed, maybe encouraged. Each person uses it their own way: ChatGPT in a tab, Copilot in the IDE, Claude for the tricky stuff, a design tool for mockups. Output goes up, but the know-how stays inside each person's head. Two engineers, or two PMs, or two designers on the same team get very different results because they prompt differently.
+*Individual adoption.* AI is allowed, maybe encouraged. Each person uses it their own way: ChatGPT in a tab, Copilot in the IDE, Claude for the tricky stuff, a design tool for mockups. Output goes up, but the know-how stays inside each person's head. Two engineers, or two PMs, or two designers on the same team get very different results because they prompt differently.
 
 Most companies are here in early 2026. It's a real improvement over Level 0, and it's where the myth of *"AI gives you speed"* gets born. As I [argued before](https://chemaclass.com/blog/ai-gives-you-speed-not-quality/), speed without shared direction is faster chaos.
 
@@ -110,7 +110,7 @@ At this level, quality depends less on the model and more on the context around 
 
 Instead of one assistant, you get a squad: a TDD coach, a clean code reviewer, a domain architect, a docs maintainer. Outside engineering, the same idea applies with research, design, and ops agents. I covered the developer side in [Build Your Own Team of Agents](https://chemaclass.com/blog/build-your-own-team-of-agents/), and the leverage is real.
 
-Humans stop competing with AI on speed and start directing it. You review, decide, and set the bar. Agents do the typing and more and more of the thinking. Pair programming with a person still wins on complex trade-offs, but an agent pair is always there for the rest.
+Humans stop competing with AI on speed and start directing it. You review, decide, and set the bar. Agents handle typing, and increasingly the thinking. Pair programming with a person still wins on complex trade-offs, but an agent pair is always there for the rest.
 
 At the company level, the org chart, roles, and processes are still the same. What changes is that each person produces a lot more, and the team's output reflects it. Level 4 multiplies output inside the existing structure. Level 5 changes the structure.
 
@@ -143,8 +143,6 @@ You stop thinking about details first and start thinking about direction: what a
 This sounds like good news for anyone who prefers architecture to typing, and it is. But there's a trap: you can only work at the high level if you know the low level well enough to catch drift. When the agent produces something subtly wrong (a test that passes for the wrong reason, a refactor that changes behavior under load, a design that breaks on mobile), you need to spot it instantly. If you can't, you're not directing, you're signing off on whatever shows up.
 
 > AI lets you spend more time on direction, but only if you've already earned the right to ignore the details. You earn that by having mastered them first.
-
-Quality concerns don't disappear when AI writes the code. They become constant, across the product's whole life, not just the moments a human touched the file. That's why Level 3 and above care so much about rules, conventions, and reviews: they make quality built in rather than something you hope for.
 
 ## Why the ladder matters
 
