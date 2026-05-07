@@ -37,6 +37,9 @@
     reset: 'Borrar mis datos',
     resetConfirm: '¿Seguro? Esto borra tus posts leídos y favoritos guardados en este navegador.',
     export: 'Exportar',
+    import: 'Importar',
+    importInvalid: 'Archivo no válido. Esperaba un export del perfil.',
+    importDone: 'Importado: {read} leídos y {favs} guardados añadidos.',
     of: 'de',
     posts: 'posts',
     read: 'leídos',
@@ -47,7 +50,7 @@
     noSeries: 'Sin series aún.',
     topTags: 'Etiquetas que más lees',
     noTags: 'Cuando marques posts como leídos, sus etiquetas aparecerán aquí.',
-    dataLocal: 'Todos tus datos están en este navegador. Puedes exportarlos o borrarlos.',
+    dataLocal: 'Todos tus datos están en este navegador. Puedes exportarlos, importarlos o borrarlos.',
     tools: 'Herramientas'
   } : {
     overall: 'Overall progress',
@@ -66,6 +69,9 @@
     reset: 'Clear my data',
     resetConfirm: "Sure? This clears the posts you've read and the favorites you've saved in this browser.",
     export: 'Export',
+    import: 'Import',
+    importInvalid: 'Invalid file. Expected a profile export.',
+    importDone: 'Imported: {read} read and {favs} saved added.',
     of: 'of',
     posts: 'posts',
     read: 'read',
@@ -76,7 +82,7 @@
     noSeries: 'No series yet.',
     topTags: 'Tags you read most',
     noTags: 'As you mark posts as read, their tags will show up here.',
-    dataLocal: 'All your data lives in this browser. You can export or clear it.',
+    dataLocal: 'All your data lives in this browser. You can export, import, or clear it.',
     tools: 'Tools'
   };
 
@@ -430,6 +436,53 @@
       URL.revokeObjectURL(url);
     });
     row.appendChild(exportBtn);
+
+    var importBtn = el('button', 'profile-btn', escapeHTML(t.import));
+    importBtn.type = 'button';
+    var fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'application/json,.json';
+    fileInput.style.display = 'none';
+    importBtn.addEventListener('click', function () { fileInput.click(); });
+    fileInput.addEventListener('change', function () {
+      var file = fileInput.files && fileInput.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function () {
+        var data;
+        try { data = JSON.parse(reader.result); }
+        catch (e) { window.alert(t.importInvalid); fileInput.value = ''; return; }
+        if (!data || typeof data !== 'object' ||
+            (data.read && typeof data.read !== 'object') ||
+            (data.favorites && typeof data.favorites !== 'object')) {
+          window.alert(t.importInvalid);
+          fileInput.value = '';
+          return;
+        }
+        var curRead = loadJSON(READ_KEY);
+        var curFavs = loadJSON(FAV_KEY);
+        var addedRead = 0, addedFavs = 0;
+        var inRead = data.read || {};
+        var inFavs = data.favorites || {};
+        Object.keys(inRead).forEach(function (k) {
+          if (!(k in curRead)) { curRead[k] = inRead[k]; addedRead++; }
+        });
+        Object.keys(inFavs).forEach(function (k) {
+          if (!(k in curFavs)) { curFavs[k] = inFavs[k]; addedFavs++; }
+        });
+        saveJSON(READ_KEY, curRead);
+        saveJSON(FAV_KEY, curFavs);
+        fileInput.value = '';
+        window.alert(t.importDone.replace('{read}', addedRead).replace('{favs}', addedFavs));
+        window.dispatchEvent(new Event('chemaclass:post-read'));
+        window.dispatchEvent(new Event('chemaclass:favorite-toggled'));
+        render();
+      };
+      reader.onerror = function () { window.alert(t.importInvalid); fileInput.value = ''; };
+      reader.readAsText(file);
+    });
+    row.appendChild(importBtn);
+    row.appendChild(fileInput);
 
     var resetBtn = el('button', 'profile-btn profile-btn--danger', escapeHTML(t.reset));
     resetBtn.type = 'button';
