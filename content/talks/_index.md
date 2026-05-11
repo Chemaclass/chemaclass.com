@@ -10,9 +10,10 @@ sort_by = "weight"
 
 ### June
 
-- 2026-06-08/10 | International PHP Conference [**Berlin, Germany**] (EN)
+- 2026-06-08 | International PHP Conference [**Berlin, Germany**] (EN)
   - [Full-day Workshop: Modernizing Legacy PHP with Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
     *Hands-on workshop where participants tackle real legacy code using TDD, refactoring patterns, and collaborative pair programming.*
+- 2026-06-09 | International PHP Conference [**Berlin, Germany**] (EN)
   - [Writing Lisp in PHP: A Journey with Phel](https://phpconference.com/php-core-coding/lisp-in-php-phel/)
     *Exploring functional programming through Phel, a Lisp dialect that compiles to PHP with persistent data structures and macros.*
   - [AI as Your Coding Co-Pilot: Human-Centered Workflows for Modern Developers](https://phpconference.com/trends-gen-ai/ai-copilot-human-centered-workflows/)

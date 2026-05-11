@@ -13,6 +13,8 @@ What are code katas? Have you ever wondered what a pair/mob programming session 
 
 ---
 
+- 2026-06-08 | International PHP Conference [**Berlin, Germany**] (EN)
+  - [Full-day Workshop: Modernizing Legacy PHP with Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
 - 2025-10-27 | International PHP Conference [**Munich, Germany**] (EN)
   - [Full-day Workshop: Modernizing Legacy PHP with Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
 - 2025-08-21 | International PHP Conference [**Remote**] (EN)
