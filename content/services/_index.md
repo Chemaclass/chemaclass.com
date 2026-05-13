@@ -30,14 +30,6 @@ tech = ["PHP"]
 type = "library"
 
 [[extra.projects]]
-name = "php-best-practices"
-description = "What I consider the best practices for web and software development."
-github = "Chemaclass/php-best-practices"
-tags = ["Best Practices"]
-tech = ["PHP"]
-type = "docs"
-
-[[extra.projects]]
 name = "edifact-parser"
 description = "A parser for a UN/EDIFACT file in PHP."
 github = "Chemaclass/edifact-parser"
@@ -54,20 +46,28 @@ tech = ["Phel"]
 type = "app"
 
 [[extra.projects]]
-name = "create-pr"
-description = "A bash script to create PR based on your branch and context."
-github = "Chemaclass/create-pr"
-tags = ["CLI"]
-tech = ["Bash"]
-type = "tool"
-
-[[extra.projects]]
 name = "Unspent"
 description = "A bookkeeping library using the UTXO model. Track value like physical cash with complete audit trails."
 github = "Chemaclass/unspent"
 tags = ["UTXO", "Accounting"]
 tech = ["PHP"]
 type = "library"
+
+[[extra.projects]]
+name = "agnostic-ai"
+description = "One source of truth for AI agents, skills, rules, and hooks. Transpile to every AI CLI you use."
+github = "Chemaclass/agnostic-ai"
+tags = ["AI", "CLI"]
+tech = ["Go"]
+type = "tool"
+
+[[extra.projects]]
+name = "satscribe"
+description = "Makes Bitcoin easier to understand."
+github = "Chemaclass/satscribe"
+tags = ["AI", "Bitcoin"]
+tech = ["PHP", "AI"]
+type = "app"
 
 [[extra.websites]]
 name = "Teína"

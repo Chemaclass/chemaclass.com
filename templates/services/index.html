@@ -331,8 +331,9 @@
 <script>
 const tabs = document.querySelectorAll('.tab-btn');
 const panels = document.querySelectorAll('.tab-panel');
+const validTabs = Array.from(tabs).map(t => t.dataset.tab);
 
-function switchTab(newTab) {
+function switchTab(newTab, { updateHash = true, focus = true } = {}) {
   tabs.forEach(t => {
     t.classList.remove('active');
     t.setAttribute('aria-selected', 'false');
@@ -343,8 +344,19 @@ function switchTab(newTab) {
   newTab.classList.add('active');
   newTab.setAttribute('aria-selected', 'true');
   newTab.setAttribute('tabindex', '0');
-  newTab.focus();
+  if (focus) newTab.focus();
   document.getElementById(newTab.dataset.tab).classList.add('active');
+
+  if (updateHash) {
+    history.replaceState(null, '', '#' + newTab.dataset.tab);
+  }
+}
+
+function activateFromHash() {
+  const id = window.location.hash.slice(1);
+  if (!validTabs.includes(id)) return;
+  const target = document.querySelector(`.tab-btn[data-tab="${id}"]`);
+  if (target) switchTab(target, { updateHash: false, focus: false });
 }
 
 tabs.forEach(btn => {
@@ -363,5 +375,8 @@ tabs.forEach(btn => {
     }
   });
 });
+
+activateFromHash();
+window.addEventListener('hashchange', activateFromHash);
 </script>
 {% endblock js %}

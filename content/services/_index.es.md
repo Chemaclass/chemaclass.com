@@ -29,14 +29,6 @@ tech = ["PHP"]
 type = "library"
 
 [[extra.projects]]
-name = "php-best-practices"
-description = "Las buenas prácticas que sigo para desarrollo web y software."
-github = "Chemaclass/php-best-practices"
-tags = ["Buenas Prácticas"]
-tech = ["PHP"]
-type = "docs"
-
-[[extra.projects]]
 name = "edifact-parser"
 description = "Parser para archivos UN/EDIFACT en PHP."
 github = "Chemaclass/edifact-parser"
@@ -53,11 +45,19 @@ tech = ["Phel"]
 type = "app"
 
 [[extra.projects]]
-name = "create-pr"
-description = "Script bash para crear PRs a partir de tu rama y contexto."
-github = "Chemaclass/create-pr"
-tags = ["CLI"]
-tech = ["Bash"]
+name = "Unspent"
+description = "Librería de contabilidad con modelo UTXO. Rastrea valor como efectivo físico con auditoría completa."
+github = "Chemaclass/unspent"
+tags = ["UTXO", "Contabilidad"]
+tech = ["PHP"]
+type = "library"
+
+[[extra.projects]]
+name = "agnostic-ai"
+description = "Una única fuente de verdad para agentes, skills, reglas y hooks de IA. Transpila a cualquier CLI de IA."
+github = "Chemaclass/agnostic-ai"
+tags = ["AI", "CLI"]
+tech = ["Go"]
 type = "tool"
 
 [[extra.projects]]
