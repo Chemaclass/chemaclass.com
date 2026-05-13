@@ -34,12 +34,10 @@
     border-radius: 2rem;
     text-decoration: none;
     color: var(--body-color);
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
     &:hover {
       border-color: var(--accent-color) !important;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     &--lg {
@@ -113,14 +111,6 @@
       color: var(--accent-color);
       border-bottom: none;
     }
-
-    svg {
-      transition: transform 0.2s ease;
-    }
-
-    &:hover svg {
-      transform: translateX(-3px);
-    }
   }
 
   &__header {
@@ -174,11 +164,10 @@
     border-radius: 12px;
     text-decoration: none;
     color: inherit;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
     &:hover {
       border-color: var(--accent-color) !important;
-      transform: translateX(4px);
     }
 
     h3 {

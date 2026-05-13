@@ -117,13 +117,12 @@
   border-radius: 12px;
   padding: 1.25rem;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
   display: flex;
   flex-direction: column;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 
   &:hover {
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     border-color: var(--accent-color);
     border-bottom-color: var(--accent-color);
   }
@@ -375,7 +374,7 @@
   padding: 1rem 1.25rem;
   text-decoration: none;
   color: inherit;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
   @media (max-width: $breakpoint-phone) {
     padding: 0.875rem 1rem;
@@ -384,7 +383,6 @@
 
   &:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     border-bottom-color: var(--accent-color);
   }
 
@@ -620,16 +618,11 @@
   border: 1px solid var(--preview-divider-color);
   border-radius: 12px;
   padding: 1.25rem;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
   text-decoration: none;
 
   &:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-
-    .service-card__more i {
-      transform: translateX(4px);
-    }
   }
 
   &__header {
@@ -733,10 +726,6 @@
 
     &:hover {
       border-bottom-color: var(--accent-color);
-
-      .service-card__more i {
-        transform: translateX(3px);
-      }
     }
   }
 }
@@ -764,7 +753,7 @@
   border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
   & + & {
     margin-top: 3rem;
@@ -772,7 +761,6 @@
 
   &:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
 
   .sessions-content {
@@ -843,11 +831,10 @@
     font-size: 0.9rem;
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
     &:hover {
       filter: brightness(1.1);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 
     &--secondary {
@@ -874,11 +861,10 @@
   border-radius: 12px;
   padding: 1.5rem;
   margin-top: 1.5rem;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
   &:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
 
   &__icon {
@@ -926,12 +912,11 @@
     font-weight: 600;
     font-size: 0.9rem;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     border: none;
 
     &:hover {
       filter: brightness(1.1);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
       border: none;
       color: white;
       text-decoration: none;

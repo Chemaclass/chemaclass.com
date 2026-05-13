@@ -17,10 +17,6 @@
 
   .tier-card {
     @include card-b-colors-light;
-
-    &:hover {
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
   }
 
   #section-current-sponsors {

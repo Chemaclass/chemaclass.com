@@ -45,11 +45,10 @@
   border: 1px solid var(--preview-divider-color);
   border-radius: 16px;
   overflow: hidden;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  transition: border-color 0.25s ease;
 
   &:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   }
 
   &__video {

@@ -19,13 +19,6 @@
       border-bottom: none;
     }
 
-    svg {
-      transition: transform 0.2s ease;
-    }
-
-    &:hover svg {
-      transform: translateX(-3px);
-    }
   }
 }
 
@@ -76,10 +69,9 @@
   border: 1px solid var(--preview-divider-color);
   text-decoration: none;
   color: inherit;
-  transition: transform 0.25s var(--ease-out-expo), box-shadow 0.25s var(--ease-out-expo), border-color 0.25s ease;
+  transition: border-color 0.25s ease;
 
   &:hover {
-    box-shadow: var(--shadow-md);
     border-color: var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
   }
@@ -164,7 +156,7 @@
   padding: 1.5rem;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo), border-color 0.3s ease;
+  transition: border-color 0.3s ease;
   position: relative;
   overflow: hidden;
 
@@ -181,7 +173,6 @@
   }
 
   &:hover {
-    box-shadow: var(--shadow-lg);
     border-bottom: 1px solid var(--preview-divider-color);
 
     &::before {
@@ -274,14 +265,6 @@
     font-weight: 600;
     color: var(--accent-color);
     margin-top: auto;
-
-    svg {
-      transition: transform 0.2s ease;
-    }
-  }
-
-  &:hover &__link svg {
-    transform: translate(2px, -2px);
   }
 }
 
@@ -309,10 +292,9 @@
   padding: 1.5rem;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo), border-color 0.3s ease;
+  transition: border-color 0.3s ease;
 
   &:hover {
-    box-shadow: var(--shadow-lg);
     border-bottom: 2px solid var(--preview-divider-color);
   }
 
@@ -371,13 +353,6 @@
       color: white;
     }
 
-    svg {
-      transition: transform 0.2s ease;
-    }
-  }
-
-  &:hover &__action svg {
-    transform: translateX(3px);
   }
 }
 

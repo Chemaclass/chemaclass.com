@@ -202,12 +202,11 @@
   color: var(--color-subtitle);
   cursor: pointer;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: background 0.15s ease, border-color 0.15s ease;
 
   &:hover {
     background: rgba(255, 213, 79, 0.12);
     border-left-color: rgba(255, 179, 0, 0.7);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   // Floating margin mode (applied by JS when enough right-margin space)
@@ -234,7 +233,6 @@
     &:hover {
       background: rgba(255, 179, 0, 0.1);
       border-left-color: rgba(255, 179, 0, 0.6);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
   }
 }

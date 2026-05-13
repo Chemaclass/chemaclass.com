@@ -79,7 +79,7 @@
     border-bottom: 1px solid rgba(45, 90, 142, 0.12);
     text-decoration: none;
     color: inherit;
-    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo), border-color 0.2s ease;
+    transition: border-color 0.2s ease;
 
     .theme-dark & {
       background: rgba(93, 168, 229, 0.06);
@@ -89,7 +89,6 @@
     }
 
     &:hover {
-      box-shadow: var(--shadow-md);
       border-color: var(--accent-color);
     }
 
@@ -216,14 +215,13 @@
   border-radius: 12px;
   border: 1px solid var(--preview-divider-color);
   background: var(--search-input-bg);
-  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo), border-color 0.2s ease;
+  transition: border-color 0.2s ease;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
 
   &:hover,
   &--active {
     border-color: var(--accent-color);
-    box-shadow: var(--shadow-md);
   }
 
   &.pinned {

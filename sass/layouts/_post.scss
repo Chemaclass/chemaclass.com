@@ -40,14 +40,6 @@
       color: var(--accent-color);
       border-bottom: none;
     }
-
-    svg {
-      transition: transform 0.2s ease;
-    }
-
-    &:hover svg {
-      transform: translateX(-3px);
-    }
   }
 
   &__hero {
@@ -236,7 +228,7 @@
     background: var(--search-input-bg);
     text-decoration: none;
     color: inherit;
-    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo), border-color 0.2s ease, background 0.2s ease;
+    transition: border-color 0.2s ease, background 0.2s ease;
     max-width: 48%;
     flex: 1;
     box-shadow: var(--shadow-sm);
@@ -244,7 +236,6 @@
     &:hover {
       border: 1px solid var(--accent-color) !important;
       background: var(--search-bg-selected-item);
-      box-shadow: var(--shadow-md);
     }
 
     &:hover &-label {
@@ -257,20 +248,12 @@
 
     &--prev {
       align-items: flex-start;
-
-      &:hover svg {
-        transform: translateX(-3px);
-      }
     }
 
     &--next {
       align-items: flex-end;
       margin-left: auto;
       text-align: right;
-
-      &:hover svg {
-        transform: translateX(3px);
-      }
     }
   }
 

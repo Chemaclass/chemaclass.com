@@ -195,14 +195,6 @@
       background: var(--accent-color);
       color: white;
     }
-
-    svg {
-      transition: transform 0.2s ease;
-    }
-
-    &:hover svg {
-      transform: translateX(3px);
-    }
   }
 }
 

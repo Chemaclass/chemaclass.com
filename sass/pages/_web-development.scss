@@ -152,7 +152,7 @@
     font-weight: 600;
     font-size: 0.95rem;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
     &:focus-visible {
       outline: 2px solid var(--accent-color);
@@ -162,7 +162,6 @@
     &:hover {
       color: white;
       filter: brightness(1.1);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       border-bottom: none;
     }
 
@@ -726,7 +725,7 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
     &:focus-visible {
       outline: 2px solid var(--accent-color);
@@ -736,8 +735,6 @@
     &:hover {
       color: white;
       filter: brightness(1.1);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     i {
@@ -1041,7 +1038,7 @@
   border-radius: 12px;
   overflow: hidden;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
   &:focus-visible {
     outline: 2px solid var(--accent-color);
@@ -1050,7 +1047,6 @@
 
   &:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 
     .portfolio-item__image img {
       transform: scale(1.03);
@@ -1058,7 +1054,6 @@
 
     .portfolio-item__name i {
       opacity: 1;
-      transform: translateX(2px);
     }
   }
 
@@ -1184,7 +1179,7 @@
     font-weight: 600;
     font-size: 0.95rem;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
     &:focus-visible {
       outline: 2px solid var(--accent-color);
@@ -1194,8 +1189,6 @@
     &:hover {
       color: white;
       filter: brightness(1.1);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       border-bottom: none;
     }
 
@@ -1374,7 +1367,7 @@
   border: 1px solid var(--preview-divider-color);
   border-radius: 12px;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
   &:focus-visible {
     outline: 2px solid var(--accent-color);
@@ -1383,11 +1376,9 @@
 
   &:hover {
     border-color: var(--accent-color);
-    transform: translateX(4px);
 
     .resource-card__arrow {
       opacity: 1;
-      transform: translateX(2px);
     }
 
     .resource-card__icon {

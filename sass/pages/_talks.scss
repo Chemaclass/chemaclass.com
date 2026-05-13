@@ -51,14 +51,13 @@
   border-radius: 12px;
   border: 1px solid var(--preview-divider-color);
   background: var(--search-input-bg);
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
 
   &:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid var(--accent-color);
   }
 
@@ -305,14 +304,6 @@
       color: var(--accent-color);
       border-bottom: none;
     }
-
-    svg {
-      transition: transform 0.2s ease;
-    }
-
-    &:hover svg {
-      transform: translateX(-3px);
-    }
   }
 
   &__hero {
@@ -404,12 +395,10 @@
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
     &:hover {
       opacity: 0.85;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       border-bottom: none;
       color: white;
     }
@@ -537,11 +526,10 @@
       border-radius: 12px;
       margin: 1.5rem 0;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease;
 
       &:hover {
         transform: scale(1.01);
-        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
       }
     }
 
@@ -579,13 +567,11 @@
     background: var(--search-input-bg);
     text-decoration: none;
     color: inherit;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     max-width: 45%;
 
     &:hover {
       border-color: var(--accent-color);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
     &--prev {

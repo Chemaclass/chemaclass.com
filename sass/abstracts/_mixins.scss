@@ -1,3 +1,11 @@
+// Unified card surface — use via `@extend %card;`
+%card {
+  background: var(--table-bg-even);
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
 // Card color mixins
 @mixin card-a-colors-light {
   background-color: #eaecef;

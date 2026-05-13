@@ -123,12 +123,9 @@ $profile-max-width: 920px;
   gap: 0.5rem;
   color: inherit;
   text-decoration: none;
-  transition: transform 0.3s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)),
-              box-shadow 0.3s ease,
-              border-color 0.2s ease;
+  transition: border-color 0.2s ease;
 
   &:hover {
-    box-shadow: var(--shadow-md);
     border-color: var(--accent-color);
   }
 
@@ -266,9 +263,7 @@ $profile-max-width: 920px;
   font-weight: 500;
   text-decoration: none;
   line-height: 1.2;
-  transition: transform 0.3s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)),
-              box-shadow 0.3s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)),
-              border-color 0.2s ease,
+  transition: border-color 0.2s ease,
               color 0.2s ease;
 
   &__name {
@@ -290,8 +285,6 @@ $profile-max-width: 920px;
   }
 
   &:hover {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-sm);
     border-color: var(--accent-color);
     color: var(--accent-color);
 
@@ -317,11 +310,10 @@ $profile-max-width: 920px;
     border-radius: 8px;
     border: 1px solid var(--preview-divider-color);
     background: var(--body-background);
-    transition: border-color 0.2s ease, transform 0.2s ease;
+    transition: border-color 0.2s ease;
 
     &:hover {
       border-color: var(--accent-color);
-      transform: translateX(2px);
     }
   }
 
