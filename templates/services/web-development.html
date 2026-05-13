@@ -189,7 +189,7 @@
             <th></th>
             <th class="col-static"><i class="fa-solid fa-bolt"></i>{{ trans(key="svc_static", lang=lang) }}</th>
             <th class="col-ssg"><i class="fa-solid fa-code"></i>{{ trans(key="svc_static_blog", lang=lang) }}</th>
-            <th class="col-wp"><i class="fa-brands fa-wordpress"></i>WordPress</th>
+            <th class="col-wp col-unavailable"><i class="fa-brands fa-wordpress"></i><span class="col-label">WordPress</span><span class="col-unavailable__badge">{% if lang == "es" %}No disponible{% else %}Unavailable{% endif %}</span></th>
           </tr>
         </thead>
         <tbody>
@@ -340,8 +340,8 @@
               <li>{% if lang == "es" %}Mantenimiento: €{{ config.extra.pricing_static_pro_maintenance | default(value=120) }}/año{% else %}Maintenance: €{{ config.extra.pricing_static_pro_maintenance | default(value=120) }}/year{% endif %}</li>
             </ul>
           </div>
-          <div class="pricing-card">
-            <h4><i class="fa-brands fa-wordpress"></i> WordPress</h4>
+          <div class="pricing-card pricing-card--unavailable">
+            <h4><i class="fa-brands fa-wordpress"></i> WordPress <span class="pricing-card__badge">{% if lang == "es" %}No disponible{% else %}Unavailable{% endif %}</span></h4>
             <div class="pricing-card__price">€{{ config.extra.pricing_wordpress_min | default(value=2000) }} - €{{ config.extra.pricing_wordpress_max | default(value=4000) }}</div>
             <ul class="pricing-card__details">
               <li>{% if lang == "es" %}Hosting: €{{ config.extra.pricing_wordpress_hosting | default(value=100) }}/año{% else %}Hosting: €{{ config.extra.pricing_wordpress_hosting | default(value=100) }}/year{% endif %}</li>

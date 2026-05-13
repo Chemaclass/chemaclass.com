@@ -427,6 +427,36 @@
         color: #5ba8d1;
       }
     }
+
+    &.col-unavailable {
+      i,
+      .col-label {
+        opacity: 0.5;
+      }
+
+      .col-label {
+        display: block;
+        line-height: 1.2;
+      }
+    }
+
+    .col-unavailable__badge {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--color-subtitle);
+      background: var(--preview-divider-color);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+  }
+
+  tbody tr td:nth-child(4) {
+    opacity: 0.5;
   }
 
   tbody td {
@@ -567,6 +597,24 @@
 
 .decision-card--unavailable {
   opacity: 0.5;
+}
+
+.pricing-card--unavailable {
+  opacity: 0.5;
+
+  .pricing-card__badge {
+    display: inline-block;
+    margin-left: 0.4rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--color-subtitle);
+    background: var(--preview-divider-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    vertical-align: middle;
+  }
 }
 
 .decision-tip {
