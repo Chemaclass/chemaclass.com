@@ -160,31 +160,7 @@
   position: relative;
   overflow: hidden;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    border-radius: 16px 16px 0 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  &:hover {
-    border-bottom: 1px solid var(--preview-divider-color);
-
-    &::before {
-      opacity: 1;
-    }
-  }
-
   &--bashunit {
-    &::before {
-      background: linear-gradient(90deg, #10b981, #34d399);
-    }
-
     &:hover {
       border-color: #10b981;
     }
@@ -196,10 +172,6 @@
   }
 
   &--phel {
-    &::before {
-      background: linear-gradient(90deg, #8b5cf6, #a78bfa);
-    }
-
     &:hover {
       border-color: #8b5cf6;
     }
@@ -210,11 +182,7 @@
     }
   }
 
-  &--sauron {
-    &::before {
-      background: linear-gradient(90deg, #ef4444, #f87171);
-    }
-
+  &--agnostic-ai {
     &:hover {
       border-color: #ef4444;
     }
