@@ -102,6 +102,21 @@
 
   </section>
 
+  <!-- Bottom CTA -->
+  <section class="service-cta">
+    <div class="service-cta__icon"><i class="fa-solid fa-rocket"></i></div>
+    <h2>{% if lang == "es" %}¿Por dónde empezamos?{% else %}Where do we start?{% endif %}</h2>
+    <p>{% if lang == "es" %}Cuéntame qué necesitas. Respondo en menos de 24 horas.{% else %}Tell me what you need. I reply within 24 hours.{% endif %}</p>
+    <div class="service-cta__buttons">
+      <a href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}" class="service-cta__btn">
+        <i class="fa-solid fa-globe"></i> {% if lang == "es" %}Necesito una web{% else %}I need a website{% endif %}
+      </a>
+      <a href="{% if lang == 'es' %}/es/services/consulting/{% else %}/services/consulting/{% endif %}" class="service-cta__btn service-cta__btn--secondary">
+        <i class="fa-solid fa-comments"></i> {% if lang == "es" %}Quiero una sesión{% else %}I want a session{% endif %}
+      </a>
+    </div>
+  </section>
+
   <!-- Testimonials -->
   <section class="services-testimonials">
     <h2>{% if lang == "es" %}Lo que dicen{% else %}What people say{% endif %}</h2>
@@ -187,21 +202,6 @@
           {% if lang == "es" %}Webs: precio cerrado tras una llamada gratuita de discovery. Sin sorpresas. Consultoría: por sesión, sin suscripciones. Escríbeme para los detalles.{% else %}Websites: fixed quote after a free discovery call. No surprises. Consulting: per session, no subscriptions. Email me for details.{% endif %}
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Bottom CTA -->
-  <section class="service-cta">
-    <div class="service-cta__icon"><i class="fa-solid fa-envelope"></i></div>
-    <h2>{% if lang == "es" %}¿Por dónde empezamos?{% else %}Where do we start?{% endif %}</h2>
-    <p>{% if lang == "es" %}Cuéntame qué necesitas. Respondo en menos de 24 horas.{% else %}Tell me what you need. I reply within 24 hours.{% endif %}</p>
-    <div class="service-cta__buttons">
-      <a href="mailto:hi@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Web&body=Hola%20Chema%2C%0A%0AQué%20necesito%3A%0A%0AGracias!{% else %}Web%20Development%20Inquiry&body=Hi%20Chema%2C%0A%0AWhat%20I%20need%3A%0A%0AThanks!{% endif %}" class="service-cta__btn">
-        <i class="fa-solid fa-globe"></i> {% if lang == "es" %}Necesito una web{% else %}I need a website{% endif %}
-      </a>
-      <a href="mailto:hi@chemaclass.es?subject={% if lang == 'es' %}Consulta&body=Hola%20Chema%2C%0A%0ATema%3A%0ALo%20que%20quiero%20resolver%3A%0A%0AGracias!{% else %}Consulting%20Inquiry&body=Hi%20Chema%2C%0A%0ATopic%3A%0AWhat%20I%27m%20trying%20to%20figure%20out%3A%0A%0AThanks!{% endif %}" class="service-cta__btn service-cta__btn--secondary">
-        <i class="fa-solid fa-comments"></i> {% if lang == "es" %}Quiero una sesión{% else %}I want a session{% endif %}
-      </a>
     </div>
   </section>
 </article>
