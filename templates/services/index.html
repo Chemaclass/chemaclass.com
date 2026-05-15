@@ -105,41 +105,63 @@
   <!-- Testimonials -->
   <section class="services-testimonials">
     <h2>{% if lang == "es" %}Lo que dicen{% else %}What people say{% endif %}</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <blockquote>{% if lang == "es" %}"Exactamente lo que necesitábamos, con una sección de conciertos perfecta para que los fans sigan la agenda."{% else %}"Exactly what we needed, with a concerts section our fans love to follow."{% endif %}</blockquote>
-        <footer>
-          <img src="/images/testimonials/adrian-teina.jpg" alt="Adrian" class="testimonial-card__avatar">
-          <div>
-            <strong>Adrián</strong>
-            <span>{% if lang == "es" %}Banda de indie rock, Teína{% else %}Indie rock band, Teína{% endif %}</span>
+    <div class="testimonials-carousel">
+      <button class="testimonials-carousel__btn testimonials-carousel__btn--prev" aria-label="Previous">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="testimonials-carousel__track-container">
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <blockquote>{% if lang == "es" %}"Por fin tenemos la presencia online que nuestro molino de 140 años merece."{% else %}"We finally have the online presence our 140-year-old mill deserves."{% endif %}</blockquote>
+            <footer>
+              <img src="/images/testimonials/dirk-windmuehle.jpg" alt="Dirk" class="testimonial-card__avatar">
+              <div>
+                <strong>Dirk</strong>
+                <span>{% if lang == "es" %}Molino Tündern{% else %}Windmill Tündern{% endif %}</span>
+              </div>
+              <a href="https://windmuehle-tuendern.de" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </footer>
           </div>
-          <a href="https://teina.es" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </footer>
-      </div>
-      <div class="testimonial-card">
-        <blockquote>{% if lang == "es" %}"Un portfolio rápido y limpio para compartir mi trabajo, investigación y publicaciones sin fricciones."{% else %}"A fast, clean portfolio to share my work, research, and publications seamlessly."{% endif %}</blockquote>
-        <footer>
-          <img src="/images/testimonials/fco-sandoval.jpg" alt="Francisco" class="testimonial-card__avatar">
-          <div>
-            <strong>Francisco</strong>
-            <span>{% if lang == "es" %}Arquitecto, Portfolio personal{% else %}Architect, Personal Portfolio{% endif %}</span>
+          <div class="testimonial-card">
+            <blockquote>{% if lang == "es" %}"Exactamente lo que necesitábamos, con una sección de conciertos perfecta para que los fans sigan la agenda."{% else %}"Exactly what we needed, with a concerts section our fans love to follow."{% endif %}</blockquote>
+            <footer>
+              <img src="/images/testimonials/adrian-teina.jpg" alt="Adrian" class="testimonial-card__avatar">
+              <div>
+                <strong>Adrián</strong>
+                <span>{% if lang == "es" %}Banda de rock, Teína{% else %}Indie rock band, Teína{% endif %}</span>
+              </div>
+              <a href="https://teina.es" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </footer>
           </div>
-          <a href="https://fco-sandoval-gomez.es" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </footer>
-      </div>
-      <div class="testimonial-card">
-        <blockquote>{% if lang == "es" %}"Nuestros clientes nos encuentran fácilmente y reservan directamente desde la web. Limpia, rápida y profesional."{% else %}"Our clients find us easily and book directly from the site. Clean, fast, and professional."{% endif %}</blockquote>
-        <footer>
-          <img src="/images/testimonials/carlos-dkrisna.svg" alt="Carlos" class="testimonial-card__avatar">
-          <div>
-            <strong>Carlos</strong>
-            <span>{% if lang == "es" %}Centro de belleza, D'Krisna{% else %}Beauty &amp; wellness, D'Krisna{% endif %}</span>
+          <div class="testimonial-card">
+            <blockquote>{% if lang == "es" %}"Un portfolio rápido y limpio para compartir mi trabajo, investigación y publicaciones sin fricciones."{% else %}"A fast, clean portfolio to share my work, research, and publications seamlessly."{% endif %}</blockquote>
+            <footer>
+              <img src="/images/testimonials/fco-sandoval.jpg" alt="Francisco" class="testimonial-card__avatar">
+              <div>
+                <strong>Francisco</strong>
+                <span>{% if lang == "es" %}Arquitecto, Portfolio{% else %}Architect, Portfolio{% endif %}</span>
+              </div>
+              <a href="https://fco-sandoval-gomez.es" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </footer>
           </div>
-          <a href="https://dkrisna.es" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </footer>
+          <div class="testimonial-card">
+            <blockquote>{% if lang == "es" %}"Nuestros clientes nos encuentran fácilmente y reservan directamente desde la web. Limpia, rápida y profesional."{% else %}"Our clients find us easily and book directly from the site. Clean, fast, and professional."{% endif %}</blockquote>
+            <footer>
+              <img src="/images/testimonials/carlos-dkrisna.svg" alt="Carlos" class="testimonial-card__avatar">
+              <div>
+                <strong>Carlos</strong>
+                <span>{% if lang == "es" %}Bienestar, D'Krisna{% else %}Wellness, D'Krisna{% endif %}</span>
+              </div>
+              <a href="https://dkrisna.es" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </footer>
+          </div>
+        </div>
       </div>
+      <button class="testimonials-carousel__btn testimonials-carousel__btn--next" aria-label="Next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
     </div>
+    <div class="testimonials-carousel__dots"></div>
   </section>
 
   <!-- FAQ -->
@@ -212,5 +234,90 @@ document.querySelectorAll('.services-faq__question').forEach(btn => {
     btn.nextElementSibling.classList.toggle('open', !expanded);
   });
 });
+
+// Testimonials carousel
+(function() {
+  const carousel = document.querySelector('.testimonials-carousel');
+  if (!carousel) return;
+
+  const track = carousel.querySelector('.testimonials-grid');
+  const items = track.querySelectorAll('.testimonial-card');
+  const prevBtn = carousel.querySelector('.testimonials-carousel__btn--prev');
+  const nextBtn = carousel.querySelector('.testimonials-carousel__btn--next');
+  const dotsContainer = document.querySelector('.testimonials-carousel__dots');
+
+  const totalItems = items.length;
+  let currentIndex = 0;
+  let itemsPerView = window.innerWidth <= 768 ? 1 : 3;
+
+  function getTotalPositions() {
+    return totalItems - itemsPerView + 1;
+  }
+
+  function createDots() {
+    dotsContainer.innerHTML = '';
+    const totalPositions = getTotalPositions();
+    for (let i = 0; i < totalPositions; i++) {
+      const dot = document.createElement('button');
+      dot.classList.add('testimonials-carousel__dot');
+      dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      if (i === 0) dot.classList.add('testimonials-carousel__dot--active');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function updateDots() {
+    dotsContainer.querySelectorAll('.testimonials-carousel__dot').forEach((dot, i) => {
+      dot.classList.toggle('testimonials-carousel__dot--active', i === currentIndex);
+    });
+  }
+
+  function goToSlide(index) {
+    const maxIndex = totalItems - itemsPerView;
+    currentIndex = Math.max(0, Math.min(index, maxIndex));
+    const gap = 24;
+    const itemWidth = items[0].offsetWidth;
+    track.style.transform = `translateX(-${currentIndex * (itemWidth + gap)}px)`;
+    updateDots();
+  }
+
+  function goNext() {
+    const maxIndex = totalItems - itemsPerView;
+    goToSlide(currentIndex >= maxIndex ? 0 : currentIndex + 1);
+  }
+
+  function goPrev() {
+    const maxIndex = totalItems - itemsPerView;
+    goToSlide(currentIndex <= 0 ? maxIndex : currentIndex - 1);
+  }
+
+  prevBtn.addEventListener('click', goPrev);
+  nextBtn.addEventListener('click', goNext);
+
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      const newItemsPerView = window.innerWidth <= 768 ? 1 : 3;
+      if (newItemsPerView !== itemsPerView) {
+        itemsPerView = newItemsPerView;
+        currentIndex = 0;
+        createDots();
+      }
+      goToSlide(currentIndex);
+    }, 100);
+  });
+
+  let touchStartX = 0;
+  track.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+  track.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) diff > 0 ? goNext() : goPrev();
+  }, { passive: true });
+
+  createDots();
+  goToSlide(0);
+})();
 </script>
 {% endblock js %}
