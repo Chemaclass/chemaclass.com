@@ -46,8 +46,7 @@
     font-size: 0.85rem;
     font-weight: 600;
     transition: opacity 0.2s ease;
-
-    border-bottom: none;
+    border-bottom: 1px solid transparent;
 
     &:hover {
       opacity: 0.85;

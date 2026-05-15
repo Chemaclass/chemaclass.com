@@ -311,21 +311,13 @@ main:has(.homepage-container) #scroll-to-top {
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: none;
+  border-bottom: 1px solid transparent;
   white-space: nowrap;
-  transition: filter 0.2s ease;
-
-  i {
-    transition: transform 0.2s ease;
-  }
+  transition: opacity 0.2s ease;
 
   &:hover {
-    filter: brightness(0.88);
+    opacity: 0.85;
     color: #fff;
-
-    i {
-      transform: translateX(4px);
-    }
   }
 }
 
