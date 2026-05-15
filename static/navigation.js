@@ -21,14 +21,35 @@ window.closeSearch = function() {
 };
 
 // Mobile menu toggle
+window.closeMobileMenu = function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navbar = document.querySelector('.navbar');
+  const backdrop = document.getElementById('nav-backdrop');
+  navbar.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  if (backdrop) backdrop.classList.remove('active');
+};
+
 window.toggleMobileMenu = function(e) {
   e.stopPropagation();
   const hamburger = document.querySelector('.hamburger');
   const navbar = document.querySelector('.navbar');
-  navbar.classList.toggle('open');
+  const backdrop = document.getElementById('nav-backdrop');
+  const isOpen = navbar.classList.toggle('open');
   hamburger.classList.toggle('open');
-  hamburger.setAttribute('aria-expanded', navbar.classList.contains('open'));
+  hamburger.setAttribute('aria-expanded', isOpen);
+  if (backdrop) backdrop.classList.toggle('active', isOpen);
 };
+
+// Close mobile menu when a nav link is tapped
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.nav-links > a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (document.querySelector('.navbar.open')) closeMobileMenu();
+    });
+  });
+});
 
 // Keyboard shortcuts: vim-style with g-prefix commands
 (function() {
