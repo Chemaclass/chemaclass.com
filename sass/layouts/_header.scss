@@ -35,6 +35,7 @@
   // Stable dimensions prevent layout shift
   min-height: 56px;
   box-sizing: border-box;
+  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
 
   &::after {
     content: '';
@@ -53,12 +54,10 @@
 
   &.hidden {
     transform: translateY(-100%);
-    transition: transform 0.5s ease-out;
   }
 
   &.show {
     transform: translateY(0);
-    transition: transform 0.5s ease-in;
   }
 }
 
