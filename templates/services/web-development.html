@@ -36,8 +36,8 @@
   <section class="service-intro">
     <p>{% if lang == "es" %}Toda empresa necesita una web, pero no todas necesitan el mismo tipo. Te ayudo a elegir el enfoque adecuado basado en tus necesidades reales, no en lo que está de moda o es innecesariamente complejo.{% else %}Every business needs a website, but not the same kind. I help you choose what actually fits your needs, not what's trendy or over-engineered.{% endif %}</p>
     <p>{% if lang == "es" %}Ofrezco dos tipos de sitios web, cada uno diseñado para diferentes situaciones. Entender la diferencia te ahorrará tiempo, dinero y frustraciones.{% else %}I offer two types of websites, each for a different situation. Knowing the difference saves you time, money, and frustration.{% endif %}</p>
-    <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="noopener" class="service-intro__cta">
-      <i class="fa-brands fa-linkedin"></i> {{ trans(key="svc_contact", lang=lang) }}
+    <a href="mailto:hi@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Web&body=Hola%20Chema%2C%0A%0AQué%20necesito%3A%0A%0AGracias!{% else %}Web%20Development%20Inquiry&body=Hi%20Chema%2C%0A%0AWhat%20I%20need%3A%0A%0AThanks!{% endif %}" class="service-intro__cta">
+      <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_contact", lang=lang) }}
     </a>
   </section>
 
@@ -354,8 +354,8 @@
 
       <div class="quote-cta">
         <p class="quote-cta__text">{% if lang == "es" %}Cada proyecto es diferente. Contacta conmigo para hablar de tus necesidades y recibir un presupuesto personalizado.{% else %}Every project is different. Contact me to discuss your needs and get a personalized quote.{% endif %}</p>
-        <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="noopener" class="quote-cta__btn">
-          <i class="fa-brands fa-linkedin"></i> {{ trans(key="svc_request_quote", lang=lang) }}
+        <a href="mailto:hi@chemaclass.es?subject={% if lang == 'es' %}Presupuesto%20Web&body=Hola%20Chema%2C%0A%0AQué%20necesito%3A%0ATipo%20de%20sitio%3A%0A%0AGracias!{% else %}Website%20Quote&body=Hi%20Chema%2C%0A%0AWhat%20I%20need%3A%0AType%20of%20site%3A%0A%0AThanks!{% endif %}" class="quote-cta__btn">
+          <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_request_quote", lang=lang) }}
         </a>
       </div>
 
@@ -476,6 +476,11 @@
     <div class="portfolio-carousel__dots"></div>
   </section>
 
+  <p class="decision-tip">
+    <i class="fa-solid fa-compass"></i>
+    <strong>{% if lang == "es" %}¿Tech lead o manager?{% else %}Tech lead or manager?{% endif %}</strong>
+    {% if lang == "es" %}También ofrezco consultoría individual sobre liderazgo técnico, estrategia de ingeniería y dinámicas de equipo. <a href="{% if lang == 'es' %}/es{% endif %}/services/consulting/">Ver consultoría.</a>{% else %}I also offer one-on-one consulting on tech leadership, engineering strategy, and team dynamics. <a href="{% if lang == 'es' %}/es{% endif %}/services/consulting/">See consulting.</a>{% endif %}
+  </p>
 </article>
 
 {% endblock content %}

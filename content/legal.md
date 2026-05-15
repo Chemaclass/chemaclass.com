@@ -56,7 +56,7 @@ Since Cronitor RUM collects anonymized data, there is no personal data to delete
 
 ## Disclaimer
 
-The blog posts and articles on this site reflect my personal opinions and experiences. While I offer [professional services](/services/) for web development and team workshops, the free content published here is educational in nature and not a substitute for a formal consulting engagement.
+Content on this site reflects my personal opinions and experiences. It is educational, not a substitute for a formal engagement. I offer [professional services](/services/) as separate paid engagements.
 
 I am not responsible for the content of external websites linked from this site.
 

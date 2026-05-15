@@ -67,7 +67,7 @@
   <header class="projects-hero service-hero">
     <h1>{{ trans(key="svc_services", lang=lang) }}</h1>
     <p class="projects-hero__subtitle service-hero__subtitle">
-      {% if lang == "es" %}Con más de {{ config.extra.years_software }} años en desarrollo de software, ayudo a empresas y particulares a estar online con sitios web rápidos y profesionales. Si necesitas presencia web, puedo ayudarte.{% else %}With {{ config.extra.years_software }}+ years in software development, I help businesses and individuals get online with fast, professional websites. If you need a web presence, I can help.{% endif %}
+      {% if lang == "es" %}Soy un ingeniero de software y tech lead con más de 15 años de experiencia. Trabajo de forma independiente: construyendo webs, asesorando sobre prácticas de software y profundizando en temas sobre los que llevo años escribiendo. Esto es lo que ofrezco.{% else %}I'm a software engineer and tech lead with 15+ years of experience. I work independently: building websites, consulting on software practices, and going deep on topics I've been writing about for years. Here's what I offer.{% endif %}
     </p>
   </header>
 
@@ -82,20 +82,23 @@
           <span class="service-card__more">{{ trans(key="svc_learn_more", lang=lang) }} <i class="fa-solid fa-arrow-right"></i></span>
         </div>
         <h3>{{ trans(key="svc_static_websites", lang=lang) }}</h3>
+        <p class="service-card__audience">{% if lang == "es" %}Para empresas y profesionales{% else %}For businesses and professionals{% endif %}</p>
         <p>{% if lang == "es" %}Landing pages, portfolios, sitios corporativos. Rápidos, accesibles, fáciles de mantener.{% else %}Landing pages, portfolios, company sites. Fast, accessible, easy to maintain.{% endif %}</p>
         <span class="service-card__price">{{ trans(key="svc_request_quote", lang=lang) }}</span>
       </a>
 
-      <div class="service-card service-card--unavailable">
+      <a href="{% if lang == 'es' %}/es/services/consulting/{% else %}/services/consulting/{% endif %}" class="service-card">
         <div class="service-card__header">
           <div class="service-card__icon">
-            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-comments"></i>
           </div>
-          <span class="service-card__badge">{% if lang == "es" %}No disponible{% else %}Unavailable{% endif %}</span>
+          <span class="service-card__more">{{ trans(key="svc_learn_more", lang=lang) }} <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-        <h3>{{ trans(key="svc_workshops", lang=lang) }}</h3>
-        <p>{% if lang == "es" %}Sesiones de equipo sobre TDD, refactoring y pair programming a través de katas.{% else %}Team sessions on TDD, refactoring, and pair programming through katas.{% endif %}</p>
-      </div>
+        <h3>{% if lang == "es" %}Consultoría{% else %}Consulting{% endif %}</h3>
+        <p class="service-card__audience">{% if lang == "es" %}Para tech leads, EMs y CTOs{% else %}For tech leads, EMs, and CTOs{% endif %}</p>
+        <p>{% if lang == "es" %}Sesiones individuales sobre liderazgo técnico, decisiones de ingeniería y gestión de equipos.{% else %}One-on-one sessions on tech leadership, engineering decisions, and team dynamics.{% endif %}</p>
+        <span class="service-card__price">{{ trans(key="svc_book_session", lang=lang) }}</span>
+      </a>
 
     </div>
 
@@ -108,49 +111,6 @@
         <a href="mailto:hi@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Vale%20Regalo&body=Hola%20Chema,%0A%0AMe%20gustaría%20solicitar%20un%20vale%20regalo.%0A%0ATipo%20de%20vale:%0ANombre%20del%20destinatario:%0A%0AGracias!{% else %}Gift%20Voucher%20Inquiry&body=Hi%20Chema,%0A%0AI'd%20like%20to%20request%20a%20gift%20voucher.%0A%0AType%20of%20voucher:%0ARecipient%20name:%0A%0AThanks!{% endif %}" class="sessions-cta">
           <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_request_voucher", lang=lang) }}
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="services-faq" id="faq">
-    <h2 class="services-faq__title">{{ trans(key="svc_faq", lang=lang) }}</h2>
-    <div class="services-faq__list">
-      <div class="services-faq__item">
-        <button class="services-faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('open')">
-          {% if lang == "es" %}¿Cuánto tiempo tarda un sitio web?{% else %}How long does a website take?{% endif %}
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="services-faq__answer">
-          {% if lang == "es" %}Normalmente 2-4 semanas desde el primer contacto hasta el lanzamiento. Sitios más complejos con contenido personalizado pueden tardar un poco más.{% else %}Typically 2-4 weeks from first contact to launch. More complex sites with custom content may take a bit longer.{% endif %}
-        </div>
-      </div>
-      <div class="services-faq__item">
-        <button class="services-faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('open')">
-          {% if lang == "es" %}¿Puedo editar el contenido yo mismo?{% else %}Can I edit the content myself?{% endif %}
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="services-faq__answer">
-          {% if lang == "es" %}Sí. Los sitios estáticos usan archivos Markdown simples que puedes editar. WordPress incluye un panel de control completo. Te enseño a usar ambos.{% else %}Yes. Static sites use simple Markdown files you can edit. WordPress includes a full dashboard. I'll teach you to use either.{% endif %}
-        </div>
-      </div>
-      <div class="services-faq__item">
-        <button class="services-faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('open')">
-          {% if lang == "es" %}¿Qué incluye un sitio web típico?{% else %}What's included in a typical website?{% endif %}
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="services-faq__answer">
-          {% if lang == "es" %}4-5 páginas (inicio, sobre mí, contacto y un par de páginas personalizadas), diseño responsive, SEO básico, seguridad HTTPS, optimización de rendimiento y analíticas.{% else %}4-5 pages (homepage, about, contact, and a couple of custom pages), responsive design, SEO fundamentals, HTTPS security, performance optimization, and analytics.{% endif %}
-        </div>
-      </div>
-      <div class="services-faq__item">
-        <button class="services-faq__question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('open')">
-          {% if lang == "es" %}¿Ofreces mantenimiento continuo?{% else %}Do you offer ongoing maintenance?{% endif %}
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="services-faq__answer">
-          {% if lang == "es" %}Sí. Los sitios estáticos necesitan mantenimiento mínimo. WordPress requiere actualizaciones regulares. También ayudo con cambios puntuales. Contáctame para más detalles.{% else %}Yes. Static sites need minimal maintenance. WordPress requires regular updates. I also help with one-off changes. Contact me for details.{% endif %}
-        </div>
       </div>
     </div>
   </section>

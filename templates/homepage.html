@@ -130,6 +130,19 @@
         </div>
     </section>
 
+    <!-- Work with me Section -->
+    <section class="services-cta-section">
+      <div class="services-cta-inner">
+        <div class="services-cta-text">
+          <h2>{{ trans(key="home_services_cta", lang=lang) }}</h2>
+          <p>{% if lang == "es" %}Ofrezco consultoría individual sobre los temas en los que escribo: TDD, arquitectura, liderazgo, Bitcoin e IA. También desarrollo webs profesionales para negocios y particulares.{% else %}I offer 1:1 consulting on topics I write about: TDD, architecture, leadership, Bitcoin, and AI. I also build professional websites for businesses.{% endif %}</p>
+        </div>
+        <a href="{% if lang == 'es' %}/es/services/{% else %}/services/{% endif %}" class="services-cta-button">
+          {{ trans(key="svc_services", lang=lang) }} <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
     <!-- Latest Content Section -->
     <section class="latest-section">
         <div class="section-header">
@@ -249,6 +262,8 @@
             </a>
         </div>
     </section>
+
+    {% include "partials/newsletter-signup.html" %}
 
 </div>
 {% endblock content %}

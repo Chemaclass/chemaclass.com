@@ -192,6 +192,8 @@ newsletter_title = "Stay in the loop"
 newsletter_description = "Get notified when I publish new posts. No spam, unsubscribe anytime."
 newsletter_button = "Subscribe"
 newsletter_mail_subject = "Subscribe"
+newsletter_unsubscribe = "Unsubscribe"
+newsletter_unsubscribe_subject = "Unsubscribe"
 # Sponsor page
 sponsor_title = "Sponsor"
 sponsor_back = "Home"
@@ -287,6 +289,7 @@ svc_ready_level_up = "Ready to level up your team?"
 svc_services = "Services"
 svc_learn_more = "Learn more"
 svc_static_websites = "Static Websites"
+svc_book_session = "Book a session"
 svc_team_gifts = "Gift Vouchers"
 svc_request_voucher = "Request a voucher"
 svc_faq = "Frequently Asked Questions"
@@ -351,6 +354,9 @@ pricing_workshop_3_people = 1400
 pricing_workshop_4_6_min = 1900
 pricing_workshop_4_6_max = 2800
 pricing_workshop_8_people = 3800
+pricing_consulting_session = 100
+pricing_consulting_pack3 = 250
+pricing_consulting_pack3_save = 50
 
 # Spanish language configuration
 [languages.es]
@@ -534,6 +540,8 @@ newsletter_title = "Mantente al día"
 newsletter_description = "Recibe una notificación cuando publique nuevos artículos. Sin spam, cancela cuando quieras."
 newsletter_button = "Suscribirse"
 newsletter_mail_subject = "Suscribirse"
+newsletter_unsubscribe = "Cancelar suscripción"
+newsletter_unsubscribe_subject = "Cancelar suscripción"
 # Sponsor page
 sponsor_title = "Colabora"
 sponsor_back = "Inicio"
@@ -629,6 +637,7 @@ svc_ready_level_up = "¿Listo para potenciar a tu equipo?"
 svc_services = "Servicios"
 svc_learn_more = "Más información"
 svc_static_websites = "Desarrollo Web"
+svc_book_session = "Reservar sesión"
 svc_team_gifts = "Vales Regalo"
 svc_request_voucher = "Solicitar un vale"
 svc_faq = "Preguntas Frecuentes"

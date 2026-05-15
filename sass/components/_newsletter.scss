@@ -20,6 +20,14 @@
     line-height: 1.5;
   }
 
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
   &__button {
     display: inline-flex;
     align-items: center;
@@ -40,6 +48,19 @@
 
     i {
       font-size: 0.9rem;
+    }
+  }
+
+  &__unsubscribe {
+    font-size: 0.8rem;
+    color: var(--color-subtitle);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 1;
+      border-bottom: none;
     }
   }
 }

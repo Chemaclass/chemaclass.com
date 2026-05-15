@@ -645,6 +645,14 @@
   gap: 1rem;
   margin-bottom: 2rem;
 
+  &--3col {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
   @media (max-width: $breakpoint-tablet) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1191,11 +1199,19 @@
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
   border-radius: 12px;
-  padding: 2.5rem;
+  padding: 3rem 2.5rem;
   text-align: center;
+  margin-top: 3rem;
+
+  &__icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    display: block;
+  }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     margin: 0 0 0.75rem;
     color: var(--heading-color);
@@ -1203,10 +1219,12 @@
 
   > p {
     color: var(--color-subtitle);
-    margin: 0 0 1.5rem;
-    max-width: 500px;
+    margin: 0 0 1.75rem;
+    max-width: 480px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   &__buttons {
