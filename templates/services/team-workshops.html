@@ -33,7 +33,7 @@
   </header>
 
   <!-- Value Proposition -->
-  <section class="service-intro">
+  <section class="service-intro" id="intro">
     <p>{% if lang == "es" %}Pasa un día completo programando, testeando y refactorizando. Este taller es 100% práctico: trabajarás con una serie de katas de código independientes diseñadas para crear hábitos sólidos en testing, desarrollo guiado por tests (TDD) y refactoring. Principios agnósticos del lenguaje, adaptables al stack de tu equipo.{% else %}Spend a full day coding, testing, and refactoring. This workshop is all about practical, hands-on learning: you'll work through a series of independent code katas designed to help you build strong habits around testing, test-driven development (TDD), and refactoring. Language-agnostic principles, adaptable to your team's stack.{% endif %}</p>
     <a href="mailto:hi@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Taller%20de%20Equipo&body=Hola%20Chema%2C%0A%0AEstoy%20interesado%20en%20reservar%20un%20taller%20de%20equipo.%0A%0ATamaño%20del%20equipo%3A%0AFechas%20preferidas%3A%0A%0AGracias!{% else %}Team%20Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20booking%20a%20team%20workshop.%0A%0ATeam%20size%3A%0APreferred%20dates%3A%0A%0AThanks!{% endif %}" class="service-intro__cta">
       <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_book_workshop", lang=lang) }}
@@ -41,7 +41,7 @@
   </section>
 
   <!-- Workshop Schedule -->
-  <section class="service-options service-options-2">
+  <section class="service-options service-options-2" id="options">
     <div class="service-option">
       <div class="service-option__header">
         <div class="service-option__icon">
@@ -90,7 +90,7 @@
   </section>
 
   <!-- What you'll learn -->
-  <section class="service-decision">
+  <section class="service-decision" id="decide">
     <h2>{{ trans(key="svc_team_gains", lang=lang) }}</h2>
     <div class="decision-cards">
       <div class="decision-card">
@@ -125,7 +125,7 @@
   </section>
 
   <!-- How it works -->
-  <section class="service-process">
+  <section class="service-process" id="process">
     <h2>{{ trans(key="svc_how_i_work", lang=lang) }}</h2>
     <div class="process-steps">
       <div class="process-step">
@@ -158,7 +158,7 @@
       </div>
     </div>
 
-    <div class="budget-section">
+    <div class="budget-section" id="pricing">
       <div class="budget-header">
         <h3>{{ trans(key="svc_investment", lang=lang) }}</h3>
         <p>{% if lang == "es" %}Grupos de 3-8 participantes. Talleres presenciales en Berlín, remotos en otras ubicaciones.{% else %}Groups of 3-8 participants. On-site workshops in Berlin, remote for other locations.{% endif %}</p>
@@ -205,7 +205,7 @@
   </section>
 
   <!-- Workshop Resources -->
-  <section class="service-resources">
+  <section class="service-resources" id="resources">
     <h2>{{ trans(key="svc_workshop_resources", lang=lang) }}</h2>
     <p class="service-resources__intro">{% if lang == "es" %}Materiales y charlas relacionadas con el contenido del taller:{% else %}Materials and talks related to my workshop content:{% endif %}</p>
     <div class="resources-grid">
@@ -260,9 +260,20 @@
 
 {% block js %}
 <script>
-// Show pricing details if ?prices=1 is in URL
-if (new URLSearchParams(window.location.search).get('prices') === '1') {
-  document.querySelectorAll('.pricing-details').forEach(el => el.style.display = 'block');
-}
+// Show pricing details if prices=1 is in URL (query or malformed hash like #pricing?prices=1)
+(function() {
+  const search = new URLSearchParams(window.location.search);
+  const hash = window.location.hash;
+  const hashId = hash.includes('?') ? hash.substring(1, hash.indexOf('?')) : hash.substring(1);
+  const hashQuery = hash.includes('?') ? hash.substring(hash.indexOf('?') + 1) : '';
+  const fromHash = new URLSearchParams(hashQuery);
+  if (search.get('prices') === '1' || fromHash.get('prices') === '1') {
+    document.querySelectorAll('.pricing-details').forEach(el => el.style.display = 'block');
+    if (hashId) {
+      const target = document.getElementById(hashId);
+      if (target) target.scrollIntoView();
+    }
+  }
+})();
 </script>
 {% endblock js %}

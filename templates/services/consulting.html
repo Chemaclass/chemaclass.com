@@ -54,7 +54,7 @@
     <p class="service-hero__subtitle">{% if lang == "es" %}Para tech leads, engineering managers y CTOs navegando complejidad real.{% else %}For tech leads, engineering managers, and CTOs navigating real complexity.{% endif %}</p>
   </header>
 
-  <section class="service-intro">
+  <section class="service-intro" id="intro">
     <p>{% if lang == "es" %}He sido desarrollador, tech lead y manager en distintas empresas y culturas. No enseño teoría: comparto perspectiva construida haciendo el trabajo real.{% else %}I've been a developer, tech lead, and manager across different companies and cultures. I don't teach theory: I share perspective built from doing the actual work.{% endif %}</p>
     <p>{% if lang == "es" %}Tú traes el problema. Trabajamos en ello juntos, en directo, una hora.{% else %}You bring the problem. We work through it together, live, one hour.{% endif %}</p>
     <a href="mailto:hi@chemaclass.es?subject={% if lang == 'es' %}Consulta&body=Hola%20Chema%2C%0A%0ATema%3A%0ALo%20que%20quiero%20resolver%3A%0A%0AGracias!{% else %}Consulting%20Inquiry&body=Hi%20Chema%2C%0A%0ATopic%3A%0AWhat%20I%27m%20trying%20to%20figure%20out%3A%0A%0AThanks!{% endif %}" class="service-intro__cta">
@@ -62,7 +62,7 @@
     </a>
   </section>
 
-  <section class="service-process">
+  <section class="service-process" id="process">
     <h2>{% if lang == "es" %}Cómo funciona{% else %}How it works{% endif %}</h2>
     <div class="process-steps process-steps--3col">
       <div class="process-step">
@@ -90,7 +90,7 @@
 
   </section>
 
-  <section class="service-decision">
+  <section class="service-decision" id="topics">
     <h2>{% if lang == "es" %}Temas{% else %}Topics{% endif %}</h2>
     <div class="decision-cards">
       <div class="decision-card">
@@ -123,7 +123,7 @@
     </div>
   </section>
 
-  <section class="service-resources">
+  <section class="service-resources" id="resources">
     <h2>{% if lang == "es" %}Recursos relacionados{% else %}Related resources{% endif %}</h2>
     <div class="resources-grid">
       <a href="{% if lang == 'es' %}/es{% endif %}/blog/tech-lead/" class="resource-card">
@@ -149,7 +149,7 @@
     </div>
   </section>
 
-  <section class="service-process">
+  <section class="service-process" id="pricing">
     <div class="budget-section">
       <div class="budget-header">
         <h3>{% if lang == "es" %}Precios{% else %}Pricing{% endif %}</h3>

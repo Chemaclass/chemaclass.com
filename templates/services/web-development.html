@@ -33,7 +33,7 @@
   </header>
 
   <!-- Value Proposition -->
-  <section class="service-intro">
+  <section class="service-intro" id="intro">
     <p>{% if lang == "es" %}Toda empresa necesita una web, pero no todas necesitan el mismo tipo. Te ayudo a elegir el enfoque adecuado basado en tus necesidades reales, no en lo que está de moda o es innecesariamente complejo.{% else %}Every business needs a website, but not the same kind. I help you choose what actually fits your needs, not what's trendy or over-engineered.{% endif %}</p>
     <p>{% if lang == "es" %}Ofrezco dos tipos de sitios web, cada uno diseñado para diferentes situaciones. Entender la diferencia te ahorrará tiempo, dinero y frustraciones.{% else %}I offer two types of websites, each for a different situation. Knowing the difference saves you time, money, and frustration.{% endif %}</p>
     <a href="mailto:hi@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Web&body=Hola%20Chema%2C%0A%0AQué%20necesito%3A%0A%0AGracias!{% else %}Web%20Development%20Inquiry&body=Hi%20Chema%2C%0A%0AWhat%20I%20need%3A%0A%0AThanks!{% endif %}" class="service-intro__cta">
@@ -69,7 +69,7 @@
   </section>
 
   <!-- Options Grid -->
-  <section class="service-options service-options-2">
+  <section class="service-options service-options-2" id="options">
     <div class="service-option">
       <div class="service-option__header">
         <div class="service-option__icon">
@@ -145,7 +145,7 @@
   </section>
 
   <!-- Decision Helper -->
-  <section class="service-decision">
+  <section class="service-decision" id="decide">
     <h2>{{ trans(key="svc_not_sure", lang=lang) }}</h2>
     <div class="decision-cards decision-cards--2col">
       <div class="decision-card">
@@ -172,7 +172,7 @@
   </section>
 
   <!-- Process & Budget -->
-  <section class="service-process">
+  <section class="service-process" id="process">
     <h2>{{ trans(key="svc_how_i_work", lang=lang) }}</h2>
     <div class="process-steps">
       <div class="process-step">
@@ -205,7 +205,7 @@
       </div>
     </div>
 
-    <div class="budget-section">
+    <div class="budget-section" id="budget">
       <div class="budget-header">
         <h3>{{ trans(key="svc_budget", lang=lang) }}</h3>
         <p>{% if lang == "es" %}Trabajo directo contigo, sin intermediarios. Calidad senior, precios competitivos, entrega en menos de un mes. Vista previa desde el primer día, feedback diario, iteraciones cortas.{% else %}I work directly with you, no middlemen. Senior quality, competitive rates, delivery in less than a month. Preview from day one, daily feedback, short iterations.{% endif %}</p>
@@ -258,7 +258,7 @@
   </section>
 
   <!-- Portfolio -->
-  <section class="service-portfolio">
+  <section class="service-portfolio" id="portfolio">
     <h2>{{ trans(key="svc_recent_work", lang=lang) }}</h2>
     <div class="portfolio-carousel">
       <button class="portfolio-carousel__btn portfolio-carousel__btn--prev" aria-label="Previous">
@@ -376,10 +376,21 @@
 
 {% block js %}
 <script>
-// Show pricing details if ?prices=1 is in URL
-if (new URLSearchParams(window.location.search).get('prices') === '1') {
-  document.querySelectorAll('.pricing-details').forEach(el => el.style.display = 'block');
-}
+// Show pricing details if prices=1 is in URL (query or malformed hash like #budget?prices=1)
+(function() {
+  const search = new URLSearchParams(window.location.search);
+  const hash = window.location.hash;
+  const hashId = hash.includes('?') ? hash.substring(1, hash.indexOf('?')) : hash.substring(1);
+  const hashQuery = hash.includes('?') ? hash.substring(hash.indexOf('?') + 1) : '';
+  const fromHash = new URLSearchParams(hashQuery);
+  if (search.get('prices') === '1' || fromHash.get('prices') === '1') {
+    document.querySelectorAll('.pricing-details').forEach(el => el.style.display = 'block');
+    if (hashId) {
+      const target = document.getElementById(hashId);
+      if (target) target.scrollIntoView();
+    }
+  }
+})();
 
 // Portfolio Carousel
 (function() {
