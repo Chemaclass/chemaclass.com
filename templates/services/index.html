@@ -16,8 +16,6 @@
 {% endblock styles %}
 
 {% block posthead %}
-<link rel="preload" href="{{ get_url(path='github-stars.js') | safe }}" as="script">
-
 <!-- FAQPage Schema -->
 <script type="application/ld+json">
 {
@@ -26,34 +24,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "{% if lang == 'es' %}¿Cuánto tiempo tarda un sitio web?{% else %}How long does a website take?{% endif %}",
+      "name": "{% if lang == 'es' %}¿Cuál servicio es el adecuado para mí?{% else %}Which service is right for me?{% endif %}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{% if lang == 'es' %}Normalmente 2-4 semanas desde el primer contacto hasta el lanzamiento. Sitios más complejos con contenido personalizado pueden tardar un poco más.{% else %}Typically 2-4 weeks from first contact to launch. More complex sites with custom content may take a bit longer.{% endif %}"
+        "text": "{% if lang == 'es' %}Si necesitas una web construida, elige Desarrollo Web. Si quieres pensar en voz alta sobre un reto técnico o de liderazgo, elige Consultoría.{% else %}If you need a website built, choose Web Development. If you want to think through a technical or leadership challenge, choose Consulting.{% endif %}"
       }
     },
     {
       "@type": "Question",
-      "name": "{% if lang == 'es' %}¿Puedo editar el contenido yo mismo?{% else %}Can I edit the content myself?{% endif %}",
+      "name": "{% if lang == 'es' %}¿Con qué rapidez puedes empezar?{% else %}How quickly can you start?{% endif %}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{% if lang == 'es' %}Sí. Los sitios estáticos usan archivos Markdown simples que puedes editar. WordPress incluye un panel de control completo. Te enseño a usar ambos.{% else %}Yes. Static sites use simple Markdown files you can edit. WordPress includes a full dashboard. I'll teach you to use either.{% endif %}"
+        "text": "{% if lang == 'es' %}Normalmente puedo empezar en una semana. Escríbeme con lo que necesitas y acordamos el horario.{% else %}I can usually start within a week. Email me with what you need and we'll agree on timing.{% endif %}"
       }
     },
     {
       "@type": "Question",
-      "name": "{% if lang == 'es' %}¿Qué incluye un sitio web típico?{% else %}What's included in a typical website?{% endif %}",
+      "name": "{% if lang == 'es' %}¿Trabajas con clientes fuera de España?{% else %}Do you work with clients outside Spain?{% endif %}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{% if lang == 'es' %}4-5 páginas (inicio, sobre mí, contacto y un par de páginas personalizadas), diseño responsive, SEO básico, seguridad HTTPS, optimización de rendimiento y analíticas.{% else %}4-5 pages (homepage, about, contact, and a couple of custom pages), responsive design, SEO fundamentals, HTTPS security, performance optimization, and analytics.{% endif %}"
+        "text": "{% if lang == 'es' %}Sí, trabajo completamente en remoto. He trabajado con clientes y equipos de Alemania, España y otros países.{% else %}Yes, fully remote. I've worked with clients and teams from Germany, Spain, and elsewhere.{% endif %}"
       }
     },
     {
       "@type": "Question",
-      "name": "{% if lang == 'es' %}¿Ofreces mantenimiento continuo?{% else %}Do you offer ongoing maintenance?{% endif %}",
+      "name": "{% if lang == 'es' %}¿Cómo funciona el precio?{% else %}How does pricing work?{% endif %}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{% if lang == 'es' %}Sí. Los sitios estáticos necesitan mantenimiento mínimo. WordPress requiere actualizaciones regulares. También ayudo con cambios puntuales.{% else %}Yes. Static sites need minimal maintenance. WordPress requires regular updates. I also help with one-off changes.{% endif %}"
+        "text": "{% if lang == 'es' %}Webs: precio cerrado tras una llamada gratuita de discovery. Consultoría: por sesión. Escríbeme para un presupuesto personalizado.{% else %}Websites: fixed quote after a free discovery call. Consulting: per session. Email me for details.{% endif %}"
       }
     }
   ]
@@ -102,241 +100,117 @@
 
     </div>
 
-    <div class="services-sessions" id="voucher">
-      <div class="sessions-content">
-        <h3><i class="fa-solid fa-gift"></i> {{ trans(key="svc_team_gifts", lang=lang) }}</h3>
-        <p>{% if lang == "es" %}¿Conoces a alguien que <a href="/es/services/web-development/#everywebsite">necesita una web</a>? Contáctame para opciones.{% else %}Know someone who <a href="/services/web-development/#everywebsite">needs a website</a>? Contact me to discuss options.{% endif %}</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="services-testimonials">
+    <h2>{% if lang == "es" %}Lo que dicen{% else %}What people say{% endif %}</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <blockquote>{% if lang == "es" %}"Exactamente lo que necesitábamos, con una sección de conciertos perfecta para que los fans sigan la agenda."{% else %}"Exactly what we needed, with a concerts section our fans love to follow."{% endif %}</blockquote>
+        <footer>
+          <img src="/images/testimonials/adrian-teina.jpg" alt="Adrian" class="testimonial-card__avatar">
+          <div>
+            <strong>Adrián</strong>
+            <span>{% if lang == "es" %}Banda de indie rock, Teína{% else %}Indie rock band, Teína{% endif %}</span>
+          </div>
+          <a href="https://teina.es" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </footer>
       </div>
-      <div class="sessions-actions">
-        <a href="mailto:hi@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Vale%20Regalo&body=Hola%20Chema,%0A%0AMe%20gustaría%20solicitar%20un%20vale%20regalo.%0A%0ATipo%20de%20vale:%0ANombre%20del%20destinatario:%0A%0AGracias!{% else %}Gift%20Voucher%20Inquiry&body=Hi%20Chema,%0A%0AI'd%20like%20to%20request%20a%20gift%20voucher.%0A%0AType%20of%20voucher:%0ARecipient%20name:%0A%0AThanks!{% endif %}" class="sessions-cta">
-          <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_request_voucher", lang=lang) }}
-        </a>
+      <div class="testimonial-card">
+        <blockquote>{% if lang == "es" %}"Un portfolio rápido y limpio para compartir mi trabajo, investigación y publicaciones sin fricciones."{% else %}"A fast, clean portfolio to share my work, research, and publications seamlessly."{% endif %}</blockquote>
+        <footer>
+          <img src="/images/testimonials/fco-sandoval.jpg" alt="Francisco" class="testimonial-card__avatar">
+          <div>
+            <strong>Francisco</strong>
+            <span>{% if lang == "es" %}Arquitecto, Portfolio personal{% else %}Architect, Personal Portfolio{% endif %}</span>
+          </div>
+          <a href="https://fco-sandoval-gomez.es" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </footer>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>{% if lang == "es" %}"Nuestros clientes nos encuentran fácilmente y reservan directamente desde la web. Limpia, rápida y profesional."{% else %}"Our clients find us easily and book directly from the site. Clean, fast, and professional."{% endif %}</blockquote>
+        <footer>
+          <img src="/images/testimonials/carlos-dkrisna.svg" alt="Carlos" class="testimonial-card__avatar">
+          <div>
+            <strong>Carlos</strong>
+            <span>{% if lang == "es" %}Centro de belleza, D'Krisna{% else %}Beauty &amp; wellness, D'Krisna{% endif %}</span>
+          </div>
+          <a href="https://dkrisna.es" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </footer>
       </div>
     </div>
   </section>
 
-  <!-- Projects Tabs -->
-  <section class="projects-tabs" id="projects">
-    <div class="tabs-nav" role="tablist" aria-label="{% if lang == 'es' %}Categorías de proyectos{% else %}Project categories{% endif %}">
-      <button class="tab-btn active" data-tab="websites" role="tab" aria-selected="true" aria-controls="tab-websites" id="btn-websites" tabindex="0">
-        <i class="fa-solid fa-globe"></i> {{ trans(key="svc_websites", lang=lang) }}
-      </button>
-      <button class="tab-btn" data-tab="featured" role="tab" aria-selected="false" aria-controls="tab-featured" id="btn-featured" tabindex="-1">
-        <i class="fa-solid fa-star"></i> {{ trans(key="svc_featured_oss", lang=lang) }}
-      </button>
-      <button class="tab-btn" data-tab="more" role="tab" aria-selected="false" aria-controls="tab-more" id="btn-more" tabindex="-1">
-        <i class="fa-solid fa-code"></i> {{ trans(key="svc_more_projects", lang=lang) }}
-      </button>
-    </div>
-
-    <!-- Featured Projects Tab -->
-    <div class="tab-panel" id="featured" role="tabpanel" aria-labelledby="btn-featured">
-      <div class="projects-featured__grid">
-        {% for project in section.extra.headliners %}
-        <a href="https://github.com/{{ project.github }}" target="_blank" rel="noopener noreferrer" class="project-card project-card--featured" data-repo="{{ project.github }}">
-          <div class="project-header">
-            <span class="project-icon">
-              {% if project.icon == "bashunit" %}
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.8 362.8"><path d="M317.5 0H45.4C20.3 0 0 20.3 0 45.4v272.1c0 25 20.3 45.4 45.4 45.4h272.1c25 0 45.4-20.3 45.4-45.4V45.4C362.8 20.3 342.5 0 317.5 0z" fill="#2e3436"/><path d="M259.3 317.5c11.2-4 21.6-10.1 30.5-17.9 4.9 10.9 15.7 17.9 27.6 17.9h-58.1zM226.8 45.3h-90.7C86 45.3 45.3 86 45.3 136.1v38.3c12.5-34.8 43.9-59.4 80.7-63.3.6-17.5 2.8-35 6.8-52.1a5.68 5.68 0 0 1 4.5-4.3c3.1-.5 6 1.5 6.6 4.6 3 16.8 10.6 32.5 22 45.2 1.6 1.8 2.9 3.9 3.9 6.1h5.4c2.4-21.3 12.9-40.9 29.3-54.6 1.3-1.1 3-1.5 4.6-1.2 3.1.6 5.1 3.5 4.6 6.6-3 16.8-1.2 34.2 5.2 50 .4.9.7 1.9.9 2.9 19.5 7.7 32.3 26.5 32.3 47.5v29.8c0 15.6-12.7 28.3-28.3 28.3h-78c-1.6 0-2.8-1.3-2.8-2.8 0-1.6 1.3-2.8 2.8-2.8h78c12.5 0 22.7-10.2 22.7-22.7v-29.8c0-25-20.3-45.4-45.3-45.4H136c-50.1 0-90.7 40.6-90.7 90.7v19.8c0 50.1 40.6 90.7 90.7 90.7h90.7c50.1 0 90.7-40.6 90.7-90.7v-90.7c.1-50.2-40.5-90.9-90.6-90.9zm-78 119.8c0-13.5 11-24.4 24.5-24.4s24.4 11 24.4 24.5-11 24.4-24.5 24.4c-13.4 0-24.4-11-24.4-24.5z" fill="#eceeee"/><path d="M161.7 108.3c-12.1-13.5-20.2-30.1-23.4-48-4.5 19.5-6.8 39.5-6.8 59.6a17.31 17.31 0 0 0 17.3 17.3 17.31 17.31 0 0 0 17.3-17.3c0-4.4-1.6-8.5-4.4-11.6zm51.5 3.7c-6.3-16.5-8.1-34.3-5-51.7C193.1 73 183.3 91 181 110.6h20.3c4 0 8 .4 11.9 1.4z" fill="#8ae234"/></svg>
-              {% elif project.icon == "phel" %}
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.3 167.7"><path d="M6 66l95 96h36V93l-36-74H42L6 56v106h36l24-35" fill="none" stroke="#512da8" stroke-width="8"/><path d="M137 93l58-3-12-58-32-26h-34l-16 13-23 9-12 22 46 52z" fill="none" stroke="#512da8" stroke-width="8"/><path d="M195 90l-12 57h-13l-2-56m2 56l-13-11h12" fill="none" stroke="#512da8" stroke-width="8"/></svg>
-              {% elif project.icon == "gacela" %}
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 480"><g fill="none" stroke="#5a9fd4" stroke-width="8" stroke-linejoin="round"><path d="M5.9,287.9 24.8,229.5 58.4,205.4 43.6,242z"/><path d="M12.6,462.5 29.1,442.1 32,469.2z"/><path d="M27.1,330.5 33.9,345.4 50.4,346.9 29.1,442.1 12.6,462.5z"/><path d="M55.4,262.7 83.5,217.2 147.9,214.9 120.9,292.2 50.4,346.9 33.9,345.4 27.1,330.5z"/><path d="M58.4,205.4 83.5,217.2 55.4,262.7 43.6,242z"/><path d="M71.9,343.9 98.8,348.1 111,439.2 103.6,461.9z"/><path d="M111,439.2 121.9,461.9 103.6,461.9z"/><path d="M120.9,292.2 218.8,302.7 229.3,267.4 264.4,232.2 147.9,214.9z"/><path d="M144.5,294.9 120.9,292.2 71.9,330.3 71.9,343.9 98.8,348.1z"/><path d="M176.9,467.3 195.1,448 228.7,367.2 207.6,367.2 202.8,356.8z"/><path d="M176.9,467.7 195.1,448 199.1,472.5z"/><path d="M202.8,356.8 229.3,267.4 264.4,232.2 285.5,273.2 228.7,367.2 207.6,367.2z"/><path d="M272.3,16.2 376.8,61.5 405.4,106.3 390.4,136.3 383.5,132.1 384.6,121.9 363.5,68.7z"/><path d="M293.1,9.4 386.3,60.6 412.3,101.7 405.4,106.3 376.8,61.5 340.4,45.7z"/><path d="M302.9,177.3 147.9,214.9 83.5,217.2 58.4,205.4 133.5,179.7z"/><path d="M302.9,177.3 379.2,108.2 384.6,121.9 383.5,132.1 390.4,136.3 338.1,192.9z"/><path d="M303.3,368.6 274.2,297.1 310,267.1 325.5,351.3z"/><path d="M325.5,351.3 354.6,445.2 344.4,462.2 303.3,368.6z"/><path d="M338.1,192.9 264.4,232.2 147.9,214.9 302.9,177.3z"/><path d="M344.4,462.2 354.6,445.2 362.3,462.2z"/><path d="M365.3,220.7 267.6,302.7 285.5,273.2 264.4,232.2 338.1,192.9z"/><path d="M365.3,220.7 410.9,165.5 390.4,136.3 338.1,192.9z"/><path d="M390.4,136.3 383.5,132.1 389.4,78.9 400.3,116.6z"/><path d="M410.9,165.5 475.6,166.2 390.4,136.3z"/><path d="M412.3,101.7 433,124.8 482.2,151.3 475.6,166.2 390.4,136.3 405.4,106.3z"/><path d="M414.5,77 409.2,96.7 405.6,91z"/></g></svg>
-              {% endif %}
-            </span>
-            <div class="project-title">
-              <h3>{{ project.name }}</h3>
-              <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count"></span></span>
-            </div>
-          </div>
-          <p>{{ project.description }}</p>
-          <div class="project-meta">
-            {% if project.tech %}
-            <div class="tech-badges">
-              {% for tech in project.tech %}
-              <span class="tech-badge tech-badge--{{ tech | lower }}">
-                {% if tech == "PHP" %}<i class="fa-brands fa-php"></i>
-                {% elif tech == "Bash" %}<i class="fa-solid fa-terminal"></i>
-                {% elif tech == "Lisp" %}<i class="fa-solid fa-code"></i>
-                {% elif tech == "Python" %}<i class="fa-brands fa-python"></i>
-                {% elif tech == "Vue" %}<i class="fa-brands fa-vuejs"></i>
-                {% elif tech == "Go" %}<i class="fa-brands fa-golang"></i>
-                {% elif tech == "TypeScript" %}<i class="fa-brands fa-js"></i>
-                {% elif tech == "Phel" %}<i class="fa-solid fa-code"></i>
-                {% else %}<i class="fa-solid fa-code"></i>{% endif %}
-                {{ tech }}
-              </span>
-              {% endfor %}
-            </div>
-            {% endif %}
-            {% if project.type %}
-            <span class="project-type">
-              {% if project.type == "library" %}<i class="fa-solid fa-cube"></i>
-              {% elif project.type == "tool" %}<i class="fa-solid fa-wrench"></i>
-              {% elif project.type == "app" %}<i class="fa-solid fa-rocket"></i>
-              {% elif project.type == "website" %}<i class="fa-solid fa-globe"></i>
-              {% elif project.type == "language" %}<i class="fa-solid fa-language"></i>
-              {% elif project.type == "docs" %}<i class="fa-solid fa-book"></i>
-              {% endif %}
-              {{ project.type }}
-            </span>
-            {% endif %}
-            {% if project.status %}
-            <span class="project-status project-status--{{ project.status | lower }}">{{ project.status }}</span>
-            {% endif %}
-          </div>
-        </a>
-        {% endfor %}
+  <!-- FAQ -->
+  <section class="services-faq">
+    <h2 class="services-faq__title">{% if lang == "es" %}Preguntas frecuentes{% else %}Common questions{% endif %}</h2>
+    <div class="services-faq__list">
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false">
+          {% if lang == "es" %}¿Cuál servicio es el adecuado para mí?{% else %}Which service is right for me?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}Si necesitas una web construida, elige <a href="/es/services/web-development/">Desarrollo Web</a>. Si quieres pensar en voz alta sobre un reto técnico o de liderazgo con alguien que lo ha vivido, elige <a href="/es/services/consulting/">Consultoría</a>.{% else %}If you need a website built, go to <a href="/services/web-development/">Web Development</a>. If you want to think through a technical or leadership challenge with someone who has been there, go to <a href="/services/consulting/">Consulting</a>.{% endif %}
+        </div>
       </div>
-    </div>
-
-    <!-- Websites Tab -->
-    <div class="tab-panel active" id="websites" role="tabpanel" aria-labelledby="btn-websites">
-      <div class="projects-personal__grid projects-personal__grid--websites">
-        {% for website in section.extra.websites %}
-        <a href="{{ website.url }}" target="_blank" rel="noopener noreferrer" class="project-card project-card--simple project-card--with-image{% if website.hide_on_tablet %} project-card--hiddable{% endif %}">
-          {% if website.image %}
-          <div class="project-card__image">
-            <img src="{{ website.image }}" alt="{{ website.name }}" loading="lazy">
-          </div>
-          {% endif %}
-          <div class="project-card__header">
-            <h3>{{ website.name }}</h3>
-            <div class="project-card__meta">
-              <span class="project-card__github-link" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://github.com/{{ website.github }}', '_blank');" title="{% if lang == 'es' %}Ver código en GitHub{% else %}View source on GitHub{% endif %}">
-                <i class="fa-brands fa-github"></i>
-              </span>
-            </div>
-          </div>
-          <p>{{ website.description }}</p>
-          <div class="project-card__footer">
-            {% if website.tech %}
-            <div class="tech-badges tech-badges--small">
-              {% for tech in website.tech %}
-              <span class="tech-badge tech-badge--{{ tech | lower }}">
-                {% if tech == "Vue" %}<i class="fa-brands fa-vuejs"></i>
-                {% elif tech == "Zola" %}<i class="fa-solid fa-bolt"></i>
-                {% elif tech == "SCSS" %}<i class="fa-brands fa-sass"></i>
-                {% else %}<i class="fa-solid fa-code"></i>{% endif %}
-              </span>
-              {% endfor %}
-            </div>
-            {% endif %}
-            <div class="project-card__tags">
-              <span class="project-tag project-tag--live"><i class="fa-solid fa-circle"></i> Live</span>
-            </div>
-          </div>
-        </a>
-        {% endfor %}
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false">
+          {% if lang == "es" %}¿Con qué rapidez puedes empezar?{% else %}How quickly can you start?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}Normalmente puedo empezar en una semana. Escríbeme con lo que necesitas y acordamos el horario.{% else %}Usually within a week. Email me with what you need and we'll agree on timing.{% endif %}
+        </div>
       </div>
-    </div>
-
-    <!-- More Projects Tab -->
-    <div class="tab-panel" id="more" role="tabpanel" aria-labelledby="btn-more">
-      <div class="projects-personal__grid">
-        {% for project in section.extra.projects %}
-        <a href="https://github.com/{{ project.github }}" target="_blank" rel="noopener noreferrer" class="project-card project-card--simple{% if project.featured %} project-card--highlight{% endif %}{% if project.hide_on_tablet %} project-card--hiddable{% endif %}" data-repo="{{ project.github }}">
-          <div class="project-card__header">
-            <h3>{{ project.name }}</h3>
-            <div class="project-card__meta">
-              {% if project.status %}
-              <span class="project-status project-status--small project-status--{{ project.status | lower }}">{{ project.status }}</span>
-              {% endif %}
-              <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count"></span></span>
-            </div>
-          </div>
-          <p>{{ project.description }}</p>
-          <div class="project-card__footer">
-            {% if project.tech %}
-            <div class="tech-badges tech-badges--small">
-              {% for tech in project.tech %}
-              <span class="tech-badge tech-badge--{{ tech | lower }}">
-                {% if tech == "PHP" %}<i class="fa-brands fa-php"></i>
-                {% elif tech == "Bash" %}<i class="fa-solid fa-terminal"></i>
-                {% elif tech == "Python" %}<i class="fa-brands fa-python"></i>
-                {% elif tech == "Vue" %}<i class="fa-brands fa-vuejs"></i>
-                {% elif tech == "Go" %}<i class="fa-brands fa-golang"></i>
-                {% elif tech == "Phel" %}<i class="fa-solid fa-code"></i>
-                {% else %}<i class="fa-solid fa-code"></i>{% endif %}
-              </span>
-              {% endfor %}
-            </div>
-            {% endif %}
-            {% if project.tags %}
-            <div class="project-card__tags">
-              {% for tag in project.tags %}
-              <span class="project-tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
-            {% endif %}
-          </div>
-        </a>
-        {% endfor %}
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false">
+          {% if lang == "es" %}¿Trabajas con clientes fuera de España?{% else %}Do you work with clients outside Spain?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}Sí, trabajo completamente en remoto. He trabajado con clientes y equipos de Alemania, España y otros países.{% else %}Yes, fully remote. Past clients and teams from Germany, Spain, and elsewhere.{% endif %}
+        </div>
+      </div>
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false">
+          {% if lang == "es" %}¿Cómo funciona el precio?{% else %}How does pricing work?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}Webs: precio cerrado tras una llamada gratuita de discovery. Sin sorpresas. Consultoría: por sesión, sin suscripciones. Escríbeme para los detalles.{% else %}Websites: fixed quote after a free discovery call. No surprises. Consulting: per session, no subscriptions. Email me for details.{% endif %}
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Optional: Page content from markdown -->
-  {% if section.content %}
-  <section class="projects-content">
-    {{ section.content | safe }}
+  <!-- Bottom CTA -->
+  <section class="service-cta">
+    <div class="service-cta__icon"><i class="fa-solid fa-envelope"></i></div>
+    <h2>{% if lang == "es" %}¿Por dónde empezamos?{% else %}Where do we start?{% endif %}</h2>
+    <p>{% if lang == "es" %}Cuéntame qué necesitas. Respondo en menos de 24 horas.{% else %}Tell me what you need. I reply within 24 hours.{% endif %}</p>
+    <div class="service-cta__buttons">
+      <a href="mailto:hi@chemaclass.es?subject={% if lang == 'es' %}Consulta%20Web&body=Hola%20Chema%2C%0A%0AQué%20necesito%3A%0A%0AGracias!{% else %}Web%20Development%20Inquiry&body=Hi%20Chema%2C%0A%0AWhat%20I%20need%3A%0A%0AThanks!{% endif %}" class="service-cta__btn">
+        <i class="fa-solid fa-globe"></i> {% if lang == "es" %}Necesito una web{% else %}I need a website{% endif %}
+      </a>
+      <a href="mailto:hi@chemaclass.es?subject={% if lang == 'es' %}Consulta&body=Hola%20Chema%2C%0A%0ATema%3A%0ALo%20que%20quiero%20resolver%3A%0A%0AGracias!{% else %}Consulting%20Inquiry&body=Hi%20Chema%2C%0A%0ATopic%3A%0AWhat%20I%27m%20trying%20to%20figure%20out%3A%0A%0AThanks!{% endif %}" class="service-cta__btn service-cta__btn--secondary">
+        <i class="fa-solid fa-comments"></i> {% if lang == "es" %}Quiero una sesión{% else %}I want a session{% endif %}
+      </a>
+    </div>
   </section>
-  {% endif %}
 </article>
 
 {% endblock content %}
 
 {% block js %}
-<script type="text/javascript" src="{{ get_url(path='github-stars.js') | safe }}" defer></script>
 <script>
-const tabs = document.querySelectorAll('.tab-btn');
-const panels = document.querySelectorAll('.tab-panel');
-const validTabs = Array.from(tabs).map(t => t.dataset.tab);
-
-function switchTab(newTab, { updateHash = true, focus = true } = {}) {
-  tabs.forEach(t => {
-    t.classList.remove('active');
-    t.setAttribute('aria-selected', 'false');
-    t.setAttribute('tabindex', '-1');
-  });
-  panels.forEach(p => p.classList.remove('active'));
-
-  newTab.classList.add('active');
-  newTab.setAttribute('aria-selected', 'true');
-  newTab.setAttribute('tabindex', '0');
-  if (focus) newTab.focus();
-  document.getElementById(newTab.dataset.tab).classList.add('active');
-
-  if (updateHash) {
-    history.replaceState(null, '', '#' + newTab.dataset.tab);
-  }
-}
-
-function activateFromHash() {
-  const id = window.location.hash.slice(1);
-  if (!validTabs.includes(id)) return;
-  const target = document.querySelector(`.tab-btn[data-tab="${id}"]`);
-  if (target) switchTab(target, { updateHash: false, focus: false });
-}
-
-tabs.forEach(btn => {
-  btn.addEventListener('click', () => switchTab(btn));
-
-  btn.addEventListener('keydown', (e) => {
-    const tabArray = Array.from(tabs);
-    const index = tabArray.indexOf(btn);
-
-    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-      e.preventDefault();
-      const nextIndex = e.key === 'ArrowRight'
-        ? (index + 1) % tabArray.length
-        : (index - 1 + tabArray.length) % tabArray.length;
-      switchTab(tabArray[nextIndex]);
-    }
+document.querySelectorAll('.services-faq__question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.nextElementSibling.classList.toggle('open', !expanded);
   });
 });
-
-activateFromHash();
-window.addEventListener('hashchange', activateFromHash);
 </script>
 {% endblock js %}

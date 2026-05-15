@@ -901,6 +901,129 @@
   border-top: 1px solid var(--preview-divider-color);
 }
 
+// Testimonials Section
+.services-testimonials {
+  margin-top: 4rem;
+
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 2rem;
+    color: var(--heading-color);
+  }
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testimonial-card {
+  background: var(--search-input-bg);
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: 0.75rem;
+    right: 1.25rem;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: var(--accent-color);
+    opacity: 0.12;
+    font-family: Georgia, serif;
+    pointer-events: none;
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--body-color);
+    font-style: italic;
+    opacity: 1;
+    flex: 1;
+
+    &::before, &::after {
+      content: none;
+    }
+  }
+
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: var(--search-bg-selected-item);
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--preview-divider-color);
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      flex: 1;
+    }
+
+    strong {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--heading-color);
+    }
+
+    span {
+      font-size: 0.78rem;
+      color: var(--color-subtitle);
+    }
+  }
+}
+
+.testimonial-card__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: var(--accent-color);
+  text-decoration: none;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.2s ease, background 0.2s ease;
+
+  i {
+    font-size: 0.7rem;
+  }
+
+  &:hover {
+    opacity: 1;
+    background: var(--search-bg-selected-item);
+    border-bottom: none;
+  }
+}
+
 // FAQ Section
 .services-faq {
   margin-top: 4rem;
@@ -967,7 +1090,7 @@
 
   &__answer {
     display: none;
-    padding: 0 1.25rem 1rem;
+    padding: 0.75rem 1.25rem 1rem;
     font-size: 0.9rem;
     color: var(--color-subtitle);
     line-height: 1.6;
