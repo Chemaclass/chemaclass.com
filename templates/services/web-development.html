@@ -69,7 +69,7 @@
   </section>
 
   <!-- Options Grid -->
-  <section class="service-options service-options-3">
+  <section class="service-options service-options-2">
     <div class="service-option">
       <div class="service-option__header">
         <div class="service-option__icon">
@@ -142,41 +142,6 @@
       </div>
     </div>
 
-    <div class="service-option service-option--unavailable">
-      <div class="service-option__header">
-        <div class="service-option__icon service-option__icon--secondary">
-          <i class="fa-brands fa-wordpress"></i>
-        </div>
-        <h2>{{ trans(key="svc_wordpress", lang=lang) }}</h2>
-        <span class="service-option__badge">{% if lang == "es" %}No disponible{% else %}Unavailable{% endif %}</span>
-      </div>
-
-      <p class="service-option__desc">{% if lang == "es" %}Un sitio web flexible que puedes editar tú mismo a través de un panel intuitivo. Control total sobre tu contenido.{% else %}A flexible website you can edit yourself through a user-friendly dashboard. Full control over your content.{% endif %}</p>
-
-      <div class="service-option__benefits">
-        <h3>{{ trans(key="svc_what_you_get", lang=lang) }}</h3>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Edita contenido sin tocar código{% else %}Edit content without touching code{% endif %}</li>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Añade páginas, posts e imágenes{% else %}Add pages, posts, and images yourself{% endif %}</li>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Múltiples editores en el equipo{% else %}Multiple team members can contribute{% endif %}</li>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Miles de plugins disponibles{% else %}Thousands of plugins available{% endif %}</li>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Interfaz familiar{% else %}Familiar interface{% endif %}</li>
-        </ul>
-      </div>
-
-      <div class="service-option__ideal">
-        <h3>{{ trans(key="svc_ideal_for", lang=lang) }}</h3>
-        <ul>
-          <li>{% if lang == "es" %}Blogs y sitios de noticias{% else %}Blogs and news sites{% endif %}</li>
-          <li>{% if lang == "es" %}Sitios con múltiples editores{% else %}Sites with multiple editors{% endif %}</li>
-          <li>{% if lang == "es" %}Actualizaciones frecuentes de contenido{% else %}Frequent content updates{% endif %}</li>
-        </ul>
-      </div>
-
-      <div class="service-option__consideration">
-        <strong>{{ trans(key="svc_one_thing", lang=lang) }}</strong> {% if lang == "es" %}Más flexibilidad significa más mantenimiento. WordPress necesita actualizaciones regulares y atención de seguridad, lo que se traduce en mayores costes a largo plazo.{% else %}More flexibility means more maintenance. WordPress needs regular updates and security attention, which translates to higher long-term costs.{% endif %}
-      </div>
-    </div>
   </section>
 
   <!-- Comparison Table -->
@@ -189,7 +154,6 @@
             <th></th>
             <th class="col-static"><i class="fa-solid fa-bolt"></i>{{ trans(key="svc_static", lang=lang) }}</th>
             <th class="col-ssg"><i class="fa-solid fa-code"></i>{{ trans(key="svc_static_blog", lang=lang) }}</th>
-            <th class="col-wp col-unavailable"><i class="fa-brands fa-wordpress"></i><span class="col-label">WordPress</span><span class="col-unavailable__badge">{% if lang == "es" %}No disponible{% else %}Unavailable{% endif %}</span></th>
           </tr>
         </thead>
         <tbody>
@@ -197,49 +161,41 @@
             <td>{{ trans(key="svc_loading_speed", lang=lang) }}</td>
             <td class="highlight"><i class="fa-solid fa-gauge-high"></i> {{ trans(key="svc_very_fast", lang=lang) }}</td>
             <td class="highlight"><i class="fa-solid fa-gauge-high"></i> {{ trans(key="svc_very_fast", lang=lang) }}</td>
-            <td>{{ trans(key="svc_good", lang=lang) }}</td>
           </tr>
           <tr>
             <td>{{ trans(key="svc_security", lang=lang) }}</td>
             <td class="highlight"><i class="fa-solid fa-shield-halved"></i> {{ trans(key="svc_excellent", lang=lang) }}</td>
             <td class="highlight"><i class="fa-solid fa-shield-halved"></i> {{ trans(key="svc_excellent", lang=lang) }}</td>
-            <td class="caution"><i class="fa-solid fa-triangle-exclamation"></i> {{ trans(key="svc_needs_attention", lang=lang) }}</td>
           </tr>
           <tr>
             <td>{{ trans(key="svc_hosting_cost", lang=lang) }}</td>
             <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_very_low", lang=lang) }}</td>
             <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_very_low", lang=lang) }}</td>
-            <td>{{ trans(key="svc_moderate", lang=lang) }}</td>
           </tr>
           <tr>
             <td>{{ trans(key="svc_maintenance", lang=lang) }}</td>
             <td class="highlight">{{ trans(key="svc_minimal", lang=lang) }}</td>
             <td class="highlight">{{ trans(key="svc_minimal", lang=lang) }}</td>
-            <td class="caution">{{ trans(key="svc_regular_updates", lang=lang) }}</td>
           </tr>
           <tr>
             <td>{{ trans(key="svc_blog_support", lang=lang) }}</td>
             <td><i class="fa-solid fa-xmark"></i></td>
-            <td class="highlight"><i class="fa-solid fa-check"></i></td>
             <td class="highlight"><i class="fa-solid fa-check"></i></td>
           </tr>
           <tr>
             <td>{{ trans(key="svc_non_tech_editing", lang=lang) }}</td>
             <td><i class="fa-solid fa-xmark"></i></td>
             <td><i class="fa-solid fa-check" style="opacity: 0.4"></i></td>
-            <td class="highlight"><i class="fa-solid fa-check"></i></td>
           </tr>
           <tr>
             <td>{{ trans(key="svc_dev_cost", lang=lang) }}</td>
             <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_lowest", lang=lang) }}</td>
             <td>{{ trans(key="svc_medium", lang=lang) }}</td>
-            <td><i class="fa-solid fa-arrow-up"></i> {{ trans(key="svc_higher", lang=lang) }}</td>
           </tr>
           <tr>
             <td>{{ trans(key="svc_long_term_cost", lang=lang) }}</td>
             <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_lowest", lang=lang) }}</td>
             <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_low", lang=lang) }}</td>
-            <td><i class="fa-solid fa-arrow-up"></i> {{ trans(key="svc_higher", lang=lang) }}</td>
           </tr>
         </tbody>
       </table>
@@ -264,14 +220,6 @@
           <li>{% if lang == "es" %}Quieres un blog o sección de noticias{% else %}You want a blog or news section{% endif %}</li>
           <li>{% if lang == "es" %}Las actualizaciones son ocasionales (mensuales){% else %}Updates are occasional (monthly){% endif %}</li>
           <li>{% if lang == "es" %}Quieres los beneficios de un sitio estático{% else %}You want static site benefits{% endif %}</li>
-        </ul>
-      </div>
-      <div class="decision-card decision-card--unavailable">
-        <h3><i class="fa-brands fa-wordpress"></i> {{ trans(key="svc_choose_wordpress", lang=lang) }}</h3>
-        <ul>
-          <li>{% if lang == "es" %}Necesitas editores no técnicos{% else %}Non-technical editors needed{% endif %}</li>
-          <li>{% if lang == "es" %}Necesitas e-commerce{% else %}You need e-commerce{% endif %}</li>
-          <li>{% if lang == "es" %}El ecosistema de plugins importa{% else %}Plugin ecosystem matters{% endif %}</li>
         </ul>
       </div>
     </div>
@@ -323,7 +271,7 @@
 
       <!-- Pricing details (hidden by default, shown with ?prices=1) -->
       <div class="pricing-details" style="display: none;">
-        <div class="pricing-grid">
+        <div class="pricing-grid pricing-grid--2col">
           <div class="pricing-card">
             <h4><i class="fa-solid fa-bolt"></i> {{ trans(key="svc_static", lang=lang) }}</h4>
             <div class="pricing-card__price">€{{ config.extra.pricing_static_simple_min | default(value=1000) }} - €{{ config.extra.pricing_static_simple_max | default(value=2000) }}</div>
@@ -338,14 +286,6 @@
             <ul class="pricing-card__details">
               <li>{% if lang == "es" %}Hosting: €{{ config.extra.pricing_static_hosting | default(value=25) }}/año{% else %}Hosting: €{{ config.extra.pricing_static_hosting | default(value=25) }}/year{% endif %}</li>
               <li>{% if lang == "es" %}Mantenimiento: €{{ config.extra.pricing_static_pro_maintenance | default(value=120) }}/año{% else %}Maintenance: €{{ config.extra.pricing_static_pro_maintenance | default(value=120) }}/year{% endif %}</li>
-            </ul>
-          </div>
-          <div class="pricing-card pricing-card--unavailable">
-            <h4><i class="fa-brands fa-wordpress"></i> WordPress <span class="pricing-card__badge">{% if lang == "es" %}No disponible{% else %}Unavailable{% endif %}</span></h4>
-            <div class="pricing-card__price">€{{ config.extra.pricing_wordpress_min | default(value=2000) }} - €{{ config.extra.pricing_wordpress_max | default(value=4000) }}</div>
-            <ul class="pricing-card__details">
-              <li>{% if lang == "es" %}Hosting: €{{ config.extra.pricing_wordpress_hosting | default(value=100) }}/año{% else %}Hosting: €{{ config.extra.pricing_wordpress_hosting | default(value=100) }}/year{% endif %}</li>
-              <li>{% if lang == "es" %}Mantenimiento: €{{ config.extra.pricing_wordpress_maintenance | default(value=500) }}/año{% else %}Maintenance: €{{ config.extra.pricing_wordpress_maintenance | default(value=500) }}/year{% endif %}</li>
             </ul>
           </div>
         </div>
@@ -441,7 +381,7 @@
               <img src="/images/portfolio/postcardfromtheroad-sample.jpg" alt="Postcard from the Road website" loading="lazy">
             </div>
             <div class="portfolio-item__content">
-              <span class="portfolio-item__tag">WordPress</span>
+              <span class="portfolio-item__tag">{{ trans(key="svc_static_blog", lang=lang) }}</span>
               <h3 class="portfolio-item__name">Postcard from the Road <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
               <p class="portfolio-item__desc">{% if lang == "es" %}Blog de viajes con galería fotográfica y narrativas personales.{% else %}Travel blog with photo gallery and personal narratives.{% endif %}</p>
               <div class="portfolio-item__features">
