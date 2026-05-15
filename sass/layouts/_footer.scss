@@ -47,9 +47,11 @@
     font-weight: 600;
     transition: opacity 0.2s ease;
 
+    border-bottom: none;
+
     &:hover {
       opacity: 0.85;
-      border-bottom: none;
+      color: #fff;
     }
 
     i {

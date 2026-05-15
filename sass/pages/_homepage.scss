@@ -311,6 +311,7 @@ main:has(.homepage-container) #scroll-to-top {
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
+  border-bottom: none;
   white-space: nowrap;
   transition: filter 0.2s ease;
 
@@ -319,8 +320,8 @@ main:has(.homepage-container) #scroll-to-top {
   }
 
   &:hover {
-    filter: brightness(1.12);
-    border-bottom: none;
+    filter: brightness(0.88);
+    color: #fff;
 
     i {
       transform: translateX(4px);
