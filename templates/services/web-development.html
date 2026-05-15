@@ -422,11 +422,6 @@
 
 {% block js %}
 <script>
-// Show pricing details if ?prices=1 is in URL
-if (new URLSearchParams(window.location.search).get('prices') === '1') {
-  document.querySelectorAll('.pricing-details').forEach(el => el.style.display = 'block');
-}
-
 // Portfolio Carousel
 (function() {
   const carousel = document.querySelector('.portfolio-carousel');
