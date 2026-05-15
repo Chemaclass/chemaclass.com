@@ -115,12 +115,12 @@
         <span class="service-option__tag service-option__tag--tertiary">{{ trans(key="svc_static_blog_tag", lang=lang) }}</span>
       </div>
 
-      <p class="service-option__desc">{% if lang == "es" %}Un sitio web flexible tipo blog construido con herramientas como Zola o VitePress. La velocidad de los sitios estáticos con la estructura de WP.{% else %}A flexible blog-like website built with tools like Zola or VitePress. The speed of static sites with the structure of WP.{% endif %}</p>
+      <p class="service-option__desc">{% if lang == "es" %}Un sitio web flexible tipo blog construido con herramientas como Zola o VitePress. La velocidad de una web a medida con la estructura de WP.{% else %}A flexible blog-like website built with tools like Zola or VitePress. The speed of a custom website with the structure of WP.{% endif %}</p>
 
       <div class="service-option__benefits">
         <h3>{{ trans(key="svc_what_you_get", lang=lang) }}</h3>
         <ul>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Misma velocidad que webs estáticas{% else %}Same fast loading as static sites{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Misma velocidad que la web a medida{% else %}Same fast loading as the Custom Website{% endif %}</li>
           <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Posts, páginas y plantillas{% else %}Blog posts, pages, and custom templates{% endif %}</li>
           <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Contenido en Markdown{% else %}Markdown-based content (text files){% endif %}</li>
           <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Control de versiones incluido{% else %}Version control for all content changes{% endif %}</li>
@@ -144,64 +144,6 @@
 
   </section>
 
-  <!-- Comparison Table -->
-  <section class="service-comparison">
-    <h2>{{ trans(key="svc_quick_comparison", lang=lang) }}</h2>
-    <div class="comparison-table">
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th class="col-static"><i class="fa-solid fa-bolt"></i>{{ trans(key="svc_static", lang=lang) }}</th>
-            <th class="col-ssg"><i class="fa-solid fa-code"></i>{{ trans(key="svc_static_blog", lang=lang) }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{ trans(key="svc_loading_speed", lang=lang) }}</td>
-            <td class="highlight"><i class="fa-solid fa-gauge-high"></i> {{ trans(key="svc_very_fast", lang=lang) }}</td>
-            <td class="highlight"><i class="fa-solid fa-gauge-high"></i> {{ trans(key="svc_very_fast", lang=lang) }}</td>
-          </tr>
-          <tr>
-            <td>{{ trans(key="svc_security", lang=lang) }}</td>
-            <td class="highlight"><i class="fa-solid fa-shield-halved"></i> {{ trans(key="svc_excellent", lang=lang) }}</td>
-            <td class="highlight"><i class="fa-solid fa-shield-halved"></i> {{ trans(key="svc_excellent", lang=lang) }}</td>
-          </tr>
-          <tr>
-            <td>{{ trans(key="svc_hosting_cost", lang=lang) }}</td>
-            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_very_low", lang=lang) }}</td>
-            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_very_low", lang=lang) }}</td>
-          </tr>
-          <tr>
-            <td>{{ trans(key="svc_maintenance", lang=lang) }}</td>
-            <td class="highlight">{{ trans(key="svc_minimal", lang=lang) }}</td>
-            <td class="highlight">{{ trans(key="svc_minimal", lang=lang) }}</td>
-          </tr>
-          <tr>
-            <td>{{ trans(key="svc_blog_support", lang=lang) }}</td>
-            <td><i class="fa-solid fa-xmark"></i></td>
-            <td class="highlight"><i class="fa-solid fa-check"></i></td>
-          </tr>
-          <tr>
-            <td>{{ trans(key="svc_non_tech_editing", lang=lang) }}</td>
-            <td><i class="fa-solid fa-xmark"></i></td>
-            <td><i class="fa-solid fa-check" style="opacity: 0.4"></i></td>
-          </tr>
-          <tr>
-            <td>{{ trans(key="svc_dev_cost", lang=lang) }}</td>
-            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_lowest", lang=lang) }}</td>
-            <td>{{ trans(key="svc_medium", lang=lang) }}</td>
-          </tr>
-          <tr>
-            <td>{{ trans(key="svc_long_term_cost", lang=lang) }}</td>
-            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_lowest", lang=lang) }}</td>
-            <td class="highlight"><i class="fa-solid fa-arrow-down"></i> {{ trans(key="svc_low", lang=lang) }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
   <!-- Decision Helper -->
   <section class="service-decision">
     <h2>{{ trans(key="svc_not_sure", lang=lang) }}</h2>
@@ -219,13 +161,13 @@
         <ul>
           <li>{% if lang == "es" %}Quieres un blog o sección de noticias{% else %}You want a blog or news section{% endif %}</li>
           <li>{% if lang == "es" %}Las actualizaciones son ocasionales (mensuales){% else %}Updates are occasional (monthly){% endif %}</li>
-          <li>{% if lang == "es" %}Quieres los beneficios de un sitio estático{% else %}You want static site benefits{% endif %}</li>
+          <li>{% if lang == "es" %}Quieres los beneficios de una web a medida{% else %}You want custom website benefits{% endif %}</li>
         </ul>
       </div>
     </div>
     <p class="decision-tip">
       <i class="fa-solid fa-lightbulb"></i>
-      <strong>{{ trans(key="svc_honest_advice", lang=lang) }}</strong> {% if lang == "es" %}En caso de duda, empieza con estática. Es más fácil añadir complejidad después que simplificar una solución sobredimensionada.{% else %}When in doubt, start with static. It's easier to add complexity later than to simplify an over-engineered solution.{% endif %}
+      <strong>{{ trans(key="svc_honest_advice", lang=lang) }}</strong> {% if lang == "es" %}En caso de duda, empieza con la web a medida. Es más fácil añadir complejidad después que simplificar una solución sobredimensionada.{% else %}When in doubt, start with the Custom Website. It's easier to add complexity later than to simplify an over-engineered solution.{% endif %}
     </p>
   </section>
 
@@ -422,6 +364,11 @@
 
 {% block js %}
 <script>
+// Show pricing details if ?prices=1 is in URL
+if (new URLSearchParams(window.location.search).get('prices') === '1') {
+  document.querySelectorAll('.pricing-details').forEach(el => el.style.display = 'block');
+}
+
 // Portfolio Carousel
 (function() {
   const carousel = document.querySelector('.portfolio-carousel');

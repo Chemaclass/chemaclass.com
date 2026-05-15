@@ -1,6 +1,6 @@
 +++
 title = "Desarrollo Web | Chemaclass"
-description = "Desarrollo web profesional para empresas. Sitios estáticos rápidos y seguros, o WordPress flexible según lo que necesites."
+description = "Desarrollo web profesional para empresas. Webs a medida rápidas y seguras, o sitios con blog según lo que necesites."
 template = "services/web-development.html"
 
 [extra]

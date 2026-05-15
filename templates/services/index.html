@@ -72,7 +72,8 @@
   <!-- Services Section -->
   <section class="projects-services" id="services">
     <div class="services-grid">
-      <a href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}" class="service-card">
+      <a href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}" class="service-card service-card--featured">
+        <span class="service-card__featured-badge">{% if lang == "es" %}Más solicitado{% else %}Most Requested{% endif %}</span>
         <div class="service-card__header">
           <div class="service-card__icon">
             <i class="fa-solid fa-globe"></i>
@@ -82,6 +83,12 @@
         <h3>{{ trans(key="svc_static_websites", lang=lang) }}</h3>
         <p class="service-card__audience">{% if lang == "es" %}Para empresas y profesionales{% else %}For businesses and professionals{% endif %}</p>
         <p>{% if lang == "es" %}Landing pages, portfolios, sitios corporativos. Rápidos, accesibles, fáciles de mantener.{% else %}Landing pages, portfolios, company sites. Fast, accessible, easy to maintain.{% endif %}</p>
+        <ul class="service-card__features">
+          <li>{% if lang == "es" %}Diseño responsive y mobile-first{% else %}Responsive & mobile-first{% endif %}</li>
+          <li>{% if lang == "es" %}SEO básico y rendimiento{% else %}SEO fundamentals & performance{% endif %}</li>
+          <li>{% if lang == "es" %}HTTPS y seguridad{% else %}HTTPS & security{% endif %}</li>
+          <li>{% if lang == "es" %}Mantenimiento y actualizaciones{% else %}Maintenance & updates{% endif %}</li>
+        </ul>
         <span class="service-card__price">{{ trans(key="svc_request_quote", lang=lang) }}</span>
       </a>
 
@@ -95,10 +102,21 @@
         <h3>{% if lang == "es" %}Consultoría{% else %}Consulting{% endif %}</h3>
         <p class="service-card__audience">{% if lang == "es" %}Para tech leads, EMs y CTOs{% else %}For tech leads, EMs, and CTOs{% endif %}</p>
         <p>{% if lang == "es" %}Sesiones individuales sobre liderazgo técnico, decisiones de ingeniería y gestión de equipos.{% else %}One-on-one sessions on tech leadership, engineering decisions, and team dynamics.{% endif %}</p>
+        <ul class="service-card__features">
+          <li>{% if lang == "es" %}Liderazgo técnico efectivo{% else %}Effective tech leadership{% endif %}</li>
+          <li>{% if lang == "es" %}Equipos y resolución de conflictos{% else %}Teams & conflict resolution{% endif %}</li>
+          <li>{% if lang == "es" %}Estrategia técnica y deuda{% else %}Technical strategy & debt{% endif %}</li>
+          <li>{% if lang == "es" %}Decisiones de arquitectura{% else %}Architecture decisions{% endif %}</li>
+        </ul>
         <span class="service-card__price">{{ trans(key="svc_book_session", lang=lang) }}</span>
       </a>
 
     </div>
+
+    <p class="services-helper">
+      {% if lang == "es" %}¿No estás seguro de qué servicio necesitas?{% else %}Not sure which service you need?{% endif %}
+      <a href="mailto:hi@chemaclass.es">{% if lang == "es" %}Hablemos de tu proyecto{% else %}Let's discuss your project{% endif %}</a>
+    </p>
 
   </section>
 
@@ -106,7 +124,7 @@
   <section class="service-cta">
     <div class="service-cta__icon"><i class="fa-solid fa-rocket"></i></div>
     <h2>{% if lang == "es" %}¿Por dónde empezamos?{% else %}Where do we start?{% endif %}</h2>
-    <p>{% if lang == "es" %}Cuéntame qué necesitas. Respondo en menos de 24 horas.{% else %}Tell me what you need. I reply within 24 hours.{% endif %}</p>
+    <p>{% if lang == "es" %}Cuéntame qué necesitas y elegimos el camino juntos.{% else %}Tell me what you need and we'll pick the path together.{% endif %}</p>
     <div class="service-cta__buttons">
       <a href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}" class="service-cta__btn">
         <i class="fa-solid fa-globe"></i> {% if lang == "es" %}Necesito una web{% else %}I need a website{% endif %}
@@ -115,10 +133,12 @@
         <i class="fa-solid fa-comments"></i> {% if lang == "es" %}Quiero una sesión{% else %}I want a session{% endif %}
       </a>
     </div>
+    <p class="service-cta__note">{% if lang == "es" %}Tiempo de respuesta habitual: menos de 24 horas{% else %}Typical response time: within 24 hours{% endif %}</p>
   </section>
 
   <!-- Testimonials -->
   <section class="services-testimonials">
+    <span class="section-eyebrow">{% if lang == "es" %}Testimonios{% else %}Testimonials{% endif %}</span>
     <h2>{% if lang == "es" %}Lo que dicen{% else %}What people say{% endif %}</h2>
     <div class="testimonials-carousel">
       <div class="testimonials-carousel__track-container">
@@ -164,6 +184,7 @@
 
   <!-- FAQ -->
   <section class="services-faq">
+    <span class="section-eyebrow">{% if lang == "es" %}Preguntas{% else %}FAQ{% endif %}</span>
     <h2 class="services-faq__title">{% if lang == "es" %}Preguntas frecuentes{% else %}Common questions{% endif %}</h2>
     <div class="services-faq__list">
       <div class="services-faq__item">

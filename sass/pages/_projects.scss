@@ -606,10 +606,29 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 
   @media (max-width: $breakpoint-phone) {
     grid-template-columns: 1fr;
+  }
+}
+
+.services-helper {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-subtitle);
+  margin: 0 0 2rem;
+
+  a {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-bottom-color: var(--accent-color);
+    }
   }
 }
 
@@ -618,11 +637,58 @@
   border: 1px solid var(--preview-divider-color);
   border-radius: 12px;
   padding: 1.25rem;
+  position: relative;
   transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
   text-decoration: none;
 
   &:hover {
     border-color: var(--accent-color);
+  }
+
+  &--featured {
+    border-color: var(--accent-color);
+  }
+
+  &__featured-badge {
+    position: absolute;
+    top: -0.7rem;
+    left: 1rem;
+    background: var(--accent-color);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    border-radius: 99px;
+    line-height: 1;
+  }
+
+  &__features {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    li {
+      position: relative;
+      padding-left: 1.4rem;
+      font-size: 0.85rem;
+      color: var(--body-color);
+      line-height: 1.45;
+
+      &::before {
+        content: "\2713";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--accent-color);
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+    }
   }
 
   &__header {
@@ -901,6 +967,18 @@
   border-top: 1px solid var(--preview-divider-color);
 }
 
+// Section eyebrow label
+.section-eyebrow {
+  display: block;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
 // Testimonials Section
 .services-testimonials {
   margin-top: 4rem;
@@ -1016,14 +1094,14 @@
   position: relative;
 
   &::before {
-    content: "\201C";
+    content: "\201D";
     position: absolute;
-    top: 0.75rem;
-    right: 1.25rem;
-    font-size: 3.5rem;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 4.5rem;
     line-height: 1;
     color: var(--accent-color);
-    opacity: 0.12;
+    opacity: 0.22;
     font-family: Georgia, serif;
     pointer-events: none;
   }

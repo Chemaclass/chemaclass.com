@@ -1239,6 +1239,13 @@
     flex-wrap: wrap;
   }
 
+  &__note {
+    color: var(--color-subtitle);
+    font-size: 0.85rem;
+    margin: 1.75rem 0 0;
+    opacity: 0.85;
+  }
+
   &__btn {
     display: inline-flex;
     align-items: center;
