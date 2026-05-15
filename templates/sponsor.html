@@ -69,6 +69,38 @@
     </p>
   </section>
 
+  <!-- Donation Options -->
+  <section class="sponsor-options">
+    <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--paypal">
+      <div class="sponsor-card__icon">
+        <i class="fa-brands fa-paypal"></i>
+      </div>
+      <div class="sponsor-card__body">
+        <span class="sponsor-card__label">PayPal</span>
+        <span class="sponsor-card__action">{{ trans(key="sponsor_paypal_action", lang=lang) }}</span>
+      </div>
+      <span class="sponsor-card__arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </span>
+    </a>
+    <a href="https://getalby.com/p/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--lightning">
+      <div class="sponsor-card__icon">
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+      <div class="sponsor-card__body">
+        <span class="sponsor-card__label">Lightning</span>
+        <span class="sponsor-card__action">{{ trans(key="sponsor_lightning_action", lang=lang) }}</span>
+      </div>
+      <span class="sponsor-card__arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </span>
+    </a>
+  </section>
+
   <!-- Impact Stats -->
   <section class="sponsor-stats">
     <a href="{% if lang == 'es' %}/es/blog/{% else %}/blog/{% endif %}" class="sponsor-stat">
@@ -83,19 +115,6 @@
       <span class="sponsor-stat__number">7+</span>
       <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_talks", lang=lang) }}</span>
     </a>
-  </section>
-
-  <!-- Topic Strip -->
-  <section class="sponsor-topics">
-    <div class="sponsor-topics__list">
-      {% for topic in config.extra.topics %}
-        {% if topic.title != "Speaking & Teaching" %}
-        <a href="{% if lang == 'es' %}/es/topics/{% else %}/topics/{% endif %}#{{ topic.title | slugify }}" class="sponsor-topic">
-          {% if lang == "es" and topic.title_es %}{{ topic.title_es }}{% else %}{{ topic.title }}{% endif %}
-        </a>
-        {% endif %}
-      {% endfor %}
-    </div>
   </section>
 
   <!-- Open Source Projects -->
@@ -150,38 +169,6 @@
         </span>
       </a>
     </div>
-  </section>
-
-  <!-- Donation Options -->
-  <section class="sponsor-options">
-    <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--paypal">
-      <div class="sponsor-card__icon">
-        <i class="fa-brands fa-paypal"></i>
-      </div>
-      <div class="sponsor-card__body">
-        <span class="sponsor-card__label">PayPal</span>
-        <span class="sponsor-card__action">{{ trans(key="sponsor_paypal_action", lang=lang) }}</span>
-      </div>
-      <span class="sponsor-card__arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </span>
-    </a>
-    <a href="https://getalby.com/p/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--lightning">
-      <div class="sponsor-card__icon">
-        <i class="fa-solid fa-bolt"></i>
-      </div>
-      <div class="sponsor-card__body">
-        <span class="sponsor-card__label">Lightning</span>
-        <span class="sponsor-card__action">{{ trans(key="sponsor_lightning_action", lang=lang) }}</span>
-      </div>
-      <span class="sponsor-card__arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </span>
-    </a>
   </section>
 
   <!-- Thank You -->

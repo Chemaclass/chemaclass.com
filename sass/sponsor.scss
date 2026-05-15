@@ -94,36 +94,6 @@
   }
 }
 
-// Topic Strip
-.sponsor-topics {
-  margin-bottom: 3rem;
-  text-align: center;
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-}
-
-.sponsor-topic {
-  display: inline-block;
-  padding: 0.3rem 0.75rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--color-subtitle);
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 99px;
-  text-decoration: none;
-
-  &:hover {
-    border-bottom: 1px solid var(--preview-divider-color);
-    text-decoration: none;
-  }
-}
-
 // Open Source Projects Section
 .sponsor-projects {
   margin-bottom: 3.5rem;
@@ -241,7 +211,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
 
   @media (max-width: $breakpoint-phone) {
     grid-template-columns: 1fr;
@@ -251,11 +221,11 @@
 .sponsor-card {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
-  border-radius: 16px;
-  padding: 1.25rem 1.5rem;
+  border-radius: 20px;
+  padding: 2rem 2rem;
   text-decoration: none;
   color: inherit;
   transition: border-color 0.3s ease, background 0.3s ease;
@@ -263,13 +233,13 @@
   overflow: hidden;
 
   &__icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     flex-shrink: 0;
     transition: transform 0.25s ease;
   }
@@ -282,25 +252,25 @@
   }
 
   &__label {
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--heading-color);
     line-height: 1.2;
   }
 
   &__action {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--color-subtitle);
-    margin-top: 0.2rem;
+    margin-top: 0.25rem;
   }
 
   &__arrow {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
     flex-shrink: 0;
     transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
   }
