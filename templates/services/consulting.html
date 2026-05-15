@@ -88,37 +88,6 @@
       </div>
     </div>
 
-    <div class="budget-section">
-      <div class="budget-header">
-        <h3>{% if lang == "es" %}Precios{% else %}Pricing{% endif %}</h3>
-        <p>{% if lang == "es" %}Sin intermediarios. Trato directo, precio claro.{% else %}No middlemen. Direct contact, clear pricing.{% endif %}</p>
-      </div>
-
-      <!-- Pricing (hidden by default, shown with ?prices=1) -->
-      <div class="pricing-details" style="display: none;">
-        <div class="pricing-grid pricing-grid--2col">
-          <div class="pricing-card">
-            <h4><i class="fa-solid fa-comment-dots"></i> {% if lang == "es" %}Sesión individual{% else %}Single session{% endif %}</h4>
-            <div class="pricing-card__price">€{{ config.extra.pricing_consulting_session | default(value=100) }}</div>
-            <div class="pricing-card__subprice">{% if lang == "es" %}por sesión de 1 hora{% else %}per 1-hour session{% endif %}</div>
-            <ul class="pricing-card__details">
-              <li>{% if lang == "es" %}Cualquier tema{% else %}Any topic{% endif %}</li>
-              <li>{% if lang == "es" %}Sin diapositivas, tú traes el problema{% else %}No slides, you bring the problem{% endif %}</li>
-            </ul>
-          </div>
-          <div class="pricing-card pricing-card--featured">
-            <h4><i class="fa-solid fa-layer-group"></i> {% if lang == "es" %}Pack de 3 sesiones{% else %}Pack of 3 sessions{% endif %}<span class="pricing-card__badge">{% if lang == "es" %}Mejor valor{% else %}Best value{% endif %}</span></h4>
-            <div class="pricing-card__price">€{{ config.extra.pricing_consulting_pack3 | default(value=250) }}</div>
-            <div class="pricing-card__subprice">{% if lang == "es" %}3 sesiones de 1 hora{% else %}3 × 1-hour sessions{% endif %}</div>
-            <ul class="pricing-card__details">
-              <li>{% if lang == "es" %}Ahorra €{{ config.extra.pricing_consulting_pack3_save | default(value=50) }} respecto a sueltas{% else %}Save €{{ config.extra.pricing_consulting_pack3_save | default(value=50) }} vs individual{% endif %}</li>
-              <li>{% if lang == "es" %}Usa las sesiones cuando quieras{% else %}Use sessions whenever you want{% endif %}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
   </section>
 
   <section class="service-decision">
@@ -127,28 +96,28 @@
       <div class="decision-card">
         <h3><i class="fa-solid fa-compass"></i> {% if lang == "es" %}Liderazgo efectivo{% else %}Effective Leadership{% endif %}</h3>
         <ul>
-          <li>{% if lang == "es" %}Encontrar tu rol como tech lead o EM{% else %}Finding your role as a tech lead or EM{% endif %}</li>
-          <li>{% if lang == "es" %}Liderar sin autoridad formal{% else %}Leading without formal authority{% endif %}</li>
-          <li>{% if lang == "es" %}Dar feedback que genera cambio real{% else %}Giving feedback that drives real change{% endif %}</li>
-          <li>{% if lang == "es" %}Construir cultura de calidad en el equipo{% else %}Building a quality culture in the team{% endif %}</li>
+          <li>{% if lang == "es" %}Saber exactamente qué se espera de ti como tech lead o EM{% else %}Know exactly what's expected of you as a tech lead or EM{% endif %}</li>
+          <li>{% if lang == "es" %}Liderar con impacto sin necesitar autoridad formal{% else %}Lead with impact without needing formal authority{% endif %}</li>
+          <li>{% if lang == "es" %}Dar feedback que la gente realmente aplica{% else %}Give feedback people actually act on{% endif %}</li>
+          <li>{% if lang == "es" %}Crear un equipo que se preocupe por la calidad{% else %}Build a team that genuinely cares about quality{% endif %}</li>
         </ul>
       </div>
       <div class="decision-card">
         <h3><i class="fa-solid fa-people-arrows"></i> {% if lang == "es" %}Equipos y conflictos{% else %}Teams & Conflict{% endif %}</h3>
         <ul>
-          <li>{% if lang == "es" %}Resolver conflictos técnicos y de equipo{% else %}Resolving technical and team conflicts{% endif %}</li>
-          <li>{% if lang == "es" %}Retener a las personas correctas{% else %}Retaining the right people{% endif %}</li>
-          <li>{% if lang == "es" %}Adaptarse a cambios organizacionales{% else %}Adapting to organizational change{% endif %}</li>
-          <li>{% if lang == "es" %}Alinear ingeniería con negocio{% else %}Aligning engineering with business{% endif %}</li>
+          <li>{% if lang == "es" %}Desactivar conflictos antes de que drenen al equipo{% else %}Defuse conflicts before they drain the team{% endif %}</li>
+          <li>{% if lang == "es" %}Retener a las personas que merecen quedarse{% else %}Keep the people worth keeping{% endif %}</li>
+          <li>{% if lang == "es" %}Navegar cambios organizacionales sin perder impulso{% else %}Navigate org changes without losing momentum{% endif %}</li>
+          <li>{% if lang == "es" %}Hacer que ingeniería y negocio tiren en la misma dirección{% else %}Get engineering and business pulling in the same direction{% endif %}</li>
         </ul>
       </div>
       <div class="decision-card">
         <h3><i class="fa-solid fa-layer-group"></i> {% if lang == "es" %}Estrategia técnica{% else %}Technical Strategy{% endif %}</h3>
         <ul>
-          <li>{% if lang == "es" %}Dirección técnica y decisiones de arquitectura{% else %}Technical direction and architecture decisions{% endif %}</li>
-          <li>{% if lang == "es" %}Deuda técnica: cuándo pagar y cuándo no{% else %}Tech debt: when to pay it and when not to{% endif %}</li>
-          <li>{% if lang == "es" %}Adoptar IA sin perder calidad{% else %}Adopting AI without losing quality{% endif %}</li>
-          <li>{% if lang == "es" %}Cultura de ingeniería a escala{% else %}Engineering culture at scale{% endif %}</li>
+          <li>{% if lang == "es" %}Fijar una dirección técnica clara que tu equipo pueda seguir{% else %}Set a clear technical direction your team can follow{% endif %}</li>
+          <li>{% if lang == "es" %}Saber cuándo atacar la deuda técnica y cuándo no{% else %}Know exactly when to tackle tech debt vs ship faster{% endif %}</li>
+          <li>{% if lang == "es" %}Usar IA para ir más rápido sin bajar el nivel{% else %}Use AI to move faster without lowering the bar{% endif %}</li>
+          <li>{% if lang == "es" %}Construir cultura de ingeniería que escale con el equipo{% else %}Build engineering culture that scales with your team{% endif %}</li>
         </ul>
       </div>
     </div>
@@ -172,11 +141,43 @@
         <div class="resource-card__content"><h3>{% if lang == "es" %}La IA te da velocidad, no calidad{% else %}AI Gives You Speed, Not Quality{% endif %}</h3></div>
         <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
-      <a href="{% if lang == 'es' %}/es{% endif %}/blog/the-levels-of-ai-adoption/" class="resource-card">
-        <div class="resource-card__icon"><i class="fa-solid fa-robot"></i></div>
-        <div class="resource-card__content"><h3>{% if lang == "es" %}Los niveles de adopción de la IA{% else %}The Levels of AI Adoption{% endif %}</h3></div>
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/the-beauty-of-leadership/" class="resource-card">
+        <div class="resource-card__icon"><i class="fa-solid fa-heart"></i></div>
+        <div class="resource-card__content"><h3>{% if lang == "es" %}La belleza del liderazgo{% else %}The Beauty of Leadership{% endif %}</h3></div>
         <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
+    </div>
+  </section>
+
+  <section class="service-process">
+    <div class="budget-section">
+      <div class="budget-header">
+        <h3>{% if lang == "es" %}Precios{% else %}Pricing{% endif %}</h3>
+        <p>{% if lang == "es" %}Sin intermediarios. Trato directo, precio claro.{% else %}No middlemen. Direct contact, clear pricing.{% endif %}</p>
+      </div>
+
+      <div class="pricing-details">
+        <div class="pricing-grid pricing-grid--2col">
+          <div class="pricing-card">
+            <h4><i class="fa-solid fa-comment-dots"></i> {% if lang == "es" %}Sesión individual{% else %}Single session{% endif %}</h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_consulting_session | default(value=100) }}</div>
+            <div class="pricing-card__subprice">{% if lang == "es" %}por sesión de 1 hora{% else %}per 1-hour session{% endif %}</div>
+            <ul class="pricing-card__details">
+              <li>{% if lang == "es" %}Cualquier tema{% else %}Any topic{% endif %}</li>
+              <li>{% if lang == "es" %}Sin diapositivas, tú traes el problema{% else %}No slides, you bring the problem{% endif %}</li>
+            </ul>
+          </div>
+          <div class="pricing-card pricing-card--featured">
+            <h4><i class="fa-solid fa-layer-group"></i> {% if lang == "es" %}Pack de 3 sesiones{% else %}Pack of 3 sessions{% endif %}<span class="pricing-card__badge">{% if lang == "es" %}Mejor valor{% else %}Best value{% endif %}</span></h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_consulting_pack3 | default(value=250) }}</div>
+            <div class="pricing-card__subprice">{% if lang == "es" %}3 sesiones de 1 hora{% else %}3 × 1-hour sessions{% endif %}</div>
+            <ul class="pricing-card__details">
+              <li>{% if lang == "es" %}Ahorra €{{ config.extra.pricing_consulting_pack3_save | default(value=50) }} respecto a sueltas{% else %}Save €{{ config.extra.pricing_consulting_pack3_save | default(value=50) }} vs individual{% endif %}</li>
+              <li>{% if lang == "es" %}Usa las sesiones cuando quieras{% else %}Use sessions whenever you want{% endif %}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -193,10 +194,3 @@
 </article>
 {% endblock content %}
 
-{% block js %}
-<script>
-if (new URLSearchParams(window.location.search).get('prices') === '1') {
-  document.querySelectorAll('.pricing-details').forEach(el => el.style.display = 'block');
-}
-</script>
-{% endblock js %}
