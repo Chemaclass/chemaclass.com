@@ -217,21 +217,33 @@
           <div class="pricing-card">
             <h4><i class="fa-solid fa-bolt"></i> {{ trans(key="svc_static", lang=lang) }}</h4>
             <div class="pricing-card__price">€{{ config.extra.pricing_static_simple_min | default(value=1000) }} - €{{ config.extra.pricing_static_simple_max | default(value=2000) }}</div>
-            <ul class="pricing-card__details">
-              <li>{% if lang == "es" %}Hosting: €{{ config.extra.pricing_static_hosting | default(value=25) }}/año{% else %}Hosting: €{{ config.extra.pricing_static_hosting | default(value=25) }}/year{% endif %}</li>
-              <li>{% if lang == "es" %}Mantenimiento: €{{ config.extra.pricing_static_maintenance_min | default(value=50) }}-{{ config.extra.pricing_static_maintenance_max | default(value=120) }}/año{% else %}Maintenance: €{{ config.extra.pricing_static_maintenance_min | default(value=50) }}-{{ config.extra.pricing_static_maintenance_max | default(value=120) }}/year{% endif %}</li>
-            </ul>
+            <div class="pricing-card__price-label">{% if lang == "es" %}pago único, precio cerrado{% else %}one-time, fixed price{% endif %}</div>
+            <p class="pricing-card__included">{% if lang == "es" %}Año 1 incluye hosting, dominio y mantenimiento.{% else %}Year 1 includes hosting, domain, and care.{% endif %}</p>
+            <p class="pricing-card__anchor">{% if lang == "es" %}Hecho por un senior, la mitad del coste de una agencia. Listo en días, no meses.{% else %}Senior-built, half the agency cost. Live in days, not months.{% endif %}</p>
+            <div class="pricing-card__ongoing">
+              <span class="pricing-card__ongoing-label">{% if lang == "es" %}Desde el Año 2{% else %}From Year 2{% endif %}</span>
+              <ul class="pricing-card__details">
+                <li>{% if lang == "es" %}Hosting + dominio: €{{ config.extra.pricing_static_hosting | default(value=25) }} + €{{ config.extra.pricing_domain | default(value=15) }}/año{% else %}Hosting + domain: €{{ config.extra.pricing_static_hosting | default(value=25) }} + €{{ config.extra.pricing_domain | default(value=15) }}/yr{% endif %}</li>
+                <li>{% if lang == "es" %}Plan de mantenimiento: €{{ config.extra.pricing_static_maintenance_min | default(value=50) }}-{{ config.extra.pricing_static_maintenance_max | default(value=120) }}/año{% else %}Care plan: €{{ config.extra.pricing_static_maintenance_min | default(value=50) }}-{{ config.extra.pricing_static_maintenance_max | default(value=120) }}/yr{% endif %}</li>
+              </ul>
+            </div>
           </div>
           <div class="pricing-card">
             <h4><i class="fa-solid fa-code"></i> {{ trans(key="svc_static_blog", lang=lang) }}</h4>
             <div class="pricing-card__price">€{{ config.extra.pricing_static_pro_min | default(value=1500) }} - €{{ config.extra.pricing_static_pro_max | default(value=2500) }}</div>
-            <ul class="pricing-card__details">
-              <li>{% if lang == "es" %}Hosting: €{{ config.extra.pricing_static_hosting | default(value=25) }}/año{% else %}Hosting: €{{ config.extra.pricing_static_hosting | default(value=25) }}/year{% endif %}</li>
-              <li>{% if lang == "es" %}Mantenimiento: €{{ config.extra.pricing_static_pro_maintenance | default(value=120) }}/año{% else %}Maintenance: €{{ config.extra.pricing_static_pro_maintenance | default(value=120) }}/year{% endif %}</li>
-            </ul>
+            <div class="pricing-card__price-label">{% if lang == "es" %}pago único, precio cerrado{% else %}one-time, fixed price{% endif %}</div>
+            <p class="pricing-card__included">{% if lang == "es" %}Año 1 incluye hosting, dominio y mantenimiento.{% else %}Year 1 includes hosting, domain, and care.{% endif %}</p>
+            <p class="pricing-card__anchor">{% if lang == "es" %}Tu propio motor de contenido. Sin SaaS, sin suscripciones mensuales.{% else %}Own your content engine. No SaaS lock-in, no monthly fees.{% endif %}</p>
+            <div class="pricing-card__ongoing">
+              <span class="pricing-card__ongoing-label">{% if lang == "es" %}Desde el Año 2{% else %}From Year 2{% endif %}</span>
+              <ul class="pricing-card__details">
+                <li>{% if lang == "es" %}Hosting + dominio: €{{ config.extra.pricing_static_hosting | default(value=25) }} + €{{ config.extra.pricing_domain | default(value=15) }}/año{% else %}Hosting + domain: €{{ config.extra.pricing_static_hosting | default(value=25) }} + €{{ config.extra.pricing_domain | default(value=15) }}/yr{% endif %}</li>
+                <li>{% if lang == "es" %}Plan de mantenimiento: €{{ config.extra.pricing_static_pro_maintenance | default(value=120) }}/año{% else %}Care plan: €{{ config.extra.pricing_static_pro_maintenance | default(value=120) }}/yr{% endif %}</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <p class="pricing-note">{% if lang == "es" %}* Dominio: €{{ config.extra.pricing_domain | default(value=15) }}/año. Precios orientativos, el presupuesto final depende de la complejidad.{% else %}* Domain: €{{ config.extra.pricing_domain | default(value=15) }}/year. Indicative prices, final quote depends on complexity.{% endif %}</p>
+        <p class="pricing-note">{% if lang == "es" %}* Plan de mantenimiento: hasta 2h/mes (actualizaciones, parches, ediciones ligeras, arreglos menores). Mínimo 2 años, después opcional. Hosting + dominio son obligatorios para mantener la web activa. Los gestiono yo, o te transfiero la cuenta y el código en cualquier momento. Precios orientativos, el presupuesto final depende de la complejidad.{% else %}* Care plan: up to 2hr/month (updates, patches, light edits, minor fixes). 2-year minimum, optional afterwards. Hosting + domain required to keep the site live. I manage them, or transfer the account and code to you anytime. Indicative prices, final quote depends on complexity.{% endif %}</p>
       </div>
 
       <div class="quote-cta">

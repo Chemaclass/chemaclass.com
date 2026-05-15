@@ -312,19 +312,19 @@ It seems like this page does not exist… Return back to the [homepage](/)
 
 # Centralized pricing (all values in EUR)
 pricing_web_dev_starting = 1100
-pricing_static_simple_min = 1100
-pricing_static_simple_max = 2700
-pricing_static_simple_note = 1100
-pricing_static_pro_min = 2000
-pricing_static_pro_max = 3500
+pricing_static_simple_min = 1500
+pricing_static_simple_max = 3500
+pricing_static_simple_note = 1500
+pricing_static_pro_min = 2500
+pricing_static_pro_max = 4500
 pricing_wordpress_min = 2800
 pricing_wordpress_max = 6500
 pricing_domain = 15
 pricing_static_hosting = 35
 pricing_wordpress_hosting = 130
-pricing_static_maintenance_min = 80
-pricing_static_maintenance_max = 160
-pricing_static_pro_maintenance = 160
+pricing_static_maintenance_min = 150
+pricing_static_maintenance_max = 300
+pricing_static_pro_maintenance = 300
 pricing_wordpress_maintenance = 700
 pricing_workshop_per_person = 480
 pricing_workshop_3_people = 1400
