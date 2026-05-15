@@ -106,9 +106,6 @@
   <section class="services-testimonials">
     <h2>{% if lang == "es" %}Lo que dicen{% else %}What people say{% endif %}</h2>
     <div class="testimonials-carousel">
-      <button class="testimonials-carousel__btn testimonials-carousel__btn--prev" aria-label="Previous">
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
       <div class="testimonials-carousel__track-container">
         <div class="testimonials-grid">
           <div class="testimonial-card">
@@ -144,22 +141,8 @@
               <a href="https://fco-sandoval-gomez.es" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </footer>
           </div>
-          <div class="testimonial-card">
-            <blockquote>{% if lang == "es" %}"Nuestros clientes nos encuentran fácilmente y reservan directamente desde la web. Limpia, rápida y profesional."{% else %}"Our clients find us easily and book directly from the site. Clean, fast, and professional."{% endif %}</blockquote>
-            <footer>
-              <img src="/images/testimonials/carlos-dkrisna.svg" alt="Carlos" class="testimonial-card__avatar">
-              <div>
-                <strong>Carlos</strong>
-                <span>{% if lang == "es" %}Bienestar, D'Krisna{% else %}Wellness, D'Krisna{% endif %}</span>
-              </div>
-              <a href="https://dkrisna.es" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </footer>
-          </div>
         </div>
       </div>
-      <button class="testimonials-carousel__btn testimonials-carousel__btn--next" aria-label="Next">
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
     </div>
     <div class="testimonials-carousel__dots"></div>
   </section>
