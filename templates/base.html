@@ -381,6 +381,7 @@
     {% block rss %}
       <link rel="alternate" type="application/atom+xml" hreflang="en" href="{{ get_url(path='atom.xml') | safe }}" title="Atom Feed (EN)">
       <link rel="alternate" type="application/atom+xml" hreflang="es" href="{{ get_url(path='es/atom.xml') | safe }}" title="Atom Feed (ES)">
+      <link rel="alternate" type="application/feed+json" href="{{ config.base_url | safe }}/feed.json" title="JSON Feed">
     {% endblock rss %}
     {% block posthead %}{% endblock posthead %}
   </head>

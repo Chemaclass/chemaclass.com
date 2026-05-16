@@ -84,6 +84,9 @@ python3 scripts/generate-md-pages.py
 echo "Generating llms-full.txt..."
 python3 scripts/generate-llms-txt.py
 
+echo "Generating JSON Feed..."
+python3 scripts/generate-feed-json.py
+
 echo "Enriching sitemap with last-modified dates..."
 python3 scripts/enrich-sitemap.py
 
