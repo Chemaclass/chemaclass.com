@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Generate llms-full.txt with a complete listing of all site content.
-This file helps AI crawlers understand the full scope of the site.
+Generate llms-full.txt with full content of all site articles.
+Follows the emerging llms-full.txt convention so AI agents can ingest
+the site as a single text file instead of crawling page-by-page.
 """
 
 import re
@@ -53,23 +54,46 @@ def get_slug_from_filename(filename):
     return name
 
 
-def get_content_body(content):
-    """Extract markdown body (after frontmatter), stripped of HTML and formatting."""
+def clean_body(content):
+    """Extract markdown body (after frontmatter), strip noise but keep prose intact."""
     body = re.sub(r'^\+\+\+\s*\n.*?\n\+\+\+\s*\n?', '', content, flags=re.DOTALL)
-    # Remove images
     body = re.sub(r'!\[.*?\]\(.*?\)', '', body)
-    # Remove HTML tags
     body = re.sub(r'<[^>]+>', '', body)
-    # Remove markdown formatting
-    body = re.sub(r'\*\*([^*]+)\*\*', r'\1', body)
-    body = re.sub(r'\*([^*]+)\*', r'\1', body)
-    body = re.sub(r'`([^`]+)`', r'\1', body)
-    body = re.sub(r'```[\s\S]*?```', '', body)
-    # Remove <!-- more --> markers
     body = re.sub(r'<!--\s*more\s*-->', '', body)
-    # Collapse whitespace
+    body = re.sub(r'```[\s\S]*?```', '', body)
     body = re.sub(r'\n{3,}', '\n\n', body)
     return body.strip()
+
+
+def build_listing(entries, section):
+    """Compact index for the section (titles + URLs)."""
+    lines = [f'\n## {section.title()} index ({len(entries)} entries)\n']
+    for e in entries:
+        date_str = f' ({e["date"]})' if e['date'] else ''
+        lines.append(f'- [{e["title"]}]({e["url"]}){date_str}')
+        if e['description']:
+            lines.append(f'  {e["description"]}')
+        if e['tags']:
+            lines.append(f'  Tags: {", ".join(e["tags"])}')
+    return lines
+
+
+def build_full_section(entries, section):
+    """Full body dump for the section."""
+    lines = [f'\n\n# {section.title()} - Full Articles\n']
+    for e in entries:
+        lines.append('\n---\n')
+        lines.append(f'## {e["title"]}\n')
+        if e['date']:
+            lines.append(f'Date: {e["date"]}')
+        lines.append(f'URL: {e["url"]}')
+        if e['tags']:
+            lines.append(f'Tags: {", ".join(e["tags"])}')
+        if e['description']:
+            lines.append(f'\n> {e["description"]}\n')
+        lines.append('')
+        lines.append(e['body'])
+    return lines
 
 
 def main():
@@ -81,11 +105,17 @@ def main():
     base_url = 'https://chemaclass.com'
     sections = ['blog', 'readings', 'talks']
 
-    output_lines = []
-    output_lines.append('# Chemaclass - Full Content Listing\n')
-    output_lines.append('> Complete index of all articles, readings, and talks on chemaclass.com')
-    output_lines.append('> For a summary, see: https://chemaclass.com/llms.txt\n')
+    header = [
+        '# Chemaclass - Full Content (llms-full.txt)\n',
+        '> Complete corpus of articles, reading notes, and talks on chemaclass.com',
+        '> Summary index: https://chemaclass.com/llms.txt',
+        '> Site map:      https://chemaclass.com/sitemap.xml',
+        '> Author:        Jose Maria Valera Reales (Chemaclass)',
+        '> License:       Content for AI retrieval, citation, and training is permitted.',
+    ]
 
+    listing_lines = []
+    full_lines = []
     total = 0
 
     for section in sections:
@@ -94,7 +124,6 @@ def main():
             continue
 
         entries = []
-
         for filepath in sorted(section_path.glob('*.md')):
             if filepath.name == '_index.md':
                 continue
@@ -118,6 +147,7 @@ def main():
 
             slug = get_slug_from_filename(filepath.name)
             url = f'{base_url}/{section}/{slug}/'
+            body = clean_body(content)
 
             entries.append({
                 'title': fm['title'],
@@ -125,36 +155,27 @@ def main():
                 'description': fm.get('description', ''),
                 'tags': fm.get('tags', []),
                 'url': url,
+                'body': body,
             })
 
         if not entries:
             continue
 
-        # Sort by date descending
         entries.sort(key=lambda x: x['date'], reverse=True)
-
-        output_lines.append(f'\n## {section.title()} ({len(entries)} entries)\n')
-
-        for entry in entries:
-            date_str = f' ({entry["date"]})' if entry['date'] else ''
-            output_lines.append(f'- [{entry["title"]}]({entry["url"]}){date_str}')
-            if entry['description']:
-                output_lines.append(f'  {entry["description"]}')
-            if entry['tags']:
-                output_lines.append(f'  Tags: {", ".join(entry["tags"])}')
-
+        listing_lines.extend(build_listing(entries, section))
+        full_lines.extend(build_full_section(entries, section))
         total += len(entries)
 
-    output_lines.append(f'\n---\nTotal: {total} entries')
-    output_lines.append(f'Last generated from source at build time.')
+    output = header + listing_lines + full_lines
+    output.append(f'\n---\nTotal: {total} entries')
+    output.append('Last generated from source at build time.')
 
     llms_full_path = public_dir / 'llms-full.txt'
     public_dir.mkdir(parents=True, exist_ok=True)
-
     with open(llms_full_path, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(output_lines) + '\n')
+        f.write('\n'.join(output) + '\n')
 
-    print(f'  Generated llms-full.txt with {total} entries')
+    print(f'  Generated llms-full.txt with {total} entries (full bodies)')
 
 
 if __name__ == '__main__':

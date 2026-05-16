@@ -40,4 +40,7 @@ Jose Maria Valera Reales is a Tech Lead at Purpose Green with 15+ years in softw
 
 - Atom (EN): https://chemaclass.com/atom.xml
 - Atom (ES): https://chemaclass.com/es/atom.xml
+- JSON Feed: https://chemaclass.com/feed.json
 - Sitemap: https://chemaclass.com/sitemap.xml
+- Full content (for AI agents): https://chemaclass.com/llms-full.txt
+- AI use policy: https://chemaclass.com/.well-known/ai.txt
