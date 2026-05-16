@@ -1,0 +1,24 @@
+# humanstxt.org
+
+/* TEAM */
+  Name: Jose Maria Valera Reales (Chemaclass)
+  Role: Tech Lead, writer, open source contributor
+  Site: https://chemaclass.com
+  Contact: hi [at] chemaclass.com
+  Twitter: @Chemaclass
+  GitHub: @Chemaclass
+  LinkedIn: jose-maria-valera-reales
+  Location: Berlin, Germany
+
+/* THANKS */
+  Open source maintainers, conference organisers, reviewers,
+  and everyone who reads, shares, or pushes back on the writing.
+
+/* SITE */
+  Last update: 2026-05-16
+  Language: English, Español
+  Doctype: HTML5
+  Generator: Zola (https://www.getzola.org/)
+  Source: https://github.com/Chemaclass/chemaclass.com
+  Components: Tera templates, SCSS, vanilla JS
+  Standards: WCAG 2.1 AA aim, OpenGraph, JSON-LD, llms.txt, ai.txt
