@@ -1222,7 +1222,7 @@
     color: var(--heading-color);
   }
 
-  > p {
+  > p:not(.service-cta__note) {
     color: var(--color-subtitle);
     margin: 0 0 1.75rem;
     max-width: 480px;

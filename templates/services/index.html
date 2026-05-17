@@ -151,7 +151,7 @@
                 <strong>Adrián</strong>
                 <span>{% if lang == "es" %}Banda de rock, Teína{% else %}Indie rock band, Teína{% endif %}</span>
               </div>
-              <a href="https://teina.es" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="{% if lang == 'es' %}https://teina.es/{% else %}https://teina.es/en/{% endif %}" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </footer>
           </div>
           <div class="testimonial-card">
@@ -162,7 +162,7 @@
                 <strong>Francisco</strong>
                 <span>{% if lang == "es" %}Arquitecto, Portfolio{% else %}Architect, Portfolio{% endif %}</span>
               </div>
-              <a href="https://fco-sandoval-gomez.es" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="{% if lang == 'es' %}https://fco-sandoval-gomez.es/{% else %}https://fco-sandoval-gomez.es/en/{% endif %}" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </footer>
           </div>
           <div class="testimonial-card">
@@ -173,7 +173,7 @@
                 <strong>Dirk</strong>
                 <span>{% if lang == "es" %}Molino Tündern{% else %}Windmill Tündern{% endif %}</span>
               </div>
-              <a href="https://windmuehle-tuendern.de" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="{% if lang == 'es' %}https://windmuehle-tuendern.de/es/{% else %}https://windmuehle-tuendern.de/en/{% endif %}" target="_blank" rel="noopener" class="testimonial-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </footer>
           </div>
         </div>
