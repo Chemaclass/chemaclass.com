@@ -611,6 +611,7 @@
     <script>
       // Lazy-load search scripts (uses template URLs, must stay inline)
       let searchLoaded = false;
+      let searchReady = false;
       function loadSearch() {
         if (searchLoaded) return;
         searchLoaded = true;
@@ -619,11 +620,41 @@
         el.onload = function() {
           const s = document.createElement('script');
           s.src = "{{ get_url(path='search.js') }}";
+          s.onload = function() {
+            searchReady = true;
+            document.dispatchEvent(new CustomEvent('search-ready'));
+          };
           document.body.appendChild(s);
         };
         document.body.appendChild(el);
       }
       document.getElementById('site-search')?.addEventListener('focus', loadSearch, {once: true});
+
+      // Open search overlay automatically when URL has ?q=term
+      (function autoSearchFromQuery() {
+        function run() {
+          const params = new URLSearchParams(window.location.search);
+          const q = (params.get('q') || '').trim().slice(0, 200);
+          if (!q) return;
+          const input = document.getElementById('site-search');
+          if (!input || typeof toggleSearch !== 'function') return;
+          input.value = q;
+          toggleSearch();
+          const fire = function() {
+            input.dispatchEvent(new KeyboardEvent('keyup', { key: 'a' }));
+          };
+          if (searchReady) {
+            fire();
+          } else {
+            document.addEventListener('search-ready', fire, { once: true });
+          }
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', run);
+        } else {
+          run();
+        }
+      })();
     </script>
     <script type="text/javascript" src="{{ get_url(path='navigation.js') }}" defer></script>
     {% block highlights %}{% endblock highlights %}
