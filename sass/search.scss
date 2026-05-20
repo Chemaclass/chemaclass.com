@@ -144,79 +144,55 @@
 }
 
 
-// Easter egg: "67" split seesaw with pivot, kid, confetti, counter
+// Easter egg: "67" — page wobble + giant bouncing 6/7
 body.easter-67 {
   overflow-x: hidden;
-}
 
-.easter-67-stage {
-  perspective: 1500px;
-  isolation: isolate;
-}
-
-.easter-67-half {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  will-change: transform;
-  backface-visibility: hidden;
-
-  &.easter-67-left {
-    clip-path: inset(0 50% 0 0);
-    transform-origin: 0% 100%;
-    animation: easter-67-left 1.6s ease-in-out infinite;
-  }
-
-  &.easter-67-right {
-    clip-path: inset(0 0 0 50%);
-    transform-origin: 100% 100%;
-    animation: easter-67-right 1.6s ease-in-out infinite;
+  #main-content {
+    animation: easter-67-wobble 0.5s ease-in-out 8;
+    transform-origin: 50% 50%;
+    will-change: transform;
   }
 }
 
-@keyframes easter-67-left {
-  0%, 50%, 100% { transform: rotate(0deg); }
-  25%           { transform: rotate(-10deg); }
+@keyframes easter-67-wobble {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  25%      { transform: rotate(-3deg) translateY(-4px); }
+  75%      { transform: rotate(3deg)  translateY(4px); }
 }
 
-@keyframes easter-67-right {
-  0%, 50%, 100% { transform: rotate(0deg); }
-  75%           { transform: rotate(10deg); }
-}
-
-.easter-67-pivot {
-  position: absolute;
-  bottom: -36px;
-  left: 50%;
-  transform: translateX(-50%);
+.easter-67-banner {
+  position: fixed;
+  inset: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 5vw, 60px);
   pointer-events: none;
-}
-
-.easter-67-kid {
-  font-size: 48px;
+  z-index: 1500;
+  font-size: clamp(80px, 22vw, 280px);
   line-height: 1;
-  animation: easter-67-bob 1.6s ease-in-out infinite;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.45));
+  animation: easter-67-banner-out 0.6s ease-in 3.4s forwards;
 }
 
-.easter-67-wedge {
-  width: 0;
-  height: 0;
-  margin-top: -4px;
-  border-left: 28px solid transparent;
-  border-right: 28px solid transparent;
-  border-bottom: 28px solid var(--accent-color, #3a5c88);
-  opacity: 0.85;
+.easter-67-digit {
+  display: inline-block;
+  animation: easter-67-jump 0.55s ease-in-out infinite;
 }
 
-@keyframes easter-67-bob {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
+.easter-67-six   { animation-delay: 0s; }
+.easter-67-seven { animation-delay: 0.275s; }
+
+@keyframes easter-67-jump {
+  0%, 100% { transform: translateY(0)     scale(1)    rotate(0deg); }
+  40%      { transform: translateY(-40px) scale(1.25) rotate(-8deg); }
+  60%      { transform: translateY(-40px) scale(1.25) rotate(8deg); }
+}
+
+@keyframes easter-67-banner-out {
+  0%   { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.6); }
 }
 
 .easter-67-message {
@@ -229,29 +205,23 @@ body.easter-67 {
   }
 }
 
-// Mobile: tone down rotation, shrink pivot to avoid horizontal overflow
 @media (max-width: 640px) {
-  .easter-67-kid    { font-size: 36px; }
-  .easter-67-wedge  {
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-bottom-width: 20px;
+  @keyframes easter-67-wobble {
+    0%, 100% { transform: rotate(0deg) translateY(0); }
+    25%      { transform: rotate(-2deg) translateY(-2px); }
+    75%      { transform: rotate(2deg)  translateY(2px); }
   }
-  .easter-67-pivot  { bottom: -24px; }
-
-  @keyframes easter-67-left {
-    0%, 50%, 100% { transform: rotate(0deg); }
-    25%           { transform: rotate(-6deg); }
-  }
-  @keyframes easter-67-right {
-    0%, 50%, 100% { transform: rotate(0deg); }
-    75%           { transform: rotate(6deg); }
+  @keyframes easter-67-jump {
+    0%, 100% { transform: translateY(0)     scale(1)    rotate(0deg); }
+    40%      { transform: translateY(-20px) scale(1.2)  rotate(-6deg); }
+    60%      { transform: translateY(-20px) scale(1.2)  rotate(6deg); }
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .easter-67-half,
-  .easter-67-kid {
+  body.easter-67 #main-content,
+  .easter-67-banner,
+  .easter-67-digit {
     animation: none !important;
   }
 }

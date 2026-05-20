@@ -447,7 +447,7 @@ function initSearch() {
         // Easter egg: "67" (and variants) triggers seesaw animation
         if (window.__easter67) {
             if (window.__easter67.isTriggerTerm(term)) {
-                window.__easter67.trigger({ persistent: true });
+                window.__easter67.trigger();
                 searchResults.style.display = "block";
                 const resultCount = activeContainer.querySelector('.search-results__count');
                 if (resultCount) resultCount.textContent = "";
