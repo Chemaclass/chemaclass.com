@@ -144,19 +144,79 @@
 }
 
 
-// Easter egg: "67" seesaw animation
-@keyframes seesaw-67 {
-  0%   { transform: rotate(0deg); }
-  25%  { transform: rotate(-7deg); }
-  50%  { transform: rotate(0deg); }
-  75%  { transform: rotate(7deg); }
-  100% { transform: rotate(0deg); }
+// Easter egg: "67" split seesaw with pivot, kid, confetti, counter
+body.easter-67 {
+  overflow-x: hidden;
 }
 
-body.easter-67 main {
-  animation: seesaw-67 1.6s ease-in-out infinite;
-  transform-origin: 50% 50%;
+.easter-67-stage {
+  perspective: 1500px;
+  isolation: isolate;
+}
+
+.easter-67-half {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   will-change: transform;
+  backface-visibility: hidden;
+
+  &.easter-67-left {
+    clip-path: inset(0 50% 0 0);
+    transform-origin: 0% 100%;
+    animation: easter-67-left 1.6s ease-in-out infinite;
+  }
+
+  &.easter-67-right {
+    clip-path: inset(0 0 0 50%);
+    transform-origin: 100% 100%;
+    animation: easter-67-right 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes easter-67-left {
+  0%, 50%, 100% { transform: rotate(0deg); }
+  25%           { transform: rotate(-10deg); }
+}
+
+@keyframes easter-67-right {
+  0%, 50%, 100% { transform: rotate(0deg); }
+  75%           { transform: rotate(10deg); }
+}
+
+.easter-67-pivot {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.easter-67-kid {
+  font-size: 48px;
+  line-height: 1;
+  animation: easter-67-bob 1.6s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.easter-67-wedge {
+  width: 0;
+  height: 0;
+  margin-top: -4px;
+  border-left: 28px solid transparent;
+  border-right: 28px solid transparent;
+  border-bottom: 28px solid var(--accent-color, #3a5c88);
+  opacity: 0.85;
+}
+
+@keyframes easter-67-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
 }
 
 .easter-67-message {
@@ -169,9 +229,30 @@ body.easter-67 main {
   }
 }
 
+// Mobile: tone down rotation, shrink pivot to avoid horizontal overflow
+@media (max-width: 640px) {
+  .easter-67-kid    { font-size: 36px; }
+  .easter-67-wedge  {
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+  }
+  .easter-67-pivot  { bottom: -24px; }
+
+  @keyframes easter-67-left {
+    0%, 50%, 100% { transform: rotate(0deg); }
+    25%           { transform: rotate(-6deg); }
+  }
+  @keyframes easter-67-right {
+    0%, 50%, 100% { transform: rotate(0deg); }
+    75%           { transform: rotate(6deg); }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  body.easter-67 main {
-    animation: none;
+  .easter-67-half,
+  .easter-67-kid {
+    animation: none !important;
   }
 }
 

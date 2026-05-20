@@ -444,21 +444,23 @@ function initSearch() {
         searchResultsItems.innerHTML = "";
         currentTerm = term;
 
-        // Easter egg: "67" triggers seesaw animation
-        if (term === "67") {
-            document.body.classList.add("easter-67");
-            searchResults.style.display = "block";
-            const resultCount = activeContainer.querySelector('.search-results__count');
-            if (resultCount) resultCount.textContent = "";
-            const item = document.createElement("li");
-            item.innerHTML = `<div class="search-results__item easter-67-message">`
-                + `<span class="search-results__item-title">6️⃣ 7️⃣</span>`
-                + `<div class="search-results__item-body">${IS_SPANISH ? "Seis... ¡siete!" : "Six... seven!"}</div>`
-                + `</div>`;
-            searchResultsItems.appendChild(item);
-            return;
+        // Easter egg: "67" (and variants) triggers seesaw animation
+        if (window.__easter67) {
+            if (window.__easter67.isTriggerTerm(term)) {
+                window.__easter67.trigger({ persistent: true });
+                searchResults.style.display = "block";
+                const resultCount = activeContainer.querySelector('.search-results__count');
+                if (resultCount) resultCount.textContent = "";
+                const item = document.createElement("li");
+                item.innerHTML = `<div class="search-results__item easter-67-message">`
+                    + `<span class="search-results__item-title">6️⃣ 7️⃣</span>`
+                    + `<div class="search-results__item-body">${IS_SPANISH ? "Seis... ¡siete!" : "Six... seven!"}</div>`
+                    + `</div>`;
+                searchResultsItems.appendChild(item);
+                return;
+            }
+            window.__easter67.stop();
         }
-        document.body.classList.remove("easter-67");
 
         if (term === "" || term.length < 2) {
             return;
@@ -615,8 +617,12 @@ function initSearch() {
             }
         });
 
-        input.addEventListener("focusout", function () {
+        input.addEventListener("focusout", function (e) {
             resultsItemsIndex = -1;
+            const next = e.relatedTarget;
+            if (window.__easter67 && (!next || !container.contains(next))) {
+                window.__easter67.stop();
+            }
         });
     });
 
