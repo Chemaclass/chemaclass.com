@@ -18,6 +18,7 @@ window.closeSearch = function() {
   document.getElementById('site-search').value = '';
   const results = document.querySelector('.search-results');
   if (results) results.style.display = 'none';
+  document.body.classList.remove('easter-67');
 };
 
 // Mobile menu toggle

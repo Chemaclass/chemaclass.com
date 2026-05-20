@@ -443,6 +443,23 @@ function initSearch() {
         searchResults.style.display = term === "" || term.length < 2 ? "none" : "block";
         searchResultsItems.innerHTML = "";
         currentTerm = term;
+
+        // Easter egg: "67" triggers seesaw animation
+        if (term === "67") {
+            document.body.classList.add("easter-67");
+            searchResults.style.display = "block";
+            const resultCount = activeContainer.querySelector('.search-results__count');
+            if (resultCount) resultCount.textContent = "";
+            const item = document.createElement("li");
+            item.innerHTML = `<div class="search-results__item easter-67-message">`
+                + `<span class="search-results__item-title">6️⃣ 7️⃣</span>`
+                + `<div class="search-results__item-body">${IS_SPANISH ? "Seis... ¡siete!" : "Six... seven!"}</div>`
+                + `</div>`;
+            searchResultsItems.appendChild(item);
+            return;
+        }
+        document.body.classList.remove("easter-67");
+
         if (term === "" || term.length < 2) {
             return;
         }

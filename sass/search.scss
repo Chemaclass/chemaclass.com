@@ -144,6 +144,37 @@
 }
 
 
+// Easter egg: "67" seesaw animation
+@keyframes seesaw-67 {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-7deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(7deg); }
+  100% { transform: rotate(0deg); }
+}
+
+body.easter-67 main {
+  animation: seesaw-67 1.6s ease-in-out infinite;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.easter-67-message {
+  text-align: center;
+  padding: 16px;
+
+  .search-results__item-title {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.easter-67 main {
+    animation: none;
+  }
+}
+
 // Hide native search clear button
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration,
