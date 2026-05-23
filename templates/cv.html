@@ -105,7 +105,7 @@
   </header>
 
   <!-- Availability -->
-  <section class="cv-availability" aria-label="{% if lang == 'es' %}Disponibilidad{% else %}Availability{% endif %}">
+  <section class="cv-availability cv-print-hide" aria-label="{% if lang == 'es' %}Disponibilidad{% else %}Availability{% endif %}">
     <div class="cv-availability__status">
       <span class="cv-availability__dot" aria-hidden="true"></span>
       <strong>{% if lang == "es" %}Abierto a nuevas oportunidades desde julio de 2026{% else %}Open to new opportunities from July 2026{% endif %}</strong>
@@ -165,7 +165,6 @@
             <span class="cv-tag"><i class="fa-brands fa-docker"></i> Docker</span>
             <span class="cv-tag"><i class="fa-brands fa-aws"></i> EC2, S3, RDS</span>
             <span class="cv-tag"><i class="fa-solid fa-dog"></i> DataDog</span>
-            <span class="cv-tag"><i class="fa-solid fa-tower-broadcast"></i> Sentry</span>
           </div>
         </div>
       </div>
@@ -222,13 +221,10 @@
             <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
             <span class="cv-tag"><i class="fa-solid fa-gem"></i> Spryker</span>
             <span class="cv-tag"><i class="fa-solid fa-vial"></i> PHPUnit</span>
-            <span class="cv-tag"><i class="fa-solid fa-shield"></i> PHPStan</span>
             <span class="cv-tag"><i class="fa-solid fa-database"></i> PostgreSQL</span>
             <span class="cv-tag"><i class="fa-solid fa-bolt"></i> Redis</span>
             <span class="cv-tag"><i class="fa-solid fa-magnifying-glass"></i> ElasticSearch</span>
             <span class="cv-tag"><i class="fa-solid fa-envelope-open"></i> RabbitMQ</span>
-            <span class="cv-tag"><i class="fa-solid fa-dharmachakra"></i> K8s</span>
-            <span class="cv-tag"><i class="fa-brands fa-aws"></i> EC2</span>
             <span class="cv-tag"><i class="fa-brands fa-docker"></i> Docker</span>
           </div>
         </div>
@@ -458,8 +454,9 @@
 
   <!-- Open Source -->
   <section class="cv-section">
-    <h2><a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="cv-section__link cv-print-hide"><i class="fa-brands fa-osi"></i> Open Source</a><span class="cv-print-only"><i class="fa-brands fa-osi"></i> Open Source</span></h2>
-    <p class="cv-oss-summary"><i class="fa-brands fa-github"></i> <a href="https://github.com/Chemaclass" target="_blank" rel="noopener">github.com/Chemaclass</a> · {% if lang == "es" %}143 repos públicos · 214 seguidores{% else %}143 public repos · 214 followers{% endif %}</p>
+    <h2><a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="cv-section__link cv-print-hide">
+      <i class="fa-brands fa-github"></i> Open Source</a><span class="cv-print-only"><i class="fa-brands fa-osi"></i> Open Source</span>
+    </h2>
     <div class="cv-projects">
       <a href="https://bashunit.typeddevs.com/" target="_blank" rel="noopener" class="cv-project cv-print-hide">
         <h3>
