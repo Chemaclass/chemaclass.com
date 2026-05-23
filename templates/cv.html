@@ -14,11 +14,12 @@
   "url": "{{ config.base_url | safe }}/cv/",
   "mainEntity": {
     "@type": "Person",
-    "name": "Jose Maria Valera Reales",
+    "name": "Jose M. Valera Reales",
     "alternateName": "Chemaclass",
     "url": "{{ config.base_url | safe }}",
     "image": "{{ get_url(path=config.extra.icon) | safe }}",
     "jobTitle": "Tech Lead",
+    {# Update worksFor after Jun 2026 when Purpose Green tenure ends #}
     "worksFor": {
       "@type": "Organization",
       "name": "Purpose Green",
@@ -35,14 +36,20 @@
       "Software craftsmanship",
       "Test-Driven Development",
       "Domain-Driven Design",
+      "Modular monolith",
       "Refactoring",
       "PHP",
+      "Laravel",
       "Symfony",
+      "Pest",
+      "PHPUnit",
       "Bash",
       "Lisp",
       "Phel",
-      "Bitcoin",
-      "Lightning Network",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes",
+      "AWS",
       "AI agents",
       "Engineering leadership",
       "Team building",
@@ -82,10 +89,10 @@
   <!-- Header -->
   <header class="cv-header">
     <div class="cv-header__photo">
-      <img src="{{ profile_image.url }}" alt="Jose Maria Valera Reales" width="150" height="150" />
+      <img src="{{ profile_image.url }}" alt="Jose M. Valera Reales" width="150" height="150" />
     </div>
     <div class="cv-header__info">
-      <h1>Jose Maria Valera Reales</h1>
+      <h1>Jose M. Valera Reales</h1>
       <p class="cv-header__title">Tech Lead · <span class="cv-header__subtitle">{{ trans(key="home_subtitle", lang=lang) }}</span> <span class="cv-header__title-url">· chemaclass.com</span></p>
       <p class="cv-header__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany</p>
       <div class="cv-header__links">
@@ -106,10 +113,10 @@
     <ul class="cv-availability__details">
       <li><i class="fa-solid fa-location-dot"></i> {% if lang == "es" %}Berlín preferido{% else %}Berlin preferred{% endif %}</li>
       <li><i class="fa-solid fa-building"></i> {% if lang == "es" %}Oficina o híbrido{% else %}On-site or hybrid{% endif %}</li>
-      <li><i class="fa-solid fa-clock"></i> {% if lang == "es" %}Horario flexible{% else %}Flexible hours{% endif %}</li>
+      <li><i class="fa-solid fa-clock"></i> {% if lang == "es" %}Horario flexible (core: 10–16h){% else %}Flexible hours (core: 10–16h){% endif %}</li>
     </ul>
     <p class="cv-availability__fit">
-      {% if lang == "es" %}Tech Lead player-coach. Escribo código en producción a diario y hago crecer a los desarrolladores a mi alrededor hasta el siguiente nivel. Once años en backend (principalmente PHP, abierto a otros), dos estancias largas liderando equipos en scale-ups de Berlín, mantenedor activo de open source y escritor público sobre agentic coding y liderazgo en ingeniería. Busco liderar un equipo de ingeniería de 5-15 personas en una compañía con misión clara que se tome el craftsmanship en serio: TDD, pair programming, katas mensuales, contratar por ownership no por output. Etapa flexible. Misión por encima de tamaño.{% else %}Player-coach Tech Lead. Ship production code daily and grow the developers around me to the next level. Eleven years in backend (mainly PHP, open to others), two long tenures leading teams in Berlin scale-ups, an active open-source maintainer and a public writer on agentic coding and engineering leadership. Looking to lead a 5-15 person engineering team in a mission-leaning company that takes craftsmanship seriously: TDD, pair programming, monthly katas, hiring for ownership not output. Stage flexible. Mission over scale.{% endif %}
+      {% if lang == "es" %}Tech Lead player-coach. Escribo código en producción a diario y hago crecer a los desarrolladores a mi alrededor hasta el siguiente nivel. Once años en backend (principalmente PHP, abierto a otros), dos estancias largas liderando equipos en scale-ups de Berlín, mantenedor activo de open source y escritor público sobre agentic coding y liderazgo en ingeniería. Busco liderar un equipo de ingeniería de 2-10 personas en una compañía con misión clara que se tome el craftsmanship en serio: TDD, pair programming, katas mensuales, contratar por ownership no por output. Etapa flexible. Misión por encima de tamaño.{% else %}Player-coach Tech Lead. Ship production code daily and grow the developers around me to the next level. Eleven years in backend (mainly PHP, open to others), two long tenures leading teams in Berlin scale-ups, an active open-source maintainer and a public writer on agentic coding and engineering leadership. Looking to lead a 2-10 person engineering team in a mission-leaning company that takes craftsmanship seriously: TDD, pair programming, monthly katas, hiring for ownership not output. Stage flexible. Mission over scale.{% endif %}
     </p>
     <a href="mailto:hi@chemaclass.com" class="cv-availability__cta"><i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Hablemos{% else %}Get in touch{% endif %}</a>
   </section>
@@ -118,6 +125,10 @@
   <section class="cv-section">
     <h2><i class="fa-solid fa-user"></i> {% if lang == "es" %}Sobre mí{% else %}About{% endif %}</h2>
     {{ page.content | safe }}
+    <blockquote class="cv-hero-quote">
+      <p>{% if lang == "es" %}"Chema está muy por delante de la curva en IA. Mientras la mayoría de equipos aún debaten por dónde empezar, Chema ya tiene múltiples agentes corriendo en producción."{% else %}"Chema is well ahead of the curve on AI. While most teams are still debating where to start, Chema already has multiple agents running in production."{% endif %}</p>
+      <footer>&mdash; <a href="https://www.linkedin.com/in/leon-laakmann-672325b7/" target="_blank" rel="noopener"><strong>Leon Laakmann</strong></a>, Product Lead at Purpose Green</footer>
+    </blockquote>
   </section>
 
   <!-- Experience -->
@@ -139,7 +150,7 @@
             <h4>Tech Lead</h4>
             <span class="cv-job__dates">Mar 2025 &ndash; Jun 2026</span>
           </div>
-          <p>{% if lang == "es" %}Liderazgo técnico práctico combinando ingeniería de software diaria con crecimiento del equipo. Escribo código en producción mientras ayudo a los desarrolladores a construir una cultura de ownership, maestría y propósito. Mentoría, valores de Extreme Programming, code katas mensuales. Diseño e implementación de sistemas backend escalables (Laravel modular monolith)<span class="cv-print-hide"> apoyando la misión de descarbonizar cada edificio europeo</span>.{% else %}Hands-on technical leadership combining daily software engineering with team growth. Writing production code while helping developers build a culture of ownership, mastery, and purpose. Mentoring, Extreme Programming values, monthly code katas. Designing and implementing scalable backend systems (Laravel modular monolith)<span class="cv-print-hide"> supporting the mission of decarbonizing every European building</span>.{% endif %}</p>
+          <p>{% if lang == "es" %}Lideré la migración de la API Laravel a monolito modular con límites DDD: módulos de dominio independientes que escalan entre equipos sin acoplamiento cruzado. Player-coach: código en producción a diario mientras hago crecer al equipo con mentoría, katas mensuales y prácticas XP (ownership, maestría, propósito)<span class="cv-print-hide">. Sistemas backend apoyando la misión de descarbonizar cada edificio europeo</span>.{% else %}Drove the migration of our Laravel API into a modular monolith with DDD boundaries: independent domain modules that scale across teams without cross-coupling. Player-coach: ship production code daily while growing engineers through mentoring, monthly katas, and XP practices (ownership, mastery, purpose)<span class="cv-print-hide">. Backend systems supporting the mission of decarbonizing every European building</span>.{% endif %}</p>
           <div class="cv-job__role">
             <h4>Software Developer</h4>
             <span class="cv-job__dates">Aug 2024 &ndash; Mar 2025</span>
@@ -173,7 +184,7 @@
             <h4>Tech Lead</h4>
             <span class="cv-job__dates">Aug 2023 &ndash; Jul 2024</span>
           </div>
-          <p>{% if lang == "es" %}Lead Developer del equipo SDK implementando una nueva API de pagos. Mentoría y coaching de equipos. Entrevistas y contratación.{% else %}Lead Developer for the SDK team implementing a new payments API. Mentoring and coaching software teams. Interviewing and hiring.{% endif %}</p>
+          <p>{% if lang == "es" %}Tech Lead supervisando 3 equipos (12 ingenieros en total): DevOps, integraciones de APIs externas e integraciones internas. Lead Developer del equipo SDK implementando una nueva API de pagos. Mentoría y coaching cross-team. Entrevistas y contratación.{% else %}Tech Lead overseeing 3 teams (12 engineers total): DevOps, external API integrations, and internal integrations. Lead Developer for the SDK team implementing a new payments API. Cross-team mentoring and coaching. Interviewing and hiring.{% endif %}</p>
           <div class="cv-tags cv-tags--small">
             <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
             <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
@@ -201,7 +212,7 @@
             <h4>Tech Lead</h4>
             <span class="cv-job__dates">Jul 2021 &ndash; Jul 2023</span>
           </div>
-          <p>{% if lang == "es" %}Lead del equipo Web-IT. Coaching de desarrolladores en su camino al siguiente nivel, cultivando una cultura de ownership, customer centricity, maestría y propósito.{% else %}Lead of the Web-IT team. Coaching developers on their journey to the next level, while cultivating a culture of ownership, customer centricity, mastery, and purpose.{% endif %}</p>
+          <p>{% if lang == "es" %}Lead del equipo Web-IT (6 ingenieros) responsable del Webshop. Coaching de desarrolladores en su camino al siguiente nivel, cultivando una cultura de ownership, customer centricity, maestría y propósito.{% else %}Lead of the Web-IT team (6 engineers) responsible for the Webshop. Coaching developers on their journey to the next level, while cultivating a culture of ownership, customer centricity, mastery, and purpose.{% endif %}</p>
           <div class="cv-job__role">
             <h4>Software Developer</h4>
             <span class="cv-job__dates">Jun 2020 &ndash; Jul 2021</span>
@@ -237,7 +248,7 @@
             <h4>Software Developer</h4>
             <span class="cv-job__dates">Sep 2017 &ndash; May 2020</span>
           </div>
-          <p>{% if lang == "es" %}Parte del equipo de Analytics, enfocado en el servicio API backend para la solución de seguimiento de paquetes.{% else %}Part of the Analytics Team, focused on the Backend API service for the parcel tracking solution.{% endif %}</p>
+          <p>{% if lang == "es" %}Parte del equipo interno de Analytics (5 ingenieros), enfocado en el servicio API backend para la solución de seguimiento de paquetes.{% else %}Part of the internal Analytics team (5 engineers), focused on the Backend API service for the parcel tracking solution.{% endif %}</p>
           <div class="cv-tags cv-tags--small">
             <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
             <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
@@ -445,68 +456,131 @@
     <button class="cv-rec-toggle" onclick="this.previousElementSibling.classList.toggle('cv-recommendations--visible'); this.textContent = this.previousElementSibling.classList.contains('cv-recommendations--visible') ? '{% if lang == "es" %}Ver menos{% else %}Show less{% endif %}' : '{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (12)'">{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (12)</button>
   </section>
 
+  <!-- Open Source -->
+  <section class="cv-section">
+    <h2><a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="cv-section__link cv-print-hide"><i class="fa-brands fa-osi"></i> Open Source</a><span class="cv-print-only"><i class="fa-brands fa-osi"></i> Open Source</span></h2>
+    <p class="cv-oss-summary"><i class="fa-brands fa-github"></i> <a href="https://github.com/Chemaclass" target="_blank" rel="noopener">github.com/Chemaclass</a> · {% if lang == "es" %}143 repos públicos · 214 seguidores{% else %}143 public repos · 214 followers{% endif %}</p>
+    <div class="cv-projects">
+      <a href="https://bashunit.typeddevs.com/" target="_blank" rel="noopener" class="cv-project cv-print-hide">
+        <h3>
+          <svg class="cv-project__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.8 362.8"><path d="M317.5 0H45.4C20.3 0 0 20.3 0 45.4v272.1c0 25 20.3 45.4 45.4 45.4h272.1c25 0 45.4-20.3 45.4-45.4V45.4C362.8 20.3 342.5 0 317.5 0z" fill="#2e3436"/><path d="M259.3 317.5c11.2-4 21.6-10.1 30.5-17.9 4.9 10.9 15.7 17.9 27.6 17.9h-58.1zM226.8 45.3h-90.7C86 45.3 45.3 86 45.3 136.1v38.3c12.5-34.8 43.9-59.4 80.7-63.3.6-17.5 2.8-35 6.8-52.1a5.68 5.68 0 0 1 4.5-4.3c3.1-.5 6 1.5 6.6 4.6 3 16.8 10.6 32.5 22 45.2 1.6 1.8 2.9 3.9 3.9 6.1h5.4c2.4-21.3 12.9-40.9 29.3-54.6 1.3-1.1 3-1.5 4.6-1.2 3.1.6 5.1 3.5 4.6 6.6-3 16.8-1.2 34.2 5.2 50 .4.9.7 1.9.9 2.9 19.5 7.7 32.3 26.5 32.3 47.5v29.8c0 15.6-12.7 28.3-28.3 28.3h-78c-1.6 0-2.8-1.3-2.8-2.8 0-1.6 1.3-2.8 2.8-2.8h78c12.5 0 22.7-10.2 22.7-22.7v-29.8c0-25-20.3-45.4-45.3-45.4H136c-50.1 0-90.7 40.6-90.7 90.7v19.8c0 50.1 40.6 90.7 90.7 90.7h90.7c50.1 0 90.7-40.6 90.7-90.7v-90.7c.1-50.2-40.5-90.9-90.6-90.9zm-78 119.8c0-13.5 11-24.4 24.5-24.4s24.4 11 24.4 24.5-11 24.4-24.5 24.4c-13.4 0-24.4-11-24.4-24.5z" fill="#eceeee"/><path d="M161.7 108.3c-12.1-13.5-20.2-30.1-23.4-48-4.5 19.5-6.8 39.5-6.8 59.6a17.31 17.31 0 0 0 17.3 17.3 17.31 17.31 0 0 0 17.3-17.3c0-4.4-1.6-8.5-4.4-11.6zm51.5 3.7c-6.3-16.5-8.1-34.3-5-51.7C193.1 73 183.3 91 181 110.6h20.3c4 0 8 .4 11.9 1.4z" fill="#8ae234"/></svg>
+          bashunit
+        </h3>
+        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> 411 · {% if lang == "es" %}Creador y Maintainer{% else %}Creator &amp; Maintainer{% endif %}</p>
+        <p>{% if lang == "es" %}Librería de testing para scripts bash inspirada en PHPUnit. Lleva prácticas de calidad a shell scripts y pipelines de CI.{% else %}Testing library for bash scripts inspired by PHPUnit. Brings quality testing practices to shell scripts and CI pipelines.{% endif %}</p>
+        <p class="cv-project__meta cv-project__meta--award"><i class="fa-solid fa-trophy"></i> {% if lang == "es" %}Side Project del Año 2023{% else %}Side Project of the Year 2023{% endif %}</p>
+      </a>
+      <a href="https://phel-lang.org" target="_blank" rel="noopener" class="cv-project cv-print-hide">
+        <h3>
+          <svg class="cv-project__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.3 167.7"><path d="M6 66l95 96h36V93l-36-74H42L6 56v106h36l24-35" fill="none" stroke="#512da8" stroke-width="8"/><path d="M137 93l58-3-12-58-32-26h-34l-16 13-23 9-12 22 46 52z" fill="none" stroke="#512da8" stroke-width="8"/><path d="M195 90l-12 57h-13l-2-56m2 56l-13-11h12" fill="none" stroke="#512da8" stroke-width="8"/></svg>
+          Phel Lang
+        </h3>
+        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> 505 · {% if lang == "es" %}Core Maintainer{% else %}Core Maintainer{% endif %}</p>
+        <p>{% if lang == "es" %}Lenguaje de programación funcional que compila a PHP. Dialecto de Lisp inspirado en Clojure con estructuras de datos persistentes, macros y REPL.{% else %}Functional programming language that compiles to PHP. A Lisp dialect inspired by Clojure with persistent data structures, macros, and a REPL.{% endif %}</p>
+      </a>
+      <a href="https://github.com/gacela-project/gacela" target="_blank" rel="noopener" class="cv-project cv-print-hide">
+        <h3>
+          <svg class="cv-project__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 480" aria-label="Gacela" role="img" width="22" height="22"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M5.9,287.9 24.8,229.5 58.4,205.4 43.6,242z"></path><path d="M12.6,462.5 29.1,442.1 32,469.2z"></path><path d="M27.1,330.5 33.9,345.4 50.4,346.9 29.1,442.1 12.6,462.5z"></path><path d="M55.4,262.7 83.5,217.2 147.9,214.9 120.9,292.2 50.4,346.9 33.9,345.4 27.1,330.5z"></path><path d="M58.4,205.4 83.5,217.2 55.4,262.7 43.6,242z"></path><path d="M71.9,343.9 98.8,348.1 111,439.2 103.6,461.9z"></path><path d="M111,439.2 121.9,461.9 103.6,461.9z"></path><path d="M120.9,292.2 218.8,302.7 229.3,267.4 264.4,232.2 147.9,214.9z"></path><path d="M144.5,294.9 120.9,292.2 71.9,330.3 71.9,343.9 98.8,348.1z"></path><path d="M176.9,467.3 195.1,448 228.7,367.2 207.6,367.2 202.8,356.8z"></path><path d="M176.9,467.7 195.1,448 199.1,472.5z"></path><path d="M202.8,356.8 229.3,267.4 264.4,232.2 285.5,273.2 228.7,367.2 207.6,367.2z"></path><path d="M272.3,16.2 376.8,61.5 405.4,106.3 390.4,136.3 383.5,132.1 384.6,121.9 363.5,68.7z"></path><path d="M293.1,9.4 386.3,60.6 412.3,101.7 405.4,106.3 376.8,61.5 340.4,45.7z"></path><path d="M302.9,177.3 147.9,214.9 83.5,217.2 58.4,205.4 133.5,179.7z"></path><path d="M302.9,177.3 379.2,108.2 384.6,121.9 383.5,132.1 390.4,136.3 338.1,192.9z"></path><path d="M303.3,368.6 274.2,297.1 310,267.1 325.5,351.3z"></path><path d="M325.5,351.3 354.6,445.2 344.4,462.2 303.3,368.6z"></path><path d="M338.1,192.9 264.4,232.2 147.9,214.9 302.9,177.3z"></path><path d="M344.4,462.2 354.6,445.2 362.3,462.2z"></path><path d="M365.3,220.7 267.6,302.7 285.5,273.2 264.4,232.2 338.1,192.9z"></path><path d="M365.3,220.7 410.9,165.5 390.4,136.3 338.1,192.9z"></path><path d="M390.4,136.3 383.5,132.1 389.4,78.9 400.3,116.6z"></path><path d="M410.9,165.5 475.6,166.2 390.4,136.3z"></path><path d="M412.3,101.7 433,124.8 482.2,151.3 475.6,166.2 390.4,136.3 405.4,106.3z"></path><path d="M414.5,77 409.2,96.7 405.6,91z"></path></g></svg>
+          Gacela
+        </h3>
+        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> 133 · {% if lang == "es" %}Creador &amp; Maintainer{% else %}Creator &amp; Maintainer{% endif %}</p>
+        <p>{% if lang == "es" %}Framework PHP para aplicaciones modulares. Normaliza entry points y comunicación entre módulos para arquitecturas limpias.{% else %}PHP framework for modular applications. Normalizes module entry points and inter-module communication for cleaner architectures.{% endif %}</p>
+      </a>
+      <div class="cv-project cv-print-only">
+        <h3>bashunit · 411★</h3>
+        <p>{% if lang == "es" %}Creador y Maintainer. Librería de testing para scripts bash. Side Project del Año 2023.{% else %}Creator &amp; Maintainer. Testing library for bash scripts. Side Project of the Year 2023.{% endif %}</p>
+      </div>
+      <div class="cv-project cv-print-only">
+        <h3>Phel Lang · 505★</h3>
+        <p>{% if lang == "es" %}Core Maintainer. Lenguaje funcional que compila a PHP. Dialecto de Lisp inspirado en Clojure.{% else %}Core Maintainer. Functional language that compiles to PHP. Lisp dialect inspired by Clojure.{% endif %}</p>
+      </div>
+      <div class="cv-project cv-print-only">
+        <h3>Gacela · 133★</h3>
+        <p>{% if lang == "es" %}Creador &amp; Maintainer. Framework PHP para aplicaciones modulares.{% else %}Creator &amp; Maintainer. PHP framework for modular applications.{% endif %}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Talks -->
+  <section class="cv-section">
+    <h2><a href="/talks/" class="cv-section__link cv-print-hide"><i class="fa-solid fa-microphone"></i> {% if lang == "es" %}Charlas{% else %}Talks{% endif %}</a><span class="cv-print-only"><i class="fa-solid fa-microphone"></i> {% if lang == "es" %}Charlas{% else %}Talks{% endif %}</span></h2>
+    <p class="cv-section__lead">{% if lang == "es" %}35+ charlas y workshops desde 2021. Conferencias internacionales, meetups y comunidades de software craftsmanship.{% else %}35+ talks and workshops since 2021. International conferences, meetups, and software craftsmanship communities.{% endif %}</p>
+    <ul class="cv-talks">
+      <li>
+        <strong>International PHP Conference</strong>
+        <span>Berlin / Munich · 2022&ndash;2026</span>
+        <em>{% if lang == "es" %}TDD, refactoring, Phel, AI co-pilot, workshops de pair programming{% else %}TDD, refactoring, Phel, AI co-pilot, pair programming workshops{% endif %}</em>
+      </li>
+      <li>
+        <strong>WeAreDevelopers World Congress</strong>
+        <span>Berlin · 2023</span>
+        <em>Phel Lang, Extreme Programming</em>
+      </li>
+      <li>
+        <strong>PHPers Summit</strong>
+        <span>Poznan · 2023</span>
+        <em>Phel Lang</em>
+      </li>
+      <li>
+        <strong>Code Talks</strong>
+        <span>Hamburg · 2022</span>
+        <em>Update Your Team to be More Extreme</em>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Writing -->
+  <section class="cv-section">
+    <h2><a href="/blog/" class="cv-section__link cv-print-hide"><i class="fa-solid fa-pen-nib"></i> {% if lang == "es" %}Escritura{% else %}Writing{% endif %}</a><span class="cv-print-only"><i class="fa-solid fa-pen-nib"></i> {% if lang == "es" %}Escritura{% else %}Writing{% endif %}</span></h2>
+    <p class="cv-section__lead">{% if lang == "es" %}70+ posts publicados en chemaclass.com sobre agentic coding, liderazgo en ingeniería, craftsmanship y arquitectura modular.{% else %}70+ posts published on chemaclass.com on agentic coding, engineering leadership, craftsmanship, and modular architecture.{% endif %}</p>
+    <div class="cv-writing-series">
+      <span class="cv-tag"><i class="fa-solid fa-robot"></i> {% if lang == "es" %}Serie AI{% else %}AI Series{% endif %}</span>
+      <span class="cv-tag"><i class="fa-solid fa-users"></i> {% if lang == "es" %}Liderazgo &amp; Equipos{% else %}Leadership &amp; Teams{% endif %}</span>
+      <span class="cv-tag"><i class="fa-solid fa-hammer"></i> {% if lang == "es" %}Software Craftsmanship{% else %}Software Craftsmanship{% endif %}</span>
+      <span class="cv-tag"><i class="fa-solid fa-bolt"></i> Agile &amp; XP</span>
+    </div>
+  </section>
+
   <!-- Skills -->
   <section class="cv-section">
     <h2><i class="fa-solid fa-code"></i> {% if lang == "es" %}Habilidades{% else %}Skills{% endif %}</h2>
     <div class="cv-skills">
       <div class="cv-skills__group">
-        <h3 class="cv-skills__label cv-skills__label--lang">{% if lang == "es" %}Lenguajes{% else %}Languages{% endif %}</h3>
+        <h3 class="cv-skills__label">{% if lang == "es" %}Lenguajes & IA{% else %}Languages & AI{% endif %}</h3>
         <div class="cv-skills__items">
-          <span class="cv-skill cv-skill--lang"><i class="fa-brands fa-php"></i> PHP</span>
-          <span class="cv-skill cv-skill--lang"><i class="fa-solid fa-terminal"></i> Bash</span>
-          <span class="cv-skill cv-skill--lang"><i class="fa-solid fa-code"></i> Lisp</span>
-          <span class="cv-skill cv-skill--lang"><i class="fa-brands fa-golang"></i> Go</span>
-          <span class="cv-skill cv-skill--lang cv-print-hide"><i class="fa-brands fa-java"></i> Java</span>
-          <span class="cv-skill cv-skill--lang cv-print-hide"><i class="fa-brands fa-python"></i> Python</span>
+          <span class="cv-skill"><i class="fa-brands fa-php"></i> PHP</span>
+          <span class="cv-skill"><i class="fa-solid fa-terminal"></i> Bash</span>
+          <span class="cv-skill"><i class="fa-solid fa-code"></i> Lisp</span>
+          <span class="cv-skill"><i class="fa-brands fa-golang"></i> Go</span>
+          <span class="cv-skill"><i class="fa-solid fa-robot"></i> Claude</span>
+          <span class="cv-skill"><i class="fa-solid fa-brain"></i> Codex</span>
         </div>
       </div>
       <div class="cv-skills__group">
-        <h3 class="cv-skills__label cv-skills__label--tool">Frameworks & Tools</h3>
+        <h3 class="cv-skills__label">Frameworks &amp; Tools</h3>
         <div class="cv-skills__items">
-          <span class="cv-skill cv-skill--tool"><i class="fa-brands fa-laravel"></i> Laravel</span>
-          <span class="cv-skill cv-skill--tool cv-print-hide"><i class="fa-brands fa-symfony"></i> Symfony</span>
-          <span class="cv-skill cv-skill--tool"><i class="fa-solid fa-vial"></i> PHPUnit</span>
-          <span class="cv-skill cv-skill--tool"><i class="fa-solid fa-shield"></i> PHPStan</span>
+          <span class="cv-skill"><i class="fa-brands fa-laravel"></i> Laravel</span>
+          <span class="cv-skill cv-print-hide"><i class="fa-brands fa-symfony"></i> Symfony</span>
+          <span class="cv-skill"><i class="fa-solid fa-vial"></i> PHPUnit</span>
+          <span class="cv-skill"><i class="fa-solid fa-shield"></i> PHPStan</span>
         </div>
       </div>
       <div class="cv-skills__group">
-        <h3 class="cv-skills__label cv-skills__label--practice">{% if lang == "es" %}Prácticas{% else %}Practices{% endif %}</h3>
+        <h3 class="cv-skills__label">{% if lang == "es" %}Datos &amp; Infraestructura{% else %}Data &amp; Infrastructure{% endif %}</h3>
         <div class="cv-skills__items">
-          <span class="cv-skill cv-skill--practice"><i class="fa-solid fa-vial-circle-check"></i> TDD</span>
-          <span class="cv-skill cv-skill--practice"><i class="fa-solid fa-arrows-rotate"></i> XP</span>
-          <span class="cv-skill cv-skill--practice"><i class="fa-brands fa-osi"></i> {{ trans(key="home_skill_open_source", lang=lang) }}</span>
+          <span class="cv-skill"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+          <span class="cv-skill"><i class="fa-solid fa-bolt"></i> Redis</span>
+          <span class="cv-skill cv-print-hide"><i class="fa-solid fa-database"></i> MySQL</span>
+          <span class="cv-skill"><i class="fa-brands fa-docker"></i> Docker</span>
         </div>
       </div>
       <div class="cv-skills__group">
-        <h3 class="cv-skills__label cv-skills__label--infra">{% if lang == "es" %}Infraestructura{% else %}Infrastructure{% endif %}</h3>
+        <h3 class="cv-skills__label">{% if lang == "es" %}Prácticas &amp; Liderazgo{% else %}Practices &amp; Leadership{% endif %}</h3>
         <div class="cv-skills__items">
-          <span class="cv-skill cv-skill--infra"><i class="fa-brands fa-docker"></i> Docker</span>
-          <span class="cv-skill cv-skill--infra"><i class="fa-brands fa-aws"></i> EC2</span>
-          <span class="cv-skill cv-skill--infra"><i class="fa-solid fa-dharmachakra"></i> K8s</span>
-        </div>
-      </div>
-      <div class="cv-skills__group">
-        <h3 class="cv-skills__label cv-skills__label--db">Data</h3>
-        <div class="cv-skills__items">
-          <span class="cv-skill cv-skill--db"><i class="fa-solid fa-database"></i> PostgreSQL</span>
-          <span class="cv-skill cv-skill--db"><i class="fa-solid fa-bolt"></i> Redis</span>
-          <span class="cv-skill cv-skill--db"><i class="fa-solid fa-database"></i> MySQL</span>
-          <span class="cv-skill cv-skill--db"><i class="fa-solid fa-magnifying-glass"></i> ElasticSearch</span>
-        </div>
-      </div>
-      <div class="cv-skills__group">
-        <h3 class="cv-skills__label cv-skills__label--soft">{% if lang == "es" %}Soft Skills{% else %}Soft Skills{% endif %}</h3>
-        <div class="cv-skills__items">
-          <span class="cv-skill cv-skill--soft"><i class="fa-solid fa-compass"></i> {{ trans(key="home_skill_leadership", lang=lang) }}</span>
-          <span class="cv-skill cv-skill--soft"><i class="fa-solid fa-people-arrows"></i> Mentoring</span>
-          <span class="cv-skill cv-skill--soft"><i class="fa-solid fa-comments"></i> {{ trans(key="home_skill_communication", lang=lang) }}</span>
-        </div>
-      </div>
-      <div class="cv-skills__group">
-        <h3 class="cv-skills__label cv-skills__label--ai">AI</h3>
-        <div class="cv-skills__items">
-          <span class="cv-skill cv-skill--ai"><i class="fa-solid fa-robot"></i> Claude</span>
-          <span class="cv-skill cv-skill--ai"><i class="fa-solid fa-brain"></i> OpenClaw</span>
+          <span class="cv-skill"><i class="fa-solid fa-vial-circle-check"></i> TDD</span>
+          <span class="cv-skill"><i class="fa-solid fa-arrows-rotate"></i> XP</span>
+          <span class="cv-skill"><i class="fa-solid fa-compass"></i> {{ trans(key="home_skill_leadership", lang=lang) }}</span>
+          <span class="cv-skill"><i class="fa-solid fa-people-arrows"></i> Mentoring</span>
         </div>
       </div>
     </div>
@@ -543,9 +617,9 @@
       </div>
       <div class="cv-edu">
         <h3><i class="fa-solid fa-earth-europe"></i> Erasmus+ Programme</h3>
-        <p class="cv-edu__location">ENAE Business School</p>
+        <p class="cv-edu__location">{% if lang == "es" %}Via ENAE Business School (Murcia) &rarr; Lübeck, Alemania{% else %}Via ENAE Business School (Murcia) &rarr; Lübeck, Germany{% endif %}</p>
         <span class="cv-job__dates">Dec 2014 &ndash; Jun 2015</span>
-        <p class="cv-edu__focus">{% if lang == "es" %}Lübeck, Alemania{% else %}Lübeck, Germany{% endif %}</p>
+        <p class="cv-edu__focus">{% if lang == "es" %}Estancia profesional en Alemania (combinada con trabajo en Falk medizinische Datenverarbeitung).{% else %}Professional placement in Germany (combined with work at Falk medizinische Datenverarbeitung).{% endif %}</p>
       </div>
     </div>
   </section>
@@ -604,34 +678,7 @@
     </div>
   </section>
 
-  <!-- Open Source -->
-  <section class="cv-section">
-    <h2><i class="fa-brands fa-osi"></i> Open Source</h2>
-    <div class="cv-projects">
-      <a href="https://bashunit.typeddevs.com/" target="_blank" rel="noopener" class="cv-project cv-print-hide">
-        <h3>
-          <svg class="cv-project__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.8 362.8"><path d="M317.5 0H45.4C20.3 0 0 20.3 0 45.4v272.1c0 25 20.3 45.4 45.4 45.4h272.1c25 0 45.4-20.3 45.4-45.4V45.4C362.8 20.3 342.5 0 317.5 0z" fill="#2e3436"/><path d="M259.3 317.5c11.2-4 21.6-10.1 30.5-17.9 4.9 10.9 15.7 17.9 27.6 17.9h-58.1zM226.8 45.3h-90.7C86 45.3 45.3 86 45.3 136.1v38.3c12.5-34.8 43.9-59.4 80.7-63.3.6-17.5 2.8-35 6.8-52.1a5.68 5.68 0 0 1 4.5-4.3c3.1-.5 6 1.5 6.6 4.6 3 16.8 10.6 32.5 22 45.2 1.6 1.8 2.9 3.9 3.9 6.1h5.4c2.4-21.3 12.9-40.9 29.3-54.6 1.3-1.1 3-1.5 4.6-1.2 3.1.6 5.1 3.5 4.6 6.6-3 16.8-1.2 34.2 5.2 50 .4.9.7 1.9.9 2.9 19.5 7.7 32.3 26.5 32.3 47.5v29.8c0 15.6-12.7 28.3-28.3 28.3h-78c-1.6 0-2.8-1.3-2.8-2.8 0-1.6 1.3-2.8 2.8-2.8h78c12.5 0 22.7-10.2 22.7-22.7v-29.8c0-25-20.3-45.4-45.3-45.4H136c-50.1 0-90.7 40.6-90.7 90.7v19.8c0 50.1 40.6 90.7 90.7 90.7h90.7c50.1 0 90.7-40.6 90.7-90.7v-90.7c.1-50.2-40.5-90.9-90.6-90.9zm-78 119.8c0-13.5 11-24.4 24.5-24.4s24.4 11 24.4 24.5-11 24.4-24.5 24.4c-13.4 0-24.4-11-24.4-24.5z" fill="#eceeee"/><path d="M161.7 108.3c-12.1-13.5-20.2-30.1-23.4-48-4.5 19.5-6.8 39.5-6.8 59.6a17.31 17.31 0 0 0 17.3 17.3 17.31 17.31 0 0 0 17.3-17.3c0-4.4-1.6-8.5-4.4-11.6zm51.5 3.7c-6.3-16.5-8.1-34.3-5-51.7C193.1 73 183.3 91 181 110.6h20.3c4 0 8 .4 11.9 1.4z" fill="#8ae234"/></svg>
-          bashunit
-        </h3>
-        <p>{% if lang == "es" %}Librería de testing para scripts bash. Premiada como Side Project del Año, 2023.{% else %}Testing library for bash scripts. Awarded Side Project of the Year, 2023.{% endif %}</p>
-      </a>
-      <a href="https://phel-lang.org" target="_blank" rel="noopener" class="cv-project cv-print-hide">
-        <h3>
-          <svg class="cv-project__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.3 167.7"><path d="M6 66l95 96h36V93l-36-74H42L6 56v106h36l24-35" fill="none" stroke="#512da8" stroke-width="8"/><path d="M137 93l58-3-12-58-32-26h-34l-16 13-23 9-12 22 46 52z" fill="none" stroke="#512da8" stroke-width="8"/><path d="M195 90l-12 57h-13l-2-56m2 56l-13-11h12" fill="none" stroke="#512da8" stroke-width="8"/></svg>
-          Phel Lang
-        </h3>
-        <p>{% if lang == "es" %}Lenguaje de programación funcional que compila a PHP. Dialecto de Lisp inspirado en Clojure.{% else %}Functional programming language that compiles to PHP. A Lisp dialect inspired by Clojure.{% endif %}</p>
-      </a>
-      <div class="cv-project cv-print-only">
-        <h3>bashunit</h3>
-        <p>{% if lang == "es" %}Librería de testing para scripts bash. Premiada como Side Project del Año, 2023.{% else %}Testing library for bash scripts. Awarded Side Project of the Year, 2023.{% endif %}</p>
-      </div>
-      <div class="cv-project cv-print-only">
-        <h3>Phel Lang</h3>
-        <p>{% if lang == "es" %}Lenguaje de programación funcional que compila a PHP. Dialecto de Lisp inspirado en Clojure.{% else %}Functional programming language that compiles to PHP. A Lisp dialect inspired by Clojure.{% endif %}</p>
-      </div>
-    </div>
-  </section>
+
 </article>
 
 <script>
