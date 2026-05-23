@@ -8,7 +8,7 @@ tags = [ "ai", "software", "leadership" ]
 subtitle = "When you become the slowest part of the system"
 static_thumbnail = "/images/blog/placeholder.jpg"
 series = "ai"
-series_order = 8
+series_order = 9
 related_posts = [
   "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
   "blog/2026-02-07-build-your-own-team-of-agents.md",
