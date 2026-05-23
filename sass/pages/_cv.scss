@@ -126,6 +126,76 @@ $cv-card-padding: 1.25rem;
 
 .cv-print-only { display: none; }
 
+// Availability
+.cv-availability {
+  @extend %cv-card;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+
+  &__status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+    color: var(--heading-color);
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #16a34a;
+    box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.18);
+    flex-shrink: 0;
+    animation: cvAvailabilityPulse 2s infinite;
+  }
+
+  &__details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    font-size: 0.9rem;
+    color: var(--color-subtitle);
+
+    li i {
+      margin-right: 0.3rem;
+      color: var(--accent-color);
+    }
+  }
+
+  &__fit {
+    margin: 0 0 0.75rem;
+    color: var(--body-color);
+    font-size: 0.95rem;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 20px;
+    background: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+@keyframes cvAvailabilityPulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.18); }
+  50%      { box-shadow: 0 0 0 8px rgba(22, 163, 74, 0.05); }
+}
+
 // Sections
 .cv-section {
   padding: 2rem 0;
@@ -315,6 +385,12 @@ $cv-card-padding: 1.25rem;
     }
   }
 
+  &__total {
+    color: var(--color-subtitle);
+    opacity: 0.75;
+    margin-left: 0.35rem;
+  }
+
   &__body {
     padding-left: 3.35rem;
     margin-top: 0.4rem;
@@ -473,29 +549,6 @@ $cv-card-padding: 1.25rem;
     color: var(--color-subtitle);
   }
 
-  &__bar {
-    position: relative;
-    height: 4px;
-    border-radius: 2px;
-    background: var(--preview-divider-color);
-    margin-top: 0.2rem;
-    overflow: hidden;
-
-    > span {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      border-radius: inherit;
-      background: var(--accent-color);
-    }
-  }
-
-  &[data-level="1"] &__bar > span { width: 20%; }
-  &[data-level="2"] &__bar > span { width: 40%; }
-  &[data-level="3"] &__bar > span { width: 60%; }
-  &[data-level="4"] &__bar > span { width: 80%; }
-  &[data-level="5"] &__bar > span { width: 100%; }
 }
 
 // Projects
