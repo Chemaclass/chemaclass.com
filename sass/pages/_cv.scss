@@ -796,7 +796,6 @@ a.cv-project {
 .cv-recommendations {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  align-items: start;
   gap: 1rem;
 
   &--more {
@@ -807,7 +806,6 @@ a.cv-project {
   &--visible {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    align-items: start;
     gap: 1rem;
   }
 }
@@ -827,7 +825,6 @@ a.cv-project {
   }
 
   &__text {
-    flex: 1;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 8;
