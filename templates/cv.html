@@ -384,12 +384,26 @@
     <h2><i class="fa-solid fa-quote-left"></i> {% if lang == "es" %}Recomendaciones{% else %}Recommendations{% endif %}</h2>
     <div class="cv-recommendations">
       <blockquote class="cv-rec">
+        <p>"I worked with Chema for almost two years at Purpose Green. We started together as Senior Backend Engineers, and he later became our Team Tech Lead. Chema is one of the most professional leaders and colleagues I have ever worked with.</p>
+        <p>He has solid experience in PHP and team management, but what I appreciated most was how supportive he was. He was always there to help the team and made sure we had everything we needed to succeed. He is a great leader and a great person."</p>
+        <footer><span class="cv-rec__avatar" style="background:#0f766e">MI</span> <a href="https://www.linkedin.com/in/muhamadibrahim/" target="_blank" rel="noopener"><strong>Mohamed Ibrahim Alokl</strong></a> · Software Engineer at Purpose Green <span class="cv-rec__date">Apr 2026</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
+        <p>"Chema is the best team lead I have ever worked with. He has a real talent for motivating the whole team to grow, try new things, and stay curious about modern tools and ideas.</p>
+        <p>For him, collaboration and communication are the key to everything. He builds an environment where people feel safe to share ideas, ask questions, and learn from each other. You can feel that he really cares about the team, not only about the results.</p>
+        <p>Chema also led our integration of AI tools and helped the whole team fall in love with agentic coding. He shared patterns, ran sessions, and showed us how to use these tools in a smart and structured way — not as hype, but as a real part of how we ship software.</p>
+        <p>Any team that gets Chema as a lead is very lucky. He makes people around him better engineers and better teammates."</p>
+        <footer><span class="cv-rec__avatar" style="background:#7c3aed">RF</span> <a href="https://www.linkedin.com/in/r-frolov/" target="_blank" rel="noopener"><strong>Roman Frolov</strong></a> · Software Engineer at Purpose Green <span class="cv-rec__date">Apr 2026</span></footer>
+      </blockquote>
+      <blockquote class="cv-rec">
         <p>"I've worked with Chema twice, first at Seven Senders (2017-2019), and again at Purpose Green as my counterpart on the tech side.</p>
         <p>What makes Chema rare is that he doesn't hide behind roadmaps or architecture diagrams. He gets into the details when it matters and refuses to use process as an excuse to slow things down. Agile isn't a methodology to him, it's how he works, which makes him unusually easy to build with from a product seat.</p>
         <p>He's also well ahead of the curve on AI. While most teams are still debating where to start, Chema already has multiple agents running in production.</p>
         <p>If you want a tech lead who pairs sharp engineering instincts with a real appetite for what's next, Chema is the one."</p>
         <footer><span class="cv-rec__avatar" style="background:#0891b2">LL</span> <a href="https://www.linkedin.com/in/leon-laakmann-672325b7/" target="_blank" rel="noopener"><strong>Leon Laakmann</strong></a> · Product Lead at Purpose Green <span class="cv-rec__date">Apr 2026</span></footer>
       </blockquote>
+    </div>
+    <div class="cv-recommendations cv-recommendations--more">
       <blockquote class="cv-rec">
         <p>"Chema is a great engineer and knows how to create value from get go. He was proactive, resourceful, and knew how to navigate extreme complexity, demonstrating clear leadership skills. He not only adhered to agile principles, but also lifted his co-workers by coaching them."</p>
         <footer><span class="cv-rec__avatar" style="background:#2d5a8e">EL</span> <a href="https://www.linkedin.com/in/elofca" target="_blank" rel="noopener"><strong>Engin Lofça</strong></a> · Product Leadership in Payments <span class="cv-rec__date">May 2025</span></footer>
@@ -398,8 +412,6 @@
         <p>"Chema is a great leader, speaker, and impactful contributor! He always balances clean code, testing, and software design with pragmatism while delivering value to the customer. With a truly agile mindset, he is capable of helping your tech organization reach the next level."</p>
         <footer><span class="cv-rec__avatar" style="background:#16a34a">BD</span> <a href="https://www.linkedin.com/in/borisdiebold" target="_blank" rel="noopener"><strong>Boris Diebold</strong></a> · CTO at HeyJobs <span class="cv-rec__date">May 2024</span></footer>
       </blockquote>
-    </div>
-    <div class="cv-recommendations cv-recommendations--more">
       <blockquote class="cv-rec">
         <p>"Chema is an impressive person to work with and to be inspired by. His coding skills were already outstanding when I hired him, principles like SOLID or approaches like TDD were mastered and embraced by heart already. This turned out to even be surpassed by his incredible learning mindset. One of a kind, a perfect addition to any a-team."</p>
         <footer><span class="cv-rec__avatar" style="background:#8b5cf6">CK</span> <a href="https://www.linkedin.com/in/christian-kuennemann-berlin" target="_blank" rel="noopener"><strong>Christian Künnemann</strong></a> · Director Software Engineering <span class="cv-rec__date">Apr 2024</span></footer>
@@ -449,7 +461,7 @@
         <footer><span class="cv-rec__avatar" style="background:#16a34a">AC</span> <a href="https://www.linkedin.com/in/annemarschner" target="_blank" rel="noopener"><strong>Anne Christiansen</strong></a> · Marketing &amp; Communications <span class="cv-rec__date">Nov 2016</span></footer>
       </blockquote>
     </div>
-    <button class="cv-rec-toggle" onclick="this.previousElementSibling.classList.toggle('cv-recommendations--visible'); this.textContent = this.previousElementSibling.classList.contains('cv-recommendations--visible') ? '{% if lang == "es" %}Ver menos{% else %}Show less{% endif %}' : '{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (12)'">{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (12)</button>
+    <button class="cv-rec-toggle" onclick="this.previousElementSibling.classList.toggle('cv-recommendations--visible'); this.textContent = this.previousElementSibling.classList.contains('cv-recommendations--visible') ? '{% if lang == "es" %}Ver menos{% else %}Show less{% endif %}' : '{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (14)'">{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (14)</button>
   </section>
 
   <!-- Open Source -->
@@ -685,6 +697,22 @@
     ? { more: 'Leer más', less: 'Ver menos' }
     : { more: 'Read more', less: 'Show less' };
 
+  function addToggle(rec, wrap) {
+    var footer = rec.querySelector('footer');
+    var btn = document.createElement('button');
+    btn.className = 'cv-rec__inline-toggle';
+    btn.type = 'button';
+    btn.innerHTML = '<span>' + labels.more + '</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i>';
+    var labelEl = btn.querySelector('span');
+    btn.addEventListener('click', function () {
+      var expanded = rec.classList.toggle('cv-rec--expanded');
+      labelEl.textContent = expanded ? labels.less : labels.more;
+    });
+    rec.insertBefore(btn, footer);
+  }
+
+  var pending = [];
+
   document.querySelectorAll('.cv-rec').forEach(function (rec) {
     if (rec.querySelector('.cv-rec__text')) return;
     var paragraphs = Array.prototype.filter.call(rec.children, function (el) {
@@ -699,18 +727,17 @@
     var footer = rec.querySelector('footer');
     rec.insertBefore(wrap, footer);
 
-    if (wrap.scrollHeight <= wrap.clientHeight + 1) return;
+    pending.push({ rec: rec, wrap: wrap });
+  });
 
-    var btn = document.createElement('button');
-    btn.className = 'cv-rec__inline-toggle';
-    btn.type = 'button';
-    btn.innerHTML = '<span>' + labels.more + '</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i>';
-    var labelEl = btn.querySelector('span');
-    btn.addEventListener('click', function () {
-      var expanded = rec.classList.toggle('cv-rec--expanded');
-      labelEl.textContent = expanded ? labels.less : labels.more;
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      pending.forEach(function (item) {
+        if (item.wrap.scrollHeight > item.wrap.clientHeight + 1) {
+          addToggle(item.rec, item.wrap);
+        }
+      });
     });
-    rec.insertBefore(btn, footer);
   });
 })();
 </script>
