@@ -208,7 +208,18 @@
     <div class="budget-section" id="budget">
       <div class="budget-header">
         <h3>{{ trans(key="svc_budget", lang=lang) }}</h3>
-        <p>{% if lang == "es" %}Trabajo directo contigo, sin intermediarios. Calidad senior, precios competitivos, entrega en menos de un mes. Vista previa desde el primer día, feedback diario, iteraciones cortas.{% else %}I work directly with you, no middlemen. Senior quality, competitive rates, delivery in less than a month. Preview from day one, daily feedback, short iterations.{% endif %}</p>
+        <ul class="budget-highlights">
+          {% if lang == "es" %}
+          <li><i class="fa-solid fa-user-tie"></i> Trabajo directo contigo, sin intermediarios</li>
+          <li><i class="fa-solid fa-bolt"></i> Calidad senior, entrega en menos de un mes</li>
+          <li><i class="fa-solid fa-eye"></i> Vista previa desde el primer día, feedback diario</li>
+          {% else %}
+          <li><i class="fa-solid fa-user-tie"></i> Direct work with you, no middlemen</li>
+          <li><i class="fa-solid fa-bolt"></i> Senior quality, delivery in under a month</li>
+          <li><i class="fa-solid fa-eye"></i> Preview from day one, daily feedback</li>
+          {% endif %}
+        </ul>
+        <p class="budget-floor">{% if lang == "es" %}Proyectos desde €{{ config.extra.pricing_static_simple_min | default(value=1500) }}{% else %}Projects from €{{ config.extra.pricing_static_simple_min | default(value=1500) }}{% endif %}</p>
       </div>
 
       <!-- Pricing details (hidden by default, shown with ?prices=1) -->
@@ -219,7 +230,7 @@
             <div class="pricing-card__price">€{{ config.extra.pricing_static_simple_min | default(value=1000) }} - €{{ config.extra.pricing_static_simple_max | default(value=2000) }}</div>
             <div class="pricing-card__price-label">{% if lang == "es" %}pago único, precio cerrado{% else %}one-time, fixed price{% endif %}</div>
             <p class="pricing-card__included">{% if lang == "es" %}Año 1 incluye hosting, dominio y mantenimiento.{% else %}Year 1 includes hosting, domain, and care.{% endif %}</p>
-            <p class="pricing-card__anchor">{% if lang == "es" %}Hecho por un senior, la mitad del coste de una agencia. Listo en días, no meses.{% else %}Senior-built, half the agency cost. Live in days, not months.{% endif %}</p>
+            <p class="pricing-card__anchor">{% if lang == "es" %}Agencias cobran €8-15k por lo mismo. Senior, en días, no meses.{% else %}Agencies charge €8-15k for the same. Senior-built, in days, not months.{% endif %}</p>
             <div class="pricing-card__ongoing">
               <span class="pricing-card__ongoing-label">{% if lang == "es" %}Desde el Año 2{% else %}From Year 2{% endif %}</span>
               <ul class="pricing-card__details">
@@ -227,6 +238,9 @@
                 <li>{% if lang == "es" %}Plan de mantenimiento: €{{ config.extra.pricing_static_maintenance_min | default(value=50) }}-{{ config.extra.pricing_static_maintenance_max | default(value=120) }}/año{% else %}Care plan: €{{ config.extra.pricing_static_maintenance_min | default(value=50) }}-{{ config.extra.pricing_static_maintenance_max | default(value=120) }}/yr{% endif %}</li>
               </ul>
             </div>
+            <a href="mailto:web@chemaclass.com?subject={% if lang == 'es' %}Presupuesto%20Web%20a%20Medida&body=Hola%20Chema%2C%0A%0AMe%20interesa%20la%20Web%20a%20Medida.%0A%0AQué%20necesito%3A%0A%0AGracias!{% else %}Custom%20Website%20Quote&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20the%20Custom%20Website.%0A%0AWhat%20I%20need%3A%0A%0AThanks!{% endif %}" class="pricing-card__cta">
+              <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Pedir presupuesto{% else %}Get a quote{% endif %}
+            </a>
           </div>
           <div class="pricing-card">
             <h4><i class="fa-solid fa-code"></i> {{ trans(key="svc_static_blog", lang=lang) }}</h4>
@@ -238,12 +252,15 @@
               <span class="pricing-card__ongoing-label">{% if lang == "es" %}Desde el Año 2{% else %}From Year 2{% endif %}</span>
               <ul class="pricing-card__details">
                 <li>{% if lang == "es" %}Hosting + dominio: €{{ config.extra.pricing_static_hosting | default(value=25) }} + €{{ config.extra.pricing_domain | default(value=15) }}/año{% else %}Hosting + domain: €{{ config.extra.pricing_static_hosting | default(value=25) }} + €{{ config.extra.pricing_domain | default(value=15) }}/yr{% endif %}</li>
-                <li>{% if lang == "es" %}Plan de mantenimiento: €{{ config.extra.pricing_static_pro_maintenance | default(value=120) }}/año{% else %}Care plan: €{{ config.extra.pricing_static_pro_maintenance | default(value=120) }}/yr{% endif %}</li>
+                <li>{% if lang == "es" %}Plan de mantenimiento: €{{ config.extra.pricing_static_pro_maintenance_min | default(value=350) }}-{{ config.extra.pricing_static_pro_maintenance_max | default(value=500) }}/año{% else %}Care plan: €{{ config.extra.pricing_static_pro_maintenance_min | default(value=350) }}-{{ config.extra.pricing_static_pro_maintenance_max | default(value=500) }}/yr{% endif %}</li>
               </ul>
             </div>
+            <a href="mailto:web@chemaclass.com?subject={% if lang == 'es' %}Presupuesto%20Web%20%2B%20Blog&body=Hola%20Chema%2C%0A%0AMe%20interesa%20la%20Web%20%2B%20Blog.%0A%0AQué%20necesito%3A%0A%0AGracias!{% else %}Website%20%2B%20Blog%20Quote&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20the%20Website%20%2B%20Blog.%0A%0AWhat%20I%20need%3A%0A%0AThanks!{% endif %}" class="pricing-card__cta">
+              <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Pedir presupuesto{% else %}Get a quote{% endif %}
+            </a>
           </div>
         </div>
-        <p class="pricing-note">{% if lang == "es" %}* Plan de mantenimiento: hasta 2h/mes (actualizaciones, parches, ediciones ligeras, arreglos menores). Mínimo 2 años, después opcional. Hosting + dominio son obligatorios para mantener la web activa. Los gestiono yo, o te transfiero la cuenta y el código en cualquier momento. Precios orientativos, el presupuesto final depende de la complejidad.{% else %}* Care plan: up to 2hr/month (updates, patches, light edits, minor fixes). 2-year minimum, optional afterwards. Hosting + domain required to keep the site live. I manage them, or transfer the account and code to you anytime. Indicative prices, final quote depends on complexity.{% endif %}</p>
+        <p class="pricing-note">{% if lang == "es" %}* Plan de mantenimiento: cubre actualizaciones y ediciones menores. Los cambios sustanciales se presupuestan aparte según complejidad. Hosting + dominio son obligatorios para mantener la web activa. Los gestiono yo, o te transfiero la cuenta y el código en cualquier momento. Precios orientativos, el presupuesto final depende de la complejidad.{% else %}* Care plan: covers updates and minor edits. Substantial changes priced separately based on complexity. Hosting + domain required to keep the site live. I manage them, or transfer the account and code to you anytime. Indicative prices, final quote depends on complexity.{% endif %}</p>
       </div>
 
       <div class="quote-cta">
@@ -253,7 +270,29 @@
         </a>
       </div>
 
-      <p class="budget-disclaimer">{% if lang == "es" %}Precios personalizados según el número de páginas, funcionalidades y complejidad del diseño.{% else %}Pricing customized based on number of pages, features, and design complexity.{% endif %}</p>
+      <div class="budget-faq">
+        <h4>{% if lang == "es" %}Preguntas frecuentes{% else %}Frequently asked{% endif %}</h4>
+        <details>
+          <summary>{% if lang == "es" %}¿Qué pasa si necesito cambios después del lanzamiento?{% else %}What if I need changes after launch?{% endif %}</summary>
+          <p>{% if lang == "es" %}Cambios menores entran en el plan de mantenimiento. Para cambios sustanciales o nuevas funcionalidades, te presupuesto aparte según complejidad.{% else %}Minor changes are covered by the care plan. For substantial changes or new features, I quote separately based on complexity.{% endif %}</p>
+        </details>
+        <details>
+          <summary>{% if lang == "es" %}¿Puedo llevarme la web a otro proveedor?{% else %}Can I move the site to another provider?{% endif %}</summary>
+          <p>{% if lang == "es" %}Sí, en cualquier momento. Te transfiero la cuenta de hosting, el dominio y el código fuente sin coste adicional.{% else %}Yes, anytime. I transfer the hosting account, domain, and source code at no extra cost.{% endif %}</p>
+        </details>
+        <details>
+          <summary>{% if lang == "es" %}¿El plan de mantenimiento es obligatorio?{% else %}Is the care plan required?{% endif %}</summary>
+          <p>{% if lang == "es" %}No. El Año 1 ya viene incluido en el precio. Desde el Año 2 es totalmente opcional.{% else %}No. Year 1 is bundled in the price. From Year 2 it's fully optional.{% endif %}</p>
+        </details>
+        <details>
+          <summary>{% if lang == "es" %}¿Cuánto se tarda en lanzar?{% else %}How long until launch?{% endif %}</summary>
+          <p>{% if lang == "es" %}Menos de un mes para la mayoría de proyectos. Vista previa desde el primer día, iteraciones cortas con feedback diario.{% else %}Less than a month for most projects. Preview link from day one, short iterations with daily feedback.{% endif %}</p>
+        </details>
+        <details>
+          <summary>{% if lang == "es" %}¿Por qué tan barato comparado con una agencia?{% else %}Why so cheap compared to an agency?{% endif %}</summary>
+          <p>{% if lang == "es" %}Sin intermediarios, sin equipo de ventas, sin oficinas. Trabajas directamente con un senior, no con un junior gestionado por capas de management.{% else %}No middlemen, no sales team, no offices. You work directly with a senior, not a junior managed through layers of overhead.{% endif %}</p>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -385,6 +424,7 @@
   const fromHash = new URLSearchParams(hashQuery);
   if (search.get('prices') === '1' || fromHash.get('prices') === '1') {
     document.querySelectorAll('.pricing-details').forEach(el => el.style.display = 'block');
+    document.querySelectorAll('.budget-section .quote-cta').forEach(el => el.style.display = 'none');
     if (hashId) {
       const target = document.getElementById(hashId);
       if (target) target.scrollIntoView();

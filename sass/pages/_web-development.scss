@@ -754,6 +754,124 @@
     margin-right: auto;
     line-height: 1.6;
   }
+
+  .budget-floor {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-top: 1rem;
+  }
+
+  .budget-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 1rem auto 0;
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    text-align: left;
+
+    li {
+      display: grid;
+      grid-template-columns: 1.5rem 1fr;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--color-subtitle);
+      font-size: 1rem;
+      line-height: 1.5;
+
+      i {
+        color: var(--accent-color);
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.pricing-card__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--accent-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 1.25rem;
+  border-bottom: 1px solid transparent;
+  transition: opacity 0.2s ease;
+
+  &:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    opacity: 0.85;
+    color: white;
+  }
+}
+
+.budget-faq {
+  margin-top: 2.5rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin: 0 0 1rem;
+    text-align: center;
+  }
+
+  details {
+    background: var(--search-input-bg);
+    border: 1px solid var(--preview-divider-color);
+    border-radius: 8px;
+    padding: 0.85rem 1.25rem;
+    margin-bottom: 0.5rem;
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--heading-color);
+      list-style: none;
+      padding-right: 1.5rem;
+      position: relative;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: "+";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.25rem;
+        color: var(--accent-color);
+        font-weight: 700;
+      }
+    }
+
+    &[open] summary::after {
+      content: "−";
+    }
+
+    p {
+      margin: 0.75rem 0 0;
+      color: var(--color-subtitle);
+      line-height: 1.6;
+    }
+  }
 }
 
 .quote-cta {
