@@ -1,0 +1,64 @@
+chemaclass.com — Dual License
+
+This repository contains both source code and creative content, each
+covered by a separate license.
+
+================================================================================
+Code (templates, stylesheets, scripts, configuration, build files)
+================================================================================
+
+MIT License
+
+Copyright (c) 2026 Chemaclass (Jose Maria Valera Reales)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Scope: everything outside the `content/` directory, including but not limited
+to `templates/`, `sass/`, `static/`, `scripts/`, `config.toml`, `build.sh`,
+and any JavaScript or shell files at the repository root.
+
+================================================================================
+Content (blog posts, readings, talks, CV, services pages, and other writing)
+================================================================================
+
+Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+
+Copyright (c) 2026 Chemaclass (Jose Maria Valera Reales)
+
+You are free to:
+  - Share — copy and redistribute the material in any medium or format
+  - Adapt — remix, transform, and build upon the material
+
+Under the following terms:
+  - Attribution — You must give appropriate credit, provide a link to the
+    license, and indicate if changes were made.
+  - NonCommercial — You may not use the material for commercial purposes.
+
+Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+Scope: everything inside the `content/` directory, including all Markdown
+files (`.md`), images, and other media used within posts.
+
+================================================================================
+Third-Party Assets
+================================================================================
+
+Third-party fonts, icons, libraries, and images retain their original
+licenses. See individual file headers or `static/` subdirectories for
+attribution where applicable.

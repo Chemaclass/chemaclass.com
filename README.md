@@ -32,4 +32,13 @@ Runs `zola build` followed by post-build scripts that enrich the search index, g
 
 ## Contributing
 
-Pull requests are welcome. Fork the repo and submit your changes.
+Issues and typo/bug-fix PRs are welcome. Content contributions to blog posts, readings, or talks are unlikely to be merged.
+
+## License
+
+Dual-licensed:
+
+- **Code** (templates, stylesheets, scripts, configuration): [MIT](LICENSE)
+- **Content** (`content/**`: blog posts, readings, talks, CV): [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+
+See [LICENSE](LICENSE) for full terms.
