@@ -270,29 +270,65 @@
         </a>
       </div>
 
-      <div class="budget-faq">
-        <h4>{% if lang == "es" %}Preguntas frecuentes{% else %}Frequently asked{% endif %}</h4>
-        <details>
-          <summary>{% if lang == "es" %}¿Qué pasa si necesito cambios después del lanzamiento?{% else %}What if I need changes after launch?{% endif %}</summary>
-          <p>{% if lang == "es" %}Cambios menores entran en el plan de mantenimiento. Para cambios sustanciales o nuevas funcionalidades, te presupuesto aparte según complejidad.{% else %}Minor changes are covered by the care plan. For substantial changes or new features, I quote separately based on complexity.{% endif %}</p>
-        </details>
-        <details>
-          <summary>{% if lang == "es" %}¿Puedo llevarme la web a otro proveedor?{% else %}Can I move the site to another provider?{% endif %}</summary>
-          <p>{% if lang == "es" %}Sí, en cualquier momento. Te transfiero la cuenta de hosting, el dominio y el código fuente sin coste adicional.{% else %}Yes, anytime. I transfer the hosting account, domain, and source code at no extra cost.{% endif %}</p>
-        </details>
-        <details>
-          <summary>{% if lang == "es" %}¿El plan de mantenimiento es obligatorio?{% else %}Is the care plan required?{% endif %}</summary>
-          <p>{% if lang == "es" %}No. El Año 1 ya viene incluido en el precio. Desde el Año 2 es totalmente opcional.{% else %}No. Year 1 is bundled in the price. From Year 2 it's fully optional.{% endif %}</p>
-        </details>
-        <details>
-          <summary>{% if lang == "es" %}¿Cuánto se tarda en lanzar?{% else %}How long until launch?{% endif %}</summary>
-          <p>{% if lang == "es" %}Menos de un mes para la mayoría de proyectos. Vista previa desde el primer día, iteraciones cortas con feedback diario.{% else %}Less than a month for most projects. Preview link from day one, short iterations with daily feedback.{% endif %}</p>
-        </details>
-        <details>
-          <summary>{% if lang == "es" %}¿Por qué tan barato comparado con una agencia?{% else %}Why so cheap compared to an agency?{% endif %}</summary>
-          <p>{% if lang == "es" %}Sin intermediarios, sin equipo de ventas, sin oficinas. Trabajas directamente con un senior, no con un junior gestionado por capas de management.{% else %}No middlemen, no sales team, no offices. You work directly with a senior, not a junior managed through layers of overhead.{% endif %}</p>
-        </details>
-      </div>
+      <section class="services-faq">
+        <h2 class="services-faq__title">{% if lang == "es" %}Preguntas frecuentes{% else %}Frequently asked{% endif %}</h2>
+        <div class="services-faq__list">
+          <div class="services-faq__item">
+            <button class="services-faq__question" aria-expanded="false">
+              {% if lang == "es" %}¿Qué pasa si necesito cambios después del lanzamiento?{% else %}What if I need changes after launch?{% endif %}
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="services-faq__answer">
+              {% if lang == "es" %}Cambios menores entran en el plan de mantenimiento. Para cambios sustanciales o nuevas funcionalidades, te presupuesto aparte según complejidad.{% else %}Minor changes are covered by the care plan. For substantial changes or new features, I quote separately based on complexity.{% endif %}
+            </div>
+          </div>
+          <div class="services-faq__item">
+            <button class="services-faq__question" aria-expanded="false">
+              {% if lang == "es" %}¿Puedo llevarme la web a otro proveedor?{% else %}Can I move the site to another provider?{% endif %}
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="services-faq__answer">
+              {% if lang == "es" %}Sí, en cualquier momento. Te transfiero la cuenta de hosting, el dominio y el código fuente sin coste adicional.{% else %}Yes, anytime. I transfer the hosting account, domain, and source code at no extra cost.{% endif %}
+            </div>
+          </div>
+          <div class="services-faq__item">
+            <button class="services-faq__question" aria-expanded="false">
+              {% if lang == "es" %}¿El plan de mantenimiento es obligatorio?{% else %}Is the care plan required?{% endif %}
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="services-faq__answer">
+              {% if lang == "es" %}No. El Año 1 ya viene incluido en el precio. Desde el Año 2 es totalmente opcional.{% else %}No. Year 1 is bundled in the price. From Year 2 it's fully optional.{% endif %}
+            </div>
+          </div>
+          <div class="services-faq__item">
+            <button class="services-faq__question" aria-expanded="false">
+              {% if lang == "es" %}¿Cuánto se tarda en lanzar?{% else %}How long until launch?{% endif %}
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="services-faq__answer">
+              {% if lang == "es" %}Menos de un mes para la mayoría de proyectos. Vista previa desde el primer día, iteraciones cortas con feedback diario.{% else %}Less than a month for most projects. Preview link from day one, short iterations with daily feedback.{% endif %}
+            </div>
+          </div>
+          <div class="services-faq__item">
+            <button class="services-faq__question" aria-expanded="false">
+              {% if lang == "es" %}¿Por qué tan barato comparado con una agencia?{% else %}Why so cheap compared to an agency?{% endif %}
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="services-faq__answer">
+              {% if lang == "es" %}Sin intermediarios, sin equipo de ventas, sin oficinas. Trabajas directamente con un senior, no con un junior gestionado por capas de management.{% else %}No middlemen, no sales team, no offices. You work directly with a senior, not a junior managed through layers of overhead.{% endif %}
+            </div>
+          </div>
+          <div class="services-faq__item">
+            <button class="services-faq__question" aria-expanded="false">
+              {% if lang == "es" %}¿Qué NO está incluido?{% else %}What's NOT included?{% endif %}
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="services-faq__answer">
+              {% if lang == "es" %}Estos sitios son estáticos. No incluyen carrito de compra ni checkout, sincronización de stock o inventario, integraciones con ERP/CRM, lógica de backend a medida ni cuentas de usuario o paneles. Si necesitas algo de esto, reserva una <a href="/es/services/consulting/">sesión de consultoría</a> y te oriento hacia la herramienta o partner adecuado.{% else %}These sites are static. No shopping cart or checkout, no stock or inventory sync, no ERP/CRM integrations, no custom backend logic, no user accounts or dashboards. If you need any of these, book a <a href="/services/consulting/">consulting call</a> and I'll point you to the right tool or partner.{% endif %}
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </section>
 
@@ -415,6 +451,14 @@
 
 {% block js %}
 <script>
+document.querySelectorAll('.services-faq__question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.nextElementSibling.classList.toggle('open', !expanded);
+  });
+});
+
 // Show pricing details if prices=1 is in URL (query or malformed hash like #budget?prices=1)
 (function() {
   const search = new URLSearchParams(window.location.search);

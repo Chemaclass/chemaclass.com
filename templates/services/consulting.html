@@ -149,6 +149,39 @@
     </div>
   </section>
 
+  <section class="services-faq" id="faq">
+    <h2 class="services-faq__title">{% if lang == "es" %}Preguntas frecuentes{% else %}Frequently asked{% endif %}</h2>
+    <div class="services-faq__list">
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false">
+          {% if lang == "es" %}¿Qué NO está incluido?{% else %}What's NOT included?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}No es trabajo de código a medida, ni code reviews, ni acompañamiento de larga duración (retainer). Es una sesión enfocada de una hora para pensar tu problema en directo.{% else %}This isn't hands-on coding, code reviews, or long-term retainer coaching. It's a focused one-hour session to think through your problem live.{% endif %}
+        </div>
+      </div>
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false">
+          {% if lang == "es" %}¿Para quién es?{% else %}Who is this for?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}Tech leads, engineering managers y CTOs con complejidad real (equipo, organización, decisiones técnicas). No es mentoría para devs de primer empleo.{% else %}Tech leads, engineering managers, and CTOs facing real complexity (team, org, technical decisions). Not mentoring for first-job developers.{% endif %}
+        </div>
+      </div>
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false">
+          {% if lang == "es" %}¿Política de cancelación?{% else %}Cancellation policy?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}Reprograma sin coste hasta 24h antes. Después de eso, la sesión cuenta como usada.{% else %}Reschedule free up to 24h before. After that, the session counts as used.{% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="service-process" id="pricing">
     <div class="budget-section">
       <div class="budget-header">
@@ -193,4 +226,16 @@
   </section>
 </article>
 {% endblock content %}
+
+{% block js %}
+<script>
+document.querySelectorAll('.services-faq__question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.nextElementSibling.classList.toggle('open', !expanded);
+  });
+});
+</script>
+{% endblock js %}
 
