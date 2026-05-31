@@ -2,6 +2,7 @@
 .idea/
 .vscode/
 .claude/settings.local.json
+.claude/scheduled_tasks.lock
 .claude/blog-writing-style.md
 public/
 static/processed_images/
