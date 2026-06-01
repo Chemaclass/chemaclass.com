@@ -39,7 +39,7 @@ every one is essential.
 You **embrace the change** to the point that you **enjoy** going out of your comfort zone whenever needed. Seeking to
 create **value** for your team and its dynamics, and always considering personal growth.
 
-But sure, let's assume all that -and everything else I might have missed regarding "**agility**," how could you work
+But sure, let's assume all that, and everything else I might have missed regarding "**agility**," how could you work
 with an external team that is not agile? How could your "perfectly agile team" work with another group of people with
 nothing to do with software? For example, a doctor.
 
@@ -56,7 +56,7 @@ team members to meet with that expert for 30/60 min, so they can talk and share 
 as much as possible to shorten the feedback loop. For example, once a week.
 
 Collecting those requirements and impressions from the experts and then driving the design of your software according to
-that is [Domain-Driven Design](https://en.wikipedia.org//wiki/Domain-driven_design). You can find a lot of documentation
+that is [Domain-Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design). You can find a lot of documentation
 about *DDD* in books (like *[Domain-Driven Design Distilled](/readings/domain-driven-design-distilled)*) or in many
 blogs on the Internet.
 
@@ -75,7 +75,7 @@ How could you work agile with that doctor?
 - Courage
 - Respect
 
-These **abstract goals** apply to any profession - and even life, not just software. 
+These **abstract goals** apply to any profession, and even life, not just software. 
 
 > Continuous communication helps shorten the feedback loop, which simplifies the tasks. Always with the courage to
 > address the truth and respect for each other.

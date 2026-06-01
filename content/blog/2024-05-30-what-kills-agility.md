@@ -24,7 +24,7 @@ series_order = 5
 
 ![blog-cover](/images/blog/2024-05-30/cover.jpg)
 
-Dozens of documents and spreadsheets, meetings over meetings, and yet without much impact, result in team misalignments—realized too late.
+Dozens of documents and spreadsheets, meetings over meetings, and yet without much impact, result in team misalignments, realized too late.
 
 <!-- more -->
 
@@ -32,7 +32,7 @@ How we manage an organization defines its quality. Excellent management is cruci
 
 If you are already happy with how you and your team work together, that's okay. However, what about reevaluating how you work to look for potential improvements?
 
-I am referring to evaluating your system and how you and the people around you act within it. What worked months or years ago might differ from what we could discover today—as part of continuous improvement.
+I am referring to evaluating your system and how you and the people around you act within it. What worked months or years ago might differ from what we could discover today, as part of continuous improvement.
 
 I dislike politics in the workplace, where each team looks out for themselves instead of having a bigger shared direction. This results in daily work filled with fear from above, passed down to the people below, maintaining an [unhealthy working environment](/blog/unhealthy-working-environment). Game of Thrones is great as a fictional series, but not something to deal with in daily business.
 

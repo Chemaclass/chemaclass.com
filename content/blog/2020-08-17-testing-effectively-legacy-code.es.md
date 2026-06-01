@@ -220,7 +220,7 @@ Ahora puedes refactorizar el código de producción que cubriste con tests sin e
 
 ## El código legacy es código sin tests
 
-![blog-cover](/images/blog/2020-08-17/footer.jpg)
+![el código legacy es código sin tests](/images/blog/2020-08-17/footer.jpg)
 
 Por supuesto, hay mucho más que aprender
 sobre [testing y trabajo con código legacy](/es/readings/working-effectively-with-legacy-code/). De hecho, especialmente cuando

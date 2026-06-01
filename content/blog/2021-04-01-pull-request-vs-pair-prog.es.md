@@ -46,9 +46,9 @@ El concepto de "Draft PR" existe para indicar que el PR aún no está listo para
 
 Los Pull Requests son una de las mejores herramientas para compartir conocimiento sobre cambios en el sistema, pero a veces se usan mal:
 
-1. **Discusiones sobre estilo de codigo**. El estilo no debería discutirse en un PR. Ya debería haber un CI ejecutando un linter. Si quieres cambiar algo, proponlo en el linter, no en un PR aleatorio.
+1. **Discusiones sobre estilo de código**. El estilo no debería discutirse en un PR. Ya debería haber un CI ejecutando un linter. Si quieres cambiar algo, proponlo en el linter, no en un PR aleatorio.
 2. **Detectar bugs**. Los bugs y comportamiento esperado deberían cubrirse con tests automatizados. El desarrollador es el primer responsable.
-3. **Discusiones de arquitectura o diseno**. Cuando una solución está desarrollada y lista para revisión, es difícil "deshacerla" y reescribirla. "¿Por qué lo harías? Ya está hecho y funciona."
+3. **Discusiones de arquitectura o diseño**. Cuando una solución está desarrollada y lista para revisión, es difícil "deshacerla" y reescribirla. "¿Por qué lo harías? Ya está hecho y funciona."
 
 Tener a alguien extra revisando decisiones de diseño puede ayudar, pero podríamos haber resuelto posibles desacuerdos antes.
 
@@ -114,4 +114,4 @@ Si aún te sientes incómodo con alguien a tu lado mientras programas, quizás n
 
 > Está totalmente bien no saber todo. Lo más importante es saber cómo trabajar juntos.
 
-![blog-img](/images/blog/2021-04-01/footer.jpg)
+![dos desarrolladores haciendo pair programming](/images/blog/2021-04-01/footer.jpg)

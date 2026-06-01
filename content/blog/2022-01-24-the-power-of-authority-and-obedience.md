@@ -29,8 +29,8 @@ person, and how easily people could be influenced into committing atrocities. Eg
 During the 1960s, the psychologist Stanley Milgram conducted a series of obedience experiments directly related to the
 power of authority and obedience, even when they might end-up in fatal ending.
 
-Milgran examined justifications for acts of genocide offered by those accused at the World War II, Nuremberg War
-Criminal trials. Their defence often was based on "obedience" - that they were just following orders from their
+Milgram examined justifications for acts of genocide offered by those accused at the World War II, Nuremberg War
+Criminal trials. Their defence often was based on "obedience", that they were just following orders from their
 superiors. Milgram came up with the experiment to answer this question:
 
 > Could it be that Eichmann and his million accomplices in the Holocaust were just following orders?

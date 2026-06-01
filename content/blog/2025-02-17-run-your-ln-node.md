@@ -48,7 +48,7 @@ The LN is a second-layer solution built on top of Bitcoin to enable fast, cheap,
 ### Key Concepts
 
 - **Payment Channels**: Users open a channel by making an on-chain transaction, then send unlimited instant payments within that channel.
-- **Routing**: You don't need a direct channel with everyone —payments can be routed through multiple connected nodes.
+- **Routing**: You don't need a direct channel with everyone, payments can be routed through multiple connected nodes.
 - **Low Fees**: Only opening/closing channels require on-chain fees; most transactions cost fractions of a cent.
 
 ### Goal

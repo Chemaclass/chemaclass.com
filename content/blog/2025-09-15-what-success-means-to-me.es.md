@@ -33,7 +33,7 @@ Pero me he dado cuenta de que eso no es lo que me hace levantarme por las mañan
 
 ## La verdadera medida
 
-El éxito, para mí, ahora es directo: **despertar sabiendo que lo que hago hace más felices a las personas a mi alrededor —y a mí mismo**.
+El éxito, para mí, ahora es directo: **despertar sabiendo que lo que hago hace más felices a las personas a mi alrededor, y a mí mismo**.
 
 Me costó llegar a esto. Puede que esta definición no le parezca simple a todo el mundo, y está bien. Pero para mí, lo clarificó todo.
 
@@ -107,7 +107,7 @@ Y prepárate para [abrazar el cambio](/es/blog/embrace-the-change) cuando tu def
 
 Eso se siente como éxito para mí.
 
-![cover](/images/blog/2025-11-15/footer.jpg)
+![lo que el éxito significa para mí](/images/blog/2025-11-15/footer.jpg)
 
 ---
 

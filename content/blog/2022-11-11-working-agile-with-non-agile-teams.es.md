@@ -36,7 +36,7 @@ Estás usando bucles de retroalimentación cortos, donde las cosas cambian const
 
 **Abrazas el cambio** hasta el punto de que **disfrutas** saliendo de tu zona de confort cuando es necesario. Buscando crear **valor** para tu equipo y sus dinámicas, y siempre considerando el crecimiento personal.
 
-Pero claro, asumamos todo eso -y todo lo demás que pueda haber olvidado respecto a la "**agilidad**", ¿cómo podrías trabajar con un equipo externo que no es agile? ¿Cómo podría tu "equipo perfectamente agile" trabajar con otro grupo de personas que no tiene nada que ver con software? Por ejemplo, un médico.
+Pero claro, asumamos todo eso, y todo lo demás que pueda haber olvidado respecto a la "**agilidad**", ¿cómo podrías trabajar con un equipo externo que no es agile? ¿Cómo podría tu "equipo perfectamente agile" trabajar con otro grupo de personas que no tiene nada que ver con software? Por ejemplo, un médico.
 
 Un médico no tiene tiempo para aprender sobre tus "valores y principios agile para desarrollo de software". Un médico no tiene tiempo para aprender sobre "extreme programming". De manera similar, no tienen tiempo para aprender sobre testing, diseño, arquitectura y **buenas prácticas** relacionadas con el software en general.
 
@@ -46,7 +46,7 @@ Un médico no tiene tiempo para aprender sobre tus "valores y principios agile p
 
 Si necesitas trabajar con ese médico es porque él/ella debería ser un experto de dominio. Sugiero que uno o dos miembros de tu equipo se reúnan con ese experto durante 30/60 min, para que puedan hablar y compartir sus impresiones. Y luego repetir esto tanto como sea posible para acortar el bucle de retroalimentación. Por ejemplo, una vez a la semana.
 
-Recopilar esos requisitos e impresiones de los expertos y luego dirigir el diseño de tu software de acuerdo con eso es [Domain-Driven Design](https://en.wikipedia.org//wiki/Domain-driven_design). Puedes encontrar mucha documentación sobre *DDD* en libros (como *[Domain-Driven Design Distilled](/es/readings/domain-driven-design-distilled)*) o en muchos blogs en Internet.
+Recopilar esos requisitos e impresiones de los expertos y luego dirigir el diseño de tu software de acuerdo con eso es [Domain-Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design). Puedes encontrar mucha documentación sobre *DDD* en libros (como *[Domain-Driven Design Distilled](/es/readings/domain-driven-design-distilled)*) o en muchos blogs en Internet.
 
 Sin embargo, el aspecto crítico aquí no es qué requisitos o impresiones *se están resolviendo* sino **cómo**.
 ¿Cómo podrías trabajar agile con ese médico?
@@ -63,7 +63,7 @@ Sin embargo, el aspecto crítico aquí no es qué requisitos o impresiones *se e
 - Coraje
 - Respeto
 
-Estos **objetivos abstractos** aplican a cualquier profesión - e incluso a la vida, no solo al software.
+Estos **objetivos abstractos** aplican a cualquier profesión, e incluso a la vida, no solo al software.
 
 > La comunicación continua ayuda a acortar el bucle de retroalimentación, lo que simplifica las tareas. Siempre con el coraje de abordar la verdad y respeto mutuo.
 

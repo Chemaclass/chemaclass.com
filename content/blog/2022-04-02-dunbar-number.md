@@ -52,10 +52,10 @@ themselves if they met again.
 
 - Single teams: 5-9 people.
   - There is a shared trust among the team members.
-  - The trust is build among time.
+  - The trust is built over time.
   - Therefore, they must be a long term team.
 - Group: 50 people.
-  - They can have meaning relationship.
+  - They can have meaningful relationships.
   - They share a domain or subdomain.
   - They understand the challenges and help each other out.
 - Division: 150 people

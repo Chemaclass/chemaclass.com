@@ -140,8 +140,8 @@ OP_DUP OP_HASH160 <PubKHash> OP_EQUALVERIFY OP_CHECKSIG
 1. The `ScriptSig` (unlocking script) is pushed onto the stack.
 2. The `ScriptPubKey` (locking script) is executed.
 
-![cover](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc3_0703.png)
-![cover](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc3_0704.png)
+![p2pkh script execution step 1](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc3_0703.png)
+![p2pkh script execution step 2](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc3_0704.png)
 
 ---
 
@@ -309,7 +309,7 @@ OP_0 <sig2> <sig3> 2 <PubK1> <PubK2> <PubK3> 3 OP_CHECKMULTISIG
 
 The input script in this multisig is not `<sig2> <sig3>` but `OP_0 <sig2> <sig3>`.
 
-It because the custom early on to use `OP_0` which later because a relay policy rule and eventually a consensus rule ([BIP147](https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki)).
+It became the custom early on to use `OP_0`, which later became a relay policy rule and eventually a consensus rule ([BIP147](https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki)).
 
 It is possible that the original developer added the extra element in the original version of Bitcoin, so they could add a feature for allowing a map to be passed in a later soft fork (for performance reasons). However, that feature was never implemented, and the BIP147 update to the consensus rules in 2017 makes it impossible to add that feature in the future.
 

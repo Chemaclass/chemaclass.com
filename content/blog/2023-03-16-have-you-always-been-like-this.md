@@ -47,7 +47,7 @@ However, I have always enjoyed writing since I was a kid. For personal circumsta
 
 Writing was (and still is) a way to sort out my thoughts, especially during hard times; writing was a way to escape from the world. It helped me to understand myself better the day after. And it worked.
 
-Knowing your limitations can help you understand your reality and fight against it. Life is hard enough to accept whatever "is there," even if you are dissatisfied with it - especially if you have a reason for that.
+Knowing your limitations can help you understand your reality and fight against it. Life is hard enough to accept whatever "is there," even if you are dissatisfied with it, especially if you have a reason for that.
 
 I learned that I don't want to waste my time in a life I will regret when I die. For that reason, I started seeking opportunities to grow at everything I do all the time.
 

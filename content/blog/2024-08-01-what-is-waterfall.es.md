@@ -23,7 +23,7 @@ related_readings = [
 
 ![blog-cover](/images/blog/2024-08-01/cover.jpg)
 
-Waterfall es como seguir un camino recto donde te mueves de un paso al siguiente en un orden definido — como el agua fluyendo por una cascada a través de diferentes etapas.
+Waterfall es como seguir un camino recto donde te mueves de un paso al siguiente en un orden definido, como el agua fluyendo por una cascada a través de diferentes etapas.
 
 <!-- more -->
 
@@ -35,7 +35,7 @@ Usualmente sigue una secuencia directa como esta:
 
 ## La realidad de Waterfall
 
-Waterfall puede ser como el comunismo en teoría — parece perfecto en papel pero no funciona en el mundo real.
+Waterfall puede ser como el comunismo en teoría, parece perfecto en papel pero no funciona en el mundo real.
 
 - Los clientes a menudo no saben exactamente lo que quieren.
 - Los requisitos están constantemente cambiando.
@@ -54,7 +54,7 @@ El gran problema es cuando los superiores dictan exactamente cómo deben trabaja
 
 ---
 
-![footer](/images/blog/2024-08-01/footer.jpg)
+![agile vs waterfall](/images/blog/2024-08-01/footer.jpg)
 
 ## Por qué se creó Agile
 

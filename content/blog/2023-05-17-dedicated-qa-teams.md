@@ -33,11 +33,11 @@ A software team's final goal is to make the QA position useless because they sho
 
 ## The hidden truth behind the lack of software quality
 
-Unfortunately, in our software industry, the demand for "fast, quick and dirty" projects ended up in poorly developed MVPs by simply applying patches and code over code with just manual testing checking happy paths - sometimes even ignoring edge cases.
+Unfortunately, in our software industry, the demand for "fast, quick and dirty" projects ended up in poorly developed MVPs by simply applying patches and code over code with just manual testing checking happy paths, sometimes even ignoring edge cases.
 
 > "The deadline is in one week, so you better finish it on time!"
 
-We don't learn the importance of what automated testing can bring to our daily job, so we don't take it seriously, and therefore, we don't practice it enough. And, for that exact reason, because we don't practice it, we don't know how to perform it properly - yes, I am talking about writing automated tests that prove the behavior of your software!
+We don't learn the importance of what automated testing can bring to our daily job, so we don't take it seriously, and therefore, we don't practice it enough. And, for that exact reason, because we don't practice it, we don't know how to perform it properly. Yes, I am talking about writing automated tests that prove the behavior of your software!
 
 Our inability to write testable code results in software that is hard to test, and thus we delegate testing to other third parties shifting the responsibility for the overall end quality of the product or service we write.
 

@@ -90,7 +90,7 @@ arguments expecting different inputs under your entire control.
 When you are writing a unit test:
 
 * Try to instantiate your classes first.
-* Avoid mocking concrete classes. I wrote an article exclusively about this exclusively:
+* Avoid mocking concrete classes. I wrote an article exclusively about this:
   encouraging [final classes](https://medium.com/swlh/final-classes-in-php-9174e3e2747e) and interfaces.
 
 > Mock interfaces. Instantiate concrete classes.
@@ -105,7 +105,7 @@ When you are writing a unit test:
 * Make dependencies explicit.
 * Program to an interface, not to an implementation.
 
-![blog-img](/images/blog/2021-01-11/footer.jpg)
+![mock interfaces, instantiate concrete classes](/images/blog/2021-01-11/footer.jpg)
 
 ---
 

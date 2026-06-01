@@ -72,7 +72,7 @@ iteration, called sprints, usually 1, 2, or 4 weeks.
 It's common to find certain ceremonies/meetings like:
 
 - **Stand-up**: 15 min (or less) to keep everyone in the team sync and updated about the work and call out for action when
-  anyone is blocked or need especial attention or help.
+  anyone is blocked or needs special attention or help.
 - **Refinement**: 2h? meeting to make sure the tickets are in a good shape before planning them to be worked on in the next
   sprint.
 - **Planning**: 2h? meeting to plan the work to be done in the next sprint.
@@ -128,7 +128,7 @@ In these situations, I encounter a pattern such as:
 In the end, there are a lot of strategies, and it's up to you to act on them whenever you see something that could be
 improved.
 
-It's OK to point out the "_elephant in the room_" and ask for help to improve any situation you think - or feel - is not
+It's OK to point out the "_elephant in the room_" and ask for help to improve any situation you think (or feel) is not
 working as it should.
 
 ![blog-footer](/images/blog/2022-12-06/footer.jpg)

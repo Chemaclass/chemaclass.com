@@ -64,4 +64,4 @@ Puedes leer más sobre cómo el testing está relacionado con la calidad aquí.
 
 El software no es como el vino: no mejora solo. Si quieres un sistema mejor, tienes que trabajar para conseguirlo.
 
-![blog-img](/images/blog/2020-06-28/footer.jpg)
+![el refactoring como mejora continua](/images/blog/2020-06-28/footer.jpg)

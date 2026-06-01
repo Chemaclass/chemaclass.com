@@ -34,7 +34,7 @@ Para explicar cómo creo que debería ser una buena presentación, abordaré tre
 2. Diseño y maquetación: cómo puedes diseñar una presentación fácil de seguir que apoye tu charla en lugar de desviar la atención de lo que realmente intentas decir.
 3. Por último, creo que la audiencia también es responsable de que una charla técnica sea exitosa, así que añadiré un recordatorio sobre el rol y las responsabilidades de los oyentes.
 
-![blog-img](/images/blog/2019-11-18/talking.jpg)
+![persona hablando ante una audiencia](/images/blog/2019-11-18/talking.jpg)
 
 ### Considera tu audiencia
 
@@ -71,7 +71,7 @@ Resume la(s) conclusión(es) principal(es) de forma concisa:
 * ¿Cuáles son los aprendizajes de esta reunión?
 * ¿Cuáles son las preguntas abiertas o los siguientes pasos?
 
-![blog-img](/images/blog/2019-11-18/books.jpg)
+![pila de libros](/images/blog/2019-11-18/books.jpg)
 
 ## Diseño y maquetación
 
@@ -105,4 +105,4 @@ Si tienes código que presentar, considera:
 
 Al final de la reunión, deberíamos hacernos estas preguntas para mejorar. Pide opiniones a otras personas para que podamos crecer más y juntos.
 
-![blog-img](/images/blog/2019-11-18/footer.jpg)
+![audiencia en una presentación](/images/blog/2019-11-18/footer.jpg)

@@ -29,7 +29,7 @@ El paralelismo es **hacer** varias cosas simultaneamente. La concurrencia es **l
 
 > Imagina que cocinas: preparas una sopa, una ensalada y una tortilla. Eres una sola persona, pero preparas varios platos. Podrias terminar primero la ensalada, la sopa o la tortilla... no hay garantia. Esto es concurrencia: lidias con varias cosas a la vez. Cuando tu pareja viene a ayudarte, eso ya es paralelismo.
 
-![cover](/images/blog/2024-04-02/concurrency-vs-multithreading.jpg)
+![concurrencia vs multithreading](/images/blog/2024-04-02/concurrency-vs-multithreading.jpg)
 
 Recuerdo haber construido un juego similar en `Java` cuando aprendia multithreading hace diez anos. Aprovecho esta oportunidad para hacerlo de nuevo con `Go` moderno.
 
@@ -42,7 +42,7 @@ Separé el código en cuatro áreas para ayudar a visualizarlo:
 - Moviendo los caballos
 
 
-![cover](/images/blog/2024-04-02/race-horses-demo.gif)
+![demo de carrera de caballos en terminal](/images/blog/2024-04-02/race-horses-demo.gif)
 
 ### Punto de entrada
 

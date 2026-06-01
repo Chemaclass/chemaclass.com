@@ -35,7 +35,7 @@ Puedes fijar uno o dos de ellos, pero no los tres.
 
 En metodologías de software, puedes adaptar esta idea cambiando **calidad** por **alcance**:
 
-![blog-cover](/images/blog/2022-07-25/middle.jpg)
+![triángulo con alcance en lugar de calidad](/images/blog/2022-07-25/middle.jpg)
 
 ### Waterfall
 
@@ -53,7 +53,7 @@ Un equipo agile no puede predecir el alcance de su trabajo en un proyecto de un 
 
 Como puedes ver, un dato curioso es que waterfall y agile comparten un triángulo invertido con sus parámetros fijos y variables. Realmente interesante.
 
-![blog-cover](/images/blog/2022-07-25/footer.jpg)
+![triángulos invertidos de waterfall y agile](/images/blog/2022-07-25/footer.jpg)
 
 ## Referencia
 

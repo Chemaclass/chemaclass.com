@@ -50,7 +50,7 @@ Con `strict_types=1`, le dices al motor que `int $x` significa que $x debe ser u
 
 El escritor solo necesita mantener esa estrictez mientras escribe. Pero como escritor, deberías preocuparte por tus lectores. Eso incluye a tu yo futuro.
 
-![blog-img](/images/blog/2020-08-09/footer.jpg)
+![declaración strict_types en php](/images/blog/2020-08-09/footer.jpg)
 
 ------
 

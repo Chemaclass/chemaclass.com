@@ -71,4 +71,4 @@ Si necesitas reconfigurar un objeto, cambiar partes de un algoritmo o reescribir
 
 > Interfaces -> Clases finales -> Composición
 
-![blog-cover](/images/blog/2020-06-06/footer.jpg)
+![interfaces, clases finales y composición](/images/blog/2020-06-06/footer.jpg)

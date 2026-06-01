@@ -37,7 +37,7 @@ Es un tema subjetivo. Lo que funciona para uno puede no funcionar para otro. Aun
 
 Durante algunos años escribí mis pensamientos en un "diario". En 2015, cuando me mudé a Alemania, no conocía a mucha gente y todo era nuevo. Decidí escribir mis pensamientos para leerlos al día siguiente y reflexionar sobre ellos. Tres años después, en diciembre de 2017, publiqué ["Ojos en un recuerdo"](http://ojosenunrecuerdo.es/). Es la compilación de esos pensamientos, tal como vinieron. Puedes ver la evolución de los temas y cómo fueron escritos.
 
-![blog-img](/images/blog/2020-09-08/oeur-books.jpg)
+![libros ojos en un recuerdo](/images/blog/2020-09-08/oeur-books.jpg)
 
 El ejercicio de auto-reflexión fue más importante que el libro. La meta no era escribir un libro. Era entender qué pasaba dentro de mí. Publicarlo fue un accidente. Un hermoso accidente. Este hábito de pensar sobre mis acciones y decisiones me ayudó a desarrollar quién soy hoy.
 
@@ -47,7 +47,7 @@ El ejercicio ayuda a mi mente a desconectar de lo técnico. Mantiene mi cuerpo a
 
 > El deporte específico es un detalle. Lo importante es hacer deporte.
 
-![blog-img](/images/blog/2020-09-08/bjj-berlin-2020.jpg)
+![entrenamiento de jiu-jitsu en berlín](/images/blog/2020-09-08/bjj-berlin-2020.jpg)
 
 ### Libros
 
@@ -59,7 +59,7 @@ Algunos libros que me ayudaron a entender cómo nos comportamos y por qué hacem
 - Hábitos atómicos, de James Clear.
 - Scrum: El arte de hacer el doble de trabajo en la mitad de tiempo, de Jeff Sutherland.
 
-![blog-img](/images/blog/2020-09-08/atomic-habits.jpg)
+![libro hábitos atómicos](/images/blog/2020-09-08/atomic-habits.jpg)
 
 ## Trucos personales
 
@@ -72,7 +72,7 @@ Ojalá hubiera leído mucho más. Con tantas distracciones, mantenerte enfocado 
 
 > No se trata de eliminar tus viejos hábitos sino de reemplazarlos por nuevos.
 
-![blog-img](/images/blog/2020-09-08/chema-jumping.jpg)
+![chema saltando al aire libre](/images/blog/2020-09-08/chema-jumping.jpg)
 
 ### Cómo mejorar tus hábitos
 
@@ -91,7 +91,7 @@ Los hábitos emergen sin nuestro consentimiento. El cerebro crea bucles de hábi
 
 > La repetición es la clave. Facilita lo que quieres hacer. Dificulta lo que quieres dejar de hacer. Disfruta el proceso: esa es la meta.
 
-![blog-img](/images/blog/2020-09-08/chema-next-turm.jpg)
+![chema junto a una torre](/images/blog/2020-09-08/chema-next-turm.jpg)
 
 ## Enlaces interesantes
 

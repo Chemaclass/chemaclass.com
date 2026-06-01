@@ -140,8 +140,8 @@ OP_DUP OP_HASH160 <PubKHash> OP_EQUALVERIFY OP_CHECKSIG
 1. El `ScriptSig` (script de desbloqueo) se empuja a la pila.
 2. El `ScriptPubKey` (script de bloqueo) se ejecuta.
 
-![cover](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc3_0703.png)
-![cover](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc3_0704.png)
+![ejecucion del script p2pkh paso 1](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc3_0703.png)
+![ejecucion del script p2pkh paso 2](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc3_0704.png)
 
 ---
 

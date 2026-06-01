@@ -80,7 +80,7 @@ A pet project is a playground to create software and train your professional ski
 - [php-scaffolding](https://github.com/Chemaclass/php-scaffolding): a basic PHP scaffolding with Docker.
 
 **Inactive:**
-- [stock-ticker](https://github.com/Chemaclass/stock-ticker): get a notification with the news from your favorites Tickers.
+- [stock-ticker](https://github.com/Chemaclass/stock-ticker): get a notification with the news from your favorite Tickers.
 - [jira-status-notifier](https://github.com/Chemaclass/JiraStatusNotifier): Notify when the JIRA tickets don't move along.
 - [edifact-parser](https://github.com/Chemaclass/EdifactParser): a parser for a UN/EDIFACT file format in PHP.
 

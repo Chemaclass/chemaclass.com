@@ -24,11 +24,11 @@ So, you're a software developer, and you've mastered coding languages, algorithm
 
 <!-- more -->
 
-If you can't work well with others, it doesn't matter how great your code is — nobody will want to work with you.
+If you can't work well with others, it doesn't matter how great your code is, nobody will want to work with you.
 
 ## Why People Skills Matter in Software
 
-In software development, collaboration is everything. Projects aren't just solo endeavors. You will be part of a team — with other developers, designers, or even non-tech folks like managers and clients. How you communicate, collaborate, and handle feedback can make or break your success.
+In software development, collaboration is everything. Projects aren't just solo endeavors. You will be part of a team, with other developers, designers, or even non-tech folks like managers and clients. How you communicate, collaborate, and handle feedback can make or break your success.
 
 ### The Brilliant but Difficult Teammate
 
@@ -38,7 +38,7 @@ Think about it. Have you ever had that one teammate who's brilliant but hard or 
 
 Being a good team player means listening to others, being open to feedback, sharing ideas, and, most importantly, being respectful and considerate. You want people to enjoy working with you, not avoid it.
 
-Good people skills help you build strong working relationships, solve problems faster, and create a better work environment for everyone. Don't just aim to be a coding expert — ensure you're also great to work with.
+Good people skills help you build strong working relationships, solve problems faster, and create a better work environment for everyone. Don't just aim to be a coding expert, ensure you're also great to work with.
 
 ### The Long-Term Impact
 
@@ -46,7 +46,7 @@ In the long run, your people skills can boost your success as much, if not more,
 
 > People skills are as necessary as technical skills. No one will want to work with you if you are not a good team player.
 
-![middle](/images/blog/2024-09-02/middle.jpg)
+![people working together](/images/blog/2024-09-02/middle.jpg)
 
 ## What are people skills?
 
@@ -80,10 +80,10 @@ The competencies that enable you to interact effectively and smoothly with other
 
 ### Why They're Harder Than You Think
 
-These are often called interpersonal or soft skills, but mastering them can be surprisingly challenging — perhaps even more so than many technical skills. Unlike "hard skills," which are tangible and can often be learned through a few hours or days of study, people skills involve navigating the intricate web of human emotions, experiences, and expectations.
+These are often called interpersonal or soft skills, but mastering them can be surprisingly challenging, perhaps even more so than many technical skills. Unlike "hard skills," which are tangible and can often be learned through a few hours or days of study, people skills involve navigating the intricate web of human emotions, experiences, and expectations.
 
 While technical skills might require you to dive into documentation, run experiments, and refine your approach, understanding and relating to people is far more complex.
 
 Humans bring their feelings, backgrounds, and routines into interactions, adding layers of complexity beyond machines' straightforward logic. These personal details shape the reality we perceive, making interpersonal skills an essential yet complex part of effective communication and collaboration.
 
-![cover](/images/blog/2024-09-02/footer.jpg)
+![people skills matter](/images/blog/2024-09-02/footer.jpg)

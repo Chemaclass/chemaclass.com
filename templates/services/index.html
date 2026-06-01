@@ -73,7 +73,6 @@
   <section class="projects-services" id="services">
     <div class="services-grid">
       <a href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}" class="service-card service-card--featured">
-        <span class="service-card__featured-badge">{% if lang == "es" %}Más solicitado{% else %}Most Requested{% endif %}</span>
         <div class="service-card__header">
           <div class="service-card__icon">
             <i class="fa-solid fa-globe"></i>
@@ -92,12 +91,12 @@
         <span class="service-card__price">{{ trans(key="svc_request_quote", lang=lang) }}</span>
       </a>
 
-      <a href="{% if lang == 'es' %}/es/services/consulting/{% else %}/services/consulting/{% endif %}" class="service-card">
+      <div class="service-card service-card--unavailable" aria-disabled="true">
         <div class="service-card__header">
           <div class="service-card__icon">
             <i class="fa-solid fa-comments"></i>
           </div>
-          <span class="service-card__more">{{ trans(key="svc_learn_more", lang=lang) }} <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="service-card__badge">{{ trans(key="svc_consulting_unavailable", lang=lang) }}</span>
         </div>
         <h3>{% if lang == "es" %}Consultoría{% else %}Consulting{% endif %}</h3>
         <p class="service-card__audience">{% if lang == "es" %}Para tech leads, EMs y CTOs{% else %}For tech leads, EMs, and CTOs{% endif %}</p>
@@ -108,8 +107,8 @@
           <li>{% if lang == "es" %}Estrategia técnica y deuda{% else %}Technical strategy & debt{% endif %}</li>
           <li>{% if lang == "es" %}Decisiones de arquitectura{% else %}Architecture decisions{% endif %}</li>
         </ul>
-        <span class="service-card__price">{{ trans(key="svc_book_session", lang=lang) }}</span>
-      </a>
+        <span class="service-card__price service-card__price--muted">{{ trans(key="svc_consulting_unavailable", lang=lang) }}</span>
+      </div>
 
     </div>
 
@@ -118,22 +117,6 @@
       <a href="mailto:hi@chemaclass.com">{% if lang == "es" %}Hablemos de tu proyecto{% else %}Let's discuss your project{% endif %}</a>
     </p>
 
-  </section>
-
-  <!-- Bottom CTA -->
-  <section class="service-cta">
-    <div class="service-cta__icon"><i class="fa-solid fa-rocket"></i></div>
-    <h2>{% if lang == "es" %}¿Por dónde empezamos?{% else %}Where do we start?{% endif %}</h2>
-    <p>{% if lang == "es" %}Cuéntame qué necesitas y elegimos el camino juntos.{% else %}Tell me what you need and we'll pick the path together.{% endif %}</p>
-    <div class="service-cta__buttons">
-      <a href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}" class="service-cta__btn">
-        <i class="fa-solid fa-globe"></i> {% if lang == "es" %}Necesito una web{% else %}I need a website{% endif %}
-      </a>
-      <a href="{% if lang == 'es' %}/es/services/consulting/{% else %}/services/consulting/{% endif %}" class="service-cta__btn service-cta__btn--secondary">
-        <i class="fa-solid fa-comments"></i> {% if lang == "es" %}Quiero una sesión{% else %}I want a session{% endif %}
-      </a>
-    </div>
-    <p class="service-cta__note">{% if lang == "es" %}Tiempo de respuesta habitual: menos de 24 horas{% else %}Typical response time: within 24 hours{% endif %}</p>
   </section>
 
   <!-- Testimonials -->

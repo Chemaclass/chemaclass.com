@@ -37,7 +37,7 @@ El objetivo es construir un sistema donde los despliegues a producción sean tan
 
 Las dinámicas del equipo también son un factor esencial aquí. Si establecemos miedo a los despliegues los viernes, y miedo a nuestro sistema, eso terminará en falta de responsabilidad por defecto. Esto me recuerda a [The Five Dysfunctions of a Team](/es/readings/the-five-dysfunctions-of-a-team/).
 
-![cover](/images/blog/2024-02-25/middle.jpg)
+![desplegando los viernes](/images/blog/2024-02-25/middle.jpg)
 
 Si despliegas cambios pequeños y frecuentes tan pronto como pueden garantizar 100% de calidad y éxito de valor, ¿por qué retrasar tal mejora incremental a tu sistema?
 
@@ -53,4 +53,4 @@ Creo que las **releases frecuentes** y **pequeñas** a producción **son clave**
 
 Poder desplegar los viernes (si es necesario o deseado) impacta la confianza del equipo. De manera similar, prohibir los despliegues los viernes impacta la autoestima del equipo también.
 
-![cover](/images/blog/2024-02-25/footer.jpg)
+![releases frecuentes y pequeñas](/images/blog/2024-02-25/footer.jpg)

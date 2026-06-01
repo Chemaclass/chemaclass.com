@@ -53,7 +53,7 @@ Cuando mockeas, anulas la lógica de la clase mockeada. La lógica real queda oc
 
 * Los *valores de retorno del mock pueden diferir de los reales*. Por ejemplo, puede devolver un tipo distinto con atributos diferentes.
 
-* Los *efectos secundarios y comportamiento del mock pueden diferir del objeto real*. Quizás el mock no lanza una excepcion que el objeto real sí lanzaría.
+* Los *efectos secundarios y comportamiento del mock pueden diferir del objeto real*. Quizás el mock no lanza una excepción que el objeto real sí lanzaría.
 
 ## Alternativas a mockear
 
@@ -93,7 +93,7 @@ Cuando estés escribiendo un test unitario:
 * Haz las dependencias explícitas.
 * Programa hacia una interfaz, no hacia una implementación.
 
-![blog-img](/images/blog/2021-01-11/footer.jpg)
+![mockea interfaces, instancia clases concretas](/images/blog/2021-01-11/footer.jpg)
 
 ---
 

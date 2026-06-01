@@ -42,7 +42,7 @@ Creating awareness about this can help you to be cautious to avoid this from hap
 
 ### What can you do about it?
 
-If you can recognize this situation within your company, I recommend helping to create awareness about it. Talk to each other. If you feel you can't, that’s a symptom of a [unhealthy working environment](/blog/unhealthy-working-environment/), and that’s something more significant to deal with.
+If you can recognize this situation within your company, I recommend helping to create awareness about it. Talk to each other. If you feel you can't, that’s a symptom of an [unhealthy working environment](/blog/unhealthy-working-environment/), and that’s something more significant to deal with.
 
 If you are the one experiencing this in "first person," I would recommend you:
 

@@ -52,7 +52,7 @@ Su trabajo se basó en la investigación criptográfica fundamental de **Whitfie
 
 Se reunían online en la lista de correo cypherpunks. En su mejor momento, tenía unos 2000 suscriptores que intercambiaban más de 30 mensajes al día. Su lema: **"Cypherpunks write code."** No solo hablaban de privacidad. La construían.
 
-![cover](/images/blog/2024-12-11/manifesto.jpg)
+![a cypherpunk's manifesto](/images/blog/2024-12-11/manifesto.jpg)
 
 ## Filosofía y objetivos
 
@@ -101,7 +101,7 @@ Los Cypherpunks enfrentan estas críticas principales:
 
 Es la eterna tensión entre privacidad y seguridad en el mundo digital.
 
-![cover](/images/blog/2024-12-11/btc-p2p.jpg)
+![bitcoin dinero entre pares](/images/blog/2024-12-11/btc-p2p.jpg)
 
 ## Precursores de Bitcoin
 

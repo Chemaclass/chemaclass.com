@@ -94,7 +94,7 @@ Aquí entran tasas de matriculación, recogida de basuras, permisos de obra. Par
 
 ## ¿Cómo funcionan?
 
-![cover](/images/blog/2025-01-02/middle.jpg)
+![cómo funcionan los impuestos](/images/blog/2025-01-02/middle.jpg)
 
 Los impuestos suelen ser una mezcla de responsabilidades **nacionales**, **regionales** y **locales**:
 
@@ -130,7 +130,7 @@ Los impuestos parecerían más justos si la gente confiara en que se gastan bien
 
 ## Una nueva perspectiva
 
-![cover](/images/blog/2025-01-02/middle-2.jpg)
+![una nueva perspectiva sobre los impuestos](/images/blog/2025-01-02/middle-2.jpg)
 
 Se supone que los impuestos financian servicios públicos esenciales. Pero el gran problema con los impuestos (y los gobiernos grandes) es que suelen traer **ineficiencia y corrupción**. Cuanto más poder tiene un gobierno, más probable es que lo use mal. Por eso creo que los gobiernos deberían ser **pequeños, enfocados y eficientes**: dar servicios esenciales sin complicar las cosas ni meterse en la vida de la gente.
 
@@ -154,4 +154,4 @@ Bitcoin tiene una **oferta fija de 21 millones** de monedas. No se puede inflar.
 
 **Bitcoin** no elimina los impuestos ni los servicios públicos, pero **cuestiona cómo pensamos sobre el dinero y el poder**. Da a la gente más **control sobre su riqueza** y demuestra que los sistemas financieros pueden funcionar sin grandes instituciones (a menudo corruptas). Es **un paso hacia un mundo con más libertad individual** y gobiernos pequeños, eficientes y justos.
 
-![cover](/images/blog/2025-01-02/footer.jpg)
+![bitcoin y libertad](/images/blog/2025-01-02/footer.jpg)

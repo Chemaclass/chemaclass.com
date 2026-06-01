@@ -309,7 +309,7 @@ Estos no son casos extremos:
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-argentina">
         <div class="interactive-list__content">
-          <p>Argentina sufrió 211% de inflación en 2023 bajo décadas de políticas de gobierno grande. Luego Javier Milei asumió el cargo. Redujo a la mitad los ministerios, despidió 40.000 empleados públicos, y terminó con la financiación monetaria. Resultado: la inflación cayó a 117% en 2024, luego a 31% a finales de 2025—la más baja en siete años. El PIB creció 7.6% en Q2 2025, el más fuerte en dos décadas. <br> <br>La pobreza cayó del 57% al 32%. Gobierno más pequeño, principios de dinero sólido. La adopción de Bitcoin sigue alta—los argentinos aprendieron a no confiar en ninguna moneda que no puedan verificar ellos mismos.</p>
+          <p>Argentina sufrió 211% de inflación en 2023 bajo décadas de políticas de gobierno grande. Luego Javier Milei asumió el cargo. Redujo a la mitad los ministerios, despidió 40.000 empleados públicos, y terminó con la financiación monetaria. Resultado: la inflación cayó a 117% en 2024, luego a 31% a finales de 2025, la más baja en siete años. El PIB creció 7.6% en Q2 2025, el más fuerte en dos décadas. <br> <br>La pobreza cayó del 57% al 32%. Gobierno más pequeño, principios de dinero sólido. La adopción de Bitcoin sigue alta, los argentinos aprendieron a no confiar en ninguna moneda que no puedan verificar ellos mismos.</p>
         </div>
         <a href="https://www.aljazeera.com/economy/2025/7/25/milei-tames-inflation-but-argentines-still-struggle-to-afford-basics" class="interactive-list__link" target="_blank" rel="noopener">Leer artículo completo →</a>
       </div>
@@ -321,19 +321,19 @@ Estos no son casos extremos:
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-etfs">
         <div class="interactive-list__content">
-          <p>En enero de 2024, la SEC aprobó ETFs de Bitcoin por primera vez. En meses, la inversión institucional se disparó un 400%. A finales de 2024, los inversores profesionales tenían $27.4 mil millones en ETFs de Bitcoin—más del 26% del AUM total. Solo el IBIT de BlackRock alcanzó $50 mil millones. <br> <br>Bitcoin ya no era solo para early adopters. Wall Street lo llamó "año cero de la adopción institucional". El activo que los bancos una vez desestimaron ahora está en fondos de pensiones.</p>
+          <p>En enero de 2024, la SEC aprobó ETFs de Bitcoin por primera vez. En meses, la inversión institucional se disparó un 400%. A finales de 2024, los inversores profesionales tenían $27.4 mil millones en ETFs de Bitcoin, más del 26% del AUM total. Solo el IBIT de BlackRock alcanzó $50 mil millones. <br> <br>Bitcoin ya no era solo para early adopters. Wall Street lo llamó "año cero de la adopción institucional". El activo que los bancos una vez desestimaron ahora está en fondos de pensiones.</p>
         </div>
         <a href="https://www.cnbc.com/2024/01/10/sec-approves-rule-changes-that-pave-the-way-for-bitcoin-etfs.html" class="interactive-list__link" target="_blank" rel="noopener">Leer artículo completo →</a>
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-gaza">
         <div class="interactive-list__content">
-          <p>Cuando las importaciones de efectivo a Gaza fueron bloqueadas en 2024, la infraestructura bancaria colapsó. Las transferencias tradicionales cobraban más del 30%—si funcionaban. Bitcoin se convirtió en una línea de vida. Un voluntario envió $123.000 en BTC que compraron comida, agua y construyeron refugios para familias desplazadas. <br> <br>Un taxista llamado Yusef recibió $48k en donaciones Bitcoin y construyó 100 tiendas. Cuando los bancos fallan, Bitcoin sigue funcionando. Sin permiso necesario.</p>
+          <p>Cuando las importaciones de efectivo a Gaza fueron bloqueadas en 2024, la infraestructura bancaria colapsó. Las transferencias tradicionales cobraban más del 30%, si funcionaban. Bitcoin se convirtió en una línea de vida. Un voluntario envió $123.000 en BTC que compraron comida, agua y construyeron refugios para familias desplazadas. <br> <br>Un taxista llamado Yusef recibió $48k en donaciones Bitcoin y construyó 100 tiendas. Cuando los bancos fallan, Bitcoin sigue funcionando. Sin permiso necesario.</p>
         </div>
         <a href="https://bitcoinmagazine.com/culture/palestinian-taxi-driver-uses-bitcoin-to-save-civilians-in-gaza-" class="interactive-list__link" target="_blank" rel="noopener">Leer artículo completo →</a>
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-usreserve">
         <div class="interactive-list__content">
-          <p>El 6 de marzo de 2025, el presidente Trump firmó una orden ejecutiva estableciendo una Reserva Estratégica de Bitcoin—un "Fort Knox digital". La reserva tiene ~200.000 BTC de activos incautados, con política de nunca vender. <br> <br>EE.UU. había perdido $17 mil millones vendiendo bitcoin incautado demasiado temprano. Ahora lo mantienen. Pakistán anunció su propia reserva semanas después. Naciones que una vez desestimaron Bitcoin ahora compiten por acumularlo.</p>
+          <p>El 6 de marzo de 2025, el presidente Trump firmó una orden ejecutiva estableciendo una Reserva Estratégica de Bitcoin, un "Fort Knox digital". La reserva tiene ~200.000 BTC de activos incautados, con política de nunca vender. <br> <br>EE.UU. había perdido $17 mil millones vendiendo bitcoin incautado demasiado temprano. Ahora lo mantienen. Pakistán anunció su propia reserva semanas después. Naciones que una vez desestimaron Bitcoin ahora compiten por acumularlo.</p>
         </div>
         <a href="https://www.whitehouse.gov/fact-sheets/2025/03/fact-sheet-president-donald-j-trump-establishes-the-strategic-bitcoin-reserve-and-u-s-digital-asset-stockpile/" class="interactive-list__link" target="_blank" rel="noopener">Leer artículo completo →</a>
       </div>

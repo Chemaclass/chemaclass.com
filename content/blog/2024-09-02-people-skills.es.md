@@ -24,11 +24,11 @@ Así que eres desarrollador de software, y has dominado lenguajes de programaci�
 
 <!-- more -->
 
-Si no puedes trabajar bien con otros, no importa lo bueno que sea tu código — nadie querrá trabajar contigo.
+Si no puedes trabajar bien con otros, no importa lo bueno que sea tu código, nadie querrá trabajar contigo.
 
 ## Por qué las habilidades interpersonales importan en software
 
-En el desarrollo de software, la colaboración lo es todo. Los proyectos no son solo esfuerzos en solitario. Serás parte de un equipo — con otros desarrolladores, diseñadores, o incluso personas no técnicas como gerentes y clientes. Cómo comunicas, colaboras y manejas las opiniones que recibes puede determinar tu éxito.
+En el desarrollo de software, la colaboración lo es todo. Los proyectos no son solo esfuerzos en solitario. Serás parte de un equipo, con otros desarrolladores, diseñadores, o incluso personas no técnicas como gerentes y clientes. Cómo comunicas, colaboras y manejas las opiniones que recibes puede determinar tu éxito.
 
 ### El compañero brillante pero difícil
 
@@ -38,7 +38,7 @@ Piénsalo. ¿Alguna vez has tenido ese compañero de equipo que es brillante per
 
 Ser un buen compañero de equipo significa escuchar a los demás, estar abierto a la crítica constructiva, compartir ideas, y lo más importante, ser respetuoso y considerado. Quieres que la gente disfrute trabajando contigo, no que lo eviten.
 
-Las buenas habilidades interpersonales te ayudan a construir relaciones de trabajo sólidas, resolver problemas más rápido y crear un mejor ambiente de trabajo para todos. No solo aspires a ser un experto en programación — asegúrate de que también seas genial para trabajar.
+Las buenas habilidades interpersonales te ayudan a construir relaciones de trabajo sólidas, resolver problemas más rápido y crear un mejor ambiente de trabajo para todos. No solo aspires a ser un experto en programación, asegúrate de que también seas genial para trabajar.
 
 ### El impacto a largo plazo
 
@@ -46,7 +46,7 @@ A largo plazo, tus habilidades interpersonales pueden impulsar tu éxito tanto, 
 
 > Las habilidades interpersonales son tan necesarias como las habilidades técnicas. Nadie querrá trabajar contigo si no eres un buen compañero de equipo.
 
-![middle](/images/blog/2024-09-02/middle.jpg)
+![personas trabajando juntas](/images/blog/2024-09-02/middle.jpg)
 
 ## ¿Qué son las habilidades interpersonales?
 
@@ -80,10 +80,10 @@ Las competencias que te permiten interactuar efectiva y fluidamente con otros.
 
 ### Por qué son más difíciles de lo que piensas
 
-A menudo se les llama habilidades interpersonales o blandas, pero dominarlas puede ser sorprendentemente desafiante — quizás incluso más que muchas habilidades técnicas. A diferencia de las "habilidades duras", que son tangibles y a menudo se pueden aprender a través de unas pocas horas o días de estudio, las habilidades interpersonales implican navegar la intrincada red de emociones, experiencias y expectativas humanas.
+A menudo se les llama habilidades interpersonales o blandas, pero dominarlas puede ser sorprendentemente desafiante, quizás incluso más que muchas habilidades técnicas. A diferencia de las "habilidades duras", que son tangibles y a menudo se pueden aprender a través de unas pocas horas o días de estudio, las habilidades interpersonales implican navegar la intrincada red de emociones, experiencias y expectativas humanas.
 
 Mientras que las habilidades técnicas pueden requerir que te sumerjas en documentación, ejecutes experimentos y refines tu enfoque, entender y relacionarte con las personas es mucho más complejo.
 
 Los humanos traen sus sentimientos, antecedentes y rutinas a las interacciones, añadiendo capas de complejidad más allá de la lógica directa de las máquinas. Estos detalles personales moldean la realidad que percibimos, haciendo que las habilidades interpersonales sean una parte esencial pero compleja de la comunicación y colaboración efectiva.
 
-![cover](/images/blog/2024-09-02/footer.jpg)
+![las habilidades interpersonales importan](/images/blog/2024-09-02/footer.jpg)

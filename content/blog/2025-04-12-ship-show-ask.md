@@ -28,11 +28,11 @@ series_order = 6
 
 In fast-moving teams, one of the biggest tensions we face is this: How do we keep shipping without compromising quality or collaboration?
 
-The traditional approach to pull requests often slows things down. We wait hours—or days—for approvals, even for trivial changes. But the alternative—just merging directly—can feel reckless or invisible to the rest of the team.
+The traditional approach to pull requests often slows things down. We wait hours, or days, for approvals, even for trivial changes. But the alternative, just merging directly, can feel reckless or invisible to the rest of the team.
 
 <!-- more -->
 
-That's where the Ship-Show-Ask strategy comes in. Originally described by [Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html), this model offers a more flexible and thoughtful way to handle code changes. It's not just a branching strategy—it's a shift in how teams collaborate, trust, and take ownership.
+That's where the Ship-Show-Ask strategy comes in. Originally described by [Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html), this model offers a more flexible and thoughtful way to handle code changes. It's not just a branching strategy, it's a shift in how teams collaborate, trust, and take ownership.
 
 ## What is Ship, Show, Ask?
 
@@ -46,7 +46,7 @@ The key idea is to use Ask as the default for most work, fall back to Show when 
 
 ## Why I prefer to Ask and Show
 
-In my experience, it helps to treat every change—even the small ones—as something worth sharing. I always create a branch and open a PR. It provides visibility, builds a shared history, and creates a space for optional or asynchronous feedback.
+In my experience, it helps to treat every change, even the small ones, as something worth sharing. I always create a branch and open a PR. It provides visibility, builds a shared history, and creates a space for optional or asynchronous feedback.
 
 But not all PRs need to follow the same review process.
 
@@ -59,7 +59,7 @@ I prefer to wait for a peer review when:
 - It introduces architectural or structural decisions that haven't been agreed on yet
 - It benefits from shared input or a second pair of eyes
 
-That said, **Ask doesn't mean over-engineering the process**. Often, one thoughtful reviewer is enough—especially if they're familiar with the domain. If the change touches a specific area, I'll ask for feedback from the person who owns (or best understands) that part of the code. It doesn't need to involve everyone.
+That said, **Ask doesn't mean over-engineering the process**. Often, one thoughtful reviewer is enough, especially if they're familiar with the domain. If the change touches a specific area, I'll ask for feedback from the person who owns (or best understands) that part of the code. It doesn't need to involve everyone.
 
 > In small teams, requiring two approvals on every PR can quickly become a bottleneck and slow down the delivery of value. The goal is alignment and quality, not ceremony for its own sake.
 
@@ -75,7 +75,7 @@ I might merge immediately when:
 - Making non-functional tweaks (formatting, logs, comments)
 - Applying UI or style adjustments with no logic change
 
-The key principle: **Show is optional—never mandatory**. I choose Show only if the change is low-risk and fits within team expectations. When I use Show, I own the outcome. The responsibility is mine.
+The key principle: **Show is optional, never mandatory**. I choose Show only if the change is low-risk and fits within team expectations. When I use Show, I own the outcome. The responsibility is mine.
 
 ## Why this approach works for me
 
@@ -103,16 +103,16 @@ A Show PR might be the right choice when:
 Some practical advice from experience:
 
 - Clarify team expectations for when to use Show vs Ask
-- Always provide context in your PR—even if merging immediately
+- Always provide context in your PR, even if merging immediately
 - Write tests for any new logic or behavior
-- Welcome post-merge feedback—review doesn't stop at merge
+- Welcome post-merge feedback, review doesn't stop at merge
 - Reflect regularly as a team and adjust the approach as needed
 
 ---
 
 Ship, Show, Ask is more than just branching hygiene.
 
-To me, it's about building a culture of clarity, accountability, and trust—where developers are empowered to move fast while staying thoughtful.
+To me, it's about building a culture of clarity, accountability, and trust, where developers are empowered to move fast while staying thoughtful.
 
 If you're tired of slow PR queues and over-engineered approvals, this might be worth a try.
 

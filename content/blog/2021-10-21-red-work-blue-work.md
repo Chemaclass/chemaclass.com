@@ -32,7 +32,7 @@ have different languages.
 
 Red Work is about **doing and reducing variability**. Red Work focuses on a proving mindset and a performance mindset.
 
-In Red Work, you seek for completing a task without a lot of need for deciding what or how. Red Work is being in control
+In Red Work, you seek to complete a task without a lot of need for deciding what or how. Red Work is being in control
 and taking control. Such as:
 
 - Process work and avoid errors.

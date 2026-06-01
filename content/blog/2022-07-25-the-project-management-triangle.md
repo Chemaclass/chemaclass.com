@@ -20,7 +20,7 @@ related_readings = [
 
 ![blog-cover](/images/blog/2022-07-25/cover.jpg)
 
-A triangle of time, quality and cost. it's an indicator that these three parameters are interconnected.
+A triangle of time, quality and cost. It's an indicator that these three parameters are interconnected.
 You can fix one or two of them, but not three.
 
 <!-- more -->
@@ -35,7 +35,7 @@ You can fix one or two of them, but not three.
 
 In software methodologies, you can adapt this idea by changing **quality** to **scope**:
 
-![blog-cover](/images/blog/2022-07-25/middle.jpg)
+![triangle with scope replacing quality](/images/blog/2022-07-25/middle.jpg)
 
 ### Waterfall
 
@@ -58,7 +58,7 @@ learnings and recalibrating their priorities again and again.
 As you can see, one funny fact is that the waterfall and agile share an inverted triangle with their fixed and variables
 parameters. Really interesting indeed.
 
-![blog-cover](/images/blog/2022-07-25/footer.jpg)
+![inverted triangles for waterfall and agile](/images/blog/2022-07-25/footer.jpg)
 
 ## Reference
 

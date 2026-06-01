@@ -31,7 +31,7 @@ The London company was building software from outside-in, while the Chicago comp
 
 ## Outside-in: London School
 
-It provides a behavior-driven approach to TDD. Starting from the outside of the application and working in moving to
+It provides a behavior-driven approach to TDD. Starting from the outside of the application and working inwards to
 lower layers. For example, starting from the API/Controllers down to the application or domain layers.
 
 ### PROS
@@ -51,7 +51,7 @@ lower layers. For example, starting from the API/Controllers down to the applica
 ## Inside-out: Chicago School
 
 It's an informal, exploratory, state-based approach of TDD. Starting from the inside of the application (usually the
-domain) and works out towards the APIs.
+domain) and working out towards the APIs.
 
 ### PROS
 

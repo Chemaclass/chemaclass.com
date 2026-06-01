@@ -77,7 +77,7 @@ That said, Pull Requests and Pair Programming aren't mutually exclusive, they ca
 The most common fear that I saw while encouraging to do Pair Programming is that some people are shy and they don't like to have other eyes around them while they are coding because of:
 - Fear that they don't know what to code or where to start.
 - Fear that others will laugh at their solutions.
-- Fear to don't succeed in public.
+- Fear to not succeed in public.
 - Fear to not be able to develop the expected solution for multiple reasons: misunderstanding the task or lack of knowledge.
 - Fear to change your mind in front of others.
 - Fear to discuss and make decisions loud.
@@ -114,4 +114,4 @@ If you still feel uncomfortable having another person next to you while you writ
 
 > It's totally ok not knowing everything. The most important thing is to know how to work together.
 
-![blog-img](/images/blog/2021-04-01/footer.jpg)
+![two developers pair programming](/images/blog/2021-04-01/footer.jpg)

@@ -23,7 +23,7 @@ related_readings = [
 
 ![blog-cover](/images/blog/2024-08-01/cover.jpg)
 
-Waterfall is like following a straight path where you move from one step to the next in a defined order — like water flowing down a waterfall through different stages.
+Waterfall is like following a straight path where you move from one step to the next in a defined order, like water flowing down a waterfall through different stages.
 
 <!-- more -->
 
@@ -35,7 +35,7 @@ It usually follows a straightforward sequence like this:
 
 ## The reality of Waterfall
 
-Waterfall can be like communism in theory — it seems perfect on paper but doesn't work in the real world.
+Waterfall can be like communism in theory, it seems perfect on paper but doesn't work in the real world.
 
 - Clients often don't know exactly what they want.
 - Requirements are constantly changing.
@@ -54,7 +54,7 @@ The big issue is when higher-ups dictate exactly how teams should work, leading 
 
 ---
 
-![footer](/images/blog/2024-08-01/footer.jpg)
+![agile vs waterfall](/images/blog/2024-08-01/footer.jpg)
 
 ## Why Agile was created
 

@@ -64,7 +64,7 @@ La discriminación, el favoritismo o las oportunidades desiguales crean una atm�
 
 Cuando sientes que no hay espacio para avanzar profesionalmente, te desconectas y te sientes insatisfecho con tu rol.
 
-![blog-cover](/images/blog/2023-10-11/middle.jpg)
+![blog-middle](/images/blog/2023-10-11/middle.jpg)
 
 ### Conflictos tóxicos entre compañeros
 
@@ -89,7 +89,7 @@ Exponerse mucho tiempo a un ambiente así lleva al agotamiento físico y emocion
 > Estos síntomas varían de un sitio a otro. Abordarlos rápido es clave para crear un ambiente sano y productivo.
 
 
-![blog-cover](/images/blog/2023-10-11/footer.jpg)
+![blog-footer](/images/blog/2023-10-11/footer.jpg)
 
 
 ## ¿Qué puedes hacer al respecto?

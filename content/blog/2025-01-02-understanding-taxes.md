@@ -95,7 +95,7 @@ These include fees for registering vehicles, paying for waste collection, and ob
 
 ## How do they work?
 
-![cover](/images/blog/2025-01-02/middle.jpg)
+![how taxes work](/images/blog/2025-01-02/middle.jpg)
 
 Taxes are usually a mix of **national**, **regional**, and **local** responsibilities:
 
@@ -131,7 +131,7 @@ Taxes would seem much fairer if people trusted their money was being spent wisel
 
 ## A new perspective
 
-![cover](/images/blog/2025-01-02/middle-2.jpg)
+![a new perspective on taxes](/images/blog/2025-01-02/middle-2.jpg)
 
 Taxes are supposed to fund critical public services, but the biggest problem with taxes (and big governments) is that they often lead to **inefficiency and corruption**. The more power a government has, the more likely it is to misuse it. That's why governments should be (for me) **small, focused, and efficient**, providing essential services without overcomplicating things or overreaching into people's lives.
 
@@ -155,4 +155,4 @@ With its **fixed supply of 21 million** coins, Bitcoin cannot be inflated in thi
 
 **Bitcoin** doesn't eliminate taxes or public services but **challenges how we think about money and power**. It gives people more **control over their wealth** and shows how financial systems work without needing large, often corrupt institutions. It's **a step toward a world where individuals have more freedom** and governments focus on being small, efficient, and fair.
 
-![cover](/images/blog/2025-01-02/footer.jpg)
+![bitcoin and freedom](/images/blog/2025-01-02/footer.jpg)

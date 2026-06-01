@@ -26,7 +26,7 @@ Coding is not just another job. Writing software can be really fun and, even mor
 
 That itself is not bad at all! Practice makes the master, so a lot of coding will inevitably help you improve your coding skills… but there are [other aspects](/blog/the-path-to-seniority-in-software/) that you need to keep in mind in order to help you grow into a great engineer.
 
-As a software engineer, your job is not "just to write software" -for its own sake, but to **use software to solve actual business problems**. To make that happen there are plenty of different methodologies out there, for sure. However, we must agree that you need to identify and understand your customer’s needs in order to know what to actually build.
+As a software engineer, your job is not "just to write software" for its own sake, but to **use software to solve actual business problems**. To make that happen there are plenty of different methodologies out there, for sure. However, we must agree that you need to identify and understand your customer’s needs in order to know what to actually build.
 
 You need to know your product, at least until certain level, so you can design your software using a similar language closer to the business, which will help its evolution and overall quality. This will be beneficial for the future (and present) maintenance of the product.
 

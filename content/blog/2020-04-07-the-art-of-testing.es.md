@@ -62,6 +62,6 @@ Por tanto, el testing no solo verifica comportamiento. También guía el softwar
 
 ¿Deberíamos testear todo? Depende del contexto. Habrá situaciones donde los tests no aporten beneficio. Aun así, escribe código como si fuera a ser testeado.
 
-![blog-cover](/images/blog/2020-04-07/footer.jpg)
+![código testeable y buen diseño](/images/blog/2020-04-07/footer.jpg)
 
 > El código testeable tiende a un mejor diseño y, por lo tanto, a mejor calidad.

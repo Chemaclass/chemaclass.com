@@ -26,11 +26,11 @@ Se publicó en 1998 y lo leí a principios de 2021. Mejor tarde que nunca. Mi he
 
 > Viven en un Laberinto (que representa nuestro entorno) y para sobrevivir necesitan salir de su zona de confort y buscar queso (que representa la felicidad y el éxito).
 >
-> El cuento empieza cuando ambos grupos llegan a la "Estacion de Queso C", llena de queso. Los humanos establecen rutinas; los ratones mantienen sus instintos activos.
+> El cuento empieza cuando ambos grupos llegan a la "Estación de Queso C", llena de queso. Los humanos establecen rutinas; los ratones mantienen sus instintos activos.
 >
-> Un día los ratones llegan y no queda queso. Salen a buscar más en otro lugar. Hem y Haw, en cambio, se quejan. Hem, enfadado, exige "Quien se ha llevado mi queso?!". Ambos contaban con que el queso sería eterno, así que no estaban preparados. La diferencia clave es cómo reaccionan.
+> Un día los ratones llegan y no queda queso. Salen a buscar más en otro lugar. Hem y Haw, en cambio, se quejan. Hem, enfadado, exige "¿Quién se ha llevado mi queso?!". Ambos contaban con que el queso sería eterno, así que no estaban preparados. La diferencia clave es cómo reaccionan.
 >
-> Hem se niega a marcharse de la "Estacion de Queso C". Sigue yendo cada día esperando encontrar queso, cada vez mas debil y con miedo de hacer algo diferente. Haw, en cambio, decide reírse de la situación, vence su miedo y sale a buscar más queso.
+> Hem se niega a marcharse de la "Estación de Queso C". Sigue yendo cada día esperando encontrar queso, cada vez más débil y con miedo de hacer algo diferente. Haw, en cambio, decide reírse de la situación, vence su miedo y sale a buscar más queso.
 >
 > ... Te dejo el resto del cuento para ti.
 

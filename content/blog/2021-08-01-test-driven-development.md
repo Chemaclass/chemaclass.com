@@ -30,7 +30,7 @@ easy to be tested.
 ## The root of the problem
 
 Without (a solid) experience in testing, developers can have a hard time while trying to apply testing in general as
-part of their daily job. It's not simply because of the topic's complexity, but **because they are used to write
+part of their daily job. It's not simply because of the topic's complexity, but **because they are used to writing
 code that is hard to test.**
 
 Writing tests for already working software (mainly when it was done without considering testing at all) translates as

@@ -27,11 +27,11 @@ series_order = 6
 
 En equipos que se mueven rápido, una de las mayores tensiones que enfrentamos es esta: ¿Cómo seguimos entregando sin comprometer la calidad o la colaboración?
 
-El enfoque tradicional de pull requests a menudo ralentiza las cosas. Esperamos horas—o días—por aprobaciones, incluso para cambios triviales. Pero la alternativa—simplemente mergear directamente—puede sentirse imprudente o invisible para el resto del equipo.
+El enfoque tradicional de pull requests a menudo ralentiza las cosas. Esperamos horas, o días, por aprobaciones, incluso para cambios triviales. Pero la alternativa, simplemente mergear directamente, puede sentirse imprudente o invisible para el resto del equipo.
 
 <!-- more -->
 
-Ahí es donde entra la estrategia Ship-Show-Ask. Originalmente descrita por [Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html), este modelo ofrece una forma más flexible y reflexiva de manejar cambios de código. No es solo una estrategia de branching—es un cambio en cómo los equipos colaboran, confían y toman propiedad.
+Ahí es donde entra la estrategia Ship-Show-Ask. Originalmente descrita por [Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html), este modelo ofrece una forma más flexible y reflexiva de manejar cambios de código. No es solo una estrategia de branching, es un cambio en cómo los equipos colaboran, confían y toman propiedad.
 
 ## ¿Qué es Ship, Show, Ask?
 
@@ -45,7 +45,7 @@ La idea clave es usar Ask como el default para la mayoría del trabajo, recurrir
 
 ## Por qué prefiero Ask y Show
 
-En mi experiencia, ayuda tratar cada cambio—incluso los pequeños—como algo que vale la pena compartir. Siempre creo una rama y abro un PR. Proporciona visibilidad, construye un historial compartido, y crea un espacio para opiniones opcionales o asíncronas.
+En mi experiencia, ayuda tratar cada cambio, incluso los pequeños, como algo que vale la pena compartir. Siempre creo una rama y abro un PR. Proporciona visibilidad, construye un historial compartido, y crea un espacio para opiniones opcionales o asíncronas.
 
 Pero no todos los PRs necesitan seguir el mismo proceso de revisión.
 
@@ -58,7 +58,7 @@ Prefiero esperar una revisión de un compañero cuando:
 - Introduce decisiones arquitectónicas o estructurales que no se han acordado aún
 - Se beneficia de input compartido o un segundo par de ojos
 
-Dicho esto, **Ask no significa sobre-ingeniar el proceso**. A menudo, un revisor reflexivo es suficiente—especialmente si está familiarizado con el dominio. Si el cambio toca un área específica, pediré la opinión de la persona que posee (o mejor entiende) esa parte del código. No necesita involucrar a todos.
+Dicho esto, **Ask no significa sobre-ingeniar el proceso**. A menudo, un revisor reflexivo es suficiente, especialmente si está familiarizado con el dominio. Si el cambio toca un área específica, pediré la opinión de la persona que posee (o mejor entiende) esa parte del código. No necesita involucrar a todos.
 
 > En equipos pequeños, requerir dos aprobaciones en cada PR puede convertirse rápidamente en un cuello de botella y ralentizar la entrega de valor. El objetivo es alineamiento y calidad, no ceremonia por sí misma.
 
@@ -74,7 +74,7 @@ Podría mergear inmediatamente cuando:
 - Hago ajustes no funcionales (formato, logs, comentarios)
 - Aplico ajustes de UI o estilo sin cambio de lógica
 
-El principio clave: **Show es opcional—nunca obligatorio**. Elijo Show solo si el cambio es de bajo riesgo y encaja con las expectativas del equipo. Cuando uso Show, me hago responsable del resultado. La responsabilidad es mía.
+El principio clave: **Show es opcional, nunca obligatorio**. Elijo Show solo si el cambio es de bajo riesgo y encaja con las expectativas del equipo. Cuando uso Show, me hago responsable del resultado. La responsabilidad es mía.
 
 ## Por qué este enfoque funciona para mí
 
@@ -102,16 +102,16 @@ Un PR Show podría ser la elección correcta cuando:
 Algunos consejos prácticos de la experiencia:
 
 - Clarifica las expectativas del equipo sobre cuándo usar Show vs Ask
-- Siempre proporciona contexto en tu PR—incluso si mergeas inmediatamente
+- Siempre proporciona contexto en tu PR, incluso si mergeas inmediatamente
 - Escribe tests para cualquier lógica o comportamiento nuevo
-- Da la bienvenida a los comentarios post-merge—la revisión no termina en el merge
+- Da la bienvenida a los comentarios post-merge, la revisión no termina en el merge
 - Reflexiona regularmente como equipo y ajusta el enfoque según sea necesario
 
 ---
 
 Ship, Show, Ask es más que higiene de branching.
 
-Para mí, se trata de construir una cultura de claridad, responsabilidad y confianza—donde los desarrolladores están empoderados para moverse rápido mientras permanecen reflexivos.
+Para mí, se trata de construir una cultura de claridad, responsabilidad y confianza, donde los desarrolladores están empoderados para moverse rápido mientras permanecen reflexivos.
 
 Si estás cansado de colas lentas de PR y aprobaciones sobre-ingeniadas, esto podría valer la pena intentarlo.
 

@@ -26,9 +26,9 @@ Published in 1998, and I just read it at the beginning of 2021. Better late than
 
 > They live in a Maze (that represents one's environment) and in order to survive they need to go out of their comfort zone and look for cheese (which represents happiness and success).
 >
-> The tale starts when both groups end up at "Cheese Station C", full of cheese. The humans established routines while the mouses kept their instincts active.
+> The tale starts when both groups end up at "Cheese Station C", full of cheese. The humans established routines while the mice kept their instincts active.
 >
-> One day the mousses arrive at the "Cheese Station C" and find no cheese left. So they go out to find more cheese somewhere else. On the contrary, when Hem and Haw see that there is no cheese left, they start complaining. Hem, angry and annoyed, demands "Who moved my cheese?!". Both humans counted on the cheese supply would be endless constant, so they weren't prepared for that unexpected. The main difference here is how Haw and Hem react to this situation.
+> One day the mice arrive at the "Cheese Station C" and find no cheese left. So they go out to find more cheese somewhere else. On the contrary, when Hem and Haw see that there is no cheese left, they start complaining. Hem, angry and annoyed, demands "Who moved my cheese?!". Both humans counted on the cheese supply being endless and constant, so they weren't prepared for the unexpected. The main difference here is how Haw and Hem react to this situation.
 >
 > Hem denies moving away from the "Cheese Station C", so he keeps going there every day expecting to find cheese without success, being weaker, and with continuous fear of doing something different. Haw, on the other hand, decides to laugh at the situation, turns down his fear, and goes out looking for more cheese.
 >

@@ -150,7 +150,7 @@ createInvoiceForCustomers(new AnyOtherType());
 El desempaquetado de argumentos, combinado con funciones variádicas, nos permite simular arrays tipados. Un gran poder conlleva una gran responsabilidad.
 Hay que conocer bien nuestras herramientas para usarlas con criterio.
 
-![blog-cover](/images/blog/2020-10-13/footer.jpg)
+![arrays tipados con variádicas en php](/images/blog/2020-10-13/footer.jpg)
 
 ---
 

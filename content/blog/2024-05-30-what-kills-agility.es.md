@@ -24,7 +24,7 @@ series_order = 5
 
 ![blog-cover](/images/blog/2024-05-30/cover.jpg)
 
-Docenas de documentos y hojas de cálculo, reuniones tras reuniones, y sin embargo sin mucho impacto, resultan en desalineaciones del equipo—descubiertas demasiado tarde.
+Docenas de documentos y hojas de cálculo, reuniones tras reuniones, y sin embargo sin mucho impacto, resultan en desalineaciones del equipo, descubiertas demasiado tarde.
 
 <!-- more -->
 
@@ -32,7 +32,7 @@ Cómo gestionamos una organización define su calidad. Una excelente gestión es
 
 Si ya estás feliz con cómo tú y tu equipo trabajan juntos, está bien. Sin embargo, ¿qué hay de reevaluar cómo trabajas para buscar mejoras potenciales?
 
-Me refiero a evaluar tu sistema y cómo tú y las personas a tu alrededor actúan dentro de él. Lo que funcionó hace meses o años podría diferir de lo que podríamos descubrir hoy—como parte de la mejora continua.
+Me refiero a evaluar tu sistema y cómo tú y las personas a tu alrededor actúan dentro de él. Lo que funcionó hace meses o años podría diferir de lo que podríamos descubrir hoy, como parte de la mejora continua.
 
 No me gusta la política en el lugar de trabajo, donde cada equipo va a lo suyo en lugar de tener una dirección compartida más grande. Esto resulta en trabajo diario lleno de miedo desde arriba, pasado a las personas de abajo, manteniendo un [ambiente de trabajo no saludable](/es/blog/unhealthy-working-environment). Game of Thrones es genial como serie de ficción, pero no algo con lo que lidiar en el negocio diario.
 

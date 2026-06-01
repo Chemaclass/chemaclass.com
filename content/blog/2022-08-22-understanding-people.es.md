@@ -1,12 +1,17 @@
 +++
 title = "Entendiendo a las Personas"
-description = "Uno de los mayores retos es evitar malentendidos y aceptar que los demas no piensan igual que tu."
+description = "Uno de los mayores retos es evitar malentendidos y aceptar que los demás no piensan igual que tú."
 draft = false
 [taxonomies]
 tags = [ "communication", "psychology", "team-management" ]
 [extra]
-subtitle = "Malentendidos, comunicacion efectiva y autorreflexion"
+subtitle = "Malentendidos, comunicación efectiva y autorreflexión"
 static_thumbnail = "/images/blog/2022-08-22/cover.jpg"
+related_posts = [
+  "blog/2024-09-02-people-skills.md",
+  "blog/2022-04-02-dunbar-number.md",
+  "blog/2023-06-08-learned-helplessness.md",
+]
 related_readings = [
   "readings/2021-04-05-97-things-every-em-should-know.md",
   "readings/2021-10-22-leadership-is-language.md",
@@ -68,4 +73,4 @@ La autorreflexion es esencial para mejorar y corregir tu actitud. Para adaptarte
 
 > Mira mas alla de tu area de influencia. Comparte tus ideas y no te averguences de tus errores si los tomas como oportunidades de aprendizaje.
 
-![blog-cover](/images/blog/2022-08-22/footer.jpg)
+![personas comunicandose](/images/blog/2022-08-22/footer.jpg)

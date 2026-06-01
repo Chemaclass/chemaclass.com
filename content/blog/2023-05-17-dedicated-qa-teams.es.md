@@ -33,11 +33,11 @@ El objetivo final de un equipo de software es hacer la posición de QA inútil p
 
 ## La verdad oculta detrás de la falta de calidad del software
 
-Desafortunadamente, en nuestra industria del software, la demanda de proyectos "rápidos, rápidos y sucios" terminó en MVPs pobremente desarrollados simplemente aplicando parches y código sobre código con solo testing manual comprobando caminos felices - a veces incluso ignorando casos límite.
+Desafortunadamente, en nuestra industria del software, la demanda de proyectos "rápidos, rápidos y sucios" terminó en MVPs pobremente desarrollados simplemente aplicando parches y código sobre código con solo testing manual comprobando caminos felices, a veces incluso ignorando casos límite.
 
 > "La fecha límite es en una semana, ¡así que mejor termínalo a tiempo!"
 
-No aprendemos la importancia de lo que el testing automatizado puede aportar a nuestro trabajo diario, así que no lo tomamos en serio, y por lo tanto, no lo practicamos lo suficiente. Y, por esa misma razón, porque no lo practicamos, no sabemos cómo realizarlo correctamente - ¡sí, estoy hablando de escribir tests automatizados que prueban el comportamiento de tu software!
+No aprendemos la importancia de lo que el testing automatizado puede aportar a nuestro trabajo diario, así que no lo tomamos en serio, y por lo tanto, no lo practicamos lo suficiente. Y, por esa misma razón, porque no lo practicamos, no sabemos cómo realizarlo correctamente. ¡Sí, estoy hablando de escribir tests automatizados que prueban el comportamiento de tu software!
 
 Nuestra incapacidad para escribir código testeable resulta en software que es difícil de testear, y por lo tanto delegamos el testing a terceros trasladando la responsabilidad de la calidad final general del producto o servicio que escribimos.
 

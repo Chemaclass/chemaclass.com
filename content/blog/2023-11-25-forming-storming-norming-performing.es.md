@@ -44,7 +44,7 @@ En esta etapa inicial, los miembros del equipo son cordiales pero tímidos, inse
 
 ## Storming
 
-Surgen conflictos y desacuerdos cuando los miembros empiezan a expresar su individualidad. Pueden aparecer luchas de poder y desafios a la autoridad del lider.
+Surgen conflictos y desacuerdos cuando los miembros empiezan a expresar su individualidad. Pueden aparecer luchas de poder y desafíos a la autoridad del líder.
 
 > **Objetivo**: El equipo clarifica sus objetivos, los miembros aprenden a resolver conflictos y abordar diferencias de manera constructiva.
 
@@ -54,11 +54,11 @@ Surgen conflictos y desacuerdos cuando los miembros empiezan a expresar su indiv
 - Reconocer y abordar conflictos de manera constructiva
 - Fomentar la comunicación abierta y honesta mientras guía al equipo a través del proceso de entender y apreciar perspectivas diversas
 
-![cover](/images/blog/2023-11-25/middle.jpg)
+![blog-middle](/images/blog/2023-11-25/middle.jpg)
 
 ## Norming
 
-La cohesion empieza a desarrollarse. Los miembros establecen normas y valores. Los roles se aclaran y surge un sentido de unidad.
+La cohesión empieza a desarrollarse. Los miembros establecen normas y valores. Los roles se aclaran y surge un sentido de unidad.
 
 > **Objetivo**: El equipo se esfuerza por establecer normas, valores y un entendimiento compartido. Los miembros aprenden a apreciar las fortalezas y debilidades de cada uno.
 
@@ -70,7 +70,7 @@ La cohesion empieza a desarrollarse. Los miembros establecen normas y valores. L
 
 ## Performing
 
-El equipo funciona a pleno rendimiento, enfocado en lograr sus objetivos. Los miembros colaboran, confian entre si y se apoyan mutuamente.
+El equipo funciona a pleno rendimiento, enfocado en lograr sus objetivos. Los miembros colaboran, confían entre sí y se apoyan mutuamente.
 
 > **Objetivo**: El equipo está comprometido con su propósito común y opera a un alto nivel de eficiencia y efectividad.
 
@@ -82,7 +82,7 @@ El equipo funciona a pleno rendimiento, enfocado en lograr sus objetivos. Los mi
 
 ## Adjourning (o Mourning)
 
-Esta etapa marca el final de la tarea o proyecto. Los miembros pueden sentir cierta perdida cuando el grupo se disuelve.
+Esta etapa marca el final de la tarea o proyecto. Los miembros pueden sentir cierta pérdida cuando el grupo se disuelve.
 
 > **Objetivo**: Reconocer y celebrar los logros del equipo, proporcionar cierre y reflexionar sobre la experiencia general.
 
@@ -93,13 +93,13 @@ Esta etapa marca el final de la tarea o proyecto. Los miembros pueden sentir cie
 - Facilitar una sesión reflexiva para capturar lecciones aprendidas y crear una experiencia de cierre positiva
 
 
-![cover](/images/blog/2023-11-25/footer.jpg)
+![blog-footer](/images/blog/2023-11-25/footer.jpg)
 
-Para llevar un equipo a alto rendimiento usando el [Modelo de Tuckman](https://en.wikipedia.org/wiki/Tuckman's_stages_of_group_development), los **lideres** deben conocer las etapas y **adaptar** su estilo segun la situacion.
+Para llevar un equipo a alto rendimiento usando el [Modelo de Tuckman](https://en.wikipedia.org/wiki/Tuckman's_stages_of_group_development), los **líderes** deben conocer las etapas y **adaptar** su estilo según la situación.
 
-Esto significa dar **orientacion y estructura** en _forming_, **facilitar la resolucion de conflictos** en _storming_, **fomentar colaboracion y comunicacion** en _norming_, **dar autonomia** en _performing_, y **reconocer logros** en _adjourning_.
+Esto significa dar **orientación y estructura** en _forming_, **facilitar la resolución de conflictos** en _storming_, **fomentar colaboración y comunicación** en _norming_, **dar autonomía** en _performing_, y **reconocer logros** en _adjourning_.
 
-> La comunicacion regular, las actividades de team-building y resolver conflictos de forma constructiva son claves durante todo el proceso.
+> La comunicación regular, las actividades de team-building y resolver conflictos de forma constructiva son claves durante todo el proceso.
 
 ---
 

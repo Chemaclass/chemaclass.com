@@ -59,8 +59,8 @@ The key here is to find a way to connect with people by understanding how they u
 Here is an idea you could try:
 
 - Give them a book containing ideas or knowledge that could benefit the whole.
-- Allow reading this book during work time -- eg: on Fridays after lunch. This is a company investment for the development of your team. 
-- The book should be read in 3-4 hours -- or a couple of Fridays, depending on the number of pages.
+- Allow reading this book during work time, eg: on Fridays after lunch. This is a company investment for the development of your team. 
+- The book should be read in 3-4 hours, or a couple of Fridays, depending on the number of pages.
 - Don’t wait until the book is finished to talk about it. Follow the progress.
 - You will have great topics to discuss during your next 1:1.
 

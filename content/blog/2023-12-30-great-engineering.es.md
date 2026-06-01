@@ -24,17 +24,17 @@ Programar no es solo otro trabajo. Escribir software puede ser realmente diverti
 
 <!-- more -->
 
-Eso no tiene nada de malo. La practica hace al maestro, y programar mucho te ayudara a mejorar tus habilidades de codificacion. Pero hay [otros aspectos](/es/blog/the-path-to-seniority-in-software/) que debes tener en cuenta para crecer como gran ingeniero.
+Eso no tiene nada de malo. La práctica hace al maestro, y programar mucho te ayudará a mejorar tus habilidades de codificación. Pero hay [otros aspectos](/es/blog/the-path-to-seniority-in-software/) que debes tener en cuenta para crecer como gran ingeniero.
 
-Como ingeniero de software, tu trabajo no es "solo escribir codigo", sino **usar el software para resolver problemas reales de negocio**. Para lograrlo, existen muchas metodologias. Pero en algo hay que estar de acuerdo: necesitas identificar y entender las necesidades de tu cliente para saber que construir.
+Como ingeniero de software, tu trabajo no es "solo escribir código", sino **usar el software para resolver problemas reales de negocio**. Para lograrlo, existen muchas metodologías. Pero en algo hay que estar de acuerdo: necesitas identificar y entender las necesidades de tu cliente para saber qué construir.
 
-Necesitas conocer tu producto, al menos hasta cierto nivel, para disenar tu software usando un lenguaje cercano al negocio. Esto ayuda a su evolucion y calidad, y facilita el mantenimiento presente y futuro.
+Necesitas conocer tu producto, al menos hasta cierto nivel, para diseñar tu software usando un lenguaje cercano al negocio. Esto ayuda a su evolución y calidad, y facilita el mantenimiento presente y futuro.
 
-IT, Software, Producto y Personas estan muy conectados. Entender la relacion entre estos campos ayuda a cada persona a cumplir mejor sus objetivos.
+IT, Software, Producto y Personas están muy conectados. Entender la relación entre estos campos ayuda a cada persona a cumplir mejor sus objetivos.
 
-Un gran trabajo en equipo no es solo la suma de las partes: multiplica el valor creado entre los companeros. Para eso, saber comunicar bien es clave para generar claridad a cualquier nivel.
+Un gran trabajo en equipo no es solo la suma de las partes: multiplica el valor creado entre los compañeros. Para eso, saber comunicar bien es clave para generar claridad a cualquier nivel.
 
-Por eso un gran ingeniero conoce de negocio, cliente, producto y programacion. Entender estos puntos marca la diferencia entre un ingeniero promedio y uno excelente.
+Por eso un gran ingeniero conoce de negocio, cliente, producto y programación. Entender estos puntos marca la diferencia entre un ingeniero promedio y uno excelente.
 
 ---
 

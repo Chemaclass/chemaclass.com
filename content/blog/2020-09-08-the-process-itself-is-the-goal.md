@@ -38,10 +38,10 @@ This is a totally subjective topic that might be different from person to person
 I used to write my thoughts in a "diary" for some years. Back then, in 2015, when I moved to Germany, I didn't know many people here, and the environment was completely new.
 I decided to write my thoughts to myself in order to read them the day after and do some retrospection about it. Finally, after around 3 years, in December 2017, I published a book named ["Ojos en un recuerdo"](http://ojosenunrecuerdo.es/). That book is the compilation of those thoughts. No story behind it. They are as they came. You can see the evolution of the topics and about what and how they were written.
 
-![blog-img](/images/blog/2020-09-08/oeur-books.jpg)
+![ojos en un recuerdo books](/images/blog/2020-09-08/oeur-books.jpg)
 
 The exercise of self-reflection itself was more important than the book! The goal here wasn't writing a book at all. The goal was the self-projection to understand what was going on inside myself. Publishing those thoughts in a book was an accident. A beautiful accident, though.
-This habit of thinking about my actions and decisions (what do I do and why) helped me to develop who am I nowadays.
+This habit of thinking about my actions and decisions (what do I do and why) helped me to develop who I am nowadays.
 
 ### Sports
 
@@ -49,18 +49,18 @@ Exercise helps my mind to disconnect from the tech area. It keeps my body active
 
 > The specific sport itself is an irrelevant detail as far as you feel comfortable. The act of doing sport is the key here.
 
-![blog-img](/images/blog/2020-09-08/bjj-berlin-2020.jpg)
+![jiu-jitsu training in berlin](/images/blog/2020-09-08/bjj-berlin-2020.jpg)
 
 ### Books
 
 I try to read tech throughout the day and non-tech during the night. For example, some days before going to work or after working time I might read a tech book. And some days before going to sleep I like to read a non-tech one. This way, I feed my brain with knowledge and I also provide it with non-tech space, so it can rest from code and enjoy other "universes" as well.
 Some suggestions that helped me to understand how we behave, why we do what we do, and therefore build some habits that I didn't know how to:
 
-- The power of Habits, by Charles Duhigg.
+- The Power of Habit, by Charles Duhigg.
 - Atomic Habits, by James Clear.
 - Scrum: Doing Twice the Work in Half the Time, by Jeff Sutherland.
 
-![blog-img](/images/blog/2020-09-08/atomic-habits.jpg)
+![atomic habits book](/images/blog/2020-09-08/atomic-habits.jpg)
 
 ## Personal tricks
 
@@ -69,11 +69,11 @@ I wish I would have read much more. Nowadays, with the number of distractions th
 - I keep my personal phone always in silence and vibration mode.
 - I used to spend hours on social media; a lot of time wasted. Not anymore. I reduced the social media noise to the minimum by removing the apps that prevent me from being as productive as I want. Some of them from my phone, others the account itself.
 - I used to play video games. Not anymore. Instead, I go to GitHub to work on my pet projects, contribute to an open-source project, or simply read a book.
-- When I go for a run, I enjoy it twice by listening to a 45-min podcast that I want to listen to since the very morning. The reward of listening to the podcast is linked with the act of going out and run. I conscientiously created that habit.
+- When I go for a run, I enjoy it twice by listening to a 45-min podcast that I want to listen to since the very morning. The reward of listening to the podcast is linked with the act of going out and running. I conscientiously created that habit.
 
 > It's not about removing your old habits but replacing them with new ones.
 
-![blog-img](/images/blog/2020-09-08/chema-jumping.jpg)
+![chema jumping outdoors](/images/blog/2020-09-08/chema-jumping.jpg)
 
 ### How to improve your habits
 
@@ -92,7 +92,7 @@ Habits emerge without our consent. To save energy, the brain creates a habit loo
 
 > Repetition is the key. Make it easier to do what you want to do. Make it harder to do what you want to stop doing. Enjoy the process: that's the goal.
 
-![blog-img](/images/blog/2020-09-08/chema-next-turm.jpg)
+![chema by a tower](/images/blog/2020-09-08/chema-next-turm.jpg)
 
 ## Interesting links
 

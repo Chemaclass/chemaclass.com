@@ -136,4 +136,4 @@ El juicio humano no desaparece. Se mueve hacia arriba. En lugar de revisar cada 
 
 Ese sigue siendo nuestro trabajo. Y vale la pena hacerlo bien.
 
-![cover](/images/blog/2026-01-11/footer.jpg)
+![mcp conectando la ia con herramientas](/images/blog/2026-01-11/footer.jpg)

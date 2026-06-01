@@ -49,6 +49,11 @@
     </a>
   </nav>
 
+  <div class="service-notice" role="status">
+    <i class="fa-solid fa-circle-info"></i>
+    <span>{{ trans(key="svc_consulting_paused_banner", lang=lang) }}</span>
+  </div>
+
   <header class="service-hero">
     <h1>{% if lang == "es" %}Consultoría{% else %}Consulting{% endif %}</h1>
     <p class="service-hero__subtitle">{% if lang == "es" %}Para tech leads, engineering managers y CTOs navegando complejidad real.{% else %}For tech leads, engineering managers, and CTOs navigating real complexity.{% endif %}</p>
@@ -57,9 +62,9 @@
   <section class="service-intro" id="intro">
     <p>{% if lang == "es" %}He sido desarrollador, tech lead y manager en distintas empresas y culturas. No enseño teoría: comparto perspectiva construida haciendo el trabajo real.{% else %}I've been a developer, tech lead, and manager across different companies and cultures. I don't teach theory: I share perspective built from doing the actual work.{% endif %}</p>
     <p>{% if lang == "es" %}Tú traes el problema. Trabajamos en ello juntos, en directo, una hora.{% else %}You bring the problem. We work through it together, live, one hour.{% endif %}</p>
-    <a href="mailto:consulting@chemaclass.com?subject={% if lang == 'es' %}Consulta&body=Hola%20Chema%2C%0A%0ATema%3A%0ALo%20que%20quiero%20resolver%3A%0A%0AGracias!{% else %}Consulting%20Inquiry&body=Hi%20Chema%2C%0A%0ATopic%3A%0AWhat%20I%27m%20trying%20to%20figure%20out%3A%0A%0AThanks!{% endif %}" class="service-intro__cta">
-      <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_book_session", lang=lang) }}
-    </a>
+    <span class="service-intro__cta service-intro__cta--disabled" aria-disabled="true">
+      <i class="fa-solid fa-ban"></i> {{ trans(key="svc_consulting_unavailable", lang=lang) }}
+    </span>
   </section>
 
   <section class="service-process" id="process">
@@ -182,7 +187,8 @@
     </div>
   </section>
 
-  <section class="service-process" id="pricing">
+  <!-- Pricing (hidden by default, shown with ?prices=1) -->
+  <section class="service-process" id="pricing" style="display: none;">
     <div class="budget-section">
       <div class="budget-header">
         <h3>{% if lang == "es" %}Precios{% else %}Pricing{% endif %}</h3>
@@ -219,9 +225,9 @@
     <h2>{% if lang == "es" %}¿Listo para hablar?{% else %}Ready to talk?{% endif %}</h2>
     <p>{% if lang == "es" %}No tienes que tenerlo todo claro. Solo dime el tema.{% else %}You don't need to have it all figured out. Just tell me the topic.{% endif %}</p>
     <div class="service-cta__buttons">
-      <a href="mailto:consulting@chemaclass.com?subject={% if lang == 'es' %}Consulta&body=Hola%20Chema%2C%0A%0ATema%3A%0ALo%20que%20quiero%20resolver%3A%0A%0AGracias!{% else %}Consulting%20Inquiry&body=Hi%20Chema%2C%0A%0ATopic%3A%0AWhat%20I%27m%20trying%20to%20figure%20out%3A%0A%0AThanks!{% endif %}" class="service-cta__btn">
-        <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_book_session", lang=lang) }}
-      </a>
+      <span class="service-cta__btn service-cta__btn--disabled" aria-disabled="true">
+        <i class="fa-solid fa-ban"></i> {{ trans(key="svc_consulting_unavailable", lang=lang) }}
+      </span>
     </div>
   </section>
 </article>
@@ -236,6 +242,22 @@ document.querySelectorAll('.services-faq__question').forEach(btn => {
     btn.nextElementSibling.classList.toggle('open', !expanded);
   });
 });
+
+// Show pricing if prices=1 is in URL (query or malformed hash like #pricing?prices=1)
+(function() {
+  const search = new URLSearchParams(window.location.search);
+  const hash = window.location.hash;
+  const hashId = hash.includes('?') ? hash.substring(1, hash.indexOf('?')) : hash.substring(1);
+  const hashQuery = hash.includes('?') ? hash.substring(hash.indexOf('?') + 1) : '';
+  const fromHash = new URLSearchParams(hashQuery);
+  if (search.get('prices') === '1' || fromHash.get('prices') === '1') {
+    document.querySelectorAll('#pricing').forEach(el => el.style.display = 'block');
+    if (hashId) {
+      const target = document.getElementById(hashId);
+      if (target) target.scrollIntoView();
+    }
+  }
+})();
 </script>
 {% endblock js %}
 

@@ -6,6 +6,11 @@ tags = [ "php", "open-source", "software-design" ]
 [extra]
 subtitle = "A new functional language with full interoperability with PHP"
 static_thumbnail = "/images/blog/2021-02-01/cover.jpg"
+related_posts = [
+  "blog/2021-05-03-open-source-software.md",
+  "blog/2020-10-13-typed-arrays-php.md",
+  "blog/2020-08-09-strict-types.md",
+]
 related_readings = [
   "readings/2020-05-21-7-languages-in-7-weeks.md",
   "readings/2020-08-16-advance-web-application-architecture.md",
@@ -15,7 +20,7 @@ related_readings = [
 
 ![blog-cover](/images/blog/2021-02-01/cover.jpg)
 
-A new Functional Programming language build-in on the PHP ecosystem. 
+A new Functional Programming language built-in on the PHP ecosystem.
 
 <!-- more -->
 
@@ -50,7 +55,7 @@ progress over the weeks with these learnings.
 Suddenly, one day beginning of June 2020, I saw a post in Reddit's PHP official channel, with a message of someone
 mentioning this "**Phel**" project, claiming to be a **"functional programming language" written in PHP**!
 
-I work with PHP for around 8 years so far, and I always try to combine OOP with FP as much as possible (because I
+I've worked with PHP for around 8 years so far, and I always try to combine OOP with FP as much as possible (because I
 believe both paradigms are better combined; they are not necessarily exclusive), and a new dialect of Lisp fully written
 in native **PHP 7.4** sounded really exciting. I decided to take a look at it. I wanted to see the code.
 
@@ -62,7 +67,7 @@ test myself and grow professionally at the same time.
 
 My first commit was done on 6 June 2020, and since then I've been dedicating a little time each day during my free
 hours to its development.
-It helps me to learn more about FP, languages internal design, and best practices on testing and software design
+It helps me to learn more about FP, languages' internal design, and best practices on testing and software design
 architecture in general.
 
 I started applying minor changes until I ended refactoring the whole compiler structure (among other things) in order to

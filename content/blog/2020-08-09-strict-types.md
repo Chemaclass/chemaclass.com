@@ -28,7 +28,7 @@ The good thing about declaring a PHP file as strict is that it actually applies 
 
 ## Strict types affect coercion types
 
-Using hint type without `strict_types` may lead to subtle bugs.
+Using a type hint without `strict_types` may lead to subtle bugs.
 
 Without this, `int $x` meant `$x must have a value coercible to an int`. Any value that could be coerced to an int would pass the hint type, including:
 
@@ -50,7 +50,7 @@ Actually, declare(strict_types=1); is more for the reader than for the writer. W
 
 The writer just needs to maintain such strictness while writing the expected behavior. That said, as a writer, you should care about your readers, which also includes your future self. Because you are going to be one of them.
 
-![blog-img](/images/blog/2020-08-09/footer.jpg)
+![strict_types declaration in php](/images/blog/2020-08-09/footer.jpg)
 
 ------
 

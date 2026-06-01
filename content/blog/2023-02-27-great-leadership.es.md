@@ -87,7 +87,7 @@ Liderar a través del cambio es algo que hay que afrontar muchas veces en la vid
 
 ### Empoderar a tu gente
 
-Deberías empoderar a tu gente para que se conviertan en líderes. Recomiendo "[Turn the ship around!](/es/readings/turn-the-ship-around/)" (¡Cambia el satisfacer!), donde el autor desafía el modelo de **líderes vs. seguidores** hacia una relación de **líderes-a-líderes**.
+Deberías empoderar a tu gente para que se conviertan en líderes. Recomiendo "[Turn the ship around!](/es/readings/turn-the-ship-around/)" (¡Gira el barco!), donde el autor desafía el modelo de **líderes vs. seguidores** hacia una relación de **líderes-a-líderes**.
 
 > "El liderazgo es comunicar a las personas su valor tan claramente que se inspiran para verlo en sí mismas." -- Turn the ship around!
 

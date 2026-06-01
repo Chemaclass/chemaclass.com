@@ -71,7 +71,7 @@ It is just like the regular game except you play it multiple times with an oppon
 
 This is closely related to trust, human behavior, and social constructs in relationships that impact us both individually and collectively.
 
-In the Prisoner's Dilemma, the best strategy is to start with cooperation, but then mimic the other player's previous action in the following rounds – rewarding cooperation and punishing betrayal.
+In the Prisoner's Dilemma, the best strategy is to start with cooperation, but then mimic the other player's previous action in the following rounds, rewarding cooperation and punishing betrayal.
 
 {{ youtube(id="S0SQLQMLi8Q") }}
 

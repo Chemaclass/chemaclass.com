@@ -136,5 +136,5 @@ Human judgment doesn't disappear. It moves upstream. Instead of reviewing every 
 
 That's still our job. And it's a job worth doing well.
 
-![cover](/images/blog/2026-01-11/footer.jpg)
+![mcp connecting ai to tools](/images/blog/2026-01-11/footer.jpg)
 

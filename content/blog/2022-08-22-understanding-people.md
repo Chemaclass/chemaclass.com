@@ -7,6 +7,11 @@ tags = [ "communication", "psychology", "team-management" ]
 [extra]
 subtitle = "Misunderstandings, effective communication, and self-reflection"
 static_thumbnail = "/images/blog/2022-08-22/cover.jpg"
+related_posts = [
+  "blog/2024-09-02-people-skills.md",
+  "blog/2022-04-02-dunbar-number.md",
+  "blog/2023-06-08-learned-helplessness.md",
+]
 related_readings = [
   "readings/2021-04-05-97-things-every-em-should-know.md",
   "readings/2021-10-22-leadership-is-language.md",
@@ -81,4 +86,4 @@ are surrounded by, **especially when dealing with people**.
 > Look over your reach area, share your thoughts, and don't be ashamed of your mistakes as far as you take them as
 > learning opportunities.
 
-![blog-cover](/images/blog/2022-08-22/footer.jpg)
+![people communicating](/images/blog/2022-08-22/footer.jpg)

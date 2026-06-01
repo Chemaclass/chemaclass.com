@@ -39,7 +39,7 @@ If you're using platforms like GitHub, you'll notice a little "Verified" badge n
 
 Signed commits help keep your contributions authentic and trustworthy. By adding a cryptographic signature to your commits, you prove that the changes came from you. This is especially important in collaborative environments, where maintaining trust and accountability is key.
 
-Without signed commits, anyone could fake a commit using someone else's email. For example, they could use your email, and platforms like GitHub would link it to your profile, making it look like you made the changes —even if you didn't... not good!
+Without signed commits, anyone could fake a commit using someone else's email. For example, they could use your email, and platforms like GitHub would link it to your profile, making it look like you made the changes, even if you didn't... not good!
 
 ![blog-cover](/images/blog/2024-11-17/impersonating-commit.jpg)
 
@@ -101,7 +101,7 @@ And also when clicking on the "Verified" badge on GitHub directly.
 
 ![blog-cover](/images/blog/2024-11-17/gpg-verify.jpg)
 
-Verified commits might seem like a small step, but they make your code more trustworthy. It's an easy way to add an extra layer of protection to your work—and it's worth it. Give it a try!
+Verified commits might seem like a small step, but they make your code more trustworthy. It's an easy way to add an extra layer of protection to your work, and it's worth it. Give it a try!
 
 ---
 

@@ -309,7 +309,7 @@ These aren't edge cases:
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-argentina">
         <div class="interactive-list__content">
-          <p>Argentina suffered 211% inflation in 2023 under decades of big-government policies. Then Javier Milei took office. He halved ministries, cut 40,000 government jobs, and ended monetary financing. Result: inflation dropped to 117% in 2024, then 31% by end of 2025—lowest in seven years. GDP grew 7.6% in Q2 2025, the strongest in two decades. <br> <br>Poverty fell from 57% to 32%. Smaller government, sound money principles. Bitcoin adoption remains high—Argentines learned not to trust any currency they can't verify themselves.</p>
+          <p>Argentina suffered 211% inflation in 2023 under decades of big-government policies. Then Javier Milei took office. He halved ministries, cut 40,000 government jobs, and ended monetary financing. Result: inflation dropped to 117% in 2024, then 31% by end of 2025, the lowest in seven years. GDP grew 7.6% in Q2 2025, the strongest in two decades. <br> <br>Poverty fell from 57% to 32%. Smaller government, sound money principles. Bitcoin adoption remains high, Argentines learned not to trust any currency they can't verify themselves.</p>
         </div>
         <a href="https://www.aljazeera.com/economy/2025/7/25/milei-tames-inflation-but-argentines-still-struggle-to-afford-basics" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
@@ -321,19 +321,19 @@ These aren't edge cases:
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-etfs">
         <div class="interactive-list__content">
-          <p>In January 2024, the SEC approved Bitcoin ETFs for the first time. Within months, institutional investment surged 400%. By end of 2024, professional investors held $27.4 billion in Bitcoin ETFs—over 26% of total AUM. BlackRock's IBIT alone reached $50 billion. <br> <br>Bitcoin was no longer just for early adopters. Wall Street called it "year zero of institutional adoption." The asset that banks once dismissed now sits in pension funds.</p>
+          <p>In January 2024, the SEC approved Bitcoin ETFs for the first time. Within months, institutional investment surged 400%. By end of 2024, professional investors held $27.4 billion in Bitcoin ETFs, over 26% of total AUM. BlackRock's IBIT alone reached $50 billion. <br> <br>Bitcoin was no longer just for early adopters. Wall Street called it "year zero of institutional adoption." The asset that banks once dismissed now sits in pension funds.</p>
         </div>
         <a href="https://www.cnbc.com/2024/01/10/sec-approves-rule-changes-that-pave-the-way-for-bitcoin-etfs.html" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-gaza">
         <div class="interactive-list__content">
-          <p>When cash imports into Gaza were blocked in 2024, banking infrastructure collapsed. Traditional transfers charged 30%+ fees—if they worked at all. Bitcoin became a lifeline. One volunteer sent $123,000 in BTC that bought food, water, and built shelters for displaced families. <br> <br>A taxi driver named Yusef received $48k in Bitcoin donations and built 100 tents. When banks fail, Bitcoin still works. No permission needed.</p>
+          <p>When cash imports into Gaza were blocked in 2024, banking infrastructure collapsed. Traditional transfers charged 30%+ fees, if they worked at all. Bitcoin became a lifeline. One volunteer sent $123,000 in BTC that bought food, water, and built shelters for displaced families. <br> <br>A taxi driver named Yusef received $48k in Bitcoin donations and built 100 tents. When banks fail, Bitcoin still works. No permission needed.</p>
         </div>
         <a href="https://bitcoinmagazine.com/culture/palestinian-taxi-driver-uses-bitcoin-to-save-civilians-in-gaza-" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-usreserve">
         <div class="interactive-list__content">
-          <p>On March 6, 2025, President Trump signed an executive order establishing a Strategic Bitcoin Reserve—a "digital Fort Knox." The reserve holds ~200,000 BTC from seized assets, with a policy never to sell. <br> <br>The U.S. had lost $17 billion selling seized bitcoin too early. Now it's holding. Pakistan announced its own reserve weeks later. Nations that once dismissed Bitcoin now compete to accumulate it.</p>
+          <p>On March 6, 2025, President Trump signed an executive order establishing a Strategic Bitcoin Reserve, a "digital Fort Knox." The reserve holds ~200,000 BTC from seized assets, with a policy never to sell. <br> <br>The U.S. had lost $17 billion selling seized bitcoin too early. Now it's holding. Pakistan announced its own reserve weeks later. Nations that once dismissed Bitcoin now compete to accumulate it.</p>
         </div>
         <a href="https://www.whitehouse.gov/fact-sheets/2025/03/fact-sheet-president-donald-j-trump-establishes-the-strategic-bitcoin-reserve-and-u-s-digital-asset-stockpile/" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>

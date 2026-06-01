@@ -77,6 +77,6 @@ Should we test everything? Well, that's the million-dollar question. In my opini
 might encounter situations where tests might not be beneficial. Even in those situations, we should write our code as if
 it could be tested anyway.
 
-![blog-cover](/images/blog/2020-04-07/footer.jpg)
+![testable code and good design](/images/blog/2020-04-07/footer.jpg)
 
 > Testable code tends to better design and, therefore, better quality.

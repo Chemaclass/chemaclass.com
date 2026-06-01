@@ -58,8 +58,8 @@ Las reuniones 1:1 son ideales para establecer conexiones personales con tus comp
 Aquí hay una idea que podrías probar:
 
 - Dales un libro que contenga ideas o conocimiento que podría beneficiar a todos.
-- Permite leer este libro durante el tiempo de trabajo -- ej: los viernes después del almuerzo. Esta es una inversión de la empresa para el desarrollo de tu equipo.
-- El libro debería leerse en 3-4 horas -- o un par de viernes, dependiendo del número de páginas.
+- Permite leer este libro durante el tiempo de trabajo, ej: los viernes después del almuerzo. Esta es una inversión de la empresa para el desarrollo de tu equipo.
+- El libro debería leerse en 3-4 horas, o un par de viernes, dependiendo del número de páginas.
 - No esperes hasta que el libro esté terminado para hablar sobre él. Sigue el progreso.
 - Tendrás grandes temas para discutir durante tu próximo 1:1.
 

@@ -53,7 +53,7 @@ Their work built on foundational cryptographic research by **Whitfield Diffie** 
 
 They gathered online on the cypherpunks mailing list, which at its peak had around 2000 subscribers exchanging 30+ messages per day. Their motto: **"Cypherpunks write code."** They didn't just talk about privacy. They built it.
 
-![cover](/images/blog/2024-12-11/manifesto.jpg)
+![a cypherpunk's manifesto](/images/blog/2024-12-11/manifesto.jpg)
 
 ## Philosophy and goals
 
@@ -102,7 +102,7 @@ The Cypherpunks face these main criticisms:
 
 This shows the ongoing struggle between promoting privacy and maintaining safety in the digital world.
 
-![cover](/images/blog/2024-12-11/btc-p2p.jpg)
+![bitcoin peer-to-peer cash](/images/blog/2024-12-11/btc-p2p.jpg)
 
 ## Precursors to Bitcoin
 
