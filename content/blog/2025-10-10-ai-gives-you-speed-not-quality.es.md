@@ -88,7 +88,7 @@ Como escribí sobre [el arte del testing](/es/blog/the-art-of-testing/), la cali
 
 > Somos la última parte responsable del código que la IA escribe. El commit, la revisión, la aprobación, el merge, el deploy. Todo eso somos nosotros.
 
-Moverse rápido en la dirección equivocada solo te lleva a perderte más rápido. Las líneas de código apareciendo en pantalla no es progreso. El valor que aportamos como desarrolladores no es velocidad de tipeo. Nuestro valor está en entender hacia dónde vamos, mantener disciplina sobre el caos, y asegurar que el código que entregamos hoy no se convierta en la pesadilla de mañana.
+Moverse rápido en la dirección equivocada solo te lleva a perderte más rápido. Las líneas de código apareciendo en pantalla no es progreso. El valor que aportamos como desarrolladores no es la velocidad tecleando. Nuestro valor está en entender hacia dónde vamos, mantener disciplina sobre el caos, y asegurar que el código que entregamos hoy no se convierta en la pesadilla de mañana.
 
 Usa la IA. Abraza la velocidad. Pero nunca olvides: **tú eres quien conduce**. Si sueltas el volante, terminarás en una pila de código imposible de mantener más rápido de lo que esperabas.
 

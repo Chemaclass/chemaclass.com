@@ -9,6 +9,8 @@ tags = ["pair-programming", "xp", "tdd", "communication", "clean-code"]
 subtitle = "Embracing quality practices in your engineering culture"
 static_thumbnail = "/images/blog/2024-03-28/cover.jpg"
 pin = false
+series = "craftsmanship"
+series_order = 7
 related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2022-05-27-bikeshedding.md",
@@ -25,7 +27,7 @@ related_readings = [
 
 ![blog-cover](/images/blog/2024-03-28/cover.jpg)
 
-What is pair programming? Let's first establish what pair programming is: Two people working together on the same problem at the same time. 
+What is pair programming? Two people working together on the same problem, at the same time.
 
 <!-- more -->
 
@@ -35,7 +37,7 @@ Each person will have a role:
 - Navigator: he will pay attention to the bigger picture; eg: architecture, relation between collaborators, object design, etc.
 - Driver: she will pay attention to the small details; eg: naming, code conventions, writing syntax, object design, etc.
 
-> The pair could --and should-- switch roles occasionally; eg: every X commits pushed, every 10 mins, … up to them.
+> The pair could, and should, switch roles occasionally; eg: every X commits pushed, every 10 mins, … up to them.
 
 Pair programming should not be considered a practice only for "seniors" to juniors, but regardless of the team members' experience level.
 
@@ -49,7 +51,7 @@ It is about the constant **sharing** of **knowledge** atmosphere by default, red
 
 It is about **team cohesion** and sharpening the feeling that we belong. When we understand each other's strengths and weaknesses, we will realize how much we can help each other grow.
 
-![cover](/images/blog/2024-03-28/footer.jpg)
+![blog-img](/images/blog/2024-03-28/footer.jpg)
 
 ## How can you practice pair programming?
 
@@ -58,7 +60,7 @@ Pair programming can be done in different ways:
 - You can start and finish a task with pairing. You can time-box it to 30, 60, 90 minutes. Either way, it is recommended to have pauses in the middle - Pomodoro. 
 - You can start the task together and stop when one of your peers feels confident enough to continue alone. 
 
-> It is up to the team --and the task in context-- to decide when and how to apply pairing to get the best out of it.
+> It is up to the team, and the task in context, to decide when and how to apply pairing to get the best out of it.
 
 This does not mean you must constantly work "no matter what" in pair. This is not about creating rules; on the contrary, it is about embracing this practice to the point you feel confident to choose when and how to use it to get the best out of it.
 
@@ -73,7 +75,7 @@ Pair programming might become one of the best tools in your team toolbox for dai
 - **Backseat driver**: The navigator engages actively with the driver.
 - **Tourist guide**: The navigator passively learns with the driver.
 
-![cover](/images/blog/2024-03-28/good-pair-prog.jpg)
+![effective pair programming patterns](/images/blog/2024-03-28/good-pair-prog.jpg)
 
 #### Anti-patterns while pairing
 
@@ -84,10 +86,17 @@ Pair programming might become one of the best tools in your team toolbox for dai
 - **Philosophical pair**: The pair is [bikeshedding](/blog/bikeshedding/) into irrelevant topics.
 - **The code war**: The pair does not reach an agreement and starts an unnecessary war, which wastes time and effort.
 
-![cover](/images/blog/2024-03-28/anti-pair-prog.jpg)
+![pair programming anti-patterns](/images/blog/2024-03-28/anti-pair-prog.jpg)
 
 **Want more?** Check this out: [Learning Through KATAS](https://www.figma.com/file/FCmGwRPIO8cLowDRraJhgr/Learning-TDD)
 
-![cover](/images/blog/2024-03-28/learning-through-katas.jpg)
+![learning through katas](/images/blog/2024-03-28/learning-through-katas.jpg)
+
+## The takeaway
+
+Pairing is not a rule to enforce, it is a tool to reach for. Use it when the task is complex, the knowledge is siloed,
+or the stakes are high. Skip it when the work is trivial. The goal is never "always pair", it is **better software and a
+stronger team**. Pick one real task this week, pair on it, and switch roles often. The benefits show up faster than you
+expect.
 
 > Thanks to my friend [Manu](https://x.com/evrtrabajo), who helped me with this post. We even share a [workshop](https://phpconference.com/agile-culture/practical-tdd-workshop/) on this topic.

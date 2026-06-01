@@ -56,7 +56,7 @@ leader.
 
 > "The capacity to translate vision into reality." Warren Bennis.
 
-Every sprint, you vision fruits in your garden. And you work towards it and make that happen. This makes you a gardener,
+Every sprint, you envision fruits in your garden. And you work towards it and make that happen. This makes you a gardener,
 not a leader.
 
 > "Leaders will be those who empower others." Bill Gates.
@@ -119,3 +119,6 @@ everyone can grow certain leadership skills to some extent, which also means **i
 You can get inspiration from a lot of different sources. While it's true that you can learn a lot from your own mistakes
 and successes, and even from the people around you, I think it's very optimal to listen to the wisdom from other people's
 experiences outside your circle. For example listening to podcasts, ted-talks, books, or even audiobooks.
+
+> The beauty of leadership is that it asks for no permission. No title, no promotion, no org chart. It begins the
+> moment you decide to lift the people around you.

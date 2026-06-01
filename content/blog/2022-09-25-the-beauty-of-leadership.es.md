@@ -102,3 +102,5 @@ Sé que no todos quieren aceptar los cambios necesarios para convertirse en líd
 ## ¿Cómo convertirse en un mejor líder?
 
 Puedes inspirarte en muchas fuentes. Aprendes de tus errores y éxitos, y de quienes te rodean. Pero también es muy útil escuchar la sabiduría de gente fuera de tu círculo: podcasts, charlas TED, libros, audiolibros...
+
+> La belleza del liderazgo es que no pide permiso. Ni título, ni promoción, ni organigrama. Empieza en el momento en que decides elevar a quienes te rodean.

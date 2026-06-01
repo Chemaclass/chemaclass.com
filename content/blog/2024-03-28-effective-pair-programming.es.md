@@ -8,6 +8,8 @@ tags = ["pair-programming", "xp", "tdd", "communication", "clean-code"]
 subtitle = "Abrazando prácticas de calidad en tu cultura de ingeniería"
 static_thumbnail = "/images/blog/2024-03-28/cover.jpg"
 pin = false
+series = "craftsmanship"
+series_order = 7
 related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2022-05-27-bikeshedding.md",
@@ -24,7 +26,7 @@ related_readings = [
 
 ![blog-cover](/images/blog/2024-03-28/cover.jpg)
 
-¿Qué es el pair programming? Primero establezcamos qué es: Dos personas trabajando juntas en el mismo problema al mismo tiempo.
+¿Qué es el pair programming? Dos personas trabajando juntas en el mismo problema, al mismo tiempo.
 
 <!-- more -->
 
@@ -34,7 +36,7 @@ Cada persona tendrá un rol:
 - Navegador: prestará atención al panorama general; ej: arquitectura, relación entre colaboradores, diseño de objetos, etc.
 - Conductor: prestará atención a los pequeños detalles; ej: naming, convenciones de código, sintaxis de escritura, diseño de objetos, etc.
 
-> La pareja podría --y debería-- intercambiar roles ocasionalmente; ej: cada X commits pusheados, cada 10 min,... depende de ellos.
+> La pareja podría, y debería, intercambiar roles ocasionalmente; ej: cada X commits pusheados, cada 10 min,... depende de ellos.
 
 El pair programming no debería considerarse una práctica solo para "seniors" hacia juniors, sino independientemente del nivel de experiencia de los miembros del equipo.
 
@@ -48,7 +50,7 @@ Se trata de la atmósfera constante de **compartir conocimiento** por defecto, r
 
 Se trata de **cohesión de equipo** y afilar el sentimiento de que pertenecemos. Cuando entendemos las fortalezas y debilidades de cada uno, nos daremos cuenta de cuánto podemos ayudarnos a crecer mutuamente.
 
-![cover](/images/blog/2024-03-28/footer.jpg)
+![blog-img](/images/blog/2024-03-28/footer.jpg)
 
 ## ¿Cómo puedes practicar pair programming?
 
@@ -57,7 +59,7 @@ El pair programming puede hacerse de diferentes maneras:
 - Puedes empezar y terminar una tarea con pairing. Puedes limitarlo a 30, 60, 90 minutos. De cualquier manera, se recomienda tener pausas en el medio - Pomodoro.
 - Puedes empezar la tarea juntos y parar cuando uno de tus compañeros se sienta lo suficientemente confiado para continuar solo.
 
-> Depende del equipo --y la tarea en contexto-- decidir cuándo y cómo aplicar pairing para sacar lo mejor de ello.
+> Depende del equipo, y de la tarea en contexto, decidir cuándo y cómo aplicar pairing para sacar lo mejor de ello.
 
 Esto no significa que debas trabajar constantemente "sin importar qué" en pareja. No se trata de crear reglas; por el contrario, se trata de abrazar esta práctica hasta el punto de que te sientas confiado para elegir cuándo y cómo usarla para sacar lo mejor de ella.
 
@@ -72,7 +74,7 @@ El pair programming podría convertirse en una de las mejores herramientas en la
 - **Backseat driver**: El navegador se involucra activamente con el conductor.
 - **Tourist guide**: El navegador aprende pasivamente con el conductor.
 
-![cover](/images/blog/2024-03-28/good-pair-prog.jpg)
+![patrones de pair programming efectivo](/images/blog/2024-03-28/good-pair-prog.jpg)
 
 #### Anti-patrones mientras haces pairing
 
@@ -83,10 +85,17 @@ El pair programming podría convertirse en una de las mejores herramientas en la
 - **Philosophical pair**: La pareja está haciendo [bikeshedding](/es/blog/bikeshedding/) en temas irrelevantes.
 - **The code war**: La pareja no llega a un acuerdo y comienza una guerra innecesaria, que desperdicia tiempo y esfuerzo.
 
-![cover](/images/blog/2024-03-28/anti-pair-prog.jpg)
+![anti-patrones de pair programming](/images/blog/2024-03-28/anti-pair-prog.jpg)
 
 **¿Quieres más?** Mira esto: [Learning Through KATAS](https://www.figma.com/file/FCmGwRPIO8cLowDRraJhgr/Learning-TDD)
 
-![cover](/images/blog/2024-03-28/learning-through-katas.jpg)
+![aprendiendo a través de katas](/images/blog/2024-03-28/learning-through-katas.jpg)
+
+## La conclusión
+
+El pairing no es una regla que imponer, es una herramienta a la que recurrir. Úsalo cuando la tarea es compleja, el
+conocimiento está aislado o lo que está en juego es importante. Sáltalo cuando el trabajo es trivial. El objetivo nunca
+es "hacer siempre pairing", es **mejor software y un equipo más fuerte**. Elige una tarea real esta semana, hazla en
+pareja e intercambia roles a menudo. Los beneficios aparecen más rápido de lo que esperas.
 
 > Gracias a mi amigo [Manu](https://x.com/evrtrabajo), quien me ayudó con este post. Incluso compartimos un [taller](https://phpconference.com/agile-culture/practical-tdd-workshop/) sobre este tema.
