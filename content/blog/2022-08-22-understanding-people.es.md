@@ -21,56 +21,56 @@ related_readings = [
 
 ![blog-cover](/images/blog/2022-08-22/cover.jpg)
 
-Uno de los mayores retos es evitar malentendidos y aceptar que los demas no piensan igual que tu.
+Uno de los mayores retos es evitar malentendidos y aceptar que los demás no piensan igual que tú.
 
 <!-- more -->
 
 ## Percepciones diferentes
 
-Cada persona tiene experiencias y antecedentes distintos. Todos percibimos la realidad de forma diferente. Ser consciente de esto es el primer paso para entender tu rol en la comunicacion con otros, y para desarrollar empatia.
+Cada persona tiene experiencias y antecedentes distintos. Todos percibimos la realidad de forma diferente. Ser consciente de esto es el primer paso para entender tu rol en la comunicación con otros, y para desarrollar empatía.
 
-Muchas veces, el verdadero problema detras de la friccion en un equipo es la mala comunicacion. A veces nadie sabe como ni por que dos miembros del equipo ya no se llevan bien. Pero el conflicto es obvio.
+Muchas veces, el verdadero problema detrás de la fricción en un equipo es la mala comunicación. A veces nadie sabe cómo ni por qué dos miembros del equipo ya no se llevan bien. Pero el conflicto es obvio.
 
-El problema es que impide al equipo trabajar con eficacia. La razon suele ser la **incapacidad de entender las motivaciones y problemas del otro**.
+El problema es que impide al equipo trabajar con eficacia. La razón suele ser la **incapacidad de entender las motivaciones y problemas del otro**.
 
 Y eso lleva a malentendidos.
 
 ## Malentendidos
 
-Lo que tu entiendes de una conversacion puede diferir de lo que percibe la otra persona. Eso causa problemas. Y puede convertirse en algo serio que afecte la relacion entre ambas partes.
+Lo que tú entiendes de una conversación puede diferir de lo que percibe la otra persona. Eso causa problemas. Y puede convertirse en algo serio que afecte la relación entre ambas partes.
 
-## ¿Como resolverlo?
+## ¿Cómo resolverlo?
 
-Evitar malentendidos no es facil, pero puedes mejorar paso a paso trabajando tus habilidades de comunicacion.
+Evitar malentendidos no es fácil, pero puedes mejorar paso a paso trabajando tus habilidades de comunicación.
 
-### Empatia
+### Empatía
 
-Empatia es la capacidad de entender lo que sienten otras personas. Ver las cosas desde su punto de vista e imaginarte en su lugar. Ponerte en su posicion.
+Empatía es la capacidad de entender lo que sienten otras personas. Ver las cosas desde su punto de vista e imaginarte en su lugar. Ponerte en su posición.
 
-### Comunicacion efectiva
+### Comunicación efectiva
 
-La solucion no suele empezar por arreglar a la otra persona. Lo que ayuda es trabajar en **ser mas explicito**. Por ejemplo:
+La solución no suele empezar por arreglar a la otra persona. Lo que ayuda es trabajar en **ser más explícito**. Por ejemplo:
 
-- Clarifica las expectativas sobre el objetivo comun
+- Clarifica las expectativas sobre el objetivo común
   - Crea conversaciones abiertas y honestas sobre lo que esperas
   - Las suposiciones son peligrosas
 - Da tanto contexto como sea necesario
   - Aunque te parezca evidente
 - Cada detalle cuenta
-  - Mas informacion siempre es mejor que menos
+  - Más información siempre es mejor que menos
 
-Para comunicarnos bien, hay que **reducir el riesgo de malentendidos al minimo**.
+Para comunicarnos bien, hay que **reducir el riesgo de malentendidos al mínimo**.
 
-### Autorreflexion
+### Autorreflexión
 
-Los conflictos saludables son normales y aceptables. No hay que tener miedo a los desacuerdos. Esta bien cambiar de opinion al descubrir nuevas posibilidades. Cuanto antes, mejor.
+Los conflictos saludables son normales y aceptables. No hay que tener miedo a los desacuerdos. Está bien cambiar de opinión al descubrir nuevas posibilidades. Cuanto antes, mejor.
 
-En mi experiencia, entender a las personas es complicado por muchas razones. Pero sobre todo por los malentendidos que generamos por falta de contexto, mas que por desacuerdos reales.
+En mi experiencia, entender a las personas es complicado por muchas razones. Pero sobre todo por los malentendidos que generamos por falta de contexto, más que por desacuerdos reales.
 
-Si algo no funciona como esperabas, empieza mirandote a ti mismo. No culpes a otros. ¿Que podrias haber dicho para crear mas claridad? ¿Que harias diferente?
+Si algo no funciona como esperabas, empieza mirándote a ti mismo. No culpes a otros. ¿Qué podrías haber dicho para crear más claridad? ¿Qué harías diferente?
 
-La autorreflexion es esencial para mejorar y corregir tu actitud. Para adaptarte al cambio constante que nos rodea, **especialmente cuando tratas con personas**.
+La autorreflexión es esencial para mejorar y corregir tu actitud. Para adaptarte al cambio constante que nos rodea, **especialmente cuando tratas con personas**.
 
-> Mira mas alla de tu area de influencia. Comparte tus ideas y no te averguences de tus errores si los tomas como oportunidades de aprendizaje.
+> Mira más allá de tu área de influencia. Comparte tus ideas y no te avergüences de tus errores si los tomas como oportunidades de aprendizaje.
 
-![personas comunicandose](/images/blog/2022-08-22/footer.jpg)
+![personas comunicándose](/images/blog/2022-08-22/footer.jpg)

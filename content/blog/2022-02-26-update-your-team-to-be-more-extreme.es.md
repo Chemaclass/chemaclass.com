@@ -44,75 +44,75 @@ El objetivo es crear un ambiente que fomente la mejora continua. Buscar aprender
 
 > Programa tiempo cada X semanas para practicar juntos.
 
-Al final de cada iteracion, o cada 2-4 semanas, trabajamos en katas en parejas o mob durante 2 horas. Ese espacio tambien sirve para preparar charlas tecnicas internas y compartir conocimiento interesante que no sea del "negocio diario".
+Al final de cada iteración, o cada 2-4 semanas, trabajamos en katas en parejas o mob durante 2 horas. Ese espacio también sirve para preparar charlas técnicas internas y compartir conocimiento interesante que no sea del "negocio diario".
 
-El objetivo es salir de nuestra zona de confort. Mejorar nuestra capacidad de adaptacion mientras aprendemos otros temas.
+El objetivo es salir de nuestra zona de confort. Mejorar nuestra capacidad de adaptación mientras aprendemos otros temas.
 
-## ¿Que es una kata de codigo?
+## ¿Qué es una kata de código?
 
-Los desarrolladores no practicamos lo suficiente. La mayor parte del aprendizaje ocurre en el trabajo, y ahi es donde cometemos la mayoria de errores.
+Los desarrolladores no practicamos lo suficiente. La mayor parte del aprendizaje ocurre en el trabajo, y ahí es donde cometemos la mayoría de errores.
 
-El termino "kata" viene del karate: movimientos repetitivos que mejoran tus habilidades de combate.
+El término "kata" viene del karate: movimientos repetitivos que mejoran tus habilidades de combate.
 
-Las katas de codigo dan a los desarrolladores los mismos beneficios que practicar en cualquier profesion. Son ejercicios simples que permiten experimentar y aprender sin la presion de produccion.
+Las katas de código dan a los desarrolladores los mismos beneficios que practicar en cualquier profesión. Son ejercicios simples que permiten experimentar y aprender sin la presión de producción.
 
 > No hay respuestas correctas o incorrectas en una kata: el beneficio viene del proceso, no del resultado.
 
-### Motivacion
+### Motivación
 
-- Practicar tecnicas de refactoring.
+- Practicar técnicas de refactoring.
 - Practicar TDD.
 - Aplicar principios SOLID.
 - Hacer sesiones de live coding.
 - Ejercitar el concepto driver-navigator.
-- Mejorar la cohesion del equipo.
+- Mejorar la cohesión del equipo.
 - Pasarlo bien mientras aprendes con otros.
 
-Si te interesa mi vision sobre TDD y katas, escribi un post hace poco: [Test-Driven Development](/es/blog/test-driven-development/).
+Si te interesa mi visión sobre TDD y katas, escribí un post hace poco: [Test-Driven Development](/es/blog/test-driven-development/).
 
-## ¿Que es una charla tecnica?
+## ¿Qué es una charla técnica?
 
-Las charlas tecnicas nos permiten compartir conocimiento de nuestra industria con el equipo.
+Las charlas técnicas nos permiten compartir conocimiento de nuestra industria con el equipo.
 
-Puede ser sobre FrontEnd, BackEnd, DevOps. Pero tambien animo a compartir:
+Puede ser sobre FrontEnd, BackEnd, DevOps. Pero también animo a compartir:
 
-- un nuevo lenguaje que estas aprendiendo,
+- un nuevo lenguaje que estás aprendiendo,
 - un resumen de un libro que terminaste,
-- una tecnologia que te da curiosidad,
-- un software que te gustaria presentar,
+- una tecnología que te da curiosidad,
+- un software que te gustaría presentar,
 - una herramienta que mejora tu productividad,
 - en realidad: <u>cualquier cosa que aporte valor o conocimiento.</u>
 
-### ¿Como presento una charla tecnica?
+### ¿Cómo presento una charla técnica?
 
-Escribi un articulo con consejos sobre [como mejorar tu charla tecnica](/es/blog/improve-your-tech-talk/). Algunas preguntas que pueden ayudarte:
+Escribí un artículo con consejos sobre [cómo mejorar tu charla técnica](/es/blog/improve-your-tech-talk/). Algunas preguntas que pueden ayudarte:
 
-- ¿Que has aprendido recientemente?
-- ¿Que conocimiento seria interesante compartir con tus companeros?
-- ¿Que aspecto de ti te gustaria mejorar profesional o personalmente?
+- ¿Qué has aprendido recientemente?
+- ¿Qué conocimiento sería interesante compartir con tus compañeros?
+- ¿Qué aspecto de ti te gustaría mejorar profesional o personalmente?
 
-> Una sola regla: se curioso y "[abraza el cambio](/es/blog/embrace-the-change/)."
+> Una sola regla: sé curioso y "[abraza el cambio](/es/blog/embrace-the-change/)."
 
-## Viernes de investigacion y aprendizaje
+## Viernes de investigación y aprendizaje
 
-Reserva el ultimo viernes del mes para investigar y aprender. Todo el equipo tendra un espacio dedicado al crecimiento y la experimentacion.
+Reserva el último viernes del mes para investigar y aprender. Todo el equipo tendrá un espacio dedicado al crecimiento y la experimentación.
 
-Es clave construir confianza con tu equipo. Que todos sepan que cada uno usara este tiempo bien. No microgestiones forzando un registro detallado en una wiki.
+Es clave construir confianza con tu equipo. Que todos sepan que cada uno usará este tiempo bien. No microgestiones forzando un registro detallado en una wiki.
 
-Eso si, estaria bien que el equipo comparta lo que hace. Crea transparencia. Un anuncio verbal el dia antes con las intenciones, y el dia despues con los aprendizajes clave.
+Eso sí, estaría bien que el equipo comparta lo que hace. Crea transparencia. Un anuncio verbal el día antes con las intenciones, y el día después con los aprendizajes clave.
 
 ### Resumen
 
-Puedes ayudar a tu equipo a ser mas extreme creando un espacio dedicado al crecimiento y la experimentacion.
+Puedes ayudar a tu equipo a ser más extreme creando un espacio dedicado al crecimiento y la experimentación.
 
 - Da flexibilidad para experimentar con estas ideas.
 - Es una oportunidad para crecer y aprender a la vez.
 - La responsabilidad es de cada persona y del equipo.
 
-> No microgestiones este tiempo. Enfocate en el resultado. Ayuda a tu equipo a crecer, y disfrutaran creciendo contigo.
+> No microgestiones este tiempo. Enfócate en el resultado. Ayuda a tu equipo a crecer, y disfrutarán creciendo contigo.
 
 ![blog-footer](/images/blog/2022-02-26/footer.jpg)
 
-## Charla Tecnica
+## Charla Técnica
 
-Tras escribir este post (originalmente en febrero de 2022), me invitaron a dar una [charla tecnica](/es/talks/update-your-team-to-be-more-extreme) sobre este tema en varias conferencias.
+Tras escribir este post (originalmente en febrero de 2022), me invitaron a dar una [charla técnica](/es/talks/update-your-team-to-be-more-extreme) sobre este tema en varias conferencias.

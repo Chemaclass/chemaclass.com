@@ -4,7 +4,7 @@ description = "El bikeshedding explica por qué los equipos pierden tiempo en de
 [taxonomies]
 tags = [ "psychology", "team-management", "productivity", "communication" ]
 [extra]
-subtitle = "Tambien conocida como la Ley de trivialidad"
+subtitle = "También conocida como la Ley de trivialidad"
 static_thumbnail = "/images/blog/2022-05-27/cover.jpg"
 related_posts = [
   "blog/2022-04-02-dunbar-number.md",
@@ -19,34 +19,34 @@ related_readings = [
 
 ![blog-cover](/images/blog/2022-05-27/cover.jpg)
 
-El termino se acuno como metafora de la Ley de trivialidad de Parkinson. La gente en las organizaciones suele dar demasiada importancia a los asuntos triviales.
+El término se acuñó como metáfora de la Ley de trivialidad de Parkinson. La gente en las organizaciones suele dar demasiada importancia a los asuntos triviales.
 
 <!-- more -->
 
 ## Bikeshed-ing
 
-El concepto aparecio como corolario de la "[Ley de Parkinson](https://en.wikipedia.org/wiki/Parkinson%27s_law)", una parodia sobre gestion. "Bikeshedding" es una version dramatizada de la "[Ley de trivialidad](https://en.wikipedia.org/wiki/Law_of_triviality)".
+El concepto apareció como corolario de la "[Ley de Parkinson](https://en.wikipedia.org/wiki/Parkinson%27s_law)", una parodia sobre gestión. "Bikeshedding" es una versión dramatizada de la "[Ley de trivialidad](https://en.wikipedia.org/wiki/Law_of_triviality)".
 
-[C. Northcote Parkinson](https://en.wikipedia.org/wiki/C._Northcote_Parkinson) observo que un comite que debe **aprobar planes para una central nuclear** puede pasar la mayor parte del tiempo en temas faciles de entender pero poco importantes. Por ejemplo, que materiales usar para el cobertizo de bicis del personal. Mientras tanto, descuidan el diseno de la central, que es **mucho mas importante** pero mas dificil de criticar. Como el dijo:
+[C. Northcote Parkinson](https://en.wikipedia.org/wiki/C._Northcote_Parkinson) observó que un comité que debe **aprobar planes para una central nuclear** puede pasar la mayor parte del tiempo en temas fáciles de entender pero poco importantes. Por ejemplo, qué materiales usar para el cobertizo de bicis del personal. Mientras tanto, descuidan el diseño de la central, que es **mucho más importante** pero más difícil de criticar. Como él dijo:
 
-> "El tiempo dedicado a cualquier tema sera inversamente proporcional al dinero involucrado."
+> "El tiempo dedicado a cualquier tema será inversamente proporcional al dinero involucrado."
 
 ### La gente da **demasiada importancia a lo trivial**
 
-Lo he visto en todas las empresas donde he trabajado. Cuando mezclas temas importantes con otros no tan importantes (o nada importantes), es muy comun acabar discutiendo lo trivial con tus companeros. Mientras tanto, las cosas importantes que darian valor real al cliente quedan aparcadas.
+Lo he visto en todas las empresas donde he trabajado. Cuando mezclas temas importantes con otros no tan importantes (o nada importantes), es muy común acabar discutiendo lo trivial con tus compañeros. Mientras tanto, las cosas importantes que darían valor real al cliente quedan aparcadas.
 
-Pasa mas de lo que pensamos, y le puede ocurrir a cualquiera.
+Pasa más de lo que pensamos, y le puede ocurrir a cualquiera.
 
-### ¿Que podemos hacer?
+### ¿Qué podemos hacer?
 
-Crear conciencia de este problema en tu equipo. La comunicacion honesta y la confianza son claves.
+Crear conciencia de este problema en tu equipo. La comunicación honesta y la confianza son claves.
 
 Pasos a seguir:
 
-- Se consciente del problema.
+- Sé consciente del problema.
 - Ve valor en cambiar este comportamiento.
-- Senala el problema cuando lo veas ocurrir.
-- Espera lo mismo de tus companeros.
+- Señala el problema cuando lo veas ocurrir.
+- Espera lo mismo de tus compañeros.
 
 ### Referencias
 

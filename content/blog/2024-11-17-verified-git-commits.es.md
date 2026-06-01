@@ -20,41 +20,41 @@ related_readings = [
 
 ![blog-cover](/images/blog/2024-11-17/cover.jpg)
 
-En desarrollo de software, la confianza y la seguridad son clave. Una forma facil de mejorar ambas: usar commits verificados.
+En desarrollo de software, la confianza y la seguridad son clave. Una forma fácil de mejorar ambas: usar commits verificados.
 
 <!-- more -->
 
-Ya trabajes en open-source o en una empresa privada, los commits verificados aseguran que tus contribuciones son legitimas. Veamos que son, por que importan y como empezar a usarlos.
+Ya trabajes en open-source o en una empresa privada, los commits verificados aseguran que tus contribuciones son legítimas. Veamos qué son, por qué importan y cómo empezar a usarlos.
 
-## ¿Que son los commits verificados?
+## ¿Qué son los commits verificados?
 
 Un commit verificado es un commit de Git firmado digitalmente por su autor. La firma demuestra que el commit viene de quien dice haberlo hecho. Herramientas como [GPG (GNU Privacy Guard)](https://gnupg.org/) permiten adjuntar esta firma.
 
-En plataformas como GitHub veras una insignia "Verified" junto a los commits firmados. Es una forma rapida de mostrar que el commit es autentico.
+En plataformas como GitHub verás una insignia "Verified" junto a los commits firmados. Es una forma rápida de mostrar que el commit es auténtico.
 
 ![blog-cover](/images/blog/2024-11-17/verified-commit-example.jpg)
 
-## ¿Por que son importantes?
+## ¿Por qué son importantes?
 
-Los commits firmados mantienen tus contribuciones autenticas y confiables. La firma criptografica demuestra que los cambios vinieron de ti. En entornos colaborativos, donde la confianza y la responsabilidad importan mucho, esto es clave.
+Los commits firmados mantienen tus contribuciones auténticas y confiables. La firma criptográfica demuestra que los cambios vinieron de ti. En entornos colaborativos, donde la confianza y la responsabilidad importan mucho, esto es clave.
 
-Sin firmar, cualquiera puede falsificar un commit usando tu email. GitHub lo vincularia a tu perfil, pareciendo que hiciste los cambios aunque no fuera asi. Nada bueno.
+Sin firmar, cualquiera puede falsificar un commit usando tu email. GitHub lo vincularía a tu perfil, pareciendo que hiciste los cambios aunque no fuera así. Nada bueno.
 
 ![blog-cover](/images/blog/2024-11-17/impersonating-commit.jpg)
 
 ![blog-cover](/images/blog/2024-11-17/impersonating-commit4.jpg)
 
-Al firmar tus commits, demuestras que el trabajo es tuyo. Evitas la suplantacion, generas confianza y mantienes todo transparente.
+Al firmar tus commits, demuestras que el trabajo es tuyo. Evitas la suplantación, generas confianza y mantienes todo transparente.
 
-> <small>Nota: Para esta demo, use un email publico de Linus Torvalds. Al hacer push, GitHub reconocio el email y lo vinculo a su perfil. Suplantacion solo con fines de demo para mostrar los riesgos. Usa siempre tu propio email para commits.</small>
+> <small>Nota: Para esta demo, usé un email público de Linus Torvalds. Al hacer push, GitHub reconoció el email y lo vinculó a su perfil. Suplantación solo con fines de demo para mostrar los riesgos. Usa siempre tu propio email para commits.</small>
 
 ---
 
-## Como empezar con commits verificados
+## Cómo empezar con commits verificados
 
 ### Configura una clave GPG
 
-Primero necesitas una clave GPG. Asi se hace:
+Primero necesitas una clave GPG. Así se hace:
 
 Genera una clave GPG:
 ```bash
@@ -85,7 +85,7 @@ Navega a "Settings > SSH and GPG keys," y pega tu clave.
 
 ### Empieza a firmar commits
 
-A partir de ahora, Git firmara tus commits automaticamente.
+A partir de ahora, Git firmará tus commits automáticamente.
 
 Si quieres firmar un commit a mano, usa la bandera `-S`:
 ```bash
@@ -96,11 +96,11 @@ Puedes **verificar** la firma del commit con:
 git log --show-signature
 ```
 
-Tambien puedes hacer clic en la insignia "Verified" en GitHub.
+También puedes hacer clic en la insignia "Verified" en GitHub.
 
 ![blog-cover](/images/blog/2024-11-17/gpg-verify.jpg)
 
-Los commits verificados parecen un paso pequeno, pero hacen tu codigo mas confiable. Una capa extra de proteccion facil de anadir. Pruebalo.
+Los commits verificados parecen un paso pequeño, pero hacen tu código más confiable. Una capa extra de protección fácil de añadir. Pruébalo.
 
 ---
 

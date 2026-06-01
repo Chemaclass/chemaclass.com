@@ -23,15 +23,15 @@ Quería aprender un nuevo lenguaje, así que después de probar algunos, termin�
 
 <!-- more -->
 
-[Golang](https://go.dev/) (o `Go`) soporta concurrencia mediante hilos ligeros llamados goroutines. Son diferentes del multithreading tradicional de Java, donde hay que manejar sincronizacion y coordinacion para gestionar recursos compartidos de forma segura. Las goroutines son ligeras, las gestiona el runtime de Go, y son mas baratas de crear y manejar.
+[Golang](https://go.dev/) (o `Go`) soporta concurrencia mediante hilos ligeros llamados goroutines. Son diferentes del multithreading tradicional de Java, donde hay que manejar sincronización y coordinación para gestionar recursos compartidos de forma segura. Las goroutines son ligeras, las gestiona el runtime de Go, y son más baratas de crear y manejar.
 
-El paralelismo es **hacer** varias cosas simultaneamente. La concurrencia es **lidiar** con varias cosas a la vez. En ambos casos, no conocemos el orden de ejecucion: no sabemos que pasara primero ni que terminara antes.
+El paralelismo es **hacer** varias cosas simultáneamente. La concurrencia es **lidiar** con varias cosas a la vez. En ambos casos, no conocemos el orden de ejecución: no sabemos qué pasará primero ni qué terminará antes.
 
-> Imagina que cocinas: preparas una sopa, una ensalada y una tortilla. Eres una sola persona, pero preparas varios platos. Podrias terminar primero la ensalada, la sopa o la tortilla... no hay garantia. Esto es concurrencia: lidias con varias cosas a la vez. Cuando tu pareja viene a ayudarte, eso ya es paralelismo.
+> Imagina que cocinas: preparas una sopa, una ensalada y una tortilla. Eres una sola persona, pero preparas varios platos. Podrías terminar primero la ensalada, la sopa o la tortilla... no hay garantía. Esto es concurrencia: lidias con varias cosas a la vez. Cuando tu pareja viene a ayudarte, eso ya es paralelismo.
 
 ![concurrencia vs multithreading](/images/blog/2024-04-02/concurrency-vs-multithreading.jpg)
 
-Recuerdo haber construido un juego similar en `Java` cuando aprendia multithreading hace diez anos. Aprovecho esta oportunidad para hacerlo de nuevo con `Go` moderno.
+Recuerdo haber construido un juego similar en `Java` cuando aprendía multithreading hace diez años. Aprovecho esta oportunidad para hacerlo de nuevo con `Go` moderno.
 
 Construi un juego de terminal que simula una carrera de caballos. Cada caballo es una goroutine que corre en una matriz bidimensional compartida. Cuando un caballo llega al final, notifica al canal compartido con los demas caballos (que corren en diferentes procesos) y todos se detienen, mostrando al ganador.
 
@@ -98,7 +98,7 @@ func main() {
 
 ### Generando el tablero
 
-El tablero de carreras es una matriz bidimensional de punteros a Horses. Cada linea "contiene" un solo Caballo: solo un puntero apunta a un Caballo real, el resto son `nil`. Al generar el Tablero, creamos un Caballo en la primera posicion de cada linea.
+El tablero de carreras es una matriz bidimensional de punteros a Horses. Cada línea "contiene" un solo Caballo: solo un puntero apunta a un Caballo real, el resto son `nil`. Al generar el Tablero, creamos un Caballo en la primera posición de cada línea.
 
 ```go
 func NewRaceBoard(lines, lineLength int) [][]*Horse {
@@ -135,7 +135,7 @@ func generateHorseName() string {
 
 ### Renderizando el juego
 
-Los metodos `RenderGame()`, `renderRaceBoard()`, `renderRaceLine()` y `renderRacePosition()` estan separados para que cada uno tenga una responsabilidad clara: renderizar su sujeto correspondiente.
+Los métodos `RenderGame()`, `renderRaceBoard()`, `renderRaceLine()` y `renderRacePosition()` están separados para que cada uno tenga una responsabilidad clara: renderizar su sujeto correspondiente.
 
 > `RenderGame()` se está ejecutando en otro proceso usando `go`.
 
@@ -215,9 +215,9 @@ func renderRacePosition(
 
 ### Moviendo los caballos
 
-En `main(...)`, el `winnerChan` es un canal compartido que usara el primer Caballo que llegue a la ultima posicion de su linea.
+En `main(...)`, el `winnerChan` es un canal compartido que usará el primer Caballo que llegue a la última posición de su línea.
 
-Cada Caballo ejecuta un bucle hasta llegar al final de la linea o recibir (via `winnerChan`) el mensaje de que otro Caballo ya gano. Hasta entonces, cada caballo se mueve de forma independiente, durmiendo milisegundos aleatorios antes de avanzar a la siguiente posicion.
+Cada Caballo ejecuta un bucle hasta llegar al final de la línea o recibir (vía `winnerChan`) el mensaje de que otro Caballo ya ganó. Hasta entonces, cada caballo se mueve de forma independiente, durmiendo milisegundos aleatorios antes de avanzar a la siguiente posición.
 
 > `startRuningHorseInLine()` se ejecuta en otro proceso usando `go`.
 
@@ -268,6 +268,6 @@ func moveHorseOnePos(board [][]*Horse, line int, winnerChan chan Horse) {
 
 ### Código fuente
 
-El codigo de este post es una version simplificada. Si quieres ver el codigo completo funcionando, esta aqui: [Chemaclass/go-horse-racing](https://github.com/Chemaclass/go-horse-racing).
+El código de este post es una versión simplificada. Si quieres ver el código completo funcionando, está aquí: [Chemaclass/go-horse-racing](https://github.com/Chemaclass/go-horse-racing).
 
-> Gracias a mi antiguo Team Lead, Andrei Boar, que me ayudo a revisar mi solucion original y proporciono una [solucion alternativa](https://gist.github.com/zuzuleinen/79413aa7933d7d6c6d84ec6ba8c3910a) (mas simple y mejor) que aplique a mi codigo. Lo principal que aprendi fue usar un `chan Horse` para pasar el Caballo ganador desde `main()`, en vez de usar un `chan bool` y un `sync.WaitGroup` entre todos los hilos.
+> Gracias a mi antiguo Team Lead, Andrei Boar, que me ayudó a revisar mi solución original y proporcionó una [solución alternativa](https://gist.github.com/zuzuleinen/79413aa7933d7d6c6d84ec6ba8c3910a) (más simple y mejor) que apliqué a mi código. Lo principal que aprendí fue usar un `chan Horse` para pasar el Caballo ganador desde `main()`, en vez de usar un `chan bool` y un `sync.WaitGroup` entre todos los hilos.

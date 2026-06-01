@@ -47,28 +47,28 @@ Script funciona con un modelo de pila: los comandos y datos se apilan y se proce
 
 ### Gasto condicional
 
-Una transaccion que solo se puede gastar si se cumplen ciertos criterios o se proporcionan datos especificos. Sirve para:
+Una transacción que solo se puede gastar si se cumplen ciertos criterios o se proporcionan datos específicos. Sirve para:
   - servicios de custodia
-  - intercambios atomicos
+  - intercambios atómicos
   - otros arreglos financieros
 
 ### Multifirma
 
-Puedes configurar transacciones que requieran varias firmas de diferentes claves privadas. Util para:
+Puedes configurar transacciones que requieran varias firmas de diferentes claves privadas. Útil para:
   - cuentas conjuntas
   - fondos corporativos
   - mayor seguridad (nadie puede gastar los fondos por su cuenta)
 
 ### Bloqueo temporal
 
-Las transacciones pueden tener condiciones de tiempo: no se pueden gastar hasta cierta fecha o altura de bloque. Util para:
+Las transacciones pueden tener condiciones de tiempo: no se pueden gastar hasta cierta fecha o altura de bloque. Útil para:
   - pagos diferidos
   - contratos inteligentes
   - evitar gastos prematuros (ej: [Lightning Network](https://en.bitcoin.it/wiki/Lightning_Network))
 
-### Codigos de operacion
+### Códigos de operación
 
-El Script de Bitcoin usa [OP_Codes](https://en.bitcoin.it/wiki/Script#Opcodes) para realizar operaciones especificas. Algunos ejemplos:
+El Script de Bitcoin usa [OP_Codes](https://en.bitcoin.it/wiki/Script#Opcodes) para realizar operaciones específicas. Algunos ejemplos:
 
 - `OP_DUP`: <small>Duplica el elemento superior de la pila.</small>
 - `OP_HASH160`: <small>Hashea el elemento superior de la pila dos veces (SHA-256 seguido de RIPEMD-160).</small>
@@ -80,7 +80,7 @@ El Script de Bitcoin usa [OP_Codes](https://en.bitcoin.it/wiki/Script#Opcodes) p
 
 ## Tipos comunes de direcciones Bitcoin
 
-Cada tipo de direccion corresponde a una forma distinta de hacer scripts. Veamos ejemplos para cada tipo principal.
+Cada tipo de dirección corresponde a una forma distinta de hacer scripts. Veamos ejemplos para cada tipo principal.
 
 - **P2PK**: Las primeras transacciones legacy usando claves públicas completas directamente.
 - **P2PKH**: Comienza con `1`. Transacciones **Legacy** usando hashes de claves públicas.
@@ -92,17 +92,17 @@ Cada tipo de direccion corresponde a una forma distinta de hacer scripts. Veamos
 
 > Usar SegWit nativo (P2WPKH y P2WSH) es preferible cuando es posible, ya que maximiza los beneficios de la actualización SegWit, pero P2SH-SegWit puede ser útil para compatibilidad con sistemas más antiguos.
 
-### P2PK (Pay-to-PubKey) - Direccion Legacy antigua <small>[arriba](#tipos-comunes-de-direcciones-bitcoin)</small>
+### P2PK (Pay-to-PubKey) - Dirección Legacy antigua <small>[arriba](#tipos-comunes-de-direcciones-bitcoin)</small>
 
 <div class="status info">
 Comienza con "1" (ej., 1A1zP1eP5QGefi2DMPTf...v7DivfNa)
 </div>
 
-Antes de P2PKH y P2SH, las direcciones de Bitcoin eran mas limitadas:
+Antes de P2PKH y P2SH, las direcciones de Bitcoin eran más limitadas:
 
-- Empiezan con 1 pero sin hashear la clave publica.
+- Empiezan con 1 pero sin hashear la clave pública.
 - Poco usadas hoy por falta de privacidad y eficiencia.
-- Formato **obsoleto** en favor de P2PKH como minimo.
+- Formato **obsoleto** en favor de P2PKH como mínimo.
 
 ---
 
@@ -216,7 +216,7 @@ Este script significa que se requieren 2 de 3 claves públicas proporcionadas pa
 Comienza con "bc1q" (ej., bc1qf0r2m0ck4psv6yrk9w.....kw8v5rj7ph3)
 </div>
 
-P2WPKH es una direccion Segregated Witness (SegWit) con un formato de scripting distinto. Simplifica las transacciones: menos datos y menos comisiones que los formatos legacy.
+P2WPKH es una dirección Segregated Witness (SegWit) con un formato de scripting distinto. Simplifica las transacciones: menos datos y menos comisiones que los formatos legacy.
 
 ### ScriptPubKey (Script de Bloqueo)
 
@@ -230,7 +230,7 @@ OP_0 OP_PUSHBYTES_20 <PubKHash>
 
 ### Datos del Testigo
 
-En P2WPKH no hace falta un script de desbloqueo tradicional. La informacion de desbloqueo va como parte de los datos del testigo en el formato SegWit.
+En P2WPKH no hace falta un script de desbloqueo tradicional. La información de desbloqueo va como parte de los datos del testigo en el formato SegWit.
 
 ```php
 <sig> <PubK>
@@ -301,7 +301,7 @@ OP_1 <x-only PubK>
 
 ### *Hay una rareza en la ejecución de CHECKMULTISIG <small>[arriba](#scriptsig-script-de-desbloqueo-2)</small>
 
-`OP_CHECKMULTISIG` saca un elemento de mas de la pila. Ese elemento extra se ignora al verificar firmas, asi que no afecta directamente. Pero tiene que estar porque si intenta sacar de una pila vacia, el script falla.
+`OP_CHECKMULTISIG` saca un elemento de más de la pila. Ese elemento extra se ignora al verificar firmas, así que no afecta directamente. Pero tiene que estar porque si intenta sacar de una pila vacía, el script falla.
 
 ```php
 OP_0 <sig2> <sig3> 2 <PubK1> <PubK2> <PubK3> 3 OP_CHECKMULTISIG
@@ -309,17 +309,17 @@ OP_0 <sig2> <sig3> 2 <PubK1> <PubK2> <PubK3> 3 OP_CHECKMULTISIG
 
 El script de entrada en este multisig no es `<sig2> <sig3>` sino `OP_0 <sig2> <sig3>`.
 
-Al principio se usaba `OP_0` por convencion. Luego se convirtio en regla de relay y finalmente en regla de consenso ([BIP147](https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki)).
+Al principio se usaba `OP_0` por convención. Luego se convirtió en regla de relay y finalmente en regla de consenso ([BIP147](https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki)).
 
-Puede que el desarrollador original lo pusiera pensando en anadir una funcion de mapa en un soft fork futuro (por rendimiento). Esa funcion nunca se implemento, y BIP147 en 2017 lo hace imposible ya.
+Puede que el desarrollador original lo pusiera pensando en añadir una función de mapa en un soft fork futuro (por rendimiento). Esa función nunca se implementó, y BIP147 en 2017 lo hace imposible ya.
 
-Solo el creador de Bitcoin podria decir si fue un bug o un plan. Si ves un script multisig, espera encontrar un `OP_0` extra al principio. Es un parche para esta rareza del consenso.
+Solo el creador de Bitcoin podría decir si fue un bug o un plan. Si ves un script multisig, espera encontrar un `OP_0` extra al principio. Es un parche para esta rareza del consenso.
 
 ---
 
 ## Para seguir aprendiendo
 
-- Documentacion oficial de [Script](https://en.bitcoin.it/wiki/Script) en el Bitcoin Wiki.
+- Documentación oficial de [Script](https://en.bitcoin.it/wiki/Script) en el Bitcoin Wiki.
 - [Bitcoin IDE](https://siminchen.github.io/bitcoinIDE/build/editor.html): emulador visual de Script online, genial para aprender.
-- [Script Editor](https://coins.github.io/bitcoin-scripts/script-editor/): investigacion sobre escalabilidad y usabilidad de Bitcoin.
-- [Miniscript](https://bitcoin.sipa.be/miniscript/): lenguaje para escribir Scripts de Bitcoin de forma estructurada, con analisis, composicion y firma generica.
+- [Script Editor](https://coins.github.io/bitcoin-scripts/script-editor/): investigación sobre escalabilidad y usabilidad de Bitcoin.
+- [Miniscript](https://bitcoin.sipa.be/miniscript/): lenguaje para escribir Scripts de Bitcoin de forma estructurada, con análisis, composición y firma genérica.

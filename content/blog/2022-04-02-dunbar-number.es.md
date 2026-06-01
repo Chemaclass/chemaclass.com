@@ -1,6 +1,6 @@
 +++
 title = "El Número de Dunbar"
-description = "El numero de Dunbar es el limite cognitivo de personas con las que podemos mantener relaciones sociales estables."
+description = "El número de Dunbar es el límite cognitivo de personas con las que podemos mantener relaciones sociales estables."
 [taxonomies]
 tags = [ "psychology", "team-management", "communication" ]
 [extra]
@@ -19,29 +19,29 @@ related_readings = [
 
 ![blog-cover](/images/blog/2022-04-02/cover.jpg)
 
-Un limite cognitivo de cuantas relaciones sociales estables podemos mantener. Saber quien es cada persona y como se relaciona con las demas.
+Un límite cognitivo de cuántas relaciones sociales estables podemos mantener. Saber quién es cada persona y cómo se relaciona con las demás.
 
 <!-- more -->
 
 El estudio muestra que:
-- Relacion cercana: 5 personas.
+- Relación cercana: 5 personas.
 - Confianza profunda: 15 personas.
 - Relaciones significativas: 50 personas.
 - Contactos activos: 150 personas.
 
-## ¿Por que este limite es 150?
+## ¿Por qué este límite es 150?
 
-Por nuestra capacidad cognitiva limitada. Nuestra capacidad para razonar, resolver problemas y entender ideas complejas tiene un tope. Al crecer el equipo, aumenta la carga cognitiva y la comunicacion sufre. Por eso un equipo muy grande pierde sus beneficios.
+Por nuestra capacidad cognitiva limitada. Nuestra capacidad para razonar, resolver problemas y entender ideas complejas tiene un tope. Al crecer el equipo, aumenta la carga cognitiva y la comunicación sufre. Por eso un equipo muy grande pierde sus beneficios.
 
 ### Origen
 
-En los 90, el antropologo Robin Dunbar encontro una correlacion entre el tamano del cerebro de los primates y el tamano de su grupo social. Extrapolo los resultados al cerebro humano y propuso que podemos mantener unas 150 relaciones estables. Dunbar teorizo que:
+En los 90, el antropólogo Robin Dunbar encontró una correlación entre el tamaño del cerebro de los primates y el tamaño de su grupo social. Extrapoló los resultados al cerebro humano y propuso que podemos mantener unas 150 relaciones estables. Dunbar teorizó que:
 
-> "Este limite depende directamente del tamano del neocortex, que a su vez limita el tamano del grupo [...] El limite impuesto por la capacidad de procesamiento neocortical es simplemente el numero de personas con las que se puede mantener una relacion estable."
+> "Este límite depende directamente del tamaño del neocórtex, que a su vez limita el tamaño del grupo [...] El límite impuesto por la capacidad de procesamiento neocortical es simplemente el número de personas con las que se puede mantener una relación estable."
 
-Este numero incluye tambien colegas del pasado, como amigos del instituto, con los que querrias reencontrarte si os volvierais a ver.
+Este número incluye también colegas del pasado, como amigos del instituto, con los que querrías reencontrarte si os volvierais a ver.
 
-## ¿Como se aplica esto a los equipos?
+## ¿Cómo se aplica esto a los equipos?
 
 - Equipos individuales: 5-9 personas.
   - Confianza compartida entre los miembros.
@@ -56,4 +56,4 @@ Este numero incluye tambien colegas del pasado, como amigos del instituto, con l
 ### Referencias
 
 - [Robin Dunbar](https://en.wikipedia.org/wiki/Robin_Dunbar)
-- [Numero de Dunbar](https://en.wikipedia.org/wiki/Dunbar%27s_number)
+- [Número de Dunbar](https://en.wikipedia.org/wiki/Dunbar%27s_number)
