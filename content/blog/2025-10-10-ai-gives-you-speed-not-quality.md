@@ -6,7 +6,7 @@ draft = false
 tags = [ "ai", "software-architecture", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "The human factor in the age of vibe-coding"
-static_thumbnail = "/images/blog/2025-12-02/cover.jpg"
+static_thumbnail = "/images/blog/2025-10-10/cover.jpg"
 series = "ai"
 series_order = 1
 related_posts = [
@@ -94,4 +94,4 @@ Use AI. Embrace the speed. But never forget: **you're the one steering**. If you
 
 And when that happens, there's no one else to blame.
 
-![cover](/images/blog/2025-12-02/footer.jpg)
+![you are the one steering](/images/blog/2025-10-10/footer.jpg)

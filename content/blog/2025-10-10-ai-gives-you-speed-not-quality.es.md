@@ -6,7 +6,7 @@ draft = false
 tags = [ "ai", "software-architecture", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "El factor humano en la era del vibe-coding"
-static_thumbnail = "/images/blog/2025-12-02/cover.jpg"
+static_thumbnail = "/images/blog/2025-10-10/cover.jpg"
 series = "ai"
 series_order = 1
 related_posts = [
@@ -94,4 +94,4 @@ Usa la IA. Abraza la velocidad. Pero nunca olvides: **tú eres quien conduce**. 
 
 Y cuando eso pase, no hay nadie más a quien culpar.
 
-![cover](/images/blog/2025-12-02/footer.jpg)
+![tú eres quien conduce](/images/blog/2025-10-10/footer.jpg)
