@@ -96,7 +96,6 @@
           <div class="service-card__icon">
             <i class="fa-solid fa-comments"></i>
           </div>
-          <span class="service-card__badge">{{ trans(key="svc_consulting_unavailable", lang=lang) }}</span>
         </div>
         <h3>{% if lang == "es" %}Consultoría{% else %}Consulting{% endif %}</h3>
         <p class="service-card__audience">{% if lang == "es" %}Para tech leads, EMs y CTOs{% else %}For tech leads, EMs, and CTOs{% endif %}</p>
@@ -111,11 +110,6 @@
       </div>
 
     </div>
-
-    <p class="services-helper">
-      {% if lang == "es" %}¿No estás seguro de qué servicio necesitas?{% else %}Not sure which service you need?{% endif %}
-      <a href="mailto:hi@chemaclass.com">{% if lang == "es" %}Hablemos de tu proyecto{% else %}Let's discuss your project{% endif %}</a>
-    </p>
 
   </section>
 
