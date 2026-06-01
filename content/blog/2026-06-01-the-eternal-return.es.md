@@ -1,7 +1,7 @@
 +++
 title = "El Eterno Retorno"
 description = "Nietzsche usó el eterno retorno como prueba. La vida lo usa como espejo. Los patrones riman no para predecir el futuro, sino para revelar en quién te conviertes bajo presión."
-draft = true
+draft = false
 [taxonomies]
 tags = [ "philosophy", "psychology", "career" ]
 [extra]
@@ -83,7 +83,7 @@ Lo que sí te toca: si te quedas el tiempo suficiente para ver la forma. Si refl
 
 El demonio de Nietzsche no estaba preguntando por la reencarnación. Estaba preguntando si has vivido una vida digna de ser vivida. La prueba es interna.
 
-Así que pregúntatelo. Si esta misma vida se repitiera para siempre, sin que cambie un solo detalle, ¿la respuesta honesta sería alegría o arrepentimiento? Eres la única que puede responder, y a la que más le cuesta hacerlo con sinceridad.
+Así que pregúntatelo. Si esta misma vida se repitiera para siempre, sin que cambie un solo detalle, ¿la respuesta honesta sería alegría o arrepentimiento? Eres el único que puede responder, y al que más le cuesta hacerlo con sinceridad.
 
 Amo estar vivo. El hecho de que termine es justo lo que le da peso al tiempo dentro de él. Si no me gusta en quién me estoy convirtiendo, aún tengo tiempo de cambiar. Eso es lo único útil que el retorno ha ofrecido jamás. No conocimiento del futuro. Un espejo en el presente.
 

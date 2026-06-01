@@ -1,7 +1,7 @@
 +++
 title = "The Eternal Return"
 description = "Nietzsche used eternal return as a test. Life uses it as a mirror. Patterns rhyme not to predict the future, but to reveal who you become under pressure."
-draft = true
+draft = false
 [taxonomies]
 tags = [ "philosophy", "psychology", "career" ]
 [extra]
