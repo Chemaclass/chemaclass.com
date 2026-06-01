@@ -21,7 +21,7 @@ related_readings = [
   "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
 ]
 series = "leadership"
-series_order = 5
+series_order = 6
 +++
 
 ![blog-cover](/images/blog/2023-08-02/cover.jpg)

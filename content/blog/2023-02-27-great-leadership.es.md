@@ -30,7 +30,7 @@ related_readings = [
   "readings/2020-03-26-the-manager-path.md",
 ]
 series = "leadership"
-series_order = 4
+series_order = 5
 +++
 
 ![blog-cover](/images/blog/2023-02-27/cover.jpg)

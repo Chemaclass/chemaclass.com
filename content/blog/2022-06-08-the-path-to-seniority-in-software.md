@@ -1,11 +1,19 @@
 +++
 title = "The Path to Seniority in Software"
 description = "Real seniority goes beyond job titles. It's about impact, mentoring others, owning outcomes, and raising the bar for your entire team."
+draft = false
 [taxonomies]
 tags = [ "career", "mentoring", "clean-code", "tdd", "communication" ]
 [extra]
 subtitle = "How to become a Senior Software Developer?"
 static_thumbnail = "/images/blog/2022-06-08/cover.jpg"
+series = "leadership"
+series_order = 3
+related_posts = [
+  "blog/2021-07-01-tech-lead.md",
+  "blog/2023-12-30-great-engineering.md",
+  "blog/2022-09-25-the-beauty-of-leadership.md",
+]
 related_readings = [
   "readings/2021-01-16-who-moved-my-cheese.md",
   "readings/2022-01-16-leaders-eat-last.md",
@@ -16,12 +24,12 @@ related_readings = [
 
 ![blog-cover](/images/blog/2022-06-08/cover.jpg)
 
-We all have been junior developers at some point. This is easy to know because it is at the very beginning of your
-carrier. Your responsibilities were narrowed down by other peers who were looking after you. 
+We all have been junior developers at some point. This is easy to know because it sits at the very beginning of your
+career. Your responsibilities were narrowed down by other peers who were looking after you.
 
 <!-- more -->
 
-Suddenly, at some point, after some months or years, you got your promotion or another job, where you weren't a junior
+At some point, after months or years, you got your promotion or another job, where you weren't a junior
 anymore, but an intermediate.
 
 An intermediate (also known as middle) is something between junior and senior. You know now that you are not a junior 
@@ -37,14 +45,14 @@ Unfortunately, the "seniority" level is very much polluted by marketing and poli
 does it mean "senior" in this context? In all the companies where I have been working (if not all) I have always been
 surrounded by people who claimed to be "seniors" when in reality only a few I would consider such.
 
-Our senior industry is falsified by companies' need of having experts on paper more than in reality, and this is a
+Our senior label is inflated by companies needing experts on paper more than in reality, and this is a
 problem we need to deal with and speak about.
 
 Seniority generally means more experience, but how do you calculate this? It is easy from a company's point of view: 
 more years in the industry. But, is the number of years you have been working really relevant in an industry that is
 constantly changing and evolving? Actually, this wouldn't be a big issue if you have the software fundamentals
-well interiorized, but funny enough, I have seen these fundamentals just in ~10% of all seniors during my almost 10 years of
-experience and 7 companies I have worked with.
+well interiorized, but funny enough, I have seen these fundamentals in only ~10% of the seniors I have met across many
+years and several companies.
 
 The fact that you have been working for 10 or more years doesn't necessarily mean you are a "senior" with software. 
 What else can we measure in order to identify if you deserve indeed this title?
@@ -62,20 +70,20 @@ this context.
 
 Being senior in our software industry is not about "the number of years of experience" but:
 
-- How well can you **transmit your knowledge** to others? Sharing your knowledge is an important task for a senior person.
-- How well can you **collaborate** with other people? Including the PM/PO and other teams. Collaboration is crucial 
+- How well do you **transmit your knowledge** to others? Sharing what you know is a core task for a senior person.
+- How well do you **collaborate** with other people, including the PM/PO and other teams? Collaboration is crucial
   to creating a constant feedback loop.
-- How well can you **work together** with your peers? Pair-programming embraces team cohesion and helps the team become
+- How well do you **work together** with your peers? Pair-programming builds team cohesion and helps everyone become
   better.
-- How well are your **testing** skills? Testing is highly related to the quality of your work, and a senior should aim
+- How strong are your **testing** skills? Testing is tied to the quality of your work, and a senior should aim
   for an incremental design.
-- How well is your understanding of **delivering value constantly** in small chunks? The sooner you deliver value, the
+- How well do you understand **delivering value constantly** in small chunks? The sooner you deliver value, the
   sooner you get feedback about it.
-- How well is your **technical knowledge** related to quality software and the trade-offs to get there?
-  SOLID principles, clean code, TDD, refactoring as part of your daily job, low coupling, high cohesion, appropriate 
+- How deep is your **technical knowledge** of quality software and the trade-offs to get there?
+  SOLID principles, clean code, TDD, refactoring as part of your daily job, low coupling, high cohesion, appropriate
   data structures, and choosing the right solution (KISS, YAGNI...).
-- How well are you capable to adapt and **cope with changes**? Change is inevitable, and therefore we must learn how to 
-  deal with changes, especially the ones that we cannot control.
+- How well do you adapt and **cope with change**? Change is inevitable, so we must learn to
+  deal with it, especially the parts we cannot control.
 - How developed is your **entrepreneurial thinking**? Always keeping the organization's goals in mind.
 
 As you can see, there is no mention of concrete technology or years of experience. Why? Because technology is just an 
@@ -100,3 +108,18 @@ could clearly see this problem on a daily basis.
 
 > You need this combination to build yourself as a truly senior developer; time, experience, and most importantly:
 > attitude towards **improving your own skills and the ones that surround you**.
+
+## Where to start
+
+Seniority is not granted, it is practiced. You don't wait for the title, you build the behavior until the title catches
+up. Start small, and start now:
+
+- **Teach what you know.** Pick one thing you understand and explain it to someone this week. If you can't explain it,
+  you don't own it yet.
+- **Seek the uncomfortable.** Volunteer for the task slightly beyond you. Growth lives at the edge of what you can
+  already do.
+- **Reflect on purpose.** After each project, ask what you would do differently. Experience without reflection is just
+  repetition.
+
+The path is not a promotion. It is the daily decision to improve yourself and the people around you. Do that long
+enough, and the title becomes a formality.

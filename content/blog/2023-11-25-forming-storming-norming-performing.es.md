@@ -17,7 +17,7 @@ related_readings = [
   "readings/2022-09-30-dare-to-lead.md",
 ]
 series = "leadership"
-series_order = 6
+series_order = 7
 +++
 
 ![blog-cover](/images/blog/2023-11-25/cover.jpg)
