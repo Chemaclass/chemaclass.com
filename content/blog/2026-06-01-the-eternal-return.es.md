@@ -41,7 +41,7 @@ He sentido esto muchas veces. Cambiando de empresa, cerrando un capítulo de tra
 
 La conclusión fácil es: ya he visto esto antes, sé qué hacer. Esa conclusión es errónea.
 
-Los eventos no son los mismos. La lección del anterior no se traslada limpiamente. Actuar como si lo hiciera es la forma más común en que la gente con experiencia comete errores con experiencia. Confunden reconocimiento con comprensión.
+Los eventos no son los mismos. La lección del anterior no se traslada limpiamente. Actuar como si lo hiciera es la forma más común en que los expertos cometen errores de expertos. Confunden reconocimiento con comprensión.
 
 > La familiaridad de la forma no es conocimiento de la solución.
 
