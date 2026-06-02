@@ -112,6 +112,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "{{ config.base_url | safe }}/#organization",
       "name": "Chemaclass",
       "url": "{{ config.base_url | safe }}",
       "description": "{{ config.description }}",
@@ -161,6 +162,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "{{ config.base_url | safe }}/#person",
       "name": "Jose Maria Valera Reales",
       "alternateName": "Chemaclass",
       "url": "{{ config.base_url | safe }}",
@@ -177,47 +179,6 @@
       ]
     }
     </script>
-
-    {% if page and page.date %}
-    {% if page.extra.static_thumbnail %}
-      {% if page.extra.static_thumbnail is matching("^http[s]?://") %}
-        {% set ld_image = page.extra.static_thumbnail %}
-      {% else %}
-        {% set ld_image = get_url(path=page.extra.static_thumbnail) %}
-      {% endif %}
-    {% elif config.extra.default_og_image %}
-      {% set ld_image = get_url(path=config.extra.default_og_image) %}
-    {% endif %}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.permalink | safe }}" },
-      "headline": {{ page.title | json_encode | safe }},
-      "description": {{ page.description | default(value=config.description) | json_encode | safe }},
-      "datePublished": "{{ page.date | date(format='%+') }}",
-      "dateModified": "{% if page.updated %}{{ page.updated | date(format='%+') }}{% else %}{{ page.date | date(format='%+') }}{% endif %}",
-      "inLanguage": "{{ lang }}",
-      "url": "{{ page.permalink | safe }}",
-      {% if ld_image %}"image": "{{ ld_image | safe }}",{% endif %}
-      {% if page.word_count %}"wordCount": {{ page.word_count }},{% endif %}
-      {% if page.taxonomies.tags %}"articleSection": {{ page.taxonomies.tags.0 | json_encode | safe }},
-      "keywords": {{ page.taxonomies.tags | join(sep=", ") | json_encode | safe }},{% endif %}
-      "author": {
-        "@type": "Person",
-        "name": "Jose Maria Valera Reales",
-        "alternateName": "Chemaclass",
-        "url": "{{ config.base_url | safe }}"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "Jose Maria Valera Reales",
-        "alternateName": "Chemaclass",
-        "url": "{{ config.base_url | safe }}"
-      }
-    }
-    </script>
-    {% endif %}
 
     {% if page %}
     <meta property="og:type" content="article">
