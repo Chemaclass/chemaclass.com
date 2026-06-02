@@ -61,7 +61,7 @@ La gente que recibe este beneficio no son los listos. Son los expuestos. Los que
 
 > Los patrones no pueden rimar si solo vives una forma.
 
-Por eso importa mantenerse abierto. [Abrazar el cambio](@/blog/2021-03-01-embrace-the-change.md) no es personalidad, es método. Es cómo acumulas la materia prima que, mucho después, te permite reconocerte bajo presión.
+Por eso importa mantenerse abierto. [Abrazar el cambio](/es/blog/embrace-the-change/) no es personalidad, es método. Es cómo acumulas la materia prima que, mucho después, te permite reconocerte bajo presión.
 
 ## Diez años después
 

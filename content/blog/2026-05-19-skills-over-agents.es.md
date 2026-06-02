@@ -102,7 +102,7 @@ El agente ve la descripción en la lista de skills. Pides un review, carga `SKIL
 
 ## Skills vs agentes especializados
 
-Ya cubrí los [agentes especializados](/blog/inside-the-claude-folder/#agents-specialized-roles): workers aislados con su propio prompt y conjunto de herramientas. Buenos para trabajo en paralelo y fronteras de contexto limpias.
+Ya cubrí los [agentes especializados](/es/blog/inside-the-claude-folder/#agents-specialized-roles): workers aislados con su propio prompt y conjunto de herramientas. Buenos para trabajo en paralelo y fronteras de contexto limpias.
 
 Los agentes especializados son toscos. Un agente, un rol, un prompt fijo. Si quieres tres tipos de calidad de review, o escribes tres agentes o metes todo en uno.
 

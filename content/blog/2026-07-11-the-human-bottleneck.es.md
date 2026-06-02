@@ -36,7 +36,7 @@ Tu instinto es revisar todo. Cuando lo intentas, empiezas a leer por encima. Dej
 
 > Si revisas todo con la misma profundidad, no revisas nada con profundidad real.
 
-Escribí sobre un problema relacionado en [La IA Te Da Velocidad, No Calidad](/blog/ai-gives-you-speed-not-quality/). El marrón se movió de escribir código a revisarlo.
+Escribí sobre un problema relacionado en [La IA Te Da Velocidad, No Calidad](/es/blog/ai-gives-you-speed-not-quality/). El marrón se movió de escribir código a revisarlo.
 
 ## Human-on-the-loop
 
@@ -95,7 +95,7 @@ Dos preguntas que este enfoque no resuelve por sí solo.
 
 La atención que ahorras tiene un sitio mejor donde ir. Decisiones de arquitectura. Dirección de producto. Confianza del cliente. Respuesta a incidentes. No son ineficiencias esperando automatización. Son donde el juicio humano crea más valor.
 
-[Ship, Show, Ask](/blog/ship-show-ask/) siempre fue sobre ajustar la atención al riesgo. Era opcional cuando el volumen de revisión era pequeño. No lo es cuando los agentes producen diez PRs por hora.
+[Ship, Show, Ask](/es/blog/ship-show-ask/) siempre fue sobre ajustar la atención al riesgo. Era opcional cuando el volumen de revisión era pequeño. No lo es cuando los agentes producen diez PRs por hora.
 
 La pregunta no es _"¿cómo reviso más rápido?"_ Es _"¿dónde importa de verdad mi revisión?"_
 
