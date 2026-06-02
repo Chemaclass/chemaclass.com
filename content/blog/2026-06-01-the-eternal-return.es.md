@@ -6,7 +6,7 @@ draft = false
 tags = [ "philosophy", "psychology", "career" ]
 [extra]
 subtitle = "Un espejo en el presente"
-static_thumbnail = "/images/blog/2026-06-01/cover.jpg"
+static_thumbnail = "/images/blog/2026-06-01/cover.webp"
 related_posts = [
   "blog/2021-03-01-embrace-the-change.md",
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
@@ -19,7 +19,7 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2026-06-01/cover.jpg)
+![El eterno retorno de Nietzsche como prueba de la vida que vives](/images/blog/2026-06-01/cover.webp)
 
 Nietzsche propuso un experimento mental en *La gaya ciencia*. Imagina que un demonio te visita por la noche y te dice: esta vida que has vivido, la vivirás otra vez, infinitas veces, exactamente igual. Cada alegría, cada arrepentimiento, cada detalle. ¿Te derrumbarías o lo celebrarías como un regalo?
 
@@ -53,7 +53,7 @@ El mismo tipo de presión saca a la superficie las mismas partes de ti. El mismo
 
 Ese es el regalo. No sabiduría predictiva sobre el mundo. Conciencia diagnóstica sobre ti mismo.
 
-![blog-img](/images/blog/2026-06-01/middle.jpg)
+![Patrones de vida que se repiten y revelan en quién te conviertes bajo presión](/images/blog/2026-06-01/middle.webp)
 
 ## La exposición es la variable
 
@@ -65,7 +65,7 @@ Por eso importa mantenerse abierto. [Abrazar el cambio](/es/blog/embrace-the-cha
 
 ## Diez años después
 
-Hace diez años estaba [escribiendo un libro](https://chemaclass.com/books/) de mis pensamientos. Escribía cada pocos días, solo para releerlos al día siguiente y entenderme mejor. Ya no soy esa persona.
+Hace diez años estaba [escribiendo un libro](/es/books/) de mis pensamientos. Escribía cada pocos días, solo para releerlos al día siguiente y entenderme mejor. Ya no soy esa persona.
 
 Todo principio lleva la forma de un final. Aceptarlo te permite dejar de perseguir lo definitivo y prestar atención al proceso en sí.
 
@@ -89,6 +89,6 @@ Amo estar vivo. El hecho de que termine es justo lo que le da peso al tiempo den
 
 > Tenemos una vida. Haz que sea una que querrías revivir.
 
-![blog-footer](/images/blog/2026-06-01/footer.jpg)
+![Un espejo en el presente, no una predicción del futuro](/images/blog/2026-06-01/footer.webp)
 
 {{ youtube(id="KqhPdzqqask") }}

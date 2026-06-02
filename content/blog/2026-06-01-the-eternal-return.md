@@ -6,7 +6,7 @@ draft = false
 tags = [ "philosophy", "psychology", "career" ]
 [extra]
 subtitle = "A mirror in the present"
-static_thumbnail = "/images/blog/2026-06-01/cover.jpg"
+static_thumbnail = "/images/blog/2026-06-01/cover.webp"
 related_posts = [
   "blog/2021-03-01-embrace-the-change.md",
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
@@ -19,7 +19,7 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2026-06-01/cover.jpg)
+![Nietzsche's eternal return as a test of the life you live](/images/blog/2026-06-01/cover.webp)
 
 Nietzsche proposed a thought experiment in *The Gay Science*. Imagine a demon visits you at night and says: this life you have lived, you will live again, infinite times, exactly the same. Every joy, every regret, every detail. Would you collapse, or would you celebrate?
 
@@ -53,7 +53,7 @@ The same kind of pressure surfaces the same parts of you. The same kind of decis
 
 That is the gift. Not predictive wisdom about the world. Diagnostic awareness about yourself.
 
-![blog-img](/images/blog/2026-06-01/middle.jpg)
+![Repeated life patterns revealing who you become under pressure](/images/blog/2026-06-01/middle.webp)
 
 ## Exposure Is the Variable
 
@@ -65,7 +65,7 @@ This is why staying open matters. [Welcoming change](@/blog/2021-03-01-embrace-t
 
 ## Ten Years Later
 
-Ten years ago I was [writing a book](https://chemaclass.com/books/) of my thoughts. I wrote every few days, just to read it back the next morning and understand myself better. I am not that person anymore.
+Ten years ago I was [writing a book](/books/) of my thoughts. I wrote every few days, just to read it back the next morning and understand myself better. I am not that person anymore.
 
 Every beginning carries the shape of an end. Accepting that lets you stop chasing finality and pay attention to the process itself.
 
@@ -89,6 +89,6 @@ I love being alive. The fact it ends is what gives the time inside it weight. If
 
 > We get one life. Make it one you would relive.
 
-![blog-footer](/images/blog/2026-06-01/footer.jpg)
+![A mirror in the present, not a prediction of the future](/images/blog/2026-06-01/footer.webp)
 
 {{ youtube(id="KqhPdzqqask") }}
