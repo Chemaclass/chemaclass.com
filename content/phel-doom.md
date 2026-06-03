@@ -1,7 +1,7 @@
 +++
 title = "phel-doom"
-description = "Download the latest phel-doom PHAR release. Redirects to the latest GitHub release asset."
+description = "phel-doom on GitHub. Redirects to the repository's Play section with install and run instructions."
 template = "redirect.html"
 [extra]
-redirect_url = "https://github.com/Chemaclass/phel-doom/releases/latest/download/phel-doom.phar"
+redirect_url = "https://github.com/Chemaclass/phel-doom#play"
 +++
