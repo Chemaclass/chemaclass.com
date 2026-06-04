@@ -16,7 +16,7 @@ sort_by = "weight"
 - 2026-06-09 | International PHP Conference [**Berlin, Germany**] (EN)
   - [Writing Lisp in PHP: A Journey with Phel](https://phpconference.com/php-core-coding/lisp-in-php-phel/)
     *Exploring functional programming through Phel, a Lisp dialect that compiles to PHP with persistent data structures and macros.*
-  - [AI as Your Coding Co-Pilot: Human-Centered Workflows for Modern Developers](https://phpconference.com/trends-gen-ai/ai-copilot-human-centered-workflows/)
+  - [AI as Your Coding Co-Pilot: Human-Centered Workflows for Modern Developers](https://phpconference.com/trends-gen-ai/ai-copilot-human-centered-workflows/) [[slides](/slides/ai-copilot/)]
     *Practical strategies for integrating AI tools into your daily coding workflow while keeping the human developer in control.*
 
 ---
