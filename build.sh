@@ -93,4 +93,10 @@ python3 scripts/enrich-sitemap.py
 echo "Minifying HTML, CSS, JS, SVG, and XML..."
 minify -r -o public/ public/
 
+# Marp slide decks must NOT be minified: minify mangles their inline data-style
+# attributes (SVG/foreignObject) into visible text, dumping raw CSS onto the slides.
+# The deck HTML is already optimized by build-slides.sh, so restore the pristine output.
+echo "Restoring un-minified slide decks (Marp HTML must not be minified)..."
+cp -R static/slides/. public/slides/
+
 echo "Build complete!"
