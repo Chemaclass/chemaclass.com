@@ -3,6 +3,12 @@ marp: true
 theme: default
 paginate: true
 size: 16:9
+title: "AI as Your Coding Co-Pilot"
+description: "Human-centered AI coding workflows — the adoption ladder from denial (L0) to AI-native teams (L5), plus concrete refactor, test, and architecture loops with an LLM."
+author: "Chemaclass"
+keywords: "AI, LLM, Claude Code, developer workflows, PHP, software craftsmanship"
+url: "https://chemaclass.com/slides/ai-copilot/"
+image: "https://chemaclass.com/slides/ai-copilot/assets/cover.png"
 footer: 'AI as Your Coding Co-Pilot · @Chemaclass'
 style: |
   /* ============================================================

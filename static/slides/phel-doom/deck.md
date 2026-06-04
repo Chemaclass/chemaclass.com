@@ -1,7 +1,11 @@
 ---
 marp: true
 title: "Writing Lisp in PHP: A Journey with Phel"
-author: Jose M. Valera Reales (Chemaclass)
+description: "We learn Phel — a Lisp that compiles to PHP — by building a DOOM clone, exploring persistent data structures, macros, and the REPL."
+author: "Chemaclass"
+keywords: "Phel, Lisp, PHP, functional programming, macros, REPL, DOOM"
+url: "https://chemaclass.com/slides/phel-doom/"
+image: "https://chemaclass.com/slides/phel-doom/assets/screenshot.png"
 theme: uncover
 paginate: true
 footer: "Writing Lisp in PHP · Chemaclass"
