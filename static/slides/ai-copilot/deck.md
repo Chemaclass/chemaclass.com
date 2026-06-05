@@ -422,7 +422,33 @@ Walk the tree, ~10s per item:
 - rules/ = glob-targeted conventions.
 - hooks/ = shell scripts that fire on events.
 - agents/ = specialized roles.
-→ "The most important file in that folder."
+→ "But that folder is Claude-specific. What happens when you switch tools?"
+-->
+
+---
+
+## ▸ Level 3 · Make it vendor-agnostic
+
+<div class="ladder l3"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+That folder is Claude-specific. Bet on the **context**, not the vendor.
+
+> **agnostic-ai** — write the spec once, sync to 14+ tools.
+
+```
+.agnostic-ai/  →  Claude · Cursor · Copilot · Gemini · Codex …
+```
+
+One source of truth. Switch tools, keep your edge.
+
+<span class="small">github.com/Chemaclass/agnostic-ai</span>
+
+<!--
+"You just saw the .claude/ folder. But that's one vendor's format."
+"I wrote agnostic-ai for exactly this: define agents, skills, rules, hooks once — sync to 14+ tools in their native format."
+Land: "Bet on the context, not the vendor. The tool ships next year. Your context shouldn't have to be rewritten."
+[OFFLINE-SAFE: WASM playground runs in-browser, no internet. Pre-load a tab if you want to demo a sync.]
+→ "Now — the most important file in that folder."
 -->
 
 ---
@@ -614,6 +640,8 @@ A coding agent lives in one repo.
 - I talk to him over **Telegram**.
 - He pushes back when I tunnel.
 
+<span class="small">sauronbot.github.io</span>
+
 </div>
 <div>
 
@@ -643,11 +671,22 @@ recording lands the same beat; live is a bonus, not a dependency.
 
 <div class="ladder l4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
+<div class="content-img">
+<div>
+
 Hidden in Sauron's blog. A 9-level Lord of the Rings game.<br>**+5k lines. Two days. I wrote zero code.**
 
-> I brought the creativity: lore, vision, pushback.<br>Sauron brought the craft: every line of code.
+> I brought the creativity: lore & vision.<br>Sauron brought the craft: every line of code.
 
 Neither of us could have built it alone.<br>**That's a co-pilot at its best.**
+
+</div>
+<div>
+
+![w:100%](assets/22-carry-the-ring.png)
+
+</div>
+</div>
 
 <!--
 [let the demo/gif play first, then talk]
