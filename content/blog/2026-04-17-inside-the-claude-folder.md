@@ -52,7 +52,8 @@ In [Phel](https://github.com/phel-lang/phel-lang), mine covers the compiler pipe
 
 A global `~/.claude/CLAUDE.md` applies to _all_ your projects. The project file says _how this codebase works_. The global file says _how I work_.
 
-Every byte ships in every prompt. Keep it short. Past one screen, move detail into `rules/` or `skills/`.
+Every byte ships in every prompt. Keep it short. 
+Past one screen, move detail into `rules/` or `skills/`.
 
 > A good `CLAUDE.md` is a good onboarding doc. The better it is, the less you repeat yourself.
 
