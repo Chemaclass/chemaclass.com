@@ -163,13 +163,13 @@ Confident, not hyped. Pause after "honest version." Skip the agenda — open wit
 → Sets up promise vs reality.
 
 ═══ 45-MIN BUDGET ═══
-Open+thesis(1-4) 4 · Ladder+poll(5) 3 · L0-L2(6-9) 5 · L3+local files(10-16) 8
-3 workflows(17-19) 4 · L4+Sauron(20-22) 7 · game(21) 2 · L5(23-26) 5
-skip+takehome+close(27-28) 2 · Q&A 5  =  45 min
+Open+thesis(1-4) 4 · Ladder+poll(5) 3 · L0-L2(6-9) 5 · L3+local files(10-15) 8
+2 workflows(16-17) 4 · L4 teams+Sauron(18-23) 9 · game(23) 2 · L5(24-27) 5
+skip+takehome+close(28-30) 2 · Q&A 5  =  45 min
 
 OFFLINE-SAFE: every demo runs from LOCAL files. No internet required to hit 45.
-- .claude/ files (13-16): your own repo, fully offline.
-- Game + Konami (21): static HTML, pre-loaded tab, runs offline.
+- .claude/ files (12-14): your own repo, fully offline.
+- Game + Konami (23): static HTML, pre-loaded tab, runs offline.
 - Sauron (22): play a PRE-RECORDED screen-capture of a Telegram exchange.
 Internet only UPGRADES Sauron to live — never gates the talk. If wifi is solid AND you
 want it, go live; otherwise the recording carries the same beat. Record all three the
@@ -422,33 +422,7 @@ Walk the tree, ~10s per item:
 - rules/ = glob-targeted conventions.
 - hooks/ = shell scripts that fire on events.
 - agents/ = specialized roles.
-→ "But that folder is Claude-specific. What happens when you switch tools?"
--->
-
----
-
-## ▸ Level 3 · Make it vendor-agnostic
-
-<div class="ladder l3"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-
-That folder is Claude-specific. Bet on the **context**, not the vendor.
-
-> **agnostic-ai** — write the spec once, sync to 14+ tools.
-
-```
-.agnostic-ai/  →  Claude · Cursor · Copilot · Gemini · Codex …
-```
-
-One source of truth. Switch tools, keep your edge.
-
-<span class="small">github.com/Chemaclass/agnostic-ai</span>
-
-<!--
-"You just saw the .claude/ folder. But that's one vendor's format."
-"I wrote agnostic-ai for exactly this: define agents, skills, rules, hooks once — sync to 14+ tools in their native format."
-Land: "Bet on the context, not the vendor. The tool ships next year. Your context shouldn't have to be rewritten."
-[OFFLINE-SAFE: WASM playground runs in-browser, no internet. Pre-load a tab if you want to demo a sync.]
-→ "Now — the most important file in that folder."
+→ "Now: the most important file in that folder."
 -->
 
 ---
@@ -464,14 +438,14 @@ Read on every boot. The agent's onboarding doc.
 <div class="panel-box"><strong>🏠 Global</strong><code>~/.claude/CLAUDE.md</code>: how I work. Commit style, habits, preferences.</div>
 </div>
 
-Every byte ships in every prompt. Keep it short. Past one screen, move detail to `rules/` and `skills/`.
+Ships in every prompt. Keep it short: overflow goes to `rules/` and `skills/`.
 
 <!--
 "A good CLAUDE.md is a good onboarding doc."
 "The better it is, the less you repeat yourself to the agent."
 "Every byte ships in every prompt — keep it short. Past one screen, move to rules/ or skills/."
 
-[DEMO ~2 min, spans 13-16 · OFFLINE-SAFE] Open your editor. Show the REAL files: your
+[DEMO ~2 min, spans 12-14 · OFFLINE-SAFE] Open your editor. Show the REAL files: your
 project CLAUDE.md, one skill.md, and a hook firing on save. All local, no internet.
 Concrete beats the diagram. Pre-open the files before the talk.
 → "But some rules shouldn't be suggestions. That's what hooks are for."
@@ -502,30 +476,109 @@ Land: "Safety before leverage. That order matters."
 
 > Who does your taxes? A 300-IQ genius who never read tax law, or an accountant with 20 years of filings?
 
+<style scoped>
+  section { justify-content:center !important; }
+  .sk-split { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center; margin-top:.2rem; }
+  .sk-split ul { margin:0; font-size:25px; }
+  .sk-split li { margin:.3em 0; }
+  .sk-split pre { font-size:18px; margin:0 0 .4rem; }
+</style>
+
+<div class="sk-split">
+<div>
+
 - **Intelligence ≠ expertise.** A skill = a markdown file, loaded **on demand**.
-- **The agent is replaceable. Your skills are not.** New model → productive day one.
-- Start at the **second repeated prompt**. That's a skill waiting.
+- **Agent is replaceable. Skills are not.** New model, productive day one.
+- Start at the **second repeated prompt**.
+
+</div>
+<div>
+
+```
+.agnostic-ai/skills/
+├── commit/
+├── refactor/
+├── test/
+└── … 15 total
+```
+
+<span class="small">github.com/phel-lang/.../.agnostic-ai/skills</span>
+
+</div>
+</div>
 
 <!--
 [pause after the accountant line. Let it land.]
 "Intelligence is not expertise. Skills close that gap. A skill is a markdown file — 20 cost nothing until one fits."
 Land: "The agent ships next year. Your skills ship forever. They encode your domain, your conventions, your architecture."
 "Start with the second repeated prompt. That's a skill waiting to be written."
-→ "Now let's see this in action — three concrete workflows."
+→ "One catch: all of this is one vendor's format. Make it portable."
+-->
+
+---
+
+## ▸ Level 3 · Make it vendor-agnostic
+
+<div class="ladder l3"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<style scoped>
+  .ag-split { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center; margin-top:.3rem; }
+  .ag-split pre { font-size: 18px; margin:0; }
+</style>
+
+<div class="ag-split">
+<div>
+
+Folder, CLAUDE.md, rules, skills: all Claude-specific. Bet on the **context**, not the vendor.
+
+> **agnostic-ai**: write the spec once, sync to 14+ tools.
+
+One source of truth. Switch tools, keep your edge.
+
+<span class="small">github.com/Chemaclass/agnostic-ai</span>
+
+</div>
+<div>
+
+```yaml
+# agnostic-ai.yaml: one spec, every tool
+version: 1
+
+sources:
+  agents:  .agnostic-ai/agents
+  skills:  .agnostic-ai/skills
+  rules:   .agnostic-ai/rules
+
+targets:
+  - claude
+  - cursor
+  - copilot
+  - codex
+```
+
+</div>
+</div>
+
+<!--
+"You just built the whole .claude/ folder: CLAUDE.md, rules, skills, hooks. But that's one vendor's format."
+"I wrote agnostic-ai for exactly this: define agents, skills, rules, hooks once, sync to 14+ tools in their native format."
+Land: "Bet on the context, not the vendor. The tool ships next year. Your context shouldn't have to be rewritten."
+[OFFLINE-SAFE: WASM playground runs in-browser, no internet. Pre-load a tab if you want to demo a sync.]
+→ "Context is the what. Now the how: two concrete workflows."
 -->
 
 ---
 
 ## Workflow 1 · Refactoring with an LLM
 
-<span class="chip">1 of 3</span>
+<span class="chip">1 of 2</span>
 
 <div class="wf-problem">🚨 <strong>Problem:</strong> AI defaults to <em>adding</em>. Won't improve code unless asked.</div>
 
 <div class="wf-steps">
 <div class="wf-step"><span class="n">1</span>Make it work first.</div>
 <div class="wf-step"><span class="n">2</span><em>"Simplify."</em> · <em>"SOLID violations?"</em></div>
-<div class="wf-step"><span class="n">3</span><code>/refactor-check</code> reads the diff.</div>
+<div class="wf-step"><span class="n">3</span><code>/refactor</code> reads the diff.</div>
 </div>
 
 <div class="wf-rule">You name the shape. AI drives the move.</div>
@@ -534,7 +587,7 @@ Land: "The agent ships next year. Your skills ship forever. They encode your dom
 "AI defaults to adding. It won't improve code unless you explicitly ask."
 Step 1: "Make it work first. Don't refactor in the same prompt."
 Step 2: ask out loud — "simplify this", "remove the boilerplate", "any SOLID violations?"
-Step 3: run /refactor-check — a clean-code-reviewer agent reads the diff.
+Step 3: run /refactor, a clean-code-reviewer agent reads the diff.
 Land: "You name the target shape. The co-pilot drives the mechanical move."
 → "Workflow 2: where AI usually makes tests worse — and how to fix that."
 -->
@@ -543,7 +596,7 @@ Land: "You name the target shape. The co-pilot drives the mechanical move."
 
 ## Workflow 2 · Testing with an LLM
 
-<span class="chip">2 of 3</span>
+<span class="chip">2 of 2</span>
 
 <div class="wf-problem">🚨 <strong>Problem:</strong> AI mirrors <em>implementation</em>. Tests break on refactor.</div>
 
@@ -561,31 +614,6 @@ Step 1: ask for behavior, not implementation. Name the outcome, not the method.
 Step 2: a TDD-coach agent runs red → green → refactor in sequence.
 Step 3: a hook blocks the commit unless the suite is green and coverage holds.
 Land: "TDD used to compete with deadlines. With a hook enforcing coverage, it doesn't have to."
-→ "The hardest workflow: architecture."
--->
-
----
-
-## Workflow 3 · Architectural reasoning with an LLM
-
-<span class="chip">3 of 3</span>
-
-<div class="wf-problem">🚨 <strong>Problem:</strong> AI decides <em>locally</em>, blind to the whole system.</div>
-
-<div class="wf-steps">
-<div class="wf-step"><span class="n">1</span><strong>Plan mode</strong>: map deps, propose an approach first.</div>
-<div class="wf-step"><span class="n">2</span>You <strong>approve / modify / reject</strong>.</div>
-<div class="wf-step"><span class="n">3</span><strong>Domain-architect</strong> owns boundaries. <strong>Pair-buddy</strong> challenges.</div>
-</div>
-
-<div class="wf-rule">Architecture is human judgment. AI executes the plan you approve.</div>
-
-<!--
-"The agent sees local context. You hold global."
-Step 1: plan mode maps dependencies and proposes an approach before touching anything.
-Step 2: you approve / modify / reject the plan. First decision you make, not the last.
-Step 3: a domain-architect agent owns boundaries; a pair-buddy agent challenges before you commit.
-Land: "Architecture is human judgment. The co-pilot executes the plan you approve."
 → "What if these ran as standing roles? That's L4."
 -->
 
@@ -621,6 +649,86 @@ Land: "Humans stop racing AI on speed and start directing it."
 "Start with subagents — simpler, cheaper, easier to debug."
 "Upgrade to teams when tasks need to run in parallel and share findings."
 "Teams cost ~3x tokens. Make the parallelism earn it."
+→ "Theory's enough. Watch a real team work."
+-->
+
+---
+
+## ▸ Level 4 · A team with names
+
+<div class="ladder l4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<style scoped>
+  .tm-split { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center; margin-top:.4rem; }
+  .tm-split ul { margin:0; font-size:25px; }
+  .tm-split li { margin:.32em 0; }
+  .tm-split img { box-shadow:var(--shadow); border-radius:8px; }
+</style>
+
+<div class="tm-split">
+<div>
+
+Approve the plan, three agents split the work in parallel:
+
+- **Arwen** rewrites the DB query.
+- **Elrond** updates the handler limits.
+- **Galadriel** changes paging, finds a failing test.
+
+Each reports back. I merge.
+
+</div>
+<div>
+
+![w:100%](assets/21-agent-team.png)
+
+</div>
+</div>
+
+<!--
+"Give the team names and the coordination becomes legible."
+"Approve once. Three background agents launch — Arwen, Elrond, Galadriel — each owns a slice."
+"Arwen takes the DB window function, Elrond the handler limits, Galadriel paging plus tests."
+"They report back as they finish. Galadriel even flags a failing test before I ask."
+Land: "Independent sessions, shared task list. That's a team, not a tool."
+→ "And it scales: seven agents, one command."
+-->
+
+---
+
+## ▸ Level 4 · Seven agents, one command
+
+<div class="ladder l4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<style scoped>
+  .wt-split { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center; margin-top:.4rem; }
+  .wt-split ul { margin:0; font-size:25px; }
+  .wt-split li { margin:.32em 0; }
+  .wt-split img { box-shadow:var(--shadow); border-radius:8px; }
+</style>
+
+<div class="wt-split">
+<div>
+
+Same shape, more agents. One command, each grabs an issue in its own **git worktree**. No collisions.
+
+- Reads the architecture rules first.
+- Follows TDD: red → green → refactor.
+- Commits, opens a PR, reports back.
+
+</div>
+<div>
+
+![w:100%](assets/21-parallel-worktrees.png)
+
+</div>
+</div>
+
+<!--
+"Same shape as the named team — just more of it. Seven agents, one command."
+"Each picks an issue off the task list, runs in its own git worktree — isolated branch, isolated dir. No stepping on each other."
+Walk the table: agent → issue → branch → worktree. All parallel.
+"Each one reads the architecture rules, follows TDD, commits, opens a PR, reports back."
+Land: "I monitor and merge. The parallelism is real, not a demo trick."
 → "My own team runs 24/7. Let me show you."
 -->
 
@@ -684,6 +792,8 @@ Neither of us could have built it alone.<br>**That's a co-pilot at its best.**
 <div>
 
 ![w:100%](assets/22-carry-the-ring.png)
+
+<span class="small">sauronbot.github.io</span>
 
 </div>
 </div>
@@ -832,27 +942,36 @@ Order is the lesson: shared practices → context → teams → AI-native.
 
 ## Take home: simple, repeatable techniques
 
+<style scoped>
+  section { justify-content: center !important; font-size: 28px; line-height: 1.45; }
+  ol li, ul li { margin: .34em 0; }
+  ol { margin: .3em 0 0; }
+  p { margin: .45em 0; }
+  .divider { margin: 1rem auto !important; }
+</style>
+
 1. **Locate yourself on the ladder.** Next step, not the top.
 2. **Write down how your team uses AI** (L2). Commit it.
-3. **Engineer context before chasing models.** CLAUDE.md, rules, skills.
-4. **Extract a skill** on the second repeated prompt.
-5. **Refactor:** make it work, then simplify.
-6. **Test:** behavior, not implementation.
-7. **Architect:** plan mode first.
-8. **Review where it matters.** Agents handle the rest.
+3. **Extract a skill** on the second repeated prompt.
+
+<div class="divider"></div>
+
+**Bonus · tools worth stealing**
+
+<span class="small dim">Same context window, twice the room.</span>
+
+- [**Caveman**](https://github.com/JuliusBrussee/caveman): trims what the agent says back.
+- [**RTK**](https://github.com/rtk-ai/rtk): trims what the terminal pipes in.
+- [**agnostic-ai**](https://github.com/Chemaclass/agnostic-ai): write context once, sync to 14+ tools.
 
 <!--
 "Monday morning. Here's exactly what you do."
 Walk the list in order — each item is one action, not a concept.
 1. Locate yourself on the ladder. Pick the next step, not the top.
 2. Write down how your team uses AI (L2). Commit it.
-3. Engineer context before chasing models: CLAUDE.md, rules, skills.
-4. Extract a skill on the second repeated prompt.
-5. Refactor: make it work, then tell AI to simplify.
-6. Test: ask for behavior, not implementation; let a TDD loop + hook hold the line.
-7. Architect: plan mode first. Think, approve, then code.
-8. Review where it matters. Let agents handle the rest.
+3. Extract a skill on the second repeated prompt.
 "Pick one. Just one. The next step on your ladder, not the top."
+Bonus, three tools worth stealing: Caveman trims what the agent says, RTK trims what the terminal pipes back (same window, twice the room), agnostic-ai writes your context once and syncs it to 14+ tools.
 Re-poll the room (callback to s5): "Show of hands — who'll be one step higher by Monday?"
 Leave this slide up during Q&A. [Q&A ~5 min]
 -->
