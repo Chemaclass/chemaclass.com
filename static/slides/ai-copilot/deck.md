@@ -4,7 +4,7 @@ theme: default
 paginate: true
 size: 16:9
 title: "AI as Your Coding Co-Pilot"
-description: "Human-centered AI coding workflows — the adoption ladder from denial (L0) to AI-native teams (L5), plus concrete refactor, test, and architecture loops with an LLM."
+description: "Human-centered AI coding workflows: the adoption ladder from denial (L0) to AI-native teams (L5), plus concrete refactor and test loops with an LLM."
 author: "Chemaclass"
 keywords: "AI, LLM, Claude Code, developer workflows, PHP, software craftsmanship"
 url: "https://chemaclass.com/slides/ai-copilot/"
@@ -13,7 +13,7 @@ footer: 'AI as Your Coding Co-Pilot · @Chemaclass'
 style: |
   /* ============================================================
      Theme mirrors chemaclass.com. Rubik + GitHub-inspired tokens.
-     Light mode only — always renders light regardless of OS setting.
+     Light mode only, always renders light regardless of OS setting.
      ============================================================ */
   @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
@@ -159,7 +159,7 @@ style: |
 
 <!--
 "A year ago I was wrong about AI. This talk is the honest version of what I learned."
-Confident, not hyped. Pause after "honest version." Skip the agenda — open with the tension.
+Confident, not hyped. Pause after "honest version." Skip the agenda, open with the tension.
 → Sets up promise vs reality.
 
 ═══ 45-MIN BUDGET ═══
@@ -171,7 +171,7 @@ OFFLINE-SAFE: every demo runs from LOCAL files. No internet required to hit 45.
 - .claude/ files (12-14): your own repo, fully offline.
 - Game + Konami (23): static HTML, pre-loaded tab, runs offline.
 - Sauron (22): play a PRE-RECORDED screen-capture of a Telegram exchange.
-Internet only UPGRADES Sauron to live — never gates the talk. If wifi is solid AND you
+Internet only UPGRADES Sauron to live, never gates the talk. If wifi is solid AND you
 want it, go live; otherwise the recording carries the same beat. Record all three the
 night before. The 35-min read-through is the hard floor if all media fails.
 -->
@@ -190,7 +190,7 @@ night before. The 35-min read-through is the hard floor if all media fails.
 
 <!--
 "We all felt the rush." [pause] "Most of us also felt the hangover."
-Land the final line slowly — it's the thesis of the whole talk.
+Land the final line slowly, it's the thesis of the whole talk.
 → Let the next slide breathe. It's a quote. Don't rush into it.
 -->
 
@@ -230,7 +230,7 @@ I stopped racing AI. Started directing it.
 </div>
 
 <!--
-"I was there — skeptic, resistant. A decade of TDD and clean code."
+"I was there, skeptic, resistant. A decade of TDD and clean code."
 My fear: AI ships impressive code that decays fast.
 Land: "I stopped racing AI and started directing it." [pause]
 This is the emotional core. Vulnerability = trust from the audience.
@@ -248,10 +248,10 @@ Most companies at **Level 1** in 2026. Every slide = one step up.
 ![w:780](assets/05-ladder.svg)
 
 <!--
-"Before we go deeper — show of hands."
+"Before we go deeper, show of hands."
 "Who's at L0? L1? L2?" Pause after each. Count. React genuinely.
 "Every slide from here is one step up this ladder. This is the map."
-~2 min here. Worth it — engagement anchors the whole rest of the talk.
+~2 min here. Worth it, engagement anchors the whole rest of the talk.
 → Start at the bottom.
 -->
 
@@ -300,7 +300,7 @@ Speed without shared direction = faster chaos.
 <!--
 "Same task. Same prompt. Two engineers. Two wildly different outputs."
 "Why? Know-how trapped in each head."
-Stack Overflow analogy lands with this audience — they lived that era.
+Stack Overflow analogy lands with this audience, they lived that era.
 → "There's a floor at L1 that never changes, no matter how high you climb."
 -->
 
@@ -331,7 +331,7 @@ Stack Overflow analogy lands with this audience — they lived that era.
 "This floor stays no matter how high you climb."
 Land: "You own every line. Can't blame Claude at 2am." [pause for laugh]
 "Never accept code you don't understand. Can't explain it = time bomb."
-→ "When your team shares that discipline — that's L2."
+→ "When your team shares that discipline, that's L2."
 -->
 
 ---
@@ -413,7 +413,7 @@ One git-committed folder. Everyone who clones inherits it.
 ```
 
 <!--
-"MCP — Model Context Protocol — gives the agent hands: filesystem, github, postgres, your tools. It turns it from a conversation partner into an active participant."
+"MCP (Model Context Protocol) gives the agent hands: filesystem, github, postgres, your tools. It turns it from a conversation partner into an active participant."
 "One folder. Six layers. Committed to git. Everyone who clones inherits the full setup."
 Walk the tree, ~10s per item:
 - CLAUDE.md = the onboarding doc.
@@ -443,7 +443,7 @@ Ships in every prompt. Keep it short: overflow goes to `rules/` and `skills/`.
 <!--
 "A good CLAUDE.md is a good onboarding doc."
 "The better it is, the less you repeat yourself to the agent."
-"Every byte ships in every prompt — keep it short. Past one screen, move to rules/ or skills/."
+"Every byte ships in every prompt, keep it short. Past one screen, move to rules/ or skills/."
 
 [DEMO ~2 min, spans 12-14 · OFFLINE-SAFE] Open your editor. Show the REAL files: your
 project CLAUDE.md, one skill.md, and a hook firing on save. All local, no internet.
@@ -509,7 +509,7 @@ Land: "Safety before leverage. That order matters."
 
 <!--
 [pause after the accountant line. Let it land.]
-"Intelligence is not expertise. Skills close that gap. A skill is a markdown file — 20 cost nothing until one fits."
+"Intelligence is not expertise. Skills close that gap. A skill is a markdown file, 20 cost nothing until one fits."
 Land: "The agent ships next year. Your skills ship forever. They encode your domain, your conventions, your architecture."
 "Start with the second repeated prompt. That's a skill waiting to be written."
 → "One catch: all of this is one vendor's format. Make it portable."
@@ -586,10 +586,10 @@ Land: "Bet on the context, not the vendor. The tool ships next year. Your contex
 <!--
 "AI defaults to adding. It won't improve code unless you explicitly ask."
 Step 1: "Make it work first. Don't refactor in the same prompt."
-Step 2: ask out loud — "simplify this", "remove the boilerplate", "any SOLID violations?"
+Step 2: ask out loud, "simplify this", "remove the boilerplate", "any SOLID violations?"
 Step 3: run /refactor, a clean-code-reviewer agent reads the diff.
 Land: "You name the target shape. The co-pilot drives the mechanical move."
-→ "Workflow 2: where AI usually makes tests worse — and how to fix that."
+→ "Workflow 2: where AI usually makes tests worse, and how to fix that."
 -->
 
 ---
@@ -630,9 +630,9 @@ Land: "TDD used to compete with deadlines. With a hook enforcing coverage, it do
 - Humans stop racing AI on speed and start **directing** it.
 
 <!--
-"The 3 workflows become standing roles. Org chart unchanged — each person produces a lot more."
+"The 3 workflows become standing roles. Org chart unchanged, each person produces a lot more."
 Land: "Humans stop racing AI on speed and start directing it."
-→ "Two shapes of multi-agent work — pick the right one."
+→ "Two shapes of multi-agent work, pick the right one."
 -->
 
 ---
@@ -646,7 +646,7 @@ Land: "Humans stop racing AI on speed and start directing it."
 - **Competing hypotheses** for debugging: adversarial teammates each defend a theory, disprove the others. Survivor = real root cause.
 
 <!--
-"Start with subagents — simpler, cheaper, easier to debug."
+"Start with subagents, simpler, cheaper, easier to debug."
 "Upgrade to teams when tasks need to run in parallel and share findings."
 "Teams cost ~3x tokens. Make the parallelism earn it."
 → "Theory's enough. Watch a real team work."
@@ -686,7 +686,7 @@ Each reports back. I merge.
 
 <!--
 "Give the team names and the coordination becomes legible."
-"Approve once. Three background agents launch — Arwen, Elrond, Galadriel — each owns a slice."
+"Approve once. Three background agents launch (Arwen, Elrond, Galadriel), each owns a slice."
 "Arwen takes the DB window function, Elrond the handler limits, Galadriel paging plus tests."
 "They report back as they finish. Galadriel even flags a failing test before I ask."
 Land: "Independent sessions, shared task list. That's a team, not a tool."
@@ -724,8 +724,8 @@ Same shape, more agents. One command, each grabs an issue in its own **git workt
 </div>
 
 <!--
-"Same shape as the named team — just more of it. Seven agents, one command."
-"Each picks an issue off the task list, runs in its own git worktree — isolated branch, isolated dir. No stepping on each other."
+"Same shape as the named team, just more of it. Seven agents, one command."
+"Each picks an issue off the task list, runs in its own git worktree, isolated branch, isolated dir. No stepping on each other."
 Walk the table: agent → issue → branch → worktree. All parallel.
 "Each one reads the architecture rules, follows TDD, commits, opens a PR, reports back."
 Land: "I monitor and merge. The parallelism is real, not a demo trick."
@@ -759,15 +759,15 @@ A coding agent lives in one repo.
 </div>
 
 <!--
-[tone shift — personal, proud]
+[tone shift: personal, proud]
 "A coding agent lives in one repo for one task. Sauron lives in my life."
 "Sauron isn't a tool I open. It's a place I work."
 "Runs on my own hardware via OpenClaw. Always on. No tab to open."
 "I talk to him over Telegram. He reviews PRs, opens issues, ships OSS."
-"He pushes back when I tunnel — that's the point." Mention sauronbot.github.io.
+"He pushes back when I tunnel, that's the point." Mention sauronbot.github.io.
 
 [DEMO ~4 min · OFFLINE-SAFE] Default: play a PRE-RECORDED screen capture of a Telegram
-exchange — a real pushback, then Sauron opens an issue/PR. Plays from local file, no wifi.
+exchange, a real pushback, then Sauron opens an issue/PR. Plays from local file, no wifi.
 OPTIONAL live upgrade: only if wifi is solid AND you tested it before the talk. The
 recording lands the same beat; live is a bonus, not a dependency.
 → "The most memorable thing we built together."
@@ -800,11 +800,11 @@ Neither of us could have built it alone.<br>**That's a co-pilot at its best.**
 
 <!--
 [let the demo/gif play first, then talk]
-"I brought the vision. Sauron brought the craft — rendering, physics, Web Audio, mobile input."
-"5k lines. Two days. I wrote zero code — but every creative decision was mine."
+"I brought the vision. Sauron brought the craft, rendering, physics, Web Audio, mobile input."
+"5k lines. Two days. I wrote zero code, but every creative decision was mine."
 Land: "Neither could have made it alone. That's what a co-pilot looks like at its best."
 
-[DEMO ~2 min · OFFLINE-SAFE] Static HTML game — pre-load in a browser tab BEFORE the
+[DEMO ~2 min · OFFLINE-SAFE] Static HTML game, pre-load in a browser tab BEFORE the
 talk so it runs with zero internet. Clear a level, trigger the Konami easter egg.
 If the tab somehow fails: play a local screen-recording instead. Either way, 2 min.
 → "L5 is where this changes the structure, not just the output."
@@ -830,8 +830,8 @@ L4 multiplies output inside the existing structure. **L5 changes the structure.*
 "L4 multiplies output inside the existing structure."
 [pause] "L5 changes the structure itself."
 Spell out the shift: tickets written so an agent can act on them, reviews that assume part was machine-written, architecture that accounts for what agents do well.
-"A senior IC starts to look more like a tech lead — leading people and agents."
-"Few companies fully here in 2026 — but ignoring the direction is its own decision."
+"A senior IC starts to look more like a tech lead, leading people and agents."
+"Few companies fully here in 2026, but ignoring the direction is its own decision."
 → "L5 creates a new bottleneck. Us."
 -->
 
@@ -848,7 +848,7 @@ We spent decades making machines faster.<br>Now the slowest part of the system i
 Agents ship 10 PRs while you drink your coffee.<br>You can add more agents. You can't add more of yourself.
 
 <!--
-[slow down here — this one lands differently]
+[slow down here, this one lands differently]
 "We spent decades making machines faster."
 [pause] "Now we're the slowest part of the system."
 Don't rush. Let it sit.
@@ -880,9 +880,9 @@ Pilot & autopilot. Plane flies itself; pilot watches and steps in when something
 
 <!--
 "Pilot and autopilot. Plane flies itself. Pilot watches, steps in when something looks wrong."
-Say Ship / Show / Ask explicitly — these are the decision rule. Point to each card.
+Say Ship / Show / Ask explicitly, these are the decision rule. Point to each card.
 "Beware automation complacency. Read diffs you don't have to. Stay sharp."
-→ "But some things still require full eyes — on purpose."
+→ "But some things still require full eyes, on purpose."
 -->
 
 ---
@@ -966,13 +966,13 @@ Order is the lesson: shared practices → context → teams → AI-native.
 
 <!--
 "Monday morning. Here's exactly what you do."
-Walk the list in order — each item is one action, not a concept.
+Walk the list in order, each item is one action, not a concept.
 1. Locate yourself on the ladder. Pick the next step, not the top.
 2. Write down how your team uses AI (L2). Commit it.
 3. Extract a skill on the second repeated prompt.
 "Pick one. Just one. The next step on your ladder, not the top."
 Bonus, three tools worth stealing: Caveman trims what the agent says, RTK trims what the terminal pipes back (same window, twice the room), agnostic-ai writes your context once and syncs it to 14+ tools.
-Re-poll the room (callback to s5): "Show of hands — who'll be one step higher by Monday?"
+Re-poll the room (callback to s5): "Show of hands, who'll be one step higher by Monday?"
 Leave this slide up during Q&A. [Q&A ~5 min]
 -->
 
