@@ -1,5 +1,9 @@
 # Project Instructions for chemaclass.com
 
+## Rules
+
+@.claude/rules/no-em-dash.md
+
 ## Overview
 
 This is a personal website built with [Zola](https://www.getzola.org/) (Rust-based static site generator).
