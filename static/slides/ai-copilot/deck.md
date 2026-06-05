@@ -529,7 +529,7 @@ Land: "The agent ships next year. Your skills ship forever. They encode your dom
 <div class="ag-split">
 <div>
 
-Folder, CLAUDE.md, rules, skills: all Claude-specific. Bet on the **context**, not the vendor.
+All of it is Claude-specific. Bet on the **context**, not the vendor.
 
 > **agnostic-ai**: write the spec once, sync to 14+ tools.
 
@@ -641,9 +641,17 @@ Land: "Humans stop racing AI on speed and start directing it."
 
 <div class="ladder l4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
-- **Subagents**: inside one session, focused work, report back. Can't talk to each other.
-- **Agent teams**: independent sessions, own context, coordinate via shared **task list** + **mailbox**.
-- **Competing hypotheses** for debugging: adversarial teammates each defend a theory, disprove the others. Survivor = real root cause.
+<style scoped>
+  section { justify-content:center !important; }
+  .vs-rule { margin-top:1rem; }
+</style>
+
+<div class="two-col">
+<div class="panel-box"><strong>🔹 Subagents</strong>One session, focused work, report back. Can't talk to each other.</div>
+<div class="panel-box"><strong>🔸 Agent teams</strong>Independent sessions, own context. Coordinate via mailbox.</div>
+</div>
+
+<div class="wf-rule vs-rule"><strong>Competing hypotheses:</strong> teammates each defend a theory, disprove the rest.</div>
 
 <!--
 "Start with subagents, simpler, cheaper, easier to debug."
@@ -989,7 +997,7 @@ Leave this slide up during Q&A. [Q&A ~5 min]
 
 <span class="small">When the hype settles, the question won't be "did you use AI?"<br>It'll be "at what level, and with what direction?"</span>
 
-<span class="small thanks"><strong>Thanks.</strong> · chemaclass.com · sauronbot.github.io</span>
+<span class="small thanks"><strong>Thanks</strong> · chemaclass.com/tags/ai</span>
 
 <!--
 [slow, weight, meaning]
