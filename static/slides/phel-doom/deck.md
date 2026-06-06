@@ -807,7 +807,7 @@ DEMO > build it up live, same engine, one subsystem at a time:
 
 A named Phel-level op that compiles straight to raw PHP. **Zero call overhead** in a ~7200-cell/frame render loop - a function would cost a call per cell.
 
-<span class="reflex">🧠 Macros rewrite code at compile time. Here, the humblest case: zero-cost inlining. PHP's nearest is `eval()`. Don't.</span>
+<span class="reflex">🧠 Macros rewrite code at compile time. Here, the humblest case: zero-cost inlining.</span>
 <!--
 "Macros rewrite code at compile time. This is the humblest use - zero-cost inlining."
 Trace buf-set → php/aset. "A function would pay a call per cell; this pays nothing."
@@ -946,25 +946,6 @@ BEFORE TALK: run phel build so the file is fresh.
 <!--
 Sweep fast. Rising energy into demo.
 "Enough slides. Let me show you."
--->
-
----
-
-## Phel: the honest scorecard
-
-| Use it when | Skip it when |
-|---|---|
-| Pure domain logic | You rely on framework magic |
-| Data pipelines, game loops | Team prefers familiar syntax |
-| You enjoy functional thinking | You need a mature ecosystem today |
-
-**Loved:** pure functions, macros, threading, full PHP interop
-
-**Watch out:** small ecosystem, learning curve, unfamiliar syntax
-
-<!--
-"Start on a pure-logic module. Don't rewrite your framework."
-Candor here buys credibility. Don't rush - last word before demo.
 -->
 
 ---
