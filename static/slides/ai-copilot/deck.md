@@ -163,14 +163,14 @@ Confident, not hyped. Pause after "honest version." Skip the agenda, open with t
 → Sets up promise vs reality.
 
 ═══ 45-MIN BUDGET ═══
-Open+thesis(1-4) 4 · Ladder+poll(5) 3 · L0-L2(6-9) 5 · L3+local files(10-15) 8
-2 workflows(16-17) 4 · L4 teams+Sauron(18-23) 9 · game(23) 2 · L5(24-27) 5
-skip+takehome+close(28-30) 2 · Q&A 5  =  45 min
+Open+thesis(1-4) 4 · Ladder+poll(5) 3 · L0-L2(6-9) 5 · L3+local files(10-15) 9
+L4 teams+Sauron(16-20) 9 · game(21) 2 · L5(22-25) 5
+skip+takehome+close(26-27) 2 · Q&A 5  =  ~44 min (1 min buffer)
 
 OFFLINE-SAFE: every demo runs from LOCAL files. No internet required to hit 45.
-- .claude/ files (12-14): your own repo, fully offline.
-- Game + Konami (23): static HTML, pre-loaded tab, runs offline.
-- Sauron (22): play a PRE-RECORDED screen-capture of a Telegram exchange.
+- .agnostic-ai/ files (11-15): your own repo, fully offline.
+- Game + Konami (21): static HTML, pre-loaded tab, runs offline.
+- Sauron (20): play a PRE-RECORDED screen-capture of a Telegram exchange.
 Internet only UPGRADES Sauron to live, never gates the talk. If wifi is solid AND you
 want it, go live; otherwise the recording carries the same beat. Record all three the
 night before. The 35-min read-through is the hard floor if all media fails.
@@ -248,10 +248,12 @@ Most companies at **Level 1** in 2026. Every slide = one step up.
 ![w:780](assets/05-ladder.svg)
 
 <!--
-"Before we go deeper, show of hands."
-"Who's at L0? L1? L2?" Pause after each. Count. React genuinely.
-"Every slide from here is one step up this ladder. This is the map."
-~2 min here. Worth it, engagement anchors the whole rest of the talk.
+Don't ask for levels yet, nobody knows them. Poll something they can answer now.
+"Quick show of hands: who uses AI in their daily work?" Count. "Who's banned from it?" React genuinely.
+Then introduce the map: "Six rungs. Denial at the bottom, orchestrating a team of agents at the top."
+"Every slide from here is one step up. By the end you'll know exactly which rung you're on."
+That self-placement is the payoff we cash in at the close, not here.
+~2 min. Worth it, this engagement anchors the rest of the talk.
 → Start at the bottom.
 -->
 
@@ -389,135 +391,12 @@ Team writes down *how we use AI*: shared prompts, conventions, when to push back
 "Stop chasing models. Start engineering context."
 Land: "Weak model + great context beats frontier model with none." [pause]
 "The intelligence was always there. Context gives it hands."
-→ "First tool that gives the agent hands: MCP."
+→ "First, don't lock that context to one vendor."
 -->
 
 ---
 
-## ▸ Level 3 · MCP + the `.claude/` folder
-
-<div class="ladder l3"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-
-**MCP** gives the agent reach: `filesystem` · `github` · `postgres` · your tools.
-
-One git-committed folder. Everyone who clones inherits it.
-
-```
-.claude/
-├── CLAUDE.md
-├── settings.json
-├── skills/
-├── rules/
-├── hooks/
-└── agents/
-```
-
-<!--
-"MCP (Model Context Protocol) gives the agent hands: filesystem, github, postgres, your tools. It turns it from a conversation partner into an active participant."
-"One folder. Six layers. Committed to git. Everyone who clones inherits the full setup."
-Walk the tree, ~10s per item:
-- CLAUDE.md = the onboarding doc.
-- settings.json = permissions, hooks, env.
-- skills/ = runnable procedures.
-- rules/ = glob-targeted conventions.
-- hooks/ = shell scripts that fire on events.
-- agents/ = specialized roles.
-→ "Now: the most important file in that folder."
--->
-
----
-
-## ▸ Level 3 · CLAUDE.md: where everything starts
-
-<div class="ladder l3"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-
-Read on every boot. The agent's onboarding doc.
-
-<div class="two-col">
-<div class="panel-box"><strong>📁 Project</strong><code>CLAUDE.md</code>: how this codebase works. Architecture, conventions, style.</div>
-<div class="panel-box"><strong>🏠 Global</strong><code>~/.claude/CLAUDE.md</code>: how I work. Commit style, habits, preferences.</div>
-</div>
-
-Ships in every prompt. Keep it short: overflow goes to `rules/` and `skills/`.
-
-<!--
-"A good CLAUDE.md is a good onboarding doc."
-"The better it is, the less you repeat yourself to the agent."
-"Every byte ships in every prompt, keep it short. Past one screen, move to rules/ or skills/."
-
-[DEMO ~2 min, spans 12-14 · OFFLINE-SAFE] Open your editor. Show the REAL files: your
-project CLAUDE.md, one skill.md, and a hook firing on save. All local, no internet.
-Concrete beats the diagram. Pre-open the files before the talk.
-→ "But some rules shouldn't be suggestions. That's what hooks are for."
--->
-
----
-
-## ▸ Level 3 · Rules, hooks, permissions
-
-<div class="ladder l3"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-
-- **Rules** (`rules/`): glob-targeted conventions. *Domain layer = no framework imports.* Loaded only when matched.
-- **Hooks**: shell commands on events. Auto-format, block edits to critical files, even if the agent forgets.
-- **Permissions**: `allow` unlocks flow; `deny` draws lines the agent can't cross, *even when asked politely.*
-
-<!--
-"Rules: what the agent should know. Hooks: what the system enforces regardless."
-"Permissions: lines the agent can't cross, even when asked politely."
-Land: "Safety before leverage. That order matters."
-→ "Skills are where your competitive edge actually lives."
--->
-
----
-
-## ▸ Level 3 · Skills: your edge that outlasts models
-
-<div class="ladder l3"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-
-> Who does your taxes? A 300-IQ genius who never read tax law, or an accountant with 20 years of filings?
-
-<style scoped>
-  section { justify-content:center !important; }
-  .sk-split { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center; margin-top:.2rem; }
-  .sk-split ul { margin:0; font-size:25px; }
-  .sk-split li { margin:.3em 0; }
-  .sk-split pre { font-size:18px; margin:0 0 .4rem; }
-</style>
-
-<div class="sk-split">
-<div>
-
-- **Intelligence ≠ expertise.** A skill = a markdown file, loaded **on demand**.
-- **Agent is replaceable. Skills are not.** New model, productive day one.
-- Start at the **second repeated prompt**.
-
-</div>
-<div>
-
-```
-.agnostic-ai/skills/
-├── commit/
-├── refactor/
-├── test/
-└── … 15 total
-```
-
-<span class="small">github.com/phel-lang/.../.agnostic-ai/skills</span>
-
-</div>
-</div>
-
-<!--
-[pause after the accountant line. Let it land.]
-"Intelligence is not expertise. Skills close that gap. A skill is a markdown file, 20 cost nothing until one fits."
-Land: "The agent ships next year. Your skills ship forever. They encode your domain, your conventions, your architecture."
-"Start with the second repeated prompt. That's a skill waiting to be written."
-→ "One catch: all of this is one vendor's format. Make it portable."
--->
-
----
-
-## ▸ Level 3 · Make it vendor-agnostic
+## ▸ Level 3 · agnostic-ai: one spec, every tool
 
 <div class="ladder l3"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
@@ -529,13 +408,13 @@ Land: "The agent ships next year. Your skills ship forever. They encode your dom
 <div class="ag-split">
 <div>
 
-All of it is Claude-specific. Bet on the **context**, not the vendor.
+Your edge is the **context**, not the vendor. Don't lock it to one tool.
 
 > **agnostic-ai**: write the spec once, sync to 14+ tools.
 
 One source of truth. Switch tools, keep your edge.
 
-<span class="small">github.com/Chemaclass/agnostic-ai</span>
+<span class="small"><a href="https://github.com/Chemaclass/agnostic-ai">github.com/Chemaclass/agnostic-ai</a></span>
 
 </div>
 <div>
@@ -560,61 +439,179 @@ targets:
 </div>
 
 <!--
-"You just built the whole .claude/ folder: CLAUDE.md, rules, skills, hooks. But that's one vendor's format."
-"I wrote agnostic-ai for exactly this: define agents, skills, rules, hooks once, sync to 14+ tools in their native format."
+"Before we touch a single file: don't bet your context on one tool's format."
+"agnostic-ai: define agents, skills, rules, hooks once, sync to 14+ tools in their native format."
 Land: "Bet on the context, not the vendor. The tool ships next year. Your context shouldn't have to be rewritten."
 [OFFLINE-SAFE: WASM playground runs in-browser, no internet. Pre-load a tab if you want to demo a sync.]
-→ "Context is the what. Now the how: two concrete workflows."
+→ "So what lives in that one source of truth? One committed folder."
 -->
 
 ---
 
-## Workflow 1 · Refactoring with an LLM
+## ▸ Level 3 · The `.agnostic-ai/` folder
 
-<span class="chip">1 of 2</span>
+<div class="ladder l3"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
-<div class="wf-problem">🚨 <strong>Problem:</strong> AI defaults to <em>adding</em>. Won't improve code unless asked.</div>
+<style scoped>
+  .fld-split { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center; margin-top:.3rem; }
+  .fld-split pre { font-size:18px; margin:0; }
+</style>
 
-<div class="wf-steps">
-<div class="wf-step"><span class="n">1</span>Make it work first.</div>
-<div class="wf-step"><span class="n">2</span><em>"Simplify."</em> · <em>"SOLID violations?"</em></div>
-<div class="wf-step"><span class="n">3</span><code>/refactor</code> reads the diff.</div>
+<div class="fld-split">
+<div>
+
+```
+.agnostic-ai/
+├── agents/   # specialized roles
+├── skills/   # runnable procedures
+├── rules/    # scoped conventions
+├── hooks/    # event scripts
+└── agnostic-ai.yaml
+```
+
+One git-committed folder. Clone it, inherit everything.
+
+</div>
+<div>
+
+**🫀 The root context: where it all starts**
+
+Read on every boot. *Project:* how the codebase works. *Global:* how you work.
+
+Ships in every prompt: keep it short, overflow to `rules/` and `skills/`.
+
+</div>
 </div>
 
-<div class="wf-rule">You name the shape. AI drives the move.</div>
-
 <!--
-"AI defaults to adding. It won't improve code unless you explicitly ask."
-Step 1: "Make it work first. Don't refactor in the same prompt."
-Step 2: ask out loud, "simplify this", "remove the boilerplate", "any SOLID violations?"
-Step 3: run /refactor, a clean-code-reviewer agent reads the diff.
-Land: "You name the target shape. The co-pilot drives the mechanical move."
-→ "Workflow 2: where AI usually makes tests worse, and how to fix that."
+"One folder, committed to git. Everyone who clones inherits the full setup."
+"agnostic-ai syncs it to each tool's native files: .claude/, .cursor/, copilot, whatever you use."
+The heart is the root context, the onboarding doc read on every boot. Project = how this codebase works, global = how you work.
+"Every byte ships in every prompt. Keep it short, past one screen move to rules/ or skills/."
+[DEMO ~2 min · OFFLINE-SAFE] Open your editor, show the real files: project context, one skill.md, a hook firing on save. All local.
+→ "Some of that context shouldn't be a suggestion. Enforce it."
 -->
 
 ---
 
-## Workflow 2 · Testing with an LLM
+## ▸ Level 3 · Guardrails: suggest vs enforce
 
-<span class="chip">2 of 2</span>
+<div class="ladder l3"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
-<div class="wf-problem">🚨 <strong>Problem:</strong> AI mirrors <em>implementation</em>. Tests break on refactor.</div>
+<style scoped>
+  .gr-split { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center; margin-top:.3rem; }
+  .gr-split pre { font-size:18px; margin:0; }
+</style>
 
-<div class="wf-steps">
-<div class="wf-step"><span class="n">1</span>Ask for <strong>behavior</strong>, not implementation.</div>
-<div class="wf-step"><span class="n">2</span><strong>TDD-coach agent</strong>: red → green → refactor.</div>
-<div class="wf-step"><span class="n">3</span><strong>Hook blocks the commit</strong> unless green.</div>
+<div class="gr-split">
+<div>
+
+- **Rules** *suggest*: scoped conventions, loaded only when a file matches.
+- **Hooks** *enforce*: shell on events, run regardless, even if the agent forgets.
+
+A `deny` is a line the agent can't cross, *even when asked politely.*
+
+</div>
+<div>
+
+```bash
+# hook: keep the domain framework-free
+PreToolUse(Edit), path src/Domain/**
+  → exit 2 "no framework imports here"  # blocks
+```
+
+</div>
 </div>
 
-<div class="wf-rule">TDD no longer has to fight deadlines.</div>
+<!--
+"Two kinds of guardrail. Rules suggest, hooks enforce."
+"A rule is advice the agent reads when a file matches. A hook is a shell command the system runs no matter what: auto-format, block a commit, protect a file."
+Land: "Rules are what it should know. Hooks are what the system guarantees."
+"And a deny permission is a hard line, off-limits even when asked politely."
+→ "Guardrails done. The highest-leverage file in the folder: skills."
+-->
+
+---
+
+## ▸ Level 3 · Skills: your edge that outlasts models
+
+<div class="ladder l3"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+> Who does your taxes? A 300-IQ genius who never read tax law, or an accountant with 20 years of filings?
+
+<style scoped>
+  .sk-split { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center; margin-top:.2rem; }
+  .sk-split ul { margin:0; font-size:25px; }
+  .sk-split li { margin:.3em 0; }
+  .sk-split pre { font-size:18px; margin:0 0 .4rem; }
+</style>
+
+<div class="sk-split">
+<div>
+
+- **Intelligence ≠ expertise.** A skill = a markdown file, loaded **on demand**.
+- **Agent is replaceable. Skills are not.** New model, productive day one.
+- Start at the **second repeated prompt**.
+
+</div>
+<div>
+
+```
+.agnostic-ai/skills/
+├── commit/
+├── refactor/
+├── test/
+└── … 15 total
+```
+
+<span class="small"><a href="https://github.com/phel-lang/phel-lang/tree/main/.agnostic-ai/skills">github.com/phel-lang/.../.agnostic-ai/skills</a></span>
+
+</div>
+</div>
 
 <!--
-"Say 'test behavior' out loud." [pause] "That changes everything."
-Step 1: ask for behavior, not implementation. Name the outcome, not the method.
-Step 2: a TDD-coach agent runs red → green → refactor in sequence.
-Step 3: a hook blocks the commit unless the suite is green and coverage holds.
-Land: "TDD used to compete with deadlines. With a hook enforcing coverage, it doesn't have to."
-→ "What if these ran as standing roles? That's L4."
+[pause after the accountant line. Let it land.]
+"Intelligence is not expertise. Skills close that gap. A skill is a markdown file, they cost nothing until one fits."
+Land: "The agent ships next year. Your skills ship forever. They encode your domain, your conventions, your architecture."
+"Start with the second repeated prompt. That's a skill waiting to be written."
+→ "Skills are what the agent knows. MCP is what it can reach."
+-->
+
+---
+
+## ▸ Level 3 · MCP: reach beyond the repo
+
+<div class="ladder l3"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<style scoped>
+  .mcp-split { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center; margin-top:.3rem; }
+  .mcp-split pre { font-size:18px; margin:0; }
+</style>
+
+<div class="mcp-split">
+<div>
+
+**MCP** gives the agent hands beyond your code: `filesystem` · `github` · `postgres` · your own tools.
+
+Context says **what**. MCP lets it **act** on the world outside the repo.
+
+</div>
+<div>
+
+```
+You: "which users churned last week?"
+ →  agent queries prod Postgres (read-only)
+ →  answers in plain English
+```
+
+</div>
+</div>
+
+<!--
+"MCP, Model Context Protocol, gives the agent hands: filesystem, github, postgres, your own tools. It turns a conversation partner into an active participant."
+"Concrete: ask 'which users churned last week', the agent runs a read-only query and answers. No copy-paste, no leaving the chat."
+Land: "Context says what to do. MCP lets it reach out and do it."
+→ "Context is the what. Next: who acts on it. A team of agents."
 -->
 
 ---
@@ -625,12 +622,14 @@ Land: "TDD used to compete with deadlines. With a hook enforcing coverage, it do
 
 > A single agent is an assistant. Multiple agents from a shared plan is a **team**.
 
-- Specialists, not generalists: Explorer · Clean-code reviewer · TDD coach · Domain architect.
+- Specialists, not generalists: explorer, reviewer, TDD coach, architect.
 - Right model for the right job: cheap to explore, capable for architecture.
 - Humans stop racing AI on speed and start **directing** it.
 
+<span class="small"><a href="https://github.com/phel-lang/phel-lang/tree/main/.agnostic-ai/agents">github.com/phel-lang/.../.agnostic-ai/agents</a></span>
+
 <!--
-"The 3 workflows become standing roles. Org chart unchanged, each person produces a lot more."
+"Specialist roles become standing teammates. Org chart unchanged, each person produces a lot more."
 Land: "Humans stop racing AI on speed and start directing it."
 → "Two shapes of multi-agent work, pick the right one."
 -->
@@ -642,7 +641,6 @@ Land: "Humans stop racing AI on speed and start directing it."
 <div class="ladder l4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <style scoped>
-  section { justify-content:center !important; }
   .vs-rule { margin-top:1rem; }
 </style>
 
@@ -651,7 +649,7 @@ Land: "Humans stop racing AI on speed and start directing it."
 <div class="panel-box"><strong>🔸 Agent teams</strong>Independent sessions, own context. Coordinate via mailbox.</div>
 </div>
 
-<div class="wf-rule vs-rule"><strong>Competing hypotheses:</strong> teammates each defend a theory, disprove the rest.</div>
+<div class="wf-rule vs-rule"><strong>Where a team wins:</strong> rival theories debate until one survives.</div>
 
 <!--
 "Start with subagents, simpler, cheaper, easier to debug."
@@ -667,10 +665,11 @@ Land: "Humans stop racing AI on speed and start directing it."
 <div class="ladder l4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <style scoped>
-  .tm-split { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center; margin-top:.4rem; }
+  .tm-split { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start; margin-top:.4rem; }
   .tm-split ul { margin:0; font-size:25px; }
   .tm-split li { margin:.32em 0; }
-  .tm-split img { box-shadow:var(--shadow); border-radius:8px; }
+  .tm-split img { box-shadow:var(--shadow); border-radius:8px;
+    width:100%; height:425px; object-fit:cover; object-position:left center; }
 </style>
 
 <div class="tm-split">
@@ -708,10 +707,11 @@ Land: "Independent sessions, shared task list. That's a team, not a tool."
 <div class="ladder l4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <style scoped>
-  .wt-split { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center; margin-top:.4rem; }
+  .wt-split { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start; margin-top:.4rem; }
   .wt-split ul { margin:0; font-size:25px; }
   .wt-split li { margin:.32em 0; }
-  .wt-split img { box-shadow:var(--shadow); border-radius:8px; }
+  .wt-split img { box-shadow:var(--shadow); border-radius:8px;
+    width:100%; height:425px; object-fit:cover; object-position:left center; }
 </style>
 
 <div class="wt-split">
@@ -746,6 +746,10 @@ Land: "I monitor and merge. The parallelism is real, not a demo trick."
 
 <div class="ladder l4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
+<style scoped>
+  section .content-img img { max-height:430px; height:430px; object-fit:cover; object-position:center top; }
+</style>
+
 <div class="content-img">
 <div>
 
@@ -755,8 +759,7 @@ A coding agent lives in one repo.
 - Its own hardware via **OpenClaw**.
 - I talk to him over **Telegram**.
 - He pushes back when I tunnel.
-
-<span class="small">sauronbot.github.io</span>
+- <a href="https://sauronbot.github.io">sauronbot.github.io</a>
 
 </div>
 <div>
@@ -787,6 +790,10 @@ recording lands the same beat; live is a bonus, not a dependency.
 
 <div class="ladder l4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
+<style scoped>
+  section .content-img img { max-height:380px; height:380px; object-fit:cover; object-position:center center; }
+</style>
+
 <div class="content-img">
 <div>
 
@@ -801,7 +808,7 @@ Neither of us could have built it alone.<br>**That's a co-pilot at its best.**
 
 ![w:100%](assets/22-carry-the-ring.png)
 
-<span class="small">sauronbot.github.io</span>
+<span class="small faint" style="display:block; text-align:center; margin-top:.45rem;">sauronbot.github.io</span>
 
 </div>
 </div>
@@ -951,7 +958,7 @@ Order is the lesson: shared practices → context → teams → AI-native.
 ## Take home: simple, repeatable techniques
 
 <style scoped>
-  section { justify-content: center !important; font-size: 28px; line-height: 1.45; }
+  section { font-size: 28px; line-height: 1.45; }
   ol li, ul li { margin: .34em 0; }
   ol { margin: .3em 0 0; }
   p { margin: .45em 0; }
