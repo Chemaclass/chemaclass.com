@@ -18,6 +18,8 @@
 #   scripts/build-slides.sh --all                 # same, explicit
 #   scripts/build-slides.sh <slug>                # rebuild one existing deck
 #   scripts/build-slides.sh <external-folder> <slug>   # import a deck from another repo
+#   scripts/build-slides.sh --watch [slug]        # live-reload server: editing deck.md
+#                                                 # refreshes the browser instantly
 #
 # Each build auto-optimizes assets (minify SVG, pngquant PNG once) and regenerates
 # static/slides/index.html — a themed landing listing all decks. Zero maintenance.
@@ -29,7 +31,8 @@
 #   4. link from a talk page:  [[slides](/slides/<slug>/)]
 #
 # Preview while editing:
-#   cd static/slides/<slug> && npx -y @marp-team/marp-cli -s . --html --allow-local-files
+#   scripts/build-slides.sh --watch            # live server, all decks
+#   scripts/build-slides.sh --watch ai-copilot # live server scoped to one deck
 #   # or, through the site:   zola serve  ->  http://127.0.0.1:1111/slides/<slug>/
 #
 # Notes: theme mirrors chemaclass.com (Rubik, palette). Speaker notes live in <!-- ... -->.
@@ -135,13 +138,32 @@ HTML
 
 # ---- parse args -----------------------------------------------------------
 ALL=0
+WATCH=0
 ARGS=()
 for a in "$@"; do
   case "$a" in
-    --all) ALL=1 ;;
-    *)     ARGS+=("$a") ;;
+    --all)   ALL=1 ;;
+    --watch) WATCH=1 ;;
+    *)       ARGS+=("$a") ;;
   esac
 done
+
+# ---- WATCH mode: live-reload preview server -------------------------------
+# Marp server mode renders decks on the fly and reloads the browser on every
+# save. No index.html is written here — run a normal build before committing.
+if [ "$WATCH" = "1" ]; then
+  if [ "${#ARGS[@]}" -ge 1 ]; then
+    SERVE="$BASE/${ARGS[0]}"
+    [ -d "$SERVE" ] || die "no static/slides/${ARGS[0]}/"
+  else
+    SERVE="$BASE"
+  fi
+  echo "• watch: live server at http://localhost:8080/  (Ctrl-C to stop)"
+  echo "  saving deck.md reloads the browser automatically."
+  echo "  note: index.html is NOT regenerated in watch mode —"
+  echo "        run 'scripts/build-slides.sh' before committing."
+  exec npx -y @marp-team/marp-cli -s "$SERVE" --html --allow-local-files
+fi
 
 # ---- ALL mode: rebuild every deck under static/slides/* -------------------
 if [ "${#ARGS[@]}" -eq 0 ] || [ "$ALL" = "1" ]; then
