@@ -145,7 +145,11 @@ a {
   text-decoration: none;
   transition: color 0.2s ease;
 
-  &:hover {
+  // Plain text links get the recolor + underline on hover. Button-styled
+  // anchors (btn/button/cta/view-all) opt out: they keep their own bg/color
+  // and must never inherit the underline border, which looks broken on a
+  // solid-blue button.
+  &:hover:not([class*="btn"]):not([class*="button"]):not([class*="cta"]):not(.view-all) {
     color: var(--accent-overlay-color);
     border-bottom: 1px solid var(--accent-color-light);
   }

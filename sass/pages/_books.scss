@@ -196,8 +196,8 @@
       color: white;
 
       &:hover {
-        filter: brightness(1.15);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        color: white;
+        background: color-mix(in srgb, var(--accent-color) 85%, black);
       }
     }
 
@@ -648,8 +648,8 @@
       color: white;
 
       &:hover {
-        filter: brightness(1.15);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        color: white;
+        background: color-mix(in srgb, var(--accent-color) 85%, black);
       }
     }
 
