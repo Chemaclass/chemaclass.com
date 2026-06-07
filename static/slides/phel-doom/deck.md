@@ -156,14 +156,14 @@ Name the room: "You're thinking: that can't work in PHP."
 ## What you'll leave with
 
 1. **Why** Phel exists and what makes it different
-2. **How** to write Phel, from zero
-3. **How** it plugs into your PHP tooling and runtime
-4. **When** to use it, and when not to
+2. **How** to write it from zero: syntax, data, state
+3. **How** it plugs into PHP: all of PHP, the REPL, one CLI
+4. **How** immutability shapes a real project: DOOM
 
 > We learn by **building the game**. No spec-reading.
 
 <!--
-30s. "Four things: why it exists, how to write it, how it plugs in, when to use it."
+30s. "Four things: why it exists, how to write it, how it plugs into PHP, and how it builds a real game."
 Don't read the list. Signpost and move.
 -->
 
@@ -201,7 +201,7 @@ vendor/bin/phel build    # compiles .phel → out/*.php
 - **OPcache + JIT** apply for free.
 - Ships as `vendor/bin/phel`. One CLI for everything.
 
-> Write Lisp. Ship PHP. Server learns nothing new.
+> Write Lisp. Ship PHP. Server needs nothing new.
 <!--
 "You write Lisp. You ship PHP. Server learns nothing new."
 Tease: "We'll open the compiled files live later - no magic."
@@ -431,33 +431,6 @@ Foreshadow: "Same shape casts one ray per screen column, ~120-180 a frame in the
 
 ---
 
-## State: opt-in and explicit
-
-```clojure
-(def score (atom 0))    ; wrap a value in a labeled, mutable box
-```
-
-| | expression | result |
-|---|---|---|
-| read | `@score` | `0` |
-| apply fn | `(swap! score + 10)` | `10` |
-| increment | `(swap! score inc)` | `11` |
-| reset | `(reset! score 0)` | `0` |
-
-`!` suffix = side effect. `@` = dereference (read current value).
-
-Mutation is **rare**, **named**, and **visible.**
-Not hidden in a property.
-
-<span class="reflex">🧠 Any PHP property mutates from anywhere. In Phel: one labeled box.</span>
-
-<!--
-"Functional doesn't mean no state. 11,700 lines, a handful of atoms."
-"swap! applies a function atomically. @ reads the current value."
--->
-
----
-
 <!-- _class: lead -->
 # ACT 2
 ## PHP interop and tooling
@@ -518,30 +491,6 @@ Load any namespace. Probe any function. No rebuild, no restart.
 <!--
 DO IT LIVE. 3-4 expressions. Invite: "throw me something."
 Breather - don't rush. 90s max, then back to slides.
--->
-
----
-
-## One CLI for everything
-
-```bash
-phel run …     phel repl      phel test
-phel build     phel format    phel doctor
-```
-
-- Lives in `vendor/bin/phel`. Installed as a normal Composer dependency.
-- Wire into your **CI, git hooks, Docker.** No new toolchain.
-- Prod: `phel build` emits plain PHP. No Phel at runtime.
-
-**Editors:** PhpStorm plugin · VS Code extension · Vim · Emacs
-Syntax highlighting, REPL actions, LSP + nREPL.
-
-> Your workflow unchanged. Phel just plugs in.
-
-<!--
-"phel doctor checks your setup. phel format auto-formats. phel lint catches errors early."
-"PhpStorm and VS Code have first-class plugins - syntax, REPL actions, LSP + nREPL."
-"Phel joins your workflow, not replaces it."
 -->
 
 ---
@@ -822,19 +771,16 @@ Pure functions: call with input, check output. Done.
 
 ## Dividend: pure is fast
 
-Target: cast + render **< 5 ms**.
-Measured `cast-frame`: **0.21 / 0.32 / 0.51 ms**
+Target **< 5 ms** per frame · measured **0.2 - 0.5 ms**
 
-- Memoize `cast-frame` on paused frames. **Legal because it is pure.**
-- Precompute view angles in an atom: **-60%** cast time.
-- Raw PHP arrays for the grid: Phel's persistent vectors are **~680x slower** here.
-- Type hints + raw operators: **~5x** faster in the innermost loop.
+- **Memoize** paused frames: a one-line cache, safe because pure.
+- Precompute view angles: **-60%** cast time.
+- Hot loop: raw PHP arrays, not persistent vectors (**~680x** faster).
 
-<span class="reflex">🧠 Pure function = same input, same output. Caching is always safe.</span>
+<span class="reflex">🧠 Pure = same input, same output. Caching can never be wrong.</span>
 <!--
-Point at chart: 2.04 → 0.51 ms.
-"Memoize was one line. Legal because it's pure - same input, same output."
-Honest: "Persistent vectors are beautiful. ~680x slower in a 7,000-cell hot loop."
+"Memoize was one line. Free and safe - a pure function can't lie."
+Honest: "Persistent vectors are beautiful, but ~680x slower in a 7,000-cell hot loop. Reach for raw arrays there."
 -->
 
 ---
