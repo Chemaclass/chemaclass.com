@@ -111,7 +111,7 @@ Slides 19+ = real phel-doom code.
 
 # Writing Lisp in PHP
 
-### We learn by building a DOOM clone
+### Learn Phel by building DOOM
 
 **Chemaclass**
 
@@ -796,26 +796,6 @@ DEMO > build it up live, same engine, one subsystem at a time:
 
 ---
 
-## Macros: name an idiom, pay nothing
-
-```clojure
-(defmacro buf-set [b i v]
-  `(php/aset ~b ~i ~v))    ; ` = template, ~ = splice value in
-```
-
-`(buf-set frame i cell)` → **at compile time** → `(php/aset frame i cell)`
-
-A named Phel-level op that compiles straight to raw PHP. **Zero call overhead** in a ~7200-cell/frame render loop - a function would cost a call per cell.
-
-<span class="reflex">🧠 Macros rewrite code at compile time. Here, the humblest case: zero-cost inlining.</span>
-<!--
-"Macros rewrite code at compile time. This is the humblest use - zero-cost inlining."
-Trace buf-set → php/aset. "A function would pay a call per cell; this pays nothing."
-One beat. Pause.
--->
-
----
-
 ## Testing: pure = no mocks
 
 ```clojure
@@ -855,27 +835,6 @@ Measured `cast-frame`: **0.21 / 0.32 / 0.51 ms**
 Point at chart: 2.04 → 0.51 ms.
 "Memoize was one line. Legal because it's pure - same input, same output."
 Honest: "Persistent vectors are beautiful. ~680x slower in a 7,000-cell hot loop."
--->
-
----
-
-## Determinism: free features
-
-```clojure
-(rng/seed! seed)              ; one seed per run
-(recur … (rng/next-raw!) …)   ; advance deterministically
-```
-
-Same seed → identical levels, enemies, loot.
-
-- **R** on death = replay the exact same map
-- `--record` / `--demo` = record and replay
-
-<span class="reflex">🧠 PHP global `rand()` = non-reproducible. Thread the seed → same input, same run, every time.</span>
-
-<!--
-"Same seed → same levels, same enemies, same loot. Entire run is reproducible."
-If time: DO LIVE - run --demo replay.
 -->
 
 ---
