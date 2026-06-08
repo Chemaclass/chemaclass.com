@@ -277,12 +277,11 @@ The real cost isn't a leak, it's compounding time: every month at L0, competitor
 
 <div class="ladder l1"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
-**Example:** Two engineers, same task. One gets clean code, one gets garbage. They prompt differently. Know-how trapped in each head.
+Same task, two engineers: one gets clean code, one gets garbage. The know-how is trapped in each head.
 
 > The quality of your answer depends on the quality of your question.
 
-Prompting = modern descendant of asking on Stack Overflow. 
-Speed without shared direction = faster chaos.
+Speed without shared direction is just faster chaos.
 
 <!--
 Same task, same nominal prompt, two engineers, wildly different output. The difference is know-how trapped in each head, never written down.
@@ -343,33 +342,6 @@ Team writes down *how we use AI*: shared prompts, conventions, when to push back
 L1 to L2 is a cultural step, not a technical one, which is why it's the hardest on the ladder.
 What to write down: shared prompts, conventions, when to push back. Commit it, review it like code. Now AI is a team skill, not a personal habit, so the floor and ceiling both rise and new hires ramp faster.
 The gap it leaves: shared practices still have no memory. That's what context (L3) fixes.
--->
-
----
-
-## ▸ Level 3 · Context is the real superpower
-
-<div class="ladder l3"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-
-<div class="content-img">
-<div>
-
-> The intelligence was always there. Context gives it hands.
-
-- Model reasons about your schema *if you paste it*. Limit isn't intelligence. It's **reach**.
-- **Weak model + great context beats frontier model with none.**
-
-</div>
-<div>
-
-![w:100%](assets/10-brain-hands.svg)
-
-</div>
-</div>
-
-<!--
-Key claim: a weak model with great context beats a frontier model with none. The bottleneck was never raw intelligence, it's reach into your schema, conventions, and code.
-So all of L3 is about engineering that context. Stop chasing models, start engineering context.
 -->
 
 ---
@@ -713,7 +685,6 @@ A coding agent lives in one repo.
 
 - Its own hardware via **OpenClaw**.
 - I talk to him over **Telegram**.
-- He pushes back when I tunnel.
 - <a href="https://sauronbot.github.io">sauronbot.github.io</a>
 
 </div>
