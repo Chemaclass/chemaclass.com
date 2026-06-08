@@ -143,6 +143,9 @@ Privacy isn't dead. They made sure of that.
 ---
 
 {{ youtube(id="9vM0oIEhMag") }}
+
+---
+
 **Related links**
 
 - Learn more: [What is PGP encryption?](/pgp) <small>A 3-minute tutorial for beginners</small>

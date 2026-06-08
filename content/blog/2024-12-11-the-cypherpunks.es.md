@@ -142,6 +142,9 @@ La privacidad no está muerta. Ellos se aseguraron de eso.
 ---
 
 {{ youtube(id="9vM0oIEhMag") }}
+
+---
+
 **Enlaces relacionados**
 
 - Aprende más: [¿Qué es el cifrado PGP?](/pgp) <small>Un tutorial de 3 minutos para principiantes</small>
