@@ -80,6 +80,12 @@ style: |
   .split > .col-text { flex: 1; }
   .split > .col-img { flex: 1; }
   .split > .col-img img { width: 100%; border-radius: 8px; box-shadow: 0 2px 12px rgba(15,23,42,.18); }
+  .ray-demo { width: 100%; max-height: 420px; height: auto; display: block; margin: 6px auto 10px; }
+  .shot { display: block; margin: 18px auto 0; height: 210px; width: auto; max-width: 70%; border-radius: 10px; box-shadow: 0 2px 12px rgba(15,23,42,.18); }
+  .formula { font-family: "Fira Code", ui-monospace, monospace; font-size: 40px; font-weight: 600; color: #512da8; text-align: center; background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 22px 18px; margin: 22px auto; }
+  .formula .den { color: #be185d; }
+  @keyframes raysweep { 0% { opacity: 0 } 2% { opacity: 1 } 7% { opacity: 1 } 12% { opacity: 0 } 100% { opacity: 0 } }
+  @media (prefers-reduced-motion: reduce) { .ray-demo [style*="raysweep"] { animation: none !important } }
   footer { color: #94a3b8; }
   section::after { color: #94a3b8; }
   /* === code-token colours - light syntax theme === */
@@ -115,11 +121,6 @@ Slides 19+ = real phel-doom code.
 
 **Chemaclass**
 
-<!--
-20s. "40 minutes: I'll teach you a Lisp - and prove it's not a toy by showing a DOOM clone I built with it."
-Eye contact. No notes.
--->
-
 ---
 
 <!-- _paginate: false -->
@@ -127,11 +128,6 @@ Eye contact. No notes.
 <!-- _footer: "" -->
 
 ![bg fit](assets/screenshot.png)
-
-<!--
-3s silence. Let it breathe. Say nothing. Let the room realize what they're looking at.
-Then click to the claim.
--->
 
 ---
 
@@ -144,12 +140,9 @@ Then click to the claim.
 This is **DOOM**. In a **terminal**.
 Written in a **Lisp**. That compiles to **PHP 8.4**.
 
+## Write Lisp. Ship PHP. Even DOOM.
+
 <span class="small">~11,700 lines of Phel · same raycasting idea as id Software's 1993 original · ~5 ms/frame</span>
-<!--
-Click in. 3s silence. Let the GIF breathe.
-"DOOM. In a terminal. Written in Lisp. Compiled to PHP 8.4."
-Name the room: "You're thinking: that can't work in PHP."
--->
 
 ---
 
@@ -161,11 +154,6 @@ Name the room: "You're thinking: that can't work in PHP."
 4. **How** immutability shapes a real project: DOOM
 
 > We learn by **building the game**. No spec-reading.
-
-<!--
-30s. "Four things: why it exists, how to write it, how it plugs into PHP, and how it builds a real game."
-Don't read the list. Signpost and move.
--->
 
 ---
 
@@ -183,11 +171,6 @@ composer require phel-lang/phel-lang
 
 <span class="reflex">🧠 "New language = new runtime + new hires"? No. It's a Composer package.</span>
 
-<!--
-Clojure folks: "Same idea, PHP runtime." Everyone else: "PHP under the hood, written like a Lisp."
-Land on: "you require a dependency, not a platform."
--->
-
 ---
 
 ## It's still PHP under the hood
@@ -202,10 +185,6 @@ vendor/bin/phel build    # compiles .phel → out/*.php
 - Ships as `vendor/bin/phel`. One CLI for everything.
 
 > Write Lisp. Ship PHP. Server needs nothing new.
-<!--
-"You write Lisp. You ship PHP. Server learns nothing new."
-Tease: "We'll open the compiled files live later - no magic."
--->
 
 ---
 
@@ -213,7 +192,7 @@ Tease: "We'll open the compiled files live later - no magic."
 # ACT 1
 ## Phel basics, for PHP developers
 
-<!-- Zero Lisp experience assumed. All examples standalone, no game code yet. -->
+*Ten minutes. Zero Lisp needed.*
 
 ---
 
@@ -236,12 +215,6 @@ Tease: "We'll open the compiled files live later - no magic."
 That's the entire syntax. Everything else is just functions.
 
 <span class="reflex">🧠 `1 + 2 * 3` has precedence rules. In Phel: always `(op args)`, no exceptions.</span>
-
-<!--
-"If you can read (+ 1 2), you can read every line in this game."
-Tackle parens: "Yes, parentheses. You stop seeing them in ten minutes."
-Don't dodge it - name it, defuse it, move.
--->
 
 ---
 
@@ -266,11 +239,6 @@ Don't dodge it - name it, defuse it, move.
 
 <span class="reflex">🧠 PHP: any var is reassignable from anywhere. `def` says "this never changes."</span>
 
-<!--
-"? suffix - convention, like PHP's is_ prefix. Not special syntax."
-"let is a scoped block. a, b, total vanish after the closing ]."
--->
-
 ---
 
 ## Functions
@@ -291,12 +259,6 @@ Don't dodge it - name it, defuse it, move.
 ```
 
 <span class="reflex">🧠 PHP: `function greet($n) { return "Hello, ".$n; }` · `fn($x) => $x * 2`</span>
-
-<!--
-"No return keyword. Last expression IS the value."
-"defn = public, defn- = private. That's the whole access model."
-"#() is shorthand for a one-liner fn. % is the argument. You'll see it everywhere."
--->
 
 ---
 
@@ -320,11 +282,6 @@ like PHP string keys but faster to compare
 
 <span class="reflex">🧠 PHP arrays do everything. Phel separates the concept: map / vector / set.</span>
 
-<!--
-PHP translation: "map = assoc array, vector = indexed array, set = unique values."
-":name is a keyword - interned, faster to compare than a plain string."
--->
-
 ---
 
 ## Working with collections
@@ -343,11 +300,6 @@ PHP translation: "map = assoc array, vector = indexed array, set = unique values
 ```
 
 <span class="reflex">🧠 `array_map` / `array_filter` / `array_reduce` - same patterns, first-class in Phel.</span>
-
-<!--
-"map, filter, reduce - you already know these. Same concept, cleaner syntax."
-"for is like a list comprehension. :when is the filter condition."
--->
 
 ---
 
@@ -372,11 +324,6 @@ PHP translation: "map = assoc array, vector = indexed array, set = unique values
 
 <span class="reflex">🧠 PHP `switch` is a statement. `cond` IS the value, assign it directly.</span>
 
-<!--
-"if and cond return a value. No temp variable needed."
-Walk grade(82) aloud → :B. One beat. Move.
--->
-
 ---
 
 ## Threading: pipelines, not nesting
@@ -399,11 +346,6 @@ Walk grade(82) aloud → :B. One beat. Move.
 
 <span class="reflex">🧠 `$obj->method()->chain()` needs fluent objects. `->` works on any value.</span>
 
-<!--
-"PHP fluent chains need objects. -> works on any value."
-Give this a full breath - most useful daily concept.
--->
-
 ---
 
 ## Loops without mutation
@@ -424,18 +366,13 @@ No `while`. No `$i++`. No mutable variables.
 
 <span class="reflex">🧠 `loop` = "start here". `recur` = "next iteration, no new stack frame."</span>
 
-<!--
-"loop = initial state. recur = next iteration, no new stack frame."
-Foreshadow: "Same shape casts one ray per screen column, ~120-180 a frame in the raycaster. Coming up."
--->
-
 ---
 
 <!-- _class: lead -->
 # ACT 2
 ## PHP interop and tooling
 
-<!-- Bridge from Phel concepts to their PHP world. -->
+*But can it touch real PHP?*
 
 ---
 
@@ -460,12 +397,6 @@ Any Composer package works.
 
 <span class="reflex">🧠 "But does it have a library for X?" Yes. All of them. It's PHP.</span>
 
-<!--
-"Every PHP function, prefixed with php/. There is no wall."
-"Objects: php/new to construct. .method to call. ClassName/CONST for statics."
-Segue: "Next slide: the REPL - let's try it live."
--->
-
 ---
 
 ## The REPL: try everything live
@@ -488,18 +419,13 @@ phel:> (-> "  hello  " php/trim php/strtoupper)
 
 Load any namespace. Probe any function. No rebuild, no restart.
 
-<!--
-DO IT LIVE. 3-4 expressions. Invite: "throw me something."
-Breather - don't rush. 90s max, then back to slides.
--->
-
 ---
 
 <!-- _class: lead -->
 # ACT 3
 ## Now let's build a game
 
-<!-- Real project code. They know the primitives. Now see them at scale. -->
+*Does immutability survive a real project?*
 
 ---
 
@@ -523,11 +449,6 @@ Breather - don't rush. 90s max, then back to slides.
 
 <span class="reflex">🧠 `ns` = namespace. `:require … :as` = `use X as Y`. `:refer` = `use function X`. Same idea, Lisp syntax.</span>
 
-<!--
-"ns dot-separated mirrors the file path - same idea as PSR-4 namespaces."
-"*build-mode* stops top-level effects during phel build. First clue about compilation."
--->
-
 ---
 
 ## ...and `play-command` is one loop, forever
@@ -545,12 +466,6 @@ Breather - don't rush. 90s max, then back to slides.
 Each frame: `world' = (tick-world world keys dt)`. Draw, discard, repeat.
 
 <span class="reflex">🧠 The whole game is a **fold over keystrokes** - a fresh world each frame.</span>
-
-<!--
-VERY high level - don't read code. "main wired the CLI; play IS the game: a loop."
-Trace the cycle with your finger: input → tick (pure) → render (io) → back to the top with a NEW world.
-"Hold this picture. Next: what's actually IN a world? Then: how one frame transforms it."
--->
 
 ---
 
@@ -570,10 +485,6 @@ This single map **IS the game**.
 - diff it to find what changed
 - save it to disk for quick-save
 - replay it from a seed for deterministic demos
-<!--
-"Everything you see, shoot, or pick up is in this one map."
-Point at :grid, :player, :enemies. "Diff it. Save it. Replay it."
--->
 
 ---
 
@@ -598,11 +509,6 @@ $p->angle = 1.57;   // mutates in-place
 
 <span class="reflex">🧠 Same semantics, half the code. `assoc` returns a new map - original never touched.</span>
 
-<!--
-"PHP: class, constructor, getters. Phel: 4-line function, plain map."
-Pause after the image. That contrast is the laugh.
--->
-
 ---
 
 ## One pure frame: `tick-world`
@@ -621,12 +527,7 @@ Pause after the image. That contrast is the laugh.
 Every subsystem is `world -> world`. Old world discarded.
 A bug stays **trapped in its subsystem** - it can't corrupt the rest.
 
-<span class="reflex">🧠 PHP: subsystems call each other, mutate shared state. Here: one function in, one function out. Nothing else can touch it.</span>
-
-<!--
-"Physics, pickups, enemies, projectiles, shooting, damage - each just world→world."
-"Nothing can corrupt anything else. All testable without a terminal."
--->
+<span class="reflex">🧠 PHP: subsystems mutate shared state. Here: one in, one out. Nothing else can touch it.</span>
 
 ---
 
@@ -646,16 +547,12 @@ tree src/
 ```
 
 > Purity is not mere taste. Structure enforces it.
-<!--
-"core/ literally cannot call print or rand. No require, no access."
-DO LIVE: tree src/ - point at the three directories.
--->
 
 ---
 
-## The trick, in one breath
+## Fake 3D: a flat 2D map
 
-The world is really a **flat maze on graph paper**:
+The world is really a **maze on graph paper**:
 
 <div class="split">
 <div class="col-text">
@@ -667,9 +564,9 @@ The world is really a **flat maze on graph paper**:
 #######
 ```
 
-**One ray** per column → how far to a wall.
+You move on a **flat grid, top-down.** The 3D is an illusion.
 
-Near = **TALL** strip, far = short. Stack them → **the right view.**
+So how does a flat map become *that* view? →
 
 </div>
 <div class="col-img">
@@ -679,39 +576,135 @@ Near = **TALL** strip, far = short. Stack them → **the right view.**
 </div>
 </div>
 
-<!--
-SET UP the real slide. Say it plain BEFORE the code.
-"Forget 3D engines. A maze seen from above, drawn one column at a time."
-Gesture: hands wide for tall=close, narrow for far. Then: "now the real version."
-
-DEMO > bare raycaster (split layout: left 3D, right 2D map, walls only):
-    phel run phel-doom.main demo --phase 1
--->
+<!-- DEMO: phel run phel-doom.main demo --phase 1  (bare raycaster: 3D left, 2D map right, walls only) -->
 
 ---
 
 ## DOOM (1993): Carmack's math
 
-**id Software, John Carmack.** A 486 PC. No GPU. Shipped in 11 months.
+**id Software, John Carmack.** A 486. No GPU. 11 months.
 
-The same intuition, made exact:
+One ray per column, marched to the first wall → distance `d`.
 
-```
-; per column:  angle = player_angle + column_offset
-;   march the ray to the first wall  →  distance d
-;   strip_height = screen_height / d        ; smaller d → taller strip
-```
+<div class="formula">strip height = screen height <span class="den">/ d</span></div>
 
-**One division per ray.** No matrix math. No 3D engine.
+Small `d` = **tall strip.** One division per ray. No 3D engine.
 
 <span class="reflex">🧠 PHP instinct: reach for a 3D rendering library. Carmack: constrain the world, trust the math.</span>
 
-<!--
-Bridge from the previous slide: "that hand-wave, now a formula."
-"This is the entire trick - one division per ray."
-"Carmack's constraint: no looking up or down, flat floors per room. That keeps the math simple."
-Pause. "Now the code. Same algorithm, in Phel. Loop and recur."
--->
+---
+
+## See it: rays in, walls out
+
+<svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" class="ray-demo" role="img" aria-label="raycasting animation">
+<rect x="24" y="28" width="300" height="300" rx="8" fill="#eef2f7" stroke="#cbd5e1"/>
+<rect x="372" y="28" width="300" height="150.0" fill="#dfe6ef"/>
+<rect x="372" y="178.0" width="300" height="150.0" fill="#c3ccd8"/>
+<rect x="372" y="28" width="300" height="300" rx="8" fill="none" stroke="#cbd5e1"/>
+<line x1="174.0" y1="328.0" x2="204.6" y2="238.0" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="199.5" y2="238.0" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="194.8" y2="238.0" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="191.6" y2="230.7" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="191.6" y2="196.6" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="191.6" y2="129.0" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="185.9" y2="58.0" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="174.0" y2="58.0" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="162.1" y2="58.0" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="150.1" y2="58.0" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="137.7" y2="58.0" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="125.0" y2="58.0" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="111.7" y2="58.0" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="97.5" y2="58.0" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<line x1="174.0" y1="328.0" x2="82.3" y2="58.0" stroke="#c7b8ea" stroke-width="1" opacity="0.55"/>
+<rect x="652.0" y="48.0" width="20.6" height="260.0" fill="rgb(116,85,184)"/>
+<rect x="632.0" y="48.0" width="20.6" height="260.0" fill="rgb(116,85,184)"/>
+<rect x="612.0" y="48.0" width="20.6" height="260.0" fill="rgb(116,85,184)"/>
+<rect x="592.0" y="57.7" width="20.6" height="240.6" fill="rgb(114,83,182)"/>
+<rect x="572.0" y="89.0" width="20.6" height="178.0" fill="rgb(106,75,169)"/>
+<rect x="552.0" y="119.2" width="20.6" height="117.6" fill="rgb(89,60,143)"/>
+<rect x="532.0" y="134.7" width="20.6" height="86.7" fill="rgb(71,43,117)"/>
+<rect x="512.0" y="134.7" width="20.6" height="86.7" fill="rgb(71,43,117)"/>
+<rect x="492.0" y="134.7" width="20.6" height="86.7" fill="rgb(71,43,117)"/>
+<rect x="472.0" y="134.7" width="20.6" height="86.7" fill="rgb(71,43,117)"/>
+<rect x="452.0" y="134.7" width="20.6" height="86.7" fill="rgb(71,43,117)"/>
+<rect x="432.0" y="134.7" width="20.6" height="86.7" fill="rgb(71,43,117)"/>
+<rect x="412.0" y="134.7" width="20.6" height="86.7" fill="rgb(71,43,117)"/>
+<rect x="392.0" y="134.7" width="20.6" height="86.7" fill="rgb(71,43,117)"/>
+<rect x="372.0" y="134.7" width="20.6" height="86.7" fill="rgb(71,43,117)"/>
+<line x1="174.0" y1="328.0" x2="204.6" y2="238.0" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:4.2s"/>
+<circle cx="204.6" cy="238.0" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:4.2s"/>
+<rect x="652.0" y="48.0" width="20.6" height="260.0" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:4.2s"/>
+<rect x="652.0" y="48.0" width="20.6" height="260.0" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:4.2s"/>
+<line x1="174.0" y1="328.0" x2="199.5" y2="238.0" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.9s"/>
+<circle cx="199.5" cy="238.0" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.9s"/>
+<rect x="632.0" y="48.0" width="20.6" height="260.0" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.9s"/>
+<rect x="632.0" y="48.0" width="20.6" height="260.0" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.9s"/>
+<line x1="174.0" y1="328.0" x2="194.8" y2="238.0" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.6s"/>
+<circle cx="194.8" cy="238.0" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.6s"/>
+<rect x="612.0" y="48.0" width="20.6" height="260.0" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.6s"/>
+<rect x="612.0" y="48.0" width="20.6" height="260.0" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.6s"/>
+<line x1="174.0" y1="328.0" x2="191.6" y2="230.7" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.3s"/>
+<circle cx="191.6" cy="230.7" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.3s"/>
+<rect x="592.0" y="57.7" width="20.6" height="240.6" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.3s"/>
+<rect x="592.0" y="57.7" width="20.6" height="240.6" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.3s"/>
+<line x1="174.0" y1="328.0" x2="191.6" y2="196.6" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.0s"/>
+<circle cx="191.6" cy="196.6" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.0s"/>
+<rect x="572.0" y="89.0" width="20.6" height="178.0" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.0s"/>
+<rect x="572.0" y="89.0" width="20.6" height="178.0" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:3.0s"/>
+<line x1="174.0" y1="328.0" x2="191.6" y2="129.0" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:2.7s"/>
+<circle cx="191.6" cy="129.0" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:2.7s"/>
+<rect x="552.0" y="119.2" width="20.6" height="117.6" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:2.7s"/>
+<rect x="552.0" y="119.2" width="20.6" height="117.6" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:2.7s"/>
+<line x1="174.0" y1="328.0" x2="185.9" y2="58.0" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:2.4s"/>
+<circle cx="185.9" cy="58.0" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:2.4s"/>
+<rect x="532.0" y="134.7" width="20.6" height="86.7" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:2.4s"/>
+<rect x="532.0" y="134.7" width="20.6" height="86.7" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:2.4s"/>
+<line x1="174.0" y1="328.0" x2="174.0" y2="58.0" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:2.1s"/>
+<circle cx="174.0" cy="58.0" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:2.1s"/>
+<rect x="512.0" y="134.7" width="20.6" height="86.7" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:2.1s"/>
+<rect x="512.0" y="134.7" width="20.6" height="86.7" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:2.1s"/>
+<line x1="174.0" y1="328.0" x2="162.1" y2="58.0" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:1.8s"/>
+<circle cx="162.1" cy="58.0" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:1.8s"/>
+<rect x="492.0" y="134.7" width="20.6" height="86.7" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:1.8s"/>
+<rect x="492.0" y="134.7" width="20.6" height="86.7" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:1.8s"/>
+<line x1="174.0" y1="328.0" x2="150.1" y2="58.0" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:1.5s"/>
+<circle cx="150.1" cy="58.0" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:1.5s"/>
+<rect x="472.0" y="134.7" width="20.6" height="86.7" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:1.5s"/>
+<rect x="472.0" y="134.7" width="20.6" height="86.7" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:1.5s"/>
+<line x1="174.0" y1="328.0" x2="137.7" y2="58.0" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:1.2s"/>
+<circle cx="137.7" cy="58.0" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:1.2s"/>
+<rect x="452.0" y="134.7" width="20.6" height="86.7" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:1.2s"/>
+<rect x="452.0" y="134.7" width="20.6" height="86.7" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:1.2s"/>
+<line x1="174.0" y1="328.0" x2="125.0" y2="58.0" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.9s"/>
+<circle cx="125.0" cy="58.0" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.9s"/>
+<rect x="432.0" y="134.7" width="20.6" height="86.7" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.9s"/>
+<rect x="432.0" y="134.7" width="20.6" height="86.7" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.9s"/>
+<line x1="174.0" y1="328.0" x2="111.7" y2="58.0" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.6s"/>
+<circle cx="111.7" cy="58.0" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.6s"/>
+<rect x="412.0" y="134.7" width="20.6" height="86.7" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.6s"/>
+<rect x="412.0" y="134.7" width="20.6" height="86.7" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.6s"/>
+<line x1="174.0" y1="328.0" x2="97.5" y2="58.0" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.3s"/>
+<circle cx="97.5" cy="58.0" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.3s"/>
+<rect x="392.0" y="134.7" width="20.6" height="86.7" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.3s"/>
+<rect x="392.0" y="134.7" width="20.6" height="86.7" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.3s"/>
+<line x1="174.0" y1="328.0" x2="82.3" y2="58.0" stroke="#6d28d9" stroke-width="3" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.0s"/>
+<circle cx="82.3" cy="58.0" r="4.5" fill="#be185d" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.0s"/>
+<rect x="372.0" y="134.7" width="20.6" height="86.7" fill="#ede9fe" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.0s"/>
+<rect x="372.0" y="134.7" width="20.6" height="86.7" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0" style="animation:raysweep 4.5s linear infinite;animation-delay:0.0s"/>
+<line x1="32.8" y1="58.0" x2="191.6" y2="58.0" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+<line x1="191.6" y1="58.0" x2="191.6" y2="238.0" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+<line x1="191.6" y1="238.0" x2="315.2" y2="238.0" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+<circle cx="174.0" cy="328.0" r="6" fill="#be185d"/>
+<text x="174.0" y="350.0" text-anchor="middle" font-size="14" fill="#64748b">player</text>
+<text x="174" y="18" text-anchor="middle" font-size="15" font-weight="700" fill="#512da8">top-down map</text>
+<text x="522" y="18" text-anchor="middle" font-size="15" font-weight="700" fill="#512da8">rendered screen</text>
+<text x="350" y="195" text-anchor="middle" font-size="22" fill="#7c5cc4">&#8594;</text>
+</svg>
+
+Left: one ray per column, distance to the wall.
+Right: each distance becomes a strip. **Near = tall, far = short.**
+
+<!-- Curved/bulging walls? We use perpendicular distance, not raw, which kills the fisheye. -->
 
 ---
 
@@ -730,17 +723,11 @@ Pause. "Now the code. Same algorithm, in Phel. Loop and recur."
         :else (recur (+ dist 0.05))))))             ; keep stepping
 ```
 
-No mutable counter. Pure. Unit-test in one line.
+No mutable counter. **Even the renderer is pure** - unit-test in one line.
 **Once per screen column - ~120-180 rays a frame.**
 <!--
-"Same loop/recur from slide 13 - now casting one ray per screen column, 120-180 a frame."
-"SIMPLIFIED: step-march. Real engine uses DDA." Say it once, move on.
-Energy: "DOOM 1993. In a terminal. Written in Lisp."
-
-DEMO > build it up live, same engine, one subsystem at a time:
-    phel run phel-doom.main demo --phase 2     ; + the pistol
-    phel run phel-doom.main demo --phase 3     ; + enemies
-    phel run phel-doom.main demo --phase 4     ; + interior cover walls
+Simplified step-march; the real engine uses DDA.
+DEMO: phel run phel-doom.main demo --phase 2 (+pistol) / --phase 3 (+enemies) / --phase 4 (+cover walls)
 -->
 
 ---
@@ -762,10 +749,7 @@ composer test     # 1716 tests, green the whole way
 No mocks. No fake terminal. No DI container.
 Pure functions: call with input, check output. Done.
 
-<!--
-"Every pure function is a test waiting to happen."
-"What you'd normally mock: clock, RNG, renderer. Nothing to mock here."
--->
+<!-- Nothing to mock: no clock, RNG, or renderer to fake. -->
 
 ---
 
@@ -773,15 +757,12 @@ Pure functions: call with input, check output. Done.
 
 Target **< 5 ms** per frame · measured **0.2 - 0.5 ms**
 
-- **Memoize** paused frames: a one-line cache, safe because pure.
+- **Memoize** paused frames: one-line cache, safe because pure.
 - Precompute view angles: **-60%** cast time.
-- Hot loop: raw PHP arrays, not persistent vectors (**~680x** faster).
+- Hot loop: raw arrays over persistent vectors: **~680x**.
 
-<span class="reflex">🧠 Pure = same input, same output. Caching can never be wrong.</span>
-<!--
-"Memoize was one line. Free and safe - a pure function can't lie."
-Honest: "Persistent vectors are beautiful, but ~680x slower in a 7,000-cell hot loop. Reach for raw arrays there."
--->
+<span class="reflex">🧠 Pure: same input, same output. Cache can't be wrong.</span>
+<!-- Persistent vectors are ~680x slower in the 7,000-cell hot loop; raw arrays there. -->
 
 ---
 
@@ -807,9 +788,8 @@ Honest: "Persistent vectors are beautiful, but ~680x slower in a 7,000-cell hot 
 ```
 
 <!--
-DO LIVE: less out/phel_doom/core/state.php
-"No magic. PHP you'd recognize. ??= interns keyword once. defn → AbstractFn + __invoke."
-BEFORE TALK: run phel build so the file is fresh.
+Live: less out/phel_doom/core/state.php  (run `phel build` first).
+??= interns each keyword once; defn compiles to AbstractFn + __invoke.
 -->
 
 ---
@@ -818,7 +798,7 @@ BEFORE TALK: run phel build so the file is fresh.
 # ACT 4
 ## Story and verdict
 
-<!-- Rising energy. Story → verdict → demo. -->
+*So… should you use it?*
 
 ---
 
@@ -831,27 +811,21 @@ BEFORE TALK: run phel build so the file is fresh.
 - **Jun 1:** BFG, quick-save, record + replay
 - **Jun 2:** super shotgun, rocket, incinerator
 - **Jun 3:** distributable PHAR + checksums
+- **Jun 8:** real Freedoom sprites: enemies, guns, pickups + OST loop
 
 **+400 commits.** Tiny PRs, each closing one issue.
-
-<!--
-"Not a big bang. One issue, one PR, every day."
-"Pure architecture enabled this - each feature bolted on without breaking anything."
--->
 
 ---
 
 ## The full picture
 
-- **Engine:** raycaster, sprite occlusion, ~5 ms/frame
-- **Levels:** 10 generated levels, locked doors, secret walls, automap
-- **Combat:** 8 weapons, reload, berserk, hit-stop, fire damage + resists
-- **Enemies:** 10 types - imps, demons, pinkies, spectres, fireball casters (caco / baron / archvile), revenants, mancubi, cyberdemon boss
-- **Systems:** lives, armor, difficulty, quick-save, record/replay, audio
-<!--
-Sweep fast. Rising energy into demo.
-"Enough slides. Let me show you."
--->
+- **Engine:** raycaster + Freedoom sprites, ~5 ms/frame
+- **Levels:** 10, locked doors, secret walls
+- **Combat:** 7 weapons, berserk, fire resists
+- **Enemies:** 10 types → cyberdemon boss
+- **Systems:** quick-save, record/replay, audio
+
+<img class="shot" src="assets/screenshot.png" alt="phel-doom gameplay">
 
 ---
 
@@ -859,7 +833,7 @@ Sweep fast. Rising energy into demo.
 # ACT 5
 ## Live demo
 
-<!-- Deep breath. Terminal is the star now. -->
+*Enough slides.*
 
 ---
 
@@ -872,11 +846,7 @@ Sweep fast. Rising energy into demo.
 5. *(if time)* `--god --armory -l 10` → **cyberdemon boss**
 6. **`F3` debug overlay** → live ~5 ms frame budget
 
-<!--
-~5 min. Narrate: "every frame, a brand-new immutable world."
-End on F3: "real budget - callback to slide 28."
-BEFORE TALK: terminal font BIG. Boss command in shell history. Fallback video loaded.
--->
+<!-- Prep: big terminal font, boss command in shell history, fallback video ready. -->
 
 ---
 
@@ -884,11 +854,11 @@ BEFORE TALK: terminal font BIG. Boss command in shell history. Fallback video lo
 
 # Thank you
 
+## Write Lisp. Ship PHP. Even DOOM.
+
+Reach for it when immutability + a REPL pay off.
+
 ### https://chemaclass.com/phel-doom
 
 **Questions?** The REPL is open.
-<!--
-Leave REPL running on screen.
-If pause: "We covered why, how to write it, how it integrates, when to use it."
-Link stays up. Let people scan or type it.
--->
+
