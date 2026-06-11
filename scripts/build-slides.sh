@@ -20,6 +20,8 @@
 #   scripts/build-slides.sh <external-folder> <slug>   # import a deck from another repo
 #   scripts/build-slides.sh --watch [slug]        # live-reload server: editing deck.md
 #                                                 # refreshes the browser instantly
+#   scripts/build-slides.sh --pdf                 # also export slides.pdf alongside each index.html
+#   scripts/build-slides.sh --pdf <slug>          # same, for one deck
 #
 # Each build auto-optimizes assets (minify SVG, pngquant PNG once) and regenerates
 # static/slides/index.html — a themed landing listing all decks. Zero maintenance.
@@ -65,6 +67,7 @@ optimize_assets() {  # $1=dir
 }
 
 # render static/slides/<slug>/deck.md -> static/slides/<slug>/index.html (in place)
+# if PDF=1, also renders slides.pdf alongside
 render_one() {  # $1=slug
   local slug="$1" dir="$BASE/$1"
   [ -f "$dir/deck.md" ] || die "no deck.md in static/slides/$slug/"
@@ -73,6 +76,12 @@ render_one() {  # $1=slug
   npx -y @marp-team/marp-cli "$dir/deck.md" \
     --html --allow-local-files \
     -o "$dir/index.html"
+  if [ "${PDF:-0}" = "1" ]; then
+    echo "• [$slug] exporting -> static/slides/$slug/slides.pdf"
+    npx -y @marp-team/marp-cli "$dir/deck.md" \
+      --pdf --html --allow-local-files \
+      -o "$dir/slides.pdf"
+  fi
   echo "  ✓ /slides/$slug/"
 }
 
@@ -139,14 +148,17 @@ HTML
 # ---- parse args -----------------------------------------------------------
 ALL=0
 WATCH=0
+PDF=0
 ARGS=()
 for a in "$@"; do
   case "$a" in
     --all)   ALL=1 ;;
     --watch) WATCH=1 ;;
+    --pdf)   PDF=1 ;;
     *)       ARGS+=("$a") ;;
   esac
 done
+export PDF
 
 # ---- WATCH mode: live-reload preview server -------------------------------
 # Marp server mode renders decks on the fly and reloads the browser on every

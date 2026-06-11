@@ -7,3 +7,4 @@
 public/
 static/processed_images/
 static/terminal-fs.json
+static/slides/*/slides.pdf
