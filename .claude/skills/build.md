@@ -5,10 +5,10 @@ allowed-tools: Bash(zola *)
 
 # Build Zola Site
 
-Run the Zola build process and report any errors.
+Run the Zola build from the project root and report any errors.
 
 ```bash
-cd /Users/chema/Code/Chemaclass/chemaclass.com && zola build
+zola build
 ```
 
 If there are errors, analyze them and suggest fixes.

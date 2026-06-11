@@ -4,21 +4,22 @@
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "Bash(git commit*)",
+        "matcher": "Bash",
         "hooks": [
           {
             "type": "command",
-            "command": "cd /Users/chema/Code/Chemaclass/chemaclass.com && zola check 2>&1 | tail -5"
+            "command": "jq -e '.tool_input.command | test(\"^git commit\")' > /dev/null 2>&1 && cd /Users/chema/Code/Chemaclass/chemaclass.com && zola check 2>&1 | tail -5 || true"
           }
         ]
       }
     ],
-    "Stop": [
+    "PostToolUse": [
       {
+        "matcher": "Edit|Write",
         "hooks": [
           {
             "type": "command",
-            "command": "afplay /System/Library/Sounds/Glass.aiff"
+            "command": "f=$(jq -r '.tool_input.file_path // empty'); case \"$f\" in */content/*.md|*/static/slides/*.md) if grep -n '—' \"$f\" >&2; then echo \"Em dash (U+2014) is forbidden; replace it (see .claude/rules/no-em-dash.md)\" >&2; exit 2; fi ;; esac; exit 0"
           }
         ]
       }

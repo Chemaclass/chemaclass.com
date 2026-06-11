@@ -26,17 +26,17 @@ Move an image to the correct location and insert it into a blog post.
    - Remove the source file after successful copy
 
 4. Update the blog post based on placement:
-   - **cover**: Set `static_thumbnail = "/images/blog/YYYY-MM-DD/cover.{ext}"` in front matter `[extra]`
-   - **middle**: Insert `![blog-middle](/images/blog/YYYY-MM-DD/middle.{ext})` after the `<!-- more -->` marker (or ask user where to place it)
-   - **footer**: Insert `![blog-footer](/images/blog/YYYY-MM-DD/footer.{ext})` just before the `## Related` section
+   - **cover**: set `static_thumbnail = "/images/blog/YYYY-MM-DD/cover.{ext}"` in front matter `[extra]`, and add `![cover](...)` as the first body line if missing
+   - **middle**: insert `![blog-middle](/images/blog/YYYY-MM-DD/middle.{ext})` after the `<!-- more -->` marker (or ask user where to place it)
+   - **footer**: insert `![blog-footer](/images/blog/YYYY-MM-DD/footer.{ext})` just before the `## Related` section (or at the end of the body if there is none)
 
 5. Verify the image path resolves correctly with `zola build`
 
 ## Image naming convention
 
-- `cover.jpg` — hero/thumbnail at the top (referenced in front matter)
-- `middle.jpg` — inline image within the content body
-- `footer.jpg` — image before the Related section at the end
+- `cover.jpg`: hero/thumbnail at the top (referenced in front matter)
+- `middle.jpg`: inline image within the content body
+- `footer.jpg`: image before the Related section at the end
 
 ## Arguments
 $ARGUMENTS

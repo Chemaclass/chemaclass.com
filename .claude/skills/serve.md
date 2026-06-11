@@ -5,10 +5,10 @@ allowed-tools: Bash(zola *)
 
 # Serve Zola Site Locally
 
-Start the Zola development server in the background.
+Start the Zola development server from the project root, in the background, so the user can preview the site at http://127.0.0.1:1111
 
 ```bash
-cd /Users/chema/Code/Chemaclass/chemaclass.com && zola serve
+zola serve
 ```
 
-Run this in the background so the user can preview the site at http://127.0.0.1:1111
+If port 1111 is already in use, a server is likely running; tell the user instead of starting another.

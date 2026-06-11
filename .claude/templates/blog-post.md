@@ -6,16 +6,16 @@ draft = true
 tags = [ "tag1", "tag2" ]
 [extra]
 subtitle = "The Subtitle"
-static_thumbnail = "/images/blog/2023-10-20/cover.jpg"
+static_thumbnail = "/images/blog/YYYY-MM-DD/cover.jpg"
 related_posts = [
-  "blog/2022-08-22-understanding-people.md",
+  "blog/YYYY-MM-DD-slug.md",
 ]
 related_readings = [
-  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/YYYY-MM-DD-slug.md",
 ]
 +++
 
-![cover](/images/blog/2023-10-20/cover.jpg)
+![cover](/images/blog/YYYY-MM-DD/cover.jpg)
 
 Intro
 
@@ -24,8 +24,3 @@ Intro
 ## Header
 
 Content
-
-## Related
-
-- [@internal-link Blog Post Title](@/blog/YYYY-MM-DD-slug.md)
-- [@internal-link Reading Title](@/readings/YYYY-MM-DD-slug.md)

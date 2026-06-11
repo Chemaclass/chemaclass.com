@@ -5,10 +5,10 @@ allowed-tools: Bash(zola *)
 
 # Check Internal Links
 
-Run `zola check` to verify all internal links are valid.
+Run `zola check` from the project root to verify all internal links are valid.
 
 ```bash
-cd /Users/chema/Code/Chemaclass/chemaclass.com && zola check
+zola check
 ```
 
-Report any broken links found.
+Report any broken links found, with the file and link for each.

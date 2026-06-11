@@ -14,28 +14,30 @@ Lint blog posts (and optionally readings) for common issues.
 2. For each post, check:
 
 ### Required front matter fields
-- `title` — must be non-empty
-- `description` — must be non-empty
-- `[taxonomies]` with `tags` — must have at least one tag
-- `[extra]` with `subtitle` — must be non-empty
+- `title`: non-empty
+- `description`: non-empty
+- `[taxonomies]` with `tags`: at least one tag
+- `[extra]` with `subtitle`: non-empty
 
 ### Structure checks
 - `<!-- more -->` marker must exist after the introduction
-- Must end with a `## Related` section
-- No skipped heading levels (e.g., h2 → h4 without h3)
+- Must have either `related_posts` in front matter or a `## Related` section (`related_posts` preferred)
+- No skipped heading levels (e.g. h2 to h4 without h3)
 - No more than 7 `## ` (h2) headings
+- No em dash (`—`, U+2014) anywhere; no en dash (`–`, U+2013) in prose
 
 ### Asset checks
-- If `static_thumbnail` is set, verify the file exists in `static/`
+- If `static_thumbnail` is a local path, verify the file exists in `static/`
 - If `related_posts` entries exist, verify each target file exists in `content/`
 - If `related_readings` entries exist, verify each target file exists in `content/`
 
 ### Filename check
-- Must match pattern `YYYY-MM-DD-slug.md`
+- Must match pattern `YYYY-MM-DD-slug.md` (or `YYYY-MM-DD-slug.es.md`)
 - Date must be valid
 
 ## Output format
 
-Group issues by file. Show a summary at the end with total files checked and issues found.
+Group issues by file. End with a summary: total files checked, files with issues, total issues.
 
+## Target
 $ARGUMENTS

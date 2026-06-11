@@ -1,25 +1,26 @@
 ---
 description: "Create a new blog post from the project template"
-allowed-tools: Read, Write, Glob
+allowed-tools: Read, Write, Glob, Grep
 argument-hint: "<topic>"
 ---
 
 # Create New Blog Post
 
-Create a new blog post using the project template.
+Create a new blog post using the project template and writing style guide.
 
 ## Instructions
 
 1. Read the template at `.claude/templates/blog-post.md`
-2. If `.claude/blog-writing-style.md` exists, read it and apply it as the tone and style guide. If it does not exist, skip this step.
+2. Read `.claude/blog-writing-style.md` (if present) and apply it as the tone and style guide
 3. Create the file at `content/blog/YYYY-MM-DD-slug.md` using today's date
 4. Replace template placeholders with actual content based on the topic
-5. Include proper front matter with title, description, tags, and subtitle
-6. Update `static_thumbnail` path to use the correct date
-7. Add `<!-- more -->` marker after the introduction
-8. Follow the heading structure (limit h2 to 5-7, never skip levels)
-9. End with a `## Related` section
-10. Set `draft = true` by default
+5. Fill the front matter: title, description, tags (reuse existing tags), subtitle
+6. Set `static_thumbnail` to `/images/blog/YYYY-MM-DD/cover.jpg` with today's date
+7. Check if the topic fits an existing series (see `[extra.series]` in `config.toml`); if so, add `series` and `series_order` to `[extra]`
+8. Add `<!-- more -->` marker after the introduction
+9. Limit h2 headings to 5-7, never skip heading levels
+10. Prefer `related_posts` front matter over a `## Related` section
+11. Set `draft = true`
 
 ## Topic/Title
 $ARGUMENTS

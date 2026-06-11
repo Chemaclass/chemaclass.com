@@ -24,7 +24,3 @@ Intro
 ## Header
 
 Content
-
-## Related
-
-- [@internal-link Reading Title](@/readings/YYYY-MM-DD-slug.md)

@@ -6,12 +6,12 @@ argument-hint: "[tag or year]"
 
 # List Blog Posts
 
-List all blog posts with their metadata.
+List all blog posts in `content/blog/` (excluding `.es.md` files), most recent first, as a table with:
 
-Show the most recent posts first with:
 - Title
 - Date
 - Tags
 - Draft status
 
-$ARGUMENTS (optional: filter by tag or year)
+## Filter (optional: tag or year)
+$ARGUMENTS

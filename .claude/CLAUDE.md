@@ -41,53 +41,41 @@ The site supports English (default) and Spanish:
 
 ## Blog Writing
 
-### Blog Post Structure
+Tone and style: follow `.claude/blog-writing-style.md` (local, gitignored) for all posts, readings, translations, and edits.
 
-Files: `/content/blog/YYYY-MM-DD-slug.md`
+### Blog post structure
+
+Files: `content/blog/YYYY-MM-DD-slug.md`. Front matter template: `.claude/templates/blog-post.md`.
 
 Required elements:
 - Front matter with title, description, tags, subtitle
-- `<!-- more -->` marker after introduction (for excerpt)
-- Clear section headers (limit h2 to 5-7 per document)
-- `## Related` section at the end
-
-### Front Matter Template
-
-```toml
-+++
-title = "The Title"
-description = "Clear, compelling description"
-draft = false
-[taxonomies]
-tags = [ "tag1", "tag2" ]
-[extra]
-subtitle = "A complementary subtitle"
-static_thumbnail = "/images/blog/YYYY-MM-DD/cover.jpg"
-series = "series-key"       # optional, see Series section below
-series_order = 1            # optional, position within the series
-+++
-```
+- `<!-- more -->` marker after the introduction (for excerpt)
+- Clear section headers (limit h2 to 5-7 per document, never skip levels)
+- `related_posts` in front matter (preferred) or a `## Related` section at the end
 
 ### Series
 
 Series group related posts with navigation (title, "Part X of Y", prev/next links). When creating a new post, check if it fits an existing series and add `series` + `series_order` to `[extra]` in both EN and ES files.
 
-Defined in `config.toml` under `[extra.series.<key>]`:
-
-| Key | Title | Posts |
-|-----|-------|-------|
-| `bitcoin` | Bitcoin Series | PGP, Cypherpunks, Programmable Money, Taxes, Fundamentals, How It Works |
-| `ai` | AI Series | Speed Not Quality, MCP Context, Team of Agents, Idealism vs Pragmatism |
-| `craftsmanship` | Software Craftsmanship Series | Art of Testing, Mock or Not, TDD, TDD vs BDD, London vs Chicago, Test Private Methods |
-| `leadership` | Leadership & Teams Series | Tech Lead, Red vs Blue Work, Beauty of Leadership, Great Leadership, Everyone on Board, FSNP |
-| `agile` | Agile & XP Series | Extreme Teams, Agile with Non-Agile, Ignoring Scrum, Friday Deploys, What Kills Agility, Ship Show Ask |
+Defined in `config.toml` under `[extra.series.<key>]` (the authoritative, current list lives there). Existing keys: `bitcoin`, `ai`, `craftsmanship`, `leadership`, `agile`.
 
 To add a new series: add `[extra.series.<key>]` with `title` and `title_es` in `config.toml`.
+
+## Talks and Slides
+
+- Talk pages: `content/talks/<slug>.md` + colocated `<slug>.es.md`. The talk index is `content/talks/_index.md` (+ `.es.md`).
+- Slide decks are Marp markdown, colocated with their build output under `static/slides/<slug>/`:
+  - `deck.md` - source (speaker notes in HTML comments)
+  - `assets/` - media referenced by the deck
+  - `index.html` - generated in place, committed (CI is Zola-only, no Marp at deploy time)
+- Build decks with `scripts/build-slides.sh` (`--all`, `<slug>`, or `<external-folder> <slug>` to import; `--pdf` also renders a PDF, which is gitignored).
+- After editing a `deck.md`, rebuild that slug and commit both source and generated output.
 
 ## Skills Available
 
 - `/new-blog-post <topic>` - Create a new blog post (uses `.claude/templates/blog-post.md`)
 - `/new-reading <title> by <author>` - Create a new reading note (uses `.claude/templates/reading.md`)
+- `/new-talk <title> [--deck]` - Create a talk page (EN+ES), optionally scaffold a Marp deck
 - `/build` - Build the site
 - `/serve` - Start dev server
 - `/check-links` - Verify internal links
