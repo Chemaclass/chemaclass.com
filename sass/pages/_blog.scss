@@ -72,24 +72,21 @@
   &__card {
     padding: 1rem;
     border-radius: 10px;
-    border-left: 3px solid var(--accent-color);
+    border: 1px solid rgba(45, 90, 142, 0.12);
     background: rgba(45, 90, 142, 0.04);
-    border-top: 1px solid rgba(45, 90, 142, 0.12);
-    border-right: 1px solid rgba(45, 90, 142, 0.12);
-    border-bottom: 1px solid rgba(45, 90, 142, 0.12);
     text-decoration: none;
     color: inherit;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
     .theme-dark & {
       background: rgba(93, 168, 229, 0.06);
-      border-top-color: rgba(93, 168, 229, 0.15);
-      border-right-color: rgba(93, 168, 229, 0.15);
-      border-bottom-color: rgba(93, 168, 229, 0.15);
+      border-color: rgba(93, 168, 229, 0.15);
     }
 
     &:hover {
       border-color: var(--accent-color);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(45, 90, 142, 0.12);
     }
 
     h3 {
