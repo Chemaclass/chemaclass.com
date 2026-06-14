@@ -13,7 +13,7 @@ sort_by = "weight"
 - 2026-06-09 | International PHP Conference [**Berlín, Alemania**] (EN)
   - [Escribiendo Lisp en PHP: Un viaje con Phel](https://phpconference.com/php-core-coding/lisp-in-php-phel/) [[slides](/slides/phel-doom/)]
     *Explorando programación funcional a través de Phel, un dialecto Lisp que compila a PHP con estructuras de datos persistentes y macros.*
-  - [AI como tu Co-Piloto de Código: Flujos de Trabajo Centrados en el Humano para Desarrolladores Modernos](https://phpconference.com/trends-gen-ai/ai-copilot-human-centered-workflows/) [[slides](/slides/ai-copilot/)]
+  - [De la negación a nativo en IA: la escalera de adopción del desarrollador](https://phpconference.com/trends-gen-ai/ai-copilot-human-centered-workflows/) [[slides](/slides/ai-copilot/)]
     *Estrategias prácticas para integrar herramientas de IA en tu flujo de trabajo diario manteniendo al desarrollador humano al mando.*
 - 2026-06-08 | International PHP Conference [**Berlín, Alemania**] (EN)
   - [Taller de día completo: Modernizando PHP Legacy con Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
@@ -36,7 +36,7 @@ sort_by = "weight"
 - 2025-10-27 | International PHP Conference [**Múnich, Alemania**] (EN)
   - [Taller de día completo: Modernizando PHP Legacy con Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
     *Taller de día completo trabajando con código legacy usando TDD y técnicas de pair programming.*
-  - [De $this a (this) — Una introducción amigable a Phel](https://phpconference.com/web-development/phel-introduction-functional-programming-lisp/)
+  - [De $this a (this): Una introducción amigable a Phel](https://phpconference.com/web-development/phel-introduction-functional-programming-lisp/)
     *Un camino amigable del OOP de PHP al mundo funcional de Phel, con demos de live coding uniendo ambos paradigmas.*
 
 ![workshop ipc munich 2025](/images/talks/2025-10-27/workshop-ipc-munich25.jpg)

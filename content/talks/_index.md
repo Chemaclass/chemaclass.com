@@ -13,7 +13,7 @@ sort_by = "weight"
 - 2026-06-09 | International PHP Conference [**Berlin, Germany**] (EN)
   - [Writing Lisp in PHP: A Journey with Phel](https://phpconference.com/php-core-coding/lisp-in-php-phel/) [[slides](/slides/phel-doom/)]
     *Exploring functional programming through Phel, a Lisp dialect that compiles to PHP with persistent data structures and macros.*
-  - [AI as Your Coding Co-Pilot: Human-Centered Workflows for Modern Developers](https://phpconference.com/trends-gen-ai/ai-copilot-human-centered-workflows/) [[slides](/slides/ai-copilot/)]
+  - [From Denial to AI-Native: The Developer Adoption Ladder](https://phpconference.com/trends-gen-ai/ai-copilot-human-centered-workflows/) [[slides](/slides/ai-copilot/)]
     *Practical strategies for integrating AI tools into your daily coding workflow while keeping the human developer in control.*
 - 2026-06-08 | International PHP Conference [**Berlin, Germany**] (EN)
   - [Full-day Workshop: Modernizing Legacy PHP with Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
@@ -36,7 +36,7 @@ sort_by = "weight"
 - 2025-10-27 | International PHP Conference [**Munich, Germany**] (EN)
   - [Full-day Workshop: Modernizing Legacy PHP with Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
     *Full-day workshop tackling legacy codebases with TDD and pair programming techniques.*
-  - [From $this to (this) — A Gentle Introduction to Phel](https://phpconference.com/web-development/phel-introduction-functional-programming-lisp/)
+  - [From $this to (this): A Gentle Introduction to Phel](https://phpconference.com/web-development/phel-introduction-functional-programming-lisp/)
     *A gentle path from PHP's OOP to Phel's functional world, with live coding demos bridging both paradigms.*
 
 ![workshop ipc munich 2025](/images/talks/2025-10-27/workshop-ipc-munich25.jpg)

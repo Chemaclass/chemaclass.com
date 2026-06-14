@@ -3,13 +3,13 @@ marp: true
 theme: default
 paginate: true
 size: 16:9
-title: "AI as Your Coding Co-Pilot"
+title: "From Denial to AI-Native: The Developer Adoption Ladder"
 description: "Human-centered AI coding workflows: the adoption ladder from denial (L0) to AI-native teams (L5), plus concrete refactor and test loops with an LLM."
 author: "Chemaclass"
 keywords: "AI, LLM, Claude Code, developer workflows, PHP, software craftsmanship"
 url: "https://chemaclass.com/slides/ai-copilot/"
 image: "https://chemaclass.com/slides/ai-copilot/assets/cover.png"
-footer: 'AI as Your Coding Co-Pilot · @Chemaclass'
+footer: 'From Denial to AI-Native: The Developer Adoption Ladder · @Chemaclass'
 style: |
   /* ============================================================
      Theme mirrors chemaclass.com. Rubik + GitHub-inspired tokens.
@@ -151,9 +151,9 @@ style: |
 
 <span class="kicker">PHP Conference · Trends & Gen AI</span>
 
-# AI as Your<br>Coding Co-Pilot
+# From Denial<br>to AI-Native
 
-### Human-Centered Workflows for Modern Developers
+### The Developer Adoption Ladder
 
 **Chema** · chemaclass.com
 
