@@ -71,6 +71,13 @@
 {% endblock posthead %}
 
 {% block content %}
+{# Star counts fetched at build time; fall back to last known values if the API is unreachable. #}
+{% set phel_data = load_data(url="https://api.github.com/repos/phel-lang/phel-lang", format="json", required=false) %}
+{% set bashunit_data = load_data(url="https://api.github.com/repos/TypedDevs/bashunit", format="json", required=false) %}
+{% set_global phel_stars = 513 %}
+{% if phel_data %}{% set_global phel_stars = phel_data.stargazers_count %}{% endif %}
+{% set_global bashunit_stars = 413 %}
+{% if bashunit_data %}{% set_global bashunit_stars = bashunit_data.stargazers_count %}{% endif %}
 <div class="homepage-container">
     <!-- Top Row: Hero Left + Nav/Search/About Right -->
     <div class="homepage-top">
@@ -259,7 +266,7 @@
                     <div class="project-info">
                         <div class="project-title">
                             <h3>Phel</h3>
-                            <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count"></span></span>
+                            <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count">{% if phel_stars >= 1000 %}{{ (phel_stars / 1000) | round(precision=1) }}k{% else %}{{ phel_stars }}{% endif %}</span></span>
                         </div>
                         <p class="project-tagline">{{ trans(key="home_project_phel_desc", lang=lang) }}</p>
                     </div>
@@ -279,7 +286,7 @@
                     <div class="project-info">
                         <div class="project-title">
                             <h3>bashunit</h3>
-                            <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count"></span></span>
+                            <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count">{% if bashunit_stars >= 1000 %}{{ (bashunit_stars / 1000) | round(precision=1) }}k{% else %}{{ bashunit_stars }}{% endif %}</span></span>
                         </div>
                         <p class="project-tagline">{{ trans(key="home_project_bashunit_desc", lang=lang) }}</p>
                     </div>
@@ -300,7 +307,6 @@
 {% endblock content %}
 
 {% block js %}
-<script type="text/javascript" src="{{ get_url(path='github-stars.js') | safe }}" defer></script>
 <script>
 (function() {
   const lang = '{{ lang }}';
