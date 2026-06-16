@@ -642,7 +642,7 @@ main:has(.homepage-container) #scroll-to-top {
 
   .featured-list__thumb {
     flex-shrink: 0;
-    width: 128px;
+    width: 168px;
     height: 128px;
     border-radius: 8px;
     overflow: hidden;
@@ -673,7 +673,7 @@ main:has(.homepage-container) #scroll-to-top {
     line-height: 1.45;
     margin: 0 0 0.35rem;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -1053,7 +1053,7 @@ main:has(.homepage-container) #scroll-to-top {
   }
 
   .featured-list__thumb {
-    width: 104px;
+    width: 128px;
     height: 104px;
   }
 
