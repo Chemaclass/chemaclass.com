@@ -231,6 +231,7 @@
                     {% endif %}
                     <div class="featured-list__text">
                         <h4>{{ post.title }}</h4>
+                        <p class="featured-list__preview">{{ post.description | truncate(length=110) }}</p>
                         <span class="latest-date">
                             {% if lang == "es" %}{{ post.date | date(format="%d/%m/%Y") }}{% else %}{{ post.date | date(format="%B %d, %Y") }}{% endif %}
                             {% set reading_time = post.extra.reading_time | default(value=post.reading_time) %}
@@ -244,15 +245,27 @@
             </div>
         </div>
 
-        <!-- Latest readings strip -->
-        <div class="reading-strip">
-            <span class="reading-strip__label"><i class="fa-solid fa-book-open"></i> {{ trans(key="nav_readings", lang=lang) }}</span>
-            <span class="reading-strip__items">
+        <!-- Latest readings -->
+        <div class="readings-block">
+            <div class="readings-block__header">
+                <span class="readings-block__label"><i class="fa-solid fa-book-open"></i> {{ trans(key="nav_readings", lang=lang) }}</span>
+                <a href="{% if lang == 'es' %}/es/readings/{% else %}/readings/{% endif %}" class="view-all">{{ trans(key="home_view_all", lang=lang) }}</a>
+            </div>
+            <div class="readings-row">
                 {% for reading in readings.pages | slice(end=3) %}
-                <a href="{{ reading.permalink }}">{{ reading.title }}</a>{% if not loop.last %}<span class="reading-strip__sep">·</span>{% endif %}
+                <a href="{{ reading.permalink }}" class="reading-card" data-from="{{ reading.date }}">
+                    {% if reading.extra.static_thumbnail %}
+                    <div class="reading-card__cover">
+                        <img src="{{ reading.extra.static_thumbnail | safe }}" alt="{{ reading.title }}" loading="lazy" decoding="async" />
+                    </div>
+                    {% endif %}
+                    <div class="reading-card__text">
+                        <h4>{{ reading.title }}</h4>
+                        {% if reading.extra.author %}<span class="reading-card__author">{{ reading.extra.author }}</span>{% endif %}
+                    </div>
+                </a>
                 {% endfor %}
-            </span>
-            <a href="{% if lang == 'es' %}/es/readings/{% else %}/readings/{% endif %}" class="reading-strip__all">{{ trans(key="home_view_all", lang=lang) }} <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
         </div>
     </section>
 
