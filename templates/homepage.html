@@ -87,7 +87,7 @@
                     {{ trans(key="home_subtitle", lang=lang) }}
                 </p>
                 <div class="hero-quotes">
-                    <blockquote class="hero-quote active"><p></p></blockquote>
+                    <blockquote class="hero-quote active"><p>{% if lang == "es" %}"Programar es el arte de simplificar rutinas."{% else %}"Programming is the art of simplifying routines."{% endif %}</p></blockquote>
                 </div>
             </div>
         </section>
@@ -343,7 +343,8 @@
   const quotes = lang === 'es' ? quotesEs : quotesEn;
   const el = document.querySelector('.hero-quote p');
   if (!el) return;
-  let last = -1;
+  // Quote 0 is server-rendered to avoid an empty first paint; start rotation from there.
+  let last = 0;
   function showRandom() {
     let idx;
     do { idx = Math.floor(Math.random() * quotes.length); } while (idx === last);
@@ -354,7 +355,6 @@
       el.style.opacity = 1;
     }, 300);
   }
-  showRandom();
   setInterval(showRandom, 7000);
 })();
 </script>
