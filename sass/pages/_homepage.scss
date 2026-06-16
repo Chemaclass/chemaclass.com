@@ -631,14 +631,13 @@ main:has(.homepage-container) #scroll-to-top {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  justify-content: space-between;
 }
 
 .featured-list__item {
   display: flex;
   gap: 0.85rem;
   align-items: center;
-  flex: 0 0 auto;
+  flex: 1 1 0;
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
   border-radius: 10px;
