@@ -68,6 +68,22 @@
 }
 </script>
 
+<!-- ItemList Schema for latest content -->
+{% set schema_blogs = get_section(path="blog/_index.md", lang=lang) %}
+{% set schema_readings = get_section(path="readings/_index.md", lang=lang) %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Latest content",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "url": {{ schema_blogs.pages.0.permalink | json_encode | safe }}, "name": {{ schema_blogs.pages.0.title | json_encode | safe }} },
+    { "@type": "ListItem", "position": 2, "url": {{ schema_readings.pages.0.permalink | json_encode | safe }}, "name": {{ schema_readings.pages.0.title | json_encode | safe }} },
+    { "@type": "ListItem", "position": 3, "url": {{ schema_blogs.pages.1.permalink | json_encode | safe }}, "name": {{ schema_blogs.pages.1.title | json_encode | safe }} }
+  ]
+}
+</script>
+
 {% endblock posthead %}
 
 {% block content %}
