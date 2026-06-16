@@ -690,16 +690,17 @@ main:has(.homepage-container) #scroll-to-top {
 
 // Latest readings
 .readings-block {
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
 }
 
-.readings-block__header {
+// Shared sub-section header (Posts / Readings)
+.content-block__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.6rem;
 
-  .readings-block__label {
+  .content-block__label {
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;

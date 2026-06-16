@@ -175,6 +175,10 @@
     <section class="latest-section">
         <div class="section-header">
             <h2>{{ trans(key="home_latest", lang=lang) }}</h2>
+        </div>
+
+        <div class="content-block__header">
+            <span class="content-block__label"><i class="fa-solid fa-newspaper"></i> {% if lang == "es" %}Posts{% else %}Posts{% endif %}</span>
             <a href="{% if lang == 'es' %}/es/blog/{% else %}/blog/{% endif %}" class="view-all">{{ trans(key="home_view_all", lang=lang) }}</a>
         </div>
 
@@ -247,8 +251,8 @@
 
         <!-- Latest readings -->
         <div class="readings-block">
-            <div class="readings-block__header">
-                <span class="readings-block__label"><i class="fa-solid fa-book-open"></i> {{ trans(key="nav_readings", lang=lang) }}</span>
+            <div class="content-block__header">
+                <span class="content-block__label"><i class="fa-solid fa-book-open"></i> {{ trans(key="nav_readings", lang=lang) }}</span>
                 <a href="{% if lang == 'es' %}/es/readings/{% else %}/readings/{% endif %}" class="view-all">{{ trans(key="home_view_all", lang=lang) }}</a>
             </div>
             <div class="readings-row">
