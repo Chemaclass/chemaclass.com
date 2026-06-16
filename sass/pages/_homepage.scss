@@ -547,7 +547,7 @@ main:has(.homepage-container) #scroll-to-top {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 1rem;
-  align-items: stretch;
+  align-items: start;
 }
 
 // Shared meta typography
@@ -566,7 +566,6 @@ main:has(.homepage-container) #scroll-to-top {
   color: var(--color-subtitle);
   line-height: 1.6;
   margin: 0 0 1rem;
-  flex-grow: 1;
 }
 
 .latest-date {
@@ -605,7 +604,10 @@ main:has(.homepage-container) #scroll-to-top {
     padding: 1.1rem 1.25rem 1.25rem;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+  }
+
+  .latest-date {
+    margin-top: 0.25rem;
   }
 
   h3 {
@@ -627,8 +629,8 @@ main:has(.homepage-container) #scroll-to-top {
 .featured-list__item {
   display: flex;
   gap: 0.85rem;
-  align-items: flex-start;
-  flex: 1;
+  align-items: center;
+  flex: 0 0 auto;
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
   border-radius: 10px;
@@ -866,6 +868,15 @@ main:has(.homepage-container) #scroll-to-top {
   .profile .profile-container {
     width: 150px;
     height: 150px;
+  }
+
+  // Latest content stacks: featured on top, secondary posts full-width below
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-card h3 {
+    font-size: 1.25rem;
   }
 
 }
