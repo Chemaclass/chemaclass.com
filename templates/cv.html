@@ -18,12 +18,11 @@
     "alternateName": "Chemaclass",
     "url": "{{ config.base_url | safe }}",
     "image": "{{ get_url(path=config.extra.icon) | safe }}",
-    "jobTitle": "Tech Lead",
-    {# Update worksFor after Jun 2026 when Purpose Green tenure ends #}
+    "jobTitle": "Product Engineer",
     "worksFor": {
       "@type": "Organization",
-      "name": "Purpose Green",
-      "url": "https://purpose-green.com"
+      "name": "Kombo",
+      "url": "https://kombo.dev"
     },
     "address": {
       "@type": "PostalAddress",
@@ -58,9 +57,9 @@
     ],
     "hasOccupation": {
       "@type": "Occupation",
-      "name": "Tech Lead",
+      "name": "Product Engineer",
       "occupationalCategory": "15-1252.00",
-      "skills": "Software architecture, team leadership, mentoring, testing strategy, code review, technical decision making"
+      "skills": "Software architecture, product engineering, API integrations, testing strategy, code review, technical decision making"
     },
     "sameAs": [
       "https://x.com/Chemaclass",
@@ -93,7 +92,7 @@
     </div>
     <div class="cv-header__info">
       <h1>Jose M. Valera Reales</h1>
-      <p class="cv-header__title">Tech Lead · <span class="cv-header__subtitle">{{ trans(key="home_subtitle", lang=lang) }}</span> <span class="cv-header__title-url">· chemaclass.com</span></p>
+      <p class="cv-header__title">Product Engineer · <span class="cv-header__subtitle">{{ trans(key="home_subtitle", lang=lang) }}</span> <span class="cv-header__title-url">· chemaclass.com</span></p>
       <p class="cv-header__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany</p>
       <div class="cv-header__links">
         <a href="https://github.com/Chemaclass" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> <span class="cv-print-hide">GitHub</span><span class="cv-print-only">github.com/Chemaclass</span></a>
@@ -119,13 +118,31 @@
     <h2><i class="fa-solid fa-briefcase"></i> {% if lang == "es" %}Experiencia{% else %}Experience{% endif %}</h2>
 
     <div class="cv-timeline">
+      <!-- Kombo -->
+      <div class="cv-job">
+        <div class="cv-job__header">
+          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://kombo.dev&size=128" alt="Kombo" loading="lazy" />
+          <div>
+            <h3><a href="https://kombo.dev" target="_blank" rel="noopener">Kombo</a></h3>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {% if lang == "es" %}Actualidad{% else %}Present{% endif %}</span></p>
+          </div>
+        </div>
+        <div class="cv-job__body">
+          <div class="cv-job__role">
+            <h4>Product Engineer</h4>
+            <span class="cv-job__dates">Jun 2026 &ndash; {% if lang == "es" %}Actualidad{% else %}Present{% endif %}</span>
+          </div>
+          <p>{% if lang == "es" %}Product Engineer en Kombo, la API unificada líder para integraciones de HRIS, ATS, Payroll y LMS. Construyo producto en la intersección de ingeniería y necesidades de cliente, permitiendo a empresas B2B conectar cientos de sistemas de RRHH a través de una sola API.{% else %}Product Engineer at Kombo, the leading unified API for HRIS, ATS, Payroll, and LMS integrations. Building product at the intersection of engineering and customer needs, enabling B2B companies to connect hundreds of HR systems through a single API.{% endif %}</p>
+        </div>
+      </div>
+
       <!-- Purpose Green -->
       <div class="cv-job">
         <div class="cv-job__header">
           <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://purpose-green.com&size=128" alt="Purpose Green" loading="lazy" />
           <div>
             <h3><a href="https://www.purpose-green.com/" target="_blank" rel="noopener">Purpose Green</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {% if lang == "es" %}1 año 11 meses{% else %}1 yr 11 mos{% endif %}</span></p>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {% if lang == "es" %}2 años{% else %}2 yrs{% endif %}</span></p>
           </div>
         </div>
         <div class="cv-job__body">
@@ -136,7 +153,7 @@
           <p>{% if lang == "es" %}Lideré la migración de la API Laravel a monolito modular con límites DDD: módulos de dominio independientes que escalan entre equipos sin acoplamiento cruzado. Player-coach: código en producción a diario mientras hago crecer al equipo con mentoría, katas mensuales y prácticas XP (ownership, maestría, propósito)<span class="cv-print-hide">. Sistemas backend apoyando la misión de descarbonizar cada edificio europeo</span>.{% else %}Drove the migration of our Laravel API into a modular monolith with DDD boundaries: independent domain modules that scale across teams without cross-coupling. Player-coach: ship production code daily while growing engineers through mentoring, monthly katas, and XP practices (ownership, mastery, purpose)<span class="cv-print-hide">. Backend systems supporting the mission of decarbonizing every European building</span>.{% endif %}</p>
           <div class="cv-job__role">
             <h4>Software Developer</h4>
-            <span class="cv-job__dates">Aug 2024 &ndash; Mar 2025</span>
+            <span class="cv-job__dates">Jul 2024 &ndash; Mar 2025</span>
           </div>
           <p>{% if lang == "es" %}Ingeniero backend senior. Integración del sistema de pagos con Stripe. Promoción de valores, principios y prácticas de Extreme Programming. Code katas mensuales, enfoque en excelencia individual y de equipo.{% else %}Senior Backend Engineer. Payment system integration with Stripe. Promoting Extreme Programming values, principles, and practices. Monthly code katas, focus on individual and team excellence.{% endif %}</p>
           <div class="cv-tags cv-tags--small">

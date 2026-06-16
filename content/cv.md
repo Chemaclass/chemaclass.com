@@ -1,6 +1,6 @@
 +++
 title = "CV | Chemaclass"
-description = "Jose M. Valera Reales - Tech Lead, Software Engineer, Open Source contributor. 15+ years building software, 5+ years leading teams."
+description = "Jose M. Valera Reales - Product Engineer at Kombo, Tech Lead, Open Source contributor. 15+ years building software, 5+ years leading teams."
 template = "cv.html"
 aliases = ["/resume"]
 +++

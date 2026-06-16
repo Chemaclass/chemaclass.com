@@ -4,7 +4,7 @@
 
 ## About
 
-Jose Maria Valera Reales is a Tech Lead at Purpose Green with 15+ years in software engineering and 5+ in leadership. He writes about software craftsmanship, testing, leadership, Bitcoin, and AI. The site is available in English and Spanish.
+Jose Maria Valera Reales is a Product Engineer at Kombo with 15+ years in software engineering and 5+ in leadership. He writes about software craftsmanship, testing, leadership, Bitcoin, and AI. The site is available in English and Spanish.
 
 ## Sections
 
