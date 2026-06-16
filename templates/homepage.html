@@ -236,7 +236,7 @@
                             {% if lang == "es" %}{{ post.date | date(format="%d/%m/%Y") }}{% else %}{{ post.date | date(format="%B %d, %Y") }}{% endif %}
                             {% set reading_time = post.extra.reading_time | default(value=post.reading_time) %}
                             {% if reading_time %}
-                                <span class="latest-reading-time">· {{ reading_time }} {{ trans(key="minutes_read", lang=lang) }}</span>
+                                <span class="latest-reading-time">· {{ reading_time }} min</span>
                             {% endif %}
                         </span>
                     </div>
