@@ -212,6 +212,35 @@
                 </span>
             </a>
 
+            {% set latest_blog2 = blogs.pages.1 %}
+            <a href="{{ latest_blog2.permalink }}" class="latest-card" data-from="{{latest_blog2.date}}">
+                {% if latest_blog2.extra.static_thumbnail %}
+                <div class="latest-card__thumb">
+                    {% if latest_blog2.extra.static_thumbnail is matching("^http[s]?://") %}
+                        <img src="{{ latest_blog2.extra.static_thumbnail | safe }}" alt="{{ latest_blog2.title }}" loading="lazy" decoding="async" />
+                    {% else %}
+                        {% set thumb_path = latest_blog2.extra.static_thumbnail | trim_start_matches(pat="/") %}
+                        {% set thumb_webp = resize_image(path=thumb_path, width=400, height=225, op="fill", quality=75, format="webp") %}
+                        {% set thumb_fb = resize_image(path=thumb_path, width=400, height=225, op="fill", quality=80) %}
+                        <picture>
+                            <source type="image/webp" srcset="{{ thumb_webp.url }}" />
+                            <img src="{{ thumb_fb.url }}" alt="{{ latest_blog2.title }}" width="{{ thumb_fb.width }}" height="{{ thumb_fb.height }}" loading="lazy" decoding="async" />
+                        </picture>
+                    {% endif %}
+                </div>
+                {% endif %}
+                <span class="latest-type">{{ trans(key="nav_blog", lang=lang) }}</span>
+                <h3>{{ latest_blog2.title }}</h3>
+                <p class="latest-preview">{{ latest_blog2.description | truncate(length=120) }}</p>
+                <span class="latest-date">
+                    {% if lang == "es" %}{{ latest_blog2.date | date(format="%d/%m/%Y") }}{% else %}{{ latest_blog2.date | date(format="%B %d, %Y") }}{% endif %}
+                    {% set reading_time = latest_blog2.extra.reading_time | default(value=latest_blog2.reading_time) %}
+                    {% if reading_time %}
+                        <span class="latest-reading-time">· {{ reading_time }} {{ trans(key="minutes_read", lang=lang) }}</span>
+                    {% endif %}
+                </span>
+            </a>
+
         </div>
     </section>
 

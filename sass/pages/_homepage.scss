@@ -545,7 +545,7 @@ main:has(.homepage-container) #scroll-to-top {
 // Latest Content Grid
 .latest-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
 
