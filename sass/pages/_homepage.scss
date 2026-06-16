@@ -547,7 +547,7 @@ main:has(.homepage-container) #scroll-to-top {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 1rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 // Shared meta typography
@@ -591,12 +591,18 @@ main:has(.homepage-container) #scroll-to-top {
     transform: translateY(-2px);
   }
 
-  .featured-card__thumb img,
-  .featured-card__thumb picture {
+  // Image flexes to fill remaining height so the card matches the right column
+  .featured-card__thumb {
+    flex: 1 1 auto;
+    min-height: 200px;
+    overflow: hidden;
+  }
+
+  .featured-card__thumb picture,
+  .featured-card__thumb img {
     display: block;
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -604,6 +610,7 @@ main:has(.homepage-container) #scroll-to-top {
     padding: 1.1rem 1.25rem 1.25rem;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
   }
 
   .latest-date {
@@ -624,6 +631,7 @@ main:has(.homepage-container) #scroll-to-top {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  justify-content: space-between;
 }
 
 .featured-list__item {
