@@ -231,7 +231,7 @@
                     {% endif %}
                     <div class="featured-list__text">
                         <h4>{{ post.title }}</h4>
-                        <p class="featured-list__preview">{{ post.description | truncate(length=110) }}</p>
+                        <p class="featured-list__preview">{{ post.description | truncate(length=160) }}</p>
                         <span class="latest-date">
                             {% if lang == "es" %}{{ post.date | date(format="%d/%m/%Y") }}{% else %}{{ post.date | date(format="%B %d, %Y") }}{% endif %}
                             {% set reading_time = post.extra.reading_time | default(value=post.reading_time) %}
