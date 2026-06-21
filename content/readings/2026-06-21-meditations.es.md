@@ -73,3 +73,7 @@ No puedes perder lo que no tienes, y lo único que tienes es el ahora. Preocupar
 - **Solo el presente es tuyo.** El pasado y el futuro son preocupación prestada.
 
 Dos mil años después, nada de esto suena anticuado. El imperio desapareció. Los problemas son idénticos. Ese es el extraño consuelo de este libro: un hombre con poder absoluto descubrió lo mismo que el resto de nosotros. Lo único que de verdad gobiernas eres tú mismo.
+
+---
+
+{{ youtube(id="9A5m4OiF6jE") }}

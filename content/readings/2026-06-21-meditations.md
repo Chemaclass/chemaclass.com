@@ -73,3 +73,7 @@ You can't lose what you don't have, and you only ever have now. Worrying about t
 - **Only the present is yours.** The past and future are borrowed worry.
 
 Two thousand years later, none of it feels dated. The empire is gone. The problems are identical. That's the strange comfort of this book: a man with absolute power discovered the same thing the rest of us do. The only thing you ever really run is yourself.
+
+---
+
+{{ youtube(id="_6cSYKeafmk") }}
