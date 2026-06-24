@@ -976,10 +976,9 @@ a.cv-project {
     border-bottom: 1px solid #ddd;
     padding: 0.5rem 0;
 
-    > h2 { font-size: 0.85rem; margin: 0 0 0.5rem; }
+    // Keep a section heading glued to the content below it instead of orphaning at a page bottom.
+    > h2 { font-size: 0.85rem; margin: 0 0 0.5rem; break-after: avoid; page-break-after: avoid; }
     > p, > blockquote { font-size: 0.78rem; margin: 0 0 0.3rem; line-height: 1.45; }
-
-    &--page-break { page-break-before: always; }
   }
 
   .cv-job {
@@ -1012,6 +1011,10 @@ a.cv-project {
     p { font-size: 0.72rem; line-height: 1.4; margin: 0 0 0.4rem; }
     footer { font-size: 0.65rem; }
     &__avatar { width: 20px; height: 20px; font-size: 0.5rem; }
+
+    // Print the full quote: no clamping, no "Read more" toggle (nothing to click on paper).
+    &__text { display: block; overflow: visible; -webkit-line-clamp: unset; }
+    &__inline-toggle { display: none !important; }
   }
 
   .cv-skills {
