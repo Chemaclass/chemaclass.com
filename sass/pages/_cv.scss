@@ -1018,11 +1018,9 @@ a.cv-project {
   }
 
   .cv-skills {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
 
-    &__group:nth-child(5) { grid-column: span 2; .cv-skills__items { gap: 0.2rem 0.5rem; } }
-    &__group:nth-child(6) { grid-column: span 2; .cv-skills__items { gap: 0.2rem 0.5rem; } }
     &__label { display: none; }
     &__items { gap: 0.2rem; }
   }
