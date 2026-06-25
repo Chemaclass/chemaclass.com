@@ -87,4 +87,4 @@ we indeed gain the courage to succeed and lead.
 
 ### Summary
 
-{{ youtube(id="uk68F2Jl3q8") }}
+{{ youtube(id="bsT5Tbt2mjU") }}
