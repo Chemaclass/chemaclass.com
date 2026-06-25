@@ -20,8 +20,6 @@ related_readings = [
 ]
 +++
 
-![Nietzsche's eternal return as a test of the life you live](/images/blog/2026-06-01/cover.webp)
-
 Nietzsche proposed a thought experiment in *The Gay Science*. Imagine a demon visits you at night and says: this life you have lived, you will live again, infinite times, exactly the same. Every joy, every regret, every detail. Would you collapse, or would you celebrate?
 
 <!-- more -->

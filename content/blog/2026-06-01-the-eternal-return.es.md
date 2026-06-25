@@ -20,8 +20,6 @@ related_readings = [
 ]
 +++
 
-![El eterno retorno de Nietzsche como prueba de la vida que vives](/images/blog/2026-06-01/cover.webp)
-
 Nietzsche propuso un experimento mental en *La gaya ciencia*. Imagina que un demonio te visita por la noche y te dice: esta vida que has vivido, la vivirás otra vez, infinitas veces, exactamente igual. Cada alegría, cada arrepentimiento, cada detalle. ¿Te derrumbarías o lo celebrarías como un regalo?
 
 <!-- more -->
