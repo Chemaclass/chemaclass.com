@@ -122,17 +122,7 @@ rtk gain --history    # per-command breakdown
 rtk discover          # scan your Claude Code history for missed wins
 ```
 
-Run `rtk gain` after real use. Mine:
-
-```
-RTK Token Savings (Global Scope)
-Total commands:    14773
-Input tokens:      49.4M
-Output tokens:     3.8M
-Tokens saved:      45.6M (92.3%)
-```
-
-92.3% of terminal input tokens never had to reach the model.
+Run `rtk gain` after real use to see your own savings. RTK reports [60-90% fewer tokens](https://github.com/rtk-ai/rtk) on common dev commands.
 
 > Output you never read is still output the model has to read.
 

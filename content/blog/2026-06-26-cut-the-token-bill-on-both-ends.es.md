@@ -122,17 +122,7 @@ rtk gain --history    # desglose por comando
 rtk discover          # escanea tu historial de Claude Code buscando ganancias
 ```
 
-Ejecuta `rtk gain` tras un uso real. El mío:
-
-```
-RTK Token Savings (Global Scope)
-Total commands:    14773
-Input tokens:      49.4M
-Output tokens:     3.8M
-Tokens saved:      45.6M (92.3%)
-```
-
-El 92.3% de los tokens de entrada de la terminal no tuvieron que llegar al modelo.
+Ejecuta `rtk gain` tras un uso real para ver tu propio ahorro. RTK reporta [60-90% menos tokens](https://github.com/rtk-ai/rtk) en los comandos de desarrollo habituales.
 
 > El output que tú no lees sigue siendo output que el modelo tiene que leer.
 
