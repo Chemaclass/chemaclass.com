@@ -33,14 +33,14 @@ Two tools fixed most of it. One trims what the agent says. The other trims what 
 
 Biggest blocks in any session transcript: agent responses and tool output. Not your prompts.
 
-- Agent responses: pleasantries, hedging, restatements, "Sure! Happy to help...".
+- Agent responses: small talk, hedging, repetition, "Sure! Happy to help...".
 - Tool output: `npm install` logs, `git status` walls of text, `grep` dumps with full file paths.
 
 Both pile up. Both push the useful signal away from the model.
 
 ## Caveman trims the output
 
-**[Caveman](https://github.com/JuliusBrussee/caveman)** is a Claude Code skill. One command, `/caveman full`, and the agent drops articles, fillers, and pleasantries. Fragments are welcome. Technical terms stay exact.
+**[Caveman](https://github.com/JuliusBrussee/caveman)** is a Claude Code skill. One command, `/caveman full`, and the agent drops articles, fillers, and small talk. Fragments are welcome. Technical terms stay exact.
 
 Install:
 
@@ -52,7 +52,7 @@ What dies:
 
 - Articles: a, an, the.
 - Fillers: just, really, basically, actually, simply.
-- Pleasantries: sure, of course, happy to.
+- Small talk: sure, of course, happy to.
 - Hedging: might, perhaps, it depends.
 
 What stays:
@@ -171,7 +171,7 @@ If an answer lands too terse, type `normal mode`.
 
 You do not need both on day one. Pick the leak that hurts more.
 
-Agent writes long essays for every fix? Install Caveman first.
+Agent writes long replies for every fix? Install Caveman first.
 
 Every `grep` or `npm install` floods the window? Install RTK first.
 

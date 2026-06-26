@@ -33,14 +33,14 @@ Dos herramientas arreglaron casi todo. Una recorta lo que el agent dice. La otra
 
 Los bloques más grandes en cualquier transcripción de sesión: respuestas del agent y output de herramientas. No tus prompts.
 
-- Respuestas del agent: cortesías, vacilaciones, repeticiones, "Sure! Happy to help...".
+- Respuestas del agent: cháchara, vacilaciones, repeticiones, "Sure! Happy to help...".
 - Output de herramientas: logs de `npm install`, muros de texto de `git status`, volcados de `grep` con rutas completas.
 
 Los dos se acumulan. Los dos alejan la señal útil del modelo.
 
 ## Caveman recorta la salida
 
-**[Caveman](https://github.com/JuliusBrussee/caveman)** es un skill de Claude Code. Un comando, `/caveman full`, y el agent deja caer artículos, rellenos y cortesías. Los fragmentos son bienvenidos. Los términos técnicos se mantienen exactos.
+**[Caveman](https://github.com/JuliusBrussee/caveman)** es un skill de Claude Code. Un comando, `/caveman full`, y el agent deja caer artículos, rellenos y cháchara. Los fragmentos son bienvenidos. Los términos técnicos se mantienen exactos.
 
 Instalación:
 
@@ -52,7 +52,7 @@ Lo que muere:
 
 - Artículos: a, an, the.
 - Rellenos: just, really, basically, actually, simply.
-- Cortesías: sure, of course, happy to.
+- Cháchara: sure, of course, happy to.
 - Vacilaciones: might, perhaps, it depends.
 
 Lo que sobrevive:
@@ -171,7 +171,7 @@ Si una respuesta queda demasiado seca, escribe `normal mode`.
 
 No necesitas las dos el primer día. Elige la fuga que más duela.
 
-¿El agent escribe ensayos largos por cada fix? Instala Caveman primero.
+¿El agent escribe respuestas largas por cada fix? Instala Caveman primero.
 
 ¿Cada `grep` o `npm install` inunda la ventana? Instala RTK primero.
 
