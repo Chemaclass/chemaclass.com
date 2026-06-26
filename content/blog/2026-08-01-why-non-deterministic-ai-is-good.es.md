@@ -1,12 +1,12 @@
 +++
-title = "Por qué que la IA no sea determinista es bueno"
+title = "Por qué es bueno que la IA no sea determinista"
 description = "Mismo prompt, respuesta distinta. Esa impredecibilidad es lo que hace útil a la IA generativa."
 draft = true
 [taxonomies]
 tags = [ "ai", "engineering", "mindset" ]
 [extra]
 subtitle = "La aleatoriedad es el precio de la creatividad"
-static_thumbnail = "/images/blog/placeholder.jpg"
+static_thumbnail = "/images/blog/2026-08-01/cover.webp"
 series = "ai"
 series_order = 10
 related_posts = [
@@ -31,7 +31,7 @@ No lo está. Es la forma de la herramienta.
 
 ## La creatividad exige una tirada de dados
 
-Un modelo que siempre elige el token más probable produce texto plano y repetitivo. El muestreo introduce aleatoriedad, y esa aleatoriedad es lo que le permite explorar completados plausibles. Baja la temperatura a cero y cambias rango por fiabilidad.
+Un modelo que siempre elige el token más probable produce texto plano y repetitivo. El muestreo introduce aleatoriedad, y esa aleatoriedad es lo que le permite explorar completados plausibles. Baja la temperatura hacia cero y cambias rango por consistencia.
 
 Pregúntate: ¿quieres una herramienta que siempre te dé la misma respuesta, o una que pueda sorprenderte de forma útil?
 
@@ -62,10 +62,12 @@ Setup flojo, distribución ancha y ruidosa. Setup cuidado, distribución estrech
 
 > No elimino el no-determinismo. Hago que cada tirada caiga dentro de la diana.
 
-Por eso sigo invirtiendo en la carpeta `.claude/`, en guías de estilo, en ficheros de memoria, en skills bien acotadas. Los retornos son compuestos.
+Por eso sigo invirtiendo en la [carpeta `.claude/`](/es/blog/inside-the-claude-folder/), en guías de estilo, en ficheros de memoria, en [skills bien acotadas](/es/blog/skills-over-agents/). Los retornos son compuestos.
 
 ## Dejar de tratar la IA como una función
 
 Una función da una salida por entrada. Un colaborador me da un borrador distinto cada mañana. Un LLM es lo segundo. Juzgarlo con las reglas de lo primero es cómo los equipos acaban bloqueados en la "reproducibilidad," persiguiendo seeds que nunca van a necesitar.
 
 Abraza la varianza donde ayuda. Acótala donde estorba. Ese es el juego entero.
+
+![blog-footer](/images/blog/2026-08-01/footer.webp)

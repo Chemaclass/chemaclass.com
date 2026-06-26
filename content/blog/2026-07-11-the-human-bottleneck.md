@@ -6,7 +6,7 @@ draft = true
 tags = [ "ai", "software", "leadership" ]
 [extra]
 subtitle = "When you become the slowest part of the system"
-static_thumbnail = "/images/blog/placeholder.jpg"
+static_thumbnail = "/images/blog/2026-07-11/cover.webp"
 series = "ai"
 series_order = 9
 related_posts = [
@@ -16,15 +16,13 @@ related_posts = [
 ]
 +++
 
-![cover](/images/blog/placeholder.jpg)
-
 AI agents can write code, review it, test it, and deploy it. We spent decades making machines faster. Now the slowest part of the system has changed.
 
 It's us.
 
 <!-- more -->
 
-A small team running [OpenClaw](https://sauronbot.github.io/) runs several agents in parallel. One for code quality. One for integrations. One for tests. They produce PRs, review each other's work, flag what needs a human decision. The system works. Every important choice still goes through a person.
+A small team running [OpenClaw](https://openclaw.ai) runs several agents in parallel. One for code quality. One for integrations. One for tests. They produce PRs, review each other's work, flag what needs a human decision. The system works. Every important choice still goes through a person.
 
 You can add more agents. You can't add more of yourself.
 
@@ -59,8 +57,6 @@ Some work still needs careful eyes on every change:
 
 In these areas, you spend full attention. On purpose.
 
-![blog-middle](/images/blog/placeholder.jpg)
-
 ## Reduce what needs review
 
 The answer isn't faster humans. It's fewer things that need human attention in the first place.
@@ -91,7 +87,7 @@ Two questions this approach doesn't answer by itself.
 
 **How do junior developers grow?** Fixing lint, updating dependencies, adding test coverage: that used to be how juniors learned the codebase. That repetitive work built the instincts seniors now use to design agent systems. If agents take that work, replace it with something deliberate. Mentorship. Architecture walkthroughs. Guided exposure to production incidents.
 
-## Design for reversibility
+## Where your attention belongs
 
 The attention you save has somewhere better to go. Architecture decisions. Product direction. Customer trust. Incident response. These aren't inefficiencies waiting for automation. They're where human judgment creates the most value.
 
@@ -102,3 +98,5 @@ The question isn't _"how do I review faster?"_ It's _"where does my review actua
 > The future isn't about removing humans from the loop. It's about putting them in the right loop.
 
 Agents didn't create this bottleneck. They made it impossible to ignore.
+
+![blog-footer](/images/blog/2026-07-11/footer.webp)
