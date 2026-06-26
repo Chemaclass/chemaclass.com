@@ -6,7 +6,7 @@ draft = true
 tags = [ "ai", "software", "leadership" ]
 [extra]
 subtitle = "Cuando te conviertes en la parte más lenta del sistema"
-static_thumbnail = "/images/blog/placeholder.jpg"
+static_thumbnail = "/images/blog/2026-07-11/cover.webp"
 series = "ai"
 series_order = 9
 related_posts = [
@@ -16,15 +16,13 @@ related_posts = [
 ]
 +++
 
-![cover](/images/blog/placeholder.jpg)
-
 Los agentes de IA pueden escribir código, revisarlo, testearlo y desplegarlo. Pasamos décadas haciendo las máquinas más rápidas. Ahora la parte más lenta del sistema ha cambiado.
 
 Somos nosotros.
 
 <!-- more -->
 
-Un equipo pequeño que trabaja en [OpenClaw](https://sauronbot.github.io/) corre varios agentes en paralelo. Uno para calidad de código. Uno para integraciones. Uno para tests. Producen PRs, se revisan entre ellos, marcan lo que necesita decisión humana. El sistema funciona. Toda decisión importante sigue pasando por una persona.
+Un equipo pequeño que trabaja en [OpenClaw](https://openclaw.ai) corre varios agentes en paralelo. Uno para calidad de código. Uno para integraciones. Uno para tests. Producen PRs, se revisan entre ellos, marcan lo que necesita decisión humana. El sistema funciona. Toda decisión importante sigue pasando por una persona.
 
 Puedes añadir más agentes. No puedes añadir más de ti.
 
@@ -46,7 +44,7 @@ Piensa en piloto y autopilot. El avión vuela solo la mayor parte del tiempo. El
 
 La aviación llama a la trampa _complacencia por automatización_: si el autopilot lo hace todo demasiado tiempo, el piloto pierde la destreza para emergencias. Igual con desarrolladores. Si los agentes hacen todo el trabajo, pierdes el instinto que detecta problemas.
 
-La solución: practica a propósito. Lee diffs que no tienes que leer. Camina los cambios en la terminal. Pídele al agente que explique su razonamiento antes de mergear.
+La solución: practica a propósito. Lee diffs que no tienes que leer. Repasa los cambios en la terminal. Pídele al agente que explique su razonamiento antes de mergear.
 
 ## Cuándo la revisión completa sigue ganando
 
@@ -58,8 +56,6 @@ Hay trabajo que aún necesita ojos humanos en cada cambio:
 - **Sistemas regulados.** Si un auditor pregunta "¿quién aprobó este cambio?", la respuesta no puede ser "la IA".
 
 En estas áreas, gastas toda tu atención. A propósito.
-
-![blog-middle](/images/blog/placeholder.jpg)
 
 ## Reducir lo que necesita revisión
 
@@ -91,7 +87,7 @@ Dos preguntas que este enfoque no resuelve por sí solo.
 
 **¿Cómo crecen los developers junior?** Arreglar lint, actualizar dependencias, añadir cobertura de tests: así aprendían los junior el codebase. Ese trabajo repetitivo construía los instintos que los seniors usan hoy para diseñar sistemas con agentes. Si los agentes se comen ese trabajo, reemplázalo con algo deliberado. Mentoría. Walkthroughs de arquitectura. Exposición guiada a incidentes de producción.
 
-## Diseña para reversibilidad
+## Dónde importa tu atención
 
 La atención que ahorras tiene un sitio mejor donde ir. Decisiones de arquitectura. Dirección de producto. Confianza del cliente. Respuesta a incidentes. No son ineficiencias esperando automatización. Son donde el juicio humano crea más valor.
 
@@ -102,3 +98,5 @@ La pregunta no es _"¿cómo reviso más rápido?"_ Es _"¿dónde importa de verd
 > El futuro no va de sacar humanos del loop. Va de ponerlos en el loop correcto.
 
 Los agentes no crearon este cuello de botella. Lo hicieron imposible de ignorar.
+
+![blog-footer](/images/blog/2026-07-11/footer.webp)

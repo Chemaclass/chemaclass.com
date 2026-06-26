@@ -1,12 +1,12 @@
 +++
 title = "Cut the Token Bill on Both Ends"
 description = "Two small tools that compound: Caveman shrinks what the agent says back, RTK shrinks what your terminal pipes in. Same context window, twice the room."
-draft = true
+draft = false
 [taxonomies]
 tags = [ "ai", "productivity", "developer-tools", "agentic-coding" ]
 [extra]
 subtitle = "Two leaks, two patches"
-static_thumbnail = "/images/blog/placeholder.jpg"
+static_thumbnail = "/images/blog/2026-06-26/cover.webp"
 series = "ai"
 series_order = 8
 related_posts = [
@@ -40,7 +40,7 @@ Both pile up. Both push the useful signal away from the model.
 
 ## Caveman trims the output
 
-**[Caveman](https://github.com/JuliusBrussee/caveman)** is a Claude Code skill. One mode flip and the agent drops articles, fillers, and pleasantries. Fragments are welcome. Technical terms stay exact.
+**[Caveman](https://github.com/JuliusBrussee/caveman)** is a Claude Code skill. One command, `/caveman full`, and the agent drops articles, fillers, and pleasantries. Fragments are welcome. Technical terms stay exact.
 
 Install:
 
@@ -60,7 +60,7 @@ What stays:
 - Code blocks, exact errors, file paths, commands.
 - Security warnings and destructive ops (skill auto-clarifies).
 
-Same answer. A quarter of the length.
+Same answer. A fraction of the prose.
 
 {% deep_dive(title="Before and after") %}
 
@@ -88,11 +88,12 @@ Install:
 
 ```bash
 brew install rtk
+rtk init -g    # install the hook that auto-rewrites commands
 ```
 
 The wrapped version strips noise before it reaches the agent. Color codes. Repeated separators. `npm` install banners. Verbose timestamps.
 
-Same `git status` on this very repo, raw vs wrapped:
+Same `git status`, raw vs wrapped:
 
 ```
 $ rtk proxy git status
@@ -101,7 +102,7 @@ Your branch is up to date with 'origin/main'.
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-	content/blog/2026-05-23-cut-the-token-bill-on-both-ends.md
+	content/blog/new-draft.md
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
@@ -109,8 +110,8 @@ nothing added to commit but untracked files present (use "git add" to track)
 ```
 $ rtk git status
 * main...origin/main
-? Untracked: 1 files
-   content/blog/2026-05-23-cut-the-token-bill-on-both-ends.md
+? Untracked: 1 file
+   content/blog/new-draft.md
 ```
 
 Same information. Half the lines. On a busy repo the gap scales: dozens of untracked files, branch hints, instruction lines, all collapse to one block.
@@ -134,8 +135,6 @@ Tokens saved:      45.6M (92.3%)
 92.3% of terminal input tokens never had to reach the model.
 
 > Output you never read is still output the model has to read.
-
-![blog-middle](/images/blog/placeholder.jpg)
 
 ## Why the combo compounds
 
@@ -163,7 +162,7 @@ RTK never touches the payload. Strips noise around it. Errors and stack traces s
 rtk proxy <cmd>   # raw output, no filtering
 ```
 
-If an answer lands too terse, type `stop caveman` or `normal mode`.
+If an answer lands too terse, type `normal mode`.
 
 > Compression is for the chatter. Never for the substance.
 
@@ -178,3 +177,5 @@ Every `grep` or `npm install` floods the window? Install RTK first.
 Then add the second. They do not conflict.
 
 > Two tools. Two leaks. One context window that lasts twice as long.
+
+![blog-footer](/images/blog/2026-06-26/footer.webp)
