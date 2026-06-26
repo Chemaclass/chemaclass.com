@@ -136,6 +136,17 @@ Compaction kicks in later. Cached top of conversation stays cheap. Only the new 
 
 Real check on the $100/month Claude Max plan. Before both tools: I hit the weekly usage cap often, sometimes on a single project. After: multiple projects running in parallel and the cap rarely shows.
 
+## Install globally, then forget it
+
+Both installs are global and one-time. Run them once and your workflow does not change at all.
+
+- Caveman installs into your global Claude Code setup, so it is there on every project. The skill activates on its own. Nothing to wire up, nothing to retype each session.
+- RTK's `rtk init -g` plants a global hook. You keep typing `git status`, `npm install`, `grep` exactly as before; the hook rewrites them to the `rtk` wrapper on the fly. You never see it kick in.
+
+No babysitting. No new habits. The tools run in the background, on every repo, automatically.
+
+> The best optimization is the one you set up once and never think about again.
+
 ## When not to compress
 
 Both tools know when to step aside.

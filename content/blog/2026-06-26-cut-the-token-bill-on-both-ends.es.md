@@ -136,6 +136,17 @@ La compactación llega más tarde. El inicio cacheado de la conversación se man
 
 Prueba real con el plan Claude Max de 100$/mes. Antes de las dos herramientas: llegaba al límite semanal a menudo, a veces con un solo proyecto. Después: varios proyectos en paralelo y el límite casi no aparece.
 
+## Instálalas globalmente y olvídate
+
+Las dos instalaciones son globales y de una sola vez. Las ejecutas una vez y tu forma de trabajar no cambia en nada.
+
+- Caveman se instala en tu configuración global de Claude Code, así que está en todos los proyectos. El skill se activa solo. Nada que cablear, nada que reescribir en cada sesión.
+- El `rtk init -g` de RTK planta un hook global. Sigues escribiendo `git status`, `npm install`, `grep` igual que siempre; el hook los reescribe al wrapper de `rtk` al vuelo. Nunca lo ves entrar en acción.
+
+Sin niñera. Sin hábitos nuevos. Las herramientas corren en segundo plano, en cada repo, de forma automática.
+
+> La mejor optimización es la que configuras una vez y no vuelves a pensar en ella.
+
 ## Cuándo no comprimir
 
 Las dos herramientas saben cuándo hacerse a un lado.
