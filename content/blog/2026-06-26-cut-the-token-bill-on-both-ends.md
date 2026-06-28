@@ -19,24 +19,20 @@ related_readings = [
 ]
 +++
 
-Every agentic session burns tokens in two directions. Agent talks back. Terminal pipes output in. Same context window, both ends leaking.
+Every agentic session burns tokens in two directions. The agent talks back. The terminal pipes output in. Same context window, both ends leaking.
 
-Run long enough and you hit the wall. Quality drops. Costs climb.
-
-Two tools fixed most of it. One trims what the agent says. The other trims what flows back from the shell.
+Run long enough and you hit the wall: quality drops, costs climb.
 
 <!-- more -->
 
 > Same model. Same prompts. Lighter bill.
 
-## Two leaks in the same window
-
-Biggest blocks in any session transcript: agent responses and tool output. Not your prompts.
+The biggest blocks in a session transcript aren't your prompts:
 
 - Agent responses: small talk, hedging, repetition, "Sure! Happy to help...".
 - Tool output: `npm install` logs, `git status` walls of text, `grep` dumps with full file paths.
 
-Both pile up. Both push the useful signal away from the model.
+Two tools, one leak each. One trims what the agent says. The other trims what the shell sends back.
 
 ## Caveman trims the output
 
@@ -60,8 +56,6 @@ What stays:
 - Code blocks, exact errors, file paths, commands.
 - Security warnings and destructive ops (skill auto-clarifies).
 
-Same answer. A fraction of the prose.
-
 {% deep_dive(title="Before and after") %}
 
 Normal mode:
@@ -76,9 +70,9 @@ Same fix. Same code block follows. Quarter of the prose.
 
 {% end %}
 
-Levels: `lite`, `full`, `ultra`. Start at `full`. Ultra reads like telegrams.
+Levels: `lite`, `full`, `ultra`. Start at `full`; ultra reads like telegrams. If an answer ever lands too terse, type `normal mode`.
 
-> The agent does not lose intelligence when you take away its small talk.
+> The agent doesn't lose intelligence when you take away its small talk.
 
 ## RTK trims the input
 
@@ -91,7 +85,9 @@ brew install rtk
 rtk init -g    # install the hook that auto-rewrites commands
 ```
 
-The wrapped version strips noise before it reaches the agent. Color codes. Repeated separators. `npm` install banners. Verbose timestamps.
+If `rtk gain` later errors, a different tool with the same name slipped in; install from the [repo](https://github.com/rtk-ai/rtk) instead.
+
+The wrapped version strips noise before it reaches the agent: color codes, repeated separators, `npm` install banners, verbose timestamps.
 
 Same `git status`, raw vs wrapped:
 
@@ -122,60 +118,25 @@ rtk gain --history    # per-command breakdown
 rtk discover          # scan your Claude Code history for missed wins
 ```
 
-Run `rtk gain` after real use to see your own savings. RTK reports [60-90% fewer tokens](https://github.com/rtk-ai/rtk) on common dev commands.
+RTK reports [60-90% fewer tokens](https://github.com/rtk-ai/rtk) on common dev commands. Run `rtk gain` after real use to see your own.
+
+It never touches the payload, only the noise around it. Errors and stack traces stay exact. If a filter ever eats something you need, bypass it for one call: `rtk proxy <cmd>`.
 
 > Output you never read is still output the model has to read.
 
 ## Why the combo compounds
 
-Each tool plugs one leak. Together they multiply.
-
-A turn: prompt, think, run command, terminal output, read, answer. RTK shrinks the tool output. Caveman shrinks the answer. Smaller turns, more turns in the same window.
-
-Compaction kicks in later. Cached top of conversation stays cheap. Only the new parts cost.
+Each tool plugs one leak. Together they multiply. A turn goes: prompt, think, run command, terminal output, read, answer. RTK shrinks the tool output. Caveman shrinks the answer. Smaller turns, more turns in the same window.
 
 Real check on the $100/month Claude Max plan. Before both tools: I hit the weekly usage cap often, sometimes on a single project. After: multiple projects running in parallel and the cap rarely shows.
 
-## Install globally, then forget it
+> The plan didn't get bigger. The sessions got smaller.
 
-Both installs are global and one-time. Run them once and your workflow does not change at all.
+## Set it once, then forget it
 
-- Caveman installs into your global Claude Code setup, so it is there on every project. The skill activates on its own. Nothing to wire up, nothing to retype each session.
-- RTK's `rtk init -g` plants a global hook. You keep typing `git status`, `npm install`, `grep` exactly as before; the hook rewrites them to the `rtk` wrapper on the fly. You never see it kick in.
+Both installs are global and one-time. You keep typing `git status`, `grep`, and `npm install` exactly as before: the hook rewrites them, and Caveman activates on its own. No babysitting, no new habits.
 
-No babysitting. No new habits. The tools run in the background, on every repo, automatically.
-
-> The best optimization is the one you set up once and never think about again.
-
-## When not to compress
-
-Both tools know when to step aside.
-
-Caveman switches back to normal prose for:
-
-- Security warnings and destructive operations.
-- Multi-step sequences where fragments could be misread.
-- When you ask the agent to clarify or repeat.
-
-RTK never touches the payload. Strips noise around it. Errors and stack traces stay exact. If a filter ever eats something you need, bypass it for one call:
-
-```bash
-rtk proxy <cmd>   # raw output, no filtering
-```
-
-If an answer lands too terse, type `normal mode`.
-
-> Compression is for the chatter. Never for the substance.
-
-## Start with one, add the other
-
-You do not need both on day one. Pick the leak that hurts more.
-
-Agent writes long replies for every fix? Install Caveman first.
-
-Every `grep` or `npm install` floods the window? Install RTK first.
-
-Then add the second. They do not conflict.
+Not sure where to start? Pick the leak that hurts more. Long replies for every fix, Caveman first. Floods of `grep` and `npm install` output, RTK first. Then add the other; they don't conflict.
 
 > Two tools. Two leaks. One context window that lasts twice as long.
 

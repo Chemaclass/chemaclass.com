@@ -21,22 +21,18 @@ related_readings = [
 
 Toda sesión agéntica quema tokens en dos direcciones. El agent te responde. La terminal escupe output. Mismo context window, fugas por los dos lados.
 
-Estira lo suficiente y chocas con el muro. La calidad cae. Los costes suben.
-
-Dos herramientas arreglaron casi todo. Una recorta lo que el agent dice. La otra recorta lo que vuelve desde la shell.
+Estíralo lo suficiente y chocas con el muro: la calidad cae, los costes suben.
 
 <!-- more -->
 
 > Mismo modelo. Mismos prompts. Factura más ligera.
 
-## Dos fugas en la misma ventana
-
-Los bloques más grandes en cualquier transcripción de sesión: respuestas del agent y output de herramientas. No tus prompts.
+Los bloques más grandes en cualquier transcripción de sesión no son tus prompts:
 
 - Respuestas del agent: cháchara, vacilaciones, repeticiones, "Sure! Happy to help...".
 - Output de herramientas: logs de `npm install`, muros de texto de `git status`, volcados de `grep` con rutas completas.
 
-Los dos se acumulan. Los dos alejan la señal útil del modelo.
+Dos herramientas, una fuga cada una. Una recorta lo que el agent dice. La otra recorta lo que vuelve desde la shell.
 
 ## Caveman recorta la salida
 
@@ -60,8 +56,6 @@ Lo que sobrevive:
 - Bloques de código, errores exactos, rutas de archivo, comandos.
 - Avisos de seguridad y operaciones destructivas (el skill se aclara solo).
 
-Misma respuesta. Una fracción de la prosa.
-
 {% deep_dive(title="Antes y después") %}
 
 Modo normal:
@@ -76,7 +70,7 @@ Mismo fix. Mismo bloque de código a continuación. Un cuarto de prosa.
 
 {% end %}
 
-Niveles: `lite`, `full`, `ultra`. Empieza en `full`. Ultra se lee como un telegrama.
+Niveles: `lite`, `full`, `ultra`. Empieza en `full`; ultra se lee como un telegrama. Si una respuesta queda demasiado seca, escribe `normal mode`.
 
 > El agent no pierde inteligencia cuando le quitas la cháchara.
 
@@ -91,7 +85,9 @@ brew install rtk
 rtk init -g    # instala el hook que reescribe los comandos
 ```
 
-La versión envuelta quita el ruido antes de llegar al agent. Códigos de color. Separadores repetidos. Banners de `npm install`. Timestamps verbosos.
+Si más tarde `rtk gain` da error, se ha colado otra herramienta con el mismo nombre; instala desde el [repo](https://github.com/rtk-ai/rtk).
+
+La versión envuelta quita el ruido antes de llegar al agent: códigos de color, separadores repetidos, banners de `npm install`, timestamps verbosos.
 
 El mismo `git status`, en crudo vs envuelto:
 
@@ -114,7 +110,7 @@ $ rtk git status
    content/blog/new-draft.md
 ```
 
-Misma información. La mitad de líneas. En un repo con movimiento la diferencia escala: decenas de untracked files, pistas de branch, líneas de instrucciones, todo colapsa en un bloque.
+Misma información. La mitad de líneas. En un repo con movimiento la diferencia escala: decenas de untracked files, pistas de rama, líneas de instrucciones, todo colapsa en un bloque.
 
 ```bash
 rtk gain              # ver cuántos tokens te ha ahorrado
@@ -122,60 +118,25 @@ rtk gain --history    # desglose por comando
 rtk discover          # escanea tu historial de Claude Code buscando ganancias
 ```
 
-Ejecuta `rtk gain` tras un uso real para ver tu propio ahorro. RTK reporta [60-90% menos tokens](https://github.com/rtk-ai/rtk) en los comandos de desarrollo habituales.
+RTK reporta [60-90% menos tokens](https://github.com/rtk-ai/rtk) en los comandos de desarrollo habituales. Ejecuta `rtk gain` tras un uso real para ver tu propio ahorro.
+
+Nunca toca el payload, solo el ruido a su alrededor. Los errores y stack traces se mantienen exactos. Si algún filtro alguna vez se come algo que necesitas, sáltatelo para esa llamada: `rtk proxy <cmd>`.
 
 > El output que tú no lees sigue siendo output que el modelo tiene que leer.
 
 ## Por qué la combinación suma
 
-Cada herramienta tapa una fuga. Juntas multiplican.
+Cada herramienta tapa una fuga. Juntas multiplican. Un turno va: prompt, pensar, ejecutar comando, output de terminal, leer, responder. RTK encoge el output de la herramienta. Caveman encoge la respuesta. Turnos más pequeños, más turnos en la misma ventana.
 
-Un turno: prompt, pensar, ejecutar comando, output de terminal, leer, responder. RTK encoge el output de la herramienta. Caveman encoge la respuesta. Turnos más pequeños, más turnos en la misma ventana.
+Prueba real con el plan Claude Max de 100 $/mes. Antes de las dos herramientas: llegaba al límite semanal a menudo, a veces con un solo proyecto. Después: varios proyectos en paralelo y el límite casi no aparece.
 
-La compactación llega más tarde. El inicio cacheado de la conversación se mantiene barato. Solo las partes nuevas cuestan.
+> El plan no se hizo más grande. Las sesiones se hicieron más pequeñas.
 
-Prueba real con el plan Claude Max de 100$/mes. Antes de las dos herramientas: llegaba al límite semanal a menudo, a veces con un solo proyecto. Después: varios proyectos en paralelo y el límite casi no aparece.
+## Instálalas una vez y olvídate
 
-## Instálalas globalmente y olvídate
+Las dos instalaciones son globales y de una sola vez. Sigues escribiendo `git status`, `grep` y `npm install` igual que siempre: el hook los reescribe, y Caveman se activa solo. Sin niñera, sin hábitos nuevos.
 
-Las dos instalaciones son globales y de una sola vez. Las ejecutas una vez y tu forma de trabajar no cambia en nada.
-
-- Caveman se instala en tu configuración global de Claude Code, así que está en todos los proyectos. El skill se activa solo. Nada que cablear, nada que reescribir en cada sesión.
-- El `rtk init -g` de RTK planta un hook global. Sigues escribiendo `git status`, `npm install`, `grep` igual que siempre; el hook los reescribe al wrapper de `rtk` al vuelo. Nunca lo ves entrar en acción.
-
-Sin niñera. Sin hábitos nuevos. Las herramientas corren en segundo plano, en cada repo, de forma automática.
-
-> La mejor optimización es la que configuras una vez y no vuelves a pensar en ella.
-
-## Cuándo no comprimir
-
-Las dos herramientas saben cuándo hacerse a un lado.
-
-Caveman vuelve a prosa normal para:
-
-- Avisos de seguridad y operaciones destructivas.
-- Secuencias multi-paso donde los fragmentos pueden malinterpretarse.
-- Cuando le pides al agent que aclare o repita.
-
-RTK nunca toca el payload. Quita el ruido a su alrededor. Los errores y stack traces se mantienen exactos. Si algún filtro alguna vez se come algo que necesitas, sáltatelo para esa llamada:
-
-```bash
-rtk proxy <cmd>   # output crudo, sin filtrar
-```
-
-Si una respuesta queda demasiado seca, escribe `normal mode`.
-
-> La compresión es para la cháchara. Nunca para la sustancia.
-
-## Empieza con una, añade la otra
-
-No necesitas las dos el primer día. Elige la fuga que más duela.
-
-¿El agent escribe respuestas largas por cada fix? Instala Caveman primero.
-
-¿Cada `grep` o `npm install` inunda la ventana? Instala RTK primero.
-
-Luego añade la otra. No entran en conflicto.
+¿No sabes por dónde empezar? Elige la fuga que más duela. Respuestas largas por cada fix, Caveman primero. Inundaciones de output de `grep` y `npm install`, RTK primero. Luego añade la otra; no entran en conflicto.
 
 > Dos herramientas. Dos fugas. Una ventana de contexto que dura el doble.
 
