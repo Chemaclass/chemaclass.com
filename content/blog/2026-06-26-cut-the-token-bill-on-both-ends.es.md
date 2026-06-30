@@ -1,6 +1,6 @@
 +++
 title = "Recorta la Factura de Tokens"
-description = "Dos herramientas pequeñas que se suman: Caveman recorta lo que el agent te responde, RTK recorta lo que la terminal manda de vuelta. Mismo context window, el doble de espacio."
+description = "Dos herramientas pequeñas que se suman: Caveman recorta lo que el agent te responde, RTK recorta lo que la terminal manda de vuelta. Más espacio en el mismo context window, mismo modelo, mismos prompts."
 draft = false
 [taxonomies]
 tags = [ "ai", "productivity", "developer-tools", "agentic-coding" ]
@@ -19,24 +19,24 @@ related_readings = [
 ]
 +++
 
-Toda sesión agéntica quema tokens en dos direcciones. El agent te responde. La terminal escupe output. Mismo context window, fugas por los dos lados.
+Toda sesión agéntica quema tokens en dos direcciones a la vez. El agent te responde, y la terminal escupe su output. Las dos cosas pasan por el mismo context window, y las dos tienen fugas.
 
-Estíralo lo suficiente y chocas con el muro: la calidad cae, los costes suben.
+Estira la sesión lo suficiente y chocas con el muro. Las respuestas empeoran y la factura sube.
 
 <!-- more -->
 
 > Mismo modelo. Mismos prompts. Factura más ligera.
 
-Los bloques más grandes en cualquier transcripción de sesión no son tus prompts:
+Abre cualquier transcripción de sesión y los bloques más grandes no son tus prompts:
 
 - Respuestas del agent: cháchara, vacilaciones, repeticiones, "Sure! Happy to help...".
 - Output de herramientas: logs de `npm install`, muros de texto de `git status`, volcados de `grep` con rutas completas.
 
-Dos herramientas, una fuga cada una. Una recorta lo que el agent dice. La otra recorta lo que vuelve desde la shell.
+Las dos herramientas de abajo atacan una de esas cosas cada una. Caveman se ocupa de lo que el agent responde. RTK se ocupa de lo que la shell manda de vuelta.
 
 ## Caveman recorta la salida
 
-**[Caveman](https://github.com/JuliusBrussee/caveman)** es un Agent Skill. Un comando, `/caveman full`, y el agent deja caer artículos, rellenos y cháchara. Los fragmentos son bienvenidos. Los términos técnicos se mantienen exactos.
+**[Caveman](https://github.com/JuliusBrussee/caveman)** es un Agent Skill. Ejecuta `/caveman full` una vez y el agent deja de rellenar sus respuestas: sin artículos, sin relleno, sin cháchara. Los fragmentos están bien, y los términos técnicos se mantienen exactos.
 
 Instalación:
 
@@ -66,17 +66,17 @@ Modo caveman:
 
 > Bug in auth middleware. Token expiry check use `<` not `<=`. Fix:
 
-Mismo fix. Mismo bloque de código a continuación. Un cuarto de prosa.
+Mismo fix, y el bloque de código que viene después es idéntico. Lo único que encoge es la prosa de alrededor, hasta más o menos un cuarto.
 
 {% end %}
 
-Niveles: `lite`, `full`, `ultra`. Empieza en `full`; ultra se lee como un telegrama. Si una respuesta queda demasiado seca, escribe `normal mode`.
+Hay tres niveles: `lite`, `full` y `ultra`. Empieza en `full`, porque `ultra` se lee como un telegrama. Si una respuesta te queda demasiado seca, escribe `normal mode` y se relaja.
 
 > El agent no pierde inteligencia cuando le quitas la cháchara.
 
 ## RTK recorta la entrada
 
-**[RTK](https://github.com/rtk-ai/rtk)** (Rust Token Killer) envuelve los comandos que ejecuta tu agent. Un hook reescribe `git status` a `rtk git status`. Transparente. Cero overhead.
+**[RTK](https://github.com/rtk-ai/rtk)** (Rust Token Killer) envuelve los comandos que ejecuta tu agent. Un hook reescribe `git status` como `rtk git status` por detrás, así que no hay nada extra que teclear ni overhead que notar.
 
 Instalación:
 
@@ -87,9 +87,9 @@ rtk init -g    # instala el hook que reescribe los comandos
 
 Si más tarde `rtk gain` da error, se ha colado otra herramienta con el mismo nombre; instala desde el [repo](https://github.com/rtk-ai/rtk).
 
-La versión envuelta quita el ruido antes de llegar al agent: códigos de color, separadores repetidos, banners de `npm install`, timestamps verbosos.
+La versión envuelta quita el ruido antes de que llegue al agent: códigos de color, separadores repetidos, banners de `npm install`, timestamps verbosos.
 
-El mismo `git status`, en crudo vs envuelto:
+Aquí tienes el mismo `git status`, en crudo y luego envuelto:
 
 ```
 $ rtk proxy git status
@@ -110,7 +110,7 @@ $ rtk git status
    content/blog/new-draft.md
 ```
 
-Misma información. La mitad de líneas. En un repo con movimiento la diferencia escala: decenas de untracked files, pistas de rama, líneas de instrucciones, todo colapsa en un bloque.
+La misma información en la mitad de líneas. En un repo con movimiento la diferencia solo crece, porque decenas de untracked files, pistas de rama y líneas de instrucciones colapsan en un solo bloque pequeño.
 
 ```bash
 rtk gain              # ver cuántos tokens te ha ahorrado
@@ -118,26 +118,24 @@ rtk gain --history    # desglose por comando
 rtk discover          # escanea tu historial de agente buscando ganancias
 ```
 
-RTK reporta [60-90% menos tokens](https://github.com/rtk-ai/rtk) en los comandos de desarrollo habituales. Ejecuta `rtk gain` tras un uso real para ver tu propio ahorro.
+RTK reporta [60-90% menos tokens](https://github.com/rtk-ai/rtk) en los comandos de desarrollo habituales. Ejecuta `rtk gain` tras un uso real para ver tu propio número.
 
-Nunca toca el payload, solo el ruido a su alrededor. Los errores y stack traces se mantienen exactos. Si algún filtro alguna vez se come algo que necesitas, sáltatelo para esa llamada: `rtk proxy <cmd>`.
+Nunca toca el payload, solo el ruido a su alrededor, así que los errores y los stack traces salen exactamente como son. Si algún filtro alguna vez se come algo que de verdad necesitas, sáltatelo en esa llamada con `rtk proxy <cmd>`.
 
 > El output que tú no lees sigue siendo output que el modelo tiene que leer.
 
 ## Por qué la combinación suma
 
-Cada herramienta tapa una fuga. Juntas multiplican. Un turno va: prompt, pensar, ejecutar comando, output de terminal, leer, responder. RTK encoge el output de la herramienta. Caveman encoge la respuesta. Turnos más pequeños, más turnos en la misma ventana.
+Por separado, cada herramienta ayuda un poco. Júntalas y el efecto se multiplica, porque atacan mitades distintas del mismo bucle. Un turno va así: tú escribes el prompt, el agent piensa, ejecuta un comando, la terminal responde, el agent lo lee y luego te contesta. RTK encoge la mitad de la terminal y Caveman encoge la respuesta, así que cada turno sale más barato y caben más en una misma ventana.
 
-Prueba real con un plan de 100 $/mes. Antes de las dos herramientas: llegaba al límite semanal a menudo, a veces con un solo proyecto. Después: varios proyectos en paralelo y el límite casi no aparece.
-
-> El plan no se hizo más grande. Las sesiones se hicieron más pequeñas.
+Aquí está la prueba real, en un plan de 100 $/mes. Antes de añadirlas llegaba al límite semanal continuamente, a veces con un solo proyecto. Ahora corro varios proyectos en paralelo y el límite casi no aparece. El plan no se hizo más grande; las sesiones se hicieron más pequeñas.
 
 ## Instálalas una vez y olvídate
 
-Las dos instalaciones son globales y de una sola vez. Sigues escribiendo `git status`, `grep` y `npm install` igual que siempre: el hook los reescribe, y Caveman se activa solo. Sin niñera, sin hábitos nuevos.
+Las dos instalaciones son globales, y las haces una sola vez. A partir de ahí sigues escribiendo `git status`, `grep` y `npm install` igual que siempre. El hook los reescribe por ti y Caveman se activa solo, así que no hay hábitos nuevos que aprender.
 
-¿No sabes por dónde empezar? Elige la fuga que más duela. Respuestas largas por cada fix, Caveman primero. Inundaciones de output de `grep` y `npm install`, RTK primero. Luego añade la otra; no entran en conflicto.
+¿No sabes por dónde empezar? Elige la fuga que más te duela ahora mismo. Si el problema son las respuestas largas en cada arreglo, empieza por Caveman. Si son las inundaciones de output de `grep` y `npm install`, empieza por RTK. Añade la otra cuando te apetezca, que no se estorban entre sí.
 
-> Dos herramientas. Dos fugas. Una ventana de contexto que dura el doble.
+> No mejoraste el modelo. Dejaste de malgastar su atención.
 
 ![blog-footer](/images/blog/2026-06-26/footer.webp)
