@@ -72,7 +72,7 @@ style: |
   section.lead blockquote { color: #e2e8f0; border-left-color: #c4b5fd; }
   section.lead blockquote::before { color: #c4b5fd; }
   .small { font-size: 21px; color: #64748b; margin-top: 4px; }
-  .reflex { color: #0f766e; font-size: 20px; margin-top: 6px; }
+  .reflex { color: #0f766e; font-size: 20px; line-height: 1.4; margin-top: 6px; }
   .wf-step { font-size: 24px; }
   .chip { font-size: 15px; display: inline-block; background: #ede9fe; color: #512da8; border-radius: 999px; padding: 2px 10px; font-weight: 600; }
   /* Two-column split: full-width header above, text-left + image-right below */
@@ -98,6 +98,10 @@ style: |
   .hljs-attr, .hljs-attribute             { color: #0369a1; }
   .hljs-title, .hljs-title.class_         { color: #374151; }
   .hljs-variable, .hljs-params            { color: #374151; }
+  /* Audience toggle (PHP default / TS via ?for=ts). Pre-paint flash guard only;
+     the real toggle rules are injected unscoped at runtime, since Marp scopes
+     everything here under `section` and would break html[data-aud] selectors. */
+  .aud-ts { display: none; }
 ---
 
 <!--
@@ -169,7 +173,7 @@ Written in a **Lisp**. That compiles to **PHP 8.4**.
 composer require phel-lang/phel-lang
 ```
 
-<span class="reflex">🧠 "New language = new runtime + new hires"? No. It's a Composer package.</span>
+<span class="reflex aud-php">🧠 "New language = new runtime + new hires"? No. It's a Composer package.</span><span class="reflex aud-ts">🧠 "New language = new runtime + new hires"? No. It installs like any dependency, into a PHP stack.</span>
 
 ---
 
@@ -190,7 +194,7 @@ vendor/bin/phel build    # compiles .phel → out/*.php
 
 <!-- _class: lead -->
 # ACT 1
-## Phel basics, for PHP developers
+## Phel basics, for <span class="aud-php">PHP</span><span class="aud-ts">TS</span> developers
 
 *Ten minutes. Zero Lisp needed.*
 
@@ -237,7 +241,7 @@ That's the entire syntax. Everything else is just functions.
   total)  ; =>  30   (a, b, total don't exist outside)
 ```
 
-<span class="reflex">🧠 PHP: any var is reassignable from anywhere. `def` says "this never changes."</span>
+<span class="reflex aud-php">🧠 PHP: any var is reassignable from anywhere. `def` says "this never changes."</span><span class="reflex aud-ts">🧠 TS: `let` reassigns from anywhere. `def` is like a module-level `const`: this never changes.</span>
 
 ---
 
@@ -258,7 +262,7 @@ That's the entire syntax. Everything else is just functions.
 (map #(* % 2) [1 2 3])  ; =>  [2 4 6]
 ```
 
-<span class="reflex">🧠 PHP: `function greet($n) { return "Hello, ".$n; }` · `fn($x) => $x * 2`</span>
+<span class="reflex aud-php">🧠 PHP: `function greet($n) { return "Hello, ".$n; }` · `fn($x) => $x * 2`</span><span class="reflex aud-ts">🧠 TS: `function greet(n) { return "Hello, " + n; }` · `(x) => x * 2`</span>
 
 ---
 
@@ -280,7 +284,7 @@ That's the entire syntax. Everything else is just functions.
 **Keywords** (`:name`, `:active?`): typed constants, 
 like PHP string keys but faster to compare
 
-<span class="reflex">🧠 PHP arrays do everything. Phel separates the concept: map / vector / set.</span>
+<span class="reflex aud-php">🧠 PHP arrays do everything. Phel separates the concept: map / vector / set.</span><span class="reflex aud-ts">🧠 TS splits object / array / `Set` already. Phel makes the split first-class and immutable.</span>
 
 ---
 
@@ -299,7 +303,7 @@ like PHP string keys but faster to compare
 (for [x :in nums :when (odd? x)] (* x x))  ; =>  [1 9 25]
 ```
 
-<span class="reflex">🧠 `array_map` / `array_filter` / `array_reduce` - same patterns, first-class in Phel.</span>
+<span class="reflex aud-php">🧠 `array_map` / `array_filter` / `array_reduce` - same patterns, first-class in Phel.</span><span class="reflex aud-ts">🧠 `.map` / `.filter` / `.reduce` - same patterns, first-class in Phel.</span>
 
 ---
 
@@ -322,7 +326,7 @@ like PHP string keys but faster to compare
 (grade 82)  ; =>  :B
 ```
 
-<span class="reflex">🧠 PHP `switch` is a statement. `cond` IS the value, assign it directly.</span>
+<span class="reflex aud-php">🧠 PHP `switch` is a statement. `cond` IS the value, assign it directly.</span><span class="reflex aud-ts">🧠 TS: `switch` is a statement, `cond` IS the value. No nested ternaries.</span>
 
 ---
 
@@ -344,7 +348,7 @@ like PHP string keys but faster to compare
     str)      ; (str 30)  =>  "30"
 ```
 
-<span class="reflex">🧠 `$obj->method()->chain()` needs fluent objects. `->` works on any value.</span>
+<span class="reflex aud-php">🧠 `$obj->method()->chain()` needs fluent objects. `->` works on any value.</span><span class="reflex aud-ts">🧠 `obj.method().chain()` needs fluent objects. `->` works on any value.</span>
 
 ---
 
@@ -447,7 +451,7 @@ Load any namespace. Probe any function. No rebuild, no restart.
 
 <span class="small">src/main.phel: the bootstrap (version wiring trimmed)</span>
 
-<span class="reflex">🧠 `ns` = namespace. `:require … :as` = `use X as Y`. `:refer` = `use function X`. Same idea, Lisp syntax.</span>
+<span class="reflex aud-php">🧠 `ns` = namespace. `:require … :as` = `use X as Y`. `:refer` = `use function X`. Same idea, Lisp syntax.</span><span class="reflex aud-ts">🧠 `ns` = module. `:require :as` = `import * as Y`. `:refer` = `import {x}`.</span>
 
 ---
 
@@ -490,6 +494,8 @@ This single map **IS the game**.
 
 ## Functions create data, not objects
 
+<div class="aud-php">
+
 ```php
 class Player { // PHP - class + mutation
     public function __construct(
@@ -499,6 +505,21 @@ class Player { // PHP - class + mutation
 $p = new Player(2.5, 3.5, 0.0);
 $p->angle = 1.57;   // mutates in-place
 ```
+
+</div>
+<div class="aud-ts">
+
+```typescript
+class Player { // TS - class + mutation
+  constructor(
+    public x: number, public y: number, public angle: number,
+  ) {}
+}
+const p = new Player(2.5, 3.5, 0.0);
+p.angle = 1.57;   // mutates in-place
+```
+
+</div>
 
 ```clojure
 ; Phel - function + immutable update
@@ -527,7 +548,7 @@ $p->angle = 1.57;   // mutates in-place
 Every subsystem is `world -> world`. Old world discarded.
 A bug stays **trapped in its subsystem** - it can't corrupt the rest.
 
-<span class="reflex">🧠 PHP: subsystems mutate shared state. Here: one in, one out. Nothing else can touch it.</span>
+<span class="reflex aud-php">🧠 PHP: subsystems mutate shared state. Here: one in, one out. Nothing else can touch it.</span><span class="reflex aud-ts">🧠 TS: shared mutable state drifts. Here: one in, one out. Nothing else can touch it.</span>
 
 ---
 
@@ -590,7 +611,7 @@ One ray per column, marched to the first wall → distance `d`.
 
 Small `d` = **tall strip.** One division per ray. No 3D engine.
 
-<span class="reflex">🧠 PHP instinct: reach for a 3D rendering library. Carmack: constrain the world, trust the math.</span>
+<span class="reflex aud-php">🧠 PHP instinct: reach for a 3D rendering library. Carmack: constrain the world, trust the math.</span><span class="reflex aud-ts">🧠 JS instinct: reach for WebGL or three.js. Carmack: constrain the world, trust the math.</span>
 
 ---
 
@@ -861,4 +882,60 @@ Reach for it when immutability + a REPL pay off.
 ### https://chemaclass.com/phel-doom
 
 **Questions?** The REPL is open.
+
+<script>
+(function () {
+  if (window.__audInit) return;
+  window.__audInit = true;
+  var KEY = "phel-doom-aud";
+  var css = document.createElement("style");
+  css.textContent =
+    /* !important beats Marp's ID-scoped `.aud-ts{display:none}` flash guard */
+    'html[data-aud="ts"] .aud-php{display:none!important}' +
+    'html[data-aud="ts"] .aud-ts{display:revert!important}' +
+    '.aud-toggle{position:fixed;top:12px;right:12px;z-index:99999;display:flex;' +
+    'font-family:"Fira Code",ui-monospace,monospace;font-size:13px;font-weight:600;' +
+    'border:1px solid #cbd5e1;border-radius:999px;overflow:hidden;background:#f1f5f9;' +
+    'box-shadow:0 2px 8px rgba(15,23,42,.18);user-select:none}' +
+    '.aud-toggle button{border:0;background:transparent;color:#64748b;padding:6px 15px;' +
+    'cursor:pointer;font:inherit;line-height:1}' +
+    '.aud-toggle button.on{background:#512da8;color:#fff}' +
+    '@media print{.aud-toggle{display:none!important}}';
+  document.head.appendChild(css);
+  function read() {
+    var p = new URLSearchParams(location.search).get("for");
+    if (p === "ts" || p === "php") return p;
+    try { var s = localStorage.getItem(KEY); if (s) return s; } catch (e) {}
+    return "php";
+  }
+  function apply(aud) {
+    document.documentElement.setAttribute("data-aud", aud);
+    try { localStorage.setItem(KEY, aud); } catch (e) {}
+    var u = new URL(location.href);
+    if (aud === "ts") u.searchParams.set("for", "ts"); else u.searchParams.delete("for");
+    history.replaceState(null, "", u);
+    var t = document.querySelector(".aud-toggle");
+    if (t) t.querySelectorAll("button").forEach(function (b) {
+      b.classList.toggle("on", b.dataset.aud === aud);
+    });
+  }
+  function build() {
+    if (document.querySelector(".aud-toggle")) return;
+    var wrap = document.createElement("div");
+    wrap.className = "aud-toggle";
+    ["php", "ts"].forEach(function (a) {
+      var b = document.createElement("button");
+      b.dataset.aud = a;
+      b.textContent = a.toUpperCase();
+      b.addEventListener("click", function () { apply(a); });
+      wrap.appendChild(b);
+    });
+    document.body.appendChild(wrap);
+    apply(read());
+  }
+  if (document.readyState === "loading")
+    document.addEventListener("DOMContentLoaded", build);
+  else build();
+})();
+</script>
 
