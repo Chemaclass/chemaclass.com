@@ -1,14 +1,14 @@
 ---
 marp: true
-title: "Writing Lisp in PHP: A Journey with Phel"
-description: "We learn Phel — a Lisp that compiles to PHP — by building a DOOM clone, exploring persistent data structures, macros, and the REPL."
+title: "Running DOOM with Phel"
+description: "We learn Phel (a Lisp that compiles to PHP) by building a DOOM clone, exploring persistent data structures, macros, and the REPL."
 author: "Chemaclass"
 keywords: "Phel, Lisp, PHP, functional programming, macros, REPL, DOOM"
 url: "https://chemaclass.com/slides/phel-doom/"
 image: "https://chemaclass.com/slides/phel-doom/assets/screenshot.png"
 theme: uncover
 paginate: true
-footer: "Writing Lisp in PHP · Chemaclass"
+footer: "Running DOOM with Phel · Chemaclass"
 backgroundColor: #f8fafc
 color: #1e293b
 style: |
@@ -115,9 +115,9 @@ Slides 19+ = real phel-doom code.
 <!-- _paginate: false -->
 <!-- _footer: "" -->
 
-# Writing Lisp in PHP
+# Running DOOM with Phel
 
-### Learn Phel by building DOOM
+### Building a raycasting engine with functional Phel
 
 **Chemaclass**
 
