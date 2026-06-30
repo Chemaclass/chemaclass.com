@@ -36,7 +36,7 @@ Dos herramientas, una fuga cada una. Una recorta lo que el agent dice. La otra r
 
 ## Caveman recorta la salida
 
-**[Caveman](https://github.com/JuliusBrussee/caveman)** es un skill de Claude Code. Un comando, `/caveman full`, y el agent deja caer artículos, rellenos y cháchara. Los fragmentos son bienvenidos. Los términos técnicos se mantienen exactos.
+**[Caveman](https://github.com/JuliusBrussee/caveman)** es un Agent Skill. Un comando, `/caveman full`, y el agent deja caer artículos, rellenos y cháchara. Los fragmentos son bienvenidos. Los términos técnicos se mantienen exactos.
 
 Instalación:
 
@@ -115,7 +115,7 @@ Misma información. La mitad de líneas. En un repo con movimiento la diferencia
 ```bash
 rtk gain              # ver cuántos tokens te ha ahorrado
 rtk gain --history    # desglose por comando
-rtk discover          # escanea tu historial de Claude Code buscando ganancias
+rtk discover          # escanea tu historial de agente buscando ganancias
 ```
 
 RTK reporta [60-90% menos tokens](https://github.com/rtk-ai/rtk) en los comandos de desarrollo habituales. Ejecuta `rtk gain` tras un uso real para ver tu propio ahorro.
@@ -128,7 +128,7 @@ Nunca toca el payload, solo el ruido a su alrededor. Los errores y stack traces 
 
 Cada herramienta tapa una fuga. Juntas multiplican. Un turno va: prompt, pensar, ejecutar comando, output de terminal, leer, responder. RTK encoge el output de la herramienta. Caveman encoge la respuesta. Turnos más pequeños, más turnos en la misma ventana.
 
-Prueba real con el plan Claude Max de 100 $/mes. Antes de las dos herramientas: llegaba al límite semanal a menudo, a veces con un solo proyecto. Después: varios proyectos en paralelo y el límite casi no aparece.
+Prueba real con un plan de 100 $/mes. Antes de las dos herramientas: llegaba al límite semanal a menudo, a veces con un solo proyecto. Después: varios proyectos en paralelo y el límite casi no aparece.
 
 > El plan no se hizo más grande. Las sesiones se hicieron más pequeñas.
 
