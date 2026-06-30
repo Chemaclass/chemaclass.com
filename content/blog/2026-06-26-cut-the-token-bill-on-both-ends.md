@@ -36,7 +36,7 @@ Two tools, one leak each. One trims what the agent says. The other trims what th
 
 ## Caveman trims the output
 
-**[Caveman](https://github.com/JuliusBrussee/caveman)** is a Claude Code skill. One command, `/caveman full`, and the agent drops articles, fillers, and small talk. Fragments are welcome. Technical terms stay exact.
+**[Caveman](https://github.com/JuliusBrussee/caveman)** is an Agent Skill. One command, `/caveman full`, and the agent drops articles, fillers, and small talk. Fragments are welcome. Technical terms stay exact.
 
 Install:
 
@@ -115,7 +115,7 @@ Same information. Half the lines. On a busy repo the gap scales: dozens of untra
 ```bash
 rtk gain              # see how many tokens it saved you
 rtk gain --history    # per-command breakdown
-rtk discover          # scan your Claude Code history for missed wins
+rtk discover          # scan your agent history for missed wins
 ```
 
 RTK reports [60-90% fewer tokens](https://github.com/rtk-ai/rtk) on common dev commands. Run `rtk gain` after real use to see your own.
@@ -128,7 +128,7 @@ It never touches the payload, only the noise around it. Errors and stack traces 
 
 Each tool plugs one leak. Together they multiply. A turn goes: prompt, think, run command, terminal output, read, answer. RTK shrinks the tool output. Caveman shrinks the answer. Smaller turns, more turns in the same window.
 
-Real check on the $100/month Claude Max plan. Before both tools: I hit the weekly usage cap often, sometimes on a single project. After: multiple projects running in parallel and the cap rarely shows.
+Real check on a $100/month plan. Before both tools: I hit the weekly usage cap often, sometimes on a single project. After: multiple projects running in parallel and the cap rarely shows.
 
 > The plan didn't get bigger. The sessions got smaller.
 
