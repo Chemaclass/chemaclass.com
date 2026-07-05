@@ -74,12 +74,13 @@
             <img src="{{ page.extra.static_thumbnail | safe }}" alt="{{ page.title }}" width="960" height="540" loading="eager" fetchpriority="high" />
           {% else %}
             {% set hero_path = page.extra.static_thumbnail | trim_start_matches(pat="/") %}
-            {% set hero_sm = resize_image(path=hero_path, width=480, height=270, op="fill", quality=80, format="webp") %}
-            {% set hero_md = resize_image(path=hero_path, width=720, height=405, op="fill", quality=80, format="webp") %}
-            {% set hero_lg = resize_image(path=hero_path, width=960, height=540, op="fill", quality=80, format="webp") %}
-            {% set hero_fb = resize_image(path=hero_path, width=960, height=540, op="fill", quality=85) %}
+            {% set hero_sm = resize_image(path=hero_path, width=480, height=270, op="fill", quality=88, format="webp") %}
+            {% set hero_md = resize_image(path=hero_path, width=720, height=405, op="fill", quality=88, format="webp") %}
+            {% set hero_lg = resize_image(path=hero_path, width=960, height=540, op="fill", quality=88, format="webp") %}
+            {% set hero_xl = resize_image(path=hero_path, width=1440, height=810, op="fill", quality=88, format="webp") %}
+            {% set hero_fb = resize_image(path=hero_path, width=960, height=540, op="fill", quality=88) %}
             <picture>
-              <source type="image/webp" srcset="{{ hero_sm.url }} 480w, {{ hero_md.url }} 720w, {{ hero_lg.url }} 960w" sizes="(max-width: 720px) 100vw, 960px" />
+              <source type="image/webp" srcset="{{ hero_sm.url }} 480w, {{ hero_md.url }} 720w, {{ hero_lg.url }} 960w, {{ hero_xl.url }} 1440w" sizes="(max-width: 720px) 100vw, 960px" />
               <img src="{{ hero_fb.url }}" alt="{{ page.title }}" width="{{ hero_fb.width }}" height="{{ hero_fb.height }}" loading="eager" fetchpriority="high" />
             </picture>
           {% endif %}
