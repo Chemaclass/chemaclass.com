@@ -34,7 +34,7 @@ Well, there are multiple options. The key is to be aware of them and use them wi
 - We can always do some pair-thinking, talk at any time. Communication is always good in order to clarify the possible uncertainty.
 - Sharing your git patches is another good option.
 
-# Git diff to the rescue!
+## Git diff to the rescue!
 
 What if you (as a reviewer) could share your idea without any single commit or comment in the PR, but sharing your changes directly with the author?
 

@@ -8,7 +8,7 @@ date = 2025-12-09
 tags = []
 +++
 
-# Nine Branches
+## Nine Branches
 
 {{ youtube(id="LfPmK6SfLmc") }}
 
@@ -17,7 +17,7 @@ tags = []
 December 2025.
 It's cold outside. The kind that cleans your face and forces you to wake up.
 
-Eleven years later, I still think about that twenty-one-year-old kid who took a flight to Lübeck without understanding what it would cost. I'm not talking about the language—an English to survive and no German at all. I'm talking about everything else: the loneliness, the fear, the freedom, the people who save you without knowing it.
+Eleven years later, I still think about that twenty-one-year-old kid who took a flight to Lübeck without understanding what it would cost. I'm not talking about the language: an English to survive and no German at all. I'm talking about everything else: the loneliness, the fear, the freedom, the people who save you without knowing it.
 
 It wasn't bravery. It was urgency.
 
@@ -183,7 +183,7 @@ That word stuck with me. He was right. I had settled.
 
 With my savings I could have held on for a few months. But then what? What if I didn't find work? The uncertainty forced me to look at myself straight on and recognize my mistakes.
 
-It was time to focus and surf the waves. Two weeks into searching—getting up at eight and not letting go of the laptop until five—I found work.
+It was time to focus and surf the waves. Two weeks into searching (getting up at eight and not letting go of the laptop until five) I found work.
 
 I couldn't give up. And I didn't.
 
@@ -237,7 +237,7 @@ But no victory tastes the same if there's no one to celebrate it with.
 
 And you are that someone: Dad. Maricarmen. Juan. Jesús. Ángel. Lola. Cosme. Anica. Antonio. Uncle Cosme. Aunt Angustias. And Anna-Lena.
 
-You are the branches—and the roots—of this tree that I continue to be.
+You are the branches (and the roots) of this tree that I continue to be.
 
 Physical distance doesn't diminish love. The few times we see each other a year don't reduce what you mean to me.
 
