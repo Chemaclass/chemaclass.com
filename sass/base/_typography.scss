@@ -146,10 +146,11 @@ a {
   transition: color 0.2s ease;
 
   // Plain text links get the recolor + underline on hover. Button-styled
-  // anchors (btn/button/cta/view-all) opt out: they keep their own bg/color
-  // and must never inherit the underline border, which looks broken on a
-  // solid-blue button.
-  &:hover:not([class*="btn"]):not([class*="button"]):not([class*="cta"]):not(.view-all):not(.header-left) {
+  // anchors (btn/button/cta/view-all/pill tags) opt out: they keep their own
+  // bg/color and must never inherit the underline border, which looks broken
+  // on a solid-blue button. Without the blog-post__tag opt-out this recolor
+  // beats its own :hover and paints blue text on the blue hover bg.
+  &:hover:not([class*="btn"]):not([class*="button"]):not([class*="cta"]):not(.view-all):not(.header-left):not(.blog-post__tag) {
     color: var(--accent-overlay-color);
     border-bottom: 1px solid var(--accent-color-light);
   }
