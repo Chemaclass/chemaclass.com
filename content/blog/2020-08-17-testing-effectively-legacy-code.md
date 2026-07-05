@@ -5,7 +5,7 @@ description = "How to write characterization tests for legacy code to safely ref
 tags = [ "testing", "refactoring", "clean-code", "tdd"]
 [extra]
 subtitle = "How to write proper tests to already written code"
-static_thumbnail = "/images/blog/2021-01-11/cover.jpg"
+static_thumbnail = "/images/blog/2020-08-17/cover.jpg"
 related_posts = [
   "blog/2020-06-06-final-classes.md",
   "blog/2020-06-28-the-art-of-refactoring.md",
@@ -16,8 +16,6 @@ related_readings = [
   "readings/2016-05-01-clean-code.md",
 ]
 +++
-
-![blog-cover](/images/blog/2020-08-17/cover.jpg)
 
 These tests are also known as Characterization tests.
 
