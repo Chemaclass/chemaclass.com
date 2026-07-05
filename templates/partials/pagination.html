@@ -1,0 +1,43 @@
+{% macro nav(paginator, lang="en") %}
+{% if paginator.number_pagers > 1 %}
+{% set last_page = paginator.number_pagers %}
+<nav class="pagination" aria-label="{{ trans(key='pagination_nav', lang=lang) }}">
+  {% if paginator.previous %}
+    <a class="pagination__link pagination__prev" href="{{ paginator.previous | safe }}" rel="prev">
+      <i class="fa-solid fa-arrow-left"></i> {{ trans(key="pagination_prev", lang=lang) }}
+    </a>
+  {% else %}
+    <span class="pagination__link pagination__prev is-disabled" aria-hidden="true">
+      <i class="fa-solid fa-arrow-left"></i> {{ trans(key="pagination_prev", lang=lang) }}
+    </span>
+  {% endif %}
+
+  <ol class="pagination__pages">
+    {% for i in range(start=1, end=last_page + 1) %}
+      <li>
+        {% if i == paginator.current_index %}
+          <span class="pagination__page is-current" aria-current="page">{{ i }}</span>
+        {% else %}
+          {% if i == 1 %}
+            {% set page_url = paginator.first %}
+          {% else %}
+            {% set page_url = paginator.base_url ~ i ~ "/" %}
+          {% endif %}
+          <a class="pagination__page" href="{{ page_url | safe }}">{{ i }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+
+  {% if paginator.next %}
+    <a class="pagination__link pagination__next" href="{{ paginator.next | safe }}" rel="next">
+      {{ trans(key="pagination_next", lang=lang) }} <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  {% else %}
+    <span class="pagination__link pagination__next is-disabled" aria-hidden="true">
+      {{ trans(key="pagination_next", lang=lang) }} <i class="fa-solid fa-arrow-right"></i>
+    </span>
+  {% endif %}
+</nav>
+{% endif %}
+{% endmacro %}

@@ -107,6 +107,11 @@ highlight_clear_confirm = "Remove all highlights and notes from this page?"
 highlight_clear_done = "All highlights cleared"
 highlight_export = "Copy all notes"
 highlight_export_done = "Notes copied to clipboard"
+# Pagination and navigation
+pagination_nav = "Pagination"
+pagination_prev = "Previous"
+pagination_next = "Next"
+jump_to_year = "Jump to year"
 # Section headers and descriptions
 blog_title = "Blog"
 blog_filter_all = "All"
@@ -436,6 +441,11 @@ highlight_clear_confirm = "¿Eliminar todos los resaltados y notas de esta pági
 highlight_clear_done = "Todos los resaltados eliminados"
 highlight_export = "Copiar todas las notas"
 highlight_export_done = "Notas copiadas al portapapeles"
+# Pagination and navigation
+pagination_nav = "Paginación"
+pagination_prev = "Anterior"
+pagination_next = "Siguiente"
+jump_to_year = "Ir al año"
 # Section headers and descriptions
 blog_title = "Blog"
 blog_filter_all = "Todos"
