@@ -81,7 +81,8 @@ To add a new series: add `[extra.series.<key>]` with `title` and `title_es` in `
 - `/check-links` - Verify internal links
 - `/list-posts` - List blog posts with metadata
 - `/translate <file>` - Translate content EN↔ES
-- `/add-image <path> [post-date] [cover|middle|footer]` - Add image to blog post
+- `/add-image <path> [post-date] [cover|middle|footer]` - Add image to blog post (optimizes to webp by default)
+- `/optimize-images <path...> [--slot ...] [--width N]` - Optimize images to web-ready webp, report before/after
 - `/optimize-ui [target]` - Analyze and improve visual design
 - `/check-translations [blog|readings|talks]` - Find content missing Spanish translations
 - `/validate-posts [file]` - Lint front matter, structure, and asset references

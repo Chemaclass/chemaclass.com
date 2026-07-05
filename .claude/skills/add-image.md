@@ -19,16 +19,17 @@ Move an image to the correct location and insert it into a blog post.
    - Find the matching file in `content/blog/` by date prefix or slug
    - Extract the date (YYYY-MM-DD) from the filename
 
-3. Move the image:
+3. Optimize and place the image (always optimize by default, never copy a raw phone photo in):
    - Create `static/images/blog/YYYY-MM-DD/` if it doesn't exist
-   - Copy the source image to `static/images/blog/YYYY-MM-DD/{placement}.jpg`
-     - If the source isn't `.jpg`, keep the original extension
-   - Remove the source file after successful copy
+   - Run `bash scripts/optimize-image.sh <source> static/images/blog/YYYY-MM-DD/{placement}.webp --width <W> --quality 80`
+     - Width by slot: `cover`/`footer` = `1200`, `middle` = `800`
+   - **Report the before/after size** the script prints (before KB, after KB, % saved)
+   - Remove the source file after a successful optimize
 
-4. Update the blog post based on placement:
-   - **cover**: set `static_thumbnail = "/images/blog/YYYY-MM-DD/cover.{ext}"` in front matter `[extra]`, and add `![cover](...)` as the first body line if missing
-   - **middle**: insert `![blog-middle](/images/blog/YYYY-MM-DD/middle.{ext})` after the `<!-- more -->` marker (or ask user where to place it)
-   - **footer**: insert `![blog-footer](/images/blog/YYYY-MM-DD/footer.{ext})` just before the `## Related` section (or at the end of the body if there is none)
+4. Update the blog post based on placement (all images are `.webp`):
+   - **cover**: set `static_thumbnail = "/images/blog/YYYY-MM-DD/cover.webp"` in front matter `[extra]` (newer posts do not add a body `![cover]` line; the template renders the hero from `static_thumbnail`)
+   - **middle**: insert `![descriptive alt](/images/blog/YYYY-MM-DD/middle.webp)` near the middle of the body (or ask user where to place it)
+   - **footer**: insert `![descriptive alt](/images/blog/YYYY-MM-DD/footer.webp)` as the last content line
 
 5. Verify the image path resolves correctly with `zola build`
 
