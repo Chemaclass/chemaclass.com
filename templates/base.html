@@ -218,53 +218,63 @@
     <meta property="og:locale:alternate" content="es_ES">
     {% endif %}
 
-    {% if page.extra.thumbnail or page.extra.static_thumbnail or config.extra.default_og_image %}
-    <meta name="twitter:card" content="summary_large_image">
+    {# Resolve a single share image with honest dimensions. External book covers (readings) are
+       portrait and can't be measured remotely, so we skip fake dimensions; cover-less pages fall
+       back to the 1.91:1 banner instead of the near-square avatar. #}
+    {% set og_image = "" %}
+    {% set og_w = 0 %}
+    {% set og_h = 0 %}
+    {% set og_external = false %}
+    {% if page.extra.thumbnail %}
+      {% set og_src = page.path ~ page.extra.thumbnail %}
+      {% set og_image = get_url(path=og_src) %}
+      {% set m = get_image_metadata(path=og_src, allow_missing=true) %}
+      {% if m %}{% set og_w = m.width %}{% set og_h = m.height %}{% endif %}
+    {% elif page.extra.static_thumbnail %}
+      {% if page.extra.static_thumbnail is matching("^http[s]?://") %}
+        {% set og_image = page.extra.static_thumbnail %}
+        {% set og_external = true %}
+      {% else %}
+        {% set og_src = page.extra.static_thumbnail | trim_start_matches(pat="/") %}
+        {% set og_image = get_url(path=page.extra.static_thumbnail) %}
+        {% set m = get_image_metadata(path=og_src, allow_missing=true) %}
+        {% if m %}{% set og_w = m.width %}{% set og_h = m.height %}{% endif %}
+      {% endif %}
     {% else %}
+      {% set og_banner = resize_image(path="banner.jpg", width=1200, height=630, op="fill", format="jpeg", quality=82) %}
+      {% set og_image = og_banner.url %}
+      {% set og_w = 1200 %}
+      {% set og_h = 630 %}
+    {% endif %}
+
+    {% set og_type = "image/jpeg" %}
+    {% if og_image is matching("(?i)\.png($|\?)") %}{% set og_type = "image/png" %}
+    {% elif og_image is matching("(?i)\.webp($|\?)") %}{% set og_type = "image/webp" %}
+    {% elif og_image is matching("(?i)\.gif($|\?)") %}{% set og_type = "image/gif" %}{% endif %}
+
+    {# Wide images get the large card; portrait/square (book covers, avatars) get the compact one #}
+    {% if og_external or (og_w > 0 and og_w < og_h * 1.5) %}
     <meta name="twitter:card" content="summary">
+    {% else %}
+    <meta name="twitter:card" content="summary_large_image">
     {% endif %}
 
     {% if config.extra.twitter %}
-      <meta name="twitter:creator" content="@{{ config.extra.twitter }}">
-      <meta name="twitter:site" content="@{{ config.extra.twitter }}">
+    <meta name="twitter:creator" content="@{{ config.extra.twitter }}">
+    <meta name="twitter:site" content="@{{ config.extra.twitter }}">
     {% endif %}
 
-    {% if page.extra.thumbnail %}
-      {% set og_meta = get_image_metadata(path=page.path ~ page.extra.thumbnail, allow_missing=true) %}
-      <meta property="og:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail) }}">
-      <meta property="og:image:width" content="{% if og_meta %}{{ og_meta.width }}{% else %}1200{% endif %}">
-      <meta property="og:image:height" content="{% if og_meta %}{{ og_meta.height }}{% else %}630{% endif %}">
-      <meta property="og:image:alt" content="{{ page.title | default(value=config.title) }}">
-      <meta name="twitter:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail) }}">
-      <meta name="twitter:image:alt" content="{{ page.title | default(value=config.title) }}">
-    {% elif page.extra.static_thumbnail %}
-      {%if page.extra.static_thumbnail is matching("^http[s]?://") %}
-        <meta property="og:image" content="{{ page.extra.static_thumbnail | safe}}">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
-        <meta property="og:image:alt" content="{{ page.title | default(value=config.title) }}">
-        <meta name="twitter:image" content="{{ page.extra.static_thumbnail | safe}}">
-        <meta name="twitter:image:alt" content="{{ page.title | default(value=config.title) }}">
-      {% else %}
-        {% set og_path = page.extra.static_thumbnail | trim_start_matches(pat="/") %}
-        {% set og_meta = get_image_metadata(path=og_path, allow_missing=true) %}
-        <meta property="og:image" content="{{ get_url(path=page.extra.static_thumbnail) }}">
-        <meta property="og:image:width" content="{% if og_meta %}{{ og_meta.width }}{% else %}1200{% endif %}">
-        <meta property="og:image:height" content="{% if og_meta %}{{ og_meta.height }}{% else %}630{% endif %}">
-        <meta property="og:image:alt" content="{{ page.title | default(value=config.title) }}">
-        <meta name="twitter:image" content="{{ get_url(path=page.extra.static_thumbnail) }}">
-        <meta name="twitter:image:alt" content="{{ page.title | default(value=config.title) }}">
-      {% endif %}
-    {% elif config.extra.default_og_image %}
-        {% set og_default_path = config.extra.default_og_image | trim_start_matches(pat="/") %}
-        {% set og_meta = get_image_metadata(path=og_default_path, allow_missing=true) %}
-        <meta property="og:image" content="{{ get_url(path=config.extra.default_og_image) }}">
-        <meta property="og:image:width" content="{% if og_meta %}{{ og_meta.width }}{% else %}1200{% endif %}">
-        <meta property="og:image:height" content="{% if og_meta %}{{ og_meta.height }}{% else %}630{% endif %}">
-        <meta property="og:image:alt" content="{{ page.title | default(value=config.title) }}">
-        <meta name="twitter:image" content="{{ get_url(path=config.extra.default_og_image) }}">
-        <meta name="twitter:image:alt" content="{{ page.title | default(value=config.title) }}">
+    {% set og_alt = page.title | default(value=config.title) %}
+    <meta property="og:image" content="{{ og_image | safe }}">
+    <meta property="og:image:secure_url" content="{{ og_image | safe }}">
+    {% if og_w > 0 and og_h > 0 %}
+    <meta property="og:image:width" content="{{ og_w }}">
+    <meta property="og:image:height" content="{{ og_h }}">
     {% endif %}
+    <meta property="og:image:type" content="{{ og_type | safe }}">
+    <meta property="og:image:alt" content="{{ og_alt }}">
+    <meta name="twitter:image" content="{{ og_image | safe }}">
+    <meta name="twitter:image:alt" content="{{ og_alt }}">
 
     {% block description %}
       {% if page.description %}
