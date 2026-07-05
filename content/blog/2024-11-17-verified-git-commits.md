@@ -19,7 +19,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-11-17/cover.jpg)
 
 When it comes to software development, trust and security are very important. One easy way to level up both is by using verified commits. 
 

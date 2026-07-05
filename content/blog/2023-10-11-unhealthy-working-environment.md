@@ -22,7 +22,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-10-11/cover.jpg)
 
 An unhealthy working environment can have various symptoms that negatively impact employees' physical and mental well-being.
 

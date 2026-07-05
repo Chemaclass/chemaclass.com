@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2022-05-27/cover.jpg)
 
 El término se acuñó como metáfora de la Ley de trivialidad de Parkinson. La gente en las organizaciones suele dar demasiada importancia a los asuntos triviales.
 

@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-12-30/cover.jpg)
 
 Coding is not just another job. Writing software can be really fun and, even more, it can be your personal hobby as well! You might be focused on coding, coding and more coding to level up your own career skills.
 

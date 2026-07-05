@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-06-27/cover.jpg)
 
 The Prisoner's Dilemma is a hypothetical game set up showing a situation where people won't want to work together even when it's beneficial to do so.
 

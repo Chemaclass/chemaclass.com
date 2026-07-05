@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2022-05-27/cover.jpg)
 
 The term was coined as a metaphor to illuminate Parkinson's Law of triviality. People within an organization typically give disproportionate weight to trivial issues.
 

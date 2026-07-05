@@ -19,7 +19,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-05-17/cover.jpg)
 
 Esto será controvertido, pero hablemos de la posición de QA. La verdad oculta detrás de la falta de calidad del software y por qué esto debería preocuparte si escribes software.
 

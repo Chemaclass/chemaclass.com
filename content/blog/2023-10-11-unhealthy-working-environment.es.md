@@ -22,7 +22,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-10-11/cover.jpg)
 
 Un ambiente de trabajo no saludable tiene varios síntomas que afectan el bienestar físico y mental de las personas.
 

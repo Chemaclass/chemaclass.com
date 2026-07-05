@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2020-09-08/cover.jpg)
 
 Ninguna meta debería ser un logro en sí misma, sino el proceso que nos ayuda a ir en la dirección de esas metas.
 

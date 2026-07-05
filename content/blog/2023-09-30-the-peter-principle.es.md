@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-09-30/cover.jpg)
 
 Cuando alguien es competente en su trabajo, lo ascienden a un puesto que requiere otras habilidades. Si no las tiene, será incompetente y no lo ascenderán más.
 

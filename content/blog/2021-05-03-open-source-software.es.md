@@ -16,7 +16,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2021-05-03/cover.jpg)
 
 ¿Qué es el Software de Código Abierto (OSS)? ¿Cuáles son sus beneficios? ¿Cómo puedes empezar a contribuir a cualquier OSS? ¿Proyectos personales? ¿Compartir conocimiento? ¿Por qué todo esto?
 

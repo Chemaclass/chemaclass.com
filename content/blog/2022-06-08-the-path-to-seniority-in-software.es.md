@@ -22,7 +22,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2022-06-08/cover.jpg)
 
 Todos hemos sido desarrolladores junior en algún momento. Esto es fácil de saber porque es al principio de tu carrera. Tus responsabilidades fueron delimitadas por otros compañeros que cuidaban de ti.
 

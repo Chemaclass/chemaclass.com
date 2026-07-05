@@ -22,7 +22,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2022-06-08/cover.jpg)
 
 We all have been junior developers at some point. This is easy to know because it sits at the very beginning of your
 career. Your responsibilities were narrowed down by other peers who were looking after you.

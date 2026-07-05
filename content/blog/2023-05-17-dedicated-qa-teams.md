@@ -19,7 +19,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-05-17/cover.jpg)
 
 This will be controversial, but let's talk about the QA position. The hidden truth behind the lack of software quality and why this should concern you if you write software.
 

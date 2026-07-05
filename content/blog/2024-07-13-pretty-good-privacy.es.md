@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-07-13/cover.jpg)
 
 PGP (_Pretty Good Privacy_) es un programa de cifrado para proteger tu privacidad y autenticar comunicaciones. Sirve para firmar, cifrar y descifrar textos, correos, archivos, directorios y particiones de disco.
 

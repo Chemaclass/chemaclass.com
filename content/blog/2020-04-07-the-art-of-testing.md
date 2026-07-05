@@ -21,7 +21,6 @@ series = "craftsmanship"
 series_order = 1
 +++
 
-![blog-cover](/images/blog/2020-04-07/cover.jpg)
 
 Why you should consider testing as part of your daily development habit and how it's directly linked to the software
 quality.

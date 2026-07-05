@@ -19,7 +19,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2022-08-22/cover.jpg)
 
 Uno de los mayores retos es evitar malentendidos y aceptar que los demás no piensan igual que tú.
 

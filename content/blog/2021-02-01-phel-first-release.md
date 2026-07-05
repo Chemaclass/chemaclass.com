@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2021-02-01/cover.jpg)
 
 A new Functional Programming language built-in on the PHP ecosystem.
 

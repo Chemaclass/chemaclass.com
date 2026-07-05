@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-04-14/cover.jpg)
 
 To introduce a new tech stack for the entire team, it's important to bring "why?" and a strategy to make it happen among the team because it will affect everyone.
 

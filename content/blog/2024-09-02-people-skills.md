@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-09-02/cover.jpg)
 
 So, you're a software developer, and you've mastered coding languages, algorithms, and all the tech stuff. That's awesome! But here's the deal: technical skills alone won't get you as far as you might think. 
 

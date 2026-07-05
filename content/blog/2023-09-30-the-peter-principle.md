@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-09-30/cover.jpg)
 
 A person who is competent at their job will get promoted to a position that requires other skills. If they lack the skills for the new role, they will be incompetent at the new level, and will not be promoted again.
 

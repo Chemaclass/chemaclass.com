@@ -16,7 +16,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2020-08-09/cover.jpg)
 
 In December 2015, PHP 7 introduced scalar type declarations and with it the strict types flag. What is this new feature?
 

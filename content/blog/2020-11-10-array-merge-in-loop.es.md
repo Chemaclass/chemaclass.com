@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2020-11-10/cover.jpg)
 
 Usar array_merge dentro de un bucle mata el rendimiento.
 El operador spread te ayudará a mejorar esto aplanando el array.

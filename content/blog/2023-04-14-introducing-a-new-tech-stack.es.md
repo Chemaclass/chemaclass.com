@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-04-14/cover.jpg)
 
 Cuando introduces una nueva tecnología en tu equipo, necesitas explicar el porqué y tener una estrategia clara. Va a afectar a todos.
 

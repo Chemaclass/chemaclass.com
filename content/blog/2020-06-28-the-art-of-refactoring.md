@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2020-06-28/cover.jpg)
 
 If you see something, in the scope of your current task, that can be easily improved, improve it. And if you have any questions about it, ask.
 

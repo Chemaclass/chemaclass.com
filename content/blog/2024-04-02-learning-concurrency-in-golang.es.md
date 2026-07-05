@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-04-02/cover.jpg)
 
 Quería aprender un nuevo lenguaje, así que después de probar algunos, terminé con Golang como uno de mis favoritos por su simplicidad y capacidades. Tiene características que no había usado en años, como multithreading y concurrencia.
 

@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2021-06-01/cover.jpg)
 
 ¿Hasta qué punto las fuerzas sociales alteran las opiniones de las personas? ¿Qué aspecto de la influencia del grupo es más importante: el tamaño de la mayoría, o la unanimidad de opinión?
 

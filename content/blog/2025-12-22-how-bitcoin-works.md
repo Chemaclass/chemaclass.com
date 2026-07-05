@@ -22,7 +22,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2025-12-21/cover.jpg)
 
 This post explains how Bitcoin works under the hood. If you're looking for why Bitcoin matters, start with [Bitcoin Fundamentals](/blog/bitcoin-fundamentals/).
 

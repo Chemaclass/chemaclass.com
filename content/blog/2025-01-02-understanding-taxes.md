@@ -21,7 +21,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2025-01-02/cover.jpg)
 
 Taxes are unavoidable. Whether it's your paycheck, morning coffee, or the house you just bought, taxes are everywhere. If you've ever wondered where your money goes after payday or why buying property comes with extra fees, this post is for you. I'll keep it simple without diving into complicated legal stuff.
 

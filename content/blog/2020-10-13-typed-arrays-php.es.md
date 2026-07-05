@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2020-10-13/cover.jpg)
 
 Desempaquetado de argumentos, lista de argumentos variables de función, y funciones variádicas.
 

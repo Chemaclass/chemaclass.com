@@ -22,7 +22,6 @@ series = "agile"
 series_order = 3
 +++
 
-![blog-cover](/images/blog/2022-12-06/cover.jpg)
 
 Hablando con un amigo sobre agile, me hizo una pregunta interesante: a veces Agile y Scrum encajan mal, especialmente con las reuniones. Aquí van mis reflexiones.
 

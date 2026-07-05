@@ -20,7 +20,6 @@ series = "leadership"
 series_order = 7
 +++
 
-![blog-cover](/images/blog/2023-11-25/cover.jpg)
 
 En 1965, el psicólogo Bruce Tuckman creó un modelo que describe cómo un grupo se forma y madura hasta convertirse en un equipo cohesivo y efectivo.
 

@@ -19,7 +19,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2022-10-08/cover.jpg)
 
 Hace poco recibí una pregunta en Twitter que me hizo pensar bastante. Decidí compartir mis reflexiones al respecto.
 

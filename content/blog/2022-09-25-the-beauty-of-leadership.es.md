@@ -22,7 +22,6 @@ series = "leadership"
 series_order = 4
 +++
 
-![blog-cover](/images/blog/2022-09-25/cover.jpg)
 
 El liderazgo no es sinónimo de gestión, no tiene nada que ver con títulos o atributos personales. Entonces, ¿qué es? ¿Cómo podemos convertirnos en líderes? Y lo más importante, ¿por qué?
 

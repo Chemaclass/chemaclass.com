@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-11-17/cover.jpg)
 
 En desarrollo de software, la confianza y la seguridad son clave. Una forma fácil de mejorar ambas: usar commits verificados.
 

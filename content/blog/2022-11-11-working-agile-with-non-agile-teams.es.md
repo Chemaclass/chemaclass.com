@@ -21,7 +21,6 @@ series = "agile"
 series_order = 2
 +++
 
-![blog-cover](/images/blog/2022-11-11/cover.jpg)
 
 Asumamos que ya sabes qué es el manifiesto agile. Consideremos que aplicas la mayoría de los valores, principios y prácticas de "extreme programming". ¿Cómo puedes trabajar con otros equipos que no son agile?
 

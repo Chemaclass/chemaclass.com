@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2022-01-24/cover.jpg)
 
 Milgram quiso investigar hasta dónde llegaría la gente obedeciendo una orden que implicara dañar a otra persona. Y qué tan fácil era influenciarles para cometer atrocidades, como ocurrió con los alemanes en la Segunda Guerra Mundial.
 

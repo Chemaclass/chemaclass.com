@@ -23,7 +23,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-12-11/cover.jpg)
 
 In the early '90s, with the internet on the rise, a group called the Cypherpunks emerged to defend digital privacy. They pushed for encryption and privacy, shaping our digital world with their vision.
 

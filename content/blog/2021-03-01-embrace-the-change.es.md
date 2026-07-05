@@ -16,7 +16,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2021-03-01/cover.jpg)
 
 El libro *¿Quién se ha llevado mi queso?* presenta un cuento dentro de la historia principal que consiste en 4 personajes: dos ratones, **Sniff** y **Scurry**, y dos pequeñas personas, **Hem** y **Haw**.
 

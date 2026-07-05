@@ -16,7 +16,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2020-06-06/cover.jpg)
 
 Contratos claros, efectos secundarios aislados, testeabilidad, baja complejidad y carga cognitiva, fluidez del código y confianza en ti mismo.
 

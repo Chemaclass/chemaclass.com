@@ -21,7 +21,6 @@ series = "agile"
 series_order = 4
 +++
 
-![blog-cover](/images/blog/2024-02-25/cover.jpg)
 
 He escuchado múltiples veces, de varias personas, la idea de pánico hacia desplegar los viernes. ¿Qué tan buena es esa idea de prohibir el día antes del fin de semana entregar nuevo valor a nuestros clientes?
 

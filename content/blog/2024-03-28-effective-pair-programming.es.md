@@ -24,7 +24,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-03-28/cover.jpg)
 
 ¿Qué es el pair programming? Dos personas trabajando juntas en el mismo problema, al mismo tiempo.
 

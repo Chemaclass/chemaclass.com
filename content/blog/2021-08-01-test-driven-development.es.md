@@ -19,7 +19,6 @@ series = "craftsmanship"
 series_order = 3
 +++
 
-![blog-cover](/images/blog/2021-08-01/cover.jpg)
 
 La complejidad aquí no está en escribir tests en sí, sino en los hábitos que tenemos que cambiar para crear software que sea fácil de testear.
 

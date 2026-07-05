@@ -16,7 +16,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2021-05-03/cover.jpg)
 
 What is Open-Source Software (OSS)? What are their benefits? How can you start contributing to any OSS? Pet projects? Knowledge sharing? Why all of these?
 

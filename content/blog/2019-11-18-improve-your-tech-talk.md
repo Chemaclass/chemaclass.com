@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2019-11-18/cover.jpg)
 
 We have found ourselves attending a meeting that felt like we were wasting our time with a "monologue" that is either hard to follow or doesn't seem so interesting as it could.
 Let's fix this.

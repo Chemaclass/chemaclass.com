@@ -24,7 +24,6 @@ series = "leadership"
 series_order = 6
 +++
 
-![blog-cover](/images/blog/2023-08-02/cover.jpg)
 
 I was invited to the WeAreDevelopers World Congress to give a tech talk about my experience with XP and the profound benefits of embracing change in your work and life.
 

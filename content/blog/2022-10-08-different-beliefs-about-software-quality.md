@@ -19,7 +19,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2022-10-08/cover.jpg)
 
 I recently got a great question on Twitter which got me thinking for a while and I decided to share my thoughts about it.
 

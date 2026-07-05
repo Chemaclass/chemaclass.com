@@ -19,7 +19,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-07-06/cover.jpg)
 
 A Bitcoin se le llama "dinero programable" porque permite ejecutar transacciones con condiciones mediante su lenguaje de scripting.
 

@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-01-09/cover.jpg)
 
 Mi entrevista con **devm.io** sobre Agile y Extreme Programming.
 

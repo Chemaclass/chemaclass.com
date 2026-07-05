@@ -28,7 +28,6 @@ series = "agile"
 series_order = 1
 +++
 
-![blog-cover](/images/blog/2022-02-26/cover.jpg)
 
 Nuestra profesión del software está en constante evolución y exige aprendizaje continuo. El cambio no es opcional en nuestra industria.
 

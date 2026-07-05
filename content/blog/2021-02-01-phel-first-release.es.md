@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2021-02-01/cover.jpg)
 
 Un nuevo lenguaje de Programación Funcional construido sobre el ecosistema de PHP.
 

@@ -19,7 +19,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2022-08-22/cover.jpg)
 
 One of the most complicated challenges for everyone is avoiding misunderstandings and being aware that other people
 don't think the same way as you do.
