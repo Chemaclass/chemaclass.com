@@ -10,7 +10,7 @@ subtitle = "El mercado sabe lo que nadie puede saber"
 static_thumbnail = "/images/blog/2026-07-05/cover.webp"
 related_posts = [
   "blog/2025-11-21-bitcoin-fundamentals.md",
-  "blog/2024-07-06-programmable-money.md",
+  "blog/2025-01-02-understanding-taxes.md",
   "blog/2024-06-27-prisoners-dilemma.md",
 ]
 related_readings = [
@@ -25,7 +25,7 @@ París, alrededor de 1680. Según cuenta la historia, el ministro de finanzas de
 
 Uno de ellos, un comerciante llamado Legendre, da una respuesta famosa. _"Laissez-nous faire."_ Dejadnos hacer.
 
-Décadas después, el economista Vincent de Gournay convierte esa respuesta en una frase: _laissez faire, laissez passer_. Deja actuar. Deja pasar.
+Unos setenta años después, el economista Vincent de Gournay convierte esa respuesta en una frase: _laissez faire, laissez passer_. Deja actuar. Deja pasar.
 
 El Estado ofreció ayuda. El mercado solo pidió que lo dejaran en paz.
 
@@ -51,7 +51,9 @@ El ensayo de Hayek en cuatro líneas:
 Leonard Read lo explicó con un lápiz. En [_I, Pencil_](https://fee.org/resources/i-pencil/), ni una sola persona en el mundo sabe fabricar un lápiz desde cero: la madera, el grafito, la pintura, la goma. Y aun así, los lápices cuestan casi nada y están por todas partes. Nadie manda. Ese es el punto.
 
 {% deep_dive(title="Yo, el lápiz (1958)") %}
-Leonard Read cuenta la historia desde el punto de vista del lápiz. Cedro de Oregón, grafito de Sri Lanka, cera, pegamento, un anillo de latón. Leñadores, mineros, marineros, químicos: millones de personas cooperaron para fabricarlo, y ni una sola conoce la receta completa. Nadie se lo ordenó. Los precios coordinaron cada paso. La idea de Read: si ningún cerebro puede hacer un lápiz, desconfía de los planes que necesitan un cerebro para una economía entera.
+Leonard Read cuenta la historia desde el punto de vista del lápiz. Cedro de Oregón y California, grafito de Sri Lanka, cera, pegamento, un anillo de latón. Leñadores, mineros, marineros, químicos: millones de personas cooperaron para fabricarlo, y ni una sola conoce la receta completa.
+
+Nadie se lo ordenó. Los precios coordinaron cada paso. La idea de Read: si ningún cerebro puede hacer un lápiz, desconfía de los planes que necesitan un cerebro para una economía entera.
 {% end %}
 
 > El orden no necesita un diseñador. Necesita libertad y un precio.
@@ -62,13 +64,13 @@ Toda acción tiene efectos que se ven y efectos que no. Frédéric Bastiat const
 
 Un niño rompe el cristal de una tienda. Un curioso se encoge de hombros: bueno, al menos le da trabajo al cristalero. Cierto. Esa es la parte que se ve.
 
-Pero el tendero gastó en un cristal el dinero que quizá habría gastado en zapatos. El zapatero se quedó sin ese pedido. Esa es la [parte que no se ve](https://www.econlib.org/library/Bastiat/basEss1.html). El cristal no es riqueza nueva. Es riqueza movida, y en parte destruida.
+Pero el dinero que el tendero gastó en el cristal quizá habría comprado zapatos nuevos. El zapatero se quedó sin ese pedido. Esa es la [parte que no se ve](https://www.econlib.org/library/Bastiat/basEss1.html). El cristal no es riqueza nueva. Es riqueza movida, y en parte destruida.
 
 {% deep_dive(title="Lo que se ve y lo que no se ve (1850)") %}
 La regla de Bastiat: todo acto tiene un efecto que ves ahora y una cadena de efectos que no ves. El cristal roto abre el ensayo, y después aplica la misma prueba a impuestos, subvenciones, obras públicas y aranceles. El truco siempre es el mismo: contar lo que la política crea e ignorar lo que impide. El mal economista se queda en el primer efecto. El bueno cuenta toda la cadena.
 {% end %}
 
-Casi todas las intervenciones funcionan así. El beneficio es ruidoso y cercano. El coste es silencioso y se reparte fino. Los planificadores optimizan lo que ven y lo pagan con lo que no ven.
+Muchas intervenciones caen en esta trampa. El beneficio es ruidoso y cercano. El coste es silencioso y se reparte fino. Los planificadores optimizan lo que ven y lo pagan con lo que no ven.
 
 > Las buenas intenciones no son lo mismo que las buenas cuentas.
 
@@ -80,9 +82,9 @@ El laissez faire nunca fue "sin reglas". Un mercado libre se apoya en algo que e
 
 El Estado de derecho es el marco. Dentro de él, la gente es libre de actuar. Sin él, "mercado libre" solo significa que gana quien trae más fuerza. Una pelea, no un mercado.
 
-Hayek escribió un libro entero, [_Camino de servidumbre_](/es/readings/the-road-to-serfdom/), sobre adónde lleva ese otro camino. La libertad necesita una estructura. La estructura no es enemiga de la libertad. Es lo que la hace posible.
+Hayek escribió un libro, [_Camino de servidumbre_](/es/readings/the-road-to-serfdom/), sobre adónde lleva ese otro camino. La libertad necesita una estructura. La estructura no es enemiga de la libertad. Es lo que la hace posible.
 
-> Sin reglas no significa libre. Significa que gana el más fuerte.
+> Un mercado sin Estado de derecho es un juego sin árbitro.
 
 ![Una gaviota planeando sobre el mar abierto, sin que nadie la dirija](/images/blog/2026-07-05/middle.webp)
 
@@ -90,7 +92,7 @@ Hayek escribió un libro entero, [_Camino de servidumbre_](/es/readings/the-road
 
 Los gobiernos soltaron casi todos los precios. Casi nunca soltaron uno: el dinero.
 
-El dinero también es un precio. El precio de todo lo demás. Cuando un gobierno imprime más, tus ahorros compran menos sin hacer ruido, y tú nunca votaste eso. Un impuesto que no parece un impuesto.
+El dinero también es un precio. El precio de todo lo demás. Cuando un gobierno imprime demasiado, tus ahorros compran menos sin hacer ruido, y tú nunca votaste eso. Un impuesto que no parece un impuesto.
 
 Por eso empecé a interesarme por el [dinero que nadie puede imprimir](/es/blog/bitcoin-fundamentals/). Si los precios libres coordinan a desconocidos mejor que cualquier planificador, ¿por qué el precio más importante, [el del propio dinero](/es/blog/programmable-money/), tendría que ser la excepción?
 
