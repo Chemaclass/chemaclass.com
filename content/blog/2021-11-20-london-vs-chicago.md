@@ -18,7 +18,6 @@ series = "craftsmanship"
 series_order = 5
 +++
 
-![blog-cover](/images/blog/2021-11-20/cover.jpg)
 
 There are two known schools in TDD: the mockist school (aka Outside-in) and the classicist school (aka Inside-out).
 

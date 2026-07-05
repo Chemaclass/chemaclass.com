@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-12-30/cover.jpg)
 
 Programar no es solo otro trabajo. Escribir software puede ser realmente divertido y, aún más, ¡puede ser tu hobby personal también! Podrías estar enfocado en programar, programar y más programar para subir de nivel tus propias habilidades profesionales.
 

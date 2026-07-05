@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-07-05/cover.jpg)
 
 A veces me cuesta irme a la cama con la mente en blanco porque muy a menudo pienso en mi próxima lectura, aprendizaje, charla, o qué escribiré este mes o el siguiente.
 

@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-06-08/cover.jpg)
 
 Learned helplessness is the behavior exhibited by a subject after enduring repeated aversive stimuli beyond their control. 
 

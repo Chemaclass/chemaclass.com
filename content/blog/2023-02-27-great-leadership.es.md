@@ -33,7 +33,6 @@ series = "leadership"
 series_order = 5
 +++
 
-![blog-cover](/images/blog/2023-02-27/cover.jpg)
 
 Cuando el negocio crece, el foco de los líderes debe pasar de los clientes a los empleados. Quiero compartir los puntos clave que cualquier líder debería trabajar regularmente.
 

@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-06-08/cover.jpg)
 
 La indefensión aprendida es el comportamiento que muestra una persona tras sufrir repetidamente situaciones adversas que escapan a su control.
 

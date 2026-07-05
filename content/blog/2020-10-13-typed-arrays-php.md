@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2020-10-13/cover.jpg)
 
 Argument unpacking, function variable argument list, and variadics function.
 

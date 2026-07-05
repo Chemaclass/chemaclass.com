@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-06-27/cover.jpg)
 
 El Dilema del Prisionero es un experimento mental que muestra por que a veces no colaboramos, aunque nos convenga hacerlo.
 

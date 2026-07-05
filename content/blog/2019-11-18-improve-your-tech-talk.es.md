@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2019-11-18/cover.jpg)
 
 A todos nos ha pasado estar en reuniones que parecían una pérdida de tiempo, con un "monólogo" difícil de seguir o menos interesante de lo que podría ser.
 Vamos a arreglar esto.

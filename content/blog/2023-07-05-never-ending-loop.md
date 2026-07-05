@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-07-05/cover.jpg)
 
 It is hard sometimes to get to bed with the mind blank because, more often than not, I think about my next reading, learning, talk, or what I will write this or next month.
 

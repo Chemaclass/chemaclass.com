@@ -23,7 +23,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2025-11-15/cover.jpg)
 
 Durante mucho tiempo, pensé que el éxito se trataba de alcanzar ciertos hitos. Conseguir esa promoción. Ganar un salario específico. Construir algo que la gente reconociera.
 

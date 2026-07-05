@@ -20,7 +20,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2021-04-01/cover.jpg)
 
 Let's talk about the benefits of Pull Requests and Pair Programming, and my thoughts on these after some years of experience with them. 
 

@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2023-03-16/cover.jpg)
 
 I've got this question recently, a couple of times, and this is a great topic to share.
 

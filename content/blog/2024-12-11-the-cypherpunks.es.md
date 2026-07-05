@@ -22,7 +22,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-12-11/cover.jpg)
 
 A principios de los 90, con el auge de internet, surgió un grupo llamado los Cypherpunks para defender la privacidad digital. Impulsaron el cifrado y la privacidad, moldeando nuestro mundo digital con su visión.
 

@@ -18,7 +18,6 @@ series = "leadership"
 series_order = 2
 +++
 
-![blog-cover](/images/blog/2021-10-21/cover.jpg)
 
 "Blue Work" and "Red Work" are concepts that [David Marquet](https://x.com/ldavidmarquet)
 describes in his book [Leadership is Language](/readings/leadership-is-language/). Both require different mindsets and

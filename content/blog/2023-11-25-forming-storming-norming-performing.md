@@ -20,7 +20,6 @@ series = "leadership"
 series_order = 7
 +++
 
-![blog-cover](/images/blog/2023-11-25/cover.jpg)
 
 In 1965, psychologist Bruce Tuckman developed a model (Tuckman's Model) that describes the stages of group development, forming and maturing into a cohesive and effective team. 
 

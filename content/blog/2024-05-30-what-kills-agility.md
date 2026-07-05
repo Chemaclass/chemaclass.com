@@ -22,7 +22,6 @@ series = "agile"
 series_order = 5
 +++
 
-![blog-cover](/images/blog/2024-05-30/cover.jpg)
 
 Dozens of documents and spreadsheets, meetings over meetings, and yet without much impact, result in team misalignments, realized too late.
 

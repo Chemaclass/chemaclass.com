@@ -20,7 +20,6 @@ series = "craftsmanship"
 series_order = 2
 +++
 
-![blog-cover](/images/blog/2021-01-11/cover.jpg)
 
 Mocking is useful, but "what to mock" usually turns out to be more complicated than expected if you don't treat
 this carefully.

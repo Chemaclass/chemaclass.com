@@ -15,7 +15,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2020-12-01/cover.jpg)
 
 Descubre otra forma de compartir sugerencias con tu equipo de desarrollo.
 

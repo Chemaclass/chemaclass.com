@@ -22,7 +22,6 @@ series = "leadership"
 series_order = 4
 +++
 
-![blog-cover](/images/blog/2022-09-25/cover.jpg)
 
 Leadership is not a synonym for management, it has nothing to do with titles or personal attributes. So, what is it? How
 can we become leaders? And most importantly, why?

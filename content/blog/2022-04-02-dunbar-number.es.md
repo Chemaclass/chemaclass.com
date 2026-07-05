@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2022-04-02/cover.jpg)
 
 Un límite cognitivo de cuántas relaciones sociales estables podemos mantener. Saber quién es cada persona y cómo se relaciona con las demás.
 

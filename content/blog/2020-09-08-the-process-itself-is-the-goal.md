@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2020-09-08/cover.jpg)
 
 No goal should be an achievement on its own, but the process itself that helps us to go in the direction of these goals.
 

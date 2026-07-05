@@ -20,7 +20,6 @@ series = "craftsmanship"
 series_order = 3
 +++
 
-![blog-cover](/images/blog/2021-08-01/cover.jpg)
 
 The complexity here is not about writing tests itself, but the habits that we have to change to create software that is
 easy to be tested.

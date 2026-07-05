@@ -23,7 +23,6 @@ series = "leadership"
 series_order = 6
 +++
 
-![blog-cover](/images/blog/2023-08-02/cover.jpg)
 
 Fui invitado al WeAreDevelopers World Congress para dar una charla técnica sobre mi experiencia con XP y los profundos beneficios de abrazar el cambio en tu trabajo y vida.
 

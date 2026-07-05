@@ -21,7 +21,6 @@ series = "craftsmanship"
 series_order = 6
 +++
 
-![blog-cover](/images/blog/2023-10-20/cover.jpg)
 
 This is a question that I have encountered with some frequency for a long time. So I thought I would put together my thoughts on the subject here.
 

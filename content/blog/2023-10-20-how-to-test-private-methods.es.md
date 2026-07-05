@@ -21,7 +21,6 @@ series = "craftsmanship"
 series_order = 6
 +++
 
-![blog-cover](/images/blog/2023-10-20/cover.jpg)
 
 Esta pregunta me la han hecho muchas veces a lo largo de los años. Aquí recopilo mis ideas al respecto.
 

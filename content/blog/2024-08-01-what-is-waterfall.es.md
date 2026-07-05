@@ -21,7 +21,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-08-01/cover.jpg)
 
 Waterfall es como seguir un camino recto donde te mueves de un paso al siguiente en un orden definido, como el agua fluyendo por una cascada a través de diferentes etapas.
 

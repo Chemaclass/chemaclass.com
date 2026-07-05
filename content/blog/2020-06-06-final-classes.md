@@ -16,7 +16,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2020-06-06/cover.jpg)
 
 Clear contracts, isolated side effects, testability, low complexity and cognitive load, code fluidity, and confidence in yourself.
 

@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-09-02/cover.jpg)
 
 Así que eres desarrollador de software, y has dominado lenguajes de programación, algoritmos y todo lo técnico. ¡Genial! Pero aquí está el asunto: las habilidades técnicas por sí solas no te llevarán tan lejos como podrías pensar.
 

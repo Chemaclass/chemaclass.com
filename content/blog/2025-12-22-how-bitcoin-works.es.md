@@ -22,7 +22,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2025-12-21/cover.jpg)
 
 Este post explica cómo funciona Bitcoin por dentro. Si buscas entender por qué importa, empieza con [Fundamentos de Bitcoin](/es/blog/bitcoin-fundamentals/).
 

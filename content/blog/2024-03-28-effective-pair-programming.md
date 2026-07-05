@@ -25,7 +25,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2024-03-28/cover.jpg)
 
 What is pair programming? Two people working together on the same problem, at the same time.
 

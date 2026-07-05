@@ -22,7 +22,6 @@ series = "agile"
 series_order = 5
 +++
 
-![blog-cover](/images/blog/2024-05-30/cover.jpg)
 
 Docenas de documentos y hojas de cálculo, reuniones tras reuniones, y sin embargo sin mucho impacto, resultan en desalineaciones del equipo, descubiertas demasiado tarde.
 

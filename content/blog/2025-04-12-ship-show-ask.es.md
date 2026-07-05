@@ -23,7 +23,6 @@ series = "agile"
 series_order = 6
 +++
 
-![blog-cover](/images/blog/2025-04-12/cover.jpg)
 
 En equipos que se mueven rápido, una de las mayores tensiones que enfrentamos es esta: ¿Cómo seguimos entregando sin comprometer la calidad o la colaboración?
 

@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2022-07-25/cover.jpg)
 
 Un triángulo de tiempo, calidad y coste. Es un indicador de que estos tres parámetros están interconectados.
 Puedes fijar uno o dos de ellos, pero no los tres.

@@ -21,7 +21,6 @@ series = "craftsmanship"
 series_order = 1
 +++
 
-![blog-cover](/images/blog/2020-04-07/cover.jpg)
 
 ¿Por qué considerar el testing parte de tu desarrollo diario? Porque está directamente vinculado a la calidad del software.
 

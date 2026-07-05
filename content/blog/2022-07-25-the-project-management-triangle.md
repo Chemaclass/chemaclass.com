@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2022-07-25/cover.jpg)
 
 A triangle of time, quality and cost. It's an indicator that these three parameters are interconnected.
 You can fix one or two of them, but not three.

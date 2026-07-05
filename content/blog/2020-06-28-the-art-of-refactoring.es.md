@@ -18,7 +18,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2020-06-28/cover.jpg)
 
 Si ves algo, en el ámbito de tu tarea actual, que puede mejorarse fácilmente, mejóralo. Y si tienes alguna pregunta al respecto, pregunta.
 

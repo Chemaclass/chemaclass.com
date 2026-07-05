@@ -21,7 +21,6 @@ series = "agile"
 series_order = 2
 +++
 
-![blog-cover](/images/blog/2022-11-11/cover.jpg)
 
 Let's assume you already know what the agile manifesto is. Let's consider that you apply most of the "extreme
 programming" values, principles, and practices. How can you work with other teams that aren't agile?

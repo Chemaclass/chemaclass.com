@@ -20,7 +20,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2025-01-02/cover.jpg)
 
 Los impuestos son inevitables. Tu sueldo, el café de la mañana, la casa que acabas de comprar: todos llevan impuestos. Si alguna vez te has preguntado a dónde va tu dinero o por qué comprar una propiedad incluye tasas extra, este post es para ti. Voy a mantenerlo simple, sin complicaciones legales.
 

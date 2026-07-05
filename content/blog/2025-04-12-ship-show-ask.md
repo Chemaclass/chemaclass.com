@@ -24,7 +24,6 @@ series = "agile"
 series_order = 6
 +++
 
-![blog-cover](/images/blog/2025-04-12/cover.jpg)
 
 In fast-moving teams, one of the biggest tensions we face is this: How do we keep shipping without compromising quality or collaboration?
 

@@ -20,7 +20,6 @@ series = "craftsmanship"
 series_order = 2
 +++
 
-![blog-cover](/images/blog/2021-01-11/cover.jpg)
 
 Mockear es útil, pero "qué mockear" suele resultar más complicado de lo esperado si no tratas esto con cuidado.
 

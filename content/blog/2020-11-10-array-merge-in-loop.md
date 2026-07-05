@@ -17,7 +17,6 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2020-11-10/cover.jpg)
 
 Using array_merge inside a loop is a performance killer.
 The spread operator will help you to improve this by flatting the array.

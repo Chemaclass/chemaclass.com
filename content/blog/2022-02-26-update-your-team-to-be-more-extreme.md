@@ -28,7 +28,6 @@ series = "agile"
 series_order = 1
 +++
 
-![blog-cover](/images/blog/2022-02-26/cover.jpg)
 
 Our software profession is constantly evolving; it demands a non-stop learning process. We must embrace the change in our industry.
 
