@@ -84,7 +84,7 @@ Cuando estés escribiendo un test unitario:
 
 {{ youtube(id="RbSqXFUfRMU") }}
 
-"El uso excesivo de mocks lleva a código legacy." — Philippe Boargau
+"El uso excesivo de mocks lleva a código legacy." - Philippe Boargau
 
 ### ¿Cómo podemos evitar el mocking excesivo?
 
@@ -98,8 +98,8 @@ Cuando estés escribiendo un test unitario:
 
 #### Referencias
 
-- [Mocking is a code smell](https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a) — Eric Elliott
-- [When to mock](https://blog.cleancoder.com/uncle-bob/2014/05/10/WhenToMock.html) & [Test Definitions](https://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html) — Uncle Bob
-- [Final classes by default](https://matthiasnoback.nl/2018/09/final-classes-by-default-why/) — Matthias Noback
-- [The problem with mocks](https://www.seanh.cc/2017/03/17/the-problem-with-mocks/) — Sean Hammond
-- [A Set of Unit Testing Rules](https://www.artima.com/weblogs/viewpost.jsp?thread=126923) — Michael Feathers
+- [Mocking is a code smell](https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a) - Eric Elliott
+- [When to mock](https://blog.cleancoder.com/uncle-bob/2014/05/10/WhenToMock.html) & [Test Definitions](https://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html) - Uncle Bob
+- [Final classes by default](https://matthiasnoback.nl/2018/09/final-classes-by-default-why/) - Matthias Noback
+- [The problem with mocks](https://www.seanh.cc/2017/03/17/the-problem-with-mocks/) - Sean Hammond
+- [A Set of Unit Testing Rules](https://www.artima.com/weblogs/viewpost.jsp?thread=126923) - Michael Feathers

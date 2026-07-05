@@ -67,7 +67,7 @@ These are questions that can help you keep the focus while building yourself. Wh
 
 Within your context and possibilities, you are what you choose to be. And that’s what differentiates you from your past and your future. The actions you do, the way you communicate and interact with others, the decisions you choose, etc..., differentiate you. That’s what differentiates you from yourself at another point in time.
 
-This is why I enjoy reading – or listening to a book – per month. This is why I enjoy learning anytime, all the time. This is why I like to share what I know with others. This is who I choose to be.
+This is why I enjoy reading (or listening to a book) per month. This is why I enjoy learning anytime, all the time. This is why I like to share what I know with others. This is who I choose to be.
 
 A few years ago, I wrote about [the process itself as the goal](/blog/the-process-itself-is-the-goal/), which says basically: "_Repetition is the key. Make it easier to do what you want to do. Make it harder to do what you want to stop doing. Enjoy the process: that's the goal._"
 

@@ -17,7 +17,7 @@ Phel is a functional programming language that compiles into PHP. It is a dialec
 - 2026-06-09 | International PHP Conference [**Berlin, Germany**] (EN)
   - [Writing Lisp in PHP: A Journey with Phel](https://phpconference.com/php-core-coding/lisp-in-php-phel/) [[slides](/slides/phel-doom/)]
 - 2025-10-27 | International PHP Conference [**Munich, Germany**] (EN)
-  - [From $this to (this) — A Gentle Introduction to Phel](https://phpconference.com/web-development/phel-introduction-functional-programming-lisp/)
+  - [From $this to (this): A Gentle Introduction to Phel](https://phpconference.com/web-development/phel-introduction-functional-programming-lisp/)
 - 2023-10-24/26 | International PHP Conference [**Munich, Germany**] (EN)
   - [Introducing Functional Programming in PHP with Phel](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
 - 2023-07-28 | WeAreDevelopers World Congress [**Berlin, Germany**] (EN)

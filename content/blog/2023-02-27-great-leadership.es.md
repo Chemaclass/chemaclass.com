@@ -68,13 +68,13 @@ Para ampliar ese post con recursos y ejemplos, aquí encontrarás libros sobre l
 
 Primero necesitas definir un **propósito** para tu liderazgo. Recomiendo "[Start with Why](/es/readings/start-with-why/)" (Empieza con el porqué), que ayuda a clarificar la diferencia entre grandes líderes y los que no lo son.
 
-> "La capacidad de inspirar a quienes te rodean y lograr cosas notables comienza con POR QUE." -- Empieza con el porqué
+> "La capacidad de inspirar a quienes te rodean y lograr cosas notables comienza con POR QUE." - Empieza con el porqué
 
 El liderazgo no es ser el jefe de nadie sino **servir** a otros. Deberías ser un ejemplo que tu gente copiaría y seguiría, especialmente en tiempos difíciles. Esta es una filosofía donde el líder busca servir. "[Leaders Eat Last](/es/readings/leaders-eat-last/)" (Los líderes comen al final) profundiza en este tema.
 
 Si quieres más, la guinda es "[The infinite game](/es/readings/the-infinite-game/)" (El juego infinito), el tercer libro de Simon Sinek. Cuestiona nuestra mentalidad al confrontar problemas de negocio: la necesidad de una _causa justa, liderazgo valiente, equipos de confianza_ y un _rival digno._
 
-> "No existe la organización 'correcta'. Solo existen organizaciones, cada una con fortalezas distintas, limitaciones distintas y aplicaciones específicas. Una organización no es absoluta. Es una herramienta para hacer que las personas sean productivas trabajando juntas." -- The infinite game
+> "No existe la organización 'correcta'. Solo existen organizaciones, cada una con fortalezas distintas, limitaciones distintas y aplicaciones específicas. Una organización no es absoluta. Es una herramienta para hacer que las personas sean productivas trabajando juntas." - The infinite game
 
 ### Liderar a través del cambio
 
@@ -82,13 +82,13 @@ Liderar a través del cambio es algo que hay que afrontar muchas veces en la vid
 
 ¿Cómo eliminas malos hábitos y creas buenos? "[The Power of Habit](/es/readings/the-power-of-habits/)" (El poder de los hábitos) y "[Atomic Habits](/es/readings/atomic-habits/)" (Hábitos atómicos) ayudan a entender que los hábitos son como un músculo. Puedes entrenarlos.
 
-> "Cambia cómo te identificas. El entorno es más importante que estar motivado. Reduce la fricción para los buenos hábitos y aumenta la fricción para los malos hábitos." -- Atomic Habits
+> "Cambia cómo te identificas. El entorno es más importante que estar motivado. Reduce la fricción para los buenos hábitos y aumenta la fricción para los malos hábitos." - Atomic Habits
 
 ### Empoderar a tu gente
 
 Deberías empoderar a tu gente para que se conviertan en líderes. Recomiendo "[Turn the ship around!](/es/readings/turn-the-ship-around/)" (¡Gira el barco!), donde el autor desafía el modelo de **líderes vs. seguidores** hacia una relación de **líderes-a-líderes**.
 
-> "El liderazgo es comunicar a las personas su valor tan claramente que se inspiran para verlo en sí mismas." -- Turn the ship around!
+> "El liderazgo es comunicar a las personas su valor tan claramente que se inspiran para verlo en sí mismas." - Turn the ship around!
 
 ### Comunicación efectiva
 
@@ -96,19 +96,19 @@ La comunicación es una de las habilidades más difíciles porque constantemente
 
 "[Leadership is Language](/es/readings/leadership-is-language/)" (El liderazgo es lenguaje) desafía el modelo de la era industrial (donde los líderes dan órdenes y los empleados las siguen), con estrategias como: _controlar el reloj, colaborar, comprometerse, completar y mejorar_.
 
-> "Tus palabras importan más de lo que piensas." -- Leadership is Language
+> "Tus palabras importan más de lo que piensas." - Leadership is Language
 
 Es importante reconocer nuestras emociones y no dejar que controlen nuestras acciones. Crear un ambiente abierto, honesto y **seguro** es clave para generar confianza.
 
 "[Dare to lead](/es/readings/dare-to-lead/)" (Atrévete a liderar) plantea que los líderes necesitan ser más vulnerables. Los valores sólidos te guían a hacer lo correcto en lugar de lo fácil. La confianza y las conversaciones difíciles importan, aunque te hagan sentir incómodo.
 
-> "Los grandes líderes deben ser valientes y siempre atreverse a dar retroalimentación constructiva, decir la verdad y ser claros sobre sus expectativas." -- Dare to lead
+> "Los grandes líderes deben ser valientes y siempre atreverse a dar retroalimentación constructiva, decir la verdad y ser claros sobre sus expectativas." - Dare to lead
 
 ### Persuasión
 
 En comunicación, necesitas buenas habilidades de persuasión para convencer a otros. "[Never split the difference](/es/readings/never-split-the-difference/)" (Rompe la barrera del no) es un libro sobre negociación de un ex negociador de secuestros del FBI. Ofrece ideas para negociar bien: empezar escuchando, usar espejos para fomentar empatía, empatía táctica para llegar a acuerdos, etiquetar emociones...
 
-> "La negociación comienza con escuchar, haciendo que se trate de las otras personas, validando sus emociones y creando suficiente confianza y seguridad para que una conversación real pueda comenzar." -- Never split the difference
+> "La negociación comienza con escuchar, haciendo que se trate de las otras personas, validando sus emociones y creando suficiente confianza y seguridad para que una conversación real pueda comenzar." - Never split the difference
 
 
 ![blog-middle](/images/blog/2023-02-27/middle.jpg)
@@ -129,7 +129,7 @@ Aunque liderazgo y gestión no son lo mismo, conocer algo de teoría de gestión
 
 Si quieres más, recomiendo "[The Essential Drucker](/es/readings/the-essential-drucker/)" (Lo esencial de Drucker), que cubre los principios esenciales de la gestión.
 
-> "La gestión es sobre humanos." -- The Essential Drucker
+> "La gestión es sobre humanos." - The Essential Drucker
 
 ### Mentalidad de CEO
 
@@ -137,13 +137,13 @@ No todos los líderes quieren ser CEO, pero "[The Great CEO Within](/es/readings
 
 "[Adapt or Die](/es/readings/adapt-or-die/)" (Adaptarse o morir) cubre los aspectos fundamentales para prosperar en cualquier negocio: Producto, Estrategia, Motor de Crecimiento, Modelo Financiero, Personas, Operaciones, Proceso y Liderazgo.
 
-> "El liderazgo es sobre ayudar a las personas a adaptarse y liderar a través del cambio para que el negocio y su gente puedan prosperar." -- Adapt or die
+> "El liderazgo es sobre ayudar a las personas a adaptarse y liderar a través del cambio para que el negocio y su gente puedan prosperar." - Adapt or die
 
 ### Liderazgo de ingeniería
 
 Sobre ingeniería y crecimiento, recomiendo "[The Manager Path](/es/readings/manager-path/)" (El camino del manager) y "[The Art of Leadership](/es/readings/the-art-of-leadership/)" (El arte del liderazgo). Ambos son fáciles de leer y llenos de sabiduría.
 
-> "Los managers te dicen dónde estás; los líderes te dicen hacia dónde vas." -- The Art of Leadership
+> "Los managers te dicen dónde estás; los líderes te dicen hacia dónde vas." - The Art of Leadership
 
 ---
 

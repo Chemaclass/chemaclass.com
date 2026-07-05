@@ -64,7 +64,7 @@ details: [Working agile with non-agile teams](/blog/working-agile-with-non-agile
 ## Scrum in a nutshell
 
 Scrum is a framework for project management emphasizing software development, although it is used in other fields like
-sales, marketing, and more. It's designed for teams of 5–9 people (see [Dunbar number](/blog/dunbar-number/)) who are
+sales, marketing, and more. It's designed for teams of 5 to 9 people (see [Dunbar number](/blog/dunbar-number/)) who are
 totally autonomous and responsible for breaking down their work into small chunks that can be completed in a time-boxed
 iteration, called sprints, usually 1, 2, or 4 weeks.
 

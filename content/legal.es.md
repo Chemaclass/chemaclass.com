@@ -28,16 +28,16 @@ Estos datos son agregados y no te identifican personalmente.
 
 Algunas páginas pueden incluir:
 
-- **Vídeos de YouTube** — Cuando ves una página con un vídeo incrustado, YouTube puede establecer cookies y recopilar datos según la [Política de Privacidad de Google](https://policies.google.com/privacy).
-- **GitHub Gists** — Los fragmentos de código incrustados desde GitHub pueden cargar scripts externos según la [Política de Privacidad de GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+- **Vídeos de YouTube**: Cuando ves una página con un vídeo incrustado, YouTube puede establecer cookies y recopilar datos según la [Política de Privacidad de Google](https://policies.google.com/privacy).
+- **GitHub Gists**: Los fragmentos de código incrustados desde GitHub pueden cargar scripts externos según la [Política de Privacidad de GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
 ## Servicios de Terceros
 
 Este sitio utiliza los siguientes servicios externos:
 
-- **FontAwesome** — para iconos
-- **PayPal/Alby** — para donaciones (enlaces externos)
-- **GitHub** — para alojamiento de código y enlaces
+- **FontAwesome**: para iconos
+- **PayPal/Alby**: para donaciones (enlaces externos)
+- **GitHub**: para alojamiento de código y enlaces
 
 Cada servicio tiene su propia política de privacidad.
 

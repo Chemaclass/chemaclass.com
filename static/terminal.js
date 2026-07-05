@@ -1405,7 +1405,7 @@ ${portrait}
 
       const targetTags = new Set(target.tags || []);
       if (targetTags.size === 0) {
-        return `[[;#6e7681;]${args[0]} has no tags — cannot compute similarity]`;
+        return `[[;#6e7681;]${args[0]} has no tags, cannot compute similarity]`;
       }
 
       const resolvedPath = normalizePath(args[0]);
@@ -1744,7 +1744,7 @@ ${portrait}
           'set nu': function() { return '[[;#6e7681;]Line numbers? In a terminal? You rebel.]'; },
           'set nonumber': function() { return '[[;#6e7681;]Line numbers were never on. Well played.]'; },
           '%s/bug/feature/g': function() { return '[[;#3fb950;]42 substitutions on 42 lines.] [[;#6e7681;]All bugs are now features.]'; },
-          'visual': function() { return '[[;#d29922;]VISUAL mode] [[;#6e7681;]— just kidding, select text with your mouse like everyone else.]'; }
+          'visual': function() { return '[[;#d29922;]VISUAL mode:] [[;#6e7681;]just kidding, select text with your mouse like everyone else.]'; }
         };
         const fullVcmd = vcmd + (args.length ? ' ' + args.join(' ') : '');
         if (vimCommands[fullVcmd]) {

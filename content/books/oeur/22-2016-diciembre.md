@@ -11,11 +11,11 @@ tags = []
 
 ## Slave to Death
 
-Having death so present day after day, so recurrent, is something inevitable for us. Being aware that our time is not infinite should make us question what we want—or should want—to invest it in.
+Having death so present day after day, so recurrent, is something inevitable for us. Being aware that our time is not infinite should make us question what we want (or should want) to invest it in.
 
 My greatest fear is the sudden headache that sometimes assaults me when I try to fall asleep. I'm not talking about emotional pain but physical because, in addition to seeming random, they could be playing for the last time with no chance of a replay.
 
-This is what happened and what could happen again: headaches in the darkness leading to the ultimate uncertainty we all fear so much—death.
+This is what happened and what could happen again: headaches in the darkness leading to the ultimate uncertainty we all fear so much: death.
 
 Especially at a distance, where I would only have myself. If any tragedy were to occur, there would be no first ones to find out... only seconds and thirds, as these first ones could do nothing but suspect and deny what possibly happened until the truth becomes inevitable.
 
@@ -43,7 +43,7 @@ Guidelines without an apparent direction, some more and less consistent with the
 
 Lack of principles that isolate us from our purpose and reason for being. There is a lack of arguments that invite us to believe in what would not hold.
 
-Belief in the boldest lack. Ignorance better internalizes prayer to the insult—dictator tales for those who dare not to question.
+Belief in the boldest lack. Ignorance better internalizes prayer to the insult: dictator tales for those who dare not to question.
 
 Death is a real determining judge.
 

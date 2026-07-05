@@ -68,13 +68,13 @@ To extend the previous post providing resources and examples, in this one, you w
 
 First of all, you need to define a **purpose** for your leadership. I would recommend "[Start with Why](/readings/start-with-why/)", as this can help you clarify the difference between great leaders and those who are not.
 
-> "The ability to inspire those around you and to achieve remarkable things starts with WHY." -- Start with Why
+> "The ability to inspire those around you and to achieve remarkable things starts with WHY." - Start with Why
 
 You need to be aware that leadership is not about being the boss of anyone but **serving** others. It would help if you were a role example that your people would copy and follow, especially in hard times. This is a leadership philosophy in which the leader aims to serve. "[Leaders Eat Last](/readings/leaders-eat-last/)" goes deeper into this topic.
 
 After reading the previous two books, if you are looking for more, the cherry on top is "[The infinite game](/readings/the-infinite-game/)", which is the third and last book (so far) by Simon Sinek. This book questions our daily mindset when confronting (business) problems. It's about the need of a _just cause, courageous leadership, trusting teams,_ and a _worthy rival._
 
-> "There is no such thing as the one "right" organization. There are only organizations, each of which has distinct strengths, distinct limitations, and specific applications. An organization is not absolute. It is a tool for making people productive in working together." -- The infinite game
+> "There is no such thing as the one "right" organization. There are only organizations, each of which has distinct strengths, distinct limitations, and specific applications. An organization is not absolute. It is a tool for making people productive in working together." - The infinite game
 
 ### Leading through change
 
@@ -82,13 +82,13 @@ Leading through change is something you have to face in many moments in your lif
 
 How do you eliminate bad habits and start creating good ones? "[The Power of Habit](/readings/the-power-of-habits/)" and "[Atomic Habits](/readings/atomic-habits/)" are great books that help you understand that habits are like a muscle. You can train them.
 
-> "Change how you identify yourself. The environment is more important than being motivated. Reduce friction for good habits and increase friction for bad habits." -- Atomic Habits
+> "Change how you identify yourself. The environment is more important than being motivated. Reduce friction for good habits and increase friction for bad habits." - Atomic Habits
 
 ### Empowering your people
 
 It would be best if you empowered your people to become leaders themselves. A great book I recommend is "[Turn the ship around!](/readings/turn-the-ship-around/)", in which the author challenges the commonly accepted **leaders vs. followers** model into a **leaders-to-leaders** relationship.
 
-> "Leadership is communicating to people their worth so clearly that they are inspired to see it in themselves." -- Turn the ship around!
+> "Leadership is communicating to people their worth so clearly that they are inspired to see it in themselves." - Turn the ship around!
 
 ### Effective communication
 
@@ -96,19 +96,19 @@ Communication is one of the most challenging skills you need because you constan
 
 "[Leadership is Language](/readings/leadership-is-language/)" challenges the industrial-age playbook (where leaders give commands and employees follow them), giving you strategies that can help you such as: _control the clock, collaborate, commit, complete, and improve_.
 
-> "Your words matter more than you think." -- Leadership is Language
+> "Your words matter more than you think." - Leadership is Language
 
 It is important to recognize our emotions and not let them control our actions. Creating an open, honest, and **safe environment** is crucial to create trust among your peers.
 
 "[Dare to lead](/readings/dare-to-lead/)" addresses that leaders need to be more vulnerable. It shows that solid values guide you to do what is correct rather than easy. The importance of trust and difficult conversations even when they make you uncomfortable.
 
-> "Great leaders must be brave and always dare to provide constructive feedback, speak the truth, and be clear about their expectations." -- Dare to lead
+> "Great leaders must be brave and always dare to provide constructive feedback, speak the truth, and be clear about their expectations." - Dare to lead
 
 ### Persuasion
 
 Regarding communication, you might need some good persuasion skills to convince others about your ideas. "[Never split the difference](/readings/never-split-the-difference/)" is a book about negotiation (from one FBI's lead international kidnapping negotiator) that gives you great insides into how to negotiate effectively: negotiation begins with listening, using mirrors to encourage the other side to empathise, tactical empathy to getting an agreement, labelling emotions, among others.
 
-> "Negotiation begins with listening, making it about the other people, validating their emotions, and creating enough trust and safety for a real conversation to begin." -- Never split the difference
+> "Negotiation begins with listening, making it about the other people, validating their emotions, and creating enough trust and safety for a real conversation to begin." - Never split the difference
 
 
 ![blog-middle](/images/blog/2023-02-27/middle.jpg)
@@ -129,7 +129,7 @@ Although leadership is not the same as management, I find it quite useful knowin
 
 After that one, if you want more, I can recommend something more advance with "[The Essential Drucker](/readings/the-essential-drucker/)", which addresses the essential principles of management.
 
-> "Management is about humans." -- The Essential Drucker
+> "Management is about humans." - The Essential Drucker
 
 ### CEO Mindset
 
@@ -137,13 +137,13 @@ Although not every leader might want to be a CEO, I find "[The Great CEO Within]
 
 Similarly, "[Adapt or Die](/readings/adapt-or-die/)" is a great book that covers the fundamental aspects of overall responsibilities and capabilities to thrive in any business, addressing aspects such as Product, Strategy, Growth Engine, Financial Model, People, Operations, Process, and Leadership.
 
-> "Leadership is about helping people adapt and leading through change so the business and its people can thrive." -- Adapt or die
+> "Leadership is about helping people adapt and leading through change so the business and its people can thrive." - Adapt or die
 
 ### Engineering leadership
 
 Related to engineering and growing,  I also recommend "[The Manager Path](/readings/manager-path/)", and "[The Art of Leadership](/readings/the-art-of-leadership/)", both great books; easy to read and full of wisdom.
 
-> "Managers tell you where you are; leaders tell you where you are going." -- The Art of Leadership
+> "Managers tell you where you are; leaders tell you where you are going." - The Art of Leadership
 
 --- 
 

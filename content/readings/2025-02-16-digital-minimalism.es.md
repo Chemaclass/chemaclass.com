@@ -27,11 +27,11 @@ Vivimos conectados todo el tiempo. El minimalismo digital de Cal Newport no prop
 
 Newport basa su enfoque en tres ideas:
 
-- **El desorden cuesta caro** – Las distracciones digitales fragmentan tu atención y agotan tu energía mental. Ordenar tu vida digital te devuelve el control.
+- **El desorden cuesta caro**: Las distracciones digitales fragmentan tu atención y agotan tu energía mental. Ordenar tu vida digital te devuelve el control.
 
-- **Optimizar es esencial** – No aceptes cada app o plataforma sin pensar. Elige solo las que encajan con tus valores y metas.
+- **Optimizar es esencial**: No aceptes cada app o plataforma sin pensar. Elige solo las que encajan con tus valores y metas.
 
-- **La intención lo es todo** – No se trata solo de reducir el tiempo de pantalla. Se trata de decidir cuándo y cómo usas la tecnología.
+- **La intención lo es todo**: No se trata solo de reducir el tiempo de pantalla. Se trata de decidir cuándo y cómo usas la tecnología.
 
 ## El detox digital de 30 días
 
@@ -47,20 +47,20 @@ Es un reinicio. Te ayuda a ver qué tecnologías mejoran tu vida y cuáles solo 
 
 Quienes lo adoptan notan:
 
-- **Mejor enfoque** – Menos distracciones significa trabajo profundo más accesible.
-- **Menos ansiedad** – Sin redes sociales ni notificaciones constantes, tu mente se calma.
-- **Relaciones más ricas** – Priorizar lo presencial fortalece los vínculos reales.
-- **Mayor productividad** – Menos ruido digital, más eficiencia y creatividad.
+- **Mejor enfoque**: Menos distracciones significa trabajo profundo más accesible.
+- **Menos ansiedad**: Sin redes sociales ni notificaciones constantes, tu mente se calma.
+- **Relaciones más ricas**: Priorizar lo presencial fortalece los vínculos reales.
+- **Mayor productividad**: Menos ruido digital, más eficiencia y creatividad.
 
 ## Cómo empezar
 
 Algunos pasos concretos:
 
-- **Audita tu vida digital** – ¿Qué apps te quitan tiempo sin darte nada a cambio?
-- **Pon límites de pantalla** – Usa las herramientas del móvil para restringir ciertas apps.
-- **Crea zonas libres de tecnología** – El dormitorio o la mesa del comedor, por ejemplo.
-- **Vuelve a lo analógico** – Libros, hobbies, conversaciones cara a cara.
-- **Programa horas offline** – Momentos del día donde te desconectas del todo.
+- **Audita tu vida digital**: ¿Qué apps te quitan tiempo sin darte nada a cambio?
+- **Pon límites de pantalla**: Usa las herramientas del móvil para restringir ciertas apps.
+- **Crea zonas libres de tecnología**: El dormitorio o la mesa del comedor, por ejemplo.
+- **Vuelve a lo analógico**: Libros, hobbies, conversaciones cara a cara.
+- **Programa horas offline**: Momentos del día donde te desconectas del todo.
 
 ## Para cerrar
 
@@ -75,4 +75,3 @@ El minimalismo digital **no rechaza la tecnología**. La usa **de forma que mejo
 ### Cal Newport entrevistado por Lex Fridman
 
 {{ youtube(id="y3Umo_jd5AA") }}
-

@@ -21,7 +21,7 @@ related_readings = [
 
 <!-- more -->
 
-Una visión general básica y directa de lo que es Agile, presentando algunos ejemplos de frameworks bien conocidos hoy, como Scrum o Kanban—todo condensado en un libro de unas 100 páginas que puedes leer en un par de horas.
+Una visión general básica y directa de lo que es Agile, presentando algunos ejemplos de frameworks bien conocidos hoy, como Scrum o Kanban, todo condensado en un libro de unas 100 páginas que puedes leer en un par de horas.
 
 ## Capítulos
 

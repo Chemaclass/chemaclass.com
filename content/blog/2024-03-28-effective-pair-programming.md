@@ -1,6 +1,6 @@
 +++
 title = "Effective Pair Programming"
-description = "A practical guide to pair programming that works -- roles, rotation, when to pair, common pitfalls, and how to make sessions productive."
+description = "A practical guide to pair programming that works: roles, rotation, when to pair, common pitfalls, and how to make sessions productive."
 draft = false
 aliases = [ "/pair-programming" ]
 [taxonomies]

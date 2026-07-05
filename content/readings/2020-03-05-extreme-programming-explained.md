@@ -40,7 +40,7 @@ below.
 ### Communication
 
 Software development is inherently a team sport that relies on communication to transfer knowledge from one team member
-to everyone else on the team. XP stresses the importance of the appropriate kind of communication. – face to face
+to everyone else on the team. XP stresses the importance of the appropriate kind of communication: face to face
 discussion with the aid of a white board or other drawing mechanism.
 
 ### Simplicity

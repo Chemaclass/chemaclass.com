@@ -59,4 +59,4 @@ This book is full of lessons that apply to everyone no matter who they are or wh
 
 {{ youtube(id="OvYCLxqkfvY") }}
 
-> "Life moves on and so should we" — Spencer Johnson
+> "Life moves on and so should we" - Spencer Johnson

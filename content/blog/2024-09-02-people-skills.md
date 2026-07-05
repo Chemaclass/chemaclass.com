@@ -1,6 +1,6 @@
 +++
 title = "People Skills"
-description = "So, you're a software developer, and you've mastered coding languages, algorithms, and all the tech stuff. That's awesome! But here's the deal: technical skills alone won't get you as far as you might think. If you can't work well with others, it doesn't matter how great your code is — nobody will want to work with you."
+description = "So, you're a software developer, and you've mastered coding languages, algorithms, and all the tech stuff. That's awesome! But here's the deal: technical skills alone won't get you as far as you might think. If you can't work well with others, it doesn't matter how great your code is, nobody will want to work with you."
 draft = false
 [taxonomies]
 tags = [ "communication", "team-management", "career", "leadership" ]

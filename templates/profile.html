@@ -21,7 +21,7 @@
 {% block content %}
 {#
   Emit every blog post + reading post as a tiny JSON record the profile.js can
-  read. We keep the payload minimal — just what the dashboard needs — so the
+  read. We keep the payload minimal (just what the dashboard needs) so the
   page stays lean.
 #}
 {% set blog = get_section(path="blog/_index.md", lang=lang) %}

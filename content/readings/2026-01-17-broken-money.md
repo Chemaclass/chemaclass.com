@@ -25,13 +25,13 @@ A deep dive into monetary history through a technological lens. Lyn Alden traces
 
 ## What Makes Money Work?
 
-Alden starts with the fundamentals: what actually makes something money? She breaks it down into key properties—durability, divisibility, portability, scarcity—and shows how different forms of money throughout history have excelled or failed at these.
+Alden starts with the fundamentals: what actually makes something money? She breaks it down into key properties (durability, divisibility, portability, scarcity) and shows how different forms of money throughout history have excelled or failed at these.
 
 The key insight? Money is a technology, and like all technologies, it evolves. What worked for ancient civilizations doesn't necessarily work in a globally connected digital world.
 
 ## The Fiat Experiment
 
-One of the most eye-opening sections covers how we ended up with our current fiat system. Alden documents the shift from gold-backed currencies to pure government-issued money, explaining why this experiment—only about 50 years old—has led to persistent inflation and monetary instability.
+One of the most eye-opening sections covers how we ended up with our current fiat system. Alden documents the shift from gold-backed currencies to pure government-issued money, explaining why this experiment (only about 50 years old) has led to persistent inflation and monetary instability.
 
 > "Many currencies are rapidly diluted, which continually devalues the savings and wages of the billions of people who live and work within those jurisdictions."
 
@@ -39,7 +39,7 @@ She backs this up with real-world examples from Nigeria, Egypt, Brazil, and othe
 
 ## The Network Effects of Money
 
-Alden brings a unique perspective as an engineer turned financial analyst. She applies network theory to explain why certain forms of money win out over others. Money, like the internet, benefits from network effects—the more people use it, the more useful it becomes.
+Alden brings a unique perspective as an engineer turned financial analyst. She applies network theory to explain why certain forms of money win out over others. Money, like the internet, benefits from network effects: the more people use it, the more useful it becomes.
 
 This framework helps explain both why the dollar dominates global trade and why Bitcoin has grown so quickly despite starting from zero.
 

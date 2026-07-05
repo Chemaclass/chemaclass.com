@@ -6,9 +6,9 @@ sort_by = "weight"
 aliases = ["/books/oeur/en/"]
 [extra]
 cover = "/images/books/oeur/oeur-cover.jpg"
-year = "2015 — 2017"
+year = "2015 - 2017"
 description = "A compilation of thoughts structured like a diary. The result of moving to a new country and looking for new opportunities in life, spanning over two years of personal reflections."
-quote = "A book dedicated only to the brave — for no one and for everyone"
+quote = "A book dedicated only to the brave: for no one and for everyone"
 about_slug = "acerca-de-este-libro"
 +++
 

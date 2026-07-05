@@ -27,7 +27,7 @@ To my motive, my motivation.
 
 Our project doesn't have to be common or even shared, but I'm sure both of us would like the same goal: to achieve it. And there is nothing more satisfying than achieving our goals, from those we set in the past to those born just a few seconds ago. Time doesn't matter when it comes to creating oneself.
 
-Let's change, breathe, and evolve without losing our essence, being the ones who decide. There will be no prayer or creed to guide us. Let's enjoy ourselves and our decisions, as well as our mistakes; but above all, let's learn from them— from our decisions! Let's not stop, let's keep moving forward. We will manage to surprise ourselves, without a doubt.
+Let's change, breathe, and evolve without losing our essence, being the ones who decide. There will be no prayer or creed to guide us. Let's enjoy ourselves and our decisions, as well as our mistakes; but above all, let's learn from them (from our decisions!). Let's not stop, let's keep moving forward. We will manage to surprise ourselves, without a doubt.
 
 Maturity is not achieved with age but with experience.
 

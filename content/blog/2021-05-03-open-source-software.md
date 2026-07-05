@@ -96,7 +96,7 @@ A pet project is a playground to create software and train your professional ski
   design of your application by splitting the logic into different modules.
 
 **Abandoned:**
-- [nm_template](https://github.com/NuevaMetal/nm_template): The base template for NuevaMetal (2013–2016).
+- [nm_template](https://github.com/NuevaMetal/nm_template): The base template for NuevaMetal (2013-2016).
 
 ## Knowledge Sharing and Impact
 

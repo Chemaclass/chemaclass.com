@@ -1,6 +1,6 @@
 +++
 title = "Ship, Show, Ask"
-description = "En equipos que se mueven rápido, una de las mayores tensiones que enfrentamos es esta: ¿Cómo seguimos entregando sin comprometer la calidad o la colaboración? El enfoque tradicional de pull requests a menudo ralentiza las cosas. Esperamos horas—o días—por aprobaciones, incluso para cambios triviales. Pero la alternativa—simplemente mergear directamente—puede sentirse imprudente o invisible para el resto del equipo. Ahí es donde entra la estrategia Ship-Show-Ask."
+description = "En equipos que se mueven rápido, una de las mayores tensiones que enfrentamos es esta: ¿Cómo seguimos entregando sin comprometer la calidad o la colaboración? El enfoque tradicional de pull requests a menudo ralentiza las cosas. Esperamos horas, o días, por aprobaciones, incluso para cambios triviales. Pero la alternativa, simplemente mergear directamente, puede sentirse imprudente o invisible para el resto del equipo. Ahí es donde entra la estrategia Ship-Show-Ask."
 draft = false
 [taxonomies]
 tags = [ "agile", "code-review", "team-management", "productivity" ]
@@ -36,9 +36,9 @@ Ahí es donde entra la estrategia Ship-Show-Ask. Originalmente descrita por [Rou
 
 Es un modelo que clasifica los cambios basándose en cuánta revisión requieren:
 
-- **Ship** – Mergear directamente a main (sin PR)
-- **Show** – Abrir un pull request, pero mergearlo inmediatamente
-- **Ask** – Abrir un pull request y esperar revisión
+- **Ship**: Mergear directamente a main (sin PR)
+- **Show**: Abrir un pull request, pero mergearlo inmediatamente
+- **Ask**: Abrir un pull request y esperar revisión
 
 La idea clave es usar Ask como el default para la mayoría del trabajo, recurrir a Show cuando el contexto lo hace seguro, y evitar Ship (o reservarlo para casos extremadamente triviales, si se usa).
 

@@ -25,7 +25,7 @@ This book covers everything from the basics to the most profound technical aspec
 
 The first edition of this book was published in December 2014. Ten years later, a third edition with up-to-date knowledge just came out. It is highly recommended to all people interested in this outstanding topic and the tech behind it.
 
-- A broad introduction to Bitcoin and its underlying blockchain--ideal for nontechnical users, investors, and business executives.
+- A broad introduction to Bitcoin and its underlying blockchain, ideal for nontechnical users, investors, and business executives.
 - An explanation of Bitcoin's technical foundation and cryptographic currency for developers, engineers, and software and systems architects.
 - Details of the Bitcoin decentralized network, peer-to-peer architecture, transaction lifecycle, and security principles.
 - New developments such as Taproot, Tapscript, Schnorr signatures, and the Lightning Network.

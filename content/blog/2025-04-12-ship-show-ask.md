@@ -1,7 +1,7 @@
 +++
 title = "Ship, Show, Ask"
 aliases = [ "/ship-show-ask" ]
-description = "In fast-moving teams, one of the biggest tensions we face is this: How do we keep shipping without compromising quality or collaboration? The traditional approach to pull requests often slows things down. We wait hours—or days—for approvals, even for trivial changes. But the alternative—just merging directly—can feel reckless or invisible to the rest of the team. That's where the Ship-Show-Ask strategy comes in."
+description = "In fast-moving teams, one of the biggest tensions we face is this: How do we keep shipping without compromising quality or collaboration? The traditional approach to pull requests often slows things down. We wait hours, or days, for approvals, even for trivial changes. But the alternative, just merging directly, can feel reckless or invisible to the rest of the team. That's where the Ship-Show-Ask strategy comes in."
 draft = false
 [taxonomies]
 tags = [ "agile", "code-review", "team-management", "productivity" ]
@@ -37,9 +37,9 @@ That's where the Ship-Show-Ask strategy comes in. Originally described by [Rouan
 
 It's a model that classifies changes based on how much review they require:
 
-- **Ship** – Merge directly to main (without a PR)
-- **Show** – Open a pull request, but merge it immediately
-- **Ask** – Open a pull request and wait for review
+- **Ship**: Merge directly to main (without a PR)
+- **Show**: Open a pull request, but merge it immediately
+- **Ask**: Open a pull request and wait for review
 
 The key idea is to use Ask as the default for most work, fall back to Show when the context makes it safe, and avoid Ship (or reserve it for extremely trivial cases, if used at all).
 

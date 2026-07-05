@@ -33,17 +33,17 @@ identity, belonging, loss, connection, sex, and depression.
 
 From chapter 22:
 
-> — "You don't like anything that's happening." It made me even more depressed when she said that.
+> "You don't like anything that's happening." It made me even more depressed when she said that.
 >
-> — "Yes I do. Yes I do. Sure I do. Don't say that. Why the hell do you say that?"
+> "Yes I do. Yes I do. Sure I do. Don't say that. Why the hell do you say that?"
 >
-> — "Because you don't. You don't like any schools. You don't like a million things. You don't."
+> "Because you don't. You don't like any schools. You don't like a million things. You don't."
 >
-> — "I do! That's where you're wrong—that's exactly where you're wrong! Why the hell do you have to say that?" I said. Boy, was she depressing me.
+> "I do! That's where you're wrong, that's exactly where you're wrong! Why the hell do you have to say that?" I said. Boy, was she depressing me.
 >
-> — "Because you don't," she said. "Name one thing."
+> "Because you don't," she said. "Name one thing."
 >
-> — "One thing? One thing I like?" I said. "Okay."
+> "One thing? One thing I like?" I said. "Okay."
 >
 > The trouble was, I couldn't concentrate too hot. Sometimes it's hard to concentrate.
 

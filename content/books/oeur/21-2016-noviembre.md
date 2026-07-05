@@ -35,7 +35,7 @@ Unpleasant surprises are so inevitable that even our own destiny would be alarme
 
 Blind opportunities that, along with indiscreet verses, are surprised day after day by their adventures, some so uncontrollable and others so sudden that even sleeping without dreams, living without aspirations, tend toward dissatisfied normality. I am those blind opportunities. I am those indiscreet verses.
 
-Insecure and alarming suspicions until the moment comes and reality surprises us with firm harshness—and unbreakable certainty—regardless of our possible discontent.
+Insecure and alarming suspicions until the moment comes and reality surprises us with firm harshness (and unbreakable certainty) regardless of our possible discontent.
 
 Inevitable discrepancy. Discontent with that situation that seems to surpass us by too much. Still shaken to assimilate.
 
@@ -57,6 +57,6 @@ Both religion and politics are nothing more than unattainable utopias intertwine
 
 I am not asserting that both politics and religion are unnecessary and senseless. I declare that we will be wrong in claiming to be right in any utopia. Politics is necessary; hence, it reflects our lack of understanding, just as religion is evidence of our backwardness as rational beings.
 
-Ultimately, politics must — or should— ensure our well-being as collective beings. However, religion has abused ignorance, both of those who wanted it and those who had no other options.
+Ultimately, politics must (or should) ensure our well-being as collective beings. However, religion has abused ignorance, both of those who wanted it and those who had no other options.
 
-Therefore, our biggest mistake will be any belief disposed of— even predisposed— in any utopia.
+Therefore, our biggest mistake will be any belief disposed of (even predisposed) in any utopia.

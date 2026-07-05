@@ -21,7 +21,7 @@ related_readings = [
 
 <!-- more -->
 
-A basic and straightforward overview of what Agile is, presenting some framework examples that are well known today, such as Scrum or Kanban—everything condensed in a 100's pages book that you can read in a couple of hours.
+A basic and straightforward overview of what Agile is, presenting some framework examples that are well known today, such as Scrum or Kanban, everything condensed in a 100's pages book that you can read in a couple of hours.
 
 ## Chapters
 

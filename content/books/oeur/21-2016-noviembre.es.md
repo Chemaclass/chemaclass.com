@@ -35,7 +35,7 @@ Sorpresas no tan gratas y tan inevitables que incluso a nuestro mismo destino al
 
 Oportunidades ciegas que junto a versos indiscretos se sorprenden día tras día tras sus venturas, algunas tan incontrolables y otras tan repentinas que incluso dormir sin sueños, vivir sin aspiraciones, tiende a la normalidad disconforme. Yo soy esas oportunidades ciegas. Yo soy esos versos indiscretos.
 
-Sospechas inseguras y alarmantes hasta que el momento llegue y la realidad sorprenda con crudeza firme —y seguridad inquebrantable— sin importar lo más mínimo nuestro posible descontento.
+Sospechas inseguras y alarmantes hasta que el momento llegue y la realidad sorprenda con crudeza firme (y seguridad inquebrantable) sin importar lo más mínimo nuestro posible descontento.
 
 Discrepancia inevitable. Disconformidad frente a aquella situación que nos parece superar con demasiadas creces. Conmoción aún por asimilar.
 
@@ -58,8 +58,8 @@ Tanto la religión como la política no son más que utopías inalcanzables entr
 
 No estoy afirmando que tanto la política como la religión sean innecesarios sin sentidos. Declaro que estaremos equivocados en la afirmación del tener la razón en cualquier utopía. La política es necesaria: de ahí que sea el reflejo de nuestra falta de entendimiento. Así como la religión es también la evidencia de nuestro atraso como seres racionales.
 
-La política, al fin y al cabo, vela —o debería hacerlo— por nuestro bienestar como seres colectivos. Sin embargo, la religión ha abusado de la ignorancia, de aquéllos que quisieron como de aquéllos que no tuvieron otras opciones.
+La política, al fin y al cabo, vela (o debería hacerlo) por nuestro bienestar como seres colectivos. Sin embargo, la religión ha abusado de la ignorancia, de aquéllos que quisieron como de aquéllos que no tuvieron otras opciones.
 
-Será, por tanto, nuestro mayor error cualquier creencia dispuesta —incluso predispuesta— en cualquier utopía.
+Será, por tanto, nuestro mayor error cualquier creencia dispuesta (incluso predispuesta) en cualquier utopía.
 
 ![book-chapter](/images/books/oeur/21.jpg)

@@ -56,9 +56,9 @@ Bitcoin did not appear out of nowhere. For decades prior to Satoshi Nakamoto’s
 
 > The central bank declared the insurer "too big to fail," and, along with the US Treasury, bailed it out with an injection of $68 billion (plus another $112 billion in guarantees).
 
-> If Friedrich Hayek's analysis of monetary economics early in this career was correct, Bitcoin could help fix the economy. As an unbacked currency that operated without a central bank, bitcoin was an entirely homogeneous form of money. Anyone could control their own coins, and there were no reserve ratios to worry about. And, since bitcoin existed on the internet, it was borderless as well. Anyone with an internet connection, anywhere in the world, could download the software and start sending and receiving transactions to anyone else.  This combination --a homogeneous, borderless type of money with a fixed supply-- is what Hayek once described as neutral money.
+> If Friedrich Hayek's analysis of monetary economics early in this career was correct, Bitcoin could help fix the economy. As an unbacked currency that operated without a central bank, bitcoin was an entirely homogeneous form of money. Anyone could control their own coins, and there were no reserve ratios to worry about. And, since bitcoin existed on the internet, it was borderless as well. Anyone with an internet connection, anywhere in the world, could download the software and start sending and receiving transactions to anyone else.  This combination (a homogeneous, borderless type of money with a fixed supply) is what Hayek once described as neutral money.
 
-> Bitcoin would also facilitate international trade in a much more straightforward manner, where only the buyer and seller and (the prices of) their respective products are affected --not the price levels across their entire countries.
+> Bitcoin would also facilitate international trade in a much more straightforward manner, where only the buyer and seller and (the prices of) their respective products are affected, not the price levels across their entire countries.
 
 > In Bitcoin, no one is in charge... and everyone is in charge.
 
