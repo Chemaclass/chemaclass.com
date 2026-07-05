@@ -16,8 +16,8 @@
 {% endblock styles %}
 
 {% block posthead %}
-{% set profile_image = resize_image(path=config.extra.profile_large, width=360, height=360, op="fill") %}
-<link rel="preload" href="{{ profile_image.url }}" as="image">
+{% set profile_image = resize_image(path=config.extra.profile_large, width=360, height=360, op="fill", format="webp", quality=80) %}
+<link rel="preload" href="{{ profile_image.url }}" as="image" type="image/webp">
 
 <!-- Person Schema for homepage -->
 <script type="application/ld+json">
