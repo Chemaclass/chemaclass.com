@@ -206,6 +206,10 @@
     <meta property="og:description" content="{{ page.description }}">
     {% elif section.description %}
     <meta property="og:description" content="{{ section.description }}">
+    {% elif page.summary %}
+    <meta property="og:description" content="{{ page.summary | striptags | trim | truncate(length=200) }}">
+    {% elif page.content %}
+    <meta property="og:description" content="{{ page.content | striptags | trim | truncate(length=200) }}">
     {% else %}
     <meta property="og:description" content="{{ config.description }}">
     {% endif %}
@@ -283,6 +287,14 @@
       {% elif section.description %}
         <meta name="description" content="{{ section.description }}" />
         <meta name="twitter:description" content="{{ section.description }}">
+      {% elif page.summary %}
+        {% set fallback_desc = page.summary | striptags | trim | truncate(length=200) %}
+        <meta name="description" content="{{ fallback_desc }}" />
+        <meta name="twitter:description" content="{{ fallback_desc }}">
+      {% elif page.content %}
+        {% set fallback_desc = page.content | striptags | trim | truncate(length=200) %}
+        <meta name="description" content="{{ fallback_desc }}" />
+        <meta name="twitter:description" content="{{ fallback_desc }}">
       {% else %}
         <meta name="description" content="{{ config.description }}" />
         <meta name="twitter:description" content="{{ config.description }}">
@@ -330,7 +342,7 @@
 
     <!-- Hreflang for multilingual support -->
     {% if page.translations %}
-      <link rel="alternate" hreflang="{{ lang }}" href="{{ page.permalink | safe }}" />
+      {# page.translations already includes this page, so the loop emits the self link too #}
       {% for t in page.translations %}
         <link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.permalink | safe }}" />
       {% endfor %}
@@ -342,7 +354,6 @@
         {% endif %}{% endfor %}
       {% endif %}
     {% elif section.translations %}
-      <link rel="alternate" hreflang="{{ lang }}" href="{{ section.permalink | safe }}" />
       {% for t in section.translations %}
         <link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.permalink | safe }}" />
       {% endfor %}
@@ -391,7 +402,6 @@
     {% block rss %}
       <link rel="alternate" type="application/atom+xml" hreflang="en" href="{{ get_url(path='atom.xml') | safe }}" title="Atom Feed (EN)">
       <link rel="alternate" type="application/atom+xml" hreflang="es" href="{{ get_url(path='es/atom.xml') | safe }}" title="Atom Feed (ES)">
-      <link rel="alternate" type="application/feed+json" href="{{ config.base_url | safe }}/feed.json" title="JSON Feed">
       <link rel="author" href="{{ config.base_url | safe }}/humans.txt">
     {% endblock rss %}
     {% block posthead %}{% endblock posthead %}
