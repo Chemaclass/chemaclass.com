@@ -94,7 +94,7 @@ Near the goal, Sam says: *"I can see it, Mr. Frodo. Just a bit further."* One li
 
 They drift in and out like background voices on a long walk. Companions who speak when the moment calls for it, not when the script says to.
 
-![Minas Morgul: the Eye sees you](/images/blog/2026-04-04/gameplay-morgul.png)
+<img src="/images/blog/2026-04-04/gameplay-morgul.webp" alt="Minas Morgul: the Eye sees you" width="1600" height="695" loading="lazy" decoding="async" />
 
 
 ## Who made this

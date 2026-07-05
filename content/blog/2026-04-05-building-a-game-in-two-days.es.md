@@ -94,7 +94,7 @@ Cerca de la meta, Sam dice: *"Puedo verlo, señor Frodo. Solo un poco más."* Co
 
 Aparecen y desaparecen como voces de fondo en un largo camino. Compañeros que hablan cuando el momento lo pide, no cuando el guión dice que toca.
 
-![Minas Morgul: el Ojo te ve](/images/blog/2026-04-04/gameplay-morgul.png)
+<img src="/images/blog/2026-04-04/gameplay-morgul.webp" alt="Minas Morgul: el Ojo te ve" width="1600" height="695" loading="lazy" decoding="async" />
 
 
 ## Quién hizo esto
