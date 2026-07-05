@@ -6,20 +6,52 @@
 window.toggleSearch = function() {
   if (typeof loadSearch === 'function') loadSearch();
   const overlay = document.getElementById('search-overlay');
+  const toggle = document.getElementById('search-toggle');
   const isActive = overlay.classList.toggle('active');
+  if (toggle) toggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
   if (isActive) {
+    window.__searchReturnFocus = document.activeElement;
     setTimeout(() => document.getElementById('site-search').focus(), 50);
+  } else {
+    restoreSearchFocus();
   }
 };
 
 window.closeSearch = function() {
   const overlay = document.getElementById('search-overlay');
   overlay.classList.remove('active');
+  const toggle = document.getElementById('search-toggle');
+  if (toggle) toggle.setAttribute('aria-expanded', 'false');
   document.getElementById('site-search').value = '';
   const results = document.querySelector('.search-results');
   if (results) results.style.display = 'none';
   if (window.__easter67) window.__easter67.stop();
+  restoreSearchFocus();
 };
+
+// Return focus to whatever opened the overlay so keyboard users land back in place
+function restoreSearchFocus() {
+  const el = window.__searchReturnFocus;
+  window.__searchReturnFocus = null;
+  if (el && typeof el.focus === 'function') { el.focus(); return; }
+  const toggle = document.getElementById('search-toggle');
+  if (toggle) toggle.focus();
+}
+
+// Trap Tab within the modal search overlay while it is open
+(function initSearchFocusTrap() {
+  const overlay = document.getElementById('search-overlay');
+  if (!overlay) return;
+  overlay.addEventListener('keydown', function(e) {
+    if (e.key !== 'Tab' || !overlay.classList.contains('active')) return;
+    const nodes = overlay.querySelectorAll('a[href], button, input, [tabindex]:not([tabindex="-1"])');
+    const items = Array.prototype.filter.call(nodes, function(el) { return !el.disabled && el.offsetParent !== null; });
+    if (!items.length) return;
+    const first = items[0], last = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+})();
 
 // Mobile menu toggle
 window.closeMobileMenu = function() {

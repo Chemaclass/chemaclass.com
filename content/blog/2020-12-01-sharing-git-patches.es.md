@@ -34,7 +34,7 @@ Bueno, hay múltiples opciones. La clave es ser consciente de ellas y usarlas sa
 - Siempre podemos hacer algo de pair-thinking, hablar en cualquier momento. La comunicación siempre es buena para aclarar la posible incertidumbre.
 - Compartir tus parches de git es otra buena opción.
 
-# ¡Git diff al rescate!
+## ¡Git diff al rescate!
 
 ¿Y si tú (como revisor) pudieras compartir tu idea sin ningún commit o comentario en el PR, pero compartiendo tus cambios directamente con el autor?
 

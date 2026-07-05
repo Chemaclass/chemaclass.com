@@ -24,7 +24,7 @@ Un nuevo lenguaje de Programación Funcional construido sobre el ecosistema de P
 
 <!-- more -->
 
-# El Lenguaje Phel
+## El Lenguaje Phel
 
 Phel es un lenguaje de Programación Funcional ([FP](https://en.wikipedia.org/wiki/Functional_programming)) que compila a PHP. Es un dialecto de [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) inspirado en Clojure y Janet.
 

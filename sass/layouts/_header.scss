@@ -105,6 +105,10 @@
       font-size: 16px;
       outline: none;
 
+      &:focus-visible {
+        box-shadow: 0 0 0 2px var(--accent-color);
+      }
+
       &::placeholder {
         color: var(--color-subtitle);
       }

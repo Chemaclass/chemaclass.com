@@ -1,6 +1,6 @@
 +++
 title = "Experimentos de Conformidad"
-description = "¿Hasta qué punto las fuerzas sociales alteran las opiniones de las personas? ¿Qué aspecto de la influencia del grupo es más importante — el tamaño de la mayoría, o la unanimidad de opinión?"
+description = "¿Hasta qué punto las fuerzas sociales alteran las opiniones de las personas? ¿Qué aspecto de la influencia del grupo es más importante: el tamaño de la mayoría, o la unanimidad de opinión?"
 [taxonomies]
 tags = [ "psychology", "leadership", "communication" ]
 [extra]
@@ -19,11 +19,11 @@ related_readings = [
 
 ![blog-cover](/images/blog/2021-06-01/cover.jpg)
 
-¿Hasta qué punto las fuerzas sociales alteran las opiniones de las personas? ¿Qué aspecto de la influencia del grupo es más importante — el tamaño de la mayoría, o la unanimidad de opinión?
+¿Hasta qué punto las fuerzas sociales alteran las opiniones de las personas? ¿Qué aspecto de la influencia del grupo es más importante: el tamaño de la mayoría, o la unanimidad de opinión?
 
 <!-- more -->
 
-# El psicólogo Solomon Asch
+## El psicólogo Solomon Asch
 
 Durante los primeros años de la Segunda Guerra Mundial, cuando Hitler estaba en la cúspide del poder, Solomon Asch empezó a estudiar el impacto de la propaganda y el adoctrinamiento. Era profesor en el departamento de psicología del Brooklyn College y luego estuvo 19 años en Swarthmore College.
 
@@ -32,7 +32,7 @@ En los años 50, Asch se hizo famoso por sus experimentos sobre la presión soci
 ## Asch preguntó
 
 ¿Hasta qué punto las fuerzas sociales alteran las opiniones de las personas?
-¿Qué aspecto de la influencia del grupo es más importante — el tamaño de la mayoría, o la unanimidad de opinión?
+¿Qué aspecto de la influencia del grupo es más importante: el tamaño de la mayoría, o la unanimidad de opinión?
 
 > Asch creía que las personas se comportan según cómo perciben el mundo, no según cómo es realmente.
 
