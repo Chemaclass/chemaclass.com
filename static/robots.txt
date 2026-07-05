@@ -62,11 +62,9 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-# Sitemaps (English + Spanish)
+# Sitemap (single file, includes English + Spanish URLs)
 Sitemap: https://chemaclass.com/sitemap.xml
-Sitemap: https://chemaclass.com/es/sitemap.xml
 
 # AI/LLM context files
 # Summary index:   https://chemaclass.com/llms.txt
-# Full content:    https://chemaclass.com/llms-full.txt
 # Use policy:      https://chemaclass.com/.well-known/ai.txt

@@ -43,7 +43,7 @@
     "name": "{{ page.title }}",
     "author": { "@type": "Person", "name": "{{ page.extra.author }}" }
     {% if page.extra.pages %}, "numberOfPages": {{ page.extra.pages }}{% endif %}
-    {% if page.extra.static_thumbnail %}, "image": "{{ config.base_url | safe }}{{ page.extra.static_thumbnail | safe }}"{% endif %}
+    {% if page.extra.static_thumbnail %}, "image": "{% if page.extra.static_thumbnail is matching("^http") %}{{ page.extra.static_thumbnail | safe }}{% else %}{{ config.base_url | safe }}{{ page.extra.static_thumbnail | safe }}{% endif %}"{% endif %}
   },
   "author": {
     "@type": "Person",
