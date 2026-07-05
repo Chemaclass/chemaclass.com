@@ -48,7 +48,7 @@ Every action has effects you can see and effects you can't. Frédéric Bastiat b
 
 A boy breaks a shop window. A bystander shrugs: well, at least it gives the glazier some work. True. That's the part you see.
 
-But the shopkeeper spent on glass the money he meant for shoes. The shoemaker got no order. That's the [part you don't see](https://bastiat.org/en/twisatwins.html). The window is not new wealth. It's wealth moved, and partly destroyed.
+But the shopkeeper spent on glass the money he meant for shoes. The shoemaker got no order. That's the [part you don't see](https://www.econlib.org/library/Bastiat/basEss1.html). The window is not new wealth. It's wealth moved, and partly destroyed.
 
 Most interventions work like this. The benefit is loud and close. The cost is quiet and spread thin. Planners optimize what they can see and pay with what they can't.
 
