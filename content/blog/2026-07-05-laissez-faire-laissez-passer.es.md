@@ -48,7 +48,7 @@ Toda acción tiene efectos que se ven y efectos que no. Frédéric Bastiat const
 
 Un niño rompe el cristal de una tienda. Un curioso se encoge de hombros: bueno, al menos le da trabajo al cristalero. Cierto. Esa es la parte que se ve.
 
-Pero el tendero gastó en un cristal el dinero que iba a gastar en zapatos. El zapatero se quedó sin ese pedido. Esa es la [parte que no se ve](https://bastiat.org/en/twisatwins.html). El cristal no es riqueza nueva. Es riqueza movida, y en parte destruida.
+Pero el tendero gastó en un cristal el dinero que iba a gastar en zapatos. El zapatero se quedó sin ese pedido. Esa es la [parte que no se ve](https://www.econlib.org/library/Bastiat/basEss1.html). El cristal no es riqueza nueva. Es riqueza movida, y en parte destruida.
 
 Casi todas las intervenciones funcionan así. El beneficio es ruidoso y cercano. El coste es silencioso y se reparte fino. Los planificadores optimizan lo que ven y lo pagan con lo que no ven.
 
