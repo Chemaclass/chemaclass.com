@@ -11,7 +11,7 @@ tags = []
 
 ## Esclavo de la muerte
 
-Tener la muerte tan presente día tras día, tan recurrente, nos es algo inevitable. Pues ser tan conscientes de que nuestro tiempo no es infinito debería hacernos plantear en qué queremos —o deberíamos querer— invertirlo.
+Tener la muerte tan presente día tras día, tan recurrente, nos es algo inevitable. Pues ser tan conscientes de que nuestro tiempo no es infinito debería hacernos plantear en qué queremos (o deberíamos querer) invertirlo.
 
 Mi mayor temor es el dolor de cabeza que, repentino, a veces me asalta cuando intento conciliar el sueño. No hablo de dolores emocionales, sino físicos, pues, además de parecer aleatorios, podrían estar jugando por última vez sin posible oportunidad de réplica.
 

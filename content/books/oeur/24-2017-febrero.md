@@ -17,7 +17,7 @@ It is our context that determines the perception of what we are judging. Playing
 
 Consider not expressing ourselves, not revealing ourselves to ourselves, for an excessive period. Weigh the idea of not considering our observation of what we cannot stop looking at: our life and our time, our moments and our being: ourselves.
 
-Not reflecting on our actions in the wake of our leaving —even if involuntarily— sentences our opinion and appreciation of everything that borders our surroundings. Everything we do, therefore, will leave a trace: our immortal past, which is inevitably part of the cause, directly transforming us into the consequence we are becoming.
+Not reflecting on our actions in the wake of our leaving (even if involuntarily) sentences our opinion and appreciation of everything that borders our surroundings. Everything we do, therefore, will leave a trace: our immortal past, which is inevitably part of the cause, directly transforming us into the consequence we are becoming.
 
 For the estimation of our values, we will arbitrate their resolution. Encircling our sanity and specifying what our disposition dictates. If we do not value ourselves, our values will be diminished in the possible shyness of cowardice. We cannot be upright or free individuals if we do not value ourselves. Otherwise, at least we will have the opportunity to be so to the extent of our possible considerations.
 

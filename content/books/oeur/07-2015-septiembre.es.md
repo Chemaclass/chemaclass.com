@@ -11,11 +11,11 @@ tags = []
 
 ## Dios existe: soy yo, y tú también
 
-Yo soy un no muerto. Soy un vivo —y vaya si vivo: ¡más vivo que nunca!—. Soy una persona que le gusta tener las cosas claras. Carácter, justo.
+Yo soy un no muerto. Soy un vivo (y vaya si vivo: ¡más vivo que nunca!). Soy una persona que le gusta tener las cosas claras. Carácter, justo.
 
 Soy una persona amante de la vida, del momento y del tiempo, así como de mis circunstancias. No querría jamás ser una persona idolatrada por masas que no son capaces de ver más allá de su realidad.
 
-No entraré en detalles de si es más o menos correcto ser fiel a una u otra creencia. Cada uno que haga lo que quiera —de ahí nuestra libertad—, pero la libertad va ligada a la responsabilidad. Cada uno pasa a ser responsable de sí mismo; cada cual, que vele por sus creencias, que yo velaré por las mías. Y por las mías significa no callarme cuando algo me moleste, cuando algo no sea correcto a mis ojos ni cuando crea que algo no tiene sentido. Entonces hablaré para intentar corregirlo.
+No entraré en detalles de si es más o menos correcto ser fiel a una u otra creencia. Cada uno que haga lo que quiera (de ahí nuestra libertad), pero la libertad va ligada a la responsabilidad. Cada uno pasa a ser responsable de sí mismo; cada cual, que vele por sus creencias, que yo velaré por las mías. Y por las mías significa no callarme cuando algo me moleste, cuando algo no sea correcto a mis ojos ni cuando crea que algo no tiene sentido. Entonces hablaré para intentar corregirlo.
 
 Nada de maldad, aquí nadie ha venido a hablar del bien y del mal. Eso ya... que se lo traiga cada uno de casa. Estoy en contra de toda religión que no defienda el valor humano individual por encima de todo, por encima de cualquier entidad divina.
 
@@ -47,7 +47,7 @@ Haremos un antes y un después. Quién sabe a quién le puede llegar esto. Lo me
 
 La filosofía podríamos entenderla como la más pura y abstracta ciencia en base al subjetivismo que trata de, por encima de dar respuestas, encontrar las preguntas adecuadas. Filosofar es cuestionar.
 
-La finalidad de este arte no debe concluir en ser leída. La filosofía debería buscar ser escéptica y pragmática. Leer filosofía es saludable. Estudiarla incluso, si nos gusta o apasiona, puede llegar a aportarnos un rico nivel cultural, pero ése nunca debió ser su último fin. El arte del pensar no debió nacer para ser leído ni tampoco para ser escrito. Escribir filosofía es inútil si no aportamos ninguna cuestión. Leer filosofía es inútil si no nos hemos dispuesto de herramientas —nuevas o no— para seguir construyéndonos, pues la filosofía es inútil en sí misma: somos nosotros los que le daremos el valor que consideremos.
+La finalidad de este arte no debe concluir en ser leída. La filosofía debería buscar ser escéptica y pragmática. Leer filosofía es saludable. Estudiarla incluso, si nos gusta o apasiona, puede llegar a aportarnos un rico nivel cultural, pero ése nunca debió ser su último fin. El arte del pensar no debió nacer para ser leído ni tampoco para ser escrito. Escribir filosofía es inútil si no aportamos ninguna cuestión. Leer filosofía es inútil si no nos hemos dispuesto de herramientas (nuevas o no) para seguir construyéndonos, pues la filosofía es inútil en sí misma: somos nosotros los que le daremos el valor que consideremos.
 
 No existe una verdad absoluta que regule la importancia y el valor de la misma, pues algo tan abstracto, ¿cómo podríamos cuantificarlo? El valor de la duda. ¡Ahí está su verdadero valor!: ¡es ella misma!
 

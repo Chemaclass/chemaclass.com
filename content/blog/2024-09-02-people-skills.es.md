@@ -1,6 +1,6 @@
 +++
 title = "Habilidades Interpersonales"
-description = "Así que eres desarrollador de software, y has dominado lenguajes de programación, algoritmos y todo lo técnico. ¡Genial! Pero aquí está el asunto: las habilidades técnicas por sí solas no te llevarán tan lejos como podrías pensar. Si no puedes trabajar bien con otros, no importa lo bueno que sea tu código — nadie querrá trabajar contigo."
+description = "Así que eres desarrollador de software, y has dominado lenguajes de programación, algoritmos y todo lo técnico. ¡Genial! Pero aquí está el asunto: las habilidades técnicas por sí solas no te llevarán tan lejos como podrías pensar. Si no puedes trabajar bien con otros, no importa lo bueno que sea tu código, nadie querrá trabajar contigo."
 draft = false
 [taxonomies]
 tags = [ "communication", "team-management", "career", "leadership" ]

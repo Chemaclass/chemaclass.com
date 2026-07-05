@@ -34,7 +34,7 @@ He rejects the utopian idea that a perfect society could be built on rational se
 
 The Underground Man is paralyzed by over-thinking. He sees every angle, every consequence, every possible interpretation. So he does nothing. He calls himself more conscious than the "men of action" who simply act without questioning everything.
 
-> "I swear, gentlemen, that to be too conscious is an illness—a real thorough-going illness."
+> "I swear, gentlemen, that to be too conscious is an illness: a real thorough-going illness."
 
 There's something uncomfortably relatable here. The trap of analysis paralysis. Knowing too much can become an excuse to do nothing at all.
 

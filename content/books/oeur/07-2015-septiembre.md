@@ -11,11 +11,11 @@ tags = []
 
 ## God exists: it's me, and so are you
 
-I am an undead. I am alive—more alive than ever! I am a person who likes to have things clear. Character, fair.
+I am an undead. I am alive, more alive than ever! I am a person who likes to have things clear. Character, fair.
 
 I am a life-loving person, embracing the moment and time, as well as my circumstances. I would never want to be a person idolized by the masses who cannot see beyond their reality.
 
-I won't go into details about whether it's more or less correct to be faithful to one belief or another. Everyone can do what they want—that's our freedom—but freedom is linked to responsibility. Each becomes responsible for themselves; each one, guard your beliefs, and I will guard mine. Guarding mine means not staying silent when something bothers me, when something is not right in my eyes, or when I believe something doesn't make sense. Then, I will speak up to try to correct it.
+I won't go into details about whether it's more or less correct to be faithful to one belief or another. Everyone can do what they want (that's our freedom), but freedom is linked to responsibility. Each becomes responsible for themselves; each one, guard your beliefs, and I will guard mine. Guarding mine means not staying silent when something bothers me, when something is not right in my eyes, or when I believe something doesn't make sense. Then, I will speak up to try to correct it.
 
 No malice here; no one has come to discuss good and evil. That's something everyone can handle on their own. I am against any religion that does not uphold individual human value above all, above any divine entity.
 
@@ -47,7 +47,7 @@ We will make a before and an after. Who knows who this might reach? The best thi
 
 We could understand philosophy as the purest and most abstract science based on subjectivism, which, instead of providing answers, seeks to find the right questions. To philosophize is to question.
 
-The purpose of this art should not end with being read. Philosophy should strive to be skeptical and pragmatic. Reading philosophy is healthy. Studying it, if we like or are passionate about it, can provide us with a rich cultural level, but that should never have been its ultimate purpose. The art of thinking did not arise to be read or written. Writing philosophy is useless if we do not contribute any questions. Reading philosophy is useless if we have not equipped ourselves—with new or existing tools—to continue building ourselves because philosophy is useless in itself: we are the ones who will give it the value we consider.
+The purpose of this art should not end with being read. Philosophy should strive to be skeptical and pragmatic. Reading philosophy is healthy. Studying it, if we like or are passionate about it, can provide us with a rich cultural level, but that should never have been its ultimate purpose. The art of thinking did not arise to be read or written. Writing philosophy is useless if we do not contribute any questions. Reading philosophy is useless if we have not equipped ourselves (with new or existing tools) to continue building ourselves because philosophy is useless in itself: we are the ones who will give it the value we consider.
 
 There is no absolute truth that regulates its importance and value, because something so abstract, how could we quantify it? The value of doubt. There lies its true value: it is doubt itself!
 

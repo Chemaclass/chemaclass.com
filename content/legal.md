@@ -28,16 +28,16 @@ This data is aggregated and does not personally identify you.
 
 Some pages may include:
 
-- **YouTube videos** — When you view a page with an embedded video, YouTube may set cookies and collect data according to [Google's Privacy Policy](https://policies.google.com/privacy).
-- **GitHub Gists** — Code snippets embedded from GitHub may load external scripts according to [GitHub's Privacy Policy](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+- **YouTube videos**: When you view a page with an embedded video, YouTube may set cookies and collect data according to [Google's Privacy Policy](https://policies.google.com/privacy).
+- **GitHub Gists**: Code snippets embedded from GitHub may load external scripts according to [GitHub's Privacy Policy](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
 ## Third-Party Services
 
 This site uses the following external services:
 
-- **FontAwesome** — for icons
-- **PayPal/Alby** — for donations (external links)
-- **GitHub** — for code hosting and links
+- **FontAwesome**: for icons
+- **PayPal/Alby**: for donations (external links)
+- **GitHub**: for code hosting and links
 
 Each service has its own privacy policy.
 

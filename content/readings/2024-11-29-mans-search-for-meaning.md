@@ -67,9 +67,9 @@ Frankl's book is not just a memoir but a testament to human resilience and the p
 
 > "Ultimately, man should not ask what the meaning of his life is, but rather he must recognize that it is he who is asked."
 
-> “We needed to stop asking about the meaning of life, and instead to think of ourselves as those who were being questioned by life -daily and hourly.”
+> “We needed to stop asking about the meaning of life, and instead to think of ourselves as those who were being questioned by life, daily and hourly.”
 
-> “Everything can be taken from a man but one thing: the last of the human freedoms—to choose one’s attitude in any given set of circumstances, to choose one’s own way.”
+> “Everything can be taken from a man but one thing: the last of the human freedoms, to choose one’s attitude in any given set of circumstances, to choose one’s own way.”
 
 > "Freedom, however, is not the last word. Freedom is only part of the story and half of the truth. Freedom is but the negative aspect of the whole phenomenon whose positive aspect is responsibleness."
 

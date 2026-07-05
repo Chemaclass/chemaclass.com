@@ -59,4 +59,4 @@ El libro está lleno de lecciones aplicables a cualquiera, sin importar quién s
 
 {{ youtube(id="OvYCLxqkfvY") }}
 
-> "La vida sigue adelante y nosotros también deberíamos" — Spencer Johnson
+> "La vida sigue adelante y nosotros también deberíamos" - Spencer Johnson

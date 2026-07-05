@@ -24,7 +24,7 @@ Bitcoin with Rigor goes beyond a basic explanation of Bitcoin, offering a detail
 
 <!-- more -->
 
-Bitcoin’s novelty makes it challenging to grasp fully. It requires knowledge of computing, economics, and finance while also being a digital asset with no historical precedent to guide understanding. Yet, much like the Internet—also relatively young but undeniably transformative—Bitcoin has the potential to redefine systems and leave a lasting impact.
+Bitcoin’s novelty makes it challenging to grasp fully. It requires knowledge of computing, economics, and finance while also being a digital asset with no historical precedent to guide understanding. Yet, much like the Internet (also relatively young but undeniably transformative), Bitcoin has the potential to redefine systems and leave a lasting impact.
 
 This book aims to equip readers with the tools to understand how Bitcoin works, empowering them to form their own well-informed opinions about its role in society or, if they choose, to begin a professional journey in this evolving sector. Written with rigor but without excessive technicality, the content is designed to be concise, accessible, and engaging, providing the foundation needed to truly comprehend Bitcoin.
 

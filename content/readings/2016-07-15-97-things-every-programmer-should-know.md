@@ -56,7 +56,7 @@ old problems, learning appropriate best practices, and honing your craft through
 
 19.- When designing an API, aim to make it **easy to use**, not convenient to code.
 
-20.- Deploy early and **often** – do not leave it until the end of the project.
+20.- Deploy early and **often**. Do not leave it until the end of the project.
 
 22.- Improving your skills should be on your daily basis.
 
@@ -76,7 +76,7 @@ old problems, learning appropriate best practices, and honing your craft through
 
 29.- Understand at least some complexities of your business, not just programming.
 
-30.- **DRY** – Don't Repeat Yourself.
+30.- **DRY**: Don't Repeat Yourself.
 
 32.- Encapsulate behavior, not just state.
 
@@ -86,7 +86,7 @@ old problems, learning appropriate best practices, and honing your craft through
 
 36.- Give proper **context** when asking for help, because people can't just guess what's going on.
 
-37.- It's not about the long hours – learn to **work effectively**. 
+37.- It's not about the long hours. Learn to **work effectively**. 
 - Dedicate time to continuous learning and to think about what you're doing.
 
 38.- Write proper **bug reports**:
@@ -121,7 +121,7 @@ old problems, learning appropriate best practices, and honing your craft through
 
 48.- Use a relational DB if your application is going to handle a large, persistent, interconnected set of data.
 
-49.- Learn to **communicate** well in many "languages": not just to your machine, but also to business partners – and maybe even pick up a foreign language too. 
+49.- Learn to **communicate** well in many "languages": not just to your machine, but also to business partners, and maybe even pick up a foreign language too. 
 - It's good for connections and for life.
 
 54.- Think twice before implementing "temporary solutions".

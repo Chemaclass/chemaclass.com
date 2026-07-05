@@ -61,7 +61,7 @@ Estos son los temas que encontrarás en el libro:
 
 > Siempre vuelve a tus metas principales. [...] Me aseguro de que cada meta tenga un "por qué" claro detrás. Así, cuando me pierdo, vuelvo a mi "por qué".
 
--- Referencia a "[Empieza con el Por Qué](/es/readings/start-with-why)" de Simon Sinek.
+- Referencia a "[Empieza con el Por Qué](/es/readings/start-with-why)" de Simon Sinek.
 
 > Cuando eres el jefe, recuerda esta regla de oro: Pregunta a la gente qué piensa en lugar de decirles qué hacer.
 

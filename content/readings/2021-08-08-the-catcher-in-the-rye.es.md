@@ -29,17 +29,17 @@ El protagonista se convirtió en icono de la rebeldía adolescente. La novela to
 
 Del capítulo 22:
 
-> — "No te gusta nada de lo que está pasando." Me deprimió aún más cuando dijo eso.
+> "No te gusta nada de lo que está pasando." Me deprimió aún más cuando dijo eso.
 >
-> — "Sí me gusta. Sí me gusta. Claro que sí. No digas eso. ¿Por qué diablos dices eso?"
+> "Sí me gusta. Sí me gusta. Claro que sí. No digas eso. ¿Por qué diablos dices eso?"
 >
-> — "Porque no te gusta. No te gusta ninguna escuela. No te gustan un millón de cosas. No te gustan."
+> "Porque no te gusta. No te gusta ninguna escuela. No te gustan un millón de cosas. No te gustan."
 >
-> — "¡Sí me gustan! Ahí es donde te equivocas—¡es exactamente donde te equivocas! ¿Por qué diablos tienes que decir eso?" dije. Cielos, me estaba deprimiendo.
+> "¡Sí me gustan! Ahí es donde te equivocas, ¡es exactamente donde te equivocas! ¿Por qué diablos tienes que decir eso?" dije. Cielos, me estaba deprimiendo.
 >
-> — "Porque no te gustan," dijo ella. "Nombra una cosa."
+> "Porque no te gustan," dijo ella. "Nombra una cosa."
 >
-> — "¿Una cosa? ¿Una cosa que me guste?" dije. "Vale."
+> "¿Una cosa? ¿Una cosa que me guste?" dije. "Vale."
 >
 > El problema era que no podía concentrarme muy bien. A veces es difícil concentrarse.
 

@@ -64,7 +64,7 @@ These are the topics you'll find in the book:
 > Always return to your core goals. [...] I make sure each core goal has a clearly defined "why?" behind it, this way 
 > if I ever get lost, I go back to my "why."
 
--- Reference to "[Start with Why](/readings/start-with-why)" by Simon Sinek.
+- Reference to "[Start with Why](/readings/start-with-why)" by Simon Sinek.
 
 > When you're the boss, remember this golden rule: Ask people what they think instead of telling them what to do.
 

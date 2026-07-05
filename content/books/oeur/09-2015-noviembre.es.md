@@ -27,7 +27,7 @@ Para mi motivo, mi motivación.
 
 Nuestro proyecto no tiene por qué ser común ni tan siquiera compartido, pero estoy seguro de que a ambos nos gustaría una misma meta: alcanzarlo. Y es que no hay nada más satisfactorio que lograr nuestros objetivos, desde los que nos propusimos en antaño hasta los que nacieron hace escasos segundos. No importa el tiempo cuando se trata de crearse a uno mismo.
 
-Cambiemos, respiremos y evolucionemos sin perder nuestra esencia, siendo nosotros los que decidamos. No habrá rezo ni credo alguno que nos dirija. Disfrutemos de nosotros y de nuestras decisiones, así como de nuestras equivocaciones; pero sobre todo aprendamos  de ellas —¡de nuestras decisiones!—. No nos detengamos, sigamos avanzando. Conseguiremos sorprendernos, no quepa la menor duda.
+Cambiemos, respiremos y evolucionemos sin perder nuestra esencia, siendo nosotros los que decidamos. No habrá rezo ni credo alguno que nos dirija. Disfrutemos de nosotros y de nuestras decisiones, así como de nuestras equivocaciones; pero sobre todo aprendamos  de ellas (¡de nuestras decisiones!). No nos detengamos, sigamos avanzando. Conseguiremos sorprendernos, no quepa la menor duda.
 
 La madurez no se alcanza con los años, sino con la experiencia.
 

@@ -38,15 +38,15 @@ followed, and that was it. But that way of leading is no longer effective, it is
 
 ### The six plays
 
-- Control the clock, don't obey the clock--Pre-plan decision points and give your people the tools they need to hit
+- Control the clock, don't obey the clock: pre-plan decision points and give your people the tools they need to hit
   pause on a plan of action if they notice something wrong.
-- Collaborate, don't coerce–As the leader, you should be the last one to offer your opinion.
-- Commit, don't comply–Rather than expect your team to comply with specific directions, explain your overall goals, and
+- Collaborate, don't coerce: as the leader, you should be the last one to offer your opinion.
+- Commit, don't comply: rather than expect your team to comply with specific directions, explain your overall goals, and
   get their commitment to achieving it one piece at a time.
-- Complete, not continue–If every day feels like a repetition of the last, you're doing something wrong.
-- Improve, don't prove–Ask your people to improve on plans and processes, rather than prove that they can meet fixed
+- Complete, not continue: if every day feels like a repetition of the last, you're doing something wrong.
+- Improve, don't prove: ask your people to improve on plans and processes, rather than prove that they can meet fixed
   goals or deadlines.
-- Connect, don't conform–Flatten hierarchies in your organization and connect with your people to encourage them to
+- Connect, don't conform: flatten hierarchies in your organization and connect with your people to encourage them to
   contribute to decision-making
 
 --- 

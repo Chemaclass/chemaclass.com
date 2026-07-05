@@ -23,11 +23,11 @@ All this journey has not been made for the reader to like it but for the author.
 
 The book you have in your hands is the work of more than two years of one of the most skilled persons that I have ever met: my brother, José María. The real reason to write this prologue is to put the reader in a situation where, while reading the book, they can understand the context of specific chapters.
 
-In the year 2004, at the age of 37, our mother passed away. She had a stroke and left my father responsible for raising eight children by himself – the oldest was 13, José María was 11, and the youngest was just 19 days old. We all had to change schools and redo our lives.
+In the year 2004, at the age of 37, our mother passed away. She had a stroke and left my father responsible for raising eight children by himself: the oldest was 13, José María was 11, and the youngest was just 19 days old. We all had to change schools and redo our lives.
 
 Three years later, he married another woman, who made our lives a living hell. After many discussions with our older sister, who had taken up the responsibility of being "the woman of the house," she sent her to finish her university-level studies in another city, which she perfectly could have done in ours. By order of age, her next "target" was José María.
 
-Our father was overwhelmed by what was happening. The encounters between him and us got bigger and bigger until we relegated – all seven of us – to the garage in the duplex where we "lived," as the backyard of a castle. Additionally, we were utterly forbidden to go upstairs where the main rooms were (kitchen, living room, bathrooms,
+Our father was overwhelmed by what was happening. The encounters between him and us got bigger and bigger until we relegated (all seven of us) to the garage in the duplex where we "lived," as the backyard of a castle. Additionally, we were utterly forbidden to go upstairs where the main rooms were (kitchen, living room, bathrooms,
 and bedrooms) unless it was time to eat or go to sleep, with all the "human necessities" that implies.
 
 The disagreements with her continued as time passed until my father was forced to decide that we all would return to the flat where we grew up with our mother, our home.

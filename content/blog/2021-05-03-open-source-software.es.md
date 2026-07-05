@@ -90,7 +90,7 @@ Un proyecto personal es un terreno de juego para crear software y entrenar tus h
   diseño de tu aplicación dividiendo la lógica en diferentes módulos.
 
 **Abandonadas:**
-- [nm_template](https://github.com/NuevaMetal/nm_template): La plantilla base para NuevaMetal (2013–2016).
+- [nm_template](https://github.com/NuevaMetal/nm_template): La plantilla base para NuevaMetal (2013-2016).
 
 ## Compartir Conocimiento e Impacto
 

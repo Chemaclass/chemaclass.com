@@ -17,7 +17,7 @@ tags = []
 Diciembre de 2025.
 Afuera hace frío. De ese que te limpia la cara y te obliga a despertar.
 
-Once años después, sigo pensando en aquel chaval de veintiuno que cogió un vuelo a Lübeck sin entender lo que iba a costar. No hablo del idioma —un inglés para sobrevivir y nada de alemán—. Hablo de todo lo demás: la soledad, el miedo, la libertad, las personas que te salvan sin saberlo.
+Once años después, sigo pensando en aquel chaval de veintiuno que cogió un vuelo a Lübeck sin entender lo que iba a costar. No hablo del idioma (un inglés para sobrevivir y nada de alemán). Hablo de todo lo demás: la soledad, el miedo, la libertad, las personas que te salvan sin saberlo.
 
 No era valentía. Era urgencia.
 
@@ -183,7 +183,7 @@ Esa palabra se me quedó grabada. Tenía razón. Me había acomodado.
 
 Con mis ahorros podría haber aguantado unos meses. ¿Pero y después? ¿Y si no encontraba trabajo? La incertidumbre me obligó a mirarme de frente y reconocer mis errores.
 
-Tocaba enfocarse y surfear las olas. A las dos semanas de buscar —levantándome a las ocho y sin soltar el portátil hasta las cinco—, encontré trabajo.
+Tocaba enfocarse y surfear las olas. A las dos semanas de buscar (levantándome a las ocho y sin soltar el portátil hasta las cinco), encontré trabajo.
 
 No podía darme por rendido. Y no lo hice.
 
@@ -237,7 +237,7 @@ Pero ninguna victoria tiene el mismo sabor si no hay con quien celebrarla.
 
 Y vosotros sois ese alguien: Papá. Maricarmen. Juan. Jesús. Ángel. Lola. Cosme. Anica. Antonio. Chacho Cosme. Chacha Angustias. Y Anna-Lena.
 
-Sois las ramas —y las raíces— de este árbol que sigo siendo.
+Sois las ramas (y las raíces) de este árbol que sigo siendo.
 
 La distancia física no disminuye el amor. Las pocas veces que nos vemos al año no reducen lo que significáis para mí.
 

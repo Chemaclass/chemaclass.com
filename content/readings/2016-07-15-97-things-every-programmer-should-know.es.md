@@ -54,7 +54,7 @@ related_readings = [
 
 19.- Al diseñar una API, apunta a hacerla **fácil de usar**, no conveniente de codificar.
 
-20.- Despliega temprano y **frecuentemente** – no lo dejes hasta el final del proyecto.
+20.- Despliega temprano y **frecuentemente**. No lo dejes hasta el final del proyecto.
 
 22.- Mejorar tus habilidades debería ser algo diario.
 
@@ -74,7 +74,7 @@ related_readings = [
 
 29.- Entiende al menos algunas complejidades de tu negocio, no solo programación.
 
-30.- **DRY** – No Te Repitas.
+30.- **DRY**: No Te Repitas.
 
 32.- Encapsula comportamiento, no solo estado.
 

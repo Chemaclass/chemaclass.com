@@ -18,7 +18,7 @@ En esta charla explico los fundamentos de Phel y hago una demo de live coding mo
 - 2026-06-09 | International PHP Conference [**Berlín, Alemania**] (EN)
   - [Writing Lisp in PHP: A Journey with Phel](https://phpconference.com/php-core-coding/lisp-in-php-phel/) [[slides](/slides/phel-doom/)]
 - 2025-10-27 | International PHP Conference [**Múnich, Alemania**] (EN)
-  - [From $this to (this) — A Gentle Introduction to Phel](https://phpconference.com/web-development/phel-introduction-functional-programming-lisp/)
+  - [From $this to (this): A Gentle Introduction to Phel](https://phpconference.com/web-development/phel-introduction-functional-programming-lisp/)
 - 2023-10-24/26 | International PHP Conference [**Múnich, Alemania**] (EN)
   - [Introducing Functional Programming in PHP with Phel](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
 - 2023-07-28 | WeAreDevelopers World Congress [**Berlín, Alemania**] (EN)

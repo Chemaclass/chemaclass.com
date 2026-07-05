@@ -1,6 +1,6 @@
 +++
 title = "Cómo Funciona Bitcoin"
-description = "Transacciones, bloques, minería, el modelo UTXO y Lightning Network -- cómo funciona Bitcoin por dentro, explicado en términos simples."
+description = "Transacciones, bloques, minería, el modelo UTXO y Lightning Network: cómo funciona Bitcoin por dentro, explicado en términos simples."
 [taxonomies]
 tags = [ "bitcoin", "cryptography", "tutorial" ]
 [extra]

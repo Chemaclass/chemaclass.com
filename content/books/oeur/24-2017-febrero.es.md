@@ -17,7 +17,7 @@ Es nuestro contexto el que determina la percepción hacia aquello que estamos ju
 
 Considerar no pronunciarnos, no revelarnos ante nosotros, durante un excesivo periodo de tiempo. Sopesar la idea del no tener en cuenta nuestra observación hacia aquello que no podemos dejar de mirar: nuestra vida y nuestro tiempo: nuestros momentos y nuestro ser: a nosotros mismos.
 
-No reflexionar sobre nuestras acciones, sobre la estela que estamos dejando —aunque sea de forma involuntaria—, sentenciará nuestro parecer, así como nuestro aprecio, a todo aquello que linde con su entorno. Todo lo que hagamos, por tanto, dejará un rastro: nuestro inmortal pasado, que es de forma inevitable parte de la causa, transformándonos de forma directa en la consecuencia en la que nos estamos convirtiendo.
+No reflexionar sobre nuestras acciones, sobre la estela que estamos dejando (aunque sea de forma involuntaria), sentenciará nuestro parecer, así como nuestro aprecio, a todo aquello que linde con su entorno. Todo lo que hagamos, por tanto, dejará un rastro: nuestro inmortal pasado, que es de forma inevitable parte de la causa, transformándonos de forma directa en la consecuencia en la que nos estamos convirtiendo.
 
 Pues la estimación de nuestros valores arbitrará la resolución de los mismos. Cercando nuestra cordura y puntualizando aquello que disponga nuestra disposición. Si no nos estimamos, nuestros valores quedarán mermados en la posible timidez de la cobardía. Si no nos estimamos no podremos ser personas cabales ni libres. De lo contrario, al menos tendremos la oportunidad de serlo en la medida de nuestras posibles consideraciones.
 ```

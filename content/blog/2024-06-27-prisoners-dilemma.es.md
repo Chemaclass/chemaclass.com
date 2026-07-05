@@ -47,7 +47,7 @@ Fuente: [Wikipedia](https://en.wikipedia.org//wiki/Prisoner's_dilemma)
 > pero en ningún caso ninguno puede saber lo que el otro ha decidido hasta que haya tomado irrevocablemente su decisión.
 >
 > Cada uno es informado de que al otro prisionero se le está ofreciendo exactamente el mismo trato.
-> Cada prisionero solo se preocupa por su propio bienestar—por minimizar su propia sentencia de prisión.
+> Cada prisionero solo se preocupa por su propio bienestar, por minimizar su propia sentencia de prisión.
 
 Esto lleva a cuatro posibles resultados diferentes para los prisioneros A y B:
 

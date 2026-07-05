@@ -47,7 +47,7 @@ Source: [Wikipedia](https://en.wikipedia.org//wiki/Prisoner's_dilemma)
 > but in no case may either learn what the other has decided until he has irrevocably made his decision. 
 > 
 > Each is informed that the other prisoner is being offered the very same deal. 
-> Each prisoner is concerned only with his own welfare—with minimizing his own prison sentence.
+> Each prisoner is concerned only with his own welfare, with minimizing his own prison sentence.
 
 This leads to four different possible outcomes for prisoners A and B:
 

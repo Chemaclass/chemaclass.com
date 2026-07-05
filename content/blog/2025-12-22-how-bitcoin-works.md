@@ -1,6 +1,6 @@
 +++
 title = "How Bitcoin Works"
-description = "Transactions, blocks, mining, the UTXO model, and Lightning Network -- how Bitcoin actually works under the hood, explained in plain terms."
+description = "Transactions, blocks, mining, the UTXO model, and Lightning Network: how Bitcoin actually works under the hood, explained in plain terms."
 [taxonomies]
 tags = [ "bitcoin", "cryptography", "tutorial" ]
 [extra]
