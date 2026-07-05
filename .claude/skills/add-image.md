@@ -21,8 +21,8 @@ Move an image to the correct location and insert it into a blog post.
 
 3. Optimize and place the image (always optimize by default, never copy a raw phone photo in):
    - Create `static/images/blog/YYYY-MM-DD/` if it doesn't exist
-   - Run `bash scripts/optimize-image.sh <source> static/images/blog/YYYY-MM-DD/{placement}.webp --width <W> --quality 80`
-     - Width by slot: `cover`/`footer` = `1200`, `middle` = `800`
+   - Run `bash scripts/optimize-image.sh <source> static/images/blog/YYYY-MM-DD/{placement}.webp --width <W> --quality 85`
+     - Width by slot: `cover` = `1600` (min, ≥820px tall: the template builds a 1440w retina hero from it; bump width for ultra-wide sources), `middle`/`footer` = `1200`
    - **Report the before/after size** the script prints (before KB, after KB, % saved)
    - Remove the source file after a successful optimize
 

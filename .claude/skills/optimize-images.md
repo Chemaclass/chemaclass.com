@@ -12,7 +12,9 @@ Convert heavy source images (phone JPGs, PNGs) into web-ready `.webp`: downscale
 
 - Optimize with `scripts/optimize-image.sh` (one call per file). It only downscales, never upscales.
 - Defaults: width `1600`, quality `80`.
-- Blog slot widths (site convention): `cover` and `footer` = `1200`, `middle` = `800`, quality `80`.
+- Blog slot widths (site convention): `cover` = `1600`, `middle`/`footer` = `1200`, quality `85`.
+  - **Cover must be ≥1600px wide and ≥820px tall.** The post template (`templates/blog/post.html`) generates a 1440w retina hero variant via `resize_image` (16:9 `op="fill"`); a smaller master gets upscaled and looks soft on 2x screens. For an ultra-wide source that lands under 820px tall at 1600, bump the width until height ≥820 (e.g. 1800).
+  - `middle`/`footer` are inline body images shipped as-is; 1200px keeps them sharp on 2x at the ~700px content column.
 - A file that is already `.webp`, within the target width, and under 300 KB is skipped (the script says so). Pass `--force` to re-encode anyway.
 - **Always report a before/after table** after optimizing: file/slot, before KB, after KB, % saved, plus a TOTAL row. Never skip this, even for a single file.
 
