@@ -5,7 +5,8 @@ draft = false
 [taxonomies]
 tags = [ "economics", "philosophy", "freedom", "bitcoin" ]
 [extra]
-subtitle = "Por defecto, libertad"
+reading_time = 4
+subtitle = "La carga de la prueba es del control"
 static_thumbnail = "/images/blog/2026-07-05/cover.webp"
 related_posts = [
   "blog/2025-11-21-bitcoin-fundamentals.md",
@@ -20,7 +21,7 @@ related_readings = [
 ]
 +++
 
-París, alrededor de 1680. El ministro de finanzas de Luis XIV, Jean-Baptiste Colbert, reúne a un grupo de comerciantes. Hace una pregunta simple: ¿qué puede hacer el Estado para ayudar a vuestros negocios?
+París, alrededor de 1680. Según cuenta la historia, el ministro de finanzas de Luis XIV, Jean-Baptiste Colbert, reúne a un grupo de comerciantes. Hace una pregunta simple: ¿qué puede hacer el Estado para ayudar a vuestros negocios?
 
 Uno de ellos, un comerciante llamado Legendre, da una respuesta famosa. _"Laissez-nous faire."_ Dejadnos hacer.
 
@@ -38,7 +39,20 @@ Friedrich Hayek llamó a esto el problema del conocimiento. La información que 
 
 De ese trabajo se encarga [el precio](https://www.econlib.org/library/Essays/hykKnw.html). Cuando el trigo escasea, su precio sube, y miles de desconocidos se ajustan sin que nadie se lo ordene. Sin ningún memorándum.
 
+{% deep_dive(title="El uso del conocimiento en la sociedad (1945)") %}
+El ensayo de Hayek en cuatro líneas:
+
+- El conocimiento que mueve una economía (quién necesita qué, dónde, ahora mismo) vive repartido en millones de cabezas.
+- Casi todo es local y caduca rápido. Ninguna oficina puede reunirlo antes de que se quede viejo.
+- Un precio comprime todo eso en un número con el que cualquiera puede actuar.
+- Así que la pregunta no es quién debería planificar. Es cómo usar un conocimiento que ningún planificador puede tener. Los precios ya lo hacen.
+{% end %}
+
 Leonard Read lo explicó con un lápiz. En [_I, Pencil_](https://fee.org/resources/i-pencil/), ni una sola persona en el mundo sabe fabricar un lápiz desde cero: la madera, el grafito, la pintura, la goma. Y aun así, los lápices cuestan casi nada y están por todas partes. Nadie manda. Ese es el punto.
+
+{% deep_dive(title="Yo, el lápiz (1958)") %}
+Leonard Read cuenta la historia desde el punto de vista del lápiz. Cedro de Oregón, grafito de Sri Lanka, cera, pegamento, un anillo de latón. Leñadores, mineros, marineros, químicos: millones de personas cooperaron para fabricarlo, y ni una sola conoce la receta completa. Nadie se lo ordenó. Los precios coordinaron cada paso. La idea de Read: si ningún cerebro puede hacer un lápiz, desconfía de los planes que necesitan un cerebro para una economía entera.
+{% end %}
 
 > El orden no necesita un diseñador. Necesita libertad y un precio.
 
@@ -48,7 +62,11 @@ Toda acción tiene efectos que se ven y efectos que no. Frédéric Bastiat const
 
 Un niño rompe el cristal de una tienda. Un curioso se encoge de hombros: bueno, al menos le da trabajo al cristalero. Cierto. Esa es la parte que se ve.
 
-Pero el tendero gastó en un cristal el dinero que iba a gastar en zapatos. El zapatero se quedó sin ese pedido. Esa es la [parte que no se ve](https://www.econlib.org/library/Bastiat/basEss1.html). El cristal no es riqueza nueva. Es riqueza movida, y en parte destruida.
+Pero el tendero gastó en un cristal el dinero que quizá habría gastado en zapatos. El zapatero se quedó sin ese pedido. Esa es la [parte que no se ve](https://www.econlib.org/library/Bastiat/basEss1.html). El cristal no es riqueza nueva. Es riqueza movida, y en parte destruida.
+
+{% deep_dive(title="Lo que se ve y lo que no se ve (1850)") %}
+La regla de Bastiat: todo acto tiene un efecto que ves ahora y una cadena de efectos que no ves. El cristal roto abre el ensayo, y después aplica la misma prueba a impuestos, subvenciones, obras públicas y aranceles. El truco siempre es el mismo: contar lo que la política crea e ignorar lo que impide. El mal economista se queda en el primer efecto. El bueno cuenta toda la cadena.
+{% end %}
 
 Casi todas las intervenciones funcionan así. El beneficio es ruidoso y cercano. El coste es silencioso y se reparte fino. Los planificadores optimizan lo que ven y lo pagan con lo que no ven.
 
@@ -56,15 +74,15 @@ Casi todas las intervenciones funcionan así. El beneficio es ruidoso y cercano.
 
 ## La libertad no es caos
 
-Aquí es donde se equivoca gente de los dos bandos.
+Aquí es donde se equivocan tanto los fans como los críticos del laissez faire.
 
 El laissez faire nunca fue "sin reglas". Un mercado libre se apoya en algo que está debajo: propiedad que de verdad es tuya, y contratos que de verdad se cumplen. Quita eso y no obtienes libertad. Obtienes al más fuerte llevándose lo que quiere.
 
-El Estado de derecho es el marco. Dentro de él, la gente es libre de actuar. Sin él, "mercado libre" solo significa quien trae más fuerza. Eso no es un mercado. Es una pelea.
+El Estado de derecho es el marco. Dentro de él, la gente es libre de actuar. Sin él, "mercado libre" solo significa que gana quien trae más fuerza. Una pelea, no un mercado.
 
-Hayek escribió un [libro entero](/es/readings/the-road-to-serfdom/) sobre adónde lleva el otro camino. La libertad necesita una estructura. La estructura no es enemiga de la libertad. Es lo que la hace posible.
+Hayek escribió un libro entero, [_Camino de servidumbre_](/es/readings/the-road-to-serfdom/), sobre adónde lleva ese otro camino. La libertad necesita una estructura. La estructura no es enemiga de la libertad. Es lo que la hace posible.
 
-> Libre es un marco, no un vacío.
+> Sin reglas no significa libre. Significa que gana el más fuerte.
 
 ![Una gaviota planeando sobre el mar abierto, sin que nadie la dirija](/images/blog/2026-07-05/middle.webp)
 
@@ -74,13 +92,13 @@ Los gobiernos soltaron casi todos los precios. Casi nunca soltaron uno: el diner
 
 El dinero también es un precio. El precio de todo lo demás. Cuando un gobierno imprime más, tus ahorros compran menos sin hacer ruido, y tú nunca votaste eso. Un impuesto que no parece un impuesto.
 
-Por eso hay quien quiere [dinero que nadie pueda imprimir](/es/blog/bitcoin-fundamentals/). Si los precios libres coordinan a desconocidos mejor que cualquier planificador, ¿por qué el precio más importante, [el del propio dinero](/es/blog/programmable-money/), tendría que ser la excepción?
+Por eso empecé a interesarme por el [dinero que nadie puede imprimir](/es/blog/bitcoin-fundamentals/). Si los precios libres coordinan a desconocidos mejor que cualquier planificador, ¿por qué el precio más importante, [el del propio dinero](/es/blog/programmable-money/), tendría que ser la excepción?
 
-> El mercado más libre es el del propio dinero.
+> Liberaron el precio del pan. Se quedaron con el precio del dinero.
 
 ## Por defecto, libertad
 
-Fíjate en la carga de la prueba que casi todos llevamos. Damos por hecho que la libertad necesita una razón, y que el control es lo seguro por defecto. Demuestra que esto debería permitirse.
+Fíjate en la carga de la prueba que casi todos llevamos. Damos por hecho que la libertad necesita una razón, y que el control es lo seguro por defecto. _"Demuestra que esto debería permitirse."_
 
 Dale la vuelta. La libertad es el punto de partida. Cada regla, cada prohibición, cada intervención es lo que tiene que ganarse su sitio. No porque el mercado sea perfecto. No lo es. Los mercados fallan, hay gente que sale perjudicada, y algunos problemas piden una respuesta común. Pero quien quiera anular millones de decisiones libres debería ser el que explique por qué. Cada vez.
 

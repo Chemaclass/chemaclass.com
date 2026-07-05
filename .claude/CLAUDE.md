@@ -52,6 +52,7 @@ Required elements:
 - `<!-- more -->` marker after the introduction (for excerpt)
 - Clear section headers (limit h2 to 5-7 per document, never skip levels)
 - `related_posts` in front matter (preferred) or a `## Related` section at the end
+- If a post uses `{% deep_dive %}` blocks, set `[extra] reading_time` (minutes) counting only words outside those blocks; templates prefer it over Zola's computed time
 
 ### Series
 

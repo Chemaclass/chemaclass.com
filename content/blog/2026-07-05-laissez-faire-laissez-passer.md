@@ -1,11 +1,12 @@
 +++
 title = "Laissez Faire, Laissez Passer"
-description = "One old French phrase holds the whole case for free markets. Let people act, let goods move. No planner knows what the market knows, and freedom, not control, should be the default."
+description = "One old French phrase holds the whole case for free markets. Let people act, let goods pass. No planner knows what the market knows, and freedom, not control, should be the default."
 draft = false
 [taxonomies]
 tags = [ "economics", "philosophy", "freedom", "bitcoin" ]
 [extra]
-subtitle = "The default is freedom"
+reading_time = 4
+subtitle = "The burden of proof belongs to control"
 static_thumbnail = "/images/blog/2026-07-05/cover.webp"
 related_posts = [
   "blog/2025-11-21-bitcoin-fundamentals.md",
@@ -20,11 +21,11 @@ related_readings = [
 ]
 +++
 
-Paris, around 1680. The finance minister of Louis XIV, Jean-Baptiste Colbert, gathers a group of merchants. He asks a simple question: what can the state do to help your business?
+Paris, around 1680. As the story goes, the finance minister of Louis XIV, Jean-Baptiste Colbert, gathers a group of merchants. He asks a simple question: what can the state do to help your business?
 
 One of them, a merchant named Legendre, gives a famous answer. _"Laissez-nous faire."_ Leave us alone.
 
-Decades later, the economist Vincent de Gournay turns that reply into a phrase: _laissez faire, laissez passer_. Let people act. Let goods move.
+Decades later, the economist Vincent de Gournay turns that reply into a phrase: _laissez faire, laissez passer_. Let people act. Let goods pass.
 
 The state offered to help. The market asked only to be left alone.
 
@@ -38,7 +39,20 @@ Friedrich Hayek called this the knowledge problem. The information needed to run
 
 The [price does that job](https://www.econlib.org/library/Essays/hykKnw.html) instead. When wheat gets scarce, its price rises, and thousands of strangers adjust without being told to. No memo required.
 
+{% deep_dive(title="The Use of Knowledge in Society (1945)") %}
+Hayek's essay in four lines:
+
+- The knowledge that runs an economy (who needs what, where, right now) lives scattered in millions of heads.
+- Most of it is local and short-lived. No office can collect it before it goes stale.
+- A price compresses all of it into one number anyone can act on.
+- So the question is not who should plan. It's how to use knowledge no planner can hold. Prices already do.
+{% end %}
+
 Leonard Read made the point with a pencil. In [_I, Pencil_](https://fee.org/resources/i-pencil/), not one person on earth knows how to make a pencil from scratch: the wood, the graphite, the paint, the eraser. Yet pencils cost almost nothing and are everywhere. Nobody is in charge. That is the point.
+
+{% deep_dive(title="I, Pencil (1958)") %}
+Leonard Read tells the story from the pencil's point of view. Cedar from Oregon, graphite from Sri Lanka, wax, glue, a brass ring. Loggers, miners, sailors, chemists: millions of people cooperated to make it, and not one of them knows the whole recipe. Nobody ordered them to. Prices coordinated every step. Read's point: if no mastermind can make a pencil, be suspicious of plans that need a mastermind for a whole economy.
+{% end %}
 
 > Order doesn't need a designer. It needs freedom and a price.
 
@@ -46,9 +60,13 @@ Leonard Read made the point with a pencil. In [_I, Pencil_](https://fee.org/reso
 
 Every action has effects you can see and effects you can't. Frédéric Bastiat built a whole way of thinking around that one idea.
 
-A boy breaks a shop window. A bystander shrugs: well, at least it gives the glazier some work. True. That's the part you see.
+A boy breaks a shop window. A bystander shrugs: well, at least the glazier, the man who fits the new glass, gets some work. True. That's the part you see.
 
-But the shopkeeper spent on glass the money he meant for shoes. The shoemaker got no order. That's the [part you don't see](https://www.econlib.org/library/Bastiat/basEss1.html). The window is not new wealth. It's wealth moved, and partly destroyed.
+But the shopkeeper spent on glass the money that might have bought new shoes. The shoemaker got no order. That's the [part you don't see](https://www.econlib.org/library/Bastiat/basEss1.html). The window is not new wealth. It's wealth moved, and partly destroyed.
+
+{% deep_dive(title="What Is Seen and What Is Not Seen (1850)") %}
+Bastiat's rule: every act has one effect you see now and a chain of effects you don't. The broken window opens the essay, then he runs the same test on taxes, subsidies, public works, and tariffs. The trick is always the same: count what the policy creates, ignore what it prevents. The bad economist stops at the first effect. The good one counts the whole chain.
+{% end %}
 
 Most interventions work like this. The benefit is loud and close. The cost is quiet and spread thin. Planners optimize what they can see and pay with what they can't.
 
@@ -56,15 +74,15 @@ Most interventions work like this. The benefit is loud and close. The cost is qu
 
 ## Freedom is not chaos
 
-Here is where people on both sides get it wrong.
+Here is where both the fans and the critics of laissez faire get it wrong.
 
 Laissez faire was never "no rules." A free market rests on something underneath: property you actually own, and contracts that are actually enforced. Take those away and you don't get freedom. You get the strongest person taking whatever they want.
 
-The rule of law is the frame. Inside it, people are free to act. Without it, "free market" just means whoever brings the most force. That's not a market. That's a fight.
+The rule of law is the frame. Inside it, people are free to act. Without it, "free market" just means whoever brings the most force wins. A fight, not a market.
 
-Hayek wrote a [whole book](/readings/the-road-to-serfdom/) on where the other road leads. Freedom needs a structure. The structure isn't the enemy of freedom. It's what makes it possible.
+Hayek wrote a whole book, [_The Road to Serfdom_](/readings/the-road-to-serfdom/), on where that other road leads. Freedom needs a structure. The structure isn't the enemy of freedom. It's what makes it possible.
 
-> Free is a frame, not a void.
+> No rules doesn't mean free. It means the strongest wins.
 
 ![A seagull gliding over the open sea, steered by no one](/images/blog/2026-07-05/middle.webp)
 
@@ -74,13 +92,13 @@ Governments let go of most prices. They almost never let go of one: money.
 
 Money is a price too. The price of everything else. When a government prints more of it, your savings quietly buy less, and you never voted for that. A tax that doesn't look like a tax.
 
-This is why some people want [money nobody can print](/blog/bitcoin-fundamentals/). If free prices coordinate strangers better than any planner, why should the most important price, [the price of money itself](/blog/programmable-money/), be the exception?
+This is why I got interested in [money nobody can print](/blog/bitcoin-fundamentals/). If free prices coordinate strangers better than any planner, why should the most important price, [the price of money itself](/blog/programmable-money/), be the exception?
 
-> The freest market is the one for money itself.
+> They freed the price of bread. They kept the price of money.
 
 ## The default is freedom
 
-Notice the burden of proof most of us carry. We assume freedom needs a reason, and control is the safe default. Prove this should be allowed.
+Notice the burden of proof most of us carry. We assume freedom needs a reason, and control is the safe default. _"Prove this should be allowed."_
 
 Turn it around. Freedom is the baseline. Every rule, every ban, every intervention is what has to earn its place. Not because the market is perfect. It isn't. Markets fail, people get hurt, and some problems need a shared answer. But whoever wants to override millions of free choices should be the one who explains why. Every time.
 
