@@ -195,7 +195,7 @@
                         {% set thumb_fb = resize_image(path=thumb_path, width=800, height=450, op="fill", quality=80) %}
                         <picture>
                             <source type="image/webp" srcset="{{ thumb_webp.url }}" />
-                            <img src="{{ thumb_fb.url }}" alt="{{ featured.title }}" width="{{ thumb_fb.width }}" height="{{ thumb_fb.height }}" loading="lazy" decoding="async" />
+                            <img src="{{ thumb_fb.url }}" alt="{{ featured.title }}" width="{{ thumb_fb.width }}" height="{{ thumb_fb.height }}" loading="eager" fetchpriority="high" decoding="async" />
                         </picture>
                     {% endif %}
                 </div>
