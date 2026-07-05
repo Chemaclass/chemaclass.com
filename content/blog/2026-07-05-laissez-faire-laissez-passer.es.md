@@ -6,7 +6,7 @@ draft = false
 tags = [ "economics", "philosophy", "freedom", "bitcoin" ]
 [extra]
 reading_time = 4
-subtitle = "La carga de la prueba es del control"
+subtitle = "El mercado sabe lo que nadie puede saber"
 static_thumbnail = "/images/blog/2026-07-05/cover.webp"
 related_posts = [
   "blog/2025-11-21-bitcoin-fundamentals.md",

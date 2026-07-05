@@ -6,7 +6,7 @@ draft = false
 tags = [ "economics", "philosophy", "freedom", "bitcoin" ]
 [extra]
 reading_time = 4
-subtitle = "The burden of proof belongs to control"
+subtitle = "The market knows what no one person can"
 static_thumbnail = "/images/blog/2026-07-05/cover.webp"
 related_posts = [
   "blog/2025-11-21-bitcoin-fundamentals.md",
