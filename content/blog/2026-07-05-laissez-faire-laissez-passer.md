@@ -94,7 +94,7 @@ Governments let go of most prices. They almost never let go of one: money.
 
 Money is a price too. The price of everything else. When a government prints too much of it, your savings quietly buy less, and you never voted for that. A tax that doesn't look like a tax.
 
-This is why I got interested in [money nobody can print](/blog/bitcoin-fundamentals/). If free prices coordinate strangers better than any planner, why should the most important price, [the price of money itself](/blog/programmable-money/), be the exception?
+This is why I got interested in [money nobody can print](/blog/bitcoin-fundamentals/). If free prices coordinate strangers better than any planner, why should the most important price, the price of money itself, be the exception?
 
 > They freed the price of bread. They kept the price of money.
 
