@@ -94,7 +94,7 @@ Los gobiernos soltaron casi todos los precios. Casi nunca soltaron uno: el diner
 
 El dinero también es un precio. El precio de todo lo demás. Cuando un gobierno imprime demasiado, tus ahorros compran menos sin hacer ruido, y tú nunca votaste eso. Un impuesto que no parece un impuesto.
 
-Por eso empecé a interesarme por el [dinero que nadie puede imprimir](/es/blog/bitcoin-fundamentals/). Si los precios libres coordinan a desconocidos mejor que cualquier planificador, ¿por qué el precio más importante, [el del propio dinero](/es/blog/programmable-money/), tendría que ser la excepción?
+Por eso empecé a interesarme por el [dinero que nadie puede imprimir](/es/blog/bitcoin-fundamentals/). Si los precios libres coordinan a desconocidos mejor que cualquier planificador, ¿por qué el precio más importante, el del propio dinero, tendría que ser la excepción?
 
 > Liberaron el precio del pan. Se quedaron con el precio del dinero.
 
