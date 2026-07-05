@@ -66,6 +66,28 @@
 
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
 
+  {# Distinct years in date order (section is sorted desc), matching the year headers below #}
+  {% set_global seen_years = [] %}
+  {% for post in section.pages %}
+    {% if post not in pinned_posts %}
+      {% set post_year = post.date | date(format="%Y") %}
+      {% if post_year not in seen_years %}
+        {% set_global seen_years = seen_years | concat(with=post_year) %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% if seen_years | length > 1 %}
+  <nav class="year-nav" aria-label="{{ trans(key='jump_to_year', lang=lang) }}">
+    <span class="year-nav__label">{{ trans(key="jump_to_year", lang=lang) }}</span>
+    <ul class="year-nav__list">
+      {% for year in seen_years %}
+        <li><a class="year-nav__link" href="#year-{{ year }}">{{ year }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+  {% endif %}
+
   <div class="blog-list blog-list--featured">
     {% for post in pinned_posts %}
       {{ helpers::content_card(post=post, pinned=true, lang=lang) }}
@@ -79,7 +101,7 @@
         {% set post_year = post.date | date(format="%Y") %}
         {% if post_year != current_year %}
           {% set_global current_year = post_year %}
-          <h3 class="blog-year-header">{{ post_year }}</h3>
+          <h3 class="blog-year-header" id="year-{{ post_year }}">{{ post_year }}</h3>
         {% endif %}
         {% if not featured_shown %}
           {{ helpers::content_card(post=post, featured=true, lang=lang) }}

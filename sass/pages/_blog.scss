@@ -159,9 +159,53 @@
   margin: 1.5rem 0 0.5rem;
   padding-bottom: 0.35rem;
   border-bottom: 2px solid var(--preview-divider-color);
+  // Offset anchor jumps so the year heading isn't flush against the viewport top
+  scroll-margin-top: 1.5rem;
 
   &.hidden {
     display: none;
+  }
+}
+
+// Year quick-jump nav on the blog index
+.year-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin: 1rem 0 1.5rem;
+
+  &__label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-subtitle);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+    border: 1px solid var(--preview-divider-color);
+    border-radius: 999px;
+    color: var(--color-subtitle);
+    text-decoration: none;
+    transition: color 0.15s ease, border-color 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
   }
 }
 

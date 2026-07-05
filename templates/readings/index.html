@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% import "partials/helpers-preview.html" as helpers %}
+{% import "partials/pagination.html" as pagination %}
 
 {% block title %}
   {{ trans(key="readings_title", lang=lang) }} | Chemaclass
@@ -50,16 +51,21 @@
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
 
   <div class="blog-list">
-    {% for post in pinned_posts %}
-      {{ helpers::content_card(post=post, pinned=true, lang=lang) }}
-    {% endfor %}
+    {# Pinned items belong to the whole collection, so only surface them on page 1 #}
+    {% if paginator.current_index == 1 %}
+      {% for post in pinned_posts %}
+        {{ helpers::content_card(post=post, pinned=true, lang=lang) }}
+      {% endfor %}
+    {% endif %}
 
-    {% for post in section.pages %}
+    {% for post in paginator.pages %}
       {% if post not in pinned_posts %}
         {{ helpers::content_card(post=post, lang=lang) }}
       {% endif %}
     {% endfor %}
   </div>
+
+  {{ pagination::nav(paginator=paginator, lang=lang) }}
   </div>
 
 

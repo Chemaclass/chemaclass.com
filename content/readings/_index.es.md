@@ -4,6 +4,7 @@ description = "Resúmenes de libros y notas sobre artesanía del software, psico
 template = "readings/index.html"
 page_template = "readings/post.html"
 sort_by = "date"
+paginate_by = 20
 +++
 
 # Lecturas
