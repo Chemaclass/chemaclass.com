@@ -15,6 +15,8 @@ En esta sesión de live coding exploramos desarrollo test-first y técnicas de r
 
 ---
 
+- 2026-10-26 | International JavaScript Conference [**Múnich, Alemania**] (EN)
+  - [Full-day Workshop: Modernizing Legacy Code with Pair Programming](https://javascript-conference.com/munich/program-munich/)
 - 2026-06-08 | International PHP Conference [**Berlín, Alemania**] (EN)
   - [Full-day Workshop: Modernizing Legacy PHP with Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
 - 2025-10-27 | International PHP Conference [**Múnich, Alemania**] (EN)
