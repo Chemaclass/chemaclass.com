@@ -8,6 +8,15 @@ sort_by = "weight"
 
 ## 2026
 
+### Octubre
+
+- 2026-10-27 | International PHP Conference [**Múnich, Alemania**] (EN)
+  - [Ejecutando DOOM en PHP con Phel](https://phpconference.com/php-core-coding/running-doom-php-phel/) [[slides](/slides/phel-doom/)]
+    *Ejecutando el clásico DOOM en PHP a través de Phel: una muestra divertida de hasta dónde puede llegar un Lisp que compila a PHP.*
+- 2026-10-26 | International JavaScript Conference [**Múnich, Alemania**] (EN)
+  - [Taller de día completo: Modernizando Código Legacy con Pair Programming](https://javascript-conference.com/munich/program-munich/)
+    *Sesión práctica de día completo trabajando con código legacy real, aplicando TDD, patrones de refactoring y pair programming colaborativo.*
+
 ### Junio
 
 - 2026-06-09 | International PHP Conference [**Berlín, Alemania**] (EN)

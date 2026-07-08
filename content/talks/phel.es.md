@@ -15,6 +15,8 @@ En esta charla explico los fundamentos de Phel y hago una demo de live coding mo
 
 ---
 
+- 2026-10-27 | International PHP Conference [**Múnich, Alemania**] (EN)
+  - [Running DOOM in PHP with Phel](https://phpconference.com/php-core-coding/running-doom-php-phel/) [[slides](/slides/phel-doom/)]
 - 2026-06-09 | International PHP Conference [**Berlín, Alemania**] (EN)
   - [Writing Lisp in PHP: A Journey with Phel](https://phpconference.com/php-core-coding/lisp-in-php-phel/) [[slides](/slides/phel-doom/)]
 - 2025-10-27 | International PHP Conference [**Múnich, Alemania**] (EN)
