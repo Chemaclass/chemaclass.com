@@ -2,7 +2,7 @@
 title = "Phel: The Lisp That Compiles to PHP"
 description = "The new Functional Programming language build-in for PHP."
 [taxonomies]
-tags = [ "php", "open-source", "software-design" ]
+tags = [ "phel", "php", "open-source", "software-design" ]
 [extra]
 subtitle = "A new functional language with full interoperability with PHP"
 static_thumbnail = "/images/blog/2021-02-01/cover.jpg"
