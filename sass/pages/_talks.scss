@@ -358,15 +358,33 @@
     }
   }
 
-  // Description card (abstract)
+  // Abstract card: site's clean bordered surface + a watermark quote glyph,
+  // instead of an accent left-bar (that bar reads too templated).
   &__description {
-    background: var(--search-input-bg);
-    border-radius: 12px;
-    padding: 1.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    background: var(--table-bg-even);
+    border: 1px solid var(--preview-divider-color);
+    border-radius: 14px;
+    padding: 2rem 2.25rem;
     margin-bottom: 2rem;
-    border-left: 4px solid var(--accent-color);
+    box-shadow: var(--shadow-sm);
+
+    &::before {
+      content: "\201C";
+      position: absolute;
+      top: -0.85rem;
+      left: 0.9rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 6rem;
+      line-height: 1;
+      color: var(--accent-color);
+      opacity: 0.12;
+      pointer-events: none;
+    }
 
     p {
+      position: relative;
       margin: 0;
       font-size: 1.05rem;
       line-height: 1.75;
