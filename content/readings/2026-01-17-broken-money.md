@@ -54,3 +54,5 @@ Her analysis is grounded in engineering principles: What are Bitcoin's actual pr
 "Broken Money" stands out because it doesn't assume you already agree with the premise. Alden methodically builds the case that something is wrong with how money works today, traces the historical roots of these problems, and then evaluates potential solutions.
 
 Whether you end up convinced by her conclusions or not, you'll come away with a much deeper understanding of monetary systems and why they matter.
+
+You use money every day. Learn how it actually works.
