@@ -72,7 +72,7 @@ style: |
   section.lead blockquote { color: #e2e8f0; border-left-color: #c4b5fd; }
   section.lead blockquote::before { color: #c4b5fd; }
   .small { font-size: 21px; color: #64748b; margin-top: 4px; }
-  .reflex { color: #0f766e; font-size: 20px; line-height: 1.4; margin-top: 6px; }
+  .reflex { color: #0f766e; font-size: 20px; line-height: 1.4; margin-top: 6px; display: block; text-wrap: balance; }
   .wf-step { font-size: 24px; }
   .chip { font-size: 15px; display: inline-block; background: #ede9fe; color: #512da8; border-radius: 999px; padding: 2px 10px; font-weight: 600; }
   /* Two-column split: full-width header above, text-left + image-right below */
@@ -173,7 +173,7 @@ Written in a **Lisp**. That compiles to **PHP 8.4**.
 composer require phel-lang/phel-lang
 ```
 
-<span class="reflex aud-php">🧠 "New language = new runtime + new hires"? No. It's a Composer package.</span><span class="reflex aud-ts">🧠 "New language = new runtime + new hires"? No. It installs like any dependency, into a PHP stack.</span>
+<span class="reflex aud-php">🧠 "New language = new runtime + new hires"? No. It's a Composer package.</span><span class="reflex aud-ts">🧠 "New language = new runtime + new hires"? No.<br>It installs like any dependency, into a PHP stack.</span>
 
 ---
 
@@ -446,7 +446,7 @@ Load any namespace. Probe any function. No rebuild, no restart.
     :commands [play-command]}))
 
 (when-not *build-mode*            ; skip side-effects during phel build
-  (php/exit (cli/run app (cli/argv argv))))
+  (php/exit (cli/run app (cli/argv *argv*))))
 ```
 
 <span class="small">src/main.phel: the bootstrap (version wiring trimmed)</span>
