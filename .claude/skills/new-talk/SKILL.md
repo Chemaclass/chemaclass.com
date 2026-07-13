@@ -1,7 +1,7 @@
 ---
-description: "Create a new talk page (EN + ES) and optionally scaffold a Marp slide deck"
+name: new-talk
+description: "Create a new talk page (EN + ES) and optionally scaffold a Marp slide deck. Argument: <talk-title> [--deck]"
 allowed-tools: Read, Write, Glob, Grep, Bash(scripts/build-slides.sh *), Bash(mkdir *)
-argument-hint: "<talk-title> [--deck]"
 ---
 
 # Create New Talk
@@ -23,4 +23,4 @@ argument-hint: "<talk-title> [--deck]"
 6. Update the talks index `content/talks/_index.md` (+ `.es.md`): it is a manual log grouped `## YYYY` then `### Month`, newest first; every entry needs the event bullet, its link sub-bullet, and a one-line italic description (see `references/talks.md`)
 
 ## Talk
-$ARGUMENTS
+The talk title (and optional `--deck` flag) is provided with this skill call.

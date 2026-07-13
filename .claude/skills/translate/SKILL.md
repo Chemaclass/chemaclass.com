@@ -1,7 +1,7 @@
 ---
-description: "Translate content between English and Spanish"
+name: translate
+description: "Translate content between English and Spanish. Argument: <file-path>"
 allowed-tools: Read, Write, Glob
-argument-hint: "<file-path>"
 ---
 
 # Translate Content
@@ -18,4 +18,4 @@ argument-hint: "<file-path>"
 6. Preserve all links, images, and code blocks unchanged
 
 ## File to translate
-$ARGUMENTS
+The file path to translate is provided with this skill call.
