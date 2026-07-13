@@ -41,7 +41,7 @@ The site supports English (default) and Spanish:
 
 ## Blog Writing
 
-Tone and style: follow `.claude/blog-writing-style.md` (local, gitignored) for all posts, readings, translations, and edits.
+Tone and style: use the `writing-style` skill (`.claude/skills/writing-style/`) for all posts, readings, talks, translations, and edits. Core voice is in `SKILL.md`; load only the matching reference: `references/blog-posts.md`, `references/readings.md`, or `references/spanish.md`.
 
 ### Blog post structure
 
