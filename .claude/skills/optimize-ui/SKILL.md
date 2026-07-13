@@ -1,5 +1,6 @@
 ---
-description: "Analyze and improve visual design using the site's design system"
+name: optimize-ui
+description: "Analyze and improve visual design using the site's design system (SCSS tokens, shadows, easing). Use for any UI, styling, or design work on templates or sass files."
 allowed-tools: Read, Edit, Write, Glob, Grep, Bash(zola build)
 argument-hint: "[component or page]"
 ---
@@ -26,12 +27,12 @@ The user provides a target: a specific component, page, or area to optimize (e.g
 
 ## Design System Reference
 
-See [reference.md](optimize-ui/reference.md) for the full design system (tokens, breakpoints, patterns).
+See [reference.md](reference.md) for the full design system (tokens, breakpoints, patterns).
 
 ## Workflow
 
 1. **Read** the target SCSS file(s) and related template(s)
-2. **Read** [reference.md](optimize-ui/reference.md) for design tokens
+2. **Read** [reference.md](reference.md) for design tokens
 3. **Identify** issues: inconsistent tokens, hardcoded values, missing hover states, accessibility gaps, visual imbalance
 4. **Apply** fixes using the design system tokens - never introduce new hardcoded colors/shadows
 5. **Verify** with `zola build` - must compile without errors

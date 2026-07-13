@@ -1,5 +1,6 @@
 ---
-description: "Find content files missing their Spanish translation"
+name: check-translations
+description: "Find content files missing their Spanish (.es.md) translation. Use when asked about translation coverage or after adding new English content."
 allowed-tools: Glob, Read, Grep
 argument-hint: "[blog|readings|talks]"
 ---

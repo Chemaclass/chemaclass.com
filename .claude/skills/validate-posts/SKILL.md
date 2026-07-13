@@ -1,5 +1,6 @@
 ---
-description: "Lint blog posts for missing front matter, broken links, and structure issues"
+name: validate-posts
+description: "Lint blog posts for missing front matter, broken asset references, structure issues, and forbidden dashes. Use before publishing a post, before flipping draft to false, or after substantial edits to existing content."
 allowed-tools: Glob, Read, Grep
 argument-hint: "[file-path or date]"
 ---

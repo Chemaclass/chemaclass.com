@@ -8,7 +8,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "jq -e '.tool_input.command | test(\"^git commit\")' > /dev/null 2>&1 && cd /Users/chema/Code/Chemaclass/chemaclass.com && zola check 2>&1 | tail -5 || true"
+            "command": "jq -e '.tool_input.command | test(\"^(rtk )?git commit\")' > /dev/null 2>&1 || exit 0; out=$(cd /Users/chema/Code/Chemaclass/chemaclass.com && zola build --output-dir /tmp/zola-precommit-gate --force 2>&1) || { printf '%s\\n' \"$out\" | tail -5 >&2; echo 'zola build failed; fix errors before committing' >&2; exit 2; }"
+          },
+          {
+            "type": "command",
+            "command": "cmd=$(jq -r '.tool_input.command // empty'); case \"$cmd\" in git\\ commit*|rtk\\ git\\ commit*|gh\\ pr*|rtk\\ gh\\ pr*) if printf '%s' \"$cmd\" | grep -q '—'; then echo 'Em dash (U+2014) is forbidden in commit/PR text (see .claude/rules/no-em-dash.md)' >&2; exit 2; fi ;; esac; exit 0"
           }
         ]
       }
@@ -19,13 +23,32 @@
         "hooks": [
           {
             "type": "command",
-            "command": "f=$(jq -r '.tool_input.file_path // empty'); case \"$f\" in */content/*.md|*/static/slides/*.md) if grep -n '—' \"$f\" >&2; then echo \"Em dash (U+2014) is forbidden; replace it (see .claude/rules/no-em-dash.md)\" >&2; exit 2; fi ;; esac; exit 0"
+            "command": "f=$(jq -r '.tool_input.file_path // empty'); case \"$f\" in */content/*.md|*/static/slides/*.md) if grep -n '[—–]' \"$f\" >&2; then echo \"Em dash (U+2014) and en dash (U+2013) are forbidden; replace them (see .claude/rules/no-em-dash.md)\" >&2; exit 2; fi ;; esac; exit 0"
           }
         ]
       }
     ]
   },
   "permissions": {
+    "allow": [
+      "Bash(zola build:*)",
+      "Bash(zola check:*)",
+      "Bash(zola serve:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git add:*)",
+      "Bash(rtk git status:*)",
+      "Bash(rtk git diff:*)",
+      "Bash(rtk git log:*)",
+      "Bash(rtk git show:*)",
+      "Bash(scripts/build-slides.sh:*)",
+      "Bash(bash scripts/build-slides.sh:*)",
+      "Bash(scripts/optimize-image.sh:*)",
+      "Bash(bash scripts/optimize-image.sh:*)",
+      "WebFetch(domain:chemaclass.com)"
+    ],
     "deny": [
       "Bash(git push --force:*)",
       "Bash(git push -f:*)",
