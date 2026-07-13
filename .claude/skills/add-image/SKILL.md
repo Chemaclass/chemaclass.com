@@ -1,7 +1,7 @@
 ---
 name: add-image
 description: "Add an image to a blog post (cover, middle, or footer). Arguments: <image-path> [post-date] [cover|middle|footer]"
-allowed-tools: Read, Write, Edit, Glob, Bash(cp *), Bash(rm *), Bash(mkdir *), Bash(zola build)
+allowed-tools: Read, Write, Edit, Glob, Bash(bash scripts/optimize-image.sh:*), Bash(scripts/optimize-image.sh:*), Bash(rm *), Bash(mkdir *), Bash(zola build)
 ---
 
 # Add Image to Blog Post
