@@ -6,7 +6,7 @@ draft = true
 tags = [ "ai", "software", "leadership" ]
 [extra]
 subtitle = "Cuando te conviertes en la parte más lenta del sistema"
-static_thumbnail = "/images/blog/2026-07-11/cover.webp"
+static_thumbnail = "/images/blog/2026-08-01/cover.webp"
 series = "ai"
 series_order = 9
 related_posts = [
@@ -99,4 +99,4 @@ La pregunta no es _"¿cómo reviso más rápido?"_ Es _"¿dónde importa de verd
 
 Los agentes no crearon este cuello de botella. Lo hicieron imposible de ignorar.
 
-![blog-footer](/images/blog/2026-07-11/footer.webp)
+![blog-footer](/images/blog/2026-08-01/footer.webp)

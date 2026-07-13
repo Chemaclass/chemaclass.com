@@ -6,7 +6,7 @@ draft = true
 tags = [ "ai", "engineering", "mindset" ]
 [extra]
 subtitle = "Randomness is the cost of creativity"
-static_thumbnail = "/images/blog/2026-08-01/cover.webp"
+static_thumbnail = "/images/blog/2026-09-01/cover.webp"
 series = "ai"
 series_order = 10
 related_posts = [
@@ -70,4 +70,4 @@ A function has one output per input. A collaborator gives me a different draft e
 
 Embrace variance where it helps. Constrain it where it hurts. That's the whole game.
 
-![blog-footer](/images/blog/2026-08-01/footer.webp)
+![blog-footer](/images/blog/2026-09-01/footer.webp)

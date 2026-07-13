@@ -6,7 +6,7 @@ draft = true
 tags = [ "ai", "engineering", "mindset" ]
 [extra]
 subtitle = "La aleatoriedad es el precio de la creatividad"
-static_thumbnail = "/images/blog/2026-08-01/cover.webp"
+static_thumbnail = "/images/blog/2026-09-01/cover.webp"
 series = "ai"
 series_order = 10
 related_posts = [
@@ -70,4 +70,4 @@ Una función da una salida por entrada. Un colaborador me da un borrador distint
 
 Abraza la varianza donde ayuda. Acótala donde estorba. Ese es el juego entero.
 
-![blog-footer](/images/blog/2026-08-01/footer.webp)
+![blog-footer](/images/blog/2026-09-01/footer.webp)
