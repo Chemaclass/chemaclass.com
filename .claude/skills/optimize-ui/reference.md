@@ -15,8 +15,8 @@ sass/
   layouts/_taxonomy.scss       # Tag/category pages
   components/                  # Reusable UI modules (buttons, tables, dialog, etc.)
   pages/                       # Page-specific styles (homepage, blog, readings, etc.)
-  themes/_light.scss           # Light theme overrides
-  themes/_dark.scss            # Dark theme overrides
+  themes/_light.scss           # Component-level light overrides
+  themes/_dark.scss            # Component-level dark overrides (dark color tokens live in abstracts/_variables.scss .theme-dark)
   utils/_responsive.scss       # Responsive utilities
 ```
 
@@ -43,7 +43,7 @@ sass/
 --shadow-lg: 0 4px 12px rgba(0,0,0,0.08), 0 8px 28px rgba(0,0,0,0.06);
 ```
 
-Dark mode shadows use higher opacity (0.2-0.3 range).
+Dark mode shadows use higher opacity (0.15-0.3 range).
 
 ## Easing
 
@@ -92,7 +92,7 @@ transition: transform 0.3s var(--ease-out-expo),
             border-color 0.2s ease;
 
 &:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
   border-color: var(--accent-color);
 }

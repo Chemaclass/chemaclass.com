@@ -9,7 +9,7 @@ allowed-tools: Read, Write, Glob
 ## Instructions
 
 1. Read the source file
-2. Read `.claude/skills/writing-style/SKILL.md` and `.claude/skills/writing-style/references/spanish.md` (if present) and apply their rules
+2. Read `.claude/skills/writing-style/SKILL.md` and `.claude/skills/writing-style/references/spanish.md` and apply their rules
 3. Create a colocated `.es.md` file (or `.md` if translating from Spanish)
 4. Translate all content:
    - Front matter (title, description, subtitle)

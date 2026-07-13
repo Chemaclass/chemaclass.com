@@ -21,14 +21,12 @@ Convert heavy source images (phone JPGs, PNGs) into web-ready `.webp`: downscale
 
 ## Steps
 
-1. Resolve inputs from `$ARGUMENTS` (paths, optional `--slot`, `--width`, `--quality`). Expand a directory with Glob.
-2. Pick the width per file: `--width` if given, else the slot width, else `1600`.
-3. Run `bash scripts/optimize-image.sh <src> [dest] --width N --quality 80` for each file.
+1. Resolve inputs from the skill arguments (paths, optional `--slot`, `--width`, `--quality`). Expand a directory with Glob.
+2. Pick width and quality per file: `--width`/`--quality` if given, else the slot values (blog slots use quality `85`), else the defaults (width `1600`, quality `80`).
+3. Run `bash scripts/optimize-image.sh <src> [dest] --width N --quality Q` for each file.
 4. Print the before/after table (values come from the script's output lines).
 
 ## Notes
 
 - Requires `cwebp`/`webpinfo` (`brew install webp`).
 - Blog images live at `static/images/blog/YYYY-MM-DD/{cover,middle,footer}.webp`. Keep source originals out of the repo (e.g. under gitignored `local/imgs/`).
-
-$ARGUMENTS
