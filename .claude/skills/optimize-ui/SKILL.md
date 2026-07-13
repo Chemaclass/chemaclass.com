@@ -7,7 +7,7 @@ argument-hint: "[component or page]"
 
 # Optimize UI
 
-Analyze and improve the visual design of chemaclass.com components, pages, or the overall design system. This skill knows the site's SCSS architecture, design tokens, and aesthetic direction.
+Analyze and improve the visual design of chemaclass.com components, pages, or the overall design system.
 
 ## Arguments
 
@@ -36,7 +36,6 @@ See [reference.md](reference.md) for the full design system (tokens, breakpoints
 3. **Identify** issues: inconsistent tokens, hardcoded values, missing hover states, accessibility gaps, visual imbalance
 4. **Apply** fixes using the design system tokens - never introduce new hardcoded colors/shadows
 5. **Verify** with `zola build` - must compile without errors
-6. **Summarize** changes concisely
 
 ## Rules
 
@@ -44,7 +43,6 @@ See [reference.md](reference.md) for the full design system (tokens, breakpoints
 - Always use `--shadow-sm/md/lg` - never write ad-hoc `box-shadow` values
 - Always use `--ease-out-expo` for card/lift transitions
 - Always use `var(--preview-divider-color)` for borders, never hardcoded grays
-- Maintain both light and dark mode - test changes mentally against both
+- Maintain both light and dark mode - test changes against both
 - Respect `prefers-reduced-motion` (already set globally)
 - Keep changes minimal and targeted - don't refactor what isn't broken
-- Run `zola build` after changes to verify compilation

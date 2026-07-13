@@ -6,8 +6,6 @@ argument-hint: "<talk-title> [--deck]"
 
 # Create New Talk
 
-Create a talk page in `content/talks/` with its Spanish counterpart, and optionally a Marp deck under `static/slides/`.
-
 ## Instructions
 
 1. Read an existing talk (e.g. `content/talks/bashunit.md`) as the structural reference

@@ -6,8 +6,6 @@ argument-hint: "<topic>"
 
 # Create New Blog Post
 
-Create a new blog post using the project template and writing style guide.
-
 ## Instructions
 
 1. Read the template at `.claude/templates/blog-post.md`
@@ -15,7 +13,7 @@ Create a new blog post using the project template and writing style guide.
 3. Create the file at `content/blog/YYYY-MM-DD-slug.md` using today's date
 4. Replace template placeholders with actual content based on the topic
 5. Fill the front matter: title, description, tags (reuse existing tags), subtitle
-6. Set `static_thumbnail` to `/images/blog/YYYY-MM-DD/cover.jpg` with today's date
+6. Set `static_thumbnail` to `/images/blog/YYYY-MM-DD/cover.webp` with today's date
 7. Check if the topic fits an existing series (see `[extra.series]` in `config.toml`); if so, add `series` and `series_order` to `[extra]`
 8. Add `<!-- more -->` marker after the introduction
 9. Limit h2 headings to 5-7, never skip heading levels

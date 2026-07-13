@@ -6,8 +6,6 @@ argument-hint: "<book-title> by <author>"
 
 # Create New Reading
 
-Create a new reading note using the project template and writing style guide.
-
 ## Instructions
 
 1. Read the template at `.claude/templates/reading.md`

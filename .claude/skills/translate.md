@@ -6,8 +6,6 @@ argument-hint: "<file-path>"
 
 # Translate Content
 
-Translate the specified content file to Spanish (or from Spanish to English).
-
 ## Instructions
 
 1. Read the source file

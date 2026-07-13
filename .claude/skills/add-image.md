@@ -6,8 +6,6 @@ argument-hint: "<image-path> [post-date] [cover|middle|footer]"
 
 # Add Image to Blog Post
 
-Move an image to the correct location and insert it into a blog post.
-
 ## Instructions
 
 1. Parse the arguments: `<image-path> [post-slug-or-date] [placement]`
@@ -32,12 +30,6 @@ Move an image to the correct location and insert it into a blog post.
    - **footer**: insert `![descriptive alt](/images/blog/YYYY-MM-DD/footer.webp)` as the last content line
 
 5. Verify the image path resolves correctly with `zola build`
-
-## Image naming convention
-
-- `cover.jpg`: hero/thumbnail at the top (referenced in front matter)
-- `middle.jpg`: inline image within the content body
-- `footer.jpg`: image before the Related section at the end
 
 ## Arguments
 $ARGUMENTS
