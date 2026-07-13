@@ -5,8 +5,6 @@ allowed-tools: Bash(zola *)
 
 # Check Internal Links
 
-Run `zola check` from the project root to verify all internal links are valid.
-
 ```bash
 zola check
 ```

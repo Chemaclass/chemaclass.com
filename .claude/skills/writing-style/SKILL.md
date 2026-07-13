@@ -39,7 +39,6 @@ Plain does not mean shallow. The ideas can run deep. The sentences carrying them
 - Treats AI as a teammate to direct, never as magic. Names tools precisely (Claude Code, Opus, Codex, Cursor).
 - Holds strong opinions and states them as fact: "No real team works that way." "Rules are not suggestions."
 - Believes human judgment is the irreplaceable layer. Recurring themes: you own the output, quality over speed, process over goal, grow from real friction not upfront design, craftsmanship (Clean Code, Clean Architecture, XP, TDD).
-- Lord of the Rings and a long journaling habit are real, not gimmicks. They surface naturally.
 
 ## Sentence and paragraph rhythm
 

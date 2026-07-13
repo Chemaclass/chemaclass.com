@@ -7,7 +7,7 @@ argument-hint: "<image-path...> [--slot cover|middle|footer] [--width N] [--qual
 
 # Optimize Images
 
-Convert heavy source images (phone JPGs, PNGs) into web-ready `.webp`: downscale to a sane width and compress. This runs by default whenever images are added to the site, so nothing heavy ever ships.
+Convert heavy source images (phone JPGs, PNGs) into web-ready `.webp`: downscale to a sane width and compress.
 
 ## Rules
 
