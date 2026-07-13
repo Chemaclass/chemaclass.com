@@ -1,7 +1,7 @@
 ---
-description: "Add an image to a blog post (cover, middle, or footer)"
+name: add-image
+description: "Add an image to a blog post (cover, middle, or footer). Arguments: <image-path> [post-date] [cover|middle|footer]"
 allowed-tools: Read, Write, Edit, Glob, Bash(cp *), Bash(rm *), Bash(mkdir *), Bash(zola build)
-argument-hint: "<image-path> [post-date] [cover|middle|footer]"
 ---
 
 # Add Image to Blog Post
@@ -32,4 +32,4 @@ argument-hint: "<image-path> [post-date] [cover|middle|footer]"
 5. Verify the image path resolves correctly with `zola build`
 
 ## Arguments
-$ARGUMENTS
+The invocation arguments (`<image-path> [post-date] [cover|middle|footer]`) are provided with this skill call.

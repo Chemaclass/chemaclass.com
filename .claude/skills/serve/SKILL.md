@@ -1,4 +1,5 @@
 ---
+name: serve
 description: "Start the Zola dev server for local preview"
 allowed-tools: Bash(zola *)
 ---

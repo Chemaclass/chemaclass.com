@@ -1,7 +1,7 @@
 ---
-description: "Create a new reading note from the project template"
+name: new-reading
+description: "Create a new reading note from the project template. Argument: <book-title> by <author>"
 allowed-tools: Read, Write, Glob
-argument-hint: "<book-title> by <author>"
 ---
 
 # Create New Reading
@@ -19,4 +19,4 @@ argument-hint: "<book-title> by <author>"
 9. Set `draft = true`
 
 ## Book
-$ARGUMENTS
+The book title and author are provided with this skill call.

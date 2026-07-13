@@ -1,4 +1,5 @@
 ---
+name: build
 description: "Build the Zola static site and report errors"
 allowed-tools: Bash(zola *)
 ---

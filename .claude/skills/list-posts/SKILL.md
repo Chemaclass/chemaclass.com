@@ -1,7 +1,7 @@
 ---
-description: "List blog posts with title, date, tags, and draft status"
+name: list-posts
+description: "List blog posts with title, date, tags, and draft status. Optional argument: [tag or year] to filter"
 allowed-tools: Glob, Read, Grep
-argument-hint: "[tag or year]"
 ---
 
 # List Blog Posts
@@ -14,4 +14,4 @@ List all blog posts in `content/blog/` (excluding `.es.md` files), most recent f
 - Draft status
 
 ## Filter (optional: tag or year)
-$ARGUMENTS
+If a tag or year is provided with this skill call, filter the list by it.
