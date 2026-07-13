@@ -45,14 +45,7 @@ Tone and style: use the `writing-style` skill (`.claude/skills/writing-style/`) 
 
 ### Blog post structure
 
-Files: `content/blog/YYYY-MM-DD-slug.md`. Front matter template: `.claude/templates/blog-post.md`.
-
-Required elements:
-- Front matter with title, description, tags, subtitle
-- `<!-- more -->` marker after the introduction (for excerpt)
-- Clear section headers (limit h2 to 5-7 per document, never skip levels)
-- `related_posts` in front matter (preferred) or a `## Related` section at the end
-- If a post uses `{% deep_dive %}` blocks, set `[extra] reading_time` (minutes) counting only words outside those blocks; templates prefer it over Zola's computed time
+Files: `content/blog/YYYY-MM-DD-slug.md`. Front matter template: `.claude/templates/blog-post.md`. Full structure rules, front matter fields, and pre-publish checklist: `.claude/skills/writing-style/references/blog-posts.md`.
 
 ### Series
 
@@ -74,19 +67,7 @@ To add a new series: add `[extra.series.<key>]` with `title` and `title_es` in `
 
 ## Skills Available
 
-- `/new-blog-post <topic>` - Create a new blog post (uses `.claude/templates/blog-post.md`)
-- `/new-reading <title> by <author>` - Create a new reading note (uses `.claude/templates/reading.md`)
-- `/new-talk <title> [--deck]` - Create a talk page (EN+ES), optionally scaffold a Marp deck
-- `/build` - Build the site
-- `/serve` - Start dev server
-- `/check-links` - Verify internal links
-- `/list-posts` - List blog posts with metadata
-- `/translate <file>` - Translate content EN↔ES
-- `/add-image <path> [post-date] [cover|middle|footer]` - Add image to blog post (optimizes to webp by default)
-- `/optimize-images <path...> [--slot ...] [--width N]` - Optimize images to web-ready webp, report before/after
-- `/optimize-ui [target]` - Analyze and improve visual design
-- `/check-translations [blog|readings|talks]` - Find content missing Spanish translations
-- `/validate-posts [file]` - Lint front matter, structure, and asset references
+Project skills live in `.claude/skills/` (one file or dir per skill, invoked as `/<name>`); see each skill's description for usage. Always optimize images via `/optimize-images` or `/add-image` before adding them to the site, and run `/validate-posts` before marking a post ready.
 
 ## Code Style
 

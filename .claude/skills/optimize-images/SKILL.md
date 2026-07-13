@@ -1,5 +1,6 @@
 ---
-description: "Optimize images to web-ready webp (downscale + compress) and report before/after"
+name: optimize-images
+description: "Optimize images to web-ready webp (downscale + compress) and report before/after sizes. Use whenever an image is added to the site or a raw photo/PNG/JPG shows up; never ship an unoptimized image."
 allowed-tools: Read, Glob, Bash(bash scripts/optimize-image.sh:*), Bash(scripts/optimize-image.sh:*), Bash(wc:*), Bash(webpinfo:*)
 argument-hint: "<image-path...> [--slot cover|middle|footer] [--width N] [--quality Q]"
 ---
