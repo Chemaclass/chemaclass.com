@@ -54,3 +54,5 @@ Su análisis tiene base ingenieril: ¿Cuáles son las propiedades reales de Bitc
 "Dinero roto" destaca porque no asume que ya compartes su premisa. Alden construye el caso paso a paso: algo falla en cómo funciona el dinero hoy. Traza las raíces históricas del problema y evalúa posibles soluciones.
 
 Aunque no termines convencido, saldrás entendiendo mucho mejor los sistemas monetarios y por qué importan.
+
+Usas dinero todos los días. Aprende cómo funciona de verdad.

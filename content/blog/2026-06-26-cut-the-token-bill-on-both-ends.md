@@ -9,6 +9,7 @@ subtitle = "Two leaks, two patches"
 static_thumbnail = "/images/blog/2026-06-26/cover.webp"
 series = "ai"
 series_order = 8
+reading_time = 4
 related_posts = [
   "blog/2026-05-19-skills-over-agents.md",
   "blog/2026-04-17-inside-the-claude-folder.md",

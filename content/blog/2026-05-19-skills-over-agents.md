@@ -9,6 +9,7 @@ subtitle = "Intelligence without expertise is entertainment"
 static_thumbnail = "/images/blog/2026-05-19/cover.jpg"
 series = "ai"
 series_order = 7
+reading_time = 4
 related_posts = [
   "blog/2026-04-17-inside-the-claude-folder.md",
   "blog/2026-02-07-build-your-own-team-of-agents.md",
