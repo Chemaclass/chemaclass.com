@@ -6,7 +6,7 @@ draft = true
 tags = [ "ai", "software", "leadership" ]
 [extra]
 subtitle = "When you become the slowest part of the system"
-static_thumbnail = "/images/blog/2026-07-11/cover.webp"
+static_thumbnail = "/images/blog/2026-08-01/cover.webp"
 series = "ai"
 series_order = 9
 related_posts = [
@@ -99,4 +99,4 @@ The question isn't _"how do I review faster?"_ It's _"where does my review actua
 
 Agents didn't create this bottleneck. They made it impossible to ignore.
 
-![blog-footer](/images/blog/2026-07-11/footer.webp)
+![blog-footer](/images/blog/2026-08-01/footer.webp)
