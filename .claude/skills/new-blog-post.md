@@ -11,7 +11,7 @@ Create a new blog post using the project template and writing style guide.
 ## Instructions
 
 1. Read the template at `.claude/templates/blog-post.md`
-2. Read `.claude/blog-writing-style.md` (if present) and apply it as the tone and style guide
+2. Read `.claude/skills/writing-style/SKILL.md` and `.claude/skills/writing-style/references/blog-posts.md` (if present) and apply them as the tone and style guide
 3. Create the file at `content/blog/YYYY-MM-DD-slug.md` using today's date
 4. Replace template placeholders with actual content based on the topic
 5. Fill the front matter: title, description, tags (reuse existing tags), subtitle
