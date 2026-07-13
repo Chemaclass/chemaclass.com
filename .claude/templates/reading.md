@@ -15,8 +15,6 @@ related_readings = [
 ]
 +++
 
-![cover](https://m.media-amazon.com/images/...)
-
 Intro
 
 <!-- more -->

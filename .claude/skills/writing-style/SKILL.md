@@ -13,6 +13,7 @@ Read only the reference that matches the task:
 
 - Blog post structure, front matter, pre-publish checklist: `references/blog-posts.md`
 - Reading notes (book summaries): `references/readings.md`
+- Talk pages and talks index: `references/talks.md`
 - Spanish translations (`.es.md`): `references/spanish.md`
 
 ## Voice in one line
@@ -53,7 +54,7 @@ Plain does not mean shallow. The ideas can run deep. The sentences carrying them
 
 ## Openings (before `<!-- more -->`)
 
-2 to 4 short paragraphs that end on a one-line pivot or thesis, then the cut. Two modes:
+1 to 4 short paragraphs, then the cut. The one-line pivot or thesis lands either at the end of the hook or as the first line right after `<!-- more -->`. Two modes:
 
 - **Mode A: scene/anecdote first.** Open on a concrete fact or scenario, not a thesis. "Nietzsche proposed a thought experiment..." / "Hidden inside Sauron's blog, there is a playable game."
 - **Mode B: claim, undercut, pivot.** Confident statement, an immediate "But..." reversal, a one-line redirect. The signature hinge is a one-line paragraph: **"But X isn't Y."** ("But understanding isn't the same as access.")
@@ -70,7 +71,7 @@ Always stamped, never trailing off. The last beat is one of:
 
 ## Pull-quotes (`>` blockquotes)
 
-- **Frequency:** about one per H2 section in didactic/technical posts, sometimes two. A pure narrative post can use zero (it uses bold inline labels instead). Match the register, do not force quotes into a story.
+- **Frequency:** one per 1-2 H2 sections in didactic/technical posts. Narrative posts vary from zero (bold inline labels carry the emphasis instead) to quote-heavy. Match the register, do not force a quote into every section.
 - **Length:** one sentence, occasionally two. Self-contained, tweetable.
 - **Three shapes, in order of frequency:**
   1. Two-way antithesis: "Skills capture what to do. Rules capture what not to do." / "The agent is replaceable. Your skills are not."

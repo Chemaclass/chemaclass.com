@@ -11,9 +11,9 @@ Create a talk page in `content/talks/` with its Spanish counterpart, and optiona
 ## Instructions
 
 1. Read an existing talk (e.g. `content/talks/bashunit.md`) as the structural reference
-2. Read `.claude/skills/writing-style/SKILL.md` (if present) for tone
+2. Read `.claude/skills/writing-style/SKILL.md` and `.claude/skills/writing-style/references/talks.md` (if present) for tone and talk-page conventions
 3. Create `content/talks/<slug>.md`:
-   - Front matter: `title`, `weight` (check existing talks; lower = listed first), `tags`, `[extra]` with `subtitle` and optional `project_url`
+   - Front matter: `title`, `weight` (check existing talks; lower = listed first), `[taxonomies]` with `tags`, optional `aliases`, `[extra]` with `subtitle` and optional `project_url`
    - One intro paragraph describing the talk
    - `<!-- more -->` marker, then `---`
    - Event list, most recent first, one bullet per delivery:
@@ -22,7 +22,7 @@ Create a talk page in `content/talks/` with its Spanish counterpart, and optiona
 5. If `--deck` is passed, scaffold the deck:
    - Create `static/slides/<slug>/deck.md` (Marp markdown, speaker notes in HTML comments) and `static/slides/<slug>/assets/`
    - Build it with `scripts/build-slides.sh <slug>` and commit the generated `index.html` alongside the source
-6. Update the talks index `content/talks/_index.md` (+ `.es.md`) if it lists talks or events manually
+6. Update the talks index `content/talks/_index.md` (+ `.es.md`): it is a manual log grouped `## YYYY` then `### Month`, newest first; every entry needs the event bullet, its link sub-bullet, and a one-line italic description (see `references/talks.md`)
 
 ## Talk
 $ARGUMENTS
