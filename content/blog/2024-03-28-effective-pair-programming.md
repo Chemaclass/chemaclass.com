@@ -98,4 +98,6 @@ or the stakes are high. Skip it when the work is trivial. The goal is never "alw
 stronger team**. Pick one real task this week, pair on it, and switch roles often. The benefits show up faster than you
 expect.
 
-> Thanks to my friend [Manu](https://x.com/evrtrabajo), who helped me with this post. We even share a [workshop](https://phpconference.com/agile-culture/practical-tdd-workshop/) on this topic.
+{% kudos() %}
+Thanks to my friend [Manu](https://x.com/evrtrabajo), who helped me with this post. We even share a [workshop](https://phpconference.com/agile-culture/practical-tdd-workshop/) on this topic.
+{% end %}

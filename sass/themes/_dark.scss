@@ -9,6 +9,15 @@
     background-color: var(--preview-divider-color);
   }
 
+  .kudos__content,
+  .kudos__content p {
+    color: var(--color-subtitle);
+  }
+
+  .kudos__content a {
+    color: var(--accent-color);
+  }
+
   a {
     color: var(--link-color);
   }

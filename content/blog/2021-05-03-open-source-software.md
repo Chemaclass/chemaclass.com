@@ -4,11 +4,13 @@ description = "A practical guide to open-source software: its benefits, how to s
 [taxonomies]
 tags = [ "open-source", "git", "career", "productivity" ]
 [extra]
-subtitle = "The power of contributing to OSS 🖥"
-static_thumbnail = "/images/blog/2021-05-03/cover.jpg"
+subtitle = "The power of contributing to OSS"
+static_thumbnail = "/images/blog/2021-05-03/cover.webp"
 related_posts = [
   "blog/2021-02-01-phel-first-release.md",
   "blog/2024-04-02-learning-concurrency-in-golang.md",
+  # TODO re-enable when garage-door post publishes
+  # "blog/2026-07-14-working-with-the-garage-door-open.md",
 ]
 related_readings = [
   "readings/2016-10-01-the-pragmatic-programmer.md",
@@ -16,8 +18,7 @@ related_readings = [
 ]
 +++
 
-
-What is Open-Source Software (OSS)? What are their benefits? How can you start contributing to any OSS? Pet projects? Knowledge sharing? Why all of these?
+What is Open-Source Software (OSS)? What are its benefits? How can you start contributing? Pet projects? Knowledge sharing? Why all of this?
 
 <!-- more -->
 
@@ -28,7 +29,7 @@ OSS shares similarities with free software, but it's not the same. Free software
 - [PHPUnit](https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE) is an example of OSS which is free.
 - [Spryker](https://github.com/spryker/spryker-core/blob/master/LICENSE) is an example of OSS which is not free.
 
-> OSS is basically software that is public, open to the world.
+> OSS is software that is public, open to the world.
 
 ## Benefits
 
@@ -58,7 +59,7 @@ OSS shares similarities with free software, but it's not the same. Free software
 
 ### Getting Started with GitHub
 
-Nowadays, it's really trivial to start contributing to OSS:
+Nowadays, it's easy to start contributing to OSS:
 - You can start your own project. A pet project fits here perfectly!
 - You can contribute to an existing OSS project.
 
@@ -102,10 +103,10 @@ A pet project is a playground to create software and train your professional ski
 
 ### Blog Posts
 
-- Pull Requests vs Pair Programming
-- The process itself is the goal
-- The art of refactoring; When, How, and Why
-- The art of testing: Where design meets quality
+- [Pull Requests vs Pair Programming](/blog/pull-request-vs-pair-prog/)
+- [The Process Itself Is the Goal](/blog/the-process-itself-is-the-goal/)
+- [The Art of Refactoring: When, How, and Why](/blog/the-art-of-refactoring/)
+- [The Art of Testing: Where Design Meets Quality](/blog/the-art-of-testing/)
 
 > ... and many more on [https://chemaclass.com/blog/](https://chemaclass.com/blog/)
 
@@ -118,14 +119,14 @@ A pet project is a playground to create software and train your professional ski
 
 Developing a sixth sense to smell patterns which you have already done and their positive & negative experiences.
 
-**Showing your skills and helping the community around you.**
+**Showing your skills and helping the community around you.** That's [working with the garage door open](/blog/working-with-the-garage-door-open/).
 
 > Open-Source Software offers you one of the best opportunities to start building your career path towards continuous improvement.
 
 ---
 
 This is a (Spanish) talk that I did remotely on April 2021,
-for [PHPMad Madrid Community](https://www.meetup.com/phpmad/events/277733306/). I basically present all these ideas
+for [PHPMad Madrid Community](https://www.meetup.com/phpmad/events/277733306/). I present all these ideas
 together with a live demo of how to contribute to a real OSS.
 
 {{ youtube(id="GE5wR_SC_P4") }}

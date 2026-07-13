@@ -13,7 +13,7 @@ allowed-tools: Read, Write, Glob, Grep
 3. Create the file at `content/blog/YYYY-MM-DD-slug.md` using today's date
 4. Replace template placeholders with actual content based on the topic
 5. Fill the front matter: title, description, tags (reuse existing tags), subtitle
-6. Set `static_thumbnail` to `/images/blog/YYYY-MM-DD/cover.webp` with today's date
+6. Set `static_thumbnail` to the shared placeholder `/images/blog/placeholder.webp` (a committed TODO image) so the draft compiles without real assets. Use the same path for any `![blog-footer](...)`/`![blog-middle](...)` slots you add. Swap these to `/images/blog/YYYY-MM-DD/<slot>.webp` when real images land via `/add-image`.
 7. Check if the topic fits an existing series (see `[extra.series]` in `config.toml`); if so, add `series` and `series_order` to `[extra]`
 8. Add `<!-- more -->` marker after the introduction
 9. Limit h2 headings to 5-7, never skip heading levels
