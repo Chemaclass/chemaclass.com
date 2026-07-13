@@ -24,7 +24,7 @@ allowed-tools: Read, Write, Edit, Glob, Bash(bash scripts/optimize-image.sh:*), 
    - **Report the before/after size** the script prints (before KB, after KB, % saved)
    - Remove the source file after a successful optimize
 
-4. Update the blog post based on placement (all images are `.webp`):
+4. Update the blog post based on placement (all images are `.webp`). If the slot currently points at the shared placeholder `/images/blog/placeholder.webp`, replace that reference with the real per-date path:
    - **cover**: set `static_thumbnail = "/images/blog/YYYY-MM-DD/cover.webp"` in front matter `[extra]` (newer posts do not add a body `![cover]` line; the template renders the hero from `static_thumbnail`)
    - **middle**: insert `![descriptive alt](/images/blog/YYYY-MM-DD/middle.webp)` near the middle of the body (or ask user where to place it)
    - **footer**: insert `![descriptive alt](/images/blog/YYYY-MM-DD/footer.webp)` as the last content line

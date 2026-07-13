@@ -1,18 +1,17 @@
 +++
 title = "Ship, Show, Ask"
-description = "En equipos que se mueven rápido, una de las mayores tensiones que enfrentamos es esta: ¿Cómo seguimos entregando sin comprometer la calidad o la colaboración? El enfoque tradicional de pull requests a menudo ralentiza las cosas. Esperamos horas, o días, por aprobaciones, incluso para cambios triviales. Pero la alternativa, simplemente mergear directamente, puede sentirse imprudente o invisible para el resto del equipo. Ahí es donde entra la estrategia Ship-Show-Ask."
+description = "No todos los cambios necesitan la misma revisión. Ship, Show, Ask ajusta el proceso de revisión al riesgo del cambio, para que los equipos sigan entregando sin perder calidad ni colaboración."
 draft = false
 [taxonomies]
 tags = [ "agile", "code-review", "team-management", "productivity" ]
 [extra]
-subtitle = "Colaboración impulsada por la cultura a la velocidad del código"
-static_thumbnail = "/images/blog/2025-04-12/cover.jpg"
+subtitle = "Ajusta la revisión al riesgo, no al ritual"
+static_thumbnail = "/images/blog/2025-04-12/cover.webp"
 related_posts = [
-  "blog/2022-06-08-the-path-to-seniority-in-software.md",
-  "blog/2023-12-30-great-engineering.md",
+  # TODO re-enable when garage-door post publishes
+  # "blog/2026-07-14-working-with-the-garage-door-open.md",
   "blog/2024-02-25-deployments-on-fridays.md",
   "blog/2024-03-28-effective-pair-programming.md",
-  "blog/2024-09-02-people-skills.md",
 ]
 related_readings = [
   "readings/2020-03-05-extreme-programming-explained.md",
@@ -23,10 +22,9 @@ series = "agile"
 series_order = 6
 +++
 
-
 En equipos que se mueven rápido, una de las mayores tensiones que enfrentamos es esta: ¿Cómo seguimos entregando sin comprometer la calidad o la colaboración?
 
-El enfoque tradicional de pull requests a menudo ralentiza las cosas. Esperamos horas, o días, por aprobaciones, incluso para cambios triviales. Pero la alternativa, simplemente mergear directamente, puede sentirse imprudente o invisible para el resto del equipo.
+El enfoque tradicional de pull requests a menudo ralentiza las cosas. Esperamos horas, o días, por aprobaciones, incluso para cambios triviales. Pero la alternativa, mergear directamente, puede sentirse imprudente o invisible para el resto del equipo.
 
 <!-- more -->
 
@@ -44,7 +42,7 @@ La idea clave es usar Ask como el default para la mayoría del trabajo, recurrir
 
 ## Por qué prefiero Ask y Show
 
-En mi experiencia, ayuda tratar cada cambio, incluso los pequeños, como algo que vale la pena compartir. Siempre creo una rama y abro un PR. Proporciona visibilidad, construye un historial compartido, y crea un espacio para opiniones opcionales o asíncronas.
+Trata cada cambio, incluso los pequeños, como algo que vale la pena compartir. Siempre creo una rama y abro un PR. Proporciona visibilidad, construye un historial compartido, y crea un espacio para opiniones opcionales o asíncronas. Es [trabajar con la puerta del garaje abierta](/es/blog/working-with-the-garage-door-open/), aplicado al código.
 
 Pero no todos los PRs necesitan seguir el mismo proceso de revisión.
 
@@ -65,7 +63,7 @@ Dicho esto, **Ask no significa sobre-ingeniar el proceso**. A menudo, un revisor
 
 Podría mergear inmediatamente cuando:
 
-- Practico pair programming (la revisión ya ocurrió en vivo)
+- Practico [pair programming](/es/blog/effective-pair-programming/) (la revisión ya ocurrió en vivo)
 - Corrijo erratas o enlaces rotos
 - Actualizo documentación o changelogs
 - Refactorizo dentro de un módulo que poseo
@@ -84,7 +82,7 @@ Este modelo me ayuda a:
 - Evitar cuellos de botella, especialmente en equipos pequeños o async
 - Fomentar una mentalidad de confianza, responsabilidad y toma de decisiones reflexiva
 
-> Cambia el objetivo de simplemente obtener aprobación a compartir intención y ser dueño del resultado.
+> Cambia el objetivo de obtener aprobación a compartir intención y ser dueño del resultado.
 
 ## ¿Qué hace un buen "Show"?
 
@@ -108,12 +106,10 @@ Algunos consejos prácticos de la experiencia:
 
 ---
 
-Ship, Show, Ask es más que higiene de branching.
+Ship, Show, Ask es más que higiene de branching. Construye una cultura de claridad, responsabilidad y confianza, donde los desarrolladores se mueven rápido sin dejar de ser reflexivos.
 
-Para mí, se trata de construir una cultura de claridad, responsabilidad y confianza, donde los desarrolladores están empoderados para moverse rápido mientras permanecen reflexivos.
+Si estás cansado de colas lentas de PR y aprobaciones sobre-ingeniadas, pruébalo en tu próximo cambio. ¿Quieres profundizar? Lee el [post original de Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html).
 
-Si estás cansado de colas lentas de PR y aprobaciones sobre-ingeniadas, esto podría valer la pena intentarlo.
+> Ajusta la revisión al riesgo. Sé dueño de lo que mergeas.
 
-> ¿Curioso por profundizar? Mira el [post de Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html).
-
-![footer](/images/blog/2025-04-12/footer.jpg)
+![blog-footer](/images/blog/2025-04-12/footer.webp)

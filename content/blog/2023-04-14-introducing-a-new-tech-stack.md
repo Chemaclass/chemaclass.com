@@ -59,4 +59,6 @@ ADRs are useful to understand old decisions and keep them in the version control
 
 ![blog-footer](/images/blog/2023-04-14/footer.jpg)
 
-> Thanks to my friends [Manu](https://x.com/evrtrabajo), [Antonio](https://x.com/Tito_Kati), and [Jesus](https://x.com/JesusValera96), who helped me come up with this summary of ideas after brainstorming together.
+{% kudos() %}
+Thanks to my friends [Manu](https://x.com/evrtrabajo), [Antonio](https://x.com/Tito_Kati), and [Jesus](https://x.com/JesusValera96), who helped me come up with this summary of ideas after brainstorming together.
+{% end %}

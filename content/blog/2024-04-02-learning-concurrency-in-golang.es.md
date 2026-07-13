@@ -269,4 +269,6 @@ func moveHorseOnePos(board [][]*Horse, line int, winnerChan chan Horse) {
 
 El código de este post es una versión simplificada. Si quieres ver el código completo funcionando, está aquí: [Chemaclass/go-horse-racing](https://github.com/Chemaclass/go-horse-racing).
 
-> Gracias a mi antiguo Team Lead, Andrei Boar, que me ayudó a revisar mi solución original y proporcionó una [solución alternativa](https://gist.github.com/zuzuleinen/79413aa7933d7d6c6d84ec6ba8c3910a) (más simple y mejor) que apliqué a mi código. Lo principal que aprendí fue usar un `chan Horse` para pasar el Caballo ganador desde `main()`, en vez de usar un `chan bool` y un `sync.WaitGroup` entre todos los hilos.
+{% kudos() %}
+Gracias a mi antiguo Team Lead, Andrei Boar, que me ayudó a revisar mi solución original y proporcionó una [solución alternativa](https://gist.github.com/zuzuleinen/79413aa7933d7d6c6d84ec6ba8c3910a) (más simple y mejor) que apliqué a mi código. Lo principal que aprendí fue usar un `chan Horse` para pasar el Caballo ganador desde `main()`, en vez de usar un `chan bool` y un `sync.WaitGroup` entre todos los hilos.
+{% end %}

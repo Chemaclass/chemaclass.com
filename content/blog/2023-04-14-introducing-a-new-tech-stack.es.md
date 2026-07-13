@@ -59,4 +59,6 @@ Los ADRs ayudan a entender decisiones antiguas. Guárdalos en el control de vers
 
 ![blog-footer](/images/blog/2023-04-14/footer.jpg)
 
-> Gracias a mis amigos [Manu](https://x.com/evrtrabajo), [Antonio](https://x.com/Tito_Kati) y [Jesus](https://x.com/JesusValera96), que me ayudaron a crear este resumen de ideas haciendo brainstorming juntos.
+{% kudos() %}
+Gracias a mis amigos [Manu](https://x.com/evrtrabajo), [Antonio](https://x.com/Tito_Kati) y [Jesus](https://x.com/JesusValera96), que me ayudaron a crear este resumen de ideas haciendo brainstorming juntos.
+{% end %}

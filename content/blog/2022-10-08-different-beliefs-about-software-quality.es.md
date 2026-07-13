@@ -86,4 +86,6 @@ El desarrollo de software no es solo código, es **negocio**. Hay que encontrar 
 
 Ningún equipo debería tener "baja calidad" como parte de su identidad. Cada equipo tiene expectativas de calidad. La **clave** está en **acordar qué es buena calidad**.
 
-> Gracias a mi anterior Engineering Manager, Evgenii Sokolov, quien me inspiró a escribir estas líneas adicionales después de compartir el post original.
+{% kudos() %}
+Gracias a mi anterior Engineering Manager, Evgenii Sokolov, quien me inspiró a escribir estas líneas adicionales después de compartir el post original.
+{% end %}

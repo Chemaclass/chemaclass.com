@@ -5,17 +5,18 @@ description = "Guía práctica sobre software de código abierto: sus beneficios
 tags = [ "open-source", "git", "career", "productivity" ]
 [extra]
 subtitle = "El poder de contribuir a OSS"
-static_thumbnail = "/images/blog/2021-05-03/cover.jpg"
+static_thumbnail = "/images/blog/2021-05-03/cover.webp"
 related_posts = [
   "blog/2021-02-01-phel-first-release.md",
   "blog/2024-04-02-learning-concurrency-in-golang.md",
+  # TODO re-enable when garage-door post publishes
+  # "blog/2026-07-14-working-with-the-garage-door-open.md",
 ]
 related_readings = [
   "readings/2016-10-01-the-pragmatic-programmer.md",
   "readings/2022-06-29-modern-software-engineering.md",
 ]
 +++
-
 
 ¿Qué es el Software de Código Abierto (OSS)? ¿Cuáles son sus beneficios? ¿Cómo puedes empezar a contribuir a cualquier OSS? ¿Proyectos personales? ¿Compartir conocimiento? ¿Por qué todo esto?
 
@@ -28,7 +29,7 @@ OSS tiene similitudes con el software libre, pero no es lo mismo. El software li
 - [PHPUnit](https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE) es un ejemplo de OSS que es gratuito.
 - [Spryker](https://github.com/spryker/spryker-core/blob/master/LICENSE) es un ejemplo de OSS que no es gratuito.
 
-> OSS es básicamente software que es público, abierto al mundo.
+> OSS es software público, abierto al mundo.
 
 ## Beneficios
 
@@ -52,7 +53,7 @@ OSS tiene similitudes con el software libre, pero no es lo mismo. El software li
 
 ### Empezando con GitHub
 
-Hoy en día, es realmente trivial empezar a contribuir a OSS:
+Hoy en día, es fácil empezar a contribuir a OSS:
 - Puedes empezar tu propio proyecto. ¡Un proyecto personal encaja aquí perfectamente!
 - Puedes contribuir a un proyecto OSS existente.
 
@@ -96,10 +97,10 @@ Un proyecto personal es un terreno de juego para crear software y entrenar tus h
 
 ### Posts del Blog
 
-- Pull Requests vs Pair Programming
-- El proceso en sí es la meta
-- El arte del refactoring; Cuándo, Cómo y Por qué
-- El arte del testing: Donde el diseño se encuentra con la calidad
+- [Pull Requests vs Pair Programming](/es/blog/pull-request-vs-pair-prog/)
+- [El proceso en sí es la meta](/es/blog/the-process-itself-is-the-goal/)
+- [El arte del refactoring: cuándo, cómo y por qué](/es/blog/the-art-of-refactoring/)
+- [El arte del testing: donde el diseño se encuentra con la calidad](/es/blog/the-art-of-testing/)
 
 > ... y muchos más en [https://chemaclass.com/es/blog/](https://chemaclass.com/es/blog/)
 
@@ -112,14 +113,14 @@ Un proyecto personal es un terreno de juego para crear software y entrenar tus h
 
 Vas desarrollando un sexto sentido para detectar patrones que ya has visto, con sus experiencias buenas y malas.
 
-**Mostrando tus habilidades y ayudando a la comunidad a tu alrededor.**
+**Mostrando tus habilidades y ayudando a la comunidad a tu alrededor.** Eso es [trabajar con la puerta del garaje abierta](/es/blog/working-with-the-garage-door-open/).
 
 > El Software de Código Abierto te ofrece una de las mejores oportunidades para empezar a construir tu camino profesional hacia la mejora continua.
 
 ---
 
 Esta es una charla (en español) que hice de forma remota en abril de 2021,
-para la [Comunidad PHPMad Madrid](https://www.meetup.com/phpmad/events/277733306/). Básicamente presento todas estas ideas
+para la [Comunidad PHPMad Madrid](https://www.meetup.com/phpmad/events/277733306/). Presento todas estas ideas
 junto con una demo en vivo de cómo contribuir a un OSS real.
 
 {{ youtube(id="GE5wR_SC_P4") }}

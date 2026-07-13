@@ -97,4 +97,6 @@ conocimiento está aislado o lo que está en juego es importante. Sáltalo cuand
 es "hacer siempre pairing", es **mejor software y un equipo más fuerte**. Elige una tarea real esta semana, hazla en
 pareja e intercambia roles a menudo. Los beneficios aparecen más rápido de lo que esperas.
 
-> Gracias a mi amigo [Manu](https://x.com/evrtrabajo), quien me ayudó con este post. Incluso compartimos un [taller](https://phpconference.com/agile-culture/practical-tdd-workshop/) sobre este tema.
+{% kudos() %}
+Gracias a mi amigo [Manu](https://x.com/evrtrabajo), quien me ayudó con este post. Incluso compartimos un [taller](https://phpconference.com/agile-culture/practical-tdd-workshop/) sobre este tema.
+{% end %}
