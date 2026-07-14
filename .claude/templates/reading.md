@@ -10,6 +10,7 @@ subtitle = "The Subtitle"
 pages = "0"
 author = "Author Name"
 static_thumbnail = "https://m.media-amazon.com/images/..."
+expand_preview = true
 related_readings = [
   "readings/YYYY-MM-DD-slug.md",
 ]

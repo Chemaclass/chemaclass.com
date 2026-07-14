@@ -17,8 +17,8 @@ Field shapes live in the template: `.claude/templates/blog-post.md`. This file c
 ## Body
 
 - Short intro hook, then `<!-- more -->` before the first `##`.
-- **Body length ~800-1000 words** (corpus norm ~900). Longer only when `deep_dive` blocks park the overflow.
-- **4 to 7 H2 sections.** Never skip levels. H3 only to enumerate named sub-parts under one H2 (e.g. "### Level 0", "### Level 1").
+- **Body length ~800-1000 words** (corpus norm ~900). Longer only when `deep_dive` blocks park the overflow. Short reflective essays run ~550; that is fine when the idea is one clean arc.
+- **4 to 7 H2 sections** is the norm. Deep_dive-heavy reference posts may run more (how-bitcoin-works has 9); reflective essays may run fewer. Never skip levels. H3 only to enumerate named sub-parts under one H2 (e.g. "### Level 0", "### Level 1").
 - Cover comes from `static_thumbnail` (the template renders it as the hero). Do not repeat a body `![cover]` line in newer posts.
 - In-body images by slot: `![blog-middle](...)` near the middle, `![blog-footer](...)` as the last content line. Descriptive alt text is better than the slot name. In a draft, point these at `/images/blog/placeholder.webp` until the real image exists.
 - `{% deep_dive(title="...") %}...{% end %}` to park optional detail (code samples, extended examples) out of the main flow. Title is a short noun phrase. If used, set `[extra] reading_time` (minutes) counting only words outside the blocks.
@@ -32,7 +32,7 @@ Field shapes live in the template: `.claude/templates/blog-post.md`. This file c
 2. Opening: hook in 2-4 short paragraphs, one-line pivot, then `<!-- more -->`.
 3. Ending: stamped (aphorism, imperative cluster, or hard one-liner). Not a recap.
 4. Pull-quotes: about one per H2 in a didactic post, each a self-contained aphorism.
-5. 4 to 7 H2s, no skipped levels, every section earns its place. Body ~800-1000 words.
+5. H2 count fits the post type (norm 4-7; more for deep_dive-heavy explainers, fewer for short essays), no skipped levels, every section earns its place. Body ~800-1000 words (~550 for reflective essays).
 6. Nothing from the "Never do" list in `SKILL.md` (em dashes, hedging, exclamations, emoji, AI hype).
 7. Backticks on every file/command/flag. Bold for punchlines and list labels.
 8. At least one inline link to a related prior post. External links for every stat.

@@ -35,6 +35,8 @@ sass/
 | `--search-input-bg` | `#fff` | `#22262b` | Card/input backgrounds |
 | `--search-bg-selected-item` | `#f5f6f8` | `#282d33` | Hover backgrounds |
 
+A semantic status palette (`--color-error/success/warning/info/primary/secondary/neutral` variants) and further `--search-*` tokens also live in `abstracts/_variables.scss`; check there when styling status or search UI.
+
 ## Shadow Tokens
 
 ```scss
@@ -96,6 +98,16 @@ transition: transform 0.3s var(--ease-out-expo),
   box-shadow: var(--shadow-lg);
   border-color: var(--accent-color);
 }
+```
+
+## Callout Pattern (kudos)
+
+Non-interactive callouts (`sass/components/_kudos.scss`, shortcode `templates/shortcodes/kudos.html`) use an accent bar instead of the card hover pattern:
+```scss
+background: rgba(var(--body-bg-rgb), 0.3);
+border-left: 3px solid var(--accent-color);
+border-radius: 0 8px 8px 0;
+box-shadow: var(--shadow-sm);
 ```
 
 ## Header Glass Effect
