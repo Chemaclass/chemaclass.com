@@ -1,7 +1,7 @@
 +++
 title = "Trabajar con la Puerta del Garaje Abierta"
 description = "Trabajar en abierto deja que la gente ayude mientras el trabajo aún se puede moldear. Pero una puerta abierta es pasiva. El verdadero skill es empujar la señal correcta a la sala correcta."
-draft = true
+draft = false
 [taxonomies]
 tags = [ "communication", "leadership", "career", "mentoring" ]
 [extra]
