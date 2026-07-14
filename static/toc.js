@@ -74,13 +74,14 @@
       if (insideRelated) {
         if (!relatedAdded) {
           relatedAdded = true;
-          // Add a single flat "Related" TOC entry pointing to the first related heading
+          // Single flat entry pointing to the first related heading; reuse its
+          // own (already localized) text so the TOC matches the page language
           const listItem = document.createElement('li');
           listItem.className = 'toc-item toc-h2';
 
           const link = document.createElement('a');
           link.href = `#${heading.id}`;
-          link.textContent = 'Related';
+          link.textContent = headingText;
           link.className = 'toc-link';
 
           link.addEventListener('click', (e) => {
