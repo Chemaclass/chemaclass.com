@@ -1,7 +1,7 @@
 +++
 title = "Working With the Garage Door Open"
 description = "Working in the open lets people help while the work is still shapeable. But an open door is passive. The real skill is pushing the right signal to the right room."
-draft = true
+draft = false
 [taxonomies]
 tags = [ "communication", "leadership", "career", "mentoring" ]
 [extra]
