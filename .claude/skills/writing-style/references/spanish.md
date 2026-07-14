@@ -1,5 +1,7 @@
 # Spanish translation style (`.es.md`, colocated)
 
+English is the main version; the `.es.md` file is derived from it. When they drift, update ES to match EN, never the reverse.
+
 - **Informal `tú` throughout.** Never `usted`. `tú`-conjugated imperatives ("Commitea la carpeta. Compártela."). Peninsular vocabulary ("ordenador", "vale la pena", "a las tantas de la noche").
 - **Keep in English** (often italicized as borrowed words): tool/ecosystem nouns and code identifiers. `skill`/`skills` (pluralized English-style, "los skills"), `commit`, `PR`, `prompt`, `setup`, `output`, `issue` ("la issue"), `feature`, `test`, `hooks`, `settings`, `open source`, `trade-offs`, `clean code`, `naming`, `know-how`, `lock-in`, `hype`, `tooling`, `leverage`, `codebase`, `bug`, `loop`, `build`, `lint`, `auth`, `diff`, `rollback`, `feature flags`, `canary deploy`, `track record`, `autopilot`.
 - **English verbs take Spanish conjugation**: "commitea", "promptear", "mergear", "testearlo", "onboardea".

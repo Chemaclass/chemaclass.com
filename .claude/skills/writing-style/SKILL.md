@@ -58,6 +58,8 @@ Plain does not mean shallow. The ideas can run deep. The sentences carrying them
 - **Mode A: scene/anecdote first.** Open on a concrete fact or scenario, not a thesis. "Nietzsche proposed a thought experiment..." / "Hidden inside Sauron's blog, there is a playable game."
 - **Mode B: claim, undercut, pivot.** Confident statement, an immediate "But..." reversal, a one-line redirect. The signature hinge is a one-line paragraph: **"But X isn't Y."** ("But understanding isn't the same as access.")
 
+A recurring variant: the first line right after `<!-- more -->` is a `>` blockquote stating the thesis as an aphorism ("> Same model. Same prompts. Lighter bill."). Use it when the thesis compresses to one tweetable line.
+
 Never open with throat-clearing ("In today's fast-paced world", "Have you ever wondered"). Open with a fact, a scene, or a claim, then cut.
 
 ## Closings
@@ -99,7 +101,7 @@ Always stamped, never trailing off. The last beat is one of:
 
 - No em dashes or en dashes (`.claude/rules/no-em-dash.md`). Use period, comma, colon, or parentheses.
 - No hedging: "I think", "perhaps", "it seems", "arguably", "in my humble opinion".
-- No exclamation marks, no emoji, no profanity. Fragments and bold carry the emphasis.
+- No exclamation marks in your own prose (fine inside quoted speech or example text), no emoji, no profanity. Fragments and bold carry the emphasis.
 - No long multi-clause subordinate sentences.
 - No unexplained jargon and no jargon for its own sake.
 - No corporate AI hype ("revolutionary", "game-changing", "unlock the power of").

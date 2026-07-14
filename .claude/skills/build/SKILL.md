@@ -11,3 +11,5 @@ zola build
 ```
 
 If there are errors, analyze them and suggest fixes.
+
+Note: this is the fast error check. The production `./build.sh` also runs python post-processing and minify steps that a green `zola build` does not exercise.

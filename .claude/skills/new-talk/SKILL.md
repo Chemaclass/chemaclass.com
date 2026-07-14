@@ -18,8 +18,9 @@ allowed-tools: Read, Write, Glob, Grep, Bash(scripts/build-slides.sh *), Bash(mk
      `- YYYY-MM-DD | Event Name [**City, Country**] (EN|ES)` with a sub-bullet linking to the event page (and video/photos if available)
 4. Create the colocated `content/talks/<slug>.es.md` translation (same structure, see `.claude/skills/writing-style/references/spanish.md`)
 5. If `--deck` is passed, scaffold the deck:
-   - Create `static/slides/<slug>/deck.md` (Marp markdown, speaker notes in HTML comments) and `static/slides/<slug>/assets/`
-   - Build it with `scripts/build-slides.sh <slug>` and commit the generated `index.html` alongside the source
+   - Copy an existing deck to inherit the embedded site theme (`cp -r static/slides/ai-copilot static/slides/<deck-slug>`), then replace the `deck.md` content and swap `assets/`. Do not create `deck.md` from scratch: the theme lives in its `style:` block
+   - The deck slug may differ from the talk slug (e.g. talk `phel` uses deck `phel-doom`)
+   - Build it with `scripts/build-slides.sh <deck-slug>` and commit the generated `index.html` alongside the source
 6. Update the talks index `content/talks/_index.md` (+ `.es.md`): it is a manual log grouped `## YYYY` then `### Month`, newest first; every entry needs the event bullet, its link sub-bullet, and a one-line italic description (see `references/talks.md`)
 
 ## Talk

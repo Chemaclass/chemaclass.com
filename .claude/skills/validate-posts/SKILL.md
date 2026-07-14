@@ -22,10 +22,15 @@ Lint blog posts (and optionally readings) for common issues.
 
 ### Structure checks
 - `<!-- more -->` marker must exist after the introduction
-- Must have either `related_posts` in front matter or a `## Related` section (`related_posts` preferred)
+- Must have `related_posts` in front matter
 - No skipped heading levels (e.g. h2 to h4 without h3)
-- Between 4 and 7 `## ` (h2) headings
+- Advisory (report as a note, not a failure): the norm is 4 to 7 `## ` (h2) headings; deep_dive-heavy explainers and short reflective essays legitimately fall outside it
 - No em dash (`—`, U+2014) anywhere; no en dash (`–`, U+2013) in prose
+
+### Series checks
+- If `series` is set, `series_order` must be set too (and vice versa)
+- The `series` value must exist as a `[extra.series.<key>]` entry in `config.toml`
+- `series` and `series_order` must be identical in the EN file and its `.es.md` mirror
 
 ### Asset checks
 - If `static_thumbnail` is a local path, verify the file exists in `static/`
