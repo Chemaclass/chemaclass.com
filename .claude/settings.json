@@ -23,7 +23,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "f=$(jq -r '.tool_input.file_path // empty'); case \"$f\" in */content/*.md|*/static/slides/*.md) if grep -n '[—–]' \"$f\" >&2; then echo \"Em dash (U+2014) and en dash (U+2013) are forbidden; replace them (see .claude/rules/no-em-dash.md)\" >&2; exit 2; fi ;; esac; exit 0"
+            "command": "f=$(jq -r '.tool_input.file_path // empty'); case \"$f\" in */content/*.md|*/static/slides/*.md) if grep -n -e '—' -e '–' \"$f\" >&2; then echo \"Em dash (U+2014) and en dash (U+2013) are forbidden; replace them (see .claude/rules/no-em-dash.md)\" >&2; exit 2; fi ;; esac; exit 0"
           }
         ]
       }
