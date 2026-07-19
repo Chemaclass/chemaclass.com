@@ -2,6 +2,7 @@
 name: new-blog-post
 description: "Create a new blog post from the project template. Argument: <topic>"
 allowed-tools: Read, Write, Glob, Grep
+argument-hint: "<topic>"
 ---
 
 # Create New Blog Post

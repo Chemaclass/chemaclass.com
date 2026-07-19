@@ -2,6 +2,7 @@
 name: translate
 description: "Translate content between English and Spanish. Argument: <file-path>"
 allowed-tools: Read, Write, Glob
+argument-hint: "<file-path>"
 ---
 
 # Translate Content
