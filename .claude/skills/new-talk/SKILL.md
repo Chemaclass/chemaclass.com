@@ -2,6 +2,7 @@
 name: new-talk
 description: "Create a new talk page (EN + ES) and optionally scaffold a Marp slide deck. Argument: <talk-title> [--deck]"
 allowed-tools: Read, Write, Glob, Grep, Bash(scripts/build-slides.sh *), Bash(mkdir *)
+argument-hint: "<talk-title> [--deck]"
 ---
 
 # Create New Talk

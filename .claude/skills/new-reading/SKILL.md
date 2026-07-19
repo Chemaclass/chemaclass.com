@@ -2,6 +2,7 @@
 name: new-reading
 description: "Create a new reading note from the project template. Argument: <book-title> by <author>"
 allowed-tools: Read, Write, Glob
+argument-hint: "<book-title> by <author>"
 ---
 
 # Create New Reading
