@@ -11,3 +11,4 @@ English is the main version; the `.es.md` file is derived from it. When they dri
 - **Assets and metadata are identical to EN**: image paths, `static_thumbnail`, `related_posts`, `related_readings`, `tags`, `series`, `series_order`, `reading_time`. Two deliberate exceptions: a youtube id may be swapped for a Spanish-language equivalent of the same content, and author names localize to their Spanish exonym ("Marcus Aurelius" becomes "Marco Aurelio").
 - **Translate idiomatically, not literally.** "and hope it works" becomes "y rezas para que funcione". "at midnight" becomes "a las tantas de la noche". Shift person when it sounds more natural ("developers are loud" becomes "los desarrolladores hablamos alto").
 - **Keep the same structure**: paragraph count, headings, pull-quotes, fragment rhythm.
+- **Typography and numbers:** quotes use `"..."`, never `«...»`. Numbers and dates follow Spanish conventions when ambiguous, English when technical.

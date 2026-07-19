@@ -26,6 +26,7 @@ This is the rule above all others. The reader skims on a phone, between meetings
 
 - **One idea per sentence.** If a sentence needs a second read, split it.
 - **Pick the plain word over the fancy one:** "use" not "utilize", "help" not "facilitate", "about" not "regarding", "enough" not "sufficient", "start" not "commence", "show" not "demonstrate".
+- **No niche or "MBA" English.** The author is a Spanish native; the reader often is too. Avoid metaphor-jargon a non-native would not recognize: "moat", "table stakes", "north star", "boil the ocean", "fungible", "ergonomic" (as metaphor), "load-bearing" (as metaphor), "compound" (verb, when "add up" works). When in doubt, pick the shorter Anglo word over the Latin one. Test: would a Spanish-speaking developer with B2 English understand it on first read?
 - **Concrete over abstract.** A real example beats a definition. Show the thing, do not theorize about it.
 - **Explain every term the moment you use it.** Assume a sharp reader who is new to this topic, not an expert.
 - **Short paragraphs, plenty of white space.** Walls of text lose people.
@@ -84,7 +85,7 @@ Always stamped, never trailing off. The last beat is one of:
 - **Rhetorical questions** to open a section or set up a turn: "Who handles your taxes?"
 - **Hard-cut negation:** state the tempting belief, then flatly kill it. "The easy conclusion is X. That conclusion is wrong."
 - **Two-way contrast** is the core engine (it powers most titles, subtitles, and pull-quotes): "Rules are guardrails. Skills are expertise."
-- **Sustained metaphor/analogy:** introduce one and reuse it (mirror, hands vs brain, engine vs map, pilot vs autopilot, hiring/onboarding, steering wheel). Always a concrete everyday analogy for an abstract point.
+- **Sustained metaphor/analogy:** introduce one and reuse it (mirror, hands vs brain, engine vs map, pilot vs autopilot, hiring/onboarding, steering wheel). Always a concrete everyday analogy for an abstract point. One analogy per section, never stacked. No pop-culture references that age fast.
 - **Concession then pivot:** "It works. But..."
 
 ## Diction and formatting
@@ -93,6 +94,7 @@ Always stamped, never trailing off. The last beat is one of:
 - **Contractions:** use them freely in technical and casual posts (this is the default for the AI series: isn't, don't, you'll, that's). Drop them only for a genuinely philosophical/elevated register (the rare reflective essay). When unsure, contract.
 - **Technical terms** are named precisely and glossed in plain English in the same breath. "MCP is a protocol, not a product."
 - **Backticks** for every file, command, flag, and key: `.claude/`, `git status`, `Shift+Tab`.
+- **Code snippets** are real and runnable. No `foo`/`bar` unless illustrating syntax itself. Comment only the non-obvious line. One strong example beats three weak ones.
 - **Bold** for the punchline of an argument and for inline list labels ("**Security code.** Login flows...").
 - **Italics** for quoted prompts/phrases (_"fix issue #42"_), coined terms on first use (_vibe-coding_), and an allusive signoff line.
 - **Link to your own prior posts inline**, often. Thread the series. Root-relative `/blog/slug/` or absolute `https://chemaclass.com/blog/slug/`, with `#anchor` to a specific section when useful. Link external sources for any stat or claim.
@@ -101,6 +103,7 @@ Always stamped, never trailing off. The last beat is one of:
 
 - No em dashes or en dashes (`.claude/rules/no-em-dash.md`). Use period, comma, colon, or parentheses.
 - No hedging: "I think", "perhaps", "it seems", "arguably", "in my humble opinion".
+- No filler adverbs: "just", "really", "basically", "actually", "simply".
 - No exclamation marks in your own prose (fine inside quoted speech or example text), no emoji, no profanity. Fragments and bold carry the emphasis.
 - No long multi-clause subordinate sentences.
 - No unexplained jargon and no jargon for its own sake.
