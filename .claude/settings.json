@@ -8,11 +8,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "jq -e '.tool_input.command | test(\"^(rtk )?git commit\")' > /dev/null 2>&1 || exit 0; out=$(cd /Users/chema/Code/Chemaclass/chemaclass.com && zola build --output-dir /tmp/zola-precommit-gate --force 2>&1) || { printf '%s\\n' \"$out\" | tail -5 >&2; echo 'zola build failed; fix errors before committing' >&2; exit 2; }"
+            "command": "jq -e '.tool_input.command | test(\"(^|[;&|] *)(rtk )?git commit\")' > /dev/null 2>&1 || exit 0; out=$(cd /Users/chema/Code/Chemaclass/chemaclass.com && zola build --output-dir /tmp/zola-precommit-gate --force 2>&1) || { printf '%s\\n' \"$out\" | tail -5 >&2; echo 'zola build failed; fix errors before committing' >&2; exit 2; }"
           },
           {
             "type": "command",
-            "command": "cmd=$(jq -r '.tool_input.command // empty'); case \"$cmd\" in git\\ commit*|rtk\\ git\\ commit*|gh\\ pr*|rtk\\ gh\\ pr*) if printf '%s' \"$cmd\" | grep -q '—'; then echo 'Em dash (U+2014) is forbidden in commit/PR text (see .claude/rules/no-em-dash.md)' >&2; exit 2; fi ;; esac; exit 0"
+            "command": "cmd=$(jq -r '.tool_input.command // empty'); case \"$cmd\" in *git\\ commit*|*gh\\ pr*) if printf '%s' \"$cmd\" | grep -q '—'; then echo 'Em dash (U+2014) is forbidden in commit/PR text (see .claude/rules/no-em-dash.md)' >&2; exit 2; fi ;; esac; exit 0"
           }
         ]
       }
