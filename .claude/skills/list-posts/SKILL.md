@@ -2,6 +2,7 @@
 name: list-posts
 description: "List blog posts with title, date, tags, and draft status. Optional argument: [tag or year] to filter"
 allowed-tools: Glob, Read, Grep
+model: haiku
 ---
 
 # List Blog Posts
