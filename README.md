@@ -9,8 +9,8 @@ I write about tech, habits, and team behaviors at my [blog](https://chemaclass.c
 ## Prerequisites
 
 - [Zola](https://www.getzola.org/documentation/getting-started/installation/) 0.22.1+
-- Python 3 (for post-build scripts)
-- [minify](https://github.com/tdewolff/minify) (for production builds)
+- Python 3 (standard library only, for the post-build scripts)
+- [minify](https://github.com/tdewolff/minify) (production builds only)
 
 ## Development
 
@@ -28,7 +28,18 @@ Open [http://localhost:1111](http://localhost:1111) in your browser.
 ./build.sh
 ```
 
-Runs `zola build` followed by post-build scripts that enrich the search index, generate plain-text and markdown pages, build `llms.txt`, and minify assets.
+Runs `zola build`, then the `scripts/` post-processors: enrich the search index and sitemap with dates, generate the terminal filesystem, the plain-text and Markdown page mirrors, `llms-full.txt`, and the JSON feed, then minify HTML, CSS, and JS.
+
+## Project structure
+
+```
+content/     Blog posts, readings, talks (Markdown, EN + colocated .es)
+templates/   Tera templates
+sass/        SCSS, compiled by Zola
+static/      Images, JS, fonts, and served metadata (llms.txt, robots.txt, ...)
+scripts/     Python post-build processors (shared helpers in _common.py)
+config.toml  Zola config, i18n strings, and site data
+```
 
 ## Contributing
 
