@@ -20,7 +20,7 @@
   "serviceType": "{% if lang == 'es' %}Consultoría de liderazgo técnico{% else %}Tech leadership consulting{% endif %}",
   "offers": {
     "@type": "Offer",
-    "price": "{{ config.extra.pricing_consulting_session | default(value=100) }}",
+    "price": "{{ config.extra.pricing_consulting_session }}",
     "priceCurrency": "EUR",
     "description": "{% if lang == 'es' %}Sesión individual de 1 hora{% else %}Single 1-hour session{% endif %}"
   }
@@ -199,7 +199,7 @@
         <div class="pricing-grid pricing-grid--2col">
           <div class="pricing-card">
             <h4><i class="fa-solid fa-comment-dots"></i> {% if lang == "es" %}Sesión individual{% else %}Single session{% endif %}</h4>
-            <div class="pricing-card__price">€{{ config.extra.pricing_consulting_session | default(value=100) }}</div>
+            <div class="pricing-card__price">€{{ config.extra.pricing_consulting_session }}</div>
             <div class="pricing-card__subprice">{% if lang == "es" %}por sesión de 1 hora{% else %}per 1-hour session{% endif %}</div>
             <ul class="pricing-card__details">
               <li>{% if lang == "es" %}Cualquier tema{% else %}Any topic{% endif %}</li>
@@ -208,10 +208,10 @@
           </div>
           <div class="pricing-card pricing-card--featured">
             <h4><i class="fa-solid fa-layer-group"></i> {% if lang == "es" %}Pack de 3 sesiones{% else %}Pack of 3 sessions{% endif %}<span class="pricing-card__badge">{% if lang == "es" %}Mejor valor{% else %}Best value{% endif %}</span></h4>
-            <div class="pricing-card__price">€{{ config.extra.pricing_consulting_pack3 | default(value=250) }}</div>
+            <div class="pricing-card__price">€{{ config.extra.pricing_consulting_pack3 }}</div>
             <div class="pricing-card__subprice">{% if lang == "es" %}3 sesiones de 1 hora{% else %}3 × 1-hour sessions{% endif %}</div>
             <ul class="pricing-card__details">
-              <li>{% if lang == "es" %}Ahorra €{{ config.extra.pricing_consulting_pack3_save | default(value=50) }} respecto a sueltas{% else %}Save €{{ config.extra.pricing_consulting_pack3_save | default(value=50) }} vs individual{% endif %}</li>
+              <li>{% if lang == "es" %}Ahorra €{{ config.extra.pricing_consulting_pack3_save }} respecto a sueltas{% else %}Save €{{ config.extra.pricing_consulting_pack3_save }} vs individual{% endif %}</li>
               <li>{% if lang == "es" %}Usa las sesiones cuando quieras{% else %}Use sessions whenever you want{% endif %}</li>
             </ul>
           </div>

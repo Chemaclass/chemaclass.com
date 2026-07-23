@@ -1,5 +1,5 @@
 // ==========================================================================
-// Easter egg: "67" — full meme mode: page wobble + giant bouncing 6 7
+// Easter egg: "67", full meme mode: page wobble + giant bouncing 6 7
 // ==========================================================================
 (function () {
   const TRIGGER_RE = /^(67|6\s*7|6-7|six\s*seven|seis\s*siete)$/i;

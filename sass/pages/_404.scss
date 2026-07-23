@@ -240,7 +240,7 @@
 }
 
 // Responsive
-@media (max-width: 600px) {
+@media (max-width: $breakpoint-phone) {
   .not-found-container {
     padding: 1rem;
     min-height: calc(100vh - 8rem);

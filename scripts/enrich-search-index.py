@@ -4,12 +4,16 @@ Post-build script to add publication dates to the search index.
 Run after `zola build` to enrich search_index.en.json with dates.
 """
 
+from __future__ import annotations
+
 import json
-import os
 import re
 from pathlib import Path
+from typing import Dict, Optional
 
-def extract_date_from_frontmatter(filepath):
+from _common import extract_date_from_filename
+
+def extract_date_from_frontmatter(filepath: Path) -> Optional[str]:
     """Extract date from markdown frontmatter."""
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
@@ -30,19 +34,12 @@ def extract_date_from_frontmatter(filepath):
             date_match = re.search(r'^date:\s*["\']?(\d{4}-\d{2}-\d{2})', frontmatter, re.MULTILINE)
             if date_match:
                 return date_match.group(1)
-    except Exception as e:
+    except (OSError, UnicodeDecodeError) as e:
         print(f"Error reading {filepath}: {e}")
 
     return None
 
-def extract_date_from_filename(filename):
-    """Extract date from filename like 2024-01-15-slug.md"""
-    match = re.match(r'^(\d{4}-\d{2}-\d{2})-', filename)
-    if match:
-        return match.group(1)
-    return None
-
-def build_url_to_date_map(content_dir):
+def build_url_to_date_map(content_dir: Path) -> Dict[str, str]:
     """Build a mapping from URL paths to dates."""
     url_to_date = {}
     base_url = "https://chemaclass.com"
@@ -73,7 +70,7 @@ def build_url_to_date_map(content_dir):
 
     return url_to_date
 
-def enrich_search_index(public_dir, url_to_date):
+def enrich_search_index(public_dir: Path, url_to_date: Dict[str, str]) -> bool:
     """Add dates to search indices for all languages."""
     total_enriched = 0
 
@@ -81,7 +78,7 @@ def enrich_search_index(public_dir, url_to_date):
         with open(index_file, 'r', encoding='utf-8') as f:
             search_index = json.load(f)
 
-        docs = search_index.get('documentStore', {}).get('docs', {})
+        docs = search_index['documentStore']['docs']
 
         enriched_count = 0
         for url, doc in docs.items():
@@ -97,7 +94,7 @@ def enrich_search_index(public_dir, url_to_date):
 
     return total_enriched > 0
 
-def main():
+def main() -> None:
     # Determine paths relative to script location
     script_dir = Path(__file__).parent
     project_root = script_dir.parent

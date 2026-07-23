@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# build-slides.sh — render Marp talk decks in place.
+# build-slides.sh, render Marp talk decks in place.
 #
 # Single-dir layout: a deck and its build output live in ONE folder under
 # static/slides/<slug>/ , which Zola serves verbatim at /slides/<slug>/ :
@@ -8,10 +8,10 @@
 #   static/slides/<slug>/
 #   ├── deck.md      # source (Marp markdown + speaker notes in HTML comments)
 #   ├── assets/      # media referenced by the deck
-#   └── index.html   # GENERATED in place — the rendered deck
+#   └── index.html   # GENERATED in place, the rendered deck
 #
 # No source/output duplication: assets are stored once. Commit the whole folder.
-# CI stays Zola-only — no Marp/node at deploy time.
+# CI stays Zola-only, no Marp/node at deploy time.
 #
 # Usage:
 #   scripts/build-slides.sh                       # rebuild ALL decks under static/slides/*
@@ -24,9 +24,9 @@
 #   scripts/build-slides.sh --pdf <slug>          # same, for one deck
 #
 # Each build auto-optimizes assets (minify SVG, pngquant PNG once) and regenerates
-# static/slides/index.html — a themed landing listing all decks. Zero maintenance.
+# static/slides/index.html, a themed landing listing all decks. Zero maintenance.
 #
-# Add a new talk (copy an existing deck — it carries the theme):
+# Add a new talk (copy an existing deck, it carries the theme):
 #   1. cp -r static/slides/ai-copilot static/slides/<slug>
 #   2. replace static/slides/<slug>/deck.md content + swap assets/ media
 #   3. scripts/build-slides.sh <slug>
@@ -49,7 +49,7 @@ BASE="$REPO/static/slides"
 
 # optimize media in a deck folder. Best-effort + idempotent:
 #  - SVG: minify (re-minifying an already-minified file is a no-op).
-#  - PNG: pngquant ONCE — skipped if already a palette ("colormap") image, so rebuilds
+#  - PNG: pngquant ONCE, skipped if already a palette ("colormap") image, so rebuilds
 #    never re-quantize and erode quality. Skips silently if a tool is absent.
 optimize_assets() {  # $1=dir
   local d="$1" f
@@ -133,7 +133,7 @@ generate_index() {
   <main class="wrap">
     <header>
       <h1>Slides</h1>
-      <p class="lead">Talk decks — open in the browser, present from anywhere.</p>
+      <p class="lead">Talk decks, open in the browser, present from anywhere.</p>
     </header>
     <div class="grid">
 $cards    </div>
@@ -162,7 +162,7 @@ export PDF
 
 # ---- WATCH mode: live-reload preview server -------------------------------
 # Marp server mode renders decks on the fly and reloads the browser on every
-# save. No index.html is written here — run a normal build before committing.
+# save. No index.html is written here, run a normal build before committing.
 if [ "$WATCH" = "1" ]; then
   if [ "${#ARGS[@]}" -ge 1 ]; then
     SERVE="$BASE/${ARGS[0]}"
@@ -172,7 +172,7 @@ if [ "$WATCH" = "1" ]; then
   fi
   echo "• watch: live server at http://localhost:8080/  (Ctrl-C to stop)"
   echo "  saving deck.md reloads the browser automatically."
-  echo "  note: index.html is NOT regenerated in watch mode —"
+  echo "  note: index.html is NOT regenerated in watch mode ,"
   echo "        run 'scripts/build-slides.sh' before committing."
   exec npx -y @marp-team/marp-cli -s "$SERVE" --html --allow-local-files
 fi
@@ -220,7 +220,7 @@ fi
 echo "• importing $SRC -> static/slides/$SLUG/"
 mkdir -p "$DEST"
 cp -f "$SRC/deck.md" "$DEST/deck.md"
-# media only — drop internal docs (MANIFEST etc.) from the public folder
+# media only, drop internal docs (MANIFEST etc.) from the public folder
 if [ -d "$SRC/assets" ]; then
   rsync -a --delete --delete-excluded --exclude '*.md' "$SRC/assets/" "$DEST/assets/"
 fi

@@ -253,7 +253,7 @@
 }
 
 // Responsive
-@media (max-width: 600px) {
+@media (max-width: $breakpoint-phone) {
   .talks-grid {
     grid-template-columns: 1fr;
   }
@@ -619,7 +619,7 @@
 }
 
 // Single talk responsive
-@media (max-width: 600px) {
+@media (max-width: $breakpoint-phone) {
   .talk-single {
     &__title {
       font-size: 1.5rem;

@@ -48,7 +48,7 @@
 
   function saveRead(map) {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(map)); }
-    catch (e) { /* quota or privacy mode — ignore */ }
+    catch (e) { /* quota or privacy mode, ignore */ }
   }
 
   // Normalize path as stable storage key.
@@ -58,7 +58,7 @@
   }
 
   function markReadLinks() {
-    // Fast path: if the page has no listing cards, nothing to paint — bail
+    // Fast path: if the page has no listing cards, nothing to paint, bail
     // before scanning every anchor. Covers post pages, CV, 404, etc.
     if (!document.querySelector('.blog-card, .latest-card')) return;
 
@@ -91,7 +91,7 @@
       target.classList.add('is-read');
 
       // Inject labeled pill at end of meta row so unread/read cards share the
-      // same left-to-right rhythm (date, reading-time, [read]) — idempotent.
+      // same left-to-right rhythm (date, reading-time, [read]), idempotent.
       var meta = target.querySelector('.blog-card__meta') ||
                  target.querySelector('.latest-date');
       if (meta && !meta.querySelector('.blog-card__read')) {
@@ -152,7 +152,7 @@
     if (isPostPage()) trackCurrentPost();
   }
 
-  // Debug API — useful in devtools, no-op in normal use.
+  // Debug API, useful in devtools, no-op in normal use.
   window.__readingStreak = {
     list: function () { return loadRead(); },
     mark: function (path) {

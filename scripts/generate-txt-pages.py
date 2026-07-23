@@ -4,67 +4,16 @@ Generate plain text versions of all pages for curl-friendly access.
 Creates .txt files alongside HTML for terminal users.
 """
 
-import os
 import re
 import textwrap
 from pathlib import Path
 
-
-def extract_frontmatter(content):
-    """Extract TOML frontmatter from markdown content."""
-    frontmatter = {}
-
-    # Match TOML frontmatter (between +++ markers)
-    toml_match = re.search(r'^\+\+\+\s*\n(.*?)\n\+\+\+', content, re.DOTALL)
-    if toml_match:
-        fm_text = toml_match.group(1)
-
-        # Extract title
-        title_match = re.search(r'^title\s*=\s*"([^"]*)"', fm_text, re.MULTILINE)
-        if title_match:
-            frontmatter['title'] = title_match.group(1)
-
-        # Extract description
-        desc_match = re.search(r'^description\s*=\s*"([^"]*)"', fm_text, re.MULTILINE)
-        if desc_match:
-            frontmatter['description'] = desc_match.group(1)
-
-        # Extract date from frontmatter
-        date_match = re.search(r'^date\s*=\s*["\']?(\d{4}-\d{2}-\d{2})', fm_text, re.MULTILINE)
-        if date_match:
-            frontmatter['date'] = date_match.group(1)
-
-        # Extract tags
-        tags_match = re.search(r'tags\s*=\s*\[(.*?)\]', fm_text, re.DOTALL)
-        if tags_match:
-            tags_str = tags_match.group(1)
-            tags = re.findall(r'"([^"]*)"', tags_str)
-            frontmatter['tags'] = tags
-
-    return frontmatter
-
-
-def extract_date_from_filename(filename):
-    """Extract date from filename like 2024-01-15-slug.md"""
-    match = re.match(r'^(\d{4}-\d{2}-\d{2})-', filename)
-    if match:
-        return match.group(1)
-    return None
-
-
-def get_content_body(content):
-    """Extract markdown body (after frontmatter)."""
-    body = re.sub(r'^\+\+\+\s*\n.*?\n\+\+\+\s*\n?', '', content, flags=re.DOTALL)
-    body = re.sub(r'^---\s*\n.*?\n---\s*\n?', '', body, flags=re.DOTALL)
-    return body.strip()
-
-
-def get_slug_from_filename(filename):
-    """Extract slug from filename, removing date prefix."""
-    name = filename.replace('.md', '')
-    name = re.sub(r'\.(es|en)$', '', name)
-    name = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', name)
-    return name
+from _common import (
+    extract_date_from_filename,
+    extract_frontmatter,
+    get_content_body,
+    get_slug_from_filename,
+)
 
 
 def markdown_to_plaintext(content, width=80):
@@ -216,39 +165,35 @@ def generate_index_txt(section, files, base_url, width=80):
     return output
 
 
-def process_markdown_file(filepath, section, base_url):
+def process_markdown_file(filepath: Path, section: str, base_url: str) -> dict:
     """Process a single markdown file and generate .txt version."""
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            content = f.read()
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
 
-        frontmatter = extract_frontmatter(content)
-        body = get_content_body(content)
+    frontmatter = extract_frontmatter(content)
+    body = get_content_body(content, strip_yaml=True)
 
-        # Get date from filename if not in frontmatter
-        if 'date' not in frontmatter:
-            date = extract_date_from_filename(filepath.name)
-            if date:
-                frontmatter['date'] = date
+    # Get date from filename if not in frontmatter
+    if 'date' not in frontmatter:
+        date = extract_date_from_filename(filepath.name)
+        if date:
+            frontmatter['date'] = date
 
-        slug = get_slug_from_filename(filepath.name)
-        url = f'{base_url}/{section}/{slug}/'
+    slug = get_slug_from_filename(filepath.name)
+    url = f'{base_url}/{section}/{slug}/'
 
-        txt_content = format_txt_page(frontmatter, body, url)
+    txt_content = format_txt_page(frontmatter, body, url)
 
-        return {
-            'slug': slug,
-            'title': frontmatter.get('title', slug),
-            'date': frontmatter.get('date', ''),
-            'description': frontmatter.get('description', ''),
-            'txt_content': txt_content
-        }
-    except Exception as e:
-        print(f'Error processing {filepath}: {e}')
-        return None
+    return {
+        'slug': slug,
+        'title': frontmatter.get('title', slug),
+        'date': frontmatter.get('date', ''),
+        'description': frontmatter.get('description', ''),
+        'txt_content': txt_content
+    }
 
 
-def main():
+def main() -> None:
     script_dir = Path(__file__).parent
     project_root = script_dir.parent
     content_dir = project_root / 'content'

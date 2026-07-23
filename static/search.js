@@ -1,7 +1,7 @@
 const UP_ARROW = "ArrowUp";
 const DOWN_ARROW = "ArrowDown";
 const ENTER_KEY = "Enter";
-const WAIT_TIME_MS = 150; // Reduced from 200ms to 150ms for faster response
+const WAIT_TIME_MS = 150; // debounce window before firing a search
 const DOCUMENT_LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
 const IS_SPANISH = DOCUMENT_LANG.startsWith("es");
 const LANG_PREFIX = IS_SPANISH ? "/es" : "";
@@ -394,7 +394,7 @@ function preloadSearchIndex() {
 function initSearch() {
     const fieldBoosts = { title: { boost: 5 }, body: { boost: 1 } };
     const options = {
-        bool: "OR", // Changed from AND to OR for better recall
+        bool: "OR", // OR matching widens recall
         fields: fieldBoosts,
         expand: true // Enable query expansion for better matching
     };

@@ -2,7 +2,7 @@
 // Text Highlighting & Sharing
 // ==========================================================================
 
-// Highlight marks — realistic highlighter pen effect
+// Highlight marks, realistic highlighter pen effect
 .user-highlight {
   background: linear-gradient(
     168deg,
@@ -31,7 +31,7 @@
     );
   }
 
-  // Active state — stronger highlight when its note is focused
+  // Active state, stronger highlight when its note is focused
   &--active {
     background: linear-gradient(
       168deg,
@@ -166,7 +166,7 @@
   }
 }
 
-// Noted indicator — dashed underline on highlights with notes
+// Noted indicator, dashed underline on highlights with notes
 .user-highlight--noted {
   text-decoration: underline dashed rgba(255, 179, 0, 0.6) 1.5px;
   text-underline-offset: 3px;
@@ -177,7 +177,7 @@
 }
 
 // ==========================================================================
-// Note annotation — inline block by default, floats in right margin on wide screens
+// Note annotation, inline block by default, floats in right margin on wide screens
 // ==========================================================================
 
 // Content containers need position: relative for margin-mode notes
@@ -218,7 +218,7 @@
     z-index: 100;
   }
 
-  // Active state — note is being viewed/edited
+  // Active state, note is being viewed/edited
   &--active {
     border-left-color: rgba(255, 179, 0, 0.8);
     background: rgba(255, 213, 79, 0.12);
@@ -360,7 +360,7 @@
 }
 
 // ==========================================================================
-// Note popover — floating panel for first-time note creation
+// Note popover, floating panel for first-time note creation
 // ==========================================================================
 .highlight-note-popover {
   position: absolute;
@@ -451,7 +451,7 @@
 }
 
 // Mobile: larger touch targets
-@media (max-width: 600px) {
+@media (max-width: $breakpoint-phone) {
   .highlight-toolbar {
     padding: 4px 8px;
     gap: 4px;
@@ -473,7 +473,7 @@
     display: none;
     margin: 0;
 
-    // Floating popover — positioned by JS below the tapped highlight
+    // Floating popover, positioned by JS below the tapped highlight
     &--visible {
       display: flex;
       position: absolute;
