@@ -1,8 +1,8 @@
 // Bookmark toggle injected by static/favorites.js into .blog-post__top-row.
 // Shape mirrors .toc-toggle pill so the three controls in that row feel like
-// one family — back link / save / toc toggle.
+// one family, back link / save / toc toggle.
 
-$fav-accent: #f59e0b; // amber — reads as "saved"
+$fav-accent: #f59e0b; // amber, reads as "saved"
 $fav-accent-soft: rgba(245, 158, 11, 0.18);
 
 // Icon-only ghost button so it sits quietly next to the TOC toggle.
@@ -46,7 +46,7 @@ $fav-accent-soft: rgba(245, 158, 11, 0.18);
     }
   }
 
-  // Tiny pop when the reader saves — confirms the action without a toast.
+  // Tiny pop when the reader saves, confirms the action without a toast.
   &.just-saved .favorite-toggle__icon {
     animation: favorite-pop 0.55s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
   }

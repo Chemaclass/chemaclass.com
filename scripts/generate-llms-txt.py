@@ -8,50 +8,11 @@ the site as a single text file instead of crawling page-by-page.
 import re
 from pathlib import Path
 
-
-def extract_frontmatter(content):
-    """Extract TOML frontmatter from markdown content."""
-    frontmatter = {}
-
-    toml_match = re.search(r'^\+\+\+\s*\n(.*?)\n\+\+\+', content, re.DOTALL)
-    if toml_match:
-        fm_text = toml_match.group(1)
-
-        title_match = re.search(r'^title\s*=\s*"([^"]*)"', fm_text, re.MULTILINE)
-        if title_match:
-            frontmatter['title'] = title_match.group(1)
-
-        desc_match = re.search(r'^description\s*=\s*"([^"]*)"', fm_text, re.MULTILINE)
-        if desc_match:
-            frontmatter['description'] = desc_match.group(1)
-
-        date_match = re.search(r'^date\s*=\s*["\']?(\d{4}-\d{2}-\d{2})', fm_text, re.MULTILINE)
-        if date_match:
-            frontmatter['date'] = date_match.group(1)
-
-        tags_match = re.search(r'tags\s*=\s*\[(.*?)\]', fm_text, re.DOTALL)
-        if tags_match:
-            tags_str = tags_match.group(1)
-            tags = re.findall(r'"([^"]*)"', tags_str)
-            frontmatter['tags'] = tags
-
-    return frontmatter
-
-
-def extract_date_from_filename(filename):
-    """Extract date from filename like 2024-01-15-slug.md"""
-    match = re.match(r'^(\d{4}-\d{2}-\d{2})-', filename)
-    if match:
-        return match.group(1)
-    return None
-
-
-def get_slug_from_filename(filename):
-    """Extract slug from filename, removing date prefix and language suffix."""
-    name = filename.replace('.md', '')
-    name = re.sub(r'\.(es|en)$', '', name)
-    name = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', name)
-    return name
+from _common import (
+    extract_date_from_filename,
+    extract_frontmatter,
+    get_slug_from_filename,
+)
 
 
 def clean_body(content):
@@ -96,7 +57,7 @@ def build_full_section(entries, section):
     return lines
 
 
-def main():
+def main() -> None:
     script_dir = Path(__file__).parent
     project_root = script_dir.parent
     content_dir = project_root / 'content'
@@ -130,11 +91,8 @@ def main():
             if '.es.md' in filepath.name:
                 continue
 
-            try:
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    content = f.read()
-            except Exception:
-                continue
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content = f.read()
 
             fm = extract_frontmatter(content)
             if not fm.get('title'):

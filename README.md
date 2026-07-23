@@ -1,6 +1,6 @@
 # chemaclass.com
 
-Personal website built with [Zola](https://www.getzola.org/) — a Rust-based static site generator.
+Personal website built with [Zola](https://www.getzola.org/), a Rust-based static site generator.
 
 I write about tech, habits, and team behaviors at my [blog](https://chemaclass.com/blog/). You can also find my [book reading notes](https://chemaclass.com/readings/) and [talks](https://chemaclass.com/talks/).
 

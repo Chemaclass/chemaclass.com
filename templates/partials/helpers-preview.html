@@ -10,55 +10,6 @@
   {%- endif %}
 {% endmacro %}
 
-{% macro summary(post) %}
-  {%- if post.summary -%}
-    {{ post.summary | safe  }}
-  {%- else -%}
-    {{ post.content | safe | striptags | truncate(length=300) }}
-  {%- endif -%}
-{% endmacro %}
-
-{% macro summary_tags(post) %}
-  {{ post.summary | safe  }}
-  {{ post.content | safe | striptags | truncate(length=300) }}
-{% endmacro %}
-
-{% macro author(post) %}
-  {% if post.extra.author %}
-    <br>
-    <small class="author">by {{ post.extra.author }}</small>
-  {% endif %}
-{% endmacro %}
-
-{% macro reading_preview(post, lang="en") %}
-<div class="reading-preview">
-  <h3 class="reading-title{% if post.extra.expand_preview %} reading-title__long{% endif %}">
-    <a href="{{ post.permalink }}">{{ post.title }}</a>
-    {{ helpers_preview::author(post=post) }}
-  </h3>
-
-  {% if post.taxonomies.tags %}
-    <span class="reading-tags {% if post.extra.expand_preview %} reading-tags__long{% endif %}">
-      {% for tag in post.taxonomies.tags %}
-        <span class="reading-tag">{{ tag }}</span>
-      {% endfor %}
-    </span>
-  {% endif %}
-
-  <span class="reading-date">
-    {% if lang == "es" %}{{ post.date | date(format="%d/%m/%Y") }}{% else %}{{ post.date | date(format="%B %d, %Y") }}{% endif %}
-  </span>
-
-  <div class="summary">
-    {{ helpers_preview::summary(post=post) }}
-  </div>
-
-  {% if post.extra.current_read %}
-    <span class="reading-current no-select">{{ trans(key="currently_reading", lang=lang) }}</span>
-  {% endif %}
-</div>
-{% endmacro %}
-
 {% macro content_card(post, pinned=false, featured=false, lang="en") %}
 <article class="blog-card {% if pinned %}pinned{% endif %} {% if featured %}featured{% endif %} {% if post.extra.thumbnail or post.extra.static_thumbnail %}has-thumbnail{% endif %}" data-post-path="{{ post.path }}">
   <a href="{{ post.permalink }}" class="blog-card__link">

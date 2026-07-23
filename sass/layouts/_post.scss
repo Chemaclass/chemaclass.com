@@ -397,7 +397,7 @@
 }
 
 // Responsive
-@media (max-width: 600px) {
+@media (max-width: $breakpoint-phone) {
   .blog-post {
     &__title {
       font-size: 1.75rem;
@@ -440,30 +440,6 @@
       font-size: 0.8rem;
       -webkit-line-clamp: 2;
     }
-  }
-}
-
-// Legacy styles (keep for compatibility)
-.post-title {
-  margin-bottom: 3rem;
-
-  .tags {
-    > *:not(:last-child) {
-      margin-right: 0.25rem;
-    }
-  }
-
-  > h1 {
-    margin-bottom: 0.4rem;
-  }
-
-  small {
-    line-height: unset;
-  }
-
-  .post-subtitle {
-    margin-top: 0;
-    color: var(--color-subtitle);
   }
 }
 

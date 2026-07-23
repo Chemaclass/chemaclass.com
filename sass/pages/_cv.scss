@@ -332,7 +332,7 @@ $cv-card-padding: 1.25rem;
   gap: 1rem;
 }
 
-// Job entries — unified card
+// Job entries, unified card
 .cv-job {
   @extend %cv-card;
 
@@ -449,7 +449,7 @@ $cv-card-padding: 1.25rem;
   }
 }
 
-// Education / Certs / Awards — unified card
+// Education / Certs / Awards, unified card
 .cv-edu {
   @extend %cv-card;
 
@@ -716,7 +716,7 @@ a.cv-project {
   }
 }
 
-// Talks list — card rows
+// Talks list, card rows
 .cv-talks {
   list-style: none;
   padding: 0;
@@ -768,7 +768,7 @@ a.cv-project {
   }
 }
 
-// Writing series — card chips
+// Writing series, card chips
 .cv-writing-series {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
