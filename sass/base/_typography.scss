@@ -145,12 +145,13 @@ a {
   text-decoration: none;
   transition: color 0.2s ease;
 
-  // Plain text links get the recolor + underline on hover. Button-styled
-  // anchors (btn/button/cta/view-all/pill tags) opt out: they keep their own
-  // bg/color and must never inherit the underline border, which looks broken
-  // on a solid-blue button. Without the blog-post__tag opt-out this recolor
-  // beats its own :hover and paints blue text on the blue hover bg.
-  &:hover:not([class*="btn"]):not([class*="button"]):not([class*="cta"]):not(.view-all):not(.header-left):not(.blog-post__tag):not(.talk-single__tag):not(.talk-single__project-link) {
+  // Plain prose links get the recolor + underline on hover. :where() pins this
+  // at a:hover specificity (0,1,1) so any component's own :hover wins: a card or
+  // TOC/nav/footer link that sets its own border-color or `border-bottom: none`
+  // keeps a uniform border instead of this underline painting a mismatched line
+  // across its bottom edge. Prose links have no such :hover, so they still get
+  // the treatment. The button/tag list stays as a belt-and-suspenders opt-out.
+  &:hover:where(:not([class*="btn"]):not([class*="button"]):not([class*="cta"]):not(.view-all):not(.header-left):not(.blog-post__tag):not(.talk-single__tag):not(.talk-single__project-link)) {
     color: var(--accent-overlay-color);
     border-bottom: 1px solid var(--accent-color-light);
   }
