@@ -12,38 +12,16 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
+from _common import (
+    extract_date_from_filename,
+    extract_frontmatter,
+    get_slug_from_filename,
+)
+
 BASE_URL = 'https://chemaclass.com'
 AUTHOR_NAME = 'Jose Maria Valera Reales'
 AUTHOR_URL = BASE_URL
 MAX_ITEMS = 30
-
-
-def extract_frontmatter(content):
-    """Extract TOML frontmatter."""
-    fm = {}
-    m = re.search(r'^\+\+\+\s*\n(.*?)\n\+\+\+', content, re.DOTALL)
-    if not m:
-        return fm
-
-    fm_text = m.group(1)
-    for key in ('title', 'description'):
-        km = re.search(rf'^{key}\s*=\s*"([^"]*)"', fm_text, re.MULTILINE)
-        if km:
-            fm[key] = km.group(1)
-
-    dm = re.search(r'^date\s*=\s*["\']?(\d{4}-\d{2}-\d{2})', fm_text, re.MULTILINE)
-    if dm:
-        fm['date'] = dm.group(1)
-
-    tm = re.search(r'tags\s*=\s*\[(.*?)\]', fm_text, re.DOTALL)
-    if tm:
-        fm['tags'] = re.findall(r'"([^"]*)"', tm.group(1))
-
-    thumb = re.search(r'static_thumbnail\s*=\s*"([^"]*)"', fm_text)
-    if thumb:
-        fm['thumbnail'] = thumb.group(1)
-
-    return fm
 
 
 def extract_excerpt(content):
@@ -58,14 +36,7 @@ def extract_excerpt(content):
     return excerpt[:500]
 
 
-def slug_from_filename(filename):
-    name = filename.replace('.md', '')
-    name = re.sub(r'\.(es|en)$', '', name)
-    name = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', name)
-    return name
-
-
-def collect_entries(content_dir, sections):
+def collect_entries(content_dir: Path, sections: list) -> list:
     entries = []
     for section in sections:
         section_path = content_dir / section
@@ -76,21 +47,18 @@ def collect_entries(content_dir, sections):
             if fp.name == '_index.md' or '.es.md' in fp.name:
                 continue
 
-            try:
-                with open(fp, 'r', encoding='utf-8') as f:
-                    content = f.read()
-            except Exception:
-                continue
+            with open(fp, 'r', encoding='utf-8') as f:
+                content = f.read()
 
             fm = extract_frontmatter(content)
             if not fm.get('title') or not fm.get('date'):
-                m = re.match(r'^(\d{4}-\d{2}-\d{2})-', fp.name)
-                if m:
-                    fm['date'] = m.group(1)
+                date = extract_date_from_filename(fp.name)
+                if date:
+                    fm['date'] = date
                 else:
                     continue
 
-            slug = slug_from_filename(fp.name)
+            slug = get_slug_from_filename(fp.name)
             url = f'{BASE_URL}/{section}/{slug}/'
 
             published = datetime.strptime(fm['date'], '%Y-%m-%d').replace(tzinfo=timezone.utc)
@@ -116,7 +84,7 @@ def collect_entries(content_dir, sections):
     return entries[:MAX_ITEMS]
 
 
-def main():
+def main() -> None:
     project_root = Path(__file__).parent.parent
     content_dir = project_root / 'content'
     public_dir = project_root / 'public'

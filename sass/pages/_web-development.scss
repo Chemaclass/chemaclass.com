@@ -89,7 +89,7 @@
     top: 0;
     right: 0;
 
-    @media (max-width: 600px) {
+    @media (max-width: $breakpoint-phone) {
       position: static;
       display: flex;
       justify-content: flex-end;
@@ -112,7 +112,7 @@
       text-decoration: none;
       transition: all 0.2s ease;
 
-      @media (max-width: 600px) {
+      @media (max-width: $breakpoint-phone) {
         min-width: 44px;
         height: 44px;
         font-size: 0.85rem;
@@ -1193,19 +1193,6 @@
       flex: 0 0 100%;
       min-width: 100%;
     }
-  }
-}
-
-// Legacy grid fallback (kept for reference, can be removed)
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-
-  @media (max-width: $breakpoint-tablet) {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-    margin: 0 auto;
   }
 }
 

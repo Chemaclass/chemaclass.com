@@ -169,7 +169,7 @@
         <div class="pricing-grid">
           <div class="pricing-card">
             <h4><i class="fa-solid fa-user"></i> {% if lang == "es" %}Por persona{% else %}Per person{% endif %}</h4>
-            <div class="pricing-card__price">€{{ config.extra.pricing_workshop_per_person | default(value=350) }}</div>
+            <div class="pricing-card__price">€{{ config.extra.pricing_workshop_per_person }}</div>
             <ul class="pricing-card__details">
               <li>{% if lang == "es" %}Día completo de taller{% else %}Full day workshop{% endif %}</li>
               <li>{% if lang == "es" %}Materiales incluidos{% else %}Materials included{% endif %}</li>
@@ -177,14 +177,14 @@
           </div>
           <div class="pricing-card">
             <h4><i class="fa-solid fa-users"></i> 3 {% if lang == "es" %}personas{% else %}people{% endif %}</h4>
-            <div class="pricing-card__price">€{{ config.extra.pricing_workshop_3_people | default(value=1050) }}</div>
+            <div class="pricing-card__price">€{{ config.extra.pricing_workshop_3_people }}</div>
             <ul class="pricing-card__details">
               <li>{% if lang == "es" %}Mínimo recomendado{% else %}Recommended minimum{% endif %}</li>
             </ul>
           </div>
           <div class="pricing-card">
             <h4><i class="fa-solid fa-user-group"></i> 4-6 {% if lang == "es" %}personas{% else %}people{% endif %}</h4>
-            <div class="pricing-card__price">€{{ config.extra.pricing_workshop_4_6_min | default(value=1400) }} - €{{ config.extra.pricing_workshop_4_6_max | default(value=2100) }}</div>
+            <div class="pricing-card__price">€{{ config.extra.pricing_workshop_4_6_min }} - €{{ config.extra.pricing_workshop_4_6_max }}</div>
             <ul class="pricing-card__details">
               <li>{% if lang == "es" %}Tamaño ideal{% else %}Ideal size{% endif %}</li>
             </ul>

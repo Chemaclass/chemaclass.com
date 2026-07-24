@@ -17,9 +17,9 @@ Jose Maria Valera Reales is a Product Engineer at Kombo with 15+ years in softwa
 ## Series
 
 - Bitcoin Series: PGP, Cypherpunks, Programmable Money, Taxes, Fundamentals, How It Works
-- AI Series: Speed Not Quality, MCP Context, Team of Agents, Idealism vs Pragmatism
-- Software Craftsmanship Series: Art of Testing, Mock or Not, TDD, TDD vs BDD, London vs Chicago, Test Private Methods
-- Leadership & Teams Series: Tech Lead, Red vs Blue Work, Beauty of Leadership, Great Leadership, Everyone on Board, FSNP
+- AI Series: Speed Not Quality, MCP Context, Team of Agents, Idealism vs Pragmatism, Inside .claude, Levels of AI Adoption, Skills Over Agents, Token Bill, Human Bottleneck, Non-Deterministic AI
+- Software Craftsmanship Series: Art of Testing, Mock or Not, TDD, TDD vs BDD, London vs Chicago, Test Private Methods, Pair Programming
+- Leadership & Teams Series: Tech Lead, Red vs Blue Work, Path to Seniority, Beauty of Leadership, Great Leadership, Everyone on Board, FSNP, Garage Door Open
 - Agile & XP Series: Extreme Teams, Agile with Non-Agile, Ignoring Scrum, Friday Deploys, What Kills Agility, Ship Show Ask
 
 ## Topics

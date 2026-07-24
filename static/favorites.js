@@ -6,7 +6,7 @@
   if (typeof window === 'undefined' || !window.localStorage) return;
 
   var STORAGE_KEY = 'chemaclass:favorites';
-  // Blog and reading post paths — tag pages and listings aren't saveable.
+  // Blog and reading post paths, tag pages and listings aren't saveable.
   var POST_PATH_RE = /^\/(?:es\/)?(?:blog|readings)\/[^\/]+\/?$/;
 
   var BOOKMARK_SVG_OUTLINE =
@@ -28,7 +28,7 @@
 
   function save(map) {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(map)); }
-    catch (e) { /* quota or privacy mode — ignore */ }
+    catch (e) { /* quota or privacy mode, ignore */ }
   }
 
   function normalize(path) {
@@ -46,7 +46,7 @@
     }));
   }
 
-  // The bookmark toggle lives inside .blog-post__top-row — same row as
+  // The bookmark toggle lives inside .blog-post__top-row, same row as
   // "← all posts" and the TOC toggle. Mirrors their pill shape to blend in.
   function injectButton() {
     var row = document.querySelector('.blog-post__top-row');

@@ -1,5 +1,5 @@
 // ==========================================================================
-// Text Highlighting & Sharing — highlights.js
+// Text Highlighting & Sharing, highlights.js
 // Allows readers to highlight text passages, persist them in localStorage,
 // and share quotes via social media or clipboard.
 // ==========================================================================
@@ -48,7 +48,7 @@
   }
 
   // ========================================================================
-  // Path serialization — encode a text node position relative to content
+  // Path serialization, encode a text node position relative to content
   // Format: "TAG:siblingIndex/#text:childIndex"
   // ========================================================================
   // Check if a node is an injected note element (should be invisible to paths)
@@ -227,7 +227,7 @@
         }
         valid.push(h);
       } catch (_) {
-        // Range could not be restored — skip
+        // Range could not be restored, skip
       }
     });
 
@@ -535,7 +535,7 @@
   }
 
   // ========================================================================
-  // Notes — inline margin annotations
+  // Notes, inline margin annotations
   // ========================================================================
 
   function saveNote(id, noteText) {
@@ -1042,7 +1042,7 @@
   }
 
   // ========================================================================
-  // Event: mouseup in content — show toolbar if text selected
+  // Event: mouseup in content, show toolbar if text selected
   // ========================================================================
   content.addEventListener('mouseup', function(e) {
     // Ignore if clicking toolbar
@@ -1061,7 +1061,7 @@
   });
 
   // ========================================================================
-  // Mobile note toggle — show/hide note below the tapped highlight
+  // Mobile note toggle, show/hide note below the tapped highlight
   // ========================================================================
   var MOBILE_BP = 1024;
   var visibleMobileNote = null;
@@ -1135,7 +1135,7 @@
   });
 
   // ========================================================================
-  // Event: hover on highlighted text — activate its note (if any)
+  // Event: hover on highlighted text, activate its note (if any)
   // ========================================================================
   var hoveredMarkId = null;
 
@@ -1169,7 +1169,7 @@
   });
 
   // ========================================================================
-  // Event: click elsewhere — hide toolbar
+  // Event: click elsewhere, hide toolbar
   // ========================================================================
   document.addEventListener('mousedown', function(e) {
     if (toolbar && toolbar.contains(e.target)) return;
@@ -1215,7 +1215,7 @@
   });
 
   // ========================================================================
-  // Footer actions — only visible when highlights exist
+  // Footer actions, only visible when highlights exist
   // ========================================================================
   var exportBtn = null;
   var clearBtn = null;
