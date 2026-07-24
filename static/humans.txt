@@ -15,7 +15,7 @@
   and everyone who reads, shares, or pushes back on the writing.
 
 /* SITE */
-  Last update: 2026-05-16
+  Last update: 2026-07-24
   Language: English, Español
   Doctype: HTML5
   Generator: Zola (https://www.getzola.org/)

@@ -17,9 +17,9 @@ Jose Maria Valera Reales es Product Engineer en Kombo con más de 15 años en in
 ## Series
 
 - Serie Bitcoin: PGP, Cypherpunks, Dinero Programable, Impuestos, Fundamentos, Cómo Funciona
-- Serie IA: Velocidad no Calidad, Contexto MCP, Equipo de Agentes, Idealismo vs Pragmatismo
-- Serie Artesanía del Software: Arte del Testing, Mock o No, TDD, TDD vs BDD, London vs Chicago, Testear Métodos Privados
-- Serie Liderazgo y Equipos: Tech Lead, Red vs Blue Work, Belleza del Liderazgo, Gran Liderazgo, Todos a Bordo, FSNP
+- Serie IA: Velocidad no Calidad, Contexto MCP, Equipo de Agentes, Idealismo vs Pragmatismo, Dentro de .claude, Niveles de Adopción, Skills sobre Agents, Factura de Tokens, Cuello de Botella Humano, IA No Determinista
+- Serie Artesanía del Software: Arte del Testing, Mock o No, TDD, TDD vs BDD, London vs Chicago, Testear Métodos Privados, Pair Programming
+- Serie Liderazgo y Equipos: Tech Lead, Red vs Blue Work, Camino a la Seniority, Belleza del Liderazgo, Gran Liderazgo, Todos a Bordo, FSNP, Puerta del Garaje Abierta
 - Serie Agile y XP: Equipos Extremos, Agile con No-Agile, Ignorar Scrum, Deploys en Viernes, Qué Mata la Agilidad, Ship Show Ask
 
 ## Temas
