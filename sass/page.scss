@@ -4,7 +4,6 @@
 
 // 1. Abstracts
 @import "abstracts/variables";
-@import "abstracts/mixins";
 
 // 2. Vendors
 @import "normalize";
@@ -26,7 +25,6 @@
 
 // 6. Pages
 @import "pages/404";
-@import "pages/terminal";
 @import "pages/talks";
 @import "pages/books";
 @import "pages/music";
@@ -37,8 +35,6 @@
 @import "components/interactive-list";
 
 // 7. Themes
-@import "themes/light";
-@import "themes/dark";
 
 // 8. Utilities
 @import "utils/responsive";

@@ -1,5 +1,5 @@
 // Profile page: reads the embedded posts metadata + localStorage (reading-streak
-// keys + favorites keys) and renders a dashboard. 100% client-side — no fetch,
+// keys + favorites keys) and renders a dashboard. 100% client-side, no fetch,
 // no analytics, no sync. Clearing site data resets everything.
 (function () {
   if (typeof window === 'undefined') return;
@@ -18,7 +18,7 @@
   var lang = payload.lang || 'en';
   var es = lang === 'es';
 
-  // Tiny i18n dictionary — kept in JS so we don't pollute config.toml for a
+  // Tiny i18n dictionary, kept in JS so we don't pollute config.toml for a
   // single page. Keep strings short and sober.
   var t = es ? {
     overall: 'Progreso general',
@@ -142,7 +142,7 @@
   }
 
   // Inline SVG icon in section headings. `d` may contain multiple subpaths
-  // separated by ` M …` — we split them into sibling <path> elements so each
+  // separated by ` M …`, we split them into sibling <path> elements so each
   // renders as an independent stroke (clean line caps, no accidental joins).
   function iconSVG(d) {
     var parts = String(d).trim().split(/\s+M/).filter(Boolean);

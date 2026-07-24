@@ -1,31 +1,33 @@
 #!/usr/bin/env python3
 """Enrich sitemap.xml with <lastmod> dates from git history."""
+from __future__ import annotations
 
 import os
 import re
 import subprocess
 from pathlib import Path
+from typing import List, Optional
 
 BASE_URL = "https://chemaclass.com"
 PUBLIC_DIR = "public"
 CONTENT_DIR = "content"
 
 
-def get_git_date(filepath):
+def get_git_date(filepath: str) -> Optional[str]:
     """Get the last commit date (ISO 8601) for a file."""
     try:
         result = subprocess.run(
             ["git", "log", "-1", "--format=%aI", "--", filepath],
             capture_output=True, text=True, timeout=5,
         )
-        if result.returncode == 0 and result.stdout.strip():
-            return result.stdout.strip()
-    except Exception:
-        pass
+    except subprocess.TimeoutExpired:
+        return None
+    if result.returncode == 0 and result.stdout.strip():
+        return result.stdout.strip()
     return None
 
 
-def url_to_content_paths(url):
+def url_to_content_paths(url: str) -> List[str]:
     """Map a sitemap URL to candidate content file paths."""
     path = url.replace(BASE_URL, "").strip("/")
 
@@ -45,7 +47,7 @@ def url_to_content_paths(url):
     return [c for c in candidates if c]
 
 
-def find_content_file(url):
+def find_content_file(url: str) -> Optional[str]:
     """Find the content file for a URL."""
     for candidate in url_to_content_paths(url):
         if os.path.exists(candidate):
@@ -53,7 +55,7 @@ def find_content_file(url):
     return None
 
 
-def enrich_sitemap(sitemap_path):
+def enrich_sitemap(sitemap_path: str) -> int:
     """Add <lastmod> to sitemap entries missing it."""
     with open(sitemap_path) as f:
         content = f.read()
@@ -63,7 +65,7 @@ def enrich_sitemap(sitemap_path):
 
     count = 0
 
-    def add_lastmod(match):
+    def add_lastmod(match: "re.Match[str]") -> str:
         nonlocal count
         block = match.group(0)
 

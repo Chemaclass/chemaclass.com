@@ -406,7 +406,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 })();
 
-// "42" easter egg — The Hitchhiker's Guide
+// "42" easter egg, The Hitchhiker's Guide
 (function() {
   var buf = '';
   var timer = null;
@@ -428,7 +428,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 })();
 
-// Bitcoin block height ticker — type "btc"
+// Bitcoin block height ticker, type "btc"
 (function() {
   var SEQ = ['b', 't', 'c'];
   var pos = 0;

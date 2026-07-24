@@ -92,7 +92,7 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: $breakpoint-phone) {
   .related-content__cards {
     grid-template-columns: 1fr;
   }

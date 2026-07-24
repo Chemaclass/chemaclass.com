@@ -1,9 +1,9 @@
-// /profile — client-side reading dashboard.
+// /profile, client-side reading dashboard.
 // Visual language:
 //   - Same "card" motif as topics/readings (soft background, 1px divider border,
 //     12px radius, subtle shadow on hover).
 //   - Two accent colors: reading-streak green for progress, favorites amber for stars.
-//   - No chrome when data is empty — just honest empty-state copy.
+//   - No chrome when data is empty, just honest empty-state copy.
 
 $profile-green: #22c55e;
 $profile-amber: #f59e0b;
@@ -267,7 +267,7 @@ $profile-max-width: 920px;
               color 0.2s ease;
 
   &__name {
-    // Tag name stays the dominant visual — same weight/size across the cloud.
+    // Tag name stays the dominant visual, same weight/size across the cloud.
   }
 
   &__count {
