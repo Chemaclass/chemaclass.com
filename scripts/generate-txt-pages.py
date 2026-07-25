@@ -16,6 +16,7 @@ from _common import (
     get_slug_from_filename,
     iter_section_files,
     read_entry,
+    require_title,
 )
 
 
@@ -100,12 +101,12 @@ def markdown_to_plaintext(content, width=80):
     return result.strip()
 
 
-def format_txt_page(frontmatter, content, url, width=80):
+def format_txt_page(frontmatter, content, url, title, width=80):
     """Format a full plain text page."""
     separator = '=' * width
     thin_sep = '-' * width
 
-    title = frontmatter.get('title', 'Untitled').upper()
+    title = title.upper()
     date = frontmatter.get('date', '')
     tags = frontmatter.get('tags', [])
     description = frontmatter.get('description', '')
@@ -147,13 +148,15 @@ def generate_index_txt(section, files, base_url, width=80):
     output += thin_sep + '\n\n'
 
     # Sort by date, newest first
-    sorted_files = sorted(files, key=lambda x: x.get('date', ''), reverse=True)
+    sorted_files = sorted(files, key=lambda x: x['date'], reverse=True)
 
+    # process_markdown_file below sets every key, so index instead of defaulting:
+    # a missing one is a bug here, not a page that genuinely has no slug.
     for f in sorted_files:
-        date = f.get('date', '')
-        slug = f.get('slug', '')
-        file_title = f.get('title', slug)
-        desc = f.get('description', '')
+        date = f['date']
+        slug = f['slug']
+        file_title = f['title']
+        desc = f['description']
 
         if date:
             output += f'[{date}] '
@@ -171,14 +174,15 @@ def generate_index_txt(section, files, base_url, width=80):
 def process_markdown_file(filepath: Path, section: str, base_url: str) -> dict:
     """Process a single markdown file and generate .txt version."""
     frontmatter, body = read_entry(filepath, strip_yaml=True)
+    title = require_title(frontmatter, filepath)
     slug = get_slug_from_filename(filepath.name)
     url = entry_url(section, slug, base_url)
 
-    txt_content = format_txt_page(frontmatter, body, url)
+    txt_content = format_txt_page(frontmatter, body, url, title)
 
     return {
         'slug': slug,
-        'title': frontmatter.get('title', slug),
+        'title': title,
         'date': frontmatter.get('date', ''),
         'description': frontmatter.get('description', ''),
         'txt_content': txt_content

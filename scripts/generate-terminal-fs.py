@@ -15,6 +15,7 @@ from _common import (
     get_slug_from_filename,
     iter_section_files,
     read_entry,
+    require_title,
 )
 
 
@@ -24,7 +25,7 @@ def process_markdown_file(filepath: Path) -> dict:
 
     return {
         'type': 'file',
-        'title': frontmatter.get('title', filepath.stem),
+        'title': require_title(frontmatter, filepath),
         'date': frontmatter.get('date', ''),
         'description': frontmatter.get('description', ''),
         'tags': frontmatter.get('tags', []),

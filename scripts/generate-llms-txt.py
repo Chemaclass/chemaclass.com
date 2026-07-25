@@ -14,6 +14,7 @@ from _common import (
     get_slug_from_filename,
     iter_section_files,
     read_entry,
+    require_title,
 )
 
 
@@ -76,11 +77,9 @@ def main() -> None:
         entries = []
         for filepath in iter_section_files(section):
             fm, body = read_entry(filepath)
-            if not fm.get('title'):
-                continue
 
             entries.append({
-                'title': fm['title'],
+                'title': require_title(fm, filepath),
                 'date': fm.get('date', ''),
                 'description': fm.get('description', ''),
                 'tags': fm.get('tags', []),

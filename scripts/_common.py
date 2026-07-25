@@ -9,6 +9,7 @@ shared here so there is one source of truth.
 from __future__ import annotations
 
 import re
+import sys
 from pathlib import Path
 from typing import Iterator, List, Optional, TypedDict
 
@@ -80,6 +81,24 @@ def extract_frontmatter(content: str) -> TFrontMatter:
     return fm
 
 
+def require_title(fm: TFrontMatter, filepath: Path) -> str:
+    """Return the front matter title, or exit non-zero naming the offending file.
+
+    Every content page on the site carries `title = "..."`. When the parser could
+    not read one, the generators used to paper over it in four different ways: the
+    txt and md mirrors published a page headed "Untitled", the terminal filesystem
+    fell back to the filename, and llms-full.txt and feed.json dropped the entry
+    without a word. The build stayed green through all of it. The usual cause is a
+    title extract_frontmatter cannot read (single quotes, an escaped quote, a
+    multi-line string), which is a content bug to fix at the source, so name the
+    file and stop the way scripts/check-icons.py does.
+    """
+    title = fm.get('title')
+    if not title:
+        sys.exit(f'{filepath}: front matter has no readable `title = "..."`')
+    return title
+
+
 def extract_date_from_filename(filename: str) -> Optional[str]:
     """Return the YYYY-MM-DD date prefix of a filename, or None."""
     m = re.match(r'^(\d{4}-\d{2}-\d{2})-', filename)
@@ -116,7 +135,14 @@ def iter_section_files(
 def read_entry(filepath: Path, strip_yaml: bool = False) -> tuple:
     """Read one content file and return (frontmatter, body). The date falls back
     to the filename prefix, which is where most posts carry it."""
-    content = filepath.read_text(encoding='utf-8')
+    try:
+        content = filepath.read_text(encoding='utf-8')
+    except (OSError, UnicodeDecodeError) as e:
+        # Every caller reached this path through a glob, so the file was there a
+        # moment ago: a broken symlink, a permission problem, or content that is
+        # not UTF-8. Name it, instead of leaving a traceback that says only which
+        # generator happened to trip over it first.
+        sys.exit(f'cannot read {filepath}: {e}')
     fm = extract_frontmatter(content)
     if 'date' not in fm:
         date = extract_date_from_filename(filepath.name)
@@ -125,9 +151,10 @@ def read_entry(filepath: Path, strip_yaml: bool = False) -> tuple:
     return fm, get_content_body(content, strip_yaml=strip_yaml)
 
 
-def entry_url(section: str, slug: str, base_url: str = BASE_URL) -> str:
-    """Canonical URL of a section entry."""
-    return f'{base_url}/{section}/{slug}/'
+def entry_url(section: str, slug: str, base_url: str = BASE_URL, es: bool = False) -> str:
+    """Canonical URL of a section entry. Spanish entries are served under /es/."""
+    prefix = f'{base_url}/es' if es else base_url
+    return f'{prefix}/{section}/{slug}/'
 
 
 def get_content_body(content: str, strip_yaml: bool = False) -> str:

@@ -19,6 +19,7 @@ from _common import (
     get_slug_from_filename,
     iter_section_files,
     read_entry,
+    require_title,
 )
 
 AUTHOR_NAME = 'Jose Maria Valera Reales'
@@ -42,9 +43,11 @@ def collect_entries(sections: list) -> list:
     for section in sections:
         for fp in iter_section_files(section):
             fm, body = read_entry(fp)
-            # An entry needs both to appear in a feed. read_entry has already
-            # tried the filename for a missing date.
-            if not fm.get('title') or not fm.get('date'):
+            # A JSON Feed item must carry date_published, and read_entry has
+            # already tried the filename, so a page with no date anywhere (talks,
+            # services) is simply not feed material. A missing title is a
+            # different story: require_title stops rather than drop the entry.
+            if not fm.get('date'):
                 continue
 
             url = entry_url(section, get_slug_from_filename(fp.name))
@@ -53,7 +56,7 @@ def collect_entries(sections: list) -> list:
             item = {
                 'id': url,
                 'url': url,
-                'title': fm['title'],
+                'title': require_title(fm, fp),
                 'date_published': published.isoformat(),
                 'summary': fm.get('description', ''),
                 'content_text': extract_excerpt(body),
