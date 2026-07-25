@@ -15,8 +15,29 @@
     '</svg>';
 
   function load() {
-    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+    var raw;
+    // Reading localStorage throws when the origin has no storage access, e.g.
+    // Safari private browsing. Nothing is stored then, so an empty map is right
+    // and there is nothing to report.
+    try { raw = localStorage.getItem(STORAGE_KEY); }
     catch (e) { return {}; }
+    if (!raw) return {};
+
+    // Past this point the value is one we wrote. A stored value that no longer
+    // parses, or that is not the { path: timestamp } map this file writes, is
+    // corruption: the next save replaces it, so silently returning {} is how the
+    // reader's saved posts vanish without a trace.
+    var parsed;
+    try { parsed = JSON.parse(raw); }
+    catch (e) {
+      console.error('[favorites] ' + STORAGE_KEY + ' is not valid JSON, ignoring it:', e);
+      return {};
+    }
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+      console.error('[favorites] ' + STORAGE_KEY + ' is not an object, ignoring it:', parsed);
+      return {};
+    }
+    return parsed;
   }
 
   function save(map) {

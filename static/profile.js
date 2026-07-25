@@ -11,9 +11,13 @@
   var root   = document.getElementById('profile-app');
   if (!dataEl || !root) return;
 
-  var payload;
-  try { payload = JSON.parse(dataEl.textContent); }
-  catch (e) { payload = { posts: [], series: {}, lang: 'en' }; }
+  // #profile-data is a <script type="application/json"> that templates/profile.html
+  // writes at build time, so it either parses for every visitor or for none: a
+  // failure here is a template bug, not a runtime condition. The empty
+  // { posts: [], series: {}, lang: 'en' } fallback this replaces turned that bug
+  // into a dashboard that told the reader they had finished nothing and read it
+  // back to them in English. Let the SyntaxError reach the console instead.
+  var payload = JSON.parse(dataEl.textContent);
 
   var lang = payload.lang || 'en';
   var es = lang === 'es';
@@ -87,8 +91,30 @@
   };
 
   function loadJSON(key) {
-    try { return JSON.parse(localStorage.getItem(key)) || {}; }
+    var raw;
+    // Reading localStorage throws when the origin has no storage access, e.g.
+    // Safari private browsing. Nothing is stored then, so an empty map is right
+    // and there is nothing to report.
+    try { raw = localStorage.getItem(key); }
     catch (e) { return {}; }
+    if (!raw) return {};
+
+    // Past this point the value is one favorites.js or reading-streak.js wrote. A
+    // value that no longer parses, or that is not a map, is corruption, and this
+    // page has an Import button that merges into it and writes it straight back:
+    // returning {} quietly is how the reader's history gets overwritten instead of
+    // added to.
+    var parsed;
+    try { parsed = JSON.parse(raw); }
+    catch (e) {
+      console.error('[profile] ' + key + ' is not valid JSON, ignoring it:', e);
+      return {};
+    }
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+      console.error('[profile] ' + key + ' is not an object, ignoring it:', parsed);
+      return {};
+    }
+    return parsed;
   }
 
   function saveJSON(key, val) {
@@ -107,10 +133,12 @@
   for (var i = 0; i < posts.length; i++) {
     var p = posts[i];
     // permalink like "https://chemaclass.com/blog/slug/" → "/blog/slug"
-    var pl = '';
-    try { pl = new URL(p.permalink).pathname; } catch (e) { /* skip */ }
-    if (!pl) continue;
-    var key = normalize(pl);
+    // Every permalink comes from the same `{{ post.permalink }}` in
+    // templates/profile.html and Zola always renders it absolute, so new URL
+    // either works for all of them or for none. Skipping the odd one silently
+    // dropped a post out of the progress totals and showed the reader a
+    // percentage that was simply wrong, so let a broken permalink throw.
+    var key = normalize(new URL(p.permalink).pathname);
     p._key = key;
     byPath[key] = p;
   }

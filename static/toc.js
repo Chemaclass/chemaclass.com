@@ -82,6 +82,16 @@
     });
   }
 
+  // navigator.clipboard is undefined outside a secure context and writeText
+  // rejects when the permission is denied, so funnel both into one rejection and
+  // let the caller decide what the reader sees.
+  function copyToClipboard(text) {
+    if (!navigator.clipboard) {
+      return Promise.reject(new Error('the clipboard API needs a secure context (https)'));
+    }
+    return navigator.clipboard.writeText(text);
+  }
+
   // "#" affordance that copies a link straight to a section. Zola gives every
   // content heading an id, so these just hang off what is already there.
   function addHeadingAnchors() {
@@ -100,9 +110,24 @@
       anchor.addEventListener('click', (e) => {
         e.preventDefault();
         const url = window.location.href.split('#')[0] + `#${heading.id}`;
-        navigator.clipboard.writeText(url);
-        anchor.textContent = '✓';
-        setTimeout(() => { anchor.textContent = '#'; }, 1000);
+        // Only claim success once the write resolves. Ticking straight after the
+        // call showed a tick even when the copy was refused, and the reader went
+        // on to paste whatever was in the clipboard before.
+        copyToClipboard(url).then(
+          () => {
+            anchor.textContent = '✓';
+            setTimeout(() => { anchor.textContent = '#'; }, 1000);
+          },
+          (error) => {
+            console.error('[toc] could not copy the link to this section:', error);
+            anchor.textContent = '✕';
+            anchor.title = 'Could not copy the link';
+            setTimeout(() => {
+              anchor.textContent = '#';
+              anchor.title = 'Copy link';
+            }, 1500);
+          }
+        );
       });
       heading.appendChild(anchor);
     });

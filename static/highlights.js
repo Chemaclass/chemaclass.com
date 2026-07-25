@@ -25,15 +25,50 @@
   // Storage
   // ========================================================================
   function loadHighlights() {
+    var raw;
+    // Reading localStorage throws when the origin has no storage access, e.g.
+    // Safari private browsing. There is nothing stored then, so an empty list is
+    // the right answer and there is nothing to report.
     try {
-      return JSON.parse(localStorage.getItem(pageKey)) || [];
+      raw = localStorage.getItem(pageKey);
     } catch (_) {
       return [];
     }
+    if (!raw) return [];
+
+    // Past this point the value is one we wrote ourselves. If it no longer parses,
+    // or is not the array this file stores, say so: the next save silently
+    // replaces it, so a quiet [] is how a reader's highlights disappear.
+    var parsed;
+    try {
+      parsed = JSON.parse(raw);
+    } catch (error) {
+      console.error('[highlights] ' + pageKey + ' is not valid JSON, ignoring it:', error);
+      return [];
+    }
+    if (!Array.isArray(parsed)) {
+      console.error('[highlights] ' + pageKey + ' is not an array, ignoring it:', parsed);
+      return [];
+    }
+    return parsed;
   }
 
   function saveHighlights(arr) {
     localStorage.setItem(pageKey, JSON.stringify(arr));
+  }
+
+  // navigator.clipboard is undefined outside a secure context and writeText
+  // rejects when the permission is denied, so funnel both into one rejection.
+  function copyToClipboard(text) {
+    if (!navigator.clipboard) {
+      return Promise.reject(new Error('the clipboard API needs a secure context (https)'));
+    }
+    return navigator.clipboard.writeText(text);
+  }
+
+  function reportCopyFailure(what, error) {
+    console.error('[highlights] could not copy ' + what + ' to the clipboard:', error);
+    showToast(t('copy-failed', 'Could not copy to the clipboard'));
   }
 
   function addHighlight(entry) {
@@ -528,8 +563,10 @@
   function copyQuote(text, headingId) {
     var url = buildTextFragmentUrl(text, headingId);
     var quote = '\u201c' + text.substring(0, 500) + '\u201d\n\n' + url;
-    navigator.clipboard.writeText(quote).then(function() {
+    copyToClipboard(quote).then(function() {
       showToast(t('copied', 'Quote copied'));
+    }, function(error) {
+      reportCopyFailure('the quote', error);
     });
     hideToolbar();
   }
@@ -1310,8 +1347,10 @@
     lines.push('---');
 
     var text = lines.join('\n').trimEnd();
-    navigator.clipboard.writeText(text).then(function() {
+    copyToClipboard(text).then(function() {
       showToast(t('export-done', 'Notes copied to clipboard'));
+    }, function(error) {
+      reportCopyFailure('the notes', error);
     });
   }
 

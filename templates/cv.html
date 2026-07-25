@@ -757,13 +757,20 @@
 
   Object.keys(byRepo).forEach(function (repo) {
     var key = 'gh-stars:' + repo;
+    // Only the cache read is wrapped. Keeping render() inside the try as well
+    // meant a bug in it was swallowed and the code fell through to a refetch,
+    // hiding the breakage behind a slower path that looked like a cache miss.
+    var cached = null;
     try {
-      var cached = JSON.parse(localStorage.getItem(key) || 'null');
-      if (cached && Date.now() - cached.t < TTL) {
-        render(repo, cached.c);
-        return;
-      }
-    } catch (e) {}
+      cached = JSON.parse(localStorage.getItem(key) || 'null');
+    } catch (e) {
+      // No storage access (Safari private browsing) or a stale entry we can no
+      // longer read: either way there is no cache, so fetch.
+    }
+    if (cached && typeof cached.c === 'number' && Date.now() - cached.t < TTL) {
+      render(repo, cached.c);
+      return;
+    }
 
     fetch('https://api.github.com/repos/' + repo, {
       headers: { Accept: 'application/vnd.github+json' }
