@@ -79,12 +79,6 @@
     }
   }
 
-  // Line 1: Title + Tags
-  &__title-row {
-    display: block;
-    margin-bottom: 0.75rem;
-  }
-
   &__title {
     font-size: 2.25rem;
     font-weight: 700;
@@ -125,14 +119,6 @@
       color: white;
       border-bottom: none;
     }
-  }
-
-  // Line 2: Subtitle + Metadata (not sticky)
-  &__subtitle-row {
-    display: block;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--preview-divider-color);
   }
 
   &__subtitle {
@@ -448,46 +434,6 @@
   }
 }
 
-.post-revisited-date {
-  color: #1059b6;
-  font-weight: bold;
-}
-
-.footer-rule {
-  margin-top: 4rem;
-  border: 2px darkgrey dashed;
-}
-
-.related-container {
-  margin: 1rem auto;
-  display: flex;
-  text-align: center;
-
-  > .link {
-    flex: 1;
-    padding: 1rem;
-    box-sizing: border-box;
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-
-    span {
-      font-style: italic;
-      font-size: 1rem;
-    }
-
-    a {
-      text-wrap: balance;
-    }
-  }
-}
-
-.found-a-typo {
-  float: right;
-}
-
 // Footnotes
 .footnote-definition {
   font-size: 1rem;
@@ -522,37 +468,6 @@
   & > p {
     display: inline-block;
     margin: 0;
-  }
-}
-
-// Keyboard shortcuts hint - single subtle line
-.post-shortcuts {
-  text-align: center;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px dashed var(--preview-divider-color);
-}
-
-.post-shortcuts__hint {
-  font-size: 0.75rem;
-  color: var(--color-subtitle);
-  opacity: 0.5;
-
-  kbd {
-    display: inline-block;
-    padding: 0.1rem 0.35rem;
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.7rem;
-    background: var(--preview-divider-color);
-    border-radius: 3px;
-    border: 1px solid rgba(128, 128, 128, 0.2);
-  }
-}
-
-// Hide on mobile (keyboard shortcuts don't apply to touch)
-@media (max-width: 768px) {
-  .post-shortcuts {
-    display: none;
   }
 }
 

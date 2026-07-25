@@ -302,18 +302,3 @@
     }
   }
 }
-
-// Legacy styles (keep for compatibility)
-.taxonomy-name {
-  text-transform: capitalize;
-}
-
-.taxonomy-container {
-  display: flex;
-  flex-wrap: wrap;
-
-  > .term:not(:last-child) {
-    margin-right: 1rem;
-    margin-bottom: 0.5rem;
-  }
-}

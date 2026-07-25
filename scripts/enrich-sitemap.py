@@ -108,6 +108,16 @@ def enrich_sitemap(sitemap_path: str) -> int:
 
 
 if __name__ == "__main__":
+    # PUBLIC_DIR and CONTENT_DIR are relative and get_git_date shells out to git
+    # with a relative path, so this has to run from the repo root. Without the
+    # guard the rglob below finds nothing and the script reports "0 entries
+    # enriched" and exits 0.
+    if not Path(PUBLIC_DIR).is_dir() or not Path(CONTENT_DIR).is_dir():
+        raise SystemExit(
+            f"{PUBLIC_DIR}/ and {CONTENT_DIR}/ must both exist. "
+            "Run `zola build` first, from the repo root."
+        )
+
     sitemaps = sorted(PUBLIC_DIR.rglob("sitemap.xml"))
     if not sitemaps:
         sys.exit(f"no sitemap.xml under {PUBLIC_DIR}: run `zola build` first")

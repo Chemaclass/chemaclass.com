@@ -1,15 +1,3 @@
-{% macro date_and_words(post, lang="en") %}
-  {% set reading_time = post.extra.reading_time | default(value=post.reading_time) %}
-  {% if post.date and post.word_count > 0 -%}
-    {% if lang == "es" %}{{ post.date| date(format="%d/%m/%Y") }}{% else %}{{ post.date| date(format="%B %d, %Y") }}{% endif %} - {{ post.word_count }} {{ trans(key="words", lang=lang) }} -
-    {{ reading_time }} {{ trans(key="minutes_read", lang=lang) }}
-  {% else %}
-    {% if post.date %}
-      {% if lang == "es" %}{{ post.date| date(format="%d/%m/%Y") }}{% else %}{{ post.date| date(format="%B %d, %Y") }}{% endif %}
-    {%- endif %}
-  {%- endif %}
-{% endmacro %}
-
 {% macro content_card(post, pinned=false, featured=false, lang="en") %}
 <article class="blog-card {% if pinned %}pinned{% endif %} {% if featured %}featured{% endif %} {% if post.extra.thumbnail or post.extra.static_thumbnail %}has-thumbnail{% endif %}" data-post-path="{{ post.path }}">
   <a href="{{ post.permalink }}" class="blog-card__link">
