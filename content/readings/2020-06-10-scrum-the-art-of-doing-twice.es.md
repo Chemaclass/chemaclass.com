@@ -8,7 +8,7 @@ tags = [ "scrum", "agile", "team-management", "productivity" ]
 subtitle = "El arte de hacer el doble de trabajo en la mitad de tiempo"
 pages = "250"
 author = "Jeff Sutherland"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/515tsl4uoZL._SX324_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/scrum-the-art-of-doing-twice.webp"
 related_readings = [
   "readings/2021-03-01-zombie-scrum-survival-guide.md",
   "readings/2021-02-22-agile-product-management-with-scrum.md",

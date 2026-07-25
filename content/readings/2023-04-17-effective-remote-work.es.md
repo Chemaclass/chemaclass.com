@@ -9,7 +9,7 @@ tags = [ "team-management", "communication", "productivity", "leadership" ]
 subtitle = "Para Ti, Tu Equipo y Tu Empresa"
 pages = "300"
 author = "James Stanier"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1634819208i/59425223.jpg"
+static_thumbnail = "/images/readings/effective-remote-work.webp"
 expand_preview = false
 related_readings = [
   "readings/2021-05-28-peopleware.md",

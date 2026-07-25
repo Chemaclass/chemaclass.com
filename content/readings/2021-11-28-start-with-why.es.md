@@ -8,7 +8,7 @@ tags = [ "leadership", "communication", "philosophy", "career" ]
 subtitle = "Cómo los grandes líderes inspiran a todos a actuar"
 pages = "250"
 author = "Simon Sinek"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51BlNddi+NL._SX330_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/start-with-why.webp"
 expand_preview = true
 related_readings = [
   "readings/2023-01-29-the-infinite-game.md",

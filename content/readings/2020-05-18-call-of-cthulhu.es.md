@@ -8,7 +8,7 @@ tags = [ "fiction", "horror" ]
 subtitle = "El relato que dio origen a los Mitos de Cthulhu"
 pages = "100"
 author = "H. P. Lovecraft"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41xOuZGh2NL._SX331_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/call-of-cthulhu.webp"
 related_readings = [
   "readings/2023-08-13-the-day-of-the-triffids.md",
   "readings/2023-12-09-invincible.md",

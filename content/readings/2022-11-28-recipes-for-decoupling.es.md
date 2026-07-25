@@ -8,7 +8,7 @@ tags = [ "php", "software-design", "architecture", "clean-code" ]
 subtitle = ""
 pages = "280"
 author = "Matthias Noback"
-static_thumbnail = "https://matthiasnoback.nl/assets/books/recipes-for-decoupling.jpg"
+static_thumbnail = "/images/readings/recipes-for-decoupling.webp"
 expand_preview = false
 related_readings = [
   "readings/2018-06-04-clean-architecture.md",

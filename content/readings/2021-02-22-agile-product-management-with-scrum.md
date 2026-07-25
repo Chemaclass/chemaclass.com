@@ -8,7 +8,7 @@ tags = [ "agile", "scrum", "management" ]
 subtitle = "Creating Products that Customers Love"
 pages = "120"
 author = "Roman Pichler"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41NCrarVPVL._SX328_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/agile-product-management-with-scrum.webp"
 related_readings = [
   "readings/2020-06-10-scrum-the-art-of-doing-twice.md",
   "readings/2021-03-01-zombie-scrum-survival-guide.md",

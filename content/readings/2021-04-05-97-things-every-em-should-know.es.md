@@ -8,7 +8,7 @@ tags = [ "leadership", "team-management", "communication", "mentoring" ]
 subtitle = "Sabiduría colectiva de los expertos"
 pages = "255"
 author = "Camille Fournier"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51pZKdYunNL._SX331_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/97-things-every-em-should-know.webp"
 related_readings = [
   "readings/2020-03-26-the-manager-path.md",
   "readings/2021-06-27-effective-software-em.md",

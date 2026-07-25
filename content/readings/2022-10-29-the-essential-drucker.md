@@ -8,7 +8,7 @@ tags = [ "leadership", "team-management", "philosophy" ]
 subtitle = "The Best of Sixty Years of Peter Drucker's Essential Writings on Management"
 pages = "360"
 author = "Peter F. Drucker"
-static_thumbnail = "https://m.media-amazon.com/images/I/41gdosc0RaL.jpg"
+static_thumbnail = "/images/readings/the-essential-drucker.webp"
 expand_preview = false
 related_readings = [
   "readings/2020-04-03-high-output-management.md",

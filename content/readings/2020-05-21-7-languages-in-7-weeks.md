@@ -8,7 +8,7 @@ tags = [ "software-design", "software", "career" ]
 subtitle = "Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages"
 pages = "300"
 author = "Bruce Tate"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51LZT+tSrTL._SX415_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/7-languages-in-7-weeks.webp"
 related_readings = [
   "readings/2016-10-01-the-pragmatic-programmer.md",
   "readings/2022-06-29-modern-software-engineering.md",

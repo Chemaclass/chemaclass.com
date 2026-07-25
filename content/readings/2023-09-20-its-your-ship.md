@@ -10,7 +10,7 @@ tags = [ "leadership", "team-management", "communication", "mentoring" ]
 subtitle = "Management Techniques from the Best Damn Ship in the Navy"
 pages = "200"
 author = "D. Michael Abrashoff"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1435059869i/183392.jpg"
+static_thumbnail = "/images/readings/its-your-ship.webp"
 expand_preview = false
 related_readings = [
   "readings/2021-09-12-turn-the-ship-around.md",

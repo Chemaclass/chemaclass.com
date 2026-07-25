@@ -8,7 +8,7 @@ tags = [ "leadership", "team-management", "mentoring", "communication" ]
 subtitle = "Una guía para líderes técnicos que navegan el crecimiento y el cambio"
 pages = "220"
 author = "Camille Fournier"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51BHEtpF4eL._SX331_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/the-manager-path.webp"
 related_posts = [
   "blog/2021-07-01-tech-lead.md",
   "blog/2023-02-27-great-leadership.md",

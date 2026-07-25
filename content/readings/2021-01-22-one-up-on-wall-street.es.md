@@ -8,7 +8,7 @@ tags = [ "economics" ]
 subtitle = "Cómo usar lo que ya sabes para ganar dinero en el mercado"
 pages = "180"
 author = "Peter Lynch"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51RWLY76LAL._SX324_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/one-up-on-wall-street.webp"
 related_readings = [
   "readings/2021-01-31-stock-market-for-beginners.md",
   "readings/2021-01-15-rich-dad-poor-dad.md",
