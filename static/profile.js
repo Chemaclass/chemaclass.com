@@ -24,8 +24,10 @@
   // { posts: [], series: {}, lang: 'en' } fallback this replaces turned that bug
   // into a dashboard that told the reader they had finished nothing and read it
   // back to them in English. Let the SyntaxError reach the console instead.
-  var payload = JSON.parse(dataEl.textContent);
+  var parsed = JSON.parse(dataEl.textContent);
 
+  // Shape check on top of the parse: a payload that parsed but lacks `series`
+  // still threw further down, which looked identical to this page never loading.
   var payload = {
     posts: Array.isArray(parsed.posts) ? parsed.posts : [],
     series: (parsed.series && typeof parsed.series === 'object') ? parsed.series : {},
