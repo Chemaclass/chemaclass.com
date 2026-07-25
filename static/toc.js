@@ -67,6 +67,27 @@
 
   // One listener on the list instead of one per link: the markup arrives from the
   // server, so there is nothing to bind at creation time.
+  function bindMobileToggle() {
+    const btn = tocContainerRef.querySelector('.toc-mobile-toggle');
+    if (!btn) return;
+
+    btn.addEventListener('click', function () {
+      const open = tocContainerRef.dataset.tocOpen === 'true';
+      tocContainerRef.dataset.tocOpen = open ? 'false' : 'true';
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+    });
+
+    // Following a link is the point of opening it, so close it again.
+    const list = tocContainerRef.querySelector('.toc-list');
+    if (list) {
+      list.addEventListener('click', function (e) {
+        if (!e.target.closest('.toc-link')) return;
+        tocContainerRef.dataset.tocOpen = 'false';
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  }
+
   function bindTOCLinks() {
     const list = tocContainerRef.querySelector('.toc-list');
     if (!list) return;
@@ -240,9 +261,13 @@
       return;
     }
 
+    // Narrow screens show the panel as a collapsed disclosure above the article,
+    // so the desktop show/hide switch does not apply, but the links still do.
     if (compactMediaQuery.matches) {
-      setTOCState(true, false);
+      setTOCState(false, false);
       hideToggle();
+      bindTOCLinks();
+      bindMobileToggle();
       return;
     }
 

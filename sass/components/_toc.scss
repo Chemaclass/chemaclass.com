@@ -68,8 +68,31 @@
       scrollbar-color: var(--preview-divider-color) transparent;
     }
 
+    // Narrow screens: the sidebar becomes a collapsed disclosure above the article
+    // rather than disappearing. Static position, full width, no sticky and no
+    // viewport-height cap, so it never covers the text it links to.
     @media (max-width: 1024px) {
-      display: none;
+      width: 100%;
+      max-height: none;
+      position: static;
+      overflow: visible;
+      margin-bottom: 1.5rem;
+      padding: 0.5rem 0.75rem;
+
+      .toc-header {
+        display: none;
+      }
+
+      .toc-list {
+        display: none;
+        margin-top: 0.5rem;
+        max-height: 50vh;
+        overflow-y: auto;
+      }
+
+      &[data-toc-open="true"] .toc-list {
+        display: block;
+      }
     }
 
     // Scrolling down: navbar hidden, more vertical space available
@@ -255,3 +278,46 @@
   }
 }
 
+
+// Disclosure that opens the list on narrow screens. Desktop keeps the always-open
+// sidebar, so this is hidden there.
+.toc-mobile-toggle {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.35rem 0;
+  background: none;
+  border: none;
+  color: var(--heading-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &__chevron {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: var(--color-subtitle);
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    border-bottom: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+  }
+}
+
+[data-toc-open="true"] .toc-mobile-toggle__chevron {
+  transform: rotate(180deg);
+}

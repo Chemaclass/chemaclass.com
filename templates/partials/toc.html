@@ -44,6 +44,30 @@
   aria-label="{{ trans(key='toc_header_title', lang=lang) }}">
   <div id="reading-progress" class="reading-progress"></div>
 
+  {# Narrow screens hide the desktop panel and get this disclosure instead: a post
+     of any length was unnavigable on a phone, which is where most readers are. The
+     list ships collapsed at that width so opening it is the only thing that moves,
+     and toc.js binds the button. Without JS the noscript rule below expands it,
+     because a control that cannot open is worse than no control. #}
+  <button type="button"
+          class="toc-mobile-toggle"
+          aria-expanded="false"
+          aria-controls="toc-list">
+    <span class="toc-mobile-toggle__label">{{ trans(key="toc_header_title", lang=lang) }}</span>
+    <svg class="toc-mobile-toggle__chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      <path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+  <noscript>
+    <style>@media (max-width: 1024px) {
+      /* Matches the compiled selector, which nests under .blog-post-layout: a
+         shorter one loses on specificity and the list stays shut with no way to
+         open it. */
+      .blog-post-layout #toc-container .toc-list { display: block; }
+      .toc-mobile-toggle { display: none; }
+    }</style>
+  </noscript>
+
   <div class="toc-header">
     <a class="toc-title" href="#">{{ trans(key="toc_header_title", lang=lang) }}</a>
     <button type="button" class="toc-close" aria-label="{{ trans(key='toc_close_label', lang=lang) }}">
@@ -53,7 +77,7 @@
     </button>
   </div>
 
-  <ul class="toc-list" role="list">
+  <ul class="toc-list" id="toc-list" role="list">
     {% for a in page.toc %}
       <li class="toc-item toc-h{{ a.level }}">
         <a class="toc-link" href="#{{ a.id }}">{{ a.title }}</a>
