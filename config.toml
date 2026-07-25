@@ -646,3 +646,219 @@ desc_es = "Entender el comportamiento humano, motivación y patrones cognitivos.
 name = "economics"
 desc = "Economic theory, monetary policy, financial systems, and investing principles."
 desc_es = "Teoría económica, política monetaria, sistemas financieros y principios de inversión."
+
+[[extra.tag_descriptions]]
+name = "agentic-coding"
+desc = "Coding with agents that plan and execute, not just autocomplete."
+desc_es = "Programar con agentes que planifican y ejecutan, no solo autocompletan."
+
+[[extra.tag_descriptions]]
+name = "agile"
+desc = "Agile in practice: short feedback loops over ceremonies and certificates."
+desc_es = "Agile en la práctica: ciclos de feedback cortos frente a ceremonias y certificados."
+
+[[extra.tag_descriptions]]
+name = "ai"
+desc = "Working with AI agents: context, tooling, and where the human still decides."
+desc_es = "Trabajar con agentes de IA: contexto, herramientas y dónde decide el humano."
+
+[[extra.tag_descriptions]]
+name = "bash"
+desc = "Shell scripting that survives contact with production and CI."
+desc_es = "Scripting de shell que sobrevive al contacto con producción y CI."
+
+[[extra.tag_descriptions]]
+name = "bashunit"
+desc = "bashunit, the testing library that brings real assertions to bash scripts."
+desc_es = "bashunit, la librería de testing que trae aserciones de verdad a los scripts bash."
+
+[[extra.tag_descriptions]]
+name = "code-review"
+desc = "Reviewing code so it improves the design, not just the diff."
+desc_es = "Revisar código para mejorar el diseño, no solo el diff."
+
+[[extra.tag_descriptions]]
+name = "craftsmanship"
+desc = "Caring about how software is built, not only that it ships."
+desc_es = "Cuidar cómo se construye el software, no solo que salga."
+
+[[extra.tag_descriptions]]
+name = "cryptography"
+desc = "Keys, signatures, and hashes: the primitives and what they guarantee."
+desc_es = "Claves, firmas y hashes: las primitivas y qué garantizan."
+
+[[extra.tag_descriptions]]
+name = "ddd"
+desc = "Domain-Driven Design: modelling the business before the database."
+desc_es = "Domain-Driven Design: modelar el negocio antes que la base de datos."
+
+[[extra.tag_descriptions]]
+name = "developer-tools"
+desc = "The tools between an idea and a merged commit."
+desc_es = "Las herramientas entre una idea y un commit mergeado."
+
+[[extra.tag_descriptions]]
+name = "devops"
+desc = "Pipelines, environments, and shipping without holding your breath."
+desc_es = "Pipelines, entornos y desplegar sin aguantar la respiración."
+
+[[extra.tag_descriptions]]
+name = "docker"
+desc = "Containers for reproducible development and predictable deploys."
+desc_es = "Contenedores para desarrollo reproducible y despliegues predecibles."
+
+[[extra.tag_descriptions]]
+name = "dystopia"
+desc = "Books about futures worth avoiding, and why they still read as warnings."
+desc_es = "Libros sobre futuros que conviene evitar, y por qué siguen leyéndose como advertencias."
+
+[[extra.tag_descriptions]]
+name = "fiction"
+desc = "Novels and stories, read for pleasure rather than for work."
+desc_es = "Novelas y relatos, leídos por placer y no por trabajo."
+
+[[extra.tag_descriptions]]
+name = "freedom"
+desc = "Autonomy, sound money, and the right to opt out."
+desc_es = "Autonomía, dinero sólido y el derecho a salirse."
+
+[[extra.tag_descriptions]]
+name = "functional-programming"
+desc = "Immutability, pure functions, and composing behaviour instead of state."
+desc_es = "Inmutabilidad, funciones puras y componer comportamiento en vez de estado."
+
+[[extra.tag_descriptions]]
+name = "gacela"
+desc = "Gacela, the PHP framework for splitting an application into real modules."
+desc_es = "Gacela, el framework PHP para dividir una aplicación en módulos de verdad."
+
+[[extra.tag_descriptions]]
+name = "git"
+desc = "Git as a design tool: readable history, small commits, honest branches."
+desc_es = "Git como herramienta de diseño: historia legible, commits pequeños, ramas honestas."
+
+[[extra.tag_descriptions]]
+name = "golang"
+desc = "Go: simple concurrency and small binaries, with the trade-offs that come with them."
+desc_es = "Go: concurrencia simple y binarios pequeños, con los compromisos que traen."
+
+[[extra.tag_descriptions]]
+name = "horror"
+desc = "Stories that unsettle, and what the fear is really about."
+desc_es = "Historias que inquietan, y de qué habla realmente el miedo."
+
+[[extra.tag_descriptions]]
+name = "lisp"
+desc = "Parentheses, macros, and treating code as data."
+desc_es = "Paréntesis, macros y tratar el código como datos."
+
+[[extra.tag_descriptions]]
+name = "live-coding"
+desc = "Building software in front of an audience, mistakes included."
+desc_es = "Construir software delante de una audiencia, errores incluidos."
+
+[[extra.tag_descriptions]]
+name = "mentoring"
+desc = "Growing other developers without doing the work for them."
+desc_es = "Hacer crecer a otros desarrolladores sin hacerles el trabajo."
+
+[[extra.tag_descriptions]]
+name = "modular"
+desc = "Boundaries between modules, and why they decide how a system ages."
+desc_es = "Fronteras entre módulos, y por qué deciden cómo envejece un sistema."
+
+[[extra.tag_descriptions]]
+name = "music"
+desc = "Songs, instruments, and the making of them."
+desc_es = "Canciones, instrumentos y el proceso de hacerlas."
+
+[[extra.tag_descriptions]]
+name = "open-source"
+desc = "Publishing, maintaining, and depending on code in the open."
+desc_es = "Publicar, mantener y depender de código abierto."
+
+[[extra.tag_descriptions]]
+name = "phel"
+desc = "Phel, a functional Lisp that compiles to PHP."
+desc_es = "Phel, un Lisp funcional que compila a PHP."
+
+[[extra.tag_descriptions]]
+name = "php"
+desc = "Modern PHP: types, tooling, and architecture beyond the framework."
+desc_es = "PHP moderno: tipos, herramientas y arquitectura más allá del framework."
+
+[[extra.tag_descriptions]]
+name = "presentations"
+desc = "Preparing a talk so the audience leaves with something."
+desc_es = "Preparar una charla para que el público se lleve algo."
+
+[[extra.tag_descriptions]]
+name = "privacy"
+desc = "Keeping data yours: threat models, tools, and trade-offs."
+desc_es = "Que tus datos sigan siendo tuyos: modelos de amenaza, herramientas y compromisos."
+
+[[extra.tag_descriptions]]
+name = "productivity"
+desc = "Doing the work that matters instead of more work."
+desc_es = "Hacer el trabajo que importa en lugar de más trabajo."
+
+[[extra.tag_descriptions]]
+name = "scrum"
+desc = "Scrum as practised: what the framework helps with and what it hides."
+desc_es = "Scrum en la práctica: en qué ayuda el framework y qué esconde."
+
+[[extra.tag_descriptions]]
+name = "security"
+desc = "Threat models, secrets, and the habits that prevent incidents."
+desc_es = "Modelos de amenaza, secretos y los hábitos que evitan incidentes."
+
+[[extra.tag_descriptions]]
+name = "software"
+desc = "Building software: design decisions, trade-offs, and the craft around them."
+desc_es = "Construir software: decisiones de diseño, compromisos y el oficio alrededor."
+
+[[extra.tag_descriptions]]
+name = "software-architecture"
+desc = "Structuring systems so they can still be changed later."
+desc_es = "Estructurar sistemas para que se puedan seguir cambiando después."
+
+[[extra.tag_descriptions]]
+name = "software-design"
+desc = "Designing code that is easy to read, test, and replace."
+desc_es = "Diseñar código fácil de leer, testear y reemplazar."
+
+[[extra.tag_descriptions]]
+name = "speaking"
+desc = "Conference talks, workshops, and getting on stage."
+desc_es = "Charlas en conferencias, talleres y subirse al escenario."
+
+[[extra.tag_descriptions]]
+name = "symfony"
+desc = "Symfony: using the framework without letting it own your domain."
+desc_es = "Symfony: usar el framework sin dejar que se apropie de tu dominio."
+
+[[extra.tag_descriptions]]
+name = "team-culture"
+desc = "The habits and defaults that decide how a team actually works."
+desc_es = "Los hábitos y los valores por defecto que deciden cómo trabaja un equipo."
+
+[[extra.tag_descriptions]]
+name = "team-management"
+desc = "Leading a team day to day: priorities, trust, and hard conversations."
+desc_es = "Liderar un equipo en el día a día: prioridades, confianza y conversaciones difíciles."
+
+[[extra.tag_descriptions]]
+name = "tutorial"
+desc = "Step-by-step guides you can follow with a keyboard."
+desc_es = "Guías paso a paso que puedes seguir con el teclado."
+
+[[extra.tag_descriptions]]
+name = "workshop"
+desc = "Hands-on sessions where the group writes the code."
+desc_es = "Sesiones prácticas donde el grupo escribe el código."
+
+[[extra.tag_descriptions]]
+name = "xp"
+desc = "Extreme Programming: pairing, TDD, and continuous everything."
+desc_es = "Extreme Programming: pair programming, TDD y todo en continuo."
+
