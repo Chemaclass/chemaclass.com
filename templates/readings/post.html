@@ -66,38 +66,8 @@
             {{ macros::back_arrow() }}
             {{ trans(key="all_readings", lang=lang) }}
           </a>
-          {# Rendered here, not injected by favorites.js: a button appearing after load
-             widens this row and can rewrap it, pushing the whole article down.
-             favorites.js only reads localStorage and flips the saved state. #}
-          <button type="button"
-                  class="favorite-toggle"
-                  aria-pressed="false"
-                  title="{{ trans(key='favorite_save', lang=lang) }}"
-                  aria-label="{{ trans(key='favorite_save', lang=lang) }}"
-                  data-label-save="{{ trans(key='favorite_save', lang=lang) }}"
-                  data-label-remove="{{ trans(key='favorite_remove', lang=lang) }}">
-            <svg class="favorite-toggle__icon" viewBox="0 0 24 24" width="16" height="16"
-                 fill="none" stroke="currentColor" stroke-width="2"
-                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
-            </svg>
-          </button>
-          <button id="toc-toggle"
-                  class="toc-toggle"
-                  type="button"
-                  role="switch"
-                  aria-checked="true"
-                  aria-label="Toggle table of contents">
-            <svg class="toc-toggle__icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="1" y="2" width="5" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M9 4h6M9 8h6M9 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <span class="toc-toggle__label">{{ trans(key="toc_toggle_label", lang=lang) }}</span>
-            <span class="toc-toggle__switch">
-              <span class="toc-toggle__knob"></span>
-            </span>
-            <kbd class="toc-toggle__shortcut">T</kbd>
-          </button>
+          {{ macros::favorite_toggle(lang=lang) }}
+          {{ macros::toc_toggle(lang=lang) }}
         </div>
 
         <!-- Hero thumbnail -->
