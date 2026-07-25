@@ -6,7 +6,11 @@ window.addEventListener('load', function () {
     //////////////////////////
     // scroll to top button
     //////////////////////////
+    // #scroll-to-top is rendered unconditionally by the `header` block in
+    // base.html, which no template overrides. Bail rather than throw if that ever
+    // changes, otherwise the navbar and TOC handlers below die with it.
     const $scrollToTop = document.getElementById('scroll-to-top');
+    if (!$scrollToTop) return;
 
     $scrollToTop.addEventListener('click', () => {
         window.scrollTo({top: 0, behavior: 'smooth'});

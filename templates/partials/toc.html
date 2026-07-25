@@ -24,6 +24,13 @@
   {% endfor %}
 {% endfor %}
 
+{# Contract: the #related-content target of the entry below is rendered by
+   partials/related-posts.html, not by this file. Any template that includes this
+   partial and lets a page set extra.related_posts / extra.related_readings must
+   also include partials/related-posts.html, or the TOC grows a link to an anchor
+   that is not on the page. blog/post.html and readings/post.html include both;
+   books/post.html includes only this one, which is safe today because no book
+   chapter sets either field. #}
 {% set has_related = page.extra.related_posts or page.extra.related_readings %}
 {# The related section sits inside .blog-post__content, so the old script counted
    its heading towards the minimum. Keep counting it, or 47 readings with a single
