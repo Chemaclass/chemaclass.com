@@ -8,7 +8,7 @@ tags = [ "leadership", "team-management", "communication", "productivity", "ment
 subtitle = "The Tactical Guide to Company Building"
 pages = "200"
 author = "Matt Mochary"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41zoJiSUq4L._SX331_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/the-great-ceo-within.webp"
 expand_preview = false
 related_readings = [
   "readings/2020-04-03-high-output-management.md",

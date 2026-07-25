@@ -8,7 +8,7 @@ tags = [ "docker", "devops" ]
 subtitle = "Desde introducción hasta conceptos avanzados"
 pages = "200"
 author = "Fran Ramírez, Elías Grande, Rafael Troncoso"
-static_thumbnail = "https://0xword.com/477-large_default/docker-secdevops.jpg"
+static_thumbnail = "/images/readings/docker-secdevops.webp"
 expand_preview = false
 related_readings = [
   "readings/2024-05-31-the-phoenix-project.md",

@@ -9,7 +9,7 @@ tags = [ "bitcoin", "economics", "philosophy" ]
 subtitle = "Published in 2017, most of the technology shown is already history"
 pages = "200"
 author = "Félix Brezo, Yaiza Rubio"
-static_thumbnail = "https://0xword.com/230-large_default/bitcoin-la-tecnologia-blockchain-y-su-investigacion.jpg"
+static_thumbnail = "/images/readings/bitcoin-la-tecnologia-blockchain-y-su-investigacion.webp"
 expand_preview = false
 related_readings = [
   "readings/2021-09-20-the-bitcoin-standard.md",

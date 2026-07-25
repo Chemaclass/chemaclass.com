@@ -8,7 +8,7 @@ tags = [ "xp", "agile", "tdd", "pair-programming", "communication" ]
 subtitle = "Abraza el Cambio"
 pages = "160"
 author = "Kent Beck"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41b11Tipy0L._SX396_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/extreme-programming-explained.webp"
 related_posts = [
   "blog/2024-03-28-effective-pair-programming.md",
   "blog/2023-01-09-interview-about-xp-and-agile.md",

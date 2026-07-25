@@ -9,7 +9,7 @@ tags = [ "leadership", "team-management", "communication", "productivity", "phil
 subtitle = "Cómo Crear Innovación, Resolver Puzzles de Personas y Ganar en los Negocios"
 pages = "270"
 author = "Thomas H. Douglas"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653013359i/61132070.jpg"
+static_thumbnail = "/images/readings/adapt-or-die.webp"
 expand_preview = true
 related_readings = [
   "readings/2021-01-16-who-moved-my-cheese.md",

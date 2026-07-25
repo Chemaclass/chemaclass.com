@@ -9,7 +9,7 @@ tags = [ "bitcoin", "economics", "leadership" ]
 subtitle = "The battle for control over Bitcoin's protocol rules"
 pages = "240"
 author = "Jonathan Bier"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615869542i/57429394.jpg"
+static_thumbnail = "/images/readings/the-blocksize-war.webp"
 expand_preview = false
 related_readings = [
   "readings/2021-09-20-the-bitcoin-standard.md",

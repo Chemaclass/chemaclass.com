@@ -9,7 +9,7 @@ tags = [ "bitcoin", "economics", "philosophy" ]
 subtitle = "Por qué nuestro sistema financiero nos está fallando y cómo podemos mejorarlo"
 pages = "538"
 author = "Lyn Alden"
-static_thumbnail = "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1692701772i/197566578.jpg"
+static_thumbnail = "/images/readings/broken-money.webp"
 expand_preview = true
 related_readings = [
   "readings/2021-09-20-the-bitcoin-standard.md",

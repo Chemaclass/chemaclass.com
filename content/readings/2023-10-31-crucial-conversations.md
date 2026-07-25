@@ -9,7 +9,7 @@ tags = [ "communication", "leadership", "psychology", "team-management" ]
 subtitle = "Tools for Talking When Stakes are High"
 pages = "200"
 author = "Patterson, Grenny, McMillan, Switzler"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1497193248i/15014.jpg"
+static_thumbnail = "/images/readings/crucial-conversations.webp"
 expand_preview = false
 related_readings = [
   "readings/2020-06-12-never-split-the-difference.md",

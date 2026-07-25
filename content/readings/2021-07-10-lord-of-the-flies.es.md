@@ -8,7 +8,7 @@ tags = [ "fiction", "psychology", "leadership", "philosophy" ]
 subtitle = ""
 pages = "220"
 author = "William Golding"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51de-lVnNCL._SX325_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/lord-of-the-flies.webp"
 expand_preview = true
 related_readings = [
   "readings/2020-11-02-animal-farm.md",

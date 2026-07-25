@@ -8,7 +8,7 @@ tags = [ "software-design", "architecture", "clean-code" ]
 subtitle = "Cómo crear componentes de software reutilizables"
 pages = "250"
 author = "Matthias Noback"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41MltJ4VMxL._SX348_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/packaging-design.webp"
 related_readings = [
   "readings/2016-09-01-sprint.md",
   "readings/2022-08-21-continuous-discovery-habits.md",

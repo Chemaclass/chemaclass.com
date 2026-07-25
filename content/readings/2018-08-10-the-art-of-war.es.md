@@ -8,7 +8,7 @@ tags = [ "philosophy", "psychology", "leadership" ]
 subtitle = "¿Cómo debemos comportarnos en una batalla?"
 pages = "100"
 author = "Sun Tzu"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41Le0J5QuNL._SX331_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/the-art-of-war.webp"
 expand_preview = false
 related_readings = [
   "readings/2021-04-19-the-art-of-leadership.md",

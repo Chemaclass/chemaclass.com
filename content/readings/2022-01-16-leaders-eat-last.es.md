@@ -8,7 +8,7 @@ tags = [ "leadership", "team-management", "psychology", "communication" ]
 subtitle = "Por qué algunos equipos trabajan unidos y otros no"
 pages = "360"
 author = "Simon Sinek"
-static_thumbnail = "https://m.media-amazon.com/images/I/51ejdeSXFjL.jpg"
+static_thumbnail = "/images/readings/leaders-eat-last.webp"
 expand_preview = false
 related_readings = [
   "readings/2021-11-28-start-with-why.md",

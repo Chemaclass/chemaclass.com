@@ -9,7 +9,7 @@ tags = [ "bitcoin", "privacy", "economics", "philosophy" ]
 subtitle = "La Historia de las Personas y Proyectos que Inspiraron Bitcoin"
 pages = "300"
 author = "Aaron van Wirdum"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1703246002i/204250558.jpg"
+static_thumbnail = "/images/readings/the-genesis-book.webp"
 expand_preview = true
 related_readings = [
   "readings/2021-09-20-the-bitcoin-standard.md",

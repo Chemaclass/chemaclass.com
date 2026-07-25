@@ -8,7 +8,7 @@ tags = [ "refactoring", "testing", "tdd", "software-design" ]
 subtitle = "Estrategias para trabajar con código heredado"
 pages = "460"
 author = "Michael Feathers"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41Fh9iUog4L._SX376_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/working-effectively-with-legacy-code.webp"
 related_readings = [
   "readings/2016-05-01-clean-code.md",
   "readings/2022-07-11-clean-craftsmanship.md",

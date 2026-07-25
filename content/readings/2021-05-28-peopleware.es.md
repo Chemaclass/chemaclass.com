@@ -8,7 +8,7 @@ tags = [ "team-management", "productivity", "communication", "psychology" ]
 subtitle = "Proyectos y equipos productivos"
 pages = "230"
 author = "Tom DeMarco"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51RuNCswX8L._SX341_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/peopleware.webp"
 expand_preview = true
 related_readings = [
   "readings/2022-03-31-team-topologies.md",

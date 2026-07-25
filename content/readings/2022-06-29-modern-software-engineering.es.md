@@ -8,7 +8,7 @@ tags = [ "software-design", "testing", "architecture", "agile" ]
 subtitle = "Haciendo lo que funciona para construir mejor software más rápido"
 pages = "200"
 author = "David Farley"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51OFUgJAdaL._SX402_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/modern-software-engineering.webp"
 expand_preview = false
 related_readings = [
   "readings/2022-07-11-clean-craftsmanship.md",

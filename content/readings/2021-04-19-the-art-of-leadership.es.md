@@ -9,7 +9,7 @@ subtitle = "Pequeñas cosas, bien hechas"
 pin = false
 pages = "165"
 author = "Michael Lopp"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/31YOKF2IcBL._SX331_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/the-art-of-leadership.webp"
 related_posts = [
   "blog/2023-02-27-great-leadership.md",
   "blog/2022-09-25-the-beauty-of-leadership.md",
