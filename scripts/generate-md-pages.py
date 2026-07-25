@@ -5,13 +5,19 @@ Creates index.md files alongside HTML for markdown-friendly viewing.
 Inspired by Claude Code docs serving raw .md files.
 """
 
+from __future__ import annotations
+
 import re
 from pathlib import Path
+from typing import Dict, List, TypedDict
 
 from _common import (
     BASE_URL,
     PUBLIC_DIR,
     SECTIONS,
+    TFrontMatter,
+    TLang,
+    TSection,
     entry_url,
     get_slug_from_filename,
     iter_section_files,
@@ -20,7 +26,17 @@ from _common import (
 )
 
 
-def format_md_page(frontmatter, body, url, title):
+class TMdPage(TypedDict):
+    """One rendered page, plus the metadata the section index needs. Total: the
+    processor fills every field, so generate_index_md reads them directly."""
+    slug: str
+    title: str
+    date: str
+    description: str
+    md_content: str
+
+
+def format_md_page(frontmatter: TFrontMatter, body: str, url: str, title: str) -> str:
     """Format a markdown page with a clean header and original content."""
     subtitle = frontmatter.get('subtitle', '')
     date = frontmatter.get('date', '')
@@ -50,7 +66,7 @@ def format_md_page(frontmatter, body, url, title):
     return output
 
 
-def generate_index_md(section, files, base_url):
+def generate_index_md(section: TSection, files: List[TMdPage], base_url: str) -> str:
     """Generate an index.md for a section listing all files."""
     title = section.capitalize()
     # Derive path prefix from base_url (e.g. '' or '/es')
@@ -79,7 +95,7 @@ def generate_index_md(section, files, base_url):
     return output
 
 
-def process_markdown_file(filepath: Path, section: str, base_url: str) -> dict:
+def process_markdown_file(filepath: Path, section: TSection, base_url: str) -> TMdPage:
     """Process a single markdown file and generate .md version."""
     frontmatter, body = read_entry(filepath)
     title = require_title(frontmatter, filepath)
@@ -112,10 +128,10 @@ def main() -> None:
     for section in SECTIONS:
         # Spanish entries are colocated with their English original and land under
         # /es/, so this generator wants both and sorts them apart by filename.
-        per_lang = {'en': [], 'es': []}
+        per_lang: Dict[TLang, List[TMdPage]] = {'en': [], 'es': []}
 
         for filepath in iter_section_files(section, translations=True):
-            lang = 'es' if '.es.md' in filepath.name else 'en'
+            lang: TLang = 'es' if '.es.md' in filepath.name else 'en'
             result = process_markdown_file(filepath, section, BASE_URL)
             per_lang[lang].append(result)
 

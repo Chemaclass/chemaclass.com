@@ -9,7 +9,7 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
-from typing import Dict
+from typing import Any, Dict
 
 from _common import (
     CONTENT_DIR,
@@ -21,8 +21,11 @@ from _common import (
     read_entry,
 )
 
+# Maps a full published URL to a YYYY-MM-DD date. The key is the whole URL,
+# language prefix included, because that is how the search index keys its docs.
+TUrlToDate = Dict[str, str]
 
-def build_url_to_date_map(content_dir: Path) -> Dict[str, str]:
+def build_url_to_date_map(content_dir: Path) -> TUrlToDate:
     """Build a mapping from entry URL to publication date, both languages.
 
     A `.es.md` shares its slug with the English original but is published under
@@ -30,7 +33,7 @@ def build_url_to_date_map(content_dir: Path) -> Dict[str, str]:
     the URL off the filename stem, produces keys no Spanish permalink can match,
     which is how search_index.es.json ended up with a date on none of its 221
     documents while the English index had 164."""
-    url_to_date = {}
+    url_to_date: TUrlToDate = {}
 
     for section in SECTIONS:
         for filepath in iter_section_files(section, content_dir, translations=True):
@@ -46,7 +49,23 @@ def build_url_to_date_map(content_dir: Path) -> Dict[str, str]:
 
     return url_to_date
 
-def enrich_search_index(public_dir: Path, url_to_date: Dict[str, str]) -> None:
+def docs_of(search_index: Any, index_file: Path) -> Dict[str, Dict[str, Any]]:
+    """Narrow the elasticlunr index Zola wrote down to its docs map.
+
+    json.load hands back Any, so every access under it is unchecked. Zola owns this
+    file's shape, so a release that moved `documentStore.docs` would surface as a
+    bare KeyError, or as .items() on a list. Check the shape once."""
+    store = search_index.get('documentStore') if isinstance(search_index, dict) else None
+    docs = store.get('docs') if isinstance(store, dict) else None
+    if not isinstance(docs, dict):
+        raise SystemExit(
+            f"{index_file}: expected documentStore.docs to be an object, got "
+            f"{type(docs).__name__}. Did the Zola search index format change?"
+        )
+    return docs
+
+
+def enrich_search_index(public_dir: Path, url_to_date: TUrlToDate) -> None:
     """Add dates to search indices for all languages.
 
     An index that comes out with no dates at all means the URLs built from the
@@ -65,7 +84,7 @@ def enrich_search_index(public_dir: Path, url_to_date: Dict[str, str]) -> None:
         with open(index_file, 'r', encoding='utf-8') as f:
             search_index = json.load(f)
 
-        docs = search_index['documentStore']['docs']
+        docs = docs_of(search_index, index_file)
 
         enriched_count = 0
         for url, doc in docs.items():

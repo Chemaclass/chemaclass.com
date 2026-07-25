@@ -19,7 +19,13 @@
   // back to them in English. Let the SyntaxError reach the console instead.
   var payload = JSON.parse(dataEl.textContent);
 
-  var lang = payload.lang || 'en';
+  var payload = {
+    posts: Array.isArray(parsed.posts) ? parsed.posts : [],
+    series: (parsed.series && typeof parsed.series === 'object') ? parsed.series : {},
+    lang: parsed.lang === 'es' ? 'es' : 'en'
+  };
+
+  var lang = payload.lang;
   var es = lang === 'es';
 
   // Tiny i18n dictionary, kept in JS so we don't pollute config.toml for a
@@ -90,11 +96,27 @@
     tools: 'Tools'
   };
 
+  // Both stored maps are { normalizedPath: timestamp }. They are reader-writable
+  // and the Import button below feeds a whole file into them, so treat what comes
+  // back as untrusted: `JSON.parse(...) || {}` passed arrays, numbers and strings
+  // straight through, and this page then sorted and date-formatted them. Keep
+  // only real timestamps so the sort comparators below cannot see NaN and
+  // fmtDate() cannot be handed something new Date() will not take.
+  function asTimestampMap(raw) {
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return {};
+    var map = {};
+    for (var path in raw) {
+      if (!Object.prototype.hasOwnProperty.call(raw, path)) continue;
+      var ts = raw[path];
+      if (typeof ts === 'number' && isFinite(ts) && ts > 0) map[path] = ts;
+    }
+    return map;
+  }
+
   function loadJSON(key) {
     var raw;
     // Reading localStorage throws when the origin has no storage access, e.g.
-    // Safari private browsing. Nothing is stored then, so an empty map is right
-    // and there is nothing to report.
+    // Safari private browsing. Nothing is stored then, so an empty map is right.
     try { raw = localStorage.getItem(key); }
     catch (e) { return {}; }
     if (!raw) return {};
@@ -114,7 +136,9 @@
       console.error('[profile] ' + key + ' is not an object, ignoring it:', parsed);
       return {};
     }
-    return parsed;
+    // Every caller reads these as { path: timestamp }, and a bad timestamp reaches
+    // the progress maths and the rendered dates, so drop those entries here.
+    return asTimestampMap(parsed);
   }
 
   function saveJSON(key, val) {
@@ -128,10 +152,17 @@
   }
 
   // Build a path→post index for cross-referencing localStorage keys.
-  var posts = payload.posts || [];
+  // Only posts that got a _key here are kept: render() reads p._key on every
+  // post, and a record whose permalink did not parse left it undefined, so a
+  // single bad entry threw on p._key.indexOf() before the first card was built
+  // and the page sat on its loading skeleton forever. Same for `section`, which
+  // indexes a fixed pair of buckets below.
+  var rawPosts = Array.isArray(payload.posts) ? payload.posts : [];
+  var posts = [];
   var byPath = {};
-  for (var i = 0; i < posts.length; i++) {
-    var p = posts[i];
+  for (var i = 0; i < rawPosts.length; i++) {
+    var p = rawPosts[i];
+    if (!p || (p.section !== 'blog' && p.section !== 'readings')) continue;
     // permalink like "https://chemaclass.com/blog/slug/" → "/blog/slug"
     // Every permalink comes from the same `{{ post.permalink }}` in
     // templates/profile.html and Zola always renders it absolute, so new URL
@@ -141,6 +172,7 @@
     var key = normalize(new URL(p.permalink).pathname);
     p._key = key;
     byPath[key] = p;
+    posts.push(p);
   }
 
   function el(tag, cls, html) {
@@ -480,9 +512,14 @@
         var data;
         try { data = JSON.parse(reader.result); }
         catch (e) { window.alert(t.importInvalid); fileInput.value = ''; return; }
-        if (!data || typeof data !== 'object' ||
-            (data.read && typeof data.read !== 'object') ||
-            (data.favorites && typeof data.favorites !== 'object')) {
+        // `typeof x === 'object'` is true for null and for arrays, so the old
+        // check accepted both and then copied whatever the file held straight
+        // into live reader storage: a value like "2024-01-01" or true became a
+        // timestamp that every date read afterwards had to survive. Run the file
+        // through the same shape gate as stored data, and require at least one
+        // recognisable map so an unrelated JSON file is still rejected loudly.
+        if (!data || typeof data !== 'object' || Array.isArray(data) ||
+            (data.read === undefined && data.favorites === undefined)) {
           window.alert(t.importInvalid);
           fileInput.value = '';
           return;
@@ -490,8 +527,8 @@
         var curRead = loadJSON(READ_KEY);
         var curFavs = loadJSON(FAV_KEY);
         var addedRead = 0, addedFavs = 0;
-        var inRead = data.read || {};
-        var inFavs = data.favorites || {};
+        var inRead = asTimestampMap(data.read);
+        var inFavs = asTimestampMap(data.favorites);
         Object.keys(inRead).forEach(function (k) {
           if (!(k in curRead)) { curRead[k] = inRead[k]; addedRead++; }
         });

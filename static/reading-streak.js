@@ -75,6 +75,14 @@
     return pill;
   }
 
+  // Stored reader data is untrusted input: it is reader-writable, it survives
+  // every release, and the profile page's Import button copies a whole file into
+  // it. `JSON.parse(...) || {}` caught only null and a syntax error, so an array,
+  // a number or a string all came through truthy and then broke writing silently
+  // (JSON.stringify of an array drops string properties). Values have to be real
+  // timestamps too: formatDate() below feeds them to new Date(), and a string
+  // like "yesterday" yields an Invalid Date that toLocaleDateString renders as
+  // the literal text "Invalid Date" in the card pill instead of throwing.
   function loadRead() {
     var raw;
     // Reading localStorage throws when the origin has no storage access, e.g.
@@ -84,10 +92,9 @@
     catch (e) { return {}; }
     if (!raw) return {};
 
-    // Past this point the value is one we wrote. A stored value that no longer
-    // parses, or that is not the { path: timestamp } map this file writes, is
-    // corruption: the next save replaces it, so a silent {} is how a reader's
-    // whole reading history disappears without anyone noticing.
+    // Past this point the value is one we wrote, but it stays reader-writable, so
+    // treat it as untrusted. A silent {} on corruption is how a reader's whole
+    // reading history disappears: the next save replaces whatever is there.
     var parsed;
     try { parsed = JSON.parse(raw); }
     catch (e) {
@@ -98,7 +105,17 @@
       console.error('[reading-streak] ' + STORAGE_KEY + ' is not an object, ignoring it:', parsed);
       return {};
     }
-    return parsed;
+
+    // Keep only real timestamps, or the "read on" tooltip renders Invalid Date.
+    // Rebuilding the map means the next save heals the stored value.
+    var map = {};
+    for (var path in parsed) {
+      if (!Object.prototype.hasOwnProperty.call(parsed, path)) continue;
+      var ts = parsed[path];
+      if (typeof ts === 'number' && isFinite(ts) && ts > 0) map[path] = ts;
+      else console.warn('[reading-streak] dropping ' + path + ', timestamp is not usable:', ts);
+    }
+    return map;
   }
 
   function saveRead(map) {

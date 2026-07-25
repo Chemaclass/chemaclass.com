@@ -23,10 +23,12 @@
     catch (e) { return {}; }
     if (!raw) return {};
 
-    // Past this point the value is one we wrote. A stored value that no longer
-    // parses, or that is not the { path: timestamp } map this file writes, is
-    // corruption: the next save replaces it, so silently returning {} is how the
-    // reader's saved posts vanish without a trace.
+    // Past this point the value is one we wrote, and it is still reader-writable
+    // and outlives every release, so treat it as untrusted. `JSON.parse(...) || {}`
+    // caught only null and syntax errors: an array, a number or a string parses
+    // truthy, and writing through one loses everything, because JSON.stringify of
+    // an array drops string properties. Saving then appeared to work and persisted
+    // nothing, permanently, with no error anywhere.
     var parsed;
     try { parsed = JSON.parse(raw); }
     catch (e) {
@@ -37,7 +39,17 @@
       console.error('[favorites] ' + STORAGE_KEY + ' is not an object, ignoring it:', parsed);
       return {};
     }
-    return parsed;
+
+    // Drop entries whose timestamp is not a real one, or the "saved on" dates
+    // render as Invalid Date. Rebuilding the map means the next save heals it.
+    var map = {};
+    for (var path in parsed) {
+      if (!Object.prototype.hasOwnProperty.call(parsed, path)) continue;
+      var ts = parsed[path];
+      if (typeof ts === 'number' && isFinite(ts) && ts > 0) map[path] = ts;
+      else console.warn('[favorites] dropping ' + path + ', timestamp is not usable:', ts);
+    }
+    return map;
   }
 
   function save(map) {

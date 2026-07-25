@@ -11,7 +11,7 @@ from __future__ import annotations
 import re
 import sys
 from pathlib import Path
-from typing import Iterator, List, Optional, TypedDict
+from typing import Iterator, Literal, Optional, Tuple, TypedDict
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = PROJECT_ROOT / 'content'
@@ -42,37 +42,49 @@ def _read_base_url() -> str:
 # Site origin, no trailing slash. Sourced from config.toml, never hardcoded.
 BASE_URL = _read_base_url()
 
+# The content directories the generators walk. Spelled as a closed set because
+# iter_section_files() below yields nothing for a directory that is not there:
+# a mistyped section produces an empty output file rather than an error, which is
+# the kind of miss nobody notices. As a Literal, the typo is a type error.
+# 'services' is only walked by the terminal generator, not by SECTIONS.
+TSection = Literal['blog', 'readings', 'talks', 'services']
+
 # The sections every generator walks. Ordered, because it decides the order
 # entries appear in llms-full.txt and the terminal filesystem.
-SECTIONS = ['blog', 'readings', 'talks']
+SECTIONS: list[TSection] = ['blog', 'readings', 'talks']
+
+# The two languages content is authored in. Spanish entries are colocated with
+# their English original as `*.es.md` and publish under /es/.
+TLang = Literal['en', 'es']
 
 
 class TFrontMatter(TypedDict, total=False):
     """The front-matter subset the generators read, flattened.
 
-    Two differences from the source file are worth knowing, because both have
-    bitten already:
+    total=False because a key is set only when its pattern matched, so a post
+    missing `title =` simply has no 'title'. Read with .get(), or prove the key is
+    present first: indexing straight in turns a titleless post into a bare KeyError
+    that fails the whole build.
+
+    Two differences from the source file, both of which have bitten already:
 
     - `subtitle`, `thumbnail`, `related_posts` and `related_readings` live under
-      `[extra]` in the TOML, but sit at the top level here. Only `title`,
-      `description`, `date` and `tags` are genuinely top-level in the source.
-      A key written on the wrong side of the `[extra]` line parses fine and is
-      then read by nobody.
+      `[extra]` in the TOML but sit at the top level here. Only `title`,
+      `description`, `date` and `tags` are genuinely top-level in the source, so a
+      key written on the wrong side of the `[extra]` line parses fine and is then
+      read by nobody.
     - `thumbnail` holds `[extra] static_thumbnail`. The templates ALSO read a
-      separate `extra.thumbnail`, a page-relative path for colocated assets
-      that no content file currently sets. The two are not the same field.
-
-    Every key is optional: `extract_frontmatter` sets one only when its pattern
-    matches, so callers must use `.get()`.
+      separate `extra.thumbnail`, a page-relative path for colocated assets that no
+      content file currently sets. The two are not the same field.
     """
     title: str
     description: str
     date: str
-    tags: List[str]
+    tags: list[str]
     subtitle: str
     thumbnail: str
-    related_posts: List[str]
-    related_readings: List[str]
+    related_posts: list[str]
+    related_readings: list[str]
 
 
 def extract_frontmatter(content: str) -> TFrontMatter:
@@ -153,7 +165,7 @@ def get_slug_from_filename(filename: str) -> str:
 
 
 def iter_section_files(
-    section: str,
+    section: TSection,
     content_dir: Optional[Path] = None,
     translations: bool = False,
 ) -> Iterator[Path]:
@@ -171,9 +183,13 @@ def iter_section_files(
         yield path
 
 
-def read_entry(filepath: Path, strip_yaml: bool = False) -> tuple:
+def read_entry(filepath: Path, strip_yaml: bool = False) -> Tuple[TFrontMatter, str]:
     """Read one content file and return (frontmatter, body). The date falls back
-    to the filename prefix, which is where most posts carry it."""
+    to the filename prefix, which is where most posts carry it.
+
+    The pair is spelled out rather than left as a bare `tuple`: every generator
+    unpacks this, and a bare tuple made both halves Any, so unpacking in the wrong
+    order or calling .get() on the body type-checked fine and failed at build time."""
     try:
         content = filepath.read_text(encoding='utf-8')
     except (OSError, UnicodeDecodeError) as e:
@@ -190,8 +206,12 @@ def read_entry(filepath: Path, strip_yaml: bool = False) -> tuple:
     return fm, get_content_body(content, strip_yaml=strip_yaml)
 
 
-def entry_url(section: str, slug: str, base_url: str = BASE_URL, es: bool = False) -> str:
-    """Canonical URL of a section entry. Spanish entries are served under /es/."""
+def entry_url(section: TSection, slug: str, base_url: str = BASE_URL, es: bool = False) -> str:
+    """Canonical URL of a section entry. Spanish entries are served under /es/.
+
+    Language is an explicit argument on purpose. While it was an implicit filename
+    convention, the Spanish search index carried dates on 0 of 221 documents
+    because the keys it built matched no permalink."""
     prefix = f'{base_url}/es' if es else base_url
     return f'{prefix}/{section}/{slug}/'
 

@@ -16,10 +16,13 @@ It fails loudly on an `fa-` class that no longer exists upstream, which is
 usually a typo in a template.
 """
 
+from __future__ import annotations
+
 import json
 import re
 import sys
 from pathlib import Path
+from typing import Iterable
 
 try:
     from fontTools import subset
@@ -45,9 +48,9 @@ ICON_NAME = re.compile(r"\.fa-([a-z0-9-]+):before")
 USED_CLASS = re.compile(r"fa-([a-z0-9-]+)")
 
 
-def parse_icons(css):
+def parse_icons(css: str) -> dict[str, int]:
     """Map every icon name upstream knows to its codepoint."""
-    icons = {}
+    icons: dict[str, int] = {}
     for selector, content in ICON_RULE.findall(css):
         # Ligatures like "\f0d0\f0d1" are not icons we can subset by codepoint.
         codepoints = [int(cp, 16) for cp in content.split("\\") if cp]
@@ -58,9 +61,10 @@ def parse_icons(css):
     return icons
 
 
-def scan_used(icons):
+def scan_used(icons: dict[str, int]) -> tuple[set[str], set[str]]:
     """Icon names referenced anywhere in the site, plus anything unrecognised."""
-    used, unknown = set(), set()
+    used: set[str] = set()
+    unknown: set[str] = set()
     for pattern in SCAN_GLOBS:
         for path in ROOT.glob(pattern):
             text = path.read_text(encoding="utf-8", errors="ignore")
@@ -72,7 +76,7 @@ def scan_used(icons):
     return used, unknown
 
 
-def subset_font(src, dest, codepoints):
+def subset_font(src: Path, dest: Path, codepoints: Iterable[int]) -> None:
     options = subset.Options()
     options.flavor = "woff2"
     options.layout_features = []  # icon fonts need no shaping
@@ -86,21 +90,21 @@ def subset_font(src, dest, codepoints):
     font.close()
 
 
-def shrink_css(css, keep):
+def shrink_css(css: str, keep: set[str]) -> str:
     """Drop the content rule of every icon nobody uses, keep the rest verbatim."""
 
-    def replace(match):
+    def replace(match: "re.Match[str]") -> str:
         names = set(ICON_NAME.findall(match.group(1)))
         return match.group(0) if names & keep else ""
 
     return ICON_RULE.sub(replace, css)
 
 
-def kb(n):
+def kb(n: float) -> str:
     return f"{n / 1024:.1f} KB"
 
 
-def main():
+def main() -> None:
     source_css = SOURCE / "fontawesome.min.css"
     if not source_css.is_file():
         sys.exit(f"missing pristine source: {source_css}")
@@ -123,7 +127,7 @@ def main():
 
     print(f"{len(used)} icons used out of {len(icons)} available\n")
     total_before = total_after = 0
-    shipped = set()
+    shipped: set[int] = set()
 
     for src in sorted(SOURCE.glob("*.woff2")):
         dest = FONT_OUT / src.name

@@ -24,6 +24,27 @@
   // ========================================================================
   // Storage
   // ========================================================================
+  // A highlight is only restorable if it carries the fields restoreHighlights()
+  // dereferences: two node paths it splits on '/', the quoted text whose .length
+  // it reads, and two numeric offsets it hands to Range.setStart/setEnd. Anything
+  // short of that used to take the whole feature down rather than skip one entry.
+  function isHighlight(h) {
+    return !!h && typeof h === 'object' &&
+           typeof h.id === 'string' &&
+           typeof h.text === 'string' &&
+           typeof h.anchorPath === 'string' &&
+           typeof h.focusPath === 'string' &&
+           typeof h.anchorOffset === 'number' && isFinite(h.anchorOffset) &&
+           typeof h.focusOffset === 'number' && isFinite(h.focusOffset);
+  }
+
+  // Stored highlights are untrusted input: reader-writable, and carried across
+  // every release that has changed this record's shape. `|| []` caught only null
+  // and a syntax error, so a stored object came through truthy and then threw
+  // "highlights.forEach is not a function" out of restoreHighlights, uncaught,
+  // killing highlighting on the page for good. A record missing `text` threw the
+  // same way on expectedText.length, outside the try. Both are dropped here now,
+  // so one bad entry costs one highlight instead of all of them.
   function loadHighlights() {
     var raw;
     // Reading localStorage throws when the origin has no storage access, e.g.
@@ -36,9 +57,11 @@
     }
     if (!raw) return [];
 
-    // Past this point the value is one we wrote ourselves. If it no longer parses,
-    // or is not the array this file stores, say so: the next save silently
-    // replaces it, so a quiet [] is how a reader's highlights disappear.
+    // Past this point the value is one we wrote, and still reader-writable. A quiet
+    // [] on corruption is how a reader's highlights disappear, since the next save
+    // replaces whatever is there. One malformed record used to throw on
+    // expectedText.length outside the try and cost every highlight on the page, so
+    // drop bad records individually instead.
     var parsed;
     try {
       parsed = JSON.parse(raw);
@@ -50,11 +73,19 @@
       console.error('[highlights] ' + pageKey + ' is not an array, ignoring it:', parsed);
       return [];
     }
-    return parsed;
+    var usable = parsed.filter(isHighlight);
+    if (usable.length !== parsed.length) {
+      console.warn('[highlights] dropped ' + (parsed.length - usable.length) + ' malformed record(s) in ' + pageKey);
+    }
+    return usable;
   }
 
   function saveHighlights(arr) {
-    localStorage.setItem(pageKey, JSON.stringify(arr));
+    // Unlike the other modules this had no guard, so Safari private mode and a
+    // full quota threw out of restoreHighlights on every page load.
+    try {
+      localStorage.setItem(pageKey, JSON.stringify(arr));
+    } catch (_) { /* quota or privacy mode, ignore */ }
   }
 
   // navigator.clipboard is undefined outside a secure context and writeText
