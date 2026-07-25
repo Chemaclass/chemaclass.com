@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% import "partials/macros.html" as macros %}
+
 {% block title %}
   {% if lang == "es" %}Tu perfil de lectura{% else %}Your reading profile{% endif %} | Chemaclass
 {% endblock %}
@@ -9,11 +11,7 @@
 {% endblock posthead %}
 
 {% block styles %}
-<link rel="stylesheet" href="{{ get_url(path='profile.css') | safe }}">
-<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
-</noscript>
+{{ macros::page_styles(css='profile.css') }}
 {% endblock styles %}
 
 {% block content %}

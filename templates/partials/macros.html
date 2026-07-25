@@ -2,6 +2,20 @@
    Shared Macros for Template Reuse
    ========================================================================== #}
 
+{# Head stylesheets for a page: the entry bundle plus the async search bundle.
+   search.css is loaded on every page because the search dialog lives in base.html,
+   so it is preloaded and swapped in, with a <noscript> fallback. Pass `preload` to
+   send a second bundle down the same async path (sponsor.css does this). #}
+{% macro page_styles(css, preload="") -%}
+<link rel="stylesheet" href="{{ get_url(path=css) | safe }}">
+{% if preload %}<link rel="preload" href="{{ get_url(path=preload) | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+{% endif %}<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+{% if preload %}  <link rel="stylesheet" href="{{ get_url(path=preload) | safe }}">
+{% endif %}  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{%- endmacro %}
+
 {# Format date based on language (ES: dd/mm/yyyy, EN: Month dd, yyyy) #}
 {% macro format_date(date, lang) %}
 {% if lang == "es" %}{{ date | date(format="%d/%m/%Y") }}{% else %}{{ date | date(format="%B %d, %Y") }}{% endif %}
