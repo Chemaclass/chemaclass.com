@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% import "partials/macros.html" as macros %}
+
+{% block title %}
+  {{ trans(key="series_title", lang=lang) }} | Chemaclass
+{% endblock %}
+
+{% block styles %}
+{{ macros::page_styles(css='page.css') }}
+{% endblock styles %}
+
+{% block posthead %}
+  {% for entry in section.pages %}
+    <link rel="prerender" href="{{ entry.permalink }}" />
+  {% endfor %}
+{% endblock posthead %}
+
+{% block content %}
+<div class="series-page">
+  <header class="series-page__header">
+    <h1>{{ trans(key="series_title", lang=lang) }}</h1>
+    <p class="series-page__intro">{{ trans(key="series_intro", lang=lang) }}</p>
+  </header>
+
+  <div class="series-page__list">
+    {# Each page under content/series/ binds a URL to a key in
+       config.extra.series, which owns the title and the description. The posts
+       themselves are found by their own extra.series, so adding a post to a series
+       needs no change here. #}
+    {% set blog = get_section(path="blog/_index.md", lang=lang) %}
+    {% for entry in section.pages %}
+      {% set key = entry.extra.series %}
+      {% set conf = config.extra.series[key] %}
+
+      {% set_global parts = [] %}
+      {% for post in blog.pages %}
+        {% if post.extra.series and post.extra.series == key %}
+          {% set_global parts = parts | concat(with=post) %}
+        {% endif %}
+      {% endfor %}
+      {% set parts = parts | sort(attribute="extra.series_order") %}
+
+      {% if parts | length > 0 %}
+      <article class="series-card">
+        <div class="series-card__head">
+          <h2 class="series-card__title">
+            <a href="{{ entry.permalink }}">
+              {% if lang == "es" and conf.title_es %}{{ conf.title_es }}{% else %}{{ conf.title }}{% endif %}
+            </a>
+          </h2>
+          <span class="series-card__count">{{ parts | length }} {{ trans(key="series_parts", lang=lang) }}</span>
+        </div>
+
+        {% if conf.desc %}
+          <p class="series-card__desc">
+            {% if lang == "es" and conf.desc_es %}{{ conf.desc_es }}{% else %}{{ conf.desc }}{% endif %}
+          </p>
+        {% endif %}
+
+        <ol class="series-card__parts">
+          {% for post in parts | slice(end=3) %}
+            <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ol>
+
+        <a class="series-card__more" href="{{ entry.permalink }}">
+          {{ trans(key="series_start", lang=lang) }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

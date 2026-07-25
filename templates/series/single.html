@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% import "partials/macros.html" as macros %}
+
+{% block title %}
+{%- set conf = config.extra.series[page.extra.series] -%}
+{%- set series_name = conf.title -%}
+{%- if lang == "es" and conf.title_es -%}{%- set series_name = conf.title_es -%}{%- endif -%}
+{%- set series_desc = conf.desc | default(value="") -%}
+{%- if lang == "es" and conf.desc_es -%}{%- set series_desc = conf.desc_es -%}{%- endif -%}
+{{ series_name }} | Chemaclass{% endblock %}
+
+{% block description %}
+{%- set conf = config.extra.series[page.extra.series] -%}
+{%- set series_name = conf.title -%}
+{%- if lang == "es" and conf.title_es -%}{%- set series_name = conf.title_es -%}{%- endif -%}
+{%- set series_desc = conf.desc | default(value="") -%}
+{%- if lang == "es" and conf.desc_es -%}{%- set series_desc = conf.desc_es -%}{%- endif -%}
+
+  {% if series_desc %}
+    <meta name="description" content="{{ series_desc }}" />
+    <meta name="twitter:description" content="{{ series_desc }}">
+  {% endif %}
+{% endblock description %}
+
+{% block styles %}
+{{ macros::page_styles(css='page.css') }}
+{% endblock styles %}
+
+{% block content %}
+{%- set conf = config.extra.series[page.extra.series] -%}
+{%- set series_name = conf.title -%}
+{%- if lang == "es" and conf.title_es -%}{%- set series_name = conf.title_es -%}{%- endif -%}
+{%- set series_desc = conf.desc | default(value="") -%}
+{%- if lang == "es" and conf.desc_es -%}{%- set series_desc = conf.desc_es -%}{%- endif -%}
+{% set key = page.extra.series %}
+{% set blog = get_section(path="blog/_index.md", lang=lang) %}
+{% set_global parts = [] %}
+{% for post in blog.pages %}
+  {% if post.extra.series and post.extra.series == key %}
+    {% set_global parts = parts | concat(with=post) %}
+  {% endif %}
+{% endfor %}
+{% set parts = parts | sort(attribute="extra.series_order") %}
+
+<div class="series-single">
+  <a href="{{ macros::lang_path(path='/series/', lang=lang) }}" class="series-single__back">
+    {{ macros::back_arrow() }}
+    {{ trans(key="series_all", lang=lang) }}
+  </a>
+
+  <header class="series-single__header">
+    <h1>{{ series_name }}</h1>
+    {% if series_desc %}<p class="series-single__desc">{{ series_desc }}</p>{% endif %}
+    <p class="series-single__count">{{ parts | length }} {{ trans(key="series_parts", lang=lang) }}</p>
+  </header>
+
+  {# Ordered by extra.series_order, which is the reading order the author set, not
+     the publication date. A gap or a repeat here shows up as a wrong number. #}
+  <ol class="series-single__parts">
+    {% for post in parts %}
+      <li class="series-part">
+        <span class="series-part__number">{{ post.extra.series_order }}</span>
+        <div class="series-part__body">
+          <h2 class="series-part__title"><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
+          {% if post.extra.subtitle %}
+            <p class="series-part__subtitle">{{ post.extra.subtitle }}</p>
+          {% endif %}
+          {% if post.description %}
+            <p class="series-part__desc">{{ post.description }}</p>
+          {% endif %}
+          <p class="series-part__meta">
+            <time datetime="{{ post.date }}">{{ macros::format_date(date=post.date, lang=lang) }}</time>
+            {% if post.reading_time %} &middot; {{ post.reading_time }} min{% endif %}
+          </p>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</div>
+{% endblock content %}
