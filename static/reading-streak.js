@@ -41,9 +41,27 @@
     return pill;
   }
 
+  // Stored reader data is untrusted input: it is reader-writable, it survives
+  // every release, and the profile page's Import button copies a whole file into
+  // it. `JSON.parse(...) || {}` caught only null and a syntax error, so an array,
+  // a number or a string all came through truthy and then broke writing silently
+  // (JSON.stringify of an array drops string properties). Values have to be real
+  // timestamps too: formatDate() below feeds them to new Date(), and a string
+  // like "yesterday" yields an Invalid Date that toLocaleDateString renders as
+  // the literal text "Invalid Date" in the card pill instead of throwing.
   function loadRead() {
-    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+    var raw;
+    try { raw = JSON.parse(localStorage.getItem(STORAGE_KEY)); }
     catch (e) { return {}; }
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return {};
+
+    var map = {};
+    for (var path in raw) {
+      if (!Object.prototype.hasOwnProperty.call(raw, path)) continue;
+      var ts = raw[path];
+      if (typeof ts === 'number' && isFinite(ts) && ts > 0) map[path] = ts;
+    }
+    return map;
   }
 
   function saveRead(map) {

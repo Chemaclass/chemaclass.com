@@ -24,16 +24,44 @@
   // ========================================================================
   // Storage
   // ========================================================================
+  // A highlight is only restorable if it carries the fields restoreHighlights()
+  // dereferences: two node paths it splits on '/', the quoted text whose .length
+  // it reads, and two numeric offsets it hands to Range.setStart/setEnd. Anything
+  // short of that used to take the whole feature down rather than skip one entry.
+  function isHighlight(h) {
+    return !!h && typeof h === 'object' &&
+           typeof h.id === 'string' &&
+           typeof h.text === 'string' &&
+           typeof h.anchorPath === 'string' &&
+           typeof h.focusPath === 'string' &&
+           typeof h.anchorOffset === 'number' && isFinite(h.anchorOffset) &&
+           typeof h.focusOffset === 'number' && isFinite(h.focusOffset);
+  }
+
+  // Stored highlights are untrusted input: reader-writable, and carried across
+  // every release that has changed this record's shape. `|| []` caught only null
+  // and a syntax error, so a stored object came through truthy and then threw
+  // "highlights.forEach is not a function" out of restoreHighlights, uncaught,
+  // killing highlighting on the page for good. A record missing `text` threw the
+  // same way on expectedText.length, outside the try. Both are dropped here now,
+  // so one bad entry costs one highlight instead of all of them.
   function loadHighlights() {
+    var raw;
     try {
-      return JSON.parse(localStorage.getItem(pageKey)) || [];
+      raw = JSON.parse(localStorage.getItem(pageKey));
     } catch (_) {
       return [];
     }
+    if (!Array.isArray(raw)) return [];
+    return raw.filter(isHighlight);
   }
 
   function saveHighlights(arr) {
-    localStorage.setItem(pageKey, JSON.stringify(arr));
+    // Unlike the other modules this had no guard, so Safari private mode and a
+    // full quota threw out of restoreHighlights on every page load.
+    try {
+      localStorage.setItem(pageKey, JSON.stringify(arr));
+    } catch (_) { /* quota or privacy mode, ignore */ }
   }
 
   function addHighlight(entry) {

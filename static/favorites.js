@@ -14,9 +14,32 @@
       '<path d="M2 0h20v32l-10-8-10 8z"/>' +
     '</svg>';
 
-  function load() {
-    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  // localStorage is reader-writable and outlives every release, so what comes
+  // back is untrusted input, not a { path: timestamp } map by construction.
+  // `JSON.parse(...) || {}` only caught the null and the syntax error: an array,
+  // a number or a string all parse fine and are truthy, and then writing through
+  // one loses everything. JSON.stringify of an array drops string properties and
+  // JSON.stringify of a number ignores them outright, so saving a post appeared
+  // to work and persisted nothing, permanently, with no error anywhere. Values
+  // must be real timestamps too, or the "saved on" dates render Invalid Date.
+  // One shape check here, at the only place stored data enters.
+  function readMap(key) {
+    var raw;
+    try { raw = JSON.parse(localStorage.getItem(key)); }
     catch (e) { return {}; }
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return {};
+
+    var map = {};
+    for (var path in raw) {
+      if (!Object.prototype.hasOwnProperty.call(raw, path)) continue;
+      var ts = raw[path];
+      if (typeof ts === 'number' && isFinite(ts) && ts > 0) map[path] = ts;
+    }
+    return map;
+  }
+
+  function load() {
+    return readMap(STORAGE_KEY);
   }
 
   function save(map) {
