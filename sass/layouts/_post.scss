@@ -63,11 +63,10 @@
       overflow: visible;
 
       img {
-        // `width: auto` sized the cover from its intrinsic dimensions, which for
-        // the remote covers most readings use arrive only with the bytes. The
-        // cover took 66px until then and 465px after, shoving the title and the
-        // whole article down: 0.13 CLS. Pin the box to what the template already
-        // declares (280x420) and let `contain` letterbox anything off-ratio.
+        // Pin the box to the 280x420 the template declares and let `contain`
+        // letterbox anything off-ratio. Most readings use a remote cover whose
+        // intrinsic size only arrives with the bytes, so an auto width collapses
+        // the box until then and shoves the whole article down (0.13 CLS).
         width: 280px;
         max-width: 100%;
         height: auto;
@@ -77,12 +76,6 @@
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
       }
     }
-  }
-
-  // Line 1: Title + Tags
-  &__title-row {
-    display: block;
-    margin-bottom: 0.75rem;
   }
 
   &__title {
@@ -125,14 +118,6 @@
       color: white;
       border-bottom: none;
     }
-  }
-
-  // Line 2: Subtitle + Metadata (not sticky)
-  &__subtitle-row {
-    display: block;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--preview-divider-color);
   }
 
   &__subtitle {
@@ -229,7 +214,7 @@
     gap: 0.35rem;
     padding: 1rem 1.25rem;
     border-radius: 12px;
-    border: 1px solid var(--preview-divider-color) !important;
+    border: 1px solid var(--preview-divider-color);
     background: var(--search-input-bg);
     text-decoration: none;
     color: inherit;
@@ -239,7 +224,7 @@
     box-shadow: var(--shadow-sm);
 
     &:hover {
-      border: 1px solid var(--accent-color) !important;
+      border: 1px solid var(--accent-color);
       background: var(--search-bg-selected-item);
     }
 
@@ -448,46 +433,6 @@
   }
 }
 
-.post-revisited-date {
-  color: #1059b6;
-  font-weight: bold;
-}
-
-.footer-rule {
-  margin-top: 4rem;
-  border: 2px darkgrey dashed;
-}
-
-.related-container {
-  margin: 1rem auto;
-  display: flex;
-  text-align: center;
-
-  > .link {
-    flex: 1;
-    padding: 1rem;
-    box-sizing: border-box;
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-
-    span {
-      font-style: italic;
-      font-size: 1rem;
-    }
-
-    a {
-      text-wrap: balance;
-    }
-  }
-}
-
-.found-a-typo {
-  float: right;
-}
-
 // Footnotes
 .footnote-definition {
   font-size: 1rem;
@@ -522,37 +467,6 @@
   & > p {
     display: inline-block;
     margin: 0;
-  }
-}
-
-// Keyboard shortcuts hint - single subtle line
-.post-shortcuts {
-  text-align: center;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px dashed var(--preview-divider-color);
-}
-
-.post-shortcuts__hint {
-  font-size: 0.75rem;
-  color: var(--color-subtitle);
-  opacity: 0.5;
-
-  kbd {
-    display: inline-block;
-    padding: 0.1rem 0.35rem;
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.7rem;
-    background: var(--preview-divider-color);
-    border-radius: 3px;
-    border: 1px solid rgba(128, 128, 128, 0.2);
-  }
-}
-
-// Hide on mobile (keyboard shortcuts don't apply to touch)
-@media (max-width: 768px) {
-  .post-shortcuts {
-    display: none;
   }
 }
 

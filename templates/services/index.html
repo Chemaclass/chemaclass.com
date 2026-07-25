@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "partials/macros.html" as macros %}
 
 {% block title %}
 {{ section.title }}
@@ -217,8 +216,6 @@ document.querySelectorAll('.services-faq__question').forEach(btn => {
 
   const track = carousel.querySelector('.testimonials-grid');
   const items = track.querySelectorAll('.testimonial-card');
-  const prevBtn = carousel.querySelector('.testimonials-carousel__btn--prev');
-  const nextBtn = carousel.querySelector('.testimonials-carousel__btn--next');
   const dotsContainer = document.querySelector('.testimonials-carousel__dots');
 
   const totalItems = items.length;
@@ -266,9 +263,6 @@ document.querySelectorAll('.services-faq__question').forEach(btn => {
     const maxIndex = totalItems - itemsPerView;
     goToSlide(currentIndex <= 0 ? maxIndex : currentIndex - 1);
   }
-
-  prevBtn.addEventListener('click', goPrev);
-  nextBtn.addEventListener('click', goNext);
 
   let resizeTimeout;
   window.addEventListener('resize', () => {

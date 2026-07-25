@@ -180,7 +180,12 @@
 // Note annotation, inline block by default, floats in right margin on wide screens
 // ==========================================================================
 
-// Content containers need position: relative for margin-mode notes
+// Content containers need position: relative for margin-mode notes.
+// These three selectors mirror the fallback chain at the top of
+// static/highlights.js exactly. Every entry point that ships highlights.js must
+// import this partial: post.css covers .blog-post__content and
+// .book-chapter__content, page.css covers .talk-single__content. Change one
+// side and change the other.
 .blog-post__content,
 .book-chapter__content,
 .talk-single__content {

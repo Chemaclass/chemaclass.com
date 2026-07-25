@@ -1,8 +1,8 @@
 // ==========================================================================
 // Profile Entry Point (/profile, client-side reading dashboard)
 //
-// Dedicated bundle so the ~11KB of profile styling doesn't ride along on
-// every other page's main.css. Mirrors the structure of page.scss/listing.scss.
+// Dedicated bundle so the ~11KB of profile styling doesn't ride along in the
+// other page bundles. Mirrors the structure of page.scss/listing.scss.
 // ==========================================================================
 
 // 1. Abstracts
@@ -29,7 +29,5 @@
 // 6. Pages
 @import "pages/profile";
 
-// 7. Themes
-
-// 8. Utilities
+// 7. Utilities
 @import "utils/responsive";

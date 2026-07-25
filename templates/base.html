@@ -584,7 +584,7 @@
     </footer>
 
     <script>
-      // Inline dark-mode.js to eliminate network request
+      // Inlined rather than a separate file, to save a request on every page.
       window.toDarkMode = function() {
         localStorage.theme = "dark";
         localStorage.setItem('preference-theme', "theme-dark");

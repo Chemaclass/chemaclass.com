@@ -115,6 +115,11 @@ Type 'ls' to see available sections, or 'help' for all commands.'''
 
 
 def main() -> None:
+    script_dir = Path(__file__).parent
+    project_root = script_dir.parent
+    content_dir = project_root / 'content'
+    public_dir = project_root / 'public'
+
     print("Building terminal filesystem...")
     fs = build_filesystem(CONTENT_DIR)
 

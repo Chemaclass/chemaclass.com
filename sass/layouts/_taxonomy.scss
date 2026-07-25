@@ -30,19 +30,19 @@
     gap: 0.4rem;
     padding: 0.45rem 0.9rem;
     background: var(--search-input-bg);
-    border: 1px solid var(--preview-divider-color) !important;
+    border: 1px solid var(--preview-divider-color);
     border-radius: 2rem;
     text-decoration: none;
     color: var(--body-color);
     transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
     &:hover {
-      border-color: var(--accent-color) !important;
+      border-color: var(--accent-color);
     }
 
     &--lg {
       padding: 0.6rem 1.2rem;
-      border-color: var(--accent-color) !important;
+      border-color: var(--accent-color);
 
       .tags-page__tag-name {
         font-size: 1.05rem;
@@ -160,14 +160,14 @@
     gap: 1rem;
     padding: 1rem 1.25rem;
     background: var(--search-input-bg);
-    border: 1px solid var(--preview-divider-color) !important;
+    border: 1px solid var(--preview-divider-color);
     border-radius: 12px;
     text-decoration: none;
     color: inherit;
     transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
     &:hover {
-      border-color: var(--accent-color) !important;
+      border-color: var(--accent-color);
     }
 
     h3 {
@@ -300,20 +300,5 @@
     &__post-desc {
       display: none;
     }
-  }
-}
-
-// Legacy styles (keep for compatibility)
-.taxonomy-name {
-  text-transform: capitalize;
-}
-
-.taxonomy-container {
-  display: flex;
-  flex-wrap: wrap;
-
-  > .term:not(:last-child) {
-    margin-right: 1rem;
-    margin-bottom: 0.5rem;
   }
 }
