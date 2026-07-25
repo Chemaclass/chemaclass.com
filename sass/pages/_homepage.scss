@@ -350,6 +350,17 @@ main:has(.homepage-container) #scroll-to-top {
   font-weight: 500;
   cursor: default;
 
+  // Font Awesome loads async, so the icon is a zero-width nothing until it
+  // arrives. Reserve the box now: without it, every pill widens at once, the row
+  // rewraps, and the section below jumps (measured 0.043 CLS, one row moving
+  // 49px).
+  > i {
+    display: inline-block;
+    width: 1em;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
   --skill-hue-tool: #16a34a;
   --skill-hue-practice: #8b5cf6;
   --skill-hue-soft: #ea580c;
