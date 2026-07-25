@@ -16,6 +16,7 @@ It fails loudly on an `fa-` class that no longer exists upstream, which is
 usually a typo in a template.
 """
 
+import json
 import re
 import sys
 from pathlib import Path
@@ -30,6 +31,9 @@ ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "tools" / "fontawesome"
 CSS_OUT = ROOT / "static" / "css" / "fontawesome.min.css"
 FONT_OUT = ROOT / "static" / "fonts" / "fontawesome"
+# What ended up in the subset, so scripts/check-icons.py can verify the built site
+# against the glyphs that are really there, without needing fonttools in CI.
+MANIFEST = SOURCE / "subset-manifest.json"
 
 # Files that can reference an icon class.
 SCAN_GLOBS = ("templates/**/*.html", "content/**/*.md", "static/**/*.js", "config.toml")
@@ -119,6 +123,7 @@ def main():
 
     print(f"{len(used)} icons used out of {len(icons)} available\n")
     total_before = total_after = 0
+    shipped = set()
 
     for src in sorted(SOURCE.glob("*.woff2")):
         dest = FONT_OUT / src.name
@@ -126,10 +131,26 @@ def main():
             available = set(font.getBestCmap())
         wanted = codepoints & available
         subset_font(src, dest, wanted)
+        # Read the glyphs back out of what was written, not out of what was asked
+        # for, so the manifest describes the file the site actually serves.
+        with TTFont(str(dest)) as font:
+            shipped |= set(font.getBestCmap())
         before, after = src.stat().st_size, dest.stat().st_size
         total_before += before
         total_after += after
         print(f"  {src.name:28} {len(wanted):>3} glyphs  {kb(before):>9} -> {kb(after):>8}")
+
+    unshipped = sorted(name for name in used if icons[name] not in shipped)
+    if unshipped:
+        sys.exit(
+            "these icons are used but no subset font carries their glyph: "
+            + ", ".join(unshipped)
+        )
+
+    MANIFEST.write_text(
+        json.dumps({name: f"{icons[name]:x}" for name in sorted(used)}, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
     CSS_OUT.write_text(shrink_css(css, used), encoding="utf-8")
     before, after = source_css.stat().st_size, CSS_OUT.stat().st_size
