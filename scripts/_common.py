@@ -18,7 +18,29 @@ CONTENT_DIR = PROJECT_ROOT / 'content'
 PUBLIC_DIR = PROJECT_ROOT / 'public'
 STATIC_DIR = PROJECT_ROOT / 'static'
 
-BASE_URL = 'https://chemaclass.com'
+def _read_base_url() -> str:
+    """Read `base_url` from config.toml, the one place that defines the origin.
+
+    Zola builds every permalink from this value, and the generators have to
+    agree with it: `enrich-search-index.py` matches its keys against the
+    permalinks Zola wrote, and `enrich-sitemap.py` strips it back off to find
+    the source file. A second copy here is a copy that can fall behind, and a
+    URL shape that no longer matches the site is exactly how the Spanish search
+    index went 221 documents with no date.
+    """
+    config = PROJECT_ROOT / 'config.toml'
+    m = re.search(
+        r'^base_url\s*=\s*"([^"]+)"',
+        config.read_text(encoding='utf-8'),
+        re.MULTILINE,
+    )
+    if not m:
+        sys.exit(f'{config}: no `base_url = "..."` to build URLs from')
+    return m.group(1).rstrip('/')
+
+
+# Site origin, no trailing slash. Sourced from config.toml, never hardcoded.
+BASE_URL = _read_base_url()
 
 # The sections every generator walks. Ordered, because it decides the order
 # entries appear in llms-full.txt and the terminal filesystem.
@@ -26,6 +48,23 @@ SECTIONS = ['blog', 'readings', 'talks']
 
 
 class TFrontMatter(TypedDict, total=False):
+    """The front-matter subset the generators read, flattened.
+
+    Two differences from the source file are worth knowing, because both have
+    bitten already:
+
+    - `subtitle`, `thumbnail`, `related_posts` and `related_readings` live under
+      `[extra]` in the TOML, but sit at the top level here. Only `title`,
+      `description`, `date` and `tags` are genuinely top-level in the source.
+      A key written on the wrong side of the `[extra]` line parses fine and is
+      then read by nobody.
+    - `thumbnail` holds `[extra] static_thumbnail`. The templates ALSO read a
+      separate `extra.thumbnail`, a page-relative path for colocated assets
+      that no content file currently sets. The two are not the same field.
+
+    Every key is optional: `extract_frontmatter` sets one only when its pattern
+    matches, so callers must use `.get()`.
+    """
     title: str
     description: str
     date: str
