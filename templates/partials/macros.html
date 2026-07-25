@@ -2,6 +2,114 @@
    Shared Macros for Template Reuse
    ========================================================================== #}
 
+{# Head stylesheets for a page: the entry bundle plus the async search bundle.
+   search.css is loaded on every page because the search dialog lives in base.html,
+   so it is preloaded and swapped in, with a <noscript> fallback. Pass `preload` to
+   send a second bundle down the same async path (sponsor.css does this). #}
+{% macro page_styles(css, preload="") -%}
+<link rel="stylesheet" href="{{ get_url(path=css) | safe }}">
+{% if preload %}<link rel="preload" href="{{ get_url(path=preload) | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+{% endif %}<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+{% if preload %}  <link rel="stylesheet" href="{{ get_url(path=preload) | safe }}">
+{% endif %}  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{%- endmacro %}
+
+{# Translated labels highlights.js reads off the container it decorates. Spell
+   them as data attributes because the script is a static file and cannot call
+   trans(). Emitted as attributes, so call this inside the opening tag:
+     <div class="blog-post__content"
+          {{ macros::highlight_labels(lang=lang) }}> #}
+{% macro highlight_labels(lang) -%}
+data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
+             data-hl-remove="{{ trans(key='highlight_remove', lang=lang) }}"
+             data-hl-share-x="{{ trans(key='highlight_share_x', lang=lang) }}"
+             data-hl-share-linkedin="{{ trans(key='highlight_share_linkedin', lang=lang) }}"
+             data-hl-copy-quote="{{ trans(key='highlight_copy_quote', lang=lang) }}"
+             data-hl-copied="{{ trans(key='highlight_copied', lang=lang) }}"
+             data-hl-copy-failed="{{ trans(key='highlight_copy_failed', lang=lang) }}"
+             data-hl-saved="{{ trans(key='highlight_saved', lang=lang) }}"
+             data-hl-removed="{{ trans(key='highlight_removed', lang=lang) }}"
+             data-hl-add-note="{{ trans(key='highlight_add_note', lang=lang) }}"
+             data-hl-edit-note="{{ trans(key='highlight_edit_note', lang=lang) }}"
+             data-hl-note-saved="{{ trans(key='highlight_note_saved', lang=lang) }}"
+             data-hl-note-removed="{{ trans(key='highlight_note_removed', lang=lang) }}"
+             data-hl-note-placeholder="{{ trans(key='highlight_note_placeholder', lang=lang) }}"
+             data-hl-clear-all="{{ trans(key='highlight_clear_all', lang=lang) }}"
+             data-hl-clear-confirm="{{ trans(key='highlight_clear_confirm', lang=lang) }}"
+             data-hl-clear-done="{{ trans(key='highlight_clear_done', lang=lang) }}"
+             data-hl-export="{{ trans(key='highlight_export', lang=lang) }}"
+             data-hl-export-done="{{ trans(key='highlight_export_done', lang=lang) }}"
+{%- endmacro %}
+
+{# ItemList schema for a section listing, newest first. Capped at 20 entries:
+   past that the markup costs more than the extra rows are worth to a crawler. #}
+{% macro item_list_schema(section, name) -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListOrder": "https://schema.org/ItemListOrderDescending",
+  "name": "{{ name }}",
+  "url": "{{ section.permalink | safe }}",
+  "numberOfItems": {{ section.pages | length }},
+  "itemListElement": [
+    {%- set list_items = section.pages | slice(end=20) -%}
+    {%- for post in list_items %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "url": "{{ post.permalink | safe }}",
+      "name": "{{ post.title }}"
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+{%- endmacro %}
+
+{# Bookmark button for the .blog-post__top-row of a post.
+   Rendered here, not injected by favorites.js: a button appearing after load
+   widens this row and can rewrap it, pushing the whole article down.
+   favorites.js only reads localStorage and flips the saved state. #}
+{% macro favorite_toggle(lang) -%}
+<button type="button"
+                  class="favorite-toggle"
+                  aria-pressed="false"
+                  title="{{ trans(key='favorite_save', lang=lang) }}"
+                  aria-label="{{ trans(key='favorite_save', lang=lang) }}"
+                  data-label-save="{{ trans(key='favorite_save', lang=lang) }}"
+                  data-label-remove="{{ trans(key='favorite_remove', lang=lang) }}">
+            <svg class="favorite-toggle__icon" viewBox="0 0 24 24" width="16" height="16"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+            </svg>
+          </button>
+{%- endmacro %}
+
+{# Table-of-contents switch for the .blog-post__top-row of a post. toc.js binds
+   it by id, so there is exactly one per page. #}
+{% macro toc_toggle(lang) -%}
+<button id="toc-toggle"
+                  class="toc-toggle"
+                  type="button"
+                  role="switch"
+                  aria-checked="true"
+                  aria-label="Toggle table of contents">
+            <svg class="toc-toggle__icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="1" y="2" width="5" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M9 4h6M9 8h6M9 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span class="toc-toggle__label">{{ trans(key="toc_toggle_label", lang=lang) }}</span>
+            <span class="toc-toggle__switch">
+              <span class="toc-toggle__knob"></span>
+            </span>
+            <kbd class="toc-toggle__shortcut">T</kbd>
+          </button>
+{%- endmacro %}
+
 {# Format date based on language (ES: dd/mm/yyyy, EN: Month dd, yyyy) #}
 {% macro format_date(date, lang) %}
 {% if lang == "es" %}{{ date | date(format="%d/%m/%Y") }}{% else %}{{ date | date(format="%B %d, %Y") }}{% endif %}

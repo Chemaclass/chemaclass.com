@@ -4,34 +4,68 @@ Generate a virtual filesystem JSON for the terminal interface.
 Parses all markdown content and creates a navigable structure.
 """
 
+from __future__ import annotations
+
 import json
 from pathlib import Path
+from typing import Dict, List, TypedDict, Union, cast
 
 from _common import (
-    extract_date_from_filename,
-    extract_frontmatter,
-    get_content_body,
+    CONTENT_DIR,
+    PUBLIC_DIR,
+    SECTIONS,
+    STATIC_DIR,
+    TSection,
     get_slug_from_filename,
+    iter_section_files,
+    read_entry,
+    require_title,
 )
 
+# The terminal browses services like a content section, so it walks one more
+# directory than the generators that publish feeds.
+TERMINAL_SECTIONS: List[TSection] = SECTIONS + ['services']
 
-def process_markdown_file(filepath: Path) -> dict:
+
+class TFileNode(TypedDict, total=False):
+    """A file leaf in the virtual filesystem terminal.js walks.
+
+    `type` is the discriminator terminal.js switches on. about.txt carries only
+    a title and content, which is why the metadata keys are optional."""
+    type: str
+    title: str
+    date: str
+    description: str
+    tags: List[str]
+    subtitle: str
+    related_posts: List[str]
+    related_readings: List[str]
+    content: str
+
+
+class TDirNode(TypedDict):
+    """A directory in the virtual filesystem: file nodes keyed by slug."""
+    type: str
+    children: Dict[str, TFileNode]
+
+
+TNode = Union[TFileNode, TDirNode]
+
+
+def dir_nodes(fs: Dict[str, TNode]) -> List[TDirNode]:
+    """The dir nodes of the filesystem, discriminated on the same `type` field
+    terminal.js switches on. This is the one place the union is narrowed, so the
+    cast sits next to the check that justifies it."""
+    return [cast(TDirNode, node) for node in fs.values() if node.get('type') == 'dir']
+
+
+def process_markdown_file(filepath: Path) -> TFileNode:
     """Process a single markdown file and return its metadata."""
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    frontmatter = extract_frontmatter(content)
-    body = get_content_body(content, strip_yaml=True)
-
-    # Get date from filename if not in frontmatter
-    if 'date' not in frontmatter:
-        date = extract_date_from_filename(filepath.name)
-        if date:
-            frontmatter['date'] = date
+    frontmatter, body = read_entry(filepath, strip_yaml=True)
 
     return {
         'type': 'file',
-        'title': frontmatter.get('title', filepath.stem),
+        'title': require_title(frontmatter, filepath),
         'date': frontmatter.get('date', ''),
         'description': frontmatter.get('description', ''),
         'tags': frontmatter.get('tags', []),
@@ -42,53 +76,21 @@ def process_markdown_file(filepath: Path) -> dict:
     }
 
 
-def build_filesystem(content_dir: Path) -> dict:
+def build_filesystem(content_dir: Path) -> Dict[str, TNode]:
     """Build the virtual filesystem structure."""
-    fs = {}
+    fs: Dict[str, TNode] = {}
 
-    sections = ['blog', 'readings', 'talks']
-
-    for section in sections:
-        section_path = content_dir / section
-        if not section_path.exists():
+    for section in TERMINAL_SECTIONS:
+        children = {
+            get_slug_from_filename(filepath.name): process_markdown_file(filepath)
+            for filepath in iter_section_files(section, content_dir)
+        }
+        if not children and not (content_dir / section).is_dir():
             continue
-
         fs[section] = {
             'type': 'dir',
-            'children': {}
+            'children': children
         }
-
-        for filepath in sorted(section_path.glob('*.md')):
-            # Skip index files and non-English versions
-            if filepath.name == '_index.md':
-                continue
-            if '.es.md' in filepath.name:
-                continue
-
-            slug = get_slug_from_filename(filepath.name)
-            file_data = process_markdown_file(filepath)
-
-            if file_data:
-                fs[section]['children'][slug] = file_data
-
-    # Add services as a directory
-    services_path = content_dir / 'services'
-    if services_path.exists():
-        fs['services'] = {
-            'type': 'dir',
-            'children': {}
-        }
-        for filepath in sorted(services_path.glob('*.md')):
-            if filepath.name == '_index.md':
-                continue
-            if '.es.md' in filepath.name:
-                continue
-
-            slug = get_slug_from_filename(filepath.name)
-            file_data = process_markdown_file(filepath)
-
-            if file_data:
-                fs['services']['children'][slug] = file_data
 
     # Add about info
     fs['about.txt'] = {
@@ -113,31 +115,18 @@ Type 'ls' to see available sections, or 'help' for all commands.'''
 
 
 def main() -> None:
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parent
-    content_dir = project_root / 'content'
-    public_dir = project_root / 'public'
-
-    # Ensure public directory exists
-    public_dir.mkdir(exist_ok=True)
-
     print("Building terminal filesystem...")
-    fs = build_filesystem(content_dir)
+    fs = build_filesystem(CONTENT_DIR)
 
-    # Count entries
-    total_files = 0
-    for key, value in fs.items():
-        if value.get('type') == 'dir':
-            total_files += len(value.get('children', {}))
-        else:
-            total_files += 1
+    # Count entries. Narrow on the `type` discriminator rather than probing for a
+    # `children` key that only dir nodes carry.
+    dirs = dir_nodes(fs)
+    total_files = sum(len(node['children']) for node in dirs) + (len(fs) - len(dirs))
 
-    print(f"Found {total_files} files across {len([k for k, v in fs.items() if v.get('type') == 'dir'])} directories")
+    print(f"Found {total_files} files across {len(dirs)} directories")
 
     # Write JSON file to static/ (for zola serve) and public/ (for builds)
-    static_dir = project_root / 'static'
-
-    for output_dir in [static_dir, public_dir]:
+    for output_dir in [STATIC_DIR, PUBLIC_DIR]:
         output_dir.mkdir(exist_ok=True)
         output_path = output_dir / 'terminal-fs.json'
         with open(output_path, 'w', encoding='utf-8') as f:

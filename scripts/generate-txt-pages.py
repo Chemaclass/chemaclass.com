@@ -4,19 +4,38 @@ Generate plain text versions of all pages for curl-friendly access.
 Creates .txt files alongside HTML for terminal users.
 """
 
+from __future__ import annotations
+
 import re
 import textwrap
 from pathlib import Path
+from typing import List, TypedDict
 
 from _common import (
-    extract_date_from_filename,
-    extract_frontmatter,
-    get_content_body,
+    BASE_URL,
+    PUBLIC_DIR,
+    SECTIONS,
+    TFrontMatter,
+    TSection,
+    entry_url,
     get_slug_from_filename,
+    iter_section_files,
+    read_entry,
+    require_title,
 )
 
 
-def markdown_to_plaintext(content, width=80):
+class TTxtPage(TypedDict):
+    """One rendered page, plus the metadata the section index needs. Total: the
+    processor fills every field, so generate_index_txt reads them directly."""
+    slug: str
+    title: str
+    date: str
+    description: str
+    txt_content: str
+
+
+def markdown_to_plaintext(content: str, width: int = 80) -> str:
     """Convert markdown to readable plain text."""
     # Remove images
     content = re.sub(r'!\[.*?\]\(.*?\)', '[image]', content)
@@ -25,7 +44,7 @@ def markdown_to_plaintext(content, width=80):
     content = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'\1 (\2)', content)
 
     # Convert headers to uppercase with underlines
-    def header_replace(match):
+    def header_replace(match: "re.Match[str]") -> str:
         level = len(match.group(1))
         text = match.group(2).strip()
         if level == 1:
@@ -61,8 +80,8 @@ def markdown_to_plaintext(content, width=80):
 
     # Wrap paragraphs
     lines = content.split('\n')
-    wrapped_lines = []
-    current_paragraph = []
+    wrapped_lines: List[str] = []
+    current_paragraph: List[str] = []
 
     for line in lines:
         stripped = line.strip()
@@ -97,12 +116,14 @@ def markdown_to_plaintext(content, width=80):
     return result.strip()
 
 
-def format_txt_page(frontmatter, content, url, width=80):
+def format_txt_page(
+    frontmatter: TFrontMatter, content: str, url: str, title: str, width: int = 80
+) -> str:
     """Format a full plain text page."""
     separator = '=' * width
     thin_sep = '-' * width
 
-    title = frontmatter.get('title', 'Untitled').upper()
+    title = title.upper()
     date = frontmatter.get('date', '')
     tags = frontmatter.get('tags', [])
     description = frontmatter.get('description', '')
@@ -130,7 +151,9 @@ def format_txt_page(frontmatter, content, url, width=80):
     return output
 
 
-def generate_index_txt(section, files, base_url, width=80):
+def generate_index_txt(
+    section: TSection, files: List[TTxtPage], base_url: str, width: int = 80
+) -> str:
     """Generate an index.txt for a section listing all files."""
     separator = '=' * width
     thin_sep = '-' * width
@@ -144,13 +167,15 @@ def generate_index_txt(section, files, base_url, width=80):
     output += thin_sep + '\n\n'
 
     # Sort by date, newest first
-    sorted_files = sorted(files, key=lambda x: x.get('date', ''), reverse=True)
+    sorted_files = sorted(files, key=lambda x: x['date'], reverse=True)
 
+    # process_markdown_file below sets every key, so index instead of defaulting:
+    # a missing one is a bug here, not a page that genuinely has no slug.
     for f in sorted_files:
-        date = f.get('date', '')
-        slug = f.get('slug', '')
-        file_title = f.get('title', slug)
-        desc = f.get('description', '')
+        date = f['date']
+        slug = f['slug']
+        file_title = f['title']
+        desc = f['description']
 
         if date:
             output += f'[{date}] '
@@ -165,84 +190,46 @@ def generate_index_txt(section, files, base_url, width=80):
     return output
 
 
-def process_markdown_file(filepath: Path, section: str, base_url: str) -> dict:
+def process_markdown_file(filepath: Path, section: TSection, base_url: str) -> TTxtPage:
     """Process a single markdown file and generate .txt version."""
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    frontmatter = extract_frontmatter(content)
-    body = get_content_body(content, strip_yaml=True)
-
-    # Get date from filename if not in frontmatter
-    if 'date' not in frontmatter:
-        date = extract_date_from_filename(filepath.name)
-        if date:
-            frontmatter['date'] = date
-
+    frontmatter, body = read_entry(filepath, strip_yaml=True)
+    title = require_title(frontmatter, filepath)
     slug = get_slug_from_filename(filepath.name)
-    url = f'{base_url}/{section}/{slug}/'
+    url = entry_url(section, slug, base_url)
 
-    txt_content = format_txt_page(frontmatter, body, url)
+    txt_content = format_txt_page(frontmatter, body, url, title)
 
     return {
         'slug': slug,
-        'title': frontmatter.get('title', slug),
+        'title': title,
         'date': frontmatter.get('date', ''),
         'description': frontmatter.get('description', ''),
         'txt_content': txt_content
     }
 
 
+def write(path: Path, text: str) -> None:
+    """Write text, creating the parent directory."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding='utf-8')
+
+
 def main() -> None:
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parent
-    content_dir = project_root / 'content'
-    public_dir = project_root / 'public'
-
-    base_url = 'https://chemaclass.com'
-    sections = ['blog', 'readings', 'talks']
-
     total_files = 0
 
-    for section in sections:
-        section_path = content_dir / section
-        if not section_path.exists():
-            continue
+    for section in SECTIONS:
+        section_files: List[TTxtPage] = []
 
-        section_files = []
+        for filepath in iter_section_files(section):
+            result = process_markdown_file(filepath, section, BASE_URL)
+            section_files.append(result)
+            write(PUBLIC_DIR / section / result['slug'] / 'index.txt',
+                  result['txt_content'])
+            total_files += 1
 
-        for filepath in sorted(section_path.glob('*.md')):
-            # Skip index files and non-English versions
-            if filepath.name == '_index.md':
-                continue
-            if '.es.md' in filepath.name:
-                continue
-
-            result = process_markdown_file(filepath, section, base_url)
-            if result:
-                section_files.append(result)
-
-                # Create output directory
-                output_dir = public_dir / section / result['slug']
-                output_dir.mkdir(parents=True, exist_ok=True)
-
-                # Write .txt file
-                txt_path = output_dir / 'index.txt'
-                with open(txt_path, 'w', encoding='utf-8') as f:
-                    f.write(result['txt_content'])
-
-                total_files += 1
-
-        # Generate section index.txt
         if section_files:
-            index_content = generate_index_txt(section, section_files, base_url)
-            index_dir = public_dir / section
-            index_dir.mkdir(parents=True, exist_ok=True)
-
-            index_path = index_dir / 'index.txt'
-            with open(index_path, 'w', encoding='utf-8') as f:
-                f.write(index_content)
-
+            write(PUBLIC_DIR / section / 'index.txt',
+                  generate_index_txt(section, section_files, BASE_URL))
             print(f'  {section}/: {len(section_files)} files + index.txt')
 
     print(f'Generated {total_files} .txt files')

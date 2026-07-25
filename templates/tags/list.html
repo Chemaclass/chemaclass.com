@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 
+{% import "partials/macros.html" as macros %}
+
 {% block styles %}
-<link rel="stylesheet" href="{{ get_url(path='listing.css') | safe }}">
-<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
-</noscript>
+{{ macros::page_styles(css='listing.css') }}
 {% endblock styles %}
 
 {% block description %}

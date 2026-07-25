@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% import "partials/macros.html" as macros %}
+
 {% block title %}
   {% if lang == "es" %}Tu perfil de lectura{% else %}Your reading profile{% endif %} | Chemaclass
 {% endblock %}
@@ -9,11 +11,7 @@
 {% endblock posthead %}
 
 {% block styles %}
-<link rel="stylesheet" href="{{ get_url(path='profile.css') | safe }}">
-<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
-</noscript>
+{{ macros::page_styles(css='profile.css') }}
 {% endblock styles %}
 
 {% block content %}
@@ -44,8 +42,14 @@
         "section": "blog",
         "date": "{{ post.date }}",
         "tags": {{ post.taxonomies.tags | default(value=[]) | json_encode | safe }},
-        "series": "{{ post.extra.series | default(value='') }}",
-        "series_order": {{ post.extra.series_order | default(value=0) }}
+        {# json_encode both, because this block has to parse as JSON or the whole
+           dashboard silently empties. A `series_order = "two"` in front matter
+           interpolated bare as `"series_order": two`, which is invalid JSON, and
+           profile.js then fell into its catch and rendered an empty profile in
+           English. Blog posts are caught by the sort in series-navigation.html,
+           but readings are not: nothing else validates their series fields. #}
+        "series": {{ post.extra.series | default(value='') | json_encode | safe }},
+        "series_order": {{ post.extra.series_order | default(value=0) | json_encode | safe }}
       }
     {% endfor %}
     {% for post in readings.pages %}
@@ -56,8 +60,14 @@
         "section": "readings",
         "date": "{{ post.date }}",
         "tags": {{ post.taxonomies.tags | default(value=[]) | json_encode | safe }},
-        "series": "{{ post.extra.series | default(value='') }}",
-        "series_order": {{ post.extra.series_order | default(value=0) }}
+        {# json_encode both, because this block has to parse as JSON or the whole
+           dashboard silently empties. A `series_order = "two"` in front matter
+           interpolated bare as `"series_order": two`, which is invalid JSON, and
+           profile.js then fell into its catch and rendered an empty profile in
+           English. Blog posts are caught by the sort in series-navigation.html,
+           but readings are not: nothing else validates their series fields. #}
+        "series": {{ post.extra.series | default(value='') | json_encode | safe }},
+        "series_order": {{ post.extra.series_order | default(value=0) | json_encode | safe }}
       }
     {% endfor %}
   ]

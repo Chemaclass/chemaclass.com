@@ -63,6 +63,16 @@
     return window.innerWidth < 500 ? BANNER_MOBILE : BANNER_FULL;
   }
 
+  // Command arguments are whatever the reader typed. parseInt with no radix reads
+  // "0x10" as 16, and with or without one it truncates "20x5" to 20 and "2024oops"
+  // to 2024, so a typo silently ran a different query than the one asked for.
+  // Require the whole argument to be digits and let the caller decide what an
+  // unusable value means: a count falls back to its default, a year is rejected.
+  function parseWholeNumber(arg) {
+    if (typeof arg !== 'string' || !/^\d+$/.test(arg.trim())) return NaN;
+    return parseInt(arg.trim(), 10);
+  }
+
   // Command implementations
   const commands = {
     help: function() {
@@ -704,7 +714,8 @@ ${portrait}
     },
 
     recent: function(args) {
-      const count = parseInt(args[0]) || 5;
+      const requested = parseWholeNumber(args[0]);
+      const count = (isNaN(requested) || requested === 0) ? 5 : requested;
       const posts = [];
 
       function collectPosts(dir, path) {
@@ -846,7 +857,13 @@ ${portrait}
     },
 
     timeline: function(args) {
-      const yearFilter = args[0] ? parseInt(args[0]) : null;
+      // `timeline nope` used to parse to NaN, test falsy, and quietly render the
+      // all-years view as though no year had been asked for. Reject it, the way
+      // cal already does.
+      const yearFilter = args[0] ? parseWholeNumber(args[0]) : null;
+      if (yearFilter !== null && isNaN(yearFilter)) {
+        return `[[;#f85149;]timeline: invalid year '${args[0]}']`;
+      }
       const posts = [];
 
       function collectPosts(dir, path) {
@@ -875,9 +892,9 @@ ${portrait}
         let total = 0;
         for (const post of posts) {
           const date = post.entry.date;
-          const year = parseInt(date.substring(0, 4));
+          const year = parseInt(date.substring(0, 4), 10);
           if (year === yearFilter) {
-            const month = parseInt(date.substring(5, 7)) - 1;
+            const month = parseInt(date.substring(5, 7), 10) - 1;
             monthCounts[month]++;
             total++;
           }
@@ -924,7 +941,8 @@ ${portrait}
     },
 
     'top-tags': function(args) {
-      const n = parseInt(args[0]) || 10;
+      const requested = parseWholeNumber(args[0]);
+      const n = (isNaN(requested) || requested === 0) ? 10 : requested;
       const tagCounts = {};
 
       function collectTags(dir) {
@@ -1168,8 +1186,8 @@ ${portrait}
       const postDates = new Set(posts.map(p => p.entry.date));
 
       // Determine year
-      const allYears = [...new Set(posts.map(p => parseInt(p.entry.date.substring(0, 4))))].sort();
-      const targetYear = args[0] ? parseInt(args[0]) : allYears[allYears.length - 1];
+      const allYears = [...new Set(posts.map(p => parseInt(p.entry.date.substring(0, 4), 10)))].sort();
+      const targetYear = args[0] ? parseWholeNumber(args[0]) : allYears[allYears.length - 1];
 
       if (isNaN(targetYear)) {
         return `[[;#f85149;]cal: invalid year '${args[0]}']`;
