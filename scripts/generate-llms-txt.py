@@ -6,18 +6,19 @@ the site as a single text file instead of crawling page-by-page.
 """
 
 import re
-from pathlib import Path
 
 from _common import (
-    extract_date_from_filename,
-    extract_frontmatter,
+    PUBLIC_DIR,
+    SECTIONS,
+    entry_url,
     get_slug_from_filename,
+    iter_section_files,
+    read_entry,
 )
 
 
-def clean_body(content):
-    """Extract markdown body (after frontmatter), strip noise but keep prose intact."""
-    body = re.sub(r'^\+\+\+\s*\n.*?\n\+\+\+\s*\n?', '', content, flags=re.DOTALL)
+def clean_body(body):
+    """Strip noise from a markdown body but keep the prose intact."""
     body = re.sub(r'!\[.*?\]\(.*?\)', '', body)
     body = re.sub(r'<[^>]+>', '', body)
     body = re.sub(r'<!--\s*more\s*-->', '', body)
@@ -58,14 +59,6 @@ def build_full_section(entries, section):
 
 
 def main() -> None:
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parent
-    content_dir = project_root / 'content'
-    public_dir = project_root / 'public'
-
-    base_url = 'https://chemaclass.com'
-    sections = ['blog', 'readings', 'talks']
-
     header = [
         '# Chemaclass - Full Content (llms-full.txt)\n',
         '> Complete corpus of articles, reading notes, and talks on chemaclass.com',
@@ -79,41 +72,20 @@ def main() -> None:
     full_lines = []
     total = 0
 
-    for section in sections:
-        section_path = content_dir / section
-        if not section_path.exists():
-            continue
-
+    for section in SECTIONS:
         entries = []
-        for filepath in sorted(section_path.glob('*.md')):
-            if filepath.name == '_index.md':
-                continue
-            if '.es.md' in filepath.name:
-                continue
-
-            with open(filepath, 'r', encoding='utf-8') as f:
-                content = f.read()
-
-            fm = extract_frontmatter(content)
+        for filepath in iter_section_files(section):
+            fm, body = read_entry(filepath)
             if not fm.get('title'):
                 continue
-
-            if 'date' not in fm:
-                date = extract_date_from_filename(filepath.name)
-                if date:
-                    fm['date'] = date
-
-            slug = get_slug_from_filename(filepath.name)
-            url = f'{base_url}/{section}/{slug}/'
-            body = clean_body(content)
 
             entries.append({
                 'title': fm['title'],
                 'date': fm.get('date', ''),
                 'description': fm.get('description', ''),
                 'tags': fm.get('tags', []),
-                'url': url,
-                'body': body,
+                'url': entry_url(section, get_slug_from_filename(filepath.name)),
+                'body': clean_body(body),
             })
 
         if not entries:
@@ -128,8 +100,8 @@ def main() -> None:
     output.append(f'\n---\nTotal: {total} entries')
     output.append('Last generated from source at build time.')
 
-    llms_full_path = public_dir / 'llms-full.txt'
-    public_dir.mkdir(parents=True, exist_ok=True)
+    llms_full_path = PUBLIC_DIR / 'llms-full.txt'
+    PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
     with open(llms_full_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(output) + '\n')
 

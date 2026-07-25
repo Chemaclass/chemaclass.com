@@ -9,10 +9,13 @@ import re
 from pathlib import Path
 
 from _common import (
-    extract_date_from_filename,
-    extract_frontmatter,
-    get_content_body,
+    BASE_URL,
+    PUBLIC_DIR,
+    SECTIONS,
+    entry_url,
     get_slug_from_filename,
+    iter_section_files,
+    read_entry,
 )
 
 
@@ -76,19 +79,9 @@ def generate_index_md(section, files, base_url):
 
 def process_markdown_file(filepath: Path, section: str, base_url: str) -> dict:
     """Process a single markdown file and generate .md version."""
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    frontmatter = extract_frontmatter(content)
-    body = get_content_body(content)
-
-    if 'date' not in frontmatter:
-        date = extract_date_from_filename(filepath.name)
-        if date:
-            frontmatter['date'] = date
-
+    frontmatter, body = read_entry(filepath)
     slug = get_slug_from_filename(filepath.name)
-    url = f'{base_url}/{section}/{slug}/'
+    url = entry_url(section, slug, base_url)
 
     # Remove <!-- more --> markers
     body = re.sub(r'<!--\s*more\s*-->', '', body)
@@ -104,70 +97,38 @@ def process_markdown_file(filepath: Path, section: str, base_url: str) -> dict:
     }
 
 
+def write(path: Path, text: str) -> None:
+    """Write text, creating the parent directory."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding='utf-8')
+
+
 def main() -> None:
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parent
-    content_dir = project_root / 'content'
-    public_dir = project_root / 'public'
-
-    base_url = 'https://chemaclass.com'
-    sections = ['blog', 'readings', 'talks']
-
     total_files = 0
 
-    for section in sections:
-        section_path = content_dir / section
-        if not section_path.exists():
-            continue
+    for section in SECTIONS:
+        # Spanish entries are colocated with their English original and land under
+        # /es/, so this generator wants both and sorts them apart by filename.
+        per_lang = {'en': [], 'es': []}
 
-        section_files = []
-        es_section_files = []
+        for filepath in iter_section_files(section, translations=True):
+            lang = 'es' if '.es.md' in filepath.name else 'en'
+            result = process_markdown_file(filepath, section, BASE_URL)
+            per_lang[lang].append(result)
 
-        for filepath in sorted(section_path.glob('*.md')):
-            if filepath.name.startswith('_index'):
+            prefix = PUBLIC_DIR / 'es' if lang == 'es' else PUBLIC_DIR
+            write(prefix / section / result['slug'] / 'index.md', result['md_content'])
+            total_files += 1
+
+        for lang, files in per_lang.items():
+            if not files:
                 continue
+            base = BASE_URL if lang == 'en' else f'{BASE_URL}/es'
+            prefix = PUBLIC_DIR if lang == 'en' else PUBLIC_DIR / 'es'
+            write(prefix / section / 'index.md', generate_index_md(section, files, base))
 
-            is_spanish = '.es.md' in filepath.name
-
-            result = process_markdown_file(filepath, section, base_url)
-            if result:
-                if is_spanish:
-                    es_section_files.append(result)
-                    output_dir = public_dir / 'es' / section / result['slug']
-                else:
-                    section_files.append(result)
-                    output_dir = public_dir / section / result['slug']
-
-                output_dir.mkdir(parents=True, exist_ok=True)
-
-                md_path = output_dir / 'index.md'
-                with open(md_path, 'w', encoding='utf-8') as f:
-                    f.write(result['md_content'])
-
-                total_files += 1
-
-        # Generate section index.md (EN)
-        if section_files:
-            index_content = generate_index_md(section, section_files, base_url)
-            index_dir = public_dir / section
-            index_dir.mkdir(parents=True, exist_ok=True)
-
-            index_path = index_dir / 'index.md'
-            with open(index_path, 'w', encoding='utf-8') as f:
-                f.write(index_content)
-
-        # Generate section index.md (ES)
-        if es_section_files:
-            index_content = generate_index_md(section, es_section_files, f'{base_url}/es')
-            index_dir = public_dir / 'es' / section
-            index_dir.mkdir(parents=True, exist_ok=True)
-
-            index_path = index_dir / 'index.md'
-            with open(index_path, 'w', encoding='utf-8') as f:
-                f.write(index_content)
-
-        if section_files or es_section_files:
-            print(f'  {section}/: {len(section_files)} EN + {len(es_section_files)} ES files')
+        if per_lang['en'] or per_lang['es']:
+            print(f'  {section}/: {len(per_lang["en"])} EN + {len(per_lang["es"])} ES files')
 
     print(f'Generated {total_files} .md files')
 

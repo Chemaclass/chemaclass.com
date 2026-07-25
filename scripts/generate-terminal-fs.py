@@ -8,26 +8,19 @@ import json
 from pathlib import Path
 
 from _common import (
-    extract_date_from_filename,
-    extract_frontmatter,
-    get_content_body,
+    CONTENT_DIR,
+    PUBLIC_DIR,
+    SECTIONS,
+    STATIC_DIR,
     get_slug_from_filename,
+    iter_section_files,
+    read_entry,
 )
 
 
 def process_markdown_file(filepath: Path) -> dict:
     """Process a single markdown file and return its metadata."""
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    frontmatter = extract_frontmatter(content)
-    body = get_content_body(content, strip_yaml=True)
-
-    # Get date from filename if not in frontmatter
-    if 'date' not in frontmatter:
-        date = extract_date_from_filename(filepath.name)
-        if date:
-            frontmatter['date'] = date
+    frontmatter, body = read_entry(filepath, strip_yaml=True)
 
     return {
         'type': 'file',
@@ -46,49 +39,18 @@ def build_filesystem(content_dir: Path) -> dict:
     """Build the virtual filesystem structure."""
     fs = {}
 
-    sections = ['blog', 'readings', 'talks']
-
-    for section in sections:
-        section_path = content_dir / section
-        if not section_path.exists():
+    # services joins the usual sections here: the terminal browses it like the rest.
+    for section in SECTIONS + ['services']:
+        children = {
+            get_slug_from_filename(filepath.name): process_markdown_file(filepath)
+            for filepath in iter_section_files(section, content_dir)
+        }
+        if not children and not (content_dir / section).is_dir():
             continue
-
         fs[section] = {
             'type': 'dir',
-            'children': {}
+            'children': children
         }
-
-        for filepath in sorted(section_path.glob('*.md')):
-            # Skip index files and non-English versions
-            if filepath.name == '_index.md':
-                continue
-            if '.es.md' in filepath.name:
-                continue
-
-            slug = get_slug_from_filename(filepath.name)
-            file_data = process_markdown_file(filepath)
-
-            if file_data:
-                fs[section]['children'][slug] = file_data
-
-    # Add services as a directory
-    services_path = content_dir / 'services'
-    if services_path.exists():
-        fs['services'] = {
-            'type': 'dir',
-            'children': {}
-        }
-        for filepath in sorted(services_path.glob('*.md')):
-            if filepath.name == '_index.md':
-                continue
-            if '.es.md' in filepath.name:
-                continue
-
-            slug = get_slug_from_filename(filepath.name)
-            file_data = process_markdown_file(filepath)
-
-            if file_data:
-                fs['services']['children'][slug] = file_data
 
     # Add about info
     fs['about.txt'] = {
@@ -113,16 +75,8 @@ Type 'ls' to see available sections, or 'help' for all commands.'''
 
 
 def main() -> None:
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parent
-    content_dir = project_root / 'content'
-    public_dir = project_root / 'public'
-
-    # Ensure public directory exists
-    public_dir.mkdir(exist_ok=True)
-
     print("Building terminal filesystem...")
-    fs = build_filesystem(content_dir)
+    fs = build_filesystem(CONTENT_DIR)
 
     # Count entries
     total_files = 0
@@ -135,9 +89,7 @@ def main() -> None:
     print(f"Found {total_files} files across {len([k for k, v in fs.items() if v.get('type') == 'dir'])} directories")
 
     # Write JSON file to static/ (for zola serve) and public/ (for builds)
-    static_dir = project_root / 'static'
-
-    for output_dir in [static_dir, public_dir]:
+    for output_dir in [STATIC_DIR, PUBLIC_DIR]:
         output_dir.mkdir(exist_ok=True)
         output_path = output_dir / 'terminal-fs.json'
         with open(output_path, 'w', encoding='utf-8') as f:

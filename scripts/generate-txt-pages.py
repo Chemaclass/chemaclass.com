@@ -9,10 +9,13 @@ import textwrap
 from pathlib import Path
 
 from _common import (
-    extract_date_from_filename,
-    extract_frontmatter,
-    get_content_body,
+    BASE_URL,
+    PUBLIC_DIR,
+    SECTIONS,
+    entry_url,
     get_slug_from_filename,
+    iter_section_files,
+    read_entry,
 )
 
 
@@ -167,20 +170,9 @@ def generate_index_txt(section, files, base_url, width=80):
 
 def process_markdown_file(filepath: Path, section: str, base_url: str) -> dict:
     """Process a single markdown file and generate .txt version."""
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    frontmatter = extract_frontmatter(content)
-    body = get_content_body(content, strip_yaml=True)
-
-    # Get date from filename if not in frontmatter
-    if 'date' not in frontmatter:
-        date = extract_date_from_filename(filepath.name)
-        if date:
-            frontmatter['date'] = date
-
+    frontmatter, body = read_entry(filepath, strip_yaml=True)
     slug = get_slug_from_filename(filepath.name)
-    url = f'{base_url}/{section}/{slug}/'
+    url = entry_url(section, slug, base_url)
 
     txt_content = format_txt_page(frontmatter, body, url)
 
@@ -193,56 +185,28 @@ def process_markdown_file(filepath: Path, section: str, base_url: str) -> dict:
     }
 
 
+def write(path: Path, text: str) -> None:
+    """Write text, creating the parent directory."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding='utf-8')
+
+
 def main() -> None:
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parent
-    content_dir = project_root / 'content'
-    public_dir = project_root / 'public'
-
-    base_url = 'https://chemaclass.com'
-    sections = ['blog', 'readings', 'talks']
-
     total_files = 0
 
-    for section in sections:
-        section_path = content_dir / section
-        if not section_path.exists():
-            continue
-
+    for section in SECTIONS:
         section_files = []
 
-        for filepath in sorted(section_path.glob('*.md')):
-            # Skip index files and non-English versions
-            if filepath.name == '_index.md':
-                continue
-            if '.es.md' in filepath.name:
-                continue
+        for filepath in iter_section_files(section):
+            result = process_markdown_file(filepath, section, BASE_URL)
+            section_files.append(result)
+            write(PUBLIC_DIR / section / result['slug'] / 'index.txt',
+                  result['txt_content'])
+            total_files += 1
 
-            result = process_markdown_file(filepath, section, base_url)
-            if result:
-                section_files.append(result)
-
-                # Create output directory
-                output_dir = public_dir / section / result['slug']
-                output_dir.mkdir(parents=True, exist_ok=True)
-
-                # Write .txt file
-                txt_path = output_dir / 'index.txt'
-                with open(txt_path, 'w', encoding='utf-8') as f:
-                    f.write(result['txt_content'])
-
-                total_files += 1
-
-        # Generate section index.txt
         if section_files:
-            index_content = generate_index_txt(section, section_files, base_url)
-            index_dir = public_dir / section
-            index_dir.mkdir(parents=True, exist_ok=True)
-
-            index_path = index_dir / 'index.txt'
-            with open(index_path, 'w', encoding='utf-8') as f:
-                f.write(index_content)
-
+            write(PUBLIC_DIR / section / 'index.txt',
+                  generate_index_txt(section, section_files, BASE_URL))
             print(f'  {section}/: {len(section_files)} files + index.txt')
 
     print(f'Generated {total_files} .txt files')

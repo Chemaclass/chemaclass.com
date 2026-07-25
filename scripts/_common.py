@@ -9,7 +9,19 @@ shared here so there is one source of truth.
 from __future__ import annotations
 
 import re
-from typing import List, Optional, TypedDict
+from pathlib import Path
+from typing import Iterator, List, Optional, TypedDict
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+CONTENT_DIR = PROJECT_ROOT / 'content'
+PUBLIC_DIR = PROJECT_ROOT / 'public'
+STATIC_DIR = PROJECT_ROOT / 'static'
+
+BASE_URL = 'https://chemaclass.com'
+
+# The sections every generator walks. Ordered, because it decides the order
+# entries appear in llms-full.txt and the terminal filesystem.
+SECTIONS = ['blog', 'readings', 'talks']
 
 
 class TFrontMatter(TypedDict, total=False):
@@ -80,6 +92,42 @@ def get_slug_from_filename(filename: str) -> str:
     name = re.sub(r'\.(es|en)$', '', name)
     name = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', name)
     return name
+
+
+def iter_section_files(
+    section: str,
+    content_dir: Optional[Path] = None,
+    translations: bool = False,
+) -> Iterator[Path]:
+    """Yield a section's entry files in filename order, skipping the section
+    index. Translations (`*.es.md`) are skipped unless asked for. Yields nothing
+    when the section directory is absent."""
+    root = (content_dir or CONTENT_DIR) / section
+    if not root.is_dir():
+        return
+    for path in sorted(root.glob('*.md')):
+        if path.name.startswith('_index'):
+            continue
+        if not translations and '.es.md' in path.name:
+            continue
+        yield path
+
+
+def read_entry(filepath: Path, strip_yaml: bool = False) -> tuple:
+    """Read one content file and return (frontmatter, body). The date falls back
+    to the filename prefix, which is where most posts carry it."""
+    content = filepath.read_text(encoding='utf-8')
+    fm = extract_frontmatter(content)
+    if 'date' not in fm:
+        date = extract_date_from_filename(filepath.name)
+        if date:
+            fm['date'] = date
+    return fm, get_content_body(content, strip_yaml=strip_yaml)
+
+
+def entry_url(section: str, slug: str, base_url: str = BASE_URL) -> str:
+    """Canonical URL of a section entry."""
+    return f'{base_url}/{section}/{slug}/'
 
 
 def get_content_body(content: str, strip_yaml: bool = False) -> str:

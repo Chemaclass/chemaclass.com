@@ -2,22 +2,19 @@
 """Enrich sitemap.xml with <lastmod> dates from git history."""
 from __future__ import annotations
 
-import os
 import re
 import subprocess
 from pathlib import Path
 from typing import List, Optional
 
-BASE_URL = "https://chemaclass.com"
-PUBLIC_DIR = "public"
-CONTENT_DIR = "content"
+from _common import BASE_URL, CONTENT_DIR, PUBLIC_DIR
 
 
-def get_git_date(filepath: str) -> Optional[str]:
+def get_git_date(filepath: Path) -> Optional[str]:
     """Get the last commit date (ISO 8601) for a file."""
     try:
         result = subprocess.run(
-            ["git", "log", "-1", "--format=%aI", "--", filepath],
+            ["git", "log", "-1", "--format=%aI", "--", str(filepath)],
             capture_output=True, text=True, timeout=5,
         )
     except subprocess.TimeoutExpired:
@@ -27,7 +24,7 @@ def get_git_date(filepath: str) -> Optional[str]:
     return None
 
 
-def url_to_content_paths(url: str) -> List[str]:
+def url_to_content_paths(url: str) -> List[Path]:
     """Map a sitemap URL to candidate content file paths."""
     path = url.replace(BASE_URL, "").strip("/")
 
@@ -35,22 +32,20 @@ def url_to_content_paths(url: str) -> List[str]:
     clean = path[3:] if is_es else path
     suffix = ".es.md" if is_es else ".md"
 
-    candidates = [
-        f"{CONTENT_DIR}/{clean}_index{suffix}",
-        f"{CONTENT_DIR}/{clean}/index{suffix}" if clean else None,
-        f"{CONTENT_DIR}/{clean}{suffix}" if clean else None,
+    if not clean:
+        return [CONTENT_DIR / f"_index{suffix}"]
+
+    return [
+        CONTENT_DIR / f"{clean}_index{suffix}",
+        CONTENT_DIR / f"{clean}/index{suffix}",
+        CONTENT_DIR / f"{clean}{suffix}",
     ]
 
-    if not clean:
-        candidates = [f"{CONTENT_DIR}/_index{suffix}"]
 
-    return [c for c in candidates if c]
-
-
-def find_content_file(url: str) -> Optional[str]:
+def find_content_file(url: str) -> Optional[Path]:
     """Find the content file for a URL."""
     for candidate in url_to_content_paths(url):
-        if os.path.exists(candidate):
+        if candidate.exists():
             return candidate
     return None
 
@@ -100,7 +95,7 @@ def enrich_sitemap(sitemap_path: str) -> int:
 
 if __name__ == "__main__":
     total = 0
-    for sitemap in Path(PUBLIC_DIR).rglob("sitemap.xml"):
+    for sitemap in PUBLIC_DIR.rglob("sitemap.xml"):
         added = enrich_sitemap(str(sitemap))
         total += added
         print(f"  {sitemap}: added {added} <lastmod> entries")

@@ -10,23 +10,24 @@ than Atom/RSS XML. Mirrors the Atom feed shape.
 import json
 import re
 from datetime import datetime, timezone
-from pathlib import Path
 
 from _common import (
-    extract_date_from_filename,
-    extract_frontmatter,
+    BASE_URL,
+    PUBLIC_DIR,
+    SECTIONS,
+    entry_url,
     get_slug_from_filename,
+    iter_section_files,
+    read_entry,
 )
 
-BASE_URL = 'https://chemaclass.com'
 AUTHOR_NAME = 'Jose Maria Valera Reales'
 AUTHOR_URL = BASE_URL
 MAX_ITEMS = 30
 
 
-def extract_excerpt(content):
-    """First chunk before <!-- more --> or first ~500 chars of body."""
-    body = re.sub(r'^\+\+\+\s*\n.*?\n\+\+\+\s*\n?', '', content, flags=re.DOTALL)
+def extract_excerpt(body):
+    """First chunk before <!-- more --> or first ~500 chars of the body."""
     parts = re.split(r'<!--\s*more\s*-->', body, maxsplit=1)
     excerpt = parts[0]
     excerpt = re.sub(r'!\[.*?\]\(.*?\)', '', excerpt)
@@ -36,31 +37,17 @@ def extract_excerpt(content):
     return excerpt[:500]
 
 
-def collect_entries(content_dir: Path, sections: list) -> list:
+def collect_entries(sections: list) -> list:
     entries = []
     for section in sections:
-        section_path = content_dir / section
-        if not section_path.exists():
-            continue
-
-        for fp in sorted(section_path.glob('*.md')):
-            if fp.name == '_index.md' or '.es.md' in fp.name:
+        for fp in iter_section_files(section):
+            fm, body = read_entry(fp)
+            # An entry needs both to appear in a feed. read_entry has already
+            # tried the filename for a missing date.
+            if not fm.get('title') or not fm.get('date'):
                 continue
 
-            with open(fp, 'r', encoding='utf-8') as f:
-                content = f.read()
-
-            fm = extract_frontmatter(content)
-            if not fm.get('title') or not fm.get('date'):
-                date = extract_date_from_filename(fp.name)
-                if date:
-                    fm['date'] = date
-                else:
-                    continue
-
-            slug = get_slug_from_filename(fp.name)
-            url = f'{BASE_URL}/{section}/{slug}/'
-
+            url = entry_url(section, get_slug_from_filename(fp.name))
             published = datetime.strptime(fm['date'], '%Y-%m-%d').replace(tzinfo=timezone.utc)
 
             item = {
@@ -69,7 +56,7 @@ def collect_entries(content_dir: Path, sections: list) -> list:
                 'title': fm['title'],
                 'date_published': published.isoformat(),
                 'summary': fm.get('description', ''),
-                'content_text': extract_excerpt(content),
+                'content_text': extract_excerpt(body),
                 'authors': [{'name': AUTHOR_NAME, 'url': AUTHOR_URL}],
             }
 
@@ -85,12 +72,9 @@ def collect_entries(content_dir: Path, sections: list) -> list:
 
 
 def main() -> None:
-    project_root = Path(__file__).parent.parent
-    content_dir = project_root / 'content'
-    public_dir = project_root / 'public'
-    public_dir.mkdir(parents=True, exist_ok=True)
+    PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
 
-    items = collect_entries(content_dir, ['blog', 'readings', 'talks'])
+    items = collect_entries(SECTIONS)
 
     feed = {
         'version': 'https://jsonfeed.org/version/1.1',
@@ -105,7 +89,7 @@ def main() -> None:
         'items': items,
     }
 
-    out = public_dir / 'feed.json'
+    out = PUBLIC_DIR / 'feed.json'
     with open(out, 'w', encoding='utf-8') as f:
         json.dump(feed, f, ensure_ascii=False, indent=2)
 
