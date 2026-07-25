@@ -59,17 +59,6 @@ main:has(.homepage-container) #scroll-to-top {
       line-height: 1.5;
     }
 
-    .hero-cta {
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: 500;
-      transition: opacity 0.2s ease;
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-
     .hero-quotes {
       position: relative;
       min-height: 3em;
@@ -101,11 +90,6 @@ main:has(.homepage-container) #scroll-to-top {
 .homepage-right {
   flex: 1;
   min-width: 0;
-}
-
-// Remove custom navigation from homepage (using global header instead)
-.homepage-nav {
-  display: none;
 }
 
 // Profile with circular image
@@ -155,8 +139,7 @@ main:has(.homepage-container) #scroll-to-top {
 }
 
 .projects-section,
-.latest-section,
-.connect-section {
+.latest-section {
   margin: 2rem 0;
 
   h2 {
@@ -216,49 +199,6 @@ main:has(.homepage-container) #scroll-to-top {
         margin-bottom: 0;
       }
 
-      .purpose-green-link {
-        text-decoration: none;
-        color: var(--accent-color);
-        font-weight: 500;
-        transition: color 0.2s ease;
-
-        &:hover {
-          color: #16a34a;
-        }
-      }
-    }
-  }
-
-  .philosophy {
-    font-size: 0.9rem;
-    color: var(--color-subtitle);
-    margin: 0;
-    padding-top: 1rem;
-    border-top: 1px solid var(--preview-divider-color);
-    line-height: 1.6;
-    cursor: pointer;
-
-    strong {
-      color: var(--accent-color);
-      font-weight: 600;
-    }
-
-    .philosophy-main {
-      display: block;
-    }
-
-    .philosophy-subtitle {
-      display: block;
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
-    }
-
-    &.expanded .philosophy-subtitle {
-      max-height: 50px;
-      opacity: 1;
-      margin-top: 0.5rem;
     }
   }
 }
@@ -784,81 +724,6 @@ main:has(.homepage-container) #scroll-to-top {
   }
 }
 
-// Connect Section
-.connect-section {
-  text-align: center;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.85rem;
-  border-radius: 2rem;
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  text-decoration: none;
-  color: var(--body-color);
-  font-size: 0.85rem;
-  transition: all 0.2s ease;
-
-  i {
-    font-size: 1rem;
-    transition: color 0.2s ease;
-  }
-
-  // GitHub - black/white based on theme
-  &[title="GitHub"] {
-    i { color: var(--heading-color); }
-    &:hover {
-      border-color: #333;
-      background: #333;
-      color: white;
-      i { color: white; }
-    }
-  }
-
-  // X - adapts to theme (black on light, white on dark)
-  &[title="X"] {
-    i { color: var(--heading-color); }
-    &:hover {
-      border-color: var(--heading-color);
-      background: var(--heading-color);
-      color: var(--body-bg);
-      i { color: var(--body-bg); }
-    }
-  }
-
-  // LinkedIn - blue
-  &[title="LinkedIn"] {
-    i { color: #0a66c2; }
-    &:hover {
-      border-color: #0a66c2;
-      background: #0a66c2;
-      color: white;
-      i { color: white; }
-    }
-  }
-
-  // Nostr - purple
-  &[title="Nostr"] {
-    i { color: #8b5cf6; }
-    &:hover {
-      border-color: #8b5cf6;
-      background: #8b5cf6;
-      color: white;
-      i { color: white; }
-    }
-  }
-}
-
 // Responsive
 @media (max-width: $breakpoint-tablet) {
   .homepage-top {
@@ -969,15 +834,10 @@ main:has(.homepage-container) #scroll-to-top {
       font-size: 0.85rem;
     }
 
-    .philosophy {
-      font-size: 0.8rem;
-      padding-top: 0.75rem;
-    }
   }
 
   .projects-section,
-  .latest-section,
-  .connect-section {
+  .latest-section {
     margin: 1rem 0;
 
     h2 {
@@ -1092,24 +952,6 @@ main:has(.homepage-container) #scroll-to-top {
   .readings-row {
     grid-template-columns: 1fr;
   }
-
-  .social-links {
-    gap: 0.5rem;
-  }
-
-  .social-link {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.85rem;
-
-    span {
-      display: none;
-    }
-
-    i {
-      font-size: 1.25rem;
-    }
-  }
-
 }
 
 // Extra small screens
@@ -1145,116 +987,14 @@ main:has(.homepage-container) #scroll-to-top {
 }
 
 // ==========================================================================
-// Connect Section
-// ==========================================================================
-
-.connect-section {
-  margin-top: 2.5rem;
-
-  .section-header {
-    margin-bottom: 1rem;
-    text-align: center;
-
-    h2 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--heading-color);
-      margin: 0;
-    }
-  }
-}
-
-.connect-links {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.75rem;
-}
-
-.connect-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1rem;
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 2rem;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--body-color);
-  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-
-  i {
-    font-size: 1rem;
-    color: var(--color-subtitle);
-    transition: color 0.2s ease;
-  }
-
-  // Brand-specific hover colors
-  &--github:hover {
-    border-color: #333;
-    background: #333;
-    color: white;
-    i { color: white; }
-  }
-
-  &--twitter:hover {
-    border-color: var(--heading-color);
-    background: var(--heading-color);
-    color: var(--body-bg);
-    i { color: var(--body-bg); }
-  }
-
-  &--linkedin:hover {
-    border-color: #0077b5;
-    background: #0077b5;
-    color: white;
-    i { color: white; }
-  }
-
-  &--email:hover {
-    border-color: var(--accent-color);
-    background: var(--accent-color);
-    color: white;
-    i { color: white; }
-  }
-}
-
-@media (max-width: $breakpoint-tablet) {
-  .connect-links {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: $breakpoint-phone) {
-  .connect-links {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  .connect-link {
-    padding: 0.5rem 0.85rem;
-    font-size: 0.85rem;
-
-    i {
-      font-size: 1.1rem;
-    }
-  }
-}
-
-// ==========================================================================
 // Focus States (Accessibility)
 // ==========================================================================
 
-.hero-cta:focus-visible,
 .project-card:focus-visible,
 .featured-card:focus-visible,
 .featured-list__item:focus-visible,
 .reading-card:focus-visible,
-.connect-link:focus-visible,
-.view-all:focus-visible,
-.social-link:focus-visible {
+.view-all:focus-visible {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
 }
@@ -1267,12 +1007,6 @@ main:has(.homepage-container) #scroll-to-top {
 }
 
 .about-paragraphs p a:focus-visible {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-.philosophy:focus-visible {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
   border-radius: 4px;
