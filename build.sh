@@ -69,6 +69,9 @@ echo "Using Zola $(zola --version)"
 echo "Building site..."
 zola build "$@"
 
+echo "Checking the Font Awesome subset covers every icon in use..."
+python3 scripts/check-icons.py
+
 echo "Enriching search index with dates..."
 python3 scripts/enrich-search-index.py
 
