@@ -20,6 +20,15 @@ Each entry point imports in a fixed order, and the numbered comments in the file
 mark it: abstracts, vendors, base, layouts, components, pages, themes, utilities.
 Keep that order. Later groups are allowed to lean on earlier ones, not the reverse.
 
+An entry point is picked by a template's `{% block styles %}`, so the pairing runs
+both ways: a template that loads a script must load a bundle that carries that
+script's styles. `components/_highlights.scss` is the live example. Its container
+selectors are `.blog-post__content`, `.book-chapter__content` and
+`.talk-single__content`, one per host template, and those templates sit across two
+bundles (`post.css` for the first two, `page.css` for talks), so both import it.
+When you add a component whose markup is created by JS, check every template that
+loads the script, not just the obvious one.
+
 ## Where a new rule goes
 
 | Folder | Holds | Examples |

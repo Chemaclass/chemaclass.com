@@ -162,7 +162,8 @@
   }
 }
 
-// Image lightbox modal
+// Responsive styles for book chapters
+// (the lightbox those images open lives in components/_lightbox.scss)
 
 @media (max-width: $breakpoint-phone) {
   .book-chapter {

@@ -29,10 +29,11 @@
 @import "components/pagination";
 
 // 6. Pages
+// No components/lightbox here: the only .lightbox markup on the site lives in
+// templates/books/post.html, which loads post.css.
 @import "pages/blog";
 @import "pages/readings";
 @import "pages/book-chapter";
-@import "components/lightbox";
 @import "pages/topics";
 
 // 7. Themes

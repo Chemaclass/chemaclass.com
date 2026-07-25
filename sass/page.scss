@@ -22,6 +22,12 @@
 @import "components/theme-toggle";
 @import "components/buttons";
 @import "components/dialog";
+@import "components/tables";
+@import "components/interactive-list";
+// talks/post.html loads this bundle and also loads static/highlights.js, whose
+// container selectors include .talk-single__content. Without this import the
+// highlight marks, toolbar and notes render unstyled on a talk page.
+@import "components/highlights";
 
 // 6. Pages
 @import "pages/404";
@@ -31,8 +37,6 @@
 @import "pages/cv";
 @import "pages/web-development";
 @import "pages/projects";
-@import "components/tables";
-@import "components/interactive-list";
 
 // 7. Themes
 
