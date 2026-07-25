@@ -1,4 +1,9 @@
-// Table of Contents (TOC) Generator and Manager
+// Table of Contents behaviour.
+//
+// The list itself is rendered at build time by templates/partials/toc.html, so it
+// is on screen with the first paint. This file only adds what needs a browser:
+// scroll spy, the show/hide toggle and its preference, keyboard navigation, and
+// the copy-link anchors on the headings.
 (function() {
   'use strict';
 
@@ -7,7 +12,6 @@
     contentSelector: '.blog-post__content, .book-chapter__content, .post-title ~ div, .reading-post .post-title ~ div',
     tocContainer: '#toc-container',
     headingSelectors: 'h2, h3, h4',
-    minHeadings: 2,
     activeClass: 'active',
     offset: 200
   };
@@ -48,91 +52,60 @@
     }
   }
 
-  // Generate TOC from page headings
-  function generateTOC() {
+  function hideToggle() {
+    if (tocToggle) {
+      tocToggle.classList.add('toc-toggle--hidden');
+    }
+  }
+
+  function scrollToId(id) {
+    const target = document.getElementById(id);
+    if (!target) return;
+    const targetPosition = target.getBoundingClientRect().top + window.scrollY - CONFIG.offset;
+    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    history.pushState(null, null, `#${id}`);
+  }
+
+  // One listener on the list instead of one per link: the markup arrives from the
+  // server, so there is nothing to bind at creation time.
+  function bindTOCLinks() {
+    const list = tocContainerRef.querySelector('.toc-list');
+    if (!list) return;
+
+    list.addEventListener('click', (e) => {
+      const link = e.target.closest('.toc-link');
+      if (!link) return;
+      const id = decodeURIComponent(link.getAttribute('href').slice(1));
+      if (!document.getElementById(id)) return;
+      e.preventDefault();
+      scrollToId(id);
+    });
+  }
+
+  // "#" affordance that copies a link straight to a section. Zola gives every
+  // content heading an id, so these just hang off what is already there.
+  function addHeadingAnchors() {
     const content = document.querySelector(CONFIG.contentSelector);
-    if (!content) return null;
+    if (!content) return;
 
-    const headings = content.querySelectorAll(CONFIG.headingSelectors);
-    if (headings.length < CONFIG.minHeadings) return null;
+    content.querySelectorAll(CONFIG.headingSelectors).forEach((heading) => {
+      if (!heading.id || heading.closest('.related-content')) return;
+      if (heading.querySelector('.heading-anchor')) return;
 
-    const tocList = document.createElement('ul');
-    tocList.className = 'toc-list';
-    tocList.setAttribute('role', 'list');
-
-    let relatedAdded = false;
-
-    headings.forEach((heading, index) => {
-      if (!heading.id) {
-        heading.id = `heading-${index}`;
-      }
-
-      const headingText = heading.textContent;
-      const insideRelated = heading.closest('.related-content');
-
-      // Skip any heading inside the related-content section entirely
-      if (insideRelated) {
-        if (!relatedAdded) {
-          relatedAdded = true;
-          // Single flat entry pointing to the first related heading; reuse its
-          // own (already localized) text so the TOC matches the page language
-          const listItem = document.createElement('li');
-          listItem.className = 'toc-item toc-h2';
-
-          const link = document.createElement('a');
-          link.href = `#${heading.id}`;
-          link.textContent = headingText;
-          link.className = 'toc-link';
-
-          link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetPosition = heading.getBoundingClientRect().top + window.scrollY - CONFIG.offset;
-            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-            history.pushState(null, null, `#${heading.id}`);
-          });
-
-          listItem.appendChild(link);
-          tocList.appendChild(listItem);
-        }
-        return;
-      }
-
-      // Add anchor link to heading
       const anchor = document.createElement('a');
       anchor.href = `#${heading.id}`;
       anchor.className = 'heading-anchor';
-      anchor.innerHTML = '#';
+      anchor.textContent = '#';
       anchor.title = 'Copy link';
       anchor.addEventListener('click', (e) => {
         e.preventDefault();
         const url = window.location.href.split('#')[0] + `#${heading.id}`;
         navigator.clipboard.writeText(url);
-        anchor.innerHTML = '✓';
-        setTimeout(() => { anchor.innerHTML = '#'; }, 1000);
+        anchor.textContent = '✓';
+        setTimeout(() => { anchor.textContent = '#'; }, 1000);
       });
       heading.appendChild(anchor);
-
-      const listItem = document.createElement('li');
-      listItem.className = `toc-item toc-${heading.tagName.toLowerCase()}`;
-
-      const link = document.createElement('a');
-      link.href = `#${heading.id}`;
-      link.textContent = headingText;
-      link.className = 'toc-link';
-
-      // Smooth scroll on click
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetPosition = heading.getBoundingClientRect().top + window.scrollY - CONFIG.offset;
-        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-        history.pushState(null, null, `#${heading.id}`);
-      });
-
-      listItem.appendChild(link);
-      tocList.appendChild(listItem);
     });
-
-    return tocList;
   }
 
   // Highlight active section based on scroll position
@@ -224,79 +197,42 @@
     tocLinks[nextIndex].focus();
   }
 
-  // Initialize TOC
   function initTOC() {
+    // The heading anchors are worth having even on a page with no TOC panel.
+    addHeadingAnchors();
+
     tocContainerRef = document.querySelector(CONFIG.tocContainer);
-    if (!tocContainerRef) return;
+
+    // Too few headings to be worth a panel: the template rendered none.
+    if (!tocContainerRef) {
+      hideToggle();
+      return;
+    }
 
     if (compactMediaQuery.matches) {
-      tocContainerRef.style.display = 'none';
       setTOCState(true, false);
-      if (tocToggle) {
-        tocToggle.classList.add('toc-toggle--hidden');
-      }
+      hideToggle();
       return;
     }
 
-    const tocList = generateTOC();
-    if (!tocList) {
-      tocContainerRef.style.display = 'none';
-      setTOCState(true, false);
-      if (tocToggle) {
-        tocToggle.classList.add('toc-toggle--hidden');
-      }
-      return;
+    bindTOCLinks();
+
+    const tocTitle = tocContainerRef.querySelector('.toc-title');
+    if (tocTitle) {
+      tocTitle.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        history.pushState(null, null, window.location.pathname);
+      });
     }
 
-    // Build TOC header
-    const tocTitleText = tocContainerRef.dataset.title || 'On this page';
-    const tocCloseLabel = tocContainerRef.dataset.closeLabel || 'Hide table of contents';
-
-    const tocHeader = document.createElement('div');
-    tocHeader.className = 'toc-header';
-
-    const tocTitle = document.createElement('a');
-    tocTitle.className = 'toc-title';
-    tocTitle.href = '#';
-    tocTitle.textContent = tocTitleText;
-    tocTitle.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      history.pushState(null, null, window.location.pathname);
-    });
-
-    const tocCloseButton = document.createElement('button');
-    tocCloseButton.type = 'button';
-    tocCloseButton.className = 'toc-close';
-    tocCloseButton.setAttribute('aria-label', tocCloseLabel);
-    tocCloseButton.innerHTML = `
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-        <path d="M4 4l8 8m0-8L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-      </svg>
-    `;
-    tocCloseButton.addEventListener('click', () => setTOCState(true));
-
-    tocHeader.appendChild(tocTitle);
-    tocHeader.appendChild(tocCloseButton);
-
-    // Preserve reading progress bar before clearing
-    const progressBar = tocContainerRef.querySelector('#reading-progress');
-
-    // Set up container with ARIA
-    tocContainerRef.innerHTML = '';
-    tocContainerRef.setAttribute('aria-label', 'Table of contents');
-
-    // Re-insert reading progress bar
-    if (progressBar) {
-      tocContainerRef.appendChild(progressBar);
+    const tocCloseButton = tocContainerRef.querySelector('.toc-close');
+    if (tocCloseButton) {
+      tocCloseButton.addEventListener('click', () => setTOCState(true));
     }
-
-    tocContainerRef.appendChild(tocHeader);
-    tocContainerRef.appendChild(tocList);
 
     // Restore saved preference
-    const savedPref = getSavedPreference();
-    setTOCState(savedPref, false);
+    setTOCState(getSavedPreference(), false);
 
     // Toggle button
     if (tocToggle) {
