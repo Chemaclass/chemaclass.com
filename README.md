@@ -28,7 +28,20 @@ Open [http://localhost:1111](http://localhost:1111) in your browser.
 ./build.sh
 ```
 
-Runs `zola build`, then the `scripts/` post-processors: enrich the search index and sitemap with dates, generate the terminal filesystem, the plain-text and Markdown page mirrors, `llms-full.txt`, and the JSON feed, then minify HTML, CSS, and JS.
+Runs `zola build`, then the `scripts/` post-processors: check the icon subset, enrich the search index and sitemap with dates, generate the terminal filesystem, the plain-text and Markdown page mirrors, `llms-full.txt`, and the JSON feed, then minify HTML, CSS, and JS.
+
+## Icons
+
+The site ships a Font Awesome subset: only the ~100 icons actually used, cut from the pristine release in `tools/fontawesome/` into `static/`. Full set is 397 KB, the subset is 39 KB.
+
+After adding or removing an `fa-*` class, regenerate it and commit the result:
+
+```bash
+pip install fonttools brotli
+python3 scripts/subset-fontawesome.py
+```
+
+Forgetting is safe: `./build.sh` runs `scripts/check-icons.py`, which fails the build on an icon class the subset does not carry.
 
 ## Project structure
 
@@ -39,6 +52,7 @@ sass/        SCSS, compiled by Zola
 static/      Images, JS, fonts, and served metadata (llms.txt, robots.txt, ...)
 scripts/     Python post-build processors (shared helpers in _common.py)
 docs/        Notes on how the site is written and released
+tools/       Pristine vendor sources the build cuts down (Font Awesome)
 config.toml  Zola config, i18n strings, and site data
 ```
 
