@@ -1,7 +1,4 @@
 // Readings index header
-.readings-index {
-}
-
 .readings-header {
   text-align: center;
   margin-bottom: 2rem;
@@ -41,25 +38,4 @@
     width: 100%;
   }
 
-  .book-pages {
-    display: none;
-  }
-
-  .description {
-    display: block;
-    font-size: 0.7em;
-    font-style: italic;
-  }
-
-  .author {
-    color: var(--color-subtitle);
-    font-size: 0.5em;
-    display: block;
-  }
-}
-
-.book-preview {
-  .book-title {
-    margin-bottom: 0;
-  }
 }

@@ -155,11 +155,6 @@ a {
     color: var(--accent-overlay-color);
     border-bottom: 1px solid var(--accent-color-light);
   }
-
-  &.close-border:hover {
-    border-bottom: none;
-    text-decoration: underline;
-  }
 }
 
 hr {
