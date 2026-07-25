@@ -1,16 +1,13 @@
-{# Table of contents, rendered at build time from page.toc.
+{# Table of contents, rendered here from page.toc rather than built in the browser:
+   a client-side list leaves the styled panel painted empty until every deferred
+   script has run. Zola emits the same slug ids on the headings, so the anchors
+   match without any JS.
 
-   This used to be built in the browser by toc.js on DOMContentLoaded, so the
-   styled panel painted empty and stayed that way until every deferred script had
-   run. Zola knows the headings at build time and already emits slug ids on them,
-   so the list ships inside the HTML and the anchors match without any JS.
+   Three nested loops flatten h2 > h3 > h4, every heading depth the content uses,
+   into one list. The `level` on each entry drives the class, so a page starting at
+   h3 still gets the right indent.
 
-   Levels are flattened into one list, the way the old script did it: three nested
-   loops cover h2 > h3 > h4, which is every heading depth the content uses. The
-   `level` on each entry drives the class, so a page starting at h3 still gets the
-   right indent.
-
-   toc.js now only decorates this: scroll spy, the toggle, keyboard nav, and the
+   toc.js only decorates this: scroll spy, the toggle, keyboard nav, and the
    copy-link anchors on the headings themselves. #}
 
 {% set_global toc_count = 0 %}
@@ -25,15 +22,14 @@
 {% endfor %}
 
 {% set has_related = page.extra.related_posts or page.extra.related_readings %}
-{# The related section sits inside .blog-post__content, so the old script counted
-   its heading towards the minimum. Keep counting it, or 47 readings with a single
-   heading plus related links would lose the panel they have today. #}
+{# The related section renders a heading inside .blog-post__content, so it counts
+   towards the threshold below. Drop it and every reading with a single heading plus
+   related links loses its panel. #}
 {% if has_related %}
   {% set_global toc_count = toc_count + 1 %}
 {% endif %}
 
-{# Below two headings a panel is more furniture than help, which is the threshold
-   the script used (CONFIG.minHeadings). #}
+{# Below two headings a panel is more furniture than help. #}
 {% if toc_count >= 2 %}
 <nav
   id="toc-container"
@@ -68,7 +64,7 @@
     {% endfor %}
 
     {# The related section is template markup, not content, so it never appears in
-       page.toc. One flat entry, matching what the script used to synthesise. #}
+       page.toc. One flat entry, added by hand. #}
     {% if has_related %}
       <li class="toc-item toc-h2">
         <a class="toc-link" href="#related-content">

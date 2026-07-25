@@ -40,9 +40,9 @@
   }
 
   // The button is rendered by the post templates, inside .blog-post__top-row
-  // alongside "back" and the TOC toggle. Injecting it here used to widen that row
-  // after load, which rewrapped it on narrow screens and pushed the article down.
-  // All that is left is reading the stored state and keeping it in sync.
+  // alongside "back" and the TOC toggle. Do not inject it here: adding it after load
+  // widens that row, rewraps it on narrow screens and pushes the article down. This
+  // only reads the stored state and keeps it in sync.
   function bindButton() {
     var btn = document.querySelector('.favorite-toggle');
     if (!btn || btn.dataset.bound) return;

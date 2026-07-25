@@ -17,7 +17,7 @@ partial pulled in by one.
 | `sponsor.scss` | sponsor page and its widgets |
 
 Each entry point imports in a fixed order, and the numbered comments in the file
-mark it: abstracts, vendors, base, layouts, components, pages, themes, utilities.
+mark it: abstracts, vendors, base, layouts, components, pages, utilities.
 Keep that order. Later groups are allowed to lean on earlier ones, not the reverse.
 
 ## Where a new rule goes
@@ -28,7 +28,7 @@ Keep that order. Later groups are allowed to lean on earlier ones, not the rever
 | `vendors/` | third-party CSS and font declarations | `_normalize.scss`, `_fonts.scss` |
 | `base/` | element-level defaults | `_reset.scss`, `_typography.scss` |
 | `layouts/` | page furniture and structure | `_header.scss`, `_footer.scss` |
-| `components/` | one reusable thing, named after it | `_tag-chips.scss`, `_toc.scss` |
+| `components/` | one reusable thing, named after it | `_pagination.scss`, `_toc.scss` |
 | `pages/` | rules only one page or section needs | `_blog.scss`, `_book-chapter.scss` |
 | `utils/` | helpers that must win last | `_responsive.scss` |
 
@@ -54,5 +54,4 @@ Breakpoints are Sass variables, so they work inside `@media`: `$breakpoint-phone
 
 The global `a:hover` in `base/_typography.scss` adds the prose underline through a
 `:where()` denylist, which pins it at plain `a:hover` specificity. Any component's
-own `:hover` therefore wins without `!important`. If you find `!important` on a
-border in older code, it is a leftover and can go.
+own `:hover` therefore wins without `!important`, so do not reach for one.

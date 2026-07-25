@@ -70,9 +70,9 @@
             {{ macros::back_arrow() }}
             {{ trans(key="all_readings", lang=lang) }}
           </a>
-          {# Rendered here, not injected by favorites.js: a button appearing after load
-             widens this row and can rewrap it, pushing the whole article down.
-             favorites.js only reads localStorage and flips the saved state. #}
+          {# Keep this button in the markup. A button that appears after load widens
+             this row and can rewrap it, pushing the whole article down. favorites.js
+             only reads localStorage and flips the saved state. #}
           <button type="button"
                   class="favorite-toggle"
                   aria-pressed="false"
