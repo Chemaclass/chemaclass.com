@@ -27,14 +27,7 @@
 
 {% block content %}
   <div class="blog-post-layout" data-toc-hidden="false">
-    <!-- Table of Contents -->
-    <nav
-      id="toc-container"
-      data-hide-toc="false"
-      data-title="{{ trans(key='toc_header_title', lang=lang) }}"
-      data-close-label="{{ trans(key='toc_close_label', lang=lang) }}">
-      <div id="reading-progress" class="reading-progress"></div>
-    </nav>
+    {% include "partials/toc.html" %}
 
     <div class="blog-post-main">
       <article class="book-chapter">
@@ -174,7 +167,10 @@
     const scrollTop = window.scrollY;
 
     const progress = Math.min(Math.max((scrollTop - articleTop + windowHeight * 0.5) / totalHeight, 0), 1);
-    document.getElementById('reading-progress').style.width = (progress * 100) + '%';
+    // The bar lives in the TOC panel, which a page with fewer than two headings
+    // does not render.
+    const bar = document.getElementById('reading-progress');
+    if (bar) bar.style.width = (progress * 100) + '%';
   });
 
   // Image lightbox

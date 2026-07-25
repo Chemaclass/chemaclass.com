@@ -17,6 +17,9 @@
     const scrollTop = window.scrollY;
 
     const progress = Math.min(Math.max((scrollTop - articleTop + windowHeight * 0.5) / totalHeight, 0), 1);
-    document.getElementById('reading-progress').style.width = (progress * 100) + '%';
+    // The bar lives in the TOC panel, which a page with fewer than two headings
+    // does not render.
+    const bar = document.getElementById('reading-progress');
+    if (bar) bar.style.width = (progress * 100) + '%';
   });
 </script>

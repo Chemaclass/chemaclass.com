@@ -61,14 +61,7 @@
 
 {% block content %}
   <div class="blog-post-layout" data-toc-hidden="false">
-    <!-- Table of Contents -->
-    <nav
-      id="toc-container"
-      data-hide-toc="false"
-      data-title="{{ trans(key='toc_header_title', lang=lang) }}"
-      data-close-label="{{ trans(key='toc_close_label', lang=lang) }}">
-      <div id="reading-progress" class="reading-progress"></div>
-    </nav>
+    {% include "partials/toc.html" %}
 
     <div class="blog-post-main">
       <article class="blog-post">
