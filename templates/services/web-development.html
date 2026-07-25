@@ -489,7 +489,6 @@ document.querySelectorAll('.services-faq__question').forEach(btn => {
     return totalItems - itemsPerView + 1;
   }
 
-  // Create dots
   function createDots() {
     dotsContainer.innerHTML = '';
     const totalPositions = getTotalPositions();
@@ -503,7 +502,6 @@ document.querySelectorAll('.services-faq__question').forEach(btn => {
     }
   }
 
-  // Update dots
   function updateDots() {
     const dots = dotsContainer.querySelectorAll('.portfolio-carousel__dot');
     dots.forEach((dot, i) => {
@@ -511,7 +509,6 @@ document.querySelectorAll('.services-faq__question').forEach(btn => {
     });
   }
 
-  // Go to slide
   function goToSlide(index) {
     const maxIndex = totalItems - itemsPerView;
     currentIndex = Math.max(0, Math.min(index, maxIndex));
@@ -543,11 +540,9 @@ document.querySelectorAll('.services-faq__question').forEach(btn => {
     }
   }
 
-  // Event listeners
   prevBtn.addEventListener('click', goPrev);
   nextBtn.addEventListener('click', goNext);
 
-  // Handle resize
   let resizeTimeout;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
@@ -562,7 +557,6 @@ document.querySelectorAll('.services-faq__question').forEach(btn => {
     }, 100);
   });
 
-  // Touch/swipe support
   let touchStartX = 0;
   let touchEndX = 0;
 
@@ -582,7 +576,6 @@ document.querySelectorAll('.services-faq__question').forEach(btn => {
     }
   }, { passive: true });
 
-  // Initialize
   createDots();
 })();
 </script>

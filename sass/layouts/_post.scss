@@ -63,11 +63,10 @@
       overflow: visible;
 
       img {
-        // `width: auto` sized the cover from its intrinsic dimensions, which for
-        // the remote covers most readings use arrive only with the bytes. The
-        // cover took 66px until then and 465px after, shoving the title and the
-        // whole article down: 0.13 CLS. Pin the box to what the template already
-        // declares (280x420) and let `contain` letterbox anything off-ratio.
+        // Pin the box to the 280x420 the template declares and let `contain`
+        // letterbox anything off-ratio. Most readings use a remote cover whose
+        // intrinsic size only arrives with the bytes, so an auto width collapses
+        // the box until then and shoves the whole article down (0.13 CLS).
         width: 280px;
         max-width: 100%;
         height: auto;
@@ -215,7 +214,7 @@
     gap: 0.35rem;
     padding: 1rem 1.25rem;
     border-radius: 12px;
-    border: 1px solid var(--preview-divider-color) !important;
+    border: 1px solid var(--preview-divider-color);
     background: var(--search-input-bg);
     text-decoration: none;
     color: inherit;
@@ -225,7 +224,7 @@
     box-shadow: var(--shadow-sm);
 
     &:hover {
-      border: 1px solid var(--accent-color) !important;
+      border: 1px solid var(--accent-color);
       background: var(--search-bg-selected-item);
     }
 

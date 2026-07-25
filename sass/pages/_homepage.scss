@@ -124,8 +124,6 @@ main:has(.homepage-container) #scroll-to-top {
   }
 }
 
-// Navigation removed - using global header instead
-
 // Section headers
 .about-section {
   margin: 0;
@@ -198,6 +196,7 @@ main:has(.homepage-container) #scroll-to-top {
       &:last-child {
         margin-bottom: 0;
       }
+
     }
   }
 }
@@ -832,6 +831,7 @@ main:has(.homepage-container) #scroll-to-top {
     .about-paragraphs p {
       font-size: 0.85rem;
     }
+
   }
 
   .projects-section,
@@ -1009,4 +1009,3 @@ main:has(.homepage-container) #scroll-to-top {
   outline-offset: 2px;
   border-radius: 4px;
 }
-

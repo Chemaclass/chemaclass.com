@@ -18,7 +18,7 @@
   }
 }
 
-// Navigation (breadcrumb + lang switch)
+// Navigation (breadcrumb)
 .service-nav {
   display: flex;
   justify-content: space-between;
@@ -27,29 +27,6 @@
 
   .blog-post__back {
     margin-bottom: 0;
-  }
-
-  .lang-switch {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 36px;
-    height: 36px;
-    padding: 0 0.5rem;
-    border-radius: 6px;
-    background: var(--search-input-bg);
-    border: 1px solid var(--preview-divider-color) !important;
-    color: var(--color-subtitle);
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.2s ease;
-
-    &:hover {
-      border: 1px solid var(--accent-color) !important;
-      color: var(--accent-color);
-      background: var(--search-bg-selected-item);
-    }
   }
 }
 
@@ -79,6 +56,7 @@
     font-size: 1.1rem;
     margin: 0;
   }
+
 }
 
 // Intro Section
@@ -306,10 +284,162 @@
   }
 }
 
-// Decision Section
-.service-decision {
+// Comparison Section
+.comparison-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.9rem;
+    background: var(--search-input-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--preview-divider-color);
+  }
+
+  thead th {
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    background: var(--search-bg-selected-item);
+    border-bottom: 2px solid var(--preview-divider-color);
+    text-align: center;
+    vertical-align: middle;
+
+    &:first-child {
+      text-align: left;
+      width: 180px;
+    }
+
+    i {
+      display: block;
+      font-size: 1.25rem;
+      margin-bottom: 0.35rem;
+    }
+
+    &.col-static i {
+      color: var(--accent-color);
+    }
+
+    &.col-ssg i {
+      color: #6b46c1;
+
+      html[color-theme=dark] & {
+        color: #9f7aea;
+      }
+    }
+
+    &.col-wp i {
+      color: #21759b;
+
+      html[color-theme=dark] & {
+        color: #5ba8d1;
+      }
+    }
+
+    &.col-unavailable {
+      i,
+      .col-label {
+        opacity: 0.5;
+      }
+
+      .col-label {
+        display: block;
+        line-height: 1.2;
+      }
+    }
+
+    .col-unavailable__badge {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--color-subtitle);
+      background: var(--preview-divider-color);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+  }
+
+  tbody tr td:nth-child(4) {
+    opacity: 0.5;
+  }
+
+  tbody td {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    color: var(--body-color);
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--preview-divider-color);
+    vertical-align: middle;
+
+    &:first-child {
+      text-align: left;
+      font-weight: 600;
+      color: var(--heading-color);
+    }
+
+    i {
+      font-size: 1rem;
+    }
+
+    &.highlight {
+      color: #16a34a;
+      font-weight: 600;
+
+      html[color-theme=dark] & {
+        color: #4ade80;
+      }
+
+      i {
+        color: inherit;
+      }
+    }
+
+    &.caution {
+      color: #d97706;
+      font-weight: 500;
+
+      html[color-theme=dark] & {
+        color: #fbbf24;
+      }
+
+      i {
+        color: inherit;
+      }
+    }
+
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  tbody tr:nth-child(even) td {
+    background: rgba(0, 0, 0, 0.02);
+
+    html[color-theme=dark] & {
+      background: rgba(255, 255, 255, 0.02);
+    }
+  }
+
+  tbody tr {
+    transition: background-color 0.15s ease;
+
+    &:hover td {
+      background: var(--search-bg-selected-item);
+    }
+  }
 }
 
+// Decision Section
 .decision-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -405,9 +535,6 @@
 }
 
 // Process Section
-.service-process {
-}
-
 .process-steps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -636,10 +763,6 @@
   margin: 0;
   text-align: center;
   line-height: 1.6;
-}
-
-// Portfolio Section
-.service-portfolio {
 }
 
 // Portfolio Carousel

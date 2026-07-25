@@ -2,6 +2,11 @@
 // Projects Page Styles
 // ==========================================================================
 
+@keyframes pulse-loading {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
 // Hero Section
 .projects-hero {
   text-align: center;

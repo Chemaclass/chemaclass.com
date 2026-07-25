@@ -47,6 +47,12 @@ ICON_RULE = re.compile(r'((?:\.fa-[a-z0-9-]+:before,?)+)\{content:"([^"]+)"\}')
 ICON_NAME = re.compile(r"\.fa-([a-z0-9-]+):before")
 USED_CLASS = re.compile(r"fa-([a-z0-9-]+)")
 
+# Upstream lists a .ttf after each .woff2 in `src:`. We only ever subset the
+# woff2 files, so the .ttf URLs point at files that are not in static/fonts/.
+# Every browser that reaches this CSS supports woff2, so the entry was never a
+# working fallback, just a 404 waiting to be requested.
+TTF_FALLBACK = re.compile(r",url\([^)]+\.ttf\) format\(\"truetype\"\)")
+
 
 def parse_icons(css: str) -> dict[str, int]:
     """Map every icon name upstream knows to its codepoint."""
@@ -97,7 +103,7 @@ def shrink_css(css: str, keep: set[str]) -> str:
         names = set(ICON_NAME.findall(match.group(1)))
         return match.group(0) if names & keep else ""
 
-    return ICON_RULE.sub(replace, css)
+    return TTF_FALLBACK.sub("", ICON_RULE.sub(replace, css))
 
 
 def kb(n: float) -> str:
