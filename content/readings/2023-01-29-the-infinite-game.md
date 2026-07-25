@@ -8,7 +8,7 @@ tags = [ "leadership", "team-management", "philosophy", "communication" ]
 subtitle = "A bold framework for leadership in today's ever-changing world"
 pages = "270"
 author = "Simon Sinek"
-static_thumbnail = "https://m.media-amazon.com/images/I/41r53pSrB4L.jpg"
+static_thumbnail = "/images/readings/the-infinite-game.webp"
 expand_preview = true
 related_readings = [
   "readings/2021-11-28-start-with-why.md",

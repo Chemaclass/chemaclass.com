@@ -8,7 +8,7 @@ tags = [ "architecture", "software-design", "clean-code", "ddd" ]
 subtitle = "Guía del artesano para la estructura y diseño de software"
 pages = "400"
 author = "Robert C. Martin"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41TPrNDI50L._SX387_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/clean-architecture.webp"
 related_posts = [
   "blog/2023-12-30-great-engineering.md",
   "blog/2021-08-01-test-driven-development.md",

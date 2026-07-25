@@ -12,6 +12,7 @@ from pathlib import Path
 from typing import Any, Dict
 
 from _common import (
+    BASE_URL,
     CONTENT_DIR,
     PUBLIC_DIR,
     SECTIONS,

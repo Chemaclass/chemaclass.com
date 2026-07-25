@@ -8,7 +8,7 @@ tags = [ "fiction", "psychology", "philosophy" ]
 subtitle = ""
 pages = "220"
 author = "J. D. Salinger"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lprH3LF4L._SX323_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/the-catcher-in-the-rye.webp"
 expand_preview = false
 related_readings = [
   "readings/2026-02-04-notes-from-underground.md",

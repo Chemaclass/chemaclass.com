@@ -8,7 +8,7 @@ tags = [ "ddd", "architecture", "software-design" ]
 subtitle = "DDD explicado de forma clara y práctica"
 pages = "160"
 author = "Vaughn Vernon"
-static_thumbnail = "https://m.media-amazon.com/images/I/51yhBoDgkqL.jpg"
+static_thumbnail = "/images/readings/domain-driven-design-distilled.webp"
 expand_preview = true
 related_readings = [
   "readings/2018-06-04-clean-architecture.md",

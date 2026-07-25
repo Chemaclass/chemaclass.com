@@ -8,7 +8,7 @@ tags = [ "psychology", "economics", "philosophy" ]
 subtitle = "Lecciones sobre riqueza, codicia y felicidad"
 pages = "240"
 author = "Morgan Housel"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41haL4XdXAL._SX322_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/the-psychology-of-money.webp"
 expand_preview = false
 related_readings = [
   "readings/2021-01-15-rich-dad-poor-dad.md",

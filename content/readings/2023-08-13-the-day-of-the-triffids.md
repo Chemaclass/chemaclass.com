@@ -9,7 +9,7 @@ tags = [ "fiction", "psychology" ]
 subtitle = ""
 pages = "270"
 author = "John Wyndham"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320530145i/530965.jpg"
+static_thumbnail = "/images/readings/the-day-of-the-triffids.webp"
 expand_preview = true
 related_readings = [
   "readings/2020-05-18-call-of-cthulhu.md",

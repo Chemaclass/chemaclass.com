@@ -8,7 +8,7 @@ tags = [ "team-management", "architecture", "devops", "agile" ]
 subtitle = "Organizando equipos de negocio y tecnología para flujo rápido"
 pages = "240"
 author = "Matthew Skelton, Manuel Pais"
-static_thumbnail = "https://m.media-amazon.com/images/I/81vdbXuZ0NL._AC_UL640_FMwebp_QL65_.jpg"
+static_thumbnail = "/images/readings/team-topologies.webp"
 expand_preview = false
 related_posts = [
   "blog/2022-04-02-dunbar-number.md",

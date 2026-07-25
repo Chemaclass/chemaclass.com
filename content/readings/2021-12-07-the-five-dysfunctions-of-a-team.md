@@ -8,7 +8,7 @@ tags = [ "leadership", "team-management", "communication", "psychology" ]
 subtitle = "A Leadership Fable"
 pages = "240"
 author = "Patrick M. Lencioni"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QArmq8raL._SX328_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/the-five-dysfunctions-of-a-team.webp"
 expand_preview = true
 related_readings = [
   "readings/2021-05-28-peopleware.md",

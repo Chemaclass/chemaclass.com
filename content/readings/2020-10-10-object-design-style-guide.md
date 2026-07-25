@@ -8,7 +8,7 @@ tags = [ "software-design", "clean-code", "php" ]
 subtitle = "Powerful Techniques for Creating Flexible, Readable, and Maintainable Object-Oriented Code in Any OO Language"
 pages = "240"
 author = "Matthias Noback"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41gb4dgVhhL._SX397_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/object-design-style-guide.webp"
 expand_preview = true
 related_readings = [
   "readings/2016-05-01-clean-code.md",

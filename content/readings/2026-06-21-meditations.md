@@ -8,7 +8,7 @@ tags = [ "philosophy", "self-improvement" ]
 subtitle = "A Roman emperor's private notes on how to live"
 pages = "256"
 author = "Marcus Aurelius"
-static_thumbnail = "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1421618636i/30659.jpg"
+static_thumbnail = "/images/readings/meditations.webp"
 related_readings = [
   "readings/2026-03-15-the-art-of-being-happy.md",
   "readings/2024-11-29-mans-search-for-meaning.md",

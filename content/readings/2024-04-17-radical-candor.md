@@ -9,7 +9,7 @@ tags = [ "leadership", "communication", "team-management", "mentoring" ]
 subtitle = "How to Get What You Want by Saying What You Mean"
 pages = "300"
 author = "Kim Scott"
-static_thumbnail = "https://m.media-amazon.com/images/I/71qELZ2wR9L._SL1500_.jpg"
+static_thumbnail = "/images/readings/radical-candor.webp"
 expand_preview = false
 related_readings = [
   "readings/2023-10-31-crucial-conversations.md",

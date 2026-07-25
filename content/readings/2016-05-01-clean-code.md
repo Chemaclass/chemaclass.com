@@ -8,7 +8,7 @@ tags = [ "clean-code", "software-design", "testing", "tdd", "refactoring" ]
 subtitle = "A Handbook of Agile Software Craftsmanship"
 pages = "460"
 author = "Robert C. Martin"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41yafGMO+rL._SX376_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/clean-code.webp"
 expand_preview = true
 related_posts = [
   "blog/2020-06-28-the-art-of-refactoring.md",

@@ -8,7 +8,7 @@ tags = [ "bitcoin", "economics", "philosophy" ]
 subtitle = "The Decentralized Alternative to Central Banking"
 pages = "300"
 author = "Saifedean Ammous"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41x6NvXWekS._SX336_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/the-bitcoin-standard.webp"
 expand_preview = false
 related_readings = [
   "readings/2023-06-20-the-blocksize-war.md",

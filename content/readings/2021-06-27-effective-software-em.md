@@ -8,7 +8,7 @@ tags = [ "leadership", "team-management", "career", "communication" ]
 subtitle = "How to Be the Leader Your Development Team Needs"
 pages = "350"
 author = "James Stanier"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL._SX404_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/effective-software-em.webp"
 expand_preview = true
 related_readings = [
   "readings/2020-03-26-the-manager-path.md",

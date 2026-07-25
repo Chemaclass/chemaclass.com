@@ -9,7 +9,7 @@ tags = [ "bitcoin", "privacy", "economics", "philosophy" ]
 subtitle = "The Story of the People and Projects That Inspired Bitcoin"
 pages = "300"
 author = "Aaron van Wirdum"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1703246002i/204250558.jpg"
+static_thumbnail = "/images/readings/the-genesis-book.webp"
 expand_preview = true
 related_readings = [
   "readings/2021-09-20-the-bitcoin-standard.md",

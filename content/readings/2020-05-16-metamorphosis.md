@@ -8,7 +8,7 @@ tags = [ "fiction", "philosophy", "psychology" ]
 subtitle = "A novella about alienation, identity, and transformation"
 pages = "65"
 author = " Franz Kafka"
-static_thumbnail = "https://images-eu.ssl-images-amazon.com/images/I/51bQzldipYL._SY264_BO1,204,203,200_QL40_ML2_.jpg"
+static_thumbnail = "/images/readings/metamorphosis.webp"
 related_readings = [
   "readings/2026-02-04-notes-from-underground.md",
   "readings/2024-11-29-mans-search-for-meaning.md",

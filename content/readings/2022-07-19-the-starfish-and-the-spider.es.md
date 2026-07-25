@@ -9,7 +9,7 @@ tags = [ "leadership", "team-management", "philosophy" ]
 subtitle = "El poder imparable de las organizaciones sin líder"
 pages = "240"
 author = "Ori Brafman, Rod Beckstrom"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41T1ZmJ8BGL._SX324_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/the-starfish-and-the-spider.webp"
 expand_preview = false
 related_readings = [
   "readings/2022-08-01-the-great-ceo-within.md",

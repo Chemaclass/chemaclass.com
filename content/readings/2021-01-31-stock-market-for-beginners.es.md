@@ -8,7 +8,7 @@ tags = [ "economics" ]
 subtitle = "25 lecciones doradas de inversión en acciones"
 pages = "160"
 author = "Mark Atwood"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51Gnm7D+qIL._SX311_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/stock-market-for-beginners.webp"
 related_readings = [
   "readings/2021-01-22-one-up-on-wall-street.md",
   "readings/2021-01-15-rich-dad-poor-dad.md",

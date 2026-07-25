@@ -8,7 +8,7 @@ tags = [ "architecture", "php", "software-design", "refactoring" ]
 subtitle = "La guía que lleva tus habilidades de código al siguiente nivel"
 pages = "370"
 author = "Matthias Noback"
-static_thumbnail = "https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero?1620605116"
+static_thumbnail = "/images/readings/advance-web-application-architecture.webp"
 expand_preview = true
 related_readings = [
   "readings/2018-06-04-clean-architecture.md",

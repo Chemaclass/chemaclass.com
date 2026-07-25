@@ -8,7 +8,7 @@ tags = [ "philosophy", "self-improvement" ]
 subtitle = "50 rules for life from philosophy's most famous pessimist"
 pages = "112"
 author = "Arthur Schopenhauer"
-static_thumbnail = "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1736579215i/223484689.jpg"
+static_thumbnail = "/images/readings/the-art-of-being-happy.webp"
 related_readings = [
   "readings/2018-08-10-the-art-of-war.md",
   "readings/2024-11-29-mans-search-for-meaning.md",

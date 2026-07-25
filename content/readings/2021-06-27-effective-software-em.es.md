@@ -8,7 +8,7 @@ tags = [ "leadership", "team-management", "career", "communication" ]
 subtitle = "Cómo ser el líder que tu equipo de desarrollo necesita"
 pages = "350"
 author = "James Stanier"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51B56axRbDL._SX404_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/effective-software-em.webp"
 expand_preview = true
 related_readings = [
   "readings/2020-03-26-the-manager-path.md",

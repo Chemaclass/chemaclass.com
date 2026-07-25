@@ -8,7 +8,7 @@ tags = [ "leadership", "team-management", "communication", "mentoring" ]
 subtitle = "Una historia real de convertir seguidores en líderes"
 pages = "220"
 author = "L. David Marquet"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL._SX323_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/turn-the-ship-around.webp"
 expand_preview = false
 related_readings = [
   "readings/2021-10-22-leadership-is-language.md",

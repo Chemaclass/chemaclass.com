@@ -8,7 +8,7 @@ tags = [ "fiction", "dystopia", "philosophy", "psychology" ]
 subtitle = "All animals are equal. But some animals are more equal than others."
 pages = "90"
 author = "George Orwell"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/515KWRPPnYL._SX305_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/animal-farm.webp"
 related_readings = [
   "readings/2020-05-13-1984.md",
   "readings/2023-06-28-fahrenheit-451.md",

@@ -8,7 +8,7 @@ tags = [ "software-design", "clean-code", "refactoring", "career" ]
 subtitle = "El camino hacia la maestría"
 pages = "350"
 author = "Andrew Hunt, David Thomas"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41as+WafrFL._SX258_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/the-pragmatic-programmer.webp"
 related_readings = [
   "readings/2016-05-01-clean-code.md",
   "readings/2016-08-01-the-clean-coder.md",

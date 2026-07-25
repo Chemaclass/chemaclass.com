@@ -8,7 +8,7 @@ tags = [ "clean-code", "career", "tdd", "communication" ]
 subtitle = "Un código de conducta para programadores profesionales"
 pages = "250"
 author = "Robert C. Martin"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lbNIP1YLL._SX381_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/the-clean-coder.webp"
 expand_preview = true
 related_readings = [
   "readings/2016-05-01-clean-code.md",

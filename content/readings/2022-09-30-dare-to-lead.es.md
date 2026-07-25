@@ -8,7 +8,7 @@ tags = [ "leadership", "communication", "psychology", "mentoring" ]
 subtitle = "Trabajo Valiente. Conversaciones Difíciles. Corazones Enteros."
 pages = "320"
 author = "Brené Brown"
-static_thumbnail = "https://m.media-amazon.com/images/I/4108sPwaBfL.jpg"
+static_thumbnail = "/images/readings/dare-to-lead.webp"
 expand_preview = false
 related_readings = [
   "readings/2024-04-17-radical-candor.md",

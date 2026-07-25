@@ -8,7 +8,7 @@ tags = [ "scrum", "agile", "team-management", "productivity" ]
 subtitle = "Un viaje hacia la recuperación"
 pages = "250"
 author = "Christiaan Verwijs, Johannes Schartau, Barry Overeem"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/511aL5yxHVL._SX383_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/zombie-scrum-survival-guide.webp"
 related_readings = [
   "readings/2020-06-10-scrum-the-art-of-doing-twice.md",
   "readings/2021-02-22-agile-product-management-with-scrum.md",

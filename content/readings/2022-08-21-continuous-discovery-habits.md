@@ -8,7 +8,7 @@ tags = [ "team-management", "agile", "productivity" ]
 subtitle = "Discover Products that Create Customer Value and Business Value"
 pages = "220"
 author = "Teresa Torres"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41O-IVvXtmS._SX331_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/continuous-discovery-habits.webp"
 expand_preview = false
 related_readings = [
   "readings/2024-01-26-the-lean-startup.md",

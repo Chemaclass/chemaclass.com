@@ -8,7 +8,7 @@ tags = [ "agile", "tdd", "software-design" ]
 subtitle = "Back to Basics"
 pages = "190"
 author = "Robert C. Martin"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41VQ9-JOXLL._SX380_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/clean-agile.webp"
 related_readings = [
   "readings/2020-03-05-extreme-programming-explained.md",
   "readings/2020-06-10-scrum-the-art-of-doing-twice.md",

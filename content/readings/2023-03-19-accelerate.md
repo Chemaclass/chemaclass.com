@@ -9,7 +9,7 @@ tags = [ "devops", "software-design", "agile", "productivity" ]
 subtitle = "Building and Scaling High Performing Technology Organizations"
 pages = "150"
 author = "Nicole Forsgren, Jez Humble, Gene Kim"
-static_thumbnail = "https://m.media-amazon.com/images/I/41YpWJi9OoL.jpg"
+static_thumbnail = "/images/readings/accelerate.webp"
 expand_preview = false
 related_readings = [
   "readings/2024-05-31-the-phoenix-project.md",

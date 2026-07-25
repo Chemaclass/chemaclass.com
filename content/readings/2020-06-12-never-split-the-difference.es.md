@@ -8,7 +8,7 @@ tags = [ "communication", "psychology", "leadership" ]
 subtitle = "Negociar como si tu vida dependiera de ello"
 pages = "280"
 author = "Chris Voss"
-static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51UM7MD1RlL._SX305_BO1,204,203,200_.jpg"
+static_thumbnail = "/images/readings/never-split-the-difference.webp"
 related_readings = [
   "readings/2023-10-31-crucial-conversations.md",
   "readings/2024-04-17-radical-candor.md",

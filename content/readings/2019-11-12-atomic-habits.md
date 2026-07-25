@@ -8,7 +8,7 @@ tags = [ "psychology", "productivity", "career" ]
 subtitle = "An Easy & Proven Way to Build Good Habits & Break Bad Ones"
 pages = "320"
 author = "James Clear"
-static_thumbnail = "https://m.media-amazon.com/images/I/51-nXsSRfZL.jpg"
+static_thumbnail = "/images/readings/atomic-habits.webp"
 related_posts = [
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
   "blog/2022-06-08-the-path-to-seniority-in-software.md",
