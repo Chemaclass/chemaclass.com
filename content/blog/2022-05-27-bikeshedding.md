@@ -1,18 +1,24 @@
 +++
 title = "Bikeshedding"
-description = "People within an organization typically give disproportionate weight to trivial issues."
+description = "Bikeshedding explains why teams waste time on trivial decisions while ignoring complex, important ones. Learn to recognize and avoid it."
 [taxonomies]
-tags = [ "psychology", "team-work", "management" ]
+tags = [ "psychology", "team-management", "productivity", "communication" ]
 [extra]
 subtitle = "Also known as the Law of triviality"
 static_thumbnail = "/images/blog/2022-05-27/cover.jpg"
+related_posts = [
+  "blog/2022-04-02-dunbar-number.md",
+  "blog/2022-07-25-the-project-management-triangle.md",
+  "blog/2022-08-22-understanding-people.md",
+]
+related_readings = [
+  "readings/2021-05-28-peopleware.md",
+  "readings/2023-10-31-crucial-conversations.md",
+]
 +++
 
-![blog-cover](/images/blog/2022-05-27/cover.jpg)
 
-The term was coined as a metaphor to illuminate Parkinson's Law of triviality.
-
-People within an organization typically give disproportionate weight to trivial issues.
+The term was coined as a metaphor to illuminate Parkinson's Law of triviality. People within an organization typically give disproportionate weight to trivial issues.
 
 <!-- more -->
 
@@ -51,6 +57,3 @@ Break down steps:
 ### References
 
 {{ youtube(id="D4hUq_aNXaA") }}
-
-
-

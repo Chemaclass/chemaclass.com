@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+{% import "partials/macros.html" as macros %}
+
+{% block title %}
+{{ page.title }}
+{% endblock %}
+
+{% block posthead %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{% if lang == 'es' %}Consultoría{% else %}Consulting{% endif %}",
+  "description": "{% if lang == 'es' %}Sesiones individuales para tech leads, engineering managers y CTOs navegando complejidad real.{% else %}One-on-one sessions for tech leads, engineering managers, and CTOs navigating real complexity.{% endif %}",
+  "provider": {
+    "@type": "Person",
+    "name": "Chema Valera",
+    "url": "https://chemaclass.com"
+  },
+  "serviceType": "{% if lang == 'es' %}Consultoría de liderazgo técnico{% else %}Tech leadership consulting{% endif %}",
+  "offers": {
+    "@type": "Offer",
+    "price": "{{ config.extra.pricing_consulting_session }}",
+    "priceCurrency": "EUR",
+    "description": "{% if lang == 'es' %}Sesión individual de 1 hora{% else %}Single 1-hour session{% endif %}"
+  }
+}
+</script>
+{% endblock posthead %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='page.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
+{% block content %}
+<article class="service-page">
+  <nav class="service-nav">
+    <a href="{% if lang == 'es' %}/es/services/{% else %}/services/{% endif %}" class="blog-post__back">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      {{ trans(key="svc_all_services", lang=lang) }}
+    </a>
+  </nav>
+
+  <div class="service-notice" role="status">
+    <i class="fa-solid fa-circle-info"></i>
+    <span>{{ trans(key="svc_consulting_paused_banner", lang=lang) }}</span>
+  </div>
+
+  <header class="service-hero">
+    <h1>{% if lang == "es" %}Consultoría{% else %}Consulting{% endif %}</h1>
+    <p class="service-hero__subtitle">{% if lang == "es" %}Para tech leads, engineering managers y CTOs navegando complejidad real.{% else %}For tech leads, engineering managers, and CTOs navigating real complexity.{% endif %}</p>
+  </header>
+
+  <section class="service-intro" id="intro">
+    <p>{% if lang == "es" %}He sido desarrollador, tech lead y manager en distintas empresas y culturas. No enseño teoría: comparto perspectiva construida haciendo el trabajo real.{% else %}I've been a developer, tech lead, and manager across different companies and cultures. I don't teach theory: I share perspective built from doing the actual work.{% endif %}</p>
+    <p>{% if lang == "es" %}Tú traes el problema. Trabajamos en ello juntos, en directo, una hora.{% else %}You bring the problem. We work through it together, live, one hour.{% endif %}</p>
+    <span class="service-intro__cta service-intro__cta--disabled" aria-disabled="true">
+      <i class="fa-solid fa-ban"></i> {{ trans(key="svc_consulting_unavailable", lang=lang) }}
+    </span>
+  </section>
+
+  <section class="service-process" id="process">
+    <h2>{% if lang == "es" %}Cómo funciona{% else %}How it works{% endif %}</h2>
+    <div class="process-steps process-steps--3col">
+      <div class="process-step">
+        <span class="process-step__number">1</span>
+        <div class="process-step__content">
+          <h3>{% if lang == "es" %}Contacta{% else %}Contact{% endif %}</h3>
+          <p>{% if lang == "es" %}Escríbeme con tu tema y lo que quieres resolver.{% else %}Contact me with your topic and what you're trying to figure out.{% endif %}</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">2</span>
+        <div class="process-step__content">
+          <h3>{% if lang == "es" %}Acordamos{% else %}Align{% endif %}</h3>
+          <p>{% if lang == "es" %}Acordamos el enfoque y el horario.{% else %}We agree on focus and timing.{% endif %}</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">3</span>
+        <div class="process-step__content">
+          <h3>{% if lang == "es" %}Sesión{% else %}Session{% endif %}</h3>
+          <p>{% if lang == "es" %}Videollamada de una hora. Trabajamos el problema en directo. Sales con un siguiente paso concreto.{% else %}One-hour video call. We work through the problem live. You leave with a concrete next step.{% endif %}</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="service-decision" id="topics">
+    <h2>{% if lang == "es" %}Temas{% else %}Topics{% endif %}</h2>
+    <div class="decision-cards">
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-compass"></i> {% if lang == "es" %}Liderazgo efectivo{% else %}Effective Leadership{% endif %}</h3>
+        <ul>
+          <li>{% if lang == "es" %}Saber exactamente qué se espera de ti como tech lead o EM{% else %}Know exactly what's expected of you as a tech lead or EM{% endif %}</li>
+          <li>{% if lang == "es" %}Liderar con impacto sin necesitar autoridad formal{% else %}Lead with impact without needing formal authority{% endif %}</li>
+          <li>{% if lang == "es" %}Dar feedback que la gente realmente aplica{% else %}Give feedback people actually act on{% endif %}</li>
+          <li>{% if lang == "es" %}Crear un equipo que se preocupe por la calidad{% else %}Build a team that genuinely cares about quality{% endif %}</li>
+        </ul>
+      </div>
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-people-arrows"></i> {% if lang == "es" %}Equipos y conflictos{% else %}Teams & Conflict{% endif %}</h3>
+        <ul>
+          <li>{% if lang == "es" %}Desactivar conflictos antes de que drenen al equipo{% else %}Defuse conflicts before they drain the team{% endif %}</li>
+          <li>{% if lang == "es" %}Retener a las personas que merecen quedarse{% else %}Keep the people worth keeping{% endif %}</li>
+          <li>{% if lang == "es" %}Navegar cambios organizacionales sin perder impulso{% else %}Navigate org changes without losing momentum{% endif %}</li>
+          <li>{% if lang == "es" %}Hacer que ingeniería y negocio tiren en la misma dirección{% else %}Get engineering and business pulling in the same direction{% endif %}</li>
+        </ul>
+      </div>
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-layer-group"></i> {% if lang == "es" %}Estrategia técnica{% else %}Technical Strategy{% endif %}</h3>
+        <ul>
+          <li>{% if lang == "es" %}Fijar una dirección técnica clara que tu equipo pueda seguir{% else %}Set a clear technical direction your team can follow{% endif %}</li>
+          <li>{% if lang == "es" %}Saber cuándo atacar la deuda técnica y cuándo no{% else %}Know exactly when to tackle tech debt vs ship faster{% endif %}</li>
+          <li>{% if lang == "es" %}Usar IA para ir más rápido sin bajar el nivel{% else %}Use AI to move faster without lowering the bar{% endif %}</li>
+          <li>{% if lang == "es" %}Construir cultura de ingeniería que escale con el equipo{% else %}Build engineering culture that scales with your team{% endif %}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-resources" id="resources">
+    <h2>{% if lang == "es" %}Recursos relacionados{% else %}Related resources{% endif %}</h2>
+    <div class="resources-grid">
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/tech-lead/" class="resource-card">
+        <div class="resource-card__icon"><i class="fa-solid fa-compass"></i></div>
+        <div class="resource-card__content"><h3>{% if lang == "es" %}El Tech Lead{% else %}The Tech Lead{% endif %}</h3></div>
+        <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
+      </a>
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/great-leadership/" class="resource-card">
+        <div class="resource-card__icon"><i class="fa-solid fa-star"></i></div>
+        <div class="resource-card__content"><h3>{% if lang == "es" %}Gran Liderazgo{% else %}Great Leadership{% endif %}</h3></div>
+        <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
+      </a>
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/ai-gives-you-speed-not-quality/" class="resource-card">
+        <div class="resource-card__icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <div class="resource-card__content"><h3>{% if lang == "es" %}La IA te da velocidad, no calidad{% else %}AI Gives You Speed, Not Quality{% endif %}</h3></div>
+        <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
+      </a>
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/the-beauty-of-leadership/" class="resource-card">
+        <div class="resource-card__icon"><i class="fa-solid fa-heart"></i></div>
+        <div class="resource-card__content"><h3>{% if lang == "es" %}La belleza del liderazgo{% else %}The Beauty of Leadership{% endif %}</h3></div>
+        <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
+      </a>
+    </div>
+  </section>
+
+  <section class="services-faq" id="faq">
+    <h2 class="services-faq__title">{% if lang == "es" %}Preguntas frecuentes{% else %}Frequently asked{% endif %}</h2>
+    <div class="services-faq__list">
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false">
+          {% if lang == "es" %}¿Qué NO está incluido?{% else %}What's NOT included?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}No es trabajo de código a medida, ni code reviews, ni acompañamiento de larga duración (retainer). Es una sesión enfocada de una hora para pensar tu problema en directo.{% else %}This isn't hands-on coding, code reviews, or long-term retainer coaching. It's a focused one-hour session to think through your problem live.{% endif %}
+        </div>
+      </div>
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false">
+          {% if lang == "es" %}¿Para quién es?{% else %}Who is this for?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}Tech leads, engineering managers y CTOs con complejidad real (equipo, organización, decisiones técnicas). No es mentoría para devs de primer empleo.{% else %}Tech leads, engineering managers, and CTOs facing real complexity (team, org, technical decisions). Not mentoring for first-job developers.{% endif %}
+        </div>
+      </div>
+      <div class="services-faq__item">
+        <button class="services-faq__question" aria-expanded="false">
+          {% if lang == "es" %}¿Política de cancelación?{% else %}Cancellation policy?{% endif %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="services-faq__answer">
+          {% if lang == "es" %}Reprograma sin coste hasta 24h antes. Después de eso, la sesión cuenta como usada.{% else %}Reschedule free up to 24h before. After that, the session counts as used.{% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing (hidden by default, shown with ?prices=1) -->
+  <section class="service-process" id="pricing" style="display: none;">
+    <div class="budget-section">
+      <div class="budget-header">
+        <h3>{% if lang == "es" %}Precios{% else %}Pricing{% endif %}</h3>
+        <p>{% if lang == "es" %}Sin intermediarios. Trato directo, precio claro.{% else %}No middlemen. Direct contact, clear pricing.{% endif %}</p>
+      </div>
+
+      <div class="pricing-details">
+        <div class="pricing-grid pricing-grid--2col">
+          <div class="pricing-card">
+            <h4><i class="fa-solid fa-comment-dots"></i> {% if lang == "es" %}Sesión individual{% else %}Single session{% endif %}</h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_consulting_session }}</div>
+            <div class="pricing-card__subprice">{% if lang == "es" %}por sesión de 1 hora{% else %}per 1-hour session{% endif %}</div>
+            <ul class="pricing-card__details">
+              <li>{% if lang == "es" %}Cualquier tema{% else %}Any topic{% endif %}</li>
+              <li>{% if lang == "es" %}Sin diapositivas, tú traes el problema{% else %}No slides, you bring the problem{% endif %}</li>
+            </ul>
+          </div>
+          <div class="pricing-card pricing-card--featured">
+            <h4><i class="fa-solid fa-layer-group"></i> {% if lang == "es" %}Pack de 3 sesiones{% else %}Pack of 3 sessions{% endif %}<span class="pricing-card__badge">{% if lang == "es" %}Mejor valor{% else %}Best value{% endif %}</span></h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_consulting_pack3 }}</div>
+            <div class="pricing-card__subprice">{% if lang == "es" %}3 sesiones de 1 hora{% else %}3 × 1-hour sessions{% endif %}</div>
+            <ul class="pricing-card__details">
+              <li>{% if lang == "es" %}Ahorra €{{ config.extra.pricing_consulting_pack3_save }} respecto a sueltas{% else %}Save €{{ config.extra.pricing_consulting_pack3_save }} vs individual{% endif %}</li>
+              <li>{% if lang == "es" %}Usa las sesiones cuando quieras{% else %}Use sessions whenever you want{% endif %}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-cta">
+    <div class="service-cta__icon"><i class="fa-solid fa-comments"></i></div>
+    <h2>{% if lang == "es" %}¿Listo para hablar?{% else %}Ready to talk?{% endif %}</h2>
+    <p>{% if lang == "es" %}No tienes que tenerlo todo claro. Solo dime el tema.{% else %}You don't need to have it all figured out. Just tell me the topic.{% endif %}</p>
+    <div class="service-cta__buttons">
+      <span class="service-cta__btn service-cta__btn--disabled" aria-disabled="true">
+        <i class="fa-solid fa-ban"></i> {{ trans(key="svc_consulting_unavailable", lang=lang) }}
+      </span>
+    </div>
+  </section>
+</article>
+{% endblock content %}
+
+{% block js %}
+<script>
+document.querySelectorAll('.services-faq__question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.nextElementSibling.classList.toggle('open', !expanded);
+  });
+});
+
+// Show pricing if prices=1 is in URL (query or malformed hash like #pricing?prices=1)
+(function() {
+  const search = new URLSearchParams(window.location.search);
+  const hash = window.location.hash;
+  const hashId = hash.includes('?') ? hash.substring(1, hash.indexOf('?')) : hash.substring(1);
+  const hashQuery = hash.includes('?') ? hash.substring(hash.indexOf('?') + 1) : '';
+  const fromHash = new URLSearchParams(hashQuery);
+  if (search.get('prices') === '1' || fromHash.get('prices') === '1') {
+    document.querySelectorAll('#pricing').forEach(el => el.style.display = 'block');
+    if (hashId) {
+      const target = document.getElementById(hashId);
+      if (target) target.scrollIntoView();
+    }
+  }
+})();
+</script>
+{% endblock js %}
+

@@ -1,17 +1,26 @@
 +++
 title = "The Manager Path"
-description = "A Guide for Tech Leaders Navigating Growth and Change"
+description = "Camille Fournier maps the career path from engineer to CTO, covering 1:1s, mentoring, team management, and the evolving responsibilities at each level of technical leadership."
 aliases = [ "/readings/manager-path" ]
+authors = [ "Camille Fournier" ]
 [taxonomies]
-tags = [ "management", "leadership" ]
+tags = [ "leadership", "team-management", "mentoring", "communication" ]
 [extra]
 subtitle = "A Guide for Tech Leaders Navigating Growth and Change"
 pages = "220"
 author = "Camille Fournier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51BHEtpF4eL._SX331_BO1,204,203,200_.jpg"
+related_posts = [
+  "blog/2021-07-01-tech-lead.md",
+  "blog/2023-02-27-great-leadership.md",
+  "blog/2022-09-25-the-beauty-of-leadership.md",
+]
+related_readings = [
+  "readings/2020-04-03-high-output-management.md",
+  "readings/2021-06-27-effective-software-em.md",
+  "readings/2022-01-23-modern-cto.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51BHEtpF4eL._SX331_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

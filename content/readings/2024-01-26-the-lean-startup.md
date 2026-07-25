@@ -2,17 +2,22 @@
 title = "The Lean Startup"
 description = "Most startups fail. But many of those failures are preventable. The Lean Startup is a new approach being adopted across the globe, changing the way companies are built and new products are launched."
 draft = false
+authors = [ "Eric Ries" ]
 [taxonomies]
-tags = [ "management", "leadership" ] 
+tags = [ "leadership", "team-management", "productivity", "agile" ] 
 [extra]
 subtitle = "How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful"
 pages = "300"
 author = "Eric Ries"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629999184i/10127019.jpg"
 expand_preview = false
+related_posts = ["blog/2023-02-27-great-leadership.md", "blog/2022-08-22-understanding-people.md", "blog/2023-10-11-unhealthy-working-environment.md", "blog/2022-11-11-working-agile-with-non-agile-teams.md"]
+related_readings = [
+  "readings/2016-09-01-sprint.md",
+  "readings/2022-08-21-continuous-discovery-habits.md",
+  "readings/2024-05-31-the-phoenix-project.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629999184i/10127019.jpg" >
 
 <!-- more -->
 
@@ -29,17 +34,10 @@ Eric Ries defines a startup as an organization dedicated to creating something n
 - Embrace new accounting methods
 - Learn what is not working and apply changes immediately: stay lean
 
-#### Summary
+### Summary
 
 {{ youtube(id="RSaIOCHbuYw") }}
 
 ---
 
 {{ youtube(id="fEvKo90qBns") }}
-
-### Recommended posts
-
-- [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
-- [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
-- [Unhealthy working environment](/blog/unhealthy-working-environment/)<small> Recognizing red flags of an unhealthy workplace</small>
-- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small> How can you work with other teams that aren't agile?</small>

@@ -1,17 +1,21 @@
 +++
 title = "Turn the Ship Around!"
 description = "The book is about his leadership theories to how he implemented a fresh leadership model. Including the limitations of a hierarchical top-down model, why/how he failed to empower his team earlier in his career, and how the circumstances for Santa Fe were ideal for him to experiment with the new leader-leader approach."
+authors = [ "L. David Marquet" ]
 [taxonomies]
-tags = [ "leadership", "management" ]
+tags = [ "leadership", "team-management", "communication", "mentoring" ]
 [extra]
 subtitle = "A True Story of Turning Followers into Leaders"
 pages = "220"
 author = "L. David Marquet"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL._SX323_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-10-22-leadership-is-language.md",
+  "readings/2023-09-20-its-your-ship.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/91vIBQGfysL._SX323_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

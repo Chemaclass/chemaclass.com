@@ -1,17 +1,24 @@
 +++
-title = "Dunbar number"
+title = "Dunbar Number"
 description = "Dunbar's number is a suggested cognitive limit to the number of people with whom one can maintain stable social relationships."
 [taxonomies]
-tags = [ "psychology", "team-work", "management" ]
+tags = [ "psychology", "team-management", "communication" ]
 [extra]
 subtitle = ""
 static_thumbnail = "/images/blog/2022-04-02/cover.jpg"
+related_posts = [
+  "blog/2022-05-27-bikeshedding.md",
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-11-25-forming-storming-norming-performing.md",
+]
+related_readings = [
+  "readings/2021-05-28-peopleware.md",
+  "readings/2022-03-31-team-topologies.md",
+]
 +++
 
-![blog-cover](/images/blog/2022-04-02/cover.jpg)
 
-Dunbar's number is a suggested cognitive limit to the number of people with whom one can maintain stable social
-relationships, in which an individual knows who each person is and how each person relates to every other person.
+A cognitive limit to the number of people with whom one can maintain stable social relationships, in which an individual knows who each person is and how each person relates to every other person.
 
 <!-- more -->
 
@@ -44,10 +51,10 @@ themselves if they met again.
 
 - Single teams: 5-9 people.
   - There is a shared trust among the team members.
-  - The trust is build among time.
+  - The trust is built over time.
   - Therefore, they must be a long term team.
 - Group: 50 people.
-  - They can have meaning relationship.
+  - They can have meaningful relationships.
   - They share a domain or subdomain.
   - They understand the challenges and help each other out.
 - Division: 150 people

@@ -1,14 +1,22 @@
 +++
-title = "Typed arrays in PHP"
+title = "Typed Arrays in PHP"
 description = "Argument unpacking, function variable argument list, and variadics function."
 [taxonomies]
-tags = [ "software", "php", "array", "generics" ]
+tags = [ "php", "software-design", "clean-code"]
 [extra]
 subtitle = "An alternative to the missing feature in PHP: Generics"
 static_thumbnail = "/images/blog/2020-10-13/cover.jpg"
+related_posts = [
+  "blog/2020-11-10-array-merge-in-loop.md",
+  "blog/2021-01-11-to-mock-or-not-to-mock.md",
+  "blog/2021-02-01-phel-first-release.md",
+]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2020-10-10-object-design-style-guide.md",
+]
 +++
 
-![blog-cover](/images/blog/2020-10-13/cover.jpg)
 
 Argument unpacking, function variable argument list, and variadics function.
 
@@ -19,7 +27,7 @@ Argument unpacking, function variable argument list, and variadics function.
 - Function variable argument list: The arguments will be passed into the given variable as an array.
 - Variadics function: Types can be checked with a type-hint.
 
-We will use this snipped for our examples
+We will use this snippet for our examples.
 Having a class, `Customer`:
 
 ```php
@@ -121,7 +129,7 @@ createInvoiceForCustomers(
     new Customer('any name'), 
     new Customer('any name'),
 ); // OK
-// This is not even possible to write. The IDE will yeld at you. 
+// This is not even possible to write. The IDE will yell at you. 
 // It's expecting a `Customer`, but `AnyOtherType` is given:
 createInvoiceForCustomers(new AnyOtherType());
 ```
@@ -142,11 +150,11 @@ createInvoiceForCustomers(new AnyOtherType());
 Argument unpacking is a great feature that, in combination with variadic functions, can help us to simulate typed arrays. With great power comes great responsibility, and this is no exception.
 We need to learn about our toolbox in order to use it wisely.
 
-![blog-cover](/images/blog/2020-10-13/footer.jpg)
+![typed arrays with variadics in php](/images/blog/2020-10-13/footer.jpg)
 
 ---
 
-#### References
+### References
 - [Argument unpacking](https://wiki.php.net/rfc/argument_unpacking)
 - [Function variable argument list](https://www.php.net/manual/en/functions.arguments.php#functions.variable-arg-list)
 - [Variadics function](https://wiki.php.net/rfc/variadics)

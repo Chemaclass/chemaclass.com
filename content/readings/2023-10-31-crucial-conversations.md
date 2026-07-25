@@ -2,17 +2,21 @@
 title = "Crucial Conversations"
 description = "Crucial Conversations gives you the tools you need to step up to life's most difficult and important conversations, say what's on your mind, and achieve the positive resolutions you want."
 draft = false
+authors = [ "Patterson", "Grenny", "McMillan", "Switzler" ]
 [taxonomies]
-tags = [ "leadership", "communication" ]
+tags = [ "communication", "leadership", "psychology", "team-management" ]
 [extra]
 subtitle = "Tools for Talking When Stakes are High"
 pages = "200"
 author = "Patterson, Grenny, McMillan, Switzler"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1497193248i/15014.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2020-06-12-never-split-the-difference.md",
+  "readings/2024-04-17-radical-candor.md",
+  "readings/2021-10-22-leadership-is-language.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1497193248i/15014.jpg" >
 
 <!-- more -->
 

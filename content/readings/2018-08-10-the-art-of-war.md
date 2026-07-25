@@ -1,17 +1,21 @@
 +++
 title = "The Art of War"
 description = "The Art of War is an ancient Chinese military treatise attributed to Sun Tzu, a high-ranking military general, strategist and tactician, and kindred to the Realpolitik of his time, termed in China as Legalism."
+authors = [ "Sun Tzu" ]
 [taxonomies]
-tags = [ "psychology", "communication" ]
+tags = [ "philosophy", "psychology", "leadership" ]
 [extra]
 subtitle = "How should we behave in a battle?"
 pages = "100"
 author = "Sun Tzu"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41Le0J5QuNL._SX331_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-04-19-the-art-of-leadership.md",
+  "readings/2021-11-28-start-with-why.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41Le0J5QuNL._SX331_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

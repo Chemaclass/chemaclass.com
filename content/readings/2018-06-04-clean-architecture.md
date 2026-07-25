@@ -1,16 +1,25 @@
 +++
 title = "Clean Architecture"
-description = "A Craftsman's Guide to Software Structure and Design"
+description = "Robert C. Martin's guide to SOLID principles, component design, and architectural boundaries that keep software systems flexible, testable, and maintainable over time."
+authors = [ "Robert C. Martin" ]
 [taxonomies]
-tags = [ "software", "architecture" ]
+tags = [ "architecture", "software-design", "clean-code", "ddd" ]
 [extra]
 subtitle = "A Craftsman's Guide to Software Structure and Design"
 pages = "400"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41TPrNDI50L._SX387_BO1,204,203,200_.jpg"
+related_posts = [
+  "blog/2023-12-30-great-engineering.md",
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2023-04-14-introducing-a-new-tech-stack.md",
+]
+related_readings = [
+  "readings/2020-09-10-domain-driven-design-distilled.md",
+  "readings/2022-11-28-recipes-for-decoupling.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41TPrNDI50L._SX387_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 
@@ -65,5 +74,3 @@ We can identify four main layers, although the number may vary:
 - **Interface adapters**: Gateways, presenters and controllers. For example, this layer will contain the MVC
   architecture of the GUI and also objects that transform data between the format of the database and the use-cases.
 - **Frameworks and drivers**: web frameworks, database, the view of MVC.
-
-

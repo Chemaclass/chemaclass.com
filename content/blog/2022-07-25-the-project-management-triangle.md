@@ -2,15 +2,24 @@
 title = "The Project Management Triangle"
 description = "A triangle of time, quality and cost. it's an indicator that these three parameters are interconnected. You can fix one or two of them, but not three."
 [taxonomies]
-tags = [ "management" ]
+tags = [ "agile", "team-management", "productivity" ]
 [extra]
 subtitle = "The Iron Triangle"
 static_thumbnail = "/images/blog/2022-07-25/cover.jpg"
+related_posts = [
+  "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md",
+  "blog/2024-08-01-what-is-waterfall.md",
+  "blog/2022-05-27-bikeshedding.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2020-06-10-scrum-the-art-of-doing-twice.md",
+  "readings/2023-03-19-accelerate.md",
+]
 +++
 
-![blog-cover](/images/blog/2022-07-25/cover.jpg)
 
-A triangle of time, quality and cost. it's an indicator that these three parameters are interconnected.
+A triangle of time, quality and cost. It's an indicator that these three parameters are interconnected.
 You can fix one or two of them, but not three.
 
 <!-- more -->
@@ -25,7 +34,7 @@ You can fix one or two of them, but not three.
 
 In software methodologies, you can adapt this idea by changing **quality** to **scope**:
 
-![blog-cover](/images/blog/2022-07-25/middle.jpg)
+![triangle with scope replacing quality](/images/blog/2022-07-25/middle.jpg)
 
 ### Waterfall
 
@@ -48,10 +57,7 @@ learnings and recalibrating their priorities again and again.
 As you can see, one funny fact is that the waterfall and agile share an inverted triangle with their fixed and variables
 parameters. Really interesting indeed.
 
-![blog-cover](/images/blog/2022-07-25/footer.jpg)
-
-> TL;DR: Deliver value constantly in short iterations. Why? Because this will help you to get feedback, and feedback is
-necessary to make the right decisions.
+![inverted triangles for waterfall and agile](/images/blog/2022-07-25/footer.jpg)
 
 ## Reference
 

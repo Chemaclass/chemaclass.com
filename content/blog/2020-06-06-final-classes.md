@@ -1,14 +1,21 @@
 +++
-title = "Final classes in PHP | Java | Any"
+title = "Final Classes in PHP | Java | Any"
 description = "Clear contracts, isolated side effects, testability, low complexity and cognitive load, code fluidity, and confidence in yourself."
 [taxonomies]
-tags = [ "final", "classes", "php", "java" ]
+tags = [ "php", "software-design", "clean-code", "testing"]
 [extra]
 subtitle = "Final, or not final, that's the question"
 static_thumbnail = "/images/blog/2020-06-06/cover.jpg"
+related_posts = [
+  "blog/2020-08-09-strict-types.md",
+  "blog/2020-04-07-the-art-of-testing.md",
+]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2020-10-10-object-design-style-guide.md",
+]
 +++
 
-![blog-cover](/images/blog/2020-06-06/cover.jpg)
 
 Clear contracts, isolated side effects, testability, low complexity and cognitive load, code fluidity, and confidence in yourself.
 
@@ -18,15 +25,15 @@ Clear contracts, isolated side effects, testability, low complexity and cognitiv
 
 ### Reduce the scope visibility to the minimum
 
-When you see a class prefix with final you will prevent a particular class to be extended by any other, which not only makes it more readable but also makes you be sure that the scope of the logic where you are is limited to that particular class.
+When you see a class prefixed with final you will prevent a particular class to be extended by any other, which not only makes it more readable but also makes you be sure that the scope of the logic where you are is limited to that particular class.
 
 ### Encourage "composition over inheritance" mentality
 
-The Open-Close Principle states: open for extension but close for modification.
+The Open-Close Principle states: open for extension but closed for modification.
 
 If for any reason, a good one you should be completely aware of, you decide to create an inheritance there, well, then just drop the final keyword and you are good to go.
 
-When you "by default" can't extends from a class (because it's final), you will help yourself by thinking about using composition instead of inheritance.
+When you "by default" can't extend from a class (because it's final), you will help yourself by thinking about using composition instead of inheritance.
 
 ## Why isn't this class final?
 
@@ -36,7 +43,7 @@ If we aim for composition over inheritance, then we should try to avoid inherita
 
 When we first taught OOP, we usually introduced the classic inheritance example.
 
-Nonetheless, when Alan Kay created Smalltalk, the inheritance was never the main concept of it. The main concept was messaging, which is that you can send messages to objects and they encapsulate the data and logic in it, and you can change their behavior by using different objects, which is actually composition. But the concept of inheritance is too popular that eventually overshadows composition.
+Nonetheless, when Alan Kay created Smalltalk, the inheritance was never the main concept of it. The main concept was messaging, which is that you can send messages to objects and they encapsulate the data and logic in it, and you can change their behavior by using different objects, which is actually composition. But the concept of inheritance is so popular that it eventually overshadows composition.
 
 ### Benefits
 
@@ -62,4 +69,4 @@ If you need to represent a hierarchy of classes, where subclasses are proper sub
 
 > Interfaces -> Final classes -> Composition
 
-![blog-cover](/images/blog/2020-06-06/footer.jpg)
+![interfaces, final classes and composition](/images/blog/2020-06-06/footer.jpg)

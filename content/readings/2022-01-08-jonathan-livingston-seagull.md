@@ -1,17 +1,21 @@
 +++
 title = "Jonathan Livingston Seagull"
 description = "A fable in novella form about a seagull who is trying to learn about life and flight, and a homily about self-perfection."
+authors = [ "Richard Bach" ]
 [taxonomies]
-tags = [ "novel", "self-help", "spiritual" ]
+tags = [ "fiction", "philosophy", "psychology", "career" ]
 [extra]
 subtitle = "A story"
 pages = "100"
 author = "Richard Bach"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/419VQmad1LL._SX374_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2023-11-07-the-alchemist.md",
+  "readings/2022-12-17-momo.md",
+  "readings/2024-11-29-mans-search-for-meaning.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/419VQmad1LL._SX374_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 A fable in novella form about a seagull who is trying to learn about life and flight, and a homily about self-perfection.

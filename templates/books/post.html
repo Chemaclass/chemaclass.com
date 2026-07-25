@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+
+{% import "partials/helpers-preview.html" as helpers_preview %}
+{% import "partials/related-container.html" as related %}
+{% import "partials/macros.html" as macros %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='post.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
+{% block posthead %}
+{% if page.lower %}
+<link rel="prerender" href="{{ page.lower.permalink }}">
+{% endif %}
+
+{% if page.higher %}
+<link rel="prerender" href="{{ page.higher.permalink }}">
+{% endif %}
+
+{% set schema_type = "Chapter" %}
+{% include "partials/post-schema.html" %}
+{% endblock posthead %}
+
+{% block content %}
+  <div class="blog-post-layout" data-toc-hidden="false">
+    <!-- Table of Contents -->
+    <nav
+      id="toc-container"
+      data-hide-toc="false"
+      data-title="{{ trans(key='toc_header_title', lang=lang) }}"
+      data-close-label="{{ trans(key='toc_close_label', lang=lang) }}">
+      <div id="reading-progress" class="reading-progress"></div>
+    </nav>
+
+    <div class="blog-post-main">
+      <article class="book-chapter">
+        <!-- Back to book link -->
+        {% set section = get_section(path=page.ancestors | last) %}
+        <div class="blog-post__top-row">
+          <a href="{{ section.permalink }}" class="book-chapter__back">
+            {{ macros::back_arrow() }}
+            {{ section.title | split(pat=" | ") | first }}
+          </a>
+          <button id="toc-toggle"
+                  class="toc-toggle"
+                  type="button"
+                  role="switch"
+                  aria-checked="true"
+                  aria-label="Toggle table of contents">
+            <svg class="toc-toggle__icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="1" y="2" width="5" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M9 4h6M9 8h6M9 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span class="toc-toggle__label">{{ trans(key="toc_toggle_label", lang=lang) }}</span>
+            <span class="toc-toggle__switch">
+              <span class="toc-toggle__knob"></span>
+            </span>
+            <kbd class="toc-toggle__shortcut">T</kbd>
+          </button>
+        </div>
+
+        <!-- Chapter header -->
+        <header class="book-chapter__header">
+          <h1 class="book-chapter__title">{{ page.title }}</h1>
+
+          <div class="book-chapter__meta">
+            {% if page.date %}
+            <span class="book-chapter__date">
+              {{ macros::calendar_icon() }}
+              {{ page.date | date(format="%B %Y") }}
+            </span>
+            {% endif %}
+            {% if page.reading_time %}
+            <span class="book-chapter__reading-time">
+              {{ macros::clock_icon() }}
+              {{ page.reading_time }} {{ trans(key="minutes_read", lang=lang) }}
+            </span>
+            {% endif %}
+            {% if page.word_count %}
+            <span class="book-chapter__word-count">
+              {{ macros::document_icon() }}
+              {{ page.word_count }} {{ trans(key="words", lang=lang) }}
+            </span>
+            {% endif %}
+          </div>
+        </header>
+
+        <!-- Chapter content -->
+        <div class="book-chapter__content"
+             data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
+             data-hl-remove="{{ trans(key='highlight_remove', lang=lang) }}"
+             data-hl-share-x="{{ trans(key='highlight_share_x', lang=lang) }}"
+             data-hl-share-linkedin="{{ trans(key='highlight_share_linkedin', lang=lang) }}"
+             data-hl-copy-quote="{{ trans(key='highlight_copy_quote', lang=lang) }}"
+             data-hl-copied="{{ trans(key='highlight_copied', lang=lang) }}"
+             data-hl-saved="{{ trans(key='highlight_saved', lang=lang) }}"
+             data-hl-removed="{{ trans(key='highlight_removed', lang=lang) }}"
+             data-hl-add-note="{{ trans(key='highlight_add_note', lang=lang) }}"
+             data-hl-edit-note="{{ trans(key='highlight_edit_note', lang=lang) }}"
+             data-hl-note-saved="{{ trans(key='highlight_note_saved', lang=lang) }}"
+             data-hl-note-removed="{{ trans(key='highlight_note_removed', lang=lang) }}"
+             data-hl-note-placeholder="{{ trans(key='highlight_note_placeholder', lang=lang) }}"
+             data-hl-clear-all="{{ trans(key='highlight_clear_all', lang=lang) }}"
+             data-hl-clear-confirm="{{ trans(key='highlight_clear_confirm', lang=lang) }}"
+             data-hl-clear-done="{{ trans(key='highlight_clear_done', lang=lang) }}"
+             data-hl-export="{{ trans(key='highlight_export', lang=lang) }}"
+             data-hl-export-done="{{ trans(key='highlight_export_done', lang=lang) }}">
+          {{ page.content | safe }}
+        </div>
+
+        <!-- Footer -->
+        <footer class="book-chapter__footer">
+          {% set url = config.extra.repo_content_url ~ page.relative_path %}
+          <a href="{{ url }}" class="book-chapter__edit-link">
+            {{ macros::edit_icon() }}
+            {{ trans(key="found_typo", lang=lang) }}
+          </a>
+          <span id="highlight-clear-slot"></span>
+        </footer>
+
+        <!-- Chapter navigation -->
+        <nav class="book-chapter__nav">
+          {% if page.lower %}
+            <a href="{{ page.lower.permalink }}" class="book-chapter__nav-link book-chapter__nav-link--prev">
+              <span class="book-chapter__nav-label">
+                {{ macros::nav_arrow_left() }}
+                {{ trans(key="previous_chapter", lang=lang) }}
+              </span>
+              <span class="book-chapter__nav-title">{{ page.lower.title }}</span>
+            </a>
+          {% else %}
+            <span></span>
+          {% endif %}
+          {% if page.higher %}
+            <a href="{{ page.higher.permalink }}" class="book-chapter__nav-link book-chapter__nav-link--next">
+              <span class="book-chapter__nav-label">
+                {{ trans(key="next_chapter", lang=lang) }}
+                {{ macros::nav_arrow_right() }}
+              </span>
+              <span class="book-chapter__nav-title">{{ page.higher.title }}</span>
+            </a>
+          {% endif %}
+        </nav>
+      </article>
+    </div>
+  </div>
+
+
+  <!-- Image lightbox modal -->
+  <div id="image-lightbox" class="lightbox">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <img class="lightbox__image" src="" alt="">
+  </div>
+
+{% endblock content %}
+
+{% block js %}
+<script type="text/javascript" src="{{ get_url(path='toc.js') | safe }}" defer></script>
+<script>
+  // Reading progress bar
+  window.addEventListener('scroll', function() {
+    const article = document.querySelector('.book-chapter__content');
+    if (!article) return;
+
+    const pageFooter = document.querySelector('.page-footer');
+    const articleTop = article.offsetTop;
+    const endPoint = pageFooter ? (pageFooter.offsetTop - 420) : (articleTop + article.offsetHeight);
+    const totalHeight = endPoint - articleTop;
+    const windowHeight = window.innerHeight;
+    const scrollTop = window.scrollY;
+
+    const progress = Math.min(Math.max((scrollTop - articleTop + windowHeight * 0.5) / totalHeight, 0), 1);
+    document.getElementById('reading-progress').style.width = (progress * 100) + '%';
+  });
+
+  // Image lightbox
+  (function() {
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImg = lightbox.querySelector('.lightbox__image');
+    const lightboxClose = lightbox.querySelector('.lightbox__close');
+    const chapterImages = document.querySelectorAll('.book-chapter__content img');
+
+    chapterImages.forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function() {
+        lightboxImg.src = this.src;
+        lightboxImg.alt = this.alt;
+        lightbox.classList.add('lightbox--active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('lightbox--active');
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('lightbox--active')) {
+        closeLightbox();
+      }
+    });
+  })();
+</script>
+{% endblock js %}
+
+{% block highlights %}
+<script type="text/javascript" src="{{ get_url(path='highlights.js') }}" defer></script>
+{% endblock highlights %}

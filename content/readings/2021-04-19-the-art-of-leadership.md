@@ -1,17 +1,26 @@
 +++
 title = "The Art of Leadership"
 description = "Leadership practices are small things done repetitively over time. Managers tell you where you are, leaders tell you where you're going."
+authors = [ "Michael Loop" ]
 [taxonomies]
-tags = [ "leadership", "management" ]
+tags = [ "leadership", "communication", "mentoring", "team-management" ]
 [extra]
 subtitle = "Small Things, Done Well"
 pin = false
 pages = "165"
 author = "Michael Lopp"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/31YOKF2IcBL._SX331_BO1,204,203,200_.jpg"
+related_posts = [
+  "blog/2023-02-27-great-leadership.md",
+  "blog/2022-09-25-the-beauty-of-leadership.md",
+  "blog/2024-09-02-people-skills.md",
+]
+related_readings = [
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/31YOKF2IcBL._SX331_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

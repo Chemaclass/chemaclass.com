@@ -1,16 +1,20 @@
 +++
 title = "Rich dad poor dad"
 description = "Explodes the myth that you need to earn a high income to become rich."
+authors = [ "Robert T. Kiyosaki" ]
 [taxonomies]
-tags = [ "business", "financial" ]
+tags = [ "economics" ]
 [extra]
 subtitle = "What the Rich Teach Their Kids about Money That the Poor and Middle Class Do Not!"
 pages = "180"
 author = "Robert T. Kiyosaki"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51rgCls-voL._SX350_BO1,204,203,200_.jpg"
+related_readings = [
+  "readings/2022-02-27-the-psychology-of-money.md",
+  "readings/2021-01-22-one-up-on-wall-street.md",
+  "readings/2021-01-31-stock-market-for-beginners.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51rgCls-voL._SX350_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

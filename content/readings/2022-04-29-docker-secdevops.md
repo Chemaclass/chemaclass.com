@@ -1,6 +1,7 @@
 +++
 title = "Docker: SecDevOps"
 description = "A great book about Docker, from introduction to advanced concepts all covered by easy-to-follow examples."
+authors = [ "Fran Ramírez", "Elías Grande", "Rafael Troncoso" ]
 [taxonomies]
 tags = [ "docker", "devops" ]
 [extra]
@@ -9,9 +10,12 @@ pages = "200"
 author = "Fran Ramírez, Elías Grande, Rafael Troncoso"
 static_thumbnail = "https://0xword.com/477-large_default/docker-secdevops.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2024-05-31-the-phoenix-project.md",
+  "readings/2023-03-19-accelerate.md",
+  "readings/2022-03-31-team-topologies.md",
+]
 +++
-
-<img border="0" src="https://0xword.com/477-large_default/docker-secdevops.jpg" >
 
 <!-- more -->
 

@@ -1,14 +1,21 @@
 +++
-title = "Embrace the change"
+title = "Embrace the Change"
 description = "The tale is a beautiful metaphor of the different attitudes that people adopt as part of their identity in life when they have to confront any change."
 [taxonomies]
-tags = [ "books", "change", "management", "leadership" ]
+tags = [ "leadership", "psychology", "career", "philosophy" ]
 [extra]
 subtitle = "Who moved my cheese?🧀"
 static_thumbnail = "/images/blog/2021-03-01/cover.jpg"
+related_posts = [
+  "blog/2020-09-08-the-process-itself-is-the-goal.md",
+  "blog/2023-03-16-have-you-always-been-like-this.md",
+  "blog/2023-07-05-never-ending-loop.md",
+]
+related_readings = [
+  "readings/2021-01-16-who-moved-my-cheese.md",
+]
 +++
 
-![blog-cover](/images/blog/2021-03-01/cover.jpg)
 
 The book *Who moved my cheese?* presents a tale inside the main story that consists of 4 characters: two mice, **Sniff** and **Scurry**, and two little persons, **Hem** and **Haw**.
 
@@ -18,9 +25,9 @@ Published in 1998, and I just read it at the beginning of 2021. Better late than
 
 > They live in a Maze (that represents one's environment) and in order to survive they need to go out of their comfort zone and look for cheese (which represents happiness and success).
 >
-> The tale starts when both groups end up at "Cheese Station C", full of cheese. The humans established routines while the mouses kept their instincts active.
+> The tale starts when both groups end up at "Cheese Station C", full of cheese. The humans established routines while the mice kept their instincts active.
 >
-> One day the mousses arrive at the "Cheese Station C" and find no cheese left. So they go out to find more cheese somewhere else. On the contrary, when Hem and Haw see that there is no cheese left, they start complaining. Hem, angry and annoyed, demands "Who moved my cheese?!". Both humans counted on the cheese supply would be endless constant, so they weren't prepared for that unexpected. The main difference here is how Haw and Hem react to this situation.
+> One day the mice arrive at the "Cheese Station C" and find no cheese left. So they go out to find more cheese somewhere else. On the contrary, when Hem and Haw see that there is no cheese left, they start complaining. Hem, angry and annoyed, demands "Who moved my cheese?!". Both humans counted on the cheese supply being endless and constant, so they weren't prepared for the unexpected. The main difference here is how Haw and Hem react to this situation.
 >
 > Hem denies moving away from the "Cheese Station C", so he keeps going there every day expecting to find cheese without success, being weaker, and with continuous fear of doing something different. Haw, on the other hand, decides to laugh at the situation, turns down his fear, and goes out looking for more cheese.
 >
@@ -52,4 +59,4 @@ This book is full of lessons that apply to everyone no matter who they are or wh
 
 {{ youtube(id="OvYCLxqkfvY") }}
 
-> "Life moves on and so should we" — Spencer Johnson
+> "Life moves on and so should we" - Spencer Johnson

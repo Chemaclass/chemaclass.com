@@ -1,16 +1,20 @@
 +++
 title = "Never split the difference"
 description = "From policing the rough streets of Kansas City, Missouri, to becoming the FBI's lead international kidnapping negotiator to teaching negotiation at leading universities, Chris Voss has tested the techniques in 'Never Split the Difference' across the full spectrum of human endeavor and proved their effectiveness."
+authors = [ "Chris Voss" ]
 [taxonomies]
-tags = [ "carrier skills", "negotiation" ]
+tags = [ "communication", "psychology", "leadership" ]
 [extra]
 subtitle = "Negotiating as if your life depended on it"
 pages = "280"
 author = "Chris Voss"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51UM7MD1RlL._SX305_BO1,204,203,200_.jpg"
+related_readings = [
+  "readings/2023-10-31-crucial-conversations.md",
+  "readings/2024-04-17-radical-candor.md",
+  "readings/2021-10-22-leadership-is-language.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51UM7MD1RlL._SX305_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 
@@ -33,6 +37,6 @@ across the full spectrum of human endeavor and proved their effectiveness.
 5. "No" provides a great opportunity for you, and the other party to clarify what you really want by eliminating what you
    don't want.
 
-#### Summary video
+### Summary video
 
 {{ youtube(id="QIRk382yJm4") }}

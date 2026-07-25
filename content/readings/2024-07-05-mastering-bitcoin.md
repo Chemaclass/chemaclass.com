@@ -2,17 +2,22 @@
 title = "Mastering Bitcoin"
 description = "This book covers everything from the basics to the most profound technical aspects of how Bitcoin works. It is an excellent guide through the complex world of Bitcoin, providing the knowledge you need to participate in the Internet of Money."
 draft = false
+authors = [ "Andreas M. Antonopoulos", "David A. Harding" ]
 [taxonomies]
-tags = [ "software", "bitcoin" ]
+tags = [ "bitcoin", "software-design", "privacy" ]
 [extra]
 subtitle = "Programming the Open Blockchain"
 pages = "400"
 author = "Andreas M. Antonopoulos, David A. Harding"
 static_thumbnail = "https://m.media-amazon.com/images/I/71JEv9rs7xL.jpg"
 expand_preview = true
+related_posts = ["blog/2024-07-06-programmable-money.md"]
+related_readings = [
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2023-03-11-21-lessons.md",
+]
 +++
-
-<img border="0" src="https://m.media-amazon.com/images/I/71JEv9rs7xL.jpg" >
 
 This book covers everything from the basics to the most profound technical aspects of Bitcoin. It is an excellent guide through this complex world, providing the knowledge you need to participate in the Internet of money.
 
@@ -20,7 +25,7 @@ This book covers everything from the basics to the most profound technical aspec
 
 The first edition of this book was published in December 2014. Ten years later, a third edition with up-to-date knowledge just came out. It is highly recommended to all people interested in this outstanding topic and the tech behind it.
 
-- A broad introduction to Bitcoin and its underlying blockchain--ideal for nontechnical users, investors, and business executives.
+- A broad introduction to Bitcoin and its underlying blockchain, ideal for nontechnical users, investors, and business executives.
 - An explanation of Bitcoin's technical foundation and cryptographic currency for developers, engineers, and software and systems architects.
 - Details of the Bitcoin decentralized network, peer-to-peer architecture, transaction lifecycle, and security principles.
 - New developments such as Taproot, Tapscript, Schnorr signatures, and the Lightning Network.
@@ -85,16 +90,3 @@ The first edition of this book was published in December 2014. Ten years later, 
 1. Mining is one of the inventions that make Bitcoin special, a **decentralized consensus** mechanism that is the basis for P2P digital cash.
    - It secures the Bitcoin system and enables the emergence of network-wide consensus without a central authority.
 1. A **soft-fork** is a forward-compatible change to the consensus rules that allows unupgraded clients to continue to operate in consensus with the new rules.
-
----
-
-### Related posts
-
-- [Programmable Money](/blog/programmable-money) <small>The power of Bitcoin's Script</small>
-
-### Related readings
-
-- [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
-- [The Blocksize War](/readings/the-blocksize-war/) <small>by Jonathan Bier</small>
-- [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>by Saifedean Ammous</small>
-- [The Book Of Satoshi](/readings/the-book-of-satoshi/) <small>by Phil Champagne</small>

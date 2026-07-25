@@ -1,17 +1,22 @@
 +++
 title = "Modern CTO"
 description = "In Modern CTO, Joel Beasley provides readers with an in-depth road map on how to successfully navigate the unexplored and jagged transition between these two roles. Drawing from personal experience, Joel gives a refreshing take on the challenges, lessons, and things to avoid on this journey."
+authors = [ "Joel Beasley" ]
 [taxonomies]
-tags = [ "leadership", "people" ]
+tags = [ "leadership", "team-management", "software-design", "communication" ]
 [extra]
 subtitle = ""
 pages = "144"
 author = "Joel Beasley"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51GydOENM3L._SX331_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-11-28-start-with-why.md",
+  "readings/2020-03-26-the-manager-path.md",
+  "readings/2022-08-01-the-great-ceo-within.md",
+  "readings/2021-06-27-effective-software-em.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51GydOENM3L._SX331_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 
@@ -59,7 +64,7 @@ These are the topics you'll find in the book:
 > Always return to your core goals. [...] I make sure each core goal has a clearly defined "why?" behind it, this way 
 > if I ever get lost, I go back to my "why."
 
--- Reference to "[Start with Why](/readings/start-with-why)" by Simon Sinek.
+- Reference to "[Start with Why](/readings/start-with-why)" by Simon Sinek.
 
 > When you're the boss, remember this golden rule: Ask people what they think instead of telling them what to do.
 

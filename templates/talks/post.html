@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% import "partials/macros.html" as macros %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='page.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
+{% block posthead %}
+  {% if page.lower %}
+  <link rel="prerender" href="{{ page.lower.permalink }}">
+  {% endif %}
+
+  {% if page.higher %}
+  <link rel="prerender" href="{{ page.higher.permalink }}">
+  {% endif %}
+
+  {% for tag in page.taxonomies.tags %}
+  <link rel="prerender" href='{{ get_taxonomy_url(kind="tags", name=tag) }}'>
+  {% endfor %}
+
+  {% set schema_type = "CreativeWork" %}
+  {% include "partials/post-schema.html" %}
+{% endblock posthead %}
+
+{% block content %}
+  <article class="talk-single">
+    <!-- Back link -->
+    <a href="{{ macros::lang_path(path='/talks/', lang=lang) }}" class="talk-single__back">
+      {{ macros::back_arrow() }}
+      {{ trans(key="all_talks", lang=lang) }}
+    </a>
+
+    <!-- Hero section -->
+    <header class="talk-single__hero">
+      <h1 class="talk-single__title">{{ page.title }}</h1>
+      {% if page.extra.subtitle %}
+        <p class="talk-single__subtitle">{{ page.extra.subtitle }}</p>
+      {% endif %}
+      {% if page.taxonomies.tags %}
+        <div class="talk-single__tags">
+          {% for tag in page.taxonomies.tags %}
+            <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="talk-single__tag">{{ tag }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </header>
+
+    <!-- Description card -->
+    {% if page.summary %}
+    <div class="talk-single__description">
+      {{ page.summary | safe }}
+    </div>
+    {% endif %}
+
+    <!-- Project link -->
+    {% if page.extra.project_url %}
+    <div class="talk-single__project">
+      <a href="{{ page.extra.project_url }}" target="_blank" rel="noopener" class="talk-single__project-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        {{ trans(key="talks_view_project", lang=lang) }}
+      </a>
+    </div>
+    {% endif %}
+
+    <!-- Appearances section -->
+    <div class="talk-single__section-header">
+      <h2>{{ trans(key="talks_appearances", lang=lang) }}</h2>
+    </div>
+
+    <!-- Content (appearances list + images) -->
+    <section class="talk-single__content"
+             data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
+             data-hl-remove="{{ trans(key='highlight_remove', lang=lang) }}"
+             data-hl-share-x="{{ trans(key='highlight_share_x', lang=lang) }}"
+             data-hl-share-linkedin="{{ trans(key='highlight_share_linkedin', lang=lang) }}"
+             data-hl-copy-quote="{{ trans(key='highlight_copy_quote', lang=lang) }}"
+             data-hl-copied="{{ trans(key='highlight_copied', lang=lang) }}"
+             data-hl-saved="{{ trans(key='highlight_saved', lang=lang) }}"
+             data-hl-removed="{{ trans(key='highlight_removed', lang=lang) }}"
+             data-hl-add-note="{{ trans(key='highlight_add_note', lang=lang) }}"
+             data-hl-edit-note="{{ trans(key='highlight_edit_note', lang=lang) }}"
+             data-hl-note-saved="{{ trans(key='highlight_note_saved', lang=lang) }}"
+             data-hl-note-removed="{{ trans(key='highlight_note_removed', lang=lang) }}"
+             data-hl-note-placeholder="{{ trans(key='highlight_note_placeholder', lang=lang) }}"
+             data-hl-clear-all="{{ trans(key='highlight_clear_all', lang=lang) }}"
+             data-hl-clear-confirm="{{ trans(key='highlight_clear_confirm', lang=lang) }}"
+             data-hl-clear-done="{{ trans(key='highlight_clear_done', lang=lang) }}"
+             data-hl-export="{{ trans(key='highlight_export', lang=lang) }}"
+             data-hl-export-done="{{ trans(key='highlight_export_done', lang=lang) }}">
+      {% if page.summary %}
+        {{ page.content | replace(from=page.summary, to="") | safe }}
+      {% else %}
+        {{ page.content | safe }}
+      {% endif %}
+    </section>
+
+    <div id="highlight-clear-slot" style="text-align:right"></div>
+
+    <!-- Navigation between talks -->
+    <nav class="talk-single__nav">
+      {% if page.lower %}
+        <a href="{{ page.lower.permalink }}" class="talk-single__nav-link talk-single__nav-link--prev">
+          <span class="talk-single__nav-label">{{ trans(key="previous", lang=lang) }}</span>
+          <span class="talk-single__nav-title">{{ page.lower.title }}</span>
+        </a>
+      {% else %}
+        <span></span>
+      {% endif %}
+      {% if page.higher %}
+        <a href="{{ page.higher.permalink }}" class="talk-single__nav-link talk-single__nav-link--next">
+          <span class="talk-single__nav-label">{{ trans(key="next", lang=lang) }}</span>
+          <span class="talk-single__nav-title">{{ page.higher.title }}</span>
+        </a>
+      {% endif %}
+    </nav>
+  </article>
+
+
+{% endblock content %}
+
+{% block highlights %}
+<script type="text/javascript" src="{{ get_url(path='highlights.js') }}" defer></script>
+{% endblock highlights %}

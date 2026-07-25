@@ -1,18 +1,22 @@
 +++
 title = "The Alchemist"
-description = ""
+description = "A classic novel about Santiago, a boy who embarks on a journey seeking treasure in Egypt, learning the true importance of self-improvement and what really matters in life."
 draft = false
+authors = [ "Paulo Coelho" ]
 [taxonomies]
-tags = [ "novel", "fantasy" ]
+tags = [ "fiction", "philosophy", "career" ]
 [extra]
 subtitle = ""
 pages = "200"
 author = "Paulo Coelho"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1551938818i/44295818.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2022-01-08-jonathan-livingston-seagull.md",
+  "readings/2022-12-17-momo.md",
+  "readings/2024-11-29-mans-search-for-meaning.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1551938818i/44295818.jpg" >
 
 <!-- more -->
 
@@ -20,4 +24,4 @@ The Alchemist is a classic novel in which a boy named Santiago embarks on a jour
 
 #### Video Summary
 
-{{ youtube(id="AbFG1vjNuvA") }}
+{{ youtube(id="b41MXNaFJj0") }}

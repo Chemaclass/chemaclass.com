@@ -1,15 +1,24 @@
 +++
-title = "Understanding people"
+title = "Understanding People"
 description = "One of the most complicated challenges for everyone is avoiding misunderstandings and being aware that other people don't think the same way as you do."
 draft = false
 [taxonomies]
-tags = [ "team-work", "people", "psychology" ]
+tags = [ "communication", "psychology", "team-management" ]
 [extra]
 subtitle = "Misunderstandings, effective communication, and self-reflection"
 static_thumbnail = "/images/blog/2022-08-22/cover.jpg"
+related_posts = [
+  "blog/2024-09-02-people-skills.md",
+  "blog/2022-04-02-dunbar-number.md",
+  "blog/2023-06-08-learned-helplessness.md",
+]
+related_readings = [
+  "readings/2021-04-05-97-things-every-em-should-know.md",
+  "readings/2021-10-22-leadership-is-language.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+]
 +++
 
-![blog-cover](/images/blog/2022-08-22/cover.jpg)
 
 One of the most complicated challenges for everyone is avoiding misunderstandings and being aware that other people
 don't think the same way as you do.
@@ -76,10 +85,4 @@ are surrounded by, **especially when dealing with people**.
 > Look over your reach area, share your thoughts, and don't be ashamed of your mistakes as far as you take them as
 > learning opportunities.
 
-![blog-cover](/images/blog/2022-08-22/footer.jpg)
-
-### Recommended readings
-
-- [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/) <small>by Patrick M. Lencioni</small>
-- [97 Things Every Engineering Manager should know](/readings/97-things-every-em-should-know/) <small>by Camille Fournier</small>
-- [Leadership is Language](/readings/leadership-is-language/) <small>by L. David Marquet</small>
+![people communicating](/images/blog/2022-08-22/footer.jpg)

@@ -1,18 +1,22 @@
 +++
 title = "Invincible"
-description = "Achieve More, Suffer Less"
+description = "Marcos Vazquez combines stoic philosophy with modern psychology to train your mind for clarity, determination, and discipline in the face of adversity."
 draft = false
+authors = [ "Marcos Vazquez" ]
 [taxonomies]
-tags = [ "discipline", "stoicism", "philosophy" ] 
+tags = [ "philosophy", "psychology", "productivity" ] 
 [extra]
 subtitle = "Achieve More, Suffer Less"
 pages = "180"
 author = "Marcos Vazquez"
 static_thumbnail = "https://m.media-amazon.com/images/I/71+1EHGiyRL._SL1500_.jpg"
 expand_preview = false
+related_posts = ["blog/2023-07-05-never-ending-loop.md", "blog/2023-03-16-have-you-always-been-like-this.md", "blog/2020-09-08-the-process-itself-is-the-goal.md"]
+related_readings = [
+  "readings/2023-08-13-the-day-of-the-triffids.md",
+  "readings/2020-05-18-call-of-cthulhu.md",
+]
 +++
-
-<img border="0" src="https://m.media-amazon.com/images/I/71+1EHGiyRL._SL1500_.jpg" >
 
 <!-- more -->
 
@@ -33,8 +37,3 @@ This book will help you use your mind to improve your body, but it actually goes
 
 {{ youtube(id="R9OCA6UFE-0") }}
 
-### Recommended posts
-
-- [Never ending loop](/blog/never-ending-loop/)<small> Writing to help myself sleep</small>
-- [Have you always been like this?](/blog/have-you-always-been-like-this/)<small> How to find a balance of growth and happiness</small>
-- [The process itself is the goal](/blog/the-process-itself-is-the-goal/)<small> How to focus and have self-discipline</small>

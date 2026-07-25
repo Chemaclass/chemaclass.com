@@ -1,31 +1,38 @@
 +++
-title = "Learning concurrency in Golang"
+title = "Learning Concurrency in Golang"
 description = "I wanted to learn a new programming language, so after trying some, I ended up with Golang as one of my favorites for its simplicity and capabilities. It has features I haven’t used in years, like multithreading and concurrency."
 draft = false
 [taxonomies]
-tags = [ "software", "golang" ]
+tags = ["golang", "software-design", "clean-code"]
 [extra]
 subtitle = "A horse racing emulator explained step by step"
 static_thumbnail = "/images/blog/2024-04-02/cover.jpg"
+related_posts = [
+  "blog/2023-12-30-great-engineering.md",
+  "blog/2020-04-07-the-art-of-testing.md",
+]
+related_readings = [
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+  "readings/2022-06-29-modern-software-engineering.md",
+]
 +++
 
-![blog-cover](/images/blog/2024-04-02/cover.jpg)
 
-I wanted to learn a new programming language, so after trying some, I ended up with Golang as one of my favorites for its simplicity and capabilities. It has features I haven’t used in years, like multithreading and concurrency.
+I wanted to learn a new language, so after trying some, I ended up with Golang as one of my favorites for its simplicity and capabilities. It has features I haven’t used in years, like multithreading and concurrency.
 
 <!-- more -->
 
-[Golang](https://go.dev/) (or `Go`) supports concurrency through lightweight threads called goroutines. These are different from traditional multithreading—like in Java, where you have to handle sync and coordination to manage shared resources safely. In contrast, Go's goroutines are lightweight, managed by the Go runtime, and cheaper to create and manage.
+[Golang](https://go.dev/) (or `Go`) supports concurrency through lightweight threads called goroutines. These are different from traditional multithreading, like in Java, where you have to handle sync and coordination to manage shared resources safely. In contrast, Go's goroutines are lightweight, managed by the Go runtime, and cheaper to create and manage.
 
 While parallelism is **doing** several things simultaneously, concurrency is about **dealing** with several things at the same time. When we talk about concurrency and parallelism, we don’t know the order of things. We don’t know what’s going to happen first or what’s going to end first. There is an undefined order of execution.
 
 > Imagine you cooking: preparing a soup, a salad and an omelet. You would be one single unit, but you are preparing different dishes. You might finish the salad first or the soup or the omelet… We cannot guarantee that! This would be concurrency, as you are alone dealing with several things. As soon as your partner comes and helps you cook, then we will be talking about parallelism.
 
-![cover](/images/blog/2024-04-02/concurrency-vs-multithreading.jpg)
+![concurrency vs multithreading](/images/blog/2024-04-02/concurrency-vs-multithreading.jpg)
 
 I remember building a similar game in `Java` when I was learning multithreading ten years ago… let’s use this opportunity to do it again with modern `Go`.
 
-I built a terminal game emulator that mimics one horse racing. Each horse is a goroutine that runs in a shared bidimensional matrix. Once a horse reaches the end, it notifies the shared channel between all other horses --running in different processes-- and they all stop, showing in the terminal the winner of the race.
+I built a terminal game emulator that mimics one horse racing. Each horse is a goroutine that runs in a shared bidimensional matrix. Once a horse reaches the end, it notifies the shared channel between all other horses (running in different processes) and they all stop, showing in the terminal the winner of the race.
 
 I separated the code into four areas to help visualize it:
 - Entry point
@@ -34,7 +41,7 @@ I separated the code into four areas to help visualize it:
 - Moving the horses
 
 
-![cover](/images/blog/2024-04-02/race-horses-demo.gif)
+![horse racing terminal demo](/images/blog/2024-04-02/race-horses-demo.gif)
 
 ### Entry point
 
@@ -127,7 +134,7 @@ func generateHorseName() string {
 
 ### Rendering the game
 
-Then `RenderGame()`, `renderRaceBoard()`, `renderRaceLine()` and `renderRacePosition()` are separated to help focus on each method's responsibility --identifying what is the subject to be rendered.
+Then `RenderGame()`, `renderRaceBoard()`, `renderRaceLine()` and `renderRacePosition()` are separated to help focus on each method's responsibility, identifying what is the subject to be rendered.
 
 > `RenderGame()` is being executed in another process using `go`.
 
@@ -262,6 +269,6 @@ func moveHorseOnePos(board [][]*Horse, line int, winnerChan chan Horse) {
 
 The code displayed in this post is a simplified version, so if you would like to check the working source, you can do it here: [Chemaclass/go-horse-racing](https://github.com/Chemaclass/go-horse-racing).
 
-> Thanks to my former Team Lead, Andrei Boar, who helped me review my first original solution and provided an [alternative solution](https://gist.github.com/zuzuleinen/79413aa7933d7d6c6d84ec6ba8c3910a) (simpler and better!), which I applied to my original code. The main learning was using a `chan Horse` to pass the winner Horse from `main()`, instead of using a `chan bool` and a `sync.WaitGroup` between all threads.
-
-
+{% kudos() %}
+Thanks to my former Team Lead, Andrei Boar, who helped me review my first original solution and provided an [alternative solution](https://gist.github.com/zuzuleinen/79413aa7933d7d6c6d84ec6ba8c3910a) (simpler and better!), which I applied to my original code. The main learning was using a `chan Horse` to pass the winner Horse from `main()`, instead of using a `chan bool` and a `sync.WaitGroup` between all threads.
+{% end %}

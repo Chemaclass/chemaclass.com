@@ -1,0 +1,114 @@
++++
+title = "Commits de Git Verificados"
+description = "Firma tus commits de Git con GPG para demostrar que son tuyos. Sin firmas, cualquiera puede falsificar commits con tu email. Se configura en 5 minutos."
+draft = false
+[taxonomies]
+tags = [ "git", "security", "cryptography", "open-source" ]
+[extra]
+subtitle = "Aumentando la confianza y seguridad en tu código"
+static_thumbnail = "/images/blog/2024-11-17/cover.jpg"
+related_posts = [
+  "blog/2024-07-13-pretty-good-privacy.md",
+  "blog/2021-05-03-open-source-software.md",
+  "blog/2024-12-11-the-cypherpunks.md",
+]
+related_readings = [
+  "readings/2024-07-05-mastering-bitcoin.md",
+  "readings/2024-06-21-the-genesis-book.md",
+]
++++
+
+
+En desarrollo de software, la confianza y la seguridad son clave. Una forma fácil de mejorar ambas: usar commits verificados.
+
+<!-- more -->
+
+Ya trabajes en open-source o en una empresa privada, los commits verificados aseguran que tus contribuciones son legítimas. Veamos qué son, por qué importan y cómo empezar a usarlos.
+
+## ¿Qué son los commits verificados?
+
+Un commit verificado es un commit de Git firmado digitalmente por su autor. La firma demuestra que el commit viene de quien dice haberlo hecho. Herramientas como [GPG (GNU Privacy Guard)](https://gnupg.org/) permiten adjuntar esta firma.
+
+En plataformas como GitHub verás una insignia "Verified" junto a los commits firmados. Es una forma rápida de mostrar que el commit es auténtico.
+
+![blog-cover](/images/blog/2024-11-17/verified-commit-example.jpg)
+
+## ¿Por qué son importantes?
+
+Los commits firmados mantienen tus contribuciones auténticas y confiables. La firma criptográfica demuestra que los cambios vinieron de ti. En entornos colaborativos, donde la confianza y la responsabilidad importan mucho, esto es clave.
+
+Sin firmar, cualquiera puede falsificar un commit usando tu email. GitHub lo vincularía a tu perfil, pareciendo que hiciste los cambios aunque no fuera así. Nada bueno.
+
+![blog-cover](/images/blog/2024-11-17/impersonating-commit.jpg)
+
+![blog-cover](/images/blog/2024-11-17/impersonating-commit4.jpg)
+
+Al firmar tus commits, demuestras que el trabajo es tuyo. Evitas la suplantación, generas confianza y mantienes todo transparente.
+
+> <small>Nota: Para esta demo, usé un email público de Linus Torvalds. Al hacer push, GitHub reconoció el email y lo vinculó a su perfil. Suplantación solo con fines de demo para mostrar los riesgos. Usa siempre tu propio email para commits.</small>
+
+---
+
+## Cómo empezar con commits verificados
+
+### Configura una clave GPG
+
+Primero necesitas una clave GPG. Así se hace:
+
+Genera una clave GPG:
+```bash
+gpg --full-generate-key
+```
+Encuentra tu ID de clave:
+```bash
+gpg --list-secret-keys --keyid-format=long
+```
+Dile a Git que use tu clave:
+```bash
+git config --global user.signingkey <tu-id-de-clave>
+```
+Haz que firmar commits sea el valor por defecto:
+```bash
+git config --global commit.gpgsign true
+```
+
+### Añade tu clave a [GitHub](https://github.com/settings/keys)/[GitLab](https://docs.gitlab.com/user/project/repository/signed_commits/gpg/)
+
+Exporta tu clave pública:
+```bash
+gpg --armor --export <tu-id-de-clave>
+```
+Navega a "Settings > SSH and GPG keys," y pega tu clave.
+
+![blog-cover](/images/blog/2024-11-17/gpg-keys.jpg)
+
+### Empieza a firmar commits
+
+A partir de ahora, Git firmará tus commits automáticamente.
+
+Si quieres firmar un commit a mano, usa la bandera `-S`:
+```bash
+git commit -S -m "Tu mensaje de commit"
+```
+Puedes **verificar** la firma del commit con:
+```bash
+git log --show-signature
+```
+
+También puedes hacer clic en la insignia "Verified" en GitHub.
+
+![blog-cover](/images/blog/2024-11-17/gpg-verify.jpg)
+
+Los commits verificados parecen un paso pequeño, pero hacen tu código más confiable. Una capa extra de protección fácil de añadir. Pruébalo.
+
+---
+
+### Extra: Configuración completa en español
+
+{{ youtube(id="0DzQBu7U2f4") }}
+
+---
+
+**Enlaces relacionados**
+
+- Aprende más: [¿Qué es el cifrado PGP?](/pgp) <small>Un tutorial de 3 minutos para principiantes</small>

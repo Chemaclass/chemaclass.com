@@ -3,17 +3,21 @@ title = "It's Your Ship"
 description = "It's Your Ship is a leadership book written by D. Michael Abrashoff, a former commander of the USS Benfold, a guided missile destroyer. The book focuses on Abrashoff's experiences and the leadership principles he applied to transform the performance and culture of his ship."
 draft = false
 aliases = [ "/readings/it-is-your-ship" ]
+authors = [ "D. Michael Abrashoff" ]
 [taxonomies]
-tags = [ "leadership", "management" ]
+tags = [ "leadership", "team-management", "communication", "mentoring" ]
 [extra]
 subtitle = "Management Techniques from the Best Damn Ship in the Navy"
 pages = "200"
 author = "D. Michael Abrashoff"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1435059869i/183392.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/2021-10-22-leadership-is-language.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1435059869i/183392.jpg" >
 
 <!-- more -->
 

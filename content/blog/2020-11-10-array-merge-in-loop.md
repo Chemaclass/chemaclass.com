@@ -1,14 +1,22 @@
 +++
-title = "Never use array_merge in a loop"
+title = "Never Use array_merge in a Loop"
 description = "Using array_merge inside a loop is a performance killer. The spread operator will help you to improve this by flatting the array."
 [taxonomies]
-tags = [ "software", "php", "array", "performance" ]
+tags = [ "php", "clean-code", "refactoring"]
 [extra]
 subtitle = "The spread operator to the rescue"
 static_thumbnail = "/images/blog/2020-11-10/cover.jpg"
+related_posts = [
+  "blog/2020-10-13-typed-arrays-php.md",
+  "blog/2020-06-28-the-art-of-refactoring.md",
+  "blog/2021-01-11-to-mock-or-not-to-mock.md",
+]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+]
 +++
 
-![blog-cover](/images/blog/2020-11-10/cover.jpg)
 
 Using array_merge inside a loop is a performance killer.
 The spread operator will help you to improve this by flatting the array.
@@ -128,4 +136,3 @@ Otherwise, the internal standard library will help you deal with it.
 
 - [Spread_operator_for_array - Wikipedia](https://wiki.php.net/rfc/spread_operator_for_array)
 - [Flatten_a_list - Rosettacode](https://rosettacode.org/wiki/Flatten_a_list)
-- [Slow array function used in loop - Kalessil](https://kalessil.github.io/phpinspectionsea/docs/performance.html#slow-array-function-used-in-loop)

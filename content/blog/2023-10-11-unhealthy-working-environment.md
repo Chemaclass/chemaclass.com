@@ -1,15 +1,27 @@
 +++
-title = "Unhealthy working environment"
+title = "Unhealthy Working Environment"
 description = "An unhealthy working environment can have various symptoms that negatively impact both the physical and mental well-being of employees."
 draft = false
 [taxonomies]
-tags = [ "management", "leadership" ]
+tags = ["leadership", "team-management", "communication", "psychology"]
 [extra]
 subtitle = "Recognizing red flags of an unhealthy workplace"
 static_thumbnail = "/images/blog/2023-10-11/cover.jpg"
+related_posts = [
+  "blog/2020-09-08-the-process-itself-is-the-goal.md",
+  "blog/2021-03-01-embrace-the-change.md",
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-02-27-great-leadership.md",
+  "blog/2023-03-16-have-you-always-been-like-this.md",
+  "blog/2023-09-30-the-peter-principle.md",
+]
+related_readings = [
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2021-10-22-leadership-is-language.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
 +++
 
-![blog-cover](/images/blog/2023-10-11/cover.jpg)
 
 An unhealthy working environment can have various symptoms that negatively impact employees' physical and mental well-being.
 
@@ -51,7 +63,7 @@ Discrimination, favoritism, or unequal opportunities can create a toxic and divi
 
 When employees feel that there is no room for advancement or professional growth, they may become disengaged and unfulfilled in their roles.
 
-![blog-cover](/images/blog/2023-10-11/middle.jpg)
+![blog-middle](/images/blog/2023-10-11/middle.jpg)
 
 ### Unhealthy conflicts among colleagues
 
@@ -76,7 +88,7 @@ Prolonged exposure to a non-healthy work environment can lead to physical and em
 > It's important to note that these symptoms can vary from one workplace to another. Addressing these issues promptly and effectively is crucial to create a healthy and productive environment.
 
 
-![blog-cover](/images/blog/2023-10-11/footer.jpg)
+![blog-footer](/images/blog/2023-10-11/footer.jpg)
 
 
 ## What can you do about it?

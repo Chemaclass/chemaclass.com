@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{ trans(key="talks_title", lang=lang) }} | Chemaclass
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='page.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
+{% block posthead %}
+  {% for post in section.pages %}
+    <link rel="prerender" href="{{ post.permalink }}" />
+  {% endfor %}
+{% endblock posthead %}
+
+{% block content %}
+  <div class="talks-page">
+    <div class="talks-header">
+      <h1>{{ trans(key="talks_title", lang=lang) }}</h1>
+      <p class="talks-intro">{{ trans(key="talks_intro", lang=lang) }}</p>
+    </div>
+
+    <!-- Featured Topics -->
+    {% if section.pages | length > 0 %}
+    <section class="talks-featured">
+      <h2 class="talks-section-title">{{ trans(key="talks_featured", lang=lang) }}</h2>
+      <div class="talks-grid">
+        {% for talk in section.pages %}
+        {% if talk.slug == "bashunit" or talk.slug == "phel" or talk.slug == "hands-on-refactoring-tdd" %}
+        <a href="{{ talk.permalink }}" class="talk-card">
+          <div class="talk-card__content">
+            <h3 class="talk-card__title">{{ talk.title }}</h3>
+            {% if talk.extra.subtitle %}
+              <p class="talk-card__subtitle">{{ talk.extra.subtitle }}</p>
+            {% endif %}
+            <p class="talk-card__summary">{{ talk.summary | striptags }}</p>
+            {% if talk.taxonomies.tags %}
+              <div class="talk-card__tags">
+                {% for tag in talk.taxonomies.tags | slice(end=3) %}
+                  <span class="talk-card__tag">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- Timeline -->
+    <section class="talks-timeline">
+      <h2 class="talks-section-title">{{ trans(key="talks_timeline", lang=lang) }}</h2>
+      <div class="timeline-content">
+        {{ section.content | safe }}
+      </div>
+    </section>
+  </div>
+
+{% endblock content %}

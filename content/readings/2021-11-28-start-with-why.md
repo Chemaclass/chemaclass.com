@@ -1,17 +1,21 @@
 +++
 title = "Start with Why"
 description = "Start with Why asks (and answers) the questions: why are some people and organizations more innovative, more influential, and more profitable than others? Why do some command greater loyalty from customers and employees alike? Even among the successful, why are so few able to repeat their success over and over?"
+authors = [ "Simon Sinek" ]
 [taxonomies]
-tags = [ "leadership", "entrepreneurship" ]
+tags = [ "leadership", "communication", "philosophy", "career" ]
 [extra]
 subtitle = "How Great Leaders Inspire Everyone to Take Action"
 pages = "250"
 author = "Simon Sinek"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51BlNddi+NL._SX330_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2023-01-29-the-infinite-game.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2021-04-19-the-art-of-leadership.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51BlNddi+NL._SX330_BO1,204,203,200_.jpg" >
 
 *Start with Why* asks (and answers) the questions: why are some people and organizations more innovative, more
 influential, and more profitable than others? Why do some command greater loyalty from customers and employees alike?

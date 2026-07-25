@@ -2,13 +2,24 @@
 title = "Pull Requests vs Pair Programming"
 description = "Let's talk about the benefits of Pull Requests and Pair Programming, and my thoughts on these after some years of experience with them."
 [taxonomies]
-tags = [ "team-work", "pull-request", "pair-programming" ]
+tags = [ "pair-programming", "code-review", "agile", "communication" ]
 [extra]
 subtitle = "Why choosing when you can have both?"
 static_thumbnail = "/images/blog/2021-04-01/cover.jpg"
+related_posts = [
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
+  "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+  "blog/2024-05-30-what-kills-agility.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-05-28-peopleware.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
-![blog-cover](/images/blog/2021-04-01/cover.jpg)
 
 Let's talk about the benefits of Pull Requests and Pair Programming, and my thoughts on these after some years of experience with them. 
 
@@ -65,7 +76,7 @@ That said, Pull Requests and Pair Programming aren't mutually exclusive, they ca
 The most common fear that I saw while encouraging to do Pair Programming is that some people are shy and they don't like to have other eyes around them while they are coding because of:
 - Fear that they don't know what to code or where to start.
 - Fear that others will laugh at their solutions.
-- Fear to don't succeed in public.
+- Fear to not succeed in public.
 - Fear to not be able to develop the expected solution for multiple reasons: misunderstanding the task or lack of knowledge.
 - Fear to change your mind in front of others.
 - Fear to discuss and make decisions loud.
@@ -102,4 +113,4 @@ If you still feel uncomfortable having another person next to you while you writ
 
 > It's totally ok not knowing everything. The most important thing is to know how to work together.
 
-![blog-img](/images/blog/2021-04-01/footer.jpg)
+![two developers pair programming](/images/blog/2021-04-01/footer.jpg)

@@ -1,5 +1,25 @@
 {% extends "base.html" %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='listing.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
+{% block description %}
+  {% if lang == "es" %}
+    <meta name="description" content="Explora {{ terms | length }} etiquetas sobre desarrollo de software, liderazgo, testing y más." />
+    <meta name="twitter:description" content="Explora {{ terms | length }} etiquetas sobre desarrollo de software, liderazgo, testing y más.">
+  {% else %}
+    <meta name="description" content="Browse {{ terms | length }} tags covering software development, leadership, testing, and more." />
+    <meta name="twitter:description" content="Browse {{ terms | length }} tags covering software development, leadership, testing, and more.">
+  {% endif %}
+{% endblock description %}
+
 {% block posthead %}
 {% for term in terms %}
 <link rel="prerender" href="{{ term.permalink }}" />
@@ -7,12 +27,35 @@
 {% endblock posthead %}
 
 {% block content %}
-<h1 class="taxonomy-name">{{ taxonomy.name }}</h1>
-<div class="taxonomy-container">
-    {% for term in terms %}
-    <div class="term">
-        <a href="{{ term.permalink }}">{{ term.name }} ({{ term.pages | length }})</a>
-    </div>
+<div class="tags-page">
+  <header class="tags-page__header">
+    <h1>{{ trans(key="all_tags", lang=lang) }}</h1>
+    <p class="tags-page__count">{{ terms | length }} tags</p>
+  </header>
+
+  {% set_global max_count = 0 %}
+  {% for term in terms %}
+    {% set count = term.pages | length %}
+    {% if count > max_count %}
+      {% set_global max_count = count %}
+    {% endif %}
+  {% endfor %}
+
+  <div class="tags-page__cloud">
+    {% for term in terms | sort(attribute="pages") | reverse %}
+      {% set count = term.pages | length %}
+      {% if count >= max_count / 2 %}
+        {% set size = "lg" %}
+      {% elif count >= max_count / 4 %}
+        {% set size = "md" %}
+      {% else %}
+        {% set size = "sm" %}
+      {% endif %}
+      <a href="{{ term.permalink }}" class="tags-page__tag tags-page__tag--{{ size }}">
+        <span class="tags-page__tag-name">{{ term.name }}</span>
+        <span class="tags-page__tag-count">{{ count }}</span>
+      </a>
     {% endfor %}
+  </div>
 </div>
 {% endblock content %}

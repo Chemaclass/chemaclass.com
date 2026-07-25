@@ -1,16 +1,20 @@
 +++
 title = "Working Effectively with Legacy Code"
-description = "This book offers start-to-finish strategies for working more effectively with large, untested legacy code bases."
+description = "Michael Feathers presents practical techniques for adding tests to untested code, breaking dependencies, and safely refactoring large legacy systems without introducing bugs."
+authors = [ "Michael Feathers" ]
 [taxonomies]
-tags = [ "software", "legacy", "testing" ]
+tags = [ "refactoring", "testing", "tdd", "software-design" ]
 [extra]
-subtitle = "This book offers start-to-finish strategies for working more effectively with large, untested legacy code bases."
+subtitle = "Start-to-finish strategies for working with large, untested legacy code bases"
 pages = "460"
 author = "Michael Feathers"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41Fh9iUog4L._SX376_BO1,204,203,200_.jpg"
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41Fh9iUog4L._SX376_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

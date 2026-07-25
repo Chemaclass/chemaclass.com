@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+{% import "partials/macros.html" as macros %}
+
+{% block title %}
+{{ page.title }}
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='page.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
+{% block content %}
+<article class="service-page">
+  <nav class="service-nav">
+    <a href="{% if lang == 'es' %}/es/services/{% else %}/services/{% endif %}" class="blog-post__back">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      {{ trans(key="svc_all_services", lang=lang) }}
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="service-hero">
+    <h1>{{ trans(key="svc_workshops", lang=lang) }}</h1>
+    <p class="service-hero__subtitle">{{ trans(key="svc_workshops_subtitle", lang=lang) }}</p>
+  </header>
+
+  <!-- Value Proposition -->
+  <section class="service-intro" id="intro">
+    <p>{% if lang == "es" %}Pasa un día completo programando, testeando y refactorizando. Este taller es 100% práctico: trabajarás con una serie de katas de código independientes diseñadas para crear hábitos sólidos en testing, desarrollo guiado por tests (TDD) y refactoring. Principios agnósticos del lenguaje, adaptables al stack de tu equipo.{% else %}Spend a full day coding, testing, and refactoring. This workshop is all about practical, hands-on learning: you'll work through a series of independent code katas designed to help you build strong habits around testing, test-driven development (TDD), and refactoring. Language-agnostic principles, adaptable to your team's stack.{% endif %}</p>
+    <a href="mailto:workshops@chemaclass.com?subject={% if lang == 'es' %}Consulta%20Taller%20de%20Equipo&body=Hola%20Chema%2C%0A%0AEstoy%20interesado%20en%20reservar%20un%20taller%20de%20equipo.%0A%0ATamaño%20del%20equipo%3A%0AFechas%20preferidas%3A%0A%0AGracias!{% else %}Team%20Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20booking%20a%20team%20workshop.%0A%0ATeam%20size%3A%0APreferred%20dates%3A%0A%0AThanks!{% endif %}" class="service-intro__cta">
+      <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_book_workshop", lang=lang) }}
+    </a>
+  </section>
+
+  <!-- Workshop Schedule -->
+  <section class="service-options service-options-2" id="options">
+    <div class="service-option">
+      <div class="service-option__header">
+        <div class="service-option__icon">
+          <i class="fa-solid fa-sun"></i>
+        </div>
+        <h2>{{ trans(key="svc_morning_session", lang=lang) }}</h2>
+        <span class="service-option__tag">Testing & TDD</span>
+      </div>
+
+      <p class="service-option__desc">{% if lang == "es" %}Nos enfocamos en técnicas de testing que hacen el cambio seguro, desde tests golden master que capturan el comportamiento existente hasta ejercicios TDD que guían mejor diseño.{% else %}We focus on testing techniques that make change safe, from golden tests that capture existing behavior to TDD exercises that guide better design.{% endif %}</p>
+
+      <div class="service-option__benefits">
+        <h3>{{ trans(key="svc_topics_covered", lang=lang) }}</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Testing golden master{% else %}Golden master testing{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Patrones de approval testing{% else %}Approval testing patterns{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Ciclo de desarrollo guiado por tests{% else %}Test-driven development cycle{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Escribir tests que guían el diseño{% else %}Writing tests that guide design{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Entendiendo los test doubles{% else %}Understanding test doubles{% endif %}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-option">
+      <div class="service-option__header">
+        <div class="service-option__icon service-option__icon--secondary">
+          <i class="fa-solid fa-moon"></i>
+        </div>
+        <h2>{{ trans(key="svc_afternoon_session", lang=lang) }}</h2>
+        <span class="service-option__tag service-option__tag--secondary">Refactoring</span>
+      </div>
+
+      <p class="service-option__desc">{% if lang == "es" %}Cambiamos el enfoque al refactoring: aplicando cambios pequeños y focalizados para mejorar código legacy sin romperlo.{% else %}We switch gears to refactoring: applying small, focused changes to improve messy, legacy-style code without breaking it.{% endif %}</p>
+
+      <div class="service-option__benefits">
+        <h3>{{ trans(key="svc_topics_covered", lang=lang) }}</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Técnicas de refactoring seguro{% else %}Safe refactoring techniques{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Patrones extract method & class{% else %}Extract method & class patterns{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Trabajar con código legacy{% else %}Working with legacy code{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Identificación de code smells{% else %}Code smells identification{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Estrategias de mejora incremental{% else %}Incremental improvement strategies{% endif %}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- What you'll learn -->
+  <section class="service-decision" id="decide">
+    <h2>{{ trans(key="svc_team_gains", lang=lang) }}</h2>
+    <div class="decision-cards">
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-flask-vial"></i> {{ trans(key="svc_testing_confidence", lang=lang) }}</h3>
+        <ul>
+          <li>{% if lang == "es" %}Escribir tests significativos{% else %}Write meaningful tests{% endif %}</li>
+          <li>{% if lang == "es" %}Testear código legacy con seguridad{% else %}Test legacy code safely{% endif %}</li>
+          <li>{% if lang == "es" %}Crear el hábito de testear{% else %}Build a testing habit{% endif %}</li>
+        </ul>
+      </div>
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-code-branch"></i> {{ trans(key="svc_tdd_mindset", lang=lang) }}</h3>
+        <ul>
+          <li>{% if lang == "es" %}Ciclo red-green-refactor{% else %}Red-green-refactor cycle{% endif %}</li>
+          <li>{% if lang == "es" %}Diseñar a través de tests{% else %}Design through tests{% endif %}</li>
+          <li>{% if lang == "es" %}Commits más pequeños y focalizados{% else %}Smaller, focused commits{% endif %}</li>
+        </ul>
+      </div>
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> {{ trans(key="svc_refactoring_skills", lang=lang) }}</h3>
+        <ul>
+          <li>{% if lang == "es" %}Mejorar código con seguridad{% else %}Improve code safely{% endif %}</li>
+          <li>{% if lang == "es" %}Abordar deuda técnica{% else %}Tackle technical debt{% endif %}</li>
+          <li>{% if lang == "es" %}Patrones de código limpio{% else %}Clean code patterns{% endif %}</li>
+        </ul>
+      </div>
+    </div>
+    <p class="decision-tip">
+      <i class="fa-solid fa-lightbulb"></i>
+      <strong>{{ trans(key="svc_key_outcome", lang=lang) }}</strong> {% if lang == "es" %}Tu equipo sale con un toolkit probado para escribir mejor código, mejorar codebases existentes y colaborar efectivamente mediante pair programming.{% else %}Your team walks away with a proven toolkit for writing better code, improving existing codebases, and collaborating effectively through pair programming.{% endif %}
+    </p>
+  </section>
+
+  <!-- How it works -->
+  <section class="service-process" id="process">
+    <h2>{{ trans(key="svc_how_i_work", lang=lang) }}</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <span class="process-step__number">1</span>
+        <div class="process-step__content">
+          <h3>{{ trans(key="svc_discovery", lang=lang) }}</h3>
+          <p>{% if lang == "es" %}Hablamos del nivel de experiencia de tu equipo y los retos específicos que quieres abordar.{% else %}We discuss your team's experience level and specific challenges you want to address.{% endif %}</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">2</span>
+        <div class="process-step__content">
+          <h3>{{ trans(key="svc_customization", lang=lang) }}</h3>
+          <p>{% if lang == "es" %}Adapto las katas y ejercicios al stack tecnológico y objetivos de tu equipo.{% else %}I tailor the katas and exercises to match your team's tech stack and goals.{% endif %}</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">3</span>
+        <div class="process-step__content">
+          <h3>{{ trans(key="svc_workshop_day", lang=lang) }}</h3>
+          <p>{% if lang == "es" %}Día completo de programación práctica, pair programming y aprendizaje colaborativo.{% else %}Full day of hands-on coding, pair programming, and collaborative learning.{% endif %}</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">4</span>
+        <div class="process-step__content">
+          <h3>{{ trans(key="svc_followup", lang=lang) }}</h3>
+          <p>{% if lang == "es" %}Materiales, ejemplos de código y recursos para seguir practicando.{% else %}Materials, code samples, and resources to continue practicing.{% endif %}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="budget-section" id="pricing">
+      <div class="budget-header">
+        <h3>{{ trans(key="svc_investment", lang=lang) }}</h3>
+        <p>{% if lang == "es" %}Grupos de 3-8 participantes. Talleres presenciales en Berlín, remotos en otras ubicaciones.{% else %}Groups of 3-8 participants. On-site workshops in Berlin, remote for other locations.{% endif %}</p>
+      </div>
+
+      <!-- Pricing details (hidden by default, shown with ?prices=1) -->
+      <div class="pricing-details" style="display: none;">
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h4><i class="fa-solid fa-user"></i> {% if lang == "es" %}Por persona{% else %}Per person{% endif %}</h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_workshop_per_person }}</div>
+            <ul class="pricing-card__details">
+              <li>{% if lang == "es" %}Día completo de taller{% else %}Full day workshop{% endif %}</li>
+              <li>{% if lang == "es" %}Materiales incluidos{% else %}Materials included{% endif %}</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h4><i class="fa-solid fa-users"></i> 3 {% if lang == "es" %}personas{% else %}people{% endif %}</h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_workshop_3_people }}</div>
+            <ul class="pricing-card__details">
+              <li>{% if lang == "es" %}Mínimo recomendado{% else %}Recommended minimum{% endif %}</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h4><i class="fa-solid fa-user-group"></i> 4-6 {% if lang == "es" %}personas{% else %}people{% endif %}</h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_workshop_4_6_min }} - €{{ config.extra.pricing_workshop_4_6_max }}</div>
+            <ul class="pricing-card__details">
+              <li>{% if lang == "es" %}Tamaño ideal{% else %}Ideal size{% endif %}</li>
+            </ul>
+          </div>
+        </div>
+        <p class="pricing-note">{% if lang == "es" %}* Máximo 8 participantes por taller. Precios presenciales en Berlín, contacta para tarifas remotas.{% else %}* Maximum 8 participants per workshop. On-site prices for Berlin, contact for remote rates.{% endif %}</p>
+      </div>
+
+      <div class="quote-cta">
+        <p class="quote-cta__text">{% if lang == "es" %}Cada equipo tiene necesidades diferentes. Contacta conmigo para discutir el enfoque y recibir un presupuesto personalizado.{% else %}Every team has different needs. Contact me to discuss the approach and get a personalized quote.{% endif %}</p>
+        <a href="mailto:workshops@chemaclass.com?subject={% if lang == 'es' %}Consulta%20Taller&body=Hola%20Chema%2C%0A%0AEstoy%20interesado%20en%20un%20taller%20para%20mi%20equipo.%0A%0ATamaño%20del%20equipo%3A%0ATema%20de%20interés%3A%0A%0AGracias!{% else %}Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20a%20workshop%20for%20my%20team.%0A%0ATeam%20size%3A%0ATopic%20of%20interest%3A%0A%0AThanks!{% endif %}" class="quote-cta__btn">
+          <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_request_info", lang=lang) }}
+        </a>
+      </div>
+
+      <p class="budget-disclaimer">{% if lang == "es" %}Presupuesto personalizado después de la llamada de descubrimiento.{% else %}Personalized quote after discovery call.{% endif %}</p>
+    </div>
+  </section>
+
+  <!-- Workshop Resources -->
+  <section class="service-resources" id="resources">
+    <h2>{{ trans(key="svc_workshop_resources", lang=lang) }}</h2>
+    <p class="service-resources__intro">{% if lang == "es" %}Materiales y charlas relacionadas con el contenido del taller:{% else %}Materials and talks related to my workshop content:{% endif %}</p>
+    <div class="resources-grid">
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/test-driven-development/" class="resource-card">
+        <div class="resource-card__icon"><i class="fa-solid fa-flask"></i></div>
+        <div class="resource-card__content">
+          <h3>Test-Driven Development</h3>
+          <p>{% if lang == "es" %}Entendiendo los principios y prácticas de TDD{% else %}Understanding TDD principles and practices{% endif %}</p>
+        </div>
+        <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
+      </a>
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/effective-pair-programming/" class="resource-card">
+        <div class="resource-card__icon"><i class="fa-solid fa-users"></i></div>
+        <div class="resource-card__content">
+          <h3>Effective Pair Programming</h3>
+          <p>{% if lang == "es" %}Técnicas para programación colaborativa{% else %}Techniques for collaborative coding{% endif %}</p>
+        </div>
+        <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
+      </a>
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/update-your-team-to-be-more-extreme/" class="resource-card">
+        <div class="resource-card__icon"><i class="fa-solid fa-bolt"></i></div>
+        <div class="resource-card__content">
+          <h3>Extreme Programming Values</h3>
+          <p>{% if lang == "es" %}Los 5 valores que hacen equipos efectivos{% else %}The 5 values that make teams effective{% endif %}</p>
+        </div>
+        <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
+      </a>
+      <a href="{% if lang == 'es' %}/es{% endif %}/blog/great-engineering/" class="resource-card">
+        <div class="resource-card__icon"><i class="fa-solid fa-rocket"></i></div>
+        <div class="resource-card__content">
+          <h3>Great Engineering</h3>
+          <p>{% if lang == "es" %}Qué hace que los equipos de ingeniería destaquen{% else %}What makes engineering teams excel{% endif %}</p>
+        </div>
+        <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="service-cta">
+    <h2>{{ trans(key="svc_ready_level_up", lang=lang) }}</h2>
+    <p>{% if lang == "es" %}Hablemos de cómo un taller puede ayudar a tu equipo a escribir mejor código, trabajar juntos de forma más efectiva y abordar ese codebase legacy con confianza.{% else %}Let's discuss how a workshop can help your team write better code, work together more effectively, and tackle that legacy codebase with confidence.{% endif %}</p>
+    <div class="service-cta__buttons">
+      <a href="mailto:workshops@chemaclass.com?subject={% if lang == 'es' %}Consulta%20Taller%20de%20Equipo&body=Hola%20Chema%2C%0A%0AEstoy%20interesado%20en%20reservar%20un%20taller%20de%20equipo.%0A%0ATamaño%20del%20equipo%3A%0AFechas%20preferidas%3A%0AUbicación%20(presencial%2Fremoto)%3A%0A%0AGracias!{% else %}Team%20Workshop%20Inquiry&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20booking%20a%20team%20workshop.%0A%0ATeam%20size%3A%0APreferred%20dates%3A%0ALocation%20(on-site%2Fremote)%3A%0A%0AThanks!{% endif %}" class="service-cta__btn service-cta__btn--secondary">
+        <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_contact", lang=lang) }}
+      </a>
+    </div>
+  </section>
+</article>
+
+{% endblock content %}
+
+{% block js %}
+<script>
+// Show pricing details if prices=1 is in URL (query or malformed hash like #pricing?prices=1)
+(function() {
+  const search = new URLSearchParams(window.location.search);
+  const hash = window.location.hash;
+  const hashId = hash.includes('?') ? hash.substring(1, hash.indexOf('?')) : hash.substring(1);
+  const hashQuery = hash.includes('?') ? hash.substring(hash.indexOf('?') + 1) : '';
+  const fromHash = new URLSearchParams(hashQuery);
+  if (search.get('prices') === '1' || fromHash.get('prices') === '1') {
+    document.querySelectorAll('.pricing-details').forEach(el => el.style.display = 'block');
+    if (hashId) {
+      const target = document.getElementById(hashId);
+      if (target) target.scrollIntoView();
+    }
+  }
+})();
+</script>
+{% endblock js %}

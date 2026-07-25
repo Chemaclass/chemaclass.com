@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% import "partials/macros.html" as macros %}
+
+{% block title %}
+  {{ section.title }} | Chemaclass
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='page.css') | safe }}">
+{% endblock styles %}
+
+{% block content %}
+  <div class="music-index">
+    <div class="music-header">
+      <h1>{{ section.title }}</h1>
+      <p class="music-intro">{{ section.content | safe | striptags }}</p>
+    </div>
+
+    <div class="music-grid">
+      {% for page in section.pages %}
+      <div class="music-card">
+        {% if page.extra.youtube_id %}
+        <div class="music-card__video">
+          <div class="music-card__player" data-yt-id="{{ page.extra.youtube_id }}">
+            <img
+              src="https://img.youtube.com/vi/{{ page.extra.youtube_id }}/hqdefault.jpg"
+              alt="{{ page.title }}"
+              loading="lazy"
+              decoding="async"
+              width="480"
+              height="360" />
+            <button class="music-card__play" aria-label="Play {{ page.title }}">
+              <svg viewBox="0 0 68 48" width="68" height="48">
+                <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#212121" fill-opacity=".8"/>
+                <path d="M45 24L27 14v20" fill="#fff"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        {% endif %}
+        <div class="music-card__info">
+          <h2 class="music-card__title">{{ page.title }}</h2>
+          {% if page.description %}
+            <p class="music-card__description">{{ page.description }}</p>
+          {% endif %}
+          {% if page.date %}
+            <span class="music-card__date">
+              {{ macros::format_date(date=page.date, lang=lang) }}
+            </span>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock content %}
+
+{% block js %}
+<script>
+  document.querySelectorAll('.music-card__player').forEach(function(player) {
+    player.addEventListener('click', function() {
+      var id = this.dataset.ytId;
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1';
+      iframe.title = 'YouTube video';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      this.innerHTML = '';
+      this.appendChild(iframe);
+      this.classList.add('music-card__player--active');
+    });
+  });
+</script>
+{% endblock js %}

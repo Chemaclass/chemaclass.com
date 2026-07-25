@@ -1,14 +1,26 @@
 +++
-title = "The art of testing: where design meets quality"
+title = "The Art of Testing: Where Design Meets Quality"
 description = "Why you should consider testing as part of your daily development habit and how it's directly linked to the software quality."
 [taxonomies]
-tags = [ "software", "design", "testing", "quality"]
+tags = [ "testing", "software-design", "clean-code", "tdd"]
 [extra]
 subtitle = "From a software developer's point of view"
 static_thumbnail = "/images/blog/2020-04-07/cover.jpg"
+related_posts = [
+  "blog/2020-06-28-the-art-of-refactoring.md",
+  "blog/2021-01-11-to-mock-or-not-to-mock.md",
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2023-10-20-how-to-test-private-methods.md",
+]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+  "readings/2019-07-01-working-effectively-with-legacy-code.md",
+]
+series = "craftsmanship"
+series_order = 1
 +++
 
-![blog-cover](/images/blog/2020-04-07/cover.jpg)
 
 Why you should consider testing as part of your daily development habit and how it's directly linked to the software
 quality.
@@ -64,6 +76,6 @@ Should we test everything? Well, that's the million-dollar question. In my opini
 might encounter situations where tests might not be beneficial. Even in those situations, we should write our code as if
 it could be tested anyway.
 
-![blog-cover](/images/blog/2020-04-07/footer.jpg)
+![testable code and good design](/images/blog/2020-04-07/footer.jpg)
 
 > Testable code tends to better design and, therefore, better quality.

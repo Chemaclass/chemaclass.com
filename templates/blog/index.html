@@ -1,68 +1,116 @@
 {% extends "base.html" %}
 
-{% import "helpers-preview.html" as helpers_preview %}
+{% import "partials/helpers-preview.html" as helpers %}
 
 {% block title %}
-  Blog | Chemaclass
+  {{ trans(key="blog_title", lang=lang) }} | Chemaclass
 {% endblock %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='listing.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
 {% block posthead %}
-  {% for post in section.pages %}
-    <link rel="prerender" href="{{ post.permalink }}" />
-  {% endfor %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListOrder": "https://schema.org/ItemListOrderDescending",
+  "name": "{{ trans(key='blog_title', lang=lang) }}",
+  "url": "{{ section.permalink | safe }}",
+  "numberOfItems": {{ section.pages | length }},
+  "itemListElement": [
+    {%- set list_items = section.pages | slice(end=20) -%}
+    {%- for post in list_items %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "url": "{{ post.permalink | safe }}",
+      "name": "{{ post.title }}"
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
 {% endblock posthead %}
 
 {% block content %}
-  {{ section.content | safe }}
+  <div class="blog-index">
+    <div class="blog-header">
+      <h1>{{ trans(key="blog_title", lang=lang) }}</h1>
+      <p class="blog-intro">{{ trans(key="blog_intro", lang=lang) }}</p>
+    </div>
+
+  {% if config.extra.start_here_posts %}
+  <section class="start-here">
+    <h2 class="start-here__heading"><i class="fa-solid fa-compass"></i> {{ trans(key="blog_start_here", lang=lang) }}</h2>
+    <div class="start-here__grid">
+      {% for path in config.extra.start_here_posts %}
+        {% set post = get_page(path=path, lang=lang) %}
+        <a href="{{ post.permalink }}" class="start-here__card">
+          <h3>{{ post.title }}</h3>
+          {% if post.extra.subtitle %}
+            <p class="start-here__subtitle">{{ post.extra.subtitle }}</p>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
 
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
 
-  {% for post in pinned_posts %}
-    <div class="preview post-preview highlighted">
-      <h3 class="post-title">
-        <a href="{{ post.permalink }}">{{ post.title }}</a>
-        {{ helpers_preview::author(post=post) }}
-        {% if post.extra.subtitle %}
-          <br>
-          <small style="margin-top: 0; font-size: 0.8em;">
-            {{ post.extra.subtitle }}
-          </small>
-        {% endif %}
-      </h3>
-      <small>
-        {{ helpers_preview::date_and_words(post=post) }}
-      </small>
-      <div class="summary">
-        {{ helpers_preview::summary(post=post) }}
-      </div>
-    </div>
-  {% endfor %}
-
-  {% if pinned_posts %}
-    <hr>
-  {% endif %}
-
+  {# Distinct years in date order (section is sorted desc), matching the year headers below #}
+  {% set_global seen_years = [] %}
   {% for post in section.pages %}
-    {%if post not in pinned_posts %}
-        <div class="preview post-preview">
-          <h3 class="post-title">
-            <a href="{{ post.permalink }}">{{ post.title }}</a>
-            {% if post.extra.subtitle %}
-              <br>
-              <small style="margin-top: 0; font-size: 0.8em;">
-                {{ post.extra.subtitle }}
-              </small>
-            {% endif %}
-          </h3>
-          <small>
-            {{ helpers_preview::date_and_words(post=post) }}
-          </small>
-          <div class="summary">
-            {{ helpers_preview::summary(post=post) }}
-          </div>
-        </div>
+    {% if post not in pinned_posts %}
+      {% set post_year = post.date | date(format="%Y") %}
+      {% if post_year not in seen_years %}
+        {% set_global seen_years = seen_years | concat(with=post_year) %}
+      {% endif %}
     {% endif %}
   {% endfor %}
 
-  {% include "footer-about.html" %}
+  {% if seen_years | length > 1 %}
+  <nav class="year-nav" aria-label="{{ trans(key='jump_to_year', lang=lang) }}">
+    <span class="year-nav__label">{{ trans(key="jump_to_year", lang=lang) }}</span>
+    <ul class="year-nav__list">
+      {% for year in seen_years %}
+        <li><a class="year-nav__link" href="#year-{{ year }}">{{ year }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+  {% endif %}
+
+  <div class="blog-list blog-list--featured">
+    {% for post in pinned_posts %}
+      {{ helpers::content_card(post=post, pinned=true, lang=lang) }}
+    {% endfor %}
+
+    {# Non-pinned posts grouped by year, first one featured #}
+    {% set_global current_year = "" %}
+    {% set_global featured_shown = false %}
+    {% for post in section.pages %}
+      {% if post not in pinned_posts %}
+        {% set post_year = post.date | date(format="%Y") %}
+        {% if post_year != current_year %}
+          {% set_global current_year = post_year %}
+          <h3 class="blog-year-header" id="year-{{ post_year }}">{{ post_year }}</h3>
+        {% endif %}
+        {% if not featured_shown %}
+          {{ helpers::content_card(post=post, featured=true, lang=lang) }}
+          {% set_global featured_shown = true %}
+        {% else %}
+          {{ helpers::content_card(post=post, lang=lang) }}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  </div>
 {% endblock content %}

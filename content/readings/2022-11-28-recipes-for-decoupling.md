@@ -1,17 +1,21 @@
 +++
 title = "Recipes for Decoupling"
 description = "What is coupling, and why is it bad? What is decoupling, and how to do it efficiently? This book is a compilation of strategies to decouple your domain code from those infrastructure details, so you can enjoy a healthier system in the long run."
+authors = [ "Matthias Noback" ]
 [taxonomies]
-tags = [ "software", "design" ]
+tags = [ "php", "software-design", "architecture", "clean-code" ]
 [extra]
 subtitle = ""
 pages = "280"
 author = "Matthias Noback"
 static_thumbnail = "https://matthiasnoback.nl/assets/books/recipes-for-decoupling.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2020-09-10-domain-driven-design-distilled.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+]
 +++
-
-<img border="0" src="https://matthiasnoback.nl/assets/books/recipes-for-decoupling.jpg" >
 
 <!-- more -->
 

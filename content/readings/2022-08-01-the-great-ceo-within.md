@@ -1,17 +1,21 @@
 +++
 title = "The Great CEO Within"
 description = "Learn how to efficiently scale your business from startup to corporation by implementing a system of accountability, effective problem-solving, and transparent feedback."
+authors = [ "Matt Mochary" ]
 [taxonomies]
-tags = [ "management", "business", "leadership" ]
+tags = [ "leadership", "team-management", "communication", "productivity", "mentoring" ]
 [extra]
 subtitle = "The Tactical Guide to Company Building"
 pages = "200"
 author = "Matt Mochary"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41zoJiSUq4L._SX331_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2020-04-03-high-output-management.md",
+  "readings/2022-10-29-the-essential-drucker.md",
+  "readings/2020-03-26-the-manager-path.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41zoJiSUq4L._SX331_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

@@ -1,17 +1,21 @@
 +++
 title = "97 Things Every Programmer Should Know"
 description = "Tap into the wisdom of experts to learn what every programmer should know, no matter what language you use. With the 97 short and extremely useful tips for programmers in this book, you'll expand your skills by adopting new approaches to old problems, learning appropriate best practices, and honing your craft through sound advice."
+authors = [ "Kevlin Henney" ]
 [taxonomies]
-tags = [ "software", "general wisdom" ]
+tags = [ "software-design", "clean-code", "career", "productivity" ]
 [extra]
-subtitle = ""
+subtitle = "Collective whisdom from the experts"
 pages = "250"
 author = "Kevlin Henney"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51AqVDUY13L._SX331_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+  "readings/2016-05-01-clean-code.md",
+  "readings/2016-08-01-the-clean-coder.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51AqVDUY13L._SX331_BO1,204,203,200_.jpg" >
 
 Tap into the wisdom of experts to learn what every programmer should know, no matter what language you use. With the 97
 short and extremely useful tips for programmers in this book, you'll expand your skills by adopting new approaches to
@@ -52,7 +56,7 @@ old problems, learning appropriate best practices, and honing your craft through
 
 19.- When designing an API, aim to make it **easy to use**, not convenient to code.
 
-20.- Deploy early and **often** – do not leave it until the end of the project.
+20.- Deploy early and **often**. Do not leave it until the end of the project.
 
 22.- Improving your skills should be on your daily basis.
 
@@ -72,7 +76,7 @@ old problems, learning appropriate best practices, and honing your craft through
 
 29.- Understand at least some complexities of your business, not just programming.
 
-30.- **DRY** – Don't Repeat Yourself.
+30.- **DRY**: Don't Repeat Yourself.
 
 32.- Encapsulate behavior, not just state.
 
@@ -82,7 +86,7 @@ old problems, learning appropriate best practices, and honing your craft through
 
 36.- Give proper **context** when asking for help, because people can't just guess what's going on.
 
-37.- It's not about the long hours – learn to **work effectively**. 
+37.- It's not about the long hours. Learn to **work effectively**. 
 - Dedicate time to continuous learning and to think about what you're doing.
 
 38.- Write proper **bug reports**:
@@ -117,7 +121,7 @@ old problems, learning appropriate best practices, and honing your craft through
 
 48.- Use a relational DB if your application is going to handle a large, persistent, interconnected set of data.
 
-49.- Learn to **communicate** well in many "languages": not just to your machine, but also to business partners – and maybe even pick up a foreign language too. 
+49.- Learn to **communicate** well in many "languages": not just to your machine, but also to business partners, and maybe even pick up a foreign language too. 
 - It's good for connections and for life.
 
 54.- Think twice before implementing "temporary solutions".

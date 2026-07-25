@@ -2,17 +2,21 @@
 title = "The Starfish and the Spider"
 description = "If you cut off a spider's head, it dies; if you cut off a starfish's leg it grows a new one, and that leg can grow into an entirely new starfish. Traditional top-down organizations are like spiders, but now starfish organizations are changing the face of business and the world."
 draft = false
+authors = [ "Ori Brafman", "Rod Beckstrom" ]
 [taxonomies]
-tags = [ "business", "leadership" ]
+tags = [ "leadership", "team-management", "philosophy" ]
 [extra]
 subtitle = "The Unstoppable Power of Leaderless Organizations"
 pages = "240"
 author = "Ori Brafman, Rod Beckstrom"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41T1ZmJ8BGL._SX324_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2022-08-01-the-great-ceo-within.md",
+  "readings/2022-10-29-the-essential-drucker.md",
+  "readings/2021-11-28-start-with-why.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41T1ZmJ8BGL._SX324_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

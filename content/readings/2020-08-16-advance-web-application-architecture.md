@@ -1,17 +1,21 @@
 +++
 title = "Advanced Web Application Architecture"
 description = "The best guide that brings your coding and architecture skills a level up. All the modern PHP features combined with the elegance of a well designed modular design."
+authors = [ "Matthias Noback" ]
 [taxonomies]
-tags = [ "software", "architecture" ]
+tags = [ "architecture", "php", "software-design", "refactoring" ]
 [extra]
 subtitle = "The best guide that brings your coding skills a level up."
 pages = "370"
 author = "Matthias Noback"
 static_thumbnail = "https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero?1620605116"
 expand_preview = true
+related_readings = [
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2020-09-10-domain-driven-design-distilled.md",
+  "readings/2022-11-28-recipes-for-decoupling.md",
+]
 +++
-
-<img border="0" src="https://d2sofvawe08yqg.cloudfront.net/web-application-architecture/s_hero" >
 
 This book helps you get your web applications back in shape. It contains many techniques for decoupling from
 infrastructure (like the framework or the database).

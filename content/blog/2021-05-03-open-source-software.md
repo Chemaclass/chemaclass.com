@@ -1,134 +1,128 @@
 +++
 title = "Open-Source Software"
-description = "What is Open-Source Software (OSS)? What are their benefits? How can you start contributing to any OSS? Pet projects? Knowledge sharing? Why all of these?"
+description = "A practical guide to open-source software: its benefits, how to start contributing, and why sharing code accelerates your career growth."
 [taxonomies]
-tags = [ "software", "open-source", "git", "github", "knowledge-sharing" ]
+tags = [ "open-source", "git", "career", "productivity" ]
 [extra]
-subtitle = "The power of contributing to OSS 🖥"
-static_thumbnail = "/images/blog/2021-05-03/cover.jpg"
+subtitle = "The power of contributing to OSS"
+static_thumbnail = "/images/blog/2021-05-03/cover.webp"
+related_posts = [
+  "blog/2021-02-01-phel-first-release.md",
+  "blog/2024-04-02-learning-concurrency-in-golang.md",
+  "blog/2026-07-14-working-with-the-garage-door-open.md",
+]
+related_readings = [
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+  "readings/2022-06-29-modern-software-engineering.md",
+]
 +++
 
-![blog-cover](/images/blog/2021-05-03/cover.jpg)
+Every project you ship stands on open-source software. Your framework, your test runner, your compiler, the small library you never think about.
 
-What is Open-Source Software (OSS)? 
-What are their benefits? 
-How can you start contributing to any OSS?
-Pet projects? Knowledge sharing? Why all of these?
+You use it every day. The real question is whether you ever give back.
 
 <!-- more -->
 
-## What is Open-Source Software (OSS)? 🤔
+Giving back is not charity. It is one of the fastest ways to grow as a developer.
 
-OSS shares similarities with free software, but it's not the same. Free software is a form of OSS, but that doesn't necessarily mean that it has to be free. For example:
+## What is OSS?
 
-- [PHPUnit](https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE) is an example of OSS which is free.
-- [Spryker](https://github.com/spryker/spryker-core/blob/master/LICENSE) is an example of OSS which is not free.
+Open-source is not the same as free software. Free software is one kind of open-source, but open-source does not have to be free to use. Two examples draw the line. [PHPUnit](https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE) is open-source and free. [Spryker](https://github.com/spryker/spryker-core/blob/master/LICENSE) is open-source and paid. Both publish their code for anyone to read.
 
-> OSS is basically software that is public, open to the world.
+> OSS is software that is public, open to the world.
 
-## Benefits — for a company 🛕
+## Benefits
 
-- Adoption: the easier the access, the easier the adoption.
-- Training and tutorials help the system to grow.
-- Tech: often on the cutting edge of technology.
-  Tech moves fast. They will get obsolete if they don't.
-- Community: the people around want to improve as it grows.
-  Public channels enable easy access and community building.
-- Trust: the software is public and accessible.
-  Everyone can check the quality of the software anytime.
+Two groups win from open-source: the companies that publish it, and the people who contribute.
 
-## Benefits — for you, as a single contributor 🤓
+### For companies
 
-- Flexibility: decide on what you want to work on.
-- Self-confidence: the experience improves your skills.
-- Training: without the pressure of a PROD environment.
-- Tech: play with the latest features of your tech.
-  Try upcoming versions of your coding lang, or even try new ones!
-- Soft skills: improve your communication skills.
-  Good communication in the project is important.
-  Especially when you face disagreements.
+Open access drives adoption. The easier the code is to get, the faster people build on it. Training and tutorials pull in newcomers and grow the ecosystem. The code tends to sit on the cutting edge, because software that stands still goes obsolete. A public project gathers a community around it, and public channels make that community easy to join.
 
-> TL;DR: It can be a "constant kata" if you want to.
+And because anyone can read the source, anyone can check its quality. That is trust you cannot fake.
 
-## GitHub to the rescue 😃
+### For individual contributors
 
-Nowadays, it's really trivial to start contributing to OSS:
-- You can start your own project. A pet project fits here perfectly!
-- You can contribute to an existing OSS project.
+You pick what you work on. You practice real skills without the pressure of a production outage. You get to play with the newest features of your language, or try a language you have never touched.
 
-## Pet projects 🐘
+You also sharpen the soft skills that carry a career: writing clearly, explaining a change, holding your ground when people disagree.
 
-A pet project is a playground to create software and train your professional skills. Creating pet projects in your public GitHub profile has all the benefits of contributing to OSS, plus you're your own boss:
-- You dictate the roadmap.
-- You decide what to do and how.
-- You're your own boss.
+> The code teaches the hard skills. The disagreements teach the rest.
 
-> The project is there for you. <br>
-> You are responsible to play, explore and pass your limits.
+## Contributing to OSS
 
-## Some Chema's Pet Projects 🦣
+### Getting started with GitHub
 
-#### Active
-- [php-best-practices](https://github.com/Chemaclass/php-best-practices): what I consider best practices for web-dev.
-- [php-scaffolding](https://github.com/Chemaclass/php-scaffolding): a basic PHP scaffolding with Docker.
-- [typed-arrays](https://github.com/Chemaclass/typed-arrays): generics replacement for PHP.
+Starting is easy, and you have two doors. Open your own project, or contribute to one that already exists. A pet project fits the first door perfectly.
 
-#### Inactive
+### Pet projects
 
-- [stock-ticker](https://github.com/Chemaclass/stock-ticker): get a notification with the news from your favorites Tickers.
-- [jira-status-notifier](https://github.com/Chemaclass/JiraStatusNotifier): Notify when the JIRA tickets don't move along.
+A pet project is a playground to build real software and train real skills. Put it on your public GitHub profile and you get every benefit of contributing to OSS, plus one more: you answer to nobody. You set the roadmap. You decide what to build and how. You are your own boss.
+
+> The project is there for you. You are responsible to play, explore, and push past your limits.
+
+### My pet projects
+
+**Active:**
+- [agnostic-ai](https://github.com/Chemaclass/agnostic-ai): write AI agents, skills, rules, and hooks once, use them in every AI CLI.
+- [bashdep](https://github.com/Chemaclass/bashdep): a simple dependency manager for Bash.
+- [phel-snake](https://github.com/Chemaclass/phel-snake): the snake game in your terminal, written in Phel.
 - [edifact-parser](https://github.com/Chemaclass/EdifactParser): a parser for a UN/EDIFACT file format in PHP.
+- [unspent](https://github.com/Chemaclass/unspent): a PHP library for UTXO-like bookkeeping with unspent entries.
 
-#### Abandoned
+**Inactive:**
+- [create-pr](https://github.com/Chemaclass/create-pr): a Bash script to open a pull request from your branch and context.
 
+**Abandoned:**
+- [stock-ticker](https://github.com/Chemaclass/stock-ticker): get a notification with the news from your favorite Tickers.
+- [jira-status-notifier](https://github.com/Chemaclass/JiraStatusNotifier): Notify when the JIRA tickets don't move along.
+- [php-best-practices](https://github.com/Chemaclass/php-best-practices): what I considered best practices for web-dev (archived).
+- [php-scaffolding](https://github.com/Chemaclass/php-scaffolding): a basic PHP scaffolding with Docker (archived).
 - [knob-mvc](https://github.com/Chemaclass/knob-mvc): a framework to create WordPress templates (2015/2017).
 
-## Some of Chema's OSS org contributions 🌚
+> ... and many more on [github.com/Chemaclass](https://github.com/Chemaclass)
 
-#### Active
+### My OSS organization contributions
 
+**Active:**
 - [phel-lang](https://github.com/phel-lang/phel-lang): Phel is a functional programming language that compiles to PHP.
   It is a dialect of Lisp inspired by Clojure and Janet. I already wrote a post about
   this: [Phel: A Lisp that compiles to PHP](/blog/phel-first-release/)
 - [gacela-project](https://github.com/gacela-project/gacela): Gacela is a PHP framework that helps you to improve the
   design of your application by splitting the logic into different modules.
 
-#### Abandoned
+**Abandoned:**
+- [nm_template](https://github.com/NuevaMetal/nm_template): The base template for NuevaMetal (2013-2016).
 
-- [nm_template](https://github.com/NuevaMetal/nm_template): The base template for NuevaMetal (2013–2016).
+## Knowledge Sharing and Impact
 
-## Knowledge sharing ✍🏼
+Code is only half of it. The other half is what you write down and hand to the next person.
 
-- Pull Requests vs Pair Programming
-- The process itself is the goal
-- The art of refactoring; When, How, and Why
-- The art of testing: Where design meets quality
+### Blog posts
+
+- [Pull Requests vs Pair Programming](/blog/pull-request-vs-pair-prog/)
+- [The Process Itself Is the Goal](/blog/the-process-itself-is-the-goal/)
+- [The Art of Refactoring: When, How, and Why](/blog/the-art-of-refactoring/)
+- [The Art of Testing: Where Design Meets Quality](/blog/the-art-of-testing/)
 
 > ... and many more on [https://chemaclass.com/blog/](https://chemaclass.com/blog/)
 
-## The beauty of this 🧑‍🎓
+### The beauty of OSS
 
-- Seeing the corrections that you constantly keep doing
-- Seeing how your own code gets old with time
-- Seeing the many mistakes that you have done
-- Seeing how you are getting better at coding over time
+Contribute in public long enough and you start to see your own growth. The corrections you keep making. The code you wrote last year, already aged. The mistakes, all of them, in the open. And underneath, the slow proof that you are getting better.
 
-Developing a sixth sense to smell patterns which you have already done and their positive & negative experiences.
+You build a sixth sense for patterns you have hit before, the good ones and the painful ones.
 
-**Showing your skills and helping the community around you.**
+**Show your skills. Help the people around you.** That is [working with the garage door open](/blog/working-with-the-garage-door-open/).
 
-> Open-Source Software offers you one of the best opportunities to start building your career path towards continuous improvement.
+> Open-source software offers you one of the best opportunities to start building a career of continuous improvement.
 
 ---
 
 This is a (Spanish) talk that I did remotely on April 2021,
-for [PHPMad Madrid Community](https://www.meetup.com/phpmad/events/277733306/). I basically present all these ideas
+for [PHPMad Madrid Community](https://www.meetup.com/phpmad/events/277733306/). I present all these ideas
 together with a live demo of how to contribute to a real OSS.
 
 {{ youtube(id="GE5wR_SC_P4") }}
 
 ---
-
-### References
-
-- [Getting started with Open Source Software](https://jesusvalerareales.medium.com/getting-started-with-open-source-software-e6c177b68b39)

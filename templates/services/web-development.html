@@ -1,0 +1,596 @@
+{% extends "base.html" %}
+{% import "partials/macros.html" as macros %}
+
+{% block title %}
+{{ page.title }}
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='page.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
+{% block content %}
+<article class="service-page">
+  <nav class="service-nav">
+    <a href="{% if lang == 'es' %}/es/services/{% else %}/services/{% endif %}" class="blog-post__back">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      {{ trans(key="svc_all_services", lang=lang) }}
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="service-hero">
+    <h1>{{ trans(key="svc_web_dev", lang=lang) }}</h1>
+    <p class="service-hero__subtitle">{{ trans(key="svc_web_dev_subtitle", lang=lang) }}</p>
+  </header>
+
+  <!-- Value Proposition -->
+  <section class="service-intro" id="intro">
+    <p>{% if lang == "es" %}Toda empresa necesita una web, pero no todas necesitan el mismo tipo. Te ayudo a elegir el enfoque adecuado basado en tus necesidades reales, no en lo que está de moda o es innecesariamente complejo.{% else %}Every business needs a website, but not the same kind. I help you choose what actually fits your needs, not what's trendy or over-engineered.{% endif %}</p>
+    <p>{% if lang == "es" %}Ofrezco dos tipos de sitios web, cada uno diseñado para diferentes situaciones. Entender la diferencia te ahorrará tiempo, dinero y frustraciones.{% else %}I offer two types of websites, each for a different situation. Knowing the difference saves you time, money, and frustration.{% endif %}</p>
+    <a href="mailto:web@chemaclass.com?subject={% if lang == 'es' %}Consulta%20Web&body=Hola%20Chema%2C%0A%0AQué%20necesito%3A%0A%0AGracias!{% else %}Web%20Development%20Inquiry&body=Hi%20Chema%2C%0A%0AWhat%20I%20need%3A%0A%0AThanks!{% endif %}" class="service-intro__cta">
+      <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_contact", lang=lang) }}
+    </a>
+  </section>
+
+  <!-- What's Included -->
+  <section class="service-included" id="everywebsite">
+    <h2>{{ trans(key="svc_every_site_includes", lang=lang) }}</h2>
+    <div class="included-grid">
+      <div class="included-item">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <span>{{ trans(key="svc_responsive", lang=lang) }}</span>
+      </div>
+      <div class="included-item">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>{{ trans(key="svc_seo", lang=lang) }}</span>
+      </div>
+      <div class="included-item">
+        <i class="fa-solid fa-lock"></i>
+        <span>{{ trans(key="svc_https", lang=lang) }}</span>
+      </div>
+      <div class="included-item">
+        <i class="fa-solid fa-gauge-high"></i>
+        <span>{{ trans(key="svc_performance", lang=lang) }}</span>
+      </div>
+      <div class="included-item">
+        <i class="fa-solid fa-chart-simple"></i>
+        <span>Analytics</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Options Grid -->
+  <section class="service-options service-options-2" id="options">
+    <div class="service-option">
+      <div class="service-option__header">
+        <div class="service-option__icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h2>{{ trans(key="svc_static", lang=lang) }}</h2>
+        <span class="service-option__tag">{{ trans(key="svc_static_tag", lang=lang) }}</span>
+      </div>
+
+      <p class="service-option__desc">{% if lang == "es" %}Un sitio web rápido y seguro, construido una vez y listo para funcionar. Piensa en él como un folleto digital que nunca falla.{% else %}A fast, secure website built once and ready to perform. Think of it as a digital brochure that never breaks.{% endif %}</p>
+
+      <div class="service-option__benefits">
+        <h3>{{ trans(key="svc_what_you_get", lang=lang) }}</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Carga ultrarrápida (< 1 seg){% else %}Lightning-fast loading (< 1 sec){% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Seguridad excelente{% else %}Excellent security (virtually unhackable){% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Costes de hosting muy bajos{% else %}Very low hosting costs{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Mantenimiento mínimo{% else %}Minimal ongoing maintenance{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Funciona en todos los dispositivos{% else %}Works perfectly on all devices{% endif %}</li>
+        </ul>
+      </div>
+
+      <div class="service-option__ideal">
+        <h3>{{ trans(key="svc_ideal_for", lang=lang) }}</h3>
+        <ul>
+          <li>{% if lang == "es" %}Webs corporativas{% else %}Company websites{% endif %}</li>
+          <li>{% if lang == "es" %}Portfolios profesionales{% else %}Professional portfolios{% endif %}</li>
+          <li>{% if lang == "es" %}Catálogos de productos{% else %}Product showcases{% endif %}</li>
+        </ul>
+      </div>
+
+      <div class="service-option__consideration">
+        <strong>{{ trans(key="svc_one_thing", lang=lang) }}</strong> {% if lang == "es" %}Las actualizaciones de contenido requieren un desarrollador. Para la mayoría de empresas que actualizan pocas veces al año, es un pequeño compromiso a cambio de todos los beneficios.{% else %}Content updates require a developer. For most businesses that update a few times per year, this is a minor trade-off for all the benefits.{% endif %}
+      </div>
+    </div>
+
+    <div class="service-option">
+      <div class="service-option__header">
+        <div class="service-option__icon service-option__icon--tertiary">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h2>{{ trans(key="svc_static_blog", lang=lang) }}</h2>
+        <span class="service-option__tag service-option__tag--tertiary">{{ trans(key="svc_static_blog_tag", lang=lang) }}</span>
+      </div>
+
+      <p class="service-option__desc">{% if lang == "es" %}Un sitio web flexible tipo blog construido con herramientas como Zola o VitePress. La velocidad de una web a medida con la estructura de WP.{% else %}A flexible blog-like website built with tools like Zola or VitePress. The speed of a custom website with the structure of WP.{% endif %}</p>
+
+      <div class="service-option__benefits">
+        <h3>{{ trans(key="svc_what_you_get", lang=lang) }}</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Misma velocidad que la web a medida{% else %}Same fast loading as the Custom Website{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Posts, páginas y plantillas{% else %}Blog posts, pages, and custom templates{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Contenido en Markdown{% else %}Markdown-based content (text files){% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Control de versiones incluido{% else %}Version control for all content changes{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Sin base de datos ni vulnerabilidades{% else %}No database or security vulnerabilities{% endif %}</li>
+        </ul>
+      </div>
+
+      <div class="service-option__ideal">
+        <h3>{{ trans(key="svc_ideal_for", lang=lang) }}</h3>
+        <ul>
+          <li>{% if lang == "es" %}Blogs y noticias de empresa{% else %}Business blogs and news{% endif %}</li>
+          <li>{% if lang == "es" %}Portfolio con casos de estudio{% else %}Portfolio with case studies{% endif %}</li>
+          <li>{% if lang == "es" %}Actualizaciones mensuales de contenido{% else %}Monthly content updates{% endif %}</li>
+        </ul>
+      </div>
+
+      <div class="service-option__consideration">
+        <strong>{{ trans(key="svc_one_thing", lang=lang) }}</strong> {% if lang == "es" %}Las actualizaciones son sencillas pero requieren una breve sesión de formación. Alternativamente, puedo gestionar las actualizaciones mensuales por un coste mínimo.{% else %}Content updates are simple but require a quick training session. Alternatively, I can handle monthly updates for you at a minimal cost.{% endif %}
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Decision Helper -->
+  <section class="service-decision" id="decide">
+    <h2>{{ trans(key="svc_not_sure", lang=lang) }}</h2>
+    <div class="decision-cards decision-cards--2col">
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-bolt"></i> {{ trans(key="svc_choose_static", lang=lang) }}</h3>
+        <ul>
+          <li>{% if lang == "es" %}El contenido cambia raramente{% else %}Content rarely changes{% endif %}</li>
+          <li>{% if lang == "es" %}La velocidad y seguridad importan{% else %}Speed and security matter{% endif %}</li>
+          <li>{% if lang == "es" %}Quieres los costes más bajos{% else %}You want lowest costs{% endif %}</li>
+        </ul>
+      </div>
+      <div class="decision-card">
+        <h3><i class="fa-solid fa-code"></i> {{ trans(key="svc_choose_static_blog", lang=lang) }}</h3>
+        <ul>
+          <li>{% if lang == "es" %}Quieres un blog o sección de noticias{% else %}You want a blog or news section{% endif %}</li>
+          <li>{% if lang == "es" %}Las actualizaciones son ocasionales (mensuales){% else %}Updates are occasional (monthly){% endif %}</li>
+          <li>{% if lang == "es" %}Quieres los beneficios de una web a medida{% else %}You want custom website benefits{% endif %}</li>
+        </ul>
+      </div>
+    </div>
+    <p class="decision-tip">
+      <i class="fa-solid fa-lightbulb"></i>
+      <strong>{{ trans(key="svc_honest_advice", lang=lang) }}</strong> {% if lang == "es" %}En caso de duda, empieza con la web a medida. Es más fácil añadir complejidad después que simplificar una solución sobredimensionada.{% else %}When in doubt, start with the Custom Website. It's easier to add complexity later than to simplify an over-engineered solution.{% endif %}
+    </p>
+  </section>
+
+  <!-- Process & Budget -->
+  <section class="service-process" id="process">
+    <h2>{{ trans(key="svc_how_i_work", lang=lang) }}</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <span class="process-step__number">1</span>
+        <div class="process-step__content">
+          <h3>{{ trans(key="svc_discovery", lang=lang) }}</h3>
+          <p>{% if lang == "es" %}Hablamos de tus objetivos, audiencia y requisitos. Gratis, sin compromiso.{% else %}We discuss your goals, audience, and requirements. Free, no commitment.{% endif %}</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">2</span>
+        <div class="process-step__content">
+          <h3>{{ trans(key="svc_proposal", lang=lang) }}</h3>
+          <p>{% if lang == "es" %}Recibes un alcance claro, plazo y precio cerrado. Sin sorpresas.{% else %}You receive a clear scope, timeline, and fixed price. No surprises.{% endif %}</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">3</span>
+        <div class="process-step__content">
+          <h3>{{ trans(key="svc_development", lang=lang) }}</h3>
+          <p>{% if lang == "es" %}Construyo tu web y comparto un enlace de vista previa. Revisas, pruebas y das feedback en cada fase.{% else %}I build your site and share a preview link. You review, test, and give feedback at each stage.{% endif %}</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">4</span>
+        <div class="process-step__content">
+          <h3>{{ trans(key="svc_launch", lang=lang) }}</h3>
+          <p>{% if lang == "es" %}Tu web sale en producción. Me encargo del despliegue y soporte inicial.{% else %}Your site goes live. I handle deployment and initial support.{% endif %}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="budget-section" id="budget">
+      <div class="budget-header">
+        <h3>{{ trans(key="svc_budget", lang=lang) }}</h3>
+        <ul class="budget-highlights">
+          {% if lang == "es" %}
+          <li><i class="fa-solid fa-user-tie"></i> Trabajo directo contigo, sin intermediarios</li>
+          <li><i class="fa-solid fa-bolt"></i> Calidad senior, entrega en menos de un mes</li>
+          <li><i class="fa-solid fa-eye"></i> Vista previa desde el primer día, feedback diario</li>
+          {% else %}
+          <li><i class="fa-solid fa-user-tie"></i> Direct work with you, no middlemen</li>
+          <li><i class="fa-solid fa-bolt"></i> Senior quality, delivery in under a month</li>
+          <li><i class="fa-solid fa-eye"></i> Preview from day one, daily feedback</li>
+          {% endif %}
+        </ul>
+        <p class="budget-floor">{% if lang == "es" %}Proyectos desde €{{ config.extra.pricing_static_simple_min }}{% else %}Projects from €{{ config.extra.pricing_static_simple_min }}{% endif %}</p>
+      </div>
+
+      <!-- Pricing details (hidden by default, shown with ?prices=1) -->
+      <div class="pricing-details" style="display: none;">
+        <div class="pricing-grid pricing-grid--2col">
+          <div class="pricing-card">
+            <h4><i class="fa-solid fa-bolt"></i> {{ trans(key="svc_static", lang=lang) }}</h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_static_simple_min }} - €{{ config.extra.pricing_static_simple_max }}</div>
+            <div class="pricing-card__price-label">{% if lang == "es" %}pago único, precio cerrado{% else %}one-time, fixed price{% endif %}</div>
+            <p class="pricing-card__included">{% if lang == "es" %}Año 1 incluye hosting, dominio y mantenimiento.{% else %}Year 1 includes hosting, domain, and care.{% endif %}</p>
+            <p class="pricing-card__anchor">{% if lang == "es" %}Agencias cobran €8-15k por lo mismo. Senior, en días, no meses.{% else %}Agencies charge €8-15k for the same. Senior-built, in days, not months.{% endif %}</p>
+            <div class="pricing-card__ongoing">
+              <span class="pricing-card__ongoing-label">{% if lang == "es" %}Desde el Año 2{% else %}From Year 2{% endif %}</span>
+              <ul class="pricing-card__details">
+                <li>{% if lang == "es" %}Hosting + dominio: €{{ config.extra.pricing_static_hosting }} + €{{ config.extra.pricing_domain }}/año{% else %}Hosting + domain: €{{ config.extra.pricing_static_hosting }} + €{{ config.extra.pricing_domain }}/yr{% endif %}</li>
+                <li>{% if lang == "es" %}Plan de mantenimiento: €{{ config.extra.pricing_static_maintenance_min }}-{{ config.extra.pricing_static_maintenance_max }}/año{% else %}Care plan: €{{ config.extra.pricing_static_maintenance_min }}-{{ config.extra.pricing_static_maintenance_max }}/yr{% endif %}</li>
+              </ul>
+            </div>
+            <a href="mailto:web@chemaclass.com?subject={% if lang == 'es' %}Presupuesto%20Web%20a%20Medida&body=Hola%20Chema%2C%0A%0AMe%20interesa%20la%20Web%20a%20Medida.%0A%0AQué%20necesito%3A%0A%0AGracias!{% else %}Custom%20Website%20Quote&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20the%20Custom%20Website.%0A%0AWhat%20I%20need%3A%0A%0AThanks!{% endif %}" class="pricing-card__cta">
+              <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Pedir presupuesto{% else %}Get a quote{% endif %}
+            </a>
+          </div>
+          <div class="pricing-card">
+            <h4><i class="fa-solid fa-code"></i> {{ trans(key="svc_static_blog", lang=lang) }}</h4>
+            <div class="pricing-card__price">€{{ config.extra.pricing_static_pro_min }} - €{{ config.extra.pricing_static_pro_max }}</div>
+            <div class="pricing-card__price-label">{% if lang == "es" %}pago único, precio cerrado{% else %}one-time, fixed price{% endif %}</div>
+            <p class="pricing-card__included">{% if lang == "es" %}Año 1 incluye hosting, dominio y mantenimiento.{% else %}Year 1 includes hosting, domain, and care.{% endif %}</p>
+            <p class="pricing-card__anchor">{% if lang == "es" %}Tu propio motor de contenido. Sin SaaS, sin suscripciones mensuales.{% else %}Own your content engine. No SaaS lock-in, no monthly fees.{% endif %}</p>
+            <div class="pricing-card__ongoing">
+              <span class="pricing-card__ongoing-label">{% if lang == "es" %}Desde el Año 2{% else %}From Year 2{% endif %}</span>
+              <ul class="pricing-card__details">
+                <li>{% if lang == "es" %}Hosting + dominio: €{{ config.extra.pricing_static_hosting }} + €{{ config.extra.pricing_domain }}/año{% else %}Hosting + domain: €{{ config.extra.pricing_static_hosting }} + €{{ config.extra.pricing_domain }}/yr{% endif %}</li>
+                <li>{% if lang == "es" %}Plan de mantenimiento: €{{ config.extra.pricing_static_pro_maintenance_min }}-{{ config.extra.pricing_static_pro_maintenance_max }}/año{% else %}Care plan: €{{ config.extra.pricing_static_pro_maintenance_min }}-{{ config.extra.pricing_static_pro_maintenance_max }}/yr{% endif %}</li>
+              </ul>
+            </div>
+            <a href="mailto:web@chemaclass.com?subject={% if lang == 'es' %}Presupuesto%20Web%20%2B%20Blog&body=Hola%20Chema%2C%0A%0AMe%20interesa%20la%20Web%20%2B%20Blog.%0A%0AQué%20necesito%3A%0A%0AGracias!{% else %}Website%20%2B%20Blog%20Quote&body=Hi%20Chema%2C%0A%0AI'm%20interested%20in%20the%20Website%20%2B%20Blog.%0A%0AWhat%20I%20need%3A%0A%0AThanks!{% endif %}" class="pricing-card__cta">
+              <i class="fa-solid fa-envelope"></i> {% if lang == "es" %}Pedir presupuesto{% else %}Get a quote{% endif %}
+            </a>
+          </div>
+        </div>
+        <p class="pricing-note">{% if lang == "es" %}* Plan de mantenimiento: cubre actualizaciones y ediciones menores. Los cambios sustanciales se presupuestan aparte según complejidad. Hosting + dominio son obligatorios para mantener la web activa. Los gestiono yo, o te transfiero la cuenta y el código en cualquier momento. Precios orientativos, el presupuesto final depende de la complejidad.{% else %}* Care plan: covers updates and minor edits. Substantial changes priced separately based on complexity. Hosting + domain required to keep the site live. I manage them, or transfer the account and code to you anytime. Indicative prices, final quote depends on complexity.{% endif %}</p>
+      </div>
+
+      <div class="quote-cta">
+        <p class="quote-cta__text">{% if lang == "es" %}Cada proyecto es diferente. Contacta conmigo para hablar de tus necesidades y recibir un presupuesto personalizado.{% else %}Every project is different. Contact me to discuss your needs and get a personalized quote.{% endif %}</p>
+        <a href="mailto:web@chemaclass.com?subject={% if lang == 'es' %}Presupuesto%20Web&body=Hola%20Chema%2C%0A%0AQué%20necesito%3A%0ATipo%20de%20sitio%3A%0A%0AGracias!{% else %}Website%20Quote&body=Hi%20Chema%2C%0A%0AWhat%20I%20need%3A%0AType%20of%20site%3A%0A%0AThanks!{% endif %}" class="quote-cta__btn">
+          <i class="fa-solid fa-envelope"></i> {{ trans(key="svc_request_quote", lang=lang) }}
+        </a>
+      </div>
+
+      <section class="services-faq">
+        <h2 class="services-faq__title">{% if lang == "es" %}Preguntas frecuentes{% else %}Frequently asked{% endif %}</h2>
+        <div class="services-faq__list">
+          <div class="services-faq__item">
+            <button class="services-faq__question" aria-expanded="false">
+              {% if lang == "es" %}¿Qué pasa si necesito cambios después del lanzamiento?{% else %}What if I need changes after launch?{% endif %}
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="services-faq__answer">
+              {% if lang == "es" %}Cambios menores entran en el plan de mantenimiento. Para cambios sustanciales o nuevas funcionalidades, te presupuesto aparte según complejidad.{% else %}Minor changes are covered by the care plan. For substantial changes or new features, I quote separately based on complexity.{% endif %}
+            </div>
+          </div>
+          <div class="services-faq__item">
+            <button class="services-faq__question" aria-expanded="false">
+              {% if lang == "es" %}¿Puedo llevarme la web a otro proveedor?{% else %}Can I move the site to another provider?{% endif %}
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="services-faq__answer">
+              {% if lang == "es" %}Sí, en cualquier momento. Te transfiero la cuenta de hosting, el dominio y el código fuente sin coste adicional.{% else %}Yes, anytime. I transfer the hosting account, domain, and source code at no extra cost.{% endif %}
+            </div>
+          </div>
+          <div class="services-faq__item">
+            <button class="services-faq__question" aria-expanded="false">
+              {% if lang == "es" %}¿El plan de mantenimiento es obligatorio?{% else %}Is the care plan required?{% endif %}
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="services-faq__answer">
+              {% if lang == "es" %}No. El Año 1 ya viene incluido en el precio. Desde el Año 2 es totalmente opcional.{% else %}No. Year 1 is bundled in the price. From Year 2 it's fully optional.{% endif %}
+            </div>
+          </div>
+          <div class="services-faq__item">
+            <button class="services-faq__question" aria-expanded="false">
+              {% if lang == "es" %}¿Cuánto se tarda en lanzar?{% else %}How long until launch?{% endif %}
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="services-faq__answer">
+              {% if lang == "es" %}Menos de un mes para la mayoría de proyectos. Vista previa desde el primer día, iteraciones cortas con feedback diario.{% else %}Less than a month for most projects. Preview link from day one, short iterations with daily feedback.{% endif %}
+            </div>
+          </div>
+          <div class="services-faq__item">
+            <button class="services-faq__question" aria-expanded="false">
+              {% if lang == "es" %}¿Por qué tan barato comparado con una agencia?{% else %}Why so cheap compared to an agency?{% endif %}
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="services-faq__answer">
+              {% if lang == "es" %}Sin intermediarios, sin equipo de ventas, sin oficinas. Trabajas directamente con un senior, no con un junior gestionado por capas de management.{% else %}No middlemen, no sales team, no offices. You work directly with a senior, not a junior managed through layers of overhead.{% endif %}
+            </div>
+          </div>
+          <div class="services-faq__item">
+            <button class="services-faq__question" aria-expanded="false">
+              {% if lang == "es" %}¿Qué NO está incluido?{% else %}What's NOT included?{% endif %}
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="services-faq__answer">
+              {% if lang == "es" %}Estos sitios son estáticos. No incluyen carrito de compra ni checkout, sincronización de stock o inventario, integraciones con ERP/CRM, lógica de backend a medida ni cuentas de usuario o paneles. Si necesitas algo de esto, reserva una <a href="/es/services/consulting/">sesión de consultoría</a> y te oriento hacia la herramienta o partner adecuado.{% else %}These sites are static. No shopping cart or checkout, no stock or inventory sync, no ERP/CRM integrations, no custom backend logic, no user accounts or dashboards. If you need any of these, book a <a href="/services/consulting/">consulting call</a> and I'll point you to the right tool or partner.{% endif %}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="service-portfolio" id="portfolio">
+    <h2>{{ trans(key="svc_recent_work", lang=lang) }}</h2>
+    <div class="portfolio-carousel">
+      <button class="portfolio-carousel__btn portfolio-carousel__btn--prev" aria-label="Previous">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="portfolio-carousel__track-container">
+        <div class="portfolio-carousel__track">
+          <a href="https://teina.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+            <div class="portfolio-item__image">
+              <img src="/images/portfolio/teina-sample.jpg" alt="Teína website" loading="lazy">
+            </div>
+            <div class="portfolio-item__content">
+              <span class="portfolio-item__tag">{{ trans(key="svc_static", lang=lang) }}</span>
+              <h3 class="portfolio-item__name">Teína <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+              <p class="portfolio-item__desc">{% if lang == "es" %}Banda de indie pop rock de Calasparra, Murcia. 6 miembros, versiones y temas propios.{% else %}Indie pop rock band from Calasparra, Murcia. 6 members, covers and original songs.{% endif %}</p>
+              <div class="portfolio-item__features">
+                <span class="feature-badge"><i class="fa-solid fa-language"></i> 2 {% if lang == "es" %}idiomas{% else %}languages{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-images"></i> {% if lang == "es" %}Galería{% else %}Gallery{% endif %}</span>
+                <span class="feature-badge"><i class="fa-brands fa-youtube"></i> {% if lang == "es" %}Vídeos{% else %}Videos{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-file"></i> 5 {% if lang == "es" %}páginas{% else %}pages{% endif %}</span>
+              </div>
+            </div>
+          </a>
+          <a href="https://fco-sandoval-gomez.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+            <div class="portfolio-item__image">
+              <img src="/images/portfolio/fco-sandoval-gomez-sample.jpg" alt="Fco Sandoval Gómez website" loading="lazy">
+            </div>
+            <div class="portfolio-item__content">
+              <span class="portfolio-item__tag">{{ trans(key="svc_static_blog", lang=lang) }}</span>
+              <h3 class="portfolio-item__name">Fco Sandoval Gómez <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+              <p class="portfolio-item__desc">{% if lang == "es" %}Portfolio profesional para un arquitecto especializado en conservación del patrimonio.{% else %}Professional portfolio for an architect specializing in heritage conservation.{% endif %}</p>
+              <div class="portfolio-item__features">
+                <span class="feature-badge"><i class="fa-solid fa-language"></i> 3 {% if lang == "es" %}idiomas{% else %}languages{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-magnifying-glass"></i> {% if lang == "es" %}Búsqueda{% else %}Search{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-images"></i> {% if lang == "es" %}Galería{% else %}Gallery{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-newspaper"></i> Blog</span>
+              </div>
+            </div>
+          </a>
+          <a href="https://windmuehle-tuendern.de" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+            <div class="portfolio-item__image">
+              <img src="/images/portfolio/windmuelle-tuendern-sample.jpg" alt="Windmuehle Tündern website" loading="lazy">
+            </div>
+            <div class="portfolio-item__content">
+              <span class="portfolio-item__tag">{{ trans(key="svc_static_blog", lang=lang) }}</span>
+              <h3 class="portfolio-item__name">Windmuehle Tündern <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+              <p class="portfolio-item__desc">{% if lang == "es" %}Web sin ánimo de lucro para la restauración de un molino histórico en Alemania.{% else %}Non-profit site for the restoration of a historic windmill in Germany.{% endif %}</p>
+              <div class="portfolio-item__features">
+                <span class="feature-badge"><i class="fa-solid fa-language"></i> 3 {% if lang == "es" %}idiomas{% else %}languages{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-hand-holding-heart"></i> {% if lang == "es" %}Donaciones{% else %}Donations{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-newspaper"></i> {% if lang == "es" %}Noticias{% else %}News{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-images"></i> {% if lang == "es" %}Galería{% else %}Gallery{% endif %}</span>
+              </div>
+            </div>
+          </a>
+          <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+            <div class="portfolio-item__image">
+              <img src="/images/portfolio/dkrisna-sample.jpg" alt="D'Krisna website" loading="lazy">
+            </div>
+            <div class="portfolio-item__content">
+              <span class="portfolio-item__tag">{{ trans(key="svc_static", lang=lang) }}</span>
+              <h3 class="portfolio-item__name">D'Krisna <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+              <p class="portfolio-item__desc">{% if lang == "es" %}Centro de belleza y bienestar en Murcia.{% else %}Beauty and wellness salon in Murcia.{% endif %}</p>
+              <div class="portfolio-item__features">
+                <span class="feature-badge"><i class="fa-solid fa-language"></i> 2 {% if lang == "es" %}idiomas{% else %}languages{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-calendar-check"></i> {% if lang == "es" %}Reservas{% else %}Booking{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-star"></i> {% if lang == "es" %}Reseñas{% else %}Reviews{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-file"></i> 6 {% if lang == "es" %}páginas{% else %}pages{% endif %}</span>
+              </div>
+            </div>
+          </a>
+          <a href="https://postcardfromtheroad.eu" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+            <div class="portfolio-item__image">
+              <img src="/images/portfolio/postcardfromtheroad-sample.jpg" alt="Postcard from the Road website" loading="lazy">
+            </div>
+            <div class="portfolio-item__content">
+              <span class="portfolio-item__tag">{{ trans(key="svc_static_blog", lang=lang) }}</span>
+              <h3 class="portfolio-item__name">Postcard from the Road <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+              <p class="portfolio-item__desc">{% if lang == "es" %}Blog de viajes con galería fotográfica y narrativas personales.{% else %}Travel blog with photo gallery and personal narratives.{% endif %}</p>
+              <div class="portfolio-item__features">
+                <span class="feature-badge"><i class="fa-solid fa-folder"></i> 18+ {% if lang == "es" %}categorías{% else %}categories{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-magnifying-glass"></i> {% if lang == "es" %}Búsqueda{% else %}Search{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-images"></i> {% if lang == "es" %}Galerías{% else %}Galleries{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-pen"></i> 50+ posts</span>
+              </div>
+            </div>
+          </a>
+          <a href="https://dinamita-gym.es" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+            <div class="portfolio-item__image">
+              <img src="/images/portfolio/dinamitagym-sample.jpg" alt="Dinamita Gym website" loading="lazy">
+            </div>
+            <div class="portfolio-item__content">
+              <span class="portfolio-item__tag">{{ trans(key="svc_static", lang=lang) }}</span>
+              <h3 class="portfolio-item__name">Dinamita Gym <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+              <p class="portfolio-item__desc">{% if lang == "es" %}Centro de entrenamiento funcional y fuerza en Caravaca de la Cruz.{% else %}Functional fitness and strength training center in Caravaca de la Cruz.{% endif %}</p>
+              <div class="portfolio-item__features">
+                <span class="feature-badge"><i class="fa-solid fa-dumbbell"></i> {% if lang == "es" %}Fitness{% else %}Fitness{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-user"></i> {% if lang == "es" %}Personal{% else %}Personal{% endif %}</span>
+                <span class="feature-badge"><i class="fa-solid fa-file"></i> 1 {% if lang == "es" %}página{% else %}page{% endif %}</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <button class="portfolio-carousel__btn portfolio-carousel__btn--next" aria-label="Next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="portfolio-carousel__dots"></div>
+  </section>
+
+</article>
+
+{% endblock content %}
+
+{% block js %}
+<script>
+document.querySelectorAll('.services-faq__question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.nextElementSibling.classList.toggle('open', !expanded);
+  });
+});
+
+// Show pricing details if prices=1 is in URL (query or malformed hash like #budget?prices=1)
+(function() {
+  const search = new URLSearchParams(window.location.search);
+  const hash = window.location.hash;
+  const hashId = hash.includes('?') ? hash.substring(1, hash.indexOf('?')) : hash.substring(1);
+  const hashQuery = hash.includes('?') ? hash.substring(hash.indexOf('?') + 1) : '';
+  const fromHash = new URLSearchParams(hashQuery);
+  if (search.get('prices') === '1' || fromHash.get('prices') === '1') {
+    document.querySelectorAll('.pricing-details').forEach(el => el.style.display = 'block');
+    document.querySelectorAll('.budget-section .quote-cta').forEach(el => el.style.display = 'none');
+    if (hashId) {
+      const target = document.getElementById(hashId);
+      if (target) target.scrollIntoView();
+    }
+  }
+})();
+
+// Portfolio Carousel
+(function() {
+  const carousel = document.querySelector('.portfolio-carousel');
+  if (!carousel) return;
+
+  const track = carousel.querySelector('.portfolio-carousel__track');
+  const items = track.querySelectorAll('.portfolio-item');
+  const prevBtn = carousel.querySelector('.portfolio-carousel__btn--prev');
+  const nextBtn = carousel.querySelector('.portfolio-carousel__btn--next');
+  const dotsContainer = document.querySelector('.portfolio-carousel__dots');
+
+  const totalItems = items.length;
+  let currentIndex = 0;
+  let itemsPerView = window.innerWidth <= 768 ? 1 : 3;
+
+  // Calculate total positions (one dot per position)
+  function getTotalPositions() {
+    return totalItems - itemsPerView + 1;
+  }
+
+  // Create dots
+  function createDots() {
+    dotsContainer.innerHTML = '';
+    const totalPositions = getTotalPositions();
+    for (let i = 0; i < totalPositions; i++) {
+      const dot = document.createElement('button');
+      dot.classList.add('portfolio-carousel__dot');
+      dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      if (i === 0) dot.classList.add('portfolio-carousel__dot--active');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  // Update dots
+  function updateDots() {
+    const dots = dotsContainer.querySelectorAll('.portfolio-carousel__dot');
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('portfolio-carousel__dot--active', i === currentIndex);
+    });
+  }
+
+  // Go to slide
+  function goToSlide(index) {
+    const maxIndex = totalItems - itemsPerView;
+    currentIndex = Math.max(0, Math.min(index, maxIndex));
+
+    const gap = 24; // 1.5rem in pixels
+    const itemWidth = items[0].offsetWidth;
+    const offset = currentIndex * (itemWidth + gap);
+
+    track.style.transform = `translateX(-${offset}px)`;
+    updateDots();
+  }
+
+  // Navigate with looping (one item at a time)
+  function goNext() {
+    const maxIndex = totalItems - itemsPerView;
+    if (currentIndex >= maxIndex) {
+      goToSlide(0); // Loop to first
+    } else {
+      goToSlide(currentIndex + 1);
+    }
+  }
+
+  function goPrev() {
+    const maxIndex = totalItems - itemsPerView;
+    if (currentIndex <= 0) {
+      goToSlide(maxIndex); // Loop to last
+    } else {
+      goToSlide(currentIndex - 1);
+    }
+  }
+
+  // Event listeners
+  prevBtn.addEventListener('click', goPrev);
+  nextBtn.addEventListener('click', goNext);
+
+  // Handle resize
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      const newItemsPerView = window.innerWidth <= 768 ? 1 : 3;
+      if (newItemsPerView !== itemsPerView) {
+        itemsPerView = newItemsPerView;
+        currentIndex = 0;
+        createDots();
+      }
+      goToSlide(currentIndex);
+    }, 100);
+  });
+
+  // Touch/swipe support
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        goNext();
+      } else {
+        goPrev();
+      }
+    }
+  }, { passive: true });
+
+  // Initialize
+  createDots();
+})();
+</script>
+{% endblock js %}

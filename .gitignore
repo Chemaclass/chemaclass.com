@@ -1,4 +1,9 @@
-.idea
-.vscode
+.DS_Store
+.idea/
+.vscode/
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
 public/
 static/processed_images/
+static/terminal-fs.json
+static/slides/*/slides.pdf

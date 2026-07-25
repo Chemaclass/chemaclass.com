@@ -1,0 +1,35 @@
+// ==========================================================================
+// Profile Entry Point (/profile, client-side reading dashboard)
+//
+// Dedicated bundle so the ~11KB of profile styling doesn't ride along on
+// every other page's main.css. Mirrors the structure of page.scss/listing.scss.
+// ==========================================================================
+
+// 1. Abstracts
+@import "abstracts/variables";
+
+// 2. Vendors
+@import "normalize";
+@import "fonts";
+
+// 3. Base
+@import "base/reset";
+@import "base/global";
+@import "base/typography";
+
+// 4. Layouts
+@import "layouts/header";
+@import "layouts/footer";
+
+// 5. Components
+@import "menu";
+@import "components/buttons";
+@import "components/dialog";
+
+// 6. Pages
+@import "pages/profile";
+
+// 7. Themes
+
+// 8. Utilities
+@import "utils/responsive";

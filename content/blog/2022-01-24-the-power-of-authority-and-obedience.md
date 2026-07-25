@@ -1,17 +1,25 @@
 +++
-title = "The power of authority and obedience"
+title = "The Power of Authority and Obedience"
 description = "Milgram was interested in researching how far people would go in obeying an instruction if it involved harming another person, and how easily people could be influenced into committing atrocities. For example, Germans in WWII."
 [taxonomies]
-tags = [ "experiment", "psychology", "people", "humanity" ]
+tags = [ "psychology", "leadership", "communication" ]
 [extra]
 subtitle = "Milgram's experiment"
 static_thumbnail = "/images/blog/2022-01-24/cover.jpg"
+related_posts = [
+  "blog/2021-06-01-conformity-experiments.md",
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-10-11-unhealthy-working-environment.md",
+]
+related_readings = [
+  "readings/2021-10-22-leadership-is-language.md",
+  "readings/2024-11-29-mans-search-for-meaning.md",
+]
 +++
 
-![blog-cover](/images/blog/2022-01-24/cover.jpg)
 
 Milgram was interested in researching how far people would go in obeying an instruction if it involved harming another
-person, and how easily people could be influenced into committing atrocities. For example, Germans in WWII.
+person, and how easily people could be influenced into committing atrocities. Eg: Germans in WWII.
 
 <!-- more -->
 
@@ -20,8 +28,8 @@ person, and how easily people could be influenced into committing atrocities. Fo
 During the 1960s, the psychologist Stanley Milgram conducted a series of obedience experiments directly related to the
 power of authority and obedience, even when they might end-up in fatal ending.
 
-Milgran examined justifications for acts of genocide offered by those accused at the World War II, Nuremberg War
-Criminal trials. Their defence often was based on "obedience" - that they were just following orders from their
+Milgram examined justifications for acts of genocide offered by those accused at the World War II, Nuremberg War
+Criminal trials. Their defence often was based on "obedience", that they were just following orders from their
 superiors. Milgram came up with the experiment to answer this question:
 
 > Could it be that Eichmann and his million accomplices in the Holocaust were just following orders?
@@ -94,21 +102,21 @@ take responsibility.
 
 Among many others, these are some of the variations:
 
-#### Uniform
+### Uniform
 
 When the role of the researcher was taken over by an "ordinary person without a uniform" (always a confederate), the
 obedience dropped to 20%.
 
-#### Change of location
+### Change of location
 
 Obedience dropped to 47.5% when the experiment was moved to a set of offices instead of the impressive Yale University.
 
-#### Social support condition
+### Social support condition
 
 Two other participants (confederates) were also teachers but refused to obey. One at 150 volts, and the other at 210
 volts. The presence of others who are seen to disobey the authority figure reduces the level of obedience to 10%.
 
-#### Absent experimenter condition
+### Absent experimenter condition
 
 When the researcher instructed and prompted the teacher by telephone from another room, obedience fell to 20.5%. Many
 participants cheated and missed out shocks or gave less voltage than ordered. The proximity of authority figure affects

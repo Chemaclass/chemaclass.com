@@ -1,0 +1,175 @@
+body {
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: var(--body-bg);
+  color: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+  letter-spacing: -0.01em;
+  scroll-margin-top: 100px;
+
+  &.active {
+    color: var(--accent-color);
+  }
+
+  .heading-anchor {
+    opacity: 0;
+    margin-left: 0.5rem;
+    color: var(--color-subtitle);
+    text-decoration: none;
+    transition: opacity 0.2s ease, color 0.2s ease;
+    font-weight: 400;
+    font-size: 0.85em;
+
+    &:hover {
+      color: var(--accent-color);
+      border-bottom: none;
+    }
+  }
+
+  &:hover .heading-anchor {
+    opacity: 1;
+  }
+}
+
+h1 sup {
+  top: -1.5em;
+  font-size: small;
+}
+
+h3 small {
+  line-height: unset;
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+blockquote {
+  border-left: 3px solid var(--accent-color);
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  font-style: italic;
+  font-size: 1.15rem;
+  margin-left: 0;
+  margin-right: 0;
+  color: var(--body-color);
+  opacity: 0.85;
+
+  p:before {
+    content: '';
+    font-style: normal;
+  }
+
+  p {
+    margin: 0.5em 0;
+  }
+}
+
+.tldr {
+  background: var(--search-input-bg);
+  border: 1px solid var(--preview-divider-color);
+  border-left: 3px solid var(--accent-color);
+  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-sm);
+
+  &::before {
+    content: "TL;DR";
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+  }
+
+  p {
+    display: inline;
+    margin: 0;
+  }
+}
+
+code {
+  background: hsla(0, 0%, 0%, 0.05);
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  font-size: 0.88em;
+
+  pre > & {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+  }
+}
+
+pre {
+  overflow: auto;
+  padding: 1.25rem;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.dark pre {
+  background-color: #111 !important;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  // Plain prose links get the recolor + underline on hover. :where() pins this
+  // at a:hover specificity (0,1,1) so any component's own :hover wins: a card or
+  // TOC/nav/footer link that sets its own border-color or `border-bottom: none`
+  // keeps a uniform border instead of this underline painting a mismatched line
+  // across its bottom edge. Prose links have no such :hover, so they still get
+  // the treatment. The button/tag list stays as a belt-and-suspenders opt-out.
+  &:hover:where(:not([class*="btn"]):not([class*="button"]):not([class*="cta"]):not(.view-all):not(.header-left):not(.blog-post__tag):not(.talk-single__tag):not(.talk-single__project-link)) {
+    color: var(--accent-overlay-color);
+    border-bottom: 1px solid var(--accent-color-light);
+  }
+
+  &.close-border:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--preview-divider-color);
+  margin: 2.5rem 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 14px;
+}

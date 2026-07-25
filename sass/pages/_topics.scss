@@ -1,0 +1,227 @@
+// Topics header (matches blog/readings/talks pattern)
+.topics-header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .topics-intro {
+    color: var(--color-subtitle);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .topics-header .topics-intro {
+    font-size: 1rem;
+  }
+}
+
+// Topics page content
+.topics-page {
+  &__groups {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__group {
+    background: var(--search-input-bg);
+    border: 1px solid var(--preview-divider-color);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    transition: border-color 0.2s ease;
+
+    &.expanded {
+      border-color: var(--accent-color);
+    }
+  }
+
+  &__group-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+    gap: 1rem;
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 0;
+      color: var(--heading-color);
+    }
+  }
+
+  &__group-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__group-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  &__group-count {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--preview-divider-color);
+    color: var(--color-subtitle);
+    padding: 0.1rem 0.5rem;
+    border-radius: 1rem;
+    min-width: 1.8em;
+    text-align: center;
+
+    .expanded & {
+      background: var(--accent-color);
+      color: white;
+    }
+  }
+
+  &__group-desc {
+    font-size: 0.9rem;
+    color: var(--color-subtitle);
+    line-height: 1.5;
+    margin: 0.25rem 0 0;
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    color: var(--color-subtitle);
+    transition: all 0.2s ease;
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    .expanded & svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__group-header:hover &__toggle {
+    color: var(--accent-color);
+  }
+
+  // Tags hidden by default, revealed on expand
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.2s ease, margin 0.3s ease;
+    margin-top: 0;
+
+    .expanded & {
+      max-height: 500px;
+      opacity: 1;
+      margin-top: 1rem;
+    }
+  }
+
+  &__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    background: var(--body-bg);
+    border: 1px solid var(--preview-divider-color);
+    border-radius: 2rem;
+    text-decoration: none;
+    color: var(--body-color);
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: var(--accent-color);
+    }
+
+    &--popular {
+      .topics-page__tag-name {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__tag-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  &__tag-count {
+    background: var(--preview-divider-color);
+    color: var(--color-subtitle);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.1rem 0.45rem;
+    border-radius: 1rem;
+    min-width: 1.4em;
+    text-align: center;
+  }
+
+  &__footer {
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+
+  &__all-tags {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid var(--accent-color);
+    border-radius: 2rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--accent-color);
+      color: white;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .topics-page {
+    &__group {
+      padding: 1rem;
+    }
+
+    &__group-header h2 {
+      font-size: 1.05rem;
+    }
+
+    &__group-desc {
+      font-size: 0.82rem;
+    }
+
+    &__tags {
+      gap: 0.4rem;
+    }
+
+    &__tag {
+      padding: 0.35rem 0.7rem;
+    }
+
+    &__tag-name {
+      font-size: 0.8rem;
+    }
+  }
+}

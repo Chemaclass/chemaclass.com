@@ -1,27 +1,42 @@
 +++
-title = "Effective pair programming"
-description = "Let's first establish what pair programming is: Two people working together on the same problem at the same time. It is not about one person showing off their skills in front of another, nor one person afraid of making mistakes due to an impostor syndrome."
+title = "Effective Pair Programming"
+description = "A practical guide to pair programming that works: roles, rotation, when to pair, common pitfalls, and how to make sessions productive."
 draft = false
 aliases = [ "/pair-programming" ]
 [taxonomies]
-tags = [ "software", "team-work" ]
+tags = ["pair-programming", "xp", "tdd", "communication", "clean-code"]
 [extra]
 subtitle = "Embracing quality practices in your engineering culture"
 static_thumbnail = "/images/blog/2024-03-28/cover.jpg"
 pin = false
+series = "craftsmanship"
+series_order = 7
+related_posts = [
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2022-05-27-bikeshedding.md",
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2022-08-22-understanding-people.md",
+]
+related_readings = [
+  "readings/2016-08-01-the-clean-coder.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+  "readings/2020-10-10-object-design-style-guide.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
-![blog-cover](/images/blog/2024-03-28/cover.jpg)
 
-What is pair programming? Let's first establish what pair programming is: Two people working together on the same problem at the same time. It is not about one person showing off their skills in front of another, nor one person afraid of making mistakes due to an impostor syndrome.
+What is pair programming? Two people working together on the same problem, at the same time.
 
 <!-- more -->
+
+It is not about one person showing off their skills in front of another, nor one person afraid of making mistakes due to an impostor syndrome.
 
 Each person will have a role: 
 - Navigator: he will pay attention to the bigger picture; eg: architecture, relation between collaborators, object design, etc.
 - Driver: she will pay attention to the small details; eg: naming, code conventions, writing syntax, object design, etc.
 
-> The pair could --and should-- switch roles occasionally; eg: every X commits pushed, every 10 mins, … up to them.
+> The pair could, and should, switch roles occasionally; eg: every X commits pushed, every 10 mins, … up to them.
 
 Pair programming should not be considered a practice only for "seniors" to juniors, but regardless of the team members' experience level.
 
@@ -35,7 +50,7 @@ It is about the constant **sharing** of **knowledge** atmosphere by default, red
 
 It is about **team cohesion** and sharpening the feeling that we belong. When we understand each other's strengths and weaknesses, we will realize how much we can help each other grow.
 
-![cover](/images/blog/2024-03-28/footer.jpg)
+![blog-img](/images/blog/2024-03-28/footer.jpg)
 
 ## How can you practice pair programming?
 
@@ -44,7 +59,7 @@ Pair programming can be done in different ways:
 - You can start and finish a task with pairing. You can time-box it to 30, 60, 90 minutes. Either way, it is recommended to have pauses in the middle - Pomodoro. 
 - You can start the task together and stop when one of your peers feels confident enough to continue alone. 
 
-> It is up to the team --and the task in context-- to decide when and how to apply pairing to get the best out of it.
+> It is up to the team, and the task in context, to decide when and how to apply pairing to get the best out of it.
 
 This does not mean you must constantly work "no matter what" in pair. This is not about creating rules; on the contrary, it is about embracing this practice to the point you feel confident to choose when and how to use it to get the best out of it.
 
@@ -59,7 +74,7 @@ Pair programming might become one of the best tools in your team toolbox for dai
 - **Backseat driver**: The navigator engages actively with the driver.
 - **Tourist guide**: The navigator passively learns with the driver.
 
-![cover](/images/blog/2024-03-28/good-pair-prog.jpg)
+![effective pair programming patterns](/images/blog/2024-03-28/good-pair-prog.jpg)
 
 #### Anti-patterns while pairing
 
@@ -70,25 +85,19 @@ Pair programming might become one of the best tools in your team toolbox for dai
 - **Philosophical pair**: The pair is [bikeshedding](/blog/bikeshedding/) into irrelevant topics.
 - **The code war**: The pair does not reach an agreement and starts an unnecessary war, which wastes time and effort.
 
-![cover](/images/blog/2024-03-28/anti-pair-prog.jpg)
+![pair programming anti-patterns](/images/blog/2024-03-28/anti-pair-prog.jpg)
 
 **Want more?** Check this out: [Learning Through KATAS](https://www.figma.com/file/FCmGwRPIO8cLowDRraJhgr/Learning-TDD)
 
-![cover](/images/blog/2024-03-28/learning-through-katas.jpg)
+![learning through katas](/images/blog/2024-03-28/learning-through-katas.jpg)
 
-> Thanks to my friend [Manu](https://x.com/evrtrabajo), who helped me with this post. We even share a [workshop](https://phpconference.com/agile-culture/practical-tdd-workshop/) on this topic.
+## The takeaway
 
----
+Pairing is not a rule to enforce, it is a tool to reach for. Use it when the task is complex, the knowledge is siloed,
+or the stakes are high. Skip it when the work is trivial. The goal is never "always pair", it is **better software and a
+stronger team**. Pick one real task this week, pair on it, and switch roles often. The benefits show up faster than you
+expect.
 
-### Related posts
-
-- [Test-Driven (Development)](/blog/test-driven-development/) <small>What is challenging about it?</small>
-- [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
-- [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
-
-### Recommended readings
-
-- [The Clean Coder](/readings/the-clean-coder/) <small>by Robert C. Martin</small>
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
-- [Object Design Style Guide](/readings/object-design-style-guide) <small>by Matthias Noback</small>
-- [Advanced Web Application Architecture](/readings/advance-web-application-architecture/) <small>by Matthias Noback</small>
+{% kudos() %}
+Thanks to my friend [Manu](https://x.com/evrtrabajo), who helped me with this post. We even share a [workshop](https://phpconference.com/agile-culture/practical-tdd-workshop/) on this topic.
+{% end %}

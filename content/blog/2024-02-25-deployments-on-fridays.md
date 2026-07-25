@@ -3,13 +3,24 @@ title = "Deployments on Fridays"
 description = "I have heard multiple times, from various people, the idea of panic towards deploying on Fridays. How good is that idea of banning the day before weekend from delivering new value to our clients or customers?"
 draft = false
 [taxonomies]
-tags = [ "software", "team-work" ]
+tags = ["agile", "xp", "leadership", "productivity"]
 [extra]
 subtitle = "Why \"should we not\" deploy to production on Fridays?"
 static_thumbnail = "/images/blog/2024-02-25/cover.jpg"
+related_posts = [
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2022-10-08-different-beliefs-about-software-quality.md",
+  "blog/2023-05-17-dedicated-qa-teams.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
+series = "agile"
+series_order = 4
 +++
 
-![blog-cover](/images/blog/2024-02-25/cover.jpg)
 
 I have heard multiple times, from various people, the idea of panic towards deploying on Fridays. How good is that idea of banning the day before weekend from delivering new value to our clients or customers?
 
@@ -25,7 +36,7 @@ The goal is build a system where deployments to production should be as often, s
 
 The team dynamics are also an essential factor here. If we establish fear of deployments on Fridays, and fear of our system, that will end up in lack of accountability by default. This reminds me of [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/).
 
-![cover](/images/blog/2024-02-25/middle.jpg)
+![deploying on fridays](/images/blog/2024-02-25/middle.jpg)
 
 If you deploy small and frequent changes as soon as they can guarantee 100% quality value success, why delay such an incremental improvement to your system?
 
@@ -41,18 +52,4 @@ I believe **frequent** and **small releases** to production **are key**; any tim
 
 Being able to deploy on Fridays (if needed or wanted) impacts the team's confidence. Similarly, forbidding deployments on Fridays impacts the team's self-esteem as well.
 
-![cover](/images/blog/2024-02-25/footer.jpg)
-
----
-
-### Related posts
-
-- [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
-- [Different beliefs about software quality](/blog/different-beliefs-about-software-quality/) <small>Some thoughts about software quality</small>
-- [Dedicated QA Teams in software?](/blog/dedicated-qa-teams/) <small>How does it fit a dedicated QA person in your agile team?</small>
-
-### Recommended readings
-
-- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
-- [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/) <small>by Patrick M. Lencioni</small>
+![frequent small releases](/images/blog/2024-02-25/footer.jpg)

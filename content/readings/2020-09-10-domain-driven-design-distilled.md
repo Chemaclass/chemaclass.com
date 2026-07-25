@@ -1,17 +1,21 @@
 +++
 title = "Domain-Driven Design Distilled"
 description = "Domain-Driven Design Distilled brings DDD to life. Whether you're a developer, consultant, or customer, it will help you understand it, so you can benefit from its power."
+authors = [ "Vaughn Vernon" ]
 [taxonomies]
-tags = [ "software", "architecture" ]
+tags = [ "ddd", "architecture", "software-design" ]
 [extra]
 subtitle = ""
 pages = "160"
 author = "Vaughn Vernon"
 static_thumbnail = "https://m.media-amazon.com/images/I/51yhBoDgkqL.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2022-11-28-recipes-for-decoupling.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+]
 +++
-
-<img border="0" src="https://m.media-amazon.com/images/I/51yhBoDgkqL.jpg" >
 
 Domain-Driven Design Distilled brings DDD to life. Whether you're a developer, consultant, or customer, it will help 
 you understand it, so you can benefit from its power.
@@ -34,4 +38,4 @@ that language.
 How to use Subdomains to handle legacy systems and integrate multiple Bounded Contexts to define team relationships and
 technical mechanisms.
 
-> Domain-Driven Design Distilled brings **DDD** to life. 
+> Domain-Driven Design Distilled brings **DDD** to life.

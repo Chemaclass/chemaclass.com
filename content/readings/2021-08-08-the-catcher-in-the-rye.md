@@ -1,17 +1,21 @@
 +++
 title = "The Catcher in the Rye"
 description = "The novel is a deeper reflection of Salinger's own youth, his complicated relationship with growing up and the generational trauma affected by World War II."
+authors = [ "J. D. Salinger" ]
 [taxonomies]
-tags = [ "novel", "fiction" ]
+tags = [ "fiction", "psychology", "philosophy" ]
 [extra]
 subtitle = ""
 pages = "220"
 author = "J. D. Salinger"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lprH3LF4L._SX323_BO1,204,203,200_.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2026-02-04-notes-from-underground.md",
+  "readings/2021-07-10-lord-of-the-flies.md",
+  "readings/2023-11-07-the-alchemist.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51lprH3LF4L._SX323_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 
@@ -29,17 +33,17 @@ identity, belonging, loss, connection, sex, and depression.
 
 From chapter 22:
 
-> — "You don't like anything that's happening." It made me even more depressed when she said that.
+> "You don't like anything that's happening." It made me even more depressed when she said that.
 >
-> — "Yes I do. Yes I do. Sure I do. Don't say that. Why the hell do you say that?"
+> "Yes I do. Yes I do. Sure I do. Don't say that. Why the hell do you say that?"
 >
-> — "Because you don't. You don't like any schools. You don't like a million things. You don't."
+> "Because you don't. You don't like any schools. You don't like a million things. You don't."
 >
-> — "I do! That's where you're wrong—that's exactly where you're wrong! Why the hell do you have to say that?" I said. Boy, was she depressing me.
+> "I do! That's where you're wrong, that's exactly where you're wrong! Why the hell do you have to say that?" I said. Boy, was she depressing me.
 >
-> — "Because you don't," she said. "Name one thing."
+> "Because you don't," she said. "Name one thing."
 >
-> — "One thing? One thing I like?" I said. "Okay."
+> "One thing? One thing I like?" I said. "Okay."
 >
 > The trouble was, I couldn't concentrate too hot. Sometimes it's hard to concentrate.
 

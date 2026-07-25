@@ -1,0 +1,257 @@
+.blog-post-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    display: block;
+    max-width: 100%;
+  }
+
+  #toc-container {
+    width: 240px;
+    flex-shrink: 0;
+    background: var(--search-input-bg);
+    border: 1px solid var(--preview-divider-color);
+    border-radius: 12px;
+    padding: 1rem;
+    max-height: calc(100vh - 120px);
+    overflow: hidden;
+    overflow-y: auto;
+    position: sticky;
+    top: 10px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+    transition: top 0.3s ease-in-out, max-height 0.3s ease-in-out;
+
+    // Custom scrollbar - hidden by default, visible on hover/scroll
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 4px;
+      transition: background 0.2s ease;
+    }
+
+    &:hover::-webkit-scrollbar-thumb,
+    &:active::-webkit-scrollbar-thumb,
+    &.scrolling::-webkit-scrollbar-thumb {
+      background: var(--preview-divider-color);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--color-subtitle);
+    }
+
+    // Firefox
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+
+    &:hover,
+    &.scrolling {
+      scrollbar-color: var(--preview-divider-color) transparent;
+    }
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+
+    // Scrolling down: navbar hidden, more vertical space available
+    &.toc-top {
+      top: 20px;
+      max-height: calc(100vh - 40px);
+    }
+
+    // Scrolling up: navbar visible, reduce height to account for navbar
+    &.toc-top.toc-navbar-visible {
+      top: 80px;
+      max-height: calc(100vh - 120px);
+    }
+  }
+
+  &[data-toc-hidden="true"] {
+    #toc-container {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      width: 0;
+      padding: 0;
+      margin-right: -2rem;
+      border-width: 0;
+    }
+  }
+
+  .blog-post-main {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media (max-width: $breakpoint-phone) {
+      display: block;
+    }
+  }
+}
+
+.toc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.toc-title {
+  font-weight: 500;
+  color: var(--body-color);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.toc-close {
+  border: none;
+  background: transparent;
+  color: var(--color-subtitle);
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  opacity: 0.5;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
+    color: var(--heading-color);
+  }
+
+  svg {
+    width: 0.85rem;
+    height: 0.85rem;
+  }
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.toc-item {
+  position: relative;
+
+  &.toc-h2 {
+    margin-top: 0.5rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .toc-link {
+      font-weight: 500;
+      font-size: 0.85rem;
+    }
+  }
+
+  // Nested items with vertical guide line
+  &.toc-h3,
+  &.toc-h4 {
+    position: relative;
+    margin-left: 0.5rem;
+
+    // Vertical guide line
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--preview-divider-color);
+      transition: background 0.15s ease;
+    }
+
+    // Highlight guide line when item is active
+    &:has(.toc-link.active)::before {
+      background: var(--accent-color);
+    }
+
+    .toc-link {
+      margin-left: 0.75rem;
+    }
+  }
+
+  &.toc-h3 {
+    .toc-link {
+      font-size: 0.8rem;
+      color: var(--color-subtitle);
+      opacity: 0.9;
+    }
+  }
+
+  &.toc-h4 {
+    margin-left: 1.25rem;
+
+    .toc-link {
+      font-size: 0.75rem;
+      color: var(--color-subtitle);
+      opacity: 0.8;
+    }
+  }
+}
+
+.toc-link {
+  color: var(--color-subtitle);
+  text-decoration: none;
+  display: block;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  font-size: 0.85rem;
+  line-height: 1.4;
+
+  &:hover {
+    color: var(--body-color);
+    background: var(--search-bg-selected-item);
+    border-bottom: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 1px;
+  }
+
+  &.active {
+    color: var(--accent-color);
+    background: rgba(58, 92, 136, 0.1);
+    font-weight: 500;
+  }
+}
+

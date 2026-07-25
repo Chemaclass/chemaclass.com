@@ -1,0 +1,387 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ trans(key="home_title_tag", lang=lang) }}
+{% endblock %}
+
+
+{% block styles%}
+<link rel="stylesheet" href="{{ get_url(path='index.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
+{% block posthead %}
+{% set profile_image = resize_image(path=config.extra.profile_large, width=360, height=360, op="fill", format="webp", quality=80) %}
+<link rel="preload" href="{{ profile_image.url }}" as="image" type="image/webp">
+
+<!-- Person Schema for homepage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jose Maria Valera Reales",
+  "alternateName": "Chemaclass",
+  "url": "{{ config.base_url | safe }}",
+  "image": "{{ get_url(path=config.extra.default_og_image) | safe }}",
+  "jobTitle": "Product Engineer",
+  "description": "{{ config.description }}",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Kombo",
+    "url": "https://kombo.dev"
+  },
+  "knowsAbout": ["PHP", "Lisp", "Bash", "Software Architecture", "Test-Driven Development", "Extreme Programming", "Leadership", "Open Source", "Laravel", "Docker", "AI"],
+  "sameAs": [
+    "https://x.com/Chemaclass",
+    "https://github.com/Chemaclass",
+    "https://www.linkedin.com/in/jose-maria-valera-reales/"
+  ]
+}
+</script>
+
+<!-- WebSite Schema for sitelinks search box -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Chemaclass",
+  "url": "{{ config.base_url | safe }}",
+  "description": "{{ config.description }}",
+  "inLanguage": ["en", "es"],
+  "author": {
+    "@type": "Person",
+    "name": "Jose Maria Valera Reales"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ config.base_url | safe }}/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- ItemList Schema for latest content -->
+{% set schema_blogs = get_section(path="blog/_index.md", lang=lang) %}
+{% set schema_readings = get_section(path="readings/_index.md", lang=lang) %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Latest content",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "url": {{ schema_blogs.pages.0.permalink | json_encode | safe }}, "name": {{ schema_blogs.pages.0.title | json_encode | safe }} },
+    { "@type": "ListItem", "position": 2, "url": {{ schema_readings.pages.0.permalink | json_encode | safe }}, "name": {{ schema_readings.pages.0.title | json_encode | safe }} },
+    { "@type": "ListItem", "position": 3, "url": {{ schema_blogs.pages.1.permalink | json_encode | safe }}, "name": {{ schema_blogs.pages.1.title | json_encode | safe }} }
+  ]
+}
+</script>
+
+{% endblock posthead %}
+
+{% block content %}
+{# Star counts fetched at build time; fall back to last known values if the API is unreachable. #}
+{% set phel_data = load_data(url="https://api.github.com/repos/phel-lang/phel-lang", format="json", required=false) %}
+{% set bashunit_data = load_data(url="https://api.github.com/repos/TypedDevs/bashunit", format="json", required=false) %}
+{% set_global phel_stars = 513 %}
+{% if phel_data %}{% set_global phel_stars = phel_data.stargazers_count %}{% endif %}
+{% set_global bashunit_stars = 413 %}
+{% if bashunit_data %}{% set_global bashunit_stars = bashunit_data.stargazers_count %}{% endif %}
+<div class="homepage-container">
+    <!-- Top Row: Hero Left + Nav/Search/About Right -->
+    <div class="homepage-top">
+        <!-- Left Column: Hero -->
+        <section class="hero-content">
+            <div class="profile">
+                <div class="profile-container">
+                    <img src="{{ profile_image.url }}" alt="{{ trans(key="home_profile_alt", lang=lang) }}" width="360" height="360" decoding="async" fetchpriority="high"/>
+                </div>
+            </div>
+            <div class="hero-text">
+                <h1>Chemaclass</h1>
+                <p class="subtitle">
+                    {{ trans(key="home_subtitle", lang=lang) }}
+                </p>
+                <div class="hero-quotes">
+                    <blockquote class="hero-quote active"><p>{% if lang == "es" %}"Programar es el arte de simplificar rutinas."{% else %}"Programming is the art of simplifying routines."{% endif %}</p></blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Column: About -->
+        <div class="homepage-right">
+            <section class="about-section">
+                <div class="about-card">
+                    <h2>{{ trans(key="home_about", lang=lang) }}</h2>
+                    <div class="about-paragraphs">
+                        <p>{{ trans(key="home_about_p1", lang=lang) | safe }}</p>
+                        <p>{{ trans(key="home_about_p2", lang=lang) }}</p>
+                        <p>{{ trans(key="home_about_p3", lang=lang) }}</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="skills-tags">
+            <span class="skill-tag lang"><i class="fa-brands fa-php"></i> PHP</span>
+            <span class="skill-tag lang"><i class="fa-solid fa-terminal"></i> Bash</span>
+            <span class="skill-tag lang"><i class="fa-solid fa-code"></i> Lisp</span>
+            <span class="skill-tag tool"><i class="fa-brands fa-laravel"></i> Laravel</span>
+            <span class="skill-tag tool"><i class="fa-solid fa-vial"></i> PHPUnit</span>
+            <span class="skill-tag tool"><i class="fa-solid fa-shield"></i> PHPStan</span>
+            <span class="skill-tag practice"><i class="fa-solid fa-vial-circle-check"></i> TDD</span>
+            <span class="skill-tag practice"><i class="fa-solid fa-arrows-rotate"></i> XP</span>
+            <span class="skill-tag practice"><i class="fa-brands fa-osi"></i> {{ trans(key="home_skill_open_source", lang=lang) }}</span>
+            <span class="skill-tag infra"><i class="fa-brands fa-docker"></i> Docker</span>
+            <span class="skill-tag infra"><i class="fa-brands fa-aws"></i> AWS</span>
+            <span class="skill-tag db"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+            <span class="skill-tag db"><i class="fa-solid fa-bolt"></i> Redis</span>
+            <span class="skill-tag soft"><i class="fa-solid fa-compass"></i> {{ trans(key="home_skill_leadership", lang=lang) }}</span>
+            <span class="skill-tag soft"><i class="fa-solid fa-comments"></i> {{ trans(key="home_skill_communication", lang=lang) }}</span>
+            <span class="skill-tag ai"><i class="fa-solid fa-robot"></i> Claude</span>
+            <a href="https://sauronbot.github.io/" target="_blank" rel="noopener" class="skill-tag ai"><i class="fa-solid fa-brain"></i> OpenClaw</a>
+        </div>
+    </section>
+
+    {# Work with me Section hidden #}
+    {#
+    <section class="services-cta-section">
+      <div class="services-cta-inner">
+        <div class="services-cta-text">
+          <h2>{{ trans(key="home_services_cta", lang=lang) }}</h2>
+          <p>{% if lang == "es" %}¿Necesitas una web, o alguien con quien pensar en voz alta sobre un reto técnico o de liderazgo?{% else %}Need a website built, or a thinking partner on a technical or leadership challenge?{% endif %}</p>
+        </div>
+        <a href="{% if lang == 'es' %}/es/services/{% else %}/services/{% endif %}" class="services-cta-button">
+          {{ trans(key="svc_services", lang=lang) }} <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+    #}
+
+    <!-- Latest Content Section -->
+    {% set blogs = get_section(path="blog/_index.md", lang=lang) %}
+    {% set readings = get_section(path="readings/_index.md", lang=lang) %}
+    {% set featured = blogs.pages.0 %}
+    <section class="latest-section">
+        <div class="section-header">
+            <h2>{{ trans(key="home_latest", lang=lang) }}</h2>
+        </div>
+
+        <div class="content-block__header">
+            <span class="content-block__label"><i class="fa-solid fa-newspaper"></i> {% if lang == "es" %}Posts{% else %}Posts{% endif %}</span>
+            <a href="{% if lang == 'es' %}/es/blog/{% else %}/blog/{% endif %}" class="view-all">{{ trans(key="home_view_all", lang=lang) }}</a>
+        </div>
+
+        <div class="featured-grid">
+            <!-- Featured blog post -->
+            <a href="{{ featured.permalink }}" class="featured-card" data-from="{{ featured.date }}">
+                {% if featured.extra.static_thumbnail %}
+                <div class="featured-card__thumb">
+                    {% if featured.extra.static_thumbnail is matching("^http[s]?://") %}
+                        <img src="{{ featured.extra.static_thumbnail | safe }}" alt="{{ featured.title }}" loading="lazy" decoding="async" />
+                    {% else %}
+                        {% set thumb_path = featured.extra.static_thumbnail | trim_start_matches(pat="/") %}
+                        {% set thumb_webp = resize_image(path=thumb_path, width=800, height=450, op="fill", quality=75, format="webp") %}
+                        {% set thumb_fb = resize_image(path=thumb_path, width=800, height=450, op="fill", quality=80) %}
+                        <picture>
+                            <source type="image/webp" srcset="{{ thumb_webp.url }}" />
+                            <img src="{{ thumb_fb.url }}" alt="{{ featured.title }}" width="{{ thumb_fb.width }}" height="{{ thumb_fb.height }}" loading="eager" fetchpriority="high" decoding="async" />
+                        </picture>
+                    {% endif %}
+                </div>
+                {% endif %}
+                <div class="featured-card__body">
+                    <span class="latest-type">{{ trans(key="nav_blog", lang=lang) }}</span>
+                    <h3>{{ featured.title }}</h3>
+                    <p class="latest-preview">{{ featured.description | truncate(length=180) }}</p>
+                    <span class="latest-date">
+                        {% if lang == "es" %}{{ featured.date | date(format="%d/%m/%Y") }}{% else %}{{ featured.date | date(format="%B %d, %Y") }}{% endif %}
+                        {% set reading_time = featured.extra.reading_time | default(value=featured.reading_time) %}
+                        {% if reading_time %}
+                            <span class="latest-reading-time">· {{ reading_time }} {{ trans(key="minutes_read", lang=lang) }}</span>
+                        {% endif %}
+                    </span>
+                </div>
+            </a>
+
+            <!-- Secondary blog posts -->
+            <div class="featured-list">
+                {% for post in blogs.pages | slice(start=1, end=4) %}
+                <a href="{{ post.permalink }}" class="featured-list__item" data-from="{{ post.date }}">
+                    {% if post.extra.static_thumbnail %}
+                    <div class="featured-list__thumb">
+                        {% if post.extra.static_thumbnail is matching("^http[s]?://") %}
+                            <img src="{{ post.extra.static_thumbnail | safe }}" alt="{{ post.title }}" loading="lazy" decoding="async" />
+                        {% else %}
+                            {% set thumb_path = post.extra.static_thumbnail | trim_start_matches(pat="/") %}
+                            {% set thumb_webp = resize_image(path=thumb_path, width=336, height=256, op="fill", quality=75, format="webp") %}
+                            {% set thumb_fb = resize_image(path=thumb_path, width=336, height=256, op="fill", quality=80) %}
+                            <picture>
+                                <source type="image/webp" srcset="{{ thumb_webp.url }}" />
+                                <img src="{{ thumb_fb.url }}" alt="{{ post.title }}" width="{{ thumb_fb.width }}" height="{{ thumb_fb.height }}" loading="lazy" decoding="async" />
+                            </picture>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                    <div class="featured-list__text">
+                        <h4>{{ post.title }}</h4>
+                        <p class="featured-list__preview">{{ post.description | truncate(length=160) }}</p>
+                        <span class="latest-date">
+                            {% if lang == "es" %}{{ post.date | date(format="%d/%m/%Y") }}{% else %}{{ post.date | date(format="%B %d, %Y") }}{% endif %}
+                            {% set reading_time = post.extra.reading_time | default(value=post.reading_time) %}
+                            {% if reading_time %}
+                                <span class="latest-reading-time">· {{ reading_time }} min</span>
+                            {% endif %}
+                        </span>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Latest readings -->
+        <div class="readings-block">
+            <div class="content-block__header">
+                <span class="content-block__label"><i class="fa-solid fa-book-open"></i> {{ trans(key="nav_readings", lang=lang) }}</span>
+                <a href="{% if lang == 'es' %}/es/readings/{% else %}/readings/{% endif %}" class="view-all">{{ trans(key="home_view_all", lang=lang) }}</a>
+            </div>
+            <div class="readings-row">
+                {% for reading in readings.pages | slice(end=3) %}
+                <a href="{{ reading.permalink }}" class="reading-card" data-from="{{ reading.date }}">
+                    {% if reading.extra.static_thumbnail %}
+                    <div class="reading-card__cover">
+                        <img src="{{ reading.extra.static_thumbnail | safe }}" alt="{{ reading.title }}" loading="lazy" decoding="async" />
+                    </div>
+                    {% endif %}
+                    <div class="reading-card__text">
+                        <h4>{{ reading.title }}</h4>
+                        {% if reading.extra.author %}<span class="reading-card__author">{{ reading.extra.author }}</span>{% endif %}
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Section -->
+    <section class="projects-section">
+        <div class="section-header">
+            <h2>{{ trans(key="home_projects", lang=lang) }}</h2>
+            <a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="view-all">{{ trans(key="home_view_all", lang=lang) }}</a>
+        </div>
+        <div class="projects-grid projects-grid--featured">
+            <a target="_blank" rel="noopener" href="https://phel-lang.org" class="project-card project-card--showcase" data-repo="phel-lang/phel-lang">
+                <div class="project-card__header">
+                    <span class="project-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.3 167.7"><path d="M6 66l95 96h36V93l-36-74H42L6 56v106h36l24-35" fill="none" stroke="#512da8" stroke-width="8"/><path d="M137 93l58-3-12-58-32-26h-34l-16 13-23 9-12 22 46 52z" fill="none" stroke="#512da8" stroke-width="8"/><path d="M195 90l-12 57h-13l-2-56m2 56l-13-11h12" fill="none" stroke="#512da8" stroke-width="8"/></svg>
+                    </span>
+                    <div class="project-info">
+                        <div class="project-title">
+                            <h3>Phel</h3>
+                            <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count">{% if phel_stars >= 1000 %}{{ (phel_stars / 1000) | round(precision=1) }}k{% else %}{{ phel_stars }}{% endif %}</span></span>
+                        </div>
+                        <p class="project-tagline">{{ trans(key="home_project_phel_desc", lang=lang) }}</p>
+                    </div>
+                </div>
+                <div class="project-card__snippet">
+                    <code>(<span class="sn-kw">ns</span> <span class="sn-fn">app</span>)
+(<span class="sn-kw">defn</span> <span class="sn-fn">greet</span> [name]
+  (<span class="sn-fn">str</span> <span class="sn-str">"Hello, "</span> name <span class="sn-str">"!"</span>))</code>
+                </div>
+                <p class="project-card__desc">{{ trans(key="home_project_phel_long", lang=lang) }}</p>
+            </a>
+            <a target="_blank" rel="noopener" href="https://bashunit.typeddevs.com/" class="project-card project-card--showcase" data-repo="TypedDevs/bashunit">
+                <div class="project-card__header">
+                    <span class="project-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.8 362.8"><path d="M317.5 0H45.4C20.3 0 0 20.3 0 45.4v272.1c0 25 20.3 45.4 45.4 45.4h272.1c25 0 45.4-20.3 45.4-45.4V45.4C362.8 20.3 342.5 0 317.5 0z" fill="#2e3436"/><path d="M259.3 317.5c11.2-4 21.6-10.1 30.5-17.9 4.9 10.9 15.7 17.9 27.6 17.9h-58.1zM226.8 45.3h-90.7C86 45.3 45.3 86 45.3 136.1v38.3c12.5-34.8 43.9-59.4 80.7-63.3.6-17.5 2.8-35 6.8-52.1a5.68 5.68 0 0 1 4.5-4.3c3.1-.5 6 1.5 6.6 4.6 3 16.8 10.6 32.5 22 45.2 1.6 1.8 2.9 3.9 3.9 6.1h5.4c2.4-21.3 12.9-40.9 29.3-54.6 1.3-1.1 3-1.5 4.6-1.2 3.1.6 5.1 3.5 4.6 6.6-3 16.8-1.2 34.2 5.2 50 .4.9.7 1.9.9 2.9 19.5 7.7 32.3 26.5 32.3 47.5v29.8c0 15.6-12.7 28.3-28.3 28.3h-78c-1.6 0-2.8-1.3-2.8-2.8 0-1.6 1.3-2.8 2.8-2.8h78c12.5 0 22.7-10.2 22.7-22.7v-29.8c0-25-20.3-45.4-45.3-45.4H136c-50.1 0-90.7 40.6-90.7 90.7v19.8c0 50.1 40.6 90.7 90.7 90.7h90.7c50.1 0 90.7-40.6 90.7-90.7v-90.7c.1-50.2-40.5-90.9-90.6-90.9zm-78 119.8c0-13.5 11-24.4 24.5-24.4s24.4 11 24.4 24.5-11 24.4-24.5 24.4c-13.4 0-24.4-11-24.4-24.5z" fill="#eceeee"/><path d="M161.7 108.3c-12.1-13.5-20.2-30.1-23.4-48-4.5 19.5-6.8 39.5-6.8 59.6a17.31 17.31 0 0 0 17.3 17.3 17.31 17.31 0 0 0 17.3-17.3c0-4.4-1.6-8.5-4.4-11.6zm51.5 3.7c-6.3-16.5-8.1-34.3-5-51.7C193.1 73 183.3 91 181 110.6h20.3c4 0 8 .4 11.9 1.4z" fill="#8ae234"/></svg>
+                    </span>
+                    <div class="project-info">
+                        <div class="project-title">
+                            <h3>bashunit</h3>
+                            <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count">{% if bashunit_stars >= 1000 %}{{ (bashunit_stars / 1000) | round(precision=1) }}k{% else %}{{ bashunit_stars }}{% endif %}</span></span>
+                        </div>
+                        <p class="project-tagline">{{ trans(key="home_project_bashunit_desc", lang=lang) }}</p>
+                    </div>
+                </div>
+                <div class="project-card__snippet">
+                    <code><span class="sn-kw">function</span> <span class="sn-fn">test_sum</span>() {
+  <span class="sn-fn">assert_equals</span> <span class="sn-str">4</span> <span class="sn-str">"$(sum 2 2)"</span>
+}</code>
+                </div>
+                <p class="project-card__desc">{{ trans(key="home_project_bashunit_long", lang=lang) }}</p>
+            </a>
+        </div>
+    </section>
+
+</div>
+{% endblock content %}
+
+{% block js %}
+<script>
+(function() {
+  const lang = '{{ lang }}';
+  const quotesEn = [
+    "Programming is the art of simplifying routines.",
+    "Individuals and interactions over tools.",
+    "Open source everything.",
+    "The process itself is the goal.",
+    "Success is making people around me happier.",
+    "A great engineer is not just a great coder.",
+    "Nobody is perfect, but a team can be.",
+    "Move from maker mode to multiplier.",
+    "Practice makes the master.",
+    "Testable code leads to better design.",
+    "Refactoring is part of our daily job.",
+    "Easy to test means good design.",
+    "Making others happier compounds.",
+    "People skills matter as much as technical.",
+    "Change happens. Keep moving forward.",
+    "Enjoy the process: that's the goal."
+  ];
+  const quotesEs = [
+    "Programar es el arte de simplificar rutinas.",
+    "Individuos e interacciones sobre herramientas.",
+    "Open source para todo.",
+    "El proceso en sí es el objetivo.",
+    "El éxito es hacer más feliz a la gente a mi alrededor.",
+    "Un gran ingeniero no es solo un gran programador.",
+    "Nadie es perfecto, pero un equipo puede serlo.",
+    "Pasar de modo creador a multiplicador.",
+    "La práctica hace al maestro.",
+    "El código testeable lleva a mejor diseño.",
+    "Refactorizar es parte de nuestro trabajo diario.",
+    "Fácil de testear significa buen diseño.",
+    "Hacer feliz a los demás se multiplica.",
+    "Las habilidades sociales importan tanto como las técnicas.",
+    "El cambio ocurre. Sigue adelante.",
+    "Disfruta el proceso: ese es el objetivo."
+  ];
+  const quotes = lang === 'es' ? quotesEs : quotesEn;
+  const el = document.querySelector('.hero-quote p');
+  if (!el) return;
+  // Quote 0 is server-rendered to avoid an empty first paint; start rotation from there.
+  let last = 0;
+  function showRandom() {
+    let idx;
+    do { idx = Math.floor(Math.random() * quotes.length); } while (idx === last);
+    last = idx;
+    el.style.opacity = 0;
+    setTimeout(() => {
+      el.textContent = '"' + quotes[idx] + '"';
+      el.style.opacity = 1;
+    }, 300);
+  }
+  setInterval(showRandom, 7000);
+})();
+</script>
+{% endblock js %}

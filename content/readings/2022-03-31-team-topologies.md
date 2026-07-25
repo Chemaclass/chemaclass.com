@@ -1,22 +1,28 @@
 +++
 title = "Team Topologies"
 description = "Team Topologies focuses on how to set up dynamic team structures and interaction modes that can help teams adapt quickly to new conditions, and achieve fast and safe software delivery."
+authors = [ "Matthew Skelton", "Manuel Pais" ]
 [taxonomies]
-tags = [ "team-work", "management" ]
+tags = [ "team-management", "architecture", "devops", "agile" ]
 [extra]
 subtitle = "Organizing Business and Technology Teams for Fast Flow"
 pages = "240"
 author = "Matthew Skelton, Manuel Pais"
 static_thumbnail = "https://m.media-amazon.com/images/I/81vdbXuZ0NL._AC_UL640_FMwebp_QL65_.jpg"
-expand_preview = true
+expand_preview = false
+related_posts = [
+  "blog/2022-04-02-dunbar-number.md",
+]
+related_readings = [
+  "readings/2021-05-28-peopleware.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2023-03-19-accelerate.md",
+]
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/81vdbXuZ0NL._AC_UL640_FMwebp_QL65_.jpg" >
-
-Team Topologies focuses on how to set up dynamic team structures and interaction modes that can help teams adapt quickly
-to new conditions, and achieve fast and safe software delivery.
-
 <!-- more -->
+
+Team Topologies focuses on how to set up dynamic team structures and interaction modes that can help teams adapt quickly to new conditions, and achieve fast and safe software delivery.
 
 ## Team structure
 
@@ -77,4 +83,3 @@ to new conditions, and achieve fast and safe software delivery.
 - Collaboration. Work closely between teams with different skill sets.
 - X-as-a-Service. Clear ownership, small cognitive load.
 - Facilitation. Helping to clear impediments, focus on quality interactions between other teams.
-

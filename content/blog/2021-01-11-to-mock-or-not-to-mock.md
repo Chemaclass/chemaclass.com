@@ -1,16 +1,27 @@
 +++
-title = "To mock or not to mock"
-description = "Mocking is useful, but 'what to mock' usually turns out to be a bit more complicated than expected if you don't treat this carefully."
+title = "To Mock or Not to Mock"
+description = "Mocking is useful, but 'what to mock' usually turns out to be a more complicated than expected if you don't treat this carefully."
 [taxonomies]
-tags = [ "software", "mocking", "testing", "design" ]
+tags = [ "testing", "tdd", "software-design", "clean-code", "php" ]
 [extra]
 subtitle = "How to escape the mocking hell"
 static_thumbnail = "/images/blog/2021-01-11/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2021-09-25-tdd-vs-bdd.md",
+  "blog/2023-10-20-how-to-test-private-methods.md",
+]
+related_readings = [
+  "readings/2022-07-11-clean-craftsmanship.md",
+  "readings/2022-06-29-modern-software-engineering.md",
+]
+series = "craftsmanship"
+series_order = 2
 +++
 
-![blog-cover](/images/blog/2021-01-11/cover.jpg)
 
-Mocking is useful, but "what to mock" usually turns out to be a bit more complicated than expected if you don't treat
+Mocking is useful, but "what to mock" usually turns out to be more complicated than expected if you don't treat
 this carefully.
 
 <!-- more -->
@@ -78,14 +89,14 @@ arguments expecting different inputs under your entire control.
 When you are writing a unit test:
 
 * Try to instantiate your classes first.
-* Avoid mocking concrete classes. I wrote an article exclusively about this exclusively:
+* Avoid mocking concrete classes. I wrote an article exclusively about this:
   encouraging [final classes](https://medium.com/swlh/final-classes-in-php-9174e3e2747e) and interfaces.
 
 > Mock interfaces. Instantiate concrete classes.
 
 {{ youtube(id="RbSqXFUfRMU") }}
 
-"Excessive use of mocks leads to legacy code." — Philippe Boargau
+"Excessive use of mocks leads to legacy code." - Philippe Boargau
 
 ### How can we avoid excessive mocking?
 
@@ -93,15 +104,14 @@ When you are writing a unit test:
 * Make dependencies explicit.
 * Program to an interface, not to an implementation.
 
-![blog-img](/images/blog/2021-01-11/footer.jpg)
+![mock interfaces, instantiate concrete classes](/images/blog/2021-01-11/footer.jpg)
 
 ---
 
 #### References
 
-- [Testing with Test Doubles?](https://jesusvalerareales.medium.com/testing-with-test-doubles-7c3abb9eb3f2) — Jesus Valera
-- [Mocking is a code smell](https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a) — Eric Elliott
-- [When to mock](https://blog.cleancoder.com/uncle-bob/2014/05/10/WhenToMock.html) & [Test Definitions](https://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html) — Uncle Bob 
-- [Final classes by default](https://matthiasnoback.nl/2018/09/final-classes-by-default-why/) — Matthias Noback
-- [The problem with mocks](https://www.seanh.cc/2017/03/17/the-problem-with-mocks/) — Sean Hammond
-- [A Set of Unit Testing Rules](https://www.artima.com/weblogs/viewpost.jsp?thread=126923) — Michael Feathers
+- [Mocking is a code smell](https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a) - Eric Elliott
+- [When to mock](https://blog.cleancoder.com/uncle-bob/2014/05/10/WhenToMock.html) & [Test Definitions](https://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html) - Uncle Bob 
+- [Final classes by default](https://matthiasnoback.nl/2018/09/final-classes-by-default-why/) - Matthias Noback
+- [The problem with mocks](https://www.seanh.cc/2017/03/17/the-problem-with-mocks/) - Sean Hammond
+- [A Set of Unit Testing Rules](https://www.artima.com/weblogs/viewpost.jsp?thread=126923) - Michael Feathers

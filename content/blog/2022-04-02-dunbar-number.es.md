@@ -1,0 +1,58 @@
++++
+title = "El Número de Dunbar"
+description = "El número de Dunbar es el límite cognitivo de personas con las que podemos mantener relaciones sociales estables."
+[taxonomies]
+tags = [ "psychology", "team-management", "communication" ]
+[extra]
+subtitle = ""
+static_thumbnail = "/images/blog/2022-04-02/cover.jpg"
+related_posts = [
+  "blog/2022-05-27-bikeshedding.md",
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-11-25-forming-storming-norming-performing.md",
+]
+related_readings = [
+  "readings/2021-05-28-peopleware.md",
+  "readings/2022-03-31-team-topologies.md",
+]
++++
+
+
+Un límite cognitivo de cuántas relaciones sociales estables podemos mantener. Saber quién es cada persona y cómo se relaciona con las demás.
+
+<!-- more -->
+
+El estudio muestra que:
+- Relación cercana: 5 personas.
+- Confianza profunda: 15 personas.
+- Relaciones significativas: 50 personas.
+- Contactos activos: 150 personas.
+
+## ¿Por qué este límite es 150?
+
+Por nuestra capacidad cognitiva limitada. Nuestra capacidad para razonar, resolver problemas y entender ideas complejas tiene un tope. Al crecer el equipo, aumenta la carga cognitiva y la comunicación sufre. Por eso un equipo muy grande pierde sus beneficios.
+
+### Origen
+
+En los 90, el antropólogo Robin Dunbar encontró una correlación entre el tamaño del cerebro de los primates y el tamaño de su grupo social. Extrapoló los resultados al cerebro humano y propuso que podemos mantener unas 150 relaciones estables. Dunbar teorizó que:
+
+> "Este límite depende directamente del tamaño del neocórtex, que a su vez limita el tamaño del grupo [...] El límite impuesto por la capacidad de procesamiento neocortical es simplemente el número de personas con las que se puede mantener una relación estable."
+
+Este número incluye también colegas del pasado, como amigos del instituto, con los que querrías reencontrarte si os volvierais a ver.
+
+## ¿Cómo se aplica esto a los equipos?
+
+- Equipos individuales: 5-9 personas.
+  - Confianza compartida entre los miembros.
+  - La confianza se construye con el tiempo.
+  - Deben ser equipos a largo plazo.
+- Grupo: 50 personas.
+  - Relaciones significativas.
+  - Comparten un dominio o subdominio.
+  - Entienden los retos y se ayudan mutuamente.
+- Division: 150 personas.
+
+### Referencias
+
+- [Robin Dunbar](https://en.wikipedia.org/wiki/Robin_Dunbar)
+- [Número de Dunbar](https://en.wikipedia.org/wiki/Dunbar%27s_number)

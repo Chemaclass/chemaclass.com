@@ -1,0 +1,69 @@
+{% macro date_and_words(post, lang="en") %}
+  {% set reading_time = post.extra.reading_time | default(value=post.reading_time) %}
+  {% if post.date and post.word_count > 0 -%}
+    {% if lang == "es" %}{{ post.date| date(format="%d/%m/%Y") }}{% else %}{{ post.date| date(format="%B %d, %Y") }}{% endif %} - {{ post.word_count }} {{ trans(key="words", lang=lang) }} -
+    {{ reading_time }} {{ trans(key="minutes_read", lang=lang) }}
+  {% else %}
+    {% if post.date %}
+      {% if lang == "es" %}{{ post.date| date(format="%d/%m/%Y") }}{% else %}{{ post.date| date(format="%B %d, %Y") }}{% endif %}
+    {%- endif %}
+  {%- endif %}
+{% endmacro %}
+
+{% macro content_card(post, pinned=false, featured=false, lang="en") %}
+<article class="blog-card {% if pinned %}pinned{% endif %} {% if featured %}featured{% endif %} {% if post.extra.thumbnail or post.extra.static_thumbnail %}has-thumbnail{% endif %}" data-post-path="{{ post.path }}">
+  <a href="{{ post.permalink }}" class="blog-card__link">
+    {% if post.extra.thumbnail %}
+      <div class="blog-card__thumbnail">
+        <img src="{{ get_url(path=post.path ~ post.extra.thumbnail) }}" alt="{{ post.title }}" width="480" height="270" {% if featured %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async" />
+      </div>
+    {% elif post.extra.static_thumbnail %}
+      <div class="blog-card__thumbnail">
+        {% if post.extra.static_thumbnail is matching("^http[s]?://") %}
+          <img src="{{ post.extra.static_thumbnail | safe }}" alt="{{ post.title }}" width="480" height="270" {% if featured %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async" />
+        {% else %}
+          {% set card_path = post.extra.static_thumbnail | trim_start_matches(pat="/") %}
+          {% if featured %}
+            {% set card_webp = resize_image(path=card_path, width=960, height=540, op="fill", quality=100, format="webp") %}
+            {% set card_fb = resize_image(path=card_path, width=960, height=540, op="fill", quality=100) %}
+          {% else %}
+            {% set card_webp = resize_image(path=card_path, width=480, height=270, op="fill", quality=75, format="webp") %}
+            {% set card_fb = resize_image(path=card_path, width=480, height=270, op="fill", quality=80) %}
+          {% endif %}
+          <picture>
+            <source type="image/webp" srcset="{{ card_webp.url }}" />
+            <img src="{{ card_fb.url }}" alt="{{ post.title }}" width="{{ card_fb.width }}" height="{{ card_fb.height }}" {% if featured %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async" />
+          </picture>
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="blog-card__content">
+      <div class="blog-card__meta">
+        <span class="blog-card__date">{% if lang == "es" %}{{ post.date | date(format="%d/%m/%Y") }}{% else %}{{ post.date | date(format="%b %d, %Y") }}{% endif %}</span>
+        {% set reading_time = post.extra.reading_time | default(value=post.reading_time) %}
+        {% if reading_time %}
+          <span class="blog-card__reading-time">{{ reading_time }} {{ trans(key="minutes_read", lang=lang) }}</span>
+        {% endif %}
+        {% if pinned %}
+          <span class="blog-card__pinned-badge">{{ trans(key="pinned", lang=lang) }}</span>
+        {% endif %}
+      </div>
+      <h2 class="blog-card__title">{{ post.title }}</h2>
+      {% if post.extra.author %}
+        <p class="blog-card__author">{{ trans(key="written_by", lang=lang) }} {{ post.extra.author }}</p>
+      {% endif %}
+      {% if post.extra.subtitle %}
+        <p class="blog-card__subtitle">{{ post.extra.subtitle }}</p>
+      {% endif %}
+      <p class="blog-card__summary">{{ post.description | default(value=post.summary | striptags | truncate(length=150)) }}</p>
+      {% if post.taxonomies.tags %}
+        <div class="blog-card__tags">
+          {% for tag in post.taxonomies.tags | slice(end=3) %}
+            <span class="blog-card__tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </a>
+</article>
+{% endmacro %}

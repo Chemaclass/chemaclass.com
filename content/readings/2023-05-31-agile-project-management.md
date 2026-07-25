@@ -2,21 +2,26 @@
 title = "Agile Project Management"
 description = "Projects that followed a Waterfall methodology tended to exceed their expenses in the first initiative over time, while the product delivered was below standard and difficult to use. That situation originated that a group of developers signed a brief, 68-word manifesto in 2001."
 draft = false
+authors = [ "Jeremy Savell" ]
 [taxonomies]
-tags = [ "agile", "management" ]
+tags = [ "agile", "team-management", "scrum", "communication" ]
 [extra]
 subtitle = "A Beginner's Guide to Agile Implementation and Leadership"
 pages = "120"
 author = "Jeremy Savell"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1574715655i/48978620.jpg"
 expand_preview = false
+related_posts = ["blog/2022-11-11-working-agile-with-non-agile-teams.md", "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md", "blog/2023-01-09-interview-about-xp-and-agile.md"]
+related_readings = [
+  "readings/2020-06-10-scrum-the-art-of-doing-twice.md",
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-02-22-agile-product-management-with-scrum.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1574715655i/48978620.jpg" >
 
 <!-- more -->
 
-A basic and straightforward overview of what Agile is, presenting some framework examples that are well known today, such as Scrum or Kanban—everything condensed in a 100's pages book that you can read in a couple of hours.
+A basic and straightforward overview of what Agile is, presenting some framework examples that are well known today, such as Scrum or Kanban, everything condensed in a 100's pages book that you can read in a couple of hours.
 
 ## Chapters
 
@@ -46,7 +51,7 @@ Projects that followed a **Waterfall** methodology tended to exceed their expens
 
 That situation originated that a group of developers signed a brief, 68-word manifesto in 2001.
 
-#### A bit of history...
+#### A brief background
 
 During the 1960s, software got into a big crisis; creating software was complex but changing it later became pure chaos. **Waterfall** to the rescue.
 
@@ -82,15 +87,3 @@ These distinct yet similar solutions were decentralized, working independently o
 
 > That is, while there is value in the items on the rights, we value the items on the left more.
 
----
-
-## Related posts
-
-- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small>How can you work with other teams that aren't agile?</small>
-- [Ignoring Scrum to get more Agile?](/blog/ignoring-scrum-to-get-more-agile/) <small>Killing agility with excessive meetings</small>
-- [Interview about XP and Agile](/blog/interview-about-xp-and-agile/) <small>Agile is about HOW you do certain things</small>
-
-## Related readings
-
-- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
-- [Agile Product Management with Scrum](/readings/agile-product-management-with-scrum/) <small>by Roman Pichler</small>

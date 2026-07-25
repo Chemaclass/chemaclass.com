@@ -1,0 +1,70 @@
+# https://chemaclass.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Search engines (explicit allow)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# AI retrieval bots (answer engines, citations)
+# These fetch content to answer user queries in real time.
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# AI training crawlers
+# Allow training too (content is open; goal is reach).
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Sitemap (single file, includes English + Spanish URLs)
+Sitemap: https://chemaclass.com/sitemap.xml
+
+# AI/LLM context files
+# Summary index:   https://chemaclass.com/llms.txt
+# Use policy:      https://chemaclass.com/.well-known/ai.txt

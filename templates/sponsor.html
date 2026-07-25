@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='page.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='sponsor.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='sponsor.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
+{% block posthead %}
+<!-- WebPage schema for sponsor page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "url": "{{ page.permalink | safe }}",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Jose Maria Valera Reales",
+    "alternateName": "Chemaclass",
+    "url": "{{ config.base_url | safe }}"
+  },
+  "potentialAction": [
+    {
+      "@type": "DonateAction",
+      "name": "PayPal",
+      "recipient": {
+        "@type": "Person",
+        "name": "Chemaclass"
+      },
+      "target": "https://www.paypal.com/paypalme/chemaclass"
+    },
+    {
+      "@type": "DonateAction",
+      "name": "Bitcoin Lightning",
+      "recipient": {
+        "@type": "Person",
+        "name": "Chemaclass"
+      },
+      "target": "https://getalby.com/p/chemaclass"
+    }
+  ]
+}
+</script>
+{% endblock posthead %}
+
+{% block content %}
+<article class="sponsor-page">
+  <!-- Back link -->
+  <a href="{% if lang == 'es' %}/es/{% else %}/{% endif %}" class="sponsor-page__back">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    {{ trans(key="sponsor_back", lang=lang) }}
+  </a>
+
+  <!-- Hero Section -->
+  <section class="sponsor-hero">
+    <h1>{{ trans(key="sponsor_hero_title", lang=lang) }}</h1>
+    <p class="sponsor-hero__subtitle">
+      {{ trans(key="sponsor_hero_subtitle", lang=lang) }}
+    </p>
+  </section>
+
+  <!-- Donation Options -->
+  <section class="sponsor-options">
+    <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--paypal">
+      <div class="sponsor-card__icon">
+        <i class="fa-brands fa-paypal"></i>
+      </div>
+      <div class="sponsor-card__body">
+        <span class="sponsor-card__label">PayPal</span>
+        <span class="sponsor-card__action">{{ trans(key="sponsor_paypal_action", lang=lang) }}</span>
+      </div>
+      <span class="sponsor-card__arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </span>
+    </a>
+    <a href="https://getalby.com/p/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--lightning">
+      <div class="sponsor-card__icon">
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+      <div class="sponsor-card__body">
+        <span class="sponsor-card__label">Lightning</span>
+        <span class="sponsor-card__action">{{ trans(key="sponsor_lightning_action", lang=lang) }}</span>
+      </div>
+      <span class="sponsor-card__arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </span>
+    </a>
+  </section>
+
+  <!-- Impact Stats -->
+  <section class="sponsor-stats">
+    <a href="{% if lang == 'es' %}/es/blog/{% else %}/blog/{% endif %}" class="sponsor-stat">
+      <span class="sponsor-stat__number">60+</span>
+      <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_articles", lang=lang) }}</span>
+    </a>
+    <a href="{% if lang == 'es' %}/es/readings/{% else %}/readings/{% endif %}" class="sponsor-stat">
+      <span class="sponsor-stat__number">80+</span>
+      <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_readings", lang=lang) }}</span>
+    </a>
+    <a href="{% if lang == 'es' %}/es/talks/{% else %}/talks/{% endif %}" class="sponsor-stat">
+      <span class="sponsor-stat__number">7+</span>
+      <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_talks", lang=lang) }}</span>
+    </a>
+  </section>
+
+  <!-- Open Source Projects -->
+  <section class="sponsor-projects">
+    <h2>{{ trans(key="sponsor_projects_title", lang=lang) }}</h2>
+    <div class="sponsor-projects__grid">
+      <a href="https://github.com/TypedDevs/bashunit" target="_blank" rel="noopener" class="sponsor-project sponsor-project--bashunit">
+        <div class="sponsor-project__header">
+          <span class="sponsor-project__icon">
+            <i class="fa-solid fa-terminal"></i>
+          </span>
+          <span class="sponsor-project__name">bashunit</span>
+        </div>
+        <p class="sponsor-project__desc">{{ trans(key="sponsor_project_bashunit", lang=lang) }}</p>
+        <span class="sponsor-project__link">
+          {{ trans(key="sponsor_project_visit", lang=lang) }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M7 7h10v10"/>
+          </svg>
+        </span>
+      </a>
+
+      <a href="https://github.com/phel-lang/phel-lang" target="_blank" rel="noopener" class="sponsor-project sponsor-project--phel">
+        <div class="sponsor-project__header">
+          <span class="sponsor-project__icon">
+            <i class="fa-solid fa-code"></i>
+          </span>
+          <span class="sponsor-project__name">Phel</span>
+        </div>
+        <p class="sponsor-project__desc">{{ trans(key="sponsor_project_phel", lang=lang) }}</p>
+        <span class="sponsor-project__link">
+          {{ trans(key="sponsor_project_visit", lang=lang) }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M7 7h10v10"/>
+          </svg>
+        </span>
+      </a>
+
+      <a href="https://github.com/Chemaclass/agnostic-ai" target="_blank" rel="noopener" class="sponsor-project sponsor-project--agnostic-ai">
+        <div class="sponsor-project__header">
+          <span class="sponsor-project__icon">
+            <i class="fa-solid fa-robot"></i>
+          </span>
+          <span class="sponsor-project__name">agnostic-ai</span>
+        </div>
+        <p class="sponsor-project__desc">{{ trans(key="sponsor_project_agnostic_ai", lang=lang) }}</p>
+        <span class="sponsor-project__link">
+          {{ trans(key="sponsor_project_visit", lang=lang) }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M7 7h10v10"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Thank You -->
+  <footer class="sponsor-thanks">
+    <p class="sponsor-thanks__message">{{ trans(key="sponsor_thanks", lang=lang) | safe }}</p>
+    <p class="sponsor-thanks__cta">{{ trans(key="sponsor_thanks_cta", lang=lang) }}</p>
+  </footer>
+</article>
+{% endblock content %}

@@ -3,15 +3,23 @@ title = "The Peter Principle"
 description = "The Peter principle states that a person who is competent at their job will earn a promotion to a position that requires different skills. If the promoted person lacks the skills required for the new role, they will be incompetent at the new level, and will not be promoted again."
 draft = false
 [taxonomies]
-tags = [ "management", "leadership" ]
+tags = ["leadership", "career", "team-management", "psychology"]
 [extra]
 subtitle = "The rise to a level of incompetence"
 static_thumbnail = "/images/blog/2023-09-30/cover.jpg"
+related_posts = [
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2023-02-27-great-leadership.md",
+  "blog/2023-10-11-unhealthy-working-environment.md",
+]
+related_readings = [
+  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
 +++
 
-![blog-cover](/images/blog/2023-09-30/cover.jpg)
 
-The Peter principle states that a person who is competent at their job will earn a promotion to a position that requires different skills. If the promoted person lacks the skills required for the new role, they will be incompetent at the new level, and will not be promoted again.
+A person who is competent at their job will get promoted to a position that requires other skills. If they lack the skills for the new role, they will be incompetent at the new level, and will not be promoted again.
 
 <!-- more -->
 
@@ -33,22 +41,10 @@ Creating awareness about this can help you to be cautious to avoid this from hap
 
 ### What can you do about it?
 
-If you can recognize this situation within your company, I recommend helping to create awareness about it. Talk to each other. If you feel you can't, that’s a symptom of a [unhealthy working environment](/blog/unhealthy-working-environment/), and that’s something more significant to deal with.
+If you can recognize this situation within your company, I recommend helping to create awareness about it. Talk to each other. If you feel you can't, that’s a symptom of an [unhealthy working environment](/blog/unhealthy-working-environment/), and that’s something more significant to deal with.
 
 If you are the one experiencing this in "first person," I would recommend you:
 
 - Talk to your manager; ask for training, mentoring, or whatever you need to get the skills you lack, from confidence, communication, or anything that could help your new role. Maybe you didn’t get enough or proper training for the new job, which requires different skills.
 
 - Consider pivoting back where you were good and keep mastering that, helping and inspiring those next to you. Not everybody has to be promoted all the time.
-
----
-
-### Related readings
-
-- [Dare to lead](/readings/dare-to-lead/)<small> by Brené Brown</small>
-- [Turn the ship around!](/readings/turn-the-ship-around/)<small> by L. David Marquet</small>
-
-### Related posts
-
-- [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
-- [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>

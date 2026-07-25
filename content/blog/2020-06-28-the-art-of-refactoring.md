@@ -1,14 +1,23 @@
 +++
-title = "The art of refactoring"
+title = "The Art of Refactoring"
 description = "If you see something, in the scope of your current task, that can be easily improved, improve it. And if you have any questions about it, ask."
 [taxonomies]
-tags = [ "software", "refactoring", "testing" ]
+tags = [ "refactoring", "clean-code", "testing", "software-design"]
 [extra]
 subtitle = "When, how, and why"
 static_thumbnail = "/images/blog/2020-06-28/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2020-08-17-testing-effectively-legacy-code.md",
+  "blog/2021-08-01-test-driven-development.md",
+]
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2019-07-01-working-effectively-with-legacy-code.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+]
 +++
 
-![blog-cover](/images/blog/2020-06-28/cover.jpg)
 
 If you see something, in the scope of your current task, that can be easily improved, improve it. And if you have any questions about it, ask.
 
@@ -30,12 +39,12 @@ We do not need to ask permission to refactor. Or do we ask our managers for perm
 
 In order to do proper refactoring, the intention of such refactoring needs to be clear. What is intended to achieve and how? Pair programming (or even pair thinking!) certainly helps in this topic because it syncs two brains on the same topic and that encourages team building and a better understanding of them.
 
-Applying refactoring in a collaborative way, in a "bidirectional channel", is fundamental when working within a team. Refactoring shouldn't be a tabu topic, on the contrary: it will be helpful in order to unify the goals and the direction of the team code quality.
+Applying refactoring in a collaborative way, in a "bidirectional channel", is fundamental when working within a team. Refactoring shouldn't be a taboo topic, on the contrary: it will be helpful in order to unify the goals and the direction of the team code quality.
 
 ### Some personal advice about the "how"
 
 Continuous improvement is what we're looking for within this topic, but…
-* If you realize your changes are generating more noise than help, stop immediately and think again if your changes are worth in the current system status.
+* If you realize your changes are generating more noise than help, stop immediately and think again if your changes are worth it in the current system status.
 
 Maybe it's not the right moment for that refactoring.
 
@@ -49,7 +58,7 @@ We usually refactor in order to increase our productivity, making the code more 
 
 ### Testing
 
-Be aware that you should have a pretty well suite of tests covering the logic that you might have changed. Without tests, refactoring can be really risky. Usually, the easier something is to be tested, the easier it is to be replaced or removed.
+Be aware that you should have a pretty good suite of tests covering the logic that you might have changed. Without tests, refactoring can be really risky. Usually, the easier something is to be tested, the easier it is to be replaced or removed.
 
 You can read more about how testing is related to quality here.
 
@@ -59,4 +68,4 @@ Wouldn't you want to have a better system as time goes by?
 
 Software isn't like wine: it doesn't get better as time passes by. Therefore, if you want to have a better system you must work for it.
 
-![blog-img](/images/blog/2020-06-28/footer.jpg)
+![refactoring as continuous improvement](/images/blog/2020-06-28/footer.jpg)

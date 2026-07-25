@@ -1,0 +1,115 @@
++++
+title = "Ship, Show, Ask"
+description = "No todos los cambios necesitan la misma revisión. Ship, Show, Ask ajusta el proceso de revisión al riesgo del cambio, para que los equipos sigan entregando sin perder calidad ni colaboración."
+draft = false
+[taxonomies]
+tags = [ "agile", "code-review", "team-management", "productivity" ]
+[extra]
+subtitle = "Ajusta la revisión al riesgo, no al ritual"
+static_thumbnail = "/images/blog/2025-04-12/cover.webp"
+related_posts = [
+  # TODO re-enable when garage-door post publishes
+  # "blog/2026-07-14-working-with-the-garage-door-open.md",
+  "blog/2024-02-25-deployments-on-fridays.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+]
+related_readings = [
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2023-03-19-accelerate.md",
+  "readings/2020-03-12-clean-agile.md",
+]
+series = "agile"
+series_order = 6
++++
+
+En equipos que se mueven rápido, una de las mayores tensiones que enfrentamos es esta: ¿Cómo seguimos entregando sin comprometer la calidad o la colaboración?
+
+El enfoque tradicional de pull requests a menudo ralentiza las cosas. Esperamos horas, o días, por aprobaciones, incluso para cambios triviales. Pero la alternativa, mergear directamente, puede sentirse imprudente o invisible para el resto del equipo.
+
+<!-- more -->
+
+Ahí es donde entra la estrategia Ship-Show-Ask. Originalmente descrita por [Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html), este modelo ofrece una forma más flexible y reflexiva de manejar cambios de código. No es solo una estrategia de branching, es un cambio en cómo los equipos colaboran, confían y toman propiedad.
+
+## ¿Qué es Ship, Show, Ask?
+
+Es un modelo que clasifica los cambios basándose en cuánta revisión requieren:
+
+- **Ship**: Mergear directamente a main (sin PR)
+- **Show**: Abrir un pull request, pero mergearlo inmediatamente
+- **Ask**: Abrir un pull request y esperar revisión
+
+La idea clave es usar Ask como el default para la mayoría del trabajo, recurrir a Show cuando el contexto lo hace seguro, y evitar Ship (o reservarlo para casos extremadamente triviales, si se usa).
+
+## Por qué prefiero Ask y Show
+
+Trata cada cambio, incluso los pequeños, como algo que vale la pena compartir. Siempre creo una rama y abro un PR. Proporciona visibilidad, construye un historial compartido, y crea un espacio para opiniones opcionales o asíncronas. Es [trabajar con la puerta del garaje abierta](/es/blog/working-with-the-garage-door-open/), aplicado al código.
+
+Pero no todos los PRs necesitan seguir el mismo proceso de revisión.
+
+### Por defecto uso Ask
+
+Prefiero esperar una revisión de un compañero cuando:
+
+- El cambio involucra lógica arriesgada o compleja
+- Podría impactar a otros desarrolladores o equipos
+- Introduce decisiones arquitectónicas o estructurales que no se han acordado aún
+- Se beneficia de input compartido o un segundo par de ojos
+
+Dicho esto, **Ask no significa sobre-ingeniar el proceso**. A menudo, un revisor reflexivo es suficiente, especialmente si está familiarizado con el dominio. Si el cambio toca un área específica, pediré la opinión de la persona que posee (o mejor entiende) esa parte del código. No necesita involucrar a todos.
+
+> En equipos pequeños, requerir dos aprobaciones en cada PR puede convertirse rápidamente en un cuello de botella y ralentizar la entrega de valor. El objetivo es alineamiento y calidad, no ceremonia por sí misma.
+
+### Uso Show para cambios seguros y de bajo impacto
+
+Podría mergear inmediatamente cuando:
+
+- Practico [pair programming](/es/blog/effective-pair-programming/) (la revisión ya ocurrió en vivo)
+- Corrijo erratas o enlaces rotos
+- Actualizo documentación o changelogs
+- Refactorizo dentro de un módulo que poseo
+- Añado tests para comportamiento existente
+- Hago ajustes no funcionales (formato, logs, comentarios)
+- Aplico ajustes de UI o estilo sin cambio de lógica
+
+El principio clave: **Show es opcional, nunca obligatorio**. Elijo Show solo si el cambio es de bajo riesgo y encaja con las expectativas del equipo. Cuando uso Show, me hago responsable del resultado. La responsabilidad es mía.
+
+## Por qué este enfoque funciona para mí
+
+Este modelo me ayuda a:
+
+- Entregar más rápido sin comprometer la calidad
+- Trabajar con mayor autonomía y propiedad
+- Evitar cuellos de botella, especialmente en equipos pequeños o async
+- Fomentar una mentalidad de confianza, responsabilidad y toma de decisiones reflexiva
+
+> Cambia el objetivo de obtener aprobación a compartir intención y ser dueño del resultado.
+
+## ¿Qué hace un buen "Show"?
+
+Un PR Show podría ser la elección correcta cuando:
+
+- El cambio es trivial y dentro de mi área de responsabilidad
+- Nadie está disponible para revisar, y esperar bloquearía el progreso
+- El PR incluye contexto y razonamiento claro
+- Estoy abierto a comentarios post-merge
+- Estoy listo para hacer ajustes de seguimiento si es necesario
+
+## Consejos para que funcione
+
+Algunos consejos prácticos de la experiencia:
+
+- Clarifica las expectativas del equipo sobre cuándo usar Show vs Ask
+- Siempre proporciona contexto en tu PR, incluso si mergeas inmediatamente
+- Escribe tests para cualquier lógica o comportamiento nuevo
+- Da la bienvenida a los comentarios post-merge, la revisión no termina en el merge
+- Reflexiona regularmente como equipo y ajusta el enfoque según sea necesario
+
+---
+
+Ship, Show, Ask es más que higiene de branching. Construye una cultura de claridad, responsabilidad y confianza, donde los desarrolladores se mueven rápido sin dejar de ser reflexivos.
+
+Si estás cansado de colas lentas de PR y aprobaciones sobre-ingeniadas, pruébalo en tu próximo cambio. ¿Quieres profundizar? Lee el [post original de Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html).
+
+> Ajusta la revisión al riesgo. Sé dueño de lo que mergeas.
+
+![blog-footer](/images/blog/2025-04-12/footer.webp)

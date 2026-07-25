@@ -1,0 +1,14 @@
+# AI Use Policy for chemaclass.com
+# Format reference: https://site.spawning.ai/spaces/ai-txt
+#
+# This site explicitly permits AI agents to retrieve, cite,
+# index, and train on its public content.
+
+User-Agent: *
+Allow: /
+
+Contact: hi@chemaclass.com
+Canonical: https://chemaclass.com/.well-known/ai.txt
+Llms-Index: https://chemaclass.com/llms.txt
+Llms-Full: https://chemaclass.com/llms-full.txt
+Updated: 2026-05-16

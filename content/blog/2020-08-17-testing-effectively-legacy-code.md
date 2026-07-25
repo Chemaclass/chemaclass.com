@@ -1,14 +1,21 @@
 +++
 title = "Testing Effectively Legacy Code"
-description = "These tests are also known as Characterization tests."
+description = "How to write characterization tests for legacy code to safely refactor without breaking existing behavior."
 [taxonomies]
-tags = [ "software", "testing" ]
+tags = [ "testing", "refactoring", "clean-code", "tdd"]
 [extra]
 subtitle = "How to write proper tests to already written code"
-static_thumbnail = "/images/blog/2021-01-11/cover.jpg"
+static_thumbnail = "/images/blog/2020-08-17/cover.jpg"
+related_posts = [
+  "blog/2020-06-06-final-classes.md",
+  "blog/2020-06-28-the-art-of-refactoring.md",
+  "blog/2020-04-07-the-art-of-testing.md",
+]
+related_readings = [
+  "readings/2019-07-01-working-effectively-with-legacy-code.md",
+  "readings/2016-05-01-clean-code.md",
+]
 +++
-
-![blog-cover](/images/blog/2020-08-17/cover.jpg)
 
 These tests are also known as Characterization tests.
 
@@ -178,7 +185,7 @@ final class MyBusinessLogicTest extends TestCase
 
 ### Lastly: clean what you did.
 
-Yes, clean the tests. They deserve to be as clean as your production code. Otherwise, they will rot as time pass by and
+Yes, clean the tests. They deserve to be as clean as your production code. Otherwise, they will rot as time passes by and
 remain dirty for your colleagues and your future self!
 
 For example, you can apply extract method refactoring to move out the implementation details (of the creation of the
@@ -211,7 +218,7 @@ Now you can refactor the production code that you covered with tests without tha
 
 ## Legacy Code is code without tests
 
-![blog-cover](/images/blog/2020-08-17/footer.jpg)
+![legacy code is code without tests](/images/blog/2020-08-17/footer.jpg)
 
 Of course, there is way more to learn
 about [testing and working with legacy code](/readings/working-effectively-with-legacy-code/). In fact, especially when

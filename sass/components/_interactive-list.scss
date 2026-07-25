@@ -1,0 +1,215 @@
+// Interactive List Component
+// Desktop: side-by-side tabs + content panel
+// Mobile: accordion-style
+
+.interactive-list {
+  margin: 2rem 0;
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__title {
+    padding: 1rem 1.5rem;
+    margin: 0;
+    background: rgba(var(--body-bg-rgb), 0.5);
+    border-bottom: 1px solid var(--preview-divider-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  &__container {
+    display: flex;
+    min-height: 280px;
+
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+      min-height: auto;
+    }
+  }
+
+  &__nav {
+    flex: 0 0 220px;
+    align-self: flex-start;
+    display: block;
+    background: rgba(var(--body-bg-rgb), 0.3);
+    border-right: 1px solid var(--preview-divider-color);
+    max-height: var(--interactive-list-nav-height, none);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    // Firefox scrollbar styling
+    scrollbar-width: thin;
+    scrollbar-color: var(--preview-divider-color) transparent;
+
+    // Webkit scrollbar styling (Chrome, Safari, Edge)
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--preview-divider-color);
+      border-radius: 3px;
+
+      &:hover {
+        background: var(--color-subtitle);
+      }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      flex: none;
+      align-self: stretch;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      border-right: none;
+      border-bottom: 1px solid var(--preview-divider-color);
+      max-height: none;
+      overflow-y: visible;
+      overflow-x: auto;
+    }
+  }
+
+  &__tab {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 1px solid var(--preview-divider-color);
+    transition: background 0.2s ease;
+    font-family: inherit;
+    font-size: 1rem;
+
+    &:hover {
+      background: rgba(var(--body-bg-rgb), 0.6);
+    }
+
+    &.active {
+      background: var(--search-input-bg);
+      border-left: 3px solid var(--accent-color);
+      padding-left: calc(1.25rem - 3px);
+
+      @media (max-width: $breakpoint-tablet) {
+        border-left: none;
+        padding-left: 0.75rem;
+        border-bottom: 2px solid var(--accent-color);
+        background: var(--accent-color);
+        color: var(--body-bg);
+
+        .interactive-list__label {
+          color: var(--body-bg);
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: row;
+      align-items: center;
+      width: auto;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--preview-divider-color);
+      border-radius: 6px;
+      border-bottom: 1px solid var(--preview-divider-color);
+      font-size: 0.85rem;
+    }
+
+    &:last-child {
+      border-bottom: none;
+
+      @media (max-width: $breakpoint-tablet) {
+        border-bottom: 1px solid var(--preview-divider-color);
+      }
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  &__summary {
+    font-size: 0.85rem;
+    color: var(--color-subtitle);
+    margin-top: 0.25rem;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  &__panels {
+    flex: 1;
+    position: relative;
+    background: var(--search-input-bg);
+  }
+
+  &__panel {
+    display: none;
+    padding: 1.5rem;
+    height: 100%;
+    box-sizing: border-box;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__content {
+    line-height: 1.7;
+    color: var(--body-color);
+
+    p {
+      margin: 0 0 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    strong {
+      color: var(--heading-color);
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+
+    &:hover {
+      color: var(--accent-overlay-color);
+      text-decoration: underline;
+      border-bottom: none;
+    }
+  }
+}
+
+// Mobile accordion enhancements
+@media (max-width: $breakpoint-tablet) {
+  .interactive-list {
+    &__nav {
+      // On mobile, tabs become clickable headers
+    }
+
+    &__panels {
+      border-top: 1px solid var(--preview-divider-color);
+    }
+
+    &__panel {
+      padding: 1.25rem;
+    }
+  }
+}

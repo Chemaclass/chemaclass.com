@@ -1,0 +1,553 @@
+// Reading progress bar (inside TOC)
+.reading-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-color-light));
+  width: 0;
+  border-radius: 12px 12px 0 0;
+  transition: width 0.15s ease-out;
+}
+
+// Blog post article
+.blog-post {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  flex: 1;
+  overflow-wrap: break-word;
+
+  &__top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__back {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-subtitle);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color);
+      border-bottom: none;
+    }
+  }
+
+  &__hero {
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    // Book cover styling for reading posts
+    &--reading {
+      display: flex;
+      justify-content: center;
+      border-radius: 0;
+      overflow: visible;
+
+      img {
+        width: auto;
+        max-width: 280px;
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+        border-radius: 4px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  // Line 1: Title + Tags
+  &__title-row {
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--heading-color);
+    line-height: 1.3;
+    display: inline;
+  }
+
+  &__author {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-subtitle);
+    margin-top: 0.25rem;
+  }
+
+  &__tags {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &__tag {
+    background: var(--search-bg-selected-item);
+    color: var(--body-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--accent-color);
+      color: white;
+      border-bottom: none;
+    }
+  }
+
+  // Line 2: Subtitle + Metadata (not sticky)
+  &__subtitle-row {
+    display: block;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--preview-divider-color);
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--color-subtitle);
+    width: 100%;
+  }
+
+  &__date,
+  &__reading-time,
+  &__word-count,
+  &__current-read {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+
+    svg {
+      opacity: 0.7;
+    }
+  }
+
+  &__current-read {
+    color: var(--accent-color);
+    font-weight: 500;
+
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &__meta-row {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--preview-divider-color);
+  }
+
+  &__content {
+    // Content styles inherited from global typography
+
+    // First image after hero shouldn't show (it's usually the same)
+    // Use first-of-type to match even when .tldr div comes before it
+    > p:first-of-type img[alt="blog-cover"] {
+      display: none;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--preview-divider-color);
+  }
+
+  &__edit-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-subtitle);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color);
+      border-bottom: none;
+    }
+  }
+
+  // Navigation between posts
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  &__nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    border: 1px solid var(--preview-divider-color) !important;
+    background: var(--search-input-bg);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    max-width: 48%;
+    flex: 1;
+    box-shadow: var(--shadow-sm);
+
+    &:hover {
+      border: 1px solid var(--accent-color) !important;
+      background: var(--search-bg-selected-item);
+    }
+
+    &:hover &-label {
+      color: var(--accent-color);
+    }
+
+    &:hover &-title {
+      color: var(--accent-color);
+    }
+
+    &--prev {
+      align-items: flex-start;
+    }
+
+    &--next {
+      align-items: flex-end;
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+
+  &__nav-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.7rem;
+    color: var(--color-subtitle);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    transition: color 0.2s ease;
+
+    svg {
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &__nav-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--heading-color);
+    line-height: 1.4;
+    transition: color 0.2s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// .blog-post-layout styles are in _toc.scss
+
+.blog-post-bottom {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.toc-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--preview-divider-color);
+  background: var(--search-bg-selected-item);
+  color: var(--body-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+
+  &:hover {
+    border-color: var(--accent-color);
+  }
+
+  &:hover &__label,
+  &:hover &__icon {
+    color: var(--accent-color);
+  }
+
+  &--hidden {
+    display: none !important;
+  }
+
+  .blog-post__top-row & {
+    margin-left: auto;
+  }
+
+  // Sidebar icon
+  &__icon {
+    width: 14px;
+    height: 14px;
+    color: var(--color-subtitle);
+    transition: color 0.2s ease;
+  }
+
+  // "TOC" label
+  &__label {
+    color: var(--color-subtitle);
+    transition: color 0.2s ease;
+    letter-spacing: 0.03em;
+  }
+
+  // Toggle switch track
+  &__switch {
+    position: relative;
+    width: 28px;
+    height: 16px;
+    background: var(--preview-divider-color);
+    border-radius: 999px;
+    transition: background 0.25s ease;
+    margin-left: 0.2rem;
+  }
+
+  // Toggle switch knob
+  &__knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.25s ease, background 0.25s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  // Keyboard shortcut hint
+  &__shortcut {
+    font-family: inherit;
+    font-size: 0.7rem;
+    color: var(--color-subtitle);
+    opacity: 0.6;
+    padding: 0.1rem 0.35rem;
+    background: var(--preview-divider-color);
+    border-radius: 4px;
+    margin-left: 0.2rem;
+  }
+
+  // Active state (TOC visible)
+  &[aria-checked="true"] {
+    .toc-toggle__switch {
+      background: var(--accent-color);
+    }
+
+    .toc-toggle__knob {
+      transform: translateX(12px);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .toc-toggle {
+    display: none !important;
+  }
+}
+
+// Responsive
+@media (max-width: $breakpoint-phone) {
+  .blog-post {
+    &__title {
+      font-size: 1.75rem;
+      display: block;
+    }
+
+    &__tags {
+      display: flex;
+      margin-top: 0.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__meta {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    &__hero img {
+      max-height: 250px;
+    }
+
+    &__nav {
+      gap: 0.5rem;
+    }
+
+    &__nav-link {
+      max-width: 50%;
+      padding: 0.75rem;
+    }
+
+    &__nav-label {
+      font-size: 0.65rem;
+    }
+
+    &__nav-title {
+      font-size: 0.8rem;
+      -webkit-line-clamp: 2;
+    }
+  }
+}
+
+.post-revisited-date {
+  color: #1059b6;
+  font-weight: bold;
+}
+
+.footer-rule {
+  margin-top: 4rem;
+  border: 2px darkgrey dashed;
+}
+
+.related-container {
+  margin: 1rem auto;
+  display: flex;
+  text-align: center;
+
+  > .link {
+    flex: 1;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+
+    span {
+      font-style: italic;
+      font-size: 1rem;
+    }
+
+    a {
+      text-wrap: balance;
+    }
+  }
+}
+
+.found-a-typo {
+  float: right;
+}
+
+// Footnotes
+.footnote-definition {
+  font-size: 1rem;
+  margin: 1rem 0px;
+  padding-left: 40px;
+  position: relative;
+
+  &:nth-of-type(1) {
+    margin-top: $footnote-space;
+    padding-top: $footnote-space;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+
+    & > sup {
+      top: $footnote-space;
+    }
+  }
+
+  & > sup {
+    position: absolute;
+    top: 0;
+    right: calc(100% - 35px);
+    font-size: inherit;
+    line-height: inherit;
+    margin-right: 0px;
+    display: inline-block;
+
+    &:after {
+      content: ".";
+    }
+  }
+
+  & > p {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+// Keyboard shortcuts hint - single subtle line
+.post-shortcuts {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--preview-divider-color);
+}
+
+.post-shortcuts__hint {
+  font-size: 0.75rem;
+  color: var(--color-subtitle);
+  opacity: 0.5;
+
+  kbd {
+    display: inline-block;
+    padding: 0.1rem 0.35rem;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    background: var(--preview-divider-color);
+    border-radius: 3px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+  }
+}
+
+// Hide on mobile (keyboard shortcuts don't apply to touch)
+@media (max-width: 768px) {
+  .post-shortcuts {
+    display: none;
+  }
+}
+

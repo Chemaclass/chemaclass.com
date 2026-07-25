@@ -1,17 +1,21 @@
 +++
 title = "Leaders Eat Last"
 description = "A company's biggest strength doesn't lie in its products or services. It always lies in its people, and in their ability to cooperate closely and rally behind the organization, especially during a crisis."
+authors = [ "Simon Sinek" ]
 [taxonomies]
-tags = [ "leadership", "people" ]
+tags = [ "leadership", "team-management", "psychology", "communication" ]
 [extra]
 subtitle = "Why Some Teams Pull Together and Others Don't"
 pages = "360"
 author = "Simon Sinek"
 static_thumbnail = "https://m.media-amazon.com/images/I/51ejdeSXFjL.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-11-28-start-with-why.md",
+  "readings/2022-09-30-dare-to-lead.md",
+  "readings/2023-01-29-the-infinite-game.md",
+]
 +++
-
-<img border="0" src="https://m.media-amazon.com/images/I/51ejdeSXFjL.jpg" >
 
 <!-- more -->
 

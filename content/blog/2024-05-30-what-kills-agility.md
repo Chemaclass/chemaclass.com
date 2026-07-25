@@ -1,26 +1,37 @@
 +++
-title = "What kills agility?"
+title = "What Kills Agility?"
 description = "Why Agile, if you already do Scrum, Kanban, SAFe, or Waterfall? How we manage an organization defines its quality. Excellent management is crucial to avoid the Waterfall trap if we aim to build an Agile environment. But why would we want that? What's wrong with the way we already work?"
 draft = false
 [taxonomies]
-tags = [ "software", "agile", "management" ]
+tags = ["agile", "xp", "leadership", "team-management", "communication"]
 [extra]
 subtitle = "Why Agile if you already do Scrum, Kanban, SAFe, or Waterfall?"
 static_thumbnail = "/images/blog/2024-05-30/cover.jpg"
 pin = false
+related_posts = [
+  "blog/2022-11-11-working-agile-with-non-agile-teams.md",
+  "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md",
+  "blog/2023-01-09-interview-about-xp-and-agile.md",
+  "blog/2023-10-11-unhealthy-working-environment.md",
+]
+related_readings = [
+  "readings/2016-08-01-the-clean-coder.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
+series = "agile"
+series_order = 5
 +++
 
-![blog-cover](/images/blog/2024-05-30/cover.jpg)
 
-Dozens of documents and spreadsheets, meetings over meetings, and yet without much impact, result in team misalignments—realized too late.
-
-How we manage an organization defines its quality. Excellent management is crucial to avoid the Waterfall trap if we aim to build an Agile environment. But why would we want that? What's wrong with the way we already work?
+Dozens of documents and spreadsheets, meetings over meetings, and yet without much impact, result in team misalignments, realized too late.
 
 <!-- more -->
 
+How we manage an organization defines its quality. Excellent management is crucial to avoid the Waterfall trap if we aim to build an Agile environment. But why would we want that? What's wrong with the way we already work?
+
 If you are already happy with how you and your team work together, that's okay. However, what about reevaluating how you work to look for potential improvements?
 
-I am referring to evaluating your system and how you and the people around you act within it. What worked months or years ago might differ from what we could discover today—as part of continuous improvement.
+I am referring to evaluating your system and how you and the people around you act within it. What worked months or years ago might differ from what we could discover today, as part of continuous improvement.
 
 I dislike politics in the workplace, where each team looks out for themselves instead of having a bigger shared direction. This results in daily work filled with fear from above, passed down to the people below, maintaining an [unhealthy working environment](/blog/unhealthy-working-environment). Game of Thrones is great as a fictional series, but not something to deal with in daily business.
 
@@ -53,17 +64,3 @@ Learn the basics of Extreme Programming (XP) and Lean Software Development.
 - **Lean**: Takes a broader approach, focusing on removing waste, optimizing flow, and improving processes across the organization.
 
 ![blog-cover](/images/blog/2024-05-30/footer.jpg)
-
----
-
-### Related posts
-
-- [Unhealthy working environment](/blog/unhealthy-working-environment) <small>Recognizing red flags of an unhealthy workplace</small>
-- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small>How can you work with other teams that aren't agile?</small>
-- [Ignoring Scrum to get more Agile?](/blog/ignoring-scrum-to-get-more-agile/) <small>Killing agility with excessive meetings</small>
-- [Interview about XP and Agile](/blog/interview-about-xp-and-agile/) <small>Agile is about HOW you do certain things</small>
-
-### Recommended readings
-
-- [The Clean Coder](/readings/the-clean-coder/) <small>by Robert C. Martin</small>
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>

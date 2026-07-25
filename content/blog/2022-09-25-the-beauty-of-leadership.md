@@ -1,15 +1,27 @@
 +++
-title = "The beauty of leadership"
-description = "Leadership is not a synonym for management, it has nothing to do with titles or personal attributes. So, what is it? How can we become leaders? And most importantly, why?"
+title = "The Beauty of Leadership"
+description = "Leadership is action, not a title. It has nothing to do with management or hierarchy. What it really means and how anyone can lead."
 draft = false
 [taxonomies]
-tags = [ "leadership", "people", "management" ]
+tags = [ "leadership", "team-management", "communication", "mentoring" ]
 [extra]
 subtitle = "Team Lead? Tech Lead? What is leadership and what is not?"
 static_thumbnail = "/images/blog/2022-09-25/cover.jpg"
+related_posts = [
+  "blog/2023-02-27-great-leadership.md",
+  "blog/2021-07-01-tech-lead.md",
+  "blog/2023-11-25-forming-storming-norming-performing.md",
+]
+related_readings = [
+  "readings/2021-04-19-the-art-of-leadership.md",
+  "readings/2021-09-12-turn-the-ship-around.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2022-09-30-dare-to-lead.md",
+]
+series = "leadership"
+series_order = 4
 +++
 
-![blog-cover](/images/blog/2022-09-25/cover.jpg)
 
 Leadership is not a synonym for management, it has nothing to do with titles or personal attributes. So, what is it? How
 can we become leaders? And most importantly, why?
@@ -43,7 +55,7 @@ leader.
 
 > "The capacity to translate vision into reality." Warren Bennis.
 
-Every sprint, you vision fruits in your garden. And you work towards it and make that happen. This makes you a gardener,
+Every sprint, you envision fruits in your garden. And you work towards it and make that happen. This makes you a gardener,
 not a leader.
 
 > "Leaders will be those who empower others." Bill Gates.
@@ -107,9 +119,5 @@ You can get inspiration from a lot of different sources. While it's true that yo
 and successes, and even from the people around you, I think it's very optimal to listen to the wisdom from other people's
 experiences outside your circle. For example listening to podcasts, ted-talks, books, or even audiobooks.
 
-### Recommended readings
-
-- [Turn the Ship Around!](/readings/turn-the-ship-around/), by L. David Marquet
-- [Leaders Eat Last](/readings/leaders-eat-last/), by Simon Sinek
-- [The Art of Leadership](/readings/the-art-of-leadership/), by Michael Lopp
-- [Dare to lead](/readings/dare-to-lead/), by Brené Brown
+> The beauty of leadership is that it asks for no permission. No title, no promotion, no org chart. It begins the
+> moment you decide to lift the people around you.

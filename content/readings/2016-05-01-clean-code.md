@@ -1,17 +1,26 @@
 +++
 title = "Clean Code"
 description = "Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn't have to be that way."
+authors = [ "Robert C. Martin" ]
 [taxonomies]
-tags = [ "software", "clean-code" ]
+tags = [ "clean-code", "software-design", "testing", "tdd", "refactoring" ]
 [extra]
 subtitle = "A Handbook of Agile Software Craftsmanship"
 pages = "460"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41yafGMO+rL._SX376_BO1,204,203,200_.jpg"
 expand_preview = true
+related_posts = [
+  "blog/2020-06-28-the-art-of-refactoring.md",
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
+]
+related_readings = [
+  "readings/2016-08-01-the-clean-coder.md",
+  "readings/2018-06-04-clean-architecture.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41yafGMO+rL._SX376_BO1,204,203,200_.jpg" >
 
 Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year,
 countless hours and significant resources are lost because of poorly written code. But it doesn't have to be that way.
@@ -22,7 +31,7 @@ countless hours and significant resources are lost because of poorly written cod
 
 ## Summary
 
-#### Chapter 1:  What Is Clean Code?
+### Chapter 1:  What Is Clean Code?
 
 - The code can be measured with either "good" or "bad" in the code review or by how many minutes it takes you to talk
   about it.
@@ -32,7 +41,7 @@ countless hours and significant resources are lost because of poorly written cod
 - It is necessary that your code is clean and readable for anyone to find and easily understand. Avoid wasting others'
   time.
 
-#### Chapter 2: Meaningful Names
+### Chapter 2: Meaningful Names
 
 - Names of the classes, variables, and methods must be meaningful and clearly indicate what a method does or what an
   attribute is.
@@ -40,7 +49,7 @@ countless hours and significant resources are lost because of poorly written cod
 - Avoid acronyms and avoid confusing names, which may bring anyone who reads the code to the wrong conclusions.
 - Use names that reflect the system domain, the context, and the problems that must be solved.
 
-#### Chapter 3: Functions
+### Chapter 3: Functions
 
 - Methods should be easy to read and understand.
 - Methods should convey its intention.
@@ -53,7 +62,7 @@ countless hours and significant resources are lost because of poorly written cod
 - `Boolean` type as a parameter already states that it does more than one thing.
 - Avoid duplication.
 
-#### Chapter 4: Comments
+### Chapter 4: Comments
 
 - One of the common reasons for comments is because the code is bad.
 - If you're thinking about writing a comment, then the code should be refactored.
@@ -66,7 +75,7 @@ countless hours and significant resources are lost because of poorly written cod
 - They shouldn't be used to indicate who changed or why, use versioning.
 - Don't comment code that will not be used. Remove it instead.
 
-#### Chapter 5: Formatting
+### Chapter 5: Formatting
 
 - Formatting should indicate things of importance since it is a developer of communication form.
 - A messy code is hard to read.
@@ -76,7 +85,7 @@ countless hours and significant resources are lost because of poorly written cod
 - Try to keep more next related concepts vertically to create a code stream.
 - Use spaces between operators, parameters, and commas.
 
-#### Chapter 6: Objects and Data Structure
+### Chapter 6: Objects and Data Structure
 
 - Follow the [Law of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter):
   - Each unit should have only limited knowledge about other units: only units "closely" related to the current unit.
@@ -86,7 +95,7 @@ countless hours and significant resources are lost because of poorly written cod
 - Objects hide the data abstraction and expose methods that operate the data.
 - Data structures expose your data and do not have significant methods.
 
-#### Chapter 7: Error Handling
+### Chapter 7: Error Handling
 
 - Error handling should be planned carefully by all programmers.
 - When wrong things occur, we have to get it to do the right things.
@@ -97,14 +106,14 @@ countless hours and significant resources are lost because of poorly written cod
 - Avoid returning a `NULL` in methods, preferably to return an empty object.
 - Avoid passing `NULL` to the methods; this can generate `NullPointerExceptions`.
 
-#### Chapter 8: Boundary
+### Chapter 8: Boundary
 
 - In third-party code, to avoid passing objects, APIs look forward in order to keep things in the same class.
 - Perform tests on the API's third party.
 - Study the documentation and test the third API before you start using it.
 - Check well the features you will use.
 
-#### Chapter 9: Unit Tests
+### Chapter 9: Unit Tests
 
 - Make sure each piece of code is doing what you expect it to do.
 - Follow the [TDDs law](https://en.wikipedia.org/wiki/Test-driven_development):
@@ -122,7 +131,7 @@ countless hours and significant resources are lost because of poorly written cod
   - The test is timely.
 - The test is as important as the production code.
 
-#### Chapter 10: Classes
+### Chapter 10: Classes
 
 - By default, classes should start with the variables:
   - Static and constants public.

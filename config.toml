@@ -1,37 +1,648 @@
 base_url = "https://chemaclass.com"
+default_language = "en"
 
 title = "Chemaclass"
-description = "Check out my latest blog posts and readings."
+description = "Tech Lead sharing practical insights on software craftsmanship, TDD, leadership, Bitcoin, and AI. Blog posts, book summaries, and conference talks."
+author = "Chemaclass"
 
 generate_feeds = true
+generate_sitemap = true
 taxonomies = [{ name = "tags" }]
 compile_sass = true
+build_search_index = true
+
+[search]
+include_title = true
+include_path = false
+include_content = true
+include_description = true
+index_format = "elasticlunr_json"
+truncate_content_length = 2000  # Limit content length for better performance
 
 [markdown]
-
-highlight_code = true
-highlight_theme = "demain"
-extra_syntaxes_and_themes = ["syntaxes"]
 smart_punctuation = true
 
+[markdown.highlighting]
+light_theme = "github-light"
+dark_theme = "github-dark"
+
+[translations]
+related_posts = "Related posts"
+related_readings = "Related readings"
+all_posts = "All posts"
+all_readings = "All readings"
+all_talks = "All Talks"
+previous = "Previous"
+next = "Next"
+previous_chapter = "Previous Chapter"
+next_chapter = "Next Chapter"
+minutes_read = "min read"
+nav_blog = "Blog"
+nav_readings = "Readings"
+nav_services = "Services"
+nav_talks = "Talks"
+nav_cv = "CV"
+toc_header_title = "On this page"
+toc_close_label = "Hide table of contents"
+toc_toggle_label = "TOC"
+nav_sponsor_cta = "Sponsor"
+nav_legal = "Legal"
+search_placeholder = "Search..."
+search_toggle_title = "Search"
+search_light_title = "Switch to dark mode"
+search_dark_title = "Switch to light mode"
+lang_switch_en_title = "English version"
+lang_switch_es_title = "Spanish version"
+# Keyboard shortcuts modal
+shortcuts_title = "Keyboard Shortcuts"
+shortcuts_movement = "Movement"
+shortcuts_goto = "Go to"
+shortcuts_actions = "Actions"
+shortcuts_general = "General"
+shortcuts_prev_post = "Previous post"
+shortcuts_next_post = "Next post"
+shortcuts_scroll_down = "Scroll down"
+shortcuts_scroll_up = "Scroll up"
+shortcuts_top = "Scroll to top"
+shortcuts_bottom = "Scroll to bottom"
+shortcuts_home = "Home"
+shortcuts_blog = "Blog"
+shortcuts_readings = "Readings"
+shortcuts_cv = "CV"
+shortcuts_search = "Search"
+shortcuts_theme = "Toggle theme"
+shortcuts_toc = "Toggle TOC"
+shortcuts_lang = "Switch language"
+shortcuts_help = "Show this help"
+shortcuts_close = "Close"
+shortcuts_terminal = "Terminal"
+shortcuts_highlight = "Toggle highlight"
+shortcuts_next_heading = "Next section"
+shortcuts_prev_heading = "Previous section"
+# Text highlighting
+highlight_save = "Highlight"
+highlight_remove = "Remove highlight"
+highlight_share_x = "Share on X"
+highlight_share_linkedin = "Share on LinkedIn"
+highlight_copy_quote = "Copy quote"
+highlight_copied = "Quote copied"
+highlight_saved = "Highlight saved"
+highlight_removed = "Highlight removed"
+highlight_add_note = "Add note"
+highlight_edit_note = "Edit note"
+highlight_note_saved = "Note saved"
+highlight_note_removed = "Note removed"
+highlight_note_placeholder = "Write a note..."
+highlight_clear_all = "Clear all highlights"
+highlight_clear_confirm = "Remove all highlights and notes from this page?"
+highlight_clear_done = "All highlights cleared"
+highlight_export = "Copy all notes"
+highlight_export_done = "Notes copied to clipboard"
+# Pagination and navigation
+pagination_nav = "Pagination"
+pagination_prev = "Previous"
+pagination_next = "Next"
+jump_to_year = "Jump to year"
+# Section headers and descriptions
+blog_title = "Blog"
+blog_intro = "Thoughts on software development, testing, leadership, and building better teams. From technical deep-dives on TDD and refactoring to reflections on communication and growth. Whether you're a developer looking to level up your craft or a tech lead navigating team dynamics, you'll find practical insights here."
+readings_title = "Readings"
+readings_intro = "Book summaries and notes from my reading journey across software craftsmanship, psychology, philosophy, and personal development. Each entry includes key takeaways and my own reflections. If you're looking for your next book or want the essential ideas without the full read, start here."
+books_title = "Books"
+books_intro = "Personal writing beyond code. From introspective journals to collected reflections, these are the longer-form works that didn't fit in a blog post."
+books_chapters = "chapters"
+books_read_online = "Read Online"
+books_about = "About this Book"
+talks_title = "Talks"
+talks_intro = "Conference talks and workshops on testing, refactoring, and software craftsmanship. From live coding sessions on TDD to practical refactoring techniques, each talk shares real-world experience in an accessible way. Explore the topics below or browse the timeline for past and upcoming events."
+talks_featured = "Featured Topics"
+talks_timeline = "Timeline"
+talks_appearances = "Appearances"
+talks_view_project = "View Project"
+# Meta elements
+words = "words"
+pages = "pages"
+pinned = "Pinned"
+written_by = "by"
+currently_reading = "Currently reading"
+older = "Older"
+newer = "Newer"
+found_typo = "Found a typo? Edit this page"
+view_markdown = "View as Markdown"
+footer_col_explore = "Explore"
+footer_col_creative = "Creative"
+footer_col_about = "About"
+footer_tagline = "Building software, teams, and ideas."
+all_tags = "All tags"
+post = "post"
+posts = "posts"
+nav_topics = "Topics"
+nav_profile = "Profile"
+nav_books = "Books"
+nav_music = "Music"
+topics_title = "Topics"
+topics_intro = "Explore content by theme. Each topic groups related tags to help you find what interests you most."
+# Homepage
+home_title_tag = "Home | Chemaclass"
+home_subtitle = "Building software, teams, and ideas"
+home_about = "About"
+home_projects = "Open Source Projects"
+home_view_all = "View all →"
+home_latest = "Latest Content"
+home_profile_alt = "Chemaclass profile picture"
+home_project_bashunit_desc = "Testing framework for Bash"
+home_project_bashunit_long = "Write tests for your bash scripts with a simple, expressive syntax. Assertions, mocking, snapshots, and more."
+home_project_phel_desc = "A Lisp that compiles to PHP"
+home_project_phel_long = "Functional programming meets PHP. Write expressive, immutable code with macros, pattern matching, and a REPL."
+home_skill_open_source = "Open Source"
+home_skill_leadership = "Leadership"
+home_skill_communication = "Communication"
+home_services_cta = "Work with me"
+home_about_p1 = "15+ years building software, 5+ leading teams. Still <a href=\"https://github.com/Chemaclass\" target=\"_blank\" rel=\"noopener\">writing code</a> daily."
+home_about_p2 = "I specialize in layered architecture, modular monoliths, and TDD. I organize AI agents as a team of specialists with clear roles and constraints, so quality standards don't compete with deadlines."
+home_about_p3 = "A great engineer is not just a great coder. The best teams are the ones where psychological safety and growth mindset make everyone sharper."
+# Newsletter
+blog_start_here = "Start Here"
+series_part = "Part"
+series_of = "of"
+# Sponsor page
+sponsor_back = "Home"
+sponsor_hero_title = "Support My Work"
+sponsor_hero_subtitle = "Everything on this site is free. Your support helps me keep it that way."
+sponsor_stat_articles = "Articles"
+sponsor_stat_readings = "Book Notes"
+sponsor_stat_talks = "Talks"
+sponsor_paypal_action = "Donate some fiat"
+sponsor_lightning_action = "Donate some sats"
+sponsor_projects_title = "Open Source Projects"
+sponsor_project_bashunit = "A testing framework for Bash. Write tests with a simple, expressive syntax."
+sponsor_project_phel = "A functional programming language (Lisp) that compiles to PHP."
+sponsor_project_agnostic_ai = "One source of truth for AI agents, skills, rules, and hooks. Transpile to every AI CLI you use."
+sponsor_project_visit = "Visit"
+sponsor_thanks = "Thank you for being here. Every read, share, or contribution helps keep this going."
+sponsor_thanks_cta = "Let's connect and keep building together."
+# Services - Web Development
+svc_all_services = "All Services"
+svc_web_dev = "Web Development"
+svc_web_dev_subtitle = "Professional websites that work for your business"
+svc_every_site_includes = "Every website includes"
+svc_responsive = "Responsive design"
+svc_seo = "SEO fundamentals"
+svc_https = "HTTPS security"
+svc_performance = "Performance optimized"
+svc_static = "Custom Website"
+svc_static_blog = "Website + Blog"
+svc_static_tag = "Recommended for most businesses"
+svc_static_blog_tag = "Best of both worlds"
+svc_what_you_get = "What you get"
+svc_ideal_for = "Ideal for"
+svc_one_thing = "One thing to know:"
+svc_not_sure = "Not sure which to choose?"
+svc_choose_static = "Choose Custom Website if..."
+svc_choose_static_blog = "Choose Website + Blog if..."
+svc_honest_advice = "My honest advice:"
+svc_how_i_work = "How I Work"
+svc_discovery = "Discovery Call"
+svc_proposal = "Proposal"
+svc_development = "Development"
+svc_launch = "Launch"
+svc_budget = "Pricing & What's Included"
+svc_request_quote = "Request a Quote"
+svc_contact = "Get in touch"
+svc_recent_work = "Recent Work"
+# Services - Team Workshops
+svc_workshops = "Team Workshops"
+svc_workshops_subtitle = "Hands-on coding sessions that level up your team"
+svc_book_workshop = "Book a workshop"
+svc_morning_session = "Morning Session"
+svc_afternoon_session = "Afternoon Session"
+svc_topics_covered = "Topics covered"
+svc_team_gains = "What your team will gain"
+svc_testing_confidence = "Testing confidence"
+svc_tdd_mindset = "TDD mindset"
+svc_refactoring_skills = "Refactoring skills"
+svc_key_outcome = "Key outcome:"
+svc_customization = "Customization"
+svc_workshop_day = "Workshop Day"
+svc_followup = "Follow-up"
+svc_investment = "Investment"
+svc_request_info = "Request Information"
+svc_workshop_resources = "Workshop Resources"
+svc_ready_level_up = "Ready to level up your team?"
+# Services - Index page
+svc_services = "Services"
+svc_learn_more = "Learn more"
+svc_static_websites = "Custom Websites"
+svc_consulting_unavailable = "Unavailable"
+svc_consulting_paused_banner = "Consulting is currently on pause. I'm not taking on new sessions right now. Feel free to read on, and reach out about web development."
+
 [extra]
+start_here_posts = [
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+  "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
+  "blog/2022-09-25-the-beauty-of-leadership.md",
+]
+
 nav = [
     { name = "Blog", path = "/blog/" },
     { name = "Readings", path = "/readings/" },
-    { name = "Talks", path = "/talks/" },
-    { name = "", path = "javascript:void(0)", id = "theme-toggle" },
+    { name = "CV", path = "/cv/" },
 ]
 
+# Search engine verification (add your tokens here)
+google_site_verification = ""
+bing_site_verification = ""
+
+twitter = "Chemaclass"
 icon = "icon.jpg"
 profile_small = "icon.jpg"
 profile_large = "profile.jpg"
 default_og_image = "profile.jpg"
 
-accent = "#3a5c88"
-accent_light = "#397fd8"
+accent = "#2d5a8e"
 
-repo_content_url = "https://github.com/Chemaclass/chemaclass.es/blob/master/content/"
+repo_content_url = "https://github.com/Chemaclass/chemaclass.com/edit/main/content/"
 
-not_found_message = """
-It seems like this page does not exist… Return back to the [homepage](/)
-"""
+
+# Centralized pricing (all values in EUR)
+pricing_static_simple_min = 2000
+pricing_static_simple_max = 4000
+pricing_static_pro_min = 3000
+pricing_static_pro_max = 5500
+pricing_domain = 15
+pricing_static_hosting = 35
+pricing_static_maintenance_min = 200
+pricing_static_maintenance_max = 400
+pricing_static_pro_maintenance_min = 250
+pricing_static_pro_maintenance_max = 450
+pricing_workshop_per_person = 480
+pricing_workshop_3_people = 1400
+pricing_workshop_4_6_min = 1900
+pricing_workshop_4_6_max = 2800
+pricing_consulting_session = 100
+pricing_consulting_pack3 = 250
+pricing_consulting_pack3_save = 50
+
+# Spanish language configuration
+[languages.es]
+title = "Chemaclass"
+description = "Tech Lead compartiendo ideas prácticas sobre artesanía del software, TDD, liderazgo, Bitcoin e IA. Artículos, resúmenes de libros y charlas."
+generate_feeds = true
+build_search_index = true
+taxonomies = [{ name = "tags" }]
+
+[languages.es.search]
+include_title = true
+include_path = false
+include_content = true
+include_description = true
+index_format = "elasticlunr_json"
+truncate_content_length = 2000
+
+[languages.es.translations]
+related_posts = "Artículos relacionados"
+related_readings = "Lecturas relacionadas"
+all_posts = "Todos los artículos"
+all_readings = "Todas las lecturas"
+all_talks = "Todas las charlas"
+previous = "Anterior"
+next = "Siguiente"
+previous_chapter = "Capítulo anterior"
+next_chapter = "Siguiente capítulo"
+minutes_read = "min de lectura"
+nav_blog = "Blog"
+nav_readings = "Lecturas"
+nav_services = "Servicios"
+nav_talks = "Charlas"
+nav_cv = "CV"
+toc_header_title = "En esta página"
+toc_close_label = "Ocultar índice"
+toc_toggle_label = "Índice"
+nav_sponsor_cta = "Colabora"
+nav_legal = "Legal"
+search_placeholder = "Buscar..."
+search_toggle_title = "Buscar"
+search_light_title = "Cambiar a modo oscuro"
+search_dark_title = "Cambiar a modo claro"
+lang_switch_en_title = "Versión en inglés"
+lang_switch_es_title = "Versión en español"
+# Keyboard shortcuts modal
+shortcuts_title = "Atajos de Teclado"
+shortcuts_movement = "Movimiento"
+shortcuts_goto = "Ir a"
+shortcuts_actions = "Acciones"
+shortcuts_general = "General"
+shortcuts_prev_post = "Artículo anterior"
+shortcuts_next_post = "Artículo siguiente"
+shortcuts_scroll_down = "Bajar"
+shortcuts_scroll_up = "Subir"
+shortcuts_top = "Ir arriba"
+shortcuts_bottom = "Ir al final"
+shortcuts_home = "Inicio"
+shortcuts_blog = "Blog"
+shortcuts_readings = "Lecturas"
+shortcuts_cv = "CV"
+shortcuts_search = "Buscar"
+shortcuts_theme = "Cambiar tema"
+shortcuts_toc = "Mostrar/ocultar índice"
+shortcuts_lang = "Cambiar idioma"
+shortcuts_help = "Mostrar ayuda"
+shortcuts_close = "Cerrar"
+shortcuts_terminal = "Terminal"
+shortcuts_highlight = "Alternar resaltado"
+shortcuts_next_heading = "Siguiente sección"
+shortcuts_prev_heading = "Sección anterior"
+# Text highlighting
+highlight_save = "Resaltar"
+highlight_remove = "Quitar resaltado"
+highlight_share_x = "Compartir en X"
+highlight_share_linkedin = "Compartir en LinkedIn"
+highlight_copy_quote = "Copiar cita"
+highlight_copied = "Cita copiada"
+highlight_saved = "Resaltado guardado"
+highlight_removed = "Resaltado eliminado"
+highlight_add_note = "Añadir nota"
+highlight_edit_note = "Editar nota"
+highlight_note_saved = "Nota guardada"
+highlight_note_removed = "Nota eliminada"
+highlight_note_placeholder = "Escribe una nota..."
+highlight_clear_all = "Borrar todos los resaltados"
+highlight_clear_confirm = "¿Eliminar todos los resaltados y notas de esta página?"
+highlight_clear_done = "Todos los resaltados eliminados"
+highlight_export = "Copiar todas las notas"
+highlight_export_done = "Notas copiadas al portapapeles"
+# Pagination and navigation
+pagination_nav = "Paginación"
+pagination_prev = "Anterior"
+pagination_next = "Siguiente"
+jump_to_year = "Ir al año"
+# Section headers and descriptions
+blog_title = "Blog"
+blog_intro = "Reflexiones sobre desarrollo de software, testing, liderazgo y cómo construir mejores equipos. Desde inmersiones técnicas en TDD y refactoring hasta ideas sobre comunicación y crecimiento. Si eres desarrollador buscando mejorar tu oficio o tech lead navegando dinámicas de equipo, encontrarás ideas prácticas aquí."
+readings_title = "Lecturas"
+readings_intro = "Resúmenes de libros y notas de mi trayectoria lectora en artesanía del software, psicología, filosofía y desarrollo personal. Cada entrada incluye puntos clave y mis propias reflexiones. Si buscas tu próximo libro o quieres las ideas esenciales sin leer todo, empieza aquí."
+books_title = "Libros"
+books_intro = "Escritura personal más allá del código. Desde diarios introspectivos hasta reflexiones recopiladas, estos son los trabajos de mayor extensión que no cabían en un post."
+books_chapters = "capítulos"
+books_read_online = "Leer Online"
+books_about = "Sobre este Libro"
+talks_title = "Charlas"
+talks_intro = "Charlas y talleres sobre testing, refactoring y artesanía del software. Desde sesiones de live coding sobre TDD hasta técnicas prácticas de refactoring, cada charla comparte experiencia real de forma accesible. Explora los temas a continuación o revisa la cronología de eventos pasados y futuros."
+talks_featured = "Temas Destacados"
+talks_timeline = "Cronología"
+talks_appearances = "Presentaciones"
+talks_view_project = "Ver Proyecto"
+# Meta elements
+words = "palabras"
+pages = "páginas"
+pinned = "Destacado"
+written_by = "por"
+currently_reading = "Leyendo actualmente"
+older = "Anterior"
+newer = "Siguiente"
+found_typo = "¿Encontraste un error? Editar esta página"
+view_markdown = "Ver en Markdown"
+footer_col_explore = "Explora"
+footer_col_creative = "Creativo"
+footer_col_about = "Sobre mí"
+footer_tagline = "Construyendo software, equipos e ideas."
+all_tags = "Todas las etiquetas"
+post = "artículo"
+posts = "artículos"
+nav_topics = "Temas"
+nav_profile = "Perfil"
+nav_books = "Libros"
+nav_music = "Música"
+topics_title = "Temas"
+topics_intro = "Explora contenido por temática. Cada tema agrupa etiquetas relacionadas para que encuentres lo que más te interesa."
+# Homepage
+home_title_tag = "Inicio | Chemaclass"
+home_subtitle = "Construyendo software, equipos e ideas"
+home_about = "Sobre mí"
+home_projects = "Proyectos Open Source"
+home_view_all = "Ver todos →"
+home_latest = "Último Contenido"
+home_profile_alt = "Foto de perfil de Chemaclass"
+home_project_bashunit_desc = "Framework de testing para Bash"
+home_project_bashunit_long = "Escribe tests para tus scripts bash con una sintaxis simple y expresiva. Aserciones, mocking, snapshots y mucho más."
+home_project_phel_desc = "Un Lisp que compila a PHP"
+home_project_phel_long = "Programación funcional sobre PHP. Escribe código expresivo e inmutable con macros, pattern matching y un REPL."
+home_skill_open_source = "Código abierto"
+home_skill_leadership = "Liderazgo"
+home_skill_communication = "Comunicación"
+home_services_cta = "Trabaja conmigo"
+home_about_p1 = "15+ años construyendo software, 5+ liderando equipos. Sigo <a href=\"https://github.com/Chemaclass\" target=\"_blank\" rel=\"noopener\">escribiendo código</a> a diario."
+home_about_p2 = "Me especializo en arquitectura por capas, monolitos modulares y TDD. Organizo agentes de IA como un equipo de especialistas con roles y restricciones claras, para que los estándares de calidad no compitan con los plazos."
+home_about_p3 = "Un gran ingeniero no es solo un gran programador. Los mejores equipos son aquellos donde la seguridad psicológica y la mentalidad de crecimiento hacen a todos más agudos."
+# Newsletter
+blog_start_here = "Empieza aquí"
+series_part = "Parte"
+series_of = "de"
+# Sponsor page
+sponsor_back = "Inicio"
+sponsor_hero_title = "Colabora"
+sponsor_hero_subtitle = "Todo en este sitio es gratuito. Tu apoyo me ayuda a mantenerlo así."
+sponsor_stat_articles = "Artículos"
+sponsor_stat_readings = "Notas de Libros"
+sponsor_stat_talks = "Charlas"
+sponsor_paypal_action = "Dona algo de fiat"
+sponsor_lightning_action = "Dona algunos sats"
+sponsor_projects_title = "Proyectos Open Source"
+sponsor_project_bashunit = "Un framework de testing para Bash. Escribe tests con una sintaxis simple y expresiva."
+sponsor_project_phel = "Un lenguaje de programación funcional (Lisp) que compila a PHP."
+sponsor_project_agnostic_ai = "Una única fuente de verdad para agentes, skills, reglas y hooks de IA. Transpila a cualquier CLI de IA."
+sponsor_project_visit = "Visitar"
+sponsor_thanks = "Gracias por estar aquí. Cada lectura, cada vez que compartes o contribuyes, ayuda a mantener esto vivo."
+sponsor_thanks_cta = "Conectemos y sigamos construyendo juntos."
+# Services - Web Development
+svc_all_services = "Todos los Servicios"
+svc_web_dev = "Desarrollo Web"
+svc_web_dev_subtitle = "Sitios web profesionales que trabajan para tu negocio"
+svc_every_site_includes = "Todos los sitios web incluyen"
+svc_responsive = "Diseño responsive"
+svc_seo = "SEO básico"
+svc_https = "Seguridad HTTPS"
+svc_performance = "Optimizado para velocidad"
+svc_static = "Web a Medida"
+svc_static_blog = "Web + Blog"
+svc_static_tag = "Recomendado para la mayoría"
+svc_static_blog_tag = "Lo mejor de ambos mundos"
+svc_what_you_get = "Qué obtienes"
+svc_ideal_for = "Ideal para"
+svc_one_thing = "A tener en cuenta:"
+svc_not_sure = "¿No sabes cuál elegir?"
+svc_choose_static = "Elige Web a Medida si..."
+svc_choose_static_blog = "Elige Web + Blog si..."
+svc_honest_advice = "Mi consejo sincero:"
+svc_how_i_work = "Cómo Trabajo"
+svc_discovery = "Llamada de Descubrimiento"
+svc_proposal = "Propuesta"
+svc_development = "Desarrollo"
+svc_launch = "Lanzamiento"
+svc_budget = "Precios y qué incluye"
+svc_request_quote = "Solicitar presupuesto"
+svc_contact = "Contactar"
+svc_recent_work = "Trabajos Recientes"
+# Services - Team Workshops
+svc_workshops = "Talleres de Equipo"
+svc_workshops_subtitle = "Sesiones prácticas de código que potencian a tu equipo"
+svc_book_workshop = "Reservar taller"
+svc_morning_session = "Sesión de Mañana"
+svc_afternoon_session = "Sesión de Tarde"
+svc_topics_covered = "Temas cubiertos"
+svc_team_gains = "Qué ganará tu equipo"
+svc_testing_confidence = "Confianza en testing"
+svc_tdd_mindset = "Mentalidad TDD"
+svc_refactoring_skills = "Habilidades de refactoring"
+svc_key_outcome = "Resultado clave:"
+svc_customization = "Personalización"
+svc_workshop_day = "Día del Taller"
+svc_followup = "Seguimiento"
+svc_investment = "Inversión"
+svc_request_info = "Solicitar información"
+svc_workshop_resources = "Recursos del Taller"
+svc_ready_level_up = "¿Listo para potenciar a tu equipo?"
+# Services - Index page
+svc_services = "Servicios"
+svc_learn_more = "Más información"
+svc_static_websites = "Desarrollo Web"
+svc_consulting_unavailable = "No disponible"
+svc_consulting_paused_banner = "La consultoría está en pausa. Ahora mismo no acepto nuevas sesiones. Puedes seguir leyendo y escribirme para desarrollo web."
+
+[extra.series.bitcoin]
+title = "Bitcoin Series"
+title_es = "Serie Bitcoin"
+
+[extra.series.ai]
+title = "AI Series"
+title_es = "Serie IA"
+
+[extra.series.craftsmanship]
+title = "Software Craftsmanship Series"
+title_es = "Serie Artesanía del Software"
+
+[extra.series.leadership]
+title = "Leadership & Teams Series"
+title_es = "Serie Liderazgo y Equipos"
+
+[extra.series.agile]
+title = "Agile & XP Series"
+title_es = "Serie Agile y XP"
+
+[[extra.topics]]
+title = "Leadership & People"
+title_es = "Liderazgo y Personas"
+description = "Growing as a leader, building great teams, and the human side of software."
+description_es = "Crecer como líder, construir equipos y el lado humano del software."
+tags = ["leadership", "management", "team-management", "team-culture", "mentoring", "communication", "career", "professionalism", "self-improvement"]
+
+[[extra.topics]]
+title = "Mind & Knowledge"
+title_es = "Mente y Conocimiento"
+description = "Philosophy, psychology, productivity, and the pursuit of understanding."
+description_es = "Filosofía, psicología, productividad y la búsqueda del entendimiento."
+tags = ["philosophy", "psychology", "productivity", "fiction", "dystopia", "horror", "music"]
+
+[[extra.topics]]
+title = "Software Craft & Testing"
+title_es = "Artesanía del Software y Testing"
+description = "Practices for writing better software: TDD, clean code, refactoring, and design."
+description_es = "Prácticas para escribir mejor software: TDD, código limpio, refactoring y diseño."
+tags = ["testing", "tdd", "clean-code", "refactoring", "code-review", "architecture", "software-design", "software-architecture", "ddd", "pair-programming", "xp", "agile"]
+
+[[extra.topics]]
+title = "Bitcoin & Economics"
+title_es = "Bitcoin y Economía"
+description = "Sound money, Austrian economics, privacy, and the technology behind Bitcoin."
+description_es = "Dinero sólido, economía austriaca, privacidad y la tecnología detrás de Bitcoin."
+tags = ["bitcoin", "economics", "money", "finance", "investing", "cryptography", "privacy", "security", "encryption"]
+
+[[extra.topics]]
+title = "Programming Languages & Tools"
+title_es = "Lenguajes y Herramientas"
+description = "Hands-on content about specific languages, frameworks, and developer tooling."
+description_es = "Contenido práctico sobre lenguajes, frameworks y herramientas de desarrollo."
+tags = ["php", "golang", "lisp", "bash", "symfony", "docker", "git", "devops", "developer-tools", "bashunit", "gacela", "phel", "functional-programming"]
+
+[[extra.topics]]
+title = "Speaking & Teaching"
+title_es = "Charlas y Enseñanza"
+description = "Conference talks, workshops, live coding, and sharing knowledge."
+description_es = "Charlas, talleres, live coding y compartir conocimiento."
+tags = ["speaking", "presentations", "live-coding", "tutorial", "workshop", "open-source"]
+
+[[extra.tag_descriptions]]
+name = "testing"
+desc = "Software testing strategies, frameworks, and testing culture."
+desc_es = "Estrategias de testing, frameworks y cultura de pruebas."
+
+[[extra.tag_descriptions]]
+name = "tdd"
+desc = "Test-Driven Development: writing tests first to drive better design."
+desc_es = "Desarrollo Guiado por Tests: escribir tests primero para mejor diseño."
+
+[[extra.tag_descriptions]]
+name = "leadership"
+desc = "Leading teams, making decisions, and growing as a technical leader."
+desc_es = "Liderar equipos, tomar decisiones y crecer como líder técnico."
+
+[[extra.tag_descriptions]]
+name = "self-improvement"
+desc = "Personal growth, habits, and becoming a better professional."
+desc_es = "Crecimiento personal, hábitos y convertirse en mejor profesional."
+
+[[extra.tag_descriptions]]
+name = "bitcoin"
+desc = "Bitcoin technology, monetary theory, and the future of money."
+desc_es = "Tecnología Bitcoin, teoría monetaria y el futuro del dinero."
+
+[[extra.tag_descriptions]]
+name = "clean-code"
+desc = "Writing code that is readable, maintainable, and expressive."
+desc_es = "Escribir código legible, mantenible y expresivo."
+
+[[extra.tag_descriptions]]
+name = "philosophy"
+desc = "Philosophical ideas and their application to software and life."
+desc_es = "Ideas filosóficas y su aplicación al software y la vida."
+
+[[extra.tag_descriptions]]
+name = "communication"
+desc = "The art of clear communication in teams and beyond."
+desc_es = "El arte de la comunicación clara en equipos y más allá."
+
+[[extra.tag_descriptions]]
+name = "pair-programming"
+desc = "Working together at one keyboard: practices, benefits, and challenges."
+desc_es = "Trabajar juntos en un teclado: prácticas, beneficios y desafíos."
+
+[[extra.tag_descriptions]]
+name = "career"
+desc = "Career development, growth paths, and professional transitions."
+desc_es = "Desarrollo profesional, caminos de crecimiento y transiciones."
+
+[[extra.tag_descriptions]]
+name = "architecture"
+desc = "Software architecture patterns, decisions, and trade-offs."
+desc_es = "Patrones de arquitectura de software, decisiones y compromisos."
+
+[[extra.tag_descriptions]]
+name = "refactoring"
+desc = "Improving code structure without changing its behavior."
+desc_es = "Mejorar la estructura del código sin cambiar su comportamiento."
+
+[[extra.tag_descriptions]]
+name = "management"
+desc = "Team management, organizational dynamics, and engineering management."
+desc_es = "Gestión de equipos, dinámicas organizacionales y gestión de ingeniería."
+
+[[extra.tag_descriptions]]
+name = "psychology"
+desc = "Understanding human behavior, motivation, and cognitive patterns."
+desc_es = "Entender el comportamiento humano, motivación y patrones cognitivos."
+
+[[extra.tag_descriptions]]
+name = "economics"
+desc = "Economic theory, monetary policy, financial systems, and investing principles."
+desc_es = "Teoría económica, política monetaria, sistemas financieros y principios de inversión."

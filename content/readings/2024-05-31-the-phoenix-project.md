@@ -2,17 +2,22 @@
 title = "The Phoenix Project"
 description = "This is a story about an impossible project in which the people around are constantly playing politics, busy fixing critical bugs and wasting constant efforts on quick patches instead of helping the business thrive."
 draft = false
+authors = [ "Gene Kim", "Kevin Behr", "George Spafford" ]
 [taxonomies]
-tags = [ "software", "devops" ] 
+tags = [ "devops", "leadership", "agile", "team-management" ] 
 [extra]
 subtitle = "A Novel About IT, DevOps, And Helping Your Business Win"
 pages = "430"
 author = "Gene Kim, Kevin Behr, George Spafford"
 static_thumbnail = "https://m.media-amazon.com/images/I/81ZMvLDtmIL._SL1500_.jpg"
 expand_preview = true
+related_posts = ["blog/2023-12-30-great-engineering.md", "blog/2023-10-11-unhealthy-working-environment.md", "blog/2024-02-25-deployments-on-fridays.md"]
+related_readings = [
+  "readings/2023-03-19-accelerate.md",
+  "readings/2024-01-26-the-lean-startup.md",
+  "readings/2022-03-31-team-topologies.md",
+]
 +++
-
-<img border="0" src="https://m.media-amazon.com/images/I/81ZMvLDtmIL._SL1500_.jpg" >
 
 This is a story about an impossible project in which the people around are constantly playing politics, busy fixing critical bugs and wasting constant efforts on quick patches instead of helping the business thrive.
 
@@ -40,9 +45,3 @@ For example, the first question: "What are the four types of work that IT does?"
 ---
 
 {{ youtube(id="6QNdL1I7OTM") }}
-
-### Recommended posts
-
-- [Great engineering](/blog/great-engineering) <small>A great engineer is not just a great coder</small>
-- [Unhealthy working environment](/blog/unhealthy-working-environment) <small>Recognizing red flags of an unhealthy workplace</small>
-- [Deployments on Fridays](/blog/deployments-on-fridays) <small>Why "should we not" deploy to production on Fridays?</small>

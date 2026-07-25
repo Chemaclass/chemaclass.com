@@ -1,17 +1,33 @@
 +++
-title = "Update your team to be more extreme"
+title = "Update Your Team to Be More Extreme"
 description = "Our profession is constantly evolving; therefore, it demands a non-stop learning process. Embracing the change is not optional in our software industry. We need to create spaces to get out of our comfort zone."
+updated_at = "2023-03-23"
 [taxonomies]
-tags = [ "team", "work", "extreme", "programming" ]
+tags = [ "xp", "agile", "team-management", "mentoring", "tdd" ]
 [extra]
 subtitle = "How can you help your peers to embrace the change?"
 static_thumbnail = "/images/blog/2022-02-26/cover.jpg"
 pin = false
+related_posts = [
+  "blog/2019-11-18-improve-your-tech-talk.md",
+  "blog/2021-03-01-embrace-the-change.md",
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2022-11-11-working-agile-with-non-agile-teams.md",
+  "blog/2023-01-09-interview-about-xp-and-agile.md",
+  "blog/2023-08-02-how-do-you-get-everyone-on-board.md",
+]
+related_readings = [
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-01-16-who-moved-my-cheese.md",
+  "readings/2021-05-28-peopleware.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
+series = "agile"
+series_order = 1
 +++
 
-![blog-cover](/images/blog/2022-02-26/cover.jpg)
-
-> Revisited: <span class="post-revisited-date">2023-03-23</span>
 
 Our software profession is constantly evolving; it demands a non-stop learning process. We must embrace the change in our industry.
 
@@ -101,30 +117,5 @@ You can help your team to be more extreme by helping with a dedicated team space
 
 ## Tech Talk
 
-After writing this blog post (originally in Feb, 2022), I was invited to do a [tech talk](/talks/) in different conferences about this topic.
-
-- 2022-06-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Berlin, Germany] (EN)
-- 2022-09-16 | [Code Talks](https://codetalks.de/speakers#speaker-985?event=7) [Hamburg, Germany] (EN)
-- 2022-10-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Munich, Germany] (EN)
-- 2022-12-21 | IES Ginés Pérez Chirinos [Murcia, Spain] (ES)
-- 2023-01-19 | [devm.io](https://devm.io/update-your-team-to-be-more-extreme/) [Remote] (EN)
-- 2023-07-28 | [WeAreDeveloper World Congress](https://www.wearedevelopers.com/world-congress) [Berlin, Germany] (EN)
-
-### WeAreDevelopers World Congress in Berlin (July 2023)
-
-{{ youtube(id="dqtAyl-SvaY") }}
-
-### Recommended readings
-
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
-- [Who moved my cheese?](/readings/who-moved-my-cheese/) <small>by Spencer Johnson</small>
-- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
-- [Peopleware](/readings/peopleware) <small>by Tom DeMarco, Timothy Lister</small>
-- [The Pragmatic Programmer](/readings/the-pragmatic-programmer/) <small>by  David Thomas, Andrew Hunt</small>
-
-### Related posts
-
-- [The path to seniority in software](/blog/the-path-to-seniority-in-software/) <small>How to become a Senior Software Developer?</small>
-- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small>How can you work with other teams that aren't agile?</small>
-- [Interview about XP and Agile](/blog/interview-about-xp-and-agile/) <small>Agile is about HOW you do certain things</small>
-- [How do you get everyone on board?](/blog/how-do-you-get-everyone-on-board/) <small>How do you deal with people reluctant to change?</small>
+After writing this blog post (originally in Feb, 2022), I was invited to do 
+a [tech talk](/talks/update-your-team-to-be-more-extreme) in different conferences about this topic.

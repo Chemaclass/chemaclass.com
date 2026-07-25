@@ -1,16 +1,25 @@
 +++
 title = "Test-Driven (Development)"
-description = "The complexity here is not about writing tests itself, but the habits that we have to change to create software that is easy to be tested."
+description = "TDD is a design practice, not just a testing technique. Writing tests first changes how you think about code and shape its structure."
 draft = false
-aliases = [ "/inner-peace-katas", "blog/inner-peace-katas" ]
+aliases = [ "tdd", "/inner-peace-katas", "blog/inner-peace-katas" ]
 [taxonomies]
-tags = [ "tdd", "testing", "software" ]
+tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
 subtitle = "What is challenging about it?"
 static_thumbnail = "/images/blog/2021-08-01/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+]
+related_readings = [
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+  "readings/2016-05-01-clean-code.md",
+]
+series = "craftsmanship"
+series_order = 3
 +++
 
-![blog-cover](/images/blog/2021-08-01/cover.jpg)
 
 The complexity here is not about writing tests itself, but the habits that we have to change to create software that is
 easy to be tested.
@@ -20,7 +29,7 @@ easy to be tested.
 ## The root of the problem
 
 Without (a solid) experience in testing, developers can have a hard time while trying to apply testing in general as
-part of their daily job. It's not simply because of the topic's complexity, but **because they are used to write
+part of their daily job. It's not simply because of the topic's complexity, but **because they are used to writing
 code that is hard to test.**
 
 Writing tests for already working software (mainly when it was done without considering testing at all) translates as
@@ -97,7 +106,6 @@ You can find a lot of katas on the Internet. For example:
 
 - [http://codekata.com](http://codekata.com)
 - [https://codingdojo.org/kata](https://codingdojo.org/kata)
-- [https://katalyst.codurance.com/browse](https://katalyst.codurance.com/browse)
 - [https://github.com/gamontal/awesome-katas](https://github.com/gamontal/awesome-katas)
 
 ---

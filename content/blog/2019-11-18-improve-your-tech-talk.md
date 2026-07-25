@@ -1,15 +1,23 @@
 +++
-title = "How to improve your tech-talk (or any other presentation)"
+title = "How to Improve Your Tech-Talk (or Any Other Presentation)"
 description = "We have found ourselves attending a meeting that felt like we were wasting our time with a monologue that is either hard to follow or doesn't seem so interesting as it could. Let's fix this."
 aliases = [ "/tech-talk" ]
 [taxonomies]
-tags = [ "presentation", "soft-skills", "communication"]
+tags = [ "communication", "leadership", "productivity", "career"]
 [extra]
 subtitle = "Some tips to improve your communication skills"
 static_thumbnail = "/images/blog/2019-11-18/cover.jpg"
+related_posts = [
+  "blog/2022-06-08-the-path-to-seniority-in-software.md",
+  "blog/2024-09-02-people-skills.md",
+  "blog/2023-03-16-have-you-always-been-like-this.md",
+]
+related_readings = [
+  "readings/2023-10-31-crucial-conversations.md",
+  "readings/2020-06-12-never-split-the-difference.md",
+]
 +++
 
-![blog-cover](/images/blog/2019-11-18/cover.jpg)
 
 We have found ourselves attending a meeting that felt like we were wasting our time with a "monologue" that is either hard to follow or doesn't seem so interesting as it could.
 Let's fix this.
@@ -26,7 +34,7 @@ To explain how I think a good presentation should look like I will address three
 2. Design and Layout: how you can design an easy-to-follow presentation that supports your talk instead of taking away the attention from what you are actually trying to say.
 3. Lastly, I think also the audience is responsible for making a tech talk successful, so I will also add a reminder about the role and responsibilities of the listeners.
 
-![blog-img](/images/blog/2019-11-18/talking.jpg)
+![person talking to an audience](/images/blog/2019-11-18/talking.jpg)
 
 ### Consider your audience
 
@@ -63,7 +71,7 @@ Summarize the main conclusion(s) in a concise way:
 * What are the learnings from this meeting?
 * What are the open questions or next steps?
 
-![blog-img](/images/blog/2019-11-18/books.jpg)
+![stack of books](/images/blog/2019-11-18/books.jpg)
 
 ## Design and Layout
 
@@ -97,4 +105,4 @@ If you have some code to present, consider:
 
 At the end of the meeting, we should ask these questions in order to improve. Ask other people for their feedback, so we can grow further and together.
 
-![blog-img](/images/blog/2019-11-18/footer.jpg)
+![audience at a presentation](/images/blog/2019-11-18/footer.jpg)

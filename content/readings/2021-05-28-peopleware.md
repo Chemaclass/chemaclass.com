@@ -1,17 +1,21 @@
 +++
 title = "Peopleware"
 description = "Software development is about people: when, how and where they can best work together. Not about programming languages or tools. Not about fast computers, networks or internet access."
+authors = [ "Tom DeMarco", "Timothy Lister" ]
 [taxonomies]
-tags = [ "people", "management" ]
+tags = [ "team-management", "productivity", "communication", "psychology" ]
 [extra]
 subtitle = "Productive Projects and Teams"
 pages = "230"
 author = "Tom DeMarco"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51RuNCswX8L._SX341_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2022-03-31-team-topologies.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2023-04-17-effective-remote-work.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51RuNCswX8L._SX341_BO1,204,203,200_.jpg" >
 
 Software development is about people: when, how and where they can best work together. Not about programming languages
 or tools. Not about fast computers, networks or internet access.

@@ -2,17 +2,21 @@
 title = "Effective Remote Work"
 description = "An effective remote work environment is about treating everyone as remote, with everyone in mind having the same level, equality, and information."
 draft = false
+authors = [ "James Stanier" ]
 [taxonomies]
-tags = [ "remote", "software" ]
+tags = [ "team-management", "communication", "productivity", "leadership" ]
 [extra]
 subtitle = "For Yourself, Your Team, and Your Company"
 pages = "300"
 author = "James Stanier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1634819208i/59425223.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-05-28-peopleware.md",
+  "readings/2022-03-31-team-topologies.md",
+  "readings/2023-05-31-agile-project-management.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1634819208i/59425223.jpg" >
 
 <!-- more -->
 

@@ -1,15 +1,24 @@
 +++
-title = "Dedicated QA Teams in software?"
+title = "Dedicated QA Teams in Software?"
 description = "This will be controversial, but let's talk about the QA position. The hidden truth behind the lack of software quality and why this should concern you if you write software."
 draft = false
 [taxonomies]
-tags = [ "software", "agile" ]
+tags = [ "testing", "tdd", "agile", "clean-code" ]
 [extra]
 subtitle = "How does it fit a dedicated QA person in your agile team?"
 static_thumbnail = "/images/blog/2023-05-17/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2021-09-25-tdd-vs-bdd.md",
+]
+related_readings = [
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+]
 +++
 
-![blog-cover](/images/blog/2023-05-17/cover.jpg)
 
 This will be controversial, but let's talk about the QA position. The hidden truth behind the lack of software quality and why this should concern you if you write software.
 
@@ -23,11 +32,11 @@ A software team's final goal is to make the QA position useless because they sho
 
 ## The hidden truth behind the lack of software quality
 
-Unfortunately, in our software industry, the demand for "fast, quick and dirty" projects ended up in poorly developed MVPs by simply applying patches and code over code with just manual testing checking happy paths - sometimes even ignoring edge cases.
+Unfortunately, in our software industry, the demand for "fast, quick and dirty" projects ended up in poorly developed MVPs by simply applying patches and code over code with just manual testing checking happy paths, sometimes even ignoring edge cases.
 
 > "The deadline is in one week, so you better finish it on time!"
 
-We don't learn the importance of what automated testing can bring to our daily job, so we don't take it seriously, and therefore, we don't practice it enough. And, for that exact reason, because we don't practice it, we don't know how to perform it properly - yes, I am talking about writing automated tests that prove the behavior of your software!
+We don't learn the importance of what automated testing can bring to our daily job, so we don't take it seriously, and therefore, we don't practice it enough. And, for that exact reason, because we don't practice it, we don't know how to perform it properly. Yes, I am talking about writing automated tests that prove the behavior of your software!
 
 Our inability to write testable code results in software that is hard to test, and thus we delegate testing to other third parties shifting the responsibility for the overall end quality of the product or service we write.
 
@@ -56,12 +65,3 @@ And that's how you change the "full-time QA position" into a "role mentality for
 Code never lies and never forgets; once it's written and automated in your pipeline, you can run it anytime at zero cost.
 
 ![blog-footer](/images/blog/2023-05-17/footer.jpg)
-
-
----
-
-### Related posts
-
-- [TDD vs BDD](/blog/tdd-vs-bdd/) <small>Design or Workflow?</small>
-- [Test-Driven (Development)](/blog/test-driven-development/) <small>What is challenging about it?</small>
-- [Where design meets quality](/blog/the-art-of-testing/) <small>From a software developer's point of view</small>

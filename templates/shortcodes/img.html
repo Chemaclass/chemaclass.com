@@ -1,0 +1,27 @@
+{# Responsive image shortcode with WebP and srcset support
+   Usage: {{ img(src="/images/blog/2025-01-01/photo.jpg", alt="Description") }}
+   Optional: width (default: 960), height (default: 540), quality (default: 80)
+#}
+{% set src = src | trim_start_matches(pat="/") %}
+{% set width = width | default(value=960) %}
+{% set height = height | default(value=540) %}
+{% set quality = quality | default(value=80) %}
+
+{% set img_sm = resize_image(path=src, width=480, height=270, op="fill", quality=quality, format="webp") %}
+{% set img_md = resize_image(path=src, width=720, height=405, op="fill", quality=quality, format="webp") %}
+{% set img_lg = resize_image(path=src, width=width, height=height, op="fill", quality=quality, format="webp") %}
+{% set img_fallback = resize_image(path=src, width=width, height=height, op="fill", quality=quality) %}
+
+<picture>
+  <source
+    type="image/webp"
+    srcset="{{ img_sm.url }} 480w, {{ img_md.url }} 720w, {{ img_lg.url }} {{ width }}w"
+    sizes="(max-width: 480px) 100vw, (max-width: 720px) 100vw, {{ width }}px" />
+  <img
+    src="{{ img_fallback.url }}"
+    alt="{{ alt | default(value='') }}"
+    width="{{ img_lg.width }}"
+    height="{{ img_lg.height }}"
+    loading="lazy"
+    decoding="async" />
+</picture>

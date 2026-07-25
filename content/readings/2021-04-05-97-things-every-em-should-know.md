@@ -1,16 +1,20 @@
 +++
 title = "97 Things Every Engineering Manager should know"
 description = "As a manager your work is to create clarity, clarity, and more clarity."
+authors = [ "Camille Fournier" ]
 [taxonomies]
-tags = [ "engineering", "management" ]
+tags = [ "leadership", "team-management", "communication", "mentoring" ]
 [extra]
 subtitle = "Collective Wisdom from the Experts"
 pages = "255"
 author = "Camille Fournier"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51pZKdYunNL._SX331_BO1,204,203,200_.jpg"
+related_readings = [
+  "readings/2020-03-26-the-manager-path.md",
+  "readings/2021-06-27-effective-software-em.md",
+  "readings/2020-04-03-high-output-management.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51pZKdYunNL._SX331_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

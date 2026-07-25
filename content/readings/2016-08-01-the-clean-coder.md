@@ -1,17 +1,21 @@
 +++
 title = "The Clean Coder"
-description = "A Code of Conduct for Professional Programmers"
+description = "Robert C. Martin's guide to professional behavior in software development, covering time management, pressure handling, TDD practices, and what it truly means to be a software craftsman."
+authors = [ "Robert C. Martin" ]
 [taxonomies]
-tags = [ "software", "clean-code" ]
+tags = [ "clean-code", "career", "tdd", "communication" ]
 [extra]
 subtitle = "A Code of Conduct for Professional Programmers"
 pages = "250"
 author = "Robert C. Martin"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51lbNIP1YLL._SX381_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2016-05-01-clean-code.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+  "readings/2018-06-04-clean-architecture.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51lbNIP1YLL._SX381_BO1,204,203,200_.jpg" >
 
 Programmers who endure and succeed amidst swirling uncertainty and nonstop pressure share a common attribute: They care
 deeply about the practice of creating software. They treat it as a craft. They are professionals.
@@ -34,7 +38,7 @@ deeply about the practice of creating software. They treat it as a craft. They a
 
 ## Summary
 
-#### Chapter 1: Professionalism
+### Chapter 1: Professionalism
 
 - Being a professional means taking full responsibility for one's actions.
 - First rule is not doing harm to the function nor the structure of the software.
@@ -51,7 +55,7 @@ deeply about the practice of creating software. They treat it as a craft. They a
   - It should be fun.
 - Also, know your domain, identify with your customer (no "us vs. them", ever).
 
-#### Chapter 2: Saying No
+### Chapter 2: Saying No
 
 - Professionals have the courage to say no to their managers.
 - Managers and developers have roles that are often adversarial, because on the short term, their goals tend to
@@ -59,7 +63,7 @@ deeply about the practice of creating software. They treat it as a craft. They a
 - The higher the stakes, the more valuable a "no" becomes, and the harder to say.
 - Good teams will successfully work towards a yes, but only a right yes, that will later work out in practice.
 
-#### Chapter 3: Saying Yes
+### Chapter 3: Saying Yes
 
 - There are three parts to making a commitment:
   - You say you will do it
@@ -68,7 +72,7 @@ deeply about the practice of creating software. They treat it as a craft. They a
 - Your commitment must respect the limits of what you expect (based on your experience) you can and cannot do.
   - If you recognize you will probably not be able to meet a commitment, you need to raise a red flag immediately.
 
-#### Chapter 4: Coding
+### Chapter 4: Coding
 
 - Programming requires a level of focus that few other disciplines require.
 - "The zone" (or "flow") is not as good as people think: you will be locally productive, but will often lose the bigger
@@ -78,7 +82,7 @@ deeply about the practice of creating software. They treat it as a craft. They a
   - TDD helps to make the pre-interruption context reproducible.
     - Minimize time spent debugging
 - Coding is a **marathon**, not a sprint, so conserve the energy and creativity.
-- Go home when it's time, even in the middle of something important.
+- Leave when it's time, even in the middle of something important.
 - Continuously re-estimate your best/likely/worst completion time and speak up as soon as you recognize you will likely
   be late.
   - Do not allow anyone to rush you.
@@ -87,7 +91,7 @@ deeply about the practice of creating software. They treat it as a craft. They a
   style.
   - Don't be shy from asking.
 
-#### Chapter 5: Test-Driven Development
+### Chapter 5: Test-Driven Development
 
 - [TDD](https://en.wikipedia.org/wiki/Test-driven_development) is not a cure-all and is impractical or inappropriate in
   some (rare) cases.
@@ -99,14 +103,14 @@ deeply about the practice of creating software. They treat it as a craft. They a
   5. Refactor as needed
   6. Repeat
 
-#### Chapter 6: Practicing
+### Chapter 6: Practicing
 
 - A programming Kata is a precise set of choreographed keystrokes and mouse movements that simulates the solving of some
   programming problem.
   - A Kata is about the process, not the solution.
   - You aren't solving the problem because you already know the solution.
 
-#### Chapter 7: Acceptance Testings
+### Chapter 7: Acceptance Testings
 
 - Avoid garbage in, garbage out. Make sure you understand the requirements.
   - Creating this understanding means removing ambiguity.
@@ -118,7 +122,7 @@ deeply about the practice of creating software. They treat it as a craft. They a
   developers.
 - Run all tests in a continuous integration and immediately fix any failures.
 
-#### Chapter 8: Test Strategies
+### Chapter 8: Test Strategies
 
 - Consider QA part of the team. They act as specifiers: writing acceptance tests, including the failure cases and corner
   cases, and perform exploratory testing.
@@ -127,7 +131,7 @@ deeply about the practice of creating software. They treat it as a craft. They a
   - Many tests are component or integration tests. By QA or Business assisted by Developers. For Business and
     Developers.
 
-#### Chapter 9: Time management
+### Chapter 9: Time management
 
 - Management roles in software development requires good time management.
 - Meeting are necessary but are also often huge time wasters, so avoid meeting that have no clear benefit <- this is a
@@ -142,13 +146,13 @@ deeply about the practice of creating software. They treat it as a craft. They a
     - Creative input.
     - Short breaks every 45 minutes.
 
-#### Chapter 10: Estimation
+### Chapter 10: Estimation
 
 - Estimation is the source of most distrust between business people and developers because the latter provide estimate
   which the former treats like commitments.
   - Both are insufficiently aware that the estimate really is a probability distribution, not a fixed number.
 
-#### Chapter 11: Pressure
+### Chapter 11: Pressure
 
 - The professional developer is calm and decisive under pressure, adhering to his training and disciplines, knowing that
   they are the best way to meet pressing deadlines and commitments.
@@ -159,7 +163,7 @@ deeply about the practice of creating software. They treat it as a craft. They a
 - Don't panic. Talk with your team. Don't rush. Trust your disciplines.
 - Offer to pair to others in crisis.
 
-#### Chapter 12: Collaboration
+### Chapter 12: Collaboration
 
 - Not all but most programmers like working alone. But we need to understand the goals of the surrounding people,
   including business folks.
@@ -168,14 +172,14 @@ deeply about the practice of creating software. They treat it as a craft. They a
   communication.
   - Programming is all about **communication**.
 
-#### Chapter 13: Teams and Projects
+### Chapter 13: Teams and Projects
 
 - Teams need time (months) to gel, to really get to know each other and learn to truly work together.
   - Assigning fractional people to different projects is a bad idea, as is breaking up a good team at the end of a
     project.
   - Instead, assigning several projects to one team can work well.
 
-#### Chapter 14: Mentoring, Apprenticeship and Craftsmanship
+### Chapter 14: Mentoring, Apprenticeship and Craftsmanship
 
 - Young programmers need mentoring.
   - Mentoring can be implicit or explicit.

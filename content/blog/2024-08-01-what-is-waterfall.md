@@ -1,21 +1,32 @@
 +++
-title = "What is Waterfall?"
-description = "Waterfall is like following a straight path where you move from one step to the next in a defined order — like water flowing down a waterfall through different stages. The problem is that each step can take a lot of time and resources to complete. Plus, you don't get feedback until the entire stage is finished, which can lead to a lot of wasted time. This is especially tricky in software development, where things are always changing and evolving."
+title = "What Is Waterfall?"
+description = "Waterfall is like following a straight path where you move from one step to the next in a defined order, like water flowing down a waterfall through different stages. The problem is that each step can take a lot of time and resources to complete. Plus, you don't get feedback until the entire stage is finished, which can lead to a lot of wasted time. This is especially tricky in software development, where things are always changing and evolving."
 draft = false
 [taxonomies]
-tags = [ "software", "management" ]
+tags = [ "agile", "software-design", "team-management", "productivity" ]
 [extra]
 subtitle = "What makes Waterfall a poor fit for modern software development?"
 static_thumbnail = "/images/blog/2024-08-01/cover.jpg"
+related_posts = [
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
+  "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md",
+  "blog/2024-03-28-effective-pair-programming.md",
+  "blog/2024-05-30-what-kills-agility.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-05-28-peopleware.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
-![blog-cover](/images/blog/2024-08-01/cover.jpg)
 
-Waterfall is like following a straight path where you move from one step to the next in a defined order — like water flowing down a waterfall through different stages.
-
-The problem is that each step can take a lot of time and resources to complete. Plus, you don't get feedback until the entire stage is finished, which can lead to a lot of wasted time. This is especially tricky in software development, where things are always changing and evolving.
+Waterfall is like following a straight path where you move from one step to the next in a defined order, like water flowing down a waterfall through different stages.
 
 <!-- more -->
+
+The problem is that each step can take a lot of time and resources to complete. Plus, you don't get feedback until the entire stage is finished, which can lead to a lot of wasted time. This is especially tricky in software development, where things are always changing and evolving.
 
 It usually follows a straightforward sequence like this:
 
@@ -23,7 +34,7 @@ It usually follows a straightforward sequence like this:
 
 ## The reality of Waterfall
 
-Waterfall can be like communism in theory — it seems perfect on paper but doesn't work in the real world.
+Waterfall can be like communism in theory, it seems perfect on paper but doesn't work in the real world.
 
 - Clients often don't know exactly what they want.
 - Requirements are constantly changing.
@@ -42,7 +53,7 @@ The big issue is when higher-ups dictate exactly how teams should work, leading 
 
 ---
 
-![footer](/images/blog/2024-08-01/footer.jpg)
+![agile vs waterfall](/images/blog/2024-08-01/footer.jpg)
 
 ## Why Agile was created
 
@@ -78,7 +89,7 @@ Together, these practices make your development process more flexible, collabora
 I’ve [talked](/talks/) about Agile at various tech events and explored it in depth because I’m passionate about how it can supercharge software teams. When done right, Agile can completely change how teams work, making them faster, more efficient, and better at delivering what clients and businesses really need.
 
 - 2022-06-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Berlin, Germany] (EN)
-- 2022-09-16 | [Code Talks](https://codetalks.de/speakers#speaker-985?event=7) [Hamburg, Germany] (EN)
+- 2022-09-16 | [Code Talks](https://codetalks.de/) [Hamburg, Germany] (EN)
 - 2022-10-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Munich, Germany] (EN)
 - 2022-12-21 | IES Ginés Pérez Chirinos [Murcia, Spain] (ES)
 - 2023-01-19 | [devm.io](https://devm.io/update-your-team-to-be-more-extreme/) [Remote] (EN)
@@ -87,19 +98,3 @@ I’ve [talked](/talks/) about Agile at various tech events and explored it in d
 ### WeAreDevelopers World Congress in Berlin
 
 {{ youtube(id="dqtAyl-SvaY") }}
-
----
-
-### Related posts
-
-- [What kills agility?](/blog/what-kills-agility/) <small>Why Agile if you already do Scrum, Kanban, SAFe, or Waterfall?</small>
-- [Ignoring Scrum to get more Agile?](/blog/ignoring-scrum-to-get-more-agile/) <small>Killing agility with excessive meetings</small>
-- [Update your team to be more extreme](/blog/update-your-team-to-be-more-extreme/) <small>How can you help your peers to embrace the change?</small>
-- [Effective pair programming](/blog/effective-pair-programming/) <small>Embracing quality practices in your engineering culture</small>
-- [Test-Driven (Development)](/blog/test-driven-development/) <small>What is challenging about it?</small>
-
-### Related readings
-
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
-- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
-- [Peopleware](/readings/peopleware) <small>by Tom DeMarco, Timothy Lister</small>

@@ -1,15 +1,26 @@
 +++
-title = "Working agile with non-agile teams"
+title = "Working Agile with Non-Agile Teams"
 description = "Let's assume you already know what the agile manifesto is. Let's consider that you apply most of the extreme programming values, principles, and practices. How can you work with other teams that aren't agile?"
 draft = false
 [taxonomies]
-tags = [ "software", "people", "agile" ]
+tags = [ "agile", "xp", "communication", "team-management" ]
 [extra]
 subtitle = "How can you work with other teams that aren't agile?"
 static_thumbnail = "/images/blog/2022-11-11/cover.jpg"
+related_posts = [
+  "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
+  "blog/2022-08-22-understanding-people.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2020-09-10-domain-driven-design-distilled.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
+series = "agile"
+series_order = 2
 +++
 
-![blog-cover](/images/blog/2022-11-11/cover.jpg)
 
 Let's assume you already know what the agile manifesto is. Let's consider that you apply most of the "extreme
 programming" values, principles, and practices. How can you work with other teams that aren't agile?
@@ -27,7 +38,7 @@ every one is essential.
 You **embrace the change** to the point that you **enjoy** going out of your comfort zone whenever needed. Seeking to
 create **value** for your team and its dynamics, and always considering personal growth.
 
-But sure, let's assume all that -and everything else I might have missed regarding "**agility**," how could you work
+But sure, let's assume all that, and everything else I might have missed regarding "**agility**," how could you work
 with an external team that is not agile? How could your "perfectly agile team" work with another group of people with
 nothing to do with software? For example, a doctor.
 
@@ -44,7 +55,7 @@ team members to meet with that expert for 30/60 min, so they can talk and share 
 as much as possible to shorten the feedback loop. For example, once a week.
 
 Collecting those requirements and impressions from the experts and then driving the design of your software according to
-that is [Domain-Driven Design](https://en.wikipedia.org//wiki/Domain-driven_design). You can find a lot of documentation
+that is [Domain-Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design). You can find a lot of documentation
 about *DDD* in books (like *[Domain-Driven Design Distilled](/readings/domain-driven-design-distilled)*) or in many
 blogs on the Internet.
 
@@ -63,7 +74,7 @@ How could you work agile with that doctor?
 - Courage
 - Respect
 
-These **abstract goals** apply to any profession - and even life, not just software. 
+These **abstract goals** apply to any profession, and even life, not just software. 
 
 > Continuous communication helps shorten the feedback loop, which simplifies the tasks. Always with the courage to
 > address the truth and respect for each other.
@@ -117,16 +128,3 @@ learns from their **mistakes**; there is no need for masks anymore.
 That's when the magic starts to happen, and suddenly you can work agile with any team, especially yours.
 
 ![blog-footer](/images/blog/2022-11-11/footer.jpg)
-
----
-
-### Related posts
-
-- [Update your team to be more extreme](/blog/update-your-team-to-be-more-extreme/). <small>How can you help your peers to embrace the change?</small>
-- [Understanding people](/blog/understanding-people/). <small>Misunderstandings, effective communication, and self-reflection</small>
-
-### Recommended readings
-
-- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
-- [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/) <small>by Patrick M. Lencioni</small>

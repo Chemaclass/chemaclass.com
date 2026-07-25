@@ -1,0 +1,66 @@
+// ==========================================================================
+// Pagination (blog/readings/tag index page navigation)
+// ==========================================================================
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2.5rem 0 1rem;
+
+  &__link,
+  &__page {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+    border: 1px solid var(--preview-divider-color);
+    border-radius: 8px;
+    color: var(--body-color);
+    text-decoration: none;
+    transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+  }
+
+  &__pages {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__page {
+    min-width: 2.25rem;
+    justify-content: center;
+    font-variant-numeric: tabular-nums;
+
+    &.is-current {
+      background: var(--accent-color);
+      border-color: var(--accent-color);
+      color: #fff;
+      cursor: default;
+    }
+  }
+
+  .is-disabled {
+    opacity: 0.4;
+    cursor: default;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--body-color);
+      border-color: var(--preview-divider-color);
+    }
+  }
+}

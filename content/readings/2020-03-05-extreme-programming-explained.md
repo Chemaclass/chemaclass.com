@@ -2,16 +2,25 @@
 title = "Extreme Programming Explained"
 description = "Extreme Programming (XP) is an agile software development framework that aims to produce higher quality software, and higher quality of life for the development team. XP is the most specific of the agile frameworks regarding appropriate engineering practices for software development."
 aliases = [ "/readings/xp-embrace-change" ]
+authors = [ "Kent Beck" ]
 [taxonomies]
-tags = [ "software", "team-work" ]
+tags = [ "xp", "agile", "tdd", "pair-programming", "communication" ]
 [extra]
 subtitle = "Embrace Change"
 pages = "160"
 author = "Kent Beck"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41b11Tipy0L._SX396_BO1,204,203,200_.jpg"
+related_posts = [
+  "blog/2024-03-28-effective-pair-programming.md",
+  "blog/2023-01-09-interview-about-xp-and-agile.md",
+  "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2022-07-11-clean-craftsmanship.md",
+  "readings/2023-03-19-accelerate.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41b11Tipy0L._SX396_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 
@@ -31,7 +40,7 @@ below.
 ### Communication
 
 Software development is inherently a team sport that relies on communication to transfer knowledge from one team member
-to everyone else on the team. XP stresses the importance of the appropriate kind of communication. – face to face
+to everyone else on the team. XP stresses the importance of the appropriate kind of communication: face to face
 discussion with the aid of a white board or other drawing mechanism.
 
 ### Simplicity

@@ -1,17 +1,21 @@
 +++
 title = "The Essential Drucker"
 description = "The Essential Drucker contains twenty-six selections on management in the organization, management and the individual, and management and society. It covers the basic principles and concerns of management and its problems, challenges, and opportunities, giving managers, executives, and professionals the tools to perform the tasks that the economy and society of tomorrow will demand of them."
+authors = [ "Peter F. Drucker" ]
 [taxonomies]
-tags = [ "management", "people" ]
+tags = [ "leadership", "team-management", "philosophy" ]
 [extra]
 subtitle = "The Best of Sixty Years of Peter Drucker's Essential Writings on Management"
 pages = "360"
 author = "Peter F. Drucker"
 static_thumbnail = "https://m.media-amazon.com/images/I/41gdosc0RaL.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2020-04-03-high-output-management.md",
+  "readings/2022-08-01-the-great-ceo-within.md",
+  "readings/2022-07-19-the-starfish-and-the-spider.md",
+]
 +++
-
-<img border="0" src="https://m.media-amazon.com/images/I/41gdosc0RaL.jpg" >
 
 <!-- more -->
 

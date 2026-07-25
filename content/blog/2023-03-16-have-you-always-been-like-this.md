@@ -1,15 +1,22 @@
 +++
-title = "Have you always been like this?"
+title = "Have You Always Been Like This?"
 description = "Have you always been like this? Constantly reading books, writing blog posts, public speaker in conferences and meet-ups, learning in your private time, etc...? The short answer is: no, and let me tell you how I ended up in this situation."
 draft = false
 [taxonomies]
-tags = [ "habits", "focus", "discipline" ]
+tags = [ "career", "productivity", "philosophy" ]
 [extra]
 subtitle = "How to find a balance of growth and happiness"
 static_thumbnail = "/images/blog/2023-03-16/cover.jpg"
+related_posts = [
+  "blog/2019-11-18-improve-your-tech-talk.md",
+  "blog/2020-09-08-the-process-itself-is-the-goal.md",
+]
+related_readings = [
+  "readings/2017-03-20-the-power-of-habits.md",
+  "readings/2019-11-12-atomic-habits.md",
+]
 +++
 
-![blog-cover](/images/blog/2023-03-16/cover.jpg)
 
 I've got this question recently, a couple of times, and this is a great topic to share.
 
@@ -39,7 +46,7 @@ However, I have always enjoyed writing since I was a kid. For personal circumsta
 
 Writing was (and still is) a way to sort out my thoughts, especially during hard times; writing was a way to escape from the world. It helped me to understand myself better the day after. And it worked.
 
-Knowing your limitations can help you understand your reality and fight against it. Life is hard enough to accept whatever "is there," even if you are dissatisfied with it - especially if you have a reason for that.
+Knowing your limitations can help you understand your reality and fight against it. Life is hard enough to accept whatever "is there," even if you are dissatisfied with it, especially if you have a reason for that.
 
 I learned that I don't want to waste my time in a life I will regret when I die. For that reason, I started seeking opportunities to grow at everything I do all the time.
 
@@ -60,7 +67,7 @@ These are questions that can help you keep the focus while building yourself. Wh
 
 Within your context and possibilities, you are what you choose to be. And that’s what differentiates you from your past and your future. The actions you do, the way you communicate and interact with others, the decisions you choose, etc..., differentiate you. That’s what differentiates you from yourself at another point in time.
 
-This is why I enjoy reading – or listening to a book – per month. This is why I enjoy learning anytime, all the time. This is why I like to share what I know with others. This is who I choose to be.
+This is why I enjoy reading (or listening to a book) per month. This is why I enjoy learning anytime, all the time. This is why I like to share what I know with others. This is who I choose to be.
 
 A few years ago, I wrote about [the process itself as the goal](/blog/the-process-itself-is-the-goal/), which says basically: "_Repetition is the key. Make it easier to do what you want to do. Make it harder to do what you want to stop doing. Enjoy the process: that's the goal._"
 
@@ -85,10 +92,3 @@ I don't expect things to change from one day to another. I enjoy experimenting, 
 What keeps me moving is <u>the time I have left</u> and the idea of thinking, "**what would I like to have changed?**" And in such a case, "**Why didn't I?**"
 
 ![blog-footer](/images/blog/2023-03-16/footer.jpg)
-
----
-
-### Related readings
-
-- [The power of habits](/readings/the-power-of-habits/)  <small>Why We Do What We Do, and How to Change</small>
-- [Atomic habits](/readings/atomic-habits/)  <small>An Easy & Proven Way to Build Good Habits & Break Bad Ones</small>

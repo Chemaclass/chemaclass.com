@@ -1,0 +1,44 @@
+@view-transition {
+  navigation: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  margin: auto;
+  border: solid rgba(0, 0, 0, 0.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.content {
+  max-width: 100%;
+}
+
+main {
+  max-width: $max-width;
+  padding: 1rem;
+  margin: auto;
+}
+
+.only-desktop-visible,
+.only-phone-visible {
+  display: none;
+}

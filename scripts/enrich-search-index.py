@@ -1,0 +1,112 @@
+#!/usr/bin/env python3
+"""
+Post-build script to add publication dates to the search index.
+Run after `zola build` to enrich search_index.en.json with dates.
+"""
+
+from __future__ import annotations
+
+import json
+import re
+from pathlib import Path
+from typing import Dict, Optional
+
+from _common import extract_date_from_filename
+
+def extract_date_from_frontmatter(filepath: Path) -> Optional[str]:
+    """Extract date from markdown frontmatter."""
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        # Match TOML frontmatter (between +++ markers)
+        toml_match = re.search(r'^\+\+\+\s*\n(.*?)\n\+\+\+', content, re.DOTALL)
+        if toml_match:
+            frontmatter = toml_match.group(1)
+            date_match = re.search(r'^date\s*=\s*["\']?(\d{4}-\d{2}-\d{2})', frontmatter, re.MULTILINE)
+            if date_match:
+                return date_match.group(1)
+
+        # Match YAML frontmatter (between --- markers)
+        yaml_match = re.search(r'^---\s*\n(.*?)\n---', content, re.DOTALL)
+        if yaml_match:
+            frontmatter = yaml_match.group(1)
+            date_match = re.search(r'^date:\s*["\']?(\d{4}-\d{2}-\d{2})', frontmatter, re.MULTILINE)
+            if date_match:
+                return date_match.group(1)
+    except (OSError, UnicodeDecodeError) as e:
+        print(f"Error reading {filepath}: {e}")
+
+    return None
+
+def build_url_to_date_map(content_dir: Path) -> Dict[str, str]:
+    """Build a mapping from URL paths to dates."""
+    url_to_date = {}
+    base_url = "https://chemaclass.com"
+
+    sections = ['blog', 'readings', 'talks']
+
+    for section in sections:
+        section_path = content_dir / section
+        if not section_path.exists():
+            continue
+
+        for filepath in section_path.glob('*.md'):
+            if filepath.name == '_index.md':
+                continue
+
+            # Try frontmatter first, then filename
+            date = extract_date_from_frontmatter(filepath)
+            if not date:
+                date = extract_date_from_filename(filepath.name)
+
+            if date:
+                # Generate the URL slug (remove date prefix and .md extension)
+                slug = filepath.stem
+                slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', slug)
+
+                url = f"{base_url}/{section}/{slug}/"
+                url_to_date[url] = date
+
+    return url_to_date
+
+def enrich_search_index(public_dir: Path, url_to_date: Dict[str, str]) -> bool:
+    """Add dates to search indices for all languages."""
+    total_enriched = 0
+
+    for index_file in public_dir.glob('search_index.*.json'):
+        with open(index_file, 'r', encoding='utf-8') as f:
+            search_index = json.load(f)
+
+        docs = search_index['documentStore']['docs']
+
+        enriched_count = 0
+        for url, doc in docs.items():
+            if url in url_to_date:
+                doc['date'] = url_to_date[url]
+                enriched_count += 1
+
+        with open(index_file, 'w', encoding='utf-8') as f:
+            json.dump(search_index, f, ensure_ascii=False, separators=(',', ':'))
+
+        print(f"  {index_file.name}: {enriched_count} documents")
+        total_enriched += enriched_count
+
+    return total_enriched > 0
+
+def main() -> None:
+    # Determine paths relative to script location
+    script_dir = Path(__file__).parent
+    project_root = script_dir.parent
+    content_dir = project_root / 'content'
+    public_dir = project_root / 'public'
+
+    print("Building URL to date mapping...")
+    url_to_date = build_url_to_date_map(content_dir)
+    print(f"Found {len(url_to_date)} dated documents")
+
+    print("Enriching search indices...")
+    enrich_search_index(public_dir, url_to_date)
+
+if __name__ == '__main__':
+    main()

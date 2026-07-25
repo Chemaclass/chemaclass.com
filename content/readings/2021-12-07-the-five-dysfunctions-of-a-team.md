@@ -1,17 +1,21 @@
 +++
 title = "The Five Dysfunctions of a Team"
 description = "This book is a leadership fable about a tech company that is struggling to get more customers. The C level is not working as a team, and they have a hard time coming to any agreements which result in negative morale. Until the new CEO, Catherine Petersen, joins the team, and she is able to recognize the problems and help the team overcome them by understanding the situation."
+authors = [ "Patrick M. Lencioni" ]
 [taxonomies]
-tags = [ "leadership", "management" ]
+tags = [ "leadership", "team-management", "communication", "psychology" ]
 [extra]
 subtitle = "A Leadership Fable"
 pages = "240"
 author = "Patrick M. Lencioni"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/51QArmq8raL._SX328_BO1,204,203,200_.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2021-05-28-peopleware.md",
+  "readings/2022-03-31-team-topologies.md",
+  "readings/2023-09-20-its-your-ship.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/51QArmq8raL._SX328_BO1,204,203,200_.jpg" >
 
 This book is a leadership fable about a tech company that is struggling to get more customers. The C level is not
 working as a team, and they have a hard time coming to any agreements which result in negative morale. Until the new

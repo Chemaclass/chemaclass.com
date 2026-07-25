@@ -1,0 +1,43 @@
+{% if page.extra.series %}
+  {% set series_key = page.extra.series %}
+  {% set series_config = config.extra.series[series_key] %}
+  {% set series_title = series_config.title %}
+  {% if lang == "es" and series_config.title_es %}
+    {% set series_title = series_config.title_es %}
+  {% endif %}
+
+  {% set blog_section = get_section(path="blog/_index.md", lang=lang) %}
+  {% set series_posts = [] %}
+  {% for p in blog_section.pages %}
+    {% if p.extra.series and p.extra.series == series_key %}
+      {% set_global series_posts = series_posts | concat(with=p) %}
+    {% endif %}
+  {% endfor %}
+  {% set series_posts = series_posts | sort(attribute="extra.series_order") %}
+
+  {% set current_order = page.extra.series_order %}
+  {% set total = series_posts | length %}
+
+  <nav class="series-nav" aria-label="{{ series_title }}">
+    <div class="series-nav__info">
+      <span class="series-nav__title">{{ series_title }}</span>
+      <span class="series-nav__position">{{ trans(key="series_part", lang=lang) }} {{ current_order }} {{ trans(key="series_of", lang=lang) }} {{ total }}</span>
+    </div>
+    <div class="series-nav__links">
+      {% for p in series_posts %}
+        {% if p.extra.series_order == current_order - 1 %}
+          <a href="{{ p.permalink }}" class="series-nav__link series-nav__link--prev" title="{{ p.title }}">
+            ← {{ trans(key="previous", lang=lang) }}
+          </a>
+        {% endif %}
+      {% endfor %}
+      {% for p in series_posts %}
+        {% if p.extra.series_order == current_order + 1 %}
+          <a href="{{ p.permalink }}" class="series-nav__link series-nav__link--next" title="{{ p.title }}">
+            {{ trans(key="next", lang=lang) }} →
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </nav>
+{% endif %}

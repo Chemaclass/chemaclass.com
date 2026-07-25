@@ -1,19 +1,23 @@
 +++
 title = "The infinite game"
 description = "From the bestselling author of Start With Why and Leaders Eat Last, a bold framework for leadership in today's ever-changing world."
+authors = [ "Simon Sinek" ]
 [taxonomies]
-tags = [ "leadership", "people" ]
+tags = [ "leadership", "team-management", "philosophy", "communication" ]
 [extra]
 subtitle = "A bold framework for leadership in today's ever-changing world"
 pages = "270"
 author = "Simon Sinek"
 static_thumbnail = "https://m.media-amazon.com/images/I/41r53pSrB4L.jpg"
 expand_preview = true
+related_readings = [
+  "readings/2021-11-28-start-with-why.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2023-02-26-adapt-or-die.md",
+]
 +++
 
-<img border="0" src="https://m.media-amazon.com/images/I/41r53pSrB4L.jpg" >
-
-How do we win a game that has no end? Finite games, like football or chess, have known players, fixed rules and a clear endpoint. The winners and losers are easily identified. Infinite games, games with no finish line, like business or politics, or life itself, have players who come and go. The rules of an infinite game are changeable while infinite games have no defined endpoint. There are no winners or losers—only ahead and behind.
+How do we win a game that has no end? Finite games, like football or chess, have known players, fixed rules and a clear endpoint. The winners and losers are easily identified. Infinite games, games with no finish line, like business or politics, or life itself, have players who come and go. The rules of an infinite game are changeable while infinite games have no defined endpoint. There are no winners or losers: only ahead and behind.
 
 <!-- more -->
 

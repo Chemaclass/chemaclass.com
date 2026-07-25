@@ -1,17 +1,21 @@
 +++
 title = "Dare to lead"
 description = "Leadership is not about titles, status and power over people. Leaders are people who hold themselves accountable for recognising the potential in people and ideas, and developing that potential. This is a book for everyone who is ready to choose courage over comfort, make a difference and lead."
+authors = [ "Brené Brown" ]
 [taxonomies]
-tags = [ "leadership", "people" ]
+tags = [ "leadership", "communication", "psychology", "mentoring" ]
 [extra]
 subtitle = "Brave Work. Tough Conversations. Whole Hearts."
 pages = "320"
 author = "Brené Brown"
 static_thumbnail = "https://m.media-amazon.com/images/I/4108sPwaBfL.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2024-04-17-radical-candor.md",
+  "readings/2022-01-16-leaders-eat-last.md",
+  "readings/2021-04-19-the-art-of-leadership.md",
+]
 +++
-
-<img border="0" src="https://m.media-amazon.com/images/I/4108sPwaBfL.jpg" >
 
 <!-- more -->
 
@@ -83,4 +87,4 @@ we indeed gain the courage to succeed and lead.
 
 ### Summary
 
-{{ youtube(id="uk68F2Jl3q8") }}
+{{ youtube(id="bsT5Tbt2mjU") }}

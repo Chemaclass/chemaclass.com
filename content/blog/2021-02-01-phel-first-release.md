@@ -1,20 +1,29 @@
 +++
-title = "Phel: the Lisp that compiles to PHP"
-description = "The new Functional Programming language build-in PHP."
+title = "Phel: The Lisp That Compiles to PHP"
+description = "The new Functional Programming language build-in for PHP."
 [taxonomies]
-tags = [ "software", "open-source", "functional-programming", "lisp", "php" ]
+tags = [ "phel", "php", "open-source", "software-design" ]
 [extra]
-subtitle = "The new functional language. Fully interoperability with PHP 🚀"
+subtitle = "A new functional language with full interoperability with PHP"
 static_thumbnail = "/images/blog/2021-02-01/cover.jpg"
+related_posts = [
+  "blog/2021-05-03-open-source-software.md",
+  "blog/2020-10-13-typed-arrays-php.md",
+  "blog/2020-08-09-strict-types.md",
+]
+related_readings = [
+  "readings/2020-05-21-7-languages-in-7-weeks.md",
+  "readings/2020-08-16-advance-web-application-architecture.md",
+  "readings/2020-10-10-object-design-style-guide.md",
+]
 +++
 
-![blog-cover](/images/blog/2021-02-01/cover.jpg)
 
-The new Functional Programming language build-in PHP. Check it out!
+A new Functional Programming language built-in on the PHP ecosystem.
 
 <!-- more -->
 
-# The Phel Language
+## The Phel Language
 
 Phel is a Functional Programming ([FP](https://en.wikipedia.org/wiki/Functional_programming)) language that compiles to PHP. It is a dialect of [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) inspired by Clojure and Janet.
 
@@ -38,14 +47,14 @@ Phel is a creation of Jens Haase, and as he mentions on the website, "it is the 
 - It is easy to write and debug
 
 From my point, it was ending May 2020 when I finished the
-book [Seven Languages in Seven Weeks](/readings/7-languages-in-7-weeks/), in which I learned a bit of Prolog, Erlang,
+book [Seven Languages in Seven Weeks](/readings/7-languages-in-7-weeks/), in which I learned the basics of Prolog, Erlang,
 Clojure, Haskell… I even created a [repository in GitHub](https://github.com/Chemaclass/7LangIn7Weeks) to store my
 progress over the weeks with these learnings.
 
 Suddenly, one day beginning of June 2020, I saw a post in Reddit's PHP official channel, with a message of someone
 mentioning this "**Phel**" project, claiming to be a **"functional programming language" written in PHP**!
 
-I work with PHP for around 8 years so far, and I always try to combine OOP with FP as much as possible (because I
+I've worked with PHP for around 8 years so far, and I always try to combine OOP with FP as much as possible (because I
 believe both paradigms are better combined; they are not necessarily exclusive), and a new dialect of Lisp fully written
 in native **PHP 7.4** sounded really exciting. I decided to take a look at it. I wanted to see the code.
 
@@ -55,8 +64,9 @@ and [Advanced Web Application Architecture](/readings/advance-web-application-ar
 out what I learned and put it for real in a project. This was (and still is) a beautiful challenge, which helps me to
 test myself and grow professionally at the same time.
 
-My first commit was done on 6 June 2020, and since then I work on this project a bit (almost) every day in my free time.
-It helps me to learn more about FP, languages internal design, and best practices on testing and software design
+My first commit was done on 6 June 2020, and since then I've been dedicating a little time each day during my free
+hours to its development.
+It helps me to learn more about FP, languages' internal design, and best practices on testing and software design
 architecture in general.
 
 I started applying minor changes until I ended refactoring the whole compiler structure (among other things) in order to
@@ -79,7 +89,7 @@ The following example gives a short impression of how Phel looks like:
 ```
 
 ## Current status of Phel
-- We have an open [Gitter Community](https://gitter.im/phel-lang/community) where we help each other
+
 - We prepared an easy [Getting Started Guide](https://phel-lang.org/documentation/getting-started/)
 - We prepared an easy GitHub Repository with a [Phel Scaffolding Template](https://github.com/phel-lang/phel-scaffolding)
 - We just released the first official version: [0.1.0](https://github.com/phel-lang/phel-lang/tags)
@@ -90,4 +100,6 @@ Check out the official website with all documentation: [https://phel-lang.org/](
 
 ### Also recommended
 
-- [Functional Programming with Phel - JesusValera](https://jesusvalerareales.com/functional-programming-with-phel/)
+
+
+- [Functional Programming with Phel - JesusValera](https://jesusvalera.dev/functional-programming-with-phel/)

@@ -1,0 +1,40 @@
+<div class="interactive-list" data-component="interactive-list">
+  {% if title %}<h3 class="interactive-list__title">{{ title }}</h3>{% endif %}
+
+  <div class="interactive-list__container">
+    <nav class="interactive-list__nav" role="tablist" aria-label="{{ title | default(value='Interactive list') }}">
+      {% for item in items %}
+      <button
+        class="interactive-list__tab{% if loop.first %} active{% endif %}"
+        role="tab"
+        aria-selected="{% if loop.first %}true{% else %}false{% endif %}"
+        aria-controls="panel-{{ item.id }}"
+        data-target="{{ item.id }}"
+        tabindex="{% if loop.first %}0{% else %}-1{% endif %}">
+        <span class="interactive-list__label">{{ item.label }}</span>
+        {% if item.summary %}<span class="interactive-list__summary">{{ item.summary }}</span>{% endif %}
+      </button>
+      {% endfor %}
+    </nav>
+
+    <div class="interactive-list__panels">
+      {% for item in items %}
+      <div
+        class="interactive-list__panel{% if loop.first %} active{% endif %}"
+        role="tabpanel"
+        id="panel-{{ item.id }}"
+        aria-labelledby="{{ item.id }}"
+        {% if not loop.first %}hidden{% endif %}>
+        <div class="interactive-list__content">
+          {{ item.content | safe }}
+        </div>
+        {% if item.link %}
+        <a href="{{ item.link }}" class="interactive-list__link" target="_blank" rel="noopener noreferrer">
+          Read full article →
+        </a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

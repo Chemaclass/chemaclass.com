@@ -1,0 +1,267 @@
+// Search results dropdown
+.search-results {
+  display: none;
+  background: var(--search-bg-results);
+  border: 1px solid var(--search-divider-color, transparent);
+  border-radius: 12px;
+  max-height: 60vh;
+  overflow-y: auto;
+  z-index: 4000;
+
+  // Custom scrollbar
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--search-scrollbar-thumb, rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    &:hover {
+      background: var(--search-scrollbar-thumb-hover, rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  // Firefox
+  scrollbar-width: thin;
+  scrollbar-color: var(--search-scrollbar-thumb, rgba(0, 0, 0, 0.15)) transparent;
+
+  .theme-dark & {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  &__header {
+    padding: 10px 16px 6px;
+    border-bottom: 1px solid var(--search-divider-color, #e8e8e8);
+  }
+
+  &__count {
+    font-size: 12px;
+    color: var(--search-count-color, #70757a);
+  }
+
+  &__items {
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+  }
+
+  li {
+    &:has(.search-results__item.category) {
+      padding: 12px 16px 4px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--search-category, #70757a);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: default;
+      user-select: none;
+
+      &:first-child {
+        padding-top: 8px;
+      }
+
+      .search-results__item-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &:has(.search-results__item.empty:not(.category)) {
+      padding: 16px;
+      text-align: center;
+      color: var(--search-category, #70757a);
+    }
+
+    &.selected,
+    &:hover:not(:has(.category)):not(:has(.empty)) {
+      background-color: var(--search-bg-selected-item, #f8f9fa);
+    }
+  }
+
+  &__item {
+    a {
+      display: block;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__item-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  &__item-section {
+    color: var(--search-section-color, #188038);
+    font-weight: 500;
+  }
+
+  &__item-date {
+    color: var(--search-date-color, #70757a);
+  }
+
+  &__item-title {
+    display: block;
+    font-size: 18px;
+    color: var(--search-title-color, #1a0dab);
+    margin-bottom: 4px;
+    line-height: 1.3;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__item-body {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--search-body-color, #4d5156);
+
+    b {
+      font-weight: 600;
+      color: var(--search-highlight-color, #5f6368);
+    }
+  }
+}
+
+
+// Easter egg: "67", page wobble + giant bouncing 6/7
+body.easter-67 {
+  overflow-x: hidden;
+
+  #main-content {
+    animation: easter-67-wobble 0.5s ease-in-out 8;
+    transform-origin: 50% 50%;
+    will-change: transform;
+  }
+}
+
+@keyframes easter-67-wobble {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  25%      { transform: rotate(-3deg) translateY(-4px); }
+  75%      { transform: rotate(3deg)  translateY(4px); }
+}
+
+.easter-67-banner {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 5vw, 60px);
+  pointer-events: none;
+  z-index: 1500;
+  font-size: clamp(80px, 22vw, 280px);
+  line-height: 1;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.45));
+  animation: easter-67-banner-out 0.6s ease-in 3.4s forwards;
+}
+
+.easter-67-digit {
+  display: inline-block;
+  animation: easter-67-jump 0.55s ease-in-out infinite;
+}
+
+.easter-67-six   { animation-delay: 0s; }
+.easter-67-seven { animation-delay: 0.275s; }
+
+@keyframes easter-67-jump {
+  0%, 100% { transform: translateY(0)     scale(1)    rotate(0deg); }
+  40%      { transform: translateY(-40px) scale(1.25) rotate(-8deg); }
+  60%      { transform: translateY(-40px) scale(1.25) rotate(8deg); }
+}
+
+@keyframes easter-67-banner-out {
+  0%   { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.6); }
+}
+
+.easter-67-message {
+  text-align: center;
+  padding: 16px;
+
+  .search-results__item-title {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 640px) {
+  @keyframes easter-67-wobble {
+    0%, 100% { transform: rotate(0deg) translateY(0); }
+    25%      { transform: rotate(-2deg) translateY(-2px); }
+    75%      { transform: rotate(2deg)  translateY(2px); }
+  }
+  @keyframes easter-67-jump {
+    0%, 100% { transform: translateY(0)     scale(1)    rotate(0deg); }
+    40%      { transform: translateY(-20px) scale(1.2)  rotate(-6deg); }
+    60%      { transform: translateY(-20px) scale(1.2)  rotate(6deg); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.easter-67 #main-content,
+  .easter-67-banner,
+  .easter-67-digit {
+    animation: none !important;
+  }
+}
+
+// Hide native search clear button
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+// Light mode
+:root {
+  --search-bg-input: transparent;
+  --search-border-color: #dfe1e5;
+  --search-shortcut-bg: #f1f3f4;
+  --search-shortcut-border: #dadce0;
+  --search-section-color: var(--accent-color, #3a5c88);
+  --search-date-color: #70757a;
+  --search-title-color: var(--accent-color, #3a5c88);
+  --search-body-color: #4d5156;
+  --search-highlight-color: #5f6368;
+  --search-divider-color: #e8e8e8;
+  --search-count-color: #70757a;
+}
+
+// Dark mode
+.theme-dark {
+  --search-bg-input: rgba(255, 255, 255, 0.08);
+  --search-border-color: #4a4a4a;
+  --search-shortcut-bg: #3a3a3a;
+  --search-shortcut-border: #555;
+  --search-section-color: deepskyblue;
+  --search-date-color: #a0a0a0;
+  --search-title-color: #fff;
+  --search-body-color: #c5c5c5;
+  --search-highlight-color: #fff;
+  --search-divider-color: #3c3c3c;
+  --search-count-color: #a0a0a0;
+  --search-scrollbar-thumb: rgba(255, 255, 255, 0.2);
+  --search-scrollbar-thumb-hover: rgba(255, 255, 255, 0.35);
+}

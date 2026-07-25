@@ -1,22 +1,35 @@
 +++
-title = "How do you get everyone on board?"
+title = "How Do You Get Everyone on Board?"
 description = "I was invited to the WeAreDevelopers World Congress to give a tech talk about my experience with Extreme Programming and the profound benefits of embracing change in your work and life."
 draft = false
 aliases = [ "/blog/how-do-you-deal-with-hard-people", "/blog/how-to-get-everyone-on-board" ]
 [taxonomies]
-tags = [ "leadership", "people" ]
+tags = [ "leadership", "communication", "team-management", "mentoring", "xp" ]
 [extra]
 subtitle = "How do you deal with people reluctant to change?"
 static_thumbnail = "/images/blog/2023-08-02/cover.jpg"
+related_posts = [
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2022-11-11-working-agile-with-non-agile-teams.md",
+  "blog/2023-02-27-great-leadership.md",
+]
+related_readings = [
+  "readings/2020-03-05-extreme-programming-explained.md",
+  "readings/2021-01-16-who-moved-my-cheese.md",
+  "readings/2021-05-28-peopleware.md",
+  "readings/2021-11-28-start-with-why.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+]
+series = "leadership"
+series_order = 6
 +++
 
-![blog-cover](/images/blog/2023-08-02/cover.jpg)
 
-Last week, I was at the WeAreDevelopers World Congress, the biggest conference I've been giving a tech talk.
-
-With more than 12k attendees, 300 speakers, and ~10 tracks in parallel, I was invited to give not one but two talks. One is about my experience with Extreme Programming and the profound benefits of embracing change in your work and life.
+I was invited to the WeAreDevelopers World Congress to give a tech talk about my experience with XP and the profound benefits of embracing change in your work and life.
 
 <!-- more -->
+
+With more than 12k attendees, 300 speakers, and ~10 tracks in parallel, I was invited to give not one but two talks. One is about my experience with Extreme Programming and the profound benefits of embracing change in your work and life.
 
 I especially enjoyed the audience engagement and feedback they gave me after each talk. In particular, a question I had faced many times during my career: "**How do you deal with people reluctant to change?**"
 
@@ -45,8 +58,8 @@ The key here is to find a way to connect with people by understanding how they u
 Here is an idea you could try:
 
 - Give them a book containing ideas or knowledge that could benefit the whole.
-- Allow reading this book during work time -- eg: on Fridays after lunch. This is a company investment for the development of your team. 
-- The book should be read in 3-4 hours -- or a couple of Fridays, depending on the number of pages.
+- Allow reading this book during work time, eg: on Fridays after lunch. This is a company investment for the development of your team. 
+- The book should be read in 3-4 hours, or a couple of Fridays, depending on the number of pages.
 - Don’t wait until the book is finished to talk about it. Follow the progress.
 - You will have great topics to discuss during your next 1:1.
 
@@ -69,11 +82,3 @@ You cannot force people to change. On the contrary, the more you try to force it
 ![footer](/images/blog/2023-08-02/footer.jpg)
 
 > Photos from me at WeAreDevelopers World Congress, Berlin 2023.
-
---- 
-
-### Related posts
-
-- [Great leadership](/blog/great-leadership) <small>Leadership starts within your own life and behaviour</small>
-- [Understanding people](/blog/understanding-people) <small>Misunderstandings, effective communication, and self-reflection</small>
-- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/) <small> How can you work with other teams that aren't agile?</small>

@@ -1,18 +1,22 @@
 +++
 title = "Bitcoin: Blockchain y su investigación"
 description = "How is created Bitcoin address? How does it work the creation of the private & public keys and how are they known as wallets? And many other interesting questions."
-draft = true
+draft = false
+authors = [ "Félix Brezo", "Yaiza Rubio" ]
 [taxonomies]
-tags = [ "bitcoin", "blockchain" ]
+tags = [ "bitcoin", "economics", "philosophy" ]
 [extra]
 subtitle = "Published in 2017, most of the technology shown is already history"
 pages = "200"
 author = "Félix Brezo, Yaiza Rubio"
 static_thumbnail = "https://0xword.com/230-large_default/bitcoin-la-tecnologia-blockchain-y-su-investigacion.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+  "readings/2023-07-10-the-book-of-satoshi.md",
+]
 +++
-
-<img border="0" src="https://0xword.com/230-large_default/bitcoin-la-tecnologia-blockchain-y-su-investigacion.jpg" >
 
 <!-- more -->
 

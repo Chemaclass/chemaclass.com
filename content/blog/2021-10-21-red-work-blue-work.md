@@ -2,13 +2,22 @@
 title = "Red Work vs Blue Work"
 description = "Blue Work and Red Work are concepts that David Marquet describes in his book 'Leadership is Language. Both require different mindsets and both have different languages."
 [taxonomies]
-tags = [ "leadership", "people" ]
+tags = [ "leadership", "team-management", "productivity", "agile" ]
 [extra]
 subtitle = "Managing the two kinds of work"
 static_thumbnail = "/images/blog/2021-10-21/cover.jpg"
+related_posts = [
+  "blog/2022-09-25-the-beauty-of-leadership.md",
+  "blog/2023-02-27-great-leadership.md",
+  "blog/2021-06-01-conformity-experiments.md",
+]
+related_readings = [
+  "readings/2021-10-22-leadership-is-language.md",
+]
+series = "leadership"
+series_order = 2
 +++
 
-![blog-cover](/images/blog/2021-10-21/cover.jpg)
 
 "Blue Work" and "Red Work" are concepts that [David Marquet](https://x.com/ldavidmarquet)
 describes in his book [Leadership is Language](/readings/leadership-is-language/). Both require different mindsets and
@@ -22,7 +31,7 @@ have different languages.
 
 Red Work is about **doing and reducing variability**. Red Work focuses on a proving mindset and a performance mindset.
 
-In Red Work, you seek for completing a task without a lot of need for deciding what or how. Red Work is being in control
+In Red Work, you seek to complete a task without a lot of need for deciding what or how. Red Work is being in control
 and taking control. Such as:
 
 - Process work and avoid errors.

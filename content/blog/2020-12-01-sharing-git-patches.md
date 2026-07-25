@@ -1,14 +1,20 @@
 +++
-title = "Sharing your git patches"
+title = "Sharing Your Git Patches"
 description = "Discover another way of sharing suggestions with your development team."
 [taxonomies]
-tags = [ "software", "sharing", "git", "team" ]
+tags = [ "git", "code-review", "communication", "pair-programming"]
 [extra]
 subtitle = "Another way of sharing quick suggestions with your team"
 static_thumbnail = "/images/blog/2020-12-01/cover.jpg"
+related_posts = [
+  "blog/2021-04-01-pull-request-vs-pair-prog.md",
+  "blog/2025-04-12-ship-show-ask.md",
+]
+related_readings = [
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
-![blog-cover](/images/blog/2020-12-01/cover.jpg)
 
 Discover another way of sharing suggestions with your development team.
 
@@ -27,7 +33,7 @@ Well, there are multiple options. The key is to be aware of them and use them wi
 - We can always do some pair-thinking, talk at any time. Communication is always good in order to clarify the possible uncertainty.
 - Sharing your git patches is another good option.
 
-# Git diff to the rescue!
+## Git diff to the rescue!
 
 What if you (as a reviewer) could share your idea without any single commit or comment in the PR, but sharing your changes directly with the author?
 

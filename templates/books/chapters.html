@@ -1,23 +1,241 @@
 {% extends "blog/index.html" %}
 
-{% import "helpers-preview.html" as helpers_preview %}
+{% import "partials/helpers-preview.html" as helpers_preview %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='page.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
 
 {% block title %}
   Book | Chemaclass
 {% endblock %}
 
 {% block content %}
-  {{ section.content | safe }}
-
-  {% for post in section.pages %}
-    <div class="preview book-preview">
-      <h3 class="book-title">
-        <a href="{{ post.permalink }}">{{ post.title }}</a>
-      </h3>
-      <small>
-        {{ helpers_preview::date_and_words(post=post) }}
-      </small>
+  <div class="book-chapters">
+    <div class="book-chapters__header">
+      <h1>{{ section.title | split(pat=" | ") | first }}</h1>
     </div>
-  {% endfor %}
 
+    <div class="book-chapters__intro">
+      <div class="book-chapters__text">
+        {{ section.content | safe }}
+      </div>
+    </div>
+
+    <div class="book-chapters__search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" id="chapter-search"
+             placeholder="{% if lang == 'es' %}Buscar capítulos por título o contenido...{% else %}Search chapters by title or content...{% endif %}"
+             autocomplete="off" />
+      <span class="book-chapters__search-count" id="chapter-search-count"></span>
+    </div>
+
+    <div class="book-chapters__grid">
+      {% if section.extra.cover %}
+      <div class="chapter-card chapter-card--cover">
+        <div class="chapter-card__image">
+          <img src="{{ section.extra.cover }}" alt="{{ section.title | split(pat=' | ') | first }}" />
+        </div>
+      </div>
+      {% endif %}
+      {% set current_year = "" %}
+      {% for post in section.pages %}
+        {% set filename = post.relative_path | split(pat="/") | last | replace(from=".md", to="") | replace(from=".es", to="") %}
+        {% set chapter_num = filename | split(pat="-") | first %}
+
+        {# Extract year from filename (e.g., "01-2015-marzo" -> "2015") #}
+        {% set parts = filename | split(pat="-") %}
+        {% if parts | length >= 2 %}
+          {% set year = parts[1] %}
+        {% else %}
+          {% set year = "" %}
+        {% endif %}
+
+        {# Year section header #}
+        {% if year != current_year and year is matching("^20[0-9]{2}$") %}
+          {% set_global current_year = year %}
+          <div class="book-chapters__year-section">
+            <h2>{{ year }}</h2>
+          </div>
+        {% endif %}
+
+        {# Determine if this is a December chapter #}
+        {% set is_december = "diciembre" in post.slug %}
+
+        {# Determine if this is a special chapter (prologue/index) #}
+        {% set is_special = chapter_num == "0" %}
+
+        <a href="{{ post.permalink }}"
+           class="chapter-card{% if is_december %} chapter-card--december{% endif %}{% if is_special %} chapter-card--special{% endif %}"
+           data-search-text="{{ post.title }} {{ post.content | striptags }}">
+          <div class="chapter-card__image{% if chapter_num == '0' %} chapter-card__image--placeholder{% endif %}">
+            {% if chapter_num != "0" %}
+              <img src="/images/books/oeur/{{ chapter_num }}.jpg" alt="{{ post.title }}" loading="lazy" />
+            {% else %}
+              <i class="fa-solid fa-book-open"></i>
+            {% endif %}
+            {% if chapter_num != "0" %}
+              <span class="chapter-card__number">{{ chapter_num | int }}</span>
+            {% endif %}
+          </div>
+          <div class="chapter-card__content">
+            <h3 class="chapter-card__title">{{ post.title }}</h3>
+            {% if is_special and post.extra.subtitle %}
+              <span class="chapter-card__subtitle">{{ post.extra.subtitle }}</span>
+            {% endif %}
+            {# Only show month for regular chapters (not special pages) #}
+            {% if chapter_num != "0" and parts | length >= 3 %}
+              <span class="chapter-card__month">{{ parts[2] | capitalize }}</span>
+            {% endif %}
+            {% if post.word_count %}
+              <span class="chapter-card__poems">
+                <i class="fa-solid fa-feather"></i>
+                {{ post.word_count }} {% if lang == "es" %}palabras{% else %}words{% endif %}
+              </span>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+
+      <div class="book-chapters__no-results" id="chapter-no-results" style="display:none">
+        {% if lang == "es" %}No se encontraron capítulos{% else %}No chapters found{% endif %}
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    var input = document.getElementById('chapter-search');
+    if (!input) return;
+
+    var grid = document.querySelector('.book-chapters__grid');
+    var cards = Array.from(grid.querySelectorAll('a.chapter-card'));
+    var yearSections = Array.from(grid.querySelectorAll('.book-chapters__year-section'));
+    var noResults = document.getElementById('chapter-no-results');
+    var countEl = document.getElementById('chapter-search-count');
+    var totalChapters = cards.length;
+
+    function normalize(str) {
+      return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
+    var cardData = cards.map(function(card) {
+      var fullText = card.dataset.searchText || '';
+      var title = (card.querySelector('.chapter-card__title') || {}).textContent || '';
+      var body = fullText.substring(title.length).trim();
+      return {
+        el: card,
+        text: normalize(fullText),
+        body: body,
+        normalizedBody: normalize(body),
+        contentEl: card.querySelector('.chapter-card__content')
+      };
+    });
+
+    function getSnippet(body, normalizedBody, tokens) {
+      if (!body) return '';
+
+      var hasBodyMatch = tokens.some(function(t) { return normalizedBody.includes(t); });
+      if (!hasBodyMatch) return '';
+
+      // Find earliest token match position
+      var bestIdx = normalizedBody.length;
+      tokens.forEach(function(t) {
+        var idx = normalizedBody.indexOf(t);
+        if (idx !== -1 && idx < bestIdx) bestIdx = idx;
+      });
+
+      // Extract a window around the match (position mapping is ~1:1 for Spanish text)
+      var start = Math.max(0, bestIdx - 50);
+      var end = Math.min(body.length, bestIdx + 80);
+
+      // Snap to word boundaries
+      if (start > 0) {
+        var ws = body.indexOf(' ', start);
+        if (ws !== -1 && ws - start < 15) start = ws + 1;
+      }
+      if (end < body.length) {
+        var ws = body.lastIndexOf(' ', end);
+        if (ws !== -1 && end - ws < 15) end = ws;
+      }
+
+      var snippet = body.substring(start, end).trim().replace(/^[,;:\s]+/, '');
+      var prefix = start > 0 ? '…' : '';
+      var suffix = end < body.length ? '…' : '';
+
+      // Highlight words that contain a matched token
+      snippet = snippet.replace(/\S+/g, function(word) {
+        var nWord = normalize(word);
+        var matched = tokens.some(function(t) { return nWord.includes(t); });
+        return matched ? '<b>' + word + '</b>' : word;
+      });
+
+      return prefix + snippet + suffix;
+    }
+
+    function clearSnippets() {
+      cardData.forEach(function(item) {
+        var el = item.contentEl.querySelector('.chapter-card__snippet');
+        if (el) el.remove();
+      });
+    }
+
+    input.addEventListener('input', function() {
+      var raw = this.value.trim();
+      var query = normalize(raw);
+
+      clearSnippets();
+
+      if (!query) {
+        cards.forEach(function(c) { c.style.display = ''; });
+        yearSections.forEach(function(y) { y.style.display = ''; });
+        noResults.style.display = 'none';
+        countEl.textContent = '';
+        return;
+      }
+
+      var tokens = query.split(/\s+/).filter(Boolean);
+      var visible = 0;
+
+      cardData.forEach(function(item) {
+        var match = tokens.every(function(t) { return item.text.includes(t); });
+        item.el.style.display = match ? '' : 'none';
+        if (match) {
+          visible++;
+          var snippet = getSnippet(item.body, item.normalizedBody, tokens);
+          if (snippet) {
+            var el = document.createElement('div');
+            el.className = 'chapter-card__snippet';
+            el.innerHTML = snippet;
+            item.contentEl.appendChild(el);
+          }
+        }
+      });
+
+      yearSections.forEach(function(section) {
+        var next = section.nextElementSibling;
+        var hasVisible = false;
+        while (next && !next.classList.contains('book-chapters__year-section') && next.id !== 'chapter-no-results') {
+          if (next.tagName === 'A' && next.classList.contains('chapter-card') && next.style.display !== 'none') {
+            hasVisible = true;
+            break;
+          }
+          next = next.nextElementSibling;
+        }
+        section.style.display = hasVisible ? '' : 'none';
+      });
+
+      noResults.style.display = visible === 0 ? '' : 'none';
+      countEl.textContent = visible > 0 && visible < totalChapters
+        ? visible + ' / ' + totalChapters
+        : '';
+    });
+  })();
+  </script>
 {% endblock %}

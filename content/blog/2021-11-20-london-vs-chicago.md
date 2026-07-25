@@ -2,13 +2,22 @@
 title = "London vs Chicago"
 description = "There are two known schools in TDD: the mockist school (aka Outside-in) and the classicist school (aka Inside-out)."
 [taxonomies]
-tags = [ "tdd", "software" ]
+tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
 subtitle = "It's an integration, not a choice"
 static_thumbnail = "/images/blog/2021-11-20/cover.jpg"
+related_posts = [
+  "blog/2021-08-01-test-driven-development.md",
+  "blog/2021-09-25-tdd-vs-bdd.md",
+]
+related_readings = [
+  "readings/2022-07-11-clean-craftsmanship.md",
+  "readings/2022-06-29-modern-software-engineering.md",
+]
+series = "craftsmanship"
+series_order = 5
 +++
 
-![blog-cover](/images/blog/2021-11-20/cover.jpg)
 
 There are two known schools in TDD: the mockist school (aka Outside-in) and the classicist school (aka Inside-out).
 
@@ -21,7 +30,7 @@ The London company was building software from outside-in, while the Chicago comp
 
 ## Outside-in: London School
 
-It provides a behavior-driven approach to TDD. Starting from the outside of the application and working in moving to
+It provides a behavior-driven approach to TDD. Starting from the outside of the application and working inwards to
 lower layers. For example, starting from the API/Controllers down to the application or domain layers.
 
 ### PROS
@@ -41,7 +50,7 @@ lower layers. For example, starting from the API/Controllers down to the applica
 ## Inside-out: Chicago School
 
 It's an informal, exploratory, state-based approach of TDD. Starting from the inside of the application (usually the
-domain) and works out towards the APIs.
+domain) and working out towards the APIs.
 
 ### PROS
 

@@ -1,18 +1,23 @@
 +++
 title = "The Book Of Satoshi"
-description = "The Collected Writings of Bitcoin Creator Satoshi Nakamoto"
+description = "A compilation of Satoshi Nakamoto's emails, forum posts, and writings from 2008-2010 that detail Bitcoin's creation, design decisions, and the vision behind the protocol."
 draft = false
+authors = [ "Phil Champagne" ]
 [taxonomies]
-tags = [ "bitcoin", "history" ]
+tags = [ "bitcoin", "economics", "philosophy" ]
 [extra]
 subtitle = "The Collected Writings of Bitcoin Creator Satoshi Nakamoto"
 pages = "350"
 author = "Phil Champagne"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1404481980i/22619661.jpg"
 expand_preview = false
+related_readings = [
+  "readings/2021-09-20-the-bitcoin-standard.md",
+  "readings/2023-06-20-the-blocksize-war.md",
+  "readings/2024-06-21-the-genesis-book.md",
+  "readings/2024-07-05-mastering-bitcoin.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1404481980i/22619661.jpg" >
 
 <!-- more -->
 
@@ -29,12 +34,3 @@ Beginning on November 1st 2009 with the publication of the seminal paper describ
 Nakamoto's true identity may never be known. Therefore the writings reproduced here are probably all the world will ever hear from him concerning Bitcoin's creation, workings, and theoretical basis. Want to learn more about Bitcoin? Go directly to the source-the writings of the creator himself, Satoshi Nakamoto.
 
 {{ youtube(id="kaBmAV5DaXI") }}
-
----
-
-### Related readings
-
-- [The Genesis Book](/readings/the-genesis-book/) <small>by Aaron van Wirdum</small>
-- [The Bitcoin Standard](/readings/the-bitcoin-standard/) <small>by Saifedean Ammous</small>
-- [The Blocksize War](/readings/the-blocksize-war/) <small>by Jonathan Bier</small>
-- [Mastering Bitcoin](/readings/mastering-bitcoin/) <small>by Andreas M. Antonopoulos, David A. Harding</small>

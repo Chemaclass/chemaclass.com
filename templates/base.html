@@ -1,6 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
   <head>
+    <script>
+      // Apply theme immediately to prevent flash
+      (function() {
+        if (localStorage.theme === 'dark') {
+          document.documentElement.classList.add('theme-dark');
+          document.documentElement.setAttribute('color-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('color-theme', 'light');
+        }
+      })();
+    </script>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta
@@ -9,6 +20,20 @@
     />
 
     <meta name="theme-color" content="{{ config.extra.accent }}" />
+    <meta name="author" content="{{ config.author }}">
+    {% if paginator and paginator.current_index and paginator.current_index > 1 %}
+    <meta name="robots" content="noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    {% else %}
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    {% endif %}
+    <link rel="manifest" href="/manifest.json" />
+
+    {% if config.extra.google_site_verification %}
+    <meta name="google-site-verification" content="{{ config.extra.google_site_verification }}">
+    {% endif %}
+    {% if config.extra.bing_site_verification %}
+    <meta name="msvalidate.01" content="{{ config.extra.bing_site_verification }}">
+    {% endif %}
 
     {% if config.extra.profile_small %}
       {% set icon = resize_image(path=config.extra.profile_small, width=48, height=48, op="fill") -%}
@@ -19,45 +44,263 @@
       {% endfor %}
     {% endif %}
 
-    {% set gtag = get_env(name="GTAG", default=false) %}
-    {% if gtag %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ gtag }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ gtag }}');
-      </script>
+
+    <!-- DNS prefetch + preconnect for outbound link targets -->
+    <link rel="dns-prefetch" href="https://github.com">
+    <link rel="dns-prefetch" href="https://x.com">
+    <link rel="dns-prefetch" href="https://www.linkedin.com">
+    <link rel="dns-prefetch" href="https://www.youtube-nocookie.com">
+
+    <!-- Preload only above-the-fold fonts; FontAwesome icons sit below the hero, so preloading them stole bandwidth from the LCP image -->
+    <link rel="preload" href="/fonts/rubik-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/rubik-500.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Inline critical font-face to prevent FOUT -->
+    <style>
+      @font-face {
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 400;
+        font-display: optional;
+        src: local("Rubik"), url("/fonts/rubik-regular.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 500;
+        font-display: optional;
+        src: local("Rubik Medium"), url("/fonts/rubik-500.woff2") format("woff2");
+      }
+      /* Reserve navbar height to prevent layout shift */
+      .site-header { min-height: 56px; }
+    </style>
+
+    {% set rum_key = get_env(name="RUM_KEY", default=false) %}
+    {% if rum_key %}
+    <link rel="preconnect" href="https://rum.cronitor.io" crossorigin>
+    <script async src="https://rum.cronitor.io/script.js"></script>
+    <script>
+      window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+      if (!localStorage.getItem('cronitor_exclude')) {
+        cronitor('config', { clientKey: '{{rum_key}}' });
+      }
+
+      // Track outbound link clicks
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[href]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        if (href && href.startsWith('http') && !href.includes(location.hostname)) {
+          cronitor('track', 'OutboundClick', { url: href });
+        }
+      });
+
+      // Track language switches
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a.lang-switch');
+        if (!link) return;
+        var target = link.textContent.trim();
+        cronitor('track', 'LanguageSwitch', { to: target });
+      });
+    </script>
     {% endif %}
 
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "{{ config.base_url | safe }}/#organization",
+      "name": "Chemaclass",
+      "url": "{{ config.base_url | safe }}",
+      "description": "{{ config.description }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ get_url(path=config.extra.icon) | safe }}"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Jose Maria Valera Reales"
+      },
+      "sameAs": [
+        "https://x.com/Chemaclass",
+        "https://github.com/Chemaclass",
+        "https://www.linkedin.com/in/jose-maria-valera-reales/"
+      ]
+    }
+    </script>
+
+    <!-- WebSite Schema with SearchAction (enables sitelinks search box) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "{{ config.title }}",
+      "url": "{{ config.base_url | safe }}",
+      "inLanguage": ["en", "es"],
+      "description": "{{ config.description }}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Chemaclass",
+        "url": "{{ config.base_url | safe }}"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "{{ config.base_url | safe }}/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Person Schema (author identity) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "{{ config.base_url | safe }}/#person",
+      "name": "Jose Maria Valera Reales",
+      "alternateName": "Chemaclass",
+      "url": "{{ config.base_url | safe }}",
+      "image": "{{ get_url(path=config.extra.icon) | safe }}",
+      "jobTitle": "Product Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Kombo"
+      },
+      "sameAs": [
+        "https://x.com/Chemaclass",
+        "https://github.com/Chemaclass",
+        "https://www.linkedin.com/in/jose-maria-valera-reales/"
+      ]
+    }
+    </script>
+
+    {% if page %}
+    <meta property="og:type" content="article">
+    {% if page.date %}
+    <meta property="article:published_time" content="{{ page.date | date(format='%+') }}">
+    <meta property="article:modified_time" content="{% if page.updated %}{{ page.updated | date(format='%+') }}{% else %}{{ page.date | date(format='%+') }}{% endif %}">
+    {% endif %}
+    <meta property="article:author" content="{{ config.author }}">
+    {% if page.taxonomies.tags %}
+    <meta property="article:section" content="{{ page.taxonomies.tags.0 }}">
+    {% for tag in page.taxonomies.tags %}
+    <meta property="article:tag" content="{{ tag }}">
+    {% endfor %}
+    {% endif %}
+    {% else %}
     <meta property="og:type" content="website">
+    {% endif %}
+    <meta property="og:site_name" content="{{ config.title }}">
 
-    <meta name="twitter:card" content="summary">
-
-    {% if config.twitter %}
-      <meta name="twitter:creator" content="@{{ config.twitter }}">
-      <meta name="twitter:site" content="@{{ config.twitter }}">
+    <!-- Open Graph title and description -->
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}">
+    {% else %}
+    <meta property="og:title" content="{{ config.title }}">
+    {% endif %}
+    {% if page.description %}
+    <meta property="og:description" content="{{ page.description }}">
+    {% elif section.description %}
+    <meta property="og:description" content="{{ section.description }}">
+    {% elif page.summary %}
+    <meta property="og:description" content="{{ page.summary | striptags | trim | truncate(length=200) }}">
+    {% elif page.content %}
+    <meta property="og:description" content="{{ page.content | striptags | trim | truncate(length=200) }}">
+    {% else %}
+    <meta property="og:description" content="{{ config.description }}">
     {% endif %}
 
+    <!-- Open Graph locale -->
+    <meta property="og:locale" content="{% if lang == 'es' %}es_ES{% else %}en_US{% endif %}">
+    {% if lang == 'es' %}
+    <meta property="og:locale:alternate" content="en_US">
+    {% else %}
+    <meta property="og:locale:alternate" content="es_ES">
+    {% endif %}
+
+    {# Resolve a single share image with honest dimensions. External book covers (readings) are
+       portrait and can't be measured remotely, so we skip fake dimensions; cover-less pages fall
+       back to the 1.91:1 banner instead of the near-square avatar. #}
+    {% set og_image = "" %}
+    {% set og_w = 0 %}
+    {% set og_h = 0 %}
+    {% set og_external = false %}
     {% if page.extra.thumbnail %}
-      <meta property="og:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail) }}">
+      {% set og_src = page.path ~ page.extra.thumbnail %}
+      {% set og_image = get_url(path=og_src) %}
+      {% set m = get_image_metadata(path=og_src, allow_missing=true) %}
+      {% if m %}{% set og_w = m.width %}{% set og_h = m.height %}{% endif %}
     {% elif page.extra.static_thumbnail %}
-      {%if page.extra.static_thumbnail is matching("^http[s]?://") %}
-        <meta property="og:image" content="{{ page.extra.static_thumbnail | safe}}">
+      {% if page.extra.static_thumbnail is matching("^http[s]?://") %}
+        {% set og_image = page.extra.static_thumbnail %}
+        {% set og_external = true %}
       {% else %}
-        <meta property="og:image" content="{{ get_url(path=page.extra.static_thumbnail) }}">
+        {% set og_src = page.extra.static_thumbnail | trim_start_matches(pat="/") %}
+        {% set og_image = get_url(path=page.extra.static_thumbnail) %}
+        {% set m = get_image_metadata(path=og_src, allow_missing=true) %}
+        {% if m %}{% set og_w = m.width %}{% set og_h = m.height %}{% endif %}
       {% endif %}
-    {% elif config.extra.default_og_image %}
-        <meta property="og:image" content="{{ get_url(path=config.extra.default_og_image) }}">
+    {% else %}
+      {% set og_banner = resize_image(path="banner.jpg", width=1200, height=630, op="fill", format="jpeg", quality=82) %}
+      {% set og_image = og_banner.url %}
+      {% set og_w = 1200 %}
+      {% set og_h = 630 %}
     {% endif %}
+
+    {% set og_type = "image/jpeg" %}
+    {% if og_image is matching("(?i)\.png($|\?)") %}{% set og_type = "image/png" %}
+    {% elif og_image is matching("(?i)\.webp($|\?)") %}{% set og_type = "image/webp" %}
+    {% elif og_image is matching("(?i)\.gif($|\?)") %}{% set og_type = "image/gif" %}{% endif %}
+
+    {# Wide images get the large card; portrait/square (book covers, avatars) get the compact one #}
+    {% if og_external or (og_w > 0 and og_w < og_h * 1.5) %}
+    <meta name="twitter:card" content="summary">
+    {% else %}
+    <meta name="twitter:card" content="summary_large_image">
+    {% endif %}
+
+    {% if config.extra.twitter %}
+    <meta name="twitter:creator" content="@{{ config.extra.twitter }}">
+    <meta name="twitter:site" content="@{{ config.extra.twitter }}">
+    {% endif %}
+
+    {% set og_alt = page.title | default(value=config.title) %}
+    <meta property="og:image" content="{{ og_image | safe }}">
+    <meta property="og:image:secure_url" content="{{ og_image | safe }}">
+    {% if og_w > 0 and og_h > 0 %}
+    <meta property="og:image:width" content="{{ og_w }}">
+    <meta property="og:image:height" content="{{ og_h }}">
+    {% endif %}
+    <meta property="og:image:type" content="{{ og_type | safe }}">
+    <meta property="og:image:alt" content="{{ og_alt }}">
+    <meta name="twitter:image" content="{{ og_image | safe }}">
+    <meta name="twitter:image:alt" content="{{ og_alt }}">
 
     {% block description %}
       {% if page.description %}
         <meta name="description" content="{{ page.description }}" />
         <meta name="twitter:description" content="{{ page.description }}">
+      {% elif section.description %}
+        <meta name="description" content="{{ section.description }}" />
+        <meta name="twitter:description" content="{{ section.description }}">
+      {% elif page.summary %}
+        {% set fallback_desc = page.summary | striptags | trim | truncate(length=200) %}
+        <meta name="description" content="{{ fallback_desc }}" />
+        <meta name="twitter:description" content="{{ fallback_desc }}">
+      {% elif page.content %}
+        {% set fallback_desc = page.content | striptags | trim | truncate(length=200) %}
+        <meta name="description" content="{{ fallback_desc }}" />
+        <meta name="twitter:description" content="{{ fallback_desc }}">
       {% else %}
         <meta name="description" content="{{ config.description }}" />
-        <meta name="twitter:description" content="{{ config.description}}">
+        <meta name="twitter:description" content="{{ config.description }}">
+      {% endif %}
+      {% if page.taxonomies.tags %}
+        <meta name="keywords" content="{{ page.taxonomies.tags | join(sep=', ') }}">
       {% endif %}
     {% endblock description %}
 
@@ -68,7 +311,7 @@
     {% endif %}
 
     {% for link in config.extra.nav %}
-      <link rel="prerender" href="{{ link.path }}" />
+      <link rel="prefetch" href="{{ link.path }}" />
     {% endfor %}
 
     {% set icon = resize_image(path=config.extra.profile_small, width=50, height=50, op="fill") -%}
@@ -77,56 +320,411 @@
     <title>
       {% block title %}
         {% if page.title %}
-          {{ page.title }}
+          {{ page.title }} | {{ config.title }}
+        {% elif section.title %}
+          {{ section.title }}
         {% else %}
           {{ config.title }}
         {% endif %}
       {% endblock title %}
     </title>
 
+    {% if page.permalink %}
+      <link rel="canonical" href="{{ page.permalink | safe }}" />
+      <meta property="og:url" content="{{ page.permalink | safe }}" />
+    {% elif section.permalink %}
+      <link rel="canonical" href="{{ section.permalink | safe }}" />
+      <meta property="og:url" content="{{ section.permalink | safe }}" />
+    {% else %}
+      <link rel="canonical" href="{{ config.base_url | safe }}" />
+      <meta property="og:url" content="{{ config.base_url | safe }}" />
+    {% endif %}
+
+    <!-- Hreflang for multilingual support -->
+    {% if page.translations %}
+      {# page.translations already includes this page, so the loop emits the self link too #}
+      {% for t in page.translations %}
+        <link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.permalink | safe }}" />
+      {% endfor %}
+      {% if lang == "en" %}
+        <link rel="alternate" hreflang="x-default" href="{{ page.permalink | safe }}" />
+      {% else %}
+        {% for t in page.translations %}{% if t.lang == "en" %}
+          <link rel="alternate" hreflang="x-default" href="{{ t.permalink | safe }}" />
+        {% endif %}{% endfor %}
+      {% endif %}
+    {% elif section.translations %}
+      {% for t in section.translations %}
+        <link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.permalink | safe }}" />
+      {% endfor %}
+      {% if lang == "en" %}
+        <link rel="alternate" hreflang="x-default" href="{{ section.permalink | safe }}" />
+      {% else %}
+        {% for t in section.translations %}{% if t.lang == "en" %}
+          <link rel="alternate" hreflang="x-default" href="{{ t.permalink | safe }}" />
+        {% endif %}{% endfor %}
+      {% endif %}
+    {% elif page.permalink %}
+      {% if lang == "es" %}
+        <link rel="alternate" hreflang="es" href="{{ page.permalink | safe }}" />
+        <link rel="alternate" hreflang="en" href="{{ page.permalink | replace(from="/es/", to="/") | safe }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ page.permalink | replace(from="/es/", to="/") | safe }}" />
+      {% else %}
+        <link rel="alternate" hreflang="en" href="{{ page.permalink | safe }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ page.permalink | safe }}" />
+      {% endif %}
+    {% elif section.permalink %}
+      {% if lang == "es" %}
+        <link rel="alternate" hreflang="es" href="{{ section.permalink | safe }}" />
+        <link rel="alternate" hreflang="en" href="{{ section.permalink | replace(from="/es/", to="/") | safe }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ section.permalink | replace(from="/es/", to="/") | safe }}" />
+      {% else %}
+        <link rel="alternate" hreflang="en" href="{{ section.permalink | safe }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ section.permalink | safe }}" />
+      {% endif %}
+    {% endif %}
+
     {% block head %}
-      <script src="https://kit.fontawesome.com/cfd779d106.js" crossorigin="anonymous"></script>
+      <link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="/css/fontawesome.min.css"></noscript>
     {% endblock head %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
-      <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
-      <link rel="stylesheet" href="{{ get_url(path='sponsor.css') | safe }}">
+      <link rel="stylesheet" href="{{ get_url(path='page.css') | safe }}">
+      <link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" href="{{ get_url(path='sponsor.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+        <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+        <link rel="stylesheet" href="{{ get_url(path='sponsor.css') | safe }}">
+        <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+      </noscript>
     {% endblock styles %}
     {% block rss %}
-      <link rel="alternate" type="application/atom+xml" href="{{ get_url(path='atom.xml') | safe }}" title="Atom Feed">
+      <link rel="alternate" type="application/atom+xml" hreflang="en" href="{{ get_url(path='atom.xml') | safe }}" title="Atom Feed (EN)">
+      <link rel="alternate" type="application/atom+xml" hreflang="es" href="{{ get_url(path='es/atom.xml') | safe }}" title="Atom Feed (ES)">
+      <link rel="author" href="{{ config.base_url | safe }}/humans.txt">
     {% endblock rss %}
     {% block posthead %}{% endblock posthead %}
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     {% block header %}
-      <header>
-        <a class="profile-icon" href="/">
-          <img src="{{ icon.url }}" alt="profile picture">
+      <header class="site-header">
+        {% set cp_home = current_path | default(value="") %}
+        {% set is_home = cp_home == "/" or cp_home == "/es/" %}
+        <a class="header-left{% if is_home %} header-left--no-avatar{% endif %}" href="{% if lang == 'es' %}/es/{% else %}/{% endif %}">
+          {% if not is_home %}
+          <span class="profile-icon">
+            {% set nav_icon = resize_image(path=config.extra.profile_small, width=36, height=36, op="fill") %}
+            <img src="{{ nav_icon.url }}" alt="Chemaclass" />
+          </span>
+          <span class="site-title">Chemaclass</span>
+          {% endif %}
         </a>
-        <nav>
-          {% for link in config.extra.nav %}
-            <a href="{{ link.path }}" {% if link.id %}id="{{ link.id }}"{% endif %}>{{ link.name }}</a>
-          {% endfor %}
+
+        <nav class="navbar">
+          <button class="hamburger" aria-label="Menu" aria-expanded="false" onclick="toggleMobileMenu(event)">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-links">
+            {% set cp = current_path | default(value="/") %}
+            {% if lang == "es" %}
+              <a href="/es/blog/"{% if cp is starting_with("/es/blog/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_blog", lang=lang) }}</a>
+              <a href="/es/readings/"{% if cp is starting_with("/es/readings/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_readings", lang=lang) }}</a>
+            {% else %}
+              <a href="/blog/"{% if cp is starting_with("/blog/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_blog", lang=lang) }}</a>
+              <a href="/readings/"{% if cp is starting_with("/readings/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_readings", lang=lang) }}</a>
+            {% endif %}
+            <div class="nav-utilities">
+              {% set profile_href = '/profile/' %}{% if lang == 'es' %}{% set profile_href = '/es/profile/' %}{% endif %}
+              <a href="{{ profile_href }}" class="profile-link{% if cp is starting_with(profile_href) %} nav-active{% endif %}"{% if cp is starting_with(profile_href) %} aria-current="page"{% endif %} title="{{ trans(key="nav_profile", lang=lang) }}" aria-label="{{ trans(key="nav_profile", lang=lang) }}">
+                <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--body-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="4"></circle>
+                  <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+                </svg>
+              </a>
+              <button id="search-toggle" onclick="toggleSearch()" aria-expanded="false" aria-controls="search-overlay" title="{{ trans(key="search_toggle_title", lang=lang) }}" aria-label="{{ trans(key="search_toggle_title", lang=lang) }}">
+                <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--body-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+              </button>
+              <button id="light-mode" onclick="toDarkMode()" title="{{ trans(key="search_light_title", lang=lang) }}" aria-label="{{ trans(key="search_light_title", lang=lang) }}">
+                <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--body-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+                </svg>
+              </button>
+              <button id="dark-mode" onclick="toLightMode()" title="{{ trans(key="search_dark_title", lang=lang) }}" aria-label="{{ trans(key="search_dark_title", lang=lang) }}">
+                <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--body-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2v2"></path>
+                  <path d="M12 20v2"></path>
+                  <path d="m4.93 4.93 1.41 1.41"></path>
+                  <path d="m17.66 17.66 1.41 1.41"></path>
+                  <path d="M2 12h2"></path>
+                  <path d="M20 12h2"></path>
+                  <path d="m6.34 17.66-1.41 1.41"></path>
+                  <path d="m19.07 4.93-1.41 1.41"></path>
+                </svg>
+              </button>
+              {% if current_path is defined %}
+                {% if lang == "es" %}
+                  <a href="{{ current_path | replace(from='/es/', to='/') }}" class="lang-switch" title="{{ trans(key="lang_switch_en_title", lang=lang) }}">EN</a>
+                {% else %}
+                  <a href="/es{{ current_path }}" class="lang-switch" title="{{ trans(key="lang_switch_es_title", lang=lang) }}">ES</a>
+                {% endif %}
+              {% else %}
+                {% if lang == "es" %}
+                  <a href="/" class="lang-switch" title="{{ trans(key="lang_switch_en_title", lang=lang) }}">EN</a>
+                {% else %}
+                  <a href="/es/" class="lang-switch" title="{{ trans(key="lang_switch_es_title", lang=lang) }}">ES</a>
+                {% endif %}
+              {% endif %}
+            </div>
+          </div>
         </nav>
+
+        <!-- Mobile menu backdrop -->
+        <div class="nav-backdrop" id="nav-backdrop" onclick="closeMobileMenu()"></div>
+
+        <!-- Search overlay -->
+        <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Site search">
+          <div class="search-overlay__container search-container">
+            <div class="search-overlay__input-wrapper">
+              <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+              <input type="search" id="site-search" name="search" class="search" autocomplete="off" placeholder="{{ trans(key="search_placeholder", lang=lang) }}" aria-label="{{ trans(key="search_placeholder", lang=lang) }}">
+              <button class="search-overlay__close" onclick="closeSearch()" aria-label="Close search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="search-results">
+              <div class="search-results__header">
+                <span class="search-results__count"></span>
+              </div>
+              <div class="search-results__items"></div>
+            </div>
+          </div>
+        </div>
+
       </header>
     {% endblock header %}
 
-    <main>
-    {% block content %} {% endblock content %}
+    <main id="main-content">
+        <div id="scroll-to-top" class="hidden">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/>
+            </svg>
+        </div>
+      {% block content %} {% endblock content %}
     </main>
 
-    <footer id="footer-page">
-      <a href="{{ get_url(path='atom.xml') | safe }}"><i class="fa fa-rss dark-hover" aria-hidden="true"></i> RSS</a>
-      | <a href="/sponsor"><i class="fa fa-magic dark-hover" aria-hidden="true"></i> Sponsor</a>
-      © <time datetime="{{now() | date(format='%Y')}}">{{now() | date(format="%Y")}}</time>
-      <div class="phone-footer-about"></div>
-      <span class="tooltip"
-        data-tooltip-pos="top"
-        data-tooltip="PGP: E51B 5BF4 5F85 D160">Chema</span>
-      - Jose M. Valera Reales
+    <footer class="page-footer">
+      {% set home_url = '/' %}{% if lang == 'es' %}{% set home_url = '/es/' %}{% endif %}
+      {% set lp = '' %}{% if lang == 'es' %}{% set lp = '/es' %}{% endif %}
+      <div class="page-footer__container">
+        <div class="page-footer__brand">
+          <a href="{{ home_url }}" class="page-footer__brand-link">
+            {% set footer_icon = resize_image(path=config.extra.profile_small, width=40, height=40, op="fill") %}
+            <img src="{{ footer_icon.url }}" alt="Chemaclass" width="32" height="32" />
+            <span>Chemaclass</span>
+          </a>
+          <p class="page-footer__tagline">{{ trans(key="footer_tagline", lang=lang) }}</p>
+          <div class="page-footer__social">
+            <a href="https://github.com/Chemaclass" target="_blank" rel="me noopener" class="page-footer__social-link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://x.com/Chemaclass" target="_blank" rel="me noopener" class="page-footer__social-link" aria-label="X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="me noopener" class="page-footer__social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="{% if lang == 'es' %}{{ get_url(path='es/atom.xml') | safe }}{% else %}{{ get_url(path='atom.xml') | safe }}{% endif %}" class="page-footer__social-link" aria-label="RSS">
+              <i class="fa-solid fa-rss"></i>
+            </a>
+          </div>
+        </div>
+
+        <nav class="page-footer__nav" aria-label="Footer">
+          <div class="page-footer__col">
+            <h3 class="page-footer__col-title">{{ trans(key="footer_col_explore", lang=lang) }}</h3>
+            <ul class="page-footer__list">
+              <li><a href="{{ lp }}/blog/">{{ trans(key="nav_blog", lang=lang) }}</a></li>
+              <li><a href="{{ lp }}/readings/">{{ trans(key="nav_readings", lang=lang) }}</a></li>
+              <li><a href="{{ lp }}/topics/">{{ trans(key="nav_topics", lang=lang) }}</a></li>
+            </ul>
+          </div>
+
+          <div class="page-footer__col">
+            <h3 class="page-footer__col-title">{{ trans(key="footer_col_creative", lang=lang) }}</h3>
+            <ul class="page-footer__list">
+              <li><a href="{{ lp }}/talks/">{{ trans(key="nav_talks", lang=lang) }}</a></li>
+              <li><a href="{{ lp }}/books/">{{ trans(key="nav_books", lang=lang) }}</a></li>
+              <li><a href="/music/">{{ trans(key="nav_music", lang=lang) }}</a></li>
+            </ul>
+          </div>
+
+          <div class="page-footer__col">
+            <h3 class="page-footer__col-title">{{ trans(key="footer_col_about", lang=lang) }}</h3>
+            <ul class="page-footer__list">
+              <li><a href="{{ lp }}/cv/">{{ trans(key="nav_cv", lang=lang) }}</a></li>
+              <li><a href="{{ lp }}/services/">{{ trans(key="nav_services", lang=lang) }}</a></li>
+              <li><a href="{{ lp }}/sponsor/">{{ trans(key="nav_sponsor_cta", lang=lang) }}</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="page-footer__bottom">
+        <span class="page-footer__copyright">
+          © <time datetime="{{now() | date(format='%Y')}}">{{now() | date(format="%Y")}}</time> Jose M. Valera Reales
+        </span>
+        <a href="{{ lp }}/legal/" class="page-footer__legal">{{ trans(key="nav_legal", lang=lang) }}</a>
+      </div>
     </footer>
 
-    <script src="{{ get_url(path="js/theme.js") | safe }}"></script>
+    <script>
+      // Inline dark-mode.js to eliminate network request
+      window.toDarkMode = function() {
+        localStorage.theme = "dark";
+        localStorage.setItem('preference-theme', "theme-dark");
+        window.updateTheme();
+      }
+      window.toLightMode = function() {
+        localStorage.theme = "light";
+        localStorage.setItem('preference-theme', "theme-light");
+        window.updateTheme();
+      }
+      function updateTheme() {
+        if (localStorage.theme === 'dark') {
+          document.documentElement.classList.add('theme-dark');
+          document.documentElement.setAttribute('color-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('theme-dark');
+          document.documentElement.setAttribute('color-theme', 'light');
+        }
+      }
+      updateTheme();
+
+      // Keyboard shortcut: D to toggle theme
+      document.addEventListener('keydown', function(e) {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+        if (e.key === 'd' || e.key === 'D') {
+          e.preventDefault();
+          const isDark = document.documentElement.classList.contains('theme-dark');
+          isDark ? toLightMode() : toDarkMode();
+        }
+      });
+    </script>
+    <script type="text/javascript" src="{{ get_url(path='scroll.js') }}" defer></script>
+    <script type="text/javascript" src="{{ get_url(path='reading-streak.js') }}" defer></script>
+    <script type="text/javascript" src="{{ get_url(path='favorites.js') }}" defer></script>
+    <script>
+      // Lazy-load search scripts (uses template URLs, must stay inline)
+      let searchLoaded = false;
+      let searchReady = false;
+      function loadSearch() {
+        if (searchLoaded) return;
+        searchLoaded = true;
+        const el = document.createElement('script');
+        el.src = "{{ get_url(path='elasticlunr.min.js') }}";
+        el.onload = function() {
+          const s = document.createElement('script');
+          s.src = "{{ get_url(path='search.js') }}";
+          s.onload = function() {
+            searchReady = true;
+            document.dispatchEvent(new CustomEvent('search-ready'));
+          };
+          document.body.appendChild(s);
+        };
+        document.body.appendChild(el);
+      }
+      document.getElementById('site-search')?.addEventListener('focus', loadSearch, {once: true});
+
+      // Open search overlay automatically when URL has ?q=term
+      (function autoSearchFromQuery() {
+        function run() {
+          const params = new URLSearchParams(window.location.search);
+          const q = (params.get('q') || '').trim().slice(0, 200);
+          if (!q) return;
+          const input = document.getElementById('site-search');
+          if (!input || typeof toggleSearch !== 'function') return;
+          input.value = q;
+          toggleSearch();
+          const fire = function() {
+            input.dispatchEvent(new KeyboardEvent('keyup', { key: 'a' }));
+          };
+          if (searchReady) {
+            fire();
+          } else {
+            document.addEventListener('search-ready', fire, { once: true });
+          }
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', run);
+        } else {
+          run();
+        }
+      })();
+    </script>
+    <script type="text/javascript" src="{{ get_url(path='easter-67.js') }}" defer></script>
+    <script type="text/javascript" src="{{ get_url(path='navigation.js') }}" defer></script>
+    {% block highlights %}{% endblock highlights %}
+
+    <!-- Keyboard shortcuts help modal (native dialog) -->
+    <dialog id="shortcuts-dialog" class="shortcuts-dialog">
+      <div class="shortcuts-dialog__header">
+        <h3>{{ trans(key="shortcuts_title", lang=lang) }}</h3>
+        <button class="shortcuts-dialog__close" onclick="closeShortcutsModal()" aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 6L6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="shortcuts-dialog__body">
+        <div class="shortcuts-dialog__group">
+          <h4>{{ trans(key="shortcuts_movement", lang=lang) }} <small class="shortcuts-dialog__subtitle">vim hjkl</small></h4>
+          <div class="shortcuts-dialog__item"><kbd>h</kbd><span>{{ trans(key="shortcuts_prev_post", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">← left</small></div>
+          <div class="shortcuts-dialog__item"><kbd>j</kbd><span>{{ trans(key="shortcuts_scroll_down", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">↓ down</small></div>
+          <div class="shortcuts-dialog__item"><kbd>k</kbd><span>{{ trans(key="shortcuts_scroll_up", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">↑ up</small></div>
+          <div class="shortcuts-dialog__item"><kbd>l</kbd><span>{{ trans(key="shortcuts_next_post", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">→ right</small></div>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>g</kbd><span>{{ trans(key="shortcuts_top", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>G</kbd><span>{{ trans(key="shortcuts_bottom", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>n</kbd><span>{{ trans(key="shortcuts_next_heading", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">next heading</small></div>
+          <div class="shortcuts-dialog__item"><kbd>N</kbd><span>{{ trans(key="shortcuts_prev_heading", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">previous heading</small></div>
+        </div>
+        <div class="shortcuts-dialog__group">
+          <h4>{{ trans(key="shortcuts_goto", lang=lang) }} <small class="shortcuts-dialog__subtitle">g = go</small></h4>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>h</kbd><span>{{ trans(key="shortcuts_home", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go home</small></div>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>b</kbd><span>{{ trans(key="shortcuts_blog", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go blog</small></div>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>r</kbd><span>{{ trans(key="shortcuts_readings", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go readings</small></div>
+          <div class="shortcuts-dialog__item"><kbd>g</kbd><kbd>c</kbd><span>{{ trans(key="shortcuts_cv", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">go cv</small></div>
+        </div>
+        <div class="shortcuts-dialog__group">
+          <h4>{{ trans(key="shortcuts_actions", lang=lang) }}</h4>
+          <div class="shortcuts-dialog__item"><kbd>/</kbd><span>{{ trans(key="shortcuts_search", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">vim search</small></div>
+          <div class="shortcuts-dialog__item"><kbd>d</kbd><span>{{ trans(key="shortcuts_theme", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">dark mode</small></div>
+          <div class="shortcuts-dialog__item"><kbd>t</kbd><span>{{ trans(key="shortcuts_toc", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">table of contents</small></div>
+          <div class="shortcuts-dialog__item"><kbd>i</kbd><span>{{ trans(key="shortcuts_lang", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">i18n</small></div>
+          <div class="shortcuts-dialog__item"><kbd>m</kbd><span>{{ trans(key="shortcuts_highlight", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">mark text</small></div>
+        </div>
+        <div class="shortcuts-dialog__group">
+          <h4>{{ trans(key="shortcuts_general", lang=lang) }}</h4>
+          <div class="shortcuts-dialog__item"><kbd>?</kbd><span>{{ trans(key="shortcuts_help", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>Esc</kbd><span>{{ trans(key="shortcuts_close", lang=lang) }}</span></div>
+          <div class="shortcuts-dialog__item"><kbd>:</kbd><span>{{ trans(key="shortcuts_terminal", lang=lang) }}</span><small class="shortcuts-dialog__mnemonic">vim command mode</small></div>
+          <div class="shortcuts-dialog__item" style="opacity:0.4"><kbd>&#x2191;&#x2191;&#x2193;&#x2193;&#x2190;&#x2192;&#x2190;&#x2192;BA</kbd><span>???</span></div>
+        </div>
+      </div>
+    </dialog>
   </body>
   {% block js %}
   {% endblock js %}

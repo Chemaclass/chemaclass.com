@@ -1,0 +1,603 @@
+// ==========================================================================
+// Navigation: Search overlay, mobile menu, keyboard shortcuts
+// ==========================================================================
+
+// Search overlay toggle
+window.toggleSearch = function() {
+  if (typeof loadSearch === 'function') loadSearch();
+  const overlay = document.getElementById('search-overlay');
+  const toggle = document.getElementById('search-toggle');
+  const isActive = overlay.classList.toggle('active');
+  if (toggle) toggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+  if (isActive) {
+    window.__searchReturnFocus = document.activeElement;
+    setTimeout(() => document.getElementById('site-search').focus(), 50);
+  } else {
+    restoreSearchFocus();
+  }
+};
+
+window.closeSearch = function() {
+  const overlay = document.getElementById('search-overlay');
+  overlay.classList.remove('active');
+  const toggle = document.getElementById('search-toggle');
+  if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  document.getElementById('site-search').value = '';
+  const results = document.querySelector('.search-results');
+  if (results) results.style.display = 'none';
+  if (window.__easter67) window.__easter67.stop();
+  restoreSearchFocus();
+};
+
+// Return focus to whatever opened the overlay so keyboard users land back in place
+function restoreSearchFocus() {
+  const el = window.__searchReturnFocus;
+  window.__searchReturnFocus = null;
+  if (el && typeof el.focus === 'function') { el.focus(); return; }
+  const toggle = document.getElementById('search-toggle');
+  if (toggle) toggle.focus();
+}
+
+// Trap Tab within the modal search overlay while it is open
+(function initSearchFocusTrap() {
+  const overlay = document.getElementById('search-overlay');
+  if (!overlay) return;
+  overlay.addEventListener('keydown', function(e) {
+    if (e.key !== 'Tab' || !overlay.classList.contains('active')) return;
+    const nodes = overlay.querySelectorAll('a[href], button, input, [tabindex]:not([tabindex="-1"])');
+    const items = Array.prototype.filter.call(nodes, function(el) { return !el.disabled && el.offsetParent !== null; });
+    if (!items.length) return;
+    const first = items[0], last = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+})();
+
+// Mobile menu toggle
+window.closeMobileMenu = function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navbar = document.querySelector('.navbar');
+  const backdrop = document.getElementById('nav-backdrop');
+  navbar.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  if (backdrop) backdrop.classList.remove('active');
+};
+
+window.toggleMobileMenu = function(e) {
+  e.stopPropagation();
+  const hamburger = document.querySelector('.hamburger');
+  const navbar = document.querySelector('.navbar');
+  const backdrop = document.getElementById('nav-backdrop');
+  const isOpen = navbar.classList.toggle('open');
+  hamburger.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
+  if (backdrop) backdrop.classList.toggle('active', isOpen);
+};
+
+// Close mobile menu when a nav link is tapped
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.nav-links > a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (document.querySelector('.navbar.open')) closeMobileMenu();
+    });
+  });
+});
+
+// Keyboard shortcuts: vim-style with g-prefix commands
+(function() {
+  var gPending = false;
+  var gTimer = null;
+  var gBadges = [];
+  var cards = document.querySelectorAll('.blog-card');
+  var selectedIndex = -1;
+
+  // Heading navigation state (n/N keys on blog posts)
+  var headings = document.querySelectorAll('.blog-post__content h2, .blog-post__content h3');
+  var HEADING_OFFSET = 20;
+
+  function findCurrentHeadingIndex() {
+    var scrollTop = window.scrollY + HEADING_OFFSET + 10;
+    var current = -1;
+    for (var i = 0; i < headings.length; i++) {
+      if (headings[i].getBoundingClientRect().top + window.scrollY <= scrollTop) {
+        current = i;
+      }
+    }
+    return current;
+  }
+
+  function scrollToHeading(index) {
+    if (index < 0 || index >= headings.length) return;
+    var top = headings[index].getBoundingClientRect().top + window.scrollY - HEADING_OFFSET;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+    showToast((index + 1) + ' / ' + headings.length);
+  }
+
+  function selectCard(index) {
+    if (cards.length === 0) return;
+    index = Math.max(0, Math.min(index, cards.length - 1));
+    if (selectedIndex >= 0 && cards[selectedIndex]) {
+      cards[selectedIndex].classList.remove('blog-card--active');
+    }
+    selectedIndex = index;
+    cards[selectedIndex].classList.add('blog-card--active');
+    cards[selectedIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    showToast((selectedIndex + 1) + ' / ' + cards.length);
+  }
+
+  function clearCardSelection() {
+    if (selectedIndex >= 0 && cards[selectedIndex]) {
+      cards[selectedIndex].classList.remove('blog-card--active');
+    }
+    selectedIndex = -1;
+  }
+
+  var G_PREFIX_MAP = [
+    { key: 'h', selector: '.header-left' },
+    { key: 'b', selector: '.nav-links a[href$="/blog/"]' },
+    { key: 'r', selector: '.nav-links a[href$="/readings/"]' },
+    { key: 'c', selector: '.nav-links a[href$="/cv/"]' },
+    { key: 'g', selector: '#scroll-to-top' },
+  ];
+
+  function isElVisible(el) {
+    if (!el) return false;
+    var style = getComputedStyle(el);
+    if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') return false;
+    var rect = el.getBoundingClientRect();
+    return rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < window.innerHeight;
+  }
+
+  function showGBadges() {
+    var currentPath = window.location.pathname;
+    G_PREFIX_MAP.forEach(function(item) {
+      var els = document.querySelectorAll(item.selector);
+      var target = null;
+      els.forEach(function(el) { if (isElVisible(el)) target = el; });
+      if (!target) return;
+
+      // Skip showing badge if it's a link to the current page
+      if (target.tagName === 'A' && target.getAttribute('href')) {
+        var targetPath = target.getAttribute('href');
+        if (currentPath === targetPath || currentPath === targetPath + '/' || currentPath + '/' === targetPath) {
+          return;
+        }
+      }
+
+      var rect = target.getBoundingClientRect();
+      var badge = document.createElement('kbd');
+      badge.className = 'shortcut-hint';
+      badge.textContent = item.key;
+      badge.style.position = 'fixed';
+      badge.style.top = (rect.top + rect.height / 2) + 'px';
+      badge.style.left = (rect.left + rect.width / 2) + 'px';
+      document.body.appendChild(badge);
+      gBadges.push(badge);
+
+      requestAnimationFrame(function() {
+        badge.classList.add('visible');
+      });
+    });
+  }
+
+  function removeGBadges() {
+    gBadges.forEach(function(badge) {
+      badge.classList.remove('visible');
+      badge.addEventListener('transitionend', function() { badge.remove(); });
+      setTimeout(function() { badge.remove(); }, 300);
+    });
+    gBadges = [];
+  }
+
+  function cancelG() {
+    gPending = false;
+    if (gTimer) { clearTimeout(gTimer); gTimer = null; }
+    removeGBadges();
+  }
+
+  function getLangPrefix() {
+    return document.documentElement.lang === 'es' ? '/es' : '';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeSearch();
+      closeShortcutsModal();
+      cancelG();
+      clearCardSelection();
+      return;
+    }
+
+    // Skip shortcuts when typing in inputs
+    var isTyping = ['INPUT', 'TEXTAREA'].includes(e.target.tagName) || e.target.isContentEditable;
+    if (isTyping) return;
+
+    // Skip if modifier keys are pressed
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+    // Skip if global shortcuts are disabled (e.g., 404 page)
+    if (window.disableGlobalShortcuts) return;
+
+    // Handle g-prefix commands (gg, gh, gb, gr, gp, ge, ga)
+    if (gPending) {
+      if (e.repeat) return;
+      cancelG();
+      var langPrefix = getLangPrefix();
+      switch (e.key) {
+        case 'g': // gg - scroll to top / select first card
+          e.preventDefault();
+          if (cards.length > 0) {
+            selectCard(0);
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            showToast('Top');
+          }
+          return;
+        case 'h': // gh - go home
+          e.preventDefault();
+          window.location.href = langPrefix + '/';
+          return;
+        case 'b': // gb - go blog
+          e.preventDefault();
+          window.location.href = langPrefix + '/blog/';
+          return;
+        case 'r': // gr - go readings
+          e.preventDefault();
+          window.location.href = langPrefix + '/readings/';
+          return;
+        case 'c': // gc - go cv
+          e.preventDefault();
+          window.location.href = langPrefix + '/cv/';
+          return;
+        default:
+          return;
+      }
+    }
+
+    // "g" - Start g-prefix mode and show hint badges
+    if (e.key === 'g') {
+      if (e.repeat) return;
+      gPending = true;
+      showGBadges();
+      gTimer = setTimeout(function() {
+        gPending = false;
+        gTimer = null;
+        removeGBadges();
+      }, 500);
+      return;
+    }
+
+    // "G" (Shift+G) - Scroll to bottom / select last card
+    if (e.key === 'G') {
+      e.preventDefault();
+      if (cards.length > 0) {
+        selectCard(cards.length - 1);
+      } else {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        showToast('Bottom');
+      }
+      return;
+    }
+
+    // "n" - Next heading (blog posts only)
+    if (e.key === 'n' && headings.length > 0) {
+      e.preventDefault();
+      var current = findCurrentHeadingIndex();
+      var next = current + 1;
+      if (next < headings.length) scrollToHeading(next);
+      return;
+    }
+
+    // "N" - Previous heading (blog posts only)
+    if (e.key === 'N' && headings.length > 0) {
+      e.preventDefault();
+      var current = findCurrentHeadingIndex();
+      var prev = current - 1;
+      if (prev >= 0) {
+        scrollToHeading(prev);
+      } else {
+        // Scroll to top of article
+        var article = document.querySelector('.blog-post__content');
+        if (article) {
+          window.scrollTo({ top: article.getBoundingClientRect().top + window.scrollY - HEADING_OFFSET, behavior: 'smooth' });
+          showToast('Top');
+        }
+      }
+      return;
+    }
+
+    // "/" - Toggle search (vim: / to search)
+    if (e.key === '/') {
+      e.preventDefault();
+      toggleSearch();
+      return;
+    }
+
+    // "i" - Toggle language (i18n)
+    if (e.key === 'i') {
+      e.preventDefault();
+      var currentPath = window.location.pathname;
+      var isSpanish = currentPath.startsWith('/es/');
+      if (isSpanish) {
+        window.location.href = currentPath.replace(/^\/es\//, '/');
+      } else {
+        window.location.href = '/es' + currentPath;
+      }
+      return;
+    }
+
+    // "j" - Scroll down / next card (vim: down)
+    if (e.key === 'j') {
+      e.preventDefault();
+      if (cards.length > 0) {
+        selectCard(selectedIndex + 1);
+      } else {
+        window.scrollBy({ top: 150, behavior: 'smooth' });
+      }
+      return;
+    }
+
+    // "k" - Scroll up / previous card (vim: up)
+    if (e.key === 'k') {
+      e.preventDefault();
+      if (cards.length > 0) {
+        selectCard(selectedIndex - 1);
+      } else {
+        window.scrollBy({ top: -150, behavior: 'smooth' });
+      }
+      return;
+    }
+
+    // "Enter" - Open selected card
+    if (e.key === 'Enter') {
+      if (selectedIndex >= 0 && cards[selectedIndex]) {
+        var link = cards[selectedIndex].querySelector('.blog-card__link');
+        if (link) window.location.href = link.href;
+      }
+      return;
+    }
+
+    // "h" - Previous post (vim: left)
+    if (e.key === 'h') {
+      var prevLink = document.querySelector('.blog-post__nav-link--prev');
+      if (prevLink) {
+        e.preventDefault();
+        window.location.href = prevLink.href;
+      } else if (document.querySelector('.blog-post__nav')) {
+        showToast('No older post');
+      }
+      return;
+    }
+
+    // "l" - Next post / open selected card (vim: right)
+    if (e.key === 'l') {
+      if (selectedIndex >= 0 && cards[selectedIndex]) {
+        e.preventDefault();
+        var link = cards[selectedIndex].querySelector('.blog-card__link');
+        if (link) window.location.href = link.href;
+        return;
+      }
+      var nextLink = document.querySelector('.blog-post__nav-link--next');
+      if (nextLink) {
+        e.preventDefault();
+        window.location.href = nextLink.href;
+      } else if (document.querySelector('.blog-post__nav')) {
+        showToast('No newer post');
+      }
+      return;
+    }
+
+    // ":" - Open terminal (vim: command mode)
+    if (e.key === ':') {
+      e.preventDefault();
+      var langPrefix = getLangPrefix();
+      window.location.href = langPrefix + '/terminal/';
+      return;
+    }
+
+    // "?" - Show keyboard shortcuts help
+    if (e.key === '?') {
+      e.preventDefault();
+      toggleShortcutsModal();
+      return;
+    }
+  });
+
+})();
+
+// "42" easter egg, The Hitchhiker's Guide
+(function() {
+  var buf = '';
+  var timer = null;
+  document.addEventListener('keydown', function(e) {
+    if (['INPUT', 'TEXTAREA'].includes(e.target.tagName) || e.target.isContentEditable) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.key === '4' || e.key === '2') {
+      buf += e.key;
+      clearTimeout(timer);
+      timer = setTimeout(function() { buf = ''; }, 1000);
+      if (buf === '42') {
+        buf = '';
+        clearTimeout(timer);
+        showToast('The answer to life, the universe, and everything.');
+      }
+    } else {
+      buf = '';
+    }
+  });
+})();
+
+// Bitcoin block height ticker, type "btc"
+(function() {
+  var SEQ = ['b', 't', 'c'];
+  var pos = 0;
+  var timer = null;
+  var ticker = null;
+
+  function removeTicker() {
+    if (ticker) {
+      ticker.classList.remove('show');
+      setTimeout(function() { if (ticker) { ticker.remove(); ticker = null; } }, 400);
+    }
+  }
+
+  function showTicker() {
+    if (ticker) { removeTicker(); return; }
+
+    ticker = document.createElement('div');
+    ticker.id = 'btc-ticker';
+    ticker.style.cssText = 'position:fixed;bottom:16px;right:16px;background:rgba(0,0,0,0.85);color:#f7931a;font-family:monospace;font-size:13px;padding:8px 14px;border-radius:6px;border:1px solid #f7931a33;z-index:9999;opacity:0;transition:opacity 0.3s;cursor:pointer;';
+    ticker.textContent = '\u20BF loading...';
+    ticker.onclick = removeTicker;
+    document.body.appendChild(ticker);
+    requestAnimationFrame(function() { ticker.style.opacity = '1'; ticker.classList.add('show'); });
+
+    fetch('https://mempool.space/api/blocks/tip/height')
+      .then(function(r) { return r.text(); })
+      .then(function(height) {
+        if (ticker) ticker.textContent = '\u20BF block ' + Number(height).toLocaleString();
+      })
+      .catch(function() {
+        if (ticker) ticker.textContent = '\u20BF unable to reach mempool';
+      });
+
+    setTimeout(removeTicker, 15000);
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (['INPUT', 'TEXTAREA'].includes(e.target.tagName) || e.target.isContentEditable) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.key === SEQ[pos]) {
+      pos++;
+      clearTimeout(timer);
+      timer = setTimeout(function() { pos = 0; }, 1000);
+      if (pos === SEQ.length) {
+        pos = 0;
+        clearTimeout(timer);
+        showTicker();
+      }
+    } else {
+      pos = 0;
+    }
+  });
+})();
+
+// Konami code easter egg
+(function() {
+  var KONAMI = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+  var pos = 0;
+  var timer = null;
+  document.addEventListener('keydown', function(e) {
+    if (e.key === KONAMI[pos]) {
+      pos++;
+      clearTimeout(timer);
+      timer = setTimeout(function() { pos = 0; }, 2000);
+      if (pos === KONAMI.length) {
+        pos = 0;
+        clearTimeout(timer);
+        if (typeof window.startSpaceInvaders === 'function') {
+          window.startSpaceInvaders();
+        } else {
+          var s = document.createElement('script');
+          s.src = document.querySelector('script[src*="navigation"]').src.replace('navigation.js', 'space-invaders.js');
+          s.onload = function() { window.startSpaceInvaders(); };
+          document.body.appendChild(s);
+        }
+      }
+    } else {
+      pos = 0;
+    }
+  });
+})();
+
+// Toast notification
+function showToast(message) {
+  var toast = document.getElementById('toast-notification');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'toast-notification';
+    toast.className = 'toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(function() { toast.classList.remove('show'); }, 1500);
+}
+
+// Shortcuts dialog (native HTML dialog element)
+function openShortcutsModal() {
+  var dialog = document.getElementById('shortcuts-dialog');
+  if (dialog && !dialog.open) {
+    dialog.showModal();
+    document.body.classList.add('modal-open');
+  }
+}
+
+function closeShortcutsModal() {
+  var dialog = document.getElementById('shortcuts-dialog');
+  if (dialog) {
+    dialog.close();
+    document.body.classList.remove('modal-open');
+  }
+}
+
+function toggleShortcutsModal() {
+  var dialog = document.getElementById('shortcuts-dialog');
+  if (dialog && dialog.open) {
+    closeShortcutsModal();
+  } else {
+    openShortcutsModal();
+  }
+}
+
+// Setup dialog event listeners
+document.addEventListener('DOMContentLoaded', function() {
+  var dialog = document.getElementById('shortcuts-dialog');
+  if (!dialog) return;
+
+  // Close on backdrop click
+  dialog.addEventListener('click', function(e) {
+    if (e.target === dialog) {
+      closeShortcutsModal();
+    }
+  });
+
+  // Cleanup when dialog closes (handles Escape key too)
+  dialog.addEventListener('close', function() {
+    document.body.classList.remove('modal-open');
+  });
+});
+
+// Close search when clicking outside
+document.addEventListener('click', function(e) {
+  var overlay = document.getElementById('search-overlay');
+  var toggle = document.getElementById('search-toggle');
+  if (!overlay?.classList.contains('active')) return;
+  if (!overlay.contains(e.target) && !toggle.contains(e.target)) {
+    closeSearch();
+  }
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(function(el) {
+  el.addEventListener('click', function() {
+    document.querySelector('.navbar').classList.remove('open');
+    var hamburger = document.querySelector('.hamburger');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(e) {
+  var navbar = document.querySelector('.navbar');
+  var hamburger = document.querySelector('.hamburger');
+  if (!navbar?.classList.contains('open')) return;
+  if (!hamburger.contains(e.target)) {
+    navbar.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+});
+

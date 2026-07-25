@@ -1,16 +1,20 @@
 +++
 title = "The Power of Habit"
-description = "Why We Do What We Do, and How to Change"
+description = "Charles Duhigg explores the science behind habit formation, showing how habits work, why they exist, and practical strategies to transform them for personal and professional growth."
+authors = [ "Charles Duhigg" ]
 [taxonomies]
-tags = [ "habits", "improvement" ]
+tags = [ "psychology", "productivity", "career" ]
 [extra]
 subtitle = "Why We Do What We Do, and How to Change"
 pages = "400"
 author = "Charles Duhigg"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/41fQW9Q-L4L._SX324_BO1,204,203,200_.jpg"
+related_posts = ["blog/2020-09-08-the-process-itself-is-the-goal.md"]
+related_readings = [
+  "readings/2019-11-12-atomic-habits.md",
+  "readings/2025-02-16-digital-minimalism.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/41fQW9Q-L4L._SX324_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

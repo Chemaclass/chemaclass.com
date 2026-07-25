@@ -1,20 +1,28 @@
 +++
-title = "Conformity experiments"
-description = "To what extent do social forces alter people's opinions? Which aspect of the group influence is most important — the size of the majority, or the unanimity of opinion?"
+title = "Conformity Experiments"
+description = "To what extent do social forces alter people's opinions? Which aspect of the group influence is most important: the size of the majority, or the unanimity of opinion?"
 [taxonomies]
-tags = [ "experiment", "psychology", "people", "humanity" ]
+tags = [ "psychology", "leadership", "communication" ]
 [extra]
 subtitle = "The uncomfortable truth about human nature"
 static_thumbnail = "/images/blog/2021-06-01/cover.jpg"
+related_posts = [
+  "blog/2022-01-24-the-power-of-authority-and-obedience.md",
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2021-10-21-red-work-blue-work.md",
+]
+related_readings = [
+  "readings/2021-10-22-leadership-is-language.md",
+  "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",
+]
 +++
 
-![blog-cover](/images/blog/2021-06-01/cover.jpg)
 
-To what extent do social forces alter people's opinions? Which aspect of the group influence is most important — the size of the majority, or the unanimity of opinion?
+To what extent do social forces alter people's opinions? Which aspect of the group influence is most important: the size of the majority, or the unanimity of opinion?
 
 <!-- more -->
 
-# The psychologist Solomon Asch
+## The psychologist Solomon Asch
 
 During the early years of World War II, when Hitler was at the height of power, Solomon Asch began studying the impact of propaganda and indoctrination while he was a professor at Brooklyn College's psychology department. He also was a professor for 19 years at Swarthmore College.
 
@@ -23,7 +31,7 @@ During the 1950s, Asch became famous for his series of experiments that demonstr
 ## Asch asked
 
 To what extent do social forces alter people's opinions?
-Which aspect of the group influence is most important — the size of the majority, or the unanimity of opinion?
+Which aspect of the group influence is most important: the size of the majority, or the unanimity of opinion?
 
 > Asch believed that people behave according to how they perceive the world, not to how it actually is.
 
@@ -73,5 +81,3 @@ Asch went on to conduct further experiments in order to determine which factors 
 ### Resources
 
 - [Solomon Asch | Wikipedia](https://en.wikipedia.org/wiki/Solomon_Asch)
-- [Solomon Asch - Biography | VeryWellMind](https://www.verywellmind.com/solomon-asch-biography)
-- [The Asch conformity experiments | VeryWellMind](https://www.verywellmind.com/the-asch-conformity-experiments)

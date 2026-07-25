@@ -1,0 +1,22 @@
+{# ==========================================================================
+   Reading Progress Bar Script
+   Usage: {% include "partials/reading-progress.html" %}
+   Requires: Element with id="reading-progress" and class="blog-post__content"
+   ========================================================================== #}
+<script>
+  // Reading progress bar
+  window.addEventListener('scroll', function() {
+    const article = document.querySelector('.blog-post__content');
+    if (!article) return;
+
+    const pageFooter = document.querySelector('.page-footer');
+    const articleTop = article.offsetTop;
+    const endPoint = pageFooter ? (pageFooter.offsetTop - 420) : (articleTop + article.offsetHeight);
+    const totalHeight = endPoint - articleTop;
+    const windowHeight = window.innerHeight;
+    const scrollTop = window.scrollY;
+
+    const progress = Math.min(Math.max((scrollTop - articleTop + windowHeight * 0.5) / totalHeight, 0), 1);
+    document.getElementById('reading-progress').style.width = (progress * 100) + '%';
+  });
+</script>

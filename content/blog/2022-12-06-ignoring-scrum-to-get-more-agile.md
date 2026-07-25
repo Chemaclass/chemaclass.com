@@ -1,28 +1,32 @@
 +++
-title = "Ignoring Scrum to get more Agile?"
-description = "Talking to a friend about agile, he asked me a fascinating question remarking how badly sometimes Agile and Scrum fit together, especially regarding meetings. These are my thoughts about this topic."
+title = "Ignoring Scrum to Get More Agile?"
+description = "People become slaves to systems that are supposed to help. Boring meetings are killing agile. Meetings require active participation from everyone. Otherwise, you might not be essential to that meeting, and rather use your time with something else."
 draft = false
 [taxonomies]
-tags = [ "software", "scrum", "agile" ]
+tags = [ "agile", "scrum", "communication", "productivity" ]
 [extra]
 subtitle = "Killing agility with excessive meetings"
 static_thumbnail = "/images/blog/2022-12-06/cover.jpg"
+related_posts = [
+  "blog/2022-04-02-dunbar-number.md",
+  "blog/2022-07-25-the-project-management-triangle.md",
+  "blog/2022-08-22-understanding-people.md",
+  "blog/2022-11-11-working-agile-with-non-agile-teams.md",
+]
+related_readings = [
+  "readings/2020-06-10-scrum-the-art-of-doing-twice.md",
+  "readings/2021-03-01-zombie-scrum-survival-guide.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
+series = "agile"
+series_order = 3
 +++
 
-![blog-cover](/images/blog/2022-12-06/cover.jpg)
 
 Talking to a friend about agile, he asked me a fascinating question remarking how badly sometimes Agile and Scrum fit
 together, especially regarding meetings. These are my thoughts about this topic.
 
 <!-- more -->
-
----
-
-**TL;DR**: People become slaves to systems that are supposed to help. Boring meetings are killing agile. Meetings
-require an active participation from everyone. Otherwise, you might not be essential to that meeting, and rather use
-your time with something else.
-
----
 
 > "Do you think it would make sense to just use agile and ignore scrum (sprints) completely in a product based
 > development company. I feel it's hard to be agile when you have 10 hours of meetings per week." Filip G.
@@ -60,14 +64,14 @@ details: [Working agile with non-agile teams](/blog/working-agile-with-non-agile
 ## Scrum in a nutshell
 
 Scrum is a framework for project management emphasizing software development, although it is used in other fields like
-sales, marketing, and more. It's designed for teams of 5–9 people (see [Dunbar number](/blog/dunbar-number/)) who are
+sales, marketing, and more. It's designed for teams of 5 to 9 people (see [Dunbar number](/blog/dunbar-number/)) who are
 totally autonomous and responsible for breaking down their work into small chunks that can be completed in a time-boxed
 iteration, called sprints, usually 1, 2, or 4 weeks.
 
 It's common to find certain ceremonies/meetings like:
 
 - **Stand-up**: 15 min (or less) to keep everyone in the team sync and updated about the work and call out for action when
-  anyone is blocked or need especial attention or help.
+  anyone is blocked or needs special attention or help.
 - **Refinement**: 2h? meeting to make sure the tickets are in a good shape before planning them to be worked on in the next
   sprint.
 - **Planning**: 2h? meeting to plan the work to be done in the next sprint.
@@ -97,7 +101,7 @@ really?
 
 When something doesn't work the way I expect (e.g., I don't like the outcome, or I think something is off), before
 blaming and pushing away responsibilities to others, I want to reflect on it and identify the root of the issue. What
-could I do to make the situation a bit better?
+could I do to make the situation better?
 
 ---
 
@@ -123,15 +127,7 @@ In these situations, I encounter a pattern such as:
 In the end, there are a lot of strategies, and it's up to you to act on them whenever you see something that could be
 improved.
 
-It's OK to point out the "_elephant in the room_" and ask for help to improve any situation you think - or feel - is not
+It's OK to point out the "_elephant in the room_" and ask for help to improve any situation you think (or feel) is not
 working as it should.
 
 ![blog-footer](/images/blog/2022-12-06/footer.jpg)
-
----
-
-### Related posts
-
-- [Working agile with non-agile teams](/blog/working-agile-with-non-agile-teams/). <small>How can you work with other teams that aren't agile?</small>
-- [Understanding people](/blog/understanding-people/). <small>Misunderstandings, effective communication, and self-reflection</small>
-- [The Project Management Triangle](/blog/the-project-management-triangle/). <small>The Iron Triangle</small>

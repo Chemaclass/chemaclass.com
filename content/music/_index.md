@@ -1,9 +1,11 @@
 +++
-template = "blog/index.html"
-page_template = "blog/blog-post.html"
+title = "Music"
+description = "Songs and covers where I play electric bass. A creative side beyond code."
+template = "music/index.html"
+page_template = "music/page.html"
 sort_by = "date"
 +++
 
-# Music
-
 ---
+
+Some of my songs or covers where I play e-bass.

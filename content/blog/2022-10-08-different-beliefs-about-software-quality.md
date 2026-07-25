@@ -1,15 +1,24 @@
 +++
-title = "Different beliefs about software quality"
+title = "Different Beliefs About Software Quality"
 description = "What to do when working on \"bad software\" and you can't improve it because it is against the beliefs of your peers? Should you change the company?"
 draft = false
 [taxonomies]
-tags = [ "software", "people" ]
+tags = [ "clean-code", "agile", "xp", "communication", "career" ]
 [extra]
 subtitle = "Some thoughts about software quality among your team"
 static_thumbnail = "/images/blog/2022-10-08/cover.jpg"
+related_posts = [
+  "blog/2020-04-07-the-art-of-testing.md",
+  "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
+  "blog/2022-08-22-understanding-people.md",
+]
+related_readings = [
+  "readings/2020-03-12-clean-agile.md",
+  "readings/2021-05-28-peopleware.md",
+  "readings/2020-03-05-extreme-programming-explained.md",
+]
 +++
 
-![blog-cover](/images/blog/2022-10-08/cover.jpg)
 
 I recently got a great question on Twitter which got me thinking for a while and I decided to share my thoughts about it.
 
@@ -93,18 +102,6 @@ market as soon as possible.
 It doesn't make sense to have "low quality" as part of the identity of any team. Every team has certain quality 
 expectations. Therefore, the **key** here is to **agree on what good quality is**.
 
-> Thanks to my former Engineer Manager, Evgenii Sokolov, who inspired me to write these extra lines after sharing the original post.
-
----
-
-### Related posts
-
-- [The art of testing: where design meets quality](/blog/the-art-of-testing/). <small>From a software developer's point of view</small>
-- [Understanding people](/blog/understanding-people/). <small>Misunderstandings, effective communication, and self-reflection</small>
-- [Update your team to be more extreme](/blog/update-your-team-to-be-more-extreme/). <small>How can you help your peers to embrace the change?</small>
-
-### Recommended readings
-
-- [Extreme Programming Explained](/readings/xp-embrace-change/) <small>by Kent Beck</small>
-- [Peopleware](/readings/peopleware) <small>by Tom DeMarco</small>
-- [Clean Agile](/readings/clean-agile/) <small>by Robert C. Martin</small>
+{% kudos() %}
+Thanks to my former Engineer Manager, Evgenii Sokolov, who inspired me to write these extra lines after sharing the original post.
+{% end %}

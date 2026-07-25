@@ -1,16 +1,20 @@
 +++
 title = "Zombie Scrum Survival Guide"
 description = "Zombie Scrum Survival Guide reveals why Scrum runs aground and shows how to supercharge your Scrum outcomes, while having a lot more fun along the way."
+authors = [ "Christiaan Verwijs", "Johannes Schartau", "Barry Overeem" ]
 [taxonomies]
-tags = [ "scrum", "agile", "recovery" ]
+tags = [ "scrum", "agile", "team-management", "productivity" ]
 [extra]
 subtitle = "A Journey to Recovery"
 pages = "250"
 author = "Christiaan Verwijs, Johannes Schartau, Barry Overeem"
 static_thumbnail = "https://images-na.ssl-images-amazon.com/images/I/511aL5yxHVL._SX383_BO1,204,203,200_.jpg"
+related_readings = [
+  "readings/2020-06-10-scrum-the-art-of-doing-twice.md",
+  "readings/2021-02-22-agile-product-management-with-scrum.md",
+  "readings/2020-03-12-clean-agile.md",
+]
 +++
-
-<img border="0" src="https://images-na.ssl-images-amazon.com/images/I/511aL5yxHVL._SX383_BO1,204,203,200_.jpg" >
 
 <!-- more -->
 

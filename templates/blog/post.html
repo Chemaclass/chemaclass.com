@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+
+{% import "partials/helpers-preview.html" as helpers_preview %}
+{% import "partials/related-container.html" as related %}
+{% import "partials/macros.html" as macros %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='post.css') | safe }}">
+<link rel="preload" href="{{ get_url(path='custom.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ get_url(path='custom.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
+</noscript>
+{% endblock styles %}
+
+{% block posthead %}
+{% if page.lower %}
+<link rel="prerender" href="{{ page.lower.permalink }}">
+{% endif %}
+
+{% if page.higher %}
+<link rel="prerender" href="{{ page.higher.permalink }}">
+{% endif %}
+
+{% for tag in page.taxonomies.tags %}
+<link rel="prerender" href='{{ get_taxonomy_url(kind="tags", name=tag) }}'>
+{% endfor %}
+
+{% set schema_type = "BlogPosting" %}
+{% include "partials/post-schema.html" %}
+{% endblock posthead %}
+
+{% block content %}
+  <div class="blog-post-layout" data-toc-hidden="false">
+    <!-- Table of Contents -->
+    <nav
+      id="toc-container"
+      data-hide-toc="false"
+      data-title="{{ trans(key='toc_header_title', lang=lang) }}"
+      data-close-label="{{ trans(key='toc_close_label', lang=lang) }}">
+      <div id="reading-progress" class="reading-progress"></div>
+    </nav>
+
+    <div class="blog-post-main">
+      <article class="blog-post">
+        <div class="blog-post__top-row">
+          <a href="{{ macros::lang_path(path='/blog/', lang=lang) }}" class="blog-post__back">
+            {{ macros::back_arrow() }}
+            {{ trans(key="all_posts", lang=lang) }}
+          </a>
+          <button id="toc-toggle"
+                  class="toc-toggle"
+                  type="button"
+                  role="switch"
+                  aria-checked="true"
+                  aria-label="Toggle table of contents">
+            <svg class="toc-toggle__icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="1" y="2" width="5" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M9 4h6M9 8h6M9 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span class="toc-toggle__label">{{ trans(key="toc_toggle_label", lang=lang) }}</span>
+            <span class="toc-toggle__switch">
+              <span class="toc-toggle__knob"></span>
+            </span>
+            <kbd class="toc-toggle__shortcut">T</kbd>
+          </button>
+        </div>
+
+        <!-- Hero thumbnail -->
+        {% if page.extra.static_thumbnail %}
+        <div class="blog-post__hero">
+          {% if page.extra.static_thumbnail is matching("^http[s]?://") %}
+            <img src="{{ page.extra.static_thumbnail | safe }}" alt="{{ page.title }}" width="960" height="540" loading="eager" fetchpriority="high" />
+          {% else %}
+            {% set hero_path = page.extra.static_thumbnail | trim_start_matches(pat="/") %}
+            {% set hero_sm = resize_image(path=hero_path, width=480, height=270, op="fill", quality=88, format="webp") %}
+            {% set hero_md = resize_image(path=hero_path, width=720, height=405, op="fill", quality=88, format="webp") %}
+            {% set hero_lg = resize_image(path=hero_path, width=960, height=540, op="fill", quality=88, format="webp") %}
+            {% set hero_xl = resize_image(path=hero_path, width=1440, height=810, op="fill", quality=88, format="webp") %}
+            {% set hero_fb = resize_image(path=hero_path, width=960, height=540, op="fill", quality=88) %}
+            <picture>
+              <source type="image/webp" srcset="{{ hero_sm.url }} 480w, {{ hero_md.url }} 720w, {{ hero_lg.url }} 960w, {{ hero_xl.url }} 1440w" sizes="(max-width: 720px) 100vw, 960px" />
+              <img src="{{ hero_fb.url }}" alt="{{ page.title }}" width="{{ hero_fb.width }}" height="{{ hero_fb.height }}" loading="eager" fetchpriority="high" />
+            </picture>
+          {% endif %}
+        </div>
+        {% elif page.extra.thumbnail %}
+        <div class="blog-post__hero">
+          <img src="{{ get_url(path=page.path ~ page.extra.thumbnail) }}" alt="{{ page.title }}" width="960" height="540" loading="eager" fetchpriority="high" />
+        </div>
+        {% endif %}
+
+        <!-- Title -->
+        <h1 class="blog-post__title">{{ page.title }}</h1>
+
+        <!-- Subtitle + Metadata + Tags -->
+        <div class="blog-post__meta-row">
+          {% if page.extra.subtitle %}
+            <p class="blog-post__subtitle">{{ page.extra.subtitle }}</p>
+          {% endif %}
+          <div class="blog-post__meta">
+            {% if page.date %}
+            <span class="blog-post__date">
+              {{ macros::calendar_icon() }}
+              {{ macros::format_date(date=page.date, lang=lang) }}
+            </span>
+            {% endif %}
+            {% set reading_time = page.extra.reading_time | default(value=page.reading_time) %}
+            {% if reading_time %}
+            <span class="blog-post__reading-time">
+              {{ macros::clock_icon() }}
+              {{ reading_time }} {{ trans(key="minutes_read", lang=lang) }}
+            </span>
+            {% endif %}
+            {% if page.word_count %}
+            <span class="blog-post__word-count">
+              {{ macros::document_icon() }}
+              {{ page.word_count }} {{ trans(key="words", lang=lang) }}
+            </span>
+            {% endif %}
+            {% if page.taxonomies.tags %}
+            <span class="blog-post__tags">
+              {% for tag in page.taxonomies.tags %}
+                <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="blog-post__tag">{{ tag }}</a>
+              {% endfor %}
+            </span>
+            {% endif %}
+          </div>
+        </div>
+
+        {% include "partials/series-navigation.html" %}
+
+        <!-- Content -->
+        <div class="blog-post__content"
+             data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
+             data-hl-remove="{{ trans(key='highlight_remove', lang=lang) }}"
+             data-hl-share-x="{{ trans(key='highlight_share_x', lang=lang) }}"
+             data-hl-share-linkedin="{{ trans(key='highlight_share_linkedin', lang=lang) }}"
+             data-hl-copy-quote="{{ trans(key='highlight_copy_quote', lang=lang) }}"
+             data-hl-copied="{{ trans(key='highlight_copied', lang=lang) }}"
+             data-hl-saved="{{ trans(key='highlight_saved', lang=lang) }}"
+             data-hl-removed="{{ trans(key='highlight_removed', lang=lang) }}"
+             data-hl-add-note="{{ trans(key='highlight_add_note', lang=lang) }}"
+             data-hl-edit-note="{{ trans(key='highlight_edit_note', lang=lang) }}"
+             data-hl-note-saved="{{ trans(key='highlight_note_saved', lang=lang) }}"
+             data-hl-note-removed="{{ trans(key='highlight_note_removed', lang=lang) }}"
+             data-hl-note-placeholder="{{ trans(key='highlight_note_placeholder', lang=lang) }}"
+             data-hl-clear-all="{{ trans(key='highlight_clear_all', lang=lang) }}"
+             data-hl-clear-confirm="{{ trans(key='highlight_clear_confirm', lang=lang) }}"
+             data-hl-clear-done="{{ trans(key='highlight_clear_done', lang=lang) }}"
+             data-hl-export="{{ trans(key='highlight_export', lang=lang) }}"
+             data-hl-export-done="{{ trans(key='highlight_export_done', lang=lang) }}">
+          {% if page.description %}
+          <div class="tldr">{{ page.description }}</div>
+          {% endif %}
+          {{ page.content | safe }}
+          {% include "partials/related-posts.html" %}
+        </div>
+      </article>
+
+      <div class="blog-post-bottom">
+        {% include "partials/edit-link.html" %}
+        {% include "partials/post-navigation.html" %}
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block js %}
+<script type="text/javascript" src="{{ get_url(path='toc.js') | safe }}" defer></script>
+<script type="text/javascript" src="{{ get_url(path='interactive-list.js') | safe }}" defer></script>
+{% include "partials/reading-progress.html" %}
+<script>
+  // Add lazy loading to markdown content images
+  document.querySelectorAll('.blog-post__content img').forEach(function(img) {
+    img.setAttribute('loading', 'lazy');
+    img.setAttribute('decoding', 'async');
+  });
+</script>
+{% endblock js %}
+
+{% block highlights %}
+<script type="text/javascript" src="{{ get_url(path='highlights.js') }}" defer></script>
+{% endblock highlights %}
+
+{% macro page_sub_header(page) %}
+  <small>
+    {{ helpers_preview::date_and_words(post=page) }}
+
+    <span class="found-a-typo">
+      {% set url = config.extra.repo_content_url ~ page.relative_path %}
+      Found a typo? <a href="{{url}}">Edit me</a>
+    </span>
+
+    {% if page.taxonomies.tags %}
+      <br>
+      <span class="tags">
+        {% for tag in page.taxonomies.tags %}
+          <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">{{ tag }}</a>
+        {% endfor %}
+      </span>
+    {% endif %}
+  </small>
+{% endmacro %}

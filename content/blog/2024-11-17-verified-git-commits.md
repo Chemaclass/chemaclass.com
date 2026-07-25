@@ -1,22 +1,30 @@
 +++
-title = "Verified git commits"
-description = "Learn why verified Git commits are essential for secure software development and how to set them up step by step."
+title = "Verified Git Commits"
+description = "Sign your Git commits with GPG to prove they're really from you. Without signatures, anyone can fake commits using your email. It takes 5 minutes to set up and adds real trust to your codebase."
 draft = false
 aliases = [ "/blog/verified-commits" ]
 [taxonomies]
-tags = [ "software", "open-source", "git" ]
+tags = [ "git", "security", "cryptography", "open-source" ]
 [extra]
 subtitle = "Boosting trust and security in your codebase"
 static_thumbnail = "/images/blog/2024-11-17/cover.jpg"
+related_posts = [
+  "blog/2024-07-13-pretty-good-privacy.md",
+  "blog/2021-05-03-open-source-software.md",
+  "blog/2024-12-11-the-cypherpunks.md",
+]
+related_readings = [
+  "readings/2024-07-05-mastering-bitcoin.md",
+  "readings/2024-06-21-the-genesis-book.md",
+]
 +++
 
-![cover](/images/blog/2024-11-17/cover.jpg)
 
 When it comes to software development, trust and security are very important. One easy way to level up both is by using verified commits. 
 
-Whether you're working on an open-source project or in a private company, verified commits can make sure your contributions are legit. Let's break down what they are, why they're important, and how to start using them.
-
 <!-- more -->
+
+Whether you're working on an open-source project or in a private company, verified commits can make sure your contributions are legit. Let's break down what they are, why they're important, and how to start using them.
 
 ## What are verified commits?
 
@@ -24,17 +32,17 @@ A verified commit is basically a Git commit that is signed by the author using a
 
 If you're using platforms like GitHub, you'll notice a little "Verified" badge next to commits that are signed properly. It's a quick way to show that the commit is authentic.
 
-![cover](/images/blog/2024-11-17/verified-commit-example.jpg)
+![blog-cover](/images/blog/2024-11-17/verified-commit-example.jpg)
 
 ## Why Are They Important?
 
 Signed commits help keep your contributions authentic and trustworthy. By adding a cryptographic signature to your commits, you prove that the changes came from you. This is especially important in collaborative environments, where maintaining trust and accountability is key.
 
-Without signed commits, anyone could fake a commit using someone else's email. For example, they could use your email, and platforms like GitHub would link it to your profile, making it look like you made the changes —even if you didn't... not good!
+Without signed commits, anyone could fake a commit using someone else's email. For example, they could use your email, and platforms like GitHub would link it to your profile, making it look like you made the changes, even if you didn't... not good!
 
-![cover](/images/blog/2024-11-17/impersonating-commit.jpg)
+![blog-cover](/images/blog/2024-11-17/impersonating-commit.jpg)
 
-![cover](/images/blog/2024-11-17/impersonating-commit4.jpg)
+![blog-cover](/images/blog/2024-11-17/impersonating-commit4.jpg)
 
 By signing your commits, you show that the work is genuinely yours. It stops impersonation, builds trust in what you've done, and keeps everything transparent and accountable.
 
@@ -65,7 +73,7 @@ Make signing commits the default:
 git config --global commit.gpgsign true
 ```
 
-### Add your key to [GitHub](https://github.com/settings/keys)/[GitLab](https://gitlab.com/-/user_settings/gpg_keys)
+### Add your key to [GitHub](https://github.com/settings/keys)/[GitLab](https://docs.gitlab.com/user/project/repository/signed_commits/gpg/)
 
 Export your public key:
 ```bash
@@ -73,7 +81,7 @@ gpg --armor --export <your-key-id>
 ```
 Navigate to "Settings > SSH and GPG keys," and paste your key.
 
-![cover](/images/blog/2024-11-17/gpg-keys.jpg)
+![blog-cover](/images/blog/2024-11-17/gpg-keys.jpg)
 
 ### Start signing commits
 
@@ -90,9 +98,9 @@ git log --show-signature
 
 And also when clicking on the "Verified" badge on GitHub directly.
 
-![cover](/images/blog/2024-11-17/gpg-verify.jpg)
+![blog-cover](/images/blog/2024-11-17/gpg-verify.jpg)
 
-Verified commits might seem like a small step, but they make your code more trustworthy. It's an easy way to add an extra layer of protection to your work—and it's worth it. Give it a try!
+Verified commits might seem like a small step, but they make your code more trustworthy. It's an easy way to add an extra layer of protection to your work, and it's worth it. Give it a try!
 
 ---
 
@@ -102,6 +110,6 @@ Verified commits might seem like a small step, but they make your code more trus
 
 ---
 
-### Related links
+**Related links**
 
 - Learn more: [What is PGP encryption?](/pgp) <small>A 3-minute tutorial for beginners</small>
