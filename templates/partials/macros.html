@@ -1,7 +1,3 @@
-{# ==========================================================================
-   Shared Macros for Template Reuse
-   ========================================================================== #}
-
 {# Format date based on language (ES: dd/mm/yyyy, EN: Month dd, yyyy) #}
 {% macro format_date(date, lang) %}
 {% if lang == "es" %}{{ date | date(format="%d/%m/%Y") }}{% else %}{{ date | date(format="%B %d, %Y") }}{% endif %}

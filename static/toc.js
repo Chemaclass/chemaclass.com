@@ -7,7 +7,6 @@
 (function() {
   'use strict';
 
-  // Configuration
   const CONFIG = {
     contentSelector: '.blog-post__content, .book-chapter__content, .post-title ~ div, .reading-post .post-title ~ div',
     tocContainer: '#toc-container',

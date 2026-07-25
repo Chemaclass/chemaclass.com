@@ -118,13 +118,9 @@ def main() -> None:
     content_dir = project_root / 'content'
     public_dir = project_root / 'public'
 
-    # Ensure public directory exists
-    public_dir.mkdir(exist_ok=True)
-
     print("Building terminal filesystem...")
     fs = build_filesystem(content_dir)
 
-    # Count entries
     total_files = 0
     for key, value in fs.items():
         if value.get('type') == 'dir':
