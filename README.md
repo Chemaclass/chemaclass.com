@@ -51,9 +51,15 @@ templates/   Tera templates
 sass/        SCSS, compiled by Zola
 static/      Images, JS, fonts, and served metadata (llms.txt, robots.txt, ...)
 scripts/     Python post-build processors (shared helpers in _common.py)
+docs/        Notes on how the site is written and released
 tools/       Pristine vendor sources the build cuts down (Font Awesome)
 config.toml  Zola config, i18n strings, and site data
 ```
+
+## Writing
+
+File layout, drafts, and how to land a post on a chosen day:
+[docs/publishing.md](docs/publishing.md).
 
 ## Contributing
 
