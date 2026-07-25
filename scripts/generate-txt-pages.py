@@ -4,14 +4,19 @@ Generate plain text versions of all pages for curl-friendly access.
 Creates .txt files alongside HTML for terminal users.
 """
 
+from __future__ import annotations
+
 import re
 import textwrap
 from pathlib import Path
+from typing import List, TypedDict
 
 from _common import (
     BASE_URL,
     PUBLIC_DIR,
     SECTIONS,
+    TFrontMatter,
+    TSection,
     entry_url,
     get_slug_from_filename,
     iter_section_files,
@@ -19,7 +24,17 @@ from _common import (
 )
 
 
-def markdown_to_plaintext(content, width=80):
+class TTxtPage(TypedDict):
+    """One rendered page, plus the metadata the section index needs. Total: the
+    processor fills every field, so generate_index_txt reads them directly."""
+    slug: str
+    title: str
+    date: str
+    description: str
+    txt_content: str
+
+
+def markdown_to_plaintext(content: str, width: int = 80) -> str:
     """Convert markdown to readable plain text."""
     # Remove images
     content = re.sub(r'!\[.*?\]\(.*?\)', '[image]', content)
@@ -28,7 +43,7 @@ def markdown_to_plaintext(content, width=80):
     content = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'\1 (\2)', content)
 
     # Convert headers to uppercase with underlines
-    def header_replace(match):
+    def header_replace(match: "re.Match[str]") -> str:
         level = len(match.group(1))
         text = match.group(2).strip()
         if level == 1:
@@ -64,8 +79,8 @@ def markdown_to_plaintext(content, width=80):
 
     # Wrap paragraphs
     lines = content.split('\n')
-    wrapped_lines = []
-    current_paragraph = []
+    wrapped_lines: List[str] = []
+    current_paragraph: List[str] = []
 
     for line in lines:
         stripped = line.strip()
@@ -100,7 +115,9 @@ def markdown_to_plaintext(content, width=80):
     return result.strip()
 
 
-def format_txt_page(frontmatter, content, url, width=80):
+def format_txt_page(
+    frontmatter: TFrontMatter, content: str, url: str, width: int = 80
+) -> str:
     """Format a full plain text page."""
     separator = '=' * width
     thin_sep = '-' * width
@@ -133,7 +150,9 @@ def format_txt_page(frontmatter, content, url, width=80):
     return output
 
 
-def generate_index_txt(section, files, base_url, width=80):
+def generate_index_txt(
+    section: TSection, files: List[TTxtPage], base_url: str, width: int = 80
+) -> str:
     """Generate an index.txt for a section listing all files."""
     separator = '=' * width
     thin_sep = '-' * width
@@ -147,13 +166,13 @@ def generate_index_txt(section, files, base_url, width=80):
     output += thin_sep + '\n\n'
 
     # Sort by date, newest first
-    sorted_files = sorted(files, key=lambda x: x.get('date', ''), reverse=True)
+    sorted_files = sorted(files, key=lambda x: x['date'], reverse=True)
 
     for f in sorted_files:
-        date = f.get('date', '')
-        slug = f.get('slug', '')
-        file_title = f.get('title', slug)
-        desc = f.get('description', '')
+        date = f['date']
+        slug = f['slug']
+        file_title = f['title']
+        desc = f['description']
 
         if date:
             output += f'[{date}] '
@@ -168,7 +187,7 @@ def generate_index_txt(section, files, base_url, width=80):
     return output
 
 
-def process_markdown_file(filepath: Path, section: str, base_url: str) -> dict:
+def process_markdown_file(filepath: Path, section: TSection, base_url: str) -> TTxtPage:
     """Process a single markdown file and generate .txt version."""
     frontmatter, body = read_entry(filepath, strip_yaml=True)
     slug = get_slug_from_filename(filepath.name)
@@ -195,7 +214,7 @@ def main() -> None:
     total_files = 0
 
     for section in SECTIONS:
-        section_files = []
+        section_files: List[TTxtPage] = []
 
         for filepath in iter_section_files(section):
             result = process_markdown_file(filepath, section, BASE_URL)

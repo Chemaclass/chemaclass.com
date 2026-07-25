@@ -5,11 +5,15 @@ Follows the emerging llms-full.txt convention so AI agents can ingest
 the site as a single text file instead of crawling page-by-page.
 """
 
+from __future__ import annotations
+
 import re
+from typing import List, TypedDict
 
 from _common import (
     PUBLIC_DIR,
     SECTIONS,
+    TSection,
     entry_url,
     get_slug_from_filename,
     iter_section_files,
@@ -17,7 +21,19 @@ from _common import (
 )
 
 
-def clean_body(body):
+class TEntry(TypedDict):
+    """One article in the corpus. Total, unlike the front matter it comes from:
+    the collector below fills every optional field with '' or [] before
+    appending, which is what lets the builders index straight into the record."""
+    title: str
+    date: str
+    description: str
+    tags: List[str]
+    url: str
+    body: str
+
+
+def clean_body(body: str) -> str:
     """Strip noise from a markdown body but keep the prose intact."""
     body = re.sub(r'!\[.*?\]\(.*?\)', '', body)
     body = re.sub(r'<[^>]+>', '', body)
@@ -27,7 +43,7 @@ def clean_body(body):
     return body.strip()
 
 
-def build_listing(entries, section):
+def build_listing(entries: List[TEntry], section: TSection) -> List[str]:
     """Compact index for the section (titles + URLs)."""
     lines = [f'\n## {section.title()} index ({len(entries)} entries)\n']
     for e in entries:
@@ -40,7 +56,7 @@ def build_listing(entries, section):
     return lines
 
 
-def build_full_section(entries, section):
+def build_full_section(entries: List[TEntry], section: TSection) -> List[str]:
     """Full body dump for the section."""
     lines = [f'\n\n# {section.title()} - Full Articles\n']
     for e in entries:
@@ -68,19 +84,20 @@ def main() -> None:
         '> License:       Content for AI retrieval, citation, and training is permitted.',
     ]
 
-    listing_lines = []
-    full_lines = []
+    listing_lines: List[str] = []
+    full_lines: List[str] = []
     total = 0
 
     for section in SECTIONS:
-        entries = []
+        entries: List[TEntry] = []
         for filepath in iter_section_files(section):
             fm, body = read_entry(filepath)
-            if not fm.get('title'):
+            title = fm.get('title')
+            if not title:
                 continue
 
             entries.append({
-                'title': fm['title'],
+                'title': title,
                 'date': fm.get('date', ''),
                 'description': fm.get('description', ''),
                 'tags': fm.get('tags', []),

@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import re
 from pathlib import Path
-from typing import Iterator, List, Optional, TypedDict
+from typing import Iterator, Literal, Optional, Tuple, TypedDict
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = PROJECT_ROOT / 'content'
@@ -19,20 +19,37 @@ STATIC_DIR = PROJECT_ROOT / 'static'
 
 BASE_URL = 'https://chemaclass.com'
 
+# The content directories the generators walk. Spelled as a closed set because
+# iter_section_files() below yields nothing for a directory that is not there:
+# a mistyped section produces an empty output file rather than an error, which is
+# the kind of miss nobody notices. As a Literal, the typo is a type error.
+# 'services' is only walked by the terminal generator, not by SECTIONS.
+TSection = Literal['blog', 'readings', 'talks', 'services']
+
 # The sections every generator walks. Ordered, because it decides the order
 # entries appear in llms-full.txt and the terminal filesystem.
-SECTIONS = ['blog', 'readings', 'talks']
+SECTIONS: list[TSection] = ['blog', 'readings', 'talks']
+
+# The two languages content is authored in. Spanish entries are colocated with
+# their English original as `*.es.md` and publish under /es/.
+TLang = Literal['en', 'es']
 
 
 class TFrontMatter(TypedDict, total=False):
+    """Front matter as parsed, not as declared.
+
+    total=False because every key is set only when its pattern matched, so a
+    post missing `title =` simply has no 'title'. Read with .get(), or prove the
+    key is present first and bind it to a local. Indexing straight in is how a
+    post with no title turns into a bare KeyError that fails the whole build."""
     title: str
     description: str
     date: str
-    tags: List[str]
+    tags: list[str]
     subtitle: str
     thumbnail: str
-    related_posts: List[str]
-    related_readings: List[str]
+    related_posts: list[str]
+    related_readings: list[str]
 
 
 def extract_frontmatter(content: str) -> TFrontMatter:
@@ -95,7 +112,7 @@ def get_slug_from_filename(filename: str) -> str:
 
 
 def iter_section_files(
-    section: str,
+    section: TSection,
     content_dir: Optional[Path] = None,
     translations: bool = False,
 ) -> Iterator[Path]:
@@ -113,9 +130,14 @@ def iter_section_files(
         yield path
 
 
-def read_entry(filepath: Path, strip_yaml: bool = False) -> tuple:
+def read_entry(filepath: Path, strip_yaml: bool = False) -> Tuple[TFrontMatter, str]:
     """Read one content file and return (frontmatter, body). The date falls back
-    to the filename prefix, which is where most posts carry it."""
+    to the filename prefix, which is where most posts carry it.
+
+    The pair is spelled out rather than left as a bare `tuple`: every generator
+    unpacks this, and a bare tuple made both halves Any, so unpacking them in the
+    wrong order or calling .get() on the body string type-checked fine and only
+    failed at build time."""
     content = filepath.read_text(encoding='utf-8')
     fm = extract_frontmatter(content)
     if 'date' not in fm:
@@ -125,8 +147,12 @@ def read_entry(filepath: Path, strip_yaml: bool = False) -> tuple:
     return fm, get_content_body(content, strip_yaml=strip_yaml)
 
 
-def entry_url(section: str, slug: str, base_url: str = BASE_URL) -> str:
-    """Canonical URL of a section entry."""
+def entry_url(section: TSection, slug: str, base_url: str = BASE_URL) -> str:
+    """Canonical URL of a section entry.
+
+    The language lives in base_url, not here: Spanish entries pass
+    f'{BASE_URL}/es'. See the note in enrich-search-index.py for what happens
+    when a caller forgets that."""
     return f'{base_url}/{section}/{slug}/'
 
 

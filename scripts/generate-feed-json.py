@@ -7,14 +7,18 @@ Easier to parse for modern feed readers and agent tooling
 than Atom/RSS XML. Mirrors the Atom feed shape.
 """
 
+from __future__ import annotations
+
 import json
 import re
 from datetime import datetime, timezone
+from typing import List, Sequence, TypedDict
 
 from _common import (
     BASE_URL,
     PUBLIC_DIR,
     SECTIONS,
+    TSection,
     entry_url,
     get_slug_from_filename,
     iter_section_files,
@@ -26,7 +30,26 @@ AUTHOR_URL = BASE_URL
 MAX_ITEMS = 30
 
 
-def extract_excerpt(body):
+class TAuthor(TypedDict):
+    name: str
+    url: str
+
+
+class TFeedItem(TypedDict, total=False):
+    """One JSON Feed v1.1 item. total=False because `tags` and `image` are only
+    written when the post has them; everything else is always set."""
+    id: str
+    url: str
+    title: str
+    date_published: str
+    summary: str
+    content_text: str
+    authors: List[TAuthor]
+    tags: List[str]
+    image: str
+
+
+def extract_excerpt(body: str) -> str:
     """First chunk before <!-- more --> or first ~500 chars of the body."""
     parts = re.split(r'<!--\s*more\s*-->', body, maxsplit=1)
     excerpt = parts[0]
@@ -37,23 +60,27 @@ def extract_excerpt(body):
     return excerpt[:500]
 
 
-def collect_entries(sections: list) -> list:
-    entries = []
+def collect_entries(sections: Sequence[TSection]) -> List[TFeedItem]:
+    entries: List[TFeedItem] = []
     for section in sections:
         for fp in iter_section_files(section):
             fm, body = read_entry(fp)
             # An entry needs both to appear in a feed. read_entry has already
-            # tried the filename for a missing date.
-            if not fm.get('title') or not fm.get('date'):
+            # tried the filename for a missing date. Bind them to locals: front
+            # matter is total=False, so indexing fm['title'] below would be an
+            # unchecked read that only this guard makes safe.
+            title = fm.get('title')
+            date = fm.get('date')
+            if not title or not date:
                 continue
 
             url = entry_url(section, get_slug_from_filename(fp.name))
-            published = datetime.strptime(fm['date'], '%Y-%m-%d').replace(tzinfo=timezone.utc)
+            published = datetime.strptime(date, '%Y-%m-%d').replace(tzinfo=timezone.utc)
 
-            item = {
+            item: TFeedItem = {
                 'id': url,
                 'url': url,
-                'title': fm['title'],
+                'title': title,
                 'date_published': published.isoformat(),
                 'summary': fm.get('description', ''),
                 'content_text': extract_excerpt(body),
