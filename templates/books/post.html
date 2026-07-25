@@ -9,14 +9,7 @@
 {% endblock styles %}
 
 {% block posthead %}
-{% if page.lower %}
-<link rel="prerender" href="{{ page.lower.permalink }}">
-{% endif %}
-
-{% if page.higher %}
-<link rel="prerender" href="{{ page.higher.permalink }}">
-{% endif %}
-
+{% include "partials/prerender-links.html" %}
 {% set schema_type = "Chapter" %}
 {% include "partials/post-schema.html" %}
 {% endblock posthead %}
@@ -117,26 +110,8 @@
 
 {% block js %}
 <script type="text/javascript" src="{{ get_url(path='toc.js') | safe }}" defer></script>
+{% include "partials/reading-progress.html" %}
 <script>
-  // Reading progress bar
-  window.addEventListener('scroll', function() {
-    const article = document.querySelector('.book-chapter__content');
-    if (!article) return;
-
-    const pageFooter = document.querySelector('.page-footer');
-    const articleTop = article.offsetTop;
-    const endPoint = pageFooter ? (pageFooter.offsetTop - 420) : (articleTop + article.offsetHeight);
-    const totalHeight = endPoint - articleTop;
-    const windowHeight = window.innerHeight;
-    const scrollTop = window.scrollY;
-
-    const progress = Math.min(Math.max((scrollTop - articleTop + windowHeight * 0.5) / totalHeight, 0), 1);
-    // The bar lives in the TOC panel, which a page with fewer than two headings
-    // does not render.
-    const bar = document.getElementById('reading-progress');
-    if (bar) bar.style.width = (progress * 100) + '%';
-  });
-
   // Image lightbox
   (function() {
     const lightbox = document.getElementById('image-lightbox');

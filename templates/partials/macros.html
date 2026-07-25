@@ -42,6 +42,32 @@ data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
              data-hl-export-done="{{ trans(key='highlight_export_done', lang=lang) }}"
 {%- endmacro %}
 
+{# ItemList schema for a section listing, newest first. Capped at 20 entries:
+   past that the markup costs more than the extra rows are worth to a crawler. #}
+{% macro item_list_schema(section, name) -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListOrder": "https://schema.org/ItemListOrderDescending",
+  "name": "{{ name }}",
+  "url": "{{ section.permalink | safe }}",
+  "numberOfItems": {{ section.pages | length }},
+  "itemListElement": [
+    {%- set list_items = section.pages | slice(end=20) -%}
+    {%- for post in list_items %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "url": "{{ post.permalink | safe }}",
+      "name": "{{ post.title }}"
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+{%- endmacro %}
+
 {# Bookmark button for the .blog-post__top-row of a post.
    Rendered here, not injected by favorites.js: a button appearing after load
    widens this row and can rewrap it, pushing the whole article down.

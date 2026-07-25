@@ -7,18 +7,7 @@
 {% endblock styles %}
 
 {% block posthead %}
-  {% if page.lower %}
-  <link rel="prerender" href="{{ page.lower.permalink }}">
-  {% endif %}
-
-  {% if page.higher %}
-  <link rel="prerender" href="{{ page.higher.permalink }}">
-  {% endif %}
-
-  {% for tag in page.taxonomies.tags %}
-  <link rel="prerender" href='{{ get_taxonomy_url(kind="tags", name=tag) }}'>
-  {% endfor %}
-
+  {% include "partials/prerender-links.html" %}
   {% set schema_type = "CreativeWork" %}
   {% include "partials/post-schema.html" %}
 {% endblock posthead %}

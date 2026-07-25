@@ -9,18 +9,7 @@
 {% endblock styles %}
 
 {% block posthead %}
-{% if page.lower %}
-<link rel="prerender" href="{{ page.lower.permalink }}">
-{% endif %}
-
-{% if page.higher %}
-<link rel="prerender" href="{{ page.higher.permalink }}">
-{% endif %}
-
-{% for tag in page.taxonomies.tags %}
-<link rel="prerender" href='{{ get_taxonomy_url(kind="tags", name=tag) }}'>
-{% endfor %}
-
+{% include "partials/prerender-links.html" %}
 {% set schema_type = "BlogPosting" %}
 {% include "partials/post-schema.html" %}
 {% endblock posthead %}
@@ -128,13 +117,7 @@
 <script type="text/javascript" src="{{ get_url(path='toc.js') | safe }}" defer></script>
 <script type="text/javascript" src="{{ get_url(path='interactive-list.js') | safe }}" defer></script>
 {% include "partials/reading-progress.html" %}
-<script>
-  // Add lazy loading to markdown content images
-  document.querySelectorAll('.blog-post__content img').forEach(function(img) {
-    img.setAttribute('loading', 'lazy');
-    img.setAttribute('decoding', 'async');
-  });
-</script>
+{% include "partials/lazy-content-images.html" %}
 {% endblock js %}
 
 {% block highlights %}

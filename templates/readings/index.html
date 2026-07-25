@@ -13,27 +13,7 @@
 {% endblock styles %}
 
 {% block posthead %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "itemListOrder": "https://schema.org/ItemListOrderDescending",
-  "name": "{{ trans(key='readings_title', lang=lang) }}",
-  "url": "{{ section.permalink | safe }}",
-  "numberOfItems": {{ section.pages | length }},
-  "itemListElement": [
-    {%- set list_items = section.pages | slice(end=20) -%}
-    {%- for post in list_items %}
-    {
-      "@type": "ListItem",
-      "position": {{ loop.index }},
-      "url": "{{ post.permalink | safe }}",
-      "name": "{{ post.title }}"
-    }{% if not loop.last %},{% endif %}
-    {%- endfor %}
-  ]
-}
-</script>
+{{ macros::item_list_schema(section=section, name=trans(key='readings_title', lang=lang)) }}
 {% endblock posthead %}
 
 {% block content %}
