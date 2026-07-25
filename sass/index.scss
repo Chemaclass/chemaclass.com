@@ -6,8 +6,8 @@
 @import "abstracts/variables";
 
 // 2. Vendors
-@import "normalize";
-@import "fonts";
+@import "vendors/normalize";
+@import "vendors/fonts";
 
 // 3. Base
 @import "base/reset";
@@ -18,7 +18,7 @@
 @import "layouts/footer";
 
 // 5. Components
-@import "menu";
+@import "components/theme-toggle";
 @import "components/buttons";
 @import "components/dialog";
 @import "components/read-state";

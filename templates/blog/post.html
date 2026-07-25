@@ -40,6 +40,22 @@
             {{ macros::back_arrow() }}
             {{ trans(key="all_posts", lang=lang) }}
           </a>
+          {# Rendered here, not injected by favorites.js: a button appearing after load
+             widens this row and can rewrap it, pushing the whole article down.
+             favorites.js only reads localStorage and flips the saved state. #}
+          <button type="button"
+                  class="favorite-toggle"
+                  aria-pressed="false"
+                  title="{{ trans(key='favorite_save', lang=lang) }}"
+                  aria-label="{{ trans(key='favorite_save', lang=lang) }}"
+                  data-label-save="{{ trans(key='favorite_save', lang=lang) }}"
+                  data-label-remove="{{ trans(key='favorite_remove', lang=lang) }}">
+            <svg class="favorite-toggle__icon" viewBox="0 0 24 24" width="16" height="16"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+            </svg>
+          </button>
           <button id="toc-toggle"
                   class="toc-toggle"
                   type="button"

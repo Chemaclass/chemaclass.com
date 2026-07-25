@@ -1,0 +1,58 @@
+// Full-screen image viewer, opened from images inside a book chapter.
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+
+    .lightbox__image {
+      transform: scale(1);
+    }
+  }
+
+  &__image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    line-height: 1;
+    padding: 0;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Responsive styles for book chapters

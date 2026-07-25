@@ -6,8 +6,8 @@
 @import "abstracts/variables";
 
 // 2. Vendors
-@import "normalize";
-@import "fonts";
+@import "vendors/normalize";
+@import "vendors/fonts";
 
 // 3. Base
 @import "base/reset";
@@ -21,7 +21,7 @@
 @import "layouts/taxonomy";
 
 // 5. Components
-@import "menu";
+@import "components/theme-toggle";
 @import "components/buttons";
 @import "components/dialog";
 @import "components/read-state";
@@ -31,6 +31,8 @@
 // 6. Pages
 @import "pages/blog";
 @import "pages/readings";
+@import "pages/book-chapter";
+@import "components/lightbox";
 @import "pages/topics";
 
 // 7. Themes
