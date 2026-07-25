@@ -37,7 +37,7 @@
     {% endif %}
   {% endfor %}
 
-  <div class="tags-page__cloud">
+  <div class="tag-cloud">
     {% for term in terms | sort(attribute="pages") | reverse %}
       {% set count = term.pages | length %}
       {% if count >= max_count / 2 %}
@@ -47,9 +47,9 @@
       {% else %}
         {% set size = "sm" %}
       {% endif %}
-      <a href="{{ term.permalink }}" class="tags-page__tag tags-page__tag--{{ size }}">
-        <span class="tags-page__tag-name">{{ term.name }}</span>
-        <span class="tags-page__tag-count">{{ count }}</span>
+      <a href="{{ term.permalink }}" class="tag-chip tag-chip--{{ size }}">
+        <span class="tag-chip__name">{{ term.name }}</span>
+        <span class="tag-chip__count">{{ count }}</span>
       </a>
     {% endfor %}
   </div>

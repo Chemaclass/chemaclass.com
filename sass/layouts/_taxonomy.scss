@@ -17,82 +17,6 @@
     margin: 0;
   }
 
-  &__cloud {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.6rem;
-  }
-
-  &__tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.45rem 0.9rem;
-    background: var(--search-input-bg);
-    border: 1px solid var(--preview-divider-color);
-    border-radius: 2rem;
-    text-decoration: none;
-    color: var(--body-color);
-    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-
-    &:hover {
-      border-color: var(--accent-color);
-    }
-
-    &--lg {
-      padding: 0.6rem 1.2rem;
-      border-color: var(--accent-color);
-
-      .tags-page__tag-name {
-        font-size: 1.05rem;
-        font-weight: 600;
-        color: var(--heading-color);
-      }
-
-      .tags-page__tag-count {
-        background: var(--accent-color);
-        color: white;
-      }
-    }
-
-    &--md {
-      padding: 0.5rem 1rem;
-
-      .tags-page__tag-name {
-        font-size: 0.92rem;
-        font-weight: 500;
-      }
-    }
-
-    &--sm {
-      .tags-page__tag-name {
-        font-size: 0.82rem;
-        font-weight: 400;
-        color: var(--color-subtitle);
-      }
-
-      .tags-page__tag-count {
-        font-size: 0.7rem;
-      }
-    }
-  }
-
-  &__tag-name {
-    font-weight: 500;
-    font-size: 0.9rem;
-  }
-
-  &__tag-count {
-    background: var(--preview-divider-color);
-    color: var(--color-subtitle);
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.15rem 0.5rem;
-    border-radius: 1rem;
-    min-width: 1.5em;
-    text-align: center;
-  }
 }
 
 // Single tag page
@@ -265,26 +189,8 @@
 
 // Responsive
 @media (max-width: $breakpoint-phone) {
-  .tags-page {
-    &__header h1 {
-      font-size: 1.5rem;
-    }
-
-    &__cloud {
-      gap: 0.5rem;
-    }
-
-    &__tag {
-      padding: 0.4rem 0.8rem;
-
-      &--lg {
-        padding: 0.5rem 1rem;
-      }
-    }
-
-    &__tag-name {
-      font-size: 0.85rem;
-    }
+  .tags-page__header h1 {
+    font-size: 1.5rem;
   }
 
   .tag-single {
