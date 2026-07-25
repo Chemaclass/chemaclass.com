@@ -1,0 +1,85 @@
+{# Table of contents, rendered at build time from page.toc.
+
+   This used to be built in the browser by toc.js on DOMContentLoaded, so the
+   styled panel painted empty and stayed that way until every deferred script had
+   run. Zola knows the headings at build time and already emits slug ids on them,
+   so the list ships inside the HTML and the anchors match without any JS.
+
+   Levels are flattened into one list, the way the old script did it: three nested
+   loops cover h2 > h3 > h4, which is every heading depth the content uses. The
+   `level` on each entry drives the class, so a page starting at h3 still gets the
+   right indent.
+
+   toc.js now only decorates this: scroll spy, the toggle, keyboard nav, and the
+   copy-link anchors on the headings themselves. #}
+
+{% set_global toc_count = 0 %}
+{% for a in page.toc %}
+  {% set_global toc_count = toc_count + 1 %}
+  {% for b in a.children %}
+    {% set_global toc_count = toc_count + 1 %}
+    {% for c in b.children %}
+      {% set_global toc_count = toc_count + 1 %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
+{% set has_related = page.extra.related_posts or page.extra.related_readings %}
+{# The related section sits inside .blog-post__content, so the old script counted
+   its heading towards the minimum. Keep counting it, or 47 readings with a single
+   heading plus related links would lose the panel they have today. #}
+{% if has_related %}
+  {% set_global toc_count = toc_count + 1 %}
+{% endif %}
+
+{# Below two headings a panel is more furniture than help, which is the threshold
+   the script used (CONFIG.minHeadings). #}
+{% if toc_count >= 2 %}
+<nav
+  id="toc-container"
+  data-hide-toc="false"
+  aria-label="{{ trans(key='toc_header_title', lang=lang) }}">
+  <div id="reading-progress" class="reading-progress"></div>
+
+  <div class="toc-header">
+    <a class="toc-title" href="#">{{ trans(key="toc_header_title", lang=lang) }}</a>
+    <button type="button" class="toc-close" aria-label="{{ trans(key='toc_close_label', lang=lang) }}">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+        <path d="M4 4l8 8m0-8L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+      </svg>
+    </button>
+  </div>
+
+  <ul class="toc-list" role="list">
+    {% for a in page.toc %}
+      <li class="toc-item toc-h{{ a.level }}">
+        <a class="toc-link" href="#{{ a.id }}">{{ a.title }}</a>
+      </li>
+      {% for b in a.children %}
+        <li class="toc-item toc-h{{ b.level }}">
+          <a class="toc-link" href="#{{ b.id }}">{{ b.title }}</a>
+        </li>
+        {% for c in b.children %}
+          <li class="toc-item toc-h{{ c.level }}">
+            <a class="toc-link" href="#{{ c.id }}">{{ c.title }}</a>
+          </li>
+        {% endfor %}
+      {% endfor %}
+    {% endfor %}
+
+    {# The related section is template markup, not content, so it never appears in
+       page.toc. One flat entry, matching what the script used to synthesise. #}
+    {% if has_related %}
+      <li class="toc-item toc-h2">
+        <a class="toc-link" href="#related-content">
+          {% if page.extra.related_posts %}
+            {{ trans(key="related_posts", lang=lang) }}
+          {% else %}
+            {{ trans(key="related_readings", lang=lang) }}
+          {% endif %}
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
