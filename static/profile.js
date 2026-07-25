@@ -4,6 +4,13 @@
 (function () {
   if (typeof window === 'undefined') return;
 
+  // These two keys are owned by reading-streak.js and favorites.js respectively
+  // and are repeated here on purpose. profile.html emits this script tag inside
+  // the content block, which base.html renders above the reading-streak.js and
+  // favorites.js tags, so with `defer` this file executes first and neither
+  // window.__readingStreak nor window.__favorites exists yet. Reading
+  // localStorage directly is what makes that order irrelevant. Rename a key in
+  // one of those files and it must be renamed here too.
   var READ_KEY = 'chemaclass:read-posts';
   var FAV_KEY  = 'chemaclass:favorites';
 

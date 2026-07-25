@@ -1,7 +1,3 @@
-{# ==========================================================================
-   Shared Macros for Template Reuse
-   ========================================================================== #}
-
 {# Head stylesheets for a page: the entry bundle plus the async search bundle.
    search.css is loaded on every page because the search dialog lives in base.html,
    so it is preloaded and swapped in, with a <noscript> fallback. Pass `preload` to
@@ -69,10 +65,9 @@ data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
 </script>
 {%- endmacro %}
 
-{# Bookmark button for the .blog-post__top-row of a post.
-   Rendered here, not injected by favorites.js: a button appearing after load
-   widens this row and can rewrap it, pushing the whole article down.
-   favorites.js only reads localStorage and flips the saved state. #}
+{# Bookmark button for the .blog-post__top-row of a post. Keep it in the markup:
+   a button that appears after load widens this row and can rewrap it, pushing the
+   whole article down. favorites.js only reads localStorage and flips the state. #}
 {% macro favorite_toggle(lang) -%}
 <button type="button"
                   class="favorite-toggle"
@@ -184,41 +179,4 @@ data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
   <line x1="16" y1="13" x2="8" y2="13"></line>
   <line x1="16" y1="17" x2="8" y2="17"></line>
 </svg>
-{% endmacro %}
-
-{# Tech badge icon based on technology name #}
-{% macro tech_icon(tech) %}
-{% if tech == "PHP" %}<i class="fa-brands fa-php"></i>
-{% elif tech == "Bash" %}<i class="fa-solid fa-terminal"></i>
-{% elif tech == "Lisp" or tech == "Phel" %}<i class="fa-solid fa-code"></i>
-{% elif tech == "Vue" %}<i class="fa-brands fa-vuejs"></i>
-{% elif tech == "AI" %}<i class="fa-solid fa-robot"></i>
-{% else %}<i class="fa-solid fa-code"></i>
-{% endif %}
-{% endmacro %}
-
-{# Format price with thousand separator based on language (ES: 1.000, EN: 1,000) #}
-{# Note: Only works correctly for values 1000-9999 with remainders of 0, 50, or 100 #}
-{% macro price(value, lang) %}
-{%- if value >= 1000 -%}
-{%- set thousands = value / 1000 | round(method="floor") | int -%}
-{%- set remainder = value - thousands * 1000 -%}
-{%- if remainder == 0 -%}
-{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}000
-{%- elif remainder == 50 -%}
-{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}050
-{%- elif remainder == 100 -%}
-{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}100
-{%- elif remainder == 400 -%}
-{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}400
-{%- elif remainder == 500 -%}
-{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}500
-{%- elif remainder == 800 -%}
-{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}800
-{%- else -%}
-{{ thousands }}{% if lang == "es" %}.{% else %},{% endif %}{{ remainder }}
-{%- endif -%}
-{%- else -%}
-{{ value }}
-{%- endif -%}
 {% endmacro %}

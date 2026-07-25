@@ -7,7 +7,6 @@
 (function() {
   'use strict';
 
-  // Configuration
   const CONFIG = {
     contentSelector: '.blog-post__content, .book-chapter__content, .post-title ~ div, .reading-post .post-title ~ div',
     tocContainer: '#toc-container',
@@ -94,6 +93,13 @@
 
   // "#" affordance that copies a link straight to a section. Zola gives every
   // content heading an id, so these just hang off what is already there.
+  //
+  // This writes into the same subtree highlights.js serialises. Its stored paths
+  // are child indexes (nodeToPath in highlights.js), so injecting here is only
+  // safe because the anchor is *appended*: it lands after every existing child,
+  // and no other node's index moves. If this ever inserts anywhere but the end,
+  // add a skip for .heading-anchor to isNoteNode in highlights.js, or every saved
+  // highlight in a heading stops resolving.
   function addHeadingAnchors() {
     const content = document.querySelector(CONFIG.contentSelector);
     if (!content) return;

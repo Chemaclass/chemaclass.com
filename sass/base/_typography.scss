@@ -151,14 +151,17 @@ a {
   // keeps a uniform border instead of this underline painting a mismatched line
   // across its bottom edge. Prose links have no such :hover, so they still get
   // the treatment. The button/tag list stays as a belt-and-suspenders opt-out.
+  //
+  // Layering: this is the one place a base/ partial names classes owned by later
+  // layers. .header-left is layouts/_header.scss, .view-all is pages/_homepage,
+  // .blog-post__tag is layouts/_post, .talk-single__tag and
+  // .talk-single__project-link are pages/_talks. The denylist is data, not a
+  // style dependency, so nothing here needs those partials to be loaded. But
+  // renaming any of the five silently re-enables the prose underline on that
+  // element, so grep this selector on any such rename.
   &:hover:where(:not([class*="btn"]):not([class*="button"]):not([class*="cta"]):not(.view-all):not(.header-left):not(.blog-post__tag):not(.talk-single__tag):not(.talk-single__project-link)) {
     color: var(--accent-overlay-color);
     border-bottom: 1px solid var(--accent-color-light);
-  }
-
-  &.close-border:hover {
-    border-bottom: none;
-    text-decoration: underline;
   }
 }
 

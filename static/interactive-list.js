@@ -19,17 +19,14 @@
       tab.addEventListener('click', function() {
         const targetId = tab.dataset.target;
 
-        // Update tabs: remove active state from all
         tabs.forEach(function(t) {
           t.classList.remove('active');
           t.setAttribute('aria-selected', 'false');
         });
 
-        // Set clicked tab as active
         tab.classList.add('active');
         tab.setAttribute('aria-selected', 'true');
 
-        // Update panels: hide all, show target
         panels.forEach(function(p) {
           p.classList.remove('active');
         });
@@ -67,15 +64,11 @@
     });
   }
 
-  /**
-   * Initialize all interactive list components on the page
-   */
   function init() {
     var containers = document.querySelectorAll('[data-component="interactive-list"]');
     containers.forEach(initInteractiveList);
   }
 
-  // Initialize on DOM ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

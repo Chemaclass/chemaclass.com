@@ -44,6 +44,11 @@ $read-accent-bg: rgba(34, 197, 94, 0.12);
 
 // Latest-card has no meta flex-row of its own, so build one inline on read:
 // pill pushes to the right of the date.
+// Layering note: .latest-card and .latest-date belong to pages/_homepage.scss,
+// so this block only does anything in index.css. It reaches up a layer on
+// purpose, because the pill itself is a component and splitting it would put
+// half of one visual state in a page partial. If .latest-* is ever renamed,
+// grep here too.
 .latest-card.is-read {
   .latest-date {
     display: flex;

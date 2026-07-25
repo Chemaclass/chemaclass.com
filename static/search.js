@@ -188,7 +188,6 @@ function getActiveSearchContainer() {
 
 // Initialize with the first visible container (will be updated dynamically)
 let activeContainer = getActiveSearchContainer() || allSearchContainers[0];
-let searchInput = activeContainer?.querySelector('input[type="search"]');
 let searchResults = activeContainer?.querySelector(".search-results");
 let searchResultsItems = activeContainer?.querySelector(".search-results__items");
 

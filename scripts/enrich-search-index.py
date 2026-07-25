@@ -93,6 +93,18 @@ def enrich_search_index(public_dir: Path, url_to_date: TUrlToDate) -> None:
                 enriched_count += 1
 
         if not enriched_count:
+            # A dev server writes the index with its own base URL, so nothing can
+            # match and the run is simply against the wrong build, not a bug in the
+            # URL mapping. Say which it is instead of blaming the content.
+            sample = next(iter(docs), '')
+            if sample and not sample.startswith(BASE_URL):
+                prefix = sample.split('/')[0] + '//' + sample.split('/')[2] if '//' in sample else sample
+                sys.exit(
+                    f"{index_file.name}: built with base_url {prefix}, but this "
+                    f"script builds {BASE_URL} URLs. A running `zola serve` "
+                    "overwrites public/ with its own base URL: stop it, or run the "
+                    "build in a separate worktree."
+                )
             sys.exit(
                 f"{index_file.name}: none of its {len(docs)} documents matched a "
                 "dated content file, so no result would show a date. The URLs built "

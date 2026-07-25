@@ -1,6 +1,6 @@
-// Bookmark toggle injected by static/favorites.js into .blog-post__top-row.
-// Shape mirrors .toc-toggle pill so the three controls in that row feel like
-// one family, back link / save / toc toggle.
+// Bookmark toggle in .blog-post__top-row, rendered by the post templates and
+// driven by static/favorites.js. Shape mirrors the .toc-toggle pill so the three
+// controls in that row feel like one family, back link / save / toc toggle.
 
 $fav-accent: #f59e0b; // amber, reads as "saved"
 $fav-accent-soft: rgba(245, 158, 11, 0.18);

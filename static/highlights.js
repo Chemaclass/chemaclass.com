@@ -21,6 +21,15 @@
     return content.getAttribute('data-hl-' + key) || fallback;
   }
 
+  // showToast is a global declared by static/navigation.js. base.html loads that
+  // file (deferred) before the {% block highlights %} script tag, so deferred
+  // execution order guarantees it exists here. Called through a guard anyway so a
+  // template that ships highlights.js without navigation.js degrades to a silent
+  // save instead of throwing mid-handler and leaving the highlight half-applied.
+  function showToast(message) {
+    if (typeof window.showToast === 'function') window.showToast(message);
+  }
+
   // ========================================================================
   // Storage
   // ========================================================================

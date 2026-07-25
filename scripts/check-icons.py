@@ -96,6 +96,17 @@ def fail(message: str) -> int:
 
 
 def main() -> int:
+    # Every path here is relative, so build.sh's contract is: run from the repo
+    # root, after `zola build`. Without public/ the HTML scan finds nothing and the
+    # check would report success on zero icons, which is the one failure mode this
+    # script exists to prevent.
+    if not PUBLIC_DIR.is_dir():
+        print(
+            f"{PUBLIC_DIR}/ not found. Run `zola build` first, from the repo root.",
+            file=sys.stderr,
+        )
+        return 1
+
     for path in (CSS_PATH, SOURCE_CSS, MANIFEST):
         if not path.is_file():
             print(f"{path} is missing", file=sys.stderr)
