@@ -63,10 +63,15 @@
       overflow: visible;
 
       img {
-        width: auto;
-        max-width: 280px;
+        // `width: auto` sized the cover from its intrinsic dimensions, which for
+        // the remote covers most readings use arrive only with the bytes. The
+        // cover took 66px until then and 465px after, shoving the title and the
+        // whole article down: 0.13 CLS. Pin the box to what the template already
+        // declares (280x420) and let `contain` letterbox anything off-ratio.
+        width: 280px;
+        max-width: 100%;
         height: auto;
-        max-height: 420px;
+        aspect-ratio: 280 / 420;
         object-fit: contain;
         border-radius: 4px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);

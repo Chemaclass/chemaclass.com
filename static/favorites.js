@@ -9,13 +9,6 @@
   // Blog and reading post paths, tag pages and listings aren't saveable.
   var POST_PATH_RE = /^\/(?:es\/)?(?:blog|readings)\/[^\/]+\/?$/;
 
-  var BOOKMARK_SVG_OUTLINE =
-    '<svg class="favorite-toggle__icon" viewBox="0 0 24 24" width="16" height="16" ' +
-         'fill="none" stroke="currentColor" stroke-width="2" ' +
-         'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-      '<path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>' +
-    '</svg>';
-
   var BOOKMARK_SVG_FILLED =
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 32" aria-hidden="true">' +
       '<path d="M2 0h20v32l-10-8-10 8z"/>' +
@@ -46,58 +39,47 @@
     }));
   }
 
-  // The bookmark toggle lives inside .blog-post__top-row, same row as
-  // "← all posts" and the TOC toggle. Mirrors their pill shape to blend in.
-  function injectButton() {
-    var row = document.querySelector('.blog-post__top-row');
-    if (!row || row.querySelector('.favorite-toggle')) return;
+  // The button is rendered by the post templates, inside .blog-post__top-row
+  // alongside "back" and the TOC toggle. Injecting it here used to widen that row
+  // after load, which rewrapped it on narrow screens and pushed the article down.
+  // All that is left is reading the stored state and keeping it in sync.
+  function bindButton() {
+    var btn = document.querySelector('.favorite-toggle');
+    if (!btn || btn.dataset.bound) return;
+    btn.dataset.bound = 'true';
+
+    var labelSave = btn.dataset.labelSave || 'Save post';
+    var labelRemove = btn.dataset.labelRemove || 'Remove from saved';
+
+    function render(saved) {
+      btn.classList.toggle('is-saved', saved);
+      btn.setAttribute('aria-pressed', saved ? 'true' : 'false');
+      btn.setAttribute('title', saved ? labelRemove : labelSave);
+      btn.setAttribute('aria-label', saved ? labelRemove : labelSave);
+    }
 
     var key = normalize(location.pathname);
-    var map = load();
-    var saved = !!map[key];
-
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'favorite-toggle';
-    btn.setAttribute('aria-pressed', saved ? 'true' : 'false');
-    btn.setAttribute('title', saved ? 'Remove from saved' : 'Save post');
-    btn.setAttribute('aria-label', saved ? 'Remove from saved' : 'Save post');
-    btn.innerHTML = BOOKMARK_SVG_OUTLINE;
-
-    if (saved) btn.classList.add('is-saved');
+    render(!!load()[key]);
 
     btn.addEventListener('click', function () {
       var current = load();
       var k = normalize(location.pathname);
-      if (current[k]) {
-        delete current[k];
-        btn.classList.remove('is-saved');
-        btn.setAttribute('aria-pressed', 'false');
-        btn.setAttribute('title', 'Save post');
-        btn.setAttribute('aria-label', 'Save post');
-        emit(k, false);
-      } else {
+      var saved = !current[k];
+
+      if (saved) {
         current[k] = Date.now();
-        btn.classList.add('is-saved', 'just-saved');
-        btn.setAttribute('aria-pressed', 'true');
-        btn.setAttribute('title', 'Remove from saved');
-        btn.setAttribute('aria-label', 'Remove from saved');
+        btn.classList.add('just-saved');
         window.setTimeout(function () {
           btn.classList.remove('just-saved');
         }, 600);
-        emit(k, true);
+      } else {
+        delete current[k];
       }
-      save(current);
-    });
 
-    // Slot it right after the back link, before the toc-toggle, so layout stays
-    // "[ back ] [ save ] … [ toc toggle ]".
-    var back = row.querySelector('.blog-post__back');
-    if (back && back.nextSibling) {
-      row.insertBefore(btn, back.nextSibling);
-    } else {
-      row.appendChild(btn);
-    }
+      render(saved);
+      save(current);
+      emit(k, saved);
+    });
   }
 
   // Debug / profile-page API.
@@ -158,7 +140,7 @@
   }
 
   function init() {
-    if (isPostPage()) injectButton();
+    if (isPostPage()) bindButton();
     decorateCards();
   }
 
