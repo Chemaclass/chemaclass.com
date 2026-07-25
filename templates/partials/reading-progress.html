@@ -1,12 +1,13 @@
 {# ==========================================================================
    Reading Progress Bar Script
    Usage: {% include "partials/reading-progress.html" %}
-   Requires: Element with id="reading-progress" and class="blog-post__content"
+   Requires: an element with id="reading-progress" and an article body matching
+   one of the selectors below. A page renders exactly one of them.
    ========================================================================== #}
 <script>
   // Reading progress bar
   window.addEventListener('scroll', function() {
-    const article = document.querySelector('.blog-post__content');
+    const article = document.querySelector('.blog-post__content, .book-chapter__content');
     if (!article) return;
 
     const pageFooter = document.querySelector('.page-footer');

@@ -15,8 +15,41 @@
     '</svg>';
 
   function load() {
-    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+    var raw;
+    // Reading localStorage throws when the origin has no storage access, e.g.
+    // Safari private browsing. Nothing is stored then, so an empty map is right
+    // and there is nothing to report.
+    try { raw = localStorage.getItem(STORAGE_KEY); }
     catch (e) { return {}; }
+    if (!raw) return {};
+
+    // Past this point the value is one we wrote, and it is still reader-writable
+    // and outlives every release, so treat it as untrusted. `JSON.parse(...) || {}`
+    // caught only null and syntax errors: an array, a number or a string parses
+    // truthy, and writing through one loses everything, because JSON.stringify of
+    // an array drops string properties. Saving then appeared to work and persisted
+    // nothing, permanently, with no error anywhere.
+    var parsed;
+    try { parsed = JSON.parse(raw); }
+    catch (e) {
+      console.error('[favorites] ' + STORAGE_KEY + ' is not valid JSON, ignoring it:', e);
+      return {};
+    }
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+      console.error('[favorites] ' + STORAGE_KEY + ' is not an object, ignoring it:', parsed);
+      return {};
+    }
+
+    // Drop entries whose timestamp is not a real one, or the "saved on" dates
+    // render as Invalid Date. Rebuilding the map means the next save heals it.
+    var map = {};
+    for (var path in parsed) {
+      if (!Object.prototype.hasOwnProperty.call(parsed, path)) continue;
+      var ts = parsed[path];
+      if (typeof ts === 'number' && isFinite(ts) && ts > 0) map[path] = ts;
+      else console.warn('[favorites] dropping ' + path + ', timestamp is not usable:', ts);
+    }
+    return map;
   }
 
   function save(map) {

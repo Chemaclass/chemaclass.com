@@ -7,78 +7,84 @@ Run after `zola build` to enrich search_index.en.json with dates.
 from __future__ import annotations
 
 import json
-import re
+import sys
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Any, Dict
 
-from _common import extract_date_from_filename
+from _common import (
+    CONTENT_DIR,
+    PUBLIC_DIR,
+    SECTIONS,
+    entry_url,
+    get_slug_from_filename,
+    iter_section_files,
+    read_entry,
+)
 
-def extract_date_from_frontmatter(filepath: Path) -> Optional[str]:
-    """Extract date from markdown frontmatter."""
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            content = f.read()
+# Maps a full published URL to a YYYY-MM-DD date. The key is the whole URL,
+# language prefix included, because that is how the search index keys its docs.
+TUrlToDate = Dict[str, str]
 
-        # Match TOML frontmatter (between +++ markers)
-        toml_match = re.search(r'^\+\+\+\s*\n(.*?)\n\+\+\+', content, re.DOTALL)
-        if toml_match:
-            frontmatter = toml_match.group(1)
-            date_match = re.search(r'^date\s*=\s*["\']?(\d{4}-\d{2}-\d{2})', frontmatter, re.MULTILINE)
-            if date_match:
-                return date_match.group(1)
+def build_url_to_date_map(content_dir: Path) -> TUrlToDate:
+    """Build a mapping from entry URL to publication date, both languages.
 
-        # Match YAML frontmatter (between --- markers)
-        yaml_match = re.search(r'^---\s*\n(.*?)\n---', content, re.DOTALL)
-        if yaml_match:
-            frontmatter = yaml_match.group(1)
-            date_match = re.search(r'^date:\s*["\']?(\d{4}-\d{2}-\d{2})', frontmatter, re.MULTILINE)
-            if date_match:
-                return date_match.group(1)
-    except (OSError, UnicodeDecodeError) as e:
-        print(f"Error reading {filepath}: {e}")
+    A `.es.md` shares its slug with the English original but is published under
+    /es/, so the language has to reach the URL. Walking English only, or building
+    the URL off the filename stem, produces keys no Spanish permalink can match,
+    which is how search_index.es.json ended up with a date on none of its 221
+    documents while the English index had 164."""
+    url_to_date: TUrlToDate = {}
 
-    return None
-
-def build_url_to_date_map(content_dir: Path) -> Dict[str, str]:
-    """Build a mapping from URL paths to dates."""
-    url_to_date = {}
-    base_url = "https://chemaclass.com"
-
-    sections = ['blog', 'readings', 'talks']
-
-    for section in sections:
-        section_path = content_dir / section
-        if not section_path.exists():
-            continue
-
-        for filepath in section_path.glob('*.md'):
-            if filepath.name == '_index.md':
-                continue
-
-            # Try frontmatter first, then filename
-            date = extract_date_from_frontmatter(filepath)
-            if not date:
-                date = extract_date_from_filename(filepath.name)
-
+    for section in SECTIONS:
+        for filepath in iter_section_files(section, content_dir, translations=True):
+            fm, _ = read_entry(filepath)
+            date = fm.get('date')
             if date:
-                # Generate the URL slug (remove date prefix and .md extension)
-                slug = filepath.stem
-                slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', slug)
-
-                url = f"{base_url}/{section}/{slug}/"
+                url = entry_url(
+                    section,
+                    get_slug_from_filename(filepath.name),
+                    es='.es.md' in filepath.name,
+                )
                 url_to_date[url] = date
 
     return url_to_date
 
-def enrich_search_index(public_dir: Path, url_to_date: Dict[str, str]) -> bool:
-    """Add dates to search indices for all languages."""
-    total_enriched = 0
+def docs_of(search_index: Any, index_file: Path) -> Dict[str, Dict[str, Any]]:
+    """Narrow the elasticlunr index Zola wrote down to its docs map.
 
-    for index_file in public_dir.glob('search_index.*.json'):
+    json.load hands back Any, so every access under it is unchecked. Zola owns this
+    file's shape, so a release that moved `documentStore.docs` would surface as a
+    bare KeyError, or as .items() on a list. Check the shape once."""
+    store = search_index.get('documentStore') if isinstance(search_index, dict) else None
+    docs = store.get('docs') if isinstance(store, dict) else None
+    if not isinstance(docs, dict):
+        raise SystemExit(
+            f"{index_file}: expected documentStore.docs to be an object, got "
+            f"{type(docs).__name__}. Did the Zola search index format change?"
+        )
+    return docs
+
+
+def enrich_search_index(public_dir: Path, url_to_date: TUrlToDate) -> None:
+    """Add dates to search indices for all languages.
+
+    An index that comes out with no dates at all means the URLs built from the
+    filenames no longer match the permalinks Zola wrote, so every result in that
+    language loses its date. Printing the count and returning a bool nobody read
+    is what let exactly that ship for the Spanish index, so fail the build here.
+    """
+    index_files = sorted(public_dir.glob('search_index.*.json'))
+    if not index_files:
+        sys.exit(
+            f"no search_index.*.json in {public_dir}: run `zola build` first, or "
+            "build_search_index has been turned off in config.toml"
+        )
+
+    for index_file in index_files:
         with open(index_file, 'r', encoding='utf-8') as f:
             search_index = json.load(f)
 
-        docs = search_index['documentStore']['docs']
+        docs = docs_of(search_index, index_file)
 
         enriched_count = 0
         for url, doc in docs.items():
@@ -86,27 +92,25 @@ def enrich_search_index(public_dir: Path, url_to_date: Dict[str, str]) -> bool:
                 doc['date'] = url_to_date[url]
                 enriched_count += 1
 
+        if not enriched_count:
+            sys.exit(
+                f"{index_file.name}: none of its {len(docs)} documents matched a "
+                "dated content file, so no result would show a date. The URLs built "
+                "from content/ no longer line up with the permalinks in the index."
+            )
+
         with open(index_file, 'w', encoding='utf-8') as f:
             json.dump(search_index, f, ensure_ascii=False, separators=(',', ':'))
 
         print(f"  {index_file.name}: {enriched_count} documents")
-        total_enriched += enriched_count
-
-    return total_enriched > 0
 
 def main() -> None:
-    # Determine paths relative to script location
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parent
-    content_dir = project_root / 'content'
-    public_dir = project_root / 'public'
-
     print("Building URL to date mapping...")
-    url_to_date = build_url_to_date_map(content_dir)
+    url_to_date = build_url_to_date_map(CONTENT_DIR)
     print(f"Found {len(url_to_date)} dated documents")
 
     print("Enriching search indices...")
-    enrich_search_index(public_dir, url_to_date)
+    enrich_search_index(PUBLIC_DIR, url_to_date)
 
 if __name__ == '__main__':
     main()

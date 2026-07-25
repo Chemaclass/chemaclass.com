@@ -364,30 +364,34 @@ if (document.readyState === "complete" || (document.readyState !== "loading" && 
     });
 }
 
+// Fetch the search index, saying which path failed and with what status. Without
+// the response.ok check a 404 (a renamed index, a language dropped from
+// config.toml) reached JSON.parse as an HTML error page and surfaced as an
+// unexplained SyntaxError.
+function fetchSearchIndex() {
+    return fetch(SEARCH_INDEX_PATH).then((response) => {
+        if (!response.ok) {
+            throw new Error(`${SEARCH_INDEX_PATH} returned HTTP ${response.status}`);
+        }
+        return response.json();
+    });
+}
+
 // Preload the search index after page load for instant search
 function preloadSearchIndex() {
+    // A failure here is not fatal: initIndex() fetches the index again on the
+    // first keystroke. It is still worth a line in the console, because the
+    // silent version made a broken index path look like nothing had happened.
+    const store = (data) => { window.__searchIndexData = data; };
+    const warn = (error) => {
+        console.warn('[search] preloading the index failed, it will be fetched on demand:', error);
+    };
+
     // Use requestIdleCallback to load during idle time, or setTimeout as fallback
     if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => {
-            fetch(SEARCH_INDEX_PATH)
-                .then(async (response) => {
-                    const data = await response.json();
-                    // Store in a global variable for initSearch to use
-                    window.__searchIndexData = data;
-                })
-                .catch(() => {
-                    // Silently fail - regular search will still work
-                });
-        });
+        requestIdleCallback(() => { fetchSearchIndex().then(store, warn); });
     } else {
-        setTimeout(() => {
-            fetch(SEARCH_INDEX_PATH)
-                .then(async (response) => {
-                    const data = await response.json();
-                    window.__searchIndexData = data;
-                })
-                .catch(() => {});
-        }, 1000);
+        setTimeout(() => { fetchSearchIndex().then(store, warn); }, 1000);
     }
 }
 
@@ -414,14 +418,10 @@ function initSearch() {
         }
 
         if (index === undefined) {
-            index = fetch(SEARCH_INDEX_PATH)
-                .then(
-                    async function (response) {
-                        const data = await response.json();
-                        indexCache = elasticlunr.Index.load(data);
-                        return indexCache;
-                    }
-                );
+            index = fetchSearchIndex().then(function (data) {
+                indexCache = elasticlunr.Index.load(data);
+                return indexCache;
+            });
         }
         return await index;
     }

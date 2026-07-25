@@ -1,0 +1,13 @@
+{# ==========================================================================
+   Defer the images inside a rendered post body. Zola's markdown does not emit
+   loading/decoding hints, and the hero above is the only image worth fetching
+   eagerly, so everything in the body opts out.
+   Usage: {% include "partials/lazy-content-images.html" %}
+   ========================================================================== #}
+<script>
+  // Add lazy loading to markdown content images
+  document.querySelectorAll('.blog-post__content img').forEach(function(img) {
+    img.setAttribute('loading', 'lazy');
+    img.setAttribute('decoding', 'async');
+  });
+</script>

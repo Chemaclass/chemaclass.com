@@ -5,26 +5,11 @@
 {% import "partials/macros.html" as macros %}
 
 {% block styles %}
-<link rel="stylesheet" href="{{ get_url(path='post.css') | safe }}">
-<link rel="preload" href="{{ get_url(path='search.css') | safe }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="{{ get_url(path='search.css') | safe }}">
-</noscript>
+{{ macros::page_styles(css='post.css') }}
 {% endblock styles %}
 
 {% block posthead %}
-{% if page.lower %}
-<link rel="prerender" href="{{ page.lower.permalink }}">
-{% endif %}
-
-{% if page.higher %}
-<link rel="prerender" href="{{ page.higher.permalink }}">
-{% endif %}
-
-{% for tag in page.taxonomies.tags %}
-<link rel="prerender" href='{{ get_taxonomy_url(kind="tags", name=tag) }}'>
-{% endfor %}
-
+{% include "partials/prerender-links.html" %}
 {% set schema_type = "Article" %}
 {% include "partials/post-schema.html" %}
 
@@ -70,38 +55,8 @@
             {{ macros::back_arrow() }}
             {{ trans(key="all_readings", lang=lang) }}
           </a>
-          {# Rendered here, not injected by favorites.js: a button appearing after load
-             widens this row and can rewrap it, pushing the whole article down.
-             favorites.js only reads localStorage and flips the saved state. #}
-          <button type="button"
-                  class="favorite-toggle"
-                  aria-pressed="false"
-                  title="{{ trans(key='favorite_save', lang=lang) }}"
-                  aria-label="{{ trans(key='favorite_save', lang=lang) }}"
-                  data-label-save="{{ trans(key='favorite_save', lang=lang) }}"
-                  data-label-remove="{{ trans(key='favorite_remove', lang=lang) }}">
-            <svg class="favorite-toggle__icon" viewBox="0 0 24 24" width="16" height="16"
-                 fill="none" stroke="currentColor" stroke-width="2"
-                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
-            </svg>
-          </button>
-          <button id="toc-toggle"
-                  class="toc-toggle"
-                  type="button"
-                  role="switch"
-                  aria-checked="true"
-                  aria-label="Toggle table of contents">
-            <svg class="toc-toggle__icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="1" y="2" width="5" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M9 4h6M9 8h6M9 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <span class="toc-toggle__label">{{ trans(key="toc_toggle_label", lang=lang) }}</span>
-            <span class="toc-toggle__switch">
-              <span class="toc-toggle__knob"></span>
-            </span>
-            <kbd class="toc-toggle__shortcut">T</kbd>
-          </button>
+          {{ macros::favorite_toggle(lang=lang) }}
+          {{ macros::toc_toggle(lang=lang) }}
         </div>
 
         <!-- Hero thumbnail -->
@@ -181,24 +136,7 @@
 
         <!-- Content -->
         <div class="blog-post__content reading-post"
-             data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
-             data-hl-remove="{{ trans(key='highlight_remove', lang=lang) }}"
-             data-hl-share-x="{{ trans(key='highlight_share_x', lang=lang) }}"
-             data-hl-share-linkedin="{{ trans(key='highlight_share_linkedin', lang=lang) }}"
-             data-hl-copy-quote="{{ trans(key='highlight_copy_quote', lang=lang) }}"
-             data-hl-copied="{{ trans(key='highlight_copied', lang=lang) }}"
-             data-hl-saved="{{ trans(key='highlight_saved', lang=lang) }}"
-             data-hl-removed="{{ trans(key='highlight_removed', lang=lang) }}"
-             data-hl-add-note="{{ trans(key='highlight_add_note', lang=lang) }}"
-             data-hl-edit-note="{{ trans(key='highlight_edit_note', lang=lang) }}"
-             data-hl-note-saved="{{ trans(key='highlight_note_saved', lang=lang) }}"
-             data-hl-note-removed="{{ trans(key='highlight_note_removed', lang=lang) }}"
-             data-hl-note-placeholder="{{ trans(key='highlight_note_placeholder', lang=lang) }}"
-             data-hl-clear-all="{{ trans(key='highlight_clear_all', lang=lang) }}"
-             data-hl-clear-confirm="{{ trans(key='highlight_clear_confirm', lang=lang) }}"
-             data-hl-clear-done="{{ trans(key='highlight_clear_done', lang=lang) }}"
-             data-hl-export="{{ trans(key='highlight_export', lang=lang) }}"
-             data-hl-export-done="{{ trans(key='highlight_export_done', lang=lang) }}">
+             {{ macros::highlight_labels(lang=lang) }}>
           {% if page.description %}
           <div class="tldr">{{ page.description }}</div>
           {% endif %}
@@ -220,13 +158,7 @@
 {% block js %}
 <script type="text/javascript" src="{{ get_url(path='toc.js') | safe }}" defer></script>
 {% include "partials/reading-progress.html" %}
-<script>
-  // Add lazy loading to markdown content images
-  document.querySelectorAll('.blog-post__content img').forEach(function(img) {
-    img.setAttribute('loading', 'lazy');
-    img.setAttribute('decoding', 'async');
-  });
-</script>
+{% include "partials/lazy-content-images.html" %}
 {% endblock js %}
 
 {% block highlights %}

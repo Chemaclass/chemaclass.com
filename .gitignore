@@ -7,3 +7,6 @@ public/
 static/processed_images/
 static/terminal-fs.json
 static/slides/*/slides.pdf
+
+# Agent worktrees live inside the repo but are separate checkouts
+.claude/worktrees/
