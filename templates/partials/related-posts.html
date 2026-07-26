@@ -4,8 +4,10 @@
   <div class="related-content__section">
     <h2 class="related-content__heading">{{ trans(key="related_posts", lang=lang) }}</h2>
     <div class="related-content__cards">
+      {# Front matter names the English file. Without lang, every Spanish post
+         sent the reader to the English version of its own related posts. #}
       {% for path in page.extra.related_posts %}
-        {% set related = get_page(path=path) %}
+        {% set related = get_page(path=path, lang=lang) %}
         <a href="{{ related.permalink }}" class="related-card">
           <span class="related-card__date">{% if lang == "es" %}{{ related.date | date(format="%d/%m/%Y") }}{% else %}{{ related.date | date(format="%b %d, %Y") }}{% endif %}</span>
           <h3 class="related-card__title">{{ related.title }}</h3>
@@ -23,10 +25,10 @@
     <h2 class="related-content__heading">{{ trans(key="related_readings", lang=lang) }}</h2>
     <div class="related-content__inline">
       {% for path in page.extra.related_readings %}
-        {% set related = get_page(path=path) %}
+        {% set related = get_page(path=path, lang=lang) %}
         <a href="{{ related.permalink }}" class="related-inline">
           <i class="fa-solid fa-book"></i>
-          <span>{{ related.title }}{% if related.extra.author %} <span class="related-inline__author">by {{ related.extra.author }}</span>{% endif %}</span>
+          <span>{{ related.title }}{% if related.extra.author %} <span class="related-inline__author">{{ trans(key="written_by", lang=lang) }} {{ related.extra.author }}</span>{% endif %}</span>
         </a>
       {% endfor %}
     </div>
