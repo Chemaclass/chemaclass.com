@@ -13,8 +13,8 @@ argument-hint: "<book-title> by <author>"
 2. Read `.claude/skills/writing-style/SKILL.md` and `.claude/skills/writing-style/references/readings.md` (if present) and apply them as the tone and style guide
 3. Create the file at `content/readings/YYYY-MM-DD-slug.md` using today's date
 4. Replace template placeholders with actual content based on the book
-5. Fill the front matter: title, description, authors, tags, subtitle, pages, author, and `expand_preview = true` (the site default; nearly every reading uses it)
-6. Set `static_thumbnail` to the book's cover image URL (from Goodreads/Amazon if known)
+5. Fill the front matter: title, description, authors, tags, subtitle, pages, author
+6. Set `static_thumbnail` to the book's cover image URL (from Goodreads/Amazon if known), then run `python3 scripts/localize-reading-covers.py` to fetch it and rewrite the field to a local webp
 7. Add `<!-- more -->` marker after the introduction
 8. Fill `related_readings` in front matter with thematically similar readings, and optionally `related_posts` when a blog post covers the same theme (verify each target file exists)
 9. Set `draft = true`

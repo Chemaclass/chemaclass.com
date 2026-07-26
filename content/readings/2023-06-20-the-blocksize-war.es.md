@@ -10,7 +10,6 @@ subtitle = "La batalla por el control del protocolo de Bitcoin"
 pages = "240"
 author = "Jonathan Bier"
 static_thumbnail = "/images/readings/the-blocksize-war.webp"
-expand_preview = false
 related_readings = [
   "readings/2021-09-20-the-bitcoin-standard.md",
   "readings/2023-07-10-the-book-of-satoshi.md",

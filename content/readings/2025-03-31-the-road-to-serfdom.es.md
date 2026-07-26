@@ -10,7 +10,6 @@ subtitle = "Cómo la planificación central puede erosionar lentamente la libert
 pages = "266"
 author = "Friedrich A. Hayek"
 static_thumbnail = "/images/readings/the-road-to-serfdom.webp"
-expand_preview = true
 related_posts = ["blog/2025-01-02-understanding-taxes.md"]
 related_readings = [
   "readings/2025-06-22-principles-of-economics.md",

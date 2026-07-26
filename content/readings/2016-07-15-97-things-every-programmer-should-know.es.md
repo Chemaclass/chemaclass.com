@@ -9,7 +9,6 @@ subtitle = "Sabiduría colectiva de los expertos"
 pages = "250"
 author = "Kevlin Henney"
 static_thumbnail = "/images/readings/97-things-every-programmer-should-know.webp"
-expand_preview = true
 related_readings = [
   "readings/2016-10-01-the-pragmatic-programmer.md",
   "readings/2016-05-01-clean-code.md",

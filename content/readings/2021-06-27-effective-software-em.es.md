@@ -9,7 +9,6 @@ subtitle = "Cómo ser el líder que tu equipo de desarrollo necesita"
 pages = "350"
 author = "James Stanier"
 static_thumbnail = "/images/readings/effective-software-em.webp"
-expand_preview = true
 related_readings = [
   "readings/2020-03-26-the-manager-path.md",
   "readings/2020-04-03-high-output-management.md",

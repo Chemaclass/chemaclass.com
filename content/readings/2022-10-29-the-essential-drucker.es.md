@@ -9,7 +9,6 @@ subtitle = "Lo Mejor de Sesenta Años de Escritos de Peter Drucker sobre Gestió
 pages = "360"
 author = "Peter F. Drucker"
 static_thumbnail = "/images/readings/the-essential-drucker.webp"
-expand_preview = false
 related_readings = [
   "readings/2020-04-03-high-output-management.md",
   "readings/2022-08-01-the-great-ceo-within.md",

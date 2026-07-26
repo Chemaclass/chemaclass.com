@@ -9,7 +9,6 @@ subtitle = "Cómo los grandes líderes inspiran a todos a actuar"
 pages = "250"
 author = "Simon Sinek"
 static_thumbnail = "/images/readings/start-with-why.webp"
-expand_preview = true
 related_readings = [
   "readings/2023-01-29-the-infinite-game.md",
   "readings/2022-01-16-leaders-eat-last.md",

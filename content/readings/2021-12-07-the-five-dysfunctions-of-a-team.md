@@ -9,7 +9,6 @@ subtitle = "A Leadership Fable"
 pages = "240"
 author = "Patrick M. Lencioni"
 static_thumbnail = "/images/readings/the-five-dysfunctions-of-a-team.webp"
-expand_preview = true
 related_readings = [
   "readings/2021-05-28-peopleware.md",
   "readings/2022-03-31-team-topologies.md",

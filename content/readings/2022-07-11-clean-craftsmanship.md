@@ -9,7 +9,6 @@ subtitle = "Disciplines, Standards, and Ethics"
 pages = "380"
 author = "Robert C. Martin"
 static_thumbnail = "/images/readings/clean-craftsmanship.webp"
-expand_preview = false
 related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2024-03-28-effective-pair-programming.md",

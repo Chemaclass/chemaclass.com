@@ -9,7 +9,6 @@ subtitle = "How should we behave in a battle?"
 pages = "100"
 author = "Sun Tzu"
 static_thumbnail = "/images/readings/the-art-of-war.webp"
-expand_preview = false
 related_readings = [
   "readings/2021-04-19-the-art-of-leadership.md",
   "readings/2021-11-28-start-with-why.md",

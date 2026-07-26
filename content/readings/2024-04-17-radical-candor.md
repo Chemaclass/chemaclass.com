@@ -10,7 +10,6 @@ subtitle = "How to Get What You Want by Saying What You Mean"
 pages = "300"
 author = "Kim Scott"
 static_thumbnail = "/images/readings/radical-candor.webp"
-expand_preview = false
 related_readings = [
   "readings/2023-10-31-crucial-conversations.md",
   "readings/2020-06-12-never-split-the-difference.md",
