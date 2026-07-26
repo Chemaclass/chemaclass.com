@@ -9,7 +9,6 @@ subtitle = "Manual de artesanía ágil de software"
 pages = "460"
 author = "Robert C. Martin"
 static_thumbnail = "/images/readings/clean-code.webp"
-expand_preview = true
 related_posts = [
   "blog/2020-06-28-the-art-of-refactoring.md",
   "blog/2020-04-07-the-art-of-testing.md",

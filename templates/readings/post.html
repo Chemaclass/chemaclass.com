@@ -82,7 +82,7 @@
       <h1 class="blog-post__title">
         {{ page.title }}
         {% if page.extra.author %}
-          <small class="blog-post__author">by {{ page.extra.author }}</small>
+          <small class="blog-post__author">{{ trans(key="written_by", lang=lang) }} {{ page.extra.author }}</small>
         {% endif %}
       </h1>
 

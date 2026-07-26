@@ -48,6 +48,13 @@ def format_md_page(frontmatter: TFrontMatter, body: str, url: str, title: str) -
     if subtitle:
         output += f'*{subtitle}*\n\n'
 
+    # The canonical URL of the page this mirrors. These files exist to be read
+    # away from the site, by an agent or a plain curl, so the one thing they must
+    # carry is where they came from. It is also what keeps `url` honest: while
+    # nothing printed it, the caller could pass the English URL for a Spanish
+    # page and no output ever disagreed.
+    output += f'{url}\n\n'
+
     meta_parts = []
     if date:
         meta_parts.append(date)
@@ -69,8 +76,10 @@ def format_md_page(frontmatter: TFrontMatter, body: str, url: str, title: str) -
 def generate_index_md(section: TSection, files: List[TMdPage], base_url: str) -> str:
     """Generate an index.md for a section listing all files."""
     title = section.capitalize()
-    # Derive path prefix from base_url (e.g. '' or '/es')
-    path_prefix = base_url.replace('https://chemaclass.com', '')
+    # Path prefix ('' or '/es'), peeled off the origin rather than off a literal
+    # 'https://chemaclass.com': a second copy of the origin here silently stops
+    # matching the moment base_url in config.toml changes.
+    path_prefix = base_url[len(BASE_URL):]
 
     output = f'# {title}\n\n'
     output += f'[{base_url}/{section}/]({base_url}/{section}/)\n\n'
@@ -95,12 +104,14 @@ def generate_index_md(section: TSection, files: List[TMdPage], base_url: str) ->
     return output
 
 
-def process_markdown_file(filepath: Path, section: TSection, base_url: str) -> TMdPage:
+def process_markdown_file(filepath: Path, section: TSection, lang: TLang) -> TMdPage:
     """Process a single markdown file and generate .md version."""
     frontmatter, body = read_entry(filepath)
     title = require_title(frontmatter, filepath)
     slug = get_slug_from_filename(filepath.name)
-    url = entry_url(section, slug, base_url)
+    # entry_url takes the language explicitly: a Spanish page lives under /es/,
+    # and passing the origin alone gave all 175 of them the English URL.
+    url = entry_url(section, slug, es=(lang == 'es'))
 
     # Remove <!-- more --> markers
     body = re.sub(r'<!--\s*more\s*-->', '', body)
@@ -132,7 +143,7 @@ def main() -> None:
 
         for filepath in iter_section_files(section, translations=True):
             lang: TLang = 'es' if '.es.md' in filepath.name else 'en'
-            result = process_markdown_file(filepath, section, BASE_URL)
+            result = process_markdown_file(filepath, section, lang)
             per_lang[lang].append(result)
 
             prefix = PUBLIC_DIR / 'es' if lang == 'es' else PUBLIC_DIR

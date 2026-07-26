@@ -2,7 +2,7 @@
 
 A reading is a book-anchored takeaway note, not an argument. Shorter, more list-driven, points outward to the book. Template: `.claude/templates/reading.md`. The filename date is when the book was finished.
 
-- Front matter: `title`, `description`, `[taxonomies] tags`, `authors = [ ... ]`, `[extra] author`, `[extra] pages` (string), `[extra] subtitle` (the book's real subtitle or a short tagline; often left empty `""` when neither fits), `static_thumbnail` (external cover URL, Goodreads/Amazon), `expand_preview = true` (the default, used by nearly every reading), `related_readings`, optional `related_posts`.
+- Front matter: `title`, `description`, `[taxonomies] tags`, `authors = [ ... ]`, `[extra] author`, `[extra] pages` (string), `[extra] subtitle` (the book's real subtitle or a short tagline; often left empty `""` when neither fits), `static_thumbnail` (a local webp under `/images/readings/`; start from a Goodreads/Amazon URL and run `scripts/localize-reading-covers.py`), `related_readings`, optional `related_posts`.
 - **No `rating`, `verdict`, `score`, or buy-link fields exist. Do not invent them.**
 - No inline `![cover]` line in the body; the cover comes from `static_thumbnail`.
 - Length: ~400 to 800 words.

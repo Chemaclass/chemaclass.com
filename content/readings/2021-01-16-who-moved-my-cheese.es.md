@@ -9,7 +9,6 @@ subtitle = "Una forma sorprendente de afrontar el cambio en el trabajo y en la v
 pages = "94"
 author = "Spencer Johnson"
 static_thumbnail = "/images/readings/who-moved-my-cheese.webp"
-expand_preview = true
 related_posts = ["blog/2021-03-01-embrace-the-change.md"]
 related_readings = [
   "readings/2019-11-12-atomic-habits.md",

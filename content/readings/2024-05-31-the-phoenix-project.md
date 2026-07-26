@@ -10,7 +10,6 @@ subtitle = "A Novel About IT, DevOps, And Helping Your Business Win"
 pages = "430"
 author = "Gene Kim, Kevin Behr, George Spafford"
 static_thumbnail = "/images/readings/the-phoenix-project.webp"
-expand_preview = true
 related_posts = ["blog/2023-12-30-great-engineering.md", "blog/2023-10-11-unhealthy-working-environment.md", "blog/2024-02-25-deployments-on-fridays.md"]
 related_readings = [
   "readings/2023-03-19-accelerate.md",

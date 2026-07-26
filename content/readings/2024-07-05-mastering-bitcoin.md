@@ -10,7 +10,6 @@ subtitle = "Programming the Open Blockchain"
 pages = "400"
 author = "Andreas M. Antonopoulos, David A. Harding"
 static_thumbnail = "/images/readings/mastering-bitcoin.webp"
-expand_preview = true
 related_posts = ["blog/2024-07-06-programmable-money.md"]
 related_readings = [
   "readings/2024-06-21-the-genesis-book.md",

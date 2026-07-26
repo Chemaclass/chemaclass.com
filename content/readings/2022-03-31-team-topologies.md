@@ -9,7 +9,6 @@ subtitle = "Organizing Business and Technology Teams for Fast Flow"
 pages = "240"
 author = "Matthew Skelton, Manuel Pais"
 static_thumbnail = "/images/readings/team-topologies.webp"
-expand_preview = false
 related_posts = [
   "blog/2022-04-02-dunbar-number.md",
 ]

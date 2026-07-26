@@ -10,7 +10,6 @@ subtitle = "De Turing a Nakamoto"
 pages = "250"
 author = "Alfre Mancera"
 static_thumbnail = "/images/readings/criptoria.webp"
-expand_preview = true
 related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]
 related_readings = [
   "readings/2024-06-21-the-genesis-book.md",

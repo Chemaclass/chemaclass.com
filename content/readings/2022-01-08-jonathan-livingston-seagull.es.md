@@ -9,7 +9,6 @@ subtitle = "Una historia"
 pages = "100"
 author = "Richard Bach"
 static_thumbnail = "/images/readings/jonathan-livingston-seagull.webp"
-expand_preview = false
 related_readings = [
   "readings/2023-11-07-the-alchemist.md",
   "readings/2022-12-17-momo.md",

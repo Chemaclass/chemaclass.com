@@ -10,7 +10,6 @@ subtitle = "Para Ti, Tu Equipo y Tu Empresa"
 pages = "300"
 author = "James Stanier"
 static_thumbnail = "/images/readings/effective-remote-work.webp"
-expand_preview = false
 related_readings = [
   "readings/2021-05-28-peopleware.md",
   "readings/2022-03-31-team-topologies.md",

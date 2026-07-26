@@ -9,7 +9,6 @@ subtitle = "A Code of Conduct for Professional Programmers"
 pages = "250"
 author = "Robert C. Martin"
 static_thumbnail = "/images/readings/the-clean-coder.webp"
-expand_preview = true
 related_readings = [
   "readings/2016-05-01-clean-code.md",
   "readings/2022-07-11-clean-craftsmanship.md",

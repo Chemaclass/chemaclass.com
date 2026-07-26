@@ -9,7 +9,6 @@ subtitle = "The Decentralized Alternative to Central Banking"
 pages = "300"
 author = "Saifedean Ammous"
 static_thumbnail = "/images/readings/the-bitcoin-standard.webp"
-expand_preview = false
 related_readings = [
   "readings/2023-06-20-the-blocksize-war.md",
   "readings/2023-07-10-the-book-of-satoshi.md",

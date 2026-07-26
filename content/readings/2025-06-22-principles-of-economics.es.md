@@ -10,7 +10,6 @@ subtitle = ""
 pages = "400"
 author = "Saifedean Ammous"
 static_thumbnail = "/images/readings/principles-of-economics.webp"
-expand_preview = true
 related_posts = ["blog/2024-12-11-the-cypherpunks.md"]
 related_readings = [
   "readings/2021-09-20-the-bitcoin-standard.md",

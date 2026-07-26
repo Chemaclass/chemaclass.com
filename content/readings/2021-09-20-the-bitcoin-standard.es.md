@@ -9,7 +9,6 @@ subtitle = "La alternativa descentralizada a la banca central"
 pages = "300"
 author = "Saifedean Ammous"
 static_thumbnail = "/images/readings/the-bitcoin-standard.webp"
-expand_preview = false
 related_posts = [
   "blog/2025-11-21-bitcoin-fundamentals.md",
   "blog/2025-12-22-how-bitcoin-works.md",

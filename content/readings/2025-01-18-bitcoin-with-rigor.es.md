@@ -10,7 +10,6 @@ subtitle = "Un estudio técnico sobre cómo funciona Bitcoin"
 pages = "520"
 author = "Jose Sanchis"
 static_thumbnail = "/images/readings/bitcoin-with-rigor.webp"
-expand_preview = true
 related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]
 related_readings = [
   "readings/2024-07-05-mastering-bitcoin.md",

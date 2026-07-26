@@ -9,7 +9,6 @@ subtitle = "The best guide that brings your coding skills a level up."
 pages = "370"
 author = "Matthias Noback"
 static_thumbnail = "/images/readings/advance-web-application-architecture.webp"
-expand_preview = true
 related_readings = [
   "readings/2018-06-04-clean-architecture.md",
   "readings/2020-09-10-domain-driven-design-distilled.md",

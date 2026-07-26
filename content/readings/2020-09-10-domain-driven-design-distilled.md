@@ -9,7 +9,6 @@ subtitle = ""
 pages = "160"
 author = "Vaughn Vernon"
 static_thumbnail = "/images/readings/domain-driven-design-distilled.webp"
-expand_preview = true
 related_readings = [
   "readings/2018-06-04-clean-architecture.md",
   "readings/2022-11-28-recipes-for-decoupling.md",

@@ -9,7 +9,6 @@ subtitle = "Powerful Techniques for Creating Flexible, Readable, and Maintainabl
 pages = "240"
 author = "Matthias Noback"
 static_thumbnail = "/images/readings/object-design-style-guide.webp"
-expand_preview = true
 related_readings = [
   "readings/2016-05-01-clean-code.md",
   "readings/2020-09-10-domain-driven-design-distilled.md",

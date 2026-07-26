@@ -9,8 +9,7 @@ tags = [ "tag1", "tag2" ]
 subtitle = "The Subtitle"
 pages = "0"
 author = "Author Name"
-static_thumbnail = "https://m.media-amazon.com/images/..."
-expand_preview = true
+static_thumbnail = "/images/readings/slug.webp"
 # pin = true           # optional; floats the reading to the top of /readings/.
 #                      # Only `true` does anything.
 related_readings = [
@@ -32,9 +31,12 @@ Field notes (see also .claude/skills/writing-style/references/readings.md):
   interpolates it into schema.org `numberOfPages`.
 - `author` (singular, under `[extra]`) is what every template renders. The
   top-level `authors` array is the Zola-native field and is not rendered.
-- `expand_preview` is currently INERT: no template, script, or JS reads it.
-  It is kept for consistency with the ~120 existing readings that set it.
-  Either wire it up or drop it from all of them, but do not assume it works.
+- `expand_preview` is gone. It was set in 122 readings and read by nothing, so
+  it was dropped from all of them. Do not reintroduce it.
+- `static_thumbnail` points at a local webp under `/images/readings/`. A remote
+  cover URL still works, but run `scripts/localize-reading-covers.py` to pull it
+  down: Zola cannot resize a remote image, and the page then depends on someone
+  else's CDN staying up.
 - `related_*` paths are relative to `content/`, keep the `.md` extension, and
   point at the ENGLISH file even inside a `.es.md` reading.
 -->

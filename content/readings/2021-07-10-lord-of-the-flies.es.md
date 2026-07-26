@@ -9,7 +9,6 @@ subtitle = ""
 pages = "220"
 author = "William Golding"
 static_thumbnail = "/images/readings/lord-of-the-flies.webp"
-expand_preview = true
 related_readings = [
   "readings/2020-11-02-animal-farm.md",
   "readings/2020-05-13-1984.md",

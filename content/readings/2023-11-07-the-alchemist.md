@@ -10,7 +10,6 @@ subtitle = ""
 pages = "200"
 author = "Paulo Coelho"
 static_thumbnail = "/images/readings/the-alchemist.webp"
-expand_preview = false
 related_readings = [
   "readings/2022-01-08-jonathan-livingston-seagull.md",
   "readings/2022-12-17-momo.md",

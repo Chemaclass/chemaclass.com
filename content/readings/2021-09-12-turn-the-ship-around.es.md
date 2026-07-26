@@ -9,7 +9,6 @@ subtitle = "Una historia real de convertir seguidores en líderes"
 pages = "220"
 author = "L. David Marquet"
 static_thumbnail = "/images/readings/turn-the-ship-around.webp"
-expand_preview = false
 related_readings = [
   "readings/2021-10-22-leadership-is-language.md",
   "readings/2023-09-20-its-your-ship.md",

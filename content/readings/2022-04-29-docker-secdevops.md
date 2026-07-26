@@ -9,7 +9,6 @@ subtitle = "From introduction to advanced concepts"
 pages = "200"
 author = "Fran Ramírez, Elías Grande, Rafael Troncoso"
 static_thumbnail = "/images/readings/docker-secdevops.webp"
-expand_preview = false
 related_readings = [
   "readings/2024-05-31-the-phoenix-project.md",
   "readings/2023-03-19-accelerate.md",

@@ -9,7 +9,6 @@ subtitle = "Un marco para el liderazgo en un mundo que cambia constantemente"
 pages = "270"
 author = "Simon Sinek"
 static_thumbnail = "/images/readings/the-infinite-game.webp"
-expand_preview = true
 related_readings = [
   "readings/2021-11-28-start-with-why.md",
   "readings/2022-01-16-leaders-eat-last.md",

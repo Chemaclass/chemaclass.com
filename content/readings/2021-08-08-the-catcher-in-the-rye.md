@@ -9,7 +9,6 @@ subtitle = ""
 pages = "220"
 author = "J. D. Salinger"
 static_thumbnail = "/images/readings/the-catcher-in-the-rye.webp"
-expand_preview = false
 related_readings = [
   "readings/2026-02-04-notes-from-underground.md",
   "readings/2021-07-10-lord-of-the-flies.md",

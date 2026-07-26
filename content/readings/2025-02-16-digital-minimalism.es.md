@@ -10,7 +10,6 @@ subtitle = "Eligiendo una Vida Enfocada en un Mundo Ruidoso"
 pages = "250"
 author = "Cal Newport"
 static_thumbnail = "/images/readings/digital-minimalism.webp"
-expand_preview = true
 related_posts = ["blog/2020-09-08-the-process-itself-is-the-goal.md", "blog/2023-03-16-have-you-always-been-like-this.md"]
 related_readings = [
   "readings/2019-11-12-atomic-habits.md",

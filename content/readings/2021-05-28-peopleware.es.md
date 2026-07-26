@@ -9,7 +9,6 @@ subtitle = "Proyectos y equipos productivos"
 pages = "230"
 author = "Tom DeMarco"
 static_thumbnail = "/images/readings/peopleware.webp"
-expand_preview = true
 related_readings = [
   "readings/2022-03-31-team-topologies.md",
   "readings/2021-12-07-the-five-dysfunctions-of-a-team.md",

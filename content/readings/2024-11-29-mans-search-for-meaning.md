@@ -10,7 +10,6 @@ subtitle = "Purpose in despair: Frankl's holocaust insights"
 pages = "120"
 author = "Viktor E. Frankl"
 static_thumbnail = "/images/readings/mans-search-for-meaning.webp"
-expand_preview = true
 related_posts = ["blog/2023-03-16-have-you-always-been-like-this.md", "blog/2020-09-08-the-process-itself-is-the-goal.md"]
 related_readings = [
   "readings/2026-02-04-notes-from-underground.md",

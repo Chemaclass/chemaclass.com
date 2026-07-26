@@ -10,7 +10,6 @@ subtitle = "La Historia de las Personas y Proyectos que Inspiraron Bitcoin"
 pages = "300"
 author = "Aaron van Wirdum"
 static_thumbnail = "/images/readings/the-genesis-book.webp"
-expand_preview = true
 related_readings = [
   "readings/2021-09-20-the-bitcoin-standard.md",
   "readings/2023-06-20-the-blocksize-war.md",
