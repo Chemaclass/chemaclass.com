@@ -28,7 +28,20 @@ Open [http://localhost:1111](http://localhost:1111) in your browser.
 ./build.sh
 ```
 
-Runs `zola build`, then the `scripts/` post-processors: check the icon subset, enrich the search index and sitemap with dates, generate the terminal filesystem, the plain-text and Markdown page mirrors, `llms-full.txt`, and the JSON feed, then minify HTML, CSS, and JS.
+Runs `zola build`, then the `scripts/` post-processors: check the icon subset and the topic tag coverage, enrich the search index and sitemap with dates, generate the terminal filesystem, the plain-text and Markdown page mirrors, `llms-full.txt`, and the JSON feed, then minify HTML, CSS, and JS.
+
+## Smoke test
+
+`zola build` never runs the site's JavaScript, so a script that parses fine and dies on its first line still produces a green build. That is how a broken `profile.js` reached production and left every visitor looking at a loading skeleton.
+
+```bash
+./build.sh
+python3 scripts/check-js-runtime.py
+```
+
+It serves `public/` locally, loads 18 pages covering each of the site's scripts in headless Chrome, and fails on any uncaught exception. Needs Chrome, which is why it runs as its own CI step rather than inside `build.sh`: that script has to work anywhere with Zola, Python and minify. Takes about 45 seconds.
+
+Read the module docstring before trusting a green run. It cannot see a bare `console.error`, a 404 on a subresource, or anything behind a click.
 
 ## Icons
 
