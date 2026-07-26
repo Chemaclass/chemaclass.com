@@ -1,7 +1,7 @@
 +++
 title = "Update Your Team to Be More Extreme"
 description = "Our profession is constantly evolving; therefore, it demands a non-stop learning process. Embracing the change is not optional in our software industry. We need to create spaces to get out of our comfort zone."
-updated_at = "2023-03-23"
+updated = "2023-03-23"
 [taxonomies]
 tags = [ "xp", "agile", "team-management", "mentoring", "tdd" ]
 [extra]

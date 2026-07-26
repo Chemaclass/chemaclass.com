@@ -10,7 +10,6 @@ subtitle = "The Collected Writings of Bitcoin Creator Satoshi Nakamoto"
 pages = "350"
 author = "Phil Champagne"
 static_thumbnail = "/images/readings/the-book-of-satoshi.webp"
-expand_preview = false
 related_readings = [
   "readings/2021-09-20-the-bitcoin-standard.md",
   "readings/2023-06-20-the-blocksize-war.md",

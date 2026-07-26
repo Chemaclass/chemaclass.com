@@ -10,7 +10,6 @@ subtitle = "Publicado en 2017, la mayor parte de la tecnología mostrada ya es h
 pages = "200"
 author = "Félix Brezo, Yaiza Rubio"
 static_thumbnail = "/images/readings/bitcoin-la-tecnologia-blockchain-y-su-investigacion.webp"
-expand_preview = false
 related_readings = [
   "readings/2021-09-20-the-bitcoin-standard.md",
   "readings/2024-07-05-mastering-bitcoin.md",

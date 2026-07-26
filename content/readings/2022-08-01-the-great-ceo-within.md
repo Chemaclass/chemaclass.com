@@ -9,7 +9,6 @@ subtitle = "The Tactical Guide to Company Building"
 pages = "200"
 author = "Matt Mochary"
 static_thumbnail = "/images/readings/the-great-ceo-within.webp"
-expand_preview = false
 related_readings = [
   "readings/2020-04-03-high-output-management.md",
   "readings/2022-10-29-the-essential-drucker.md",

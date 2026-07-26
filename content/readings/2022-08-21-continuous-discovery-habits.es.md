@@ -9,7 +9,6 @@ subtitle = "Descubre Productos que Crean Valor para el Cliente y Valor de Negoci
 pages = "220"
 author = "Teresa Torres"
 static_thumbnail = "/images/readings/continuous-discovery-habits.webp"
-expand_preview = false
 related_readings = [
   "readings/2024-01-26-the-lean-startup.md",
   "readings/2016-09-01-sprint.md",

@@ -9,7 +9,6 @@ subtitle = "The hidden power of what you say, and what you don't"
 pages = "350"
 author = "L. David Marquet"
 static_thumbnail = "/images/readings/leadership-is-language.webp"
-expand_preview = true
 related_readings = [
   "readings/2021-09-12-turn-the-ship-around.md",
   "readings/2024-04-17-radical-candor.md",

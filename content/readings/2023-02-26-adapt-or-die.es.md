@@ -10,7 +10,6 @@ subtitle = "Cómo Crear Innovación, Resolver Puzzles de Personas y Ganar en los
 pages = "270"
 author = "Thomas H. Douglas"
 static_thumbnail = "/images/readings/adapt-or-die.webp"
-expand_preview = true
 related_readings = [
   "readings/2021-01-16-who-moved-my-cheese.md",
   "readings/2023-01-29-the-infinite-game.md",

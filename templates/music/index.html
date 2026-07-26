@@ -7,7 +7,10 @@
 {% endblock %}
 
 {% block styles %}
-<link rel="stylesheet" href="{{ get_url(path='page.css') | safe }}">
+{# Via the macro, not a bare link: it also pulls in search.css, and base.html
+   renders the search dialog on every page. Hand-rolled, this shipped the dialog
+   markup with none of its styles. #}
+{{ macros::page_styles(css='page.css') }}
 {% endblock styles %}
 
 {% block content %}

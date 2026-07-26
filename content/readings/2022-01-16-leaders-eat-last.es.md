@@ -9,7 +9,6 @@ subtitle = "Por qué algunos equipos trabajan unidos y otros no"
 pages = "360"
 author = "Simon Sinek"
 static_thumbnail = "/images/readings/leaders-eat-last.webp"
-expand_preview = false
 related_readings = [
   "readings/2021-11-28-start-with-why.md",
   "readings/2022-09-30-dare-to-lead.md",

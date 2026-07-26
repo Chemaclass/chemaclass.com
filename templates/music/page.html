@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block styles %}
-<link rel="stylesheet" href="{{ get_url(path='page.css') | safe }}">
+{{ macros::page_styles(css='page.css') }}
 {% endblock styles %}
 
 {% block content %}

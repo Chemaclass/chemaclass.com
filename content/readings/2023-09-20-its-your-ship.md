@@ -11,7 +11,6 @@ subtitle = "Management Techniques from the Best Damn Ship in the Navy"
 pages = "200"
 author = "D. Michael Abrashoff"
 static_thumbnail = "/images/readings/its-your-ship.webp"
-expand_preview = false
 related_readings = [
   "readings/2021-09-12-turn-the-ship-around.md",
   "readings/2021-10-22-leadership-is-language.md",

@@ -10,7 +10,6 @@ subtitle = "El poder imparable de las organizaciones sin líder"
 pages = "240"
 author = "Ori Brafman, Rod Beckstrom"
 static_thumbnail = "/images/readings/the-starfish-and-the-spider.webp"
-expand_preview = false
 related_readings = [
   "readings/2022-08-01-the-great-ceo-within.md",
   "readings/2022-10-29-the-essential-drucker.md",

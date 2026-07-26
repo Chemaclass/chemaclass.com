@@ -11,7 +11,6 @@ subtitle = "Technical innovations from the trenches"
 pages = "120"
 author = "Sjors Provoost"
 static_thumbnail = "/images/readings/bitcoin-wip.webp"
-expand_preview = true
 related_posts = ["blog/2024-12-11-the-cypherpunks.md", "blog/2024-07-06-programmable-money.md"]
 related_readings = [
   "readings/2021-09-20-the-bitcoin-standard.md",

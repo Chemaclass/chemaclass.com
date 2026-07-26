@@ -10,7 +10,6 @@ subtitle = "Logra Más, Sufre Menos"
 pages = "180"
 author = "Marcos Vazquez"
 static_thumbnail = "/images/readings/invincible.webp"
-expand_preview = false
 related_posts = ["blog/2023-07-05-never-ending-loop.md", "blog/2023-03-16-have-you-always-been-like-this.md", "blog/2020-09-08-the-process-itself-is-the-goal.md"]
 related_readings = [
   "readings/2023-08-13-the-day-of-the-triffids.md",

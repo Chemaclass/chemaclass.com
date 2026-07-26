@@ -10,7 +10,6 @@ subtitle = "How Today's Entrepreneurs Use Continuous Innovation to Create Radica
 pages = "300"
 author = "Eric Ries"
 static_thumbnail = "/images/readings/the-lean-startup.webp"
-expand_preview = false
 related_posts = ["blog/2023-02-27-great-leadership.md", "blog/2022-08-22-understanding-people.md", "blog/2023-10-11-unhealthy-working-environment.md", "blog/2022-11-11-working-agile-with-non-agile-teams.md"]
 related_readings = [
   "readings/2016-09-01-sprint.md",

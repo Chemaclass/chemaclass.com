@@ -10,7 +10,6 @@ subtitle = ""
 pages = "270"
 author = "John Wyndham"
 static_thumbnail = "/images/readings/the-day-of-the-triffids.webp"
-expand_preview = true
 related_readings = [
   "readings/2020-05-18-call-of-cthulhu.md",
   "readings/2023-12-09-invincible.md",
