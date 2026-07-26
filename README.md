@@ -41,6 +41,8 @@ python3 scripts/check-js-runtime.py
 
 It serves `public/` locally, loads 18 pages covering each of the site's scripts in headless Chrome, and fails on any uncaught exception. Needs Chrome, which is why it runs as its own CI step rather than inside `build.sh`: that script has to work anywhere with Zola, Python and minify. Takes about 45 seconds.
 
+Every run starts by loading a page that throws on purpose and requiring that it be caught. A checker like this has several ways to silently pass everything (Chrome not launching, a changed log format, a regex that matches nothing), and all of them look identical to a clean site, so a pass is only worth reading after the detector has proved it can fail.
+
 Read the module docstring before trusting a green run. It cannot see a bare `console.error`, a 404 on a subresource, or anything behind a click.
 
 ## Icons

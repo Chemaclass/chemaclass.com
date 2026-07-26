@@ -214,6 +214,42 @@ def build_harness(directory: Path) -> Optional[Path]:
     return harness
 
 
+def self_test(chrome: str, directory: Path) -> None:
+    """Prove the detector works here, before trusting it about the site.
+
+    A check that cannot fail is worse than no check, and this one has three ways
+    to silently pass everything: Chrome not launching on the runner, a console
+    log format that changed under it, or a regex of mine that matches nothing.
+    All three look exactly like a clean site. Two of them actually happened while
+    this file was being written, and one of those survived a full green run of 19
+    pages with a known crash compiled into the bundle.
+
+    So: serve a page that throws on purpose, and require that it is caught. If it
+    is not, the report that follows means nothing, so say that and stop rather
+    than printing a screen of reassuring ok lines.
+    """
+    page = directory / '_js-selftest.html'
+    page.write_text(
+        '<!doctype html><meta charset="utf-8"><title>self test</title>\n'
+        '<script>deliberatelyUndefinedFunction();</script>\n',
+        encoding='utf-8',
+    )
+    try:
+        fatal, every = visit(chrome, f'{ORIGIN}/_js-selftest.html')
+    finally:
+        page.unlink(missing_ok=True)
+
+    if not fatal:
+        sys.exit(
+            'SELF TEST FAILED: a page that throws on purpose was reported clean, '
+            'so this check cannot detect anything and a pass here proves nothing '
+            'about the site.\n'
+            f'  Chrome: {chrome}\n'
+            f'  console messages seen: {every or "none at all, so Chrome likely never ran the page"}'
+        )
+    print(f'  self test: detected "{fatal[0]}"')
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--verbose', action='store_true',
@@ -239,6 +275,7 @@ def main() -> int:
 
     failures: List[Tuple[str, List[str]]] = []
     try:
+        self_test(chrome, root)
         for path, what in checks:
             url = f'http://127.0.0.1:{PORT}{path}'
             try:
