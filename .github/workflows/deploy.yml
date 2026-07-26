@@ -37,6 +37,13 @@ jobs:
         env:
           RUM_KEY: ${{ secrets.RUM_KEY }}
 
+      # Deliberately its own step rather than part of build.sh: this is the one
+      # check that needs a browser, and build.sh has to stay runnable on any
+      # machine with Zola, Python and minify. Chrome is preinstalled on the
+      # ubuntu runner image.
+      - name: Check no page throws a JavaScript error
+        run: python3 scripts/check-js-runtime.py
+
       - name: Upload artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
