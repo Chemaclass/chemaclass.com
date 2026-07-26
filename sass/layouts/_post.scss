@@ -228,11 +228,11 @@
       background: var(--search-bg-selected-item);
     }
 
-    &:hover &-label {
-      color: var(--accent-color);
-    }
-
-    &:hover &-title {
+    // `&-label` here would compile to `.blog-post__nav-link-label`, which the
+    // markup never emits: post-navigation.html uses `__nav-label`, without the
+    // `-link` infix. Spelled in full so the hover colour actually lands.
+    &:hover .blog-post__nav-label,
+    &:hover .blog-post__nav-title {
       color: var(--accent-color);
     }
 

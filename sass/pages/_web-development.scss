@@ -494,26 +494,26 @@
   }
 }
 
-// NOTE: `.pricing-card--unavailable` is never rendered, so the nested
-// `.pricing-card__badge` rule below never applies even though the badge element
-// does exist on /services/consulting/. Left in place deliberately: the styling
-// needs to be un-nested, not deleted.
 .pricing-card--unavailable {
   opacity: 0.5;
+}
 
-  .pricing-card__badge {
-    display: inline-block;
-    margin-left: 0.4rem;
-    font-size: 0.65rem;
-    font-weight: 600;
-    color: var(--color-subtitle);
-    background: var(--preview-divider-color);
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    vertical-align: middle;
-  }
+// Top level, not nested under `--unavailable`: that modifier is never rendered,
+// so the "Best value" badge on /services/consulting/ inherited the h4 it sits in
+// and showed up as plain heading text.
+.pricing-card__badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  background: var(--search-bg-selected-item);
+  border: 1px solid var(--accent-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
 }
 
 .decision-tip {
