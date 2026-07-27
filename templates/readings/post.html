@@ -26,16 +26,9 @@
     {% if page.extra.pages %}, "numberOfPages": {{ page.extra.pages }}{% endif %}
     {% if page.extra.static_thumbnail %}, "image": "{% if page.extra.static_thumbnail is matching("^http") %}{{ page.extra.static_thumbnail | safe }}{% else %}{{ config.base_url | safe }}{{ page.extra.static_thumbnail | safe }}{% endif %}"{% endif %}
   },
-  "author": {
-    "@type": "Person",
-    "name": "Jose Maria Valera Reales",
-    "url": "{{ config.base_url | safe }}"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Chemaclass",
-    "url": "{{ config.base_url | safe }}"
-  },
+  "author": { "@id": "{{ config.base_url | safe }}/#person" },
+  "publisher": { "@id": "{{ config.base_url | safe }}/#organization" },
+  "isPartOf": { "@id": "{{ config.base_url | safe }}/#website" },
   "reviewBody": "{{ page.description | default(value='') }}"
 }
 </script>
