@@ -164,14 +164,32 @@ def get_slug_from_filename(filename: str) -> str:
     return name
 
 
+def is_draft(filepath: Path) -> bool:
+    """True when the file carries `draft = true` in its front matter.
+
+    Zola drops drafts from the build, so a draft has no page on the site. The
+    generators walked the content directory directly and did not, which quietly
+    published every draft as a .md and .txt mirror, listed it in llms-full.txt,
+    and put it in the terminal filesystem: four unlisted but fetchable URLs for
+    posts that are not out yet.
+    """
+    try:
+        content = filepath.read_text(encoding='utf-8')
+    except (OSError, UnicodeDecodeError) as e:
+        sys.exit(f'cannot read {filepath}: {e}')
+    return bool(re.search(r'^draft\s*=\s*true\s*$', content, re.MULTILINE))
+
+
 def iter_section_files(
     section: TSection,
     content_dir: Optional[Path] = None,
     translations: bool = False,
+    drafts: bool = False,
 ) -> Iterator[Path]:
     """Yield a section's entry files in filename order, skipping the section
-    index. Translations (`*.es.md`) are skipped unless asked for. Yields nothing
-    when the section directory is absent."""
+    index. Translations (`*.es.md`) are skipped unless asked for, and so are
+    drafts, matching what Zola puts on the site. Yields nothing when the section
+    directory is absent."""
     root = (content_dir or CONTENT_DIR) / section
     if not root.is_dir():
         return
@@ -179,6 +197,8 @@ def iter_section_files(
         if path.name.startswith('_index'):
             continue
         if not translations and '.es.md' in path.name:
+            continue
+        if not drafts and is_draft(path):
             continue
         yield path
 
