@@ -66,6 +66,11 @@ fi
 
 echo "Using Zola $(zola --version)"
 
+# Before the build, not after: the templates read these dates with load_data()
+# to publish an honest dateModified.
+echo "Recording last-modified dates from git..."
+python3 scripts/generate-last-modified.py
+
 echo "Building site..."
 zola build "$@"
 

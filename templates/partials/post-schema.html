@@ -5,6 +5,16 @@
    Optional: schema_type (default: "Article")
    ========================================================================== #}
 {% set schema_type = schema_type | default(value="Article") %}
+{# dateModified used to fall back to the publication date, so a post edited a
+   dozen times still claimed it had not changed since the day it went out. The
+   real dates come from git, written to data/last-modified.json before the build
+   (scripts/generate-last-modified.py). required=false so `zola serve` on a fresh
+   clone still renders, just without the git dates. #}
+{% set modified_dates = load_data(path="data/last-modified.json", format="json", required=false) %}
+{% set_global git_modified = false %}
+{% if modified_dates and page.relative_path %}
+  {% set_global git_modified = modified_dates[page.relative_path] | default(value=false) %}
+{% endif %}
 {% set img_url = false %}{% set img_meta = false %}
 {% if page.extra.static_thumbnail %}
   {% if page.extra.static_thumbnail is matching("^http[s]?://") %}
@@ -50,7 +60,7 @@
     {% if page.description %}"description": "{{ page.description }}",{% endif %}
     "image": {% if img_url %}{ "@type": "ImageObject", "url": "{{ img_url | safe }}"{% if img_meta %}, "width": {{ img_meta.width }}, "height": {{ img_meta.height }}{% endif %} }{% else %}[]{% endif %}{% if page.date %},
     "datePublished": "{{ page.date | date(format="%+") }}",
-    "dateModified": "{% if page.updated %}{{ page.updated | date(format="%+") }}{% else %}{{ page.date | date(format="%+") }}{% endif %}"{% endif %}{% if page.word_count %},
+    "dateModified": "{% if page.updated %}{{ page.updated | date(format="%+") }}{% elif git_modified %}{{ git_modified }}{% else %}{{ page.date | date(format="%+") }}{% endif %}"{% endif %}{% if page.word_count %},
     "wordCount": {{ page.word_count }}{% endif %}{% set reading_time = page.extra.reading_time | default(value=page.reading_time) %}{% if reading_time %},
     "timeRequired": "PT{{ reading_time }}M"{% endif %}{% if page.taxonomies.tags %},
     "keywords": "{{ page.taxonomies.tags | join(sep=', ') }}",
