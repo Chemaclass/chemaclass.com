@@ -165,9 +165,11 @@
       "url": "{{ config.base_url | safe }}",
       "image": "{{ get_url(path=config.extra.icon) | safe }}",
       "jobTitle": "Product Engineer",
+      "description": "{{ config.description }}",
       "worksFor": {
         "@type": "Organization",
-        "name": "Kombo"
+        "name": "Kombo",
+        "url": "https://kombo.dev"
       },
       {# What this author writes about, as entities rather than free text. The
          Wikipedia links are how a search or answer engine resolves "TDD" here to
