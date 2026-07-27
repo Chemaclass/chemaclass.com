@@ -7,7 +7,7 @@ author = "Chemaclass"
 
 generate_feeds = true
 generate_sitemap = true
-taxonomies = [{ name = "tags" }]
+taxonomies = [{ name = "tags", feed = true }]
 compile_sass = true
 build_search_index = true
 
@@ -300,7 +300,7 @@ title = "Chemaclass"
 description = "Tech Lead compartiendo ideas prácticas sobre artesanía del software, TDD, liderazgo, Bitcoin e IA. Artículos, resúmenes de libros y charlas."
 generate_feeds = true
 build_search_index = true
-taxonomies = [{ name = "tags" }]
+taxonomies = [{ name = "tags", feed = true }]
 
 [languages.es.search]
 include_title = true
