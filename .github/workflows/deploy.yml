@@ -63,3 +63,25 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # After the deploy, never before: IndexNow tells the engines to come and
+      # fetch these URLs, so they have to be live by then. Google ignores the
+      # protocol; Bing, Yandex, Seznam and Naver act on it within minutes.
+      - name: Checkout for the IndexNow submission
+        if: github.event_name == 'push'
+        uses: actions/checkout@v4
+        with:
+          # The submission is built from what changed in this push, so the
+          # commit before it has to be in the clone.
+          fetch-depth: 0
+
+      - name: Submit changed URLs to IndexNow
+        if: github.event_name == 'push'
+        run: |
+          before="${{ github.event.before }}"
+          # A new branch or a force push reports an all-zero "before" commit,
+          # which is not a revision git can diff from.
+          if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
+            before="${{ github.sha }}^"
+          fi
+          python3 scripts/indexnow.py "$before..${{ github.sha }}"
