@@ -22,11 +22,18 @@
 
     <meta name="theme-color" content="{{ config.extra.accent }}" />
     <meta name="author" content="{{ config.author }}">
+    {# One robots directive per page, and exactly one. Pages that want to stay out
+       of the index (the reading profile, the 404) used to add a second meta from
+       their posthead block while this one still said "index, follow", leaving two
+       contradictory directives on the same page. Overriding this block replaces
+       the default instead of competing with it. #}
+    {% block robots %}
     {% if paginator and paginator.current_index and paginator.current_index > 1 %}
     <meta name="robots" content="noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     {% else %}
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     {% endif %}
+    {% endblock robots %}
     <link rel="manifest" href="/manifest.json" />
 
     {% if config.extra.google_site_verification %}
