@@ -1,18 +1,25 @@
 #!/usr/bin/env python3
 """
-Generate llms-full.txt with full content of all site articles.
-Follows the emerging llms-full.txt convention so AI agents can ingest
-the site as a single text file instead of crawling page-by-page.
+Generate llms-full.txt with full content of all site articles, and append the
+content index to llms.txt.
+
+llms-full.txt follows the emerging convention so AI agents can ingest the site
+as a single text file instead of crawling page-by-page. llms.txt is the summary
+index next to it: the prose half is hand-written in static/llms.txt (and
+static/es/llms.txt), and the per-entry link list below the marker is written
+here, because a hand-maintained one goes stale the moment a post is published.
 """
 
 from __future__ import annotations
 
 import re
-from typing import List, TypedDict
+import sys
+from typing import List, Tuple, TypedDict
 
 from _common import (
     PUBLIC_DIR,
     SECTIONS,
+    TLang,
     TSection,
     entry_url,
     get_slug_from_filename,
@@ -20,6 +27,11 @@ from _common import (
     read_entry,
     require_title,
 )
+
+# Everything from this heading down is regenerated on every build. The prose
+# above it stays hand-written, so the marker has to be present in the source
+# file: silently appending instead would double the index on the next run.
+INDEX_MARKER = '## Content index'
 
 
 class TEntry(TypedDict):
@@ -75,6 +87,71 @@ def build_full_section(entries: List[TEntry], section: TSection) -> List[str]:
     return lines
 
 
+def build_content_index(lang: TLang) -> Tuple[List[str], int]:
+    """The per-entry link list for llms.txt, newest first within each section.
+
+    Links point at the .md mirror rather than the HTML page: an agent reading
+    llms.txt wants the source, and the mirrors are already published next to
+    every entry.
+    """
+    lines: List[str] = [INDEX_MARKER, '']
+    total = 0
+
+    for section in SECTIONS:
+        entries: List[Tuple[str, str, str, str]] = []
+        for filepath in iter_section_files(section, translations=(lang == 'es')):
+            is_es = '.es.md' in filepath.name
+            if is_es != (lang == 'es'):
+                continue
+            fm, _ = read_entry(filepath)
+            url = entry_url(section, get_slug_from_filename(filepath.name), es=is_es)
+            entries.append((
+                fm.get('date', ''),
+                require_title(fm, filepath),
+                f'{url}index.md',
+                fm.get('description', ''),
+            ))
+
+        if not entries:
+            continue
+
+        entries.sort(key=lambda e: e[0], reverse=True)
+        lines.append(f'### {section.title()} ({len(entries)})')
+        lines.append('')
+        for date, title, url, description in entries:
+            date_str = f'`{date}` ' if date else ''
+            lines.append(f'- {date_str}[{title}]({url})')
+            if description:
+                lines.append(f'  {description}')
+        lines.append('')
+        total += len(entries)
+
+    return lines, total
+
+
+def write_content_index(lang: TLang) -> int:
+    """Replace the marked index section of the built llms.txt for one language.
+
+    Reads the file Zola already copied from static/, so the hand-written prose
+    is the source of truth for everything above the marker.
+    """
+    path = PUBLIC_DIR / 'llms.txt' if lang == 'en' else PUBLIC_DIR / 'es' / 'llms.txt'
+    if not path.is_file():
+        sys.exit(f'{path}: expected Zola to have copied it from static/ before this runs')
+
+    text = path.read_text(encoding='utf-8')
+    if INDEX_MARKER not in text:
+        sys.exit(
+            f'{path.name}: no "{INDEX_MARKER}" heading to write the entry list under. '
+            'Add it to the source file in static/, at the point the generated index belongs.'
+        )
+
+    prose = text.split(INDEX_MARKER)[0].rstrip()
+    index_lines, total = build_content_index(lang)
+    path.write_text(prose + '\n\n' + '\n'.join(index_lines).rstrip() + '\n', encoding='utf-8')
+    return total
+
+
 def main() -> None:
     header = [
         '# Chemaclass - Full Content (llms-full.txt)\n',
@@ -121,6 +198,10 @@ def main() -> None:
         f.write('\n'.join(output) + '\n')
 
     print(f'  Generated llms-full.txt with {total} entries (full bodies)')
+
+    for lang in ('en', 'es'):
+        indexed = write_content_index(lang)
+        print(f'  Wrote the llms.txt content index ({lang}): {indexed} entries')
 
 
 if __name__ == '__main__':
