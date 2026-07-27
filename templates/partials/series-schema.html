@@ -1,0 +1,52 @@
+{# ==========================================================================
+   JSON-LD for a series landing page (templates/series/single.html).
+
+   The site has five series with prev/next navigation and a "Part X of Y"
+   label, and none of it was machine-readable: to a crawler the parts were
+   unrelated posts. CreativeWorkSeries names the whole and orders the parts,
+   which is what lets an answer engine say which post comes third.
+
+   Requires: page (a content/series/<key>.md page), config, lang.
+   ========================================================================== #}
+{%- set conf = config.extra.series[page.extra.series] -%}
+{%- set series_name = conf.title -%}
+{%- if lang == "es" and conf.title_es -%}{%- set series_name = conf.title_es -%}{%- endif -%}
+{%- set series_desc = conf.desc | default(value="") -%}
+{%- if lang == "es" and conf.desc_es -%}{%- set series_desc = conf.desc_es -%}{%- endif -%}
+{%- set blog = get_section(path="blog/_index.md", lang=lang) -%}
+{%- set_global series_parts = [] -%}
+{%- for post in blog.pages -%}
+  {%- if post.extra.series and post.extra.series == page.extra.series -%}
+    {%- set_global series_parts = series_parts | concat(with=post) -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- set series_parts = series_parts | sort(attribute="extra.series_order") -%}
+{% if series_parts | length > 0 %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWorkSeries",
+  "@id": "{{ page.permalink | safe }}#series",
+  "name": "{{ series_name }}",
+  {% if series_desc %}"description": "{{ series_desc }}",{% endif %}
+  "url": "{{ page.permalink | safe }}",
+  "inLanguage": "{{ lang }}",
+  "isPartOf": { "@id": "{{ config.base_url | safe }}/#website" },
+  "author": { "@id": "{{ config.base_url | safe }}/#person" },
+  "numberOfItems": {{ series_parts | length }},
+  "hasPart": [
+    {%- for post in series_parts %}
+    {
+      "@type": "BlogPosting",
+      "@id": "{{ post.permalink | safe }}",
+      "url": "{{ post.permalink | safe }}",
+      "headline": "{{ post.title }}",
+      {% if post.description %}"description": "{{ post.description }}",{% endif %}
+      {% if post.date %}"datePublished": "{{ post.date | date(format='%+') }}",{% endif %}
+      "position": {{ post.extra.series_order }}
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+{% endif %}

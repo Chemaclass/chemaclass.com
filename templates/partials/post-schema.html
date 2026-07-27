@@ -28,8 +28,22 @@
     },
     {# Ties the article to the site node in base.html. Without it the three
        top-level nodes (WebSite, Organization, Person) and every article were
-       separate islands, and nothing said this page belongs to this site. #}
+       separate islands, and nothing said this page belongs to this site.
+       A post in a series belongs to two wholes, so this is an array there:
+       the site, and the CreativeWorkSeries node the series page declares. #}
+    {%- set series_page = false -%}
+    {%- if page.extra.series -%}
+      {%- set series_page = get_page(path="series/" ~ page.extra.series ~ ".md", lang=lang) -%}
+    {%- endif %}
+    {% if series_page %}
+    "isPartOf": [
+      { "@id": "{{ config.base_url | safe }}/#website" },
+      { "@id": "{{ series_page.permalink | safe }}#series" }
+    ],
+    {% if page.extra.series_order %}"position": {{ page.extra.series_order }},{% endif %}
+    {% else %}
     "isPartOf": { "@id": "{{ config.base_url | safe }}/#website" },
+    {% endif %}
     "url": "{{ page.permalink | safe }}",
     "isAccessibleForFree": true,
     "headline": "{{ page.title }}",
