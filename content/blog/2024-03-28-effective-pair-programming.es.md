@@ -22,6 +22,12 @@ related_readings = [
   "readings/2020-10-10-object-design-style-guide.md",
   "readings/2020-03-05-extreme-programming-explained.md",
 ]
+faq = [
+  { q = "¿Qué es el pair programming?", a = "Dos personas trabajando juntas en el mismo problema al mismo tiempo, una al teclado y otra atenta a la visión general. No es un senior enseñando a un junior, ni una persona mirando cómo trabaja otra." },
+  { q = "¿Cuánto debería durar una sesión de pairing?", a = "Ponle un límite: 30, 60 o 90 minutos, con pausas por el medio. También podéis empezar juntos y separaros cuando uno se sienta con confianza para seguir solo. Lo deciden el equipo y la tarea." },
+  { q = "¿Cuándo no conviene hacer pairing?", a = "Sáltatelo cuando el trabajo es trivial. Empareja cuando la tarea es compleja, el conocimiento está aislado o hay mucho en juego. El objetivo nunca es emparejar siempre, sino mejor software y un equipo más fuerte." },
+  { q = "¿Cuáles son los anti-patrones más comunes al emparejar?", a = "El compañero silencioso, el que va por libre e ignora al navegante, la pareja distraída, el dictador, la pareja filosófica que acaba en bikeshedding y la guerra de código donde nadie cede." },
+]
 +++
 
 

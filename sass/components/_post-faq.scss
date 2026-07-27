@@ -1,0 +1,64 @@
+// ==========================================================================
+// Post FAQ
+// Optional question list at the end of a post (see partials/post-faq.html).
+// Built on <details> so it opens without JavaScript, and so a crawler reads
+// the answer whether or not the item is expanded.
+// ==========================================================================
+
+.post-faq {
+  margin: 3rem 0 0;
+
+  &__title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    color: var(--heading-color);
+  }
+
+  &__item {
+    border: 1px solid var(--preview-divider-color);
+    border-radius: 10px;
+    margin-bottom: 0.6rem;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: var(--accent-color);
+    }
+
+    &[open] .post-faq__question::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__question {
+    padding: 0.85rem 1.1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "\25be";
+      font-size: 0.9rem;
+      color: var(--accent-color);
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &__answer {
+    padding: 0 1.1rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--body-color);
+  }
+}

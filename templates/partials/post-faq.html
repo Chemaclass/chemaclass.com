@@ -1,0 +1,50 @@
+{# ==========================================================================
+   Optional FAQ block for a post: rendered questions plus FAQPage markup.
+
+   Question and answer pairs are what an answer engine lifts verbatim, and the
+   only FAQ on the site was hand-built into one services page. Any post can now
+   carry one, from front matter:
+
+     [extra]
+     faq = [
+       { q = "Question in full?", a = "Answer in one or two plain sentences." },
+     ]
+
+   Answers are plain text on purpose: the same string is rendered and put in the
+   JSON-LD, and markup in the schema half is what gets a rich result rejected.
+
+   Requires: page, lang.
+   ========================================================================== #}
+{% if page.extra.faq %}
+<section class="post-faq" aria-labelledby="post-faq-title">
+  <h2 class="post-faq__title" id="post-faq-title">{{ trans(key="faq_title", lang=lang) }}</h2>
+  {% for item in page.extra.faq %}
+  <details class="post-faq__item">
+    <summary class="post-faq__question">{{ item.q }}</summary>
+    <div class="post-faq__answer">{{ item.a }}</div>
+  </details>
+  {% endfor %}
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "{{ page.permalink | safe }}#faq",
+  "isPartOf": { "@id": "{{ page.permalink | safe }}" },
+  "inLanguage": "{{ lang }}",
+  "mainEntity": [
+    {%- for item in page.extra.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | json_encode | safe }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.a | json_encode | safe }}
+      }
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+{% endif %}

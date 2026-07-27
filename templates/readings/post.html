@@ -132,6 +132,7 @@
           <div class="tldr">{{ page.description }}</div>
           {% endif %}
           {{ page.content | safe }}
+          {% include "partials/post-faq.html" %}
           {% include "partials/related-posts.html" %}
         </div>
       </article>
