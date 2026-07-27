@@ -28,6 +28,7 @@ faq = [
   { q = "¿Cuándo no conviene hacer pairing?", a = "Sáltatelo cuando el trabajo es trivial. Empareja cuando la tarea es compleja, el conocimiento está aislado o hay mucho en juego. El objetivo nunca es emparejar siempre, sino mejor software y un equipo más fuerte." },
   { q = "¿Cuáles son los anti-patrones más comunes al emparejar?", a = "El compañero silencioso, el que va por libre e ignora al navegante, la pareja distraída, el dictador, la pareja filosófica que acaba en bikeshedding y la guerra de código donde nadie cede." },
 ]
+tldr = "El pairing es una herramienta, no una regla. Dos personas, dos roles, que se intercambian a menudo. Úsalo cuando la tarea es compleja, el conocimiento está aislado o hay mucho en juego, y sáltatelo cuando el trabajo es trivial."
 +++
 
 

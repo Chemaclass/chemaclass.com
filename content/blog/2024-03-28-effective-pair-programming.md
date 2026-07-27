@@ -29,6 +29,7 @@ faq = [
   { q = "When should you not pair?", a = "Skip it when the work is trivial. Pair when the task is complex, the knowledge is siloed, or the stakes are high. The goal is never to always pair, it is better software and a stronger team." },
   { q = "What are the most common pairing anti-patterns?", a = "The silent partner, the solo act who ignores the navigator, the distracted pair, the dictator, the philosophical pair that drifts into bikeshedding, and the code war where neither side gives ground." },
 ]
+tldr = "Pairing is a tool, not a rule. Two people, two roles, switched often. Reach for it when the task is complex, the knowledge is siloed or the stakes are high, and skip it when the work is trivial."
 +++
 
 

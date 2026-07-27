@@ -1,0 +1,19 @@
+{# ==========================================================================
+   The summary box at the top of a post.
+
+   Answer engines quote the first self-contained paragraph they find, and the
+   page description doubles as that paragraph. A post can override it with a
+   sharper one written for the reader rather than for the search result:
+
+     [extra]
+     tldr = "One or two sentences: what this post claims, and what to do with it."
+
+   Whichever wins is also what goes into the schema abstract, so the rendered
+   summary and the marked-up one cannot say different things.
+
+   Requires: page.
+   ========================================================================== #}
+{% set tldr_text = page.extra.tldr | default(value=page.description) | default(value="") %}
+{% if tldr_text %}
+<div class="tldr">{{ tldr_text }}</div>
+{% endif %}

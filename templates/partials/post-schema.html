@@ -57,7 +57,11 @@
     "url": "{{ page.permalink | safe }}",
     "isAccessibleForFree": true,
     "headline": "{{ page.title }}",
-    {% if page.description %}"description": "{{ page.description }}",{% endif %}
+    {% if page.description %}"description": {{ page.description | json_encode | safe }},{% endif %}
+    {# The same summary the page shows at the top, so the rendered and the
+       marked-up one cannot drift apart. #}
+    {% set abstract_text = page.extra.tldr | default(value=page.description) | default(value="") %}
+    {% if abstract_text %}"abstract": {{ abstract_text | json_encode | safe }},{% endif %}
     "image": {% if img_url %}{ "@type": "ImageObject", "url": "{{ img_url | safe }}"{% if img_meta %}, "width": {{ img_meta.width }}, "height": {{ img_meta.height }}{% endif %} }{% else %}[]{% endif %}{% if page.date %},
     "datePublished": "{{ page.date | date(format="%+") }}",
     "dateModified": "{% if page.updated %}{{ page.updated | date(format="%+") }}{% elif git_modified %}{{ git_modified }}{% else %}{{ page.date | date(format="%+") }}{% endif %}"{% endif %}{% if page.word_count %},

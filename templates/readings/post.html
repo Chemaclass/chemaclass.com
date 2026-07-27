@@ -128,9 +128,7 @@
         <!-- Content -->
         <div class="blog-post__content reading-post"
              {{ macros::highlight_labels(lang=lang) }}>
-          {% if page.description %}
-          <div class="tldr">{{ page.description }}</div>
-          {% endif %}
+          {% include "partials/tldr.html" %}
           {{ page.content | safe }}
           {% include "partials/post-faq.html" %}
           {% include "partials/related-posts.html" %}
