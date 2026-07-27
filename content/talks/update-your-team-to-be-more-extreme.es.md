@@ -5,6 +5,9 @@ weight = 1
 tags = [ "agile", "xp", "team-culture" ]
 [extra]
 subtitle = "¿Cómo puedes ayudar a tus compañeros a abrazar el cambio?"
+videos = [
+  { id = "dqtAyl-SvaY", name = "Una introducción a Extreme Programming", date = "2023-07-28", lang = "en" },
+]
 +++
 
 Nuestra profesión evoluciona constantemente y exige aprendizaje continuo. En software, abrazar el cambio no es opcional.

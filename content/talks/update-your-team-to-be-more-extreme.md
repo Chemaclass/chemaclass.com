@@ -5,6 +5,9 @@ weight = 1
 tags = [ "agile", "xp", "team-culture" ]
 [extra]
 subtitle = "How can you help your peers to embrace the change?"
+videos = [
+  { id = "dqtAyl-SvaY", name = "An Introduction to Extreme Programming", date = "2023-07-28", lang = "en" },
+]
 +++
 
 Our profession is constantly evolving; therefore, it demands a non-stop learning process. Embracing change is not optional in the software industry. We need to create spaces to get out of our comfort zone, so our cognitive brain can train and improve how to adapt to our surroundings, which are constantly transforming. A solution for this could be by integrating internal tech talks or katas, which provide the team with a great opportunity to have fun while learning and sharing knowledge between team members.
