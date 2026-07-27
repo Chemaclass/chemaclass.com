@@ -23,6 +23,12 @@ related_readings = [
   "readings/2020-10-10-object-design-style-guide.md",
   "readings/2020-03-05-extreme-programming-explained.md",
 ]
+faq = [
+  { q = "What is pair programming?", a = "Two people working together on the same problem at the same time, one driving the keyboard and one navigating the bigger picture. It is not a senior teaching a junior, and it is not one person watching another work." },
+  { q = "How long should a pairing session last?", a = "Time-box it: 30, 60 or 90 minutes, with pauses in the middle. You can also start a task together and split when one of you feels confident enough to continue alone. The team and the task decide." },
+  { q = "When should you not pair?", a = "Skip it when the work is trivial. Pair when the task is complex, the knowledge is siloed, or the stakes are high. The goal is never to always pair, it is better software and a stronger team." },
+  { q = "What are the most common pairing anti-patterns?", a = "The silent partner, the solo act who ignores the navigator, the distracted pair, the dictator, the philosophical pair that drifts into bikeshedding, and the code war where neither side gives ground." },
+]
 +++
 
 

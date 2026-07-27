@@ -28,6 +28,7 @@ dark_theme = "github-dark"
 
 [translations]
 related_posts = "Related posts"
+faq_title = "Frequently asked"
 related_readings = "Related readings"
 all_posts = "All posts"
 all_readings = "All readings"
@@ -311,6 +312,7 @@ truncate_content_length = 2000
 
 [languages.es.translations]
 related_posts = "Artículos relacionados"
+faq_title = "Preguntas frecuentes"
 related_readings = "Lecturas relacionadas"
 all_posts = "Todos los artículos"
 all_readings = "Todas las lecturas"
