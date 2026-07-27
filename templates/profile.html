@@ -6,9 +6,9 @@
   {% if lang == "es" %}Tu perfil de lectura{% else %}Your reading profile{% endif %} | Chemaclass
 {% endblock %}
 
-{% block posthead %}
+{% block robots %}
 <meta name="robots" content="noindex, nofollow">
-{% endblock posthead %}
+{% endblock robots %}
 
 {% block styles %}
 {{ macros::page_styles(css='profile.css') }}
