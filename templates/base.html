@@ -136,15 +136,13 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "{{ config.base_url | safe }}/#website",
       "name": "{{ config.title }}",
       "url": "{{ config.base_url | safe }}",
       "inLanguage": ["en", "es"],
       "description": "{{ config.description }}",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Chemaclass",
-        "url": "{{ config.base_url | safe }}"
-      },
+      "publisher": { "@id": "{{ config.base_url | safe }}/#organization" },
+      "author": { "@id": "{{ config.base_url | safe }}/#person" },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {

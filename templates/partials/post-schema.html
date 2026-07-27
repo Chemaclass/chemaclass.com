@@ -26,6 +26,10 @@
       "@type": "WebPage",
       "@id": "{{ page.permalink | safe }}"
     },
+    {# Ties the article to the site node in base.html. Without it the three
+       top-level nodes (WebSite, Organization, Person) and every article were
+       separate islands, and nothing said this page belongs to this site. #}
+    "isPartOf": { "@id": "{{ config.base_url | safe }}/#website" },
     "url": "{{ page.permalink | safe }}",
     "isAccessibleForFree": true,
     "headline": "{{ page.title }}",
