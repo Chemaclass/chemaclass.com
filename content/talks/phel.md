@@ -7,6 +7,11 @@ tags = [ "phel", "php", "functional-programming", "lisp" ]
 [extra]
 subtitle = "A native Lisp for PHP"
 project_url = "https://phel-lang.org/"
+slides = "/slides/phel-doom/"
+videos = [
+  { id = "ZQTann9ItH8", name = "Phel in 5 min", date = "2023-03-28", lang = "en" },
+  { id = "9pElbTEcyGA", name = "Phel Language: functional programming for PHP?", date = "2022-06-23", lang = "es" },
+]
 +++
 
 Phel is a functional programming language that compiles into PHP. It is a dialect of Lisp inspired by Clojure and built on PHP's ecosystem. Among other features, it has persistent data structures (Lists, Vectors, Maps, and Sets), macros, recursive functions, and a REPL. This talk covers the basics of Phel and includes a live coding demo showing its potential.

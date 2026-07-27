@@ -1,0 +1,57 @@
+{# ==========================================================================
+   JSON-LD for the recordings and slide decks of a talk.
+
+   The talk page itself is a CreativeWork (see post-schema.html), which says
+   nothing about the two things people actually search for: the video and the
+   deck. Both are declared from front matter rather than scraped out of the
+   appearances list, so the data stays explicit.
+
+   Front matter, under [extra]:
+     videos = [ { id = "<youtube id>", name = "...", date = "YYYY-MM-DD", lang = "en" } ]
+     slides = "/slides/<slug>/"   # or an absolute URL for an external deck
+
+   Requires: page, config, lang.
+   ========================================================================== #}
+{%- set talk_desc = page.description | default(value=page.extra.subtitle) | default(value=page.title) -%}
+
+{% if page.extra.videos %}
+  {% for video in page.extra.videos %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "{{ video.name }}",
+  "description": "{{ video.description | default(value=talk_desc) }}",
+  {# YouTube serves this thumbnail for every video id, and Google asks for one
+     on a VideoObject: without it the entry is ignored for video results. #}
+  "thumbnailUrl": "https://i.ytimg.com/vi/{{ video.id }}/hqdefault.jpg",
+  "uploadDate": "{{ video.date }}",
+  "contentUrl": "https://youtu.be/{{ video.id }}",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/{{ video.id }}",
+  "inLanguage": "{{ video.lang | default(value='en') }}",
+  "isPartOf": { "@id": "{{ page.permalink | safe }}" },
+  "creator": { "@id": "{{ config.base_url | safe }}/#person" },
+  "publisher": { "@id": "{{ config.base_url | safe }}/#organization" }
+}
+</script>
+  {% endfor %}
+{% endif %}
+
+{% if page.extra.slides %}
+{%- set slides_url = page.extra.slides -%}
+{%- if not slides_url is matching("^http") -%}{%- set slides_url = config.base_url ~ page.extra.slides -%}{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PresentationDigitalDocument",
+  "name": "{{ page.title }}",
+  "description": "{{ talk_desc }}",
+  "url": "{{ slides_url | safe }}",
+  "encodingFormat": "text/html",
+  "inLanguage": "{{ lang }}",
+  "about": { "@id": "{{ page.permalink | safe }}" },
+  "author": { "@id": "{{ config.base_url | safe }}/#person" },
+  "isPartOf": { "@id": "{{ config.base_url | safe }}/#website" }
+}
+</script>
+{% endif %}
