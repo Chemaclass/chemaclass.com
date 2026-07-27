@@ -27,6 +27,10 @@
 {{ macros::page_styles(css='page.css') }}
 {% endblock styles %}
 
+{% block posthead %}
+{% include "partials/series-schema.html" %}
+{% endblock posthead %}
+
 {% block content %}
 {%- set conf = config.extra.series[page.extra.series] -%}
 {%- set series_name = conf.title -%}
