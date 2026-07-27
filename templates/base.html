@@ -385,6 +385,36 @@
       {% endif %}
     {% endif %}
 
+    {# Machine-readable mirrors of this page. scripts/generate-md-pages.py and
+       generate-txt-pages.py write index.md / index.txt next to the HTML for blog,
+       readings and talks, but nothing pointed at them, so only a human clicking
+       the footer link ever found them. GitHub Pages serves fixed headers, so a
+       <link rel="alternate"> is the only discovery channel an agent has.
+       Guards: paginated listings have no mirror of their own, and the .txt
+       generator is English-only. #}
+    {# Spelled out rather than `default(value=section.permalink)`: the filter argument
+       is evaluated even when the page permalink is there, and 404.html renders with
+       neither variable in context. #}
+    {% set_global mirror_url = "" %}
+    {% if page.permalink %}{% set_global mirror_url = page.permalink %}
+    {% elif section.permalink %}{% set_global mirror_url = section.permalink %}{% endif %}
+    {% set is_paginated_page = paginator and paginator.current_index and paginator.current_index > 1 %}
+    {% if mirror_url and not is_paginated_page %}
+      {% set mirror_path = mirror_url | replace(from=config.base_url, to="") | replace(from="/es/", to="/") %}
+      {% if mirror_path is starting_with("/blog/") or mirror_path is starting_with("/readings/") or mirror_path is starting_with("/talks/") %}
+        <link rel="alternate" type="text/markdown" href="{{ mirror_url | safe }}index.md" title="Markdown source">
+        {% if lang == "en" %}
+        <link rel="alternate" type="text/plain" href="{{ mirror_url | safe }}index.txt" title="Plain text">
+        {% endif %}
+      {% endif %}
+    {% endif %}
+    {% if lang == "es" %}
+      <link rel="alternate" type="text/plain" href="{{ get_url(path='es/llms.txt') | safe }}" title="llms.txt">
+    {% else %}
+      <link rel="alternate" type="text/plain" href="{{ get_url(path='llms.txt') | safe }}" title="llms.txt">
+      <link rel="alternate" type="text/plain" href="{{ get_url(path='llms-full.txt') | safe }}" title="llms-full.txt">
+    {% endif %}
+
     {% block head %}
       <link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript><link rel="stylesheet" href="/css/fontawesome.min.css"></noscript>
