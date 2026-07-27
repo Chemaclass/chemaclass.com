@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Enrich sitemap.xml with <lastmod> dates from git history."""
+"""Enrich sitemap.xml with <lastmod> dates from git history and hreflang links.
+
+Zola writes a flat list of every URL in both languages with nothing tying the
+English and Spanish versions of a page together. The HTML head carries the
+hreflang pairs, but the sitemap is the form Google prefers for them, so the
+same pairing is written here from the URLs the sitemap already lists.
+"""
 from __future__ import annotations
 
 import re
@@ -64,8 +70,47 @@ def find_content_file(url: str) -> Optional[Path]:
     return None
 
 
+XHTML_NS = "http://www.w3.org/1999/xhtml"
+
+
+def counterpart(url: str) -> Optional[str]:
+    """The same page in the other language, by URL shape: /x/ <-> /es/x/.
+
+    Returns None for a URL that is not on this origin, which is the one case
+    where the shape rule says nothing.
+    """
+    if not url.startswith(BASE_URL):
+        return None
+    path = url[len(BASE_URL):]
+    if path.startswith("/es/") or path == "/es":
+        return BASE_URL + (path[3:] or "/")
+    return f"{BASE_URL}/es{path}"
+
+
+def hreflang_links(url: str, known: set) -> str:
+    """The <xhtml:link> block pairing a URL with its translation.
+
+    Empty when the page exists in one language only: an alternate pointing at a
+    URL that is not in the sitemap is an alternate pointing at a 404. Google
+    wants every version of a page listed on every version, itself included, so
+    both links are emitted on both sides.
+    """
+    other = counterpart(url)
+    if other is None or other not in known:
+        return ""
+
+    is_es = url.startswith(f"{BASE_URL}/es/") or url == f"{BASE_URL}/es"
+    en_url, es_url = (other, url) if is_es else (url, other)
+
+    return (
+        f'\n    <xhtml:link rel="alternate" hreflang="en" href="{en_url}"/>'
+        f'\n    <xhtml:link rel="alternate" hreflang="es" href="{es_url}"/>'
+        f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{en_url}"/>'
+    )
+
+
 def enrich_sitemap(sitemap_path: str) -> int:
-    """Add <lastmod> to sitemap entries missing it."""
+    """Add <lastmod> and hreflang alternates to sitemap entries missing them."""
     with open(sitemap_path) as f:
         content = f.read()
 
@@ -73,33 +118,39 @@ def enrich_sitemap(sitemap_path: str) -> int:
         return 0
 
     count = 0
+    known_urls = set(re.findall(r"<loc>(.*?)</loc>", content))
 
-    def add_lastmod(match: "re.Match[str]") -> str:
+    def enrich_url(match: "re.Match[str]") -> str:
         nonlocal count
         block = match.group(0)
-
-        if "<lastmod>" in block:
-            return block
 
         loc = re.search(r"<loc>(.*?)</loc>", block)
         if not loc:
             return block
 
-        content_file = find_content_file(loc.group(1))
-        if not content_file:
+        addition = ""
+        if "<lastmod>" not in block:
+            content_file = find_content_file(loc.group(1))
+            git_date = get_git_date(content_file) if content_file else None
+            if git_date:
+                addition += f"\n    <lastmod>{git_date}</lastmod>"
+                count += 1
+
+        if "xhtml:link" not in block:
+            addition += hreflang_links(loc.group(1), known_urls)
+
+        if not addition:
             return block
 
-        git_date = get_git_date(content_file)
-        if not git_date:
-            return block
+        return block.replace("</loc>", f"</loc>{addition}")
 
-        count += 1
-        return block.replace(
-            "</loc>",
-            f"</loc>\n    <lastmod>{git_date}</lastmod>",
-        )
+    enriched = re.sub(r"<url>.*?</url>", enrich_url, content, flags=re.DOTALL)
 
-    enriched = re.sub(r"<url>.*?</url>", add_lastmod, content, flags=re.DOTALL)
+    # The alternates use the xhtml prefix, which has to be declared on the root
+    # element or the file is not well-formed XML and Search Console rejects it
+    # whole, not just the entries carrying the links.
+    if "xhtml:link" in enriched and 'xmlns:xhtml' not in enriched:
+        enriched = enriched.replace("<urlset ", f'<urlset xmlns:xhtml="{XHTML_NS}" ', 1)
 
     with open(sitemap_path, "w") as f:
         f.write(enriched)
