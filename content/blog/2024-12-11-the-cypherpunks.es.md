@@ -132,7 +132,7 @@ Bitcoin ha cambiado cómo entendemos el dinero, la privacidad y la seguridad:
 
 Bitcoin dio vida a los ideales cypherpunk. Ha provocado debates globales sobre privacidad financiera, la naturaleza del dinero y el poder de la criptografía. Y sigue evolucionando con desarrollos como [Lightning Network](https://en.wikipedia.org/wiki/Lightning_Network) para transacciones más rápidas y privadas, y [Taproot](/es/blog/programmable-money/#p2tr-pay-to-taproot-taproot-up) para mayor privacidad.
 
-## Conclusión
+## Lo que dejaron los cypherpunks
 
 Los cypherpunks demostraron que un pequeño grupo de personas que escriben código pueden cambiar el mundo. Cada mensaje cifrado que envías, cada transacción de Bitcoin, cada navegación anónima: su legado.
 

@@ -133,7 +133,7 @@ Bitcoin has revolutionized our understanding of money, privacy, and security:
 
 Bitcoin has brought cypherpunk ideals to life, sparking global discussions on financial privacy, money's nature, and cryptography's transformative power. With developments like the [Lightning Network](https://en.wikipedia.org/wiki/Lightning_Network) for faster, private transactions and [Taproot](/blog/programmable-money/#p2tr-pay-to-taproot-taproot-up) for enhanced transaction privacy, Bitcoin continues to evolve.
 
-## Conclusion
+## What the cypherpunks left behind
 
 The cypherpunks proved that a small group of people who write code can change the world. Every encrypted message you send, every Bitcoin transaction, every anonymous browse: their legacy.
 

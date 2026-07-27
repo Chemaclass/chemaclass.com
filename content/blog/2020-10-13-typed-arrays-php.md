@@ -145,7 +145,7 @@ createInvoiceForCustomers(new AnyOtherType());
 - It helps to minimize the number of arguments that we use in a function.
 
 
-## Conclusions
+## Variadics simulate typed arrays, use them wisely
 
 Argument unpacking is a great feature that, in combination with variadic functions, can help us to simulate typed arrays. With great power comes great responsibility, and this is no exception.
 We need to learn about our toolbox in order to use it wisely.

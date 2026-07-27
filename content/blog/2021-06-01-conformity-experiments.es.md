@@ -55,7 +55,7 @@ Asch también descubrió algo clave: cuando uno de los actores daba la respuesta
 
 > Después de combinar las pruebas, los resultados indicaron que los participantes se conformaban con la respuesta incorrecta del grupo aproximadamente un tercio de las veces.
 
-## Conclusión
+## Por qué la gente se conforma con un grupo con el que no está de acuerdo
 
 ¿Por qué los participantes se conformaron tan fácilmente? En las entrevistas posteriores, la mayoría admitió que no creían en sus respuestas conformistas. Simplemente siguieron al grupo por miedo a quedar en ridículo.
 

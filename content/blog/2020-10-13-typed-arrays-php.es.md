@@ -144,7 +144,7 @@ createInvoiceForCustomers(new AnyOtherType());
 - Ayuda a minimizar el número de argumentos.
 
 
-## Conclusiones
+## Los variadics simulan arrays tipados, úsalos con cabeza
 
 El desempaquetado de argumentos, combinado con funciones variádicas, nos permite simular arrays tipados. Un gran poder conlleva una gran responsabilidad.
 Hay que conocer bien nuestras herramientas para usarlas con criterio.
