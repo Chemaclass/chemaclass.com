@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Enrich sitemap.xml with <lastmod> dates from git history and hreflang links.
+"""Enrich sitemap.xml with <lastmod> dates, hreflang links and page images.
 
 Zola writes a flat list of every URL in both languages with nothing tying the
-English and Spanish versions of a page together. The HTML head carries the
-hreflang pairs, but the sitemap is the form Google prefers for them, so the
-same pairing is written here from the URLs the sitemap already lists.
+English and Spanish versions of a page together, and no mention of the cover
+image a post carries. The HTML head has the hreflang pairs and the og:image,
+but the sitemap is the form Google prefers for both, so they are written here
+from the same front matter the rest of the build reads.
 """
 from __future__ import annotations
 
@@ -14,7 +15,16 @@ import sys
 from pathlib import Path
 from typing import List, Optional
 
-from _common import BASE_URL, CONTENT_DIR, PUBLIC_DIR
+from _common import (
+    BASE_URL,
+    CONTENT_DIR,
+    PUBLIC_DIR,
+    SECTIONS,
+    STATIC_DIR,
+    extract_frontmatter,
+    get_slug_from_filename,
+    iter_section_files,
+)
 
 
 def get_git_date(filepath: Path) -> Optional[str]:
@@ -62,15 +72,59 @@ def url_to_content_paths(url: str) -> List[Path]:
     ]
 
 
+def _entry_index() -> dict:
+    """Map (section, slug, is_es) to the content file, once per run.
+
+    The path-shaped candidates above cannot find a post: blog and readings files
+    carry a YYYY-MM-DD- prefix that the URL does not, so /blog/some-post/ never
+    matched content/blog/2024-03-28-some-post.md. Everything those entries were
+    meant to get, the git <lastmod> included, was silently skipped for them.
+    """
+    global _ENTRY_INDEX
+    if _ENTRY_INDEX is None:
+        _ENTRY_INDEX = {}
+        for section in SECTIONS:
+            for path in iter_section_files(section, translations=True):
+                is_es = ".es.md" in path.name
+                _ENTRY_INDEX[(section, get_slug_from_filename(path.name), is_es)] = path
+    return _ENTRY_INDEX
+
+
+_ENTRY_INDEX: Optional[dict] = None
+
+
 def find_content_file(url: str) -> Optional[Path]:
     """Find the content file for a URL."""
     for candidate in url_to_content_paths(url):
         if candidate.exists():
             return candidate
+
+    path = url.replace(BASE_URL, "").strip("/")
+    is_es = path.startswith("es/")
+    parts = (path[3:] if is_es else path).split("/")
+    if len(parts) == 2:
+        return _entry_index().get((parts[0], parts[1], is_es))
     return None
 
 
 XHTML_NS = "http://www.w3.org/1999/xhtml"
+IMAGE_NS = "http://www.google.com/schemas/sitemap-image/1.1"
+
+
+def page_image(content_file: Path) -> Optional[str]:
+    """The cover image of a page, as an absolute URL, or None.
+
+    Only images this site hosts are listed. Some reading notes point their
+    cover at a remote bookseller, and a sitemap that claims an image on
+    another origin is one Search Console rejects for that entry.
+    """
+    fm = extract_frontmatter(content_file.read_text(encoding="utf-8"))
+    thumbnail = fm.get("thumbnail")
+    if not thumbnail or thumbnail.startswith("http"):
+        return None
+    if not (STATIC_DIR / thumbnail.lstrip("/")).is_file():
+        return None
+    return f"{BASE_URL}{thumbnail}"
 
 
 def counterpart(url: str) -> Optional[str]:
@@ -110,7 +164,7 @@ def hreflang_links(url: str, known: set) -> str:
 
 
 def enrich_sitemap(sitemap_path: str) -> int:
-    """Add <lastmod> and hreflang alternates to sitemap entries missing them."""
+    """Add <lastmod>, hreflang alternates and page images to entries missing them."""
     with open(sitemap_path) as f:
         content = f.read()
 
@@ -128,9 +182,10 @@ def enrich_sitemap(sitemap_path: str) -> int:
         if not loc:
             return block
 
+        content_file = find_content_file(loc.group(1))
+
         addition = ""
         if "<lastmod>" not in block:
-            content_file = find_content_file(loc.group(1))
             git_date = get_git_date(content_file) if content_file else None
             if git_date:
                 addition += f"\n    <lastmod>{git_date}</lastmod>"
@@ -138,6 +193,15 @@ def enrich_sitemap(sitemap_path: str) -> int:
 
         if "xhtml:link" not in block:
             addition += hreflang_links(loc.group(1), known_urls)
+
+        if content_file and "image:image" not in block:
+            image = page_image(content_file)
+            if image:
+                addition += (
+                    "\n    <image:image>"
+                    f"\n      <image:loc>{image}</image:loc>"
+                    "\n    </image:image>"
+                )
 
         if not addition:
             return block
@@ -151,6 +215,8 @@ def enrich_sitemap(sitemap_path: str) -> int:
     # whole, not just the entries carrying the links.
     if "xhtml:link" in enriched and 'xmlns:xhtml' not in enriched:
         enriched = enriched.replace("<urlset ", f'<urlset xmlns:xhtml="{XHTML_NS}" ', 1)
+    if "image:image" in enriched and 'xmlns:image' not in enriched:
+        enriched = enriched.replace("<urlset ", f'<urlset xmlns:image="{IMAGE_NS}" ', 1)
 
     with open(sitemap_path, "w") as f:
         f.write(enriched)
