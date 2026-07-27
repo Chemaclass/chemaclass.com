@@ -104,7 +104,7 @@ Si aún te sientes incómodo con alguien a tu lado mientras programas, quizás n
 
 > La práctica hace al maestro.
 
-## Resumen
+## Mantén las pull requests, añade pair programming
 
 - No me malinterpretes, los Pull Requests son geniales. Sigue haciéndolos.
 - La colaboración en equipo es esencial. El Pair Programming apunta a esto.

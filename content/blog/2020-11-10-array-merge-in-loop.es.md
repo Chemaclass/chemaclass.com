@@ -120,7 +120,7 @@ $merged = iterator_to_array(
 // $merged === [1, 2, 3, 4, 5, 6, 7, 8];
 ```
 
-## Conclusión
+## Qué enfoque de aplanado usar
 
 Normalmente, saber aplanar un array de dos niveles suele ser suficiente:
 ```php

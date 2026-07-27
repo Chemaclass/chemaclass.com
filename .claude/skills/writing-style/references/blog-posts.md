@@ -11,7 +11,8 @@ Field shapes live in the template: `.claude/templates/blog-post.md`. This file c
 - `[extra] subtitle`: a punchy aphoristic tagline, no period, sentence-case first word ("Two leaks, two patches").
 - `[extra] static_thumbnail`: the cover, `/images/blog/YYYY-MM-DD/cover.webp` (webp preferred). Drafts without real images point at the committed placeholder `/images/blog/placeholder.webp` until `/add-image` swaps in the real cover.
 - `[extra] series` + `series_order`: optional, when the post belongs to a series (keys in `config.toml` under `[extra.series]`). The AI posts form one running numbered series (`series = "ai"`).
-- `updated`: optional, set when substantially revising a published post.
+- `[extra] tldr`: optional. The summary box at the top of the post. Defaults to `description`; set it when the post deserves an opening line written for a reader rather than for a search result. Also published as the schema `abstract`.
+- `updated`: optional, set when substantially revising a published post. The last-modified date otherwise comes from git, so this is only for marking a real revision.
 - `related_posts` (usually 3) and `related_readings` (0-3): repo-relative paths. Preferred over a trailing `## Related` section.
 
 ## Body
@@ -20,6 +21,8 @@ Field shapes live in the template: `.claude/templates/blog-post.md`. This file c
 - **Body length ~800-1000 words** (corpus norm ~900). Longer only when `deep_dive` blocks park the overflow. Short reflective essays run ~550; that is fine when the idea is one clean arc.
 - **4 to 7 H2 sections** is the norm. Deep_dive-heavy reference posts may run more (how-bitcoin-works has 9); reflective essays may run fewer. Never skip levels. H3 only to enumerate named sub-parts under one H2 (e.g. "### Level 0", "### Level 1").
 - **In-body headings are sentence case** (Title Case is for the post title only). Headings are statements, not questions; use verbs when possible ("Skills load context on demand", not "On-demand loading of skills").
+- **Every heading names its own claim.** A heading is what a search or answer engine matches a question against, and generic labels match nothing: no "Conclusion", "Summary", "Context", "Introduction", "Final thoughts", "The problem". Say what the section actually concludes: "London and Chicago work better together", "Why people conform to a group they disagree with". A closing section still closes; it just carries the point in its title. When a question phrasing is what the reader would type, put it in `[extra] faq` rather than in a heading (see below).
+- `[extra] faq`: optional list of `{ q = "...", a = "..." }`. Renders a `<details>` list at the end of the post and publishes FAQPage markup. This is where literal question phrasing belongs. Answers are plain text, one to three sentences, no markdown. Translate the pairs in the ES mirror.
 - Cover comes from `static_thumbnail` (the template renders it as the hero). Do not repeat a body `![cover]` line in newer posts.
 - In-body images by slot: `![blog-middle](...)` near the middle, `![blog-footer](...)` as the last content line. Descriptive alt text is better than the slot name. In a draft, point these at `/images/blog/placeholder.webp` until the real image exists.
 - `{% deep_dive(title="...") %}...{% end %}` to park optional detail (code samples, extended examples) out of the main flow. Title is a short noun phrase. If used, set `[extra] reading_time` (minutes) counting only words outside the blocks.

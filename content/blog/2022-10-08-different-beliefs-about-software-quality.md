@@ -26,7 +26,7 @@ I recently got a great question on Twitter which got me thinking for a while and
 
 ---
 
-## Context
+## The tweet that started this
 
 But first, some context: I am feeling great because the codebase where I work is getting better and better, so I am tweeting this:
 

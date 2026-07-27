@@ -26,7 +26,7 @@ Hace poco recibí una pregunta en Twitter que me hizo pensar bastante. Decidí c
 
 ---
 
-## Contexto
+## El tweet que empezó esto
 
 Primero, algo de contexto: me siento muy bien porque el código base donde trabajo mejora cada vez más, así que tuiteé esto:
 

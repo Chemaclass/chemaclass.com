@@ -104,7 +104,7 @@ If you still feel uncomfortable having another person next to you while you writ
 
 > Practice makes the master.
 
-## Summary
+## Keep pull requests, add pair programming
 
 - Don't get me wrong, Pull Requests are great. Keep doing them.
 - Team collaboration is essential. Pair Programming aims for this.

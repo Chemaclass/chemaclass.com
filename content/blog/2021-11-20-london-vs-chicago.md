@@ -66,7 +66,7 @@ domain) and working out towards the APIs.
 
 - **YAGNI**: it's often over-engineering solutions, with code that is not really needed (or even used!) in the end.
 
-## Conclusion
+## London and Chicago work better together
 
 It's not about choosing one over the other. It's about understanding your context and driving optimization towards those
 qualities that need to be optimized. London and Chicago each have their pros and cons. The best approach to TDD is an

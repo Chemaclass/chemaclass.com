@@ -55,7 +55,7 @@ Un enfoque informal, exploratorio, basado en estado. Empiezas desde el interior 
 
 - **YAGNI**: a menudo sobre-diseña soluciones, con código que realmente no se necesita (¡o ni siquiera se usa!) al final.
 
-## Conclusión
+## Londres y Chicago funcionan mejor juntas
 
 No se trata de elegir uno u otro. Se trata de entender tu contexto y optimizar las cualidades que lo necesitan. London y Chicago tienen sus pros y contras. El mejor enfoque para TDD es integrar ambas escuelas.
 

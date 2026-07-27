@@ -120,7 +120,7 @@ $merged = iterator_to_array(
 // $merged === [1, 2, 3, 4, 5, 6, 7, 8];
 ```
 
-## Conclusion
+## Which flattening approach to reach for
 
 Usually, being aware of how to flat a "2 level" array might be sufficient:
 ```php

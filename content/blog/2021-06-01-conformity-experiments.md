@@ -55,7 +55,7 @@ Asch also found that having one of the confederates give the correct answer whil
 
 > After combining the trials, the results indicated that participants conformed to the incorrect group answer approximately one-third of the time.
 
-## Conclusion
+## Why people conform to a group they disagree with
 
 Why did the participants conform so easily? When they were interviewed after the experiment, most of them said that they did not really believe their conforming answers, but had gone along with the group for fear of being ridiculed.
 
