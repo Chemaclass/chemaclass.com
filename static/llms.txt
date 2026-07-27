@@ -44,3 +44,7 @@ Jose Maria Valera Reales is a Product Engineer at Kombo with 15+ years in softwa
 - Sitemap: https://chemaclass.com/sitemap.xml
 - Full content (for AI agents): https://chemaclass.com/llms-full.txt
 - AI use policy: https://chemaclass.com/.well-known/ai.txt
+
+## Content index
+
+Every blog post, reading note and talk, generated at build time.
