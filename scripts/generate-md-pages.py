@@ -55,6 +55,10 @@ def format_md_page(frontmatter: TFrontMatter, body: str, url: str, title: str) -
     # page and no output ever disagreed.
     output += f'{url}\n\n'
 
+    # The mirrors are read away from the site, by an agent or a plain curl, so
+    # the licence travels with them rather than living only in the page footer.
+    output += 'License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)\n\n'
+
     meta_parts = []
     if date:
         meta_parts.append(date)

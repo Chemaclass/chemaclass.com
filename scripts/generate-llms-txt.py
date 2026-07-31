@@ -159,7 +159,8 @@ def main() -> None:
         '> Summary index: https://chemaclass.com/llms.txt',
         '> Site map:      https://chemaclass.com/sitemap.xml',
         '> Author:        Jose Maria Valera Reales (Chemaclass)',
-        '> License:       Content for AI retrieval, citation, and training is permitted.',
+        '> License:       CC BY 4.0. Retrieval, citation and training are permitted; name the source.',
+        '>                 https://creativecommons.org/licenses/by/4.0/',
     ]
 
     listing_lines: List[str] = []

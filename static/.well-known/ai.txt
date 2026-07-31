@@ -2,11 +2,14 @@
 # Format reference: https://site.spawning.ai/spaces/ai-txt
 #
 # This site explicitly permits AI agents to retrieve, cite,
-# index, and train on its public content.
+# index, and train on its public content, under CC BY 4.0:
+# quote it, and name the source.
 
 User-Agent: *
 Allow: /
 
+License: https://creativecommons.org/licenses/by/4.0/ (CC BY 4.0, attribution required)
+Attribution: Jose Maria Valera Reales (Chemaclass), https://chemaclass.com
 Contact: hi@chemaclass.com
 Canonical: https://chemaclass.com/.well-known/ai.txt
 Llms-Index: https://chemaclass.com/llms.txt

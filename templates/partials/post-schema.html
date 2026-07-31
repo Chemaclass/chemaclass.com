@@ -5,6 +5,10 @@
    Optional: schema_type (default: "Article")
    ========================================================================== #}
 {% set schema_type = schema_type | default(value="Article") %}
+{# Whether this page falls under the site content licence. The written work does;
+   the poetry in content/books/ is a different kind of thing and books/post.html
+   opts out, so nothing licenses it by inheriting a default. #}
+{% set licensed = licensed | default(value=true) %}
 {# dateModified used to fall back to the publication date, so a post edited a
    dozen times still claimed it had not changed since the day it went out. The
    real dates come from git, written to data/last-modified.json before the build
@@ -56,6 +60,12 @@
     {% endif %}
     "url": "{{ page.permalink | safe }}",
     "isAccessibleForFree": true,
+    {# Free to read is not the same as free to reuse, and an answer engine
+       deciding whether it may quote this should not have to infer either. #}
+    {% if licensed and config.extra.content_license %}"license": "{{ config.extra.content_license.url | safe }}",
+    "usageInfo": "{{ config.base_url | safe }}/.well-known/ai.txt",
+    "copyrightHolder": { "@id": "{{ config.base_url | safe }}/#person" },
+    "copyrightYear": "{% if page.date %}{{ page.date | date(format='%Y') }}{% endif %}",{% endif %}
     "headline": "{{ page.title }}",
     {% if page.description %}"description": {{ page.description | json_encode | safe }},{% endif %}
     {# The same summary the page shows at the top, so the rendered and the
