@@ -127,13 +127,23 @@
 
     content.querySelectorAll(CONFIG.headingSelectors).forEach((heading) => {
       if (!heading.id || heading.closest('.related-content')) return;
-      if (heading.querySelector('.heading-anchor')) return;
 
-      const anchor = document.createElement('a');
-      anchor.href = `#${heading.id}`;
-      anchor.className = 'heading-anchor';
-      anchor.textContent = '#';
-      anchor.title = 'Copy link';
+      // Zola renders these anchors into the HTML (templates/anchor-link.html).
+      // One is still created here for headings that come from a template rather
+      // than from markdown, and the copy behaviour is attached either way. The
+      // bound flag is what keeps a second call from stacking handlers.
+      let anchor = heading.querySelector('.heading-anchor');
+      if (!anchor) {
+        anchor = document.createElement('a');
+        anchor.href = `#${heading.id}`;
+        anchor.className = 'heading-anchor';
+        anchor.textContent = '#';
+        anchor.title = 'Copy link';
+        heading.appendChild(anchor);
+      }
+      if (anchor.dataset.copyBound) return;
+      anchor.dataset.copyBound = '1';
+
       anchor.addEventListener('click', (e) => {
         e.preventDefault();
         const url = window.location.href.split('#')[0] + `#${heading.id}`;
@@ -156,7 +166,6 @@
           }
         );
       });
-      heading.appendChild(anchor);
     });
   }
 
