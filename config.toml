@@ -21,6 +21,10 @@ truncate_content_length = 2000  # Limit content length for better performance
 
 [markdown]
 smart_punctuation = true
+# Section permalinks rendered into the HTML, using templates/anchor-link.html.
+# The headings always had ids; what was missing was a link to them that survives
+# without JavaScript, which is what a reader copies and an agent cites.
+insert_anchor_links = "right"
 
 [markdown.highlighting]
 light_theme = "github-light"
