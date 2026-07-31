@@ -31,6 +31,7 @@
 {% endblock rss %}
 
 {% block posthead %}
+  {% include "partials/tag-schema.html" %}
   {% for post in term.pages %}
     <link rel="prerender" href="{{ post.permalink }}" />
   {% endfor %}

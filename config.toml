@@ -615,26 +615,31 @@ tags = ["speaking", "presentations", "live-coding", "tutorial", "workshop", "ope
 name = "testing"
 desc = "Software testing strategies, frameworks, and testing culture."
 desc_es = "Estrategias de testing, frameworks y cultura de pruebas."
+entity = "https://en.wikipedia.org/wiki/Software_testing"
 
 [[extra.tag_descriptions]]
 name = "tdd"
 desc = "Test-Driven Development: writing tests first to drive better design."
 desc_es = "Desarrollo Guiado por Tests: escribir tests primero para mejor diseño."
+entity = "https://en.wikipedia.org/wiki/Test-driven_development"
 
 [[extra.tag_descriptions]]
 name = "leadership"
 desc = "Leading teams, making decisions, and growing as a technical leader."
 desc_es = "Liderar equipos, tomar decisiones y crecer como líder técnico."
+entity = "https://en.wikipedia.org/wiki/Leadership"
 
 [[extra.tag_descriptions]]
 name = "self-improvement"
 desc = "Personal growth, habits, and becoming a better professional."
 desc_es = "Crecimiento personal, hábitos y convertirse en mejor profesional."
+entity = "https://en.wikipedia.org/wiki/Personal_development"
 
 [[extra.tag_descriptions]]
 name = "bitcoin"
 desc = "Bitcoin technology, monetary theory, and the future of money."
 desc_es = "Tecnología Bitcoin, teoría monetaria y el futuro del dinero."
+entity = "https://en.wikipedia.org/wiki/Bitcoin"
 
 [[extra.tag_descriptions]]
 name = "clean-code"
@@ -645,46 +650,55 @@ desc_es = "Escribir código legible, mantenible y expresivo."
 name = "philosophy"
 desc = "Philosophical ideas and their application to software and life."
 desc_es = "Ideas filosóficas y su aplicación al software y la vida."
+entity = "https://en.wikipedia.org/wiki/Philosophy"
 
 [[extra.tag_descriptions]]
 name = "communication"
 desc = "The art of clear communication in teams and beyond."
 desc_es = "El arte de la comunicación clara en equipos y más allá."
+entity = "https://en.wikipedia.org/wiki/Communication"
 
 [[extra.tag_descriptions]]
 name = "pair-programming"
 desc = "Working together at one keyboard: practices, benefits, and challenges."
 desc_es = "Trabajar juntos en un teclado: prácticas, beneficios y desafíos."
+entity = "https://en.wikipedia.org/wiki/Pair_programming"
 
 [[extra.tag_descriptions]]
 name = "career"
 desc = "Career development, growth paths, and professional transitions."
 desc_es = "Desarrollo profesional, caminos de crecimiento y transiciones."
+entity = "https://en.wikipedia.org/wiki/Career"
 
 [[extra.tag_descriptions]]
 name = "architecture"
 desc = "Software architecture patterns, decisions, and trade-offs."
 desc_es = "Patrones de arquitectura de software, decisiones y compromisos."
+entity = "https://en.wikipedia.org/wiki/Software_architecture"
 
 [[extra.tag_descriptions]]
 name = "refactoring"
 desc = "Improving code structure without changing its behavior."
 desc_es = "Mejorar la estructura del código sin cambiar su comportamiento."
+entity = "https://en.wikipedia.org/wiki/Code_refactoring"
 
 [[extra.tag_descriptions]]
 name = "management"
 desc = "Team management, organizational dynamics, and engineering management."
 desc_es = "Gestión de equipos, dinámicas organizacionales y gestión de ingeniería."
+entity = "https://en.wikipedia.org/wiki/Management"
 
 [[extra.tag_descriptions]]
 name = "psychology"
 desc = "Understanding human behavior, motivation, and cognitive patterns."
 desc_es = "Entender el comportamiento humano, motivación y patrones cognitivos."
+entity = "https://en.wikipedia.org/wiki/Psychology"
 
 [[extra.tag_descriptions]]
 name = "economics"
 desc = "Economic theory, monetary policy, financial systems, and investing principles."
 desc_es = "Teoría económica, política monetaria, sistemas financieros y principios de inversión."
+entity = "https://en.wikipedia.org/wiki/Economics"
 
 [[extra.tag_descriptions]]
 name = "agentic-coding"
@@ -695,209 +709,250 @@ desc_es = "Programar con agentes que planifican y ejecutan, no solo autocompleta
 name = "agile"
 desc = "Agile in practice: short feedback loops over ceremonies and certificates."
 desc_es = "Agile en la práctica: ciclos de feedback cortos frente a ceremonias y certificados."
+entity = "https://en.wikipedia.org/wiki/Agile_software_development"
 
 [[extra.tag_descriptions]]
 name = "ai"
 desc = "Working with AI agents: context, tooling, and where the human still decides."
 desc_es = "Trabajar con agentes de IA: contexto, herramientas y dónde decide el humano."
+entity = "https://en.wikipedia.org/wiki/Artificial_intelligence"
 
 [[extra.tag_descriptions]]
 name = "bash"
 desc = "Shell scripting that survives contact with production and CI."
 desc_es = "Scripting de shell que sobrevive al contacto con producción y CI."
+entity = "https://en.wikipedia.org/wiki/Bash_(Unix_shell)"
 
 [[extra.tag_descriptions]]
 name = "bashunit"
 desc = "bashunit, the testing library that brings real assertions to bash scripts."
 desc_es = "bashunit, la librería de testing que trae aserciones de verdad a los scripts bash."
+entity = "https://bashunit.typeddevs.com/"
 
 [[extra.tag_descriptions]]
 name = "code-review"
 desc = "Reviewing code so it improves the design, not just the diff."
 desc_es = "Revisar código para mejorar el diseño, no solo el diff."
+entity = "https://en.wikipedia.org/wiki/Code_review"
 
 [[extra.tag_descriptions]]
 name = "craftsmanship"
 desc = "Caring about how software is built, not only that it ships."
 desc_es = "Cuidar cómo se construye el software, no solo que salga."
+entity = "https://en.wikipedia.org/wiki/Software_craftsmanship"
 
 [[extra.tag_descriptions]]
 name = "cryptography"
 desc = "Keys, signatures, and hashes: the primitives and what they guarantee."
 desc_es = "Claves, firmas y hashes: las primitivas y qué garantizan."
+entity = "https://en.wikipedia.org/wiki/Cryptography"
 
 [[extra.tag_descriptions]]
 name = "ddd"
 desc = "Domain-Driven Design: modelling the business before the database."
 desc_es = "Domain-Driven Design: modelar el negocio antes que la base de datos."
+entity = "https://en.wikipedia.org/wiki/Domain-driven_design"
 
 [[extra.tag_descriptions]]
 name = "developer-tools"
 desc = "The tools between an idea and a merged commit."
 desc_es = "Las herramientas entre una idea y un commit mergeado."
+entity = "https://en.wikipedia.org/wiki/Programming_tool"
 
 [[extra.tag_descriptions]]
 name = "devops"
 desc = "Pipelines, environments, and shipping without holding your breath."
 desc_es = "Pipelines, entornos y desplegar sin aguantar la respiración."
+entity = "https://en.wikipedia.org/wiki/DevOps"
 
 [[extra.tag_descriptions]]
 name = "docker"
 desc = "Containers for reproducible development and predictable deploys."
 desc_es = "Contenedores para desarrollo reproducible y despliegues predecibles."
+entity = "https://en.wikipedia.org/wiki/Docker_(software)"
 
 [[extra.tag_descriptions]]
 name = "dystopia"
 desc = "Books about futures worth avoiding, and why they still read as warnings."
 desc_es = "Libros sobre futuros que conviene evitar, y por qué siguen leyéndose como advertencias."
+entity = "https://en.wikipedia.org/wiki/Dystopia"
 
 [[extra.tag_descriptions]]
 name = "fiction"
 desc = "Novels and stories, read for pleasure rather than for work."
 desc_es = "Novelas y relatos, leídos por placer y no por trabajo."
+entity = "https://en.wikipedia.org/wiki/Fiction"
 
 [[extra.tag_descriptions]]
 name = "freedom"
 desc = "Autonomy, sound money, and the right to opt out."
 desc_es = "Autonomía, dinero sólido y el derecho a salirse."
+entity = "https://en.wikipedia.org/wiki/Free_will"
 
 [[extra.tag_descriptions]]
 name = "functional-programming"
 desc = "Immutability, pure functions, and composing behaviour instead of state."
 desc_es = "Inmutabilidad, funciones puras y componer comportamiento en vez de estado."
+entity = "https://en.wikipedia.org/wiki/Functional_programming"
 
 [[extra.tag_descriptions]]
 name = "gacela"
 desc = "Gacela, the PHP framework for splitting an application into real modules."
 desc_es = "Gacela, el framework PHP para dividir una aplicación en módulos de verdad."
+entity = "https://github.com/gacela-project/gacela"
 
 [[extra.tag_descriptions]]
 name = "git"
 desc = "Git as a design tool: readable history, small commits, honest branches."
 desc_es = "Git como herramienta de diseño: historia legible, commits pequeños, ramas honestas."
+entity = "https://en.wikipedia.org/wiki/Git"
 
 [[extra.tag_descriptions]]
 name = "golang"
 desc = "Go: simple concurrency and small binaries, with the trade-offs that come with them."
 desc_es = "Go: concurrencia simple y binarios pequeños, con los compromisos que traen."
+entity = "https://en.wikipedia.org/wiki/Go_(programming_language)"
 
 [[extra.tag_descriptions]]
 name = "horror"
 desc = "Stories that unsettle, and what the fear is really about."
 desc_es = "Historias que inquietan, y de qué habla realmente el miedo."
+entity = "https://en.wikipedia.org/wiki/Horror_fiction"
 
 [[extra.tag_descriptions]]
 name = "lisp"
 desc = "Parentheses, macros, and treating code as data."
 desc_es = "Paréntesis, macros y tratar el código como datos."
+entity = "https://en.wikipedia.org/wiki/Lisp_(programming_language)"
 
 [[extra.tag_descriptions]]
 name = "live-coding"
 desc = "Building software in front of an audience, mistakes included."
 desc_es = "Construir software delante de una audiencia, errores incluidos."
+entity = "https://en.wikipedia.org/wiki/Live_coding"
 
 [[extra.tag_descriptions]]
 name = "mentoring"
 desc = "Growing other developers without doing the work for them."
 desc_es = "Hacer crecer a otros desarrolladores sin hacerles el trabajo."
+entity = "https://en.wikipedia.org/wiki/Mentorship"
 
 [[extra.tag_descriptions]]
 name = "modular"
 desc = "Boundaries between modules, and why they decide how a system ages."
 desc_es = "Fronteras entre módulos, y por qué deciden cómo envejece un sistema."
+entity = "https://en.wikipedia.org/wiki/Modular_programming"
 
 [[extra.tag_descriptions]]
 name = "music"
 desc = "Songs, instruments, and the making of them."
 desc_es = "Canciones, instrumentos y el proceso de hacerlas."
+entity = "https://en.wikipedia.org/wiki/Music"
 
 [[extra.tag_descriptions]]
 name = "open-source"
 desc = "Publishing, maintaining, and depending on code in the open."
 desc_es = "Publicar, mantener y depender de código abierto."
+entity = "https://en.wikipedia.org/wiki/Open-source_software"
 
 [[extra.tag_descriptions]]
 name = "phel"
 desc = "Phel, a functional Lisp that compiles to PHP."
 desc_es = "Phel, un Lisp funcional que compila a PHP."
+entity = "https://phel-lang.org"
 
 [[extra.tag_descriptions]]
 name = "php"
 desc = "Modern PHP: types, tooling, and architecture beyond the framework."
 desc_es = "PHP moderno: tipos, herramientas y arquitectura más allá del framework."
+entity = "https://en.wikipedia.org/wiki/PHP"
 
 [[extra.tag_descriptions]]
 name = "presentations"
 desc = "Preparing a talk so the audience leaves with something."
 desc_es = "Preparar una charla para que el público se lleve algo."
+entity = "https://en.wikipedia.org/wiki/Presentation"
 
 [[extra.tag_descriptions]]
 name = "privacy"
 desc = "Keeping data yours: threat models, tools, and trade-offs."
 desc_es = "Que tus datos sigan siendo tuyos: modelos de amenaza, herramientas y compromisos."
+entity = "https://en.wikipedia.org/wiki/Privacy"
 
 [[extra.tag_descriptions]]
 name = "productivity"
 desc = "Doing the work that matters instead of more work."
 desc_es = "Hacer el trabajo que importa en lugar de más trabajo."
+entity = "https://en.wikipedia.org/wiki/Productivity"
 
 [[extra.tag_descriptions]]
 name = "scrum"
 desc = "Scrum as practised: what the framework helps with and what it hides."
 desc_es = "Scrum en la práctica: en qué ayuda el framework y qué esconde."
+entity = "https://en.wikipedia.org/wiki/Scrum_(software_development)"
 
 [[extra.tag_descriptions]]
 name = "security"
 desc = "Threat models, secrets, and the habits that prevent incidents."
 desc_es = "Modelos de amenaza, secretos y los hábitos que evitan incidentes."
+entity = "https://en.wikipedia.org/wiki/Computer_security"
 
 [[extra.tag_descriptions]]
 name = "software"
 desc = "Building software: design decisions, trade-offs, and the craft around them."
 desc_es = "Construir software: decisiones de diseño, compromisos y el oficio alrededor."
+entity = "https://en.wikipedia.org/wiki/Software"
 
 [[extra.tag_descriptions]]
 name = "software-architecture"
 desc = "Structuring systems so they can still be changed later."
 desc_es = "Estructurar sistemas para que se puedan seguir cambiando después."
+entity = "https://en.wikipedia.org/wiki/Software_architecture"
 
 [[extra.tag_descriptions]]
 name = "software-design"
 desc = "Designing code that is easy to read, test, and replace."
 desc_es = "Diseñar código fácil de leer, testear y reemplazar."
+entity = "https://en.wikipedia.org/wiki/Software_design"
 
 [[extra.tag_descriptions]]
 name = "speaking"
 desc = "Conference talks, workshops, and getting on stage."
 desc_es = "Charlas en conferencias, talleres y subirse al escenario."
+entity = "https://en.wikipedia.org/wiki/Public_speaking"
 
 [[extra.tag_descriptions]]
 name = "symfony"
 desc = "Symfony: using the framework without letting it own your domain."
 desc_es = "Symfony: usar el framework sin dejar que se apropie de tu dominio."
+entity = "https://en.wikipedia.org/wiki/Symfony"
 
 [[extra.tag_descriptions]]
 name = "team-culture"
 desc = "The habits and defaults that decide how a team actually works."
 desc_es = "Los hábitos y los valores por defecto que deciden cómo trabaja un equipo."
+entity = "https://en.wikipedia.org/wiki/Organizational_culture"
 
 [[extra.tag_descriptions]]
 name = "team-management"
 desc = "Leading a team day to day: priorities, trust, and hard conversations."
 desc_es = "Liderar un equipo en el día a día: prioridades, confianza y conversaciones difíciles."
+entity = "https://en.wikipedia.org/wiki/Team_management"
 
 [[extra.tag_descriptions]]
 name = "tutorial"
 desc = "Step-by-step guides you can follow with a keyboard."
 desc_es = "Guías paso a paso que puedes seguir con el teclado."
+entity = "https://en.wikipedia.org/wiki/Tutorial"
 
 [[extra.tag_descriptions]]
 name = "workshop"
 desc = "Hands-on sessions where the group writes the code."
 desc_es = "Sesiones prácticas donde el grupo escribe el código."
+entity = "https://en.wikipedia.org/wiki/Workshop"
 
 [[extra.tag_descriptions]]
 name = "xp"
 desc = "Extreme Programming: pairing, TDD, and continuous everything."
 desc_es = "Extreme Programming: pair programming, TDD y todo en continuo."
-
+entity = "https://en.wikipedia.org/wiki/Extreme_programming"
