@@ -47,6 +47,8 @@ Jose Maria Valera Reales es Product Engineer en Kombo con más de 15 años en in
 
 - Licencia: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Cita libremente, nombrando la fuente.
 
+- Índice legible por máquina de todo el contenido: https://chemaclass.com/index.json
+
 ## Content index
 
 Cada post, lectura y charla, generado en tiempo de build.
