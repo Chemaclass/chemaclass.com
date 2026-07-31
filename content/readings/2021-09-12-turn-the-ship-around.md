@@ -30,7 +30,7 @@ It is common for enthusiastic employees to suggest new ideas, and then they are 
 work". People feel frustrated and eventually stop trying or leave the organization. **Bosses also feel
 frustrated** when their staff would rather **do the minimum** rather than to **innovate or take responsibility**.
 
-<img border="0" style="width: 100%" src="https://i0.wp.com/readingraphics.com/uploads/2019/06/Turn-the-Ship-Around_Overview.png" >
+<img alt="Overview of the Turn the Ship Around leadership model" border="0" style="width: 100%" src="https://i0.wp.com/readingraphics.com/uploads/2019/06/Turn-the-Ship-Around_Overview.png" >
 
 > The leader-leader model recognizes that everyone has the ability and **potential to lead**. 
 > It taps on individual potential at all levels, reduces dependency on a single leader and delivers sustained performance.
@@ -74,7 +74,7 @@ thoroughly understand the organization's goals and decision-making criteria.
 - Begin with the end in mind.
 - Encourage a questioning attitude over blind obedience.
 
-<img border="0" style="width: 100%" src="https://i2.wp.com/readingraphics.com/wp-content/uploads/2019/06/Turn-the-Ship-Around_the-Leader-Leader-Model.png" >
+<img alt="The leader-leader model: control, competence and clarity" border="0" style="width: 100%" src="https://i2.wp.com/readingraphics.com/wp-content/uploads/2019/06/Turn-the-Ship-Around_the-Leader-Leader-Model.png" >
 
 
 ## Favourite quotes
