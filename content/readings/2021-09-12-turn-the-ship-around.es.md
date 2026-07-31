@@ -24,7 +24,7 @@ Casi todos dividimos el mundo en **líderes vs seguidores** sin darnos cuenta. A
 
 Es muy común: un empleado entusiasta propone una idea nueva y le dicen "eso no es tu trabajo" o "eso no va a funcionar". La gente se frustra y al final deja de intentarlo o se va. **Los jefes también se frustran** cuando su equipo prefiere **hacer lo mínimo** en vez de **innovar o asumir responsabilidad**.
 
-<img border="0" style="width: 100%" src="https://i0.wp.com/readingraphics.com/uploads/2019/06/Turn-the-Ship-Around_Overview.png" >
+<img alt="Resumen del modelo de liderazgo de Turn the Ship Around" border="0" style="width: 100%" src="https://i0.wp.com/readingraphics.com/uploads/2019/06/Turn-the-Ship-Around_Overview.png" >
 
 > El modelo líder-líder parte de que todos tienen capacidad y **potencial para liderar**.
 > Aprovecha ese potencial en todos los niveles, reduce la dependencia de un solo líder y logra un rendimiento sostenido.
@@ -65,7 +65,7 @@ Para tomar buenas decisiones en cualquier nivel, hay que estar alineado con el p
 - Empieza con el fin en mente.
 - Fomenta cuestionar las cosas en vez de obedecer ciegamente.
 
-<img border="0" style="width: 100%" src="https://i2.wp.com/readingraphics.com/wp-content/uploads/2019/06/Turn-the-Ship-Around_the-Leader-Leader-Model.png" >
+<img alt="El modelo líder-líder: control, competencia y claridad" border="0" style="width: 100%" src="https://i2.wp.com/readingraphics.com/wp-content/uploads/2019/06/Turn-the-Ship-Around_the-Leader-Leader-Model.png" >
 
 
 ## Citas favoritas
