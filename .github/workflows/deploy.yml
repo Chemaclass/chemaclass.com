@@ -26,6 +26,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Full history, not the default single commit. Two build steps read
+          # dates out of git: the last body edit of every post
+          # (scripts/generate-last-modified.py, which feeds dateModified and the
+          # "Updated" stamp) and the sitemap <lastmod>. With a shallow clone
+          # every file looks like it changed in the deploy commit, so the whole
+          # site published today's date as its last modification.
+          fetch-depth: 0
 
       - name: Install Zola
         uses: taiki-e/install-action@v2
