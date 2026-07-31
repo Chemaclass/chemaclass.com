@@ -138,6 +138,7 @@ footer_col_explore = "Explore"
 footer_col_creative = "Creative"
 footer_col_about = "About"
 footer_tagline = "Building software, teams, and ideas."
+footer_license = "Content under"
 all_tags = "All tags"
 browse_by_tag = "Browse by tag"
 series_title = "Series"
@@ -423,6 +424,7 @@ footer_col_explore = "Explora"
 footer_col_creative = "Creativo"
 footer_col_about = "Sobre mí"
 footer_tagline = "Construyendo software, equipos e ideas."
+footer_license = "Contenido bajo"
 all_tags = "Todas las etiquetas"
 browse_by_tag = "Explora por etiqueta"
 series_title = "Series"
@@ -610,6 +612,15 @@ title_es = "Charlas y Enseñanza"
 description = "Conference talks, workshops, live coding, and sharing knowledge."
 description_es = "Charlas, talleres, live coding y compartir conocimiento."
 tags = ["speaking", "presentations", "live-coding", "tutorial", "workshop", "open-source"]
+
+# The licence the public content is published under. Named here so the schema,
+# the head link, the footer, ai.txt and the markdown mirrors all quote the same
+# one: an AI system deciding whether it may quote this site should not have to
+# guess, and attribution is the whole ask.
+[extra.content_license]
+name = "CC BY 4.0"
+id = "CC-BY-4.0"
+url = "https://creativecommons.org/licenses/by/4.0/"
 
 [[extra.tag_descriptions]]
 name = "testing"

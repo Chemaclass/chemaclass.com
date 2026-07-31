@@ -12,6 +12,17 @@ Este sitio web está operado por **Jose Maria Valera Reales** (Chemaclass).
 
 Para contacto, puedes encontrarme en [GitHub](https://github.com/Chemaclass).
 
+## Licencia del contenido
+
+Los textos de este sitio (artículos, lecturas, charlas) se publican bajo
+[Creative Commons Atribución 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+Cítalos, tradúcelos, constrúye sobre ellos, incluido para entrenamiento y
+recuperación por IA. La única condición es la atribución: nombra a Jose Maria
+Valera Reales y enlaza la página de la que lo tomaste.
+
+Los ejemplos de código dentro de los artículos son libres sin atribución.
+
 ## Analíticas
 
 Este sitio utiliza [Cronitor RUM](https://cronitor.io/real-user-monitoring) para recopilar estadísticas de uso anónimas. Esto me ayuda a entender cómo los visitantes usan el sitio y mejorar el contenido.

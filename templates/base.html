@@ -150,6 +150,8 @@
       "description": "{{ config.description }}",
       "publisher": { "@id": "{{ config.base_url | safe }}/#organization" },
       "author": { "@id": "{{ config.base_url | safe }}/#person" },
+      {% if config.extra.content_license %}"license": "{{ config.extra.content_license.url | safe }}",
+      "usageInfo": "{{ config.base_url | safe }}/.well-known/ai.txt",{% endif %}
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -449,6 +451,10 @@
       <link rel="alternate" type="text/plain" href="{{ get_url(path='llms-full.txt') | safe }}" title="llms-full.txt">
     {% endif %}
 
+    {% if config.extra.content_license %}
+    <link rel="license" href="{{ config.extra.content_license.url | safe }}">
+    {% endif %}
+
     {% block head %}
       <link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript><link rel="stylesheet" href="/css/fontawesome.min.css"></noscript>
@@ -647,6 +653,12 @@
         <span class="page-footer__copyright">
           © <time datetime="{{now() | date(format='%Y')}}">{{now() | date(format="%Y")}}</time> Jose M. Valera Reales
         </span>
+        {% if config.extra.content_license %}
+        <span class="page-footer__license">
+          {{ trans(key="footer_license", lang=lang) }}
+          <a href="{{ config.extra.content_license.url | safe }}" rel="license noopener" target="_blank">{{ config.extra.content_license.name }}</a>
+        </span>
+        {% endif %}
         <a href="{{ lp }}/legal/" class="page-footer__legal">{{ trans(key="nav_legal", lang=lang) }}</a>
       </div>
     </footer>
