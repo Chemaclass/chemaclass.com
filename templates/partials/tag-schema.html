@@ -1,0 +1,65 @@
+{# ==========================================================================
+   JSON-LD for a tag page: what the tag means, and what is filed under it.
+
+   The 115 tag pages across both languages carried the site-level nodes and
+   nothing else, so a crawler saw a list of links with no subject. A tag is a
+   concept, which is what DefinedTerm says, and `sameAs` resolves that concept
+   to the entity the rest of the world knows it by, from
+   config.extra.tag_descriptions.
+
+   Requires: term, config, lang.
+   ========================================================================== #}
+{%- set_global tag_desc = "" -%}
+{%- set_global tag_entity = "" -%}
+{%- for td in config.extra.tag_descriptions -%}
+  {%- if td.name == term.name -%}
+    {%- if lang == "es" and td.desc_es -%}
+      {%- set_global tag_desc = td.desc_es -%}
+    {%- else -%}
+      {%- set_global tag_desc = td.desc | default(value="") -%}
+    {%- endif -%}
+    {%- set_global tag_entity = td.entity | default(value="") -%}
+  {%- endif -%}
+{%- endfor -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "{{ term.permalink | safe }}",
+  "url": "{{ term.permalink | safe }}",
+  "name": "{{ term.name }}",
+  {% if tag_desc %}"description": {{ tag_desc | json_encode | safe }},{% endif %}
+  "inLanguage": "{{ lang }}",
+  "isPartOf": { "@id": "{{ config.base_url | safe }}/#website" },
+  "about": {
+    "@type": "DefinedTerm",
+    "@id": "{{ term.permalink | safe }}#term",
+    "name": "{{ term.name }}",
+    {% if tag_desc %}"description": {{ tag_desc | json_encode | safe }},{% endif %}
+    {% if tag_entity %}"sameAs": "{{ tag_entity | safe }}",{% endif %}
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "@id": "{{ config.base_url | safe }}/topics/#terms",
+      "name": "Chemaclass topics",
+      "url": "{{ config.base_url | safe }}{% if lang == 'es' %}/es{% endif %}/topics/"
+    }
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "numberOfItems": {{ term.pages | length }},
+    {# Capped like the section listings: past twenty entries the markup costs
+       more than the extra rows are worth to a crawler. #}
+    "itemListElement": [
+      {%- for post in term.pages | slice(end=20) %}
+      {
+        "@type": "ListItem",
+        "position": {{ loop.index }},
+        "url": "{{ post.permalink | safe }}",
+        "name": {{ post.title | json_encode | safe }}
+      }{% if not loop.last %},{% endif %}
+      {%- endfor %}
+    ]
+  }
+}
+</script>

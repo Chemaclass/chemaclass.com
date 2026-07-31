@@ -68,6 +68,28 @@
     "wordCount": {{ page.word_count }}{% endif %}{% set reading_time = page.extra.reading_time | default(value=page.reading_time) %}{% if reading_time %},
     "timeRequired": "PT{{ reading_time }}M"{% endif %}{% if page.taxonomies.tags %},
     "keywords": "{{ page.taxonomies.tags | join(sep=', ') }}",
+    {# What the article is about, as entities rather than as tag strings. The
+       mapping lives next to the tag descriptions in config.toml, so a tag names
+       the same concept here, on its own page and on /topics/. Counted first
+       because Tera has no object literals to collect matches into, and the JSON
+       still needs to know which entry is last. #}
+    {%- set_global about_total = 0 -%}
+    {%- for tag in page.taxonomies.tags -%}
+      {%- for td in config.extra.tag_descriptions -%}
+        {%- if td.name == tag and td.entity -%}{%- set_global about_total = about_total + 1 -%}{%- endif -%}
+      {%- endfor -%}
+    {%- endfor -%}
+    {% if about_total > 0 %}"about": [
+      {%- set_global about_seen = 0 -%}
+      {%- for tag in page.taxonomies.tags -%}
+        {%- for td in config.extra.tag_descriptions -%}
+          {%- if td.name == tag and td.entity -%}
+            {%- set_global about_seen = about_seen + 1 %}
+      { "@type": "Thing", "name": "{{ tag }}", "sameAs": "{{ td.entity | safe }}" }{% if about_seen < about_total %},{% endif %}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endfor %}
+    ],{% endif %}
     "articleSection": "{{ page.taxonomies.tags.0 }}"{% endif %}{% if lang %},
     "inLanguage": "{{ lang }}"{% endif %}{% if config.author %},
     "author": {
