@@ -98,6 +98,9 @@ python3 scripts/generate-llms-txt.py
 echo "Generating JSON Feed..."
 python3 scripts/generate-feed-json.py
 
+echo "Generating the machine-readable content index..."
+python3 scripts/generate-index-json.py
+
 echo "Enriching sitemap with last-modified dates..."
 python3 scripts/enrich-sitemap.py
 

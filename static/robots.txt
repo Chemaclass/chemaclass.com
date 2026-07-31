@@ -67,4 +67,5 @@ Sitemap: https://chemaclass.com/sitemap.xml
 
 # AI/LLM context files
 # Summary index:   https://chemaclass.com/llms.txt
+# JSON index:      https://chemaclass.com/index.json
 # Use policy:      https://chemaclass.com/.well-known/ai.txt
