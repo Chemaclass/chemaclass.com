@@ -55,6 +55,13 @@
       { "@id": "{{ series_page.permalink | safe }}#series" }
     ],
     {% if page.extra.series_order %}"position": {{ page.extra.series_order }},{% endif %}
+    {% elif part_of_id %}
+    {# A book chapter belongs to its book as well as to the site; books/post.html
+       passes the node id, so the Chapter and the Book point at each other. #}
+    "isPartOf": [
+      { "@id": "{{ config.base_url | safe }}/#website" },
+      { "@id": "{{ part_of_id | safe }}" }
+    ],
     {% else %}
     "isPartOf": { "@id": "{{ config.base_url | safe }}/#website" },
     {% endif %}

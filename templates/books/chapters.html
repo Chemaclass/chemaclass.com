@@ -6,6 +6,10 @@
 {{ macros::page_styles(css='page.css') }}
 {% endblock styles %}
 
+{% block posthead %}
+{% include "partials/book-schema.html" %}
+{% endblock posthead %}
+
 {% block title %}
   Book | Chemaclass
 {% endblock %}
