@@ -1,0 +1,46 @@
+{# ==========================================================================
+   JSON-LD for a book: the whole work, and the chapters it is made of.
+
+   The chapters each declared a Chapter node, but nothing declared the book they
+   belong to, so a crawler saw 35 loose pages by nobody in particular. Book ties
+   them together and names the author, which is the point: this one is his own.
+
+   Requires: section (a book index with [extra] cover / year / description),
+             config, lang.
+   ========================================================================== #}
+{%- set book_title = section.title | split(pat=" | ") | first -%}
+{%- set chapters = section.pages -%}
+{% if chapters | length > 0 %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "@id": "{{ section.permalink | safe }}#book",
+  "name": "{{ book_title }}",
+  "url": "{{ section.permalink | safe }}",
+  {% if section.extra.description %}"description": {{ section.extra.description | json_encode | safe }},{% endif %}
+  {% if section.extra.cover %}"image": "{{ config.base_url | safe }}{{ section.extra.cover }}",{% endif %}
+  "author": { "@id": "{{ config.base_url | safe }}/#person" },
+  "inLanguage": "{{ lang }}",
+  "genre": "Poetry",
+  "bookFormat": "https://schema.org/EBook",
+  "isAccessibleForFree": true,
+  {# The years are the span the diary covers, which is what the book is dated by.
+     Taken as written rather than parsed: "2015 - 2017" is a period, not a date. #}
+  {% if section.extra.year %}"temporalCoverage": "{{ section.extra.year }}",{% endif %}
+  "numberOfPages": {{ chapters | length }},
+  "isPartOf": { "@id": "{{ config.base_url | safe }}/#website" },
+  "hasPart": [
+    {%- for chapter in chapters %}
+    {
+      "@type": "Chapter",
+      "@id": "{{ chapter.permalink | safe }}",
+      "url": "{{ chapter.permalink | safe }}",
+      "name": {{ chapter.title | json_encode | safe }},
+      "position": {{ loop.index }}
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+{% endif %}

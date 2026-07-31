@@ -10,6 +10,8 @@
 {% include "partials/prerender-links.html" %}
 {% set schema_type = "Chapter" %}
 {% set licensed = false %}
+{% set book_section = get_section(path=page.ancestors | last) %}
+{% set part_of_id = book_section.permalink ~ "#book" %}
 {% include "partials/post-schema.html" %}
 {% endblock posthead %}
 
