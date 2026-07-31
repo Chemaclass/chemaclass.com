@@ -1,0 +1,29 @@
+{# ==========================================================================
+   "Updated on <date>", shown only when the body has actually been edited since
+   publication.
+
+   The schema publishes dateModified from git (see partials/post-schema.html),
+   and Google asks that a modified date the markup claims be visible on the page
+   too. The date comes from data/last-modified.json, which counts a change to the
+   prose and walks past front-matter-only commits, so this line appears when the
+   text really changed and not when a tag was added.
+
+   Requires: page, lang.
+   ========================================================================== #}
+{% set updated_dates = load_data(path="data/last-modified.json", format="json", required=false) %}
+{% set_global body_edited = false %}
+{% if updated_dates and page.relative_path %}
+  {% set_global body_edited = updated_dates[page.relative_path] | default(value=false) %}
+{% endif %}
+{% if body_edited and page.date %}
+  {# Compared as YYYYMMDD integers: Tera reads `>` as arithmetic, so two date
+     strings on either side fail the render outright. #}
+  {% set edited_day = body_edited | date(format="%Y%m%d") | int %}
+  {% set published_day = page.date | date(format="%Y%m%d") | int %}
+  {% if edited_day > published_day %}
+  <span class="blog-post__updated" title="{{ trans(key='updated_on', lang=lang) }}">
+    {{ macros::refresh_icon() }}
+    {{ trans(key="updated_on", lang=lang) }} {{ macros::format_date(date=body_edited, lang=lang) }}
+  </span>
+  {% endif %}
+{% endif %}

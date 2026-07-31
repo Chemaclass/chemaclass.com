@@ -91,6 +91,7 @@
             {{ macros::format_date(date=page.date, lang=lang) }}
           </span>
           {% endif %}
+          {% include "partials/updated-date.html" %}
           {% if page.reading_time %}
           <span class="blog-post__reading-time">
             {{ macros::clock_icon() }}
