@@ -39,27 +39,62 @@ data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
              data-hl-export-done="{{ trans(key='highlight_export_done', lang=lang) }}"
 {%- endmacro %}
 
-{# ItemList schema for a section listing, newest first. Capped at 20 entries:
-   past that the markup costs more than the extra rows are worth to a crawler. #}
-{% macro item_list_schema(section, name) -%}
+{# Schema for a section listing: the page itself, the entries on it, and the
+   trail back to the home page.
+
+   It used to emit a bare ItemList, which described the rows and left the page
+   they sit on undescribed, and the listings were the only pages on the site with
+   no breadcrumbs. Entries are capped at 20: past that the markup costs more than
+   the extra rows are worth to a crawler.
+
+   `kind` is the schema type of the page, CollectionPage unless a more specific
+   one fits, such as Blog for /blog/. #}
+{% macro collection_schema(section, name, lang, kind="CollectionPage") -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "itemListOrder": "https://schema.org/ItemListOrderDescending",
-  "name": "{{ name }}",
+  "@type": "{{ kind }}",
+  "@id": "{{ section.permalink | safe }}",
   "url": "{{ section.permalink | safe }}",
-  "numberOfItems": {{ section.pages | length }},
+  "name": "{{ name }}",
+  {% if section.description %}"description": {{ section.description | json_encode | safe }},{% endif %}
+  "inLanguage": "{{ lang }}",
+  "isPartOf": { "@id": "{{ config.base_url | safe }}/#website" },
+  "author": { "@id": "{{ config.base_url | safe }}/#person" },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "numberOfItems": {{ section.pages | length }},
+    "itemListElement": [
+      {%- for post in section.pages | slice(end=20) %}
+      {
+        "@type": "ListItem",
+        "position": {{ loop.index }},
+        "url": "{{ post.permalink | safe }}",
+        "name": {{ post.title | json_encode | safe }}
+      }{% if not loop.last %},{% endif %}
+      {%- endfor %}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
   "itemListElement": [
-    {%- set list_items = section.pages | slice(end=20) -%}
-    {%- for post in list_items %}
     {
       "@type": "ListItem",
-      "position": {{ loop.index }},
-      "url": "{{ post.permalink | safe }}",
-      "name": "{{ post.title }}"
-    }{% if not loop.last %},{% endif %}
-    {%- endfor %}
+      "position": 1,
+      "name": "Chemaclass",
+      "item": "{{ config.base_url | safe }}{% if lang == 'es' %}/es/{% endif %}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ name }}",
+      "item": "{{ section.permalink | safe }}"
+    }
   ]
 }
 </script>

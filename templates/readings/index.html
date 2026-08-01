@@ -13,7 +13,7 @@
 {% endblock styles %}
 
 {% block posthead %}
-{{ macros::item_list_schema(section=section, name=trans(key='readings_title', lang=lang)) }}
+{{ macros::collection_schema(section=section, name=trans(key='readings_title', lang=lang), lang=lang) }}
 {% endblock posthead %}
 
 {% block content %}

@@ -10,6 +10,10 @@
 {{ macros::page_styles(css='page.css') }}
 {% endblock styles %}
 
+{% block posthead %}
+{{ macros::collection_schema(section=section, name=trans(key='series_title', lang=lang), lang=lang) }}
+{% endblock posthead %}
+
 
 
 {% block content %}
