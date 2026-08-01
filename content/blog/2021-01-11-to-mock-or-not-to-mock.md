@@ -5,7 +5,7 @@ description = "Mocking is useful, but 'what to mock' usually turns out to be a m
 tags = [ "testing", "tdd", "software-design", "clean-code", "php" ]
 [extra]
 subtitle = "How to escape the mocking hell"
-static_thumbnail = "/images/blog/2021-01-11/cover.jpg"
+static_thumbnail = "/images/blog/2021-01-11/cover.webp"
 related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
   "blog/2021-08-01-test-driven-development.md",
@@ -104,7 +104,7 @@ When you are writing a unit test:
 * Make dependencies explicit.
 * Program to an interface, not to an implementation.
 
-![mock interfaces, instantiate concrete classes](/images/blog/2021-01-11/footer.jpg)
+![mock interfaces, instantiate concrete classes](/images/blog/2021-01-11/footer.webp)
 
 ---
 

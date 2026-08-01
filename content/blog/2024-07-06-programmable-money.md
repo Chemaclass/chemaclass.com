@@ -6,7 +6,7 @@ draft = false
 tags = [ "bitcoin", "software", "cryptography", "security" ]
 [extra]
 subtitle = "The power of Bitcoin's Script"
-static_thumbnail = "/images/blog/2024-07-06/cover.jpg"
+static_thumbnail = "/images/blog/2024-07-06/cover.webp"
 series = "bitcoin"
 series_order = 3
 related_posts = [

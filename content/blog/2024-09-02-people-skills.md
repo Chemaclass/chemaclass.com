@@ -6,7 +6,7 @@ draft = false
 tags = [ "communication", "team-management", "career", "leadership" ]
 [extra]
 subtitle = "From code to collaboration"
-static_thumbnail = "/images/blog/2024-09-02/cover.jpg"
+static_thumbnail = "/images/blog/2024-09-02/cover.webp"
 related_posts = [
   "blog/2022-08-22-understanding-people.md",
   "blog/2023-12-30-great-engineering.md",
@@ -85,4 +85,4 @@ While technical skills might require you to dive into documentation, run experim
 
 Humans bring their feelings, backgrounds, and routines into interactions, adding layers of complexity beyond machines' straightforward logic. These personal details shape the reality we perceive, making interpersonal skills an essential yet complex part of effective communication and collaboration.
 
-![people skills matter](/images/blog/2024-09-02/footer.jpg)
+![people skills matter](/images/blog/2024-09-02/footer.webp)

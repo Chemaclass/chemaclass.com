@@ -6,7 +6,7 @@ draft = false
 tags = [ "ai", "software", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "Holding both ends of the rope"
-static_thumbnail = "/images/blog/2026-03-01/cover.jpg"
+static_thumbnail = "/images/blog/2026-03-01/cover.webp"
 series = "ai"
 series_order = 4
 related_posts = [
@@ -92,7 +92,7 @@ Pairing works best when both people are engaged, the problem benefits from two p
 
 > The goal of pairing isn't to pair. It's to build shared understanding and catch mistakes early. If another approach achieves that in your context, use it.
 
-![blog-middle](/images/blog/2026-03-01/middle.jpg)
+![blog-middle](/images/blog/2026-03-01/middle.webp)
 
 ## AI: from skeptic to squad leader
 
@@ -152,4 +152,4 @@ Every practice in this post follows the same pattern. The ideal version exists i
 
 > Next time you're shipping that 11pm fix, you'll know which corners you cut and why. That's the whole game. Not perfection. Not speed. Knowing which one should lead.
 
-![blog-footer](/images/blog/2026-03-01/footer.jpg)
+![blog-footer](/images/blog/2026-03-01/footer.webp)

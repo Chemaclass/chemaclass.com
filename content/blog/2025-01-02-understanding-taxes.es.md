@@ -6,7 +6,7 @@ draft = false
 tags = [ "bitcoin", "philosophy", "economics", "privacy" ]
 [extra]
 subtitle = "A dónde va tu dinero y cómo repensar el sistema"
-static_thumbnail = "/images/blog/2025-01-02/cover.jpg"
+static_thumbnail = "/images/blog/2025-01-02/cover.webp"
 series = "bitcoin"
 series_order = 4
 related_posts = [
@@ -93,7 +93,7 @@ Aquí entran tasas de matriculación, recogida de basuras, permisos de obra. Par
 
 ## ¿Cómo funcionan?
 
-![cómo funcionan los impuestos](/images/blog/2025-01-02/middle.jpg)
+![cómo funcionan los impuestos](/images/blog/2025-01-02/middle.webp)
 
 Los impuestos suelen ser una mezcla de responsabilidades **nacionales**, **regionales** y **locales**:
 
@@ -153,4 +153,4 @@ Bitcoin tiene una **oferta fija de 21 millones** de monedas. No se puede inflar.
 
 **Bitcoin** no elimina los impuestos ni los servicios públicos, pero **cuestiona cómo pensamos sobre el dinero y el poder**. Da a la gente más **control sobre su riqueza** y demuestra que los sistemas financieros pueden funcionar sin grandes instituciones (a menudo corruptas). Es **un paso hacia un mundo con más libertad individual** y gobiernos pequeños, eficientes y justos.
 
-![bitcoin y libertad](/images/blog/2025-01-02/footer.jpg)
+![bitcoin y libertad](/images/blog/2025-01-02/footer.webp)

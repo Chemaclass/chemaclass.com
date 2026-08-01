@@ -60,7 +60,7 @@ The book links to more than two hundred articles, videos, podcasts, and even the
     C. Bitcoin White Paper
 
 
-![cover](/images/readings/2024-08-02/sjors-and-chema.jpg)
+![cover](/images/readings/2024-08-02/sjors-and-chema.webp)
 
 ---
 

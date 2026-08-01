@@ -6,7 +6,7 @@ draft = false
 tags = [ "career", "philosophy", "productivity" ]
 [extra]
 subtitle = "Escribiendo para ayudarme a dormir"
-static_thumbnail = "/images/blog/2023-07-05/cover.jpg"
+static_thumbnail = "/images/blog/2023-07-05/cover.webp"
 related_posts = [
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
   "blog/2021-03-01-embrace-the-change.md",
@@ -34,6 +34,6 @@ Puedo ver algunas similitudes hoy en día. Sin embargo, ya no veo la necesidad d
 
 Escribir es una de mis formas favoritas de expresarme, especialmente cuando no puedo dormir. Me recuerda a esos años, y pienso enormemente en la increíble evolución desde entonces.
 
-![blog-footer](/images/blog/2023-07-05/footer.jpg)
+![blog-footer](/images/blog/2023-07-05/footer.webp)
 
 > Fotos originales de mi viaje a la Toscana, Italia, el mes pasado.

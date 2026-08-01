@@ -6,7 +6,7 @@ draft = false
 tags = [ "leadership", "team-management", "communication", "mentoring" ]
 [extra]
 subtitle = "¿Team Lead? ¿Tech Lead? ¿Qué es el liderazgo y qué no lo es?"
-static_thumbnail = "/images/blog/2022-09-25/cover.jpg"
+static_thumbnail = "/images/blog/2022-09-25/cover.webp"
 related_posts = [
   "blog/2023-02-27-great-leadership.md",
   "blog/2021-07-01-tech-lead.md",
@@ -72,7 +72,7 @@ Elementos clave de esta definición:
 
 ---
 
-![blog-cover](/images/blog/2022-09-25/footer.jpg)
+![blog-cover](/images/blog/2022-09-25/footer.webp)
 
 ## ¿Por qué alguien querría convertirse en líder?
 

@@ -6,7 +6,7 @@ aliases = [ "/tech-talk" ]
 tags = [ "communication", "leadership", "productivity", "career"]
 [extra]
 subtitle = "Some tips to improve your communication skills"
-static_thumbnail = "/images/blog/2019-11-18/cover.jpg"
+static_thumbnail = "/images/blog/2019-11-18/cover.webp"
 related_posts = [
   "blog/2022-06-08-the-path-to-seniority-in-software.md",
   "blog/2024-09-02-people-skills.md",

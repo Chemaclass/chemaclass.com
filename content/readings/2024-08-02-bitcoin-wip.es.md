@@ -59,7 +59,7 @@ El libro enlaza a más de doscientos artículos, videos, podcasts e incluso cód
     C. White Paper de Bitcoin
 
 
-![cover](/images/readings/2024-08-02/sjors-and-chema.jpg)
+![cover](/images/readings/2024-08-02/sjors-and-chema.webp)
 
 ---
 

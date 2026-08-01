@@ -6,7 +6,7 @@ draft = false
 tags = [ "agile", "scrum", "communication", "productivity" ]
 [extra]
 subtitle = "Killing agility with excessive meetings"
-static_thumbnail = "/images/blog/2022-12-06/cover.jpg"
+static_thumbnail = "/images/blog/2022-12-06/cover.webp"
 related_posts = [
   "blog/2022-04-02-dunbar-number.md",
   "blog/2022-07-25-the-project-management-triangle.md",
@@ -130,4 +130,4 @@ improved.
 It's OK to point out the "_elephant in the room_" and ask for help to improve any situation you think (or feel) is not
 working as it should.
 
-![blog-footer](/images/blog/2022-12-06/footer.jpg)
+![blog-footer](/images/blog/2022-12-06/footer.webp)

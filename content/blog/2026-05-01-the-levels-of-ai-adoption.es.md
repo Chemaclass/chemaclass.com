@@ -6,7 +6,7 @@ draft = false
 tags = [ "ai", "software", "leadership", "craftsmanship", "productivity", "developer-tools" ]
 [extra]
 subtitle = "De prompts copiados a equipos de agentes"
-static_thumbnail = "/images/blog/2026-05-01/cover.jpg"
+static_thumbnail = "/images/blog/2026-05-01/cover.webp"
 series = "ai"
 series_order = 6
 related_posts = [
@@ -76,7 +76,7 @@ Lovable, v0, Canva y la propia Figma están bajo presión para repensar su posic
 
 Las empresas que lo sienten primero no son las herramientas de diseño. Son los negocios pequeños que no podían pagar diseño, los *founders* montando un *pitch deck* a las tantas de la noche, los PMs probando una idea antes de convocar una reunión. Habrá una minoría de casos donde alguien sí hubiera pagado a un diseñador y ahora no lo hace, y ese coste es real. Pero en la mayoría, la IA no reemplazó a nadie: rellenó un hueco donde nunca iba a haber uno.
 
-![Pequeña biblioteca con estanterías de madera y pilas de libros](/images/blog/2026-05-01/middle.jpg)
+![Pequeña biblioteca con estanterías de madera y pilas de libros](/images/blog/2026-05-01/middle.webp)
 
 ## Los niveles de adopción de la IA
 
@@ -166,4 +166,4 @@ La IA puede ejecutar, pero no sabe a dónde vas. Puede producir, pero no sabe qu
 
 Cuando se relaje el *hype* (y se relajará), la pregunta no va a ser *"¿usaste IA?"*, todo el mundo lo habrá hecho. La pregunta va a ser *"¿a qué nivel, y con qué dirección?"*
 
-![Sala de lectura con un libro abierto sobre una mesa de madera](/images/blog/2026-05-01/footer.jpg)
+![Sala de lectura con un libro abierto sobre una mesa de madera](/images/blog/2026-05-01/footer.webp)

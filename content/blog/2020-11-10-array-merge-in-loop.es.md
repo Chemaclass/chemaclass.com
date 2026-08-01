@@ -5,7 +5,7 @@ description = "Usar array_merge dentro de un bucle mata el rendimiento. El opera
 tags = [ "php", "clean-code", "refactoring"]
 [extra]
 subtitle = "El operador spread al rescate"
-static_thumbnail = "/images/blog/2020-11-10/cover.jpg"
+static_thumbnail = "/images/blog/2020-11-10/cover.webp"
 related_posts = [
   "blog/2020-10-13-typed-arrays-php.md",
   "blog/2020-06-28-the-art-of-refactoring.md",

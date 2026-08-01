@@ -6,7 +6,7 @@ updated = "2023-03-23"
 tags = [ "xp", "agile", "team-management", "mentoring", "tdd" ]
 [extra]
 subtitle = "How can you help your peers to embrace the change?"
-static_thumbnail = "/images/blog/2022-02-26/cover.jpg"
+static_thumbnail = "/images/blog/2022-02-26/cover.webp"
 pin = false
 related_posts = [
   "blog/2019-11-18-improve-your-tech-talk.md",
@@ -113,7 +113,7 @@ You can help your team to be more extreme by helping with a dedicated team space
 
 > Do not micromanage this dedicated time. Focus on the outcome. Help your team to grow, and they will enjoy growing with you.
 
-![blog-footer](/images/blog/2022-02-26/footer.jpg)
+![blog-footer](/images/blog/2022-02-26/footer.webp)
 
 ## Tech Talk
 

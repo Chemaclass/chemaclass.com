@@ -101,7 +101,7 @@ The Cypherpunks face these main criticisms:
 
 This shows the ongoing struggle between promoting privacy and maintaining safety in the digital world.
 
-![bitcoin peer-to-peer cash](/images/blog/2024-12-11/btc-p2p.jpg)
+![bitcoin peer-to-peer cash](/images/blog/2024-12-11/btc-p2p.webp)
 
 ## Precursors to Bitcoin
 

@@ -6,7 +6,7 @@ draft = false
 tags = [ "ai", "software", "craftsmanship", "productivity", "developer-tools" ]
 [extra]
 subtitle = "Intelligence without expertise is entertainment"
-static_thumbnail = "/images/blog/2026-05-19/cover.jpg"
+static_thumbnail = "/images/blog/2026-05-19/cover.webp"
 series = "ai"
 series_order = 7
 reading_time = 4
@@ -99,7 +99,7 @@ Agent sees the description in the skill list. Ask for a review, it loads `SKILL.
 
 {% end %}
 
-![blog-middle](/images/blog/2026-05-19/middle.jpg)
+![blog-middle](/images/blog/2026-05-19/middle.webp)
 
 ## Skills vs specialized agents
 
@@ -148,7 +148,7 @@ The agent ships next year. The skill ships forever.
 
 > Write the skill once. Every session after that starts where the last one ended.
 
-![blog-footer](/images/blog/2026-05-19/footer.jpg)
+![blog-footer](/images/blog/2026-05-19/footer.webp)
 
 ---
 

@@ -6,7 +6,7 @@ draft = false
 tags = [ "communication", "psychology", "team-management" ]
 [extra]
 subtitle = "Malentendidos, comunicación efectiva y autorreflexión"
-static_thumbnail = "/images/blog/2022-08-22/cover.jpg"
+static_thumbnail = "/images/blog/2022-08-22/cover.webp"
 related_posts = [
   "blog/2024-09-02-people-skills.md",
   "blog/2022-04-02-dunbar-number.md",
@@ -72,4 +72,4 @@ La autorreflexión es esencial para mejorar y corregir tu actitud. Para adaptart
 
 > Mira más allá de tu área de influencia. Comparte tus ideas y no te avergüences de tus errores si los tomas como oportunidades de aprendizaje.
 
-![personas comunicándose](/images/blog/2022-08-22/footer.jpg)
+![personas comunicándose](/images/blog/2022-08-22/footer.webp)

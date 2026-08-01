@@ -5,7 +5,7 @@ description = "Desempaquetado de argumentos, lista de argumentos variables de fu
 tags = [ "php", "software-design", "clean-code"]
 [extra]
 subtitle = "Una alternativa a la característica que falta en PHP: Generics"
-static_thumbnail = "/images/blog/2020-10-13/cover.jpg"
+static_thumbnail = "/images/blog/2020-10-13/cover.webp"
 related_posts = [
   "blog/2020-11-10-array-merge-in-loop.md",
   "blog/2021-01-11-to-mock-or-not-to-mock.md",
@@ -149,7 +149,7 @@ createInvoiceForCustomers(new AnyOtherType());
 El desempaquetado de argumentos, combinado con funciones variádicas, nos permite simular arrays tipados. Un gran poder conlleva una gran responsabilidad.
 Hay que conocer bien nuestras herramientas para usarlas con criterio.
 
-![arrays tipados con variádicas en php](/images/blog/2020-10-13/footer.jpg)
+![arrays tipados con variádicas en php](/images/blog/2020-10-13/footer.webp)
 
 ---
 

@@ -6,7 +6,7 @@ draft = false
 tags = [ "software-design", "architecture", "team-management", "communication" ]
 [extra]
 subtitle = "How to introduce new technologies in your team"
-static_thumbnail = "/images/blog/2023-04-14/cover.jpg"
+static_thumbnail = "/images/blog/2023-04-14/cover.webp"
 related_posts = [
   "blog/2022-08-22-understanding-people.md",
   "blog/2022-11-11-working-agile-with-non-agile-teams.md",
@@ -39,7 +39,7 @@ When adopting new technologies in our daily business, it's not rare that we tend
 
 Don't get me wrong, learning and experimenting with new technologies is great, but introducing it in your daily work is another story because it will affect the whole team. So we need to be more careful with this.
 
-![blog-middle](/images/blog/2023-04-14/middle.jpg)
+![blog-middle](/images/blog/2023-04-14/middle.webp)
 
 ## The focus of the conversation
 
@@ -57,7 +57,7 @@ Whatever the outcome, you should write it down as an [ADR](https://adr.github.io
 
 ADRs are useful to understand old decisions and keep them in the version control, in the same project if possible. They are helpful for the current team, but also for new joiners.
 
-![blog-footer](/images/blog/2023-04-14/footer.jpg)
+![blog-footer](/images/blog/2023-04-14/footer.webp)
 
 {% kudos() %}
 Thanks to my friends [Manu](https://x.com/evrtrabajo), [Antonio](https://x.com/Tito_Kati), and [Jesus](https://x.com/JesusValera96), who helped me come up with this summary of ideas after brainstorming together.

@@ -6,7 +6,7 @@ draft = false
 tags = [ "ai", "software", "leadership", "craftsmanship", "productivity", "developer-tools" ]
 [extra]
 subtitle = "From copy-paste prompts to agentic teams"
-static_thumbnail = "/images/blog/2026-05-01/cover.jpg"
+static_thumbnail = "/images/blog/2026-05-01/cover.webp"
 series = "ai"
 series_order = 6
 related_posts = [
@@ -76,7 +76,7 @@ Lovable, v0, Canva, and Figma itself are all under pressure to rethink their pos
 
 The companies feeling this first aren't the design tools. They're the small businesses that couldn't afford design work, the founders building a pitch deck at midnight, the PMs testing an idea before booking a meeting. There's a minority of cases where someone would have paid a designer and now won't, and that cost is real. But in most of them, AI didn't replace anyone: it filled a space where no designer was ever going to exist.
 
-![Small library with wooden bookshelves and stacks of books](/images/blog/2026-05-01/middle.jpg)
+![Small library with wooden bookshelves and stacks of books](/images/blog/2026-05-01/middle.webp)
 
 ## The levels of AI adoption
 
@@ -166,4 +166,4 @@ AI can execute, but it doesn't know where you're going. It can produce, but it d
 
 When the hype settles (and it will), the question won't be *"did you use AI?"* Everyone will. The question will be *"at what level, and with what direction?"*
 
-![Library reading room with an open book on a wooden desk](/images/blog/2026-05-01/footer.jpg)
+![Library reading room with an open book on a wooden desk](/images/blog/2026-05-01/footer.webp)

@@ -6,7 +6,7 @@ draft = false
 tags = [ "philosophy", "career", "productivity", "leadership" ]
 [extra]
 subtitle = "A simple definition that changed how I live"
-static_thumbnail = "/images/blog/2025-11-15/cover.jpg"
+static_thumbnail = "/images/blog/2025-11-15/cover.webp"
 related_posts = [
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
   "blog/2021-03-01-embrace-the-change.md",
@@ -106,7 +106,7 @@ And be ready to [embrace the change](/blog/embrace-the-change) when your definit
 
 That feels like success to me.
 
-![what success means to me](/images/blog/2025-11-15/footer.jpg)
+![what success means to me](/images/blog/2025-11-15/footer.webp)
 
 ---
 

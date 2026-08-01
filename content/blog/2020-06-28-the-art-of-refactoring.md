@@ -5,7 +5,7 @@ description = "If you see something, in the scope of your current task, that can
 tags = [ "refactoring", "clean-code", "testing", "software-design"]
 [extra]
 subtitle = "When, how, and why"
-static_thumbnail = "/images/blog/2020-06-28/cover.jpg"
+static_thumbnail = "/images/blog/2020-06-28/cover.webp"
 related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
   "blog/2020-08-17-testing-effectively-legacy-code.md",
@@ -68,4 +68,4 @@ Wouldn't you want to have a better system as time goes by?
 
 Software isn't like wine: it doesn't get better as time passes by. Therefore, if you want to have a better system you must work for it.
 
-![refactoring as continuous improvement](/images/blog/2020-06-28/footer.jpg)
+![refactoring as continuous improvement](/images/blog/2020-06-28/footer.webp)

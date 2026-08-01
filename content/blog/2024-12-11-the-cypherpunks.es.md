@@ -100,7 +100,7 @@ Los Cypherpunks enfrentan estas críticas principales:
 
 Es la eterna tensión entre privacidad y seguridad en el mundo digital.
 
-![bitcoin dinero entre pares](/images/blog/2024-12-11/btc-p2p.jpg)
+![bitcoin dinero entre pares](/images/blog/2024-12-11/btc-p2p.webp)
 
 ## Precursores de Bitcoin
 

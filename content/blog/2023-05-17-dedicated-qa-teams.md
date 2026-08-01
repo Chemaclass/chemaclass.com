@@ -6,7 +6,7 @@ draft = false
 tags = [ "testing", "tdd", "agile", "clean-code" ]
 [extra]
 subtitle = "How does it fit a dedicated QA person in your agile team?"
-static_thumbnail = "/images/blog/2023-05-17/cover.jpg"
+static_thumbnail = "/images/blog/2023-05-17/cover.webp"
 related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
   "blog/2021-08-01-test-driven-development.md",
@@ -64,4 +64,4 @@ And that's how you change the "full-time QA position" into a "role mentality for
 
 Code never lies and never forgets; once it's written and automated in your pipeline, you can run it anytime at zero cost.
 
-![blog-footer](/images/blog/2023-05-17/footer.jpg)
+![blog-footer](/images/blog/2023-05-17/footer.webp)

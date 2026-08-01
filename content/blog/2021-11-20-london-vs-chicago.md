@@ -5,7 +5,7 @@ description = "There are two known schools in TDD: the mockist school (aka Outsi
 tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
 subtitle = "It's an integration, not a choice"
-static_thumbnail = "/images/blog/2021-11-20/cover.jpg"
+static_thumbnail = "/images/blog/2021-11-20/cover.webp"
 related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2021-09-25-tdd-vs-bdd.md",

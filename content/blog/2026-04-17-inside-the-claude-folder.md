@@ -6,7 +6,7 @@ draft = false
 tags = [ "ai", "software", "tutorial", "craftsmanship", "developer-tools", "productivity" ]
 [extra]
 subtitle = "A tutorial through rules, skills, agents, hooks, and settings"
-static_thumbnail = "/images/blog/2026-04-17/cover.jpg"
+static_thumbnail = "/images/blog/2026-04-17/cover.webp"
 series = "ai"
 series_order = 5
 related_posts = [
@@ -132,7 +132,7 @@ Compiler rules don't fire when editing Phel source. Phel rules don't fire when e
 
 Rules are not suggestions. They travel with the code: a convention change and its rule ship in the same commit. No drift, no outdated wiki.
 
-![blog-middle](/images/blog/2026-04-17/middle.jpg)
+![blog-middle](/images/blog/2026-04-17/middle.webp)
 
 ## Automation and delegation
 
@@ -200,4 +200,4 @@ Commit the folder. Share it. When someone joins, their session inherits everythi
 
 Treat `.claude/` like infrastructure. Version it. Review it. Evolve it with the codebase.
 
-![blog-footer](/images/blog/2026-04-17/footer.jpg)
+![blog-footer](/images/blog/2026-04-17/footer.webp)

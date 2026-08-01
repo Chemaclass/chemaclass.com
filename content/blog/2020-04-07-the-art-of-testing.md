@@ -5,7 +5,7 @@ description = "Why you should consider testing as part of your daily development
 tags = [ "testing", "software-design", "clean-code", "tdd"]
 [extra]
 subtitle = "From a software developer's point of view"
-static_thumbnail = "/images/blog/2020-04-07/cover.jpg"
+static_thumbnail = "/images/blog/2020-04-07/cover.webp"
 related_posts = [
   "blog/2020-06-28-the-art-of-refactoring.md",
   "blog/2021-01-11-to-mock-or-not-to-mock.md",
@@ -76,6 +76,6 @@ Should we test everything? Well, that's the million-dollar question. In my opini
 might encounter situations where tests might not be beneficial. Even in those situations, we should write our code as if
 it could be tested anyway.
 
-![testable code and good design](/images/blog/2020-04-07/footer.jpg)
+![testable code and good design](/images/blog/2020-04-07/footer.webp)
 
 > Testable code tends to better design and, therefore, better quality.

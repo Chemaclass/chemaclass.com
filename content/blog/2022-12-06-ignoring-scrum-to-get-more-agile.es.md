@@ -6,7 +6,7 @@ draft = false
 tags = [ "agile", "scrum", "communication", "productivity" ]
 [extra]
 subtitle = "Matando la agilidad con reuniones excesivas"
-static_thumbnail = "/images/blog/2022-12-06/cover.jpg"
+static_thumbnail = "/images/blog/2022-12-06/cover.webp"
 related_posts = [
   "blog/2022-04-02-dunbar-number.md",
   "blog/2022-07-25-the-project-management-triangle.md",
@@ -98,4 +98,4 @@ Hay muchas estrategias. Depende de ti actuar cuando veas algo mejorable.
 
 Está bien señalar el "_elefante en la habitación_" y pedir ayuda para mejorar cualquier situación que sientas que no funciona como debería.
 
-![blog-footer](/images/blog/2022-12-06/footer.jpg)
+![blog-footer](/images/blog/2022-12-06/footer.webp)

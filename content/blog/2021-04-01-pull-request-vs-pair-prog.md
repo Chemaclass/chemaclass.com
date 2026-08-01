@@ -5,7 +5,7 @@ description = "Let's talk about the benefits of Pull Requests and Pair Programmi
 tags = [ "pair-programming", "code-review", "agile", "communication" ]
 [extra]
 subtitle = "Why choosing when you can have both?"
-static_thumbnail = "/images/blog/2021-04-01/cover.jpg"
+static_thumbnail = "/images/blog/2021-04-01/cover.webp"
 related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
@@ -113,4 +113,4 @@ If you still feel uncomfortable having another person next to you while you writ
 
 > It's totally ok not knowing everything. The most important thing is to know how to work together.
 
-![two developers pair programming](/images/blog/2021-04-01/footer.jpg)
+![two developers pair programming](/images/blog/2021-04-01/footer.webp)

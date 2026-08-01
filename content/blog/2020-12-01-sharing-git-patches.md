@@ -5,7 +5,7 @@ description = "Discover another way of sharing suggestions with your development
 tags = [ "git", "code-review", "communication", "pair-programming"]
 [extra]
 subtitle = "Another way of sharing quick suggestions with your team"
-static_thumbnail = "/images/blog/2020-12-01/cover.jpg"
+static_thumbnail = "/images/blog/2020-12-01/cover.webp"
 related_posts = [
   "blog/2021-04-01-pull-request-vs-pair-prog.md",
   "blog/2025-04-12-ship-show-ask.md",

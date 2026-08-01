@@ -49,7 +49,7 @@ Actually, declare(strict_types=1); is more for the reader than for the writer. W
 
 The writer just needs to maintain such strictness while writing the expected behavior. That said, as a writer, you should care about your readers, which also includes your future self. Because you are going to be one of them.
 
-![strict_types declaration in php](/images/blog/2020-08-09/footer.jpg)
+![strict_types declaration in php](/images/blog/2020-08-09/footer.webp)
 
 ------
 

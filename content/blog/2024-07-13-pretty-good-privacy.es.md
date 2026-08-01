@@ -6,7 +6,7 @@ draft = false
 tags = [ "security", "privacy", "cryptography" ]
 [extra]
 subtitle = "Cómo PGP protege tu comunicación digital"
-static_thumbnail = "/images/blog/2024-07-13/cover.jpg"
+static_thumbnail = "/images/blog/2024-07-13/cover.webp"
 series = "bitcoin"
 series_order = 1
 related_posts = [

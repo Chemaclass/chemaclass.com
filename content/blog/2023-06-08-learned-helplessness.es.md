@@ -6,7 +6,7 @@ draft = false
 tags = [ "psychology", "productivity", "career", "philosophy" ]
 [extra]
 subtitle = "Una aceptación de impotencia"
-static_thumbnail = "/images/blog/2023-06-08/cover.jpg"
+static_thumbnail = "/images/blog/2023-06-08/cover.webp"
 related_posts = [
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
   "blog/2023-03-16-have-you-always-been-like-this.md",

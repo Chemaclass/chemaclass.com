@@ -6,7 +6,7 @@ draft = false
 tags = ["leadership", "team-management", "communication", "psychology"]
 [extra]
 subtitle = "Recognizing red flags of an unhealthy workplace"
-static_thumbnail = "/images/blog/2023-10-11/cover.jpg"
+static_thumbnail = "/images/blog/2023-10-11/cover.webp"
 related_posts = [
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
   "blog/2021-03-01-embrace-the-change.md",
@@ -63,7 +63,7 @@ Discrimination, favoritism, or unequal opportunities can create a toxic and divi
 
 When employees feel that there is no room for advancement or professional growth, they may become disengaged and unfulfilled in their roles.
 
-![blog-middle](/images/blog/2023-10-11/middle.jpg)
+![blog-middle](/images/blog/2023-10-11/middle.webp)
 
 ### Unhealthy conflicts among colleagues
 
@@ -88,7 +88,7 @@ Prolonged exposure to a non-healthy work environment can lead to physical and em
 > It's important to note that these symptoms can vary from one workplace to another. Addressing these issues promptly and effectively is crucial to create a healthy and productive environment.
 
 
-![blog-footer](/images/blog/2023-10-11/footer.jpg)
+![blog-footer](/images/blog/2023-10-11/footer.webp)
 
 
 ## What can you do about it?

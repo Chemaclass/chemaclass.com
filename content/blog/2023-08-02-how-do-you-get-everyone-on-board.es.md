@@ -6,7 +6,7 @@ draft = false
 tags = [ "leadership", "communication", "team-management", "mentoring", "xp" ]
 [extra]
 subtitle = "¿Cómo tratas con personas reacias al cambio?"
-static_thumbnail = "/images/blog/2023-08-02/cover.jpg"
+static_thumbnail = "/images/blog/2023-08-02/cover.webp"
 related_posts = [
   "blog/2022-08-22-understanding-people.md",
   "blog/2022-11-11-working-agile-with-non-agile-teams.md",

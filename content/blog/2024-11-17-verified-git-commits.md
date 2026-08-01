@@ -7,7 +7,7 @@ aliases = [ "/blog/verified-commits" ]
 tags = [ "git", "security", "cryptography", "open-source" ]
 [extra]
 subtitle = "Boosting trust and security in your codebase"
-static_thumbnail = "/images/blog/2024-11-17/cover.jpg"
+static_thumbnail = "/images/blog/2024-11-17/cover.webp"
 related_posts = [
   "blog/2024-07-13-pretty-good-privacy.md",
   "blog/2021-05-03-open-source-software.md",
@@ -42,7 +42,7 @@ Without signed commits, anyone could fake a commit using someone else's email. F
 
 ![blog-cover](/images/blog/2024-11-17/impersonating-commit.jpg)
 
-![blog-cover](/images/blog/2024-11-17/impersonating-commit4.jpg)
+![blog-cover](/images/blog/2024-11-17/impersonating-commit4.webp)
 
 By signing your commits, you show that the work is genuinely yours. It stops impersonation, builds trust in what you've done, and keeps everything transparent and accountable.
 
