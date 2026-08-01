@@ -5,6 +5,10 @@ template = "page.html"
 aliases = [ "/gpg" ]
 +++
 
+# PGP
+
+Public key for Chemaclass: verify signatures, encrypt a message, or import it directly.
+
 ### Fingerprint
 
 ```
