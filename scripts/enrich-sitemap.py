@@ -171,6 +171,13 @@ def enrich_sitemap(sitemap_path: str) -> int:
     if "<sitemapindex" in content:
         return 0
 
+    # Zola lists the paginated listings, and those pages carry noindex and
+    # canonicalize to the first page. Search Console reads a submitted URL marked
+    # noindex as an error, so the ten of them were ten errors in the Pages report
+    # for URLs nobody wanted indexed in the first place.
+    content, dropped = re.subn(
+        r"<url>\s*<loc>[^<]*/page/\d+/</loc>.*?</url>\s*", "", content, flags=re.DOTALL)
+
     count = 0
     known_urls = set(re.findall(r"<loc>(.*?)</loc>", content))
 
@@ -221,6 +228,8 @@ def enrich_sitemap(sitemap_path: str) -> int:
     with open(sitemap_path, "w") as f:
         f.write(enriched)
 
+    if dropped:
+        print(f"  dropped {dropped} paginated URL(s) that carry noindex")
     return count
 
 
