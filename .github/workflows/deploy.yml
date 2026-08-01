@@ -35,6 +35,31 @@ jobs:
           # site published today's date as its last modification.
           fetch-depth: 0
 
+      # Zola encodes ~900 covers and thumbnails into static/processed_images and
+      # skips the ones already there. A clean runner has none, and profiling this
+      # job showed what that costs: 56.9s cold against 34.5s with the images
+      # already encoded.
+      #
+      # Exact-match key, no restore-keys: a partial hit would keep resurrecting
+      # images whose source or resize settings have changed, and the stale copies
+      # would ride along in the published artifact.
+      - name: Cache the processed images
+        uses: actions/cache@v6
+        with:
+          path: static/processed_images
+          key: processed-images-${{ hashFiles('static/images/**', 'templates/**', 'config.toml') }}
+
+      # Zola compares timestamps, not just filenames: a source image newer than
+      # its processed output is re-encoded. Checkout stamps every source with the
+      # time of the clone, while the restored images keep the timestamps they were
+      # archived with, so without this the cache restores 47MB and Zola re-encodes
+      # all of it anyway. That is exactly what the first attempt at this did.
+      - name: Mark the cached images as current
+        run: |
+          if [ -d static/processed_images ]; then
+            find static/processed_images -type f -exec touch {} +
+          fi
+
       - name: Install Zola
         uses: taiki-e/install-action@v2
         with:
