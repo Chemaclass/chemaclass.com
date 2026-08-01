@@ -6,7 +6,7 @@ draft = false
 tags = ["pair-programming", "xp", "tdd", "communication", "clean-code"]
 [extra]
 subtitle = "Abrazando prácticas de calidad en tu cultura de ingeniería"
-static_thumbnail = "/images/blog/2024-03-28/cover.jpg"
+static_thumbnail = "/images/blog/2024-03-28/cover.webp"
 pin = false
 series = "craftsmanship"
 series_order = 7
@@ -56,7 +56,7 @@ Se trata de la atmósfera constante de **compartir conocimiento** por defecto, r
 
 Se trata de **cohesión de equipo** y afilar el sentimiento de que pertenecemos. Cuando entendemos las fortalezas y debilidades de cada uno, nos daremos cuenta de cuánto podemos ayudarnos a crecer mutuamente.
 
-![blog-img](/images/blog/2024-03-28/footer.jpg)
+![blog-img](/images/blog/2024-03-28/footer.webp)
 
 ## ¿Cómo puedes practicar pair programming?
 

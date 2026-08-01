@@ -69,4 +69,4 @@ If you need to represent a hierarchy of classes, where subclasses are proper sub
 
 > Interfaces -> Final classes -> Composition
 
-![interfaces, final classes and composition](/images/blog/2020-06-06/footer.jpg)
+![interfaces, final classes and composition](/images/blog/2020-06-06/footer.webp)

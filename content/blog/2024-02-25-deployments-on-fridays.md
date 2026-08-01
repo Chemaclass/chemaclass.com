@@ -6,7 +6,7 @@ draft = false
 tags = ["agile", "xp", "leadership", "productivity"]
 [extra]
 subtitle = "Why \"should we not\" deploy to production on Fridays?"
-static_thumbnail = "/images/blog/2024-02-25/cover.jpg"
+static_thumbnail = "/images/blog/2024-02-25/cover.webp"
 related_posts = [
   "blog/2022-06-08-the-path-to-seniority-in-software.md",
   "blog/2022-10-08-different-beliefs-about-software-quality.md",
@@ -52,4 +52,4 @@ I believe **frequent** and **small releases** to production **are key**; any tim
 
 Being able to deploy on Fridays (if needed or wanted) impacts the team's confidence. Similarly, forbidding deployments on Fridays impacts the team's self-esteem as well.
 
-![frequent small releases](/images/blog/2024-02-25/footer.jpg)
+![frequent small releases](/images/blog/2024-02-25/footer.webp)

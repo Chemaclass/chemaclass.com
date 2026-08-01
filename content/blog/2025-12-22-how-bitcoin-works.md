@@ -5,7 +5,7 @@ description = "Transactions, blocks, mining, the UTXO model, and Lightning Netwo
 tags = [ "bitcoin", "cryptography", "tutorial" ]
 [extra]
 subtitle = "Blockchain, cryptography, and consensus"
-static_thumbnail = "/images/blog/2025-12-21/cover.jpg"
+static_thumbnail = "/images/blog/2025-12-21/cover.webp"
 series = "bitcoin"
 series_order = 6
 related_posts = [

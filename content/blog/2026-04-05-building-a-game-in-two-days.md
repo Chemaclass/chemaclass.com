@@ -6,7 +6,7 @@ draft = false
 tags = ["ai", "software", "open-source"]
 [extra]
 subtitle = "What happens when you give an AI a quest and get out of the way"
-static_thumbnail = "/images/blog/2026-04-04/cover.png"
+static_thumbnail = "/images/blog/2026-04-04/cover.webp"
 related_posts = [
   "blog/2026-02-07-build-your-own-team-of-agents.md",
   "blog/2026-01-11-mcp-giving-your-ai-agent-the-right-context.md",
@@ -50,7 +50,7 @@ I asked Sauron to draw them properly. Frodo got curly hair and hobbit feet. The 
 
 All drawn with canvas calls. No image files. Every pixel computed at runtime.
 
-![The Pelennor Fields chapter complete](/images/blog/2026-04-04/gameplay-pelennor.png)
+![The Pelennor Fields chapter complete](/images/blog/2026-04-04/gameplay-pelennor.webp)
 
 ## Nine levels, nine chapters
 

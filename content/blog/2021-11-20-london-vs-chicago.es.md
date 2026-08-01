@@ -5,7 +5,7 @@ description = "Hay dos escuelas conocidas en TDD: la escuela mockista (también 
 tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
 subtitle = "Es una integración, no una elección"
-static_thumbnail = "/images/blog/2021-11-20/cover.jpg"
+static_thumbnail = "/images/blog/2021-11-20/cover.webp"
 related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2021-09-25-tdd-vs-bdd.md",

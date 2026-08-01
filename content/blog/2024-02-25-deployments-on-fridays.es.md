@@ -6,7 +6,7 @@ draft = false
 tags = ["agile", "xp", "leadership", "productivity"]
 [extra]
 subtitle = "¿Por qué \"no deberíamos\" desplegar a producción los viernes?"
-static_thumbnail = "/images/blog/2024-02-25/cover.jpg"
+static_thumbnail = "/images/blog/2024-02-25/cover.webp"
 related_posts = [
   "blog/2022-06-08-the-path-to-seniority-in-software.md",
   "blog/2022-10-08-different-beliefs-about-software-quality.md",
@@ -52,4 +52,4 @@ Creo que las **releases frecuentes** y **pequeñas** a producción **son clave**
 
 Poder desplegar los viernes (si es necesario o deseado) impacta la confianza del equipo. De manera similar, prohibir los despliegues los viernes impacta la autoestima del equipo también.
 
-![releases frecuentes y pequeñas](/images/blog/2024-02-25/footer.jpg)
+![releases frecuentes y pequeñas](/images/blog/2024-02-25/footer.webp)

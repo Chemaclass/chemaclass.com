@@ -5,7 +5,7 @@ description = "Using array_merge inside a loop is a performance killer. The spre
 tags = [ "php", "clean-code", "refactoring"]
 [extra]
 subtitle = "The spread operator to the rescue"
-static_thumbnail = "/images/blog/2020-11-10/cover.jpg"
+static_thumbnail = "/images/blog/2020-11-10/cover.webp"
 related_posts = [
   "blog/2020-10-13-typed-arrays-php.md",
   "blog/2020-06-28-the-art-of-refactoring.md",

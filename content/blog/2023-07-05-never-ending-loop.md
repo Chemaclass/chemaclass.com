@@ -6,7 +6,7 @@ draft = false
 tags = [ "career", "philosophy", "productivity" ]
 [extra]
 subtitle = "Writing to help myself sleep"
-static_thumbnail = "/images/blog/2023-07-05/cover.jpg"
+static_thumbnail = "/images/blog/2023-07-05/cover.webp"
 related_posts = [
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
   "blog/2021-03-01-embrace-the-change.md",
@@ -34,6 +34,6 @@ I can see some similarities nowadays. However, I no longer see the need to write
 
 Writing is one of my favorite ways to express myself, especially when I cannot sleep. It reminds me of those years, and I think greatly about the incredible evolution since then.
 
-![blog-footer](/images/blog/2023-07-05/footer.jpg)
+![blog-footer](/images/blog/2023-07-05/footer.webp)
 
 > Original photos from my trip to Tuscany, Italy, last month.

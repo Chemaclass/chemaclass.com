@@ -6,7 +6,7 @@ draft = false
 tags = [ "clean-code", "agile", "xp", "communication", "career" ]
 [extra]
 subtitle = "Algunas reflexiones sobre la calidad del software en tu equipo"
-static_thumbnail = "/images/blog/2022-10-08/cover.jpg"
+static_thumbnail = "/images/blog/2022-10-08/cover.webp"
 related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
   "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
@@ -74,7 +74,7 @@ Si después de varios meses intentando estas ideas de verdad ninguna funciona, b
 
 ---
 
-![blog-footer](/images/blog/2022-10-08/footer.jpg)
+![blog-footer](/images/blog/2022-10-08/footer.webp)
 
 ## Pensamientos adicionales
 

@@ -6,7 +6,7 @@ updated = "2023-03-23"
 tags = [ "xp", "agile", "team-management", "mentoring", "tdd" ]
 [extra]
 subtitle = "¿Cómo puedes ayudar a tus compañeros a abrazar el cambio?"
-static_thumbnail = "/images/blog/2022-02-26/cover.jpg"
+static_thumbnail = "/images/blog/2022-02-26/cover.webp"
 pin = false
 related_posts = [
   "blog/2019-11-18-improve-your-tech-talk.md",
@@ -110,7 +110,7 @@ Puedes ayudar a tu equipo a ser más extreme creando un espacio dedicado al crec
 
 > No microgestiones este tiempo. Enfócate en el resultado. Ayuda a tu equipo a crecer, y disfrutarán creciendo contigo.
 
-![blog-footer](/images/blog/2022-02-26/footer.jpg)
+![blog-footer](/images/blog/2022-02-26/footer.webp)
 
 ## Charla Técnica
 

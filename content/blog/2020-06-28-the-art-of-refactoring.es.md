@@ -5,7 +5,7 @@ description = "Si ves algo, en el ámbito de tu tarea actual, que puede mejorars
 tags = [ "refactoring", "clean-code", "testing", "software-design"]
 [extra]
 subtitle = "Cuándo, cómo y por qué"
-static_thumbnail = "/images/blog/2020-06-28/cover.jpg"
+static_thumbnail = "/images/blog/2020-06-28/cover.webp"
 related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
   "blog/2020-08-17-testing-effectively-legacy-code.md",
@@ -63,4 +63,4 @@ Puedes leer más sobre cómo el testing está relacionado con la calidad aquí.
 
 El software no es como el vino: no mejora solo. Si quieres un sistema mejor, tienes que trabajar para conseguirlo.
 
-![el refactoring como mejora continua](/images/blog/2020-06-28/footer.jpg)
+![el refactoring como mejora continua](/images/blog/2020-06-28/footer.webp)

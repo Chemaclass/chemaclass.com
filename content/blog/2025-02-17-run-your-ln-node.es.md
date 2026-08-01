@@ -72,7 +72,7 @@ Antes de empezar, vas a necesitar las siguientes cosas:
 - Tarjeta de memoria SD (32/64gb) _(~10€)_
 - Adaptador de tarjeta SD a USB (para flashear el SO en la raspi) _(~10€)_
 
-![tutorial](/images/blog/2025-02-17/requirements.jpg)
+![tutorial](/images/blog/2025-02-17/requirements.webp)
 
 ### Pasos de instalación
 

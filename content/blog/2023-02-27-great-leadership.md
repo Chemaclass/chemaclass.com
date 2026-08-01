@@ -6,7 +6,7 @@ draft = false
 tags = [ "leadership", "communication", "team-management", "mentoring" ]
 [extra]
 subtitle = "Leadership starts within your own life and behaviour"
-static_thumbnail = "/images/blog/2023-02-27/cover.jpg"
+static_thumbnail = "/images/blog/2023-02-27/cover.webp"
 related_posts = [
   "blog/2022-09-25-the-beauty-of-leadership.md",
 ]
@@ -111,7 +111,7 @@ Regarding communication, you might need some good persuasion skills to convince 
 > "Negotiation begins with listening, making it about the other people, validating their emotions, and creating enough trust and safety for a real conversation to begin." - Never split the difference
 
 
-![blog-middle](/images/blog/2023-02-27/middle.jpg)
+![blog-middle](/images/blog/2023-02-27/middle.webp)
 
 ---
 
@@ -161,7 +161,7 @@ However, these are the essential points to remember:
 
 Your primary responsibility is to help others improve, and this is only possible if you **embrace the change** and **start with yourself**.
 
-![blog-footer](/images/blog/2023-02-27/footer.jpg)
+![blog-footer](/images/blog/2023-02-27/footer.webp)
 
 ### All mentioned authors
 

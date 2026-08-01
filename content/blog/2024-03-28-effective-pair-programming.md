@@ -7,7 +7,7 @@ aliases = [ "/pair-programming" ]
 tags = ["pair-programming", "xp", "tdd", "communication", "clean-code"]
 [extra]
 subtitle = "Embracing quality practices in your engineering culture"
-static_thumbnail = "/images/blog/2024-03-28/cover.jpg"
+static_thumbnail = "/images/blog/2024-03-28/cover.webp"
 pin = false
 series = "craftsmanship"
 series_order = 7
@@ -57,7 +57,7 @@ It is about the constant **sharing** of **knowledge** atmosphere by default, red
 
 It is about **team cohesion** and sharpening the feeling that we belong. When we understand each other's strengths and weaknesses, we will realize how much we can help each other grow.
 
-![blog-img](/images/blog/2024-03-28/footer.jpg)
+![blog-img](/images/blog/2024-03-28/footer.webp)
 
 ## How can you practice pair programming?
 

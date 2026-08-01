@@ -28,7 +28,7 @@ sort_by = "weight"
   - [Full-day Workshop: Modernizing Legacy PHP with Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
     *Hands-on workshop where participants tackle real legacy code using TDD, refactoring patterns, and collaborative pair programming.*
 
-![workshop ipc berlin 2026](/images/talks/2026-06-08/workshop-ipc-berlin26.jpg)
+![workshop ipc berlin 2026](/images/talks/2026-06-08/workshop-ipc-berlin26.webp)
 
 ---
 
@@ -48,7 +48,7 @@ sort_by = "weight"
   - [From $this to (this): A Gentle Introduction to Phel](https://phpconference.com/web-development/phel-introduction-functional-programming-lisp/)
     *A gentle path from PHP's OOP to Phel's functional world, with live coding demos bridging both paradigms.*
 
-![workshop ipc munich 2025](/images/talks/2025-10-27/workshop-ipc-munich25.jpg)
+![workshop ipc munich 2025](/images/talks/2025-10-27/workshop-ipc-munich25.webp)
 
 ### August
 

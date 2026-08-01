@@ -6,7 +6,7 @@ draft = false
 tags = [ "ai", "software", "craftsmanship", "productivity", "developer-tools" ]
 [extra]
 subtitle = "Inteligencia sin experiencia es entretenimiento"
-static_thumbnail = "/images/blog/2026-05-19/cover.jpg"
+static_thumbnail = "/images/blog/2026-05-19/cover.webp"
 series = "ai"
 series_order = 7
 reading_time = 4
@@ -99,7 +99,7 @@ El agente ve la descripción en la lista de skills. Pides un review, carga `SKIL
 
 {% end %}
 
-![blog-middle](/images/blog/2026-05-19/middle.jpg)
+![blog-middle](/images/blog/2026-05-19/middle.webp)
 
 ## Skills vs agentes especializados
 
@@ -148,7 +148,7 @@ El agente sale el año que viene. El skill se queda para siempre.
 
 > Escribe el skill una vez. Cada sesión a partir de ahí empieza donde acabó la anterior.
 
-![blog-footer](/images/blog/2026-05-19/footer.jpg)
+![blog-footer](/images/blog/2026-05-19/footer.webp)
 
 ---
 

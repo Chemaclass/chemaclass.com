@@ -6,7 +6,7 @@ draft = false
 tags = [ "testing", "tdd", "agile", "clean-code" ]
 [extra]
 subtitle = "¿Cómo encaja una persona QA dedicada en tu equipo agile?"
-static_thumbnail = "/images/blog/2023-05-17/cover.jpg"
+static_thumbnail = "/images/blog/2023-05-17/cover.webp"
 related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
   "blog/2021-08-01-test-driven-development.md",
@@ -64,4 +64,4 @@ Y así es como cambias la "posición de QA a tiempo completo" en una "mentalidad
 
 El código nunca miente y nunca olvida; una vez que está escrito y automatizado en tu pipeline, puedes ejecutarlo en cualquier momento sin coste.
 
-![blog-footer](/images/blog/2023-05-17/footer.jpg)
+![blog-footer](/images/blog/2023-05-17/footer.webp)

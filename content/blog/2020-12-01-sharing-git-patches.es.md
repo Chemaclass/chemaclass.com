@@ -5,7 +5,7 @@ description = "Descubre otra forma de compartir sugerencias con tu equipo de des
 tags = [ "git", "code-review", "communication", "pair-programming"]
 [extra]
 subtitle = "Otra forma de compartir sugerencias rápidas con tu equipo"
-static_thumbnail = "/images/blog/2020-12-01/cover.jpg"
+static_thumbnail = "/images/blog/2020-12-01/cover.webp"
 related_posts = [
   "blog/2021-04-01-pull-request-vs-pair-prog.md",
   "blog/2025-04-12-ship-show-ask.md",

@@ -6,7 +6,7 @@ draft = false
 tags = [ "agile", "software-design", "team-management", "productivity" ]
 [extra]
 subtitle = "What makes Waterfall a poor fit for modern software development?"
-static_thumbnail = "/images/blog/2024-08-01/cover.jpg"
+static_thumbnail = "/images/blog/2024-08-01/cover.webp"
 related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
@@ -53,7 +53,7 @@ The big issue is when higher-ups dictate exactly how teams should work, leading 
 
 ---
 
-![agile vs waterfall](/images/blog/2024-08-01/footer.jpg)
+![agile vs waterfall](/images/blog/2024-08-01/footer.webp)
 
 ## Why Agile was created
 

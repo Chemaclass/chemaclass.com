@@ -6,7 +6,7 @@ draft = false
 tags = [ "ai", "software", "tutorial", "craftsmanship", "developer-tools", "productivity" ]
 [extra]
 subtitle = "Un tutorial sobre rules, skills, agents, hooks y settings"
-static_thumbnail = "/images/blog/2026-04-17/cover.jpg"
+static_thumbnail = "/images/blog/2026-04-17/cover.webp"
 series = "ai"
 series_order = 5
 related_posts = [
@@ -132,7 +132,7 @@ Las rules del compilador no se activan al editar código Phel. Las rules de Phel
 
 Las rules no son sugerencias. Viajan con el código: un cambio de convención y su rule viajan en el mismo commit. Sin drift, sin wikis desactualizadas.
 
-![blog-middle](/images/blog/2026-04-17/middle.jpg)
+![blog-middle](/images/blog/2026-04-17/middle.webp)
 
 ## Automatización y delegación
 
@@ -200,4 +200,4 @@ Commitea la carpeta. Compártela. Cuando alguien se una, su sesión hereda todo.
 
 Trata `.claude/` como infraestructura. Versiónala. Revísala. Hazla evolucionar con el código.
 
-![blog-footer](/images/blog/2026-04-17/footer.jpg)
+![blog-footer](/images/blog/2026-04-17/footer.webp)

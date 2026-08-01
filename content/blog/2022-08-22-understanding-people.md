@@ -6,7 +6,7 @@ draft = false
 tags = [ "communication", "psychology", "team-management" ]
 [extra]
 subtitle = "Misunderstandings, effective communication, and self-reflection"
-static_thumbnail = "/images/blog/2022-08-22/cover.jpg"
+static_thumbnail = "/images/blog/2022-08-22/cover.webp"
 related_posts = [
   "blog/2024-09-02-people-skills.md",
   "blog/2022-04-02-dunbar-number.md",
@@ -85,4 +85,4 @@ are surrounded by, **especially when dealing with people**.
 > Look over your reach area, share your thoughts, and don't be ashamed of your mistakes as far as you take them as
 > learning opportunities.
 
-![people communicating](/images/blog/2022-08-22/footer.jpg)
+![people communicating](/images/blog/2022-08-22/footer.webp)

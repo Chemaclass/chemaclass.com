@@ -6,7 +6,7 @@ draft = false
 tags = ["leadership", "team-management", "psychology", "communication"]
 [extra]
 subtitle = "Tuckman's Model to drive a team to high performance"
-static_thumbnail = "/images/blog/2023-11-25/cover.jpg"
+static_thumbnail = "/images/blog/2023-11-25/cover.webp"
 related_posts = [
   "blog/2022-08-22-understanding-people.md",
   "blog/2023-02-27-great-leadership.md",
@@ -53,7 +53,7 @@ Conflict and disagreement emerge as team members start to express their individu
 - Acknowledge and address conflicts constructively
 - Encourage open and honest communication while guiding the team through the process of understanding and appreciating diverse perspectives
 
-![blog-middle](/images/blog/2023-11-25/middle.jpg)
+![blog-middle](/images/blog/2023-11-25/middle.webp)
 
 ## Norming
 
@@ -92,7 +92,7 @@ This stage involves the completion of the task or project. Team members may expe
 - Facilitate a reflective session to capture lessons learned and create a positive closure experience
 
 
-![blog-footer](/images/blog/2023-11-25/footer.jpg)
+![blog-footer](/images/blog/2023-11-25/footer.webp)
 
 To develop a team to a high-performance level using [Tuckman's Model](https://en.wikipedia.org/wiki/Tuckman's_stages_of_group_development), **leaders** should be aware of the stages and **adapt** their leadership style accordingly.
 

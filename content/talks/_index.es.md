@@ -28,7 +28,7 @@ sort_by = "weight"
   - [Taller de día completo: Modernizando PHP Legacy con Pair Programming](https://phpconference.com/php-core-coding/refactoring-workshop-modernizing-legacy-php-pair-programming/)
     *Taller práctico donde los participantes trabajan con código legacy real usando TDD, patrones de refactoring y pair programming colaborativo.*
 
-![workshop ipc berlin 2026](/images/talks/2026-06-08/workshop-ipc-berlin26.jpg)
+![workshop ipc berlin 2026](/images/talks/2026-06-08/workshop-ipc-berlin26.webp)
 
 ---
 
@@ -48,7 +48,7 @@ sort_by = "weight"
   - [De $this a (this): Una introducción amigable a Phel](https://phpconference.com/web-development/phel-introduction-functional-programming-lisp/)
     *Un camino amigable del OOP de PHP al mundo funcional de Phel, con demos de live coding uniendo ambos paradigmas.*
 
-![workshop ipc munich 2025](/images/talks/2025-10-27/workshop-ipc-munich25.jpg)
+![workshop ipc munich 2025](/images/talks/2025-10-27/workshop-ipc-munich25.webp)
 
 ### Agosto
 

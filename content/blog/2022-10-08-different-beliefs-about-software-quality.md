@@ -6,7 +6,7 @@ draft = false
 tags = [ "clean-code", "agile", "xp", "communication", "career" ]
 [extra]
 subtitle = "Some thoughts about software quality among your team"
-static_thumbnail = "/images/blog/2022-10-08/cover.jpg"
+static_thumbnail = "/images/blog/2022-10-08/cover.webp"
 related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
   "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
@@ -85,7 +85,7 @@ beliefs. After all, you're the first and primary responsible person for taking c
 
 ---
 
-![blog-footer](/images/blog/2022-10-08/footer.jpg)
+![blog-footer](/images/blog/2022-10-08/footer.webp)
 
 ## Extra thoughts
 

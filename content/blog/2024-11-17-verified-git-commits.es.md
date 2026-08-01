@@ -6,7 +6,7 @@ draft = false
 tags = [ "git", "security", "cryptography", "open-source" ]
 [extra]
 subtitle = "Aumentando la confianza y seguridad en tu código"
-static_thumbnail = "/images/blog/2024-11-17/cover.jpg"
+static_thumbnail = "/images/blog/2024-11-17/cover.webp"
 related_posts = [
   "blog/2024-07-13-pretty-good-privacy.md",
   "blog/2021-05-03-open-source-software.md",
@@ -41,7 +41,7 @@ Sin firmar, cualquiera puede falsificar un commit usando tu email. GitHub lo vin
 
 ![blog-cover](/images/blog/2024-11-17/impersonating-commit.jpg)
 
-![blog-cover](/images/blog/2024-11-17/impersonating-commit4.jpg)
+![blog-cover](/images/blog/2024-11-17/impersonating-commit4.webp)
 
 Al firmar tus commits, demuestras que el trabajo es tuyo. Evitas la suplantación, generas confianza y mantienes todo transparente.
 

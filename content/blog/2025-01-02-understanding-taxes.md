@@ -7,7 +7,7 @@ draft = false
 tags = [ "bitcoin", "philosophy", "economics", "privacy" ]
 [extra]
 subtitle = "Where your money goes and how to rethink the system"
-static_thumbnail = "/images/blog/2025-01-02/cover.jpg"
+static_thumbnail = "/images/blog/2025-01-02/cover.webp"
 series = "bitcoin"
 series_order = 4
 related_posts = [
@@ -94,7 +94,7 @@ These include fees for registering vehicles, paying for waste collection, and ob
 
 ## How do they work?
 
-![how taxes work](/images/blog/2025-01-02/middle.jpg)
+![how taxes work](/images/blog/2025-01-02/middle.webp)
 
 Taxes are usually a mix of **national**, **regional**, and **local** responsibilities:
 
@@ -154,4 +154,4 @@ With its **fixed supply of 21 million** coins, Bitcoin cannot be inflated in thi
 
 **Bitcoin** doesn't eliminate taxes or public services but **challenges how we think about money and power**. It gives people more **control over their wealth** and shows how financial systems work without needing large, often corrupt institutions. It's **a step toward a world where individuals have more freedom** and governments focus on being small, efficient, and fair.
 
-![bitcoin and freedom](/images/blog/2025-01-02/footer.jpg)
+![bitcoin and freedom](/images/blog/2025-01-02/footer.webp)

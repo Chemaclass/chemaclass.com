@@ -6,7 +6,7 @@ draft = false
 tags = [ "ai", "software", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "From solo assistant to coordinated workforce"
-static_thumbnail = "/images/blog/2026-02-07/cover.jpg"
+static_thumbnail = "/images/blog/2026-02-07/cover.webp"
 series = "ai"
 series_order = 3
 related_posts = [
@@ -146,7 +146,7 @@ You can view the team in-process (single terminal, navigate with Shift+Up/Down) 
 
 Teammates load your project context automatically (`CLAUDE.md`, MCP servers, skills) but don't inherit the lead's conversation history. When spawning a teammate, be specific about which files to focus on and what constraints apply. A vague spawn prompt produces vague work.
 
-![blog-middle](/images/blog/2026-02-07/middle.jpg)
+![blog-middle](/images/blog/2026-02-07/middle.webp)
 
 ### Plan first, execute after
 
@@ -251,4 +251,4 @@ If you want a starting point, I put together [laravel-claude-toolkit](https://gi
 - [Claude Code: Agent Teams](https://code.claude.com/docs/en/agent-teams) | claude.com
 - [Claude Code Tips: Workflow Boosters](https://rfrolov.me/en/blog/claude-code-tips) | rfrolov.me
 
-![blog-footer](/images/blog/2026-02-07/footer.jpg)
+![blog-footer](/images/blog/2026-02-07/footer.webp)

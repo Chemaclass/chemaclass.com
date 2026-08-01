@@ -6,7 +6,7 @@ draft = false
 tags = [ "career", "productivity", "philosophy" ]
 [extra]
 subtitle = "Cómo encontrar un equilibrio entre crecimiento y felicidad"
-static_thumbnail = "/images/blog/2023-03-16/cover.jpg"
+static_thumbnail = "/images/blog/2023-03-16/cover.webp"
 related_posts = [
   "blog/2019-11-18-improve-your-tech-talk.md",
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
@@ -71,7 +71,7 @@ Por eso disfruto leer (o escuchar) un libro al mes. Por eso disfruto aprender en
 
 Hace unos años escribí sobre [el proceso en sí mismo como objetivo](/es/blog/the-process-itself-is-the-goal/): "_La repetición es la clave. Facilita hacer lo que quieres hacer. Dificulta hacer lo que quieres dejar de hacer. Disfruta el proceso: ese es el objetivo._"
 
-![blog-middle](/images/blog/2023-03-16/middle.jpg)
+![blog-middle](/images/blog/2023-03-16/middle.webp)
 
 ## ¿Cuánto tiempo tengo?
 
@@ -91,4 +91,4 @@ No espero que las cosas cambien de un día para otro. Disfruto experimentando, c
 
 Lo que me mantiene en movimiento es <u>el tiempo que me queda</u> y pensar: "**¿Qué me habría gustado haber cambiado?**" Y si es así, "**¿Por qué no lo hice?**"
 
-![blog-footer](/images/blog/2023-03-16/footer.jpg)
+![blog-footer](/images/blog/2023-03-16/footer.webp)

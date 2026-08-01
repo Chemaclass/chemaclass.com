@@ -6,7 +6,7 @@ draft = false
 tags = [ "communication", "team-management", "career", "leadership" ]
 [extra]
 subtitle = "Del código a la colaboración"
-static_thumbnail = "/images/blog/2024-09-02/cover.jpg"
+static_thumbnail = "/images/blog/2024-09-02/cover.webp"
 related_posts = [
   "blog/2022-08-22-understanding-people.md",
   "blog/2023-12-30-great-engineering.md",
@@ -85,4 +85,4 @@ Mientras que las habilidades técnicas pueden requerir que te sumerjas en docume
 
 Los humanos traen sus sentimientos, antecedentes y rutinas a las interacciones, añadiendo capas de complejidad más allá de la lógica directa de las máquinas. Estos detalles personales moldean la realidad que percibimos, haciendo que las habilidades interpersonales sean una parte esencial pero compleja de la comunicación y colaboración efectiva.
 
-![las habilidades interpersonales importan](/images/blog/2024-09-02/footer.jpg)
+![las habilidades interpersonales importan](/images/blog/2024-09-02/footer.webp)

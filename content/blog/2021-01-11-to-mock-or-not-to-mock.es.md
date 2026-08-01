@@ -5,7 +5,7 @@ description = "Mockear es útil, pero 'qué mockear' suele resultar más complic
 tags = [ "testing", "tdd", "software-design", "clean-code", "php" ]
 [extra]
 subtitle = "Cómo escapar del infierno del mocking"
-static_thumbnail = "/images/blog/2021-01-11/cover.jpg"
+static_thumbnail = "/images/blog/2021-01-11/cover.webp"
 related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
   "blog/2021-08-01-test-driven-development.md",
@@ -92,7 +92,7 @@ Cuando estés escribiendo un test unitario:
 * Haz las dependencias explícitas.
 * Programa hacia una interfaz, no hacia una implementación.
 
-![mockea interfaces, instancia clases concretas](/images/blog/2021-01-11/footer.jpg)
+![mockea interfaces, instancia clases concretas](/images/blog/2021-01-11/footer.webp)
 
 ---
 

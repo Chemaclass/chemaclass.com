@@ -7,7 +7,7 @@ aliases = [ "/blog/how-do-you-deal-with-hard-people", "/blog/how-to-get-everyone
 tags = [ "leadership", "communication", "team-management", "mentoring", "xp" ]
 [extra]
 subtitle = "How do you deal with people reluctant to change?"
-static_thumbnail = "/images/blog/2023-08-02/cover.jpg"
+static_thumbnail = "/images/blog/2023-08-02/cover.webp"
 related_posts = [
   "blog/2022-08-22-understanding-people.md",
   "blog/2022-11-11-working-agile-with-non-agile-teams.md",

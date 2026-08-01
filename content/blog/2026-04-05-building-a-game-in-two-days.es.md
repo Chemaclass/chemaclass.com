@@ -6,7 +6,7 @@ draft = false
 tags = ["ai", "software", "open-source"]
 [extra]
 subtitle = "Qué ocurre cuando le das una misión a una IA y te apartas del camino"
-static_thumbnail = "/images/blog/2026-04-04/cover.png"
+static_thumbnail = "/images/blog/2026-04-04/cover.webp"
 related_posts = [
   "blog/2026-02-07-build-your-own-team-of-agents.md",
   "blog/2026-01-11-mcp-giving-your-ai-agent-the-right-context.md",
@@ -50,7 +50,7 @@ Le pedí a Sauron que los dibujara en condiciones. Frodo recibió cabello rizado
 
 Todo dibujado con llamadas de canvas. Sin archivos de imagen. Cada píxel calculado en tiempo de ejecución.
 
-![Los Campos del Pelennor, capítulo completado](/images/blog/2026-04-04/gameplay-pelennor.png)
+![Los Campos del Pelennor, capítulo completado](/images/blog/2026-04-04/gameplay-pelennor.webp)
 
 ## Nueve niveles, nueve capítulos
 

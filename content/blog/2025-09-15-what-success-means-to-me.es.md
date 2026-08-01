@@ -6,7 +6,7 @@ draft = false
 tags = [ "philosophy", "career", "productivity", "leadership" ]
 [extra]
 subtitle = "Una definición simple que cambió cómo vivo"
-static_thumbnail = "/images/blog/2025-11-15/cover.jpg"
+static_thumbnail = "/images/blog/2025-11-15/cover.webp"
 related_posts = [
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
   "blog/2021-03-01-embrace-the-change.md",
@@ -106,7 +106,7 @@ Y prepárate para [abrazar el cambio](/es/blog/embrace-the-change) cuando tu def
 
 Eso se siente como éxito para mí.
 
-![lo que el éxito significa para mí](/images/blog/2025-11-15/footer.jpg)
+![lo que el éxito significa para mí](/images/blog/2025-11-15/footer.webp)
 
 ---
 

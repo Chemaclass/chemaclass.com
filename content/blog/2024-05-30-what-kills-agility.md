@@ -6,7 +6,7 @@ draft = false
 tags = ["agile", "xp", "leadership", "team-management", "communication"]
 [extra]
 subtitle = "Why Agile if you already do Scrum, Kanban, SAFe, or Waterfall?"
-static_thumbnail = "/images/blog/2024-05-30/cover.jpg"
+static_thumbnail = "/images/blog/2024-05-30/cover.webp"
 pin = false
 related_posts = [
   "blog/2022-11-11-working-agile-with-non-agile-teams.md",
@@ -63,4 +63,4 @@ Learn the basics of Extreme Programming (XP) and Lean Software Development.
 - **XP**: Focused on software development practices and technical excellence, with specific practices like pair programming and Test-Driven Development (TDD).
 - **Lean**: Takes a broader approach, focusing on removing waste, optimizing flow, and improving processes across the organization.
 
-![blog-cover](/images/blog/2024-05-30/footer.jpg)
+![blog-cover](/images/blog/2024-05-30/footer.webp)

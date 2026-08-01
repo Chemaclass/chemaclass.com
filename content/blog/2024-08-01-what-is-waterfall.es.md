@@ -6,7 +6,7 @@ draft = false
 tags = [ "agile", "software-design", "team-management", "productivity" ]
 [extra]
 subtitle = "¿Qué hace que Waterfall sea inadecuado para el desarrollo de software moderno?"
-static_thumbnail = "/images/blog/2024-08-01/cover.jpg"
+static_thumbnail = "/images/blog/2024-08-01/cover.webp"
 related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
@@ -53,7 +53,7 @@ El gran problema es cuando los superiores dictan exactamente cómo deben trabaja
 
 ---
 
-![agile vs waterfall](/images/blog/2024-08-01/footer.jpg)
+![agile vs waterfall](/images/blog/2024-08-01/footer.webp)
 
 ## Por qué se creó Agile
 

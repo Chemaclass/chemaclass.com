@@ -73,7 +73,7 @@ Before we begin, you are going to need the following things:
 - SD memory card (32/64gb) _(~10€)_
 - Adapter SD card to USB (to flash the OS into the raspi) _(~10€)_
 
-![tutorial](/images/blog/2025-02-17/requirements.jpg)
+![tutorial](/images/blog/2025-02-17/requirements.webp)
 
 ### Installation Steps
 

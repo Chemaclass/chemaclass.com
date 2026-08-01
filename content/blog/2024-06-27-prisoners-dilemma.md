@@ -6,7 +6,7 @@ draft = false
 tags = ["psychology", "philosophy", "communication"]
 [extra]
 subtitle = "The dilemma of trust and self-interest"
-static_thumbnail = "/images/blog/2024-06-27/cover.jpg"
+static_thumbnail = "/images/blog/2024-06-27/cover.webp"
 related_posts = [
   "blog/2022-11-11-working-agile-with-non-agile-teams.md",
   "blog/2023-06-08-learned-helplessness.md",

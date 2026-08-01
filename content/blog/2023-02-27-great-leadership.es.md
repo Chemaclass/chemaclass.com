@@ -6,7 +6,7 @@ draft = false
 tags = [ "leadership", "communication", "team-management", "mentoring" ]
 [extra]
 subtitle = "El liderazgo comienza dentro de tu propia vida y comportamiento"
-static_thumbnail = "/images/blog/2023-02-27/cover.jpg"
+static_thumbnail = "/images/blog/2023-02-27/cover.webp"
 related_posts = [
   "blog/2022-09-25-the-beauty-of-leadership.md",
 ]
@@ -111,7 +111,7 @@ En comunicación, necesitas buenas habilidades de persuasión para convencer a o
 > "La negociación comienza con escuchar, haciendo que se trate de las otras personas, validando sus emociones y creando suficiente confianza y seguridad para que una conversación real pueda comenzar." - Never split the difference
 
 
-![blog-middle](/images/blog/2023-02-27/middle.jpg)
+![blog-middle](/images/blog/2023-02-27/middle.webp)
 
 ---
 
@@ -161,7 +161,7 @@ Los puntos esenciales a recordar:
 
 Tu responsabilidad principal es ayudar a otros a mejorar. Y eso solo es posible si **abrazas el cambio** y **empiezas contigo mismo**.
 
-![blog-footer](/images/blog/2023-02-27/footer.jpg)
+![blog-footer](/images/blog/2023-02-27/footer.webp)
 
 ### Todos los autores mencionados
 

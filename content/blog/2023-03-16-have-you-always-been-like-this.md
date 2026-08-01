@@ -6,7 +6,7 @@ draft = false
 tags = [ "career", "productivity", "philosophy" ]
 [extra]
 subtitle = "How to find a balance of growth and happiness"
-static_thumbnail = "/images/blog/2023-03-16/cover.jpg"
+static_thumbnail = "/images/blog/2023-03-16/cover.webp"
 related_posts = [
   "blog/2019-11-18-improve-your-tech-talk.md",
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
@@ -71,7 +71,7 @@ This is why I enjoy reading (or listening to a book) per month. This is why I en
 
 A few years ago, I wrote about [the process itself as the goal](/blog/the-process-itself-is-the-goal/), which says basically: "_Repetition is the key. Make it easier to do what you want to do. Make it harder to do what you want to stop doing. Enjoy the process: that's the goal._"
 
-![blog-middle](/images/blog/2023-03-16/middle.jpg)
+![blog-middle](/images/blog/2023-03-16/middle.webp)
 
 ## How much time do I have?
 
@@ -91,4 +91,4 @@ I don't expect things to change from one day to another. I enjoy experimenting, 
 
 What keeps me moving is <u>the time I have left</u> and the idea of thinking, "**what would I like to have changed?**" And in such a case, "**Why didn't I?**"
 
-![blog-footer](/images/blog/2023-03-16/footer.jpg)
+![blog-footer](/images/blog/2023-03-16/footer.webp)
