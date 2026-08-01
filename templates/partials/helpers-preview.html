@@ -12,8 +12,11 @@
         {% else %}
           {% set card_path = post.extra.static_thumbnail | trim_start_matches(pat="/") %}
           {% if featured %}
-            {% set card_webp = resize_image(path=card_path, width=960, height=540, op="fill", quality=100, format="webp") %}
-            {% set card_fb = resize_image(path=card_path, width=960, height=540, op="fill", quality=100) %}
+            {# quality=88, not 100: at 100 the encoder stops discarding anything and
+               the featured card came out at 434KB, which is the LCP image of every
+               listing page. The rest of the site already renders heroes at 88. #}
+            {% set card_webp = resize_image(path=card_path, width=960, height=540, op="fill", quality=88, format="webp") %}
+            {% set card_fb = resize_image(path=card_path, width=960, height=540, op="fill", quality=85) %}
           {% else %}
             {% set card_webp = resize_image(path=card_path, width=480, height=270, op="fill", quality=75, format="webp") %}
             {% set card_fb = resize_image(path=card_path, width=480, height=270, op="fill", quality=80) %}
