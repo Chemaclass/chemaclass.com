@@ -149,6 +149,10 @@
   </style>
 </head>
 <body>
+  {# The page is one canvas-like terminal, so it had no heading at all: the only
+     two pages on the site without one. Off-screen rather than visible, because
+     the terminal draws its own banner. #}
+  <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">{{ page.title }}</h1>
   <div id="terminal"></div>
 
   <!-- jQuery -->
