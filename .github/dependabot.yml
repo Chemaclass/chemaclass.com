@@ -1,0 +1,13 @@
+# Actions drift quietly: the pinned majors kept running on Node 20 long after it
+# was deprecated, and the only sign was a warning at the bottom of every deploy.
+# Weekly is often enough for a site that deploys from one workflow.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: ci
+    labels:
+      - dependencies
