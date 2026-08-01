@@ -68,6 +68,9 @@ echo "Using Zola $(zola --version)"
 
 # Before the build, not after: the templates read these dates with load_data()
 # to publish an honest dateModified.
+echo "Fetching the GitHub star counts..."
+python3 scripts/fetch-github-stars.py
+
 echo "Recording last-modified dates from git..."
 python3 scripts/generate-last-modified.py
 

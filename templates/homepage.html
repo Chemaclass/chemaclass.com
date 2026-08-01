@@ -38,13 +38,18 @@
 {% endblock posthead %}
 
 {% block content %}
-{# Star counts fetched at build time; fall back to last known values if the API is unreachable. #}
-{% set phel_data = load_data(url="https://api.github.com/repos/phel-lang/phel-lang", format="json", required=false) %}
-{% set bashunit_data = load_data(url="https://api.github.com/repos/TypedDevs/bashunit", format="json", required=false) %}
+{# Star counts, read from the file scripts/fetch-github-stars.py writes before the
+   build. This used to call api.github.com from the template, which is two
+   unauthenticated requests from a shared CI address in the middle of rendering.
+   The fallbacks below are what shows when the file is missing, as it is on a
+   fresh clone running `zola serve`. #}
+{% set github_stars = load_data(path="data/github-stars.json", format="json", required=false) %}
 {% set_global phel_stars = 513 %}
-{% if phel_data %}{% set_global phel_stars = phel_data.stargazers_count %}{% endif %}
 {% set_global bashunit_stars = 413 %}
-{% if bashunit_data %}{% set_global bashunit_stars = bashunit_data.stargazers_count %}{% endif %}
+{% if github_stars %}
+  {% set_global phel_stars = github_stars.phel | default(value=phel_stars) %}
+  {% set_global bashunit_stars = github_stars.bashunit | default(value=bashunit_stars) %}
+{% endif %}
 <div class="homepage-container">
     <!-- Top Row: Hero Left + Nav/Search/About Right -->
     <div class="homepage-top">
