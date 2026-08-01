@@ -38,6 +38,54 @@ The site supports English (default) and Spanish:
 - `zola serve` - Start dev server at http://127.0.0.1:1111
 - `zola check` - Verify internal links
 - `./build.sh` - Production build script
+- `python3 scripts/validate-prod.py [--full]` - Check the live site (also `/validate-prod`)
+
+## Build Pipeline
+
+`./build.sh` is `zola build` plus a chain of stdlib-only Python steps, in order.
+Anything that reads or writes build output belongs here, not in a template.
+
+Before the build:
+
+- `generate-last-modified.py` - the date each content file was last *substantially*
+  edited, from git, into `data/last-modified.json` (gitignored). At least 25 changed
+  words below the front matter counts; punctuation sweeps, accent fixes and moved
+  paragraphs do not. Feeds `dateModified` and the visible "Updated" stamp.
+
+After it, each reading `public/` or `content/`:
+
+- `check-icons.py`, `check-topics.py` - the Font Awesome subset covers every icon,
+  `/topics/` covers every tag.
+- `enrich-search-index.py` - dates into the elasticlunr index.
+- `generate-terminal-fs.py` - the filesystem behind `/terminal/`.
+- `generate-txt-pages.py`, `generate-md-pages.py` - the `.txt` (EN only) and `.md`
+  mirrors next to every blog, readings and talks entry. Drafts are skipped.
+- `generate-llms-txt.py` - `llms-full.txt`, and the entry list below the
+  `## Content index` marker in both `llms.txt` files.
+- `generate-feed-json.py` - JSON Feed.
+- `optimize-content-images.py` - `loading`, `decoding`, `width` and `height` on
+  in-article images. Do not reintroduce a runtime version: setting these after load
+  is too late, the preload scanner has already started every request.
+- `generate-index-json.py` - `/index.json`, every entry with each format's URL.
+- `enrich-sitemap.py` - git `<lastmod>`, hreflang pairs, page images.
+- `check-assets.py` - every referenced file exists. Fails the build.
+
+CI additionally runs `check-js-runtime.py` (headless Chrome, uncaught JS errors)
+and, after deploying, `indexnow.py` for the URLs the push changed.
+
+## Config Knobs
+
+`config.toml` carries more than Zola's own settings:
+
+- `[extra.content_license]` - the licence quoted by the schema, the head link, the
+  footer, `ai.txt` and the markdown mirrors. Poetry opts out in `books/post.html`.
+- `[[extra.tag_descriptions]]` - `name`, `desc`, `desc_es`, and `entity`, the URL a
+  tag resolves to. Used by tag pages (`DefinedTerm`) and by posts (`about`).
+- `[extra.series.<key>]`, `[[extra.topics]]`, `start_here_posts`, `nav`.
+
+Optional `[extra]` fields on content: `tldr` (summary box and schema `abstract`),
+`faq` (rendered `<details>` list and `FAQPage`), `videos` and `slides` on talks
+(`VideoObject`, `PresentationDigitalDocument`).
 
 ## Blog Writing
 
