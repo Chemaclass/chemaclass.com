@@ -50,16 +50,27 @@ def report(name: str, passed: bool, detail: str = '') -> bool:
     return passed
 
 
-def get(url: str) -> Tuple[int, str]:
-    try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40) as r:
-            raw = r.read()
-            body = gzip.decompress(raw) if r.headers.get('Content-Encoding') == 'gzip' else raw
-            return r.status, body.decode('utf-8', 'replace')
-    except urllib.error.HTTPError as e:
-        return e.code, ''
-    except Exception:
-        return 0, ''
+def get(url: str, attempts: int = 3) -> Tuple[int, str]:
+    """Fetch a page, retrying what looks like throttling rather than a fault.
+
+    The host answers a burst of parallel requests with a 503, and the weight pass
+    makes exactly that kind of burst. Reporting the next page as unreachable
+    because of it teaches everyone to ignore this script.
+    """
+    for attempt in range(attempts):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40) as r:
+                raw = r.read()
+                body = gzip.decompress(raw) if r.headers.get('Content-Encoding') == 'gzip' else raw
+                return r.status, body.decode('utf-8', 'replace')
+        except urllib.error.HTTPError as e:
+            if e.code < 500 or attempt == attempts - 1:
+                return e.code, ''
+        except Exception:
+            if attempt == attempts - 1:
+                return 0, ''
+        time.sleep(1 + attempt)
+    return 0, ''
 
 
 def weigh(url: str) -> Tuple[int, float]:
