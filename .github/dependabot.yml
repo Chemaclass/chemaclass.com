@@ -11,3 +11,16 @@ updates:
       prefix: ci
     labels:
       - dependencies
+    # Majors only. Every action here floats on its major tag, which already picks
+    # up fixes, so a minor or patch bump means pinning one action to an exact
+    # version while the other four keep floating. taiki-e/install-action shipped
+    # 17 releases in one month; the first such pull request was already a release
+    # behind by the time it was opened.
+    #
+    # A major bump is the one that carries the breaking change and the runtime
+    # deprecation, which is what this file is here to catch.
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-minor
+          - version-update:semver-patch
