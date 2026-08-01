@@ -107,6 +107,12 @@ python3 scripts/generate-index-json.py
 echo "Enriching sitemap with last-modified dates..."
 python3 scripts/enrich-sitemap.py
 
+# Last check before minify: every stylesheet, script, font and image the pages
+# reference has to exist. Zola verifies the links between pages; nothing verified
+# the files they load.
+echo "Checking every referenced file exists..."
+python3 scripts/check-assets.py
+
 echo "Minifying HTML, CSS, JS, SVG, and XML..."
 minify -r -o public/ public/
 
