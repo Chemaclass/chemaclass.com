@@ -40,14 +40,18 @@ jobs:
       # job showed what that costs: 56.9s cold against 34.5s with the images
       # already encoded.
       #
-      # Exact-match key, no restore-keys: a partial hit would keep resurrecting
-      # images whose source or resize settings have changed, and the stale copies
-      # would ride along in the published artifact.
+      # restore-keys means a push that changes a template or adds one image still
+      # starts from the previous set and re-encodes only what changed, instead of
+      # all 900. What used to make that unsafe was accumulation, and
+      # scripts/prune-processed-images.py now deletes anything the build stopped
+      # referencing before the cache is saved.
       - name: Cache the processed images
         uses: actions/cache@v6
         with:
           path: static/processed_images
           key: processed-images-${{ hashFiles('static/images/**', 'templates/**', 'config.toml') }}
+          restore-keys: |
+            processed-images-
 
       # Zola compares timestamps, not just filenames: a source image newer than
       # its processed output is re-encoded. Checkout stamps every source with the

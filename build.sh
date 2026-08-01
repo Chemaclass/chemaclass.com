@@ -113,6 +113,12 @@ python3 scripts/enrich-sitemap.py
 # Last check before minify: every stylesheet, script, font and image the pages
 # reference has to exist. Zola verifies the links between pages; nothing verified
 # the files they load.
+# After the last generator, so the references are final: anything in
+# static/processed_images the build no longer points at is dead weight in both
+# the cache and the published artifact.
+echo "Pruning processed images the build no longer uses..."
+python3 scripts/prune-processed-images.py
+
 echo "Checking every referenced file exists..."
 python3 scripts/check-assets.py
 
