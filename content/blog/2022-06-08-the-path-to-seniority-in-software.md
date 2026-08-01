@@ -20,6 +20,12 @@ related_readings = [
   "readings/2020-03-05-extreme-programming-explained.md",
   "readings/2020-03-26-the-manager-path.md",
 ]
+faq = [
+  { q = "What makes a developer senior?", a = "Not years. How well you transmit knowledge, collaborate, pair, test, deliver value in small chunks, handle change, and how deep your technical judgement goes on trade-offs. Technology is an implementation detail." },
+  { q = "Does experience equal seniority?", a = "No. Fifteen years doing the same thing every day is not the same as five years spent challenging yourself weekly. Time plus experience plus attitude is what builds a senior, and attitude is the part most people skip." },
+  { q = "Why does the senior title feel inflated?", a = "Because companies need experts on paper more than in reality, and years in the industry are the easiest thing to measure. In many years across several companies I have seen the software fundamentals well interiorized in about 10% of the people carrying the title." },
+  { q = "How do you start becoming senior?", a = "Teach one thing you understand to someone this week, volunteer for the task slightly beyond you, and after each project ask what you would do differently. Seniority is practiced, not granted." },
+]
 +++
 
 
