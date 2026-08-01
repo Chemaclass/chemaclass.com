@@ -98,6 +98,9 @@ python3 scripts/generate-llms-txt.py
 echo "Generating JSON Feed..."
 python3 scripts/generate-feed-json.py
 
+echo "Adding loading hints and dimensions to in-article images..."
+python3 scripts/optimize-content-images.py
+
 echo "Generating the machine-readable content index..."
 python3 scripts/generate-index-json.py
 
