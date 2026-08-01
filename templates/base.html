@@ -395,6 +395,19 @@
     {% elif section.permalink %}
       <link rel="canonical" href="{{ section.permalink | safe }}" />
       <meta property="og:url" content="{{ section.permalink | safe }}" />
+    {# A taxonomy page has neither `page` nor `section`, only `term`. Without this
+       branch all 115 tag pages in each language fell through to the base URL and
+       declared the home page as their canonical, which tells Google they are
+       duplicates of it and takes them out of the index. #}
+    {% elif term.permalink %}
+      <link rel="canonical" href="{{ term.permalink | safe }}" />
+      <meta property="og:url" content="{{ term.permalink | safe }}" />
+    {# The taxonomy list page (/tags/) has no page, section or term either. Zola
+       sets current_url on everything it renders, so it is the last resort before
+       naming the home page, which was never a correct answer for any of these. #}
+    {% elif current_url %}
+      <link rel="canonical" href="{{ current_url | safe }}" />
+      <meta property="og:url" content="{{ current_url | safe }}" />
     {% else %}
       <link rel="canonical" href="{{ config.base_url | safe }}" />
       <meta property="og:url" content="{{ config.base_url | safe }}" />
@@ -423,6 +436,36 @@
         {% for t in section.translations %}{% if t.lang == "en" %}
           <link rel="alternate" hreflang="x-default" href="{{ t.permalink | safe }}" />
         {% endif %}{% endfor %}
+      {% endif %}
+    {# Same gap on the language tags: a term page carried none at all. The other
+       language only has this term when its own content uses it, and /es/tags/music/
+       does not exist, so the pair is emitted only after finding it. #}
+    {% elif term.permalink %}
+      {% set_global other_lang = "es" %}
+      {% if lang == "es" %}{% set_global other_lang = "en" %}{% endif %}
+      {% set other_taxonomy = get_taxonomy(kind="tags", lang=other_lang) %}
+      {% set_global other_term_url = "" %}
+      {% for other in other_taxonomy.items %}
+        {% if other.name == term.name %}{% set_global other_term_url = other.permalink %}{% endif %}
+      {% endfor %}
+      <link rel="alternate" hreflang="{{ lang }}" href="{{ term.permalink | safe }}" />
+      {% if other_term_url %}
+        <link rel="alternate" hreflang="{{ other_lang }}" href="{{ other_term_url | safe }}" />
+      {% endif %}
+      {% if lang == "en" %}
+        <link rel="alternate" hreflang="x-default" href="{{ term.permalink | safe }}" />
+      {% elif other_term_url %}
+        <link rel="alternate" hreflang="x-default" href="{{ other_term_url | safe }}" />
+      {% endif %}
+    {% elif current_url and not page.permalink and not section.permalink %}
+      {% if lang == "es" %}
+        <link rel="alternate" hreflang="es" href="{{ current_url | safe }}" />
+        <link rel="alternate" hreflang="en" href="{{ current_url | replace(from="/es/", to="/") | safe }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ current_url | replace(from="/es/", to="/") | safe }}" />
+      {% else %}
+        <link rel="alternate" hreflang="en" href="{{ current_url | safe }}" />
+        <link rel="alternate" hreflang="es" href="{{ current_url | replace(from=config.base_url, to=config.base_url ~ "/es") | safe }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ current_url | safe }}" />
       {% endif %}
     {% elif page.permalink %}
       {% if lang == "es" %}
