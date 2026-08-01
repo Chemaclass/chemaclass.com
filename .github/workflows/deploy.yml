@@ -35,19 +35,6 @@ jobs:
           # site published today's date as its last modification.
           fetch-depth: 0
 
-      # Zola resizes the covers and thumbnails into static/processed_images and
-      # skips any it has already produced. On a clean runner it has produced
-      # none, so every deploy re-encoded ~900 images and `zola build` took 44s of
-      # a 90s pipeline. The key is an exact match on purpose, with no
-      # restore-keys: a partial hit would keep resurrecting images whose source
-      # or resize settings have changed, and the stale copies would ride along
-      # in the artifact forever.
-      - name: Cache the processed images
-        uses: actions/cache@v6
-        with:
-          path: static/processed_images
-          key: processed-images-${{ hashFiles('static/images/**', 'templates/**', 'config.toml') }}
-
       - name: Install Zola
         uses: taiki-e/install-action@v2
         with:
@@ -57,6 +44,10 @@ jobs:
         run: ./build.sh
         env:
           RUM_KEY: ${{ secrets.RUM_KEY }}
+          # scripts/fetch-github-stars.py reads two repos through the API.
+          # Unauthenticated, from a shared runner address, that is a 403 for
+          # rate limiting; with the workflow token it is two fast requests.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Deliberately its own step rather than part of build.sh: this is the one
       # check that needs a browser, and build.sh has to stay runnable on any
