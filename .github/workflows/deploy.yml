@@ -40,6 +40,20 @@ jobs:
         with:
           tool: zola@0.22.0
 
+      - name: TEMPORARY profile where zola build spends its time
+        run: |
+          echo "--- run 1: cold processed_images"
+          /usr/bin/time -f "cold zola build: %e s" zola build 2>&1 | tail -3
+          echo "--- run 2: warm processed_images (same job, images already encoded)"
+          /usr/bin/time -f "warm zola build: %e s" zola build 2>&1 | tail -3
+          echo "--- run 3: warm, search index off"
+          sed -i 's/^build_search_index = true/build_search_index = false/' config.toml
+          /usr/bin/time -f "warm, no search index: %e s" zola build 2>&1 | tail -3
+          git checkout config.toml
+          echo "--- counts"
+          ls static/processed_images | wc -l
+          du -sh public static/processed_images
+
       - name: Build site
         run: ./build.sh
         env:
