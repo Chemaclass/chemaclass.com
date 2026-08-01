@@ -22,6 +22,13 @@ related_readings = [
   "readings/2020-09-10-domain-driven-design-distilled.md",
   "readings/2020-10-10-object-design-style-guide.md",
 ]
+faq = [
+  { q = "Does AI make you a faster developer?", a = "Yes, and speed is not quality. AI will happily generate messy code if that is what completes the task: it does not care about maintainability or about what happens when the requirements change next month." },
+  { q = "Should you accept code from AI that you do not understand?", a = "No. A fast answer you cannot explain is worse than a slow one you can. When it breaks at 2am you are debugging code you did not write, with no mental model of why it exists." },
+  { q = "How do you get better output from an AI assistant?", a = "The same way you got better answers on Stack Overflow: ask better questions. Give clear context, constraints and examples, then challenge what comes back. Ask it to simplify, because its default is to add rather than to improve." },
+  { q = "What can AI not do for a codebase?", a = "It cannot see the architecture, know why a decision was made months ago, or understand where the product is heading. It makes local decisions with the context you hand it. Holding the shape of the system is the human job." },
+  { q = "Who owns AI-generated code?", a = "You do. Once you review it, approve it, merge it and deploy it, it is your code, and no assistant is going to answer for it when it breaks in production." },
+]
 +++
 
 I've been using AI coding assistants extensively: ChatGPT, Codex, Claude with Sonnet and Opus. They're incredibly helpful. They give you speed like nothing else.

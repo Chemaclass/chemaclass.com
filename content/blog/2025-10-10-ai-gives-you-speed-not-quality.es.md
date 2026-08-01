@@ -22,6 +22,13 @@ related_readings = [
   "readings/2020-09-10-domain-driven-design-distilled.md",
   "readings/2020-10-10-object-design-style-guide.md",
 ]
+faq = [
+  { q = "¿La IA te hace más rápido programando?", a = "Sí, y la velocidad no es calidad. La IA generará código sucio sin pestañear si es lo que completa la tarea: no le importa la mantenibilidad ni lo que pase cuando los requisitos cambien el mes que viene." },
+  { q = "¿Deberías aceptar código de la IA que no entiendes?", a = "No. Una respuesta rápida que no sabes explicar es peor que una lenta que sí. Cuando se rompa a las 2am estarás depurando código que no escribiste, sin ningún modelo mental de por qué existe." },
+  { q = "¿Cómo se consiguen mejores respuestas de un asistente de IA?", a = "Igual que se conseguían mejores respuestas en Stack Overflow: preguntando mejor. Da contexto, restricciones y ejemplos, y luego cuestiona lo que vuelve. Pídele que simplifique, porque por defecto añade en vez de mejorar." },
+  { q = "¿Qué no puede hacer la IA con tu código?", a = "No ve la arquitectura, no sabe por qué se tomó una decisión hace meses ni hacia dónde va el producto. Toma decisiones locales con el contexto que le das. Sostener la forma del sistema es trabajo humano." },
+  { q = "¿De quién es el código que genera la IA?", a = "Tuyo. En cuanto lo revisas, lo apruebas, lo mergeas y lo despliegas, es tu código, y ningún asistente va a responder por él cuando se rompa en producción." },
+]
 +++
 
 He estado usando asistentes de codificación IA extensivamente: ChatGPT, Codex, Claude con Sonnet y Opus. Son increíblemente útiles. Te dan velocidad como nada más.
