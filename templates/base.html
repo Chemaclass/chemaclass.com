@@ -347,9 +347,32 @@
       <meta name="twitter:title" content="{{ config.title }}">
     {% endif %}
 
-    {% for link in config.extra.nav %}
-      <link rel="prefetch" href="{{ link.path }}" />
-    {% endfor %}
+    {# Speculative loading, once, for the whole site.
+
+       What this replaces: a <link rel="prefetch"> for every nav entry on every
+       page, and a <link rel="prerender"> per related page, which on a tag page
+       meant twenty of them. rel=prerender is deprecated (Chrome degrades it to a
+       NoState Prefetch, Firefox and Safari ignore it), so those hints were
+       either fetching twenty pages nobody asked for or doing nothing at all.
+
+       Moderate eagerness fetches one page: the one under the pointer, on hover
+       or pointerdown. The profile page is excluded because it is per-reader and
+       carries noindex, and the terminal because it pulls an 800KB filesystem. #}
+    <script type="speculationrules">
+    {
+      "prefetch": [
+        {
+          "where": {
+            "and": [
+              { "href_matches": "/*" },
+              { "not": { "href_matches": ["/profile/*", "/es/profile/*", "/terminal/*", "/es/terminal/*"] } }
+            ]
+          },
+          "eagerness": "moderate"
+        }
+      ]
+    }
+    </script>
 
     {% set icon = resize_image(path=config.extra.profile_small, width=50, height=50, op="fill") -%}
     <link rel="prefetch" href="{{ icon.url }}" />

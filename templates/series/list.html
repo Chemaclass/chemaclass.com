@@ -10,11 +10,7 @@
 {{ macros::page_styles(css='page.css') }}
 {% endblock styles %}
 
-{% block posthead %}
-  {% for entry in section.pages %}
-    <link rel="prerender" href="{{ entry.permalink }}" />
-  {% endfor %}
-{% endblock posthead %}
+
 
 {% block content %}
 <div class="series-page">
