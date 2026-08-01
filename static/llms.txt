@@ -49,6 +49,8 @@ Jose Maria Valera Reales is a Product Engineer at Kombo with 15+ years in softwa
 
 - Machine-readable index of everything: https://chemaclass.com/index.json
 
+- Site search (OpenSearch): https://chemaclass.com/opensearch.xml
+
 ## Content index
 
 Every blog post, reading note and talk, generated at build time.

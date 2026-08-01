@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Lets a browser add this site's search to its address bar, and gives an agent
+     a machine-readable pointer to the search endpoint the WebSite schema already
+     advertises. -->
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Chemaclass</ShortName>
+  <Description>Search posts, reading notes and talks on chemaclass.com</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="64" height="64" type="image/jpeg">https://chemaclass.com/icon.jpg</Image>
+  <Url type="text/html" method="get" template="https://chemaclass.com/?q={searchTerms}"/>
+  <moz:SearchForm xmlns:moz="http://www.mozilla.org/2006/browser/search/">https://chemaclass.com/</moz:SearchForm>
+</OpenSearchDescription>

@@ -494,6 +494,10 @@
       {# Everything published, in one JSON document: scripts/generate-index-json.py.
          Declared so an agent can find it without being told it exists. #}
       <link rel="alternate" type="application/json" href="{{ get_url(path='index.json') | safe }}" title="Content index (JSON)">
+      {# Lets a browser add this site's search to its address bar. It also points
+         at the same ?q= endpoint the WebSite schema advertises as its
+         SearchAction, so the two cannot disagree. #}
+      <link rel="search" type="application/opensearchdescription+xml" href="{{ get_url(path='opensearch.xml') | safe }}" title="Chemaclass">
       <link rel="author" href="{{ config.base_url | safe }}/humans.txt">
     {% endblock rss %}
     {% block posthead %}{% endblock posthead %}
