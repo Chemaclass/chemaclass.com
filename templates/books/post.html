@@ -7,7 +7,6 @@
 {% endblock styles %}
 
 {% block posthead %}
-{% include "partials/prerender-links.html" %}
 {% set schema_type = "Chapter" %}
 {% set licensed = false %}
 {% set book_section = get_section(path=page.ancestors | last) %}
