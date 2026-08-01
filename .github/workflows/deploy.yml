@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           # Full history, not the default single commit. Two build steps read
           # dates out of git: the last body edit of every post
@@ -67,7 +67,7 @@ jobs:
 
       - name: Upload artifact
         if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./public
 
@@ -83,14 +83,14 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
       # After the deploy, never before: IndexNow tells the engines to come and
       # fetch these URLs, so they have to be live by then. Google ignores the
       # protocol; Bing, Yandex, Seznam and Naver act on it within minutes.
       - name: Checkout for the IndexNow submission
         if: github.event_name == 'push'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           # The submission is built from what changed in this push, so the
           # commit before it has to be in the clone.
