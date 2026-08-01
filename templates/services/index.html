@@ -84,6 +84,28 @@
         <span class="service-card__price">{{ trans(key="svc_request_quote", lang=lang) }}</span>
       </a>
 
+      {# The workshops page existed with a full description and was linked from
+         nowhere: no navigation reached it, and the only thing pointing at it was
+         the hreflang tag on its own translation. #}
+      <a href="{% if lang == 'es' %}/es/services/team-workshops/{% else %}/services/team-workshops/{% endif %}" class="service-card">
+        <div class="service-card__header">
+          <div class="service-card__icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <span class="service-card__more">{{ trans(key="svc_learn_more", lang=lang) }} <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+        <h3>{% if lang == "es" %}Talleres para Equipos{% else %}Team Workshops{% endif %}</h3>
+        <p class="service-card__audience">{% if lang == "es" %}Para equipos de desarrollo{% else %}For engineering teams{% endif %}</p>
+        <p>{% if lang == "es" %}Un día completo escribiendo código, tests y refactorizando. Katas independientes, agnósticas del lenguaje.{% else %}A full day of coding, testing and refactoring. Independent katas, adaptable to your team's stack.{% endif %}</p>
+        <ul class="service-card__features">
+          <li>{% if lang == "es" %}Testing y TDD por la mañana{% else %}Testing and TDD in the morning{% endif %}</li>
+          <li>{% if lang == "es" %}Refactoring por la tarde{% else %}Refactoring in the afternoon{% endif %}</li>
+          <li>{% if lang == "es" %}Golden master y approval testing{% else %}Golden master and approval testing{% endif %}</li>
+          <li>{% if lang == "es" %}Práctica sobre código legacy{% else %}Hands-on with legacy-style code{% endif %}</li>
+        </ul>
+        <span class="service-card__price">{{ trans(key="svc_request_quote", lang=lang) }}</span>
+      </a>
+
       <div class="service-card service-card--unavailable" aria-disabled="true">
         <div class="service-card__header">
           <div class="service-card__icon">
@@ -163,7 +185,7 @@
           <i class="fa-solid fa-chevron-down"></i>
         </button>
         <div class="services-faq__answer">
-          {% if lang == "es" %}Si necesitas una web construida, elige <a href="/es/services/web-development/">Desarrollo Web</a>. Si quieres pensar en voz alta sobre un reto técnico o de liderazgo con alguien que lo ha vivido, elige <a href="/es/services/consulting/">Consultoría</a>.{% else %}If you need a website built, go to <a href="/services/web-development/">Web Development</a>. If you want to think through a technical or leadership challenge with someone who has been there, go to <a href="/services/consulting/">Consulting</a>.{% endif %}
+          {% if lang == "es" %}Si necesitas una web construida, elige <a href="/es/services/web-development/">Desarrollo Web</a>. Si quieres pensar en voz alta sobre un reto técnico o de liderazgo con alguien que lo ha vivido, elige <a href="/es/services/consulting/">Consultoría</a>. Si tu equipo quiere un día de práctica, elige <a href="/es/services/team-workshops/">Talleres para Equipos</a>.{% else %}If you need a website built, go to <a href="/services/web-development/">Web Development</a>. If you want to think through a technical or leadership challenge with someone who has been there, go to <a href="/services/consulting/">Consulting</a>. If your team wants a day of hands-on practice, go to <a href="/services/team-workshops/">Team Workshops</a>.{% endif %}
         </div>
       </div>
       <div class="services-faq__item">
