@@ -13,6 +13,12 @@ body {
 
 img {
   max-width: 100%;
+  // Paired with the width/height attributes the build writes onto in-article
+  // images: those attributes are what reserves the space and stops the layout
+  // shifting, and this is what keeps the aspect ratio once max-width shrinks
+  // the image on a narrow screen. Without it the attribute height wins and the
+  // picture is squashed.
+  height: auto;
   margin: auto;
   border: solid rgba(0, 0, 0, 0.04);
 }
