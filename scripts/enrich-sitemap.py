@@ -163,6 +163,45 @@ def hreflang_links(url: str, known: set) -> str:
     )
 
 
+def unsubmittable(url: str) -> Optional[str]:
+    """Why this URL does not belong in the sitemap, or None when it does.
+
+    A sitemap is a list of pages asked to be indexed as themselves, so three
+    kinds of page do not belong on it, and Search Console reports each as an
+    error against a URL nobody wanted indexed to begin with:
+
+    - noindex, which the paginated listings and the reading profile carry
+    - a redirect, which is what Zola writes for /<section>/page/1/ and what
+      templates/redirect.html writes for the short aliases
+    - a canonical naming a different URL, which says "index that one instead"
+
+    All three are read from the built HTML rather than from a list of paths kept
+    here, because each decision lives in the template that owns the page. A
+    second copy of it in this script is one that goes stale the next time a
+    template changes its mind.
+    """
+    path = url[len(BASE_URL):].strip("/") if url.startswith(BASE_URL) else ""
+    page = PUBLIC_DIR / path / "index.html" if path else PUBLIC_DIR / "index.html"
+    if not page.is_file():
+        return None
+    # Every one of these markers sits in the head, and these files run up to 400KB.
+    head = page.read_text(encoding="utf-8", errors="ignore")[:8000]
+
+    robots = re.search(r'<meta[^>]+name=["\']?robots["\']?[^>]*>', head, re.I)
+    if robots and "noindex" in robots.group(0).lower():
+        return "noindex"
+
+    if re.search(r'<meta[^>]+http-equiv=["\']?refresh', head, re.I):
+        return "redirect"
+
+    canonical = re.search(
+        r'<link[^>]+rel=["\']?canonical["\']?[^>]*href=["\']?([^"\'\s>]+)', head, re.I)
+    if canonical and canonical.group(1).rstrip("/") != url.rstrip("/"):
+        return "canonical elsewhere"
+
+    return None
+
+
 def enrich_sitemap(sitemap_path: str) -> int:
     """Add <lastmod>, hreflang alternates and page images to entries missing them."""
     with open(sitemap_path) as f:
@@ -171,12 +210,22 @@ def enrich_sitemap(sitemap_path: str) -> int:
     if "<sitemapindex" in content:
         return 0
 
-    # Zola lists the paginated listings, and those pages carry noindex and
-    # canonicalize to the first page. Search Console reads a submitted URL marked
-    # noindex as an error, so the ten of them were ten errors in the Pages report
-    # for URLs nobody wanted indexed in the first place.
-    content, dropped = re.subn(
-        r"<url>\s*<loc>[^<]*/page/\d+/</loc>.*?</url>\s*", "", content, flags=re.DOTALL)
+    # Zola lists every page it renders, and unsubmittable names the ones that do
+    # not belong on a sitemap. Dropping them here, before known_urls is taken
+    # below, also keeps the hreflang alternates from pointing at entries that are
+    # no longer in the file.
+    reasons: dict = {}
+
+    def drop_unsubmittable(match: "re.Match[str]") -> str:
+        loc = re.search(r"<loc>(.*?)</loc>", match.group(0))
+        reason = unsubmittable(loc.group(1)) if loc else None
+        if reason:
+            reasons[reason] = reasons.get(reason, 0) + 1
+            return ""
+        return match.group(0)
+
+    content = re.sub(r"<url>.*?</url>\s*", drop_unsubmittable, content, flags=re.DOTALL)
+    dropped = sum(reasons.values())
 
     count = 0
     known_urls = set(re.findall(r"<loc>(.*?)</loc>", content))
@@ -229,7 +278,8 @@ def enrich_sitemap(sitemap_path: str) -> int:
         f.write(enriched)
 
     if dropped:
-        print(f"  dropped {dropped} paginated URL(s) that carry noindex")
+        detail = ", ".join(f"{n} {why}" for why, n in sorted(reasons.items()))
+        print(f"  dropped {dropped} URL(s) that do not belong in a sitemap: {detail}")
     return count
 
 
