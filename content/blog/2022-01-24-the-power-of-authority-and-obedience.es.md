@@ -5,7 +5,7 @@ description = "Milgram quiso investigar hasta dónde llegaría la gente obedecie
 tags = [ "psychology", "leadership", "communication" ]
 [extra]
 subtitle = "El experimento de Milgram"
-static_thumbnail = "/images/blog/2022-01-24/cover.jpg"
+static_thumbnail = "/images/blog/2022-01-24/cover.webp"
 related_posts = [
   "blog/2021-06-01-conformity-experiments.md",
   "blog/2022-08-22-understanding-people.md",
@@ -39,7 +39,7 @@ Cada participante fue emparejado con otra persona. Un sorteo (amañado) decidía
 
 Al aprendiz lo llevaron a una habitación y le conectaron electrodos. El maestro y el investigador fueron a otra habitación con un generador de descargas. Los interruptores iban desde 15 voltios (descarga leve) hasta 450 voltios (XXX).
 
-![blog-footer](/images/blog/2022-01-24/video-fragment.jpg)
+![blog-footer](/images/blog/2022-01-24/video-fragment.webp)
 
 El aprendiz daba respuestas incorrectas a propósito. Por cada error, el maestro debía darle una descarga. Cuando el maestro se negaba, el investigador le presionaba con estas órdenes:
 
@@ -116,7 +116,7 @@ El experimento de Milgram se convirtió en un clásico de la psicología. Demost
 >
 > Stanley Milgram, 1974.
 
-![blog-footer](/images/blog/2022-01-24/footer.jpg)
+![blog-footer](/images/blog/2022-01-24/footer.webp)
 
 ### Recursos
 

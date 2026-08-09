@@ -36,7 +36,7 @@ The goal is build a system where deployments to production should be as often, s
 
 The team dynamics are also an essential factor here. If we establish fear of deployments on Fridays, and fear of our system, that will end up in lack of accountability by default. This reminds me of [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/).
 
-![deploying on fridays](/images/blog/2024-02-25/middle.jpg)
+![deploying on fridays](/images/blog/2024-02-25/middle.webp)
 
 If you deploy small and frequent changes as soon as they can guarantee 100% quality value success, why delay such an incremental improvement to your system?
 

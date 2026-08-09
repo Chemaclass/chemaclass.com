@@ -5,7 +5,7 @@ description = "El cuento es una metáfora de las diferentes actitudes que adopta
 tags = [ "leadership", "psychology", "career", "philosophy" ]
 [extra]
 subtitle = "¿Quién se ha llevado mi queso?"
-static_thumbnail = "/images/blog/2021-03-01/cover.jpg"
+static_thumbnail = "/images/blog/2021-03-01/cover.webp"
 related_posts = [
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
   "blog/2023-03-16-have-you-always-been-like-this.md",

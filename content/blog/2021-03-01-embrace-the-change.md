@@ -5,7 +5,7 @@ description = "The tale is a beautiful metaphor of the different attitudes that 
 tags = [ "leadership", "psychology", "career", "philosophy" ]
 [extra]
 subtitle = "Who moved my cheese?🧀"
-static_thumbnail = "/images/blog/2021-03-01/cover.jpg"
+static_thumbnail = "/images/blog/2021-03-01/cover.webp"
 related_posts = [
   "blog/2020-09-08-the-process-itself-is-the-goal.md",
   "blog/2023-03-16-have-you-always-been-like-this.md",

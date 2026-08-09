@@ -6,7 +6,7 @@ draft = false
 tags = [ "privacy", "bitcoin", "cryptography", "security", "philosophy" ]
 [extra]
 subtitle = "Pioneros de la privacidad en la era digital"
-static_thumbnail = "/images/blog/2024-12-11/cover.jpg"
+static_thumbnail = "/images/blog/2024-12-11/cover.webp"
 series = "bitcoin"
 series_order = 2
 related_posts = [
@@ -51,7 +51,7 @@ Su trabajo se basó en la investigación criptográfica fundamental de **Whitfie
 
 Se reunían online en la lista de correo cypherpunks. En su mejor momento, tenía unos 2000 suscriptores que intercambiaban más de 30 mensajes al día. Su lema: **"Cypherpunks write code."** No solo hablaban de privacidad. La construían.
 
-![a cypherpunk's manifesto](/images/blog/2024-12-11/manifesto.jpg)
+![a cypherpunk's manifesto](/images/blog/2024-12-11/manifesto.webp)
 
 ## Filosofía y objetivos
 

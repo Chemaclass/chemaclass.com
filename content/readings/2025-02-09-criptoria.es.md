@@ -83,7 +83,7 @@ Un libro para quienes creen que hay formas de organización social y económica 
 - Inteligencia Metálica
 - Alan Eterno
 
-![cover](/images/readings/2025-02-09/criptoria-book.jpg)
+![cover](/images/readings/2025-02-09/criptoria-book.webp)
 
 ## Parte II: Después de Turing
 

@@ -6,7 +6,7 @@ draft = false
 tags = ["leadership", "career", "team-management", "psychology"]
 [extra]
 subtitle = "El ascenso a un nivel de incompetencia"
-static_thumbnail = "/images/blog/2023-09-30/cover.jpg"
+static_thumbnail = "/images/blog/2023-09-30/cover.webp"
 related_posts = [
   "blog/2022-08-22-understanding-people.md",
   "blog/2023-02-27-great-leadership.md",

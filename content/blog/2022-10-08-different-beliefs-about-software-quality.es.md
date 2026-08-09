@@ -34,7 +34,7 @@ Primero, algo de contexto: me siento muy bien porque el código base donde traba
 
 Y entonces recibí una pregunta pidiendo sugerencias:
 
-![blog-tweet](/images/blog/2022-10-08/tweet.jpg)
+![blog-tweet](/images/blog/2022-10-08/tweet.webp)
 
 Así que aquí vamos...
 

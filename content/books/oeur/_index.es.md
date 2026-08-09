@@ -5,7 +5,7 @@ page_template = "books/post.html"
 sort_by = "weight"
 aliases = ["/books/oeur/es/"]
 [extra]
-cover = "/images/books/oeur/oeur-cover.jpg"
+cover = "/images/books/oeur/oeur-cover.webp"
 year = "2015 - 2017"
 description = "Un recopilatorio de la evolución de los pensamientos de un joven en un formato parecido al de un diario. Un trabajo de más de dos años que ha derivado en una colección de reflexiones cada cual más personal que la anterior."
 quote = "Un libro dedicado sólo a los valientes: para nadie y para todos"

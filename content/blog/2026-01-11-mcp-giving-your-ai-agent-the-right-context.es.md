@@ -6,7 +6,7 @@ draft = false
 tags = [ "ai", "software-architecture", "developer-tools", "craftsmanship" ]
 [extra]
 subtitle = "Por qué el contexto es el verdadero superpoder"
-static_thumbnail = "/images/blog/2026-01-11/cover.jpg"
+static_thumbnail = "/images/blog/2026-01-11/cover.webp"
 series = "ai"
 series_order = 2
 related_posts = [

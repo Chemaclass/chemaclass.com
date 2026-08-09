@@ -78,7 +78,7 @@ Team members naturally tend to put their own needs (ego, career development, rec
 goals of the team when individuals aren't held accountable. If a team has lost sight of the need for achievement, the
 business ultimately suffers.
 
-![blog-cover](/images/readings/2021-12-07/the-model.jpg)
+![blog-cover](/images/readings/2021-12-07/the-model.webp)
 
 ---
 

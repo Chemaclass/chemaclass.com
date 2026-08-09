@@ -5,7 +5,7 @@ description = "The new Functional Programming language build-in for PHP."
 tags = [ "phel", "php", "open-source", "software-design" ]
 [extra]
 subtitle = "A new functional language with full interoperability with PHP"
-static_thumbnail = "/images/blog/2021-02-01/cover.jpg"
+static_thumbnail = "/images/blog/2021-02-01/cover.webp"
 related_posts = [
   "blog/2021-05-03-open-source-software.md",
   "blog/2020-10-13-typed-arrays-php.md",

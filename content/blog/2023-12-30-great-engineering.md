@@ -6,7 +6,7 @@ draft = false
 tags = ["software-design", "career", "communication", "clean-code"]
 [extra]
 subtitle = "A great engineer is not just a great coder"
-static_thumbnail = "/images/blog/2023-12-30/cover.jpg"
+static_thumbnail = "/images/blog/2023-12-30/cover.webp"
 related_posts = [
   "blog/2022-06-08-the-path-to-seniority-in-software.md",
   "blog/2024-03-28-effective-pair-programming.md",

@@ -7,7 +7,7 @@ date = 2015-09-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/07.jpg)
+![book-chapter](/images/books/oeur/07.webp)
 
 ## God exists: it's me, and so are you
 

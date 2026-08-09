@@ -5,7 +5,7 @@ description = "Cómo escribir tests de caracterización para código legacy y re
 tags = [ "testing", "refactoring", "clean-code", "tdd"]
 [extra]
 subtitle = "Cómo escribir tests adecuados para código ya escrito"
-static_thumbnail = "/images/blog/2020-08-17/cover.jpg"
+static_thumbnail = "/images/blog/2020-08-17/cover.webp"
 related_posts = [
   "blog/2020-06-06-final-classes.md",
   "blog/2020-06-28-the-art-of-refactoring.md",
@@ -218,7 +218,7 @@ Ahora puedes refactorizar el código de producción que cubriste con tests sin e
 
 ## El código legacy es código sin tests
 
-![el código legacy es código sin tests](/images/blog/2020-08-17/footer.jpg)
+![el código legacy es código sin tests](/images/blog/2020-08-17/footer.webp)
 
 Por supuesto, hay mucho más que aprender
 sobre [testing y trabajo con código legacy](/es/readings/working-effectively-with-legacy-code/). De hecho, especialmente cuando

@@ -5,7 +5,7 @@ description = "Milgram was interested in researching how far people would go in 
 tags = [ "psychology", "leadership", "communication" ]
 [extra]
 subtitle = "Milgram's experiment"
-static_thumbnail = "/images/blog/2022-01-24/cover.jpg"
+static_thumbnail = "/images/blog/2022-01-24/cover.webp"
 related_posts = [
   "blog/2021-06-01-conformity-experiments.md",
   "blog/2022-08-22-understanding-people.md",
@@ -48,7 +48,7 @@ The learner was taken into a room and had electrodes attached to his arms, and t
 room next door that contained an electric shock generator and a row of switches marked from 15 volts (slight shock) to
 300 volts (severe shock) to 450 volts (XXX).
 
-![blog-footer](/images/blog/2022-01-24/video-fragment.jpg)
+![blog-footer](/images/blog/2022-01-24/video-fragment.webp)
 
 The learner gave mainly wrong answers (on purpose), and for each of these, the teacher had to give him an electric
 shock. When the teacher refused to administer a shock, the researcher gave a series of orders to ensure they continued:
@@ -141,7 +141,7 @@ that situational variables have a stronger sway than personality factors in dete
 >
 > Stanley Milgram, 1974.
 
-![blog-footer](/images/blog/2022-01-24/footer.jpg)
+![blog-footer](/images/blog/2022-01-24/footer.webp)
 
 ### Resources
 

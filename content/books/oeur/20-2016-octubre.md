@@ -7,7 +7,7 @@ date = 2016-10-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/20.jpg)
+![book-chapter](/images/books/oeur/20.webp)
 
 ## Entropy
 

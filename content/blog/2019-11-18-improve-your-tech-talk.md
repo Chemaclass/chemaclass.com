@@ -34,7 +34,7 @@ To explain how I think a good presentation should look like I will address three
 2. Design and Layout: how you can design an easy-to-follow presentation that supports your talk instead of taking away the attention from what you are actually trying to say.
 3. Lastly, I think also the audience is responsible for making a tech talk successful, so I will also add a reminder about the role and responsibilities of the listeners.
 
-![person talking to an audience](/images/blog/2019-11-18/talking.jpg)
+![person talking to an audience](/images/blog/2019-11-18/talking.webp)
 
 ### Consider your audience
 
@@ -71,7 +71,7 @@ Summarize the main conclusion(s) in a concise way:
 * What are the learnings from this meeting?
 * What are the open questions or next steps?
 
-![stack of books](/images/blog/2019-11-18/books.jpg)
+![stack of books](/images/blog/2019-11-18/books.webp)
 
 ## Design and Layout
 
@@ -105,4 +105,4 @@ If you have some code to present, consider:
 
 At the end of the meeting, we should ask these questions in order to improve. Ask other people for their feedback, so we can grow further and together.
 
-![audience at a presentation](/images/blog/2019-11-18/footer.jpg)
+![audience at a presentation](/images/blog/2019-11-18/footer.webp)

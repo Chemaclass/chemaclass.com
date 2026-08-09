@@ -62,4 +62,4 @@ La política, al fin y al cabo, vela (o debería hacerlo) por nuestro bienestar 
 
 Será, por tanto, nuestro mayor error cualquier creencia dispuesta (incluso predispuesta) en cualquier utopía.
 
-![book-chapter](/images/books/oeur/21.jpg)
+![book-chapter](/images/books/oeur/21.webp)

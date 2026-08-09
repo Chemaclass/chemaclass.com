@@ -6,7 +6,7 @@ draft = false
 tags = [ "career", "mentoring", "clean-code", "tdd", "communication" ]
 [extra]
 subtitle = "How to become a Senior Software Developer?"
-static_thumbnail = "/images/blog/2022-06-08/cover.jpg"
+static_thumbnail = "/images/blog/2022-06-08/cover.webp"
 series = "leadership"
 series_order = 3
 related_posts = [

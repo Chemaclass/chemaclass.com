@@ -5,7 +5,7 @@ description = "Blue Work y Red Work son conceptos que David Marquet describe en 
 tags = [ "leadership", "team-management", "productivity", "agile" ]
 [extra]
 subtitle = "Gestionando los dos tipos de trabajo"
-static_thumbnail = "/images/blog/2021-10-21/cover.jpg"
+static_thumbnail = "/images/blog/2021-10-21/cover.webp"
 related_posts = [
   "blog/2022-09-25-the-beauty-of-leadership.md",
   "blog/2023-02-27-great-leadership.md",

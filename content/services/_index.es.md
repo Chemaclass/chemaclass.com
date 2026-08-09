@@ -73,7 +73,7 @@ name = "Teína"
 description = "Banda de indie pop rock de Calasparra, Murcia. Web multilingüe con galería y vídeos."
 github = "Chemaclass/teina.es"
 url = "https://teina.es"
-image = "/images/portfolio/teina-sample.jpg"
+image = "/images/portfolio/teina-sample.webp"
 tech = ["Zola", "SCSS"]
 
 [[extra.websites]]
@@ -81,7 +81,7 @@ name = "Fco. Sandoval Gómez"
 description = "Portfolio de arquitectura y conservación del patrimonio. Trabajo profesional en España."
 github = "Chemaclass/fco-sandoval-gomez.es"
 url = "https://fco-sandoval-gomez.es"
-image = "/images/portfolio/fco-sandoval-gomez-sample.jpg"
+image = "/images/portfolio/fco-sandoval-gomez-sample.webp"
 tech = ["Zola", "SCSS"]
 
 [[extra.websites]]
@@ -89,7 +89,7 @@ name = "D'Krisna"
 description = "Centro de belleza y bienestar en Murcia. Multilingüe con reservas automáticas vía Booksy."
 github = "Chemaclass/dkrisna.es"
 url = "https://dkrisna.es"
-image = "/images/portfolio/dkrisna-sample.jpg"
+image = "/images/portfolio/dkrisna-sample.webp"
 tech = ["Zola", "SCSS"]
 
 [[extra.websites]]
@@ -97,7 +97,7 @@ name = "Windmühle Tündern"
 description = "Web sin ánimo de lucro para restaurar y preservar el molino histórico de Tündern, Alemania."
 github = "Chemaclass/website-windmuehle"
 url = "https://windmuehle-tuendern.de"
-image = "/images/portfolio/windmuelle-tuendern-sample.jpg"
+image = "/images/portfolio/windmuelle-tuendern-sample.webp"
 tech = ["Vue", "Zola"]
 
 +++

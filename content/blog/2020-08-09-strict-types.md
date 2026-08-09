@@ -5,7 +5,7 @@ description = "Why declaring strict_types in PHP improves code readability and p
 tags = [ "php", "clean-code", "software-design"]
 [extra]
 subtitle = "declare(strict_types=1);"
-static_thumbnail = "/images/blog/2020-08-09/cover.jpg"
+static_thumbnail = "/images/blog/2020-08-09/cover.webp"
 related_posts = [
   "blog/2020-06-06-final-classes.md",
   "blog/2020-10-13-typed-arrays-php.md",

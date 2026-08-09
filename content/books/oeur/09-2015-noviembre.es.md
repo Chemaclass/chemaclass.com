@@ -104,4 +104,4 @@ Cuanto antes lo hagamos nuestro,
 antes se volverá amable».
 ```
 
-![book-chapter](/images/books/oeur/09.jpg)
+![book-chapter](/images/books/oeur/09.webp)

@@ -6,7 +6,7 @@ draft = false
 tags = ["golang", "software-design", "clean-code"]
 [extra]
 subtitle = "A horse racing emulator explained step by step"
-static_thumbnail = "/images/blog/2024-04-02/cover.jpg"
+static_thumbnail = "/images/blog/2024-04-02/cover.webp"
 related_posts = [
   "blog/2023-12-30-great-engineering.md",
   "blog/2020-04-07-the-art-of-testing.md",
@@ -28,7 +28,7 @@ While parallelism is **doing** several things simultaneously, concurrency is abo
 
 > Imagine you cooking: preparing a soup, a salad and an omelet. You would be one single unit, but you are preparing different dishes. You might finish the salad first or the soup or the omelet… We cannot guarantee that! This would be concurrency, as you are alone dealing with several things. As soon as your partner comes and helps you cook, then we will be talking about parallelism.
 
-![concurrency vs multithreading](/images/blog/2024-04-02/concurrency-vs-multithreading.jpg)
+![concurrency vs multithreading](/images/blog/2024-04-02/concurrency-vs-multithreading.webp)
 
 I remember building a similar game in `Java` when I was learning multithreading ten years ago… let’s use this opportunity to do it again with modern `Go`.
 

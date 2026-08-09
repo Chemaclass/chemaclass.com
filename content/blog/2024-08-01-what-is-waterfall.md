@@ -30,7 +30,7 @@ The problem is that each step can take a lot of time and resources to complete. 
 
 It usually follows a straightforward sequence like this:
 
-![Waterfall img from Comic Agile](/images/blog/2024-08-01/waterfall.jpg)
+![Waterfall img from Comic Agile](/images/blog/2024-08-01/waterfall.webp)
 
 ## The reality of Waterfall
 

@@ -7,7 +7,7 @@ date = 2016-02-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/12.jpg)
+![book-chapter](/images/books/oeur/12.webp)
 
 ## Traveling to Our Encounter
 

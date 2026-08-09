@@ -59,4 +59,4 @@ La correcta educación es aquélla que enseña la grandeza de nuestros actos com
 
 Nuestras acciones deberían tener una reacción igual a lo que hacemos; deberíamos actuar como nos gustaría que con nosotros el mundo se comportase. Deberíamos prosperar como a nosotros nos gustaría ver a los nuestros prosperar. Deberíamos ser como aquella persona que nos gustaría realmente conocer.
 
-![book-chapter](/images/books/oeur/22.jpg)
+![book-chapter](/images/books/oeur/22.webp)

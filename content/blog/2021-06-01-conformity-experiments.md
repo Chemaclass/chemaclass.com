@@ -5,7 +5,7 @@ description = "To what extent do social forces alter people's opinions? Which as
 tags = [ "psychology", "leadership", "communication" ]
 [extra]
 subtitle = "The uncomfortable truth about human nature"
-static_thumbnail = "/images/blog/2021-06-01/cover.jpg"
+static_thumbnail = "/images/blog/2021-06-01/cover.webp"
 related_posts = [
   "blog/2022-01-24-the-power-of-authority-and-obedience.md",
   "blog/2022-08-22-understanding-people.md",

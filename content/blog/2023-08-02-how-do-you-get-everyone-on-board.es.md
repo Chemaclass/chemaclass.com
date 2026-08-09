@@ -48,7 +48,7 @@ Pero aún así, a pesar de tu esfuerzo por crear un ambiente de confianza y segu
 
 La clave aquí es encontrar una manera de conectar con las personas entendiendo cómo entienden su potencial para que puedas empoderarlas y ayudarlas a crecer.
 
-![middle](/images/blog/2023-08-02/middle.jpg)
+![middle](/images/blog/2023-08-02/middle.webp)
 
 ### Concede tiempo para leer
 
@@ -78,6 +78,6 @@ Experimenta con cualquier libro, marco de tiempo, persona o grupo para crear un 
 
 No puedes forzar a las personas a cambiar. Por el contrario, cuanto más intentes forzarlo, más difícil te lo pondrán. En cambio, enfócate en entenderlas reconociendo lo que sienten y pensando sobre lo que hacen para crear un terreno común de [entendimiento mutuo](/es/blog/understanding-people).
 
-![footer](/images/blog/2023-08-02/footer.jpg)
+![footer](/images/blog/2023-08-02/footer.webp)
 
 > Fotos mías en WeAreDevelopers World Congress, Berlín 2023.

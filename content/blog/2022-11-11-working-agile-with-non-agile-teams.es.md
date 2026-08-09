@@ -6,7 +6,7 @@ draft = false
 tags = [ "agile", "xp", "communication", "team-management" ]
 [extra]
 subtitle = "¿Cómo puedes trabajar con otros equipos que no son agile?"
-static_thumbnail = "/images/blog/2022-11-11/cover.jpg"
+static_thumbnail = "/images/blog/2022-11-11/cover.webp"
 related_posts = [
   "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
   "blog/2022-08-22-understanding-people.md",
@@ -50,7 +50,7 @@ Recopilar esos requisitos e impresiones de los expertos y luego dirigir el dise�
 Sin embargo, el aspecto crítico aquí no es qué requisitos o impresiones *se están resolviendo* sino **cómo**.
 ¿Cómo podrías trabajar agile con ese médico?
 
-![blog-middle](/images/blog/2022-11-11/middle.jpg)
+![blog-middle](/images/blog/2022-11-11/middle.webp)
 
 > Agile es sobre retroalimentación rápida. Es sobre comunicación efectiva y reducir desperdicio mientras se apunta a la simplicidad.
 
@@ -106,4 +106,4 @@ Todos se preocupan y asumen plena responsabilidad de mantener al equipo saludabl
 
 Es entonces cuando la magia empieza a suceder, y de repente puedes trabajar agile con cualquier equipo, especialmente el tuyo.
 
-![blog-footer](/images/blog/2022-11-11/footer.jpg)
+![blog-footer](/images/blog/2022-11-11/footer.webp)

@@ -5,7 +5,7 @@ description = "¿Hasta qué punto las fuerzas sociales alteran las opiniones de 
 tags = [ "psychology", "leadership", "communication" ]
 [extra]
 subtitle = "La incómoda verdad sobre la naturaleza humana"
-static_thumbnail = "/images/blog/2021-06-01/cover.jpg"
+static_thumbnail = "/images/blog/2021-06-01/cover.webp"
 related_posts = [
   "blog/2022-01-24-the-power-of-authority-and-obedience.md",
   "blog/2022-08-22-understanding-people.md",

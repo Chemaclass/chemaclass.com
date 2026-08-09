@@ -83,7 +83,7 @@ Cryptoria is addressed to all people convinced that, beyond inherited or imposed
 - Metallic Intelligence
 - Eternal Alan
 
-![cover](/images/readings/2025-02-09/criptoria-book.jpg)
+![cover](/images/readings/2025-02-09/criptoria-book.webp)
 
 ## Part II: After Turing
 

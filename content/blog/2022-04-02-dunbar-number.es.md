@@ -5,7 +5,7 @@ description = "El número de Dunbar es el límite cognitivo de personas con las 
 tags = [ "psychology", "team-management", "communication" ]
 [extra]
 subtitle = ""
-static_thumbnail = "/images/blog/2022-04-02/cover.jpg"
+static_thumbnail = "/images/blog/2022-04-02/cover.webp"
 related_posts = [
   "blog/2022-05-27-bikeshedding.md",
   "blog/2022-08-22-understanding-people.md",

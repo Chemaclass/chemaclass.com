@@ -7,7 +7,7 @@ date = 2015-11-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/09.jpg)
+![book-chapter](/images/books/oeur/09.webp)
 
 ## To the Motive
 
