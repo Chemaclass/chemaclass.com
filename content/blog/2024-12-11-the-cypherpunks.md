@@ -7,7 +7,7 @@ draft = false
 tags = [ "privacy", "bitcoin", "cryptography", "security", "philosophy" ]
 [extra]
 subtitle = "Pioneers of privacy in the digital age"
-static_thumbnail = "/images/blog/2024-12-11/cover.jpg"
+static_thumbnail = "/images/blog/2024-12-11/cover.webp"
 series = "bitcoin"
 series_order = 2
 related_posts = [
@@ -52,7 +52,7 @@ Their work built on foundational cryptographic research by **Whitfield Diffie** 
 
 They gathered online on the cypherpunks mailing list, which at its peak had around 2000 subscribers exchanging 30+ messages per day. Their motto: **"Cypherpunks write code."** They didn't just talk about privacy. They built it.
 
-![a cypherpunk's manifesto](/images/blog/2024-12-11/manifesto.jpg)
+![a cypherpunk's manifesto](/images/blog/2024-12-11/manifesto.webp)
 
 ## Philosophy and goals
 

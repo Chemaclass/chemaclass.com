@@ -6,7 +6,7 @@ draft = false
 tags = [ "career", "mentoring", "clean-code", "tdd", "communication" ]
 [extra]
 subtitle = "¿Cómo convertirse en un Desarrollador Senior?"
-static_thumbnail = "/images/blog/2022-06-08/cover.jpg"
+static_thumbnail = "/images/blog/2022-06-08/cover.webp"
 series = "leadership"
 series_order = 3
 related_posts = [

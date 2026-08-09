@@ -44,6 +44,6 @@ En esta charla explico los fundamentos de Phel y hago una demo de live coding mo
 - 2022-06-23 | DesarrolloWeb [**Remoto**] (ES)
   - [Phel Language ¿Programación funcional para PHP?](https://www.youtube.com/live/9pElbTEcyGA)
 
-![cover](/images/talks/2023-07-28/phel-we-are-devs-23.jpg)
+![cover](/images/talks/2023-07-28/phel-we-are-devs-23.webp)
 
-![cover](/images/talks/2023-02-08/phel-sf-group-23.jpg)
+![cover](/images/talks/2023-02-08/phel-sf-group-23.webp)

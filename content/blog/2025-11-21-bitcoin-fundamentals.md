@@ -6,7 +6,7 @@ draft = false
 tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
 [extra]
 subtitle = "A beginner's guide to sound money"
-static_thumbnail = "/images/blog/2025-12-21/footer.jpg"
+static_thumbnail = "/images/blog/2025-12-21/footer.webp"
 reading_time = 12
 series = "bitcoin"
 series_order = 5
@@ -24,7 +24,7 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2025-12-21/footer.jpg)
+![blog-cover](/images/blog/2025-12-21/footer.webp)
 
 What would you do if your bank account was frozen tomorrow? No warning, no explanation, no access to your own money.
 
@@ -369,7 +369,7 @@ Bitcoin isn't perfect. Things to be aware of:
 
 None of these are dealbreakers. They're tradeoffs. The more you learn, the fewer limitations you face.
 
-![blog-cover](/images/blog/2025-12-21/footer.jpg)
+![blog-cover](/images/blog/2025-12-21/footer.webp)
 
 ## Bitcoin Today
 

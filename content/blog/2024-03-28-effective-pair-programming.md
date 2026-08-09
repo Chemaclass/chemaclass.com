@@ -81,7 +81,7 @@ Pair programming might become one of the best tools in your team toolbox for dai
 - **Backseat driver**: The navigator engages actively with the driver.
 - **Tourist guide**: The navigator passively learns with the driver.
 
-![effective pair programming patterns](/images/blog/2024-03-28/good-pair-prog.jpg)
+![effective pair programming patterns](/images/blog/2024-03-28/good-pair-prog.webp)
 
 #### Anti-patterns while pairing
 
@@ -92,11 +92,11 @@ Pair programming might become one of the best tools in your team toolbox for dai
 - **Philosophical pair**: The pair is [bikeshedding](/blog/bikeshedding/) into irrelevant topics.
 - **The code war**: The pair does not reach an agreement and starts an unnecessary war, which wastes time and effort.
 
-![pair programming anti-patterns](/images/blog/2024-03-28/anti-pair-prog.jpg)
+![pair programming anti-patterns](/images/blog/2024-03-28/anti-pair-prog.webp)
 
 **Want more?** Check this out: [Learning Through KATAS](https://www.figma.com/file/FCmGwRPIO8cLowDRraJhgr/Learning-TDD)
 
-![learning through katas](/images/blog/2024-03-28/learning-through-katas.jpg)
+![learning through katas](/images/blog/2024-03-28/learning-through-katas.webp)
 
 ## The takeaway
 

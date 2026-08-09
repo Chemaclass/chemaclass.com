@@ -255,4 +255,4 @@ Trabaja. Quiere. Sueña. Sonríe.
 
 Pero juntos.
 
-![book-chapter](/images/books/oeur/familia.jpg)
+![book-chapter](/images/books/oeur/familia.webp)

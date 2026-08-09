@@ -6,7 +6,7 @@ draft = false
 tags = [ "agile", "xp", "tdd", "communication" ]
 [extra]
 subtitle = "Agile es sobre CÓMO haces ciertas cosas"
-static_thumbnail = "/images/blog/2023-01-09/cover.jpg"
+static_thumbnail = "/images/blog/2023-01-09/cover.webp"
 related_posts = [
   "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
   "blog/2024-05-30-what-kills-agility.md",

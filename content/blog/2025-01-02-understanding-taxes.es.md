@@ -129,7 +129,7 @@ Los impuestos parecerían más justos si la gente confiara en que se gastan bien
 
 ## Una nueva perspectiva
 
-![una nueva perspectiva sobre los impuestos](/images/blog/2025-01-02/middle-2.jpg)
+![una nueva perspectiva sobre los impuestos](/images/blog/2025-01-02/middle-2.webp)
 
 Se supone que los impuestos financian servicios públicos esenciales. Pero el gran problema con los impuestos (y los gobiernos grandes) es que suelen traer **ineficiencia y corrupción**. Cuanto más poder tiene un gobierno, más probable es que lo use mal. Por eso creo que los gobiernos deberían ser **pequeños, enfocados y eficientes**: dar servicios esenciales sin complicar las cosas ni meterse en la vida de la gente.
 

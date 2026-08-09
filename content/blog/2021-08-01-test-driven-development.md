@@ -7,7 +7,7 @@ aliases = [ "tdd", "/inner-peace-katas", "blog/inner-peace-katas" ]
 tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
 subtitle = "What is challenging about it?"
-static_thumbnail = "/images/blog/2021-08-01/cover.jpg"
+static_thumbnail = "/images/blog/2021-08-01/cover.webp"
 related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
 ]
@@ -45,11 +45,11 @@ do apply this great (and mandatory) philosophy in my daily work.
 
 - Instead of: design code -> develop code -> write tests.
 
-![non-tdd-style](/images/blog/2021-08-01/non-tdd-style.png)
+![non-tdd-style](/images/blog/2021-08-01/non-tdd-style.webp)
 
 - It's about: write failing automated test -> run failing test -> develop code to make test pass -> run test -> repeat.
 
-![tdd-style](/images/blog/2021-08-01/tdd-style.png)
+![tdd-style](/images/blog/2021-08-01/tdd-style.webp)
 
 The idea of driving your code by testing can be understood depending on the abstraction level of what you're writing at
 the moment. You don't want to create a wrong coupling between the tests and the code being tested. You want to test the
@@ -70,7 +70,7 @@ higher quality.
 
 ## Improve your Test-Driven skills
 
-![tdd-style](/images/blog/2021-08-01/tdd-style-with-git.png)
+![tdd-style](/images/blog/2021-08-01/tdd-style-with-git.webp)
 
 The best way to learn Test-Driven is doing software katas. Try them alone and with others. Both are equally important.
 

@@ -7,7 +7,7 @@ date = 2016-11-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/21.jpg)
+![book-chapter](/images/books/oeur/21.webp)
 
 ## Sweet memories
 

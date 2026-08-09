@@ -5,7 +5,7 @@ description = "El nuevo lenguaje de Programación Funcional construido para PHP.
 tags = [ "phel", "php", "open-source", "software-design" ]
 [extra]
 subtitle = "Un nuevo lenguaje funcional con interoperabilidad total con PHP"
-static_thumbnail = "/images/blog/2021-02-01/cover.jpg"
+static_thumbnail = "/images/blog/2021-02-01/cover.webp"
 related_posts = [
   "blog/2021-05-03-open-source-software.md",
   "blog/2020-10-13-typed-arrays-php.md",

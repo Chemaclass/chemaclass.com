@@ -6,7 +6,7 @@ draft = false
 tags = [ "agile", "xp", "communication", "team-management" ]
 [extra]
 subtitle = "How can you work with other teams that aren't agile?"
-static_thumbnail = "/images/blog/2022-11-11/cover.jpg"
+static_thumbnail = "/images/blog/2022-11-11/cover.webp"
 related_posts = [
   "blog/2022-02-26-update-your-team-to-be-more-extreme.md",
   "blog/2022-08-22-understanding-people.md",
@@ -62,7 +62,7 @@ blogs on the Internet.
 However, the critical aspect here is not what requirements or impressions are *being resolved* but **how**.
 How could you work agile with that doctor?
 
-![blog-middle](/images/blog/2022-11-11/middle.jpg)
+![blog-middle](/images/blog/2022-11-11/middle.webp)
 
 > Agile is about quick feedback. It's about effective communication and reducing waste while aiming for simplicity.
 
@@ -127,4 +127,4 @@ learns from their **mistakes**; there is no need for masks anymore.
 
 That's when the magic starts to happen, and suddenly you can work agile with any team, especially yours.
 
-![blog-footer](/images/blog/2022-11-11/footer.jpg)
+![blog-footer](/images/blog/2022-11-11/footer.webp)

@@ -80,7 +80,7 @@ El pair programming podría convertirse en una de las mejores herramientas en la
 - **Backseat driver**: El navegador se involucra activamente con el conductor.
 - **Tourist guide**: El navegador aprende pasivamente con el conductor.
 
-![patrones de pair programming efectivo](/images/blog/2024-03-28/good-pair-prog.jpg)
+![patrones de pair programming efectivo](/images/blog/2024-03-28/good-pair-prog.webp)
 
 #### Anti-patrones mientras haces pairing
 
@@ -91,11 +91,11 @@ El pair programming podría convertirse en una de las mejores herramientas en la
 - **Philosophical pair**: La pareja está haciendo [bikeshedding](/es/blog/bikeshedding/) en temas irrelevantes.
 - **The code war**: La pareja no llega a un acuerdo y comienza una guerra innecesaria, que desperdicia tiempo y esfuerzo.
 
-![anti-patrones de pair programming](/images/blog/2024-03-28/anti-pair-prog.jpg)
+![anti-patrones de pair programming](/images/blog/2024-03-28/anti-pair-prog.webp)
 
 **¿Quieres más?** Mira esto: [Learning Through KATAS](https://www.figma.com/file/FCmGwRPIO8cLowDRraJhgr/Learning-TDD)
 
-![aprendiendo a través de katas](/images/blog/2024-03-28/learning-through-katas.jpg)
+![aprendiendo a través de katas](/images/blog/2024-03-28/learning-through-katas.webp)
 
 ## La conclusión
 

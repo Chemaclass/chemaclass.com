@@ -45,7 +45,7 @@ A largo plazo, tus habilidades interpersonales pueden impulsar tu éxito tanto, 
 
 > Las habilidades interpersonales son tan necesarias como las habilidades técnicas. Nadie querrá trabajar contigo si no eres un buen compañero de equipo.
 
-![personas trabajando juntas](/images/blog/2024-09-02/middle.jpg)
+![personas trabajando juntas](/images/blog/2024-09-02/middle.webp)
 
 ## ¿Qué son las habilidades interpersonales?
 

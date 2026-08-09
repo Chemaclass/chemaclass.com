@@ -23,4 +23,4 @@ Gacela's vision is to simplify the communication of your different modules in yo
 - 2022-01-25 | Spryker Digital User Group [**Remote**] (EN)
   - [Gacela Framework 0.1](https://www.meetup.com/spryker-user-group/events/282267564/)
 
-![cover](/images/talks/2023-05-24/gacela-ipc-berin-23.jpg)
+![cover](/images/talks/2023-05-24/gacela-ipc-berin-23.webp)

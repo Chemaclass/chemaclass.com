@@ -6,7 +6,7 @@ draft = false
 tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
 [extra]
 subtitle = "Una guía para principiantes sobre dinero sólido"
-static_thumbnail = "/images/blog/2025-12-21/footer.jpg"
+static_thumbnail = "/images/blog/2025-12-21/footer.webp"
 reading_time = 12
 series = "bitcoin"
 series_order = 5
@@ -24,7 +24,7 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2025-12-21/footer.jpg)
+![blog-cover](/images/blog/2025-12-21/footer.webp)
 
 ¿Qué harías si tu cuenta bancaria fuera congelada mañana? Sin aviso, sin explicación, sin acceso a tu propio dinero.
 
@@ -369,7 +369,7 @@ Bitcoin no es perfecto. Ten en cuenta:
 
 Ninguno de estos son obstáculos insuperables. Son compensaciones. Cuanto más aprendes, menos limitaciones enfrentas.
 
-![blog-cover](/images/blog/2025-12-21/footer.jpg)
+![blog-cover](/images/blog/2025-12-21/footer.webp)
 
 ## Bitcoin hoy
 
