@@ -255,4 +255,4 @@ Trabaja. Quiere. Sueña. Sonríe.
 
 Pero juntos.
 
-![book-chapter](/images/books/oeur/familia.webp)
+![Un retrato de familia de varias generaciones, dibujado a lápiz suave](/images/books/oeur/familia.webp)
