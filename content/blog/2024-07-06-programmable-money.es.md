@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "bitcoin", "software", "cryptography", "security" ]
 [extra]
+tldr = "El Script de Bitcoin adjunta condiciones de gasto a una transacción: multifirma, timelocks y más. No es Turing completo a propósito, y ahí está la gracia."
 subtitle = "El poder del Script de Bitcoin"
 static_thumbnail = "/images/blog/2024-07-06/cover.webp"
 series = "bitcoin"

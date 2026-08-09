@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "agile", "xp", "communication", "team-management" ]
 [extra]
+tldr = "No puedes hacer agile a otro equipo. Sí puedes acortar tus propios ciclos de feedback en la frontera que compartís, y eso suele bastar."
 subtitle = "¿Cómo puedes trabajar con otros equipos que no son agile?"
 static_thumbnail = "/images/blog/2022-11-11/cover.webp"
 related_posts = [

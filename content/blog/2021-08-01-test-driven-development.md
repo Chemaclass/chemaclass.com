@@ -6,6 +6,7 @@ aliases = [ "tdd", "/inner-peace-katas", "blog/inner-peace-katas" ]
 [taxonomies]
 tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
+tldr = "TDD is a design practice, not a testing technique. The hard part is not writing tests, it is changing the habits that produce code nobody can test."
 subtitle = "What is challenging about it?"
 static_thumbnail = "/images/blog/2021-08-01/cover.webp"
 related_posts = [

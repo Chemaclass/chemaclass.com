@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "leadership", "communication", "team-management", "mentoring" ]
 [extra]
+tldr = "Cuando la empresa crece, el foco del líder pasa de los clientes a los empleados, y con él cambian los principios que importan."
 subtitle = "El liderazgo comienza dentro de tu propia vida y comportamiento"
 static_thumbnail = "/images/blog/2023-02-27/cover.webp"
 related_posts = [

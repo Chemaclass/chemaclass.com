@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "leadership", "team-management", "communication", "mentoring" ]
 [extra]
+tldr = "Leadership is action, not a title or a place in the hierarchy. Anyone can lead, and the way in is learning from other people's experience as well as your own."
 subtitle = "Team Lead? Tech Lead? What is leadership and what is not?"
 static_thumbnail = "/images/blog/2022-09-25/cover.webp"
 related_posts = [

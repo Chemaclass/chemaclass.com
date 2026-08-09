@@ -6,6 +6,7 @@ draft = false
 [taxonomies]
 tags = [ "agile", "code-review", "team-management", "productivity" ]
 [extra]
+tldr = "Match the review to the risk: ship the low-risk changes, show the ones worth reading, ask when you genuinely want input. It clears PR queues without losing quality."
 subtitle = "Match the review to the risk, not the ritual"
 static_thumbnail = "/images/blog/2025-04-12/cover.webp"
 related_posts = [

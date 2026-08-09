@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "software", "craftsmanship", "leadership" ]
 [extra]
+tldr = "The ideal version of every practice lives in books, the pragmatic one lives in your codebase under pressure. Good engineering holds both ends of the rope."
 subtitle = "Holding both ends of the rope"
 static_thumbnail = "/images/blog/2026-03-01/cover.webp"
 series = "ai"

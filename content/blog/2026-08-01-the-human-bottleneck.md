@@ -5,6 +5,7 @@ draft = true
 [taxonomies]
 tags = [ "ai", "software", "leadership" ]
 [extra]
+tldr = "When agents ship faster than you can review, the fix is not reviewing faster. Decide where your attention actually matters and grant autonomy where it has been earned."
 subtitle = "When you become the slowest part of the system"
 static_thumbnail = "/images/blog/2026-08-01/cover.webp"
 series = "ai"

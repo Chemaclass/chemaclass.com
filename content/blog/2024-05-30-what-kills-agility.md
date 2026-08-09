@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = ["agile", "xp", "leadership", "team-management", "communication"]
 [extra]
+tldr = "Agility dies in management, not in the framework. Documents, endless meetings and alignment that arrives too late kill it, whatever the process on the box says."
 subtitle = "Why Agile if you already do Scrum, Kanban, SAFe, or Waterfall?"
 static_thumbnail = "/images/blog/2024-05-30/cover.webp"
 pin = false

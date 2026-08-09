@@ -5,6 +5,7 @@ draft = true
 [taxonomies]
 tags = [ "ai", "software", "psychology" ]
 [extra]
+tldr = "Mismo prompt, respuesta distinta: eso es la función, no el fallo. La varianza es lo que hace útil la generación, así que abrázala donde ayuda y acótala donde duele."
 subtitle = "La aleatoriedad es el precio de la creatividad"
 static_thumbnail = "/images/blog/2026-09-01/cover.webp"
 series = "ai"

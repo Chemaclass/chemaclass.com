@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
 [extra]
+tldr = "Bitcoin is money with a fixed supply of 21 million, no central authority and no permission required. Start small, keep learning, and hold your own keys."
 subtitle = "A beginner's guide to sound money"
 static_thumbnail = "/images/blog/2025-12-21/footer.webp"
 reading_time = 12

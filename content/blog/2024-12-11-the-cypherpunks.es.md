@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "privacy", "bitcoin", "cryptography", "security", "philosophy" ]
 [extra]
+tldr = "Los Cypherpunks lucharon por poner la criptografía fuerte en manos de todos. De su trabajo salieron PGP, Tor y las ideas sobre las que después se construyó Bitcoin."
 subtitle = "Pioneros de la privacidad en la era digital"
 static_thumbnail = "/images/blog/2024-12-11/cover.webp"
 series = "bitcoin"

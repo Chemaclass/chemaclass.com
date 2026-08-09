@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "agile", "scrum", "communication", "productivity" ]
 [extra]
+tldr = "Scrum no es agile, es una forma de llegar. Cuando las ceremonias dejan de producir feedback, dilo en voz alta y cambia el proceso."
 subtitle = "Matando la agilidad con reuniones excesivas"
 static_thumbnail = "/images/blog/2022-12-06/cover.webp"
 related_posts = [
