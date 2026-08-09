@@ -24,7 +24,7 @@ This is a story about an impossible project in which the people around are const
 
 > If IT fails, the business fails.
 
-**DevOps Principles**: Flow, Feedback, and Continual Learning and Experimentation. These guiding concepts promote advancements in responsiveness, dependability, and teamwork.
+**[DevOps](/readings/accelerate/) Principles**: Flow, Feedback, and Continual Learning and Experimentation. These guiding concepts promote advancements in responsiveness, dependability, and teamwork.
 
 #### Summary
 

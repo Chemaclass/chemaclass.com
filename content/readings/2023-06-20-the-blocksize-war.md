@@ -20,9 +20,9 @@ related_readings = [
 
 <!-- more -->
 
-This book covers Bitcoin's blocksize war, which was waged from August 2015 to November 2017. On the surface the battle was about the amount of data allowed in each Bitcoin block, however it exposed much deeper issues, such as who controls Bitcoin's protocol rules. 
+This book covers [Bitcoin](/blog/bitcoin-fundamentals/)'s blocksize war, which was waged from August 2015 to November 2017. On the surface the battle was about the amount of data allowed in each Bitcoin block, however it exposed much deeper issues, such as who controls Bitcoin's protocol rules. 
 
-This book explores some of the major characters in the conflict and includes coverage, from both the front lines and behind the scenes, during some of the most acute phases of the struggle.
+This book explores some of the major characters in the [conflict](/readings/the-five-dysfunctions-of-a-team/) and includes coverage, from both the front lines and behind the scenes, during some of the most acute phases of the struggle.
 
 The account in this book includes discussions with the key players from both sides during the war, exploring their motivations, strategy and thought processes as the exhausting campaign progressed and developed.
 

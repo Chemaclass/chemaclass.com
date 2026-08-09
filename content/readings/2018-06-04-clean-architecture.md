@@ -25,7 +25,7 @@ related_readings = [
 
 ### Code design principles (SOLID)
 
-- **Single Responsibility**: a class should have one, and only one, reason to change. Or the new version: a module
+- **[Single Responsibility](/readings/clean-code/)**: a class should have one, and only one, reason to change. Or the new version: a module
   should be responsible to one, and only one, actor.
 - **Open-closed**: a class should be open for extension but closed for modification.
 - **Liskov’s Substitution**: objects in a program should be replaceable with instances of their subtypes without
@@ -37,7 +37,7 @@ related_readings = [
 
 #### Component cohesion
 
-- **Reuse/Release Equivalence** Principle: classes and modules (i.e. a component) reused together should be released
+- **Reuse/Release Equivalence** Principle: classes and modules (i.e. a [component](/readings/packaging-design/)) reused together should be released
   together. They should have the same version number and there should be proper documentation such as changelogs.
 - **Common Closure** Principle: classes that change together should be grouped together, and vice versa. The single
   responsibility principle at component-level.

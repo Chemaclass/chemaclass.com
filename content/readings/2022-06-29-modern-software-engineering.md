@@ -31,7 +31,7 @@ To optimize for learning, the book presents five behaviors to consider:
 - Empiricism
 - Being Experimental
 
-The main idea is to work on small steps, collect feedback, and adjust.
+The main idea is to work on small steps, collect [feedback](/blog/ship-show-ask/), and adjust.
 
 ### Optimize for managing complexity
 

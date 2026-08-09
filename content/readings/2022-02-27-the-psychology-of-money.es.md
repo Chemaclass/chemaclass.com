@@ -26,7 +26,7 @@ Tener más dinero te hará más feliz SOLO si significa tener más control sobre
 
 ### Interés compuesto
 
-- Empieza a invertir con lo que puedas y mantente invertido.
+- Empieza a [invertir](/es/readings/one-up-on-wall-street/) con lo que puedas y mantente invertido.
 - Aprovecha el poder del interés compuesto.
 
 ### Volatilidad

@@ -28,11 +28,11 @@ Somos individuos y parte de grupos sociales a la vez. Cada día tomamos decision
 
 - Las **endorfinas** y la **dopamina** nos impulsan a satisfacer necesidades personales: encontrar comida, desarrollar soluciones, perseverar ante problemas. Nos ayudan a hacer cosas para sobrevivir.
 
-- La **serotonina** y la **oxitocina** nos animan a trabajar con otros. Construyen confianza, lealtad y camaradería. Fortalecen nuestros lazos sociales y aumentan nuestra inclinación a cooperar para lograr lo que no podemos solos.
+- La **serotonina** y la **oxitocina** nos animan a trabajar con otros. Construyen [confianza](/es/readings/the-five-dysfunctions-of-a-team/), lealtad y camaradería. Fortalecen nuestros lazos sociales y aumentan nuestra inclinación a cooperar para lograr lo que no podemos solos.
 
 ## Círculos de seguridad
 
-La familia tradicionalmente proporciona un Círculo de Seguridad donde nos sentimos seguros y apoyados. Dentro del círculo tenemos un equilibrio saludable de **E.D.S.O.** y niveles bajos de cortisol. En las organizaciones, los Círculos de Seguridad dan a la gente un sentido de pertenencia y seguridad. Facilitan la comunicación, cooperación, resolución de problemas e innovación. La gente puede dirigir su atención a amenazas y oportunidades externas. Cuando se sienten amenazados por políticas y luchas internas, miran hacia adentro para protegerse. El grupo se vuelve más vulnerable.
+La familia tradicionalmente proporciona un Círculo de Seguridad donde nos sentimos seguros y apoyados. Dentro del círculo tenemos un equilibrio saludable de **E.D.S.O.** y niveles bajos de cortisol. En las organizaciones, los Círculos de Seguridad dan a la gente un sentido de pertenencia y seguridad. Facilitan la comunicación, cooperación, resolución de problemas e innovación. La gente puede dirigir su [atención](/es/readings/digital-minimalism/) a amenazas y oportunidades externas. Cuando se sienten amenazados por políticas y luchas internas, miran hacia adentro para protegerse. El grupo se vuelve más vulnerable.
 
 Los líderes deben ganarse el respeto y la lealtad haciendo los mayores sacrificios y estando dispuestos a comer al final. Hay que dar confianza para ganar confianza.
 
@@ -44,7 +44,7 @@ Los 4 químicos **E.D.S.O.** juegan roles importantes en nuestra supervivencia. 
 - **Abundancia destructiva**: respondemos diferente a la escasez y al exceso. Los líderes se han cegado tanto por el interés comercial que olvidaron a quién deben servir.
 - **Cambios sociales**: nuestras normas y valores han cambiado con los Boomers post-WWII, la Generación X y los Millennials. Cada vez más adictos a la dopamina y desequilibrados.
 
-> Simon Sinek ofrece muchos ejemplos e historias de líderes en todos los ámbitos: militar, política y negocios.
+> [Simon Sinek](/es/readings/start-with-why/) ofrece muchos ejemplos e historias de líderes en todos los ámbitos: militar, política y negocios.
 
 ---
 

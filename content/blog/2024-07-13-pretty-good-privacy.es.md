@@ -45,7 +45,7 @@ Su defensa fue ingeniosa: publicó el código fuente de PGP en un libro. Los lib
 - Genera pares de claves pública/privada para intercambio seguro
 - Soporta varios algoritmos de cifrado y funciones hash
 
-Hoy PGP sigue vivo como **OpenPGP** (el estándar) y **GPG** (GNU Privacy Guard, la implementación libre). Cuando verificas una descarga de software o firmas un commit de git, probablemente estás usando GPG.
+Hoy PGP sigue vivo como **OpenPGP** (el estándar) y **[GPG](/es/blog/verified-git-commits/)** (GNU Privacy Guard, la implementación libre). Cuando verificas una descarga de software o firmas un commit de git, probablemente estás usando GPG.
 
 ## Cómo funciona
 

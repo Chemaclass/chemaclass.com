@@ -18,9 +18,9 @@ related_readings = [
 
 <!-- more -->
 
-Una selección de veintiséis textos sobre gestión organizacional, el individuo y la sociedad.
+Una selección de veintiséis textos sobre [gestión](/es/readings/high-output-management/) organizacional, el individuo y la sociedad.
 
-El libro cubre los principios básicos de la gestión junto con sus problemas, desafíos y oportunidades. Ofrece a managers, ejecutivos y profesionales las herramientas necesarias para afrontar lo que la economía y la sociedad del mañana les exigirán.
+El libro cubre los principios básicos de la gestión junto con sus problemas, desafíos y oportunidades. Ofrece a managers, [ejecutivos](/es/readings/the-great-ceo-within/) y profesionales las herramientas necesarias para afrontar lo que la economía y la sociedad del mañana les exigirán.
 
 ---
 

@@ -18,7 +18,7 @@ related_readings = [
 ]
 +++
 
-Bitcoin did not appear out of nowhere. For decades prior to Satoshi Nakamoto’s invention, a diverse group of computer scientists, privacy activists, and heterodox economists tried to create a digital form of money that could operate independently of government control. The Genesis Book tells the story of the people and projects that inspired the invention of the world’s first successful peer-to-peer electronic cash system.
+[Bitcoin](/blog/bitcoin-fundamentals/) did not appear out of nowhere. For decades prior to Satoshi Nakamoto’s invention, a diverse group of computer scientists, [privacy](/blog/pretty-good-privacy/) activists, and heterodox economists tried to create a digital form of money that could operate independently of government control. The Genesis Book tells the story of the people and projects that inspired the invention of the world’s first successful peer-to-peer electronic cash system.
 
 <!-- more -->
 
@@ -55,7 +55,7 @@ Bitcoin did not appear out of nowhere. For decades prior to Satoshi Nakamoto’s
 
 > The central bank declared the insurer "too big to fail," and, along with the US Treasury, bailed it out with an injection of $68 billion (plus another $112 billion in guarantees).
 
-> If Friedrich Hayek's analysis of monetary economics early in this career was correct, Bitcoin could help fix the economy. As an unbacked currency that operated without a central bank, bitcoin was an entirely homogeneous form of money. Anyone could control their own coins, and there were no reserve ratios to worry about. And, since bitcoin existed on the internet, it was borderless as well. Anyone with an internet connection, anywhere in the world, could download the software and start sending and receiving transactions to anyone else.  This combination (a homogeneous, borderless type of money with a fixed supply) is what Hayek once described as neutral money.
+> If Friedrich [Hayek](/readings/the-road-to-serfdom/)'s analysis of monetary economics early in this career was correct, Bitcoin could help fix the economy. As an unbacked currency that operated without a central bank, bitcoin was an entirely homogeneous form of money. Anyone could control their own coins, and there were no reserve ratios to worry about. And, since bitcoin existed on the internet, it was borderless as well. Anyone with an internet connection, anywhere in the world, could download the software and start sending and receiving transactions to anyone else.  This combination (a homogeneous, borderless type of money with a fixed supply) is what Hayek once described as neutral money.
 
 > Bitcoin would also facilitate international trade in a much more straightforward manner, where only the buyer and seller and (the prices of) their respective products are affected, not the price levels across their entire countries.
 

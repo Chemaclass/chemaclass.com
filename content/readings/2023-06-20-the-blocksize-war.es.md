@@ -20,7 +20,7 @@ related_readings = [
 
 <!-- more -->
 
-Este libro cuenta la guerra del tamaño de bloque de Bitcoin, que duró desde agosto de 2015 hasta noviembre de 2017. En apariencia, la batalla giraba en torno a cuántos datos podía contener cada bloque. Pero el conflicto destapó algo más profundo: quién controla las reglas del protocolo de Bitcoin.
+Este libro cuenta la guerra del tamaño de bloque de [Bitcoin](/es/blog/bitcoin-fundamentals/), que duró desde agosto de 2015 hasta noviembre de 2017. En apariencia, la batalla giraba en torno a cuántos datos podía contener cada bloque. Pero el [conflicto](/es/readings/the-five-dysfunctions-of-a-team/) destapó algo más profundo: quién controla las reglas del protocolo de Bitcoin.
 
 El autor explora a los personajes principales del conflicto. Ofrece cobertura desde las trincheras y también tras bastidores, durante las fases más intensas de la lucha.
 

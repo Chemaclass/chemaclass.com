@@ -81,7 +81,7 @@ Este modelo me ayuda a:
 - Entregar más rápido sin comprometer la calidad
 - Trabajar con mayor autonomía y propiedad
 - Evitar cuellos de botella, especialmente en equipos pequeños o async
-- Fomentar una mentalidad de confianza, responsabilidad y toma de decisiones reflexiva
+- Fomentar una mentalidad de [confianza](/es/readings/the-five-dysfunctions-of-a-team/), responsabilidad y toma de decisiones reflexiva
 
 > Cambia el objetivo de obtener aprobación a compartir intención y ser dueño del resultado.
 

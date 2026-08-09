@@ -31,8 +31,8 @@ El código malo puede funcionar, pero si no está limpio, puede hundir a una emp
 
 ### Capítulo 1: ¿Qué es el código limpio?
 
-- El código se puede medir como "bueno" o "malo" en una revisión, o por cuánto tiempo tardas en explicarlo.
-- El código limpio es elegante, eficiente, legible, simple, sin duplicaciones y bien escrito.
+- El código se puede medir como "bueno" o "malo" en una [revisión](/es/blog/pull-request-vs-pair-prog/), o por cuánto tiempo tardas en explicarlo.
+- El [código limpio](/es/blog/the-art-of-refactoring/) es elegante, eficiente, legible, simple, sin duplicaciones y bien escrito.
 - Tu código debe añadir valor al negocio.
 - Al abrir un archivo fuente, el código limpio transmite calidad y se entiende fácilmente.
 - Haz tu código limpio y legible para que cualquiera pueda entenderlo rápido. No hagas perder tiempo a otros.

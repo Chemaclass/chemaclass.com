@@ -34,7 +34,7 @@ Desarrollar software va de personas que se comunican con clientes y stakeholders
 - Las organizaciones tienden a crear "días ocupados" con muchas reuniones, en lugar de confiar en que sus empleados se autoorganicen.
 - El factor humano suele ser el cuello de botella de un proyecto.
 - La gente no trabaja más duro bajo presión. Puede que rindan más un tiempo, pero se quemarán y se irán.
-- El rol del manager es facilitar que la gente trabaje, no forzarla.
+- El rol del [manager](/es/readings/the-manager-path/) es facilitar que la gente trabaje, no forzarla.
 
 - Cualquier cosa que necesites medir puede medirse de alguna forma, y eso es mejor que no medirla.
 - El pecado capital de la gestión es desperdiciar el tiempo de la gente.

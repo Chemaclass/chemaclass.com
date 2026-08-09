@@ -46,7 +46,7 @@ The problem? AI will happily generate messy code if that's what gets the job don
 
 > AI is a mirror that reflects the context you give it. If your codebase is messy, it will generate more mess. If your prompts are vague, it will make assumptions.
 
-Without careful guidance, you end up with patches on top of patches. Freshly created legacy code. A codebase where every change feels risky and the team spends more time fighting the code than building features.
+Without careful guidance, you end up with patches on top of patches. Freshly created [legacy code](/blog/testing-effectively-legacy-code/). A codebase where every change feels risky and the team spends more time fighting the code than building features.
 
 ## The art of asking
 
@@ -84,7 +84,7 @@ There's something else AI can't replace: the team.
 
 A conversation with a colleague about _"should we extract this into a service?"_ often leads to insights that no AI prompt would surface. That back-and-forth, the pushback, the _"what if we tried this instead"_. That's where real understanding happens.
 
-[Extreme Programming Explained](/readings/extreme-programming-explained/) emphasizes practices like pair programming and collective code ownership for good reason. These aren't inefficiencies to be automated away. They're how teams build quality into their process.
+[Extreme Programming Explained](/readings/extreme-programming-explained/) emphasizes practices like [pair programming](/blog/effective-pair-programming/) and collective code ownership for good reason. These aren't inefficiencies to be automated away. They're how teams build quality into their process.
 
 When you skip the human discussion and just let AI generate solutions, you lose the opportunity to learn, to challenge assumptions, and to grow as a team.
 

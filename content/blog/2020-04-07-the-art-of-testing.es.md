@@ -23,7 +23,7 @@ series_order = 1
 +++
 
 
-¿Por qué considerar el testing parte de tu desarrollo diario? Porque está directamente vinculado a la calidad del software.
+¿Por qué considerar el testing parte de tu desarrollo diario? Porque está directamente vinculado a la [calidad del software](/es/blog/different-beliefs-about-software-quality/).
 
 <!-- more -->
 

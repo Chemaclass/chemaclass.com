@@ -22,10 +22,10 @@ How do we win a game that has no end? Finite games, like football or chess, have
 
 > Infinite-minded leaders understand that "best" is not a permanent state. Instead, they strive to be "better". "Better" suggests a journey of constant improvement and makes us feel like we are being invited to contribute our talents and energies to make progress in that journey.
 
-The question is, how do we play to succeed in the game we're in? In this book, Simon Sinek offers a framework for leading with an infinite mindset: 
+The question is, how do we play to succeed in the game we're in? In this book, [Simon Sinek](/readings/start-with-why/) offers a framework for leading with an infinite mindset: 
 
 1. Just Cause
-2. Courageous leadership
+2. Courageous [leadership](/blog/the-beauty-of-leadership/)
 3. Trusting teams
 4. Worthy rival
 

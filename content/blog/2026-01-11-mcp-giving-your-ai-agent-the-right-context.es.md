@@ -43,9 +43,9 @@ Con MCP le das a la IA acceso directo a herramientas y recursos. Puede leer arch
 
 ## Qué es realmente MCP
 
-MCP es un protocolo, no un producto. Un estándar abierto que define cómo los agentes de IA pueden conectarse a fuentes de datos y herramientas externas. Piensa en ello como un puente entre el modelo de IA y tu entorno de desarrollo.
+MCP es un protocolo, no un producto. Un estándar abierto que define cómo los [agentes de IA](/es/blog/build-your-own-team-of-agents/) pueden conectarse a fuentes de datos y herramientas externas. Piensa en ello como un puente entre el modelo de IA y tu entorno de desarrollo.
 
-La arquitectura es simple: los servidores MCP exponen capacidades y los clientes de IA las consumen. Claude Desktop y Claude Code soportan MCP oficialmente, y cada vez más herramientas adoptan el protocolo.
+La arquitectura es simple: los servidores MCP exponen capacidades y los clientes de IA las consumen. Claude Desktop y [Claude Code](/es/blog/inside-the-claude-folder/) soportan MCP oficialmente, y cada vez más herramientas adoptan el protocolo.
 
 Por ejemplo, en Claude Code puedes añadir servidores a un archivo `.mcp.json` en la raíz de tu proyecto. Claude Code lee este archivo al abrir el proyecto e inicia los servidores configurados automáticamente:
 

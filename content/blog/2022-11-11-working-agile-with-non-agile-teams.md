@@ -23,7 +23,7 @@ series_order = 2
 +++
 
 
-Let's assume you already know what the agile manifesto is. Let's consider that you apply most of the "extreme
+Let's assume you already know what the [agile manifesto](/readings/clean-agile/) is. Let's consider that you apply most of the "extreme
 programming" values, principles, and practices. How can you work with other teams that aren't agile?
 
 <!-- more -->
@@ -44,7 +44,7 @@ with an external team that is not agile? How could your "perfectly agile team" w
 nothing to do with software? For example, a doctor.
 
 A doctor has no time to learn about your "agile values and principles for software development." A doctor has no time to
-learn about "extreme programming." Similarly, they don't have time to learn about testing, design, architecture, and
+learn about "[extreme programming](/blog/update-your-team-to-be-more-extreme/)." Similarly, they don't have time to learn about testing, design, architecture, and
 **good practices** related to software in general.
 
 How could you create a **bridge** between that doctor and your software team?

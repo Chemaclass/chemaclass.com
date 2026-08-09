@@ -16,7 +16,7 @@ related_readings = [
 ]
 +++
 
-Una recopilación completa de temas clave para la gestión: 1:1s, evaluaciones de desempeño, contratación, despidos, política laboral y trabajo remoto.
+Una recopilación completa de temas clave para la gestión: 1:1s, evaluaciones de desempeño, contratación, despidos, política laboral y [trabajo remoto](/es/readings/effective-remote-work/).
 
 El libro tiene 3 partes: la primera cubre lo que un manager nuevo debería saber; la segunda y tercera profundizan en temas que todo manager debería dominar.
 
@@ -84,7 +84,7 @@ Mis aprendizajes de este libro:
 ### Capítulo 09: Construir tu red
 
 - Hacer presentaciones, mantenerte en contacto.
-- Coaching y mentoría.
+- Coaching y [mentoría](/es/blog/the-path-to-seniority-in-software/).
 
 ## Parte 3 - El panorama general
 
@@ -97,7 +97,7 @@ Mis aprendizajes de este libro:
 ### Capítulo 11: Los proyectos son difíciles
 
 - "El ojo de Sauron": trabajar en proyectos de alto riesgo.
-- Todo se ralentiza cuando el equipo crece. Más código legacy, más problemas.
+- Todo se ralentiza cuando el equipo crece. Más [código legacy](/es/blog/testing-effectively-legacy-code/), más problemas.
 - Equilibrio entre alcance, recursos y tiempo.
 
 > "Lidera desde el frente. Da el ejemplo. Pon el trabajo. Los proyectos difíciles pueden definir tu carrera. Adueñátelos y estate ahí."

@@ -17,7 +17,7 @@ related_readings = [
 +++
 
 <!-- more -->
-Una fábula corta sobre una gaviota que quiere aprender sobre la vida y el vuelo. Una reflexión sobre la autoperfección.
+Una fábula corta sobre una gaviota que quiere aprender sobre la vida y el vuelo. Una reflexión sobre la [autoperfección](/es/readings/atomic-habits/).
 
 ## Trama
 
@@ -27,7 +27,7 @@ Un día conoce a dos gaviotas que lo llevan a un "plano superior de existencia".
 
 Pero Jonathan no está satisfecho con su nueva vida. Regresa a la Tierra para encontrar a otros como él, compartir lo aprendido y difundir su amor por el vuelo. Su misión tiene éxito. Reúne a su alrededor una bandada de gaviotas marginadas por no conformarse. Su primer estudiante, Fletcher Lynd Seagull, acaba convirtiéndose en maestro. Jonathan se va a enseñar a otras bandadas.
 
-> Esta novela corta se ha traducido a más de treinta idiomas.
+> Esta [novela corta](/es/readings/metamorphosis/) se ha traducido a más de treinta idiomas.
 
 ---
 

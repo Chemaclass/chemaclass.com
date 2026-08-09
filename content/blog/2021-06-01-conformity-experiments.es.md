@@ -24,7 +24,7 @@ related_readings = [
 
 ## El psicólogo Solomon Asch
 
-Durante los primeros años de la Segunda Guerra Mundial, cuando Hitler estaba en la cúspide del poder, Solomon Asch empezó a estudiar el impacto de la propaganda y el adoctrinamiento. Era profesor en el departamento de psicología del Brooklyn College y luego estuvo 19 años en Swarthmore College.
+Durante los primeros años de la Segunda Guerra Mundial, cuando Hitler estaba en la cúspide del poder, Solomon Asch empezó a estudiar el impacto de la [propaganda](/es/blog/the-power-of-authority-and-obedience/) y el adoctrinamiento. Era profesor en el departamento de psicología del Brooklyn College y luego estuvo 19 años en Swarthmore College.
 
 En los años 50, Asch se hizo famoso por sus experimentos sobre la presión social y la conformidad. ¿Hasta dónde llega la gente para encajar con otros en un grupo? Su investigación mostró que los participantes tendían a conformarse con el grupo, incluso cuando creían que estaba equivocado.
 

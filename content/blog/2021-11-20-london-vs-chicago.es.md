@@ -34,7 +34,7 @@ Un enfoque guiado por comportamiento para TDD. Empiezas desde el exterior de la 
 
 ### PROS
 
-- **Enfocado en Comportamiento**: requiere muchos dobles de test porque testeas abstracciones que aún no existen (creas lógica de alto nivel primero). No escribirás código muerto, pero es fácil crear tests muy acoplados a la lógica, lo que dificulta el refactoring.
+- **Enfocado en Comportamiento**: requiere muchos dobles de test porque testeas abstracciones que aún no existen (creas lógica de alto nivel primero). No escribirás código muerto, pero es fácil crear tests muy acoplados a la lógica, lo que dificulta el [refactoring](/es/blog/the-art-of-refactoring/).
 - **Separación Comando-Consulta**: es una disciplina para gestionar efectos secundarios. O realizas una acción (comando) o pides un valor (consulta).
 
 ### CONTRAS

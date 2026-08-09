@@ -316,7 +316,7 @@ These aren't edge cases:
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-remittances">
         <div class="interactive-list__content">
-          <p>Migrant workers send $700 billion home every year. Traditional services like Western Union take 6-10% in fees. For a worker sending $200, that's $20 gone. Money their family desperately needs. <br> <br>Bitcoin and Lightning Network transfer value across borders for cents, settling in minutes instead of days. Companies like Bitso processed $8 billion in crypto remittances in 2023. Cheaper transfers mean more food on the table.</p>
+          <p>Migrant workers send $700 billion home every year. Traditional services like Western Union take 6-10% in fees. For a worker sending $200, that's $20 gone. Money their family desperately needs. <br> <br>Bitcoin and [Lightning Network](/blog/run-your-ln-node/) transfer value across borders for cents, settling in minutes instead of days. Companies like Bitso processed $8 billion in crypto remittances in 2023. Cheaper transfers mean more food on the table.</p>
         </div>
         <a href="https://www.coindesk.com/consensus-magazine/2023/04/17/send-globally-crypto-remittance-service" class="interactive-list__link" target="_blank" rel="noopener">Read full article →</a>
       </div>
@@ -350,7 +350,7 @@ These aren't edge cases:
 
 ## Common Objections
 
-- **"It's used for crime."** So is cash. The difference: Bitcoin leaves a permanent, traceable record. The blockchain is a [forensic tool](https://www.chainalysis.com/blog/2025-crypto-crime-report-introduction/). Most criminals prefer dollars.
+- **"It's used for crime."** So is cash. The difference: Bitcoin leaves a permanent, traceable record. The [blockchain](/blog/how-bitcoin-works/) is a [forensic tool](https://www.chainalysis.com/blog/2025-crypto-crime-report-introduction/). Most criminals prefer dollars.
 
 - **"It's too volatile."** True in the short term. Zoom out: Bitcoin has been the [best-performing asset of the last decade](https://www.coingecko.com/research/publications/bitcoin-versus-traditional-assets-price-returns). Volatility decreases as adoption grows. Don't invest money you need next month.
 

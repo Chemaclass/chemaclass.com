@@ -20,7 +20,7 @@ related_readings = [
 
 ### La lección principal
 
-> Tu trabajo como manager es crear claridad. Claridad y más claridad.
+> Tu trabajo como [manager](/es/readings/the-manager-path/) es crear claridad. Claridad y más claridad.
 
 ### Ideas clave
 
@@ -31,7 +31,7 @@ related_readings = [
   - ¿Cómo creo claridad?
   - ¿Cómo creo capacidad?
 - Pide que te aclaren las cosas.
-- Para dar feedback constructivo, observa dónde la persona se bloquea, se desvía o se descuida.
+- Para dar [feedback](/es/blog/ship-show-ask/) constructivo, observa dónde la persona se bloquea, se desvía o se descuida.
 - Gestionar no es un ascenso. Es un cambio de carrera.
 - La mayoría de las disfunciones vienen de objetivos poco claros.
 - Con fecha límite fija, el alcance y la calidad siempre son negociables.

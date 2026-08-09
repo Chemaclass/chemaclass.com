@@ -25,7 +25,7 @@ El libro presenta el desarrollo de software como una práctica de ingeniería re
 El libro presenta cinco comportamientos clave para aprender mejor:
 
 - Trabajar de forma iterativa
-- Buscar feedback
+- Buscar [feedback](/es/blog/ship-show-ask/)
 - Incrementalismo
 - Empirismo
 - Ser experimental
@@ -40,7 +40,7 @@ Cinco ideas para manejar la complejidad:
 - Cohesión
 - Separación de responsabilidades
 - Ocultación de información y abstracción
-- Gestión del acoplamiento
+- Gestión del [acoplamiento](/es/readings/recipes-for-decoupling/)
 
 Gestionar la complejidad de nuestros sistemas es fundamental.
 

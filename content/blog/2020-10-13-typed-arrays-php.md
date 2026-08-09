@@ -107,7 +107,7 @@ createInvoiceForCustomers([new AnyOtherType()]); // won't work
 
 By doing that `createInvoice(Customer $customer)` we are ensuring the type of the argument, which is good! But, what about going one step further. Could we check the types of the elements when calling the function `createInvoiceForCustomers(array $customers)`, even making the IDE complain when the types are not right?
 
-Well, that's actually what Generics are for, but sadly, they are not yet in PHP. Not even in the upcoming PHP 8. Hopefully in a near future, but we cannot predict that for now.
+Well, that's actually what Generics are for, but sadly, they are not yet in [PHP](/blog/strict-types/). Not even in the upcoming PHP 8. Hopefully in a near future, but we cannot predict that for now.
 Luckily, we have currently an alternative nowadays, but it's not that popular. It has its own "pros" and "cons", so let's take a look at an example first:
 
 ```php

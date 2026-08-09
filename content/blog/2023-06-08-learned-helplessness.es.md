@@ -44,7 +44,7 @@ En la **Parte 2** del experimento, los mismos tres grupos de perros fueron teste
 
 ---
 
-Aunque este experimento fue demostrado con diferentes tipos de animales, también aplica a las personas. Esto es visible en niños cuando integran fracaso temprano para pedir ayuda, frustración, rendirse, poca motivación y procrastinación. Y estos puntos continúan mientras las personas envejecen.
+Aunque este experimento fue demostrado con diferentes tipos de animales, también aplica a las personas. Esto es visible en niños cuando integran fracaso temprano para pedir ayuda, frustración, rendirse, poca [motivación](/es/readings/start-with-why/) y procrastinación. Y estos puntos continúan mientras las personas envejecen.
 
 > Porque, si "no puedes hacer nada", ¿para qué intentarlo siquiera?
 

@@ -16,7 +16,7 @@ related_readings = [
 ]
 +++
 
-Este libro hace que DDD cobre vida. Da igual si eres desarrollador, consultor o cliente: te ayuda a entenderlo y sacarle provecho.
+Este libro hace que [DDD](/es/readings/recipes-for-decoupling/) cobre vida. Da igual si eres [desarrollador](/es/readings/clean-architecture/), consultor o cliente: te ayuda a entenderlo y sacarle provecho.
 
 <!-- more -->
 ---

@@ -86,7 +86,7 @@ Las mejores mecánicas vinieron del material fuente.
 
 ## Sonido y voces
 
-Sin archivos de audio. Todos los sonidos sintetizados en tiempo de ejecución con la Web Audio API. El Ojo abriéndose es un tono ascendente con reverb. El rugido del Balrog es un dron de baja frecuencia. Cada nivel tiene su propio dron ambiental: zumbido cálido para la Comarca, pulso profundo para Moria, rumor volcánico para el Monte del Destino. El juego entero es un archivo JavaScript. Sin activos externos.
+Sin archivos de audio. Todos los sonidos sintetizados en tiempo de ejecución con la Web Audio API. El Ojo abriéndose es un tono ascendente con reverb. El rugido del Balrog es un dron de baja frecuencia. Cada nivel tiene su propio dron ambiental: zumbido cálido para la Comarca, pulso profundo para Moria, rumor volcánico para el Monte del Destino. El juego entero es un archivo JavaScript. Sin [activos](/es/readings/rich-dad-poor-dad/) externos.
 
 Sam y Gandalf te hablan durante el juego. No en cuadros de diálogo. Pequeños susurros que aparecen en pantalla y se desvanecen.
 

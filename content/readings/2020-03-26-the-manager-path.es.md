@@ -28,7 +28,7 @@ related_readings = [
 1. Las reuniones uno a uno con tu manager son esenciales para una buena relación laboral.
 2. El trabajo de un manager es facilitar que su equipo haga las cosas, creando entornos donde el trabajo pueda fluir.
 3. Mentorear a los nuevos empleados es crítico.
-4. El feedback funciona mejor cuando lo combinas con coaching.
+4. El [feedback](/es/blog/ship-show-ask/) funciona mejor cuando lo combinas con coaching.
 5. Es poco realista pensar que puedes o debes proteger a tu equipo de todo.
 
 ---

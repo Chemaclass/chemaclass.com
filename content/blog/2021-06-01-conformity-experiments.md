@@ -24,7 +24,7 @@ To what extent do social forces alter people's opinions? Which aspect of the gro
 
 ## The psychologist Solomon Asch
 
-During the early years of World War II, when Hitler was at the height of power, Solomon Asch began studying the impact of propaganda and indoctrination while he was a professor at Brooklyn College's psychology department. He also was a professor for 19 years at Swarthmore College.
+During the early years of World War II, when Hitler was at the height of power, Solomon Asch began studying the impact of [propaganda](/blog/the-power-of-authority-and-obedience/) and indoctrination while he was a professor at Brooklyn College's psychology department. He also was a professor for 19 years at Swarthmore College.
 
 During the 1950s, Asch became famous for his series of experiments that demonstrated the effects of social pressure on conformity. How far would people go to conform to others in a group? Asch's research demonstrated that participants were surprisingly likely to conform to a group, even when they personally believed that the group was incorrect.
 

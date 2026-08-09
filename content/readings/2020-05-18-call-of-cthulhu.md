@@ -19,4 +19,4 @@ related_readings = [
 <!-- more -->
 
 The Call of Cthulu, the tale of a horrifying underwater monster coming to life and threatening mankind, spawning an
-entire mythology, with the power to strike terror into the hearts of even the Great Old Ones.
+entire [mythology](/readings/the-day-of-the-triffids/), with the power to strike [terror](/readings/fahrenheit-451/) into the hearts of even the Great Old Ones.

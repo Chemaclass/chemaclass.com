@@ -45,6 +45,6 @@ Si reconoces esta situación en tu empresa, ayuda a crear conciencia. Hablad ent
 
 Si eres tú quien lo está viviendo en primera persona, te recomiendo:
 
-- Habla con tu manager. Pide formación, mentoría o lo que necesites para adquirir las habilidades que te faltan: confianza, comunicación, o lo que ayude a tu nuevo rol. Quizás no recibiste la formación adecuada para un trabajo que requiere habilidades diferentes.
+- Habla con tu [manager](/es/readings/the-manager-path/). Pide formación, [mentoría](/es/blog/the-path-to-seniority-in-software/) o lo que necesites para adquirir las habilidades que te faltan: confianza, comunicación, o lo que ayude a tu nuevo rol. Quizás no recibiste la formación adecuada para un trabajo que requiere habilidades diferentes.
 
 - Considera volver a donde eras bueno y seguir dominando eso. Ayuda e inspira a quienes están a tu lado. No todo el mundo tiene que ascender siempre.

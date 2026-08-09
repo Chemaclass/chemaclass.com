@@ -83,7 +83,7 @@ Leading through change is something you have to face in many moments in your lif
 
 How do you eliminate bad habits and start creating good ones? "[The Power of Habit](/readings/the-power-of-habits/)" and "[Atomic Habits](/readings/atomic-habits/)" are great books that help you understand that habits are like a muscle. You can train them.
 
-> "Change how you identify yourself. The environment is more important than being motivated. Reduce friction for good habits and increase friction for bad habits." - Atomic Habits
+> "Change how you identify yourself. The environment is more important than being motivated. Reduce friction for good habits and increase friction for bad habits." - [Atomic Habits](/readings/atomic-habits/)
 
 ### Empowering your people
 
@@ -97,7 +97,7 @@ Communication is one of the most challenging skills you need because you constan
 
 "[Leadership is Language](/readings/leadership-is-language/)" challenges the industrial-age playbook (where leaders give commands and employees follow them), giving you strategies that can help you such as: _control the clock, collaborate, commit, complete, and improve_.
 
-> "Your words matter more than you think." - Leadership is Language
+> "Your words matter more than you think." - [Leadership is Language](/readings/leadership-is-language/)
 
 It is important to recognize our emotions and not let them control our actions. Creating an open, honest, and **safe environment** is crucial to create trust among your peers.
 
@@ -109,7 +109,7 @@ It is important to recognize our emotions and not let them control our actions. 
 
 Regarding communication, you might need some good persuasion skills to convince others about your ideas. "[Never split the difference](/readings/never-split-the-difference/)" is a book about negotiation (from one FBI's lead international kidnapping negotiator) that gives you great insides into how to negotiate effectively: negotiation begins with listening, using mirrors to encourage the other side to empathise, tactical empathy to getting an agreement, labelling emotions, among others.
 
-> "Negotiation begins with listening, making it about the other people, validating their emotions, and creating enough trust and safety for a real conversation to begin." - Never split the difference
+> "Negotiation begins with listening, making it about the other people, validating their emotions, and creating enough trust and safety for a real conversation to begin." - [Never split the difference](/readings/never-split-the-difference/)
 
 
 ![blog-middle](/images/blog/2023-02-27/middle.webp)
@@ -169,10 +169,10 @@ Your primary responsibility is to help others improve, and this is only possible
 - Simon Sinek: [Start with Why](/readings/start-with-why/), [Leaders Eat Last](/readings/leaders-eat-last/), [The infinite game](/readings/the-infinite-game/)
 - Spencer Johnson: [Who moved my cheese?](/readings/who-moved-my-cheese/)
 - Charles Duhigg: [The Power of Habit](/readings/the-power-of-habits/)
-- James Clear: [Atomic Habits](/readings/atomic-habits/)
-- L. David Marquet: [Turn the ship around!](/readings/turn-the-ship-around/), [Leadership is Language](/readings/leadership-is-language/)
+- James Clear: Atomic Habits
+- L. David Marquet: [Turn the ship around!](/readings/turn-the-ship-around/), Leadership is Language
 - Brené Brown: [Dare to lead](/readings/dare-to-lead/)
-- Chris Voss: [Never split the difference](/readings/never-split-the-difference/)
+- Chris Voss: Never split the difference
 - Patrick M. Lencioni: [The Five Dysfunctions of a Team](/readings/the-five-dysfunctions-of-a-team/)
 - Andrew S. Grove: [High Output Management](/readings/high-output-management/)
 - Peter F. Drucker: [The Essential Drucker](/readings/the-essential-drucker/)

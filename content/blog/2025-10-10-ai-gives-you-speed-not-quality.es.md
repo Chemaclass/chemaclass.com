@@ -84,7 +84,7 @@ Hay algo más que la IA no puede reemplazar: el equipo.
 
 Una conversación con un colega sobre _"¿deberíamos extraer esto en un servicio?"_ a menudo lleva a insights que ningún prompt de IA sacaría a la luz. Ese ida y vuelta, el cuestionar, el _"¿qué si intentamos esto en su lugar?"_. Ahí es donde ocurre el entendimiento real.
 
-[Extreme Programming Explained](/es/readings/extreme-programming-explained/) enfatiza prácticas como pair programming y propiedad colectiva del código por buenas razones. Estas no son ineficiencias para automatizar. Son cómo los equipos construyen calidad en su proceso.
+[Extreme Programming Explained](/es/readings/extreme-programming-explained/) enfatiza prácticas como [pair programming](/es/blog/effective-pair-programming/) y propiedad colectiva del código por buenas razones. Estas no son ineficiencias para automatizar. Son cómo los equipos construyen calidad en su proceso.
 
 Cuando saltas la discusión humana y solo dejas que la IA genere soluciones, pierdes la oportunidad de aprender, de desafiar suposiciones y de crecer como equipo.
 

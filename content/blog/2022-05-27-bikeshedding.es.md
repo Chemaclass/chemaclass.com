@@ -38,7 +38,7 @@ Pasa más de lo que pensamos, y le puede ocurrir a cualquiera.
 
 ### ¿Qué podemos hacer?
 
-Crear conciencia de este problema en tu equipo. La comunicación honesta y la confianza son claves.
+Crear conciencia de este problema en tu equipo. La comunicación honesta y la [confianza](/es/readings/the-five-dysfunctions-of-a-team/) son claves.
 
 Pasos a seguir:
 

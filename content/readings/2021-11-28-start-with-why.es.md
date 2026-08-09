@@ -16,13 +16,13 @@ related_readings = [
 ]
 +++
 
-¿Por qué algunas personas y organizaciones son más innovadoras, influyentes y rentables que otras? ¿Por qué algunas consiguen mayor lealtad de clientes y empleados? Incluso entre las exitosas, ¿por qué tan pocas pueden repetir su éxito?
+¿Por qué algunas personas y [organizaciones](/es/readings/the-infinite-game/) son más innovadoras, influyentes y rentables que otras? ¿Por qué algunas consiguen mayor lealtad de clientes y empleados? Incluso entre las exitosas, ¿por qué tan pocas pueden repetir su éxito?
 
 <!-- more -->
 
 ---
 
-La capacidad de inspirar y lograr cosas notables empieza con el POR QUÉ. Quienes empiezan con el POR QUÉ no manipulan, inspiran.
+La capacidad de [inspirar](/es/readings/leaders-eat-last/) y lograr cosas notables empieza con el POR QUÉ. Quienes empiezan con el POR QUÉ no manipulan, inspiran.
 
 Martin Luther King Jr., Steve Jobs y los hermanos Wright tenían poco en común. Pero todos empezaron con el POR QUÉ. Entendieron que la gente no compra un producto, servicio o idea hasta que entiende el POR QUÉ detrás.
 

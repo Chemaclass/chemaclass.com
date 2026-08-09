@@ -43,7 +43,7 @@ These are the topics you'll find in the book:
 - How to bounce back from unforeseen constraints
 - Answer the question: "How difficult is it to code...?"
 - How to avoid the "bottom of the ninth" guy
-- When to respond to feedback
+- When to respond to [feedback](/blog/ship-show-ask/)
 - How to validate an expert in any field
 - How to effectively communicate complex ideas
 
@@ -63,7 +63,7 @@ These are the topics you'll find in the book:
 > Always return to your core goals. [...] I make sure each core goal has a clearly defined "why?" behind it, this way 
 > if I ever get lost, I go back to my "why."
 
-- Reference to "[Start with Why](/readings/start-with-why)" by Simon Sinek.
+- Reference to "[Start with Why](/readings/start-with-why)" by [Simon Sinek](/readings/start-with-why/).
 
 > When you're the boss, remember this golden rule: Ask people what they think instead of telling them what to do.
 

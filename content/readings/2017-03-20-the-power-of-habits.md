@@ -20,7 +20,7 @@ related_readings = [
 
 ## Takeaways
 
-1. All habits operate the same way
+1. All [habits](/readings/atomic-habits/) operate the same way
 2. Changing a habit means changing one key aspect...
 3. ...and changing one habit can change a lot of things
 4. Willpower is a muscle

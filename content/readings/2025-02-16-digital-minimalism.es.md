@@ -18,7 +18,7 @@ related_readings = [
 ]
 +++
 
-Vivimos conectados todo el tiempo. El minimalismo digital de Cal Newport no propone rechazar la tecnología, sino usarla con intención. El resultado: recuperas tu enfoque, reduces la ansiedad y construyes relaciones más profundas.
+Vivimos conectados todo el tiempo. El minimalismo digital de [Cal Newport](/es/readings/the-power-of-habits/) no propone rechazar la tecnología, sino usarla con intención. El resultado: recuperas tu enfoque, reduces la ansiedad y construyes relaciones más profundas.
 
 <!-- more -->
 
@@ -26,7 +26,7 @@ Vivimos conectados todo el tiempo. El minimalismo digital de Cal Newport no prop
 
 Newport basa su enfoque en tres ideas:
 
-- **El desorden cuesta caro**: Las distracciones digitales fragmentan tu atención y agotan tu energía mental. Ordenar tu vida digital te devuelve el control.
+- **El desorden cuesta caro**: Las distracciones digitales fragmentan tu [atención](/es/readings/atomic-habits/) y agotan tu energía mental. Ordenar tu vida digital te devuelve el control.
 
 - **Optimizar es esencial**: No aceptes cada app o plataforma sin pensar. Elige solo las que encajan con tus valores y metas.
 

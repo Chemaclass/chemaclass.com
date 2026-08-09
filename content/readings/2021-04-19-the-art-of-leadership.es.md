@@ -27,13 +27,13 @@ related_readings = [
 ### Notas destacadas
 
 - Liderar son pequeñas cosas hechas de forma consistente.
-- La empatía es una habilidad poderosa.
-- Los uno a uno son clave para conectar con el equipo.
+- La [empatía](/es/blog/people-skills/) es una habilidad poderosa.
+- Los [uno a uno](/es/readings/the-manager-path/) son clave para conectar con el equipo.
 - Pedir feedback genera confianza y fortalece relaciones.
 - Ante el feedback, da las gracias y haz preguntas para entender mejor.
 - El feedback es un regalo.
 - No es personal, es profesional.
-- El liderazgo es un traje que eliges ponerte para que otros lo vean.
+- El [liderazgo](/es/blog/the-beauty-of-leadership/) es un traje que eliges ponerte para que otros lo vean.
 - Los managers te dicen dónde estás; los líderes, hacia dónde vas.
 - Tus compañeros se convierten en tus aliados.
 

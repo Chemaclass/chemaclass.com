@@ -16,7 +16,7 @@ related_readings = [
 ]
 +++
 
-This book is a leadership fable about a tech company that is struggling to get more customers. The C level is not
+This book is a [leadership](/blog/the-beauty-of-leadership/) fable about a tech company that is struggling to get more customers. The C level is not
 working as a team, and they have a hard time coming to any agreements which result in negative morale. Until the new
 CEO, Catherine Petersen, joins the team, and she is able to recognize the problems and help the team overcome them by
 understanding the situation.

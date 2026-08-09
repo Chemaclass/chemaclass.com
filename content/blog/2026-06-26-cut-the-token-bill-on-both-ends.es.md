@@ -134,10 +134,10 @@ Aquí está la prueba real, en un plan de 100 $/mes. Antes de añadirlas llegaba
 
 ## Instálalas una vez y olvídate
 
-Las dos instalaciones son globales, y las haces una sola vez. A partir de ahí sigues escribiendo `git status`, `grep` y `npm install` igual que siempre. El hook los reescribe por ti y Caveman se activa solo, así que no hay hábitos nuevos que aprender.
+Las dos instalaciones son globales, y las haces una sola vez. A partir de ahí sigues escribiendo `git status`, `grep` y `npm install` igual que siempre. El hook los reescribe por ti y Caveman se activa solo, así que no hay [hábitos](/es/readings/atomic-habits/) nuevos que aprender.
 
 ¿No sabes por dónde empezar? Elige la fuga que más te duela ahora mismo. Si el problema son las respuestas largas en cada arreglo, empieza por Caveman. Si son las inundaciones de output de `grep` y `npm install`, empieza por RTK. Añade la otra cuando te apetezca, que no se estorban entre sí.
 
-> No mejoraste el modelo. Dejaste de malgastar su atención.
+> No mejoraste el modelo. Dejaste de malgastar su [atención](/es/readings/digital-minimalism/).
 
 ![blog-footer](/images/blog/2026-06-26/footer.webp)

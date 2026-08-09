@@ -19,7 +19,7 @@ related_readings = [
 A radical playbook to empower your people and put your team on a path to continuous improvement. 
 
 In this book, the former submarine commander Captain [L. David Marquet](https://x.com/ldavidmarquet) dives deep into one of the most investigated
-marine disasters, the sinking of the El Faro, and surfaces with new ideas on leadership and language.
+marine disasters, the sinking of the El Faro, and surfaces with new ideas on [leadership](/blog/the-beauty-of-leadership/) and language.
 
 <!-- more -->
 

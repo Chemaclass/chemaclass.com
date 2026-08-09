@@ -21,7 +21,7 @@ related_readings = [
 ### Takeaways
 
 - Don't Repeat Yourself.
-- Mindset is as important as knowledge.
+- [Mindset](/readings/atomic-habits/) is as important as knowledge.
 - Good code is easier to change than bad design.
 - Choose great tools and become fluent with them.
 
@@ -30,7 +30,7 @@ related_readings = [
 #### Don't Repeat Yourself (DRY)
 
 - Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.
-- DRY is about the duplication of knowledge, of intent. It's about expressing the same thing in two different places,
+- [DRY](/readings/clean-code/) is about the duplication of knowledge, of intent. It's about expressing the same thing in two different places,
   possibly in two totally different ways.
 
 #### Mindset is as important as knowledge

@@ -24,7 +24,7 @@ These tests are also known as Characterization tests.
 > A characterization test describes the actual behavior of an existing piece of software, and therefore protects existing
 > behavior of legacy code against unintended changes via automated testing. This term was coined by [Michael Feathers](/readings/working-effectively-with-legacy-code/).
 
-They enable and provide a safety net for extending and refactoring code that does not have adequate tests. A test can be
+They enable and provide a safety net for extending and [refactoring](/blog/the-art-of-refactoring/) code that does not have adequate tests. A test can be
 written that asserts that the output of the legacy code matches the observed result for the given inputs.
 
 ## How to start?

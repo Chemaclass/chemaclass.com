@@ -17,7 +17,7 @@ related_readings = [
 +++
 
 
-Contratos claros, efectos secundarios aislados, testeabilidad, baja complejidad y carga cognitiva, fluidez del código y confianza en ti mismo.
+Contratos claros, efectos secundarios aislados, testeabilidad, baja complejidad y carga cognitiva, fluidez del código y [confianza](/es/readings/the-five-dysfunctions-of-a-team/) en ti mismo.
 
 <!-- more -->
 
@@ -52,7 +52,7 @@ Pero cuando Alan Kay creó Smalltalk, la herencia no era el concepto principal. 
 * **Testeabilidad.** Mockear interfaces es muy fácil.
 * **Complejidad manejable.** Todo aislado significa menos cambios en cascada.
 * **Baja carga cognitiva.** Menos complejidad, más foco en lo importante.
-* **Flexibilidad.** Sin acoplamiento innecesario, mover código es más fácil.
+* **Flexibilidad.** Sin [acoplamiento](/es/readings/recipes-for-decoupling/) innecesario, mover código es más fácil.
 * **Confianza.** Testear código aislado te da seguridad para cambiarlo.
 
 

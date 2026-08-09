@@ -134,10 +134,10 @@ Here's the real check, on a $100/month plan. Before I added these, I hit the wee
 
 ## Set it once, then forget it
 
-Both installs are global, and you do them once. After that you keep typing `git status`, `grep`, and `npm install` exactly as before. The hook rewrites them for you and Caveman kicks in on its own, so there are no new habits to learn.
+Both installs are global, and you do them once. After that you keep typing `git status`, `grep`, and `npm install` exactly as before. The hook rewrites them for you and Caveman kicks in on its own, so there are no new [habits](/readings/atomic-habits/) to learn.
 
 Not sure where to start? Pick whichever leak hurts more right now. If long replies on every little fix are the problem, start with Caveman. If it's floods of `grep` and `npm install` output, start with RTK. Add the other one whenever you feel like it, since they don't get in each other's way.
 
-> You didn't upgrade the model. You stopped wasting its attention.
+> You didn't upgrade the model. You stopped wasting its [attention](/readings/digital-minimalism/).
 
 ![blog-footer](/images/blog/2026-06-26/footer.webp)

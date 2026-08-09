@@ -49,7 +49,7 @@ related_readings = [
 
 #### Estableciendo límites
 
-Los límites separan elementos de software: lo que importa de lo que no, lo de alto nivel de lo de bajo nivel. Si el código de alto nivel depende del de bajo nivel, los cambios se propagan hacia arriba. Ponemos un límite usando polimorfismo para invertir el flujo. Esto es el Principio de Inversión de Dependencias de SOLID.
+Los límites separan elementos de software: lo que importa de lo que no, lo de alto nivel de lo de bajo nivel. Si el código de alto nivel depende del de bajo nivel, los cambios se propagan hacia arriba. Ponemos un límite usando polimorfismo para [invertir](/es/readings/one-up-on-wall-street/) el flujo. Esto es el Principio de Inversión de Dependencias de SOLID.
 
 #### Separando capas
 

@@ -17,7 +17,7 @@ related_readings = [
 ]
 +++
 
-This book is fantastic and frightening but entirely plausible. It doesn't seem scientifically possible, but its characters are living people shaken out of the civilization they know into the horror of a world dominated by "triffids".
+This book is fantastic and frightening but entirely [plausible](/readings/call-of-cthulhu/). It doesn't seem scientifically possible, but its characters are living people shaken out of the [civilization](/readings/lord-of-the-flies/) they know into the horror of a world dominated by "triffids".
 
 <!-- more -->
 

@@ -17,7 +17,7 @@ related_readings = [
 ]
 +++
 
-Fantástico, aterrador y plausible a partes iguales. Los personajes son personas reales, arrancadas de su civilización y lanzadas al horror de un mundo dominado por los "trífidos".
+Fantástico, aterrador y [plausible](/es/readings/call-of-cthulhu/) a partes iguales. Los personajes son personas reales, arrancadas de su [civilización](/es/readings/lord-of-the-flies/) y lanzadas al horror de un mundo dominado por los "trífidos".
 
 <!-- more -->
 

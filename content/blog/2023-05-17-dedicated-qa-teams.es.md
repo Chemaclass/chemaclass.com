@@ -20,7 +20,7 @@ related_readings = [
 +++
 
 
-Esto será controvertido, pero hablemos de la posición de QA. La verdad oculta detrás de la falta de calidad del software y por qué esto debería preocuparte si escribes software.
+Esto será controvertido, pero hablemos de la posición de QA. La verdad oculta detrás de la falta de [calidad del software](/es/blog/different-beliefs-about-software-quality/) y por qué esto debería preocuparte si escribes software.
 
 <!-- more -->
 
@@ -48,7 +48,7 @@ Eres la última y principal persona responsable de tu conocimiento, así que mej
 
 Mira todo lo que haces como una oportunidad de aprendizaje. Practica y mejora por defecto en todo lo que haces.
 
-Si no sabes cómo empezar, aquí está mi consejo favorito: siempre puedes practicar y mejorar tus habilidades de testing usando katas de código. Lee más sobre este tema [aquí](/es/blog/test-driven-development/).
+Si no sabes cómo empezar, aquí está mi consejo favorito: siempre puedes practicar y mejorar tus habilidades de testing usando [katas](/es/blog/update-your-team-to-be-more-extreme/) de código. Lee más sobre este tema [aquí](/es/blog/test-driven-development/).
 
 ## Buena teoría, pero... ¿para qué molestarse?
 

@@ -21,7 +21,7 @@ related_readings = [
 +++
 
 
-A Bitcoin se le llama "dinero programable" porque permite ejecutar transacciones con condiciones mediante su lenguaje de scripting.
+A [Bitcoin](/es/blog/bitcoin-fundamentals/) se le llama "dinero programable" porque permite ejecutar transacciones con condiciones mediante su lenguaje de scripting.
 
 <!-- more -->
 
@@ -88,7 +88,7 @@ Cada tipo de dirección corresponde a una forma distinta de hacer scripts. Veamo
 - **P2MS**: Típicamente es un tipo de dirección P2SH o P2WSH.
 - **P2WPKH**: Comienza con `bc1`. **SegWit** nativo, transacciones más eficientes.
 - **P2WSH**: Comienza con `bc1`. **SegWit** para scripts complejos.
-- **P2TR**: Comienza con `bc1p`. Direcciones **Taproot** SegWit, mejorando privacidad y eficiencia para transacciones complejas.
+- **P2TR**: Comienza con `bc1p`. Direcciones **Taproot** SegWit, mejorando [privacidad](/es/blog/pretty-good-privacy/) y eficiencia para transacciones complejas.
 
 > Usar SegWit nativo (P2WPKH y P2WSH) es preferible cuando es posible, ya que maximiza los beneficios de la actualización SegWit, pero P2SH-SegWit puede ser útil para compatibilidad con sistemas más antiguos.
 

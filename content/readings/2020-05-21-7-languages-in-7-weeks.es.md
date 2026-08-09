@@ -18,9 +18,9 @@ related_readings = [
 
 <!-- more -->
 
-El Programador Pragmático recomienda aprender un lenguaje nuevo cada año. Pero si uno por año está bien, ¿por qué no siete en siete semanas?
+[El Programador Pragmático](/es/readings/the-pragmatic-programmer/) recomienda aprender un lenguaje nuevo cada año. Pero si uno por año está bien, ¿por qué no siete en siete semanas?
 
-Este libro te lleva de paseo por Clojure, Haskell, Io, Prolog, Scala, Erlang y Ruby. Aunque tu lenguaje favorito no esté en la lista, vas a ampliar tu forma de pensar al ver estos lenguajes lado a lado. Aprenderás algo valioso de cada uno. Y lo mejor: aprenderás a aprender lenguajes rápido.
+Este libro te lleva de paseo por [Clojure](/es/blog/phel-first-release/), Haskell, Io, Prolog, Scala, Erlang y Ruby. Aunque tu lenguaje favorito no esté en la lista, vas a ampliar tu forma de pensar al ver estos lenguajes lado a lado. Aprenderás algo valioso de cada uno. Y lo mejor: aprenderás a aprender lenguajes rápido.
 
 ---
 

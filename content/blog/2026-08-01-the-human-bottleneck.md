@@ -17,7 +17,7 @@ related_posts = [
 ]
 +++
 
-AI agents can write code, review it, test it, and deploy it. We spent decades making machines faster. Now the slowest part of the system has changed.
+[AI agents](/blog/build-your-own-team-of-agents/) can write code, review it, test it, and deploy it. We spent decades making machines faster. Now the slowest part of the system has changed.
 
 It's us.
 

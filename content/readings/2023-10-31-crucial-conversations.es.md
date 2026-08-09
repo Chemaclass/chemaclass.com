@@ -19,7 +19,7 @@ related_readings = [
 
 <!-- more -->
 
-Cuando hay mucho en juego, las opiniones difieren y las emociones se disparan, tienes tres opciones: evitar la conversación y sufrir las consecuencias, manejarla mal y sufrir las consecuencias, o leer este libro y aprender a comunicarte mejor cuando más importa.
+Cuando hay mucho en juego, las opiniones difieren y las [emociones](/es/readings/never-split-the-difference/) se disparan, tienes tres opciones: evitar la [conversación](/es/readings/radical-candor/) y sufrir las consecuencias, manejarla mal y sufrir las consecuencias, o leer este libro y aprender a comunicarte mejor cuando más importa.
 
 > Si no lo hablas, lo actuarás.
 

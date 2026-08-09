@@ -49,10 +49,10 @@ Nonetheless, when Alan Kay created Smalltalk, the inheritance was never the main
 
 * Clear contracts. Using interfaces will force you to think in terms of communication between objects.
 * Isolated, side effect free code units. Injecting interfaces only as dependencies will remove every nasty side effect around the code you are working on.
-* Testability. Mocking dependencies is extremely easy when they are interfaces.
+* Testability. [Mocking](/blog/to-mock-or-not-to-mock/) dependencies is extremely easy when they are interfaces.
 * Low, manageable complexity. Since everything is isolated, you won't need to worry about rippling changes. This dramatically decreases the complexity of your code.
 * Low cognitive load. With decreased complexity, your brain will be free to focus on what matters.
-* Code fluidity. By removing any unnecessary coupling, you will be able to move things around way more easily than before.
+* Code fluidity. By removing any unnecessary [coupling](/readings/recipes-for-decoupling/), you will be able to move things around way more easily than before.
 * Confidence in yourself. Being able to test your code in isolation so well will give you a wonderful sense of confidence in changing it.
 
 

@@ -33,7 +33,7 @@ It explores an optimal decision-making process for product teams, so that they c
 7. Prioritizing Opportunities, Not Solutions
 8. Supercharged Ideation
 9. Identifying Hidden Assumptions
-10. Testing Assumptions, Not Ideas
+10. [Testing](/blog/the-art-of-testing/) Assumptions, Not Ideas
 11. Measuring Impact
 12. Managing the Cycles
 13. Show Your Work

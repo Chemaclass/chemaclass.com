@@ -27,7 +27,7 @@ If you can't work well with others, it doesn't matter how great your code is, no
 
 ## Why People Skills Matter in Software
 
-In software development, collaboration is everything. Projects aren't just solo endeavors. You will be part of a team, with other developers, designers, or even non-tech folks like managers and clients. How you communicate, collaborate, and handle feedback can make or break your success.
+In software development, collaboration is everything. Projects aren't just solo endeavors. You will be part of a team, with other developers, designers, or even non-tech folks like managers and clients. How you communicate, collaborate, and handle [feedback](/blog/ship-show-ask/) can make or break your success.
 
 ### The Brilliant but Difficult Teammate
 
@@ -71,7 +71,7 @@ The competencies that enable you to interact effectively and smoothly with other
 
 - **Adaptability**: Being flexible and open to change, adjusting your approach as needed to meet different situations or personalities.
 
-- **Leadership**: Inspiring and guiding others, providing direction, and fostering a positive environment.
+- **[Leadership](/blog/the-beauty-of-leadership/)**: Inspiring and guiding others, providing direction, and fostering a positive environment.
 
 - **Networking**: Building and maintaining professional relationships that can provide support, opportunities, and resources.
 

@@ -19,7 +19,7 @@ related_readings = [
 
 <!-- more -->
 
-The Alchemist is a classic novel in which a boy named Santiago embarks on a journey seeking treasure in the Egyptian pyramids after having a recurring dream about it. On the way meets mentors, falls in love, and most importantly, learns the true importance of who he is and how to improve himself and focus on what really matters in life.
+The Alchemist is a classic novel in which a boy named Santiago embarks on a [journey](/readings/jonathan-livingston-seagull/) seeking treasure in the Egyptian pyramids after having a recurring dream about it. On the way meets [mentors](/blog/the-path-to-seniority-in-software/), falls in love, and most importantly, learns the true importance of who he is and how to improve himself and focus on what really matters in life.
 
 #### Video Summary
 

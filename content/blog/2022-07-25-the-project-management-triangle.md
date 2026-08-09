@@ -38,13 +38,13 @@ In software methodologies, you can adapt this idea by changing **quality** to **
 
 ### Waterfall
 
-In waterfall projects, the scope is fixed, while the time and money will be more variable. Depending if it's more
+In [waterfall](/blog/what-is-waterfall/) projects, the scope is fixed, while the time and money will be more variable. Depending if it's more
 important finishing on time or on budget.
 
 ### Agile
 
-On the other hand, in an agile environment we usually work on a few weeks' iterations, so this is the fix part: the
-time, in order to deliver value as soon as possible, and so get feedback and recalibrate again and again.
+On the other hand, in an [agile](/blog/what-kills-agility/) environment we usually work on a few weeks' iterations, so this is the fix part: the
+time, in order to deliver value as soon as possible, and so get [feedback](/blog/ship-show-ask/) and recalibrate again and again.
 
 The costs in a software team are also fixed by the people that belong to it.
 

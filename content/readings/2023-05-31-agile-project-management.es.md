@@ -20,7 +20,7 @@ related_readings = [
 
 <!-- more -->
 
-Una visión general básica y directa de lo que es Agile, presentando algunos ejemplos de frameworks bien conocidos hoy, como Scrum o Kanban, todo condensado en un libro de unas 100 páginas que puedes leer en un par de horas.
+Una visión general básica y directa de lo que es [Agile](/es/blog/what-kills-agility/), presentando algunos ejemplos de frameworks bien conocidos hoy, como [Scrum](/es/blog/ignoring-scrum-to-get-more-agile/) o Kanban, todo condensado en un libro de unas 100 páginas que puedes leer en un par de horas.
 
 ## Capítulos
 
@@ -46,7 +46,7 @@ Una visión general básica y directa de lo que es Agile, presentando algunos ej
 
 ### Puntos clave
 
-Los proyectos que seguían una metodología **Waterfall** tendían a exceder sus gastos con el tiempo, mientras que el producto entregado estaba por debajo del estándar y era difícil de usar.
+Los proyectos que seguían una metodología **[Waterfall](/es/blog/what-is-waterfall/)** tendían a exceder sus gastos con el tiempo, mientras que el producto entregado estaba por debajo del estándar y era difícil de usar.
 
 Esa situación originó que un grupo de desarrolladores firmara un breve manifiesto de 68 palabras en 2001.
 
@@ -71,7 +71,7 @@ Durante los años 70 y 80, **Desarrollo Iterativo e Incremental (IID)** probó s
 
 Unos años después, surgió un nuevo método **Prototipado de Producción Iterativa Rápida (RIPP)**, más tarde llamado **Desarrollo Rápido de Aplicaciones (RAD)**, que afirmaba *"Software funcionando en 90 días... o te devolvemos tu dinero."*
 
-Por último, durante los 90 se definieron en detalle **Extreme Programming (XP)**, **Scrum** y **Crystal**.
+Por último, durante los 90 se definieron en detalle **[Extreme Programming](/es/blog/update-your-team-to-be-more-extreme/) (XP)**, **Scrum** y **Crystal**.
 
 Estas soluciones distintas pero similares estaban descentralizadas, trabajando independientemente unas de otras. Esta realización llevó a esa noche en Utah la unificación de estas ideas bajo una bandera, en un documento.
 

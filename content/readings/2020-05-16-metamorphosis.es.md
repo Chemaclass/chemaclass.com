@@ -18,6 +18,6 @@ related_readings = [
 
 <!-- more -->
 
-Una novela corta de Franz Kafka, publicada en 1915. Es una de las obras fundamentales de la ficción del siglo XX y se estudia en todo el mundo occidental.
+Una novela corta de [Franz Kafka](/es/readings/notes-from-underground/), publicada en 1915. Es una de las obras fundamentales de la [ficción](/es/readings/the-catcher-in-the-rye/) del siglo XX y se estudia en todo el mundo occidental.
 
 La historia comienza con Gregor Samsa, un viajante de comercio, que despierta convertido en una criatura monstruosa parecida a un insecto. Kafka nunca explicó la causa de la transformación. El resto de la novela trata sobre los intentos de Gregor de adaptarse a su nueva condición mientras lidia con ser una carga para su familia, que siente repulsión por la criatura en que se ha convertido.

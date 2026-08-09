@@ -25,7 +25,7 @@ In this guide, I'll show you how to set up a fully custodial Lightning Network (
 
 <!-- more -->
 
-It supports both Lightning and Nostr addresses, enabling seamless connectivity across ecosystems, and integrates effortlessly with dozens of Bitcoin applications. With built-in Lightning Service Provider (LSP) services and the Alby Go mobile app, managing your node on the go has never been easier.
+It supports both Lightning and Nostr addresses, enabling seamless connectivity across ecosystems, and integrates effortlessly with dozens of [Bitcoin](/blog/bitcoin-fundamentals/) applications. With built-in Lightning Service Provider (LSP) services and the Alby Go mobile app, managing your node on the go has never been easier.
 
 ---
 
@@ -42,7 +42,7 @@ Anyway, I've included a brief recap of the Lightning Network basics below.
 The LN is a second-layer solution built on top of Bitcoin to enable fast, cheap, and scalable transactions.
 
 - **Why?** Bitcoin's base layer is secure but slow and expensive for small payments due to block size limits and fees.
-- **How?** LN uses off-chain payment channels that allow users to transact instantly without waiting for blockchain confirmations.
+- **How?** LN uses off-chain payment channels that allow users to transact instantly without waiting for [blockchain](/blog/how-bitcoin-works/) confirmations.
 
 ### Key Concepts
 

@@ -37,7 +37,7 @@ when not to mock, but especially why.
 
 First, we should define what is a mock:
 
-> In a unit test, mock objects can simulate the behavior of complex, real objects and are therefore useful when it is impractical or impossible to incorporate a real object into a unit test.
+> In a [unit test](/blog/the-art-of-testing/), mock objects can simulate the behavior of complex, real objects and are therefore useful when it is impractical or impossible to incorporate a real object into a unit test.
 
 Mocking makes sense in a *unit testing* context. An integration test should go through the real implementation checking
 the integration between multiple units, which are even allowed to talk to the DB or File IO: infrastructure code.
@@ -97,7 +97,7 @@ When you are writing a unit test:
 
 {{ youtube(id="RbSqXFUfRMU") }}
 
-"Excessive use of mocks leads to legacy code." - Philippe Boargau
+"Excessive use of mocks leads to [legacy code](/blog/testing-effectively-legacy-code/)." - Philippe Boargau
 
 ### How can we avoid excessive mocking?
 
@@ -113,6 +113,6 @@ When you are writing a unit test:
 
 - [Mocking is a code smell](https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a) - Eric Elliott
 - [When to mock](https://blog.cleancoder.com/uncle-bob/2014/05/10/WhenToMock.html) & [Test Definitions](https://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html) - Uncle Bob 
-- [Final classes by default](https://matthiasnoback.nl/2018/09/final-classes-by-default-why/) - Matthias Noback
+- [Final classes by default](https://matthiasnoback.nl/2018/09/final-classes-by-default-why/) - [Matthias Noback](/readings/object-design-style-guide/)
 - [The problem with mocks](https://www.seanh.cc/2017/03/17/the-problem-with-mocks/) - Sean Hammond
 - [A Set of Unit Testing Rules](https://www.artima.com/weblogs/viewpost.jsp?thread=126923) - Michael Feathers

@@ -64,7 +64,7 @@ Every action has effects you can see and effects you can't. Frédéric Bastiat b
 
 A boy breaks a shop window. A bystander shrugs: well, at least the glazier, the man who fits the new glass, gets some work. True. That's the part you see.
 
-But the money the shopkeeper spent on glass might have bought new shoes. The shoemaker got no order. That's the [part you don't see](https://www.econlib.org/library/Bastiat/basEss1.html). The window is not new wealth. It's wealth moved, and partly destroyed.
+But the money the shopkeeper spent on glass might have bought new shoes. The shoemaker got no order. That's the [part you don't see](https://www.econlib.org/library/Bastiat/basEss1.html). The window is not new [wealth](/readings/rich-dad-poor-dad/). It's wealth moved, and partly destroyed.
 
 {% deep_dive(title="What Is Seen and What Is Not Seen (1850)") %}
 Bastiat's rule: every act has one effect you see now and a chain of effects you don't. The broken window opens the essay, then he runs the same test on taxes, subsidies, public works, and tariffs. The trick is always the same: count what the policy creates, ignore what it prevents. The bad economist stops at the first effect. The good one counts the whole chain.

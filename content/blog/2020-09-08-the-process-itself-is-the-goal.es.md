@@ -56,7 +56,7 @@ Algunos libros que me ayudaron a entender cómo nos comportamos y por qué hacem
 
 - El poder de los hábitos, de Charles Duhigg.
 - Hábitos atómicos, de James Clear.
-- Scrum: El arte de hacer el doble de trabajo en la mitad de tiempo, de Jeff Sutherland.
+- [Scrum](/es/blog/ignoring-scrum-to-get-more-agile/): El arte de hacer el doble de trabajo en la mitad de tiempo, de Jeff Sutherland.
 
 ![libro hábitos atómicos](/images/blog/2020-09-08/atomic-habits.webp)
 
@@ -81,7 +81,7 @@ Los hábitos emergen sin nuestro consentimiento. El cerebro crea bucles de hábi
 - Los pequeños éxitos construyen victorias más grandes.
 - Enfócate menos en metas y más en sistemas y procesos.
 - Para cambiar hábitos, cambia cómo te identificas.
-- Para construir buenos hábitos, el entorno importa más que la motivación.
+- Para construir buenos hábitos, el entorno importa más que la [motivación](/es/readings/start-with-why/).
 - Para romper un mal hábito, reduce exposición a sus señales.
 - Combina algo que quieras hacer con algo que necesites hacer.
 - No busques el hábito perfecto. Solo repite.

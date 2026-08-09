@@ -19,7 +19,7 @@ related_readings = [
 
 <!-- more -->
 
-Santiago es un joven pastor que tiene un sueño recurrente: hay un tesoro esperándole en las pirámides de Egipto. Decide ir a buscarlo. Por el camino encuentra mentores, se enamora y, sobre todo, aprende quién es realmente y qué es lo que importa de verdad en la vida.
+Santiago es un joven pastor que tiene un [sueño recurrente](/es/readings/jonathan-livingston-seagull/): hay un tesoro esperándole en las pirámides de Egipto. Decide ir a buscarlo. Por el camino encuentra [mentores](/es/blog/the-path-to-seniority-in-software/), se enamora y, sobre todo, aprende quién es realmente y qué es lo que importa de verdad en la vida.
 
 #### Resumen en Video
 

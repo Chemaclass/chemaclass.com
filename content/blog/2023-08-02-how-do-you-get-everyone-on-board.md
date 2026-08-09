@@ -30,7 +30,7 @@ I was invited to the WeAreDevelopers World Congress to give a tech talk about my
 
 <!-- more -->
 
-With more than 12k attendees, 300 speakers, and ~10 tracks in parallel, I was invited to give not one but two talks. One is about my experience with Extreme Programming and the profound benefits of embracing change in your work and life.
+With more than 12k attendees, 300 speakers, and ~10 tracks in parallel, I was invited to give not one but two talks. One is about my experience with [Extreme Programming](/blog/update-your-team-to-be-more-extreme/) and the profound benefits of embracing change in your work and life.
 
 I especially enjoyed the audience engagement and feedback they gave me after each talk. In particular, a question I had faced many times during my career: "**How do you deal with people reluctant to change?**"
 

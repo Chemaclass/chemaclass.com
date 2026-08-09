@@ -18,7 +18,7 @@ related_readings = [
 
 <!-- more -->
 
-Clean Agile comes from Uncle Bob, one of the founding fathers of Agile, one of the seventeen people who authored the
+Clean [Agile](/blog/what-kills-agility/) comes from Uncle Bob, one of the founding fathers of Agile, one of the seventeen people who authored the
 [Agile Manifesto](https://agilemanifesto.org/) back in 2001.
 
 ---

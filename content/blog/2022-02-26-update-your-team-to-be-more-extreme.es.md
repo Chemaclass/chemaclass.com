@@ -60,9 +60,9 @@ Las katas de código dan a los desarrolladores los mismos beneficios que practic
 
 ### Motivación
 
-- Practicar técnicas de refactoring.
+- Practicar técnicas de [refactoring](/es/blog/the-art-of-refactoring/).
 - Practicar TDD.
-- Aplicar principios SOLID.
+- Aplicar principios [SOLID](/es/readings/clean-architecture/).
 - Hacer sesiones de live coding.
 - Ejercitar el concepto driver-navigator.
 - Mejorar la cohesión del equipo.

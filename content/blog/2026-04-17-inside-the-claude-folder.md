@@ -99,7 +99,7 @@ A skill is a markdown file in `.claude/skills/`, a procedure you call with a sla
 
 - **`/gh-issue <number>`**: issue to branch, TDD plan, PR.
 - **`/commit`**: fix, analysis, tests, conventional commit.
-- **`/refactor-check`**: SOLID, naming, architecture smells.
+- **`/refactor-check`**: [SOLID](/readings/clean-architecture/), naming, architecture smells.
 - **`/release [version]`**: changelog, PHAR, tag, release.
 
 {% deep_dive(title="Skills vs rules vs raw prompting") %}
@@ -120,7 +120,7 @@ Skills turn tribal knowledge into runnable steps anyone can execute.
 
 {% deep_dive(title="Glob-targeted rules in practice") %}
 
-Rule files in Phel:
+Rule files in [Phel](/blog/phel-first-release/):
 
 - **`compiler.md`**: strict 4-phase pipeline, no bypassing.
 - **`php.md`**: PER 3.0, `final` classes, `readonly`, Gacela.
@@ -171,7 +171,7 @@ Everything so far shapes one agent. Agents add specialists the main agent can de
 A few from Phel:
 
 - **Explorer** (Sonnet, read-only): files, structure mapping.
-- **Clean Code Reviewer**: SOLID and naming on diffs.
+- **[Clean Code](/readings/clean-code/) Reviewer**: SOLID and naming on diffs.
 - **TDD Coach**: red-green-refactor enforcement.
 - **Domain Architect**: module boundaries, compiler pipeline.
 - **Debugger**: compiler errors across all phases.

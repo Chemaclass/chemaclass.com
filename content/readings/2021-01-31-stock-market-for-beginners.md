@@ -20,5 +20,5 @@ related_readings = [
 
 - Stock Market Basics & Essentials
 - Fundamental, Industry and Company Research
-- Investment Styles Such as Value, Growth and Income Investing
+- [Investment Styles](/readings/one-up-on-wall-street/) Such as Value, Growth and Income [Investing](/readings/the-psychology-of-money/)
 - Short Selling, Buying on Margin, Day Trading

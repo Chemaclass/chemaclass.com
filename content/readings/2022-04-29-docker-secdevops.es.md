@@ -20,6 +20,6 @@ related_readings = [
 
 Un libro muy completo sobre Docker, desde lo básico hasta conceptos avanzados, con ejemplos fáciles de seguir.
 
-Cubre buenas prácticas para construir imágenes Docker y mantener la seguridad al ejecutar contenedores. También explica el demonio Docker y toda la tecnología que hay detrás.
+Cubre buenas prácticas para construir imágenes Docker y mantener la [seguridad](/es/blog/verified-git-commits/) al ejecutar [contenedores](/es/readings/accelerate/). También explica el demonio Docker y toda la tecnología que hay detrás.
 
 > El libro está disponible solo en español: [0xWord](https://0xword.com/es/libros/103-docker-secdevops.html)

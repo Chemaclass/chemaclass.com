@@ -18,7 +18,7 @@ related_readings = [
 
 <!-- more -->
 
-The book is about his leadership theories to how he implemented a fresh leadership model. Including the limitations of a
+The book is about his [leadership](/blog/the-beauty-of-leadership/) theories to how he implemented a fresh leadership model. Including the limitations of a
 hierarchical top-down model, why/how he failed to empower his team earlier in his career, and how the circumstances for
 Santa Fe were ideal for him to experiment with the new leader-leader approach.
 
@@ -40,7 +40,7 @@ frustrated** when their staff would rather **do the minimum** rather than to **i
 #### Control
 
 Control refers to the freedom and authority to make decisions about why, what and how you're going to work. The goal is
-to delegate decision-making control as far as possible in the organization.
+to [delegate](/blog/tech-lead/) decision-making control as far as possible in the organization.
 
 - Find the genetic code for control and rewrite it.
 - Act your way to new thinking.
@@ -87,6 +87,6 @@ thoroughly understand the organization's goals and decision-making criteria.
 
 {{ youtube(id="OqmdLcyES_Q") }}
 
-David Marquet talks about leadership that turns the ship around in his keynote at the Worldwebforum.
+[David Marquet](/readings/leadership-is-language/) talks about leadership that turns the ship around in his keynote at the Worldwebforum.
 
 {{ youtube(id="ivwKQqf4ixA") }}

@@ -39,5 +39,5 @@ Never ever.
 
 ## What if...?
 
-If you really want to test a private method, consider extracting that private method logic into a separate class, and write a unit test for that class' behavior.
+If you really want to test a private method, consider extracting that private method logic into a separate class, and write a [unit test](/blog/the-art-of-testing/) for that class' behavior.
 > For this one, I was inspired by Fran Iglesias' [original post](https://franiglesias.github.io/test-private-methods/).

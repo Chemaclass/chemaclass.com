@@ -145,7 +145,7 @@ old problems, learning appropriate best practices, and honing your craft through
 
 63.- Learn about the build process. It's an important part of development.
 
-64.- Practice **pair programming**.
+64.- Practice **[pair programming](/blog/effective-pair-programming/)**.
 
 65.- Prefer **domain-specific types** over primitive types.
 - They make the code more readable and less prone to errors in development.
@@ -196,7 +196,7 @@ old problems, learning appropriate best practices, and honing your craft through
 
 94.- Try to write **"small" functions**.
 
-95. Good tests act as **documentation** for the code they're testing.
+95. Good tests act as **documentation** for the code they're [testing](/blog/the-art-of-testing/).
 - They describe how the code works.
 
 96. To be a good programmer, you have to care about the **quality** of the code.

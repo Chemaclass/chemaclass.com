@@ -23,9 +23,9 @@ El libro *¿Quién se ha llevado mi queso?* presenta un cuento dentro de la hist
 
 Se publicó en 1998 y lo leí a principios de 2021. Mejor tarde que nunca. Mi hermano Jesús me lo recomendó.
 
-> Viven en un Laberinto (que representa nuestro entorno) y para sobrevivir necesitan salir de su zona de confort y buscar queso (que representa la felicidad y el éxito).
+> Viven en un Laberinto (que representa nuestro entorno) y para sobrevivir necesitan salir de su zona de confort y buscar queso (que representa la [felicidad](/es/readings/the-art-of-being-happy/) y el éxito).
 >
-> El cuento empieza cuando ambos grupos llegan a la "Estación de Queso C", llena de queso. Los humanos establecen rutinas; los ratones mantienen sus instintos activos.
+> El cuento empieza cuando ambos grupos llegan a la "Estación de Queso C", llena de queso. Los humanos establecen rutinas; los ratones mantienen sus instintos [activos](/es/readings/rich-dad-poor-dad/).
 >
 > Un día los ratones llegan y no queda queso. Salen a buscar más en otro lugar. Hem y Haw, en cambio, se quejan. Hem, enfadado, exige "¿Quién se ha llevado mi queso?!". Ambos contaban con que el queso sería eterno, así que no estaban preparados. La diferencia clave es cómo reaccionan.
 >
