@@ -7,7 +7,7 @@ date = 2015-09-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/07.webp)
+![Books flying away like birds from an open book resting on a wire](/images/books/oeur/07.webp)
 
 ## God exists: it's me, and so are you
 

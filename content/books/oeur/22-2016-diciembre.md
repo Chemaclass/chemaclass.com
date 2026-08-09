@@ -7,7 +7,7 @@ date = 2016-12-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/22.webp)
+![A human skull in profile, resting in the mist](/images/books/oeur/22.webp)
 
 ## Slave to Death
 

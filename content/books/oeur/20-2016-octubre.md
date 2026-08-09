@@ -7,7 +7,7 @@ date = 2016-10-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/20.webp)
+![A figure at one end of a long wire, a distant signpost at the other](/images/books/oeur/20.webp)
 
 ## Entropy
 

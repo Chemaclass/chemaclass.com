@@ -71,4 +71,4 @@ Defendamos nuestros intereses, pero siempre con argumentos, y el día que éstos
 
 Una mente cerrada donde las ideas no pueden confluir es sinónimo de fracaso. Un lugar cerrado en el que las ideas no pueden converger está destinado al olvido.
 
-![book-chapter](/images/books/oeur/07.webp)
+![Libros que vuelan como pájaros desde un libro abierto apoyado en un cable](/images/books/oeur/07.webp)

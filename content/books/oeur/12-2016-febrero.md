@@ -7,7 +7,7 @@ date = 2016-02-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/12.webp)
+![A single sailboat on still water beneath heavy clouds](/images/books/oeur/12.webp)
 
 ## Traveling to Our Encounter
 

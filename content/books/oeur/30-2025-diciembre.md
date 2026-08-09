@@ -255,4 +255,4 @@ Work. Love. Dream. Smile.
 
 But together.
 
-![book-chapter](/images/books/oeur/familia.webp)
+![A family group portrait spanning several generations, drawn in soft pencil](/images/books/oeur/familia.webp)
