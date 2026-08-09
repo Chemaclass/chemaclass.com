@@ -26,7 +26,7 @@ Having more money will make you happier ONLY if that means you'll have more cont
 
 ### Compounding
 
-- Start investing with whatever you can afford, and stay invested.
+- Start [investing](/readings/one-up-on-wall-street/) with whatever you can afford, and stay invested.
 - Leverage the power of compounding.
 
 ### Volatility

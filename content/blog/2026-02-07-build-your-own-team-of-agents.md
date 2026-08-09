@@ -20,7 +20,7 @@ related_readings = [
 ]
 +++
 
-Most people use AI coding assistants as a single conversation partner. You open a chat, describe what you need, and get an answer. It works. But it's like hiring one generalist to handle everything: frontend, backend, testing, documentation, deployment. No real team works that way.
+Most people use AI coding assistants as a single conversation partner. You open a chat, describe what you need, and get an answer. It works. But it's like [hiring](/readings/effective-software-em/) one generalist to handle everything: frontend, backend, testing, documentation, deployment. No real team works that way.
 
 The real leverage comes when you organize AI as a team: onboarding, standard procedures, specialists, and parallel execution.
 
@@ -34,7 +34,7 @@ Every good team starts with onboarding. AI agents need the same.
 
 ### Project rules
 
-In Claude Code, the `CLAUDE.md` file at the root of your project is the onboarding doc. The agent reads it every time it starts working: project structure, coding conventions, style guides, tool configurations.
+In [Claude Code](/blog/inside-the-claude-folder/), the `CLAUDE.md` file at the root of your project is the onboarding doc. The agent reads it every time it starts working: project structure, coding conventions, style guides, tool configurations.
 
 But `CLAUDE.md` is just the entry point. You can split rules into focused files under `.claude/rules/`, each targeting specific parts of your codebase via glob patterns. The agent doesn't just know your conventions, it's constrained by them. Layer boundaries, naming patterns, dependency directions. All versioned alongside the code they protect. And since `.claude/` lives in the repo, every human teammate gets the same setup when they join the project.
 
@@ -58,7 +58,7 @@ There's also a global `~/.claude/CLAUDE.md` that applies across all your project
 
 Every team has recurring workflows that live in wikis, runbooks, or someone's head. When they live in someone's head, they're fragile.
 
-Custom slash commands in `.claude/commands/` turn these workflows into executable instructions. Each command is a markdown file describing a multi-step procedure. In one of my projects, every creation command starts with tests. TDD is baked into the procedure, not left to discipline.
+Custom slash commands in `.claude/commands/` turn these workflows into executable instructions. Each command is a markdown file describing a multi-step procedure. In one of my projects, every creation command starts with tests. [TDD](/blog/test-driven-development/) is baked into the procedure, not left to discipline.
 
 {% deep_dive(title="Commands from a real project") %}
 
@@ -69,7 +69,7 @@ Custom slash commands in `.claude/commands/` turn these workflows into executabl
 - **`/create-page`**: React pages with factories and smoke tests.
 
 **Quality & workflow:**
-- **`/refactor-check`**: Analyzes code against SOLID principles.
+- **`/refactor-check`**: Analyzes code against [SOLID](/readings/clean-architecture/) principles.
 - **`/test`**: Runs the suite with module filtering.
 - **`/fix`**: Auto-applies linting and static analysis corrections.
 - **`/gh-issue`**: From GitHub issue to implementation to PR in one command.

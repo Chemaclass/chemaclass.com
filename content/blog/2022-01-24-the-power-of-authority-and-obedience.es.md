@@ -105,7 +105,7 @@ Cuando el investigador daba instrucciones por teléfono desde otra habitación, 
 ¿Por qué tantos participantes hicieron algo aparentemente sádico al recibir órdenes de una autoridad? Según Milgram, varios factores situacionales lo explican:
 
 - La presencia física de una autoridad aumentó el cumplimiento.
-- Yale es una institución de confianza, así que el experimento parecía seguro.
+- Yale es una institución de [confianza](/es/readings/the-five-dysfunctions-of-a-team/), así que el experimento parecía seguro.
 - La selección de maestro y aprendiz parecía aleatoria.
 - Los participantes asumían que el investigador era un experto.
 - Les dijeron que las descargas eran dolorosas, no peligrosas.

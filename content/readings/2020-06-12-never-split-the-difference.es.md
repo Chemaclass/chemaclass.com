@@ -24,9 +24,9 @@ Chris Voss pasó de patrullar las calles de Kansas City a ser el negociador prin
 
 ## Aprendizajes
 
-1. Negociar empieza por escuchar. Hay que hacer que la conversación gire en torno al otro, validar sus emociones y crear la confianza necesaria para hablar de verdad.
+1. Negociar empieza por escuchar. Hay que hacer que la conversación gire en torno al otro, validar sus emociones y crear la [confianza](/es/readings/the-five-dysfunctions-of-a-team/) necesaria para hablar de verdad.
 
-2. Usa el "espejo" (repetir las últimas palabras del otro) para generar empatía, mantener la conversación viva, ganar tiempo y hacer que el otro revele su estrategia.
+2. Usa el "espejo" (repetir las últimas palabras del otro) para generar [empatía](/es/blog/people-skills/), mantener la conversación viva, ganar tiempo y hacer que el otro revele su estrategia.
 
 3. La empatía táctica te ayuda a ver tanto los obstáculos emocionales como los caminos posibles hacia un acuerdo.
 

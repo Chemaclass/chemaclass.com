@@ -18,10 +18,10 @@ related_readings = [
 
 <!-- more -->
 
-A twenty-six selections on management in the organization, management and the individual, and management and society.
+A twenty-six selections on [management](/readings/high-output-management/) in the organization, management and the individual, and management and society.
 
 It covers the basic principles of management and its problems, challenges, and opportunities, giving managers, 
-executives, and professionals the tools to perform the tasks that the economy and society of tomorrow will demand 
+[executives](/readings/the-great-ceo-within/), and professionals the tools to perform the tasks that the economy and society of tomorrow will demand 
 of them.
 
 ---

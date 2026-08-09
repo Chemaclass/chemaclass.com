@@ -18,7 +18,7 @@ related_readings = [
 
 <!-- more -->
 
-Leadership is not about titles, status, and power over people. Leaders are people who hold themselves accountable for
+[Leadership](/blog/the-beauty-of-leadership/) is not about titles, status, and power over people. Leaders are people who hold themselves accountable for
 recognising the potential in people and ideas and developing that potential. This book is for everyone ready to choose
 courage over comfort, make a difference, and lead.
 
@@ -40,7 +40,7 @@ The modern workplace might feel like a “gladiator arena.” While it might not
 still requires bravery, and plenty of sweetness and tears, to the point that we can feel so overwhelmed that we are
 tempted to leave. So, according to Brené:
 
-> "One of the most significant sources of motivation for sticking it out is to be crystal clear about our core values."
+> "One of the most significant sources of [motivation](/readings/start-with-why/) for sticking it out is to be crystal clear about our core values."
 
 Values are the **ideals** that we have that bring purpose to what we do in our life. They guide us and give us something to
 hold on to during dark and difficult times. Strong values guide us **to do what is correct** rather than easy.
@@ -51,7 +51,7 @@ A great leader encourages potential in people and possesses the courage to guide
 the critical skills for doing this is courage and the ability to deliver **honest and open feedback**.
 
 Unfortunately, many leaders are afraid to give tuff feedback and leave their employees in the dark. Yes, sometimes the
-truth hurts, but we often avoid difficult conversations because they make **us** uncomfortable.
+truth hurts, but we often avoid [difficult conversations](/readings/crucial-conversations/) because they make **us** uncomfortable.
 
 > "Great leaders must be brave and always dare to provide constructive feedback, speak the truth, and be clear about
 > their expectations."

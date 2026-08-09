@@ -17,7 +17,7 @@ related_posts = [
 ]
 +++
 
-Los agentes de IA pueden escribir código, revisarlo, testearlo y desplegarlo. Pasamos décadas haciendo las máquinas más rápidas. Ahora la parte más lenta del sistema ha cambiado.
+Los [agentes de IA](/es/blog/build-your-own-team-of-agents/) pueden escribir código, revisarlo, testearlo y desplegarlo. Pasamos décadas haciendo las máquinas más rápidas. Ahora la parte más lenta del sistema ha cambiado.
 
 Somos nosotros.
 

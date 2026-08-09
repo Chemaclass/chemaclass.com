@@ -70,7 +70,7 @@ Each step might feel harmless, but it adds up. And once people depend too much o
 
 ## Final thoughts: Is Hayek still relevant?
 
-Totally. While the world has changed, the tension between freedom and control is still very real. Hayek's ideas remind us that freedom doesn't usually vanish overnight: it fades when we're not paying attention.
+Totally. While the world has changed, the tension between freedom and control is still very real. Hayek's ideas remind us that freedom doesn't usually vanish overnight: it fades when we're not paying [attention](/readings/digital-minimalism/).
 
 Sure, some government help is needed. But Hayek's warning? Too much control, even with good intentions, can lead us somewhere we don't want to go.
 

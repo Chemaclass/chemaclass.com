@@ -54,17 +54,17 @@ That's only possible when people trust their money and their future. So again, l
 
 If there's a hero in this book, it's **the entrepreneur**: the person who **takes risks**, builds businesses, and **creates value**.
 
-Ammous has zero love for central planners, regulations, or government bailouts. He's all about free markets and letting smart people solve problems without interference. When prices are honest and money is sound, people figure things out on their own.
+Ammous has zero love for central planners, regulations, or government bailouts. He's all about [free markets](/blog/laissez-faire-laissez-passer/) and letting smart people solve problems without interference. When prices are honest and money is sound, people figure things out on their own.
 
 ## 6. Inflation and Central Planning? Big Red Flags
 
 Ammous doesn't pull punches. He's very critical of how governments manage money and the economy.
 
-He sees inflation as a sneaky form of theft and believes that constant meddling (like printing money or setting interest rates) only makes things worse. He even calls out entire fields like climate economics and ESG as being more about politics than real economics.
+He sees [inflation](/readings/broken-money/) as a sneaky form of theft and believes that constant meddling (like printing money or setting interest rates) only makes things worse. He even calls out entire fields like climate economics and ESG as being more about politics than real economics.
 
 ## 7. Bitcoin: The Grand Finale
 
-While this book isn't just about Bitcoin, it clearly leads there. After explaining why our current money system is broken, Ammous points to Bitcoin as the best solution we've seen in over a century.
+While this book isn't just about [Bitcoin](/blog/bitcoin-fundamentals/), it clearly leads there. After explaining why our current money system is broken, Ammous points to Bitcoin as the best solution we've seen in over a century.
 
 It's digital, limited, and no one can mess with it. Bitcoin is the return of sound money, and a chance to fix a lot of what's wrong today.
 

@@ -29,7 +29,7 @@ Fui invitado al WeAreDevelopers World Congress para dar una charla técnica sobr
 
 <!-- more -->
 
-Con más de 12k asistentes, 300 speakers y ~10 tracks en paralelo, fui invitado a dar no una sino dos charlas. Una es sobre mi experiencia con Extreme Programming y los profundos beneficios de abrazar el cambio en tu trabajo y vida.
+Con más de 12k asistentes, 300 speakers y ~10 tracks en paralelo, fui invitado a dar no una sino dos charlas. Una es sobre mi experiencia con [Extreme Programming](/es/blog/update-your-team-to-be-more-extreme/) y los profundos beneficios de abrazar el cambio en tu trabajo y vida.
 
 Disfruté especialmente la participación de la audiencia y las opiniones que me dieron después de cada charla. En particular, una pregunta que había enfrentado muchas veces durante mi carrera: "**¿Cómo tratas con personas reacias al cambio?**"
 

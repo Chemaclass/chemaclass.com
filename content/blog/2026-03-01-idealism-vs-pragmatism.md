@@ -131,7 +131,7 @@ The pragmatist in me used to drop TDD when deadlines got tight. The pragmatist i
 
 {% deep_dive(title="My setup") %}
 
-I use Claude for everything. Claude Code with Opus or Sonnet as the agentic coder: full development workflows, reading the codebase, following conventions, running tests, creating PRs. Claude app and Claude as a coworker for the chat side: brainstorming, architecture discussions, explaining code, drafting documentation. For inline assistance, the plugins I already have in my IDE are enough. I tried Copilot and Cursor, they're not for me. Claude covers what I need.
+I use Claude for everything. [Claude Code](/blog/inside-the-claude-folder/) with Opus or Sonnet as the agentic coder: full development workflows, reading the codebase, following conventions, running tests, creating PRs. Claude app and Claude as a coworker for the chat side: brainstorming, architecture discussions, explaining code, drafting documentation. For inline assistance, the plugins I already have in my IDE are enough. I tried Copilot and Cursor, they're not for me. Claude covers what I need.
 
 Different modes for different tasks. An agentic assistant following my TDD commands is a different workflow from chatting about design patterns. Both are useful. Neither replaces the other.
 

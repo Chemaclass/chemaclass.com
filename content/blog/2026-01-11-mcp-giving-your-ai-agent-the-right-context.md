@@ -45,7 +45,7 @@ With MCP, you give the AI direct access to tools and resources. It can read file
 
 MCP is a protocol, not a product. It's an open standard that defines how AI agents can connect to external data sources and tools. Think of it as a bridge between the AI model and your development environment.
 
-The architecture is simple: MCP servers expose capabilities, and AI clients consume them. Claude Desktop and Claude Code officially support MCP, with more tools adopting the protocol as it matures.
+The architecture is simple: MCP servers expose capabilities, and AI clients consume them. Claude Desktop and [Claude Code](/blog/inside-the-claude-folder/) officially support MCP, with more tools adopting the protocol as it matures.
 
 For example, in Claude Code you can add servers to a `.mcp.json` file at your project root. Claude Code reads this file when you open the project and starts the configured servers automatically:
 
@@ -73,7 +73,7 @@ For example, in Claude Code you can add servers to a `.mcp.json` file at your pr
 Each server gives the AI different capabilities:
 
 - **filesystem**: Read and navigate your project files. The AI can explore your codebase, check existing patterns, and understand your directory structure before suggesting changes.
-- **github**: Access issues, pull requests, and repository metadata. Ask the AI to summarize open issues, check PR comments, or understand what your team is working on.
+- **github**: Access issues, [pull requests](/blog/pull-request-vs-pair-prog/), and repository metadata. Ask the AI to summarize open issues, check PR comments, or understand what your team is working on.
 - **postgres**: Query your database directly. The AI can inspect your schema, run read queries, and understand your data model without you copying table definitions.
 
 Different tools, same protocol. You configure once, and any MCP-compatible client can use these servers.

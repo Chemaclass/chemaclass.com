@@ -16,7 +16,7 @@ related_readings = [
 ]
 +++
 
-Un clásico que mezcla parábola, alegoría, mito, cuento moral y hasta parodia política.
+Un clásico que mezcla parábola, [alegoría](/es/readings/animal-farm/), mito, cuento moral y hasta parodia política.
 
 Un grupo de niños británicos acaba varado en una isla desierta. Su intento de gobernarse a sí mismos termina en desastre.
 

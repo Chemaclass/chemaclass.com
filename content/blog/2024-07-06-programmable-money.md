@@ -21,7 +21,7 @@ related_readings = [
 +++
 
 
-Bitcoin is often referred to as "programmable money" because it allows for the execution of programmable transactions through its scripting language.
+[Bitcoin](/blog/bitcoin-fundamentals/) is often referred to as "programmable money" because it allows for the execution of programmable transactions through its scripting language.
 
 <!-- more -->
 
@@ -88,7 +88,7 @@ In Bitcoin, different address types correspond to various ways to script transac
 - [**P2MS**](#p2ms-pay-to-multisig-up): It is typically a type of P2SH or P2WSH address.
 - [**P2WPKH**](#p2wpkh-pay-to-witness-public-key-hash-segwit-up): Begins with `bc1`. Native **SegWit**, more efficient transactions.
 - [**P2WSH**](#p2wsh-pay-to-witness-script-hash-segwit-up): Begins with `bc1`. **SegWit** for complex scripts.
-- [**P2TR**](#p2tr-pay-to-taproot-taproot-up): Begins with `bc1p`. SegWit **Taproot** addresses, improving privacy and efficiency for complex transactions.
+- [**P2TR**](#p2tr-pay-to-taproot-taproot-up): Begins with `bc1p`. SegWit **Taproot** addresses, improving [privacy](/blog/pretty-good-privacy/) and efficiency for complex transactions.
 
 > Using native SegWit (P2WPKH and P2WSH) is preferable when possible, as it maximizes the benefits of the SegWit upgrade, but P2SH-SegWit can be useful for compatibility with older systems.
 

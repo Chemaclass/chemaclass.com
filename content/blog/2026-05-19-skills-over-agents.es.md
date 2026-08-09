@@ -22,7 +22,7 @@ related_readings = [
 ]
 +++
 
-La gente compara agentes de código. Claude Code, Codex, Gemini CLI. Cuál es más listo, más rápido, más barato. Los benchmarks salen nuevos cada mes.
+La gente compara agentes de código. [Claude Code](/es/blog/inside-the-claude-folder/), Codex, Gemini CLI. Cuál es más listo, más rápido, más barato. Los benchmarks salen nuevos cada mes.
 
 Pregunta equivocada.
 
@@ -96,7 +96,7 @@ Para cada issue encontrado:
 - Cómo sería el fix
 ```
 
-El agente ve la descripción en la lista de skills. Pides un review, carga `SKILL.md`. Necesita un patrón SOLID, lee la referencia. Dos niveles, bajo demanda.
+El agente ve la descripción en la lista de skills. Pides un review, carga `SKILL.md`. Necesita un patrón [SOLID](/es/readings/clean-architecture/), lee la referencia. Dos niveles, bajo demanda.
 
 {% end %}
 
@@ -113,7 +113,7 @@ Los skills son finos. Un agente, muchos skills. El skill correcto se carga para 
 Regla práctica:
 
 - Usa un **skill** cuando necesitas un procedimiento o patrón. De `phel-lang`: `/gh-issue` (de issue a PR), `/commit` (commit convencional), `/refactor-check` (review SOLID).
-- Usa un **agente** cuando necesitas aislamiento. De `phel-lang`: `tdd-coach` (pairing de TDD), `clean-code-reviewer` (review de PR), `domain-architect` (exploración de arquitectura).
+- Usa un **agente** cuando necesitas aislamiento. De `phel-lang`: `tdd-coach` (pairing de [TDD](/es/blog/test-driven-development/)), `clean-code-reviewer` (review de PR), `domain-architect` (exploración de arquitectura).
 
 La mayoría de necesidades son skills, no agentes.
 

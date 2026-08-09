@@ -21,7 +21,7 @@ related_readings = [
 ### Aprendizajes
 
 - No te repitas.
-- La mentalidad importa tanto como el conocimiento.
+- La [mentalidad](/es/readings/atomic-habits/) importa tanto como el conocimiento.
 - El buen código es más fácil de cambiar que el mal diseño.
 - Elige buenas herramientas y domínalas.
 
@@ -30,7 +30,7 @@ related_readings = [
 #### No Te Repitas (DRY)
 
 - Cada pieza de conocimiento debe tener una única representación clara dentro del sistema.
-- DRY trata sobre la duplicación de conocimiento, de intención. Es expresar lo mismo en dos lugares, quizás de formas diferentes.
+- [DRY](/es/readings/clean-code/) trata sobre la duplicación de conocimiento, de intención. Es expresar lo mismo en dos lugares, quizás de formas diferentes.
 
 #### La mentalidad importa tanto como el conocimiento
 

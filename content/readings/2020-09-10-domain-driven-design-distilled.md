@@ -16,7 +16,7 @@ related_readings = [
 ]
 +++
 
-Domain-Driven Design Distilled brings DDD to life. Whether you're a developer, consultant, or customer, it will help 
+Domain-Driven Design Distilled brings [DDD](/readings/recipes-for-decoupling/) to life. Whether you're a [developer](/readings/clean-architecture/), consultant, or customer, it will help 
 you understand it, so you can benefit from its power.
 
 <!-- more -->

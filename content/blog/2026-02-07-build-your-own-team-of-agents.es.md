@@ -34,7 +34,7 @@ Todo buen equipo empieza con onboarding. Los agentes de IA necesitan lo mismo.
 
 ### Reglas del proyecto
 
-En Claude Code, el archivo `CLAUDE.md` en la raíz de tu proyecto es el documento de onboarding. El agente lo lee cada vez que empieza a trabajar: estructura, convenciones, guías de estilo, herramientas.
+En [Claude Code](/es/blog/inside-the-claude-folder/), el archivo `CLAUDE.md` en la raíz de tu proyecto es el documento de onboarding. El agente lo lee cada vez que empieza a trabajar: estructura, convenciones, guías de estilo, herramientas.
 
 Pero `CLAUDE.md` es solo el punto de entrada. Puedes dividir las reglas en archivos enfocados bajo `.claude/rules/`, cada uno apuntando a partes específicas de tu código mediante patrones glob. El agente no solo conoce tus convenciones, está limitado por ellas. Límites de capas, patrones de nomenclatura, dirección de dependencias. Todo versionado junto al código que protegen.
 
@@ -58,7 +58,7 @@ También existe un `~/.claude/CLAUDE.md` global que aplica en todos tus proyecto
 
 Todos los equipos tienen flujos recurrentes que viven en wikis, runbooks, o en la cabeza de alguien. Cuando viven en la cabeza de alguien, son frágiles.
 
-Los comandos slash personalizados en `.claude/commands/` convierten estos flujos en instrucciones ejecutables. Cada comando es un archivo markdown que describe un procedimiento de varios pasos. En uno de mis proyectos, cada comando de creación empieza con tests. TDD incorporado al procedimiento, no dejado a la disciplina.
+Los comandos slash personalizados en `.claude/commands/` convierten estos flujos en instrucciones ejecutables. Cada comando es un archivo markdown que describe un procedimiento de varios pasos. En uno de mis proyectos, cada comando de creación empieza con tests. [TDD](/es/blog/test-driven-development/) incorporado al procedimiento, no dejado a la disciplina.
 
 {% deep_dive(title="Comandos de un proyecto real") %}
 
@@ -69,7 +69,7 @@ Los comandos slash personalizados en `.claude/commands/` convierten estos flujos
 - **`/create-page`**: Páginas React con factories y smoke tests.
 
 **Calidad y flujo de trabajo:**
-- **`/refactor-check`**: Analiza código contra principios SOLID.
+- **`/refactor-check`**: Analiza código contra principios [SOLID](/es/readings/clean-architecture/).
 - **`/test`**: Ejecuta la suite con filtrado por módulo.
 - **`/fix`**: Auto-aplica correcciones de linting y análisis estático.
 - **`/gh-issue`**: De issue de GitHub a implementación y PR en un solo comando.

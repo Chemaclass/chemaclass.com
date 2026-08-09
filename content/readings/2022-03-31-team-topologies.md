@@ -26,7 +26,7 @@ Team Topologies focuses on how to set up dynamic team structures and interaction
 ## Team structure
 
 - High cohesion: Group related things together.
-- Loose coupling: There must be clear boundaries between the teams.
+- Loose [coupling](/readings/recipes-for-decoupling/): There must be clear boundaries between the teams.
 - Cognitive load: It's like the RAM of the team. The team can burn down if you load with more than the team can handle.
 
 > In order to avoid bottleneck teams, you need to make sure their cognitive load is not very high.
@@ -49,7 +49,7 @@ Team Topologies focuses on how to set up dynamic team structures and interaction
 - 3 Types of cognitive load:
     - Intrinsic: Fundamentals of the problem space. Example: programming language.
     - Extraneous: Environment related. Example: how to deploy.
-    - Germane: Special attention is required. Example: business domain.
+    - Germane: Special [attention](/readings/digital-minimalism/) is required. Example: business domain.
 - Heuristics:
     - 3 types of domain: Simple, complicated, complex.
     - If the domain is too big, split it into subdomains.

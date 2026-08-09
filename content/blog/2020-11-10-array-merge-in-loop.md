@@ -19,7 +19,7 @@ related_readings = [
 
 
 Using array_merge inside a loop is a performance killer.
-The spread operator will help you to improve this by flatting the array.
+The [spread operator](/blog/typed-arrays-php/) will help you to improve this by flatting the array.
 
 <!-- more -->
 

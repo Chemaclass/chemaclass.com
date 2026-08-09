@@ -28,7 +28,7 @@ Docenas de documentos y hojas de cálculo, reuniones tras reuniones, y sin embar
 
 <!-- more -->
 
-Cómo gestionamos una organización define su calidad. Una excelente gestión es crucial para evitar la trampa del Waterfall si buscamos construir un entorno Agile. Pero ¿por qué querríamos eso? ¿Qué hay de malo en la forma en que ya trabajamos?
+Cómo gestionamos una organización define su calidad. Una excelente gestión es crucial para evitar la trampa del [Waterfall](/es/blog/what-is-waterfall/) si buscamos construir un entorno Agile. Pero ¿por qué querríamos eso? ¿Qué hay de malo en la forma en que ya trabajamos?
 
 Si ya estás feliz con cómo tú y tu equipo trabajan juntos, está bien. Sin embargo, ¿qué hay de reevaluar cómo trabajas para buscar mejoras potenciales?
 
@@ -38,7 +38,7 @@ No me gusta la política en el lugar de trabajo, donde cada equipo va a lo suyo 
 
 Agile nació precisamente como respuesta al desperdicio excesivo generado por la política y la microgestión organizacional.
 
-Controlar y el "rendimiento lento" necesitaba un enfoque más flexible. Cuando las personas adoptan una mentalidad fija, resisten el cambio, temen al fracaso y priorizan procesos rígidos y jerarquías. Esto entra en conflicto con las ideas centrales de Agile de abrazar el cambio, entrega continua con desarrollo iterativo, planificación flexible y fomentar la colaboración e innovación.
+Controlar y el "rendimiento lento" necesitaba un enfoque más flexible. Cuando las personas adoptan una mentalidad fija, resisten el cambio, temen al fracaso y priorizan procesos rígidos y jerarquías. Esto entra en conflicto con las ideas centrales de Agile de abrazar el cambio, [entrega continua](/es/readings/accelerate/) con desarrollo iterativo, planificación flexible y fomentar la colaboración e innovación.
 
 Una mentalidad fija lleva al miedo a la experimentación y una reticencia a desafiar el statu quo, reduciendo el progreso y el potencial de aprendizaje y crecimiento.
 
@@ -59,9 +59,9 @@ Una mentalidad fija lleva al miedo a la experimentación y una reticencia a desa
 
 ### ¿Qué puedes hacer al respecto?
 
-Aprende los básicos de Extreme Programming (XP) y Lean Software Development.
+Aprende los básicos de [Extreme Programming](/es/blog/update-your-team-to-be-more-extreme/) (XP) y Lean Software Development.
 
-- **XP**: Enfocado en prácticas de desarrollo de software y excelencia técnica, con prácticas específicas como pair programming y Test-Driven Development (TDD).
+- **XP**: Enfocado en prácticas de desarrollo de software y excelencia técnica, con prácticas específicas como [pair programming](/es/blog/effective-pair-programming/) y Test-Driven Development ([TDD](/es/blog/test-driven-development/)).
 - **Lean**: Toma un enfoque más amplio, enfocándose en eliminar desperdicio, optimizar flujo y mejorar procesos en toda la organización.
 
 ![Una valla oxidada bloqueando un paso estrecho sobre Alicante, con la ciudad y su puerto al fondo](/images/blog/2024-05-30/footer.webp)

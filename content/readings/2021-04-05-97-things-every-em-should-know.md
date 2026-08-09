@@ -20,7 +20,7 @@ related_readings = [
 
 ### The main takeaway
 
-> As a manager your work is to create clarity, clarity, and more clarity.
+> As a [manager](/readings/the-manager-path/) your work is to create clarity, clarity, and more clarity.
 
 ### Key Insights
 
@@ -31,7 +31,7 @@ related_readings = [
   - How do I create clarity?
   - How do I create capacity?
 - Ask for clarification.
-- To give constructive feedback, pay attention to how the person gets stuck, sidetracked or sloppy.
+- To give constructive [feedback](/blog/ship-show-ask/), pay [attention](/readings/digital-minimalism/) to how the person gets stuck, sidetracked or sloppy.
 - Management is not a promotion. It is a career change.
 - Most of the dysfunctions come from some lack of clarity goal.
 - For a fixed deadline, scope and quality are always negotiable.

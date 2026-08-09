@@ -20,9 +20,9 @@ related_readings = [
 
 <!-- more -->
 
-La mayoría de las startups fracasan, pero muchos de esos fracasos se pueden evitar. El método Lean Startup es un enfoque que está cambiando cómo se crean empresas y se lanzan productos en todo el mundo.
+La mayoría de las startups fracasan, pero muchos de esos fracasos se pueden evitar. El método Lean Startup es un enfoque que está cambiando cómo se crean empresas y se lanzan [productos](/es/readings/continuous-discovery-habits/) en todo el mundo.
 
-Eric Ries define una startup como una organización que crea algo nuevo bajo condiciones de extrema incertidumbre. Da igual si es una persona en un garaje o un grupo de profesionales en una sala de juntas de una empresa Fortune 500. Lo que comparten es la misión de atravesar esa niebla de incertidumbre para encontrar un camino hacia un negocio sostenible.
+Eric Ries define una startup como una organización que crea algo nuevo bajo condiciones de extrema [incertidumbre](/es/readings/sprint/). Da igual si es una persona en un garaje o un grupo de profesionales en una sala de juntas de una empresa Fortune 500. Lo que comparten es la misión de atravesar esa niebla de incertidumbre para encontrar un camino hacia un negocio sostenible.
 
 ## Puntos Clave
 

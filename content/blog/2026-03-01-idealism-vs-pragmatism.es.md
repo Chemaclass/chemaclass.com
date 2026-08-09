@@ -131,7 +131,7 @@ El pragmático en mí solía abandonar TDD cuando los deadlines apretaban. El pr
 
 {% deep_dive(title="Mi setup") %}
 
-Uso Claude para todo. Claude Code con Opus o Sonnet como programador agéntico: flujos de desarrollo completos, lectura del código, seguimiento de convenciones, ejecución de tests, creación de PRs. Claude app y Claude como coworker para la parte conversacional: brainstorming, discusiones de arquitectura, explicar código, redactar documentación. Para asistencia inline, los plugins que ya tengo en mi IDE son suficientes. Probé Copilot y Cursor, no son para mí. Claude cubre lo que necesito.
+Uso Claude para todo. [Claude Code](/es/blog/inside-the-claude-folder/) con Opus o Sonnet como programador agéntico: flujos de desarrollo completos, lectura del código, seguimiento de convenciones, ejecución de tests, creación de PRs. Claude app y Claude como coworker para la parte conversacional: brainstorming, discusiones de arquitectura, explicar código, redactar documentación. Para asistencia inline, los plugins que ya tengo en mi IDE son suficientes. Probé Copilot y Cursor, no son para mí. Claude cubre lo que necesito.
 
 Diferentes modos para diferentes tareas. Un asistente agéntico siguiendo mis comandos de TDD es un flujo diferente a chatear sobre patrones de diseño. Ambos son útiles. Ninguno reemplaza al otro.
 

@@ -32,7 +32,7 @@ countless hours and significant resources are lost because of poorly written cod
 
 ### Chapter 1:  What Is Clean Code?
 
-- The code can be measured with either "good" or "bad" in the code review or by how many minutes it takes you to talk
+- The code can be measured with either "good" or "bad" in the [code review](/blog/pull-request-vs-pair-prog/) or by how many minutes it takes you to talk
   about it.
 - A clean code should be elegant, efficient, readable, simple, without duplications, and well-written.
 - You should add value to the business with your code.
@@ -122,7 +122,7 @@ countless hours and significant resources are lost because of poorly written cod
 - Keep your test clean.
 - The tests must undergo changes in the same way that the code.
 - The dirtier the code, the more difficult test will be to maintain.
-- Use the F.I.R.S.T rule for testing:
+- Use the F.I.R.S.T rule for [testing](/blog/the-art-of-testing/):
   - The test is fast-running.
   - The tests are independent of others.
   - The test is repeatable in various environments.

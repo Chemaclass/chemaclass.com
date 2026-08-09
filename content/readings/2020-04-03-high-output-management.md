@@ -26,10 +26,10 @@ management manifesto with the ability to revolutionize the way we work.
 
 - Managerial Leverage
 - Training
-- Motivation
+- [Motivation](/readings/start-with-why/)
 - Meetings and Decisions
 - One-on-One Meetings
-- Delegation and Task-Relevant Maturity
+- [Delegation](/blog/tech-lead/) and Task-Relevant Maturity
 - KPIs
 - Performance Reviews
 - Interviews

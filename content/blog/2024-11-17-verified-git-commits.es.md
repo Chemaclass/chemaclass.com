@@ -19,11 +19,11 @@ related_readings = [
 +++
 
 
-En desarrollo de software, la confianza y la seguridad son clave. Una forma fácil de mejorar ambas: usar commits verificados.
+En desarrollo de software, la [confianza](/es/readings/the-five-dysfunctions-of-a-team/) y la seguridad son clave. Una forma fácil de mejorar ambas: usar commits verificados.
 
 <!-- more -->
 
-Ya trabajes en open-source o en una empresa privada, los commits verificados aseguran que tus contribuciones son legítimas. Veamos qué son, por qué importan y cómo empezar a usarlos.
+Ya trabajes en [open-source](/es/blog/open-source-software/) o en una empresa privada, los commits verificados aseguran que tus contribuciones son legítimas. Veamos qué son, por qué importan y cómo empezar a usarlos.
 
 ## ¿Qué son los commits verificados?
 

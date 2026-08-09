@@ -51,7 +51,7 @@ Este fue el gran salto, y no porque los modelos fueran más listos. Lo que cambi
 
 > El salto de asistente a agente no es una mejora de velocidad. Es un cambio en la descripción del puesto. Pasas de escribir código a dirigir trabajo.
 
-Claude Code casi no necesita setup. Sin *lock-in* de editor. Apúntalo a tu repo, suelta una carpeta `.claude` con reglas y convenciones, y se adapta. Lo conté en [Dentro de la Carpeta .claude](https://chemaclass.com/blog/inside-the-claude-folder/).
+[Claude Code](/es/blog/inside-the-claude-folder/) casi no necesita setup. Sin *lock-in* de editor. Apúntalo a tu repo, suelta una carpeta `.claude` con reglas y convenciones, y se adapta. Lo conté en [Dentro de la Carpeta .claude](https://chemaclass.com/blog/inside-the-claude-folder/).
 
 El modelo que eliges importa más que antes. Los modelos frontera de hoy están muy por delante de los de hace un año. La distancia entre *"puede esbozar una función"* y *"puede refactorizar un módulo con criterio"* se cerró más rápido de lo esperado, y sigue cerrándose mientras Claude, Codex y Gemini se empujan mutuamente cada mes. Los precios también se están acercando, lo cual es una forma educada de decir que todos copian al primero que acierta con la versión sostenible.
 
@@ -109,9 +109,9 @@ A este nivel, la calidad depende menos del modelo y más del contexto que lo rod
 
 ### Nivel 4: Equipos de agentes
 
-En vez de un asistente, tienes un escuadrón: un *coach* de TDD, un revisor de *clean code*, un arquitecto de dominio, alguien que mantiene la documentación. Fuera de ingeniería, la misma idea aplica con agentes de *research*, diseño y *ops*. Cubrí el lado de desarrollo en [Construye tu Propio Equipo de Agentes](https://chemaclass.com/blog/build-your-own-team-of-agents/), y el *leverage* es real.
+En vez de un asistente, tienes un escuadrón: un *coach* de [TDD](/es/blog/test-driven-development/), un revisor de *clean code*, un arquitecto de dominio, alguien que mantiene la documentación. Fuera de ingeniería, la misma idea aplica con agentes de *research*, diseño y *ops*. Cubrí el lado de desarrollo en [Construye tu Propio Equipo de Agentes](https://chemaclass.com/blog/build-your-own-team-of-agents/), y el *leverage* es real.
 
-Los humanos dejan de competir con la IA en velocidad y empiezan a dirigirla. Revisas, decides y marcas el listón. Los agentes se encargan de teclear, y cada vez más de pensar. El *pair programming* con una persona sigue ganando en los *trade-offs* complejos, pero siempre tienes un agente disponible para el resto.
+Los humanos dejan de competir con la IA en velocidad y empiezan a dirigirla. Revisas, decides y marcas el listón. Los agentes se encargan de teclear, y cada vez más de pensar. El *[pair programming](/es/blog/effective-pair-programming/)* con una persona sigue ganando en los *trade-offs* complejos, pero siempre tienes un agente disponible para el resto.
 
 A nivel empresa, el organigrama, los roles y los procesos siguen siendo los de antes. Lo que cambia es que cada persona produce mucho más, y eso se nota en los resultados del equipo. El Nivel 4 multiplica el *output* dentro de la estructura existente. El Nivel 5 cambia la estructura.
 

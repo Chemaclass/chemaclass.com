@@ -17,7 +17,7 @@ related_readings = [
 +++
 
 A great compilation of all topics that are important for management: 1:1s, performance reviews, hiring and laying off,
-workplace politics, remote work, and others.
+workplace politics, [remote work](/readings/effective-remote-work/), and others.
 
 The book is divided into 3 parts: the first part covers things a new manager should know, the second and third parts go
 into topics that all managers should master.
@@ -82,7 +82,7 @@ My takeaways from this book:
 - People leaving is normal.
 - Voluntary resignations that are:
     - "good reasons", aka you could have not done much about it.
-    - "bad reasons", that is you could have caught (and addressed) things early like coworker conflict, lack of
+    - "bad reasons", that is you could have caught (and addressed) things early like coworker [conflict](/readings/the-five-dysfunctions-of-a-team/), lack of
       challenge, compensation.
 
 > "As a manager, you are doomed to failure if you think that you are going to keep everyone in your current team indefinitely. [...]
@@ -91,7 +91,7 @@ My takeaways from this book:
 ### Chapter 09: How to win friends and influence people (Being well-connected)
 
 - Building your network . Making introductions, checking in with others.
-- Coaching and mentoring.
+- Coaching and [mentoring](/blog/the-path-to-seniority-in-software/).
 
 ## Part 3 - The Bigger Picture
 

@@ -20,11 +20,11 @@ related_readings = [
 +++
 
 
-When it comes to software development, trust and security are very important. One easy way to level up both is by using verified commits. 
+When it comes to software development, [trust](/readings/the-five-dysfunctions-of-a-team/) and security are very important. One easy way to level up both is by using verified commits. 
 
 <!-- more -->
 
-Whether you're working on an open-source project or in a private company, verified commits can make sure your contributions are legit. Let's break down what they are, why they're important, and how to start using them.
+Whether you're working on an [open-source](/blog/open-source-software/) project or in a private company, verified commits can make sure your contributions are legit. Let's break down what they are, why they're important, and how to start using them.
 
 ## What are verified commits?
 

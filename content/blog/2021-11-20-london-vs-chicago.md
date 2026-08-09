@@ -38,7 +38,7 @@ lower layers. For example, starting from the API/Controllers down to the applica
 
 - **Behavioral Focused**: this requires a lot of test doubles because you will test a lot of abstractions that don't exist
   yet as you are creating a high level of logic first. You aren't going to write dead-code but it will be easy to create
-  tests highly coupled to the logic and therefore making refactoring a difficult task.
+  tests highly coupled to the logic and therefore making [refactoring](/blog/the-art-of-refactoring/) a difficult task.
 - **Command-Query separation**: is a discipline for managing side effects. Either you perform an action (command) or you ask
   for a value (query).
 

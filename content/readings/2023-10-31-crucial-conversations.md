@@ -19,7 +19,7 @@ related_readings = [
 
 <!-- more -->
 
-When stakes are high, opinions vary, and emotions run strong, you have three choices: Avoid a crucial conversation and suffer the consequences; handle the conversation badly and suffer the consequences; or read Crucial Conversations and discover how to communicate best when it matters most.
+When [stakes](/readings/radical-candor/) are high, opinions vary, and [emotions](/readings/never-split-the-difference/) run strong, you have three choices: Avoid a crucial conversation and suffer the consequences; handle the conversation badly and suffer the consequences; or read Crucial Conversations and discover how to communicate best when it matters most.
 
 > If you don't talk it out, then you'll act it out.
 

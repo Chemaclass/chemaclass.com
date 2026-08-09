@@ -25,7 +25,7 @@ related_posts = [
 
 <!-- more -->
 
-The Bitcoin Standard analyzes the historical context to the rise of Bitcoin, the economic properties that have allowed
+The [Bitcoin](/blog/bitcoin-fundamentals/) Standard analyzes the historical context to the rise of Bitcoin, the economic properties that have allowed
 it to grow quickly, and its likely economic, political, and social implications.
 
 While Bitcoin is a new invention of the digital age, the problem it purports to solve is as old as human society itself:
@@ -36,7 +36,7 @@ coins, the gold standard, and modern government debt.
 With this background in place, the book moves on to explain the operation of Bitcoin in a functional and intuitive way.
 Bitcoin is a decentralized, distributed piece of software that converts electricity and processing power into
 indisputably accurate records, thus allowing its users to utilize the Internet to perform the traditional functions of
-money without having to rely on, or trust, any authorities or infrastructure in the physical world.
+money without having to rely on, or [trust](/readings/the-five-dysfunctions-of-a-team/), any authorities or infrastructure in the physical world.
 
 The final chapter of the book explores some of the most common questions surrounding Bitcoin:
 

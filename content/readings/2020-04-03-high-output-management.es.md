@@ -26,7 +26,7 @@ Un clásico de Silicon Valley. El ex presidente y CEO de Intel comparte su persp
 - Formación
 - Motivación
 - Reuniones y decisiones
-- Reuniones uno a uno
+- Reuniones [uno a uno](/es/readings/the-manager-path/)
 - Delegación y madurez relevante para la tarea
 - KPIs
 - Evaluaciones de desempeño

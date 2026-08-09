@@ -19,7 +19,7 @@ related_readings = [
 
 <!-- more -->
 
-Radical Candor is a management philosophy developed by Kim Scott, a former Google leader. It's a crash course on how to be a great manager, focusing on being empathetic and results-oriented. The core idea is to create a stress-free environment where people feel safe to speak their minds, get their jobs done, and feel respected.
+Radical Candor is a management [philosophy](/readings/meditations/) developed by Kim Scott, a former Google leader. It's a crash course on how to be a great [manager](/readings/the-manager-path/), focusing on being empathetic and results-oriented. The core idea is to create a stress-free environment where people feel safe to speak their minds, get their jobs done, and feel respected.
 
 ### Key Insights
 
@@ -30,7 +30,7 @@ Radical Candor is a management philosophy developed by Kim Scott, a former Googl
 ### The Two Dimensions of Radical Candor
 
 - **Care Personally**: This dimension involves showing genuine interest in people's lives, well-being, and goals. It's about being human and empathetic.
-- **Challenge Directly**: This dimension involves giving specific, timely, and actionable feedback that is both kind and clear. It's about being straightforward and results-oriented.
+- **Challenge Directly**: This dimension involves giving specific, timely, and actionable [feedback](/blog/ship-show-ask/) that is both kind and clear. It's about being straightforward and results-oriented.
 
 ### Avoiding the Three Behaviors
 

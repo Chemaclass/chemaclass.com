@@ -33,7 +33,7 @@ self-interests against group interests. This dilemma also happens in our bodies 
 - **Endorphins** and **dopamine** drive us to satisfy our personal needs, e.g. to find food, develop solutions and
   persevere through problems. They help us to get things done, so we can survive.
 
-- **Serotonin** and **oxytocin** encourage us to work together with others. They build feelings of trust, loyalty and
+- **Serotonin** and **oxytocin** encourage us to work together with others. They build feelings of [trust](/readings/the-five-dysfunctions-of-a-team/), loyalty and
   camaraderie, strengthen our social bonds and increase our inclination to cooperate with others to achieve what we
   can't on our own.
 
@@ -42,7 +42,7 @@ self-interests against group interests. This dilemma also happens in our bodies 
 Traditionally, our family provides a Circle of Safety where we feel safe and supported. Inside the circle, we have a
 healthy balance of **E.D.S.O**. and low Cortisol levels. In organizations, Circles of Safety provide people with a sense of
 belonging and security. This facilitates communication, cooperation, problem-solving and innovation, allowing people to
-direct their attention to external threats and opportunities. In contrast, when people feel threatened by internal
+direct their [attention](/readings/digital-minimalism/) to external threats and opportunities. In contrast, when people feel threatened by internal
 politics and infighting, they turn their attention inward to focus on self-preservation, making the group more
 vulnerable as a whole.
 
@@ -63,7 +63,7 @@ here?
 - **Social Changes**: how our societal norms and values have changed with the post-WWII Boomer Generation, followed by
   Gen-Xers and Gen-Ys, to become increasingly dopamine-addicted and imbalanced.
 
-> Simon Sinek offers many detailed examples and stories of leaders in all walks from the military to politics and businesses.
+> [Simon Sinek](/readings/start-with-why/) offers many detailed examples and stories of leaders in all walks from the military to politics and businesses.
 
 ---
 

@@ -26,7 +26,7 @@ have different languages.
 
 <!-- more -->
 
-> "Doing" in our traditional leadership style will not take us to where we need to be in the future.
+> "Doing" in our traditional [leadership](/blog/the-beauty-of-leadership/) style will not take us to where we need to be in the future.
 
 ## What is "Red Work"?
 

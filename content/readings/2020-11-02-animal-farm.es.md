@@ -18,6 +18,6 @@ related_readings = [
 
 <!-- more -->
 
-El Sr. Jones, dueño de la Granja Manor, es tan vago y borracho que un día se olvida de dar de comer a los animales. Eso desata una rebelión. Los cerdos Napoleón y Bola de Nieve toman el liderazgo y los animales se hacen con el control.
+El Sr. Jones, dueño de la Granja Manor, es tan vago y borracho que un día se olvida de dar de comer a los animales. Eso desata una rebelión. Los cerdos Napoleón y Bola de Nieve toman el [liderazgo](/es/blog/the-beauty-of-leadership/) y los animales se hacen con el control.
 
 Juran acabar con las desigualdades. La granja pasa a llamarse Granja Animal y se organiza para beneficiar a todos los que caminan en cuatro patas. Pero con el tiempo, los ideales se corrompen. Después, se olvidan. Y algo nuevo e inesperado emerge.

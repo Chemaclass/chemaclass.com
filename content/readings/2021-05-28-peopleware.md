@@ -33,7 +33,7 @@ customers and stakeholders, are supported by their managers and collaborate in t
 - People should be asking and wondering why things are getting done the way they are being done.
 - There must be always a trade between quality and quantity.
 
-- Organisations tend to expand and create a “busy day”, creating a lot of meetings rather than trust their employees to self-organize.
+- Organisations tend to expand and create a “busy day”, creating a lot of meetings rather than [trust](/readings/the-five-dysfunctions-of-a-team/) their employees to self-organize.
 - The human elements are usually the bottleneck of a project.
 - People won’t work harder if you put them under pressure. They might work more for some time, but they will also get overburden and leave.
 - Managers' real role is to make it possible for people to work, rather than forcing them to.

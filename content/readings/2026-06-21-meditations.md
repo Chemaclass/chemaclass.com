@@ -16,11 +16,11 @@ related_readings = [
 ]
 +++
 
-Marcus Aurelius ruled the most powerful empire on earth. Emperor of Rome. And every night he sat down and wrote notes to himself about how to be a better person. He never meant for anyone to read them. That's exactly what makes the book so good. It's not advice for you. It's a man arguing with himself.
+Marcus Aurelius ruled the most powerful empire on earth. [Emperor of Rome](/readings/the-art-of-being-happy/). And every night he sat down and wrote notes to himself about how to be a better person. He never meant for anyone to read them. That's exactly what makes the book so good. It's not advice for you. It's a man arguing with himself.
 
 <!-- more -->
 
-There's no system here. No chapters, no plan. Just fragments, written across years in army camps and palaces. You can open it anywhere and find something useful. Less like a philosophy book. More like a notebook that survived 1,800 years by accident.
+There's no system here. No chapters, no plan. Just fragments, written across years in army camps and palaces. You can open it anywhere and find something useful. Less like a [philosophy book](/readings/notes-from-underground/). More like a notebook that survived 1,800 years by accident.
 
 I came to this one as an audiobook, in Spanish, a few sections at a time. It's the rare book that works better in fragments than in one sitting. A few minutes a day, one idea to sit with, then back to it tomorrow.
 

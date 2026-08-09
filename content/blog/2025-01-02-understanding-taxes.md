@@ -100,7 +100,7 @@ These include fees for registering vehicles, paying for waste collection, and ob
 Taxes are usually a mix of **national**, **regional**, and **local** responsibilities:
 
 - National taxes have **standardized rates**, like income tax or VAT.
-- Regional taxes vary **depending on where you live**, like wealth or inheritance taxes.
+- Regional taxes vary **depending on where you live**, like [wealth](/readings/rich-dad-poor-dad/) or inheritance taxes.
 - Local taxes are **specific to your city** or town, like property or waste fees.
 
 Taxes are often deducted directly from employees' paychecks. Freelancers and business owners, on the other hand, need to calculate and pay their taxes regularly.
@@ -135,9 +135,9 @@ Taxes would seem much fairer if people trusted their money was being spent wisel
 
 Taxes are supposed to fund critical public services, but the biggest problem with taxes (and big governments) is that they often lead to **inefficiency and corruption**. The more power a government has, the more likely it is to misuse it. That's why governments should be (for me) **small, focused, and efficient**, providing essential services without overcomplicating things or overreaching into people's lives.
 
-Here is where **Bitcoin offers an interesting alternative**. Bitcoin is decentralized, which means no one controls it: not governments, banks, or anyone. This removes the risk of corruption or mismanagement by powerful institutions. Every Bitcoin transaction is recorded on a public ledger that anyone can verify, so it's **transparent and resistant to manipulation**.
+Here is where **[Bitcoin](/blog/bitcoin-fundamentals/) offers an interesting alternative**. Bitcoin is decentralized, which means no one controls it: not governments, banks, or anyone. This removes the risk of corruption or mismanagement by powerful institutions. Every Bitcoin transaction is recorded on a public ledger that anyone can verify, so it's **transparent and resistant to manipulation**.
 
-While most countries want to tax Bitcoin transactions, using **Bitcoin gives people more control over their money**. Unlike traditional currencies that governments can print endlessly (causing inflation and lowering the value of savings), Bitcoin has a **limited supply**, so its value can't be diluted similarly. It's also borderless, meaning you can send and receive money without relying on banks or other intermediaries that might take a cut or add delays.
+While most countries want to tax Bitcoin transactions, using **Bitcoin gives people more control over their money**. Unlike traditional currencies that governments can print endlessly (causing [inflation](/readings/broken-money/) and lowering the value of savings), Bitcoin has a **limited supply**, so its value can't be diluted similarly. It's also borderless, meaning you can send and receive money without relying on banks or other intermediaries that might take a cut or add delays.
 
 ### Why government money works
 

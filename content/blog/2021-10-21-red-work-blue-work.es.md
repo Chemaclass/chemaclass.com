@@ -25,7 +25,7 @@ describe en su libro [Leadership is Language](/es/readings/leadership-is-languag
 
 <!-- more -->
 
-> "Hacer" en nuestro estilo de liderazgo tradicional no nos llevará a donde necesitamos estar en el futuro.
+> "Hacer" en nuestro estilo de [liderazgo](/es/blog/the-beauty-of-leadership/) tradicional no nos llevará a donde necesitamos estar en el futuro.
 
 ## ¿Qué es "Red Work"?
 

@@ -28,7 +28,7 @@ The narrator argues that people don't just want what's good for them. Sometimes 
 
 > "What man wants is simply independent choice, whatever that independence may cost and wherever it may lead."
 
-He rejects the utopian idea that a perfect society could be built on rational self-interest. Humans aren't machines. They'll destroy their own happiness just to prove they can.
+He rejects the utopian idea that a perfect society could be built on rational self-interest. Humans aren't machines. They'll destroy their own [happiness](/readings/the-art-of-being-happy/) just to prove they can.
 
 ## The Wall and Inaction
 

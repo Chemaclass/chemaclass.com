@@ -20,7 +20,7 @@ related_readings = [
 
 <!-- more -->
 
-¿Te has preguntado alguna vez quién es Satoshi Nakamoto, el creador anónimo de Bitcoin?
+¿Te has preguntado alguna vez quién es Satoshi Nakamoto, el creador anónimo de [Bitcoin](/es/blog/bitcoin-fundamentals/)?
 
 Bitcoin nació en 2009 y revolucionó nuestra forma de entender el dinero. Sin gobierno ni banco central detrás, completamente electrónico, funciona gracias a sistemas criptográficos avanzados.
 

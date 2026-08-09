@@ -24,7 +24,7 @@ En esta guía te muestro cómo configurar un nodo de Lightning Network (LN) con 
 
 <!-- more -->
 
-Soporta direcciones Lightning y Nostr, conectando ambos ecosistemas sin problemas. Se integra con docenas de aplicaciones Bitcoin. Con los servicios LSP (Lightning Service Provider) integrados y la app Alby Go, gestionar tu nodo desde el móvil es muy fácil.
+Soporta direcciones Lightning y Nostr, conectando ambos ecosistemas sin problemas. Se integra con docenas de aplicaciones [Bitcoin](/es/blog/bitcoin-fundamentals/). Con los servicios LSP (Lightning Service Provider) integrados y la app Alby Go, gestionar tu nodo desde el móvil es muy fácil.
 
 ---
 
@@ -41,7 +41,7 @@ De todos modos, he incluido un breve repaso de los fundamentos de Lightning Netw
 La LN es una capa construida sobre Bitcoin que permite transacciones rápidas, baratas y escalables.
 
 - **¿Por qué?** La capa base de Bitcoin es segura pero lenta y cara para pagos pequeños, por los límites de bloque y las comisiones.
-- **¿Cómo?** LN usa canales de pago fuera de la cadena. Puedes enviar pagos al instante sin esperar confirmaciones en la blockchain.
+- **¿Cómo?** LN usa canales de pago fuera de la cadena. Puedes enviar pagos al instante sin esperar confirmaciones en la [blockchain](/es/blog/how-bitcoin-works/).
 
 ### Conceptos clave
 

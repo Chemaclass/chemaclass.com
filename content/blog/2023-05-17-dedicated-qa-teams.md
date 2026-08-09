@@ -20,7 +20,7 @@ related_readings = [
 +++
 
 
-This will be controversial, but let's talk about the QA position. The hidden truth behind the lack of software quality and why this should concern you if you write software.
+This will be controversial, but let's talk about the QA position. The hidden truth behind the lack of [software quality](/blog/different-beliefs-about-software-quality/) and why this should concern you if you write software.
 
 <!-- more -->
 
@@ -38,7 +38,7 @@ Unfortunately, in our software industry, the demand for "fast, quick and dirty" 
 
 We don't learn the importance of what automated testing can bring to our daily job, so we don't take it seriously, and therefore, we don't practice it enough. And, for that exact reason, because we don't practice it, we don't know how to perform it properly. Yes, I am talking about writing automated tests that prove the behavior of your software!
 
-Our inability to write testable code results in software that is hard to test, and thus we delegate testing to other third parties shifting the responsibility for the overall end quality of the product or service we write.
+Our inability to write testable code results in software that is hard to test, and thus we [delegate](/blog/tech-lead/) testing to other third parties shifting the responsibility for the overall end quality of the product or service we write.
 
 ## Practice makes the master
 

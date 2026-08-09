@@ -16,7 +16,7 @@ related_readings = [
 ]
 +++
 
-Schopenhauer is probably the most famous pessimist in philosophy. He believed suffering is the default state of existence and that desire only leads to more desire. So a book about happiness from this guy? Sounds like a contradiction. It's not. It's actually one of the most practical things he ever wrote.
+Schopenhauer is probably the most famous pessimist in [philosophy](/readings/meditations/). He believed [suffering](/readings/mans-search-for-meaning/) is the default state of existence and that desire only leads to more desire. So a book about happiness from this guy? Sounds like a contradiction. It's not. It's actually one of the most practical things he ever wrote.
 
 <!-- more -->
 

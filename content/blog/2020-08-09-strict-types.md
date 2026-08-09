@@ -17,7 +17,7 @@ related_readings = [
 +++
 
 
-In December 2015, PHP 7 introduced scalar type declarations and with it the strict types flag. What is this new feature?
+In December 2015, [PHP](/blog/typed-arrays-php/) 7 introduced scalar type declarations and with it the strict types flag. What is this new feature?
 
 <!-- more -->
 

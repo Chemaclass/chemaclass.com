@@ -19,7 +19,7 @@ related_readings = [
 ]
 +++
 
-Bitcoin with Rigor goes beyond a basic explanation of Bitcoin, offering a detailed analysis of how Bitcoin works. It breaks down its components clearly, helping readers understand both the parts and the system as a whole. This deep dive explores Bitcoin’s potential and risks, recognizing it as a decade-old monetary experiment that hasn’t yet stood the test of time like gold or silver. Despite this, its innovative design makes it a promising system for the present and future.
+[Bitcoin](/blog/bitcoin-fundamentals/) with Rigor goes beyond a basic explanation of Bitcoin, offering a detailed analysis of how Bitcoin works. It breaks down its components clearly, helping readers understand both the parts and the system as a whole. This deep dive explores Bitcoin’s potential and risks, recognizing it as a decade-old monetary experiment that hasn’t yet stood the test of time like gold or silver. Despite this, its innovative design makes it a promising system for the present and future.
 
 <!-- more -->
 
@@ -90,7 +90,7 @@ This book aims to equip readers with the tools to understand how Bitcoin works, 
 - Unilateral Payment Channels
 - Lightning Channels
 - Multi-channel Payments and HTLCs
-- Lightning Network
+- [Lightning Network](/blog/run-your-ln-node/)
 - Discreet Log Contracts (DLCs)
 - MAST, P2SMR, and P2CH
 - Taproot and Grafroot

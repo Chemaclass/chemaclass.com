@@ -18,7 +18,7 @@ related_readings = [
 
 <!-- more -->
 
-El liderazgo no va de títulos, estatus ni poder sobre los demás. Los líderes reconocen el potencial en las personas y las ideas, y se comprometen a desarrollarlo. Este libro es para quienes están listos para elegir el coraje sobre la comodidad y marcar la diferencia.
+El [liderazgo](/es/blog/the-beauty-of-leadership/) no va de títulos, estatus ni poder sobre los demás. Los líderes reconocen el potencial en las personas y las ideas, y se comprometen a desarrollarlo. Este libro es para quienes están listos para elegir el coraje sobre la comodidad y marcar la diferencia.
 
 ## Coraje y vulnerabilidad
 
@@ -38,7 +38,7 @@ El lugar de trabajo moderno puede sentirse como una "arena de gladiadores". Aunq
 todavía requiere valentía, y mucho esfuerzo y lágrimas, al punto de que podemos sentirnos tan abrumados que estamos
 tentados a irnos. Entonces, según Brené:
 
-> "Una de las fuentes más significativas de motivación para aguantar es tener absolutamente claros nuestros valores fundamentales."
+> "Una de las fuentes más significativas de [motivación](/es/readings/start-with-why/) para aguantar es tener absolutamente claros nuestros valores fundamentales."
 
 Los valores son los **ideales** que tenemos y que dan propósito a lo que hacemos en nuestra vida. Nos guían y nos dan algo a lo que
 aferrarnos durante tiempos oscuros y difíciles. Los valores fuertes nos guían **a hacer lo correcto** en lugar de lo fácil.
@@ -49,7 +49,7 @@ Un gran líder fomenta el potencial en las personas y posee el coraje de guiar e
 las habilidades críticas para hacer esto es el coraje y la capacidad de dar **retroalimentación honesta y abierta**.
 
 Desafortunadamente, muchos líderes tienen miedo de dar retroalimentación difícil y dejan a sus empleados en la oscuridad. Sí, a veces la
-verdad duele, pero a menudo evitamos las conversaciones difíciles porque nos hacen sentir incómodos **a nosotros**.
+verdad duele, pero a menudo evitamos las [conversaciones difíciles](/es/readings/crucial-conversations/) porque nos hacen sentir incómodos **a nosotros**.
 
 > "Los grandes líderes deben ser valientes y siempre atreverse a proporcionar retroalimentación constructiva, decir la verdad y ser claros sobre
 > sus expectativas."

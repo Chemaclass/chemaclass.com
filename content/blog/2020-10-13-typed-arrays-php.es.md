@@ -18,12 +18,12 @@ related_readings = [
 +++
 
 
-Desempaquetado de argumentos, lista de argumentos variables de función, y funciones variádicas.
+Desempaquetado de argumentos, lista de argumentos variables de [función](/es/blog/strict-types/), y funciones variádicas.
 
 <!-- more -->
 
 ### La combinación perfecta
-- **Desempaquetado de argumentos**: pasa los elementos de un array como argumentos individuales a una función.
+- **Desempaquetado de argumentos**: pasa los elementos de un [array](/es/blog/array-merge-in-loop/) como argumentos individuales a una función.
 - **Lista de argumentos variables**: la función recibe los argumentos como un array.
 - **Función variádica**: permite verificar los tipos con un type-hint.
 

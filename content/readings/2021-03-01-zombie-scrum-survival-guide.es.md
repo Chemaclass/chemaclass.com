@@ -18,7 +18,7 @@ related_readings = [
 
 <!-- more -->
 
-Disfruté mucho las ideas y experimentos del libro. Pone el dedo en la llaga sobre muchos equipos que dicen hacer Scrum o Agile de forma cuestionable. A eso lo llaman Zombie Scrum.
+Disfruté mucho las ideas y experimentos del libro. Pone el dedo en la llaga sobre muchos equipos que dicen hacer [Scrum](/es/blog/ignoring-scrum-to-get-more-agile/) o [Agile](/es/blog/what-kills-agility/) de forma cuestionable. A eso lo llaman Zombie Scrum.
 
 ### Resumen
 

@@ -50,7 +50,7 @@ Conflict and disagreement emerge as team members start to express their individu
 
 ### Leadership approach
 
-- Facilitate conflict resolution
+- Facilitate [conflict](/readings/the-five-dysfunctions-of-a-team/) resolution
 - Acknowledge and address conflicts constructively
 - Encourage open and honest communication while guiding the team through the process of understanding and appreciating diverse perspectives
 
@@ -95,7 +95,7 @@ This stage involves the completion of the task or project. Team members may expe
 
 ![blog-footer](/images/blog/2023-11-25/footer.webp)
 
-To develop a team to a high-performance level using [Tuckman's Model](https://en.wikipedia.org/wiki/Tuckman's_stages_of_group_development), **leaders** should be aware of the stages and **adapt** their leadership style accordingly.
+To develop a team to a high-performance level using [Tuckman's Model](https://en.wikipedia.org/wiki/Tuckman's_stages_of_group_development), **leaders** should be aware of the stages and **adapt** their [leadership](/blog/the-beauty-of-leadership/) style accordingly.
 
 This involves providing **guidance and structure** during the _forming_ stage, **facilitating conflict resolution** during _storming_, **fostering collaboration and communication** during _norming_, **empowering autonomy** during _performing_, and **recognizing achievements** during _adjourning_. 
 

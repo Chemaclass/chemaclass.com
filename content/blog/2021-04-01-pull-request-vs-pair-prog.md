@@ -58,7 +58,7 @@ Having an extra person looking at the changes that we have done for "designing d
 
 ## Pair Programming
 
-The concept of "Pair Programming" can be understood from different points of view. Pair thinking and pair programming, driver-navigator roles concepts, or pure live coding from one side. Actually, this is way easier than it looks like at first instance:
+The concept of "Pair Programming" can be understood from different points of view. Pair thinking and [pair programming](/blog/effective-pair-programming/), driver-navigator roles concepts, or pure live coding from one side. Actually, this is way easier than it looks like at first instance:
 - Either you watch and help the other person to write code,
 - Or you type while getting another pair of eyes watching and helping you.
 
@@ -88,7 +88,7 @@ The pattern which rejects Pair Programing is basically "fear", and being out of 
 
 Pair Programming is not "to show off in front of your colleagues" or "to be screwed by your peers", but to be transparent (showing your skills as they really are) and improve as a team lifting up each other.
 
-Programming is an iterative process that needs a continuous refactoring of our way of thinking in order to achieve better solutions, day by day. Therefore, programming with another person next to you (with a different way of thinking) will help the team to get the best from each other while discarding the waste or bad habits if necessary.
+Programming is an iterative process that needs a continuous [refactoring](/blog/the-art-of-refactoring/) of our way of thinking in order to achieve better solutions, day by day. Therefore, programming with another person next to you (with a different way of thinking) will help the team to get the best from each other while discarding the waste or bad habits if necessary.
 
 Pair Programming doesn't need to be always set for everything. As a tool, it's flexible, and we can choose how, when and for what reason.
 
@@ -100,7 +100,7 @@ A personal rule of thumb, before starting tasks that might involve touching mult
 
 If you still feel uncomfortable having another person next to you while you write code, it might be because you aren't particularly happy with your own code, or the process that you follow in order to achieve some result. My favorite way to work on this is by exercising on your own and working on improving your skills as a software developer.
 - Create and play around with your own pet projects.
-- Work on code katas on your own and with others.
+- Work on [code katas](/blog/update-your-team-to-be-more-extreme/) on your own and with others.
 
 > Practice makes the master.
 

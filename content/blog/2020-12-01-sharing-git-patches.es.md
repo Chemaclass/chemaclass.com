@@ -22,7 +22,7 @@ Descubre otra forma de compartir sugerencias con tu equipo de desarrollo.
 
 ### Imagina esta situación
 
-Estás revisando un Pull Request (PR), y ves algunas mejoras menores o sugerencias que te gustaría compartir con el autor. Podrías escribir algunos comentarios, y normalmente, eso sería suficiente.
+Estás revisando un [Pull Request](/es/blog/pull-request-vs-pair-prog/) (PR), y ves algunas mejoras menores o sugerencias que te gustaría compartir con el autor. Podrías escribir algunos comentarios, y normalmente, eso sería suficiente.
 
 Imagina que para transmitir tu "idea completa" necesitarías cambiar algunos archivos porque simplemente comunicar la imagen completa acabará en un comentario enorme que podría no ser tan claro como podría ser.
 

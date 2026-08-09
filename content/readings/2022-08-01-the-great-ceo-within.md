@@ -19,7 +19,7 @@ related_readings = [
 <!-- more -->
 
 Matt Mochary coaches the CEOs of many of the fastest-scaling technology companies in Silicon Valley. 
-He shares his highly effective leadership and business-operating tools with any CEO or manager in the world.
+He shares his highly effective [leadership](/blog/the-beauty-of-leadership/) and business-operating tools with any CEO or manager in the world.
 
 Learn how to efficiently scale your business from startup to corporation by implementing a system of accountability,
 effective problem-solving, and transparent feedback.
@@ -30,7 +30,7 @@ effective problem-solving, and transparent feedback.
 ## 3 Key takeaways
 
 - You need to learn how to manage yourself before you can manage your business.
-- Don't ignore conflict. Be transparent, give and take feedback often, and be an active listener.
+- Don't ignore [conflict](/readings/the-five-dysfunctions-of-a-team/). Be transparent, give and take feedback often, and be an active listener.
 - Be obsessed with learning about your customer. Do so by asking better questions.
 
 ---
@@ -234,7 +234,7 @@ effective problem-solving, and transparent feedback.
 ### Recruiting
 
 - Spend as little time as possible with the candidates that you don't hire, and as much time as possible with the candidates that you want to hire.
-- As the hiring manager, write out a 90 roadmap for the position you need to fill.
+- As the [hiring](/readings/effective-software-em/) manager, write out a 90 roadmap for the position you need to fill.
 
 ### On-boarding
 

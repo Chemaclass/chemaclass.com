@@ -39,7 +39,7 @@ tldr = "El pairing es una herramienta, no una regla. Dos personas, dos roles, qu
 No se trata de que una persona muestre sus habilidades frente a otra, ni de que una persona tenga miedo de cometer errores debido al síndrome del impostor.
 
 Cada persona tendrá un rol:
-- Navegador: prestará atención al panorama general; ej: arquitectura, relación entre colaboradores, diseño de objetos, etc.
+- Navegador: prestará [atención](/es/readings/digital-minimalism/) al panorama general; ej: arquitectura, relación entre colaboradores, diseño de objetos, etc.
 - Conductor: prestará atención a los pequeños detalles; ej: naming, convenciones de código, sintaxis de escritura, diseño de objetos, etc.
 
 > La pareja podría, y debería, intercambiar roles ocasionalmente; ej: cada X commits pusheados, cada 10 min,... depende de ellos.

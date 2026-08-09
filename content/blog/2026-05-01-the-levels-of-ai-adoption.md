@@ -33,7 +33,7 @@ Using AI to code meant a second tab. Write a function, get stuck, paste the erro
 
 > The first generation of AI coding tools gave you a parrot trained on the whole internet. Fluent, confident, and often saying things that made no sense in your codebase.
 
-This was *vibe-coding* in its first form: you gave the vibe by pasting context, and the AI filled in code that looked right. It compiled often enough to feel useful, and broke often enough to feel dangerous.
+This was *[vibe-coding](/blog/ai-gives-you-speed-not-quality/)* in its first form: you gave the vibe by pasting context, and the AI filled in code that looked right. It compiled often enough to feel useful, and broke often enough to feel dangerous.
 
 ## The IDE generation
 
@@ -51,7 +51,7 @@ This was the big shift, and not because the models were smarter. The unit of wor
 
 > The jump from assistant to agent is not a speed improvement. It's a change of job description. You move from typing code to directing work.
 
-Claude Code needs almost no setup. No editor lock-in. Point it at your repo, drop a `.claude` folder with rules and conventions, and it adapts. I covered that in [Inside the .claude Folder](https://chemaclass.com/blog/inside-the-claude-folder/).
+[Claude Code](/blog/inside-the-claude-folder/) needs almost no setup. No editor lock-in. Point it at your repo, drop a `.claude` folder with rules and conventions, and it adapts. I covered that in [Inside the .claude Folder](https://chemaclass.com/blog/inside-the-claude-folder/).
 
 The model you pick matters more than before. Today's frontier models are way ahead of where they were a year ago. The gap between *"can draft a function"* and *"can refactor a module with judgment"* closed faster than expected, and it keeps closing as Claude, Codex, and Gemini push each other forward every month. Prices are getting closer too, which is a polite way of saying everyone copies whoever figures out the sustainable version first.
 
@@ -111,7 +111,7 @@ At this level, quality depends less on the model and more on the context around 
 
 Instead of one assistant, you get a squad: a TDD coach, a clean code reviewer, a domain architect, a docs maintainer. Outside engineering, the same idea applies with research, design, and ops agents. I covered the developer side in [Build Your Own Team of Agents](https://chemaclass.com/blog/build-your-own-team-of-agents/), and the leverage is real.
 
-Humans stop competing with AI on speed and start directing it. You review, decide, and set the bar. Agents handle typing, and increasingly the thinking. Pair programming with a person still wins on complex trade-offs, but an agent pair is always there for the rest.
+Humans stop competing with AI on speed and start directing it. You review, decide, and set the bar. Agents handle typing, and increasingly the thinking. [Pair programming](/blog/effective-pair-programming/) with a person still wins on complex trade-offs, but an agent pair is always there for the rest.
 
 At the company level, the org chart, roles, and processes are still the same. What changes is that each person produces a lot more, and the team's output reflects it. Level 4 multiplies output inside the existing structure. Level 5 changes the structure.
 

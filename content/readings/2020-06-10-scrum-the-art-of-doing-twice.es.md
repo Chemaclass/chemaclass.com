@@ -20,4 +20,4 @@ related_readings = [
 
 Toda organización tiene que lidiar con entregar productos a tiempo y dentro del presupuesto. Da igual el tamaño.
 
-Scrum te muestra cómo hacerlo. Te explica cómo definir lo que quieres lograr, cómo armar el equipo adecuado y cómo seguir el progreso hasta completar el proyecto con éxito.
+[Scrum](/es/blog/ignoring-scrum-to-get-more-agile/) te muestra cómo hacerlo. Te explica cómo definir lo que quieres lograr, cómo armar el equipo adecuado y cómo seguir el progreso hasta completar el proyecto con éxito.

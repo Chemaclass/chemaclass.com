@@ -19,9 +19,9 @@ related_readings = [
 <!-- more -->
 
 Apply design principles to your classes, preparing them for reuse. You will use package design principles to create
-packages that are just right in terms of cohesion and coupling, and are user- and maintainer-friendly at the same time.
+packages that are just right in terms of cohesion and [coupling](/readings/recipes-for-decoupling/), and are user- and maintainer-friendly at the same time.
 
-The first part of this book walks you through the five SOLID principles that will help you improve the design of your
+The first part of this book walks you through the five [SOLID](/readings/clean-architecture/) principles that will help you improve the design of your
 classes. The second part introduces you to the best practices of package design, and covers both package cohesion
 principles and package coupling principles. Cohesion principles show you which classes should be put together in a
 package, when to split packages, and if a combination of classes may be considered a "package" in the first place.

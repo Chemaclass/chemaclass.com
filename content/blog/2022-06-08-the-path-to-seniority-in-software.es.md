@@ -65,7 +65,7 @@ Ser senior en nuestra industria del software no se trata del "número de años d
 - ¿Qué tan bien **trabajas en conjunto** con tus compañeros? El pair-programming fomenta la cohesión del equipo y ayuda a que todos mejoren.
 - ¿Qué tan fuertes son tus habilidades de **testing**? El testing está ligado a la calidad de tu trabajo, y un senior debería apuntar a un diseño incremental.
 - ¿Qué tan bien entiendes **entregar valor constantemente** en pequeñas partes? Cuanto antes entregues valor, antes obtendrás retroalimentación sobre ello.
-- ¿Qué tan profundo es tu **conocimiento técnico** sobre software de calidad y los trade-offs para llegar allí? Principios SOLID, código limpio, TDD, refactoring como parte de tu trabajo diario, bajo acoplamiento, alta cohesión, estructuras de datos apropiadas y elegir la solución correcta (KISS, YAGNI...).
+- ¿Qué tan profundo es tu **conocimiento técnico** sobre software de calidad y los trade-offs para llegar allí? Principios [SOLID](/es/readings/clean-architecture/), código limpio, [TDD](/es/blog/test-driven-development/), [refactoring](/es/blog/the-art-of-refactoring/) como parte de tu trabajo diario, bajo acoplamiento, alta cohesión, estructuras de datos apropiadas y elegir la solución correcta (KISS, YAGNI...).
 - ¿Qué tan bien te adaptas y **lidias con el cambio**? El cambio es inevitable, así que debemos aprender a gestionarlo, especialmente lo que no podemos controlar.
 - ¿Qué tan desarrollado está tu **pensamiento emprendedor**? Siempre manteniendo los objetivos de la organización en mente.
 

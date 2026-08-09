@@ -24,7 +24,7 @@ I ran the same prompt twice and got two different answers. My first instinct was
 
 ## The instinct to expect determinism
 
-As programmers, we're trained to trust repeatability. Same input, same output. Flaky tests fail. Non-reproducible builds fail. So when an LLM phrases things differently on the second call, the reflex is to call it a bug.
+As programmers, we're trained to trust repeatability. Same input, same output. Flaky tests fail. Non-reproducible builds fail. So when an [LLM](/blog/the-levels-of-ai-adoption/) phrases things differently on the second call, the reflex is to call it a bug.
 
 It's not. It's the shape of the tool.
 

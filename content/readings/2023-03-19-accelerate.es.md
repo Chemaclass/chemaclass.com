@@ -59,7 +59,7 @@ Accelerate explora cómo los equipos que usan **Lean Software** y **DevOps** pue
 - Fomentar y Apoyar el Aprendizaje
 - Apoyar y Facilitar la Colaboración entre Equipos
 - Proporcionar Recursos y Herramientas que Hacen el Trabajo Significativo
-- Apoyar o Encarnar el Liderazgo Transformacional
+- Apoyar o Encarnar el [Liderazgo](/es/blog/the-beauty-of-leadership/) Transformacional
 
 ## Cuatro Métricas Clave
 

@@ -38,11 +38,11 @@ En metodologías de software, puedes adaptar esta idea cambiando **calidad** por
 
 ### Waterfall
 
-En proyectos waterfall, el alcance está fijado, mientras que el tiempo y el dinero serán más variables. Dependiendo de si es más importante terminar a tiempo o dentro del presupuesto.
+En proyectos [waterfall](/es/blog/what-is-waterfall/), el alcance está fijado, mientras que el tiempo y el dinero serán más variables. Dependiendo de si es más importante terminar a tiempo o dentro del presupuesto.
 
 ### Agile
 
-Por otro lado, en un entorno agile normalmente trabajamos en iteraciones de pocas semanas, así que esta es la parte fija: el tiempo, para entregar valor lo antes posible, y así obtener retroalimentación y recalibrar una y otra vez.
+Por otro lado, en un entorno [agile](/es/blog/what-kills-agility/) normalmente trabajamos en iteraciones de pocas semanas, así que esta es la parte fija: el tiempo, para entregar valor lo antes posible, y así obtener retroalimentación y recalibrar una y otra vez.
 
 Los costes en un equipo de software también están fijados por las personas que pertenecen a él.
 

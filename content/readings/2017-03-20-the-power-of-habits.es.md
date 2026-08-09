@@ -20,7 +20,7 @@ related_readings = [
 
 ## Aprendizajes
 
-1. Todos los hábitos operan de la misma manera
+1. Todos los [hábitos](/es/readings/atomic-habits/) operan de la misma manera
 2. Cambiar un hábito significa cambiar un aspecto clave...
 3. ...y cambiar un hábito puede cambiar muchas cosas
 4. La fuerza de voluntad es un músculo

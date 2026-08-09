@@ -18,7 +18,7 @@ related_readings = [
 
 <!-- more -->
 
-Matt Mochary hace coaching a CEOs de las empresas tech de más rápido crecimiento en Silicon Valley. Comparte sus herramientas de liderazgo y operaciones con cualquier CEO o manager del mundo.
+Matt Mochary hace coaching a CEOs de las empresas tech de más rápido crecimiento en Silicon Valley. Comparte sus herramientas de [liderazgo](/es/blog/the-beauty-of-leadership/) y operaciones con cualquier CEO o [manager](/es/readings/the-manager-path/) del mundo.
 
 El libro enseña a escalar tu negocio de startup a empresa con sistemas de responsabilidad, resolución de problemas y feedback transparente.
 
@@ -244,7 +244,7 @@ El libro enseña a escalar tu negocio de startup a empresa con sistemas de respo
 
 ### Ventas efectivas
 
-- Construye confianza.
+- Construye [confianza](/es/readings/the-five-dysfunctions-of-a-team/).
 - Vende resultados, no características.
 - Identifica los dolores de los clientes.
 
