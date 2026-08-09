@@ -3,7 +3,7 @@ title = "Por qué es bueno que la IA no sea determinista"
 description = "Mismo prompt, respuesta distinta. Esa impredecibilidad es lo que hace útil a la IA generativa."
 draft = true
 [taxonomies]
-tags = [ "ai", "engineering", "mindset" ]
+tags = [ "ai", "software", "psychology" ]
 [extra]
 subtitle = "La aleatoriedad es el precio de la creatividad"
 static_thumbnail = "/images/blog/2026-09-01/cover.webp"

@@ -3,7 +3,7 @@ title = "The Art of Being Happy"
 description = "Schopenhauer's 50 rules for practical happiness, built on avoiding suffering rather than chasing pleasure."
 authors = [ "Arthur Schopenhauer" ]
 [taxonomies]
-tags = [ "philosophy", "self-improvement" ]
+tags = [ "philosophy" ]
 [extra]
 subtitle = "50 rules for life from philosophy's most famous pessimist"
 pages = "112"

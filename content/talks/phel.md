@@ -4,7 +4,7 @@ description = "Phel, a functional Lisp that compiles to PHP. Persistent data str
 aliases = [ "talks/phel-lang" ]
 weight = 1
 [taxonomies]
-tags = [ "phel", "php", "functional-programming", "lisp" ]
+tags = [ "phel", "php", "software-design", "software" ]
 [extra]
 subtitle = "A native Lisp for PHP"
 project_url = "https://phel-lang.org/"

@@ -3,7 +3,7 @@ title = "MCP: Dándole a tu Agente IA el Contexto Adecuado"
 description = "MCP conecta agentes de IA con tus herramientas, bases de datos y APIs mediante un protocolo estándar. Dale el contexto que necesita."
 draft = false
 [taxonomies]
-tags = [ "ai", "software-architecture", "developer-tools", "craftsmanship" ]
+tags = [ "ai", "architecture", "developer-tools", "craftsmanship" ]
 [extra]
 subtitle = "Por qué el contexto es el verdadero superpoder"
 static_thumbnail = "/images/blog/2026-01-11/cover.webp"

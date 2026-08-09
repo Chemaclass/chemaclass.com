@@ -4,7 +4,7 @@ description = "Gacela normalises the entry point of each module in your PHP appl
 aliases = [ "talks/gacela-project" ]
 weight = 1
 [taxonomies]
-tags = [ "gacela", "php", "architecture", "modular" ]
+tags = [ "gacela", "php", "architecture" ]
 [extra]
 subtitle = "Build modular PHP applications"
 +++

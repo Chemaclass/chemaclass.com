@@ -3,7 +3,7 @@ title = "Meditaciones"
 description = "El cuaderno privado de Marco Aurelio, escrito para sí mismo mientras gobernaba un imperio. Estoicismo sin teoría, solo práctica."
 authors = [ "Marco Aurelio" ]
 [taxonomies]
-tags = [ "philosophy", "self-improvement" ]
+tags = [ "philosophy" ]
 [extra]
 subtitle = "Las notas privadas de un emperador romano sobre cómo vivir"
 pages = "256"

@@ -3,7 +3,7 @@ title = "AI Gives You Speed, Not Quality"
 description = "AI accelerates your output but doesn't ensure quality. You're responsible for every line you commit. Speed without direction is chaos."
 draft = false
 [taxonomies]
-tags = [ "ai", "software-architecture", "craftsmanship", "leadership" ]
+tags = [ "ai", "architecture", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "The human factor in the age of vibe-coding"
 static_thumbnail = "/images/blog/2025-10-10/cover.webp"

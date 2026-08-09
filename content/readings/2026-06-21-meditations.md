@@ -3,7 +3,7 @@ title = "Meditations"
 description = "The private notebook Marcus Aurelius wrote for himself while running an empire. Stoicism with the theory stripped out."
 authors = [ "Marcus Aurelius" ]
 [taxonomies]
-tags = [ "philosophy", "self-improvement" ]
+tags = [ "philosophy" ]
 [extra]
 subtitle = "A Roman emperor's private notes on how to live"
 pages = "256"

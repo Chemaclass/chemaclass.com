@@ -573,49 +573,49 @@ title = "Leadership & People"
 title_es = "Liderazgo y Personas"
 description = "Growing as a leader, building great teams, and the human side of software."
 description_es = "Crecer como líder, construir equipos y el lado humano del software."
-tags = ["leadership", "management", "team-management", "team-culture", "mentoring", "communication", "career", "self-improvement"]
+tags = ["leadership", "team-management", "mentoring", "communication", "career", "philosophy"]
 
 [[extra.topics]]
 title = "Mind & Knowledge"
 title_es = "Mente y Conocimiento"
 description = "Philosophy, psychology, productivity, and the pursuit of understanding."
 description_es = "Filosofía, psicología, productividad y la búsqueda del entendimiento."
-tags = ["philosophy", "psychology", "productivity", "mindset", "fiction", "dystopia", "horror"]
+tags = ["philosophy", "psychology", "productivity", "fiction"]
 
 [[extra.topics]]
 title = "Software Craft & Testing"
 title_es = "Artesanía del Software y Testing"
 description = "Practices for writing better software: TDD, clean code, refactoring, and design."
 description_es = "Prácticas para escribir mejor software: TDD, código limpio, refactoring y diseño."
-tags = ["testing", "tdd", "clean-code", "refactoring", "code-review", "architecture", "software-design", "software-architecture", "ddd", "pair-programming", "xp", "agile", "scrum", "craftsmanship", "software", "engineering", "modular"]
+tags = ["testing", "tdd", "clean-code", "refactoring", "code-review", "architecture", "software-design", "pair-programming", "xp", "agile", "scrum", "craftsmanship", "software"]
 
 [[extra.topics]]
 title = "Bitcoin & Economics"
 title_es = "Bitcoin y Economía"
 description = "Sound money, Austrian economics, privacy, and the technology behind Bitcoin."
 description_es = "Dinero sólido, economía austriaca, privacidad y la tecnología detrás de Bitcoin."
-tags = ["bitcoin", "economics", "cryptography", "privacy", "security", "freedom"]
+tags = ["bitcoin", "economics", "cryptography", "privacy", "security", "philosophy"]
 
 [[extra.topics]]
 title = "Programming Languages & Tools"
 title_es = "Lenguajes y Herramientas"
 description = "Hands-on content about specific languages, frameworks, and developer tooling."
 description_es = "Contenido práctico sobre lenguajes, frameworks y herramientas de desarrollo."
-tags = ["php", "golang", "lisp", "bash", "symfony", "docker", "git", "devops", "developer-tools", "bashunit", "gacela", "phel", "functional-programming"]
+tags = ["php", "software", "developer-tools", "devops", "git", "bashunit", "gacela", "phel", "software-design"]
 
 [[extra.topics]]
 title = "AI & Agents"
 title_es = "IA y Agentes"
 description = "Working with AI agents, agentic coding, and what the tooling changes about the craft."
 description_es = "Trabajar con agentes de IA, agentic coding y lo que las herramientas cambian del oficio."
-tags = ["ai", "agentic-coding"]
+tags = ["ai"]
 
 [[extra.topics]]
 title = "Speaking & Teaching"
 title_es = "Charlas y Enseñanza"
 description = "Conference talks, workshops, live coding, and sharing knowledge."
 description_es = "Charlas, talleres, live coding y compartir conocimiento."
-tags = ["speaking", "presentations", "live-coding", "tutorial", "workshop", "open-source"]
+tags = ["communication", "pair-programming", "tutorial", "mentoring", "open-source"]
 
 # The licence the public content is published under. Named here so the schema,
 # the head link, the footer, ai.txt and the markdown mirrors all quote the same
@@ -643,12 +643,6 @@ name = "leadership"
 desc = "Leading teams, making decisions, and growing as a technical leader."
 desc_es = "Liderar equipos, tomar decisiones y crecer como líder técnico."
 entity = "https://en.wikipedia.org/wiki/Leadership"
-
-[[extra.tag_descriptions]]
-name = "self-improvement"
-desc = "Personal growth, habits, and becoming a better professional."
-desc_es = "Crecimiento personal, hábitos y convertirse en mejor profesional."
-entity = "https://en.wikipedia.org/wiki/Personal_development"
 
 [[extra.tag_descriptions]]
 name = "bitcoin"
@@ -698,12 +692,6 @@ desc_es = "Mejorar la estructura del código sin cambiar su comportamiento."
 entity = "https://en.wikipedia.org/wiki/Code_refactoring"
 
 [[extra.tag_descriptions]]
-name = "management"
-desc = "Team management, organizational dynamics, and engineering management."
-desc_es = "Gestión de equipos, dinámicas organizacionales y gestión de ingeniería."
-entity = "https://en.wikipedia.org/wiki/Management"
-
-[[extra.tag_descriptions]]
 name = "psychology"
 desc = "Understanding human behavior, motivation, and cognitive patterns."
 desc_es = "Entender el comportamiento humano, motivación y patrones cognitivos."
@@ -716,11 +704,6 @@ desc_es = "Teoría económica, política monetaria, sistemas financieros y princ
 entity = "https://en.wikipedia.org/wiki/Economics"
 
 [[extra.tag_descriptions]]
-name = "agentic-coding"
-desc = "Coding with agents that plan and execute, not just autocomplete."
-desc_es = "Programar con agentes que planifican y ejecutan, no solo autocompletan."
-
-[[extra.tag_descriptions]]
 name = "agile"
 desc = "Agile in practice: short feedback loops over ceremonies and certificates."
 desc_es = "Agile en la práctica: ciclos de feedback cortos frente a ceremonias y certificados."
@@ -731,12 +714,6 @@ name = "ai"
 desc = "Working with AI agents: context, tooling, and where the human still decides."
 desc_es = "Trabajar con agentes de IA: contexto, herramientas y dónde decide el humano."
 entity = "https://en.wikipedia.org/wiki/Artificial_intelligence"
-
-[[extra.tag_descriptions]]
-name = "bash"
-desc = "Shell scripting that survives contact with production and CI."
-desc_es = "Scripting de shell que sobrevive al contacto con producción y CI."
-entity = "https://en.wikipedia.org/wiki/Bash_(Unix_shell)"
 
 [[extra.tag_descriptions]]
 name = "bashunit"
@@ -763,12 +740,6 @@ desc_es = "Claves, firmas y hashes: las primitivas y qué garantizan."
 entity = "https://en.wikipedia.org/wiki/Cryptography"
 
 [[extra.tag_descriptions]]
-name = "ddd"
-desc = "Domain-Driven Design: modelling the business before the database."
-desc_es = "Domain-Driven Design: modelar el negocio antes que la base de datos."
-entity = "https://en.wikipedia.org/wiki/Domain-driven_design"
-
-[[extra.tag_descriptions]]
 name = "developer-tools"
 desc = "The tools between an idea and a merged commit."
 desc_es = "Las herramientas entre una idea y un commit mergeado."
@@ -781,34 +752,10 @@ desc_es = "Pipelines, entornos y desplegar sin aguantar la respiración."
 entity = "https://en.wikipedia.org/wiki/DevOps"
 
 [[extra.tag_descriptions]]
-name = "docker"
-desc = "Containers for reproducible development and predictable deploys."
-desc_es = "Contenedores para desarrollo reproducible y despliegues predecibles."
-entity = "https://en.wikipedia.org/wiki/Docker_(software)"
-
-[[extra.tag_descriptions]]
-name = "dystopia"
-desc = "Books about futures worth avoiding, and why they still read as warnings."
-desc_es = "Libros sobre futuros que conviene evitar, y por qué siguen leyéndose como advertencias."
-entity = "https://en.wikipedia.org/wiki/Dystopia"
-
-[[extra.tag_descriptions]]
 name = "fiction"
 desc = "Novels and stories, read for pleasure rather than for work."
 desc_es = "Novelas y relatos, leídos por placer y no por trabajo."
 entity = "https://en.wikipedia.org/wiki/Fiction"
-
-[[extra.tag_descriptions]]
-name = "freedom"
-desc = "Autonomy, sound money, and the right to opt out."
-desc_es = "Autonomía, dinero sólido y el derecho a salirse."
-entity = "https://en.wikipedia.org/wiki/Free_will"
-
-[[extra.tag_descriptions]]
-name = "functional-programming"
-desc = "Immutability, pure functions, and composing behaviour instead of state."
-desc_es = "Inmutabilidad, funciones puras y componer comportamiento en vez de estado."
-entity = "https://en.wikipedia.org/wiki/Functional_programming"
 
 [[extra.tag_descriptions]]
 name = "gacela"
@@ -823,40 +770,10 @@ desc_es = "Git como herramienta de diseño: historia legible, commits pequeños,
 entity = "https://en.wikipedia.org/wiki/Git"
 
 [[extra.tag_descriptions]]
-name = "golang"
-desc = "Go: simple concurrency and small binaries, with the trade-offs that come with them."
-desc_es = "Go: concurrencia simple y binarios pequeños, con los compromisos que traen."
-entity = "https://en.wikipedia.org/wiki/Go_(programming_language)"
-
-[[extra.tag_descriptions]]
-name = "horror"
-desc = "Stories that unsettle, and what the fear is really about."
-desc_es = "Historias que inquietan, y de qué habla realmente el miedo."
-entity = "https://en.wikipedia.org/wiki/Horror_fiction"
-
-[[extra.tag_descriptions]]
-name = "lisp"
-desc = "Parentheses, macros, and treating code as data."
-desc_es = "Paréntesis, macros y tratar el código como datos."
-entity = "https://en.wikipedia.org/wiki/Lisp_(programming_language)"
-
-[[extra.tag_descriptions]]
-name = "live-coding"
-desc = "Building software in front of an audience, mistakes included."
-desc_es = "Construir software delante de una audiencia, errores incluidos."
-entity = "https://en.wikipedia.org/wiki/Live_coding"
-
-[[extra.tag_descriptions]]
 name = "mentoring"
 desc = "Growing other developers without doing the work for them."
 desc_es = "Hacer crecer a otros desarrolladores sin hacerles el trabajo."
 entity = "https://en.wikipedia.org/wiki/Mentorship"
-
-[[extra.tag_descriptions]]
-name = "modular"
-desc = "Boundaries between modules, and why they decide how a system ages."
-desc_es = "Fronteras entre módulos, y por qué deciden cómo envejece un sistema."
-entity = "https://en.wikipedia.org/wiki/Modular_programming"
 
 [[extra.tag_descriptions]]
 name = "music"
@@ -881,12 +798,6 @@ name = "php"
 desc = "Modern PHP: types, tooling, and architecture beyond the framework."
 desc_es = "PHP moderno: tipos, herramientas y arquitectura más allá del framework."
 entity = "https://en.wikipedia.org/wiki/PHP"
-
-[[extra.tag_descriptions]]
-name = "presentations"
-desc = "Preparing a talk so the audience leaves with something."
-desc_es = "Preparar una charla para que el público se lleve algo."
-entity = "https://en.wikipedia.org/wiki/Presentation"
 
 [[extra.tag_descriptions]]
 name = "privacy"
@@ -919,34 +830,10 @@ desc_es = "Construir software: decisiones de diseño, compromisos y el oficio al
 entity = "https://en.wikipedia.org/wiki/Software"
 
 [[extra.tag_descriptions]]
-name = "software-architecture"
-desc = "Structuring systems so they can still be changed later."
-desc_es = "Estructurar sistemas para que se puedan seguir cambiando después."
-entity = "https://en.wikipedia.org/wiki/Software_architecture"
-
-[[extra.tag_descriptions]]
 name = "software-design"
 desc = "Designing code that is easy to read, test, and replace."
 desc_es = "Diseñar código fácil de leer, testear y reemplazar."
 entity = "https://en.wikipedia.org/wiki/Software_design"
-
-[[extra.tag_descriptions]]
-name = "speaking"
-desc = "Conference talks, workshops, and getting on stage."
-desc_es = "Charlas en conferencias, talleres y subirse al escenario."
-entity = "https://en.wikipedia.org/wiki/Public_speaking"
-
-[[extra.tag_descriptions]]
-name = "symfony"
-desc = "Symfony: using the framework without letting it own your domain."
-desc_es = "Symfony: usar el framework sin dejar que se apropie de tu dominio."
-entity = "https://en.wikipedia.org/wiki/Symfony"
-
-[[extra.tag_descriptions]]
-name = "team-culture"
-desc = "The habits and defaults that decide how a team actually works."
-desc_es = "Los hábitos y los valores por defecto que deciden cómo trabaja un equipo."
-entity = "https://en.wikipedia.org/wiki/Organizational_culture"
 
 [[extra.tag_descriptions]]
 name = "team-management"
@@ -959,12 +846,6 @@ name = "tutorial"
 desc = "Step-by-step guides you can follow with a keyboard."
 desc_es = "Guías paso a paso que puedes seguir con el teclado."
 entity = "https://en.wikipedia.org/wiki/Tutorial"
-
-[[extra.tag_descriptions]]
-name = "workshop"
-desc = "Hands-on sessions where the group writes the code."
-desc_es = "Sesiones prácticas donde el grupo escribe el código."
-entity = "https://en.wikipedia.org/wiki/Workshop"
 
 [[extra.tag_descriptions]]
 name = "xp"

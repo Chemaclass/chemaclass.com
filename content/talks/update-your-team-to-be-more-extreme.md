@@ -3,7 +3,7 @@ title = "Update your team to be more extreme"
 description = "Embracing change is not optional in software. How to create the spaces your team needs to leave the comfort zone and keep learning."
 weight = 1
 [taxonomies]
-tags = [ "agile", "xp", "team-culture" ]
+tags = [ "agile", "xp", "team-management" ]
 [extra]
 subtitle = "How can you help your peers to embrace the change?"
 videos = [

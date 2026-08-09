@@ -3,7 +3,7 @@ title = "bashunit"
 description = "bashunit, un framework de testing para scripts bash inspirado en PHPUnit y Jest. Testea los scripts de tus pipelines como todo lo demás."
 weight = 1
 [taxonomies]
-tags = [ "bashunit", "bash", "testing", "open-source" ]
+tags = [ "bashunit", "developer-tools", "testing", "open-source" ]
 [extra]
 subtitle = "Testeando tus scripts bash"
 project_url = "https://bashunit.typeddevs.com/"

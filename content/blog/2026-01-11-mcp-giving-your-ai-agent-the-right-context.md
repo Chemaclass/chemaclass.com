@@ -3,7 +3,7 @@ title = "MCP: Giving Your AI Agent the Right Context"
 description = "MCP connects AI agents to your dev tools, databases, and APIs through a standard protocol. Give your agent the context it actually needs."
 draft = false
 [taxonomies]
-tags = [ "ai", "software-architecture", "developer-tools", "craftsmanship" ]
+tags = [ "ai", "architecture", "developer-tools", "craftsmanship" ]
 [extra]
 subtitle = "Why context is the real superpower"
 static_thumbnail = "/images/blog/2026-01-11/cover.webp"

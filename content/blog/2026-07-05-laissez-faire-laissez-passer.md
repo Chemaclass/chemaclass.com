@@ -3,7 +3,7 @@ title = "Laissez Faire, Laissez Passer"
 description = "Let people act, let goods pass. No planner knows what the market knows, and freedom, not control, should be the default."
 draft = false
 [taxonomies]
-tags = [ "economics", "philosophy", "freedom", "bitcoin" ]
+tags = [ "economics", "philosophy", "bitcoin" ]
 [extra]
 reading_time = 4
 subtitle = "The market knows what no one person can"
