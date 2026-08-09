@@ -31,7 +31,7 @@ Both of those are you. The tension between them isn't a contradiction. It's how 
 
 ## Two forces, one decision
 
-**Idealism** is the compass. Clean code, tested behavior, shared understanding, principled design. Without it, you drift. Every shortcut compounds, every hack breeds another hack, and eventually you're maintaining a system nobody wants to touch. Poor software quality cost US companies [$2.41 trillion in 2022](https://www.it-cisq.org/the-cost-of-poor-quality-software-in-the-us-a-2022-report/), with technical debt as a major driver. That's what "we'll fix it later" looks like at scale.
+**Idealism** is the compass. Clean code, tested behavior, shared understanding, principled design. Without it, you drift. Every shortcut compounds, every hack breeds another hack, and eventually you're maintaining a system nobody wants to touch. Poor software quality cost US companies [$2.41 trillion in 2022](https://web.archive.org/web/20240110163603/https://www.it-cisq.org/the-cost-of-poor-quality-software-in-the-us-a-2022-report/), with technical debt as a major driver. That's what "we'll fix it later" looks like at scale.
 
 **Pragmatism** is the engine. Deadlines, incomplete information, limited resources, shifting requirements. Without it, you never ship. You spend weeks perfecting an abstraction that the business abandoned two sprints ago.
 

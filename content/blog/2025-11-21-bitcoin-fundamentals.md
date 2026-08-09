@@ -386,7 +386,7 @@ This isn't just theory anymore.
 ### Global adoption
 
 - **Central African Republic** adopted Bitcoin as legal tender in 2022 ([source](https://www.cnbc.com/2022/04/28/central-african-republic-adopts-bitcoin-as-legal-tender.html))
-- **Switzerland** allows tax payments in Bitcoin in Canton Zug since 2021 ([source](https://zg.ch/de/steuern-finanzen/steuern/steuerbezug/taxpaymentswithcryptocurrencies))
+- **Switzerland** allows tax payments in Bitcoin in Canton Zug since 2021 ([source](https://zg.ch/de/steuern-finanzen/steuern/inkasso))
 - **Emerging markets** lead in grassroots adoption: Vietnam, Philippines, Nigeria
 
 ### Real-world usage

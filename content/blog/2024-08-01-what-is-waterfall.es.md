@@ -89,7 +89,7 @@ Juntas, estas prácticas hacen tu proceso de desarrollo más flexible, colaborat
 He [hablado](/es/talks/) sobre Agile en varios eventos tecnológicos y lo he explorado en profundidad porque me apasiona cómo puede potenciar a los equipos de software. Cuando se hace bien, Agile puede cambiar completamente cómo trabajan los equipos, haciéndolos más rápidos, más eficientes y mejores en entregar lo que los clientes y negocios realmente necesitan.
 
 - 2022-06-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Berlín, Alemania] (EN)
-- 2022-09-16 | [Code Talks](https://codetalks.de/speakers#speaker-985?event=7) [Hamburgo, Alemania] (EN)
+- 2022-09-16 | [Code Talks](https://web.archive.org/web/20231231183058/https://web.archive.org/web/20231231183058/https://codetalks.de/) [Hamburgo, Alemania] (EN)
 - 2022-10-26 | [International PHP Conference](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/) [Múnich, Alemania] (EN)
 - 2022-12-21 | IES Ginés Pérez Chirinos [Murcia, España] (ES)
 - 2023-01-19 | [devm.io](https://devm.io/update-your-team-to-be-more-extreme/) [Remoto] (EN)

@@ -155,7 +155,7 @@ Then, you will be asked to enter your password. Enter the password you chose in 
 
 #### 4. Alby Hub Setup
 
-Wait another 2-3 mins and visit your host: [http://testhub.local/](http://testhub.local/) 
+Wait another 2-3 mins and visit your host: `http://testhub.local/` 
 
 ![tutorial](/images/blog/2025-02-17/tuto-14.webp)
 

@@ -28,7 +28,7 @@ Hay que crear espacios para salir de la zona de confort y entrenar nuestra capac
 - 2022-10-26 | International PHP Conference [**Múnich, Alemania**] (EN)
   - [Update Your Team to be More Extreme](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/)
 - 2022-09-16 | Code Talks [**Hamburgo, Alemania**] (EN)
-  - [Update Your Team to be More Extreme](https://codetalks.de/)
+  - [Update Your Team to be More Extreme](https://web.archive.org/web/20231231183058/https://codetalks.de/)
 - 2022-06-26 | International PHP Conference [**Berlín, Alemania**] (EN)
   - [Update Your Team to be More Extreme](https://phpconference.com/mixed/update-your-team-to-be-more-extreme/)
 

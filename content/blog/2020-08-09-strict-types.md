@@ -55,4 +55,4 @@ The writer just needs to maintain such strictness while writing the expected beh
 
 ## References
 - [Scalar type declarations](https://www.php.net/manual/en/migration70.new-features.php#migration70.new-features.scalar-type-declarations)
-- [What do strict types do in PHP](https://stackoverflow.com/questions/48723637/what-do-strict-types-do-in-php/48723830#48723830)
+- [What do strict types do in PHP](https://stackoverflow.com/questions/48723637/what-do-strict-types-do-in-php/48723830)
