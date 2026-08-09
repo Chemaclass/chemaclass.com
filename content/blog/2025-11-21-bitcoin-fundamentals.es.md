@@ -25,8 +25,6 @@ related_readings = [
 ]
 +++
 
-![Un BTClock de escritorio mostrando el precio BTC/USD, junto a un peluche de Bitcoin y una tarjeta de circuito grabada con el logo de Bitcoin](/images/blog/2025-12-21/footer.webp)
-
 ¿Qué harías si tu cuenta bancaria fuera congelada mañana? Sin aviso, sin explicación, sin acceso a tu propio dinero.
 
 Esto no es hipotético. En 2022, Canadá congeló cuentas bancarias de personas que donaron a una protesta. En 2015, los griegos solo podían retirar 60€ por día de los cajeros. En Argentina, Turquía y Líbano, la gente vio sus ahorros perder la mitad de su valor en meses.
