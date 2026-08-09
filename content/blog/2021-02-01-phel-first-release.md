@@ -102,4 +102,4 @@ Check out the official website with all documentation: [https://phel-lang.org/](
 
 
 
-- [Functional Programming with Phel - JesusValera](https://jesusvalera.dev/functional-programming-with-phel/)
+- [Functional Programming with Phel - JesusValera](https://web.archive.org/web/20250124034118/https://jesusvalera.dev/functional-programming-with-phel/)

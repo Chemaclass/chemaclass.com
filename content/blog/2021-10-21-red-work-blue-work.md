@@ -20,7 +20,7 @@ series_order = 2
 +++
 
 
-"Blue Work" and "Red Work" are concepts that [David Marquet](https://x.com/ldavidmarquet)
+"Blue Work" and "Red Work" are concepts that [David Marquet](https://davidmarquet.com/)
 describes in his book [Leadership is Language](/readings/leadership-is-language/). Both require different mindsets and
 have different languages.
 
