@@ -6,7 +6,7 @@ draft = false
 tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
 subtitle = "¿Qué tiene de desafiante?"
-static_thumbnail = "/images/blog/2021-08-01/cover.jpg"
+static_thumbnail = "/images/blog/2021-08-01/cover.webp"
 related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
 ]
@@ -38,11 +38,11 @@ Ya hay cientos de tutoriales, libros y documentación sobre testing. Aquí compa
 
 - En lugar de: diseñar código -> desarrollar código -> escribir tests.
 
-![non-tdd-style](/images/blog/2021-08-01/non-tdd-style.png)
+![non-tdd-style](/images/blog/2021-08-01/non-tdd-style.webp)
 
 - Se trata de: escribir test automatizado que falla -> ejecutar test que falla -> desarrollar código para hacer pasar el test -> ejecutar test -> repetir.
 
-![tdd-style](/images/blog/2021-08-01/tdd-style.png)
+![tdd-style](/images/blog/2021-08-01/tdd-style.webp)
 
 La idea de guiar tu código con tests depende del nivel de abstracción de lo que estés escribiendo. No quieres acoplar mal los tests con el código testeado. Quieres testear el comportamiento de tu lógica.
 
@@ -56,7 +56,7 @@ Escribir tests al mismo tiempo que escribes el código te **obliga a escribir me
 
 ## Mejora tus habilidades de Test-Driven
 
-![tdd-style](/images/blog/2021-08-01/tdd-style-with-git.png)
+![tdd-style](/images/blog/2021-08-01/tdd-style-with-git.webp)
 
 La mejor manera de aprender Test-Driven es haciendo katas de software. Pruébalas solo y con otros. Ambas son igualmente importantes.
 

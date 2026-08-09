@@ -127,4 +127,4 @@ Pero más culpable que Dios y su inexistencia es la carencia que tienen algunos 
 
 El problema no es la Navidad en sí misma ni mucho menos su festividad ni la idea de una especial reunión familiar. Es el que engaña y el que se deja engañar. El problema no son las herramientas ni lo que disponemos, sino el uso que con ello hacemos, especialmente, a todos los que nos importan.
 
-![book-chapter](/images/books/oeur/10.jpg)
+![book-chapter](/images/books/oeur/10.webp)

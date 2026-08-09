@@ -255,4 +255,4 @@ Work. Love. Dream. Smile.
 
 But together.
 
-![book-chapter](/images/books/oeur/familia.jpg)
+![book-chapter](/images/books/oeur/familia.webp)

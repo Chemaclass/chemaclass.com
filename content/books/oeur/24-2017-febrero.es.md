@@ -50,4 +50,4 @@ Ejercitar nuestra costumbre, nuestra praxis. Sentirnos útiles en nuestro sueño
 
 Estudio de nuestro comportamiento, de nuestros intentos, de nuestras respuestas, de nuestra observación, del empirismo más allá de la mera teoría: pragmatismo para y con nosotros en nuestro día a día. Pues sobran las palabras cuando los hechos hablan por sí solos.
 
-![book-chapter](/images/books/oeur/24.jpg)
+![book-chapter](/images/books/oeur/24.webp)

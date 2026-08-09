@@ -5,7 +5,7 @@ description = "Clear contracts, isolated side effects, testability, low complexi
 tags = [ "php", "software-design", "clean-code", "testing"]
 [extra]
 subtitle = "Final, or not final, that's the question"
-static_thumbnail = "/images/blog/2020-06-06/cover.jpg"
+static_thumbnail = "/images/blog/2020-06-06/cover.webp"
 related_posts = [
   "blog/2020-08-09-strict-types.md",
   "blog/2020-04-07-the-art-of-testing.md",

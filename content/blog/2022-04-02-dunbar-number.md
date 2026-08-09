@@ -5,7 +5,7 @@ description = "Dunbar's number is a suggested cognitive limit to the number of p
 tags = [ "psychology", "team-management", "communication" ]
 [extra]
 subtitle = ""
-static_thumbnail = "/images/blog/2022-04-02/cover.jpg"
+static_thumbnail = "/images/blog/2022-04-02/cover.webp"
 related_posts = [
   "blog/2022-05-27-bikeshedding.md",
   "blog/2022-08-22-understanding-people.md",

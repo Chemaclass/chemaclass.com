@@ -117,4 +117,4 @@ The game is a collaboration in the oldest sense: two minds with different gifts,
 
 *If you want to reach the credits screen without playing through nine levels, check the help modal. There are other secrets in there too.*
 
-![The easter egg hint in the help modal](/images/blog/2026-04-04/easter-egg-help.png)
+![The easter egg hint in the help modal](/images/blog/2026-04-04/easter-egg-help.webp)

@@ -5,7 +5,7 @@ description = "A triangle of time, quality and cost. it's an indicator that thes
 tags = [ "agile", "team-management", "productivity" ]
 [extra]
 subtitle = "The Iron Triangle"
-static_thumbnail = "/images/blog/2022-07-25/cover.jpg"
+static_thumbnail = "/images/blog/2022-07-25/cover.webp"
 related_posts = [
   "blog/2022-12-06-ignoring-scrum-to-get-more-agile.md",
   "blog/2024-08-01-what-is-waterfall.md",
@@ -34,7 +34,7 @@ You can fix one or two of them, but not three.
 
 In software methodologies, you can adapt this idea by changing **quality** to **scope**:
 
-![triangle with scope replacing quality](/images/blog/2022-07-25/middle.jpg)
+![triangle with scope replacing quality](/images/blog/2022-07-25/middle.webp)
 
 ### Waterfall
 
@@ -57,7 +57,7 @@ learnings and recalibrating their priorities again and again.
 As you can see, one funny fact is that the waterfall and agile share an inverted triangle with their fixed and variables
 parameters. Really interesting indeed.
 
-![inverted triangles for waterfall and agile](/images/blog/2022-07-25/footer.jpg)
+![inverted triangles for waterfall and agile](/images/blog/2022-07-25/footer.webp)
 
 ## Reference
 

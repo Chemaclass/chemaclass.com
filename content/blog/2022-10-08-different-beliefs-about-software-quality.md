@@ -34,7 +34,7 @@ But first, some context: I am feeling great because the codebase where I work is
 
 And then I got a question asking for suggestions:
 
-![blog-tweet](/images/blog/2022-10-08/tweet.jpg)
+![blog-tweet](/images/blog/2022-10-08/tweet.webp)
 
 So there we go...
 

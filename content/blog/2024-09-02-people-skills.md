@@ -45,7 +45,7 @@ In the long run, your people skills can boost your success as much, if not more,
 
 > People skills are as necessary as technical skills. No one will want to work with you if you are not a good team player.
 
-![people working together](/images/blog/2024-09-02/middle.jpg)
+![people working together](/images/blog/2024-09-02/middle.webp)
 
 ## What are people skills?
 

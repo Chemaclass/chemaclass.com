@@ -28,4 +28,4 @@ What are code katas? Have you ever wondered what a pair/mob programming session 
 - 2024-03-14 | devm.io [**Remote**] (EN)
   - [Test Driven Development: A Hands-on Crash Course](https://devm.io/live-events/test-driven-development-a-hands-on-crash-course/)
 
-![cover](/images/talks/2024-05-28/tdd-workshop-ipc-berin-24.jpg)
+![cover](/images/talks/2024-05-28/tdd-workshop-ipc-berin-24.webp)

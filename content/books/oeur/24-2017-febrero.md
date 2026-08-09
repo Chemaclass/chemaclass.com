@@ -7,7 +7,7 @@ date = 2017-02-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/24.jpg)
+![book-chapter](/images/books/oeur/24.webp)
 
 ## Our Life
 

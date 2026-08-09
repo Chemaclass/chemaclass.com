@@ -5,7 +5,7 @@ description = "How to write characterization tests for legacy code to safely ref
 tags = [ "testing", "refactoring", "clean-code", "tdd"]
 [extra]
 subtitle = "How to write proper tests to already written code"
-static_thumbnail = "/images/blog/2020-08-17/cover.jpg"
+static_thumbnail = "/images/blog/2020-08-17/cover.webp"
 related_posts = [
   "blog/2020-06-06-final-classes.md",
   "blog/2020-06-28-the-art-of-refactoring.md",
@@ -218,7 +218,7 @@ Now you can refactor the production code that you covered with tests without tha
 
 ## Legacy Code is code without tests
 
-![legacy code is code without tests](/images/blog/2020-08-17/footer.jpg)
+![legacy code is code without tests](/images/blog/2020-08-17/footer.webp)
 
 Of course, there is way more to learn
 about [testing and working with legacy code](/readings/working-effectively-with-legacy-code/). In fact, especially when

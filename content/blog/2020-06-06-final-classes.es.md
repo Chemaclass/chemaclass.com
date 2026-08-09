@@ -5,7 +5,7 @@ description = "Contratos claros, efectos secundarios aislados, testeabilidad, ba
 tags = [ "php", "software-design", "clean-code", "testing"]
 [extra]
 subtitle = "Final, o no final, esa es la cuestión"
-static_thumbnail = "/images/blog/2020-06-06/cover.jpg"
+static_thumbnail = "/images/blog/2020-06-06/cover.webp"
 related_posts = [
   "blog/2020-08-09-strict-types.md",
   "blog/2020-04-07-the-art-of-testing.md",

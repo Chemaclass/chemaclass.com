@@ -6,7 +6,7 @@ draft = false
 tags = ["testing", "tdd", "software-design", "clean-code"]
 [extra]
 subtitle = "Testeando métodos privados. ¿Cuándo y cómo?"
-static_thumbnail = "/images/blog/2023-10-20/cover.jpg"
+static_thumbnail = "/images/blog/2023-10-20/cover.webp"
 related_posts = [
   "blog/2020-04-07-the-art-of-testing.md",
   "blog/2021-08-01-test-driven-development.md",

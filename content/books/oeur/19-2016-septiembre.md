@@ -7,7 +7,7 @@ date = 2016-09-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/19.jpg)
+![book-chapter](/images/books/oeur/19.webp)
 
 ## You Only Live Once
 

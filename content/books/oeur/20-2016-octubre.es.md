@@ -33,4 +33,4 @@ El futuro no es más que nuestra recompensa por nuestro presente. Por supuesto q
 
 No dejemos que el mal tiempo nos impida ser nosotros. No dejemos de prosperar en la medida de nuestras posibilidades. Proyectemos hacia el mundo aquello que nosotros quisiéramos sentir; pues nosotros somos el mundo, pero, sobre todo, el futuro.
 
-![book-chapter](/images/books/oeur/20.jpg)
+![book-chapter](/images/books/oeur/20.webp)

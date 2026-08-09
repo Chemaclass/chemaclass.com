@@ -6,7 +6,7 @@ draft = false
 tags = ["golang", "software-design", "clean-code"]
 [extra]
 subtitle = "Un emulador de carreras de caballos explicado paso a paso"
-static_thumbnail = "/images/blog/2024-04-02/cover.jpg"
+static_thumbnail = "/images/blog/2024-04-02/cover.webp"
 related_posts = [
   "blog/2023-12-30-great-engineering.md",
   "blog/2020-04-07-the-art-of-testing.md",
@@ -28,7 +28,7 @@ El paralelismo es **hacer** varias cosas simultáneamente. La concurrencia es **
 
 > Imagina que cocinas: preparas una sopa, una ensalada y una tortilla. Eres una sola persona, pero preparas varios platos. Podrías terminar primero la ensalada, la sopa o la tortilla... no hay garantía. Esto es concurrencia: lidias con varias cosas a la vez. Cuando tu pareja viene a ayudarte, eso ya es paralelismo.
 
-![concurrencia vs multithreading](/images/blog/2024-04-02/concurrency-vs-multithreading.jpg)
+![concurrencia vs multithreading](/images/blog/2024-04-02/concurrency-vs-multithreading.webp)
 
 Recuerdo haber construido un juego similar en `Java` cuando aprendía multithreading hace diez años. Aprovecho esta oportunidad para hacerlo de nuevo con `Go` moderno.
 

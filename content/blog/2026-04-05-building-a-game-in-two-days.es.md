@@ -117,4 +117,4 @@ El juego es una colaboración en el sentido más antiguo: dos mentes con dones d
 
 *Si quieres llegar a la pantalla de créditos sin jugar nueve niveles, revisa el modal de ayuda. Hay más secretos dentro.*
 
-![La pista del easter egg en el modal de ayuda](/images/blog/2026-04-04/easter-egg-help.png)
+![La pista del easter egg en el modal de ayuda](/images/blog/2026-04-04/easter-egg-help.webp)
