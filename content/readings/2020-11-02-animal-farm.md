@@ -3,7 +3,7 @@ title = "Animal Farm"
 description = "Orwell's political allegory about a farmyard rebellion that descends into tyranny, exposing how power corrupts even the most idealistic revolutions."
 authors = [ "George Orwell" ]
 [taxonomies]
-tags = [ "fiction", "dystopia", "philosophy", "psychology" ]
+tags = [ "fiction", "philosophy", "psychology" ]
 [extra]
 subtitle = "All animals are equal. But some animals are more equal than others."
 pages = "90"

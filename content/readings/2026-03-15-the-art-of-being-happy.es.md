@@ -3,7 +3,7 @@ title = "El arte de ser feliz"
 description = "Las 50 reglas de Schopenhauer para la felicidad práctica, basadas en evitar el sufrimiento antes que perseguir el placer."
 authors = [ "Arthur Schopenhauer" ]
 [taxonomies]
-tags = [ "philosophy", "self-improvement" ]
+tags = [ "philosophy" ]
 [extra]
 subtitle = "50 reglas para vivir del pesimista más famoso de la filosofía"
 pages = "112"

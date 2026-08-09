@@ -3,7 +3,7 @@ title = "Hands-on Refactoring and TDD"
 description = "A live coding session on test-first development and refactoring, solving a code kata from scratch in pair and mob programming."
 weight = 1
 [taxonomies]
-tags = [ "tdd", "refactoring", "live-coding", "pair-programming", "workshop" ]
+tags = [ "tdd", "refactoring", "pair-programming", "mentoring" ]
 [extra]
 subtitle = "Live Coding in Pair/Mob Programming"
 +++

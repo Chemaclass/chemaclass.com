@@ -3,7 +3,7 @@ title = "Gacela Project"
 description = "Gacela normaliza el punto de entrada de cada módulo de tu aplicación PHP, para que se comuniquen sin filtrar la lógica de dominio."
 weight = 1
 [taxonomies]
-tags = [ "gacela", "php", "architecture", "modular" ]
+tags = [ "gacela", "php", "architecture" ]
 [extra]
 subtitle = "Construye aplicaciones PHP modulares"
 +++

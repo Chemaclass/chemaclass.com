@@ -3,7 +3,7 @@ title = "La Llamada de Cthulhu"
 description = "Un monstruo submarino despierta y amenaza a la humanidad. El relato que dio origen a toda una mitología del horror."
 authors = [ "H. P. Lovecraft" ]
 [taxonomies]
-tags = [ "fiction", "horror" ]
+tags = [ "fiction" ]
 [extra]
 subtitle = "El relato que dio origen a los Mitos de Cthulhu"
 pages = "100"

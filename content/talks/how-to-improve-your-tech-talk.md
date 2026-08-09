@@ -3,7 +3,7 @@ title = "How to improve your tech talk"
 description = "How to get on a stage and talk to 5, 50 or 500 people. What it actually takes to prepare and deliver a talk worth hearing."
 weight = 1
 [taxonomies]
-tags = [ "speaking", "presentations" ]
+tags = [ "communication" ]
 [extra]
 subtitle = "Applies to any presentation"
 +++

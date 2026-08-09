@@ -3,7 +3,7 @@ title = "La IA te Da Velocidad, No Calidad"
 description = "La IA acelera tu producción pero no garantiza calidad. Eres responsable de cada línea que commiteas. Velocidad sin dirección es caos."
 draft = false
 [taxonomies]
-tags = [ "ai", "software-architecture", "craftsmanship", "leadership" ]
+tags = [ "ai", "architecture", "craftsmanship", "leadership" ]
 [extra]
 subtitle = "El factor humano en la era del vibe-coding"
 static_thumbnail = "/images/blog/2025-10-10/cover.webp"

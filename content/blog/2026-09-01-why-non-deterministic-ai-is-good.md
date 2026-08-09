@@ -3,7 +3,7 @@ title = "Why non-deterministic AI is a feature, not a bug"
 description = "Same prompt, different answer. That unpredictability is what makes generative AI useful."
 draft = true
 [taxonomies]
-tags = [ "ai", "engineering", "mindset" ]
+tags = [ "ai", "software", "psychology" ]
 [extra]
 subtitle = "Randomness is the cost of creativity"
 static_thumbnail = "/images/blog/2026-09-01/cover.webp"
