@@ -111,6 +111,41 @@ XHTML_NS = "http://www.w3.org/1999/xhtml"
 IMAGE_NS = "http://www.google.com/schemas/sitemap-image/1.1"
 
 
+def _excluded_paths() -> List[str]:
+    """`sitemap_exclude` from config.toml: pages to omit though they are indexable.
+
+    Kept in config rather than here because it is an editorial decision about
+    which pages are worth a crawler's time, not a fact about how the site is
+    built. Parsed with a regex for the same reason _common reads base_url that
+    way: this whole chain is stdlib-only, and tomllib is 3.11+.
+    """
+    text = (Path(__file__).resolve().parent.parent / "config.toml").read_text(encoding="utf-8")
+    block = re.search(r"^sitemap_exclude\s*=\s*\[(.*?)\]", text, re.S | re.M)
+    return re.findall(r'"([^"]*)"', block.group(1)) if block else []
+
+
+EXCLUDED = _excluded_paths()
+
+
+def is_excluded(url: str) -> bool:
+    """Whether config asked for this URL to stay out, in either language.
+
+    A trailing * means the descendants of a path but not the path itself, which
+    is how the OEUR chapters come out while the book they belong to stays in.
+    """
+    path = url[len(BASE_URL):] if url.startswith(BASE_URL) else url
+    if path.startswith("/es/"):
+        path = path[3:]
+    for rule in EXCLUDED:
+        if rule.endswith("*"):
+            prefix = rule[:-1]
+            if path.startswith(prefix) and path != prefix:
+                return True
+        elif path == rule:
+            return True
+    return False
+
+
 def page_image(content_file: Path) -> Optional[str]:
     """The cover image of a page, as an absolute URL, or None.
 
@@ -218,6 +253,9 @@ def enrich_sitemap(sitemap_path: str) -> int:
 
     def drop_unsubmittable(match: "re.Match[str]") -> str:
         loc = re.search(r"<loc>(.*?)</loc>", match.group(0))
+        if loc and is_excluded(loc.group(1)):
+            reasons["excluded by config"] = reasons.get("excluded by config", 0) + 1
+            return ""
         reason = unsubmittable(loc.group(1)) if loc else None
         if reason:
             reasons[reason] = reasons.get(reason, 0) + 1
