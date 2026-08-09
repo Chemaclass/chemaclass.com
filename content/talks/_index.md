@@ -203,7 +203,7 @@ sort_by = "weight"
 ### September
 
 - 2022-09-16 | Code Talks [**Hamburg, Germany**] (EN)
-  - [Update Your Team to be More Extreme](https://codetalks.de/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:6976595953680015360/))
+  - [Update Your Team to be More Extreme](https://web.archive.org/web/20231231183058/https://codetalks.de/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:6976595953680015360/))
     *Encouraging continuous improvement through internal tech talks and team rituals.*
 
 ![A packed cinema auditorium at code.talks 2022, the slide asking what the problem is beside a Comic Agile strip](/images/talks/2022-09-16/update-your-team-code-talks-22.webp)

@@ -31,7 +31,7 @@ Ambas cosas eres tú. La tensión entre ellas no es una contradicción. Es cómo
 
 ## Dos fuerzas, una decisión
 
-El **idealismo** es la brújula. Código limpio, comportamiento testeado, entendimiento compartido, diseño con principios. Sin él, te desvías. Cada atajo se acumula, cada hack engendra otro hack, y al final mantienes un sistema que nadie quiere tocar. La mala calidad del software costó a las empresas estadounidenses [$2.41 billones en 2022](https://www.it-cisq.org/the-cost-of-poor-quality-software-in-the-us-a-2022-report/), con la deuda técnica como factor principal. Así se ve "ya lo arreglaremos después" a escala.
+El **idealismo** es la brújula. Código limpio, comportamiento testeado, entendimiento compartido, diseño con principios. Sin él, te desvías. Cada atajo se acumula, cada hack engendra otro hack, y al final mantienes un sistema que nadie quiere tocar. La mala calidad del software costó a las empresas estadounidenses [$2.41 billones en 2022](https://web.archive.org/web/20240110163603/https://www.it-cisq.org/the-cost-of-poor-quality-software-in-the-us-a-2022-report/), con la deuda técnica como factor principal. Así se ve "ya lo arreglaremos después" a escala.
 
 El **pragmatismo** es el motor. Deadlines, información incompleta, recursos limitados, requisitos cambiantes. Sin él, nunca entregas. Pasas semanas perfeccionando una abstracción que el negocio abandonó hace dos sprints.
 

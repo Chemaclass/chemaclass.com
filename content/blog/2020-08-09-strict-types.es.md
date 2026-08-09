@@ -55,4 +55,4 @@ El escritor solo necesita mantener esa estrictez mientras escribe. Pero como esc
 
 ## Referencias
 - [Declaraciones de tipos escalares](https://www.php.net/manual/en/migration70.new-features.php#migration70.new-features.scalar-type-declarations)
-- [Qué hacen los strict types en PHP](https://stackoverflow.com/questions/48723637/what-do-strict-types-do-in-php/48723830#48723830)
+- [Qué hacen los strict types en PHP](https://stackoverflow.com/questions/48723637/what-do-strict-types-do-in-php/48723830)

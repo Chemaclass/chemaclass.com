@@ -386,7 +386,7 @@ Ya no es solo teoría.
 ### Adopción global
 
 - **República Centroafricana** adoptó Bitcoin como moneda de curso legal en 2022 ([fuente](https://www.cnbc.com/2022/04/28/central-african-republic-adopts-bitcoin-as-legal-tender.html))
-- **Suiza** permite pagos de impuestos en Bitcoin en el Cantón de Zug desde 2021 ([fuente](https://zg.ch/de/steuern-finanzen/steuern/steuerbezug/taxpaymentswithcryptocurrencies))
+- **Suiza** permite pagos de impuestos en Bitcoin en el Cantón de Zug desde 2021 ([fuente](https://zg.ch/de/steuern-finanzen/steuern/inkasso))
 - **Mercados emergentes** lideran en adopción de base: Vietnam, Filipinas, Nigeria
 
 ### Uso en el mundo real
