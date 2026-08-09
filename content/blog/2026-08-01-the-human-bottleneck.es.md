@@ -5,6 +5,7 @@ draft = true
 [taxonomies]
 tags = [ "ai", "software", "leadership" ]
 [extra]
+tldr = "Cuando los agentes entregan más rápido de lo que revisas, la solución no es revisar más rápido. Decide dónde importa tu atención y da autonomía donde se ha ganado."
 subtitle = "Cuando te conviertes en la parte más lenta del sistema"
 static_thumbnail = "/images/blog/2026-08-01/cover.webp"
 series = "ai"

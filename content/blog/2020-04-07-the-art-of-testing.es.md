@@ -4,6 +4,7 @@ description = "Por qué deberías considerar el testing como parte de tu hábito
 [taxonomies]
 tags = [ "testing", "software-design", "clean-code", "tdd"]
 [extra]
+tldr = "Testear es una actividad de diseño, no una fase final. Escribe el código como si tuviera que ser testeado, y deja que lo difícil de testear te señale dónde falla el diseño."
 subtitle = "Desde el punto de vista de un desarrollador de software"
 static_thumbnail = "/images/blog/2020-04-07/cover.webp"
 related_posts = [

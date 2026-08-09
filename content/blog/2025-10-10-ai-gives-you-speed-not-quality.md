@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "architecture", "craftsmanship", "leadership" ]
 [extra]
+tldr = "AI multiplies your output, not your judgement. You still own every line you commit, so speed without direction only gets you to the wrong place faster."
 subtitle = "The human factor in the age of vibe-coding"
 static_thumbnail = "/images/blog/2025-10-10/cover.webp"
 series = "ai"

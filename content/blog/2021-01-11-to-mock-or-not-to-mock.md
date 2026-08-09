@@ -4,6 +4,7 @@ description = "Mocking is useful, but 'what to mock' usually turns out to be a m
 [taxonomies]
 tags = [ "testing", "tdd", "software-design", "clean-code", "php" ]
 [extra]
+tldr = "Mock the boundaries you own, not the internals of your own code. When mocking starts to hurt, that is a design signal, not a reason to write more mocks."
 subtitle = "How to escape the mocking hell"
 static_thumbnail = "/images/blog/2021-01-11/cover.webp"
 related_posts = [

@@ -5,6 +5,7 @@ updated = "2023-03-23"
 [taxonomies]
 tags = [ "xp", "agile", "team-management", "mentoring", "tdd" ]
 [extra]
+tldr = "Las katas, las charlas técnicas internas y los viernes de investigación son la forma más barata de convertir el aprendizaje en un hábito de equipo y no personal."
 subtitle = "¿Cómo puedes ayudar a tus compañeros a abrazar el cambio?"
 static_thumbnail = "/images/blog/2022-02-26/cover.webp"
 pin = false

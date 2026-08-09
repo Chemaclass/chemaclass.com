@@ -4,6 +4,7 @@ description = "There are two known schools in TDD: the mockist school (aka Outsi
 [taxonomies]
 tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
+tldr = "London and Chicago are not a choice. Use outside-in to drive the design and inside-out to nail the logic, and pick per context rather than per doctrine."
 subtitle = "It's an integration, not a choice"
 static_thumbnail = "/images/blog/2021-11-20/cover.webp"
 related_posts = [

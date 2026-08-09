@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = ["testing", "tdd", "software-design", "clean-code"]
 [extra]
+tldr = "No testees métodos privados. Si uno es lo bastante complejo como para merecer su propio test, extráelo a una clase y testea ese comportamiento."
 subtitle = "Testeando métodos privados. ¿Cuándo y cómo?"
 static_thumbnail = "/images/blog/2023-10-20/cover.webp"
 related_posts = [

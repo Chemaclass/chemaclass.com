@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = ["agile", "xp", "leadership", "productivity"]
 [extra]
+tldr = "Banning Friday deploys treats the symptom. If deploying is scary, fix the pipeline and the tests, because the ban itself costs the team confidence."
 subtitle = "Why \"should we not\" deploy to production on Fridays?"
 static_thumbnail = "/images/blog/2024-02-25/cover.webp"
 related_posts = [

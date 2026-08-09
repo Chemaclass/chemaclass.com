@@ -4,6 +4,7 @@ description = "Blue Work and Red Work, the two modes David Marquet describes in 
 [taxonomies]
 tags = [ "leadership", "team-management", "productivity", "agile" ]
 [extra]
+tldr = "Red Work executes, Blue Work thinks. A team needs both, and the language a leader uses decides which mode the room is invited into."
 subtitle = "Managing the two kinds of work"
 static_thumbnail = "/images/blog/2021-10-21/cover.webp"
 related_posts = [

@@ -5,6 +5,7 @@ updated = "2023-03-23"
 [taxonomies]
 tags = [ "xp", "agile", "team-management", "mentoring", "tdd" ]
 [extra]
+tldr = "Code katas, internal tech talks and research Fridays are the cheapest way to turn learning into a team habit instead of a private one."
 subtitle = "How can you help your peers to embrace the change?"
 static_thumbnail = "/images/blog/2022-02-26/cover.webp"
 pin = false

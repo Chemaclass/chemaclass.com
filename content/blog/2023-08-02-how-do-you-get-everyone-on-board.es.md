@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "leadership", "communication", "team-management", "mentoring", "xp" ]
 [extra]
+tldr = "No puedes forzar a la gente a cambiar, y presionar más lo empeora. Empieza por lo que sienten y construye terreno común antes de pedir la práctica."
 subtitle = "¿Cómo tratas con personas reacias al cambio?"
 static_thumbnail = "/images/blog/2023-08-02/cover.webp"
 related_posts = [

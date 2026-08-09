@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "software", "leadership", "craftsmanship", "productivity", "developer-tools" ]
 [extra]
+tldr = "Six levels, from pasting code into a chat up to agents opening PRs while you sleep. Find the rung you are actually on, then climb one at a time."
 subtitle = "From copy-paste prompts to agentic teams"
 static_thumbnail = "/images/blog/2026-05-01/cover.webp"
 series = "ai"

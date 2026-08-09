@@ -6,6 +6,7 @@ aliases = [ "/blog/how-do-you-deal-with-hard-people", "/blog/how-to-get-everyone
 [taxonomies]
 tags = [ "leadership", "communication", "team-management", "mentoring", "xp" ]
 [extra]
+tldr = "You cannot force people to change, and pushing harder makes it worse. Start from what they feel and build common ground before asking for the practice."
 subtitle = "How do you deal with people reluctant to change?"
 static_thumbnail = "/images/blog/2023-08-02/cover.webp"
 related_posts = [

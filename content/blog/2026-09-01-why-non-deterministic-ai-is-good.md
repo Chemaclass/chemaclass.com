@@ -5,6 +5,7 @@ draft = true
 [taxonomies]
 tags = [ "ai", "software", "psychology" ]
 [extra]
+tldr = "Same prompt, different answer is the feature. Variance is what makes generation useful, so embrace it where it helps and constrain it where it hurts."
 subtitle = "Randomness is the cost of creativity"
 static_thumbnail = "/images/blog/2026-09-01/cover.webp"
 series = "ai"

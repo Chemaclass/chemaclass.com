@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "bitcoin", "philosophy", "economics", "privacy" ]
 [extra]
+tldr = "A dónde va tu dinero de verdad después del día de pago, qué impuestos te alcanzan y por qué, y por qué un dinero de oferta fija cambia el panorama."
 subtitle = "A dónde va tu dinero y cómo repensar el sistema"
 static_thumbnail = "/images/blog/2025-01-02/cover.webp"
 series = "bitcoin"

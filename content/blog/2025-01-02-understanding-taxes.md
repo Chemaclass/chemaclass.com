@@ -6,6 +6,7 @@ draft = false
 [taxonomies]
 tags = [ "bitcoin", "philosophy", "economics", "privacy" ]
 [extra]
+tldr = "Where your money actually goes after payday, which taxes reach you and why, and why a money with a fixed supply changes the picture."
 subtitle = "Where your money goes and how to rethink the system"
 static_thumbnail = "/images/blog/2025-01-02/cover.webp"
 series = "bitcoin"

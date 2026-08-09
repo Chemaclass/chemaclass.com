@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "software", "craftsmanship", "productivity", "developer-tools" ]
 [extra]
+tldr = "Los agentes son un commodity y cambian cada año. El contexto que cargas bajo demanda es lo que decide la calidad, así que construye skills que viajen con tu código."
 subtitle = "Inteligencia sin experiencia es entretenimiento"
 static_thumbnail = "/images/blog/2026-05-19/cover.webp"
 series = "ai"

@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "software", "craftsmanship", "leadership" ]
 [extra]
+tldr = "La versión ideal de cada práctica vive en los libros, la pragmática vive en tu código bajo presión. La buena ingeniería sostiene los dos extremos de la cuerda."
 subtitle = "Sosteniendo ambos extremos de la cuerda"
 static_thumbnail = "/images/blog/2026-03-01/cover.webp"
 series = "ai"

@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "leadership", "team-management", "communication", "mentoring" ]
 [extra]
+tldr = "El liderazgo es acción, no un título ni un puesto en la jerarquía. Cualquiera puede liderar, y la entrada es aprender de la experiencia ajena tanto como de la propia."
 subtitle = "¿Team Lead? ¿Tech Lead? ¿Qué es el liderazgo y qué no lo es?"
 static_thumbnail = "/images/blog/2022-09-25/cover.webp"
 related_posts = [

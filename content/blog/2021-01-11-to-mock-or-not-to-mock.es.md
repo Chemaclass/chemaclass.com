@@ -4,6 +4,7 @@ description = "Mockear es útil, pero 'qué mockear' suele resultar más complic
 [taxonomies]
 tags = [ "testing", "tdd", "software-design", "clean-code", "php" ]
 [extra]
+tldr = "Mockea las fronteras que controlas, no las tripas de tu propio código. Cuando mockear empieza a doler es una señal de diseño, no una excusa para más mocks."
 subtitle = "Cómo escapar del infierno del mocking"
 static_thumbnail = "/images/blog/2021-01-11/cover.webp"
 related_posts = [

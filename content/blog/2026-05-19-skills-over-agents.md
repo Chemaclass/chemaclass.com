@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "software", "craftsmanship", "productivity", "developer-tools" ]
 [extra]
+tldr = "Agents are commodities and change every year. The context you load on demand is what decides quality, so build a skill library that travels with your code."
 subtitle = "Intelligence without expertise is entertainment"
 static_thumbnail = "/images/blog/2026-05-19/cover.webp"
 series = "ai"

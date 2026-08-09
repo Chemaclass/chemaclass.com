@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "software", "craftsmanship", "leadership" ]
 [extra]
+tldr = "Stop treating AI as one generalist. Give agents roles, shared docs and standard procedures, run them in parallel, and stay the lead yourself."
 subtitle = "From solo assistant to coordinated workforce"
 static_thumbnail = "/images/blog/2026-02-07/cover.webp"
 series = "ai"

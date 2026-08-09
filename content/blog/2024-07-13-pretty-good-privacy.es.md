@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "security", "privacy", "cryptography" ]
 [extra]
+tldr = "PGP firma y cifra textos, correos, archivos y particiones enteras. Entiende el modelo de claves una vez y te sirve para commits firmados, correo seguro y releases verificadas."
 subtitle = "Cómo PGP protege tu comunicación digital"
 static_thumbnail = "/images/blog/2024-07-13/cover.webp"
 series = "bitcoin"

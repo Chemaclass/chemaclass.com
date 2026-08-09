@@ -4,6 +4,7 @@ description = "Transacciones, bloques, minería, el modelo UTXO y Lightning Netw
 [taxonomies]
 tags = [ "bitcoin", "cryptography", "tutorial" ]
 [extra]
+tldr = "Transacciones, bloques, minería, UTXOs y Lightning, en términos claros. Lee Fundamentos de Bitcoin primero si quieres el porqué antes que el cómo."
 subtitle = "Blockchain, criptografía y consenso"
 static_thumbnail = "/images/blog/2025-12-21/cover.webp"
 series = "bitcoin"

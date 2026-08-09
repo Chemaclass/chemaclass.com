@@ -4,6 +4,7 @@ description = "Hay dos escuelas conocidas en TDD: la escuela mockista (también 
 [taxonomies]
 tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
+tldr = "London y Chicago no son una elección. Usa outside-in para guiar el diseño e inside-out para afinar la lógica, y elige por contexto, no por doctrina."
 subtitle = "Es una integración, no una elección"
 static_thumbnail = "/images/blog/2021-11-20/cover.webp"
 related_posts = [

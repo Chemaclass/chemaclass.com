@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = ["agile", "xp", "leadership", "productivity"]
 [extra]
+tldr = "Prohibir los despliegues del viernes trata el síntoma. Si desplegar da miedo, arregla el pipeline y los tests: la prohibición le cuesta confianza al equipo."
 subtitle = "¿Por qué \"no deberíamos\" desplegar a producción los viernes?"
 static_thumbnail = "/images/blog/2024-02-25/cover.webp"
 related_posts = [

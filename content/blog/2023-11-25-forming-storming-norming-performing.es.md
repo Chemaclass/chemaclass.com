@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = ["leadership", "team-management", "psychology", "communication"]
 [extra]
+tldr = "Cada una de las cinco etapas de Tuckman te pide algo distinto: estructura en forming, resolver conflictos en storming, y después colaboración, autonomía y reconocimiento."
 subtitle = "El Modelo de Tuckman para llevar a un equipo a alto rendimiento"
 static_thumbnail = "/images/blog/2023-11-25/cover.webp"
 related_posts = [

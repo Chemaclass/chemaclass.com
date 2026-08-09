@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "architecture", "developer-tools", "craftsmanship" ]
 [extra]
+tldr = "MCP is a standard protocol connecting an agent to your tools, databases and APIs. Context, not the model, is what decides the quality of the answer."
 subtitle = "Why context is the real superpower"
 static_thumbnail = "/images/blog/2026-01-11/cover.webp"
 series = "ai"

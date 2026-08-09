@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "architecture", "craftsmanship", "leadership" ]
 [extra]
+tldr = "La IA multiplica tu producción, no tu criterio. Sigues siendo dueño de cada línea que commiteas, así que velocidad sin dirección solo te lleva antes al sitio equivocado."
 subtitle = "El factor humano en la era del vibe-coding"
 static_thumbnail = "/images/blog/2025-10-10/cover.webp"
 series = "ai"

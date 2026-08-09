@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = ["leadership", "team-management", "psychology", "communication"]
 [extra]
+tldr = "Each of Tuckman's five stages asks something different of you: structure in forming, conflict resolution in storming, then collaboration, autonomy and recognition."
 subtitle = "Tuckman's Model to drive a team to high performance"
 static_thumbnail = "/images/blog/2023-11-25/cover.webp"
 related_posts = [

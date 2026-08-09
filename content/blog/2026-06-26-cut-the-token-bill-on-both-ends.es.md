@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "productivity", "developer-tools" ]
 [extra]
+tldr = "Dos fugas, dos parches: Caveman recorta lo que el agente escribe de vuelta, RTK lo que la terminal mete dentro. Mismo modelo, mismos prompts, más espacio para trabajar."
 subtitle = "Dos fugas, dos parches"
 static_thumbnail = "/images/blog/2026-06-26/cover.webp"
 series = "ai"

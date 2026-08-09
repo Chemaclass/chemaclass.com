@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "software", "craftsmanship", "leadership" ]
 [extra]
+tldr = "Deja de tratar la IA como un generalista. Da a los agentes roles, documentación compartida y procedimientos, hazlos trabajar en paralelo y sigue liderando tú."
 subtitle = "De asistente individual a equipo coordinado"
 static_thumbnail = "/images/blog/2026-02-07/cover.webp"
 series = "ai"

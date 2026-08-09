@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "agile", "xp", "communication", "team-management" ]
 [extra]
+tldr = "You cannot make another team agile. You can shorten your own feedback loops at the boundary you share with them, and that is usually enough."
 subtitle = "How can you work with other teams that aren't agile?"
 static_thumbnail = "/images/blog/2022-11-11/cover.webp"
 related_posts = [

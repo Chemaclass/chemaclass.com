@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "bitcoin", "economics", "privacy", "philosophy" ]
 [extra]
+tldr = "Bitcoin es dinero con una oferta fija de 21 millones, sin autoridad central y sin pedir permiso. Empieza pequeño, sigue aprendiendo y guarda tus propias claves."
 subtitle = "Una guía para principiantes sobre dinero sólido"
 static_thumbnail = "/images/blog/2025-12-21/footer.webp"
 reading_time = 12

@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "career", "mentoring", "clean-code", "tdd", "communication" ]
 [extra]
+tldr = "Seniority is not a title. It is impact, mentoring and owning outcomes. Do that long enough and the title becomes a formality."
 subtitle = "How to become a Senior Software Developer?"
 static_thumbnail = "/images/blog/2022-06-08/cover.webp"
 series = "leadership"

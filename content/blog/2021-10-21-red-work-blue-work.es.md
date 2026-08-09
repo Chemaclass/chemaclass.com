@@ -4,6 +4,7 @@ description = "Blue Work y Red Work, los dos modos de trabajo que David Marquet 
 [taxonomies]
 tags = [ "leadership", "team-management", "productivity", "agile" ]
 [extra]
+tldr = "El Red Work ejecuta, el Blue Work piensa. Un equipo necesita ambos, y el lenguaje que usa el líder decide a qué modo se invita a la sala."
 subtitle = "Gestionando los dos tipos de trabajo"
 static_thumbnail = "/images/blog/2021-10-21/cover.webp"
 related_posts = [

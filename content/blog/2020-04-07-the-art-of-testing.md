@@ -4,6 +4,7 @@ description = "Why you should consider testing as part of your daily development
 [taxonomies]
 tags = [ "testing", "software-design", "clean-code", "tdd"]
 [extra]
+tldr = "Testing is a design activity, not a phase at the end. Write code as if it had to be tested, and let whatever is hard to test tell you where the design is wrong."
 subtitle = "From a software developer's point of view"
 static_thumbnail = "/images/blog/2020-04-07/cover.webp"
 related_posts = [
