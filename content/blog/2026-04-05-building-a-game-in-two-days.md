@@ -1,6 +1,6 @@
 +++
 title = "Building a Game in Two Days"
-description = "A casual Telegram message turned into a nine-level Lord of the Rings browser game. Every line of code written by an AI agent. Every creative decision made by a human who grew up on Middle-earth."
+description = "A Telegram message turned into a nine-level Lord of the Rings browser game. Code by an AI agent, every creative decision by a human."
 draft = false
 [taxonomies]
 tags = ["ai", "software", "open-source"]

@@ -1,6 +1,6 @@
 +++
 title = "Lo que el Éxito Significa para Mí"
-description = "El éxito es despertar sabiendo que lo que haces hace más felices a las personas a tu alrededor, y a ti mismo. Sin fórmula complicada. Solo consistencia sobre perfección, y construir hábitos que se alineen con lo que importa."
+description = "El éxito es despertar sabiendo que lo que haces hace más felices a los de alrededor, y a ti. Consistencia sobre perfección."
 draft = false
 [taxonomies]
 tags = [ "philosophy", "career", "productivity", "leadership" ]

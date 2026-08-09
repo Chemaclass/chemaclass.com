@@ -1,6 +1,6 @@
 +++
 title = "Programmable Money"
-description = "Bitcoin is often referred to as programmable money because it allows for the execution of programmable transactions through its scripting language, leveraging each bit for precision and functionality."
+description = "Bitcoin is called programmable money because Script lets you embed conditions into a transaction. How that scripting language works."
 draft = false
 [taxonomies]
 tags = [ "bitcoin", "software", "cryptography", "security" ]

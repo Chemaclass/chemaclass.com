@@ -1,6 +1,6 @@
 +++
 title = "Become an Effective Software Engineering Manager"
-description = "A great compilation of all topics that are important for management: 1:1s, performance reviews, hiring and laying off, workplace politics, remote work, and others."
+description = "A solid compilation for engineering managers: 1:1s, performance reviews, hiring and firing, politics and remote work."
 authors = [ "James Stanier" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "career", "communication" ]

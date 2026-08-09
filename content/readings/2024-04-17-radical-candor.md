@@ -1,6 +1,6 @@
 +++
 title = "Radical Candor"
-description = "Radical Candor is a management philosophy developed by Kim Scott, a former Google leader. It's a crash course on how to be a great manager, focusing on being empathetic and results-oriented. The core idea is to create a stress-free environment where people feel safe to speak their minds, get their jobs done, and feel respected."
+description = "Kim Scott, former Google leader, on being a great manager: empathetic and results-oriented, where people can speak freely."
 draft = false
 authors = [ "Kim Scott" ]
 [taxonomies]

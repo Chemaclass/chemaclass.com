@@ -1,6 +1,6 @@
 +++
 title = "La Estrella de Mar y la Araña"
-description = "Si cortas la cabeza a una araña, muere. Si cortas una pata a una estrella de mar, le crece otra y esa pata puede convertirse en una estrella nueva. Las organizaciones descentralizadas están cambiando los negocios y el mundo."
+description = "Corta la cabeza a una araña y muere. Corta una pata a una estrella de mar y crece otra. Cómo ganan las organizaciones descentralizadas."
 draft = false
 authors = [ "Ori Brafman", "Rod Beckstrom" ]
 [taxonomies]

@@ -1,5 +1,6 @@
 +++
 title = "About this book"
+description = "The story behind Eyes on a Memory: how the book started, who wrote it, and the team that helped bring it together."
 slug = "acerca-de-este-libro"
 weight = 0
 date = 2015-01-01

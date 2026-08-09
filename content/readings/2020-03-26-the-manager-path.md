@@ -1,6 +1,6 @@
 +++
 title = "The Manager Path"
-description = "Camille Fournier maps the career path from engineer to CTO, covering 1:1s, mentoring, team management, and the evolving responsibilities at each level of technical leadership."
+description = "Camille Fournier maps the path from engineer to CTO: 1:1s, mentoring, and what changes at each level of technical leadership."
 aliases = [ "/readings/manager-path" ]
 authors = [ "Camille Fournier" ]
 [taxonomies]

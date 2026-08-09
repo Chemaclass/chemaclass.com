@@ -1,6 +1,6 @@
 +++
 title = "Clean Agile"
-description = "This book is about Agile. What it was, what it is, and what it will be. This is a back-to-basics talk that covers the history of Agile, what motivated it, and what has happened to it since."
+description = "Back to basics on Agile: what it was, what motivated it, and what has happened to it since. Uncle Bob's account."
 authors = [ "Robert C. Martin" ]
 [taxonomies]
 tags = [ "agile", "tdd", "software-design" ]

@@ -1,5 +1,6 @@
 +++
 title = "bashunit"
+description = "bashunit, a testing framework for bash scripts inspired by PHPUnit and Jest. Test the scripts in your pipelines like you test anything else."
 weight = 1
 [taxonomies]
 tags = [ "bashunit", "bash", "testing", "open-source" ]

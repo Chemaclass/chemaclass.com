@@ -1,6 +1,6 @@
 +++
 title = "La Guerra del Tamaño de Bloque"
-description = "Jonathan Bier narra la guerra del tamaño de bloque de Bitcoin (2015-2017), explorando los actores clave, estrategias y batallas ideológicas que definieron quién controla el protocolo."
+description = "Jonathan Bier narra la guerra del tamaño de bloque (2015-2017): los actores, las estrategias y quién controla el protocolo."
 draft = false
 authors = [ "Jonathan Bier" ]
 [taxonomies]

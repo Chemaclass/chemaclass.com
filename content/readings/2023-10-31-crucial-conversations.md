@@ -1,6 +1,6 @@
 +++
 title = "Crucial Conversations"
-description = "Crucial Conversations gives you the tools you need to step up to life's most difficult and important conversations, say what's on your mind, and achieve the positive resolutions you want."
+description = "The tools to handle life's hardest conversations: say what is on your mind and still reach the resolution you want."
 draft = false
 authors = [ "Patterson", "Grenny", "McMillan", "Switzler" ]
 [taxonomies]

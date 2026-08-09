@@ -1,6 +1,6 @@
 +++
 title = "97 Things Every Programmer Should Know"
-description = "Tap into the wisdom of experts to learn what every programmer should know, no matter what language you use. With the 97 short and extremely useful tips for programmers in this book, you'll expand your skills by adopting new approaches to old problems, learning appropriate best practices, and honing your craft through sound advice."
+description = "97 short, practical tips from experts on what every programmer should know, whatever language you use."
 authors = [ "Kevlin Henney" ]
 [taxonomies]
 tags = [ "software-design", "clean-code", "career", "productivity" ]

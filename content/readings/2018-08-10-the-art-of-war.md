@@ -1,6 +1,6 @@
 +++
 title = "The Art of War"
-description = "The Art of War is an ancient Chinese military treatise attributed to Sun Tzu, a high-ranking military general, strategist and tactician, and kindred to the Realpolitik of his time, termed in China as Legalism."
+description = "Sun Tzu's ancient treatise on strategy, and how its lessons on conflict and positioning still read today."
 authors = [ "Sun Tzu" ]
 [taxonomies]
 tags = [ "philosophy", "psychology", "leadership" ]

@@ -1,6 +1,6 @@
 +++
 title = "Never split the difference"
-description = "From policing the rough streets of Kansas City, Missouri, to becoming the FBI's lead international kidnapping negotiator to teaching negotiation at leading universities, Chris Voss has tested the techniques in 'Never Split the Difference' across the full spectrum of human endeavor and proved their effectiveness."
+description = "Chris Voss, former FBI lead kidnapping negotiator, on negotiation techniques tested across the full spectrum of human stakes."
 authors = [ "Chris Voss" ]
 [taxonomies]
 tags = [ "communication", "psychology", "leadership" ]

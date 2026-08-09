@@ -1,5 +1,6 @@
 +++
 title = "Gacela Project"
+description = "Gacela normalises the entry point of each module in your PHP application, so modules talk to each other without leaking domain logic."
 aliases = [ "talks/gacela-project" ]
 weight = 1
 [taxonomies]

@@ -1,7 +1,7 @@
 +++
 title = "Ship, Show, Ask"
 aliases = [ "/ship-show-ask" ]
-description = "Not every change needs the same review. Ship, Show, Ask matches the review process to the risk of the change, so teams keep shipping without losing quality or collaboration."
+description = "Not every change needs the same review. Ship, Show, Ask matches the process to the risk, without losing quality or collaboration."
 draft = false
 [taxonomies]
 tags = [ "agile", "code-review", "team-management", "productivity" ]

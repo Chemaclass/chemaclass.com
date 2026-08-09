@@ -1,6 +1,6 @@
 +++
 title = "Deployments on Fridays"
-description = "I have heard multiple times, from various people, the idea of panic towards deploying on Fridays. How good is that idea of banning the day before weekend from delivering new value to our clients or customers?"
+description = "The panic around deploying on Fridays. Does banning a whole day of delivering value to your customers actually make sense?"
 draft = false
 [taxonomies]
 tags = ["agile", "xp", "leadership", "productivity"]

@@ -1,6 +1,6 @@
 +++
 title = "Bitcoin: Blockchain y su investigación"
-description = "How is created Bitcoin address? How does it work the creation of the private & public keys and how are they known as wallets? And many other interesting questions."
+description = "How is a Bitcoin address created? How do private and public keys become a wallet? A technical walk through the fundamentals."
 draft = false
 authors = [ "Félix Brezo", "Yaiza Rubio" ]
 [taxonomies]

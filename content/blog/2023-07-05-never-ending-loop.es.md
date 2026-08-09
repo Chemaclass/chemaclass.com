@@ -1,6 +1,6 @@
 +++
 title = "Bucle sin Fin"
-description = "A veces me cuesta irme a la cama con la mente en blanco porque muy a menudo pienso en mi próxima lectura, aprendizaje, charla, o qué escribiré este mes o el siguiente."
+description = "Cuesta irse a la cama con la mente en blanco cuando ya piensas en la próxima lectura, charla o post. Sobre el bucle sin fin."
 draft = false
 [taxonomies]
 tags = [ "career", "philosophy", "productivity" ]

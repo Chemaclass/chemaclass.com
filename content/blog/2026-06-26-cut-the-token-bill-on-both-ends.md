@@ -1,6 +1,6 @@
 +++
 title = "Cut the Token Bill on Both Ends"
-description = "Two small tools that compound: Caveman shrinks what the agent says back, RTK shrinks what your terminal pipes in. More room in the same context window, same model, same prompts."
+description = "Caveman shrinks what the agent says back, RTK shrinks what your terminal pipes in. More room in the same context window."
 draft = false
 [taxonomies]
 tags = [ "ai", "productivity", "developer-tools", "agentic-coding" ]

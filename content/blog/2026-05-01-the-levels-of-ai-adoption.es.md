@@ -1,6 +1,6 @@
 +++
 title = "Los Niveles de Adopción de la IA"
-description = "Una escalera de seis niveles para la adopción de la IA, de prompts copiados a equipos de agentes y flujos nativos de IA. Dónde se atascan las empresas y cómo subir."
+description = "Una escalera de seis niveles de adopción de IA, de prompts copiados a equipos de agentes. Dónde se atascan las empresas."
 draft = false
 [taxonomies]
 tags = [ "ai", "software", "leadership", "craftsmanship", "productivity", "developer-tools" ]

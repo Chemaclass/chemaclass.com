@@ -1,5 +1,6 @@
 +++
 title = "Prólogo"
+description = "El prólogo de Ojos en un Recuerdo: por qué se escribieron estas reflexiones, empezando una vida nueva en Alemania sin saber el idioma."
 slug = "prologo"
 weight = 2
 date = 2015-01-03

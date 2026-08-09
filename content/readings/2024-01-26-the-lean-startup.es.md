@@ -1,6 +1,6 @@
 +++
 title = "El método Lean Startup"
-description = "La mayoría de las startups fracasan, pero muchos de esos fracasos se pueden evitar. El método Lean Startup es un enfoque que está cambiando cómo se crean empresas y se lanzan productos en todo el mundo."
+description = "La mayoría de las startups fracasan, y muchos de esos fracasos se pueden evitar. El método que cambió cómo se lanzan productos."
 draft = false
 authors = [ "Eric Ries" ]
 [taxonomies]
