@@ -62,7 +62,7 @@ Las metas individuales y el estatus personal erosionan el enfoque en el éxito c
 
 Cuando no hay rendición de cuentas, la gente pone sus necesidades (ego, carrera, reconocimiento) por encima de las metas del equipo. Si el equipo pierde de vista los logros, el negocio sufre.
 
-![blog-cover](/images/readings/2021-12-07/the-model.webp)
+![La pirámide de Lencioni con las cinco disfunciones, desde la ausencia de confianza en la base hasta el miedo al conflicto, la falta de compromiso, la evasión de responsabilidades y la falta de atención a los resultados](/images/readings/2021-12-07/the-model.webp)
 
 ---
 
