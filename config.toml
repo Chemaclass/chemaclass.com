@@ -272,6 +272,15 @@ svc_consulting_unavailable = "Unavailable"
 svc_consulting_paused_banner = "Consulting is currently on pause. I'm not taking on new sessions right now. Feel free to read on, and reach out about web development."
 
 [extra]
+# Pages kept out of sitemap.xml even though they are perfectly indexable. A
+# trailing * excludes everything under the path but keeps the path itself.
+#
+# The OEUR chapters are poetry from Chema's book, not articles written to be
+# found by search. 70 of them in a 531-URL sitemap is a seventh of the crawl
+# budget spent on pages nobody searches for. /books/oeur/ stays: the book is
+# the thing worth ranking, and every chapter is one click from it.
+sitemap_exclude = ["/books/oeur/*"]
+
 start_here_posts = [
   "blog/2022-06-08-the-path-to-seniority-in-software.md",
   "blog/2024-03-28-effective-pair-programming.md",
