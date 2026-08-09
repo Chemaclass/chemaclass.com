@@ -31,7 +31,7 @@ To decide whether to use a new tech stack or not, remember that it is a team dec
 
 When proposing adopting a new library, framework, or entire new technology, an important aspect to consider is to be aware of its background and the direction where they are moving forward.
 
-What is the motivation for that tech, and why are you considering introducing it in your current stack?
+What is the [motivation](/readings/start-with-why/) for that tech, and why are you considering introducing it in your current stack?
 
 ### Coupling and dependencies
 

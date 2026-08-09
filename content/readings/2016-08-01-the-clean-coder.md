@@ -77,7 +77,7 @@ deeply about the practice of creating software. They treat it as a craft. They a
 - "The zone" (or "flow") is not as good as people think: you will be locally productive, but will often lose the bigger
   picture and possibly product not-so-good designs.
 - Interruptions are bad distractions.
-  - Pair programming is helpful to cope with them.
+  - [Pair programming](/blog/effective-pair-programming/) is helpful to cope with them.
   - TDD helps to make the pre-interruption context reproducible.
     - Minimize time spent debugging
 - Coding is a **marathon**, not a sprint, so conserve the energy and creativity.
@@ -119,7 +119,7 @@ deeply about the practice of creating software. They treat it as a craft. They a
 - Code implementation should start only when the tests are complete.
 - Unlike unit tests (which are only for programmers), the audience of acceptance tests are both: business and
   developers.
-- Run all tests in a continuous integration and immediately fix any failures.
+- Run all tests in a [continuous integration](/readings/accelerate/) and immediately fix any failures.
 
 ### Chapter 8: Test Strategies
 
@@ -213,7 +213,7 @@ software development today.
 ---
 
 In this fourth lesson, Uncle Bob introduces us to a software development methodology oriented through testing. This is
-the Test-Driven Development (TDD), a practice with a long learning curve, but with significant results to generate a
+the [Test-Driven Development](/blog/test-driven-development/) (TDD), a practice with a long learning curve, but with significant results to generate a
 more robust, safer, more maintainable code and with greater development efficiency.
 
 {{ youtube(id="58jGpV2Cg50") }}

@@ -42,7 +42,7 @@ La preferencia temporal baja construye cosas grandes: negocios, familias, rascac
 
 La calidad del dinero afecta todo. Si tu dinero pierde valor constantemente (_hola, inflación_), la gente deja de ahorrar y vive solo para hoy.
 
-Ammous señala al dinero fiat controlado por gobiernos como el problema. Y defiende volver al "dinero duro" (oro o [Bitcoin](/tags/bitcoin/)) que mantiene su valor. El buen dinero permite planificar, ahorrar y crear riqueza a largo plazo.
+Ammous señala al dinero fiat controlado por gobiernos como el problema. Y defiende volver al "dinero duro" (oro o [Bitcoin](/tags/bitcoin/)) que mantiene su valor. El buen dinero permite planificar, ahorrar y crear [riqueza](/es/readings/rich-dad-poor-dad/) a largo plazo.
 
 ## 4. Producir lleva tiempo, y eso importa
 
@@ -60,11 +60,11 @@ Ammous no tiene simpatía por planificadores centrales, regulaciones ni rescates
 
 Ammous no se anda con rodeos. Critica duramente cómo los gobiernos gestionan el dinero.
 
-Ve la inflación como robo encubierto. Y cree que la intervención constante (imprimir dinero, fijar tasas de interés) solo empeora las cosas. También cuestiona campos como la economía climática y ESG, que considera más políticos que económicos.
+Ve la [inflación](/es/readings/broken-money/) como robo encubierto. Y cree que la intervención constante (imprimir dinero, fijar tasas de interés) solo empeora las cosas. También cuestiona campos como la economía climática y ESG, que considera más políticos que económicos.
 
 ## 7. Bitcoin: el gran final
 
-El libro no trata solo de Bitcoin, pero claramente lleva hacia allí. Tras explicar por qué el sistema monetario actual está roto, Ammous presenta Bitcoin como la mejor solución en más de un siglo.
+El libro no trata solo de [Bitcoin](/es/blog/bitcoin-fundamentals/), pero claramente lleva hacia allí. Tras explicar por qué el sistema monetario actual está roto, Ammous presenta Bitcoin como la mejor solución en más de un siglo.
 
 Es digital, limitado y nadie puede manipularlo. Bitcoin representa el regreso del dinero sólido. Una oportunidad de arreglar mucho de lo que hoy está mal.
 

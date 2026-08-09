@@ -19,7 +19,7 @@ related_readings = [
 
 
 Usar array_merge dentro de un bucle mata el rendimiento.
-El operador spread te ayudará a mejorar esto aplanando el array.
+El [operador spread](/es/blog/typed-arrays-php/) te ayudará a mejorar esto aplanando el array.
 
 <!-- more -->
 

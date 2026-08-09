@@ -86,7 +86,7 @@ The best mechanics came from the source material.
 
 ## Sound and voices
 
-No audio files. Every sound synthesized at runtime with the Web Audio API. The Eye opening is a rising tone with reverb. The Balrog roar is a low-frequency drone. Each level has its own ambient drone: warm hum for the Shire, deep pulse for Moria, volcanic rumble for Mount Doom. The entire game is one JavaScript file. No external assets.
+No audio files. Every sound synthesized at runtime with the Web Audio API. The Eye opening is a rising tone with reverb. The Balrog roar is a low-frequency drone. Each level has its own ambient drone: warm hum for the Shire, deep pulse for Moria, volcanic rumble for Mount Doom. The entire game is one JavaScript file. No external [assets](/readings/rich-dad-poor-dad/).
 
 Sam and Gandalf speak during the game. Not in dialogue boxes. Small whispers that appear on screen and fade.
 

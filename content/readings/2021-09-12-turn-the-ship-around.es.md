@@ -18,7 +18,7 @@ related_readings = [
 
 <!-- more -->
 
-Marquet comparte sus teorías de liderazgo y cómo implementó un modelo diferente. Explica las limitaciones de la jerarquía tradicional, por qué falló antes al intentar empoderar a su equipo, y cómo el submarino Santa Fe fue el lugar perfecto para probar el enfoque líder-líder.
+Marquet comparte sus teorías de [liderazgo](/es/blog/the-beauty-of-leadership/) y cómo implementó un modelo diferente. Explica las limitaciones de la jerarquía tradicional, por qué falló antes al intentar empoderar a su equipo, y cómo el submarino Santa Fe fue el lugar perfecto para probar el enfoque líder-líder.
 
 Casi todos dividimos el mundo en **líderes vs seguidores** sin darnos cuenta. Asumimos qué puede o no puede hacer cada grupo. Esas suposiciones afectan cómo pensamos y actuamos, impactando el rendimiento de cada persona y de la organización.
 
@@ -33,7 +33,7 @@ Es muy común: un empleado entusiasta propone una idea nueva y le dicen "eso no 
 
 #### Control
 
-El control es la libertad y autoridad para decidir el por qué, el qué y el cómo de tu trabajo. La meta es delegar las decisiones lo más abajo posible en la organización.
+El control es la libertad y autoridad para decidir el por qué, el qué y el cómo de tu trabajo. La meta es [delegar](/es/blog/tech-lead/) las decisiones lo más abajo posible en la organización.
 
 - Encuentra el código genético del control y reescríbelo.
 - Actúa para llegar a un nuevo pensamiento.
@@ -78,6 +78,6 @@ Para tomar buenas decisiones en cualquier nivel, hay que estar alineado con el p
 
 {{ youtube(id="OqmdLcyES_Q") }}
 
-David Marquet habla sobre el liderazgo que cambia el rumbo en su keynote en el Worldwebforum.
+[David Marquet](/es/readings/leadership-is-language/) habla sobre el liderazgo que cambia el rumbo en su keynote en el Worldwebforum.
 
 {{ youtube(id="ivwKQqf4ixA") }}

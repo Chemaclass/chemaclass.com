@@ -76,7 +76,7 @@ El equipo funciona a pleno rendimiento, enfocado en lograr sus objetivos. Los mi
 
 ### Enfoque de liderazgo
 
-- Empoderar la autonomía y la confianza
+- Empoderar la autonomía y la [confianza](/es/readings/the-five-dysfunctions-of-a-team/)
 - Proporcionar oportunidades para que los miembros del equipo tomen propiedad de tareas y proyectos
 - Fomentar un ambiente donde los individuos se sientan seguros de sus habilidades y puedan colaborar sin problemas
 

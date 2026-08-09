@@ -52,7 +52,7 @@ Antes de pensar en irte, pregúntate:
 
 No existe un código base perfecto. El software es una entidad viva que cambia constantemente. Para mí, software de calidad es el que puede adaptarse al cambio con facilidad.
 
-Una vez que acordéis ese objetivo, hay muchas formas de lograrlo. Mi favorita es mantener una **mentalidad agile** con dosis de **valores, principios y prácticas de Extreme Programming**.
+Una vez que acordéis ese objetivo, hay muchas formas de lograrlo. Mi favorita es mantener una **mentalidad [agile](/es/blog/what-kills-agility/)** con dosis de **valores, principios y prácticas de [Extreme Programming](/es/blog/update-your-team-to-be-more-extreme/)**.
 
 ### El software es sobre personas
 

@@ -37,7 +37,7 @@ Siempre. Dentro del ámbito de tu tarea actual, a menos que sea una tarea planif
 
 No necesitamos pedir permiso para refactorizar. ¿Acaso pedimos permiso para hacer nuestro mejor trabajo?
 
-Para refactorizar bien, la intención debe estar clara. ¿Qué queremos lograr y cómo? El pair programming (o incluso el "pair thinking") ayuda porque sincroniza dos cerebros y fomenta mejor comprensión mutua.
+Para refactorizar bien, la intención debe estar clara. ¿Qué queremos lograr y cómo? El [pair programming](/es/blog/effective-pair-programming/) (o incluso el "pair thinking") ayuda porque sincroniza dos cerebros y fomenta mejor comprensión mutua.
 
 Refactorizar de forma colaborativa es fundamental en equipo. No debería ser tabú. Al contrario: ayuda a unificar objetivos y dirección de calidad del código.
 
@@ -55,7 +55,7 @@ Refactorizamos para aumentar productividad: código más legible es código más
 
 Necesitas un buen conjunto de tests cubriendo la lógica que vas a cambiar. Sin tests, refactorizar es arriesgado. Por lo general, cuanto más fácil es testear algo, más fácil es reemplazarlo o eliminarlo.
 
-Puedes leer más sobre cómo el testing está relacionado con la calidad aquí.
+Puedes leer más sobre cómo el [testing](/es/blog/the-art-of-testing/) está relacionado con la calidad aquí.
 
 ## ¿Por qué hacerlo?
 

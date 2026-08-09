@@ -45,6 +45,6 @@ If you can recognize this situation within your company, I recommend helping to 
 
 If you are the one experiencing this in "first person," I would recommend you:
 
-- Talk to your manager; ask for training, mentoring, or whatever you need to get the skills you lack, from confidence, communication, or anything that could help your new role. Maybe you didn’t get enough or proper training for the new job, which requires different skills.
+- Talk to your [manager](/readings/the-manager-path/); ask for training, [mentoring](/blog/the-path-to-seniority-in-software/), or whatever you need to get the skills you lack, from confidence, communication, or anything that could help your new role. Maybe you didn’t get enough or proper training for the new job, which requires different skills.
 
 - Consider pivoting back where you were good and keep mastering that, helping and inspiring those next to you. Not everybody has to be promoted all the time.

@@ -316,7 +316,7 @@ Estos no son casos extremos:
       </div>
       <div class="interactive-list__panel" role="tabpanel" id="panel-remittances">
         <div class="interactive-list__content">
-          <p>Los trabajadores migrantes envían $700 mil millones a casa cada año. Los servicios tradicionales como Western Union toman 6-10% en comisiones. Para un trabajador enviando $200, eso son $20 que desaparecen. Dinero que su familia necesita desesperadamente. <br> <br>Bitcoin y Lightning Network transfieren valor a través de fronteras por centavos, liquidando en minutos en lugar de días. Empresas como Bitso procesaron $8 mil millones en remesas crypto en 2023. Transferencias más baratas significan más comida en la mesa.</p>
+          <p>Los trabajadores migrantes envían $700 mil millones a casa cada año. Los servicios tradicionales como Western Union toman 6-10% en comisiones. Para un trabajador enviando $200, eso son $20 que desaparecen. Dinero que su familia necesita desesperadamente. <br> <br>Bitcoin y [Lightning Network](/es/blog/run-your-ln-node/) transfieren valor a través de fronteras por centavos, liquidando en minutos en lugar de días. Empresas como Bitso procesaron $8 mil millones en remesas crypto en 2023. Transferencias más baratas significan más comida en la mesa.</p>
         </div>
         <a href="https://www.coindesk.com/consensus-magazine/2023/04/17/send-globally-crypto-remittance-service" class="interactive-list__link" target="_blank" rel="noopener">Leer artículo completo →</a>
       </div>
@@ -350,7 +350,7 @@ Estos no son casos extremos:
 
 ## Objeciones comunes
 
-- **"Se usa para el crimen."** También el efectivo. La diferencia: Bitcoin deja un registro permanente y rastreable. La blockchain es una [herramienta forense](https://www.chainalysis.com/blog/2025-crypto-crime-report-introduction/). La mayoría de los criminales prefieren dólares.
+- **"Se usa para el crimen."** También el efectivo. La diferencia: Bitcoin deja un registro permanente y rastreable. La [blockchain](/es/blog/how-bitcoin-works/) es una [herramienta forense](https://www.chainalysis.com/blog/2025-crypto-crime-report-introduction/). La mayoría de los criminales prefieren dólares.
 
 - **"Es demasiado volátil."** Cierto a corto plazo. Pero si amplías el zoom, Bitcoin ha sido el [activo con mejor rendimiento de la última década](https://www.coingecko.com/research/publications/bitcoin-versus-traditional-assets-price-returns). La volatilidad baja conforme crece la adopción. No inviertas dinero que necesites el mes que viene.
 

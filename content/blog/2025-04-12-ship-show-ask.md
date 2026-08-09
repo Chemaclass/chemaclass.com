@@ -26,7 +26,7 @@ series_order = 6
 
 In fast-moving teams, one of the biggest tensions we face is this: How do we keep shipping without compromising quality or collaboration?
 
-The traditional approach to pull requests often slows things down. We wait hours, or days, for approvals, even for trivial changes. But the alternative, merging directly, can feel reckless or invisible to the rest of the team.
+The traditional approach to [pull requests](/blog/pull-request-vs-pair-prog/) often slows things down. We wait hours, or days, for approvals, even for trivial changes. But the alternative, merging directly, can feel reckless or invisible to the rest of the team.
 
 <!-- more -->
 
@@ -68,7 +68,7 @@ I might merge immediately when:
 - Practicing [pair programming](/blog/effective-pair-programming/) (the review already happened live)
 - Fixing typos or broken links
 - Updating documentation or changelogs
-- Refactoring within a module I own
+- [Refactoring](/blog/the-art-of-refactoring/) within a module I own
 - Adding tests for existing behavior
 - Making non-functional tweaks (formatting, logs, comments)
 - Applying UI or style adjustments with no logic change

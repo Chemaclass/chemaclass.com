@@ -18,8 +18,8 @@ related_readings = [
 
 <!-- more -->
 
-It was originally intended for adults but is often read by adolescents for its themes of angst, alienation, and as a
-critique on superficiality in society.
+It was originally intended for adults but is often read by adolescents for its themes of angst, [alienation](/readings/metamorphosis/), and as a
+critique on superficiality in [society](/readings/1984/).
 
 The novel is a deeper reflection of Salinger's own youth, his complicated relationship with growing up and the
 generational trauma affected by World War II.

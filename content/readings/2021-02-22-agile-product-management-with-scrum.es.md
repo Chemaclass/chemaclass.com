@@ -20,9 +20,9 @@ related_readings = [
 
 ### Temas principales
 
-- El rol del product owner
+- El rol del [product owner](/es/readings/scrum-the-art-of-doing-twice/)
 - Cómo visualizar el producto
 - Refinamiento del product backlog
 - Planificación de releases
-- Colaboración en las reuniones de sprint
+- Colaboración en las [reuniones de sprint](/es/readings/zombie-scrum-survival-guide/)
 - La transición hacia el product ownership

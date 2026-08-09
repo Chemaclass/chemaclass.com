@@ -19,9 +19,9 @@ related_readings = [
 
 <!-- more -->
 
-Si cortas la cabeza a una araña, muere. Si cortas una pata a una estrella de mar, le crece otra y esa pata puede convertirse en una estrella nueva. Las organizaciones jerárquicas tradicionales son como arañas. Las organizaciones descentralizadas son como estrellas de mar, y están cambiando los negocios y el mundo.
+Si cortas la cabeza a una araña, muere. Si cortas una pata a una estrella de mar, le crece otra y esa pata puede convertirse en una estrella nueva. Las [organizaciones](/es/readings/team-topologies/) jerárquicas tradicionales son como arañas. Las organizaciones descentralizadas son como estrellas de mar, y están cambiando los negocios y el mundo.
 
-¿Qué hay detrás del éxito de Wikipedia, Craigslist y Skype? ¿Qué tienen en común eBay y General Electric con los movimientos abolicionistas y de derechos de la mujer? ¿Qué decisión puso a General Motors y Toyota en caminos tan diferentes?
+¿Qué hay detrás del éxito de [Wikipedia](/es/blog/open-source-software/), Craigslist y Skype? ¿Qué tienen en común eBay y General Electric con los movimientos abolicionistas y de derechos de la mujer? ¿Qué decisión puso a General Motors y Toyota en caminos tan diferentes?
 
 Ori Brafman y Rod Beckstrom ofrecen respuestas sorprendentes, historias fascinantes y conexiones inesperadas. El libro explora qué pasa cuando las estrellas de mar se enfrentan a las arañas. Muestra cómo empresas e instituciones (IBM, Intuit, el gobierno de EE.UU.) están adoptando principios de estrella de mar para tener éxito.
 

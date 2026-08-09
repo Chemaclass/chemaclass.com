@@ -23,7 +23,7 @@ Told through the story of one bold company (People First IT), Adapt or Die takes
 
 Each chapter reveals more of the winning formula that all small and midsize businesses absolutely must have to succeed. Through real examples, research, and practical tools, Adapt or Die unpacks exactly how to create innovation, solve people puzzles, and win in business.
 
-> "Leadership is about helping people adapt and leading through change so the business and its people can thrive."
+> "[Leadership](/blog/the-beauty-of-leadership/) is about helping people adapt and leading through change so the business and its people can thrive."
 
 ## Why businesses fail?
 
@@ -54,7 +54,7 @@ These are the main points that everyone could develop:
 - Offer each other support
 - Good leadership
 - Clear and good organization
-- Constructive conflict drives innovation
+- Constructive [conflict](/readings/the-five-dysfunctions-of-a-team/) drives innovation
 
 > "People is not usually the root problem. The taxonomy is 3Ps: product, process, or people. And "people" is the final step because leaders need to look at product and process first. In other words, "people first" when it comes to values, but "people last" when it comes to blame."
 

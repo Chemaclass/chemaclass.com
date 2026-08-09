@@ -16,11 +16,11 @@ related_readings = [
 ]
 +++
 
-Marco Aurelio gobernaba el imperio más poderoso de la tierra. Emperador de Roma. Y cada noche se sentaba a escribir notas para sí mismo sobre cómo ser mejor persona. Nunca quiso que nadie las leyera. Eso es justo lo que hace tan bueno el libro. No son consejos para ti. Es un hombre discutiendo consigo mismo.
+Marco Aurelio gobernaba el imperio más poderoso de la tierra. [Emperador de Roma](/es/readings/the-art-of-being-happy/). Y cada noche se sentaba a escribir notas para sí mismo sobre cómo ser mejor persona. Nunca quiso que nadie las leyera. Eso es justo lo que hace tan bueno el libro. No son consejos para ti. Es un hombre discutiendo consigo mismo.
 
 <!-- more -->
 
-Aquí no hay sistema. Ni capítulos, ni plan. Solo fragmentos, escritos a lo largo de años en campamentos militares y palacios. Puedes abrirlo por cualquier página y encontrar algo útil. Menos un libro de filosofía. Más un cuaderno que sobrevivió 1.800 años por accidente.
+Aquí no hay sistema. Ni capítulos, ni plan. Solo [fragmentos](/es/readings/notes-from-underground/), escritos a lo largo de años en campamentos militares y palacios. Puedes abrirlo por cualquier página y encontrar algo útil. Menos un libro de filosofía. Más un cuaderno que sobrevivió 1.800 años por accidente.
 
 A este llegué en audiolibro, en español, unas secciones cada vez. Es de esos raros libros que funcionan mejor a fragmentos que de una sentada. Unos minutos al día, una idea con la que quedarte, y al día siguiente vuelves.
 

@@ -19,7 +19,7 @@ related_readings = [
 
 <!-- more -->
 
-Un buen entorno de trabajo remoto trata a todos por igual: mismo acceso, misma información, sin importar dónde estés.
+Un buen entorno de [trabajo remoto](/es/readings/peopleware/) trata a todos por igual: mismo acceso, misma [información](/es/readings/team-topologies/), sin importar dónde estés.
 
 ---
 

@@ -68,7 +68,7 @@ Es igual que el juego normal, pero lo juegas varias veces con el mismo oponente 
 
 ---
 
-Todo esto tiene que ver con la confianza, cómo nos comportamos y las normas sociales que influyen en nuestras relaciones.
+Todo esto tiene que ver con la [confianza](/es/readings/the-five-dysfunctions-of-a-team/), cómo nos comportamos y las normas sociales que influyen en nuestras relaciones.
 
 La mejor estrategia en el Dilema del Prisionero iterado es empezar cooperando y luego imitar lo que hizo el otro en la ronda anterior. Así recompensas la cooperación y castigas la traición.
 

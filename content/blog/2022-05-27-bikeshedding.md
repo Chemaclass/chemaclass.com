@@ -45,7 +45,7 @@ This is more common than we think, and it can happen to everyone.
 
 ### What can we do about it? 
 
-Create awareness about this problem with your team. Honest communication and trust are crucial for the solution.
+Create awareness about this problem with your team. Honest communication and [trust](/readings/the-five-dysfunctions-of-a-team/) are crucial for the solution.
 
 Break down steps:
 

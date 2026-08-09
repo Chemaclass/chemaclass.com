@@ -23,6 +23,6 @@ related_readings = [
 - Understanding the product owner’s role
 - Envisioning the product
 - Grooming the product backlog
-- Planning the release
-- Collaborating in sprint meetings
+- Planning the [release](/readings/scrum-the-art-of-doing-twice/)
+- Collaborating in [sprint meetings](/readings/zombie-scrum-survival-guide/)
 - Transitioning into product ownership

@@ -56,7 +56,7 @@ There is no perfect codebase to work on because software is a living entity and 
 quality software is the one that can cope with change smoothly.
 
 Once you have agreed on that goal, and while there are multiple ways to achieve that result, my favorite way of working
-is keeping an **agile mindset** with doses of **extreme programming** values, principles, and practices in mind.
+is keeping an **[agile](/blog/what-kills-agility/) mindset** with doses of **[extreme programming](/blog/update-your-team-to-be-more-extreme/)** values, principles, and practices in mind.
 
 ### Software is about people
 

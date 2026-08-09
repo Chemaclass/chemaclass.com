@@ -25,7 +25,7 @@ person, and how easily people could be influenced into committing atrocities. Eg
 
 ## The experiment
 
-During the 1960s, the psychologist Stanley Milgram conducted a series of obedience experiments directly related to the
+During the 1960s, the [psychologist](/blog/understanding-people/) Stanley Milgram conducted a series of obedience [experiments](/blog/conformity-experiments/) directly related to the
 power of authority and obedience, even when they might end-up in fatal ending.
 
 Milgram examined justifications for acts of genocide offered by those accused at the World War II, Nuremberg War

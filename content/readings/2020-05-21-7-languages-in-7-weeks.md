@@ -18,7 +18,7 @@ related_readings = [
 
 <!-- more -->
 
-You should learn a programming language every year, as recommended by The Pragmatic Programmer. But if one per year is
+You should learn a programming language every year, as recommended by [The Pragmatic Programmer](/readings/the-pragmatic-programmer/). But if one per year is
 good, how about Seven Languages in Seven Weeks? In this book you'll get a hands-on tour of Clojure, Haskell, Io, Prolog,
 Scala, Erlang, and Ruby. Whether your favorite language is on that list, you'll broaden your perspective of
 programming by examining these languages side-by-side. You'll learn something new from each, and best of all, you'll

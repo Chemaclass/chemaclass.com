@@ -21,7 +21,7 @@ series_order = 3
 +++
 
 
-La complejidad aquí no está en escribir tests en sí, sino en los hábitos que tenemos que cambiar para crear software que sea fácil de testear.
+La complejidad aquí no está en escribir tests en sí, sino en los [hábitos](/es/readings/atomic-habits/) que tenemos que cambiar para crear software que sea fácil de testear.
 
 <!-- more -->
 
@@ -59,7 +59,7 @@ Escribir tests al mismo tiempo que escribes el código te **obliga a escribir me
 
 ![tdd-style](/images/blog/2021-08-01/tdd-style-with-git.webp)
 
-La mejor manera de aprender Test-Driven es haciendo katas de software. Pruébalas solo y con otros. Ambas son igualmente importantes.
+La mejor manera de aprender Test-Driven es haciendo [katas](/es/blog/update-your-team-to-be-more-extreme/) de software. Pruébalas solo y con otros. Ambas son igualmente importantes.
 
 - Solo: para desafiar tu yo interior sin ninguna distracción excepto tú mismo.
 - Con otros: el pair-programming es esencial en nuestro trabajo. Las katas son las mejores herramientas para entrenar nuestras habilidades de comunicación y aprender juntos unos de otros.
@@ -108,7 +108,7 @@ TDD en pocas palabras; se trata del ritmo.
 
 ## Kent Beck
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">1. Change the code as usual<br>2. Write a test that only passes after the change<br>3. Revert to before 1<br>4. Type the test again (copy/paste is cheating &amp; invalidates the warranty of the exercise)<br>5. Make it compile by changing the code<br>6. See it fail<br>7. Change the code to make it pass</p>&mdash; Kent Beck 🌻 (@KentBeck) <a href="https://twitter.com/KentBeck/status/1421257650113634304?ref_src=twsrc%5Etfw">July 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">1. Change the code as usual<br>2. Write a test that only passes after the change<br>3. Revert to before 1<br>4. Type the test again (copy/paste is cheating &amp; invalidates the warranty of the exercise)<br>5. Make it compile by changing the code<br>6. See it fail<br>7. Change the code to make it pass</p>&mdash; [Kent Beck](/es/readings/extreme-programming-explained/) 🌻 (@KentBeck) <a href="https://twitter.com/KentBeck/status/1421257650113634304?ref_src=twsrc%5Etfw">July 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ---
 

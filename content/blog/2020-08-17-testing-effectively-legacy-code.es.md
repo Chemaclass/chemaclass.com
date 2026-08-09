@@ -22,7 +22,7 @@ Estos tests también se conocen como tests de caracterización.
 <!-- more -->
 
 > Un test de caracterización describe el comportamiento real de una pieza de software existente, y por lo tanto protege el
-> comportamiento existente del código legacy contra cambios no intencionados mediante testing automatizado. Este término fue acuñado por [Michael Feathers](/es/readings/working-effectively-with-legacy-code/).
+> comportamiento existente del código legacy contra cambios no intencionados mediante [testing](/es/blog/the-art-of-testing/) automatizado. Este término fue acuñado por [Michael Feathers](/es/readings/working-effectively-with-legacy-code/).
 
 Permiten y proporcionan una red de seguridad para extender y refactorizar código que no tiene tests adecuados. Se puede
 escribir un test que afirme que la salida del código legacy coincide con el resultado observado para las entradas dadas.
@@ -188,7 +188,7 @@ final class MyBusinessLogicTest extends TestCase
 Sí, limpia los tests. Merecen estar tan limpios como tu código de producción. De lo contrario, se pudrirán con el tiempo y
 ¡permanecerán sucios para tus compañeros y tu yo futuro!
 
-Por ejemplo, puedes aplicar el refactoring extract method para mover los detalles de implementación (de la creación de los
+Por ejemplo, puedes aplicar el [refactoring](/es/blog/the-art-of-refactoring/) extract method para mover los detalles de implementación (de la creación de los
 diferentes objetos) y mantener el mismo nivel de abstracción mientras lees el código del test.
 
 ```php

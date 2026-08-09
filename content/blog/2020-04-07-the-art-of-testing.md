@@ -39,7 +39,7 @@ different projects and teams.
 Some horrible patterns I've seen (and done):
 
 * Testing for the sake of testing: testing every single file, sometimes wrongly considered a unit.
-* Mocking every class we intend to test, overriding the actual implementation, and creating a fake behavior,
+* [Mocking](/blog/to-mock-or-not-to-mock/) every class we intend to test, overriding the actual implementation, and creating a fake behavior,
   providing a false coverage perception.
 * Coupling production code with tests everywhere, so it's impossible to change anything without breaking some tests,
   even if the feature itself it's working as intended.

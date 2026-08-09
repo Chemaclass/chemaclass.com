@@ -143,7 +143,7 @@ related_readings = [
 
 63.- Aprende sobre el proceso de build. Es una parte importante del desarrollo.
 
-64.- Practica **pair programming**.
+64.- Practica **[pair programming](/es/blog/effective-pair-programming/)**.
 
 65.- Prefiere **tipos específicos del dominio** sobre tipos primitivos.
 - Hacen el código más legible y menos propenso a errores en el desarrollo.
@@ -171,7 +171,7 @@ related_readings = [
 
 80.- Escribe tests basados en la **funcionalidad deseada** de tu programa, no en comportamiento incidental.
 
-83.- El testing toma tiempo, pero asegura la **calidad** del producto final. Hazlo.
+83.- El [testing](/es/blog/the-art-of-testing/) toma tiempo, pero asegura la **calidad** del producto final. Hazlo.
 
 85.- Hay muchos beneficios en el trabajo colaborativo y pair programming.
 

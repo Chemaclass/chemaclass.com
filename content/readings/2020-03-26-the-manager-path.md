@@ -30,7 +30,7 @@ related_readings = [
 2. A manager's job involves making it easy for her employees to get things done by creating fertile environments in
    which work can happen.
 3. Mentoring new hires is critical.
-4. Feedback works best when you, as a manager, pair that feedback with coaching.
+4. Feedback works best when you, as a manager, pair that [feedback](/blog/ship-show-ask/) with coaching.
 5. It's unrealistic to think you can or should shield your team from everything.
 
 ---

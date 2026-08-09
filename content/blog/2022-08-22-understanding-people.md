@@ -28,13 +28,13 @@ don't think the same way as you do.
 ## Different perceptions
 
 People have different experiences and backgrounds, and we all have different perceptions of reality. This is the first
-thing we need to be aware of if we want to create self-awareness of our role in communication with others or empathy.
+thing we need to be aware of if we want to create self-awareness of our role in communication with others or [empathy](/blog/people-skills/).
 
 Very often, the real issue behind friction in a team is due to miscommunication. Sometimes no one knows how or why two
-or more team members don't like each other anymore, but the conflict is obvious. 
+or more team members don't like each other anymore, but the [conflict](/readings/the-five-dysfunctions-of-a-team/) is obvious. 
 
 This can be a problem because it prevents the team from working as effectively as possible. Often, the reason for that
-friction is because of their **inability to understand each other's motivation and problems**.
+friction is because of their **inability to understand each other's [motivation](/readings/start-with-why/) and problems**.
 
 And this misfunction often leads to misunderstandings.
 

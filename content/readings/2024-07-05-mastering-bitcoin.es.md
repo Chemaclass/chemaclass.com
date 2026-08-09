@@ -18,16 +18,16 @@ related_readings = [
 ]
 +++
 
-Este libro cubre desde los conceptos básicos hasta los aspectos técnicos más profundos de Bitcoin. Una guía excelente para entender este mundo y participar en el Internet del dinero.
+Este libro cubre desde los conceptos básicos hasta los aspectos técnicos más profundos de [Bitcoin](/es/blog/bitcoin-fundamentals/). Una guía excelente para entender este mundo y participar en el Internet del dinero.
 
 <!-- more -->
 
 La primera edición se publicó en diciembre de 2014. Diez años después, ya tenemos una tercera edición actualizada. Muy recomendable para cualquier persona interesada en este tema y la tecnología que hay detrás.
 
-- Introducción amplia a Bitcoin y su blockchain, ideal para usuarios no técnicos, inversores y ejecutivos.
+- Introducción amplia a Bitcoin y su [blockchain](/es/blog/how-bitcoin-works/), ideal para usuarios no técnicos, inversores y ejecutivos.
 - Explicación técnica para desarrolladores, ingenieros y arquitectos de software.
 - Detalles sobre la red descentralizada, arquitectura P2P, ciclo de vida de transacciones y seguridad.
-- Novedades como Taproot, Tapscript, firmas Schnorr y Lightning Network.
+- Novedades como Taproot, Tapscript, firmas Schnorr y [Lightning Network](/es/blog/run-your-ln-node/).
 - Inmersión profunda en aplicaciones de Bitcoin: cómo combinar sus bloques de construcción en herramientas nuevas.
 - Historias, analogías, ejemplos y fragmentos de código que explican los conceptos clave.
 

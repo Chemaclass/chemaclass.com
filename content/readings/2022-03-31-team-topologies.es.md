@@ -26,7 +26,7 @@ El libro explica cómo estructurar equipos dinámicos y sus interacciones para a
 ## Estructura de equipo
 
 - Alta cohesión: agrupa las cosas relacionadas.
-- Bajo acoplamiento: límites claros entre equipos.
+- Bajo [acoplamiento](/es/readings/recipes-for-decoupling/): límites claros entre equipos.
 - Carga cognitiva: es como la RAM del equipo. Si lo sobrecargas, se quema.
 
 > Para evitar cuellos de botella, asegúrate de que la carga cognitiva del equipo no sea excesiva.
@@ -49,7 +49,7 @@ El libro explica cómo estructurar equipos dinámicos y sus interacciones para a
 - 3 tipos de carga cognitiva:
     - Intrínseca: fundamentos del problema. Ej: lenguaje de programación.
     - Extrínseca: relacionada con el entorno. Ej: cómo desplegar.
-    - Germane: requiere atención especial. Ej: dominio de negocio.
+    - Germane: requiere [atención](/es/readings/digital-minimalism/) especial. Ej: dominio de negocio.
 - Heurísticas:
     - 3 tipos de dominio: simple, complicado, complejo.
     - Si el dominio es muy grande, divídelo en subdominios.

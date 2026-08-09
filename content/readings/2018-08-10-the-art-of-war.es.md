@@ -18,7 +18,7 @@ related_readings = [
 
 <!-- more -->
 
-El texto tiene 13 capítulos, cada uno dedicado a un aspecto de la guerra. Se considera una obra definitiva sobre estrategia y táctica militar.
+El texto tiene 13 capítulos, cada uno dedicado a un aspecto de la guerra. Se considera una obra definitiva sobre [estrategia](/es/readings/the-art-of-leadership/) y [táctica militar](/es/readings/start-with-why/).
 
 Es el más famoso de los Siete Clásicos Militares de China. Durante dos mil años ha sido el tratado militar más importante de Asia.
 

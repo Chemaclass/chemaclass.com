@@ -57,7 +57,7 @@ Some suggestions that helped me to understand how we behave, why we do what we d
 
 - The Power of Habit, by Charles Duhigg.
 - Atomic Habits, by James Clear.
-- Scrum: Doing Twice the Work in Half the Time, by Jeff Sutherland.
+- [Scrum](/blog/ignoring-scrum-to-get-more-agile/): Doing Twice the Work in Half the Time, by Jeff Sutherland.
 
 ![atomic habits book](/images/blog/2020-09-08/atomic-habits.webp)
 
@@ -67,7 +67,7 @@ I wish I would have read much more. Nowadays, with the number of distractions th
 
 - I keep my personal phone always in silence and vibration mode.
 - I used to spend hours on social media; a lot of time wasted. Not anymore. I reduced the social media noise to the minimum by removing the apps that prevent me from being as productive as I want. Some of them from my phone, others the account itself.
-- I used to play video games. Not anymore. Instead, I go to GitHub to work on my pet projects, contribute to an open-source project, or simply read a book.
+- I used to play video games. Not anymore. Instead, I go to GitHub to work on my pet projects, contribute to an [open-source](/blog/open-source-software/) project, or simply read a book.
 - When I go for a run, I enjoy it twice by listening to a 45-min podcast that I want to listen to since the very morning. The reward of listening to the podcast is linked with the act of going out and running. I conscientiously created that habit.
 
 > It's not about removing your old habits but replacing them with new ones.

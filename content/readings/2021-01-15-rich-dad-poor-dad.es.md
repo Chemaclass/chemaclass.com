@@ -19,7 +19,7 @@ related_readings = [
 <!-- more -->
 
 - Desmonta el mito de que necesitas ganar mucho para volverte rico
-- Cuestiona la idea de que tu casa es un activo
-- Explica por qué no puedes confiar en la escuela para enseñar a tus hijos sobre dinero
+- Cuestiona la idea de que tu casa es un [activo](/es/readings/the-psychology-of-money/)
+- Explica por qué no puedes confiar en la escuela para enseñar a tus hijos sobre [dinero](/es/readings/one-up-on-wall-street/)
 - Define de una vez qué es un activo y qué es un pasivo
 - Te da herramientas para educar a tus hijos en finanzas personales

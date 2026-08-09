@@ -26,7 +26,7 @@ El estudio muestra que:
 - Relación cercana: 5 personas.
 - Confianza profunda: 15 personas.
 - Relaciones significativas: 50 personas.
-- Contactos activos: 150 personas.
+- Contactos [activos](/es/readings/rich-dad-poor-dad/): 150 personas.
 
 ## ¿Por qué este límite es 150?
 
@@ -44,7 +44,7 @@ Este número incluye también colegas del pasado, como amigos del instituto, con
 
 - Equipos individuales: 5-9 personas.
   - Confianza compartida entre los miembros.
-  - La confianza se construye con el tiempo.
+  - La [confianza](/es/readings/the-five-dysfunctions-of-a-team/) se construye con el tiempo.
   - Deben ser equipos a largo plazo.
 - Grupo: 50 personas.
   - Relaciones significativas.

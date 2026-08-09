@@ -48,7 +48,7 @@ Los programadores que triunfan bajo presión e incertidumbre comparten algo: les
 - Sigue la regla del Boy Scout: deja el código un poco más limpio de como lo encontraste.
 - Tu carrera es **tu responsabilidad**, no la de tu jefe.
   - Dedica 20 horas semanales extra a mejorar tus habilidades.
-  - Lee, experimenta, practica (katas), habla con otros, colabora, mentoriza.
+  - Lee, experimenta, practica ([katas](/es/blog/update-your-team-to-be-more-extreme/)), habla con otros, colabora, mentoriza.
   - Que sea divertido.
 - Conoce tu dominio e identifícate con tu cliente (nunca "nosotros vs. ellos").
 
@@ -73,8 +73,8 @@ Los programadores que triunfan bajo presión e incertidumbre comparten algo: les
 - Programar requiere un nivel de concentración que pocas disciplinas exigen.
 - "La zona" (o flujo) no es tan buena como parece: serás productivo localmente, pero puedes perder la visión global y producir diseños mediocres.
 - Las interrupciones son malas distracciones.
-  - El pair programming ayuda a gestionarlas.
-  - TDD hace que el contexto pre-interrupción sea reproducible.
+  - El [pair programming](/es/blog/effective-pair-programming/) ayuda a gestionarlas.
+  - [TDD](/es/blog/test-driven-development/) hace que el contexto pre-interrupción sea reproducible.
     - Minimiza el tiempo de depuración.
 - Programar es una **maratón**, no un sprint. Conserva energía y creatividad.
 - Vete cuando sea hora, aunque estés en medio de algo importante.

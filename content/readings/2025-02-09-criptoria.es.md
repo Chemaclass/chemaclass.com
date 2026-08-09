@@ -18,7 +18,7 @@ related_readings = [
 ]
 +++
 
-¿Cómo llegamos de la Grecia antigua a Bitcoin? Criptoria cuenta esa historia: el nacimiento de las computadoras, las redes y el dinero digital.
+¿Cómo llegamos de la Grecia antigua a [Bitcoin](/es/blog/bitcoin-fundamentals/)? Criptoria cuenta esa historia: el nacimiento de las computadoras, las redes y el dinero digital.
 
 El libro recorre los hitos antes y después de Alan Turing. Personas, organizaciones e inventos que revelan el vínculo profundo entre matemáticas, criptografía y la búsqueda de soberanía individual.
 
@@ -159,12 +159,12 @@ Un libro para quienes creen que hay formas de organización social y económica 
   - Frontera Electrónica
   - Independencia del Ciberespacio
 - EPIC
-- PGP
+- [PGP](/es/blog/pretty-good-privacy/)
   - Phil Zimmermann
   - Hal Finney
   - Danzando con Lobos
   - OpenPGP
-- Cypherpunks
+- [Cypherpunks](/es/blog/the-cypherpunks/)
   - Cyphernomicon
   - Manifiesto Cypherpunk
 - Clipper Chip

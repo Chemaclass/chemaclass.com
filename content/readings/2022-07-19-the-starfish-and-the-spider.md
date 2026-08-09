@@ -20,10 +20,10 @@ related_readings = [
 <!-- more -->
 
 If you cut off a spider's head, it dies; if you cut off a starfish's leg it grows a new one, and that leg can grow into
-an entirely new starfish. Traditional top-down organizations are like spiders, but now starfish organizations are
+an entirely new starfish. Traditional top-down [organizations](/readings/team-topologies/) are like spiders, but now starfish organizations are
 changing the face of business and the world.
 
-What's the hidden power behind the success of Wikipedia, craigslist, and Skype? What do eBay and General Electric have
+What's the hidden power behind the success of [Wikipedia](/blog/open-source-software/), craigslist, and Skype? What do eBay and General Electric have
 in common with the abolitionist and women's rights movements? What fundamental choice put General Motors and Toyota on
 vastly different paths?
 

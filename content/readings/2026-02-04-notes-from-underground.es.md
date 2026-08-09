@@ -28,7 +28,7 @@ El narrador sostiene que la gente no solo quiere lo que le conviene. A veces qui
 
 > "Lo que el hombre quiere es simplemente una elección independiente, cueste lo que cueste esa independencia y a donde quiera que conduzca."
 
-Rechaza la utopía de una sociedad perfecta construida sobre el interés propio racional. Los humanos no son máquinas. Destruyen su propia felicidad solo para demostrar que pueden.
+Rechaza la utopía de una sociedad perfecta construida sobre el interés propio racional. Los humanos no son máquinas. Destruyen su propia [felicidad](/es/readings/the-art-of-being-happy/) solo para demostrar que pueden.
 
 ## El muro y la inacción
 
@@ -49,7 +49,7 @@ Dostoyevski en su momento más incómodo. La brecha entre lo que decimos y lo qu
 - La racionalidad no explica del todo el comportamiento humano. La gente actúa contra sus propios intereses por rencor, aburrimiento o necesidad de sentirse libre.
 - La autoconciencia excesiva puede volverse prisión. En algún momento hay que actuar a pesar de la incertidumbre.
 - El deseo de control y el miedo a ser vulnerable destruyen relaciones.
-- El sufrimiento no siempre debe eliminarse. A veces la gente se aferra a él como prueba de que existe.
+- El [sufrimiento](/es/readings/mans-search-for-meaning/) no siempre debe eliminarse. A veces la gente se aferra a él como prueba de que existe.
 
 No es un libro fácil ni agradable. Pero se te mete bajo la piel. Anticipa el existencialismo por décadas y desafía la cómoda idea de que el progreso y la razón nos salvarán.
 

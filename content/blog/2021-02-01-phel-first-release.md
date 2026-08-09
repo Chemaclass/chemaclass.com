@@ -69,7 +69,7 @@ hours to its development.
 It helps me to learn more about FP, languages' internal design, and best practices on testing and software design
 architecture in general.
 
-I started applying minor changes until I ended refactoring the whole compiler structure (among other things) in order to
+I started applying minor changes until I ended [refactoring](/blog/the-art-of-refactoring/) the whole compiler structure (among other things) in order to
 make the modules easier to read and understand. Psalm, strict types, good test coverage, unifying code style… These were
 some of my favorite topics.
 

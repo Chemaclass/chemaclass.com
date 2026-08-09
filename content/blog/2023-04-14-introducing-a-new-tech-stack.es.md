@@ -31,7 +31,7 @@ Antes de decidir, recuerda que es una decisión de equipo. Piensa en la estandar
 
 Cuando propones adoptar una nueva biblioteca, framework o tecnología, hay que conocer su trasfondo y hacia dónde se dirige.
 
-¿Cuál es la motivación detrás de esa tecnología? ¿Por qué quieres añadirla a tu stack actual?
+¿Cuál es la [motivación](/es/readings/start-with-why/) detrás de esa tecnología? ¿Por qué quieres añadirla a tu stack actual?
 
 ### Acoplamiento y dependencias
 

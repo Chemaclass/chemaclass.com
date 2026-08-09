@@ -64,7 +64,7 @@ El "Pair Programming" puede entenderse de varias formas: pair thinking, roles co
 
 > El Pair Programming ayuda al equipo a trabajar juntos.
 
-El pair programming es trabajar con un cerebro extra y otro par de ojos. La clave es **construir un contexto** donde ambos **compartan el mismo objetivo** para encontrar la **mejor solución posible**, aprendiendo el uno del otro.
+El [pair programming](/es/blog/effective-pair-programming/) es trabajar con un cerebro extra y otro par de ojos. La clave es **construir un contexto** donde ambos **compartan el mismo objetivo** para encontrar la **mejor solución posible**, aprendiendo el uno del otro.
 No se trata de dar con la mejor solución desde el principio. Se trata de hacerlo funcionar, compartir ideas y mejorar juntos. Luego ya refactorizas y limpias el código.
 
 ### El Pair Programming es una revisión de código continua
@@ -88,7 +88,7 @@ El patrón que rechaza el Pair Programming es básicamente el miedo a salir de t
 
 No se trata de presumir ni de ser juzgado, sino de ser transparente (mostrar tus habilidades tal como son) y mejorar como equipo.
 
-Programar es un proceso iterativo que requiere refactorizar continuamente nuestra forma de pensar. Programar con otra persona (con otra forma de pensar) ayuda al equipo a sacar lo mejor de cada uno y a descartar malos hábitos.
+Programar es un proceso iterativo que requiere refactorizar continuamente nuestra forma de pensar. Programar con otra persona (con otra forma de pensar) ayuda al equipo a sacar lo mejor de cada uno y a descartar malos [hábitos](/es/readings/atomic-habits/).
 
 El Pair Programming no tiene que usarse siempre ni para todo. Es una herramienta flexible: puedes elegir cómo, cuándo y por qué.
 
@@ -100,7 +100,7 @@ Una regla personal: antes de empezar tareas que tocan múltiples módulos o regl
 
 Si aún te sientes incómodo con alguien a tu lado mientras programas, quizás no estés contento con tu propio código o con el proceso que sigues. Mi forma favorita de trabajar esto es practicar por mi cuenta y mejorar mis habilidades como desarrollador.
 - Crea y juega con tus propios proyectos personales.
-- Trabaja en katas de código por tu cuenta y con otros.
+- Trabaja en [katas](/es/blog/update-your-team-to-be-more-extreme/) de código por tu cuenta y con otros.
 
 > La práctica hace al maestro.
 

@@ -22,14 +22,14 @@ Discover another way of sharing suggestions with your development team.
 
 ### Imagine this situation
 
-You are reviewing a Pull Request (PR), and you see some minor improvements or suggestions that you would like to share with the author. You might write some comments, and usually, that would be sufficient.
+You are reviewing a [Pull Request](/blog/pull-request-vs-pair-prog/) (PR), and you see some minor improvements or suggestions that you would like to share with the author. You might write some comments, and usually, that would be sufficient.
 
 Imagine that in order to transmit your "whole idea" you would need to change some files because just communicating the full picture will end up in a huge comment which might be not as clear as it could be.
 
 ## What possibilities are there apart from just comments in a PR?
 
 Well, there are multiple options. The key is to be aware of them and use them wisely depending on the priority of the task and the changes themselves:
-- As already mentioned, writing a comment as feedback is a good idea by default, but not the only one.
+- As already mentioned, writing a comment as [feedback](/blog/ship-show-ask/) is a good idea by default, but not the only one.
 - We can always do some pair-thinking, talk at any time. Communication is always good in order to clarify the possible uncertainty.
 - Sharing your git patches is another good option.
 

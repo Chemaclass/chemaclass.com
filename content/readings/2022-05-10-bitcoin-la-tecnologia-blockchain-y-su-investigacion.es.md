@@ -19,9 +19,9 @@ related_readings = [
 
 <!-- more -->
 
-El libro se publicó en 2017, así que mucha de la tecnología ya es historia. Y eso es justo lo que más me gusta: la parte histórica y el origen de la blockchain.
+El libro se publicó en 2017, así que mucha de la tecnología ya es historia. Y eso es justo lo que más me gusta: la parte histórica y el origen de la [blockchain](/es/blog/how-bitcoin-works/).
 
-¿Cómo se crea una dirección Bitcoin? ¿Cómo funcionan las claves privadas y públicas? ¿Qué son las wallets? El libro responde estas y otras preguntas.
+¿Cómo se crea una dirección [Bitcoin](/es/blog/bitcoin-fundamentals/)? ¿Cómo funcionan las claves privadas y públicas? ¿Qué son las wallets? El libro responde estas y otras preguntas.
 
 En aquella época, algunos sitios web y servicios ya usaban Bitcoin como método de pago. Se veía venir una tendencia interesante.
 

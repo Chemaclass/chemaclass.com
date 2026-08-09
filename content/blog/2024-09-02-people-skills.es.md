@@ -71,7 +71,7 @@ Las competencias que te permiten interactuar efectiva y fluidamente con otros.
 
 - **Adaptabilidad**: Ser flexible y abierto al cambio, ajustando tu enfoque según sea necesario para enfrentar diferentes situaciones o personalidades.
 
-- **Liderazgo**: Inspirar y guiar a otros, proporcionar dirección y fomentar un ambiente positivo.
+- **[Liderazgo](/es/blog/the-beauty-of-leadership/)**: Inspirar y guiar a otros, proporcionar dirección y fomentar un ambiente positivo.
 
 - **Networking**: Construir y mantener relaciones profesionales que puedan proporcionar apoyo, oportunidades y recursos.
 

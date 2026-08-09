@@ -44,7 +44,7 @@ In **Part 2** of the experiment, the same three groups of dogs were tested in a 
 
 ---
 
-Even though this experiment was demonstrated with different types of animals, it also applies to people. This is visible in children when they integrate early failure to ask for help, frustration, giving up, poor motivation, and procrastination. And these points carry on as people age.
+Even though this experiment was demonstrated with different types of animals, it also applies to people. This is visible in children when they integrate early failure to ask for help, frustration, giving up, poor [motivation](/readings/start-with-why/), and procrastination. And these points carry on as people age.
 
 > Because, if you "cannot do anything", why would you even try it?
 

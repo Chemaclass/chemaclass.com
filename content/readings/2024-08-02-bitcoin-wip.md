@@ -19,11 +19,11 @@ related_readings = [
 ]
 +++
 
-With thousands of "crypto" projects out there, they say Bitcoin is old and boring, but nothing could be further from the truth. This book will guide you through the latest developments in Bitcoin, as seen through the eyes of one of its many developers.
+With thousands of "crypto" projects out there, they say [Bitcoin](/blog/bitcoin-fundamentals/) is old and boring, but nothing could be further from the truth. This book will guide you through the latest developments in Bitcoin, as seen through the eyes of one of its many developers.
 
 <!-- more -->
 
-You'll learn about the latest soft fork known as Taproot, the challenges of keeping open source software free of money-stealing bugs and malware, new ways to protect nodes against evildoers on the internet, how to deal with the ever-growing blockchain, and more!
+You'll learn about the latest soft fork known as Taproot, the challenges of keeping [open source](/blog/open-source-software/) software free of money-stealing bugs and malware, new ways to protect nodes against evildoers on the internet, how to deal with the ever-growing [blockchain](/blog/how-bitcoin-works/), and more!
 
 The book links to more than two hundred articles, videos, podcasts, and even the source code. And thanks to a tiny QR code next to every link, you'll never have to type long URLs.
 

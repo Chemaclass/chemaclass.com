@@ -22,7 +22,7 @@ related_readings = [
 ]
 +++
 
-People compare coding agents. Claude Code, Codex, Gemini CLI. Which one is smarter, faster, cheaper. New benchmarks every month.
+People compare coding agents. [Claude Code](/blog/inside-the-claude-folder/), Codex, Gemini CLI. Which one is smarter, faster, cheaper. New benchmarks every month.
 
 Wrong question.
 
@@ -96,7 +96,7 @@ For each issue found:
 - What the fix looks like
 ```
 
-Agent sees the description in the skill list. Ask for a review, it loads `SKILL.md`. Needs a SOLID pattern, reads the reference. Two levels, on demand.
+Agent sees the description in the skill list. Ask for a review, it loads `SKILL.md`. Needs a [SOLID](/readings/clean-architecture/) pattern, reads the reference. Two levels, on demand.
 
 {% end %}
 
@@ -113,7 +113,7 @@ Skills are finer. One agent, many skills. The right skill loads for the task. Co
 Rule of thumb:
 
 - Use a **skill** when you need a procedure or pattern. From `phel-lang`: `/gh-issue` (issue to PR), `/commit` (conventional commit), `/refactor-check` (SOLID review).
-- Use an **agent** when you need isolation. From `phel-lang`: `tdd-coach` (TDD pairing), `clean-code-reviewer` (PR review), `domain-architect` (architecture exploration).
+- Use an **agent** when you need isolation. From `phel-lang`: `tdd-coach` ([TDD](/blog/test-driven-development/) pairing), `clean-code-reviewer` (PR review), `domain-architect` (architecture exploration).
 
 Most needs are skills, not agents.
 

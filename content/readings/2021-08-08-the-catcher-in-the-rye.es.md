@@ -18,7 +18,7 @@ related_readings = [
 
 <!-- more -->
 
-Aunque fue escrita para adultos, los adolescentes la adoptaron por sus temas de angustia, alienación y crítica a lo superficial.
+Aunque fue escrita para adultos, los [adolescentes](/es/readings/lord-of-the-flies/) la adoptaron por sus temas de angustia, [alienación](/es/readings/metamorphosis/) y crítica a lo superficial.
 
 Salinger refleja su propia juventud, su relación complicada con crecer y el trauma de haber vivido la Segunda Guerra Mundial.
 

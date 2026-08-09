@@ -23,7 +23,7 @@ The book *Who moved my cheese?* presents a tale inside the main story that consi
 
 Published in 1998, and I just read it at the beginning of 2021. Better late than never. Actually, thanks to my brother Jesús, who recommended it to me.
 
-> They live in a Maze (that represents one's environment) and in order to survive they need to go out of their comfort zone and look for cheese (which represents happiness and success).
+> They live in a Maze (that represents one's environment) and in order to survive they need to go out of their comfort zone and look for cheese (which represents [happiness](/readings/the-art-of-being-happy/) and success).
 >
 > The tale starts when both groups end up at "Cheese Station C", full of cheese. The humans established routines while the mice kept their instincts active.
 >

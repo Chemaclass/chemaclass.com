@@ -18,7 +18,7 @@ related_readings = [
 ]
 +++
 
-A deep dive into monetary history through a technological lens. Lyn Alden traces how innovations shaped money across centuries, examining commodity-based systems, modern fiat currencies, and emerging alternatives like Bitcoin.
+A deep dive into monetary history through a technological lens. Lyn Alden traces how innovations shaped money across centuries, examining commodity-based systems, modern fiat currencies, and emerging alternatives like [Bitcoin](/blog/bitcoin-fundamentals/).
 
 <!-- more -->
 

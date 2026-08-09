@@ -23,13 +23,13 @@ series_order = 2
 +++
 
 
-Asumamos que ya sabes qué es el manifiesto agile. Consideremos que aplicas la mayoría de los valores, principios y prácticas de "extreme programming". ¿Cómo puedes trabajar con otros equipos que no son agile?
+Asumamos que ya sabes qué es el [manifiesto agile](/es/readings/clean-agile/). Consideremos que aplicas la mayoría de los valores, principios y prácticas de "extreme programming". ¿Cómo puedes trabajar con otros equipos que no son agile?
 
 <!-- more -->
 
 > - Individuos e interacciones sobre procesos y herramientas
 > - Software funcionando sobre documentación extensiva
-> - Colaboración con el cliente sobre negociación de contratos
+> - Colaboración con el cliente sobre [negociación](/es/readings/never-split-the-difference/) de contratos
 > - Responder ante el cambio sobre seguir un plan
 
 Estás usando bucles de retroalimentación cortos, donde las cosas cambian constantemente. Puedes sentir que el equipo está vivo y cada uno es esencial.

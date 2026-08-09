@@ -25,7 +25,7 @@ related_readings = [
 
 ## Definición
 
-Extreme Programming (XP) es un framework ágil que busca producir mejor software y mejor calidad de vida para el equipo de desarrollo. Es el más específico de los frameworks ágiles en cuanto a prácticas de ingeniería.
+[Extreme Programming](/es/blog/update-your-team-to-be-more-extreme/) (XP) es un framework ágil que busca producir mejor software y mejor calidad de vida para el equipo de desarrollo. Es el más específico de los frameworks ágiles en cuanto a prácticas de ingeniería.
 
 ---
 
@@ -172,7 +172,7 @@ Incluye personas con todas las habilidades y perspectivas necesarias para que el
 
 ### Espacio de Trabajo Informativo
 
-Configura el espacio para facilitar la comunicación cara a cara, permite algo de privacidad cuando la necesiten, y haz el trabajo transparente para el equipo y las partes interesadas.
+Configura el espacio para facilitar la comunicación cara a cara, permite algo de [privacidad](/es/blog/pretty-good-privacy/) cuando la necesiten, y haz el trabajo transparente para el equipo y las partes interesadas.
 
 ### Trabajo Energizado
 
@@ -180,7 +180,7 @@ Eres más efectivo en el desarrollo de software cuando estás enfocado y libre d
 
 ### Programación en Parejas
 
-Todo el software de producción lo desarrollan dos personas en la misma máquina. Dos cerebros y cuatro ojos son mejores que un cerebro y dos ojos. Obtienes revisión de código continua y respuestas más rápidas a problemas que podrían bloquear a una persona sola.
+Todo el software de producción lo desarrollan dos personas en la misma máquina. Dos cerebros y cuatro ojos son mejores que un cerebro y dos ojos. Obtienes [revisión de código](/es/blog/pull-request-vs-pair-prog/) continua y respuestas más rápidas a problemas que podrían bloquear a una persona sola.
 
 Los equipos que usan programación en parejas descubren que mejora la calidad sin tomar el doble de tiempo. Resuelven problemas más rápido y se mantienen más enfocados, escribiendo menos código para lograr lo mismo.
 

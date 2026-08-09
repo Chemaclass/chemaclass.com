@@ -19,7 +19,7 @@ related_readings = [
 +++
 
 
-Mi entrevista con **devm.io** sobre Agile y Extreme Programming.
+Mi entrevista con **devm.io** sobre [Agile](/es/blog/what-kills-agility/) y [Extreme Programming](/es/blog/update-your-team-to-be-more-extreme/).
 
 <!-- more -->
 
@@ -31,7 +31,7 @@ Mi entrevista con **devm.io** sobre Agile y Extreme Programming.
 
 Chema: Mi nombre es Jose Maria Valera Reales, pero todos me llaman Chema. Soy originalmente de España pero vivo en Berlín desde 2015. He estado trabajando como desarrollador de software desde 2013. En los últimos años, me he enfocado en alcanzar la excelencia y descubrir cómo ayudar a mis compañeros y, con ellos, a toda la comunidad de software a mejorar en nuestra profesión.
 
-Actualmente soy Tech Lead en [Lautsprecher Teufel GmbH](https://teufel.de/), donde trabajo con el equipo del webshop de e-commerce. También disfruto del [software de código abierto](https://github.com/Chemaclass), así que me gusta crear pull requests para otros repositorios, y también me encanta cuando recibo pull requests de otros.
+Actualmente soy [Tech Lead](/es/blog/tech-lead/) en [Lautsprecher Teufel GmbH](https://teufel.de/), donde trabajo con el equipo del webshop de e-commerce. También disfruto del [software de código abierto](https://github.com/Chemaclass), así que me gusta crear pull requests para otros repositorios, y también me encanta cuando recibo pull requests de otros.
 
 ## ¿Cómo describirías Extreme Programming? ¿Qué lo hace tan "extremo"?
 
@@ -53,7 +53,7 @@ El término "kata" proviene de los movimientos repetitivos hechos en karate que 
 
 Las katas existen para ayudar a los desarrolladores a obtener los mismos beneficios que obtendrías de la práctica en cualquier otra profesión. Estos ejercicios simples de simulación te permiten experimentar y aprender sin la presión de PROD. No hay respuestas correctas o incorrectas en ninguna kata de software: el beneficio viene del proceso, no del resultado.
 
-Hay katas para ayudarte a mejorar tus habilidades de refactoring (como Gilded Rose Refactoring Kata de Emily Bache) o tus habilidades de testing (fáciles como Fizz Buzz o Roman Numerals, o más avanzadas como Bank Kata de Sandro Mancuso). También son geniales para construir confianza al programar con otros, observar y practicar diferentes roles colaborativamente, fomentar la cohesión del equipo, etc.
+Hay katas para ayudarte a mejorar tus habilidades de [refactoring](/es/blog/the-art-of-refactoring/) (como Gilded Rose Refactoring Kata de Emily Bache) o tus habilidades de testing (fáciles como Fizz Buzz o Roman Numerals, o más avanzadas como Bank Kata de Sandro Mancuso). También son geniales para construir confianza al programar con otros, observar y practicar diferentes roles colaborativamente, fomentar la cohesión del equipo, etc.
 
 ## ¿Qué papel juegan los métodos Agile en el desarrollo de software para ti?
 

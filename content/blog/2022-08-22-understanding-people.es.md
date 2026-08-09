@@ -26,9 +26,9 @@ Uno de los mayores retos es evitar malentendidos y aceptar que los demás no pie
 
 ## Percepciones diferentes
 
-Cada persona tiene experiencias y antecedentes distintos. Todos percibimos la realidad de forma diferente. Ser consciente de esto es el primer paso para entender tu rol en la comunicación con otros, y para desarrollar empatía.
+Cada persona tiene experiencias y antecedentes distintos. Todos percibimos la realidad de forma diferente. Ser consciente de esto es el primer paso para entender tu rol en la comunicación con otros, y para desarrollar [empatía](/es/blog/people-skills/).
 
-Muchas veces, el verdadero problema detrás de la fricción en un equipo es la mala comunicación. A veces nadie sabe cómo ni por qué dos miembros del equipo ya no se llevan bien. Pero el conflicto es obvio.
+Muchas veces, el verdadero problema detrás de la fricción en un equipo es la mala comunicación. A veces nadie sabe cómo ni por qué dos miembros del equipo ya no se llevan bien. Pero el [conflicto](/es/readings/the-five-dysfunctions-of-a-team/) es obvio.
 
 El problema es que impide al equipo trabajar con eficacia. La razón suele ser la **incapacidad de entender las motivaciones y problemas del otro**.
 

@@ -60,9 +60,9 @@ Code Katas exists to help developers get the same benefits as practicing in any 
 
 ### Motivation
 
-- Work on refactoring techniques.
+- Work on [refactoring](/blog/the-art-of-refactoring/) techniques.
 - Work on TDD examples.
-- Work on SOLID principles.
+- Work on [SOLID](/readings/clean-architecture/) principles.
 - Work on live coding sessions.
 - Work on driver-navigator concepts.
 - Work on team cohesion.

@@ -86,7 +86,7 @@ Being senior in our software industry is not about "the number of years of exper
 - How well do you understand **delivering value constantly** in small chunks? The sooner you deliver value, the
   sooner you get feedback about it.
 - How deep is your **technical knowledge** of quality software and the trade-offs to get there?
-  SOLID principles, clean code, TDD, refactoring as part of your daily job, low coupling, high cohesion, appropriate
+  [SOLID](/readings/clean-architecture/) principles, clean code, [TDD](/blog/test-driven-development/), [refactoring](/blog/the-art-of-refactoring/) as part of your daily job, low coupling, high cohesion, appropriate
   data structures, and choosing the right solution (KISS, YAGNI...).
 - How well do you adapt and **cope with change**? Change is inevitable, so we must learn to
   deal with it, especially the parts we cannot control.

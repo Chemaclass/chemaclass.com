@@ -25,7 +25,7 @@ related_readings = [
 +++
 
 
-In the early '90s, with the internet on the rise, a group called the Cypherpunks emerged to defend digital privacy. They pushed for encryption and privacy, shaping our digital world with their vision.
+In the early '90s, with the internet on the rise, a group called the Cypherpunks emerged to defend digital privacy. They pushed for [encryption](/blog/pretty-good-privacy/) and privacy, shaping our digital world with their vision.
 
 <!-- more -->
 
@@ -41,7 +41,7 @@ Far from being a formal organization, the Cypherpunks were a diverse assembly of
 - **Julian Assange**, later known for WikiLeaks, participated in these discussions.
 - **Phil Zimmermann** revolutionized email privacy with his creation of PGP.
 - **Jude Milhon** (St. Jude), a hacker and writer, coined the term "cypherpunk" together with Eric Hughes.
-- **Nick Szabo** contributed significantly to digital contracts and currencies, conceptualizing "bit gold" before Bitcoin.
+- **Nick Szabo** contributed significantly to digital contracts and currencies, conceptualizing "bit gold" before [Bitcoin](/blog/bitcoin-fundamentals/).
 - **Hal Finney**, an early Bitcoin developer, worked on cryptographic software including PGP, influencing the privacy tech landscape.
 - **Adam Back** introduced Hashcash, which later inspired Bitcoin's proof-of-work, while actively engaging in cypherpunk dialogues on privacy.
 - **Wei Dai** proposed "b-money," an early idea for anonymous digital cash systems, which influenced Bitcoin's development.
@@ -130,7 +130,7 @@ Bitcoin has revolutionized our understanding of money, privacy, and security:
 
 - **Decentralized Control**: Bitcoin isn't run by any bank or government, which fits perfectly with the cypherpunk's skepticism of centralized power.
 - **Privacy**: While not completely anonymous, Bitcoin transactions use pseudonyms, offering some protection from financial oversight.
-- **Immutable Transactions**: Once a transaction is on the blockchain, it's nearly unchangeable, fostering trust in digital dealings.
+- **Immutable Transactions**: Once a transaction is on the [blockchain](/blog/how-bitcoin-works/), it's nearly unchangeable, fostering trust in digital dealings.
 
 Bitcoin has brought cypherpunk ideals to life, sparking global discussions on financial privacy, money's nature, and cryptography's transformative power. With developments like the [Lightning Network](https://en.wikipedia.org/wiki/Lightning_Network) for faster, private transactions and [Taproot](/blog/programmable-money/#p2tr-pay-to-taproot-taproot-up) for enhanced transaction privacy, Bitcoin continues to evolve.
 

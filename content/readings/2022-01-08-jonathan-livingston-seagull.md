@@ -17,7 +17,7 @@ related_readings = [
 +++
 
 <!-- more -->
-A fable in novella form about a seagull who is trying to learn about life and flight, and a homily about self-perfection.
+A fable in [novella](/readings/metamorphosis/) form about a seagull who is trying to learn about life and flight, and a homily about [self-perfection](/readings/atomic-habits/).
 
 ## Plot
 

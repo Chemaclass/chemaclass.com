@@ -18,11 +18,11 @@ related_readings = [
 ]
 +++
 
-Con miles de proyectos cripto por ahí, dicen que Bitcoin es viejo y aburrido. Nada más lejos de la realidad. Este libro te guía por los últimos desarrollos de Bitcoin desde la perspectiva de uno de sus desarrolladores.
+Con miles de proyectos cripto por ahí, dicen que [Bitcoin](/es/blog/bitcoin-fundamentals/) es viejo y aburrido. Nada más lejos de la realidad. Este libro te guía por los últimos desarrollos de Bitcoin desde la perspectiva de uno de sus desarrolladores.
 
 <!-- more -->
 
-Aprenderás sobre Taproot (el último soft fork), los retos de mantener software open source libre de bugs y malware, nuevas formas de proteger nodos contra atacantes, cómo gestionar una blockchain que no para de crecer, y mucho más.
+Aprenderás sobre Taproot (el último soft fork), los retos de mantener software [open source](/es/blog/open-source-software/) libre de bugs y malware, nuevas formas de proteger nodos contra atacantes, cómo gestionar una [blockchain](/es/blog/how-bitcoin-works/) que no para de crecer, y mucho más.
 
 El libro enlaza a más de doscientos artículos, videos, podcasts e incluso código fuente. Y gracias a los códigos QR junto a cada enlace, nunca tendrás que escribir URLs largas.
 

@@ -17,7 +17,7 @@ related_readings = [
 +++
 
 
-En diciembre de 2015, PHP 7 introdujo las declaraciones de tipos escalares y la bandera strict types. ¿Qué es esto?
+En diciembre de 2015, [PHP](/es/blog/typed-arrays-php/) 7 introdujo las declaraciones de tipos escalares y la bandera strict types. ¿Qué es esto?
 
 <!-- more -->
 

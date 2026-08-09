@@ -26,7 +26,7 @@ Nietzsche proposed a thought experiment in *The Gay Science*. Imagine a demon vi
 
 He did not mean it literally. He meant it as a test. Can you live in a way that you would willingly relive?
 
-Years passed before that idea found me again. Not as philosophy. As pattern.
+Years passed before that idea found me again. Not as [philosophy](/readings/meditations/). As pattern.
 
 ## Events That Rhyme
 
@@ -56,7 +56,7 @@ That is the gift. Not predictive wisdom about the world. Diagnostic awareness ab
 
 ## Exposure Is the Variable
 
-The people who get this benefit are not the smart ones. They are the exposed ones. The ones who took the difficult job, said yes to the hard conversation, sat with uncomfortable feedback, moved cities when it would have been easier to stay, accepted the project they were not ready for.
+The people who get this benefit are not the smart ones. They are the exposed ones. The ones who took the difficult job, said yes to the hard conversation, sat with uncomfortable [feedback](/blog/ship-show-ask/), moved cities when it would have been easier to stay, accepted the project they were not ready for.
 
 > Patterns cannot rhyme if you only ever live one shape.
 
@@ -66,7 +66,7 @@ This is why staying open matters. [Welcoming change](@/blog/2021-03-01-embrace-t
 
 Ten years ago I was [writing a book](/books/) of my thoughts. I wrote every few days, just to read it back the next morning and understand myself better. I am not that person anymore.
 
-Every beginning carries the shape of an end. Accepting that lets you stop chasing finality and pay attention to the process itself.
+Every beginning carries the shape of an end. Accepting that lets you stop chasing finality and pay [attention](/readings/digital-minimalism/) to the process itself.
 
 Process over goal. The role you take matters less than the persona you build inside it. The impact you leave is not what you intended, it is the shape of the absence you create when you are gone.
 

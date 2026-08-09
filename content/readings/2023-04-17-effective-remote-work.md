@@ -19,7 +19,7 @@ related_readings = [
 
 <!-- more -->
 
-An effective remote work environment is about treating everyone as remote, with everyone in mind having the same level, equality, and information.
+An effective [remote work environment](/readings/peopleware/) is about treating everyone as remote, with everyone in mind having the same level, [equality](/readings/team-topologies/), and information.
 
 ---
 

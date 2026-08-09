@@ -45,7 +45,7 @@ His defense was clever: he published the PGP source code in a book. Books are pr
 - Generates public and private keys for secure key exchange
 - Supports various encryption algorithms and hash functions
 
-Today, PGP lives on as **OpenPGP** (the standard) and **GPG** (GNU Privacy Guard, the free implementation). When you verify a software download or sign a git commit, you're often using GPG.
+Today, PGP lives on as **OpenPGP** (the standard) and **[GPG](/blog/verified-git-commits/)** (GNU Privacy Guard, the free implementation). When you verify a software download or sign a git commit, you're often using GPG.
 
 ## How it works
 

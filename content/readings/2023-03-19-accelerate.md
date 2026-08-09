@@ -59,7 +59,7 @@ Accelerate explores how software development teams using **Lean Software** and *
 - Encourage and Support Learning
 - Support and Facilitate Collaboration among Teams
 - Provide Resources and Tools that Make Work Meaningful
-- Support or Embody Transformational Leadership
+- Support or Embody Transformational [Leadership](/blog/the-beauty-of-leadership/)
 
 ## Four Key Metrics
 

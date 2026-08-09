@@ -19,7 +19,7 @@ related_readings = [
 <!-- more -->
 
 What is coupling, and why is it bad? What is decoupling, and how to do it efficiently? This book is a compilation of
-strategies to decouple your domain code from those infrastructure details, so you can enjoy a healthier system in the
+strategies to decouple your [domain code](/readings/domain-driven-design-distilled/) from those [infrastructure](/readings/clean-architecture/) details, so you can enjoy a healthier system in the
 long run.
 
 This book will teach you how to create [**PHPStan**](https://phpstan.org/) rules from no knowledge, and then it will 

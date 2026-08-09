@@ -19,7 +19,7 @@ related_readings = [
 <!-- more -->
 
 I really enjoy the ideas and experiments presented in the book. It points out a lot of "big elephants in many rooms" for
-a lot of teams claiming to do Scrum or Agile in a really questionable way, aka: Zombie Scrum.
+a lot of teams claiming to do [Scrum](/blog/ignoring-scrum-to-get-more-agile/) or [Agile](/blog/what-kills-agility/) in a really questionable way, aka: Zombie Scrum.
 
 ### Summary
 

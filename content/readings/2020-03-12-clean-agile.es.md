@@ -18,7 +18,7 @@ related_readings = [
 
 <!-- more -->
 
-Clean Agile viene de Uncle Bob, uno de los padres fundadores de Agile. Fue una de las diecisiete personas que escribieron el [Manifiesto Ágil](https://agilemanifesto.org/) en 2001.
+Clean [Agile](/es/blog/what-kills-agility/) viene de Uncle Bob, uno de los padres fundadores de Agile. Fue una de las diecisiete personas que escribieron el [Manifiesto Ágil](https://agilemanifesto.org/) en 2001.
 
 ---
 

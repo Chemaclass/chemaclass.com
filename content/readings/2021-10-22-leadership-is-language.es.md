@@ -18,7 +18,7 @@ related_readings = [
 
 Un manual radical para empoderar a tu gente y poner a tu equipo en un camino de mejora continua.
 
-El ex comandante de submarino [L. David Marquet](https://x.com/ldavidmarquet) analiza el hundimiento del El Faro, uno de los desastres marinos más investigados. De ahí extrae ideas clave sobre liderazgo y lenguaje.
+El ex comandante de submarino [L. David Marquet](https://x.com/ldavidmarquet) analiza el hundimiento del El Faro, uno de los desastres marinos más investigados. De ahí extrae ideas clave sobre [liderazgo](/es/blog/the-beauty-of-leadership/) y lenguaje.
 
 <!-- more -->
 

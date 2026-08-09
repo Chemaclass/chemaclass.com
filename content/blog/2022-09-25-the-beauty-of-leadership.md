@@ -48,7 +48,7 @@ etc. Managers manage *things*. Leaders lead **people**.
 
 ## What is leadership?
 
-> "A leader is someone who has followers." Peter Drucker.
+> "A leader is someone who has followers." Peter [Drucker](/readings/the-essential-drucker/).
 
 This definition is too simplistic and can be dangerous. Just because you have "under you" some people that do what you
 say simply "following orders" doesn't mean that you are a leader. You might be a commander, but not necessarily a
@@ -65,7 +65,7 @@ Empowering others is essential, but it's missing the vision or common goal.
 
 > "Leadership is influence." John Maxwell.
 
-A manager has the power to fire team members, which provides a lot of influence. Same as a robber with a gun who has 
+A [manager](/readings/the-manager-path/) has the power to fire team members, which provides a lot of influence. Same as a robber with a gun who has 
 "influence" over their victims. We are missing the source of influence.
 
 ### So, what about combining them all?

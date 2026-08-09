@@ -20,7 +20,7 @@ related_readings = [
 
 <!-- more -->
 
-A basic and straightforward overview of what Agile is, presenting some framework examples that are well known today, such as Scrum or Kanban, everything condensed in a 100's pages book that you can read in a couple of hours.
+A basic and straightforward overview of what [Agile](/blog/what-kills-agility/) is, presenting some framework examples that are well known today, such as [Scrum](/blog/ignoring-scrum-to-get-more-agile/) or Kanban, everything condensed in a 100's pages book that you can read in a couple of hours.
 
 ## Chapters
 
@@ -46,7 +46,7 @@ A basic and straightforward overview of what Agile is, presenting some framework
 
 ### Key takeaways
 
-Projects that followed a **Waterfall** methodology tended to exceed their expenses over time, while the product delivered was below standard and difficult to use.
+Projects that followed a **[Waterfall](/blog/what-is-waterfall/)** methodology tended to exceed their expenses over time, while the product delivered was below standard and difficult to use.
 
 That situation originated that a group of developers signed a brief, 68-word manifesto in 2001.
 
@@ -71,7 +71,7 @@ During the 70' and 80', **Iterations and Incremental Development (IID)** proved 
 
 A few years later, a new method surged **Rapid Iterative Production Prototyping (RIPP)**, later called **Rapid Application Development (RAD)**, which they claimed *"Working software in 90 days... or your money back."*
 
-Lastly, during the 90' **Extreme Programming (XP)**, **Scrum**, and **Crystal** were defined in detail.
+Lastly, during the 90' **[Extreme Programming](/blog/update-your-team-to-be-more-extreme/) (XP)**, **Scrum**, and **Crystal** were defined in detail.
 
 These distinct yet similar solutions were decentralized, working independently of one another. This realization led to that night in Utag the unification of these ideas under one banner, in one document.
 

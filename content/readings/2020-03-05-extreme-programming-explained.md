@@ -26,7 +26,7 @@ related_readings = [
 
 ## Definition
 
-Extreme Programming (XP) is an agile software development framework that aims to produce higher quality software, and
+[Extreme Programming](/blog/update-your-team-to-be-more-extreme/) (XP) is an agile software development framework that aims to produce higher quality software, and
 higher quality of life for the development team. XP is the most specific of the agile frameworks regarding appropriate
 engineering practices for software development.
 
@@ -216,9 +216,9 @@ You are most effective at software development and all knowledge work when you a
 
 Pair Programming means all production software is developed by two people sitting at the same machine. The idea behind
 this practice is that two brains and four eyes are better than one brain and two eyes. You effectively get a continuous
-code review and quicker response to nagging problems that may stop one person dead in their tracks.
+[code review](/blog/pull-request-vs-pair-prog/) and quicker response to nagging problems that may stop one person dead in their tracks.
 
-Teams that have used pair programming have found that it improves quality and does not actually take twice as long
+Teams that have used [pair programming](/blog/effective-pair-programming/) have found that it improves quality and does not actually take twice as long
 because they are able to work through problems quicker, and they stay more focused on the task at hand, thereby creating
 less code to accomplish the same thing.
 

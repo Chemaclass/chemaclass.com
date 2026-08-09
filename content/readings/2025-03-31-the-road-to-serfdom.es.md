@@ -70,7 +70,7 @@ Cada paso parece inofensivo, pero se acumulan. Cuando la gente depende demasiado
 
 ## ¿Sigue vigente Hayek?
 
-Sin duda. El mundo ha cambiado, pero la tensión entre libertad y control sigue ahí. Hayek nos recuerda que la libertad no desaparece de golpe. Se desvanece cuando dejamos de prestarle atención.
+Sin duda. El mundo ha cambiado, pero la tensión entre libertad y control sigue ahí. Hayek nos recuerda que la libertad no desaparece de golpe. Se desvanece cuando dejamos de prestarle [atención](/es/readings/digital-minimalism/).
 
 Claro, algo de gobierno hace falta. Pero su advertencia permanece: demasiado control, aunque venga con buenas intenciones, puede llevarnos donde no queremos estar.
 

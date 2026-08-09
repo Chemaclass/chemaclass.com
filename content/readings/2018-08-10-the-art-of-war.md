@@ -19,7 +19,7 @@ related_readings = [
 <!-- more -->
 
 The text is composed of 13 chapters, each of which is devoted to one aspect of warfare. It is commonly thought of as a
-definitive work on military strategy and tactics.
+definitive work on [military strategy](/readings/the-art-of-leadership/) and [tactics](/readings/start-with-why/).
 
 It has been the most famous and influential of China's Seven Military Classics, and "for the last two thousand years it remained the most important military treatise in Asia, where even the
 common people knew it by name." 

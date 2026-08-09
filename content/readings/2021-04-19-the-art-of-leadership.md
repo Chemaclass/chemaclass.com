@@ -26,10 +26,10 @@ related_readings = [
 
 ### Some nice keynotes
 
-- Leadership practices are small things done repetitively over time.
+- [Leadership](/blog/the-beauty-of-leadership/) practices are small things done repetitively over time.
 - Empathy is a powerful skillset.
 - The practice of one on ones is important in connecting to a team.
-- Asking for feedback can build trust and relationships.
+- Asking for [feedback](/blog/ship-show-ask/) can build [trust](/readings/the-five-dysfunctions-of-a-team/) and relationships.
 - Respond to feedback with a thank you and follow up comprehension questions.
 - Feedback is a gift.
 - It's not personal, it's professional.

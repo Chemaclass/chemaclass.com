@@ -26,7 +26,7 @@ Nietzsche propuso un experimento mental en *La gaya ciencia*. Imagina que un dem
 
 No lo decía en sentido literal. Lo decía como prueba. ¿Puedes vivir de tal forma que querrías revivirla?
 
-Pasaron años antes de que esa idea volviera a encontrarme. No como filosofía. Como patrón.
+Pasaron años antes de que esa idea volviera a encontrarme. No como [filosofía](/es/readings/meditations/). Como patrón.
 
 ## Eventos que riman
 
@@ -56,7 +56,7 @@ Ese es el regalo. No sabiduría predictiva sobre el mundo. Conciencia diagnósti
 
 ## La exposición es la variable
 
-La gente que recibe este beneficio no son los listos. Son los expuestos. Los que aceptaron el trabajo difícil, dijeron que sí a la conversación difícil, se quedaron con el feedback incómodo en lugar de descartarlo, se mudaron de ciudad cuando habría sido más fácil quedarse, aceptaron el proyecto para el que no estaban listos.
+La gente que recibe este beneficio no son los listos. Son los expuestos. Los que aceptaron el trabajo difícil, dijeron que sí a la conversación difícil, se quedaron con el [feedback](/es/blog/ship-show-ask/) incómodo en lugar de descartarlo, se mudaron de ciudad cuando habría sido más fácil quedarse, aceptaron el proyecto para el que no estaban listos.
 
 > Los patrones no pueden rimar si solo vives una forma.
 

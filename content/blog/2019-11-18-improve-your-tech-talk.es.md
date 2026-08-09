@@ -30,7 +30,7 @@ Por eso estuve pensando en ello e intenté obtener algunas claves para mejorar s
 Para explicar cómo creo que debería ser una buena presentación, abordaré tres temas principales relevantes para estructurar y diseñar tu presentación.
 
 1. Contenido de la presentación: ¿qué mensaje quieres transmitir, a quién y cómo?
-2. Diseño y maquetación: cómo puedes diseñar una presentación fácil de seguir que apoye tu charla en lugar de desviar la atención de lo que realmente intentas decir.
+2. Diseño y maquetación: cómo puedes diseñar una presentación fácil de seguir que apoye tu charla en lugar de desviar la [atención](/es/readings/digital-minimalism/) de lo que realmente intentas decir.
 3. Por último, creo que la audiencia también es responsable de que una charla técnica sea exitosa, así que añadiré un recordatorio sobre el rol y las responsabilidades de los oyentes.
 
 ![persona hablando ante una audiencia](/images/blog/2019-11-18/talking.webp)

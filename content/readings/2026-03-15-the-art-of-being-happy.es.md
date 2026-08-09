@@ -16,7 +16,7 @@ related_readings = [
 ]
 +++
 
-Schopenhauer es probablemente el pesimista más famoso de la filosofía. Creía que el sufrimiento es el estado natural de la existencia y que el deseo solo lleva a más deseo. ¿Un libro sobre felicidad de este hombre? Suena a contradicción. No lo es. Es de lo más práctico que escribió.
+Schopenhauer es probablemente el pesimista más famoso de la [filosofía](/es/readings/meditations/). Creía que el [sufrimiento](/es/readings/mans-search-for-meaning/) es el estado natural de la existencia y que el deseo solo lleva a más deseo. ¿Un libro sobre felicidad de este hombre? Suena a contradicción. No lo es. Es de lo más práctico que escribió.
 
 <!-- more -->
 
@@ -45,7 +45,7 @@ El primer grupo domina a los otros dos. Una persona rica con mal temperamento se
 
 Aquí Schopenhauer suena mucho a los estoicos y los budistas. ¿El motor de la insatisfacción? El deseo. El truco no es conseguir todo lo que quieres. Es querer menos.
 
-> "La riqueza es como el agua de mar: cuanto más bebemos, más sed tenemos."
+> "La [riqueza](/es/readings/rich-dad-poor-dad/) es como el agua de mar: cuanto más bebemos, más sed tenemos."
 
 No es ascetismo por el ascetismo. Es una estrategia práctica: **reducir la superficie expuesta a la decepción.** Cuanto menos necesitas, menos puede salir mal.
 

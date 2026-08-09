@@ -18,11 +18,11 @@ related_readings = [
 +++
 
 
-I wanted to learn a new language, so after trying some, I ended up with Golang as one of my favorites for its simplicity and capabilities. It has features I haven’t used in years, like multithreading and concurrency.
+I wanted to learn a new language, so after trying some, I ended up with Golang as one of my favorites for its [simplicity](/readings/the-pragmatic-programmer/) and capabilities. It has features I haven’t used in years, like multithreading and concurrency.
 
 <!-- more -->
 
-[Golang](https://go.dev/) (or `Go`) supports concurrency through lightweight threads called goroutines. These are different from traditional multithreading, like in Java, where you have to handle sync and coordination to manage shared resources safely. In contrast, Go's goroutines are lightweight, managed by the Go runtime, and cheaper to create and manage.
+[Golang](https://go.dev/) (or `Go`) supports concurrency through lightweight threads called goroutines. These are different from traditional multithreading, like in [Java](/blog/great-engineering/), where you have to handle sync and coordination to manage shared resources safely. In contrast, Go's goroutines are lightweight, managed by the Go runtime, and cheaper to create and manage.
 
 While parallelism is **doing** several things simultaneously, concurrency is about **dealing** with several things at the same time. When we talk about concurrency and parallelism, we don’t know the order of things. We don’t know what’s going to happen first or what’s going to end first. There is an undefined order of execution.
 

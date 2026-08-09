@@ -64,7 +64,7 @@ Toda acción tiene efectos que se ven y efectos que no. Frédéric Bastiat const
 
 Un niño rompe el cristal de una tienda. Un curioso se encoge de hombros: bueno, al menos le da trabajo al cristalero. Cierto. Esa es la parte que se ve.
 
-Pero el dinero que el tendero gastó en el cristal quizá habría comprado zapatos nuevos. El zapatero se quedó sin ese pedido. Esa es la [parte que no se ve](https://www.econlib.org/library/Bastiat/basEss1.html). El cristal no es riqueza nueva. Es riqueza movida, y en parte destruida.
+Pero el dinero que el tendero gastó en el cristal quizá habría comprado zapatos nuevos. El zapatero se quedó sin ese pedido. Esa es la [parte que no se ve](https://www.econlib.org/library/Bastiat/basEss1.html). El cristal no es [riqueza](/es/readings/rich-dad-poor-dad/) nueva. Es riqueza movida, y en parte destruida.
 
 {% deep_dive(title="Lo que se ve y lo que no se ve (1850)") %}
 La regla de Bastiat: todo acto tiene un efecto que ves ahora y una cadena de efectos que no ves. El cristal roto abre el ensayo, y después aplica la misma prueba a impuestos, subvenciones, obras públicas y aranceles. El truco siempre es el mismo: contar lo que la política crea e ignorar lo que impide. El mal economista se queda en el primer efecto. El bueno cuenta toda la cadena.

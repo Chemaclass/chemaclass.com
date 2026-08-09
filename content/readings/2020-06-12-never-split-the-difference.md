@@ -27,10 +27,10 @@ across the full spectrum of human endeavor and proved their effectiveness.
 ## Takeaways
 
 1. Negotiation begins with listening, making it about the other people, validating their emotions, and creating enough
-   trust and safety for a real conversation to begin.
+   [trust](/readings/the-five-dysfunctions-of-a-team/) and safety for a real conversation to begin.
 2. Use mirrors to encourage the other side to empathize and bond with you, keep people talking, buy your side time to
    regroup, and encourage your counterparts to reveal their strategy.
-3. Tactical empathy brings our attention to both the emotional obstacles and the potential pathways to getting an
+3. Tactical [empathy](/blog/people-skills/) brings our [attention](/readings/digital-minimalism/) to both the emotional obstacles and the potential pathways to getting an
    agreement done.
 4. Giving someone's emotion a name, otherwise known as labeling, gets you close to someone without asking about external
    factors you know nothing about.

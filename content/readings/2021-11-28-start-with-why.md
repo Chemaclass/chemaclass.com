@@ -16,7 +16,7 @@ related_readings = [
 ]
 +++
 
-*Start with Why* asks (and answers) the questions: why are some people and organizations more innovative, more
+*Start with Why* asks (and answers) the questions: why are some people and [organizations](/readings/the-infinite-game/) more innovative, more
 influential, and more profitable than others? Why do some command greater loyalty from customers and employees alike?
 Even among the successful, why are so few able to repeat their success over and over?
 
@@ -24,7 +24,7 @@ Even among the successful, why are so few able to repeat their success over and 
 
 ---
 
-The ability to inspire those around you and to achieve remarkable things starts with WHY. Those who start with WHY never
+The ability to [inspire](/readings/leaders-eat-last/) those around you and to achieve remarkable things starts with WHY. Those who start with WHY never
 manipulate, they inspire.
 
 People like Martin Luther King Jr., Steve Jobs, and the Wright Brothers had little in common, but they all started with

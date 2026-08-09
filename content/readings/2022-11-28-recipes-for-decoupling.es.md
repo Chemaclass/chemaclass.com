@@ -25,7 +25,7 @@ Aprenderás a crear reglas de [**PHPStan**](https://phpstan.org/) desde cero. Ad
 - frameworks cli
 - validación de formularios
 - orm y base de datos
-- framework de testing
+- framework de [testing](/es/blog/the-art-of-testing/)
 
 Lee más sobre el libro: [matthiasnoback.nl/book/recipes-for-decoupling/](https://matthiasnoback.nl/book/recipes-for-decoupling/)
 

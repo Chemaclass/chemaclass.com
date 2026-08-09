@@ -19,7 +19,7 @@ related_readings = [
 
 <!-- more -->
 
-Kim Scott, ex líder de Google, desarrolló esta filosofía de gestión. Es un curso intensivo sobre cómo ser un gran manager: empático y orientado a resultados. La clave está en crear un entorno donde la gente se sienta segura para decir lo que piensa y hacer su trabajo con respeto.
+Kim Scott, ex líder de Google, desarrolló esta [filosofía](/es/readings/meditations/) de gestión. Es un curso intensivo sobre cómo ser un gran [manager](/es/readings/the-manager-path/): empático y orientado a resultados. La clave está en crear un entorno donde la gente se sienta segura para decir lo que piensa y hacer su trabajo con respeto.
 
 ### Ideas clave
 
@@ -30,7 +30,7 @@ Kim Scott, ex líder de Google, desarrolló esta filosofía de gestión. Es un c
 ### Las dos dimensiones
 
 - **Preocuparse personalmente**: Mostrar interés genuino en la vida, bienestar y metas de las personas. Ser humano y empático.
-- **Desafiar directamente**: Dar feedback específico, oportuno y útil, que sea amable y claro a la vez. Ser directo y orientado a resultados.
+- **Desafiar directamente**: Dar [feedback](/es/blog/ship-show-ask/) específico, oportuno y útil, que sea amable y claro a la vez. Ser directo y orientado a resultados.
 
 ### Los tres comportamientos a evitar
 

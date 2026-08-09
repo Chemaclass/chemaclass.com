@@ -19,13 +19,13 @@ related_readings = [
 
 <!-- more -->
 
-D. Michael Abrashoff comandó el USS Benfold, un destructor de misiles guiados. En este libro cuenta cómo transformó el rendimiento y la cultura de su barco aplicando principios de liderazgo centrados en las personas.
+D. Michael Abrashoff comandó el USS Benfold, un destructor de misiles guiados. En este libro cuenta cómo transformó el rendimiento y la cultura de su barco aplicando principios de [liderazgo](/es/blog/the-beauty-of-leadership/) centrados en las personas.
 
 ## Puntos clave
 
 - **Dar poder al equipo**: Cuando la gente siente que confían en ella, se apropia de su trabajo y rinde mejor.
 
-- **Escuchar y comunicar**: La escucha activa y la comunicación abierta construyen confianza. Abrashoff se esforzó por conocer las opiniones y preocupaciones de su tripulación.
+- **Escuchar y comunicar**: La escucha activa y la comunicación abierta construyen [confianza](/es/readings/the-five-dysfunctions-of-a-team/). Abrashoff se esforzó por conocer las opiniones y preocupaciones de su tripulación.
 
 - **Liderar con el ejemplo**: Los líderes marcan el estándar con sus acciones. Abrashoff trabajó para ser el modelo que esperaba de los demás.
 

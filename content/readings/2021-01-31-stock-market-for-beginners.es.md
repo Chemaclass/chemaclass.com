@@ -18,7 +18,7 @@ related_readings = [
 
 <!-- more -->
 
-- Conceptos básicos del mercado de valores
+- Conceptos básicos del [mercado de valores](/es/readings/one-up-on-wall-street/)
 - Análisis fundamental, de industria y de empresas
-- Estilos de inversión: valor, crecimiento e ingresos
+- [Estilos de inversión](/es/readings/the-psychology-of-money/): valor, crecimiento e ingresos
 - Venta en corto, compra con margen, day trading

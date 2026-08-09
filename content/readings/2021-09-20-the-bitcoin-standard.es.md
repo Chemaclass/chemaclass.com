@@ -25,7 +25,7 @@ related_readings = [
 
 <!-- more -->
 
-El libro analiza el contexto histórico de Bitcoin, las propiedades económicas que lo hicieron crecer tan rápido, y sus posibles implicaciones económicas, políticas y sociales.
+El libro analiza el contexto histórico de [Bitcoin](/es/blog/bitcoin-fundamentals/), las propiedades económicas que lo hicieron crecer tan rápido, y sus posibles implicaciones económicas, políticas y sociales.
 
 Bitcoin es un invento de la era digital, pero el problema que resuelve es tan antiguo como la humanidad: transferir valor a través del tiempo y el espacio. Ammous nos lleva por la historia de las tecnologías que han funcionado como dinero. Desde piedras y conchas, pasando por metales y monedas, hasta el patrón oro y la deuda gubernamental moderna.
 
@@ -38,7 +38,7 @@ El capítulo final responde las preguntas más comunes sobre Bitcoin:
 - ¿Quién controla Bitcoin y pueden cambiarlo?
 - ¿Cómo se puede matar a Bitcoin?
 
-El patrón Bitcoin es el recurso esencial para entender esta alternativa descentralizada, apolítica y de libre mercado frente a los bancos centrales.
+El patrón Bitcoin es el recurso esencial para entender esta alternativa descentralizada, apolítica y de [libre mercado](/es/blog/laissez-faire-laissez-passer/) frente a los bancos centrales.
 
 ---
 

@@ -18,7 +18,7 @@ related_readings = [
 ]
 +++
 
-Lyn Alden cuenta la historia del dinero desde una mirada tecnológica. Analiza desde sistemas basados en materias primas hasta monedas fiat modernas y alternativas como Bitcoin.
+Lyn Alden cuenta la historia del dinero desde una mirada tecnológica. Analiza desde sistemas basados en materias primas hasta monedas fiat modernas y alternativas como [Bitcoin](/es/blog/bitcoin-fundamentals/).
 
 <!-- more -->
 

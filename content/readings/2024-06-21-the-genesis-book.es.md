@@ -18,7 +18,7 @@ related_readings = [
 ]
 +++
 
-Bitcoin no surgió de la nada. Durante décadas antes de Satoshi Nakamoto, científicos informáticos, activistas de la privacidad y economistas heterodoxos intentaron crear dinero digital que funcionara sin control gubernamental. Este libro cuenta la historia de las personas y proyectos que inspiraron el primer sistema de efectivo electrónico P2P exitoso del mundo.
+[Bitcoin](/es/blog/bitcoin-fundamentals/) no surgió de la nada. Durante décadas antes de Satoshi Nakamoto, científicos informáticos, activistas de la [privacidad](/es/blog/pretty-good-privacy/) y economistas heterodoxos intentaron crear dinero digital que funcionara sin control gubernamental. Este libro cuenta la historia de las personas y proyectos que inspiraron el primer sistema de efectivo electrónico P2P exitoso del mundo.
 
 <!-- more -->
 
@@ -55,7 +55,7 @@ Bitcoin no surgió de la nada. Durante décadas antes de Satoshi Nakamoto, cient
 
 > El banco central declaró a la aseguradora "demasiado grande para caer" y, junto con el Tesoro de EE.UU., la rescató con una inyección de 68 mil millones de dólares (más otros 112 mil millones en garantías).
 
-> Si el análisis de Hayek sobre economía monetaria era correcto, Bitcoin podría ayudar a arreglar la economía. Como moneda sin respaldo que operaba sin banco central, bitcoin era dinero completamente homogéneo. Cualquiera podía controlar sus propias monedas, sin preocuparse por ratios de reserva. Y como existía en internet, no tenía fronteras. Cualquiera con conexión podía descargar el software y enviar o recibir transacciones. Esta combinación (dinero homogéneo, sin fronteras y con suministro fijo) es lo que Hayek describió como dinero neutral.
+> Si el análisis de [Hayek](/es/readings/the-road-to-serfdom/) sobre economía monetaria era correcto, Bitcoin podría ayudar a arreglar la economía. Como moneda sin respaldo que operaba sin banco central, bitcoin era dinero completamente homogéneo. Cualquiera podía controlar sus propias monedas, sin preocuparse por ratios de reserva. Y como existía en internet, no tenía fronteras. Cualquiera con conexión podía descargar el software y enviar o recibir transacciones. Esta combinación (dinero homogéneo, sin fronteras y con suministro fijo) es lo que Hayek describió como dinero neutral.
 
 > Bitcoin facilitaría el comercio internacional de forma más directa: solo el comprador, el vendedor y los precios de sus productos se ven afectados, no los niveles de precios de sus países.
 

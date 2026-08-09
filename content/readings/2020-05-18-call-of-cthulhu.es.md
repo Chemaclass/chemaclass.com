@@ -18,4 +18,4 @@ related_readings = [
 
 <!-- more -->
 
-Un horripilante monstruo submarino despierta y amenaza a la humanidad. Este relato dio origen a toda una mitología: los Mitos de Cthulhu, con el poder de sembrar terror incluso en los corazones de los Grandes Antiguos.
+Un horripilante monstruo submarino despierta y amenaza a la humanidad. Este relato dio origen a toda una [mitología](/es/readings/the-day-of-the-triffids/): los Mitos de Cthulhu, con el poder de sembrar [terror](/es/readings/fahrenheit-451/) incluso en los corazones de los Grandes Antiguos.

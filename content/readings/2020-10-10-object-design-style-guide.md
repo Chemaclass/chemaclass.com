@@ -24,4 +24,4 @@ test of time.
 
 <!-- more -->
 
-Examples are in an instantly-familiar pseudocode, teaching techniques you can apply to any OO language, from C++ to PHP.
+Examples are in an instantly-familiar pseudocode, teaching techniques you can apply to any OO language, from C++ to [PHP](/blog/typed-arrays-php/).

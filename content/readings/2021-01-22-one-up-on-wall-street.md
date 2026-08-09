@@ -18,4 +18,4 @@ related_readings = [
 
 <!-- more -->
 
-America's most successful money manager tells how average investors can beat the pros by using what they know. According to Lynch, investment opportunities are everywhere.
+America's most successful money [manager](/readings/the-manager-path/) tells how average investors can beat the pros by using what they know. According to Lynch, investment opportunities are everywhere.

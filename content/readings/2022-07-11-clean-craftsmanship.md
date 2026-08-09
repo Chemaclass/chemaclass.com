@@ -25,7 +25,7 @@ related_readings = [
 
 The book is divided into three parts: the disciplines, the standards, and the ethics.
 
-The 1st part is the most technical one. It guides you with TDD examples, showing how testing can help you to design your code.
+The 1st part is the most technical one. It guides you with [TDD](/blog/test-driven-development/) examples, showing how [testing](/blog/the-art-of-testing/) can help you to design your code.
 
 The 2nd part is about productivity, quality, and courage.
 
@@ -55,9 +55,9 @@ profession. And professions need care and maintenance. I expect us all to be con
 ### Part I: The Disciplines
 
 #### Chapter 1. Craftsmanship
-- Extreme Programming
+- [Extreme Programming](/blog/update-your-team-to-be-more-extreme/)
 - Test-Driven Development
-- Refactoring
+- [Refactoring](/blog/the-art-of-refactoring/)
 - Simple Design
 - Collaborative Programming
 - Acceptance Tests

@@ -37,7 +37,7 @@ Always. In the scope of your current task unless it is an already planned task, 
 
 We do not need to ask permission to refactor. Or do we ask our managers for permission to do our best job?
 
-In order to do proper refactoring, the intention of such refactoring needs to be clear. What is intended to achieve and how? Pair programming (or even pair thinking!) certainly helps in this topic because it syncs two brains on the same topic and that encourages team building and a better understanding of them.
+In order to do proper refactoring, the intention of such refactoring needs to be clear. What is intended to achieve and how? [Pair programming](/blog/effective-pair-programming/) (or even pair thinking!) certainly helps in this topic because it syncs two brains on the same topic and that encourages team building and a better understanding of them.
 
 Applying refactoring in a collaborative way, in a "bidirectional channel", is fundamental when working within a team. Refactoring shouldn't be a taboo topic, on the contrary: it will be helpful in order to unify the goals and the direction of the team code quality.
 
@@ -60,7 +60,7 @@ We usually refactor in order to increase our productivity, making the code more 
 
 Be aware that you should have a pretty good suite of tests covering the logic that you might have changed. Without tests, refactoring can be really risky. Usually, the easier something is to be tested, the easier it is to be replaced or removed.
 
-You can read more about how testing is related to quality here.
+You can read more about how [testing](/blog/the-art-of-testing/) is related to quality here.
 
 ## Why should we do it?
 

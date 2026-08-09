@@ -36,7 +36,7 @@ Primero, deberíamos definir qué es un mock:
 
 > En un test unitario, los objetos mock pueden simular el comportamiento de objetos reales complejos y por lo tanto son útiles cuando es impracticable o imposible incorporar un objeto real en un test unitario.
 
-Mockear tiene sentido en *testing unitario*. Un test de integración pasa por la implementación real, verificando cómo interactúan varias unidades. Estos tests sí pueden hablar con la BD o el sistema de archivos.
+Mockear tiene sentido en *[testing](/es/blog/the-art-of-testing/) unitario*. Un test de integración pasa por la implementación real, verificando cómo interactúan varias unidades. Estos tests sí pueden hablar con la BD o el sistema de archivos.
 Partimos de esta base: *un test unitario es rápido, determinista, no depende de recursos externos y no requiere contexto especial para ejecutarse*.
 
 Los mocks cumplen el contrato de la *interfaz*. Nos permiten testear funcionalidad sin invocar clases colaboradoras complejas.
@@ -85,7 +85,7 @@ Cuando estés escribiendo un test unitario:
 
 {{ youtube(id="RbSqXFUfRMU") }}
 
-"El uso excesivo de mocks lleva a código legacy." - Philippe Boargau
+"El uso excesivo de mocks lleva a [código legacy](/es/blog/testing-effectively-legacy-code/)." - Philippe Boargau
 
 ### ¿Cómo podemos evitar el mocking excesivo?
 
@@ -101,6 +101,6 @@ Cuando estés escribiendo un test unitario:
 
 - [Mocking is a code smell](https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a) - Eric Elliott
 - [When to mock](https://blog.cleancoder.com/uncle-bob/2014/05/10/WhenToMock.html) & [Test Definitions](https://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html) - Uncle Bob
-- [Final classes by default](https://matthiasnoback.nl/2018/09/final-classes-by-default-why/) - Matthias Noback
+- [Final classes by default](https://matthiasnoback.nl/2018/09/final-classes-by-default-why/) - [Matthias Noback](/es/readings/object-design-style-guide/)
 - [The problem with mocks](https://www.seanh.cc/2017/03/17/the-problem-with-mocks/) - Sean Hammond
 - [A Set of Unit Testing Rules](https://www.artima.com/weblogs/viewpost.jsp?thread=126923) - Michael Feathers

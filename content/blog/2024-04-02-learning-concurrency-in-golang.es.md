@@ -18,11 +18,11 @@ related_readings = [
 +++
 
 
-Quería aprender un nuevo lenguaje, así que después de probar algunos, terminé con Golang como uno de mis favoritos por su simplicidad y capacidades. Tiene características que no había usado en años, como multithreading y concurrencia.
+Quería aprender un nuevo lenguaje, así que después de probar algunos, terminé con Golang como uno de mis favoritos por su [simplicidad](/es/readings/the-pragmatic-programmer/) y capacidades. Tiene características que no había usado en años, como multithreading y concurrencia.
 
 <!-- more -->
 
-[Golang](https://go.dev/) (o `Go`) soporta concurrencia mediante hilos ligeros llamados goroutines. Son diferentes del multithreading tradicional de Java, donde hay que manejar sincronización y coordinación para gestionar recursos compartidos de forma segura. Las goroutines son ligeras, las gestiona el runtime de Go, y son más baratas de crear y manejar.
+[Golang](https://go.dev/) (o `Go`) soporta concurrencia mediante hilos ligeros llamados goroutines. Son diferentes del multithreading tradicional de [Java](/es/blog/great-engineering/), donde hay que manejar sincronización y coordinación para gestionar recursos compartidos de forma segura. Las goroutines son ligeras, las gestiona el runtime de Go, y son más baratas de crear y manejar.
 
 El paralelismo es **hacer** varias cosas simultáneamente. La concurrencia es **lidiar** con varias cosas a la vez. En ambos casos, no conocemos el orden de ejecución: no sabemos qué pasará primero ni qué terminará antes.
 

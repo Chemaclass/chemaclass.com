@@ -18,9 +18,9 @@ related_readings = [
 
 <!-- more -->
 
-Aprende a aplicar principios de diseño a tus clases para que sean reutilizables. El libro te enseña a crear paquetes con la cohesión y acoplamiento adecuados, pensados para usuarios y mantenedores.
+Aprende a aplicar principios de diseño a tus clases para que sean reutilizables. El libro te enseña a crear paquetes con la cohesión y [acoplamiento](/es/readings/recipes-for-decoupling/) adecuados, pensados para usuarios y mantenedores.
 
-La primera parte cubre los cinco principios SOLID para mejorar el diseño de clases. La segunda parte entra en las mejores prácticas de diseño de paquetes: principios de cohesión y de acoplamiento.
+La primera parte cubre los cinco principios [SOLID](/es/readings/clean-architecture/) para mejorar el diseño de clases. La segunda parte entra en las mejores prácticas de diseño de paquetes: principios de cohesión y de acoplamiento.
 
 Los principios de cohesión te dicen qué clases van juntas, cuándo dividir un paquete, y cuándo un grupo de clases puede llamarse "paquete". Los de acoplamiento te ayudan a elegir bien las dependencias y evitar ciclos en el grafo de dependencias.
 

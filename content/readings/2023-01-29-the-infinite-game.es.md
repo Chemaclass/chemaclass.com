@@ -22,11 +22,11 @@ related_readings = [
 
 > Los líderes con mentalidad infinita entienden que "el mejor" no es un estado permanente. Se esfuerzan por ser "mejores". Esa palabra sugiere un viaje de mejora constante y nos invita a contribuir con nuestros talentos y energía.
 
-La pregunta clave es: ¿cómo jugamos para tener éxito en el juego en el que estamos? Simon Sinek ofrece un marco para liderar con mentalidad infinita:
+La pregunta clave es: ¿cómo jugamos para tener éxito en el juego en el que estamos? [Simon Sinek](/es/readings/start-with-why/) ofrece un marco para liderar con mentalidad infinita:
 
 1. Causa Justa
-2. Liderazgo valiente
-3. Equipos de confianza
+2. [Liderazgo](/es/blog/the-beauty-of-leadership/) valiente
+3. Equipos de [confianza](/es/readings/the-five-dysfunctions-of-a-team/)
 4. Rival digno
 
 ---

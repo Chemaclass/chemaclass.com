@@ -18,7 +18,7 @@ related_readings = [
 
 <!-- more -->
 
-Este libro te enseña cómo product managers y diseñadores pueden crear productos que realmente impacten la vida de sus clientes. Propone un proceso claro de toma de decisiones para equipos de producto que quieran mejorar continuamente.
+Este libro te enseña cómo [product managers](/es/readings/agile-product-management-with-scrum/) y diseñadores pueden crear productos que realmente impacten la vida de sus [clientes](/es/readings/the-lean-startup/). Propone un proceso claro de toma de decisiones para equipos de producto que quieran mejorar continuamente.
 
 #### Parte 1: ¿Qué es el descubrimiento continuo?
 1. El Qué y Por Qué del Descubrimiento Continuo

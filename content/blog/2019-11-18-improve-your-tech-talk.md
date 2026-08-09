@@ -31,7 +31,7 @@ Therefore, I was thinking about it, and I tried to get some keys to improving th
 To explain how I think a good presentation should look like I will address three main topics that are relevant to structure and design your presentation.
 
 1. Content of the presentation: what message do you want to convey to whom and how?
-2. Design and Layout: how you can design an easy-to-follow presentation that supports your talk instead of taking away the attention from what you are actually trying to say.
+2. Design and Layout: how you can design an easy-to-follow presentation that supports your talk instead of taking away the [attention](/readings/digital-minimalism/) from what you are actually trying to say.
 3. Lastly, I think also the audience is responsible for making a tech talk successful, so I will also add a reminder about the role and responsibilities of the listeners.
 
 ![person talking to an audience](/images/blog/2019-11-18/talking.webp)
@@ -103,6 +103,6 @@ If you have some code to present, consider:
 * Was it worth the time that we all spent in this room?
 * Do we regret the attendance of this meeting?
 
-At the end of the meeting, we should ask these questions in order to improve. Ask other people for their feedback, so we can grow further and together.
+At the end of the meeting, we should ask these questions in order to improve. Ask other people for their [feedback](/blog/ship-show-ask/), so we can grow further and together.
 
 ![audience at a presentation](/images/blog/2019-11-18/footer.webp)

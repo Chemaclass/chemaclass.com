@@ -18,4 +18,4 @@ related_readings = [
 
 <!-- more -->
 
-Peter Lynch, uno de los gestores de fondos más exitosos de Estados Unidos, explica cómo el inversor común puede ganarle a los profesionales usando lo que ya sabe. Las oportunidades de inversión están en todas partes.
+Peter Lynch, uno de los gestores de fondos más exitosos de Estados Unidos, explica cómo el [inversor](/es/readings/stock-market-for-beginners/) común puede ganarle a los profesionales usando lo que ya sabe. Las [oportunidades](/es/readings/the-psychology-of-money/) de inversión están en todas partes.

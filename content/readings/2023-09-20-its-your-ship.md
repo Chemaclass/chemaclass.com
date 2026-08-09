@@ -20,17 +20,17 @@ related_readings = [
 
 <!-- more -->
 
-"It's Your Ship" is a leadership book written by D. Michael Abrashoff, a former commander of the USS Benfold, a guided missile destroyer. The book focuses on Abrashoff's experiences and the leadership principles he applied to transform the performance and culture of his ship.
+"It's Your Ship" is a [leadership](/blog/the-beauty-of-leadership/) book written by D. Michael Abrashoff, a former commander of the USS Benfold, a guided missile destroyer. The book focuses on Abrashoff's experiences and the leadership principles he applied to transform the performance and culture of his ship.
 
 ## Key takeaways
 
 - **Empowerment**: Abrashoff emphasizes the importance of empowering team members. He believes that when people feel trusted and empowered, they take ownership of their work and perform at a higher level.
 
-- **Listen and Communicate**: He highlights the significance of active listening and open communication. He made an effort to listen to his crew members, seek their input, and address their concerns. This helped build trust and fostered a culture of open dialogue.
+- **Listen and Communicate**: He highlights the significance of active listening and open communication. He made an effort to listen to his crew members, seek their input, and address their concerns. This helped build [trust](/readings/the-five-dysfunctions-of-a-team/) and fostered a culture of open dialogue.
 
 - **Lead by Example**: Leaders should set the standard through their own actions. He worked hard to be a positive role model for his crew, demonstrating the behavior and work ethic he expected from them.
 
-- **Delegate Responsibility**: Abrashoff encourages leaders to delegate authority and responsibility. By giving his crew members more control over their areas of expertise, he allowed them to take ownership of their roles.
+- **Delegate Responsibility**: Abrashoff encourages leaders to [delegate](/blog/tech-lead/) authority and responsibility. By giving his crew members more control over their areas of expertise, he allowed them to take ownership of their roles.
 
 - **Foster a Culture of Innovation**: Abrashoff promoted a culture of continuous improvement and innovation. He encouraged his crew to suggest and implement changes that would enhance efficiency and effectiveness.
 

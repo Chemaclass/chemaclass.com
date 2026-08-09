@@ -20,10 +20,10 @@ related_readings = [
 <!-- more -->
 
 This book was published in 2017, so most of the technology shown is already history. And that's precisely what I really
-like from the book itself, the "historical part" and the origin of the blockchain.
+like from the book itself, the "historical part" and the origin of the [blockchain](/blog/how-bitcoin-works/).
 
 
-How is created Bitcoin address? How does it work the creation of the private & public keys and how are they known as
+How is created [Bitcoin](/blog/bitcoin-fundamentals/) address? How does it work the creation of the private & public keys and how are they known as
 wallets? And many other interesting questions.
 
 Back then, we got some websites and services that were using Bitcoin as a payment method, and there was a beauty trend.

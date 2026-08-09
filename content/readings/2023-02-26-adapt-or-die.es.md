@@ -23,7 +23,7 @@ A través de la historia de People First IT, este libro presenta El Algoritmo de
 
 Cada capítulo revela parte de la fórmula que las pequeñas y medianas empresas necesitan para triunfar. Con ejemplos reales, investigación y herramientas prácticas, el libro explica cómo crear innovación, resolver problemas de personas y ganar en los negocios.
 
-> "El liderazgo consiste en ayudar a las personas a adaptarse al cambio para que el negocio y su gente prosperen."
+> "El [liderazgo](/es/blog/the-beauty-of-leadership/) consiste en ayudar a las personas a adaptarse al cambio para que el negocio y su gente prosperen."
 
 ## ¿Por qué fracasan los negocios?
 
@@ -54,7 +54,7 @@ Puntos clave que todos podrían desarrollar:
 - Ofrecerse apoyo mutuamente
 - Buen liderazgo
 - Organización clara y buena
-- El conflicto constructivo impulsa la innovación
+- El [conflicto](/es/readings/the-five-dysfunctions-of-a-team/) constructivo impulsa la innovación
 
 > "Las personas no suelen ser el problema raíz. La taxonomía es 3Ps: producto, proceso o personas. 'Personas' va al final porque los líderes deben revisar primero producto y proceso. Es decir: las personas primero en valores, pero al último en culpa."
 

@@ -20,11 +20,11 @@ related_readings = [
 
 ## ¿Qué es código legacy?
 
-> El código legacy es simplemente código sin tests.
+> El [código legacy](/es/blog/testing-effectively-legacy-code/) es simplemente código sin tests.
 
 ### Beneficios de los tests
 
-El comportamiento es clave para entender los beneficios del testing:
+El comportamiento es clave para entender los beneficios del [testing](/es/blog/the-art-of-testing/):
 
 > El comportamiento es lo más importante del software. Los usuarios dependen de él. Les gusta que añadamos funcionalidad (si es lo que querían), pero si cambiamos o rompemos comportamiento del que dependen, pierden la confianza.
 
@@ -40,7 +40,7 @@ El enfoque sugerido:
 5. Hacer cambios y refactorizar.
 
 Un término útil es "**costura**" (seam): **un lugar donde puedes cambiar el comportamiento sin editar ese código directamente**. Como la costura en la ropa, donde dos partes se unen.
-En software, **estos lugares suelen tener interfaces bien definidas**. Puedes aprovecharlos para cambiar implementaciones con inyección de dependencias o mocking en tests.
+En software, **estos lugares suelen tener interfaces bien definidas**. Puedes aprovecharlos para cambiar implementaciones con inyección de dependencias o [mocking](/es/blog/to-mock-or-not-to-mock/) en tests.
 
 ---
 

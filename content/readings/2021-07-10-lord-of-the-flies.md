@@ -16,7 +16,7 @@ related_readings = [
 ]
 +++
 
-Labeled a parable, an allegory, a myth, a morality tale, a parody, a political treatise, even a vision of the
+Labeled a parable, an [allegory](/readings/animal-farm/), a myth, a morality tale, a parody, a political treatise, even a vision of the
 apocalypse. It has established itself as a true classic.
 
 The book focuses on a group of British boys stranded on an uninhabited island, and their disastrous attempt to govern

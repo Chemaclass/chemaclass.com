@@ -16,7 +16,7 @@ related_readings = [
 ]
 +++
 
-Una fábula de liderazgo sobre una empresa tech que no consigue crecer. El equipo directivo no trabaja como equipo, les cuesta llegar a acuerdos y la moral está por los suelos. Hasta que llega la nueva CEO, Kathryn Petersen, que identifica los problemas y ayuda al equipo a superarlos.
+Una fábula de [liderazgo](/es/blog/the-beauty-of-leadership/) sobre una empresa tech que no consigue crecer. El equipo directivo no trabaja como equipo, les cuesta llegar a acuerdos y la moral está por los suelos. Hasta que llega la nueva CEO, Kathryn Petersen, que identifica los problemas y ayuda al equipo a superarlos.
 
 <!-- more -->
 

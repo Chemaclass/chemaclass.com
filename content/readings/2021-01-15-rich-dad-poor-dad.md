@@ -19,7 +19,7 @@ related_readings = [
 <!-- more -->
 
 - Explodes the myth that you need to earn a high income to become rich
-- Challenges the belief that your house is an asset
-- Shows parents why they can't rely on the school system to teach their kids about money
+- Challenges the belief that your house is an [asset](/readings/the-psychology-of-money/)
+- Shows parents why they can't rely on the school system to teach their kids about [money](/readings/one-up-on-wall-street/)
 - Defines once and for all an asset and a liability
 - Teaches you what to teach your kids about money for their future financial success

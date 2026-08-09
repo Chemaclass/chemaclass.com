@@ -25,7 +25,7 @@ related_readings = [
 
 El libro tiene tres partes: disciplinas, estándares y ética.
 
-La primera es la más técnica. Te guía con ejemplos de TDD y muestra cómo el testing te ayuda a diseñar tu código.
+La primera es la más técnica. Te guía con ejemplos de [TDD](/es/blog/test-driven-development/) y muestra cómo el [testing](/es/blog/the-art-of-testing/) te ayuda a diseñar tu código.
 
 La segunda trata sobre productividad, calidad y coraje.
 
@@ -52,7 +52,7 @@ Una de mis partes favoritas del libro:
 ### Parte I: Las Disciplinas
 
 #### Capítulo 1. Artesanía
-- Extreme Programming
+- [Extreme Programming](/es/blog/update-your-team-to-be-more-extreme/)
 - Test-Driven Development
 - Refactoring
 - Diseño Simple

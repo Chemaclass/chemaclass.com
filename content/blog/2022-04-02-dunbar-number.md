@@ -24,7 +24,7 @@ A cognitive limit to the number of people with whom one can maintain stable soci
 
 The study shows that:
 - Close relationship: 5 people.
-- Share deep trust: 15 people.
+- Share deep [trust](/readings/the-five-dysfunctions-of-a-team/): 15 people.
 - Meaningful relations: 50 people.
 - Active contacts: 150 people.
 

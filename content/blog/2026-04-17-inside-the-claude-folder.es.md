@@ -97,9 +97,9 @@ Siguiente dolor tras onboarding: la repetición. Los skills lo resuelven.
 
 Un skill es un archivo markdown en `.claude/skills/`, un procedimiento que invocas con una barra:
 
-- **`/gh-issue <número>`**: de issue a rama, plan TDD, PR.
+- **`/gh-issue <número>`**: de issue a rama, plan [TDD](/es/blog/test-driven-development/), PR.
 - **`/commit`**: fix, análisis, tests, commit convencional.
-- **`/refactor-check`**: SOLID, naming, olores de arquitectura.
+- **`/refactor-check`**: [SOLID](/es/readings/clean-architecture/), naming, olores de arquitectura.
 - **`/release [version]`**: changelog, PHAR, tag, release.
 
 {% deep_dive(title="Skills vs rules vs prompt directo") %}
@@ -120,7 +120,7 @@ Los skills convierten conocimiento tribal en pasos ejecutables por cualquiera.
 
 {% deep_dive(title="Rules con glob en la práctica") %}
 
-Archivos de rules en Phel:
+Archivos de rules en [Phel](/es/blog/phel-first-release/):
 
 - **`compiler.md`**: pipeline estricto de 4 fases, sin atajos.
 - **`php.md`**: PER 3.0, clases `final`, `readonly`, patrón Gacela.

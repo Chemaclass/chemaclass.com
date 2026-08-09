@@ -25,11 +25,11 @@ infrastructure (like the framework or the database).
 
 In Part 1 we unlock a collection of design patterns which help you establish a clean separation between core and
 infrastructure code. Part 2 shows how these design patterns resonate at a higher level with architectural concepts like
-layers, ports and adapters (a.k.a. Hexagonal architecture). The book finishes with a discussion of testing strategies and design trade-offs.
+layers, ports and adapters (a.k.a. [Hexagonal architecture](/readings/clean-architecture/)). The book finishes with a discussion of [testing](/blog/the-art-of-testing/) strategies and design trade-offs.
 
 ### What you'll learn
 
-- Separating mixed code into core and infrastructure code by refactoring into patterns.
+- Separating mixed code into core and infrastructure code by [refactoring](/blog/the-art-of-refactoring/) into patterns.
 - Dividing your code into layers, and making a clear distinction between an application's ports and adapters.
 - Testing decoupled applications.
 

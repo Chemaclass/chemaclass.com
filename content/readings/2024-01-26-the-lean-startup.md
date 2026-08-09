@@ -20,9 +20,9 @@ related_readings = [
 
 <!-- more -->
 
-Most startups fail. But many of those failures are preventable. The Lean Startup is a new approach being adopted across the globe, changing the way companies are built and new products are launched.
+Most startups fail. But many of those failures are preventable. The Lean Startup is a new approach being adopted across the globe, changing the way companies are built and new [products](/readings/continuous-discovery-habits/) are launched.
 
-Eric Ries defines a startup as an organization dedicated to creating something new under conditions of extreme uncertainty. This is just as true for one person in a garage or a group of seasoned professionals in a Fortune 500 boardroom. What they have in common is a mission to penetrate that fog of uncertainty to discover a successful path to a sustainable business.
+Eric Ries defines a startup as an organization dedicated to creating something new under conditions of extreme [uncertainty](/readings/sprint/). This is just as true for one person in a garage or a group of seasoned professionals in a Fortune 500 boardroom. What they have in common is a mission to penetrate that fog of uncertainty to discover a successful path to a sustainable business.
 
 ## Key Takeaways
 

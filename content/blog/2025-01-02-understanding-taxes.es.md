@@ -134,9 +134,9 @@ Los impuestos parecerían más justos si la gente confiara en que se gastan bien
 
 Se supone que los impuestos financian servicios públicos esenciales. Pero el gran problema con los impuestos (y los gobiernos grandes) es que suelen traer **ineficiencia y corrupción**. Cuanto más poder tiene un gobierno, más probable es que lo use mal. Por eso creo que los gobiernos deberían ser **pequeños, enfocados y eficientes**: dar servicios esenciales sin complicar las cosas ni meterse en la vida de la gente.
 
-Aquí es donde **Bitcoin ofrece una alternativa interesante**. Es descentralizado: nadie lo controla. Ni gobiernos, ni bancos, ni nadie. Eso elimina el riesgo de corrupción o mala gestión por parte de instituciones poderosas. Cada transacción se registra en un libro mayor público que cualquiera puede verificar. Es **transparente y resistente a la manipulación**.
+Aquí es donde **[Bitcoin](/es/blog/bitcoin-fundamentals/) ofrece una alternativa interesante**. Es descentralizado: nadie lo controla. Ni gobiernos, ni bancos, ni nadie. Eso elimina el riesgo de corrupción o mala gestión por parte de instituciones poderosas. Cada transacción se registra en un libro mayor público que cualquiera puede verificar. Es **transparente y resistente a la manipulación**.
 
-Aunque la mayoría de países quieren gravar las transacciones de Bitcoin, usarlo **da más control sobre tu dinero**. Las monedas tradicionales se pueden imprimir sin límite (causando inflación y reduciendo el valor de tus ahorros). Bitcoin tiene una **oferta limitada**, así que su valor no se puede diluir igual. Además, no tiene fronteras: puedes enviar y recibir dinero sin depender de bancos ni intermediarios que se queden una parte o añadan retrasos.
+Aunque la mayoría de países quieren gravar las transacciones de Bitcoin, usarlo **da más control sobre tu dinero**. Las monedas tradicionales se pueden imprimir sin límite (causando [inflación](/es/readings/broken-money/) y reduciendo el valor de tus ahorros). Bitcoin tiene una **oferta limitada**, así que su valor no se puede diluir igual. Además, no tiene fronteras: puedes enviar y recibir dinero sin depender de bancos ni intermediarios que se queden una parte o añadan retrasos.
 
 ### Por qué funciona el dinero del gobierno
 
@@ -148,7 +148,7 @@ La **inflación** se llama a menudo "**impuesto oculto**", y con razón. Cuando 
 
 Los políticos se benefician a corto plazo: tienen más dinero sin subir impuestos directamente. Pero la gente común paga el precio con costos de vida más altos. **La inflación es un robo silencioso**: quita valor al dinero de todos para cubrir las malas decisiones financieras del gobierno.
 
-Bitcoin tiene una **oferta fija de 21 millones** de monedas. No se puede inflar. **Su escasez garantiza que nadie**, ni siquiera los políticos, **manipule su valor**. Para quienes están hartos de precios que suben y ahorros que se devalúan, Bitcoin ofrece una forma de proteger su riqueza. Es **un sistema diseñado para recompensar a los ahorradores**, no castigarlos.
+Bitcoin tiene una **oferta fija de 21 millones** de monedas. No se puede inflar. **Su escasez garantiza que nadie**, ni siquiera los políticos, **manipule su valor**. Para quienes están hartos de precios que suben y ahorros que se devalúan, Bitcoin ofrece una forma de proteger su [riqueza](/es/readings/rich-dad-poor-dad/). Es **un sistema diseñado para recompensar a los ahorradores**, no castigarlos.
 
 ### Reflexiones finales
 

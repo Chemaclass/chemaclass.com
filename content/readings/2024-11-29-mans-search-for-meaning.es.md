@@ -18,7 +18,7 @@ related_readings = [
 ]
 +++
 
-Frankl comparte sus desgarradoras experiencias del Holocausto y presenta una filosofía profunda sobre la condición humana. Un testimonio de la resiliencia del espíritu humano: incluso en los momentos más oscuros, uno puede encontrar propósito y sentido.
+Frankl comparte sus desgarradoras experiencias del Holocausto y presenta una [filosofía](/es/readings/meditations/) profunda sobre la condición humana. Un testimonio de la resiliencia del espíritu humano: incluso en los momentos más oscuros, uno puede encontrar propósito y sentido.
 
 <!-- more -->
 

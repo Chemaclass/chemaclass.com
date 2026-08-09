@@ -39,5 +39,5 @@ Nunca jamás.
 
 ## ¿Y si...?
 
-Si realmente quieres testear un método privado, considera extraer esa lógica del método privado en una clase separada, y escribe un test unitario para el comportamiento de esa clase.
+Si realmente quieres testear un método privado, considera extraer esa lógica del método privado en una [clase separada](/es/readings/clean-code/), y escribe un [test unitario](/es/blog/the-art-of-testing/) para el comportamiento de esa clase.
 > Para este, me inspiré en el [post original](https://franiglesias.github.io/test-private-methods/) de Fran Iglesias.

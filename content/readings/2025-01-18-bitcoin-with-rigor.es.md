@@ -18,7 +18,7 @@ related_readings = [
 ]
 +++
 
-Un análisis detallado de cómo funciona Bitcoin, desglosando sus componentes de forma clara para entender tanto las partes como el sistema completo. Explora su potencial y riesgos como experimento monetario que, aunque no ha superado la prueba del tiempo como el oro, tiene un diseño prometedor.
+Un análisis detallado de cómo funciona [Bitcoin](/es/blog/bitcoin-fundamentals/), desglosando sus componentes de forma clara para entender tanto las partes como el sistema completo. Explora su potencial y riesgos como experimento monetario que, aunque no ha superado la prueba del tiempo como el oro, tiene un diseño prometedor.
 
 <!-- more -->
 
@@ -89,7 +89,7 @@ Este libro busca darte las herramientas para entender cómo funciona Bitcoin. As
 - Canales de Pago Unilaterales
 - Canales Lightning
 - Pagos Multicanal y HTLCs
-- Lightning Network
+- [Lightning Network](/es/blog/run-your-ln-node/)
 - Discreet Log Contracts (DLCs)
 - MAST, P2SMR y P2CH
 - Taproot y Grafroot

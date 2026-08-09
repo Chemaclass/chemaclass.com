@@ -42,7 +42,7 @@ Liderazgo y gestión no son lo mismo. Gestionar implica planificar, medir, monit
 
 ## ¿Qué es liderazgo?
 
-> "Un líder es alguien que tiene seguidores." Peter Drucker.
+> "Un líder es alguien que tiene seguidores." Peter [Drucker](/es/readings/the-essential-drucker/).
 
 Esta definición es demasiado simplista y puede ser peligrosa. Que tengas personas "bajo ti" haciendo lo que dices porque "siguen órdenes" no te convierte en líder. Podrías ser un comandante, pero no necesariamente un líder.
 
@@ -56,7 +56,7 @@ Empoderar a otros es esencial, pero falta la visión u objetivo común.
 
 > "El liderazgo es influencia." John Maxwell.
 
-Un manager tiene el poder de despedir miembros del equipo, lo que da mucha influencia. Igual que un ladrón con pistola tiene "influencia" sobre sus víctimas. Nos falta la fuente de esa influencia.
+Un [manager](/es/readings/the-manager-path/) tiene el poder de despedir miembros del equipo, lo que da mucha influencia. Igual que un ladrón con pistola tiene "influencia" sobre sus víctimas. Nos falta la fuente de esa influencia.
 
 ### Entonces, ¿qué tal combinarlas todas?
 

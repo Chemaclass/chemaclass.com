@@ -24,7 +24,7 @@ Una historia sobre un proyecto imposible donde todos juegan a la política, arre
 
 > Si IT falla, el negocio falla.
 
-**Principios DevOps**: Flujo, Feedback, Aprendizaje Continuo y Experimentación. Estos conceptos impulsan mejoras en capacidad de respuesta, fiabilidad y trabajo en equipo.
+**Principios [DevOps](/es/readings/accelerate/)**: Flujo, Feedback, Aprendizaje Continuo y Experimentación. Estos conceptos impulsan mejoras en capacidad de respuesta, fiabilidad y trabajo en equipo.
 
 #### Resumen
 

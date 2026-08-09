@@ -20,7 +20,7 @@ Este libro te ayuda a poner en forma tus aplicaciones web. Trae muchas técnicas
 
 <!-- more -->
 
-La Parte 1 presenta patrones de diseño para separar código de negocio e infraestructura. La Parte 2 muestra cómo estos patrones encajan con conceptos arquitectónicos como capas, puertos y adaptadores (arquitectura Hexagonal). El libro cierra con estrategias de testing y decisiones de diseño.
+La Parte 1 presenta patrones de diseño para separar código de negocio e infraestructura. La Parte 2 muestra cómo estos patrones encajan con conceptos arquitectónicos como capas, puertos y adaptadores (arquitectura Hexagonal). El libro cierra con estrategias de [testing](/es/blog/the-art-of-testing/) y decisiones de diseño.
 
 ### Lo que aprenderás
 

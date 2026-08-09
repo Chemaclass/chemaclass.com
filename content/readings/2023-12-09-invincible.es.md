@@ -23,13 +23,13 @@ La calidad de tu vida depende de la calidad de tu mente. Por desgracia, dedicamo
 
 Tenemos en la cabeza el objeto más sofisticado del mundo, pero apenas sabemos cómo funciona. La mayoría no consigue dirigir su fuerza mental hacia las metas que realmente desea. Se distraen, se frustran. No resisten la tentación ni perseveran ante la adversidad. Al final, abandonan.
 
-La buena noticia es que la mente se puede entrenar, y este libro te muestra cómo. Combina **filosofía estoica** con **psicología moderna** y te da herramientas para visualizar con claridad, actuar con determinación y resistir con disciplina.
+La buena noticia es que la mente se puede entrenar, y este libro te muestra cómo. Combina **[filosofía](/es/readings/meditations/) estoica** con **psicología moderna** y te da herramientas para visualizar con claridad, actuar con determinación y resistir con disciplina.
 
 > "No sufrimos por los eventos en nuestras vidas, sino por nuestro juicio sobre ellos." Epicteto.
 
 Todo cambio externo empieza por dentro. Si quieres transformar tu cuerpo, primero hay que trabajar la mente. Una mente débil nunca creará un cuerpo fuerte.
 
-Este libro te ayuda a usar tu mente para mejorar tu cuerpo, pero va mucho más allá. No es una simple guía para optimizar hábitos diarios, sino una brújula para tu propia filosofía de vida. Las herramientas que desarrolles te servirán para cualquier cosa que quieras lograr. La vida siempre es más simple con claridad, determinación y disciplina.
+Este libro te ayuda a usar tu mente para mejorar tu cuerpo, pero va mucho más allá. No es una simple guía para optimizar [hábitos](/es/readings/atomic-habits/) diarios, sino una brújula para tu propia filosofía de vida. Las herramientas que desarrolles te servirán para cualquier cosa que quieras lograr. La vida siempre es más simple con claridad, determinación y disciplina.
 
 #### La filosofía del Estoicismo
 
