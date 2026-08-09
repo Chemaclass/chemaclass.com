@@ -3,7 +3,7 @@ title = "Recorta la Factura de Tokens"
 description = "Caveman recorta lo que responde el agent, RTK lo que devuelve la terminal. Más espacio en el mismo context window."
 draft = false
 [taxonomies]
-tags = [ "ai", "productivity", "developer-tools", "agentic-coding" ]
+tags = [ "ai", "productivity", "developer-tools" ]
 [extra]
 subtitle = "Dos fugas, dos parches"
 static_thumbnail = "/images/blog/2026-06-26/cover.webp"

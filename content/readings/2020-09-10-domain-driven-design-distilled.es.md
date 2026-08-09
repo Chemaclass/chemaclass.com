@@ -3,7 +3,7 @@ title = "Domain-Driven Design Distilled"
 description = "Una introducción accesible a DDD para desarrolladores, consultores y cualquiera que quiera entender el diseño guiado por dominio"
 authors = [ "Vaughn Vernon" ]
 [taxonomies]
-tags = [ "ddd", "architecture", "software-design" ]
+tags = [ "software-design", "architecture" ]
 [extra]
 subtitle = "DDD explicado de forma clara y práctica"
 pages = "160"

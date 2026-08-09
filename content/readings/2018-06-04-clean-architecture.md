@@ -3,7 +3,7 @@ title = "Clean Architecture"
 description = "Uncle Bob on SOLID, component design and the architectural boundaries that keep a system flexible and testable."
 authors = [ "Robert C. Martin" ]
 [taxonomies]
-tags = [ "architecture", "software-design", "clean-code", "ddd" ]
+tags = [ "architecture", "software-design", "clean-code" ]
 [extra]
 subtitle = "A Craftsman's Guide to Software Structure and Design"
 pages = "400"

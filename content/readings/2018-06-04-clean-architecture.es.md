@@ -3,7 +3,7 @@ title = "Arquitectura Limpia"
 description = "Cómo estructurar y diseñar software de forma profesional. Principios SOLID, componentes y capas explicados con claridad."
 authors = [ "Robert C. Martin" ]
 [taxonomies]
-tags = [ "architecture", "software-design", "clean-code", "ddd" ]
+tags = [ "architecture", "software-design", "clean-code" ]
 [extra]
 subtitle = "Guía del artesano para la estructura y diseño de software"
 pages = "400"

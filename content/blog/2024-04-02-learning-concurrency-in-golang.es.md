@@ -3,7 +3,7 @@ title = "Aprendiendo Concurrencia en Golang"
 description = "Aprendiendo Go por su simplicidad, y reencontrándome con cosas que no usaba en años: multithreading, goroutines y concurrencia."
 draft = false
 [taxonomies]
-tags = ["golang", "software-design", "clean-code"]
+tags = [ "software", "software-design", "clean-code" ]
 [extra]
 subtitle = "Un emulador de carreras de caballos explicado paso a paso"
 static_thumbnail = "/images/blog/2024-04-02/cover.webp"

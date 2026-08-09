@@ -3,7 +3,7 @@ title = "Cut the Token Bill on Both Ends"
 description = "Caveman shrinks what the agent says back, RTK shrinks what your terminal pipes in. More room in the same context window."
 draft = false
 [taxonomies]
-tags = [ "ai", "productivity", "developer-tools", "agentic-coding" ]
+tags = [ "ai", "productivity", "developer-tools" ]
 [extra]
 subtitle = "Two leaks, two patches"
 static_thumbnail = "/images/blog/2026-06-26/cover.webp"

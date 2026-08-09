@@ -3,7 +3,7 @@ title = "Rebelión en la granja"
 description = "La alegoría de Orwell sobre una rebelión en una granja que acaba en tiranía, y cómo el poder corrompe hasta la revolución."
 authors = [ "George Orwell" ]
 [taxonomies]
-tags = [ "fiction", "dystopia", "philosophy", "psychology" ]
+tags = [ "fiction", "philosophy", "psychology" ]
 [extra]
 subtitle = "Todos los animales son iguales. Pero algunos son más iguales que otros."
 pages = "90"

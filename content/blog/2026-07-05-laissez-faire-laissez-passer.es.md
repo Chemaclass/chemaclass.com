@@ -3,7 +3,7 @@ title = "Laissez Faire, Laissez Passer"
 description = "Deja actuar, deja pasar. Ningún planificador sabe lo que sabe el mercado, y lo normal debería ser la libertad, no el control."
 draft = false
 [taxonomies]
-tags = [ "economics", "philosophy", "freedom", "bitcoin" ]
+tags = [ "economics", "philosophy", "bitcoin" ]
 [extra]
 reading_time = 4
 subtitle = "El mercado sabe lo que nadie puede saber"
