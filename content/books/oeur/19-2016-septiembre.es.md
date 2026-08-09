@@ -84,4 +84,4 @@ Extrañar no es ausencia de dolor.
 Vivir es tomarnos en serio el antes y el después de nuestros días.
 Querer crecer despertando para aprender a luchar nos permitirá dejar de extrañar vivir porque estaremos verdaderamente viviendo.
 
-![book-chapter](/images/books/oeur/19.webp)
+![Un niño de pie, solo, entre la niebla, proyectando una sombra larga](/images/books/oeur/19.webp)

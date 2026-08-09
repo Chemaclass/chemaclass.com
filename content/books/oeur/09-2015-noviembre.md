@@ -7,7 +7,7 @@ date = 2015-11-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/09.webp)
+![Rows of tally marks, hundreds of them, fading into mist](/images/books/oeur/09.webp)
 
 ## To the Motive
 

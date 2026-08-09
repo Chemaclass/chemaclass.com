@@ -126,4 +126,4 @@ Es tan fácil dormirse deseando evadirnos de todo…, especialmente cuando la vi
 
 Creo, por tanto, que éstas son y deberían ser siempre nuestras principales cuestiones. Dormir es sano, por supuesto, pero «dormirnos la vida» nos costará la misma. En este contexto, deberíamos permanecer despiertos, pero no es fácil. ¿Quién dijo acaso que lo fuera a ser?
 
-![book-chapter](/images/books/oeur/12.webp)
+![Un velero solitario sobre aguas quietas bajo nubes densas](/images/books/oeur/12.webp)

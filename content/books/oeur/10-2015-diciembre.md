@@ -7,7 +7,7 @@ date = 2015-12-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/10.webp)
+![A covered pier with figures fishing, their lines out over the water](/images/books/oeur/10.webp)
 
 ## The Art of Adaptation
 

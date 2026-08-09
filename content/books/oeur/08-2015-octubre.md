@@ -7,7 +7,7 @@ date = 2015-10-01
 tags = []
 +++
 
-![book-chapter](/images/books/oeur/08.webp)
+![An adult and a child standing side by side, their reflection below them](/images/books/oeur/08.webp)
 
 ## Above Good and Evil
 ```
