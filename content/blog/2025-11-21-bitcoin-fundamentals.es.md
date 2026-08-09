@@ -24,7 +24,7 @@ related_readings = [
 ]
 +++
 
-![blog-cover](/images/blog/2025-12-21/footer.webp)
+![Un BTClock de escritorio mostrando el precio BTC/USD, junto a un peluche de Bitcoin y una tarjeta de circuito grabada con el logo de Bitcoin](/images/blog/2025-12-21/footer.webp)
 
 ¿Qué harías si tu cuenta bancaria fuera congelada mañana? Sin aviso, sin explicación, sin acceso a tu propio dinero.
 
@@ -369,7 +369,7 @@ Bitcoin no es perfecto. Ten en cuenta:
 
 Ninguno de estos son obstáculos insuperables. Son compensaciones. Cuanto más aprendes, menos limitaciones enfrentas.
 
-![blog-cover](/images/blog/2025-12-21/footer.webp)
+![Un BTClock de escritorio mostrando el precio BTC/USD, junto a un peluche de Bitcoin y una tarjeta de circuito grabada con el logo de Bitcoin](/images/blog/2025-12-21/footer.webp)
 
 ## Bitcoin hoy
 

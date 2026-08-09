@@ -79,6 +79,6 @@ Experiment with any book, timeframe, person, or group to create a shared underst
 
 You cannot force people to change. On the contrary, the more you try to force it, the harder they will make it for you. Instead, focus on understanding them by acknowledging what they feel and thinking about what they do to create a common ground of [understanding each other](/blog/understanding-people).
 
-![footer](/images/blog/2023-08-02/footer.webp)
+![Chema on stage pointing at a recommended readings slide listing Extreme Programming Explained, Clean Agile and The Pragmatic Programmer](/images/blog/2023-08-02/footer.webp)
 
 > Photos from me at WeAreDevelopers World Congress, Berlin 2023.

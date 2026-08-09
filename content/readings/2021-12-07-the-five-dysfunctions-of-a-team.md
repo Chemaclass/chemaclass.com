@@ -78,7 +78,7 @@ Team members naturally tend to put their own needs (ego, career development, rec
 goals of the team when individuals aren't held accountable. If a team has lost sight of the need for achievement, the
 business ultimately suffers.
 
-![blog-cover](/images/readings/2021-12-07/the-model.webp)
+![Lencioni's pyramid of the five dysfunctions, from absence of trust at the base up through fear of conflict, lack of commitment, avoidance of accountability and inattention to results](/images/readings/2021-12-07/the-model.webp)
 
 ---
 

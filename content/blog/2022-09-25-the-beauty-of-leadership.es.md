@@ -72,7 +72,7 @@ Elementos clave de esta definición:
 
 ---
 
-![blog-cover](/images/blog/2022-09-25/footer.webp)
+![Una persona cruzando sola un prado abierto por un sendero estrecho, con la línea de árboles al fondo](/images/blog/2022-09-25/footer.webp)
 
 ## ¿Por qué alguien querría convertirse en líder?
 

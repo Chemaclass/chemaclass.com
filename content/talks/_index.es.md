@@ -94,7 +94,7 @@ sort_by = "weight"
   - [Bashunit: Testeando tus scripts bash, inspirado en PHPUnit](https://phpconference.com/devops-continuous-delivery/bashunit-testing-bash-scripts/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7201174305655693312/))
     *De una idea simple a un proyecto OSS premiado gracias a estándares de calidad y colaboración abierta.*
 
-![cover](/images/talks/2024-05-28/tdd-workshop-ipc-berin-24.webp)
+![Chema frente a la sala del taller de TDD en la International PHP Conference Berlín 2024, con los asistentes trabajando en sus portátiles detrás](/images/talks/2024-05-28/tdd-workshop-ipc-berin-24.webp)
 
 ### Marzo
 
@@ -134,7 +134,7 @@ sort_by = "weight"
   - [Una Introducción a Extreme Programming](https://www.wearedevelopers.com/world-congress) [[slides](https://docs.google.com/presentation/d/1l-Mxfb6Cc9scPaqiB6j7HORwxRdhv4lqCDWtK7biMzs)] ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7091038575588200448/))
     *Cómo las tech talks internas, katas y feedback continuo ayudan a los equipos a abrazar el cambio y crecer juntos.*
 
-![cover](/images/talks/2023-07-28/phel-we-are-devs-23.webp)
+![Chema presentando programación funcional en el escenario del WeAreDevelopers World Congress 2023](/images/talks/2023-07-28/phel-we-are-devs-23.webp)
 
 ### Mayo
 
@@ -147,7 +147,7 @@ sort_by = "weight"
   - [Phel Language, un LISP nativo para PHP](https://phpconference.com/php-core-coding/phel-language-a-native-lisp-for-php/)
     *Un Lisp nativo para PHP: estructuras de datos persistentes, macros y un REPL sobre el runtime de PHP.*
 
-![cover](/images/talks/2023-05-24/gacela-ipc-berin-23.webp)
+![Chema presentando Gacela ante una sala llena en la International PHP Conference Berlín 2023](/images/talks/2023-05-24/gacela-ipc-berin-23.webp)
 
 ### Abril
 
@@ -170,7 +170,7 @@ sort_by = "weight"
   - [Lazy Objects por Nicolas Grekas y FP con PHP por Chema](https://www.meetup.com/sfugberlin/events/290735168/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:7029831557389414401/))
     *Programación funcional con Phel, presentado junto a la charla de Lazy Objects de Nicolas Grekas.*
 
-![cover](/images/talks/2023-02-08/phel-sf-group-23.webp)
+![Chema en el atril junto a una diapositiva sobre el bucle for de Phel, Symfony User Group Berlín 2023](/images/talks/2023-02-08/phel-sf-group-23.webp)
 
 ### Enero
 
@@ -206,7 +206,7 @@ sort_by = "weight"
   - [Actualiza tu equipo para ser más extremo](https://codetalks.de/) ([imgs](https://www.linkedin.com/feed/update/urn:li:activity:6976595953680015360/))
     *Fomentando la mejora continua a través de tech talks internas y rituales de equipo.*
 
-![cover](/images/talks/2022-09-16/update-your-team-code-talks-22.webp)
+![Una sala de cine llena en code.talks 2022, con la diapositiva preguntando cuál es el problema junto a una viñeta de Comic Agile](/images/talks/2022-09-16/update-your-team-code-talks-22.webp)
 
 ### Junio
 
