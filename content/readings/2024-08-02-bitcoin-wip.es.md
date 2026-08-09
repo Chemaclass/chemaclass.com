@@ -1,6 +1,6 @@
 +++
 title = "Bitcoin: A Work in Progress"
-description = "Con miles de proyectos cripto por ahí, dicen que Bitcoin es viejo y aburrido. Nada más lejos de la realidad. Este libro te guía por los últimos desarrollos de Bitcoin desde la perspectiva de uno de sus desarrolladores."
+description = "Dicen que Bitcoin es viejo y aburrido. Este libro recorre sus últimos desarrollos vistos por uno de sus propios developers."
 draft = false
 authors = [ "Sjors Provoost" ]
 [taxonomies]

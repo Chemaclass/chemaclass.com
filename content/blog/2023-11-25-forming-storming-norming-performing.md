@@ -1,6 +1,6 @@
 +++
 title = "Forming, Storming, Norming and Performing"
-description = "Embarking on the path to high team performance involves understanding Tuckman's Model, a roadmap through the stages of forming, storming, norming, performing, and adjourning. In this blog post, we explore practical strategies for each stage, empowering leaders and team members to cultivate collaboration, manage conflicts, and achieve true synergy."
+description = "Tuckman's five stages, and practical strategies for each one: forming, storming, norming, performing and adjourning."
 draft = false
 [taxonomies]
 tags = ["leadership", "team-management", "psychology", "communication"]

@@ -1,6 +1,6 @@
 +++
 title = "7 languages in 7 weeks"
-description = "A hands-on tour of Clojure, Haskell, Io, Prolog, Scala, Erlang, and Ruby. Learn how each language thinks differently and broaden your perspective on programming."
+description = "A hands-on tour of Clojure, Haskell, Io, Prolog, Scala, Erlang and Ruby, and how differently each one thinks."
 authors = [ "Bruce Tate" ]
 [taxonomies]
 tags = [ "software-design", "software", "career" ]

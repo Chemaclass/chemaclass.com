@@ -1,6 +1,6 @@
 +++
 title = "Red Work vs Blue Work"
-description = "Blue Work and Red Work are concepts that David Marquet describes in his book 'Leadership is Language. Both require different mindsets and both have different languages."
+description = "Blue Work and Red Work, the two modes David Marquet describes in Leadership is Language. Different mindsets, and different languages."
 [taxonomies]
 tags = [ "leadership", "team-management", "productivity", "agile" ]
 [extra]

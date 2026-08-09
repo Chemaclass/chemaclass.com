@@ -1,6 +1,6 @@
 +++
 title = "Mastering Bitcoin"
-description = "This book covers everything from the basics to the most profound technical aspects of how Bitcoin works. It is an excellent guide through the complex world of Bitcoin, providing the knowledge you need to participate in the Internet of Money."
+description = "From the basics to the deepest technical details of how Bitcoin works. The guide for taking part in the Internet of Money."
 draft = false
 authors = [ "Andreas M. Antonopoulos", "David A. Harding" ]
 [taxonomies]

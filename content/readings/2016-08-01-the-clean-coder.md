@@ -1,6 +1,6 @@
 +++
 title = "The Clean Coder"
-description = "Robert C. Martin's guide to professional behavior in software development, covering time management, pressure handling, TDD practices, and what it truly means to be a software craftsman."
+description = "Uncle Bob on professional behaviour in software: time management, handling pressure, TDD, and what a craftsman actually owes."
 authors = [ "Robert C. Martin" ]
 [taxonomies]
 tags = [ "clean-code", "career", "tdd", "communication" ]

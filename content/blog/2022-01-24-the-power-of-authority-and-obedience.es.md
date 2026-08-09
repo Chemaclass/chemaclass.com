@@ -1,6 +1,6 @@
 +++
 title = "El Poder de la Autoridad y la Obediencia"
-description = "Milgram quiso investigar hasta dónde llegaría la gente obedeciendo una orden que implicara dañar a otra persona. Por ejemplo, los alemanes en la Segunda Guerra Mundial."
+description = "Milgram quiso saber hasta dónde obedece la gente una orden que implica dañar a otro. Qué encontró, y por qué sigue importando."
 [taxonomies]
 tags = [ "psychology", "leadership", "communication" ]
 [extra]

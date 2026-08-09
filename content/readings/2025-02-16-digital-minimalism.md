@@ -1,6 +1,6 @@
 +++
 title = "Digital Minimalism"
-description = "In an era dominated by constant connectivity, the concept of digital minimalism emerges as a refreshing antidote. Coined by Cal Newport, this philosophy isn't about rejecting technology but rather about using it with greater intention and care. By implementing digital minimalism, individuals can reclaim focus, reduce anxiety, and cultivate deeper, more meaningful relationships."
+description = "Cal Newport's philosophy is not about rejecting technology but using it with intention, to reclaim focus and reduce anxiety."
 draft = false
 authors = [ "Cal Newport" ]
 [taxonomies]

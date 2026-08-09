@@ -1,6 +1,6 @@
 +++
 title = "97 cosas que todo programador debería saber"
-description = "97 consejos cortos y prácticos para mejorar como programador. Da igual qué lenguaje uses: aquí encontrarás nuevos enfoques, buenas prácticas y consejos sólidos de expertos."
+description = "97 consejos cortos y prácticos de expertos para mejorar como programador, sea cual sea el lenguaje que uses."
 authors = [ "Kevlin Henney" ]
 [taxonomies]
 tags = [ "software-design", "clean-code", "career", "productivity" ]

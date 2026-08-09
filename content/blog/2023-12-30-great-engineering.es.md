@@ -1,6 +1,6 @@
 +++
 title = "Gran Ingeniería"
-description = "Programar no es solo otro trabajo. En el entorno adecuado, escribir software puede ser realmente divertido y, aún más, ¡puede ser tu hobby personal también! Así que... podrías estar enfocado en programar, programar y más programar para subir de nivel tus propias habilidades profesionales."
+description = "Programar no es solo otro trabajo. En el entorno adecuado puede ser divertido, y hasta tu hobby. Sobre subir de nivel tu oficio."
 draft = false
 [taxonomies]
 tags = ["software-design", "career", "communication", "clean-code"]

@@ -1,6 +1,6 @@
 +++
 title = "Object design style guide"
-description = "Matthias Noback's practical guide to writing flexible, readable, and maintainable object-oriented code, with techniques applicable to any OO language from Python to PHP."
+description = "Matthias Noback's practical guide to flexible, readable object-oriented code, useful in any OO language."
 authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "software-design", "clean-code", "php" ]

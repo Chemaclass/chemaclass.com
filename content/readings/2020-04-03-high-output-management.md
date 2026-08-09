@@ -1,6 +1,6 @@
 +++
 title = "High Output Management"
-description = "Andy Grove's management classic from Intel, covering managerial leverage, meetings, decision-making, motivation, and how to maximize team output in technology organizations."
+description = "Andy Grove's Intel classic on managerial leverage, meetings, decisions and how to get the most output from a team."
 authors = [ "Andrew S. Grove" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "productivity" ]

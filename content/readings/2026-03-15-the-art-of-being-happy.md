@@ -1,6 +1,6 @@
 +++
 title = "The Art of Being Happy"
-description = "Schopenhauer's posthumous collection of 50 rules for practical happiness, built on the idea that avoiding suffering matters more than chasing pleasure. Surprisingly useful advice from philosophy's most famous pessimist."
+description = "Schopenhauer's 50 rules for practical happiness, built on avoiding suffering rather than chasing pleasure."
 authors = [ "Arthur Schopenhauer" ]
 [taxonomies]
 tags = [ "philosophy", "self-improvement" ]

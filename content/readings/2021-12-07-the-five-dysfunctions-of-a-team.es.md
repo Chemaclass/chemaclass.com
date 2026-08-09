@@ -1,6 +1,6 @@
 +++
 title = "Las cinco disfunciones de un equipo"
-description = "Una fábula sobre una empresa tech donde el equipo directivo no funciona. La nueva CEO, Kathryn Petersen, identifica los problemas y ayuda al equipo a superarlos."
+description = "Una fábula sobre una empresa tech cuyo equipo directivo no funciona, y cómo la nueva CEO les ayuda a superar sus disfunciones."
 authors = [ "Patrick M. Lencioni" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "communication", "psychology" ]

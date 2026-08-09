@@ -1,6 +1,6 @@
 +++
 title = "Great Engineering"
-description = "Coding is not just another job. In the right environment, writing software can be really fun and, even more, it can be your personal hobby as well! So... you might be focused on coding, coding and more coding to level up your own career skills."
+description = "Coding is not just another job. In the right environment it is fun, and even a hobby. On levelling up your craft on purpose."
 draft = false
 [taxonomies]
 tags = ["software-design", "career", "communication", "clean-code"]

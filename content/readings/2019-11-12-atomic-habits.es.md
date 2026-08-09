@@ -1,6 +1,6 @@
 +++
 title = "Hábitos Atómicos"
-description = "Solemos creer que para cambiar nuestra vida hay que pensar en grande. James Clear propone otra cosa: el cambio real viene del efecto acumulado de cientos de pequeñas decisiones."
+description = "Para cambiar tu vida no hace falta pensar en grande. James Clear muestra que el cambio real viene de cientos de decisiones pequeñas."
 authors = [ "James Clear" ]
 [taxonomies]
 tags = [ "psychology", "productivity", "career" ]

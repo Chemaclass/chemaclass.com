@@ -1,6 +1,6 @@
 +++
 title = "El guardián entre el centeno"
-description = "Salinger refleja su propia juventud, su relación complicada con crecer y el trauma de la Segunda Guerra Mundial. Una novela que se convirtió en icono de la rebeldía adolescente."
+description = "Salinger refleja su propia juventud y su relación difícil con crecer. La novela que se volvió icono de la rebeldía adolescente."
 authors = [ "J. D. Salinger" ]
 [taxonomies]
 tags = [ "fiction", "psychology", "philosophy" ]

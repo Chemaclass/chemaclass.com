@@ -1,6 +1,6 @@
 +++
 title = "Working Agile with Non-Agile Teams"
-description = "Let's assume you already know what the agile manifesto is. Let's consider that you apply most of the extreme programming values, principles, and practices. How can you work with other teams that aren't agile?"
+description = "You apply the extreme programming values and practices. So how do you work with the teams around you that are not agile?"
 draft = false
 [taxonomies]
 tags = [ "agile", "xp", "communication", "team-management" ]

@@ -1,5 +1,6 @@
 +++
 title = "Prologue"
+description = "The prologue to Eyes on a Memory: why these reflections were written, while starting a new life in Germany without knowing the language."
 slug = "prologo"
 weight = 2
 date = 2015-02-01

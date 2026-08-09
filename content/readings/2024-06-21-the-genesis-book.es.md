@@ -1,6 +1,6 @@
 +++
 title = "The Genesis Book"
-description = "Bitcoin no surgió de la nada. Durante décadas, científicos informáticos, activistas de la privacidad y economistas heterodoxos intentaron crear dinero digital que funcionara sin control gubernamental. Este libro cuenta la historia de las personas y proyectos que inspiraron el primer sistema de efectivo electrónico P2P exitoso del mundo."
+description = "Bitcoin no surgió de la nada. Las personas y proyectos que durante décadas intentaron crear dinero digital sin control estatal."
 draft = false
 authors = [ "Aaron van Wirdum" ]
 [taxonomies]

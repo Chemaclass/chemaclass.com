@@ -1,7 +1,7 @@
 +++
 title = "Run Your LN Node on a Raspberry Pi"
 aliases = [ "/blog/run-your-ln-node" ]
-description = "In this guide, I'll show you how to set up a fully custodial Lightning Network (LN) node using Alby Hub on a Raspberry Pi, giving you complete control over your node. Alby Hub offers a DIY free version for a self-custodial Lightning wallet, ensuring full ownership of your funds while being 100% open-source."
+description = "How to set up a self-custodial Lightning node with Alby Hub on a Raspberry Pi. Full control over your funds, 100% open source."
 draft = false
 [taxonomies]
 tags = [ "bitcoin", "open-source", "privacy", "tutorial" ]

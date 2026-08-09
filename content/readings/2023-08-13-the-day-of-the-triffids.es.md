@@ -1,6 +1,6 @@
 +++
 title = "El Día de los Trífidos"
-description = "Fantástico, aterrador y plausible a partes iguales. Los personajes son personas reales, arrancadas de su civilización y lanzadas al horror de un mundo dominado por plantas asesinas."
+description = "Fantástico, aterrador y plausible. Personas reales arrancadas de su civilización a un mundo dominado por plantas asesinas."
 draft = false
 authors = [ "John Wyndham" ]
 [taxonomies]

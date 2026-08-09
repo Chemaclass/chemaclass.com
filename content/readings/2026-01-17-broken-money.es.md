@@ -1,6 +1,6 @@
 +++
 title = "Dinero roto"
-description = "Lyn Alden cuenta la historia del dinero desde una mirada tecnológica. Del oro al fiat y de ahí a Bitcoin: por qué el sistema financiero falla y qué alternativas tenemos."
+description = "Lyn Alden cuenta la historia del dinero como historia tecnológica. Del oro al fiat y a Bitcoin, y por qué el sistema falla."
 draft = false
 authors = [ "Lyn Alden" ]
 [taxonomies]

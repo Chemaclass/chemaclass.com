@@ -1,6 +1,6 @@
 +++
 title = "Adapt or die"
-description = "A través de la historia de People First IT, este libro presenta El Algoritmo del Éxito: un sistema para transformar organizaciones poniendo a las personas primero."
+description = "A través de la historia de People First IT, el libro presenta El Algoritmo del Éxito: transformar la organización desde las personas."
 draft = false
 authors = [ "Thomas H. Douglas" ]
 [taxonomies]

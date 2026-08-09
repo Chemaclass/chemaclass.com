@@ -1,6 +1,6 @@
 +++
 title = "Introducing a New Tech Stack"
-description = "To introduce a new tech stack for the entire team, it's important to bring \"why?\" and a strategy to make it happen among the team because it will affect everyone."
+description = "Introducing a new tech stack affects everyone, so it needs a clear why and a strategy the whole team can get behind."
 draft = false
 [taxonomies]
 tags = [ "software-design", "architecture", "team-management", "communication" ]

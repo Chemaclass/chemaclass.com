@@ -1,6 +1,6 @@
 +++
 title = "Atrévete a liderar"
-description = "El liderazgo no va de títulos ni de poder. Va de reconocer el potencial en las personas y ayudarlas a desarrollarlo. Un libro para quienes prefieren el coraje a la comodidad."
+description = "El liderazgo no va de títulos ni de poder, sino de reconocer el potencial en las personas. Para quien prefiere coraje a comodidad."
 authors = [ "Brené Brown" ]
 [taxonomies]
 tags = [ "leadership", "communication", "psychology", "mentoring" ]

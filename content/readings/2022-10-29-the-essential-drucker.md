@@ -1,6 +1,6 @@
 +++
 title = "The Essential Drucker"
-description = "The Essential Drucker contains twenty-six selections on management in the organization, management and the individual, and management and society. It covers the basic principles and concerns of management and its problems, challenges, and opportunities, giving managers, executives, and professionals the tools to perform the tasks that the economy and society of tomorrow will demand of them."
+description = "Twenty-six selections from Drucker on management in the organization, the individual and society. The principles that still hold."
 authors = [ "Peter F. Drucker" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "philosophy" ]

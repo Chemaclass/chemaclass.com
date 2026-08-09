@@ -1,6 +1,6 @@
 +++
 title = "Bitcoin with Rigor"
-description = "Bitcoin with Rigor goes beyond a basic explanation of Bitcoin, offering a detailed analysis of how Bitcoin works. It breaks down its components clearly, helping readers understand both the parts and the system as a whole. This deep dive explores Bitcoin’s potential and risks, recognizing it as a decade-old monetary experiment that hasn’t yet stood the test of time like gold or silver. Despite this, its innovative design makes it a promising system for the present and future."
+description = "A detailed analysis of how Bitcoin works, component by component, with its potential and its risks as a monetary experiment."
 aliases = [ "/readings/bitcoin-con-rigor" ]
 draft = false
 authors = [ "Jose Sanchis" ]

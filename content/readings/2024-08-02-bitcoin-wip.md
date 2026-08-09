@@ -1,6 +1,6 @@
 +++
 title = "Bitcoin: A Work in Progress"
-description = "With thousands of 'crypto' projects out there, they say Bitcoin is old and boring, but nothing could be further from the truth. This book will guide you through the latest developments in Bitcoin, as seen through the eyes of one of its many developers."
+description = "They say Bitcoin is old and boring. This book walks through its latest developments, seen by one of its own developers."
 aliases = [ "/readings/btc-wip", "/readings/btcwip" ]
 draft = false
 authors = [ "Sjors Provoost" ]

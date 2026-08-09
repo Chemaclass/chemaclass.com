@@ -1,6 +1,6 @@
 +++
 title = "Los Cypherpunks"
-description = "A principios de los 90, con el auge de internet, surgió un grupo llamado los Cypherpunks para defender la privacidad digital. Impulsaron el cifrado y la tecnología de privacidad, moldeando nuestro mundo digital con su visión e ideales."
+description = "A principios de los 90 los Cypherpunks salieron a defender la privacidad digital. Su cifrado y sus ideales moldearon el mundo de hoy."
 draft = false
 [taxonomies]
 tags = [ "privacy", "bitcoin", "cryptography", "security", "philosophy" ]

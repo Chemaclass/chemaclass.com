@@ -1,6 +1,6 @@
 +++
 title = "¿Siempre Has Sido Así?"
-description = "¿Siempre has sido así? ¿Constantemente leyendo libros, escribiendo posts de blog, speaker público en conferencias y meet-ups, aprendiendo en tu tiempo libre, etc...? La respuesta corta es: no, y déjame contarte cómo terminé en esta situación."
+description = "¿Siempre leyendo, escribiendo y dando charlas? La respuesta corta es no. Cómo acabé aquí, y qué cambió por el camino."
 draft = false
 [taxonomies]
 tags = [ "career", "productivity", "philosophy" ]

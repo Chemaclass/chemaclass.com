@@ -1,6 +1,6 @@
 +++
 title = "Empieza con el porqué"
-description = "¿Por qué algunas personas y organizaciones son más innovadoras, influyentes y rentables? ¿Por qué algunas consiguen más lealtad de clientes y empleados? ¿Por qué tan pocas pueden repetir su éxito?"
+description = "¿Por qué unas organizaciones son más innovadoras y rentables? ¿Por qué tan pocas repiten su éxito? Sinek empieza por el porqué."
 authors = [ "Simon Sinek" ]
 [taxonomies]
 tags = [ "leadership", "communication", "philosophy", "career" ]

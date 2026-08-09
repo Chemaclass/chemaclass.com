@@ -1,6 +1,6 @@
 +++
 title = "El hombre en busca de sentido"
-description = "Frankl comparte sus desgarradoras experiencias del Holocausto y presenta una filosofía profunda sobre la condición humana. Un testimonio de la resiliencia del espíritu humano: incluso en los momentos más oscuros, uno puede encontrar propósito y sentido."
+description = "Frankl comparte su experiencia del Holocausto y una filosofía sobre encontrar sentido incluso en los momentos más oscuros."
 draft = false
 authors = [ "Viktor E. Frankl" ]
 [taxonomies]

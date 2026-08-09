@@ -1,6 +1,6 @@
 +++
 title = "Dare to lead"
-description = "Leadership is not about titles, status and power over people. Leaders are people who hold themselves accountable for recognising the potential in people and ideas, and developing that potential. This is a book for everyone who is ready to choose courage over comfort, make a difference and lead."
+description = "Leadership is not about titles or power. It is about recognising potential in people and developing it. Courage over comfort."
 authors = [ "Brené Brown" ]
 [taxonomies]
 tags = [ "leadership", "communication", "psychology", "mentoring" ]

@@ -1,6 +1,6 @@
 +++
 title = "El Triángulo de Gestión de Proyectos"
-description = "Entrega valor constantemente en iteraciones cortas. ¿Por qué? Porque esto te ayudará a obtener retroalimentación, y la retroalimentación es necesaria para tomar las decisiones correctas."
+description = "Alcance, tiempo y coste: elige dos. Por qué entregar en iteraciones cortas es lo que te da el feedback para decidir bien."
 [taxonomies]
 tags = [ "agile", "team-management", "productivity" ]
 [extra]

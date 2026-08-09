@@ -1,6 +1,6 @@
 +++
 title = "Minimalismo digital"
-description = "Cal Newport propone usar la tecnología con intención, no rechazarla. Una guía práctica para recuperar tu atención, reducir la ansiedad y construir relaciones más auténticas."
+description = "Cal Newport propone usar la tecnología con intención, no rechazarla. Cómo recuperar tu atención y reducir la ansiedad."
 draft = false
 authors = [ "Cal Newport" ]
 [taxonomies]

@@ -1,6 +1,6 @@
 +++
 title = "¿Qué Mata la Agilidad?"
-description = "¿Por qué Agile, si ya haces Scrum, Kanban, SAFe o Waterfall? Cómo gestionamos una organización define su calidad. Una excelente gestión es crucial para evitar la trampa del Waterfall si buscamos construir un entorno Agile. Pero ¿por qué querríamos eso? ¿Qué hay de malo en la forma en que ya trabajamos?"
+description = "¿Por qué Agile si ya haces Scrum, Kanban o SAFe? Cómo gestionas la organización define su calidad, y qué la mata de verdad."
 draft = false
 [taxonomies]
 tags = ["agile", "xp", "leadership", "team-management", "communication"]

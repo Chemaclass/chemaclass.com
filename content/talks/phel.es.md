@@ -1,5 +1,6 @@
 +++
 title = "Phel Lang"
+description = "Phel, un Lisp funcional que compila a PHP. Estructuras de datos persistentes, macros y un REPL, sobre el ecosistema de PHP."
 weight = 1
 [taxonomies]
 tags = [ "phel", "php", "functional-programming", "lisp" ]

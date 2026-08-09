@@ -1,6 +1,6 @@
 +++
 title = "It's Your Ship"
-description = "It's Your Ship is a leadership book written by D. Michael Abrashoff, a former commander of the USS Benfold, a guided missile destroyer. The book focuses on Abrashoff's experiences and the leadership principles he applied to transform the performance and culture of his ship."
+description = "Michael Abrashoff on how he transformed the performance and culture of the USS Benfold, and the leadership principles behind it."
 draft = false
 aliases = [ "/readings/it-is-your-ship" ]
 authors = [ "D. Michael Abrashoff" ]

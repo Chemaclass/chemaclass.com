@@ -1,6 +1,6 @@
 +++
 title = "Turn the Ship Around!"
-description = "Marquet cuenta cómo transformó el submarino Santa Fe con un nuevo modelo de liderazgo. Muestra las limitaciones de la jerarquía tradicional y cómo el enfoque líder-líder puede cambiar todo."
+description = "Marquet transformó el submarino Santa Fe cambiando de líder-seguidor a líder-líder. Los límites de la jerarquía tradicional."
 authors = [ "L. David Marquet" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "communication", "mentoring" ]

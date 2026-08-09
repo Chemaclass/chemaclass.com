@@ -1,7 +1,7 @@
 +++
 title = "The Cypherpunks"
 aliases = [ "/blog/cypherpunks" ]
-description = "In the early '90s, with the internet on the rise, a group called the Cypherpunks emerged to defend digital privacy. They pushed for encryption and privacy tech, shaping our digital world with their vision and ideals."
+description = "In the early '90s the Cypherpunks set out to defend digital privacy. Their encryption and their ideals shaped the world we live in."
 draft = false
 [taxonomies]
 tags = [ "privacy", "bitcoin", "cryptography", "security", "philosophy" ]

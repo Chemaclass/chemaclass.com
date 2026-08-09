@@ -1,6 +1,6 @@
 +++
 title = "Idealismo vs Pragmatismo"
-description = "La tensión entre hacer las cosas bien y sacar las cosas adelante marca cada decisión en el software y en la vida. TDD, pair programming, adopción de IA: los mejores resultados vienen de sostener ambos extremos de la cuerda."
+description = "Hacer las cosas bien contra sacarlas adelante. TDD, pair programming, IA: los mejores resultados sostienen ambos extremos."
 draft = false
 [taxonomies]
 tags = [ "ai", "software", "craftsmanship", "leadership" ]

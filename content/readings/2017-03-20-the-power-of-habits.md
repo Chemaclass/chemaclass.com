@@ -1,6 +1,6 @@
 +++
 title = "The Power of Habit"
-description = "Charles Duhigg explores the science behind habit formation, showing how habits work, why they exist, and practical strategies to transform them for personal and professional growth."
+description = "Charles Duhigg on the science of habit: how habits form, why they exist, and how to rewire them for good."
 authors = [ "Charles Duhigg" ]
 [taxonomies]
 tags = [ "psychology", "productivity", "career" ]

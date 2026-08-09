@@ -1,6 +1,6 @@
 +++
 title = "Modern Software Engineering"
-description = "This book presents software development as an engineering practice at every level. To master software engineering, we must become experts at learning and managing complexity."
+description = "Dave Farley presents software development as engineering at every level: becoming expert at learning and managing complexity."
 authors = [ "David Farley" ]
 [taxonomies]
 tags = [ "software-design", "testing", "architecture", "agile" ]

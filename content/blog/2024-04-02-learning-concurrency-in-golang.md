@@ -1,6 +1,6 @@
 +++
 title = "Learning Concurrency in Golang"
-description = "I wanted to learn a new programming language, so after trying some, I ended up with Golang as one of my favorites for its simplicity and capabilities. It has features I haven’t used in years, like multithreading and concurrency."
+description = "Learning Go for its simplicity, and meeting again things I had not used in years: multithreading, goroutines and concurrency."
 draft = false
 [taxonomies]
 tags = ["golang", "software-design", "clean-code"]

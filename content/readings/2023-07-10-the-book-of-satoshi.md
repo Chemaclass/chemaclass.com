@@ -1,6 +1,6 @@
 +++
 title = "The Book Of Satoshi"
-description = "A compilation of Satoshi Nakamoto's emails, forum posts, and writings from 2008-2010 that detail Bitcoin's creation, design decisions, and the vision behind the protocol."
+description = "Satoshi Nakamoto's emails and forum posts from 2008 to 2010: Bitcoin's creation, its design decisions and the vision behind it."
 draft = false
 authors = [ "Phil Champagne" ]
 [taxonomies]

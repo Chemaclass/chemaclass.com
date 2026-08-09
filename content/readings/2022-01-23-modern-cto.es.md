@@ -1,6 +1,6 @@
 +++
 title = "Modern CTO"
-description = "Joel Beasley ofrece una guía práctica para pasar de desarrollador a CTO. Comparte desde su experiencia los retos, las lecciones aprendidas y los errores típicos en este camino."
+description = "Joel Beasley traza el camino de desarrollador a CTO: los retos, las lecciones aprendidas y los errores que conviene evitar."
 authors = [ "Joel Beasley" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "software-design", "communication" ]

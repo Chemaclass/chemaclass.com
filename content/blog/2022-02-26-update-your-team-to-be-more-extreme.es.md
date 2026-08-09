@@ -1,6 +1,6 @@
 +++
 title = "Actualiza tu Equipo para Ser Más Extreme"
-description = "Nuestra profesión está en constante evolución y exige aprendizaje continuo. Abrazar el cambio no es opcional en software. Hay que crear espacios para salir de nuestra zona de confort."
+description = "El software exige aprendizaje continuo. Cómo crear espacios en tu equipo para salir de la zona de confort y abrazar el cambio."
 updated = "2023-03-23"
 [taxonomies]
 tags = [ "xp", "agile", "team-management", "mentoring", "tdd" ]

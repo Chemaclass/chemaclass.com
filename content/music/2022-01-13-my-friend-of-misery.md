@@ -1,5 +1,6 @@
 +++
 title = "My Friend Of Misery - Metallica (bass cover)"
+description = "My Friend of Misery by Metallica, played by Chema as a bass cover."
 [taxonomies]
 tags = [ "music" ]
 [extra]

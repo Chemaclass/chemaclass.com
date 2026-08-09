@@ -1,6 +1,6 @@
 +++
 title = "Bitcoin con Rigor"
-description = "Un análisis detallado de cómo funciona Bitcoin, desglosando sus componentes de forma clara. Explora su potencial y riesgos como experimento monetario que, aunque no ha superado la prueba del tiempo como el oro, tiene un diseño prometedor para el presente y futuro."
+description = "Un análisis detallado de cómo funciona Bitcoin, pieza a pieza, con su potencial y sus riesgos como experimento monetario."
 draft = false
 authors = [ "Jose Sanchis" ]
 [taxonomies]

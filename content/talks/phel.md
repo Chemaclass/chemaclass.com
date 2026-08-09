@@ -1,5 +1,6 @@
 +++
 title = "Phel Lang"
+description = "Phel, a functional Lisp that compiles to PHP. Persistent data structures, macros and a REPL, built on top of the PHP ecosystem."
 aliases = [ "talks/phel-lang" ]
 weight = 1
 [taxonomies]

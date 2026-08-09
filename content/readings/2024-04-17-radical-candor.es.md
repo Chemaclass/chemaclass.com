@@ -1,6 +1,6 @@
 +++
 title = "Radical Candor"
-description = "Kim Scott, ex líder de Google, desarrolló esta filosofía de gestión. Es un curso intensivo sobre cómo ser un gran manager: empático y orientado a resultados. La clave está en crear un entorno donde la gente se sienta segura para decir lo que piensa y hacer su trabajo con respeto."
+description = "Kim Scott, ex líder de Google, sobre ser un buen manager: empatía y resultados, en un entorno donde la gente puede hablar claro."
 draft = false
 authors = [ "Kim Scott" ]
 [taxonomies]

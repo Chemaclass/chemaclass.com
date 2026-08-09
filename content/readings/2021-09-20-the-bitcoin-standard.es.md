@@ -1,6 +1,6 @@
 +++
 title = "El patrón Bitcoin"
-description = "Un análisis del contexto histórico de Bitcoin, las propiedades económicas que lo hicieron crecer tan rápido, y sus posibles implicaciones económicas, políticas y sociales."
+description = "El contexto histórico de Bitcoin, las propiedades económicas que lo hicieron crecer y sus implicaciones políticas y sociales."
 authors = [ "Saifedean Ammous" ]
 [taxonomies]
 tags = [ "bitcoin", "economics", "philosophy" ]

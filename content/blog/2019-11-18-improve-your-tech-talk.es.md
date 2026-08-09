@@ -1,6 +1,6 @@
 +++
 title = "Cómo Mejorar tu Charla Técnica (o Cualquier Otra Presentación)"
-description = "A todos nos ha pasado estar en reuniones que parecían una pérdida de tiempo, con un monólogo difícil de seguir o menos interesante de lo que podría ser. Vamos a arreglar esto."
+description = "Todos hemos sufrido charlas difíciles de seguir. Cómo preparar y dar una charla técnica que la gente quiera escuchar."
 [taxonomies]
 tags = [ "communication", "leadership", "productivity", "career"]
 [extra]

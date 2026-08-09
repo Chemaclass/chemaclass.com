@@ -1,6 +1,6 @@
 +++
 title = "Ignoring Scrum to Get More Agile?"
-description = "People become slaves to systems that are supposed to help. Boring meetings are killing agile. Meetings require active participation from everyone. Otherwise, you might not be essential to that meeting, and rather use your time with something else."
+description = "Boring meetings are killing agile. When the process stops helping the team and starts owning it instead."
 draft = false
 [taxonomies]
 tags = [ "agile", "scrum", "communication", "productivity" ]

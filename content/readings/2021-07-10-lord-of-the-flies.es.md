@@ -1,6 +1,6 @@
 +++
 title = "El señor de las moscas"
-description = "Un clásico que mezcla parábola, alegoría y cuento moral. Un grupo de niños británicos acaba varado en una isla desierta. Su intento de gobernarse a sí mismos termina en desastre."
+description = "Un grupo de niños británicos varados en una isla desierta intenta gobernarse a sí mismo. Termina en desastre."
 authors = [ "William Golding" ]
 [taxonomies]
 tags = [ "fiction", "psychology", "leadership", "philosophy" ]

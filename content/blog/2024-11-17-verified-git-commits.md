@@ -1,6 +1,6 @@
 +++
 title = "Verified Git Commits"
-description = "Sign your Git commits with GPG to prove they're really from you. Without signatures, anyone can fake commits using your email. It takes 5 minutes to set up and adds real trust to your codebase."
+description = "Sign your Git commits with GPG to prove they are really yours. Without a signature, anyone can fake a commit using your email."
 draft = false
 aliases = [ "/blog/verified-commits" ]
 [taxonomies]

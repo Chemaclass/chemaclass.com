@@ -1,6 +1,6 @@
 +++
 title = "Agile Project Management"
-description = "Projects that followed a Waterfall methodology tended to exceed their expenses in the first initiative over time, while the product delivered was below standard and difficult to use. That situation originated that a group of developers signed a brief, 68-word manifesto in 2001."
+description = "Waterfall projects ran over budget and shipped software nobody wanted to use. In 2001, a 68-word manifesto changed that."
 draft = false
 authors = [ "Jeremy Savell" ]
 [taxonomies]

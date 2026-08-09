@@ -1,6 +1,6 @@
 +++
 title = "Trabajando Agile con Equipos No Agile"
-description = "Asumamos que ya sabes qué es el manifiesto agile. Consideremos que aplicas la mayoría de los valores, principios y prácticas de extreme programming. ¿Cómo puedes trabajar con otros equipos que no son agile?"
+description = "Aplicas los valores y prácticas de extreme programming. ¿Cómo trabajas entonces con los equipos de alrededor que no son agile?"
 draft = false
 [taxonomies]
 tags = [ "agile", "xp", "communication", "team-management" ]

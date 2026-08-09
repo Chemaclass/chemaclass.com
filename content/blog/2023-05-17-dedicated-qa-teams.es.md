@@ -1,6 +1,6 @@
 +++
 title = "¿Equipos de QA Dedicados en Software?"
-description = "Esto será controvertido, pero hablemos de la posición de QA. La verdad oculta detrás de la falta de calidad del software y por qué esto debería preocuparte si escribes software."
+description = "Hablemos de la posición de QA. La verdad detrás de la falta de calidad del software, y por qué te concierne si escribes código."
 draft = false
 [taxonomies]
 tags = [ "testing", "tdd", "agile", "clean-code" ]

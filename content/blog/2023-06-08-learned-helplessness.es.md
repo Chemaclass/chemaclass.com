@@ -1,6 +1,6 @@
 +++
 title = "Indefensión Aprendida"
-description = "La indefensión aprendida es el comportamiento que muestra una persona tras sufrir repetidamente situaciones adversas que escapan a su control. Se origina cuando alguien acepta su impotencia y deja de intentar escapar o evitar dichas situaciones."
+description = "La indefensión aprendida aparece cuando alguien acepta su impotencia y deja de intentar escapar. Qué es y cómo se rompe."
 draft = false
 [taxonomies]
 tags = [ "psychology", "productivity", "career", "philosophy" ]

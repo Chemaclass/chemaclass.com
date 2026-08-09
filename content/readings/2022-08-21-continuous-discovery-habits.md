@@ -1,6 +1,6 @@
 +++
 title = "Continuous Discovery Habits"
-description = "Continuous Discovery Habits (2021) explores how product managers and designers can keep making a positive impact on their customers’ lives. It explores an optimal decision-making process for product teams, so that they can continue to improve their offerings."
+description = "Teresa Torres on a decision-making process that keeps product teams in touch with customers and improving what they ship."
 authors = [ "Teresa Torres" ]
 [taxonomies]
 tags = [ "team-management", "agile", "productivity" ]

@@ -1,6 +1,6 @@
 +++
 title = "¿Ignorar Scrum para ser más Agile?"
-description = "Las personas se vuelven esclavas de sistemas que se supone que ayudan. Las reuniones aburridas están matando el agile. Las reuniones requieren participación activa de todos. De lo contrario, podrías no ser esencial para esa reunión, y mejor usar tu tiempo con algo más."
+description = "Las reuniones aburridas están matando el agile. Cuándo el proceso deja de ayudar y empieza a esclavizar al equipo."
 draft = false
 [taxonomies]
 tags = [ "agile", "scrum", "communication", "productivity" ]

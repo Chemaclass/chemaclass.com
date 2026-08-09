@@ -1,6 +1,6 @@
 +++
 title = "Conformity Experiments"
-description = "To what extent do social forces alter people's opinions? Which aspect of the group influence is most important: the size of the majority, or the unanimity of opinion?"
+description = "How far do social forces bend your opinion? What matters more: the size of the majority or its unanimity. Asch's experiments, explained."
 [taxonomies]
 tags = [ "psychology", "leadership", "communication" ]
 [extra]

@@ -1,6 +1,6 @@
 +++
 title = "Never Ending Loop"
-description = "It is hard sometimes to get to bed with the mind blank because, more often than not, I think about my next reading, learning, talk, or what I will write this or next month."
+description = "It is hard to get to bed with a blank mind when you are already on the next reading, talk or post. On the never ending loop."
 draft = false
 [taxonomies]
 tags = [ "career", "philosophy", "productivity" ]

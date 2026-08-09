@@ -1,5 +1,6 @@
 +++
 title = "Cómo mejorar tu charla técnica"
+description = "Cómo subir a un escenario y hablar ante 5, 50 o 500 personas. Qué hace falta de verdad para preparar y dar una buena charla."
 weight = 1
 [taxonomies]
 tags = [ "speaking", "presentations" ]

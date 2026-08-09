@@ -1,6 +1,6 @@
 +++
 title = "Meditations"
-description = "The private notebook of a Roman emperor who never meant for you to read it. Marcus Aurelius wrote these notes to remind himself how to stay sane while running an empire. Stoicism with the theory stripped out and only the practice left."
+description = "The private notebook Marcus Aurelius wrote for himself while running an empire. Stoicism with the theory stripped out."
 authors = [ "Marcus Aurelius" ]
 [taxonomies]
 tags = [ "philosophy", "self-improvement" ]

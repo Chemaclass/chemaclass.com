@@ -1,6 +1,6 @@
 +++
 title = "The Starfish and the Spider"
-description = "If you cut off a spider's head, it dies; if you cut off a starfish's leg it grows a new one, and that leg can grow into an entirely new starfish. Traditional top-down organizations are like spiders, but now starfish organizations are changing the face of business and the world."
+description = "Cut off a spider's head and it dies. Cut off a starfish's leg and it grows back. How decentralized organizations change business."
 draft = false
 authors = [ "Ori Brafman", "Rod Beckstrom" ]
 [taxonomies]

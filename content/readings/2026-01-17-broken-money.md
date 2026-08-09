@@ -1,6 +1,6 @@
 +++
 title = "Broken Money"
-description = "A deep dive into monetary history through a technological lens. Lyn Alden traces how innovations shaped money across centuries, examining commodity-based systems, modern fiat currencies, and emerging alternatives like Bitcoin. Essential reading for understanding why our financial system is failing and what we can do about it."
+description = "Lyn Alden traces monetary history through a technological lens, from commodity money to fiat to Bitcoin, and why the system fails."
 draft = false
 authors = [ "Lyn Alden" ]
 [taxonomies]

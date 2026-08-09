@@ -1,6 +1,6 @@
 +++
 title = "Turn the Ship Around!"
-description = "The book is about his leadership theories to how he implemented a fresh leadership model. Including the limitations of a hierarchical top-down model, why/how he failed to empower his team earlier in his career, and how the circumstances for Santa Fe were ideal for him to experiment with the new leader-leader approach."
+description = "Marquet turned the submarine Santa Fe around by moving from leader-follower to leader-leader. On the limits of top-down hierarchy."
 authors = [ "L. David Marquet" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "communication", "mentoring" ]

@@ -1,6 +1,6 @@
 +++
 title = "Leadership is Language"
-description = "Marquet analiza el hundimiento del El Faro, uno de los desastres marinos más investigados, y extrae ideas sobre cómo el lenguaje que usamos define nuestro liderazgo."
+description = "Marquet analiza el hundimiento del El Faro y extrae ideas sobre cómo el lenguaje que usamos define nuestro liderazgo."
 authors = [ "L. David Marquet" ]
 [taxonomies]
 tags = [ "leadership", "communication", "team-management", "productivity" ]

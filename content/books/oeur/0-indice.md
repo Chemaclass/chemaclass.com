@@ -1,5 +1,6 @@
 +++
 title = "Chapters"
+description = "The full table of contents of Eyes on a Memory, chapter by chapter, from March 2015 to the closing reflection eleven years later."
 slug = "indice"
 weight = 1
 date = 2015-01-02

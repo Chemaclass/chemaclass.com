@@ -1,5 +1,6 @@
 +++
 title = "Actualiza tu equipo para ser más extremo"
+description = "En software, abrazar el cambio no es opcional. Cómo crear los espacios que tu equipo necesita para salir de la zona de confort."
 weight = 1
 [taxonomies]
 tags = [ "agile", "xp", "team-culture" ]

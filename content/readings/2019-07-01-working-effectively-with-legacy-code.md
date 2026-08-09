@@ -1,6 +1,6 @@
 +++
 title = "Working Effectively with Legacy Code"
-description = "Michael Feathers presents practical techniques for adding tests to untested code, breaking dependencies, and safely refactoring large legacy systems without introducing bugs."
+description = "Michael Feathers on adding tests to untested code, breaking dependencies, and refactoring legacy systems safely."
 authors = [ "Michael Feathers" ]
 [taxonomies]
 tags = [ "refactoring", "testing", "tdd", "software-design" ]

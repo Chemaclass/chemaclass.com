@@ -1,6 +1,6 @@
 +++
 title = "The Lean Startup"
-description = "Most startups fail. But many of those failures are preventable. The Lean Startup is a new approach being adopted across the globe, changing the way companies are built and new products are launched."
+description = "Most startups fail, and many of those failures are preventable. The approach that changed how companies build and launch."
 draft = false
 authors = [ "Eric Ries" ]
 [taxonomies]

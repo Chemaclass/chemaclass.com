@@ -1,6 +1,6 @@
 +++
 title = "Dominando Bitcoin"
-description = "Este libro cubre desde los conceptos básicos hasta los aspectos técnicos más profundos de Bitcoin. Una guía excelente para entender este mundo y participar en el Internet del Dinero."
+description = "De los conceptos básicos a los detalles técnicos más profundos de Bitcoin. La guía para participar en el Internet del Dinero."
 draft = false
 authors = [ "Andreas M. Antonopoulos", "David A. Harding" ]
 [taxonomies]
