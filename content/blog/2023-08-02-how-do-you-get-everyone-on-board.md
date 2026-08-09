@@ -1,6 +1,6 @@
 +++
 title = "How Do You Get Everyone on Board?"
-description = "I was invited to the WeAreDevelopers World Congress to give a tech talk about my experience with Extreme Programming and the profound benefits of embracing change in your work and life."
+description = "From my talk at the WeAreDevelopers World Congress: my experience with Extreme Programming and the benefits of embracing change."
 draft = false
 aliases = [ "/blog/how-do-you-deal-with-hard-people", "/blog/how-to-get-everyone-on-board" ]
 [taxonomies]

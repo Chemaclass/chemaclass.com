@@ -1,6 +1,6 @@
 +++
 title = "Recipes for Decoupling"
-description = "¿Qué es el acoplamiento y por qué nos perjudica? Este libro recopila estrategias prácticas para separar tu código de dominio de la infraestructura y mantener un sistema sano a largo plazo."
+description = "Qué es el acoplamiento y por qué duele. Estrategias prácticas para separar tu código de dominio de la infraestructura."
 authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "php", "software-design", "architecture", "clean-code" ]

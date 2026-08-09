@@ -1,6 +1,6 @@
 +++
 title = "Gestión Ágil de Proyectos"
-description = "Los proyectos Waterfall solían pasarse de presupuesto y entregar software mediocre. En 2001, un grupo de desarrolladores firmó un manifiesto de 68 palabras que cambiaría todo."
+description = "Los proyectos Waterfall se pasaban de presupuesto y entregaban software mediocre. En 2001, 68 palabras lo cambiaron todo."
 draft = false
 authors = [ "Jeremy Savell" ]
 [taxonomies]

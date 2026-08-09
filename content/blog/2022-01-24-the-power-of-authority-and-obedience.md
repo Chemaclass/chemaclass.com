@@ -1,6 +1,6 @@
 +++
 title = "The Power of Authority and Obedience"
-description = "Milgram was interested in researching how far people would go in obeying an instruction if it involved harming another person, and how easily people could be influenced into committing atrocities. For example, Germans in WWII."
+description = "Milgram wanted to know how far people obey an order that means harming someone else. What he found, and why it still matters."
 [taxonomies]
 tags = [ "psychology", "leadership", "communication" ]
 [extra]

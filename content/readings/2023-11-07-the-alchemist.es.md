@@ -1,6 +1,6 @@
 +++
 title = "El Alquimista"
-description = "Santiago, un joven pastor, emprende un viaje hacia las pirámides de Egipto persiguiendo un sueño. En el camino descubre qué es lo que realmente importa en la vida."
+description = "Santiago, un joven pastor, viaja hacia las pirámides persiguiendo un sueño y descubre qué importa de verdad."
 draft = false
 authors = [ "Paulo Coelho" ]
 [taxonomies]

@@ -1,6 +1,6 @@
 +++
 title = "Laissez Faire, Laissez Passer"
-description = "One old French phrase holds the whole case for free markets. Let people act, let goods pass. No planner knows what the market knows, and freedom, not control, should be the default."
+description = "Let people act, let goods pass. No planner knows what the market knows, and freedom, not control, should be the default."
 draft = false
 [taxonomies]
 tags = [ "economics", "philosophy", "freedom", "bitcoin" ]

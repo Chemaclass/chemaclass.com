@@ -1,6 +1,6 @@
 +++
 title = "The Bitcoin Standard"
-description = "The Bitcoin Standard analyzes the historical context to the rise of Bitcoin, the economic properties that have allowed it to grow quickly, and its likely economic, political, and social implications."
+description = "The historical context behind Bitcoin, the economic properties that let it grow fast, and its political and social implications."
 authors = [ "Saifedean Ammous" ]
 [taxonomies]
 tags = [ "bitcoin", "economics", "philosophy" ]

@@ -1,6 +1,6 @@
 +++
 title = "The Blocksize War"
-description = "Jonathan Bier chronicles the Bitcoin blocksize war (2015-2017), exploring the key players, strategies, and ideological battles that shaped who controls Bitcoin's protocol."
+description = "Jonathan Bier chronicles the Bitcoin blocksize war of 2015 to 2017: the players, the strategies, and who controls the protocol."
 draft = false
 authors = [ "Jonathan Bier" ]
 [taxonomies]

@@ -1,6 +1,6 @@
 +++
 title = "The Day of the Triffids"
-description = "This book is fantastic and frightening, but entirely plausible. It doesn't just seem scientifically possible, but its characters are living people shaken out of the civilization they know into the horror of a world dominated by triffids."
+description = "Frightening and entirely plausible. Real people shaken out of the civilization they knew into a world dominated by triffids."
 draft = false
 authors = [ "John Wyndham" ]
 [taxonomies]

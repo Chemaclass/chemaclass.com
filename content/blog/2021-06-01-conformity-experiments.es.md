@@ -1,6 +1,6 @@
 +++
 title = "Experimentos de Conformidad"
-description = "¿Hasta qué punto las fuerzas sociales alteran las opiniones de las personas? ¿Qué aspecto de la influencia del grupo es más importante: el tamaño de la mayoría, o la unanimidad de opinión?"
+description = "¿Hasta qué punto el grupo cambia tu opinión? Qué pesa más: el tamaño de la mayoría o su unanimidad. Los experimentos de Asch, explicados."
 [taxonomies]
 tags = [ "psychology", "leadership", "communication" ]
 [extra]

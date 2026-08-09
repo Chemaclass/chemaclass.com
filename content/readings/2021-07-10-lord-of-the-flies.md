@@ -1,6 +1,6 @@
 +++
 title = "Lord of the Flies"
-description = "Labeled a parable, an allegory, a myth, a morality tale, a parody, a political treatise, even a vision of the apocalypse. It has established itself as a true classic. The book focuses on a group of British boys stranded on an uninhabited island, and their disastrous attempt to govern themselves."
+description = "A group of British boys stranded on an uninhabited island try to govern themselves. It ends in disaster."
 authors = [ "William Golding" ]
 [taxonomies]
 tags = [ "fiction", "psychology", "leadership", "philosophy" ]

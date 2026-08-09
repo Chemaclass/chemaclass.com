@@ -1,6 +1,6 @@
 +++
 title = "Despliegues los Viernes"
-description = "He escuchado múltiples veces, de varias personas, la idea de pánico hacia desplegar los viernes. ¿Qué tan buena es esa idea de prohibir el día antes del fin de semana entregar nuevo valor a nuestros clientes?"
+description = "El pánico a desplegar los viernes. ¿Tiene sentido prohibir un día entero de entregar valor a tus clientes?"
 draft = false
 [taxonomies]
 tags = ["agile", "xp", "leadership", "productivity"]

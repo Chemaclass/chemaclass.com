@@ -1,6 +1,6 @@
 +++
 title = "Modern CTO"
-description = "In Modern CTO, Joel Beasley provides readers with an in-depth road map on how to successfully navigate the unexplored and jagged transition between these two roles. Drawing from personal experience, Joel gives a refreshing take on the challenges, lessons, and things to avoid on this journey."
+description = "Joel Beasley maps the jagged transition from developer to CTO: the challenges, the lessons and the things worth avoiding."
 authors = [ "Joel Beasley" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "software-design", "communication" ]

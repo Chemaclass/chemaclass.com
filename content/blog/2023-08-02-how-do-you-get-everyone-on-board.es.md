@@ -1,6 +1,6 @@
 +++
 title = "¿Cómo Consigues que Todos se Sumen?"
-description = "Fui invitado al WeAreDevelopers World Congress para dar una charla técnica sobre mi experiencia con Extreme Programming y los profundos beneficios de abrazar el cambio en tu trabajo y vida."
+description = "De mi charla en el WeAreDevelopers World Congress: mi experiencia con Extreme Programming y los beneficios de abrazar el cambio."
 draft = false
 [taxonomies]
 tags = [ "leadership", "communication", "team-management", "mentoring", "xp" ]

@@ -1,6 +1,6 @@
 +++
 title = "Have You Always Been Like This?"
-description = "Have you always been like this? Constantly reading books, writing blog posts, public speaker in conferences and meet-ups, learning in your private time, etc...? The short answer is: no, and let me tell you how I ended up in this situation."
+description = "Always reading, writing and speaking? The short answer is no. How I ended up here, and what changed along the way."
 draft = false
 [taxonomies]
 tags = [ "career", "productivity", "philosophy" ]

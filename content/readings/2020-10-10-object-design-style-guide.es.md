@@ -5,7 +5,7 @@ authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "software-design", "clean-code", "php" ]
 [extra]
-description = "Técnicas para escribir código orientado a objetos flexible, legible y mantenible en cualquier lenguaje OO"
+description = "La guía práctica de Matthias Noback para escribir código orientado a objetos flexible y legible, útil en cualquier lenguaje OO."
 pages = "240"
 author = "Matthias Noback"
 static_thumbnail = "/images/readings/object-design-style-guide.webp"

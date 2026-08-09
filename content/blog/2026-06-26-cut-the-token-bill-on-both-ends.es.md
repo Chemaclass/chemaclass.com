@@ -1,6 +1,6 @@
 +++
 title = "Recorta la Factura de Tokens"
-description = "Dos herramientas pequeñas que se suman: Caveman recorta lo que el agent te responde, RTK recorta lo que la terminal manda de vuelta. Más espacio en el mismo context window, mismo modelo, mismos prompts."
+description = "Caveman recorta lo que responde el agent, RTK lo que devuelve la terminal. Más espacio en el mismo context window."
 draft = false
 [taxonomies]
 tags = [ "ai", "productivity", "developer-tools", "agentic-coding" ]

@@ -1,6 +1,6 @@
 +++
 title = "What Success Means to Me"
-description = "Success is waking up knowing that what you do makes the people around you, and yourself, happier. No complex formula. Just consistency over perfection, and building habits that align with what matters."
+description = "Success is waking up knowing that what you do makes the people around you, and yourself, happier. Consistency over perfection."
 draft = false
 [taxonomies]
 tags = [ "philosophy", "career", "productivity", "leadership" ]

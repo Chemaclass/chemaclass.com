@@ -324,12 +324,19 @@
       {% elif section.description %}
         <meta name="description" content="{{ section.description }}" />
         <meta name="twitter:description" content="{{ section.description }}">
+      {# A page with no description of its own falls back to its own opening words.
+         Two things that has to get right: the length, because Google shows about
+         155 characters and the old 200 shipped 77 pages whose snippet ended
+         mid-word; and the heading anchors, because anchor-link.html renders a
+         literal "#" next to every heading that striptags leaves stranded in the
+         middle of the sentence. Dropping the anchor text before striptags takes
+         it out without touching a "#" the prose itself wrote. #}
       {% elif page.summary %}
-        {% set fallback_desc = page.summary | striptags | trim | truncate(length=200) %}
+        {% set fallback_desc = page.summary | replace(from=">#</a>", to="></a>") | striptags | trim | truncate(length=155) %}
         <meta name="description" content="{{ fallback_desc }}" />
         <meta name="twitter:description" content="{{ fallback_desc }}">
       {% elif page.content %}
-        {% set fallback_desc = page.content | striptags | trim | truncate(length=200) %}
+        {% set fallback_desc = page.content | replace(from=">#</a>", to="></a>") | striptags | trim | truncate(length=155) %}
         <meta name="description" content="{{ fallback_desc }}" />
         <meta name="twitter:description" content="{{ fallback_desc }}">
       {% else %}

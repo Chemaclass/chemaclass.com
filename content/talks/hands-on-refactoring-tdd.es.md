@@ -1,5 +1,6 @@
 +++
 title = "Refactoring y TDD Práctico"
+description = "Una sesión de live coding sobre desarrollo test-first y refactoring, resolviendo una kata desde cero en pair y mob programming."
 weight = 1
 [taxonomies]
 tags = [ "tdd", "refactoring", "live-coding", "pair-programming", "workshop" ]

@@ -1,6 +1,6 @@
 +++
 title = "Laissez Faire, Laissez Passer"
-description = "Una vieja frase francesa contiene todo el argumento a favor del libre mercado. Deja actuar, deja pasar. Ningún planificador sabe lo que sabe el mercado, y lo normal debería ser la libertad, no el control."
+description = "Deja actuar, deja pasar. Ningún planificador sabe lo que sabe el mercado, y lo normal debería ser la libertad, no el control."
 draft = false
 [taxonomies]
 tags = [ "economics", "philosophy", "freedom", "bitcoin" ]

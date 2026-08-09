@@ -1,6 +1,6 @@
 +++
 title = "The Great CEO Within"
-description = "Learn how to efficiently scale your business from startup to corporation by implementing a system of accountability, effective problem-solving, and transparent feedback."
+description = "How to scale from startup to company with a system of accountability, real problem solving and transparent feedback."
 authors = [ "Matt Mochary" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "communication", "productivity", "mentoring" ]

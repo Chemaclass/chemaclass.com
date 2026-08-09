@@ -1,5 +1,6 @@
 +++
 title = "Índice"
+description = "El índice completo de Ojos en un Recuerdo, capítulo a capítulo, desde marzo de 2015 hasta la reflexión final once años después."
 slug = "indice"
 weight = 1
 date = 2015-01-02

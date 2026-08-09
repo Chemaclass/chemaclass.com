@@ -1,6 +1,6 @@
 +++
 title = "El proyecto Fénix"
-description = "Una historia sobre un proyecto imposible donde todos juegan a la política, arreglan bugs críticos sin parar y desperdician esfuerzos en parches rápidos en vez de ayudar al negocio a prosperar."
+description = "Un proyecto imposible, gente jugando a la política y parches rápidos sin fin, en vez de ayudar al negocio a funcionar."
 draft = false
 authors = [ "Gene Kim", "Kevin Behr", "George Spafford" ]
 [taxonomies]

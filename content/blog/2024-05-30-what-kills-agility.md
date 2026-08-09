@@ -1,6 +1,6 @@
 +++
 title = "What Kills Agility?"
-description = "Why Agile, if you already do Scrum, Kanban, SAFe, or Waterfall? How we manage an organization defines its quality. Excellent management is crucial to avoid the Waterfall trap if we aim to build an Agile environment. But why would we want that? What's wrong with the way we already work?"
+description = "Why Agile if you already do Scrum, Kanban or SAFe? How you manage an organization defines its quality, and what really kills it."
 draft = false
 [taxonomies]
 tags = ["agile", "xp", "leadership", "team-management", "communication"]

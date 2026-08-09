@@ -1,6 +1,6 @@
 +++
 title = "The Peter Principle"
-description = "The Peter principle states that a person who is competent at their job will earn a promotion to a position that requires different skills. If the promoted person lacks the skills required for the new role, they will be incompetent at the new level, and will not be promoted again."
+description = "The Peter principle: people get promoted until they land in a role they are not competent for, and then stop being promoted."
 draft = false
 [taxonomies]
 tags = ["leadership", "career", "team-management", "psychology"]

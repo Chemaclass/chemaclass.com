@@ -1,6 +1,6 @@
 +++
 title = "Ejecuta tu Nodo LN en una Raspberry Pi"
-description = "En esta guía te muestro cómo configurar un nodo de Lightning Network (LN) con Alby Hub en una Raspberry Pi. Tendrás control total sobre tu nodo. Alby Hub ofrece una versión DIY gratuita para una wallet Lightning auto-custodiada: tus fondos son tuyos, y el código es 100% open-source."
+description = "Cómo montar un nodo Lightning auto-custodiado con Alby Hub en una Raspberry Pi. Control total sobre tus fondos, 100% open source."
 draft = false
 [taxonomies]
 tags = [ "bitcoin", "open-source", "privacy", "tutorial" ]

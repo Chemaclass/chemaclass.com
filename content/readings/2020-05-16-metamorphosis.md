@@ -1,6 +1,6 @@
 +++
 title = "The metamorphosis"
-description = "Kafka's iconic novella about alienation and identity. Gregor Samsa wakes as a monstrous insect and must confront his family's revulsion and his own fading humanity."
+description = "Kafka's novella on alienation and identity. Gregor Samsa wakes as an insect and faces his family's revulsion."
 authors = [ "Franz Kafka" ]
 [taxonomies]
 tags = [ "fiction", "philosophy", "psychology" ]

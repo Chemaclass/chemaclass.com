@@ -1,6 +1,6 @@
 +++
 title = "Patrocinar"
-description = "Apoya mi trabajo en código abierto con bashunit, phel y agnostic-ai. Tu contribución permite más tiempo para herramientas de desarrollo y compartir conocimiento."
+description = "Apoya mi trabajo open source en bashunit, phel y agnostic-ai. Tu contribución financia más herramientas y más conocimiento compartido."
 template = "sponsor.html"
 aliases = [ "donar", "apoyar", "patrocinar" ]
 +++

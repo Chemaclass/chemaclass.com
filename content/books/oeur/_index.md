@@ -7,7 +7,7 @@ aliases = ["/books/oeur/en/"]
 [extra]
 cover = "/images/books/oeur/oeur-cover.webp"
 year = "2015 - 2017"
-description = "A compilation of thoughts structured like a diary. The result of moving to a new country and looking for new opportunities in life, spanning over two years of personal reflections."
+description = "Eyes on a Memory: two years of diary-like reflections written after moving to a new country, collected chapter by chapter into one book."
 quote = "A book dedicated only to the brave: for no one and for everyone"
 about_slug = "acerca-de-este-libro"
 +++

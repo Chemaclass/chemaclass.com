@@ -1,6 +1,6 @@
 +++
 title = "Forming, Storming, Norming y Performing"
-description = "Para que un equipo alcance alto rendimiento, hay que entender el Modelo de Tuckman: forming, storming, norming, performing y adjourning. Aquí exploro estrategias prácticas para cada etapa."
+description = "El modelo de Tuckman en cinco etapas, y estrategias prácticas para acompañar a un equipo en cada una de ellas."
 draft = false
 [taxonomies]
 tags = ["leadership", "team-management", "psychology", "communication"]

@@ -1,6 +1,6 @@
 +++
 title = "Ship, Show, Ask"
-description = "No todos los cambios necesitan la misma revisión. Ship, Show, Ask ajusta el proceso de revisión al riesgo del cambio, para que los equipos sigan entregando sin perder calidad ni colaboración."
+description = "No todo cambio necesita la misma revisión. Ship, Show, Ask ajusta el proceso al riesgo, sin perder calidad ni colaboración."
 draft = false
 [taxonomies]
 tags = [ "agile", "code-review", "team-management", "productivity" ]

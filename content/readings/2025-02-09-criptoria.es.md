@@ -1,6 +1,6 @@
 +++
 title = "Criptoria"
-description = "De Grecia a Bitcoin: cómo nacieron las computadoras, las redes y el dinero digital. Un viaje por los hitos que conectan matemáticas, criptografía y la lucha por la soberanía individual."
+description = "De Grecia a Bitcoin: los hitos que conectan matemáticas, criptografía y la lucha por la soberanía individual."
 draft = false
 authors = [ "Alfre Mancera" ]
 [taxonomies]

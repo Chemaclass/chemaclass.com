@@ -1,6 +1,6 @@
 +++
 title = "El Eterno Retorno"
-description = "Nietzsche usó el eterno retorno como prueba. La vida lo usa como espejo. Los patrones riman no para predecir el futuro, sino para revelar en quién te conviertes bajo presión."
+description = "Nietzsche usó el eterno retorno como prueba. Los patrones riman no para predecir el futuro, sino para revelar quién eres bajo presión."
 draft = false
 updated = 2026-06-02
 [taxonomies]

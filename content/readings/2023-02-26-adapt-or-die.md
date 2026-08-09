@@ -1,6 +1,6 @@
 +++
 title = "Adapt or die"
-description = "Told through the story of one bold company (People First IT), Adapt or Die takes readers through the unparalleled business system known as The Algorithm of Success that has the potential to inspire, ignite, and affect change for all aspects of an organization."
+description = "Told through the story of People First IT, this book lays out The Algorithm of Success for changing every part of an organization."
 draft = false
 authors = [ "Thomas H. Douglas" ]
 [taxonomies]
