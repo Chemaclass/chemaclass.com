@@ -30,6 +30,25 @@ insert_anchor_links = "right"
 light_theme = "github-light"
 dark_theme = "github-dark"
 
+[link_checker]
+# Hosts that answer a browser but refuse `zola check`. Every one of these was
+# verified alive by hand; they return 403, 521 or a dropped connection to an
+# automated client, and reporting them as broken every run trains everyone to
+# ignore the whole report. web.archive.org is here for a different reason: it
+# rate-limits, so checking it turns a green run into a coin flip.
+skip_prefixes = [
+    "https://bitcoin.org",
+    "https://hodlhodl.com",
+    "https://rosettacode.org",
+    "https://stackoverflow.com",
+    "https://web.archive.org",
+]
+# Anchors these sites build at runtime, so they are never in the served HTML.
+skip_anchor_prefixes = [
+    "https://github.com",
+    "https://x.com",
+]
+
 [translations]
 related_posts = "Related posts"
 faq_title = "Frequently asked"
