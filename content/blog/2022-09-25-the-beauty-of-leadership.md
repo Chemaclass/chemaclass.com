@@ -82,7 +82,7 @@ Key elements of this definition:
 
 ---
 
-![blog-cover](/images/blog/2022-09-25/footer.webp)
+![A lone walker crossing a wide open meadow on a narrow footpath, treeline in the distance](/images/blog/2022-09-25/footer.webp)
 
 ## Why would anyone want to become a leader?
 

@@ -59,7 +59,7 @@ El libro enlaza a más de doscientos artículos, videos, podcasts e incluso cód
     C. White Paper de Bitcoin
 
 
-![cover](/images/readings/2024-08-02/sjors-and-chema.webp)
+![Chema sosteniendo un ejemplar de Bitcoin: A Work in Progress junto a su autor, Sjors Provoost](/images/readings/2024-08-02/sjors-and-chema.webp)
 
 ---
 

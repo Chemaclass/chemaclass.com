@@ -31,7 +31,7 @@ Un commit verificado es un commit de Git firmado digitalmente por su autor. La f
 
 En plataformas como GitHub verás una insignia "Verified" junto a los commits firmados. Es una forma rápida de mostrar que el commit es auténtico.
 
-![blog-cover](/images/blog/2024-11-17/verified-commit-example.webp)
+![Tres commits de bashunit en GitHub, cada uno con la insignia verde Verified](/images/blog/2024-11-17/verified-commit-example.webp)
 
 ## ¿Por qué son importantes?
 
@@ -39,9 +39,9 @@ Los commits firmados mantienen tus contribuciones auténticas y confiables. La f
 
 Sin firmar, cualquiera puede falsificar un commit usando tu email. GitHub lo vincularía a tu perfil, pareciendo que hiciste los cambios aunque no fuera así. Nada bueno.
 
-![blog-cover](/images/blog/2024-11-17/impersonating-commit.webp)
+![Terminal ejecutando git commit -m "impersonating commit - do not do this"](/images/blog/2024-11-17/impersonating-commit.webp)
 
-![blog-cover](/images/blog/2024-11-17/impersonating-commit4.webp)
+![El commit falsificado en GitHub atribuido a torvalds, con la tarjeta de perfil de Linus Torvalds abierta](/images/blog/2024-11-17/impersonating-commit4.webp)
 
 Al firmar tus commits, demuestras que el trabajo es tuyo. Evitas la suplantación, generas confianza y mantienes todo transparente.
 
@@ -80,7 +80,7 @@ gpg --armor --export <tu-id-de-clave>
 ```
 Navega a "Settings > SSH and GPG keys," y pega tu clave.
 
-![blog-cover](/images/blog/2024-11-17/gpg-keys.webp)
+![La página de claves GPG en los ajustes de GitHub, con una clave de trabajo y otra personal](/images/blog/2024-11-17/gpg-keys.webp)
 
 ### Empieza a firmar commits
 
@@ -97,7 +97,7 @@ git log --show-signature
 
 También puedes hacer clic en la insignia "Verified" en GitHub.
 
-![blog-cover](/images/blog/2024-11-17/gpg-verify.webp)
+![El aviso Verified de GitHub mostrando el ID de la clave GPG que firmó el commit y la fecha de verificación](/images/blog/2024-11-17/gpg-verify.webp)
 
 Los commits verificados parecen un paso pequeño, pero hacen tu código más confiable. Una capa extra de protección fácil de añadir. Pruébalo.
 

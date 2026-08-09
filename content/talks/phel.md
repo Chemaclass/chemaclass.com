@@ -43,6 +43,6 @@ Phel is a functional programming language that compiles into PHP. It is a dialec
 - 2022-06-23 | DesarrolloWeb [**Remote**] (ES)
   - [Phel Language ¿Programación funcional para PHP?](https://www.youtube.com/live/9pElbTEcyGA)
 
-![cover](/images/talks/2023-07-28/phel-we-are-devs-23.webp)
+![Chema presenting functional programming on the WeAreDevelopers World Congress 2023 stage](/images/talks/2023-07-28/phel-we-are-devs-23.webp)
 
-![cover](/images/talks/2023-02-08/phel-sf-group-23.webp)
+![Chema at the lectern beside a slide on Phel's for loop, Symfony User Group Berlin 2023](/images/talks/2023-02-08/phel-sf-group-23.webp)

@@ -30,4 +30,4 @@ En esta sesión de live coding exploramos desarrollo test-first y técnicas de r
 - 2024-03-14 | devm.io [**Remoto**] (EN)
   - [Test Driven Development: A Hands-on Crash Course](https://devm.io/live-events/test-driven-development-a-hands-on-crash-course/)
 
-![cover](/images/talks/2024-05-28/tdd-workshop-ipc-berin-24.webp)
+![Chema frente a la sala del taller de TDD en la International PHP Conference Berlín 2024, con los asistentes trabajando en sus portátiles detrás](/images/talks/2024-05-28/tdd-workshop-ipc-berin-24.webp)

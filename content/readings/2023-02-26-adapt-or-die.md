@@ -62,7 +62,7 @@ These are the main points that everyone could develop:
 
 As you can see in the diagram, all of this comes under leadership. If leadership is about helping others adapt to change, then it must be core to our organizations.
 
-![blog-cover](/images/readings/2023-02-26/aos-leadership.webp)
+![The Algorithm of Success drawn as a temple, leadership resting on seven pillars: product, strategy, the growth engine, model, people, operations and process](/images/readings/2023-02-26/aos-leadership.webp)
 
 ### Product
 

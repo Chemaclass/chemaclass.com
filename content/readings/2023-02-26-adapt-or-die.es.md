@@ -62,7 +62,7 @@ Puntos clave que todos podrían desarrollar:
 
 Como muestra el diagrama, todo esto depende del liderazgo. Si liderar es ayudar a otros a adaptarse al cambio, debe ser central en nuestras organizaciones.
 
-![blog-cover](/images/readings/2023-02-26/aos-leadership.webp)
+![El Algoritmo del Éxito dibujado como un templo, con el liderazgo apoyado en siete pilares: producto, estrategia, motor de crecimiento, modelo, personas, operaciones y procesos](/images/readings/2023-02-26/aos-leadership.webp)
 
 ### Producto
 

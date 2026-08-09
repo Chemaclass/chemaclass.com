@@ -63,4 +63,4 @@ Learn the basics of Extreme Programming (XP) and Lean Software Development.
 - **XP**: Focused on software development practices and technical excellence, with specific practices like pair programming and Test-Driven Development (TDD).
 - **Lean**: Takes a broader approach, focusing on removing waste, optimizing flow, and improving processes across the organization.
 
-![blog-cover](/images/blog/2024-05-30/footer.webp)
+![A rusted barrier blocking a narrow walkway above Alicante, the city and its port spread out below](/images/blog/2024-05-30/footer.webp)
