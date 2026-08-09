@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "leadership", "communication", "team-management", "mentoring" ]
 [extra]
+tldr = "As a company scales, a leader's focus shifts from customers to employees, and the principles that matter shift with it."
 subtitle = "Leadership starts within your own life and behaviour"
 static_thumbnail = "/images/blog/2023-02-27/cover.webp"
 related_posts = [

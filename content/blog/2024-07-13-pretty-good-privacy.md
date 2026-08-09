@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "security", "privacy", "cryptography" ]
 [extra]
+tldr = "PGP signs and encrypts text, email, files and whole partitions. Learn the key model once and it covers signed commits, secure mail and verified releases."
 subtitle = "How PGP secures your digital communication"
 static_thumbnail = "/images/blog/2024-07-13/cover.webp"
 series = "bitcoin"

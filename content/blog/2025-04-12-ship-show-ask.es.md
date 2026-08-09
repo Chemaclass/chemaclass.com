@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "agile", "code-review", "team-management", "productivity" ]
 [extra]
+tldr = "Ajusta la revisión al riesgo: haz ship de lo de bajo riesgo, show de lo que merece leerse y ask cuando de verdad quieres opinión. Vacía la cola de PRs sin perder calidad."
 subtitle = "Ajusta la revisión al riesgo, no al ritual"
 static_thumbnail = "/images/blog/2025-04-12/cover.webp"
 related_posts = [

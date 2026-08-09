@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "career", "mentoring", "clean-code", "tdd", "communication" ]
 [extra]
+tldr = "La seniority no es un título. Es impacto, mentoría y hacerte dueño de los resultados. Hazlo el tiempo suficiente y el título será un trámite."
 subtitle = "¿Cómo convertirse en un Desarrollador Senior?"
 static_thumbnail = "/images/blog/2022-06-08/cover.webp"
 series = "leadership"

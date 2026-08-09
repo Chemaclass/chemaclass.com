@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "communication", "leadership", "career", "mentoring" ]
 [extra]
+tldr = "Trabajar en abierto deja que la gente ayude mientras el trabajo aún puede cambiar. Pero la visibilidad es pasiva: empuja la señal correcta a la sala correcta."
 subtitle = "La visibilidad es pasiva, la señal no"
 static_thumbnail = "/images/blog/2026-07-14/cover.webp"
 series = "leadership"

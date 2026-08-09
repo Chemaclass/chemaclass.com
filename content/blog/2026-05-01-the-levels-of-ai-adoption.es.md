@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "software", "leadership", "craftsmanship", "productivity", "developer-tools" ]
 [extra]
+tldr = "Seis niveles, desde pegar código en un chat hasta agentes que abren PRs mientras duermes. Localiza el escalón en el que estás de verdad y sube de uno en uno."
 subtitle = "De prompts copiados a equipos de agentes"
 static_thumbnail = "/images/blog/2026-05-01/cover.webp"
 series = "ai"

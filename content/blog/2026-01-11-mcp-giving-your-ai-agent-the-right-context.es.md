@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "architecture", "developer-tools", "craftsmanship" ]
 [extra]
+tldr = "MCP es un protocolo estándar que conecta un agente con tus herramientas, bases de datos y APIs. El contexto, no el modelo, decide la calidad de la respuesta."
 subtitle = "Por qué el contexto es el verdadero superpoder"
 static_thumbnail = "/images/blog/2026-01-11/cover.webp"
 series = "ai"

@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "tdd", "testing", "software-design", "refactoring" ]
 [extra]
+tldr = "TDD es una práctica de diseño, no una técnica de testing. Lo difícil no es escribir tests, es cambiar los hábitos que producen código imposible de testear."
 subtitle = "¿Qué tiene de desafiante?"
 static_thumbnail = "/images/blog/2021-08-01/cover.webp"
 related_posts = [

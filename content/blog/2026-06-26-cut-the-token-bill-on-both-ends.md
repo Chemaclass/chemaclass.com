@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "productivity", "developer-tools" ]
 [extra]
+tldr = "Two leaks, two patches: Caveman trims what the agent writes back, RTK trims what the terminal pipes in. Same model, same prompts, more room to work."
 subtitle = "Two leaks, two patches"
 static_thumbnail = "/images/blog/2026-06-26/cover.webp"
 series = "ai"

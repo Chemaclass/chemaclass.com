@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "software", "tutorial", "craftsmanship", "developer-tools", "productivity" ]
 [extra]
+tldr = "A tour of the .claude folder: what rules, skills, agents, hooks and settings each do. Treat it like infrastructure, version it, and evolve it with the code."
 subtitle = "A tutorial through rules, skills, agents, hooks, and settings"
 static_thumbnail = "/images/blog/2026-04-17/cover.webp"
 series = "ai"

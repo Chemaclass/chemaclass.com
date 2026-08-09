@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "bitcoin", "software", "cryptography", "security" ]
 [extra]
+tldr = "Bitcoin's Script attaches spending conditions to a transaction: multisig, timelocks and more. It is deliberately not Turing complete, and that is the point."
 subtitle = "The power of Bitcoin's Script"
 static_thumbnail = "/images/blog/2024-07-06/cover.webp"
 series = "bitcoin"
