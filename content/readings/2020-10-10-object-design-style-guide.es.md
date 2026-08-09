@@ -1,11 +1,11 @@
 +++
 title = "Guía de estilo para diseño de objetos"
+description = "La guía práctica de Matthias Noback para escribir código orientado a objetos flexible y legible, útil en cualquier lenguaje OO."
 subtitle = "Técnicas para escribir código orientado a objetos flexible, legible y mantenible"
 authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "software-design", "clean-code", "php" ]
 [extra]
-description = "La guía práctica de Matthias Noback para escribir código orientado a objetos flexible y legible, útil en cualquier lenguaje OO."
 pages = "240"
 author = "Matthias Noback"
 static_thumbnail = "/images/readings/object-design-style-guide.webp"
@@ -22,4 +22,4 @@ Este libro reúne docenas de técnicas para crear código OO profesional que agu
 
 <!-- more -->
 
-Los ejemplos usan pseudocódigo fácil de entender. Las técnicas aplican a cualquier lenguaje OO, desde C++ hasta PHP.
+Los ejemplos usan pseudocódigo fácil de entender. Las técnicas aplican a cualquier lenguaje OO, desde C++ hasta [PHP](/es/blog/typed-arrays-php/).
