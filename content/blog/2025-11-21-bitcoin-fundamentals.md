@@ -25,8 +25,6 @@ related_readings = [
 ]
 +++
 
-![A BTClock desk display showing the BTC/USD price, next to a Bitcoin plush and a circuit card etched with the Bitcoin logo](/images/blog/2025-12-21/footer.webp)
-
 What would you do if your bank account was frozen tomorrow? No warning, no explanation, no access to your own money.
 
 This isn't hypothetical. In 2022, Canada froze bank accounts of people who donated to a protest. In 2015, Greeks could only withdraw €60 per day from ATMs. In Argentina, Turkey, and Lebanon, people watched their savings lose half their value in months.
