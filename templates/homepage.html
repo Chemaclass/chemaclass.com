@@ -110,20 +110,17 @@
         </div>
     </section>
 
-    {# Work with me Section hidden #}
-    {#
     <section class="services-cta-section">
       <div class="services-cta-inner">
         <div class="services-cta-text">
           <h2>{{ trans(key="home_services_cta", lang=lang) }}</h2>
-          <p>{% if lang == "es" %}¿Necesitas una web, o alguien con quien pensar en voz alta sobre un reto técnico o de liderazgo?{% else %}Need a website built, or a thinking partner on a technical or leadership challenge?{% endif %}</p>
+          <p>{{ trans(key="home_services_intro", lang=lang) }}</p>
         </div>
         <a href="{% if lang == 'es' %}/es/services/{% else %}/services/{% endif %}" class="services-cta-button">
           {{ trans(key="svc_services", lang=lang) }} <i class="fa-solid fa-arrow-right"></i>
         </a>
       </div>
     </section>
-    #}
 
     <!-- Latest Content Section -->
     {% set blogs = get_section(path="blog/_index.md", lang=lang) %}
