@@ -152,6 +152,59 @@
 }
 
 // Blog list
+.blog-browse {
+  display: grid;
+  gap: 0.85rem;
+  margin: 1.5rem 0;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 12px;
+  background: var(--search-input-bg);
+
+  &__row {
+    display: grid;
+    grid-template-columns: 8rem minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: start;
+  }
+
+  &__label {
+    color: var(--color-subtitle);
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 2;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+
+    a {
+      padding: 0.3rem 0.65rem;
+      border: 1px solid var(--preview-divider-color);
+      border-radius: 999px;
+      color: var(--body-color);
+      font-size: 0.78rem;
+      line-height: 1.4;
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .blog-browse__row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+}
+
 .blog-list {
   display: flex;
   flex-direction: column;
