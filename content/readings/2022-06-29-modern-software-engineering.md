@@ -9,6 +9,11 @@ subtitle = "Doing What Works to Build Better Software Faster"
 pages = "200"
 author = "David Farley"
 static_thumbnail = "/images/readings/modern-software-engineering.webp"
+related_posts = [
+  "blog/2022-10-08-different-beliefs-about-software-quality.md",
+  "blog/2024-02-25-deployments-on-fridays.md",
+  "blog/2020-04-07-the-art-of-testing.md",
+]
 related_readings = [
   "readings/2022-07-11-clean-craftsmanship.md",
   "readings/2023-03-19-accelerate.md",
