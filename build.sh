@@ -66,6 +66,9 @@ fi
 
 echo "Using Zola $(zola --version)"
 
+echo "Checking content structure against the reviewed baseline..."
+python3 scripts/check-content-shape.py
+
 # Before the build, not after: the templates read these dates with load_data()
 # to publish an honest dateModified.
 echo "Fetching the GitHub star counts..."
