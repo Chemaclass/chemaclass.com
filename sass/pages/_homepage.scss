@@ -265,77 +265,51 @@ main:has(.homepage-container) #scroll-to-top {
   }
 }
 
-// Skills Section
-.skills-section {
+// Reader paths
+.reader-paths {
   margin: 2rem 0;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--heading-color);
+  }
 }
 
-.skills-tags {
+.reader-paths__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.reader-path {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  margin: 1rem 0;
-}
-
-.skill-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.4rem 0.85rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  cursor: default;
-
-  // Font Awesome loads async, so the icon is a zero-width nothing until it
-  // arrives. Reserve the box now: without it, every pill widens at once, the row
-  // rewraps, and the section below jumps (measured 0.043 CLS, one row moving
-  // 49px).
-  > i {
-    display: inline-block;
-    width: 1em;
-    text-align: center;
-    flex-shrink: 0;
-  }
-
-  --skill-hue-tool: #16a34a;
-  --skill-hue-practice: #8b5cf6;
-  --skill-hue-soft: #ea580c;
-  --skill-hue-infra: #0284c7;
-  --skill-hue-db: #db2777;
-  --skill-hue-ai: #a38b10;
-
-  .theme-dark & {
-    --skill-hue-tool: #4ade80;
-    --skill-hue-practice: #a78bfa;
-    --skill-hue-soft: #fb923c;
-    --skill-hue-infra: #38bdf8;
-    --skill-hue-db: #f472b6;
-    --skill-hue-ai: #e0c44a;
-  }
-
-  i {
-    font-size: 0.75rem;
-    opacity: 0.8;
-  }
-
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: 12px;
   background: var(--search-bg-selected-item);
   color: var(--body-color);
   border: 1px solid var(--preview-divider-color);
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 
-  &.lang {
-    background: rgba(45, 90, 142, 0.1);
+  strong {
+    font-size: 1rem;
     color: var(--accent-color);
-    border: 1px solid rgba(45, 90, 142, 0.2);
   }
 
-  &.tool     { color: var(--skill-hue-tool);     background: color-mix(in srgb, var(--skill-hue-tool) 10%, transparent);     border: 1px solid color-mix(in srgb, var(--skill-hue-tool) 22%, transparent); }
-  &.practice { color: var(--skill-hue-practice); background: color-mix(in srgb, var(--skill-hue-practice) 10%, transparent); border: 1px solid color-mix(in srgb, var(--skill-hue-practice) 22%, transparent); }
-  &.soft     { color: var(--skill-hue-soft);     background: color-mix(in srgb, var(--skill-hue-soft) 10%, transparent);     border: 1px solid color-mix(in srgb, var(--skill-hue-soft) 22%, transparent); }
-  &.infra    { color: var(--skill-hue-infra);    background: color-mix(in srgb, var(--skill-hue-infra) 10%, transparent);    border: 1px solid color-mix(in srgb, var(--skill-hue-infra) 22%, transparent); }
-  &.db       { color: var(--skill-hue-db);       background: color-mix(in srgb, var(--skill-hue-db) 10%, transparent);       border: 1px solid color-mix(in srgb, var(--skill-hue-db) 22%, transparent); }
-  &.ai       { color: var(--skill-hue-ai);       background: color-mix(in srgb, var(--skill-hue-ai) 10%, transparent);       border: 1px solid color-mix(in srgb, var(--skill-hue-ai) 25%, transparent); }
+  span {
+    color: var(--color-subtitle);
+    font-size: 0.87rem;
+    line-height: 1.5;
+  }
+
+  &:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+  }
 }
 
 // Projects Grid
@@ -802,21 +776,17 @@ main:has(.homepage-container) #scroll-to-top {
     }
   }
 
-  .skills-section {
-    margin: 0.5rem 0 1rem;
+  .reader-paths {
+    margin: 1rem 0;
   }
 
-  .skills-tags {
-    gap: 0.4rem;
+  .reader-paths__grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
-  .skill-tag {
-    padding: 0.3rem 0.7rem;
-    font-size: 0.7rem;
-
-    i {
-      font-size: 0.65rem;
-    }
+  .reader-path {
+    padding: 0.9rem 1rem;
   }
 
   .about-card {
@@ -954,15 +924,6 @@ main:has(.homepage-container) #scroll-to-top {
 
 // Extra small screens
 @media (max-width: 360px) {
-  .skill-tag {
-    padding: 0.25rem 0.6rem;
-    font-size: 0.65rem;
-
-    i {
-      font-size: 0.6rem;
-    }
-  }
-
   .hero-content .hero-text h1 {
     font-size: 1.25rem;
   }
@@ -992,16 +953,10 @@ main:has(.homepage-container) #scroll-to-top {
 .featured-card:focus-visible,
 .featured-list__item:focus-visible,
 .reading-card:focus-visible,
+.reader-path:focus-visible,
 .view-all:focus-visible {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
-}
-
-.skill-tag:focus-visible {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .about-paragraphs p a:focus-visible {
