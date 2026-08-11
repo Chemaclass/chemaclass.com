@@ -19,6 +19,11 @@ related_readings = [
   "readings/2023-03-19-accelerate.md",
   "readings/2020-03-12-clean-agile.md",
 ]
+faq = [
+  { q = "¿Qué es Ship, Show, Ask?", a = "Es una forma de ajustar la revisión de código al riesgo. Ship significa mergear directamente, Show significa abrir un pull request y mergearlo de inmediato, y Ask significa esperar una revisión antes de mergear." },
+  { q = "¿Cuándo deberías usar Show en vez de Ask?", a = "Usa Show cuando el cambio tenga poco riesgo, sea fácil de entender y encaje con las expectativas del equipo. Usa Ask cuando la lógica sea arriesgada, la decisión afecte a otros o una segunda perspectiva pueda mejorarla." },
+  { q = "¿Ship, Show, Ask elimina la revisión de código?", a = "No. Hace que la revisión sea proporcional al cambio. Ask mantiene la revisión antes del merge donde importa, mientras Show deja un registro visible y acepta feedback después del merge." },
+]
 series = "agile"
 series_order = 6
 +++
@@ -31,7 +36,7 @@ El enfoque tradicional de pull requests a menudo ralentiza las cosas. Esperamos 
 
 Ahí es donde entra la estrategia Ship-Show-Ask. Originalmente descrita por [Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html), este modelo ofrece una forma más flexible y reflexiva de manejar cambios de código. No es solo una estrategia de branching, es un cambio en cómo los equipos colaboran, confían y toman propiedad.
 
-## ¿Qué es Ship, Show, Ask?
+## Ship, Show, Ask ajusta la revisión al riesgo
 
 Es un modelo que clasifica los cambios basándose en cuánta revisión requieren:
 
@@ -85,7 +90,7 @@ Este modelo me ayuda a:
 
 > Cambia el objetivo de obtener aprobación a compartir intención y ser dueño del resultado.
 
-## ¿Qué hace un buen "Show"?
+## Un buen Show explica la decisión
 
 Un PR Show podría ser la elección correcta cuando:
 

@@ -20,6 +20,11 @@ related_readings = [
   "readings/2023-03-19-accelerate.md",
   "readings/2020-03-12-clean-agile.md",
 ]
+faq = [
+  { q = "What is Ship, Show, Ask?", a = "It is a way to match code review to risk. Ship means merging directly, Show means opening a pull request and merging it immediately, and Ask means waiting for review before merging." },
+  { q = "When should you use Show instead of Ask?", a = "Use Show when the change is low-risk, easy to understand, and within team expectations. Use Ask when the logic is risky, the decision affects others, or a second perspective would improve it." },
+  { q = "Does Ship, Show, Ask remove code review?", a = "No. It makes review proportional to the change. Ask keeps pre-merge review where it matters, while Show leaves a visible record and welcomes feedback after the merge." },
+]
 series = "agile"
 series_order = 6
 +++
@@ -32,7 +37,7 @@ The traditional approach to [pull requests](/blog/pull-request-vs-pair-prog/) of
 
 That's where the Ship-Show-Ask strategy comes in. Originally described by [Rouan Wilsenach](https://martinfowler.com/articles/ship-show-ask.html), this model offers a more flexible and thoughtful way to handle code changes. It's not just a branching strategy, it's a shift in how teams collaborate, trust, and take ownership.
 
-## What is Ship, Show, Ask?
+## Ship, Show, Ask matches review to risk
 
 It's a model that classifies changes based on how much review they require:
 
@@ -86,7 +91,7 @@ This model helps me:
 
 > It shifts the goal from getting approval to sharing intent and owning the outcome.
 
-## What makes a good "Show"?
+## A good Show explains the decision
 
 A Show PR might be the right choice when:
 
