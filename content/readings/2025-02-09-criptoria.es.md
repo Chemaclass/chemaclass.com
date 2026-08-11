@@ -81,8 +81,6 @@ Un libro para quienes creen que hay formas de organización social y económica 
 - Inteligencia Metálica
 - Alan Eterno
 
-![Un ejemplar en tapa dura de Criptoria: de Turing a Nakamoto, de Alfre Mancera, con máscaras pintadas en la portada](/images/readings/2025-02-09/criptoria-book.webp)
-
 **Parte II: Después de Turing**
 
 ### 5. Computación Moderna

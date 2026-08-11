@@ -4,7 +4,7 @@ description = "Dunbar's number is a suggested cognitive limit to the number of p
 [taxonomies]
 tags = [ "psychology", "team-management", "communication" ]
 [extra]
-subtitle = ""
+subtitle = "Why teams stop feeling like one group"
 static_thumbnail = "/images/blog/2022-04-02/cover.webp"
 related_posts = [
   "blog/2022-05-27-bikeshedding.md",

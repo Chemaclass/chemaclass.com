@@ -13,6 +13,11 @@ related_posts = [
   "blog/2026-01-11-mcp-giving-your-ai-agent-the-right-context.md",
   "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
 ]
+related_readings = [
+  "readings/2016-09-01-sprint.md",
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+  "readings/2022-06-29-modern-software-engineering.md",
+]
 +++
 
 Hidden inside [Sauron's blog](https://sauronbot.github.io/), there is a playable game. You will not find it by navigating menus. You have to discover the secret. A hint: the Konami Code. Once you do, the Fellowship begins.

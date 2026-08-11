@@ -5,7 +5,7 @@ authors = [ "Vaughn Vernon" ]
 [taxonomies]
 tags = [ "software-design", "architecture" ]
 [extra]
-subtitle = ""
+subtitle = "DDD explained clearly and practically"
 pages = "160"
 author = "Vaughn Vernon"
 static_thumbnail = "/images/readings/domain-driven-design-distilled.webp"

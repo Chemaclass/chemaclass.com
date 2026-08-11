@@ -14,6 +14,11 @@ related_posts = [
   "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
   "blog/2026-03-01-idealism-vs-pragmatism.md",
 ]
+related_readings = [
+  "readings/2024-01-26-the-lean-startup.md",
+  "readings/2016-09-01-sprint.md",
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+]
 +++
 
 Lancé el mismo prompt dos veces y obtuve dos respuestas distintas. Mi primer instinto fue pensar que estaba roto. Me llevó un rato darme cuenta de lo contrario: esa diferencia es donde vive casi todo el valor.

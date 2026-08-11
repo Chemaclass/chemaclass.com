@@ -5,7 +5,7 @@ authors = [ "Joel Beasley" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "software-design", "communication" ]
 [extra]
-subtitle = ""
+subtitle = "The uneven path from developer to executive"
 pages = "144"
 author = "Joel Beasley"
 static_thumbnail = "/images/readings/modern-cto.webp"

@@ -5,7 +5,7 @@ authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "php", "software-design", "architecture", "clean-code" ]
 [extra]
-subtitle = ""
+subtitle = "Practical ways to free domain code from infrastructure"
 pages = "280"
 author = "Matthias Noback"
 static_thumbnail = "/images/readings/recipes-for-decoupling.webp"

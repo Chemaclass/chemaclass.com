@@ -4,7 +4,7 @@ description = "El número de Dunbar es el límite cognitivo de personas con las 
 [taxonomies]
 tags = [ "psychology", "team-management", "communication" ]
 [extra]
-subtitle = ""
+subtitle = "Por qué los equipos dejan de sentirse como un solo grupo"
 static_thumbnail = "/images/blog/2022-04-02/cover.webp"
 related_posts = [
   "blog/2022-05-27-bikeshedding.md",

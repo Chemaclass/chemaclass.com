@@ -5,7 +5,7 @@ authors = [ "Joel Beasley" ]
 [taxonomies]
 tags = [ "leadership", "team-management", "software-design", "communication" ]
 [extra]
-subtitle = ""
+subtitle = "El camino irregular de developer a ejecutivo"
 pages = "144"
 author = "Joel Beasley"
 static_thumbnail = "/images/readings/modern-cto.webp"

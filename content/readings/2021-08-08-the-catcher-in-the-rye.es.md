@@ -5,7 +5,7 @@ authors = [ "J. D. Salinger" ]
 [taxonomies]
 tags = [ "fiction", "psychology", "philosophy" ]
 [extra]
-subtitle = ""
+subtitle = "Crecer sin tragarse el mundo adulto"
 pages = "220"
 author = "J. D. Salinger"
 static_thumbnail = "/images/readings/the-catcher-in-the-rye.webp"
