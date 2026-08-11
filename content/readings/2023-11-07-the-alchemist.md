@@ -6,7 +6,7 @@ authors = [ "Paulo Coelho" ]
 [taxonomies]
 tags = [ "fiction", "philosophy", "career" ]
 [extra]
-subtitle = ""
+subtitle = "A long journey toward a simple truth"
 pages = "200"
 author = "Paulo Coelho"
 static_thumbnail = "/images/readings/the-alchemist.webp"

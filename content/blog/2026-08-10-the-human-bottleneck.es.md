@@ -15,6 +15,11 @@ related_posts = [
   "blog/2026-02-07-build-your-own-team-of-agents.md",
   "blog/2025-04-12-ship-show-ask.md",
 ]
+related_readings = [
+  "readings/2021-05-28-peopleware.md",
+  "readings/2020-04-03-high-output-management.md",
+  "readings/2021-09-12-turn-the-ship-around.md",
+]
 +++
 
 Los [agentes de IA](/es/blog/build-your-own-team-of-agents/) pueden escribir código, revisarlo, testearlo y desplegarlo. Pasamos décadas haciendo las máquinas más rápidas. Ahora la parte más lenta del sistema ha cambiado.

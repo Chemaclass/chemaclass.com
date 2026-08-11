@@ -6,7 +6,7 @@ authors = [ "Saifedean Ammous" ]
 [taxonomies]
 tags = [ "economics", "bitcoin", "philosophy", "career" ]
 [extra]
-subtitle = ""
+subtitle = "Prices, capital and money through an Austrian lens"
 pages = "400"
 author = "Saifedean Ammous"
 static_thumbnail = "/images/readings/principles-of-economics.webp"

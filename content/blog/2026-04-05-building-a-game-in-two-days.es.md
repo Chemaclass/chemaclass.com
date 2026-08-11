@@ -13,6 +13,11 @@ related_posts = [
   "blog/2026-01-11-mcp-giving-your-ai-agent-the-right-context.md",
   "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
 ]
+related_readings = [
+  "readings/2016-09-01-sprint.md",
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+  "readings/2022-06-29-modern-software-engineering.md",
+]
 +++
 
 Escondido en [el blog de Sauron](https://sauronbot.github.io/) hay un juego. No lo encontrarás navegando por menús. Tienes que descubrir el secreto. Una pista: el Código Konami. Cuando lo hagas, comienza la Comunidad del Anillo.

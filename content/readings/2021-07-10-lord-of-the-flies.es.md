@@ -5,7 +5,7 @@ authors = [ "William Golding" ]
 [taxonomies]
 tags = [ "fiction", "psychology", "leadership", "philosophy" ]
 [extra]
-subtitle = ""
+subtitle = "Qué queda cuando desaparecen las reglas"
 pages = "220"
 author = "William Golding"
 static_thumbnail = "/images/readings/lord-of-the-flies.webp"

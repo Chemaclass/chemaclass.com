@@ -6,7 +6,7 @@ authors = [ "John Wyndham" ]
 [taxonomies]
 tags = [ "fiction", "psychology" ]
 [extra]
-subtitle = ""
+subtitle = "Civilization ends overnight. Survival starts in the morning"
 pages = "270"
 author = "John Wyndham"
 static_thumbnail = "/images/readings/the-day-of-the-triffids.webp"

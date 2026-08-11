@@ -14,6 +14,11 @@ related_posts = [
   "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
   "blog/2026-03-01-idealism-vs-pragmatism.md",
 ]
+related_readings = [
+  "readings/2024-01-26-the-lean-startup.md",
+  "readings/2016-09-01-sprint.md",
+  "readings/2016-10-01-the-pragmatic-programmer.md",
+]
 +++
 
 I ran the same prompt twice and got two different answers. My first instinct was to call it broken. It took me a while to realize the opposite: that difference is where most of the value lives.

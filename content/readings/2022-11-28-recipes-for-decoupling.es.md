@@ -5,7 +5,7 @@ authors = [ "Matthias Noback" ]
 [taxonomies]
 tags = [ "php", "software-design", "architecture", "clean-code" ]
 [extra]
-subtitle = ""
+subtitle = "Formas prácticas de liberar el dominio de la infraestructura"
 pages = "280"
 author = "Matthias Noback"
 static_thumbnail = "/images/readings/recipes-for-decoupling.webp"

@@ -6,7 +6,7 @@ authors = [ "Saifedean Ammous" ]
 [taxonomies]
 tags = [ "economics", "bitcoin", "philosophy", "career" ]
 [extra]
-subtitle = ""
+subtitle = "Precios, capital y dinero desde la escuela austriaca"
 pages = "400"
 author = "Saifedean Ammous"
 static_thumbnail = "/images/readings/principles-of-economics.webp"
@@ -77,4 +77,3 @@ Sales con una lente nueva para ver el mundo: por qué suben los precios, por qu�
 ## Economía Austriaca vs Economía Keynesiana
 
 {{ youtube(id="GUvTJ0xy74c") }}
-

@@ -5,7 +5,7 @@ authors = [ "J. D. Salinger" ]
 [taxonomies]
 tags = [ "fiction", "psychology", "philosophy" ]
 [extra]
-subtitle = ""
+subtitle = "Growing up without buying the adult world"
 pages = "220"
 author = "J. D. Salinger"
 static_thumbnail = "/images/readings/the-catcher-in-the-rye.webp"

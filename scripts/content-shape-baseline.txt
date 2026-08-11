@@ -121,31 +121,6 @@ generic-heading	content/readings/2024-01-26-the-lean-startup.md	summary
 generic-heading	content/readings/2024-06-21-the-genesis-book.md	contents
 generic-heading	content/readings/2024-07-05-mastering-bitcoin.md	contents
 generic-heading	content/readings/2024-08-02-bitcoin-wip.md	contents
-inline-reading-cover	content/readings/2025-02-09-criptoria.es.md	/images/readings/2025-02-09/criptoria-book.webp
-inline-reading-cover	content/readings/2025-02-09-criptoria.md	/images/readings/2025-02-09/criptoria-book.webp
-missing-related_readings	content/blog/2026-04-05-building-a-game-in-two-days.es.md
-missing-related_readings	content/blog/2026-04-05-building-a-game-in-two-days.md
-missing-related_readings	content/blog/2026-08-10-the-human-bottleneck.es.md
-missing-related_readings	content/blog/2026-08-10-the-human-bottleneck.md
-missing-related_readings	content/blog/2026-09-01-why-non-deterministic-ai-is-good.es.md
-missing-related_readings	content/blog/2026-09-01-why-non-deterministic-ai-is-good.md
-missing-subtitle	content/blog/2022-04-02-dunbar-number.es.md
-missing-subtitle	content/blog/2022-04-02-dunbar-number.md
-missing-subtitle	content/readings/2020-09-10-domain-driven-design-distilled.md
-missing-subtitle	content/readings/2021-07-10-lord-of-the-flies.es.md
-missing-subtitle	content/readings/2021-07-10-lord-of-the-flies.md
-missing-subtitle	content/readings/2021-08-08-the-catcher-in-the-rye.es.md
-missing-subtitle	content/readings/2021-08-08-the-catcher-in-the-rye.md
-missing-subtitle	content/readings/2022-01-23-modern-cto.es.md
-missing-subtitle	content/readings/2022-01-23-modern-cto.md
-missing-subtitle	content/readings/2022-11-28-recipes-for-decoupling.es.md
-missing-subtitle	content/readings/2022-11-28-recipes-for-decoupling.md
-missing-subtitle	content/readings/2023-08-13-the-day-of-the-triffids.es.md
-missing-subtitle	content/readings/2023-08-13-the-day-of-the-triffids.md
-missing-subtitle	content/readings/2023-11-07-the-alchemist.es.md
-missing-subtitle	content/readings/2023-11-07-the-alchemist.md
-missing-subtitle	content/readings/2025-06-22-principles-of-economics.es.md
-missing-subtitle	content/readings/2025-06-22-principles-of-economics.md
 question-h2	content/blog/2020-06-06-final-classes.es.md	¿Por qué esta clase no es final?
 question-h2	content/blog/2020-06-06-final-classes.md	Why isn't this class final?
 question-h2	content/blog/2020-06-28-the-art-of-refactoring.es.md	¿Cuándo y cómo refactorizar?
