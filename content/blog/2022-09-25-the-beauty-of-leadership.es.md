@@ -32,7 +32,7 @@ Investigando este tema, encontré ["What is leadership" de Kevin Kruse](https://
 
 ---
 
-## ¿Qué no es liderazgo?
+## El liderazgo no es un título
 
 El liderazgo no tiene nada que ver con títulos. Tener un cargo de nivel C no te convierte automáticamente en líder. No necesitas un título para serlo.
 
@@ -40,7 +40,7 @@ Tampoco tiene que ver con atributos personales. No hace falta ser extrovertido n
 
 Liderazgo y gestión no son lo mismo. Gestionar implica planificar, medir, monitorear, coordinar, resolver, contratar, despedir... Los managers gestionan *cosas*. Los líderes lideran **personas**.
 
-## ¿Qué es liderazgo?
+## El liderazgo es influencia social hacia un objetivo
 
 > "Un líder es alguien que tiene seguidores." Peter [Drucker](/es/readings/the-essential-drucker/).
 
@@ -75,7 +75,7 @@ Elementos clave de esta definición:
 
 ![Una persona cruzando sola un prado abierto por un sendero estrecho, con la línea de árboles al fondo](/images/blog/2022-09-25/footer.webp)
 
-## ¿Por qué alguien querría convertirse en líder?
+## El liderazgo multiplica a otras personas
 
 Hay dos concepciones diferentes en esta pregunta, y conviene separarlas desde el principio.
 
@@ -85,7 +85,7 @@ Un líder es alguien con actitud de **multiplicador**. Busca desarrollar habilid
 
 Entonces, ¿puede cualquiera convertirse en líder? ¿Cuáles son esas *habilidades* necesarias?
 
-## ¿Puede todo el mundo convertirse en líder?
+## Todo el mundo puede practicar liderazgo
 
 Con esta definición clara, podemos ver que el liderazgo tiene distintos grados según la persona y las responsabilidades que quiera asumir.
 
@@ -99,7 +99,7 @@ Para convertirte en líder necesitas habilidades específicas. Estas son las que
 
 Sé que no todos quieren aceptar los cambios necesarios para convertirse en líder. Pero creo de verdad que cualquiera puede desarrollar ciertas habilidades de liderazgo, lo que también significa **inspirar** a quienes te rodean.
 
-## ¿Cómo convertirse en un mejor líder?
+## Los mejores líderes aprenden más allá de su experiencia
 
 Puedes inspirarte en muchas fuentes. Aprendes de tus errores y éxitos, y de quienes te rodean. Pero también es muy útil escuchar la sabiduría de gente fuera de tu círculo: podcasts, charlas TED, libros, audiolibros...
 

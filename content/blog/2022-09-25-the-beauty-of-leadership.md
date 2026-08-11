@@ -35,7 +35,7 @@ leadership.
 
 ---
 
-## What is not leadership?
+## Leadership is not a title
 
 Leadership has nothing to do with titles. Just because you have a C-level title, doesn't automatically make you a 
 "leader". You don't need a leading title to become a leader.
@@ -46,7 +46,7 @@ extroverted charismatic person to practice leadership.
 Leadership and management are not synonymous. Management needs to plan, measure, monitor, coordinate, solve, hire, fire,
 etc. Managers manage *things*. Leaders lead **people**.
 
-## What is leadership?
+## Leadership is social influence toward a goal
 
 > "A leader is someone who has followers." Peter [Drucker](/readings/the-essential-drucker/).
 
@@ -85,7 +85,7 @@ Key elements of this definition:
 
 ![A lone walker crossing a wide open meadow on a narrow footpath, treeline in the distance](/images/blog/2022-09-25/footer.webp)
 
-## Why would anyone want to become a leader?
+## Leadership multiplies other people
 
 We need to make clear that there are two different conceptions when asking that question, and we need to separate them
 from the beginning.
@@ -98,7 +98,7 @@ social influence) to boost even more the value they produce.
 
 So, can anyone become a leader? What are those *skills* that you need to be a leader?
 
-## Can everyone become a leader?
+## Everyone can practice leadership
 
 Now that we found a definition of leadership, we can agree that this definition could have different degrees
 applied depending on the type of person and responsibilities they want.
@@ -114,7 +114,7 @@ However, to become a leader, you need specific skills. These are the ones I find
 I am aware that not everyone might want to accept the necessary changes to become a leader, but I truly believe
 everyone can grow certain leadership skills to some extent, which also means **inspiring** the people around you.
 
-## How to become a better leader?
+## Better leaders learn beyond their own experience
 
 You can get inspiration from a lot of different sources. While it's true that you can learn a lot from your own mistakes
 and successes, and even from the people around you, I think it's very optimal to listen to the wisdom from other people's

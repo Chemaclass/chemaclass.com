@@ -47,6 +47,8 @@ Each person will have a role:
 
 Pair programming should not be considered a practice only for "seniors" to juniors, but regardless of the team members' experience level.
 
+## Pairing creates a live feedback loop
+
 It is about the **collaboration flow**, the quality communication, the absence of feeling judged, and the idea of welcoming vulnerability with your peers, knowing they will support and help you.
 
 It is about constantly challenging each other, seeking the most pragmatic solution while keeping it simple. Always looking for **quick [feedback](/blog/ship-show-ask/)** when speaking to each other, but also on the solution you agreed to implement and its direction.
@@ -59,7 +61,7 @@ It is about **team cohesion** and sharpening the feeling that we belong. When we
 
 ![blog-img](/images/blog/2024-03-28/footer.webp)
 
-## How can you practice pair programming?
+## Practice pairing around the task
 
 Pair programming can be done in different ways:
 
@@ -72,9 +74,9 @@ This does not mean you must constantly work "no matter what" in pair. This is no
 
 Pair programming might become one of the best tools in your team toolbox for daily interactions. Not because you read it somewhere but because of the benefits you and your team will find.
 
-### Common Patterns
+## Pairing patterns change the roles
 
-#### Different strategies for effective pairing
+### Effective pairing patterns
 
 - **Driver-Navigator**: One person is driving the code (with the keyboard), focusing on the detail aspect of the task itself. The other is a navigator (no keyboard), having a more abstract picture of the task in mind.
 - **Ping-Pong**: Frequent switching driver-navigator roles in small interactions, e.g., every N minutes, every N commits, etc.
@@ -83,7 +85,7 @@ Pair programming might become one of the best tools in your team toolbox for dai
 
 ![effective pair programming patterns](/images/blog/2024-03-28/good-pair-prog.webp)
 
-#### Anti-patterns while pairing
+### Pairing anti-patterns
 
 - **The silent partner**: The navigator is not participating, and they are being silent.
 - **The solo act**: The driver ignores all inputs from the navigator.

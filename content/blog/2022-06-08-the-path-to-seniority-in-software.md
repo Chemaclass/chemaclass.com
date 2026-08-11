@@ -95,7 +95,7 @@ Being senior in our software industry is not about "the number of years of exper
 As you can see, there is no mention of concrete technology or years of experience. Why? Because technology is just an 
 "implementation detail", and experience comes by practicing and attitude, not by letting the time pass by.
 
-### Attitude is important
+## Attitude matters more than elapsed time
 
 We've got two persons:
 
