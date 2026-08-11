@@ -86,26 +86,27 @@
         </div>
     </div>
 
-    <!-- Skills Section -->
-    <section class="skills-section">
-        <div class="skills-tags">
-            <span class="skill-tag lang"><i class="fa-brands fa-php"></i> PHP</span>
-            <span class="skill-tag lang"><i class="fa-solid fa-terminal"></i> Bash</span>
-            <span class="skill-tag lang"><i class="fa-solid fa-code"></i> Lisp</span>
-            <span class="skill-tag tool"><i class="fa-brands fa-laravel"></i> Laravel</span>
-            <span class="skill-tag tool"><i class="fa-solid fa-vial"></i> PHPUnit</span>
-            <span class="skill-tag tool"><i class="fa-solid fa-shield"></i> PHPStan</span>
-            <span class="skill-tag practice"><i class="fa-solid fa-vial-circle-check"></i> TDD</span>
-            <span class="skill-tag practice"><i class="fa-solid fa-arrows-rotate"></i> XP</span>
-            <span class="skill-tag practice"><i class="fa-brands fa-osi"></i> {{ trans(key="home_skill_open_source", lang=lang) }}</span>
-            <span class="skill-tag infra"><i class="fa-brands fa-docker"></i> Docker</span>
-            <span class="skill-tag infra"><i class="fa-brands fa-aws"></i> AWS</span>
-            <span class="skill-tag db"><i class="fa-solid fa-database"></i> PostgreSQL</span>
-            <span class="skill-tag db"><i class="fa-solid fa-bolt"></i> Redis</span>
-            <span class="skill-tag soft"><i class="fa-solid fa-compass"></i> {{ trans(key="home_skill_leadership", lang=lang) }}</span>
-            <span class="skill-tag soft"><i class="fa-solid fa-comments"></i> {{ trans(key="home_skill_communication", lang=lang) }}</span>
-            <span class="skill-tag ai"><i class="fa-solid fa-robot"></i> Claude</span>
-            <a href="https://sauronbot.github.io/" target="_blank" rel="noopener" class="skill-tag ai"><i class="fa-solid fa-brain"></i> OpenClaw</a>
+    <section class="reader-paths" aria-labelledby="reader-paths-title">
+        <div class="section-header">
+            <h2 id="reader-paths-title">{{ trans(key="home_reader_paths", lang=lang) }}</h2>
+        </div>
+        <div class="reader-paths__grid">
+            <a class="reader-path" href="{% if lang == 'es' %}/es/topics/{% else %}/topics/{% endif %}#software-craft-testing">
+                <strong>{{ trans(key="home_path_software", lang=lang) }}</strong>
+                <span>{{ trans(key="home_path_software_desc", lang=lang) }}</span>
+            </a>
+            <a class="reader-path" href="{% if lang == 'es' %}/es/topics/{% else %}/topics/{% endif %}#leadership-people">
+                <strong>{{ trans(key="home_path_leadership", lang=lang) }}</strong>
+                <span>{{ trans(key="home_path_leadership_desc", lang=lang) }}</span>
+            </a>
+            <a class="reader-path" href="{% if lang == 'es' %}/es/series/ai/{% else %}/series/ai/{% endif %}">
+                <strong>{{ trans(key="home_path_ai", lang=lang) }}</strong>
+                <span>{{ trans(key="home_path_ai_desc", lang=lang) }}</span>
+            </a>
+            <a class="reader-path" href="{% if lang == 'es' %}/es/series/bitcoin/{% else %}/series/bitcoin/{% endif %}">
+                <strong>{{ trans(key="home_path_bitcoin", lang=lang) }}</strong>
+                <span>{{ trans(key="home_path_bitcoin_desc", lang=lang) }}</span>
+            </a>
         </div>
     </section>
 
