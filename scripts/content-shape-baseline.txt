@@ -1,0 +1,499 @@
+# Existing content-shape exceptions. One tab-separated issue per line.
+# Regenerate only after reviewing and fixing stale entries.
+blog-h2-count	content/blog/2019-11-18-improve-your-tech-talk.es.md
+blog-h2-count	content/blog/2019-11-18-improve-your-tech-talk.md
+blog-h2-count	content/blog/2020-04-07-the-art-of-testing.es.md
+blog-h2-count	content/blog/2020-04-07-the-art-of-testing.md
+blog-h2-count	content/blog/2020-06-06-final-classes.es.md
+blog-h2-count	content/blog/2020-06-06-final-classes.md
+blog-h2-count	content/blog/2020-06-28-the-art-of-refactoring.es.md
+blog-h2-count	content/blog/2020-06-28-the-art-of-refactoring.md
+blog-h2-count	content/blog/2020-08-09-strict-types.es.md
+blog-h2-count	content/blog/2020-08-09-strict-types.md
+blog-h2-count	content/blog/2020-08-17-testing-effectively-legacy-code.es.md
+blog-h2-count	content/blog/2020-08-17-testing-effectively-legacy-code.md
+blog-h2-count	content/blog/2020-09-08-the-process-itself-is-the-goal.es.md
+blog-h2-count	content/blog/2020-09-08-the-process-itself-is-the-goal.md
+blog-h2-count	content/blog/2020-10-13-typed-arrays-php.es.md
+blog-h2-count	content/blog/2020-10-13-typed-arrays-php.md
+blog-h2-count	content/blog/2021-03-01-embrace-the-change.es.md
+blog-h2-count	content/blog/2021-03-01-embrace-the-change.md
+blog-h2-count	content/blog/2021-07-01-tech-lead.es.md
+blog-h2-count	content/blog/2021-07-01-tech-lead.md
+blog-h2-count	content/blog/2021-08-01-test-driven-development.es.md
+blog-h2-count	content/blog/2021-08-01-test-driven-development.md
+blog-h2-count	content/blog/2021-09-25-tdd-vs-bdd.es.md
+blog-h2-count	content/blog/2021-09-25-tdd-vs-bdd.md
+blog-h2-count	content/blog/2021-10-21-red-work-blue-work.es.md
+blog-h2-count	content/blog/2021-10-21-red-work-blue-work.md
+blog-h2-count	content/blog/2021-11-20-london-vs-chicago.es.md
+blog-h2-count	content/blog/2021-11-20-london-vs-chicago.md
+blog-h2-count	content/blog/2022-01-24-the-power-of-authority-and-obedience.es.md
+blog-h2-count	content/blog/2022-01-24-the-power-of-authority-and-obedience.md
+blog-h2-count	content/blog/2022-04-02-dunbar-number.es.md
+blog-h2-count	content/blog/2022-04-02-dunbar-number.md
+blog-h2-count	content/blog/2022-05-27-bikeshedding.es.md
+blog-h2-count	content/blog/2022-05-27-bikeshedding.md
+blog-h2-count	content/blog/2022-06-08-the-path-to-seniority-in-software.es.md
+blog-h2-count	content/blog/2022-06-08-the-path-to-seniority-in-software.md
+blog-h2-count	content/blog/2022-07-25-the-project-management-triangle.es.md
+blog-h2-count	content/blog/2022-07-25-the-project-management-triangle.md
+blog-h2-count	content/blog/2022-08-22-understanding-people.es.md
+blog-h2-count	content/blog/2022-08-22-understanding-people.md
+blog-h2-count	content/blog/2022-10-08-different-beliefs-about-software-quality.es.md
+blog-h2-count	content/blog/2022-10-08-different-beliefs-about-software-quality.md
+blog-h2-count	content/blog/2022-11-11-working-agile-with-non-agile-teams.es.md
+blog-h2-count	content/blog/2022-11-11-working-agile-with-non-agile-teams.md
+blog-h2-count	content/blog/2022-12-06-ignoring-scrum-to-get-more-agile.es.md
+blog-h2-count	content/blog/2022-12-06-ignoring-scrum-to-get-more-agile.md
+blog-h2-count	content/blog/2023-02-27-great-leadership.es.md
+blog-h2-count	content/blog/2023-02-27-great-leadership.md
+blog-h2-count	content/blog/2023-03-16-have-you-always-been-like-this.es.md
+blog-h2-count	content/blog/2023-03-16-have-you-always-been-like-this.md
+blog-h2-count	content/blog/2023-04-14-introducing-a-new-tech-stack.es.md
+blog-h2-count	content/blog/2023-04-14-introducing-a-new-tech-stack.md
+blog-h2-count	content/blog/2023-06-08-learned-helplessness.es.md
+blog-h2-count	content/blog/2023-06-08-learned-helplessness.md
+blog-h2-count	content/blog/2023-07-05-never-ending-loop.es.md
+blog-h2-count	content/blog/2023-07-05-never-ending-loop.md
+blog-h2-count	content/blog/2023-08-02-how-do-you-get-everyone-on-board.es.md
+blog-h2-count	content/blog/2023-08-02-how-do-you-get-everyone-on-board.md
+blog-h2-count	content/blog/2023-09-30-the-peter-principle.es.md
+blog-h2-count	content/blog/2023-09-30-the-peter-principle.md
+blog-h2-count	content/blog/2023-10-11-unhealthy-working-environment.es.md
+blog-h2-count	content/blog/2023-10-11-unhealthy-working-environment.md
+blog-h2-count	content/blog/2023-10-20-how-to-test-private-methods.es.md
+blog-h2-count	content/blog/2023-10-20-how-to-test-private-methods.md
+blog-h2-count	content/blog/2023-12-30-great-engineering.es.md
+blog-h2-count	content/blog/2023-12-30-great-engineering.md
+blog-h2-count	content/blog/2024-02-25-deployments-on-fridays.es.md
+blog-h2-count	content/blog/2024-02-25-deployments-on-fridays.md
+blog-h2-count	content/blog/2024-03-28-effective-pair-programming.es.md
+blog-h2-count	content/blog/2024-03-28-effective-pair-programming.md
+blog-h2-count	content/blog/2024-04-02-learning-concurrency-in-golang.es.md
+blog-h2-count	content/blog/2024-04-02-learning-concurrency-in-golang.md
+blog-h2-count	content/blog/2024-05-30-what-kills-agility.es.md
+blog-h2-count	content/blog/2024-05-30-what-kills-agility.md
+blog-h2-count	content/blog/2024-06-27-prisoners-dilemma.es.md
+blog-h2-count	content/blog/2024-06-27-prisoners-dilemma.md
+blog-h2-count	content/blog/2024-09-02-people-skills.es.md
+blog-h2-count	content/blog/2024-09-02-people-skills.md
+blog-h2-count	content/blog/2024-11-17-verified-git-commits.es.md
+blog-h2-count	content/blog/2024-11-17-verified-git-commits.md
+blog-h2-count	content/blog/2025-02-17-run-your-ln-node.es.md
+blog-h2-count	content/blog/2025-02-17-run-your-ln-node.md
+blog-h2-count	content/blog/2025-11-21-bitcoin-fundamentals.es.md
+blog-h2-count	content/blog/2025-11-21-bitcoin-fundamentals.md
+blog-h2-count	content/blog/2025-12-22-how-bitcoin-works.es.md
+blog-h2-count	content/blog/2025-12-22-how-bitcoin-works.md
+blog-h2-count	content/blog/2026-05-01-the-levels-of-ai-adoption.es.md
+blog-h2-count	content/blog/2026-05-01-the-levels-of-ai-adoption.md
+blog-h2-count	content/blog/2026-05-19-skills-over-agents.es.md
+blog-h2-count	content/blog/2026-05-19-skills-over-agents.md
+blog-h2-count	content/blog/2026-08-10-the-human-bottleneck.es.md
+blog-h2-count	content/blog/2026-08-10-the-human-bottleneck.md
+generic-heading	content/readings/2016-05-01-clean-code.es.md	resumen
+generic-heading	content/readings/2016-05-01-clean-code.md	summary
+generic-heading	content/readings/2016-08-01-the-clean-coder.es.md	resumen
+generic-heading	content/readings/2016-08-01-the-clean-coder.md	summary
+generic-heading	content/readings/2021-03-01-zombie-scrum-survival-guide.es.md	resumen
+generic-heading	content/readings/2021-03-01-zombie-scrum-survival-guide.md	summary
+generic-heading	content/readings/2021-08-08-the-catcher-in-the-rye.es.md	resumen
+generic-heading	content/readings/2021-08-08-the-catcher-in-the-rye.md	summary
+generic-heading	content/readings/2021-09-12-turn-the-ship-around.es.md	resumen
+generic-heading	content/readings/2021-09-12-turn-the-ship-around.md	summary
+generic-heading	content/readings/2021-12-07-the-five-dysfunctions-of-a-team.es.md	resumen del libro
+generic-heading	content/readings/2021-12-07-the-five-dysfunctions-of-a-team.md	book summary
+generic-heading	content/readings/2022-08-01-the-great-ceo-within.es.md	resumen
+generic-heading	content/readings/2022-08-01-the-great-ceo-within.md	summary
+generic-heading	content/readings/2022-09-30-dare-to-lead.es.md	resumen
+generic-heading	content/readings/2022-09-30-dare-to-lead.md	summary
+generic-heading	content/readings/2023-04-17-effective-remote-work.es.md	resumen del libro
+generic-heading	content/readings/2023-04-17-effective-remote-work.md	book summary
+generic-heading	content/readings/2023-06-20-the-blocksize-war.es.md	resumen
+generic-heading	content/readings/2023-06-20-the-blocksize-war.md	summary
+generic-heading	content/readings/2023-06-28-fahrenheit-451.es.md	resumen
+generic-heading	content/readings/2023-06-28-fahrenheit-451.md	summary
+generic-heading	content/readings/2023-08-13-the-day-of-the-triffids.es.md	resumen
+generic-heading	content/readings/2023-08-13-the-day-of-the-triffids.md	summary
+generic-heading	content/readings/2024-01-26-the-lean-startup.es.md	resumen
+generic-heading	content/readings/2024-01-26-the-lean-startup.md	summary
+generic-heading	content/readings/2024-06-21-the-genesis-book.md	contents
+generic-heading	content/readings/2024-07-05-mastering-bitcoin.md	contents
+generic-heading	content/readings/2024-08-02-bitcoin-wip.md	contents
+inline-reading-cover	content/readings/2025-02-09-criptoria.es.md	/images/readings/2025-02-09/criptoria-book.webp
+inline-reading-cover	content/readings/2025-02-09-criptoria.md	/images/readings/2025-02-09/criptoria-book.webp
+missing-related_readings	content/blog/2026-04-05-building-a-game-in-two-days.es.md
+missing-related_readings	content/blog/2026-04-05-building-a-game-in-two-days.md
+missing-related_readings	content/blog/2026-08-10-the-human-bottleneck.es.md
+missing-related_readings	content/blog/2026-08-10-the-human-bottleneck.md
+missing-related_readings	content/blog/2026-09-01-why-non-deterministic-ai-is-good.es.md
+missing-related_readings	content/blog/2026-09-01-why-non-deterministic-ai-is-good.md
+missing-subtitle	content/blog/2022-04-02-dunbar-number.es.md
+missing-subtitle	content/blog/2022-04-02-dunbar-number.md
+missing-subtitle	content/readings/2020-09-10-domain-driven-design-distilled.md
+missing-subtitle	content/readings/2021-07-10-lord-of-the-flies.es.md
+missing-subtitle	content/readings/2021-07-10-lord-of-the-flies.md
+missing-subtitle	content/readings/2021-08-08-the-catcher-in-the-rye.es.md
+missing-subtitle	content/readings/2021-08-08-the-catcher-in-the-rye.md
+missing-subtitle	content/readings/2022-01-23-modern-cto.es.md
+missing-subtitle	content/readings/2022-01-23-modern-cto.md
+missing-subtitle	content/readings/2022-11-28-recipes-for-decoupling.es.md
+missing-subtitle	content/readings/2022-11-28-recipes-for-decoupling.md
+missing-subtitle	content/readings/2023-08-13-the-day-of-the-triffids.es.md
+missing-subtitle	content/readings/2023-08-13-the-day-of-the-triffids.md
+missing-subtitle	content/readings/2023-11-07-the-alchemist.es.md
+missing-subtitle	content/readings/2023-11-07-the-alchemist.md
+missing-subtitle	content/readings/2025-06-22-principles-of-economics.es.md
+missing-subtitle	content/readings/2025-06-22-principles-of-economics.md
+question-h2	content/blog/2020-06-06-final-classes.es.md	¿Por qué esta clase no es final?
+question-h2	content/blog/2020-06-06-final-classes.md	Why isn't this class final?
+question-h2	content/blog/2020-06-28-the-art-of-refactoring.es.md	¿Cuándo y cómo refactorizar?
+question-h2	content/blog/2020-06-28-the-art-of-refactoring.es.md	¿Por qué hacerlo?
+question-h2	content/blog/2020-06-28-the-art-of-refactoring.es.md	¿Qué es el refactoring?
+question-h2	content/blog/2020-06-28-the-art-of-refactoring.md	What is refactoring?
+question-h2	content/blog/2020-06-28-the-art-of-refactoring.md	When and how should we refactor?
+question-h2	content/blog/2020-06-28-the-art-of-refactoring.md	Why should we do it?
+question-h2	content/blog/2020-08-09-strict-types.es.md	¿A quién le importa esta línea?
+question-h2	content/blog/2020-08-09-strict-types.md	Who should care about this "strict type" line?
+question-h2	content/blog/2020-08-17-testing-effectively-legacy-code.es.md	¿Cómo empezar?
+question-h2	content/blog/2020-08-17-testing-effectively-legacy-code.md	How to start?
+question-h2	content/blog/2020-09-08-the-process-itself-is-the-goal.es.md	¿Cómo me mantengo enfocado?
+question-h2	content/blog/2020-09-08-the-process-itself-is-the-goal.md	How do I keep myself focused?
+question-h2	content/blog/2020-12-01-sharing-git-patches.es.md	¿Qué posibilidades hay aparte de solo comentarios en un PR?
+question-h2	content/blog/2020-12-01-sharing-git-patches.es.md	¿Y ahora qué?
+question-h2	content/blog/2020-12-01-sharing-git-patches.md	What now?
+question-h2	content/blog/2020-12-01-sharing-git-patches.md	What possibilities are there apart from just comments in a PR?
+question-h2	content/blog/2021-01-11-to-mock-or-not-to-mock.es.md	¿Qué pasa cuando mockeas algo?
+question-h2	content/blog/2021-01-11-to-mock-or-not-to-mock.md	What happens when you mock something?
+question-h2	content/blog/2021-02-01-phel-first-release.es.md	¿Por qué Phel?
+question-h2	content/blog/2021-02-01-phel-first-release.md	Why Phel?
+question-h2	content/blog/2021-05-03-open-source-software.es.md	¿Qué es OSS?
+question-h2	content/blog/2021-05-03-open-source-software.md	What is OSS?
+question-h2	content/blog/2021-10-21-red-work-blue-work.es.md	¿Qué es "Blue Work"?
+question-h2	content/blog/2021-10-21-red-work-blue-work.es.md	¿Qué es "Red Work"?
+question-h2	content/blog/2021-10-21-red-work-blue-work.md	What is "Blue Work"?
+question-h2	content/blog/2021-10-21-red-work-blue-work.md	What is "Red Work"?
+question-h2	content/blog/2022-02-26-update-your-team-to-be-more-extreme.es.md	¿Por qué katas de código, charlas técnicas o viernes de investigación?
+question-h2	content/blog/2022-02-26-update-your-team-to-be-more-extreme.es.md	¿Qué es una charla técnica?
+question-h2	content/blog/2022-02-26-update-your-team-to-be-more-extreme.es.md	¿Qué es una kata de código?
+question-h2	content/blog/2022-02-26-update-your-team-to-be-more-extreme.md	What is a code kata?
+question-h2	content/blog/2022-02-26-update-your-team-to-be-more-extreme.md	What is a tech-talk?
+question-h2	content/blog/2022-02-26-update-your-team-to-be-more-extreme.md	Why code katas, tech talks or research Fridays?
+question-h2	content/blog/2022-04-02-dunbar-number.es.md	¿Cómo se aplica esto a los equipos?
+question-h2	content/blog/2022-04-02-dunbar-number.es.md	¿Por qué este límite es 150?
+question-h2	content/blog/2022-04-02-dunbar-number.md	How is this related to Teams?
+question-h2	content/blog/2022-04-02-dunbar-number.md	Why is this limit 150?
+question-h2	content/blog/2022-08-22-understanding-people.es.md	¿Cómo resolverlo?
+question-h2	content/blog/2022-08-22-understanding-people.md	How to solve this?
+question-h2	content/blog/2022-09-25-the-beauty-of-leadership.es.md	¿Cómo convertirse en un mejor líder?
+question-h2	content/blog/2022-09-25-the-beauty-of-leadership.es.md	¿Por qué alguien querría convertirse en líder?
+question-h2	content/blog/2022-09-25-the-beauty-of-leadership.es.md	¿Puede todo el mundo convertirse en líder?
+question-h2	content/blog/2022-09-25-the-beauty-of-leadership.es.md	¿Qué es liderazgo?
+question-h2	content/blog/2022-09-25-the-beauty-of-leadership.es.md	¿Qué no es liderazgo?
+question-h2	content/blog/2022-09-25-the-beauty-of-leadership.md	Can everyone become a leader?
+question-h2	content/blog/2022-09-25-the-beauty-of-leadership.md	How to become a better leader?
+question-h2	content/blog/2022-09-25-the-beauty-of-leadership.md	What is leadership?
+question-h2	content/blog/2022-09-25-the-beauty-of-leadership.md	What is not leadership?
+question-h2	content/blog/2022-09-25-the-beauty-of-leadership.md	Why would anyone want to become a leader?
+question-h2	content/blog/2022-11-11-working-agile-with-non-agile-teams.es.md	La pregunta permanece: ¿eres agile?
+question-h2	content/blog/2022-11-11-working-agile-with-non-agile-teams.es.md	¿Cómo podrías trabajar agile con ese médico?
+question-h2	content/blog/2022-11-11-working-agile-with-non-agile-teams.md	How could you work agile with that doctor?
+question-h2	content/blog/2022-11-11-working-agile-with-non-agile-teams.md	The question remains: are you agile?
+question-h2	content/blog/2022-12-06-ignoring-scrum-to-get-more-agile.es.md	¿Qué puedes hacer al respecto?
+question-h2	content/blog/2022-12-06-ignoring-scrum-to-get-more-agile.md	What can you do about it?
+question-h2	content/blog/2023-01-09-interview-about-xp-and-agile.es.md	Durante el evento, también nos contarás algo sobre Katas. ¿Qué son exactamente las Katas?
+question-h2	content/blog/2023-01-09-interview-about-xp-and-agile.es.md	Organizarás un evento en vivo en devm.io sobre el tema el 19 de enero. ¿Podrías darnos un adelanto de lo que tu audiencia puede esperar?
+question-h2	content/blog/2023-01-09-interview-about-xp-and-agile.es.md	¿Cómo describirías Extreme Programming? ¿Qué lo hace tan "extremo"?
+question-h2	content/blog/2023-01-09-interview-about-xp-and-agile.es.md	¿Podrías contarnos un poco sobre ti, quién eres y qué haces?
+question-h2	content/blog/2023-01-09-interview-about-xp-and-agile.es.md	¿Qué papel juegan los métodos Agile en el desarrollo de software para ti?
+question-h2	content/blog/2023-01-09-interview-about-xp-and-agile.es.md	¿Qué tema en el área de agile debería recibir más atención?
+question-h2	content/blog/2023-01-09-interview-about-xp-and-agile.md	Could you tell us a little about yourself, who you are, and what you do?
+question-h2	content/blog/2023-01-09-interview-about-xp-and-agile.md	During the event, you will also tell us something about Katas. What exactly are Katas?
+question-h2	content/blog/2023-01-09-interview-about-xp-and-agile.md	What role do Agile methods play in software development for you?
+question-h2	content/blog/2023-01-09-interview-about-xp-and-agile.md	Which topic in the area of agile should receive more attention?
+question-h2	content/blog/2023-01-09-interview-about-xp-and-agile.md	You will host a live event on devm.io on the topic on January 19th. Could you give us a sneak peek of what your audience can expect?
+question-h2	content/blog/2023-03-16-have-you-always-been-like-this.es.md	¿Cuánto tiempo tengo?
+question-h2	content/blog/2023-03-16-have-you-always-been-like-this.md	How much time do I have?
+question-h2	content/blog/2023-04-14-introducing-a-new-tech-stack.es.md	¿Por qué ese nuevo stack tecnológico?
+question-h2	content/blog/2023-04-14-introducing-a-new-tech-stack.md	Why that new tech stack?
+question-h2	content/blog/2023-05-17-dedicated-qa-teams.es.md	Buena teoría, pero... ¿para qué molestarse?
+question-h2	content/blog/2023-05-17-dedicated-qa-teams.md	Nice theory, but… why bother?
+question-h2	content/blog/2023-09-30-the-peter-principle.es.md	¿Has vivido el Principio de Peter?
+question-h2	content/blog/2023-09-30-the-peter-principle.md	Have you experienced the Peter Principle?
+question-h2	content/blog/2023-10-11-unhealthy-working-environment.es.md	¿Qué puedes hacer al respecto?
+question-h2	content/blog/2023-10-11-unhealthy-working-environment.md	What can you do about it?
+question-h2	content/blog/2023-10-20-how-to-test-private-methods.es.md	¿Y si...?
+question-h2	content/blog/2023-10-20-how-to-test-private-methods.md	What if...?
+question-h2	content/blog/2024-03-28-effective-pair-programming.es.md	¿Cómo puedes practicar pair programming?
+question-h2	content/blog/2024-03-28-effective-pair-programming.md	How can you practice pair programming?
+question-h2	content/blog/2024-05-30-what-kills-agility.es.md	¿Qué mata la agilidad?
+question-h2	content/blog/2024-05-30-what-kills-agility.md	What kills agility?
+question-h2	content/blog/2024-09-02-people-skills.es.md	¿Qué son las habilidades interpersonales?
+question-h2	content/blog/2024-09-02-people-skills.md	What are people skills?
+question-h2	content/blog/2024-10-30-bashunit.es.md	¿Cómo está hoy en día?
+question-h2	content/blog/2024-10-30-bashunit.es.md	¿Por qué crear otra librería de testing?
+question-h2	content/blog/2024-10-30-bashunit.md	How is it nowadays?
+question-h2	content/blog/2024-10-30-bashunit.md	Why create another testing library?
+question-h2	content/blog/2024-11-17-verified-git-commits.es.md	¿Por qué son importantes?
+question-h2	content/blog/2024-11-17-verified-git-commits.es.md	¿Qué son los commits verificados?
+question-h2	content/blog/2024-11-17-verified-git-commits.md	What are verified commits?
+question-h2	content/blog/2024-11-17-verified-git-commits.md	Why Are They Important?
+question-h2	content/blog/2024-12-11-the-cypherpunks.es.md	¿Quiénes eran los Cypherpunks?
+question-h2	content/blog/2024-12-11-the-cypherpunks.md	Who were the Cypherpunks?
+question-h2	content/blog/2025-01-02-understanding-taxes.es.md	¿Cómo funcionan?
+question-h2	content/blog/2025-01-02-understanding-taxes.es.md	¿Por qué pagamos impuestos?
+question-h2	content/blog/2025-01-02-understanding-taxes.md	How do they work?
+question-h2	content/blog/2025-01-02-understanding-taxes.md	Why do we pay taxes?
+question-h2	content/blog/2025-02-17-run-your-ln-node.es.md	¿Qué es la Lightning Network?
+question-h2	content/blog/2025-02-17-run-your-ln-node.md	What is the Lightning Network?
+question-h2	content/blog/2025-11-21-bitcoin-fundamentals.es.md	¿Qué es Bitcoin?
+question-h2	content/blog/2025-11-21-bitcoin-fundamentals.md	What is Bitcoin?
+reading-mixed-headings	content/readings/2016-05-01-clean-code.es.md
+reading-mixed-headings	content/readings/2016-05-01-clean-code.md
+reading-mixed-headings	content/readings/2016-08-01-the-clean-coder.es.md
+reading-mixed-headings	content/readings/2016-08-01-the-clean-coder.md
+reading-mixed-headings	content/readings/2019-07-01-working-effectively-with-legacy-code.es.md
+reading-mixed-headings	content/readings/2019-07-01-working-effectively-with-legacy-code.md
+reading-mixed-headings	content/readings/2020-03-05-extreme-programming-explained.es.md
+reading-mixed-headings	content/readings/2020-03-05-extreme-programming-explained.md
+reading-mixed-headings	content/readings/2020-06-12-never-split-the-difference.es.md
+reading-mixed-headings	content/readings/2020-06-12-never-split-the-difference.md
+reading-mixed-headings	content/readings/2021-06-27-effective-software-em.es.md
+reading-mixed-headings	content/readings/2021-06-27-effective-software-em.md
+reading-mixed-headings	content/readings/2021-09-12-turn-the-ship-around.es.md
+reading-mixed-headings	content/readings/2021-09-12-turn-the-ship-around.md
+reading-mixed-headings	content/readings/2021-10-22-leadership-is-language.es.md
+reading-mixed-headings	content/readings/2021-10-22-leadership-is-language.md
+reading-mixed-headings	content/readings/2021-12-07-the-five-dysfunctions-of-a-team.es.md
+reading-mixed-headings	content/readings/2021-12-07-the-five-dysfunctions-of-a-team.md
+reading-mixed-headings	content/readings/2022-02-27-the-psychology-of-money.es.md
+reading-mixed-headings	content/readings/2022-02-27-the-psychology-of-money.md
+reading-mixed-headings	content/readings/2022-07-11-clean-craftsmanship.es.md
+reading-mixed-headings	content/readings/2022-07-11-clean-craftsmanship.md
+reading-mixed-headings	content/readings/2022-08-01-the-great-ceo-within.es.md
+reading-mixed-headings	content/readings/2022-08-01-the-great-ceo-within.md
+reading-mixed-headings	content/readings/2022-09-30-dare-to-lead.es.md
+reading-mixed-headings	content/readings/2022-09-30-dare-to-lead.md
+reading-mixed-headings	content/readings/2023-02-26-adapt-or-die.es.md
+reading-mixed-headings	content/readings/2023-02-26-adapt-or-die.md
+reading-mixed-headings	content/readings/2023-03-11-21-lessons.es.md
+reading-mixed-headings	content/readings/2023-03-11-21-lessons.md
+reading-mixed-headings	content/readings/2023-03-19-accelerate.es.md
+reading-mixed-headings	content/readings/2023-03-19-accelerate.md
+reading-mixed-headings	content/readings/2023-04-17-effective-remote-work.es.md
+reading-mixed-headings	content/readings/2023-04-17-effective-remote-work.md
+reading-mixed-headings	content/readings/2023-05-31-agile-project-management.es.md
+reading-mixed-headings	content/readings/2023-05-31-agile-project-management.md
+reading-mixed-headings	content/readings/2023-06-20-the-blocksize-war.es.md
+reading-mixed-headings	content/readings/2023-06-20-the-blocksize-war.md
+reading-mixed-headings	content/readings/2023-10-31-crucial-conversations.es.md
+reading-mixed-headings	content/readings/2023-10-31-crucial-conversations.md
+reading-mixed-headings	content/readings/2024-01-26-the-lean-startup.es.md
+reading-mixed-headings	content/readings/2024-01-26-the-lean-startup.md
+reading-mixed-headings	content/readings/2024-06-21-the-genesis-book.es.md
+reading-mixed-headings	content/readings/2024-06-21-the-genesis-book.md
+reading-mixed-headings	content/readings/2024-07-05-mastering-bitcoin.es.md
+reading-mixed-headings	content/readings/2024-07-05-mastering-bitcoin.md
+reading-mixed-headings	content/readings/2024-08-02-bitcoin-wip.es.md
+reading-mixed-headings	content/readings/2024-08-02-bitcoin-wip.md
+reading-mixed-headings	content/readings/2024-11-29-mans-search-for-meaning.es.md
+reading-mixed-headings	content/readings/2024-11-29-mans-search-for-meaning.md
+reading-no-headings	content/readings/2016-09-01-sprint.es.md
+reading-no-headings	content/readings/2016-09-01-sprint.md
+reading-no-headings	content/readings/2020-02-20-symfony-5.es.md
+reading-no-headings	content/readings/2020-02-20-symfony-5.md
+reading-no-headings	content/readings/2020-03-12-clean-agile.es.md
+reading-no-headings	content/readings/2020-03-12-clean-agile.md
+reading-no-headings	content/readings/2020-05-13-1984.es.md
+reading-no-headings	content/readings/2020-05-13-1984.md
+reading-no-headings	content/readings/2020-05-16-metamorphosis.es.md
+reading-no-headings	content/readings/2020-05-16-metamorphosis.md
+reading-no-headings	content/readings/2020-05-18-call-of-cthulhu.es.md
+reading-no-headings	content/readings/2020-05-18-call-of-cthulhu.md
+reading-no-headings	content/readings/2020-05-21-7-languages-in-7-weeks.es.md
+reading-no-headings	content/readings/2020-05-21-7-languages-in-7-weeks.md
+reading-no-headings	content/readings/2020-06-10-scrum-the-art-of-doing-twice.es.md
+reading-no-headings	content/readings/2020-06-10-scrum-the-art-of-doing-twice.md
+reading-no-headings	content/readings/2020-09-10-domain-driven-design-distilled.es.md
+reading-no-headings	content/readings/2020-09-10-domain-driven-design-distilled.md
+reading-no-headings	content/readings/2020-10-10-object-design-style-guide.es.md
+reading-no-headings	content/readings/2020-10-10-object-design-style-guide.md
+reading-no-headings	content/readings/2020-11-02-animal-farm.es.md
+reading-no-headings	content/readings/2020-11-02-animal-farm.md
+reading-no-headings	content/readings/2021-01-15-rich-dad-poor-dad.es.md
+reading-no-headings	content/readings/2021-01-15-rich-dad-poor-dad.md
+reading-no-headings	content/readings/2021-01-22-one-up-on-wall-street.es.md
+reading-no-headings	content/readings/2021-01-22-one-up-on-wall-street.md
+reading-no-headings	content/readings/2021-01-31-stock-market-for-beginners.es.md
+reading-no-headings	content/readings/2021-01-31-stock-market-for-beginners.md
+reading-no-headings	content/readings/2021-07-10-lord-of-the-flies.es.md
+reading-no-headings	content/readings/2021-07-10-lord-of-the-flies.md
+reading-no-headings	content/readings/2022-04-29-docker-secdevops.es.md
+reading-no-headings	content/readings/2022-04-29-docker-secdevops.md
+reading-no-headings	content/readings/2022-05-10-bitcoin-la-tecnologia-blockchain-y-su-investigacion.es.md
+reading-no-headings	content/readings/2022-05-10-bitcoin-la-tecnologia-blockchain-y-su-investigacion.md
+reading-no-headings	content/readings/2022-07-19-the-starfish-and-the-spider.es.md
+reading-no-headings	content/readings/2022-07-19-the-starfish-and-the-spider.md
+reading-no-headings	content/readings/2022-11-28-recipes-for-decoupling.es.md
+reading-no-headings	content/readings/2022-11-28-recipes-for-decoupling.md
+reading-no-headings	content/readings/2022-12-17-momo.es.md
+reading-no-headings	content/readings/2022-12-17-momo.md
+reading-no-headings	content/readings/2023-07-10-the-book-of-satoshi.es.md
+reading-no-headings	content/readings/2023-07-10-the-book-of-satoshi.md
+reading-no-headings	content/readings/2023-11-07-the-alchemist.es.md
+reading-no-headings	content/readings/2023-11-07-the-alchemist.md
+reading-no-headings	content/readings/2023-12-09-invincible.es.md
+reading-no-headings	content/readings/2023-12-09-invincible.md
+reading-no-headings	content/readings/2024-05-31-the-phoenix-project.es.md
+reading-no-headings	content/readings/2024-05-31-the-phoenix-project.md
+reading-too-long	content/readings/2016-05-01-clean-code.es.md
+reading-too-long	content/readings/2016-05-01-clean-code.md
+reading-too-long	content/readings/2016-07-15-97-things-every-programmer-should-know.es.md
+reading-too-long	content/readings/2016-07-15-97-things-every-programmer-should-know.md
+reading-too-long	content/readings/2016-08-01-the-clean-coder.es.md
+reading-too-long	content/readings/2016-08-01-the-clean-coder.md
+reading-too-long	content/readings/2020-03-05-extreme-programming-explained.es.md
+reading-too-long	content/readings/2020-03-05-extreme-programming-explained.md
+reading-too-long	content/readings/2021-06-27-effective-software-em.md
+reading-too-long	content/readings/2022-08-01-the-great-ceo-within.es.md
+reading-too-long	content/readings/2022-08-01-the-great-ceo-within.md
+reading-too-short	content/readings/2016-09-01-sprint.es.md
+reading-too-short	content/readings/2016-09-01-sprint.md
+reading-too-short	content/readings/2016-10-01-the-pragmatic-programmer.es.md
+reading-too-short	content/readings/2016-10-01-the-pragmatic-programmer.md
+reading-too-short	content/readings/2017-03-20-the-power-of-habits.es.md
+reading-too-short	content/readings/2017-03-20-the-power-of-habits.md
+reading-too-short	content/readings/2018-06-04-clean-architecture.es.md
+reading-too-short	content/readings/2018-08-10-the-art-of-war.es.md
+reading-too-short	content/readings/2019-07-01-working-effectively-with-legacy-code.es.md
+reading-too-short	content/readings/2019-07-01-working-effectively-with-legacy-code.md
+reading-too-short	content/readings/2019-11-12-atomic-habits.es.md
+reading-too-short	content/readings/2019-11-12-atomic-habits.md
+reading-too-short	content/readings/2020-02-20-symfony-5.es.md
+reading-too-short	content/readings/2020-02-20-symfony-5.md
+reading-too-short	content/readings/2020-03-12-clean-agile.es.md
+reading-too-short	content/readings/2020-03-12-clean-agile.md
+reading-too-short	content/readings/2020-03-26-the-manager-path.es.md
+reading-too-short	content/readings/2020-03-26-the-manager-path.md
+reading-too-short	content/readings/2020-04-03-high-output-management.es.md
+reading-too-short	content/readings/2020-04-03-high-output-management.md
+reading-too-short	content/readings/2020-05-13-1984.es.md
+reading-too-short	content/readings/2020-05-13-1984.md
+reading-too-short	content/readings/2020-05-16-metamorphosis.es.md
+reading-too-short	content/readings/2020-05-16-metamorphosis.md
+reading-too-short	content/readings/2020-05-18-call-of-cthulhu.es.md
+reading-too-short	content/readings/2020-05-18-call-of-cthulhu.md
+reading-too-short	content/readings/2020-05-21-7-languages-in-7-weeks.es.md
+reading-too-short	content/readings/2020-05-21-7-languages-in-7-weeks.md
+reading-too-short	content/readings/2020-06-10-scrum-the-art-of-doing-twice.es.md
+reading-too-short	content/readings/2020-06-10-scrum-the-art-of-doing-twice.md
+reading-too-short	content/readings/2020-06-12-never-split-the-difference.es.md
+reading-too-short	content/readings/2020-06-12-never-split-the-difference.md
+reading-too-short	content/readings/2020-08-16-advance-web-application-architecture.es.md
+reading-too-short	content/readings/2020-08-16-advance-web-application-architecture.md
+reading-too-short	content/readings/2020-09-10-domain-driven-design-distilled.es.md
+reading-too-short	content/readings/2020-09-10-domain-driven-design-distilled.md
+reading-too-short	content/readings/2020-10-10-object-design-style-guide.es.md
+reading-too-short	content/readings/2020-10-10-object-design-style-guide.md
+reading-too-short	content/readings/2020-11-02-animal-farm.es.md
+reading-too-short	content/readings/2020-11-02-animal-farm.md
+reading-too-short	content/readings/2020-11-12-packaging-design.es.md
+reading-too-short	content/readings/2020-11-12-packaging-design.md
+reading-too-short	content/readings/2021-01-15-rich-dad-poor-dad.es.md
+reading-too-short	content/readings/2021-01-15-rich-dad-poor-dad.md
+reading-too-short	content/readings/2021-01-16-who-moved-my-cheese.es.md
+reading-too-short	content/readings/2021-01-16-who-moved-my-cheese.md
+reading-too-short	content/readings/2021-01-22-one-up-on-wall-street.es.md
+reading-too-short	content/readings/2021-01-22-one-up-on-wall-street.md
+reading-too-short	content/readings/2021-01-31-stock-market-for-beginners.es.md
+reading-too-short	content/readings/2021-01-31-stock-market-for-beginners.md
+reading-too-short	content/readings/2021-03-01-zombie-scrum-survival-guide.es.md
+reading-too-short	content/readings/2021-03-01-zombie-scrum-survival-guide.md
+reading-too-short	content/readings/2021-04-05-97-things-every-em-should-know.es.md
+reading-too-short	content/readings/2021-04-05-97-things-every-em-should-know.md
+reading-too-short	content/readings/2021-04-19-the-art-of-leadership.es.md
+reading-too-short	content/readings/2021-04-19-the-art-of-leadership.md
+reading-too-short	content/readings/2021-07-10-lord-of-the-flies.es.md
+reading-too-short	content/readings/2021-07-10-lord-of-the-flies.md
+reading-too-short	content/readings/2021-08-08-the-catcher-in-the-rye.es.md
+reading-too-short	content/readings/2021-08-08-the-catcher-in-the-rye.md
+reading-too-short	content/readings/2021-09-20-the-bitcoin-standard.es.md
+reading-too-short	content/readings/2021-09-20-the-bitcoin-standard.md
+reading-too-short	content/readings/2021-10-22-leadership-is-language.es.md
+reading-too-short	content/readings/2021-10-22-leadership-is-language.md
+reading-too-short	content/readings/2021-11-28-start-with-why.es.md
+reading-too-short	content/readings/2021-11-28-start-with-why.md
+reading-too-short	content/readings/2022-01-08-jonathan-livingston-seagull.es.md
+reading-too-short	content/readings/2022-01-08-jonathan-livingston-seagull.md
+reading-too-short	content/readings/2022-01-23-modern-cto.es.md
+reading-too-short	content/readings/2022-01-23-modern-cto.md
+reading-too-short	content/readings/2022-02-27-the-psychology-of-money.es.md
+reading-too-short	content/readings/2022-02-27-the-psychology-of-money.md
+reading-too-short	content/readings/2022-03-31-team-topologies.es.md
+reading-too-short	content/readings/2022-04-29-docker-secdevops.es.md
+reading-too-short	content/readings/2022-04-29-docker-secdevops.md
+reading-too-short	content/readings/2022-05-10-bitcoin-la-tecnologia-blockchain-y-su-investigacion.es.md
+reading-too-short	content/readings/2022-05-10-bitcoin-la-tecnologia-blockchain-y-su-investigacion.md
+reading-too-short	content/readings/2022-06-29-modern-software-engineering.es.md
+reading-too-short	content/readings/2022-06-29-modern-software-engineering.md
+reading-too-short	content/readings/2022-07-19-the-starfish-and-the-spider.es.md
+reading-too-short	content/readings/2022-07-19-the-starfish-and-the-spider.md
+reading-too-short	content/readings/2022-08-21-continuous-discovery-habits.es.md
+reading-too-short	content/readings/2022-08-21-continuous-discovery-habits.md
+reading-too-short	content/readings/2022-10-29-the-essential-drucker.es.md
+reading-too-short	content/readings/2022-10-29-the-essential-drucker.md
+reading-too-short	content/readings/2022-11-28-recipes-for-decoupling.es.md
+reading-too-short	content/readings/2022-11-28-recipes-for-decoupling.md
+reading-too-short	content/readings/2022-12-17-momo.es.md
+reading-too-short	content/readings/2022-12-17-momo.md
+reading-too-short	content/readings/2023-03-11-21-lessons.es.md
+reading-too-short	content/readings/2023-03-11-21-lessons.md
+reading-too-short	content/readings/2023-03-19-accelerate.es.md
+reading-too-short	content/readings/2023-03-19-accelerate.md
+reading-too-short	content/readings/2023-06-20-the-blocksize-war.es.md
+reading-too-short	content/readings/2023-06-20-the-blocksize-war.md
+reading-too-short	content/readings/2023-06-28-fahrenheit-451.es.md
+reading-too-short	content/readings/2023-06-28-fahrenheit-451.md
+reading-too-short	content/readings/2023-07-10-the-book-of-satoshi.es.md
+reading-too-short	content/readings/2023-07-10-the-book-of-satoshi.md
+reading-too-short	content/readings/2023-08-13-the-day-of-the-triffids.es.md
+reading-too-short	content/readings/2023-08-13-the-day-of-the-triffids.md
+reading-too-short	content/readings/2023-09-20-its-your-ship.es.md
+reading-too-short	content/readings/2023-11-07-the-alchemist.es.md
+reading-too-short	content/readings/2023-11-07-the-alchemist.md
+reading-too-short	content/readings/2023-12-09-invincible.es.md
+reading-too-short	content/readings/2023-12-09-invincible.md
+reading-too-short	content/readings/2024-01-26-the-lean-startup.es.md
+reading-too-short	content/readings/2024-01-26-the-lean-startup.md
+reading-too-short	content/readings/2024-04-17-radical-candor.es.md
+reading-too-short	content/readings/2024-04-17-radical-candor.md
+reading-too-short	content/readings/2024-05-31-the-phoenix-project.es.md
+reading-too-short	content/readings/2024-05-31-the-phoenix-project.md
+reading-too-short	content/readings/2024-06-21-the-genesis-book.es.md
+reading-too-short	content/readings/2024-06-21-the-genesis-book.md
+reading-too-short	content/readings/2024-08-02-bitcoin-wip.es.md
+reading-too-short	content/readings/2024-08-02-bitcoin-wip.md
+reading-too-short	content/readings/2025-01-18-bitcoin-with-rigor.es.md
+reading-too-short	content/readings/2025-02-16-digital-minimalism.es.md
+reading-too-short	content/readings/2026-01-17-broken-money.es.md
+tag-count	content/readings/2020-02-20-symfony-5.es.md
+tag-count	content/readings/2020-02-20-symfony-5.md
+tag-count	content/readings/2020-05-18-call-of-cthulhu.es.md
+tag-count	content/readings/2020-05-18-call-of-cthulhu.md
+tag-count	content/readings/2020-09-10-domain-driven-design-distilled.es.md
+tag-count	content/readings/2020-09-10-domain-driven-design-distilled.md
+tag-count	content/readings/2021-01-15-rich-dad-poor-dad.es.md
+tag-count	content/readings/2021-01-15-rich-dad-poor-dad.md
+tag-count	content/readings/2021-01-22-one-up-on-wall-street.es.md
+tag-count	content/readings/2021-01-22-one-up-on-wall-street.md
+tag-count	content/readings/2021-01-31-stock-market-for-beginners.es.md
+tag-count	content/readings/2021-01-31-stock-market-for-beginners.md
+tag-count	content/readings/2022-04-29-docker-secdevops.es.md
+tag-count	content/readings/2022-04-29-docker-secdevops.md
+tag-count	content/readings/2023-08-13-the-day-of-the-triffids.es.md
+tag-count	content/readings/2023-08-13-the-day-of-the-triffids.md
+tag-count	content/readings/2026-03-15-the-art-of-being-happy.es.md
+tag-count	content/readings/2026-03-15-the-art-of-being-happy.md
+tag-count	content/readings/2026-06-21-meditations.es.md
+tag-count	content/readings/2026-06-21-meditations.md
