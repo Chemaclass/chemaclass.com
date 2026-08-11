@@ -132,7 +132,7 @@
         </div>
 
         <div class="content-block__header">
-            <span class="content-block__label"><i class="fa-solid fa-newspaper"></i> {% if lang == "es" %}Posts{% else %}Posts{% endif %}</span>
+            <span class="content-block__label"><i class="fa-solid fa-newspaper"></i> {{ trans(key="home_posts_label", lang=lang) }}</span>
             <a href="{% if lang == 'es' %}/es/blog/{% else %}/blog/{% endif %}" class="view-all">{{ trans(key="home_view_all", lang=lang) }}</a>
         </div>
 

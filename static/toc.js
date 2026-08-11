@@ -17,6 +17,9 @@
 
   const tocToggle = document.getElementById('toc-toggle');
   const tocLayout = document.querySelector('.blog-post-layout');
+  const copyLinkLabel = document.body.dataset.copyLinkLabel || 'Copy link';
+  const copyLinkFailedLabel = document.body.dataset.copyLinkFailedLabel || 'Could not copy the link';
+  const sectionLinkLabel = document.body.dataset.sectionLinkLabel || 'Link to this section';
   const tocPrefKey = 'tocHiddenPreference';
   const compactMediaQuery = window.matchMedia('(max-width: 1024px)');
   let tocContainerRef = null;
@@ -138,7 +141,8 @@
         anchor.href = `#${heading.id}`;
         anchor.className = 'heading-anchor';
         anchor.textContent = '#';
-        anchor.title = 'Copy link';
+        anchor.title = copyLinkLabel;
+        anchor.setAttribute('aria-label', sectionLinkLabel);
         heading.appendChild(anchor);
       }
       if (anchor.dataset.copyBound) return;
@@ -158,10 +162,10 @@
           (error) => {
             console.error('[toc] could not copy the link to this section:', error);
             anchor.textContent = '✕';
-            anchor.title = 'Could not copy the link';
+            anchor.title = copyLinkFailedLabel;
             setTimeout(() => {
               anchor.textContent = '#';
-              anchor.title = 'Copy link';
+              anchor.title = copyLinkLabel;
             }, 1500);
           }
         );

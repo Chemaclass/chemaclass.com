@@ -2,7 +2,7 @@
   {% if title %}<h3 class="interactive-list__title">{{ title }}</h3>{% endif %}
 
   <div class="interactive-list__container">
-    <nav class="interactive-list__nav" role="tablist" aria-label="{{ title | default(value='Interactive list') }}">
+    <nav class="interactive-list__nav" role="tablist" aria-label="{{ title | default(value=trans(key='interactive_list_label', lang=lang)) }}">
       {% for item in items %}
       <button
         class="interactive-list__tab{% if loop.first %} active{% endif %}"

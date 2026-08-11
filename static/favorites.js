@@ -6,6 +6,7 @@
   if (typeof window === 'undefined' || !window.localStorage) return;
 
   var STORAGE_KEY = 'chemaclass:favorites';
+  var SAVED_LABEL = document.body.dataset.savedLabel || 'Saved';
   // Blog and reading post paths, tag pages and listings aren't saveable.
   var POST_PATH_RE = /^\/(?:es\/)?(?:blog|readings)\/[^\/]+\/?$/;
 
@@ -165,8 +166,8 @@
       card.classList.add('is-saved');
       var badge = document.createElement('span');
       badge.className = 'blog-card__favorite';
-      badge.setAttribute('aria-label', 'Saved');
-      badge.setAttribute('title', 'Saved');
+      badge.setAttribute('aria-label', SAVED_LABEL);
+      badge.setAttribute('title', SAVED_LABEL);
       badge.innerHTML = BOOKMARK_SVG_FILLED;
       card.insertBefore(badge, card.firstChild);
     }

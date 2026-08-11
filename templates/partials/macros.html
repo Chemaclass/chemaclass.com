@@ -37,6 +37,7 @@ data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
              data-hl-clear-done="{{ trans(key='highlight_clear_done', lang=lang) }}"
              data-hl-export="{{ trans(key='highlight_export', lang=lang) }}"
              data-hl-export-done="{{ trans(key='highlight_export_done', lang=lang) }}"
+             data-hl-text-actions="{{ trans(key='highlight_text_actions', lang=lang) }}"
 {%- endmacro %}
 
 {# Schema for a section listing: the page itself, the entries on it, and the
@@ -127,7 +128,7 @@ data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
                   type="button"
                   role="switch"
                   aria-checked="true"
-                  aria-label="Toggle table of contents">
+                  aria-label="{{ trans(key='toc_toggle_aria', lang=lang) }}">
             <svg class="toc-toggle__icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <rect x="1" y="2" width="5" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
               <path d="M9 4h6M9 8h6M9 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
