@@ -9,6 +9,9 @@ subtitle = "A Roman emperor's private notes on how to live"
 pages = "256"
 author = "Marcus Aurelius"
 static_thumbnail = "/images/readings/meditations.webp"
+read_if = "You want practical philosophy in fragments that you can read for a few minutes each day."
+skip_if = "You want a systematic introduction to Stoicism or one linear argument from start to finish."
+stayed_with_me = "The only domain you govern is your judgment and your next action. Everything else is borrowed control."
 related_readings = [
   "readings/2026-03-15-the-art-of-being-happy.md",
   "readings/2024-11-29-mans-search-for-meaning.md",

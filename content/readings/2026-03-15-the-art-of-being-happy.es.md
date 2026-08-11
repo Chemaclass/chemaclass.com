@@ -9,6 +9,9 @@ subtitle = "50 reglas para vivir del pesimista más famoso de la filosofía"
 pages = "112"
 author = "Arthur Schopenhauer"
 static_thumbnail = "/images/readings/the-art-of-being-happy.webp"
+read_if = "Quieres filosofía práctica y aceptas una visión severa de la felicidad basada en evitar sufrimiento innecesario."
+skip_if = "Buscas optimismo, biografía o un sistema completo. Son reglas breves recopiladas de notas dispersas."
+stayed_with_me = "La felicidad suele consistir en restar. Querer menos reduce la superficie expuesta a la decepción."
 related_readings = [
   "readings/2018-08-10-the-art-of-war.md",
   "readings/2024-11-29-mans-search-for-meaning.md",

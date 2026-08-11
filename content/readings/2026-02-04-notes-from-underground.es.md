@@ -9,6 +9,9 @@ subtitle = "Soy un hombre enfermo... Soy un hombre rencoroso."
 pages = "136"
 author = "Fiódor Dostoyevski"
 static_thumbnail = "/images/readings/notes-from-underground.webp"
+read_if = "Te gusta la ficción que ataca ideas cómodas sobre la razón, la libertad y el autoconocimiento."
+skip_if = "Necesitas un narrador fácil de querer o una trama rápida. La incomodidad es el punto."
+stayed_with_me = "El autoconocimiento sin acción se convierte en otra forma de vanidad. El hombre del subsuelo se entiende y usa ese conocimiento para seguir atrapado."
 related_readings = [
   "readings/2024-11-29-mans-search-for-meaning.md",
   "readings/2020-05-16-metamorphosis.md",

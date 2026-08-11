@@ -10,6 +10,9 @@ subtitle = "Why Our Financial System is Failing Us and How We Can Make it Better
 pages = "538"
 author = "Lyn Alden"
 static_thumbnail = "/images/readings/broken-money.webp"
+read_if = "You want to understand money as technology, not just policy, and are willing to follow the argument from ledgers to Bitcoin."
+skip_if = "You want a short Bitcoin primer. This is a 538-page monetary history, not a quick introduction."
+stayed_with_me = "Money is constrained by the technology that moves information and value. Change the rails, and the monetary system changes with them."
 related_readings = [
   "readings/2021-09-20-the-bitcoin-standard.md",
   "readings/2024-06-21-the-genesis-book.md",

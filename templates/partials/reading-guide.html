@@ -1,0 +1,25 @@
+{% if page.extra.read_if or page.extra.skip_if or page.extra.stayed_with_me %}
+<aside class="reading-guide" aria-labelledby="reading-guide-title">
+  <h2 id="reading-guide-title" class="reading-guide__title">{{ trans(key="reading_guide_title", lang=lang) }}</h2>
+  <dl class="reading-guide__list">
+    {% if page.extra.read_if %}
+    <div class="reading-guide__item">
+      <dt>{{ trans(key="reading_guide_read_if", lang=lang) }}</dt>
+      <dd>{{ page.extra.read_if }}</dd>
+    </div>
+    {% endif %}
+    {% if page.extra.skip_if %}
+    <div class="reading-guide__item">
+      <dt>{{ trans(key="reading_guide_skip_if", lang=lang) }}</dt>
+      <dd>{{ page.extra.skip_if }}</dd>
+    </div>
+    {% endif %}
+    {% if page.extra.stayed_with_me %}
+    <div class="reading-guide__item">
+      <dt>{{ trans(key="reading_guide_stayed", lang=lang) }}</dt>
+      <dd>{{ page.extra.stayed_with_me }}</dd>
+    </div>
+    {% endif %}
+  </dl>
+</aside>
+{% endif %}

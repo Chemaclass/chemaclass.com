@@ -9,6 +9,9 @@ subtitle = "Las notas privadas de un emperador romano sobre cómo vivir"
 pages = "256"
 author = "Marco Aurelio"
 static_thumbnail = "/images/readings/meditations.webp"
+read_if = "Quieres filosofía práctica en fragmentos que puedas leer durante unos minutos al día."
+skip_if = "Buscas una introducción sistemática al estoicismo o un argumento lineal de principio a fin."
+stayed_with_me = "Solo gobiernas tu juicio y tu siguiente acción. Todo lo demás es control prestado."
 related_readings = [
   "readings/2026-03-15-the-art-of-being-happy.md",
   "readings/2024-11-29-mans-search-for-meaning.md",

@@ -129,6 +129,7 @@
         <div class="blog-post__content reading-post"
              {{ macros::highlight_labels(lang=lang) }}>
           {% include "partials/tldr.html" %}
+          {% include "partials/reading-guide.html" %}
           {{ page.content | safe }}
           {% include "partials/post-faq.html" %}
           {% include "partials/related-posts.html" %}

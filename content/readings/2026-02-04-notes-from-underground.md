@@ -9,6 +9,9 @@ subtitle = "I am a sick man... I am a spiteful man."
 pages = "136"
 author = "Fyodor Dostoevsky"
 static_thumbnail = "/images/readings/notes-from-underground.webp"
+read_if = "You like fiction that attacks comfortable ideas about reason, freedom, and self-knowledge."
+skip_if = "You need a sympathetic narrator or a plot that moves quickly. The discomfort is the point."
+stayed_with_me = "Self-awareness without action becomes another form of vanity. The Underground Man understands himself and uses that understanding to stay trapped."
 related_readings = [
   "readings/2024-11-29-mans-search-for-meaning.md",
   "readings/2020-05-16-metamorphosis.md",
