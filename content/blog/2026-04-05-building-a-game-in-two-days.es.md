@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = ["ai", "software", "open-source"]
 [extra]
+tldr = "Un agente de IA escribió 5.000 líneas en dos días. La aportación humana no fue teclear más rápido, sino mantener el gusto, el lore y la dirección que convirtieron código funcional en este juego."
 subtitle = "Qué ocurre cuando le das una misión a una IA y te apartas del camino"
 static_thumbnail = "/images/blog/2026-04-04/cover.webp"
 related_posts = [

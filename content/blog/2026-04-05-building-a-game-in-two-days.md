@@ -5,6 +5,7 @@ draft = false
 [taxonomies]
 tags = ["ai", "software", "open-source"]
 [extra]
+tldr = "An AI agent wrote 5,000 lines in two days. The human contribution was not typing faster, but holding the taste, lore, and direction that turned working code into this game."
 subtitle = "What happens when you give an AI a quest and get out of the way"
 static_thumbnail = "/images/blog/2026-04-04/cover.webp"
 related_posts = [
