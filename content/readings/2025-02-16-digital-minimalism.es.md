@@ -71,6 +71,6 @@ El minimalismo digital **no rechaza la tecnología**. La usa **de forma que mejo
 
 {{ youtube(id="sJdZ7kmA2QQ") }}
 
-### Cal Newport entrevistado por Lex Fridman
+**Cal Newport entrevistado por Lex Fridman**
 
 {{ youtube(id="y3Umo_jd5AA") }}

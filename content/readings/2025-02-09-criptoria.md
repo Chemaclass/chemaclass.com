@@ -28,9 +28,7 @@ Cryptoria is addressed to all people convinced that, beyond inherited or imposed
 
 ---
 
-## Content
-
-## Part I: Before Turing
+**Part I: Before Turing**
 
 ### 1. The Beginning of the End
 
@@ -85,7 +83,7 @@ Cryptoria is addressed to all people convinced that, beyond inherited or imposed
 
 ![A hardback copy of Criptoria: de Turing a Nakamoto by Alfre Mancera, painted masks on the cover](/images/readings/2025-02-09/criptoria-book.webp)
 
-## Part II: After Turing
+**Part II: After Turing**
 
 ### 5. Modern Computing
 
@@ -193,7 +191,7 @@ Cryptoria is addressed to all people convinced that, beyond inherited or imposed
 
 ---
 
-## 🇪🇸 Related videos
+### 🇪🇸 Related Videos
 
 {{ youtube(id="7CvsAVaOjlQ") }}
 
@@ -204,4 +202,3 @@ Cryptoria is addressed to all people convinced that, beyond inherited or imposed
 **Related links**
 
 - Book website: [www.prometeabtc.com/criptoria](https://www.prometeabtc.com/criptoria)
-

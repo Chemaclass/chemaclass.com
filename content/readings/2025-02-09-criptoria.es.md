@@ -28,9 +28,7 @@ Un libro para quienes creen que hay formas de organización social y económica 
 
 ---
 
-## Contenido
-
-## Parte I: Antes de Turing
+**Parte I: Antes de Turing**
 
 ### 1. El Principio del Fin
 
@@ -85,7 +83,7 @@ Un libro para quienes creen que hay formas de organización social y económica 
 
 ![Un ejemplar en tapa dura de Criptoria: de Turing a Nakamoto, de Alfre Mancera, con máscaras pintadas en la portada](/images/readings/2025-02-09/criptoria-book.webp)
 
-## Parte II: Después de Turing
+**Parte II: Después de Turing**
 
 ### 5. Computación Moderna
 
@@ -193,7 +191,7 @@ Un libro para quienes creen que hay formas de organización social y económica 
 
 ---
 
-## 🇪🇸 Videos relacionados
+### 🇪🇸 Videos Relacionados
 
 {{ youtube(id="7CvsAVaOjlQ") }}
 
@@ -204,4 +202,3 @@ Un libro para quienes creen que hay formas de organización social y económica 
 **Enlaces relacionados**
 
 - Sitio web del libro: [www.prometeabtc.com/criptoria](https://www.prometeabtc.com/criptoria)
-

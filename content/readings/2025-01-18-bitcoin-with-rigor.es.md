@@ -28,8 +28,6 @@ Este libro busca darte las herramientas para entender cómo funciona Bitcoin. As
 
 ---
 
-## Contenido
-
 ### 1. Conceptos Básicos de Computación
 
 - Información y Comunicación
@@ -96,7 +94,7 @@ Este libro busca darte las herramientas para entender cómo funciona Bitcoin. As
 
 ---
 
-## Presentación del libro
+### Presentación del Libro
 
 {{ youtube(id="55ZRM7j1Jzc") }}
 
