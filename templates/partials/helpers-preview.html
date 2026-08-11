@@ -12,17 +12,20 @@
         {% else %}
           {% set card_path = post.extra.static_thumbnail | trim_start_matches(pat="/") %}
           {% if featured %}
-            {# quality=88, not 100: at 100 the encoder stops discarding anything and
-               the featured card came out at 434KB, which is the LCP image of every
-               listing page. The rest of the site already renders heroes at 88. #}
-            {% set card_webp = resize_image(path=card_path, width=960, height=540, op="fill", quality=88, format="webp") %}
-            {% set card_fb = resize_image(path=card_path, width=960, height=540, op="fill", quality=85) %}
+            {% set card_sm = resize_image(path=card_path, width=480, height=270, op="fill", quality=75, format="webp") %}
+            {% set card_md = resize_image(path=card_path, width=720, height=405, op="fill", quality=78, format="webp") %}
+            {% set card_lg = resize_image(path=card_path, width=960, height=540, op="fill", quality=80, format="webp") %}
+            {% set card_fb = resize_image(path=card_path, width=960, height=540, op="fill", quality=80) %}
           {% else %}
             {% set card_webp = resize_image(path=card_path, width=480, height=270, op="fill", quality=75, format="webp") %}
             {% set card_fb = resize_image(path=card_path, width=480, height=270, op="fill", quality=80) %}
           {% endif %}
           <picture>
-            <source type="image/webp" srcset="{{ card_webp.url }}" />
+            {% if featured %}
+              <source type="image/webp" srcset="{{ card_sm.url }} 480w, {{ card_md.url }} 720w, {{ card_lg.url }} 960w" sizes="(max-width: 720px) calc(100vw - 2rem), 960px" />
+            {% else %}
+              <source type="image/webp" srcset="{{ card_webp.url }}" />
+            {% endif %}
             <img src="{{ card_fb.url }}" alt="{{ post.title }}" width="{{ card_fb.width }}" height="{{ card_fb.height }}" {% if featured %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async" />
           </picture>
         {% endif %}
