@@ -1,7 +1,7 @@
 <div {% if class %}class="{{class}}"{% endif %} style="position:relative;aspect-ratio:16/9;width:100%;">
     <iframe
             src="https://www.youtube-nocookie.com/embed/{{id}}{% if autoplay %}?autoplay=1{% endif %}"
-            title="{% if title %}{{title}}{% else %}YouTube video{% endif %}"
+            title="{% if title %}{{title}}{% else %}{{ trans(key='youtube_video_label', lang=lang) }}{% endif %}"
             width="560"
             height="315"
             loading="lazy"

@@ -377,7 +377,7 @@
     toolbar = document.createElement('div');
     toolbar.className = TOOLBAR_CLASS;
     toolbar.setAttribute('role', 'toolbar');
-    toolbar.setAttribute('aria-label', 'Text actions');
+    toolbar.setAttribute('aria-label', t('text-actions', 'Text actions'));
     document.body.appendChild(toolbar);
 
     // Prevent toolbar clicks from clearing the selection
