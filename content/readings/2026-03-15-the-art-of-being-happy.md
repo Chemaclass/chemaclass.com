@@ -9,6 +9,9 @@ subtitle = "50 rules for life from philosophy's most famous pessimist"
 pages = "112"
 author = "Arthur Schopenhauer"
 static_thumbnail = "/images/readings/the-art-of-being-happy.webp"
+read_if = "You want practical philosophy and can accept a severe view of happiness built on avoiding unnecessary suffering."
+skip_if = "You want optimism, biography, or one complete system. These are short rules collected from scattered notes."
+stayed_with_me = "Happiness is often subtraction. Wanting less reduces the surface area for disappointment."
 related_readings = [
   "readings/2018-08-10-the-art-of-war.md",
   "readings/2024-11-29-mans-search-for-meaning.md",

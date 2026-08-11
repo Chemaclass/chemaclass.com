@@ -10,6 +10,9 @@ subtitle = "Por qué nuestro sistema financiero nos está fallando y cómo podem
 pages = "538"
 author = "Lyn Alden"
 static_thumbnail = "/images/readings/broken-money.webp"
+read_if = "Quieres entender el dinero como tecnología, no solo como política, y seguir el argumento desde los libros contables hasta Bitcoin."
+skip_if = "Buscas una introducción breve a Bitcoin. Es una historia monetaria de 538 páginas, no una guía rápida."
+stayed_with_me = "El dinero está limitado por la tecnología que mueve información y valor. Cambia los raíles y el sistema monetario cambia con ellos."
 related_readings = [
   "readings/2021-09-20-the-bitcoin-standard.md",
   "readings/2024-06-21-the-genesis-book.md",
