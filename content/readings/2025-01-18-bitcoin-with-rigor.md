@@ -29,8 +29,6 @@ This book aims to equip readers with the tools to understand how Bitcoin works, 
 
 ---
 
-## Content
-
 ### 1. Basic Computer Concepts
 
 - Information and Communication
@@ -97,7 +95,7 @@ This book aims to equip readers with the tools to understand how Bitcoin works, 
 
 ---
 
-## Book presentation
+### Book Presentation
 
 {{ youtube(id="55ZRM7j1Jzc") }}
 
