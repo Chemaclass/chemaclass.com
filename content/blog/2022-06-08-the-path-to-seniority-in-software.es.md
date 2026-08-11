@@ -71,7 +71,7 @@ Ser senior en nuestra industria del software no se trata del "número de años d
 
 Como puedes ver, no hay mención de tecnología concreta o años de experiencia. ¿Por qué? Porque la tecnología es solo un "detalle de implementación", y la experiencia viene de practicar y la actitud, no de dejar pasar el tiempo.
 
-### La actitud es importante
+## La actitud importa más que el tiempo transcurrido
 
 Tenemos dos personas:
 

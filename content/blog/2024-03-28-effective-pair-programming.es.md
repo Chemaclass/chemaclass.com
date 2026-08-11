@@ -46,6 +46,8 @@ Cada persona tendrá un rol:
 
 El pair programming no debería considerarse una práctica solo para "seniors" hacia juniors, sino independientemente del nivel de experiencia de los miembros del equipo.
 
+## El pairing crea un bucle de feedback en directo
+
 Se trata del **flujo de colaboración**, la comunicación de calidad, la ausencia de sentirse juzgado y la idea de dar la bienvenida a la vulnerabilidad con tus compañeros, sabiendo que te apoyarán y ayudarán.
 
 Se trata de desafiarse constantemente mutuamente, buscando la solución más pragmática mientras se mantiene simple. Siempre buscando **retroalimentación rápida** al hablar entre ustedes, pero también sobre la solución que acordaron implementar y su dirección.
@@ -58,7 +60,7 @@ Se trata de **cohesión de equipo** y afilar el sentimiento de que pertenecemos.
 
 ![blog-img](/images/blog/2024-03-28/footer.webp)
 
-## ¿Cómo puedes practicar pair programming?
+## Practica pairing alrededor de la tarea
 
 El pair programming puede hacerse de diferentes maneras:
 
@@ -71,9 +73,9 @@ Esto no significa que debas trabajar constantemente "sin importar qué" en parej
 
 El pair programming podría convertirse en una de las mejores herramientas en la caja de herramientas de tu equipo para las interacciones diarias. No porque lo hayas leído en algún lugar, sino por los beneficios que tú y tu equipo encontrarán.
 
-### Patrones Comunes
+## Los patrones de pairing cambian los roles
 
-#### Diferentes estrategias para pairing efectivo
+### Patrones de pairing efectivo
 
 - **Driver-Navigator**: Una persona está conduciendo el código (con el teclado), enfocándose en el aspecto de detalle de la tarea en sí. La otra es navegadora (sin teclado), teniendo una imagen más abstracta de la tarea en mente.
 - **Ping-Pong**: Cambio frecuente de roles driver-navigator en pequeñas interacciones, ej: cada N minutos, cada N commits, etc.
@@ -82,7 +84,7 @@ El pair programming podría convertirse en una de las mejores herramientas en la
 
 ![patrones de pair programming efectivo](/images/blog/2024-03-28/good-pair-prog.webp)
 
-#### Anti-patrones mientras haces pairing
+### Anti-patrones de pairing
 
 - **The silent partner**: El navegador no participa, está en silencio.
 - **The solo act**: El conductor ignora todas las aportaciones del navegador.

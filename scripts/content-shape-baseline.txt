@@ -34,8 +34,6 @@ blog-h2-count	content/blog/2022-04-02-dunbar-number.es.md
 blog-h2-count	content/blog/2022-04-02-dunbar-number.md
 blog-h2-count	content/blog/2022-05-27-bikeshedding.es.md
 blog-h2-count	content/blog/2022-05-27-bikeshedding.md
-blog-h2-count	content/blog/2022-06-08-the-path-to-seniority-in-software.es.md
-blog-h2-count	content/blog/2022-06-08-the-path-to-seniority-in-software.md
 blog-h2-count	content/blog/2022-07-25-the-project-management-triangle.es.md
 blog-h2-count	content/blog/2022-07-25-the-project-management-triangle.md
 blog-h2-count	content/blog/2022-08-22-understanding-people.es.md
@@ -68,8 +66,6 @@ blog-h2-count	content/blog/2023-12-30-great-engineering.es.md
 blog-h2-count	content/blog/2023-12-30-great-engineering.md
 blog-h2-count	content/blog/2024-02-25-deployments-on-fridays.es.md
 blog-h2-count	content/blog/2024-02-25-deployments-on-fridays.md
-blog-h2-count	content/blog/2024-03-28-effective-pair-programming.es.md
-blog-h2-count	content/blog/2024-03-28-effective-pair-programming.md
 blog-h2-count	content/blog/2024-04-02-learning-concurrency-in-golang.es.md
 blog-h2-count	content/blog/2024-04-02-learning-concurrency-in-golang.md
 blog-h2-count	content/blog/2024-05-30-what-kills-agility.es.md
@@ -161,16 +157,6 @@ question-h2	content/blog/2022-04-02-dunbar-number.md	How is this related to Team
 question-h2	content/blog/2022-04-02-dunbar-number.md	Why is this limit 150?
 question-h2	content/blog/2022-08-22-understanding-people.es.md	¿Cómo resolverlo?
 question-h2	content/blog/2022-08-22-understanding-people.md	How to solve this?
-question-h2	content/blog/2022-09-25-the-beauty-of-leadership.es.md	¿Cómo convertirse en un mejor líder?
-question-h2	content/blog/2022-09-25-the-beauty-of-leadership.es.md	¿Por qué alguien querría convertirse en líder?
-question-h2	content/blog/2022-09-25-the-beauty-of-leadership.es.md	¿Puede todo el mundo convertirse en líder?
-question-h2	content/blog/2022-09-25-the-beauty-of-leadership.es.md	¿Qué es liderazgo?
-question-h2	content/blog/2022-09-25-the-beauty-of-leadership.es.md	¿Qué no es liderazgo?
-question-h2	content/blog/2022-09-25-the-beauty-of-leadership.md	Can everyone become a leader?
-question-h2	content/blog/2022-09-25-the-beauty-of-leadership.md	How to become a better leader?
-question-h2	content/blog/2022-09-25-the-beauty-of-leadership.md	What is leadership?
-question-h2	content/blog/2022-09-25-the-beauty-of-leadership.md	What is not leadership?
-question-h2	content/blog/2022-09-25-the-beauty-of-leadership.md	Why would anyone want to become a leader?
 question-h2	content/blog/2022-11-11-working-agile-with-non-agile-teams.es.md	La pregunta permanece: ¿eres agile?
 question-h2	content/blog/2022-11-11-working-agile-with-non-agile-teams.es.md	¿Cómo podrías trabajar agile con ese médico?
 question-h2	content/blog/2022-11-11-working-agile-with-non-agile-teams.md	How could you work agile with that doctor?
@@ -200,8 +186,6 @@ question-h2	content/blog/2023-10-11-unhealthy-working-environment.es.md	¿Qué p
 question-h2	content/blog/2023-10-11-unhealthy-working-environment.md	What can you do about it?
 question-h2	content/blog/2023-10-20-how-to-test-private-methods.es.md	¿Y si...?
 question-h2	content/blog/2023-10-20-how-to-test-private-methods.md	What if...?
-question-h2	content/blog/2024-03-28-effective-pair-programming.es.md	¿Cómo puedes practicar pair programming?
-question-h2	content/blog/2024-03-28-effective-pair-programming.md	How can you practice pair programming?
 question-h2	content/blog/2024-05-30-what-kills-agility.es.md	¿Qué mata la agilidad?
 question-h2	content/blog/2024-05-30-what-kills-agility.md	What kills agility?
 question-h2	content/blog/2024-09-02-people-skills.es.md	¿Qué son las habilidades interpersonales?
