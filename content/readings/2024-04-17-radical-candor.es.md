@@ -10,6 +10,11 @@ subtitle = "Cómo Conseguir Lo Que Quieres Diciendo Lo Que Piensas"
 pages = "300"
 author = "Kim Scott"
 static_thumbnail = "/images/readings/radical-candor.webp"
+related_posts = [
+  "blog/2023-02-27-great-leadership.md",
+  "blog/2022-09-25-the-beauty-of-leadership.md",
+  "blog/2022-08-22-understanding-people.md",
+]
 related_readings = [
   "readings/2023-10-31-crucial-conversations.md",
   "readings/2020-06-12-never-split-the-difference.md",

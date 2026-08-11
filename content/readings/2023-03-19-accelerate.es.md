@@ -10,6 +10,11 @@ subtitle = "Construyendo y Escalando Organizaciones Tecnológicas de Alto Rendim
 pages = "150"
 author = "Nicole Forsgren, Jez Humble, Gene Kim"
 static_thumbnail = "/images/readings/accelerate.webp"
+related_posts = [
+  "blog/2024-02-25-deployments-on-fridays.md",
+  "blog/2025-04-12-ship-show-ask.md",
+  "blog/2023-05-17-dedicated-qa-teams.md",
+]
 related_readings = [
   "readings/2024-05-31-the-phoenix-project.md",
   "readings/2022-03-31-team-topologies.md",

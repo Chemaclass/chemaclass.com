@@ -9,6 +9,11 @@ subtitle = "Start-to-finish strategies for working with large, untested legacy c
 pages = "460"
 author = "Michael Feathers"
 static_thumbnail = "/images/readings/working-effectively-with-legacy-code.webp"
+related_posts = [
+  "blog/2020-08-17-testing-effectively-legacy-code.md",
+  "blog/2020-06-28-the-art-of-refactoring.md",
+  "blog/2020-04-07-the-art-of-testing.md",
+]
 related_readings = [
   "readings/2016-05-01-clean-code.md",
   "readings/2022-07-11-clean-craftsmanship.md",
