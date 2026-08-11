@@ -234,7 +234,7 @@ What changed: I stopped racing AI on output and started directing it, reviewing,
 
 > You don't move up by buying tools. You move up by changing how work is organized and reviewed.
 
-Most companies at **Level 1** in 2026. Every slide = one step up.
+Broad, not deep: **36% of occupations** show Claude use in at least a quarter of their tasks. Only **4%** show it in three quarters. <a class="small" href="https://www.anthropic.com/news/the-anthropic-economic-index">source</a><br>Every slide = one step up.
 
 ![w:780](assets/05-ladder.svg)
 
@@ -242,6 +242,7 @@ Most companies at **Level 1** in 2026. Every slide = one step up.
 Poll the room on something they can answer now (the levels aren't defined yet): who uses AI in daily work? who's banned from it?
 The map: six rungs, denial at the bottom, orchestrating a team of agents at the top. Every slide from here is one rung up.
 Self-placement is the payoff: by the close they'll know exactly which rung they're on. We cash that in at the take-home slide, not here.
+Data behind "broad, not deep": 36% of occupations show Claude use in at least 25% of their tasks, only 4% in at least 75%. Source: https://www.anthropic.com/news/the-anthropic-economic-index
 -->
 
 ---
@@ -590,7 +591,7 @@ Right model for the right job: a cheap model to explore, a capable one for archi
 
 <!--
 Start with subagents: simpler, cheaper, easier to debug. One session, focused work, they can't talk to each other.
-Upgrade to teams when work must run in parallel and share findings, independent sessions coordinating via a mailbox. Teams cost roughly 3x the tokens, so make the parallelism earn it.
+Upgrade to teams when work must run in parallel and share findings, independent sessions coordinating via a mailbox. Anthropic's research system used about 15x the tokens of a plain chat (a single agent about 4x) and outperformed a single agent by 90.2% on their internal research eval. Token use explained 80% of the variance on BrowseComp, so make the parallelism earn it. Source: https://www.anthropic.com/engineering/multi-agent-research-system
 -->
 
 ---
@@ -786,7 +787,7 @@ The asymmetry that forces a new way of working: you can add more agents, you can
 Pilot & autopilot. Plane flies itself; pilot watches and steps in when something looks wrong.
 
 - **Ship** without review, **Show** what you did, **Ask** before big decisions.
-- Beware **automation complacency**: read diffs you don't have to.
+- Beware **approval fatigue**: [Claude Code users approve **93%** of permission prompts](https://www.anthropic.com/engineering/claude-code-auto-mode). Read diffs you don't have to.
 
 </div>
 <div>
@@ -798,7 +799,7 @@ Pilot & autopilot. Plane flies itself; pilot watches and steps in when something
 
 <!--
 Aviation framing: the plane flies itself, the pilot watches and steps in when something looks wrong. Human-on-the-loop, not hands-on every control.
-The decision rule, Ship / Show / Ask: ship without review when it's safe, show what you did, ask before big decisions. The danger is automation complacency, so deliberately read diffs you don't strictly have to.
+The decision rule, Ship / Show / Ask: ship without review when it's safe, show what you did, ask before big decisions. Ship/Show/Ask is Rouan Wilsenach's model, not Anthropic's, so don't attribute it on stage. Anthropic reports that Claude Code users approve 93% of permission prompts, a measure of approval fatigue. Its November 2025 data also shows augmentation back ahead of automation on Claude.ai, 52% to 45%. Read diffs you don't strictly have to. Sources: https://www.anthropic.com/engineering/claude-code-auto-mode and https://www.anthropic.com/research/anthropic-economic-index-january-2026-report
 -->
 
 ---
