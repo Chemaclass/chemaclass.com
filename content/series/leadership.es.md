@@ -1,6 +1,6 @@
 +++
 title = "Serie Liderazgo y Equipos"
-weight = 4
+weight = 2
 template = "series/single.html"
 
 [extra]

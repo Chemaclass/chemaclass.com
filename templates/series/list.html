@@ -43,6 +43,28 @@
 
       {% if parts | length > 0 %}
       <article class="series-card">
+        {# Covers of the first four parts. Decorative: the title next to it is the link. #}
+        {% set covers = parts | filter(attribute="extra.static_thumbnail") | slice(end=4) %}
+        {% if covers | length == 4 %}
+        <a class="series-card__mosaic" href="{{ entry.permalink }}" tabindex="-1" aria-hidden="true">
+          {% for post in covers %}
+            {% if post.extra.static_thumbnail is matching("^http[s]?://") %}
+              <img src="{{ post.extra.static_thumbnail | safe }}" alt="" width="320" height="180" loading="lazy" decoding="async" />
+            {% else %}
+              {# Same rendition the series page thumbs use, so both pages share one file. #}
+              {% set tile_path = post.extra.static_thumbnail | trim_start_matches(pat="/") %}
+              {% set tile_webp = resize_image(path=tile_path, width=320, height=180, op="fill", quality=75, format="webp") %}
+              {% set tile_fb = resize_image(path=tile_path, width=320, height=180, op="fill", quality=80) %}
+              <picture>
+                <source type="image/webp" srcset="{{ tile_webp.url }}" />
+                <img src="{{ tile_fb.url }}" alt="" width="{{ tile_fb.width }}" height="{{ tile_fb.height }}" loading="lazy" decoding="async" />
+              </picture>
+            {% endif %}
+          {% endfor %}
+        </a>
+        {% endif %}
+
+        <div class="series-card__body">
         <div class="series-card__head">
           <h2 class="series-card__title">
             <a href="{{ entry.permalink }}">
@@ -59,7 +81,7 @@
         {% endif %}
 
         <ol class="series-card__parts">
-          {% for post in parts | slice(end=3) %}
+          {% for post in parts | slice(end=6) %}
             <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
           {% endfor %}
         </ol>
@@ -70,6 +92,7 @@
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </a>
+        </div>
       </article>
       {% endif %}
     {% endfor %}

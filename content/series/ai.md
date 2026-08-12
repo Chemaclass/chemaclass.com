@@ -1,6 +1,6 @@
 +++
 title = "AI Series"
-weight = 2
+weight = 1
 template = "series/single.html"
 
 [extra]
