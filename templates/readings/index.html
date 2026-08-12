@@ -25,68 +25,6 @@
 
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
 
-  {# Tag cloud, readings only: taxonomy terms also hold blog posts and talks, so
-     every term is re-counted against the pages living under /readings/. #}
-  {% set tags = get_taxonomy(kind="tags", lang=lang) %}
-  {% set_global reading_tag_names = [] %}
-  {% set_global reading_tag_urls = [] %}
-  {% set_global reading_tag_counts = [] %}
-  {% set_global max_reading_count = 0 %}
-  {% for term in tags.items %}
-    {% set_global term_count = 0 %}
-    {% for post in term.pages %}
-      {% if "readings" in post.components %}
-        {% set_global term_count = term_count + 1 %}
-      {% endif %}
-    {% endfor %}
-    {% if term_count > 0 %}
-      {% set_global reading_tag_names = reading_tag_names | concat(with=term.name) %}
-      {% set_global reading_tag_urls = reading_tag_urls | concat(with=term.permalink) %}
-      {% set_global reading_tag_counts = reading_tag_counts | concat(with=term_count) %}
-      {% if term_count > max_reading_count %}
-        {% set_global max_reading_count = term_count %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-
-  {% if reading_tag_names | length > 0 and paginator.current_index == 1 %}
-  <nav class="readings-tags" aria-label="{{ trans(key='browse_by_tag', lang=lang) }}">
-    <span class="readings-tags__label">{{ trans(key="browse_by_tag", lang=lang) }}</span>
-    {# Heaviest tags first: the size tiers render in separate passes so the cloud
-       reads top-down without sorting three parallel arrays in Tera. Only the two
-       heaviest tiers show, otherwise the long tail of one-off tags pushes the first
-       book below the fold. The rest live behind "All tags". #}
-    <div class="tag-cloud">
-      {% set tiers = ["lg", "md"] %}
-      {% for tier in tiers %}
-        {% for name in reading_tag_names %}
-          {% set count = reading_tag_counts[loop.index0] %}
-          {% set url = reading_tag_urls[loop.index0] %}
-          {% if count >= max_reading_count / 2 %}
-            {% set size = "lg" %}
-          {% elif count >= max_reading_count / 4 %}
-            {% set size = "md" %}
-          {% else %}
-            {% set size = "sm" %}
-          {% endif %}
-          {% if size == tier %}
-            <a href="{{ url }}" class="tag-chip tag-chip--{{ size }}">
-              <span class="tag-chip__name">{{ name }}</span>
-              <span class="tag-chip__count">{{ count }}</span>
-            </a>
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
-    </div>
-    <a class="readings-tags__all" href="{% if lang == 'es' %}/es/tags/{% else %}/tags/{% endif %}">
-      {{ trans(key="all_tags", lang=lang) }}
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M5 12h14M12 5l7 7-7 7"/>
-      </svg>
-    </a>
-  </nav>
-  {% endif %}
-
   <div class="blog-list">
     {# Pinned items belong to the whole collection, so only surface them on page 1 #}
     {% if paginator.current_index == 1 %}
