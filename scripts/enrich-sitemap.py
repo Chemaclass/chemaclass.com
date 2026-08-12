@@ -12,6 +12,7 @@ from __future__ import annotations
 import re
 import subprocess
 import sys
+from datetime import datetime
 from pathlib import Path
 from typing import List, Optional
 
@@ -23,8 +24,29 @@ from _common import (
     STATIC_DIR,
     extract_frontmatter,
     get_slug_from_filename,
+    is_draft,
     iter_section_files,
 )
+
+# One `git log` per file, not per lookup: the listing dates below ask for the same
+# entry once as its own URL and again for every tag page and index that lists it.
+_GIT_DATES: dict = {}
+
+
+def newest(dates: List[str]) -> Optional[str]:
+    """The latest of a list of ISO 8601 dates, compared as instants.
+
+    Sorting them as plain strings is almost right and wrong twice a year: a commit
+    at 23:30+01:00 sorts above one at 00:15+02:00 that landed later in real time.
+    """
+    if not dates:
+        return None
+    return max(dates, key=datetime.fromisoformat)
+
+
+def lang_of(filepath: Path) -> str:
+    """'es' for a colocated `*.es.md` translation, 'en' for the original."""
+    return "es" if filepath.name.endswith(".es.md") else "en"
 
 
 def get_git_date(filepath: Path) -> Optional[str]:
@@ -36,6 +58,8 @@ def get_git_date(filepath: Path) -> Optional[str]:
     same None hid "not a git repository" and "git is not installed" behind a
     sitemap that quietly shipped without a single <lastmod>.
     """
+    if filepath in _GIT_DATES:
+        return _GIT_DATES[filepath]
     try:
         result = subprocess.run(
             ["git", "log", "-1", "--format=%aI", "--", str(filepath)],
@@ -51,14 +75,26 @@ def get_git_date(filepath: Path) -> Optional[str]:
             f"git log failed for {filepath} (exit {result.returncode}): "
             f"{result.stderr.strip() or 'no error output'}"
         )
-    return result.stdout.strip() or None
+    _GIT_DATES[filepath] = result.stdout.strip() or None
+    return _GIT_DATES[filepath]
+
+
+def is_es_path(path: str) -> bool:
+    """Whether a sitemap path is the Spanish side of the site, its root included.
+
+    The Spanish home page is the one path that carries the prefix and nothing
+    after it, so it strips to a bare "es" that no startswith("es/") test calls
+    Spanish. It resolved to content/es_index.md, matched nothing, and shipped
+    without a <lastmod>.
+    """
+    return path == "es" or path.startswith("es/")
 
 
 def url_to_content_paths(url: str) -> List[Path]:
     """Map a sitemap URL to candidate content file paths."""
     path = url.replace(BASE_URL, "").strip("/")
 
-    is_es = path.startswith("es/")
+    is_es = is_es_path(path)
     clean = path[3:] if is_es else path
     suffix = ".es.md" if is_es else ".md"
 
@@ -66,7 +102,10 @@ def url_to_content_paths(url: str) -> List[Path]:
         return [CONTENT_DIR / f"_index{suffix}"]
 
     return [
-        CONTENT_DIR / f"{clean}_index{suffix}",
+        # The separator is not optional: written as f"{clean}_index" this looked for
+        # content/blog_index.md, so every section index on the site went out with no
+        # <lastmod> while the candidate list looked like it covered them.
+        CONTENT_DIR / f"{clean}/_index{suffix}",
         CONTENT_DIR / f"{clean}/index{suffix}",
         CONTENT_DIR / f"{clean}{suffix}",
     ]
@@ -105,6 +144,106 @@ def find_content_file(url: str) -> Optional[Path]:
     if len(parts) == 2:
         return _entry_index().get((parts[0], parts[1], is_es))
     return None
+
+
+def newest_entry_date(index_file: Path) -> Optional[str]:
+    """The newest git date among the entries a section index lists.
+
+    An index file barely changes: content/blog/_index.md holds a title and an
+    intro, so its own git date says the intro was reworded, not that the page now
+    shows a new post. <lastmod> is read to decide when to come back, so for a
+    listing the honest answer is the newest thing on the list.
+
+    Only direct children, matching the index's own language. content/books/ has
+    the OEUR chapters a directory below and they belong to /books/oeur/, which
+    reaches them through its own _index file.
+    """
+    lang = lang_of(index_file)
+    dates = []
+    for path in index_file.parent.glob("*.md"):
+        if path.name.startswith("_index") or lang_of(path) != lang or is_draft(path):
+            continue
+        date = get_git_date(path)
+        if date:
+            dates.append(date)
+    return newest(dates)
+
+
+def _tag_dates() -> dict:
+    """Newest git date per (tag, language), plus ("", language) across all tags.
+
+    Tag pages are the one listing with no file behind them: Zola builds them from
+    the taxonomy, so find_content_file has nothing to return and 77 of them went
+    out with no date at all. What the page shows is its entries, so that is where
+    its date comes from.
+
+    Keyed on the tag exactly as authored. Zola slugifies tag names for the URL,
+    and every tag on this site is already lowercase and hyphenated so the two
+    agree; one that needed slugifying would miss its page, which the count of
+    dateless URLs at the end of enrich_sitemap reports.
+
+    Walks all of content/ rather than SECTIONS, because tags are also carried by
+    the music entries and the books, which SECTIONS does not include.
+    """
+    global _TAG_DATES
+    if _TAG_DATES is not None:
+        return _TAG_DATES
+
+    _TAG_DATES = {}
+    for path in sorted(CONTENT_DIR.rglob("*.md")):
+        if path.name.startswith("_index") or is_draft(path):
+            continue
+        tags = extract_frontmatter(path.read_text(encoding="utf-8")).get("tags", [])
+        if not tags:
+            continue
+        date = get_git_date(path)
+        if not date:
+            continue
+        lang = lang_of(path)
+        for key in [(tag, lang) for tag in tags] + [("", lang)]:
+            known = _TAG_DATES.get(key)
+            _TAG_DATES[key] = date if known is None else newest([known, date])
+    return _TAG_DATES
+
+
+_TAG_DATES: Optional[dict] = None
+
+
+def listed_date(url: str, content_file: Optional[Path]) -> Optional[str]:
+    """The newest date among the entries this URL lists, or None if it lists none."""
+    path = url[len(BASE_URL):].strip("/") if url.startswith(BASE_URL) else ""
+    if not path:
+        # The home page is not a listing of the loose pages that sit beside its
+        # _index file (cv, legal, pgp), so it keeps its own date.
+        return None
+
+    is_es = is_es_path(path)
+    lang = "es" if is_es else "en"
+    clean = path[3:] if is_es else path
+
+    if clean == "tags":
+        return _tag_dates().get(("", lang))
+    if clean.startswith("tags/"):
+        return _tag_dates().get((clean[len("tags/"):], lang))
+    if content_file is not None and content_file.name.startswith("_index"):
+        return newest_entry_date(content_file)
+    return None
+
+
+def lastmod_for(url: str, content_file: Optional[Path]) -> Optional[str]:
+    """The date to publish for a URL: its own, the newest it lists, whichever is later.
+
+    A section index takes the later of the two rather than only the newest entry,
+    so rewriting the intro on a section whose last post is old still shows up.
+    """
+    dates = []
+    own = get_git_date(content_file) if content_file else None
+    if own:
+        dates.append(own)
+    listed = listed_date(url, content_file)
+    if listed:
+        dates.append(listed)
+    return newest(dates)
 
 
 XHTML_NS = "http://www.w3.org/1999/xhtml"
@@ -280,9 +419,9 @@ def enrich_sitemap(sitemap_path: str) -> int:
 
         addition = ""
         if "<lastmod>" not in block:
-            git_date = get_git_date(content_file) if content_file else None
-            if git_date:
-                addition += f"\n    <lastmod>{git_date}</lastmod>"
+            lastmod = lastmod_for(loc.group(1), content_file)
+            if lastmod:
+                addition += f"\n    <lastmod>{lastmod}</lastmod>"
                 count += 1
 
         if "xhtml:link" not in block:
@@ -318,6 +457,21 @@ def enrich_sitemap(sitemap_path: str) -> int:
     if dropped:
         detail = ", ".join(f"{n} {why}" for why, n in sorted(reasons.items()))
         print(f"  dropped {dropped} URL(s) that do not belong in a sitemap: {detail}")
+
+    # Every URL here resolves to either a content file or a listing, so a dateless
+    # one means a resolution rule stopped matching. Printed by name rather than
+    # counted: the last time one broke it cost all 16 section indexes their date,
+    # and a number alone would not have said which pages to go and look at.
+    dateless = []
+    for block in re.findall(r"<url>.*?</url>", enriched, flags=re.DOTALL):
+        loc = re.search(r"<loc>(.*?)</loc>", block)
+        if loc and "<lastmod>" not in block:
+            dateless.append(loc.group(1))
+    if dateless:
+        print(f"  {len(dateless)} URL(s) with no <lastmod>:", file=sys.stderr)
+        for url in dateless:
+            print(f"    {url}", file=sys.stderr)
+
     return count
 
 
