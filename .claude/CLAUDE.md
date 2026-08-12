@@ -69,6 +69,9 @@ After it, each reading `public/` or `content/`:
 - `generate-index-json.py` - `/index.json`, every entry with each format's URL.
 - `enrich-sitemap.py` - git `<lastmod>`, hreflang pairs, page images.
 - `check-assets.py` - every referenced file exists. Fails the build.
+- `check-image-budget.py` - in-article images stay within the width and weight the
+  layout needs (1200px, 300KB; covers up to 2000px). Fails the build. Exceptions
+  live in `scripts/image-budget-baseline.txt` with a reason.
 
 CI additionally runs `check-js-runtime.py` (headless Chrome, uncaught JS errors)
 and, after deploying, `indexnow.py` for the URLs the push changed.
