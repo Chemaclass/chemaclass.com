@@ -1,0 +1,3 @@
+# Images check-image-budget.py is allowed to skip. One path per line, tab, reason.
+# Add an entry only when the file cannot be made smaller without losing what it shows.
+/images/blog/2024-04-02/race-horses-demo.gif	animated terminal capture: lossless webp comes out 30% bigger, and lossy smears the text

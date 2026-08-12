@@ -125,6 +125,9 @@ python3 scripts/prune-processed-images.py
 echo "Checking every referenced file exists..."
 python3 scripts/check-assets.py
 
+echo "Checking in-article images stay within the width and weight budget..."
+python3 scripts/check-image-budget.py
+
 # Runs before minify: the descriptions and headings it reads are easier to match
 # in the unminified HTML, and a failure here should stop the build either way.
 echo "Checking the SEO rules hold..."
