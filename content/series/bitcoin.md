@@ -1,6 +1,6 @@
 +++
 title = "Bitcoin Series"
-weight = 1
+weight = 5
 template = "series/single.html"
 
 [extra]

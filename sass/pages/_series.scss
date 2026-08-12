@@ -27,6 +27,9 @@
 }
 
 .series-card {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
   padding: 1.25rem 1.5rem;
   border: 1px solid var(--preview-divider-color);
   border-radius: 12px;
@@ -35,6 +38,48 @@
 
   &:hover {
     border-color: var(--accent-color);
+  }
+
+  &:hover &__mosaic img {
+    transform: scale(1.06);
+  }
+
+  // Quad of the first four covers, stretched to whatever height the text needs.
+  &__mosaic {
+    flex-shrink: 0;
+    display: grid;
+    // minmax(0, 1fr), not 1fr: the tiles would otherwise claim their intrinsic
+    // 320px and push the card wider than the viewport.
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+    width: 250px;
+    min-height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &:hover {
+      border-bottom: none;
+    }
+
+    picture {
+      display: block;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s var(--ease-out-expo);
+    }
+  }
+
+  &__body {
+    flex: 1;
+    min-width: 0;
   }
 
   &__head {
@@ -81,9 +126,12 @@
     padding-left: 1.25rem;
     color: var(--color-subtitle);
     font-size: 0.9rem;
+    columns: 2;
+    column-gap: 2rem;
 
     li {
       margin-bottom: 0.2rem;
+      break-inside: avoid;
     }
 
     a {
@@ -279,9 +327,27 @@
   }
 }
 
+// Two columns of titles need the full content width; below that they stack.
+@media (max-width: $breakpoint-tablet) {
+  .series-card__parts {
+    columns: 1;
+  }
+}
+
 @media (max-width: $breakpoint-phone) {
   .series-card {
+    flex-direction: column;
+    gap: 1rem;
     padding: 1rem;
+  }
+
+  // Side by side the covers would leave no room for the title, so they become a strip.
+  .series-card__mosaic {
+    width: 100%;
+    min-height: 0;
+    height: 90px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: minmax(0, 1fr);
   }
 
   .series-card__head {

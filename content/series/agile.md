@@ -1,6 +1,6 @@
 +++
 title = "Agile & XP Series"
-weight = 5
+weight = 4
 template = "series/single.html"
 
 [extra]
