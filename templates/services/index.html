@@ -20,7 +20,7 @@
       "name": "{% if lang == 'es' %}¿Cuál servicio es el adecuado para mí?{% else %}Which service is right for me?{% endif %}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{% if lang == 'es' %}Si necesitas una web construida, elige Desarrollo Web. Si quieres pensar en voz alta sobre un reto técnico o de liderazgo, elige Consultoría.{% else %}If you need a website built, choose Web Development. If you want to think through a technical or leadership challenge, choose Consulting.{% endif %}"
+        "text": "{% if lang == 'es' %}Ahora mismo solo acepto trabajo de webs, así que elige Desarrollo Web. La consultoría y los talleres para equipos están en pausa.{% else %}Right now I'm only taking website work, so choose Web Development. Consulting and team workshops are on pause.{% endif %}"
       }
     },
     {
@@ -44,7 +44,7 @@
       "name": "{% if lang == 'es' %}¿Cómo funciona el precio?{% else %}How does pricing work?{% endif %}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{% if lang == 'es' %}Webs: precio cerrado tras una llamada gratuita de discovery. Consultoría: por sesión. Escríbeme para un presupuesto personalizado.{% else %}Websites: fixed quote after a free discovery call. Consulting: per session. Email me for details.{% endif %}"
+        "text": "{% if lang == 'es' %}Webs: precio cerrado tras una llamada gratuita de discovery. Escríbeme para un presupuesto personalizado.{% else %}Websites: fixed quote after a free discovery call. Email me for details.{% endif %}"
       }
     }
   ]
@@ -84,15 +84,11 @@
         <span class="service-card__price">{{ trans(key="svc_request_quote", lang=lang) }}</span>
       </a>
 
-      {# The workshops page existed with a full description and was linked from
-         nowhere: no navigation reached it, and the only thing pointing at it was
-         the hreflang tag on its own translation. #}
-      <a href="{% if lang == 'es' %}/es/services/team-workshops/{% else %}/services/team-workshops/{% endif %}" class="service-card">
+      <div class="service-card service-card--unavailable" aria-disabled="true">
         <div class="service-card__header">
           <div class="service-card__icon">
             <i class="fa-solid fa-users"></i>
           </div>
-          <span class="service-card__more">{{ trans(key="svc_learn_more", lang=lang) }} <i class="fa-solid fa-arrow-right"></i></span>
         </div>
         <h3>{% if lang == "es" %}Talleres para Equipos{% else %}Team Workshops{% endif %}</h3>
         <p class="service-card__audience">{% if lang == "es" %}Para equipos de desarrollo{% else %}For engineering teams{% endif %}</p>
@@ -103,25 +99,7 @@
           <li>{% if lang == "es" %}Golden master y approval testing{% else %}Golden master and approval testing{% endif %}</li>
           <li>{% if lang == "es" %}Práctica sobre código legacy{% else %}Hands-on with legacy-style code{% endif %}</li>
         </ul>
-        <span class="service-card__price">{{ trans(key="svc_request_quote", lang=lang) }}</span>
-      </a>
-
-      <div class="service-card service-card--unavailable" aria-disabled="true">
-        <div class="service-card__header">
-          <div class="service-card__icon">
-            <i class="fa-solid fa-comments"></i>
-          </div>
-        </div>
-        <h3>{% if lang == "es" %}Consultoría{% else %}Consulting{% endif %}</h3>
-        <p class="service-card__audience">{% if lang == "es" %}Para tech leads, EMs y CTOs{% else %}For tech leads, EMs, and CTOs{% endif %}</p>
-        <p>{% if lang == "es" %}Sesiones individuales sobre liderazgo técnico, decisiones de ingeniería y gestión de equipos.{% else %}One-on-one sessions on tech leadership, engineering decisions, and team dynamics.{% endif %}</p>
-        <ul class="service-card__features">
-          <li>{% if lang == "es" %}Liderazgo técnico efectivo{% else %}Effective tech leadership{% endif %}</li>
-          <li>{% if lang == "es" %}Equipos y resolución de conflictos{% else %}Teams & conflict resolution{% endif %}</li>
-          <li>{% if lang == "es" %}Estrategia técnica y deuda{% else %}Technical strategy & debt{% endif %}</li>
-          <li>{% if lang == "es" %}Decisiones de arquitectura{% else %}Architecture decisions{% endif %}</li>
-        </ul>
-        <span class="service-card__price service-card__price--muted">{{ trans(key="svc_consulting_unavailable", lang=lang) }}</span>
+        <span class="service-card__price service-card__price--muted">{{ trans(key="svc_unavailable", lang=lang) }}</span>
       </div>
 
     </div>
@@ -185,7 +163,7 @@
           <i class="fa-solid fa-chevron-down"></i>
         </button>
         <div class="services-faq__answer">
-          {% if lang == "es" %}Si necesitas una web construida, elige <a href="/es/services/web-development/">Desarrollo Web</a>. Si quieres pensar en voz alta sobre un reto técnico o de liderazgo con alguien que lo ha vivido, elige <a href="/es/services/consulting/">Consultoría</a>. Si tu equipo quiere un día de práctica, elige <a href="/es/services/team-workshops/">Talleres para Equipos</a>.{% else %}If you need a website built, go to <a href="/services/web-development/">Web Development</a>. If you want to think through a technical or leadership challenge with someone who has been there, go to <a href="/services/consulting/">Consulting</a>. If your team wants a day of hands-on practice, go to <a href="/services/team-workshops/">Team Workshops</a>.{% endif %}
+          {% if lang == "es" %}Ahora mismo solo acepto trabajo de webs, así que ve a <a href="/es/services/web-development/">Desarrollo Web</a>. La consultoría y los talleres para equipos están en pausa.{% else %}Right now I'm only taking website work, so go to <a href="/services/web-development/">Web Development</a>. Consulting and team workshops are on pause.{% endif %}
         </div>
       </div>
       <div class="services-faq__item">
@@ -212,7 +190,7 @@
           <i class="fa-solid fa-chevron-down"></i>
         </button>
         <div class="services-faq__answer">
-          {% if lang == "es" %}Webs: precio cerrado tras una llamada gratuita de discovery. Sin sorpresas. Consultoría: por sesión, sin suscripciones. Escríbeme para los detalles.{% else %}Websites: fixed quote after a free discovery call. No surprises. Consulting: per session, no subscriptions. Email me for details.{% endif %}
+          {% if lang == "es" %}Webs: precio cerrado tras una llamada gratuita de discovery. Sin sorpresas. Escríbeme para los detalles.{% else %}Websites: fixed quote after a free discovery call. No surprises. Email me for details.{% endif %}
         </div>
       </div>
     </div>
