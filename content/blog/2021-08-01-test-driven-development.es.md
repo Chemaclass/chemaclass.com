@@ -17,7 +17,7 @@ related_readings = [
   "readings/2016-05-01-clean-code.md",
 ]
 series = "craftsmanship"
-series_order = 3
+series_order = 4
 +++
 
 

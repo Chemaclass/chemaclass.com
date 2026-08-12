@@ -9,7 +9,7 @@ subtitle = "Abrazando prácticas de calidad en tu cultura de ingeniería"
 static_thumbnail = "/images/blog/2024-03-28/cover.webp"
 pin = false
 series = "craftsmanship"
-series_order = 7
+series_order = 11
 related_posts = [
   "blog/2021-08-01-test-driven-development.md",
   "blog/2022-05-27-bikeshedding.md",

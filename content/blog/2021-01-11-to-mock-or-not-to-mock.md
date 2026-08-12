@@ -18,7 +18,7 @@ related_readings = [
   "readings/2022-06-29-modern-software-engineering.md",
 ]
 series = "craftsmanship"
-series_order = 2
+series_order = 7
 +++
 
 

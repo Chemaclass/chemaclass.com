@@ -19,7 +19,7 @@ related_readings = [
   "readings/2019-07-01-working-effectively-with-legacy-code.md",
 ]
 series = "craftsmanship"
-series_order = 1
+series_order = 3
 +++
 
 

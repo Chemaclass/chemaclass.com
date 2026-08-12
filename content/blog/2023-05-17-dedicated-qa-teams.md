@@ -17,6 +17,8 @@ related_readings = [
   "readings/2020-03-12-clean-agile.md",
   "readings/2022-07-11-clean-craftsmanship.md",
 ]
+series = "craftsmanship"
+series_order = 13
 +++
 
 
