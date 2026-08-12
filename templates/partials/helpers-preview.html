@@ -22,7 +22,9 @@
           {% endif %}
           <picture>
             {% if featured %}
-              <source type="image/webp" srcset="{{ card_sm.url }} 480w, {{ card_md.url }} 720w, {{ card_lg.url }} 960w" sizes="(max-width: 720px) calc(100vw - 2rem), 960px" />
+              {# Same cap as the post hero: a DPR 3 phone would otherwise take the 960w. #}
+              <source type="image/webp" media="(max-width: 720px)" srcset="{{ card_sm.url }} 480w, {{ card_md.url }} 720w" sizes="calc(100vw - 2rem)" />
+              <source type="image/webp" srcset="{{ card_sm.url }} 480w, {{ card_md.url }} 720w, {{ card_lg.url }} 960w" sizes="960px" />
             {% else %}
               <source type="image/webp" srcset="{{ card_webp.url }}" />
             {% endif %}
