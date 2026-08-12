@@ -159,6 +159,19 @@
     flex-direction: column;
     gap: 0.75rem;
   }
+
+  &__topic {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--color-subtitle);
+    text-decoration: none;
+    font-size: 0.9rem;
+
+    &:hover {
+      color: var(--accent-color);
+      border-bottom: none;
+    }
+  }
 }
 
 .series-part {
@@ -186,6 +199,26 @@
     color: var(--color-subtitle);
     font-size: 0.8rem;
     font-weight: 700;
+  }
+
+  &__thumb {
+    flex-shrink: 0;
+    width: 140px;
+    height: 79px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+
+    &:hover {
+      border-bottom: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   }
 
   &__body {
@@ -241,5 +274,10 @@
 
   .series-part {
     padding: 0.85rem;
+  }
+
+  // Three columns do not fit a phone: the number and the title carry the order.
+  .series-part__thumb {
+    display: none;
   }
 }
