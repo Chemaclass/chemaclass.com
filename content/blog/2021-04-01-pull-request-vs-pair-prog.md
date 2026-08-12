@@ -18,6 +18,8 @@ related_readings = [
   "readings/2021-05-28-peopleware.md",
   "readings/2020-03-05-extreme-programming-explained.md",
 ]
+series = "craftsmanship"
+series_order = 12
 +++
 
 

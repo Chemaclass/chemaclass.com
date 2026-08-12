@@ -16,6 +16,8 @@ related_readings = [
   "readings/2016-08-01-the-clean-coder.md",
   "readings/2022-06-29-modern-software-engineering.md",
 ]
+series = "craftsmanship"
+series_order = 1
 +++
 
 

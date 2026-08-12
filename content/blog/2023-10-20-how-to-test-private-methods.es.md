@@ -19,7 +19,7 @@ related_readings = [
   "readings/2022-07-11-clean-craftsmanship.md",
 ]
 series = "craftsmanship"
-series_order = 6
+series_order = 8
 +++
 
 
