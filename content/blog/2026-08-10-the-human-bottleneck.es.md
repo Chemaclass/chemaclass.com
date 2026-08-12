@@ -85,6 +85,8 @@ Los agentes no discuten el alcance. Pides un buscador y te llega una capa de cac
 
 Escriben el código que pediste y luego el que suponen que necesitarás más adelante. [YAGNI](/es/blog/london-vs-chicago/) a velocidad de máquina. Cada línea plausible. Cada línea tuya para revisar y mantener.
 
+Jina Yoon [señala la causa](https://newsletter.posthog.com/p/software-factories): un agente al que le pasas un ticket recibe las restricciones técnicas y nada del problema. Supone porque nadie le dio el contexto para decidir. En PostHog, los ingenieros deciden qué construir, no los PMs. Yo defiendo lo mismo. **No puedes diseñar bien un sistema sin entender el problema que resuelve.**
+
 La solución es vieja. Corta el trabajo en _vertical slices_: un camino fino de la pantalla a la base de datos que un usuario pueda usar de verdad. No la capa de repositorios esta semana y los controladores el mes que viene.
 
 Un plan por capas no entrega nada hasta que se mergea el último PR gordo, y entonces te pide revisar un mes de suposiciones de golpe. Eso es [waterfall](/es/blog/what-is-waterfall/) en una caja más pequeña.

@@ -85,6 +85,8 @@ Agents don't push back on scope. Ask for a search box and you get a cache layer,
 
 They write the code you asked for, then the code they guess you'll need later. [YAGNI](/blog/london-vs-chicago/) at machine speed. Every line plausible. Every line yours to review and maintain.
 
+Jina Yoon [names the cause](https://newsletter.posthog.com/p/software-factories): an agent handed a ticket gets the technical constraints and none of the problem. It guesses because nobody gave it the context to decide. At PostHog, engineers decide what to build, not PMs. I hold the same line. **You can't design a system well without understanding the problem it solves.**
+
 The fix is old. Cut the work into vertical slices: one thin path from screen to database that a user can actually use. Not the repository layer this week and the controllers next month.
 
 A layered plan ships nothing until the last fat PR merges, and then asks you to review a month of guesses at once. That's [waterfall](/blog/what-is-waterfall/) in a smaller box.
