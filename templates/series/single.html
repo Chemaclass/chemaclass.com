@@ -81,17 +81,19 @@
         </a>
         {% endif %}
         <div class="series-part__body">
-          <h2 class="series-part__title"><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
+          <div class="series-part__head">
+            <h2 class="series-part__title"><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
+            <p class="series-part__meta">
+              <time datetime="{{ post.date }}">{{ macros::format_date(date=post.date, lang=lang) }}</time>
+              {% if post.reading_time %} &middot; {{ post.reading_time }} min{% endif %}
+            </p>
+          </div>
           {% if post.extra.subtitle %}
             <p class="series-part__subtitle">{{ post.extra.subtitle }}</p>
           {% endif %}
           {% if post.description %}
             <p class="series-part__desc">{{ post.description }}</p>
           {% endif %}
-          <p class="series-part__meta">
-            <time datetime="{{ post.date }}">{{ macros::format_date(date=post.date, lang=lang) }}</time>
-            {% if post.reading_time %} &middot; {{ post.reading_time }} min{% endif %}
-          </p>
         </div>
       </li>
     {% endfor %}

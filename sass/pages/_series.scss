@@ -201,16 +201,23 @@
     font-weight: 700;
   }
 
+  // Stretched, not fixed height: the text decides how tall the row is, the crop follows.
   &__thumb {
     flex-shrink: 0;
-    width: 140px;
-    height: 79px;
+    align-self: stretch;
+    width: 150px;
+    min-height: 84px;
     border-radius: 8px;
     overflow: hidden;
     display: block;
 
     &:hover {
       border-bottom: none;
+    }
+
+    picture {
+      display: block;
+      height: 100%;
     }
 
     img {
@@ -222,7 +229,15 @@
   }
 
   &__body {
+    flex: 1;
     min-width: 0;
+  }
+
+  &__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
   }
 
   &__title {
@@ -256,9 +271,11 @@
   }
 
   &__meta {
+    flex-shrink: 0;
+    white-space: nowrap;
     font-size: 0.78rem;
     color: var(--color-subtitle);
-    margin: 0.4rem 0 0;
+    margin: 0;
   }
 }
 
@@ -279,5 +296,11 @@
   // Three columns do not fit a phone: the number and the title carry the order.
   .series-part__thumb {
     display: none;
+  }
+
+  .series-part__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
   }
 }
