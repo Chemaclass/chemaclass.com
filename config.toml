@@ -191,6 +191,7 @@ series_intro = "Posts written to be read in order. Each series builds one idea a
 series_parts = "parts"
 series_start = "Start reading"
 series_all = "All series"
+series_topic = "All posts on this topic"
 post = "post"
 posts = "posts"
 nav_topics = "Topics"
@@ -518,6 +519,7 @@ series_intro = "Artículos escritos para leerse en orden. Cada serie construye u
 series_parts = "partes"
 series_start = "Empezar a leer"
 series_all = "Todas las series"
+series_topic = "Todos los artículos de este tema"
 post = "artículo"
 posts = "artículos"
 nav_topics = "Temas"
@@ -635,30 +637,36 @@ title = "Bitcoin Series"
 title_es = "Serie Bitcoin"
 desc = "How Bitcoin actually works, from the blockchain up to the Lightning Network, in plain terms."
 desc_es = "Cómo funciona Bitcoin de verdad, desde la blockchain hasta la Lightning Network, en términos claros."
+# A series is a curated subset. This is the /topics/ group that holds everything else.
+topic = "bitcoin-economics"
 
 [extra.series.ai]
 title = "AI Series"
 title_es = "Serie IA"
 desc = "Working with AI agents as a team of specialists: context, tooling, and where the human still decides."
 desc_es = "Trabajar con agentes de IA como un equipo de especialistas: contexto, herramientas y dónde decide el humano."
+topic = "ai-agents"
 
 [extra.series.craftsmanship]
 title = "Software Craftsmanship Series"
 title_es = "Serie Artesanía del Software"
 desc = "The practices that keep code changeable: TDD, refactoring, clean design, and the habits around them."
 desc_es = "Las prácticas que mantienen el código cambiable: TDD, refactoring, diseño limpio y los hábitos alrededor."
+topic = "software-craft-testing"
 
 [extra.series.leadership]
 title = "Leadership & Teams Series"
 title_es = "Serie Liderazgo y Equipos"
 desc = "Leading engineers without leaving the code: priorities, trust, and the hard conversations."
 desc_es = "Liderar ingenieros sin dejar el código: prioridades, confianza y las conversaciones difíciles."
+topic = "leadership-people"
 
 [extra.series.agile]
 title = "Agile & XP Series"
 title_es = "Serie Agile y XP"
 desc = "Agile and XP as practised rather than certified: short feedback loops, pairing, and continuous everything."
 desc_es = "Agile y XP en la práctica, no en el certificado: ciclos de feedback cortos, pair programming y todo en continuo."
+topic = "software-craft-testing"
 
 [[extra.topics]]
 title = "Leadership & People"
