@@ -54,8 +54,11 @@
               {# Same rendition the series page thumbs use, so both pages share one file. #}
               {% set tile_path = post.extra.static_thumbnail | trim_start_matches(pat="/") %}
               {% set tile_webp = resize_image(path=tile_path, width=320, height=180, op="fill", quality=75, format="webp") %}
+              {% set tile_phone = resize_image(path=tile_path, width=200, height=113, op="fill", quality=72, format="webp") %}
               {% set tile_fb = resize_image(path=tile_path, width=320, height=180, op="fill", quality=80) %}
               <picture>
+                {# The strip on phones is 90px tall, so the wide rendition is wasted there. #}
+                <source type="image/webp" media="(max-width: 600px)" srcset="{{ tile_phone.url }}" />
                 <source type="image/webp" srcset="{{ tile_webp.url }}" />
                 <img src="{{ tile_fb.url }}" alt="" width="{{ tile_fb.width }}" height="{{ tile_fb.height }}" loading="lazy" decoding="async" />
               </picture>
