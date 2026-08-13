@@ -28,7 +28,7 @@ Somos nosotros.
 
 <!-- more -->
 
-Mi agente [OpenClaw](https://openclaw.ai), Sauron, corre varios agentes de programación en paralelo. Uno revisa la calidad del código. Uno se encarga de las integraciones. Uno escribe tests. Producen PRs, se revisan entre ellos, me avisan cuando una decisión necesita mi atención. Toda decisión importante sigue pasando por mí.
+Mi agente [OpenClaw](https://openclaw.ai), [Sauron](https://sauronbot.github.io/about/), corre varios agentes de programación en paralelo. Uno revisa la calidad del código. Uno se encarga de las integraciones. Uno escribe tests. Producen PRs, se revisan entre ellos, me avisan cuando una decisión necesita mi atención. Toda decisión importante sigue pasando por mí.
 
 Puedes añadir más agentes. No puedes añadir más de ti.
 

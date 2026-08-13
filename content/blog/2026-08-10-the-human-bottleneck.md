@@ -28,7 +28,7 @@ It's us.
 
 <!-- more -->
 
-My [OpenClaw](https://openclaw.ai) agent, Sauron, runs several coding agents in parallel. One checks code quality. One handles integrations. One writes tests. They produce PRs, review each other's work, and flag decisions for me. Every important choice still reaches me.
+My [OpenClaw](https://openclaw.ai) agent, [Sauron](https://sauronbot.github.io/about/), runs several coding agents in parallel. One checks code quality. One handles integrations. One writes tests. They produce PRs, review each other's work, and flag decisions for me. Every important choice still reaches me.
 
 You can add more agents. You can't add more of yourself.
 
