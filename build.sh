@@ -89,6 +89,9 @@ python3 scripts/check-topics.py
 echo "Enriching search index with dates..."
 python3 scripts/enrich-search-index.py
 
+echo "Indexing headings for the search dialog..."
+python3 scripts/generate-heading-index.py
+
 echo "Generating terminal filesystem..."
 python3 scripts/generate-terminal-fs.py
 

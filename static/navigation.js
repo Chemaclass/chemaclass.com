@@ -1,56 +1,95 @@
 // ==========================================================================
-// Navigation: Search overlay, mobile menu, keyboard shortcuts
+// Navigation: Search dialog, mobile menu, keyboard shortcuts
 // ==========================================================================
 
-// Search overlay toggle
-window.toggleSearch = function() {
+// Search dialog. Native <dialog>, so the browser owns the backdrop, the focus
+// trap, the inert page behind it and returning focus on close.
+function searchDialog() {
+  return document.getElementById('search-dialog');
+}
+
+window.openSearch = function() {
+  const dialog = searchDialog();
+  if (!dialog || dialog.open) return;
   if (typeof loadSearch === 'function') loadSearch();
   closeMobileMenu();
-  const overlay = document.getElementById('search-overlay');
-  const toggle = document.getElementById('search-toggle');
-  const isActive = overlay.classList.toggle('active');
-  if (toggle) toggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
-  if (isActive) {
-    window.__searchReturnFocus = document.activeElement;
-    setTimeout(() => document.getElementById('site-search').focus(), 50);
-  } else {
-    restoreSearchFocus();
+  dialog.showModal();
+  document.body.classList.add('search-open');
+  // Focus synchronously. Deferring it behind a timeout dropped every character
+  // typed before the timeout fired, which is most of the query for anyone who
+  // hits the shortcut and keeps going.
+  const input = document.getElementById('site-search');
+  if (input) {
+    input.focus();
+    input.select();
   }
 };
 
 window.closeSearch = function() {
-  const overlay = document.getElementById('search-overlay');
-  overlay.classList.remove('active');
-  const toggle = document.getElementById('search-toggle');
-  if (toggle) toggle.setAttribute('aria-expanded', 'false');
-  document.getElementById('site-search').value = '';
-  const results = document.querySelector('.search-results');
+  const dialog = searchDialog();
+  if (!dialog) return;
+  if (dialog.open) dialog.close();
+  document.body.classList.remove('search-open');
+  const input = document.getElementById('site-search');
+  if (input) input.value = '';
+  const results = dialog.querySelector('.search-results');
   if (results) results.style.display = 'none';
+  document.dispatchEvent(new CustomEvent('search-closed'));
   if (window.__easter67) window.__easter67.stop();
-  restoreSearchFocus();
 };
 
-// Return focus to whatever opened the overlay so keyboard users land back in place
-function restoreSearchFocus() {
-  const el = window.__searchReturnFocus;
-  window.__searchReturnFocus = null;
-  if (el && typeof el.focus === 'function') { el.focus(); return; }
-  const toggle = document.getElementById('search-toggle');
-  if (toggle) toggle.focus();
-}
+window.toggleSearch = function() {
+  const dialog = searchDialog();
+  if (dialog && dialog.open) closeSearch();
+  else openSearch();
+};
 
-// Trap Tab within the modal search overlay while it is open
-(function initSearchFocusTrap() {
-  const overlay = document.getElementById('search-overlay');
-  if (!overlay) return;
-  overlay.addEventListener('keydown', function(e) {
-    if (e.key !== 'Tab' || !overlay.classList.contains('active')) return;
-    const nodes = overlay.querySelectorAll('a[href], button, input, [tabindex]:not([tabindex="-1"])');
-    const items = Array.prototype.filter.call(nodes, function(el) { return !el.disabled && el.offsetParent !== null; });
-    if (!items.length) return;
-    const first = items[0], last = items[items.length - 1];
-    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+(function initSearchDialog() {
+  const dialog = searchDialog();
+  if (!dialog) return;
+
+  document.querySelectorAll('[data-search-trigger]').forEach(function(el) {
+    el.addEventListener('click', openSearch);
+  });
+  dialog.querySelector('[data-search-close]')?.addEventListener('click', closeSearch);
+
+  // The trigger is rendered with the Apple shortcut, the platform is only
+  // knowable here. Both modifiers open the dialog either way; this is the label.
+  if (!/mac|iphone|ipad|ipod/i.test(navigator.userAgent)) {
+    document.querySelectorAll('[data-search-hint]').forEach(function(el) {
+      el.textContent = 'Ctrl K';
+    });
+  }
+
+  // A click on the backdrop targets the dialog itself, which nothing inside it
+  // can do. Both ends of the click must land there, or selecting text in the
+  // input and releasing outside closes the dialog.
+  let fromBackdrop = false;
+  dialog.addEventListener('mousedown', function(e) { fromBackdrop = e.target === dialog; });
+  dialog.addEventListener('click', function(e) {
+    if (fromBackdrop && e.target === dialog) closeSearch();
+  });
+
+  dialog.addEventListener('cancel', function(e) {
+    e.preventDefault();
+    closeSearch();
+  });
+
+  // Escape again, explicitly: a type="search" input eats the first press to
+  // clear itself, so the dialog never sees the cancel event.
+  dialog.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeSearch();
+    }
+  });
+
+  // Own listener: the shortcut handler below returns early on every modifier key.
+  document.addEventListener('keydown', function(e) {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      toggleSearch();
+    }
   });
 })();
 
@@ -566,16 +605,6 @@ document.addEventListener('DOMContentLoaded', function() {
   dialog.addEventListener('close', function() {
     document.body.classList.remove('modal-open');
   });
-});
-
-// Close search when clicking outside
-document.addEventListener('click', function(e) {
-  var overlay = document.getElementById('search-overlay');
-  var toggle = document.getElementById('search-toggle');
-  if (!overlay?.classList.contains('active')) return;
-  if (!overlay.contains(e.target) && !toggle.contains(e.target)) {
-    closeSearch();
-  }
 });
 
 // Close mobile menu when clicking outside

@@ -61,97 +61,6 @@
   }
 }
 
-// Search overlay (dropdown style)
-.search-overlay {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: 5000;
-  padding-top: 8px;
-
-  &.active {
-    display: block;
-  }
-
-  &__container {
-    width: 400px;
-    max-width: calc(100vw - 2rem);
-  }
-
-  &__input-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    background: var(--search-input-bg);
-    border: 1px solid var(--preview-divider-color);
-    border-radius: 10px;
-    box-shadow: var(--shadow-lg);
-
-    .search-icon {
-      position: absolute;
-      left: 12px;
-      color: var(--color-subtitle);
-      pointer-events: none;
-    }
-
-    input[type="search"] {
-      width: 100%;
-      padding: 12px 40px 12px 44px;
-      border: none;
-      border-radius: 8px;
-      background: transparent;
-      color: var(--body-color);
-      font-size: 16px;
-      outline: none;
-
-      &:focus-visible {
-        box-shadow: 0 0 0 2px var(--accent-color);
-      }
-
-      &::placeholder {
-        color: var(--color-subtitle);
-      }
-    }
-  }
-
-  &__close {
-    position: absolute;
-    right: 8px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
-    color: var(--color-subtitle);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s ease, color 0.2s ease;
-
-    &:hover {
-      background: var(--search-bg-selected-item, #f0f0f0);
-      color: var(--body-color);
-    }
-
-    svg {
-      width: 16px;
-      height: 16px;
-    }
-  }
-
-  .search-results {
-    display: none;
-    margin-top: 4px;
-    background: var(--search-bg-results);
-    border: 1px solid var(--preview-divider-color);
-    border-radius: 10px;
-    box-shadow: var(--shadow-lg);
-    max-height: 70vh;
-    overflow-y: auto;
-  }
-}
-
 .site-header nav {
   display: flex;
   flex-wrap: wrap;
@@ -260,11 +169,6 @@
   }
 }
 
-// Search toggle - inherits from .nav-utilities button
-#search-toggle {
-  line-height: 0;
-}
-
 @media (max-width: $breakpoint-phone) {
   .site-header {
     // Not sticky on phone: a blurred bar pinned over a scrolling page is the
@@ -332,6 +236,43 @@
 
   &.open span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+// Search trigger: a labelled pill on desktop, a plain icon on phone. One button
+// for both, so no id is duplicated and no second listener is needed.
+.search-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.5rem 0.35rem 0.7rem;
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 2rem;
+  background: none;
+  color: var(--color-subtitle);
+  font: inherit;
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    color: var(--body-color);
+    border-color: var(--accent-color);
+  }
+
+  &__label {
+    white-space: nowrap;
+  }
+
+  &__hint {
+    padding: 0.15rem 0.35rem;
+    border: 1px solid var(--search-shortcut-border);
+    border-radius: 6px;
+    background: var(--search-shortcut-bg);
+    font-family: inherit;
+    font-size: 0.7rem;
+    font-weight: 600;
   }
 }
 
@@ -418,13 +359,30 @@
     margin-right: -6px; // pull the bars out to the page column edge
   }
 
+  .search-trigger {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+    border-color: transparent;
+    color: var(--body-color);
+
+    &__label,
+    &__hint {
+      display: none;
+    }
+  }
+
   .navbar {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: flex-end;
+    gap: 0.25rem;
     position: static;
 
     .nav-links > a {
-      padding: 0.4rem 0.65rem;
+      padding: 0.4rem 0.5rem;
     }
 
     // Utilities collapse behind the burger, anchored to .site-header
@@ -450,21 +408,6 @@
 
     &.open .nav-utilities {
       display: flex;
-    }
-  }
-
-  // Search overlay: fixed full-width on phone
-  .search-overlay {
-    position: fixed;
-    top: 56px;
-    left: 0;
-    right: 0;
-    padding: 0.75rem;
-    z-index: 5000;
-
-    &__container {
-      width: 100%;
-      max-width: 100%;
     }
   }
 }

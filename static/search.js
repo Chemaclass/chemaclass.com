@@ -6,6 +6,22 @@ const DOCUMENT_LANG = (document.documentElement.getAttribute("lang") || "en").to
 const IS_SPANISH = DOCUMENT_LANG.startsWith("es");
 const LANG_PREFIX = IS_SPANISH ? "/es" : "";
 const SEARCH_INDEX_PATH = IS_SPANISH ? "/search_index.es.json" : "/search_index.en.json";
+const HEADING_INDEX_PATH = IS_SPANISH ? "/heading_index.es.json" : "/heading_index.en.json";
+// Ten page hits fill the panel. Past that the reader refines the query rather
+// than scrolling, and every rendered row costs layout on a phone.
+const MAX_PAGE_RESULTS = 10;
+const MAX_HEADING_RESULTS = 4;
+const RECENT_STORAGE_KEY = "chemaclass:recent-searches";
+const MAX_RECENT_SEARCHES = 5;
+const SEARCH_DIALOG = document.getElementById("search-dialog");
+// The labels live in config.toml and reach the script through the dialog, so
+// there is one translation of each string rather than one per language per file.
+const SEARCH_TEXT = {
+    emptyTitle: SEARCH_DIALOG?.dataset.emptyTitle || "Nothing found",
+    emptyBody: SEARCH_DIALOG?.dataset.emptyBody || "Try something else",
+    sectionsTitle: SEARCH_DIALOG?.dataset.sectionsTitle || "Sections",
+    of: SEARCH_DIALOG?.dataset.resultsOf || "of"
+};
 const SERVICE_SEARCH_CONTENT = {
     en: {
         "/services/": "Services overview for Chemaclass: custom web development, fast static websites, static+blog hybrids, WordPress builds, and hands-on team workshops focused on XP, TDD, and refactoring. Hire me to ship reliable websites or train your engineering team.",
@@ -19,24 +35,12 @@ const SERVICE_SEARCH_CONTENT = {
     }
 };
 const SEARCH_RESULT_LABELS = {
-    en: { singular: "result", plural: "results", separator: ":" },
-    es: { singular: "resultado", plural: "resultados", separator: ":" }
+    en: { singular: "result", plural: "results" },
+    es: { singular: "resultado", plural: "resultados" }
 };
-const SEARCH_SECTION_LABELS = {
-    en: {
-        blog: "blog",
-        readings: "readings",
-        talks: "talks",
-        services: "services",
-        other: "other"
-    },
-    es: {
-        blog: "blog",
-        readings: "lecturas",
-        talks: "charlas",
-        services: "servicios",
-        other: "otros"
-    }
+const SECTION_LABELS = {
+    en: { blog: "Blog", readings: "Readings", talks: "Talks", services: "Services", music: "Music", profile: "Profile" },
+    es: { blog: "Blog", readings: "Lecturas", talks: "Charlas", services: "Servicios", music: "Música", profile: "Perfil" }
 };
 const normalizeForSearch = (str) => (str || "")
     .toString()
@@ -175,6 +179,219 @@ function getServiceSearchText(path) {
     return map[path];
 }
 
+/////////////////////////////////////////////////
+// Heading-level hits, recent searches and filters
+/////////////////////////////////////////////////
+
+// Page hits answer "which post", heading hits answer "which part of it". The
+// heading index is a flat list scored here rather than a second elasticlunr
+// index: 900 short records match faster than they load into an inverted index,
+// and the anchor is the whole point of the entry.
+let headingIndexPromise = null;
+
+function fetchHeadingIndex() {
+    if (headingIndexPromise === null) {
+        headingIndexPromise = fetch(HEADING_INDEX_PATH)
+            .then((response) => (response.ok ? response.json() : []))
+            .then((entries) => (Array.isArray(entries) ? entries.map(withHeadingSection) : []))
+            .catch((error) => {
+                console.warn('[search] heading index unavailable, page results only:', error);
+                return [];
+            });
+    }
+    return headingIndexPromise;
+}
+
+function withHeadingSection(entry) {
+    entry.section = getSectionFromPath(parseRef(entry.route).path).toLowerCase();
+    return entry;
+}
+
+// Tiers, not arithmetic: a heading that says what you typed beats a paragraph
+// that happens to contain the same words. Mirrors how the page results are
+// boosted, so the two lists can sit in the same panel without one drowning the
+// other.
+function scoreHeading(entry, phrase, words) {
+    const title = normalizeForSearch(entry.title);
+    const body = `${title} ${normalizeForSearch(entry.text)}`;
+
+    if (title === phrase) return 120;
+    if (title.startsWith(phrase)) return 100;
+    if (title.includes(phrase)) return 85;
+    if (words.every((word) => title.includes(word))) return 65;
+    if (body.includes(phrase)) return 45;
+    if (words.every((word) => body.includes(word))) return 30;
+    return 0;
+}
+
+async function searchHeadings(term) {
+    const phrase = normalizeForSearch(term).trim();
+    if (phrase.length < 2) return [];
+
+    const words = phrase.split(/\s+/).filter(Boolean);
+    const entries = await fetchHeadingIndex();
+
+    return entries
+        .map((entry) => ({ entry, score: scoreHeading(entry, phrase, words) }))
+        .filter((hit) => hit.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .map((hit) => {
+            hit.entry.score = hit.score;
+            return hit.entry;
+        });
+}
+
+function readRecentSearches() {
+    try {
+        const stored = JSON.parse(localStorage.getItem(RECENT_STORAGE_KEY));
+        return Array.isArray(stored) ? stored.filter((term) => typeof term === "string") : [];
+    } catch (error) {
+        return [];
+    }
+}
+
+function rememberSearch(term) {
+    const cleaned = (term || "").trim();
+    if (cleaned.length < 2) return;
+    const kept = [cleaned, ...readRecentSearches().filter((old) => old.toLowerCase() !== cleaned.toLowerCase())]
+        .slice(0, MAX_RECENT_SEARCHES);
+    try {
+        localStorage.setItem(RECENT_STORAGE_KEY, JSON.stringify(kept));
+    } catch (error) {
+        // Private browsing denies storage; the search itself still works
+    }
+    renderRecentSearches();
+}
+
+function forgetRecentSearches() {
+    try {
+        localStorage.removeItem(RECENT_STORAGE_KEY);
+    } catch (error) {
+        // Nothing to clear if storage was never writable
+    }
+    renderRecentSearches();
+}
+
+function renderRecentSearches() {
+    const group = SEARCH_DIALOG?.querySelector("[data-search-recent]");
+    const chips = SEARCH_DIALOG?.querySelector("[data-search-recent-chips]");
+    if (!group || !chips) return;
+
+    const terms = readRecentSearches();
+    group.hidden = terms.length === 0;
+    chips.innerHTML = "";
+    terms.forEach((term) => {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = "search-chip";
+        chip.dataset.searchTerm = term;
+        chip.textContent = term;
+        chips.appendChild(chip);
+    });
+}
+
+// An empty box says nothing about what the archive holds, so the chips take its
+// place until there is a query to answer.
+function togglePrompts(hasTerm) {
+    const prompts = SEARCH_DIALOG?.querySelector("[data-search-prompts]");
+    const filters = SEARCH_DIALOG?.querySelector("[data-search-filters]");
+    if (prompts) prompts.hidden = hasTerm;
+    if (filters) filters.hidden = !hasTerm;
+}
+
+let activeFilter = "all";
+
+function matchesFilter(section) {
+    return activeFilter === "all" || section === activeFilter;
+}
+
+function pageSection(item) {
+    const parsed = item._parsedPath || parseRef(item.ref);
+    return getSectionFromPath(parsed.path).toLowerCase();
+}
+
+// Counts on the chips, and a chip with nothing behind it says so instead of
+// offering a dead end.
+function updateFilterCounts(pageHits, headingHits) {
+    const chips = SEARCH_DIALOG?.querySelectorAll("[data-search-filters] .search-filter");
+    if (!chips) return;
+
+    const counts = {};
+    [...pageHits.map(pageSection), ...headingHits.map((entry) => entry.section)].forEach((section) => {
+        counts[section] = (counts[section] || 0) + 1;
+        counts.all = (counts.all || 0) + 1;
+    });
+
+    chips.forEach((chip) => {
+        const count = counts[chip.dataset.filter] || 0;
+        chip.dataset.count = String(count);
+        chip.disabled = count === 0 && chip.dataset.filter !== activeFilter;
+        let badge = chip.querySelector(".search-filter__count");
+        if (!badge) {
+            badge = document.createElement("span");
+            badge.className = "search-filter__count";
+            chip.appendChild(badge);
+        }
+        badge.textContent = count > 0 ? ` ${count}` : "";
+    });
+}
+
+function setActiveFilter(filter) {
+    activeFilter = filter;
+    SEARCH_DIALOG?.querySelectorAll("[data-search-filters] .search-filter").forEach((chip) => {
+        const isActive = chip.dataset.filter === filter;
+        chip.classList.toggle("search-filter--active", isActive);
+        chip.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+}
+
+// Keyboard selection and the mouse point at the same row, so Enter always opens
+// what the reader is looking at.
+function appendResultRow(markup, index) {
+    const li = document.createElement("li");
+    li.innerHTML = markup;
+    if (typeof index === "number") {
+        li.addEventListener("mouseenter", function () {
+            if (searchItemSelected) removeClass(searchItemSelected, "selected");
+            searchItemSelected = li;
+            resultsItemsIndex = index;
+            addClass(li, "selected");
+        });
+    }
+    searchResultsItems.appendChild(li);
+    return li;
+}
+
+function appendGroupLabel(title) {
+    appendResultRow(`<div class="search-results__item category">`
+        + `<span class="search-results__item-title">${title}</span>`
+        + `</div>`);
+}
+
+function sectionLabel(section) {
+    if (!section) return '';
+    const labels = SECTION_LABELS[IS_SPANISH ? "es" : "en"] || SECTION_LABELS.en;
+    return labels[section.toLowerCase()] || section.charAt(0).toUpperCase() + section.slice(1);
+}
+
+function formatHeadingResultItem(entry, terms) {
+    let teaser = "";
+    if (entry.text) {
+        try {
+            teaser = makeTeaser(entry.text, terms);
+        } catch (error) {
+            teaser = entry.text;
+        }
+    }
+    return '<div class="search-results__item">'
+        + `<a href="${entry.route}">`
+        + `<span class="search-results__item-crumb">${entry.crumb}</span>`
+        + `<span class="search-results__item-title">${entry.title}</span>`
+        + (teaser ? `<div class="search-results__item-body">${teaser}</div>` : '')
+        + `</a>`
+        + '</div>';
+}
+
 // Get all search containers and set up each one
 const allSearchContainers = Array.from(document.querySelectorAll(".search-container"));
 
@@ -204,34 +421,6 @@ function updateActiveContainer(container) {
 ////////////////////////////////////
 // Interaction with the search input
 ////////////////////////////////////
-
-// Helper to get the currently visible search input
-function getVisibleSearchInput() {
-    const container = getActiveSearchContainer();
-    return container?.querySelector('input[type="search"]');
-}
-
-document.addEventListener("keydown", function (keyboardEvent) {
-    // Cmd+K (Mac) or Ctrl+K (Windows/Linux) to focus search
-    if ((keyboardEvent.metaKey || keyboardEvent.ctrlKey) && keyboardEvent.key === 'k') {
-        keyboardEvent.preventDefault(); // Prevent browser default behavior
-        const input = getVisibleSearchInput();
-        if (input) {
-            input.focus();
-            input.select(); // Select existing text for easy replacement
-        }
-        return;
-    }
-});
-
-document.addEventListener("keyup", function (keyboardEvent) {
-    if (["s", "S", "/"].includes(keyboardEvent.key)) {
-        const input = getVisibleSearchInput();
-        if (input) {
-            input.focus();
-        }
-    }
-});
 
 document.addEventListener("keydown", function (keyboardEvent) {
     if (!searchResultsItems) return;
@@ -387,10 +576,15 @@ function preloadSearchIndex() {
     };
 
     // Use requestIdleCallback to load during idle time, or setTimeout as fallback
+    const preload = () => {
+        fetchSearchIndex().then(store, warn);
+        fetchHeadingIndex();
+    };
+
     if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => { fetchSearchIndex().then(store, warn); });
+        requestIdleCallback(preload);
     } else {
-        setTimeout(() => { fetchSearchIndex().then(store, warn); }, 1000);
+        setTimeout(preload, 1000);
     }
 }
 
@@ -440,6 +634,7 @@ function initSearch() {
             return;
         }
         searchResults.style.display = term === "" || term.length < 2 ? "none" : "block";
+        togglePrompts(term.length >= 2);
         searchResultsItems.innerHTML = "";
         currentTerm = term;
 
@@ -462,6 +657,13 @@ function initSearch() {
         }
 
         if (term === "" || term.length < 2) {
+            return;
+        }
+
+        // Easter egg: the ticker symbol types out the word
+        if (term.toLowerCase() === "btc") {
+            input.value = "bitcoin";
+            input.dispatchEvent(new KeyboardEvent("keyup", { key: "a" }));
             return;
         }
 
@@ -536,16 +738,15 @@ function initSearch() {
         // Sort results by score (relevance) in descending order
         indexResults.sort((a, b) => b.score - a.score);
 
-        const items = filterAndRankResults(indexResults, term, searchTerm);
+        const ranked = filterAndRankResults(indexResults, term, searchTerm);
+        const rankedHeadings = await searchHeadings(term);
         const resultCount = activeContainer.querySelector('.search-results__count');
+        updateFilterCounts(ranked, rankedHeadings);
 
-        if (items.length === 0) {
-            if (term.toLowerCase() === "btc") {
-                input.value = "bitcoin";
-                input.dispatchEvent(new KeyboardEvent("keyup"));
-                return
-            }
+        const items = ranked.filter((item) => matchesFilter(pageSection(item)));
+        const headings = rankedHeadings.filter((entry) => matchesFilter(entry.section));
 
+        if (items.length === 0 && headings.length === 0) {
             if (resultCount) {
                 resultCount.textContent = '';
             }
@@ -554,49 +755,70 @@ function initSearch() {
             item.innerHTML = formatSearchResultItem({
                 class: "empty",
                 doc: {
-                    title: "Nothing found",
-                    body: "Try something else",
+                    title: SEARCH_TEXT.emptyTitle,
+                    body: SEARCH_TEXT.emptyBody,
                 }
             }, "");
             searchResultsItems.appendChild(item);
             return;
         }
 
-        // Count results by section
-        const sectionCounts = {};
-        const sectionLabels = SEARCH_SECTION_LABELS[IS_SPANISH ? "es" : "en"] || SEARCH_SECTION_LABELS.en;
-        for (const item of items) {
-            const parsed = item._parsedPath || parseRef(item.ref);
-            const rawSection = getSectionFromPath(parsed.path) || 'other';
-            const label = sectionLabels[rawSection] || sectionLabels.other || rawSection;
-            sectionCounts[label] = (sectionCounts[label] || 0) + 1;
-        }
+        const shownItems = items.slice(0, MAX_PAGE_RESULTS);
+        const shownHeadings = headings.slice(0, MAX_HEADING_RESULTS);
 
-        // Update result count with section breakdown
+        // A heading that says what you typed leads, unless a page title says it
+        // too. Otherwise a post matching one weak word outranks the section that
+        // is actually about the query.
+        const normalizedTerm = normalizeForSearch(term).trim();
+        const titleHit = items.some((item) => normalizeForSearch(item.doc.title).includes(normalizedTerm));
+        const headingsFirst = shownHeadings.length > 0 && shownHeadings[0].score >= 85 && !titleHit;
+
+        // The chips carry the per-section counts, so this line only says how many
+        // were found and how many of them the panel is showing
         if (resultCount) {
             const resultLabelSet = SEARCH_RESULT_LABELS[IS_SPANISH ? "es" : "en"] || SEARCH_RESULT_LABELS.en;
-            const resultWord = items.length === 1 ? resultLabelSet.singular : resultLabelSet.plural;
-            const separator = resultLabelSet.separator || ":";
-            const sectionBreakdown = Object.entries(sectionCounts)
-                .map(([section, count]) => `${count} ${section}`)
-                .join(', ');
-            resultCount.textContent = `${items.length} ${resultWord}${sectionBreakdown ? `${separator} ${sectionBreakdown}` : ""}`;
+            const total = items.length + headings.length;
+            const shown = shownItems.length + shownHeadings.length;
+            const resultWord = total === 1 ? resultLabelSet.singular : resultLabelSet.plural;
+            resultCount.textContent = shown < total
+                ? `${shown} ${SEARCH_TEXT.of} ${total} ${resultWord}`
+                : `${total} ${resultWord}`;
         }
 
         // Easter egg: check for bitcoin search
         const isBitcoinSearch = searchTerm.toLowerCase().includes('bitcoin');
+        const terms = term.split(" ");
+        let row = 0;
 
-        // Display all results sorted by relevance
-        for (let i = 0; i < items.length; i++) {
-            const li = document.createElement("li");
-            try {
-                li.innerHTML = formatSearchResultItem(items[i], term.split(" "), isBitcoinSearch);
-            } catch (error) {
-                console.error("Failed to render search result item", error, items[i]);
-                const safeDoc = items[i].doc || {};
-                li.innerHTML = `<div class="search-results__item"><a href="${buildLocalizedHref(items[i].ref || '#')}"><span class="search-results__item-title">${safeDoc.title || items[i].ref || 'Result'}</span></a></div>`;
+        const renderPages = () => {
+            for (let i = 0; i < shownItems.length; i++) {
+                let markup;
+                try {
+                    markup = formatSearchResultItem(shownItems[i], terms, isBitcoinSearch);
+                } catch (error) {
+                    console.error("Failed to render search result item", error, shownItems[i]);
+                    const safeDoc = shownItems[i].doc || {};
+                    markup = `<div class="search-results__item"><a href="${buildLocalizedHref(shownItems[i].ref || '#')}"><span class="search-results__item-title">${safeDoc.title || shownItems[i].ref || 'Result'}</span></a></div>`;
+                }
+                appendResultRow(markup, row++);
             }
-            searchResultsItems.appendChild(li);
+        };
+
+        const renderHeadings = () => {
+            if (shownHeadings.length === 0) return;
+            appendGroupLabel(SEARCH_TEXT.sectionsTitle);
+            row++;
+            for (const entry of shownHeadings) {
+                appendResultRow(formatHeadingResultItem(entry, terms), row++);
+            }
+        };
+
+        if (headingsFirst) {
+            renderHeadings();
+            renderPages();
+        } else {
+            renderPages();
+            renderHeadings();
         }
     }, WAIT_TIME_MS);
 
@@ -625,14 +847,50 @@ function initSearch() {
         });
     });
 
-    window.addEventListener('click', function (e) {
-        allSearchContainers.forEach(container => {
-            const results = container.querySelector('.search-results');
-            if (results && results.style.display === "block" && !results.contains(e.target)) {
-                results.style.display = "none";
+    if (SEARCH_DIALOG) {
+        const input = SEARCH_DIALOG.querySelector('input[type="search"]');
+
+        const runSearch = () => {
+            if (!input) return;
+            input.focus();
+            input.dispatchEvent(new KeyboardEvent("keyup", { key: "a" }));
+        };
+
+        SEARCH_DIALOG.addEventListener("click", function (e) {
+            const chip = e.target.closest("[data-search-term]");
+            if (chip && input) {
+                input.value = chip.dataset.searchTerm;
+                runSearch();
+                return;
+            }
+
+            const filter = e.target.closest(".search-filter");
+            if (filter) {
+                setActiveFilter(filter.dataset.filter);
+                runSearch();
+                return;
+            }
+
+            if (e.target.closest("[data-search-clear-recent]")) {
+                forgetRecentSearches();
+                return;
+            }
+
+            // A query that led somewhere is worth offering again
+            if (e.target.closest(".search-results a") && input) {
+                rememberSearch(input.value);
             }
         });
-    });
+
+        document.addEventListener("search-closed", function () {
+            setActiveFilter("all");
+            togglePrompts(false);
+            renderRecentSearches();
+        });
+
+        renderRecentSearches();
+        togglePrompts(false);
+    }
 }
 
 function filterAndRankResults(results, term, searchTerm){
@@ -742,7 +1000,7 @@ function formatSearchResultItem(item, terms, isBitcoinSearch = false) {
 
     const parsed = item._parsedPath || parseRef(item.ref);
     const sectionBase = getSectionFromPath(parsed.path);
-    const section = sectionBase ? sectionBase.charAt(0).toUpperCase() + sectionBase.slice(1) : '';
+    const section = sectionLabel(sectionBase);
     const href = buildLocalizedHref(item.ref);
 
     // Format date if available
@@ -753,9 +1011,10 @@ function formatSearchResultItem(item, terms, isBitcoinSearch = false) {
         dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     }
 
-    const snippetSource = (typeof item.doc.body === "string" && item.doc.body.length > 0)
+    const rawSnippet = (typeof item.doc.body === "string" && item.doc.body.length > 0)
         ? item.doc.body
         : (typeof item.doc.description === "string" ? item.doc.description : "");
+    const snippetSource = rawSnippet.replace(/\s#(\s|$)/g, " ");
     let teaser = "";
     if (snippetSource) {
         try {
@@ -871,15 +1130,15 @@ function makeTeaser(body, terms) {
             startIndex = word[2];
         }
 
-        // add <em/> around search terms
+        // add <mark/> around search terms
         if (word[1] === TERM_WEIGHT) {
-            teaser.push("<b>");
+            teaser.push("<mark>");
         }
         startIndex = word[2] + word[0].length;
         teaser.push(body.substring(word[2], startIndex));
 
         if (word[1] === TERM_WEIGHT) {
-            teaser.push("</b>");
+            teaser.push("</mark>");
         }
     }
     teaser.push("…");

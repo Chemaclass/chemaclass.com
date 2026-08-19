@@ -1,4 +1,264 @@
-// Search results dropdown
+// The search dialog. Native <dialog>, so the browser owns the backdrop, the focus
+// trap and the inert page behind it; the only thing left to script is Escape,
+// which a type="search" input swallows on its first press.
+.search-dialog {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 10vh auto auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  overflow: visible;
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
+
+  &__panel {
+    display: flex;
+    flex-direction: column;
+    width: min(640px, calc(100vw - 2rem));
+    max-height: 78vh;
+    margin: 0 auto;
+    background: var(--search-bg-results);
+    border: 1px solid var(--search-divider-color);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+
+  &__form {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--search-divider-color);
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    color: var(--search-count-color);
+  }
+
+  input[type="search"] {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    color: var(--body-color);
+    // 16px or iOS zooms the whole page on focus
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+
+    &::placeholder {
+      color: var(--search-count-color);
+    }
+  }
+
+  &__close {
+    flex-shrink: 0;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid var(--search-shortcut-border);
+    border-radius: 6px;
+    background: var(--search-shortcut-bg);
+    color: var(--search-count-color);
+    font: inherit;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--body-color);
+    }
+  }
+
+  &__filters {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 0.35rem;
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--search-divider-color);
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    // display: flex would otherwise win over the hidden attribute
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  // Results scroll, the frame around them does not
+  .search-results {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  &__prompts {
+    flex: 0 0 auto;
+    display: grid;
+    gap: 0.9rem;
+    padding: 0.9rem 1rem 1rem;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  &__prompt-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    color: var(--search-count-color);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__clear {
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--search-count-color);
+    font: inherit;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  &__footer {
+    flex: 0 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    padding: 0.6rem 1rem;
+    border-top: 1px solid var(--search-divider-color);
+    color: var(--search-count-color);
+    font-size: 0.72rem;
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    kbd {
+      min-width: 18px;
+      padding: 0.1rem 0.3rem;
+      border: 1px solid var(--search-shortcut-border);
+      border-radius: 4px;
+      background: var(--search-shortcut-bg);
+      font-family: inherit;
+      font-size: 0.68rem;
+      text-align: center;
+    }
+  }
+}
+
+.search-filter {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--search-divider-color);
+  border-radius: 2rem;
+  background: none;
+  color: var(--search-count-color);
+  font: inherit;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    color: var(--body-color);
+  }
+
+  &--active {
+    border-color: transparent;
+    background: var(--search-filter-active-bg);
+    color: var(--accent-color);
+    font-weight: 600;
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: default;
+  }
+
+  &__count {
+    font-variant-numeric: tabular-nums;
+    opacity: 0.7;
+  }
+}
+
+.search-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.search-chip {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--search-divider-color);
+  border-radius: 2rem;
+  background: none;
+  color: var(--body-color);
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}
+
+// The dialog owns the screen on a phone: a centred card would sit under the
+// keyboard with a strip of dimmed page above it and nothing gained.
+@media (max-width: 600px) { // $breakpoint-phone
+  .search-dialog {
+    height: 100%;
+    margin: 0;
+
+    &__panel {
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      max-height: 100%;
+      border: none;
+      border-radius: 0;
+    }
+  }
+}
+
+// Body scroll lock while the dialog is open. showModal() inerts the page but
+// leaves it scrollable behind the backdrop.
+body.search-open {
+  overflow: hidden;
+}
+
+// Search results, inside the dialog
 .search-results {
   display: none;
   background: var(--search-bg-results);
@@ -119,6 +379,13 @@
     color: var(--search-date-color, #70757a);
   }
 
+  &__item-crumb {
+    display: block;
+    font-size: 12px;
+    color: var(--search-count-color);
+    margin-bottom: 2px;
+  }
+
   &__item-title {
     display: block;
     font-size: 18px;
@@ -136,9 +403,12 @@
     line-height: 1.5;
     color: var(--search-body-color, #4d5156);
 
-    b {
-      font-weight: 600;
+    mark {
+      background: var(--search-mark-bg);
       color: var(--search-highlight-color, #5f6368);
+      font-weight: 600;
+      border-radius: 2px;
+      padding: 0 1px;
     }
   }
 }
@@ -247,6 +517,8 @@ input[type="search"]::-webkit-search-results-decoration {
   --search-highlight-color: #5f6368;
   --search-divider-color: #e8e8e8;
   --search-count-color: #70757a;
+  --search-mark-bg: rgba(45, 90, 142, 0.14);
+  --search-filter-active-bg: rgba(45, 90, 142, 0.12);
 }
 
 // Dark mode
@@ -264,4 +536,6 @@ input[type="search"]::-webkit-search-results-decoration {
   --search-count-color: #a0a0a0;
   --search-scrollbar-thumb: rgba(255, 255, 255, 0.2);
   --search-scrollbar-thumb-hover: rgba(255, 255, 255, 0.35);
+  --search-mark-bg: rgba(0, 191, 255, 0.22);
+  --search-filter-active-bg: rgba(0, 191, 255, 0.16);
 }

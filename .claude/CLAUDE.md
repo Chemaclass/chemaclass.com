@@ -57,6 +57,9 @@ After it, each reading `public/` or `content/`:
 - `check-icons.py`, `check-topics.py` - the Font Awesome subset covers every icon,
   `/topics/` covers every tag.
 - `enrich-search-index.py` - dates into the elasticlunr index.
+- `generate-heading-index.py` - `heading_index.<lang>.json`, every content heading
+  with its anchor, so search results can deep-link to a section. The signal for a
+  content heading is the `heading-anchor` link, not a selector list.
 - `generate-terminal-fs.py` - the filesystem behind `/terminal/`.
 - `generate-txt-pages.py`, `generate-md-pages.py` - the `.txt` (EN only) and `.md`
   mirrors next to every blog, readings and talks entry. Drafts are skipped.
