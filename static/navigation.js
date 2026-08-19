@@ -13,7 +13,15 @@ window.openSearch = function() {
   if (!dialog || dialog.open) return;
   if (typeof loadSearch === 'function') loadSearch();
   closeMobileMenu();
-  dialog.showModal();
+  // Safari only learned showModal in 15.4. Without the guard the trigger threw a
+  // TypeError there and search was dead; the open attribute renders the same
+  // panel inline, minus the backdrop.
+  if (typeof dialog.showModal === 'function') {
+    dialog.showModal();
+  } else {
+    dialog.classList.add('search-dialog--inline');
+    dialog.setAttribute('open', '');
+  }
   document.body.classList.add('search-open');
   // Focus synchronously. Deferring it behind a timeout dropped every character
   // typed before the timeout fired, which is most of the query for anyone who
@@ -28,7 +36,9 @@ window.openSearch = function() {
 window.closeSearch = function() {
   const dialog = searchDialog();
   if (!dialog) return;
-  if (dialog.open) dialog.close();
+  if (typeof dialog.close === 'function') dialog.close();
+  else dialog.removeAttribute('open');
+  dialog.classList.remove('search-dialog--inline');
   document.body.classList.remove('search-open');
   const input = document.getElementById('site-search');
   if (input) input.value = '';
