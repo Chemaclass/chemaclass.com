@@ -572,13 +572,8 @@
         </a>
 
         <nav class="navbar">
-          <button class="hamburger" aria-label="{{ trans(key='menu_label', lang=lang) }}" aria-expanded="false" onclick="toggleMobileMenu(event)">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          {% set cp = current_path | default(value="/") %}
           <div class="nav-links">
-            {% set cp = current_path | default(value="/") %}
             {% if lang == "es" %}
               <a href="/es/blog/"{% if cp is starting_with("/es/blog/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_blog", lang=lang) }}</a>
               <a href="/es/readings/"{% if cp is starting_with("/es/readings/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_readings", lang=lang) }}</a>
@@ -586,57 +581,60 @@
               <a href="/blog/"{% if cp is starting_with("/blog/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_blog", lang=lang) }}</a>
               <a href="/readings/"{% if cp is starting_with("/readings/") %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key="nav_readings", lang=lang) }}</a>
             {% endif %}
-            <div class="nav-utilities">
-              {% set profile_href = '/profile/' %}{% if lang == 'es' %}{% set profile_href = '/es/profile/' %}{% endif %}
-              <a href="{{ profile_href }}" class="profile-link{% if cp is starting_with(profile_href) %} nav-active{% endif %}"{% if cp is starting_with(profile_href) %} aria-current="page"{% endif %} title="{{ trans(key="nav_profile", lang=lang) }}" aria-label="{{ trans(key="nav_profile", lang=lang) }}">
-                <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--body-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="8" r="4"></circle>
-                  <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
-                </svg>
-              </a>
-              <button id="search-toggle" onclick="toggleSearch()" aria-expanded="false" aria-controls="search-overlay" title="{{ trans(key="search_toggle_title", lang=lang) }}" aria-label="{{ trans(key="search_toggle_title", lang=lang) }}">
-                <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--body-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <path d="m21 21-4.3-4.3"></path>
-                </svg>
-              </button>
-              <button id="light-mode" onclick="toDarkMode()" title="{{ trans(key="search_light_title", lang=lang) }}" aria-label="{{ trans(key="search_light_title", lang=lang) }}">
-                <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--body-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
-                </svg>
-              </button>
-              <button id="dark-mode" onclick="toLightMode()" title="{{ trans(key="search_dark_title", lang=lang) }}" aria-label="{{ trans(key="search_dark_title", lang=lang) }}">
-                <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--body-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="4"></circle>
-                  <path d="M12 2v2"></path>
-                  <path d="M12 20v2"></path>
-                  <path d="m4.93 4.93 1.41 1.41"></path>
-                  <path d="m17.66 17.66 1.41 1.41"></path>
-                  <path d="M2 12h2"></path>
-                  <path d="M20 12h2"></path>
-                  <path d="m6.34 17.66-1.41 1.41"></path>
-                  <path d="m19.07 4.93-1.41 1.41"></path>
-                </svg>
-              </button>
-              {% if current_path is defined %}
-                {% if lang == "es" %}
-                  <a href="{{ current_path | replace(from='/es/', to='/') }}" class="lang-switch" title="{{ trans(key="lang_switch_en_title", lang=lang) }}">EN</a>
-                {% else %}
-                  <a href="/es{{ current_path }}" class="lang-switch" title="{{ trans(key="lang_switch_es_title", lang=lang) }}">ES</a>
-                {% endif %}
+          </div>
+          <button class="hamburger" aria-label="{{ trans(key='menu_label', lang=lang) }}" aria-expanded="false" onclick="toggleMobileMenu(event)">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-utilities">
+            {% set profile_href = '/profile/' %}{% if lang == 'es' %}{% set profile_href = '/es/profile/' %}{% endif %}
+            <a href="{{ profile_href }}" class="profile-link{% if cp is starting_with(profile_href) %} nav-active{% endif %}"{% if cp is starting_with(profile_href) %} aria-current="page"{% endif %} title="{{ trans(key="nav_profile", lang=lang) }}" aria-label="{{ trans(key="nav_profile", lang=lang) }}">
+              <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--body-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="4"></circle>
+                <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+              </svg>
+            </a>
+            <button id="search-toggle" onclick="toggleSearch()" aria-expanded="false" aria-controls="search-overlay" title="{{ trans(key="search_toggle_title", lang=lang) }}" aria-label="{{ trans(key="search_toggle_title", lang=lang) }}">
+              <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--body-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </svg>
+            </button>
+            <button id="light-mode" onclick="toDarkMode()" title="{{ trans(key="search_light_title", lang=lang) }}" aria-label="{{ trans(key="search_light_title", lang=lang) }}">
+              <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--body-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+              </svg>
+            </button>
+            <button id="dark-mode" onclick="toLightMode()" title="{{ trans(key="search_dark_title", lang=lang) }}" aria-label="{{ trans(key="search_dark_title", lang=lang) }}">
+              <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--body-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+            </button>
+            {% if current_path is defined %}
+              {% if lang == "es" %}
+                <a href="{{ current_path | replace(from='/es/', to='/') }}" class="lang-switch" title="{{ trans(key="lang_switch_en_title", lang=lang) }}">EN</a>
               {% else %}
-                {% if lang == "es" %}
-                  <a href="/" class="lang-switch" title="{{ trans(key="lang_switch_en_title", lang=lang) }}">EN</a>
-                {% else %}
-                  <a href="/es/" class="lang-switch" title="{{ trans(key="lang_switch_es_title", lang=lang) }}">ES</a>
-                {% endif %}
+                <a href="/es{{ current_path }}" class="lang-switch" title="{{ trans(key="lang_switch_es_title", lang=lang) }}">ES</a>
               {% endif %}
-            </div>
+            {% else %}
+              {% if lang == "es" %}
+                <a href="/" class="lang-switch" title="{{ trans(key="lang_switch_en_title", lang=lang) }}">EN</a>
+              {% else %}
+                <a href="/es/" class="lang-switch" title="{{ trans(key="lang_switch_es_title", lang=lang) }}">ES</a>
+              {% endif %}
+            {% endif %}
           </div>
         </nav>
 
-        <!-- Mobile menu backdrop -->
-        <div class="nav-backdrop" id="nav-backdrop" onclick="closeMobileMenu()"></div>
 
         <!-- Search overlay -->
         <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="{{ trans(key='site_search_label', lang=lang) }}">

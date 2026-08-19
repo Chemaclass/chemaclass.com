@@ -5,6 +5,7 @@
 // Search overlay toggle
 window.toggleSearch = function() {
   if (typeof loadSearch === 'function') loadSearch();
+  closeMobileMenu();
   const overlay = document.getElementById('search-overlay');
   const toggle = document.getElementById('search-toggle');
   const isActive = overlay.classList.toggle('active');
@@ -57,27 +58,25 @@ function restoreSearchFocus() {
 window.closeMobileMenu = function() {
   const hamburger = document.querySelector('.hamburger');
   const navbar = document.querySelector('.navbar');
-  const backdrop = document.getElementById('nav-backdrop');
+  // toggleSearch calls this from pages whose template drops the header
+  if (!navbar || !hamburger) return;
   navbar.classList.remove('open');
   hamburger.classList.remove('open');
   hamburger.setAttribute('aria-expanded', 'false');
-  if (backdrop) backdrop.classList.remove('active');
 };
 
 window.toggleMobileMenu = function(e) {
   e.stopPropagation();
   const hamburger = document.querySelector('.hamburger');
   const navbar = document.querySelector('.navbar');
-  const backdrop = document.getElementById('nav-backdrop');
   const isOpen = navbar.classList.toggle('open');
   hamburger.classList.toggle('open');
   hamburger.setAttribute('aria-expanded', isOpen);
-  if (backdrop) backdrop.classList.toggle('active', isOpen);
 };
 
-// Close mobile menu when a nav link is tapped
+// Close the burger panel when one of its links is tapped
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.nav-links > a').forEach(function(link) {
+  document.querySelectorAll('.nav-utilities a').forEach(function(link) {
     link.addEventListener('click', function() {
       if (document.querySelector('.navbar.open')) closeMobileMenu();
     });
@@ -579,25 +578,15 @@ document.addEventListener('click', function(e) {
   }
 });
 
-// Close mobile menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(function(el) {
-  el.addEventListener('click', function() {
-    document.querySelector('.navbar').classList.remove('open');
-    var hamburger = document.querySelector('.hamburger');
-    hamburger.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-  });
-});
-
 // Close mobile menu when clicking outside
 document.addEventListener('click', function(e) {
   var navbar = document.querySelector('.navbar');
   var hamburger = document.querySelector('.hamburger');
   if (!navbar?.classList.contains('open')) return;
-  if (!hamburger.contains(e.target)) {
-    navbar.classList.remove('open');
-    hamburger.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
+  var utilities = document.querySelector('.nav-utilities');
+  // Taps on the panel itself (theme, search) must not collapse it
+  if (!hamburger.contains(e.target) && !utilities?.contains(e.target)) {
+    closeMobileMenu();
   }
 });
 
