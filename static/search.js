@@ -38,9 +38,19 @@ const SEARCH_RESULT_LABELS = {
     en: { singular: "result", plural: "results" },
     es: { singular: "resultado", plural: "resultados" }
 };
+// Every first path segment the index actually carries, so no row falls back to a
+// capitalized English slug on /es/
 const SECTION_LABELS = {
-    en: { blog: "Blog", readings: "Readings", talks: "Talks", services: "Services", music: "Music", profile: "Profile" },
-    es: { blog: "Blog", readings: "Lecturas", talks: "Charlas", services: "Servicios", music: "Música", profile: "Perfil" }
+    en: {
+        blog: "Blog", readings: "Readings", talks: "Talks", series: "Series", services: "Services",
+        music: "Music", profile: "Profile", topics: "Topics", cv: "CV", now: "Now",
+        sponsor: "Sponsor", terminal: "Terminal", legal: "Legal"
+    },
+    es: {
+        blog: "Blog", readings: "Lecturas", talks: "Charlas", series: "Series", services: "Servicios",
+        music: "Música", profile: "Perfil", topics: "Temas", cv: "CV", now: "Ahora",
+        sponsor: "Colabora", terminal: "Terminal", legal: "Legal"
+    }
 };
 const normalizeForSearch = (str) => (str || "")
     .toString()
@@ -202,8 +212,13 @@ function fetchHeadingIndex() {
     return headingIndexPromise;
 }
 
+// Normalized once here, not per keystroke: the same 917 records were being
+// lowercased and stripped of accents on every letter typed, which was 40% of the
+// scan for text that never changes.
 function withHeadingSection(entry) {
     entry.section = getSectionFromPath(parseRef(entry.route).path).toLowerCase();
+    entry.searchTitle = normalizeForSearch(entry.title);
+    entry.searchBody = `${entry.searchTitle} ${normalizeForSearch(entry.text)}`;
     return entry;
 }
 
@@ -212,8 +227,8 @@ function withHeadingSection(entry) {
 // boosted, so the two lists can sit in the same panel without one drowning the
 // other.
 function scoreHeading(entry, phrase, words) {
-    const title = normalizeForSearch(entry.title);
-    const body = `${title} ${normalizeForSearch(entry.text)}`;
+    const title = entry.searchTitle;
+    const body = entry.searchBody;
 
     if (title === phrase) return 120;
     if (title.startsWith(phrase)) return 100;
