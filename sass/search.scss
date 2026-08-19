@@ -177,6 +177,17 @@
   }
 }
 
+// Browsers without showModal get the open attribute instead, which leaves the
+// dialog in the flow with no backdrop. Only that path needs repositioning.
+.search-dialog--inline {
+  position: fixed;
+  inset: 0;
+  z-index: 6000;
+  background: rgba(0, 0, 0, 0.55);
+  padding-top: 10vh;
+  margin: 0;
+}
+
 .search-filter {
   padding: 0.3rem 0.7rem;
   border: 1px solid var(--search-divider-color);
