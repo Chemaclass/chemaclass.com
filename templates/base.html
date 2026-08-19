@@ -837,6 +837,14 @@
         document.body.appendChild(el);
       }
       document.getElementById('site-search')?.addEventListener('focus', loadSearch, {once: true});
+      // Warm on intent, not on open: elasticlunr plus both indexes are ~400KB
+      // gzipped, and starting them when the pointer reaches the button buys the
+      // hover-to-click gap. Readers who never go near it still pay nothing.
+      document.querySelectorAll('[data-search-trigger]').forEach(function(el) {
+        el.addEventListener('pointerenter', loadSearch, {once: true});
+        el.addEventListener('touchstart', loadSearch, {once: true, passive: true});
+        el.addEventListener('focus', loadSearch, {once: true});
+      });
 
       // Open search overlay automatically when URL has ?q=term
       (function autoSearchFromQuery() {
