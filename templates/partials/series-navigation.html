@@ -1,3 +1,15 @@
+{# ==========================================================================
+   The series box on a post.
+
+   It used to read "Part 5 of 9" with prev/next arrows, which a reader takes as
+   a prerequisite: landing on part 5, you owe parts 1 to 4 first. The order is a
+   path the author suggests, not a dependency, so the box states membership and
+   points at the landing page, where the suggested order still lives and says so.
+
+   Requires: page, config, lang.
+   ========================================================================== #}
+{% import "partials/macros.html" as macros %}
+
 {% if page.extra.series %}
   {% set series_key = page.extra.series %}
   {% set series_config = config.extra.series[series_key] %}
@@ -6,38 +18,26 @@
     {% set series_title = series_config.title_es %}
   {% endif %}
 
-  {% set blog_section = get_section(path="blog/_index.md", lang=lang) %}
-  {% set series_posts = [] %}
-  {% for p in blog_section.pages %}
-    {% if p.extra.series and p.extra.series == series_key %}
-      {% set_global series_posts = series_posts | concat(with=p) %}
-    {% endif %}
-  {% endfor %}
-  {% set series_posts = series_posts | sort(attribute="extra.series_order") %}
+  {# The landing page owns its URL and only Zola knows the Spanish one lives
+     under /es/, so resolve the page instead of building the path by hand. #}
+  {% set series_page = get_page(path="series/" ~ series_key ~ ".md", lang=lang) %}
 
-  {% set current_order = page.extra.series_order %}
-  {% set total = series_posts | length %}
+  {# Every published post carrying the key counts. No sort: nothing here reads
+     the sequence any more. #}
+  {% set blog_section = get_section(path="blog/_index.md", lang=lang) %}
+  {% set total = blog_section.pages | filter(attribute="extra.series", value=series_key) | length %}
 
   <nav class="series-nav" aria-label="{{ series_title }}">
     <div class="series-nav__info">
       <span class="series-nav__title">{{ series_title }}</span>
-      <span class="series-nav__position">{{ trans(key="series_part", lang=lang) }} {{ current_order }} {{ trans(key="series_of", lang=lang) }} {{ total }}</span>
+      {# "One of 1 posts" would be worse than silence. #}
+      {% if total > 1 %}
+        <span class="series-nav__note">{{ trans(key="series_one_of", lang=lang) }} {{ total }} {{ trans(key="series_on_topic", lang=lang) }}</span>
+      {% endif %}
     </div>
-    <div class="series-nav__links">
-      {% for p in series_posts %}
-        {% if p.extra.series_order == current_order - 1 %}
-          <a href="{{ p.permalink }}" class="series-nav__link series-nav__link--prev" title="{{ p.title }}">
-            ← {{ trans(key="previous", lang=lang) }}
-          </a>
-        {% endif %}
-      {% endfor %}
-      {% for p in series_posts %}
-        {% if p.extra.series_order == current_order + 1 %}
-          <a href="{{ p.permalink }}" class="series-nav__link series-nav__link--next" title="{{ p.title }}">
-            {{ trans(key="next", lang=lang) }} →
-          </a>
-        {% endif %}
-      {% endfor %}
-    </div>
+    <a href="{{ series_page.permalink }}" class="series-nav__link">
+      {{ trans(key="series_see_all", lang=lang) }} {{ total }} {{ trans(key="posts", lang=lang) }}
+      {{ macros::nav_arrow_right() }}
+    </a>
   </nav>
 {% endif %}

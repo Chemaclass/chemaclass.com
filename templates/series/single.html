@@ -56,11 +56,15 @@
   <header class="series-single__header">
     <h1>{{ series_name }}</h1>
     {% if series_desc %}<p class="series-single__desc">{{ series_desc }}</p>{% endif %}
-    <p class="series-single__count">{{ parts | length }} {{ trans(key="series_parts", lang=lang) }}</p>
+    <p class="series-single__count">{{ parts | length }} {{ trans(key="posts", lang=lang) }}</p>
   </header>
 
-  {# Ordered by extra.series_order, which is the reading order the author set, not
-     the publication date. A gap or a repeat here shows up as a wrong number. #}
+  {# Ordered by extra.series_order, which is the reading order the author suggests,
+     not the publication date. Unlabelled the numbers read as prerequisites, which
+     is what the in-post box used to imply. A gap or a repeat shows up as a wrong
+     number. #}
+  <p class="series-single__order">{{ trans(key="series_suggested_order", lang=lang) }}</p>
+
   <ol class="series-single__parts">
     {% for post in parts %}
       <li class="series-part">

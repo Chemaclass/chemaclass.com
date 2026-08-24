@@ -1,10 +1,11 @@
 {# ==========================================================================
    JSON-LD for a series landing page (templates/series/single.html).
 
-   The site has five series with prev/next navigation and a "Part X of Y"
-   label, and none of it was machine-readable: to a crawler the parts were
-   unrelated posts. CreativeWorkSeries names the whole and orders the parts,
-   which is what lets an answer engine say which post comes third.
+   The site has five series, and none of it was machine-readable: to a crawler
+   the posts were unrelated. CreativeWorkSeries names the whole and records the
+   order the author suggests, the same order this page renders as a numbered
+   list. Membership is the claim; the position is a suggestion, not a
+   prerequisite.
 
    Requires: page (a content/series/<key>.md page), config, lang.
    ========================================================================== #}

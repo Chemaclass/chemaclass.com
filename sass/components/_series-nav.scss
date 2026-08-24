@@ -13,6 +13,7 @@
   &__info {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 0.75rem;
   }
 
@@ -21,16 +22,14 @@
     color: var(--accent-color);
   }
 
-  &__position {
+  &__note {
     color: var(--color-subtitle);
   }
 
-  &__links {
-    display: flex;
-    gap: 0.75rem;
-  }
-
   &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     text-decoration: none;
     color: var(--body-color);
     font-weight: 500;
@@ -51,5 +50,13 @@
     gap: 0.5rem;
     padding: 0.65rem 0.85rem;
     font-size: 0.8rem;
+  }
+
+  // The note is a sentence now, not "Part 5 of 9". Beside a title like
+  // "Serie Artesanía del Software" it overflows a phone, so the two stack.
+  .series-nav__info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
   }
 }

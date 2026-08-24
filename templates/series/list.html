@@ -74,7 +74,7 @@
               {% if lang == "es" and conf.title_es %}{{ conf.title_es }}{% else %}{{ conf.title }}{% endif %}
             </a>
           </h2>
-          <span class="series-card__count">{{ parts | length }} {{ trans(key="series_parts", lang=lang) }}</span>
+          <span class="series-card__count">{{ parts | length }} {{ trans(key="posts", lang=lang) }}</span>
         </div>
 
         {% if conf.desc %}
@@ -90,7 +90,7 @@
         </ol>
 
         <a class="series-card__more" href="{{ entry.permalink }}">
-          {{ trans(key="series_start", lang=lang) }}
+          {{ trans(key="series_view", lang=lang) }}
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>

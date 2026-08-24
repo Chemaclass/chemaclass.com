@@ -103,7 +103,7 @@ Files: `content/blog/YYYY-MM-DD-slug.md`. Front matter template: `.claude/templa
 
 ### Series
 
-Series group related posts with navigation (title, "Part X of Y", prev/next links). When creating a new post, check if it fits an existing series and add `series` + `series_order` to `[extra]` in both EN and ES files.
+Series group related posts. A post shows its series name and a link to the landing page; the landing page lists the posts in `series_order` as a suggested reading order. Order is a suggestion, never a prerequisite: no post may assume the reader has read another. When creating a new post, check if it fits an existing series and add `series` + `series_order` to `[extra]` in both EN and ES files.
 
 Defined in `config.toml` under `[extra.series.<key>]` (the authoritative, current list lives there). Existing keys: `bitcoin`, `ai`, `craftsmanship`, `leadership`, `agile`.
 
