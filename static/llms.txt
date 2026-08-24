@@ -16,11 +16,13 @@ Jose Maria Valera Reales is a Product Engineer at Kombo with 15+ years in softwa
 
 ## Series
 
-- Bitcoin Series: PGP, Cypherpunks, Programmable Money, Taxes, Fundamentals, How It Works
-- AI Series: Speed Not Quality, MCP Context, Team of Agents, Idealism vs Pragmatism, Inside .claude, Levels of AI Adoption, Skills Over Agents, Token Bill, Human Bottleneck, Non-Deterministic AI
-- Software Craftsmanship Series: Art of Testing, Mock or Not, TDD, TDD vs BDD, London vs Chicago, Test Private Methods, Pair Programming
-- Leadership & Teams Series: Tech Lead, Red vs Blue Work, Path to Seniority, Beauty of Leadership, Great Leadership, Everyone on Board, FSNP, Garage Door Open
-- Agile & XP Series: Extreme Teams, Agile with Non-Agile, Ignoring Scrum, Friday Deploys, What Kills Agility, Ship Show Ask
+Curated groups of posts. Each post stands on its own, and the order below is the suggested path, not a prerequisite.
+
+- [Bitcoin Series](https://chemaclass.com/series/bitcoin/) (6 posts): Pretty Good Privacy | The Cypherpunks | Programmable Money | Understanding Taxes | Bitcoin Fundamentals | How Bitcoin Works
+- [AI Series](https://chemaclass.com/series/ai/) (9 posts): AI Gives You Speed, Not Quality | MCP: Giving Your AI Agent the Right Context | Build Your Own Team of Agents | Idealism vs Pragmatism | Inside the .claude Folder | The Levels of AI Adoption | Skills Over Agents | Cut the Token Bill on Both Ends | The Human Bottleneck
+- [Software Craftsmanship Series](https://chemaclass.com/series/craftsmanship/) (13 posts): Great Engineering | Different Beliefs About Software Quality | The Art of Testing: Where Design Meets Quality | Test-Driven (Development) | TDD vs BDD | London vs Chicago | To Mock or Not to Mock | How to Test Private Methods? | The Art of Refactoring | Testing Effectively Legacy Code | Effective Pair Programming | Pull Requests vs Pair Programming | Dedicated QA Teams in Software?
+- [Leadership & Teams Series](https://chemaclass.com/series/leadership/) (8 posts): Responsibilities of a Tech Lead | Red Work vs Blue Work | The Path to Seniority in Software | The Beauty of Leadership | Great Leadership | How Do You Get Everyone on Board? | Forming, Storming, Norming and Performing | Working With the Garage Door Open
+- [Agile & XP Series](https://chemaclass.com/series/agile/) (6 posts): Update Your Team to Be More Extreme | Working Agile with Non-Agile Teams | Ignoring Scrum to Get More Agile? | Deployments on Fridays | What Kills Agility? | Ship, Show, Ask
 
 ## Topics
 

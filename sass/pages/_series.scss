@@ -199,6 +199,15 @@
     margin: 0;
   }
 
+  // Not __count's uppercase stat treatment: this is a sentence, and letter-spaced
+  // caps at that length is unreadable.
+  &__order {
+    color: var(--color-subtitle);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 1.25rem 0 0.75rem;
+  }
+
   &__parts {
     list-style: none;
     margin: 0;
