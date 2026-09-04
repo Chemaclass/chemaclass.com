@@ -209,9 +209,8 @@
     }
     </script>
 
-    {% if page %}
+    {% if page and page.date %}
     <meta property="og:type" content="article">
-    {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date(format='%+') }}">
     {# Same git-backed dates the JSON-LD uses; see partials/post-schema.html. #}
     {% set og_modified_dates = load_data(path="data/last-modified.json", format="json", required=false) %}
@@ -220,7 +219,6 @@
       {% set_global og_git_modified = og_modified_dates[page.relative_path] | default(value=false) %}
     {% endif %}
     <meta property="article:modified_time" content="{% if page.updated %}{{ page.updated | date(format='%+') }}{% elif og_git_modified %}{{ og_git_modified }}{% else %}{{ page.date | date(format='%+') }}{% endif %}">
-    {% endif %}
     <meta property="article:author" content="{{ config.author }}">
     {% if page.taxonomies.tags %}
     <meta property="article:section" content="{{ page.taxonomies.tags.0 }}">
@@ -740,7 +738,6 @@
             <ul class="page-footer__list">
               <li><a href="{{ lp }}/blog/">{{ trans(key="nav_blog", lang=lang) }}</a></li>
               <li><a href="{{ lp }}/readings/">{{ trans(key="nav_readings", lang=lang) }}</a></li>
-              <li><a href="{{ lp }}/series/">{{ trans(key="series_title", lang=lang) }}</a></li>
               <li><a href="{{ lp }}/topics/">{{ trans(key="nav_topics", lang=lang) }}</a></li>
             </ul>
           </div>

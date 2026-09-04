@@ -80,6 +80,9 @@ python3 scripts/generate-last-modified.py
 echo "Building site..."
 zola build "$@"
 
+echo "Adding canonical targets to redirect pages..."
+python3 scripts/enrich-redirects.py
+
 echo "Checking the Font Awesome subset covers every icon in use..."
 python3 scripts/check-icons.py
 

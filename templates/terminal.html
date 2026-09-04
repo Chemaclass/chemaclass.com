@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terminal | Chemaclass</title>
-  <meta name="description" content="Interactive terminal interface for chemaclass.com">
+  <meta name="description" content="{{ page.description }}">
   <meta name="theme-color" content="#0d1117">
 
   {# This page is deliberately standalone rather than extending base.html: it
@@ -25,12 +25,20 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ config.title }}">
   <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:description" content="Interactive terminal interface for chemaclass.com">
+  <meta property="og:description" content="{{ page.description }}">
   <meta property="og:url" content="{{ page.permalink | safe }}">
   <meta property="og:locale" content="{% if lang == 'es' %}es_ES{% else %}en_US{% endif %}">
   {% set og_banner = resize_image(path="banner.jpg", width=1200, height=630, op="fill", format="jpeg", quality=82) %}
   <meta property="og:image" content="{{ og_banner.url | safe }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="{{ page.title }}">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:image" content="{{ og_banner.url | safe }}">
+  <meta name="twitter:image:alt" content="{{ page.title }}">
   {% if config.extra.twitter %}<meta name="twitter:site" content="@{{ config.extra.twitter }}">{% endif %}
 
   {% if config.extra.profile_small %}

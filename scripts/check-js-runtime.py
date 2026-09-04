@@ -84,7 +84,7 @@ PAGES = (
     ('/series/', 'series index'),
     ('/cv/', 'cv page'),
     ('/services/consulting/', 'services carousel'),
-    ('/services/web-development/', 'portfolio and testimonials carousels, FAQ toggles'),
+    ('/services/web-development/', 'sales quote form and sticky CTA'),
     ('/music/', 'music index and its lazy youtube embeds'),
     ('/talks/', 'talks index'),
 )
