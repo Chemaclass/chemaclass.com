@@ -54,6 +54,7 @@ CANONICAL = re.compile(
     r'<link[^>]+rel=["\']?canonical["\']?[^>]*href=["\']([^"\']+)', re.I)
 REFRESH_CONTENT = re.compile(
     r'<meta\b[^>]*http-equiv=["\']?refresh["\']?[^>]*content=["\']([^"\']*)', re.I)
+HEAD = re.compile(r'<head\b[^>]*>(.*?)</head>', re.I | re.S)
 JSON_LD = re.compile(
     r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', re.I | re.S)
 H1 = re.compile(r'<h1[\s>]', re.I)
@@ -92,7 +93,11 @@ def check_built(problems: List[str]) -> int:
         url = '/' + str(page.parent.relative_to(PUBLIC_DIR)).replace('index.html', '')
         url = '/' if url == '/.' else url.rstrip('/') + '/'
         text = page.read_text(encoding='utf-8', errors='replace')
-        head = text[:12000]
+        found_head = HEAD.search(text)
+        # Zola's compact alias stubs omit explicit head tags. Their full file is
+        # tiny, so use it as the fallback while normal pages get the complete
+        # head regardless of optional blocks such as production RUM.
+        head = found_head.group(1) if found_head else text
 
         if REFRESH_META.search(head):
             canonical = CANONICAL.search(head)
