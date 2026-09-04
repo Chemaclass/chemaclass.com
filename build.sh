@@ -11,7 +11,8 @@ ARCH=$(uname -m)
 # Download zola if not installed
 if ! command -v zola &> /dev/null; then
   if [ "$OS" = "Darwin" ]; then
-    echo "zola not found. Install it with: brew install zola"
+    echo "zola not found. Install v${ZOLA_VERSION} by hand: see README, Prerequisites."
+    echo "Do NOT use 'brew install zola': it installs 0.23+, which breaks the templates."
     exit 1
   fi
 
