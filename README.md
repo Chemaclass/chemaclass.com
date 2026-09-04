@@ -8,9 +8,32 @@ I write about tech, habits, and team behaviors at my [blog](https://chemaclass.c
 
 ## Prerequisites
 
-- [Zola](https://www.getzola.org/documentation/getting-started/installation/) 0.22.1+
+- [Zola](https://www.getzola.org/documentation/getting-started/installation/) 0.22.x, **not 0.23+**
 - Python 3 (standard library only, for the post-build scripts)
 - [minify](https://github.com/tdewolff/minify) (production builds only)
+
+### Why Zola is pinned to 0.22
+
+Zola 0.23 ships Tera 2, which removes `{% import %}`, the `macros::fn()` call
+syntax, and shortcodes entirely. Every template here still uses all three, so
+0.23 fails the build with `Unknown tag` on the first import it meets.
+
+`build.sh` (`ZOLA_VERSION`) and the deploy workflow both pin 0.22.0. Keep the
+local binary on the same version.
+
+Homebrew tracks the latest release, so `brew install zola` gives you 0.23. Pin
+it by hand instead:
+
+```bash
+brew unlink zola   # if Homebrew already installed a newer one
+curl -sSL https://github.com/getzola/zola/releases/download/v0.22.0/zola-v0.22.0-aarch64-apple-darwin.tar.gz | tar -xz
+mv zola ~/.local/bin/zola   # any directory on your PATH
+zola --version              # zola 0.22.0
+```
+
+Use `x86_64-apple-darwin` on Intel, `x86_64-unknown-linux-gnu` on Linux. If
+`zola serve` starts failing again after a `brew upgrade`, check `which zola`
+first: Homebrew relinks its own copy.
 
 ## Development
 
