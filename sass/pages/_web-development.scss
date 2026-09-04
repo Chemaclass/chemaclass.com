@@ -136,7 +136,28 @@
 .service-options {
   display: grid;
   gap: 1.5rem;
-  margin-bottom: 3rem;
+}
+
+// Heading, shared baseline, tier cards, advice and cost are one section now.
+.service-baseline {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  &__label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-subtitle);
+  }
+}
+
+.service-choose {
+  .budget-section {
+    margin-top: 2rem;
+  }
 }
 
 // 2-column variant - full width within container
@@ -182,7 +203,7 @@
     }
   }
 
-  h2 {
+  h3 {
     font-size: 1.35rem;
     font-weight: 600;
     margin: 0 0 0.5rem;
@@ -225,7 +246,7 @@
   &__benefits, &__ideal {
     margin-bottom: 1.25rem;
 
-    h3 {
+    h3, h4 {
       font-size: 0.85rem;
       font-weight: 600;
       text-transform: uppercase;
@@ -257,16 +278,17 @@
 
   &__ideal {
     ul {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 0.5rem;
     }
 
     li {
       background: var(--search-bg-selected-item);
-      padding: 0.25rem 0.75rem;
+      padding: 0.35rem 0.75rem;
       border-radius: 20px;
       font-size: 0.8rem;
+      text-align: center;
     }
   }
 
@@ -282,160 +304,188 @@
       color: var(--heading-color);
     }
   }
-}
 
-// Comparison Section
-.comparison-table {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-
-  table {
-    width: 100%;
-    min-width: 600px;
-    border-collapse: separate;
-    border-spacing: 0;
-    font-size: 0.9rem;
-    background: var(--search-input-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--preview-divider-color);
+  &__price {
+    margin-bottom: 1.25rem;
   }
 
-  thead th {
-    padding: 1.25rem 1.5rem;
+  &__amount {
+    display: block;
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    line-height: 1.1;
+  }
+
+  &__price-label {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    color: var(--heading-color);
-    background: var(--search-bg-selected-item);
-    border-bottom: 2px solid var(--preview-divider-color);
-    text-align: center;
-    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-subtitle);
+  }
 
-    &:first-child {
-      text-align: left;
-      width: 180px;
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    background: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.85;
+      color: #fff;
     }
 
-    i {
-      display: block;
-      font-size: 1.25rem;
-      margin-bottom: 0.35rem;
+    &:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
     }
 
-    &.col-static i {
-      color: var(--accent-color);
-    }
+    // Dark theme accent is light; white ink on it fails contrast.
+    .theme-dark & {
+      color: var(--body-bg);
 
-    &.col-ssg i {
-      color: #6b46c1;
-
-      html[color-theme=dark] & {
-        color: #9f7aea;
+      &:hover {
+        color: var(--body-bg);
       }
     }
+  }
+}
 
-    &.col-wp i {
-      color: #21759b;
+// The two tier cards are one decision, so they must read as equal height and
+// their CTAs must line up regardless of how much copy each carries. The slack
+// sits below the consideration box, not above it, so the shorter card does not
+// show a hole in its middle.
+.service-option {
+  display: flex;
+  flex-direction: column;
 
-      html[color-theme=dark] & {
-        color: #5ba8d1;
-      }
+  &__consideration {
+    margin-bottom: 1.25rem;
+  }
+
+  &__cta {
+    margin-top: auto;
+  }
+}
+
+// Shared price detail under both cards, replacing the per-card duplication.
+// One panel, one measure, one alignment: the loose stack read as page furniture.
+.budget-panel {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.75rem 2rem;
+  background: var(--search-input-bg);
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 12px;
+}
+
+.budget-included {
+  margin: 0 0 0.4rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.budget-anchor {
+  margin: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--color-subtitle);
+}
+
+.budget-ongoing {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--preview-divider-color);
+
+  &__label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-subtitle);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  // Label left, price right: a price list scans, a sentence does not.
+  li {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--color-subtitle);
+
+    + li {
+      border-top: 1px solid var(--preview-divider-color);
     }
 
-    &.col-unavailable {
-      i,
-      .col-label {
-        opacity: 0.5;
-      }
-
-      .col-label {
-        display: block;
-        line-height: 1.2;
-      }
-    }
-
-    .col-unavailable__badge {
-      display: inline-block;
-      margin-top: 0.4rem;
-      font-size: 0.6rem;
+    strong {
+      flex-shrink: 0;
       font-weight: 600;
-      color: var(--color-subtitle);
-      background: var(--preview-divider-color);
-      padding: 0.15rem 0.45rem;
-      border-radius: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
+      color: var(--heading-color);
       white-space: nowrap;
     }
   }
 
-  tbody tr td:nth-child(4) {
-    opacity: 0.5;
-  }
-
-  tbody td {
-    padding: 1rem 1.5rem;
-    text-align: center;
-    color: var(--body-color);
-    font-size: 0.9rem;
-    border-bottom: 1px solid var(--preview-divider-color);
-    vertical-align: middle;
-
-    &:first-child {
-      text-align: left;
-      font-weight: 600;
-      color: var(--heading-color);
-    }
-
-    i {
-      font-size: 1rem;
-    }
-
-    &.highlight {
-      color: #16a34a;
-      font-weight: 600;
-
-      html[color-theme=dark] & {
-        color: #4ade80;
-      }
-
-      i {
-        color: inherit;
-      }
-    }
-
-    &.caution {
-      color: #d97706;
-      font-weight: 500;
-
-      html[color-theme=dark] & {
-        color: #fbbf24;
-      }
-
-      i {
-        color: inherit;
-      }
-    }
-
-  }
-
-  tbody tr:last-child td {
-    border-bottom: none;
-  }
-
-  tbody tr:nth-child(even) td {
-    background: rgba(0, 0, 0, 0.02);
-
-    html[color-theme=dark] & {
-      background: rgba(255, 255, 255, 0.02);
+  @media (max-width: $breakpoint-phone) {
+    li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.15rem;
     }
   }
+}
 
-  tbody tr {
-    transition: background-color 0.15s ease;
+.budget-panel .pricing-note {
+  margin: 1.25rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--preview-divider-color);
+  font-size: 0.8rem;
+  font-style: normal;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--color-subtitle);
+}
 
-    &:hover td {
-      background: var(--search-bg-selected-item);
-    }
+// The page already stacks two tier cards and a price panel. This advice is one
+// sentence, so it reads as a quiet aside rather than a fourth container.
+// The base .decision-tip card style stays for team-workshops.
+.decision-tip.decision-tip--inline {
+  max-width: 620px;
+  margin: 1.5rem auto 0;
+  padding: 0;
+  background: none;
+  border-left: 0;
+  border-radius: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-subtitle);
+
+  strong {
+    color: var(--heading-color);
   }
 }
 
@@ -623,7 +673,7 @@
 
 // Budget Section
 .budget-section {
-  margin-top: 5rem;
+  margin-top: 1.5rem;
 }
 
 .budget-header {
@@ -647,39 +697,6 @@
     line-height: 1.6;
   }
 
-  .budget-floor {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--heading-color);
-    margin-top: 1rem;
-  }
-
-  .budget-highlights {
-    list-style: none;
-    padding: 0;
-    margin: 1rem auto 0;
-    max-width: max-content;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    text-align: left;
-
-    li {
-      display: grid;
-      grid-template-columns: 1.5rem 1fr;
-      align-items: center;
-      gap: 0.75rem;
-      color: var(--color-subtitle);
-      font-size: 1rem;
-      line-height: 1.5;
-
-      i {
-        color: var(--accent-color);
-        text-align: center;
-        font-size: 1rem;
-      }
-    }
-  }
 }
 
 .pricing-card__cta {
@@ -965,6 +982,52 @@
   }
 }
 
+// Apps Section
+.service-apps {
+  margin-top: 4rem;
+
+  &__lead {
+    text-align: center;
+    max-width: 700px;
+    margin: -1rem auto 2rem;
+    color: var(--color-subtitle);
+    line-height: 1.7;
+  }
+
+  &__why {
+    max-width: 660px;
+    margin: 2.5rem auto 0;
+
+    p {
+      color: var(--color-subtitle);
+      line-height: 1.7;
+      margin: 0 0 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__pivot {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+  }
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
 // CTA Section
 .service-cta {
   background: var(--search-input-bg);
@@ -1077,7 +1140,6 @@
     }
   }
 }
-
 
 // ==========================================================================
 // Workshop Resources Section

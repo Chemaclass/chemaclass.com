@@ -51,7 +51,7 @@
         <span class="terminal-link-cmd">cd</span>
         <span class="terminal-link-path">/readings</span>
       </a>
-      <a href="{% if lang == 'es' %}/es/services/{% else %}/services/{% endif %}" class="terminal-link">
+      <a href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}" class="terminal-link">
         <span class="terminal-link-key">4</span>
         <span class="terminal-link-cmd">cd</span>
         <span class="terminal-link-path">/services</span>
@@ -121,7 +121,7 @@ if (window.cronitor) {
     'cd /blog': '{% if lang == "es" %}/es/blog/{% else %}/blog/{% endif %}',
     'cd /readings': '{% if lang == "es" %}/es/readings/{% else %}/readings/{% endif %}',
     'cd /talks': '{% if lang == "es" %}/es/talks/{% else %}/talks/{% endif %}',
-    'cd /services': '{% if lang == "es" %}/es/services/{% else %}/services/{% endif %}'
+    'cd /services': '{% if lang == "es" %}/es/services/web-development/{% else %}/services/web-development/{% endif %}'
   };
 
   const terminalContent = document.getElementById('terminal-content');
@@ -213,7 +213,7 @@ if (window.cronitor) {
       '1': '{% if lang == "es" %}/es/{% else %}/{% endif %}',
       '2': '{% if lang == "es" %}/es/blog/{% else %}/blog/{% endif %}',
       '3': '{% if lang == "es" %}/es/readings/{% else %}/readings/{% endif %}',
-      '4': '{% if lang == "es" %}/es/services/{% else %}/services/{% endif %}',
+      '4': '{% if lang == "es" %}/es/services/web-development/{% else %}/services/web-development/{% endif %}',
       '5': '{% if lang == "es" %}/es/talks/{% else %}/talks/{% endif %}'
     };
 

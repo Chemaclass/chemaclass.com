@@ -7,167 +7,6 @@
   50% { opacity: 0.8; }
 }
 
-// Hero Section
-.projects-hero {
-  text-align: center;
-  margin-bottom: 4rem;
-
-  h1 {
-    margin-bottom: 0.5rem;
-  }
-
-  &__subtitle {
-    color: var(--color-subtitle);
-    font-size: 1.1rem;
-    margin: 0;
-  }
-}
-
-// Services Section
-.projects-services {
-  margin-bottom: 4rem;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-
-  @media (max-width: $breakpoint-phone) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.service-card {
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 12px;
-  padding: 1.25rem;
-  position: relative;
-  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-  text-decoration: none;
-
-  &:hover {
-    border-color: var(--accent-color);
-  }
-
-  &--featured {
-    border-color: var(--accent-color);
-  }
-
-  &__features {
-    list-style: none;
-    padding: 0;
-    margin: 0.75rem 0 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-
-    li {
-      position: relative;
-      padding-left: 1.4rem;
-      font-size: 0.85rem;
-      color: var(--body-color);
-      line-height: 1.45;
-
-      &::before {
-        content: "\2713";
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: var(--accent-color);
-        font-weight: 700;
-        font-size: 0.9rem;
-      }
-    }
-  }
-
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 0.75rem;
-
-    .service-card__icon {
-      margin-bottom: 0;
-    }
-
-    .service-card__more {
-      font-size: 0.8rem;
-    }
-  }
-
-  &__icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background: var(--accent-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.75rem;
-
-    i {
-      color: white;
-      font-size: 1rem;
-    }
-  }
-
-  h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 0 0 0.5rem;
-    color: var(--heading-color);
-  }
-
-  p {
-    font-size: 0.875rem;
-    color: var(--color-subtitle);
-    margin: 0 0 0.75rem;
-    line-height: 1.5;
-  }
-
-  &__audience {
-    font-size: 0.75rem !important;
-    font-weight: 500;
-    color: var(--accent-color) !important;
-    margin: -0.25rem 0 0.5rem !important;
-  }
-
-  &__more {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--accent-color);
-    margin-top: 0.75rem;
-
-    i {
-      font-size: 0.7rem;
-      transition: transform 0.2s ease;
-    }
-  }
-
-  &__price {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--accent-color);
-    background: var(--search-bg-selected-item);
-    padding: 0.25rem 0.6rem;
-    border-radius: 4px;
-    margin-top: 0.5rem;
-  }
-}
-
-.service-card--unavailable {
-  opacity: 0.5;
-  cursor: default;
-  pointer-events: none;
-}
-
 .service-notice {
   display: flex;
   align-items: center;
@@ -185,11 +24,23 @@
     color: var(--accent-color);
     flex-shrink: 0;
   }
-}
 
-.service-card__price--muted {
-  color: var(--color-subtitle);
-  background: var(--preview-divider-color);
+  &__link {
+    flex-shrink: 0;
+    margin-left: auto;
+    font-weight: 600;
+    color: var(--accent-color);
+    white-space: nowrap;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    &__link {
+      margin-left: 0;
+    }
+  }
 }
 
 .service-cta__btn--disabled,
@@ -458,22 +309,8 @@
   }
 }
 
-// Responsive adjustments
-@media (max-width: $breakpoint-phone) {
-  .projects-hero {
-    &__subtitle {
-      font-size: 1rem;
-    }
-  }
-
-  .service-card {
-    padding: 1rem;
-  }
-}
-
 // Focus styles for accessibility
-.project-card:focus-visible,
-.service-card:focus-visible {
+.project-card:focus-visible {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
 }
@@ -503,6 +340,8 @@
 }
 
 .pricing-card {
+  display: flex;
+  flex-direction: column;
   background: var(--search-input-bg);
   border: 1px solid var(--preview-divider-color);
   border-radius: 10px;
@@ -589,6 +428,7 @@
   }
 
   &__ongoing {
+    flex: 1 1 auto;
     border-top: 1px solid var(--preview-divider-color);
     padding-top: 0.75rem;
     margin-top: 0.5rem;

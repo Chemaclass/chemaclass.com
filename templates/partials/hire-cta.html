@@ -1,0 +1,14 @@
+{# Posts and readings are where search traffic lands, and they used to end with no
+   path to the paid offer. Links straight to the offer, not the services index. #}
+<aside class="hire-cta">
+  <div class="hire-cta__body">
+    <strong class="hire-cta__title">{{ trans(key="cta_hire_title", lang=lang) }}</strong>
+    <p class="hire-cta__text">{{ trans(key="cta_hire_text", lang=lang) }}</p>
+  </div>
+  <a class="hire-cta__btn" href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}">
+    {{ trans(key="cta_hire_btn", lang=lang) }}
+    <svg width="14" height="14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12h14M12 5l7 7-7 7"/>
+    </svg>
+  </a>
+</aside>
