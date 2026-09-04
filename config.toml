@@ -70,8 +70,8 @@ cta_hire_text = "I build fast, simple websites for businesses and professionals.
 cta_hire_btn = "See what you get"
 svc_see_web_dev = "See web development"
 # Display copy for the two tiers; keep in sync with the extra.pricing_* numbers.
-svc_price_range_simple = "€2,000 - €4,000"
-svc_price_range_pro = "€3,000 - €6,000"
+svc_price_range_simple = "€1,500 - €3,000"
+svc_price_range_pro = "€2,500 - €5,000"
 nav_talks = "Talks"
 nav_cv = "CV"
 toc_header_title = "On this page"
@@ -357,14 +357,14 @@ repo_content_url = "https://github.com/Chemaclass/chemaclass.com/edit/main/conte
 
 
 # Centralized pricing (all values in EUR)
-pricing_static_simple_min = 2000
-pricing_static_simple_max = 4000
-pricing_static_pro_min = 3000
-pricing_static_pro_max = 6000
+pricing_static_simple_min = 1500
+pricing_static_simple_max = 3000
+pricing_static_pro_min = 2500
+pricing_static_pro_max = 5000
 pricing_domain = 15
 pricing_static_hosting = 35
-pricing_static_maintenance_min = 200
-pricing_static_maintenance_max = 400
+pricing_static_maintenance_min = 150
+pricing_static_maintenance_max = 300
 pricing_static_pro_maintenance_min = 250
 pricing_static_pro_maintenance_max = 500
 pricing_workshop_per_person = 480
@@ -411,8 +411,8 @@ cta_hire_title = "¿Necesitas una web?"
 cta_hire_text = "Construyo webs rápidas y sencillas para empresas y profesionales. Precio cerrado, online en menos de un mes."
 cta_hire_btn = "Ver qué incluye"
 svc_see_web_dev = "Ver desarrollo web"
-svc_price_range_simple = "2.000 - 4.000 €"
-svc_price_range_pro = "3.000 - 6.000 €"
+svc_price_range_simple = "1.500 - 3.000 €"
+svc_price_range_pro = "2.500 - 5.000 €"
 nav_talks = "Charlas"
 nav_cv = "CV"
 toc_header_title = "En esta página"
