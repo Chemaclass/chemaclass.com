@@ -25,6 +25,7 @@ the rest of the chain.
 from __future__ import annotations
 
 import html
+import json
 import re
 import sys
 from pathlib import Path
@@ -49,6 +50,12 @@ DESCRIPTION_META = re.compile(
     r'<meta[^>]+name=["\']?description["\']?[^>]*content=["\']([^"\']*)', re.I)
 ROBOTS_META = re.compile(r'<meta[^>]+name=["\']?robots["\']?[^>]*>', re.I)
 REFRESH_META = re.compile(r'<meta[^>]+http-equiv=["\']?refresh', re.I)
+CANONICAL = re.compile(
+    r'<link[^>]+rel=["\']?canonical["\']?[^>]*href=["\']([^"\']+)', re.I)
+REFRESH_CONTENT = re.compile(
+    r'<meta\b[^>]*http-equiv=["\']?refresh["\']?[^>]*content=["\']([^"\']*)', re.I)
+JSON_LD = re.compile(
+    r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', re.I | re.S)
 H1 = re.compile(r'<h1[\s>]', re.I)
 MD_IMAGE = re.compile(r'!\[([^\]]*)\]\(([^)]+)\)')
 INTERNAL_LINK = re.compile(r'\]\((/(?:es/)?(?:blog|readings|talks|series)/[^)]*)\)')
@@ -56,15 +63,24 @@ FRONT_MATTER = re.compile(r'\+\+\+\n(.*?)\n\+\+\+', re.S)
 # A fenced block holds code, and a '#' or a dash in code is not prose.
 FENCE = re.compile(r'```.*?```|~~~.*?~~~', re.S)
 
+SOCIAL_META = {
+    'og:type': re.compile(r'<meta[^>]+property=["\']og:type["\']', re.I),
+    'og:title': re.compile(r'<meta[^>]+property=["\']og:title["\']', re.I),
+    'og:description': re.compile(r'<meta[^>]+property=["\']og:description["\']', re.I),
+    'og:url': re.compile(r'<meta[^>]+property=["\']og:url["\']', re.I),
+    'og:image': re.compile(r'<meta[^>]+property=["\']og:image["\']', re.I),
+    'twitter:card': re.compile(r'<meta[^>]+name=["\']twitter:card["\']', re.I),
+    'twitter:title': re.compile(r'<meta[^>]+name=["\']twitter:title["\']', re.I),
+    'twitter:description': re.compile(r'<meta[^>]+name=["\']twitter:description["\']', re.I),
+    'twitter:image': re.compile(r'<meta[^>]+name=["\']twitter:image["\']', re.I),
+}
+
 
 def built_pages() -> List[Path]:
-    """Every page a reader can land on: no redirect stubs, no Marp decks."""
+    """Every page a reader or crawler can land on, excluding Marp decks."""
     pages = []
     for page in sorted(PUBLIC_DIR.rglob('index.html')):
         if 'slides' in page.parts:
-            continue
-        head = page.read_text(encoding='utf-8', errors='replace')[:9000]
-        if REFRESH_META.search(head):
             continue
         pages.append(page)
     return pages
@@ -76,17 +92,53 @@ def check_built(problems: List[str]) -> int:
         url = '/' + str(page.parent.relative_to(PUBLIC_DIR)).replace('index.html', '')
         url = '/' if url == '/.' else url.rstrip('/') + '/'
         text = page.read_text(encoding='utf-8', errors='replace')
+        head = text[:12000]
+
+        if REFRESH_META.search(head):
+            canonical = CANONICAL.search(head)
+            refresh = REFRESH_CONTENT.search(head)
+            target = None
+            if refresh:
+                match = re.search(r'(?:^|;)\s*url\s*=\s*(.+?)\s*$',
+                                  html.unescape(refresh.group(1)), re.I)
+                target = match.group(1).strip(' "\'') if match else None
+            if not canonical:
+                problems.append(f'{url} redirect has no canonical target')
+            elif not target:
+                problems.append(f'{url} redirect has no readable target')
+            elif html.unescape(canonical.group(1)) != target:
+                problems.append(
+                    f'{url} redirects to {target} but canonical points to '
+                    f'{html.unescape(canonical.group(1))}')
+            continue
 
         headings = len(H1.findall(text))
         if headings != 1:
             problems.append(f'{url} has {headings} <h1>, expected exactly 1')
 
-        # A noindexed page is not in the index, so its snippet cannot be wrong.
-        robots = ROBOTS_META.search(text[:9000])
+        robots_tags = ROBOTS_META.findall(head)
+        if len(robots_tags) != 1:
+            problems.append(f'{url} has {len(robots_tags)} robots tags, expected exactly 1')
+        if not CANONICAL.search(head):
+            problems.append(f'{url} has no canonical URL')
+
+        for block in JSON_LD.findall(text):
+            try:
+                json.loads(block)
+            except json.JSONDecodeError as error:
+                problems.append(f'{url} has invalid JSON-LD: {error.msg}')
+
+        # A noindexed page is not in the index, so its snippet and share card
+        # cannot appear in search results.
+        robots = ROBOTS_META.search(head)
         if robots and 'noindex' in robots.group(0).lower():
             continue
 
-        found = DESCRIPTION_META.search(text[:12000])
+        for name, pattern in SOCIAL_META.items():
+            if not pattern.search(head):
+                problems.append(f'{url} has no {name} metadata')
+
+        found = DESCRIPTION_META.search(head)
         if not found:
             problems.append(f'{url} has no meta description')
             continue
