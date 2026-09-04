@@ -28,6 +28,7 @@
 // container selectors include .talk-single__content. Without this import the
 // highlight marks, toolbar and notes render unstyled on a talk page.
 @import "components/highlights";
+@import "components/hire-cta";
 
 // 6. Pages
 @import "pages/404";

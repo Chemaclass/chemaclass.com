@@ -24,14 +24,12 @@ const SEARCH_TEXT = {
 };
 const SERVICE_SEARCH_CONTENT = {
     en: {
-        "/services/": "Services overview for Chemaclass: custom web development, fast static websites, static+blog hybrids, WordPress builds, and hands-on team workshops focused on XP, TDD, and refactoring. Hire me to ship reliable websites or train your engineering team.",
-        "/services/web-development/": "Web Development service: responsive design, SEO fundamentals, HTTPS, analytics, static websites, static site plus blog using Zola or VitePress, and WordPress builds. Highlights speed, security, low hosting costs, and options for content updates.",
-        "/services/team-workshops/": "Team Workshops service: full-day coding sessions covering testing, golden master techniques, test-driven development, refactoring, pair programming, and safe improvements to legacy code. Morning session on tests, afternoon on refactoring, investment €350 per person for 3-8 developers."
+        "/services/web-development/": "Web Development service: fast static websites for businesses and professionals, fixed price from €2,000, live in under a month. Two tiers: Custom Website and Website + Blog. Responsive design, SEO fundamentals, HTTPS, hosting and domain included for year 1, optional care plan.",
+        "/services/team-workshops/": "Team Workshops service: full-day coding sessions covering testing, golden master techniques, test-driven development, refactoring, pair programming, and safe improvements to legacy code. Morning session on tests, afternoon on refactoring, investment €480 per person for 3-8 developers."
     },
     es: {
-        "/services/": "Servicios profesionales: desarrollo web a medida, sitios estáticos rápidos, soluciones WordPress, talleres para equipos sobre TDD y refactorización. Contrata a Chemaclass para lanzar tu web o para formar a tu equipo de ingeniería.",
-        "/services/web-development/": "Servicio de Desarrollo Web: diseño responsive, SEO básico, HTTPS, analítica, sitios estáticos ultrarrápidos, blogs generados estáticamente y sitios WordPress editables. Explica qué opción conviene según el negocio y los costes de mantenimiento.",
-        "/services/team-workshops/": "Servicio de Team Workshops: un día completo de coding katas enfocados en testing, golden master, TDD, refactorización y trabajo en código legado. Incluye sesiones de mañana y tarde, pair programming y precio de 350 € por persona para grupos de 3 a 8."
+        "/services/web-development/": "Servicio de Desarrollo Web: webs estáticas rápidas para empresas y profesionales, precio cerrado desde 2.000 €, online en menos de un mes. Dos opciones: Web a Medida y Web + Blog. Diseño responsive, SEO básico, HTTPS, hosting y dominio incluidos el primer año, plan de mantenimiento opcional.",
+        "/services/team-workshops/": "Servicio de Team Workshops: un día completo de coding katas enfocados en testing, golden master, TDD, refactorización y trabajo en código legado. Incluye sesiones de mañana y tarde, pair programming y precio de 480 € por persona para grupos de 3 a 8."
     }
 };
 const SEARCH_RESULT_LABELS = {
