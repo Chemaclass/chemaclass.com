@@ -318,8 +318,8 @@
         <input id="quote-email" name="email" type="email" autocomplete="email" required placeholder="{% if lang == 'es' %}tu@empresa.com{% else %}you@company.com{% endif %}">
       </div>
       <div class="sales-field">
-        <label for="quote-website">{% if lang == "es" %}Web actual{% else %}Current website{% endif %} <span>{% if lang == "es" %}opcional{% else %}optional{% endif %}</span></label>
-        <input id="quote-website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://">
+        <label for="quote-website">{% if lang == "es" %}Web actual{% else %}Current website{% endif %} <span>{% if lang == "es" %}si ya tienes una{% else %}if you have one{% endif %}</span></label>
+        <input id="quote-website" name="website" type="text" inputmode="url" autocomplete="url" placeholder="{% if lang == 'es' %}tunegocio.com{% else %}yourbusiness.com{% endif %}">
       </div>
       <div class="sales-field">
         <label for="quote-need">{% if lang == "es" %}¿Qué necesitas?{% else %}What do you need?{% endif %}</label>
@@ -372,7 +372,8 @@
       if (!form.reportValidity()) return;
 
       const email = document.getElementById('quote-email').value.trim();
-      const website = document.getElementById('quote-website').value.trim();
+      let website = document.getElementById('quote-website').value.trim();
+      if (website && !/^https?:\/\//i.test(website)) website = 'https://' + website;
       const need = document.getElementById('quote-need').value.trim();
       const selectedPackage = packageInput.value;
       const subject = (isSpanish ? 'Presupuesto web - ' : 'Website quote - ') + selectedPackage;
