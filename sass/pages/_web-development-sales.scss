@@ -801,6 +801,7 @@
   border: 1px solid var(--sales-border);
   border-radius: 14px;
   background: var(--sales-panel);
+  box-shadow: var(--shadow-md);
 
   &__note,
   &__alternative {
@@ -848,6 +849,12 @@
     color: var(--body-color);
     font: inherit;
     font-size: 0.9rem;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-subtitle);
+    opacity: 1;
   }
 
   textarea {
@@ -1092,6 +1099,27 @@
 }
 
 .theme-dark {
+  .web-development-sales {
+    // Elevation reads as lighter in dark, the reverse of light mode. Without
+    // this swap the raised panel sits below the recessed surface it should
+    // float above, and the quote form looks like a hole in its own container.
+    --sales-panel: var(--search-bg-selected-item);
+    --sales-soft: var(--search-input-bg);
+  }
+
+  .sales-field {
+    input,
+    textarea {
+      border-color: color-mix(in srgb, var(--body-color) 18%, var(--sales-border));
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--accent-color);
+      outline-color: color-mix(in srgb, var(--accent-color) 32%, transparent);
+    }
+  }
+
   .sales-button--primary,
   .sales-package__badge,
   .sales-package__icon,
