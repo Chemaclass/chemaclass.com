@@ -14,7 +14,7 @@
     <div class="sales-hero__copy">
       <span class="sales-eyebrow">{% if lang == "es" %}Webs para pequeñas empresas y profesionales independientes{% else %}Websites for small businesses and independent professionals{% endif %}</span>
       <h1>{% if lang == "es" %}Una web profesional, online en menos de un mes{% else %}A professional website, live in under a month{% endif %}</h1>
-      <p class="sales-hero__lead">{% if lang == "es" %}Construida a medida para tu negocio, con presupuesto cerrado desde 2.000 €. Hosting, dominio y mantenimiento del primer año incluidos.{% else %}Custom-built for your business, with a fixed quote from €2,000. Hosting, domain and first-year care included.{% endif %}</p>
+      <p class="sales-hero__lead">{% if lang == "es" %}Construida a medida para tu negocio, con presupuesto cerrado desde 1.500 €. Hosting, dominio y mantenimiento del primer año incluidos.{% else %}Custom-built for your business, with a fixed quote from €1,500. Hosting, domain and first-year care included.{% endif %}</p>
       <a class="sales-button sales-button--primary" href="#quote" data-quote-cta>
         {% if lang == "es" %}Recibir presupuesto cerrado{% else %}Get a fixed quote{% endif %} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
       </a>
@@ -92,7 +92,7 @@
         </div>
         <h3>{% if lang == "es" %}Web a Medida{% else %}Custom Website{% endif %}</h3>
         <p class="sales-package__fit">{% if lang == "es" %}Para negocios cuyo contenido cambia solo unas pocas veces al año.{% else %}For businesses whose content changes only a few times a year.{% endif %}</p>
-        <p class="sales-package__price">{% if lang == "es" %}2.000 - 4.000 €{% else %}€2,000 - €4,000{% endif %}</p>
+        <p class="sales-package__price">{{ trans(key='svc_price_range_simple', lang=lang) }}</p>
         <p class="sales-package__price-note">{% if lang == "es" %}Pago único. Presupuesto cerrado antes de empezar.{% else %}One-time project fee. Fixed quote before work begins.{% endif %}</p>
         <ul class="sales-package__uses">
           <li>{% if lang == "es" %}Webs corporativas{% else %}Company websites{% endif %}</li>
@@ -104,7 +104,7 @@
         <div class="sales-package__ongoing">
           <strong>{% if lang == "es" %}Desde el año 2{% else %}From year 2{% endif %}</strong>
           <span>{% if lang == "es" %}50 €/año hosting + dominio{% else %}€50/year hosting + domain{% endif %}</span>
-          <span>{% if lang == "es" %}Mantenimiento opcional: 200 - 400 €/año{% else %}Optional care: €200 - €400/year{% endif %}</span>
+          <span>{% if lang == "es" %}Mantenimiento opcional: {{ config.extra.pricing_static_maintenance_min }} - {{ config.extra.pricing_static_maintenance_max }} €/año{% else %}Optional care: €{{ config.extra.pricing_static_maintenance_min }} - €{{ config.extra.pricing_static_maintenance_max }}/year{% endif %}</span>
         </div>
         <a class="sales-button sales-button--primary sales-button--full" href="#quote" data-quote-cta data-package="{% if lang == 'es' %}Web a Medida{% else %}Custom Website{% endif %}">{% if lang == "es" %}Recibir presupuesto cerrado{% else %}Get a fixed quote{% endif %}</a>
       </article>
@@ -116,7 +116,7 @@
         </div>
         <h3>{% if lang == "es" %}Web + Blog{% else %}Website + Blog{% endif %}</h3>
         <p class="sales-package__fit">{% if lang == "es" %}Para negocios que publican noticias, artículos o casos de estudio cada mes.{% else %}For businesses publishing news, articles, or case studies every month.{% endif %}</p>
-        <p class="sales-package__price">{% if lang == "es" %}3.000 - 6.000 €{% else %}€3,000 - €6,000{% endif %}</p>
+        <p class="sales-package__price">{{ trans(key='svc_price_range_pro', lang=lang) }}</p>
         <p class="sales-package__price-note">{% if lang == "es" %}Pago único. Presupuesto cerrado antes de empezar.{% else %}One-time project fee. Fixed quote before work begins.{% endif %}</p>
         <ul class="sales-package__uses">
           <li>{% if lang == "es" %}Blogs de empresa{% else %}Company blogs{% endif %}</li>
@@ -128,7 +128,7 @@
         <div class="sales-package__ongoing">
           <strong>{% if lang == "es" %}Desde el año 2{% else %}From year 2{% endif %}</strong>
           <span>{% if lang == "es" %}50 €/año hosting + dominio{% else %}€50/year hosting + domain{% endif %}</span>
-          <span>{% if lang == "es" %}Mantenimiento opcional: 250 - 500 €/año{% else %}Optional care: €250 - €500/year{% endif %}</span>
+          <span>{% if lang == "es" %}Mantenimiento opcional: {{ config.extra.pricing_static_pro_maintenance_min }} - {{ config.extra.pricing_static_pro_maintenance_max }} €/año{% else %}Optional care: €{{ config.extra.pricing_static_pro_maintenance_min }} - €{{ config.extra.pricing_static_pro_maintenance_max }}/year{% endif %}</span>
         </div>
         <a class="sales-button sales-button--primary sales-button--full" href="#quote" data-quote-cta data-package="{% if lang == 'es' %}Web + Blog{% else %}Website + Blog{% endif %}">{% if lang == "es" %}Recibir presupuesto cerrado{% else %}Get a fixed quote{% endif %}</a>
       </article>
