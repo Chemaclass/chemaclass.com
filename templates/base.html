@@ -126,10 +126,7 @@
         "@type": "ImageObject",
         "url": "{{ get_url(path=config.extra.icon) | safe }}"
       },
-      "founder": {
-        "@type": "Person",
-        "name": "Jose Maria Valera Reales"
-      },
+      "founder": { "@id": "{{ config.base_url | safe }}/#person" },
       "sameAs": [
         "https://x.com/Chemaclass",
         "https://github.com/Chemaclass",
@@ -755,7 +752,9 @@
             <h3 class="page-footer__col-title">{{ trans(key="footer_col_about", lang=lang) }}</h3>
             <ul class="page-footer__list">
               <li><a href="{{ lp }}/cv/">{{ trans(key="nav_cv", lang=lang) }}</a></li>
-              <li><a href="{{ lp }}/services/web-development/">{{ trans(key="nav_services", lang=lang) }}</a></li>
+              <li><a href="{{ lp }}/services/web-development/">{{ trans(key="svc_web_dev", lang=lang) }}</a></li>
+              <li><a href="{{ lp }}/services/consulting/">{{ trans(key="svc_consulting_nav", lang=lang) }}</a></li>
+              <li><a href="{{ lp }}/services/team-workshops/">{{ trans(key="svc_workshops", lang=lang) }}</a></li>
               <li><a href="{{ lp }}/sponsor/">{{ trans(key="nav_sponsor_cta", lang=lang) }}</a></li>
             </ul>
           </div>

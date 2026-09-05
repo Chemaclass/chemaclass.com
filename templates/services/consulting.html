@@ -5,25 +5,82 @@
 {% endblock %}
 
 {% block posthead %}
+{% set base = config.base_url %}
+{% if lang == 'es' %}{% set_global svc_url = base ~ '/es/services/consulting/' %}{% else %}{% set_global svc_url = base ~ '/services/consulting/' %}{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{% if lang == 'es' %}Inicio{% else %}Home{% endif %}",
+      "item": "{{ base | safe }}{% if lang == 'es' %}/es/{% else %}/{% endif %}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{% if lang == 'es' %}Consultoría{% else %}Consulting{% endif %}",
+      "item": "{{ svc_url | safe }}"
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": "{{ svc_url | safe }}#service",
   "name": "{% if lang == 'es' %}Consultoría{% else %}Consulting{% endif %}",
   "description": "{% if lang == 'es' %}Sesiones individuales para tech leads, engineering managers y CTOs navegando complejidad real.{% else %}One-on-one sessions for tech leads, engineering managers, and CTOs navigating real complexity.{% endif %}",
-  "provider": {
-    "@type": "Person",
-    "name": "Chema Valera",
-    "url": "https://chemaclass.com"
+  "url": "{{ svc_url | safe }}",
+  "provider": { "@id": "{{ base | safe }}/#person" },
+  "areaServed": {
+    "@type": "Place",
+    "name": "{% if lang == 'es' %}Remoto, en todo el mundo{% else %}Remote, worldwide{% endif %}"
   },
+  "availableLanguage": ["en", "es"],
   "serviceType": "{% if lang == 'es' %}Consultoría de liderazgo técnico{% else %}Tech leadership consulting{% endif %}",
   "offers": {
     "@type": "Offer",
-    "price": "{{ config.extra.pricing_consulting_session }}",
+    "price": {{ config.extra.pricing_consulting_session }},
     "priceCurrency": "EUR",
     "availability": "https://schema.org/OutOfStock",
     "description": "{% if lang == 'es' %}Sesión individual de 1 hora{% else %}Single 1-hour session{% endif %}"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "{% if lang == 'es' %}¿Qué NO está incluido?{% else %}What's NOT included?{% endif %}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{% if lang == 'es' %}No es trabajo de código a medida, ni code reviews, ni acompañamiento de larga duración (retainer). Es una sesión enfocada de una hora para pensar tu problema en directo.{% else %}This isn't hands-on coding, code reviews, or long-term retainer coaching. It's a focused one-hour session to think through your problem live.{% endif %}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{% if lang == 'es' %}¿Para quién es?{% else %}Who is this for?{% endif %}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{% if lang == 'es' %}Tech leads, engineering managers y CTOs con complejidad real (equipo, organización, decisiones técnicas). No es mentoría para devs de primer empleo.{% else %}Tech leads, engineering managers, and CTOs facing real complexity (team, org, technical decisions). Not mentoring for first-job developers.{% endif %}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{% if lang == 'es' %}¿Política de cancelación?{% else %}Cancellation policy?{% endif %}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{% if lang == 'es' %}Reprograma sin coste hasta 24h antes. Después de eso, la sesión cuenta como usada.{% else %}Reschedule free up to 24h before. After that, the session counts as used.{% endif %}"
+      }
+    }
+  ]
 }
 </script>
 {% endblock posthead %}

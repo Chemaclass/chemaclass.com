@@ -37,7 +37,7 @@
   "url": "{{ svc_url | safe }}",
   "description": "{% if lang == 'es' %}Webs estáticas rápidas y seguras para empresas y profesionales. Precio cerrado, hosting y dominio incluidos el primer año.{% else %}Fast, secure static websites for businesses and professionals. Fixed price, hosting and domain included for the first year.{% endif %}",
   "provider": { "@id": "{{ base | safe }}/#person" },
-  "availableLanguage": ["en", "es", "de"],
+  "availableLanguage": ["en", "es"],
   "areaServed": {
     "@type": "Place",
     "name": "{% if lang == 'es' %}Remoto, en todo el mundo{% else %}Remote, worldwide{% endif %}"
