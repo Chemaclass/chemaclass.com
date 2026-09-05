@@ -46,7 +46,6 @@
     "@type": "AggregateOffer",
     "priceCurrency": "EUR",
     "lowPrice": "{{ config.extra.pricing_static_simple_min }}",
-    "highPrice": "{{ config.extra.pricing_static_pro_max }}",
     "offerCount": 2
   },
   "hasOfferCatalog": {
@@ -61,8 +60,7 @@
         "priceSpecification": {
           "@type": "PriceSpecification",
           "priceCurrency": "EUR",
-          "minPrice": "{{ config.extra.pricing_static_simple_min }}",
-          "maxPrice": "{{ config.extra.pricing_static_simple_max }}"
+          "minPrice": "{{ config.extra.pricing_static_simple_min }}"
         }
       },
       {
@@ -73,8 +71,7 @@
         "priceSpecification": {
           "@type": "PriceSpecification",
           "priceCurrency": "EUR",
-          "minPrice": "{{ config.extra.pricing_static_pro_min }}",
-          "maxPrice": "{{ config.extra.pricing_static_pro_max }}"
+          "minPrice": "{{ config.extra.pricing_static_pro_min }}"
         }
       }
     ]
@@ -88,7 +85,7 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "{% if lang == 'es' %}¿Qué determina el precio dentro de cada rango?{% else %}What changes the price within each range?{% endif %}",
+      "name": "{% if lang == 'es' %}¿Qué determina el precio final?{% else %}What changes the final price?{% endif %}",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "{% if lang == 'es' %}El número de páginas, idiomas, funcionalidades especiales y el estado del contenido. Recibes un presupuesto cerrado para el alcance acordado antes de empezar.{% else %}The number of pages, languages, special features, and how ready your content is. You receive a fixed quote for the agreed scope before any work begins.{% endif %}"
