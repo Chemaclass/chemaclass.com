@@ -12,7 +12,7 @@
 <article class="web-development-sales">
   <section class="sales-hero" id="top">
     <div class="sales-hero__copy">
-      <span class="sales-eyebrow">{% if lang == "es" %}Diseño y desarrollo web para pequeñas empresas y profesionales independientes{% else %}Web design and development for small businesses and independent professionals{% endif %}</span>
+      <span class="sales-eyebrow">{{ trans(key='svc_price_from_label', lang=lang) }} {{ trans(key='svc_price_from_simple', lang=lang) }}</span>
       <h1>{% if lang == "es" %}Diseño de páginas web para empresas, online en menos de un mes{% else %}Website design for small businesses, live in under a month{% endif %}</h1>
       <p class="sales-hero__lead">{% if lang == "es" %}Una página web rápida y segura, hecha a medida para tu negocio. La misma persona la diseña, la construye y la lanza, así siempre sabes con quién hablas.{% else %}A fast, secure website, custom-built for your business. The same person designs it, builds it and launches it, so you always know who you are talking to.{% endif %}</p>
       <a class="sales-button sales-button--primary" href="#quote" data-quote-cta>
@@ -91,7 +91,7 @@
           <span class="sales-package__badge">{% if lang == "es" %}Recomendada{% else %}Recommended{% endif %}</span>
         </div>
         <h3>{% if lang == "es" %}Web a Medida{% else %}Custom Website{% endif %}</h3>
-        <p class="sales-package__fit">{% if lang == "es" %}Para negocios cuyo contenido cambia solo unas pocas veces al año.{% else %}For businesses whose content changes only a few times a year.{% endif %}</p>
+        <p class="sales-package__fit">{% if lang == "es" %}Para contenido que cambia pocas veces al año.{% else %}For content that changes a few times a year.{% endif %}</p>
         <p class="sales-package__price"><span class="sales-package__price-from">{{ trans(key='svc_price_from_label', lang=lang) }}</span> {{ trans(key='svc_price_from_simple', lang=lang) }}</p>
         <p class="sales-package__price-note">{% if lang == "es" %}Pago único. Presupuesto cerrado antes de empezar.{% else %}One-time project fee. Fixed quote before work begins.{% endif %}</p>
         <ul class="sales-package__uses">
@@ -115,7 +115,7 @@
           <span class="sales-package__badge sales-package__badge--neutral">{% if lang == "es" %}Para publicar cada mes{% else %}For monthly publishing{% endif %}</span>
         </div>
         <h3>{% if lang == "es" %}Web + Blog{% else %}Website + Blog{% endif %}</h3>
-        <p class="sales-package__fit">{% if lang == "es" %}Para negocios que publican noticias, artículos o casos de estudio cada mes.{% else %}For businesses publishing news, articles, or case studies every month.{% endif %}</p>
+        <p class="sales-package__fit">{% if lang == "es" %}Para publicar algo nuevo cada mes.{% else %}For publishing something new every month.{% endif %}</p>
         <p class="sales-package__price"><span class="sales-package__price-from">{{ trans(key='svc_price_from_label', lang=lang) }}</span> {{ trans(key='svc_price_from_pro', lang=lang) }}</p>
         <p class="sales-package__price-note">{% if lang == "es" %}Pago único. Presupuesto cerrado antes de empezar.{% else %}One-time project fee. Fixed quote before work begins.{% endif %}</p>
         <ul class="sales-package__uses">
@@ -124,7 +124,7 @@
           <li>{% if lang == "es" %}Casos de estudio{% else %}Case studies{% endif %}</li>
           <li>{% if lang == "es" %}Portfolios que crecen{% else %}Growing portfolios{% endif %}</li>
         </ul>
-        <p class="sales-package__consideration"><strong>{% if lang == "es" %}Actualizaciones:{% else %}Content updates:{% endif %}</strong> {% if lang == "es" %}Publícalas tú. Te enseño cómo, o lo hago yo cada mes.{% else %}Publish them yourself. I show you how, or I do it every month.{% endif %}</p>
+        <p class="sales-package__consideration"><strong>{% if lang == "es" %}Actualizaciones:{% else %}Content updates:{% endif %}</strong> {% if lang == "es" %}Publícalas tú, o las publico yo cada mes.{% else %}Publish them yourself, or I do it monthly.{% endif %}</p>
         <div class="sales-package__ongoing">
           <strong>{% if lang == "es" %}Del año 2 en adelante{% else %}Year 2 onwards{% endif %}</strong>
           <span>{% set yearly = config.extra.pricing_static_hosting + config.extra.pricing_domain %}{% if lang == "es" %}{{ yearly }} €/año hosting + dominio{% else %}€{{ yearly }}/year hosting + domain{% endif %}</span>
