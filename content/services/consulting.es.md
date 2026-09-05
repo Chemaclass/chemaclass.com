@@ -5,4 +5,6 @@ template = "services/consulting.html"
 aliases = ["/es/consulting"]
 
 [extra]
+# Paused: no new bookings, so keep it out of search until it reopens.
+noindex = true
 +++
