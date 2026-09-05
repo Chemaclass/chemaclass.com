@@ -69,7 +69,7 @@
     {# Free to read is not the same as free to reuse, and an answer engine
        deciding whether it may quote this should not have to infer either. #}
     {% if licensed and config.extra.content_license %}"license": "{{ config.extra.content_license.url | safe }}",
-    "usageInfo": "{{ config.base_url | safe }}/.well-known/ai.txt",
+    "usageInfo": "{{ config.base_url | safe }}/ai.txt",
     "copyrightHolder": { "@id": "{{ config.base_url | safe }}/#person" },
     "copyrightYear": "{% if page.date %}{{ page.date | date(format='%Y') }}{% endif %}",{% endif %}
     "headline": "{{ page.title }}",

@@ -45,7 +45,7 @@ Grupos de artículos elegidos a mano. Cada artículo se sostiene por sí solo, y
 - JSON Feed: https://chemaclass.com/feed.json
 - Sitemap: https://chemaclass.com/sitemap.xml
 - Contenido completo (para agentes IA): https://chemaclass.com/llms-full.txt
-- Política de uso IA: https://chemaclass.com/.well-known/ai.txt
+- Política de uso IA: https://chemaclass.com/ai.txt
 
 - Licencia: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Cita libremente, nombrando la fuente.
 

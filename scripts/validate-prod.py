@@ -204,7 +204,7 @@ def check_sweep(base: str) -> None:
     # Every JSON-LD node, robots.txt, llms.txt and humans.txt point at these.
     # They 404'd in production for a month because GitHub Pages drops dot
     # directories without a .nojekyll, and nothing here was looking.
-    sweep([f'{base}/.well-known/ai.txt', f'{base}/.well-known/security.txt'],
+    sweep([f'{base}/ai.txt', f'{base}/security.txt'],
           'well-known files')
 
     for path in ('/llms.txt', '/es/llms.txt'):

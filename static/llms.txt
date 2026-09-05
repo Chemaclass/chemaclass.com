@@ -45,7 +45,7 @@ Curated groups of posts. Each post stands on its own, and the order below is the
 - JSON Feed: https://chemaclass.com/feed.json
 - Sitemap: https://chemaclass.com/sitemap.xml
 - Full content (for AI agents): https://chemaclass.com/llms-full.txt
-- AI use policy: https://chemaclass.com/.well-known/ai.txt
+- AI use policy: https://chemaclass.com/ai.txt
 
 - License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Quote freely, cite the source.
 
