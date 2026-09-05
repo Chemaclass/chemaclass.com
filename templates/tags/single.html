@@ -6,6 +6,10 @@
 {{ macros::page_styles(css='listing.css') }}
 {% endblock styles %}
 
+{# Without this the term pages all fall through base.html to config.title, so
+   every one of them shipped the same <title>Chemaclass</title>. #}
+{% block title %}{{ term.name }} | {% if lang == "es" %}Artículos{% else %}Articles{% endif %} | {{ config.title }}{% endblock title %}
+
 {% block description %}
   {% set tag_desc = "" %}
   {% for td in config.extra.tag_descriptions %}
@@ -49,9 +53,12 @@
         <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
         <line x1="7" y1="7" x2="7.01" y2="7"></line>
       </svg>
-      {{ term.name }}
+      {# The term itself moved into the H1, so the label says what this page is
+         rather than repeating the word directly underneath itself. #}
+      {% if lang == "es" %}Etiqueta{% else %}Tag{% endif %}
     </span>
-    <h1>{{ term.pages | length }} {% if term.pages | length == 1 %}{{ trans(key="post", lang=lang) }}{% else %}{{ trans(key="posts", lang=lang) }}{% endif %}</h1>
+    <h1>{{ term.name }}</h1>
+    <p class="tag-single__count">{{ term.pages | length }} {% if term.pages | length == 1 %}{{ trans(key="post", lang=lang) }}{% else %}{{ trans(key="posts", lang=lang) }}{% endif %}</p>
     {% for td in config.extra.tag_descriptions %}
       {% if td.name == term.name %}
         <p class="tag-single__description">

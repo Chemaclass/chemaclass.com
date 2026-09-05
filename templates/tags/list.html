@@ -6,6 +6,8 @@
 {{ macros::page_styles(css='listing.css') }}
 {% endblock styles %}
 
+{% block title %}{% if lang == "es" %}Todas las etiquetas{% else %}All tags{% endif %} | {{ config.title }}{% endblock title %}
+
 {% block description %}
   {% if lang == "es" %}
     <meta name="description" content="Explora {{ terms | length }} etiquetas sobre desarrollo de software, liderazgo, testing y más." />
