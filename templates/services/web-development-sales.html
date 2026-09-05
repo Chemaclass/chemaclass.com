@@ -32,8 +32,11 @@
     </aside>
   </section>
 
+  {% set lp = '' %}{% if lang == 'es' %}{% set lp = '/es' %}{% endif %}
   <div class="sales-trust-strip" aria-label="{% if lang == 'es' %}Garantías del servicio{% else %}Service assurances{% endif %}">
-    <span><i class="fa-solid fa-user" aria-hidden="true"></i> {% if lang == "es" %}Hecha por un senior{% else %}Senior-built{% endif %}</span>
+    {# The only in-content internal link on the page. Someone about to wire
+       four figures to one person can go read who that person is. #}
+    <span><i class="fa-solid fa-user" aria-hidden="true"></i> <a href="{{ lp }}/cv/">{% if lang == "es" %}Hecha por un senior{% else %}Senior-built{% endif %}</a></span>
     <span><i class="fa-solid fa-file" aria-hidden="true"></i> {% if lang == "es" %}Presupuesto cerrado{% else %}Fixed quote{% endif %}</span>
     <span><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> {% if lang == "es" %}Primer año incluido{% else %}Year 1 included{% endif %}</span>
     <span><i class="fa-solid fa-code" aria-hidden="true"></i> {% if lang == "es" %}El código es tuyo{% else %}You own the code{% endif %}</span>
