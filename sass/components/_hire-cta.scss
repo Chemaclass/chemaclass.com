@@ -28,39 +28,6 @@
     margin: 0;
   }
 
-  &__btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-shrink: 0;
-    padding: 0.6rem 1.1rem;
-    border-radius: 8px;
-    background: var(--accent-color);
-    color: #fff;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-
-    &:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
-    }
-
-    // Dark theme flips --accent-color to a light blue; white ink on it is ~2.6:1.
-    .theme-dark & {
-      color: var(--body-bg);
-    }
-
-    svg {
-      transition: transform 0.2s ease;
-    }
-
-    &:hover svg {
-      transform: translateX(2px);
-    }
-  }
-
   @media (max-width: $breakpoint-phone) {
     flex-direction: column;
     align-items: flex-start;

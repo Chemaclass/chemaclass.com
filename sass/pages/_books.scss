@@ -7,24 +7,6 @@
   margin: 0 auto;
 }
 
-.books-header {
-  margin-bottom: 2.5rem;
-
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0 0 0.5rem;
-    color: var(--heading-color);
-  }
-}
-
-.books-intro {
-  font-size: 1.05rem;
-  color: var(--color-subtitle);
-  line-height: 1.6;
-  margin: 0;
-}
-
 .books-grid {
   display: flex;
   flex-direction: column;
