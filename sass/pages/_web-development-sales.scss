@@ -4,6 +4,7 @@
   --sales-panel: var(--search-input-bg);
   --sales-soft: var(--search-bg-selected-item);
   --sales-border: var(--preview-divider-color);
+  --sales-purple: #6b46c1;
   padding-top: 1.5rem;
 
   section {
@@ -310,10 +311,11 @@
   border: 1px solid var(--sales-border);
   border-radius: 16px;
   background: var(--sales-panel);
+  box-shadow: var(--shadow-sm);
 
   &--recommended {
     border-color: color-mix(in srgb, var(--accent-color) 70%, var(--sales-border));
-    box-shadow: 0 12px 32px color-mix(in srgb, var(--accent-color) 10%, transparent);
+    box-shadow: var(--shadow-lg);
   }
 
   &__topline {
@@ -335,7 +337,7 @@
     color: #fff;
 
     &--purple {
-      background: #6b46c1;
+      background: var(--sales-purple);
     }
   }
 
@@ -1124,6 +1126,13 @@
     // float above, and the quote form looks like a hole in its own container.
     --sales-panel: var(--search-bg-selected-item);
     --sales-soft: var(--search-input-bg);
+    // Both surfaces sit within a few points of the page background, so the
+    // divider is the only thing drawing a card edge. Give it something to work
+    // with, otherwise the cards dissolve into the page.
+    --sales-border: color-mix(in srgb, var(--body-color) 12%, var(--preview-divider-color));
+    // #6b46c1 is tuned for white glyphs. Against the dark-mode glyph colour
+    // below it lands at 2.6:1, so lift it to where the accent blue already sits.
+    --sales-purple: #a78bfa;
   }
 
   .sales-field {
@@ -1140,7 +1149,9 @@
   }
 
   .sales-button--primary,
-  .sales-package__badge,
+  // The neutral badge is the one surface here that is not accent-filled: it
+  // keeps its own light-on-dark colour rather than the dark glyph colour.
+  .sales-package__badge:not(.sales-package__badge--neutral),
   .sales-package__icon,
   .sales-process-grid li > span,
   .sales-sticky-cta {
