@@ -14,7 +14,7 @@
     <div class="sales-hero__copy">
       <span class="sales-eyebrow">{% if lang == "es" %}Diseño y desarrollo web para pequeñas empresas y profesionales independientes{% else %}Web design and development for small businesses and independent professionals{% endif %}</span>
       <h1>{% if lang == "es" %}Una página web profesional, online en menos de un mes{% else %}A professional website, live in under a month{% endif %}</h1>
-      <p class="sales-hero__lead">{% if lang == "es" %}Una página web rápida y segura, hecha a medida para tu negocio, con presupuesto cerrado desde 1.000 €. Hosting, dominio y mantenimiento del primer año incluidos.{% else %}A fast, secure website, custom-built for your business, with a fixed quote from €1,000. Hosting, domain and first-year care included.{% endif %}</p>
+      <p class="sales-hero__lead">{% if lang == "es" %}Una página web rápida y segura, hecha a medida para tu negocio. La misma persona la diseña, la construye y la lanza, así siempre sabes con quién hablas.{% else %}A fast, secure website, custom-built for your business. The same person designs it, builds it and launches it, so you always know who you are talking to.{% endif %}</p>
       <a class="sales-button sales-button--primary" href="#quote" data-quote-cta>
         {% if lang == "es" %}Recibir presupuesto cerrado{% else %}Get a fixed quote{% endif %} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
       </a>
@@ -102,8 +102,8 @@
         </ul>
         <p class="sales-package__consideration"><strong>{% if lang == "es" %}Actualizaciones:{% else %}Content updates:{% endif %}</strong> {% if lang == "es" %}Envíamelas cuando las necesites. Así la web sigue siendo sencilla y requiere poco mantenimiento.{% else %}Send them to me when needed. This keeps the site simple and low-maintenance.{% endif %}</p>
         <div class="sales-package__ongoing">
-          <strong>{% if lang == "es" %}Desde el año 2{% else %}From year 2{% endif %}</strong>
-          <span>{% if lang == "es" %}50 €/año hosting + dominio{% else %}€50/year hosting + domain{% endif %}</span>
+          <strong>{% if lang == "es" %}Del año 2 en adelante{% else %}Year 2 onwards{% endif %}</strong>
+          <span>{% set yearly = config.extra.pricing_static_hosting + config.extra.pricing_domain %}{% if lang == "es" %}{{ yearly }} €/año hosting + dominio{% else %}€{{ yearly }}/year hosting + domain{% endif %}</span>
           <span>{% if lang == "es" %}Mantenimiento opcional: {{ config.extra.pricing_static_maintenance }} €/año{% else %}Optional care: €{{ config.extra.pricing_static_maintenance }}/year{% endif %}</span>
         </div>
         <a class="sales-button sales-button--primary sales-button--full" href="#quote" data-quote-cta data-package="{% if lang == 'es' %}Web a Medida{% else %}Custom Website{% endif %}">{% if lang == "es" %}Recibir presupuesto cerrado{% else %}Get a fixed quote{% endif %}</a>
@@ -126,8 +126,8 @@
         </ul>
         <p class="sales-package__consideration"><strong>{% if lang == "es" %}Actualizaciones:{% else %}Content updates:{% endif %}</strong> {% if lang == "es" %}Publícalas tú tras una breve formación, o deja que yo gestione las actualizaciones mensuales.{% else %}Publish them yourself after a short handover, or let me handle the monthly updates.{% endif %}</p>
         <div class="sales-package__ongoing">
-          <strong>{% if lang == "es" %}Desde el año 2{% else %}From year 2{% endif %}</strong>
-          <span>{% if lang == "es" %}50 €/año hosting + dominio{% else %}€50/year hosting + domain{% endif %}</span>
+          <strong>{% if lang == "es" %}Del año 2 en adelante{% else %}Year 2 onwards{% endif %}</strong>
+          <span>{% set yearly = config.extra.pricing_static_hosting + config.extra.pricing_domain %}{% if lang == "es" %}{{ yearly }} €/año hosting + dominio{% else %}€{{ yearly }}/year hosting + domain{% endif %}</span>
           <span>{% if lang == "es" %}Mantenimiento opcional: {{ config.extra.pricing_static_pro_maintenance }} €/año{% else %}Optional care: €{{ config.extra.pricing_static_pro_maintenance }}/year{% endif %}</span>
         </div>
         <a class="sales-button sales-button--primary sales-button--full" href="#quote" data-quote-cta data-package="{% if lang == 'es' %}Web + Blog{% else %}Website + Blog{% endif %}">{% if lang == "es" %}Recibir presupuesto cerrado{% else %}Get a fixed quote{% endif %}</a>
