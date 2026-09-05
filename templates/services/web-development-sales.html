@@ -21,13 +21,114 @@
       <p class="sales-hero__microcopy">{% if lang == "es" %}Respuesta en un día laborable. Primera llamada gratis, sin compromiso.{% else %}Reply within one working day. Free discovery call, no commitment.{% endif %}</p>
     </div>
 
-    <aside class="sales-hero-proof" aria-label="{% if lang == 'es' %}Testimonio de cliente{% else %}Client testimonial{% endif %}">
-      <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente en producción{% else %}Live client website{% endif %}</span>
-      <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="Windmill Tündern website" width="720" height="450">
-      <blockquote>{% if lang == "es" %}“Por fin tenemos la presencia online que nuestro molino de 140 años merece.”{% else %}“We finally have the online presence our 140-year-old mill deserves.”{% endif %}</blockquote>
-      <div class="sales-hero-proof__person">
-        <img src="/images/testimonials/dirk-windmuehle.webp" alt="" width="36" height="36">
-        <span><strong>Dirk</strong> · Windmill Tündern</span>
+    <aside class="sales-hero-proof" data-proof-showcase aria-label="{% if lang == 'es' %}Proyectos seleccionados{% else %}Selected projects{% endif %}">
+      <div class="sales-hero-proof__slides" aria-live="polite">
+        <article class="sales-hero-proof__slide" data-proof-slide>
+          <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente en producción{% else %}Live client website{% endif %}</span>
+          <a href="{% if lang == 'es' %}https://windmuehle-tuendern.de/es/{% else %}https://windmuehle-tuendern.de/en/{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la web de Windmill Tündern{% else %}View the Windmill Tündern website{% endif %}">
+            <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="Windmill Tündern website" width="720" height="450">
+          </a>
+          <blockquote>{% if lang == "es" %}“Por fin tenemos la presencia online que nuestro molino de 140 años merece.”{% else %}“We finally have the online presence our 140-year-old mill deserves.”{% endif %}</blockquote>
+          <div class="sales-hero-proof__person">
+            <img src="/images/testimonials/dirk-windmuehle.webp" alt="" width="36" height="36">
+            <span><strong>Dirk</strong> · Windmill Tündern</span>
+          </div>
+        </article>
+
+        <article class="sales-hero-proof__slide" data-proof-slide hidden>
+          <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente en producción{% else %}Live client website{% endif %}</span>
+          <a href="https://teina.es" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la web de Teína{% else %}View the Teína website{% endif %}">
+            <img src="/images/portfolio/teina-sample.webp" alt="Teína website" loading="lazy" width="720" height="450">
+          </a>
+          <blockquote>{% if lang == "es" %}“Exactamente lo que necesitábamos, con una sección de conciertos perfecta para que los fans sigan la agenda.”{% else %}“Exactly what we needed, with a concerts section our fans love to follow.”{% endif %}</blockquote>
+          <div class="sales-hero-proof__person">
+            <img src="/images/testimonials/adrian-teina.webp" alt="" loading="lazy" width="36" height="36">
+            <span><strong>Adrián</strong> · Teína</span>
+          </div>
+        </article>
+
+        <article class="sales-hero-proof__slide" data-proof-slide hidden>
+          <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente en producción{% else %}Live client website{% endif %}</span>
+          <a href="{% if lang == 'es' %}https://fco-sandoval-gomez.es/{% else %}https://fco-sandoval-gomez.es/en/{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la web de Fco Sandoval Gómez{% else %}View the Fco Sandoval Gómez website{% endif %}">
+            <img src="/images/portfolio/fco-sandoval-gomez-sample.webp" alt="Fco Sandoval Gómez website" loading="lazy" width="720" height="450">
+          </a>
+          <blockquote>{% if lang == "es" %}“Un portfolio rápido y limpio para compartir mi trabajo, investigación y publicaciones sin fricciones.”{% else %}“A fast, clean portfolio to share my work, research, and publications seamlessly.”{% endif %}</blockquote>
+          <div class="sales-hero-proof__person">
+            <img src="/images/testimonials/fco-sandoval.webp" alt="" loading="lazy" width="36" height="36">
+            <span><strong>Francisco</strong> · {% if lang == "es" %}Arquitecto{% else %}Architect{% endif %}</span>
+          </div>
+        </article>
+
+        <article class="sales-hero-proof__slide" data-proof-slide hidden>
+          <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente en producción{% else %}Live client website{% endif %}</span>
+          <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la web de D'Krisna{% else %}View the D'Krisna website{% endif %}">
+            <img src="/images/portfolio/dkrisna-sample.webp" alt="D'Krisna website" loading="lazy" width="720" height="450">
+          </a>
+          <p class="sales-hero-proof__summary">{% if lang == "es" %}Web bilingüe de seis páginas que conecta servicios, reseñas y reservas.{% else %}A bilingual six-page website connecting services, reviews, and booking.{% endif %}</p>
+          <div class="sales-hero-proof__project">
+            <span class="sales-hero-proof__mark" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            <span><strong>D'Krisna</strong> · {% if lang == "es" %}Diseñada y desarrollada por mí{% else %}Designed and built by me{% endif %}</span>
+          </div>
+        </article>
+
+        <article class="sales-hero-proof__slide" data-proof-slide hidden>
+          <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente en producción{% else %}Live client website{% endif %}</span>
+          <a href="https://dinamita-gym.es" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la web de Dinamita Gym{% else %}View the Dinamita Gym website{% endif %}">
+            <img src="/images/portfolio/dinamitagym-sample.webp" alt="Dinamita Gym website" loading="lazy" width="720" height="450">
+          </a>
+          <p class="sales-hero-proof__summary">{% if lang == "es" %}Una web directa para presentar entrenamientos, equipo y formas de contacto.{% else %}A focused website presenting training, the team, and ways to get in touch.{% endif %}</p>
+          <div class="sales-hero-proof__project">
+            <span class="sales-hero-proof__mark" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            <span><strong>Dinamita Gym</strong> · {% if lang == "es" %}Diseñada y desarrollada por mí{% else %}Designed and built by me{% endif %}</span>
+          </div>
+        </article>
+
+        <article class="sales-hero-proof__slide" data-proof-slide hidden>
+          <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente en producción{% else %}Live client website{% endif %}</span>
+          <a href="https://postcardfromtheroad.eu" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la web de Postcard from the Road{% else %}View the Postcard from the Road website{% endif %}">
+            <img src="/images/portfolio/postcardfromtheroad-sample.webp" alt="Postcard from the Road website" loading="lazy" width="720" height="450">
+          </a>
+          <p class="sales-hero-proof__summary">{% if lang == "es" %}Blog de viajes con más de 50 artículos, buscador y galerías fotográficas.{% else %}A travel blog with more than 50 articles, search, and photo galleries.{% endif %}</p>
+          <div class="sales-hero-proof__project">
+            <span class="sales-hero-proof__mark" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            <span><strong>Postcard from the Road</strong> · {% if lang == "es" %}Desarrollada por mí{% else %}Built by me{% endif %}</span>
+          </div>
+        </article>
+
+        <article class="sales-hero-proof__slide" data-proof-slide hidden>
+          <span class="sales-hero-proof__label">{% if lang == "es" %}Producto propio en producción{% else %}Own product, live today{% endif %}</span>
+          <a href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la aplicación MIAFORO{% else %}View the MIAFORO application{% endif %}">
+            <img src="/images/portfolio/miaforo-sample.webp" alt="MIAFORO gym management app" loading="lazy" width="720" height="450">
+          </a>
+          <p class="sales-hero-proof__summary">{% if lang == "es" %}Reservas, cobros, socios y progreso para gimnasios independientes.{% else %}Bookings, payments, members, and progress for independent gyms.{% endif %}</p>
+          <div class="sales-hero-proof__project">
+            <span class="sales-hero-proof__mark" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
+            <span><strong>MIAFORO</strong> · {% if lang == "es" %}Creada y operada por mí{% else %}Built and operated by me{% endif %}</span>
+          </div>
+        </article>
+
+        <article class="sales-hero-proof__slide" data-proof-slide hidden>
+          <span class="sales-hero-proof__label">{% if lang == "es" %}Producto propio en producción{% else %}Own product, live today{% endif %}</span>
+          <a href="{% if lang == 'es' %}https://puertafria.es/{% else %}https://puertafria.es/en{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la aplicación puertafria{% else %}View the puertafria application{% endif %}">
+            <img src="/images/portfolio/puertafria-sample.webp" alt="puertafria sales app" loading="lazy" width="720" height="450">
+          </a>
+          <p class="sales-hero-proof__summary">{% if lang == "es" %}Un CSV convertido en un embudo diario y enfocado para captar clientes.{% else %}A CSV turned into a focused daily funnel for winning new clients.{% endif %}</p>
+          <div class="sales-hero-proof__project">
+            <span class="sales-hero-proof__mark" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
+            <span><strong>puertafria</strong> · {% if lang == "es" %}Creada y operada por mí{% else %}Built and operated by me{% endif %}</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="sales-hero-proof__nav">
+        <button type="button" data-proof-previous aria-label="{% if lang == 'es' %}Proyecto anterior{% else %}Previous project{% endif %}"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+        <div class="sales-hero-proof__dots" aria-label="{% if lang == 'es' %}Elegir proyecto{% else %}Choose a project{% endif %}">
+          {% for number in range(end=8) %}
+          <button type="button" data-proof-dot="{{ number }}" aria-label="{% if lang == 'es' %}Mostrar proyecto {{ number + 1 }}{% else %}Show project {{ number + 1 }}{% endif %}"{% if number == 0 %} class="is-active" aria-current="true"{% endif %}></button>
+          {% endfor %}
+        </div>
+        <span class="sales-hero-proof__count" data-proof-count aria-live="off">1 / 8</span>
+        <button type="button" data-proof-next aria-label="{% if lang == 'es' %}Proyecto siguiente{% else %}Next project{% endif %}"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
       </div>
     </aside>
   </section>
@@ -347,6 +448,7 @@
   const sticky = document.querySelector('.sales-sticky-cta');
   const hero = document.querySelector('.sales-hero');
   const quote = document.querySelector('.sales-quote');
+  const showcase = document.querySelector('[data-proof-showcase]');
   const isSpanish = document.documentElement.lang === 'es';
 
   function track(name, properties) {
@@ -356,6 +458,38 @@
   }
 
   track('WebDevelopmentView', { variant: 'sales' });
+
+  if (showcase) {
+    const slides = Array.from(showcase.querySelectorAll('[data-proof-slide]'));
+    const dots = Array.from(showcase.querySelectorAll('[data-proof-dot]'));
+    const count = showcase.querySelector('[data-proof-count]');
+    const previous = showcase.querySelector('[data-proof-previous]');
+    const next = showcase.querySelector('[data-proof-next]');
+    let current = 0;
+
+    const showProject = function (index, shouldTrack) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach(function (slide, slideIndex) {
+        slide.hidden = slideIndex !== current;
+      });
+      dots.forEach(function (dot, dotIndex) {
+        const active = dotIndex === current;
+        dot.classList.toggle('is-active', active);
+        if (active) dot.setAttribute('aria-current', 'true');
+        else dot.removeAttribute('aria-current');
+      });
+      if (count) count.textContent = (current + 1) + ' / ' + slides.length;
+      if (shouldTrack) track('WebsiteProofViewed', { project: current + 1 });
+    };
+
+    if (previous) previous.addEventListener('click', function () { showProject(current - 1, true); });
+    if (next) next.addEventListener('click', function () { showProject(current + 1, true); });
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        showProject(Number(dot.dataset.proofDot), true);
+      });
+    });
+  }
 
   document.querySelectorAll('[data-quote-cta]').forEach(function (cta) {
     cta.addEventListener('click', function () {
