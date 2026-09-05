@@ -29,7 +29,7 @@ main:has(.homepage-container) #scroll-to-top {
 // Put the introduction and its actions before the portrait on small screens.
 .homepage-intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 144px;
+  grid-template-columns: minmax(0, 1fr) 200px;
   align-items: center;
   gap: 2rem;
   padding: 2rem 0;
@@ -37,7 +37,7 @@ main:has(.homepage-container) #scroll-to-top {
   h1 { margin: 0 0 0.5rem; font-size: clamp(2rem, 5vw, 3rem); }
   p { max-width: 60ch; line-height: 1.65; }
   &__lead { color: var(--accent-color); font-size: 1.25rem; }
-  &__portrait { width: 144px; height: 144px; border-radius: 50%; }
+  &__portrait { width: 200px; height: 200px; border-radius: 50%; }
   &__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0 1rem; }
   &__background { font-size: 0.9rem; }
 }
@@ -56,7 +56,7 @@ main:has(.homepage-container) #scroll-to-top {
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1rem 0;
-    &__portrait { width: 96px; height: 96px; }
+    &__portrait { width: 120px; height: 120px; }
   }
 }
 
