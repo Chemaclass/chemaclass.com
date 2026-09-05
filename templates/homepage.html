@@ -51,40 +51,20 @@
   {% set_global bashunit_stars = github_stars.bashunit | default(value=bashunit_stars) %}
 {% endif %}
 <div class="homepage-container">
-    <!-- Top Row: Hero Left + Nav/Search/About Right -->
-    <div class="homepage-top">
-        <!-- Left Column: Hero -->
-        <section class="hero-content">
-            <div class="profile">
-                <div class="profile-container">
-                    <img src="{{ profile_image.url }}" alt="{{ trans(key="home_profile_alt", lang=lang) }}" width="360" height="360" decoding="async" fetchpriority="high"/>
-                </div>
+    <section class="homepage-intro" aria-labelledby="home-title">
+        <div class="homepage-intro__copy">
+            <h1 id="home-title">Chemaclass</h1>
+            <p class="homepage-intro__lead">{{ trans(key="home_subtitle", lang=lang) }}</p>
+            <p>{{ trans(key="home_about_p1", lang=lang) | safe }}</p>
+            <p>{% if lang == 'es' %}Comparto lo que aprendo sobre software y liderazgo, y creo páginas web para empresas y profesionales.{% else %}I share what I learn about software and leadership, and build websites for businesses and independent professionals.{% endif %}</p>
+            <div class="homepage-intro__actions">
+                <a class="home-action" href="{% if lang == 'es' %}/es{% endif %}/blog/">{% if lang == 'es' %}Explorar mis artículos{% else %}Explore my writing{% endif %}</a>
+                <a class="home-action home-action--primary" href="{% if lang == 'es' %}/es{% endif %}/services/web-development/">{% if lang == 'es' %}Quiero una web{% else %}Get a website{% endif %}</a>
             </div>
-            <div class="hero-text">
-                <h1>Chemaclass</h1>
-                <p class="subtitle">
-                    {{ trans(key="home_subtitle", lang=lang) }}
-                </p>
-                <div class="hero-quotes">
-                    <blockquote class="hero-quote active"><p>{% if lang == "es" %}"Programar es el arte de simplificar rutinas."{% else %}"Programming is the art of simplifying routines."{% endif %}</p></blockquote>
-                </div>
-            </div>
-        </section>
-
-        <!-- Right Column: About -->
-        <div class="homepage-right">
-            <section class="about-section">
-                <div class="about-card">
-                    <h2>{{ trans(key="home_about", lang=lang) }}</h2>
-                    <div class="about-paragraphs">
-                        <p>{{ trans(key="home_about_p1", lang=lang) | safe }}</p>
-                        <p>{{ trans(key="home_about_p2", lang=lang) }}</p>
-                        <p>{{ trans(key="home_about_p3", lang=lang) }}</p>
-                    </div>
-                </div>
-            </section>
+            <a class="homepage-intro__background" href="{% if lang == 'es' %}/es{% endif %}/cv/">{% if lang == 'es' %}Mi experiencia y trayectoria{% else %}My experience and background{% endif %}</a>
         </div>
-    </div>
+        <img class="homepage-intro__portrait" src="{{ profile_image.url }}" alt="{{ trans(key="home_profile_alt", lang=lang) }}" width="360" height="360" decoding="async" fetchpriority="high">
+    </section>
 
     <section class="reader-paths" aria-labelledby="reader-paths-title">
         <div class="section-header">
@@ -110,7 +90,14 @@
         </div>
     </section>
 
-    {% include "partials/hire-cta.html" %}
+    {% if config.extra.start_here_posts %}
+    {% set introduction = get_page(path=config.extra.start_here_posts.0, lang=lang) %}
+    <section class="home-start" aria-labelledby="home-start-title">
+        <h2 id="home-start-title">{% if lang == 'es' %}¿Primera visita? Empieza aquí{% else %}First visit? Start here{% endif %}</h2>
+        <a href="{{ introduction.permalink }}">{{ introduction.title }}</a>
+        <p>{{ introduction.description }}</p>
+    </section>
+    {% endif %}
 
     <!-- Latest Content Section -->
     {% set blogs = get_section(path="blog/_index.md", lang=lang) %}
