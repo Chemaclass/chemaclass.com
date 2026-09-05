@@ -10,7 +10,8 @@ partial pulled in by one.
 | --- | --- |
 | `index.scss` | homepage |
 | `listing.scss` | blog and readings indexes, tag pages |
-| `page.scss` | standalone pages (services, books, talks, 404) |
+| `page.scss` | standalone pages (consulting, workshops, books, talks, 404) |
+| `services.scss` | website offer and quote confirmation |
 | `post.scss` | blog posts, readings, book chapters |
 | `profile.scss` | profile page |
 | `search.scss` | search dialog, loaded async on every page |
