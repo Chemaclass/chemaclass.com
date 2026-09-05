@@ -4,6 +4,53 @@
 {{ page.title }}
 {% endblock %}
 
+{% block posthead %}
+{% set base = config.base_url %}
+{% if lang == 'es' %}{% set_global svc_url = base ~ '/es/services/team-workshops/' %}{% else %}{% set_global svc_url = base ~ '/services/team-workshops/' %}{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{% if lang == 'es' %}Inicio{% else %}Home{% endif %}",
+      "item": "{{ base | safe }}{% if lang == 'es' %}/es/{% else %}/{% endif %}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ trans(key='svc_workshops', lang=lang) }}",
+      "item": "{{ svc_url | safe }}"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "{{ svc_url | safe }}#service",
+  "name": "{{ trans(key='svc_workshops', lang=lang) }}",
+  "description": "{{ trans(key='svc_workshops_subtitle', lang=lang) }}",
+  "url": "{{ svc_url | safe }}",
+  "provider": { "@id": "{{ base | safe }}/#person" },
+  "areaServed": {
+    "@type": "Place",
+    "name": "{% if lang == 'es' %}Presencial en Berlín, remoto en otras ubicaciones{% else %}On-site in Berlin, remote for other locations{% endif %}"
+  },
+  "availableLanguage": ["en", "es"],
+  "serviceType": "{% if lang == 'es' %}Taller práctico de testing, TDD y refactoring{% else %}Hands-on testing, TDD and refactoring workshop{% endif %}",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/OutOfStock"
+  }
+}
+</script>
+{% endblock posthead %}
+
 {% block styles %}
 {{ macros::page_styles(css='page.css') }}
 {% endblock styles %}
