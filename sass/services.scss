@@ -1,0 +1,28 @@
+// Website offer and quote confirmation share this focused bundle.
+
+// 1. Abstracts
+@import "abstracts/variables";
+
+// 2. Vendors
+@import "vendors/normalize";
+@import "vendors/fonts";
+
+// 3. Base
+@import "base/reset";
+@import "base/global";
+@import "base/typography";
+
+// 4. Layouts
+@import "layouts/header";
+@import "layouts/footer";
+
+// 5. Components
+@import "components/theme-toggle";
+@import "components/buttons";
+@import "components/dialog";
+
+// 6. Pages
+@import "pages/web-development-sales";
+
+// 7. Utilities
+@import "utils/responsive";
