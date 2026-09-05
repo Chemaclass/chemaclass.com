@@ -42,15 +42,6 @@ main:has(.homepage-container) #scroll-to-top {
   &__background { font-size: 0.9rem; }
 }
 
-.home-start {
-  margin: 2.5rem 0;
-  padding: 1.5rem 0;
-  border-block: 1px solid var(--preview-divider-color);
-  h2 { font-size: 1.1rem; }
-  > a { font-size: 1.25rem; font-weight: 500; }
-  p { max-width: 65ch; color: var(--color-subtitle); }
-}
-
 @media (max-width: $breakpoint-tablet) {
   .homepage-intro {
     grid-template-columns: 1fr;
