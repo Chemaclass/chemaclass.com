@@ -90,15 +90,6 @@
         </div>
     </section>
 
-    {% if config.extra.start_here_posts %}
-    {% set introduction = get_page(path=config.extra.start_here_posts.0, lang=lang) %}
-    <section class="home-start" aria-labelledby="home-start-title">
-        <h2 id="home-start-title">{% if lang == 'es' %}¿Primera visita? Empieza aquí{% else %}First visit? Start here{% endif %}</h2>
-        <a href="{{ introduction.permalink }}">{{ introduction.title }}</a>
-        <p>{{ introduction.description }}</p>
-    </section>
-    {% endif %}
-
     <!-- Latest Content Section -->
     {% set blogs = get_section(path="blog/_index.md", lang=lang) %}
     {% set readings = get_section(path="readings/_index.md", lang=lang) %}
