@@ -30,6 +30,11 @@
     {% block robots %}
     {% if paginator and paginator.current_index and paginator.current_index > 1 %}
     <meta name="robots" content="noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    {# A page can opt out from its front matter. Used by the paused services:
+       sending searchers to an offer that takes no bookings helps nobody, and
+       it is one line to undo when the offer reopens. #}
+    {% elif page.extra.noindex %}
+    <meta name="robots" content="noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     {% else %}
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     {% endif %}

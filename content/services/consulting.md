@@ -4,4 +4,6 @@ description = "One-on-one sessions on any topic I write about: software architec
 template = "services/consulting.html"
 aliases = ["/consulting"]
 [extra]
+# Paused: no new bookings, so keep it out of search until it reopens.
+noindex = true
 +++
