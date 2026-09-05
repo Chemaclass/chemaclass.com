@@ -67,7 +67,7 @@ Dado que Cronitor RUM recopila datos anonimizados, no hay datos personales que e
 
 ## Descargo de Responsabilidad
 
-El contenido de este sitio refleja mis opiniones y experiencias personales. Es educativo, no sustituye un acuerdo formal. Ofrezco [servicios profesionales](/es/services/) como contratos remunerados independientes.
+El contenido de este sitio refleja mis opiniones y experiencias personales. Es educativo, no sustituye un acuerdo formal. Ofrezco [servicios profesionales](/es/services/web-development/) como contratos remunerados independientes.
 
 No soy responsable del contenido de los sitios web externos enlazados desde este sitio.
 
