@@ -12,7 +12,7 @@
 {% endblock styles %}
 
 {% block posthead %}
-{% set profile_image = resize_image(path=config.extra.profile_large, width=360, height=360, op="fill", format="webp", quality=80) %}
+{% set profile_image = resize_image(path=config.extra.profile_large, width=400, height=400, op="fill", format="webp", quality=80) %}
 <link rel="preload" href="{{ profile_image.url }}" as="image" type="image/webp">
 
 {# The Person and WebSite nodes used to be repeated here, anonymously, so the
@@ -63,7 +63,7 @@
             </div>
             <a class="homepage-intro__background" href="{% if lang == 'es' %}/es{% endif %}/cv/">{% if lang == 'es' %}Mi experiencia y trayectoria{% else %}My experience and background{% endif %}</a>
         </div>
-        <img class="homepage-intro__portrait" src="{{ profile_image.url }}" alt="{{ trans(key="home_profile_alt", lang=lang) }}" width="360" height="360" decoding="async" fetchpriority="high">
+        <img class="homepage-intro__portrait" src="{{ profile_image.url }}" alt="{{ trans(key="home_profile_alt", lang=lang) }}" width="400" height="400" decoding="async" fetchpriority="high">
     </section>
 
     <section class="reader-paths" aria-labelledby="reader-paths-title">

@@ -593,7 +593,7 @@ home_path_ai = "Trabaja con agentes de IA"
 home_path_ai_desc = "Contexto, herramientas y las decisiones que todavía necesitan a una persona."
 home_path_bitcoin = "Entiende Bitcoin"
 home_path_bitcoin_desc = "El protocolo, dinero sólido, privacidad y Lightning Network."
-home_about_p1 = "15+ años construyendo software, 5+ liderando equipos. Sigo <a href=\"https://github.com/Chemaclass\" target=\"_blank\" rel=\"noopener\">escribiendo código</a> a diario."
+home_about_p1 = "15+ años construyendo software, 5+ liderando equipos. Sigo <a href=\"https://github.com/Chemaclass\" target=\"_blank\" rel=\"noopener\">escribiendo código</a>."
 home_about_p2 = "Me especializo en arquitectura por capas, monolitos modulares y TDD. Organizo agentes de IA como un equipo de especialistas con roles y restricciones claras, para que los estándares de calidad no compitan con los plazos."
 home_about_p3 = "Un gran ingeniero no es solo un gran programador. Los mejores equipos son aquellos donde la seguridad psicológica y la mentalidad de crecimiento hacen a todos más agudos."
 # Newsletter
