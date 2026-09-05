@@ -201,6 +201,12 @@ def check_sweep(base: str) -> None:
     tags = [u for u in re.findall(r'<loc>(.*?)</loc>', sitemap) if re.search(r'/tags/[^/]+/$', u)]
     sweep([u + 'atom.xml' for u in tags], 'tag feeds')
 
+    # Every JSON-LD node, robots.txt, llms.txt and humans.txt point at these.
+    # They 404'd in production for a month because GitHub Pages drops dot
+    # directories without a .nojekyll, and nothing here was looking.
+    sweep([f'{base}/.well-known/ai.txt', f'{base}/.well-known/security.txt'],
+          'well-known files')
+
     for path in ('/llms.txt', '/es/llms.txt'):
         links = sorted(set(re.findall(r'\]\((https?://\S+?)\)', get(base + path)[1])))
         sweep(links, f'links in {path}')
