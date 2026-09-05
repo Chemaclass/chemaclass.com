@@ -18,7 +18,7 @@
       <a class="sales-button sales-button--primary" href="#quote" data-quote-cta>
         {% if lang == "es" %}Recibir presupuesto cerrado{% else %}Get a fixed quote{% endif %} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
       </a>
-      <p class="sales-hero__microcopy">{% if lang == "es" %}Primera llamada gratis. Sin compromiso.{% else %}Free discovery call. No commitment.{% endif %}</p>
+      <p class="sales-hero__microcopy">{% if lang == "es" %}Respuesta en un día laborable. Primera llamada gratis, sin compromiso.{% else %}Reply within one working day. Free discovery call, no commitment.{% endif %}</p>
     </div>
 
     <aside class="sales-hero-proof" aria-label="{% if lang == 'es' %}Testimonio de cliente{% else %}Client testimonial{% endif %}">
@@ -42,28 +42,70 @@
     <span><i class="fa-solid fa-code" aria-hidden="true"></i> {% if lang == "es" %}El código es tuyo{% else %}You own the code{% endif %}</span>
   </div>
 
-  <section class="sales-outcomes" id="outcomes" aria-labelledby="outcomes-title">
+
+  <section class="sales-work" id="work" aria-labelledby="work-title">
     <div class="sales-section-heading">
-      <span class="sales-eyebrow">{% if lang == "es" %}Simple a propósito{% else %}Simple on purpose{% endif %}</span>
-      <h2 id="outcomes-title">{% if lang == "es" %}Tu web tiene una misión{% else %}Your website has one job{% endif %}</h2>
-      <p>{% if lang == "es" %}Dejar claro lo que haces, dar confianza para elegirte y facilitar el siguiente paso. Yo me encargo de la estructura, el diseño, el desarrollo y el lanzamiento.{% else %}Make it obvious what you do, give people confidence to choose you, and make the next step easy. I handle the structure, design, build and launch.{% endif %}</p>
+      <span class="sales-eyebrow">{% if lang == "es" %}Webs reales, online hoy{% else %}Real websites, live today{% endif %}</span>
+      <h2 id="work-title">{% if lang == "es" %}Ejemplos de páginas web que he hecho{% else %}Websites I have built{% endif %}</h2>
     </div>
-    <div class="sales-outcome-grid">
-      <div class="sales-outcome">
-        <i class="fa-solid fa-comments" aria-hidden="true"></i>
-        <h3>{% if lang == "es" %}Que te entiendan{% else %}Be understood{% endif %}</h3>
-        <p>{% if lang == "es" %}Saben qué haces antes de bajar la página.{% else %}Visitors know what you do before they scroll.{% endif %}</p>
-      </div>
-      <div class="sales-outcome">
-        <i class="fa-solid fa-lock" aria-hidden="true"></i>
-        <h3>{% if lang == "es" %}Generar confianza{% else %}Earn trust{% endif %}</h3>
-        <p>{% if lang == "es" %}Clientes reales, con nombre, y el trabajo a la vista.{% else %}Real clients, named, with the work on the page.{% endif %}</p>
-      </div>
-      <div class="sales-outcome">
-        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-        <h3>{% if lang == "es" %}Recibir contactos{% else %}Get contacted{% endif %}</h3>
-        <p>{% if lang == "es" %}Una forma obvia de escribirte, en cada página.{% else %}One obvious way to reach you, on every page.{% endif %}</p>
-      </div>
+    <div class="sales-work-grid">
+      <article class="sales-work-card">
+        <img src="/images/portfolio/dkrisna-sample.webp" alt="D'Krisna website" loading="lazy" width="720" height="450">
+        <div class="sales-work-card__body">
+          <span class="sales-work-card__type">{% if lang == "es" %}Web a Medida{% else %}Custom Website{% endif %}</span>
+          <h3>D'Krisna</h3>
+          <p>{% if lang == "es" %}Para que los clientes del salón encuentren sus servicios y reserven: seis páginas en dos idiomas con reseñas y acceso a reservas.{% else %}Helping salon customers find services and book: six pages in two languages, with reviews and access to booking.{% endif %}</p>
+          <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer">{% if lang == "es" %}Ver web{% else %}View live website{% endif %} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+      </article>
+      <article class="sales-work-card">
+        <img src="/images/portfolio/fco-sandoval-gomez-sample.webp" alt="Fco Sandoval Gómez website" loading="lazy" width="720" height="450">
+        <div class="sales-work-card__body">
+          <span class="sales-work-card__type">{% if lang == "es" %}Web + Blog{% else %}Website + Blog{% endif %}</span>
+          <h3>Fco Sandoval Gómez</h3>
+          <p>{% if lang == "es" %}Para compartir su trabajo como arquitecto e investigador: un portfolio en tres idiomas con buscador de proyectos y publicaciones.{% else %}Helping an architect share his work and research: a portfolio in three languages with searchable projects and publications.{% endif %}</p>
+          <a href="{% if lang == 'es' %}https://fco-sandoval-gomez.es/{% else %}https://fco-sandoval-gomez.es/en/{% endif %}" target="_blank" rel="noopener noreferrer">{% if lang == "es" %}Ver web{% else %}View live website{% endif %} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+      </article>
+      <article class="sales-work-card">
+        <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="Windmill Tündern website" loading="lazy" width="720" height="450">
+        <div class="sales-work-card__body">
+          <span class="sales-work-card__type">{% if lang == "es" %}Web + Blog{% else %}Website + Blog{% endif %}</span>
+          <h3>Windmill Tündern</h3>
+          <p>{% if lang == "es" %}Para acercar la restauración a vecinos y donantes: historia, noticias y formas de colaborar en tres idiomas.{% else %}Helping neighbors and donors follow the restoration: history, updates, and ways to contribute in three languages.{% endif %}</p>
+          <a href="{% if lang == 'es' %}https://windmuehle-tuendern.de/es/{% else %}https://windmuehle-tuendern.de/en/{% endif %}" target="_blank" rel="noopener noreferrer">{% if lang == "es" %}Ver web{% else %}View live website{% endif %} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sales-testimonials" id="testimonials" aria-labelledby="testimonials-title">
+    <div class="sales-section-heading">
+      <span class="sales-eyebrow">{% if lang == "es" %}Personas que ya trabajaron conmigo{% else %}People who already hired me{% endif %}</span>
+      <h2 id="testimonials-title">{% if lang == "es" %}Opiniones de mis clientes{% else %}What my clients say{% endif %}</h2>
+    </div>
+    <div class="sales-testimonial-grid">
+      <blockquote class="sales-testimonial">
+        <p>{% if lang == "es" %}“Exactamente lo que necesitábamos, con una sección de conciertos perfecta para que los fans sigan la agenda.”{% else %}“Exactly what we needed, with a concerts section our fans love to follow.”{% endif %}</p>
+        <footer>
+          <img src="/images/testimonials/adrian-teina.webp" alt="" loading="lazy" width="40" height="40">
+          <span><strong>Adrián</strong> · Teína</span>
+        </footer>
+      </blockquote>
+      <blockquote class="sales-testimonial">
+        <p>{% if lang == "es" %}“Un portfolio rápido y limpio para compartir mi trabajo, investigación y publicaciones sin fricciones.”{% else %}“A fast, clean portfolio to share my work, research, and publications seamlessly.”{% endif %}</p>
+        <footer>
+          <img src="/images/testimonials/fco-sandoval.webp" alt="" loading="lazy" width="40" height="40">
+          <span><strong>Francisco</strong> · {% if lang == "es" %}Arquitecto{% else %}Architect{% endif %}</span>
+        </footer>
+      </blockquote>
+      <blockquote class="sales-testimonial">
+        <p>{% if lang == "es" %}“Por fin tenemos la presencia online que nuestro molino de 140 años merece.”{% else %}“We finally have the online presence our 140-year-old mill deserves.”{% endif %}</p>
+        <footer>
+          <img src="/images/testimonials/dirk-windmuehle.webp" alt="" loading="lazy" width="40" height="40">
+          <span><strong>Dirk</strong> · Windmill Tündern</span>
+        </footer>
+      </blockquote>
     </div>
   </section>
 
@@ -137,118 +179,25 @@
       </article>
     </div>
 
+    <div class="sales-scope">
+      <h3>{% if lang == 'es' %}Qué acordamos antes de empezar{% else %}What we agree before starting{% endif %}</h3>
+      <dl>
+        <div><dt>{% if lang == 'es' %}Páginas e idiomas{% else %}Pages and languages{% endif %}</dt><dd>{% if lang == 'es' %}La propuesta enumera las páginas y los idiomas incluidos en tu precio cerrado.{% else %}Your proposal lists the pages and languages included in your fixed price.{% endif %}</dd></div>
+        <div><dt>{% if lang == 'es' %}Textos e imágenes{% else %}Copy and images{% endif %}</dt><dd>{% if lang == 'es' %}Revisamos lo que ya tienes y dejamos acordado quién prepara lo que falta.{% else %}We review what you already have and agree who prepares anything missing.{% endif %}</dd></div>
+        <div><dt>{% if lang == 'es' %}Revisiones{% else %}Revisions{% endif %}</dt><dd>{% if lang == 'es' %}Acordamos las revisiones incluidas. Las ampliaciones de alcance se presupuestan por separado.{% else %}We agree the included revisions. Additions to the scope are quoted separately.{% endif %}</dd></div>
+        <div><dt>{% if lang == 'es' %}Publicación{% else %}Publishing{% endif %}</dt><dd>{% if lang == 'es' %}Web a Medida: me envías los cambios. Web + Blog: publicas tú tras una formación, o acordamos que lo haga yo.{% else %}Custom Website: send me your changes. Website + Blog: publish yourself after training, or arrange for me to do it.{% endif %}</dd></div>
+        <div><dt>{% if lang == 'es' %}Plazo{% else %}Timeline{% endif %}</dt><dd>{% if lang == 'es' %}Confirmamos la fecha de lanzamiento según el alcance, la entrega del contenido y tu disponibilidad para revisar.{% else %}We confirm the launch date based on scope, content delivery, and your availability for feedback.{% endif %}</dd></div>
+        <div><dt>{% if lang == 'es' %}Después del primer año{% else %}After year one{% endif %}</dt><dd>{% if lang == 'es' %}Hosting y dominio se renuevan cada año para mantener la web online. El mantenimiento es opcional; tienes los importes en cada paquete.{% else %}Hosting and domain renew yearly to keep the website online. Care is optional; each package shows its ongoing costs.{% endif %}</dd></div>
+      </dl>
+    </div>
+
     <p class="sales-advice"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> <strong>{% if lang == "es" %}¿No lo tienes claro?{% else %}Not sure?{% endif %}</strong> {% if lang == "es" %}Empieza con la Web a Medida. Puedes añadir el blog después.{% else %}Start with Custom Website. You can add a blog later.{% endif %}</p>
     <p class="sales-price-context">{% if lang == "es" %}El precio final depende del alcance: páginas, idiomas, funcionalidades y estado del contenido. Lo cierras antes de empezar.{% else %}The final price depends on scope, including pages, languages, features, and content readiness. You agree it before work begins.{% endif %}</p>
     <p class="sales-payment-methods"><strong>{% if lang == "es" %}Formas de pago:{% else %}Payment methods:{% endif %}</strong> {% if lang == "es" %}transferencia bancaria SEPA, PayPal o Bitcoin.{% else %}SEPA bank transfer, PayPal, or Bitcoin.{% endif %}</p>
   </section>
 
-  <section class="sales-work" id="work" aria-labelledby="work-title">
-    <div class="sales-section-heading">
-      <span class="sales-eyebrow">{% if lang == "es" %}Webs reales, online hoy{% else %}Real websites, live today{% endif %}</span>
-      <h2 id="work-title">{% if lang == "es" %}Ejemplos de páginas web que he hecho{% else %}Websites I have built{% endif %}</h2>
-    </div>
-    <div class="sales-work-grid">
-      <article class="sales-work-card">
-        <img src="/images/portfolio/dkrisna-sample.webp" alt="D'Krisna website" loading="lazy" width="720" height="450">
-        <div class="sales-work-card__body">
-          <span class="sales-work-card__type">{% if lang == "es" %}Web a Medida{% else %}Custom Website{% endif %}</span>
-          <h3>D'Krisna</h3>
-          <p>{% if lang == "es" %}Una web bilingüe de seis páginas con servicios, reseñas y reservas.{% else %}A bilingual six-page site with services, reviews and booking.{% endif %}</p>
-          <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer">{% if lang == "es" %}Ver web{% else %}View live website{% endif %} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-        </div>
-      </article>
-      <article class="sales-work-card">
-        <img src="/images/portfolio/fco-sandoval-gomez-sample.webp" alt="Fco Sandoval Gómez website" loading="lazy" width="720" height="450">
-        <div class="sales-work-card__body">
-          <span class="sales-work-card__type">{% if lang == "es" %}Web + Blog{% else %}Website + Blog{% endif %}</span>
-          <h3>Fco Sandoval Gómez</h3>
-          <p>{% if lang == "es" %}Un portfolio trilingüe con buscador para proyectos, investigación, publicaciones y casos de estudio.{% else %}A searchable, trilingual portfolio for projects, research, publications, and case studies.{% endif %}</p>
-          <a href="{% if lang == 'es' %}https://fco-sandoval-gomez.es/{% else %}https://fco-sandoval-gomez.es/en/{% endif %}" target="_blank" rel="noopener noreferrer">{% if lang == "es" %}Ver web{% else %}View live website{% endif %} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-        </div>
-      </article>
-      <article class="sales-work-card">
-        <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="Windmill Tündern website" loading="lazy" width="720" height="450">
-        <div class="sales-work-card__body">
-          <span class="sales-work-card__type">{% if lang == "es" %}Web + Blog{% else %}Website + Blog{% endif %}</span>
-          <h3>Windmill Tündern</h3>
-          <p>{% if lang == "es" %}Una web trilingüe para noticias, donaciones, historia y avances de la restauración.{% else %}A trilingual site for news, donations, history, and restoration updates.{% endif %}</p>
-          <a href="{% if lang == 'es' %}https://windmuehle-tuendern.de/es/{% else %}https://windmuehle-tuendern.de/en/{% endif %}" target="_blank" rel="noopener noreferrer">{% if lang == "es" %}Ver web{% else %}View live website{% endif %} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-        </div>
-      </article>
-    </div>
-  </section>
 
-  <section class="sales-capability" id="web-apps" aria-labelledby="capability-title">
-    <div class="sales-section-heading">
-      <span class="sales-eyebrow">{% if lang == "es" %}Construidas de principio a fin{% else %}Built end to end{% endif %}</span>
-      <h2 id="capability-title">{% if lang == "es" %}Cuando necesitas una aplicación web, no una web{% else %}When you need a web app, not a website{% endif %}</h2>
-      <p>{% if lang == "es" %}Cuando un producto necesita cuentas, pagos, bases de datos o paneles, también los construyo. Son productos propios, diseñados, desarrollados, desplegados y operados por mí.{% else %}When a product needs accounts, payments, databases, or dashboards, I build those too. These are my own products, designed, built, deployed, and operated by me.{% endif %}</p>
-    </div>
-    <div class="sales-app-grid">
-      <a class="sales-app-card" href="https://miaforo.es/en" target="_blank" rel="noopener noreferrer">
-        <img src="/images/portfolio/miaforo-sample.webp" alt="MIAFORO gym management app" loading="lazy" width="720" height="450">
-        <div class="sales-app-card__body">
-          <div class="sales-app-card__topline">
-            <span>{% if lang == "es" %}Aplicación web{% else %}Web app{% endif %}</span>
-            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-          </div>
-          <h3>MIAFORO</h3>
-          <p>{% if lang == "es" %}Gestión para gimnasios independientes. Horarios, reservas, cobros, socios y progreso en un solo producto.{% else %}Gym management for independent gyms. Schedules, bookings, payments, members, and progress in one product.{% endif %}</p>
-          <div class="sales-app-card__features">
-            <span><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> {% if lang == "es" %}Reservas{% else %}Bookings{% endif %}</span>
-            <span><i class="fa-solid fa-users" aria-hidden="true"></i> {% if lang == "es" %}Socios{% else %}Members{% endif %}</span>
-            <span><i class="fa-solid fa-chart-simple" aria-hidden="true"></i> Panel</span>
-          </div>
-        </div>
-      </a>
-      <a class="sales-app-card" href="https://puertafria.es/en" target="_blank" rel="noopener noreferrer">
-        <img src="/images/portfolio/puertafria-sample.webp" alt="puertafria sales app" loading="lazy" width="720" height="450">
-        <div class="sales-app-card__body">
-          <div class="sales-app-card__topline">
-            <span>{% if lang == "es" %}Aplicación web{% else %}Web app{% endif %}</span>
-            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-          </div>
-          <h3>puertafria</h3>
-          <p>{% if lang == "es" %}Un producto de puerta fría que convierte un CSV en la lista de a quién llamar hoy.{% else %}A cold-calling product that turns a CSV into the list of who to call today.{% endif %}</p>
-          <div class="sales-app-card__features">
-            <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> {% if lang == "es" %}Embudos{% else %}Funnels{% endif %}</span>
-            <span><i class="fa-solid fa-file" aria-hidden="true"></i> CSV</span>
-            <span><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> {% if lang == "es" %}Móvil{% else %}Mobile{% endif %}</span>
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
 
-  <section class="sales-testimonials" id="testimonials" aria-labelledby="testimonials-title">
-    <div class="sales-section-heading">
-      <span class="sales-eyebrow">{% if lang == "es" %}Personas que ya trabajaron conmigo{% else %}People who already hired me{% endif %}</span>
-      <h2 id="testimonials-title">{% if lang == "es" %}Opiniones de mis clientes{% else %}What my clients say{% endif %}</h2>
-    </div>
-    <div class="sales-testimonial-grid">
-      <blockquote class="sales-testimonial">
-        <p>{% if lang == "es" %}“Exactamente lo que necesitábamos, con una sección de conciertos perfecta para que los fans sigan la agenda.”{% else %}“Exactly what we needed, with a concerts section our fans love to follow.”{% endif %}</p>
-        <footer>
-          <img src="/images/testimonials/adrian-teina.webp" alt="" loading="lazy" width="40" height="40">
-          <span><strong>Adrián</strong> · Teína</span>
-        </footer>
-      </blockquote>
-      <blockquote class="sales-testimonial">
-        <p>{% if lang == "es" %}“Un portfolio rápido y limpio para compartir mi trabajo, investigación y publicaciones sin fricciones.”{% else %}“A fast, clean portfolio to share my work, research, and publications seamlessly.”{% endif %}</p>
-        <footer>
-          <img src="/images/testimonials/fco-sandoval.webp" alt="" loading="lazy" width="40" height="40">
-          <span><strong>Francisco</strong> · {% if lang == "es" %}Arquitecto{% else %}Architect{% endif %}</span>
-        </footer>
-      </blockquote>
-      <blockquote class="sales-testimonial">
-        <p>{% if lang == "es" %}“Por fin tenemos la presencia online que nuestro molino de 140 años merece.”{% else %}“We finally have the online presence our 140-year-old mill deserves.”{% endif %}</p>
-        <footer>
-          <img src="/images/testimonials/dirk-windmuehle.webp" alt="" loading="lazy" width="40" height="40">
-          <span><strong>Dirk</strong> · Windmill Tündern</span>
-        </footer>
-      </blockquote>
-    </div>
-  </section>
 
   <section class="sales-process" id="process" aria-labelledby="process-title">
     <div class="sales-section-heading">
@@ -308,7 +257,7 @@
     <div class="sales-quote__copy">
       <span class="sales-eyebrow">{% if lang == "es" %}El siguiente paso{% else %}The next step{% endif %}</span>
       <h2 id="quote-title">{% if lang == "es" %}Cuéntame qué necesitas{% else %}Tell me what you need{% endif %}</h2>
-      <p>{% if lang == "es" %}Envíame una breve descripción. Te responderé con la opción adecuada, el plazo probable y el siguiente paso.{% else %}Send a short brief. I will reply with whether the package fits, likely timing, and the next step.{% endif %}</p>
+      <p>{% if lang == "es" %}Envíame una breve descripción. Te responderé en un día laborable con la opción adecuada, el plazo probable y el siguiente paso. Si falta información para cerrar el presupuesto, te la pediré en ese correo.{% else %}Send a short brief. I will reply within one working day with the package that fits, likely timing, and the next step. If I need more information to finalize the quote, I will ask in that email.{% endif %}</p>
       <ul>
         <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}Primera conversación gratis{% else %}Free initial conversation{% endif %}</li>
         <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}Sin compromiso{% else %}No commitment{% endif %}</li>
@@ -342,6 +291,48 @@
       <p class="sales-quote-form__note"><i class="fa-solid fa-lock" aria-hidden="true"></i> {% if lang == "es" %}Tus datos quedan entre nosotros. Los uso solo para responderte.{% else %}Your details stay between us. I use them only to reply to you.{% endif %}</p>
       <p class="sales-quote-form__alternative">{% if lang == "es" %}¿Prefieres escribir directamente?{% else %}Prefer to write directly?{% endif %} <a href="mailto:web@chemaclass.com">web@chemaclass.com</a></p>
     </form>
+  </section>
+
+  <section class="sales-capability" id="web-apps" aria-labelledby="capability-title">
+    <div class="sales-section-heading">
+      <span class="sales-eyebrow">{% if lang == "es" %}Construidas de principio a fin{% else %}Built end to end{% endif %}</span>
+      <h2 id="capability-title">{% if lang == "es" %}También desarrollo aplicaciones web{% else %}I also build web applications{% endif %}</h2>
+      <p>{% if lang == "es" %}Cuando un producto necesita cuentas, pagos, bases de datos o paneles, también los construyo. Son productos propios, diseñados, desarrollados, desplegados y operados por mí.{% else %}When a product needs accounts, payments, databases, or dashboards, I build those too. These are my own products, designed, built, deployed, and operated by me.{% endif %}</p>
+    </div>
+    <div class="sales-app-grid">
+      <a class="sales-app-card" href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener noreferrer">
+        <img src="/images/portfolio/miaforo-sample.webp" alt="MIAFORO gym management app" loading="lazy" width="720" height="450">
+        <div class="sales-app-card__body">
+          <div class="sales-app-card__topline">
+            <span>{% if lang == "es" %}Aplicación web{% else %}Web app{% endif %}</span>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </div>
+          <h3>MIAFORO</h3>
+          <p>{% if lang == "es" %}Gestión para gimnasios independientes. Horarios, reservas, cobros, socios y progreso en un solo producto.{% else %}Gym management for independent gyms. Schedules, bookings, payments, members, and progress in one product.{% endif %}</p>
+          <div class="sales-app-card__features">
+            <span><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> {% if lang == "es" %}Reservas{% else %}Bookings{% endif %}</span>
+            <span><i class="fa-solid fa-users" aria-hidden="true"></i> {% if lang == "es" %}Socios{% else %}Members{% endif %}</span>
+            <span><i class="fa-solid fa-chart-simple" aria-hidden="true"></i> Panel</span>
+          </div>
+        </div>
+      </a>
+      <a class="sales-app-card" href="{% if lang == 'es' %}https://puertafria.es/{% else %}https://puertafria.es/en{% endif %}" target="_blank" rel="noopener noreferrer">
+        <img src="/images/portfolio/puertafria-sample.webp" alt="puertafria sales app" loading="lazy" width="720" height="450">
+        <div class="sales-app-card__body">
+          <div class="sales-app-card__topline">
+            <span>{% if lang == "es" %}Aplicación web{% else %}Web app{% endif %}</span>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </div>
+          <h3>puertafria</h3>
+          <p>{% if lang == "es" %}Un producto de puerta fría que convierte un CSV en la lista de a quién llamar hoy.{% else %}A cold-calling product that turns a CSV into the list of who to call today.{% endif %}</p>
+          <div class="sales-app-card__features">
+            <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> {% if lang == "es" %}Embudos{% else %}Funnels{% endif %}</span>
+            <span><i class="fa-solid fa-file" aria-hidden="true"></i> CSV</span>
+            <span><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> {% if lang == "es" %}Móvil{% else %}Mobile{% endif %}</span>
+          </div>
+        </div>
+      </a>
+    </div>
   </section>
 
 </article>
