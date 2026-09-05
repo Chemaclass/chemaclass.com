@@ -179,15 +179,14 @@
       </article>
     </div>
 
+    {# Two rows, not six. Pages and languages, publishing, timeline and year two
+       were each already answered by the cards above or the line below, so the
+       block only carries what nothing else on the page does. #}
     <div class="sales-scope">
       <h3>{% if lang == 'es' %}Qué acordamos antes de empezar{% else %}What we agree before starting{% endif %}</h3>
       <dl>
-        <div><dt>{% if lang == 'es' %}Páginas e idiomas{% else %}Pages and languages{% endif %}</dt><dd>{% if lang == 'es' %}La propuesta enumera las páginas y los idiomas incluidos en tu precio cerrado.{% else %}Your proposal lists the pages and languages included in your fixed price.{% endif %}</dd></div>
-        <div><dt>{% if lang == 'es' %}Textos e imágenes{% else %}Copy and images{% endif %}</dt><dd>{% if lang == 'es' %}Revisamos lo que ya tienes y dejamos acordado quién prepara lo que falta.{% else %}We review what you already have and agree who prepares anything missing.{% endif %}</dd></div>
-        <div><dt>{% if lang == 'es' %}Revisiones{% else %}Revisions{% endif %}</dt><dd>{% if lang == 'es' %}Acordamos las revisiones incluidas. Las ampliaciones de alcance se presupuestan por separado.{% else %}We agree the included revisions. Additions to the scope are quoted separately.{% endif %}</dd></div>
-        <div><dt>{% if lang == 'es' %}Publicación{% else %}Publishing{% endif %}</dt><dd>{% if lang == 'es' %}Web a Medida: me envías los cambios. Web + Blog: publicas tú tras una formación, o acordamos que lo haga yo.{% else %}Custom Website: send me your changes. Website + Blog: publish yourself after training, or arrange for me to do it.{% endif %}</dd></div>
-        <div><dt>{% if lang == 'es' %}Plazo{% else %}Timeline{% endif %}</dt><dd>{% if lang == 'es' %}Confirmamos la fecha de lanzamiento según el alcance, la entrega del contenido y tu disponibilidad para revisar.{% else %}We confirm the launch date based on scope, content delivery, and your availability for feedback.{% endif %}</dd></div>
-        <div><dt>{% if lang == 'es' %}Después del primer año{% else %}After year one{% endif %}</dt><dd>{% if lang == 'es' %}Hosting y dominio se renuevan cada año para mantener la web online. El mantenimiento es opcional; tienes los importes en cada paquete.{% else %}Hosting and domain renew yearly to keep the website online. Care is optional; each package shows its ongoing costs.{% endif %}</dd></div>
+        <div><dt>{% if lang == 'es' %}Textos e imágenes{% else %}Copy and images{% endif %}</dt><dd>{% if lang == 'es' %}Acordamos quién pone cada texto y cada foto.{% else %}We agree who provides each text and each photo.{% endif %}</dd></div>
+        <div><dt>{% if lang == 'es' %}Revisiones{% else %}Revisions{% endif %}</dt><dd>{% if lang == 'es' %}La propuesta dice cuántas incluye. Más alcance, nuevo presupuesto.{% else %}The proposal says how many are included. More scope, new quote.{% endif %}</dd></div>
       </dl>
     </div>
 
