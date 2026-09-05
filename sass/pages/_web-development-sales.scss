@@ -376,6 +376,25 @@
     line-height: 1.1;
   }
 
+  &__price-was {
+    display: inline-block;
+    margin-right: 0.4rem;
+    color: var(--color-subtitle);
+    font-size: 0.55em;
+    font-weight: 600;
+    text-decoration-thickness: 2px;
+    vertical-align: 0.34em;
+  }
+
+  &__price-was-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
   &__price-note {
     margin: 0.45rem 0 1.25rem;
     color: var(--color-subtitle);

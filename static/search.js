@@ -24,11 +24,11 @@ const SEARCH_TEXT = {
 };
 const SERVICE_SEARCH_CONTENT = {
     en: {
-        "/services/web-development/": "Web Development service: fast static websites for businesses and professionals, fixed price from €1,500, live in under a month. Two tiers: Custom Website and Website + Blog. Responsive design, SEO fundamentals, HTTPS, hosting and domain included for year 1, optional care plan.",
+        "/services/web-development/": "Web Development service: fast static websites for businesses and professionals, fixed price from €1,000, live in under a month. Two tiers: Custom Website and Website + Blog. Responsive design, SEO fundamentals, HTTPS, hosting and domain included for year 1, optional care plan.",
         "/services/team-workshops/": "Team Workshops service: full-day coding sessions covering testing, golden master techniques, test-driven development, refactoring, pair programming, and safe improvements to legacy code. Morning session on tests, afternoon on refactoring, investment €480 per person for 3-8 developers."
     },
     es: {
-        "/services/web-development/": "Servicio de Desarrollo Web: webs estáticas rápidas para empresas y profesionales, precio cerrado desde 1.500 €, online en menos de un mes. Dos opciones: Web a Medida y Web + Blog. Diseño responsive, SEO básico, HTTPS, hosting y dominio incluidos el primer año, plan de mantenimiento opcional.",
+        "/services/web-development/": "Servicio de Desarrollo Web: webs estáticas rápidas para empresas y profesionales, precio cerrado desde 1.000 €, online en menos de un mes. Dos opciones: Web a Medida y Web + Blog. Diseño responsive, SEO básico, HTTPS, hosting y dominio incluidos el primer año, plan de mantenimiento opcional.",
         "/services/team-workshops/": "Servicio de Team Workshops: un día completo de coding katas enfocados en testing, golden master, TDD, refactorización y trabajo en código legado. Incluye sesiones de mañana y tarde, pair programming y precio de 480 € por persona para grupos de 3 a 8."
     }
 };

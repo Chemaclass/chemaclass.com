@@ -14,7 +14,7 @@
     <div class="sales-hero__copy">
       <span class="sales-eyebrow">{% if lang == "es" %}Diseño y desarrollo web para pequeñas empresas y profesionales independientes{% else %}Web design and development for small businesses and independent professionals{% endif %}</span>
       <h1>{% if lang == "es" %}Una página web profesional, online en menos de un mes{% else %}A professional website, live in under a month{% endif %}</h1>
-      <p class="sales-hero__lead">{% if lang == "es" %}Una página web rápida y segura, hecha a medida para tu negocio, con presupuesto cerrado desde 1.500 €. Hosting, dominio y mantenimiento del primer año incluidos.{% else %}A fast, secure website, custom-built for your business, with a fixed quote from €1,500. Hosting, domain and first-year care included.{% endif %}</p>
+      <p class="sales-hero__lead">{% if lang == "es" %}Una página web rápida y segura, hecha a medida para tu negocio, con presupuesto cerrado desde 1.000 €. Hosting, dominio y mantenimiento del primer año incluidos.{% else %}A fast, secure website, custom-built for your business, with a fixed quote from €1,000. Hosting, domain and first-year care included.{% endif %}</p>
       <a class="sales-button sales-button--primary" href="#quote" data-quote-cta>
         {% if lang == "es" %}Recibir presupuesto cerrado{% else %}Get a fixed quote{% endif %} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
       </a>
@@ -92,7 +92,7 @@
         </div>
         <h3>{% if lang == "es" %}Web a Medida{% else %}Custom Website{% endif %}</h3>
         <p class="sales-package__fit">{% if lang == "es" %}Para negocios cuyo contenido cambia solo unas pocas veces al año.{% else %}For businesses whose content changes only a few times a year.{% endif %}</p>
-        <p class="sales-package__price">{{ trans(key='svc_price_range_simple', lang=lang) }}</p>
+        <p class="sales-package__price"><s class="sales-package__price-was"><span class="sales-package__price-was-label">{{ trans(key='svc_price_was_label', lang=lang) }} </span>{{ trans(key='svc_price_was_simple', lang=lang) }}</s> {{ trans(key='svc_price_range_simple', lang=lang) }}</p>
         <p class="sales-package__price-note">{% if lang == "es" %}Pago único. Presupuesto cerrado antes de empezar.{% else %}One-time project fee. Fixed quote before work begins.{% endif %}</p>
         <ul class="sales-package__uses">
           <li>{% if lang == "es" %}Webs corporativas{% else %}Company websites{% endif %}</li>
@@ -116,7 +116,7 @@
         </div>
         <h3>{% if lang == "es" %}Web + Blog{% else %}Website + Blog{% endif %}</h3>
         <p class="sales-package__fit">{% if lang == "es" %}Para negocios que publican noticias, artículos o casos de estudio cada mes.{% else %}For businesses publishing news, articles, or case studies every month.{% endif %}</p>
-        <p class="sales-package__price">{{ trans(key='svc_price_range_pro', lang=lang) }}</p>
+        <p class="sales-package__price"><s class="sales-package__price-was"><span class="sales-package__price-was-label">{{ trans(key='svc_price_was_label', lang=lang) }} </span>{{ trans(key='svc_price_was_pro', lang=lang) }}</s> {{ trans(key='svc_price_range_pro', lang=lang) }}</p>
         <p class="sales-package__price-note">{% if lang == "es" %}Pago único. Presupuesto cerrado antes de empezar.{% else %}One-time project fee. Fixed quote before work begins.{% endif %}</p>
         <ul class="sales-package__uses">
           <li>{% if lang == "es" %}Blogs de empresa{% else %}Company blogs{% endif %}</li>
