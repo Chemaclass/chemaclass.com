@@ -908,7 +908,7 @@ function initSearch() {
 
 function filterAndRankResults(results, term, searchTerm){
     const items = [];
-    const lowerTerm = searchTerm.toLowerCase();
+    const normalizedTerm = normalizeForSearch(searchTerm).trim();
     const normalizedQueryTokens = searchTerm
         .split(/\s+/)
         .filter(Boolean)
@@ -962,14 +962,21 @@ function filterAndRankResults(results, term, searchTerm){
         const sectionWeight = sectionWeights[sectionKey] || 1.0;
         result.score *= sectionWeight;
 
-        // Boost score for exact title matches
-        const titleLower = result.doc.title.toLowerCase();
-        if (titleLower === lowerTerm) {
-            result.score *= 3; // Triple score for exact match
-        } else if (titleLower.includes(lowerTerm)) {
-            result.score *= 2; // Double score for partial match
-        } else if (titleLower.startsWith(lowerTerm)) {
-            result.score *= 2.5; // 2.5x score for prefix match
+        // Boost score for title matches. Two things were wrong here.
+        // The comparison lowercased but did not strip diacritics, so a reader
+        // typing "paginas web" scored half of one typing "páginas web", while
+        // matchesAllTokens above already folded both sides. And the prefix
+        // branch sat after the substring branch, which subsumes it, so 2.5x
+        // was unreachable: every prefix took the 2x path instead.
+        const titleNormalized = normalizeForSearch(result.doc.title);
+        if (normalizedTerm) {
+            if (titleNormalized === normalizedTerm) {
+                result.score *= 3; // Triple score for exact match
+            } else if (titleNormalized.startsWith(normalizedTerm)) {
+                result.score *= 2.5; // 2.5x score for prefix match
+            } else if (titleNormalized.includes(normalizedTerm)) {
+                result.score *= 2; // Double score for partial match
+            }
         }
 
         items.push(result);
