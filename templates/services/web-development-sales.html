@@ -49,17 +49,17 @@
       <div class="sales-outcome">
         <i class="fa-solid fa-comments" aria-hidden="true"></i>
         <h3>{% if lang == "es" %}Que te entiendan{% else %}Be understood{% endif %}</h3>
-        <p>{% if lang == "es" %}Un mensaje claro que se entiende en segundos.{% else %}A clear message visitors can grasp in seconds.{% endif %}</p>
+        <p>{% if lang == "es" %}Saben qué haces antes de bajar la página.{% else %}Visitors know what you do before they scroll.{% endif %}</p>
       </div>
       <div class="sales-outcome">
         <i class="fa-solid fa-lock" aria-hidden="true"></i>
         <h3>{% if lang == "es" %}Generar confianza{% else %}Earn trust{% endif %}</h3>
-        <p>{% if lang == "es" %}Una presencia cuidada respaldada por trabajo real.{% else %}A polished presence backed by real proof.{% endif %}</p>
+        <p>{% if lang == "es" %}Clientes reales, con nombre, y el trabajo a la vista.{% else %}Real clients, named, with the work on the page.{% endif %}</p>
       </div>
       <div class="sales-outcome">
         <i class="fa-solid fa-envelope" aria-hidden="true"></i>
         <h3>{% if lang == "es" %}Recibir contactos{% else %}Get contacted{% endif %}</h3>
-        <p>{% if lang == "es" %}Un camino directo del interés a la consulta.{% else %}A direct path from interest to enquiry.{% endif %}</p>
+        <p>{% if lang == "es" %}Una forma obvia de escribirte, en cada página.{% else %}One obvious way to reach you, on every page.{% endif %}</p>
       </div>
     </div>
   </section>
@@ -100,7 +100,7 @@
           <li>Portfolios</li>
           <li>{% if lang == "es" %}Catálogos de producto{% else %}Product catalogues{% endif %}</li>
         </ul>
-        <p class="sales-package__consideration"><strong>{% if lang == "es" %}Actualizaciones:{% else %}Content updates:{% endif %}</strong> {% if lang == "es" %}Envíamelas cuando las necesites. Así la web sigue siendo sencilla y requiere poco mantenimiento.{% else %}Send them to me when needed. This keeps the site simple and low-maintenance.{% endif %}</p>
+        <p class="sales-package__consideration"><strong>{% if lang == "es" %}Actualizaciones:{% else %}Content updates:{% endif %}</strong> {% if lang == "es" %}Envíamelas cuando las necesites.{% else %}Send them to me when you need them.{% endif %}</p>
         <div class="sales-package__ongoing">
           <strong>{% if lang == "es" %}Del año 2 en adelante{% else %}Year 2 onwards{% endif %}</strong>
           <span>{% set yearly = config.extra.pricing_static_hosting + config.extra.pricing_domain %}{% if lang == "es" %}{{ yearly }} €/año hosting + dominio{% else %}€{{ yearly }}/year hosting + domain{% endif %}</span>
@@ -124,7 +124,7 @@
           <li>{% if lang == "es" %}Casos de estudio{% else %}Case studies{% endif %}</li>
           <li>{% if lang == "es" %}Portfolios que crecen{% else %}Growing portfolios{% endif %}</li>
         </ul>
-        <p class="sales-package__consideration"><strong>{% if lang == "es" %}Actualizaciones:{% else %}Content updates:{% endif %}</strong> {% if lang == "es" %}Publícalas tú tras una breve formación, o deja que yo gestione las actualizaciones mensuales.{% else %}Publish them yourself after a short handover, or let me handle the monthly updates.{% endif %}</p>
+        <p class="sales-package__consideration"><strong>{% if lang == "es" %}Actualizaciones:{% else %}Content updates:{% endif %}</strong> {% if lang == "es" %}Publícalas tú. Te enseño cómo, o lo hago yo cada mes.{% else %}Publish them yourself. I show you how, or I do it every month.{% endif %}</p>
         <div class="sales-package__ongoing">
           <strong>{% if lang == "es" %}Del año 2 en adelante{% else %}Year 2 onwards{% endif %}</strong>
           <span>{% set yearly = config.extra.pricing_static_hosting + config.extra.pricing_domain %}{% if lang == "es" %}{{ yearly }} €/año hosting + dominio{% else %}€{{ yearly }}/year hosting + domain{% endif %}</span>
@@ -150,7 +150,7 @@
         <div class="sales-work-card__body">
           <span class="sales-work-card__type">{% if lang == "es" %}Web a Medida{% else %}Custom Website{% endif %}</span>
           <h3>D'Krisna</h3>
-          <p>{% if lang == "es" %}Una web bilingüe de seis páginas que conecta servicios, reseñas y reservas en un recorrido claro.{% else %}A bilingual six-page site that brings services, reviews, and booking into one clear path.{% endif %}</p>
+          <p>{% if lang == "es" %}Una web bilingüe de seis páginas con servicios, reseñas y reservas.{% else %}A bilingual six-page site with services, reviews and booking.{% endif %}</p>
           <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer">{% if lang == "es" %}Ver web{% else %}View live website{% endif %} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </div>
       </article>
@@ -206,7 +206,7 @@
             <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
           </div>
           <h3>puertafria</h3>
-          <p>{% if lang == "es" %}Un producto de puerta fría que convierte un CSV en una cola diaria y enfocada de a quién contactar después.{% else %}A cold-calling product that turns a CSV into a focused daily queue of who to contact next.{% endif %}</p>
+          <p>{% if lang == "es" %}Un producto de puerta fría que convierte un CSV en la lista de a quién llamar hoy.{% else %}A cold-calling product that turns a CSV into the list of who to call today.{% endif %}</p>
           <div class="sales-app-card__features">
             <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> {% if lang == "es" %}Embudos{% else %}Funnels{% endif %}</span>
             <span><i class="fa-solid fa-file" aria-hidden="true"></i> CSV</span>
@@ -271,7 +271,7 @@
       <li>
         <span>4</span>
         <h3>{% if lang == "es" %}Lanzamiento{% else %}Launch{% endif %}</h3>
-        <p>{% if lang == "es" %}Me encargo del despliegue, la entrega y el soporte inicial.{% else %}I handle deployment, handover, and initial support.{% endif %}</p>
+        <p>{% if lang == "es" %}Lo despliego, pongo todas las cuentas a tu nombre y te acompaño en el lanzamiento.{% else %}I deploy it, put every account in your name, and support the launch.{% endif %}</p>
       </li>
     </ol>
   </section>
