@@ -74,6 +74,10 @@
   box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
   transform: rotate(1deg);
 
+  &__slide[hidden] {
+    display: none;
+  }
+
   &__label {
     display: block;
     padding: 0.25rem 0.35rem 0.7rem;
@@ -84,7 +88,17 @@
     text-transform: uppercase;
   }
 
-  > img {
+  &__slide > a {
+    display: block;
+    border-radius: 12px;
+
+    &:focus-visible {
+      outline: 3px solid color-mix(in srgb, var(--accent-color) 35%, transparent);
+      outline-offset: 3px;
+    }
+  }
+
+  &__slide > a > img {
     display: block;
     width: 100%;
     aspect-ratio: 16 / 10;
@@ -96,6 +110,7 @@
   }
 
   blockquote {
+    min-height: 3.1em;
     margin: 1rem 0 0.75rem;
     padding: 0 0.35rem;
     border: 0;
@@ -126,6 +141,113 @@
     strong {
       color: var(--heading-color);
     }
+  }
+
+  &__summary {
+    min-height: 3.1em;
+    margin: 1rem 0 0.75rem;
+    padding: 0 0.35rem;
+    color: var(--heading-color);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.55;
+  }
+
+  &__project {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-height: 36px;
+    padding: 0 0.35rem 0.25rem;
+    color: var(--color-subtitle);
+    font-size: 0.8rem;
+
+    strong {
+      color: var(--heading-color);
+    }
+  }
+
+  &__mark {
+    display: inline-flex;
+    flex: 0 0 36px;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--sales-soft);
+    color: var(--accent-color);
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: 34px 1fr auto 34px;
+    gap: 0.55rem;
+    align-items: center;
+    margin-top: 0.8rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--sales-border);
+
+    > button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      padding: 0;
+      border: 1px solid var(--sales-border);
+      border-radius: 50%;
+      background: var(--sales-panel);
+      color: var(--body-color);
+      cursor: pointer;
+
+      &:hover {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+      }
+
+      &:focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--accent-color) 35%, transparent);
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  &__dots {
+    display: flex;
+    gap: 0.35rem;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width: 7px;
+      height: 7px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: var(--sales-border);
+      cursor: pointer;
+      transition: width 0.2s ease, background-color 0.2s ease;
+
+      &.is-active {
+        width: 18px;
+        border-radius: 999px;
+        background: var(--accent-color);
+      }
+
+      &:focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--accent-color) 35%, transparent);
+        outline-offset: 3px;
+      }
+    }
+  }
+
+  &__count {
+    min-width: 2.75rem;
+    color: var(--color-subtitle);
+    font-size: 0.7rem;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
   }
 }
 
