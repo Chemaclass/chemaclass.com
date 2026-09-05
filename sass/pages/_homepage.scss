@@ -26,101 +26,53 @@ main:has(.homepage-container) #scroll-to-top {
   display: none !important;
 }
 
-// Top row: two columns
-.homepage-top {
-  display: flex;
-  gap: 3rem;
-  align-items: stretch;
-  padding: 0;
-}
-
-// Left column: Hero content
-.hero-content {
-  flex: 0 0 360px;
-  display: flex;
-  flex-direction: column;
+// Put the introduction and its actions before the portrait on small screens.
+.homepage-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 144px;
   align-items: center;
-  text-align: center;
+  gap: 2rem;
+  padding: 2rem 0;
 
-  .hero-text {
-    h1 {
-      font-size: 1.75rem;
-      margin: 0 0 0.5rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--heading-color);
-    }
-
-    .subtitle {
-      font-size: 0.95rem;
-      color: var(--accent-color);
-      margin: 0 0 1rem;
-      font-weight: 500;
-      line-height: 1.5;
-    }
-
-    .hero-quotes {
-      position: relative;
-      min-height: 3em;
-      width: 100%;
-      text-align: center;
-    }
-
-    .hero-quote {
-      margin: 0;
-      padding: 0;
-      border: none;
-      font-style: italic;
-      font-size: 0.85rem;
-      color: var(--color-subtitle);
-
-      &.active {
-        opacity: 0.85;
-      }
-
-      p {
-        margin: 0;
-        transition: opacity 0.3s ease;
-      }
-    }
-  }
+  h1 { margin: 0 0 0.5rem; font-size: clamp(2rem, 5vw, 3rem); }
+  p { max-width: 60ch; line-height: 1.65; }
+  &__lead { color: var(--accent-color); font-size: 1.25rem; }
+  &__portrait { width: 144px; height: 144px; border-radius: 50%; }
+  &__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0 1rem; }
+  &__background { font-size: 0.9rem; }
 }
 
-// Right column
-.homepage-right {
-  flex: 1;
-  min-width: 0;
+.home-action {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 0.75rem 1.35rem;
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 9px;
+  font-weight: 500;
+  text-decoration: none;
+
+  &--primary { background: var(--accent-color); color: #fff; }
+  .theme-dark &--primary { color: var(--body-bg); }
+  &:focus-visible { outline: 3px solid var(--accent-color); outline-offset: 3px; }
 }
 
-// Profile with circular image
-.profile {
-  flex-shrink: 0;
-  position: relative;
-  margin: 0 auto 1.5rem;
+.home-start {
+  margin: 2.5rem 0;
+  padding: 1.5rem 0;
+  border-block: 1px solid var(--preview-divider-color);
+  h2 { font-size: 1.1rem; }
+  > a { font-size: 1.25rem; font-weight: 500; }
+  p { max-width: 65ch; color: var(--color-subtitle); }
+}
 
-  .profile-container {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: white;
-    border: 4px solid var(--preview-divider-color);
-    transition: border-color 0.3s ease;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    &:hover {
-      border-color: var(--accent-color);
-
-      img {
-        transform: scale(1.05);
-      }
-    }
+@media (max-width: $breakpoint-tablet) {
+  .homepage-intro {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    &__portrait { width: 96px; height: 96px; }
   }
 }
 
