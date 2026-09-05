@@ -378,23 +378,15 @@
     line-height: 1.1;
   }
 
-  &__price-was {
-    display: inline-block;
-    margin-right: 0.4rem;
+  // "From" rides at the cap height of the figure rather than sitting on the
+  // baseline, so the number stays the thing the eye lands on.
+  &__price-from {
+    margin-right: 0.25rem;
     color: var(--color-subtitle);
-    font-size: 0.55em;
+    font-size: 0.42em;
     font-weight: 600;
-    text-decoration-thickness: 2px;
-    vertical-align: 0.34em;
-  }
-
-  &__price-was-label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
+    letter-spacing: 0;
+    vertical-align: 0.5em;
   }
 
   &__price-note {

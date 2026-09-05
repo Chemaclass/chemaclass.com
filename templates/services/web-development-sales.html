@@ -92,7 +92,7 @@
         </div>
         <h3>{% if lang == "es" %}Web a Medida{% else %}Custom Website{% endif %}</h3>
         <p class="sales-package__fit">{% if lang == "es" %}Para negocios cuyo contenido cambia solo unas pocas veces al año.{% else %}For businesses whose content changes only a few times a year.{% endif %}</p>
-        <p class="sales-package__price"><s class="sales-package__price-was"><span class="sales-package__price-was-label">{{ trans(key='svc_price_was_label', lang=lang) }} </span>{{ trans(key='svc_price_was_simple', lang=lang) }}</s> {{ trans(key='svc_price_range_simple', lang=lang) }}</p>
+        <p class="sales-package__price"><span class="sales-package__price-from">{{ trans(key='svc_price_from_label', lang=lang) }}</span> {{ trans(key='svc_price_from_simple', lang=lang) }}</p>
         <p class="sales-package__price-note">{% if lang == "es" %}Pago único. Presupuesto cerrado antes de empezar.{% else %}One-time project fee. Fixed quote before work begins.{% endif %}</p>
         <ul class="sales-package__uses">
           <li>{% if lang == "es" %}Webs corporativas{% else %}Company websites{% endif %}</li>
@@ -104,7 +104,7 @@
         <div class="sales-package__ongoing">
           <strong>{% if lang == "es" %}Desde el año 2{% else %}From year 2{% endif %}</strong>
           <span>{% if lang == "es" %}50 €/año hosting + dominio{% else %}€50/year hosting + domain{% endif %}</span>
-          <span>{% if lang == "es" %}Mantenimiento opcional: {{ config.extra.pricing_static_maintenance_min }} - {{ config.extra.pricing_static_maintenance_max }} €/año{% else %}Optional care: €{{ config.extra.pricing_static_maintenance_min }} - €{{ config.extra.pricing_static_maintenance_max }}/year{% endif %}</span>
+          <span>{% if lang == "es" %}Mantenimiento opcional: {{ config.extra.pricing_static_maintenance }} €/año{% else %}Optional care: €{{ config.extra.pricing_static_maintenance }}/year{% endif %}</span>
         </div>
         <a class="sales-button sales-button--primary sales-button--full" href="#quote" data-quote-cta data-package="{% if lang == 'es' %}Web a Medida{% else %}Custom Website{% endif %}">{% if lang == "es" %}Recibir presupuesto cerrado{% else %}Get a fixed quote{% endif %}</a>
       </article>
@@ -116,7 +116,7 @@
         </div>
         <h3>{% if lang == "es" %}Web + Blog{% else %}Website + Blog{% endif %}</h3>
         <p class="sales-package__fit">{% if lang == "es" %}Para negocios que publican noticias, artículos o casos de estudio cada mes.{% else %}For businesses publishing news, articles, or case studies every month.{% endif %}</p>
-        <p class="sales-package__price"><s class="sales-package__price-was"><span class="sales-package__price-was-label">{{ trans(key='svc_price_was_label', lang=lang) }} </span>{{ trans(key='svc_price_was_pro', lang=lang) }}</s> {{ trans(key='svc_price_range_pro', lang=lang) }}</p>
+        <p class="sales-package__price"><span class="sales-package__price-from">{{ trans(key='svc_price_from_label', lang=lang) }}</span> {{ trans(key='svc_price_from_pro', lang=lang) }}</p>
         <p class="sales-package__price-note">{% if lang == "es" %}Pago único. Presupuesto cerrado antes de empezar.{% else %}One-time project fee. Fixed quote before work begins.{% endif %}</p>
         <ul class="sales-package__uses">
           <li>{% if lang == "es" %}Blogs de empresa{% else %}Company blogs{% endif %}</li>
@@ -128,14 +128,14 @@
         <div class="sales-package__ongoing">
           <strong>{% if lang == "es" %}Desde el año 2{% else %}From year 2{% endif %}</strong>
           <span>{% if lang == "es" %}50 €/año hosting + dominio{% else %}€50/year hosting + domain{% endif %}</span>
-          <span>{% if lang == "es" %}Mantenimiento opcional: {{ config.extra.pricing_static_pro_maintenance_min }} - {{ config.extra.pricing_static_pro_maintenance_max }} €/año{% else %}Optional care: €{{ config.extra.pricing_static_pro_maintenance_min }} - €{{ config.extra.pricing_static_pro_maintenance_max }}/year{% endif %}</span>
+          <span>{% if lang == "es" %}Mantenimiento opcional: {{ config.extra.pricing_static_pro_maintenance }} €/año{% else %}Optional care: €{{ config.extra.pricing_static_pro_maintenance }}/year{% endif %}</span>
         </div>
         <a class="sales-button sales-button--primary sales-button--full" href="#quote" data-quote-cta data-package="{% if lang == 'es' %}Web + Blog{% else %}Website + Blog{% endif %}">{% if lang == "es" %}Recibir presupuesto cerrado{% else %}Get a fixed quote{% endif %}</a>
       </article>
     </div>
 
     <p class="sales-advice"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> <strong>{% if lang == "es" %}¿No lo tienes claro?{% else %}Not sure?{% endif %}</strong> {% if lang == "es" %}Empieza con la Web a Medida. Puedes añadir el blog después.{% else %}Start with Custom Website. You can add a blog later.{% endif %}</p>
-    <p class="sales-price-context">{% if lang == "es" %}El precio dentro del rango depende del alcance: páginas, idiomas, funcionalidades y estado del contenido.{% else %}Where you land in the range depends on scope, including pages, languages, features, and content readiness.{% endif %}</p>
+    <p class="sales-price-context">{% if lang == "es" %}El precio final depende del alcance: páginas, idiomas, funcionalidades y estado del contenido. Lo cierras antes de empezar.{% else %}The final price depends on scope, including pages, languages, features, and content readiness. You agree it before work begins.{% endif %}</p>
     <p class="sales-payment-methods"><strong>{% if lang == "es" %}Formas de pago:{% else %}Payment methods:{% endif %}</strong> {% if lang == "es" %}transferencia bancaria SEPA, PayPal o Bitcoin.{% else %}SEPA bank transfer, PayPal, or Bitcoin.{% endif %}</p>
   </section>
 
@@ -283,7 +283,7 @@
     </div>
     <div class="sales-faq__list">
       <details>
-        <summary>{% if lang == "es" %}¿Qué determina el precio dentro de cada rango?{% else %}What changes the price within each range?{% endif %}</summary>
+        <summary>{% if lang == "es" %}¿Qué determina el precio final?{% else %}What changes the final price?{% endif %}</summary>
         <p>{% if lang == "es" %}El número de páginas, idiomas, funcionalidades especiales y el estado del contenido. Recibes un presupuesto cerrado para el alcance acordado antes de empezar.{% else %}The number of pages, languages, special features, and how ready your content is. You receive a fixed quote for the agreed scope before any work begins.{% endif %}</p>
       </details>
       <details>
