@@ -1,0 +1,7 @@
+// Consistent introductions across the content collections.
+.collection-intro {
+  margin: 1rem 0 2.5rem;
+  text-align: left;
+  h1 { margin: 0 0 0.75rem; color: var(--heading-color); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.2; }
+  > p { max-width: 60ch; margin: 0; color: var(--color-subtitle); font-size: 1.05rem; line-height: 1.65; }
+}
