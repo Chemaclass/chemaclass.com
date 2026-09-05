@@ -532,8 +532,10 @@
       {{ macros::page_styles(css='page.css', preload='sponsor.css') }}
     {% endblock styles %}
     {% block rss %}
-      <link rel="alternate" type="application/atom+xml" hreflang="en" href="{{ get_url(path='atom.xml') | safe }}" title="Atom Feed (EN)">
-      <link rel="alternate" type="application/atom+xml" hreflang="es" href="{{ get_url(path='es/atom.xml') | safe }}" title="Atom Feed (ES)">
+      {# No hreflang here. These are feeds, not translations of the page, and the
+         duplicate annotation conflicts with the real pair emitted above. #}
+      <link rel="alternate" type="application/atom+xml" href="{{ get_url(path='atom.xml') | safe }}" title="Atom Feed (EN)">
+      <link rel="alternate" type="application/atom+xml" href="{{ get_url(path='es/atom.xml') | safe }}" title="Atom Feed (ES)">
       {# scripts/generate-feed-json.py has published /feed.json since the JSON Feed
          work, but nothing declared it, so no reader could autodiscover it. #}
       <link rel="alternate" type="application/feed+json" href="{{ get_url(path='feed.json') | safe }}" title="JSON Feed">
