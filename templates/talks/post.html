@@ -29,7 +29,7 @@
       {% if page.taxonomies.tags %}
         <div class="talk-single__tags">
           {% for tag in page.taxonomies.tags %}
-            <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="talk-single__tag">{{ tag }}</a>
+            <a href="{{ get_taxonomy_url(kind='tags', name=tag, lang=lang) }}" class="talk-single__tag">{{ tag }}</a>
           {% endfor %}
         </div>
       {% endif %}

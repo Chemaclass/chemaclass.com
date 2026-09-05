@@ -42,7 +42,7 @@ La preferencia temporal baja construye cosas grandes: negocios, familias, rascac
 
 La calidad del dinero afecta todo. Si tu dinero pierde valor constantemente (_hola, inflación_), la gente deja de ahorrar y vive solo para hoy.
 
-Ammous señala al dinero fiat controlado por gobiernos como el problema. Y defiende volver al "dinero duro" (oro o [Bitcoin](/tags/bitcoin/)) que mantiene su valor. El buen dinero permite planificar, ahorrar y crear [riqueza](/es/readings/rich-dad-poor-dad/) a largo plazo.
+Ammous señala al dinero fiat controlado por gobiernos como el problema. Y defiende volver al "dinero duro" (oro o [Bitcoin](/es/tags/bitcoin/)) que mantiene su valor. El buen dinero permite planificar, ahorrar y crear [riqueza](/es/readings/rich-dad-poor-dad/) a largo plazo.
 
 ## 4. Producir lleva tiempo, y eso importa
 

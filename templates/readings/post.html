@@ -118,7 +118,7 @@
           {% if page.taxonomies.tags %}
           <span class="blog-post__tags">
             {% for tag in page.taxonomies.tags %}
-              <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="blog-post__tag">{{ tag }}</a>
+              <a href="{{ get_taxonomy_url(kind='tags', name=tag, lang=lang) }}" class="blog-post__tag">{{ tag }}</a>
             {% endfor %}
           </span>
           {% endif %}

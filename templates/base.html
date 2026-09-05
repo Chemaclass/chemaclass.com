@@ -232,6 +232,10 @@
     <!-- Open Graph title and description -->
     {% if page.title %}
     <meta property="og:title" content="{{ page.title }}">
+    {% elif term.name %}
+    <meta property="og:title" content="{{ term.name }} | {{ config.title }}">
+    {% elif section.title %}
+    <meta property="og:title" content="{{ section.title }}">
     {% else %}
     <meta property="og:title" content="{{ config.title }}">
     {% endif %}
