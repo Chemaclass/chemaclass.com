@@ -189,6 +189,22 @@
     font-weight: 600;
     text-align: center;
 
+    // The one link in the strip keeps the row's colour so the four items stay
+    // one object, and earns a quiet underline so it is still discoverable.
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+      text-underline-offset: 3px;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--accent-color);
+        text-decoration-color: currentColor;
+      }
+    }
+
     + span {
       border-left: 1px solid var(--sales-border);
     }
