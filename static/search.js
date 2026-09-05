@@ -739,12 +739,35 @@ function initSearch() {
             const fuzzyOptions = {...effectiveOptions, bool: "OR"};
             indexResults = currentIndex.search(searchTerm + "*", fuzzyOptions);
         }
-        if (indexResults.length === 0 && searchTerm.length >= 4) {
+        // Zola stems the index with the Rust snowball stemmer; this file stems
+        // the query with the English Porter one. For Spanish the two disagree,
+        // so "precio" never becomes the indexed "preci". Chopping the tail is
+        // the only bridge, and gating it on zero results kept the bridge shut
+        // whenever a single weak accidental hit existed: "precio" expands to
+        // "precios", one unrelated post at 0.108, and that was enough to hide
+        // the seven documents filed under "preci". Gate on the best score
+        // instead, and merge rather than replace so a real hit is never lost.
+        const WEAK_SCORE = 1;
+        const topScore = (list) => list.reduce((max, hit) => Math.max(max, hit.score), 0);
+        if (topScore(indexResults) < WEAK_SCORE && searchTerm.length >= 4) {
             const relaxedOptions = {...effectiveOptions, bool: "OR"};
+            const seen = new Set(indexResults.map((hit) => hit.ref));
+            // Stop short of the stem. Chopping to four characters turns
+            // "contratar" into "cont" and buys documents the token filter
+            // downstream throws away anyway.
+            // Floor of 3, which is what the old loop bottomed out at: it sliced
+            // while the length was still 4, so a four-letter query like "kata"
+            // did reach "kat*". Anything higher silently drops those.
+            const floor = Math.max(3, Math.ceil(searchTerm.length * 0.6));
             let truncated = searchTerm;
-            while (indexResults.length === 0 && truncated.length >= 4) {
+            while (truncated.length > floor && topScore(indexResults) < WEAK_SCORE) {
                 truncated = truncated.slice(0, -1);
-                indexResults = currentIndex.search(truncated + "*", relaxedOptions);
+                for (const hit of currentIndex.search(truncated + "*", relaxedOptions)) {
+                    if (!seen.has(hit.ref)) {
+                        seen.add(hit.ref);
+                        indexResults.push(hit);
+                    }
+                }
             }
         }
 
