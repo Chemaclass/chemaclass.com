@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% import "partials/macros.html" as macros %}
+
+{% block styles %}
+{{ macros::page_styles(css='page.css') }}
+{% endblock styles %}
+
+{% block content %}
+{% set lp = '' %}{% if lang == 'es' %}{% set lp = '/es' %}{% endif %}
+<article class="web-development-sales">
+  <section class="sales-thanks">
+    <span class="sales-eyebrow">{% if lang == "es" %}Recibido{% else %}Received{% endif %}</span>
+    <h1>{% if lang == "es" %}Gracias, ya lo tengo{% else %}Thanks, I have it{% endif %}</h1>
+    <p class="sales-thanks__lead">{% if lang == "es" %}Leo tu descripción y te respondo en un día laborable, con la opción que encaja, el plazo probable y el siguiente paso. Si necesito algo más para cerrar el presupuesto, te lo pregunto en ese mismo correo.{% else %}I read your brief and reply within one working day, with the package that fits, the likely timing and the next step. If I need anything else to close the quote, I ask in that same email.{% endif %}</p>
+    <p class="sales-thanks__aside">{% if lang == "es" %}¿No te llega nada? Mira en spam, o escríbeme directamente a <a href="mailto:web@chemaclass.com">web@chemaclass.com</a>.{% else %}Nothing arrives? Check your spam folder, or write to me directly at <a href="mailto:web@chemaclass.com">web@chemaclass.com</a>.{% endif %}</p>
+    <div class="sales-thanks__actions">
+      <a class="sales-button sales-button--primary" href="{{ lp }}/services/web-development/">{% if lang == "es" %}Volver a los precios{% else %}Back to the prices{% endif %}</a>
+      <a class="sales-button" href="{{ lp }}/blog/">{% if lang == "es" %}Leer el blog{% else %}Read the blog{% endif %}</a>
+    </div>
+  </section>
+</article>
+
+<script>
+  // Fires here rather than on the submit button: Web3Forms only redirects to
+  // this page once it has accepted the submission, so this counts delivered
+  // briefs. The old event fired before a mailto: that often opened nothing.
+  (function () {
+    if (typeof window.cronitor !== 'function') return;
+    window.cronitor('track', 'WebsiteQuoteDelivered', {
+      variant: 'sales',
+      language: '{{ lang }}'
+    });
+  })();
+</script>
+{% endblock content %}
