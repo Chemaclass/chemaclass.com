@@ -88,8 +88,22 @@
     text-transform: uppercase;
   }
 
+  // Each crop keeps the project's main message inside the same 16:10 frame.
+  &__slide--windmill { --proof-width: 160%; --proof-left: -30%; --proof-top: -36.8%; }
+  &__slide--teina { --proof-width: 123.08%; --proof-left: -11.54%; --proof-top: -17.85%; }
+  &__slide--sandoval { --proof-width: 139.13%; --proof-left: -20%; --proof-top: -18.09%; }
+  &__slide--dkrisna { --proof-width: 168.42%; --proof-left: -34.74%; --proof-top: -61.47%; }
+  &__slide--dinamita { --proof-width: 138.46%; --proof-left: -19.23%; --proof-top: -43.08%; }
+  &__slide--postcard { --proof-width: 139.13%; --proof-left: -20%; --proof-top: -46.61%; }
+  &__slide--miaforo { --proof-width: 180%; --proof-left: -45%; --proof-top: -27%; }
+  &__slide--puertafria { --proof-width: 180%; --proof-left: -22.5%; --proof-top: -23%; }
+
   &__slide > a {
     display: block;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    border: 1px solid var(--sales-border);
     border-radius: 12px;
 
     &:focus-visible {
@@ -100,13 +114,15 @@
 
   &__slide > a > img {
     display: block;
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-    object-position: top;
+    position: absolute;
+    width: var(--proof-width, 125%);
+    max-width: none;
+    height: auto;
+    left: var(--proof-left, -12.5%);
+    top: var(--proof-top, 0%);
     margin: 0;
-    border: 1px solid var(--sales-border);
-    border-radius: 12px;
+    border: 0;
+    border-radius: 0;
   }
 
   blockquote {
