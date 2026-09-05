@@ -17,7 +17,7 @@
 
 {% block content %}
   <div class="blog-index">
-    <div class="blog-header">
+    <div class="blog-header collection-intro">
       <h1>{{ trans(key="blog_title", lang=lang) }}</h1>
       <p class="blog-intro">{{ trans(key="blog_intro", lang=lang) }}</p>
     </div>
@@ -49,15 +49,6 @@
         <a href="{% if lang == 'es' %}/es/topics/{% else %}/topics/{% endif %}#bitcoin-economics">{{ trans(key="home_path_bitcoin", lang=lang) }}</a>
       </div>
     </div>
-    <div class="blog-browse__row">
-      <span class="blog-browse__label">{{ trans(key="browse_by_series", lang=lang) }}</span>
-      <div class="blog-browse__links">
-        {% for key in ["ai", "craftsmanship", "leadership", "agile", "bitcoin"] %}
-          {% set conf = config.extra.series[key] %}
-          <a href="{% if lang == 'es' %}/es{% endif %}/series/{{ key }}/">{% if lang == "es" %}{{ conf.title_es }}{% else %}{{ conf.title }}{% endif %}</a>
-        {% endfor %}
-      </div>
-    </div>
   </nav>
 
   {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
@@ -73,6 +64,17 @@
     {% endif %}
   {% endfor %}
 
+  <details class="blog-browse-more">
+    <summary>{% if lang == 'es' %}Explorar por serie o año{% else %}Browse by series or year{% endif %}</summary>
+    <div class="blog-browse__row">
+      <span class="blog-browse__label">{{ trans(key="browse_by_series", lang=lang) }}</span>
+      <div class="blog-browse__links">
+        {% for key in ["ai", "craftsmanship", "leadership", "agile", "bitcoin"] %}
+          {% set conf = config.extra.series[key] %}
+          <a href="{% if lang == 'es' %}/es{% endif %}/series/{{ key }}/">{% if lang == "es" %}{{ conf.title_es }}{% else %}{{ conf.title }}{% endif %}</a>
+        {% endfor %}
+      </div>
+    </div>
   {% if seen_years | length > 1 %}
   <nav class="year-nav" aria-label="{{ trans(key='jump_to_year', lang=lang) }}">
     <span class="year-nav__label">{{ trans(key="jump_to_year", lang=lang) }}</span>
@@ -83,6 +85,8 @@
     </ul>
   </nav>
   {% endif %}
+
+  </details>
 
   <div class="blog-list blog-list--featured">
     {% for post in pinned_posts %}

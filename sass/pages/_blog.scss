@@ -1,26 +1,4 @@
-.blog-header {
-  text-align: center;
-  margin-bottom: 2rem;
 
-  h1 {
-    margin-bottom: 0.5rem;
-  }
-
-  .blog-intro {
-    color: var(--color-subtitle);
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin: 0 auto;
-    max-width: 700px;
-  }
-
-}
-
-@media (max-width: $breakpoint-phone) {
-  .blog-header .blog-intro {
-    font-size: 1rem;
-  }
-}
 
 // Start Here section
 .start-here {
@@ -417,4 +395,13 @@
       padding: 1rem;
     }
   }
+}
+
+.blog-browse-more {
+  margin: 0 0 2rem;
+  padding: 0.75rem 0;
+  border-block: 1px solid var(--preview-divider-color);
+  summary { cursor: pointer; padding: 0.5rem 0; color: var(--heading-color); }
+  summary:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 4px; }
+  .blog-browse__row { margin-top: 1rem; }
 }

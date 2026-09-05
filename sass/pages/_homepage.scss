@@ -42,22 +42,6 @@ main:has(.homepage-container) #scroll-to-top {
   &__background { font-size: 0.9rem; }
 }
 
-.home-action {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 48px;
-  padding: 0.75rem 1.35rem;
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 9px;
-  font-weight: 500;
-  text-decoration: none;
-
-  &--primary { background: var(--accent-color); color: #fff; }
-  .theme-dark &--primary { color: var(--body-bg); }
-  &:focus-visible { outline: 3px solid var(--accent-color); outline-offset: 3px; }
-}
-
 .home-start {
   margin: 2.5rem 0;
   padding: 1.5rem 0;
@@ -77,16 +61,6 @@ main:has(.homepage-container) #scroll-to-top {
 }
 
 // Section headers
-.about-section {
-  margin: 0;
-
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--heading-color);
-  }
-}
 
 .projects-section,
 .latest-section {
@@ -118,38 +92,6 @@ main:has(.homepage-container) #scroll-to-top {
 
   &:hover {
     color: var(--accent-color);
-  }
-}
-
-// About Card
-.about-card {
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 16px;
-  padding: 1.75rem;
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.3s ease;
-
-  h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .about-paragraphs {
-    margin: 0 0 1.25rem;
-
-    p {
-      font-size: 0.93rem;
-      line-height: 1.65;
-      color: var(--color-subtitle);
-      margin: 0 0 0.85rem;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-    }
   }
 }
 
@@ -586,35 +528,6 @@ main:has(.homepage-container) #scroll-to-top {
 
 // Responsive
 @media (max-width: $breakpoint-tablet) {
-  .homepage-top {
-    flex-direction: column;
-    gap: 0rem;
-  }
-
-  .hero-content {
-    width: 100%;
-
-    .hero-text h1 {
-      font-size: 1.75rem;
-    }
-  }
-
-  .homepage-right {
-    width: 100%;
-  }
-
-  .about-card {
-    padding-top: 1rem;
-
-    h2 {
-      margin-top: 0;
-    }
-  }
-
-  .profile .profile-container {
-    width: 150px;
-    height: 150px;
-  }
 
   // Latest content stacks: featured on top, secondary posts full-width below
   .featured-grid {
@@ -632,38 +545,6 @@ main:has(.homepage-container) #scroll-to-top {
     padding: 1rem;
   }
 
-  .homepage-top {
-    gap: 0.5rem;
-  }
-
-  .profile .profile-container {
-    width: 120px;
-    height: 120px;
-  }
-
-  .hero-content {
-    flex: 0 0 auto;
-
-    .hero-text {
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 0.75rem;
-      }
-
-      .hero-quotes {
-        min-height: 2.5em;
-      }
-
-      .hero-quote {
-        font-size: 1.1rem;
-      }
-    }
-  }
-
   .reader-paths {
     margin: 1rem 0;
   }
@@ -675,21 +556,6 @@ main:has(.homepage-container) #scroll-to-top {
 
   .reader-path {
     padding: 0.9rem 1rem;
-  }
-
-  .about-card {
-    padding: 1rem;
-    border-radius: 12px;
-
-    h2 {
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .about-paragraphs p {
-      font-size: 0.85rem;
-    }
-
   }
 
   .projects-section,
@@ -814,14 +680,6 @@ main:has(.homepage-container) #scroll-to-top {
 @media (max-width: 360px) {
   .hero-content .hero-text h1 {
     font-size: 1.25rem;
-  }
-
-  .about-card {
-    padding: 0.85rem;
-
-    .about-paragraphs p {
-      font-size: 0.8rem;
-    }
   }
 
   .project-card {

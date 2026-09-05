@@ -29,46 +29,7 @@
   text-transform: uppercase;
 }
 
-.sales-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.55rem;
-  min-height: 48px;
-  padding: 0.75rem 1.35rem;
-  border: 0;
-  border-radius: 9px;
-  font: inherit;
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1.2;
-  text-decoration: none;
-  cursor: pointer;
-  transition: opacity 0.2s ease, transform 0.2s ease;
 
-  &:hover {
-    transform: translateY(-1px);
-  }
-
-  &:focus-visible {
-    outline: 3px solid color-mix(in srgb, var(--accent-color) 35%, transparent);
-    outline-offset: 3px;
-  }
-
-  &--primary {
-    background: var(--accent-color);
-    color: #fff;
-
-    &:hover {
-      color: #fff;
-      opacity: 0.9;
-    }
-  }
-
-  &--full {
-    width: 100%;
-  }
-}
 
 .sales-hero {
   min-height: 560px;
@@ -711,10 +672,8 @@
 
   li {
     position: relative;
-    padding: 1.3rem;
-    border: 1px solid var(--sales-border);
-    border-radius: 14px;
-    background: var(--sales-panel);
+    padding: 1.3rem 0;
+    border-top: 1px solid var(--sales-border);
   }
 
   li > span {
@@ -753,10 +712,7 @@
 
   details {
     overflow: hidden;
-    margin-bottom: 0.75rem;
-    border: 1px solid var(--sales-border);
-    border-radius: 10px;
-    background: var(--sales-panel);
+    border-bottom: 1px solid var(--sales-border);
   }
 
   summary {
@@ -1199,7 +1155,6 @@
     }
   }
 
-  .sales-button--primary,
   // The neutral badge is the one surface here that is not accent-filled: it
   // keeps its own light-on-dark colour rather than the dark glyph colour.
   .sales-package__badge:not(.sales-package__badge--neutral),
