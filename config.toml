@@ -358,6 +358,12 @@ accent = "#2d5a8e"
 repo_content_url = "https://github.com/Chemaclass/chemaclass.com/edit/main/content/"
 
 
+# Web3Forms access key for the quote form. Empty means the form falls back
+# to the plain mailto link, so the page never ships a dead submit button.
+# Public by design: Web3Forms keys live in client-side HTML. Restrict the
+# domain in the Web3Forms panel rather than treating this as a secret.
+web3forms_key = "d62ec016-0f79-41e6-9b13-6f6d00848fd1"
+
 # Centralized pricing (all values in EUR)
 pricing_static_simple_min = 1000
 pricing_static_pro_min = 2000

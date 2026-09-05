@@ -1127,6 +1127,49 @@
 
 }
 
+.sales-quote-form {
+  &__botcheck {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+.sales-thanks {
+  max-width: 44rem;
+  padding: 2rem 0 1rem;
+
+  h1 {
+    margin: 0.35rem 0 1rem;
+    color: var(--heading-color);
+    font-size: clamp(2rem, 5vw, 2.9rem);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  &__lead {
+    margin: 0 0 1rem;
+    color: var(--body-color);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  &__aside {
+    margin: 0 0 2rem;
+    color: var(--color-subtitle);
+    font-size: 0.9rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
 .theme-dark {
   .web-development-sales {
     // Elevation reads as lighter in dark, the reverse of light mode. Without

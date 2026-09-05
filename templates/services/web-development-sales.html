@@ -315,7 +315,16 @@
         <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}Presupuesto cerrado antes de empezar{% else %}Fixed quote before work begins{% endif %}</li>
       </ul>
     </div>
-    <form class="sales-quote-form" action="mailto:web@chemaclass.com" method="post" enctype="text/plain" data-quote-form>
+    <form class="sales-quote-form" action="https://api.web3forms.com/submit" method="post" data-quote-form data-quote-key="{{ config.extra.web3forms_key }}" data-quote-thanks="{{ lp }}/services/web-development-thanks/">
+      <input type="hidden" name="access_key" value="{{ config.extra.web3forms_key }}">
+      <input type="hidden" name="subject" value="{% if lang == 'es' %}Presupuesto web{% else %}Website quote{% endif %} - chemaclass.com">
+      <input type="hidden" name="from_name" value="chemaclass.com">
+      {# Native POST rather than fetch: Web3Forms filters cross-origin XHR, and a
+         plain form navigation has no CORS to negotiate and needs no JavaScript.
+         They redirect the browser here once the submission is accepted. #}
+      <input type="hidden" name="redirect" value="{{ config.base_url | safe }}{{ lp | safe }}/services/web-development-thanks/">
+      {# Honeypot: bots fill every field they find, people never see this one. #}
+      <input type="checkbox" name="botcheck" class="sales-quote-form__botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="sales-field">
         <label for="quote-email">Email</label>
         <input id="quote-email" name="email" type="email" autocomplete="email" required placeholder="{% if lang == 'es' %}tu@empresa.com{% else %}you@company.com{% endif %}">
@@ -330,7 +339,7 @@
       </div>
       <input type="hidden" name="package" value="{% if lang == 'es' %}Sin seleccionar{% else %}Not selected{% endif %}" data-package-input>
       <button class="sales-button sales-button--primary sales-button--full" type="submit">{% if lang == "es" %}Enviar descripción del proyecto{% else %}Send project brief{% endif %} <i class="fa-solid fa-envelope" aria-hidden="true"></i></button>
-      <p class="sales-quote-form__note"><i class="fa-solid fa-lock" aria-hidden="true"></i> {% if lang == "es" %}Tus datos quedan entre nosotros. Al enviar se abrirá un email listo para enviar.{% else %}Your details stay between us. Sending opens a ready-to-send email.{% endif %}</p>
+      <p class="sales-quote-form__note"><i class="fa-solid fa-lock" aria-hidden="true"></i> {% if lang == "es" %}Tus datos quedan entre nosotros. Los uso solo para responderte.{% else %}Your details stay between us. I use them only to reply to you.{% endif %}</p>
       <p class="sales-quote-form__alternative">{% if lang == "es" %}¿Prefieres escribir directamente?{% else %}Prefer to write directly?{% endif %} <a href="mailto:web@chemaclass.com">web@chemaclass.com</a></p>
     </form>
   </section>
@@ -370,45 +379,36 @@
   });
 
   if (form) {
+    const submit = form.querySelector('button[type="submit"]');
+    const accessKey = form.dataset.quoteKey;
+
     form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      if (!form.reportValidity()) return;
+      // No key configured: fall back to the mail client rather than posting
+      // into a request that cannot succeed.
+      if (!accessKey) {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        const need = document.getElementById('quote-need').value.trim();
+        const subject = (isSpanish ? 'Presupuesto web - ' : 'Website quote - ') + packageInput.value;
+        window.location.href = 'mailto:web@chemaclass.com?subject=' +
+          encodeURIComponent(subject) + '&body=' + encodeURIComponent(need);
+        return;
+      }
 
-      const email = document.getElementById('quote-email').value.trim();
-      let website = document.getElementById('quote-website').value.trim();
-      if (website && !/^https?:\/\//i.test(website)) website = 'https://' + website;
-      const need = document.getElementById('quote-need').value.trim();
-      const selectedPackage = packageInput.value;
-      const subject = (isSpanish ? 'Presupuesto web - ' : 'Website quote - ') + selectedPackage;
-      const body = isSpanish ? [
-        'Hola Chema,',
-        '',
-        'Me interesa: ' + selectedPackage,
-        'Mi email: ' + email,
-        'Web actual: ' + (website || 'Ninguna'),
-        '',
-        'Lo que necesito:',
-        need,
-        '',
-        'Gracias.'
-      ].join('\n') : [
-        'Hi Chema,',
-        '',
-        'I am interested in: ' + selectedPackage,
-        'My email: ' + email,
-        'Current website: ' + (website || 'None'),
-        '',
-        'What I need:',
-        need,
-        '',
-        'Thanks!'
-      ].join('\n');
+      if (!form.reportValidity()) {
+        event.preventDefault();
+        return;
+      }
 
-      track('WebsiteQuoteFormSubmit', {
-        variant: 'sales',
-        package: selectedPackage
-      });
-      window.location.href = 'mailto:web@chemaclass.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      // Tidy the URL before it leaves, then let the native POST happen.
+      const websiteField = document.getElementById('quote-website');
+      const website = websiteField.value.trim();
+      if (website && !/^https?:\/\//i.test(website)) websiteField.value = 'https://' + website;
+
+      if (submit) {
+        submit.disabled = true;
+        submit.textContent = isSpanish ? 'Enviando...' : 'Sending...';
+      }
     });
   }
 
