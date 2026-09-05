@@ -131,7 +131,7 @@ def main() -> None:
             'author': 'Jose Maria Valera Reales',
             'languages': ['en', 'es'],
             'license': 'https://creativecommons.org/licenses/by/4.0/',
-            'usage_policy': f'{BASE_URL}/.well-known/ai.txt',
+            'usage_policy': f'{BASE_URL}/ai.txt',
         },
         'formats': {
             'summary_index': f'{BASE_URL}/llms.txt',

@@ -148,7 +148,7 @@
       "publisher": { "@id": "{{ config.base_url | safe }}/#organization" },
       "author": { "@id": "{{ config.base_url | safe }}/#person" },
       {% if config.extra.content_license %}"license": "{{ config.extra.content_license.url | safe }}",
-      "usageInfo": "{{ config.base_url | safe }}/.well-known/ai.txt",{% endif %}
+      "usageInfo": "{{ config.base_url | safe }}/ai.txt",{% endif %}
       "potentialAction": {
         "@type": "SearchAction",
         "target": {

@@ -11,7 +11,7 @@ Allow: /
 License: https://creativecommons.org/licenses/by/4.0/ (CC BY 4.0, attribution required)
 Attribution: Jose Maria Valera Reales (Chemaclass), https://chemaclass.com
 Contact: hi@chemaclass.com
-Canonical: https://chemaclass.com/.well-known/ai.txt
+Canonical: https://chemaclass.com/ai.txt
 Llms-Index: https://chemaclass.com/llms.txt
 Llms-Full: https://chemaclass.com/llms-full.txt
 Updated: 2026-05-16
