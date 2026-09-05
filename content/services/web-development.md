@@ -1,6 +1,6 @@
 +++
-title = "Fixed-Price Web Development for Small Businesses | Chemaclass"
-description = "Fast, secure static websites for businesses and professionals. Fixed price from €1,000, live in under a month. No agency overhead."
+title = "Small Business Website Design from €1,000 | Chemaclass"
+description = "Website design for small businesses, built by one senior developer in Berlin. Fixed price from €1,000, live in under a month. Hosting included."
 template = "services/web-development.html"
 aliases = ["/web", "/projects/", "/hire-me/"]
 
