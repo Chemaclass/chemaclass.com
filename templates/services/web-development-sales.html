@@ -98,7 +98,7 @@
         <article class="sales-hero-proof__slide sales-hero-proof__slide--miaforo" data-proof-slide hidden>
           <span class="sales-hero-proof__label">{% if lang == "es" %}Producto propio en producción{% else %}Own product, live today{% endif %}</span>
           <a href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la aplicación MIAFORO{% else %}View the MIAFORO application{% endif %}">
-            <img src="/images/portfolio/miaforo-sample.webp" alt="MIAFORO gym management app" loading="lazy" width="720" height="450">
+            <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="720" height="450">
           </a>
           <p class="sales-hero-proof__summary">{% if lang == "es" %}Reservas, cobros, socios y progreso para gimnasios independientes.{% else %}Bookings, payments, members, and progress for independent gyms.{% endif %}</p>
           <div class="sales-hero-proof__project">
@@ -110,7 +110,7 @@
         <article class="sales-hero-proof__slide sales-hero-proof__slide--puertafria" data-proof-slide hidden>
           <span class="sales-hero-proof__label">{% if lang == "es" %}Producto propio en producción{% else %}Own product, live today{% endif %}</span>
           <a href="{% if lang == 'es' %}https://puertafria.es/{% else %}https://puertafria.es/en{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la aplicación puertafria{% else %}View the puertafria application{% endif %}">
-            <img src="/images/portfolio/puertafria-sample.webp" alt="puertafria sales app" loading="lazy" width="720" height="450">
+            <img src="/images/portfolio/puertafria-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="puertafria sales app" loading="lazy" width="720" height="450">
           </a>
           <p class="sales-hero-proof__summary">{% if lang == "es" %}Un CSV convertido en un embudo diario y enfocado para captar clientes.{% else %}A CSV turned into a focused daily funnel for winning new clients.{% endif %}</p>
           <div class="sales-hero-proof__project">
@@ -401,7 +401,7 @@
     </div>
     <div class="sales-app-grid">
       <a class="sales-app-card sales-app-card--crop-right" href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener noreferrer">
-        <img src="/images/portfolio/miaforo-sample.webp" alt="MIAFORO gym management app" loading="lazy" width="720" height="450">
+        <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="720" height="450">
         <div class="sales-app-card__body">
           <div class="sales-app-card__topline">
             <span>{% if lang == "es" %}Aplicación web{% else %}Web app{% endif %}</span>
@@ -417,7 +417,7 @@
         </div>
       </a>
       <a class="sales-app-card sales-app-card--crop-left" href="{% if lang == 'es' %}https://puertafria.es/{% else %}https://puertafria.es/en{% endif %}" target="_blank" rel="noopener noreferrer">
-        <img src="/images/portfolio/puertafria-sample.webp" alt="puertafria sales app" loading="lazy" width="720" height="450">
+        <img src="/images/portfolio/puertafria-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="puertafria sales app" loading="lazy" width="720" height="450">
         <div class="sales-app-card__body">
           <div class="sales-app-card__topline">
             <span>{% if lang == "es" %}Aplicación web{% else %}Web app{% endif %}</span>
