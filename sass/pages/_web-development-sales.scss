@@ -646,6 +646,14 @@
     object-position: 28% top;
   }
 
+  &--crop-right > img {
+    object-position: 45% top;
+  }
+
+  &--crop-left > img {
+    object-position: 10% top;
+  }
+
   &__body {
     display: flex;
     flex-direction: column;
