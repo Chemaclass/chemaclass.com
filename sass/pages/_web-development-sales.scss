@@ -970,6 +970,7 @@
   }
 
   input,
+  select,
   textarea {
     box-sizing: border-box;
     width: 100%;
@@ -993,9 +994,67 @@
   }
 
   input:focus,
+  select:focus,
   textarea:focus {
     border-color: var(--accent-color);
     outline: 3px solid color-mix(in srgb, var(--accent-color) 18%, transparent);
+  }
+}
+
+// Native select chrome ignores the panel colours on some browsers, so the caret
+// is drawn here instead and the control keeps the same skin as every input.
+.sales-select {
+  position: relative;
+
+  select {
+    appearance: none;
+    padding-right: 2.2rem;
+    cursor: pointer;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 0.95rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-right: 2px solid var(--color-subtitle);
+    border-bottom: 2px solid var(--color-subtitle);
+    content: "";
+    pointer-events: none;
+    transform: translateY(-70%) rotate(45deg);
+  }
+}
+
+.sales-field-row {
+  display: grid;
+  gap: 0 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+// The optional pair stays out of sight until an email is typed, so the form
+// reads as three fields on arrival. Doing it in CSS rather than JavaScript
+// avoids the flash of a row that renders and then hides itself. Browsers
+// without :has() keep both fields visible, which is the harmless side.
+@supports selector(:has(*)) {
+  .sales-quote-form:has(#quote-email:placeholder-shown) .sales-field-row {
+    display: none;
+  }
+
+  .sales-quote-form:has(#quote-email:not(:placeholder-shown)) .sales-field-row {
+    animation: sales-field-reveal 0.28s var(--ease-out-expo) both;
+  }
+}
+
+@keyframes sales-field-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -1194,6 +1253,10 @@
     padding: 1rem;
   }
 
+  .sales-field-row {
+    grid-template-columns: 1fr;
+  }
+
   .sales-sticky-cta {
     position: fixed;
     right: 1rem;
@@ -1290,11 +1353,13 @@
 
   .sales-field {
     input,
+    select,
     textarea {
       border-color: color-mix(in srgb, var(--body-color) 18%, var(--sales-border));
     }
 
     input:focus,
+    select:focus,
     textarea:focus {
       border-color: var(--accent-color);
       outline-color: color-mix(in srgb, var(--accent-color) 32%, transparent);
