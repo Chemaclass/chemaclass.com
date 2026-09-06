@@ -95,8 +95,8 @@
   &__slide--dkrisna { --proof-width: 168.42%; --proof-left: -34.74%; --proof-top: -61.47%; }
   &__slide--dinamita { --proof-width: 138.46%; --proof-left: -19.23%; --proof-top: -43.08%; }
   &__slide--postcard { --proof-width: 139.13%; --proof-left: -20%; --proof-top: -46.61%; }
-  &__slide--miaforo { --proof-width: 180%; --proof-left: -45%; --proof-top: -27%; }
-  &__slide--puertafria { --proof-width: 180%; --proof-left: -22.5%; --proof-top: -23%; }
+  &__slide--miaforo { --proof-width: 139%; --proof-left: 0%; --proof-top: 0%; }
+  &__slide--puertafria { --proof-width: 124%; --proof-left: 0%; --proof-top: 0%; }
 
   &__slide > a {
     display: block;
@@ -647,11 +647,11 @@
   }
 
   &--crop-right > img {
-    object-position: 48% top;
+    object-position: 11% top;
   }
 
   &--crop-left > img {
-    object-position: 22% top;
+    object-position: 4% top;
   }
 
   &__body {
