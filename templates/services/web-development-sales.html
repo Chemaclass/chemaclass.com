@@ -98,7 +98,7 @@
         <article class="sales-hero-proof__slide sales-hero-proof__slide--miaforo" data-proof-slide hidden>
           <span class="sales-hero-proof__label">{% if lang == "es" %}Producto propio en producción{% else %}Own product, live today{% endif %}</span>
           <a href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la aplicación MIAFORO{% else %}View the MIAFORO application{% endif %}">
-            <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="720" height="450">
+            <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="1204" height="1100">
           </a>
           <p class="sales-hero-proof__summary">{% if lang == "es" %}Reservas, cobros, socios y progreso para gimnasios independientes.{% else %}Bookings, payments, members, and progress for independent gyms.{% endif %}</p>
           <div class="sales-hero-proof__project">
@@ -110,7 +110,7 @@
         <article class="sales-hero-proof__slide sales-hero-proof__slide--puertafria" data-proof-slide hidden>
           <span class="sales-hero-proof__label">{% if lang == "es" %}Producto propio en producción{% else %}Own product, live today{% endif %}</span>
           <a href="{% if lang == 'es' %}https://puertafria.es/{% else %}https://puertafria.es/en{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la aplicación puertafria{% else %}View the puertafria application{% endif %}">
-            <img src="/images/portfolio/puertafria-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="puertafria sales app" loading="lazy" width="720" height="450">
+            <img src="/images/portfolio/puertafria-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="puertafria sales app" loading="lazy" width="1204" height="1101">
           </a>
           <p class="sales-hero-proof__summary">{% if lang == "es" %}Un CSV convertido en un embudo diario y enfocado para captar clientes.{% else %}A CSV turned into a focused daily funnel for winning new clients.{% endif %}</p>
           <div class="sales-hero-proof__project">
@@ -397,11 +397,11 @@
     <div class="sales-section-heading">
       <span class="sales-eyebrow">{% if lang == "es" %}Construidas de principio a fin{% else %}Built end to end{% endif %}</span>
       <h2 id="capability-title">{% if lang == "es" %}También hago aplicaciones web{% else %}I also build web applications{% endif %}</h2>
-      <p>{% if lang == "es" %}Cuando un producto necesita cuentas, pagos, bases de datos o paneles, también los construyo. Son productos propios, diseñados, desarrollados, desplegados y operados por mí.{% else %}When a product needs accounts, payments, databases, or dashboards, I build those too. These are my own products, designed, built, deployed, and operated by me.{% endif %}</p>
+      <p>{% if lang == "es" %}Si un producto necesita cuentas, pagos o paneles, también lo construyo. Productos propios, diseñados y operados por mí.{% else %}When a product needs accounts, payments, databases, or dashboards, I build those too. These are my own products, designed, built, deployed, and operated by me.{% endif %}</p>
     </div>
     <div class="sales-app-grid">
       <a class="sales-app-card sales-app-card--crop-right" href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener noreferrer">
-        <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="720" height="450">
+        <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="1204" height="1100">
         <div class="sales-app-card__body">
           <div class="sales-app-card__topline">
             <span>{% if lang == "es" %}Aplicación web{% else %}Web app{% endif %}</span>
@@ -417,7 +417,7 @@
         </div>
       </a>
       <a class="sales-app-card sales-app-card--crop-left" href="{% if lang == 'es' %}https://puertafria.es/{% else %}https://puertafria.es/en{% endif %}" target="_blank" rel="noopener noreferrer">
-        <img src="/images/portfolio/puertafria-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="puertafria sales app" loading="lazy" width="720" height="450">
+        <img src="/images/portfolio/puertafria-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="puertafria sales app" loading="lazy" width="1204" height="1101">
         <div class="sales-app-card__body">
           <div class="sales-app-card__topline">
             <span>{% if lang == "es" %}Aplicación web{% else %}Web app{% endif %}</span>
@@ -482,13 +482,48 @@
       if (shouldTrack) track('WebsiteProofViewed', { project: current + 1 });
     };
 
-    if (previous) previous.addEventListener('click', function () { showProject(current - 1, true); });
-    if (next) next.addEventListener('click', function () { showProject(current + 1, true); });
+    // The carousel advances on its own every ten seconds. Any manual move
+    // restarts the countdown, and pointer, keyboard or a hidden tab pause it.
+    const AUTOPLAY_MS = 10000;
+    const stillMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let autoplay = null;
+
+    const stopAutoplay = function () {
+      if (autoplay) {
+        window.clearInterval(autoplay);
+        autoplay = null;
+      }
+    };
+
+    const startAutoplay = function () {
+      stopAutoplay();
+      if (slides.length < 2 || stillMotion.matches || document.hidden) return;
+      autoplay = window.setInterval(function () { showProject(current + 1, false); }, AUTOPLAY_MS);
+    };
+
+    const moveTo = function (index) {
+      showProject(index, true);
+      startAutoplay();
+    };
+
+    if (previous) previous.addEventListener('click', function () { moveTo(current - 1); });
+    if (next) next.addEventListener('click', function () { moveTo(current + 1); });
     dots.forEach(function (dot) {
       dot.addEventListener('click', function () {
-        showProject(Number(dot.dataset.proofDot), true);
+        moveTo(Number(dot.dataset.proofDot));
       });
     });
+
+    showcase.addEventListener('mouseenter', stopAutoplay);
+    showcase.addEventListener('mouseleave', startAutoplay);
+    showcase.addEventListener('focusin', stopAutoplay);
+    showcase.addEventListener('focusout', startAutoplay);
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stopAutoplay();
+      else startAutoplay();
+    });
+
+    startAutoplay();
   }
 
   document.querySelectorAll('[data-quote-cta]').forEach(function (cta) {
