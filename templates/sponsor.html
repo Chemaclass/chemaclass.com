@@ -20,8 +20,10 @@
     "name": "Jose Maria Valera Reales",
     "alternateName": "Chemaclass",
     "url": "{{ config.base_url | safe }}"
-  },
+  }
+  {% if config.extra.sponsor.paypal_enabled or config.extra.sponsor.lightning_enabled %},
   "potentialAction": [
+    {% if config.extra.sponsor.paypal_enabled %}
     {
       "@type": "DonateAction",
       "name": "PayPal",
@@ -30,7 +32,10 @@
         "name": "Chemaclass"
       },
       "target": "https://www.paypal.com/paypalme/chemaclass"
-    },
+    }
+    {% endif %}
+    {% if config.extra.sponsor.paypal_enabled and config.extra.sponsor.lightning_enabled %},{% endif %}
+    {% if config.extra.sponsor.lightning_enabled %}
     {
       "@type": "DonateAction",
       "name": "Bitcoin Lightning",
@@ -40,7 +45,9 @@
       },
       "target": "https://getalby.com/p/chemaclass"
     }
+    {% endif %}
   ]
+  {% endif %}
 }
 </script>
 {% endblock posthead %}
@@ -64,7 +71,9 @@
   </section>
 
   <!-- Donation Options -->
+  {% if config.extra.sponsor.paypal_enabled or config.extra.sponsor.lightning_enabled %}
   <section class="sponsor-options">
+    {% if config.extra.sponsor.paypal_enabled %}
     <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--paypal">
       <div class="sponsor-card__icon">
         <i class="fa-brands fa-paypal"></i>
@@ -79,6 +88,8 @@
         </svg>
       </span>
     </a>
+    {% endif %}
+    {% if config.extra.sponsor.lightning_enabled %}
     <a href="https://getalby.com/p/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--lightning">
       <div class="sponsor-card__icon">
         <i class="fa-solid fa-bolt"></i>
@@ -93,7 +104,11 @@
         </svg>
       </span>
     </a>
+    {% endif %}
   </section>
+  {% else %}
+  <p class="sponsor-options-empty">{{ trans(key="sponsor_payments_unavailable", lang=lang) }}</p>
+  {% endif %}
 
   <!-- Impact Stats -->
   <section class="sponsor-stats">

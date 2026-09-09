@@ -264,6 +264,7 @@ sponsor_stat_readings = "Book Notes"
 sponsor_stat_talks = "Talks"
 sponsor_paypal_action = "Donate some fiat"
 sponsor_lightning_action = "Donate some sats"
+sponsor_payments_unavailable = "Donations are temporarily unavailable. You can still support my work by sharing articles or contributing to the projects below."
 sponsor_projects_title = "Open Source Projects"
 sponsor_project_bashunit = "A testing framework for Bash. Write tests with a simple, expressive syntax."
 sponsor_project_phel = "A functional programming language (Lisp) that compiles to PHP."
@@ -607,6 +608,7 @@ sponsor_stat_readings = "Notas de Libros"
 sponsor_stat_talks = "Charlas"
 sponsor_paypal_action = "Dona algo de fiat"
 sponsor_lightning_action = "Dona algunos sats"
+sponsor_payments_unavailable = "Las donaciones no están disponibles temporalmente. Puedes seguir apoyando mi trabajo compartiendo artículos o contribuyendo a los proyectos de abajo."
 sponsor_projects_title = "Proyectos Open Source"
 sponsor_project_bashunit = "Un framework de testing para Bash. Escribe tests con una sintaxis simple y expresiva."
 sponsor_project_phel = "Un lenguaje de programación funcional (Lisp) que compila a PHP."
@@ -662,6 +664,12 @@ svc_ready_level_up = "¿Listo para potenciar a tu equipo?"
 svc_unavailable = "No disponible"
 svc_consulting_paused_banner = "La consultoría está en pausa. Ahora mismo no acepto nuevas sesiones. Puedes seguir leyendo y escribirme para desarrollo web."
 svc_workshops_paused_banner = "Los talleres para equipos están en pausa. Ahora mismo no acepto nuevas reservas. Puedes seguir leyendo y escribirme para desarrollo web."
+
+# Payment methods shown on /sponsor/ and /es/sponsor/. Rebuild after changing.
+# Both false shows a message with other ways to support the work.
+[extra.sponsor]
+paypal_enabled = true
+lightning_enabled = false
 
 [extra.series.bitcoin]
 title = "Bitcoin Series"
