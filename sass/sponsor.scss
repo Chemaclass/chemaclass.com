@@ -213,9 +213,25 @@
   gap: 1rem;
   margin-bottom: 3rem;
 
+  > :only-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    max-width: 32rem;
+    box-sizing: border-box;
+  }
+
   @media (max-width: $breakpoint-phone) {
     grid-template-columns: 1fr;
   }
+}
+
+.sponsor-options-empty {
+  max-width: 32rem;
+  margin: 0 auto 3rem;
+  text-align: center;
+  color: var(--color-subtitle);
+  line-height: 1.6;
 }
 
 .sponsor-card {
@@ -231,6 +247,11 @@
   transition: border-color 0.3s ease, background 0.3s ease;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: $breakpoint-phone) {
+    gap: 0.75rem;
+    padding: 1.25rem;
+  }
 
   &__icon {
     width: 64px;

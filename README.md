@@ -45,6 +45,20 @@ zola serve
 
 Open [http://localhost:1111](http://localhost:1111) in your browser.
 
+### Sponsor payment methods
+
+Enable or disable the existing methods in `config.toml`, then rebuild and deploy:
+
+```toml
+[extra.sponsor]
+paypal_enabled = true
+lightning_enabled = false
+```
+
+These switches apply to both sponsor page languages and their donation metadata.
+Two enabled methods appear side by side (stacked on mobile); one is centered.
+With both disabled, the page suggests sharing articles or contributing to projects.
+
 ## Production build
 
 ```bash
