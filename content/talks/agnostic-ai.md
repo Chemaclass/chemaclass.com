@@ -17,3 +17,6 @@ agnostic-ai keeps one source of truth instead. You write rules, skills, agents, 
 <!-- more -->
 
 ---
+
+- 2026-09-15 | ACT Berlin #14 [**Berlin, Germany**] (EN)
+  - [One spec, every AI CLI](https://luma.com/act14)

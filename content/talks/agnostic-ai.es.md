@@ -17,3 +17,6 @@ agnostic-ai mantiene una sola fuente de verdad. Escribes reglas, skills, agentes
 <!-- more -->
 
 ---
+
+- 2026-09-15 | ACT Berlin #14 [**Berlín, Alemania**] (EN)
+  - [Una spec, todas las CLI de IA](https://luma.com/act14)
