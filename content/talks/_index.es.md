@@ -17,6 +17,12 @@ sort_by = "weight"
   - [Taller de día completo: Modernizando Código Legacy con Pair Programming](https://javascript-conference.com/munich/program-munich/)
     *Sesión práctica de día completo trabajando con código legacy real, aplicando TDD, patrones de refactoring y pair programming colaborativo.*
 
+### Septiembre
+
+- 2026-09-15 | ACT Berlin #14 [**Berlín, Alemania**] (EN)
+  - [Una spec, todas las CLI de IA](https://luma.com/act14) [[slides](/slides/agnostic-ai/)]
+    *Una sola fuente de verdad para reglas, skills, agentes, hooks y servidores MCP, sincronizada con los ficheros nativos que leen 25 herramientas de IA.*
+
 ### Junio
 
 - 2026-06-09 | International PHP Conference [**Berlín, Alemania**] (EN)
