@@ -112,6 +112,9 @@ style: |
   .vs > div:nth-last-child(-n+3) { border-bottom: 0; }
   .vs .h { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
   .vs .k { font-family: var(--sans); color: var(--soft); }
+  .closing { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 40px; }
+  .qa { font-size: 150px; font-weight: 700; line-height: 1; letter-spacing: .02em;
+    color: transparent; -webkit-text-stroke: 2px var(--accent); padding-right: 10px; }
   pre { background: var(--surface) !important; border: 1px solid var(--line); border-radius: 12px;
     padding: 16px 22px !important; margin: 14px 0 !important; font-size: 19px; line-height: 1.5; }
   pre code, pre code * { background: none !important; color: var(--ink) !important; padding: 0; font-size: 1em; }
@@ -645,17 +648,15 @@ agnostic-ai sync
 <!-- _class: lead -->
 <!-- _paginate: false -->
 
-<div class="brand"><span class="mark">a</span><span class="name">agnostic-ai</span></div>
-
-# Change the tool.<br><span class="g">Keep the spec.</span>
-
-<div class="meta" style="font-size:20px; color:var(--soft);">
-  <span>github.com/Chemaclass/agnostic-ai</span>
-  <span>chemaclass.github.io/agnostic-ai/playground/</span>
+<div class="closing">
+<div>
+  <div class="brand"><span class="mark">a</span><span class="name">agnostic-ai</span></div>
+  <h1>Change the tool.<br><span class="g">Keep the spec.</span></h1>
+  <div class="meta"><span>github.com/Chemaclass/agnostic-ai</span></div>
+</div>
+<div class="qa">Q&amp;A</div>
 </div>
 
-<p class="small">Questions.</p>
-
 <!--
-0:40 · Call back to the story: Copilot, Claude, Gemini, Codex, back to Claude. The next switch costs one line in targets:. Take questions on this slide. Likely: why not only AGENTS.md, how do you keep up with vendors, what about drift inside the spec itself.
+0:40 · Call back to the story: Copilot, Claude, Gemini, Codex, back to Claude. The next switch costs one line in targets:. Say the playground is linked from the repo, no install needed. Then ask for questions and leave this slide up. Likely: why not only AGENTS.md, how do you keep up with vendors, what about drift inside the spec itself.
 -->
