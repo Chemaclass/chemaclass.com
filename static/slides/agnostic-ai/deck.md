@@ -4,7 +4,7 @@ theme: default
 paginate: true
 size: 16:9
 title: "One spec, every AI CLI"
-description: "You start on Copilot, move to Claude Code, try Gemini and Codex, and end up with the same AI config in four places. How agnostic-ai keeps one spec for 25 AI coding tools."
+description: "What an AI coding agent setup is for, why it drifts when you switch tools, and how one spec keeps the workflow across 25 AI CLIs."
 author: "Chemaclass"
 keywords: "agnostic-ai, Claude Code, Codex, Gemini CLI, Copilot, AGENTS.md, skills, developer tools"
 url: "https://chemaclass.com/slides/agnostic-ai/"
@@ -106,6 +106,7 @@ style: |
   .port span { color: var(--soft); }
   .port span.g { color: var(--accent); }
   .port b { color: var(--muted); font-weight: 400; text-align: center; }
+  .port em { display: inline-block; min-width: 150px; font-style: normal; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
   .beat span strong { font-weight: 600; }
   .vs { display: grid; grid-template-columns: minmax(0,1.35fr) minmax(0,1fr) minmax(0,1fr); padding: 6px 22px; }
   .vs > div { padding: 6px 10px; border-bottom: 1px solid var(--line); font-size: 18px; }
@@ -129,49 +130,167 @@ style: |
 
 # One spec,<br><span class="g">every AI CLI.</span>
 
-<p class="lede">A story about switching AI tools, and the config you leave behind.</p>
+<p class="lede">What your AI setup is for, why it drifts, and how to keep the workflow when you change the tool.</p>
 
 <div class="meta">
   <span>github.com/Chemaclass/agnostic-ai</span>
 </div>
 
 <!--
-0:30 · Name yourself, not the tool. The tool comes later. Ask for hands: who used more than one AI coding tool this year? Keep your hand up if it was in the same repo. Do not comment, move on.
+0:30 · Name yourself, not the tool. The tool comes much later. Ask for hands: who used more than one AI coding tool this year? Keep your hand up if it was in the same repo. Do not comment, move on.
 -->
 
 ---
 
-<div class="kicker">Part 1 · The story</div>
+<div class="kicker">Part 1 · The workflow</div>
 
-## It starts with Copilot.
+## What do you want<br>from an agent?
 
-<div class="split">
-<div>
-  <div class="beat"><i>01</i><span>Autocomplete in the editor. It feels like magic.</span></div>
-  <div class="beat"><i>02</i><span>You write down a few team conventions for it.</span></div>
-  <div class="beat hot"><i>03</i><span>One file. Easy to keep up to date.</span></div>
-</div>
-<div class="card tree"><em>your-repo/</em>
-└── .github/
-    └── <b>copilot-instructions.md</b></div>
+<div class="beat"><i>01</i><span>It follows <strong>our conventions</strong>, not the internet's.</span></div>
+<div class="beat"><i>02</i><span>It <strong>never does the dangerous thing</strong>. Not even once.</span></div>
+<div class="beat"><i>03</i><span>It runs <strong>the boring checks</strong>. Every time.</span></div>
+<div class="beat"><i>04</i><span>It repeats <strong>a workflow</strong> the same way we do.</span></div>
+<div class="beat hot"><i>05</i><span>It <strong>reaches our systems</strong>: tickets, docs, databases.</span></div>
+
+<!--
+1:00 · Ask the question to the room before showing the list. Take two or three answers. Then reveal: most of what they said is here. This is the frame for the whole talk. We care about outcomes. The files come second.
+-->
+
+---
+
+<div class="kicker">Part 1 · The workflow</div>
+
+## Every outcome has a part.
+
+<div class="card">
+  <div class="map"><b>Follow our conventions</b><span>instructions · CLAUDE.md, AGENTS.md</span></div>
+  <div class="map"><b>Respect the guardrails</b><span>rules · scoped by path</span></div>
+  <div class="map"><b>Never the dangerous thing</b><span>permissions · allow and deny</span></div>
+  <div class="map"><b>Run the checks, always</b><span>hooks · commands on events</span></div>
+  <div class="map"><b>Repeat a workflow</b><span>skills · procedures on demand</span></div>
+  <div class="map"><b>Take a focused role</b><span>agents · their own context</span></div>
+  <div class="map" style="border-bottom:0;"><b>Reach our systems</b><span>MCP servers · tools and data</span></div>
 </div>
 
 <!--
-0:40 · Everyone in the room has lived this part. Keep it short and warm. One file, one tool, no problem yet.
+1:00 · Read the left column, then the right. Seven parts, and every AI coding tool has some version of each. Names differ, the jobs do not. Next three slides: what each part is good at, in one sentence.
 -->
 
 ---
 
-<div class="kicker">Part 1 · The story</div>
+<div class="kicker">Part 1 · The workflow</div>
 
-## Then you find Claude Code.
+## Instructions and rules<br>are <span class="g">hints</span>.
 
-<p class="lede">An agent in the terminal. It reads the repo, runs the tests, opens the PR.</p>
+<div class="split">
+<div class="card tree"><b>AGENTS.md</b>
+<em>always loaded</em>
+We use conventional commits.
+Tests live next to the code.
+&nbsp;
+<b>rules/payments.md</b>
+<em>loaded in services/payments/</em>
+Money is integer cents. Never floats.</div>
+<div>
+  <p class="lede" style="margin-top:0;">The model reads them. It follows them most of the time.</p>
+  <p class="lede">Keep them short. Every line competes for attention with the task itself.</p>
+</div>
+</div>
+
+<!--
+1:00 · Instructions are the always-on context. Rules are the same idea, loaded only where they matter, so the payments rules stay out of the frontend work. The key word is hints. The model can ignore them, and on a long session it sometimes does.
+-->
+
+---
+
+<div class="kicker">Part 1 · The workflow</div>
+
+## Hooks and permissions<br>are <span class="g">not suggestions</span>.
+
+<div class="split" style="grid-template-columns:1fr 1fr;">
+<div class="card">
+  <div class="label">A hint</div>
+  <div class="stack" style="margin-top:12px; font-family:var(--sans); font-size:21px; color:var(--soft);">
+    <div>"Please run the formatter after editing."</div>
+    <div>"Do not read the .env file."</div>
+    <div class="warn">Followed most of the time.</div>
+  </div>
+</div>
+<div class="card">
+  <div class="label">A hook, a permission</div>
+  <div class="stack" style="margin-top:12px; font-family:var(--sans); font-size:21px; color:var(--soft);">
+    <div>After every edit, the formatter runs.</div>
+    <div>Reading .env is denied.</div>
+    <div class="good">Every time. No model involved.</div>
+  </div>
+</div>
+</div>
+
+<p class="lede">If it must happen, do not ask for it. Make it a hook.</p>
+
+<!--
+1:00 · The most important slide of part 1. Hooks are commands the tool runs on events: before a tool call, after an edit, at the end of a session. Permissions decide what the agent may touch at all. Neither depends on the model paying attention. Remember this, it comes back when we talk about drift.
+-->
+
+---
+
+<div class="kicker">Part 1 · The workflow</div>
+
+## Skills get things done.<br>Agents take a role.
+
+<div class="cards">
+  <div class="card row"><div class="name g">skills</div><div class="body" style="margin-top:0;">A procedure the agent loads when the task matches. <em>Write the release notes. Add a migration.</em></div></div>
+  <div class="card row"><div class="name g">agents</div><div class="body" style="margin-top:0;">A role with its own context and tools. A reviewer that only reads. A researcher that only searches.</div></div>
+  <div class="card row"><div class="name g">MCP</div><div class="body" style="margin-top:0;">The door to your systems. Tickets, docs, the staging database.</div></div>
+</div>
+
+<p class="small">The whole Claude version, explained: chemaclass.com/blog/inside-the-claude-folder</p>
+
+<!--
+1:00 · Skills are how the team's way of working becomes repeatable. Agents keep a side task out of the main context. MCP gives both of them reach. This is where most of the real investment goes: weeks of skills tuned to your codebase.
+-->
+
+---
+
+<div class="kicker">Part 1 · The workflow</div>
+
+## Yours, or the team's?
+
+<div class="split" style="grid-template-columns:1fr 1fr;">
+<div class="card">
+  <div class="label">Global · your home folder</div>
+  <div class="stack" style="margin-top:12px; font-family:var(--sans); font-size:21px; color:var(--soft);">
+    <div>How you like your commits</div>
+    <div>Your personal skills</div>
+    <div>Follows you into every repo</div>
+  </div>
+</div>
+<div class="card">
+  <div class="label">Repo · committed</div>
+  <div class="stack" style="margin-top:12px; font-family:var(--sans); font-size:21px; color:var(--soft);">
+    <div>Team conventions and guardrails</div>
+    <div>Hooks everyone must run</div>
+    <div class="g">Reviewed in PRs, like code</div>
+  </div>
+</div>
+</div>
+
+<p class="lede">Anything the team depends on belongs in the repo.</p>
+
+<!--
+0:40 · Last piece of the map. Two levels. A hook that lives only in your home folder protects only you. Now we have the words. Let's see what happens to all of this when you change tools.
+-->
+
+---
+
+<div class="kicker">Part 2 · The drift</div>
+
+## One file became a folder.
 
 <div class="split">
 <div>
-  <div class="beat"><i>01</i><span>The one file grows into a folder.</span></div>
-  <div class="beat"><i>02</i><span>Rules, skills, agents, hooks, MCP servers.</span></div>
+  <div class="beat"><i>01</i><span>Copilot first. One instructions file. Easy.</span></div>
+  <div class="beat"><i>02</i><span>Then Claude Code. Rules, skills, agents, hooks, MCP.</span></div>
   <div class="beat hot"><i>03</i><span>Claude's layout. Claude's names. Claude's formats.</span></div>
 </div>
 <div class="card tree"><b>CLAUDE.md</b>
@@ -180,84 +299,67 @@ style: |
 ├── rules/
 ├── skills/
 ├── agents/
-├── commands/
-└── settings.json  <em>hooks</em></div>
+└── settings.json  <em>hooks, permissions</em></div>
 </div>
 
-<p class="small">The whole folder, explained: chemaclass.com/blog/inside-the-claude-folder</p>
-
 <!--
-1:00 · This is where you invest. Weeks of skills and agents, tuned to your codebase. Mention the post once for anyone who wants the details. The point to land: all of that value now lives in a folder only one tool reads.
+0:50 · Everyone in the room has lived this. Part 1's seven parts, now in one tool's folder. The point to land: all that value lives in a folder only one tool reads.
 -->
 
 ---
 
 <!-- _class: lead -->
 
-<div class="kicker">Part 1 · The story</div>
+<div class="kicker">Part 2 · The drift</div>
 
 # Then Claude<br><span class="g warn">gets expensive.</span>
 
 <p class="lede">So you move to Gemini CLI. It ignores CLAUDE.md and your .claude/ folder. You start again with GEMINI.md.</p>
 
 <!--
-0:30 · No numbers. Everyone has their own pricing story, let them fill it in. Land the loss: weeks of rules, skills and agents, and the new tool reads none of it.
+0:30 · No numbers. Everyone has their own pricing story, let them fill it in. Land the loss: weeks of skills and hooks, and the new tool reads none of it.
 -->
 
 ---
 
-<div class="kicker">Part 1 · The story</div>
+<div class="kicker">Part 2 · The drift</div>
 
-## A colleague tries Codex.<br>Same level as Claude.
-
-<p class="lede">One problem. Codex does not read .claude/. So you port everything by hand.</p>
+## A colleague tries Codex.<br>So you port everything.
 
 <div class="card" style="margin-top:14px;">
-  <div class="port"><span>CLAUDE.md</span><b>&#8594;</b><span class="g">AGENTS.md</span></div>
-  <div class="port"><span>.claude/skills/</span><b>&#8594;</b><span class="g">.agents/skills/</span></div>
-  <div class="port"><span>.claude/agents/*.md</span><b>&#8594;</b><span class="g">.codex/agents/*.toml</span></div>
-  <div class="port"><span>.claude/settings.json hooks</span><b>&#8594;</b><span class="g">.codex/hooks.json</span></div>
-  <div class="port" style="border-bottom:0;"><span>.mcp.json</span><b>&#8594;</b><span class="g">.codex/config.toml</span></div>
+  <div class="port"><span><em>instructions</em> CLAUDE.md</span><b>&#8594;</b><span class="g">AGENTS.md</span></div>
+  <div class="port"><span><em>skills</em> .claude/skills/</span><b>&#8594;</b><span class="g">.agents/skills/</span></div>
+  <div class="port"><span><em>agents</em> .claude/agents/</span><b>&#8594;</b><span class="g">.codex/agents/*.toml</span></div>
+  <div class="port"><span><em>hooks</em> settings.json</span><b>&#8594;</b><span class="g">.codex/hooks.json</span></div>
+  <div class="port" style="border-bottom:0;"><span><em>MCP</em> .mcp.json</span><b>&#8594;</b><span class="g">.codex/config.toml</span></div>
 </div>
 
-<p class="small">Not a copy. A translation. Markdown agents become TOML. Hooks change shape.</p>
+<p class="small">Not a copy. A translation. Agents become TOML. Hooks change shape.</p>
 
 <!--
-1:00 · Walk two rows, not five. Agents go from Markdown to TOML. Hooks move out of settings.json into their own file. This is an afternoon of careful work, and it is correct on the day you finish it.
+1:00 · Walk two rows, not five. Point at the labels: these are the parts from part 1. Instructions and skills copy over. Agents and hooks need translating. An afternoon of careful work, correct on the day you finish it.
 -->
 
 ---
 
-<!-- _class: lead -->
+<div class="kicker">Part 2 · A month later</div>
 
-# What if we go<br>back to Claude?
+## Keep both copies.<br>Then they drift.
 
-<p class="lede">Nobody wants to throw away weeks of work. So you keep both copies.</p>
+<div class="beat"><i>01</i><span>Claude gets cheaper again. Half the team goes back.</span></div>
+<div class="beat"><i>02</i><span>New skills land in .agents/skills/. Only there.</span></div>
+<div class="beat"><i>03</i><span>A new formatter hook lands in .codex/hooks.json. Only there.</span></div>
+<div class="beat hot"><i>04</i><span class="warn">Claude has never seen a month of skills, and never runs the hook.</span></div>
+
+<p class="lede">No error. No warning. Same repo, different agents, different outcomes.</p>
 
 <!--
-0:20 · Ask it as a real question to the room. Pause. Then the answer everyone picks: keep both.
+1:00 · Nobody wants to throw away the work, so both copies stay. Read the beats as a timeline. Pause on 04 and call back to the hooks slide: a hook was the thing that must happen. On half the team it silently stopped happening. That is what drift costs. Not files. Outcomes.
 -->
 
 ---
 
-<div class="kicker">A month later</div>
-
-## The two copies drift apart.
-
-<div class="beat"><i>01</i><span>New skills land in .agents/skills/. Only there.</span></div>
-<div class="beat"><i>02</i><span>The Claude plan gets cheaper again.</span></div>
-<div class="beat"><i>03</i><span>Half the team prefers Claude. You allow both.</span></div>
-<div class="beat hot"><i>04</i><span class="warn">Claude has never seen a month of new skills.</span></div>
-
-<p class="lede">No error. No warning. Each agent answers with its own half of your conventions.</p>
-
-<!--
-1:00 · Read the four beats as a timeline. Pause on 04. The failure is silent: nothing breaks, the answers are just worse on one side of the team, and nobody knows why.
--->
-
----
-
-<div class="kicker">Today</div>
+<div class="kicker">Part 2 · Today</div>
 
 ## Nobody designed this.<br><span class="g">It piled up.</span>
 
@@ -272,29 +374,31 @@ GEMINI.md
 <b>.gemini/</b>   <em>settings, commands</em></div>
 <div>
   <p class="lede" style="margin-top:0;">Four tools. Eight places. Every copy is one more place to forget an update.</p>
-  <p class="lede">And next month someone tries Grok. Or Cursor. Or whatever ships on Tuesday.</p>
+  <p class="lede">And next month someone tries Cursor. Or whatever ships on Tuesday.</p>
 </div>
 </div>
 
 <!--
-0:50 · Let them scan the tree. Everyone recognises their own repo in it. No tool made a bad choice here. Each one picked its own layout, and your repo collected all of them.
+0:50 · Let them scan the tree. Everyone recognises their own repo. No tool made a bad choice. Each picked its own layout, and your repo collected all of them.
 -->
 
 ---
 
 <!-- _class: lead -->
 
+<div class="kicker">Part 3 · One source</div>
+
 # What if you kept<br><span class="g">one directory</span><br>for every tool?
 
 <p class="lede">Written once. Owned by no tool. Each CLI still gets the files it expects.</p>
 
 <!--
-0:30 · This is the question the whole talk answers. Say it slowly, then stop for two seconds. Someone in the room is already thinking: symlinks.
+0:30 · The question part 3 answers. Say it slowly, then stop for two seconds. Someone in the room is already thinking: symlinks.
 -->
 
 ---
 
-<div class="kicker">The obvious fix</div>
+<div class="kicker">Part 3 · The obvious fix</div>
 
 ## Keep .agents/ as the source.<br>Symlink the rest.
 
@@ -308,8 +412,8 @@ ln -s ../.agents/skills .claude/skills
   <div class="label">Works for</div>
   <div class="stack" style="margin-top:12px; font-family:var(--sans); font-size:20px; color:var(--soft);">
     <div class="good">Instructions: same Markdown, other name</div>
-    <div class="good">Skills: same SKILL.md, until a tool needs its own keys</div>
-    <div class="good">Nothing to install, no step to run</div>
+    <div class="good">Skills: same SKILL.md</div>
+    <div class="good">Nothing to install, nothing to run</div>
   </div>
 </div>
 <div class="card">
@@ -317,44 +421,42 @@ ln -s ../.agents/skills .claude/skills
   <div class="stack" style="margin-top:12px; font-family:var(--sans); font-size:20px; color:var(--soft);">
     <div class="warn">Agents: Markdown for Claude, TOML for Codex</div>
     <div class="warn">Hooks and MCP: other files, other schemas</div>
-    <div class="warn">Windows, where links check out as plain text</div>
+    <div class="warn">Windows, where links check out as text</div>
   </div>
 </div>
 </div>
 
-<p class="small">Half the problem, solved. The other half needs translation.</p>
+<p class="small">The hints link fine. The guarantees need translation.</p>
 
 <!--
-0:50 · Take the idea seriously, it is what most teams try first, and it is half right. Instructions and skills link fine. Then point back at the Codex port slide: agents and hooks were a translation, not a copy. A link cannot translate. Windows: git with core.symlinks=false checks a link out as a text file holding the path.
+0:50 · Take the idea seriously, most teams try it first, and it is half right. Notice which half breaks: agents and hooks, the parts that do the work. A link cannot translate. Windows: git with core.symlinks=false checks a link out as a text file holding the path.
 -->
 
 ---
 
-<div class="kicker">Symlinks or agnostic-ai</div>
+<div class="kicker">Part 3 · The trade-off</div>
 
 ## Symlinks share bytes.<br><span class="g">Sync writes the right ones.</span>
 
 <div class="card vs">
-  <div class="h"></div><div class="h">symlinks</div><div class="h">agnostic-ai</div>
+  <div class="h"></div><div class="h">symlinks</div><div class="h">sync</div>
   <div class="k">Same format in two tools</div><div class="good">yes</div><div class="good">yes</div>
   <div class="k">Agents, hooks, MCP per tool</div><div class="warn">no</div><div class="good">translated</div>
-  <div class="k">Scoped rules</div><div class="warn">no</div><div class="good">native per tool</div>
   <div class="k">Drift check in CI</div><div class="warn">no</div><div class="good">sync --check</div>
-  <div class="k">Windows, core.symlinks=false</div><div class="warn">plain text files</div><div class="good">real files</div>
-  <div class="k">Lookup order (Zed, WARP.md)</div><div class="warn">your problem</div><div class="good">tracked per target</div>
-  <div class="k">Setup</div><div class="good">nothing to install</div><div class="warn">one binary to install</div>
+  <div class="k">Windows</div><div class="warn">plain text files</div><div class="good">real files</div>
+  <div class="k">Setup</div><div class="good">nothing to install</div><div class="warn">one binary</div>
   <div class="k">Fresh clone</div><div class="good">ready</div><div class="warn">needs sync, or a hook</div>
 </div>
 
-<p class="small">Sync uses symlinks too, where they are safe: sync.shared-skills links skill folders whose bytes match.</p>
+<p class="small">If all your tools read the same format, use symlinks. Sync uses them too, where they are safe.</p>
 
 <!--
-1:10 · Follow-up to the symlinks slide, and the first look at the tool. Do not explain scope or sync --check here, part 3 covers both. Be fair. Symlinks win the last two rows: nothing to install, nothing to run. If all your tools read the same format, use them. They lose the moment a second format shows up, and a broken link never tells you. Zed callback: the Copilot file from the story sits above AGENTS.md in Zed's lookup list and hides it, no error. A link cannot know that. sync writes .rules for Zed, first in that list.
+1:00 · Be fair. Symlinks win the last two rows. They lose the moment a second format shows up, and a broken link never tells you. sync.shared-skills links skill folders whose bytes match.
 -->
 
 ---
 
-<div class="kicker">agnostic-ai</div>
+<div class="kicker">Part 3 · How it works</div>
 
 ## One spec. One command. Native files.
 
@@ -362,7 +464,7 @@ ln -s ../.agents/skills .claude/skills
 <div class="card">
   <div class="g">.agnostic-ai/</div>
   <div class="stack" style="margin-top:14px; font-size:18px; color:var(--soft);">
-    <div>AGNOSTIC_AI.md</div><div>rules/</div><div>skills/</div><div>agents/</div><div>hooks/</div><div>mcps/</div>
+    <div>AGNOSTIC_AI.md</div><div>rules/ · skills/ · agents/</div><div>hooks/ · settings/</div><div>mcps/</div>
   </div>
 </div>
 <div class="arrow">agnostic-ai<br>sync<b>&#8594;</b></div>
@@ -375,50 +477,120 @@ ln -s ../.agents/skills .claude/skills
 </div>
 </div>
 
-<p class="small">You edit the left side. Every tool reads the right side. The right side is generated.</p>
+<p class="small">Left: the parts from part 1, written once. Right: what each tool reads, generated.</p>
 
 <!--
-0:50 · One sentence per column. Left is what you maintain. Right is what each tool already knows how to read. Every folder from the story is on the right. Then: let me show you.
+0:50 · One sentence per column. The left side is the map from part 1. The right side is every folder from part 2. You edit the left. Then: let me show you, two minutes.
 -->
 
 ---
 
 <!-- _class: lead -->
 
-<div class="kicker">Part 2 · Live</div>
+<div class="kicker">Part 3 · Live</div>
 
 # Demo
 
 <div class="prompt"><i>$</i>agnostic-ai sync</div>
 
 <div class="chips">
-  <div class="chip">init: claude, codex, gemini, copilot</div>
-  <div class="chip">one rule, one skill</div>
-  <div class="chip">sync --dry-run</div>
+  <div class="chip">init: claude, codex</div>
   <div class="chip">sync, walk the tree</div>
-  <div class="chip">hand-edit an output</div>
-  <div class="chip accent">sync --check fails</div>
+  <div class="chip accent">hand-edit, --check fails</div>
 </div>
 
 <!--
-6:00 · Terminal font 20pt or larger. Commands, in order:
-mkdir demo && cd demo && git init
-agnostic-ai init   (pick claude, codex, gemini, copilot)
-agnostic-ai new rule conventional-commits   (write two lines in it)
-agnostic-ai new skill write-tests
-agnostic-ai sync --dry-run
+2:30 · Terminal font 20pt or larger. Prepare the repo before the talk: git init, agnostic-ai init (claude, codex), one rule, one skill already written. Live:
 agnostic-ai sync
-tree -a -I .git   (point at .claude/, .agents/, .gemini/, .github/)
-cat .gitignore   (outputs are ignored by default)
+tree -a -I .git   (point at .claude/ and .agents/, same skill, both tools)
 echo "hand edit" >> AGENTS.md
 agnostic-ai sync --check   (exit 1, drift)
 agnostic-ai sync && agnostic-ai sync --check   (green)
-If anything hangs past ten seconds, skip to the check. It is the beat that matters.
+If anything hangs past ten seconds, skip to the backup recap slide. The check is the beat that matters.
 -->
 
 ---
 
-<div class="kicker">What you just saw</div>
+<div class="kicker">Part 3 · Should you use it</div>
+
+## One tool, working alone?<br>You do not need this.
+
+<div class="split" style="grid-template-columns:1fr 1fr; margin-top:10px;">
+<div class="card">
+  <div class="label">Pays off when</div>
+  <div class="stack" style="margin-top:12px; font-family:var(--sans); font-size:20px; color:var(--soft);">
+    <div class="good">A second tool or person joins the repo</div>
+    <div class="good">Hooks and agents must work in every tool</div>
+    <div class="good">You review AI config in one place</div>
+    <div class="good">The next switch is one line in targets:</div>
+  </div>
+</div>
+<div class="card">
+  <div class="label">Costs you</div>
+  <div class="stack" style="margin-top:12px; font-family:var(--sans); font-size:20px; color:var(--soft);">
+    <div class="warn">One more binary and one more step</div>
+    <div class="warn">Outputs are overwritten, edit the spec</div>
+    <div class="warn">Support varies by tool and part</div>
+    <div class="warn">Bad rules reach every tool just as fast</div>
+  </div>
+</div>
+</div>
+
+<!--
+1:10 · Lead with the disqualifier, loudly. That is what makes the rest credible. Write CLAUDE.md and go home. Then both columns, quickly. The last con matters most: sync spreads a bad rule as fast as a good one. The spec still needs review.
+-->
+
+---
+
+<div class="kicker">Before Q&amp;A</div>
+
+## Questions for you.
+
+<div class="beat"><i>01</i><span>Which of your rules <strong>should be a hook</strong>?</span></div>
+<div class="beat"><i>02</i><span>What belongs in <strong>your home folder</strong>, and what in the repo?</span></div>
+<div class="beat"><i>03</i><span>Which of your skills would <strong>survive a tool switch</strong>?</span></div>
+<div class="beat hot"><i>04</i><span>What should <strong>never be shared</strong> across tools?</span></div>
+
+<!--
+1:00 · Read them, do not answer them. These are the questions I want back from the room. Every answer tells me what the spec should cover next. Leave this up for a few seconds before the closing slide.
+-->
+
+---
+
+<!-- _class: lead -->
+<!-- _paginate: false -->
+
+<div class="closing">
+<div>
+  <div class="brand"><span class="mark">a</span><span class="name">agnostic-ai</span></div>
+  <h1>Change the tool.<br><span class="g">Keep the workflow.</span></h1>
+  <div class="meta"><span>github.com/Chemaclass/agnostic-ai</span></div>
+</div>
+<div class="qa">Q&amp;A</div>
+</div>
+
+<!--
+0:20 · Call back to the first question: what do you want from an agent? That does not change when the tool does. Say the playground is linked from the repo, no install needed. Then ask for questions and leave this slide up. Backup slides follow for CI, monorepos, imports and hooks.
+-->
+
+---
+
+<!-- _class: lead -->
+<!-- _paginate: false -->
+
+<div class="kicker">Backup</div>
+
+# For the questions.
+
+<p class="lede">Import, scope, global, CI, git hooks, day to day.</p>
+
+<!--
+Only shown when a question needs it. Jump straight to the matching slide.
+-->
+
+---
+
+<div class="kicker">Backup · Demo recap</div>
 
 ## Two specs in. Ten native files out.
 
@@ -443,12 +615,12 @@ CLAUDE.md · AGENTS.md · GEMINI.md
 <p class="small">Codex and Gemini have no rules folder. The rule goes inside AGENTS.md and GEMINI.md instead.</p>
 
 <!--
-0:40 · Backup slide if the demo failed, recap if it worked. The shared .agents/skills/ tree is the one Codex reads. Same folder from the story, now generated.
+Fallback if the demo failed. The shared .agents/skills/ tree is the one Codex reads. Same folder from the story, now generated.
 -->
 
 ---
 
-<div class="kicker">Best practices</div>
+<div class="kicker">Backup · Best practices</div>
 
 ## Treat the spec like code.
 
@@ -459,26 +631,12 @@ CLAUDE.md · AGENTS.md · GEMINI.md
 <div class="beat hot"><i>05</i><span><strong>Choose where outputs live.</strong> Ignored by default, so a fresh clone runs sync.</span></div>
 
 <!--
-1:00 · Five habits. The last one is a real choice: ignored outputs keep the repo clean, committed outputs work for people without the CLI. Both are fine. The CI setup depends on it, coming up.
+The last one is a real choice: ignored outputs keep the repo clean, committed outputs work for people without the CLI. The CI setup depends on it.
 -->
 
 ---
 
-<!-- _class: lead -->
-
-<div class="kicker">Part 3</div>
-
-# The extra mile.
-
-<p class="lede">For when it lives in a real team, on a real repo.</p>
-
-<!--
-0:15 · Pace change. Each slide from here is one feature, one command, one reason.
--->
-
----
-
-<div class="kicker">Already have .claude/?</div>
+<div class="kicker">Backup · Already have .claude/?</div>
 
 ## Import it. Do not start over.
 
@@ -489,17 +647,17 @@ agnostic-ai sync --backup          # .bak before overwriting
 agnostic-ai revert                 # changed your mind
 ```
 
-<p class="lede">This is the story from part 1, fixed in four commands. Your skills, agents and hooks move into .agnostic-ai/ once.</p>
+<p class="lede">The Codex port from part 2, done in four commands. Your skills, agents and hooks move into .agnostic-ai/ once.</p>
 
 <p class="small">Review the imported specs before the first sync. Import from several tools, and the last one wins the shared instructions.</p>
 
 <!--
-0:50 · Call back to the Codex port slide. That afternoon of translation is now one import. Say the review warning out loud, it is the one people skip.
+That afternoon of translation is now one import. Say the review warning out loud, it is the one people skip.
 -->
 
 ---
 
-<div class="kicker">Scope</div>
+<div class="kicker">Backup · Scope</div>
 
 ## Rules that live next to the code.
 
@@ -517,12 +675,12 @@ agnostic-ai new rule payments-context --scope services/payments
 <p class="small">Claude and Gemini load it when they touch those files. Codex loads it when launched there.</p>
 
 <!--
-0:50 · One spec, four different scoping mechanisms: a paths filter, a nested AGENTS.md, a nested GEMINI.md, an applyTo glob. Nobody wants to remember those. Payment rules stay out of the root files, so context stays small and the agent stays focused. Be honest about the Codex line: it walks from the repo root down to the directory you launched it in, once per run. Start it at the root and the payments AGENTS.md never loads. Copilot applies applyTo in VS Code, JetBrains, the cloud agent and Copilot CLI, not in github.com chat. Aider, Zed, Junie, Crush, Jules and Antigravity skip scoped rules; their root rules still work. Worth it in monorepos, skip it in small repos.
+One spec, four scoping mechanisms. Be honest about Codex: it walks from the repo root down to the directory you launched it in, once per run. Start it at the root and the payments AGENTS.md never loads. Copilot applies applyTo in VS Code, JetBrains, the cloud agent and Copilot CLI, not in github.com chat. Aider, Zed, Junie, Crush, Jules and Antigravity skip scoped rules; their root rules still work. Worth it in monorepos, skip it in small repos.
 -->
 
 ---
 
-<div class="kicker">Global</div>
+<div class="kicker">Backup · Global</div>
 
 ## Your personal rules, on every project.
 
@@ -545,12 +703,12 @@ agnostic-ai sync --global
 <p class="small">Instructions, rules, hooks and skills only. Team conventions stay in the repo.</p>
 
 <!--
-0:40 · Your own habits: how you like commits, your personal skills. They follow you into every repo and every tool. Anything the team must share belongs in the repo, not here.
+The "yours or the team's" slide, as a command.
 -->
 
 ---
 
-<div class="kicker">CI</div>
+<div class="kicker">Backup · CI</div>
 
 ## Drift fails the build.
 
@@ -578,12 +736,12 @@ agnostic-ai sync --global
 ```
 
 <!--
-0:50 · The choice from best practices decides the gate. Committed outputs: check, never sync right before it, that would erase the evidence. Ignored outputs: validate and generate. The action installs the binary for you. Add --format=github for inline annotations.
+Committed outputs: check, never sync right before it, that would erase the evidence. Ignored outputs: validate and generate. The action installs the binary for you. Add --format=github for inline annotations.
 -->
 
 ---
 
-<div class="kicker">Git hooks</div>
+<div class="kicker">Backup · Git hooks</div>
 
 ## Sync on every branch switch.
 
@@ -601,12 +759,12 @@ agnostic-ai sync
 <p class="lede">post-checkout fires on checkout, clone and worktree add. A new worktree opens with its AI config ready.</p>
 
 <!--
-0:50 · Two hooks, two jobs. pre-commit catches drift before CI does. post-checkout matters when outputs are ignored: switch branches and the files follow. This is the one that saves agents running in fresh worktrees.
+Two hooks, two jobs. pre-commit catches drift before CI does. post-checkout matters when outputs are ignored: switch branches and the files follow. It saves agents running in fresh worktrees.
 -->
 
 ---
 
-<div class="kicker">Day to day</div>
+<div class="kicker">Backup · Day to day</div>
 
 ## Know where every file came from.
 
@@ -619,44 +777,5 @@ agnostic-ai sync
 </div>
 
 <!--
-0:40 · Quick tour, no demo. why is the favourite: point at any generated file and get the spec that wrote it.
--->
-
----
-
-<div class="kicker">Should you use it</div>
-
-## One tool, working alone?<br>You do not need this.
-
-<p class="lede">Write CLAUDE.md and go home. You need this the day a second tool or a second person touches the repo.</p>
-
-<div class="card" style="margin-top:22px;">
-  <div class="label">The limits</div>
-  <div class="stack" style="margin-top:12px; font-family:var(--sans); font-size:20px; color:var(--soft);">
-    <div>Support varies by target and spec kind</div>
-    <div>Outputs are overwritten, so edits belong in the spec</div>
-    <div class="warn">Bad rules reach every tool just as fast</div>
-  </div>
-</div>
-
-<!--
-0:50 · Lead with the disqualifier, loudly. That is what makes the rest credible. Then the limits, quickly.
--->
-
----
-
-<!-- _class: lead -->
-<!-- _paginate: false -->
-
-<div class="closing">
-<div>
-  <div class="brand"><span class="mark">a</span><span class="name">agnostic-ai</span></div>
-  <h1>Change the tool.<br><span class="g">Keep the spec.</span></h1>
-  <div class="meta"><span>github.com/Chemaclass/agnostic-ai</span></div>
-</div>
-<div class="qa">Q&amp;A</div>
-</div>
-
-<!--
-0:40 · Call back to the story: Copilot, Claude, Gemini, Codex, back to Claude. The next switch costs one line in targets:. Say the playground is linked from the repo, no install needed. Then ask for questions and leave this slide up. Likely: why not only AGENTS.md, how do you keep up with vendors, what about drift inside the spec itself.
+why is the favourite: point at any generated file and get the spec that wrote it.
 -->
