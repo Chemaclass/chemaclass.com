@@ -25,9 +25,10 @@ Field shapes live in the template: `.claude/templates/blog-post.md`. This file c
 - `[extra] faq`: optional list of `{ q = "...", a = "..." }`. Renders a `<details>` list at the end of the post and publishes FAQPage markup. This is where literal question phrasing belongs. Answers are plain text, one to three sentences, no markdown. Translate the pairs in the ES mirror.
 - Cover comes from `static_thumbnail` (the template renders it as the hero). Do not repeat a body `![cover]` line in newer posts.
 - In-body images by slot: `![blog-middle](...)` near the middle, `![blog-footer](...)` as the last content line. Descriptive alt text is better than the slot name. In a draft, point these at `/images/blog/placeholder.webp` until the real image exists.
-- `{% deep_dive(title="...") %}...{% end %}` to park optional detail (code samples, extended examples) out of the main flow. Title is a short noun phrase. If used, set `[extra] reading_time` (minutes) counting only words outside the blocks.
-- `{% kudos() %}Thanks to ...{% end %}` for the acknowledgment note thanking whoever gave the idea or helped with the post. Goes after the stamped ending, before the footer image. One or two sentences, markdown links allowed.
-- Optional trailing `---` then `{{ youtube(id="...") }}`, after the footer image.
+- `{% <deep_dive title="..."> %}...{% </deep_dive> %}` to park optional detail (code samples, extended examples) out of the main flow. Title is a short noun phrase. If used, set `[extra] reading_time` (minutes) counting only words outside the blocks.
+- `{% <kudos> %}Thanks to ...{% </kudos> %}` for the acknowledgment note thanking whoever gave the idea or helped with the post. Goes after the stamped ending, before the footer image. One or two sentences, markdown links allowed.
+- Optional trailing `---` then `{{ <youtube id="..." /> }}`, after the footer image.
+- The body is a Tera template, so these components are the only `{{`, `{%` or `{#` allowed in it. Wrap any literal one (a code sample, a template snippet) in `{% raw %}...{% endraw %}`, or Zola renders it as a template.
 - Many H2 sections close on a `>` punchline; do not force one on every section.
 
 ## Pre-publish checklist
