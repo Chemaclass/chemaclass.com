@@ -78,6 +78,18 @@
 {% endblock styles %}
 
 {% block content %}
+{# Star counts come from data/github-stars.json (scripts/fetch-github-stars.py),
+   then the script at the bottom refreshes them live. The fallbacks cover a
+   fresh clone where the file does not exist yet. #}
+{% set github_stars = load_data(path="data/github-stars.json", format="json", required=false) %}
+{% set_global phel_stars = 513 %}
+{% set_global bashunit_stars = 413 %}
+{% set_global agnostic_ai_stars = 12 %}
+{% if github_stars %}
+  {% set_global phel_stars = github_stars.phel | default(value=phel_stars) %}
+  {% set_global bashunit_stars = github_stars.bashunit | default(value=bashunit_stars) %}
+  {% set_global agnostic_ai_stars = github_stars.agnostic_ai | default(value=agnostic_ai_stars) %}
+{% endif %}
 {% set profile_image = resize_image(path=config.extra.profile_large, width=150, height=150, op="fill") %}
 
 <article class="cv-page">
@@ -481,7 +493,7 @@
           <svg class="cv-project__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.8 362.8"><path d="M317.5 0H45.4C20.3 0 0 20.3 0 45.4v272.1c0 25 20.3 45.4 45.4 45.4h272.1c25 0 45.4-20.3 45.4-45.4V45.4C362.8 20.3 342.5 0 317.5 0z" fill="#2e3436"/><path d="M259.3 317.5c11.2-4 21.6-10.1 30.5-17.9 4.9 10.9 15.7 17.9 27.6 17.9h-58.1zM226.8 45.3h-90.7C86 45.3 45.3 86 45.3 136.1v38.3c12.5-34.8 43.9-59.4 80.7-63.3.6-17.5 2.8-35 6.8-52.1a5.68 5.68 0 0 1 4.5-4.3c3.1-.5 6 1.5 6.6 4.6 3 16.8 10.6 32.5 22 45.2 1.6 1.8 2.9 3.9 3.9 6.1h5.4c2.4-21.3 12.9-40.9 29.3-54.6 1.3-1.1 3-1.5 4.6-1.2 3.1.6 5.1 3.5 4.6 6.6-3 16.8-1.2 34.2 5.2 50 .4.9.7 1.9.9 2.9 19.5 7.7 32.3 26.5 32.3 47.5v29.8c0 15.6-12.7 28.3-28.3 28.3h-78c-1.6 0-2.8-1.3-2.8-2.8 0-1.6 1.3-2.8 2.8-2.8h78c12.5 0 22.7-10.2 22.7-22.7v-29.8c0-25-20.3-45.4-45.3-45.4H136c-50.1 0-90.7 40.6-90.7 90.7v19.8c0 50.1 40.6 90.7 90.7 90.7h90.7c50.1 0 90.7-40.6 90.7-90.7v-90.7c.1-50.2-40.5-90.9-90.6-90.9zm-78 119.8c0-13.5 11-24.4 24.5-24.4s24.4 11 24.4 24.5-11 24.4-24.5 24.4c-13.4 0-24.4-11-24.4-24.5z" fill="#eceeee"/><path d="M161.7 108.3c-12.1-13.5-20.2-30.1-23.4-48-4.5 19.5-6.8 39.5-6.8 59.6a17.31 17.31 0 0 0 17.3 17.3 17.31 17.31 0 0 0 17.3-17.3c0-4.4-1.6-8.5-4.4-11.6zm51.5 3.7c-6.3-16.5-8.1-34.3-5-51.7C193.1 73 183.3 91 181 110.6h20.3c4 0 8 .4 11.9 1.4z" fill="#8ae234"/></svg>
           bashunit
         </h3>
-        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="typeddevs/bashunit">413</span> · {% if lang == "es" %}Creador y Maintainer{% else %}Creator &amp; Maintainer{% endif %}</p>
+        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="typeddevs/bashunit">{{ bashunit_stars }}</span> · {% if lang == "es" %}Creador y Maintainer{% else %}Creator &amp; Maintainer{% endif %}</p>
         <p>{% if lang == "es" %}Librería de testing para scripts bash inspirada en PHPUnit. Lleva prácticas de calidad a shell scripts y pipelines de CI.{% else %}Testing library for bash scripts inspired by PHPUnit. Brings quality testing practices to shell scripts and CI pipelines.{% endif %}</p>
         <p class="cv-project__meta cv-project__meta--award"><i class="fa-solid fa-trophy"></i> {% if lang == "es" %}Side Project del Año 2023{% else %}Side Project of the Year 2023{% endif %}</p>
       </a>
@@ -490,16 +502,28 @@
           <svg class="cv-project__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.3 167.7"><path d="M6 66l95 96h36V93l-36-74H42L6 56v106h36l24-35" fill="none" stroke="#512da8" stroke-width="8"/><path d="M137 93l58-3-12-58-32-26h-34l-16 13-23 9-12 22 46 52z" fill="none" stroke="#512da8" stroke-width="8"/><path d="M195 90l-12 57h-13l-2-56m2 56l-13-11h12" fill="none" stroke="#512da8" stroke-width="8"/></svg>
           Phel Lang
         </h3>
-        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="phel-lang/phel-lang">513</span> · {% if lang == "es" %}Core Maintainer{% else %}Core Maintainer{% endif %}</p>
+        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="phel-lang/phel-lang">{{ phel_stars }}</span> · {% if lang == "es" %}Core Maintainer{% else %}Core Maintainer{% endif %}</p>
         <p>{% if lang == "es" %}Lenguaje de programación funcional que compila a PHP. Dialecto de Lisp inspirado en Clojure con estructuras de datos persistentes, macros y REPL.{% else %}Functional programming language that compiles to PHP. A Lisp dialect inspired by Clojure with persistent data structures, macros, and a REPL.{% endif %}</p>
       </a>
+      <a href="https://github.com/Chemaclass/agnostic-ai" target="_blank" rel="noopener" class="cv-project cv-print-hide">
+        <h3>
+          <i class="fa-solid fa-robot cv-project__icon"></i>
+          agnostic-ai
+        </h3>
+        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="chemaclass/agnostic-ai">{{ agnostic_ai_stars }}</span> · {% if lang == "es" %}Creador y Maintainer{% else %}Creator &amp; Maintainer{% endif %}</p>
+        <p>{% if lang == "es" %}Una única fuente de verdad para agentes, skills, reglas y hooks de IA. Un sync genera los ficheros nativos de cada CLI de IA.{% else %}One source of truth for AI agents, skills, rules, and hooks. One sync writes the native files every AI CLI reads.{% endif %}</p>
+      </a>
       <div class="cv-project cv-print-only">
-        <h3>bashunit · <span class="cv-star" data-repo="typeddevs/bashunit">413</span>★</h3>
+        <h3>bashunit · <span class="cv-star" data-repo="typeddevs/bashunit">{{ bashunit_stars }}</span>★</h3>
         <p>{% if lang == "es" %}Creador y Maintainer. Librería de testing para scripts bash. Side Project del Año 2023.{% else %}Creator &amp; Maintainer. Testing library for bash scripts. Side Project of the Year 2023.{% endif %}</p>
       </div>
       <div class="cv-project cv-print-only">
-        <h3>Phel Lang · <span class="cv-star" data-repo="phel-lang/phel-lang">513</span>★</h3>
+        <h3>Phel Lang · <span class="cv-star" data-repo="phel-lang/phel-lang">{{ phel_stars }}</span>★</h3>
         <p>{% if lang == "es" %}Core Maintainer. Lenguaje funcional que compila a PHP. Dialecto de Lisp inspirado en Clojure.{% else %}Core Maintainer. Functional language that compiles to PHP. Lisp dialect inspired by Clojure.{% endif %}</p>
+      </div>
+      <div class="cv-project cv-print-only">
+        <h3>agnostic-ai · <span class="cv-star" data-repo="chemaclass/agnostic-ai">{{ agnostic_ai_stars }}</span>★</h3>
+        <p>{% if lang == "es" %}Creador y Maintainer. Una única fuente de verdad para la config de cada herramienta de IA.{% else %}Creator &amp; Maintainer. One source of truth for the config of every AI coding tool.{% endif %}</p>
       </div>
     </div>
   </section>

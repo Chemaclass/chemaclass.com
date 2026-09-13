@@ -73,7 +73,6 @@ $cv-card-padding: 1.25rem;
 
   &__title {
     font-size: 1.1rem;
-    color: var(--accent-color);
     font-weight: 500;
     margin: 0 0 0.2rem;
   }
@@ -489,6 +488,14 @@ a.cv-project {
     height: 22px;
     vertical-align: middle;
     margin-right: 0.3rem;
+  }
+
+  i.cv-project__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--accent-color);
   }
 
   h3 {
