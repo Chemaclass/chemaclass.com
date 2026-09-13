@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block styles %}
-{{ macros::page_styles(css='listing.css') }}
+{{ <page_styles css="listing.css" /> }}
 {% endblock styles %}
 
 {# Without this the term pages all fall through base.html to config.title, so
@@ -73,10 +72,10 @@
     <a href="{{ post.permalink }}" class="tag-single__post">
       {% if post.extra.static_thumbnail %}
       <div class="tag-single__post-thumb">
-        {% if post.extra.static_thumbnail is matching("^http[s]?://") %}
+        {% if post.extra.static_thumbnail is matching(pat="^http[s]?://") %}
           <img src="{{ post.extra.static_thumbnail | safe }}" alt="{{ post.title }}" width="480" height="270" loading="lazy" decoding="async" />
         {% else %}
-          {% set thumb_path = post.extra.static_thumbnail | trim_start_matches(pat="/") %}
+          {% set thumb_path = post.extra.static_thumbnail | trim_start(pat="/") %}
           {% set thumb_webp = resize_image(path=thumb_path, width=480, height=270, op="fill", quality=75, format="webp") %}
           {% set thumb_fb = resize_image(path=thumb_path, width=480, height=270, op="fill", quality=80) %}
           <picture>
@@ -92,11 +91,11 @@
       {% endif %}
       <div class="tag-single__post-content">
         <div class="tag-single__post-meta">
-          {% if post.path is containing("blog/") %}
+          {% if post.path is containing(pat="blog/") %}
           <span class="tag-single__post-type tag-single__post-type--blog">{{ trans(key="nav_blog", lang=lang) }}</span>
-          {% elif post.path is containing("readings/") %}
+          {% elif post.path is containing(pat="readings/") %}
           <span class="tag-single__post-type tag-single__post-type--reading">{{ trans(key="nav_readings", lang=lang) }}</span>
-          {% elif post.path is containing("talks/") %}
+          {% elif post.path is containing(pat="talks/") %}
           <span class="tag-single__post-type tag-single__post-type--talk">{{ trans(key="nav_talks", lang=lang) }}</span>
           {% endif %}
           {% if post.date %}

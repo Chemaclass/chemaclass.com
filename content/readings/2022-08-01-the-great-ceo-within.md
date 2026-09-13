@@ -311,7 +311,7 @@ effective problem-solving, and transparent feedback.
 
 ---
 
-{{ youtube(id="tBimI7QNjBA") }}
+{{ <youtube id="tBimI7QNjBA" /> }}
 
 Matt Mochary shares insights on developing his coaching method, understanding & overcoming primal fear, addressing
 imposter syndrome & more.

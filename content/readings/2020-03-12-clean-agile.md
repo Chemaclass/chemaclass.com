@@ -27,4 +27,4 @@ This talk is about Agile. What it was, what it is, and what it will be. This is 
 history of Agile, what motivated it, and what has happened to it since. The talk covers the basic practices of Agile,
 and compares and contrasts those practices with the current menagerie of Agile processes.
 
-{{ youtube(id="FedQ2NlgxMI") }}
+{{ <youtube id="FedQ2NlgxMI" /> }}

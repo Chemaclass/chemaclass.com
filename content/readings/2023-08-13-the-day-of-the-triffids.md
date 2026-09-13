@@ -25,6 +25,6 @@ The triffids are grotesque and dangerous plants, over seven feet tall, originall
 
 ### Summary
 
-{{ youtube(id="OQfdjhDOuCo") }}
+{{ <youtube id="OQfdjhDOuCo" /> }}
 
 > Summary based on the movie "[The Day of the Triffids](https://www.imdb.com/title/tt1332653/) (2009)"

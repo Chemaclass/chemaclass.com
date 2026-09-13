@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block title %}
   {{ section.title }} | Chemaclass
@@ -10,7 +9,7 @@
 {# Via the macro, not a bare link: it also pulls in search.css, and base.html
    renders the search dialog on every page. Hand-rolled, this shipped the dialog
    markup with none of its styles. #}
-{{ macros::page_styles(css='page.css') }}
+{{ <page_styles css="page.css" /> }}
 {% endblock styles %}
 
 {% block content %}
@@ -49,7 +48,7 @@
           {% endif %}
           {% if page.date %}
             <span class="music-card__date">
-              {{ macros::format_date(date=page.date, lang=lang) }}
+              {{ <format_date date={page.date} lang={lang} /> }}
             </span>
           {% endif %}
         </div>

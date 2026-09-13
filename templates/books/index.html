@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block title %}
   {{ trans(key="books_title", lang=lang) }} | Chemaclass
 {% endblock %}
 
 {% block styles %}
-{{ macros::page_styles(css='page.css') }}
+{{ <page_styles css="page.css" /> }}
 {% endblock styles %}
 
 {% block content %}

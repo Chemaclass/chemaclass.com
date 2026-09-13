@@ -39,4 +39,4 @@ management manifesto with the ability to revolutionize the way we work.
 
 A pretty nice overview from the takeaways by Marc Koenig:
 
-{{ youtube(id="Yi1PSs_bpQ0") }}
+{{ <youtube id="Yi1PSs_bpQ0" /> }}

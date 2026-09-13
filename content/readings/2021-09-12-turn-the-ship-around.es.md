@@ -76,8 +76,8 @@ Para tomar buenas decisiones en cualquier nivel, hay que estar alineado con el p
 
 ## Resumen
 
-{{ youtube(id="OqmdLcyES_Q") }}
+{{ <youtube id="OqmdLcyES_Q" /> }}
 
 [David Marquet](/es/readings/leadership-is-language/) habla sobre el liderazgo que cambia el rumbo en su keynote en el Worldwebforum.
 
-{{ youtube(id="ivwKQqf4ixA") }}
+{{ <youtube id="ivwKQqf4ixA" /> }}

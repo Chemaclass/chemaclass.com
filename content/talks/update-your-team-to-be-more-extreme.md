@@ -32,7 +32,7 @@ Our profession is constantly evolving; therefore, it demands a non-stop learning
 
 ### WeAreDevelopers World Congress in Berlin (July 2023)
 
-{{ youtube(id="dqtAyl-SvaY") }}
+{{ <youtube id="dqtAyl-SvaY" /> }}
 
 ## Related posts
 

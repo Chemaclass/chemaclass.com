@@ -36,4 +36,4 @@ Aunque estés rodeado de escépticos, este libro te ayudará a construir lo que 
 
 Un buen webinar donde comparten ideas clave del libro y discuten sus hallazgos más recientes.
 
-{{ youtube(id="ylGfrsXXQMs") }}
+{{ <youtube id="ylGfrsXXQMs" /> }}

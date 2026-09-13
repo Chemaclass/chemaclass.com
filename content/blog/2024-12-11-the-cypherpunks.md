@@ -142,7 +142,7 @@ Privacy isn't dead. They made sure of that.
 
 ---
 
-{{ youtube(id="9vM0oIEhMag") }}
+{{ <youtube id="9vM0oIEhMag" /> }}
 
 ---
 

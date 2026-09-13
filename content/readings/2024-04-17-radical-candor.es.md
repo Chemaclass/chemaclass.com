@@ -55,4 +55,4 @@ Al aplicar Radical Candor, managers y líderes construyen relaciones sólidas, m
 
 ---
 
-{{ youtube(id="O9hDTLo5rLA") }}
+{{ <youtube id="O9hDTLo5rLA" /> }}

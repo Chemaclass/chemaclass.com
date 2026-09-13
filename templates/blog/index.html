@@ -1,18 +1,16 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
-{% import "partials/helpers-preview.html" as helpers %}
 
 {% block title %}
   {{ trans(key="blog_title", lang=lang) }} | Chemaclass
 {% endblock %}
 
 {% block styles %}
-{{ macros::page_styles(css='listing.css') }}
+{{ <page_styles css="listing.css" /> }}
 {% endblock styles %}
 
 {% block posthead %}
-{{ macros::collection_schema(section=section, name=trans(key='blog_title', lang=lang), lang=lang, kind='Blog') }}
+{{ <collection_schema section={section} name={trans(key='blog_title', lang=lang)} lang={lang} kind="Blog" /> }}
 {% endblock posthead %}
 
 {% block content %}
@@ -51,7 +49,7 @@
     </div>
   </nav>
 
-  {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
+  {% set pinned_posts = [p for p in section.pages if p.extra.pin] %}
 
   {# Distinct years in date order (section is sorted desc), matching the year headers below #}
   {% set_global seen_years = [] %}
@@ -59,7 +57,7 @@
     {% if post not in pinned_posts %}
       {% set post_year = post.date | date(format="%Y") %}
       {% if post_year not in seen_years %}
-        {% set_global seen_years = seen_years | concat(with=post_year) %}
+        {% set_global seen_years = [...seen_years, post_year] %}
       {% endif %}
     {% endif %}
   {% endfor %}
@@ -90,7 +88,7 @@
 
   <div class="blog-list blog-list--featured">
     {% for post in pinned_posts %}
-      {{ helpers::content_card(post=post, pinned=true, lang=lang) }}
+      {{ <content_card post={post} pinned={true} lang={lang} /> }}
     {% endfor %}
 
     {# Non-pinned posts grouped by year, first one featured #}
@@ -104,10 +102,10 @@
           <h3 class="blog-year-header" id="year-{{ post_year }}">{{ post_year }}</h3>
         {% endif %}
         {% if not featured_shown %}
-          {{ helpers::content_card(post=post, featured=true, lang=lang) }}
+          {{ <content_card post={post} featured={true} lang={lang} /> }}
           {% set_global featured_shown = true %}
         {% else %}
-          {{ helpers::content_card(post=post, lang=lang) }}
+          {{ <content_card post={post} lang={lang} /> }}
         {% endif %}
       {% endif %}
     {% endfor %}

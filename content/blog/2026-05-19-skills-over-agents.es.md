@@ -56,7 +56,7 @@ La clave está en cómo se cargan. El agente lee solo nombres y descripciones al
 
 Esa carga bajo demanda es lo que hace que los skills escalen. Veinte skills casi no cuestan hasta que uno encaja con la tarea. Los agentes especializados, en cambio, cargan sus instrucciones enteras cada vez que arrancan. Más agentes, más coste fijo.
 
-{% deep_dive(title="Un ejemplo real de skill") %}
+{% <deep_dive title="Un ejemplo real de skill"> %}
 
 ```
 .claude/skills/
@@ -98,7 +98,7 @@ Para cada issue encontrado:
 
 El agente ve la descripción en la lista de skills. Pides un review, carga `SKILL.md`. Necesita un patrón [SOLID](/es/readings/clean-architecture/), lee la referencia. Dos niveles, bajo demanda.
 
-{% end %}
+{% </deep_dive> %}
 
 ![blog-middle](/images/blog/2026-05-19/middle.webp)
 
@@ -153,4 +153,4 @@ El agente sale el año que viene. El skill se queda para siempre.
 
 ---
 
-{{ youtube(id="CEvIs9y1uog") }}
+{{ <youtube id="CEvIs9y1uog" /> }}

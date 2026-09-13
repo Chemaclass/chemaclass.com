@@ -23,4 +23,4 @@ The Alchemist is a classic novel in which a boy named Santiago embarks on a [jou
 
 #### Video Summary
 
-{{ youtube(id="b41MXNaFJj0") }}
+{{ <youtube id="b41MXNaFJj0" /> }}

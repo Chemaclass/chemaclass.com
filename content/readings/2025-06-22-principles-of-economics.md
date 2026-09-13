@@ -76,4 +76,4 @@ You'll walk away with a new lens to see the world: why prices rise, why saving m
 
 ## Austrian Economics vs Keynesian Economics
 
-{{ youtube(id="GUvTJ0xy74c") }}
+{{ <youtube id="GUvTJ0xy74c" /> }}

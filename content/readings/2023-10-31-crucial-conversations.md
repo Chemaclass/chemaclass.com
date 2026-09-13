@@ -87,8 +87,8 @@ Make a good-faith guess. The more you engage in productive dialog, the more chan
 
 ### Keynote: Mastering The Art of Crucial Conversations
 
-{{ youtube(id="uc3ARpccRwQ") }}
+{{ <youtube id="uc3ARpccRwQ" /> }}
 
 #### Video Summary
 
-{{ youtube(id="Q2yG142cyNg") }}
+{{ <youtube id="Q2yG142cyNg" /> }}

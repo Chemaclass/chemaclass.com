@@ -64,7 +64,7 @@ Antes de darle más poder al agente, bloquea lo que nunca debe hacer.
 
 `.claude/settings.json` contiene tres cosas: **permissions** (allow/deny), **hooks** (comandos por evento) y **env** (variables). Un `settings.local.json` gitignoreado mantiene las configuraciones personales aparte.
 
-{% deep_dive(title="Ejemplo de permisos en Phel") %}
+{% <deep_dive title="Ejemplo de permisos en Phel"> %}
 
 ```json
 {
@@ -83,7 +83,7 @@ Antes de darle más poder al agente, bloquea lo que nunca debe hacer.
 }
 ```
 
-{% end %}
+{% </deep_dive> %}
 
 Allow desbloquea el flujo. Deny marca la línea que el agente no puede cruzar, aunque se lo pidas con buena cara.
 
@@ -102,7 +102,7 @@ Un skill es un archivo markdown en `.claude/skills/`, un procedimiento que invoc
 - **`/refactor-check`**: [SOLID](/es/readings/clean-architecture/), naming, olores de arquitectura.
 - **`/release [version]`**: changelog, PHAR, tag, release.
 
-{% deep_dive(title="Skills vs rules vs prompt directo") %}
+{% <deep_dive title="Skills vs rules vs prompt directo"> %}
 
 - **Prompt directo**: _"arregla el issue #42"_. El agente improvisa. Distinto cada vez.
 - **Rule**: _"usa conventional commits"_. Da forma al resultado, no al procedimiento.
@@ -110,7 +110,7 @@ Un skill es un archivo markdown en `.claude/skills/`, un procedimiento que invoc
 
 Los skills convierten conocimiento tribal en pasos ejecutables por cualquiera.
 
-{% end %}
+{% </deep_dive> %}
 
 > Los skills capturan qué hacer. Las rules capturan qué no hacer.
 
@@ -118,7 +118,7 @@ Los skills convierten conocimiento tribal en pasos ejecutables por cualquiera.
 
 `CLAUDE.md` se lee en cada sesión. Las rules solo cuando aplican. Los archivos en `.claude/rules/` apuntan a áreas del código con patrones glob: el agente carga solo lo que corresponde, manteniendo el contexto ligero.
 
-{% deep_dive(title="Rules con glob en la práctica") %}
+{% <deep_dive title="Rules con glob en la práctica"> %}
 
 Archivos de rules en [Phel](/es/blog/phel-first-release/):
 
@@ -129,7 +129,7 @@ Archivos de rules en [Phel](/es/blog/phel-first-release/):
 
 Las rules del compilador no se activan al editar código Phel. Las rules de Phel no se activan al editar infraestructura PHP.
 
-{% end %}
+{% </deep_dive> %}
 
 Las rules no son sugerencias. Viajan con el código: un cambio de convención y su rule viajan en el mismo commit. Sin drift, sin wikis desactualizadas.
 
@@ -143,7 +143,7 @@ Las rules dicen al agente qué hacer. Los hooks se aseguran de que ocurra aunque
 
 Comandos shell disparados por eventos de Claude Code (`PreToolUse`, `PostToolUse`, `Stop`), conectados vía `settings.json`. En Phel, `PreToolUse` bloquea ediciones a archivos críticos (`build/release.sh`, `.github/*`, `composer.lock`). `PostToolUse` auto-formatea PHP vía `php-cs-fixer`.
 
-{% deep_dive(title="Conexión de hooks") %}
+{% <deep_dive title="Conexión de hooks"> %}
 
 ```json
 {
@@ -160,7 +160,7 @@ Comandos shell disparados por eventos de Claude Code (`PreToolUse`, `PostToolUse
 }
 ```
 
-{% end %}
+{% </deep_dive> %}
 
 > Las rules son lo que el agente debe saber. Los hooks son lo que el sistema impone de todas formas.
 

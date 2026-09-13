@@ -50,4 +50,4 @@ Another blog post with way more detailed key insights:
 
 ---
 
-{{ youtube(id="oxgfehnJ7GE") }}
+{{ <youtube id="oxgfehnJ7GE" /> }}

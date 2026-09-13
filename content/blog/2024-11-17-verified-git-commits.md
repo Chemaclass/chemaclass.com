@@ -106,7 +106,7 @@ Verified commits might seem like a small step, but they make your code more trus
 
 ### Extra: Full setup in Spanish 🇪🇸
 
-{{ youtube(id="0DzQBu7U2f4") }}
+{{ <youtube id="0DzQBu7U2f4" /> }}
 
 ---
 

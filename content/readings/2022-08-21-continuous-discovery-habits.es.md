@@ -47,4 +47,4 @@ Este libro te enseña cómo [product managers](/es/readings/agile-product-manage
 
 ### El Qué y Por Qué del Descubrimiento Continuo
 
-{{ youtube(id="yNCcQODWYh0") }}
+{{ <youtube id="yNCcQODWYh0" /> }}

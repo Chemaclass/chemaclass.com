@@ -43,4 +43,4 @@ I wrote a blog post about this topic: [The process itself is the goal](/blog/the
 
 ---
 
-{{ youtube(id="YT7tQzmGRLA") }}
+{{ <youtube id="YT7tQzmGRLA" /> }}
