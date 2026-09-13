@@ -747,14 +747,14 @@ title = "Programming Languages & Tools"
 title_es = "Lenguajes y Herramientas"
 description = "Hands-on content about specific languages, frameworks, and developer tooling."
 description_es = "Contenido práctico sobre lenguajes, frameworks y herramientas de desarrollo."
-tags = ["php", "software", "developer-tools", "devops", "git", "bashunit", "gacela", "phel", "software-design"]
+tags = ["php", "software", "developer-tools", "devops", "git", "bashunit", "gacela", "phel", "agnostic-ai", "software-design"]
 
 [[extra.topics]]
 title = "AI & Agents"
 title_es = "IA y Agentes"
 description = "Working with AI agents, agentic coding, and what the tooling changes about the craft."
 description_es = "Trabajar con agentes de IA, agentic coding y lo que las herramientas cambian del oficio."
-tags = ["ai"]
+tags = ["ai", "agnostic-ai"]
 
 [[extra.topics]]
 title = "Speaking & Teaching"
@@ -860,6 +860,12 @@ name = "ai"
 desc = "Working with AI agents: context, tooling, and where the human still decides."
 desc_es = "Trabajar con agentes de IA: contexto, herramientas y dónde decide el humano."
 entity = "https://en.wikipedia.org/wiki/Artificial_intelligence"
+
+[[extra.tag_descriptions]]
+name = "agnostic-ai"
+desc = "agnostic-ai, one source of truth for the config of every AI coding tool."
+desc_es = "agnostic-ai, una sola fuente de verdad para la config de cada herramienta de IA."
+entity = "https://github.com/Chemaclass/agnostic-ai"
 
 [[extra.tag_descriptions]]
 name = "bashunit"
