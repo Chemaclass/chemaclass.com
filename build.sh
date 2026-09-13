@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ZOLA_VERSION="${ZOLA_VERSION:-0.22.0}"
+ZOLA_VERSION="${ZOLA_VERSION:-0.23.6}"
 MINIFY_VERSION="${MINIFY_VERSION:-2.21.3}"
 
 # Detect OS and architecture
@@ -11,8 +11,7 @@ ARCH=$(uname -m)
 # Download zola if not installed
 if ! command -v zola &> /dev/null; then
   if [ "$OS" = "Darwin" ]; then
-    echo "zola not found. Install v${ZOLA_VERSION} by hand: see README, Prerequisites."
-    echo "Do NOT use 'brew install zola': it installs 0.23+, which breaks the templates."
+    echo "zola not found. Install v${ZOLA_VERSION} or newer: see README, Prerequisites."
     exit 1
   fi
 
@@ -66,6 +65,14 @@ if ! command -v python3 &> /dev/null; then
 fi
 
 echo "Using Zola $(zola --version)"
+
+# The templates need Tera 2 components with implicit params, which arrived in 0.23.6.
+# Older binaries fail with template errors that do not point at the version.
+ZOLA_FOUND=$(zola --version | awk '{print $2}')
+if [ "$(printf '%s\n%s\n' "$ZOLA_VERSION" "$ZOLA_FOUND" | sort -V | head -1)" != "$ZOLA_VERSION" ]; then
+  echo "Zola $ZOLA_FOUND is too old. Install v${ZOLA_VERSION} or newer: see README, Prerequisites."
+  exit 1
+fi
 
 echo "Checking content structure against the reviewed baseline..."
 python3 scripts/check-content-shape.py

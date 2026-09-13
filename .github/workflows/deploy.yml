@@ -64,10 +64,17 @@ jobs:
             find static/processed_images -type f -exec touch {} +
           fi
 
+      # Downloaded directly: taiki-e/install-action's manifest lags new Zola
+      # releases, and the templates need 0.23.6 (component implicit params).
       - name: Install Zola
-        uses: taiki-e/install-action@v2
-        with:
-          tool: zola@0.22.0
+        env:
+          ZOLA_VERSION: 0.23.6
+        run: |
+          mkdir -p "$RUNNER_TEMP/zola"
+          curl -sSL "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
+            | tar -xz -C "$RUNNER_TEMP/zola"
+          echo "$RUNNER_TEMP/zola" >> "$GITHUB_PATH"
+          "$RUNNER_TEMP/zola/zola" --version
 
       - name: Build site
         run: ./build.sh
