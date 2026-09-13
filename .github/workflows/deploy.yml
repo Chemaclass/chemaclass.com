@@ -73,9 +73,9 @@ jobs:
         run: ./build.sh
         env:
           RUM_KEY: ${{ secrets.RUM_KEY }}
-          # scripts/fetch-github-stars.py reads two repos through the API.
+          # scripts/fetch-github-stars.py reads three repos through the API.
           # Unauthenticated, from a shared runner address, that is a 403 for
-          # rate limiting; with the workflow token it is two fast requests.
+          # rate limiting; with the workflow token it is three fast requests.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Deliberately its own step rather than part of build.sh: this is the one

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch the star counts the homepage shows, before the build starts.
+"""Fetch the star counts the homepage and the CV show, before the build starts.
 
 The homepage used to call the GitHub API from the template, with
 load_data(url=...). That works, and on a laptop it costs nothing. On a CI runner
@@ -29,6 +29,7 @@ OUTPUT = PROJECT_ROOT / 'data' / 'github-stars.json'
 REPOS = {
     'phel': 'phel-lang/phel-lang',
     'bashunit': 'TypedDevs/bashunit',
+    'agnostic_ai': 'Chemaclass/agnostic-ai',
 }
 
 
