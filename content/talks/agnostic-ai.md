@@ -10,9 +10,9 @@ project_url = "https://github.com/Chemaclass/agnostic-ai"
 slides = "/slides/agnostic-ai/"
 +++
 
-Your team uses Claude Code, a colleague prefers Cursor, and the new hire opens Codex. Same repository, same conventions, three copies of the rules that drift apart within a week. Worse, your rules can stop being read without anything failing: most tools look for the first file they recognise and stop there, so a teammate adding a second tool is enough to silence everything you wrote.
+Your team uses Claude Code, a colleague prefers Codex, and someone still has Copilot open. Each tool wants its own files, so the same conventions, skills and hooks end up copied in several places, and the copies drift apart without a single error. The tools are not the interesting part here. The workflow is.
 
-agnostic-ai keeps one source of truth instead. You write rules, skills, agents, hooks, MCP servers and commands once under `.agnostic-ai/`, and one sync command writes the native files each tool actually reads. We go from an empty repository to a synced setup live, and then we look at what the vendors get wrong: precedence lists that silently shadow your rules, legacy filenames that still win over the new ones, and paths that no vendor document ever named.
+We start with what we want from an agent and which part of its setup delivers each outcome: instructions and rules as hints, hooks and permissions as guarantees, skills, agents and MCP servers to get work done. Then we follow that setup through a few tool switches, see where it drifts, and compare two fixes: symlinks, and agnostic-ai, which keeps one spec and writes the native files 25 AI coding tools read. We close with the trade-offs and with questions for the room about what belongs in a shared agent setup.
 
 <!-- more -->
 

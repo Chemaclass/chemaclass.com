@@ -10,9 +10,9 @@ project_url = "https://github.com/Chemaclass/agnostic-ai"
 slides = "/slides/agnostic-ai/"
 +++
 
-Tu equipo usa Claude Code, un compañero prefiere Cursor y el nuevo abre Codex. Mismo repositorio, mismas convenciones, tres copias de las reglas que se desincronizan en una semana. Y hay algo peor: tus reglas pueden dejar de leerse sin que nada falle. La mayoría de las herramientas buscan el primer fichero que reconocen y paran ahí, así que basta con que un compañero añada una segunda herramienta para silenciar todo lo que escribiste.
+Tu equipo usa Claude Code, un compañero prefiere Codex y alguien sigue con Copilot abierto. Cada herramienta quiere sus propios ficheros, así que las mismas convenciones, skills y hooks acaban copiados en varios sitios, y las copias se desincronizan sin un solo error. Lo interesante aquí no son las herramientas. Es el flujo de trabajo.
 
-agnostic-ai mantiene una sola fuente de verdad. Escribes reglas, skills, agentes, hooks, servidores MCP y comandos una vez en `.agnostic-ai/`, y un único comando de sync genera los ficheros nativos que cada herramienta lee de verdad. Pasamos en directo de un repositorio vacío a un setup sincronizado, y después vemos en qué se equivocan los propios vendors: listas de precedencia que tapan tus reglas en silencio, nombres de fichero antiguos que siguen ganando a los nuevos, y rutas que ningún documento oficial mencionó jamás.
+Empezamos por lo que queremos de un agente y qué parte de su setup consigue cada resultado: instrucciones y reglas como pistas, hooks y permisos como garantías, y skills, agentes y servidores MCP para sacar el trabajo adelante. Después seguimos ese setup a través de varios cambios de herramienta, vemos dónde se desincroniza y comparamos dos soluciones: symlinks, y agnostic-ai, que mantiene una sola spec y genera los ficheros nativos que leen 25 herramientas de IA. Cerramos con los trade-offs y con preguntas para la sala sobre qué debería ir en un setup de agentes compartido.
 
 <!-- more -->
 
