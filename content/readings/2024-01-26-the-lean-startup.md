@@ -35,8 +35,8 @@ Eric Ries defines a startup as an organization dedicated to creating something n
 
 ### Summary
 
-{{ youtube(id="RSaIOCHbuYw") }}
+{{ <youtube id="RSaIOCHbuYw" /> }}
 
 ---
 
-{{ youtube(id="fEvKo90qBns") }}
+{{ <youtube id="fEvKo90qBns" /> }}

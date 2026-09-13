@@ -58,7 +58,7 @@ What stays:
 - Code blocks, exact errors, file paths, commands.
 - Security warnings and destructive ops (skill auto-clarifies).
 
-{% deep_dive(title="Before and after") %}
+{% <deep_dive title="Before and after"> %}
 
 Normal mode:
 
@@ -70,7 +70,7 @@ Caveman mode:
 
 Same fix, and the code block that follows is identical. All that shrank is the prose around it, down to about a quarter.
 
-{% end %}
+{% </deep_dive> %}
 
 There are three levels: `lite`, `full`, and `ultra`. Start at `full`, since `ultra` reads like a telegram. If an answer ever lands too terse for you, type `normal mode` and it backs off.
 

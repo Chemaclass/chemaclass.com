@@ -73,7 +73,7 @@ outcome doesn't bring any real benefits.
 It is, therefore, everyone's responsibility to be aware of these different types of work and find a good balance between
 them. Leaders involve everyone in both Red Work and Blue Work.
 
-{{ youtube(id="OEX1EVc-zjk") }}
+{{ <youtube id="OEX1EVc-zjk" /> }}
 
 ---
 

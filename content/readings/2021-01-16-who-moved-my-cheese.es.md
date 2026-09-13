@@ -41,6 +41,6 @@ Es una metáfora brillante sobre las diferentes actitudes que adoptamos cuando n
 
 > "Todo el mundo sabe que no todo cambio es bueno o incluso necesario. Pero en un mundo que está cambiando constantemente, es ventajoso para nosotros aprender a adaptarnos y disfrutar de algo mejor. No es lo que hay en la historia de '¿Quién se ha llevado mi queso?' sino cómo lo interpretas y lo aplicas a tu propia situación lo que le da valor." - Ken Blanchard.
 
-{{ youtube(id="OvYCLxqkfvY") }}
+{{ <youtube id="OvYCLxqkfvY" /> }}
 
 Escribí un artículo sobre este libro: [Abraza el cambio](/es/blog/embrace-the-change/)

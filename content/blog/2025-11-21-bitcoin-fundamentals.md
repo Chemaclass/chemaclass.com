@@ -75,7 +75,7 @@ At its core, Bitcoin is:
 
 There's no company behind Bitcoin. No CEO, no headquarters, no customer support. It's open-source software that anyone can run, inspect, or contribute to.
 
-{{ youtube(id="d7ID3fKAFQM") }}
+{{ <youtube id="d7ID3fKAFQM" /> }}
 
 ## Sound Money
 
@@ -416,7 +416,7 @@ The best way to understand Bitcoin is to use it:
 
 You don't have to go all in. Start small and keep learning, one step at a time.
 
-{{ youtube(id="Pef22g53zsg") }}
+{{ <youtube id="Pef22g53zsg" /> }}
 **Further reading**
 
 - [Bitcoin 101](https://cosmevalera.dev/blog/bitcoin-101/) <small>by Cosme - Another beginner-friendly introduction</small>

@@ -97,8 +97,8 @@ The polished result impresses people. The pushed signal is how the work gets bet
 
 Open the door. Then point at it.
 
-{% kudos() %}
+{% <kudos> %}
 Thanks to my colleague Aike, who gave me the idea in one of our conversations about making work visible.
-{% end %}
+{% </kudos> %}
 
 ![blog-footer](/images/blog/2026-07-14/footer.webp)

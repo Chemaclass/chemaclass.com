@@ -88,8 +88,8 @@ Lo importante es dejar esos acuerdos claros. Si no has comprobado quién se enca
 
 En tu próxima tarea, mira más allá del merge. ¿Qué tiene que pasar para que la persona que avisó del problema pueda darlo por resuelto? Ocúpate de que ocurra.
 
-{% kudos() %}
+{% <kudos> %}
 Gracias a [Thorsten Ball](https://x.com/thorstenball/status/2066907538499506349) por el mensaje de Slack que dio origen a este post.
-{% end %}
+{% </kudos> %}
 
 ![blog-footer](/images/blog/2026-09-20/footer.webp)

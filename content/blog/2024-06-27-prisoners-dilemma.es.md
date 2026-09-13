@@ -24,7 +24,7 @@ El Dilema del Prisionero es un experimento mental que muestra por que a veces no
 
 Dicho de otra forma: a nadie le gusta que se aprovechen de uno. Es teoría de juegos básica.
 
-{{ youtube(id="t9Lo2fgxWHw") }}
+{{ <youtube id="t9Lo2fgxWHw" /> }}
 
 El dilema plantea una decisión difícil: cooperar o traicionar. Y revela mucho sobre cómo sopesamos el interés propio frente al beneficio colectivo.
 
@@ -64,7 +64,7 @@ Esto lleva a cuatro posibles resultados diferentes para los prisioneros A y B:
 
 Es igual que el juego normal, pero lo juegas varias veces con el mismo oponente y sumas las puntuaciones. Puedes cambiar de estrategia entre rondas. Tiene aplicaciones reales porque se parece a cualquier relación continuada.
 
-{{ youtube(id="BOvAbjfJ0x0") }}
+{{ <youtube id="BOvAbjfJ0x0" /> }}
 
 ---
 
@@ -72,6 +72,6 @@ Todo esto tiene que ver con la [confianza](/es/readings/the-five-dysfunctions-of
 
 La mejor estrategia en el Dilema del Prisionero iterado es empezar cooperando y luego imitar lo que hizo el otro en la ronda anterior. Así recompensas la cooperación y castigas la traición.
 
-{{ youtube(id="S0SQLQMLi8Q") }}
+{{ <youtube id="S0SQLQMLi8Q" /> }}
 
 > No confíes, verifica.

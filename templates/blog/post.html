@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block styles %}
-{{ macros::page_styles(css='post.css') }}
+{{ <page_styles css="post.css" /> }}
 {% endblock styles %}
 
 {% block posthead %}
@@ -18,21 +17,21 @@
     <div class="blog-post-main">
       <article class="blog-post">
         <div class="blog-post__top-row">
-          <a href="{{ macros::lang_path(path='/blog/', lang=lang) }}" class="blog-post__back">
-            {{ macros::back_arrow() }}
+          <a href="{{ <lang_path path="/blog/" lang={lang} /> }}" class="blog-post__back">
+            {{ <back_arrow /> }}
             {{ trans(key="all_posts", lang=lang) }}
           </a>
-          {{ macros::favorite_toggle(lang=lang) }}
-          {{ macros::toc_toggle(lang=lang) }}
+          {{ <favorite_toggle lang={lang} /> }}
+          {{ <toc_toggle lang={lang} /> }}
         </div>
 
         <!-- Hero thumbnail -->
         {% if page.extra.static_thumbnail %}
         <div class="blog-post__hero">
-          {% if page.extra.static_thumbnail is matching("^http[s]?://") %}
+          {% if page.extra.static_thumbnail is matching(pat="^http[s]?://") %}
             <img src="{{ page.extra.static_thumbnail | safe }}" alt="{{ page.title }}" width="960" height="540" loading="eager" fetchpriority="high" />
           {% else %}
-            {% set hero_path = page.extra.static_thumbnail | trim_start_matches(pat="/") %}
+            {% set hero_path = page.extra.static_thumbnail | trim_start(pat="/") %}
             {% set hero_meta = get_image_metadata(path=hero_path) %}
             {% set hero_sm = resize_image(path=hero_path, width=480, height=270, op="fill", quality=88, format="webp") %}
             {% set hero_md = resize_image(path=hero_path, width=720, height=405, op="fill", quality=88, format="webp") %}
@@ -73,21 +72,21 @@
           <div class="blog-post__meta">
             {% if page.date %}
             <span class="blog-post__date">
-              {{ macros::calendar_icon() }}
-              {{ macros::format_date(date=page.date, lang=lang) }}
+              {{ <calendar_icon /> }}
+              {{ <format_date date={page.date} lang={lang} /> }}
             </span>
             {% endif %}
             {% include "partials/updated-date.html" %}
             {% set reading_time = page.extra.reading_time | default(value=page.reading_time) %}
             {% if reading_time %}
             <span class="blog-post__reading-time">
-              {{ macros::clock_icon() }}
+              {{ <clock_icon /> }}
               {{ reading_time }} {{ trans(key="minutes_read", lang=lang) }}
             </span>
             {% endif %}
             {% if page.word_count %}
             <span class="blog-post__word-count">
-              {{ macros::document_icon() }}
+              {{ <document_icon /> }}
               {{ page.word_count }} {{ trans(key="words", lang=lang) }}
             </span>
             {% endif %}
@@ -105,7 +104,7 @@
 
         <!-- Content -->
         <div class="blog-post__content"
-             {{ macros::highlight_labels(lang=lang) }}>
+             {{ <highlight_labels lang={lang} /> }}>
           {% include "partials/tldr.html" %}
           {{ page.content | safe }}
           {% include "partials/post-faq.html" %}

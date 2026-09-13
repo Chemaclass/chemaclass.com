@@ -63,7 +63,7 @@ El libro enlaza a más de doscientos artículos, videos, podcasts e incluso cód
 
 ---
 
-{{ youtube(id="pQb24UWWSl8") }}
+{{ <youtube id="pQb24UWWSl8" /> }}
 
 ---
 

@@ -212,9 +212,9 @@ Ahora puedes refactorizar el código de producción que cubriste con tests sin e
 
 ### Todo junto
 
-{{ gist(url="Chemaclass/07704606fcb337dbb0881c94197c329e") }}
+{{ <gist url="Chemaclass/07704606fcb337dbb0881c94197c329e" /> }}
 
-{{ gist(url="Chemaclass/9f7f96242153b696b3f8da5c7fa80461") }}
+{{ <gist url="Chemaclass/9f7f96242153b696b3f8da5c7fa80461" /> }}
 
 ---
 
@@ -243,4 +243,4 @@ Este libro te presenta muchas técnicas sobre cuándo, por qué, dónde y cómo 
 
 ---
 
-{{ youtube(id="wRtJRkRIa2s") }}
+{{ <youtube id="wRtJRkRIa2s" /> }}

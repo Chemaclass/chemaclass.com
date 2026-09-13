@@ -7,7 +7,7 @@ date = 2015-09-01
 tags = []
 +++
 
-{{ youtube(id="f6fkaLqE8pI") }}
+{{ <youtube id="f6fkaLqE8pI" /> }}
 
 ## Dios existe: soy yo, y tú también
 

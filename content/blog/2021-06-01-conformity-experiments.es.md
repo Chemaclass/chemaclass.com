@@ -65,7 +65,7 @@ La gente se conforma por dos razones principales: quieren encajar (influencia no
 
 > La conformidad puede ser influenciada tanto por una necesidad de encajar como por una creencia de que otras personas son más inteligentes o están mejor informadas.
 
-{{ youtube(id="TYIh4MkcfJA") }}
+{{ <youtube id="TYIh4MkcfJA" /> }}
 
 ## Factores que influyen en la conformidad
 

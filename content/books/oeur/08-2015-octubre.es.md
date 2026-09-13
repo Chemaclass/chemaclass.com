@@ -7,7 +7,7 @@ date = 2015-10-01
 tags = []
 +++
 
-{{ youtube(id="psZ8Q1UoypQ") }}
+{{ <youtube id="psZ8Q1UoypQ" /> }}
 
 ## Por encima del bien y del mal
 ```

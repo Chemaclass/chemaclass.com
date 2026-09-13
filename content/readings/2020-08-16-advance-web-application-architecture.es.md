@@ -34,4 +34,4 @@ La Parte 1 presenta patrones de diseño para separar código de negocio e infrae
 
 ### Patrones de diseño para modernizar código legacy
 
-{{ youtube(id="WI1QY6OMglE") }}
+{{ <youtube id="WI1QY6OMglE" /> }}

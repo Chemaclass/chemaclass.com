@@ -1,20 +1,19 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block title %}
   {{ page.title }} | Chemaclass
 {% endblock %}
 
 {% block styles %}
-{{ macros::page_styles(css='page.css') }}
+{{ <page_styles css="page.css" /> }}
 {% endblock styles %}
 
 {% block content %}
   <div class="music-index">
     <div class="music-post">
-      <a href="{{ macros::lang_path(path='/music/', lang=lang) }}" class="music-post__back">
-        {{ macros::back_arrow() }}
+      <a href="{{ <lang_path path="/music/" lang={lang} /> }}" class="music-post__back">
+        {{ <back_arrow /> }}
         Music
       </a>
 
@@ -22,7 +21,7 @@
 
       {% if page.date %}
         <span class="music-card__date" style="margin-bottom: 1.5rem; display: inline-block;">
-          {{ macros::format_date(date=page.date, lang=lang) }}
+          {{ <format_date date={page.date} lang={lang} /> }}
         </span>
       {% endif %}
 

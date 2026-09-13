@@ -191,7 +191,7 @@ In this lesson, Uncle Bob demonstrates the need to write a clean code and establ
 being these bases of a social and scientific nature. Making it clear that the future of programming is based on an
 ethical and polite code.
 
-{{ youtube(id="7EmboKQH8lM") }}
+{{ <youtube id="7EmboKQH8lM" /> }}
 
 ---
 
@@ -200,7 +200,7 @@ is something "I have to do" for the simple fact that we mistakenly consider that
 Uncle Bob, writing a comment is a sign of failure, since a good code must be able explain by itself: Fewer Comments =
 Better Code.
 
-{{ youtube(id="2a_ytyt9sf8") }}
+{{ <youtube id="2a_ytyt9sf8" /> }}
 
 ---
 
@@ -208,7 +208,7 @@ In this third lesson, Uncle Bob focuses on raising awareness, given the need to 
 production. Pointing to the lack of preparation in most programmers, as one of the main reasons for the inefficiency in
 software development today.
 
-{{ youtube(id="Qjywrq2gM8o") }}
+{{ <youtube id="Qjywrq2gM8o" /> }}
 
 ---
 
@@ -216,4 +216,4 @@ In this fourth lesson, Uncle Bob introduces us to a software development methodo
 the [Test-Driven Development](/blog/test-driven-development/) (TDD), a practice with a long learning curve, but with significant results to generate a
 more robust, safer, more maintainable code and with greater development efficiency.
 
-{{ youtube(id="58jGpV2Cg50") }}
+{{ <youtube id="58jGpV2Cg50" /> }}

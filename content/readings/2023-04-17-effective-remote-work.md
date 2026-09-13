@@ -83,4 +83,4 @@ Even though a fully remote company might not be possible for some reasons out of
 
 ## Book summary
 
-{{ youtube(id="6BFIg6Opd1c") }}
+{{ <youtube id="6BFIg6Opd1c" /> }}

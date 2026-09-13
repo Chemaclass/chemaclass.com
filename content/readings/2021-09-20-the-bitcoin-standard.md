@@ -52,8 +52,8 @@ apolitical, free-market alternative to national central banks.
 
 ## Video Summary
 
-{{ youtube(id="t1brCcgi174") }}
+{{ <youtube id="t1brCcgi174" /> }}
 
 > Extra: Lex Fridman Podcast with the author of this book
 
-{{ youtube(id="gp4U5aH_T6A") }}
+{{ <youtube id="gp4U5aH_T6A" /> }}

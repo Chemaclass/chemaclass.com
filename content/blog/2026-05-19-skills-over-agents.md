@@ -56,7 +56,7 @@ The key is how they load. The agent reads only names and descriptions at startup
 
 That on-demand loading is what makes skills scale. Twenty skills cost almost nothing until one fits the task. Specialized agents, by contrast, carry their full instructions every time they run. More agents, more fixed cost.
 
-{% deep_dive(title="A real-world skill example") %}
+{% <deep_dive title="A real-world skill example"> %}
 
 ```
 .claude/skills/
@@ -98,7 +98,7 @@ For each issue found:
 
 Agent sees the description in the skill list. Ask for a review, it loads `SKILL.md`. Needs a [SOLID](/readings/clean-architecture/) pattern, reads the reference. Two levels, on demand.
 
-{% end %}
+{% </deep_dive> %}
 
 ![blog-middle](/images/blog/2026-05-19/middle.webp)
 
@@ -153,5 +153,5 @@ The agent ships next year. The skill ships forever.
 
 ---
 
-{{ youtube(id="CEvIs9y1uog") }}
+{{ <youtube id="CEvIs9y1uog" /> }}
 

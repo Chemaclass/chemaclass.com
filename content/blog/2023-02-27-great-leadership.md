@@ -187,4 +187,4 @@ Especially if you are a software developer, this video is for you.
 
 > "Leadership is for everybody. It is for all y'all."
 
-{{ youtube(id="3PcL8UkorEg") }}
+{{ <youtube id="3PcL8UkorEg" /> }}

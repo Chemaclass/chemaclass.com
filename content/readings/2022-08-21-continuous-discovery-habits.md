@@ -48,4 +48,4 @@ It explores an optimal decision-making process for product teams, so that they c
 
 ### The What & Why of Continuous Discovery
 
-{{ youtube(id="yNCcQODWYh0") }}
+{{ <youtube id="yNCcQODWYh0" /> }}

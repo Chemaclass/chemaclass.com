@@ -7,7 +7,7 @@ date = 2017-02-01
 tags = []
 +++
 
-{{ youtube(id="0Lzn-8S0atw") }}
+{{ <youtube id="0Lzn-8S0atw" /> }}
 
 ## Nuestra vida
 

@@ -1,19 +1,16 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
-{% import "partials/helpers-preview.html" as helpers %}
-{% import "partials/pagination.html" as pagination %}
 
 {% block title %}
   {{ trans(key="readings_title", lang=lang) }} | Chemaclass
 {% endblock %}
 
 {% block styles %}
-{{ macros::page_styles(css='listing.css') }}
+{{ <page_styles css="listing.css" /> }}
 {% endblock styles %}
 
 {% block posthead %}
-{{ macros::collection_schema(section=section, name=trans(key='readings_title', lang=lang), lang=lang) }}
+{{ <collection_schema section={section} name={trans(key='readings_title', lang=lang)} lang={lang} /> }}
 {% endblock posthead %}
 
 {% block content %}
@@ -23,24 +20,24 @@
       <p class="readings-intro">{{ trans(key="readings_intro", lang=lang) }}</p>
     </div>
 
-  {% set pinned_posts = section.pages | filter(attribute="extra.pin", value=true) %}
+  {% set pinned_posts = [p for p in section.pages if p.extra.pin] %}
 
   <div class="blog-list">
     {# Pinned items belong to the whole collection, so only surface them on page 1 #}
     {% if paginator.current_index == 1 %}
       {% for post in pinned_posts %}
-        {{ helpers::content_card(post=post, pinned=true, lang=lang) }}
+        {{ <content_card post={post} pinned={true} lang={lang} /> }}
       {% endfor %}
     {% endif %}
 
     {% for post in paginator.pages %}
       {% if post not in pinned_posts %}
-        {{ helpers::content_card(post=post, lang=lang) }}
+        {{ <content_card post={post} lang={lang} /> }}
       {% endif %}
     {% endfor %}
   </div>
 
-  {{ pagination::nav(paginator=paginator, lang=lang) }}
+  {{ <pagination_nav paginator={paginator} lang={lang} /> }}
   {% include "partials/hire-cta.html" %}
   </div>
 

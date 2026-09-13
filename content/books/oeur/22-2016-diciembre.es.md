@@ -7,7 +7,7 @@ date = 2016-12-01
 tags = []
 +++
 
-{{ youtube(id="tUAdMeowzi8") }}
+{{ <youtube id="tUAdMeowzi8" /> }}
 
 ## Esclavo de la muerte
 
