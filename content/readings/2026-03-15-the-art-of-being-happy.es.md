@@ -70,4 +70,4 @@ Un libro breve y afilado. El pesimismo de Schopenhauer no lo hace sombrío. Lo h
 
 ---
 
-{{ youtube(id="3ivOsypgzdE") }}
+{{ <youtube id="3ivOsypgzdE" /> }}

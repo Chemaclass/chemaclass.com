@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block title %}CV | Chemaclass{% endblock %}
 
@@ -74,7 +73,7 @@
 {% endblock head %}
 
 {% block styles %}
-{{ macros::page_styles(css='page.css') }}
+{{ <page_styles css="page.css" /> }}
 {% endblock styles %}
 
 {% block content %}

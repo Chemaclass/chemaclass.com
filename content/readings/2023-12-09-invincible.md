@@ -34,5 +34,5 @@ This book will help you use your mind to improve your body, but it actually goes
 
 #### The philosophy of Stoicism
 
-{{ youtube(id="R9OCA6UFE-0") }}
+{{ <youtube id="R9OCA6UFE-0" /> }}
 

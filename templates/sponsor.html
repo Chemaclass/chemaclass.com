@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block styles %}
-{{ macros::page_styles(css='page.css', preload='sponsor.css') }}
+{{ <page_styles css="page.css" preload="sponsor.css" /> }}
 {% endblock styles %}
 
 {% block posthead %}

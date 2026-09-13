@@ -1,17 +1,16 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block title %}
   {{ trans(key="series_title", lang=lang) }} | Chemaclass
 {% endblock %}
 
 {% block styles %}
-{{ macros::page_styles(css='page.css') }}
+{{ <page_styles css="page.css" /> }}
 {% endblock styles %}
 
 {% block posthead %}
-{{ macros::collection_schema(section=section, name=trans(key='series_title', lang=lang), lang=lang) }}
+{{ <collection_schema section={section} name={trans(key='series_title', lang=lang)} lang={lang} /> }}
 {% endblock posthead %}
 
 
@@ -36,7 +35,7 @@
       {% set_global parts = [] %}
       {% for post in blog.pages %}
         {% if post.extra.series and post.extra.series == key %}
-          {% set_global parts = parts | concat(with=post) %}
+          {% set_global parts = [...parts, post] %}
         {% endif %}
       {% endfor %}
       {% set parts = parts | sort(attribute="extra.series_order") %}
@@ -44,15 +43,15 @@
       {% if parts | length > 0 %}
       <article class="series-card">
         {# Covers of the first four parts. Decorative: the title next to it is the link. #}
-        {% set covers = parts | filter(attribute="extra.static_thumbnail") | slice(end=4) %}
+        {% set covers = [p for p in parts if p.extra.static_thumbnail][:4] %}
         {% if covers | length == 4 %}
         <a class="series-card__mosaic" href="{{ entry.permalink }}" tabindex="-1" aria-hidden="true">
           {% for post in covers %}
-            {% if post.extra.static_thumbnail is matching("^http[s]?://") %}
+            {% if post.extra.static_thumbnail is matching(pat="^http[s]?://") %}
               <img src="{{ post.extra.static_thumbnail | safe }}" alt="" width="320" height="180" loading="lazy" decoding="async" />
             {% else %}
               {# Same rendition the series page thumbs use, so both pages share one file. #}
-              {% set tile_path = post.extra.static_thumbnail | trim_start_matches(pat="/") %}
+              {% set tile_path = post.extra.static_thumbnail | trim_start(pat="/") %}
               {% set tile_webp = resize_image(path=tile_path, width=320, height=180, op="fill", quality=75, format="webp") %}
               {% set tile_phone = resize_image(path=tile_path, width=200, height=113, op="fill", quality=72, format="webp") %}
               {% set tile_fb = resize_image(path=tile_path, width=320, height=180, op="fill", quality=80) %}
@@ -84,7 +83,7 @@
         {% endif %}
 
         <ol class="series-card__parts">
-          {% for post in parts | slice(end=6) %}
+          {% for post in parts[:6] %}
             <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
           {% endfor %}
         </ol>

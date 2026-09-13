@@ -45,7 +45,7 @@ Creo en el [desarrollo guiado por tests](/es/blog/test-driven-development/). Red
 
 Ese es el ideal. Y no es solo una sensación. Un [estudio en cuatro equipos de Microsoft e IBM](https://www.microsoft.com/en-us/research/wp-content/uploads/2009/10/Realizing-Quality-Improvement-Through-Test-Driven-Development-Results-and-Experiences-of-Four-Industrial-Teams-nagappan_tdd.pdf) encontró que TDD redujo la densidad de defectos entre un 40% y un 90%, con un incremento del 15-35% en tiempo de desarrollo. Ambos lados de la tensión, medidos.
 
-{% deep_dive(title="Más sobre el estudio") %}
+{% <deep_dive title="Más sobre el estudio"> %}
 
 El [estudio](https://www.microsoft.com/en-us/research/wp-content/uploads/2009/10/Realizing-Quality-Improvement-Through-Test-Driven-Development-Results-and-Experiences-of-Four-Industrial-Teams-nagappan_tdd.pdf) cubrió cuatro equipos: tres en Microsoft (Windows, MSN, Visual Studio) y uno en IBM trabajando en drivers de dispositivo. Cada equipo TDD fue comparado con un equipo similar en el mismo producto, usando los mismos lenguajes y herramientas, bajo el mismo manager senior. La única diferencia era TDD.
 
@@ -53,11 +53,11 @@ El equipo de IBM vio una reducción del 40% en densidad de defectos. Los equipos
 
 Nadie fue forzado a usar TDD. Los equipos lo adoptaron voluntariamente, lo cual probablemente importa: las personas que eligen una práctica tienden a aplicarla mejor que quienes reciben la orden.
 
-{% end %}
+{% </deep_dive> %}
 
 TDD es una disciplina, y la disciplina cuesta algo. Cuando estás explorando un dominio nuevo y aún no sabes cuáles son las abstracciones correctas, escribir tests primero puede parecer como dibujar un mapa sin haber visto el territorio. A veces necesitas escribir código desechable, probar una solución, tantear el espacio del problema. El descubrimiento no siempre sigue un ritmo red-green-refactor.
 
-{% deep_dive(title="Cuando test-first se encuentra con lo desconocido") %}
+{% <deep_dive title="Cuando test-first se encuentra con lo desconocido"> %}
 
 Hay una diferencia entre _"sé lo que esto debe hacer y lo especificaré primero"_ y _"aún no estoy seguro de lo que debe hacer."_ TDD brilla en el primer escenario. En el segundo, un enfoque test-last (o incluso sin tests durante la exploración) puede ser más honesto.
 
@@ -65,7 +65,7 @@ La clave es lo que pasa después del descubrimiento. Una vez que entiendes el pr
 
 Como comenté en [TDD vs BDD](/es/blog/tdd-vs-bdd/), el poder de TDD es su ciclo de feedback. Pero un ciclo de feedback requiere saber qué feedback estás buscando. Cuando aún lo estás averiguando, forzar el ciclo puede frenarte más de lo que ayuda.
 
-{% end %}
+{% </deep_dive> %}
 
 El error no es elegir test-first o test-last. El error es convertirlo en una decisión religiosa en lugar de contextual. El idealista dice _"siempre tests primero."_ El pragmático dice _"testea cuando tenga sentido."_ Yo digo: tests primero cuando puedo, tests después cuando debo, pero siempre tests.
 
@@ -79,7 +79,7 @@ Ese es el ideal. Y en muchos contextos, es la decisión correcta.
 
 Pero el pairing tiene un coste. Exige tiempo sincrónico, foco compartido y niveles de energía compatibles. En un equipo distribuido con distintas zonas horarias, encontrar ventanas de solapamiento ya es difícil. Llenarlas con sesiones de pairing deja poco espacio para trabajo individual profundo. Algunos problemas se benefician de una persona profundizando tres horas, no de dos a medio gas durante seis.
 
-{% deep_dive(title="Patrones de pairing y sus trade-offs") %}
+{% <deep_dive title="Patrones de pairing y sus trade-offs"> %}
 
 Existen múltiples patrones de pairing: Driver-Navigator, Ping-Pong, Tourist Guide. Cada uno encaja en contextos diferentes.
 
@@ -89,7 +89,7 @@ El pairing funciona mejor cuando ambas personas están involucradas, el problema
 
 Las [pull requests y el pair programming](/es/blog/pull-request-vs-pair-prog/) no son excluyentes. Sirven necesidades diferentes. A veces la revisión asíncrona es suficiente. A veces necesitas el ida y vuelta en tiempo real. La elección pragmática depende del problema, las personas y el momento.
 
-{% end %}
+{% </deep_dive> %}
 
 > El objetivo del pairing no es hacer pairing. Es construir entendimiento compartido y detectar errores pronto. Si otro enfoque lo consigue en tu contexto, úsalo.
 
@@ -129,7 +129,7 @@ Sigo practicando pair programming con personas reales para temas complejos. El i
 
 El pragmático en mí solía abandonar TDD cuando los deadlines apretaban. El pragmático en mí con la configuración de IA adecuada lo mantiene funcionando.
 
-{% deep_dive(title="Mi setup") %}
+{% <deep_dive title="Mi setup"> %}
 
 Uso Claude para todo. [Claude Code](/es/blog/inside-the-claude-folder/) con Opus o Sonnet como programador agéntico: flujos de desarrollo completos, lectura del código, seguimiento de convenciones, ejecución de tests, creación de PRs. Claude app y Claude como coworker para la parte conversacional: brainstorming, discusiones de arquitectura, explicar código, redactar documentación. Para asistencia inline, los plugins que ya tengo en mi IDE son suficientes. Probé Copilot y Cursor, no son para mí. Claude cubre lo que necesito.
 
@@ -137,7 +137,7 @@ Diferentes modos para diferentes tareas. Un asistente agéntico siguiendo mis co
 
 El mercado ahora mismo es intenso. Claude, Codex, Gemini y otros son jugadores fuertes con productos similares, y todos mejoran mes a mes. Los resultados son impresionantes y solo se aceleran. Esa es la belleza de la competencia: obliga a todos a mejorar o volverse irrelevantes, y el consumidor gana de cualquier forma. A día de hoy, Claude Code parece la opción más fuerte para cómo trabajo. Pero no tengo lealtad a una marca. Si Anthropic dejara de avanzar y un competidor fuera claramente mejor, cambiaría sin dudar. Lo que importa es la capacidad, no el logo.
 
-{% end %}
+{% </deep_dive> %}
 
 > Me equivoqué con la IA de la forma en que los idealistas se equivocan a menudo: medí la herramienta contra el resultado ideal y la encontré insuficiente, en lugar de medirla contra la alternativa realista.
 

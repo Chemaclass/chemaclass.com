@@ -97,4 +97,4 @@ He [hablado](/es/talks/) sobre Agile en varios eventos tecnológicos y lo he exp
 
 ### WeAreDevelopers World Congress en Berlín
 
-{{ youtube(id="dqtAyl-SvaY") }}
+{{ <youtube id="dqtAyl-SvaY" /> }}

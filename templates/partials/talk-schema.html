@@ -12,7 +12,7 @@
 
    Requires: page, config, lang.
    ========================================================================== #}
-{%- set talk_desc = page.description | default(value=page.extra.subtitle) | default(value=page.title) -%}
+{%- set talk_desc = page.description | default(value=page.extra.subtitle, boolean=true) | default(value=page.title) -%}
 
 {% if page.extra.videos %}
   {% for video in page.extra.videos %}
@@ -39,7 +39,7 @@
 
 {% if page.extra.slides %}
 {%- set slides_url = page.extra.slides -%}
-{%- if not slides_url is matching("^http") -%}{%- set slides_url = config.base_url ~ page.extra.slides -%}{%- endif -%}
+{%- if not slides_url is matching(pat="^http") -%}{%- set slides_url = config.base_url ~ page.extra.slides -%}{%- endif -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

@@ -25,4 +25,4 @@ curl https://chemaclass.com/pgp.asc | gpg --import
 
 <a href="/pgp.asc" id="download-link">Download public PGP key</a>
 
-{{ youtube(id="1-MPcUHhXoc") }}
+{{ <youtube id="1-MPcUHhXoc" /> }}

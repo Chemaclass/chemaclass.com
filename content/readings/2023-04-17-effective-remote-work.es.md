@@ -83,4 +83,4 @@ Puede que una empresa 100% remota no sea posible por razones que escapan a nuest
 
 ## Resumen del libro
 
-{{ youtube(id="6BFIg6Opd1c") }}
+{{ <youtube id="6BFIg6Opd1c" /> }}

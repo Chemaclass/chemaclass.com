@@ -64,7 +64,7 @@ The book links to more than two hundred articles, videos, podcasts, and even the
 
 ---
 
-{{ youtube(id="pQb24UWWSl8") }}
+{{ <youtube id="pQb24UWWSl8" /> }}
 
 ---
 

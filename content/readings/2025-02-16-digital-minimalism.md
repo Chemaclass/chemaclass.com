@@ -69,8 +69,8 @@ Digital minimalism **is not about rejecting technology** altogether. **It's abou
 
 ## Video Summary
 
-{{ youtube(id="sJdZ7kmA2QQ") }}
+{{ <youtube id="sJdZ7kmA2QQ" /> }}
 
 **Cal Newport interviewed by Lex Fridman**
 
-{{ youtube(id="y3Umo_jd5AA") }}
+{{ <youtube id="y3Umo_jd5AA" /> }}

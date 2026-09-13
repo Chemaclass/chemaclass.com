@@ -96,7 +96,7 @@ Este libro busca darte las herramientas para entender cómo funciona Bitcoin. As
 
 ### Presentación del Libro
 
-{{ youtube(id="55ZRM7j1Jzc") }}
+{{ <youtube id="55ZRM7j1Jzc" /> }}
 
 ---
 

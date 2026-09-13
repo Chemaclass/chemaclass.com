@@ -25,6 +25,6 @@ Los trífidos son plantas grotescas y peligrosas de más de dos metros. Se culti
 
 ### Resumen
 
-{{ youtube(id="OQfdjhDOuCo") }}
+{{ <youtube id="OQfdjhDOuCo" /> }}
 
 > Resumen basado en la película "[The Day of the Triffids](https://www.imdb.com/title/tt1332653/) (2009)"

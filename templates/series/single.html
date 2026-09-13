@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block title %}
 {%- set conf = config.extra.series[page.extra.series] -%}
@@ -24,7 +23,7 @@
 {% endblock description %}
 
 {% block styles %}
-{{ macros::page_styles(css='page.css') }}
+{{ <page_styles css="page.css" /> }}
 {% endblock styles %}
 
 {% block posthead %}
@@ -42,14 +41,14 @@
 {% set_global parts = [] %}
 {% for post in blog.pages %}
   {% if post.extra.series and post.extra.series == key %}
-    {% set_global parts = parts | concat(with=post) %}
+    {% set_global parts = [...parts, post] %}
   {% endif %}
 {% endfor %}
 {% set parts = parts | sort(attribute="extra.series_order") %}
 
 <div class="series-single">
-  <a href="{{ macros::lang_path(path='/series/', lang=lang) }}" class="series-single__back">
-    {{ macros::back_arrow() }}
+  <a href="{{ <lang_path path="/series/" lang={lang} /> }}" class="series-single__back">
+    {{ <back_arrow /> }}
     {{ trans(key="series_all", lang=lang) }}
   </a>
 
@@ -71,10 +70,10 @@
         <span class="series-part__number">{{ post.extra.series_order }}</span>
         {% if post.extra.static_thumbnail %}
         <a class="series-part__thumb" href="{{ post.permalink }}" tabindex="-1" aria-hidden="true">
-          {% if post.extra.static_thumbnail is matching("^http[s]?://") %}
+          {% if post.extra.static_thumbnail is matching(pat="^http[s]?://") %}
             <img src="{{ post.extra.static_thumbnail | safe }}" alt="" width="320" height="180" loading="lazy" decoding="async" />
           {% else %}
-            {% set thumb_path = post.extra.static_thumbnail | trim_start_matches(pat="/") %}
+            {% set thumb_path = post.extra.static_thumbnail | trim_start(pat="/") %}
             {% set thumb_webp = resize_image(path=thumb_path, width=320, height=180, op="fill", quality=75, format="webp") %}
             {% set thumb_fb = resize_image(path=thumb_path, width=320, height=180, op="fill", quality=80) %}
             <picture>
@@ -88,7 +87,7 @@
           <div class="series-part__head">
             <h2 class="series-part__title"><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
             <p class="series-part__meta">
-              <time datetime="{{ post.date }}">{{ macros::format_date(date=post.date, lang=lang) }}</time>
+              <time datetime="{{ post.date }}">{{ <format_date date={post.date} lang={lang} /> }}</time>
               {% if post.reading_time %} &middot; {{ post.reading_time }} min{% endif %}
             </p>
           </div>
@@ -104,7 +103,7 @@
   </ol>
 
   {% if conf.topic %}
-    <a class="series-single__topic" href="{{ macros::lang_path(path='/topics/', lang=lang) | trim | safe }}#{{ conf.topic }}">
+    <a class="series-single__topic" href="{{ <lang_path path="/topics/" lang={lang} /> }}#{{ conf.topic }}">
       {{ trans(key="series_topic", lang=lang) }}
     </a>
   {% endif %}

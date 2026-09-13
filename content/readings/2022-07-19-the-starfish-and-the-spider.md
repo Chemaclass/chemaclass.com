@@ -36,4 +36,4 @@ principles to achieve success.
 
 In this talk, Rod Beckstrom, does a great overview of the main ideas of his book: 
 
-{{ youtube(id="fumQ0s7DCEY") }}
+{{ <youtube id="fumQ0s7DCEY" /> }}

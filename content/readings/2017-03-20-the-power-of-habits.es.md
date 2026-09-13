@@ -28,4 +28,4 @@ related_readings = [
 
 ---
 
-{{ youtube(id="Zq2LVa36ukk") }}
+{{ <youtube id="Zq2LVa36ukk" /> }}

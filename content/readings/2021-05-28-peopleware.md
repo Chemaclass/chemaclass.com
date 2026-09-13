@@ -72,4 +72,4 @@ improve how you collaboratively develop and deliver software, then this book is 
 
 I found also a nice serie that shares some thoughts over each chapter of this book.
 
-{{ youtube(id="dBQMorJBueE") }}
+{{ <youtube id="dBQMorJBueE" /> }}

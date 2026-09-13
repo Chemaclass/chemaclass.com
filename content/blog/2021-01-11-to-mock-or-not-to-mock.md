@@ -95,7 +95,7 @@ When you are writing a unit test:
 
 > Mock interfaces. Instantiate concrete classes.
 
-{{ youtube(id="RbSqXFUfRMU") }}
+{{ <youtube id="RbSqXFUfRMU" /> }}
 
 "Excessive use of mocks leads to [legacy code](/blog/testing-effectively-legacy-code/)." - Philippe Boargau
 

@@ -36,7 +36,7 @@ Su defensa fue ingeniosa: publicó el código fuente de PGP en un libro. Los lib
 
 ---
 
-{{ youtube(id="1-MPcUHhXoc") }}
+{{ <youtube id="1-MPcUHhXoc" /> }}
 
 ## Características principales
 
@@ -57,7 +57,7 @@ PGP combina [criptografía de clave pública](https://en.wikipedia.org/wiki/Publ
 
 - **Firmas digitales**: El remitente firma el mensaje con su clave privada. El destinatario verifica la firma con la clave pública del remitente, confirmando quién lo envió y que el mensaje no se ha alterado.
 
-{{ youtube(id="Lq-yKJFHJpk") }}
+{{ <youtube id="Lq-yKJFHJpk" /> }}
 
 ---
 

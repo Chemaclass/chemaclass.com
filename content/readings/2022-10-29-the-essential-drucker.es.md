@@ -31,4 +31,4 @@ El libro cubre los principios básicos de la gestión junto con sus problemas, d
 3. La gestión debe permitir que la organización y sus miembros crezcan y se desarrollen
 4. Los resultados solo existen fuera de la organización
 
-{{ youtube(id="1il9VfJoaDo") }}
+{{ <youtube id="1il9VfJoaDo" /> }}

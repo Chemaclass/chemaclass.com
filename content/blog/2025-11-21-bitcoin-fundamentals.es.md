@@ -75,7 +75,7 @@ En su núcleo, Bitcoin es:
 
 No hay ninguna empresa detrás de Bitcoin. Sin CEO, sin oficinas centrales, sin soporte al cliente. Es software de código abierto que cualquiera puede ejecutar, inspeccionar o mejorar.
 
-{{ youtube(id="d7ID3fKAFQM") }}
+{{ <youtube id="d7ID3fKAFQM" /> }}
 
 ## Dinero sólido
 
@@ -416,7 +416,7 @@ La mejor forma de entender Bitcoin es usarlo:
 
 No tienes que ir all in. Empieza pequeño y sigue aprendiendo, un paso a la vez.
 
-{{ youtube(id="Pef22g53zsg") }}
+{{ <youtube id="Pef22g53zsg" /> }}
 **Lectura adicional**
 
 - [Bitcoin 101](https://cosmevalera.dev/blog/bitcoin-101/) <small>por Cosme - Otra introducción amigable para principiantes</small>

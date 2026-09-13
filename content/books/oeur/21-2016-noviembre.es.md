@@ -7,7 +7,7 @@ date = 2016-11-01
 tags = []
 +++
 
-{{ youtube(id="bfe-N9g4gO0") }}
+{{ <youtube id="bfe-N9g4gO0" /> }}
 
 ## Dulces recuerdos
 

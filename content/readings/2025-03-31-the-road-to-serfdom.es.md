@@ -74,5 +74,5 @@ Sin duda. El mundo ha cambiado, pero la tensión entre libertad y control sigue 
 
 Claro, algo de gobierno hace falta. Pero su advertencia permanece: demasiado control, aunque venga con buenas intenciones, puede llevarnos donde no queremos estar.
 
-{{ youtube(id="2oG2SLzNo-E") }}
+{{ <youtube id="2oG2SLzNo-E" /> }}
 

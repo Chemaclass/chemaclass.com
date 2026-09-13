@@ -77,4 +77,4 @@ Accelerate explora cómo los equipos que usan **Lean Software** y **DevOps** pue
 - **Tiempo Medio de Recuperación**
   - Tiempo que toma restaurar el servicio después de un fallo en producción
 
-{{ youtube(id="_d9cws_T9qk") }}
+{{ <youtube id="_d9cws_T9qk" /> }}

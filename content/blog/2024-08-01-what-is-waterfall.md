@@ -97,4 +97,4 @@ I’ve [talked](/talks/) about Agile at various tech events and explored it in d
 
 ### WeAreDevelopers World Congress in Berlin
 
-{{ youtube(id="dqtAyl-SvaY") }}
+{{ <youtube id="dqtAyl-SvaY" /> }}

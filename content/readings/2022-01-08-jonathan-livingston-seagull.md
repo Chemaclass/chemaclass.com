@@ -43,4 +43,4 @@ teacher in his own right, and Jonathan leaves to teach other flocks.
 
 ## Audiobook
 
-{{ youtube(id="8COt1n3jDqA") }}
+{{ <youtube id="8COt1n3jDqA" /> }}

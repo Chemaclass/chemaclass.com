@@ -45,4 +45,4 @@ D. Michael Abrashoff comandó el USS Benfold, un destructor de misiles guiados. 
 
 El libro ofrece perspectivas valiosas sobre liderazgo aplicables a cualquier organización. El enfoque de Abrashoff se centra en empoderar al equipo, fomentar la comunicación abierta y buscar siempre formas de mejorar.
 
-{{ youtube(id="A-mZW2VZZgY") }}
+{{ <youtube id="A-mZW2VZZgY" /> }}

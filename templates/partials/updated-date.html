@@ -22,8 +22,8 @@
   {% set published_day = page.date | date(format="%Y%m%d") | int %}
   {% if edited_day > published_day %}
   <span class="blog-post__updated" title="{{ trans(key='updated_on', lang=lang) }}">
-    {{ macros::refresh_icon() }}
-    {{ trans(key="updated_on", lang=lang) }} {{ macros::format_date(date=body_edited, lang=lang) }}
+    {{ <refresh_icon /> }}
+    {{ trans(key="updated_on", lang=lang) }} {{ <format_date date={body_edited} lang={lang} /> }}
   </span>
   {% endif %}
 {% endif %}

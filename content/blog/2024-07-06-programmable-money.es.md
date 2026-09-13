@@ -37,7 +37,7 @@ Soporta multi-firma, transferencias bloqueadas por tiempo y otras transferencias
 
 Este video muestra ejemplos de los scripts de bloqueo/desbloqueo más comunes.
 
-{{ youtube(id="6Fa04MnURhw") }}
+{{ <youtube id="6Fa04MnURhw" /> }}
 
 ## Características clave del Script de Bitcoin
 
@@ -295,7 +295,7 @@ OP_1 <x-only PubK>
 
 ---
 
-{{ youtube(id="yU3Sr07Qnxg") }}
+{{ <youtube id="yU3Sr07Qnxg" /> }}
 
 ---
 

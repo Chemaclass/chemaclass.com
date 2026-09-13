@@ -40,4 +40,4 @@ Los grandes líderes inspiran a la gente a actuar. Quienes inspiran dan un senti
 
 ## Video Resumen
 
-{{ youtube(id="u4ZoJKF_VuA") }}
+{{ <youtube id="u4ZoJKF_VuA" /> }}

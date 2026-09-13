@@ -18,7 +18,7 @@
 {%- set_global series_parts = [] -%}
 {%- for post in blog.pages -%}
   {%- if post.extra.series and post.extra.series == page.extra.series -%}
-    {%- set_global series_parts = series_parts | concat(with=post) -%}
+    {%- set_global series_parts = [...series_parts, post] -%}
   {%- endif -%}
 {%- endfor -%}
 {%- set series_parts = series_parts | sort(attribute="extra.series_order") -%}
@@ -43,7 +43,7 @@
       "url": "{{ post.permalink | safe }}",
       "headline": "{{ post.title }}",
       {% if post.description %}"description": "{{ post.description }}",{% endif %}
-      {% if post.date %}"datePublished": "{{ post.date | date(format='%+') }}",{% endif %}
+      {% if post.date %}"datePublished": "{{ post.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}",{% endif %}
       "position": {{ post.extra.series_order }}
     }{% if not loop.last %},{% endif %}
     {%- endfor %}

@@ -7,7 +7,7 @@ date = 2016-10-01
 tags = []
 +++
 
-{{ youtube(id="K6mxWaXrMn8") }}
+{{ <youtube id="K6mxWaXrMn8" /> }}
 
 ## Entropía
 

@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block styles %}
-{{ macros::page_styles(css='page.css') }}
+{{ <page_styles css="page.css" /> }}
 {% endblock styles %}
 
 {% block posthead %}
@@ -16,7 +15,7 @@
   <!-- Back link -->
   {% set section = get_section(path=page.ancestors | last) %}
   <a href="{{ section.permalink }}" class="book-about__back">
-    {{ macros::back_arrow() }}
+    {{ <back_arrow /> }}
     {{ section.title | split(pat=" | ") | first }}
   </a>
 

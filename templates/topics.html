@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block styles %}
-{{ macros::page_styles(css='listing.css') }}
+{{ <page_styles css="listing.css" /> }}
 {% endblock styles %}
 
 {% block content %}
@@ -25,10 +24,10 @@
       {% for tag_name in topic.tags %}
         {% for item in taxonomy.items %}
           {% if item.name == tag_name %}
-            {% set_global matched_tags = matched_tags | concat(with=[item]) %}
+            {% set_global matched_tags = [...matched_tags, {"count": item.pages | length, "item": item}] %}
             {% for page in item.pages %}
               {% set marker = "|" ~ page.permalink ~ "|" %}
-              {% if seen_pages is not containing(marker) %}
+              {% if seen_pages is not containing(pat=marker) %}
                 {% set_global seen_pages = seen_pages ~ marker %}
                 {% set_global topic_total = topic_total + 1 %}
               {% endif %}
@@ -53,8 +52,9 @@
       </div>
 
       <div class="topics-page__tags">
-        {% for item in matched_tags | sort(attribute="pages") | reverse %}
-          {% set count = item.pages | length %}
+        {% for entry in matched_tags | sort(attribute="count") | reverse %}
+          {% set item = entry.item %}
+          {% set count = entry.count %}
           <a href="{{ item.permalink }}" class="topics-page__tag{% if count >= 15 %} topics-page__tag--popular{% endif %}">
             <span class="topics-page__tag-name">{{ item.name }}</span>
             <span class="topics-page__tag-count">{{ count }}</span>

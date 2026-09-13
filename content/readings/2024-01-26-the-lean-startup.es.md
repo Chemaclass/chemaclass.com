@@ -35,8 +35,8 @@ Eric Ries define una startup como una organización que crea algo nuevo bajo con
 
 ### Resumen
 
-{{ youtube(id="RSaIOCHbuYw") }}
+{{ <youtube id="RSaIOCHbuYw" /> }}
 
 ---
 
-{{ youtube(id="fEvKo90qBns") }}
+{{ <youtube id="fEvKo90qBns" /> }}

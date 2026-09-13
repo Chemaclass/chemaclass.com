@@ -187,4 +187,4 @@ Especialmente si eres un desarrollador de software, este video es para ti.
 
 > "El liderazgo es para todos. Es para todos vosotros."
 
-{{ youtube(id="3PcL8UkorEg") }}
+{{ <youtube id="3PcL8UkorEg" /> }}

@@ -123,6 +123,6 @@ Esta es una charla (en español) que hice de forma remota en abril de 2021,
 para la [Comunidad PHPMad Madrid](https://www.meetup.com/phpmad/events/277733306/). Presento todas estas ideas
 junto con una demo en vivo de cómo contribuir a un OSS real.
 
-{{ youtube(id="GE5wR_SC_P4") }}
+{{ <youtube id="GE5wR_SC_P4" /> }}
 
 ---

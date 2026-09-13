@@ -29,7 +29,7 @@ If the person is competent in the new role, they will be promoted again and will
 
 > There are incentives at play. People work hard to reach a particular position or salary. Once they achieve that, some get lazy. Once people lose passion, they stop learning. They might fail to keep up with new developments, which might lead to poor work quality. To protect their comfort zone, they challenge any new idea or person that could make their life unconformable. Incompetent employees are often unhappy.
 
-{{ youtube(id="IbFr5DAyZBM") }}
+{{ <youtube id="IbFr5DAyZBM" /> }}
 
 ---
 

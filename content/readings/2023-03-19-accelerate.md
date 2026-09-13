@@ -77,4 +77,4 @@ Accelerate explores how software development teams using **Lean Software** and *
 - **Mean Time to Recovery**
   - Time it takes to restore service after production failure
 
-{{ youtube(id="_d9cws_T9qk") }}
+{{ <youtube id="_d9cws_T9qk" /> }}

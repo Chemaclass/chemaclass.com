@@ -270,8 +270,8 @@ Usualmente un consultor externo (o alguien de otra parte de la organización) qu
 
 #### ¿Qué es XP? (en 2 min)
 
-{{ youtube(id="hbFOwqYIOcU") }}
+{{ <youtube id="hbFOwqYIOcU" /> }}
 
 #### Tech Talk de Kent Beck: XP 20 años después
 
-{{ youtube(id="cGuTmOUdFbo") }}
+{{ <youtube id="cGuTmOUdFbo" /> }}

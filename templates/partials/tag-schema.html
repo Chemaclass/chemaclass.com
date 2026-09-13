@@ -51,7 +51,7 @@
     {# Capped like the section listings: past twenty entries the markup costs
        more than the extra rows are worth to a crawler. #}
     "itemListElement": [
-      {%- for post in term.pages | slice(end=20) %}
+      {%- for post in term.pages[:20] %}
       {
         "@type": "ListItem",
         "position": {{ loop.index }},

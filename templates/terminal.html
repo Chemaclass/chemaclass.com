@@ -47,7 +47,7 @@
   {% endif %}
 
   <!-- Cronitor RUM -->
-  {% set rum_key = get_env(name="RUM_KEY", default=false) %}
+  {% set rum_key = get_env(name="RUM_KEY", default="") %}
   {% if rum_key %}
   <script async src="https://rum.cronitor.io/script.js"></script>
   <script>

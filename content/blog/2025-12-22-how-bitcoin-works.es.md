@@ -30,7 +30,7 @@ Este post explica cómo funciona Bitcoin por dentro. Si buscas entender por qué
 
 *Para los técnicamente curiosos.*
 
-{{ youtube(id="bBC-nXj3Ng4") }}
+{{ <youtube id="bBC-nXj3Ng4" /> }}
 
 ## La Blockchain
 
@@ -55,7 +55,7 @@ Antes de entrar en un bloque, las transacciones esperan en el mempool. Los miner
 
 Cada nodo guarda una copia completa de la blockchain. No hay un solo servidor que hackear ni una base de datos central que corromper. Para cambiar el historial, tendrías que reescribir bloques en la mayoría de nodos del mundo.
 
-{% deep_dive(title="Estructura del bloque") %}
+{% <deep_dive title="Estructura del bloque"> %}
 
 Un bloque tiene dos partes: el **encabezado** (80 bytes) y el **cuerpo** (transacciones).
 
@@ -71,7 +71,7 @@ Los **árboles Merkle** organizan las transacciones de forma eficiente. Cada tra
 
 El peso del bloque se mide en bytes virtuales (vB). El límite es 4 millones de unidades de peso, aproximadamente 1-1.5 MB de datos por bloque.
 
-{% end %}
+{% </deep_dive> %}
 
 ## Transacciones y criptografía
 
@@ -100,7 +100,7 @@ La mayoría de transacciones usan scripts simples: "quien pueda demostrar que po
 
 Esto convierte a Bitcoin en dinero programable. Para profundizar en Script y tipos de direcciones, mira [Dinero Programable](/es/blog/programmable-money/).
 
-{% deep_dive(title="Criptografía de curva elíptica") %}
+{% <deep_dive title="Criptografía de curva elíptica"> %}
 
 Bitcoin usa **ECDSA** (Algoritmo de Firma Digital de Curva Elíptica) con la curva **secp256k1**. Se eligió esta curva por su eficiencia y porque no la diseñó ninguna agencia gubernamental (a diferencia de las curvas NIST), lo que reduce preocupaciones sobre puertas traseras.
 
@@ -117,7 +117,7 @@ Una clave privada es un entero aleatorio de 256 bits. La clave pública se deriv
 - `SIGHASH_SINGLE`: Firma una salida específica
 - Estas pueden combinarse con `ANYONECANPAY` para casos de uso avanzados
 
-{% end %}
+{% </deep_dive> %}
 
 ## Minería y consenso
 
@@ -145,11 +145,11 @@ Cada 2016 bloques (unas 2 semanas), la red ajusta la dificultad para mantener ti
 
 Explora los pools de minería y hashrate en [mempool.space/mining](https://mempool.space/mining).
 
-{% deep_dive(title="Dificultad y teoría de juegos") %}
+{% <deep_dive title="Dificultad y teoría de juegos"> %}
 
 **Cálculo de dificultad**: El objetivo es un número de 256 bits. Un hash de bloque válido debe estar por debajo de este objetivo. Objetivo más bajo = puzzle más difícil. La red ajusta cada 2016 bloques según cuánto tardaron realmente esos bloques frente a los 20.160 minutos esperados.
 
-{{ youtube(id="S9JGmA5_unY") }}
+{{ <youtube id="S9JGmA5_unY" /> }}
 
 **Hashrate y seguridad**: La seguridad de Bitcoin viene del coste de reescribir el historial. Con unos 500 EH/s (exahashes por segundo) de hashrate, atacar la red requeriría controlar la mayoría del hashpower. Eso supone miles de millones en hardware y electricidad, y además el ataque haría colapsar el valor del activo.
 
@@ -157,7 +157,7 @@ Explora los pools de minería y hashrate en [mempool.space/mining](https://mempo
 
 **Ataques del 51%**: Si un atacante controlara la mayoría del hashpower, en teoría podría hacer doble gasto minando una cadena alternativa. Pero la economía hace esto irracional para grandes valores: el ataque destruye el valor de lo que intentas robar.
 
-{% end %}
+{% </deep_dive> %}
 
 ## Direcciones y wallets
 
@@ -210,7 +210,7 @@ Cuando transmites una transacción:
 
 Los bloques se propagan de forma similar. Cuando un minero encuentra un bloque válido, se extiende por la red en segundos.
 
-{% deep_dive(title="Arquitectura de red") %}
+{% <deep_dive title="Arquitectura de red"> %}
 
 **Descubrimiento de pares**: Los nodos se encuentran mediante semillas DNS (direcciones hardcodeadas que devuelven IPs de nodos activos) y compartiendo direcciones de pares con otros nodos conectados.
 
@@ -218,7 +218,7 @@ Los bloques se propagan de forma similar. Cuando un minero encuentra un bloque v
 
 **Bloques compactos** (BIP-152) aceleran la propagación de bloques. Como los nodos ya tienen la mayoría de transacciones en su mempool, los bloques pueden transmitirse solo como el encabezado más IDs cortos de transacciones.
 
-{% end %}
+{% </deep_dive> %}
 
 ## Seguridad y confirmaciones
 
@@ -233,7 +233,7 @@ Más confirmaciones = más difícil de revertir. Para deshacer una transacción 
 - 1 confirmación: En un bloque. La reversión requiere hashpower significativo.
 - 6 confirmaciones: Estándar para grandes cantidades. Reversión prácticamente imposible.
 
-{% deep_dive(title="Seguridad de confirmaciones") %}
+{% <deep_dive title="Seguridad de confirmaciones"> %}
 
 El whitepaper de Satoshi incluye el cálculo de probabilidad. Con un atacante que controla una fracción `q` del hashpower:
 
@@ -244,7 +244,7 @@ La regla de "6 confirmaciones" asume un atacante bien financiado con hashpower s
 
 **La finalidad en Bitcoin** es probabilística, no absoluta. Pero tras suficientes confirmaciones, la probabilidad de reversión se acerca a cero para cualquier atacante realista.
 
-{% end %}
+{% </deep_dive> %}
 
 ## Alineación de incentivos
 
@@ -280,7 +280,7 @@ Lightning funciona abriendo "canales de pago" entre partes. Las transacciones de
 
 Si quieres ejecutar tu propio nodo Lightning y tomar control total de tus pagos, escribí una guía sobre cómo [Ejecutar tu nodo LN en una Raspberry Pi](/es/blog/run-your-ln-node/).
 
-{% deep_dive(title="Cómo funciona Lightning") %}
+{% <deep_dive title="Cómo funciona Lightning"> %}
 
 Los canales de pago usan direcciones **multifirma 2-de-2**. Ambas partes deben firmar para mover fondos. Esto crea una cuenta compartida de la que ninguna puede robar.
 
@@ -296,7 +296,7 @@ Si alguien no coopera, el timelock expira y los fondos vuelven. El secreto viaja
 
 **Watchtowers** monitorean la blockchain buscando intentos de trampa. Si tu contraparte intenta transmitir un estado antiguo del canal, el watchtower puede penalizarla, incluso mientras estás offline.
 
-{% end %}
+{% </deep_dive> %}
 
 ## El panorama general
 
@@ -310,7 +310,7 @@ Cada pieza sostiene a las demás. Quita una, y el sistema se debilita. Juntas, c
 
 Si eso te importa o no depende de dónde vivas y cuánto confíes en tus instituciones. Pero la opción ya existe. Y nadie puede quitártela.
 
-{% deep_dive(title="Madrigueras") %}
+{% <deep_dive title="Madrigueras"> %}
 
 La profundidad técnica de Bitcoin va mucho más allá de lo que cabe en un post. Aquí hay temas que vale la pena explorar si quieres profundizar:
 
@@ -328,4 +328,4 @@ La profundidad técnica de Bitcoin va mucho más allá de lo que cabe en un post
 
 Cuanto más profundo vas, más encuentras.
 
-{% end %}
+{% </deep_dive> %}

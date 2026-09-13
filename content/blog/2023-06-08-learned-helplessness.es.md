@@ -29,7 +29,7 @@ Se origina cuando alguien acepta su impotencia y deja de intentar escapar o evit
 
 ### Un aula con diferentes evaluaciones
 
-{{ youtube(id="gFmFOmprTt0") }}
+{{ <youtube id="gFmFOmprTt0" /> }}
 
 > Charisse Nixon, Ph.D Psicóloga del Desarrollo en Penn State Erie, The Behrend College y Directora de Investigación y Evaluación para The Ophelia Project discute el fenómeno de la indefensión aprendida.
 
@@ -66,8 +66,8 @@ Aísla el problema y no lo extrapoles a otras áreas. Deja de generalizar el fra
 
 ### English
 
-{{ youtube(id="Z8n1oUhp-EM") }}
+{{ <youtube id="Z8n1oUhp-EM" /> }}
 
 ### Español
 
-{{ youtube(id="E99XmEIPmf8") }}
+{{ <youtube id="E99XmEIPmf8" /> }}

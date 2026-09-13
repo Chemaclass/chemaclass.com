@@ -157,4 +157,4 @@ My takeaways from this book:
 
 ---
 
-{{ youtube(id="Cf6tX1ZPwvE") }}
+{{ <youtube id="Cf6tX1ZPwvE" /> }}

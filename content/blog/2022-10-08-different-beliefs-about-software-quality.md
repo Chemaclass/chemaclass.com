@@ -104,6 +104,6 @@ market as soon as possible.
 It doesn't make sense to have "low quality" as part of the identity of any team. Every team has certain quality 
 expectations. Therefore, the **key** here is to **agree on what good quality is**.
 
-{% kudos() %}
+{% <kudos> %}
 Thanks to my former Engineer Manager, Evgenii Sokolov, who inspired me to write these extra lines after sharing the original post.
-{% end %}
+{% </kudos> %}

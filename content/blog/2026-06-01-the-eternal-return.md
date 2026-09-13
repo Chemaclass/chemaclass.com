@@ -90,4 +90,4 @@ I love being alive. The fact it ends is what gives the time inside it weight. If
 
 ![A mirror in the present, not a prediction of the future](/images/blog/2026-06-01/footer.webp)
 
-{{ youtube(id="KqhPdzqqask") }}
+{{ <youtube id="KqhPdzqqask" /> }}

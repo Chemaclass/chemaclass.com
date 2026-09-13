@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block title %}404 - Page Not Found{% endblock title %}
 
@@ -9,7 +8,7 @@
 {% endblock robots %}
 
 {% block styles %}
-{{ macros::page_styles(css='page.css') }}
+{{ <page_styles css="page.css" /> }}
 {% endblock styles %}
 
 {% block content %}

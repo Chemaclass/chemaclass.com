@@ -148,4 +148,4 @@ countless hours and significant resources are lost because of poorly written cod
 This interview is based on Uncle Bob's book "Clean Code". They cover some existing guides that can help you become a
 better programmer and explore how books and current trends are shaping the software landscape.
 
-{{ youtube(id="QnmRpHFoYLk") }}
+{{ <youtube id="QnmRpHFoYLk" /> }}

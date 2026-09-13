@@ -43,4 +43,4 @@ For example, the first question: "What are the four types of work that IT does?"
 
 ---
 
-{{ youtube(id="6QNdL1I7OTM") }}
+{{ <youtube id="6QNdL1I7OTM" /> }}

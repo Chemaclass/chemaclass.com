@@ -191,9 +191,9 @@ Cryptoria is addressed to all people convinced that, beyond inherited or imposed
 
 ### 🇪🇸 Related Videos
 
-{{ youtube(id="7CvsAVaOjlQ") }}
+{{ <youtube id="7CvsAVaOjlQ" /> }}
 
-{{ youtube(id="DN3UKsf_Wmk") }}
+{{ <youtube id="DN3UKsf_Wmk" /> }}
 
 ---
 

@@ -57,6 +57,6 @@ This book is full of lessons that apply to everyone no matter who they are or wh
 
 > "Everyone knows that not all change is good or even necessary. But in a world that is constantly changing, it is to our advantage to learn how to adapt and enjoy something better. It is not what is in the story of "Who moved my cheese?" but how you interpret it and apply it to your own situation that gives it the value." - Ken Blanchard.
 
-{{ youtube(id="OvYCLxqkfvY") }}
+{{ <youtube id="OvYCLxqkfvY" /> }}
 
 > "Life moves on and so should we" - Spencer Johnson

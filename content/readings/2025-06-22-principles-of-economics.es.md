@@ -76,4 +76,4 @@ Sales con una lente nueva para ver el mundo: por qué suben los precios, por qu�
 
 ## Economía Austriaca vs Economía Keynesiana
 
-{{ youtube(id="GUvTJ0xy74c") }}
+{{ <youtube id="GUvTJ0xy74c" /> }}

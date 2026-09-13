@@ -41,4 +41,4 @@ the first place!
 This is a nice webinar, when they offer a fresh perspective on Zombie Scrum, share key insights from the book, and
 discuss their latest findings on the relentless ongoing research.
 
-{{ youtube(id="ylGfrsXXQMs") }}
+{{ <youtube id="ylGfrsXXQMs" /> }}

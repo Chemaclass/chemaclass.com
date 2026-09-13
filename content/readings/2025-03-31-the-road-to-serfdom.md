@@ -74,5 +74,5 @@ Totally. While the world has changed, the tension between freedom and control is
 
 Sure, some government help is needed. But Hayek's warning? Too much control, even with good intentions, can lead us somewhere we don't want to go.
 
-{{ youtube(id="2oG2SLzNo-E") }}
+{{ <youtube id="2oG2SLzNo-E" /> }}
 

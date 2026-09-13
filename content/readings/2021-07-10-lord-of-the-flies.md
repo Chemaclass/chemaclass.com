@@ -30,4 +30,4 @@ and between morality and immorality.
 The first chapters start slowly, but they are necessary to build up the context of the story, which scales pretty
 quickly later on.
 
-{{ youtube(id="NnnZ6y1HPqI") }}
+{{ <youtube id="NnnZ6y1HPqI" /> }}

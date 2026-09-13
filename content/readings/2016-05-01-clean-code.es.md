@@ -140,4 +140,4 @@ El código malo puede funcionar, pero si no está limpio, puede hundir a una emp
 
 Esta entrevista se basa en el libro de Uncle Bob "Código Limpio". Repasan algunas guías que te ayudarán a ser mejor programador y exploran cómo los libros y tendencias actuales están moldeando el mundo del software.
 
-{{ youtube(id="QnmRpHFoYLk") }}
+{{ <youtube id="QnmRpHFoYLk" /> }}

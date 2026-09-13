@@ -1,4 +1,4 @@
-{% macro nav(paginator, lang="en") %}
+{% component pagination_nav(paginator, lang="en") %}
 {% if paginator.number_pagers > 1 %}
 {% set last_page = paginator.number_pagers %}
 <nav class="pagination" aria-label="{{ trans(key='pagination_nav', lang=lang) }}">
@@ -40,4 +40,4 @@
   {% endif %}
 </nav>
 {% endif %}
-{% endmacro %}
+{% endcomponent pagination_nav %}

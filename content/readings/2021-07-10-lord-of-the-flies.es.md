@@ -26,4 +26,4 @@ El libro explora la tensión entre lo grupal y lo individual, entre la razón y 
 
 Los primeros capítulos van lentos, pero construyen el contexto necesario. Después la historia escala rápido.
 
-{{ youtube(id="NnnZ6y1HPqI") }}
+{{ <youtube id="NnnZ6y1HPqI" /> }}

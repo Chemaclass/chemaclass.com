@@ -39,22 +39,22 @@ Friedrich Hayek called this the knowledge problem. The information needed to run
 
 The [price does that job](https://www.econlib.org/library/Essays/hykKnw.html) instead. When wheat gets scarce, its price rises, and thousands of strangers adjust without being told to. No memo required.
 
-{% deep_dive(title="The Use of Knowledge in Society (1945)") %}
+{% <deep_dive title="The Use of Knowledge in Society (1945)"> %}
 Hayek's essay in four lines:
 
 - The knowledge that runs an economy (who needs what, where, right now) lives scattered in millions of heads.
 - Most of it is local and short-lived. No office can collect it before it goes stale.
 - A price compresses all of it into one number anyone can act on.
 - So the question is not who should plan. It's how to use knowledge no planner can hold. Prices already do.
-{% end %}
+{% </deep_dive> %}
 
 Leonard Read made the point with a pencil. In [_I, Pencil_](https://fee.org/resources/i-pencil/), not one person on earth knows how to make a pencil from scratch: the wood, the graphite, the paint, the eraser. Yet pencils cost almost nothing and are everywhere. Nobody is in charge. That is the point.
 
-{% deep_dive(title="I, Pencil (1958)") %}
+{% <deep_dive title="I, Pencil (1958)"> %}
 Leonard Read tells the story from the pencil's point of view. Cedar from Oregon and California, graphite from Sri Lanka, wax, glue, a brass ring. Loggers, miners, sailors, chemists: millions of people cooperated to make it, and not one of them knows the whole recipe.
 
 Nobody ordered them to. Prices coordinated every step. Read's point: if no mastermind can make a pencil, be suspicious of plans that need a mastermind for a whole economy.
-{% end %}
+{% </deep_dive> %}
 
 > Order doesn't need a designer. It needs freedom and a price.
 
@@ -66,9 +66,9 @@ A boy breaks a shop window. A bystander shrugs: well, at least the glazier, the 
 
 But the money the shopkeeper spent on glass might have bought new shoes. The shoemaker got no order. That's the [part you don't see](https://www.econlib.org/library/Bastiat/basEss1.html). The window is not new [wealth](/readings/rich-dad-poor-dad/). It's wealth moved, and partly destroyed.
 
-{% deep_dive(title="What Is Seen and What Is Not Seen (1850)") %}
+{% <deep_dive title="What Is Seen and What Is Not Seen (1850)"> %}
 Bastiat's rule: every act has one effect you see now and a chain of effects you don't. The broken window opens the essay, then he runs the same test on taxes, subsidies, public works, and tariffs. The trick is always the same: count what the policy creates, ignore what it prevents. The bad economist stops at the first effect. The good one counts the whole chain.
-{% end %}
+{% </deep_dive> %}
 
 Many interventions carry this trap. The benefit is loud and close. The cost is quiet and spread thin. Planners optimize what they can see and pay with what they can't.
 

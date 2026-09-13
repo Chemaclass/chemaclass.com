@@ -38,7 +38,7 @@ and build a cohesive, effective team.
 
 ## The 5 dysfunction model
 
-{{ youtube(id="GCxct4CR-To") }}
+{{ <youtube id="GCxct4CR-To" /> }}
 
 ### 1) Absence of trust
 
@@ -84,4 +84,4 @@ business ultimately suffers.
 
 ## Video Summary
 
-{{ youtube(id="Ro0NBgHo_a8") }}
+{{ <youtube id="Ro0NBgHo_a8" /> }}

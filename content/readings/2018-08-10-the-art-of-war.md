@@ -54,4 +54,4 @@ It has had an influence on Eastern and Western military thinking, business tacti
 
 ---
 
-{{ youtube(id="aF2pCff3ocg") }}
+{{ <youtube id="aF2pCff3ocg" /> }}

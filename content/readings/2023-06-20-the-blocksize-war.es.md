@@ -52,4 +52,4 @@ El relato incluye conversaciones con actores clave de ambos bandos. Descubrimos 
 
 ### Resumen
 
-{{ youtube(id="6YtS5ZNuuTw") }}
+{{ <youtube id="6YtS5ZNuuTw" /> }}

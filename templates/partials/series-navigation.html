@@ -8,7 +8,6 @@
 
    Requires: page, config, lang.
    ========================================================================== #}
-{% import "partials/macros.html" as macros %}
 
 {% if page.extra.series %}
   {% set series_key = page.extra.series %}
@@ -25,7 +24,7 @@
   {# Every published post carrying the key counts. No sort: nothing here reads
      the sequence any more. #}
   {% set blog_section = get_section(path="blog/_index.md", lang=lang) %}
-  {% set total = blog_section.pages | filter(attribute="extra.series", value=series_key) | length %}
+  {% set total = [p for p in blog_section.pages if p.extra.series == series_key] | length %}
 
   <nav class="series-nav" aria-label="{{ series_title }}">
     <div class="series-nav__info">
@@ -37,7 +36,7 @@
     </div>
     <a href="{{ series_page.permalink }}" class="series-nav__link">
       {{ trans(key="series_see_all", lang=lang) }} {{ total }} {{ trans(key="posts", lang=lang) }}
-      {{ macros::nav_arrow_right() }}
+      {{ <nav_arrow_right /> }}
     </a>
   </nav>
 {% endif %}

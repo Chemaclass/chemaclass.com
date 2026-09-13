@@ -7,7 +7,7 @@ date = 2015-12-01
 tags = []
 +++
 
-{{ youtube(id="q5BdYH_zAfQ") }}
+{{ <youtube id="q5BdYH_zAfQ" /> }}
 
 ## El arte de la adaptación
 

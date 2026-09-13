@@ -97,7 +97,7 @@ This book aims to equip readers with the tools to understand how Bitcoin works, 
 
 ### Book Presentation
 
-{{ youtube(id="55ZRM7j1Jzc") }}
+{{ <youtube id="55ZRM7j1Jzc" /> }}
 
 ---
 

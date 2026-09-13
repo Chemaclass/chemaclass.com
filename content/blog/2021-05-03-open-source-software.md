@@ -123,6 +123,6 @@ This is a (Spanish) talk that I did remotely on April 2021,
 for [PHPMad Madrid Community](https://www.meetup.com/phpmad/events/277733306/). I present all these ideas
 together with a live demo of how to contribute to a real OSS.
 
-{{ youtube(id="GE5wR_SC_P4") }}
+{{ <youtube id="GE5wR_SC_P4" /> }}
 
 ---

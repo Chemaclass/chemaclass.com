@@ -62,4 +62,4 @@ El libro profundiza en ideas como:
 
 Un vídeo donde el autor explica las ideas principales del libro:
 
-{{ youtube(id="TRqYQnCfgH8") }}
+{{ <youtube id="TRqYQnCfgH8" /> }}

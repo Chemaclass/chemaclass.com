@@ -61,4 +61,4 @@ parameters. Really interesting indeed.
 
 ## Reference
 
-{{ youtube(id="MKEyF2dmGaM") }}
+{{ <youtube id="MKEyF2dmGaM" /> }}

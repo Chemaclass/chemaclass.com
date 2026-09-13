@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block styles %}
-{{ macros::page_styles(css='listing.css') }}
+{{ <page_styles css="listing.css" /> }}
 {% endblock styles %}
 
 {% block title %}{% if lang == "es" %}Todas las etiquetas{% else %}All tags{% endif %} | {{ config.title }}{% endblock title %}
@@ -37,8 +36,9 @@
   {% endfor %}
 
   <div class="tag-cloud">
-    {% for term in terms | sort(attribute="pages") | reverse %}
-      {% set count = term.pages | length %}
+    {% for entry in [{"count": t.pages | length, "term": t} for t in terms] | sort(attribute="count") | reverse %}
+      {% set term = entry.term %}
+      {% set count = entry.count %}
       {% if count >= max_count / 2 %}
         {% set size = "lg" %}
       {% elif count >= max_count / 4 %}

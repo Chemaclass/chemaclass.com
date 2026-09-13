@@ -38,7 +38,7 @@ In [Claude Code](/blog/inside-the-claude-folder/), the `CLAUDE.md` file at the r
 
 But `CLAUDE.md` is just the entry point. You can split rules into focused files under `.claude/rules/`, each targeting specific parts of your codebase via glob patterns. The agent doesn't just know your conventions, it's constrained by them. Layer boundaries, naming patterns, dependency directions. All versioned alongside the code they protect. And since `.claude/` lives in the repo, every human teammate gets the same setup when they join the project.
 
-{% deep_dive(title="Glob-targeted rules in practice") %}
+{% <deep_dive title="Glob-targeted rules in practice"> %}
 
 - **`modules/*/Domain/**/*.php`**: No framework imports, no infrastructure dependencies, only plain PHP.
 - **`modules/*/Infrastructure/**/*.php`**: Controllers stay thin, Eloquent models stay in their place.
@@ -46,7 +46,7 @@ But `CLAUDE.md` is just the entry point. You can split rules into focused files 
 
 Each rule file is scoped to the files it cares about. Domain rules don't fire when editing a controller.
 
-{% end %}
+{% </deep_dive> %}
 
 ### Personal preferences
 
@@ -60,7 +60,7 @@ Every team has recurring workflows that live in wikis, runbooks, or someone's he
 
 Custom slash commands in `.claude/commands/` turn these workflows into executable instructions. Each command is a markdown file describing a multi-step procedure. In one of my projects, every creation command starts with tests. [TDD](/blog/test-driven-development/) is baked into the procedure, not left to discipline.
 
-{% deep_dive(title="Commands from a real project") %}
+{% <deep_dive title="Commands from a real project"> %}
 
 **Creation (TDD-first):**
 - **`/create-module`**: Scaffolds a hexagonal module with domain, application, and infrastructure layers.
@@ -74,7 +74,7 @@ Custom slash commands in `.claude/commands/` turn these workflows into executabl
 - **`/fix`**: Auto-applies linting and static analysis corrections.
 - **`/gh-issue`**: From GitHub issue to implementation to PR in one command.
 
-{% end %}
+{% </deep_dive> %}
 
 The key insight: commands turn tribal knowledge into executable instructions. What used to be "ask Sarah how we set up a new module" becomes a command anyone can run, human or agent.
 
@@ -92,7 +92,7 @@ Rules constrain: "don't do this, always do that." Skills teach: "here's the patt
 
 Instead of one generalist, you define specialized agents with a clear role, specific tools, and even a different model based on the complexity of their job. You don't need your most senior architect to rename a variable.
 
-{% deep_dive(title="Agent roles from a real project") %}
+{% <deep_dive title="Agent roles from a real project"> %}
 
 - **Explorer** (lightweight model): Read-only reconnaissance. Searches the codebase, finds files, understands structure. Access to read and search tools, nothing else.
 - **Clean code reviewer** (mid-tier model): Checks for SOLID violations, code smells, and naming inconsistencies. Read and grep access only.
@@ -100,7 +100,7 @@ Instead of one generalist, you define specialized agents with a clear role, spec
 - **React reviewer** (mid-tier model): Frontend patterns: component structure, TypeScript strictness, dark mode support, accessibility.
 - **Domain architect** (most capable model): Complex architectural decisions, module boundaries, and DDD patterns.
 
-{% end %}
+{% </deep_dive> %}
 
 > The right model for the right job. Fast and cheap for exploration. Capable and thorough for architecture.
 
@@ -175,7 +175,7 @@ Not all work benefits from parallelism. The key question: can the teammates work
 
 Having 5-6 tasks per teammate keeps everyone productive. Break the work so each teammate owns a different set of files. Without isolation, two teammates editing the same file leads to overwrites. Worktrees change this.
 
-{% deep_dive(title="Backend + Frontend in parallel") %}
+{% <deep_dive title="Backend + Frontend in parallel"> %}
 
 Say you're building a new feature that touches both backend and frontend. After planning:
 
@@ -184,7 +184,7 @@ Say you're building a new feature that touches both backend and frontend. After 
 
 They don't step on each other because the plan already defined the boundaries. Clear ownership. No merge conflicts. No waiting.
 
-{% end %}
+{% </deep_dive> %}
 
 ### Worktree isolation
 
@@ -228,13 +228,13 @@ Hooks and git hooks act as the final safety net. In my setup, nothing gets commi
 
 Agent teams add their own hooks: `TeammateIdle` keeps idle teammates working, `TaskCompleted` prevents premature task completion. Automated policies no team member can bypass.
 
-{% deep_dive(title="Hooks, permissions, and guardrails") %}
+{% <deep_dive title="Hooks, permissions, and guardrails"> %}
 
 Git hooks run linters, static analysis, and tests before every commit. Claude Code adds its own hooks (`.claude/hooks/`): shell commands that trigger on agent events like tool calls or file writes.
 
 `.claude/settings.json` controls what agents can execute. Whitelist specific tools and commands, deny destructive operations. You control not just what agents know (rules, skills) but what they can do (permissions). Rules set the culture. Permissions set the boundaries.
 
-{% end %}
+{% </deep_dive> %}
 
 ### The foundation matters
 

@@ -170,22 +170,22 @@ Los programadores que triunfan bajo presión e incertidumbre comparten algo: les
 
 En esta lección, Uncle Bob explica por qué es necesario escribir código limpio y establece las bases para lograrlo, tanto sociales como técnicas. El futuro de la programación se basa en un código ético y bien educado.
 
-{{ youtube(id="7EmboKQH8lM") }}
+{{ <youtube id="7EmboKQH8lM" /> }}
 
 ---
 
 En esta segunda lección, Uncle Bob habla del propósito de los comentarios. Rompe la idea de que comentar es algo que "hay que hacer" por ser supuestamente buena práctica. Para él, escribir un comentario es señal de fracaso: el buen código se explica solo. Menos comentarios = mejor código.
 
-{{ youtube(id="2a_ytyt9sf8") }}
+{{ <youtube id="2a_ytyt9sf8" /> }}
 
 ---
 
 En esta tercera lección, Uncle Bob quiere crear conciencia sobre la necesidad de elevar el criterio al producir código. Señala la falta de preparación de muchos programadores como una de las principales causas de la ineficiencia en el desarrollo de software actual.
 
-{{ youtube(id="Qjywrq2gM8o") }}
+{{ <youtube id="Qjywrq2gM8o" /> }}
 
 ---
 
 En esta cuarta lección, Uncle Bob introduce el Test-Driven Development (TDD). Es una práctica con curva de aprendizaje larga, pero produce código más robusto, seguro, mantenible y desarrollado con mayor eficiencia.
 
-{{ youtube(id="58jGpV2Cg50") }}
+{{ <youtube id="58jGpV2Cg50" /> }}

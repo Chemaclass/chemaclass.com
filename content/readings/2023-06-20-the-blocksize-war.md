@@ -52,4 +52,4 @@ The account in this book includes discussions with the key players from both sid
 
 ### Summary
 
-{{ youtube(id="6YtS5ZNuuTw") }}
+{{ <youtube id="6YtS5ZNuuTw" /> }}

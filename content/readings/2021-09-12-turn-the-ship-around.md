@@ -85,8 +85,8 @@ thoroughly understand the organization's goals and decision-making criteria.
 
 ## Summary
 
-{{ youtube(id="OqmdLcyES_Q") }}
+{{ <youtube id="OqmdLcyES_Q" /> }}
 
 [David Marquet](/readings/leadership-is-language/) talks about leadership that turns the ship around in his keynote at the Worldwebforum.
 
-{{ youtube(id="ivwKQqf4ixA") }}
+{{ <youtube id="ivwKQqf4ixA" /> }}

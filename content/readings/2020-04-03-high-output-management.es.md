@@ -37,4 +37,4 @@ Un clásico de Silicon Valley. El ex presidente y CEO de Intel comparte su persp
 
 Un buen resumen de las conclusiones por Marc Koenig:
 
-{{ youtube(id="Yi1PSs_bpQ0") }}
+{{ <youtube id="Yi1PSs_bpQ0" /> }}

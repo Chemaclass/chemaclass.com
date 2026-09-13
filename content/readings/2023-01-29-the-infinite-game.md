@@ -72,4 +72,4 @@ Money is a result, not a purpose.
 
 Leaders who embrace an infinite mindset build stronger, more innovative, more inspiring organizations. Ultimately, they are the ones who lead us into the future.
 
-{{ youtube(id="tye525dkfi8") }}
+{{ <youtube id="tye525dkfi8" /> }}

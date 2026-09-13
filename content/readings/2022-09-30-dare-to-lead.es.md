@@ -84,4 +84,4 @@ ganamos realmente el coraje para tener éxito y liderar.
 
 ### Resumen
 
-{{ youtube(id="bsT5Tbt2mjU") }}
+{{ <youtube id="bsT5Tbt2mjU" /> }}

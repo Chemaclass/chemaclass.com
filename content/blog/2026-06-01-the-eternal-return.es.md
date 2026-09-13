@@ -90,4 +90,4 @@ Amo estar vivo. El hecho de que termine es justo lo que le da peso al tiempo den
 
 ![Un espejo en el presente, no una predicción del futuro](/images/blog/2026-06-01/footer.webp)
 
-{{ youtube(id="KqhPdzqqask") }}
+{{ <youtube id="KqhPdzqqask" /> }}

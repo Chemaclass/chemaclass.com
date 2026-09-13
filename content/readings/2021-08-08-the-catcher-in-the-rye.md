@@ -48,4 +48,4 @@ From chapter 22:
 
 ## Summary
 
-{{ youtube(id="WSq-WQgKnyE") }}
+{{ <youtube id="WSq-WQgKnyE" /> }}

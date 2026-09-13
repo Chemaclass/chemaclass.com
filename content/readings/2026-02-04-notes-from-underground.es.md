@@ -58,4 +58,4 @@ No es un libro fácil ni agradable. Pero se te mete bajo la piel. Anticipa el ex
 
 ---
 
-{{ youtube(id="vQb0jFb_lwg") }}
+{{ <youtube id="vQb0jFb_lwg" /> }}

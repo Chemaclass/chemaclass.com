@@ -191,9 +191,9 @@ Un libro para quienes creen que hay formas de organización social y económica 
 
 ### 🇪🇸 Videos Relacionados
 
-{{ youtube(id="7CvsAVaOjlQ") }}
+{{ <youtube id="7CvsAVaOjlQ" /> }}
 
-{{ youtube(id="DN3UKsf_Wmk") }}
+{{ <youtube id="DN3UKsf_Wmk" /> }}
 
 ---
 

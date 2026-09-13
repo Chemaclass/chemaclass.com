@@ -23,4 +23,4 @@ Santiago es un joven pastor que tiene un [sueño recurrente](/es/readings/jonath
 
 #### Resumen en Video
 
-{{ youtube(id="b41MXNaFJj0") }}
+{{ <youtube id="b41MXNaFJj0" /> }}

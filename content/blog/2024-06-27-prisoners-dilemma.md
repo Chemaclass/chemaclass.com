@@ -24,7 +24,7 @@ The Prisoner's Dilemma is a hypothetical game set up showing a situation where p
 
 It's just a long way of saying people don't like to be taken advantage of. It's often game theory 101.
 
-{{ youtube(id="t9Lo2fgxWHw") }}
+{{ <youtube id="t9Lo2fgxWHw" /> }}
 
 The Prisoner's Dilemma illustrates the complexities of strategic decision-making, where individuals must choose between cooperation and betrayal, often revealing insights into human behavior and the consequences of self-interest versus collective benefit.
 
@@ -64,7 +64,7 @@ This leads to four different possible outcomes for prisoners A and B:
 
 It is just like the regular game except you play it multiple times with an opponent and add up the scores. But it can change the strategy and has more real world applications as it resembles a relationship.
 
-{{ youtube(id="BOvAbjfJ0x0") }}
+{{ <youtube id="BOvAbjfJ0x0" /> }}
 
 ---
 
@@ -72,6 +72,6 @@ This is closely related to [trust](/readings/the-five-dysfunctions-of-a-team/), 
 
 In the Prisoner's Dilemma, the best strategy is to start with cooperation, but then mimic the other player's previous action in the following rounds, rewarding cooperation and punishing betrayal.
 
-{{ youtube(id="S0SQLQMLi8Q") }}
+{{ <youtube id="S0SQLQMLi8Q" /> }}
 
 > Don't trust, verify.

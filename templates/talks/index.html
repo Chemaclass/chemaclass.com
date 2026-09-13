@@ -1,17 +1,16 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block title %}
   {{ trans(key="talks_title", lang=lang) }} | Chemaclass
 {% endblock %}
 
 {% block styles %}
-{{ macros::page_styles(css='page.css') }}
+{{ <page_styles css="page.css" /> }}
 {% endblock styles %}
 
 {% block posthead %}
-{{ macros::collection_schema(section=section, name=trans(key='all_talks', lang=lang), lang=lang) }}
+{{ <collection_schema section={section} name={trans(key='all_talks', lang=lang)} lang={lang} /> }}
 {% endblock posthead %}
 
 {% block content %}
@@ -37,7 +36,7 @@
             <p class="talk-card__summary">{{ talk.summary | striptags }}</p>
             {% if talk.taxonomies.tags %}
               <div class="talk-card__tags">
-                {% for tag in talk.taxonomies.tags | slice(end=3) %}
+                {% for tag in talk.taxonomies.tags[:3] %}
                   <span class="talk-card__tag">{{ tag }}</span>
                 {% endfor %}
               </div>

@@ -7,7 +7,7 @@ date = 2016-02-01
 tags = []
 +++
 
-{{ youtube(id="eY03KCZue6s") }}
+{{ <youtube id="eY03KCZue6s" /> }}
 
 ## Viajar a nuestro encuentro
 

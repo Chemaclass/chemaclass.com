@@ -64,4 +64,4 @@ Los profesionales quieren crecer y ser felices en el trabajo. Este libro da idea
 
 Una buena serie con reflexiones sobre cada capítulo del libro.
 
-{{ youtube(id="dBQMorJBueE") }}
+{{ <youtube id="dBQMorJBueE" /> }}

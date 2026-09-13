@@ -58,7 +58,7 @@ Lo que sobrevive:
 - Bloques de código, errores exactos, rutas de archivo, comandos.
 - Avisos de seguridad y operaciones destructivas (el skill se aclara solo).
 
-{% deep_dive(title="Antes y después") %}
+{% <deep_dive title="Antes y después"> %}
 
 Modo normal:
 
@@ -70,7 +70,7 @@ Modo caveman:
 
 Mismo fix, y el bloque de código que viene después es idéntico. Lo único que encoge es la prosa de alrededor, hasta más o menos un cuarto.
 
-{% end %}
+{% </deep_dive> %}
 
 Hay tres niveles: `lite`, `full` y `ultra`. Empieza en `full`, porque `ultra` se lee como un telegrama. Si una respuesta te queda demasiado seca, escribe `normal mode` y se relaja.
 

@@ -115,7 +115,7 @@ You can find a lot of katas on the Internet. For example:
 
 > "TDD is a design tool." That’s what Sandro has said for years. But not anymore. After working with different teams and in different organisations, and also carefully inspecting how he works, Sandro changed his mind about the role of TDD in software design.
 
-{{ youtube(id="KyFVA4Spcgg") }}
+{{ <youtube id="KyFVA4Spcgg" /> }}
 
 TDD in a nutshell; it's about the rhythm.
 

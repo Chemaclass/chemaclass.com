@@ -29,7 +29,7 @@ It was initially thought to be caused by the subject's acceptance of their power
 
 ### A classroom with different assessments
 
-{{ youtube(id="gFmFOmprTt0") }}
+{{ <youtube id="gFmFOmprTt0" /> }}
 
 > Charisse Nixon, Ph.D Developmental Psychologist at Penn State Erie, The Behrend College and Director of Research and Evaluation for The Ophelia Project discusses the phenomenon of learned helplessness.
 
@@ -66,8 +66,8 @@ Isolate the problem and don't extrapolate it to other areas. Stop generalizing f
 
 ### English
 
-{{ youtube(id="Z8n1oUhp-EM") }}
+{{ <youtube id="Z8n1oUhp-EM" /> }}
 
 ### Español
 
-{{ youtube(id="E99XmEIPmf8") }}
+{{ <youtube id="E99XmEIPmf8" /> }}

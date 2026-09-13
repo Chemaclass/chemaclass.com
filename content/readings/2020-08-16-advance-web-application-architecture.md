@@ -39,4 +39,4 @@ layers, ports and adapters (a.k.a. [Hexagonal architecture](/readings/clean-arch
 
 ### Design patterns for modernizing legacy code bases
 
-{{ youtube(id="WI1QY6OMglE") }}
+{{ <youtube id="WI1QY6OMglE" /> }}

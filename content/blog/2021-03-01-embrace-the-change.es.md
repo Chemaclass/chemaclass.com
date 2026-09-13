@@ -57,6 +57,6 @@ El libro está lleno de lecciones aplicables a cualquiera, sin importar quién s
 
 > "Todos saben que no todo cambio es bueno o necesario. Pero en un mundo en constante cambio, nos conviene aprender a adaptarnos y disfrutar de algo mejor. No es lo que dice la historia de '¿Quién se ha llevado mi queso?', sino cómo la interpretas y aplicas a tu situación lo que le da valor." - Ken Blanchard.
 
-{{ youtube(id="OvYCLxqkfvY") }}
+{{ <youtube id="OvYCLxqkfvY" /> }}
 
 > "La vida sigue adelante y nosotros también deberíamos" - Spencer Johnson

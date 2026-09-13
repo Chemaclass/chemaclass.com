@@ -57,4 +57,4 @@ Tener más dinero te hará más feliz SOLO si significa tener más control sobre
 
 ## Video Resumen
 
-{{ youtube(id="yNMnjMgdIWw") }}
+{{ <youtube id="yNMnjMgdIWw" /> }}

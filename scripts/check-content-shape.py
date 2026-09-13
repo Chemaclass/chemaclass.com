@@ -81,7 +81,9 @@ def tag_count(front_matter: str) -> int | None:
 
 def prose_word_count(body: str) -> int:
     prose = FENCE.sub('', body)
-    prose = re.sub(r'\{\{.*?\}\}', '', prose, flags=re.DOTALL)
+    # Tera tags: `{{ <youtube id="x" /> }}` goes whole, a block component loses
+    # its `{% <deep_dive title="x"> %}` and `{% </deep_dive> %}` tags but keeps its body.
+    prose = re.sub(r'\{\{.*?\}\}|\{%.*?%\}', '', prose, flags=re.DOTALL)
     prose = re.sub(r'<!--.*?-->', '', prose, flags=re.DOTALL)
     prose = re.sub(r'https?://\S+', '', prose)
     return len(WORD.findall(prose))

@@ -45,7 +45,7 @@ I believe in [test-driven development](/blog/test-driven-development/). Red, gre
 
 That's the ideal. And it's not just a feeling. A [study across four teams at Microsoft and IBM](https://www.microsoft.com/en-us/research/wp-content/uploads/2009/10/Realizing-Quality-Improvement-Through-Test-Driven-Development-Results-and-Experiences-of-Four-Industrial-Teams-nagappan_tdd.pdf) found TDD reduced defect density by 40-90%, with a 15-35% increase in development time. Both sides of the tension, measured.
 
-{% deep_dive(title="More on the study") %}
+{% <deep_dive title="More on the study"> %}
 
 The [study](https://www.microsoft.com/en-us/research/wp-content/uploads/2009/10/Realizing-Quality-Improvement-Through-Test-Driven-Development-Results-and-Experiences-of-Four-Industrial-Teams-nagappan_tdd.pdf) covered four teams: three at Microsoft (Windows, MSN, Visual Studio) and one at IBM working on device drivers. Each TDD team was compared against a similar team on the same product, using the same languages and tools, under the same senior manager. The only difference was TDD.
 
@@ -53,11 +53,11 @@ The IBM team saw a 40% defect density reduction. The Microsoft teams ranged from
 
 No one was forced into TDD. The teams adopted it voluntarily, which likely matters: people who choose a practice tend to apply it better than people who are told to.
 
-{% end %}
+{% </deep_dive> %}
 
 TDD is a discipline, and discipline costs something. When you're exploring a new domain and don't yet know what the right abstractions are, writing tests first can feel like drawing a map before you've seen the territory. Sometimes you need to write throwaway code, spike a solution, feel your way through the problem space. Discovery doesn't always follow a red-green-refactor rhythm.
 
-{% deep_dive(title="When test-first meets the unknown") %}
+{% <deep_dive title="When test-first meets the unknown"> %}
 
 There's a difference between _"I know what this should do and I'll specify it first"_ and _"I'm not sure what this should do yet."_ TDD shines in the first scenario. In the second, a test-last approach (or even no tests during exploration) can be more honest.
 
@@ -65,7 +65,7 @@ The key is what happens after discovery. Once you understand the problem, go bac
 
 As I discussed in [TDD vs BDD](/blog/tdd-vs-bdd/), the power of TDD is its feedback loop. But a feedback loop requires knowing what feedback you're looking for. When you're still figuring that out, forcing the loop can slow you down more than it helps.
 
-{% end %}
+{% </deep_dive> %}
 
 The mistake isn't choosing test-first or test-last. The mistake is making it a religious decision instead of a contextual one. The idealist says _"always test first."_ The pragmatist says _"test when it makes sense."_ I say: test first when I can, test after when I must, but always test.
 
@@ -79,7 +79,7 @@ That's the ideal. And in many contexts, it's the right call.
 
 But pairing has a cost. It demands synchronous time, shared focus, and compatible energy levels. In a distributed team across time zones, finding overlap windows is already hard. Filling those windows with pairing sessions leaves little room for deep individual work. Some problems benefit from one person going deep for three hours, not two people going medium-deep for six.
 
-{% deep_dive(title="Pairing patterns and their trade-offs") %}
+{% <deep_dive title="Pairing patterns and their trade-offs"> %}
 
 There are multiple pairing patterns: Driver-Navigator, Ping-Pong, Tourist Guide. Each fits different contexts.
 
@@ -89,7 +89,7 @@ Pairing works best when both people are engaged, the problem benefits from two p
 
 [Pull requests and pair programming](/blog/pull-request-vs-pair-prog/) aren't mutually exclusive. They serve different needs. Sometimes asynchronous review is enough. Sometimes you need the real-time back-and-forth. The pragmatic choice depends on the problem, the people, and the moment.
 
-{% end %}
+{% </deep_dive> %}
 
 > The goal of pairing isn't to pair. It's to build shared understanding and catch mistakes early. If another approach achieves that in your context, use it.
 
@@ -129,7 +129,7 @@ I still practice pair programming with real people for complex topics. The human
 
 The pragmatist in me used to drop TDD when deadlines got tight. The pragmatist in me with the right AI setup keeps it running.
 
-{% deep_dive(title="My setup") %}
+{% <deep_dive title="My setup"> %}
 
 I use Claude for everything. [Claude Code](/blog/inside-the-claude-folder/) with Opus or Sonnet as the agentic coder: full development workflows, reading the codebase, following conventions, running tests, creating PRs. Claude app and Claude as a coworker for the chat side: brainstorming, architecture discussions, explaining code, drafting documentation. For inline assistance, the plugins I already have in my IDE are enough. I tried Copilot and Cursor, they're not for me. Claude covers what I need.
 
@@ -137,7 +137,7 @@ Different modes for different tasks. An agentic assistant following my TDD comma
 
 The market right now is intense. Claude, Codex, Gemini and others are strong players with similar products, and they're all getting better on a monthly basis. The results are impressive and only accelerating. That's the beauty of competition: it forces everyone to improve or become irrelevant, and the consumer wins either way. As of today, Claude Code seems to be the strongest option for how I work. But I have no loyalty to a brand. If Anthropic stopped pushing forward and a competitor became clearly better, I'd switch without hesitation. What matters is the capability, not the logo.
 
-{% end %}
+{% </deep_dive> %}
 
 > I was wrong about AI in the way that idealists are often wrong: I measured the tool against the ideal outcome and found it lacking, instead of measuring it against the realistic alternative.
 

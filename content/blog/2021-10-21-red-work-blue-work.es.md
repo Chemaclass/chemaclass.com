@@ -64,7 +64,7 @@ Blue Work aislado es inútil. Su función es hacer mejor el Red Work. Blue Work 
 
 Por eso todos debemos ser conscientes de estos tipos de trabajo y encontrar un buen equilibrio. Los buenos líderes involucran a todos en Red Work y Blue Work.
 
-{{ youtube(id="OEX1EVc-zjk") }}
+{{ <youtube id="OEX1EVc-zjk" /> }}
 
 ---
 

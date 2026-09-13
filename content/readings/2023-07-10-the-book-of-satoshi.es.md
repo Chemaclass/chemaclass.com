@@ -32,4 +32,4 @@ Su actividad pública comenzó el 1 de noviembre de 2009 con la publicación del
 
 Probablemente nunca sabremos quién es Nakamoto. Estos escritos son todo lo que el mundo tendrá de él sobre la creación, funcionamiento y teoría detrás de Bitcoin. Si quieres aprender sobre Bitcoin, ve directo a la fuente: las palabras de su propio creador.
 
-{{ youtube(id="kaBmAV5DaXI") }}
+{{ <youtube id="kaBmAV5DaXI" /> }}

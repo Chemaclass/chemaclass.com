@@ -83,7 +83,7 @@ Cuando estés escribiendo un test unitario:
 
 > Mockea interfaces. Instancia clases concretas.
 
-{{ youtube(id="RbSqXFUfRMU") }}
+{{ <youtube id="RbSqXFUfRMU" /> }}
 
 "El uso excesivo de mocks lleva a [código legacy](/es/blog/testing-effectively-legacy-code/)." - Philippe Boargau
 

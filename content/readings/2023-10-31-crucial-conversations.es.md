@@ -87,8 +87,8 @@ Asume buena fe. Cuanto más te involucres en un diálogo productivo, más fácil
 
 ### Keynote: Dominando el Arte de las Conversaciones Cruciales
 
-{{ youtube(id="uc3ARpccRwQ") }}
+{{ <youtube id="uc3ARpccRwQ" /> }}
 
 #### Resumen en Video
 
-{{ youtube(id="Q2yG142cyNg") }}
+{{ <youtube id="Q2yG142cyNg" /> }}

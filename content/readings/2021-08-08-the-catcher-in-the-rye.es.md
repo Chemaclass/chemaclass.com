@@ -44,4 +44,4 @@ Del capítulo 22:
 
 ## Resumen
 
-{{ youtube(id="WSq-WQgKnyE") }}
+{{ <youtube id="WSq-WQgKnyE" /> }}

@@ -43,4 +43,4 @@ Por ejemplo, la primera pregunta: "¿Cuáles son los cuatro tipos de trabajo en 
 
 ---
 
-{{ youtube(id="6QNdL1I7OTM") }}
+{{ <youtube id="6QNdL1I7OTM" /> }}

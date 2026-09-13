@@ -29,4 +29,4 @@ Ori Brafman y Rod Beckstrom ofrecen respuestas sorprendentes, historias fascinan
 
 Rod Beckstrom resume las ideas principales del libro en esta charla:
 
-{{ youtube(id="fumQ0s7DCEY") }}
+{{ <youtube id="fumQ0s7DCEY" /> }}

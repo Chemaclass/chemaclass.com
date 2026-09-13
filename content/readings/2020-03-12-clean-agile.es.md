@@ -24,4 +24,4 @@ Clean [Agile](/es/blog/what-kills-agility/) viene de Uncle Bob, uno de los padre
 
 El libro trata sobre Agile: lo que fue, lo que es y lo que será. Es un regreso a lo básico que cubre la historia de Agile, qué lo motivó y qué ha pasado desde entonces. Cubre las prácticas básicas y las compara con la variedad actual de procesos ágiles.
 
-{{ youtube(id="FedQ2NlgxMI") }}
+{{ <youtube id="FedQ2NlgxMI" /> }}
