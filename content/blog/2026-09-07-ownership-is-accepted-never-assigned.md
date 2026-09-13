@@ -88,8 +88,8 @@ The important part is making those agreements explicit. If you haven't checked w
 
 For your next task, look beyond the merge. What needs to happen before the person who reported the problem can consider it solved? Follow through on that.
 
-{% kudos() %}
+{% <kudos> %}
 Thanks to [Thorsten Ball](https://x.com/thorstenball/status/2066907538499506349) for the Slack message that started this post.
-{% end %}
+{% </kudos> %}
 
 ![blog-footer](/images/blog/2026-09-20/footer.webp)

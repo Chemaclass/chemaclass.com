@@ -71,4 +71,4 @@ El dinero es un resultado, no un propósito.
 
 Los líderes con mentalidad infinita construyen organizaciones más fuertes, innovadoras e inspiradoras. Son ellos quienes nos lideran hacia el futuro.
 
-{{ youtube(id="tye525dkfi8") }}
+{{ <youtube id="tye525dkfi8" /> }}

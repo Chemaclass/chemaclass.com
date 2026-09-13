@@ -7,7 +7,7 @@ date = 2015-11-01
 tags = []
 +++
 
-{{ youtube(id="TO_mYtRJIFQ") }}
+{{ <youtube id="TO_mYtRJIFQ" /> }}
 
 ## Al motivo
 

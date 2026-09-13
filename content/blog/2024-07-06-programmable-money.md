@@ -37,7 +37,7 @@ It supports multi-signature, time-locked, and other conditional transfers that c
 
 This video includes examples of the most commonly used locking/unlocking scripts.
 
-{{ youtube(id="6Fa04MnURhw") }}
+{{ <youtube id="6Fa04MnURhw" /> }}
 
 ## Key Features of Bitcoin's Script
 
@@ -295,7 +295,7 @@ OP_1 <x-only PubK>
 
 ---
 
-{{ youtube(id="yU3Sr07Qnxg") }}
+{{ <youtube id="yU3Sr07Qnxg" /> }}
 
 ---
 

@@ -34,7 +34,7 @@ Hay que crear espacios para salir de la zona de confort y entrenar nuestra capac
 
 ### WeAreDevelopers World Congress en Berlín (Julio 2023)
 
-{{ youtube(id="dqtAyl-SvaY") }}
+{{ <youtube id="dqtAyl-SvaY" /> }}
 
 ## Artículos relacionados
 

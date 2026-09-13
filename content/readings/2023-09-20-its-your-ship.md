@@ -48,4 +48,4 @@ Overall, "It's Your Ship" provides valuable insights into leadership principles 
 
 Abrashoff's approach emphasizes the importance of empowering and valuing team members, fostering open communication, and constantly seeking ways to improve performance.
 
-{{ youtube(id="A-mZW2VZZgY") }}
+{{ <youtube id="A-mZW2VZZgY" /> }}

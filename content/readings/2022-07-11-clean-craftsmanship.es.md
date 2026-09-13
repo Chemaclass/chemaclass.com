@@ -155,7 +155,7 @@ Una de mis partes favoritas del libro:
 
 Charla de Uncle Bob donde cubre la mayoría de los temas del libro.
 
-{{ youtube(id="sPXk11hrWTM") }}
+{{ <youtube id="sPXk11hrWTM" /> }}
 ```
 Escucha sobre:
 * Cita e Intro - [00:00:00]

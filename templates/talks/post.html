@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block styles %}
-{{ macros::page_styles(css='page.css') }}
+{{ <page_styles css="page.css" /> }}
 {% endblock styles %}
 
 {% block posthead %}
@@ -15,8 +14,8 @@
 {% block content %}
   <article class="talk-single">
     <!-- Back link -->
-    <a href="{{ macros::lang_path(path='/talks/', lang=lang) }}" class="talk-single__back">
-      {{ macros::back_arrow() }}
+    <a href="{{ <lang_path path="/talks/" lang={lang} /> }}" class="talk-single__back">
+      {{ <back_arrow /> }}
       {{ trans(key="all_talks", lang=lang) }}
     </a>
 
@@ -63,7 +62,7 @@
 
     <!-- Content (appearances list + images) -->
     <section class="talk-single__content"
-             {{ macros::highlight_labels(lang=lang) }}>
+             {{ <highlight_labels lang={lang} /> }}>
       {% if page.summary %}
         {{ page.content | replace(from=page.summary, to="") | safe }}
       {% else %}

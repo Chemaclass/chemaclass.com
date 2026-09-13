@@ -44,8 +44,8 @@ El patrón Bitcoin es el recurso esencial para entender esta alternativa descent
 
 ## Video Resumen
 
-{{ youtube(id="t1brCcgi174") }}
+{{ <youtube id="t1brCcgi174" /> }}
 
 > Extra: Podcast de Lex Fridman con el autor de este libro
 
-{{ youtube(id="gp4U5aH_T6A") }}
+{{ <youtube id="gp4U5aH_T6A" /> }}

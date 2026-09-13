@@ -39,22 +39,22 @@ Friedrich Hayek llamó a esto el problema del conocimiento. La información que 
 
 De ese trabajo se encarga [el precio](https://www.econlib.org/library/Essays/hykKnw.html). Cuando el trigo escasea, su precio sube, y miles de desconocidos se ajustan sin que nadie se lo ordene. Sin ningún memorándum.
 
-{% deep_dive(title="El uso del conocimiento en la sociedad (1945)") %}
+{% <deep_dive title="El uso del conocimiento en la sociedad (1945)"> %}
 El ensayo de Hayek en cuatro líneas:
 
 - El conocimiento que mueve una economía (quién necesita qué, dónde, ahora mismo) vive repartido en millones de cabezas.
 - Casi todo es local y caduca rápido. Ninguna oficina puede reunirlo antes de que se quede viejo.
 - Un precio comprime todo eso en un número con el que cualquiera puede actuar.
 - Así que la pregunta no es quién debería planificar. Es cómo usar un conocimiento que ningún planificador puede tener. Los precios ya lo hacen.
-{% end %}
+{% </deep_dive> %}
 
 Leonard Read lo explicó con un lápiz. En [_I, Pencil_](https://fee.org/resources/i-pencil/), ni una sola persona en el mundo sabe fabricar un lápiz desde cero: la madera, el grafito, la pintura, la goma. Y aun así, los lápices cuestan casi nada y están por todas partes. Nadie manda. Ese es el punto.
 
-{% deep_dive(title="Yo, el lápiz (1958)") %}
+{% <deep_dive title="Yo, el lápiz (1958)"> %}
 Leonard Read cuenta la historia desde el punto de vista del lápiz. Cedro de Oregón y California, grafito de Sri Lanka, cera, pegamento, un anillo de latón. Leñadores, mineros, marineros, químicos: millones de personas cooperaron para fabricarlo, y ni una sola conoce la receta completa.
 
 Nadie se lo ordenó. Los precios coordinaron cada paso. La idea de Read: si ningún cerebro puede hacer un lápiz, desconfía de los planes que necesitan un cerebro para una economía entera.
-{% end %}
+{% </deep_dive> %}
 
 > El orden no necesita un diseñador. Necesita libertad y un precio.
 
@@ -66,9 +66,9 @@ Un niño rompe el cristal de una tienda. Un curioso se encoge de hombros: bueno,
 
 Pero el dinero que el tendero gastó en el cristal quizá habría comprado zapatos nuevos. El zapatero se quedó sin ese pedido. Esa es la [parte que no se ve](https://www.econlib.org/library/Bastiat/basEss1.html). El cristal no es [riqueza](/es/readings/rich-dad-poor-dad/) nueva. Es riqueza movida, y en parte destruida.
 
-{% deep_dive(title="Lo que se ve y lo que no se ve (1850)") %}
+{% <deep_dive title="Lo que se ve y lo que no se ve (1850)"> %}
 La regla de Bastiat: todo acto tiene un efecto que ves ahora y una cadena de efectos que no ves. El cristal roto abre el ensayo, y después aplica la misma prueba a impuestos, subvenciones, obras públicas y aranceles. El truco siempre es el mismo: contar lo que la política crea e ignorar lo que impide. El mal economista se queda en el primer efecto. El bueno cuenta toda la cadena.
-{% end %}
+{% </deep_dive> %}
 
 Muchas intervenciones caen en esta trampa. El beneficio es ruidoso y cercano. El coste es silencioso y se reparte fino. Los planificadores optimizan lo que ven y lo pagan con lo que no ven.
 

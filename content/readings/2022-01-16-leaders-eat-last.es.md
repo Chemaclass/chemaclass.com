@@ -50,4 +50,4 @@ Los 4 químicos **E.D.S.O.** juegan roles importantes en nuestra supervivencia. 
 
 ## TED Talk: Por qué los líderes comen al último
 
-{{ youtube(id="ReRcHdeUG9Y") }}
+{{ <youtube id="ReRcHdeUG9Y" /> }}

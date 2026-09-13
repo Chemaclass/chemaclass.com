@@ -36,4 +36,4 @@ Chris Voss pasó de patrullar las calles de Kansas City a ser el negociador prin
 
 ### Video resumen
 
-{{ youtube(id="QIRk382yJm4") }}
+{{ <youtube id="QIRk382yJm4" /> }}

@@ -51,4 +51,4 @@ the implementation using techniques such as dependency injection or [mocking](/b
 
 ---
 
-{{ youtube(id="wRtJRkRIa2s") }}
+{{ <youtube id="wRtJRkRIa2s" /> }}

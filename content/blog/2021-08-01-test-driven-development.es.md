@@ -96,7 +96,7 @@ Puedes encontrar muchas katas en Internet. Por ejemplo:
 
 > "TDD es una herramienta de diseño." Eso es lo que Sandro dijo durante años. Pero ya no. Tras trabajar con diferentes equipos y organizaciones, y observar cómo trabaja él mismo, Sandro cambió de opinión sobre el rol de TDD en el diseño de software.
 
-{{ youtube(id="KyFVA4Spcgg") }}
+{{ <youtube id="KyFVA4Spcgg" /> }}
 
 TDD en pocas palabras; se trata del ritmo.
 

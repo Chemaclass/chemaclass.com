@@ -70,4 +70,4 @@ A short, sharp book. Schopenhauer's pessimism doesn't make him joyless. It makes
 
 ---
 
-{{ youtube(id="q0zmfNx7OM4") }}
+{{ <youtube id="q0zmfNx7OM4" /> }}

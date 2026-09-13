@@ -42,4 +42,4 @@ Escribí un artículo sobre este tema: [El proceso en sí mismo es la meta](/es/
 
 ---
 
-{{ youtube(id="YT7tQzmGRLA") }}
+{{ <youtube id="YT7tQzmGRLA" /> }}

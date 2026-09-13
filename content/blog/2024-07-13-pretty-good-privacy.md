@@ -36,7 +36,7 @@ His defense was clever: he published the PGP source code in a book. Books are pr
 
 ---
 
-{{ youtube(id="1-MPcUHhXoc") }}
+{{ <youtube id="1-MPcUHhXoc" /> }}
 
 ## Key Features
 
@@ -57,7 +57,7 @@ PGP uses a combination of [public-key](https://en.wikipedia.org/wiki/Public-key_
 
 - **Digital Signatures**: PGP provides authentication through digital signatures. The sender signs the message with their private key, allowing the recipient to verify the sender’s identity using the sender’s public key, ensuring the message has not been tampered with.
 
-{{ youtube(id="Lq-yKJFHJpk") }}
+{{ <youtube id="Lq-yKJFHJpk" /> }}
 
 ---
 

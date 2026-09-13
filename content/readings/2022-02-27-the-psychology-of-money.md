@@ -57,4 +57,4 @@ Having more money will make you happier ONLY if that means you'll have more cont
 
 ## Video Summary
 
-{{ youtube(id="yNMnjMgdIWw") }}
+{{ <youtube id="yNMnjMgdIWw" /> }}

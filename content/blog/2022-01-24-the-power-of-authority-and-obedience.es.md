@@ -62,7 +62,7 @@ Varios factores influyeron: la ubicación, el comportamiento del investigador, y
 
 La gente tiende a obedecer si reconoce la autoridad del otro. Esta respuesta se aprende en la familia, la escuela y el trabajo.
 
-{{ youtube(id="rdrKCilEhC0") }}
+{{ <youtube id="rdrKCilEhC0" /> }}
 
 ---
 
