@@ -13,7 +13,7 @@ A talk page is conference material: an abstract plus a delivery log, not an essa
   `- YYYY-MM-DD | Event Name [**City, Country**] (EN|ES)`
   - Sub-bullet linking the event page; optional annotations in this order: `[[slides](...)]`, `([Video](...))`, `([imgs](...))`.
 - Multi-day events use a slash range, never an en dash: `2023-10-24/26`.
-- Optional trailing content after the event list: cover images, `{{ youtube(id="...") }}`, `## Related posts`.
+- Optional trailing content after the event list: cover images, `{{ <youtube id="..." /> }}`, `## Related posts`.
 
 ## Talks index (`content/talks/_index.md` + `.es.md`)
 
