@@ -193,12 +193,12 @@ style: |
 
 <div class="kicker">Part 1 · The story</div>
 
-# Then the price<br><span class="g warn">goes up.</span>
+# Then Claude<br><span class="g warn">gets expensive.</span>
 
-<p class="lede">Too much. So the team tries Gemini CLI. It wants GEMINI.md and its own .gemini/ folder.</p>
+<p class="lede">So you move to Gemini CLI. It ignores CLAUDE.md and your .claude/ folder. You start again with GEMINI.md.</p>
 
 <!--
-0:30 · No numbers. Everyone has their own pricing story, let them fill it in. One more tool, one more folder.
+0:30 · No numbers. Everyone has their own pricing story, let them fill it in. Land the loss: weeks of rules, skills and agents, and the new tool reads none of it.
 -->
 
 ---
