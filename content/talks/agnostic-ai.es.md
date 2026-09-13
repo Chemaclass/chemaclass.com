@@ -1,6 +1,6 @@
 +++
 title = "agnostic-ai"
-description = "Una spec, todas las CLI de IA. Escribe tus reglas, skills, agentes, hooks y servidores MCP una vez, y sincronízalos con los ficheros nativos que leen 25 herramientas de IA."
+description = "Una spec, todas las CLI de IA. Escribe reglas, skills, agentes, hooks y servidores MCP una vez, y sincronízalos con los ficheros de 25 herramientas de IA."
 weight = 1
 [taxonomies]
 tags = [ "agnostic-ai", "developer-tools", "ai", "open-source" ]
