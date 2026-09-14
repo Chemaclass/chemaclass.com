@@ -7,7 +7,7 @@ date = 2016-09-01
 tags = []
 +++
 
-{{ youtube(id="TPko2Is166c") }}
+{{ <youtube id="TPko2Is166c" /> }}
 
 ## Solo se vive una vez
 

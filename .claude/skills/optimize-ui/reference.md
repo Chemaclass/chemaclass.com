@@ -102,7 +102,7 @@ transition: transform 0.3s var(--ease-out-expo),
 
 ## Callout Pattern (kudos)
 
-Non-interactive callouts (`sass/components/_kudos.scss`, shortcode `templates/shortcodes/kudos.html`) use an accent bar instead of the card hover pattern:
+Non-interactive callouts (`sass/components/_kudos.scss`, component `templates/components/kudos.html`) use an accent bar instead of the card hover pattern:
 ```scss
 background: rgba(var(--body-bg-rgb), 0.3);
 border-left: 3px solid var(--accent-color);

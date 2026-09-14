@@ -334,8 +334,8 @@ self-discipline.
 
 #### What is XP? (in 2 min)
 
-{{ youtube(id="hbFOwqYIOcU") }}
+{{ <youtube id="hbFOwqYIOcU" /> }}
 
 #### Tech Talk by kent Beck: XP 20 years later
 
-{{ youtube(id="cGuTmOUdFbo") }}
+{{ <youtube id="cGuTmOUdFbo" /> }}

@@ -84,5 +84,5 @@ This approach helps you gain a broader perspective, allowing awareness of both y
 
 ## Animated book summary
 
-{{ youtube(id="-srD1Deh9Xg?t=64") }}
+{{ <youtube id="-srD1Deh9Xg?t=64" /> }}
 

@@ -39,4 +39,4 @@ across the full spectrum of human endeavor and proved their effectiveness.
 
 ### Summary video
 
-{{ youtube(id="QIRk382yJm4") }}
+{{ <youtube id="QIRk382yJm4" /> }}

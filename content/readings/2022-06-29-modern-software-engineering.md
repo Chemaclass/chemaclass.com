@@ -63,4 +63,4 @@ Going deeper into some ideas that were already discussed in the book, like:
 
 A great video explaining the core ideas behind this book by his author:
 
-{{ youtube(id="TRqYQnCfgH8") }}
+{{ <youtube id="TRqYQnCfgH8" /> }}

@@ -105,7 +105,7 @@ Los commits verificados parecen un paso pequeño, pero hacen tu código más con
 
 ### Extra: Configuración completa en español
 
-{{ youtube(id="0DzQBu7U2f4") }}
+{{ <youtube id="0DzQBu7U2f4" /> }}
 
 ---
 

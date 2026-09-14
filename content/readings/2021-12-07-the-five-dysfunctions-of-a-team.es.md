@@ -30,7 +30,7 @@ A lo largo de la historia, Lencioni revela las cinco disfunciones que explican p
 
 ## El modelo de las 5 disfunciones
 
-{{ youtube(id="GCxct4CR-To") }}
+{{ <youtube id="GCxct4CR-To" /> }}
 
 ### 1) Ausencia de confianza
 
@@ -68,4 +68,4 @@ Cuando no hay rendición de cuentas, la gente pone sus necesidades (ego, carrera
 
 ## Video Resumen
 
-{{ youtube(id="Ro0NBgHo_a8") }}
+{{ <youtube id="Ro0NBgHo_a8" /> }}

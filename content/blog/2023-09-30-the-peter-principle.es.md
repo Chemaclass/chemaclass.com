@@ -29,7 +29,7 @@ Si es competente en el nuevo rol, lo ascenderán otra vez. Y seguirá subiendo h
 
 > Hay incentivos en juego. La gente trabaja duro para alcanzar cierta posición o salario. Una vez que lo logra, algunos se relajan. Cuando pierden la pasión, dejan de aprender. No se mantienen al día con los nuevos desarrollos y su trabajo empeora. Para proteger su zona de confort, rechazan cualquier idea o persona nueva que pueda incomodarlos. Los empleados incompetentes suelen estar insatisfechos.
 
-{{ youtube(id="IbFr5DAyZBM") }}
+{{ <youtube id="IbFr5DAyZBM" /> }}
 
 ---
 

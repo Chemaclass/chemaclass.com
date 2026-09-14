@@ -1,9 +1,11 @@
+{% component deep_dive(title: string) %}
 <details class="deep-dive">
   <summary class="deep-dive__header">
     <span class="deep-dive__icon"></span>
-    <span class="deep-dive__title">Deep Dive: {{ title }}</span>
+    <span class="deep-dive__title">Deep Dive: {{ title | escape_html }}</span>
   </summary>
   <div class="deep-dive__content">
     {{ body | markdown | safe }}
   </div>
 </details>
+{% endcomponent deep_dive %}

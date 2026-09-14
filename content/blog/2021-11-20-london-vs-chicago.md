@@ -73,7 +73,7 @@ It's not about choosing one over the other. It's about understanding your contex
 qualities that need to be optimized. London and Chicago each have their pros and cons. The best approach to TDD is an
 integrated adoption of these two schools.
 
-{{ youtube(id="rbSDGr-_UwY") }}
+{{ <youtube id="rbSDGr-_UwY" /> }}
 
 ---
 

@@ -56,4 +56,4 @@ Como puedes ver, un dato curioso es que waterfall y agile comparten un triángul
 
 ## Referencia
 
-{{ youtube(id="MKEyF2dmGaM") }}
+{{ <youtube id="MKEyF2dmGaM" /> }}

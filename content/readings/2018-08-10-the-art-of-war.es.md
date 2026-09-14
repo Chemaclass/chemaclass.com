@@ -52,4 +52,4 @@ Ha influido en el pensamiento militar de Oriente y Occidente, en tácticas de ne
 
 ---
 
-{{ youtube(id="aF2pCff3ocg") }}
+{{ <youtube id="aF2pCff3ocg" /> }}

@@ -97,8 +97,8 @@ El resultado pulido impresiona a la gente. La señal empujada es lo que mejora e
 
 Abre la puerta. Y luego señálala.
 
-{% kudos() %}
+{% <kudos> %}
 Gracias a mi compañero Aike, que inspiró este post en una de nuestras conversaciones sobre hacer visible el trabajo.
-{% end %}
+{% </kudos> %}
 
 ![blog-footer](/images/blog/2026-07-14/footer.webp)

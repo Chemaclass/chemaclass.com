@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block styles %}
-{{ macros::page_styles(css='post.css') }}
+{{ <page_styles css="post.css" /> }}
 {% endblock styles %}
 
 {% block posthead %}
@@ -24,10 +23,10 @@
         {% set section = get_section(path=page.ancestors | last) %}
         <div class="blog-post__top-row">
           <a href="{{ section.permalink }}" class="book-chapter__back">
-            {{ macros::back_arrow() }}
+            {{ <back_arrow /> }}
             {{ section.title | split(pat=" | ") | first }}
           </a>
-          {{ macros::toc_toggle(lang=lang) }}
+          {{ <toc_toggle lang={lang} /> }}
         </div>
 
         <!-- Chapter header -->
@@ -37,19 +36,19 @@
           <div class="book-chapter__meta">
             {% if page.date %}
             <span class="book-chapter__date">
-              {{ macros::calendar_icon() }}
+              {{ <calendar_icon /> }}
               {{ page.date | date(format="%B %Y") }}
             </span>
             {% endif %}
             {% if page.reading_time %}
             <span class="book-chapter__reading-time">
-              {{ macros::clock_icon() }}
+              {{ <clock_icon /> }}
               {{ page.reading_time }} {{ trans(key="minutes_read", lang=lang) }}
             </span>
             {% endif %}
             {% if page.word_count %}
             <span class="book-chapter__word-count">
-              {{ macros::document_icon() }}
+              {{ <document_icon /> }}
               {{ page.word_count }} {{ trans(key="words", lang=lang) }}
             </span>
             {% endif %}
@@ -58,7 +57,7 @@
 
         <!-- Chapter content -->
         <div class="book-chapter__content"
-             {{ macros::highlight_labels(lang=lang) }}>
+             {{ <highlight_labels lang={lang} /> }}>
           {{ page.content | safe }}
         </div>
 
@@ -66,7 +65,7 @@
         <footer class="book-chapter__footer">
           {% set url = config.extra.repo_content_url ~ page.relative_path %}
           <a href="{{ url }}" class="book-chapter__edit-link">
-            {{ macros::edit_icon() }}
+            {{ <edit_icon /> }}
             {{ trans(key="found_typo", lang=lang) }}
           </a>
           <span id="highlight-clear-slot"></span>
@@ -77,7 +76,7 @@
           {% if page.lower %}
             <a href="{{ page.lower.permalink }}" class="book-chapter__nav-link book-chapter__nav-link--prev">
               <span class="book-chapter__nav-label">
-                {{ macros::nav_arrow_left() }}
+                {{ <nav_arrow_left /> }}
                 {{ trans(key="previous_chapter", lang=lang) }}
               </span>
               <span class="book-chapter__nav-title">{{ page.lower.title }}</span>
@@ -89,7 +88,7 @@
             <a href="{{ page.higher.permalink }}" class="book-chapter__nav-link book-chapter__nav-link--next">
               <span class="book-chapter__nav-label">
                 {{ trans(key="next_chapter", lang=lang) }}
-                {{ macros::nav_arrow_right() }}
+                {{ <nav_arrow_right /> }}
               </span>
               <span class="book-chapter__nav-title">{{ page.higher.title }}</span>
             </a>

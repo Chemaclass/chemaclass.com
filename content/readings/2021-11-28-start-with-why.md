@@ -47,4 +47,4 @@ belonging that has little to do with any external incentive or benefit to be gai
 
 ## Video Summary
 
-{{ youtube(id="u4ZoJKF_VuA") }}
+{{ <youtube id="u4ZoJKF_VuA" /> }}

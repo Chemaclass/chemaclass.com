@@ -38,7 +38,7 @@ En [Claude Code](/es/blog/inside-the-claude-folder/), el archivo `CLAUDE.md` en 
 
 Pero `CLAUDE.md` es solo el punto de entrada. Puedes dividir las reglas en archivos enfocados bajo `.claude/rules/`, cada uno apuntando a partes específicas de tu código mediante patrones glob. El agente no solo conoce tus convenciones, está limitado por ellas. Límites de capas, patrones de nomenclatura, dirección de dependencias. Todo versionado junto al código que protegen.
 
-{% deep_dive(title="Reglas con glob en la práctica") %}
+{% <deep_dive title="Reglas con glob en la práctica"> %}
 
 - **`modules/*/Domain/**/*.php`**: Sin imports de framework, sin dependencias de infraestructura, solo PHP plano.
 - **`modules/*/Infrastructure/**/*.php`**: Los controladores se mantienen delgados, los modelos Eloquent en su sitio.
@@ -46,7 +46,7 @@ Pero `CLAUDE.md` es solo el punto de entrada. Puedes dividir las reglas en archi
 
 Cada archivo de reglas tiene un scope limitado a los archivos que le importan. Las reglas de dominio no se activan cuando se edita un controlador.
 
-{% end %}
+{% </deep_dive> %}
 
 ### Preferencias personales
 
@@ -60,7 +60,7 @@ Todos los equipos tienen flujos recurrentes que viven en wikis, runbooks, o en l
 
 Los comandos slash personalizados en `.claude/commands/` convierten estos flujos en instrucciones ejecutables. Cada comando es un archivo markdown que describe un procedimiento de varios pasos. En uno de mis proyectos, cada comando de creación empieza con tests. [TDD](/es/blog/test-driven-development/) incorporado al procedimiento, no dejado a la disciplina.
 
-{% deep_dive(title="Comandos de un proyecto real") %}
+{% <deep_dive title="Comandos de un proyecto real"> %}
 
 **Creación (TDD-first):**
 - **`/create-module`**: Genera un módulo hexagonal con capas de dominio, aplicación e infraestructura.
@@ -74,7 +74,7 @@ Los comandos slash personalizados en `.claude/commands/` convierten estos flujos
 - **`/fix`**: Auto-aplica correcciones de linting y análisis estático.
 - **`/gh-issue`**: De issue de GitHub a implementación y PR en un solo comando.
 
-{% end %}
+{% </deep_dive> %}
 
 Los comandos convierten conocimiento tribal en instrucciones ejecutables. Lo que antes era "pregúntale a Sara cómo creamos un módulo nuevo" se convierte en un comando que cualquiera puede ejecutar.
 
@@ -92,7 +92,7 @@ Las reglas restringen: "no hagas esto, haz siempre aquello." Los skills enseñan
 
 En lugar de un generalista, defines agentes especializados con un rol claro, herramientas específicas, e incluso un modelo diferente según la complejidad del trabajo. No necesitas a tu arquitecto más senior para renombrar una variable.
 
-{% deep_dive(title="Roles de agentes en un proyecto real") %}
+{% <deep_dive title="Roles de agentes en un proyecto real"> %}
 
 - **Explorer** (modelo ligero): Solo lectura. Busca en el código, encuentra archivos, entiende la estructura.
 - **Revisor de código limpio** (modelo intermedio): Violaciones SOLID, code smells, inconsistencias de nomenclatura.
@@ -100,7 +100,7 @@ En lugar de un generalista, defines agentes especializados con un rol claro, her
 - **Revisor de React** (modelo intermedio): Estructura de componentes, estrictez TypeScript, accesibilidad.
 - **Arquitecto de dominio** (modelo más capaz): Decisiones de arquitectura, límites de módulos, patrones DDD.
 
-{% end %}
+{% </deep_dive> %}
 
 > El modelo adecuado para el trabajo adecuado. Rápido y barato para exploración. Capaz y riguroso para arquitectura.
 
@@ -173,7 +173,7 @@ No todo el trabajo se beneficia del paralelismo. La pregunta clave: ¿pueden los
 
 Tener 5-6 tareas por miembro mantiene a todos productivos. Que cada miembro sea dueño de archivos diferentes. Sin aislamiento, dos editando el mismo archivo lleva a sobreescrituras. Los worktrees cambian esto.
 
-{% deep_dive(title="Backend + Frontend en paralelo") %}
+{% <deep_dive title="Backend + Frontend en paralelo"> %}
 
 Imagina una funcionalidad que toca backend y frontend. Después de planificar:
 
@@ -182,7 +182,7 @@ Imagina una funcionalidad que toca backend y frontend. Después de planificar:
 
 No se pisan porque el plan ya definió los límites. Propiedad clara. Sin conflictos de merge. Sin esperas.
 
-{% end %}
+{% </deep_dive> %}
 
 ### Aislamiento con worktrees
 
@@ -226,13 +226,13 @@ Los hooks y git hooks actúan como la última red de seguridad. En mi setup, nad
 
 Los equipos de agentes añaden sus propios hooks: `TeammateIdle` mantiene activos a los miembros inactivos, `TaskCompleted` impide completar tareas prematuramente. Políticas automatizadas que nadie puede saltarse.
 
-{% deep_dive(title="Hooks, permisos y barandillas") %}
+{% <deep_dive title="Hooks, permisos y barandillas"> %}
 
 Los git hooks ejecutan linters, análisis estático y tests antes de cada commit. Claude Code añade sus propios hooks (`.claude/hooks/`): comandos shell que se disparan ante eventos del agente como llamadas a herramientas o escritura de archivos.
 
 `.claude/settings.json` controla lo que los agentes pueden ejecutar. Autoriza herramientas y comandos específicos, deniega operaciones destructivas. Controlas no solo lo que los agentes saben (reglas, skills) sino lo que pueden hacer (permisos). Las reglas definen la cultura. Los permisos definen los límites.
 
-{% end %}
+{% </deep_dive> %}
 
 ### La base importa
 

@@ -33,5 +33,5 @@ Este libro te ayuda a usar tu mente para mejorar tu cuerpo, pero va mucho más a
 
 #### La filosofía del Estoicismo
 
-{{ youtube(id="R9OCA6UFE-0") }}
+{{ <youtube id="R9OCA6UFE-0" /> }}
 

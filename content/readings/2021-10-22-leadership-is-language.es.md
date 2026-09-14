@@ -43,5 +43,5 @@ David presenta seis jugadas que todo líder debería usar para mejorar cómo ope
 
 ## Video Resumen
 
-{{ youtube(id="CQfao96j1fo") }}
+{{ <youtube id="CQfao96j1fo" /> }}
 

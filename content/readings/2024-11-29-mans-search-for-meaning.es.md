@@ -84,5 +84,5 @@ Este enfoque ayuda a ganar perspectiva: ser consciente de tus limitaciones y de 
 
 ## Resumen animado del libro
 
-{{ youtube(id="-srD1Deh9Xg?t=64") }}
+{{ <youtube id="-srD1Deh9Xg?t=64" /> }}
 

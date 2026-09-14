@@ -1,9 +1,8 @@
 {% extends "blog/index.html" %}
 
-{% import "partials/macros.html" as macros %}
 
 {% block styles %}
-{{ macros::page_styles(css='page.css') }}
+{{ <page_styles css="page.css" /> }}
 {% endblock styles %}
 
 {% block posthead %}
@@ -56,7 +55,7 @@
         {% endif %}
 
         {# Year section header #}
-        {% if year != current_year and year is matching("^20[0-9]{2}$") %}
+        {% if year != current_year and year is matching(pat="^20[0-9]{2}$") %}
           {% set_global current_year = year %}
           <div class="book-chapters__year-section">
             <h2>{{ year }}</h2>

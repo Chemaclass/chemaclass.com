@@ -64,7 +64,7 @@ Before giving the agent more power, lock down what it must never do.
 
 `.claude/settings.json` holds three things: **permissions** (allow/deny), **hooks** (event commands), and **env** (variables). A gitignored `settings.local.json` keeps personal overrides separate.
 
-{% deep_dive(title="Permissions example from Phel") %}
+{% <deep_dive title="Permissions example from Phel"> %}
 
 ```json
 {
@@ -83,7 +83,7 @@ Before giving the agent more power, lock down what it must never do.
 }
 ```
 
-{% end %}
+{% </deep_dive> %}
 
 Allow unlocks flow. Deny draws the line agents cannot cross, even when asked politely.
 
@@ -102,7 +102,7 @@ A skill is a markdown file in `.claude/skills/`, a procedure you call with a sla
 - **`/refactor-check`**: [SOLID](/readings/clean-architecture/), naming, architecture smells.
 - **`/release [version]`**: changelog, PHAR, tag, release.
 
-{% deep_dive(title="Skills vs rules vs raw prompting") %}
+{% <deep_dive title="Skills vs rules vs raw prompting"> %}
 
 - **Raw prompt**: _"fix issue #42"_. Agent improvises. Different every time.
 - **Rule**: _"use conventional commits"_. Shapes output, not procedure.
@@ -110,7 +110,7 @@ A skill is a markdown file in `.claude/skills/`, a procedure you call with a sla
 
 Skills turn tribal knowledge into runnable steps anyone can execute.
 
-{% end %}
+{% </deep_dive> %}
 
 > Skills capture what to do. Rules capture what not to do.
 
@@ -118,7 +118,7 @@ Skills turn tribal knowledge into runnable steps anyone can execute.
 
 `CLAUDE.md` is read every session. Rules only when they match. Files in `.claude/rules/` target code areas with glob patterns: the agent loads only what applies, keeping context lean.
 
-{% deep_dive(title="Glob-targeted rules in practice") %}
+{% <deep_dive title="Glob-targeted rules in practice"> %}
 
 Rule files in [Phel](/blog/phel-first-release/):
 
@@ -129,7 +129,7 @@ Rule files in [Phel](/blog/phel-first-release/):
 
 Compiler rules don't fire when editing Phel source. Phel rules don't fire when editing PHP infrastructure.
 
-{% end %}
+{% </deep_dive> %}
 
 Rules are not suggestions. They travel with the code: a convention change and its rule ship in the same commit. No drift, no outdated wiki.
 
@@ -143,7 +143,7 @@ Rules tell the agent what to do. Hooks make sure it happens even if the agent fo
 
 Shell commands triggered by Claude Code events (`PreToolUse`, `PostToolUse`, `Stop`), wired through `settings.json`. In Phel, `PreToolUse` blocks edits to critical files (`build/release.sh`, `.github/*`, `composer.lock`). `PostToolUse` auto-formats PHP via `php-cs-fixer`.
 
-{% deep_dive(title="Hooks wiring") %}
+{% <deep_dive title="Hooks wiring"> %}
 
 ```json
 {
@@ -160,7 +160,7 @@ Shell commands triggered by Claude Code events (`PreToolUse`, `PostToolUse`, `St
 }
 ```
 
-{% end %}
+{% </deep_dive> %}
 
 > Rules are what the agent should know. Hooks are what the system enforces anyway.
 

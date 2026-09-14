@@ -26,6 +26,8 @@ Lint blog posts (and optionally readings) for common issues.
 - No skipped heading levels (e.g. h2 to h4 without h3)
 - Advisory (report as a note, not a failure): the norm is 4 to 7 `## ` (h2) headings; deep_dive-heavy explainers and short reflective essays legitimately fall outside it
 - No em dash (`—`, U+2014) anywhere; no en dash (`–`, U+2013) in prose
+- Every block component opened as `{% <deep_dive title="..."> %}` or `{% <kudos> %}` is closed by its matching `{% </deep_dive> %}` or `{% </kudos> %}`, and no pre-0.23 shortcode syntax is left (`{% end %}`, `youtube(`, `deep_dive(`, `kudos(`, `gist(`)
+- Any other `{{`, `{%` or `{#` in the body sits inside `{% raw %}...{% endraw %}`: the body is rendered as a Tera template
 
 ### Series checks
 - If `series` is set, `series_order` must be set too (and vice versa)

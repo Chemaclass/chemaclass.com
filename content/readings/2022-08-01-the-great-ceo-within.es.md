@@ -307,6 +307,6 @@ El libro enseña a escalar tu negocio de startup a empresa con sistemas de respo
 
 ---
 
-{{ youtube(id="tBimI7QNjBA") }}
+{{ <youtube id="tBimI7QNjBA" /> }}
 
 Matt Mochary habla sobre su método de coaching, cómo entender y superar el miedo primigenio, el síndrome del impostor y más.

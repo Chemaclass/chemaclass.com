@@ -9,6 +9,6 @@ youtube_id = "031gxCvEVTo"
 
 Adrian (guitar) & Chema (bass).
 
-{{ youtube(id="031gxCvEVTo") }}
+{{ <youtube id="031gxCvEVTo" /> }}
 
 <!-- more -->

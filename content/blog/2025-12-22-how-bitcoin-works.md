@@ -30,7 +30,7 @@ This post explains how Bitcoin works under the hood. If you're looking for why B
 
 *For the technically curious.*
 
-{{ youtube(id="bBC-nXj3Ng4") }}
+{{ <youtube id="bBC-nXj3Ng4" /> }}
 
 ## The Blockchain
 
@@ -55,7 +55,7 @@ Before transactions get into a block, they wait in the mempool. Miners pick tran
 
 Every node keeps a complete copy of the blockchain. No single server to hack, no central database to corrupt. To change history, you'd need to rewrite blocks on the majority of nodes worldwide.
 
-{% deep_dive(title="Block Structure") %}
+{% <deep_dive title="Block Structure"> %}
 
 A block has two parts: the **header** (80 bytes) and the **body** (transactions).
 
@@ -71,7 +71,7 @@ The header contains:
 
 Block weight is measured in virtual bytes (vB). The limit is 4 million weight units, roughly 1-1.5 MB of data per block.
 
-{% end %}
+{% </deep_dive> %}
 
 ## Transactions & Cryptography
 
@@ -100,7 +100,7 @@ Most transactions use simple scripts: "whoever can prove they own this public ke
 
 This makes Bitcoin programmable money. For a deeper dive into Script and address types, see [Programmable Money](/blog/programmable-money/).
 
-{% deep_dive(title="Elliptic Curve Cryptography") %}
+{% <deep_dive title="Elliptic Curve Cryptography"> %}
 
 Bitcoin uses **ECDSA** (Elliptic Curve Digital Signature Algorithm) with the **secp256k1** curve. This curve was chosen for efficiency and because it wasn't designed by any government agency (unlike NIST curves), reducing backdoor concerns.
 
@@ -117,7 +117,7 @@ A private key is a random 256-bit integer. The public key is derived by multiply
 - `SIGHASH_SINGLE`: Signs one specific output
 - These can be combined with `ANYONECANPAY` for advanced use cases
 
-{% end %}
+{% </deep_dive> %}
 
 ## Mining & Consensus
 
@@ -145,11 +145,11 @@ Every 2016 blocks (~2 weeks), the network adjusts difficulty to maintain ~10 min
 
 Explore mining pools and hashrate at [mempool.space/mining](https://mempool.space/mining).
 
-{% deep_dive(title="Difficulty and Game Theory") %}
+{% <deep_dive title="Difficulty and Game Theory"> %}
 
 **Difficulty calculation**: The target is a 256-bit number. A valid block hash must be below this target. Lower target = harder puzzle. The network adjusts every 2016 blocks based on how long those blocks actually took vs. the expected 20,160 minutes.
 
-{{ youtube(id="S9JGmA5_unY") }}
+{{ <youtube id="S9JGmA5_unY" /> }}
 
 **Hashrate and security**: Bitcoin's security comes from the cost to rewrite history. With ~500 EH/s (exahashes per second) of hashrate, attacking the network would require controlling majority hashpower. That means billions in hardware and electricity, plus the attack would crash the asset's value.
 
@@ -157,7 +157,7 @@ Explore mining pools and hashrate at [mempool.space/mining](https://mempool.spac
 
 **51% attacks**: If an attacker controlled majority hashrate, they could theoretically double-spend by mining an alternative chain. But the economics make this irrational for large values: the attack destroys the value of what you're stealing.
 
-{% end %}
+{% </deep_dive> %}
 
 ## Addresses & Wallets
 
@@ -210,7 +210,7 @@ When you broadcast a transaction:
 
 Blocks propagate similarly. When a miner finds a valid block, it spreads across the network in seconds.
 
-{% deep_dive(title="Network Architecture") %}
+{% <deep_dive title="Network Architecture"> %}
 
 **Peer discovery**: Nodes find each other through DNS seeds (hardcoded addresses that return active node IPs) and by sharing peer addresses with connected nodes.
 
@@ -218,7 +218,7 @@ Blocks propagate similarly. When a miner finds a valid block, it spreads across 
 
 **Compact blocks** (BIP-152) speed up block propagation. Since nodes already have most transactions in their mempool, blocks can be transmitted as just the header plus short transaction IDs.
 
-{% end %}
+{% </deep_dive> %}
 
 ## Security & Confirmations
 
@@ -233,7 +233,7 @@ More confirmations = harder to reverse. To undo a confirmed transaction, an atta
 - 1 confirmation: In a block. Reversal requires significant hashpower.
 - 6 confirmations: Standard for large amounts. Reversal practically impossible.
 
-{% deep_dive(title="Confirmation Security") %}
+{% <deep_dive title="Confirmation Security"> %}
 
 Satoshi's whitepaper includes the probability calculation. With an attacker controlling fraction `q` of hashpower:
 
@@ -244,7 +244,7 @@ The "6 confirmations" rule assumes a well-funded attacker with substantial but m
 
 **Finality in Bitcoin** is probabilistic, not absolute. But after enough confirmations, the probability of reversal approaches zero for any realistic attacker.
 
-{% end %}
+{% </deep_dive> %}
 
 ## Incentive Alignment
 
@@ -280,7 +280,7 @@ Lightning works by opening "payment channels" between parties. Transactions with
 
 If you want to run your own Lightning node and take full control of your payments, I wrote a guide on how to [Run your LN node on a Raspberry Pi](/blog/run-your-ln-node/).
 
-{% deep_dive(title="How Lightning Works") %}
+{% <deep_dive title="How Lightning Works"> %}
 
 Payment channels use **2-of-2 multisig** addresses. Both parties must sign to move funds. This creates a shared account that neither can steal from.
 
@@ -296,7 +296,7 @@ If anyone fails to cooperate, the timelock expires and funds return. The secret 
 
 **Watchtowers** monitor the blockchain for cheating attempts. If your counterparty tries to broadcast an old channel state, the watchtower can penalize them, even while you're offline.
 
-{% end %}
+{% </deep_dive> %}
 
 ## The Bigger Picture
 
@@ -310,7 +310,7 @@ Every piece supports every other piece. Remove one, and the system weakens. Toge
 
 Whether that matters to you depends on where you live and how much you trust your institutions. But the option exists now. And no one can take it away.
 
-{% deep_dive(title="Rabbit Holes") %}
+{% <deep_dive title="Rabbit Holes"> %}
 
 Bitcoin's technical depth goes far beyond what fits in one post. Here are topics worth exploring if you want to go deeper:
 
@@ -328,4 +328,4 @@ Bitcoin's technical depth goes far beyond what fits in one post. Here are topics
 
 The deeper you go, the more you find.
 
-{% end %}
+{% </deep_dive> %}
