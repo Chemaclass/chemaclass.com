@@ -64,7 +64,7 @@ A pet project is a playground to build real software and train real skills. Put 
 ### My pet projects
 
 **Active:**
-- [agnostic-ai](https://github.com/Chemaclass/agnostic-ai): write AI agents, skills, rules, and hooks once, use them in every AI CLI.
+- [agnostic-ai](https://chemaclass.github.io/agnostic-ai/): write AI agents, skills, rules, and hooks once, use them in every AI CLI.
 - [bashdep](https://github.com/Chemaclass/bashdep): a simple dependency manager for Bash.
 - [phel-snake](https://github.com/Chemaclass/phel-snake): the snake game in your terminal, written in Phel.
 - [edifact-parser](https://github.com/Chemaclass/EdifactParser): a parser for a UN/EDIFACT file format in PHP.

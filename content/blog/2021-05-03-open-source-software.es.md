@@ -64,7 +64,7 @@ Un proyecto personal es un terreno de juego para crear software real y entrenar 
 ### Mis proyectos personales
 
 **Activos:**
-- [agnostic-ai](https://github.com/Chemaclass/agnostic-ai): escribe agents, skills, rules y hooks de IA una vez, úsalos en cada CLI de IA.
+- [agnostic-ai](https://chemaclass.github.io/agnostic-ai/): escribe agents, skills, rules y hooks de IA una vez, úsalos en cada CLI de IA.
 - [bashdep](https://github.com/Chemaclass/bashdep): un gestor de dependencias sencillo para Bash.
 - [phel-snake](https://github.com/Chemaclass/phel-snake): el juego de la serpiente en tu terminal, escrito en Phel.
 - [edifact-parser](https://github.com/Chemaclass/EdifactParser): un parser para formato de archivo UN/EDIFACT en PHP.
