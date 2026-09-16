@@ -865,7 +865,7 @@ entity = "https://en.wikipedia.org/wiki/Artificial_intelligence"
 name = "agnostic-ai"
 desc = "agnostic-ai, one source of truth for the config of every AI coding tool."
 desc_es = "agnostic-ai, una sola fuente de verdad para la config de cada herramienta de IA."
-entity = "https://github.com/Chemaclass/agnostic-ai"
+entity = "https://chemaclass.github.io/agnostic-ai/"
 
 [[extra.tag_descriptions]]
 name = "bashunit"

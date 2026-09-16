@@ -6,7 +6,7 @@ weight = 1
 tags = [ "agnostic-ai", "developer-tools", "ai", "open-source" ]
 [extra]
 subtitle = "Una spec, todas las CLI de IA"
-project_url = "https://github.com/Chemaclass/agnostic-ai"
+project_url = "https://chemaclass.github.io/agnostic-ai/"
 slides = "/slides/agnostic-ai/"
 +++
 

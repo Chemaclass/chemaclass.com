@@ -482,6 +482,32 @@
     <button class="cv-rec-toggle" onclick="this.previousElementSibling.classList.toggle('cv-recommendations--visible'); this.textContent = this.previousElementSibling.classList.contains('cv-recommendations--visible') ? '{% if lang == "es" %}Ver menos{% else %}Show less{% endif %}' : '{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (14)'">{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (14)</button>
   </section>
 
+  <!-- Products -->
+  <section class="cv-section" id="products" aria-labelledby="products-title">
+    <h2 id="products-title"><i class="fa-solid fa-rocket"></i> {% if lang == "es" %}Productos{% else %}Products{% endif %}</h2>
+    <p class="cv-section__lead">{% if lang == "es" %}Productos propios que he diseñado, desarrollado, desplegado y opero de principio a fin.{% else %}My own products, designed, built, deployed, and operated end to end.{% endif %}</p>
+    <div class="cv-projects cv-projects--two">
+      <a href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener" class="cv-project cv-print-hide">
+        <h3><i class="fa-solid fa-dumbbell cv-project__icon"></i> MIAFORO</h3>
+        <p class="cv-project__meta"><i class="fa-solid fa-user"></i> {% if lang == "es" %}Creador y operador{% else %}Creator &amp; operator{% endif %}</p>
+        <p>{% if lang == "es" %}Gestión para gimnasios independientes. Horarios, reservas, cobros, socios y progreso en un solo producto.{% else %}Gym management for independent gyms. Schedules, bookings, payments, members, and progress in one product.{% endif %}</p>
+      </a>
+      <a href="{% if lang == 'es' %}https://puertafria.es/{% else %}https://puertafria.es/en{% endif %}" target="_blank" rel="noopener" class="cv-project cv-print-hide">
+        <h3><i class="fa-solid fa-mobile-screen cv-project__icon"></i> puertafria</h3>
+        <p class="cv-project__meta"><i class="fa-solid fa-user"></i> {% if lang == "es" %}Creador y operador{% else %}Creator &amp; operator{% endif %}</p>
+        <p>{% if lang == "es" %}Una aplicación de venta a puerta fría que convierte un CSV en la lista de a quién llamar hoy.{% else %}A cold-calling app that turns a CSV into the list of who to call today.{% endif %}</p>
+      </a>
+      <div class="cv-project cv-print-only">
+        <h3>MIAFORO</h3>
+        <p>{% if lang == "es" %}Creador y operador. Gestión para gimnasios independientes: horarios, reservas, cobros, socios y progreso.{% else %}Creator &amp; operator. Gym management for independent gyms: schedules, bookings, payments, members, and progress.{% endif %}</p>
+      </div>
+      <div class="cv-project cv-print-only">
+        <h3>puertafria</h3>
+        <p>{% if lang == "es" %}Creador y operador. Aplicación de venta a puerta fría que convierte un CSV en la lista de a quién llamar hoy.{% else %}Creator &amp; operator. Cold-calling app that turns a CSV into the list of who to call today.{% endif %}</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Open Source -->
   <section class="cv-section">
     <h2><a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="cv-section__link cv-print-hide">
@@ -505,7 +531,7 @@
         <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="phel-lang/phel-lang">{{ phel_stars }}</span> · {% if lang == "es" %}Core Maintainer{% else %}Core Maintainer{% endif %}</p>
         <p>{% if lang == "es" %}Lenguaje de programación funcional que compila a PHP. Dialecto de Lisp inspirado en Clojure con estructuras de datos persistentes, macros y REPL.{% else %}Functional programming language that compiles to PHP. A Lisp dialect inspired by Clojure with persistent data structures, macros, and a REPL.{% endif %}</p>
       </a>
-      <a href="https://github.com/Chemaclass/agnostic-ai" target="_blank" rel="noopener" class="cv-project cv-print-hide">
+      <a href="https://chemaclass.github.io/agnostic-ai/" target="_blank" rel="noopener" class="cv-project cv-print-hide">
         <h3>
           <i class="fa-solid fa-robot cv-project__icon"></i>
           agnostic-ai
