@@ -84,7 +84,7 @@
 {% set github_stars = load_data(path="data/github-stars.json", format="json", required=false) %}
 {% set_global phel_stars = 513 %}
 {% set_global bashunit_stars = 413 %}
-{% set_global agnostic_ai_stars = 12 %}
+{% set_global agnostic_ai_stars = 15 %}
 {% if github_stars %}
   {% set_global phel_stars = github_stars.phel | default(value=phel_stars) %}
   {% set_global bashunit_stars = github_stars.bashunit | default(value=bashunit_stars) %}

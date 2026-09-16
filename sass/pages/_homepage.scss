@@ -140,7 +140,7 @@ main:has(.homepage-container) #scroll-to-top {
 
   &--featured {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -525,6 +525,12 @@ main:has(.homepage-container) #scroll-to-top {
     grid-template-columns: 1fr;
   }
 
+  // Stack the showcase cards: three columns leaves the code snippets too narrow
+  // to read without scrolling them sideways.
+  .projects-grid--featured {
+    grid-template-columns: 1fr;
+  }
+
   .featured-card h3 {
     font-size: 1.25rem;
   }
@@ -569,10 +575,6 @@ main:has(.homepage-container) #scroll-to-top {
   .projects-grid {
     flex-direction: column;
     gap: 0.75rem;
-
-    &--featured {
-      grid-template-columns: 1fr;
-    }
   }
 
   .project-card {
