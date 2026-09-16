@@ -46,9 +46,11 @@
 {% set github_stars = load_data(path="data/github-stars.json", format="json", required=false) %}
 {% set_global phel_stars = 513 %}
 {% set_global bashunit_stars = 413 %}
+{% set_global agnostic_ai_stars = 15 %}
 {% if github_stars %}
   {% set_global phel_stars = github_stars.phel | default(value=phel_stars) %}
   {% set_global bashunit_stars = github_stars.bashunit | default(value=bashunit_stars) %}
+  {% set_global agnostic_ai_stars = github_stars.agnostic_ai | default(value=agnostic_ai_stars) %}
 {% endif %}
 <div class="homepage-container">
     <section class="homepage-intro" aria-labelledby="home-title">
@@ -241,6 +243,26 @@
 }</code>
                 </div>
                 <p class="project-card__desc">{{ trans(key="home_project_bashunit_long", lang=lang) }}</p>
+            </a>
+            <a target="_blank" rel="noopener" href="https://agnostic-ai.org/" class="project-card project-card--showcase" data-repo="Chemaclass/agnostic-ai">
+                <div class="project-card__header">
+                    <span class="project-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#a8481a"/><text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" fill="#faf8f4" font-family="ui-monospace, monospace" font-size="30" font-weight="700">a&#8305;</text></svg>
+                    </span>
+                    <div class="project-info">
+                        <div class="project-title">
+                            <h3>agnostic-ai</h3>
+                            <span class="github-stars"><i class="fa-solid fa-star"></i> <span class="star-count">{% if agnostic_ai_stars >= 1000 %}{{ (agnostic_ai_stars / 1000) | round(precision=1) }}k{% else %}{{ agnostic_ai_stars }}{% endif %}</span></span>
+                        </div>
+                        <p class="project-tagline">{{ trans(key="home_project_agnostic_ai_desc", lang=lang) }}</p>
+                    </div>
+                </div>
+                <div class="project-card__snippet">
+                    <code><span class="sn-kw">name</span>: <span class="sn-str">conventional-commits</span>
+<span class="sn-kw">globs</span>: <span class="sn-str">"**/*"</span>
+<span class="sn-fn">Use Conventional Commits.</span></code>
+                </div>
+                <p class="project-card__desc">{{ trans(key="home_project_agnostic_ai_long", lang=lang) }}</p>
             </a>
         </div>
     </section>
