@@ -600,7 +600,7 @@ ${portrait}
 [[b;#3fb950;]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━]
 
 [[;#6e7681;]Your support helps me maintain open source projects like:]
-  [[;#a371f7;]→] bashunit  [[;#6e7681;]https://bashunit.typeddevs.com]
+  [[;#a371f7;]→] bashunit  [[;#6e7681;]https://bashunit.com]
   [[;#a371f7;]→] phel      [[;#6e7681;]https://phel-lang.org]
   [[;#a371f7;]→] gacela    [[;#6e7681;]https://gacela-project.com]
 

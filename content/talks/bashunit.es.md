@@ -6,7 +6,7 @@ weight = 1
 tags = [ "bashunit", "developer-tools", "testing", "open-source" ]
 [extra]
 subtitle = "Testeando tus scripts bash"
-project_url = "https://bashunit.typeddevs.com/"
+project_url = "https://bashunit.com/"
 videos = [
   { id = "SX7iNHaSsF0", name = "bashunit en 5 min", date = "2024-10-29", lang = "en" },
   { id = "X0FhUzX-aI4", name = "Ganador en la categoría de Side Project, 2023: bashunit", date = "2023-12-15", lang = "es" },

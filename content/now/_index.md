@@ -7,6 +7,6 @@ updated_es = "junio 2026"
 +++
 
 - Product Engineer at [Kombo](https://kombo.dev), building the leading unified API for HR, ATS, and Payroll integrations
-- Maintaining [bashunit](https://bashunit.typeddevs.com/) and other open source projects
+- Maintaining [bashunit](https://bashunit.com/) and other open source projects
 - Writing about software craftsmanship, Bitcoin, and leadership
 - Exploring AI-assisted development workflows

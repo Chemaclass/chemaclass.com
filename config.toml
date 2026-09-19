@@ -875,7 +875,7 @@ entity = "https://agnostic-ai.org/"
 name = "bashunit"
 desc = "bashunit, the testing library that brings real assertions to bash scripts."
 desc_es = "bashunit, la librería de testing que trae aserciones de verdad a los scripts bash."
-entity = "https://bashunit.typeddevs.com/"
+entity = "https://bashunit.com/"
 
 [[extra.tag_descriptions]]
 name = "code-review"
