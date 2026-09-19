@@ -35,7 +35,7 @@ Curated groups of posts. Each post stands on its own, and the order below is the
 
 ## Open Source
 
-- [bashunit](https://bashunit.typeddevs.com/): Testing framework for Bash scripts
+- [bashunit](https://bashunit.com/): Testing framework for Bash scripts
 - [Phel](https://phel-lang.org): A Lisp that compiles to PHP
 
 ## Feeds
