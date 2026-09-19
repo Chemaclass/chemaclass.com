@@ -112,7 +112,7 @@
       height: 12px;
       background: var(--accent-color);
       border-radius: 50%;
-      border: 2px solid var(--body-background-color);
+      border: 2px solid var(--body-bg);
     }
   }
 
@@ -469,7 +469,7 @@
           height: 8px;
           background: var(--accent-color);
           border-radius: 50%;
-          border: 2px solid var(--body-background-color);
+          border: 2px solid var(--body-bg);
         }
 
         // Nested list (talk details: title links, videos, slides)

@@ -17,6 +17,13 @@
     --color-secondary: #a2abb3;
     --color-subtitle: #5a6370;
 
+    // Read green, saved amber, destructive red. The bright values these
+    // replaced were picked against the dark theme and failed AA on white:
+    // #22c55e was 2.28:1 as percentage text. These are 5.02, 5.02 and 4.83.
+    --color-read: #15803d;
+    --color-saved: #b45309;
+    --color-danger: #dc2626;
+
     --body-bg: #f7f8fa;
     --body-bg-rgb: 247, 248, 250;
     --body-color: #2a2d32;
@@ -60,6 +67,11 @@
     --table-border-bottom: #3a3f47;
 
     --color-subtitle: #9ba3ae;
+
+    // On a dark background the bright originals pass comfortably, so they stay.
+    --color-read: #22c55e;
+    --color-saved: #f59e0b;
+    --color-danger: #f87171;
 
     --search-input-bg: #22262b;
     --search-bg-selected-item: #282d33;
