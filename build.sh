@@ -78,6 +78,9 @@ python3 scripts/fetch-github-stars.py
 echo "Recording last-modified dates from git..."
 python3 scripts/generate-last-modified.py
 
+echo "Counting talk deliveries..."
+python3 scripts/count-talks-given.py
+
 echo "Building site..."
 zola build "$@"
 
