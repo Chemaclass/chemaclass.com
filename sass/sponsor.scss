@@ -47,12 +47,109 @@
   }
 }
 
+// Hover motion for the cards that carry an icon. The icon's shapes lift and
+// settle in sequence; the card itself stays put, so the page does not twitch
+// when the pointer crosses a grid. Same shape and timing as the pricing cards.
+@keyframes sponsor-icon-lift {
+  0%   { transform: translateY(0); }
+  35%  { transform: translateY(-2px); }
+  65%  { transform: translateY(0.4px); }
+  100% { transform: translateY(0); }
+}
+
+// Section headings shared by the free and money sections
+.sponsor-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-subtitle);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+// Free ways to help
+.sponsor-free {
+  margin-bottom: 3rem;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+
+    @media (max-width: 820px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 420px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1.1rem 1rem;
+    border-radius: 16px;
+    background: var(--search-input-bg);
+    border: 1px solid var(--preview-divider-color);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+
+    svg {
+      color: var(--accent-color);
+      margin-bottom: 0.15rem;
+      transition: color 0.16s ease-out;
+    }
+
+    &:hover {
+      border-color: var(--accent-color);
+      border-bottom: 1px solid var(--accent-color);
+    }
+
+    // Every shape in the icon, not just <path>: three of these four icons are
+    // built from circles too.
+    &:hover svg > * {
+      animation: sponsor-icon-lift 0.46s ease-out both;
+    }
+
+    &:hover svg > :nth-child(2) { animation-delay: 70ms; }
+    &:hover svg > :nth-child(3) { animation-delay: 140ms; }
+    &:hover svg > :nth-child(4) { animation-delay: 210ms; }
+  }
+
+  &__label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    line-height: 1.3;
+  }
+
+  &__desc {
+    font-size: 0.82rem;
+    color: var(--color-subtitle);
+    line-height: 1.45;
+  }
+}
+
 // Impact Stats
+.sponsor-stats-block {
+  margin-bottom: 3.5rem;
+}
+
+.sponsor-stats__lead {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-subtitle);
+  margin: 0 0 0.9rem;
+}
+
 .sponsor-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
-  margin-bottom: 2rem;
 
   @media (max-width: $breakpoint-phone) {
     grid-template-columns: repeat(2, 1fr);
@@ -122,8 +219,6 @@
   border: 1px solid var(--preview-divider-color);
   border-radius: 16px;
   padding: 1.75rem;
-  text-decoration: none;
-  color: inherit;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: var(--shadow-sm);
 
@@ -131,6 +226,12 @@
     grid-template-columns: 1fr;
     gap: 1.25rem;
     padding: 1.25rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
   }
 
   &--bashunit:hover {
@@ -143,12 +244,6 @@
 
   &--agnostic-ai:hover {
     border-color: #ef4444;
-  }
-
-  &__info {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
   }
 
   &__header {
@@ -170,6 +265,12 @@
       width: 100%;
       height: 100%;
     }
+  }
+
+  // The logo lifts as one piece: staggering a brand mark's own paths pulls it
+  // apart.
+  &:hover &__icon {
+    animation: sponsor-icon-lift 0.46s ease-out both;
   }
 
   &__heading {
@@ -216,14 +317,34 @@
     margin: 0 0 1rem;
   }
 
-  &__link {
+  &__links {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: auto;
+  }
+
+  &__link {
+    display: inline-flex;
     align-items: center;
     gap: 0.35rem;
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--accent-color);
-    margin-top: auto;
+    text-decoration: none;
+    // The underline is reserved up front. Painting a border only on hover grows
+    // the links row by 1px, and the card centres its columns, so the whole text
+    // block nudged up under the cursor.
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom-color: currentColor;
+    }
+
+    &--muted {
+      color: var(--color-subtitle);
+      font-weight: 500;
+    }
   }
 
   &__snippet {
@@ -264,11 +385,29 @@
 }
 
 // Donation Options
+.sponsor-money {
+  margin-bottom: 3rem;
+
+  &__note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-subtitle);
+    margin: 1rem 0 0.35rem;
+  }
+
+  &__use {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-subtitle);
+    opacity: 0.85;
+    margin: 0;
+  }
+}
+
 .sponsor-options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin-bottom: 3rem;
 
   > :only-child {
     grid-column: 1 / -1;
@@ -427,11 +566,56 @@
     color: var(--color-subtitle);
     margin: 0;
   }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1.25rem;
+  }
+
+  &__social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 0.95rem;
+    border-radius: 999px;
+    border: 1px solid var(--preview-divider-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-subtitle);
+    text-decoration: none;
+    transition: border-color 0.25s ease, color 0.25s ease;
+
+    i {
+      font-size: 0.95rem;
+      display: inline-block;
+    }
+
+    &:hover {
+      border-color: var(--accent-color);
+      border-bottom: 1px solid var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    &:hover i {
+      animation: sponsor-icon-lift 0.46s ease-out both;
+    }
+  }
 }
 
 // Responsive
 @media (max-width: 500px) {
   .sponsor-hero h1 {
     font-size: 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sponsor-free__item svg > *,
+  .sponsor-project__icon,
+  .sponsor-thanks__social-link i {
+    animation: none !important;
   }
 }
