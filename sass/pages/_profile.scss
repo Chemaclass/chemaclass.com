@@ -370,11 +370,21 @@ $profile-max-width: 920px;
       color: #ef4444;
       background: rgba(239, 68, 68, 0.06);
     }
-  }
 
-  // Favorites list gets a subtle amber left-edge accent.
-  &--favs .profile-list__item {
-    box-shadow: inset 3px 0 0 0 rgba(245, 158, 11, 0.5);
+    // A saved list should read as titles, not as a column of delete buttons, so
+    // the X waits for the pointer. It keeps its space either way, so nothing
+    // reflows. Only where hover exists: on touch there is no hover to reveal it
+    // with. Opacity rather than display, so the button stays tabbable and the
+    // keyboard path reveals it through :focus-within.
+    @media (hover: hover) {
+      opacity: 0;
+      transition: opacity 0.2s ease, color 0.2s ease, background 0.2s ease;
+
+      .profile-list__item:hover &,
+      .profile-list__item:focus-within & {
+        opacity: 1;
+      }
+    }
   }
 }
 
