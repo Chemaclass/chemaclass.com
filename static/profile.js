@@ -280,7 +280,7 @@
           '<span class="profile-tile__label">' + escapeHTML(label) + '</span>' +
           '<span class="profile-tile__pct">' + p + t.pct + '</span>' +
         '</div>' +
-        '<div class="profile-tile__bar"><div class="profile-tile__fill"></div></div>' +
+        '<div class="profile-tile__bar" aria-hidden="true"><div class="profile-tile__fill"></div></div>' +
         '<div class="profile-tile__meta">' +
           '<strong>' + done + '</strong> ' + escapeHTML(t.of) + ' ' +
           '<strong>' + total + '</strong> ' + escapeHTML(t.posts) +
@@ -334,7 +334,7 @@
           '<span class="profile-series__title">' + escapeHTML(titleRaw) + '</span>' +
           '<span class="profile-series__count">' + done + '/' + total + '</span>' +
         '</div>' +
-        '<div class="profile-series__bar"><div class="profile-series__fill"></div></div>';
+        '<div class="profile-series__bar" aria-hidden="true"><div class="profile-series__fill"></div></div>';
       list.appendChild(row);
     });
 
@@ -368,15 +368,17 @@
       return section;
     }
 
-    var cloud = el('div', 'profile-tags');
+    // .tag-chip is the site's own chip, shared with /topics/ and the readings
+    // index. The page used to carry a near-copy of it with a 9px count.
+    var cloud = el('div', 'tag-cloud');
     entries.forEach(function (e) {
       var tagUrl = (es ? '/es' : '') + '/tags/' + encodeURIComponent(e.name) + '/';
       var a = document.createElement('a');
-      a.className = 'profile-tag';
+      a.className = 'tag-chip tag-chip--sm';
       a.href = tagUrl;
       a.innerHTML =
-        '<span class="profile-tag__name">' + escapeHTML(e.name) + '</span>' +
-        '<span class="profile-tag__count">' + e.count + '</span>';
+        '<span class="tag-chip__name">' + escapeHTML(e.name) + '</span>' +
+        '<span class="tag-chip__count">' + e.count + '</span>';
       cloud.appendChild(a);
     });
 

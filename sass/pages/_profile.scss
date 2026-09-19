@@ -5,8 +5,6 @@
 //   - Two accent colors: reading-streak green for progress, favorites amber for stars.
 //   - No chrome when data is empty, just honest empty-state copy.
 
-$profile-green: #22c55e;
-$profile-amber: #f59e0b;
 $profile-max-width: 920px;
 
 .profile-page {
@@ -87,8 +85,18 @@ $profile-max-width: 920px;
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
+  }
 
-    svg { color: $profile-amber; }
+  // Heading icons are neutral. The old rule painted every one of them amber,
+  // which spent the "saved" colour on the topic, series and recent headings
+  // too, so the star stopped meaning anything.
+  &__icon {
+    flex-shrink: 0;
+    color: var(--color-subtitle);
+  }
+
+  &__icon--amber {
+    color: var(--color-saved);
   }
 
   &__hint {
@@ -114,7 +122,7 @@ $profile-max-width: 920px;
 
 .profile-tile {
   --profile-pct: 0%;
-  background: var(--body-background);
+  background: var(--body-bg);
   border: 1px solid var(--preview-divider-color);
   border-radius: 10px;
   padding: 0.9rem 1rem;
@@ -147,7 +155,7 @@ $profile-max-width: 920px;
   &__pct {
     font-variant-numeric: tabular-nums;
     font-weight: 700;
-    color: $profile-green;
+    color: var(--color-read);
   }
 
   &__bar {
@@ -161,7 +169,8 @@ $profile-max-width: 920px;
     display: block;
     width: var(--profile-pct);
     height: 100%;
-    background: linear-gradient(90deg, $profile-green, color-mix(in srgb, $profile-green 70%, white));
+    // A bar is not text, so it keeps the brighter end of the ramp.
+    background: linear-gradient(90deg, var(--color-read), color-mix(in srgb, var(--color-read) 70%, white));
     transition: width 0.6s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
   }
 
@@ -194,11 +203,10 @@ $profile-max-width: 920px;
   transition: background 0.2s ease;
 
   &:hover,
-  &:focus,
   &:focus-visible {
     text-decoration: none;
     border-bottom: none;
-    background: var(--body-background);
+    background: var(--body-bg);
 
     .profile-series__title { color: var(--accent-color); }
   }
@@ -235,63 +243,8 @@ $profile-max-width: 920px;
   display: block;
   width: var(--profile-pct);
   height: 100%;
-  background: $profile-green;
+  background: var(--color-read);
   transition: width 0.6s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
-}
-
-// ---- Tag cloud ----
-// Pill design mirrors .skill-tag on the homepage: 20px radius, soft bg, 1px
-// semi-transparent border, subtle translateY on hover. The count hangs off
-// the right side as a contrast "badge" so the tag name and the number read
-// as one chip with two segments.
-.profile-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 0.6rem;
-}
-
-.profile-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.35rem 0.5rem 0.35rem 0.85rem;
-  border-radius: 20px;
-  background: var(--search-bg-selected-item);
-  border: 1px solid var(--preview-divider-color);
-  color: var(--body-color);
-  font-size: 0.8rem;
-  font-weight: 500;
-  text-decoration: none;
-  line-height: 1.2;
-  transition: border-color 0.2s ease,
-              color 0.2s ease;
-
-  &__name {
-    // Tag name stays the dominant visual, same weight/size across the cloud.
-  }
-
-  &__count {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 1.4em;
-    padding: 0.05rem 0.4rem;
-    border-radius: 999px;
-    background: var(--body-background);
-    color: var(--color-subtitle);
-    font-size: 0.72em;
-    font-weight: 600;
-    font-variant-numeric: tabular-nums;
-  }
-
-  &:hover {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-
-    .profile-tag__count {
-      color: var(--accent-color);
-    }
-  }
 }
 
 // ---- Recently read + favorites ----
@@ -309,7 +262,7 @@ $profile-max-width: 920px;
     gap: 0.5rem;
     border-radius: 8px;
     border: 1px solid var(--preview-divider-color);
-    background: var(--body-background);
+    background: var(--body-bg);
     transition: border-color 0.2s ease;
 
     &:hover {
@@ -333,9 +286,10 @@ $profile-max-width: 920px;
   &__title {
     font-weight: 600;
     color: var(--heading-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 
   &__meta {
@@ -367,8 +321,8 @@ $profile-max-width: 920px;
     transition: color 0.2s ease, background 0.2s ease;
 
     &:hover {
-      color: #ef4444;
-      background: rgba(239, 68, 68, 0.06);
+      color: var(--color-danger);
+      background: color-mix(in srgb, var(--color-danger) 8%, transparent);
     }
 
     // A saved list should read as titles, not as a column of delete buttons, so
@@ -405,7 +359,7 @@ $profile-max-width: 920px;
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
   border: 1px solid var(--preview-divider-color);
-  background: var(--body-background);
+  background: var(--body-bg);
   color: var(--body-color);
   font-size: 0.85rem;
   font-weight: 500;
@@ -418,9 +372,27 @@ $profile-max-width: 920px;
   }
 
   &--danger:hover {
-    border-color: #ef4444;
-    color: #ef4444;
+    border-color: var(--color-danger);
+    color: var(--color-danger);
   }
+}
+
+// The ring from components/_buttons.scss. Only the series row had a focus
+// style, and the tag cloud now inherits .tag-chip's.
+.profile-tile,
+.profile-series__row,
+.profile-list__remove,
+.profile-btn {
+  &:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+  }
+}
+
+// Inside the row's own border, so the ring is not clipped by the next item.
+.profile-list__link:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: -3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -428,7 +400,6 @@ $profile-max-width: 920px;
   .profile-tile__fill,
   .profile-series__fill,
   .profile-list__item,
-  .profile-tag,
   .profile-btn {
     animation: none !important;
     transition: none !important;
@@ -447,5 +418,13 @@ $profile-max-width: 920px;
   .profile-list__meta {
     flex-direction: column;
     gap: 0.1rem;
+  }
+
+  .profile-btn {
+    min-height: 44px;
+  }
+
+  .profile-list__remove {
+    min-width: 44px;
   }
 }
