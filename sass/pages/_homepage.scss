@@ -260,6 +260,13 @@ main:has(.homepage-container) #scroll-to-top {
     margin-bottom: 0.75rem;
     overflow-x: auto;
 
+    pre {
+      margin: 0;
+      background: none;
+      padding: 0;
+      border: 0;
+    }
+
     code {
       display: block;
       font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;

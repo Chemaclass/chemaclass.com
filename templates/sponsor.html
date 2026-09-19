@@ -162,7 +162,7 @@
           </span>
         </div>
         <div class="sponsor-project__snippet">
-          <code>(<span class="sn-kw">ns</span> <span class="sn-fn">app.core</span>)
+          <pre><code>(<span class="sn-kw">ns</span> <span class="sn-fn">app.core</span>)
 
 (<span class="sn-kw">defn</span> <span class="sn-fn">greet</span> [name]
   (<span class="sn-fn">str</span> <span class="sn-str">"Hello, "</span> name <span class="sn-str">"!"</span>))
@@ -170,7 +170,7 @@
 (<span class="sn-kw">def</span> <span class="sn-fn">admins</span>
   (<span class="sn-fn">-&gt;&gt;</span> users
        (<span class="sn-fn">filter</span> <span class="sn-op">#</span>(<span class="sn-fn">=</span> <span class="sn-str">"admin"</span> (<span class="sn-fn">get</span> <span class="sn-op">%</span> <span class="sn-str">:role</span>)))
-       (<span class="sn-fn">map</span> <span class="sn-op">#</span>(greet (<span class="sn-fn">get</span> <span class="sn-op">%</span> <span class="sn-str">:name</span>)))))</code>
+       (<span class="sn-fn">map</span> <span class="sn-op">#</span>(greet (<span class="sn-fn">get</span> <span class="sn-op">%</span> <span class="sn-str">:name</span>)))))</code></pre>
         </div>
       </a>
 
@@ -197,7 +197,7 @@
           </span>
         </div>
         <div class="sponsor-project__snippet">
-          <code><span class="sn-kw">function</span> <span class="sn-fn">set_up</span>() {
+          <pre><code><span class="sn-kw">function</span> <span class="sn-fn">set_up</span>() {
   <span class="sn-kw">export</span> TMP_DIR=<span class="sn-str">"$(mktemp -d)"</span>
 }
 
@@ -207,7 +207,7 @@
 
 <span class="sn-kw">function</span> <span class="sn-fn">test_sum_rejects_text</span>() {
   <span class="sn-fn">assert_exit_code</span> <span class="sn-str">1</span> <span class="sn-str">"$(sum a b)"</span>
-}</code>
+}</code></pre>
         </div>
       </a>
 
@@ -234,14 +234,14 @@
           </span>
         </div>
         <div class="sponsor-project__snippet">
-          <code><span class="sn-cm"># .agnostic-ai/rules/conventional-commits.md</span>
+          <pre><code><span class="sn-cm"># .agnostic-ai/rules/conventional-commits.md</span>
 <span class="sn-op">---</span>
 <span class="sn-kw">name</span>: <span class="sn-str">conventional-commits</span>
 <span class="sn-kw">globs</span>: <span class="sn-str">"**/*"</span>
 <span class="sn-op">---</span>
 <span class="sn-fn">Use Conventional Commits in every message.</span>
 
-<span class="sn-op">$</span> agnostic-ai sync <span class="sn-str">--only claude,codex,cursor</span></code>
+<span class="sn-op">$</span> agnostic-ai sync <span class="sn-str">--only claude,codex,cursor</span></code></pre>
         </div>
       </a>
     </div>

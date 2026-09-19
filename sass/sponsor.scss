@@ -233,6 +233,13 @@
     overflow-x: auto;
     min-width: 0;
 
+    pre {
+      margin: 0;
+      background: none;
+      padding: 0;
+      border: 0;
+    }
+
     code {
       display: block;
       font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
