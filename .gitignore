@@ -8,6 +8,7 @@ static/processed_images/
 static/terminal-fs.json
 data/last-modified.json
 data/github-stars.json
+data/talks-given.json
 static/slides/*/slides.pdf
 
 # Agent worktrees live inside the repo but are separate checkouts
