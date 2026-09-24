@@ -5,6 +5,7 @@
 {% endblock robots %}
 
 {% block posthead %}
+{%- set t = load_data(path="data/i18n/web-development.toml") -%}
 {% set base = config.base_url %}
 {% if lang == 'es' %}{% set_global svc_url = base ~ '/es/services/web-development/' %}{% else %}{% set_global svc_url = base ~ '/services/web-development/' %}{% endif %}
 <script type="application/ld+json">
@@ -15,7 +16,7 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "{% if lang == 'es' %}Inicio{% else %}Home{% endif %}",
+      "name": {{ t.schema.home[lang] | json_encode | safe }},
       "item": "{{ base | safe }}{% if lang == 'es' %}/es/{% else %}/{% endif %}"
     },
     {
@@ -32,15 +33,15 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "{{ svc_url | safe }}#service",
-  "name": "{% if lang == 'es' %}Diseño y desarrollo web para empresas{% else %}Web design and development for small businesses{% endif %}",
-  "serviceType": "{% if lang == 'es' %}Desarrollo web{% else %}Web development{% endif %}",
+  "name": {{ t.schema.service_name[lang] | json_encode | safe }},
+  "serviceType": {{ t.schema.service_type[lang] | json_encode | safe }},
   "url": "{{ svc_url | safe }}",
-  "description": "{% if lang == 'es' %}Webs estáticas rápidas y seguras para empresas y profesionales. Precio cerrado, hosting y dominio incluidos el primer año.{% else %}Fast, secure static websites for businesses and professionals. Fixed price, hosting and domain included for the first year.{% endif %}",
+  "description": {{ t.schema.service_description[lang] | json_encode | safe }},
   "provider": { "@id": "{{ base | safe }}/#person" },
   "availableLanguage": ["en", "es"],
   "areaServed": {
     "@type": "Place",
-    "name": "{% if lang == 'es' %}Remoto, en todo el mundo{% else %}Remote, worldwide{% endif %}"
+    "name": {{ t.schema.area[lang] | json_encode | safe }}
   },
   "offers": {
     "@type": "AggregateOffer",
@@ -55,7 +56,7 @@
       {
         "@type": "Offer",
         "name": "{{ trans(key='svc_static', lang=lang) }}",
-        "description": "{% if lang == 'es' %}Una web rápida y segura, construida a medida y lista para generar contactos.{% else %}A fast, secure website, custom-built and ready to generate enquiries.{% endif %}",
+        "description": {{ t.schema.offer_custom[lang] | json_encode | safe }},
         "priceCurrency": "EUR",
         "priceSpecification": {
           "@type": "PriceSpecification",
@@ -66,7 +67,7 @@
       {
         "@type": "Offer",
         "name": "{{ trans(key='svc_static_blog', lang=lang) }}",
-        "description": "{% if lang == 'es' %}Una web rápida con blog para publicar noticias, artículos y casos de estudio.{% else %}A fast website with a blog for publishing news, articles, and case studies.{% endif %}",
+        "description": {{ t.schema.offer_blog[lang] | json_encode | safe }},
         "priceCurrency": "EUR",
         "priceSpecification": {
           "@type": "PriceSpecification",
@@ -85,34 +86,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "{% if lang == 'es' %}¿Qué determina el precio final?{% else %}What changes the final price?{% endif %}",
+      "name": {{ t.faq.price_q[lang] | json_encode | safe }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{% if lang == 'es' %}El número de páginas, idiomas, funcionalidades especiales y el estado del contenido. Recibes un presupuesto cerrado para el alcance acordado antes de empezar.{% else %}The number of pages, languages, special features, and how ready your content is. You receive a fixed quote for the agreed scope before any work begins.{% endif %}"
+        "text": {{ t.faq.price_a[lang] | json_encode | safe }}
       }
     },
     {
       "@type": "Question",
-      "name": "{% if lang == 'es' %}¿Qué no está incluido?{% else %}What is not included?{% endif %}",
+      "name": {{ t.faq.excluded_q[lang] | json_encode | safe }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{% if lang == 'es' %}No incluye carrito de compra, sincronización de inventario, integraciones con ERP o CRM, lógica de backend a medida, cuentas de usuario ni paneles. Eso requiere una aplicación web en lugar de uno de estos paquetes.{% else %}No shopping cart, inventory sync, ERP or CRM integration, custom backend logic, user accounts, or dashboards. Those require a web app rather than one of these website packages.{% endif %}"
+        "text": {{ t.faq.excluded_a[lang] | json_encode | safe }}
       }
     },
     {
       "@type": "Question",
-      "name": "{% if lang == 'es' %}¿Cuándo puedes empezar y lanzar?{% else %}How quickly can you start and launch?{% endif %}",
+      "name": {{ t.faq.timing_q[lang] | json_encode | safe }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{% if lang == 'es' %}Normalmente puedo empezar en una semana. La mayoría de proyectos se lanzan en menos de un mes.{% else %}I can usually start within a week. Most projects launch in under a month.{% endif %}"
+        "text": {{ t.faq.timing_a[lang] | json_encode | safe }}
       }
     },
     {
       "@type": "Question",
-      "name": "{% if lang == 'es' %}¿Qué ocurre después del lanzamiento?{% else %}What happens after launch?{% endif %}",
+      "name": {{ t.faq.after_q[lang] | json_encode | safe }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{% if lang == 'es' %}La web, el dominio y el código fuente son tuyos y puedo trasladarlos a otro proveedor sin coste. El mantenimiento opcional cubre cambios menores; los cambios importantes se presupuestan por separado.{% else %}The website, domain, and source code are yours, and I can transfer them to another provider at no cost. Optional care covers minor changes; substantial changes are quoted separately.{% endif %}"
+        "text": {{ t.faq.after_a[lang] | json_encode | safe }}
       }
     }
   ]

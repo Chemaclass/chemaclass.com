@@ -9,26 +9,27 @@
 {% endblock styles %}
 
 {% block content %}
+{%- set t = load_data(path="data/i18n/web-development.toml") -%}
 <article class="web-development-sales">
   <section class="sales-hero" id="top">
     <div class="sales-hero__copy">
       <span class="sales-eyebrow">{{ trans(key='svc_price_from_label', lang=lang) }} {{ trans(key='svc_price_from_simple', lang=lang) }}</span>
-      <h1>{% if lang == "es" %}Diseño de páginas web para empresas, online en menos de un mes{% else %}Website design for small businesses, live in under a month{% endif %}</h1>
-      <p class="sales-hero__lead">{% if lang == "es" %}Webs rápidas y seguras para empresas y autónomos. Hablas conmigo desde la primera llamada hasta el día que sale online. Sin intermediarios.{% else %}Fast, secure websites for small businesses and independent professionals. You talk to me from the first call to the day it goes live. No middlemen.{% endif %}</p>
+      <h1>{{ t.hero.title[lang] | safe }}</h1>
+      <p class="sales-hero__lead">{{ t.hero.lead[lang] | safe }}</p>
       <a class="sales-button sales-button--primary" href="#quote" data-quote-cta>
-        {% if lang == "es" %}Pide tu presupuesto{% else %}Get a fixed quote{% endif %} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        {{ t.cta.quote[lang] | safe }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
       </a>
-      <p class="sales-hero__microcopy">{% if lang == "es" %}Te respondo en un día laborable. La primera llamada es gratis.{% else %}I reply within one working day. The first call is free.{% endif %}</p>
+      <p class="sales-hero__microcopy">{{ t.hero.reply_note[lang] | safe }}</p>
     </div>
 
-    <aside class="sales-hero-proof" data-proof-showcase aria-label="{% if lang == 'es' %}Proyectos seleccionados{% else %}Selected projects{% endif %}">
+    <aside class="sales-hero-proof" data-proof-showcase aria-label="{{ t.proof.label[lang] | safe }}">
       <div class="sales-hero-proof__slides" aria-live="polite">
         <article class="sales-hero-proof__slide sales-hero-proof__slide--windmill" data-proof-slide>
-          <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente{% else %}Client website{% endif %}</span>
-          <a href="{% if lang == 'es' %}https://windmuehle-tuendern.de/es/{% else %}https://windmuehle-tuendern.de/en/{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la web de Windmill Tündern{% else %}View the Windmill Tündern website{% endif %}">
+          <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
+          <a href="{{ t.link.windmill[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_windmill[lang] | safe }}">
             <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="Windmill Tündern website" width="720" height="450">
           </a>
-          <blockquote>{% if lang == "es" %}“Por fin tenemos la presencia online que nuestro molino de 140 años merece.”{% else %}“We finally have the online presence our 140-year-old mill deserves.”{% endif %}</blockquote>
+          <blockquote>{{ t.quote.windmill[lang] | safe }}</blockquote>
           <div class="sales-hero-proof__person">
             <img src="/images/testimonials/dirk-windmuehle.webp" alt="" width="36" height="36">
             <span><strong>Dirk</strong> · Windmill Tündern</span>
@@ -36,11 +37,11 @@
         </article>
 
         <article class="sales-hero-proof__slide sales-hero-proof__slide--teina" data-proof-slide hidden>
-          <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente{% else %}Client website{% endif %}</span>
-          <a href="https://teina.es" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la web de Teína{% else %}View the Teína website{% endif %}">
+          <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
+          <a href="https://teina.es" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_teina[lang] | safe }}">
             <img src="/images/portfolio/teina-sample.webp" alt="Teína website" loading="lazy" width="720" height="450">
           </a>
-          <blockquote>{% if lang == "es" %}“Exactamente lo que necesitábamos, con una sección de conciertos perfecta para que los fans sigan la agenda.”{% else %}“Exactly what we needed, with a concerts section our fans love to follow.”{% endif %}</blockquote>
+          <blockquote>{{ t.quote.teina[lang] | safe }}</blockquote>
           <div class="sales-hero-proof__person">
             <img src="/images/testimonials/adrian-teina.webp" alt="" loading="lazy" width="36" height="36">
             <span><strong>Adrián</strong> · Teína</span>
@@ -48,121 +49,121 @@
         </article>
 
         <article class="sales-hero-proof__slide sales-hero-proof__slide--sandoval" data-proof-slide hidden>
-          <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente{% else %}Client website{% endif %}</span>
-          <a href="{% if lang == 'es' %}https://fco-sandoval-gomez.es/{% else %}https://fco-sandoval-gomez.es/en/{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la web de Fco Sandoval Gómez{% else %}View the Fco Sandoval Gómez website{% endif %}">
+          <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
+          <a href="{{ t.link.fco[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_fco[lang] | safe }}">
             <img src="/images/portfolio/fco-sandoval-gomez-sample.webp" alt="Fco Sandoval Gómez website" loading="lazy" width="720" height="450">
           </a>
-          <blockquote>{% if lang == "es" %}“Un portfolio rápido y limpio para compartir mi trabajo, investigación y publicaciones sin fricciones.”{% else %}“A fast, clean portfolio to share my work, research, and publications seamlessly.”{% endif %}</blockquote>
+          <blockquote>{{ t.quote.fco[lang] | safe }}</blockquote>
           <div class="sales-hero-proof__person">
             <img src="/images/testimonials/fco-sandoval.webp" alt="" loading="lazy" width="36" height="36">
-            <span><strong>Francisco</strong> · {% if lang == "es" %}Arquitecto{% else %}Architect{% endif %}</span>
+            <span><strong>Francisco</strong> · {{ t.quote.fco_role[lang] | safe }}</span>
           </div>
         </article>
 
         <article class="sales-hero-proof__slide sales-hero-proof__slide--dkrisna" data-proof-slide hidden>
-          <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente{% else %}Client website{% endif %}</span>
-          <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la web de D'Krisna{% else %}View the D'Krisna website{% endif %}">
+          <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
+          <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_dkrisna[lang] | safe }}">
             <img src="/images/portfolio/dkrisna-sample.webp" alt="D'Krisna website" loading="lazy" width="720" height="450">
           </a>
-          <p class="sales-hero-proof__summary">{% if lang == "es" %}Seis páginas en dos idiomas, con servicios, reseñas y reservas.{% else %}Six pages in two languages, with services, reviews and booking.{% endif %}</p>
+          <p class="sales-hero-proof__summary">{{ t.proof.dkrisna_summary[lang] | safe }}</p>
           <div class="sales-hero-proof__project">
             <span class="sales-hero-proof__mark" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            <span><strong>D'Krisna</strong> · {% if lang == "es" %}La diseñé y la hice yo{% else %}I designed and built it{% endif %}</span>
+            <span><strong>D'Krisna</strong> · {{ t.proof.dkrisna_credit[lang] | safe }}</span>
           </div>
         </article>
 
         <article class="sales-hero-proof__slide sales-hero-proof__slide--postcard" data-proof-slide hidden>
-          <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente{% else %}Client website{% endif %}</span>
-          <a href="https://postcardfromtheroad.eu" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la web de Postcard from the Road{% else %}View the Postcard from the Road website{% endif %}">
+          <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
+          <a href="https://postcardfromtheroad.eu" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_postcard[lang] | safe }}">
             <img src="/images/portfolio/postcardfromtheroad-sample.webp" alt="Postcard from the Road website" loading="lazy" width="720" height="450">
           </a>
-          <p class="sales-hero-proof__summary">{% if lang == "es" %}Blog de viajes con más de 50 artículos, buscador y galerías fotográficas.{% else %}A travel blog with more than 50 articles, search, and photo galleries.{% endif %}</p>
+          <p class="sales-hero-proof__summary">{{ t.proof.postcard_summary[lang] | safe }}</p>
           <div class="sales-hero-proof__project">
             <span class="sales-hero-proof__mark" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            <span><strong>Postcard from the Road</strong> · {% if lang == "es" %}La hice yo{% else %}I built it{% endif %}</span>
+            <span><strong>Postcard from the Road</strong> · {{ t.proof.postcard_credit[lang] | safe }}</span>
           </div>
         </article>
 
         <article class="sales-hero-proof__slide sales-hero-proof__slide--miaforo" data-proof-slide hidden>
-          <span class="sales-hero-proof__label">{% if lang == "es" %}Producto propio{% else %}My own product{% endif %}</span>
-          <a href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la aplicación MIAFORO{% else %}View the MIAFORO application{% endif %}">
+          <span class="sales-hero-proof__label">{{ t.proof.own_product[lang] | safe }}</span>
+          <a href="{{ t.link.miaforo[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_miaforo[lang] | safe }}">
             <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="1600" height="1000">
           </a>
-          <p class="sales-hero-proof__summary">{% if lang == "es" %}Reservas, cobros, socios y progreso para gimnasios independientes.{% else %}Bookings, payments, members, and progress for independent gyms.{% endif %}</p>
+          <p class="sales-hero-proof__summary">{{ t.proof.miaforo_summary[lang] | safe }}</p>
           <div class="sales-hero-proof__project">
             <span class="sales-hero-proof__mark" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
-            <span><strong>MIAFORO</strong> · {% if lang == "es" %}La hice y la mantengo yo{% else %}I built it and I run it{% endif %}</span>
+            <span><strong>MIAFORO</strong> · {{ t.proof.own_credit[lang] | safe }}</span>
           </div>
         </article>
 
         <article class="sales-hero-proof__slide sales-hero-proof__slide--puertafria" data-proof-slide hidden>
-          <span class="sales-hero-proof__label">{% if lang == "es" %}Producto propio{% else %}My own product{% endif %}</span>
-          <a href="{% if lang == 'es' %}https://puertafria.es/{% else %}https://puertafria.es/en{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la aplicación puertafria{% else %}View the puertafria application{% endif %}">
+          <span class="sales-hero-proof__label">{{ t.proof.own_product[lang] | safe }}</span>
+          <a href="{{ t.link.puertafria[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_puertafria[lang] | safe }}">
             <img src="/images/portfolio/puertafria-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="puertafria sales app" loading="lazy" width="1204" height="1101">
           </a>
-          <p class="sales-hero-proof__summary">{% if lang == "es" %}Subes un CSV y te dice a quién llamar hoy.{% else %}Upload a CSV and it tells you who to call today.{% endif %}</p>
+          <p class="sales-hero-proof__summary">{{ t.proof.puertafria_summary[lang] | safe }}</p>
           <div class="sales-hero-proof__project">
             <span class="sales-hero-proof__mark" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
-            <span><strong>puertafria</strong> · {% if lang == "es" %}La hice y la mantengo yo{% else %}I built it and I run it{% endif %}</span>
+            <span><strong>puertafria</strong> · {{ t.proof.own_credit[lang] | safe }}</span>
           </div>
         </article>
       </div>
 
       <div class="sales-hero-proof__nav">
-        <button type="button" data-proof-previous aria-label="{% if lang == 'es' %}Proyecto anterior{% else %}Previous project{% endif %}"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
-        <div class="sales-hero-proof__dots" aria-label="{% if lang == 'es' %}Elegir proyecto{% else %}Choose a project{% endif %}">
+        <button type="button" data-proof-previous aria-label="{{ t.proof.previous[lang] | safe }}"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+        <div class="sales-hero-proof__dots" aria-label="{{ t.proof.choose[lang] | safe }}">
           {% for number in range(end=7) %}
-          <button type="button" data-proof-dot="{{ number }}" aria-label="{% if lang == 'es' %}Mostrar proyecto {{ number + 1 }}{% else %}Show project {{ number + 1 }}{% endif %}"{% if number == 0 %} class="is-active" aria-current="true"{% endif %}></button>
+          <button type="button" data-proof-dot="{{ number }}" aria-label="{{ t.proof.show[lang] | replace(from="{n}", to=(number + 1) ~ "") | safe }}"{% if number == 0 %} class="is-active" aria-current="true"{% endif %}></button>
           {% endfor %}
         </div>
         <span class="sales-hero-proof__count" data-proof-count aria-live="off">1 / 7</span>
-        <button type="button" data-proof-next aria-label="{% if lang == 'es' %}Proyecto siguiente{% else %}Next project{% endif %}"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+        <button type="button" data-proof-next aria-label="{{ t.proof.next[lang] | safe }}"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
       </div>
     </aside>
   </section>
 
   {% set lp = '' %}{% if lang == 'es' %}{% set lp = '/es' %}{% endif %}
-  <div class="sales-trust-strip" aria-label="{% if lang == 'es' %}Garantías del servicio{% else %}Service assurances{% endif %}">
+  <div class="sales-trust-strip" aria-label="{{ t.trust.label[lang] | safe }}">
     {# The only in-content internal link on the page. Someone about to wire
        four figures to one person can go read who that person is. #}
-    <span><i class="fa-solid fa-user" aria-hidden="true"></i> <a href="{{ lp }}/cv/">{% if lang == "es" %}Programador senior{% else %}Senior developer{% endif %}</a></span>
-    <span><i class="fa-solid fa-file" aria-hidden="true"></i> {% if lang == "es" %}Presupuesto cerrado{% else %}Fixed quote{% endif %}</span>
-    <span><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> {% if lang == "es" %}Primer año incluido{% else %}Year 1 included{% endif %}</span>
-    <span><i class="fa-solid fa-code" aria-hidden="true"></i> {% if lang == "es" %}El código es tuyo{% else %}You own the code{% endif %}</span>
+    <span><i class="fa-solid fa-user" aria-hidden="true"></i> <a href="{{ lp }}/cv/">{{ t.trust.senior[lang] | safe }}</a></span>
+    <span><i class="fa-solid fa-file" aria-hidden="true"></i> {{ t.trust.fixed_quote[lang] | safe }}</span>
+    <span><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> {{ t.trust.year_one[lang] | safe }}</span>
+    <span><i class="fa-solid fa-code" aria-hidden="true"></i> {{ t.trust.own_code[lang] | safe }}</span>
   </div>
 
 
   <section class="sales-work" id="work" aria-labelledby="work-title">
     <div class="sales-section-heading">
-      <span class="sales-eyebrow">{% if lang == "es" %}Webs que ya están online{% else %}Websites already online{% endif %}</span>
-      <h2 id="work-title">{% if lang == "es" %}Ejemplos de páginas web que he hecho{% else %}Websites I have built{% endif %}</h2>
+      <span class="sales-eyebrow">{{ t.work.eyebrow[lang] | safe }}</span>
+      <h2 id="work-title">{{ t.work.title[lang] | safe }}</h2>
     </div>
     <div class="sales-work-grid">
       <article class="sales-work-card">
         <img src="/images/portfolio/dkrisna-sample.webp" alt="D'Krisna website" loading="lazy" width="720" height="450">
         <div class="sales-work-card__body">
-          <span class="sales-work-card__type">{% if lang == "es" %}Web a Medida{% else %}Custom Website{% endif %}</span>
+          <span class="sales-work-card__type">{{ t.package.custom[lang] | safe }}</span>
           <h3>D'Krisna</h3>
-          <p>{% if lang == "es" %}Los clientes del salón ven los servicios, leen reseñas y reservan. Seis páginas en dos idiomas.{% else %}Salon customers see the services, read reviews and book. Six pages in two languages.{% endif %}</p>
-          <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer">{% if lang == "es" %}Ver web{% else %}View live website{% endif %} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <p>{{ t.work.dkrisna[lang] | safe }}</p>
+          <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer">{{ t.work.view[lang] | safe }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </div>
       </article>
       <article class="sales-work-card">
         <img src="/images/portfolio/fco-sandoval-gomez-sample.webp" alt="Fco Sandoval Gómez website" loading="lazy" width="720" height="450">
         <div class="sales-work-card__body">
-          <span class="sales-work-card__type">{% if lang == "es" %}Web + Blog{% else %}Website + Blog{% endif %}</span>
+          <span class="sales-work-card__type">{{ t.package.blog[lang] | safe }}</span>
           <h3>Fco Sandoval Gómez</h3>
-          <p>{% if lang == "es" %}El portfolio de un arquitecto e investigador. Tres idiomas y un buscador de proyectos y publicaciones.{% else %}The portfolio of an architect and researcher. Three languages and a search for projects and publications.{% endif %}</p>
-          <a href="{% if lang == 'es' %}https://fco-sandoval-gomez.es/{% else %}https://fco-sandoval-gomez.es/en/{% endif %}" target="_blank" rel="noopener noreferrer">{% if lang == "es" %}Ver web{% else %}View live website{% endif %} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <p>{{ t.work.fco[lang] | safe }}</p>
+          <a href="{{ t.link.fco[lang] | safe }}" target="_blank" rel="noopener noreferrer">{{ t.work.view[lang] | safe }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </div>
       </article>
       <article class="sales-work-card sales-work-card--focus-bottom">
         <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="Windmill Tündern website" loading="lazy" width="720" height="450">
         <div class="sales-work-card__body">
-          <span class="sales-work-card__type">{% if lang == "es" %}Web + Blog{% else %}Website + Blog{% endif %}</span>
+          <span class="sales-work-card__type">{{ t.package.blog[lang] | safe }}</span>
           <h3>Windmill Tündern</h3>
-          <p>{% if lang == "es" %}La restauración de un molino, contada a vecinos y donantes. Historia, noticias y cómo colaborar, en tres idiomas.{% else %}A windmill restoration, told to neighbors and donors. History, news and how to help, in three languages.{% endif %}</p>
-          <a href="{% if lang == 'es' %}https://windmuehle-tuendern.de/es/{% else %}https://windmuehle-tuendern.de/en/{% endif %}" target="_blank" rel="noopener noreferrer">{% if lang == "es" %}Ver web{% else %}View live website{% endif %} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <p>{{ t.work.windmill[lang] | safe }}</p>
+          <a href="{{ t.link.windmill[lang] | safe }}" target="_blank" rel="noopener noreferrer">{{ t.work.view[lang] | safe }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </div>
       </article>
     </div>
@@ -170,26 +171,26 @@
 
   <section class="sales-testimonials" id="testimonials" aria-labelledby="testimonials-title">
     <div class="sales-section-heading">
-      <span class="sales-eyebrow">{% if lang == "es" %}Clientes reales{% else %}Real clients{% endif %}</span>
-      <h2 id="testimonials-title">{% if lang == "es" %}Opiniones de mis clientes{% else %}What my clients say{% endif %}</h2>
+      <span class="sales-eyebrow">{{ t.testimonials.eyebrow[lang] | safe }}</span>
+      <h2 id="testimonials-title">{{ t.testimonials.title[lang] | safe }}</h2>
     </div>
     <div class="sales-testimonial-grid">
       <blockquote class="sales-testimonial">
-        <p>{% if lang == "es" %}“Exactamente lo que necesitábamos, con una sección de conciertos perfecta para que los fans sigan la agenda.”{% else %}“Exactly what we needed, with a concerts section our fans love to follow.”{% endif %}</p>
+        <p>{{ t.quote.teina[lang] | safe }}</p>
         <footer>
           <img src="/images/testimonials/adrian-teina.webp" alt="" loading="lazy" width="40" height="40">
           <span><strong>Adrián</strong> · Teína</span>
         </footer>
       </blockquote>
       <blockquote class="sales-testimonial">
-        <p>{% if lang == "es" %}“Un portfolio rápido y limpio para compartir mi trabajo, investigación y publicaciones sin fricciones.”{% else %}“A fast, clean portfolio to share my work, research, and publications seamlessly.”{% endif %}</p>
+        <p>{{ t.quote.fco[lang] | safe }}</p>
         <footer>
           <img src="/images/testimonials/fco-sandoval.webp" alt="" loading="lazy" width="40" height="40">
-          <span><strong>Francisco</strong> · {% if lang == "es" %}Arquitecto{% else %}Architect{% endif %}</span>
+          <span><strong>Francisco</strong> · {{ t.quote.fco_role[lang] | safe }}</span>
         </footer>
       </blockquote>
       <blockquote class="sales-testimonial">
-        <p>{% if lang == "es" %}“Por fin tenemos la presencia online que nuestro molino de 140 años merece.”{% else %}“We finally have the online presence our 140-year-old mill deserves.”{% endif %}</p>
+        <p>{{ t.quote.windmill[lang] | safe }}</p>
         <footer>
           <img src="/images/testimonials/dirk-windmuehle.webp" alt="" loading="lazy" width="40" height="40">
           <span><strong>Dirk</strong> · Windmill Tündern</span>
@@ -200,21 +201,21 @@
 
   <section class="sales-offer" id="prices" aria-labelledby="options-title">
     <div class="sales-section-heading">
-      <span class="sales-eyebrow">{% if lang == "es" %}Elige según cuánto cambie tu contenido{% else %}Choose by how often your content changes{% endif %}</span>
-      <h2 id="options-title">{% if lang == "es" %}Cuánto cuesta una página web{% else %}How much a website costs{% endif %}</h2>
+      <span class="sales-eyebrow">{{ t.pricing.eyebrow[lang] | safe }}</span>
+      <h2 id="options-title">{{ t.pricing.title[lang] | safe }}</h2>
     </div>
 
     <div class="sales-includes">
-      <h3>{% if lang == "es" %}Todas las webs incluyen{% else %}Every website includes{% endif %}</h3>
+      <h3>{{ t.pricing.includes_title[lang] | safe }}</h3>
       <ul>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}Diseño responsive a medida{% else %}Custom responsive design{% endif %}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}SEO básico{% else %}Basic SEO{% endif %}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}HTTPS{% else %}HTTPS{% endif %}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}Carga en menos de un segundo{% else %}Loads in under a second{% endif %}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}Vista previa desde el primer día{% else %}Preview link from day one{% endif %}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}Ayuda en el lanzamiento{% else %}Help on launch day{% endif %}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}Primer año de hosting, dominio y soporte{% else %}First year of hosting, domain and support{% endif %}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}Te llevas el código cuando quieras{% else %}Take your code whenever you want{% endif %}</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_design[lang] | safe }}</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_seo[lang] | safe }}</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_https[lang] | safe }}</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_speed[lang] | safe }}</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_preview[lang] | safe }}</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_launch[lang] | safe }}</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_year_one[lang] | safe }}</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_code[lang] | safe }}</li>
       </ul>
     </div>
 
@@ -222,49 +223,49 @@
       <article class="sales-package sales-package--recommended">
         <div class="sales-package__topline">
           <span class="sales-package__icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span>
-          <span class="sales-package__badge">{% if lang == "es" %}Recomendada{% else %}Recommended{% endif %}</span>
+          <span class="sales-package__badge">{{ t.pricing.recommended[lang] | safe }}</span>
         </div>
-        <h3>{% if lang == "es" %}Web a Medida{% else %}Custom Website{% endif %}</h3>
-        <p class="sales-package__fit">{% if lang == "es" %}Para contenido que cambia pocas veces al año.{% else %}For content that changes a few times a year.{% endif %}</p>
+        <h3>{{ t.package.custom[lang] | safe }}</h3>
+        <p class="sales-package__fit">{{ t.pricing.custom_fit[lang] | safe }}</p>
         <p class="sales-package__price"><span class="sales-package__price-from">{{ trans(key='svc_price_from_label', lang=lang) }}</span> {{ trans(key='svc_price_from_simple', lang=lang) }}</p>
-        <p class="sales-package__price-note">{% if lang == "es" %}Pago único. Presupuesto cerrado antes de empezar.{% else %}One-time project fee. Fixed quote before work begins.{% endif %}</p>
+        <p class="sales-package__price-note">{{ t.pricing.price_note[lang] | safe }}</p>
         <ul class="sales-package__uses">
-          <li>{% if lang == "es" %}Webs corporativas{% else %}Company websites{% endif %}</li>
+          <li>{{ t.pricing.custom_use_company[lang] | safe }}</li>
           <li>Landing pages</li>
           <li>Portfolios</li>
-          <li>{% if lang == "es" %}Catálogos de producto{% else %}Product catalogues{% endif %}</li>
+          <li>{{ t.pricing.custom_use_catalogue[lang] | safe }}</li>
         </ul>
-        <p class="sales-package__consideration"><strong>{% if lang == "es" %}Actualizaciones:{% else %}Content updates:{% endif %}</strong> {% if lang == "es" %}Envíamelas cuando las necesites.{% else %}Send them to me when you need them.{% endif %}</p>
+        <p class="sales-package__consideration"><strong>{{ t.pricing.updates_label[lang] | safe }}</strong> {{ t.pricing.custom_updates[lang] | safe }}</p>
         <div class="sales-package__ongoing">
-          <strong>{% if lang == "es" %}Del año 2 en adelante{% else %}Year 2 onwards{% endif %}</strong>
-          <span>{% set yearly = config.extra.pricing_static_hosting + config.extra.pricing_domain %}{% if lang == "es" %}{{ yearly }} €/año hosting + dominio{% else %}€{{ yearly }}/year hosting + domain{% endif %}</span>
-          <span>{% if lang == "es" %}Mantenimiento opcional: {{ config.extra.pricing_static_maintenance }} €/año{% else %}Optional care: €{{ config.extra.pricing_static_maintenance }}/year{% endif %}</span>
+          <strong>{{ t.pricing.year_two[lang] | safe }}</strong>
+          <span>{% set yearly = config.extra.pricing_static_hosting + config.extra.pricing_domain %}{{ t.pricing.yearly[lang] | replace(from="{price}", to=yearly ~ "") | safe }}</span>
+          <span>{{ t.pricing.care[lang] | replace(from="{price}", to=config.extra.pricing_static_maintenance ~ "") | safe }}</span>
         </div>
-        <a class="sales-button sales-button--primary sales-button--full" href="#quote" data-quote-cta data-package="{% if lang == 'es' %}Web a Medida{% else %}Custom Website{% endif %}">{% if lang == "es" %}Pide tu presupuesto{% else %}Get a fixed quote{% endif %}</a>
+        <a class="sales-button sales-button--primary sales-button--full" href="#quote" data-quote-cta data-package="{{ t.package.custom[lang] | safe }}">{{ t.cta.quote[lang] | safe }}</a>
       </article>
 
       <article class="sales-package">
         <div class="sales-package__topline">
           <span class="sales-package__icon sales-package__icon--purple"><i class="fa-solid fa-newspaper" aria-hidden="true"></i></span>
-          <span class="sales-package__badge sales-package__badge--neutral">{% if lang == "es" %}Para publicar cada mes{% else %}For monthly publishing{% endif %}</span>
+          <span class="sales-package__badge sales-package__badge--neutral">{{ t.pricing.blog_badge[lang] | safe }}</span>
         </div>
-        <h3>{% if lang == "es" %}Web + Blog{% else %}Website + Blog{% endif %}</h3>
-        <p class="sales-package__fit">{% if lang == "es" %}Para publicar algo nuevo cada mes.{% else %}For publishing something new every month.{% endif %}</p>
+        <h3>{{ t.package.blog[lang] | safe }}</h3>
+        <p class="sales-package__fit">{{ t.pricing.blog_fit[lang] | safe }}</p>
         <p class="sales-package__price"><span class="sales-package__price-from">{{ trans(key='svc_price_from_label', lang=lang) }}</span> {{ trans(key='svc_price_from_pro', lang=lang) }}</p>
-        <p class="sales-package__price-note">{% if lang == "es" %}Pago único. Presupuesto cerrado antes de empezar.{% else %}One-time project fee. Fixed quote before work begins.{% endif %}</p>
+        <p class="sales-package__price-note">{{ t.pricing.price_note[lang] | safe }}</p>
         <ul class="sales-package__uses">
-          <li>{% if lang == "es" %}Blogs de empresa{% else %}Company blogs{% endif %}</li>
-          <li>{% if lang == "es" %}Noticias y novedades{% else %}News and updates{% endif %}</li>
-          <li>{% if lang == "es" %}Casos de estudio{% else %}Case studies{% endif %}</li>
-          <li>{% if lang == "es" %}Portfolios que crecen{% else %}Growing portfolios{% endif %}</li>
+          <li>{{ t.pricing.blog_use_company[lang] | safe }}</li>
+          <li>{{ t.pricing.blog_use_news[lang] | safe }}</li>
+          <li>{{ t.pricing.blog_use_cases[lang] | safe }}</li>
+          <li>{{ t.pricing.blog_use_portfolio[lang] | safe }}</li>
         </ul>
-        <p class="sales-package__consideration"><strong>{% if lang == "es" %}Actualizaciones:{% else %}Content updates:{% endif %}</strong> {% if lang == "es" %}Publícalas tú, o las publico yo cada mes.{% else %}Publish them yourself, or I do it monthly.{% endif %}</p>
+        <p class="sales-package__consideration"><strong>{{ t.pricing.updates_label[lang] | safe }}</strong> {{ t.pricing.blog_updates[lang] | safe }}</p>
         <div class="sales-package__ongoing">
-          <strong>{% if lang == "es" %}Del año 2 en adelante{% else %}Year 2 onwards{% endif %}</strong>
-          <span>{% set yearly = config.extra.pricing_static_hosting + config.extra.pricing_domain %}{% if lang == "es" %}{{ yearly }} €/año hosting + dominio{% else %}€{{ yearly }}/year hosting + domain{% endif %}</span>
-          <span>{% if lang == "es" %}Mantenimiento opcional: {{ config.extra.pricing_static_pro_maintenance }} €/año{% else %}Optional care: €{{ config.extra.pricing_static_pro_maintenance }}/year{% endif %}</span>
+          <strong>{{ t.pricing.year_two[lang] | safe }}</strong>
+          <span>{% set yearly = config.extra.pricing_static_hosting + config.extra.pricing_domain %}{{ t.pricing.yearly[lang] | replace(from="{price}", to=yearly ~ "") | safe }}</span>
+          <span>{{ t.pricing.care_pro[lang] | replace(from="{price}", to=config.extra.pricing_static_pro_maintenance ~ "") | safe }}</span>
         </div>
-        <a class="sales-button sales-button--primary sales-button--full" href="#quote" data-quote-cta data-package="{% if lang == 'es' %}Web + Blog{% else %}Website + Blog{% endif %}">{% if lang == "es" %}Pide tu presupuesto{% else %}Get a fixed quote{% endif %}</a>
+        <a class="sales-button sales-button--primary sales-button--full" href="#quote" data-quote-cta data-package="{{ t.package.blog[lang] | safe }}">{{ t.cta.quote[lang] | safe }}</a>
       </article>
     </div>
 
@@ -272,16 +273,16 @@
        were each already answered by the cards above or the line below, so the
        block only carries what nothing else on the page does. #}
     <div class="sales-scope">
-      <h3>{% if lang == 'es' %}Qué acordamos antes de empezar{% else %}What we agree before starting{% endif %}</h3>
+      <h3>{{ t.pricing.scope_title[lang] | safe }}</h3>
       <dl>
-        <div><dt>{% if lang == 'es' %}Textos e imágenes{% else %}Copy and images{% endif %}</dt><dd>{% if lang == 'es' %}Acordamos quién pone cada texto y cada foto.{% else %}We agree who provides each text and each photo.{% endif %}</dd></div>
-        <div><dt>{% if lang == 'es' %}Revisiones{% else %}Revisions{% endif %}</dt><dd>{% if lang == 'es' %}La propuesta dice cuántas incluye. Más alcance, nuevo presupuesto.{% else %}The proposal says how many are included. More scope, new quote.{% endif %}</dd></div>
+        <div><dt>{{ t.pricing.scope_content[lang] | safe }}</dt><dd>{{ t.pricing.scope_content_answer[lang] | safe }}</dd></div>
+        <div><dt>{{ t.pricing.scope_revisions[lang] | safe }}</dt><dd>{{ t.pricing.scope_revisions_answer[lang] | safe }}</dd></div>
       </dl>
     </div>
 
-    <p class="sales-advice"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> <strong>{% if lang == "es" %}¿No lo tienes claro?{% else %}Not sure?{% endif %}</strong> {% if lang == "es" %}Empieza con la Web a Medida. Puedes añadir el blog después.{% else %}Start with Custom Website. You can add a blog later.{% endif %}</p>
-    <p class="sales-price-context">{% if lang == "es" %}El precio depende de las páginas, los idiomas y las funciones.{% else %}The price depends on pages, languages and features.{% endif %}</p>
-    <p class="sales-payment-methods"><strong>{% if lang == "es" %}Formas de pago:{% else %}Payment methods:{% endif %}</strong> {% if lang == "es" %}transferencia bancaria SEPA, PayPal o Bitcoin.{% else %}SEPA bank transfer, PayPal, or Bitcoin.{% endif %}</p>
+    <p class="sales-advice"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> <strong>{{ t.pricing.advice_label[lang] | safe }}</strong> {{ t.pricing.advice[lang] | safe }}</p>
+    <p class="sales-price-context">{{ t.pricing.context[lang] | safe }}</p>
+    <p class="sales-payment-methods"><strong>{{ t.pricing.payment_label[lang] | safe }}</strong> {{ t.pricing.payment[lang] | safe }}</p>
   </section>
 
 
@@ -289,72 +290,72 @@
 
   <section class="sales-process" id="process" aria-labelledby="process-title">
     <div class="sales-section-heading">
-      <span class="sales-eyebrow">{% if lang == "es" %}Sin agencias de por medio{% else %}No agency in between{% endif %}</span>
-      <h2 id="process-title">{% if lang == "es" %}De la primera llamada al lanzamiento{% else %}From first call to launch{% endif %}</h2>
+      <span class="sales-eyebrow">{{ t.process.eyebrow[lang] | safe }}</span>
+      <h2 id="process-title">{{ t.process.title[lang] | safe }}</h2>
     </div>
     <ol class="sales-process-grid">
       <li>
         <span>1</span>
-        <h3>{% if lang == "es" %}Primera llamada{% else %}First call{% endif %}</h3>
-        <p>{% if lang == "es" %}Me cuentas qué quieres y para quién. Gratis y sin compromiso.{% else %}You tell me what you want and who it is for. Free, no commitment.{% endif %}</p>
+        <h3>{{ t.process.call_title[lang] | safe }}</h3>
+        <p>{{ t.process.call[lang] | safe }}</p>
       </li>
       <li>
         <span>2</span>
-        <h3>{% if lang == "es" %}Presupuesto cerrado{% else %}Fixed quote{% endif %}</h3>
-        <p>{% if lang == "es" %}Antes de empezar sabes qué incluye, cuándo está lista y cuánto cuesta.{% else %}Before we start, you know what is included, when it is ready and what it costs.{% endif %}</p>
+        <h3>{{ t.process.quote_title[lang] | safe }}</h3>
+        <p>{{ t.process.quote[lang] | safe }}</p>
       </li>
       <li>
         <span>3</span>
-        <h3>{% if lang == "es" %}Desarrollo y revisión{% else %}Build and review{% endif %}</h3>
-        <p>{% if lang == "es" %}Desde el primer día ves la web en un enlace de prueba. La revisas por partes, no al final.{% else %}From day one you see the site on a preview link. You review it piece by piece, not at the end.{% endif %}</p>
+        <h3>{{ t.process.build_title[lang] | safe }}</h3>
+        <p>{{ t.process.build[lang] | safe }}</p>
       </li>
       <li>
         <span>4</span>
-        <h3>{% if lang == "es" %}Lanzamiento{% else %}Launch{% endif %}</h3>
-        <p>{% if lang == "es" %}La publico y pongo todas las cuentas a tu nombre. El día del lanzamiento estoy contigo.{% else %}I publish it and put every account in your name. On launch day, I am with you.{% endif %}</p>
+        <h3>{{ t.process.launch_title[lang] | safe }}</h3>
+        <p>{{ t.process.launch[lang] | safe }}</p>
       </li>
     </ol>
   </section>
 
   <section class="sales-faq" id="faq" aria-labelledby="faq-title">
     <div class="sales-section-heading">
-      <span class="sales-eyebrow">{% if lang == "es" %}Sin letra pequeña{% else %}No small print{% endif %}</span>
-      <h2 id="faq-title">{% if lang == "es" %}Preguntas frecuentes antes de contratar{% else %}Questions people ask before hiring me{% endif %}</h2>
+      <span class="sales-eyebrow">{{ t.faq.eyebrow[lang] | safe }}</span>
+      <h2 id="faq-title">{{ t.faq.title[lang] | safe }}</h2>
     </div>
     <div class="sales-faq__list">
       <details>
-        <summary>{% if lang == "es" %}¿Qué determina el precio final?{% else %}What changes the final price?{% endif %}</summary>
-        <p>{% if lang == "es" %}Cuántas páginas e idiomas, si necesitas algo especial y si ya tienes los textos y las fotos. Antes de empezar te doy un precio cerrado para lo que acordemos.{% else %}How many pages and languages, whether you need anything special, and whether your texts and photos are ready. Before we start, you get a fixed price for what we agree.{% endif %}</p>
+        <summary>{{ t.faq.price_q[lang] | safe }}</summary>
+        <p>{{ t.faq.price_a[lang] | safe }}</p>
       </details>
       <details>
-        <summary>{% if lang == "es" %}¿Qué no está incluido?{% else %}What is not included?{% endif %}</summary>
-        <p>{% if lang == "es" %}No incluye carrito de compra, sincronización de inventario, integraciones con ERP o CRM, lógica de backend a medida, cuentas de usuario ni paneles. Para eso hace falta una aplicación web, no una de estas webs.{% else %}No shopping cart, inventory sync, ERP or CRM integration, custom backend logic, user accounts, or dashboards. For that you need a web app, not one of these websites.{% endif %}</p>
+        <summary>{{ t.faq.excluded_q[lang] | safe }}</summary>
+        <p>{{ t.faq.excluded_a[lang] | safe }}</p>
       </details>
       <details>
-        <summary>{% if lang == "es" %}¿Cuándo puedes empezar y lanzar?{% else %}How quickly can you start and launch?{% endif %}</summary>
-        <p>{% if lang == "es" %}Normalmente puedo empezar en una semana. La mayoría de proyectos se lanzan en menos de un mes.{% else %}I can usually start within a week. Most projects launch in under a month.{% endif %}</p>
+        <summary>{{ t.faq.timing_q[lang] | safe }}</summary>
+        <p>{{ t.faq.timing_a[lang] | safe }}</p>
       </details>
       <details>
-        <summary>{% if lang == "es" %}¿Qué ocurre después del lanzamiento?{% else %}What happens after launch?{% endif %}</summary>
-        <p>{% if lang == "es" %}La web, el dominio y el código son tuyos. Si cambias de proveedor, te lo paso todo sin coste. El mantenimiento opcional cubre cambios pequeños. Los grandes se presupuestan aparte.{% else %}The website, domain and code are yours. If you switch provider, I hand it all over at no cost. Optional care covers small changes. Big ones are quoted separately.{% endif %}</p>
+        <summary>{{ t.faq.after_q[lang] | safe }}</summary>
+        <p>{{ t.faq.after_a[lang] | safe }}</p>
       </details>
     </div>
   </section>
 
   <section class="sales-quote" id="quote" aria-labelledby="quote-title">
     <div class="sales-quote__copy">
-      <span class="sales-eyebrow">{% if lang == "es" %}El siguiente paso{% else %}The next step{% endif %}</span>
-      <h2 id="quote-title">{% if lang == "es" %}Cuéntame qué necesitas{% else %}Tell me what you need{% endif %}</h2>
-      <p>{% if lang == "es" %}Cuéntame en pocas líneas qué tienes en mente. En un día laborable te digo qué opción te encaja y cuánto tardaría. Si me falta algo para cerrar el precio, te lo pregunto.{% else %}Tell me in a few lines what you have in mind. Within one working day I tell you which option fits and how long it would take. If I need anything to fix the price, I ask.{% endif %}</p>
+      <span class="sales-eyebrow">{{ t.form.eyebrow[lang] | safe }}</span>
+      <h2 id="quote-title">{{ t.form.title[lang] | safe }}</h2>
+      <p>{{ t.form.intro[lang] | safe }}</p>
       <ul>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}Primera conversación gratis{% else %}Free initial conversation{% endif %}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}Sin compromiso{% else %}No commitment{% endif %}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {% if lang == "es" %}Presupuesto cerrado antes de empezar{% else %}Fixed quote before work begins{% endif %}</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.form.free_call[lang] | safe }}</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.form.no_commitment[lang] | safe }}</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.form.fixed_quote[lang] | safe }}</li>
       </ul>
     </div>
     <form class="sales-quote-form" action="https://api.web3forms.com/submit" method="post" data-quote-form data-quote-key="{{ config.extra.web3forms_key }}" data-quote-thanks="{{ lp }}/services/web-development-thanks/">
       <input type="hidden" name="access_key" value="{{ config.extra.web3forms_key }}">
-      <input type="hidden" name="subject" value="{% if lang == 'es' %}Presupuesto web{% else %}Website quote{% endif %} - chemaclass.com" data-subject-input>
+      <input type="hidden" name="subject" value="{{ t.form.subject[lang] | safe }} - chemaclass.com" data-subject-input>
       <input type="hidden" name="from_name" value="chemaclass.com">
       {# Native POST rather than fetch: Web3Forms filters cross-origin XHR, and a
          plain form navigation has no CORS to negotiate and needs no JavaScript.
@@ -364,81 +365,81 @@
       <input type="checkbox" name="botcheck" class="sales-quote-form__botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="sales-field">
         <label for="quote-email">Email</label>
-        <input id="quote-email" name="email" type="email" autocomplete="email" required placeholder="{% if lang == 'es' %}tu@empresa.com{% else %}you@company.com{% endif %}">
+        <input id="quote-email" name="email" type="email" autocomplete="email" required placeholder="{{ t.form.email_placeholder[lang] | safe }}">
       </div>
       <div class="sales-field-row">
         <div class="sales-field">
-          <label for="quote-name">{% if lang == "es" %}Nombre{% else %}Name{% endif %} <span>{% if lang == "es" %}opcional{% else %}optional{% endif %}</span></label>
-          <input id="quote-name" name="name" type="text" autocomplete="name" maxlength="100" placeholder="{% if lang == 'es' %}Tu nombre{% else %}Your name{% endif %}">
+          <label for="quote-name">{{ t.form.name[lang] | safe }} <span>{{ t.form.optional[lang] | safe }}</span></label>
+          <input id="quote-name" name="name" type="text" autocomplete="name" maxlength="100" placeholder="{{ t.form.name_placeholder[lang] | safe }}">
         </div>
         <div class="sales-field">
-          <label for="quote-phone">{% if lang == "es" %}Teléfono{% else %}Phone{% endif %} <span>{% if lang == "es" %}opcional{% else %}optional{% endif %}</span></label>
-          <input id="quote-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" placeholder="{% if lang == 'es' %}+34 600 000 000{% else %}+34 600 000 000{% endif %}">
+          <label for="quote-phone">{{ t.form.phone[lang] | safe }} <span>{{ t.form.optional[lang] | safe }}</span></label>
+          <input id="quote-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" placeholder="{{ t.form.phone_placeholder[lang] | safe }}">
         </div>
       </div>
       <div class="sales-field">
-        <label for="quote-website">{% if lang == "es" %}Web actual{% else %}Current website{% endif %} <span>{% if lang == "es" %}si ya tienes una{% else %}if you have one{% endif %}</span></label>
-        <input id="quote-website" name="website" type="text" inputmode="url" autocomplete="url" placeholder="{% if lang == 'es' %}tunegocio.com{% else %}yourbusiness.com{% endif %}">
+        <label for="quote-website">{{ t.form.website[lang] | safe }} <span>{{ t.form.website_hint[lang] | safe }}</span></label>
+        <input id="quote-website" name="website" type="text" inputmode="url" autocomplete="url" placeholder="{{ t.form.website_placeholder[lang] | safe }}">
       </div>
       <div class="sales-field">
-        <label for="quote-package">{% if lang == "es" %}¿Qué opción te encaja?{% else %}Which option fits you?{% endif %} <span>{% if lang == "es" %}la ajustamos juntos{% else %}we can adjust it together{% endif %}</span></label>
+        <label for="quote-package">{{ t.form.package[lang] | safe }} <span>{{ t.form.package_hint[lang] | safe }}</span></label>
         <div class="sales-select">
           {# The values match the data-package attributes on the package CTAs, so
              clicking one preselects the matching option here. #}
           <select id="quote-package" name="package" data-package-input>
-            <option value="{% if lang == 'es' %}Aún no lo sé{% else %}Not sure yet{% endif %}">{% if lang == "es" %}Aún no lo sé{% else %}Not sure yet{% endif %}</option>
-            <option value="{% if lang == 'es' %}Web a Medida{% else %}Custom Website{% endif %}">{% if lang == "es" %}Web a Medida{% else %}Custom Website{% endif %}</option>
-            <option value="{% if lang == 'es' %}Web + Blog{% else %}Website + Blog{% endif %}">{% if lang == "es" %}Web + Blog{% else %}Website + Blog{% endif %}</option>
-            <option value="{% if lang == 'es' %}Rescatar una web existente{% else %}Rescue an existing website{% endif %}">{% if lang == "es" %}Rescatar una web existente{% else %}Rescue an existing website{% endif %}</option>
+            <option value="{{ t.form.package_unsure[lang] | safe }}">{{ t.form.package_unsure[lang] | safe }}</option>
+            <option value="{{ t.package.custom[lang] | safe }}">{{ t.package.custom[lang] | safe }}</option>
+            <option value="{{ t.package.blog[lang] | safe }}">{{ t.package.blog[lang] | safe }}</option>
+            <option value="{{ t.form.package_rescue[lang] | safe }}">{{ t.form.package_rescue[lang] | safe }}</option>
           </select>
         </div>
       </div>
       <div class="sales-field">
-        <label for="quote-need">{% if lang == "es" %}¿Qué necesitas?{% else %}What do you need?{% endif %}</label>
-        <textarea id="quote-need" name="need" rows="5" maxlength="2000" required placeholder="{% if lang == 'es' %}Una nueva web de cinco páginas para mi negocio...{% else %}A new five-page website for my business...{% endif %}"></textarea>
+        <label for="quote-need">{{ t.form.need[lang] | safe }}</label>
+        <textarea id="quote-need" name="need" rows="5" maxlength="2000" required placeholder="{{ t.form.need_placeholder[lang] | safe }}"></textarea>
       </div>
-      <button class="sales-button sales-button--primary sales-button--full" type="submit">{% if lang == "es" %}Enviar mensaje{% else %}Send message{% endif %} <i class="fa-solid fa-envelope" aria-hidden="true"></i></button>
-      <p class="sales-quote-form__note"><i class="fa-solid fa-lock" aria-hidden="true"></i> {% if lang == "es" %}Tus datos quedan entre nosotros. Los uso solo para responderte.{% else %}Your details stay between us. I use them only to reply to you.{% endif %}</p>
-      <p class="sales-quote-form__alternative">{% if lang == "es" %}¿Prefieres escribir directamente?{% else %}Prefer to write directly?{% endif %} <a href="mailto:web@chemaclass.com">web@chemaclass.com</a></p>
+      <button class="sales-button sales-button--primary sales-button--full" type="submit">{{ t.form.submit[lang] | safe }} <i class="fa-solid fa-envelope" aria-hidden="true"></i></button>
+      <p class="sales-quote-form__note"><i class="fa-solid fa-lock" aria-hidden="true"></i> {{ t.form.privacy[lang] | safe }}</p>
+      <p class="sales-quote-form__alternative">{{ t.form.direct[lang] | safe }} <a href="mailto:web@chemaclass.com">web@chemaclass.com</a></p>
     </form>
   </section>
 
   <section class="sales-capability" id="web-apps" aria-labelledby="capability-title">
     <div class="sales-section-heading">
-      <span class="sales-eyebrow">{% if lang == "es" %}Algo más que webs{% else %}More than websites{% endif %}</span>
-      <h2 id="capability-title">{% if lang == "es" %}También hago aplicaciones web{% else %}I also build web applications{% endif %}</h2>
-      <p>{% if lang == "es" %}Si tu proyecto necesita cuentas de usuario, pagos o paneles, también lo hago. Estos dos son míos: los diseñé, los hice y los mantengo yo.{% else %}If your project needs user accounts, payments or dashboards, I build that too. These two are mine: I designed them, built them and I run them.{% endif %}</p>
+      <span class="sales-eyebrow">{{ t.apps.eyebrow[lang] | safe }}</span>
+      <h2 id="capability-title">{{ t.apps.title[lang] | safe }}</h2>
+      <p>{{ t.apps.intro[lang] | safe }}</p>
     </div>
     <div class="sales-app-grid">
-      <a class="sales-app-card sales-app-card--focus-right" href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener noreferrer">
+      <a class="sales-app-card sales-app-card--focus-right" href="{{ t.link.miaforo[lang] | safe }}" target="_blank" rel="noopener noreferrer">
         <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="1600" height="1000">
         <div class="sales-app-card__body">
           <div class="sales-app-card__topline">
-            <span>{% if lang == "es" %}Aplicación web{% else %}Web app{% endif %}</span>
+            <span>{{ t.apps.type[lang] | safe }}</span>
             <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
           </div>
           <h3>MIAFORO</h3>
-          <p>{% if lang == "es" %}Software para gimnasios independientes. Horarios, reservas, cobros, socios y progreso, todo en un sitio.{% else %}Software for independent gyms. Schedules, bookings, payments, members and progress, all in one place.{% endif %}</p>
+          <p>{{ t.apps.miaforo[lang] | safe }}</p>
           <div class="sales-app-card__features">
-            <span><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> {% if lang == "es" %}Reservas{% else %}Bookings{% endif %}</span>
-            <span><i class="fa-solid fa-users" aria-hidden="true"></i> {% if lang == "es" %}Socios{% else %}Members{% endif %}</span>
+            <span><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> {{ t.apps.tag_bookings[lang] | safe }}</span>
+            <span><i class="fa-solid fa-users" aria-hidden="true"></i> {{ t.apps.tag_members[lang] | safe }}</span>
             <span><i class="fa-solid fa-chart-simple" aria-hidden="true"></i> Panel</span>
           </div>
         </div>
       </a>
-      <a class="sales-app-card sales-app-card--crop-left" href="{% if lang == 'es' %}https://puertafria.es/{% else %}https://puertafria.es/en{% endif %}" target="_blank" rel="noopener noreferrer">
+      <a class="sales-app-card sales-app-card--crop-left" href="{{ t.link.puertafria[lang] | safe }}" target="_blank" rel="noopener noreferrer">
         <img src="/images/portfolio/puertafria-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="puertafria sales app" loading="lazy" width="1204" height="1101">
         <div class="sales-app-card__body">
           <div class="sales-app-card__topline">
-            <span>{% if lang == "es" %}Aplicación web{% else %}Web app{% endif %}</span>
+            <span>{{ t.apps.type[lang] | safe }}</span>
             <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
           </div>
           <h3>puertafria</h3>
-          <p>{% if lang == "es" %}Para vender a puerta fría. Subes un CSV y te dice a quién llamar hoy.{% else %}For cold calling. Upload a CSV and it tells you who to call today.{% endif %}</p>
+          <p>{{ t.apps.puertafria[lang] | safe }}</p>
           <div class="sales-app-card__features">
-            <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> {% if lang == "es" %}Embudos{% else %}Funnels{% endif %}</span>
+            <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> {{ t.apps.tag_funnels[lang] | safe }}</span>
             <span><i class="fa-solid fa-file" aria-hidden="true"></i> CSV</span>
-            <span><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> {% if lang == "es" %}Móvil{% else %}Mobile{% endif %}</span>
+            <span><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> {{ t.apps.tag_mobile[lang] | safe }}</span>
           </div>
         </div>
       </a>
@@ -447,10 +448,11 @@
 
 </article>
 
-<a class="sales-sticky-cta" href="#quote" data-quote-cta>{% if lang == "es" %}Pide tu presupuesto{% else %}Get a fixed quote{% endif %}</a>
+<a class="sales-sticky-cta" href="#quote" data-quote-cta>{{ t.cta.quote[lang] | safe }}</a>
 {% endblock content %}
 
 {% block js %}
+{%- set t = load_data(path="data/i18n/web-development.toml") -%}
 <script>
 (function () {
   const form = document.querySelector('[data-quote-form]');
@@ -459,7 +461,11 @@
   const hero = document.querySelector('.sales-hero');
   const quote = document.querySelector('.sales-quote');
   const showcase = document.querySelector('[data-proof-showcase]');
-  const isSpanish = document.documentElement.lang === 'es';
+  const copy = {
+    notSelected: {{ t.js.not_selected[lang] | json_encode | safe }},
+    subject: {{ t.form.subject[lang] | json_encode | safe }},
+    sending: {{ t.js.sending[lang] | json_encode | safe }}
+  };
 
   function track(name, properties) {
     if (typeof window.cronitor === 'function') {
@@ -542,7 +548,7 @@
       if (selectedPackage && packageInput) packageInput.value = selectedPackage;
       track('WebsiteQuoteCtaClick', {
         variant: 'sales',
-        package: selectedPackage || (isSpanish ? 'Sin seleccionar' : 'Not selected')
+        package: selectedPackage || copy.notSelected
       });
     });
   });
@@ -558,7 +564,7 @@
         event.preventDefault();
         if (!form.reportValidity()) return;
         const need = document.getElementById('quote-need').value.trim();
-        const subject = (isSpanish ? 'Presupuesto web - ' : 'Website quote - ') + packageInput.value;
+        const subject = copy.subject + ' - ' + packageInput.value;
         window.location.href = 'mailto:web@chemaclass.com?subject=' +
           encodeURIComponent(subject) + '&body=' + encodeURIComponent(need);
         return;
@@ -577,13 +583,13 @@
       // Stamp the chosen option into the subject so the inbox sorts itself.
       const subjectInput = form.querySelector('[data-subject-input]');
       if (subjectInput && packageInput) {
-        subjectInput.value = (isSpanish ? 'Presupuesto web' : 'Website quote') +
+        subjectInput.value = copy.subject +
           ' - ' + packageInput.value;
       }
 
       if (submit) {
         submit.disabled = true;
-        submit.textContent = isSpanish ? 'Enviando...' : 'Sending...';
+        submit.textContent = copy.sending;
       }
     });
   }

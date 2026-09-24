@@ -32,6 +32,25 @@ The site supports English (default) and Spanish:
 - English: `content/page.md` or `content/page/index.md`
 - Spanish: `content/page.es.md` (colocated)
 
+Any copy change updates EN and ES in the same edit and the same commit.
+
+Template copy, three places by size:
+
+- Short UI strings (nav, buttons, labels shared site-wide): `trans(key=..., lang=lang)`,
+  from `[translations]` and `[languages.es.translations]` in `config.toml`.
+- Long page copy: `data/i18n/<page>.toml`, each key with `.en` and `.es` side by side.
+  Load it once per block with `{%- set t = load_data(path="data/i18n/<page>.toml") -%}`
+  and print `{{ t.section.key[lang] | safe }}` (values are raw HTML). Inside JSON-LD or
+  JS use `| json_encode | safe` without surrounding quotes. Fill `{n}`-style
+  placeholders with `| replace(from="{n}", to=value ~ "")`. Pilot:
+  `templates/services/web-development*.html`.
+- Structural switches (an `/es` URL prefix, a `.es.webp` suffix) stay inline as
+  `{% if lang == 'es' %}`.
+
+Tera renders a missing key as an empty string without failing, so
+`scripts/check-i18n.py` does: every key in every language, same placeholders, no
+dashes, no key a template reads but the file lacks, no key nobody reads.
+
 ## Common Commands
 
 - `zola build` - Build the static site to `public/`
@@ -47,6 +66,9 @@ Anything that reads or writes build output belongs here, not in a template.
 
 Before the build:
 
+- `check-i18n.py` - every `data/i18n/*.toml` key has EN and ES, and matches what
+  the templates read. Fails the build. Parses a strict TOML subset (Python 3.9 has
+  no `tomllib`).
 - `generate-last-modified.py` - the date each content file was last *substantially*
   edited, from git, into `data/last-modified.json` (gitignored). At least 25 changed
   words below the front matter counts; punctuation sweeps, accent fixes and moved
