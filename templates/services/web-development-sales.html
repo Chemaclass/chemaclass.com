@@ -71,18 +71,6 @@
           </div>
         </article>
 
-        <article class="sales-hero-proof__slide sales-hero-proof__slide--dinamita" data-proof-slide hidden>
-          <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente en producción{% else %}Live client website{% endif %}</span>
-          <a href="https://dinamita-gym.es" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la web de Dinamita Gym{% else %}View the Dinamita Gym website{% endif %}">
-            <img src="/images/portfolio/dinamitagym-sample.webp" alt="Dinamita Gym website" loading="lazy" width="720" height="450">
-          </a>
-          <p class="sales-hero-proof__summary">{% if lang == "es" %}Una web directa para presentar entrenamientos, equipo y formas de contacto.{% else %}A focused website presenting training, the team, and ways to get in touch.{% endif %}</p>
-          <div class="sales-hero-proof__project">
-            <span class="sales-hero-proof__mark" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            <span><strong>Dinamita Gym</strong> · {% if lang == "es" %}Diseñada y desarrollada por mí{% else %}Designed and built by me{% endif %}</span>
-          </div>
-        </article>
-
         <article class="sales-hero-proof__slide sales-hero-proof__slide--postcard" data-proof-slide hidden>
           <span class="sales-hero-proof__label">{% if lang == "es" %}Web de cliente en producción{% else %}Live client website{% endif %}</span>
           <a href="https://postcardfromtheroad.eu" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la web de Postcard from the Road{% else %}View the Postcard from the Road website{% endif %}">
@@ -98,7 +86,7 @@
         <article class="sales-hero-proof__slide sales-hero-proof__slide--miaforo" data-proof-slide hidden>
           <span class="sales-hero-proof__label">{% if lang == "es" %}Producto propio en producción{% else %}Own product, live today{% endif %}</span>
           <a href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="{% if lang == 'es' %}Ver la aplicación MIAFORO{% else %}View the MIAFORO application{% endif %}">
-            <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="1204" height="1100">
+            <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="1600" height="1000">
           </a>
           <p class="sales-hero-proof__summary">{% if lang == "es" %}Reservas, cobros, socios y progreso para gimnasios independientes.{% else %}Bookings, payments, members, and progress for independent gyms.{% endif %}</p>
           <div class="sales-hero-proof__project">
@@ -123,11 +111,11 @@
       <div class="sales-hero-proof__nav">
         <button type="button" data-proof-previous aria-label="{% if lang == 'es' %}Proyecto anterior{% else %}Previous project{% endif %}"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
         <div class="sales-hero-proof__dots" aria-label="{% if lang == 'es' %}Elegir proyecto{% else %}Choose a project{% endif %}">
-          {% for number in range(end=8) %}
+          {% for number in range(end=7) %}
           <button type="button" data-proof-dot="{{ number }}" aria-label="{% if lang == 'es' %}Mostrar proyecto {{ number + 1 }}{% else %}Show project {{ number + 1 }}{% endif %}"{% if number == 0 %} class="is-active" aria-current="true"{% endif %}></button>
           {% endfor %}
         </div>
-        <span class="sales-hero-proof__count" data-proof-count aria-live="off">1 / 8</span>
+        <span class="sales-hero-proof__count" data-proof-count aria-live="off">1 / 7</span>
         <button type="button" data-proof-next aria-label="{% if lang == 'es' %}Proyecto siguiente{% else %}Next project{% endif %}"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
       </div>
     </aside>
@@ -168,7 +156,7 @@
           <a href="{% if lang == 'es' %}https://fco-sandoval-gomez.es/{% else %}https://fco-sandoval-gomez.es/en/{% endif %}" target="_blank" rel="noopener noreferrer">{% if lang == "es" %}Ver web{% else %}View live website{% endif %} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </div>
       </article>
-      <article class="sales-work-card">
+      <article class="sales-work-card sales-work-card--focus-bottom">
         <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="Windmill Tündern website" loading="lazy" width="720" height="450">
         <div class="sales-work-card__body">
           <span class="sales-work-card__type">{% if lang == "es" %}Web + Blog{% else %}Website + Blog{% endif %}</span>
@@ -422,8 +410,8 @@
       <p>{% if lang == "es" %}Si un producto necesita cuentas, pagos o paneles, también lo construyo. Productos propios, diseñados y operados por mí.{% else %}When a product needs accounts, payments, databases, or dashboards, I build those too. These are my own products, designed, built, deployed, and operated by me.{% endif %}</p>
     </div>
     <div class="sales-app-grid">
-      <a class="sales-app-card sales-app-card--crop-right" href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener noreferrer">
-        <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="1204" height="1100">
+      <a class="sales-app-card sales-app-card--focus-right" href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener noreferrer">
+        <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="1600" height="1000">
         <div class="sales-app-card__body">
           <div class="sales-app-card__topline">
             <span>{% if lang == "es" %}Aplicación web{% else %}Web app{% endif %}</span>
