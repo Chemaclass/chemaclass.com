@@ -17,7 +17,7 @@ text.en = "Spend a full day coding, testing, and refactoring. This workshop is a
 text.es = "Pasa un día completo programando, testeando y refactorizando. Este taller es 100% práctico: trabajarás con una serie de katas de código independientes diseñadas para crear hábitos sólidos en testing, desarrollo guiado por tests (TDD) y refactoring. Principios agnósticos del lenguaje, adaptables al stack de tu equipo."
 
 [morning]
-desc.en = "We focus on testing techniques that make change safe, from golden tests that capture existing behavior to TDD exercises that guide better design."
+desc.en = "We focus on testing techniques that make change safe, from golden master tests that capture existing behavior to TDD exercises that guide better design."
 desc.es = "Nos enfocamos en técnicas de testing que hacen el cambio seguro, desde tests golden master que capturan el comportamiento existente hasta ejercicios TDD que guían mejor diseño."
 golden_master.en = "Golden master testing"
 golden_master.es = "Testing golden master"
@@ -32,7 +32,7 @@ test_doubles.es = "Entendiendo los test doubles"
 
 [afternoon]
 desc.en = "We switch gears to refactoring: applying small, focused changes to improve messy, legacy-style code without breaking it."
-desc.es = "Cambiamos el enfoque al refactoring: aplicando cambios pequeños y focalizados para mejorar código legacy sin romperlo."
+desc.es = "Cambiamos el enfoque al refactoring: aplicando cambios pequeños y focalizados para mejorar código legacy y desordenado sin romperlo."
 safe_refactoring.en = "Safe refactoring techniques"
 safe_refactoring.es = "Técnicas de refactoring seguro"
 extract.en = "Extract method & class patterns"
@@ -100,7 +100,7 @@ disclaimer.es = "Presupuesto personalizado después de la llamada de descubrimie
 
 [resources]
 intro.en = "Materials and talks related to my workshop content:"
-intro.es = "Materiales y charlas relacionadas con el contenido del taller:"
+intro.es = "Materiales y charlas relacionados con el contenido de mis talleres:"
 tdd.en = "Understanding TDD principles and practices"
 tdd.es = "Entendiendo los principios y prácticas de TDD"
 pair.en = "Techniques for collaborative coding"
