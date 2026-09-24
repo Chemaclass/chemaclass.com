@@ -77,6 +77,7 @@
 {% endblock styles %}
 
 {% block content %}
+{%- set t = load_data(path="data/i18n/cv.toml") -%}
 {# Star counts come from data/github-stars.json (scripts/fetch-github-stars.py),
    then the script at the bottom refreshes them live. The fallbacks cover a
    fresh clone where the file does not exist yet. #}
@@ -105,24 +106,24 @@
         <a href="https://github.com/Chemaclass" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> <span class="cv-print-hide">GitHub</span><span class="cv-print-only">github.com/Chemaclass</span></a>
         <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> <span class="cv-print-hide">LinkedIn</span><span class="cv-print-only">linkedin.com/in/jose-maria-valera-reales</span></a>
         <a href="mailto:hi@chemaclass.com"><i class="fa-solid fa-envelope"></i> <span class="cv-print-hide">Email</span><span class="cv-print-only">hi@chemaclass.com</span></a>
-        <a href="javascript:void(0)" onclick="window.print()" class="cv-header__pdf"><i class="fa-solid fa-file-pdf"></i> {% if lang == "es" %}Descargar PDF{% else %}Download PDF{% endif %}</a>
+        <a href="javascript:void(0)" onclick="window.print()" class="cv-header__pdf"><i class="fa-solid fa-file-pdf"></i> {{ t.header.download_pdf[lang] | safe }}</a>
       </div>
     </div>
   </header>
 
   <!-- About -->
   <section class="cv-section">
-    <h2><i class="fa-solid fa-user"></i> {% if lang == "es" %}Sobre mí{% else %}About{% endif %}</h2>
+    <h2><i class="fa-solid fa-user"></i> {{ t.about.title[lang] | safe }}</h2>
     {{ page.content | safe }}
     <blockquote class="cv-hero-quote">
-      <p>{% if lang == "es" %}"Chema está muy por delante de la curva en IA. Mientras la mayoría de equipos aún debaten por dónde empezar, Chema ya tiene múltiples agentes corriendo en producción."{% else %}"Chema is well ahead of the curve on AI. While most teams are still debating where to start, Chema already has multiple agents running in production."{% endif %}</p>
+      <p>{{ t.about.quote[lang] | safe }}</p>
       <footer>&mdash; <a href="https://www.linkedin.com/in/leon-laakmann-672325b7/" target="_blank" rel="noopener"><strong>Leon Laakmann</strong></a>, Product Lead at Purpose Green</footer>
     </blockquote>
   </section>
 
   <!-- Experience -->
   <section class="cv-section">
-    <h2><i class="fa-solid fa-briefcase"></i> {% if lang == "es" %}Experiencia{% else %}Experience{% endif %}</h2>
+    <h2><i class="fa-solid fa-briefcase"></i> {{ t.experience.title[lang] | safe }}</h2>
 
     <div class="cv-timeline">
       <!-- Kombo -->
@@ -131,15 +132,15 @@
           <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://kombo.dev&size=128" alt="Kombo" loading="lazy" />
           <div>
             <h3><a href="https://kombo.dev" target="_blank" rel="noopener">Kombo</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {% if lang == "es" %}Actualidad{% else %}Present{% endif %}</span></p>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {{ t.experience.kombo_total[lang] | safe }}</span></p>
           </div>
         </div>
         <div class="cv-job__body">
           <div class="cv-job__role">
             <h4>Product Engineer</h4>
-            <span class="cv-job__dates">Jun 2026 &ndash; {% if lang == "es" %}Actualidad{% else %}Present{% endif %}</span>
+            <span class="cv-job__dates">Jun 2026 &ndash; {{ t.experience.present[lang] | safe }}</span>
           </div>
-          <p>{% if lang == "es" %}Product Engineer en Kombo, la API unificada líder para integraciones de HRIS, ATS, Payroll y LMS. Construyo producto en la intersección de ingeniería y necesidades de cliente, permitiendo a empresas B2B conectar cientos de sistemas de RRHH a través de una sola API.{% else %}Product Engineer at Kombo, the leading unified API for HRIS, ATS, Payroll, and LMS integrations. Building product at the intersection of engineering and customer needs, enabling B2B companies to connect hundreds of HR systems through a single API.{% endif %}</p>
+          <p>{{ t.experience.kombo[lang] | safe }}</p>
           <div class="cv-tags cv-tags--small">
             <span class="cv-tag"><i class="fa-solid fa-code"></i> TypeScript</span>
             <span class="cv-tag"><i class="fa-brands fa-react"></i> React</span>
@@ -159,7 +160,7 @@
           <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://purpose-green.com&size=128" alt="Purpose Green" loading="lazy" />
           <div>
             <h3><a href="https://www.purpose-green.com/" target="_blank" rel="noopener">Purpose Green</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {% if lang == "es" %}2 años{% else %}2 yrs{% endif %}</span></p>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {{ t.experience.purpose_green_total[lang] | safe }}</span></p>
           </div>
         </div>
         <div class="cv-job__body">
@@ -167,12 +168,12 @@
             <h4>Tech Lead</h4>
             <span class="cv-job__dates">Mar 2025 &ndash; Jun 2026</span>
           </div>
-          <p>{% if lang == "es" %}Lideré la migración de la API Laravel a monolito modular con límites DDD: módulos de dominio independientes que escalan entre equipos sin acoplamiento cruzado. Player-coach: código en producción a diario mientras hago crecer al equipo con mentoría, katas mensuales y prácticas XP (ownership, maestría, propósito)<span class="cv-print-hide">. Sistemas backend apoyando la misión de descarbonizar cada edificio europeo</span>.{% else %}Drove the migration of our Laravel API into a modular monolith with DDD boundaries: independent domain modules that scale across teams without cross-coupling. Player-coach: ship production code daily while growing engineers through mentoring, monthly katas, and XP practices (ownership, mastery, purpose)<span class="cv-print-hide">. Backend systems supporting the mission of decarbonizing every European building</span>.{% endif %}</p>
+          <p>{{ t.experience.purpose_green_lead[lang] | safe }}</p>
           <div class="cv-job__role">
             <h4>Software Developer</h4>
             <span class="cv-job__dates">Jul 2024 &ndash; Mar 2025</span>
           </div>
-          <p>{% if lang == "es" %}Ingeniero backend senior. Integración del sistema de pagos con Stripe. Promoción de valores, principios y prácticas de Extreme Programming. Code katas mensuales, enfoque en excelencia individual y de equipo.{% else %}Senior Backend Engineer. Payment system integration with Stripe. Promoting Extreme Programming values, principles, and practices. Monthly code katas, focus on individual and team excellence.{% endif %}</p>
+          <p>{{ t.experience.purpose_green_dev[lang] | safe }}</p>
           <div class="cv-tags cv-tags--small">
             <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
             <span class="cv-tag"><i class="fa-brands fa-laravel"></i> Laravel 12</span>
@@ -192,7 +193,7 @@
           <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://aboutyou.com&size=128" alt="ABOUT YOU" loading="lazy" />
           <div>
             <h3><a href="https://aboutyou.com" target="_blank" rel="noopener">ABOUT YOU</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany · Remote <span class="cv-job__total">· {% if lang == "es" %}1 año{% else %}1 yr{% endif %}</span></p>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany · Remote <span class="cv-job__total">· {{ t.experience.about_you_total[lang] | safe }}</span></p>
           </div>
         </div>
         <div class="cv-job__body">
@@ -200,7 +201,7 @@
             <h4>Head of Engineering</h4>
             <span class="cv-job__dates">Aug 2023 &ndash; Jul 2024</span>
           </div>
-          <p>{% if lang == "es" %}Head of Engineering supervisando 3 equipos (12 ingenieros): DevOps, integraciones de APIs externas e internas. Lideré el equipo SDK entregando una nueva API de pagos. Impulsé Extreme Programming: pair programming, TDD, code katas. Mentoría y coaching cross-team, entrevistas y contratación.{% else %}Head of Engineering overseeing 3 teams (12 engineers): DevOps, external & internal API integrations. Led SDK team shipping new payments API. Championed Extreme Programming: pair programming, TDD, code katas. Cross-team mentoring, coaching, interviewing and hiring.{% endif %}</p>
+          <p>{{ t.experience.about_you[lang] | safe }}</p>
           <div class="cv-tags cv-tags--small">
             <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
             <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
@@ -220,7 +221,7 @@
           <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://teufel.de&size=128" alt="Teufel" loading="lazy" />
           <div>
             <h3><a href="https://www.teufel.de" target="_blank" rel="noopener">Lautsprecher Teufel</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {% if lang == "es" %}3 años 2 meses{% else %}3 yrs 2 mos{% endif %}</span></p>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {{ t.experience.teufel_total[lang] | safe }}</span></p>
           </div>
         </div>
         <div class="cv-job__body">
@@ -228,12 +229,12 @@
             <h4>Tech Lead</h4>
             <span class="cv-job__dates">Jul 2021 &ndash; Jul 2023</span>
           </div>
-          <p>{% if lang == "es" %}Lead del equipo Web-IT (6 ingenieros) responsable del Webshop. Coaching de desarrolladores en su camino al siguiente nivel, cultivando una cultura de ownership, customer centricity, maestría y propósito.{% else %}Lead of the Web-IT team (6 engineers) responsible for the Webshop. Coaching developers on their journey to the next level, while cultivating a culture of ownership, customer centricity, mastery, and purpose.{% endif %}</p>
+          <p>{{ t.experience.teufel_lead[lang] | safe }}</p>
           <div class="cv-job__role">
             <h4>Software Developer</h4>
             <span class="cv-job__dates">Jun 2020 &ndash; Jul 2021</span>
           </div>
-          <p>{% if lang == "es" %}Responsable del desarrollo del Webshop en diferentes países. Promoción de Extreme Programming con Pair-Programming y TDD.{% else %}Responsible for the development of the Webshop across different countries. Promoting Extreme Programming with Pair-Programming and TDD.{% endif %}</p>
+          <p>{{ t.experience.teufel_dev[lang] | safe }}</p>
           <div class="cv-tags cv-tags--small">
             <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
             <span class="cv-tag"><i class="fa-solid fa-gem"></i> Spryker</span>
@@ -253,7 +254,7 @@
           <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://sevensenders.com&size=128" alt="Seven Senders" loading="lazy" />
           <div>
             <h3><a href="https://www.sevensenders.com/" target="_blank" rel="noopener">Seven Senders</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {% if lang == "es" %}2 años 9 meses{% else %}2 yrs 9 mos{% endif %}</span></p>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {{ t.experience.seven_senders_total[lang] | safe }}</span></p>
           </div>
         </div>
         <div class="cv-job__body">
@@ -261,7 +262,7 @@
             <h4>Software Developer</h4>
             <span class="cv-job__dates">Sep 2017 &ndash; May 2020</span>
           </div>
-          <p>{% if lang == "es" %}Parte del equipo interno de Analytics (5 ingenieros), enfocado en el servicio API backend para la solución de seguimiento de paquetes.{% else %}Part of the internal Analytics team (5 engineers), focused on the Backend API service for the parcel tracking solution.{% endif %}</p>
+          <p>{{ t.experience.seven_senders[lang] | safe }}</p>
           <div class="cv-tags cv-tags--small">
             <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
             <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
@@ -281,7 +282,7 @@
           <img class="cv-job__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%232d5a8e'/%3E%3Ctext x='32' y='40' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='22' font-weight='600'%3EM24%3C/text%3E%3C/svg%3E" alt="Move24" />
           <div>
             <h3>Move24</h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {% if lang == "es" %}7 meses{% else %}7 mos{% endif %}</span></p>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {{ t.experience.move24_total[lang] | safe }}</span></p>
           </div>
         </div>
         <div class="cv-job__body">
@@ -289,7 +290,7 @@
             <h4>Software Developer</h4>
             <span class="cv-job__dates">Jan 2017 &ndash; Jul 2017</span>
           </div>
-          <p>{% if lang == "es" %}Responsable de la homepage y búsqueda.{% else %}Responsible for the homepage and search.{% endif %}</p>
+          <p>{{ t.experience.move24[lang] | safe }}</p>
           <div class="cv-tags cv-tags--small">
             <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
             <span class="cv-tag"><i class="fa-brands fa-laravel"></i> Laravel</span>
@@ -307,7 +308,7 @@
           <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://webgears-group.com&size=128" alt="Webgears" loading="lazy" />
           <div>
             <h3><a href="https://www.webgears-group.com/" target="_blank" rel="noopener">Webgears</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {% if lang == "es" %}1 año 4 meses{% else %}1 yr 4 mos{% endif %}</span></p>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany <span class="cv-job__total">· {{ t.experience.webgears_total[lang] | safe }}</span></p>
           </div>
         </div>
         <div class="cv-job__body">
@@ -315,7 +316,7 @@
             <h4>Software Developer</h4>
             <span class="cv-job__dates">Sep 2015 &ndash; Dec 2016</span>
           </div>
-          <p>{% if lang == "es" %}Backend de la aplicación web y herramientas internas.{% else %}Backend of the web application and internal tools.{% endif %}</p>
+          <p>{{ t.experience.webgears[lang] | safe }}</p>
           <div class="cv-tags cv-tags--small">
             <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
             <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
@@ -330,7 +331,7 @@
           <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://falk-meddv.de&size=128" alt="Falk" loading="lazy" />
           <div>
             <h3><a href="https://www.falk-meddv.de/" target="_blank" rel="noopener">Falk medizinische Datenverarbeitung</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> {% if lang == "es" %}Lübeck, Alemania{% else %}Lübeck, Germany{% endif %} <span class="cv-job__total">· {% if lang == "es" %}9 meses{% else %}9 mos{% endif %}</span></p>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> {{ t.experience.falk_location[lang] | safe }} <span class="cv-job__total">· {{ t.experience.falk_total[lang] | safe }}</span></p>
           </div>
         </div>
         <div class="cv-job__body">
@@ -338,7 +339,7 @@
             <h4>Software Developer</h4>
             <span class="cv-job__dates">Dec 2014 &ndash; Aug 2015</span>
           </div>
-          <p>{% if lang == "es" %}Desarrollo de la aplicación web para la aplicación médica de escritorio.{% else %}Built the web app for the desktop medical application.{% endif %}</p>
+          <p>{{ t.experience.falk[lang] | safe }}</p>
           <div class="cv-tags cv-tags--small">
             <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
             <span class="cv-tag"><i class="fa-solid fa-code"></i> Delphi</span>
@@ -353,7 +354,7 @@
           <img class="cv-job__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2316a34a'/%3E%3Ctext x='32' y='40' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='22' font-weight='600'%3ELV%3C/text%3E%3C/svg%3E" alt="LEVERADE" />
           <div>
             <h3><a href="https://leverade.com/" target="_blank" rel="noopener">LEVERADE</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Murcia, Spain <span class="cv-job__total">· {% if lang == "es" %}8 meses{% else %}8 mos{% endif %}</span></p>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Murcia, Spain <span class="cv-job__total">· {{ t.experience.leverade_total[lang] | safe }}</span></p>
           </div>
         </div>
         <div class="cv-job__body">
@@ -361,7 +362,7 @@
             <h4>Software Developer</h4>
             <span class="cv-job__dates">Jan 2014 &ndash; Aug 2014</span>
           </div>
-          <p>{% if lang == "es" %}Desarrollador full stack, parte del equipo de desarrollo de la aplicación web.{% else %}Full stack developer, part of the web development application team.{% endif %}</p>
+          <p>{{ t.experience.leverade[lang] | safe }}</p>
           <div class="cv-tags cv-tags--small">
             <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
             <span class="cv-tag"><i class="fa-brands fa-laravel"></i> Laravel</span>
@@ -377,15 +378,15 @@
           <img class="cv-job__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230284c7'/%3E%3Ctext x='32' y='40' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='22' font-weight='600'%3ETA%3C/text%3E%3C/svg%3E" alt="Tecnoavanza" />
           <div>
             <h3><a href="http://www.tecnoavanza.com/" target="_blank" rel="noopener">Tecnoavanza</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Murcia, Spain <span class="cv-job__total">· {% if lang == "es" %}4 meses{% else %}4 mos{% endif %}</span></p>
+            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> Murcia, Spain <span class="cv-job__total">· {{ t.experience.tecnoavanza_total[lang] | safe }}</span></p>
           </div>
         </div>
         <div class="cv-job__body">
           <div class="cv-job__role">
-            <h4>Software Developer <span class="cv-job__type">{% if lang == "es" %}Prácticas{% else %}Internship{% endif %}</span></h4>
+            <h4>Software Developer <span class="cv-job__type">{{ t.experience.internship[lang] | safe }}</span></h4>
             <span class="cv-job__dates">Mar 2013 &ndash; Jun 2013</span>
           </div>
-          <p>{% if lang == "es" %}Desarrollo de software para plataformas móviles. Primer contacto con Symfony en entorno profesional.{% else %}Software development for mobile platforms. First contact with Symfony in a professional environment.{% endif %}</p>
+          <p>{{ t.experience.tecnoavanza[lang] | safe }}</p>
           <div class="cv-tags cv-tags--small">
             <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
             <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
@@ -398,7 +399,7 @@
 
   <!-- Recommendations -->
   <section class="cv-section">
-    <h2><i class="fa-solid fa-quote-left"></i> {% if lang == "es" %}Recomendaciones{% else %}Recommendations{% endif %}</h2>
+    <h2><i class="fa-solid fa-quote-left"></i> {{ t.recommendations.title[lang] | safe }}</h2>
     <div class="cv-recommendations">
       <blockquote class="cv-rec">
         <p>"I worked with Chema for almost two years at Purpose Green. We started together as Senior Backend Engineers, and he later became our Team Tech Lead. Chema is one of the most professional leaders and colleagues I have ever worked with.</p>
@@ -478,31 +479,31 @@
         <footer><span class="cv-rec__avatar" style="background:#16a34a">AC</span> <a href="https://www.linkedin.com/in/annemarschner" target="_blank" rel="noopener"><strong>Anne Christiansen</strong></a> · Marketing &amp; Communications <span class="cv-rec__date">Nov 2016</span></footer>
       </blockquote>
     </div>
-    <button class="cv-rec-toggle" onclick="this.previousElementSibling.classList.toggle('cv-recommendations--visible'); this.textContent = this.previousElementSibling.classList.contains('cv-recommendations--visible') ? '{% if lang == "es" %}Ver menos{% else %}Show less{% endif %}' : '{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (14)'">{% if lang == "es" %}Ver más{% else %}Show more{% endif %} (14)</button>
+    <button class="cv-rec-toggle" onclick="this.previousElementSibling.classList.toggle('cv-recommendations--visible'); this.textContent = this.previousElementSibling.classList.contains('cv-recommendations--visible') ? '{{ t.recommendations.show_less[lang] | safe }}' : '{{ t.recommendations.show_more[lang] | safe }} (14)'">{{ t.recommendations.show_more[lang] | safe }} (14)</button>
   </section>
 
   <!-- Products -->
   <section class="cv-section" id="products" aria-labelledby="products-title">
-    <h2 id="products-title"><i class="fa-solid fa-rocket"></i> {% if lang == "es" %}Productos{% else %}Products{% endif %}</h2>
-    <p class="cv-section__lead">{% if lang == "es" %}Productos propios que he diseñado, desarrollado, desplegado y opero de principio a fin.{% else %}My own products, designed, built, deployed, and operated end to end.{% endif %}</p>
+    <h2 id="products-title"><i class="fa-solid fa-rocket"></i> {{ t.products.title[lang] | safe }}</h2>
+    <p class="cv-section__lead">{{ t.products.lead[lang] | safe }}</p>
     <div class="cv-projects cv-projects--two">
       <a href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener" class="cv-project cv-print-hide">
         <h3><i class="fa-solid fa-dumbbell cv-project__icon"></i> MIAFORO</h3>
-        <p class="cv-project__meta"><i class="fa-solid fa-user"></i> {% if lang == "es" %}Creador y operador{% else %}Creator &amp; operator{% endif %}</p>
-        <p>{% if lang == "es" %}Gestión para gimnasios independientes. Horarios, reservas, cobros, socios y progreso en un solo producto.{% else %}Gym management for independent gyms. Schedules, bookings, payments, members, and progress in one product.{% endif %}</p>
+        <p class="cv-project__meta"><i class="fa-solid fa-user"></i> {{ t.products.role[lang] | safe }}</p>
+        <p>{{ t.products.miaforo[lang] | safe }}</p>
       </a>
       <a href="{% if lang == 'es' %}https://puertafria.es/{% else %}https://puertafria.es/en{% endif %}" target="_blank" rel="noopener" class="cv-project cv-print-hide">
         <h3><i class="fa-solid fa-mobile-screen cv-project__icon"></i> puertafria</h3>
-        <p class="cv-project__meta"><i class="fa-solid fa-user"></i> {% if lang == "es" %}Creador y operador{% else %}Creator &amp; operator{% endif %}</p>
-        <p>{% if lang == "es" %}Una aplicación de venta a puerta fría que convierte un CSV en la lista de a quién llamar hoy.{% else %}A cold-calling app that turns a CSV into the list of who to call today.{% endif %}</p>
+        <p class="cv-project__meta"><i class="fa-solid fa-user"></i> {{ t.products.role[lang] | safe }}</p>
+        <p>{{ t.products.puertafria[lang] | safe }}</p>
       </a>
       <div class="cv-project cv-print-only">
         <h3>MIAFORO</h3>
-        <p>{% if lang == "es" %}Creador y operador. Gestión para gimnasios independientes: horarios, reservas, cobros, socios y progreso.{% else %}Creator &amp; operator. Gym management for independent gyms: schedules, bookings, payments, members, and progress.{% endif %}</p>
+        <p>{{ t.products.miaforo_print[lang] | safe }}</p>
       </div>
       <div class="cv-project cv-print-only">
         <h3>puertafria</h3>
-        <p>{% if lang == "es" %}Creador y operador. Aplicación de venta a puerta fría que convierte un CSV en la lista de a quién llamar hoy.{% else %}Creator &amp; operator. Cold-calling app that turns a CSV into the list of who to call today.{% endif %}</p>
+        <p>{{ t.products.puertafria_print[lang] | safe }}</p>
       </div>
     </div>
   </section>
@@ -518,50 +519,50 @@
           <svg class="cv-project__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.8 362.8"><path d="M317.5 0H45.4C20.3 0 0 20.3 0 45.4v272.1c0 25 20.3 45.4 45.4 45.4h272.1c25 0 45.4-20.3 45.4-45.4V45.4C362.8 20.3 342.5 0 317.5 0z" fill="#2e3436"/><path d="M259.3 317.5c11.2-4 21.6-10.1 30.5-17.9 4.9 10.9 15.7 17.9 27.6 17.9h-58.1zM226.8 45.3h-90.7C86 45.3 45.3 86 45.3 136.1v38.3c12.5-34.8 43.9-59.4 80.7-63.3.6-17.5 2.8-35 6.8-52.1a5.68 5.68 0 0 1 4.5-4.3c3.1-.5 6 1.5 6.6 4.6 3 16.8 10.6 32.5 22 45.2 1.6 1.8 2.9 3.9 3.9 6.1h5.4c2.4-21.3 12.9-40.9 29.3-54.6 1.3-1.1 3-1.5 4.6-1.2 3.1.6 5.1 3.5 4.6 6.6-3 16.8-1.2 34.2 5.2 50 .4.9.7 1.9.9 2.9 19.5 7.7 32.3 26.5 32.3 47.5v29.8c0 15.6-12.7 28.3-28.3 28.3h-78c-1.6 0-2.8-1.3-2.8-2.8 0-1.6 1.3-2.8 2.8-2.8h78c12.5 0 22.7-10.2 22.7-22.7v-29.8c0-25-20.3-45.4-45.3-45.4H136c-50.1 0-90.7 40.6-90.7 90.7v19.8c0 50.1 40.6 90.7 90.7 90.7h90.7c50.1 0 90.7-40.6 90.7-90.7v-90.7c.1-50.2-40.5-90.9-90.6-90.9zm-78 119.8c0-13.5 11-24.4 24.5-24.4s24.4 11 24.4 24.5-11 24.4-24.5 24.4c-13.4 0-24.4-11-24.4-24.5z" fill="#eceeee"/><path d="M161.7 108.3c-12.1-13.5-20.2-30.1-23.4-48-4.5 19.5-6.8 39.5-6.8 59.6a17.31 17.31 0 0 0 17.3 17.3 17.31 17.31 0 0 0 17.3-17.3c0-4.4-1.6-8.5-4.4-11.6zm51.5 3.7c-6.3-16.5-8.1-34.3-5-51.7C193.1 73 183.3 91 181 110.6h20.3c4 0 8 .4 11.9 1.4z" fill="#8ae234"/></svg>
           bashunit
         </h3>
-        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="typeddevs/bashunit">{{ bashunit_stars }}</span> · {% if lang == "es" %}Creador y Maintainer{% else %}Creator &amp; Maintainer{% endif %}</p>
-        <p>{% if lang == "es" %}Librería de testing para scripts bash inspirada en PHPUnit. Lleva prácticas de calidad a shell scripts y pipelines de CI.{% else %}Testing library for bash scripts inspired by PHPUnit. Brings quality testing practices to shell scripts and CI pipelines.{% endif %}</p>
-        <p class="cv-project__meta cv-project__meta--award"><i class="fa-solid fa-trophy"></i> {% if lang == "es" %}Side Project del Año 2023{% else %}Side Project of the Year 2023{% endif %}</p>
+        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="typeddevs/bashunit">{{ bashunit_stars }}</span> · {{ t.open_source.creator[lang] | safe }}</p>
+        <p>{{ t.open_source.bashunit[lang] | safe }}</p>
+        <p class="cv-project__meta cv-project__meta--award"><i class="fa-solid fa-trophy"></i> {{ t.open_source.bashunit_award[lang] | safe }}</p>
       </a>
       <a href="https://phel-lang.org" target="_blank" rel="noopener" class="cv-project cv-print-hide">
         <h3>
           <svg class="cv-project__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.3 167.7"><path d="M6 66l95 96h36V93l-36-74H42L6 56v106h36l24-35" fill="none" stroke="#512da8" stroke-width="8"/><path d="M137 93l58-3-12-58-32-26h-34l-16 13-23 9-12 22 46 52z" fill="none" stroke="#512da8" stroke-width="8"/><path d="M195 90l-12 57h-13l-2-56m2 56l-13-11h12" fill="none" stroke="#512da8" stroke-width="8"/></svg>
           Phel Lang
         </h3>
-        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="phel-lang/phel-lang">{{ phel_stars }}</span> · {% if lang == "es" %}Core Maintainer{% else %}Core Maintainer{% endif %}</p>
-        <p>{% if lang == "es" %}Lenguaje de programación funcional que compila a PHP. Dialecto de Lisp inspirado en Clojure con estructuras de datos persistentes, macros y REPL.{% else %}Functional programming language that compiles to PHP. A Lisp dialect inspired by Clojure with persistent data structures, macros, and a REPL.{% endif %}</p>
+        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="phel-lang/phel-lang">{{ phel_stars }}</span> · {{ t.open_source.core_maintainer[lang] | safe }}</p>
+        <p>{{ t.open_source.phel[lang] | safe }}</p>
       </a>
       <a href="https://agnostic-ai.org/" target="_blank" rel="noopener" class="cv-project cv-print-hide">
         <h3>
           <i class="fa-solid fa-robot cv-project__icon"></i>
           agnostic-ai
         </h3>
-        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="chemaclass/agnostic-ai">{{ agnostic_ai_stars }}</span> · {% if lang == "es" %}Creador y Maintainer{% else %}Creator &amp; Maintainer{% endif %}</p>
-        <p>{% if lang == "es" %}Una única fuente de verdad para agentes, skills, reglas y hooks de IA. Un sync genera los ficheros nativos de cada CLI de IA.{% else %}One source of truth for AI agents, skills, rules, and hooks. One sync writes the native files every AI CLI reads.{% endif %}</p>
+        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="chemaclass/agnostic-ai">{{ agnostic_ai_stars }}</span> · {{ t.open_source.creator[lang] | safe }}</p>
+        <p>{{ t.open_source.agnostic_ai[lang] | safe }}</p>
       </a>
       <div class="cv-project cv-print-only">
         <h3>bashunit · <span class="cv-star" data-repo="typeddevs/bashunit">{{ bashunit_stars }}</span>★</h3>
-        <p>{% if lang == "es" %}Creador y Maintainer. Librería de testing para scripts bash. Side Project del Año 2023.{% else %}Creator &amp; Maintainer. Testing library for bash scripts. Side Project of the Year 2023.{% endif %}</p>
+        <p>{{ t.open_source.bashunit_print[lang] | safe }}</p>
       </div>
       <div class="cv-project cv-print-only">
         <h3>Phel Lang · <span class="cv-star" data-repo="phel-lang/phel-lang">{{ phel_stars }}</span>★</h3>
-        <p>{% if lang == "es" %}Core Maintainer. Lenguaje funcional que compila a PHP. Dialecto de Lisp inspirado en Clojure.{% else %}Core Maintainer. Functional language that compiles to PHP. Lisp dialect inspired by Clojure.{% endif %}</p>
+        <p>{{ t.open_source.phel_print[lang] | safe }}</p>
       </div>
       <div class="cv-project cv-print-only">
         <h3>agnostic-ai · <span class="cv-star" data-repo="chemaclass/agnostic-ai">{{ agnostic_ai_stars }}</span>★</h3>
-        <p>{% if lang == "es" %}Creador y Maintainer. Una única fuente de verdad para la config de cada herramienta de IA.{% else %}Creator &amp; Maintainer. One source of truth for the config of every AI coding tool.{% endif %}</p>
+        <p>{{ t.open_source.agnostic_ai_print[lang] | safe }}</p>
       </div>
     </div>
   </section>
 
   <!-- Talks -->
   <section class="cv-section">
-    <h2><a href="/talks/" class="cv-section__link cv-print-hide"><i class="fa-solid fa-microphone"></i> {% if lang == "es" %}Charlas{% else %}Talks{% endif %}</a><span class="cv-print-only"><i class="fa-solid fa-microphone"></i> {% if lang == "es" %}Charlas{% else %}Talks{% endif %}</span></h2>
-    <p class="cv-section__lead">{% if lang == "es" %}35+ charlas y workshops desde 2021. Conferencias internacionales, meetups y comunidades de software craftsmanship.{% else %}35+ talks and workshops since 2021. International conferences, meetups, and software craftsmanship communities.{% endif %}</p>
+    <h2><a href="/talks/" class="cv-section__link cv-print-hide"><i class="fa-solid fa-microphone"></i> {{ t.talks.title[lang] | safe }}</a><span class="cv-print-only"><i class="fa-solid fa-microphone"></i> {{ t.talks.title[lang] | safe }}</span></h2>
+    <p class="cv-section__lead">{{ t.talks.lead[lang] | safe }}</p>
     <ul class="cv-talks">
       <li>
         <strong>International PHP Conference</strong>
         <span>Berlin / Munich · 2022&ndash;2026</span>
-        <em>{% if lang == "es" %}TDD, refactoring, Phel, AI co-pilot, workshops de pair programming{% else %}TDD, refactoring, Phel, AI co-pilot, pair programming workshops{% endif %}</em>
+        <em>{{ t.talks.ipc[lang] | safe }}</em>
       </li>
       <li>
         <strong>WeAreDevelopers World Congress</strong>
@@ -583,22 +584,22 @@
 
   <!-- Writing -->
   <section class="cv-section">
-    <h2><a href="/blog/" class="cv-section__link cv-print-hide"><i class="fa-solid fa-pen-nib"></i> {% if lang == "es" %}Escritura{% else %}Writing{% endif %}</a><span class="cv-print-only"><i class="fa-solid fa-pen-nib"></i> {% if lang == "es" %}Escritura{% else %}Writing{% endif %}</span></h2>
-    <p class="cv-section__lead">{% if lang == "es" %}70+ posts publicados en chemaclass.com sobre agentic coding, liderazgo en ingeniería, craftsmanship y arquitectura modular.{% else %}70+ posts published on chemaclass.com on agentic coding, engineering leadership, craftsmanship, and modular architecture.{% endif %}</p>
+    <h2><a href="/blog/" class="cv-section__link cv-print-hide"><i class="fa-solid fa-pen-nib"></i> {{ t.writing.title[lang] | safe }}</a><span class="cv-print-only"><i class="fa-solid fa-pen-nib"></i> {{ t.writing.title[lang] | safe }}</span></h2>
+    <p class="cv-section__lead">{{ t.writing.lead[lang] | safe }}</p>
     <div class="cv-writing-series">
-      <span class="cv-tag"><i class="fa-solid fa-robot"></i> {% if lang == "es" %}Serie AI{% else %}AI Series{% endif %}</span>
-      <span class="cv-tag"><i class="fa-solid fa-users"></i> {% if lang == "es" %}Liderazgo &amp; Equipos{% else %}Leadership &amp; Teams{% endif %}</span>
-      <span class="cv-tag"><i class="fa-solid fa-hammer"></i> {% if lang == "es" %}Software Craftsmanship{% else %}Software Craftsmanship{% endif %}</span>
+      <span class="cv-tag"><i class="fa-solid fa-robot"></i> {{ t.writing.series_ai[lang] | safe }}</span>
+      <span class="cv-tag"><i class="fa-solid fa-users"></i> {{ t.writing.series_leadership[lang] | safe }}</span>
+      <span class="cv-tag"><i class="fa-solid fa-hammer"></i> {{ t.writing.series_craftsmanship[lang] | safe }}</span>
       <span class="cv-tag"><i class="fa-solid fa-bolt"></i> Agile &amp; XP</span>
     </div>
   </section>
 
   <!-- Skills -->
   <section class="cv-section">
-    <h2><i class="fa-solid fa-code"></i> {% if lang == "es" %}Habilidades{% else %}Skills{% endif %}</h2>
+    <h2><i class="fa-solid fa-code"></i> {{ t.skills.title[lang] | safe }}</h2>
     <div class="cv-skills">
       <div class="cv-skills__group">
-        <h3 class="cv-skills__label">{% if lang == "es" %}Lenguajes & IA{% else %}Languages & AI{% endif %}</h3>
+        <h3 class="cv-skills__label">{{ t.skills.languages[lang] | safe }}</h3>
         <div class="cv-skills__items">
           <span class="cv-skill"><i class="fa-brands fa-php"></i> PHP</span>
           <span class="cv-skill"><i class="fa-solid fa-code"></i> TypeScript</span>
@@ -618,7 +619,7 @@
         </div>
       </div>
       <div class="cv-skills__group">
-        <h3 class="cv-skills__label">{% if lang == "es" %}Datos &amp; Infraestructura{% else %}Data &amp; Infrastructure{% endif %}</h3>
+        <h3 class="cv-skills__label">{{ t.skills.data[lang] | safe }}</h3>
         <div class="cv-skills__items">
           <span class="cv-skill"><i class="fa-solid fa-database"></i> PostgreSQL</span>
           <span class="cv-skill"><i class="fa-solid fa-bolt"></i> Redis</span>
@@ -628,7 +629,7 @@
         </div>
       </div>
       <div class="cv-skills__group">
-        <h3 class="cv-skills__label">{% if lang == "es" %}Prácticas &amp; Liderazgo{% else %}Practices &amp; Leadership{% endif %}</h3>
+        <h3 class="cv-skills__label">{{ t.skills.practices[lang] | safe }}</h3>
         <div class="cv-skills__items">
           <span class="cv-skill"><i class="fa-solid fa-vial-circle-check"></i> TDD</span>
           <span class="cv-skill"><i class="fa-solid fa-compass"></i> {{ trans(key="home_skill_leadership", lang=lang) }}</span>
@@ -641,19 +642,19 @@
 
   <!-- Education -->
   <section class="cv-section">
-    <h2><i class="fa-solid fa-graduation-cap"></i> {% if lang == "es" %}Educación{% else %}Education{% endif %}</h2>
+    <h2><i class="fa-solid fa-graduation-cap"></i> {{ t.education.title[lang] | safe }}</h2>
     <div class="cv-timeline">
       <div class="cv-edu">
         <h3><i class="fa-solid fa-school"></i> CIFP Carlos III</h3>
         <p class="cv-edu__location">Cartagena, Murcia, Spain</p>
-        <p class="cv-edu__degree">{% if lang == "es" %}Técnico Superior en Desarrollo de Aplicaciones Web{% else %}Higher Technician in Web Applications Development{% endif %}</p>
+        <p class="cv-edu__degree">{{ t.education.cifp[lang] | safe }}</p>
         <span class="cv-job__dates">2013 &ndash; 2014</span>
         <p class="cv-edu__focus"><i class="fa-brands fa-php"></i> PHP · <i class="fa-solid fa-database"></i> MySQL · <i class="fa-brands fa-js"></i> Javascript</p>
       </div>
       <div class="cv-edu">
         <h3><i class="fa-solid fa-school"></i> IES Ginés Pérez Chirinos</h3>
         <p class="cv-edu__location">Caravaca de la Cruz, Murcia, Spain</p>
-        <p class="cv-edu__degree">{% if lang == "es" %}Técnico Superior en Desarrollo de Aplicaciones Multiplataforma{% else %}Higher Technician in Multi-platform Applications Development{% endif %}</p>
+        <p class="cv-edu__degree">{{ t.education.ies[lang] | safe }}</p>
         <span class="cv-job__dates">2011 &ndash; 2013</span>
         <p class="cv-edu__focus"><i class="fa-brands fa-java"></i> Java · <i class="fa-solid fa-database"></i> Oracle SQL · <i class="fa-brands fa-android"></i> Android</p>
       </div>
@@ -662,7 +663,7 @@
 
   <!-- Certifications -->
   <section class="cv-section">
-    <h2><i class="fa-solid fa-certificate"></i> {% if lang == "es" %}Certificaciones{% else %}Certifications{% endif %}</h2>
+    <h2><i class="fa-solid fa-certificate"></i> {{ t.certifications.title[lang] | safe }}</h2>
     <div class="cv-timeline">
       <div class="cv-edu">
         <h3><i class="fa-solid fa-scroll"></i> <a href="https://www.credential.net/b7210ffc-ffb5-48e0-a829-d5107ba8536f#acc.uRNlvVIU" target="_blank" rel="noopener">Spryker Certified Foundations Developer</a></h3>
@@ -670,62 +671,62 @@
       </div>
       <div class="cv-edu">
         <h3><i class="fa-solid fa-earth-europe"></i> Erasmus+ Programme</h3>
-        <p class="cv-edu__location">{% if lang == "es" %}Via ENAE Business School (Murcia) &rarr; Lübeck, Alemania{% else %}Via ENAE Business School (Murcia) &rarr; Lübeck, Germany{% endif %}</p>
+        <p class="cv-edu__location">{{ t.certifications.erasmus_location[lang] | safe }}</p>
         <span class="cv-job__dates">Dec 2014 &ndash; Jun 2015</span>
-        <p class="cv-edu__focus">{% if lang == "es" %}Estancia profesional en Alemania (combinada con trabajo en Falk medizinische Datenverarbeitung).{% else %}Professional placement in Germany (combined with work at Falk medizinische Datenverarbeitung).{% endif %}</p>
+        <p class="cv-edu__focus">{{ t.certifications.erasmus_focus[lang] | safe }}</p>
       </div>
     </div>
   </section>
 
   <!-- Awards -->
   <section class="cv-section">
-    <h2><i class="fa-solid fa-trophy"></i> {% if lang == "es" %}Reconocimientos{% else %}Awards{% endif %}</h2>
+    <h2><i class="fa-solid fa-trophy"></i> {{ t.awards.title[lang] | safe }}</h2>
     <div class="cv-timeline">
       <div class="cv-edu">
         <h3><i class="fa-solid fa-trophy"></i> bashunit: Side Project of the Year</h3>
-        <p class="cv-edu__location">{% if lang == "es" %}Otorgado por{% else %}Issued by{% endif %} <a href="https://x.com/getmanfred" target="_blank" rel="noopener">Manfred</a> · Dec 2023</p>
-        <p class="cv-edu__degree">{% if lang == "es" %}Ganadores del Side Project del Año, 2023.{% else %}Winners of the Side Project of the Year, 2023.{% endif %}</p>
+        <p class="cv-edu__location">{{ t.awards.issued_by[lang] | safe }} <a href="https://x.com/getmanfred" target="_blank" rel="noopener">Manfred</a> · Dec 2023</p>
+        <p class="cv-edu__degree">{{ t.awards.bashunit[lang] | safe }}</p>
       </div>
       <div class="cv-edu">
-        <h3><i class="fa-solid fa-medal"></i> {% if lang == "es" %}Primer premio como estudiante{% else %}First award as student{% endif %}</h3>
-        <p class="cv-edu__location">{% if lang == "es" %}Otorgado por{% else %}Issued by{% endif %} Fundación Robles Chillida · Nov 2013</p>
-        <p class="cv-edu__degree">{% if lang == "es" %}Primer premio de ayudas al estudio al mejor expediente en la categoría de Alumnos de Grado Superior en Desarrollo de Aplicaciones Multiplataforma.{% else %}First award of study aids for the best result in the Higher Level category of Multi-platform Applications Development.{% endif %}</p>
+        <h3><i class="fa-solid fa-medal"></i> {{ t.awards.first_award_title[lang] | safe }}</h3>
+        <p class="cv-edu__location">{{ t.awards.issued_by[lang] | safe }} Fundación Robles Chillida · Nov 2013</p>
+        <p class="cv-edu__degree">{{ t.awards.first_award[lang] | safe }}</p>
       </div>
     </div>
   </section>
 
   <!-- Languages -->
   <section class="cv-section">
-    <h2><i class="fa-solid fa-language"></i> {% if lang == "es" %}Idiomas{% else %}Languages{% endif %}</h2>
+    <h2><i class="fa-solid fa-language"></i> {{ t.languages.title[lang] | safe }}</h2>
     <div class="cv-languages">
       <div class="cv-lang" data-level="5">
         <svg class="cv-flag" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#c60b1e"/><rect y="3.5" width="20" height="7" fill="#ffc400"/></svg>
         <div class="cv-lang__body">
           <div class="cv-lang__row">
-            <span class="cv-lang__name">{% if lang == "es" %}Español{% else %}Spanish{% endif %}</span>
+            <span class="cv-lang__name">{{ t.languages.spanish[lang] | safe }}</span>
             <span class="cv-lang__code">C2</span>
           </div>
-          <span class="cv-lang__level">{% if lang == "es" %}Nativo{% else %}Native{% endif %}</span>
+          <span class="cv-lang__level">{{ t.languages.spanish_level[lang] | safe }}</span>
         </div>
       </div>
       <div class="cv-lang" data-level="4">
         <svg class="cv-flag" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#012169"/><path d="M0 0l20 14M20 0L0 14" stroke="#fff" stroke-width="2.8"/><path d="M0 0l20 14M20 0L0 14" stroke="#c8102e" stroke-width="1.6"/><path d="M10 0v14M0 7h20" stroke="#fff" stroke-width="4.5"/><path d="M10 0v14M0 7h20" stroke="#c8102e" stroke-width="2.5"/></svg>
         <div class="cv-lang__body">
           <div class="cv-lang__row">
-            <span class="cv-lang__name">{% if lang == "es" %}Inglés{% else %}English{% endif %}</span>
+            <span class="cv-lang__name">{{ t.languages.english[lang] | safe }}</span>
             <span class="cv-lang__code">C1</span>
           </div>
-          <span class="cv-lang__level">{% if lang == "es" %}Profesional completo{% else %}Full professional{% endif %}</span>
+          <span class="cv-lang__level">{{ t.languages.english_level[lang] | safe }}</span>
         </div>
       </div>
       <div class="cv-lang" data-level="2">
         <svg class="cv-flag" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/><rect y="9.33" width="20" height="4.67" fill="#ffcc00"/></svg>
         <div class="cv-lang__body">
           <div class="cv-lang__row">
-            <span class="cv-lang__name">{% if lang == "es" %}Alemán{% else %}German{% endif %}</span>
+            <span class="cv-lang__name">{{ t.languages.german[lang] | safe }}</span>
             <span class="cv-lang__code">B1</span>
           </div>
-          <span class="cv-lang__level">{% if lang == "es" %}Nivel básico laboral{% else %}Limited working{% endif %}</span>
+          <span class="cv-lang__level">{{ t.languages.german_level[lang] | safe }}</span>
         </div>
       </div>
     </div>
