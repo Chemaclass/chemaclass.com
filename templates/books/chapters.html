@@ -14,6 +14,7 @@
 {% endblock %}
 
 {% block content %}
+{%- set t = load_data(path="data/i18n/books.toml") -%}
   <div class="book-chapters">
     <div class="book-chapters__header">
       <h1>{{ section.title | split(pat=" | ") | first }}</h1>
@@ -28,7 +29,7 @@
     <div class="book-chapters__search">
       <i class="fa-solid fa-magnifying-glass"></i>
       <input type="search" id="chapter-search"
-             placeholder="{% if lang == 'es' %}Buscar capítulos por título o contenido...{% else %}Search chapters by title or content...{% endif %}"
+             placeholder="{{ t.chapters.search_placeholder[lang] | safe }}"
              autocomplete="off" />
       <span class="book-chapters__search-count" id="chapter-search-count"></span>
     </div>
@@ -93,7 +94,7 @@
             {% if post.word_count %}
               <span class="chapter-card__poems">
                 <i class="fa-solid fa-feather"></i>
-                {{ post.word_count }} {% if lang == "es" %}palabras{% else %}words{% endif %}
+                {{ post.word_count }} {{ t.chapters.words[lang] | safe }}
               </span>
             {% endif %}
           </div>
@@ -101,7 +102,7 @@
       {% endfor %}
 
       <div class="book-chapters__no-results" id="chapter-no-results" style="display:none">
-        {% if lang == "es" %}No se encontraron capítulos{% else %}No chapters found{% endif %}
+        {{ t.chapters.empty[lang] | safe }}
       </div>
     </div>
   </div>

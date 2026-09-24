@@ -57,12 +57,12 @@
             <h1 id="home-title">Chemaclass</h1>
             <p class="homepage-intro__lead">{{ trans(key="home_subtitle", lang=lang) }}</p>
             <p>{{ trans(key="home_about_p1", lang=lang) | safe }}</p>
-            <p>{% if lang == 'es' %}Comparto lo que aprendo sobre software y liderazgo, y creo páginas web para empresas y profesionales.{% else %}I share what I learn about software and leadership, and build websites for businesses and independent professionals.{% endif %}</p>
+            <p>{{ trans(key="home_about_share", lang=lang) }}</p>
             <div class="homepage-intro__actions">
-                <a class="home-action" href="{% if lang == 'es' %}/es{% endif %}/blog/">{% if lang == 'es' %}Explorar mis artículos{% else %}Explore my writing{% endif %}</a>
-                <a class="home-action home-action--primary" href="{% if lang == 'es' %}/es{% endif %}/services/web-development/">{% if lang == 'es' %}Quiero una web{% else %}Get a website{% endif %}</a>
+                <a class="home-action" href="{% if lang == 'es' %}/es{% endif %}/blog/">{{ trans(key="home_action_writing", lang=lang) }}</a>
+                <a class="home-action home-action--primary" href="{% if lang == 'es' %}/es{% endif %}/services/web-development/">{{ trans(key="home_action_website", lang=lang) }}</a>
             </div>
-            <a class="homepage-intro__background" href="{% if lang == 'es' %}/es{% endif %}/cv/">{% if lang == 'es' %}Mi experiencia y trayectoria{% else %}My experience and background{% endif %}</a>
+            <a class="homepage-intro__background" href="{% if lang == 'es' %}/es{% endif %}/cv/">{{ trans(key="home_background", lang=lang) }}</a>
         </div>
         <img class="homepage-intro__portrait" src="{{ profile_image.url }}" alt="{{ trans(key="home_profile_alt", lang=lang) }}" width="400" height="400" decoding="async" fetchpriority="high">
     </section>

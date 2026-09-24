@@ -6,16 +6,17 @@
 {% endblock styles %}
 
 {% block content %}
+{%- set t = load_data(path="data/i18n/web-development.toml") -%}
 {% set lp = '' %}{% if lang == 'es' %}{% set lp = '/es' %}{% endif %}
 <article class="web-development-sales">
   <section class="sales-thanks">
-    <span class="sales-eyebrow">{% if lang == "es" %}Recibido{% else %}Received{% endif %}</span>
-    <h1>{% if lang == "es" %}Gracias, ya lo tengo{% else %}Thanks, I have it{% endif %}</h1>
-    <p class="sales-thanks__lead">{% if lang == "es" %}Lo leo y te respondo en un día laborable. Te digo qué opción te encaja y cuánto tardaría. Si me falta algo para cerrar el precio, te lo pregunto.{% else %}I read it and reply within one working day. I tell you which option fits and how long it would take. If I need anything to fix the price, I ask.{% endif %}</p>
-    <p class="sales-thanks__aside">{% if lang == "es" %}¿No te llega nada? Mira en spam, o escríbeme directamente a <a href="mailto:web@chemaclass.com">web@chemaclass.com</a>.{% else %}Nothing arrives? Check your spam folder, or write to me directly at <a href="mailto:web@chemaclass.com">web@chemaclass.com</a>.{% endif %}</p>
+    <span class="sales-eyebrow">{{ t.thanks.eyebrow[lang] | safe }}</span>
+    <h1>{{ t.thanks.title[lang] | safe }}</h1>
+    <p class="sales-thanks__lead">{{ t.thanks.lead[lang] | safe }}</p>
+    <p class="sales-thanks__aside">{{ t.thanks.aside[lang] | safe }}</p>
     <div class="sales-thanks__actions">
-      <a class="sales-button sales-button--primary" href="{{ lp }}/services/web-development/">{% if lang == "es" %}Volver a los precios{% else %}Back to the prices{% endif %}</a>
-      <a class="sales-button" href="{{ lp }}/blog/">{% if lang == "es" %}Leer el blog{% else %}Read the blog{% endif %}</a>
+      <a class="sales-button sales-button--primary" href="{{ lp }}/services/web-development/">{{ t.thanks.back[lang] | safe }}</a>
+      <a class="sales-button" href="{{ lp }}/blog/">{{ t.thanks.blog[lang] | safe }}</a>
     </div>
   </section>
 </article>

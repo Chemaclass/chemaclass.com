@@ -7,7 +7,7 @@
 
 {# Without this the term pages all fall through base.html to config.title, so
    every one of them shipped the same <title>Chemaclass</title>. #}
-{% block title %}{{ term.name }} | {% if lang == "es" %}Artículos{% else %}Articles{% endif %} | {{ config.title }}{% endblock title %}
+{% block title %}{{ term.name }} | {{ trans(key="tag_title_suffix", lang=lang) }} | {{ config.title }}{% endblock title %}
 
 {% block description %}
   {% set tag_desc = "" %}
@@ -20,8 +20,8 @@
     <meta name="description" content="{{ tag_desc }}" />
     <meta name="twitter:description" content="{{ tag_desc }}">
   {% else %}
-    <meta name="description" content="{{ term.pages | length }} {% if lang == 'es' %}artículos sobre{% else %}posts about{% endif %} {{ term.name }}" />
-    <meta name="twitter:description" content="{{ term.pages | length }} {% if lang == 'es' %}artículos sobre{% else %}posts about{% endif %} {{ term.name }}">
+    <meta name="description" content="{{ term.pages | length }} {{ trans(key="tag_posts_about", lang=lang) }} {{ term.name }}" />
+    <meta name="twitter:description" content="{{ term.pages | length }} {{ trans(key="tag_posts_about", lang=lang) }} {{ term.name }}">
   {% endif %}
 {% endblock description %}
 
@@ -54,7 +54,7 @@
       </svg>
       {# The term itself moved into the H1, so the label says what this page is
          rather than repeating the word directly underneath itself. #}
-      {% if lang == "es" %}Etiqueta{% else %}Tag{% endif %}
+      {{ trans(key="tag_label", lang=lang) }}
     </span>
     <h1>{{ term.name }}</h1>
     <p class="tag-single__count">{{ term.pages | length }} {% if term.pages | length == 1 %}{{ trans(key="post", lang=lang) }}{% else %}{{ trans(key="posts", lang=lang) }}{% endif %}</p>
