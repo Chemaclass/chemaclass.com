@@ -737,10 +737,10 @@
 
 <script>
 (function () {
-  var isES = document.documentElement.lang === 'es';
-  var labels = isES
-    ? { more: 'Leer más', less: 'Ver menos' }
-    : { more: 'Read more', less: 'Show less' };
+  var labels = {
+    more: {{ t.recommendations.read_more[lang] | json_encode | safe }},
+    less: {{ t.recommendations.show_less[lang] | json_encode | safe }}
+  };
 
   function addToggle(rec, wrap) {
     var footer = rec.querySelector('footer');
