@@ -8,6 +8,37 @@ MINIFY_VERSION="${MINIFY_VERSION:-2.21.3}"
 OS=$(uname -s)
 ARCH=$(uname -m)
 
+# Every downloaded binary is checked against a digest pinned here before it is
+# unpacked. The build runs with deploy credentials in CI, so a replaced release
+# asset must fail the build, not run inside it. A different version needs its
+# digest passed in explicitly (ZOLA_SHA256, MINIFY_SHA256).
+pinned_sha256() {
+  case "$1" in
+    zola-v0.23.6-x86_64-unknown-linux-gnu.tar.gz)  echo 8f5132b3522412d04e395e0b25f6d68613ad272a873e54a2b3ebf664873024a4 ;;
+    zola-v0.23.6-aarch64-unknown-linux-gnu.tar.gz) echo 266448fffbf7c7004ca399d0e76dd699541771096d8a42aede98cebe2a029d02 ;;
+    minify-v2.21.3-minify_linux_amd64.tar.gz)      echo a5ee60de8d3e2b98d20c6fad047bb3e2c162e1d0b56a5f474f773a651a23494e ;;
+    minify-v2.21.3-minify_linux_arm64.tar.gz)      echo 0efde9c41133430729d0ec6353045f2006ecb1185868249200b45b4f527c998d ;;
+  esac
+}
+
+verify_sha256() {
+  local file="$1" expected="$2" actual
+  if [ -z "$expected" ]; then
+    echo "No pinned SHA-256 for $file. Pass one in to download this version."
+    exit 1
+  fi
+  if command -v sha256sum &> /dev/null; then
+    actual=$(sha256sum "$file" | awk '{print $1}')
+  else
+    actual=$(shasum -a 256 "$file" | awk '{print $1}')
+  fi
+  if [ "$actual" != "$expected" ]; then
+    echo "SHA-256 mismatch for $file: expected $expected, got $actual"
+    rm -f "$file"
+    exit 1
+  fi
+}
+
 # Download zola if not installed
 if ! command -v zola &> /dev/null; then
   if [ "$OS" = "Darwin" ]; then
@@ -24,9 +55,11 @@ if ! command -v zola &> /dev/null; then
     exit 1
   fi
 
-  GH_URL="https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-${ZOLA_ARCH}.tar.gz"
+  ZOLA_ASSET="zola-v${ZOLA_VERSION}-${ZOLA_ARCH}.tar.gz"
+  GH_URL="https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/${ZOLA_ASSET}"
   echo "Downloading zola from $GH_URL"
-  curl -sSL -o zola.tar.gz "$GH_URL"
+  curl -fsSL -o zola.tar.gz "$GH_URL"
+  verify_sha256 zola.tar.gz "${ZOLA_SHA256:-$(pinned_sha256 "$ZOLA_ASSET")}"
   tar -xzf zola.tar.gz
   rm zola.tar.gz
   chmod +x zola
@@ -51,7 +84,8 @@ if ! command -v minify &> /dev/null; then
 
   MINIFY_URL="https://github.com/tdewolff/minify/releases/download/v${MINIFY_VERSION}/minify_linux_${MINIFY_ARCH}.tar.gz"
   echo "Downloading minify from $MINIFY_URL"
-  curl -sSL -o minify.tar.gz "$MINIFY_URL"
+  curl -fsSL -o minify.tar.gz "$MINIFY_URL"
+  verify_sha256 minify.tar.gz "${MINIFY_SHA256:-$(pinned_sha256 "minify-v${MINIFY_VERSION}-minify_linux_${MINIFY_ARCH}.tar.gz")}"
   tar -xzf minify.tar.gz minify
   rm minify.tar.gz
   chmod +x minify
@@ -72,6 +106,11 @@ ZOLA_FOUND=$(zola --version | awk '{print $2}')
 if [ "$(printf '%s\n%s\n' "$ZOLA_VERSION" "$ZOLA_FOUND" | sort -V | head -1)" != "$ZOLA_VERSION" ]; then
   echo "Zola $ZOLA_FOUND is too old. Install v${ZOLA_VERSION} or newer: see README, Prerequisites."
   exit 1
+fi
+# Newer is allowed, but CI builds with exactly $ZOLA_VERSION: say so, because a
+# newer Zola can render differently (0.23.6 alone changed every reading time).
+if [ "$ZOLA_FOUND" != "$ZOLA_VERSION" ]; then
+  echo "Warning: Zola $ZOLA_FOUND is newer than v${ZOLA_VERSION}, the version CI deploys with. Output may differ."
 fi
 
 echo "Checking content structure against the reviewed baseline..."
