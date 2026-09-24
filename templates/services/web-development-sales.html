@@ -27,7 +27,7 @@
         <article class="sales-hero-proof__slide sales-hero-proof__slide--windmill" data-proof-slide>
           <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
           <a href="{{ t.link.windmill[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_windmill[lang] | safe }}">
-            <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="Windmill Tündern website" width="720" height="450">
+            <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="{{ t.alt.windmill[lang] | safe }}" width="720" height="450">
           </a>
           <blockquote>{{ t.quote.windmill[lang] | safe }}</blockquote>
           <div class="sales-hero-proof__person">
@@ -39,7 +39,7 @@
         <article class="sales-hero-proof__slide sales-hero-proof__slide--teina" data-proof-slide hidden>
           <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
           <a href="https://teina.es" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_teina[lang] | safe }}">
-            <img src="/images/portfolio/teina-sample.webp" alt="Teína website" loading="lazy" width="720" height="450">
+            <img src="/images/portfolio/teina-sample.webp" alt="{{ t.alt.teina[lang] | safe }}" loading="lazy" width="720" height="450">
           </a>
           <blockquote>{{ t.quote.teina[lang] | safe }}</blockquote>
           <div class="sales-hero-proof__person">
@@ -51,7 +51,7 @@
         <article class="sales-hero-proof__slide sales-hero-proof__slide--sandoval" data-proof-slide hidden>
           <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
           <a href="{{ t.link.fco[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_fco[lang] | safe }}">
-            <img src="/images/portfolio/fco-sandoval-gomez-sample.webp" alt="Fco Sandoval Gómez website" loading="lazy" width="720" height="450">
+            <img src="/images/portfolio/fco-sandoval-gomez-sample.webp" alt="{{ t.alt.fco[lang] | safe }}" loading="lazy" width="720" height="450">
           </a>
           <blockquote>{{ t.quote.fco[lang] | safe }}</blockquote>
           <div class="sales-hero-proof__person">
@@ -63,7 +63,7 @@
         <article class="sales-hero-proof__slide sales-hero-proof__slide--dkrisna" data-proof-slide hidden>
           <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
           <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_dkrisna[lang] | safe }}">
-            <img src="/images/portfolio/dkrisna-sample.webp" alt="D'Krisna website" loading="lazy" width="720" height="450">
+            <img src="/images/portfolio/dkrisna-sample.webp" alt="{{ t.alt.dkrisna[lang] | safe }}" loading="lazy" width="720" height="450">
           </a>
           <p class="sales-hero-proof__summary">{{ t.proof.dkrisna_summary[lang] | safe }}</p>
           <div class="sales-hero-proof__project">
@@ -75,7 +75,7 @@
         <article class="sales-hero-proof__slide sales-hero-proof__slide--postcard" data-proof-slide hidden>
           <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
           <a href="https://postcardfromtheroad.eu" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_postcard[lang] | safe }}">
-            <img src="/images/portfolio/postcardfromtheroad-sample.webp" alt="Postcard from the Road website" loading="lazy" width="720" height="450">
+            <img src="/images/portfolio/postcardfromtheroad-sample.webp" alt="{{ t.alt.postcard[lang] | safe }}" loading="lazy" width="720" height="450">
           </a>
           <p class="sales-hero-proof__summary">{{ t.proof.postcard_summary[lang] | safe }}</p>
           <div class="sales-hero-proof__project">
@@ -87,7 +87,7 @@
         <article class="sales-hero-proof__slide sales-hero-proof__slide--miaforo" data-proof-slide hidden>
           <span class="sales-hero-proof__label">{{ t.proof.own_product[lang] | safe }}</span>
           <a href="{{ t.link.miaforo[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_miaforo[lang] | safe }}">
-            <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="1600" height="1000">
+            <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="{{ t.alt.miaforo[lang] | safe }}" loading="lazy" width="1600" height="1000">
           </a>
           <p class="sales-hero-proof__summary">{{ t.proof.miaforo_summary[lang] | safe }}</p>
           <div class="sales-hero-proof__project">
@@ -99,7 +99,7 @@
         <article class="sales-hero-proof__slide sales-hero-proof__slide--puertafria" data-proof-slide hidden>
           <span class="sales-hero-proof__label">{{ t.proof.own_product[lang] | safe }}</span>
           <a href="{{ t.link.puertafria[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_puertafria[lang] | safe }}">
-            <img src="/images/portfolio/puertafria-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="puertafria sales app" loading="lazy" width="1204" height="1101">
+            <img src="/images/portfolio/puertafria-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="{{ t.alt.puertafria[lang] | safe }}" loading="lazy" width="1204" height="1101">
           </a>
           <p class="sales-hero-proof__summary">{{ t.proof.puertafria_summary[lang] | safe }}</p>
           <div class="sales-hero-proof__project">
@@ -140,7 +140,7 @@
     </div>
     <div class="sales-work-grid">
       <article class="sales-work-card">
-        <img src="/images/portfolio/dkrisna-sample.webp" alt="D'Krisna website" loading="lazy" width="720" height="450">
+        <img src="/images/portfolio/dkrisna-sample.webp" alt="{{ t.alt.dkrisna[lang] | safe }}" loading="lazy" width="720" height="450">
         <div class="sales-work-card__body">
           <span class="sales-work-card__type">{{ t.package.custom[lang] | safe }}</span>
           <h3>D'Krisna</h3>
@@ -149,7 +149,7 @@
         </div>
       </article>
       <article class="sales-work-card">
-        <img src="/images/portfolio/fco-sandoval-gomez-sample.webp" alt="Fco Sandoval Gómez website" loading="lazy" width="720" height="450">
+        <img src="/images/portfolio/fco-sandoval-gomez-sample.webp" alt="{{ t.alt.fco[lang] | safe }}" loading="lazy" width="720" height="450">
         <div class="sales-work-card__body">
           <span class="sales-work-card__type">{{ t.package.blog[lang] | safe }}</span>
           <h3>Fco Sandoval Gómez</h3>
@@ -158,7 +158,7 @@
         </div>
       </article>
       <article class="sales-work-card sales-work-card--focus-bottom">
-        <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="Windmill Tündern website" loading="lazy" width="720" height="450">
+        <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="{{ t.alt.windmill[lang] | safe }}" loading="lazy" width="720" height="450">
         <div class="sales-work-card__body">
           <span class="sales-work-card__type">{{ t.package.blog[lang] | safe }}</span>
           <h3>Windmill Tündern</h3>
@@ -412,7 +412,7 @@
     </div>
     <div class="sales-app-grid">
       <a class="sales-app-card sales-app-card--focus-right" href="{{ t.link.miaforo[lang] | safe }}" target="_blank" rel="noopener noreferrer">
-        <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="MIAFORO gym management app" loading="lazy" width="1600" height="1000">
+        <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="{{ t.alt.miaforo[lang] | safe }}" loading="lazy" width="1600" height="1000">
         <div class="sales-app-card__body">
           <div class="sales-app-card__topline">
             <span>{{ t.apps.type[lang] | safe }}</span>
@@ -428,7 +428,7 @@
         </div>
       </a>
       <a class="sales-app-card sales-app-card--crop-left" href="{{ t.link.puertafria[lang] | safe }}" target="_blank" rel="noopener noreferrer">
-        <img src="/images/portfolio/puertafria-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="puertafria sales app" loading="lazy" width="1204" height="1101">
+        <img src="/images/portfolio/puertafria-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="{{ t.alt.puertafria[lang] | safe }}" loading="lazy" width="1204" height="1101">
         <div class="sales-app-card__body">
           <div class="sales-app-card__topline">
             <span>{{ t.apps.type[lang] | safe }}</span>
