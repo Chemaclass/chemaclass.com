@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block posthead %}
+{%- set t = load_data(path="data/i18n/consulting.toml") -%}
 {% set base = config.base_url %}
 {% if lang == 'es' %}{% set_global svc_url = base ~ '/es/services/consulting/' %}{% else %}{% set_global svc_url = base ~ '/services/consulting/' %}{% endif %}
 <script type="application/ld+json">
@@ -15,13 +16,13 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "{% if lang == 'es' %}Inicio{% else %}Home{% endif %}",
+      "name": {{ t.schema.home[lang] | json_encode | safe }},
       "item": "{{ base | safe }}{% if lang == 'es' %}/es/{% else %}/{% endif %}"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "{% if lang == 'es' %}Consultoría{% else %}Consulting{% endif %}",
+      "name": {{ t.schema.breadcrumb[lang] | json_encode | safe }},
       "item": "{{ svc_url | safe }}"
     }
   ]
@@ -32,22 +33,22 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "{{ svc_url | safe }}#service",
-  "name": "{% if lang == 'es' %}Consultoría{% else %}Consulting{% endif %}",
-  "description": "{% if lang == 'es' %}Sesiones individuales para tech leads, engineering managers y CTOs navegando complejidad real.{% else %}One-on-one sessions for tech leads, engineering managers, and CTOs navigating real complexity.{% endif %}",
+  "name": {{ t.schema.service_name[lang] | json_encode | safe }},
+  "description": {{ t.schema.service_description[lang] | json_encode | safe }},
   "url": "{{ svc_url | safe }}",
   "provider": { "@id": "{{ base | safe }}/#person" },
   "areaServed": {
     "@type": "Place",
-    "name": "{% if lang == 'es' %}Remoto, en todo el mundo{% else %}Remote, worldwide{% endif %}"
+    "name": {{ t.schema.area[lang] | json_encode | safe }}
   },
   "availableLanguage": ["en", "es"],
-  "serviceType": "{% if lang == 'es' %}Consultoría de liderazgo técnico{% else %}Tech leadership consulting{% endif %}",
+  "serviceType": {{ t.schema.service_type[lang] | json_encode | safe }},
   "offers": {
     "@type": "Offer",
     "price": {{ config.extra.pricing_consulting_session }},
     "priceCurrency": "EUR",
     "availability": "https://schema.org/OutOfStock",
-    "description": "{% if lang == 'es' %}Sesión individual de 1 hora{% else %}Single 1-hour session{% endif %}"
+    "description": {{ t.schema.offer[lang] | json_encode | safe }}
   }
 }
 </script>
@@ -58,26 +59,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "{% if lang == 'es' %}¿Qué NO está incluido?{% else %}What's NOT included?{% endif %}",
+      "name": {{ t.faq.excluded_q[lang] | json_encode | safe }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{% if lang == 'es' %}No es trabajo de código a medida, ni code reviews, ni acompañamiento de larga duración (retainer). Es una sesión enfocada de una hora para pensar tu problema en directo.{% else %}This isn't hands-on coding, code reviews, or long-term retainer coaching. It's a focused one-hour session to think through your problem live.{% endif %}"
+        "text": {{ t.faq.excluded_a[lang] | json_encode | safe }}
       }
     },
     {
       "@type": "Question",
-      "name": "{% if lang == 'es' %}¿Para quién es?{% else %}Who is this for?{% endif %}",
+      "name": {{ t.faq.audience_q[lang] | json_encode | safe }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{% if lang == 'es' %}Tech leads, engineering managers y CTOs con complejidad real (equipo, organización, decisiones técnicas). No es mentoría para devs de primer empleo.{% else %}Tech leads, engineering managers, and CTOs facing real complexity (team, org, technical decisions). Not mentoring for first-job developers.{% endif %}"
+        "text": {{ t.faq.audience_a[lang] | json_encode | safe }}
       }
     },
     {
       "@type": "Question",
-      "name": "{% if lang == 'es' %}¿Política de cancelación?{% else %}Cancellation policy?{% endif %}",
+      "name": {{ t.faq.cancellation_q[lang] | json_encode | safe }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{% if lang == 'es' %}Reprograma sin coste hasta 24h antes. Después de eso, la sesión cuenta como usada.{% else %}Reschedule free up to 24h before. After that, the session counts as used.{% endif %}"
+        "text": {{ t.faq.cancellation_a[lang] | json_encode | safe }}
       }
     }
   ]
@@ -90,6 +91,7 @@
 {% endblock styles %}
 
 {% block content %}
+{%- set t = load_data(path="data/i18n/consulting.toml") -%}
 <article class="service-page">
   <nav class="service-nav">
     <a href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}" class="blog-post__back">
@@ -107,40 +109,40 @@
   </div>
 
   <header class="service-hero">
-    <h1>{% if lang == "es" %}Consultoría{% else %}Consulting{% endif %}</h1>
-    <p class="service-hero__subtitle">{% if lang == "es" %}Para tech leads, engineering managers y CTOs navegando complejidad real.{% else %}For tech leads, engineering managers, and CTOs navigating real complexity.{% endif %}</p>
+    <h1>{{ t.hero.title[lang] | safe }}</h1>
+    <p class="service-hero__subtitle">{{ t.hero.subtitle[lang] | safe }}</p>
   </header>
 
   <section class="service-intro" id="intro">
-    <p>{% if lang == "es" %}He sido desarrollador, tech lead y manager en distintas empresas y culturas. No enseño teoría: comparto perspectiva construida haciendo el trabajo real.{% else %}I've been a developer, tech lead, and manager across different companies and cultures. I don't teach theory: I share perspective built from doing the actual work.{% endif %}</p>
-    <p>{% if lang == "es" %}Tú traes el problema. Trabajamos en ello juntos, en directo, una hora.{% else %}You bring the problem. We work through it together, live, one hour.{% endif %}</p>
+    <p>{{ t.intro.background[lang] | safe }}</p>
+    <p>{{ t.intro.pitch[lang] | safe }}</p>
     <span class="service-intro__cta service-intro__cta--disabled" aria-disabled="true">
       <i class="fa-solid fa-ban"></i> {{ trans(key="svc_unavailable", lang=lang) }}
     </span>
   </section>
 
   <section class="service-process" id="process">
-    <h2>{% if lang == "es" %}Cómo funciona{% else %}How it works{% endif %}</h2>
+    <h2>{{ t.process.title[lang] | safe }}</h2>
     <div class="process-steps process-steps--3col">
       <div class="process-step">
         <span class="process-step__number">1</span>
         <div class="process-step__content">
-          <h3>{% if lang == "es" %}Contacta{% else %}Contact{% endif %}</h3>
-          <p>{% if lang == "es" %}Escríbeme con tu tema y lo que quieres resolver.{% else %}Contact me with your topic and what you're trying to figure out.{% endif %}</p>
+          <h3>{{ t.process.contact_title[lang] | safe }}</h3>
+          <p>{{ t.process.contact[lang] | safe }}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">2</span>
         <div class="process-step__content">
-          <h3>{% if lang == "es" %}Acordamos{% else %}Align{% endif %}</h3>
-          <p>{% if lang == "es" %}Acordamos el enfoque y el horario.{% else %}We agree on focus and timing.{% endif %}</p>
+          <h3>{{ t.process.align_title[lang] | safe }}</h3>
+          <p>{{ t.process.align[lang] | safe }}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">3</span>
         <div class="process-step__content">
-          <h3>{% if lang == "es" %}Sesión{% else %}Session{% endif %}</h3>
-          <p>{% if lang == "es" %}Videollamada de una hora. Trabajamos el problema en directo. Sales con un siguiente paso concreto.{% else %}One-hour video call. We work through the problem live. You leave with a concrete next step.{% endif %}</p>
+          <h3>{{ t.process.session_title[lang] | safe }}</h3>
+          <p>{{ t.process.session[lang] | safe }}</p>
         </div>
       </div>
     </div>
@@ -148,92 +150,92 @@
   </section>
 
   <section class="service-decision" id="topics">
-    <h2>{% if lang == "es" %}Temas{% else %}Topics{% endif %}</h2>
+    <h2>{{ t.topics.title[lang] | safe }}</h2>
     <div class="decision-cards">
       <div class="decision-card">
-        <h3><i class="fa-solid fa-compass"></i> {% if lang == "es" %}Liderazgo efectivo{% else %}Effective Leadership{% endif %}</h3>
+        <h3><i class="fa-solid fa-compass"></i> {{ t.topics.leadership_title[lang] | safe }}</h3>
         <ul>
-          <li>{% if lang == "es" %}Saber exactamente qué se espera de ti como tech lead o EM{% else %}Know exactly what's expected of you as a tech lead or EM{% endif %}</li>
-          <li>{% if lang == "es" %}Liderar con impacto sin necesitar autoridad formal{% else %}Lead with impact without needing formal authority{% endif %}</li>
-          <li>{% if lang == "es" %}Dar feedback que la gente realmente aplica{% else %}Give feedback people actually act on{% endif %}</li>
-          <li>{% if lang == "es" %}Crear un equipo que se preocupe por la calidad{% else %}Build a team that genuinely cares about quality{% endif %}</li>
+          <li>{{ t.topics.leadership_expectations[lang] | safe }}</li>
+          <li>{{ t.topics.leadership_authority[lang] | safe }}</li>
+          <li>{{ t.topics.leadership_feedback[lang] | safe }}</li>
+          <li>{{ t.topics.leadership_quality[lang] | safe }}</li>
         </ul>
       </div>
       <div class="decision-card">
-        <h3><i class="fa-solid fa-people-arrows"></i> {% if lang == "es" %}Equipos y conflictos{% else %}Teams & Conflict{% endif %}</h3>
+        <h3><i class="fa-solid fa-people-arrows"></i> {{ t.topics.teams_title[lang] | safe }}</h3>
         <ul>
-          <li>{% if lang == "es" %}Desactivar conflictos antes de que drenen al equipo{% else %}Defuse conflicts before they drain the team{% endif %}</li>
-          <li>{% if lang == "es" %}Retener a las personas que merecen quedarse{% else %}Keep the people worth keeping{% endif %}</li>
-          <li>{% if lang == "es" %}Navegar cambios organizacionales sin perder impulso{% else %}Navigate org changes without losing momentum{% endif %}</li>
-          <li>{% if lang == "es" %}Hacer que ingeniería y negocio tiren en la misma dirección{% else %}Get engineering and business pulling in the same direction{% endif %}</li>
+          <li>{{ t.topics.teams_conflict[lang] | safe }}</li>
+          <li>{{ t.topics.teams_retention[lang] | safe }}</li>
+          <li>{{ t.topics.teams_change[lang] | safe }}</li>
+          <li>{{ t.topics.teams_alignment[lang] | safe }}</li>
         </ul>
       </div>
       <div class="decision-card">
-        <h3><i class="fa-solid fa-layer-group"></i> {% if lang == "es" %}Estrategia técnica{% else %}Technical Strategy{% endif %}</h3>
+        <h3><i class="fa-solid fa-layer-group"></i> {{ t.topics.strategy_title[lang] | safe }}</h3>
         <ul>
-          <li>{% if lang == "es" %}Fijar una dirección técnica clara que tu equipo pueda seguir{% else %}Set a clear technical direction your team can follow{% endif %}</li>
-          <li>{% if lang == "es" %}Saber cuándo atacar la deuda técnica y cuándo no{% else %}Know exactly when to tackle tech debt vs ship faster{% endif %}</li>
-          <li>{% if lang == "es" %}Usar IA para ir más rápido sin bajar el nivel{% else %}Use AI to move faster without lowering the bar{% endif %}</li>
-          <li>{% if lang == "es" %}Construir cultura de ingeniería que escale con el equipo{% else %}Build engineering culture that scales with your team{% endif %}</li>
+          <li>{{ t.topics.strategy_direction[lang] | safe }}</li>
+          <li>{{ t.topics.strategy_debt[lang] | safe }}</li>
+          <li>{{ t.topics.strategy_ai[lang] | safe }}</li>
+          <li>{{ t.topics.strategy_culture[lang] | safe }}</li>
         </ul>
       </div>
     </div>
   </section>
 
   <section class="service-resources" id="resources">
-    <h2>{% if lang == "es" %}Recursos relacionados{% else %}Related resources{% endif %}</h2>
+    <h2>{{ t.resources.title[lang] | safe }}</h2>
     <div class="resources-grid">
       <a href="{% if lang == 'es' %}/es{% endif %}/blog/tech-lead/" class="resource-card">
         <div class="resource-card__icon"><i class="fa-solid fa-compass"></i></div>
-        <div class="resource-card__content"><h3>{% if lang == "es" %}El Tech Lead{% else %}The Tech Lead{% endif %}</h3></div>
+        <div class="resource-card__content"><h3>{{ t.resources.tech_lead[lang] | safe }}</h3></div>
         <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
       <a href="{% if lang == 'es' %}/es{% endif %}/blog/great-leadership/" class="resource-card">
         <div class="resource-card__icon"><i class="fa-solid fa-star"></i></div>
-        <div class="resource-card__content"><h3>{% if lang == "es" %}Gran Liderazgo{% else %}Great Leadership{% endif %}</h3></div>
+        <div class="resource-card__content"><h3>{{ t.resources.great_leadership[lang] | safe }}</h3></div>
         <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
       <a href="{% if lang == 'es' %}/es{% endif %}/blog/ai-gives-you-speed-not-quality/" class="resource-card">
         <div class="resource-card__icon"><i class="fa-solid fa-gauge-high"></i></div>
-        <div class="resource-card__content"><h3>{% if lang == "es" %}La IA te da velocidad, no calidad{% else %}AI Gives You Speed, Not Quality{% endif %}</h3></div>
+        <div class="resource-card__content"><h3>{{ t.resources.ai_speed[lang] | safe }}</h3></div>
         <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
       <a href="{% if lang == 'es' %}/es{% endif %}/blog/the-beauty-of-leadership/" class="resource-card">
         <div class="resource-card__icon"><i class="fa-solid fa-heart"></i></div>
-        <div class="resource-card__content"><h3>{% if lang == "es" %}La belleza del liderazgo{% else %}The Beauty of Leadership{% endif %}</h3></div>
+        <div class="resource-card__content"><h3>{{ t.resources.beauty[lang] | safe }}</h3></div>
         <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
     </div>
   </section>
 
   <section class="services-faq" id="faq">
-    <h2 class="services-faq__title">{% if lang == "es" %}Preguntas frecuentes{% else %}Frequently asked{% endif %}</h2>
+    <h2 class="services-faq__title">{{ t.faq.title[lang] | safe }}</h2>
     <div class="services-faq__list">
       <div class="services-faq__item">
         <button class="services-faq__question" aria-expanded="false">
-          {% if lang == "es" %}¿Qué NO está incluido?{% else %}What's NOT included?{% endif %}
+          {{ t.faq.excluded_q[lang] | safe }}
           <i class="fa-solid fa-chevron-down"></i>
         </button>
         <div class="services-faq__answer">
-          {% if lang == "es" %}No es trabajo de código a medida, ni code reviews, ni acompañamiento de larga duración (retainer). Es una sesión enfocada de una hora para pensar tu problema en directo.{% else %}This isn't hands-on coding, code reviews, or long-term retainer coaching. It's a focused one-hour session to think through your problem live.{% endif %}
+          {{ t.faq.excluded_a[lang] | safe }}
         </div>
       </div>
       <div class="services-faq__item">
         <button class="services-faq__question" aria-expanded="false">
-          {% if lang == "es" %}¿Para quién es?{% else %}Who is this for?{% endif %}
+          {{ t.faq.audience_q[lang] | safe }}
           <i class="fa-solid fa-chevron-down"></i>
         </button>
         <div class="services-faq__answer">
-          {% if lang == "es" %}Tech leads, engineering managers y CTOs con complejidad real (equipo, organización, decisiones técnicas). No es mentoría para devs de primer empleo.{% else %}Tech leads, engineering managers, and CTOs facing real complexity (team, org, technical decisions). Not mentoring for first-job developers.{% endif %}
+          {{ t.faq.audience_a[lang] | safe }}
         </div>
       </div>
       <div class="services-faq__item">
         <button class="services-faq__question" aria-expanded="false">
-          {% if lang == "es" %}¿Política de cancelación?{% else %}Cancellation policy?{% endif %}
+          {{ t.faq.cancellation_q[lang] | safe }}
           <i class="fa-solid fa-chevron-down"></i>
         </button>
         <div class="services-faq__answer">
-          {% if lang == "es" %}Reprograma sin coste hasta 24h antes. Después de eso, la sesión cuenta como usada.{% else %}Reschedule free up to 24h before. After that, the session counts as used.{% endif %}
+          {{ t.faq.cancellation_a[lang] | safe }}
         </div>
       </div>
     </div>
@@ -243,28 +245,28 @@
   <section class="service-process" id="pricing" style="display: none;">
     <div class="budget-section">
       <div class="budget-header">
-        <h3>{% if lang == "es" %}Precios{% else %}Pricing{% endif %}</h3>
-        <p>{% if lang == "es" %}Sin intermediarios. Trato directo, precio claro.{% else %}No middlemen. Direct contact, clear pricing.{% endif %}</p>
+        <h3>{{ t.pricing.title[lang] | safe }}</h3>
+        <p>{{ t.pricing.intro[lang] | safe }}</p>
       </div>
 
       <div class="pricing-details">
         <div class="pricing-grid pricing-grid--2col">
           <div class="pricing-card">
-            <h4><i class="fa-solid fa-comment-dots"></i> {% if lang == "es" %}Sesión individual{% else %}Single session{% endif %}</h4>
+            <h4><i class="fa-solid fa-comment-dots"></i> {{ t.pricing.single_title[lang] | safe }}</h4>
             <div class="pricing-card__price">€{{ config.extra.pricing_consulting_session }}</div>
-            <div class="pricing-card__subprice">{% if lang == "es" %}por sesión de 1 hora{% else %}per 1-hour session{% endif %}</div>
+            <div class="pricing-card__subprice">{{ t.pricing.single_unit[lang] | safe }}</div>
             <ul class="pricing-card__details">
-              <li>{% if lang == "es" %}Cualquier tema{% else %}Any topic{% endif %}</li>
-              <li>{% if lang == "es" %}Sin diapositivas, tú traes el problema{% else %}No slides, you bring the problem{% endif %}</li>
+              <li>{{ t.pricing.single_topic[lang] | safe }}</li>
+              <li>{{ t.pricing.single_slides[lang] | safe }}</li>
             </ul>
           </div>
           <div class="pricing-card pricing-card--featured">
-            <h4><i class="fa-solid fa-layer-group"></i> {% if lang == "es" %}Pack de 3 sesiones{% else %}Pack of 3 sessions{% endif %}<span class="pricing-card__badge">{% if lang == "es" %}Mejor valor{% else %}Best value{% endif %}</span></h4>
+            <h4><i class="fa-solid fa-layer-group"></i> {{ t.pricing.pack_title[lang] | safe }}<span class="pricing-card__badge">{{ t.pricing.pack_badge[lang] | safe }}</span></h4>
             <div class="pricing-card__price">€{{ config.extra.pricing_consulting_pack3 }}</div>
-            <div class="pricing-card__subprice">{% if lang == "es" %}3 sesiones de 1 hora{% else %}3 × 1-hour sessions{% endif %}</div>
+            <div class="pricing-card__subprice">{{ t.pricing.pack_unit[lang] | safe }}</div>
             <ul class="pricing-card__details">
-              <li>{% if lang == "es" %}Ahorra €{{ config.extra.pricing_consulting_pack3_save }} respecto a sueltas{% else %}Save €{{ config.extra.pricing_consulting_pack3_save }} vs individual{% endif %}</li>
-              <li>{% if lang == "es" %}Usa las sesiones cuando quieras{% else %}Use sessions whenever you want{% endif %}</li>
+              <li>{{ t.pricing.pack_save[lang] | replace(from="{price}", to=config.extra.pricing_consulting_pack3_save ~ "") | safe }}</li>
+              <li>{{ t.pricing.pack_flexible[lang] | safe }}</li>
             </ul>
           </div>
         </div>
@@ -274,8 +276,8 @@
 
   <section class="service-cta">
     <div class="service-cta__icon"><i class="fa-solid fa-comments"></i></div>
-    <h2>{% if lang == "es" %}¿Listo para hablar?{% else %}Ready to talk?{% endif %}</h2>
-    <p>{% if lang == "es" %}No tienes que tenerlo todo claro. Solo dime el tema.{% else %}You don't need to have it all figured out. Just tell me the topic.{% endif %}</p>
+    <h2>{{ t.cta.title[lang] | safe }}</h2>
+    <p>{{ t.cta.text[lang] | safe }}</p>
     <div class="service-cta__buttons">
       <span class="service-cta__btn service-cta__btn--disabled" aria-disabled="true">
         <i class="fa-solid fa-ban"></i> {{ trans(key="svc_unavailable", lang=lang) }}
