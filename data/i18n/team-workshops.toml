@@ -1,0 +1,115 @@
+# Copy for /services/team-workshops/, English and Spanish side by side.
+# Change both languages in the same edit. scripts/check-i18n.py fails the
+# build on a missing language, an empty string or a key no template uses.
+#
+# Values are raw HTML (templates print them with `safe`).
+
+[schema]
+home.en = "Home"
+home.es = "Inicio"
+area.en = "On-site in Berlin, remote for other locations"
+area.es = "Presencial en Berlín, remoto en otras ubicaciones"
+service_type.en = "Hands-on testing, TDD and refactoring workshop"
+service_type.es = "Taller práctico de testing, TDD y refactoring"
+
+[intro]
+text.en = "Spend a full day coding, testing, and refactoring. This workshop is all about practical, hands-on learning: you'll work through a series of independent code katas designed to help you build strong habits around testing, test-driven development (TDD), and refactoring. Language-agnostic principles, adaptable to your team's stack."
+text.es = "Pasa un día completo programando, testeando y refactorizando. Este taller es 100% práctico: trabajarás con una serie de katas de código independientes diseñadas para crear hábitos sólidos en testing, desarrollo guiado por tests (TDD) y refactoring. Principios agnósticos del lenguaje, adaptables al stack de tu equipo."
+
+[morning]
+desc.en = "We focus on testing techniques that make change safe, from golden tests that capture existing behavior to TDD exercises that guide better design."
+desc.es = "Nos enfocamos en técnicas de testing que hacen el cambio seguro, desde tests golden master que capturan el comportamiento existente hasta ejercicios TDD que guían mejor diseño."
+golden_master.en = "Golden master testing"
+golden_master.es = "Testing golden master"
+approval.en = "Approval testing patterns"
+approval.es = "Patrones de approval testing"
+tdd_cycle.en = "Test-driven development cycle"
+tdd_cycle.es = "Ciclo de desarrollo guiado por tests"
+tests_guide_design.en = "Writing tests that guide design"
+tests_guide_design.es = "Escribir tests que guían el diseño"
+test_doubles.en = "Understanding test doubles"
+test_doubles.es = "Entendiendo los test doubles"
+
+[afternoon]
+desc.en = "We switch gears to refactoring: applying small, focused changes to improve messy, legacy-style code without breaking it."
+desc.es = "Cambiamos el enfoque al refactoring: aplicando cambios pequeños y focalizados para mejorar código legacy sin romperlo."
+safe_refactoring.en = "Safe refactoring techniques"
+safe_refactoring.es = "Técnicas de refactoring seguro"
+extract.en = "Extract method & class patterns"
+extract.es = "Patrones extract method & class"
+legacy.en = "Working with legacy code"
+legacy.es = "Trabajar con código legacy"
+code_smells.en = "Code smells identification"
+code_smells.es = "Identificación de code smells"
+incremental.en = "Incremental improvement strategies"
+incremental.es = "Estrategias de mejora incremental"
+
+[gains]
+meaningful_tests.en = "Write meaningful tests"
+meaningful_tests.es = "Escribir tests significativos"
+legacy_tests.en = "Test legacy code safely"
+legacy_tests.es = "Testear código legacy con seguridad"
+testing_habit.en = "Build a testing habit"
+testing_habit.es = "Crear el hábito de testear"
+red_green.en = "Red-green-refactor cycle"
+red_green.es = "Ciclo red-green-refactor"
+design_tests.en = "Design through tests"
+design_tests.es = "Diseñar a través de tests"
+small_commits.en = "Smaller, focused commits"
+small_commits.es = "Commits más pequeños y focalizados"
+improve_safely.en = "Improve code safely"
+improve_safely.es = "Mejorar código con seguridad"
+tech_debt.en = "Tackle technical debt"
+tech_debt.es = "Abordar deuda técnica"
+clean_code.en = "Clean code patterns"
+clean_code.es = "Patrones de código limpio"
+outcome.en = "Your team walks away with a proven toolkit for writing better code, improving existing codebases, and collaborating effectively through pair programming."
+outcome.es = "Tu equipo sale con un toolkit probado para escribir mejor código, mejorar codebases existentes y colaborar efectivamente mediante pair programming."
+
+[process]
+discovery.en = "We discuss your team's experience level and specific challenges you want to address."
+discovery.es = "Hablamos del nivel de experiencia de tu equipo y los retos específicos que quieres abordar."
+customization.en = "I tailor the katas and exercises to match your team's tech stack and goals."
+customization.es = "Adapto las katas y ejercicios al stack tecnológico y objetivos de tu equipo."
+workshop_day.en = "Full day of hands-on coding, pair programming, and collaborative learning."
+workshop_day.es = "Día completo de programación práctica, pair programming y aprendizaje colaborativo."
+followup.en = "Materials, code samples, and resources to continue practicing."
+followup.es = "Materiales, ejemplos de código y recursos para seguir practicando."
+
+[pricing]
+groups.en = "Groups of 3-8 participants. On-site workshops in Berlin, remote for other locations."
+groups.es = "Grupos de 3-8 participantes. Talleres presenciales en Berlín, remotos en otras ubicaciones."
+per_person.en = "Per person"
+per_person.es = "Por persona"
+full_day.en = "Full day workshop"
+full_day.es = "Día completo de taller"
+materials.en = "Materials included"
+materials.es = "Materiales incluidos"
+people.en = "people"
+people.es = "personas"
+recommended_minimum.en = "Recommended minimum"
+recommended_minimum.es = "Mínimo recomendado"
+ideal_size.en = "Ideal size"
+ideal_size.es = "Tamaño ideal"
+note.en = "* Maximum 8 participants per workshop. On-site prices for Berlin, contact for remote rates."
+note.es = "* Máximo 8 participantes por taller. Precios presenciales en Berlín, contacta para tarifas remotas."
+quote_text.en = "Every team has different needs. Contact me to discuss the approach and get a personalized quote."
+quote_text.es = "Cada equipo tiene necesidades diferentes. Contacta conmigo para discutir el enfoque y recibir un presupuesto personalizado."
+disclaimer.en = "Personalized quote after discovery call."
+disclaimer.es = "Presupuesto personalizado después de la llamada de descubrimiento."
+
+[resources]
+intro.en = "Materials and talks related to my workshop content:"
+intro.es = "Materiales y charlas relacionadas con el contenido del taller:"
+tdd.en = "Understanding TDD principles and practices"
+tdd.es = "Entendiendo los principios y prácticas de TDD"
+pair.en = "Techniques for collaborative coding"
+pair.es = "Técnicas para programación colaborativa"
+xp.en = "The 5 values that make teams effective"
+xp.es = "Los 5 valores que hacen equipos efectivos"
+engineering.en = "What makes engineering teams excel"
+engineering.es = "Qué hace que los equipos de ingeniería destaquen"
+
+[cta]
+text.en = "Let's discuss how a workshop can help your team write better code, work together more effectively, and tackle that legacy codebase with confidence."
+text.es = "Hablemos de cómo un taller puede ayudar a tu equipo a escribir mejor código, trabajar juntos de forma más efectiva y abordar ese codebase legacy con confianza."

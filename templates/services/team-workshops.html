@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block posthead %}
+{%- set t = load_data(path="data/i18n/team-workshops.toml") -%}
 {% set base = config.base_url %}
 {% if lang == 'es' %}{% set_global svc_url = base ~ '/es/services/team-workshops/' %}{% else %}{% set_global svc_url = base ~ '/services/team-workshops/' %}{% endif %}
 <script type="application/ld+json">
@@ -15,7 +16,7 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "{% if lang == 'es' %}Inicio{% else %}Home{% endif %}",
+      "name": {{ t.schema.home[lang] | json_encode | safe }},
       "item": "{{ base | safe }}{% if lang == 'es' %}/es/{% else %}/{% endif %}"
     },
     {
@@ -38,10 +39,10 @@
   "provider": { "@id": "{{ base | safe }}/#person" },
   "areaServed": {
     "@type": "Place",
-    "name": "{% if lang == 'es' %}Presencial en Berlín, remoto en otras ubicaciones{% else %}On-site in Berlin, remote for other locations{% endif %}"
+    "name": {{ t.schema.area[lang] | json_encode | safe }}
   },
   "availableLanguage": ["en", "es"],
-  "serviceType": "{% if lang == 'es' %}Taller práctico de testing, TDD y refactoring{% else %}Hands-on testing, TDD and refactoring workshop{% endif %}",
+  "serviceType": {{ t.schema.service_type[lang] | json_encode | safe }},
   "offers": {
     "@type": "Offer",
     "priceCurrency": "EUR",
@@ -56,6 +57,7 @@
 {% endblock styles %}
 
 {% block content %}
+{%- set t = load_data(path="data/i18n/team-workshops.toml") -%}
 <article class="service-page">
   <nav class="service-nav">
     <a href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}" class="blog-post__back">
@@ -80,7 +82,7 @@
 
   <!-- Value Proposition -->
   <section class="service-intro" id="intro">
-    <p>{% if lang == "es" %}Pasa un día completo programando, testeando y refactorizando. Este taller es 100% práctico: trabajarás con una serie de katas de código independientes diseñadas para crear hábitos sólidos en testing, desarrollo guiado por tests (TDD) y refactoring. Principios agnósticos del lenguaje, adaptables al stack de tu equipo.{% else %}Spend a full day coding, testing, and refactoring. This workshop is all about practical, hands-on learning: you'll work through a series of independent code katas designed to help you build strong habits around testing, test-driven development (TDD), and refactoring. Language-agnostic principles, adaptable to your team's stack.{% endif %}</p>
+    <p>{{ t.intro.text[lang] | safe }}</p>
     <span class="service-intro__cta service-intro__cta--disabled" aria-disabled="true">
       <i class="fa-solid fa-ban"></i> {{ trans(key="svc_unavailable", lang=lang) }}
     </span>
@@ -97,16 +99,16 @@
         <span class="service-option__tag">Testing & TDD</span>
       </div>
 
-      <p class="service-option__desc">{% if lang == "es" %}Nos enfocamos en técnicas de testing que hacen el cambio seguro, desde tests golden master que capturan el comportamiento existente hasta ejercicios TDD que guían mejor diseño.{% else %}We focus on testing techniques that make change safe, from golden tests that capture existing behavior to TDD exercises that guide better design.{% endif %}</p>
+      <p class="service-option__desc">{{ t.morning.desc[lang] | safe }}</p>
 
       <div class="service-option__benefits">
         <h3>{{ trans(key="svc_topics_covered", lang=lang) }}</h3>
         <ul>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Testing golden master{% else %}Golden master testing{% endif %}</li>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Patrones de approval testing{% else %}Approval testing patterns{% endif %}</li>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Ciclo de desarrollo guiado por tests{% else %}Test-driven development cycle{% endif %}</li>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Escribir tests que guían el diseño{% else %}Writing tests that guide design{% endif %}</li>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Entendiendo los test doubles{% else %}Understanding test doubles{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {{ t.morning.golden_master[lang] | safe }}</li>
+          <li><i class="fa-solid fa-check"></i> {{ t.morning.approval[lang] | safe }}</li>
+          <li><i class="fa-solid fa-check"></i> {{ t.morning.tdd_cycle[lang] | safe }}</li>
+          <li><i class="fa-solid fa-check"></i> {{ t.morning.tests_guide_design[lang] | safe }}</li>
+          <li><i class="fa-solid fa-check"></i> {{ t.morning.test_doubles[lang] | safe }}</li>
         </ul>
       </div>
     </div>
@@ -120,16 +122,16 @@
         <span class="service-option__tag service-option__tag--secondary">Refactoring</span>
       </div>
 
-      <p class="service-option__desc">{% if lang == "es" %}Cambiamos el enfoque al refactoring: aplicando cambios pequeños y focalizados para mejorar código legacy sin romperlo.{% else %}We switch gears to refactoring: applying small, focused changes to improve messy, legacy-style code without breaking it.{% endif %}</p>
+      <p class="service-option__desc">{{ t.afternoon.desc[lang] | safe }}</p>
 
       <div class="service-option__benefits">
         <h3>{{ trans(key="svc_topics_covered", lang=lang) }}</h3>
         <ul>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Técnicas de refactoring seguro{% else %}Safe refactoring techniques{% endif %}</li>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Patrones extract method & class{% else %}Extract method & class patterns{% endif %}</li>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Trabajar con código legacy{% else %}Working with legacy code{% endif %}</li>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Identificación de code smells{% else %}Code smells identification{% endif %}</li>
-          <li><i class="fa-solid fa-check"></i> {% if lang == "es" %}Estrategias de mejora incremental{% else %}Incremental improvement strategies{% endif %}</li>
+          <li><i class="fa-solid fa-check"></i> {{ t.afternoon.safe_refactoring[lang] | safe }}</li>
+          <li><i class="fa-solid fa-check"></i> {{ t.afternoon.extract[lang] | safe }}</li>
+          <li><i class="fa-solid fa-check"></i> {{ t.afternoon.legacy[lang] | safe }}</li>
+          <li><i class="fa-solid fa-check"></i> {{ t.afternoon.code_smells[lang] | safe }}</li>
+          <li><i class="fa-solid fa-check"></i> {{ t.afternoon.incremental[lang] | safe }}</li>
         </ul>
       </div>
     </div>
@@ -142,31 +144,31 @@
       <div class="decision-card">
         <h3><i class="fa-solid fa-flask-vial"></i> {{ trans(key="svc_testing_confidence", lang=lang) }}</h3>
         <ul>
-          <li>{% if lang == "es" %}Escribir tests significativos{% else %}Write meaningful tests{% endif %}</li>
-          <li>{% if lang == "es" %}Testear código legacy con seguridad{% else %}Test legacy code safely{% endif %}</li>
-          <li>{% if lang == "es" %}Crear el hábito de testear{% else %}Build a testing habit{% endif %}</li>
+          <li>{{ t.gains.meaningful_tests[lang] | safe }}</li>
+          <li>{{ t.gains.legacy_tests[lang] | safe }}</li>
+          <li>{{ t.gains.testing_habit[lang] | safe }}</li>
         </ul>
       </div>
       <div class="decision-card">
         <h3><i class="fa-solid fa-code-branch"></i> {{ trans(key="svc_tdd_mindset", lang=lang) }}</h3>
         <ul>
-          <li>{% if lang == "es" %}Ciclo red-green-refactor{% else %}Red-green-refactor cycle{% endif %}</li>
-          <li>{% if lang == "es" %}Diseñar a través de tests{% else %}Design through tests{% endif %}</li>
-          <li>{% if lang == "es" %}Commits más pequeños y focalizados{% else %}Smaller, focused commits{% endif %}</li>
+          <li>{{ t.gains.red_green[lang] | safe }}</li>
+          <li>{{ t.gains.design_tests[lang] | safe }}</li>
+          <li>{{ t.gains.small_commits[lang] | safe }}</li>
         </ul>
       </div>
       <div class="decision-card">
         <h3><i class="fa-solid fa-wand-magic-sparkles"></i> {{ trans(key="svc_refactoring_skills", lang=lang) }}</h3>
         <ul>
-          <li>{% if lang == "es" %}Mejorar código con seguridad{% else %}Improve code safely{% endif %}</li>
-          <li>{% if lang == "es" %}Abordar deuda técnica{% else %}Tackle technical debt{% endif %}</li>
-          <li>{% if lang == "es" %}Patrones de código limpio{% else %}Clean code patterns{% endif %}</li>
+          <li>{{ t.gains.improve_safely[lang] | safe }}</li>
+          <li>{{ t.gains.tech_debt[lang] | safe }}</li>
+          <li>{{ t.gains.clean_code[lang] | safe }}</li>
         </ul>
       </div>
     </div>
     <p class="decision-tip">
       <i class="fa-solid fa-lightbulb"></i>
-      <strong>{{ trans(key="svc_key_outcome", lang=lang) }}</strong> {% if lang == "es" %}Tu equipo sale con un toolkit probado para escribir mejor código, mejorar codebases existentes y colaborar efectivamente mediante pair programming.{% else %}Your team walks away with a proven toolkit for writing better code, improving existing codebases, and collaborating effectively through pair programming.{% endif %}
+      <strong>{{ trans(key="svc_key_outcome", lang=lang) }}</strong> {{ t.gains.outcome[lang] | safe }}
     </p>
   </section>
 
@@ -178,28 +180,28 @@
         <span class="process-step__number">1</span>
         <div class="process-step__content">
           <h3>{{ trans(key="svc_discovery", lang=lang) }}</h3>
-          <p>{% if lang == "es" %}Hablamos del nivel de experiencia de tu equipo y los retos específicos que quieres abordar.{% else %}We discuss your team's experience level and specific challenges you want to address.{% endif %}</p>
+          <p>{{ t.process.discovery[lang] | safe }}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">2</span>
         <div class="process-step__content">
           <h3>{{ trans(key="svc_customization", lang=lang) }}</h3>
-          <p>{% if lang == "es" %}Adapto las katas y ejercicios al stack tecnológico y objetivos de tu equipo.{% else %}I tailor the katas and exercises to match your team's tech stack and goals.{% endif %}</p>
+          <p>{{ t.process.customization[lang] | safe }}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">3</span>
         <div class="process-step__content">
           <h3>{{ trans(key="svc_workshop_day", lang=lang) }}</h3>
-          <p>{% if lang == "es" %}Día completo de programación práctica, pair programming y aprendizaje colaborativo.{% else %}Full day of hands-on coding, pair programming, and collaborative learning.{% endif %}</p>
+          <p>{{ t.process.workshop_day[lang] | safe }}</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-step__number">4</span>
         <div class="process-step__content">
           <h3>{{ trans(key="svc_followup", lang=lang) }}</h3>
-          <p>{% if lang == "es" %}Materiales, ejemplos de código y recursos para seguir practicando.{% else %}Materials, code samples, and resources to continue practicing.{% endif %}</p>
+          <p>{{ t.process.followup[lang] | safe }}</p>
         </div>
       </div>
     </div>
@@ -207,59 +209,59 @@
     <div class="budget-section" id="pricing">
       <div class="budget-header">
         <h3>{{ trans(key="svc_investment", lang=lang) }}</h3>
-        <p>{% if lang == "es" %}Grupos de 3-8 participantes. Talleres presenciales en Berlín, remotos en otras ubicaciones.{% else %}Groups of 3-8 participants. On-site workshops in Berlin, remote for other locations.{% endif %}</p>
+        <p>{{ t.pricing.groups[lang] | safe }}</p>
       </div>
 
       <!-- Pricing details (hidden by default, shown with ?prices=1) -->
       <div class="pricing-details" style="display: none;">
         <div class="pricing-grid">
           <div class="pricing-card">
-            <h4><i class="fa-solid fa-user"></i> {% if lang == "es" %}Por persona{% else %}Per person{% endif %}</h4>
+            <h4><i class="fa-solid fa-user"></i> {{ t.pricing.per_person[lang] | safe }}</h4>
             <div class="pricing-card__price">€{{ config.extra.pricing_workshop_per_person }}</div>
             <ul class="pricing-card__details">
-              <li>{% if lang == "es" %}Día completo de taller{% else %}Full day workshop{% endif %}</li>
-              <li>{% if lang == "es" %}Materiales incluidos{% else %}Materials included{% endif %}</li>
+              <li>{{ t.pricing.full_day[lang] | safe }}</li>
+              <li>{{ t.pricing.materials[lang] | safe }}</li>
             </ul>
           </div>
           <div class="pricing-card">
-            <h4><i class="fa-solid fa-users"></i> 3 {% if lang == "es" %}personas{% else %}people{% endif %}</h4>
+            <h4><i class="fa-solid fa-users"></i> 3 {{ t.pricing.people[lang] | safe }}</h4>
             <div class="pricing-card__price">€{{ config.extra.pricing_workshop_3_people }}</div>
             <ul class="pricing-card__details">
-              <li>{% if lang == "es" %}Mínimo recomendado{% else %}Recommended minimum{% endif %}</li>
+              <li>{{ t.pricing.recommended_minimum[lang] | safe }}</li>
             </ul>
           </div>
           <div class="pricing-card">
-            <h4><i class="fa-solid fa-user-group"></i> 4-6 {% if lang == "es" %}personas{% else %}people{% endif %}</h4>
+            <h4><i class="fa-solid fa-user-group"></i> 4-6 {{ t.pricing.people[lang] | safe }}</h4>
             <div class="pricing-card__price">€{{ config.extra.pricing_workshop_4_6_min }} - €{{ config.extra.pricing_workshop_4_6_max }}</div>
             <ul class="pricing-card__details">
-              <li>{% if lang == "es" %}Tamaño ideal{% else %}Ideal size{% endif %}</li>
+              <li>{{ t.pricing.ideal_size[lang] | safe }}</li>
             </ul>
           </div>
         </div>
-        <p class="pricing-note">{% if lang == "es" %}* Máximo 8 participantes por taller. Precios presenciales en Berlín, contacta para tarifas remotas.{% else %}* Maximum 8 participants per workshop. On-site prices for Berlin, contact for remote rates.{% endif %}</p>
+        <p class="pricing-note">{{ t.pricing.note[lang] | safe }}</p>
       </div>
 
       <div class="quote-cta">
-        <p class="quote-cta__text">{% if lang == "es" %}Cada equipo tiene necesidades diferentes. Contacta conmigo para discutir el enfoque y recibir un presupuesto personalizado.{% else %}Every team has different needs. Contact me to discuss the approach and get a personalized quote.{% endif %}</p>
+        <p class="quote-cta__text">{{ t.pricing.quote_text[lang] | safe }}</p>
         <span class="quote-cta__btn quote-cta__btn--disabled" aria-disabled="true">
           <i class="fa-solid fa-ban"></i> {{ trans(key="svc_unavailable", lang=lang) }}
         </span>
       </div>
 
-      <p class="budget-disclaimer">{% if lang == "es" %}Presupuesto personalizado después de la llamada de descubrimiento.{% else %}Personalized quote after discovery call.{% endif %}</p>
+      <p class="budget-disclaimer">{{ t.pricing.disclaimer[lang] | safe }}</p>
     </div>
   </section>
 
   <!-- Workshop Resources -->
   <section class="service-resources" id="resources">
     <h2>{{ trans(key="svc_workshop_resources", lang=lang) }}</h2>
-    <p class="service-resources__intro">{% if lang == "es" %}Materiales y charlas relacionadas con el contenido del taller:{% else %}Materials and talks related to my workshop content:{% endif %}</p>
+    <p class="service-resources__intro">{{ t.resources.intro[lang] | safe }}</p>
     <div class="resources-grid">
       <a href="{% if lang == 'es' %}/es{% endif %}/blog/test-driven-development/" class="resource-card">
         <div class="resource-card__icon"><i class="fa-solid fa-flask"></i></div>
         <div class="resource-card__content">
           <h3>Test-Driven Development</h3>
-          <p>{% if lang == "es" %}Entendiendo los principios y prácticas de TDD{% else %}Understanding TDD principles and practices{% endif %}</p>
+          <p>{{ t.resources.tdd[lang] | safe }}</p>
         </div>
         <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
@@ -267,7 +269,7 @@
         <div class="resource-card__icon"><i class="fa-solid fa-users"></i></div>
         <div class="resource-card__content">
           <h3>Effective Pair Programming</h3>
-          <p>{% if lang == "es" %}Técnicas para programación colaborativa{% else %}Techniques for collaborative coding{% endif %}</p>
+          <p>{{ t.resources.pair[lang] | safe }}</p>
         </div>
         <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
@@ -275,7 +277,7 @@
         <div class="resource-card__icon"><i class="fa-solid fa-bolt"></i></div>
         <div class="resource-card__content">
           <h3>Extreme Programming Values</h3>
-          <p>{% if lang == "es" %}Los 5 valores que hacen equipos efectivos{% else %}The 5 values that make teams effective{% endif %}</p>
+          <p>{{ t.resources.xp[lang] | safe }}</p>
         </div>
         <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
@@ -283,7 +285,7 @@
         <div class="resource-card__icon"><i class="fa-solid fa-rocket"></i></div>
         <div class="resource-card__content">
           <h3>Great Engineering</h3>
-          <p>{% if lang == "es" %}Qué hace que los equipos de ingeniería destaquen{% else %}What makes engineering teams excel{% endif %}</p>
+          <p>{{ t.resources.engineering[lang] | safe }}</p>
         </div>
         <i class="fa-solid fa-arrow-right resource-card__arrow"></i>
       </a>
@@ -293,7 +295,7 @@
   <!-- CTA -->
   <section class="service-cta">
     <h2>{{ trans(key="svc_ready_level_up", lang=lang) }}</h2>
-    <p>{% if lang == "es" %}Hablemos de cómo un taller puede ayudar a tu equipo a escribir mejor código, trabajar juntos de forma más efectiva y abordar ese codebase legacy con confianza.{% else %}Let's discuss how a workshop can help your team write better code, work together more effectively, and tackle that legacy codebase with confidence.{% endif %}</p>
+    <p>{{ t.cta.text[lang] | safe }}</p>
     <div class="service-cta__buttons">
       <span class="service-cta__btn service-cta__btn--secondary service-cta__btn--disabled" aria-disabled="true">
         <i class="fa-solid fa-ban"></i> {{ trans(key="svc_unavailable", lang=lang) }}
