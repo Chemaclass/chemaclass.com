@@ -11,6 +11,8 @@
 {{ <page_styles css="page.css" /> }}
 {% endblock styles %}
 
+{# Zola renders 404.html once, in the default language, so this page is
+   English only: there is no /es/404.html to switch for. #}
 {% block content %}
 <div class="not-found-container">
   <div class="terminal-window">
@@ -35,27 +37,27 @@
   <div class="terminal-nav" id="terminal-nav" style="opacity: 0;">
     <p class="terminal-helper">Press <kbd>1</kbd>-<kbd>5</kbd> to navigate, or type a command above</p>
     <div class="terminal-links">
-      <a href="{% if lang == 'es' %}/es/{% else %}/{% endif %}" class="terminal-link">
+      <a href="/" class="terminal-link">
         <span class="terminal-link-key">1</span>
         <span class="terminal-link-cmd">cd</span>
         <span class="terminal-link-path">/home</span>
       </a>
-      <a href="{% if lang == 'es' %}/es/blog/{% else %}/blog/{% endif %}" class="terminal-link">
+      <a href="/blog/" class="terminal-link">
         <span class="terminal-link-key">2</span>
         <span class="terminal-link-cmd">cd</span>
         <span class="terminal-link-path">/blog</span>
       </a>
-      <a href="{% if lang == 'es' %}/es/readings/{% else %}/readings/{% endif %}" class="terminal-link">
+      <a href="/readings/" class="terminal-link">
         <span class="terminal-link-key">3</span>
         <span class="terminal-link-cmd">cd</span>
         <span class="terminal-link-path">/readings</span>
       </a>
-      <a href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}" class="terminal-link">
+      <a href="/services/web-development/" class="terminal-link">
         <span class="terminal-link-key">4</span>
         <span class="terminal-link-cmd">cd</span>
         <span class="terminal-link-path">/services</span>
       </a>
-      <a href="{% if lang == 'es' %}/es/talks/{% else %}/talks/{% endif %}" class="terminal-link">
+      <a href="/talks/" class="terminal-link">
         <span class="terminal-link-key">5</span>
         <span class="terminal-link-cmd">cd</span>
         <span class="terminal-link-path">/talks</span>
@@ -69,10 +71,10 @@
     <h1>404 - Page Not Found</h1>
     <p>The page you're looking for doesn't exist or has been moved.</p>
     <nav>
-      <a href="{% if lang == 'es' %}/es/{% else %}/{% endif %}">Home</a> &middot;
-      <a href="{% if lang == 'es' %}/es/blog/{% else %}/blog/{% endif %}">Blog</a> &middot;
-      <a href="{% if lang == 'es' %}/es/readings/{% else %}/readings/{% endif %}">Readings</a> &middot;
-      <a href="{% if lang == 'es' %}/es/talks/{% else %}/talks/{% endif %}">Talks</a>
+      <a href="/">Home</a> &middot;
+      <a href="/blog/">Blog</a> &middot;
+      <a href="/readings/">Readings</a> &middot;
+      <a href="/talks/">Talks</a>
     </nav>
   </div>
 </noscript>
@@ -116,11 +118,11 @@ if (window.cronitor) {
   ];
 
   const COMMANDS = {
-    'cd /home': '{% if lang == "es" %}/es/{% else %}/{% endif %}',
-    'cd /blog': '{% if lang == "es" %}/es/blog/{% else %}/blog/{% endif %}',
-    'cd /readings': '{% if lang == "es" %}/es/readings/{% else %}/readings/{% endif %}',
-    'cd /talks': '{% if lang == "es" %}/es/talks/{% else %}/talks/{% endif %}',
-    'cd /services': '{% if lang == "es" %}/es/services/web-development/{% else %}/services/web-development/{% endif %}'
+    'cd /home': '/',
+    'cd /blog': '/blog/',
+    'cd /readings': '/readings/',
+    'cd /talks': '/talks/',
+    'cd /services': '/services/web-development/'
   };
 
   const terminalContent = document.getElementById('terminal-content');
@@ -209,11 +211,11 @@ if (window.cronitor) {
 
   function setupKeyboardShortcuts() {
     const shortcuts = {
-      '1': '{% if lang == "es" %}/es/{% else %}/{% endif %}',
-      '2': '{% if lang == "es" %}/es/blog/{% else %}/blog/{% endif %}',
-      '3': '{% if lang == "es" %}/es/readings/{% else %}/readings/{% endif %}',
-      '4': '{% if lang == "es" %}/es/services/web-development/{% else %}/services/web-development/{% endif %}',
-      '5': '{% if lang == "es" %}/es/talks/{% else %}/talks/{% endif %}'
+      '1': '/',
+      '2': '/blog/',
+      '3': '/readings/',
+      '4': '/services/web-development/',
+      '5': '/talks/'
     };
 
     document.addEventListener('keydown', function(e) {
