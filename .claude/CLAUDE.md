@@ -36,14 +36,15 @@ Any copy change updates EN and ES in the same edit and the same commit.
 
 Template copy, three places by size:
 
-- Short UI strings (nav, buttons, labels shared site-wide): `trans(key=..., lang=lang)`,
-  from `[translations]` and `[languages.es.translations]` in `config.toml`.
+- Short UI strings, and pages with only a handful of strings: `trans(key=..., lang=lang)`,
+  from `[translations]` and `[languages.es.translations]` in `config.toml`, prefixed
+  by page (`home_*`, `profile_*`, `tag_*`). A missing key fails the build.
 - Long page copy: `data/i18n/<page>.toml`, each key with `.en` and `.es` side by side.
   Load it once per block with `{%- set t = load_data(path="data/i18n/<page>.toml") -%}`
   and print `{{ t.section.key[lang] | safe }}` (values are raw HTML). Inside JSON-LD or
   JS use `| json_encode | safe` without surrounding quotes. Fill `{n}`-style
-  placeholders with `| replace(from="{n}", to=value ~ "")`. Pilot:
-  `templates/services/web-development*.html`.
+  placeholders with `| replace(from="{n}", to=value ~ "")`. In use: `cv`,
+  `consulting`, `team-workshops`, `web-development` (with its thanks page), `books`.
 - Structural switches (an `/es` URL prefix, a `.es.webp` suffix) stay inline as
   `{% if lang == 'es' %}`.
 
