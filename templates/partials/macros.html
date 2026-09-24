@@ -146,6 +146,12 @@ data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
 {% if lang == "es" %}{{ date | date(format="%d/%m/%Y") }}{% else %}{{ date | date(format="%B %d, %Y") }}{% endif %}
 {%- endcomponent format_date %}
 
+{# Month and year in the page language: "Jun 2026" in English, "jun 2026" in Spanish.
+   `date` is an ISO day, "2026-06-01". #}
+{% component month_year(date, lang) -%}
+{% if lang == "es" %}{{ date | date(format="MMM y", locale="es_ES") }}{% else %}{{ date | date(format="%b %Y") }}{% endif %}
+{%- endcomponent month_year %}
+
 {# Build language-aware path #}
 {% component lang_path(path, lang) -%}
 {% if lang == "es" %}/es{{ path }}{% else %}{{ path }}{% endif %}

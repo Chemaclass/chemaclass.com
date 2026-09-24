@@ -8,6 +8,18 @@
 download_pdf.en = "Download PDF"
 download_pdf.es = "Descargar PDF"
 
+[places]
+berlin.en = "Berlin, Germany"
+berlin.es = "Berlín, Alemania"
+berlin_remote.en = "Berlin, Germany · Remote"
+berlin_remote.es = "Berlín, Alemania · Remoto"
+murcia.en = "Murcia, Spain"
+murcia.es = "Murcia, España"
+cartagena.en = "Cartagena, Murcia, Spain"
+cartagena.es = "Cartagena, Murcia, España"
+caravaca.en = "Caravaca de la Cruz, Murcia, Spain"
+caravaca.es = "Caravaca de la Cruz, Murcia, España"
+
 [about]
 title.en = "About"
 title.es = "Sobre mí"
@@ -112,7 +124,7 @@ bashunit_print.es = "Creador y Maintainer. Librería de testing para scripts bas
 phel_print.en = "Core Maintainer. Functional language that compiles to PHP. Lisp dialect inspired by Clojure."
 phel_print.es = "Core Maintainer. Lenguaje funcional que compila a PHP. Dialecto de Lisp inspirado en Clojure."
 agnostic_ai_print.en = "Creator &amp; Maintainer. One source of truth for the config of every AI coding tool."
-agnostic_ai_print.es = "Creador y Maintainer. Una única fuente de verdad para la config de cada herramienta de IA."
+agnostic_ai_print.es = "Creador y Maintainer. Una única fuente de verdad para la config de cada herramienta de IA para programar."
 
 [talks]
 title.en = "Talks"
@@ -143,6 +155,8 @@ data.en = "Data &amp; Infrastructure"
 data.es = "Datos &amp; Infraestructura"
 practices.en = "Practices &amp; Leadership"
 practices.es = "Prácticas &amp; Liderazgo"
+frameworks.en = "Frameworks &amp; Tools"
+frameworks.es = "Frameworks &amp; Herramientas"
 
 [education]
 title.en = "Education"
@@ -165,6 +179,8 @@ title.en = "Awards"
 title.es = "Reconocimientos"
 issued_by.en = "Issued by"
 issued_by.es = "Otorgado por"
+bashunit_title.en = "bashunit: Side Project of the Year"
+bashunit_title.es = "bashunit: Side Project del Año"
 bashunit.en = "Winners of the Side Project of the Year, 2023."
 bashunit.es = "Ganadores del Side Project del Año, 2023."
 first_award_title.en = "First award as student"
