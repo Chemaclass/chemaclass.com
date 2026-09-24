@@ -35,6 +35,22 @@ fco.es = "“Un portfolio rápido y limpio para compartir mi trabajo, investigac
 fco_role.en = "Architect"
 fco_role.es = "Arquitecto"
 
+[alt]
+windmill.en = "Windmill Tündern website"
+windmill.es = "Web de Windmill Tündern"
+teina.en = "Teína website"
+teina.es = "Web de Teína"
+fco.en = "Fco Sandoval Gómez website"
+fco.es = "Web de Fco Sandoval Gómez"
+dkrisna.en = "D'Krisna website"
+dkrisna.es = "Web de D'Krisna"
+postcard.en = "Postcard from the Road website"
+postcard.es = "Web de Postcard from the Road"
+miaforo.en = "MIAFORO gym management app"
+miaforo.es = "MIAFORO, app de gestión para gimnasios"
+puertafria.en = "puertafria sales app"
+puertafria.es = "puertafria, app de ventas"
+
 [hero]
 title.en = "Website design for small businesses, live in under a month"
 title.es = "Diseño de páginas web para empresas, online en menos de un mes"
