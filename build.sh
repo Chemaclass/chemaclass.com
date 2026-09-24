@@ -116,6 +116,9 @@ fi
 echo "Checking content structure against the reviewed baseline..."
 python3 scripts/check-content-shape.py
 
+echo "Checking page copy has every language..."
+python3 scripts/check-i18n.py
+
 # Before the build, not after: the templates read these dates with load_data()
 # to publish an honest dateModified.
 echo "Fetching the GitHub star counts..."
