@@ -75,6 +75,8 @@ show_less.en = "Show less"
 show_less.es = "Ver menos"
 show_more.en = "Show more"
 show_more.es = "Ver más"
+read_more.en = "Read more"
+read_more.es = "Leer más"
 
 [products]
 title.en = "Products"
