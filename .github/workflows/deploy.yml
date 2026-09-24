@@ -9,10 +9,11 @@ on:
       - main
   workflow_dispatch:
 
+# Read-only by default. The build runs third-party binaries and scripts with
+# RUM_KEY and GITHUB_TOKEN in the environment, so the Pages write and OIDC
+# permissions belong to the deploy job alone.
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   # Pages deploys must not overlap; pull request builds are per ref and can be
@@ -66,13 +67,19 @@ jobs:
 
       # Downloaded directly: taiki-e/install-action's manifest lags new Zola
       # releases, and the templates need 0.23.6 (component implicit params).
+      # The digest is pinned, never fetched: a replaced release asset has to fail
+      # here instead of running with the build's credentials. Bump both together
+      # (the digest is on the release page, next to the asset).
       - name: Install Zola
         env:
           ZOLA_VERSION: 0.23.6
+          ZOLA_SHA256: 8f5132b3522412d04e395e0b25f6d68613ad272a873e54a2b3ebf664873024a4
         run: |
           mkdir -p "$RUNNER_TEMP/zola"
-          curl -sSL "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
-            | tar -xz -C "$RUNNER_TEMP/zola"
+          curl -fsSL -o "$RUNNER_TEMP/zola.tar.gz" \
+            "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
+          echo "${ZOLA_SHA256}  $RUNNER_TEMP/zola.tar.gz" | sha256sum --check --strict
+          tar -xzf "$RUNNER_TEMP/zola.tar.gz" -C "$RUNNER_TEMP/zola"
           echo "$RUNNER_TEMP/zola" >> "$GITHUB_PATH"
           "$RUNNER_TEMP/zola/zola" --version
 
@@ -102,6 +109,10 @@ jobs:
     # Pull requests build only: they verify the site compiles and that the
     # post-build checks pass, without touching what is live.
     if: github.event_name != 'pull_request'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
