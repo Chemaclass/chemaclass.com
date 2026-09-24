@@ -2,7 +2,7 @@
 
 
 {% block title %}
-  {% if lang == "es" %}Tu perfil de lectura{% else %}Your reading profile{% endif %} | Chemaclass
+  {{ trans(key="profile_title", lang=lang) }} | Chemaclass
 {% endblock %}
 
 {% block robots %}
@@ -75,25 +75,15 @@
 
 <div class="profile-page">
   <header class="profile-page__header">
-    <h1>{% if lang == "es" %}Tu perfil de lectura{% else %}Your reading profile{% endif %}</h1>
+    <h1>{{ trans(key="profile_title", lang=lang) }}</h1>
     <p class="profile-page__intro">
-      {% if lang == "es" %}
-        Todo lo que ves aquí vive en tu navegador. Nada sale de tu dispositivo,
-        nada se sincroniza con un servidor. Borra tus datos del sitio y el perfil se vacía.
-      {% else %}
-        Everything you see here lives in your browser. Nothing leaves your device,
-        nothing syncs to a server. Clear site data and the profile empties.
-      {% endif %}
+      {{ trans(key="profile_intro", lang=lang) }}
     </p>
   </header>
 
   <noscript>
     <p class="profile-page__noscript">
-      {% if lang == "es" %}
-        Esta página necesita JavaScript para leer tus datos locales y mostrar tu progreso.
-      {% else %}
-        This page needs JavaScript to read your local data and render your progress.
-      {% endif %}
+      {{ trans(key="profile_noscript", lang=lang) }}
     </p>
   </noscript>
 

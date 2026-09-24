@@ -63,7 +63,7 @@
   {% endfor %}
 
   <details class="blog-browse-more">
-    <summary>{% if lang == 'es' %}Explorar por serie o año{% else %}Browse by series or year{% endif %}</summary>
+    <summary>{{ trans(key="browse_more", lang=lang) }}</summary>
     <div class="blog-browse__row">
       <span class="blog-browse__label">{{ trans(key="browse_by_series", lang=lang) }}</span>
       <div class="blog-browse__links">

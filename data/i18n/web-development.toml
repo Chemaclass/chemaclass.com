@@ -338,3 +338,17 @@ offer_custom.en = "A fast, secure website, custom-built and ready to generate en
 offer_custom.es = "Una web rápida y segura, construida a medida y lista para generar contactos."
 offer_blog.en = "A fast website with a blog for publishing news, articles, and case studies."
 offer_blog.es = "Una web rápida con blog para publicar noticias, artículos y casos de estudio."
+
+[thanks]
+eyebrow.en = "Received"
+eyebrow.es = "Recibido"
+title.en = "Thanks, I have it"
+title.es = "Gracias, ya lo tengo"
+lead.en = "I read it and reply within one working day. I tell you which option fits and how long it would take. If I need anything to fix the price, I ask."
+lead.es = "Lo leo y te respondo en un día laborable. Te digo qué opción te encaja y cuánto tardaría. Si me falta algo para cerrar el precio, te lo pregunto."
+aside.en = "Nothing arrives? Check your spam folder, or write to me directly at <a href=\"mailto:web@chemaclass.com\">web@chemaclass.com</a>."
+aside.es = "¿No te llega nada? Mira en spam, o escríbeme directamente a <a href=\"mailto:web@chemaclass.com\">web@chemaclass.com</a>."
+back.en = "Back to the prices"
+back.es = "Volver a los precios"
+blog.en = "Read the blog"
+blog.es = "Leer el blog"

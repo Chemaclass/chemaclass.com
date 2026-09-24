@@ -5,16 +5,12 @@
 {{ <page_styles css="listing.css" /> }}
 {% endblock styles %}
 
-{% block title %}{% if lang == "es" %}Todas las etiquetas{% else %}All tags{% endif %} | {{ config.title }}{% endblock title %}
+{% block title %}{{ trans(key="tags_title", lang=lang) }} | {{ config.title }}{% endblock title %}
 
 {% block description %}
-  {% if lang == "es" %}
-    <meta name="description" content="Explora {{ terms | length }} etiquetas sobre desarrollo de software, liderazgo, testing y más." />
-    <meta name="twitter:description" content="Explora {{ terms | length }} etiquetas sobre desarrollo de software, liderazgo, testing y más.">
-  {% else %}
-    <meta name="description" content="Browse {{ terms | length }} tags covering software development, leadership, testing, and more." />
-    <meta name="twitter:description" content="Browse {{ terms | length }} tags covering software development, leadership, testing, and more.">
-  {% endif %}
+  {% set desc = trans(key="tags_description", lang=lang) | replace(from="{count}", to=(terms | length) ~ "") %}
+    <meta name="description" content="{{ desc }}" />
+    <meta name="twitter:description" content="{{ desc }}">
 {% endblock description %}
 
 {% block posthead %}
