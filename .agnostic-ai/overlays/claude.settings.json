@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "includeCoAuthoredBy": false,
+  "hooks": null,
+  "permissions": {
+    "allow": [
+      "Bash(zola build:*)",
+      "Bash(zola check:*)",
+      "Bash(zola serve:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git add:*)",
+      "Bash(rtk git status:*)",
+      "Bash(rtk git diff:*)",
+      "Bash(rtk git log:*)",
+      "Bash(rtk git show:*)",
+      "Bash(scripts/build-slides.sh:*)",
+      "Bash(bash scripts/build-slides.sh:*)",
+      "Bash(scripts/optimize-image.sh:*)",
+      "Bash(bash scripts/optimize-image.sh:*)",
+      "WebFetch(domain:chemaclass.com)"
+    ],
+    "deny": [
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push origin +*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git clean -f:*)",
+      "Bash(git checkout .:*)",
+      "Bash(git restore .:*)",
+      "Bash(rm -rf:*)"
+    ]
+  }
+}

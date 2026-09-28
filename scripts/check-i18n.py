@@ -11,7 +11,7 @@ So this checks, for every data/i18n/*.toml:
 
 - Every key has every language, none of them empty.
 - Each language uses the same {placeholders}, so the template fills them all.
-- No em or en dash (.claude/rules/no-em-dash.md).
+- No em or en dash (.agnostic-ai/rules/no-em-dash.md).
 - Every key a template reads exists, and every key exists because a template
   reads it. A key nothing reads is copy someone will edit for nothing.
 

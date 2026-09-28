@@ -31,7 +31,7 @@ static_thumbnail = "/images/blog/YYYY-MM-DD/cover.webp"
 ```
 
 The full front matter template, with the optional series and related-content
-fields, lives in `.claude/templates/blog-post.md`.
+fields, lives in `.agnostic-ai/templates/blog-post.md`.
 
 Anything else you drop in `content/` becomes a page too. A `content/README.md`
 does not stay behind the scenes: it builds as `/readme/` and lands in the sitemap

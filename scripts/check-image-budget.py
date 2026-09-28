@@ -7,7 +7,7 @@ whatever width the author saved them. A phone then downloads a 2624px photo to
 paint it into a 334px box, and the only signal is a slow page.
 
 The widths come from the site's own convention, documented in
-.claude/skills/optimize-images/SKILL.md:
+.agnostic-ai/skills/optimize-images/SKILL.md:
 
 - cover: at least 1600 wide, because templates/blog/post.html renders a 1440w
   retina hero. Capped here well above that, only to catch an untouched original.
