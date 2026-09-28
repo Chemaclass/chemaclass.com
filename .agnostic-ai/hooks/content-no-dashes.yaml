@@ -1,0 +1,6 @@
+command: f=$(jq -r '.tool_input.file_path // empty'); case "$f" in */content/*.md|*/static/slides/*.md) if grep -n -e '—' -e '–' "$f" >&2; then echo "Em dash (U+2014) and en dash (U+2013) are forbidden; replace them (see .agnostic-ai/rules/no-em-dash.md)" >&2; exit 2; fi ;; esac; exit 0
+event: PostToolUse
+matcher: Edit|Write
+name: content-no-dashes
+target: claude
+description: After editing content or a slide deck, block em and en dashes in that file.

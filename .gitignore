@@ -13,3 +13,23 @@ static/slides/*/slides.pdf
 
 # Agent worktrees live inside the repo but are separate checkouts
 .claude/worktrees/
+
+# >>> agnostic-ai (managed) >>>
+# Generated paths. Edit specs, not this block. Run `agnostic-ai sync` to refresh.
+# Not committed: a fresh clone or `git worktree` lacks these until `agnostic-ai sync` runs (e.g. a post-checkout hook).
+/.agents/skills/
+/.agnostic-ai/.sync-state
+/.agnostic-ai/local/
+/.agnostic-ai/packs/
+/.claude/agent-memory-local/
+/.claude/agents/
+/.claude/rules/
+/.claude/settings.json
+/.claude/settings.local.json
+/.claude/skills/
+/.codex/agents/
+/.codex/hooks.json
+/AGENTS.md
+/CLAUDE.md
+/agnostic-ai.local.yaml
+# <<< agnostic-ai (managed) <<<

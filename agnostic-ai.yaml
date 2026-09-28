@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Chemaclass/agnostic-ai/main/docs/schemas/config.schema.json
+version: 1
+
+targets:
+  - claude
+  - codex
+
+# Track shared sources; ignore generated native configuration.
+gitignore:
+  enabled: true
+
+# Fail if a spec cannot be represented by a selected target.
+on-unsupported: error

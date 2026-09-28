@@ -15,7 +15,7 @@ JavaScript error, or 404, so nothing else in the chain notices:
   them.
 - The same picture rendered three times on one page, hero included.
 
-The em dash rule is the house style in .claude/rules/no-em-dash.md, checked here
+The em dash rule is the house style in .agnostic-ai/rules/no-em-dash.md, checked here
 because a style rule nothing enforces is a style rule that drifts.
 
 Reads both the built HTML, where the description and the headings actually land,
@@ -165,7 +165,7 @@ def check_source(problems: List[str]) -> int:
 
         for dash, name in (('—', 'em dash'), ('–', 'en dash')):
             if dash in prose:
-                problems.append(f'{rel} contains an {name}, see .claude/rules/no-em-dash.md')
+                problems.append(f'{rel} contains an {name}, see .agnostic-ai/rules/no-em-dash.md')
 
         seen = {}
         for alt, url in MD_IMAGE.findall(prose):
