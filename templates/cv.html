@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 
-{% block title %}CV | Chemaclass{% endblock %}
+{% block title %}Jose M. Valera Reales, Product Engineer | {% if lang == 'es' %}Currículum{% else %}CV{% endif %}{% endblock %}
 
 {% block head %}
 <link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -12,10 +12,12 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "url": "{{ config.base_url | safe }}/cv/",
+  "url": "{{ config.base_url | safe }}{% if lang == 'es' %}/es{% endif %}/cv/",
+  "inLanguage": "{{ lang }}",
   "mainEntity": {
     "@type": "Person",
-    "name": "Jose M. Valera Reales",
+    "@id": "{{ config.base_url | safe }}/#person",
+    "name": "Jose Maria Valera Reales",
     "alternateName": "Chemaclass",
     "url": "{{ config.base_url | safe }}",
     "image": "{{ get_url(path=config.extra.icon) | safe }}",

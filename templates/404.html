@@ -7,6 +7,9 @@
 <meta name="robots" content="noindex, follow">
 {% endblock robots %}
 
+{# A missing page has no URL to name as canonical; the home page is not it. #}
+{% block canonical %}{% endblock canonical %}
+
 {% block styles %}
 {{ <page_styles css="page.css" /> }}
 {% endblock styles %}

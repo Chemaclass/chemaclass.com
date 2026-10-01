@@ -5,6 +5,17 @@
 {{ <page_styles css="page.css" /> }}
 {% endblock styles %}
 
+{# The subtitle tells a talk apart from the blog post of the same name
+   (/talks/bashunit/ and /blog/bashunit/), when it fits in the ~60 characters
+   a result shows. #}
+{% block title %}
+  {%- set talk_title = page.title -%}
+  {%- if page.extra.subtitle and (page.title ~ ": " ~ page.extra.subtitle) | length <= 47 -%}
+    {%- set talk_title = page.title ~ ": " ~ page.extra.subtitle -%}
+  {%- endif -%}
+  {{ talk_title }} | {{ config.title }}
+{% endblock title %}
+
 {% block posthead %}
   {% set schema_type = "CreativeWork" %}
   {% include "partials/post-schema.html" %}

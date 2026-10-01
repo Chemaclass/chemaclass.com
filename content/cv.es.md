@@ -1,6 +1,6 @@
 +++
 title = "CV | Chemaclass"
-description = "Jose Maria Valera Reales - Product Engineer en Kombo, Tech Lead, contribuidor Open Source. 15+ años construyendo software, 5+ años liderando equipos."
+description = "Jose Maria Valera Reales - Product Engineer en Kombo, ex Tech Lead, contribuidor open source. 15+ años construyendo software, 5+ años liderando equipos."
 template = "cv.html"
 aliases = ["/es/curriculum"]
 +++

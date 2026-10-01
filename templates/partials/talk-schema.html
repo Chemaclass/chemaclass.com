@@ -20,12 +20,12 @@
 {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  "name": "{{ video.name }}",
-  "description": "{{ video.description | default(value=talk_desc) }}",
+  "name": {{ video.name | json_encode | safe }},
+  "description": {{ video.description | default(value=talk_desc) | json_encode | safe }},
   {# YouTube serves this thumbnail for every video id, and Google asks for one
      on a VideoObject: without it the entry is ignored for video results. #}
   "thumbnailUrl": "https://i.ytimg.com/vi/{{ video.id }}/hqdefault.jpg",
-  "uploadDate": "{{ video.date }}",
+  "uploadDate": "{{ video.date }}{% if video.date | length == 10 %}T00:00:00+00:00{% endif %}",
   "contentUrl": "https://youtu.be/{{ video.id }}",
   "embedUrl": "https://www.youtube-nocookie.com/embed/{{ video.id }}",
   "inLanguage": "{{ video.lang | default(value='en') }}",
@@ -44,8 +44,8 @@
 {
   "@context": "https://schema.org",
   "@type": "PresentationDigitalDocument",
-  "name": "{{ page.title }}",
-  "description": "{{ talk_desc }}",
+  "name": {{ page.title | json_encode | safe }},
+  "description": {{ talk_desc | json_encode | safe }},
   "url": "{{ slides_url | safe }}",
   "encodingFormat": "text/html",
   "inLanguage": "{{ lang }}",
