@@ -8,15 +8,17 @@ shared here so there is one source of truth.
 """
 from __future__ import annotations
 
+import json
 import re
 import sys
 from pathlib import Path
-from typing import Iterator, Literal, Optional, Tuple, TypedDict
+from typing import Dict, Iterator, List, Literal, Optional, Tuple, TypedDict
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = PROJECT_ROOT / 'content'
 PUBLIC_DIR = PROJECT_ROOT / 'public'
 STATIC_DIR = PROJECT_ROOT / 'static'
+LAST_MODIFIED = PROJECT_ROOT / 'data' / 'last-modified.json'
 
 def _read_base_url() -> str:
     """Read `base_url` from config.toml, the one place that defines the origin.
@@ -203,6 +205,29 @@ def iter_section_files(
         yield path
 
 
+YOUTUBE_COMPONENT = re.compile(r'\{\{\s*<youtube\s+id="([^"?]+)(?:\?t=(\d+))?"[^}]*?/>\s*\}\}')
+GIST_COMPONENT = re.compile(r'\{\{\s*<gist\s+url="([^"]+)"[^}]*?/>\s*\}\}')
+DEEP_DIVE_OPEN = re.compile(r'\{%\s*<deep_dive\s+title="([^"]*)"\s*>\s*%\}')
+BLOCK_TAG = re.compile(r'\{%\s*</?[a-z_]+[^%]*%\}[ \t]*\n?')
+
+
+def components_as_markdown(body: str) -> str:
+    """Rewrite Zola components as the plain markdown they stand for.
+
+    The mirrors, feeds and llms files are read outside Zola, where
+    `{{ <youtube id="..." /> }}` is noise, and a talk page whose only content is
+    its recording would otherwise ship without the link to it.
+    """
+    def youtube(match: "re.Match[str]") -> str:
+        start = f'&t={match.group(2)}' if match.group(2) else ''
+        return f'[Video](https://www.youtube.com/watch?v={match.group(1)}{start})'
+
+    body = YOUTUBE_COMPONENT.sub(youtube, body)
+    body = GIST_COMPONENT.sub(lambda m: f'[Gist](https://gist.github.com/{m.group(1)})', body)
+    body = DEEP_DIVE_OPEN.sub(lambda m: f'**{m.group(1)}**', body)
+    return BLOCK_TAG.sub('', body)
+
+
 def read_entry(filepath: Path, strip_yaml: bool = False) -> Tuple[TFrontMatter, str]:
     """Read one content file and return (frontmatter, body). The date falls back
     to the filename prefix, which is where most posts carry it.
@@ -223,7 +248,7 @@ def read_entry(filepath: Path, strip_yaml: bool = False) -> Tuple[TFrontMatter, 
         date = extract_date_from_filename(filepath.name)
         if date:
             fm['date'] = date
-    return fm, get_content_body(content, strip_yaml=strip_yaml)
+    return fm, components_as_markdown(get_content_body(content, strip_yaml=strip_yaml))
 
 
 def entry_url(section: TSection, slug: str, base_url: str = BASE_URL, es: bool = False) -> str:
@@ -243,3 +268,50 @@ def get_content_body(content: str, strip_yaml: bool = False) -> str:
     if strip_yaml:
         body = re.sub(r'^---\s*\n.*?\n---\s*\n?', '', body, flags=re.DOTALL)
     return body.strip()
+
+
+def read_last_modified() -> Dict[str, str]:
+    """The body-edit dates written by generate-last-modified.py, keyed by content path.
+
+    Optional rather than required: this file is a build artifact, and a caller
+    running the generators by hand in a different order should still get output,
+    just without the modified dates.
+    """
+    if not LAST_MODIFIED.is_file():
+        return {}
+    return json.loads(LAST_MODIFIED.read_text(encoding='utf-8'))
+
+
+def _excluded_paths() -> List[str]:
+    """`sitemap_exclude` from config.toml: pages to omit though they are indexable.
+
+    Kept in config rather than here because it is an editorial decision about
+    which pages are worth a crawler's time, not a fact about how the site is
+    built. Parsed with a regex for the same reason base_url is read that way
+    above: this whole chain is stdlib-only, and tomllib is 3.11+.
+    """
+    text = (PROJECT_ROOT / "config.toml").read_text(encoding="utf-8")
+    block = re.search(r"^sitemap_exclude\s*=\s*\[(.*?)\]", text, re.S | re.M)
+    return re.findall(r'"([^"]*)"', block.group(1)) if block else []
+
+
+EXCLUDED = _excluded_paths()
+
+
+def is_excluded(url: str) -> bool:
+    """Whether config asked for this URL to stay out of the sitemap and IndexNow, in either language.
+
+    A trailing * means the descendants of a path but not the path itself, which
+    is how the OEUR chapters come out while the book they belong to stays in.
+    """
+    path = url[len(BASE_URL):] if url.startswith(BASE_URL) else url
+    if path.startswith("/es/"):
+        path = path[3:]
+    for rule in EXCLUDED:
+        if rule.endswith("*"):
+            prefix = rule[:-1]
+            if path.startswith(prefix) and path != prefix:
+                return True
+        elif path == rule:
+            return True
+    return False

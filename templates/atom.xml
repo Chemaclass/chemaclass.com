@@ -19,19 +19,21 @@
     <generator uri="https://www.getzola.org/">Zola</generator>
     {% if last_updated is defined %}<updated>{{ last_updated | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>{% endif %}
     <id>{{ feed_url | safe }}</id>
+    {%- set modified_dates = load_data(path="data/last-modified.json", format="json", required=false) %}
     {%- for page in pages %}
+    {%- set_global entry_modified = false %}
+    {%- if modified_dates and page.relative_path %}
+      {%- set_global entry_modified = modified_dates[page.relative_path] | default(value=false) %}
+    {%- endif %}
     <entry xml:lang="{{ page.lang }}">
         <title>{{ page.title }}</title>
-        {%- if page.extra.subtitle %}
-        <subtitle>{{ page.extra.subtitle }}</subtitle>
-        {%- endif %}
         {%- if page.taxonomies.tags %}
         {%- for tag in page.taxonomies.tags %}
-        <category term="{{ tag }}" scheme="{{ config.base_url | safe }}/tags/{{ tag }}/" label="{{ tag | replace(from="-", to=" ") | title }}"/>
+        <category term="{{ tag }}" scheme="{{ get_taxonomy_url(kind="tags", name=tag, lang=page.lang) | safe }}" label="{{ tag | replace(from="-", to=" ") | title }}"/>
         {%- endfor %}
         {%- endif %}
         <published>{{ page.date | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</published>
-        <updated>{{ page.updated | default(value=page.date, boolean=true) | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>
+        <updated>{% if page.updated %}{{ page.updated | date(format="%Y-%m-%dT%H:%M:%S%:z") }}{% elif entry_modified %}{{ entry_modified }}{% else %}{{ page.date | date(format="%Y-%m-%dT%H:%M:%S%:z") }}{% endif %}</updated>
         {% for author in page.authors %}
         <author>
           <name>

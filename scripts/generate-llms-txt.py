@@ -17,6 +17,8 @@ import sys
 from typing import List, Tuple, TypedDict
 
 from _common import (
+    BASE_URL,
+    PROJECT_ROOT,
     PUBLIC_DIR,
     SECTIONS,
     TLang,
@@ -32,6 +34,67 @@ from _common import (
 # above it stays hand-written, so the marker has to be present in the source
 # file: silently appending instead would double the index on the next run.
 INDEX_MARKER = '## Content index'
+
+
+SERIES_HEADING = '## Series'
+
+
+def series_config() -> List[Tuple[str, str, str]]:
+    """(key, title, title_es) per `[extra.series.<key>]` in config.toml, in file order.
+
+    Parsed with a regex like the rest of the chain: stdlib only, and tomllib is 3.11+.
+    """
+    text = (PROJECT_ROOT / 'config.toml').read_text(encoding='utf-8')
+    found = []
+    for key, block in re.findall(r'^\[extra\.series\.([a-z0-9_-]+)\]\n(.*?)(?=^\[|\Z)', text, re.S | re.M):
+        title = re.search(r'^title\s*=\s*"([^"]+)"', block, re.M)
+        title_es = re.search(r'^title_es\s*=\s*"([^"]+)"', block, re.M)
+        if title:
+            found.append((key, title.group(1), title_es.group(1) if title_es else title.group(1)))
+    return found
+
+
+def build_series_lines(lang: TLang) -> List[str]:
+    """One bullet per series with its posts in suggested order, read from front matter.
+
+    Hand-kept, this list fell two posts behind within a month of the last edit.
+    """
+    members: dict = {}
+    for filepath in iter_section_files('blog', translations=(lang == 'es')):
+        if ('.es.md' in filepath.name) != (lang == 'es'):
+            continue
+        raw = filepath.read_text(encoding='utf-8')
+        key = re.search(r'^series\s*=\s*"([^"]+)"', raw, re.M)
+        order = re.search(r'^series_order\s*=\s*(\d+)', raw, re.M)
+        if not key:
+            continue
+        fm, _ = read_entry(filepath)
+        members.setdefault(key.group(1), []).append(
+            (int(order.group(1)) if order else 999, require_title(fm, filepath)))
+
+    noun = 'artículos' if lang == 'es' else 'posts'
+    prefix = '/es' if lang == 'es' else ''
+    lines = []
+    for key, title, title_es in series_config():
+        posts = sorted(members.get(key, []))
+        if not posts:
+            continue
+        name = title_es if lang == 'es' else title
+        titles = ' | '.join(t for _, t in posts)
+        lines.append(f'- [{name}]({BASE_URL}{prefix}/series/{key}/) ({len(posts)} {noun}): {titles}')
+    return lines
+
+
+def replace_series(text: str, lang: TLang) -> str:
+    """Swap the bullet list under the Series heading for the generated one."""
+    start = text.find(f'\n{SERIES_HEADING}\n')
+    if start == -1:
+        sys.exit(f'llms.txt ({lang}): no "{SERIES_HEADING}" heading to write the series under')
+    end = text.find('\n## ', start + 1)
+    section = text[start:end]
+    intro = [line for line in section.split('\n') if not line.startswith('- [')]
+    body = '\n'.join(intro).rstrip() + '\n\n' + '\n'.join(build_series_lines(lang)) + '\n'
+    return text[:start] + body + text[end:]
 
 
 class TEntry(TypedDict):
@@ -94,7 +157,10 @@ def build_content_index(lang: TLang) -> Tuple[List[str], int]:
     llms.txt wants the source, and the mirrors are already published next to
     every entry.
     """
-    lines: List[str] = [INDEX_MARKER, '']
+    note = ('Cada entrada, de la más nueva a la más antigua. Los enlaces apuntan a la versión Markdown de cada página.'
+            if lang == 'es' else
+            'Every entry, newest first. Links point at the Markdown version of each page.')
+    lines: List[str] = [INDEX_MARKER, '', note, '']
     total = 0
 
     for section in SECTIONS:
@@ -116,7 +182,7 @@ def build_content_index(lang: TLang) -> Tuple[List[str], int]:
             continue
 
         entries.sort(key=lambda e: e[0], reverse=True)
-        lines.append(f'### {section.title()} ({len(entries)})')
+        lines.append(f'## {section.title()} ({len(entries)})')
         lines.append('')
         for date, title, url, description in entries:
             date_str = f'`{date}` ' if date else ''
@@ -146,7 +212,7 @@ def write_content_index(lang: TLang) -> int:
             'Add it to the source file in static/, at the point the generated index belongs.'
         )
 
-    prose = text.split(INDEX_MARKER)[0].rstrip()
+    prose = replace_series(text.split(INDEX_MARKER)[0], lang).rstrip()
     index_lines, total = build_content_index(lang)
     path.write_text(prose + '\n\n' + '\n'.join(index_lines).rstrip() + '\n', encoding='utf-8')
     return total

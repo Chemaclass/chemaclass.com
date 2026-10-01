@@ -2,7 +2,7 @@
 
 /* TEAM */
   Name: Jose Maria Valera Reales (Chemaclass)
-  Role: Tech Lead, writer, open source contributor
+  Role: Product Engineer at Kombo, writer, open source contributor
   Site: https://chemaclass.com
   Contact: hi [at] chemaclass.com
   Twitter: @Chemaclass

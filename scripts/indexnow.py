@@ -18,6 +18,7 @@ an unreachable key is rejected whole.
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
 import urllib.error
@@ -25,7 +26,7 @@ import urllib.request
 from pathlib import Path
 from typing import List, Set
 
-from _common import BASE_URL, SECTIONS, get_slug_from_filename, is_draft
+from _common import BASE_URL, SECTIONS, get_slug_from_filename, is_draft, is_excluded
 
 ENDPOINT = "https://api.indexnow.org/indexnow"
 KEY_FILE = Path(__file__).resolve().parent.parent / "static" / "indexnow-key.txt"
@@ -66,7 +67,7 @@ def content_path_to_url(path: Path) -> str:
 
 
 def urls_for(files: List[Path]) -> List[str]:
-    """Changed URLs, plus the section index of each changed entry.
+    """Changed URLs, plus the section index and series page of each changed entry.
 
     A new post changes two pages, not one: its own URL and the listing it
     appears on. Submitting only the post leaves the listing stale in the index
@@ -76,12 +77,18 @@ def urls_for(files: List[Path]) -> List[str]:
     for path in files:
         if not path.is_file() or is_draft(path):
             continue
-        urls.add(content_path_to_url(path))
+        url = content_path_to_url(path)
+        if is_excluded(url):
+            continue
+        urls.add(url)
 
+        prefix = f"{BASE_URL}/es" if path.name.endswith(".es.md") else BASE_URL
         section = path.parts[1] if len(path.parts) > 1 else ""
         if section in SECTIONS and not path.name.startswith("_index"):
-            prefix = f"{BASE_URL}/es" if path.name.endswith(".es.md") else BASE_URL
             urls.add(f"{prefix}/{section}/")
+        series = re.search(r'^series\s*=\s*"([^"]+)"', path.read_text(encoding="utf-8"), re.M)
+        if series:
+            urls.add(f"{prefix}/series/{series.group(1)}/")
     return sorted(urls)
 
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate JSON Feed v1.1 (/feed.json) from blog content.
+Generate JSON Feed v1.1 (/feed.json and /es/feed.json) from blog content.
 Spec: https://www.jsonfeed.org/version/1.1/
 
 Easier to parse for modern feed readers and agent tooling
@@ -16,13 +16,16 @@ from typing import List, Sequence, TypedDict
 
 from _common import (
     BASE_URL,
+    CONTENT_DIR,
     PUBLIC_DIR,
     SECTIONS,
+    TLang,
     TSection,
     entry_url,
     get_slug_from_filename,
     iter_section_files,
     read_entry,
+    read_last_modified,
     require_title,
 )
 
@@ -43,6 +46,7 @@ class TFeedItem(TypedDict, total=False):
     url: str
     title: str
     date_published: str
+    date_modified: str
     summary: str
     content_text: str
     authors: List[TAuthor]
@@ -57,14 +61,21 @@ def extract_excerpt(body: str) -> str:
     excerpt = re.sub(r'!\[.*?\]\(.*?\)', '', excerpt)
     excerpt = re.sub(r'<[^>]+>', '', excerpt)
     excerpt = re.sub(r'```[\s\S]*?```', '', excerpt)
+    # content_text is plain text in JSON Feed 1.1, so markdown syntax goes too.
+    excerpt = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', excerpt)
+    excerpt = re.sub(r'^#{1,6}\s+', '', excerpt, flags=re.M)
+    excerpt = re.sub(r'(\*\*|__|\*|`)', '', excerpt)
     excerpt = re.sub(r'\s+', ' ', excerpt).strip()
     return excerpt[:500]
 
 
-def collect_entries(sections: Sequence[TSection]) -> List[TFeedItem]:
+def collect_entries(sections: Sequence[TSection], lang: TLang) -> List[TFeedItem]:
     entries: List[TFeedItem] = []
+    modified = read_last_modified()
     for section in sections:
-        for fp in iter_section_files(section):
+        for fp in iter_section_files(section, translations=(lang == 'es')):
+            if ('.es.md' in fp.name) != (lang == 'es'):
+                continue
             fm, body = read_entry(fp)
             # A JSON Feed item must carry date_published, and read_entry has
             # already tried the filename, so a page with no date anywhere (talks,
@@ -74,7 +85,7 @@ def collect_entries(sections: Sequence[TSection]) -> List[TFeedItem]:
             if not date:
                 continue
 
-            url = entry_url(section, get_slug_from_filename(fp.name))
+            url = entry_url(section, get_slug_from_filename(fp.name), es=(lang == 'es'))
             published = datetime.strptime(date, '%Y-%m-%d').replace(tzinfo=timezone.utc)
 
             item: TFeedItem = {
@@ -82,6 +93,7 @@ def collect_entries(sections: Sequence[TSection]) -> List[TFeedItem]:
                 'url': url,
                 'title': require_title(fm, fp),
                 'date_published': published.isoformat(),
+                'date_modified': modified.get(str(fp.relative_to(CONTENT_DIR)), published.isoformat()),
                 'summary': fm.get('description', ''),
                 'content_text': extract_excerpt(body),
                 'authors': [{'name': AUTHOR_NAME, 'url': AUTHOR_URL}],
@@ -89,8 +101,9 @@ def collect_entries(sections: Sequence[TSection]) -> List[TFeedItem]:
 
             if fm.get('tags'):
                 item['tags'] = fm['tags']
-            if fm.get('thumbnail'):
-                item['image'] = f"{BASE_URL}{fm['thumbnail']}"
+            thumbnail = fm.get('thumbnail')
+            if thumbnail:
+                item['image'] = thumbnail if thumbnail.startswith('http') else f'{BASE_URL}{thumbnail}'
 
             entries.append(item)
 
@@ -98,29 +111,35 @@ def collect_entries(sections: Sequence[TSection]) -> List[TFeedItem]:
     return entries[:MAX_ITEMS]
 
 
+DESCRIPTIONS = {
+    'en': 'Software engineer sharing practical insights on software craftsmanship, TDD, leadership, Bitcoin, and AI.',
+    'es': 'Ingeniero de software que comparte ideas prácticas sobre artesanía del software, TDD, liderazgo, Bitcoin e IA.',
+}
+
+
 def main() -> None:
-    PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
+    for lang in ('en', 'es'):
+        prefix = '/es' if lang == 'es' else ''
+        items = collect_entries(SECTIONS, lang)
+        feed = {
+            'version': 'https://jsonfeed.org/version/1.1',
+            'title': 'Chemaclass',
+            'home_page_url': f'{BASE_URL}{prefix}/',
+            'feed_url': f'{BASE_URL}{prefix}/feed.json',
+            'description': DESCRIPTIONS[lang],
+            'language': lang,
+            'icon': f'{BASE_URL}/icons/icon-512.png',
+            'favicon': f'{BASE_URL}/icons/icon-64.png',
+            'authors': [{'name': AUTHOR_NAME, 'url': AUTHOR_URL}],
+            'items': items,
+        }
 
-    items = collect_entries(SECTIONS)
+        out = PUBLIC_DIR / prefix.lstrip('/') / 'feed.json'
+        out.parent.mkdir(parents=True, exist_ok=True)
+        with open(out, 'w', encoding='utf-8') as f:
+            json.dump(feed, f, ensure_ascii=False, indent=2)
 
-    feed = {
-        'version': 'https://jsonfeed.org/version/1.1',
-        'title': 'Chemaclass',
-        'home_page_url': BASE_URL,
-        'feed_url': f'{BASE_URL}/feed.json',
-        'description': 'Tech Lead sharing practical insights on software craftsmanship, TDD, leadership, Bitcoin, and AI.',
-        'language': 'en',
-        'icon': f'{BASE_URL}/icon.jpg',
-        'favicon': f'{BASE_URL}/icon.jpg',
-        'authors': [{'name': AUTHOR_NAME, 'url': AUTHOR_URL}],
-        'items': items,
-    }
-
-    out = PUBLIC_DIR / 'feed.json'
-    with open(out, 'w', encoding='utf-8') as f:
-        json.dump(feed, f, ensure_ascii=False, indent=2)
-
-    print(f'  Generated feed.json with {len(items)} items')
+        print(f'  Generated {prefix}/feed.json with {len(items)} items')
 
 
 if __name__ == '__main__':

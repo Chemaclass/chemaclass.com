@@ -6,7 +6,7 @@
   <ShortName>Chemaclass</ShortName>
   <Description>Search posts, reading notes and talks on chemaclass.com</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="64" height="64" type="image/jpeg">https://chemaclass.com/icon.jpg</Image>
+  <Image width="64" height="64" type="image/png">https://chemaclass.com/icons/icon-64.png</Image>
   <Url type="text/html" method="get" template="https://chemaclass.com/?q={searchTerms}"/>
   <moz:SearchForm xmlns:moz="http://www.mozilla.org/2006/browser/search/">https://chemaclass.com/</moz:SearchForm>
 </OpenSearchDescription>
