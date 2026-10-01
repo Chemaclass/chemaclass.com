@@ -17,9 +17,17 @@
       {%- endif -%}
     "/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    {% if last_updated is defined %}<updated>{{ last_updated | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>{% endif %}
-    <id>{{ feed_url | safe }}</id>
     {%- set modified_dates = load_data(path="data/last-modified.json", format="json", required=false) %}
+    {#- The feed changed when its newest entry did, which Zola's last_updated
+        does not know: it reads page dates, not the body-edit dates entries use. #}
+    {%- set_global feed_updated = "" %}
+    {%- if last_updated is defined %}{% set_global feed_updated = last_updated | date(format="%Y-%m-%dT%H:%M:%S%:z") %}{% endif %}
+    {%- if modified_dates %}{% for page in pages %}
+      {%- set entry_date = modified_dates[page.relative_path] | default(value="") %}
+      {%- if entry_date and entry_date > feed_updated %}{% set_global feed_updated = entry_date %}{% endif %}
+    {%- endfor %}{% endif %}
+    {% if feed_updated %}<updated>{{ feed_updated }}</updated>{% endif %}
+    <id>{{ feed_url | safe }}</id>
     {%- for page in pages %}
     {%- set_global entry_modified = false %}
     {%- if modified_dates and page.relative_path %}

@@ -12,7 +12,7 @@ from __future__ import annotations
 import re
 import subprocess
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import List, Optional
 
@@ -47,12 +47,22 @@ def newest(dates: List[str]) -> Optional[str]:
     """
     if not dates:
         return None
-    return max(dates, key=datetime.fromisoformat)
+    return max(dates, key=_instant)
+
+
+def _instant(date: str) -> datetime:
+    """Parse an ISO 8601 date as an aware datetime. Python 3.9 rejects a trailing
+    Z, and a naive value cannot be compared with git's offset dates at all."""
+    parsed = datetime.fromisoformat(date.replace("Z", "+00:00"))
+    return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
 
 
 def as_instant(date: str) -> str:
-    """A Zola date-only lastmod as a full ISO 8601 instant, so newest() can compare it."""
-    return f"{date}T00:00:00+00:00" if len(date) == 10 else date
+    """A Zola lastmod as a full ISO 8601 instant with an offset, as the sitemap
+    format wants whenever a time is given."""
+    if len(date) == 10:
+        return f"{date}T00:00:00+00:00"
+    return _instant(date).isoformat()
 
 
 def modified_date(filepath: Path) -> Optional[str]:
@@ -236,14 +246,15 @@ _TAG_DATES: Optional[dict] = None
 def listed_date(url: str, content_file: Optional[Path]) -> Optional[str]:
     """The newest date among the entries this URL lists, or None if it lists none."""
     path = url[len(BASE_URL):].strip("/") if url.startswith(BASE_URL) else ""
-    if not path:
-        # The home page is not a listing of the loose pages that sit beside its
-        # _index file (cv, legal, pgp), so it keeps its own date.
-        return None
-
     is_es = is_es_path(path)
     lang = "es" if is_es else "en"
     clean = path[3:] if is_es else path
+
+    if not clean:
+        # The home page shows the newest posts, not the loose pages beside its
+        # _index file (cv, legal, pgp), and its own file has no body to date.
+        suffix = ".es.md" if is_es else ".md"
+        return newest_entry_date(CONTENT_DIR / "blog" / f"_index{suffix}")
 
     if clean == "tags":
         return _tag_dates().get(("", lang))
@@ -368,7 +379,7 @@ def unsubmittable(url: str) -> Optional[str]:
 
 
 def enrich_sitemap(sitemap_path: str) -> int:
-    """Add <lastmod>, hreflang alternates and page images to entries missing them."""
+    """Date every entry, and add hreflang alternates and page images where missing."""
     with open(sitemap_path) as f:
         content = f.read()
 
@@ -495,14 +506,12 @@ if __name__ == "__main__":
 
     total = 0
     for sitemap in sitemaps:
-        added = enrich_sitemap(str(sitemap))
-        total += added
-        print(f"  {sitemap}: added {added} <lastmod> entries")
-    print(f"  Total: {total} entries enriched")
+        dated = enrich_sitemap(str(sitemap))
+        total += dated
+        print(f"  {sitemap}: dated {dated} entries")
+    print(f"  Total: {total} entries dated")
 
-    # No canary on a zero total here, deliberately. This script is idempotent: it
-    # only touches <url> blocks that have no <lastmod> yet, so a second run over an
-    # already-enriched sitemap correctly adds nothing. That is indistinguishable
-    # from url_to_content_paths breaking, and failing on it would break the build
-    # for anyone who ran the script twice. The systematic failures are caught in
-    # get_git_date instead, where they can be named precisely.
+    # No canary on the total here. Every entry gets its <lastmod> rewritten on each
+    # run, so a second run gives the same file; a resolution rule that stops
+    # matching shows up as the named list of dateless URLs above, and git failing
+    # stops in get_git_date, where the cause can be named precisely.
