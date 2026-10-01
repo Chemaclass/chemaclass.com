@@ -19,7 +19,7 @@
 <section class="post-faq" aria-labelledby="post-faq-title">
   <h2 class="post-faq__title" id="post-faq-title">{{ trans(key="faq_title", lang=lang) }}</h2>
   {% for item in page.extra.faq %}
-  <details class="post-faq__item">
+  <details class="post-faq__item" name="post-faq">
     <summary class="post-faq__question">{{ item.q }}</summary>
     <div class="post-faq__answer">{{ item.a }}</div>
   </details>
