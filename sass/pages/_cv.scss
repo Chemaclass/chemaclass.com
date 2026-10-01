@@ -486,6 +486,15 @@ a.cv-project {
   text-decoration: none;
   color: inherit;
   display: block;
+  transition: border-color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: inherit;
+    border-color: var(--accent-color);
+
+    h3 { color: var(--accent-color); }
+  }
 }
 
 .cv-project {

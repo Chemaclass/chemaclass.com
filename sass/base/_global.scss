@@ -20,7 +20,9 @@ img {
   // picture is squashed.
   height: auto;
   margin: auto;
-  border: solid rgba(0, 0, 0, 0.04);
+  // An outline, not a border: a border takes space inside fixed-size crops and shows as a frame.
+  outline: 1px solid rgba(0, 0, 0, 0.04);
+  outline-offset: -1px;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -399,9 +399,62 @@
 
 .blog-browse-more {
   margin: 0 0 2rem;
-  padding: 0.75rem 0;
-  border-block: 1px solid var(--preview-divider-color);
-  summary { cursor: pointer; padding: 0.5rem 0; color: var(--heading-color); }
-  summary:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 4px; }
-  .blog-browse__row { margin-top: 1rem; }
+  border: 1px solid var(--preview-divider-color);
+  border-radius: 12px;
+  background: var(--search-input-bg);
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--accent-color);
+  }
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1.15rem;
+    border-radius: 12px;
+    color: var(--heading-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "\25be";
+      font-size: 1.1rem;
+      line-height: 1;
+      color: var(--accent-color);
+      transition: transform 0.2s var(--ease-out-expo);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+  }
+
+  &[open] summary::after {
+    transform: rotate(180deg);
+  }
+
+  .blog-browse__row,
+  .year-nav {
+    margin: 0;
+    padding: 0 1.15rem 1rem;
+  }
+
+  .year-nav {
+    gap: 0.45rem 0.75rem;
+  }
+
+  .year-nav__label {
+    min-width: 8rem;
+    font-size: 0.8rem;
+  }
 }
