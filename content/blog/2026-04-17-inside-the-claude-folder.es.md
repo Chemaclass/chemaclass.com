@@ -206,6 +206,10 @@ El orden, guiado por fricción real:
 
 Cada paso soluciona un problema que realmente tuviste. No uno que imaginaste.
 
+¿Carpeta vacía? Deja que el agente la empiece. `/init` redacta un `CLAUDE.md` a partir de tu repo. Luego pregunta: _"¿Qué convenciones repito en este código? Propón rules y skills para ellas."_
+
+¿Ya tienes una? Pide al agente que la audite: _"Revisa `.claude/` contra la documentación actual de Claude Code. ¿Qué está desactualizado, sin usar o mal?"_ Las herramientas cambian rápido, y tu setup envejece con ellas. Así se actualizó este post por última vez.
+
 Commitea la carpeta. Compártela. Cuando alguien se una, su sesión hereda todo.
 
 ## Una spec para equipos con más de una herramienta de IA
