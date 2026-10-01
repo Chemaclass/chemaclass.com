@@ -206,6 +206,10 @@ The order, driven by real friction:
 
 Each step fixes a problem you actually had. Not one you imagined.
 
+Empty folder? Let the agent start it. `/init` drafts a `CLAUDE.md` from your repo. Then ask: _"Which conventions do I repeat in this codebase? Propose rules and skills for them."_
+
+Already have one? Ask the agent to audit it: _"Check `.claude/` against the current Claude Code docs. What is stale, unused, or wrong?"_ Tools change fast, and your setup ages with them. That's how this post got its last update.
+
 Commit the folder. Share it. When someone joins, their session inherits everything.
 
 ## One spec for teams with more than one AI tool
