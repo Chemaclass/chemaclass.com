@@ -25,12 +25,18 @@ from _common import (
     extract_frontmatter,
     get_slug_from_filename,
     is_draft,
+    is_excluded,
     iter_section_files,
+    read_last_modified,
 )
 
 # One `git log` per file, not per lookup: the listing dates below ask for the same
 # entry once as its own URL and again for every tag page and index that lists it.
 _GIT_DATES: dict = {}
+
+# The same body-edit dates the page schema publishes as dateModified, so the
+# sitemap and the page never disagree about when an entry last changed.
+_LAST_MODIFIED = read_last_modified()
 
 
 def newest(dates: List[str]) -> Optional[str]:
@@ -42,6 +48,24 @@ def newest(dates: List[str]) -> Optional[str]:
     if not dates:
         return None
     return max(dates, key=datetime.fromisoformat)
+
+
+def as_instant(date: str) -> str:
+    """A Zola date-only lastmod as a full ISO 8601 instant, so newest() can compare it."""
+    return f"{date}T00:00:00+00:00" if len(date) == 10 else date
+
+
+def modified_date(filepath: Path) -> Optional[str]:
+    """When a content file last changed in substance, or its last commit as a fallback.
+
+    A raw commit date counts front-matter sweeps and punctuation fixes as updates,
+    which is the noise generate-last-modified.py exists to filter out.
+    """
+    try:
+        key = str(filepath.relative_to(CONTENT_DIR))
+    except ValueError:
+        key = ""
+    return _LAST_MODIFIED.get(key) or get_git_date(filepath)
 
 
 def lang_of(filepath: Path) -> str:
@@ -163,7 +187,7 @@ def newest_entry_date(index_file: Path) -> Optional[str]:
     for path in index_file.parent.glob("*.md"):
         if path.name.startswith("_index") or lang_of(path) != lang or is_draft(path):
             continue
-        date = get_git_date(path)
+        date = modified_date(path)
         if date:
             dates.append(date)
     return newest(dates)
@@ -196,7 +220,7 @@ def _tag_dates() -> dict:
         tags = extract_frontmatter(path.read_text(encoding="utf-8")).get("tags", [])
         if not tags:
             continue
-        date = get_git_date(path)
+        date = modified_date(path)
         if not date:
             continue
         lang = lang_of(path)
@@ -237,7 +261,7 @@ def lastmod_for(url: str, content_file: Optional[Path]) -> Optional[str]:
     so rewriting the intro on a section whose last post is old still shows up.
     """
     dates = []
-    own = get_git_date(content_file) if content_file else None
+    own = modified_date(content_file) if content_file else None
     if own:
         dates.append(own)
     listed = listed_date(url, content_file)
@@ -248,41 +272,6 @@ def lastmod_for(url: str, content_file: Optional[Path]) -> Optional[str]:
 
 XHTML_NS = "http://www.w3.org/1999/xhtml"
 IMAGE_NS = "http://www.google.com/schemas/sitemap-image/1.1"
-
-
-def _excluded_paths() -> List[str]:
-    """`sitemap_exclude` from config.toml: pages to omit though they are indexable.
-
-    Kept in config rather than here because it is an editorial decision about
-    which pages are worth a crawler's time, not a fact about how the site is
-    built. Parsed with a regex for the same reason _common reads base_url that
-    way: this whole chain is stdlib-only, and tomllib is 3.11+.
-    """
-    text = (Path(__file__).resolve().parent.parent / "config.toml").read_text(encoding="utf-8")
-    block = re.search(r"^sitemap_exclude\s*=\s*\[(.*?)\]", text, re.S | re.M)
-    return re.findall(r'"([^"]*)"', block.group(1)) if block else []
-
-
-EXCLUDED = _excluded_paths()
-
-
-def is_excluded(url: str) -> bool:
-    """Whether config asked for this URL to stay out, in either language.
-
-    A trailing * means the descendants of a path but not the path itself, which
-    is how the OEUR chapters come out while the book they belong to stays in.
-    """
-    path = url[len(BASE_URL):] if url.startswith(BASE_URL) else url
-    if path.startswith("/es/"):
-        path = path[3:]
-    for rule in EXCLUDED:
-        if rule.endswith("*"):
-            prefix = rule[:-1]
-            if path.startswith(prefix) and path != prefix:
-                return True
-        elif path == rule:
-            return True
-    return False
 
 
 def page_image(content_file: Path) -> Optional[str]:
@@ -359,7 +348,9 @@ def unsubmittable(url: str) -> Optional[str]:
     if not page.is_file():
         return None
     # Every one of these markers sits in the head, and these files run up to 400KB.
-    head = page.read_text(encoding="utf-8", errors="ignore")[:8000]
+    text = page.read_text(encoding="utf-8", errors="ignore")
+    end = text.find("</head>")
+    head = text[:end] if end != -1 else text
 
     robots = re.search(r'<meta[^>]+name=["\']?robots["\']?[^>]*>', head, re.I)
     if robots and "noindex" in robots.group(0).lower():
@@ -417,12 +408,22 @@ def enrich_sitemap(sitemap_path: str) -> int:
 
         content_file = find_content_file(loc.group(1))
 
+        # Zola writes page.updated or page.date, which for an entry is its
+        # publication day. The later of that and the body-edit date wins.
+        dates = []
+        zola = re.search(r"<lastmod>(.*?)</lastmod>", block)
+        if zola:
+            dates.append(as_instant(zola.group(1)))
+            block = re.sub(r"\s*<lastmod>.*?</lastmod>", "", block)
+        own = lastmod_for(loc.group(1), content_file)
+        if own:
+            dates.append(own)
+        lastmod = newest(dates)
+        if lastmod:
+            block = block.replace("</loc>", f"</loc>\n    <lastmod>{lastmod}</lastmod>", 1)
+            count += 1
+
         addition = ""
-        if "<lastmod>" not in block:
-            lastmod = lastmod_for(loc.group(1), content_file)
-            if lastmod:
-                addition += f"\n    <lastmod>{lastmod}</lastmod>"
-                count += 1
 
         if "xhtml:link" not in block:
             addition += hreflang_links(loc.group(1), known_urls)
@@ -439,7 +440,9 @@ def enrich_sitemap(sitemap_path: str) -> int:
         if not addition:
             return block
 
-        return block.replace("</loc>", f"</loc>{addition}")
+        # The sitemap schema orders loc, lastmod, then elements from other
+        # namespaces, so the alternates and images go last.
+        return block.replace("</url>", f"{addition}\n  </url>")
 
     enriched = re.sub(r"<url>.*?</url>", enrich_url, content, flags=re.DOTALL)
 

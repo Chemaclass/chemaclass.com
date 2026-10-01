@@ -31,10 +31,10 @@ from _common import (
     get_slug_from_filename,
     iter_section_files,
     read_entry,
+    read_last_modified,
     require_title,
 )
 
-LAST_MODIFIED = PROJECT_ROOT / 'data' / 'last-modified.json'
 WORD = re.compile(r'\w+', re.UNICODE)
 
 
@@ -54,17 +54,6 @@ class TIndexEntry(TypedDict, total=False):
     series_order: int
     word_count: int
 
-
-def read_modified() -> Dict[str, str]:
-    """The body-edit dates written by generate-last-modified.py, if they are there.
-
-    Optional rather than required: this file is a build artifact, and a caller
-    running the generators by hand in a different order should still get an index,
-    just without the modified dates.
-    """
-    if not LAST_MODIFIED.is_file():
-        return {}
-    return json.loads(LAST_MODIFIED.read_text(encoding='utf-8'))
 
 
 def extra_field(source: str, key: str) -> str:
@@ -119,7 +108,7 @@ def build_entries(modified: Dict[str, str]) -> List[TIndexEntry]:
 
 
 def main() -> None:
-    entries = build_entries(read_modified())
+    entries = build_entries(read_last_modified())
     counts: Dict[str, int] = {}
     for entry in entries:
         counts[entry['section']] = counts.get(entry['section'], 0) + 1

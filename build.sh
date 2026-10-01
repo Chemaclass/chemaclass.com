@@ -133,6 +133,9 @@ python3 scripts/count-talks-given.py
 echo "Building site..."
 zola build "$@"
 
+echo "Stamping the last content update into humans.txt and ai.txt..."
+python3 scripts/stamp-site-dates.py
+
 echo "Adding canonical targets to redirect pages..."
 python3 scripts/enrich-redirects.py
 

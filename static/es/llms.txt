@@ -1,6 +1,6 @@
 # Chemaclass
 
-> Sitio personal de Jose Maria Valera Reales (Chemaclass). Tech Lead, ingeniero de software y contribuidor open source que comparte ideas prácticas sobre artesanía del software, TDD, liderazgo, Bitcoin e IA.
+> Sitio personal de Jose Maria Valera Reales (Chemaclass). Ingeniero de software y contribuidor open source que comparte ideas prácticas sobre artesanía del software, TDD, liderazgo, Bitcoin e IA.
 
 ## Sobre
 
@@ -26,32 +26,31 @@ Grupos de artículos elegidos a mano. Cada artículo se sostiene por sí solo, y
 
 ## Temas
 
-- Liderazgo y Personas: Crecer como líder, construir equipos y el lado humano del software
-- Mente y Conocimiento: Filosofía, psicología, productividad y la búsqueda del entendimiento
-- Artesanía del Software y Testing: TDD, código limpio, refactoring y prácticas de diseño
-- Bitcoin y Economía: Dinero sólido, economía austriaca, privacidad y tecnología Bitcoin
-- Lenguajes y Herramientas: PHP, Bash, Lisp, Symfony, Docker, Git
-- Charlas y Enseñanza: Charlas, talleres, live coding
+- [Liderazgo y Personas](https://chemaclass.com/es/topics/#leadership-people): Crecer como líder, construir equipos y el lado humano del software
+- [Mente y Conocimiento](https://chemaclass.com/es/topics/#mind-knowledge): Filosofía, psicología, productividad y la búsqueda del entendimiento
+- [Artesanía del Software y Testing](https://chemaclass.com/es/topics/#software-craft-testing): TDD, código limpio, refactoring y prácticas de diseño
+- [Bitcoin y Economía](https://chemaclass.com/es/topics/#bitcoin-economics): Dinero sólido, economía austriaca, privacidad y tecnología Bitcoin
+- [Lenguajes y Herramientas](https://chemaclass.com/es/topics/#programming-languages-tools): PHP, Bash, Lisp, Symfony, Docker, Git
+- [IA y Agentes](https://chemaclass.com/es/topics/#ai-agents): Trabajar con agentes de IA, agentic coding y lo que las herramientas cambian del oficio
+- [Charlas y Enseñanza](https://chemaclass.com/es/topics/#speaking-teaching): Charlas, talleres, live coding
 
 ## Open Source
 
-- [bashunit](https://bashunit.com/): Framework de testing para scripts Bash
 - [Phel](https://phel-lang.org): Un Lisp que compila a PHP
+- [bashunit](https://bashunit.com/): Framework de testing para scripts Bash
+- [agnostic-ai](https://agnostic-ai.org/): Una spec para agentes, skills, rules y hooks de IA, sincronizada con los archivos nativos que lee cada herramienta de IA
 
 ## Feeds
 
-- Atom (EN): https://chemaclass.com/atom.xml
-- Atom (ES): https://chemaclass.com/es/atom.xml
-- JSON Feed: https://chemaclass.com/feed.json
-- Sitemap: https://chemaclass.com/sitemap.xml
-- Contenido completo (para agentes IA): https://chemaclass.com/llms-full.txt
-- Política de uso IA: https://chemaclass.com/ai.txt
-
-- Licencia: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Cita libremente, nombrando la fuente.
-
-- Índice legible por máquina de todo el contenido: https://chemaclass.com/index.json
-
-- Búsqueda del sitio (OpenSearch): https://chemaclass.com/opensearch.xml
+- [Atom (EN)](https://chemaclass.com/atom.xml): Cada artículo y nota de lectura nuevos, en inglés
+- [Atom (ES)](https://chemaclass.com/es/atom.xml): Cada artículo y nota de lectura nuevos, en español
+- [JSON Feed (EN)](https://chemaclass.com/feed.json): Las mismas entradas en inglés, en JSON Feed 1.1
+- [JSON Feed (ES)](https://chemaclass.com/es/feed.json): Las mismas entradas en español, en JSON Feed 1.1
+- [Sitemap](https://chemaclass.com/sitemap.xml): Cada página indexable en los dos idiomas
+- [Contenido completo](https://chemaclass.com/llms-full.txt): Todo el contenido en un solo archivo de texto, para agentes de IA
+- [Índice de contenido](https://chemaclass.com/index.json): Índice legible por máquina de cada entrada, con fechas y número de palabras
+- [Política de uso IA](https://chemaclass.com/ai.txt): Se permite recuperar, citar y entrenar bajo CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); nombra la fuente
+- [Búsqueda del sitio](https://chemaclass.com/opensearch.xml): Descripción OpenSearch
 
 ## Content index
 

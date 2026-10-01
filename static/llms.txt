@@ -1,6 +1,6 @@
 # Chemaclass
 
-> Personal website of Jose Maria Valera Reales (Chemaclass). Tech Lead, software engineer, and open source contributor sharing practical insights on software craftsmanship, TDD, leadership, Bitcoin, and AI.
+> Personal website of Jose Maria Valera Reales (Chemaclass). Software engineer and open source contributor sharing practical insights on software craftsmanship, TDD, leadership, Bitcoin, and AI.
 
 ## About
 
@@ -26,32 +26,31 @@ Curated groups of posts. Each post stands on its own, and the order below is the
 
 ## Topics
 
-- Leadership & People: Growing as a leader, building great teams, and the human side of software
-- Mind & Knowledge: Philosophy, psychology, productivity, and the pursuit of understanding
-- Software Craft & Testing: TDD, clean code, refactoring, and design practices
-- Bitcoin & Economics: Sound money, Austrian economics, privacy, and Bitcoin technology
-- Programming Languages & Tools: PHP, Bash, Lisp, Symfony, Docker, Git
-- Speaking & Teaching: Conference talks, workshops, live coding
+- [Leadership & People](https://chemaclass.com/topics/#leadership-people): Growing as a leader, building great teams, and the human side of software
+- [Mind & Knowledge](https://chemaclass.com/topics/#mind-knowledge): Philosophy, psychology, productivity, and the pursuit of understanding
+- [Software Craft & Testing](https://chemaclass.com/topics/#software-craft-testing): TDD, clean code, refactoring, and design practices
+- [Bitcoin & Economics](https://chemaclass.com/topics/#bitcoin-economics): Sound money, Austrian economics, privacy, and Bitcoin technology
+- [Programming Languages & Tools](https://chemaclass.com/topics/#programming-languages-tools): PHP, Bash, Lisp, Symfony, Docker, Git
+- [AI & Agents](https://chemaclass.com/topics/#ai-agents): Working with AI agents, agentic coding, and what the tooling changes about the craft
+- [Speaking & Teaching](https://chemaclass.com/topics/#speaking-teaching): Conference talks, workshops, live coding
 
 ## Open Source
 
-- [bashunit](https://bashunit.com/): Testing framework for Bash scripts
 - [Phel](https://phel-lang.org): A Lisp that compiles to PHP
+- [bashunit](https://bashunit.com/): Testing framework for Bash scripts
+- [agnostic-ai](https://agnostic-ai.org/): One spec for AI agents, skills, rules, and hooks, synced to the native files every AI coding tool reads
 
 ## Feeds
 
-- Atom (EN): https://chemaclass.com/atom.xml
-- Atom (ES): https://chemaclass.com/es/atom.xml
-- JSON Feed: https://chemaclass.com/feed.json
-- Sitemap: https://chemaclass.com/sitemap.xml
-- Full content (for AI agents): https://chemaclass.com/llms-full.txt
-- AI use policy: https://chemaclass.com/ai.txt
-
-- License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Quote freely, cite the source.
-
-- Machine-readable index of everything: https://chemaclass.com/index.json
-
-- Site search (OpenSearch): https://chemaclass.com/opensearch.xml
+- [Atom (EN)](https://chemaclass.com/atom.xml): Every new post and reading note in English
+- [Atom (ES)](https://chemaclass.com/es/atom.xml): Every new post and reading note in Spanish
+- [JSON Feed (EN)](https://chemaclass.com/feed.json): The same English entries as JSON Feed 1.1
+- [JSON Feed (ES)](https://chemaclass.com/es/feed.json): The same Spanish entries as JSON Feed 1.1
+- [Sitemap](https://chemaclass.com/sitemap.xml): Every indexable page in both languages
+- [Full content](https://chemaclass.com/llms-full.txt): The whole corpus as one text file, for AI agents
+- [Content index](https://chemaclass.com/index.json): Machine-readable index of every entry, with dates and word counts
+- [AI use policy](https://chemaclass.com/ai.txt): Retrieval, citation and training are permitted under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); name the source
+- [Site search](https://chemaclass.com/opensearch.xml): OpenSearch description
 
 ## Content index
 
