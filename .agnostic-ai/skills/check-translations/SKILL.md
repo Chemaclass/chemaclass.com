@@ -17,7 +17,7 @@ Find content files that are missing their Spanish (`.es.md`) counterpart.
    - `content/blog/`
    - `content/readings/`
    - `content/talks/`
-2. If `$ARGUMENTS` names a directory (e.g. "blog"), only check that one.
+2. If the request names a directory (e.g. "blog"), only check that one.
 3. For each English file, check if a colocated `.es.md` version exists.
 
 ## Output format
@@ -26,5 +26,7 @@ Find content files that are missing their Spanish (`.es.md`) counterpart.
 - List of files missing translations (most recent first)
 - Overall translation coverage percentage
 
+::target claude
 ## Target
 $ARGUMENTS
+::end

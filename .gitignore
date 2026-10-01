@@ -24,9 +24,11 @@ static/slides/*/slides.pdf
 /.claude/agent-memory-local/
 /.claude/agents/
 /.claude/rules/
+/.claude/scheduled_tasks.lock
 /.claude/settings.json
 /.claude/settings.local.json
 /.claude/skills/
+/.claude/worktrees/
 /.codex/agents/
 /.codex/hooks.json
 /AGENTS.md
