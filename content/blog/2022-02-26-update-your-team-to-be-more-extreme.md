@@ -114,7 +114,7 @@ You can help your team to be more extreme by helping with a dedicated team space
 
 > Do not micromanage this dedicated time. Focus on the outcome. Help your team to grow, and they will enjoy growing with you.
 
-![blog-footer](/images/blog/2022-02-26/footer.webp)
+![A stone-paved riverside path with benches and a railing, winding ahead](/images/blog/2022-02-26/footer.webp)
 
 ## Tech Talk
 

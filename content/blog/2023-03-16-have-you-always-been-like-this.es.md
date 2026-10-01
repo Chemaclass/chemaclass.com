@@ -71,7 +71,7 @@ Por eso disfruto leer (o escuchar) un libro al mes. Por eso disfruto aprender en
 
 Hace unos años escribí sobre [el proceso en sí mismo como objetivo](/es/blog/the-process-itself-is-the-goal/): "_La repetición es la clave. Facilita hacer lo que quieres hacer. Dificulta hacer lo que quieres dejar de hacer. Disfruta el proceso: ese es el objetivo._"
 
-![blog-middle](/images/blog/2023-03-16/middle.webp)
+![Un hombre sonriente con chaqueta acolchada delante de una poza y una pequeña cascada](/images/blog/2023-03-16/middle.webp)
 
 ## ¿Cuánto tiempo tengo?
 
@@ -91,4 +91,4 @@ No espero que las cosas cambien de un día para otro. Disfruto experimentando, c
 
 Lo que me mantiene en movimiento es <u>el tiempo que me queda</u> y pensar: "**¿Qué me habría gustado haber cambiado?**" Y si es así, "**¿Por qué no lo hice?**"
 
-![blog-footer](/images/blog/2023-03-16/footer.webp)
+![Una garganta rocosa con una poza verde y tranquila y un pequeño puente de madera en lo alto](/images/blog/2023-03-16/footer.webp)

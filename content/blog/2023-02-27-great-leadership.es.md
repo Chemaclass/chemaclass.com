@@ -112,7 +112,7 @@ En comunicación, necesitas buenas habilidades de persuasión para convencer a o
 > "La negociación comienza con escuchar, haciendo que se trate de las otras personas, validando sus emociones y creando suficiente confianza y seguridad para que una conversación real pueda comenzar." - Never split the difference
 
 
-![blog-middle](/images/blog/2023-02-27/middle.webp)
+![Bancos de madera curvos en una ladera de hierba alrededor de un pabellón circular de cristal en un parque](/images/blog/2023-02-27/middle.webp)
 
 ---
 
@@ -162,7 +162,7 @@ Los puntos esenciales a recordar:
 
 Tu responsabilidad principal es ayudar a otros a mejorar. Y eso solo es posible si **abrazas el cambio** y **empiezas contigo mismo**.
 
-![blog-footer](/images/blog/2023-02-27/footer.webp)
+![Un pabellón circular de cristal con tejado verde frente a un pequeño anfiteatro al aire libre con bancos](/images/blog/2023-02-27/footer.webp)
 
 ### Todos los autores mencionados
 

@@ -50,7 +50,7 @@ But still, despite your effort to create a trustable and safe environment, you m
 
 The key here is to find a way to connect with people by understanding how they understand their potential so you can empower them and help them grow.
 
-![middle](/images/blog/2023-08-02/middle.webp)
+![A speaker on a big stage in front of a slide showing the Agile Manifesto](/images/blog/2023-08-02/middle.webp)
 
 ### Grant time for reading
 

@@ -140,4 +140,4 @@ Las dos instalaciones son globales, y las haces una sola vez. A partir de ahí s
 
 > No mejoraste el modelo. Dejaste de malgastar su [atención](/es/readings/digital-minimalism/).
 
-![blog-footer](/images/blog/2026-06-26/footer.webp)
+![Un tronco cortado cubierto de hiedra junto a un lago, rodeado de árboles verdes](/images/blog/2026-06-26/footer.webp)

@@ -72,7 +72,7 @@ Antes de empezar, vas a necesitar las siguientes cosas:
 - Tarjeta de memoria SD (32/64gb) _(~10€)_
 - Adaptador de tarjeta SD a USB (para flashear el SO en la raspi) _(~10€)_
 
-![tutorial](/images/blog/2025-02-17/requirements.webp)
+![Raspberry Pi en su carcasa negra junto a su cable de alimentación USB-C, una tarjeta microSD de 64GB y un lector de tarjetas](/images/blog/2025-02-17/requirements.webp)
 
 ### Pasos de instalación
 
@@ -81,49 +81,49 @@ Antes de empezar, vas a necesitar las siguientes cosas:
 > Sugerencia: Puedes usar [RPI imager](https://www.raspberrypi.com/software/) en tu ordenador.
 Úsalo para flashear el SO raspi recomendado para ti
 
-![tutorial](/images/blog/2025-02-17/tuto-1.webp)
+![Raspberry Pi Imager con Raspberry Pi 4, Raspberry Pi OS (64-bit) y la tarjeta SD seleccionados](/images/blog/2025-02-17/tuto-1.webp)
 
 En Storage verás tu tarjeta SD después de insertarla en tu portátil.
 
-![tutorial](/images/blog/2025-02-17/tuto-2.webp)
+![Lista de almacenamiento de Raspberry Pi Imager con la tarjeta SD insertada, 63.3 GB](/images/blog/2025-02-17/tuto-2.webp)
 
 Una vez hagas clic en "Next", verás diferentes ajustes. Haz clic en **Edit Settings**
 
-![tutorial](/images/blog/2025-02-17/tuto-3.webp)
+![Raspberry Pi Imager preguntando si aplicar los ajustes de personalización del sistema, con el botón Edit Settings](/images/blog/2025-02-17/tuto-3.webp)
 
 En `Settings > General`: establece tu hostname, el nombre de usuario y contraseña para tu usuario admin.
 Asegúrate de habilitar tu WIFI, de lo contrario tendrás que conectarla al router con un RJ-45.
 <span id="hostname-setup"></span>
 > Para este tutorial, estoy usando `testhub` como hostname, puedes usar `albyhub` o lo que prefieras.
 
-![tutorial](/images/blog/2025-02-17/tuto-4.webp)
+![OS Customisation, pestaña General: hostname testhub, usuario, contraseña y red WiFi](/images/blog/2025-02-17/tuto-4.webp)
 
 <span id="pi-enable-ssh"></span>
 En `Settings > Services`: asegúrate de que el acceso vía SSH está habilitado. Lo vamos a necesitar para instalar Alby Hub.
 
-![tutorial](/images/blog/2025-02-17/tuto-5.webp)
+![OS Customisation, pestaña Services: Enable SSH con autenticación por contraseña](/images/blog/2025-02-17/tuto-5.webp)
 
 Haz clic en "Save" y haz clic en "Yes" para iniciar la instalación.
 
-![tutorial](/images/blog/2025-02-17/tuto-6.webp)
+![Raspberry Pi Imager avisando de que se borrarán todos los datos de la tarjeta SD](/images/blog/2025-02-17/tuto-6.webp)
 
 Verás una confirmación. Haz clic en "Yes". Tardará ~10 mins...
 
-![tutorial](/images/blog/2025-02-17/tuto-7.webp)
+![Aviso de macOS pidiendo Touch ID o contraseña mientras Raspberry Pi Imager empieza a escribir](/images/blog/2025-02-17/tuto-7.webp)
 
 ¡Ahora tenemos la SD con un kernel linux fresco listo para usar!
 
-![tutorial](/images/blog/2025-02-17/tuto-8.webp)
+![Mensaje Write Successful: Raspberry Pi OS ya está en la tarjeta SD y se puede extraer](/images/blog/2025-02-17/tuto-8.webp)
 
 #### 2. Insertar la SD en la raspi
 
 Extrae la SD del portátil e insértala en la raspi primero.
 
-![tutorial](/images/blog/2025-02-17/tuto-9.webp)
+![Mano insertando la tarjeta microSD en la ranura de la carcasa de la Raspberry Pi](/images/blog/2025-02-17/tuto-9.webp)
 
 Una vez insertada la SD, conecta el cable de alimentación. Se encenderá automáticamente en cuanto la conectes.
 
-![tutorial](/images/blog/2025-02-17/tuto-10.webp)
+![Raspberry Pi encendida con el cable de alimentación conectado y los LEDs rojo y verde iluminados](/images/blog/2025-02-17/tuto-10.webp)
 
 #### 3. Instalación de Alby Hub
 
@@ -134,7 +134,7 @@ ping testhub.local
 
 Es normal si no obtienes respuesta al principio... hasta que la obtienes.
 
-![tutorial](/images/blog/2025-02-17/tuto-11.webp)
+![Salida del terminal con ping a testhub.local respondiendo, así que la Raspberry Pi es accesible](/images/blog/2025-02-17/tuto-11.webp)
 
 <span id="pi-install-alby-hub"></span>
 Ahora puedes **instalar Alby Hub** en tu raspi **usando la conexión SSH** que [habilitaste antes](/es/blog/run-your-ln-node/#pi-enable-ssh):
@@ -146,17 +146,17 @@ ssh testhub@testhub.local '/bin/bash -c "$(curl -fsSL https://getalby.com/instal
 
 Se te pedirá que escribas la palabra "yes"; escríbela.
 
-![tutorial](/images/blog/2025-02-17/tuto-12.webp)
+![Terminal ejecutando el script de instalación de Alby Hub por SSH y pidiendo confirmar la huella del host](/images/blog/2025-02-17/tuto-12.webp)
 
 Luego, se te pedirá que introduzcas tu contraseña. Introduce la contraseña que elegiste en [Settings > General](/es/blog/run-your-ln-node/#hostname-setup) para el nombre de usuario.
 
-![tutorial](/images/blog/2025-02-17/tuto-13.webp)
+![Salida del terminal que termina con Installation finished y la URL http://testhub.local](/images/blog/2025-02-17/tuto-13.webp)
 
 #### 4. Configuración de Alby Hub
 
 Espera otros 2-3 mins y visita tu host: `http://testhub.local/`
 
-![tutorial](/images/blog/2025-02-17/tuto-14.webp)
+![Pantalla de bienvenida de Alby Hub servida desde testhub.local en el navegador](/images/blog/2025-02-17/tuto-14.webp)
 
 Tu Alby hub ya está funcionando. ¡Vamos a conectarlo a tu cuenta GetAlby!
 
@@ -165,7 +165,7 @@ Tu Alby hub ya está funcionando. ¡Vamos a conectarlo a tu cuenta GetAlby!
 ## Crear una cuenta GetAlby
 🔗 [getalby.com](https://getalby.com/)
 
-![tutorial](/images/blog/2025-02-17/tuto-15.webp)
+![Formulario de registro de GetAlby pidiendo nombre y email](/images/blog/2025-02-17/tuto-15.webp)
 
 ---
 
@@ -174,56 +174,56 @@ Creé una cuenta llamada testhub.
 
 **Izquierda**: la cuenta GetAlby. **Derecha**: el nodo en la raspi.
 
-![tutorial](/images/blog/2025-02-17/tuto-16.webp)
+![Panel de GetAlby con 0 sats a la izquierda y la pantalla de bienvenida de Alby Hub a la derecha](/images/blog/2025-02-17/tuto-16.webp)
 
 Haz clic en "**Connect Now**".
 
-![tutorial](/images/blog/2025-02-17/tuto-17.webp)
+![Paso de Alby Hub Connect Your Alby Account, con la lista de ventajas y el botón Connect now](/images/blog/2025-02-17/tuto-17.webp)
 
 Haz clic en "**Request Authorization Code**".
 
-![tutorial](/images/blog/2025-02-17/tuto-18.webp)
+![Paso de Alby Hub con el botón Request Authorization Code](/images/blog/2025-02-17/tuto-18.webp)
 
 Obtienes el código de autorización (**izquierda**) que necesitas insertar en tu configuración (**derecha**).
 
-![tutorial](/images/blog/2025-02-17/tuto-19.webp)
+![Página de GetAlby con el código de autorización, junto al campo de Alby Hub donde se pega](/images/blog/2025-02-17/tuto-19.webp)
 
 <span id="alby-hub-password"></span>
 Crea una **Contraseña** para tu Alby Hub instalado en tu raspi. Puede ser diferente de la contraseña que configuraste para tu usuario root en la raspi misma.
 
-![tutorial](/images/blog/2025-02-17/tuto-20.webp)
+![Pantalla Create Password de Alby Hub con dos campos de contraseña y dos casillas de confirmación](/images/blog/2025-02-17/tuto-20.webp)
 
-![tutorial](/images/blog/2025-02-17/tuto-21.webp)
+![Alby Hub mostrando Setting up your Hub mientras arranca el nodo](/images/blog/2025-02-17/tuto-21.webp)
 
-![tutorial](/images/blog/2025-02-17/tuto-22.webp)
+![Página de inicio de Alby Hub con los cinco pasos iniciales, empezando por Open your first channel](/images/blog/2025-02-17/tuto-22.webp)
 
 Ahora es momento de **Vincular tu Cuenta Alby**
 
-![tutorial](/images/blog/2025-02-17/tuto-23.webp)
+![Página Link Alby Account to Wallet de GetAlby junto a la página Connections de Alby Hub](/images/blog/2025-02-17/tuto-23.webp)
 
 A menos que especifiques lo contrario, establece el "Budget renewal: _Monthly 1M sats_" por defecto.
 
-![tutorial](/images/blog/2025-02-17/tuto-24.webp)
-![tutorial](/images/blog/2025-02-17/tuto-25.webp)
+![Diálogo Link to Alby Account de Alby Hub con renovación mensual y 1M sats de presupuesto seleccionados](/images/blog/2025-02-17/tuto-24.webp)
+![Alby Hub mostrando Alby Account Linked con un presupuesto de 1.000.000 sats, y GetAlby con la wallet enlazada](/images/blog/2025-02-17/tuto-25.webp)
 
 ---
 
 ## Abriendo canales Lightning
 Recomiendo seguir los **Pasos Iniciales** para configurar tu Alby Hub.
 
-![tutorial](/images/blog/2025-02-17/tuto-27.webp)
+![Página de inicio de Alby Hub con el paso Link to your Alby Account hecho y Open your first channel pendiente](/images/blog/2025-02-17/tuto-27.webp)
 
 Abramos el primer canal.
 
-![tutorial](/images/blog/2025-02-17/tuto-28.webp)
+![Página Open Your First Channel con el botón Open Channel](/images/blog/2025-02-17/tuto-28.webp)
 
 Necesitas pagar ~$20 en sats para abrir un canal de _**liquidez entrante**_ de 1M sats.
 
-![tutorial](/images/blog/2025-02-17/tuto-29.webp)
+![Código QR de la factura Lightning de 19.897 sats (unos 19 USD) para pagar un canal con 1M sats de liquidez entrante](/images/blog/2025-02-17/tuto-29.webp)
 
 Después del pago, verás el canal abierto. Puede tardar un par de minutos hasta que la **_transacción de financiación_** sea minada en el siguiente bloque.
 
-![tutorial](/images/blog/2025-02-17/tuto-30.webp)
+![Página Node de Alby Hub con el nuevo canal online y un menú para ver la funding transaction](/images/blog/2025-02-17/tuto-30.webp)
 
 ---
 
@@ -233,7 +233,7 @@ Puedes recibir sats usando tu Dirección LN.
 **Izquierda**: Página pública vinculada a tu [nodo](https://getalby.com/p/chemaclass).
 **Derecha**: Página privada de tu Alby Hub.
 
-![tutorial](/images/blog/2025-02-17/tuto-33.webp)
+![Página pública de propinas de GetAlby a la izquierda y página privada Receive de Alby Hub con la dirección LN a la derecha](/images/blog/2025-02-17/tuto-33.webp)
 
 > Opcional: Puedes añadir fondos ln a tu wallet usando los servicios de terceros de GetAlby: [getalby.com/topup](https://getalby.com/topup) - ten en cuenta el KYC...
 
@@ -242,11 +242,11 @@ Puedes recibir sats usando tu Dirección LN.
 ## Usando tus Sats
 Después de eso, podrás usarlos a través de la [Extensión Alby](https://getalby.com/) o [AlbyGo](https://albygo.com/).
 
-![tutorial](/images/blog/2025-02-17/tuto-31.webp)
+![App Store de Alby Hub con Alby Extension y Alby Go, cada una con su botón Connect](/images/blog/2025-02-17/tuto-31.webp)
 
 Tu nodo es la fuente de verdad. Conecta estas apps y podrás usar tus sats en cualquier plataforma sin problemas.
 
-![tutorial](/images/blog/2025-02-17/tuto-32.webp)
+![Wallet de GetAlby y wallet de Alby Hub lado a lado mostrando la misma lista de pagos enviados y recibidos](/images/blog/2025-02-17/tuto-32.webp)
 
 > **Aviso**: la dirección LN testhub fue creada solo para propósitos de testing y tutorial. Mi dirección real es [chemaclass](https://getalby.com/p/chemaclass) ;)
 

@@ -34,6 +34,6 @@ Puedo ver algunas similitudes hoy en día. Sin embargo, ya no veo la necesidad d
 
 Escribir es una de mis formas favoritas de expresarme, especialmente cuando no puedo dormir. Me recuerda a esos años, y pienso enormemente en la increíble evolución desde entonces.
 
-![blog-footer](/images/blog/2023-07-05/footer.webp)
+![Una vista de las colinas toscanas con viñedos, olivos y cipreses](/images/blog/2023-07-05/footer.webp)
 
 > Fotos originales de mi viaje a la Toscana, Italia, el mes pasado.

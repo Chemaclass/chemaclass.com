@@ -63,7 +63,7 @@ Discrimination, favoritism, or unequal opportunities can create a toxic and divi
 
 When employees feel that there is no room for advancement or professional growth, they may become disengaged and unfulfilled in their roles.
 
-![blog-middle](/images/blog/2023-10-11/middle.webp)
+![A calm river under a blue sky with big white clouds, trees along both banks](/images/blog/2023-10-11/middle.webp)
 
 ### Unhealthy conflicts among colleagues
 
@@ -88,7 +88,7 @@ Prolonged exposure to a non-healthy work environment can lead to physical and em
 > It's important to note that these symptoms can vary from one workplace to another. Addressing these issues promptly and effectively is crucial to create a healthy and productive environment.
 
 
-![blog-footer](/images/blog/2023-10-11/footer.webp)
+![A narrow metal walkway with grated floor along an old steel bridge](/images/blog/2023-10-11/footer.webp)
 
 
 ## What can you do about it?

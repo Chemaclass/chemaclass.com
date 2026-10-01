@@ -118,4 +118,4 @@ Si estás cansado de colas lentas de PR y aprobaciones sobre-ingeniadas, pruéba
 
 > Ajusta la revisión al riesgo. Sé dueño de lo que mergeas.
 
-![blog-footer](/images/blog/2025-04-12/footer.webp)
+![Un tranvía rojo antiguo en Praga con el castillo en la colina al fondo](/images/blog/2025-04-12/footer.webp)

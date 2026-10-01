@@ -112,7 +112,7 @@ Regarding communication, you might need some good persuasion skills to convince 
 > "Negotiation begins with listening, making it about the other people, validating their emotions, and creating enough trust and safety for a real conversation to begin." - [Never split the difference](/readings/never-split-the-difference/)
 
 
-![blog-middle](/images/blog/2023-02-27/middle.webp)
+![Curved wooden benches on a grassy slope around a round glass pavilion in a park](/images/blog/2023-02-27/middle.webp)
 
 ---
 
@@ -162,7 +162,7 @@ However, these are the essential points to remember:
 
 Your primary responsibility is to help others improve, and this is only possible if you **embrace the change** and **start with yourself**.
 
-![blog-footer](/images/blog/2023-02-27/footer.webp)
+![A round glass pavilion with a green roof facing a small open-air amphitheatre of benches](/images/blog/2023-02-27/footer.webp)
 
 ### All mentioned authors
 

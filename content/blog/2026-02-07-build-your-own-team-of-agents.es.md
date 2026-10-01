@@ -147,7 +147,7 @@ Puedes ver el equipo en un mismo proceso (un terminal, navega con Shift+Up/Down)
 
 Los miembros cargan automáticamente el contexto del proyecto (`CLAUDE.md`, servidores MCP, skills) pero no heredan el historial de conversación del lead. Al crear un miembro, sé específico sobre qué archivos revisar y qué restricciones aplican. Un prompt de creación vago produce trabajo vago.
 
-![blog-middle](/images/blog/2026-02-07/middle.webp)
+![Un arroyo claro y poco profundo bajo una orilla de hojas secas y ramas caídas](/images/blog/2026-02-07/middle.webp)
 
 ### Primero planificar, después ejecutar
 
@@ -250,4 +250,4 @@ Si quieres un punto de partida, preparé [laravel-claude-toolkit](https://github
 - [Claude Code: Agent Teams](https://code.claude.com/docs/en/agent-teams) | claude.com
 - [Claude Code Tips: Workflow Boosters](https://rfrolov.me/en/blog/claude-code-tips) | rfrolov.me
 
-![blog-footer](/images/blog/2026-02-07/footer.webp)
+![Luz del sol entre ramas desnudas enredadas junto a un sendero de bosque con hojas](/images/blog/2026-02-07/footer.webp)

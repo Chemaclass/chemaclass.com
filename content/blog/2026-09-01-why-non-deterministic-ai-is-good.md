@@ -76,4 +76,4 @@ A function has one output per input. A collaborator gives me a different draft e
 
 Embrace variance where it helps. Constrain it where it hurts. That's the whole game.
 
-![blog-footer](/images/blog/2026-09-01/footer.webp)
+![Tall trees of different shapes and shades of green in a sunlit park](/images/blog/2026-09-01/footer.webp)

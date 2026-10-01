@@ -93,7 +93,7 @@ Pairing works best when both people are engaged, the problem benefits from two p
 
 > The goal of pairing isn't to pair. It's to build shared understanding and catch mistakes early. If another approach achieves that in your context, use it.
 
-![blog-middle](/images/blog/2026-03-01/middle.webp)
+![A hand-cut stone tunnel opening onto a dirt path lined with olive trees](/images/blog/2026-03-01/middle.webp)
 
 ## AI: from skeptic to squad leader
 
@@ -153,4 +153,4 @@ Every practice in this post follows the same pattern. The ideal version exists i
 
 > Next time you're shipping that 11pm fix, you'll know which corners you cut and why. That's the whole game. Not perfection. Not speed. Knowing which one should lead.
 
-![blog-footer](/images/blog/2026-03-01/footer.webp)
+![Olive branches heavy with black olives, with the sun shining through the leaves](/images/blog/2026-03-01/footer.webp)

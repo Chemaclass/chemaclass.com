@@ -100,7 +100,7 @@ El agente ve la descripción en la lista de skills. Pides un review, carga `SKIL
 
 {% </deep_dive> %}
 
-![blog-middle](/images/blog/2026-05-19/middle.webp)
+![Un potro trota hacia la valla mientras un hombre con gorra lo observa](/images/blog/2026-05-19/middle.webp)
 
 ## Skills vs agentes especializados
 
@@ -149,7 +149,7 @@ El agente sale el año que viene. El skill se queda para siempre.
 
 > Escribe el skill una vez. Cada sesión a partir de ahí empieza donde acabó la anterior.
 
-![blog-footer](/images/blog/2026-05-19/footer.webp)
+![Un hombre con gorra y chaqueta azul mira a un potro tras una valla](/images/blog/2026-05-19/footer.webp)
 
 ---
 

@@ -50,7 +50,7 @@ La primera edición se publicó en diciembre de 2014. Diez años después, ya te
 13. Seguridad de Bitcoin
 14. Aplicaciones de Segunda Capa
 
-![blog-footer](/images/readings/2024-07-05/footer.webp)
+![Mastering Bitcoin abierto en el apéndice del whitepaper de Bitcoin, con un pulgar hacia arriba delante](/images/readings/2024-07-05/footer.webp)
 
 > Libro completo también en [GitHub](https://github.com/bitcoinbook/bitcoinbook).
 

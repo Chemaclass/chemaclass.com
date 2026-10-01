@@ -63,7 +63,7 @@ blogs on the Internet.
 However, the critical aspect here is not what requirements or impressions are *being resolved* but **how**.
 How could you work agile with that doctor?
 
-![blog-middle](/images/blog/2022-11-11/middle.webp)
+![Close-up of the speaker on stage, holding a clicker, next to the projected slide](/images/blog/2022-11-11/middle.webp)
 
 > Agile is about quick feedback. It's about effective communication and reducing waste while aiming for simplicity.
 
@@ -128,4 +128,4 @@ learns from their **mistakes**; there is no need for masks anymore.
 
 That's when the magic starts to happen, and suddenly you can work agile with any team, especially yours.
 
-![blog-footer](/images/blog/2022-11-11/footer.webp)
+![A speaker on stage in front of a slide asking why you should not sleep in the next hour](/images/blog/2022-11-11/footer.webp)

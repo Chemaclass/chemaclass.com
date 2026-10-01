@@ -76,7 +76,7 @@ Si después de varios meses intentando estas ideas de verdad ninguna funciona, b
 
 ---
 
-![blog-footer](/images/blog/2022-10-08/footer.webp)
+![Un camino asfaltado entre árboles y un campo verde bajo un arcoíris tenue](/images/blog/2022-10-08/footer.webp)
 
 ## Pensamientos adicionales
 

@@ -34,6 +34,6 @@ I can see some similarities nowadays. However, I no longer see the need to write
 
 Writing is one of my favorite ways to express myself, especially when I cannot sleep. It reminds me of those years, and I think greatly about the incredible evolution since then.
 
-![blog-footer](/images/blog/2023-07-05/footer.webp)
+![A view over rolling Tuscan hills of vineyards, olive groves and cypress trees](/images/blog/2023-07-05/footer.webp)
 
 > Original photos from my trip to Tuscany, Italy, last month.

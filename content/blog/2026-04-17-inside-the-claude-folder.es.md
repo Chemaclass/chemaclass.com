@@ -144,7 +144,7 @@ Las rules del compilador no se activan al editar código Phel. Las rules de Phel
 
 Las rules no son sugerencias. Un cambio de convención y su rule van en el mismo commit. Sin drift, sin wikis desactualizadas.
 
-![blog-middle](/images/blog/2026-04-17/middle.webp)
+![Vista desde abajo de las vigas de acero de un puente viejo, con su pilar de hormigón en el prado](/images/blog/2026-04-17/middle.webp)
 
 ## Automatización y delegación
 
@@ -224,4 +224,4 @@ Por eso construí [agnostic-ai](https://agnostic-ai.org/). Escribe tus rules, sk
 
 Trata tu setup de agentes como infraestructura. Versiónalo. Revísalo. Hazlo evolucionar con el código.
 
-![blog-footer](/images/blog/2026-04-17/footer.webp)
+![La parte inferior de un puente de acero oxidado sobre un prado verde bajo nubes oscuras](/images/blog/2026-04-17/footer.webp)

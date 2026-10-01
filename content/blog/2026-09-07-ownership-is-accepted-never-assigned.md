@@ -92,4 +92,4 @@ For your next task, look beyond the merge. What needs to happen before the perso
 Thanks to [Thorsten Ball](https://x.com/thorstenball/status/2066907538499506349) for the Slack message that started this post.
 {% </kudos> %}
 
-![blog-footer](/images/blog/2026-09-20/footer.webp)
+![Large rough marble blocks stacked on the slope of a quarry under a blue sky](/images/blog/2026-09-20/footer.webp)

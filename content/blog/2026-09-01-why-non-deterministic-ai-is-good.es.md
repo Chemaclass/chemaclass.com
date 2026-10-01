@@ -76,4 +76,4 @@ Una función da una salida por entrada. Un colaborador me da un borrador distint
 
 Abraza la varianza donde ayuda. Acótala donde estorba. Ese es el juego entero.
 
-![blog-footer](/images/blog/2026-09-01/footer.webp)
+![Árboles altos de distintas formas y tonos de verde en un parque iluminado por el sol](/images/blog/2026-09-01/footer.webp)
