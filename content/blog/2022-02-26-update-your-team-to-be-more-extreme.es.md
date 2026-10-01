@@ -111,7 +111,7 @@ Puedes ayudar a tu equipo a ser más extreme creando un espacio dedicado al crec
 
 > No microgestiones este tiempo. Enfócate en el resultado. Ayuda a tu equipo a crecer, y disfrutarán creciendo contigo.
 
-![blog-footer](/images/blog/2022-02-26/footer.webp)
+![Un paseo empedrado junto al río, con bancos y una barandilla, que se pierde a lo lejos](/images/blog/2022-02-26/footer.webp)
 
 ## Charla Técnica
 

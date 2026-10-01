@@ -54,7 +54,7 @@ Conflict and disagreement emerge as team members start to express their individu
 - Acknowledge and address conflicts constructively
 - Encourage open and honest communication while guiding the team through the process of understanding and appreciating diverse perspectives
 
-![blog-middle](/images/blog/2023-11-25/middle.webp)
+![The same autumn river seen through the bars of a railing](/images/blog/2023-11-25/middle.webp)
 
 ## Norming
 
@@ -93,7 +93,7 @@ This stage involves the completion of the task or project. Team members may expe
 - Facilitate a reflective session to capture lessons learned and create a positive closure experience
 
 
-![blog-footer](/images/blog/2023-11-25/footer.webp)
+![A river with autumn trees on both banks and a bridge in the distance](/images/blog/2023-11-25/footer.webp)
 
 To develop a team to a high-performance level using [Tuckman's Model](https://en.wikipedia.org/wiki/Tuckman's_stages_of_group_development), **leaders** should be aware of the stages and **adapt** their [leadership](/blog/the-beauty-of-leadership/) style accordingly.
 

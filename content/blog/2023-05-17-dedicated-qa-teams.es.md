@@ -66,4 +66,4 @@ Y así es como cambias la "posición de QA a tiempo completo" en una "mentalidad
 
 El código nunca miente y nunca olvida; una vez que está escrito y automatizado en tu pipeline, puedes ejecutarlo en cualquier momento sin coste.
 
-![blog-footer](/images/blog/2023-05-17/footer.webp)
+![Un árbol viejo sostenido por soportes verdes en un jardín de Londres frente a edificios señoriales](/images/blog/2023-05-17/footer.webp)

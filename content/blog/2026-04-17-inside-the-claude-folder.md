@@ -144,7 +144,7 @@ Compiler rules don't fire when editing Phel source. Phel rules don't fire when e
 
 Rules are not suggestions. A convention change and its rule ship in the same commit. No drift, no outdated wiki.
 
-![blog-middle](/images/blog/2026-04-17/middle.webp)
+![Looking up at the steel trusses of an old bridge, with its concrete pillar in the meadow](/images/blog/2026-04-17/middle.webp)
 
 ## Automation and delegation
 
@@ -224,4 +224,4 @@ That's why I built [agnostic-ai](https://agnostic-ai.org/). Write your rules, sk
 
 Treat your agent setup like infrastructure. Version it. Review it. Evolve it with the codebase.
 
-![blog-footer](/images/blog/2026-04-17/footer.webp)
+![The underside of a rusty steel bridge over a green meadow under dark clouds](/images/blog/2026-04-17/footer.webp)

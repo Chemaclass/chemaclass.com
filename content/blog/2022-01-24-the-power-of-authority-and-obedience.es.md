@@ -39,7 +39,7 @@ Cada participante fue emparejado con otra persona. Un sorteo (amañado) decidía
 
 Al aprendiz lo llevaron a una habitación y le conectaron electrodos. El maestro y el investigador fueron a otra habitación con un generador de descargas. Los interruptores iban desde 15 voltios (descarga leve) hasta 450 voltios (XXX).
 
-![blog-footer](/images/blog/2022-01-24/video-fragment.webp)
+![Fotograma en blanco y negro del experimento de obediencia: un hombre con camisa de manga corta en un escritorio](/images/blog/2022-01-24/video-fragment.webp)
 
 El aprendiz daba respuestas incorrectas a propósito. Por cada error, el maestro debía darle una descarga. Cuando el maestro se negaba, el investigador le presionaba con estas órdenes:
 
@@ -116,7 +116,7 @@ El experimento de Milgram se convirtió en un clásico de la psicología. Demost
 >
 > Stanley Milgram, 1974.
 
-![blog-footer](/images/blog/2022-01-24/footer.webp)
+![Fila borrosa de interruptores del generador de descargas del experimento de obediencia](/images/blog/2022-01-24/footer.webp)
 
 ### Recursos
 

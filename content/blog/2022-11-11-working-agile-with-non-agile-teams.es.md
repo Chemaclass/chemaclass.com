@@ -51,7 +51,7 @@ Recopilar esos requisitos e impresiones de los expertos y luego dirigir el dise�
 Sin embargo, el aspecto crítico aquí no es qué requisitos o impresiones *se están resolviendo* sino **cómo**.
 ¿Cómo podrías trabajar agile con ese médico?
 
-![blog-middle](/images/blog/2022-11-11/middle.webp)
+![Primer plano del ponente en el escenario, con un mando en la mano, junto a la diapositiva proyectada](/images/blog/2022-11-11/middle.webp)
 
 > Agile es sobre retroalimentación rápida. Es sobre comunicación efectiva y reducir desperdicio mientras se apunta a la simplicidad.
 
@@ -107,4 +107,4 @@ Todos se preocupan y asumen plena responsabilidad de mantener al equipo saludabl
 
 Es entonces cuando la magia empieza a suceder, y de repente puedes trabajar agile con cualquier equipo, especialmente el tuyo.
 
-![blog-footer](/images/blog/2022-11-11/footer.webp)
+![Un ponente en el escenario ante una diapositiva que pregunta por qué no deberías dormir en la próxima hora](/images/blog/2022-11-11/footer.webp)

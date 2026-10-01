@@ -87,7 +87,7 @@ beliefs. After all, you're the first and primary responsible person for taking c
 
 ---
 
-![blog-footer](/images/blog/2022-10-08/footer.webp)
+![A narrow paved path between trees and a green field under a faint rainbow](/images/blog/2022-10-08/footer.webp)
 
 ## Extra thoughts
 

@@ -54,7 +54,7 @@ Surgen conflictos y desacuerdos cuando los miembros empiezan a expresar su indiv
 - Reconocer y abordar conflictos de manera constructiva
 - Fomentar la comunicación abierta y honesta mientras guía al equipo a través del proceso de entender y apreciar perspectivas diversas
 
-![blog-middle](/images/blog/2023-11-25/middle.webp)
+![El mismo río otoñal visto a través de los barrotes de una barandilla](/images/blog/2023-11-25/middle.webp)
 
 ## Norming
 
@@ -93,7 +93,7 @@ Esta etapa marca el final de la tarea o proyecto. Los miembros pueden sentir cie
 - Facilitar una sesión reflexiva para capturar lecciones aprendidas y crear una experiencia de cierre positiva
 
 
-![blog-footer](/images/blog/2023-11-25/footer.webp)
+![Un río con árboles otoñales en ambas orillas y un puente a lo lejos](/images/blog/2023-11-25/footer.webp)
 
 Para llevar un equipo a alto rendimiento usando el [Modelo de Tuckman](https://en.wikipedia.org/wiki/Tuckman's_stages_of_group_development), los **líderes** deben conocer las etapas y **adaptar** su estilo según la situación.
 

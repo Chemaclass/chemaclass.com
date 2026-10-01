@@ -140,4 +140,4 @@ Not sure where to start? Pick whichever leak hurts more right now. If long repli
 
 > You didn't upgrade the model. You stopped wasting its [attention](/readings/digital-minimalism/).
 
-![blog-footer](/images/blog/2026-06-26/footer.webp)
+![A cut tree trunk covered in ivy beside a lake, surrounded by green trees](/images/blog/2026-06-26/footer.webp)

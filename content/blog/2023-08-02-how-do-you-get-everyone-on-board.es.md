@@ -49,7 +49,7 @@ Pero aún así, a pesar de tu esfuerzo por crear un ambiente de confianza y segu
 
 La clave aquí es encontrar una manera de conectar con las personas entendiendo cómo entienden su potencial para que puedas empoderarlas y ayudarlas a crecer.
 
-![middle](/images/blog/2023-08-02/middle.webp)
+![Un ponente en un gran escenario ante una diapositiva con el Manifiesto Ágil](/images/blog/2023-08-02/middle.webp)
 
 ### Concede tiempo para leer
 

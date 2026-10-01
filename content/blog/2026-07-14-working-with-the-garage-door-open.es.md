@@ -101,4 +101,4 @@ Abre la puerta. Y luego señálala.
 Gracias a mi compañero Aike, que inspiró este post en una de nuestras conversaciones sobre hacer visible el trabajo.
 {% </kudos> %}
 
-![blog-footer](/images/blog/2026-07-14/footer.webp)
+![Dos torres de oficinas de cristal vistas desde abajo, con un cielo nublado entre ellas](/images/blog/2026-07-14/footer.webp)

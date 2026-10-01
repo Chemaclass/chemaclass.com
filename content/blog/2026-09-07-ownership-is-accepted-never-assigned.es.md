@@ -92,4 +92,4 @@ En tu próxima tarea, mira más allá del merge. ¿Qué tiene que pasar para que
 Gracias a [Thorsten Ball](https://x.com/thorstenball/status/2066907538499506349) por el mensaje de Slack que dio origen a este post.
 {% </kudos> %}
 
-![blog-footer](/images/blog/2026-09-20/footer.webp)
+![Grandes bloques de mármol en bruto apilados en la ladera de una cantera bajo un cielo azul](/images/blog/2026-09-20/footer.webp)

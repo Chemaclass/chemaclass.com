@@ -99,4 +99,4 @@ Hay muchas estrategias. Depende de ti actuar cuando veas algo mejorable.
 
 Está bien señalar el "_elefante en la habitación_" y pedir ayuda para mejorar cualquier situación que sientas que no funciona como debería.
 
-![blog-footer](/images/blog/2022-12-06/footer.webp)
+![Un canal flanqueado por almacenes de ladrillo rojo y una pasarela de hierro al fondo](/images/blog/2022-12-06/footer.webp)

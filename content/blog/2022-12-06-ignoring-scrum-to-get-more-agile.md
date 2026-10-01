@@ -131,4 +131,4 @@ improved.
 It's OK to point out the "_elephant in the room_" and ask for help to improve any situation you think (or feel) is not
 working as it should.
 
-![blog-footer](/images/blog/2022-12-06/footer.webp)
+![A canal lined with red-brick warehouses and an iron footbridge in the distance](/images/blog/2022-12-06/footer.webp)

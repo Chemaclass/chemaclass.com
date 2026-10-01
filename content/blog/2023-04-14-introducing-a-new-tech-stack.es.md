@@ -39,7 +39,7 @@ Al adoptar nuevas tecnologías en el día a día, es fácil acoplarse a ellas. E
 
 No me malinterpretes: aprender y experimentar con nuevas tecnologías está genial. Pero introducirlas en tu trabajo diario es otra historia. Afecta a todo el equipo, así que hay que ser cuidadosos.
 
-![blog-middle](/images/blog/2023-04-14/middle.webp)
+![Una torre de piedra redonda de la Torre de Londres con el Tower Bridge al fondo](/images/blog/2023-04-14/middle.webp)
 
 ## El enfoque de la conversación
 
@@ -57,7 +57,7 @@ Sea cual sea el resultado, escríbelo como un [ADR](https://adr.github.io/) para
 
 Los ADRs ayudan a entender decisiones antiguas. Guárdalos en el control de versiones, en el mismo proyecto si es posible. Son útiles para el equipo actual y para los nuevos que lleguen.
 
-![blog-footer](/images/blog/2023-04-14/footer.webp)
+![La Torre Blanca de la Torre de Londres vista desde abajo contra un cielo azul](/images/blog/2023-04-14/footer.webp)
 
 {% <kudos> %}
 Gracias a mis amigos [Manu](https://x.com/evrtrabajo), [Antonio](https://x.com/Tito_Kati) y [Jesus](https://x.com/JesusValera96), que me ayudaron a crear este resumen de ideas haciendo brainstorming juntos.

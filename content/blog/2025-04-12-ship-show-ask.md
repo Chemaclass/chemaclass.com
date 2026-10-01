@@ -119,4 +119,4 @@ If you're tired of slow PR queues and over-engineered approvals, try it on your 
 
 > Match the review to the risk. Own what you merge.
 
-![blog-footer](/images/blog/2025-04-12/footer.webp)
+![A vintage red tram in Prague with the castle on the hill behind it](/images/blog/2025-04-12/footer.webp)

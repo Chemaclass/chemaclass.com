@@ -101,4 +101,4 @@ Open the door. Then point at it.
 Thanks to my colleague Aike, who gave me the idea in one of our conversations about making work visible.
 {% </kudos> %}
 
-![blog-footer](/images/blog/2026-07-14/footer.webp)
+![Two glass office towers seen from below, with a cloudy sky between them](/images/blog/2026-07-14/footer.webp)

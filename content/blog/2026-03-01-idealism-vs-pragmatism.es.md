@@ -93,7 +93,7 @@ Las [pull requests y el pair programming](/es/blog/pull-request-vs-pair-prog/) n
 
 > El objetivo del pairing no es hacer pairing. Es construir entendimiento compartido y detectar errores pronto. Si otro enfoque lo consigue en tu contexto, úsalo.
 
-![blog-middle](/images/blog/2026-03-01/middle.webp)
+![Un túnel excavado en piedra que se abre a un camino de tierra entre olivos](/images/blog/2026-03-01/middle.webp)
 
 ## IA: de escéptico a líder de escuadrón
 
@@ -153,4 +153,4 @@ Cada práctica en este post sigue el mismo patrón. La versión ideal existe en 
 
 > La próxima vez que estés subiendo ese fix a las 11 de la noche, sabrás qué atajos tomaste y por qué. Ese es el juego completo. No la perfección. No la velocidad. Saber cuál debe liderar.
 
-![blog-footer](/images/blog/2026-03-01/footer.webp)
+![Ramas de olivo cargadas de aceitunas negras, con el sol entre las hojas](/images/blog/2026-03-01/footer.webp)

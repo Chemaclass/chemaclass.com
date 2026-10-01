@@ -38,8 +38,11 @@ from _common import CONTENT_DIR, PUBLIC_DIR
 MAX_DESCRIPTION = 160
 
 # Alt text that describes the slot the image sits in rather than the image.
-PLACEHOLDER_ALT = {'blog-cover', 'cover', 'footer', 'image', 'img', 'photo',
-                   'screenshot', 'picture', 'banner', 'logo', 'book-chapter'}
+PLACEHOLDER_ALT = {'blog-cover', 'blog-middle', 'blog-footer', 'middle', 'tutorial',
+                   'cover', 'footer', 'image', 'img', 'photo', 'screenshot', 'picture',
+                   'banner', 'logo', 'book-chapter'}
+# A file name pasted in as the alt says as little as a slot name does.
+FILENAME_ALT = re.compile(r'\.(jpe?g|png|webp|gif|svg)$', re.I)
 
 # Entries are expected to link to the rest of the site from inside their prose.
 # Sections of standalone pages are not: /cv/, /legal/ and the poetry chapters
@@ -169,7 +172,7 @@ def check_source(problems: List[str]) -> int:
 
         seen = {}
         for alt, url in MD_IMAGE.findall(prose):
-            if alt.strip().lower() in PLACEHOLDER_ALT:
+            if alt.strip().lower() in PLACEHOLDER_ALT or FILENAME_ALT.search(alt.strip()):
                 problems.append(f'{rel} image alt is a placeholder: ![{alt}]')
             seen[url] = seen.get(url, 0) + 1
         for url, count in seen.items():

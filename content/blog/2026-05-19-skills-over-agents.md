@@ -100,7 +100,7 @@ Agent sees the description in the skill list. Ask for a review, it loads `SKILL.
 
 {% </deep_dive> %}
 
-![blog-middle](/images/blog/2026-05-19/middle.webp)
+![A foal trots toward the fence while a man in a cap watches it](/images/blog/2026-05-19/middle.webp)
 
 ## Skills vs specialized agents
 
@@ -149,7 +149,7 @@ The agent ships next year. The skill ships forever.
 
 > Write the skill once. Every session after that starts where the last one ended.
 
-![blog-footer](/images/blog/2026-05-19/footer.webp)
+![A man in a cap and blue jacket looks at a foal behind a fence](/images/blog/2026-05-19/footer.webp)
 
 ---
 

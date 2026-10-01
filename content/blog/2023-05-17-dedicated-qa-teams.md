@@ -66,4 +66,4 @@ And that's how you change the "full-time QA position" into a "role mentality for
 
 Code never lies and never forgets; once it's written and automated in your pipeline, you can run it anytime at zero cost.
 
-![blog-footer](/images/blog/2023-05-17/footer.webp)
+![An old tree held up by green supports in a London garden in front of grand buildings](/images/blog/2023-05-17/footer.webp)

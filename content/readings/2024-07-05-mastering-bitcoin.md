@@ -50,7 +50,7 @@ The first edition of this book was published in December 2014. Ten years later, 
 13. Bitcoin Security
 14. Second-Layer Applications
 
-![blog-footer](/images/readings/2024-07-05/footer.webp)
+![Mastering Bitcoin open at the Bitcoin whitepaper appendix, with a thumbs up in front](/images/readings/2024-07-05/footer.webp)
 
 > Full book also on [GitHub](https://github.com/bitcoinbook/bitcoinbook).
 
