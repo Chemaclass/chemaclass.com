@@ -57,7 +57,7 @@ data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
   "@type": "{{ kind }}",
   "@id": "{{ section.permalink | safe }}",
   "url": "{{ section.permalink | safe }}",
-  "name": "{{ name }}",
+  "name": {{ name | json_encode | safe }},
   {% if section.description %}"description": {{ section.description | json_encode | safe }},{% endif %}
   "inLanguage": "{{ lang }}",
   "isPartOf": { "@id": "{{ config.base_url | safe }}/#website" },
@@ -93,7 +93,7 @@ data-hl-save="{{ trans(key='highlight_save', lang=lang) }}"
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "{{ name }}",
+      "name": {{ name | json_encode | safe }},
       "item": "{{ section.permalink | safe }}"
     }
   ]

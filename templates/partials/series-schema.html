@@ -28,8 +28,8 @@
   "@context": "https://schema.org",
   "@type": "CreativeWorkSeries",
   "@id": "{{ page.permalink | safe }}#series",
-  "name": "{{ series_name }}",
-  {% if series_desc %}"description": "{{ series_desc }}",{% endif %}
+  "name": {{ series_name | json_encode | safe }},
+  {% if series_desc %}"description": {{ series_desc | json_encode | safe }},{% endif %}
   "url": "{{ page.permalink | safe }}",
   "inLanguage": "{{ lang }}",
   "isPartOf": { "@id": "{{ config.base_url | safe }}/#website" },
@@ -41,8 +41,8 @@
       "@type": "BlogPosting",
       "@id": "{{ post.permalink | safe }}",
       "url": "{{ post.permalink | safe }}",
-      "headline": "{{ post.title }}",
-      {% if post.description %}"description": "{{ post.description }}",{% endif %}
+      "headline": {{ post.title | json_encode | safe }},
+      {% if post.description %}"description": {{ post.description | json_encode | safe }},{% endif %}
       {% if post.date %}"datePublished": "{{ post.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}",{% endif %}
       "position": {{ post.extra.series_order }}
     }{% if not loop.last %},{% endif %}

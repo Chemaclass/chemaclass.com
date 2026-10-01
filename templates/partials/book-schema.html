@@ -16,7 +16,7 @@
   "@context": "https://schema.org",
   "@type": "Book",
   "@id": "{{ section.permalink | safe }}#book",
-  "name": "{{ book_title }}",
+  "name": {{ book_title | json_encode | safe }},
   "url": "{{ section.permalink | safe }}",
   {% if section.extra.description %}"description": {{ section.extra.description | json_encode | safe }},{% endif %}
   {% if section.extra.cover %}"image": "{{ config.base_url | safe }}{{ section.extra.cover }}",{% endif %}

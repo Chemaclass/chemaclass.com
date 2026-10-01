@@ -10,24 +10,22 @@
 {% include "partials/post-schema.html" %}
 
 {% if page.extra.author %}
+{# The book itself, separate from the notes about it. Declared as a Review this
+   was invalid for Google on all 178 readings: a Review needs a reviewRating,
+   and these notes do not score books. #}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Review",
-  "url": "{{ page.permalink | safe }}",
-  {% if page.date %}"datePublished": "{{ page.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}",{% endif %}
-  {% if lang %}"inLanguage": "{{ lang }}",{% endif %}
-  "itemReviewed": {
-    "@type": "Book",
-    "name": "{{ page.title }}",
-    "author": { "@type": "Person", "name": "{{ page.extra.author }}" }
-    {% if page.extra.pages %}, "numberOfPages": {{ page.extra.pages }}{% endif %}
-    {% if page.extra.static_thumbnail %}, "image": "{% if page.extra.static_thumbnail is matching(pat="^http") %}{{ page.extra.static_thumbnail | safe }}{% else %}{{ config.base_url | safe }}{{ page.extra.static_thumbnail | safe }}{% endif %}"{% endif %}
-  },
-  "author": { "@id": "{{ config.base_url | safe }}/#person" },
-  "publisher": { "@id": "{{ config.base_url | safe }}/#organization" },
-  "isPartOf": { "@id": "{{ config.base_url | safe }}/#website" },
-  "reviewBody": "{{ page.description | default(value='', boolean=true) }}"
+  "@type": "Book",
+  "name": {{ page.title | json_encode | safe }},
+  "author": [
+    {%- for name in page.extra.author | split(pat=", ") %}
+    { "@type": "Person", "name": {{ name | json_encode | safe }} }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+  {% if page.extra.pages %}, "numberOfPages": {{ page.extra.pages }}{% endif %}
+  {% if page.extra.static_thumbnail %}, "image": "{% if page.extra.static_thumbnail is matching(pat="^http") %}{{ page.extra.static_thumbnail | safe }}{% else %}{{ config.base_url | safe }}{{ page.extra.static_thumbnail | safe }}{% endif %}"{% endif %},
+  "subjectOf": { "@id": "{{ page.permalink | safe }}" }
 }
 </script>
 {% endif %}

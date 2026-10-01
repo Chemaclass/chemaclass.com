@@ -2,7 +2,7 @@ base_url = "https://chemaclass.com"
 default_language = "en"
 
 title = "Chemaclass"
-description = "Tech Lead sharing practical insights on software craftsmanship, TDD, leadership, Bitcoin, and AI. Blog posts, book summaries, and conference talks."
+description = "Software engineer sharing practical insights on software craftsmanship, TDD, leadership, Bitcoin, and AI. Blog posts, book summaries, and conference talks."
 author = "Chemaclass"
 
 generate_feeds = true
@@ -51,6 +51,7 @@ skip_anchor_prefixes = [
 
 [translations]
 related_posts = "Related posts"
+breadcrumb_home = "Home"
 faq_title = "Frequently asked"
 related_readings = "Related readings"
 all_posts = "All posts"
@@ -417,7 +418,7 @@ pricing_consulting_pack3_save = 50
 # Spanish language configuration
 [languages.es]
 title = "Chemaclass"
-description = "Tech Lead compartiendo ideas prácticas sobre artesanía del software, TDD, liderazgo, Bitcoin e IA. Artículos, resúmenes de libros y charlas."
+description = "Ingeniero de software compartiendo ideas prácticas sobre artesanía del software, TDD, liderazgo, Bitcoin e IA. Artículos, resúmenes de libros y charlas."
 generate_feeds = true
 build_search_index = true
 taxonomies = [{ name = "tags", feed = true }]
@@ -432,6 +433,7 @@ truncate_content_length = 2000
 
 [languages.es.translations]
 related_posts = "Artículos relacionados"
+breadcrumb_home = "Inicio"
 faq_title = "Preguntas frecuentes"
 related_readings = "Lecturas relacionadas"
 all_posts = "Todos los artículos"

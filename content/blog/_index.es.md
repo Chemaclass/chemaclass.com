@@ -1,6 +1,6 @@
 +++
 title = "Blog | Chemaclass"
-description = "Artículos sobre artesanía del software, TDD, código limpio, liderazgo, Bitcoin e IA. Ideas prácticas de un tech lead construyendo software y equipos."
+description = "Artículos sobre artesanía del software, TDD, código limpio, liderazgo, Bitcoin e IA. Ideas prácticas de un ingeniero que ha liderado equipos."
 template = "blog/index.html"
 page_template = "blog/post.html"
 sort_by = "date"
