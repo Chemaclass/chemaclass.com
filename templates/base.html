@@ -265,9 +265,24 @@
 
     <!-- Open Graph locale -->
     <meta property="og:locale" content="{% if lang == 'es' %}es_ES{% else %}en_US{% endif %}">
-    {% set_global has_translation = term.permalink %}
+    {# The other language only has a tag when its own content uses it
+       (/es/tags/music/ does not exist), so a term page looks its twin up. The
+       result is reused by the hreflang block below. #}
+    {% set_global other_lang = "es" %}
+    {% if lang == "es" %}{% set_global other_lang = "en" %}{% endif %}
+    {% set_global other_term_url = "" %}
+    {% set_global has_translation = false %}
     {% if page.translations %}{% set_global has_translation = page.translations | length > 1 %}
-    {% elif section.translations %}{% set_global has_translation = section.translations | length > 1 %}{% endif %}
+    {% elif section.translations %}{% set_global has_translation = section.translations | length > 1 %}
+    {% elif term.permalink %}
+      {% set other_taxonomy = get_taxonomy(kind="tags", lang=other_lang) %}
+      {% for other in other_taxonomy.items %}
+        {% if other.name == term.name %}{% set_global other_term_url = other.permalink %}{% endif %}
+      {% endfor %}
+      {% set_global has_translation = other_term_url != "" %}
+    {# /tags/ has no page, section or term, and exists in both languages. #}
+    {% elif current_url %}{% set_global has_translation = true %}
+    {% endif %}
     {% if has_translation %}
     <meta property="og:locale:alternate" content="{% if lang == 'es' %}en_US{% else %}es_ES{% endif %}">
     {% endif %}
@@ -472,13 +487,6 @@
        language only has this term when its own content uses it, and /es/tags/music/
        does not exist, so the pair is emitted only after finding it. #}
     {% elif term.permalink %}
-      {% set_global other_lang = "es" %}
-      {% if lang == "es" %}{% set_global other_lang = "en" %}{% endif %}
-      {% set other_taxonomy = get_taxonomy(kind="tags", lang=other_lang) %}
-      {% set_global other_term_url = "" %}
-      {% for other in other_taxonomy.items %}
-        {% if other.name == term.name %}{% set_global other_term_url = other.permalink %}{% endif %}
-      {% endfor %}
       <link rel="alternate" hreflang="{{ lang }}" href="{{ term.permalink | safe }}" />
       {% if other_term_url %}
         <link rel="alternate" hreflang="{{ other_lang }}" href="{{ other_term_url | safe }}" />

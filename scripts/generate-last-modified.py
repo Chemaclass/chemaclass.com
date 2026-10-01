@@ -30,10 +30,11 @@ import subprocess
 import sys
 import unicodedata
 from collections import Counter
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
-from _common import CONTENT_DIR, PROJECT_ROOT, get_content_body
+from _common import CONTENT_DIR, PROJECT_ROOT, extract_date_from_filename, extract_frontmatter, get_content_body
 
 OUTPUT = PROJECT_ROOT / 'data' / 'last-modified.json'
 
@@ -158,11 +159,30 @@ def last_body_edit(reader: BlobReader, path: str, commits: List[Tuple[str, str]]
     return commits[-1][1]
 
 
+def not_before_publication(path: str, edited: str) -> str:
+    """The edit date, or the publication day when the file was committed ahead of it.
+
+    A post committed the evening before its `date` would otherwise claim it was
+    modified before it was published, in the schema and in the feeds alike.
+    """
+    source = CONTENT_DIR / path
+    if not source.is_file():
+        return edited
+    published = extract_frontmatter(source.read_text(encoding='utf-8')).get('date') \
+        or extract_date_from_filename(source.name)
+    if not published:
+        return edited
+    published_at = f'{published[:10]}T00:00:00+00:00'
+    if datetime.fromisoformat(edited) < datetime.fromisoformat(published_at):
+        return published_at
+    return edited
+
+
 def last_modified_dates() -> Dict[str, str]:
     history = commits_by_file()
     reader = BlobReader(PROJECT_ROOT)
     try:
-        return {path: last_body_edit(reader, path, commits)
+        return {path: not_before_publication(path, last_body_edit(reader, path, commits))
                 for path, commits in sorted(history.items())}
     finally:
         reader.close()

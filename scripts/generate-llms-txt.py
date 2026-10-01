@@ -91,6 +91,8 @@ def replace_series(text: str, lang: TLang) -> str:
     if start == -1:
         sys.exit(f'llms.txt ({lang}): no "{SERIES_HEADING}" heading to write the series under')
     end = text.find('\n## ', start + 1)
+    if end == -1:
+        end = len(text)
     section = text[start:end]
     intro = [line for line in section.split('\n') if not line.startswith('- [')]
     body = '\n'.join(intro).rstrip() + '\n\n' + '\n'.join(build_series_lines(lang)) + '\n'
