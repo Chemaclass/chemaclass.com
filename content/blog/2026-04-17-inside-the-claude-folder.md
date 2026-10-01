@@ -2,10 +2,11 @@
 title = "Inside the .claude Folder"
 description = "A hands-on tour of Claude Code's project folder. What rules, skills, agents, hooks, and settings each do, and how they fit together."
 draft = false
+updated = 2026-10-01
 [taxonomies]
 tags = [ "ai", "software", "tutorial", "craftsmanship", "developer-tools", "productivity" ]
 [extra]
-tldr = "A tour of the .claude folder: what rules, skills, agents, hooks and settings each do. Treat it like infrastructure, version it, and evolve it with the code."
+tldr = "A tour of the .claude folder: what rules, skills, agents, hooks and settings each do. Treat it like infrastructure, version it, and keep one spec when your team uses more than one AI tool."
 subtitle = "A tutorial through rules, skills, agents, hooks, and settings"
 static_thumbnail = "/images/blog/2026-04-17/cover.webp"
 series = "ai"
@@ -19,9 +20,15 @@ related_readings = [
   "readings/2020-03-05-extreme-programming-explained.md",
   "readings/2016-10-01-the-pragmatic-programmer.md",
 ]
+faq = [
+  { q = "Should I commit the .claude folder to git?", a = "Yes, except settings.local.json, which holds personal overrides. If a shared spec such as agnostic-ai generates the folder, commit the spec and gitignore the generated files." },
+  { q = "What is the difference between a skill and a rule?", a = "A skill is a procedure, loaded when you call it with a slash or when the task matches its description. A rule is a convention, loaded when Claude works on files that match its glob pattern." },
+  { q = "Do permission deny rules fully block a command?", a = "No. Deny rules match the command text, so a different command with the same effect can get past them. Use a PreToolUse hook or the sandbox when you need a hard block." },
+  { q = "Where should I start with the .claude folder?", a = "With CLAUDE.md, then permissions in settings.json. Add skills, rules, hooks and agents only when real friction asks for them." },
+]
 +++
 
-Every project I work on has a `.claude/` folder at the root. Committed to git, like the rest of the code.
+Every project I work on has a `.claude/` folder at the root. Its source lives in git, like the rest of the code.
 
 That folder turns Claude Code from a generic assistant into a project-aware teammate. Everyone who clones the repo inherits the same setup.
 
@@ -32,13 +39,16 @@ Agentic coding is only as good as the context you give the agent. The `.claude/`
 ## The .claude folder, at a glance
 
 ```
-.claude/
-├── CLAUDE.md         # project onboarding
-├── settings.json     # permissions, hooks, env
-├── skills/           # reusable procedures (slash commands)
-├── rules/            # glob-targeted conventions
-├── hooks/            # shell scripts run on events
-└── agents/           # specialized roles
+your-project/
+├── .mcp.json               # shared MCP servers (root only)
+└── .claude/
+    ├── CLAUDE.md           # project onboarding
+    ├── settings.json       # permissions, hooks, env
+    ├── settings.local.json # personal overrides, gitignored
+    ├── skills/             # procedures, loaded on demand
+    ├── rules/              # conventions, optionally scoped
+    ├── hooks/              # scripts for hooks
+    └── agents/             # specialized roles
 ```
 
 Six layers, one folder. Context, safety, procedures, guardrails, automation, specialists.
@@ -53,8 +63,7 @@ In [Phel](https://github.com/phel-lang/phel-lang), mine covers the compiler pipe
 
 A global `~/.claude/CLAUDE.md` applies to _all_ your projects. The project file says _how this codebase works_. The global file says _how I work_.
 
-Every byte ships in every prompt. Keep it short. 
-Past one screen, move detail into `rules/` or `skills/`.
+Every byte ships in every prompt. Keep it short. Past one screen, move detail into `rules/` or `skills/`.
 
 > A good `CLAUDE.md` is a good onboarding doc. The better it is, the less you repeat yourself.
 
@@ -85,9 +94,9 @@ Before giving the agent more power, lock down what it must never do.
 
 {% </deep_dive> %}
 
-Allow unlocks flow. Deny draws the line agents cannot cross, even when asked politely.
+Allow unlocks flow. Deny stops the obvious mistakes, but it matches the command text, not what the command does. `find . -delete` walks past a `rm` deny rule. For a hard block, use a [hook](#hooks-automation-at-the-edges).
 
-> Permissions are the floor. Everything else builds on top of a safe baseline.
+> Deny rules catch the obvious. Hooks enforce the rest.
 
 ## Procedures and guardrails
 
@@ -95,9 +104,11 @@ Allow unlocks flow. Deny draws the line agents cannot cross, even when asked pol
 
 Next pain after onboarding: repetition. Skills solve that.
 
-A skill is a markdown file in `.claude/skills/`, a procedure you call with a slash:
+A skill is a folder in `.claude/skills/` with a `SKILL.md` inside: a short description plus the steps. Only the description sits in context. Claude loads the full skill when you call it with a slash, or on its own when the task matches the description.
 
-- **`/gh-issue <number>`**: issue to branch, TDD plan, PR.
+A few from Phel:
+
+- **`/gh-issue <number>`**: issue to branch, [TDD](/blog/test-driven-development/) plan, PR.
 - **`/commit`**: fix, analysis, tests, conventional commit.
 - **`/refactor-check`**: [SOLID](/readings/clean-architecture/), naming, architecture smells.
 - **`/release [version]`**: changelog, PHAR, tag, release.
@@ -108,7 +119,7 @@ A skill is a markdown file in `.claude/skills/`, a procedure you call with a sla
 - **Rule**: _"use conventional commits"_. Shapes output, not procedure.
 - **Skill**: _"`/gh-issue 42`"_. The procedure _is_ the instruction.
 
-Skills turn tribal knowledge into runnable steps anyone can execute.
+Skills turn team habits into steps anyone can run.
 
 {% </deep_dive> %}
 
@@ -116,7 +127,7 @@ Skills turn tribal knowledge into runnable steps anyone can execute.
 
 ### Rules: the guardrails
 
-`CLAUDE.md` is read every session. Rules only when they match. Files in `.claude/rules/` target code areas with glob patterns: the agent loads only what applies, keeping context lean.
+`CLAUDE.md` loads every session. Rules load only when they match. Files in `.claude/rules/` target code areas with glob patterns, so the context stays lean.
 
 {% <deep_dive title="Glob-targeted rules in practice"> %}
 
@@ -131,7 +142,7 @@ Compiler rules don't fire when editing Phel source. Phel rules don't fire when e
 
 {% </deep_dive> %}
 
-Rules are not suggestions. They travel with the code: a convention change and its rule ship in the same commit. No drift, no outdated wiki.
+Rules are not suggestions. A convention change and its rule ship in the same commit. No drift, no outdated wiki.
 
 ![blog-middle](/images/blog/2026-04-17/middle.webp)
 
@@ -141,7 +152,7 @@ Rules are not suggestions. They travel with the code: a convention change and it
 
 Rules tell the agent what to do. Hooks make sure it happens even if the agent forgets.
 
-Shell commands triggered by Claude Code events (`PreToolUse`, `PostToolUse`, `Stop`), wired through `settings.json`. In Phel, `PreToolUse` blocks edits to critical files (`build/release.sh`, `.github/*`, `composer.lock`). `PostToolUse` auto-formats PHP via `php-cs-fixer`.
+Hooks are shell commands triggered by Claude Code events (`PreToolUse`, `PostToolUse`, `Stop`), wired through `settings.json`. In Phel, `PreToolUse` blocks edits to critical files (`build/release.sh`, `.github/*`, `composer.lock`). `PostToolUse` auto-formats PHP via `php-cs-fixer`.
 
 {% <deep_dive title="Hooks wiring"> %}
 
@@ -166,7 +177,7 @@ Shell commands triggered by Claude Code events (`PreToolUse`, `PostToolUse`, `St
 
 ### Agents: specialized roles
 
-Everything so far shapes one agent. Agents add specialists the main agent can delegate to, each with its own tools, permissions, and model. Most advanced piece. Recommend it last.
+Everything so far shapes one agent. Agents add specialists the main agent can delegate to, each with its own tools, permissions, and model. The most advanced piece, so add it last.
 
 A few from Phel:
 
@@ -176,7 +187,7 @@ A few from Phel:
 - **Domain Architect**: module boundaries, compiler pipeline.
 - **Debugger**: compiler errors across all phases.
 
-Each agent runs in its own context window: the main session stays clean while the specialist digs deep. The win is not only cost, it is focus. An agent with only read and grep cannot rewrite your codebase by mistake.
+Each agent runs in its own context window, so the main session stays clean while the specialist digs deep. The win is focus, not only cost. An agent with only read and grep cannot rewrite your codebase by mistake.
 
 > Right model for the right job. Fast and cheap for exploration. Deep and careful for architecture.
 
@@ -195,10 +206,18 @@ The order, driven by real friction:
 
 Each step fixes a problem you actually had. Not one you imagined.
 
-> The setup grows from real friction, not from upfront design.
-
 Commit the folder. Share it. When someone joins, their session inherits everything.
 
-Treat `.claude/` like infrastructure. Version it. Review it. Evolve it with the codebase.
+## One spec for teams with more than one AI tool
+
+If your team uses only Claude Code, you can stop here.
+
+`.claude/` has one limit: only Claude Code reads it. Codex reads `AGENTS.md`, Cursor reads `.cursor/rules/`. On a mixed team, the same rules get copied into each format, and the copies drift.
+
+That's why I built [agnostic-ai](https://agnostic-ai.org/). Write your rules, skills, agents, and hooks once. `agnostic-ai sync` turns them into the files each tool reads. You commit the spec, and the generated folders stay out of git. This site and Phel both run on it.
+
+> `.claude/` teaches one tool your project. One spec teaches all of them.
+
+Treat your agent setup like infrastructure. Version it. Review it. Evolve it with the codebase.
 
 ![blog-footer](/images/blog/2026-04-17/footer.webp)

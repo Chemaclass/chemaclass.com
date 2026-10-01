@@ -2,10 +2,11 @@
 title = "Dentro de la Carpeta .claude"
 description = "Un recorrido práctico por la carpeta de proyecto de Claude Code. Qué hacen rules, skills, agents, hooks y settings, y cómo encajan entre sí."
 draft = false
+updated = 2026-10-01
 [taxonomies]
 tags = [ "ai", "software", "tutorial", "craftsmanship", "developer-tools", "productivity" ]
 [extra]
-tldr = "Un recorrido por la carpeta .claude: qué hace cada regla, skill, agente, hook y ajuste. Trátala como infraestructura, versiónala y hazla evolucionar con el código."
+tldr = "Un recorrido por la carpeta .claude: qué hace cada regla, skill, agente, hook y ajuste. Trátala como infraestructura, versiónala y mantén una sola spec cuando tu equipo usa más de una herramienta de IA."
 subtitle = "Un tutorial sobre rules, skills, agents, hooks y settings"
 static_thumbnail = "/images/blog/2026-04-17/cover.webp"
 series = "ai"
@@ -18,11 +19,16 @@ related_posts = [
 related_readings = [
   "readings/2020-03-05-extreme-programming-explained.md",
   "readings/2016-10-01-the-pragmatic-programmer.md",
-  "readings/2023-03-19-accelerate.md",
+]
+faq = [
+  { q = "¿Debo commitear la carpeta .claude en git?", a = "Sí, salvo settings.local.json, que guarda tus ajustes personales. Si una spec compartida como agnostic-ai genera la carpeta, commitea la spec y añade los archivos generados al .gitignore." },
+  { q = "¿Qué diferencia hay entre un skill y una rule?", a = "Un skill es un procedimiento: se carga cuando lo invocas con una barra o cuando la tarea encaja con su descripción. Una rule es una convención: se carga cuando Claude trabaja en archivos que encajan con su patrón glob." },
+  { q = "¿Las reglas deny de permisos bloquean un comando del todo?", a = "No. Las reglas deny comparan el texto del comando, así que otro comando con el mismo efecto puede saltárselas. Usa un hook PreToolUse o el sandbox cuando necesites un bloqueo real." },
+  { q = "¿Por dónde empiezo con la carpeta .claude?", a = "Por CLAUDE.md, y luego los permisos en settings.json. Añade skills, rules, hooks y agents solo cuando la fricción real los pida." },
 ]
 +++
 
-Cada proyecto en el que trabajo tiene una carpeta `.claude/` en la raíz. Commiteada en git, como el resto del código.
+Cada proyecto en el que trabajo tiene una carpeta `.claude/` en la raíz. Su fuente vive en git, como el resto del código.
 
 Esa carpeta convierte Claude Code de un asistente genérico en un compañero que conoce tu proyecto. Quien clone el repo hereda el mismo setup.
 
@@ -33,13 +39,16 @@ El agentic coding es tan bueno como el contexto que le das al agente. La carpeta
 ## La carpeta .claude, de un vistazo
 
 ```
-.claude/
-├── CLAUDE.md         # onboarding del proyecto
-├── settings.json     # permisos, hooks, env
-├── skills/           # procedimientos reutilizables (slash commands)
-├── rules/            # convenciones por glob
-├── hooks/            # scripts que reaccionan a eventos
-└── agents/           # roles especializados
+tu-proyecto/
+├── .mcp.json               # servidores MCP compartidos (solo en la raíz)
+└── .claude/
+    ├── CLAUDE.md           # onboarding del proyecto
+    ├── settings.json       # permisos, hooks, env
+    ├── settings.local.json # ajustes personales, en .gitignore
+    ├── skills/             # procedimientos, cargados bajo demanda
+    ├── rules/              # convenciones, alcance opcional
+    ├── hooks/              # scripts para hooks
+    └── agents/             # roles especializados
 ```
 
 Seis capas, una carpeta. Contexto, seguridad, procedimientos, barandillas, automatización, especialistas.
@@ -85,9 +94,9 @@ Antes de darle más poder al agente, bloquea lo que nunca debe hacer.
 
 {% </deep_dive> %}
 
-Allow desbloquea el flujo. Deny marca la línea que el agente no puede cruzar, aunque se lo pidas con buena cara.
+Allow desbloquea el flujo. Deny frena los errores obvios, pero compara el texto del comando, no lo que hace. `find . -delete` se salta una regla deny sobre `rm`. Para un bloqueo real, usa un [hook](#hooks-automatizacion-en-los-bordes).
 
-> Los permisos son el suelo. Todo lo demás se construye sobre una base segura.
+> Las reglas deny frenan lo obvio. Los hooks imponen el resto.
 
 ## Procedimientos y barandillas
 
@@ -95,7 +104,9 @@ Allow desbloquea el flujo. Deny marca la línea que el agente no puede cruzar, a
 
 Siguiente dolor tras onboarding: la repetición. Los skills lo resuelven.
 
-Un skill es un archivo markdown en `.claude/skills/`, un procedimiento que invocas con una barra:
+Un skill es una carpeta en `.claude/skills/` con un `SKILL.md` dentro: una descripción corta más los pasos. Solo la descripción ocupa contexto. Claude carga el skill completo cuando lo invocas con una barra, o por su cuenta cuando la tarea encaja con la descripción.
+
+Algunos de Phel:
 
 - **`/gh-issue <número>`**: de issue a rama, plan [TDD](/es/blog/test-driven-development/), PR.
 - **`/commit`**: fix, análisis, tests, commit convencional.
@@ -108,7 +119,7 @@ Un skill es un archivo markdown en `.claude/skills/`, un procedimiento que invoc
 - **Rule**: _"usa conventional commits"_. Da forma al resultado, no al procedimiento.
 - **Skill**: _"`/gh-issue 42`"_. El procedimiento _es_ la instrucción.
 
-Los skills convierten conocimiento tribal en pasos ejecutables por cualquiera.
+Los skills convierten los hábitos del equipo en pasos que cualquiera puede ejecutar.
 
 {% </deep_dive> %}
 
@@ -116,7 +127,7 @@ Los skills convierten conocimiento tribal en pasos ejecutables por cualquiera.
 
 ### Rules: las barandillas
 
-`CLAUDE.md` se lee en cada sesión. Las rules solo cuando aplican. Los archivos en `.claude/rules/` apuntan a áreas del código con patrones glob: el agente carga solo lo que corresponde, manteniendo el contexto ligero.
+`CLAUDE.md` se carga en cada sesión. Las rules solo cuando aplican. Los archivos en `.claude/rules/` apuntan a áreas del código con patrones glob, así el contexto se mantiene ligero.
 
 {% <deep_dive title="Rules con glob en la práctica"> %}
 
@@ -131,7 +142,7 @@ Las rules del compilador no se activan al editar código Phel. Las rules de Phel
 
 {% </deep_dive> %}
 
-Las rules no son sugerencias. Viajan con el código: un cambio de convención y su rule viajan en el mismo commit. Sin drift, sin wikis desactualizadas.
+Las rules no son sugerencias. Un cambio de convención y su rule van en el mismo commit. Sin drift, sin wikis desactualizadas.
 
 ![blog-middle](/images/blog/2026-04-17/middle.webp)
 
@@ -141,7 +152,7 @@ Las rules no son sugerencias. Viajan con el código: un cambio de convención y 
 
 Las rules dicen al agente qué hacer. Los hooks se aseguran de que ocurra aunque el agente olvide.
 
-Comandos shell disparados por eventos de Claude Code (`PreToolUse`, `PostToolUse`, `Stop`), conectados vía `settings.json`. En Phel, `PreToolUse` bloquea ediciones a archivos críticos (`build/release.sh`, `.github/*`, `composer.lock`). `PostToolUse` auto-formatea PHP vía `php-cs-fixer`.
+Los hooks son comandos shell disparados por eventos de Claude Code (`PreToolUse`, `PostToolUse`, `Stop`), conectados vía `settings.json`. En Phel, `PreToolUse` bloquea ediciones a archivos críticos (`build/release.sh`, `.github/*`, `composer.lock`). `PostToolUse` auto-formatea PHP vía `php-cs-fixer`.
 
 {% <deep_dive title="Conexión de hooks"> %}
 
@@ -166,17 +177,17 @@ Comandos shell disparados por eventos de Claude Code (`PreToolUse`, `PostToolUse
 
 ### Agents: roles especializados
 
-Todo lo anterior da forma a un solo agente. Los agents añaden especialistas a los que el agente principal puede delegar, cada uno con sus propias herramientas, permisos y modelo. La pieza más avanzada. La recomiendo de última.
+Todo lo anterior da forma a un solo agente. Los agents añaden especialistas a los que el agente principal puede delegar, cada uno con sus propias herramientas, permisos y modelo. La pieza más avanzada, así que añádela la última.
 
 Algunos de Phel:
 
 - **Explorer** (Sonnet, solo lectura): archivos, mapeo de estructura.
-- **Clean Code Reviewer**: SOLID y naming en diffs.
+- **[Clean Code](/es/readings/clean-code/) Reviewer**: SOLID y naming en diffs.
 - **TDD Coach**: imposición red-green-refactor.
 - **Domain Architect**: límites de módulos, pipeline del compilador.
 - **Debugger**: errores del compilador en todas las fases.
 
-Cada agente corre en su propia ventana de contexto: la sesión principal se mantiene limpia mientras el especialista profundiza. La ganancia no es solo coste, es foco. Un agente con solo read y grep no puede reescribir tu código por error.
+Cada agente corre en su propia ventana de contexto, así la sesión principal se mantiene limpia mientras el especialista profundiza. La ganancia es foco, no solo coste. Un agente con solo read y grep no puede reescribir tu código por error.
 
 > El modelo correcto para el trabajo correcto. Rápido y barato para explorar. Profundo y cuidadoso para arquitectura.
 
@@ -195,10 +206,18 @@ El orden, guiado por fricción real:
 
 Cada paso soluciona un problema que realmente tuviste. No uno que imaginaste.
 
-> El setup crece desde la fricción real, no desde el diseño anticipado.
-
 Commitea la carpeta. Compártela. Cuando alguien se una, su sesión hereda todo.
 
-Trata `.claude/` como infraestructura. Versiónala. Revísala. Hazla evolucionar con el código.
+## Una spec para equipos con más de una herramienta de IA
+
+Si tu equipo solo usa Claude Code, puedes parar aquí.
+
+`.claude/` tiene un límite: solo Claude Code la lee. Codex lee `AGENTS.md`, Cursor lee `.cursor/rules/`. En un equipo mixto, las mismas rules se copian a cada formato, y las copias se desincronizan.
+
+Por eso construí [agnostic-ai](https://agnostic-ai.org/). Escribe tus rules, skills, agents y hooks una vez. `agnostic-ai sync` los convierte en los archivos que lee cada herramienta. Commiteas la spec, y las carpetas generadas se quedan fuera de git. Esta web y Phel funcionan así.
+
+> `.claude/` le enseña tu proyecto a una herramienta. Una spec se lo enseña a todas.
+
+Trata tu setup de agentes como infraestructura. Versiónalo. Revísalo. Hazlo evolucionar con el código.
 
 ![blog-footer](/images/blog/2026-04-17/footer.webp)
