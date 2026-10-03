@@ -489,23 +489,23 @@
     <h2 id="products-title"><i class="fa-solid fa-rocket"></i> {{ t.products.title[lang] | safe }}</h2>
     <p class="cv-section__lead">{{ t.products.lead[lang] | safe }}</p>
     <div class="cv-projects cv-projects--two">
-      <a href="{% if lang == 'es' %}https://miaforo.es/{% else %}https://miaforo.es/en{% endif %}" target="_blank" rel="noopener" class="cv-project cv-print-hide">
+      <a href="{% if lang == 'es' %}https://miaforo.com/es{% else %}https://miaforo.com/{% endif %}" target="_blank" rel="noopener" class="cv-project cv-print-hide">
         <h3><i class="fa-solid fa-dumbbell cv-project__icon"></i> MIAFORO</h3>
         <p class="cv-project__meta"><i class="fa-solid fa-user"></i> {{ t.products.role[lang] | safe }}</p>
         <p>{{ t.products.miaforo[lang] | safe }}</p>
       </a>
-      <a href="{% if lang == 'es' %}https://puertafria.es/{% else %}https://puertafria.es/en{% endif %}" target="_blank" rel="noopener" class="cv-project cv-print-hide">
-        <h3><i class="fa-solid fa-mobile-screen cv-project__icon"></i> puertafria</h3>
+      <a href="{% if lang == 'es' %}https://puertafria.es/es{% else %}https://puertafria.es/{% endif %}" target="_blank" rel="noopener" class="cv-project cv-print-hide">
+        <h3><i class="fa-solid fa-mobile-screen cv-project__icon"></i> tocadi</h3>
         <p class="cv-project__meta"><i class="fa-solid fa-user"></i> {{ t.products.role[lang] | safe }}</p>
-        <p>{{ t.products.puertafria[lang] | safe }}</p>
+        <p>{{ t.products.tocadi[lang] | safe }}</p>
       </a>
       <div class="cv-project cv-print-only">
         <h3>MIAFORO</h3>
         <p>{{ t.products.miaforo_print[lang] | safe }}</p>
       </div>
       <div class="cv-project cv-print-only">
-        <h3>puertafria</h3>
-        <p>{{ t.products.puertafria_print[lang] | safe }}</p>
+        <h3>tocadi</h3>
+        <p>{{ t.products.tocadi_print[lang] | safe }}</p>
       </div>
     </div>
   </section>
