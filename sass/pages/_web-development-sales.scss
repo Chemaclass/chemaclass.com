@@ -88,15 +88,6 @@
     text-transform: uppercase;
   }
 
-  // Each crop keeps the project's main message inside the same 16:10 frame.
-  &__slide--windmill { --proof-width: 100%; --proof-left: 0%; --proof-top: -35.8%; }
-  &__slide--teina { --proof-width: 123.08%; --proof-left: -11.54%; --proof-top: -17.85%; }
-  &__slide--sandoval { --proof-width: 139.13%; --proof-left: -20%; --proof-top: -18.09%; }
-  &__slide--dkrisna { --proof-width: 168.42%; --proof-left: -34.74%; --proof-top: -61.47%; }
-  &__slide--postcard { --proof-width: 139.13%; --proof-left: -20%; --proof-top: -46.61%; }
-  &__slide--miaforo { --proof-width: 100%; --proof-left: 0%; --proof-top: 0%; }
-  &__slide--puertafria { --proof-width: 124%; --proof-left: 0%; --proof-top: 0%; }
-
   &__slide > a {
     display: block;
     position: relative;
@@ -113,12 +104,9 @@
 
   &__slide > a > img {
     display: block;
-    position: absolute;
-    width: var(--proof-width, 125%);
-    max-width: none;
-    height: auto;
-    left: var(--proof-left, -12.5%);
-    top: var(--proof-top, 0%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     margin: 0;
     border: 0;
     border-radius: 0;
@@ -645,9 +633,8 @@
     object-position: 28% top;
   }
 
-  // The narrow column shows the product mockup, not the headline beside it.
-  &--focus-right > img {
-    object-position: right top;
+  &--focus-center > img {
+    object-position: center top;
   }
 
   &--crop-left > img {
@@ -729,11 +716,6 @@
     border-bottom: 1px solid var(--sales-border);
     object-fit: cover;
     object-position: top;
-  }
-
-  // For captures whose message sits low in the frame, like a full-bleed hero.
-  &--focus-bottom > img {
-    object-position: bottom;
   }
 
   &__body {
