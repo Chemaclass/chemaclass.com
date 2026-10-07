@@ -4,6 +4,7 @@
 /.agents/skills/
 /.agnostic-ai/local/
 /.agnostic-ai/packs/
+/.claude/.agnostic-ai-permissions.json
 /.claude/agent-memory-local/
 /.claude/agents/
 /.claude/rules/
@@ -12,6 +13,8 @@
 /.claude/skills/
 /.codex/agents/
 /.codex/hooks.json
+/.codex/hooks/
+/.codex/rules/
 /AGENTS.md
 /CLAUDE.md
 /agnostic-ai.local.yaml

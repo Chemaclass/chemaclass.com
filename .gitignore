@@ -18,9 +18,11 @@ static/slides/*/slides.pdf
 # Generated paths. Edit specs, not this block. Run `agnostic-ai sync` to refresh.
 # Not committed: a fresh clone or `git worktree` lacks these until `agnostic-ai sync` runs (e.g. a post-checkout hook).
 /.agents/skills/
+/.agnostic-ai/.command-lock
 /.agnostic-ai/.sync-state
 /.agnostic-ai/local/
 /.agnostic-ai/packs/
+/.claude/.agnostic-ai-permissions.json
 /.claude/agent-memory-local/
 /.claude/agents/
 /.claude/rules/
@@ -31,6 +33,8 @@ static/slides/*/slides.pdf
 /.claude/worktrees/
 /.codex/agents/
 /.codex/hooks.json
+/.codex/hooks/
+/.codex/rules/
 /AGENTS.md
 /CLAUDE.md
 /agnostic-ai.local.yaml

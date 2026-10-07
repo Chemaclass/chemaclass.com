@@ -1,0 +1,4 @@
+target: claude
+permissions:
+  deny:
+    - shell(git push origin +*)
