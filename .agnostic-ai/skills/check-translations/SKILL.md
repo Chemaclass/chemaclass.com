@@ -1,6 +1,6 @@
 ---
 name: check-translations
-description: "Find content files missing their Spanish (.es.md) translation. Use when asked about translation coverage or after adding new English content."
+description: "Find content files missing their Spanish (.es.md) translation. Use when asked how much content is translated, or after adding new English content."
 x-claude:
   allowed-tools: Glob, Read, Grep
 model: haiku
@@ -9,7 +9,7 @@ argument-hint: "[blog|readings|talks]"
 
 # Check Translations
 
-Find content files that are missing their Spanish (`.es.md`) counterpart.
+Find content files that are missing their Spanish (`.es.md`) version.
 
 ## Instructions
 
@@ -18,13 +18,13 @@ Find content files that are missing their Spanish (`.es.md`) counterpart.
    - `content/readings/`
    - `content/talks/`
 2. If the request names a directory (e.g. "blog"), only check that one.
-3. For each English file, check if a colocated `.es.md` version exists.
+3. For each English file, check if an `.es.md` version exists in the same folder.
 
 ## Output format
 
 - Total files vs translated count per directory
 - List of files missing translations (most recent first)
-- Overall translation coverage percentage
+- Overall percentage of translated files
 
 ::target claude
 ## Target

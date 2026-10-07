@@ -11,6 +11,6 @@ x-claude:
 zola check --skip-external-links
 ```
 
-External links are skipped by default: many old event pages (meetup.com) are dead and drown the report in noise. Run plain `zola check` only when explicitly asked to verify external URLs too.
+External links are skipped by default. Many old event pages (meetup.com) no longer exist, and they fill the report with useless errors. Run plain `zola check` only when the user asks to check external URLs too.
 
 Report any broken links found, with the file and link for each.

@@ -1,6 +1,6 @@
 ---
 name: validate-prod
-description: "Check the live site: structured data, machine formats, every URL it points at, and first-paint weight. Use after a deploy, or when asked whether production is healthy."
+description: "Check the live site: structured data, machine-readable formats, every URL it links to, and how much a page loads before it first shows. Use after a deploy, or when asked whether production is healthy."
 x-claude:
   allowed-tools: Bash(python3 scripts/validate-prod.py:*)
 ---
@@ -13,28 +13,32 @@ python3 scripts/validate-prod.py --full    # also sweeps every URL, about five m
 ```
 
 Run the plain form after a deploy. Run `--full` when the change touched URLs,
-mirrors, feeds or the sitemap, or when nobody has swept in a while.
+mirrors (the `.txt` and `.md` copies of pages), feeds or the sitemap, or when
+nobody has checked every URL for a while.
 
-Three passes, all against what is actually being served:
+It runs three checks, all against what the live server returns:
 
-- **features**: the structured data, machine formats, licence and freshness
-  signals the site claims to publish, checked on the pages that carry them.
+- **features**: the structured data, machine-readable formats, licence and
+  last-updated dates the site says it publishes. Each is checked on the pages
+  that should have it.
 - **sweep** (`--full`): every URL in the sitemap, `index.json`, both `llms.txt`
-  files and the tag feeds. Anything not 200 is a promise the site is not keeping.
-- **weight**: what a browser downloads before it can paint each page type, lazy
-  images excluded. Fails over 300KB.
+  files and the tag feeds. Any URL that does not return 200 is a failure: the
+  site lists it, but it does not work.
+- **weight**: how much a browser downloads before it can first show each type of
+  page, not counting images that load later (lazy images). Fails over 300KB.
 
 Exit code is non-zero when anything fails, and the failures are listed again at
 the end.
 
-`--base http://127.0.0.1:1111` points it at `zola serve` instead, though the
-freshness and sitemap checks want a full `./build.sh` to have run.
+`--base http://127.0.0.1:1111` runs it against the local `zola serve` instead.
+The last-updated date and sitemap checks need a full `./build.sh` run first.
 
 ## What it does not cover
 
-Anything a browser has to execute: `scripts/check-js-runtime.py` covers that,
-and it runs in CI. This checks the bytes, not the behaviour.
+Anything a browser has to run, like JavaScript: `scripts/check-js-runtime.py`
+checks that, and it runs in CI. This script checks the files the server sends,
+not how the page behaves.
 
-Report failures with the check name and the detail it printed. A single
-throttled 503 during a sweep is retried once before being called a failure, so a
-reported failure is real.
+Report failures with the check name and the detail it printed. During a sweep,
+a single 503 caused by rate limiting is retried once before it counts as a
+failure. So a reported failure is real.
