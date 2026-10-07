@@ -1,0 +1,5 @@
+protected:
+  paths:
+    - public/
+  decision: deny
+  reason: public/ is build output. Edit content/, templates/, sass/ or static/, then run ./build.sh.

@@ -1,6 +1,4 @@
-command: f=$(jq -r '.tool_input.file_path // empty'); case "$f" in */content/*.md|*/static/slides/*.md) if grep -n -e '—' -e '–' "$f" >&2; then echo "Em dash (U+2014) and en dash (U+2013) are forbidden; replace them (see .agnostic-ai/rules/no-em-dash.md)" >&2; exit 2; fi ;; esac; exit 0
-event: PostToolUse
-matcher: Edit|Write
 name: content-no-dashes
-target: claude
 description: After editing content or a slide deck, block em and en dashes in that file.
+on: after-edit
+command: 'command -v agnostic-ai >/dev/null || { echo "agnostic-ai is not on PATH, so the dash check cannot run" >&2; exit 2; }; files=$(agnostic-ai hook paths) || exit 2; printf "%s\n" "$files" | { bad=0; while IFS= read -r f; do case "$f" in content/*.md|*/content/*.md|static/slides/*.md|*/static/slides/*.md) if grep -n -e "—" -e "–" "$f" >&2; then bad=1; fi ;; esac; done; [ "$bad" = 0 ] || { echo "Em dash (U+2014) and en dash (U+2013) are forbidden; replace them (see .agnostic-ai/rules/no-em-dash.md)" >&2; exit 2; }; }'

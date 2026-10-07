@@ -1,8 +1,8 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Chemaclass/agnostic-ai/main/docs/schemas/config.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Chemaclass/agnostic-ai/v0.80.0/docs/schemas/config.schema.json
 version: 1
 
 # The release the generated files come from; `agnostic-ai upgrade --version v0.76.0` installs it.
-requires: "0.76.0"
+requires: "0.80.0"
 
 targets:
   - claude
@@ -14,3 +14,8 @@ gitignore:
 
 # Fail if a spec cannot be represented by a selected target.
 on-unsupported: error
+
+# Turn the shell rules in settings/permissions.yaml into Codex exec policies.
+outputs:
+  codex:
+    exec-policies-from-permissions: true
