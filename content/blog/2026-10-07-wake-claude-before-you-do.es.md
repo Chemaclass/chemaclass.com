@@ -1,6 +1,6 @@
 +++
 title = "Despierta a Claude Antes que Tú"
-description = "Los bloques de uso de Claude empiezan con tu primer mensaje. Un ping a las 7:00 mueve los reinicios a las 12:00 y las 17:00: tres bloques al día, no dos."
+description = "Los bloques de uso de Claude empiezan con tu primer mensaje. Un ping a las 7:00 mueve los reinicios a las 12:00 y las 17:00: tres bloques en tu jornada, no dos."
 draft = false
 [taxonomies]
 tags = [ "ai", "productivity", "developer-tools" ]
@@ -38,7 +38,7 @@ Manda tu primer prompt a las 9:00 y tu bloque dura hasta las 14:00. Si lo gastas
 
 La solución no es un plan más grande. Es mover ese primer mensaje.
 
-Eso hace un ping. Un mensaje mínimo, enviado a una hora fija, que solo dice "ping".
+Eso es lo que hace un ping. Un mensaje mínimo, enviado a una hora fija, que solo dice "ping".
 
 ## Un ping a las 7:00 te da un tercer bloque
 
@@ -65,9 +65,13 @@ Así que las horas del ping tienen que cuadrar con los bloques: 7:01, 12:01, 17:
 
 ## Haz que el ping no cueste casi nada
 
-Un `claude -p "ping"` normal no es pequeño. Claude Code manda todo tu setup en cada llamada: sus instrucciones largas, su lista de tools, tus plugins, tus apps conectadas, tus ficheros `CLAUDE.md`. En mi ordenador eran **unos 30.800 tokens** para decir "ping".
+Un `claude -p "ping"` normal no es pequeño. Claude Code manda todo tu setup en cada llamada: sus instrucciones largas, su lista de herramientas, tus plugins, tus apps conectadas, tus ficheros `CLAUDE.md`. En mi ordenador eran **unos 30.800 tokens** (las unidades con las que Claude cuenta tu uso) para decir "ping".
 
-Estos flags lo apagan todo:
+Apaga todo eso y usa Haiku, el modelo más pequeño y barato de Claude. La misma comprobación, **482 tokens**. Unas 60 veces menos.
+
+> Un ping solo tiene que llegar. No necesita todo tu setup.
+
+{% <deep_dive title="Los flags que lo hacen pequeño"> %}
 
 ```bash
 claude -p "ping" --model haiku \
@@ -79,8 +83,6 @@ claude -p "ping" --model haiku \
   --no-session-persistence
 ```
 
-La misma comprobación, **482 tokens**. Unas 60 veces menos. Haiku es el modelo más pequeño y barato de Claude.
-
 - `--setting-sources ""` ignora tus settings y plugins.
 - `--strict-mcp-config` ignora tus apps conectadas (servidores MCP).
 - `--tools ""` no manda la lista de tools.
@@ -90,55 +92,82 @@ La misma comprobación, **482 tokens**. Unas 60 veces menos. Haiku es el modelo 
 
 Una trampa: **no uses `--bare`**. Parece perfecto, pero se salta tu login de Claude y pide una API key. Entonces pagas por mensaje, y el reloj de tu plan nunca arranca.
 
-> Un ping solo tiene que llegar. No necesita todo tu setup.
+{% </deep_dive> %}
 
 ## Configúralo una vez
 
-Tres pasos en macOS. Primero busca dónde está `claude`. El programador de tareas necesita la ruta completa:
+En un Mac son cuatro piezas: un token, un script pequeño, una hora programada y una hora para despertar.
+
+El token me pilló por sorpresa. Mi primera versión se lanzaba a su hora y no hacía nada. El log decía por qué: `Not logged in · Please run /login`. El programador de tareas corre fuera de tu sesión, así que no puede leer el login de Claude que tu Mac guarda con sus contraseñas. `claude setup-token` te da un token que dura un año y va con tu plan.
+
+La hora de despertar también importa. Un Mac dormido se salta el ping de las 7:01, y un ping a las 10:00 empieza tu bloque a las 10:00. Adiós ventaja. Así que el Mac se despierta solo a las 6:58.
+
+Con la pantalla bloqueada funciona. El ping no necesita tu contraseña. La tapa cerrada es el punto débil: un MacBook cerrado y sin pantalla externa puede despertarse un momento y volver a dormirse antes de las 7:01. Un Mac apagado no se despierta.
+
+{% <deep_dive title="Paso a paso"> %}
+
+**1. Consigue un token.** `claude setup-token` abre el navegador e imprime un token. Cópialo y guárdalo en un fichero que solo puedas leer tú:
 
 ```bash
-which claude
+claude setup-token
+mkdir -p ~/.config/claude-ping
+pbpaste > ~/.config/claude-ping/token
+chmod 600 ~/.config/claude-ping/token
 ```
 
-**1. Un atajo para lanzarlo a mano.** Añádelo a `~/.zshrc`. Imprime `OK` o `FAIL`, así que también te dice si Claude funciona:
+**2. Escribe el script.** Guarda esto como `~/.local/bin/claude-ping`. Cambia `/path/to/claude` por lo que te dé `which claude`:
 
-```zsh
-alias claude-ping='claude -p "ping" --model haiku --setting-sources "" --strict-mcp-config --tools "" --disable-slash-commands --system-prompt "Reply pong." --no-session-persistence >/dev/null && echo OK || echo FAIL'
+```sh
+#!/bin/sh
+export PATH="$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
+export CLAUDE_CODE_OAUTH_TOKEN="$(cat "$HOME/.config/claude-ping/token")"
+cd /tmp || exit 1
+date "+%F %R"
+/path/to/claude -p "ping" --model haiku \
+  --setting-sources "" --strict-mcp-config --tools "" \
+  --disable-slash-commands --system-prompt "Reply pong." \
+  --no-session-persistence
 ```
 
-**2. Prográmalo.** cron es el programador de tareas que trae tu Mac. Ejecuta `crontab -e` y añade una línea, con tu ruta de `which claude`:
+Ejecuta `chmod +x ~/.local/bin/claude-ping` y después `~/.local/bin/claude-ping`. Quieres ver `pong`.
+
+**3. Prográmalo.** cron es el programador de tareas que trae tu Mac. Ejecuta `crontab -e` y añade una línea:
 
 ```
-1 7,12,17 * * * cd /tmp && /path/to/claude -p "ping" --model haiku --setting-sources "" --strict-mcp-config --tools "" --disable-slash-commands --system-prompt "Reply pong." --no-session-persistence >> $HOME/.claude-ping.log 2>&1
+1 7,12,17 * * * $HOME/.local/bin/claude-ping >> $HOME/.claude-ping.log 2>&1
 ```
 
-**3. Despierta el Mac.** Cron se salta las ejecuciones mientras el portátil duerme, y un ping a las 10:00 empieza tu bloque a las 10:00. Adiós ventaja. Esto lo despierta a las 6:58:
+**4. Despierta el Mac a las 6:58.** Para deshacerlo: `sudo pmset repeat cancel`.
 
 ```bash
-sudo pmset repeat wakeorpoweron MTWRFSU 06:58:00
+sudo pmset repeat wake MTWRFSU 06:58:00
 ```
 
-No funciona si el Mac está apagado. Para deshacerlo: `sudo pmset repeat cancel`.
+A la mañana siguiente, abre `~/.claude-ping.log`. Quieres ver una fecha y `pong` por cada ejecución. Si tu portátil duerme cerrado, pruébalo una noche con la tapa bajada.
 
-Al día siguiente, mira `~/.claude-ping.log`. Quieres ver `pong`.
+{% </deep_dive> %}
 
 {% <deep_dive title="Un prompt para que tu agente lo configure"> %}
 
-Pega esto en Claude Code, Codex o cualquier agente que pueda ejecutar comandos:
+Ejecuta tú `claude setup-token` y guarda el token como en el paso 1. Después pega esto tal cual (en inglés) en Claude Code, Codex o cualquier agente que pueda ejecutar comandos:
 
 ```text
-Set up "claude-ping" on this machine so my Claude usage block starts at 7:01, 12:01, and 17:01 every day.
+Set up "claude-ping" on this Mac so my Claude usage block starts at 7:01, 12:01, and 17:01 every day.
 
-1. Run `which claude` and use that full path in the scheduled job.
-2. Add this alias to my shell config (~/.zshrc or ~/.bashrc), replacing any old claude-ping alias:
-   alias claude-ping='claude -p "ping" --model haiku --setting-sources "" --strict-mcp-config --tools "" --disable-slash-commands --system-prompt "Reply pong." --no-session-persistence >/dev/null && echo OK || echo FAIL'
-3. Add this line to my crontab. Keep any lines already there:
-   1 7,12,17 * * * cd /tmp && <CLAUDE_PATH> -p "ping" --model haiku --setting-sources "" --strict-mcp-config --tools "" --disable-slash-commands --system-prompt "Reply pong." --no-session-persistence >> $HOME/.claude-ping.log 2>&1
-4. Test the alias with `zsh -ic claude-ping`. It should print OK.
-5. Test the scheduled command the way cron runs it. It should print pong:
-   env -i HOME="$HOME" USER="$USER" LOGNAME="$USER" PATH=/usr/bin:/bin /bin/sh -c '<the crontab command without the >> log part>'
-6. Do not use --bare. Do not run sudo. On a Mac, tell me the pmset command to wake it at 06:58 so I can run it myself.
-7. Tell me what you changed and the test results.
+1. Check that ~/.config/claude-ping/token exists. Never read or print it. If it is missing, stop and tell me.
+2. Run `which claude` and use that full path as <CLAUDE_PATH>.
+3. Create ~/.local/bin/claude-ping with this content and make it executable:
+   #!/bin/sh
+   export PATH="$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
+   export CLAUDE_CODE_OAUTH_TOKEN="$(cat "$HOME/.config/claude-ping/token")"
+   cd /tmp || exit 1
+   date "+%F %R"
+   <CLAUDE_PATH> -p "ping" --model haiku --setting-sources "" --strict-mcp-config --tools "" --disable-slash-commands --system-prompt "Reply pong." --no-session-persistence
+4. Add this line to my crontab. Keep any lines already there:
+   1 7,12,17 * * * $HOME/.local/bin/claude-ping >> $HOME/.claude-ping.log 2>&1
+5. Run ~/.local/bin/claude-ping. It should print the date and pong.
+6. Do not use --bare. Do not run sudo. Tell me the pmset command to wake the Mac at 06:58 so I can run it myself.
+7. Tell me what you changed and the test result.
 ```
 
 {% </deep_dive> %}
@@ -149,7 +178,7 @@ El ping es un valor por defecto, no un candado. Si mandas un prompt de verdad a 
 
 Esto funciona con los bloques de 5 horas tal como Anthropic los gestiona en octubre de 2026. Si cambian las reglas, cambia las horas.
 
-Combina bien con [recortar la factura de tokens](/es/blog/cut-the-token-bill-on-both-ends/). Ese post hace que cada bloque dure más. Este te da más bloques.
+Combina bien con [recortar la factura de tokens por los dos lados](/es/blog/cut-the-token-bill-on-both-ends/). Ese post hace que cada bloque dure más. Este te da más bloques.
 
 ## Cambia de herramienta, no de setup
 
