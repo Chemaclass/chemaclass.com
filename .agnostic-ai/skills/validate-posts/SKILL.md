@@ -1,6 +1,6 @@
 ---
 name: validate-posts
-description: "Lint blog posts for missing front matter, broken asset references, structure issues, and forbidden dashes. Use before publishing a post, before flipping draft to false, or after substantial edits to existing content."
+description: "Check blog posts for missing front matter, broken asset references, structure issues, and forbidden dashes. Use before publishing a post, before changing draft to false, or after substantial edits to existing content."
 x-claude:
   allowed-tools: Glob, Read, Grep
 argument-hint: "[file-path or date]"
@@ -8,7 +8,7 @@ argument-hint: "[file-path or date]"
 
 # Validate Posts
 
-Lint blog posts (and optionally readings) for common issues.
+Check blog posts (and optionally readings) for common issues.
 
 ## Instructions
 
@@ -25,15 +25,15 @@ Lint blog posts (and optionally readings) for common issues.
 - `<!-- more -->` marker must exist after the introduction
 - Must have `related_posts` in front matter
 - No skipped heading levels (e.g. h2 to h4 without h3)
-- Advisory (report as a note, not a failure): the norm is 4 to 7 `## ` (h2) headings; deep_dive-heavy explainers and short reflective essays legitimately fall outside it
+- Advice only (report as a note, not a failure): most posts have 4 to 7 `## ` (h2) headings. Long explainers with many deep_dive blocks, and short personal essays, can have more or fewer, and that is fine
 - No em dash (`—`, U+2014) anywhere; no en dash (`–`, U+2013) in prose
-- Every block component opened as `{% <deep_dive title="..."> %}` or `{% <kudos> %}` is closed by its matching `{% </deep_dive> %}` or `{% </kudos> %}`, and no pre-0.23 shortcode syntax is left (`{% end %}`, `youtube(`, `deep_dive(`, `kudos(`, `gist(`)
-- Any other `{{`, `{%` or `{#` in the body sits inside `{% raw %}...{% endraw %}`: the body is rendered as a Tera template
+- Every block component opened as `{% <deep_dive title="..."> %}` or `{% <kudos> %}` is closed by its matching `{% </deep_dive> %}` or `{% </kudos> %}`, and no shortcode syntax from before version 0.23 is left (`{% end %}`, `youtube(`, `deep_dive(`, `kudos(`, `gist(`)
+- Any other `{{`, `{%` or `{#` in the body must be inside `{% raw %}...{% endraw %}`, because the body is rendered as a Tera template
 
 ### Series checks
 - If `series` is set, `series_order` must be set too (and vice versa)
 - The `series` value must exist as a `[extra.series.<key>]` entry in `config.toml`
-- `series` and `series_order` must be identical in the EN file and its `.es.md` mirror
+- `series` and `series_order` must be identical in the EN file and its `.es.md` translation
 
 ### Asset checks
 - If `static_thumbnail` is a local path, verify the file exists in `static/`

@@ -13,4 +13,4 @@ zola build
 
 If there are errors, analyze them and suggest fixes.
 
-Note: this is the fast error check. The production `./build.sh` also runs python post-processing and minify steps that a green `zola build` does not exercise.
+Note: this is the quick error check. The production script `./build.sh` also runs Python steps that process the output and minify it (make the files smaller). A passing `zola build` does not test those steps.

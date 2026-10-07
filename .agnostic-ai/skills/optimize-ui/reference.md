@@ -1,6 +1,6 @@
 # Design System Reference
 
-## SCSS Architecture (SMACSS-inspired)
+## SCSS File Structure (based on SMACSS)
 
 ```
 sass/
@@ -35,7 +35,7 @@ sass/
 | `--search-input-bg` | `#fff` | `#22262b` | Card/input backgrounds |
 | `--search-bg-selected-item` | `#f5f6f8` | `#282d33` | Hover backgrounds |
 
-A semantic status palette (`--color-error/success/warning/info/primary/secondary/neutral` variants) and further `--search-*` tokens also live in `abstracts/_variables.scss`; check there when styling status or search UI.
+Status colors (`--color-error/success/warning/info/primary/secondary/neutral` variants) and more `--search-*` tokens also live in `abstracts/_variables.scss`. Check there when styling status messages or search UI.
 
 ## Shadow Tokens
 
@@ -59,7 +59,7 @@ Dark mode shadows use higher opacity (0.15-0.3 range).
 - **Body:** 18px / 1.7 line-height
 - **Headings:** weight 500, `letter-spacing: -0.01em`
 - **Font smoothing:** antialiased on both webkit and moz
-- **Inline code:** 0.88em, 4px border-radius, subtle bg
+- **Inline code:** 0.88em, 4px border-radius, light background
 - **Pre blocks:** 10px border-radius, `--shadow-sm`
 
 ## Breakpoints
@@ -83,7 +83,7 @@ $toc-content-width: 700px;       // Content with TOC sidebar
 
 ## Card Pattern
 
-All interactive cards follow this pattern:
+All clickable cards use this pattern:
 ```scss
 background: var(--search-input-bg);
 border: 1px solid var(--preview-divider-color);
@@ -102,7 +102,7 @@ transition: transform 0.3s var(--ease-out-expo),
 
 ## Callout Pattern (kudos)
 
-Non-interactive callouts (`sass/components/_kudos.scss`, component `templates/components/kudos.html`) use an accent bar instead of the card hover pattern:
+Callouts that are not clickable (`sass/components/_kudos.scss`, component `templates/components/kudos.html`) use a colored bar on the left (accent bar) instead of the card hover pattern:
 ```scss
 background: rgba(var(--body-bg-rgb), 0.3);
 border-left: 3px solid var(--accent-color);

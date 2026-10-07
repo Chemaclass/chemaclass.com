@@ -1,6 +1,6 @@
 # chemaclass.com
 
-Personal website built with [Zola](https://www.getzola.org/), a Rust-based static site generator.
+Personal website built with [Zola](https://www.getzola.org/), a static site generator written in Rust.
 
 I write about tech, habits, and team behaviors at my [blog](https://chemaclass.com/blog/). You can also find my [book reading notes](https://chemaclass.com/readings/) and [talks](https://chemaclass.com/talks/).
 
@@ -9,17 +9,17 @@ I write about tech, habits, and team behaviors at my [blog](https://chemaclass.c
 ## Prerequisites
 
 - [Zola](https://www.getzola.org/documentation/getting-started/installation/) 0.23.6 or newer
-- Python 3 (standard library only, for the post-build scripts)
+- Python 3 (standard library only, for the build scripts)
 - [minify](https://github.com/tdewolff/minify) (production builds only)
 
 ### Zola version
 
-The templates use Tera 2 components, including implicit params (`@lang`),
-which arrived in Zola 0.23.6. Anything older fails the build. `build.sh`
-(`ZOLA_VERSION`) and the deploy workflow both pin 0.23.6, and `build.sh`
-refuses an older local binary.
+The templates use Tera 2 components, including implicit params (`@lang`).
+These came in Zola 0.23.6, so any older version fails the build. `build.sh`
+(`ZOLA_VERSION`) and the deploy workflow both fix the version at 0.23.6.
+`build.sh` stops if your local Zola is older.
 
-If Homebrew still ships an older release, install the binary by hand:
+If Homebrew still has an older release, install the binary by hand:
 
 ```bash
 curl -sSL https://github.com/getzola/zola/releases/download/v0.23.6/zola-v0.23.6-aarch64-apple-darwin.tar.gz | tar -xz
@@ -49,9 +49,10 @@ paypal_enabled = true
 lightning_enabled = false
 ```
 
-These switches apply to both sponsor page languages and their donation metadata.
-Two enabled methods appear side by side (stacked on mobile); one is centered.
-With both disabled, the page suggests sharing articles or contributing to projects.
+These switches apply to the sponsor page in both languages and to its donation metadata.
+If both methods are on, they show side by side (one above the other on mobile).
+If only one is on, it is centered.
+If both are off, the page asks readers to share articles or help with projects instead.
 
 ## Production build
 
@@ -59,26 +60,26 @@ With both disabled, the page suggests sharing articles or contributing to projec
 ./build.sh
 ```
 
-Runs `zola build`, then the `scripts/` post-processors: check the icon subset and the topic tag coverage, enrich the search index and sitemap with dates, generate the terminal filesystem, the plain-text and Markdown page mirrors, `llms-full.txt`, and the JSON feed, then minify HTML, CSS, and JS.
+This runs `zola build` with the Python scripts in `scripts/` around it. Two run before the build: they check the i18n files and work out when each page was last edited. The rest run after it. They check icons, tags, assets, and image sizes. They add dates to the search index and the sitemap. They generate the terminal page files, plain-text and Markdown copies of each page, `llms.txt`, the JSON feed, and `/index.json`. Last, they minify (shrink) the HTML, CSS, and JS. The full list, in order, is under "Build Steps" in `.agnostic-ai/AGNOSTIC_AI.md`.
 
 ## Smoke test
 
-`zola build` never runs the site's JavaScript, so a script that parses fine and dies on its first line still produces a green build. That is how a broken `profile.js` reached production and left every visitor looking at a loading skeleton.
+`zola build` never runs the site's JavaScript. So a script can have valid syntax, crash on its first line, and the build still passes. That is how a broken `profile.js` reached production. Every visitor saw only the loading placeholder.
 
 ```bash
 ./build.sh
 python3 scripts/check-js-runtime.py
 ```
 
-It serves `public/` locally, loads 18 pages covering each of the site's scripts in headless Chrome, and fails on any uncaught exception. Needs Chrome, which is why it runs as its own CI step rather than inside `build.sh`: that script has to work anywhere with Zola, Python and minify. Takes about 45 seconds.
+It serves `public/` on your machine. It loads 18 pages, which together cover every script on the site, in headless Chrome (Chrome with no window). It fails on any uncaught error. It needs Chrome, so it runs as its own CI step and not inside `build.sh`. `build.sh` must work on any machine with Zola, Python and minify. The check takes about 45 seconds.
 
-Every run starts by loading a page that throws on purpose and requiring that it be caught. A checker like this has several ways to silently pass everything (Chrome not launching, a changed log format, a regex that matches nothing), and all of them look identical to a clean site, so a pass is only worth reading after the detector has proved it can fail.
+Every run starts with a page that throws an error on purpose, and the check must catch it. A checker like this can pass everything without telling you, in several ways: Chrome does not start, the log format changes, or a regex matches nothing. Each of these looks the same as a site with no errors. So a pass only means something after the checker has shown that it can fail.
 
-Read the module docstring before trusting a green run. It cannot see a bare `console.error`, a 404 on a subresource, or anything behind a click.
+Read the comment at the top of the script before you trust a passing run. The check cannot see a plain `console.error`, a 404 on a file the page loads (an image, a script, a style), or anything that only happens after a click.
 
 ## Icons
 
-The site ships a Font Awesome subset: only the ~100 icons actually used, cut from the pristine release in `tools/fontawesome/` into `static/`. Full set is 397 KB, the subset is 39 KB.
+The site ships a Font Awesome subset: only the ~100 icons it uses. The script cuts them from the untouched original release in `tools/fontawesome/` and writes them to `static/`. The full set is 397 KB, the subset is 39 KB.
 
 After adding or removing an `fa-*` class, regenerate it and commit the result:
 
@@ -87,7 +88,7 @@ pip install fonttools brotli
 python3 scripts/subset-fontawesome.py
 ```
 
-Forgetting is safe: `./build.sh` runs `scripts/check-icons.py`, which fails the build on an icon class the subset does not carry.
+If you forget, nothing breaks in production. `./build.sh` runs `scripts/check-icons.py`, which fails the build when a page uses an icon class that the subset does not have.
 
 ## Project structure
 
@@ -96,24 +97,24 @@ content/     Blog posts, readings, talks (Markdown, EN + colocated .es)
 templates/   Tera templates
 sass/        SCSS, compiled by Zola
 static/      Images, JS, fonts, and served metadata (llms.txt, robots.txt, ...)
-scripts/     Python post-build processors (shared helpers in _common.py)
+scripts/     Python build scripts run by build.sh (shared helpers in _common.py)
 docs/        Notes on how the site is written and released
-tools/       Pristine vendor sources the build cuts down (Font Awesome)
+tools/       Untouched vendor sources the build cuts down (Font Awesome)
 config.toml  Zola config, i18n strings, and site data
 ```
 
 ## Writing
 
-File layout, drafts, and how to land a post on a chosen day:
+File layout, drafts, and how to publish a post on a chosen day:
 [docs/publishing.md](docs/publishing.md).
 
 ## Contributing
 
-Issues and typo/bug-fix PRs are welcome. Content contributions to blog posts, readings, or talks are unlikely to be merged.
+Issues and PRs that fix a typo or a bug are welcome. Changes to the content of blog posts, readings, or talks will most likely not be merged.
 
 ## License
 
-Dual-licensed:
+Two licenses:
 
 - **Code** (templates, stylesheets, scripts, configuration): [MIT](LICENSE)
 - **Content** (`content/**`: blog posts, readings, talks, CV): [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
