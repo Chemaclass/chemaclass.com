@@ -10,14 +10,14 @@
       {% set_global taken = [page.permalink] %}
       {% for path in page.extra.related_posts %}
         {% set related = get_page(path=path, lang=lang) %}
-        {% if related.permalink not in taken and picked | length < 4 %}
+        {% if related.permalink not in taken and picked | length < 3 %}
           {% set_global picked = [...picked, related] %}
           {% set_global taken = [...taken, related.permalink] %}
         {% endif %}
       {% endfor %}
 
-      {# Always four cards: hand-picked first, then posts sharing two or more tags, then one, then the rest; newest first within each. #}
-      {% if picked | length < 4 %}
+      {# Always three cards: hand-picked first, then posts sharing two or more tags, then one, then the rest; newest first within each. #}
+      {% if picked | length < 3 %}
         {% set page_tags = page.taxonomies.tags | default(value=[]) %}
         {% set_global strong = [] %}
         {% set_global weak = [] %}
@@ -39,7 +39,7 @@
           {% endif %}
         {% endfor %}
         {% for post in [...strong, ...weak, ...rest] %}
-          {% if picked | length < 4 %}
+          {% if picked | length < 3 %}
             {% set_global picked = [...picked, post] %}
           {% endif %}
         {% endfor %}
