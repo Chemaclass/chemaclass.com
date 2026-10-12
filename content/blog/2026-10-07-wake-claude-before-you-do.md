@@ -5,7 +5,7 @@ draft = false
 [taxonomies]
 tags = [ "ai", "productivity", "developer-tools" ]
 [extra]
-tldr = "Claude's usage blocks start with your first message. Ping it at 7:00, 12:00 and 17:00 with a 500-token call and a 9-to-6 workday gets three fresh blocks instead of two."
+tldr = "Claude's usage blocks start with your first message. Ping it at 7:01, 12:01 and 17:01 with a cloud routine on Haiku, and a 9-to-6 workday gets three fresh blocks instead of two."
 subtitle = "Three blocks, not two"
 static_thumbnail = "/images/blog/2026-10-07/cover.webp"
 series = "ai"
@@ -36,9 +36,7 @@ On the Pro and Max plans, Claude gives you usage in **5-hour blocks**. The block
 
 Send your first prompt at 9:00 and your block runs until 14:00. Use it all by 11:00 and you wait.
 
-The fix isn't a bigger plan. It's moving that first message.
-
-That's what a ping does. A tiny message, sent on a schedule, that only says "ping".
+The fix isn't a bigger plan. It's moving that first message. That's what a ping does: a tiny message, sent on a schedule, that only says "ping".
 
 ## A ping at 7:00 gives you a third block
 
@@ -51,62 +49,41 @@ The first block is half spent before you sit down. That's fine. Nobody was using
 
 > **Same plan. Same work. Three blocks instead of two.**
 
-If you never hit the limit, skip this post. If you hit it most days, read on.
+A ping during a running block does nothing. The next block starts with the first message after the old one ends. So ping once per block, at 7:01, 12:01 and 17:01. The extra minute makes sure the old block is over.
 
-## Ping every 5 hours, not every 2
+## Set it up with a routine
 
-My first idea was to ping every 2 or 3 hours, to keep Claude "warm" all day. Wrong idea.
+Claude Code on the web can send the ping for you at set times. It calls this a routine. Your computer can stay off, and the routine uses your plan, so it starts your block.
 
-There's nothing to warm up. A ping can't make Claude faster. It only decides when a block starts. And **a ping during a running block does nothing**. The next block starts with the first message after the old one ends.
+Two choices keep it cheap: Haiku 5.5, Claude's smallest model, and a machine that can't reach anything. A ping needs no internet, no code, and no connected apps.
 
-Ping at 7, 9, 11 and 13, and the 12:00 reset waits until your 13:00 ping. You lose an hour on every reset.
+**1. Make an empty machine.** In Claude Code on the web, click "Add cloud environment". Call it "No access env", set "Network access" to None, and leave the script box empty.
 
-So the ping times must match the blocks: 7:01, 12:01, 17:01. The extra minute makes sure the old block is over.
+![Add cloud environment dialog, named No access env, with network access set to None and an empty setup script](/images/blog/2026-10-07/routine-env.webp)
 
-## Make the ping almost free
+**2. Create the routine.** Open Routines and add a new one. Name it "Ping", write "Reply pong" as the instructions, and pick Haiku 5.5 and "No access env". Skip "Select a repository" and "Add connector". Under "Select a trigger", pick Custom and type this schedule:
 
-A plain `claude -p "ping"` isn't small. Claude Code sends its whole setup with every call: its long instructions, its list of tools, your plugins, your connected apps, your `CLAUDE.md` files. On my machine that was **about 30,800 tokens** (the units Claude counts your usage in) to say "ping".
-
-Turn all of that off, and switch to Haiku, Claude's smallest and cheapest model. Same check, **482 tokens**. About 60 times smaller.
-
-> A ping only needs to arrive. It doesn't need your whole setup.
-
-{% <deep_dive title="The flags that make it small"> %}
-
-```bash
-claude -p "ping" --model haiku \
-  --setting-sources "" \
-  --strict-mcp-config \
-  --tools "" \
-  --disable-slash-commands \
-  --system-prompt "Reply pong." \
-  --no-session-persistence
+```
+1 5,10,15 * * *
 ```
 
-- `--setting-sources ""` skips your settings and plugins.
-- `--strict-mcp-config` skips your connected apps (MCP servers).
-- `--tools ""` sends no tool list.
-- `--disable-slash-commands` skips your skills.
-- `--system-prompt "Reply pong."` replaces the long default instructions.
-- `--no-session-persistence` doesn't save the chat.
+It reads as "minute 1 of hours 5, 10 and 15, every day". The times are in UTC, which is London time in winter. So this means 7:01, 12:01 and 17:01 in Spain in summer. Shift the hours to match where you live, and again when the clocks change.
 
-One trap: **don't use `--bare`**. It looks perfect, but it skips your Claude login and needs an API key. Then you pay per message, and your plan's clock never starts.
+![New routine form: name Ping, instructions Reply pong, Haiku 5.5, No access env, and a custom schedule of 1 5,10,15 * * *](/images/blog/2026-10-07/routine-new.webp)
 
-{% </deep_dive> %}
+**3. Check the runs.** The routine page lists every run. Runs can start a few minutes late: this morning's ran at 7:13, not 7:01.
 
-## Set it up once
+![The Ping routine page with its run history, three runs a day, running with No access env and Haiku 5.5](/images/blog/2026-10-07/routine-history.webp)
 
-On a Mac it takes four pieces: a token, a small script, a schedule, and a wake time.
+**4. Check your usage.** At 9:07 my usage page said 0% used, resets in 3 hours. The block started with the ping, before I sat down.
 
-The token surprised me. My first version ran on time and did nothing. The log said why: `Not logged in · Please run /login`. The scheduler runs outside your login, so it can't read the Claude login your Mac keeps in its password store. `claude setup-token` gives you a token that lasts a year and belongs to your plan.
+![Usage limits panel: current session 0% used, resets in 3 hr 3 min](/images/blog/2026-10-07/routine-usage.webp)
 
-The wake time matters too. A sleeping Mac skips the 7:01 ping, and a ping at 10:00 starts your block at 10:00. Gain gone. So the Mac wakes itself at 6:58.
+{% <deep_dive title="No routines? Run it from your Mac"> %}
 
-A locked screen is fine. The ping doesn't need your password. A closed lid is the weak spot: a MacBook shut with no external screen can wake for a moment and fall back asleep before 7:01. A Mac that is shut down doesn't wake at all.
+The same ping works from your own computer with cron, the scheduler built into your Mac. It takes four pieces: a token, a small script, a schedule, and a wake time.
 
-{% <deep_dive title="Step by step"> %}
-
-**1. Get a token.** `claude setup-token` opens your browser and prints a token. Copy it, then save it in a file only you can read:
+**1. Get a token.** cron runs outside your login, so it can't read the Claude login your Mac keeps in its password store. Without a token, the log says `Not logged in · Please run /login`. `claude setup-token` opens your browser and prints a token that lasts a year and belongs to your plan. Save it in a file only you can read:
 
 ```bash
 claude setup-token
@@ -115,7 +92,7 @@ pbpaste > ~/.config/claude-ping/token
 chmod 600 ~/.config/claude-ping/token
 ```
 
-**2. Write the script.** Save this as `~/.local/bin/claude-ping`. Replace `/path/to/claude` with the output of `which claude`:
+**2. Write the script.** Save this as `~/.local/bin/claude-ping`:
 
 ```sh
 #!/bin/sh
@@ -123,58 +100,57 @@ export PATH="$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
 export CLAUDE_CODE_OAUTH_TOKEN="$(cat "$HOME/.config/claude-ping/token")"
 cd /tmp || exit 1
 date "+%F %R"
-/path/to/claude -p "ping" --model haiku \
+claude -p "ping" --model haiku \
   --setting-sources "" --strict-mcp-config --tools "" \
   --disable-slash-commands --system-prompt "Reply pong." \
   --no-session-persistence
 ```
 
+A plain `claude -p "ping"` sends your whole setup with it: long instructions, tool list, plugins, connected apps, `CLAUDE.md` files. On my machine that was about 30,800 tokens to say "ping". These flags turn all of that off. With Haiku, the same ping is 482 tokens.
+
+Don't use `--bare`. It looks perfect, but it skips your Claude login and needs an API key. Then you pay per message, and your plan's clock never starts.
+
 Run `chmod +x ~/.local/bin/claude-ping`, then `~/.local/bin/claude-ping`. You want `pong`.
 
-**3. Schedule it.** cron is the scheduler built into your Mac. Run `crontab -e` and add one line:
+**3. Schedule it.** Run `crontab -e` and add one line. Here the times are your Mac's local time:
 
 ```
 1 7,12,17 * * * $HOME/.local/bin/claude-ping >> $HOME/.claude-ping.log 2>&1
 ```
 
-**4. Wake the Mac at 6:58.** Undo it later with `sudo pmset repeat cancel`.
+**4. Wake the Mac at 6:58.** A sleeping Mac skips the 7:01 ping. Undo it later with `sudo pmset repeat cancel`.
 
 ```bash
 sudo pmset repeat wake MTWRFSU 06:58:00
 ```
 
-The next morning, open `~/.claude-ping.log`. You want a date and `pong` for each run. If your laptop sleeps closed, test one night with the lid shut.
+A locked screen is fine. A closed lid is the weak spot: a MacBook shut with no external screen can wake for a moment and fall back asleep before 7:01. The next morning, open `~/.claude-ping.log`. You want a date and `pong` for each run.
 
-{% </deep_dive> %}
-
-{% <deep_dive title="A prompt to let your agent set it up"> %}
-
-Run `claude setup-token` yourself and save the token as in step 1. Then paste this into Claude Code, Codex, or any agent that can run commands:
+Rather let an agent do steps 2 to 4? Save the token yourself, then paste this into Claude Code, Codex, or any agent that can run commands:
 
 ```text
 Set up "claude-ping" on this Mac so my Claude usage block starts at 7:01, 12:01, and 17:01 every day.
 
 1. Check that ~/.config/claude-ping/token exists. Never read or print it. If it is missing, stop and tell me.
-2. Run `which claude` and use that full path as <CLAUDE_PATH>.
-3. Create ~/.local/bin/claude-ping with this content and make it executable:
+2. Create ~/.local/bin/claude-ping with this content and make it executable:
    #!/bin/sh
    export PATH="$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
    export CLAUDE_CODE_OAUTH_TOKEN="$(cat "$HOME/.config/claude-ping/token")"
    cd /tmp || exit 1
    date "+%F %R"
-   <CLAUDE_PATH> -p "ping" --model haiku --setting-sources "" --strict-mcp-config --tools "" --disable-slash-commands --system-prompt "Reply pong." --no-session-persistence
-4. Add this line to my crontab. Keep any lines already there:
+   claude -p "ping" --model haiku --setting-sources "" --strict-mcp-config --tools "" --disable-slash-commands --system-prompt "Reply pong." --no-session-persistence
+3. Add this line to my crontab. Keep any lines already there:
    1 7,12,17 * * * $HOME/.local/bin/claude-ping >> $HOME/.claude-ping.log 2>&1
-5. Run ~/.local/bin/claude-ping. It should print the date and pong.
-6. Do not use --bare. Do not run sudo. Tell me the pmset command to wake the Mac at 06:58 so I can run it myself.
-7. Tell me what you changed and the test result.
+4. Run ~/.local/bin/claude-ping. It should print the date and pong.
+5. Do not use --bare. Do not run sudo. Tell me the pmset command to wake the Mac at 06:58 so I can run it myself.
+6. Tell me what you changed and the test result.
 ```
 
 {% </deep_dive> %}
 
 ## Your first message still wins
 
-The ping is a default, not a lock. If you send a real prompt at 6:30, your prompt starts the block, and the schedule shifts with it. Each ping also counts toward your weekly limit. At 482 tokens on Haiku, three times a day, you won't notice.
+The ping is a default, not a lock. If you send a real prompt at 6:30, your prompt starts the block, and the schedule shifts with it. Each ping also counts toward your weekly limit. A "pong" from Haiku three times a day, you won't notice.
 
 This works with the 5-hour blocks as Anthropic runs them in October 2026. If the rules change, change the times.
 
