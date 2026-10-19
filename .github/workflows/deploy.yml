@@ -138,9 +138,9 @@ jobs:
         if: github.event_name == 'push'
         run: |
           before="${{ github.event.before }}"
-          # A new branch or a force push reports an all-zero "before" commit,
-          # which is not a revision git can diff from.
-          if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
+          # A new branch reports an all-zero "before" commit, and a force push
+          # reports one that is no longer in history: neither can be diffed from.
+          if [ -z "$before" ] || ! git merge-base --is-ancestor "$before" "${{ github.sha }}" 2>/dev/null; then
             before="${{ github.sha }}^"
           fi
           python3 scripts/indexnow.py "$before..${{ github.sha }}"
