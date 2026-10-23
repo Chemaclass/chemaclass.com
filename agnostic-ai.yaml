@@ -1,8 +1,8 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Chemaclass/agnostic-ai/v0.85.0/docs/schemas/config.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Chemaclass/agnostic-ai/v0.87.0/docs/schemas/config.schema.json
 version: 1
 
-# The release the generated files come from; `agnostic-ai upgrade --version v0.85.0` installs it.
-requires: "0.85.0"
+# The release the generated files come from; `agnostic-ai upgrade --version v0.87.0` installs it.
+requires: "0.87.0"
 
 targets:
   - claude
