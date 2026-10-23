@@ -8,7 +8,7 @@ Field shapes live in the template: `.agnostic-ai/templates/blog-post.md`. This f
 - `description`: 1 to 3 short sentences. Plain statements that give the main idea and what the reader gets from it.
 - `draft`: `true` until ready.
 - `[taxonomies] tags`: 3 to 6, lowercase, hyphenated. Reuse existing tags.
-- `[extra] subtitle`: a short, punchy tagline, no period, first word capitalized like a sentence ("Two leaks, two patches").
+- `[extra] subtitle`: a short plain tagline naming the subject, no period, first word capitalized like a sentence ("You can hand out tasks, not ownership").
 - `[extra] static_thumbnail`: the cover, `/images/blog/YYYY-MM-DD/cover.webp` (webp preferred). Drafts without real images point at the committed placeholder `/images/blog/placeholder.webp` until `/add-image` swaps in the real cover.
 - `[extra] series` + `series_order`: optional, when the post belongs to a series (keys in `config.toml` under `[extra.series]`). The AI posts form one ongoing numbered series (`series = "ai"`).
 - `[extra] tldr`: optional. The summary box at the top of the post. It defaults to `description`. Set it when the post deserves an opening line written for a reader, not for a search result. It is also published as the schema `abstract`.
@@ -26,20 +26,19 @@ Field shapes live in the template: `.agnostic-ai/templates/blog-post.md`. This f
 - The cover comes from `static_thumbnail` (the template shows it as the large top image). Do not repeat a body `![cover]` line in newer posts.
 - In-body images by position: `![blog-middle](...)` near the middle, `![blog-footer](...)` as the last content line. Descriptive alt text is better than the position name. In a draft, point these at `/images/blog/placeholder.webp` until the real image exists.
 - Use `{% <deep_dive title="..."> %}...{% </deep_dive> %}` to move optional detail (code samples, longer examples) out of the main text. The title is a short noun phrase. If you use it, set `[extra] reading_time` (minutes), counting only words outside the blocks.
-- Use `{% <kudos> %}Thanks to ...{% </kudos> %}` for the note that thanks whoever gave the idea or helped with the post. It goes after the strong final line, before the footer image. One or two sentences, markdown links allowed.
+- Use `{% <kudos> %}Thanks to ...{% </kudos> %}` for the note that thanks whoever gave the idea or helped with the post. It goes after the ending, before the footer image. One or two sentences, markdown links allowed.
 - Optional at the very end: `---` then `{{ <youtube id="..." /> }}`, after the footer image.
 - The body is a Tera template, so these components are the only `{{`, `{%` or `{#` allowed in it. Wrap any literal one (a code sample, a template snippet) in `{% raw %}...{% endraw %}`. Otherwise Zola renders it as a template.
-- Many H2 sections end on a `>` punchline. Do not force one on every section.
 
 ## Pre-publish checklist
 
 1. Read it out loud. Could a non-expert follow it on the first pass? Look for any sentence over 35 words, any fancy word where a plain one fits, anything you had to reread. Split it, simplify it, cut it. Then cut 10% of the words. If the post did not get worse, the cut stays.
-2. Opening: hook in 1-4 short paragraphs, a one-line turn, then `<!-- more -->`.
-3. Ending: a strong final line (a short saying, a group of short commands, or a hard one-liner). Not a recap.
-4. Pull-quotes: one per 1 or 2 H2 sections in a teaching post, each a short saying that makes sense alone.
+2. Opening: a concrete scene or fact in 1-4 short paragraphs, the main idea stated plainly, then `<!-- more -->`.
+3. Ending: a next step, a concrete check, or the last fact of the story. Not a recap, not a short saying.
+4. Blockquotes quote real sources only. No self-written pull-quotes.
 5. H2 count fits the post type (normal is 4-7; more for explainers with many `deep_dive` blocks, fewer for short essays). No skipped levels. Every section is needed. Body ~800-1000 words (~550 for reflective essays). Read the headings in order: they alone should tell the story.
-6. Nothing from the "Never do" list in `SKILL.md` (em dashes, hedging, exclamations, emoji, AI hype).
-7. Backticks on every file/command/flag. Bold for punchlines and list labels.
+6. Nothing from the "Never do" list in `SKILL.md`, and every quick check in `references/slop.md` passes.
+7. Backticks on every file/command/flag. Bold for list labels.
 8. At least one inline link to a related earlier post. External links for every number or statistic.
-9. Front matter complete: Title Case title, short description, punchy subtitle, tags, cover, series, related_posts/readings.
+9. Front matter complete: Title Case title, short description, plain subtitle, tags, cover, series, related_posts/readings.
 10. ES file done as described in `references/spanish.md`: `tú`, correct English terms kept, `/es/` link rule applied, metadata identical.

@@ -10,5 +10,6 @@ English is the main version. The `.es.md` file is translated from it. When they 
 - **Links:** translate the link text, except names of practices and proper nouns ("Ship, Show, Ask" stays). Root-relative `/blog/...` links get a `/es/` prefix. Absolute `https://chemaclass.com/blog/...` links stay unchanged. Slugs and `#anchors` to other posts stay in English. Anchors to the same page follow the translated heading.
 - **Assets and metadata are identical to EN**: image paths, `static_thumbnail`, `related_posts`, `related_readings`, `tags`, `series`, `series_order`, `reading_time`. Two planned exceptions: a youtube id may be swapped for a Spanish-language video with the same content, and author names use their Spanish form ("Marcus Aurelius" becomes "Marco Aurelio").
 - **Translate the meaning, not word by word.** "and hope it works" becomes "y rezas para que funcione". "at midnight" becomes "a las tantas de la noche". Change the person when it sounds more natural ("developers are loud" becomes "los desarrolladores hablamos alto").
-- **Keep the same structure**: number of paragraphs, headings, pull-quotes, rhythm of short fragments.
+- **Keep the same structure**: number of paragraphs, headings, blockquotes.
+- **Apply `references/slop.md` to the Spanish too.** Do not add filler words the English lacks ("realmente", "básicamente", "lo cierto es que").
 - **Quotes and numbers:** quotes use `"..."`, never `«...»`. Numbers and dates follow Spanish conventions when the format could be read two ways, and English conventions in technical content.

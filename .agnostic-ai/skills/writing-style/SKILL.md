@@ -1,16 +1,17 @@
 ---
 name: writing-style
-description: Voice and style guide for chemaclass.com. Use when writing, editing, or reviewing any site content, including blog posts, readings, talks, slide decks, and translations.
+description: Voice and style guide for chemaclass.com, with the anti-slop rules that keep prose from sounding machine-made. Use when writing, editing, or reviewing any site content (blog posts, readings, talks, slide decks, translations), or when asked for less slop, to clean up this text, or because a draft sounds like AI.
 ---
 
 # Writing Style (chemaclass.com)
 
-The voice for all site content. It comes from the posts already published on the site. When in doubt, read three recent posts and match them. This guide is a shortcut. It does not replace your own ear.
+The voice for all site content. When this guide and the posts already published disagree, this guide wins: older posts lean on fragments, contrasts and pull-quotes that now count as slop.
 
 ## Load by task
 
 Read only the reference that matches the task:
 
+- Before delivering any prose: `references/slop.md` (phrases to cut, structures to break, quick checks)
 - Blog post structure, front matter, pre-publish checklist: `references/blog-posts.md`
 - Reading notes (book summaries): `references/readings.md`
 - Talk pages and talks index: `references/talks.md`
@@ -18,94 +19,76 @@ Read only the reference that matches the task:
 
 ## Voice in one line
 
-Plain, direct, based on real experience. Short sentences, with some short fragments on purpose for impact. It teaches the reader directly, makes the tool easy to understand, and ends on a strong final line.
+Plain, direct, specific. Complete sentences from someone who did the work, written to the reader as `you`.
 
 ## Write for everyone (plain language first)
 
-This is the rule above all others. The reader skims on a phone, between meetings, often in their second language. Write so they never have to reread a sentence.
+This rule comes first. The reader skims on a phone, between meetings, often in their second language. Write so they never reread a sentence.
 
 - **One idea per sentence.** If a sentence needs a second read, split it.
-- **Pick the plain word over the fancy one:** "use" not "utilize", "help" not "facilitate", "about" not "regarding", "enough" not "sufficient", "start" not "commence", "show" not "demonstrate".
-- **No niche or "MBA" English.** The author is a Spanish native. The reader often is too. Avoid business metaphors a non-native would not recognize: "moat", "table stakes", "north star", "boil the ocean", "fungible", "ergonomic" (as metaphor), "load-bearing" (as metaphor), "compound" (verb, when "add up" works). When in doubt, pick the shorter Anglo word over the Latin one. Test: would a Spanish-speaking developer with B2 English understand it on first read?
-- **Concrete over abstract.** A real example beats a definition. Show the thing, do not theorize about it.
-- **Explain every term the moment you use it.** Assume a sharp reader who is new to this topic, not an expert.
-- **Short paragraphs, plenty of white space.** Walls of text lose people.
-- **Clarity beats sounding clever.** When the choice is impressive or clear, choose clear every time.
+- **Pick the plain word:** "use" not "utilize", "help" not "facilitate", "about" not "regarding", "enough" not "sufficient", "start" not "commence", "show" not "demonstrate".
+- **No niche or "MBA" English.** The author is a Spanish native; the reader often is too. Avoid metaphor jargon a non-native would not recognize: "moat", "table stakes", "north star", "boil the ocean", "fungible", "ergonomic" or "load-bearing" as metaphor, "compound" when "add up" works. Prefer the short Anglo word over the Latin one. Test: would a Spanish-speaking developer with B2 English understand it on first read?
+- **Concrete over abstract.** Show the real example, the file, the number, the person.
+- **Explain every term the moment you use it.** Assume a sharp reader who is new to the topic.
+- **Short paragraphs, plenty of white space.**
+- **Clear beats clever.**
 
-Plain does not mean shallow. The ideas can run deep. The sentences carrying them stay simple. A reader should get the meaning on the first pass and feel smarter, never lost.
+Plain does not mean shallow. The ideas can run deep while the sentences carrying them stay simple.
 
 ## Who the author is
 
-- Writes from years of real practice, not theory. Backs claims with real projects (`phel-lang`, his own `.claude/` folder, his agent Sauron). The tone is "I learned this the hard way".
-- Treats AI as a teammate to direct, never as magic. Names tools precisely (Claude Code, Opus, Codex, Cursor).
-- Holds strong opinions and states them as fact: "No real team works that way." "Rules are not suggestions."
-- Believes human judgment is the part nothing can replace. Recurring themes: you own the output, quality over speed, process over goal, grow from real problems instead of upfront design, craftsmanship (Clean Code, Clean Architecture, XP, TDD).
+- Writes from years of practice. Grounds claims in his own projects (`phel-lang`, his `.claude/` folder, his agent Sauron) and says what went wrong.
+- Treats AI as a teammate to direct. Names tools precisely (Claude Code, Opus, Codex, Cursor).
+- States opinions directly, tied to a case: "In my last three teams, nobody read the ADRs." Not a sweeping verdict on everyone.
+- Recurring themes: you own the output, quality over speed, grow from real friction, craftsmanship (Clean Code, Clean Architecture, XP, TDD).
 
 ## Sentence and paragraph rhythm
 
-- **Short by default.** A normal sentence is 6 to 15 words. Almost never over 35. Write a long thought as short independent clauses joined by commas. Never build one long sentence full of sub-clauses.
-- **Fragments for impact.** About 1 in 4 or 5 sentences is a fragment or a sentence under 5 words. Never more than 2 or 3 in a row. Then a longer sentence resets the rhythm.
-  - Examples to copy: "Wrong question." / "Fast." / "Push back." / "Not as philosophy. As pattern." / "The limitation isn't intelligence. It's reach."
-- **Lists as sentences** (items joined by commas, no "and"): "The rendering, the physics, the audio, the mobile input."
-- **Repeat the same sentence start** for rhythm: "The first time, you are too inside it to see. The second time, you start to notice. The third time, you can name it."
-- **Single-line paragraphs matter.** Use a one-sentence paragraph to change direction or to state the main idea: "But speed isn't quality." / "It's us." / "That's where MCP comes in."
-- **Expand, then contract.** A paragraph explains. Then a fragment carries the point. The short fragment is where the meaning lands.
-- **Vary the rhythm across sections.** Do not use every device in every section. A post that uses every trick everywhere reads machine-made. Let some sections run plain so the punchy ones land.
+- **Short, complete sentences.** Baseline 6 to 15 words, almost never over 35. Chain a long thought as short independent clauses, not one long sentence full of sub-clauses.
+- **Vary the length.** Three sentences in a row of the same length read mechanical; break one.
+- **Fragments are rare.** Use one only when a full sentence would sound stiff. Never stack two.
+- **Two items beat three.** Name the one or two things that matter. A list of three needs all three to be real and different.
+- **Vary paragraph endings.** Most paragraphs end on their last fact or step, not on a punchline. A one-line paragraph is allowed when it carries new information, not a restatement.
+- **Active voice with a human subject.** Name who did it: "I deleted the cache", not "the cache was deleted" or "the fix emerged".
 
 ## Openings (before `<!-- more -->`)
 
-1 to 4 short paragraphs, then the cut. The one-line turn or main idea goes either at the end of the hook or as the first line right after `<!-- more -->`. Two modes:
+1 to 4 short paragraphs, then the cut. Open on a concrete scene or fact: who did what, when, with what result ("Thorsten Ball shared a Slack message about ownership."). State the thesis plainly in the last line of the hook.
 
-- **Mode A: scene or story first.** Open on a concrete fact or scenario, not on the main idea. "Nietzsche proposed a thought experiment..." / "Hidden inside Sauron's blog, there is a playable game."
-- **Mode B: claim, reversal, turn.** A confident statement, then an immediate "But..." that reverses it, then a one-line change of direction. The typical turning point is a one-line paragraph: **"But X isn't Y."** ("But understanding isn't the same as access.")
-
-A common variant: the first line right after `<!-- more -->` is a `>` blockquote that states the main idea as a short, memorable saying ("> Same model. Same prompts. Lighter bill."). Use it when the main idea fits in one short line people could share.
-
-Never open with empty warm-up lines ("In today's fast-paced world", "Have you ever wondered"). Open with a fact, a scene, or a claim, then cut.
+Never open with empty warm-up lines ("In today's fast-paced world", "Have you ever wondered", "Here's the thing"), a rhetorical question, or a claim set up to be knocked down.
 
 ## Closings
 
-Always end on a strong final line. Never let the post fade out. The last line is one of:
+End on something the reader can do or check: the next step, the concrete test, the last fact of the story. No recap, no "time will tell", no short saying built to be quoted.
 
-- A `>` short saying as the final word: "We get one life. Make it one you would relive."
-- A group of 2 or 3 short commands: "Commit the folder. Share it." / "Version it. Review it."
-- A single hard one-liner, often pointing back to the opening: "Agents didn't create this bottleneck. They made it impossible to ignore."
+## Blockquotes (`>`)
 
-## Pull-quotes (`>` blockquotes)
-
-- **Frequency:** one per 1 or 2 H2 sections in teaching or technical posts. Story posts vary. Some have zero (bold inline labels carry the emphasis instead), some have many. Match the tone of the post. Do not force a quote into every section.
-- **Length:** one sentence, sometimes two. It must make sense alone and be short enough to share.
-- **Three shapes, from most to least common:**
-  1. Two opposite halves side by side: "Skills capture what to do. Rules capture what not to do." / "The agent is replaceable. Your skills are not."
-  2. A definition or a new way to see the thing (often a metaphor): "AI is a mirror that reflects the context you give it."
-  3. A command or a warning: "Don't be seduced by speed."
+Use `>` to quote a real source: a book, a person, a message, a prompt. Do not write your own pull-quotes. If a line of yours sounds like a pull-quote, rewrite it as a plain sentence in the paragraph.
 
 ## Rhetorical devices
 
-- **Questions to the reader** to open a section or set up a turn: "Who handles your taxes?"
-- **Hard negation:** state the tempting belief, then reject it flatly. "The easy conclusion is X. That conclusion is wrong."
-- **Two-way contrast** is the main tool (it drives most titles, subtitles, and pull-quotes): "Rules are guardrails. Skills are expertise."
-- **One metaphor or comparison, kept going:** introduce one and reuse it (mirror, hands vs brain, engine vs map, pilot vs autopilot, hiring/onboarding, steering wheel). Always use a concrete everyday comparison for an abstract point. One comparison per section, never several at once. No pop-culture references that age fast.
-- **Admit, then turn:** "It works. But..."
+- **State the point directly.** No "not X, it's Y", "X isn't the problem, Y is", or "the easy conclusion is X; that conclusion is wrong". Say Y.
+- **Questions only when the reader would ask them** and the answer needs a paragraph. No question answered in the next fragment ("Why? Because...").
+- **One concrete analogy at most per section,** reused rather than stacked. No pop-culture references that age fast.
+- **Name the actor.** Things do not "emerge", "shift" or "become": a person does something.
 
 ## Word choice and formatting
 
-- **Person:** `you` while teaching, `we`/`our` for shared responsibility and the moral close, `I` when telling personal experience. Switch between them on purpose.
-- **Contractions:** use them freely in technical and casual posts. This is the default for the AI series: isn't, don't, you'll, that's. Drop them only in a serious, philosophical tone (the rare reflective essay). When unsure, contract.
-- **Technical terms** are named precisely and explained in plain English in the same sentence. "MCP is a protocol, not a product."
+- **Person:** `you` while teaching, `I` when narrating, `we` for a team you were in. Never "people tend to" or "nobody designed this": put the reader in the scene.
+- **Contractions:** use them freely (isn't, don't, you'll). Drop them only in a rare reflective essay.
+- **Technical terms** are named precisely and explained in plain English in the same sentence.
 - **Backticks** for every file, command, flag, and key: `.claude/`, `git status`, `Shift+Tab`.
-- **Code snippets** are real and runnable. No `foo`/`bar` unless you are showing syntax itself. Comment only the line that is not obvious. One strong example beats three weak ones.
-- **Bold** for the main point of an argument and for inline list labels ("**Security code.** Login flows...").
-- **Italics** for quoted prompts or phrases (_"fix issue #42"_), new terms on first use (_vibe-coding_), and a sign-off line that hints at something instead of saying it.
-- **Link to your own earlier posts inline**, often. Connect the posts in a series. Use root-relative `/blog/slug/` or absolute `https://chemaclass.com/blog/slug/`, with `#anchor` to a specific section when useful. Link external sources for any number or claim.
+- **Code snippets** are real and runnable. No `foo`/`bar` unless illustrating syntax. Comment only the non-obvious line. One strong example beats three weak ones.
+- **Bold** for inline list labels ("**Security code.** Login flows..."). Not for slogans.
+- **Italics** for quoted prompts (_"fix issue #42"_) and coined terms on first use (_vibe-coding_).
+- **Link to your own prior posts inline** with root-relative `/blog/slug/` or absolute `https://chemaclass.com/blog/slug/`, with `#anchor` when useful. Link a source for every stat or claim.
 
-## Never do (signs that break the voice)
+## Never do
 
-- No em dashes or en dashes (`.agnostic-ai/rules/no-em-dash.md`). Use period, comma, colon, or parentheses.
-- No hedging: "I think", "perhaps", "it seems", "arguably", "in my humble opinion".
-- No filler adverbs: "just", "really", "basically", "actually", "simply".
-- No exclamation marks in your own prose (fine inside quoted speech or example text), no emoji, no profanity. Fragments and bold carry the emphasis.
-- No long sentences with many sub-clauses.
-- No unexplained jargon and no jargon for its own sake.
-- No corporate AI hype ("revolutionary", "game-changing", "unlock the power of").
-- No weak endings that fade out ("time will tell", a flat recap).
+- No em dashes or en dashes (`.agnostic-ai/rules/no-em-dash.md`). Use a period, comma, colon, or parentheses.
+- No adverbs that only add emphasis or softness ("just", "really", "basically", "actually", "simply", "truly", "deeply"). Keep an adverb only when removing it changes the fact ("later", "once", "twice").
+- No hedging ("I think", "perhaps", "it seems", "arguably") and no lazy extremes ("always", "never", "everyone") standing in for a specific case.
+- No exclamation marks in your own prose, no emoji, no profanity.
+- No corporate or AI hype ("revolutionary", "game-changing", "unlock the power of").
+- No unexplained jargon.
+- Everything in `references/slop.md`.

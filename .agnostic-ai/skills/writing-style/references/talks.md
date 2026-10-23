@@ -1,6 +1,6 @@
 # Talks (a different tone)
 
-A talk page is conference material: a short summary of the talk (the abstract) plus a list of where it was given. It is not an essay. The blog rhythm rules do not apply here. Abstracts are prose in complete sentences: no fragments, no pull-quotes, and no strong final one-liner. These rules from the core voice still apply: plain words, no hype, no hedging, no dashes, precise tool names.
+A talk page is conference material: a short summary of the talk (the abstract) plus a list of where it was given. It is not an essay. Abstracts are prose in complete sentences, with no blockquotes. The core voice and `references/slop.md` apply: plain words, no hype, no hedging, no dashes, precise tool names.
 
 - Person: `we`/`you`. Never write about yourself in the third person ("Chemaclass wants to...").
 - Plain ASCII apostrophes and quotes, no curly quotes.
