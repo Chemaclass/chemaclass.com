@@ -111,8 +111,8 @@ PRESENTER DECK, Marp.
   npx @marp-team/marp-cli -p -w deck.marp.md --allow-local-files          (live preview)
   (--allow-local-files is REQUIRED: the deck embeds assets/screenshot.png)
 
-STRUCTURE: simple → complex. Slides 1-18 = pure Phel basics (no game code).
-Slides 19+ = real phel-doom code.
+STRUCTURE: simple → complex. Intro + functional ideas + Acts 1-2 = Phel basics (no game code).
+Act 3+ = real phel-doom code.
 -->
 
 <!-- _class: lead -->
@@ -142,17 +142,17 @@ Slides 19+ = real phel-doom code.
 # Wait, what?
 
 This is **DOOM**. In a **terminal**.
-Written in a **Lisp**. That compiles to **PHP 8.4**.
+Written in a **Lisp**. That compiles to **PHP 8.5**.
 
 ## Write Lisp. Ship PHP. Even DOOM.
 
-<span class="small">~11,700 lines of Phel · same raycasting idea as id Software's 1993 original · ~5 ms/frame</span>
+<span class="small">~20,500 lines of Phel · the raycasting trick id Software used before DOOM · ~5 ms/frame</span>
 
 ---
 
 ## What you'll leave with
 
-1. **Why** Phel exists and what makes it different
+1. **Why** Phel exists and the functional ideas behind it
 2. **How** to write it from zero: syntax, data, state
 3. **How** it plugs into PHP: all of PHP, the REPL, one CLI
 4. **How** immutability shapes a real project: DOOM
@@ -184,11 +184,69 @@ vendor/bin/phel build    # compiles .phel → out/*.php
 ```
 
 - **Ahead-of-time compiled.** Not interpreted at runtime.
-- Output is **plain PHP 8.4.** Any host, zero Phel in production.
+- Output is **plain PHP 8.5.** Any host, zero Phel in production.
 - **OPcache + JIT** apply for free.
 - Ships as `vendor/bin/phel`. One CLI for everything.
 
 > Write Lisp. Ship PHP. Server needs nothing new.
+
+---
+
+## Functional programming in five ideas
+
+1. **Immutable data.** A value never changes. An update builds a new one.
+2. **Pure functions.** Same input, same output. No hidden reads or writes.
+3. **Functions are values.** Pass them in, return them, store them.
+4. **Composition.** Join small functions into a pipeline to build big ones.
+5. **Effects at the edges.** Screen, clock, random, files: one small place.
+
+<span class="reflex aud-php">🧠 PHP has the pieces: `readonly`, `fn() =>`, `array_map`. Phel makes them the default.</span><span class="reflex aud-ts">🧠 TS has the pieces: `const`, `readonly`, `.map`. Phel makes them the default.</span>
+
+<!--
+Before any syntax: what "functional" means. Phel is a Lisp, but the Lisp part is only the syntax.
+These five ideas are what change how you design code. Every one shows up later in DOOM:
+immutable world map, pure tick-world, map/filter, the -> pipeline, the io/ folder.
+-->
+
+---
+
+## Why it pays off
+
+<div class="aud-php">
+
+```php
+function heal(Player $p): Player {
+    $p->hp += 10;   // the caller's $p changed too
+    return $p;
+}
+```
+
+</div>
+<div class="aud-ts">
+
+```typescript
+function heal(p: Player): Player {
+  p.hp += 10;   // the caller's p changed too
+  return p;
+}
+```
+
+</div>
+
+```clojure
+(defn heal [player] (update player :hp + 10))
+(heal player)   ; => new map, player is untouched
+```
+
+- **Easy to test:** call with an input, check the output. No mocks.
+- **Easy to follow:** nothing changes behind your back.
+- **Safe to cache and replay:** same input, same result.
+
+<!--
+The PHP/TS version looks harmless. Anyone else holding $p now sees hp changed.
+In Phel the old value stays as it was, so a bug in one function cannot leak into another.
+We will see each benefit with real numbers in Act 3: 4,152 tests with no mocks, memoized frame data.
+-->
 
 ---
 
@@ -259,7 +317,7 @@ That's the entire syntax. Everything else is just functions.
 - Shorthand: `#(* % 2)` = `(fn [x] (* x 2))`  - like `fn($x) => $x * 2`
 
 ```clojure
-(map #(* % 2) [1 2 3])  ; =>  [2 4 6]
+(map #(* % 2) [1 2 3])  ; =>  (2 4 6)  a lazy list
 ```
 
 <span class="reflex aud-php">🧠 PHP: `function greet($n) { return "Hello, ".$n; }` · `fn($x) => $x * 2`</span><span class="reflex aud-ts">🧠 TS: `function greet(n) { return "Hello, " + n; }` · `(x) => x * 2`</span>
@@ -293,8 +351,8 @@ like PHP string keys but faster to compare
 ```clojure
 (def nums [1 2 3 4 5])
 
-(map #(* % 2) nums)  ; =>  [2 4 6 8 10]
-(filter even? nums)  ; =>  [2 4]
+(map #(* % 2) nums)  ; =>  (2 4 6 8 10)
+(filter even? nums)  ; =>  (2 4)
 (reduce + 0 nums)    ; =>  15
 ```
 
@@ -391,9 +449,9 @@ No `while`. No `$i++`. No mutable variables.
 
 ```clojure
 ; PHP objects and methods work too
-(def dt (php/new DateTime "2024-01-01"))
+(def dt (new DateTime "2024-01-01"))
 (.format dt "Y-m-d")          ; =>  "2024-01-01"   ($dt->format("Y-m-d"))
-DateTime/ATOM                  ; =>  "Y-m-d\TH:i:sP"  (::ATOM static const)
+DateTime/ATOM                 ; =>  "Y-m-d\TH:i:sP"  (::ATOM static const)
 ```
 
 Any Composer package works.
@@ -410,14 +468,15 @@ vendor/bin/phel repl
 ```
 
 ```clojure
-phel:> (+ 1 2 3)
+user:1> (+ 1 2 3)
 6
-phel:> (defn greet [n] (str "Hello, " n))
-phel:> (greet "PHP Conf")
+user:2> (defn greet [n] (str "Hello, " n))
+#'user/greet
+user:3> (greet "PHP Conf")
 "Hello, PHP Conf"
-phel:> {:x 10 :y 20}
-{:x 10 :y 20}
-phel:> (-> "  hello  " php/trim php/strtoupper)
+user:4> {:x 10 :y 20}
+{:x 10, :y 20}
+user:5> (-> "  hello  " php/trim php/strtoupper)
 "HELLO"
 ```
 
@@ -438,13 +497,12 @@ Load any namespace. Probe any function. No rebuild, no restart.
 ```clojure
 (ns phel-doom.main                ; namespace, dot mirrors the path
   (:require phel.cli :as cli)     ; Symfony Console, wrapped in Phel
-  (:require phel-doom.commands.play :refer [play-command]))
-
+  (:require phel-doom.commands.play :refer [play-command])
+  (:require phel-doom.commands.demo :refer [demo-command]))
 (def app
   (cli/application
    {:name "phel-doom" :default "play"
-    :commands [play-command]}))
-
+    :commands [play-command demo-command]}))
 (when-not *build-mode*            ; skip side-effects during phel build
   (php/exit (cli/run app (cli/argv *argv*))))
 ```
@@ -564,7 +622,7 @@ io/  →  glue/  →  core/        (dependencies go one way only)
 
 ```bash
 tree src/
-# src/core/   src/glue/   src/io/   src/commands/
+# src/commands/  src/core/  src/demo/  src/glue/  src/io/
 ```
 
 > Purity is not mere taste. Structure enforces it.
@@ -601,9 +659,9 @@ So how does a flat map become *that* view? →
 
 ---
 
-## DOOM (1993): Carmack's math
+## Wolfenstein 3D (1992): Carmack's math
 
-**id Software, John Carmack.** A 486. No GPU. 11 months.
+**id Software, John Carmack.** The trick before DOOM. No GPU.
 
 One ray per column, marched to the first wall → distance `d`.
 
@@ -744,7 +802,7 @@ Right: each distance becomes a strip. **Near = tall, far = short.**
         :else (recur (+ dist 0.05))))))             ; keep stepping
 ```
 
-No mutable counter. **Even the renderer is pure** - unit-test in one line.
+No mutable counter. **Even the raycaster is pure** - unit-test in one line.
 **Once per screen column - ~120-180 rays a frame.**
 <!--
 Simplified step-march; the real engine uses DDA.
@@ -756,15 +814,18 @@ DEMO: phel run phel-doom.main demo --phase 2 (+pistol) / --phase 3 (+enemies) / 
 ## Testing: pure = no mocks
 
 ```clojure
-(deftest cast-ray-hits-wall
-  (is (= 1.0 (cast-ray simple-grid 1.5 1.5 0.0))))
+(deftest test-fov-proj-dist-flat-below-clamp
+  (is (= proj-dist (fov-proj-dist 80))))
 
-(deftest pickup-heart-grants-life
-  (is (= (+ start-lives 2) (:lives (pickup-hearts world-on-heart)))))  ; one heart = 2 HP
+(deftest test-pickup-hearts-consumes-cell-and-heals-two
+  (let [w  (merge (player-at 5.0 5.0) {:hearts [{:x 5.0 :y 5.0}] :lives 4})
+        w' (pickup-hearts w)]
+    (is (= 0 (count (:hearts w'))))   ; heart consumed
+    (is (= 6 (:lives w')))))          ; one heart = 2 half-hearts
 ```
 
 ```bash
-composer test     # 1716 tests, green the whole way
+composer test     # 4,152 tests, green the whole way
 ```
 
 No mocks. No fake terminal. No DI container.
@@ -776,14 +837,14 @@ Pure functions: call with input, check output. Done.
 
 ## Dividend: pure is fast
 
-Target **< 5 ms** per frame · measured **0.2 - 0.5 ms**
+Target **< 5 ms** per frame · measured **~4.5 ms** (game logic **0.3 - 0.5 ms**)
 
-- **Memoize** paused frames: one-line cache, safe because pure.
+- **Memoize** view tables per screen size: safe because pure.
 - Precompute view angles: **-60%** cast time.
-- Hot loop: raw arrays over persistent vectors: **~680x**.
+- Hot loops read raw PHP arrays, not persistent vectors: level generation **3x** faster.
 
 <span class="reflex">🧠 Pure: same input, same output. Cache can't be wrong.</span>
-<!-- Persistent vectors are ~680x slower in the 7,000-cell hot loop; raw arrays there. -->
+<!-- composer bench, 2026-09-24, PHP 8.5, no JIT, 120x30: frame 4.3-4.5 ms, step 0.31-0.47 ms, cast 0.055 ms. Drawing is ~98% of the frame. -->
 
 ---
 
@@ -798,7 +859,7 @@ Target **< 5 ms** per frame · measured **0.2 - 0.5 ms**
 ```php
 \Phel::addDefinition("phel_doom.core.state", "new-player",
   new class() extends \Phel\Lang\AbstractFn {
-    public function __invoke($x, $y, $angle) {
+    public function __invoke($x, $y, $angle): PersistentMapInterface {
       static $__phel_const_0, $__phel_const_1, $__phel_const_2;
       return \Phel::map(
         ($__phel_const_0 ??= \Phel\Lang\Keyword::create("x")), $x,
@@ -834,7 +895,7 @@ Live: less out/phel_doom/core/state.php  (run `phel build` first).
 - **Jun 3:** distributable PHAR + checksums
 - **Jun 8:** real Freedoom sprites: enemies, guns, pickups + OST loop
 
-**+400 commits.** Tiny PRs, each closing one issue.
+**700+ commits, 20 releases.** Tiny PRs, each closing one issue.
 
 ---
 
