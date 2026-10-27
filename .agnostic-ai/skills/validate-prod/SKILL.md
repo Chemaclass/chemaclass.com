@@ -39,6 +39,5 @@ Anything a browser has to run, like JavaScript: `scripts/check-js-runtime.py`
 checks that, and it runs in CI. This script checks the files the server sends,
 not how the page behaves.
 
-Report failures with the check name and the detail it printed. During a sweep,
-a single 503 caused by rate limiting is retried once before it counts as a
-failure. So a reported failure is real.
+Report failures with the check name and the detail it printed. A 503 may be
+retried, but a reported failure still needs investigation.

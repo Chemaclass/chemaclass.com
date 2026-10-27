@@ -91,9 +91,10 @@ generate_index() {
   shopt -s nullglob
   for deck in "$BASE"/*/deck.md; do
     slug="$(basename "$(dirname "$deck")")"
-    title="$(grep -m1 '^# '   "$deck" | sed 's/^# //;   s/<br>/ /g; s/  */ /g')"
-    sub="$(  grep -m1 '^### ' "$deck" | sed 's/^### //')"
+    title="$(grep -m1 '^# ' "$deck" | sed 's/^# //; s/<br>/ /g; s/  */ /g' || true)"
+    sub="$(grep -m1 '^### ' "$deck" | sed 's/^### //' || true)"
     [ -n "$title" ] || title="$slug"
+    [ -n "$sub" ] || sub="$(grep -m1 '^description: ' "$deck" | sed 's/^description: *//; s/^"//; s/"$//' || true)"
     cards+="      <a class=\"deck\" href=\"/slides/$slug/\">
         <h2>$title</h2>
         <p>$sub</p>

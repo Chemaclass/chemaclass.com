@@ -121,7 +121,7 @@ Optional `[extra]` fields on content: `tldr` (summary box and schema `abstract`)
 
 ## Blog Writing
 
-Tone and style: use the `writing-style` skill (`.agnostic-ai/skills/writing-style/`) for all posts, readings, talks, translations, and edits. The core voice is in `SKILL.md`. Load only the matching file in `references/`: `blog-posts.md`, `readings.md`, `talks.md`, or `spanish.md`.
+Tone and style: use the `writing-style` skill (`.agnostic-ai/skills/writing-style/`) for all posts, readings, talks, translations, and edits. Follow its instructions for loading `references/slop.md` and the relevant content reference.
 
 ### Blog post structure
 
@@ -147,7 +147,7 @@ To add a new series: add `[extra.series.<key>]` with `title` and `title_es` in `
 
 ## Agent Config
 
-Agent rules, skills, agents, hooks, settings (permissions, protected `public/`), Codex review rules, and templates live in `.agnostic-ai/`. Edit them there, then run `agnostic-ai sync`. It generates `CLAUDE.md`, `AGENTS.md`, `.claude/`, `.codex/`, and `.agents/skills/`, all ignored by git. Paths in these files start from the repository root.
+Agent rules, skills, agents, hooks, settings (permissions, protected `public/`), Codex review rules, and templates live in `.agnostic-ai/`. Edit them there, then run `agnostic-ai sync`. It generates `CLAUDE.md`, `AGENTS.md`, `.claude/`, `.codex/`, and `.agents/skills/` for the tools to load. Generated files are ignored by git and must be regenerated after a fresh clone. Paths in these files start from the repository root.
 
 ## Skills Available
 

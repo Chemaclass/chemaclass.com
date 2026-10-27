@@ -8,7 +8,7 @@ model: haiku
 
 # List Blog Posts
 
-List all blog posts in `content/blog/` (excluding `.es.md` files), most recent first, as a table with:
+List blog posts in `content/blog/` (excluding section indexes and `.es.md` files), most recent first, as a table with:
 
 - Title
 - Date

@@ -139,12 +139,9 @@ Act 3+ = real phel-doom code.
 
 ![bg brightness:0.35](assets/screenshot.png)
 
-# Wait, what?
+# DOOM in a terminal
 
-This is **DOOM**. In a **terminal**.
-Written in a **Lisp**. That compiles to **PHP 8.5**.
-
-## Write Lisp. Ship PHP. Even DOOM.
+A DOOM-inspired game written in **Phel**, a Lisp that compiles to **PHP 8.5**.
 
 <span class="small">~20,500 lines of Phel · the raycasting trick id Software used before DOOM · ~5 ms/frame</span>
 
@@ -157,7 +154,7 @@ Written in a **Lisp**. That compiles to **PHP 8.5**.
 3. **How** it plugs into PHP: all of PHP, the REPL, one CLI
 4. **How** immutability shapes a real project: DOOM
 
-> We learn by **building the game**. No spec-reading.
+> We will learn Phel through the game.
 
 ---
 
@@ -165,15 +162,14 @@ Written in a **Lisp**. That compiles to **PHP 8.5**.
 
 - A **functional Lisp** that compiles to PHP
 - `Clojure -> JVM :: Phel -> PHP`
-- Immutability, macros, clean pipelines. 
-- All within the PHP ecosystem.
-- Just a **Composer package.** No new runtime, no new server.
+- Immutable data, macros, and pipelines
+- Installs as a **Composer package** in the PHP ecosystem
 
 ```bash
 composer require phel-lang/phel-lang
 ```
 
-<span class="reflex aud-php">🧠 "New language = new runtime + new hires"? No. It's a Composer package.</span><span class="reflex aud-ts">🧠 "New language = new runtime + new hires"? No.<br>It installs like any dependency, into a PHP stack.</span>
+<span class="reflex">🧠 Add Phel to an existing PHP project with Composer.</span>
 
 ---
 
@@ -188,7 +184,7 @@ vendor/bin/phel build    # compiles .phel → out/*.php
 - **OPcache + JIT** apply for free.
 - Ships as `vendor/bin/phel`. One CLI for everything.
 
-> Write Lisp. Ship PHP. Server needs nothing new.
+> Phel compiles to PHP before deployment.
 
 ---
 
@@ -210,7 +206,7 @@ immutable world map, pure tick-world, map/filter, the -> pipeline, the io/ folde
 
 ---
 
-## Why it pays off
+## Updating a player without mutation
 
 <div class="aud-php">
 
@@ -254,11 +250,11 @@ We will see each benefit with real numbers in Act 3: 4,152 tests with no mocks, 
 # ACT 1
 ## Phel basics, for <span class="aud-php">PHP</span><span class="aud-ts">TS</span> developers
 
-*Ten minutes. Zero Lisp needed.*
+*A short introduction to Phel.*
 
 ---
 
-## The whole syntax, in 30 seconds
+## Function calls
 
 ```clojure
 ; operator comes FIRST, no precedence rules
@@ -274,9 +270,9 @@ We will see each benefit with real numbers in Act 3: 4,152 tests with no mocks, 
 (not false)    ; =>  true
 ```
 
-That's the entire syntax. Everything else is just functions.
+Function calls put the operator before its arguments.
 
-<span class="reflex">🧠 `1 + 2 * 3` has precedence rules. In Phel: always `(op args)`, no exceptions.</span>
+<span class="reflex">🧠 Nested calls make the order of operations explicit.</span>
 
 ---
 
@@ -434,11 +430,11 @@ No `while`. No `$i++`. No mutable variables.
 # ACT 2
 ## PHP interop and tooling
 
-*But can it touch real PHP?*
+*Call PHP from Phel.*
 
 ---
 
-## No wall. All of PHP is your stdlib
+## Calling PHP from Phel
 
 ```clojure
 ; prefix any PHP function with php/
@@ -457,7 +453,7 @@ DateTime/ATOM                 ; =>  "Y-m-d\TH:i:sP"  (::ATOM static const)
 Any Composer package works.
 **Symfony Console** powers this game's CLI.
 
-<span class="reflex">🧠 "But does it have a library for X?" Yes. All of them. It's PHP.</span>
+<span class="reflex">🧠 Phel can call PHP functions and use Composer packages.</span>
 
 ---
 
@@ -488,7 +484,7 @@ Load any namespace. Probe any function. No rebuild, no restart.
 # ACT 3
 ## Now let's build a game
 
-*Does immutability survive a real project?*
+*Apply these ideas to the game.*
 
 ---
 
@@ -513,7 +509,7 @@ Load any namespace. Probe any function. No rebuild, no restart.
 
 ---
 
-## ...and `play-command` is one loop, forever
+## The game loop in `play-command`
 
 `main` just wires the CLI. The whole game is a loop, ~60×/second:
 
@@ -543,7 +539,7 @@ Each frame: `world' = (tick-world world keys dt)`. Draw, discard, repeat.
    :kills   0})          ; ...ammo, armor, doors, etc.
 ```
 
-This single map **IS the game**.
+The world map holds the game state:
 - diff it to find what changed
 - save it to disk for quick-save
 - replay it from a seed for deterministic demos
@@ -586,7 +582,7 @@ p.angle = 1.57;   // mutates in-place
 (assoc player :angle 1.57)        ; => new map, original unchanged
 ```
 
-<span class="reflex">🧠 Same semantics, half the code. `assoc` returns a new map - original never touched.</span>
+<span class="reflex">🧠 `assoc` returns a new map and leaves the original unchanged.</span>
 
 ---
 
@@ -604,7 +600,7 @@ p.angle = 1.57;   // mutates in-place
 ```
 
 Every subsystem is `world -> world`. Old world discarded.
-A bug stays **trapped in its subsystem** - it can't corrupt the rest.
+Each subsystem receives a world and returns an updated world.
 
 <span class="reflex aud-php">🧠 PHP: subsystems mutate shared state. Here: one in, one out. Nothing else can touch it.</span><span class="reflex aud-ts">🧠 TS: shared mutable state drifts. Here: one in, one out. Nothing else can touch it.</span>
 
@@ -625,13 +621,13 @@ tree src/
 # src/commands/  src/core/  src/demo/  src/glue/  src/io/
 ```
 
-> Purity is not mere taste. Structure enforces it.
+> The directory structure separates game logic from input and output.
 
 ---
 
 ## Fake 3D: a flat 2D map
 
-The world is really a **maze on graph paper**:
+The world is a **maze on a 2D grid**:
 
 <div class="split">
 <div class="col-text">
@@ -645,7 +641,7 @@ The world is really a **maze on graph paper**:
 
 You move on a **flat grid, top-down.** The 3D is an illusion.
 
-So how does a flat map become *that* view? →
+Raycasting turns the grid into the view on the right.
 
 </div>
 <div class="col-img">
@@ -659,7 +655,7 @@ So how does a flat map become *that* view? →
 
 ---
 
-## Wolfenstein 3D (1992): Carmack's math
+## Raycasting in Wolfenstein 3D (1992)
 
 **id Software, John Carmack.** The trick before DOOM. No GPU.
 
@@ -669,11 +665,11 @@ One ray per column, marched to the first wall → distance `d`.
 
 Small `d` = **tall strip.** One division per ray. No 3D engine.
 
-<span class="reflex aud-php">🧠 PHP instinct: reach for a 3D rendering library. Carmack: constrain the world, trust the math.</span><span class="reflex aud-ts">🧠 JS instinct: reach for WebGL or three.js. Carmack: constrain the world, trust the math.</span>
+<span class="reflex">🧠 A 2D map and ray distances are enough to draw this view.</span>
 
 ---
 
-## See it: rays in, walls out
+## From rays to wall strips
 
 <svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" class="ray-demo" role="img" aria-label="raycasting animation">
 <rect x="24" y="28" width="300" height="300" rx="8" fill="#eef2f7" stroke="#cbd5e1"/>
@@ -787,7 +783,7 @@ Right: each distance becomes a strip. **Near = tall, far = short.**
 
 ---
 
-## `loop/recur`: the heart of DOOM
+## Casting a ray with `loop/recur`
 
 ```clojure
 ; march a ray forward until it hits a wall
@@ -802,7 +798,7 @@ Right: each distance becomes a strip. **Near = tall, far = short.**
         :else (recur (+ dist 0.05))))))             ; keep stepping
 ```
 
-No mutable counter. **Even the raycaster is pure** - unit-test in one line.
+The raycaster uses a pure function with no mutable counter.
 **Once per screen column - ~120-180 rays a frame.**
 <!--
 Simplified step-march; the real engine uses DDA.
@@ -811,7 +807,7 @@ DEMO: phel run phel-doom.main demo --phase 2 (+pistol) / --phase 3 (+enemies) / 
 
 ---
 
-## Testing: pure = no mocks
+## Testing pure functions
 
 ```clojure
 (deftest test-fov-proj-dist-flat-below-clamp
@@ -828,14 +824,13 @@ DEMO: phel run phel-doom.main demo --phase 2 (+pistol) / --phase 3 (+enemies) / 
 composer test     # 4,152 tests, green the whole way
 ```
 
-No mocks. No fake terminal. No DI container.
-Pure functions: call with input, check output. Done.
+These tests call pure functions and check their output without mocks.
 
 <!-- Nothing to mock: no clock, RNG, or renderer to fake. -->
 
 ---
 
-## Dividend: pure is fast
+## Frame timing and optimizations
 
 Target **< 5 ms** per frame · measured **~4.5 ms** (game logic **0.3 - 0.5 ms**)
 
@@ -843,12 +838,12 @@ Target **< 5 ms** per frame · measured **~4.5 ms** (game logic **0.3 - 0.5 ms**
 - Precompute view angles: **-60%** cast time.
 - Hot loops read raw PHP arrays, not persistent vectors: level generation **3x** faster.
 
-<span class="reflex">🧠 Pure: same input, same output. Cache can't be wrong.</span>
+<span class="reflex">🧠 Pure functions return the same output for the same input, so their results can be cached.</span>
 <!-- composer bench, 2026-09-24, PHP 8.5, no JIT, 120x30: frame 4.3-4.5 ms, step 0.31-0.47 ms, cast 0.055 ms. Drawing is ~98% of the frame. -->
 
 ---
 
-## Read the receipts: Phel → PHP
+## Compiled Phel output
 
 ```clojure
 (defn new-player [x y angle] {:x x :y y :angle angle})
@@ -880,7 +875,7 @@ Live: less out/phel_doom/core/state.php  (run `phel build` first).
 # ACT 4
 ## Story and verdict
 
-*So… should you use it?*
+*The project and its development.*
 
 ---
 
@@ -915,7 +910,7 @@ Live: less out/phel_doom/core/state.php  (run `phel build` first).
 # ACT 5
 ## Live demo
 
-*Enough slides.*
+*Run the game.*
 
 ---
 
@@ -936,13 +931,11 @@ Live: less out/phel_doom/core/state.php  (run `phel build` first).
 
 # Thank you
 
-## Write Lisp. Ship PHP. Even DOOM.
-
-Reach for it when immutability + a REPL pay off.
+Phel brings immutable data and a REPL to PHP projects.
 
 ### https://chemaclass.com/phel-doom
 
-**Questions?** The REPL is open.
+**Questions?**
 
 <script>
 (function () {

@@ -24,9 +24,9 @@ argument-hint: "<image-path> [post-date] [cover|middle|footer]"
    - Run `bash scripts/optimize-image.sh <source> static/images/blog/YYYY-MM-DD/{placement}.webp --width <W> --quality 85`
      - Width by slot: `cover` = `1600`, `middle`/`footer` = `1200`. The cover width is a minimum, and the cover must be at least 820px tall: the template makes a 1440px-wide top image (hero) for high-density (retina) screens from it. For a very wide source image, use a larger width.
    - **Report the before/after size** the script prints (before KB, after KB, % saved)
-   - Delete the source file once the optimization succeeds
+   - Keep the source file; the user may need the original
 
-4. Update the blog post for the placement (all images are `.webp`). If the slot still points at the shared placeholder `/images/blog/placeholder.webp`, replace that path with the real path for the post's date:
+4. Update the English and Spanish blog posts for the placement (all images are `.webp`). Translate alt text for each language. If the slot still points at the shared placeholder `/images/blog/placeholder.webp`, replace that path with the real path for the post's date:
    - **cover**: set `static_thumbnail = "/images/blog/YYYY-MM-DD/cover.webp"` in front matter `[extra]`. Newer posts do not add a `![cover]` line in the body: the template shows the top image from `static_thumbnail`.
    - **middle**: insert `![descriptive alt](/images/blog/YYYY-MM-DD/middle.webp)` near the middle of the body (or ask the user where to place it)
    - **footer**: insert `![descriptive alt](/images/blog/YYYY-MM-DD/footer.webp)` as the last content line

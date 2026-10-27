@@ -18,9 +18,10 @@ argument-hint: "<topic>"
 6. Set `static_thumbnail` to the shared placeholder `/images/blog/placeholder.webp`. It is a TODO image stored in the repo, so the draft builds without real images. Use the same path for any `![blog-footer](...)` or `![blog-middle](...)` images you add. When `/add-image` adds the real images, change these paths to `/images/blog/YYYY-MM-DD/<slot>.webp`.
 7. Check if the topic fits an existing series (see `[extra.series]` in `config.toml`); if so, add `series` and `series_order` to `[extra]`
 8. Add `<!-- more -->` marker after the introduction
-9. Use 4 to 7 h2 headings. Never skip a heading level
+9. Choose the number of h2 headings to fit the post. Never skip a heading level
 10. List related posts in the `related_posts` front matter field, not in a `## Related` section
 11. Set `draft = true`
+12. Create the Spanish `.es.md` companion with the same series metadata and draft status, following the Spanish writing reference
 
 ## Topic/Title
 The topic/title is provided with this skill call.
