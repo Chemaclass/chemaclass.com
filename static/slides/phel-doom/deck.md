@@ -32,6 +32,10 @@ style: |
     color: #1e293b;
   }
   section.lead { justify-content: center; text-align: center; padding: 48px; }
+  section.spacious { font-size: 36px; line-height: 1.45; }
+  section.spacious h2 { font-size: 46px; }
+  section.spacious pre { font-size: 26px; }
+  section.spacious .reflex { font-size: 23px; }
   h1 { color: #512da8; font-size: 62px; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 16px; }
   h2 { color: #512da8; font-weight: 700; font-size: 40px; margin: 0 0 20px; }
   h3 { color: #6d28d9; font-weight: 700; font-size: inherit; margin: 0 0 12px; }
@@ -147,6 +151,8 @@ A DOOM-inspired game written in **Phel**, a Lisp that compiles to **PHP 8.5**.
 
 ---
 
+<!-- _class: spacious -->
+
 ## What you'll leave with
 
 1. **Why** Phel exists and the functional ideas behind it
@@ -157,6 +163,8 @@ A DOOM-inspired game written in **Phel**, a Lisp that compiles to **PHP 8.5**.
 > We will learn Phel through the game.
 
 ---
+
+<!-- _class: spacious -->
 
 ## What is Phel?
 
@@ -172,6 +180,8 @@ composer require phel-lang/phel-lang
 <span class="reflex">🧠 Add Phel to an existing PHP project with Composer.</span>
 
 ---
+
+<!-- _class: spacious -->
 
 ## It's still PHP under the hood
 
