@@ -644,7 +644,7 @@ section::after { color: #94a3b8; }
 ;color:#1e293b;background-color:#f8fafc;background-image:none;" data-marpit-pagination-total="40" data-marpit-advanced-background="content">
 <h1 id="doom-in-a-terminal">DOOM in a terminal</h1>
 <p>A DOOM-inspired game written in <strong>Phel</strong>, a Lisp that compiles to <strong>PHP 8.5</strong>.</p>
-<p><span class="small">~20,500 lines of Phel · the raycasting trick id Software used before DOOM · ~5 ms/frame</span></p>
+<p><span class="small">~20,500 lines of Phel · raycasting, as used by id Software before DOOM · ~5 ms/frame</span></p>
 <footer>Running DOOM with Phel · Chemaclass</footer>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-footer="Running DOOM with Phel · Chemaclass" data-background-color="#f8fafc" data-color="#1e293b" data-class="lead" data-theme="uncover" data-style="/* === phel-lang.org look &amp; feel - light mode ===
@@ -1088,7 +1088,7 @@ section::after { color: #94a3b8; }
 <li><strong>Ahead-of-time compiled.</strong> Not interpreted at runtime.</li>
 <li>Output is <strong>plain PHP 8.5.</strong> Any host, zero Phel in production.</li>
 <li><strong>OPcache + JIT</strong> apply for free.</li>
-<li>Ships as <code>vendor/bin/phel</code>. One CLI for everything.</li>
+<li>The CLI is available at <code>vendor/bin/phel</code>.</li>
 </ul>
 <blockquote>
 <p>Phel compiles to PHP before deployment.</p>
@@ -1336,7 +1336,7 @@ section::after { color: #94a3b8; }
 </code></pre>
 <ul>
 <li><strong>Easy to test:</strong> call with an input, check the output. No mocks.</li>
-<li><strong>Easy to follow:</strong> nothing changes behind your back.</li>
+<li><strong>Easy to follow:</strong> the original player stays unchanged.</li>
 <li><strong>Safe to cache and replay:</strong> same input, same result.</li>
 </ul>
 <footer>Running DOOM with Phel · Chemaclass</footer>
@@ -1688,7 +1688,7 @@ section::after { color: #94a3b8; }
       total (<span class="hljs-name"><span class="hljs-built_in">+</span></span> a b)]
   total)  <span class="hljs-comment">; =&gt;  30   (a, b, total don&#x27;t exist outside)</span>
 </code></pre>
-<p><span class="reflex aud-php"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> PHP: any var is reassignable from anywhere. <code>def</code> says &quot;this never changes.&quot;</span><span class="reflex aud-ts"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> TS: <code>let</code> reassigns from anywhere. <code>def</code> is like a module-level <code>const</code>: this never changes.</span></p>
+<p><span class="reflex aud-php"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> PHP variables can be reassigned. A Phel <code>def</code> creates an immutable binding.</span><span class="reflex aud-ts"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> A Phel <code>def</code> creates an immutable binding, like a module-level <code>const</code>.</span></p>
 <footer>Running DOOM with Phel · Chemaclass</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-footer="Running DOOM with Phel · Chemaclass" data-background-color="#f8fafc" data-color="#1e293b" data-theme="uncover" data-style="/* === phel-lang.org look &amp; feel - light mode ===
@@ -1928,7 +1928,7 @@ section::after { color: #94a3b8; }
 </code></pre>
 <p><strong>Keywords</strong> (<code>:name</code>, <code>:active?</code>): typed constants,<br />
 like PHP string keys but faster to compare</p>
-<p><span class="reflex aud-php"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> PHP arrays do everything. Phel separates the concept: map / vector / set.</span><span class="reflex aud-ts"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> TS splits object / array / <code>Set</code> already. Phel makes the split first-class and immutable.</span></p>
+<p><span class="reflex aud-php"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> PHP arrays can hold lists and key-value pairs. Phel has maps, vectors, and sets.</span><span class="reflex aud-ts"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> TS has objects, arrays, and <code>Set</code>. Phel has maps, vectors, and sets.</span></p>
 <footer>Running DOOM with Phel · Chemaclass</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-footer="Running DOOM with Phel · Chemaclass" data-background-color="#f8fafc" data-color="#1e293b" data-theme="uncover" data-style="/* === phel-lang.org look &amp; feel - light mode ===
@@ -2168,7 +2168,7 @@ section::after { color: #94a3b8; }
 
 (<span class="hljs-name">grade</span> <span class="hljs-number">82</span>)  <span class="hljs-comment">; =&gt;  :B</span>
 </code></pre>
-<p><span class="reflex aud-php"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> PHP <code>switch</code> is a statement. <code>cond</code> IS the value, assign it directly.</span><span class="reflex aud-ts"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> TS: <code>switch</code> is a statement, <code>cond</code> IS the value. No nested ternaries.</span></p>
+<p><span class="reflex"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> Unlike <code>switch</code>, <code>cond</code> is an expression: you can assign its result.</span></p>
 <footer>Running DOOM with Phel · Chemaclass</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-footer="Running DOOM with Phel · Chemaclass" data-background-color="#f8fafc" data-color="#1e293b" data-theme="uncover" data-style="/* === phel-lang.org look &amp; feel - light mode ===
@@ -2398,7 +2398,7 @@ section::after { color: #94a3b8; }
 @import url(&quot;https://fonts.bunny.net/css?family=fira-code:400,500,600&amp;display=swap&quot;)
 ;color:#1e293b;background-color:#f8fafc;background-image:none;" data-marpit-pagination-total="40">
 <h2 id="loops-without-mutation">Loops without mutation</h2>
-<p>No <code>while</code>. No <code>$i++</code>. No mutable variables.</p>
+<p>Use <code>loop</code> and <code>recur</code> to repeat with new bindings.</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-clojure"><span class="hljs-comment">; loop declares the bindings, recur restarts with new values</span>
 (<span class="hljs-name"><span class="hljs-built_in">loop</span></span> [i <span class="hljs-number">0</span><span class="hljs-punctuation">,</span> sum <span class="hljs-number">0</span>]
   (<span class="hljs-name"><span class="hljs-built_in">if</span></span> (<span class="hljs-name"><span class="hljs-built_in">=</span></span> i <span class="hljs-number">5</span>)
@@ -2749,7 +2749,7 @@ section::after { color: #94a3b8; }
            keysym #0369a1 · number #b45309 · comment #94a3b8 */
 @import url(&quot;https://fonts.bunny.net/css?family=fira-code:400,500,600&amp;display=swap&quot;)
 ;color:#1e293b;background-color:#f8fafc;background-image:none;" data-marpit-pagination-total="40">
-<h2 id="the-repl-try-everything-live">The REPL: try everything live</h2>
+<h2 id="try-phel-in-the-repl">Try Phel in the REPL</h2>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">vendor/bin/phel repl
 </code></pre>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-clojure">user:<span class="hljs-number">1</span>&gt; (<span class="hljs-name"><span class="hljs-built_in">+</span></span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>)
@@ -2763,7 +2763,7 @@ user:<span class="hljs-number">4</span>&gt; {<span class="hljs-symbol">:x</span>
 user:<span class="hljs-number">5</span>&gt; (<span class="hljs-name"><span class="hljs-built_in">-&gt;</span></span> <span class="hljs-string">&quot;  hello  &quot;</span> php/trim php/strtoupper)
 <span class="hljs-string">&quot;HELLO&quot;</span>
 </code></pre>
-<p>Load any namespace. Probe any function. No rebuild, no restart.</p>
+<p>Load a namespace and call its functions without rebuilding the project.</p>
 <footer>Running DOOM with Phel · Chemaclass</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-footer="Running DOOM with Phel · Chemaclass" data-background-color="#f8fafc" data-color="#1e293b" data-class="lead" data-theme="uncover" data-style="/* === phel-lang.org look &amp; feel - light mode ===
@@ -3103,7 +3103,7 @@ section::after { color: #94a3b8; }
 @import url(&quot;https://fonts.bunny.net/css?family=fira-code:400,500,600&amp;display=swap&quot;)
 ;color:#1e293b;background-color:#f8fafc;background-image:none;" data-marpit-pagination-total="40">
 <h2 id="the-game-loop-in-play-command">The game loop in <code>play-command</code></h2>
-<p><code>main</code> just wires the CLI. The whole game is a loop, ~60×/second:</p>
+<p><code>main</code> wires the CLI. The game loop runs ~60 times per second:</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>  input  ──→  tick-world  ──→  render!  ──┐
   keys        world→world     world→ANSI  │
   held        (pure)          (io)        │
@@ -3111,7 +3111,7 @@ section::after { color: #94a3b8; }
     └─────────── new world ───────────────┘
 </code></pre>
 <p>Each frame: <code>world' = (tick-world world keys dt)</code>. Draw, discard, repeat.</p>
-<p><span class="reflex"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> The whole game is a <strong>fold over keystrokes</strong> - a fresh world each frame.</span></p>
+<p><span class="reflex"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> Each frame uses the previous world and the player's input to produce a new world.</span></p>
 <footer>Running DOOM with Phel · Chemaclass</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-footer="Running DOOM with Phel · Chemaclass" data-background-color="#f8fafc" data-color="#1e293b" data-theme="uncover" data-style="/* === phel-lang.org look &amp; feel - light mode ===
@@ -3219,7 +3219,7 @@ section::after { color: #94a3b8; }
            keysym #0369a1 · number #b45309 · comment #94a3b8 */
 @import url(&quot;https://fonts.bunny.net/css?family=fira-code:400,500,600&amp;display=swap&quot;)
 ;color:#1e293b;background-color:#f8fafc;background-image:none;" data-marpit-pagination-total="40">
-<h2 id="the-whole-game-is-one-immutable-value">The whole game is one immutable value</h2>
+<h2 id="game-state-in-an-immutable-map">Game state in an immutable map</h2>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-clojure">(<span class="hljs-keyword">defn</span> <span class="hljs-title">new-world</span> [grid player]
   {<span class="hljs-symbol">:grid</span>    grid
    <span class="hljs-symbol">:player</span>  player       <span class="hljs-comment">; {:x :y :angle}</span>
@@ -3485,9 +3485,8 @@ section::after { color: #94a3b8; }
       (<span class="hljs-name">tick-shooting</span> edges)  <span class="hljs-comment">; your weapon</span>
       (<span class="hljs-name">damage-step</span> dt)))     <span class="hljs-comment">; resolve damage</span>
 </code></pre>
-<p>Every subsystem is <code>world -&gt; world</code>. Old world discarded.<br />
-Each subsystem receives a world and returns an updated world.</p>
-<p><span class="reflex aud-php"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> PHP: subsystems mutate shared state. Here: one in, one out. Nothing else can touch it.</span><span class="reflex aud-ts"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> TS: shared mutable state drifts. Here: one in, one out. Nothing else can touch it.</span></p>
+<p>Each subsystem receives a world and returns an updated world.</p>
+<p><span class="reflex"><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9e0.svg" data-marp-twemoji=""/> Each step can be tested with a world as input and its updated world as output.</span></p>
 <footer>Running DOOM with Phel · Chemaclass</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-footer="Running DOOM with Phel · Chemaclass" data-background-color="#f8fafc" data-color="#1e293b" data-theme="uncover" data-style="/* === phel-lang.org look &amp; feel - light mode ===
@@ -3840,7 +3839,7 @@ section::after { color: #94a3b8; }
 @import url(&quot;https://fonts.bunny.net/css?family=fira-code:400,500,600&amp;display=swap&quot;)
 ;color:#1e293b;background-color:#f8fafc;background-image:none;" data-marpit-pagination-total="40">
 <h2 id="raycasting-in-wolfenstein-3d-1992">Raycasting in Wolfenstein 3D (1992)</h2>
-<p><strong>id Software, John Carmack.</strong> The trick before DOOM. No GPU.</p>
+<p><strong>id Software, John Carmack.</strong> A raycasting technique used before DOOM.</p>
 <p>One ray per column, marched to the first wall → distance <code>d</code>.</p>
 <div class="formula">strip height = screen height <span class="den">/ d</span></div>
 <p>Small <code>d</code> = <strong>tall strip.</strong> One division per ray. No 3D engine.</p>

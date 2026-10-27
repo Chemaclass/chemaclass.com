@@ -148,7 +148,7 @@ Act 3+ = real phel-doom code.
 
 A DOOM-inspired game written in **Phel**, a Lisp that compiles to **PHP 8.5**.
 
-<span class="small">~20,500 lines of Phel · the raycasting trick id Software used before DOOM · ~5 ms/frame</span>
+<span class="small">~20,500 lines of Phel · raycasting, as used by id Software before DOOM · ~5 ms/frame</span>
 
 ---
 
@@ -193,7 +193,7 @@ vendor/bin/phel build    # compiles .phel → out/*.php
 - **Ahead-of-time compiled.** Not interpreted at runtime.
 - Output is **plain PHP 8.5.** Any host, zero Phel in production.
 - **OPcache + JIT** apply for free.
-- Ships as `vendor/bin/phel`. One CLI for everything.
+- The CLI is available at `vendor/bin/phel`.
 
 > Phel compiles to PHP before deployment.
 
@@ -246,7 +246,7 @@ function heal(p: Player): Player {
 ```
 
 - **Easy to test:** call with an input, check the output. No mocks.
-- **Easy to follow:** nothing changes behind your back.
+- **Easy to follow:** the original player stays unchanged.
 - **Safe to cache and replay:** same input, same result.
 
 <!--
@@ -306,7 +306,7 @@ Function calls put the operator before its arguments.
   total)  ; =>  30   (a, b, total don't exist outside)
 ```
 
-<span class="reflex aud-php">🧠 PHP: any var is reassignable from anywhere. `def` says "this never changes."</span><span class="reflex aud-ts">🧠 TS: `let` reassigns from anywhere. `def` is like a module-level `const`: this never changes.</span>
+<span class="reflex aud-php">🧠 PHP variables can be reassigned. A Phel `def` creates an immutable binding.</span><span class="reflex aud-ts">🧠 A Phel `def` creates an immutable binding, like a module-level `const`.</span>
 
 ---
 
@@ -349,7 +349,7 @@ Function calls put the operator before its arguments.
 **Keywords** (`:name`, `:active?`): typed constants, 
 like PHP string keys but faster to compare
 
-<span class="reflex aud-php">🧠 PHP arrays do everything. Phel separates the concept: map / vector / set.</span><span class="reflex aud-ts">🧠 TS splits object / array / `Set` already. Phel makes the split first-class and immutable.</span>
+<span class="reflex aud-php">🧠 PHP arrays can hold lists and key-value pairs. Phel has maps, vectors, and sets.</span><span class="reflex aud-ts">🧠 TS has objects, arrays, and `Set`. Phel has maps, vectors, and sets.</span>
 
 ---
 
@@ -391,7 +391,7 @@ like PHP string keys but faster to compare
 (grade 82)  ; =>  :B
 ```
 
-<span class="reflex aud-php">🧠 PHP `switch` is a statement. `cond` IS the value, assign it directly.</span><span class="reflex aud-ts">🧠 TS: `switch` is a statement, `cond` IS the value. No nested ternaries.</span>
+<span class="reflex">🧠 Unlike `switch`, `cond` is an expression: you can assign its result.</span>
 
 ---
 
@@ -419,7 +419,7 @@ like PHP string keys but faster to compare
 
 ## Loops without mutation
 
-No `while`. No `$i++`. No mutable variables.
+Use `loop` and `recur` to repeat with new bindings.
 
 ```clojure
 ; loop declares the bindings, recur restarts with new values
@@ -468,7 +468,7 @@ Any Composer package works.
 
 ---
 
-## The REPL: try everything live
+## Try Phel in the REPL
 
 ```bash
 vendor/bin/phel repl
@@ -487,7 +487,7 @@ user:5> (-> "  hello  " php/trim php/strtoupper)
 "HELLO"
 ```
 
-Load any namespace. Probe any function. No rebuild, no restart.
+Load a namespace and call its functions without rebuilding the project.
 
 ---
 
@@ -522,7 +522,7 @@ Load any namespace. Probe any function. No rebuild, no restart.
 
 ## The game loop in `play-command`
 
-`main` just wires the CLI. The whole game is a loop, ~60×/second:
+`main` wires the CLI. The game loop runs ~60 times per second:
 
 ```
   input  ──→  tick-world  ──→  render!  ──┐
@@ -534,11 +534,11 @@ Load any namespace. Probe any function. No rebuild, no restart.
 
 Each frame: `world' = (tick-world world keys dt)`. Draw, discard, repeat.
 
-<span class="reflex">🧠 The whole game is a **fold over keystrokes** - a fresh world each frame.</span>
+<span class="reflex">🧠 Each frame uses the previous world and the player's input to produce a new world.</span>
 
 ---
 
-## The whole game is one immutable value
+## Game state in an immutable map
 
 ```clojure
 (defn new-world [grid player]
@@ -610,10 +610,9 @@ p.angle = 1.57;   // mutates in-place
       (damage-step dt)))     ; resolve damage
 ```
 
-Every subsystem is `world -> world`. Old world discarded.
 Each subsystem receives a world and returns an updated world.
 
-<span class="reflex aud-php">🧠 PHP: subsystems mutate shared state. Here: one in, one out. Nothing else can touch it.</span><span class="reflex aud-ts">🧠 TS: shared mutable state drifts. Here: one in, one out. Nothing else can touch it.</span>
+<span class="reflex">🧠 Each step can be tested with a world as input and its updated world as output.</span>
 
 ---
 
@@ -668,7 +667,7 @@ Raycasting turns the grid into the view on the right.
 
 ## Raycasting in Wolfenstein 3D (1992)
 
-**id Software, John Carmack.** The trick before DOOM. No GPU.
+**id Software, John Carmack.** A raycasting technique used before DOOM.
 
 One ray per column, marched to the first wall → distance `d`.
 
