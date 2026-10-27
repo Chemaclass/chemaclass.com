@@ -34,6 +34,7 @@ style: |
   section.lead { justify-content: center; text-align: center; padding: 48px; }
   section.spacious { font-size: 36px; line-height: 1.45; }
   section.spacious h2 { font-size: 46px; }
+  section.spacious li { margin-bottom: 14px; }
   section.spacious pre { font-size: 26px; }
   section.spacious .reflex { font-size: 23px; }
   h1 { color: #512da8; font-size: 62px; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 16px; }
