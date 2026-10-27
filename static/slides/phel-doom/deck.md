@@ -1,5 +1,6 @@
 ---
 marp: true
+lang: en-US
 title: "Running DOOM with Phel"
 description: "We learn Phel (a Lisp that compiles to PHP) by building a DOOM clone, exploring persistent data structures, macros, and the REPL."
 author: "Chemaclass"
