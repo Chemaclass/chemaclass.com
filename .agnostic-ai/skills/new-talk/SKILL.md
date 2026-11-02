@@ -1,6 +1,6 @@
 ---
 name: new-talk
-description: "Create a new talk page (EN + ES) and optionally a starter Marp slide deck. Argument: <talk-title> [--deck]"
+description: "Use to create a talk page (EN and ES) and optionally a Marp deck. Argument: <talk-title> [--deck]"
 x-claude:
   allowed-tools: Read, Write, Glob, Grep, Bash(scripts/build-slides.sh *), Bash(mkdir *)
 argument-hint: "<talk-title> [--deck]"

@@ -1,6 +1,6 @@
 ---
 name: translate
-description: "Translate or update Spanish content from its English source. Argument: <file-path>"
+description: "Use to create or update a Spanish translation from its English source. Argument: <file-path>"
 x-claude:
   allowed-tools: Read, Write, Glob
 argument-hint: "<file-path>"

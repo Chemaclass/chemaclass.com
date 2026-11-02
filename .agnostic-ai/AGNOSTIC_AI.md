@@ -1,160 +1,89 @@
-# Project Instructions for chemaclass.com
+# chemaclass.com
 
-## Overview
+Personal website built with [Zola](https://www.getzola.org/). English is the default language; Spanish is `.es.md`.
 
-This is a personal website built with [Zola](https://www.getzola.org/), a static site generator written in Rust.
-
-## Project Structure
+## Layout
 
 ```
-content/
-├── blog/           # Blog posts (YYYY-MM-DD-slug.md)
-├── readings/       # Book summaries and reading notes
-├── talks/          # Conference talks and presentations
-├── services/       # Professional services pages
-├── books/          # Book-related content
-├── music/          # Music-related content
-├── _index.md       # Homepage (EN)
-├── _index.es.md    # Homepage (ES)
-templates/          # Tera templates
-sass/               # SCSS stylesheets
-static/             # Static assets (images, files)
-config.toml         # Zola configuration
+content/   blog/ readings/ talks/ services/ books/ music/, _index.md (EN), _index.es.md (ES)
+templates/ Tera templates      sass/ SCSS      static/ assets      config.toml
+data/i18n/ long page text      scripts/ build steps and checks
 ```
 
-## Languages (i18n)
+Blog files: `content/blog/YYYY-MM-DD-slug.md`. Front matter template: `.agnostic-ai/templates/blog-post.md`. Structure rules and the pre-publish checklist: `.agnostic-ai/skills/writing-style/references/blog-posts.md`.
 
-The site is in English (default) and Spanish:
-- English: `content/page.md` or `content/page/index.md`
-- Spanish: `content/page.es.md` (in the same folder as the English file)
+## Commands
 
-When you change any text, change EN and ES in the same edit and the same commit.
+- `zola build`: build to `public/` (generated, never edit). `zola serve`: http://127.0.0.1:1111. `zola check`: internal links.
+- `./build.sh`: production build (`zola build` plus the Python steps below).
+- `python3 scripts/validate-prod.py [--full]`: check the live site (`/validate-prod`).
+- `scripts/build-slides.sh`: build slide decks.
 
-Text inside templates lives in one of three places, chosen by size:
+## Languages
 
-- Short UI strings, and pages with only a few strings: `trans(key=..., lang=lang)`.
-  The keys live in `[translations]` and `[languages.es.translations]` in `config.toml`.
-  Each key starts with the page name (`home_*`, `profile_*`, `tag_*`). A missing key
-  fails the build.
-- Long page text: `data/i18n/<page>.toml`. Each key has `.en` and `.es` next to each other.
-  Load the file once per block with `{%- set t = load_data(path="data/i18n/<page>.toml") -%}`.
-  Print a value with `{{ t.section.key[lang] | safe }}` (values are raw HTML). Inside JSON-LD or
-  JS, use `| json_encode | safe` with no quotes around it. Fill placeholders like `{n}`
-  with `| replace(from="{n}", to=value ~ "")`. Pages that use this today: `cv`,
-  `consulting`, `team-workshops`, `web-development` (with its thanks page), `books`.
-- Switches that change structure (an `/es` URL prefix, a `.es.webp` suffix) stay in the
-  template as `{% if lang == 'es' %}`.
+- English: `content/page.md` or `content/page/index.md`. Spanish: `content/page.es.md` in the same folder.
+- Change EN and ES text in the same edit and the same commit.
+- Template text lives in one of three places:
+  - Short UI strings and pages with few strings: `trans(key=..., lang=lang)`. Keys live in `[translations]` and `[languages.es.translations]` in `config.toml`, prefixed with the page name (`home_*`, `profile_*`, `tag_*`). A missing key fails the build.
+  - Long page text: `data/i18n/<page>.toml`, each key with `.en` and `.es` side by side. Load once per block: `{%- set t = load_data(path="data/i18n/<page>.toml") -%}`. Print with `{{ t.section.key[lang] | safe }}` (values are raw HTML). In JSON-LD or JS use `| json_encode | safe` with no quotes around it. Fill placeholders such as `{n}` with `| replace(from="{n}", to=value ~ "")`. In use for `cv`, `consulting`, `team-workshops`, `web-development` (with its thanks page), `books`.
+  - Structural switches (an `/es` URL prefix, a `.es.webp` suffix): `{% if lang == 'es' %}` in the template.
+- Tera prints a missing key as an empty string, so `scripts/check-i18n.py` checks: every key in every language, same placeholders in both, no dashes, no key a template reads but the file lacks, no key no template reads.
 
-Tera prints a missing key as an empty string and does not fail. So
-`scripts/check-i18n.py` does the checking. It requires every key in every language and
-the same placeholders in both. It rejects dashes. It rejects a key that a template reads
-but the file does not have, and a key that no template reads.
+## Build steps
 
-## Common Commands
-
-- `zola build` - Build the static site to `public/`
-- `zola serve` - Start dev server at http://127.0.0.1:1111
-- `zola check` - Verify internal links
-- `./build.sh` - Production build script
-- `python3 scripts/validate-prod.py [--full]` - Check the live site (also `/validate-prod`)
-
-## Build Steps
-
-`./build.sh` runs `zola build` plus a chain of Python steps, in order. The steps use only
-the Python standard library. Any code that reads or writes build output goes here, not in
-a template.
+`./build.sh` runs `zola build` and Python standard-library steps in this order. Code that reads or writes build output belongs in a step, not in a template.
 
 Before the build:
 
-- `check-i18n.py` - checks that every `data/i18n/*.toml` key has EN and ES, and that the
-  keys match what the templates read. Fails the build. It reads only a small, strict part
-  of TOML, because Python 3.9 has no `tomllib`.
-- `generate-last-modified.py` - writes the date of the last *real* edit of each content
-  file, taken from git, into `data/last-modified.json` (ignored by git). A real edit
-  changes at least 25 words below the front matter. Punctuation fixes, accent fixes and
-  moved paragraphs do not count. The date is used for `dateModified` and the visible
-  "Updated" label.
+- `check-i18n.py`: see Languages. Fails the build. Reads only a strict subset of TOML (Python 3.9 has no `tomllib`).
+- `generate-last-modified.py`: writes the git date of each file's last real edit to `data/last-modified.json` (git-ignored). A real edit changes at least 25 words below the front matter; punctuation, accent fixes and moved paragraphs do not count. Feeds `dateModified` and the "Updated" label.
 
-After the build, each step reads `public/` or `content/`:
+After the build (read `public/` or `content/`):
 
-- `check-icons.py`, `check-topics.py` - the Font Awesome subset (the small set of icons we
-  ship) has every icon the site uses, and `/topics/` lists every tag.
-- `enrich-search-index.py` - adds dates to the elasticlunr search index.
-- `generate-heading-index.py` - writes `heading_index.<lang>.json`: every content heading
-  with its anchor, so a search result can link straight to a section. A heading counts as
-  content when it has a `heading-anchor` link. There is no list of CSS selectors.
-- `generate-terminal-fs.py` - builds the file tree behind `/terminal/`.
-- `generate-txt-pages.py`, `generate-md-pages.py` - write a `.txt` copy (EN only) and a
-  `.md` copy next to every blog, readings and talks entry. Drafts are skipped.
-- `generate-llms-txt.py` - writes `llms-full.txt`, and the list of entries below the
-  `## Content index` marker in both `llms.txt` files.
-- `generate-feed-json.py` - writes the JSON Feed.
-- `optimize-content-images.py` - sets `loading`, `decoding`, `width` and `height` on
-  images inside articles. Do not bring back a JavaScript version that sets them in the
-  browser. By the time the page has loaded, the browser has already started downloading
-  every image, so it is too late.
-- `generate-index-json.py` - writes `/index.json`: every entry, with the URL of each format.
-- `enrich-sitemap.py` - adds the git `<lastmod>` date, hreflang pairs (links between the EN
-  and ES version of a page) and page images.
-- `check-assets.py` - checks that every referenced file exists. Fails the build.
-- `check-image-budget.py` - checks that images inside articles are not wider or heavier
-  than the layout needs (1200px, 300KB; covers up to 2000px). Fails the build. Exceptions
-  live in `scripts/image-budget-baseline.txt`, each with a reason.
+- `check-icons.py`, `check-topics.py`: the shipped Font Awesome subset has every icon the site uses; `/topics/` lists every tag.
+- `enrich-search-index.py`: adds dates to the elasticlunr index.
+- `generate-heading-index.py`: writes `heading_index.<lang>.json` (content headings with anchors). A heading counts when it has a `heading-anchor` link.
+- `generate-terminal-fs.py`: file tree behind `/terminal/`.
+- `generate-txt-pages.py`, `generate-md-pages.py`: a `.txt` copy (EN only) and a `.md` copy beside every blog, readings and talks entry. Drafts are skipped.
+- `generate-llms-txt.py`: `llms-full.txt` and the entry list below `## Content index` in both `llms.txt` files.
+- `generate-feed-json.py`: JSON Feed.
+- `optimize-content-images.py`: sets `loading`, `decoding`, `width` and `height` on article images. Never set them from JavaScript: the browser has already started downloading by then.
+- `generate-index-json.py`: `/index.json`, every entry with the URL of each format.
+- `enrich-sitemap.py`: git `<lastmod>`, hreflang pairs, page images.
+- `check-assets.py`: every referenced file exists. Fails the build.
+- `check-image-budget.py`: article images at most 1200px wide and 300KB (covers up to 2000px). Fails the build. Exceptions go in `scripts/image-budget-baseline.txt`, each with a reason.
 
-CI also runs `check-js-runtime.py`. It opens pages in headless Chrome (Chrome with no
-window) and fails on uncaught JS errors. After deploying, CI runs `indexnow.py` for the
-URLs that the push changed.
+CI also runs `check-js-runtime.py` (headless Chrome, fails on uncaught JS errors) and, after a deploy, `indexnow.py` for the changed URLs.
 
-## Config Settings
+## Config
 
-`config.toml` holds more than Zola's own settings:
+`config.toml` holds more than Zola settings:
 
-- `[extra.content_license]` - the licence named in the schema, the head link, the
-  footer, `ai.txt` and the markdown copies. Poetry does not use it; see `books/post.html`.
-- `[[extra.tag_descriptions]]` - `name`, `desc`, `desc_es`, and `entity` (the URL that
-  explains what the tag means). Tag pages use it (`DefinedTerm`), and so do posts (`about`).
+- `[extra.content_license]`: licence used by the schema, head link, footer, `ai.txt` and the markdown copies. Poetry does not use it (see `books/post.html`).
+- `[[extra.tag_descriptions]]`: `name`, `desc`, `desc_es`, `entity` (URL explaining the tag). Used by tag pages (`DefinedTerm`) and posts (`about`).
 - `[extra.series.<key>]`, `[[extra.topics]]`, `start_here_posts`, `nav`.
 
-Optional `[extra]` fields on content: `tldr` (summary box and schema `abstract`),
-`faq` (a `<details>` list on the page and `FAQPage`), `videos` and `slides` on talks
-(`VideoObject`, `PresentationDigitalDocument`).
+Optional `[extra]` fields on content: `tldr` (summary box and schema `abstract`), `faq` (`<details>` list and `FAQPage`), `videos` and `slides` on talks (`VideoObject`, `PresentationDigitalDocument`).
 
-## Blog Writing
+## Writing
 
-Tone and style: use the `writing-style` skill (`.agnostic-ai/skills/writing-style/`) for all posts, readings, talks, translations, and edits. Follow its instructions for loading `references/slop.md` and the relevant content reference.
+Use the `writing-style` skill for every post, reading, talk, translation and edit; follow its instructions for loading `references/slop.md` and the content reference.
 
-### Blog post structure
+Series: a post shows its series name and links to the series page, which lists posts by `series_order` as a suggested order. No post may expect the reader to have read another. For a new post, check whether it fits an existing series; if so add `series` and `series_order` to `[extra]` in both EN and ES files. Keys are in `config.toml` under `[extra.series.<key>]` (currently `bitcoin`, `ai`, `craftsmanship`, `leadership`, `agile`). A new series needs `title` and `title_es` there.
 
-Files: `content/blog/YYYY-MM-DD-slug.md`. Front matter template: `.agnostic-ai/templates/blog-post.md`. Full structure rules, front matter fields, and the checklist before publishing: `.agnostic-ai/skills/writing-style/references/blog-posts.md`.
+## Talks and slides
 
-### Series
+- Talk pages: `content/talks/<slug>.md` and `<slug>.es.md`. Index: `content/talks/_index.md` (and `.es.md`).
+- Slide decks are Marp markdown in `static/slides/<slug>/`: `deck.md` (source, speaker notes in HTML comments), `assets/`, and a generated `index.html` that is committed (CI has no Marp).
+- Build with `scripts/build-slides.sh` (`--all`, `<slug>`, or `<external-folder> <slug>` to import; `--pdf` also writes a git-ignored PDF).
+- After editing a `deck.md`, rebuild that slug and commit source and output together.
 
-A series groups related posts. A post shows its series name and a link to the series page. The series page lists the posts in `series_order` as a suggested reading order. The order is only a suggestion. No post may expect the reader to have read another one. When you create a new post, check if it fits an existing series. If it does, add `series` + `series_order` to `[extra]` in both the EN and ES files.
+## Agent config
 
-Series are defined in `config.toml` under `[extra.series.<key>]`. That file holds the current, correct list. Existing keys: `bitcoin`, `ai`, `craftsmanship`, `leadership`, `agile`.
+Rules, skills, agents, hooks, settings (permissions, protected `public/`), Codex review rules and templates live in `.agnostic-ai/`. Edit there, then run `agnostic-ai sync`; generated files are git-ignored, so sync after a fresh clone. Paths in these files start at the repository root.
 
-To add a new series: add `[extra.series.<key>]` with `title` and `title_es` in `config.toml`.
+Optimize every image with `/optimize-images` or `/add-image` before adding it. Run `/validate-posts` before marking a post ready.
 
-## Talks and Slides
+## Code style
 
-- Talk pages: `content/talks/<slug>.md` + `<slug>.es.md` in the same folder. The talk index is `content/talks/_index.md` (+ `.es.md`).
-- Slide decks are Marp markdown. Each deck sits in `static/slides/<slug>/`, next to its build output:
-  - `deck.md` - source (speaker notes in HTML comments)
-  - `assets/` - media used by the deck
-  - `index.html` - generated in the same folder and committed (CI only runs Zola, there is no Marp at deploy time)
-- Build decks with `scripts/build-slides.sh` (`--all`, `<slug>`, or `<external-folder> <slug>` to import; `--pdf` also makes a PDF, which git ignores).
-- After you edit a `deck.md`, rebuild that slug and commit both the source and the generated output.
-
-## Agent Config
-
-Agent rules, skills, agents, hooks, settings (permissions, protected `public/`), Codex review rules, and templates live in `.agnostic-ai/`. Edit them there, then run `agnostic-ai sync`. It generates `CLAUDE.md`, `AGENTS.md`, `.claude/`, `.codex/`, and `.agents/skills/` for the tools to load. Generated files are ignored by git and must be regenerated after a fresh clone. Paths in these files start from the repository root.
-
-## Skills Available
-
-Project skills live in `.agnostic-ai/skills/`, one folder per skill. Call a skill with `/<name>`. Each skill's description says how to use it. Always optimize images with `/optimize-images` or `/add-image` before you add them to the site. Run `/validate-posts` before you mark a post as ready.
-
-## Code Style
-
-- Templates use Tera syntax
-- Styles use SCSS in `sass/` directory
-- Config uses TOML format
+Tera templates, SCSS in `sass/`, TOML config.

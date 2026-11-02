@@ -1,6 +1,6 @@
 ---
 name: check-translations
-description: "Find content files missing their Spanish (.es.md) translation. Use when asked how much content is translated, or after adding new English content."
+description: "Use to find content files missing their Spanish (.es.md) version, or to report translation coverage."
 x-claude:
   allowed-tools: Glob, Read, Grep
 model: haiku

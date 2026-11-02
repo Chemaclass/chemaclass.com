@@ -1,6 +1,6 @@
 ---
 name: list-posts
-description: "List blog posts with title, date, tags, and draft status. Optional argument: [tag or year] to filter"
+description: "Use to list blog posts with title, date, tags and draft status. Optional argument: tag or year."
 x-claude:
   allowed-tools: Glob, Read, Grep
 model: haiku

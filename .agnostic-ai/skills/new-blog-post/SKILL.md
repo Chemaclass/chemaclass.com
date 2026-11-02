@@ -1,6 +1,6 @@
 ---
 name: new-blog-post
-description: "Create a new blog post from the project template. Argument: <topic>"
+description: "Use to create a blog post from the project template. Argument: <topic>"
 x-claude:
   allowed-tools: Read, Write, Glob, Grep
 argument-hint: "<topic>"

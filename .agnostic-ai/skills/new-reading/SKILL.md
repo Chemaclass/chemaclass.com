@@ -1,6 +1,6 @@
 ---
 name: new-reading
-description: "Create a new reading note from the project template. Argument: <book-title> by <author>"
+description: "Use to create a reading note from the project template. Argument: <book-title> by <author>"
 x-claude:
   allowed-tools: Read, Write, Glob
 argument-hint: "<book-title> by <author>"

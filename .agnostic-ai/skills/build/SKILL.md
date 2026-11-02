@@ -1,6 +1,6 @@
 ---
 name: build
-description: "Build the Zola static site and report errors"
+description: "Use to build the Zola site and report errors."
 x-claude:
   allowed-tools: Bash(zola *)
 ---
@@ -13,4 +13,4 @@ zola build
 
 If there are errors, analyze them and suggest fixes.
 
-Note: this is the quick error check. The production script `./build.sh` also runs Python steps that process the output and minify it (make the files smaller). A passing `zola build` does not test those steps.
+This is the quick check. `./build.sh` also runs the Python steps and minification, which a passing `zola build` does not test.

@@ -1,6 +1,6 @@
 ---
 name: check-links
-description: "Verify all internal links with zola check"
+description: "Use to verify internal links with zola check."
 x-claude:
   allowed-tools: Bash(zola *)
 ---

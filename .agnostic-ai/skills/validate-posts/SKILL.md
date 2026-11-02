@@ -1,6 +1,6 @@
 ---
 name: validate-posts
-description: "Check blog posts for missing front matter, broken asset references, structure issues, and forbidden dashes. Use before publishing a post, before changing draft to false, or after substantial edits to existing content."
+description: "Use before publishing a post, before setting draft to false, or after big edits, to check front matter, assets, structure and dashes."
 x-claude:
   allowed-tools: Glob, Read, Grep
 argument-hint: "[file-path or date]"

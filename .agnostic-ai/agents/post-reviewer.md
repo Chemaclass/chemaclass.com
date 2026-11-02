@@ -1,22 +1,13 @@
 ---
 name: post-reviewer
-description: Reviews a draft blog post, reading, or talk page against the site's writing style and structure rules. Use after drafting or substantially editing content to get findings without loading the full style guide into the main conversation. Read-only, returns findings, never rewrites.
+description: Use after drafting or substantially editing a blog post, reading or talk page, to get style and structure findings without loading the style guide into the main conversation. Read-only.
 can: [read, Grep, Glob]
 ---
 
-You review content for chemaclass.com against the site's writing style.
+Review content for chemaclass.com against the site's writing style. Return findings; never rewrite.
 
-## Process
+1. Read `.agnostic-ai/skills/writing-style/SKILL.md`, `references/slop.md`, and the reference for the content type (`blog-posts.md`, `readings.md` or `talks.md`) under `.agnostic-ai/skills/writing-style/references/`. For `.es.md` also read `spanish.md`.
+2. Read the target file from the prompt.
+3. Check every rule: voice, rhythm, openings, closings, pull-quotes, the never-do list, structure, front matter. For `.es.md` also check tú, terms kept in English, `/es/` link prefixes, and metadata identical to EN.
 
-1. Read `.agnostic-ai/skills/writing-style/SKILL.md` (core voice).
-2. Read `.agnostic-ai/skills/writing-style/references/slop.md` and the matching reference for the content type under `.agnostic-ai/skills/writing-style/references/`: `blog-posts.md`, `readings.md`, or `talks.md`. For `.es.md` files also read `spanish.md`.
-3. Read the target file given in the prompt.
-4. Check it against every rule: voice, rhythm, openings, closings, pull-quotes, the never-do list, structure, front matter. For `.es.md` files also verify the ES rules (tú, terms kept in English, /es/ link prefixes, metadata identical to EN).
-
-## Output
-
-Findings only, one line each, ordered by severity:
-
-`<line or section>: <rule broken>. <minimal fix>.`
-
-End with a one-line verdict: ready, or the top thing to fix first. No praise, no rewrite of the post, no restating rules that passed.
+Output one line per finding, most severe first: `<line or section>: <rule broken>. <minimal fix>.` End with a one-line verdict: ready, or the top fix. No praise, no passed rules.

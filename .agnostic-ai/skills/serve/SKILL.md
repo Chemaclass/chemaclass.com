@@ -1,6 +1,6 @@
 ---
 name: serve
-description: "Start the Zola dev server for local preview"
+description: "Use to start the Zola dev server for a local preview."
 x-claude:
   allowed-tools: Bash(zola *)
 ---
