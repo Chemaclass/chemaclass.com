@@ -17,6 +17,8 @@ sort_by = "weight"
   - [Full-day Workshop: Modernizing Legacy Code with Pair Programming](https://javascript-conference.com/munich/program-munich/)
     *A hands-on, full-day session working through real legacy code with TDD, refactoring patterns, and collaborative pair programming.*
 
+![Chema taking a selfie with the workshop attendees in front of the projector screen at International JavaScript Conference Munich 2026](/images/talks/2026-10-26/workshop-ijs-munich26.webp)
+
 ### September
 
 - 2026-09-15 | ACT Berlin #14 [**Berlin, Germany**] (EN)
