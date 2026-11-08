@@ -62,28 +62,6 @@
         <img class="home-hero__portrait" src="{{ profile_image.url }}" alt="{{ trans(key="home_profile_alt", lang=lang) }}" width="560" height="680" decoding="async" fetchpriority="high">
     </section>
 
-    {% set path_series = ["craftsmanship", "leadership", "ai", "bitcoin"] %}
-    <section class="home-section reader-paths" aria-labelledby="reader-paths-title">
-        <div class="section-head">
-            <h2 id="reader-paths-title">{{ trans(key="home_reader_paths", lang=lang) }}</h2>
-            <span class="section-head__aside">{{ trans(key="home_reader_paths_aside", lang=lang) | replace(from="{n}", to=path_series | length ~ "") }}</span>
-        </div>
-        <ol class="reader-paths__grid">
-            {% for key in path_series %}
-            {% set path_key = key %}{% if key == "craftsmanship" %}{% set path_key = "software" %}{% endif %}
-            {% set series = config.extra.series[key] %}
-            <li>
-                <a class="reader-path" href="{{ prefix }}/series/{{ key }}/">
-                    <span class="ordinal" aria-hidden="true">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
-                    <strong class="reader-path__title">{{ trans(key="home_path_" ~ path_key, lang=lang) }}</strong>
-                    <span class="reader-path__desc">{{ trans(key="home_path_" ~ path_key ~ "_desc", lang=lang) }}</span>
-                    <span class="reader-path__link">{% if lang == 'es' %}{{ series.title_es }}{% else %}{{ series.title }}{% endif %} <span aria-hidden="true">→</span></span>
-                </a>
-            </li>
-            {% endfor %}
-        </ol>
-    </section>
-
     <div class="latest-grid">
     {% set featured = blogs.pages[0] %}
     <section class="home-section home-latest" aria-labelledby="latest-title">
