@@ -41,7 +41,8 @@ img {
 }
 
 main {
-  max-width: $max-width;
-  padding: 1rem;
-  margin: auto;
+  max-width: calc(var(--content-max) + 2 * var(--gutter));
+  padding: 0 var(--gutter);
+  margin: 0 auto;
+  box-sizing: border-box;
 }

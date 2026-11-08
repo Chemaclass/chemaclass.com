@@ -30,3 +30,22 @@
   src: local("Rubik Medium"), local("Rubik-Medium"),
     url("/fonts/rubik-500.woff2") format("woff2");
 }
+
+/* Newsreader, variable weight 200-800, headings and display text.
+   swap, not optional: the serif is the design, and the fallback stack
+   (Iowan, Palatino, Georgia) keeps the shift small. */
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/newsreader-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/newsreader-italic.woff2") format("woff2");
+}

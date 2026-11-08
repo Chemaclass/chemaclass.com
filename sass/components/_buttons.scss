@@ -17,9 +17,6 @@ html[color-theme=light] #light-mode {
   display: flex;
 }
 
-nav button {
-  margin-right: 1.2rem;
-}
 
 // Scroll to top button
 #scroll-to-top {
@@ -60,6 +57,7 @@ nav button {
 }
 
 // Shared actions for the homepage, service pages, and contextual service links.
+.btn,
 .home-action,
 .sales-button,
 .hire-cta__btn {
@@ -68,9 +66,9 @@ nav button {
   justify-content: center;
   gap: 0.55rem;
   min-height: 48px;
-  padding: 0.75rem 1.35rem;
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 9px;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-pill);
   font: inherit;
   font-size: 0.95rem;
   font-weight: 500;
@@ -81,18 +79,28 @@ nav button {
   background: transparent;
   color: var(--heading-color);
 
-  &:hover { border-bottom: 1px solid var(--preview-divider-color); background: var(--search-input-bg); }
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+  &:hover { border-bottom: 1px solid var(--rule-strong); background: var(--surface); }
   &:focus-visible { outline: 3px solid var(--accent-color); outline-offset: 3px; }
 }
 
+.btn--primary,
 .home-action--primary,
 .sales-button--primary,
 .hire-cta__btn {
   background: var(--accent-color);
   border-color: var(--accent-color);
-  color: #fff;
-  &:hover { background: var(--accent-color); border-color: var(--accent-color); color: #fff; opacity: 0.9; }
-  .theme-dark & { color: var(--body-bg); }
+  color: var(--accent-ink);
+  &:hover { background: var(--accent-overlay-color); border-color: var(--accent-overlay-color); border-bottom-color: var(--accent-overlay-color); color: var(--accent-ink); }
+}
+
+// White pill on the navy band.
+.btn--on-band {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #1e4470;
+  &:hover { background: #eef1f3; border-color: #eef1f3; border-bottom-color: #eef1f3; color: #1e4470; }
 }
 
 .sales-button--full { width: 100%; }

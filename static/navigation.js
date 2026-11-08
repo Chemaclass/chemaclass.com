@@ -125,7 +125,7 @@ window.toggleMobileMenu = function(e) {
 
 // Close the burger panel when one of its links is tapped
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.nav-utilities a').forEach(function(link) {
+  document.querySelectorAll('.nav-links a, .nav-utilities a').forEach(function(link) {
     link.addEventListener('click', function() {
       if (document.querySelector('.navbar.open')) closeMobileMenu();
     });

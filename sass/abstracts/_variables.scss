@@ -1,10 +1,20 @@
-// Color Variables
+// Maritime palette: sea fog ground, navy hull accent, brass fittings.
+// Names predate the redesign; components read them, so the values changed and
+// the names stayed. New code prefers the --color-*, --font-* and --radius-* tokens.
 :root {
     --link-color: var(--accent-color);
 
-    --accent-color: #2d5a8e;
-    --accent-color-light: #3574b8;
-    --accent-overlay-color: #3574b8;
+    --accent-color: #1e4470;
+    --accent-color-light: #3b6597;
+    --accent-overlay-color: #2a5a8f;
+    --accent-ink: #ffffff;
+
+    // Brass marks dots and rules. Text needs --color-brass-text: plain brass
+    // is about 3:1 on the background.
+    --color-brass: #b8862f;
+    --color-brass-text: #85601c;
+    --color-brass-on-accent: #e2be78;
+    --color-on-accent-muted: #c3d0de;
 
     --color-info: #66b2ff;
     --color-success: #5dd77b;
@@ -15,91 +25,113 @@
     --color-neutral: #a2abb3;
     --color-primary: #66b2ff;
     --color-secondary: #a2abb3;
-    --color-subtitle: #5a6370;
+    --color-subtitle: #55606c;
 
-    // Read green, saved amber, destructive red. The bright values these
-    // replaced were picked against the dark theme and failed AA on white:
-    // #22c55e was 2.28:1 as percentage text. These are 5.02, 5.02 and 4.83.
+    // Read green, saved amber, destructive red, each at least 4.8:1 on white.
     --color-read: #15803d;
     --color-saved: #b45309;
     --color-danger: #dc2626;
 
-    --body-bg: #f7f8fa;
-    --body-bg-rgb: 247, 248, 250;
-    --body-color: #2a2d32;
-    --heading-color: #14171a;
-    --preview-divider-color: #e2e5ea;
-    --table-bg-even: #f5f6f8;
-    --table-border-bottom: #dde0e5;
+    --body-bg: #f3f5f6;
+    --body-bg-rgb: 243, 245, 246;
+    --body-color: #11161c;
+    --heading-color: #11161c;
+    --surface: #ffffff;
+    --preview-divider-color: #dde2e6;
+    --rule-strong: #11161c;
+    --table-bg-even: #eef1f3;
+    --table-border-bottom: #dde2e6;
 
     --search-input-bg: #fff;
     --search-bg-results: #fff;
-    --search-input-color: #2a2d32;
-    --search-bg-selected-item: #f5f6f8;
-    --search-category: #14171a;
-    --search-items-divider: #e8eaee;
-    --search-result-count: #5a6370;
+    --search-input-color: #11161c;
+    --search-bg-selected-item: #eef1f3;
+    --search-category: #11161c;
+    --search-items-divider: #e3e7ea;
+    --search-result-count: #55606c;
 
-    // Elevation shadows
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.03);
-    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
-    --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.08), 0 8px 28px rgba(0, 0, 0, 0.06);
+    --shadow-sm: 0 1px 2px rgba(17, 22, 28, 0.04), 0 1px 4px rgba(17, 22, 28, 0.03);
+    --shadow-md: 0 1px 2px rgba(17, 22, 28, 0.04), 0 8px 24px rgba(17, 22, 28, 0.06);
+    --shadow-lg: 0 2px 4px rgba(17, 22, 28, 0.05), 0 16px 40px rgba(17, 22, 28, 0.1);
+    --shadow-book: 0 1px 2px rgba(17, 22, 28, 0.08), 0 12px 28px rgba(17, 22, 28, 0.16);
 
-    // Selection
-    --selection-bg: rgba(45, 90, 142, 0.15);
+    --selection-bg: rgba(30, 68, 112, 0.15);
     --selection-color: inherit;
 
-    // Transition timing
+    --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --font-body: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    --radius-sm: 8px;
+    --radius-card: 12px;
+    --radius-lg: 16px;
+    --radius-pill: 999px;
+
+    // Side padding: 20px on a phone, 64px from 1280px up.
+    --gutter: clamp(20px, 5vw, 64px);
+    --section-gap: clamp(64px, 9vw, 112px);
+    --content-max: 1312px;
+    --reading-max: 680px;
+
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .theme-dark {
-    --accent-color: #5da8e5;
-    --accent-color-light: #e8edf2;
-    --accent-overlay-color: #6cb4ee;
+    --accent-color: #8db4e2;
+    --accent-color-light: #b5cdea;
+    --accent-overlay-color: #a9c7ea;
+    --accent-ink: #0f141a;
 
-    --body-bg: #1a1d21;
-    --body-bg-rgb: 26, 29, 33;
-    --body-color: #e4e6ea;
-    --heading-color: #f0f1f3;
-    --preview-divider-color: #2e3238;
-    --table-bg-even: #22262b;
-    --table-border-bottom: #3a3f47;
+    --color-brass: #d6a957;
+    --color-brass-text: #e2be78;
+    --color-brass-on-accent: #e2be78;
+    --color-on-accent-muted: #c3d0de;
 
-    --color-subtitle: #9ba3ae;
+    --body-bg: #0f141a;
+    --body-bg-rgb: 15, 20, 26;
+    --body-color: #e3e8ec;
+    --heading-color: #f3f5f7;
+    --surface: #172029;
+    --preview-divider-color: #26313c;
+    --rule-strong: #c9d2da;
+    --table-bg-even: #172029;
+    --table-border-bottom: #2f3b47;
 
-    // On a dark background the bright originals pass comfortably, so they stay.
+    --color-subtitle: #9aa6b2;
+
     --color-read: #22c55e;
     --color-saved: #f59e0b;
     --color-danger: #f87171;
 
-    --search-input-bg: #22262b;
-    --search-bg-selected-item: #282d33;
+    --search-input-bg: #172029;
+    --search-bg-selected-item: #1d2833;
     --search-bg-results: var(--body-bg);
-    --search-input-color: #e4e6ea;
-    --search-category: #f0f1f3;
-    --search-items-divider: #2e3238;
-    --search-result-count: #8a92a0;
+    --search-input-color: #e3e8ec;
+    --search-category: #f3f5f7;
+    --search-items-divider: #26313c;
+    --search-result-count: #8b97a3;
 
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.15);
-    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.25), 0 4px 16px rgba(0, 0, 0, 0.2);
-    --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.3), 0 8px 28px rgba(0, 0, 0, 0.25);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 2px 4px rgba(0, 0, 0, 0.35), 0 16px 40px rgba(0, 0, 0, 0.4);
+    --shadow-book: 0 1px 2px rgba(0, 0, 0, 0.4), 0 12px 28px rgba(0, 0, 0, 0.45);
 
-    --selection-bg: rgba(93, 168, 229, 0.25);
+    --selection-bg: rgba(141, 180, 226, 0.25);
 }
 
-// Layout Variables (GitHub-inspired)
-$max-width-navbar: 1280px;
-$max-width: 1012px;
+// The navy band (open source, pricing highlight, talks CTA) stays navy in both
+// themes; in dark mode it lifts slightly so it still reads as a band.
+:root { --band-bg: #1e4470; }
+.theme-dark { --band-bg: #1a3557; }
+
+$max-width-navbar: 1312px;
+$max-width: 1312px;
 $footnote-space: 2rem;
 
-// TOC Variables
-$toc-width: 240px;
-$toc-offset: 50px;
-$toc-content-width: 700px; // narrower content for pages with TOC
+$toc-width: 200px;
+$toc-offset: 80px;
+$toc-content-width: 680px;
 $breakpoint-toc: 1200px;
 
-// Breakpoints
 $breakpoint-tablet: 880px;
 $breakpoint-phone: 600px;
 $breakpoint-small-phone: 465px;
