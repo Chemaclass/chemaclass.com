@@ -610,7 +610,6 @@
     {% block header %}
       <header class="site-header">
         <a class="header-left" href="{% if lang == 'es' %}/es/{% else %}/{% endif %}">
-          <span class="brand-dot" aria-hidden="true"></span>
           <span class="site-title">Chemaclass</span>
         </a>
 
@@ -754,7 +753,6 @@
       <div class="page-footer__container">
         <div class="page-footer__brand">
           <a href="{{ home_url }}" class="page-footer__brand-link">
-            <span class="brand-dot" aria-hidden="true"></span>
             <span>Chemaclass</span>
           </a>
           <p class="page-footer__tagline">{{ trans(key="footer_tagline", lang=lang) }}</p>
