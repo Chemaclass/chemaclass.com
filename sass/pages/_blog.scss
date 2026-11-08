@@ -21,24 +21,6 @@
   }
 }
 
-.blog-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: clamp(40px, 5vw, 64px);
-
-  @media (max-width: $breakpoint-phone) {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    margin-left: calc(var(--gutter) * -1);
-    margin-right: calc(var(--gutter) * -1);
-    padding: 0 var(--gutter) 0.25rem;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar { display: none; }
-  }
-}
-
 .start-here {
   margin-bottom: clamp(40px, 5vw, 64px);
 

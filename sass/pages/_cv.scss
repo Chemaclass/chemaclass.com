@@ -146,6 +146,24 @@
   }
 }
 
+// Heading on its own line; each row puts its dates in the label column.
+@media screen and (min-width: #{$breakpoint-tablet + 1}) {
+  .cv-section--rows {
+    grid-template-columns: minmax(0, 1fr);
+
+    .cv-section__label { padding-bottom: 8px; }
+    .cv-section__body { border-top: none; }
+
+    .cv-row {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 0 64px;
+    }
+
+    .cv-row__aside { width: auto; }
+  }
+}
+
 .cv-stats {
   display: flex;
   flex-direction: column;

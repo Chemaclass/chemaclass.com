@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 
-{% block title %}Jose M. Valera Reales, Product Engineer | {% if lang == 'es' %}Currículum{% else %}CV{% endif %}{% endblock %}
+{% block title %}Jose M. Valera Reales, Engineering Manager | {% if lang == 'es' %}Currículum{% else %}CV{% endif %}{% endblock %}
 
 {% block head %}
 {# Enriched ProfilePage + Person schema for the CV (E-E-A-T signal) #}
@@ -18,7 +18,7 @@
     "alternateName": "Chemaclass",
     "url": "{{ config.base_url | safe }}",
     "image": "{{ get_url(path=config.extra.icon) | safe }}",
-    "jobTitle": "Product Engineer",
+    "jobTitle": "Engineering Manager",
     "worksFor": {
       "@type": "Organization",
       "name": "Kombo",
@@ -57,9 +57,9 @@
     ],
     "hasOccupation": {
       "@type": "Occupation",
-      "name": "Product Engineer",
-      "occupationalCategory": "15-1252.00",
-      "skills": "Software architecture, product engineering, API integrations, testing strategy, code review, technical decision making"
+      "name": "Engineering Manager",
+      "occupationalCategory": "11-3021.00",
+      "skills": "Engineering management, team building, software architecture, product engineering, API integrations, testing strategy, code review, technical decision making"
     },
     "sameAs": [
       "https://x.com/Chemaclass",
@@ -115,6 +115,10 @@
   <section class="cv-section" aria-labelledby="cv-about">
     <div class="cv-section__label">
       <h2 id="cv-about">{{ t.about.title[lang] | safe }}</h2>
+      <dl class="cv-stats">
+        <div class="cv-stat"><dt>15+</dt><dd>{{ t.experience.stat_building[lang] | safe }}</dd></div>
+        <div class="cv-stat"><dt>5+</dt><dd>{{ t.experience.stat_leading[lang] | safe }}</dd></div>
+      </dl>
     </div>
     <div class="cv-section__body cv-about">
       {{ page.content | safe }}
@@ -125,13 +129,9 @@
     </div>
   </section>
 
-  <section class="cv-section" aria-labelledby="cv-experience">
+  <section class="cv-section cv-section--rows" aria-labelledby="cv-experience">
     <div class="cv-section__label">
       <h2 id="cv-experience">{{ t.experience.title[lang] | safe }}</h2>
-      <dl class="cv-stats">
-        <div class="cv-stat"><dt>15+</dt><dd>{{ t.experience.stat_building[lang] | safe }}</dd></div>
-        <div class="cv-stat"><dt>5+</dt><dd>{{ t.experience.stat_leading[lang] | safe }}</dd></div>
-      </dl>
     </div>
     <div class="cv-section__body">
       <div class="cv-row cv-job">
@@ -140,7 +140,10 @@
           <span class="cv-row__where">{{ t.places.berlin[lang] | safe }}</span>
         </div>
         <div class="cv-row__main">
-          <h3 class="cv-row__title">Product Engineer <em>{{ at }}</em> <a href="https://kombo.dev" target="_blank" rel="noopener">Kombo</a></h3>
+          <h3 class="cv-row__title">Engineering Manager <em>{{ at }}</em> <a href="https://kombo.dev" target="_blank" rel="noopener">Kombo</a></h3>
+          <p class="cv-row__role-dates">{{ <month_year date="2026-11-01" lang={lang} /> }} {{ to }} {{ t.experience.present[lang] | safe }}</p>
+          <p>{{ t.experience.kombo_lead[lang] | safe }}</p>
+          <h4 class="cv-row__subrole">Product Engineer <span class="cv-row__role-dates">{{ <month_year date="2026-06-01" lang={lang} /> }} {{ to }} {{ <month_year date="2026-10-01" lang={lang} /> }}</span></h4>
           <p>{{ t.experience.kombo[lang] | safe }}</p>
           <p class="cv-row__stack">TypeScript · React · Tailwind · tRPC · Prisma · PostgreSQL · Redis · Terraform</p>
         </div>
@@ -280,6 +283,8 @@
           <p>Any team that gets Chema as a lead is very lucky. He makes people around him better engineers and better teammates."</p>
           <footer><a href="https://www.linkedin.com/in/r-frolov/" target="_blank" rel="noopener"><strong>Roman Frolov</strong></a> · Software Engineer at Purpose Green <span class="cv-rec__date">{{ <month_year date="2026-04-01" lang={lang} /> }}</span></footer>
         </blockquote>
+      </div>
+      <div class="cv-recommendations cv-recommendations--more">
         <blockquote class="cv-rec">
           <p>"I've worked with Chema twice, first at Seven Senders (2017-2019), and again at Purpose Green as my counterpart on the tech side.</p>
           <p>What makes Chema rare is that he doesn't hide behind roadmaps or architecture diagrams. He gets into the details when it matters and refuses to use process as an excuse to slow things down. Agile isn't a methodology to him, it's how he works, which makes him unusually easy to build with from a product seat.</p>
@@ -287,8 +292,6 @@
           <p>If you want a tech lead who pairs sharp engineering instincts with a real appetite for what's next, Chema is the one."</p>
           <footer><a href="https://www.linkedin.com/in/leon-laakmann-672325b7/" target="_blank" rel="noopener"><strong>Leon Laakmann</strong></a> · Product Lead at Purpose Green <span class="cv-rec__date">{{ <month_year date="2026-04-01" lang={lang} /> }}</span></footer>
         </blockquote>
-      </div>
-      <div class="cv-recommendations cv-recommendations--more">
         <blockquote class="cv-rec">
           <p>"Chema is a great engineer and knows how to create value from get go. He was proactive, resourceful, and knew how to navigate extreme complexity, demonstrating clear leadership skills. He not only adhered to agile principles, but also lifted his co-workers by coaching them."</p>
           <footer><a href="https://www.linkedin.com/in/elofca" target="_blank" rel="noopener"><strong>Engin Lofça</strong></a> · Product Leadership in Payments <span class="cv-rec__date">{{ <month_year date="2025-05-01" lang={lang} /> }}</span></footer>
@@ -346,7 +349,7 @@
           <footer><a href="https://www.linkedin.com/in/annemarschner" target="_blank" rel="noopener"><strong>Anne Christiansen</strong></a> · Marketing &amp; Communications <span class="cv-rec__date">{{ <month_year date="2016-11-01" lang={lang} /> }}</span></footer>
         </blockquote>
       </div>
-      <button type="button" class="btn cv-rec-toggle" onclick="this.previousElementSibling.classList.toggle('cv-recommendations--visible'); this.textContent = this.previousElementSibling.classList.contains('cv-recommendations--visible') ? '{{ t.recommendations.show_less[lang] | safe }}' : '{{ t.recommendations.show_more[lang] | safe }} (14)'">{{ t.recommendations.show_more[lang] | safe }} (14)</button>
+      <button type="button" class="btn cv-rec-toggle" onclick="this.previousElementSibling.classList.toggle('cv-recommendations--visible'); this.textContent = this.previousElementSibling.classList.contains('cv-recommendations--visible') ? '{{ t.recommendations.show_less[lang] | safe }}' : '{{ t.recommendations.show_more[lang] | safe }} (15)'">{{ t.recommendations.show_more[lang] | safe }} (15)</button>
     </div>
   </section>
 
@@ -359,20 +362,12 @@
       <div class="cv-row cv-print-hide">
         <div class="cv-row__aside"><span class="cv-row__where">{{ t.products.role[lang] | safe }}</span></div>
         <div class="cv-row__main">
-          <h3 class="cv-row__title"><a href="{% if lang == 'es' %}https://miaforo.com/es{% else %}https://miaforo.com/{% endif %}" target="_blank" rel="noopener">MIAFORO</a></h3>
+          <h3 class="cv-row__title"><a href="{% if lang == 'es' %}https://miaforo.com/es{% else %}https://miaforo.com/{% endif %}" target="_blank" rel="noopener">miaforo</a></h3>
           <p>{{ t.products.miaforo[lang] | safe }}</p>
         </div>
       </div>
-      <div class="cv-row cv-print-hide">
-        <div class="cv-row__aside"><span class="cv-row__where">{{ t.products.role[lang] | safe }}</span></div>
-        <div class="cv-row__main">
-          <h3 class="cv-row__title"><a href="{% if lang == 'es' %}https://puertafria.es/es{% else %}https://puertafria.es/{% endif %}" target="_blank" rel="noopener">tocadi</a></h3>
-          <p>{{ t.products.tocadi[lang] | safe }}</p>
-        </div>
-      </div>
       <div class="cv-print-only cv-print-pair">
-        <div class="cv-project"><h3>MIAFORO</h3><p>{{ t.products.miaforo_print[lang] | safe }}</p></div>
-        <div class="cv-project"><h3>tocadi</h3><p>{{ t.products.tocadi_print[lang] | safe }}</p></div>
+        <div class="cv-project"><h3>miaforo</h3><p>{{ t.products.miaforo_print[lang] | safe }}</p></div>
       </div>
     </div>
   </section>
