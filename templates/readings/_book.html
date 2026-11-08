@@ -1,0 +1,24 @@
+<article class="blog-card shelf-book{% if post.extra.pin %} pinned{% endif %}" data-post-path="{{ post.path }}">
+  <a href="{{ post.permalink }}" class="blog-card__link">
+    {% if post.extra.static_thumbnail %}
+      {% if post.extra.static_thumbnail is matching(pat="^http[s]?://") %}
+        <img class="book-cover" src="{{ post.extra.static_thumbnail | safe }}" alt="" width="320" height="480" loading="lazy" decoding="async" />
+      {% else %}
+        {% set cover_path = post.extra.static_thumbnail | trim_start(pat="/") %}
+        {% set cover_webp = resize_image(path=cover_path, width=320, height=480, op="fill", quality=78, format="webp") %}
+        {% set cover_fb = resize_image(path=cover_path, width=320, height=480, op="fill", quality=80) %}
+        <picture>
+          <source type="image/webp" srcset="{{ cover_webp.url }}" />
+          <img class="book-cover" src="{{ cover_fb.url }}" alt="" width="{{ cover_fb.width }}" height="{{ cover_fb.height }}" loading="lazy" decoding="async" />
+        </picture>
+      {% endif %}
+    {% endif %}
+    <div class="blog-card__content">
+      <h2 class="blog-card__title">{{ post.title }}</h2>
+      {% if post.extra.author %}<p class="blog-card__author">{{ post.extra.author }}</p>{% endif %}
+      <div class="blog-card__meta">
+        {% if post.extra.pages %}<span>{{ post.extra.pages }} {{ trans(key="pages", lang=lang) }}</span>{% endif %}
+      </div>
+    </div>
+  </a>
+</article>

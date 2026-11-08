@@ -5,7 +5,8 @@
 .interactive-list {
   margin: 2rem 0;
   border: 1px solid var(--preview-divider-color);
-  border-radius: 8px;
+  border-radius: var(--radius-card);
+  background: var(--surface);
   overflow: hidden;
 
   &__title {

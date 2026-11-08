@@ -1,15 +1,14 @@
-// Kudos Component
-// Acknowledgment note at the bottom of a post thanking the people behind the idea
+// Acknowledgment note at the bottom of a post thanking the people behind the idea.
 
 .kudos {
   display: flex;
   align-items: baseline;
   gap: 0.75rem;
   margin: 2.5rem 0 1.5rem;
-  padding: 1rem 1.25rem;
-  border-left: 3px solid var(--accent-color);
-  border-radius: 0 8px 8px 0;
-  background: rgba(var(--body-bg-rgb), 0.3);
+  padding: 1.125rem 1.5rem;
+  border-left: 3px solid var(--color-brass);
+  border-radius: var(--radius-card);
+  background: var(--surface);
   box-shadow: var(--shadow-sm);
 
   &__icon {
@@ -19,21 +18,16 @@
   }
 
   &__content {
-    font-size: 0.95rem;
+    font-family: var(--font-display);
+    font-size: 1.125rem;
     font-style: italic;
-    line-height: 1.6;
+    line-height: 1.55;
     color: var(--color-subtitle);
 
-    p {
-      margin: 0;
-    }
+    p { margin: 0; }
 
-    a {
-      color: var(--accent-color);
-    }
+    a { color: var(--accent-color); }
 
-    code {
-      font-style: normal;
-    }
+    code { font-style: normal; }
   }
 }

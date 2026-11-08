@@ -18,6 +18,12 @@
    English only: there is no /es/404.html to switch for. #}
 {% block content %}
 <div class="not-found-container">
+  <header class="not-found-hero">
+    <span class="eyebrow eyebrow--brass">Error 404</span>
+    <h1 class="display-title">Page not <em>found</em></h1>
+    <p class="lead">The page you're looking for doesn't exist or has been moved.</p>
+  </header>
+
   <div class="terminal-window">
     <div class="terminal-header">
       <div class="terminal-buttons">
@@ -70,10 +76,8 @@
 </div>
 
 <noscript>
-  <div style="padding: 2rem; text-align: center;">
-    <h1>404 - Page Not Found</h1>
-    <p>The page you're looking for doesn't exist or has been moved.</p>
-    <nav>
+  <div class="not-found-noscript">
+    <nav aria-label="Main sections">
       <a href="/">Home</a> &middot;
       <a href="/blog/">Blog</a> &middot;
       <a href="/readings/">Readings</a> &middot;

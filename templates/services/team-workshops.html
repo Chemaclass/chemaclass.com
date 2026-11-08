@@ -74,13 +74,13 @@
     <a class="service-notice__link" href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}">{{ trans(key="svc_see_web_dev", lang=lang) }}</a>
   </div>
 
-  <!-- Hero Section -->
-  <header class="service-hero">
-    <h1>{{ trans(key="svc_workshops", lang=lang) }}</h1>
-    <p class="service-hero__subtitle">{{ trans(key="svc_workshops_subtitle", lang=lang) }}</p>
+  <header class="service-hero page-hero">
+    <div class="page-hero__text">
+      <h1 class="display-title">{{ trans(key="svc_workshops", lang=lang) }}</h1>
+      <p class="lead service-hero__subtitle">{{ trans(key="svc_workshops_subtitle", lang=lang) }}</p>
+    </div>
   </header>
 
-  <!-- Value Proposition -->
   <section class="service-intro" id="intro">
     <p>{{ t.intro.text[lang] | safe }}</p>
     <span class="service-intro__cta service-intro__cta--disabled" aria-disabled="true">
@@ -88,7 +88,6 @@
     </span>
   </section>
 
-  <!-- Workshop Schedule -->
   <section class="service-options service-options-2" id="options">
     <div class="service-option">
       <div class="service-option__header">
@@ -137,7 +136,6 @@
     </div>
   </section>
 
-  <!-- What you'll learn -->
   <section class="service-decision" id="decide">
     <h2>{{ trans(key="svc_team_gains", lang=lang) }}</h2>
     <div class="decision-cards">
@@ -172,33 +170,32 @@
     </p>
   </section>
 
-  <!-- How it works -->
   <section class="service-process" id="process">
     <h2>{{ trans(key="svc_how_i_work", lang=lang) }}</h2>
     <div class="process-steps">
       <div class="process-step">
-        <span class="process-step__number">1</span>
+        <span class="process-step__number ordinal" aria-hidden="true">01</span>
         <div class="process-step__content">
           <h3>{{ trans(key="svc_discovery", lang=lang) }}</h3>
           <p>{{ t.process.discovery[lang] | safe }}</p>
         </div>
       </div>
       <div class="process-step">
-        <span class="process-step__number">2</span>
+        <span class="process-step__number ordinal" aria-hidden="true">02</span>
         <div class="process-step__content">
           <h3>{{ trans(key="svc_customization", lang=lang) }}</h3>
           <p>{{ t.process.customization[lang] | safe }}</p>
         </div>
       </div>
       <div class="process-step">
-        <span class="process-step__number">3</span>
+        <span class="process-step__number ordinal" aria-hidden="true">03</span>
         <div class="process-step__content">
           <h3>{{ trans(key="svc_workshop_day", lang=lang) }}</h3>
           <p>{{ t.process.workshop_day[lang] | safe }}</p>
         </div>
       </div>
       <div class="process-step">
-        <span class="process-step__number">4</span>
+        <span class="process-step__number ordinal" aria-hidden="true">04</span>
         <div class="process-step__content">
           <h3>{{ trans(key="svc_followup", lang=lang) }}</h3>
           <p>{{ t.process.followup[lang] | safe }}</p>
@@ -212,7 +209,6 @@
         <p>{{ t.pricing.groups[lang] | safe }}</p>
       </div>
 
-      <!-- Pricing details (hidden by default, shown with ?prices=1) -->
       <div class="pricing-details" style="display: none;">
         <div class="pricing-grid">
           <div class="pricing-card">
@@ -252,7 +248,6 @@
     </div>
   </section>
 
-  <!-- Workshop Resources -->
   <section class="service-resources" id="resources">
     <h2>{{ trans(key="svc_workshop_resources", lang=lang) }}</h2>
     <p class="service-resources__intro">{{ t.resources.intro[lang] | safe }}</p>
@@ -292,7 +287,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="service-cta">
     <h2>{{ trans(key="svc_ready_level_up", lang=lang) }}</h2>
     <p>{{ t.cta.text[lang] | safe }}</p>

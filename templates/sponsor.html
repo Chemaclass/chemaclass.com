@@ -54,134 +54,84 @@
 {% block content %}
 {% set lp = '' %}{% if lang == 'es' %}{% set lp = '/es' %}{% endif %}
 <article class="sponsor-page">
-  <!-- Back link -->
-  <a href="{{ lp }}/" class="sponsor-page__back">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M19 12H5M12 19l-7-7 7-7"/>
-    </svg>
-    {{ trans(key="sponsor_back", lang=lang) }}
-  </a>
+  <header class="sponsor-hero">
+    <h1 class="display-title">{{ trans(key="sponsor_hero_title", lang=lang) | safe }}</h1>
+    <p class="lead">{{ trans(key="sponsor_hero_subtitle", lang=lang) }}</p>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="sponsor-hero">
-    <h1>{{ trans(key="sponsor_hero_title", lang=lang) }}</h1>
-    <p class="sponsor-hero__subtitle">
-      {{ trans(key="sponsor_hero_subtitle", lang=lang) }}
-    </p>
-  </section>
-
-  {# Free ways come before the money. Someone who cannot pay still leaves with
-     something to do, and the ask is not the first thing on the page. #}
-  <section class="sponsor-free">
-    <h2 class="sponsor-section-title">{{ trans(key="sponsor_free_title", lang=lang) }}</h2>
-    <div class="sponsor-free__grid">
-      <a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="sponsor-free__item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-        </svg>
-        <span class="sponsor-free__label">{{ trans(key="sponsor_free_star", lang=lang) }}</span>
-        <span class="sponsor-free__desc">{{ trans(key="sponsor_free_star_desc", lang=lang) }}</span>
-      </a>
-      <a href="{{ lp }}/blog/" class="sponsor-free__item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
-          <path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/>
-        </svg>
-        <span class="sponsor-free__label">{{ trans(key="sponsor_free_share", lang=lang) }}</span>
-        <span class="sponsor-free__desc">{{ trans(key="sponsor_free_share_desc", lang=lang) }}</span>
-      </a>
-      <a href="https://github.com/Chemaclass/chemaclass.com/contribute" target="_blank" rel="noopener" class="sponsor-free__item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
-        </svg>
-        <span class="sponsor-free__label">{{ trans(key="sponsor_free_fix", lang=lang) }}</span>
-        <span class="sponsor-free__desc">{{ trans(key="sponsor_free_fix_desc", lang=lang) }}</span>
-      </a>
-      <a href="{% if lang == 'es' %}{{ get_url(path='es/atom.xml') | safe }}{% else %}{{ get_url(path='atom.xml') | safe }}{% endif %}" class="sponsor-free__item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M4 11a9 9 0 019 9M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/>
-        </svg>
-        <span class="sponsor-free__label">{{ trans(key="sponsor_free_follow", lang=lang) }}</span>
-        <span class="sponsor-free__desc">{{ trans(key="sponsor_free_follow_desc", lang=lang) }}</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- Donation Options -->
-  <section class="sponsor-money">
-    <h2 class="sponsor-section-title">{{ trans(key="sponsor_money_title", lang=lang) }}</h2>
-    {% if config.extra.sponsor.paypal_enabled or config.extra.sponsor.lightning_enabled %}
-    <div class="sponsor-options">
-      {% if config.extra.sponsor.paypal_enabled %}
-      <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--paypal">
-        <div class="sponsor-card__icon">
-          <i class="fa-brands fa-paypal"></i>
-        </div>
-        <div class="sponsor-card__body">
-          <span class="sponsor-card__label">PayPal</span>
-          <span class="sponsor-card__action">{{ trans(key="sponsor_paypal_action", lang=lang) }}</span>
-        </div>
-        <span class="sponsor-card__arrow">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </span>
-      </a>
-      {% endif %}
-      {% if config.extra.sponsor.lightning_enabled %}
-      <a href="https://getalby.com/p/chemaclass" target="_blank" rel="noopener" class="sponsor-card sponsor-card--lightning">
-        <div class="sponsor-card__icon">
-          <i class="fa-solid fa-bolt"></i>
-        </div>
-        <div class="sponsor-card__body">
-          <span class="sponsor-card__label">Lightning</span>
-          <span class="sponsor-card__action">{{ trans(key="sponsor_lightning_action", lang=lang) }}</span>
-        </div>
-        <span class="sponsor-card__arrow">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </span>
-      </a>
-      {% endif %}
-    </div>
-    <p class="sponsor-money__note">{{ trans(key="sponsor_money_note", lang=lang) }}</p>
-    <p class="sponsor-money__use">{{ trans(key="sponsor_money_use", lang=lang) }}</p>
-    {% else %}
-    <p class="sponsor-options-empty">{{ trans(key="sponsor_payments_unavailable", lang=lang) }}</p>
-    {% endif %}
-  </section>
-
-  {# The counts are context for what the money keeps free, not a scoreboard.
-     Articles and book notes come straight from the sections, so they cannot go
-     stale. Talks given counts deliveries, not pages: the seven talk pages list
-     the events each one was given at, as markdown bullets Zola cannot count.
-     scripts/count-talks-given.py counts them before the build and skips dates
-     still in the future; config.extra.talks_given is only the fallback. #}
+  {# Talks given counts deliveries, not pages: scripts/count-talks-given.py
+     counts the event bullets before the build; config.extra.talks_given is
+     only the fallback. #}
   {% set blog_section = get_section(path="blog/_index.md", lang=lang) %}
   {% set readings_section = get_section(path="readings/_index.md", lang=lang) %}
   {% set talks_data = load_data(path="data/talks-given.json", format="json", required=false) %}
   {% set_global talks_given = config.extra.talks_given %}
   {% if talks_data %}{% set_global talks_given = talks_data.given %}{% endif %}
-  <section class="sponsor-stats-block">
-    <p class="sponsor-stats__lead">{{ trans(key="sponsor_stats_lead", lang=lang) }}</p>
-    <div class="sponsor-stats">
-      <a href="{{ lp }}/blog/" class="sponsor-stat">
-        <span class="sponsor-stat__number">{{ blog_section.pages | length }}</span>
-        <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_articles", lang=lang) }}</span>
-      </a>
-      <a href="{{ lp }}/readings/" class="sponsor-stat">
-        <span class="sponsor-stat__number">{{ readings_section.pages | length }}</span>
-        <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_readings", lang=lang) }}</span>
-      </a>
-      <a href="{{ lp }}/talks/" class="sponsor-stat">
-        <span class="sponsor-stat__number">{{ talks_given }}</span>
-        <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_talks", lang=lang) }}</span>
-      </a>
-    </div>
-  </section>
 
-  <!-- Open Source Projects -->
+  {# Free ways come before the money, so someone who cannot pay still leaves
+     with something to do. #}
+  <div class="sponsor-ways">
+    <section class="sponsor-free sheet" aria-labelledby="sponsor-free-title">
+      <h2 id="sponsor-free-title">{{ trans(key="sponsor_free_title", lang=lang) }}</h2>
+      <ul class="sponsor-free__list">
+        <li><a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="sponsor-free__item">
+          <span class="sponsor-free__label">{{ trans(key="sponsor_free_star", lang=lang) }}</span>
+          <span class="sponsor-free__desc">{{ trans(key="sponsor_free_star_desc", lang=lang) }}</span>
+        </a></li>
+        <li><a href="{{ lp }}/blog/" class="sponsor-free__item">
+          <span class="sponsor-free__label">{{ trans(key="sponsor_free_share", lang=lang) }}</span>
+          <span class="sponsor-free__desc">{{ trans(key="sponsor_free_share_desc", lang=lang) }}</span>
+        </a></li>
+        <li><a href="https://github.com/Chemaclass/chemaclass.com/contribute" target="_blank" rel="noopener" class="sponsor-free__item">
+          <span class="sponsor-free__label">{{ trans(key="sponsor_free_fix", lang=lang) }}</span>
+          <span class="sponsor-free__desc">{{ trans(key="sponsor_free_fix_desc", lang=lang) }}</span>
+        </a></li>
+        <li><a href="{% if lang == 'es' %}{{ get_url(path='es/atom.xml') | safe }}{% else %}{{ get_url(path='atom.xml') | safe }}{% endif %}" class="sponsor-free__item">
+          <span class="sponsor-free__label">{{ trans(key="sponsor_free_follow", lang=lang) }}</span>
+          <span class="sponsor-free__desc">{{ trans(key="sponsor_free_follow_desc", lang=lang) }}</span>
+        </a></li>
+      </ul>
+    </section>
+
+    <section class="sponsor-money band" aria-labelledby="sponsor-money-title">
+      <h2 id="sponsor-money-title">{{ trans(key="sponsor_money_title", lang=lang) }}</h2>
+      {% if config.extra.sponsor.paypal_enabled or config.extra.sponsor.lightning_enabled %}
+      <p class="sponsor-money__note">{{ trans(key="sponsor_money_note", lang=lang) }} {{ trans(key="sponsor_money_use", lang=lang) }}</p>
+      <div class="sponsor-options">
+        {% if config.extra.sponsor.paypal_enabled %}
+        <a href="https://www.paypal.com/paypalme/chemaclass" target="_blank" rel="noopener" class="sponsor-option sponsor-option--paypal">
+          <span class="sponsor-option__action">{{ trans(key="sponsor_paypal_action", lang=lang) }}</span>
+          <span class="sponsor-option__via">PayPal</span>
+        </a>
+        {% endif %}
+        {% if config.extra.sponsor.lightning_enabled %}
+        <a href="https://getalby.com/p/chemaclass" target="_blank" rel="noopener" class="sponsor-option sponsor-option--lightning">
+          <span class="sponsor-option__action">{{ trans(key="sponsor_lightning_action", lang=lang) }}</span>
+          <span class="sponsor-option__via">Lightning</span>
+        </a>
+        {% endif %}
+      </div>
+      {% else %}
+      <p class="sponsor-money__note">{{ trans(key="sponsor_payments_unavailable", lang=lang) }}</p>
+      {% endif %}
+      <div class="sponsor-stats">
+        <p class="sponsor-stats__lead">{{ trans(key="sponsor_stats_lead", lang=lang) }}</p>
+        <a href="{{ lp }}/blog/" class="sponsor-stat">
+          <span class="sponsor-stat__number">{{ blog_section.pages | length }}</span>
+          <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_articles", lang=lang) }}</span>
+        </a>
+        <a href="{{ lp }}/readings/" class="sponsor-stat">
+          <span class="sponsor-stat__number">{{ readings_section.pages | length }}</span>
+          <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_readings", lang=lang) }}</span>
+        </a>
+        <a href="{{ lp }}/talks/" class="sponsor-stat">
+          <span class="sponsor-stat__number">{{ talks_given }}</span>
+          <span class="sponsor-stat__label">{{ trans(key="sponsor_stat_talks", lang=lang) }}</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
   {% set github_stars = load_data(path="data/github-stars.json", format="json", required=false) %}
   {% set_global phel_stars = 513 %}
   {% set_global bashunit_stars = 413 %}
@@ -191,8 +141,10 @@
     {% set_global bashunit_stars = github_stars.bashunit | default(value=bashunit_stars) %}
     {% set_global agnostic_ai_stars = github_stars.agnostic_ai | default(value=agnostic_ai_stars) %}
   {% endif %}
-  <section class="sponsor-projects">
-    <h2>{{ trans(key="sponsor_projects_title", lang=lang) }}</h2>
+  <section class="sponsor-projects" aria-labelledby="sponsor-projects-title">
+    <div class="section-head">
+      <h2 id="sponsor-projects-title">{{ trans(key="sponsor_projects_title", lang=lang) }}</h2>
+    </div>
     <div class="sponsor-projects__grid">
       {# An <article> rather than a card-wide <a>: each project needs two
          destinations, and nesting links inside a link is not markup. #}
@@ -316,22 +268,17 @@
     </div>
   </section>
 
-  <!-- Thank You -->
   <footer class="sponsor-thanks">
     <p class="sponsor-thanks__message">{{ trans(key="sponsor_thanks", lang=lang) | safe }}</p>
     <p class="sponsor-thanks__cta">{{ trans(key="sponsor_thanks_cta", lang=lang) }}</p>
-    {# The CTA above says "let's connect" and used to link nothing: the footer
-       icons are a whole page further down and carry no names. Labelled here on
-       purpose, so this reads as an invitation rather than a second footer.
-       No RSS: the "follow the feed" card already covers it. #}
     <div class="sponsor-thanks__social">
-      <a href="https://github.com/Chemaclass" target="_blank" rel="me noopener" class="sponsor-thanks__social-link">
+      <a href="https://github.com/Chemaclass" target="_blank" rel="me noopener" class="pill">
         <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
       </a>
-      <a href="https://x.com/Chemaclass" target="_blank" rel="me noopener" class="sponsor-thanks__social-link">
+      <a href="https://x.com/Chemaclass" target="_blank" rel="me noopener" class="pill">
         <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X
       </a>
-      <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="me noopener" class="sponsor-thanks__social-link">
+      <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="me noopener" class="pill">
         <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
       </a>
     </div>

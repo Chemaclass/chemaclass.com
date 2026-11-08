@@ -11,98 +11,81 @@
 {% endblock posthead %}
 
 {% block content %}
-  <div class="blog-post-layout" data-toc-hidden="false">
-    {% include "partials/toc.html" %}
+  <article class="blog-post">
+    <div class="blog-post__top-row">
+      <a href="{{ <lang_path path="/blog/" lang={lang} /> }}" class="blog-post__back">
+        {{ <back_arrow /> }}
+        {{ trans(key="all_posts", lang=lang) }}
+      </a>
+      {{ <favorite_toggle lang={lang} /> }}
+      {{ <toc_toggle lang={lang} /> }}
+    </div>
 
-    <div class="blog-post-main">
-      <article class="blog-post">
-        <div class="blog-post__top-row">
-          <a href="{{ <lang_path path="/blog/" lang={lang} /> }}" class="blog-post__back">
-            {{ <back_arrow /> }}
-            {{ trans(key="all_posts", lang=lang) }}
-          </a>
-          {{ <favorite_toggle lang={lang} /> }}
-          {{ <toc_toggle lang={lang} /> }}
-        </div>
-
-        <!-- Hero thumbnail -->
-        {% if page.extra.static_thumbnail %}
-        <div class="blog-post__hero">
-          {% if page.extra.static_thumbnail is matching(pat="^http[s]?://") %}
-            <img src="{{ page.extra.static_thumbnail | safe }}" alt="{{ page.title }}" width="960" height="540" loading="eager" fetchpriority="high" />
-          {% else %}
-            {% set hero_path = page.extra.static_thumbnail | trim_start(pat="/") %}
-            {% set hero_meta = get_image_metadata(path=hero_path) %}
-            {% set hero_sm = resize_image(path=hero_path, width=480, height=270, op="fill", quality=88, format="webp") %}
-            {% set hero_md = resize_image(path=hero_path, width=720, height=405, op="fill", quality=88, format="webp") %}
-            {% set hero_lg = resize_image(path=hero_path, width=960, height=540, op="fill", quality=88, format="webp") %}
-            {% set hero_fb = resize_image(path=hero_path, width=960, height=540, op="fill", quality=88) %}
-            <picture>
-              {# Phones stop at 720w. Offering more lets a DPR 3 screen multiply 100vw by
-                 three and pull the widest rendition for a 360px box. Quality 80 rather
-                 than 88: at that density the difference is invisible and costs 30% more. #}
-              {% set hero_sm_phone = resize_image(path=hero_path, width=480, height=270, op="fill", quality=80, format="webp") %}
-              {% set hero_md_phone = resize_image(path=hero_path, width=720, height=405, op="fill", quality=80, format="webp") %}
-              <source type="image/webp" media="(max-width: 720px)" srcset="{{ hero_sm_phone.url }} 480w, {{ hero_md_phone.url }} 720w" sizes="100vw" />
-              {# 1440w only when the source can fill it: upscaling costs bytes and adds no detail. #}
-              {% if hero_meta.width >= 1440 %}
-                {% set hero_xl = resize_image(path=hero_path, width=1440, height=810, op="fill", quality=88, format="webp") %}
-                <source type="image/webp" srcset="{{ hero_sm.url }} 480w, {{ hero_md.url }} 720w, {{ hero_lg.url }} 960w, {{ hero_xl.url }} 1440w" sizes="960px" />
-              {% else %}
-                <source type="image/webp" srcset="{{ hero_sm.url }} 480w, {{ hero_md.url }} 720w, {{ hero_lg.url }} 960w" sizes="960px" />
-              {% endif %}
-              <img src="{{ hero_fb.url }}" alt="{{ page.title }}" width="{{ hero_fb.width }}" height="{{ hero_fb.height }}" loading="eager" fetchpriority="high" />
-            </picture>
-          {% endif %}
-        </div>
-        {% elif page.extra.thumbnail %}
-        <div class="blog-post__hero">
-          <img src="{{ get_url(path=page.path ~ page.extra.thumbnail) }}" alt="{{ page.title }}" width="960" height="540" loading="eager" fetchpriority="high" />
-        </div>
+    <header class="blog-post__header">
+      <p class="blog-post__meta eyebrow">
+        {% if page.extra.series and config.extra.series[page.extra.series] %}
+          {% set series_config = config.extra.series[page.extra.series] %}
+          {% set series_page = get_page(path="series/" ~ page.extra.series ~ ".md", lang=lang) %}
+          <a class="blog-post__kicker" href="{{ series_page.permalink }}">{% if lang == "es" and series_config.title_es %}{{ series_config.title_es }}{% else %}{{ series_config.title }}{% endif %}</a>
+        {% elif page.taxonomies.tags %}
+          {% set first_tag = page.taxonomies.tags | first %}
+          <a class="blog-post__kicker" href="{{ get_taxonomy_url(kind='tags', name=first_tag, lang=lang) }}">{{ first_tag }}</a>
         {% endif %}
+        {% if page.date %}
+          <time class="blog-post__date" datetime="{{ page.date | date(format='%Y-%m-%d') }}">{{ <format_date date={page.date} lang={lang} /> }}</time>
+        {% endif %}
+        {% include "partials/updated-date.html" %}
+        {% set reading_time = page.extra.reading_time | default(value=page.reading_time) %}
+        {% if reading_time %}
+          <span class="blog-post__reading-time">{{ reading_time }} {{ trans(key="minutes_read", lang=lang) }}</span>
+        {% endif %}
+      </p>
 
-        <!-- Title -->
-        <h1 class="blog-post__title">{{ page.title }}</h1>
+      <h1 class="blog-post__title">{{ page.title }}</h1>
 
-        <!-- Subtitle + Metadata + Tags -->
-        <div class="blog-post__meta-row">
-          {% if page.extra.subtitle %}
-            <p class="blog-post__subtitle">{{ page.extra.subtitle }}</p>
+      {% if page.extra.subtitle %}
+        <p class="blog-post__subtitle">{{ page.extra.subtitle }}</p>
+      {% endif %}
+    </header>
+
+    {% if page.extra.static_thumbnail %}
+    <div class="blog-post__hero">
+      {% if page.extra.static_thumbnail is matching(pat="^http[s]?://") %}
+        <img src="{{ page.extra.static_thumbnail | safe }}" alt="{{ page.title }}" width="960" height="540" loading="eager" fetchpriority="high" />
+      {% else %}
+        {% set hero_path = page.extra.static_thumbnail | trim_start(pat="/") %}
+        {% set hero_meta = get_image_metadata(path=hero_path) %}
+        {% set hero_sm = resize_image(path=hero_path, width=480, height=270, op="fill", quality=88, format="webp") %}
+        {% set hero_md = resize_image(path=hero_path, width=720, height=405, op="fill", quality=88, format="webp") %}
+        {% set hero_lg = resize_image(path=hero_path, width=960, height=540, op="fill", quality=88, format="webp") %}
+        {% set hero_fb = resize_image(path=hero_path, width=960, height=540, op="fill", quality=88) %}
+        <picture>
+          {# Phones stop at 720w: a DPR 3 screen would otherwise pull the widest
+             rendition for a 360px box. Quality 80 is invisible at that density. #}
+          {% set hero_sm_phone = resize_image(path=hero_path, width=480, height=270, op="fill", quality=80, format="webp") %}
+          {% set hero_md_phone = resize_image(path=hero_path, width=720, height=405, op="fill", quality=80, format="webp") %}
+          <source type="image/webp" media="(max-width: 720px)" srcset="{{ hero_sm_phone.url }} 480w, {{ hero_md_phone.url }} 720w" sizes="100vw" />
+          {# 1440w only when the source can fill it: upscaling costs bytes and adds no detail. #}
+          {% if hero_meta.width >= 1440 %}
+            {% set hero_xl = resize_image(path=hero_path, width=1440, height=810, op="fill", quality=88, format="webp") %}
+            <source type="image/webp" srcset="{{ hero_sm.url }} 480w, {{ hero_md.url }} 720w, {{ hero_lg.url }} 960w, {{ hero_xl.url }} 1440w" sizes="(max-width: 1100px) 100vw, 1040px" />
+          {% else %}
+            <source type="image/webp" srcset="{{ hero_sm.url }} 480w, {{ hero_md.url }} 720w, {{ hero_lg.url }} 960w" sizes="(max-width: 1100px) 100vw, 1040px" />
           {% endif %}
-          <div class="blog-post__meta">
-            {% if page.date %}
-            <span class="blog-post__date">
-              {{ <calendar_icon /> }}
-              {{ <format_date date={page.date} lang={lang} /> }}
-            </span>
-            {% endif %}
-            {% include "partials/updated-date.html" %}
-            {% set reading_time = page.extra.reading_time | default(value=page.reading_time) %}
-            {% if reading_time %}
-            <span class="blog-post__reading-time">
-              {{ <clock_icon /> }}
-              {{ reading_time }} {{ trans(key="minutes_read", lang=lang) }}
-            </span>
-            {% endif %}
-            {% if page.word_count %}
-            <span class="blog-post__word-count">
-              {{ <document_icon /> }}
-              {{ page.word_count }} {{ trans(key="words", lang=lang) }}
-            </span>
-            {% endif %}
-            {% if page.taxonomies.tags %}
-            <span class="blog-post__tags">
-              {% for tag in page.taxonomies.tags %}
-                <a href="{{ get_taxonomy_url(kind='tags', name=tag, lang=lang) }}" class="blog-post__tag">{{ tag }}</a>
-              {% endfor %}
-            </span>
-            {% endif %}
-          </div>
-        </div>
+          <img src="{{ hero_fb.url }}" alt="{{ page.title }}" width="{{ hero_fb.width }}" height="{{ hero_fb.height }}" loading="eager" fetchpriority="high" />
+        </picture>
+      {% endif %}
+    </div>
+    {% elif page.extra.thumbnail %}
+    <div class="blog-post__hero">
+      <img src="{{ get_url(path=page.path ~ page.extra.thumbnail) }}" alt="{{ page.title }}" width="960" height="540" loading="eager" fetchpriority="high" />
+    </div>
+    {% endif %}
 
-        {% include "partials/series-navigation.html" %}
+    <div class="blog-post-layout" data-toc-hidden="false">
+      {% include "partials/toc.html" %}
 
-        <!-- Content -->
+      <div class="blog-post-main">
         <div class="blog-post__content"
              {{ <highlight_labels lang={lang} /> }}>
           {% include "partials/tldr.html" %}
@@ -110,15 +93,24 @@
           {% include "partials/post-faq.html" %}
           {% include "partials/related-posts.html" %}
         </div>
-      </article>
 
-      <div class="blog-post-bottom">
-        {% include "partials/edit-link.html" %}
-        {% include "partials/post-navigation.html" %}
+        {% if page.taxonomies.tags %}
+        <ul class="blog-post__tags" role="list">
+          {% for tag in page.taxonomies.tags %}
+            <li><a href="{{ get_taxonomy_url(kind='tags', name=tag, lang=lang) }}" class="blog-post__tag pill">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% include "partials/series-navigation.html" %}
+
+        <div class="blog-post-bottom">
+          {% include "partials/edit-link.html" %}
+          {% include "partials/post-navigation.html" %}
+        </div>
       </div>
     </div>
-  </div>
-
+  </article>
 {% endblock content %}
 
 {% block js %}

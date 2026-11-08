@@ -38,84 +38,89 @@
 {% endblock posthead %}
 
 {% block content %}
+{% set_global seen_years = [] %}
+{% for post in term.pages %}
+  {% if post.year and post.year not in seen_years %}
+    {% set_global seen_years = [...seen_years, post.year] %}
+  {% endif %}
+{% endfor %}
+
 <div class="tag-single">
   <a href="{% if lang == 'es' %}/es/topics/{% else %}/topics/{% endif %}#{{ term.name }}" class="tag-single__back">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M19 12H5M12 19l-7-7 7-7"/>
     </svg>
     {{ trans(key="nav_topics", lang=lang) }}
   </a>
 
-  <header class="tag-single__header">
-    <span class="tag-single__label">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-        <line x1="7" y1="7" x2="7.01" y2="7"></line>
-      </svg>
-      {# The term itself moved into the H1, so the label says what this page is
-         rather than repeating the word directly underneath itself. #}
-      {{ trans(key="tag_label", lang=lang) }}
-    </span>
-    <h1>{{ term.name }}</h1>
-    <p class="tag-single__count">{{ term.pages | length }} {% if term.pages | length == 1 %}{{ trans(key="post", lang=lang) }}{% else %}{{ trans(key="posts", lang=lang) }}{% endif %}</p>
-    {% for td in config.extra.tag_descriptions %}
-      {% if td.name == term.name %}
-        <p class="tag-single__description">
-          {% if lang == "es" %}{{ td.desc_es }}{% else %}{{ td.desc }}{% endif %}
-        </p>
-      {% endif %}
-    {% endfor %}
+  <header class="page-hero tag-single__header">
+    <div class="page-hero__text">
+      <span class="eyebrow">{{ trans(key="tag_label", lang=lang) }} &middot; {{ term.pages | length }} {% if term.pages | length == 1 %}{{ trans(key="post", lang=lang) }}{% else %}{{ trans(key="posts", lang=lang) }}{% endif %}</span>
+      <h1 class="display-title"><em>{{ term.name }}</em></h1>
+      {% for td in config.extra.tag_descriptions %}
+        {% if td.name == term.name %}
+          <p class="lead">{% if lang == "es" %}{{ td.desc_es }}{% else %}{{ td.desc }}{% endif %}</p>
+        {% endif %}
+      {% endfor %}
+    </div>
   </header>
 
-  <div class="tag-single__posts">
-    {% for post in term.pages %}
-    <a href="{{ post.permalink }}" class="tag-single__post">
-      {% if post.extra.static_thumbnail %}
-      <div class="tag-single__post-thumb">
-        {% if post.extra.static_thumbnail is matching(pat="^http[s]?://") %}
-          <img src="{{ post.extra.static_thumbnail | safe }}" alt="{{ post.title }}" width="480" height="270" loading="lazy" decoding="async" />
-        {% else %}
-          {% set thumb_path = post.extra.static_thumbnail | trim_start(pat="/") %}
-          {% set thumb_webp = resize_image(path=thumb_path, width=480, height=270, op="fill", quality=75, format="webp") %}
-          {% set thumb_fb = resize_image(path=thumb_path, width=480, height=270, op="fill", quality=80) %}
-          <picture>
-            <source type="image/webp" srcset="{{ thumb_webp.url }}" />
-            <img src="{{ thumb_fb.url }}" alt="{{ post.title }}" width="{{ thumb_fb.width }}" height="{{ thumb_fb.height }}" loading="lazy" decoding="async" />
-          </picture>
-        {% endif %}
+  {% for year in seen_years %}
+    {% set year_posts = [p for p in term.pages if p.year == year] %}
+    <section class="year-block">
+      <div class="year-block__label">
+        <h2 class="year-block__year">{{ year }}</h2>
+        <span class="year-block__meta">{{ year_posts | length }} {% if year_posts | length == 1 %}{{ trans(key="post", lang=lang) }}{% else %}{{ trans(key="posts", lang=lang) }}{% endif %}</span>
       </div>
-      {% elif post.extra.thumbnail %}
-      <div class="tag-single__post-thumb">
-        <img src="{{ get_url(path=post.path ~ post.extra.thumbnail) }}" alt="{{ post.title }}" width="480" height="270" loading="lazy" decoding="async" />
-      </div>
-      {% endif %}
-      <div class="tag-single__post-content">
-        <div class="tag-single__post-meta">
-          {% if post.path is containing(pat="blog/") %}
-          <span class="tag-single__post-type tag-single__post-type--blog">{{ trans(key="nav_blog", lang=lang) }}</span>
-          {% elif post.path is containing(pat="readings/") %}
-          <span class="tag-single__post-type tag-single__post-type--reading">{{ trans(key="nav_readings", lang=lang) }}</span>
-          {% elif post.path is containing(pat="talks/") %}
-          <span class="tag-single__post-type tag-single__post-type--talk">{{ trans(key="nav_talks", lang=lang) }}</span>
+      <div class="year-block__body">
+        {% for post in year_posts %}
+        <a href="{{ post.permalink }}" class="tag-single__post">
+          <div class="tag-single__post-content">
+            <div class="tag-single__post-meta">
+              {% if post.path is containing(pat="blog/") %}
+              <span class="tag-single__post-type">{{ trans(key="nav_blog", lang=lang) }}</span>
+              {% elif post.path is containing(pat="readings/") %}
+              <span class="tag-single__post-type">{{ trans(key="nav_readings", lang=lang) }}</span>
+              {% elif post.path is containing(pat="talks/") %}
+              <span class="tag-single__post-type">{{ trans(key="nav_talks", lang=lang) }}</span>
+              {% endif %}
+              <span class="tag-single__post-date">{% if lang == "es" %}{{ post.date | date(format="%d/%m/%Y") }}{% else %}{{ post.date | date(format="%B %d, %Y") }}{% endif %}</span>
+            </div>
+            <h3>{{ post.title }}</h3>
+            {% if post.description %}
+            <p class="tag-single__post-desc">{{ post.description | truncate(length=220) }}</p>
+            {% endif %}
+            {% if post.taxonomies.tags %}
+            <div class="tag-single__post-tags">
+              {% for tag in post.taxonomies.tags %}
+              <span class="tag-single__post-tag{% if tag == term.name %} tag-single__post-tag--active{% endif %}">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+          {% if post.extra.static_thumbnail %}
+          <div class="tag-single__post-thumb">
+            {% if post.extra.static_thumbnail is matching(pat="^http[s]?://") %}
+              <img src="{{ post.extra.static_thumbnail | safe }}" alt="" width="480" height="270" loading="lazy" decoding="async" />
+            {% else %}
+              {% set thumb_path = post.extra.static_thumbnail | trim_start(pat="/") %}
+              {% set thumb_webp = resize_image(path=thumb_path, width=480, height=270, op="fill", quality=75, format="webp") %}
+              {% set thumb_fb = resize_image(path=thumb_path, width=480, height=270, op="fill", quality=80) %}
+              <picture>
+                <source type="image/webp" srcset="{{ thumb_webp.url }}" />
+                <img src="{{ thumb_fb.url }}" alt="" width="{{ thumb_fb.width }}" height="{{ thumb_fb.height }}" loading="lazy" decoding="async" />
+              </picture>
+            {% endif %}
+          </div>
+          {% elif post.extra.thumbnail %}
+          <div class="tag-single__post-thumb">
+            <img src="{{ get_url(path=post.path ~ post.extra.thumbnail) }}" alt="" width="480" height="270" loading="lazy" decoding="async" />
+          </div>
           {% endif %}
-          {% if post.date %}
-          <span class="tag-single__post-date">{% if lang == "es" %}{{ post.date | date(format="%d/%m/%Y") }}{% else %}{{ post.date | date(format="%B %d, %Y") }}{% endif %}</span>
-          {% endif %}
-        </div>
-        <h3>{{ post.title }}</h3>
-        {% if post.description %}
-        <p class="tag-single__post-desc">{{ post.description | truncate(length=220) }}</p>
-        {% endif %}
-        {% if post.taxonomies.tags %}
-        <div class="tag-single__post-tags">
-          {% for tag in post.taxonomies.tags %}
-          <span class="tag-single__post-tag{% if tag == term.name %} tag-single__post-tag--active{% endif %}">{{ tag }}</span>
-          {% endfor %}
-        </div>
-        {% endif %}
+        </a>
+        {% endfor %}
       </div>
-    </a>
-    {% endfor %}
-  </div>
+    </section>
+  {% endfor %}
 </div>
 {% endblock content %}

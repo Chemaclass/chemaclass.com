@@ -14,34 +14,36 @@
 {% endblock posthead %}
 
 {% block content %}
+  {%- set tl = section.content | replace(from="<li>20", to="<li><span class=\"talk-when\">20") | replace(from="(EN)\n<ul>", to="(EN)</span>\n<ul>") | replace(from="(ES)\n<ul>", to="(ES)</span>\n<ul>") | replace(from="Call\n<ul>", to="Call</span>\n<ul>") | replace(from=" | ", to="<br>") | replace(from="[<strong>", to="&middot; <strong>") | replace(from="</strong>] ", to="</strong> ") | replace(from="[<a ", to="<a class=\"pill\" ") | replace(from="</a>]", to="</a>") -%}
+  {%- set years = tl | split(pat="<h2 ") -%}
   <div class="talks-page">
-    <div class="talks-header collection-intro">
-      <h1>{{ trans(key="talks_title", lang=lang) }}</h1>
-      <p class="talks-intro">{{ trans(key="talks_intro", lang=lang) }}</p>
-    </div>
+    <header class="page-hero">
+      <div class="page-hero__text">
+        <span class="eyebrow">{{ trans(key="talks_eyebrow", lang=lang) }}</span>
+        <h1 class="display-title">{{ trans(key="talks_heading", lang=lang) | safe }}</h1>
+        <p class="lead">{{ trans(key="talks_intro", lang=lang) }}</p>
+      </div>
+      <aside class="talks-invite band">
+        <span class="talks-invite__eyebrow">{{ trans(key="talks_invite_eyebrow", lang=lang) }}</span>
+        <p class="talks-invite__text">{{ trans(key="talks_invite_text", lang=lang) }}</p>
+        <a class="talks-invite__link" href="{% if lang == 'es' %}/es/services/team-workshops/{% else %}/services/team-workshops/{% endif %}">{{ trans(key="talks_invite_link", lang=lang) }} &rarr;</a>
+      </aside>
+    </header>
 
-    <!-- Featured Topics -->
     {% if section.pages | length > 0 %}
     <section class="talks-featured">
-      <h2 class="talks-section-title">{{ trans(key="talks_featured", lang=lang) }}</h2>
+      <div class="section-head">
+        <h2>{{ trans(key="talks_featured", lang=lang) }}</h2>
+      </div>
       <div class="talks-grid">
         {% for talk in section.pages %}
         {% if talk.slug == "bashunit" or talk.slug == "phel" or talk.slug == "hands-on-refactoring-tdd" %}
         <a href="{{ talk.permalink }}" class="talk-card">
-          <div class="talk-card__content">
-            <h3 class="talk-card__title">{{ talk.title }}</h3>
-            {% if talk.extra.subtitle %}
-              <p class="talk-card__subtitle">{{ talk.extra.subtitle }}</p>
-            {% endif %}
-            <p class="talk-card__summary">{{ talk.summary | striptags }}</p>
-            {% if talk.taxonomies.tags %}
-              <div class="talk-card__tags">
-                {% for tag in talk.taxonomies.tags[:3] %}
-                  <span class="talk-card__tag">{{ tag }}</span>
-                {% endfor %}
-              </div>
-            {% endif %}
-          </div>
+          <h3 class="talk-card__title">{{ talk.title }}</h3>
+          {% if talk.extra.subtitle %}
+            <p class="talk-card__subtitle">{{ talk.extra.subtitle }}</p>
+          {% endif %}
+          <p class="talk-card__summary">{{ talk.summary | striptags }}</p>
         </a>
         {% endif %}
         {% endfor %}
@@ -49,12 +51,22 @@
     </section>
     {% endif %}
 
-    <!-- Timeline -->
-    <section class="talks-timeline">
-      <h2 class="talks-section-title">{{ trans(key="talks_timeline", lang=lang) }}</h2>
-      <div class="timeline-content">
-        {{ section.content | safe }}
-      </div>
+    <section class="talks-timeline" aria-label="{{ trans(key='talks_timeline', lang=lang) }}">
+      {% for chunk in years[1:] %}
+        {%- set parts = chunk | split(pat="</h2>") -%}
+        {%- set year = parts | first | split(pat='"') | nth(n=1) -%}
+        {%- set body = parts[1:] | join(sep="</h2>") | replace(from="<hr />", to="") -%}
+        {%- set event_count = (body | split(pat="talk-when") | length) - 1 -%}
+        <div class="year-block">
+          <div class="year-block__label">
+            <h2 class="year-block__year" id="{{ year }}">{{ year }}</h2>
+            <span class="year-block__meta">{{ trans(key="talks_events", lang=lang) | replace(from="{n}", to=event_count ~ "") }}</span>
+          </div>
+          <div class="year-block__body timeline-content">
+            {{ body | safe }}
+          </div>
+        </div>
+      {% endfor %}
     </section>
     {% include "partials/hire-cta.html" %}
   </div>

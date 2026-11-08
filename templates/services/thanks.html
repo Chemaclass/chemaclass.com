@@ -10,9 +10,9 @@
 {% set lp = '' %}{% if lang == 'es' %}{% set lp = '/es' %}{% endif %}
 <article class="web-development-sales">
   <section class="sales-thanks">
-    <span class="sales-eyebrow">{{ t.thanks.eyebrow[lang] | safe }}</span>
-    <h1>{{ t.thanks.title[lang] | safe }}</h1>
-    <p class="sales-thanks__lead">{{ t.thanks.lead[lang] | safe }}</p>
+    <span class="eyebrow eyebrow--brass">{{ t.thanks.eyebrow[lang] | safe }}</span>
+    <h1 class="display-title">{{ t.thanks.title[lang] | safe }}</h1>
+    <p class="lead">{{ t.thanks.lead[lang] | safe }}</p>
     <p class="sales-thanks__aside">{{ t.thanks.aside[lang] | safe }}</p>
     <div class="sales-thanks__actions">
       <a class="sales-button sales-button--primary" href="{{ lp }}/services/web-development/">{{ t.thanks.back[lang] | safe }}</a>

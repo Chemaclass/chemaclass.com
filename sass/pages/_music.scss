@@ -1,64 +1,63 @@
 // ==========================================================================
-// Music Index Page
+// Music index
 // ==========================================================================
 
 .music-index {
-  max-width: 900px;
-  margin: 0 auto;
+  padding-bottom: 0;
 }
 
-.music-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
+.music-band {
+  margin-top: clamp(24px, 4vw, 48px);
+  padding-top: clamp(56px, 7vw, 96px);
+  padding-bottom: clamp(64px, 8vw, 112px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 3vw, 40px);
 
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0 0 0.5rem;
-    color: var(--heading-color);
+  &__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: clamp(2.5rem, 1.6rem + 3vw, 3.75rem);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: #ffffff;
+
+    em { color: var(--color-brass-on-accent); font-style: italic; }
+  }
+
+  &__intro {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-on-accent-muted);
   }
 }
 
-.music-intro {
-  font-size: 1.05rem;
-  color: var(--color-subtitle);
-  line-height: 1.6;
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-// Video Grid
 .music-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   gap: 2rem;
-
-  @media (max-width: $breakpoint-phone) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
+  max-width: var(--content-max);
 }
 
-// Video Card
 .music-card {
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 16px;
-  overflow: hidden;
-  transition: border-color 0.25s ease;
-
-  &:hover {
-    border-color: var(--accent-color);
-  }
-
-  &__video {
-    width: 100%;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  min-width: 0;
 
   &__player {
     position: relative;
     aspect-ratio: 16 / 9;
     background: #000;
+    border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
 
@@ -69,9 +68,7 @@
       transition: opacity 0.2s ease;
     }
 
-    &:hover img {
-      opacity: 0.85;
-    }
+    &:hover img { opacity: 0.85; }
 
     &:hover .music-card__play svg path:first-child {
       fill: #f00;
@@ -83,8 +80,7 @@
 
       iframe {
         position: absolute;
-        top: 0;
-        left: 0;
+        inset: 0;
         width: 100%;
         height: 100%;
         border: none;
@@ -97,6 +93,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    min-width: 44px;
+    min-height: 44px;
     background: none;
     border: none;
     padding: 0;
@@ -107,70 +105,79 @@
       transition: fill 0.2s ease, fill-opacity 0.2s ease;
     }
 
-    &:hover {
-      transform: translate(-50%, -50%) scale(1.1);
-    }
-  }
-
-  &__info {
-    padding: 1.25rem;
+    &:hover { transform: translate(-50%, -50%) scale(1.1); }
   }
 
   &__title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 0 0 0.35rem;
-    color: var(--heading-color);
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
     line-height: 1.3;
+    color: #ffffff;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: none;
+
+      &:hover { color: var(--color-brass-on-accent); border-bottom: none; }
+    }
   }
 
   &__description {
-    font-size: 0.9rem;
-    color: var(--color-subtitle);
-    margin: 0 0 0.5rem;
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
     line-height: 1.5;
+    color: var(--color-on-accent-muted);
   }
 
   &__date {
-    font-size: 0.8rem;
-    color: var(--color-subtitle);
-    opacity: 0.7;
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--color-on-accent-muted);
   }
 }
 
 // ==========================================================================
-// Music Individual Post
+// Single music page
 // ==========================================================================
 
 .music-post {
-  max-width: 720px;
+  max-width: var(--reading-max);
   margin: 0 auto;
+  padding: clamp(32px, 5vw, 64px) 0;
 
   &__back {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    min-height: 44px;
+    margin-bottom: 1.5rem;
     color: var(--color-subtitle);
     text-decoration: none;
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
+    font-size: 0.9375rem;
     transition: color 0.2s ease;
 
-    &:hover {
-      color: var(--accent-color);
-    }
+    &:hover { color: var(--accent-color); border-bottom: none; }
 
-    svg {
-      width: 16px;
-      height: 16px;
-    }
+    svg { width: 16px; height: 16px; }
   }
 
   &__title {
-    font-size: 2rem;
-    font-weight: 700;
     margin: 0 0 0.75rem;
+    font-size: clamp(2rem, 1.4rem + 2.6vw, 3rem);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
     color: var(--heading-color);
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 0.9375rem;
+    color: var(--color-subtitle);
   }
 
   &__content {
@@ -179,7 +186,7 @@
       aspect-ratio: 16 / 9;
       height: auto;
       border: none;
-      border-radius: 12px;
+      border-radius: 14px;
     }
   }
 }

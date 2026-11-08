@@ -11,9 +11,9 @@
    Whichever wins is also what goes into the schema abstract, so the rendered
    summary and the marked-up one cannot say different things.
 
-   Requires: page.
+   Requires: page, lang.
    ========================================================================== #}
 {% set tldr_text = page.extra.tldr | default(value=page.description) | default(value="") %}
 {% if tldr_text %}
-<div class="tldr">{{ tldr_text }}</div>
+<div class="tldr" data-label="{{ trans(key='tldr_label', lang=lang) }}">{{ tldr_text }}</div>
 {% endif %}

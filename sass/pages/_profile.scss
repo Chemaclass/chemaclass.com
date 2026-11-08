@@ -1,40 +1,26 @@
-// /profile, client-side reading dashboard.
-// Visual language:
-//   - Same "card" motif as topics/readings (soft background, 1px divider border,
-//     12px radius, subtle shadow on hover).
-//   - Two accent colors: reading-streak green for progress, favorites amber for stars.
-//   - No chrome when data is empty, just honest empty-state copy.
-
-$profile-max-width: 920px;
+// /profile, client-side reading dashboard. Ruled sections on the fog ground,
+// navy for progress, brass for saved posts.
 
 .profile-page {
-  max-width: $profile-max-width;
+  max-width: 920px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding-bottom: clamp(56px, 8vw, 112px);
 
   &__header {
-    text-align: center;
-    margin: 1rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: clamp(40px, 7vw, 88px) 0 clamp(32px, 5vw, 56px);
 
-    h1 {
-      margin-bottom: 0.5rem;
-    }
+    h1 { margin: 0; font-size: clamp(2.5rem, 1.6rem + 3.2vw, 4rem); }
   }
 
-  &__intro {
-    color: var(--color-subtitle);
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0 auto;
-    max-width: 640px;
-  }
+  &__intro { margin: 0; }
 
   &__noscript {
-    text-align: center;
-    padding: 1rem;
-    margin: 1rem auto;
-    border: 1px dashed var(--preview-divider-color);
-    border-radius: 10px;
+    padding: 1rem 0;
+    margin: 0 0 1rem;
+    border-top: 1px solid var(--rule-strong);
     color: var(--color-subtitle);
   }
 }
@@ -42,7 +28,7 @@ $profile-max-width: 920px;
 .profile-app {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: clamp(40px, 5vw, 64px);
 
   // Skeleton shown before JS takes over.
   &__skeleton {
@@ -54,7 +40,7 @@ $profile-max-width: 920px;
 
 .profile-skeleton-card {
   height: 120px;
-  border-radius: 12px;
+  border-radius: var(--radius-card);
   background: linear-gradient(
     90deg,
     var(--search-input-bg) 0%,
@@ -73,15 +59,13 @@ $profile-max-width: 920px;
 
 // ---- Cards ----
 .profile-card {
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 12px;
-  padding: 1.25rem 1.5rem;
-  box-shadow: var(--shadow-sm);
+  border-top: 1px solid var(--rule-strong);
+  padding-top: 20px;
 
   &__title {
-    margin: 0 0 0.75rem;
-    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem);
+    letter-spacing: -0.02em;
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
@@ -96,13 +80,13 @@ $profile-max-width: 920px;
   }
 
   &__icon--amber {
-    color: var(--color-saved);
+    color: var(--color-brass);
   }
 
   &__hint {
-    margin: -0.25rem 0 0.9rem;
+    margin: 0 0 1.5rem;
     color: var(--color-subtitle);
-    font-size: 0.9rem;
+    font-size: 0.9375rem;
   }
 }
 
@@ -122,19 +106,20 @@ $profile-max-width: 920px;
 
 .profile-tile {
   --profile-pct: 0%;
-  background: var(--body-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 10px;
-  padding: 0.9rem 1rem;
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
   color: inherit;
   text-decoration: none;
-  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
 
   &:hover {
-    border-color: var(--accent-color);
+    border-bottom: 0;
+    box-shadow: var(--shadow-md);
   }
 
   &__head {
@@ -145,17 +130,20 @@ $profile-max-width: 920px;
   }
 
   &__label {
-    font-weight: 600;
-    color: var(--heading-color);
+    font-weight: 500;
+    color: var(--color-subtitle);
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    font-size: 0.8125rem;
   }
 
   &__pct {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 1;
     font-variant-numeric: tabular-nums;
-    font-weight: 700;
-    color: var(--color-read);
+    color: var(--heading-color);
   }
 
   &__bar {
@@ -169,8 +157,7 @@ $profile-max-width: 920px;
     display: block;
     width: var(--profile-pct);
     height: 100%;
-    // A bar is not text, so it keeps the brighter end of the ramp.
-    background: linear-gradient(90deg, var(--color-read), color-mix(in srgb, var(--color-read) 70%, white));
+    background: var(--accent-color);
     transition: width 0.6s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
   }
 
@@ -189,7 +176,6 @@ $profile-max-width: 920px;
 .profile-series {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
 }
 
 .profile-series__row {
@@ -197,16 +183,13 @@ $profile-max-width: 920px;
   display: block;
   color: inherit;
   text-decoration: none;
-  padding: 0.35rem 0.5rem;
-  margin: -0.35rem -0.5rem;
-  border-radius: 8px;
-  transition: background 0.2s ease;
+  padding: 14px 0;
+  border-top: 1px solid var(--preview-divider-color);
 
   &:hover,
   &:focus-visible {
     text-decoration: none;
     border-bottom: none;
-    background: var(--body-bg);
 
     .profile-series__title { color: var(--accent-color); }
   }
@@ -221,9 +204,11 @@ $profile-max-width: 920px;
 }
 
 .profile-series__title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
   color: var(--heading-color);
-  font-weight: 600;
-  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
 .profile-series__count {
@@ -243,7 +228,7 @@ $profile-max-width: 920px;
   display: block;
   width: var(--profile-pct);
   height: 100%;
-  background: var(--color-read);
+  background: var(--accent-color);
   transition: width 0.6s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
 }
 
@@ -254,28 +239,22 @@ $profile-max-width: 920px;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
 
   &__item {
     display: flex;
     align-items: stretch;
     gap: 0.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--preview-divider-color);
-    background: var(--body-bg);
-    transition: border-color 0.2s ease;
+    border-top: 1px solid var(--preview-divider-color);
 
-    &:hover {
-      border-color: var(--accent-color);
-    }
+    &:hover .profile-list__title { color: var(--accent-color); }
   }
 
   &__link {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.15rem;
-    padding: 0.6rem 0.85rem;
+    gap: 0.25rem;
+    padding: 14px 0;
     color: inherit;
     text-decoration: none;
     min-width: 0;
@@ -284,8 +263,12 @@ $profile-max-width: 920px;
   }
 
   &__title {
-    font-weight: 600;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.25;
     color: var(--heading-color);
+    transition: color 0.2s ease;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -301,8 +284,9 @@ $profile-max-width: 920px;
 
   &__section {
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-weight: 600;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    color: var(--color-brass-text);
   }
 
   &__date {
@@ -315,7 +299,6 @@ $profile-max-width: 920px;
     padding: 0 0.8rem;
     background: transparent;
     border: 0;
-    border-left: 1px solid var(--preview-divider-color);
     color: var(--color-subtitle);
     cursor: pointer;
     transition: color 0.2s ease, background 0.2s ease;
@@ -344,9 +327,7 @@ $profile-max-width: 920px;
 
 // ---- Tools footer ----
 .profile-card--tools {
-  background: transparent;
-  border-style: dashed;
-  box-shadow: none;
+  border-top-color: var(--preview-divider-color);
 }
 
 .profile-tools {
@@ -356,12 +337,14 @@ $profile-max-width: 920px;
 }
 
 .profile-btn {
-  padding: 0.45rem 0.9rem;
-  border-radius: 999px;
-  border: 1px solid var(--preview-divider-color);
-  background: var(--body-bg);
-  color: var(--body-color);
-  font-size: 0.85rem;
+  min-height: 44px;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--rule-strong);
+  background: transparent;
+  color: var(--heading-color);
+  font: inherit;
+  font-size: 0.9375rem;
   font-weight: 500;
   cursor: pointer;
   transition: border-color 0.2s ease, color 0.2s ease;
@@ -407,21 +390,10 @@ $profile-max-width: 920px;
 }
 
 @media (max-width: $breakpoint-phone) {
-  .profile-page {
-    padding: 0 0.75rem;
-  }
-
-  .profile-card {
-    padding: 1rem 1.1rem;
-  }
 
   .profile-list__meta {
     flex-direction: column;
     gap: 0.1rem;
-  }
-
-  .profile-btn {
-    min-height: 44px;
   }
 
   .profile-list__remove {

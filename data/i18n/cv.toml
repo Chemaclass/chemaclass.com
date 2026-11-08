@@ -7,6 +7,8 @@
 [header]
 download_pdf.en = "Download PDF"
 download_pdf.es = "Descargar PDF"
+role.en = "Product Engineer at Kombo"
+role.es = "Product Engineer en Kombo"
 
 [places]
 berlin.en = "Berlin, Germany"
@@ -29,10 +31,16 @@ quote.es = "\"Chema está muy por delante de la curva en IA. Mientras la mayorí
 [experience]
 title.en = "Experience"
 title.es = "Experiencia"
-kombo_total.en = "Present"
-kombo_total.es = "Actualidad"
-present.en = "Present"
-present.es = "Actualidad"
+stat_building.en = "years building software"
+stat_building.es = "años construyendo software"
+stat_leading.en = "years leading teams"
+stat_leading.es = "años liderando equipos"
+at.en = "at"
+at.es = "en"
+to.en = "to"
+to.es = "a"
+present.en = "now"
+present.es = "la actualidad"
 kombo.en = "Product Engineer at Kombo, the leading unified API for HRIS, ATS, Payroll, and LMS integrations. Building product at the intersection of engineering and customer needs, enabling B2B companies to connect hundreds of HR systems through a single API."
 kombo.es = "Product Engineer en Kombo, la API unificada líder para integraciones de HRIS, ATS, Payroll y LMS. Construyo producto en la intersección de ingeniería y necesidades de cliente, permitiendo a empresas B2B conectar cientos de sistemas de RRHH a través de una sola API."
 purpose_green_total.en = "2 yrs"

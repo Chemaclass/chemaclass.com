@@ -1,198 +1,99 @@
 // ==========================================================================
-// Books Index Page
+// Books index
 // ==========================================================================
 
 .books-index {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.books-grid {
+  padding: clamp(40px, 7vw, 104px) 0 clamp(56px, 8vw, 112px);
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: clamp(56px, 7vw, 96px);
 }
 
-// Book Card
-.book-card {
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.book-feature {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 2.5rem;
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 16px;
-  padding: 2rem;
-  transition: border-color 0.25s ease;
-
-  &:hover {
-    border-color: var(--accent-color);
-  }
-
-  @media (max-width: $breakpoint-tablet) {
-    grid-template-columns: 180px 1fr;
-    gap: 1.75rem;
-    padding: 1.5rem;
-  }
-
-  @media (max-width: $breakpoint-phone) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    text-align: center;
-  }
+  grid-template-columns: minmax(200px, 340px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 96px);
+  max-width: 1120px;
+  margin: 0 auto;
+  width: 100%;
 
   &__cover {
-    a {
-      display: block;
-    }
+    display: block;
+    border-bottom: none;
 
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s ease;
+    &:hover { border-bottom: none; }
 
-      &:hover {
-        transform: rotate(-1deg);
-      }
-    }
-
-    @media (max-width: $breakpoint-phone) {
-      max-width: 180px;
-      margin: 0 auto;
-    }
+    .book-cover { aspect-ratio: auto; }
   }
 
-  &__details {
+  &__body {
     display: flex;
     flex-direction: column;
-  }
-
-  &__year {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--accent-color);
-    letter-spacing: 0.03em;
-    margin-bottom: 0.5rem;
-
-    i {
-      margin-right: 0.35rem;
-      font-size: 0.75rem;
-    }
+    align-items: flex-start;
+    gap: 1.5rem;
   }
 
   &__title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0 0 0.75rem;
-    line-height: 1.3;
+    font-size: clamp(2.75rem, 1.6rem + 4.4vw, 5rem);
 
     a {
-      color: var(--heading-color);
+      color: inherit;
       text-decoration: none;
-      transition: color 0.2s ease;
+      border-bottom: none;
 
-      &:hover {
-        color: var(--accent-color);
-      }
+      &:hover { color: inherit; border-bottom: none; }
     }
-
-    @media (max-width: $breakpoint-phone) {
-      font-size: 1.35rem;
-    }
-  }
-
-  &__description {
-    font-size: 0.95rem;
-    color: var(--body-color);
-    line-height: 1.7;
-    margin: 0 0 1rem;
   }
 
   &__meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    font-size: 0.85rem;
+    margin: 0;
+    font-size: 0.9375rem;
     color: var(--color-subtitle);
-
-    i {
-      color: var(--accent-color);
-      margin-right: 0.3rem;
-    }
-
-    @media (max-width: $breakpoint-phone) {
-      justify-content: center;
-    }
   }
 
   &__quote {
-    border-left: 3px solid var(--accent-color);
-    background: var(--search-bg-selected-item);
-    border-radius: 0 8px 8px 0;
-    padding: 0.875rem 1.25rem;
-    margin: 0 0 1.25rem;
+    margin: 0;
+    padding: 0.25rem 0 0.25rem 1.5rem;
+    border-left: 2px solid var(--color-brass);
 
     p {
-      font-size: 0.9rem;
-      font-style: italic;
-      color: var(--heading-color);
-      line-height: 1.5;
       margin: 0;
-    }
-
-    @media (max-width: $breakpoint-phone) {
-      text-align: left;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+      line-height: 1.35;
+      color: var(--heading-color);
     }
   }
 
   &__actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: auto;
+    gap: 1rem;
+    padding-top: 0.5rem;
+  }
 
-    @media (max-width: $breakpoint-phone) {
-      justify-content: center;
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: minmax(0, 1fr);
+
+    &__cover {
+      width: min(240px, 60%);
     }
   }
 
-  &__btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.625rem 1.25rem;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.875rem;
-    text-decoration: none;
-    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-
-    i {
-      font-size: 0.9rem;
-    }
-
-    &--primary {
-      background: var(--accent-color);
-      color: white;
-
-      &:hover {
-        color: white;
-        background: color-mix(in srgb, var(--accent-color) 85%, black);
-      }
-    }
-
-    &--secondary {
-      background: transparent;
-      color: var(--body-color);
-      border: 1px solid var(--preview-divider-color);
-
-      &:hover {
-        border-color: var(--accent-color);
-        color: var(--accent-color);
-      }
-    }
+  @media (max-width: $breakpoint-phone) {
+    &__actions .btn { width: 100%; }
   }
 }
 
@@ -201,12 +102,16 @@
 // ==========================================================================
 
 .book-chapters {
+  padding-top: clamp(32px, 5vw, 64px);
+
   &__header {
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
 
     h1 {
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: clamp(2.5rem, 1.6rem + 3.4vw, 4rem);
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
       margin: 0;
       color: var(--heading-color);
     }
@@ -217,6 +122,8 @@
   }
 
   &__text {
+    max-width: 46rem;
+
     p {
       font-size: 1.05rem;
       line-height: 1.6;
@@ -246,8 +153,8 @@
       width: 100%;
       padding: 0.75rem 1rem 0.75rem 2.5rem;
       border: 1px solid var(--preview-divider-color);
-      border-radius: 8px;
-      background: var(--search-input-bg, transparent);
+      border-radius: var(--radius-pill);
+      background: var(--surface);
       color: var(--body-color);
       font-size: 0.95rem;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -302,12 +209,13 @@
     }
 
     h2 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--accent-color);
+      font-size: clamp(1.625rem, 1.3rem + 1vw, 1.875rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--heading-color);
       margin: 0 0 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--preview-divider-color);
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--rule-strong);
     }
   }
 }
@@ -316,9 +224,9 @@
 .chapter-card {
   display: flex;
   flex-direction: column;
-  background: var(--search-input-bg);
+  background: var(--surface);
   border: 1px solid var(--preview-divider-color);
-  border-radius: 12px;
+  border-radius: var(--radius-card);
   overflow: hidden;
   text-decoration: none;
   color: inherit;
@@ -350,7 +258,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--search-input-bg) 0%, var(--search-bg-selected-item) 100%);
+      background: var(--search-bg-selected-item);
 
       i {
         font-size: 2.5rem;
@@ -364,7 +272,7 @@
     top: 0.5rem;
     left: 0.5rem;
     background: var(--accent-color);
-    color: white;
+    color: var(--accent-ink);
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.25rem 0.5rem;
@@ -381,15 +289,16 @@
   }
 
   &__title {
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-family: var(--font-display);
+    font-size: 1.0625rem;
+    font-weight: 500;
     margin: 0 0 0.25rem;
     color: var(--heading-color);
-    line-height: 1.3;
+    line-height: 1.25;
   }
 
   &__subtitle {
-    font-size: 0.78rem;
+    font-size: 0.8125rem;
     color: var(--color-subtitle);
     line-height: 1.4;
     display: block;
@@ -439,8 +348,8 @@
     aspect-ratio: auto;
 
     img {
-      border-radius: 4px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      border-radius: 3px 8px 8px 3px;
+      box-shadow: var(--shadow-book);
     }
   }
 }
@@ -448,10 +357,10 @@
 // Special styling for prologue/index cards
 .chapter-card--special {
   .chapter-card__image--placeholder {
-    background: linear-gradient(135deg, var(--accent-color) 0%, color-mix(in srgb, var(--accent-color) 70%, black) 100%);
+    background: var(--accent-color);
 
     i {
-      color: rgba(255, 255, 255, 0.7);
+      color: var(--accent-ink);
       font-size: 3rem;
     }
   }
@@ -489,17 +398,19 @@
 // ==========================================================================
 
 .book-about {
-  max-width: 900px;
+  max-width: 1120px;
+  padding-top: clamp(32px, 5vw, 64px);
   margin: 0 auto;
 
   &__back {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    min-height: 44px;
     color: var(--color-subtitle);
     text-decoration: none;
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
+    font-size: 0.9375rem;
+    margin-bottom: 1.5rem;
     transition: color 0.2s ease;
 
     &:hover {
@@ -515,20 +426,14 @@
   // Hero Section
   &__hero {
     display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
+    grid-template-columns: minmax(200px, 320px) minmax(0, 1fr);
+    gap: clamp(32px, 6vw, 80px);
+    margin-bottom: clamp(48px, 6vw, 80px);
     align-items: start;
 
     @media (max-width: $breakpoint-tablet) {
-      grid-template-columns: 200px 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 2rem;
-    }
-
-    @media (max-width: $breakpoint-phone) {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      text-align: center;
     }
   }
 
@@ -539,42 +444,28 @@
     img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: rotate(-1deg);
-      }
+      border-radius: 3px 8px 8px 3px;
+      box-shadow: var(--shadow-book);
     }
 
-    @media (max-width: $breakpoint-phone) {
+    @media (max-width: $breakpoint-tablet) {
       position: static;
-      max-width: 200px;
-      margin: 0 auto;
-    }
-  }
-
-  &__intro {
-    @media (max-width: $breakpoint-phone) {
-      text-align: center;
+      max-width: 240px;
     }
   }
 
   &__title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    margin: 0 0 0.5rem;
+    font-size: clamp(2.5rem, 1.5rem + 3.8vw, 4.5rem);
+    font-weight: 500;
+    margin: 0 0 0.75rem;
     color: var(--heading-color);
-    line-height: 1.2;
-
-    @media (max-width: $breakpoint-phone) {
-      font-size: 1.75rem;
-    }
+    line-height: 1.02;
+    letter-spacing: -0.035em;
   }
 
   &__subtitle {
-    font-size: 1.1rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
     color: var(--accent-color);
     font-style: italic;
     margin: 0 0 1.25rem;
@@ -595,18 +486,20 @@
     margin-bottom: 1.25rem;
 
     @media (max-width: $breakpoint-phone) {
-      justify-content: center;
+      flex-direction: column;
     }
   }
 
   &__btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.25rem;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.9rem;
+    min-height: 48px;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-pill);
+    font-weight: 500;
+    font-size: 0.9375rem;
     text-decoration: none;
     transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     border: none;
@@ -617,16 +510,16 @@
 
     &--primary {
       background: var(--accent-color);
-      color: white;
+      color: var(--accent-ink);
 
       &:hover {
-        color: white;
-        background: color-mix(in srgb, var(--accent-color) 85%, black);
+        color: var(--accent-ink);
+        background: var(--accent-overlay-color);
       }
     }
 
     &--secondary {
-      background: var(--search-input-bg);
+      background: var(--surface);
       color: var(--body-color);
       border: 1px solid var(--preview-divider-color);
 
@@ -657,28 +550,20 @@
 
   // Quote
   &__quote {
-    background: linear-gradient(135deg, var(--search-input-bg) 0%, var(--search-bg-selected-item) 100%);
-    border-left: 4px solid var(--accent-color);
-    border-radius: 0 12px 12px 0;
-    padding: 2rem 2.5rem;
-    margin: 0 0 3rem;
-    text-align: center;
+    border-left: 2px solid var(--color-brass);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    margin: 0 0 clamp(48px, 6vw, 80px);
+    max-width: 40rem;
 
     p {
-      font-size: 1.25rem;
+      font-family: var(--font-display);
+      font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
       font-style: italic;
       color: var(--heading-color);
       line-height: 1.6;
       margin: 0;
     }
 
-    @media (max-width: $breakpoint-phone) {
-      padding: 1.5rem;
-
-      p {
-        font-size: 1.1rem;
-      }
-    }
   }
 
   // Sections
@@ -686,10 +571,13 @@
     margin-bottom: 2.5rem;
 
     h2 {
-      font-size: 1.25rem;
-      font-weight: 700;
+      font-size: clamp(1.625rem, 1.3rem + 1vw, 1.875rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
       color: var(--heading-color);
       margin: 0 0 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--rule-strong);
       display: flex;
       align-items: center;
       gap: 0.6rem;
@@ -702,8 +590,8 @@
 
     &--acknowledgments {
       .book-about__acknowledgments {
-        background: var(--search-input-bg);
-        border-radius: 12px;
+        background: var(--surface);
+        border-radius: var(--radius-card);
         padding: 1.5rem;
 
         p {
@@ -739,9 +627,9 @@
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    background: var(--search-input-bg);
+    background: var(--surface);
     border: 1px solid var(--preview-divider-color);
-    border-radius: 12px;
+    border-radius: var(--radius-card);
     padding: 1.25rem;
     transition: border-color 0.2s ease;
 
@@ -761,7 +649,7 @@
     flex-shrink: 0;
 
     i {
-      color: white;
+      color: var(--accent-ink);
       font-size: 1.1rem;
     }
   }
@@ -788,8 +676,8 @@
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
-      border-radius: 12px;
-      background: var(--search-input-bg);
+      border-radius: var(--radius-card);
+      background: var(--surface);
 
       iframe {
         position: absolute;
@@ -805,15 +693,15 @@
   // CTA Section
   &__cta {
     text-align: center;
-    background: linear-gradient(135deg, var(--search-input-bg) 0%, var(--search-bg-selected-item) 100%);
+    background: var(--surface);
     border: 1px solid var(--preview-divider-color);
-    border-radius: 16px;
-    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 1.5rem;
     margin-top: 3rem;
 
     h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
+      font-size: 1.625rem;
+      font-weight: 500;
       color: var(--heading-color);
       margin: 0 0 1.25rem;
     }
@@ -821,6 +709,8 @@
     .book-about__btn {
       padding: 0.875rem 2rem;
       font-size: 1rem;
+
+      @media (max-width: $breakpoint-phone) { width: 100%; }
     }
   }
 }

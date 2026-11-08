@@ -1,64 +1,60 @@
-// ==========================================================================
-// Post FAQ
 // Optional question list at the end of a post (see partials/post-faq.html).
 // Built on <details> so it opens without JavaScript, and so a crawler reads
 // the answer whether or not the item is expanded.
-// ==========================================================================
 
 .post-faq {
-  margin: 3rem 0 0;
+  margin: 3.5rem 0 0;
 
-  &__title {
-    font-size: 1.35rem;
-    font-weight: 700;
+  .post-faq__title {
     margin: 0 0 1rem;
-    color: var(--heading-color);
   }
 
   &__item {
-    border: 1px solid var(--preview-divider-color);
-    border-radius: 10px;
-    margin-bottom: 0.6rem;
-    overflow: hidden;
-    transition: border-color 0.2s ease;
+    border-top: 1px solid var(--preview-divider-color);
 
-    &:hover {
-      border-color: var(--accent-color);
-    }
-
-    &[open] .post-faq__question::after {
-      transform: rotate(180deg);
-    }
+    &:last-child { border-bottom: 1px solid var(--preview-divider-color); }
   }
 
   &__question {
-    padding: 0.85rem 1.1rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--heading-color);
-    cursor: pointer;
-    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    min-height: 56px;
+    padding: 0.875rem 0;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--heading-color);
+    cursor: pointer;
+    list-style: none;
+    transition: color 0.2s ease;
 
-    &::-webkit-details-marker {
-      display: none;
-    }
+    &::-webkit-details-marker { display: none; }
 
     &::after {
-      content: "\25be";
-      font-size: 0.9rem;
-      color: var(--accent-color);
-      transition: transform 0.2s ease;
+      content: "";
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      margin-right: 4px;
+      border-right: 1.5px solid var(--color-subtitle);
+      border-bottom: 1.5px solid var(--color-subtitle);
+      transform: rotate(45deg) translateY(-2px);
+      transition: transform 0.2s var(--ease-out-expo);
     }
+
+    &:hover { color: var(--accent-color); }
+  }
+
+  &__item[open] .post-faq__question::after {
+    transform: rotate(225deg) translateY(-2px);
   }
 
   &__answer {
-    padding: 0 1.1rem 1rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    padding: 0 0 1.25rem;
+    font-size: 1rem;
+    line-height: 1.65;
     color: var(--body-color);
   }
 }

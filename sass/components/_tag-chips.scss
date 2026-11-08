@@ -1,91 +1,68 @@
-// Rounded tag links carrying an entry count. Shared by the all-tags cloud and the
-// per-section tag bar on the readings index. The three sizes weight a cloud by how
-// many entries each tag holds.
-//
-// No !important on the borders: .tag-chip:hover (0,2,0) outranks the global
-// a:hover prose underline (0,1,1), so the chip keeps a uniform ring.
+// Tag links carrying an entry count. Shared by the all-tags cloud and the
+// profile page. The three sizes weight a cloud by how many entries each tag holds.
 
 .tag-cloud {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.75rem;
+  padding-bottom: clamp(48px, 6vw, 96px);
 }
 
 .tag-chip {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.45rem 0.9rem;
-  background: var(--search-input-bg);
+  gap: 0.5rem;
+  min-height: 40px;
+  padding: 0.5rem 1.125rem;
   border: 1px solid var(--preview-divider-color);
-  border-radius: 2rem;
+  border-radius: var(--radius-pill);
+  background: transparent;
   text-decoration: none;
   color: var(--body-color);
   transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
   &:hover {
     border-color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
   }
 
   &--lg {
-    padding: 0.6rem 1.2rem;
-    border-color: var(--accent-color);
+    min-height: 48px;
+    padding: 0.5rem 1.375rem;
+    border-color: var(--rule-strong);
 
     .tag-chip__name {
-      font-size: 1.05rem;
-      font-weight: 600;
+      font-family: var(--font-display);
+      font-size: 1.375rem;
+      font-weight: 500;
       color: var(--heading-color);
-    }
-
-    .tag-chip__count {
-      background: var(--accent-color);
-      color: #fff;
     }
   }
 
   &--md {
-    padding: 0.5rem 1rem;
-
     .tag-chip__name {
-      font-size: 0.92rem;
-      font-weight: 500;
+      font-size: 1rem;
     }
   }
 
   &--sm {
     .tag-chip__name {
-      font-size: 0.82rem;
-      font-weight: 400;
+      font-size: 0.9375rem;
       color: var(--color-subtitle);
-    }
-
-    .tag-chip__count {
-      font-size: 0.7rem;
     }
   }
 
   &__name {
-    font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.9375rem;
+    font-weight: 400;
   }
 
   &__count {
-    background: var(--preview-divider-color);
-    color: var(--color-subtitle);
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.15rem 0.5rem;
-    border-radius: 1rem;
-    min-width: 1.5em;
-    text-align: center;
+    font-size: 0.8125rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-brass-text);
   }
-}
-
-// The dark theme's accent is a light blue, so white count text on it drops to
-// about 2.4:1. Flip to the page background for a readable badge.
-.theme-dark .tag-chip--lg .tag-chip__count {
-  color: var(--body-bg);
 }
 
 @media (max-width: $breakpoint-phone) {
@@ -94,14 +71,10 @@
   }
 
   .tag-chip {
-    padding: 0.4rem 0.8rem;
+    padding: 0.5rem 0.875rem;
 
-    &--lg {
-      padding: 0.5rem 1rem;
-    }
-
-    &__name {
-      font-size: 0.85rem;
+    &--lg .tag-chip__name {
+      font-size: 1.1875rem;
     }
   }
 }

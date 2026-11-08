@@ -8,17 +8,18 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 2.5rem 0 1rem;
+  margin: clamp(32px, 4vw, 56px) 0 clamp(48px, 6vw, 96px);
 
   &__link,
   &__page {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.4rem 0.75rem;
-    font-size: 0.9rem;
+    min-height: 44px;
+    padding: 0.5rem 1.125rem;
+    font-size: 0.9375rem;
     border: 1px solid var(--preview-divider-color);
-    border-radius: 8px;
+    border-radius: var(--radius-pill);
     color: var(--body-color);
     text-decoration: none;
     transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
@@ -41,14 +42,15 @@
   }
 
   &__page {
-    min-width: 2.25rem;
+    min-width: 44px;
     justify-content: center;
     font-variant-numeric: tabular-nums;
 
     &.is-current {
-      background: var(--accent-color);
-      border-color: var(--accent-color);
-      color: #fff;
+      background: var(--heading-color);
+      border-color: var(--heading-color);
+      color: var(--body-bg);
+      font-weight: 500;
       cursor: default;
     }
   }

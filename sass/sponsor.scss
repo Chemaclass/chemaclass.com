@@ -2,54 +2,20 @@
 @import "abstracts/variables";
 
 .sponsor-page {
-
-  &__back {
-    display: flex;
-    width: fit-content;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--color-subtitle);
-    text-decoration: none;
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: var(--accent-color);
-      border-bottom: none;
-    }
-
-  }
+  padding-bottom: clamp(56px, 8vw, 112px);
 }
 
-// Hero Section
 .sponsor-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
   text-align: center;
-  margin-bottom: 2rem;
+  padding: clamp(48px, 8vw, 104px) 0 clamp(40px, 5vw, 72px);
 
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin: 0 0 1rem;
-    color: var(--heading-color);
-    letter-spacing: -0.02em;
-  }
-
-  &__subtitle {
-    font-size: 1.05rem;
-    color: var(--color-subtitle);
-    font-weight: 400;
-    margin: 0;
-    line-height: 1.6;
-  }
+  .lead { margin: 0 auto; font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem); }
 }
 
-// Hover motion for the cards that carry an icon. The icon's shapes lift and
-// settle in sequence; the card itself stays put, so the page does not twitch
-// when the pointer crosses a grid. Same shape and timing as the pricing cards.
 @keyframes sponsor-icon-lift {
   0%   { transform: translateY(0); }
   35%  { transform: translateY(-2px); }
@@ -57,175 +23,209 @@
   100% { transform: translateY(0); }
 }
 
-// Section headings shared by the free and money sections
-.sponsor-section-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-subtitle);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  text-align: center;
-  margin: 0 0 1rem;
+.sponsor-ways {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-bottom: clamp(56px, 8vw, 112px);
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(1.625rem, 1.3rem + 1vw, 1.875rem);
+    line-height: 1.2;
+  }
 }
 
-// Free ways to help
+.sponsor-free,
+.sponsor-money {
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 3.5vw, 40px);
+  min-width: 0;
+}
+
 .sponsor-free {
-  margin-bottom: 3rem;
+  h2 { padding-bottom: 16px; }
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.75rem;
-
-    @media (max-width: 820px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (max-width: 420px) {
-      grid-template-columns: 1fr;
-    }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   &__item {
     display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-    padding: 1.1rem 1rem;
-    border-radius: 16px;
-    background: var(--search-input-bg);
-    border: 1px solid var(--preview-divider-color);
-    text-decoration: none;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px 24px;
+    min-height: 44px;
+    padding: 16px 0;
+    border-top: 1px solid var(--preview-divider-color);
     color: inherit;
-    transition: border-color 0.25s ease, transform 0.25s ease;
-
-    svg {
-      color: var(--accent-color);
-      margin-bottom: 0.15rem;
-      transition: color 0.16s ease-out;
-    }
+    transition: color 0.2s ease;
 
     &:hover {
-      border-color: var(--accent-color);
-      border-bottom: 1px solid var(--accent-color);
+      border-bottom: 0;
+      .sponsor-free__label { color: var(--accent-color); }
     }
 
-    // Every shape in the icon, not just <path>: three of these four icons are
-    // built from circles too.
-    &:hover svg > * {
-      animation: sponsor-icon-lift 0.46s ease-out both;
+    @media (max-width: $breakpoint-phone) {
+      flex-direction: column;
+      gap: 4px;
     }
-
-    &:hover svg > :nth-child(2) { animation-delay: 70ms; }
-    &:hover svg > :nth-child(3) { animation-delay: 140ms; }
-    &:hover svg > :nth-child(4) { animation-delay: 210ms; }
   }
 
+  li:last-child &__item { padding-bottom: 0; }
+
   &__label {
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-family: var(--font-display);
+    font-size: 1.3125rem;
+    font-weight: 500;
+    line-height: 1.25;
     color: var(--heading-color);
-    line-height: 1.3;
+    transition: color 0.2s ease;
   }
 
   &__desc {
-    font-size: 0.82rem;
+    font-size: 0.9375rem;
+    line-height: 1.3;
     color: var(--color-subtitle);
-    line-height: 1.45;
+    text-align: right;
+
+    @media (max-width: $breakpoint-phone) { text-align: left; }
   }
 }
 
-// Impact Stats
-.sponsor-stats-block {
-  margin-bottom: 3.5rem;
+.sponsor-money {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__note {
+    margin: 0;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
 }
 
-.sponsor-stats__lead {
+.sponsor-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding-top: 16px;
+
+  > :only-child { grid-column: 1 / -1; }
+
+  @media (max-width: $breakpoint-small-phone) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.sponsor-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 56px;
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
   text-align: center;
-  font-size: 0.9rem;
-  color: var(--color-subtitle);
-  margin: 0 0 0.9rem;
+  transition: background 0.2s ease, transform 0.2s var(--ease-out-expo);
+
+  &:hover { border-bottom: 0; transform: translateY(-1px); }
+  &:focus-visible { outline: 3px solid #ffffff; outline-offset: 3px; }
+
+  &__action {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  &__via {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  // Fixed colours: the band stays navy in both themes.
+  &--paypal {
+    background: #ffffff;
+    color: #1e4470;
+    &:hover { background: #eef1f3; color: #1e4470; }
+  }
+
+  &--lightning {
+    background: var(--color-brass-on-accent);
+    color: #11161c;
+    &:hover { background: #ecd09a; color: #11161c; }
+  }
 }
 
 .sponsor-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px 40px;
+  margin-top: 12px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 
-  @media (max-width: $breakpoint-phone) {
-    grid-template-columns: repeat(2, 1fr);
+  &__lead {
+    flex-basis: 100%;
+    margin: 0 0 -4px;
+    font-size: 0.875rem;
   }
 }
 
 .sponsor-stat {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 1.25rem 0.75rem;
-  border-radius: 16px;
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  text-decoration: none;
-  color: inherit;
-  transition: border-color 0.25s ease;
+  gap: 2px;
+  color: #ffffff;
 
-  &:hover {
-    border-color: var(--accent-color);
-    border-bottom: 1px solid var(--accent-color);
-  }
+  &:hover { border-bottom: 0; color: #ffffff; .sponsor-stat__label { color: #ffffff; } }
 
   &__number {
-    font-size: 1.75rem;
-    font-weight: 800;
-    color: var(--accent-color);
-    line-height: 1;
-    margin-bottom: 0.35rem;
-    letter-spacing: -0.02em;
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 1.2;
   }
 
   &__label {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--color-subtitle);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+    font-size: 0.875rem;
+    color: var(--color-on-accent-muted);
+    transition: color 0.2s ease;
   }
 }
 
-// Open Source Projects Section
 .sponsor-projects {
-  margin-bottom: 3.5rem;
-
-  h2 {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--heading-color);
-  }
-
   &__grid {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
   }
 }
 
 .sponsor-project {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: 2rem;
+  gap: 2rem 48px;
   align-items: center;
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 16px;
-  padding: 1.75rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: var(--shadow-sm);
+  padding: 32px 0;
+  border-bottom: 1px solid var(--preview-divider-color);
 
-  @media (max-width: 820px) {
-    grid-template-columns: 1fr;
+  &:first-child { padding-top: 0; }
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.25rem;
-    padding: 1.25rem;
+    padding: 28px 0;
   }
 
   &__info {
@@ -234,17 +234,8 @@
     min-width: 0;
   }
 
-  &--bashunit:hover {
-    border-color: #10b981;
-  }
 
-  &--phel:hover {
-    border-color: #8b5cf6;
-  }
 
-  &--agnostic-ai:hover {
-    border-color: #f0a35e;
-  }
 
   &__header {
     display: flex;
@@ -284,8 +275,8 @@
   }
 
   &__name {
-    font-size: 1.35rem;
-    font-weight: 700;
+    font-size: 1.625rem;
+    font-weight: 500;
     color: var(--heading-color);
     margin: 0;
   }
@@ -298,20 +289,20 @@
     color: var(--color-subtitle);
 
     i {
-      color: #f59e0b;
+      color: var(--color-brass);
       font-size: 0.7rem;
     }
   }
 
   &__tagline {
-    font-size: 0.85rem;
+    font-size: 0.9375rem;
     font-weight: 500;
     color: var(--accent-color);
     margin: 0.2rem 0 0;
   }
 
   &__desc {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--color-subtitle);
     line-height: 1.6;
     margin: 0 0 1rem;
@@ -349,8 +340,8 @@
 
   &__snippet {
     background: #1e1e2e;
-    border-radius: 10px;
-    padding: 1.1rem 1.25rem;
+    border-radius: var(--radius-card);
+    padding: 1.25rem 1.5rem;
     overflow-x: auto;
     min-width: 0;
 
@@ -384,238 +375,42 @@
   }
 }
 
-// Donation Options
-.sponsor-money {
-  margin-bottom: 3rem;
-
-  &__note {
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--color-subtitle);
-    margin: 1rem 0 0.35rem;
-  }
-
-  &__use {
-    text-align: center;
-    font-size: 0.85rem;
-    color: var(--color-subtitle);
-    opacity: 0.85;
-    margin: 0;
-  }
-}
-
-.sponsor-options {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-
-  > :only-child {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: 100%;
-    max-width: 32rem;
-    box-sizing: border-box;
-  }
-
-  @media (max-width: $breakpoint-phone) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.sponsor-options-empty {
-  max-width: 32rem;
-  margin: 0 auto 3rem;
-  text-align: center;
-  color: var(--color-subtitle);
-  line-height: 1.6;
-}
-
-.sponsor-card {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 20px;
-  padding: 2rem 2rem;
-  text-decoration: none;
-  color: inherit;
-  transition: border-color 0.3s ease, background 0.3s ease;
-  position: relative;
-  overflow: hidden;
-
-  @media (max-width: $breakpoint-phone) {
-    gap: 0.75rem;
-    padding: 1.25rem;
-  }
-
-  &__icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.9rem;
-    flex-shrink: 0;
-    transition: transform 0.25s ease;
-  }
-
-  &__body {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 0;
-  }
-
-  &__label {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--heading-color);
-    line-height: 1.2;
-  }
-
-  &__action {
-    font-size: 0.9rem;
-    color: var(--color-subtitle);
-    margin-top: 0.25rem;
-  }
-
-  &__arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    flex-shrink: 0;
-    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
-  }
-
-  &:hover &__arrow {
-    transform: translateX(3px);
-  }
-
-  &:hover &__icon {
-    transform: scale(1.05);
-  }
-
-  &--paypal {
-    .sponsor-card__icon {
-      background: rgba(0, 112, 186, 0.12);
-      color: #0070ba;
-    }
-
-    .sponsor-card__arrow {
-      background: rgba(0, 112, 186, 0.12);
-      color: #0070ba;
-    }
-
-    &:hover {
-      border-color: #0070ba;
-      background: rgba(0, 112, 186, 0.04);
-
-      .sponsor-card__arrow {
-        background: #0070ba;
-        color: white;
-      }
-    }
-  }
-
-  &--lightning {
-    .sponsor-card__icon {
-      background: rgba(247, 147, 26, 0.12);
-      color: #f7931a;
-    }
-
-    .sponsor-card__arrow {
-      background: rgba(247, 147, 26, 0.12);
-      color: #f7931a;
-    }
-
-    &:hover {
-      border-color: #f7931a;
-      background: rgba(247, 147, 26, 0.05);
-
-      .sponsor-card__arrow {
-        background: #f7931a;
-        color: white;
-      }
-    }
-  }
-}
-
-// Thank You Section
+// Thank you
 .sponsor-thanks {
+  max-width: var(--reading-max);
+  margin: clamp(56px, 8vw, 112px) auto 0;
   text-align: center;
-  padding: 2.5rem 2rem;
-  background: var(--search-input-bg);
-  border: 1px solid var(--preview-divider-color);
-  border-radius: 16px;
 
   &__message {
-    font-size: 1.05rem;
+    margin: 0 0 1rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem);
+    line-height: 1.35;
     color: var(--heading-color);
-    line-height: 1.7;
-    margin: 0 0 1.5rem;
-    font-weight: 500;
   }
 
   &__cta {
-    font-size: 0.9rem;
-    color: var(--color-subtitle);
     margin: 0;
+    color: var(--color-subtitle);
   }
 
   &__social {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.6rem;
-    margin-top: 1.25rem;
-  }
+    gap: 10px;
+    margin-top: 24px;
 
-  &__social-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    padding: 0.45rem 0.95rem;
-    border-radius: 999px;
-    border: 1px solid var(--preview-divider-color);
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--color-subtitle);
-    text-decoration: none;
-    transition: border-color 0.25s ease, color 0.25s ease;
-
-    i {
-      font-size: 0.95rem;
-      display: inline-block;
-    }
-
-    &:hover {
-      border-color: var(--accent-color);
-      border-bottom: 1px solid var(--accent-color);
-      color: var(--accent-color);
-    }
-
-    &:hover i {
-      animation: sponsor-icon-lift 0.46s ease-out both;
-    }
-  }
-}
-
-// Responsive
-@media (max-width: 500px) {
-  .sponsor-hero h1 {
-    font-size: 1.75rem;
+    .pill { min-height: 44px; }
+    .pill:hover i { animation: sponsor-icon-lift 0.46s ease-out both; }
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sponsor-free__item svg > *,
   .sponsor-project__icon,
-  .sponsor-thanks__social-link i {
+  .sponsor-thanks__social .pill i,
+  .sponsor-option {
     animation: none !important;
+    transition: none !important;
   }
 }
