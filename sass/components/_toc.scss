@@ -260,3 +260,15 @@
     column-gap: 48px;
   }
 }
+
+// No TOC, or the reader hid it: the text sits centered under the cover.
+@media (min-width: 1025px) {
+  .blog-post-layout[data-toc-hidden="true"],
+  .blog-post-layout:not(:has(#toc-container)) {
+    grid-template-columns: minmax(0, var(--reading-max));
+    justify-content: center;
+
+    #toc-container { display: none; }
+    .blog-post-main { grid-column: 1; }
+  }
+}
