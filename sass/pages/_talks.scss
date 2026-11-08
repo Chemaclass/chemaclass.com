@@ -2,48 +2,6 @@
 // Talks index
 // ==========================================================================
 
-.talks-invite {
-  flex-shrink: 0;
-  width: min(440px, 100%);
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  padding: 1.75rem 2rem;
-  border-radius: var(--radius-card);
-
-  &__eyebrow {
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--color-brass-on-accent);
-  }
-
-  &__text {
-    margin: 0;
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.25;
-    color: #ffffff;
-  }
-
-  &__link {
-    align-self: flex-start;
-    margin-top: 0.25rem;
-    padding: 0.5rem 0;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    color: #ffffff;
-    text-decoration: underline;
-    text-decoration-color: var(--color-brass-on-accent);
-    text-underline-offset: 5px;
-    border-bottom: none;
-
-    &:hover { color: #ffffff; border-bottom: none; }
-  }
-}
-
 .talks-featured {
   margin-bottom: clamp(56px, 7vw, 96px);
 }

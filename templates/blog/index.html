@@ -14,9 +14,8 @@
 {% endblock posthead %}
 
 {% block content %}
-  {% set topics_url = "/topics/" %}
   {% set series_url = "/series/" %}
-  {% if lang == "es" %}{% set topics_url = "/es/topics/" %}{% set series_url = "/es/series/" %}{% endif %}
+  {% if lang == "es" %}{% set series_url = "/es/series/" %}{% endif %}
   {% set oldest_post = section.pages | last %}
   {% set pinned_posts = [p for p in section.pages if p.extra.pin] %}
 
@@ -39,13 +38,6 @@
         {{ trans(key="blog_search", lang=lang) | replace(from="{n}", to=(section.pages | length) ~ "") }}
       </button>
     </header>
-
-    <nav class="blog-filters" aria-label="{{ trans(key='blog_browse', lang=lang) }}">
-      <span class="pill pill--active" aria-current="page">{{ trans(key="search_filter_all", lang=lang) }}</span>
-      {% for topic in config.extra.topics %}
-        <a class="pill" href="{{ topics_url }}#{{ topic.title | slugify }}">{% if lang == "es" %}{{ topic.title_es }}{% else %}{{ topic.title }}{% endif %}</a>
-      {% endfor %}
-    </nav>
 
     {% if config.extra.start_here_posts %}
     <section class="start-here">
@@ -71,7 +63,7 @@
       <div class="blog-browse__row">
         <span class="eyebrow">{{ trans(key="browse_by_series", lang=lang) }}</span>
         <div class="blog-browse__links">
-          {% for key in ["ai", "craftsmanship", "leadership", "agile", "bitcoin"] %}
+          {% for key in ["ai", "craftsmanship", "leadership", "agile"] %}
             {% set conf = config.extra.series[key] %}
             <a class="pill" href="{{ series_url }}{{ key }}/">{% if lang == "es" %}{{ conf.title_es }}{% else %}{{ conf.title }}{% endif %}</a>
           {% endfor %}
@@ -118,6 +110,5 @@
         </section>
       {% endfor %}
     </div>
-    {% include "partials/hire-cta.html" %}
   </div>
 {% endblock content %}

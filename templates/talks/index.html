@@ -23,11 +23,6 @@
         <h1 class="display-title">{{ trans(key="talks_heading", lang=lang) | safe }}</h1>
         <p class="lead">{{ trans(key="talks_intro", lang=lang) }}</p>
       </div>
-      <aside class="talks-invite band">
-        <span class="talks-invite__eyebrow">{{ trans(key="talks_invite_eyebrow", lang=lang) }}</span>
-        <p class="talks-invite__text">{{ trans(key="talks_invite_text", lang=lang) }}</p>
-        <a class="talks-invite__link" href="{% if lang == 'es' %}/es/services/team-workshops/{% else %}/services/team-workshops/{% endif %}">{{ trans(key="talks_invite_link", lang=lang) }} &rarr;</a>
-      </aside>
     </header>
 
     {% if section.pages | length > 0 %}
@@ -68,7 +63,6 @@
         </div>
       {% endfor %}
     </section>
-    {% include "partials/hire-cta.html" %}
   </div>
 
 {% endblock content %}

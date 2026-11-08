@@ -156,6 +156,8 @@ a {
   // keeps a uniform border instead of this underline painting a mismatched line
   // across its bottom edge. Prose links have no such :hover, so they still get
   // the treatment. The button/tag list stays as a belt-and-suspenders opt-out.
+  // Links inside headings skip it: the border would grow the title by 1px.
+  // They get a text underline below instead, which takes no space.
   //
   // Layering: this is the one place a base/ partial names classes owned by later
   // layers. .header-left is layouts/_header.scss, .view-all is pages/_homepage,
@@ -164,10 +166,16 @@ a {
   // style dependency, so nothing here needs those partials to be loaded. But
   // renaming any of the five silently re-enables the prose underline on that
   // element, so grep this selector on any such rename.
-  &:hover:where(:not([class*="btn"]):not([class*="button"]):not([class*="cta"]):not(.view-all):not(.header-left):not(.blog-post__tag):not(.talk-single__tag):not(.talk-single__project-link)) {
+  &:hover:where(:not([class*="btn"]):not([class*="button"]):not([class*="cta"]):not(.view-all):not(.header-left):not(.blog-post__tag):not(.talk-single__tag):not(.talk-single__project-link):not(:is(h1, h2, h3, h4, h5, h6) a)) {
     color: var(--accent-overlay-color);
     border-bottom: 1px solid var(--accent-color-light);
   }
+}
+
+:where(h1, h2, h3, h4, h5, h6) a:where(:not(.heading-anchor)):hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
 }
 
 hr {

@@ -74,6 +74,7 @@
     <link rel="preload" href="/fonts/rubik-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/rubik-500.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/newsreader-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/newsreader-italic.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Inline critical font-face to prevent FOUT -->
     <style>
@@ -97,6 +98,13 @@
         font-weight: 200 800;
         font-display: swap;
         src: url("/fonts/newsreader-normal.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Newsreader";
+        font-style: italic;
+        font-weight: 200 800;
+        font-display: swap;
+        src: url("/fonts/newsreader-italic.woff2") format("woff2");
       }
       /* Reserve navbar height to prevent layout shift */
       .site-header { min-height: 72px; }
@@ -189,7 +197,7 @@
       "alternateName": "Chemaclass",
       "url": "{{ config.base_url | safe }}",
       "image": "{{ get_url(path=config.extra.icon) | safe }}",
-      "jobTitle": "Product Engineer",
+      "jobTitle": "Engineering Manager",
       "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" },
       "description": {{ config.description | json_encode | safe }},
       "worksFor": {
@@ -610,7 +618,7 @@
           {% set cp = current_path | default(value="/") %}
           {% set lp = "" %}{% if lang == "es" %}{% set lp = "/es" %}{% endif %}
           <div class="nav-links">
-            {% for item in [["blog", "nav_blog"], ["readings", "nav_readings"], ["talks", "nav_talks"], ["services", "nav_services"], ["cv", "nav_cv"]] %}
+            {% for item in [["blog", "nav_blog"], ["readings", "nav_readings"], ["talks", "nav_talks"]] %}
               {% set href = lp ~ "/" ~ item[0] ~ "/" %}
               <a href="{{ href }}"{% if cp is starting_with(pat=href) %} class="nav-active" aria-current="page"{% endif %}>{{ trans(key=item[1], lang=lang) }}</a>
             {% endfor %}
@@ -789,7 +797,7 @@
             <h3 class="page-footer__col-title">{{ trans(key="footer_col_about", lang=lang) }}</h3>
             <ul class="page-footer__list">
               <li><a href="{{ lp }}/cv/">{{ trans(key="nav_cv", lang=lang) }}</a></li>
-              <li><a href="{{ lp }}/services/web-development/">{{ trans(key="svc_web_dev", lang=lang) }}</a></li>
+              <li><a href="{{ lp }}/services/">{{ trans(key="nav_services", lang=lang) }}</a></li>
               <li><a href="{{ lp }}/sponsor/">{{ trans(key="nav_sponsor_cta", lang=lang) }}</a></li>
             </ul>
           </div>
