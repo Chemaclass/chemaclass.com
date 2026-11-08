@@ -11,59 +11,38 @@
 
 {% block content %}
   <div class="books-index">
-    <div class="books-header collection-intro">
-      <h1>{{ trans(key="books_title", lang=lang) }}</h1>
-      <p class="books-intro">{{ trans(key="books_intro", lang=lang) }}</p>
-    </div>
+    <h1 class="visually-hidden">{{ trans(key="books_title", lang=lang) }}</h1>
 
-    <div class="books-grid">
-      {% for subsection_path in section.subsections %}
-        {% set book = get_section(path=subsection_path) %}
-        <article class="book-card">
-          <div class="book-card__cover">
-            <a href="{{ book.permalink }}">
-              <img src="{{ book.extra.cover }}" alt="{{ book.title | split(pat=' | ') | first }}" />
-            </a>
-          </div>
-          <div class="book-card__details">
-            <span class="book-card__year">
-              <i class="fa-solid fa-calendar"></i>
-              {{ book.extra.year }}
-            </span>
-            <h2 class="book-card__title">
-              <a href="{{ book.permalink }}">{{ book.title | split(pat=" | ") | first }}</a>
-            </h2>
-            <p class="book-card__description">{{ book.extra.description }}</p>
+    {% for subsection_path in section.subsections %}
+      {% set book = get_section(path=subsection_path) %}
+      {%- set book_title = book.title | split(pat=" | ") | first -%}
+      {%- set last_word = book_title | split(pat=" ") | last -%}
+      <article class="book-feature">
+        <a class="book-feature__cover" href="{{ book.permalink }}" tabindex="-1" aria-hidden="true">
+          <img class="book-cover" src="{{ book.extra.cover }}" alt="" width="832" height="1114" />
+        </a>
+        <div class="book-feature__body">
+          <span class="eyebrow">{{ trans(key="books_title", lang=lang) }} &middot; {{ book.extra.year | replace(from=" - ", to=" " ~ trans(key="books_years_to", lang=lang) ~ " ") }}</span>
+          <h2 class="display-title book-feature__title"><a href="{{ book.permalink }}">{{ book_title | replace(from=last_word, to="") }}<em>{{ last_word }}</em></a></h2>
+          <p class="lead">{{ book.extra.description }}</p>
 
-            <div class="book-card__meta">
-              <span>
-                <i class="fa-solid fa-feather"></i>
-                {{ book.pages | length }} {{ trans(key="books_chapters", lang=lang) }}
-              </span>
-            </div>
+          <p class="book-feature__meta">{{ book.pages | length }} {{ trans(key="books_chapters", lang=lang) }}</p>
 
-            {% if book.extra.quote %}
-            <blockquote class="book-card__quote">
-              <p>{{ book.extra.quote }}</p>
-            </blockquote>
+          {% if book.extra.quote %}
+          <blockquote class="book-feature__quote">
+            <p>{{ book.extra.quote }}</p>
+          </blockquote>
+          {% endif %}
+
+          <div class="book-feature__actions">
+            <a href="{{ book.permalink }}" class="btn btn--primary">{{ trans(key="books_read_online", lang=lang) }} &rarr;</a>
+            {% if book.extra.about_slug %}
+            <a href="{{ book.permalink }}{{ book.extra.about_slug }}/" class="btn">{{ trans(key="books_about", lang=lang) }}</a>
             {% endif %}
-
-            <div class="book-card__actions">
-              <a href="{{ book.permalink }}" class="book-card__btn book-card__btn--primary">
-                <i class="fa-solid fa-book-open"></i>
-                {{ trans(key="books_read_online", lang=lang) }}
-              </a>
-              {% if book.extra.about_slug %}
-              <a href="{{ book.permalink }}{{ book.extra.about_slug }}/" class="book-card__btn book-card__btn--secondary">
-                <i class="fa-solid fa-circle-info"></i>
-                {{ trans(key="books_about", lang=lang) }}
-              </a>
-              {% endif %}
-            </div>
           </div>
-        </article>
-      {% endfor %}
-    </div>
+        </div>
+      </article>
+    {% endfor %}
   </div>
 
 {% endblock content %}

@@ -2,9 +2,13 @@
 
 
 {% block styles %}
-{{ <page_styles css="page.css" /> }}
+{{ <page_styles css="post.css" /> }}
 {% endblock styles %}
 
 {% block content %}
-  {{ page.content | safe }}
+  <article class="blog-post plain-page">
+    <div class="plain-page__content">
+      {{ page.content | safe }}
+    </div>
+  </article>
 {% endblock content %}

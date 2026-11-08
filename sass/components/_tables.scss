@@ -1,21 +1,25 @@
 table {
   border-collapse: collapse;
-  margin: 25px auto;
+  margin: 1.5rem auto;
   font-size: 0.9em;
-  font-family: sans-serif;
-  min-width: 400px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  line-height: 1.5;
 }
 
 thead tr {
-  background-color: var(--accent-color);
-  color: var(--accent-overlay-color);
+  background-color: var(--surface);
   text-align: left;
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+table th {
+  font-weight: 500;
+  color: var(--heading-color);
 }
 
 table th,
 table td {
-  padding: 10px 12px;
+  padding: 0.625rem 0.875rem;
+  vertical-align: top;
 }
 
 table tbody tr {
@@ -24,8 +28,4 @@ table tbody tr {
 
 table tbody tr:nth-of-type(even) {
   background-color: var(--table-bg-even);
-}
-
-table tbody tr:last-of-type {
-  border-bottom: 2px solid var(--accent-color);
 }

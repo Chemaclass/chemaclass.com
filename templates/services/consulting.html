@@ -108,9 +108,11 @@
     <a class="service-notice__link" href="{% if lang == 'es' %}/es/services/web-development/{% else %}/services/web-development/{% endif %}">{{ trans(key="svc_see_web_dev", lang=lang) }}</a>
   </div>
 
-  <header class="service-hero">
-    <h1>{{ t.hero.title[lang] | safe }}</h1>
-    <p class="service-hero__subtitle">{{ t.hero.subtitle[lang] | safe }}</p>
+  <header class="service-hero page-hero">
+    <div class="page-hero__text">
+      <h1 class="display-title">{{ t.hero.title[lang] | safe }}</h1>
+      <p class="lead service-hero__subtitle">{{ t.hero.subtitle[lang] | safe }}</p>
+    </div>
   </header>
 
   <section class="service-intro" id="intro">
@@ -125,21 +127,21 @@
     <h2>{{ t.process.title[lang] | safe }}</h2>
     <div class="process-steps process-steps--3col">
       <div class="process-step">
-        <span class="process-step__number">1</span>
+        <span class="process-step__number ordinal" aria-hidden="true">01</span>
         <div class="process-step__content">
           <h3>{{ t.process.contact_title[lang] | safe }}</h3>
           <p>{{ t.process.contact[lang] | safe }}</p>
         </div>
       </div>
       <div class="process-step">
-        <span class="process-step__number">2</span>
+        <span class="process-step__number ordinal" aria-hidden="true">02</span>
         <div class="process-step__content">
           <h3>{{ t.process.align_title[lang] | safe }}</h3>
           <p>{{ t.process.align[lang] | safe }}</p>
         </div>
       </div>
       <div class="process-step">
-        <span class="process-step__number">3</span>
+        <span class="process-step__number ordinal" aria-hidden="true">03</span>
         <div class="process-step__content">
           <h3>{{ t.process.session_title[lang] | safe }}</h3>
           <p>{{ t.process.session[lang] | safe }}</p>
@@ -241,7 +243,6 @@
     </div>
   </section>
 
-  <!-- Pricing (hidden by default, shown with ?prices=1) -->
   <section class="service-process" id="pricing" style="display: none;">
     <div class="budget-section">
       <div class="budget-header">

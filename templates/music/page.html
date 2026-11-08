@@ -10,7 +10,7 @@
 {% endblock styles %}
 
 {% block content %}
-  <div class="music-index">
+  <div class="music-post-wrap">
     <div class="music-post">
       <a href="{{ <lang_path path="/music/" lang={lang} /> }}" class="music-post__back">
         {{ <back_arrow /> }}
@@ -20,7 +20,7 @@
       <h1 class="music-post__title">{{ page.title }}</h1>
 
       {% if page.date %}
-        <span class="music-card__date" style="margin-bottom: 1.5rem; display: inline-block;">
+        <span class="music-post__date">
           {{ <format_date date={page.date} lang={lang} /> }}
         </span>
       {% endif %}

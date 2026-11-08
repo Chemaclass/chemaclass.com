@@ -32,97 +32,71 @@
 {% endblock posthead %}
 
 {% block content %}
-  <div class="blog-post-layout" data-toc-hidden="false">
-    {% include "partials/toc.html" %}
+  <article class="blog-post blog-post--reading">
+    <div class="blog-post__top-row">
+      <a href="{{ <lang_path path="/readings/" lang={lang} /> }}" class="blog-post__back">
+        {{ <back_arrow /> }}
+        {{ trans(key="all_readings", lang=lang) }}
+      </a>
+      {{ <favorite_toggle lang={lang} /> }}
+      {{ <toc_toggle lang={lang} /> }}
+    </div>
 
-    <div class="blog-post-main">
-      <article class="blog-post">
-        <div class="blog-post__top-row">
-          <a href="{{ <lang_path path="/readings/" lang={lang} /> }}" class="blog-post__back">
-            {{ <back_arrow /> }}
-            {{ trans(key="all_readings", lang=lang) }}
-          </a>
-          {{ <favorite_toggle lang={lang} /> }}
-          {{ <toc_toggle lang={lang} /> }}
-        </div>
-
-        <!-- Hero thumbnail -->
-        {% if page.extra.static_thumbnail %}
-        <div class="blog-post__hero blog-post__hero--reading">
-          {% if page.extra.static_thumbnail is matching(pat="^http[s]?://") %}
-            <img src="{{ page.extra.static_thumbnail | safe }}" alt="{{ page.title }}" width="280" height="420" fetchpriority="high" />
-          {% else %}
-            {% set hero_path = page.extra.static_thumbnail | trim_start(pat="/") %}
-            {% set hero_sm = resize_image(path=hero_path, width=280, height=420, op="fill", quality=80, format="webp") %}
-            {% set hero_fb = resize_image(path=hero_path, width=280, height=420, op="fill", quality=85) %}
-            <picture>
-              <source type="image/webp" srcset="{{ hero_sm.url }}" />
-              <img src="{{ hero_fb.url }}" alt="{{ page.title }}" width="{{ hero_fb.width }}" height="{{ hero_fb.height }}" fetchpriority="high" />
-            </picture>
-          {% endif %}
-        </div>
-        {% elif page.extra.thumbnail %}
-        <div class="blog-post__hero blog-post__hero--reading">
-          <img src="{{ get_url(path=page.path ~ page.extra.thumbnail) }}" alt="{{ page.title }}" width="280" height="420" fetchpriority="high" />
-        </div>
+    <header class="blog-post__header">
+      <p class="blog-post__meta eyebrow">
+        {% if page.extra.current_read %}
+          <span class="blog-post__kicker blog-post__current-read">{{ trans(key="currently_reading", lang=lang) }}</span>
+        {% elif page.taxonomies.tags %}
+          {% set first_tag = page.taxonomies.tags | first %}
+          <a class="blog-post__kicker" href="{{ get_taxonomy_url(kind='tags', name=first_tag, lang=lang) }}">{{ first_tag }}</a>
         {% endif %}
-
-      <!-- Title -->
-      <h1 class="blog-post__title">
-        {{ page.title }}
-        {% if page.extra.author %}
-          <small class="blog-post__author">{{ trans(key="written_by", lang=lang) }} {{ page.extra.author }}</small>
+        {% if page.date %}
+          <time class="blog-post__date" datetime="{{ page.date | date(format='%Y-%m-%d') }}">{{ <format_date date={page.date} lang={lang} /> }}</time>
         {% endif %}
-      </h1>
-
-      <!-- Subtitle + Metadata + Tags -->
-      <div class="blog-post__meta-row">
-        {% if page.extra.subtitle %}
-          <p class="blog-post__subtitle">{{ page.extra.subtitle }}</p>
+        {% include "partials/updated-date.html" %}
+        {% if page.reading_time %}
+          <span class="blog-post__reading-time">{{ page.reading_time }} {{ trans(key="minutes_read", lang=lang) }}</span>
         {% endif %}
-        <div class="blog-post__meta">
-          {% if page.date %}
-          <span class="blog-post__date">
-            {{ <calendar_icon /> }}
-            {{ <format_date date={page.date} lang={lang} /> }}
-          </span>
-          {% endif %}
-          {% include "partials/updated-date.html" %}
-          {% if page.reading_time %}
-          <span class="blog-post__reading-time">
-            {{ <clock_icon /> }}
-            {{ page.reading_time }} {{ trans(key="minutes_read", lang=lang) }}
-          </span>
-          {% endif %}
-          {% if page.extra.pages %}
-          <span class="blog-post__word-count">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-            </svg>
-            {{ page.extra.pages }} {{ trans(key="pages", lang=lang) }}
-          </span>
-          {% endif %}
-          {% if page.extra.current_read %}
-          <span class="blog-post__current-read">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-            </svg>
-            {{ trans(key="currently_reading", lang=lang) }}
-          </span>
-          {% endif %}
-          {% if page.taxonomies.tags %}
-          <span class="blog-post__tags">
-            {% for tag in page.taxonomies.tags %}
-              <a href="{{ get_taxonomy_url(kind='tags', name=tag, lang=lang) }}" class="blog-post__tag">{{ tag }}</a>
-            {% endfor %}
-          </span>
-          {% endif %}
-        </div>
-      </div>
+        {% if page.extra.pages %}
+          <span class="blog-post__word-count">{{ page.extra.pages }} {{ trans(key="pages", lang=lang) }}</span>
+        {% endif %}
+      </p>
 
-        <!-- Content -->
+      <h1 class="blog-post__title">{{ page.title }}</h1>
+
+      {% if page.extra.author %}
+        <p class="blog-post__author">{{ trans(key="written_by", lang=lang) }} {{ page.extra.author }}</p>
+      {% endif %}
+
+      {% if page.extra.subtitle %}
+        <p class="blog-post__subtitle">{{ page.extra.subtitle }}</p>
+      {% endif %}
+    </header>
+
+    {% if page.extra.static_thumbnail %}
+    <div class="blog-post__hero blog-post__hero--reading">
+      {% if page.extra.static_thumbnail is matching(pat="^http[s]?://") %}
+        <img class="book-cover" src="{{ page.extra.static_thumbnail | safe }}" alt="{{ page.title }}" width="280" height="420" fetchpriority="high" />
+      {% else %}
+        {% set hero_path = page.extra.static_thumbnail | trim_start(pat="/") %}
+        {% set hero_sm = resize_image(path=hero_path, width=280, height=420, op="fill", quality=80, format="webp") %}
+        {% set hero_fb = resize_image(path=hero_path, width=280, height=420, op="fill", quality=85) %}
+        <picture>
+          <source type="image/webp" srcset="{{ hero_sm.url }}" />
+          <img class="book-cover" src="{{ hero_fb.url }}" alt="{{ page.title }}" width="{{ hero_fb.width }}" height="{{ hero_fb.height }}" fetchpriority="high" />
+        </picture>
+      {% endif %}
+    </div>
+    {% elif page.extra.thumbnail %}
+    <div class="blog-post__hero blog-post__hero--reading">
+      <img class="book-cover" src="{{ get_url(path=page.path ~ page.extra.thumbnail) }}" alt="{{ page.title }}" width="280" height="420" fetchpriority="high" />
+    </div>
+    {% endif %}
+
+    <div class="blog-post-layout" data-toc-hidden="false">
+      {% include "partials/toc.html" %}
+
+      <div class="blog-post-main">
         <div class="blog-post__content reading-post"
              {{ <highlight_labels lang={lang} /> }}>
           {% include "partials/tldr.html" %}
@@ -131,17 +105,23 @@
           {% include "partials/post-faq.html" %}
           {% include "partials/related-posts.html" %}
         </div>
-      </article>
 
-      <div class="blog-post-bottom">
-        {% include "partials/hire-cta.html" %}
-        {% include "partials/edit-link.html" %}
-        {% include "partials/post-navigation.html" %}
+        {% if page.taxonomies.tags %}
+        <ul class="blog-post__tags" role="list">
+          {% for tag in page.taxonomies.tags %}
+            <li><a href="{{ get_taxonomy_url(kind='tags', name=tag, lang=lang) }}" class="blog-post__tag pill">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        <div class="blog-post-bottom">
+          {% include "partials/hire-cta.html" %}
+          {% include "partials/edit-link.html" %}
+          {% include "partials/post-navigation.html" %}
+        </div>
       </div>
     </div>
-  </div>
-
-
+  </article>
 {% endblock content %}
 
 {% block js %}

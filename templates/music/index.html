@@ -14,16 +14,16 @@
 
 {% block content %}
   <div class="music-index">
-    <div class="music-header">
-      <h1>{{ section.title }}</h1>
-      <p class="music-intro">{{ section.content | safe | striptags }}</p>
-    </div>
+    <section class="music-band band full-bleed">
+      <div class="music-band__head">
+        <h1 class="music-band__title">{{ trans(key="music_heading", lang=lang) | safe }}</h1>
+        <p class="music-band__intro">{{ section.content | safe | striptags }}</p>
+      </div>
 
-    <div class="music-grid">
-      {% for page in section.pages %}
-      <div class="music-card">
-        {% if page.extra.youtube_id %}
-        <div class="music-card__video">
+      <div class="music-grid">
+        {% for page in section.pages %}
+        <article class="music-card">
+          {% if page.extra.youtube_id %}
           <div class="music-card__player" data-yt-id="{{ page.extra.youtube_id }}">
             <img
               src="https://img.youtube.com/vi/{{ page.extra.youtube_id }}/hqdefault.jpg"
@@ -33,28 +33,26 @@
               width="480"
               height="360" />
             <button class="music-card__play" aria-label="{{ trans(key='play_label', lang=lang) }} {{ page.title }}">
-              <svg viewBox="0 0 68 48" width="68" height="48">
+              <svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true">
                 <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#212121" fill-opacity=".8"/>
                 <path d="M45 24L27 14v20" fill="#fff"/>
               </svg>
             </button>
           </div>
-        </div>
-        {% endif %}
-        <div class="music-card__info">
-          <h2 class="music-card__title">{{ page.title }}</h2>
-          {% if page.description %}
-            <p class="music-card__description">{{ page.description }}</p>
           {% endif %}
-          {% if page.date %}
-            <span class="music-card__date">
-              {{ <format_date date={page.date} lang={lang} /> }}
-            </span>
-          {% endif %}
-        </div>
+          <div class="music-card__info">
+            <h2 class="music-card__title"><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+            {% if page.description %}
+              <p class="music-card__description">{{ page.description }}</p>
+            {% endif %}
+            {% if page.date %}
+              <span class="music-card__date">{{ page.date | date(format="%Y") }}</span>
+            {% endif %}
+          </div>
+        </article>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
+    </section>
   </div>
 {% endblock content %}
 

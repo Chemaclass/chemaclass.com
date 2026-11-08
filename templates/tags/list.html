@@ -18,9 +18,11 @@
 
 {% block content %}
 <div class="tags-page">
-  <header class="tags-page__header">
-    <h1>{{ trans(key="all_tags", lang=lang) }}</h1>
-    <p class="tags-page__count">{{ terms | length }} tags</p>
+  <header class="page-hero">
+    <div class="page-hero__text">
+      <span class="eyebrow">{{ trans(key="tags_count", lang=lang) | replace(from="{n}", to=(terms | length) ~ "") }}</span>
+      <h1 class="display-title">{{ trans(key="tags_heading_lead", lang=lang) }} <em>{{ trans(key="tags_heading_em", lang=lang) }}</em></h1>
+    </div>
   </header>
 
   {% set_global max_count = 0 %}

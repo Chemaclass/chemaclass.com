@@ -4,9 +4,6 @@
 {% block title %}Jose M. Valera Reales, Product Engineer | {% if lang == 'es' %}Currículum{% else %}CV{% endif %}{% endblock %}
 
 {% block head %}
-<link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/css/fontawesome.min.css"></noscript>
-
 {# Enriched ProfilePage + Person schema for the CV (E-E-A-T signal) #}
 <script type="application/ld+json">
 {
@@ -80,6 +77,8 @@
 
 {% block content %}
 {%- set t = load_data(path="data/i18n/cv.toml") -%}
+{%- set to = t.experience.to[lang] -%}
+{%- set at = t.experience.at[lang] -%}
 {# Star counts come from data/github-stars.json (scripts/fetch-github-stars.py),
    then the script at the bottom refreshes them live. The fallbacks cover a
    fresh clone where the file does not exist yet. #}
@@ -92,649 +91,494 @@
   {% set_global bashunit_stars = github_stars.bashunit | default(value=bashunit_stars) %}
   {% set_global agnostic_ai_stars = github_stars.agnostic_ai | default(value=agnostic_ai_stars) %}
 {% endif %}
-{% set profile_image = resize_image(path=config.extra.profile_large, width=150, height=150, op="fill") %}
+{% set profile_image = resize_image(path=config.extra.profile_large, width=320, height=320, op="fill") %}
 
 <article class="cv-page">
-  <!-- Header -->
   <header class="cv-header">
-    <div class="cv-header__photo">
-      <img src="{{ profile_image.url }}" alt="Jose M. Valera Reales" width="150" height="150" />
-    </div>
+    <img class="cv-header__photo" src="{{ profile_image.url }}" alt="Jose M. Valera Reales" width="160" height="160" />
     <div class="cv-header__info">
       <h1>Jose M. Valera Reales</h1>
-      <p class="cv-header__title">Product Engineer · <span class="cv-header__subtitle">{{ trans(key="home_subtitle", lang=lang) }}</span> <span class="cv-header__title-url">· chemaclass.com</span></p>
-      <p class="cv-header__location"><i class="fa-solid fa-location-dot"></i> {{ t.places.berlin[lang] | safe }}</p>
-      <div class="cv-header__links">
-        <a href="https://github.com/Chemaclass" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> <span class="cv-print-hide">GitHub</span><span class="cv-print-only">github.com/Chemaclass</span></a>
-        <a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> <span class="cv-print-hide">LinkedIn</span><span class="cv-print-only">linkedin.com/in/jose-maria-valera-reales</span></a>
-        <a href="mailto:hi@chemaclass.com"><i class="fa-solid fa-envelope"></i> <span class="cv-print-hide">Email</span><span class="cv-print-only">hi@chemaclass.com</span></a>
-        <a href="javascript:void(0)" onclick="window.print()" class="cv-header__pdf"><i class="fa-solid fa-file-pdf"></i> {{ t.header.download_pdf[lang] | safe }}</a>
-      </div>
+      <p class="cv-header__title">{{ t.header.role[lang] | safe }} · {{ t.places.berlin[lang] | safe }}</p>
+      <ul class="cv-header__links">
+        <li><a href="https://github.com/Chemaclass" target="_blank" rel="noopener"><span class="cv-print-hide">GitHub</span><span class="cv-print-only">github.com/Chemaclass</span></a></li>
+        <li><a href="https://www.linkedin.com/in/jose-maria-valera-reales/" target="_blank" rel="noopener"><span class="cv-print-hide">LinkedIn</span><span class="cv-print-only">linkedin.com/in/jose-maria-valera-reales</span></a></li>
+        <li><a href="mailto:hi@chemaclass.com"><span class="cv-print-hide">Email</span><span class="cv-print-only">hi@chemaclass.com</span></a></li>
+        <li class="cv-print-only">chemaclass.com</li>
+      </ul>
     </div>
+    <button type="button" class="btn btn--primary cv-header__pdf" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      {{ t.header.download_pdf[lang] | safe }}
+    </button>
   </header>
 
-  <!-- About -->
-  <section class="cv-section">
-    <h2><i class="fa-solid fa-user"></i> {{ t.about.title[lang] | safe }}</h2>
-    {{ page.content | safe }}
-    <blockquote class="cv-hero-quote">
-      <p>{{ t.about.quote[lang] | safe }}</p>
-      <footer>&mdash; <a href="https://www.linkedin.com/in/leon-laakmann-672325b7/" target="_blank" rel="noopener"><strong>Leon Laakmann</strong></a>, Product Lead at Purpose Green</footer>
-    </blockquote>
+  <section class="cv-section" aria-labelledby="cv-about">
+    <div class="cv-section__label">
+      <h2 id="cv-about">{{ t.about.title[lang] | safe }}</h2>
+    </div>
+    <div class="cv-section__body cv-about">
+      {{ page.content | safe }}
+      <blockquote class="cv-hero-quote">
+        <p>{{ t.about.quote[lang] | safe }}</p>
+        <footer><a href="https://www.linkedin.com/in/leon-laakmann-672325b7/" target="_blank" rel="noopener"><strong>Leon Laakmann</strong></a>, Product Lead at Purpose Green</footer>
+      </blockquote>
+    </div>
   </section>
 
-  <!-- Experience -->
-  <section class="cv-section">
-    <h2><i class="fa-solid fa-briefcase"></i> {{ t.experience.title[lang] | safe }}</h2>
-
-    <div class="cv-timeline">
-      <!-- Kombo -->
-      <div class="cv-job">
-        <div class="cv-job__header">
-          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://kombo.dev&size=128" alt="Kombo" loading="lazy" />
-          <div>
-            <h3><a href="https://kombo.dev" target="_blank" rel="noopener">Kombo</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> {{ t.places.berlin[lang] | safe }} <span class="cv-job__total">· {{ t.experience.kombo_total[lang] | safe }}</span></p>
-          </div>
+  <section class="cv-section" aria-labelledby="cv-experience">
+    <div class="cv-section__label">
+      <h2 id="cv-experience">{{ t.experience.title[lang] | safe }}</h2>
+      <dl class="cv-stats">
+        <div class="cv-stat"><dt>15+</dt><dd>{{ t.experience.stat_building[lang] | safe }}</dd></div>
+        <div class="cv-stat"><dt>5+</dt><dd>{{ t.experience.stat_leading[lang] | safe }}</dd></div>
+      </dl>
+    </div>
+    <div class="cv-section__body">
+      <div class="cv-row cv-job">
+        <div class="cv-row__aside">
+          <span class="cv-row__dates">{{ <month_year date="2026-06-01" lang={lang} /> }} {{ to }} {{ t.experience.present[lang] | safe }}</span>
+          <span class="cv-row__where">{{ t.places.berlin[lang] | safe }}</span>
         </div>
-        <div class="cv-job__body">
-          <div class="cv-job__role">
-            <h4>Product Engineer</h4>
-            <span class="cv-job__dates">{{ <month_year date="2026-06-01" lang={lang} /> }} &ndash; {{ t.experience.present[lang] | safe }}</span>
-          </div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">Product Engineer <em>{{ at }}</em> <a href="https://kombo.dev" target="_blank" rel="noopener">Kombo</a></h3>
           <p>{{ t.experience.kombo[lang] | safe }}</p>
-          <div class="cv-tags cv-tags--small">
-            <span class="cv-tag"><i class="fa-solid fa-code"></i> TypeScript</span>
-            <span class="cv-tag"><i class="fa-brands fa-react"></i> React</span>
-            <span class="cv-tag"><i class="fa-solid fa-wind"></i> Tailwind</span>
-            <span class="cv-tag"><i class="fa-solid fa-right-left"></i> tRPC</span>
-            <span class="cv-tag"><i class="fa-solid fa-layer-group"></i> Prisma</span>
-            <span class="cv-tag"><i class="fa-solid fa-database"></i> PostgreSQL</span>
-            <span class="cv-tag"><i class="fa-solid fa-bolt"></i> Redis</span>
-            <span class="cv-tag"><i class="fa-solid fa-cubes-stacked"></i> Terraform</span>
-          </div>
+          <p class="cv-row__stack">TypeScript · React · Tailwind · tRPC · Prisma · PostgreSQL · Redis · Terraform</p>
         </div>
       </div>
 
-      <!-- Purpose Green -->
-      <div class="cv-job">
-        <div class="cv-job__header">
-          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://purpose-green.com&size=128" alt="Purpose Green" loading="lazy" />
-          <div>
-            <h3><a href="https://www.purpose-green.com/" target="_blank" rel="noopener">Purpose Green</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> {{ t.places.berlin[lang] | safe }} <span class="cv-job__total">· {{ t.experience.purpose_green_total[lang] | safe }}</span></p>
-          </div>
+      <div class="cv-row cv-job">
+        <div class="cv-row__aside">
+          <span class="cv-row__dates">{{ <month_year date="2024-07-01" lang={lang} /> }} {{ to }} {{ <month_year date="2026-06-01" lang={lang} /> }}</span>
+          <span class="cv-row__where">{{ t.places.berlin[lang] | safe }} · {{ t.experience.purpose_green_total[lang] | safe }}</span>
         </div>
-        <div class="cv-job__body">
-          <div class="cv-job__role">
-            <h4>Tech Lead</h4>
-            <span class="cv-job__dates">{{ <month_year date="2025-03-01" lang={lang} /> }} &ndash; {{ <month_year date="2026-06-01" lang={lang} /> }}</span>
-          </div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">Tech Lead <em>{{ at }}</em> <a href="https://www.purpose-green.com/" target="_blank" rel="noopener">Purpose Green</a></h3>
+          <p class="cv-row__role-dates">{{ <month_year date="2025-03-01" lang={lang} /> }} {{ to }} {{ <month_year date="2026-06-01" lang={lang} /> }}</p>
           <p>{{ t.experience.purpose_green_lead[lang] | safe }}</p>
-          <div class="cv-job__role">
-            <h4>Software Developer</h4>
-            <span class="cv-job__dates">{{ <month_year date="2024-07-01" lang={lang} /> }} &ndash; {{ <month_year date="2025-03-01" lang={lang} /> }}</span>
-          </div>
+          <h4 class="cv-row__subrole">Software Developer <span class="cv-row__role-dates">{{ <month_year date="2024-07-01" lang={lang} /> }} {{ to }} {{ <month_year date="2025-03-01" lang={lang} /> }}</span></h4>
           <p>{{ t.experience.purpose_green_dev[lang] | safe }}</p>
-          <div class="cv-tags cv-tags--small">
-            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
-            <span class="cv-tag"><i class="fa-brands fa-laravel"></i> Laravel 12</span>
-            <span class="cv-tag"><i class="fa-solid fa-bug"></i> Pest</span>
-            <span class="cv-tag"><i class="fa-solid fa-shield"></i> PHPStan</span>
-            <span class="cv-tag"><i class="fa-solid fa-database"></i> PostgreSQL</span>
-            <span class="cv-tag"><i class="fa-brands fa-docker"></i> Docker</span>
-            <span class="cv-tag"><i class="fa-brands fa-aws"></i> EC2, S3, RDS</span>
-            <span class="cv-tag"><i class="fa-solid fa-dog"></i> DataDog</span>
-          </div>
+          <p class="cv-row__stack">PHP · Laravel 12 · Pest · PHPStan · PostgreSQL · Docker · AWS (EC2, S3, RDS) · DataDog</p>
         </div>
       </div>
 
-      <!-- ABOUT YOU -->
-      <div class="cv-job">
-        <div class="cv-job__header">
-          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://aboutyou.com&size=128" alt="ABOUT YOU" loading="lazy" />
-          <div>
-            <h3><a href="https://aboutyou.com" target="_blank" rel="noopener">ABOUT YOU</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> {{ t.places.berlin_remote[lang] | safe }} <span class="cv-job__total">· {{ t.experience.about_you_total[lang] | safe }}</span></p>
-          </div>
+      <div class="cv-row cv-job">
+        <div class="cv-row__aside">
+          <span class="cv-row__dates">{{ <month_year date="2023-08-01" lang={lang} /> }} {{ to }} {{ <month_year date="2024-07-01" lang={lang} /> }}</span>
+          <span class="cv-row__where">{{ t.places.berlin_remote[lang] | safe }} · {{ t.experience.about_you_total[lang] | safe }}</span>
         </div>
-        <div class="cv-job__body">
-          <div class="cv-job__role">
-            <h4>Head of Engineering</h4>
-            <span class="cv-job__dates">{{ <month_year date="2023-08-01" lang={lang} /> }} &ndash; {{ <month_year date="2024-07-01" lang={lang} /> }}</span>
-          </div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">Head of Engineering <em>{{ at }}</em> <a href="https://aboutyou.com" target="_blank" rel="noopener">ABOUT YOU</a></h3>
           <p>{{ t.experience.about_you[lang] | safe }}</p>
-          <div class="cv-tags cv-tags--small">
-            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
-            <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
-            <span class="cv-tag"><i class="fa-solid fa-vial"></i> PHPUnit</span>
-            <span class="cv-tag"><i class="fa-solid fa-database"></i> PostgreSQL</span>
-            <span class="cv-tag"><i class="fa-solid fa-bolt"></i> Redis</span>
-            <span class="cv-tag"><i class="fa-solid fa-envelope-open"></i> RabbitMQ</span>
-            <span class="cv-tag"><i class="fa-solid fa-dharmachakra"></i> K8s</span>
-            <span class="cv-tag"><i class="fa-brands fa-aws"></i> EC2</span>
-          </div>
+          <p class="cv-row__stack">PHP · Symfony · PHPUnit · PostgreSQL · Redis · RabbitMQ · K8s · EC2</p>
         </div>
       </div>
 
-      <!-- Teufel -->
-      <div class="cv-job">
-        <div class="cv-job__header">
-          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://teufel.de&size=128" alt="Teufel" loading="lazy" />
-          <div>
-            <h3><a href="https://www.teufel.de" target="_blank" rel="noopener">Lautsprecher Teufel</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> {{ t.places.berlin[lang] | safe }} <span class="cv-job__total">· {{ t.experience.teufel_total[lang] | safe }}</span></p>
-          </div>
+      <div class="cv-row cv-job">
+        <div class="cv-row__aside">
+          <span class="cv-row__dates">{{ <month_year date="2020-06-01" lang={lang} /> }} {{ to }} {{ <month_year date="2023-07-01" lang={lang} /> }}</span>
+          <span class="cv-row__where">{{ t.places.berlin[lang] | safe }} · {{ t.experience.teufel_total[lang] | safe }}</span>
         </div>
-        <div class="cv-job__body">
-          <div class="cv-job__role">
-            <h4>Tech Lead</h4>
-            <span class="cv-job__dates">{{ <month_year date="2021-07-01" lang={lang} /> }} &ndash; {{ <month_year date="2023-07-01" lang={lang} /> }}</span>
-          </div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">Tech Lead <em>{{ at }}</em> <a href="https://www.teufel.de" target="_blank" rel="noopener">Lautsprecher Teufel</a></h3>
+          <p class="cv-row__role-dates">{{ <month_year date="2021-07-01" lang={lang} /> }} {{ to }} {{ <month_year date="2023-07-01" lang={lang} /> }}</p>
           <p>{{ t.experience.teufel_lead[lang] | safe }}</p>
-          <div class="cv-job__role">
-            <h4>Software Developer</h4>
-            <span class="cv-job__dates">{{ <month_year date="2020-06-01" lang={lang} /> }} &ndash; {{ <month_year date="2021-07-01" lang={lang} /> }}</span>
-          </div>
+          <h4 class="cv-row__subrole">Software Developer <span class="cv-row__role-dates">{{ <month_year date="2020-06-01" lang={lang} /> }} {{ to }} {{ <month_year date="2021-07-01" lang={lang} /> }}</span></h4>
           <p>{{ t.experience.teufel_dev[lang] | safe }}</p>
-          <div class="cv-tags cv-tags--small">
-            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
-            <span class="cv-tag"><i class="fa-solid fa-gem"></i> Spryker</span>
-            <span class="cv-tag"><i class="fa-solid fa-vial"></i> PHPUnit</span>
-            <span class="cv-tag"><i class="fa-solid fa-database"></i> PostgreSQL</span>
-            <span class="cv-tag"><i class="fa-solid fa-bolt"></i> Redis</span>
-            <span class="cv-tag"><i class="fa-solid fa-magnifying-glass"></i> ElasticSearch</span>
-            <span class="cv-tag"><i class="fa-solid fa-envelope-open"></i> RabbitMQ</span>
-            <span class="cv-tag"><i class="fa-brands fa-docker"></i> Docker</span>
-          </div>
+          <p class="cv-row__stack">PHP · Spryker · PHPUnit · PostgreSQL · Redis · ElasticSearch · RabbitMQ · Docker</p>
         </div>
       </div>
 
-      <!-- Seven Senders -->
-      <div class="cv-job">
-        <div class="cv-job__header">
-          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://sevensenders.com&size=128" alt="Seven Senders" loading="lazy" />
-          <div>
-            <h3><a href="https://www.sevensenders.com/" target="_blank" rel="noopener">Seven Senders</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> {{ t.places.berlin[lang] | safe }} <span class="cv-job__total">· {{ t.experience.seven_senders_total[lang] | safe }}</span></p>
-          </div>
+      <div class="cv-row cv-job">
+        <div class="cv-row__aside">
+          <span class="cv-row__dates">{{ <month_year date="2017-09-01" lang={lang} /> }} {{ to }} {{ <month_year date="2020-05-01" lang={lang} /> }}</span>
+          <span class="cv-row__where">{{ t.places.berlin[lang] | safe }} · {{ t.experience.seven_senders_total[lang] | safe }}</span>
         </div>
-        <div class="cv-job__body">
-          <div class="cv-job__role">
-            <h4>Software Developer</h4>
-            <span class="cv-job__dates">{{ <month_year date="2017-09-01" lang={lang} /> }} &ndash; {{ <month_year date="2020-05-01" lang={lang} /> }}</span>
-          </div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">Software Developer <em>{{ at }}</em> <a href="https://www.sevensenders.com/" target="_blank" rel="noopener">Seven Senders</a></h3>
           <p>{{ t.experience.seven_senders[lang] | safe }}</p>
-          <div class="cv-tags cv-tags--small">
-            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
-            <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
-            <span class="cv-tag"><i class="fa-brands fa-golang"></i> Go</span>
-            <span class="cv-tag"><i class="fa-brands fa-java"></i> Java</span>
-            <span class="cv-tag"><i class="fa-solid fa-database"></i> MySQL</span>
-            <span class="cv-tag"><i class="fa-solid fa-magnifying-glass"></i> ElasticSearch</span>
-            <span class="cv-tag"><i class="fa-brands fa-docker"></i> Docker</span>
-            <span class="cv-tag"><i class="fa-brands fa-aws"></i> EC2</span>
-          </div>
+          <p class="cv-row__stack">PHP · Symfony · Go · Java · MySQL · ElasticSearch · Docker · EC2</p>
         </div>
       </div>
 
-      <!-- Move24 -->
-      <div class="cv-job">
-        <div class="cv-job__header">
-          <img class="cv-job__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%232d5a8e'/%3E%3Ctext x='32' y='40' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='22' font-weight='600'%3EM24%3C/text%3E%3C/svg%3E" alt="Move24" />
-          <div>
-            <h3>Move24</h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> {{ t.places.berlin[lang] | safe }} <span class="cv-job__total">· {{ t.experience.move24_total[lang] | safe }}</span></p>
-          </div>
+      <div class="cv-row cv-job">
+        <div class="cv-row__aside">
+          <span class="cv-row__dates">{{ <month_year date="2017-01-01" lang={lang} /> }} {{ to }} {{ <month_year date="2017-07-01" lang={lang} /> }}</span>
+          <span class="cv-row__where">{{ t.places.berlin[lang] | safe }} · {{ t.experience.move24_total[lang] | safe }}</span>
         </div>
-        <div class="cv-job__body">
-          <div class="cv-job__role">
-            <h4>Software Developer</h4>
-            <span class="cv-job__dates">{{ <month_year date="2017-01-01" lang={lang} /> }} &ndash; {{ <month_year date="2017-07-01" lang={lang} /> }}</span>
-          </div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">Software Developer <em>{{ at }}</em> Move24</h3>
           <p>{{ t.experience.move24[lang] | safe }}</p>
-          <div class="cv-tags cv-tags--small">
-            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
-            <span class="cv-tag"><i class="fa-brands fa-laravel"></i> Laravel</span>
-            <span class="cv-tag"><i class="fa-brands fa-golang"></i> Go</span>
-            <span class="cv-tag"><i class="fa-solid fa-database"></i> PostgreSQL</span>
-            <span class="cv-tag"><i class="fa-solid fa-bolt"></i> Redis</span>
-            <span class="cv-tag"><i class="fa-brands fa-docker"></i> Docker</span>
-          </div>
+          <p class="cv-row__stack">PHP · Laravel · Go · PostgreSQL · Redis · Docker</p>
         </div>
       </div>
 
-      <!-- Webgears -->
-      <div class="cv-job">
-        <div class="cv-job__header">
-          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://webgears-group.com&size=128" alt="Webgears" loading="lazy" />
-          <div>
-            <h3><a href="https://www.webgears-group.com/" target="_blank" rel="noopener">Webgears</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> {{ t.places.berlin[lang] | safe }} <span class="cv-job__total">· {{ t.experience.webgears_total[lang] | safe }}</span></p>
-          </div>
+      <div class="cv-row cv-job">
+        <div class="cv-row__aside">
+          <span class="cv-row__dates">{{ <month_year date="2015-09-01" lang={lang} /> }} {{ to }} {{ <month_year date="2016-12-01" lang={lang} /> }}</span>
+          <span class="cv-row__where">{{ t.places.berlin[lang] | safe }} · {{ t.experience.webgears_total[lang] | safe }}</span>
         </div>
-        <div class="cv-job__body">
-          <div class="cv-job__role">
-            <h4>Software Developer</h4>
-            <span class="cv-job__dates">{{ <month_year date="2015-09-01" lang={lang} /> }} &ndash; {{ <month_year date="2016-12-01" lang={lang} /> }}</span>
-          </div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">Software Developer <em>{{ at }}</em> <a href="https://www.webgears-group.com/" target="_blank" rel="noopener">Webgears</a></h3>
           <p>{{ t.experience.webgears[lang] | safe }}</p>
-          <div class="cv-tags cv-tags--small">
-            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
-            <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
-            <span class="cv-tag"><i class="fa-solid fa-database"></i> MariaDB</span>
-          </div>
+          <p class="cv-row__stack">PHP · Symfony · MariaDB</p>
         </div>
       </div>
 
-      <!-- Falk -->
-      <div class="cv-job">
-        <div class="cv-job__header">
-          <img class="cv-job__logo" src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://falk-meddv.de&size=128" alt="Falk" loading="lazy" />
-          <div>
-            <h3><a href="https://www.falk-meddv.de/" target="_blank" rel="noopener">Falk medizinische Datenverarbeitung</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> {{ t.experience.falk_location[lang] | safe }} <span class="cv-job__total">· {{ t.experience.falk_total[lang] | safe }}</span></p>
-          </div>
+      <div class="cv-row cv-job">
+        <div class="cv-row__aside">
+          <span class="cv-row__dates">{{ <month_year date="2014-12-01" lang={lang} /> }} {{ to }} {{ <month_year date="2015-08-01" lang={lang} /> }}</span>
+          <span class="cv-row__where">{{ t.experience.falk_location[lang] | safe }} · {{ t.experience.falk_total[lang] | safe }}</span>
         </div>
-        <div class="cv-job__body">
-          <div class="cv-job__role">
-            <h4>Software Developer</h4>
-            <span class="cv-job__dates">{{ <month_year date="2014-12-01" lang={lang} /> }} &ndash; {{ <month_year date="2015-08-01" lang={lang} /> }}</span>
-          </div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">Software Developer <em>{{ at }}</em> <a href="https://www.falk-meddv.de/" target="_blank" rel="noopener">Falk medizinische Datenverarbeitung</a></h3>
           <p>{{ t.experience.falk[lang] | safe }}</p>
-          <div class="cv-tags cv-tags--small">
-            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
-            <span class="cv-tag"><i class="fa-solid fa-code"></i> Delphi</span>
-            <span class="cv-tag"><i class="fa-solid fa-database"></i> MySQL</span>
-          </div>
+          <p class="cv-row__stack">PHP · Delphi · MySQL</p>
         </div>
       </div>
 
-      <!-- miLeyenda -->
-      <div class="cv-job">
-        <div class="cv-job__header">
-          <img class="cv-job__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2316a34a'/%3E%3Ctext x='32' y='40' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='22' font-weight='600'%3ELV%3C/text%3E%3C/svg%3E" alt="LEVERADE" />
-          <div>
-            <h3><a href="https://leverade.com/" target="_blank" rel="noopener">LEVERADE</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> {{ t.places.murcia[lang] | safe }} <span class="cv-job__total">· {{ t.experience.leverade_total[lang] | safe }}</span></p>
-          </div>
+      <div class="cv-row cv-job">
+        <div class="cv-row__aside">
+          <span class="cv-row__dates">{{ <month_year date="2014-01-01" lang={lang} /> }} {{ to }} {{ <month_year date="2014-08-01" lang={lang} /> }}</span>
+          <span class="cv-row__where">{{ t.places.murcia[lang] | safe }} · {{ t.experience.leverade_total[lang] | safe }}</span>
         </div>
-        <div class="cv-job__body">
-          <div class="cv-job__role">
-            <h4>Software Developer</h4>
-            <span class="cv-job__dates">{{ <month_year date="2014-01-01" lang={lang} /> }} &ndash; {{ <month_year date="2014-08-01" lang={lang} /> }}</span>
-          </div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">Software Developer <em>{{ at }}</em> <a href="https://leverade.com/" target="_blank" rel="noopener">LEVERADE</a></h3>
           <p>{{ t.experience.leverade[lang] | safe }}</p>
-          <div class="cv-tags cv-tags--small">
-            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
-            <span class="cv-tag"><i class="fa-brands fa-laravel"></i> Laravel</span>
-            <span class="cv-tag"><i class="fa-brands fa-android"></i> Android</span>
-            <span class="cv-tag"><i class="fa-solid fa-database"></i> MySQL</span>
-          </div>
+          <p class="cv-row__stack">PHP · Laravel · Android · MySQL</p>
         </div>
       </div>
 
-      <!-- Tecnoavanza -->
-      <div class="cv-job">
-        <div class="cv-job__header">
-          <img class="cv-job__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230284c7'/%3E%3Ctext x='32' y='40' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='22' font-weight='600'%3ETA%3C/text%3E%3C/svg%3E" alt="Tecnoavanza" />
-          <div>
-            <h3><a href="http://www.tecnoavanza.com/" target="_blank" rel="noopener">Tecnoavanza</a></h3>
-            <p class="cv-job__location"><i class="fa-solid fa-location-dot"></i> {{ t.places.murcia[lang] | safe }} <span class="cv-job__total">· {{ t.experience.tecnoavanza_total[lang] | safe }}</span></p>
-          </div>
+      <div class="cv-row cv-job">
+        <div class="cv-row__aside">
+          <span class="cv-row__dates">{{ <month_year date="2013-03-01" lang={lang} /> }} {{ to }} {{ <month_year date="2013-06-01" lang={lang} /> }}</span>
+          <span class="cv-row__where">{{ t.places.murcia[lang] | safe }} · {{ t.experience.tecnoavanza_total[lang] | safe }}</span>
         </div>
-        <div class="cv-job__body">
-          <div class="cv-job__role">
-            <h4>Software Developer <span class="cv-job__type">{{ t.experience.internship[lang] | safe }}</span></h4>
-            <span class="cv-job__dates">{{ <month_year date="2013-03-01" lang={lang} /> }} &ndash; {{ <month_year date="2013-06-01" lang={lang} /> }}</span>
-          </div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">Software Developer <em>{{ at }}</em> <a href="http://www.tecnoavanza.com/" target="_blank" rel="noopener">Tecnoavanza</a> <span class="cv-row__badge">{{ t.experience.internship[lang] | safe }}</span></h3>
           <p>{{ t.experience.tecnoavanza[lang] | safe }}</p>
-          <div class="cv-tags cv-tags--small">
-            <span class="cv-tag"><i class="fa-brands fa-php"></i> PHP</span>
-            <span class="cv-tag"><i class="fa-brands fa-symfony"></i> Symfony</span>
-            <span class="cv-tag"><i class="fa-solid fa-database"></i> MySQL</span>
-          </div>
+          <p class="cv-row__stack">PHP · Symfony · MySQL</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Recommendations -->
-  <section class="cv-section">
-    <h2><i class="fa-solid fa-quote-left"></i> {{ t.recommendations.title[lang] | safe }}</h2>
-    <div class="cv-recommendations">
-      <blockquote class="cv-rec">
-        <p>"I worked with Chema for almost two years at Purpose Green. We started together as Senior Backend Engineers, and he later became our Team Tech Lead. Chema is one of the most professional leaders and colleagues I have ever worked with.</p>
-        <p>He has solid experience in PHP and team management, but what I appreciated most was how supportive he was. He was always there to help the team and made sure we had everything we needed to succeed. He is a great leader and a great person."</p>
-        <footer><span class="cv-rec__avatar" style="background:#0f766e">MI</span> <a href="https://www.linkedin.com/in/muhamadibrahim/" target="_blank" rel="noopener"><strong>Mohamed Ibrahim Alokl</strong></a> · Software Engineer at Purpose Green <span class="cv-rec__date">{{ <month_year date="2026-04-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"Chema is the best team lead I have ever worked with. He has a real talent for motivating the whole team to grow, try new things, and stay curious about modern tools and ideas.</p>
-        <p>For him, collaboration and communication are the key to everything. He builds an environment where people feel safe to share ideas, ask questions, and learn from each other. You can feel that he really cares about the team, not only about the results.</p>
-        <p>Chema also led our integration of AI tools and helped the whole team fall in love with agentic coding. He shared patterns, ran sessions, and showed us how to use these tools in a smart and structured way, not as hype, but as a real part of how we ship software.</p>
-        <p>Any team that gets Chema as a lead is very lucky. He makes people around him better engineers and better teammates."</p>
-        <footer><span class="cv-rec__avatar" style="background:#7c3aed">RF</span> <a href="https://www.linkedin.com/in/r-frolov/" target="_blank" rel="noopener"><strong>Roman Frolov</strong></a> · Software Engineer at Purpose Green <span class="cv-rec__date">{{ <month_year date="2026-04-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"I've worked with Chema twice, first at Seven Senders (2017-2019), and again at Purpose Green as my counterpart on the tech side.</p>
-        <p>What makes Chema rare is that he doesn't hide behind roadmaps or architecture diagrams. He gets into the details when it matters and refuses to use process as an excuse to slow things down. Agile isn't a methodology to him, it's how he works, which makes him unusually easy to build with from a product seat.</p>
-        <p>He's also well ahead of the curve on AI. While most teams are still debating where to start, Chema already has multiple agents running in production.</p>
-        <p>If you want a tech lead who pairs sharp engineering instincts with a real appetite for what's next, Chema is the one."</p>
-        <footer><span class="cv-rec__avatar" style="background:#0891b2">LL</span> <a href="https://www.linkedin.com/in/leon-laakmann-672325b7/" target="_blank" rel="noopener"><strong>Leon Laakmann</strong></a> · Product Lead at Purpose Green <span class="cv-rec__date">{{ <month_year date="2026-04-01" lang={lang} /> }}</span></footer>
-      </blockquote>
+  <section class="cv-section" aria-labelledby="cv-recommendations">
+    <div class="cv-section__label">
+      <h2 id="cv-recommendations">{{ t.recommendations.title[lang] | safe }}</h2>
     </div>
-    <div class="cv-recommendations cv-recommendations--more">
-      <blockquote class="cv-rec">
-        <p>"Chema is a great engineer and knows how to create value from get go. He was proactive, resourceful, and knew how to navigate extreme complexity, demonstrating clear leadership skills. He not only adhered to agile principles, but also lifted his co-workers by coaching them."</p>
-        <footer><span class="cv-rec__avatar" style="background:#2d5a8e">EL</span> <a href="https://www.linkedin.com/in/elofca" target="_blank" rel="noopener"><strong>Engin Lofça</strong></a> · Product Leadership in Payments <span class="cv-rec__date">{{ <month_year date="2025-05-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"Chema is a great leader, speaker, and impactful contributor! He always balances clean code, testing, and software design with pragmatism while delivering value to the customer. With a truly agile mindset, he is capable of helping your tech organization reach the next level."</p>
-        <footer><span class="cv-rec__avatar" style="background:#16a34a">BD</span> <a href="https://www.linkedin.com/in/borisdiebold" target="_blank" rel="noopener"><strong>Boris Diebold</strong></a> · CTO at HeyJobs <span class="cv-rec__date">{{ <month_year date="2024-05-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"Chema is an impressive person to work with and to be inspired by. His coding skills were already outstanding when I hired him, principles like SOLID or approaches like TDD were mastered and embraced by heart already. This turned out to even be surpassed by his incredible learning mindset. One of a kind, a perfect addition to any a-team."</p>
-        <footer><span class="cv-rec__avatar" style="background:#8b5cf6">CK</span> <a href="https://www.linkedin.com/in/christian-kuennemann-berlin" target="_blank" rel="noopener"><strong>Christian Künnemann</strong></a> · Director Software Engineering <span class="cv-rec__date">{{ <month_year date="2024-04-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"Working with Chema for the last three years was a powerful experience. Driven by curiosity he always challenged himself, me and the team. Trying new ways and improving long existing processes was a daily manner for him. I know his new team will be in good hands!"</p>
-        <footer><span class="cv-rec__avatar" style="background:#db2777">KB</span> <a href="https://www.linkedin.com/in/kimberley-bechinie-17a1336a" target="_blank" rel="noopener"><strong>Kimberley Bechinie</strong></a> · Head of E-Commerce PM <span class="cv-rec__date">{{ <month_year date="2023-08-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"Chema is a highly motivated and capable developer with a keen eye for detail and is always striving to improve himself, the projects he works on and the colleagues he works with. He drives change when it's needed, is a keen collaborator and a delight to work with."</p>
-        <footer><span class="cv-rec__avatar" style="background:#ea580c">RP</span> <a href="https://www.linkedin.com/in/rick-peacock-b4722717" target="_blank" rel="noopener"><strong>Rick Peacock</strong></a> · Tech Lead <span class="cv-rec__date">{{ <month_year date="2023-07-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"Chema has a great passion for testing and refactoring. He is easy to approach, always ready to help and listen, very patient and nice. He is also happy to be your rubber duck when you want to practice a talk or a coding demo. If you feel tired or stressed, Chema makes you see the fun side of coding again."</p>
-        <footer><span class="cv-rec__avatar" style="background:#0284c7">AJ</span> <a href="https://www.linkedin.com/in/alexandrajulius" target="_blank" rel="noopener"><strong>Alexandra Julius</strong></a> · Senior Software Engineer <span class="cv-rec__date">{{ <month_year date="2022-04-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"He was the 'Tony Stark' of our team. He is smart, reliable, and best known for building flawless solutions."</p>
-        <footer><span class="cv-rec__avatar" style="background:#8b5cf6">RN</span> <a href="https://www.linkedin.com/in/raj-navakoti-529880b1" target="_blank" rel="noopener"><strong>Raj Navakoti</strong></a> · Principal Engineer <span class="cv-rec__date">{{ <month_year date="2020-06-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"When he decided to leave, I knew it'll be a big loss for the team since he's been always keen on delivering quality work, learning, adapting and teaching others, maintaining a proper test suite, and delivering on time. Very good guy ;)"</p>
-        <footer><span class="cv-rec__avatar" style="background:#16a34a">AF</span> <a href="https://www.linkedin.com/in/fulopattila122" target="_blank" rel="noopener"><strong>Attila Fulop</strong></a> · Founder at Vanilo E-commerce <span class="cv-rec__date">{{ <month_year date="2020-05-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"Working with Jose is a pleasure not only in technical side but also in every-day life. Cheerful, open, convivial person. Knows and follows modern best practices, understands the pillars of Software development."</p>
-        <footer><span class="cv-rec__avatar" style="background:#2d5a8e">OD</span> <a href="https://www.linkedin.com/in/oleksii-dubinin-81447a5b" target="_blank" rel="noopener"><strong>Oleksii Dubinin</strong></a> · Lead Software Engineer <span class="cv-rec__date">{{ <month_year date="2017-12-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"Whoever hires Jose will not only get a programmer with strong technical skills, but also a great colleague with good sense of humor and great interpersonal skills. What impressed me the most was his enthusiasm to improve himself."</p>
-        <footer><span class="cv-rec__avatar" style="background:#0284c7">AB</span> <a href="https://www.linkedin.com/in/andrei-boar" target="_blank" rel="noopener"><strong>Andrei Boar</strong></a> · Senior Golang Software Engineer <span class="cv-rec__date">{{ <month_year date="2017-06-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"He is a very valuable member of the team with strong passion for work and a really hands-on 'get things done' approach. He writes very clean code, effectively applies best practices, can dig into very complex problems and simplify them."</p>
-        <footer><span class="cv-rec__avatar" style="background:#db2777">VM</span> <a href="https://www.linkedin.com/in/vladimir-minakov-98844311" target="_blank" rel="noopener"><strong>Vladimir Minakov</strong></a> · CTO at FORMEL Skin <span class="cv-rec__date">{{ <month_year date="2017-06-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"José always produced top-line quality work. He worked well with all the other developers, and carried out his responsibilities efficiently. Always ready with a smile."</p>
-        <footer><span class="cv-rec__avatar" style="background:#ea580c">JP</span> <a href="https://www.linkedin.com/in/jonathan-poischen-2a99b087" target="_blank" rel="noopener"><strong>Jonathan Poischen</strong></a> · QA Engineer at Datasite <span class="cv-rec__date">{{ <month_year date="2017-06-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"I was impressed by Jose Maria's ability to acquire the knowledge of the different subjects. His ambition and productivity was the reason why he was my partner for the final project."</p>
-        <footer><span class="cv-rec__avatar" style="background:#8b5cf6">FE</span> <a href="https://www.linkedin.com/in/francisco-javier-espejo-g%C3%B3mez-5a81879a" target="_blank" rel="noopener"><strong>Francisco Javier Espejo Gómez</strong></a> · IT Support Specialist <span class="cv-rec__date">{{ <month_year date="2016-12-01" lang={lang} /> }}</span></footer>
-      </blockquote>
-      <blockquote class="cv-rec">
-        <p>"He is a really professional and nice guy, loyal and faithful. He worked always hard and concentrated. He is an enrichment, professional and personal."</p>
-        <footer><span class="cv-rec__avatar" style="background:#16a34a">AC</span> <a href="https://www.linkedin.com/in/annemarschner" target="_blank" rel="noopener"><strong>Anne Christiansen</strong></a> · Marketing &amp; Communications <span class="cv-rec__date">{{ <month_year date="2016-11-01" lang={lang} /> }}</span></footer>
-      </blockquote>
+    <div class="cv-section__body">
+      <div class="cv-recommendations">
+        <blockquote class="cv-rec">
+          <p>"I worked with Chema for almost two years at Purpose Green. We started together as Senior Backend Engineers, and he later became our Team Tech Lead. Chema is one of the most professional leaders and colleagues I have ever worked with.</p>
+          <p>He has solid experience in PHP and team management, but what I appreciated most was how supportive he was. He was always there to help the team and made sure we had everything we needed to succeed. He is a great leader and a great person."</p>
+          <footer><a href="https://www.linkedin.com/in/muhamadibrahim/" target="_blank" rel="noopener"><strong>Mohamed Ibrahim Alokl</strong></a> · Software Engineer at Purpose Green <span class="cv-rec__date">{{ <month_year date="2026-04-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"Chema is the best team lead I have ever worked with. He has a real talent for motivating the whole team to grow, try new things, and stay curious about modern tools and ideas.</p>
+          <p>For him, collaboration and communication are the key to everything. He builds an environment where people feel safe to share ideas, ask questions, and learn from each other. You can feel that he really cares about the team, not only about the results.</p>
+          <p>Chema also led our integration of AI tools and helped the whole team fall in love with agentic coding. He shared patterns, ran sessions, and showed us how to use these tools in a smart and structured way, not as hype, but as a real part of how we ship software.</p>
+          <p>Any team that gets Chema as a lead is very lucky. He makes people around him better engineers and better teammates."</p>
+          <footer><a href="https://www.linkedin.com/in/r-frolov/" target="_blank" rel="noopener"><strong>Roman Frolov</strong></a> · Software Engineer at Purpose Green <span class="cv-rec__date">{{ <month_year date="2026-04-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"I've worked with Chema twice, first at Seven Senders (2017-2019), and again at Purpose Green as my counterpart on the tech side.</p>
+          <p>What makes Chema rare is that he doesn't hide behind roadmaps or architecture diagrams. He gets into the details when it matters and refuses to use process as an excuse to slow things down. Agile isn't a methodology to him, it's how he works, which makes him unusually easy to build with from a product seat.</p>
+          <p>He's also well ahead of the curve on AI. While most teams are still debating where to start, Chema already has multiple agents running in production.</p>
+          <p>If you want a tech lead who pairs sharp engineering instincts with a real appetite for what's next, Chema is the one."</p>
+          <footer><a href="https://www.linkedin.com/in/leon-laakmann-672325b7/" target="_blank" rel="noopener"><strong>Leon Laakmann</strong></a> · Product Lead at Purpose Green <span class="cv-rec__date">{{ <month_year date="2026-04-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+      </div>
+      <div class="cv-recommendations cv-recommendations--more">
+        <blockquote class="cv-rec">
+          <p>"Chema is a great engineer and knows how to create value from get go. He was proactive, resourceful, and knew how to navigate extreme complexity, demonstrating clear leadership skills. He not only adhered to agile principles, but also lifted his co-workers by coaching them."</p>
+          <footer><a href="https://www.linkedin.com/in/elofca" target="_blank" rel="noopener"><strong>Engin Lofça</strong></a> · Product Leadership in Payments <span class="cv-rec__date">{{ <month_year date="2025-05-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"Chema is a great leader, speaker, and impactful contributor! He always balances clean code, testing, and software design with pragmatism while delivering value to the customer. With a truly agile mindset, he is capable of helping your tech organization reach the next level."</p>
+          <footer><a href="https://www.linkedin.com/in/borisdiebold" target="_blank" rel="noopener"><strong>Boris Diebold</strong></a> · CTO at HeyJobs <span class="cv-rec__date">{{ <month_year date="2024-05-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"Chema is an impressive person to work with and to be inspired by. His coding skills were already outstanding when I hired him, principles like SOLID or approaches like TDD were mastered and embraced by heart already. This turned out to even be surpassed by his incredible learning mindset. One of a kind, a perfect addition to any a-team."</p>
+          <footer><a href="https://www.linkedin.com/in/christian-kuennemann-berlin" target="_blank" rel="noopener"><strong>Christian Künnemann</strong></a> · Director Software Engineering <span class="cv-rec__date">{{ <month_year date="2024-04-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"Working with Chema for the last three years was a powerful experience. Driven by curiosity he always challenged himself, me and the team. Trying new ways and improving long existing processes was a daily manner for him. I know his new team will be in good hands!"</p>
+          <footer><a href="https://www.linkedin.com/in/kimberley-bechinie-17a1336a" target="_blank" rel="noopener"><strong>Kimberley Bechinie</strong></a> · Head of E-Commerce PM <span class="cv-rec__date">{{ <month_year date="2023-08-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"Chema is a highly motivated and capable developer with a keen eye for detail and is always striving to improve himself, the projects he works on and the colleagues he works with. He drives change when it's needed, is a keen collaborator and a delight to work with."</p>
+          <footer><a href="https://www.linkedin.com/in/rick-peacock-b4722717" target="_blank" rel="noopener"><strong>Rick Peacock</strong></a> · Tech Lead <span class="cv-rec__date">{{ <month_year date="2023-07-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"Chema has a great passion for testing and refactoring. He is easy to approach, always ready to help and listen, very patient and nice. He is also happy to be your rubber duck when you want to practice a talk or a coding demo. If you feel tired or stressed, Chema makes you see the fun side of coding again."</p>
+          <footer><a href="https://www.linkedin.com/in/alexandrajulius" target="_blank" rel="noopener"><strong>Alexandra Julius</strong></a> · Senior Software Engineer <span class="cv-rec__date">{{ <month_year date="2022-04-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"He was the 'Tony Stark' of our team. He is smart, reliable, and best known for building flawless solutions."</p>
+          <footer><a href="https://www.linkedin.com/in/raj-navakoti-529880b1" target="_blank" rel="noopener"><strong>Raj Navakoti</strong></a> · Principal Engineer <span class="cv-rec__date">{{ <month_year date="2020-06-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"When he decided to leave, I knew it'll be a big loss for the team since he's been always keen on delivering quality work, learning, adapting and teaching others, maintaining a proper test suite, and delivering on time. Very good guy ;)"</p>
+          <footer><a href="https://www.linkedin.com/in/fulopattila122" target="_blank" rel="noopener"><strong>Attila Fulop</strong></a> · Founder at Vanilo E-commerce <span class="cv-rec__date">{{ <month_year date="2020-05-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"Working with Jose is a pleasure not only in technical side but also in every-day life. Cheerful, open, convivial person. Knows and follows modern best practices, understands the pillars of Software development."</p>
+          <footer><a href="https://www.linkedin.com/in/oleksii-dubinin-81447a5b" target="_blank" rel="noopener"><strong>Oleksii Dubinin</strong></a> · Lead Software Engineer <span class="cv-rec__date">{{ <month_year date="2017-12-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"Whoever hires Jose will not only get a programmer with strong technical skills, but also a great colleague with good sense of humor and great interpersonal skills. What impressed me the most was his enthusiasm to improve himself."</p>
+          <footer><a href="https://www.linkedin.com/in/andrei-boar" target="_blank" rel="noopener"><strong>Andrei Boar</strong></a> · Senior Golang Software Engineer <span class="cv-rec__date">{{ <month_year date="2017-06-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"He is a very valuable member of the team with strong passion for work and a really hands-on 'get things done' approach. He writes very clean code, effectively applies best practices, can dig into very complex problems and simplify them."</p>
+          <footer><a href="https://www.linkedin.com/in/vladimir-minakov-98844311" target="_blank" rel="noopener"><strong>Vladimir Minakov</strong></a> · CTO at FORMEL Skin <span class="cv-rec__date">{{ <month_year date="2017-06-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"José always produced top-line quality work. He worked well with all the other developers, and carried out his responsibilities efficiently. Always ready with a smile."</p>
+          <footer><a href="https://www.linkedin.com/in/jonathan-poischen-2a99b087" target="_blank" rel="noopener"><strong>Jonathan Poischen</strong></a> · QA Engineer at Datasite <span class="cv-rec__date">{{ <month_year date="2017-06-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"I was impressed by Jose Maria's ability to acquire the knowledge of the different subjects. His ambition and productivity was the reason why he was my partner for the final project."</p>
+          <footer><a href="https://www.linkedin.com/in/francisco-javier-espejo-g%C3%B3mez-5a81879a" target="_blank" rel="noopener"><strong>Francisco Javier Espejo Gómez</strong></a> · IT Support Specialist <span class="cv-rec__date">{{ <month_year date="2016-12-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+        <blockquote class="cv-rec">
+          <p>"He is a really professional and nice guy, loyal and faithful. He worked always hard and concentrated. He is an enrichment, professional and personal."</p>
+          <footer><a href="https://www.linkedin.com/in/annemarschner" target="_blank" rel="noopener"><strong>Anne Christiansen</strong></a> · Marketing &amp; Communications <span class="cv-rec__date">{{ <month_year date="2016-11-01" lang={lang} /> }}</span></footer>
+        </blockquote>
+      </div>
+      <button type="button" class="btn cv-rec-toggle" onclick="this.previousElementSibling.classList.toggle('cv-recommendations--visible'); this.textContent = this.previousElementSibling.classList.contains('cv-recommendations--visible') ? '{{ t.recommendations.show_less[lang] | safe }}' : '{{ t.recommendations.show_more[lang] | safe }} (14)'">{{ t.recommendations.show_more[lang] | safe }} (14)</button>
     </div>
-    <button class="cv-rec-toggle" onclick="this.previousElementSibling.classList.toggle('cv-recommendations--visible'); this.textContent = this.previousElementSibling.classList.contains('cv-recommendations--visible') ? '{{ t.recommendations.show_less[lang] | safe }}' : '{{ t.recommendations.show_more[lang] | safe }} (14)'">{{ t.recommendations.show_more[lang] | safe }} (14)</button>
   </section>
 
-  <!-- Products -->
   <section class="cv-section" id="products" aria-labelledby="products-title">
-    <h2 id="products-title"><i class="fa-solid fa-rocket"></i> {{ t.products.title[lang] | safe }}</h2>
-    <p class="cv-section__lead">{{ t.products.lead[lang] | safe }}</p>
-    <div class="cv-projects cv-projects--two">
-      <a href="{% if lang == 'es' %}https://miaforo.com/es{% else %}https://miaforo.com/{% endif %}" target="_blank" rel="noopener" class="cv-project cv-print-hide">
-        <h3><i class="fa-solid fa-dumbbell cv-project__icon"></i> MIAFORO</h3>
-        <p class="cv-project__meta"><i class="fa-solid fa-user"></i> {{ t.products.role[lang] | safe }}</p>
-        <p>{{ t.products.miaforo[lang] | safe }}</p>
-      </a>
-      <a href="{% if lang == 'es' %}https://puertafria.es/es{% else %}https://puertafria.es/{% endif %}" target="_blank" rel="noopener" class="cv-project cv-print-hide">
-        <h3><i class="fa-solid fa-mobile-screen cv-project__icon"></i> tocadi</h3>
-        <p class="cv-project__meta"><i class="fa-solid fa-user"></i> {{ t.products.role[lang] | safe }}</p>
-        <p>{{ t.products.tocadi[lang] | safe }}</p>
-      </a>
-      <div class="cv-project cv-print-only">
-        <h3>MIAFORO</h3>
-        <p>{{ t.products.miaforo_print[lang] | safe }}</p>
-      </div>
-      <div class="cv-project cv-print-only">
-        <h3>tocadi</h3>
-        <p>{{ t.products.tocadi_print[lang] | safe }}</p>
-      </div>
+    <div class="cv-section__label">
+      <h2 id="products-title">{{ t.products.title[lang] | safe }}</h2>
+      <p class="cv-section__aside">{{ t.products.lead[lang] | safe }}</p>
     </div>
-  </section>
-
-  <!-- Open Source -->
-  <section class="cv-section">
-    <h2><a href="https://github.com/Chemaclass" target="_blank" rel="noopener" class="cv-section__link cv-print-hide">
-      <i class="fa-brands fa-github"></i> Open Source</a><span class="cv-print-only"><i class="fa-brands fa-osi"></i> Open Source</span>
-    </h2>
-    <div class="cv-projects">
-      <a href="https://phel-lang.org" target="_blank" rel="noopener" class="cv-project cv-print-hide">
-        <h3>
-          <svg class="cv-project__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.3 167.7"><path d="M6 66l95 96h36V93l-36-74H42L6 56v106h36l24-35" fill="none" stroke="#512da8" stroke-width="8"/><path d="M137 93l58-3-12-58-32-26h-34l-16 13-23 9-12 22 46 52z" fill="none" stroke="#512da8" stroke-width="8"/><path d="M195 90l-12 57h-13l-2-56m2 56l-13-11h12" fill="none" stroke="#512da8" stroke-width="8"/></svg>
-          Phel Lang
-        </h3>
-        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="phel-lang/phel-lang">{{ phel_stars }}</span> · {{ t.open_source.core_maintainer[lang] | safe }}</p>
-        <p>{{ t.open_source.phel[lang] | safe }}</p>
-      </a>
-      <a href="https://bashunit.com/" target="_blank" rel="noopener" class="cv-project cv-print-hide">
-        <h3>
-          <svg class="cv-project__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.8 362.8"><path d="M317.5 0H45.4C20.3 0 0 20.3 0 45.4v272.1c0 25 20.3 45.4 45.4 45.4h272.1c25 0 45.4-20.3 45.4-45.4V45.4C362.8 20.3 342.5 0 317.5 0z" fill="#2e3436"/><path d="M259.3 317.5c11.2-4 21.6-10.1 30.5-17.9 4.9 10.9 15.7 17.9 27.6 17.9h-58.1zM226.8 45.3h-90.7C86 45.3 45.3 86 45.3 136.1v38.3c12.5-34.8 43.9-59.4 80.7-63.3.6-17.5 2.8-35 6.8-52.1a5.68 5.68 0 0 1 4.5-4.3c3.1-.5 6 1.5 6.6 4.6 3 16.8 10.6 32.5 22 45.2 1.6 1.8 2.9 3.9 3.9 6.1h5.4c2.4-21.3 12.9-40.9 29.3-54.6 1.3-1.1 3-1.5 4.6-1.2 3.1.6 5.1 3.5 4.6 6.6-3 16.8-1.2 34.2 5.2 50 .4.9.7 1.9.9 2.9 19.5 7.7 32.3 26.5 32.3 47.5v29.8c0 15.6-12.7 28.3-28.3 28.3h-78c-1.6 0-2.8-1.3-2.8-2.8 0-1.6 1.3-2.8 2.8-2.8h78c12.5 0 22.7-10.2 22.7-22.7v-29.8c0-25-20.3-45.4-45.3-45.4H136c-50.1 0-90.7 40.6-90.7 90.7v19.8c0 50.1 40.6 90.7 90.7 90.7h90.7c50.1 0 90.7-40.6 90.7-90.7v-90.7c.1-50.2-40.5-90.9-90.6-90.9zm-78 119.8c0-13.5 11-24.4 24.5-24.4s24.4 11 24.4 24.5-11 24.4-24.5 24.4c-13.4 0-24.4-11-24.4-24.5z" fill="#eceeee"/><path d="M161.7 108.3c-12.1-13.5-20.2-30.1-23.4-48-4.5 19.5-6.8 39.5-6.8 59.6a17.31 17.31 0 0 0 17.3 17.3 17.31 17.31 0 0 0 17.3-17.3c0-4.4-1.6-8.5-4.4-11.6zm51.5 3.7c-6.3-16.5-8.1-34.3-5-51.7C193.1 73 183.3 91 181 110.6h20.3c4 0 8 .4 11.9 1.4z" fill="#8ae234"/></svg>
-          bashunit
-        </h3>
-        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="typeddevs/bashunit">{{ bashunit_stars }}</span> · {{ t.open_source.creator[lang] | safe }}</p>
-        <p>{{ t.open_source.bashunit[lang] | safe }}</p>
-        <p class="cv-project__meta cv-project__meta--award"><i class="fa-solid fa-trophy"></i> {{ t.open_source.bashunit_award[lang] | safe }}</p>
-      </a>
-      <a href="https://agnostic-ai.org/" target="_blank" rel="noopener" class="cv-project cv-print-hide">
-        <h3>
-          <svg class="cv-project__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#16130f"/><path d="M43 32H50.5M39.78 39.78L45.08 45.08M32 43V50.5M24.22 39.78L18.92 45.08M21 32H13.5M24.22 24.22L18.92 18.92M32 21V13.5M39.78 24.22L45.08 18.92" stroke="#f0a35e" stroke-opacity=".7" stroke-width="3.5" stroke-linecap="round"/><circle cx="32" cy="32" r="8" fill="#f0a35e"/><g fill="#afd282"><circle cx="55" cy="32" r="4.5"/><circle cx="32" cy="55" r="4.5"/><circle cx="9" cy="32" r="4.5"/><circle cx="32" cy="9" r="4.5"/></g><g fill="#f2ede5"><circle cx="48.26" cy="48.26" r="4.5"/><circle cx="15.74" cy="48.26" r="4.5"/><circle cx="15.74" cy="15.74" r="4.5"/><circle cx="48.26" cy="15.74" r="4.5"/></g></svg>
-          agnostic-ai
-        </h3>
-        <p class="cv-project__meta"><i class="fa-solid fa-star"></i> <span class="cv-star" data-repo="chemaclass/agnostic-ai">{{ agnostic_ai_stars }}</span> · {{ t.open_source.creator[lang] | safe }}</p>
-        <p>{{ t.open_source.agnostic_ai[lang] | safe }}</p>
-      </a>
-      <div class="cv-project cv-print-only">
-        <h3>Phel Lang · <span class="cv-star" data-repo="phel-lang/phel-lang">{{ phel_stars }}</span>★</h3>
-        <p>{{ t.open_source.phel_print[lang] | safe }}</p>
-      </div>
-      <div class="cv-project cv-print-only">
-        <h3>bashunit · <span class="cv-star" data-repo="typeddevs/bashunit">{{ bashunit_stars }}</span>★</h3>
-        <p>{{ t.open_source.bashunit_print[lang] | safe }}</p>
-      </div>
-      <div class="cv-project cv-print-only">
-        <h3>agnostic-ai · <span class="cv-star" data-repo="chemaclass/agnostic-ai">{{ agnostic_ai_stars }}</span>★</h3>
-        <p>{{ t.open_source.agnostic_ai_print[lang] | safe }}</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Talks -->
-  <section class="cv-section">
-    <h2><a href="/talks/" class="cv-section__link cv-print-hide"><i class="fa-solid fa-microphone"></i> {{ t.talks.title[lang] | safe }}</a><span class="cv-print-only"><i class="fa-solid fa-microphone"></i> {{ t.talks.title[lang] | safe }}</span></h2>
-    <p class="cv-section__lead">{{ t.talks.lead[lang] | safe }}</p>
-    <ul class="cv-talks">
-      <li>
-        <strong>International PHP Conference</strong>
-        <span>Berlin / Munich · 2022&ndash;2026</span>
-        <em>{{ t.talks.ipc[lang] | safe }}</em>
-      </li>
-      <li>
-        <strong>WeAreDevelopers World Congress</strong>
-        <span>Berlin · 2023</span>
-        <em>Phel Lang, Extreme Programming</em>
-      </li>
-      <li>
-        <strong>PHPers Summit</strong>
-        <span>Poznan · 2023</span>
-        <em>Phel Lang</em>
-      </li>
-      <li>
-        <strong>Code Talks</strong>
-        <span>Hamburg · 2022</span>
-        <em>Update Your Team to be More Extreme</em>
-      </li>
-    </ul>
-  </section>
-
-  <!-- Writing -->
-  <section class="cv-section">
-    <h2><a href="/blog/" class="cv-section__link cv-print-hide"><i class="fa-solid fa-pen-nib"></i> {{ t.writing.title[lang] | safe }}</a><span class="cv-print-only"><i class="fa-solid fa-pen-nib"></i> {{ t.writing.title[lang] | safe }}</span></h2>
-    <p class="cv-section__lead">{{ t.writing.lead[lang] | safe }}</p>
-    <div class="cv-writing-series">
-      <span class="cv-tag"><i class="fa-solid fa-robot"></i> {{ t.writing.series_ai[lang] | safe }}</span>
-      <span class="cv-tag"><i class="fa-solid fa-users"></i> {{ t.writing.series_leadership[lang] | safe }}</span>
-      <span class="cv-tag"><i class="fa-solid fa-hammer"></i> {{ t.writing.series_craftsmanship[lang] | safe }}</span>
-      <span class="cv-tag"><i class="fa-solid fa-bolt"></i> Agile &amp; XP</span>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section class="cv-section">
-    <h2><i class="fa-solid fa-code"></i> {{ t.skills.title[lang] | safe }}</h2>
-    <div class="cv-skills">
-      <div class="cv-skills__group">
-        <h3 class="cv-skills__label">{{ t.skills.languages[lang] | safe }}</h3>
-        <div class="cv-skills__items">
-          <span class="cv-skill"><i class="fa-brands fa-php"></i> PHP</span>
-          <span class="cv-skill"><i class="fa-solid fa-code"></i> TypeScript</span>
-          <span class="cv-skill"><i class="fa-solid fa-terminal"></i> Bash</span>
-          <span class="cv-skill"><i class="fa-brands fa-golang"></i> Go</span>
-          <span class="cv-skill"><i class="fa-solid fa-robot"></i> Claude</span>
+    <div class="cv-section__body">
+      <div class="cv-row cv-print-hide">
+        <div class="cv-row__aside"><span class="cv-row__where">{{ t.products.role[lang] | safe }}</span></div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title"><a href="{% if lang == 'es' %}https://miaforo.com/es{% else %}https://miaforo.com/{% endif %}" target="_blank" rel="noopener">MIAFORO</a></h3>
+          <p>{{ t.products.miaforo[lang] | safe }}</p>
         </div>
       </div>
-      <div class="cv-skills__group">
-        <h3 class="cv-skills__label">{{ t.skills.frameworks[lang] | safe }}</h3>
-        <div class="cv-skills__items">
-          <span class="cv-skill"><i class="fa-brands fa-react"></i> React</span>
-          <span class="cv-skill"><i class="fa-brands fa-laravel"></i> Laravel</span>
-          <span class="cv-skill cv-print-hide"><i class="fa-brands fa-symfony"></i> Symfony</span>
-          <span class="cv-skill"><i class="fa-solid fa-vial"></i> PHPUnit</span>
-          <span class="cv-skill"><i class="fa-solid fa-shield"></i> PHPStan</span>
+      <div class="cv-row cv-print-hide">
+        <div class="cv-row__aside"><span class="cv-row__where">{{ t.products.role[lang] | safe }}</span></div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title"><a href="{% if lang == 'es' %}https://puertafria.es/es{% else %}https://puertafria.es/{% endif %}" target="_blank" rel="noopener">tocadi</a></h3>
+          <p>{{ t.products.tocadi[lang] | safe }}</p>
         </div>
       </div>
-      <div class="cv-skills__group">
-        <h3 class="cv-skills__label">{{ t.skills.data[lang] | safe }}</h3>
-        <div class="cv-skills__items">
-          <span class="cv-skill"><i class="fa-solid fa-database"></i> PostgreSQL</span>
-          <span class="cv-skill"><i class="fa-solid fa-bolt"></i> Redis</span>
-          <span class="cv-skill"><i class="fa-solid fa-layer-group"></i> Prisma</span>
-          <span class="cv-skill cv-print-hide"><i class="fa-solid fa-database"></i> MySQL</span>
-          <span class="cv-skill"><i class="fa-brands fa-docker"></i> Docker</span>
-        </div>
-      </div>
-      <div class="cv-skills__group">
-        <h3 class="cv-skills__label">{{ t.skills.practices[lang] | safe }}</h3>
-        <div class="cv-skills__items">
-          <span class="cv-skill"><i class="fa-solid fa-vial-circle-check"></i> TDD</span>
-          <span class="cv-skill"><i class="fa-solid fa-compass"></i> {{ trans(key="home_skill_leadership", lang=lang) }}</span>
-          <span class="cv-skill"><i class="fa-solid fa-arrows-rotate"></i> XP</span>
-          <span class="cv-skill"><i class="fa-solid fa-people-arrows"></i> Mentoring</span>
-        </div>
+      <div class="cv-print-only cv-print-pair">
+        <div class="cv-project"><h3>MIAFORO</h3><p>{{ t.products.miaforo_print[lang] | safe }}</p></div>
+        <div class="cv-project"><h3>tocadi</h3><p>{{ t.products.tocadi_print[lang] | safe }}</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Education -->
-  <section class="cv-section">
-    <h2><i class="fa-solid fa-graduation-cap"></i> {{ t.education.title[lang] | safe }}</h2>
-    <div class="cv-timeline">
-      <div class="cv-edu">
-        <h3><i class="fa-solid fa-school"></i> CIFP Carlos III</h3>
-        <p class="cv-edu__location">{{ t.places.cartagena[lang] | safe }}</p>
-        <p class="cv-edu__degree">{{ t.education.cifp[lang] | safe }}</p>
-        <span class="cv-job__dates">2013 &ndash; 2014</span>
-        <p class="cv-edu__focus"><i class="fa-brands fa-php"></i> PHP · <i class="fa-solid fa-database"></i> MySQL · <i class="fa-brands fa-js"></i> Javascript</p>
-      </div>
-      <div class="cv-edu">
-        <h3><i class="fa-solid fa-school"></i> IES Ginés Pérez Chirinos</h3>
-        <p class="cv-edu__location">{{ t.places.caravaca[lang] | safe }}</p>
-        <p class="cv-edu__degree">{{ t.education.ies[lang] | safe }}</p>
-        <span class="cv-job__dates">2011 &ndash; 2013</span>
-        <p class="cv-edu__focus"><i class="fa-brands fa-java"></i> Java · <i class="fa-solid fa-database"></i> Oracle SQL · <i class="fa-brands fa-android"></i> Android</p>
-      </div>
+  <section class="cv-section" aria-labelledby="cv-open-source">
+    <div class="cv-section__label">
+      <h2 id="cv-open-source">Open Source</h2>
+      <a class="cv-section__link cv-print-hide" href="https://github.com/Chemaclass" target="_blank" rel="noopener">GitHub</a>
     </div>
-  </section>
-
-  <!-- Certifications -->
-  <section class="cv-section">
-    <h2><i class="fa-solid fa-certificate"></i> {{ t.certifications.title[lang] | safe }}</h2>
-    <div class="cv-timeline">
-      <div class="cv-edu">
-        <h3><i class="fa-solid fa-scroll"></i> <a href="https://www.credential.net/b7210ffc-ffb5-48e0-a829-d5107ba8536f#acc.uRNlvVIU" target="_blank" rel="noopener">Spryker Certified Foundations Developer</a></h3>
-        <span class="cv-job__dates">{{ <month_year date="2021-07-01" lang={lang} /> }}</span>
-      </div>
-      <div class="cv-edu">
-        <h3><i class="fa-solid fa-earth-europe"></i> Erasmus+ Programme</h3>
-        <p class="cv-edu__location">{{ t.certifications.erasmus_location[lang] | safe }}</p>
-        <span class="cv-job__dates">{{ <month_year date="2014-12-01" lang={lang} /> }} &ndash; {{ <month_year date="2015-06-01" lang={lang} /> }}</span>
-        <p class="cv-edu__focus">{{ t.certifications.erasmus_focus[lang] | safe }}</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Awards -->
-  <section class="cv-section">
-    <h2><i class="fa-solid fa-trophy"></i> {{ t.awards.title[lang] | safe }}</h2>
-    <div class="cv-timeline">
-      <div class="cv-edu">
-        <h3><i class="fa-solid fa-trophy"></i> {{ t.awards.bashunit_title[lang] | safe }}</h3>
-        <p class="cv-edu__location">{{ t.awards.issued_by[lang] | safe }} <a href="https://x.com/getmanfred" target="_blank" rel="noopener">Manfred</a> · {{ <month_year date="2023-12-01" lang={lang} /> }}</p>
-        <p class="cv-edu__degree">{{ t.awards.bashunit[lang] | safe }}</p>
-      </div>
-      <div class="cv-edu">
-        <h3><i class="fa-solid fa-medal"></i> {{ t.awards.first_award_title[lang] | safe }}</h3>
-        <p class="cv-edu__location">{{ t.awards.issued_by[lang] | safe }} Fundación Robles Chillida · {{ <month_year date="2013-11-01" lang={lang} /> }}</p>
-        <p class="cv-edu__degree">{{ t.awards.first_award[lang] | safe }}</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Languages -->
-  <section class="cv-section">
-    <h2><i class="fa-solid fa-language"></i> {{ t.languages.title[lang] | safe }}</h2>
-    <div class="cv-languages">
-      <div class="cv-lang" data-level="5">
-        <svg class="cv-flag" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#c60b1e"/><rect y="3.5" width="20" height="7" fill="#ffc400"/></svg>
-        <div class="cv-lang__body">
-          <div class="cv-lang__row">
-            <span class="cv-lang__name">{{ t.languages.spanish[lang] | safe }}</span>
-            <span class="cv-lang__code">C2</span>
-          </div>
-          <span class="cv-lang__level">{{ t.languages.spanish_level[lang] | safe }}</span>
+    <div class="cv-section__body">
+      <div class="cv-row cv-print-hide">
+        <div class="cv-row__aside">
+          <span class="cv-row__dates">★ <span class="cv-star" data-repo="phel-lang/phel-lang">{{ phel_stars }}</span></span>
+          <span class="cv-row__where">{{ t.open_source.core_maintainer[lang] | safe }}</span>
+        </div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title cv-row__title--logo">
+            <svg class="cv-project__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.3 167.7"><path d="M6 66l95 96h36V93l-36-74H42L6 56v106h36l24-35" fill="none" stroke="#512da8" stroke-width="8"/><path d="M137 93l58-3-12-58-32-26h-34l-16 13-23 9-12 22 46 52z" fill="none" stroke="#512da8" stroke-width="8"/><path d="M195 90l-12 57h-13l-2-56m2 56l-13-11h12" fill="none" stroke="#512da8" stroke-width="8"/></svg>
+            <a href="https://phel-lang.org" target="_blank" rel="noopener">Phel Lang</a>
+          </h3>
+          <p>{{ t.open_source.phel[lang] | safe }}</p>
         </div>
       </div>
-      <div class="cv-lang" data-level="4">
-        <svg class="cv-flag" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#012169"/><path d="M0 0l20 14M20 0L0 14" stroke="#fff" stroke-width="2.8"/><path d="M0 0l20 14M20 0L0 14" stroke="#c8102e" stroke-width="1.6"/><path d="M10 0v14M0 7h20" stroke="#fff" stroke-width="4.5"/><path d="M10 0v14M0 7h20" stroke="#c8102e" stroke-width="2.5"/></svg>
-        <div class="cv-lang__body">
-          <div class="cv-lang__row">
-            <span class="cv-lang__name">{{ t.languages.english[lang] | safe }}</span>
-            <span class="cv-lang__code">C1</span>
-          </div>
-          <span class="cv-lang__level">{{ t.languages.english_level[lang] | safe }}</span>
+      <div class="cv-row cv-print-hide">
+        <div class="cv-row__aside">
+          <span class="cv-row__dates">★ <span class="cv-star" data-repo="typeddevs/bashunit">{{ bashunit_stars }}</span></span>
+          <span class="cv-row__where">{{ t.open_source.creator[lang] | safe }}</span>
+        </div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title cv-row__title--logo">
+            <svg class="cv-project__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.8 362.8"><path d="M317.5 0H45.4C20.3 0 0 20.3 0 45.4v272.1c0 25 20.3 45.4 45.4 45.4h272.1c25 0 45.4-20.3 45.4-45.4V45.4C362.8 20.3 342.5 0 317.5 0z" fill="#2e3436"/><path d="M259.3 317.5c11.2-4 21.6-10.1 30.5-17.9 4.9 10.9 15.7 17.9 27.6 17.9h-58.1zM226.8 45.3h-90.7C86 45.3 45.3 86 45.3 136.1v38.3c12.5-34.8 43.9-59.4 80.7-63.3.6-17.5 2.8-35 6.8-52.1a5.68 5.68 0 0 1 4.5-4.3c3.1-.5 6 1.5 6.6 4.6 3 16.8 10.6 32.5 22 45.2 1.6 1.8 2.9 3.9 3.9 6.1h5.4c2.4-21.3 12.9-40.9 29.3-54.6 1.3-1.1 3-1.5 4.6-1.2 3.1.6 5.1 3.5 4.6 6.6-3 16.8-1.2 34.2 5.2 50 .4.9.7 1.9.9 2.9 19.5 7.7 32.3 26.5 32.3 47.5v29.8c0 15.6-12.7 28.3-28.3 28.3h-78c-1.6 0-2.8-1.3-2.8-2.8 0-1.6 1.3-2.8 2.8-2.8h78c12.5 0 22.7-10.2 22.7-22.7v-29.8c0-25-20.3-45.4-45.3-45.4H136c-50.1 0-90.7 40.6-90.7 90.7v19.8c0 50.1 40.6 90.7 90.7 90.7h90.7c50.1 0 90.7-40.6 90.7-90.7v-90.7c.1-50.2-40.5-90.9-90.6-90.9zm-78 119.8c0-13.5 11-24.4 24.5-24.4s24.4 11 24.4 24.5-11 24.4-24.5 24.4c-13.4 0-24.4-11-24.4-24.5z" fill="#eceeee"/><path d="M161.7 108.3c-12.1-13.5-20.2-30.1-23.4-48-4.5 19.5-6.8 39.5-6.8 59.6a17.31 17.31 0 0 0 17.3 17.3 17.31 17.31 0 0 0 17.3-17.3c0-4.4-1.6-8.5-4.4-11.6zm51.5 3.7c-6.3-16.5-8.1-34.3-5-51.7C193.1 73 183.3 91 181 110.6h20.3c4 0 8 .4 11.9 1.4z" fill="#8ae234"/></svg>
+            <a href="https://bashunit.com/" target="_blank" rel="noopener">bashunit</a>
+          </h3>
+          <p>{{ t.open_source.bashunit[lang] | safe }}</p>
+          <p class="cv-row__stack cv-row__award">{{ t.open_source.bashunit_award[lang] | safe }}</p>
         </div>
       </div>
-      <div class="cv-lang" data-level="2">
-        <svg class="cv-flag" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/><rect y="9.33" width="20" height="4.67" fill="#ffcc00"/></svg>
-        <div class="cv-lang__body">
-          <div class="cv-lang__row">
-            <span class="cv-lang__name">{{ t.languages.german[lang] | safe }}</span>
-            <span class="cv-lang__code">B1</span>
-          </div>
-          <span class="cv-lang__level">{{ t.languages.german_level[lang] | safe }}</span>
+      <div class="cv-row cv-print-hide">
+        <div class="cv-row__aside">
+          <span class="cv-row__dates">★ <span class="cv-star" data-repo="chemaclass/agnostic-ai">{{ agnostic_ai_stars }}</span></span>
+          <span class="cv-row__where">{{ t.open_source.creator[lang] | safe }}</span>
+        </div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title cv-row__title--logo">
+            <svg class="cv-project__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#16130f"/><path d="M43 32H50.5M39.78 39.78L45.08 45.08M32 43V50.5M24.22 39.78L18.92 45.08M21 32H13.5M24.22 24.22L18.92 18.92M32 21V13.5M39.78 24.22L45.08 18.92" stroke="#f0a35e" stroke-opacity=".7" stroke-width="3.5" stroke-linecap="round"/><circle cx="32" cy="32" r="8" fill="#f0a35e"/><g fill="#afd282"><circle cx="55" cy="32" r="4.5"/><circle cx="32" cy="55" r="4.5"/><circle cx="9" cy="32" r="4.5"/><circle cx="32" cy="9" r="4.5"/></g><g fill="#f2ede5"><circle cx="48.26" cy="48.26" r="4.5"/><circle cx="15.74" cy="48.26" r="4.5"/><circle cx="15.74" cy="15.74" r="4.5"/><circle cx="48.26" cy="15.74" r="4.5"/></g></svg>
+            <a href="https://agnostic-ai.org/" target="_blank" rel="noopener">agnostic-ai</a>
+          </h3>
+          <p>{{ t.open_source.agnostic_ai[lang] | safe }}</p>
+        </div>
+      </div>
+      <div class="cv-print-only cv-print-trio">
+        <div class="cv-project"><h3>Phel Lang · <span class="cv-star" data-repo="phel-lang/phel-lang">{{ phel_stars }}</span>★</h3><p>{{ t.open_source.phel_print[lang] | safe }}</p></div>
+        <div class="cv-project"><h3>bashunit · <span class="cv-star" data-repo="typeddevs/bashunit">{{ bashunit_stars }}</span>★</h3><p>{{ t.open_source.bashunit_print[lang] | safe }}</p></div>
+        <div class="cv-project"><h3>agnostic-ai · <span class="cv-star" data-repo="chemaclass/agnostic-ai">{{ agnostic_ai_stars }}</span>★</h3><p>{{ t.open_source.agnostic_ai_print[lang] | safe }}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section" aria-labelledby="cv-talks">
+    <div class="cv-section__label">
+      <h2 id="cv-talks">{{ t.talks.title[lang] | safe }}</h2>
+      <p class="cv-section__aside">{{ t.talks.lead[lang] | safe }}</p>
+      <a class="cv-section__link cv-print-hide" href="{% if lang == 'es' %}/es{% endif %}/talks/">{{ t.talks.title[lang] | safe }}</a>
+    </div>
+    <div class="cv-section__body">
+      <ul class="cv-talks">
+        <li class="cv-row">
+          <div class="cv-row__aside"><span class="cv-row__dates">2022 {{ to }} 2026</span><span class="cv-row__where">Berlin / Munich</span></div>
+          <div class="cv-row__main"><h3 class="cv-row__title">International PHP Conference</h3><p>{{ t.talks.ipc[lang] | safe }}</p></div>
+        </li>
+        <li class="cv-row">
+          <div class="cv-row__aside"><span class="cv-row__dates">2023</span><span class="cv-row__where">Berlin</span></div>
+          <div class="cv-row__main"><h3 class="cv-row__title">WeAreDevelopers World Congress</h3><p>Phel Lang, Extreme Programming</p></div>
+        </li>
+        <li class="cv-row">
+          <div class="cv-row__aside"><span class="cv-row__dates">2023</span><span class="cv-row__where">Poznan</span></div>
+          <div class="cv-row__main"><h3 class="cv-row__title">PHPers Summit</h3><p>Phel Lang</p></div>
+        </li>
+        <li class="cv-row">
+          <div class="cv-row__aside"><span class="cv-row__dates">2022</span><span class="cv-row__where">Hamburg</span></div>
+          <div class="cv-row__main"><h3 class="cv-row__title">Code Talks</h3><p>Update Your Team to be More Extreme</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cv-section" aria-labelledby="cv-writing">
+    <div class="cv-section__label">
+      <h2 id="cv-writing">{{ t.writing.title[lang] | safe }}</h2>
+      <a class="cv-section__link cv-print-hide" href="{% if lang == 'es' %}/es{% endif %}/blog/">Blog</a>
+    </div>
+    <div class="cv-section__body cv-section__body--padded">
+      <p class="cv-writing__lead">{{ t.writing.lead[lang] | safe }}</p>
+      <ul class="cv-inline-list">
+        <li>{{ t.writing.series_ai[lang] | safe }}</li>
+        <li>{{ t.writing.series_leadership[lang] | safe }}</li>
+        <li>{{ t.writing.series_craftsmanship[lang] | safe }}</li>
+        <li>Agile &amp; XP</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cv-section" aria-labelledby="cv-skills">
+    <div class="cv-section__label">
+      <h2 id="cv-skills">{{ t.skills.title[lang] | safe }}</h2>
+    </div>
+    <div class="cv-section__body cv-skills">
+      <div class="cv-row cv-skills__group">
+        <div class="cv-row__aside"><h3 class="cv-skills__label">{{ t.skills.languages[lang] | safe }}</h3></div>
+        <ul class="cv-row__main cv-inline-list"><li>PHP</li><li>TypeScript</li><li>Bash</li><li>Go</li><li>Claude</li></ul>
+      </div>
+      <div class="cv-row cv-skills__group">
+        <div class="cv-row__aside"><h3 class="cv-skills__label">{{ t.skills.frameworks[lang] | safe }}</h3></div>
+        <ul class="cv-row__main cv-inline-list"><li>React</li><li>Laravel</li><li class="cv-print-hide">Symfony</li><li>PHPUnit</li><li>PHPStan</li></ul>
+      </div>
+      <div class="cv-row cv-skills__group">
+        <div class="cv-row__aside"><h3 class="cv-skills__label">{{ t.skills.data[lang] | safe }}</h3></div>
+        <ul class="cv-row__main cv-inline-list"><li>PostgreSQL</li><li>Redis</li><li>Prisma</li><li class="cv-print-hide">MySQL</li><li>Docker</li></ul>
+      </div>
+      <div class="cv-row cv-skills__group">
+        <div class="cv-row__aside"><h3 class="cv-skills__label">{{ t.skills.practices[lang] | safe }}</h3></div>
+        <ul class="cv-row__main cv-inline-list"><li>TDD</li><li>{{ trans(key="home_skill_leadership", lang=lang) }}</li><li>XP</li><li>Mentoring</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section cv-section--half" aria-labelledby="cv-education">
+    <div class="cv-section__label">
+      <h2 id="cv-education">{{ t.education.title[lang] | safe }}</h2>
+    </div>
+    <div class="cv-section__body">
+      <div class="cv-row cv-edu">
+        <div class="cv-row__aside"><span class="cv-row__dates">2013 {{ to }} 2014</span><span class="cv-row__where">{{ t.places.cartagena[lang] | safe }}</span></div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">CIFP Carlos III</h3>
+          <p>{{ t.education.cifp[lang] | safe }}</p>
+          <p class="cv-row__stack">PHP · MySQL · Javascript</p>
+        </div>
+      </div>
+      <div class="cv-row cv-edu">
+        <div class="cv-row__aside"><span class="cv-row__dates">2011 {{ to }} 2013</span><span class="cv-row__where">{{ t.places.caravaca[lang] | safe }}</span></div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">IES Ginés Pérez Chirinos</h3>
+          <p>{{ t.education.ies[lang] | safe }}</p>
+          <p class="cv-row__stack">Java · Oracle SQL · Android</p>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="cv-section cv-section--half" aria-labelledby="cv-certifications">
+    <div class="cv-section__label">
+      <h2 id="cv-certifications">{{ t.certifications.title[lang] | safe }}</h2>
+    </div>
+    <div class="cv-section__body">
+      <div class="cv-row cv-edu">
+        <div class="cv-row__aside"><span class="cv-row__dates">{{ <month_year date="2021-07-01" lang={lang} /> }}</span></div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title"><a href="https://www.credential.net/b7210ffc-ffb5-48e0-a829-d5107ba8536f#acc.uRNlvVIU" target="_blank" rel="noopener">Spryker Certified Foundations Developer</a></h3>
+        </div>
+      </div>
+      <div class="cv-row cv-edu">
+        <div class="cv-row__aside"><span class="cv-row__dates">{{ <month_year date="2014-12-01" lang={lang} /> }} {{ to }} {{ <month_year date="2015-06-01" lang={lang} /> }}</span></div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">Erasmus+ Programme</h3>
+          <p>{{ t.certifications.erasmus_location[lang] | safe }}</p>
+          <p class="cv-row__stack">{{ t.certifications.erasmus_focus[lang] | safe }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="cv-section cv-section--half" aria-labelledby="cv-awards">
+    <div class="cv-section__label">
+      <h2 id="cv-awards">{{ t.awards.title[lang] | safe }}</h2>
+    </div>
+    <div class="cv-section__body">
+      <div class="cv-row cv-edu">
+        <div class="cv-row__aside"><span class="cv-row__dates">{{ <month_year date="2023-12-01" lang={lang} /> }}</span><span class="cv-row__where">{{ t.awards.issued_by[lang] | safe }} <a href="https://x.com/getmanfred" target="_blank" rel="noopener">Manfred</a></span></div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">{{ t.awards.bashunit_title[lang] | safe }}</h3>
+          <p>{{ t.awards.bashunit[lang] | safe }}</p>
+        </div>
+      </div>
+      <div class="cv-row cv-edu">
+        <div class="cv-row__aside"><span class="cv-row__dates">{{ <month_year date="2013-11-01" lang={lang} /> }}</span><span class="cv-row__where">{{ t.awards.issued_by[lang] | safe }} Fundación Robles Chillida</span></div>
+        <div class="cv-row__main">
+          <h3 class="cv-row__title">{{ t.awards.first_award_title[lang] | safe }}</h3>
+          <p>{{ t.awards.first_award[lang] | safe }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section cv-section--half" aria-labelledby="cv-languages">
+    <div class="cv-section__label">
+      <h2 id="cv-languages">{{ t.languages.title[lang] | safe }}</h2>
+    </div>
+    <div class="cv-section__body">
+      <ul class="cv-languages">
+        <li class="cv-lang"><span class="cv-lang__name">{{ t.languages.spanish[lang] | safe }}</span> <span class="cv-lang__code">C2</span> <span class="cv-lang__level">{{ t.languages.spanish_level[lang] | safe }}</span></li>
+        <li class="cv-lang"><span class="cv-lang__name">{{ t.languages.english[lang] | safe }}</span> <span class="cv-lang__code">C1</span> <span class="cv-lang__level">{{ t.languages.english_level[lang] | safe }}</span></li>
+        <li class="cv-lang"><span class="cv-lang__name">{{ t.languages.german[lang] | safe }}</span> <span class="cv-lang__code">B1</span> <span class="cv-lang__level">{{ t.languages.german_level[lang] | safe }}</span></li>
+      </ul>
+    </div>
+  </section>
 </article>
 
 <script>
@@ -749,7 +593,7 @@
     var btn = document.createElement('button');
     btn.className = 'cv-rec__inline-toggle';
     btn.type = 'button';
-    btn.innerHTML = '<span>' + labels.more + '</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i>';
+    btn.innerHTML = '<span>' + labels.more + '</span><svg width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     var labelEl = btn.querySelector('span');
     btn.addEventListener('click', function () {
       var expanded = rec.classList.toggle('cv-rec--expanded');

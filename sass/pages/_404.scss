@@ -4,29 +4,39 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 10rem);
-  padding: 1.5rem;
-  gap: 1.5rem;
+  gap: 2rem;
+  padding: clamp(40px, 7vw, 88px) 0 clamp(56px, 8vw, 112px);
 }
 
-// Terminal Window
+.not-found-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+
+  .lead { margin: 0 auto; }
+}
+
+.not-found-noscript {
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
 .terminal-window {
   width: 100%;
   max-width: 42rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--preview-divider-color);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  background: rgba(var(--body-bg-rgb), 0.3);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
 }
 
 .terminal-header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1rem;
-  background: rgba(var(--body-bg-rgb), 0.5);
+  padding: 0.875rem 1.25rem;
   border-bottom: 1px solid var(--preview-divider-color);
 }
 
@@ -39,18 +49,9 @@
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
+  background-color: var(--preview-divider-color);
 
-  &--red {
-    background-color: rgba(239, 68, 68, 0.8);
-  }
-
-  &--yellow {
-    background-color: rgba(234, 179, 8, 0.8);
-  }
-
-  &--green {
-    background-color: rgba(34, 197, 94, 0.8);
-  }
+  &--red { background-color: var(--color-brass); }
 }
 
 .terminal-title {
@@ -60,7 +61,7 @@
 }
 
 .terminal-body {
-  padding: 1rem;
+  padding: 1.25rem;
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   font-size: 0.875rem;
   min-height: 300px;
@@ -68,9 +69,8 @@
   overflow-y: auto;
   cursor: text;
 
-  // Dark scrollbar
   scrollbar-width: thin;
-  scrollbar-color: rgba(128, 128, 128, 0.4) transparent;
+  scrollbar-color: var(--preview-divider-color) transparent;
 
   &::-webkit-scrollbar {
     width: 8px;
@@ -81,11 +81,11 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background: rgba(128, 128, 128, 0.4);
+    background: var(--preview-divider-color);
     border-radius: 4px;
 
     &:hover {
-      background: rgba(128, 128, 128, 0.6);
+      background: var(--color-subtitle);
     }
   }
 }
@@ -183,10 +183,9 @@
     padding: 0.125rem 0.375rem;
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
     font-size: 0.75rem;
-    background: rgba(var(--body-bg-rgb), 0.5);
+    background: var(--surface);
     border: 1px solid var(--preview-divider-color);
     border-radius: 0.25rem;
-    box-shadow: 0 1px 0 var(--preview-divider-color);
   }
 }
 
@@ -201,19 +200,23 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  min-height: 44px;
+  padding: 0.5rem 1.125rem;
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
   font-size: 0.875rem;
   color: var(--body-color);
   text-decoration: none;
   border: 1px solid var(--preview-divider-color);
-  border-radius: 0.375rem;
-  transition: all 0.15s ease;
+  border-radius: var(--radius-pill);
+  transition: border-color 0.15s ease, background 0.15s ease;
 
   &:hover {
-    background: rgba(var(--body-bg-rgb), 0.5);
+    background: var(--surface);
     border-color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
   }
+
+  &:focus-visible { outline: 3px solid var(--accent-color); outline-offset: 3px; }
 }
 
 .terminal-link-key {
@@ -225,7 +228,7 @@
   padding: 0 0.25rem;
   font-size: 0.75rem;
   font-weight: 500;
-  background: rgba(var(--body-bg-rgb), 0.5);
+  background: var(--surface);
   border: 1px solid var(--preview-divider-color);
   border-radius: 0.25rem;
   color: var(--body-color);
@@ -241,11 +244,6 @@
 
 // Responsive
 @media (max-width: $breakpoint-phone) {
-  .not-found-container {
-    padding: 1rem;
-    min-height: calc(100vh - 8rem);
-  }
-
   .terminal-body {
     min-height: 250px;
     font-size: 0.8125rem;
@@ -262,7 +260,7 @@
 
   .terminal-link {
     width: 100%;
-    max-width: 200px;
+    max-width: 260px;
     justify-content: center;
   }
 }

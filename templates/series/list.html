@@ -17,9 +17,11 @@
 
 {% block content %}
 <div class="series-page">
-  <header class="series-page__header">
-    <h1>{{ trans(key="series_title", lang=lang) }}</h1>
-    <p class="series-page__intro">{{ trans(key="series_intro", lang=lang) }}</p>
+  <header class="page-hero">
+    <div class="page-hero__text">
+      <h1 class="display-title">{{ trans(key="series_heading_lead", lang=lang) }} <em>{{ trans(key="series_heading_em", lang=lang) }}</em></h1>
+      <p class="lead">{{ trans(key="series_intro", lang=lang) }}</p>
+    </div>
   </header>
 
   <div class="series-page__list">
@@ -41,7 +43,15 @@
       {% set parts = parts | sort(attribute="extra.series_order") %}
 
       {% if parts | length > 0 %}
-      <article class="series-card">
+      <article class="year-block series-card">
+        <div class="year-block__label">
+          <span class="ordinal">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
+          <h2 class="series-card__title">
+            <a href="{{ entry.permalink }}">{% if lang == "es" and conf.title_es %}{{ conf.title_es }}{% else %}{{ conf.title }}{% endif %}</a>
+          </h2>
+          <span class="year-block__meta">{{ parts | length }} {{ trans(key="posts", lang=lang) }}</span>
+        </div>
+        <div class="year-block__body series-card__inner">
         {# Covers of the first four parts. Decorative: the title next to it is the link. #}
         {% set covers = [p for p in parts if p.extra.static_thumbnail][:4] %}
         {% if covers | length == 4 %}
@@ -67,14 +77,6 @@
         {% endif %}
 
         <div class="series-card__body">
-        <div class="series-card__head">
-          <h2 class="series-card__title">
-            <a href="{{ entry.permalink }}">
-              {% if lang == "es" and conf.title_es %}{{ conf.title_es }}{% else %}{{ conf.title }}{% endif %}
-            </a>
-          </h2>
-          <span class="series-card__count">{{ parts | length }} {{ trans(key="posts", lang=lang) }}</span>
-        </div>
 
         {% if conf.desc %}
           <p class="series-card__desc">
@@ -94,6 +96,7 @@
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </a>
+        </div>
         </div>
       </article>
       {% endif %}

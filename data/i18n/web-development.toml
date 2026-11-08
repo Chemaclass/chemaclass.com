@@ -52,8 +52,8 @@ tocadi.en = "tocadi sales app"
 tocadi.es = "tocadi, app de ventas"
 
 [hero]
-title.en = "Website design for small businesses, live in under a month"
-title.es = "Diseño de páginas web para empresas, online en menos de un mes"
+title.en = "Website design for small businesses, <em>live in under a month</em>"
+title.es = "Diseño de páginas web para empresas, <em>online en menos de un mes</em>"
 lead.en = "Fast, secure websites for small businesses and independent professionals. You talk to me from the first call to the day it goes live. No middlemen."
 lead.es = "Webs rápidas y seguras para empresas y autónomos. Hablas conmigo desde la primera llamada hasta el día que sale online. Sin intermediarios."
 reply_note.en = "I reply within one working day. The first call is free."
@@ -256,8 +256,8 @@ after_a.es = "La web, el dominio y el código son tuyos. Si cambias de proveedor
 [form]
 eyebrow.en = "The next step"
 eyebrow.es = "El siguiente paso"
-title.en = "Tell me what you need"
-title.es = "Cuéntame qué necesitas"
+title.en = "Tell me what <em>you need</em>"
+title.es = "Cuéntame qué <em>necesitas</em>"
 intro.en = "Tell me in a few lines what you have in mind. Within one working day I tell you which option fits and how long it would take. If I need anything to fix the price, I ask."
 intro.es = "Cuéntame en pocas líneas qué tienes en mente. En un día laborable te digo qué opción te encaja y cuánto tardaría. Si me falta algo para cerrar el precio, te lo pregunto."
 free_call.en = "Free initial conversation"
@@ -352,8 +352,8 @@ offer_blog.es = "Una web rápida con blog para publicar noticias, artículos y c
 [thanks]
 eyebrow.en = "Received"
 eyebrow.es = "Recibido"
-title.en = "Thanks, I have it"
-title.es = "Gracias, ya lo tengo"
+title.en = "Thanks, <em>I have it</em>"
+title.es = "Gracias, <em>ya lo tengo</em>"
 lead.en = "I read it and reply within one working day. I tell you which option fits and how long it would take. If I need anything to fix the price, I ask."
 lead.es = "Lo leo y te respondo en un día laborable. Te digo qué opción te encaja y cuánto tardaría. Si me falta algo para cerrar el precio, te lo pregunto."
 aside.en = "Nothing arrives? Check your spam folder, or write to me directly at <a href=\"mailto:web@chemaclass.com\">web@chemaclass.com</a>."

@@ -9,6 +9,8 @@ html {
 
 body {
   box-sizing: border-box;
+  // .full-bleed bands use 100vw, which counts the scrollbar on desktop.
+  overflow-x: clip;
 }
 
 img {

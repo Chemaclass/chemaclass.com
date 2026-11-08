@@ -10,25 +10,31 @@
 
 {% block content %}
 {%- set t = load_data(path="data/i18n/web-development.toml") -%}
+{% set lp = '' %}{% if lang == 'es' %}{% set lp = '/es' %}{% endif %}
 <article class="web-development-sales">
   <section class="sales-hero" id="top">
     <div class="sales-hero__copy">
-      <span class="sales-eyebrow">{{ trans(key='svc_price_from_label', lang=lang) }} {{ trans(key='svc_price_from_simple', lang=lang) }}</span>
-      <h1>{{ t.hero.title[lang] | safe }}</h1>
-      <p class="sales-hero__lead">{{ t.hero.lead[lang] | safe }}</p>
-      <a class="sales-button sales-button--primary" href="#quote" data-quote-cta>
-        {{ t.cta.quote[lang] | safe }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-      </a>
-      <p class="sales-hero__microcopy">{{ t.hero.reply_note[lang] | safe }}</p>
+      <span class="eyebrow">{{ trans(key='svc_web_dev', lang=lang) }} <span class="sales-hero__price">· {{ trans(key='svc_price_from_label', lang=lang) }} {{ trans(key='svc_price_from_simple', lang=lang) }}</span></span>
+      <h1 class="display-title sales-hero__title">{{ t.hero.title[lang] | safe }}</h1>
+      <p class="lead sales-hero__lead">{{ t.hero.lead[lang] | safe }}</p>
+      <div class="sales-hero__actions">
+        <a class="sales-button sales-button--primary sales-hero__cta" href="#quote" data-quote-cta>
+          {{ t.cta.quote[lang] | safe }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <p class="sales-hero__microcopy">{{ t.hero.reply_note[lang] | safe }}</p>
+      </div>
     </div>
 
     <aside class="sales-hero-proof" data-proof-showcase aria-label="{{ t.proof.label[lang] | safe }}">
       <div class="sales-hero-proof__slides" aria-live="polite">
         <article class="sales-hero-proof__slide" data-proof-slide>
+          <div class="sales-browser">
+            <div class="sales-browser__bar" aria-hidden="true"><span></span><span></span><span></span><span class="sales-browser__url">{{ t.link.windmill[lang] | split(pat="/") | nth(n=2) }}</span></div>
+            <a href="{{ t.link.windmill[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_windmill[lang] | safe }}">
+              <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="{{ t.alt.windmill[lang] | safe }}" width="1200" height="750">
+            </a>
+          </div>
           <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
-          <a href="{{ t.link.windmill[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_windmill[lang] | safe }}">
-            <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="{{ t.alt.windmill[lang] | safe }}" width="1200" height="750">
-          </a>
           <blockquote>{{ t.quote.windmill[lang] | safe }}</blockquote>
           <div class="sales-hero-proof__person">
             <img src="/images/testimonials/dirk-windmuehle.webp" alt="" width="36" height="36">
@@ -37,10 +43,13 @@
         </article>
 
         <article class="sales-hero-proof__slide" data-proof-slide hidden>
+          <div class="sales-browser">
+            <div class="sales-browser__bar" aria-hidden="true"><span></span><span></span><span></span><span class="sales-browser__url">{{ t.link.teina[lang] | split(pat="/") | nth(n=2) }}</span></div>
+            <a href="{{ t.link.teina[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_teina[lang] | safe }}">
+              <img src="/images/portfolio/teina-sample.webp" alt="{{ t.alt.teina[lang] | safe }}" loading="lazy" width="1200" height="750">
+            </a>
+          </div>
           <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
-          <a href="{{ t.link.teina[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_teina[lang] | safe }}">
-            <img src="/images/portfolio/teina-sample.webp" alt="{{ t.alt.teina[lang] | safe }}" loading="lazy" width="1200" height="750">
-          </a>
           <blockquote>{{ t.quote.teina[lang] | safe }}</blockquote>
           <div class="sales-hero-proof__person">
             <img src="/images/testimonials/adrian-teina.webp" alt="" loading="lazy" width="36" height="36">
@@ -49,10 +58,13 @@
         </article>
 
         <article class="sales-hero-proof__slide" data-proof-slide hidden>
+          <div class="sales-browser">
+            <div class="sales-browser__bar" aria-hidden="true"><span></span><span></span><span></span><span class="sales-browser__url">{{ t.link.fco[lang] | split(pat="/") | nth(n=2) }}</span></div>
+            <a href="{{ t.link.fco[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_fco[lang] | safe }}">
+              <img src="/images/portfolio/fco-sandoval-gomez-sample.webp" alt="{{ t.alt.fco[lang] | safe }}" loading="lazy" width="1200" height="750">
+            </a>
+          </div>
           <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
-          <a href="{{ t.link.fco[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_fco[lang] | safe }}">
-            <img src="/images/portfolio/fco-sandoval-gomez-sample.webp" alt="{{ t.alt.fco[lang] | safe }}" loading="lazy" width="1200" height="750">
-          </a>
           <blockquote>{{ t.quote.fco[lang] | safe }}</blockquote>
           <div class="sales-hero-proof__person">
             <img src="/images/testimonials/fco-sandoval.webp" alt="" loading="lazy" width="36" height="36">
@@ -61,10 +73,13 @@
         </article>
 
         <article class="sales-hero-proof__slide" data-proof-slide hidden>
+          <div class="sales-browser">
+            <div class="sales-browser__bar" aria-hidden="true"><span></span><span></span><span></span><span class="sales-browser__url">dkrisna.es</span></div>
+            <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_dkrisna[lang] | safe }}">
+              <img src="/images/portfolio/dkrisna-sample.webp" alt="{{ t.alt.dkrisna[lang] | safe }}" loading="lazy" width="1200" height="750">
+            </a>
+          </div>
           <span class="sales-hero-proof__label">{{ t.proof.client_site[lang] | safe }}</span>
-          <a href="https://dkrisna.es" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_dkrisna[lang] | safe }}">
-            <img src="/images/portfolio/dkrisna-sample.webp" alt="{{ t.alt.dkrisna[lang] | safe }}" loading="lazy" width="1200" height="750">
-          </a>
           <p class="sales-hero-proof__summary">{{ t.proof.dkrisna_summary[lang] | safe }}</p>
           <div class="sales-hero-proof__project">
             <span class="sales-hero-proof__mark" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
@@ -72,12 +87,14 @@
           </div>
         </article>
 
-
         <article class="sales-hero-proof__slide" data-proof-slide hidden>
+          <div class="sales-browser">
+            <div class="sales-browser__bar" aria-hidden="true"><span></span><span></span><span></span><span class="sales-browser__url">{{ t.link.miaforo[lang] | split(pat="/") | nth(n=2) }}</span></div>
+            <a href="{{ t.link.miaforo[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_miaforo[lang] | safe }}">
+              <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="{{ t.alt.miaforo[lang] | safe }}" loading="lazy" width="1200" height="750">
+            </a>
+          </div>
           <span class="sales-hero-proof__label">{{ t.proof.own_product[lang] | safe }}</span>
-          <a href="{{ t.link.miaforo[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_miaforo[lang] | safe }}">
-            <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="{{ t.alt.miaforo[lang] | safe }}" loading="lazy" width="1200" height="750">
-          </a>
           <p class="sales-hero-proof__summary">{{ t.proof.miaforo_summary[lang] | safe }}</p>
           <div class="sales-hero-proof__project">
             <span class="sales-hero-proof__mark" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
@@ -86,10 +103,13 @@
         </article>
 
         <article class="sales-hero-proof__slide" data-proof-slide hidden>
+          <div class="sales-browser">
+            <div class="sales-browser__bar" aria-hidden="true"><span></span><span></span><span></span><span class="sales-browser__url">{{ t.link.tocadi[lang] | split(pat="/") | nth(n=2) }}</span></div>
+            <a href="{{ t.link.tocadi[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_tocadi[lang] | safe }}">
+              <img src="/images/portfolio/tocadi-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="{{ t.alt.tocadi[lang] | safe }}" loading="lazy" width="1200" height="750">
+            </a>
+          </div>
           <span class="sales-hero-proof__label">{{ t.proof.own_product[lang] | safe }}</span>
-          <a href="{{ t.link.tocadi[lang] | safe }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.proof.view_tocadi[lang] | safe }}">
-            <img src="/images/portfolio/tocadi-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="{{ t.alt.tocadi[lang] | safe }}" loading="lazy" width="1200" height="750">
-          </a>
           <p class="sales-hero-proof__summary">{{ t.proof.tocadi_summary[lang] | safe }}</p>
           <div class="sales-hero-proof__project">
             <span class="sales-hero-proof__mark" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
@@ -111,57 +131,49 @@
     </aside>
   </section>
 
-  {% set lp = '' %}{% if lang == 'es' %}{% set lp = '/es' %}{% endif %}
-  <div class="sales-trust-strip" aria-label="{{ t.trust.label[lang] | safe }}">
+  <ul class="sales-trust-strip" aria-label="{{ t.trust.label[lang] | safe }}">
     {# The only in-content internal link on the page. Someone about to wire
        four figures to one person can go read who that person is. #}
-    <span><i class="fa-solid fa-user" aria-hidden="true"></i> <a href="{{ lp }}/cv/">{{ t.trust.senior[lang] | safe }}</a></span>
-    <span><i class="fa-solid fa-file" aria-hidden="true"></i> {{ t.trust.fixed_quote[lang] | safe }}</span>
-    <span><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> {{ t.trust.year_one[lang] | safe }}</span>
-    <span><i class="fa-solid fa-code" aria-hidden="true"></i> {{ t.trust.own_code[lang] | safe }}</span>
-  </div>
+    <li><a href="{{ lp }}/cv/">{{ t.trust.senior[lang] | safe }}</a></li>
+    <li>{{ t.trust.fixed_quote[lang] | safe }}</li>
+    <li>{{ t.trust.year_one[lang] | safe }}</li>
+    <li>{{ t.trust.own_code[lang] | safe }}</li>
+  </ul>
 
-
-  <section class="sales-work" id="work" aria-labelledby="work-title">
-    <div class="sales-section-heading">
-      <span class="sales-eyebrow">{{ t.work.eyebrow[lang] | safe }}</span>
+  <section class="sales-section sales-work" id="work" aria-labelledby="work-title">
+    <div class="sales-head">
       <h2 id="work-title">{{ t.work.title[lang] | safe }}</h2>
+      <span class="eyebrow">{{ t.work.eyebrow[lang] | safe }}</span>
     </div>
     <div class="sales-work-grid">
       <article class="sales-work-card">
-        <img src="/images/portfolio/teina-sample.webp" alt="{{ t.alt.teina[lang] | safe }}" loading="lazy" width="1200" height="750">
-        <div class="sales-work-card__body">
-          <span class="sales-work-card__type">{{ t.package.custom[lang] | safe }}</span>
-          <h3>Teína</h3>
-          <p>{{ t.work.teina[lang] | safe }}</p>
-          <a href="{{ t.link.teina[lang] | safe }}" target="_blank" rel="noopener noreferrer">{{ t.work.view[lang] | safe }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-        </div>
+        <img class="sales-work-card__image" src="/images/portfolio/teina-sample.webp" alt="{{ t.alt.teina[lang] | safe }}" loading="lazy" width="1200" height="750">
+        <span class="sales-work-card__type">{{ t.package.custom[lang] | safe }}</span>
+        <h3>Teína</h3>
+        <p>{{ t.work.teina[lang] | safe }}</p>
+        <a class="sales-work-card__link" href="{{ t.link.teina[lang] | safe }}" target="_blank" rel="noopener noreferrer">{{ t.work.view[lang] | safe }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
       </article>
       <article class="sales-work-card">
-        <img src="/images/portfolio/fco-sandoval-gomez-sample.webp" alt="{{ t.alt.fco[lang] | safe }}" loading="lazy" width="1200" height="750">
-        <div class="sales-work-card__body">
-          <span class="sales-work-card__type">{{ t.package.blog[lang] | safe }}</span>
-          <h3>Fco Sandoval Gómez</h3>
-          <p>{{ t.work.fco[lang] | safe }}</p>
-          <a href="{{ t.link.fco[lang] | safe }}" target="_blank" rel="noopener noreferrer">{{ t.work.view[lang] | safe }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-        </div>
+        <img class="sales-work-card__image" src="/images/portfolio/fco-sandoval-gomez-sample.webp" alt="{{ t.alt.fco[lang] | safe }}" loading="lazy" width="1200" height="750">
+        <span class="sales-work-card__type">{{ t.package.blog[lang] | safe }}</span>
+        <h3>Fco Sandoval Gómez</h3>
+        <p>{{ t.work.fco[lang] | safe }}</p>
+        <a class="sales-work-card__link" href="{{ t.link.fco[lang] | safe }}" target="_blank" rel="noopener noreferrer">{{ t.work.view[lang] | safe }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
       </article>
       <article class="sales-work-card">
-        <img src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="{{ t.alt.windmill[lang] | safe }}" loading="lazy" width="1200" height="750">
-        <div class="sales-work-card__body">
-          <span class="sales-work-card__type">{{ t.package.blog[lang] | safe }}</span>
-          <h3>Windmill Tündern</h3>
-          <p>{{ t.work.windmill[lang] | safe }}</p>
-          <a href="{{ t.link.windmill[lang] | safe }}" target="_blank" rel="noopener noreferrer">{{ t.work.view[lang] | safe }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-        </div>
+        <img class="sales-work-card__image" src="/images/portfolio/windmuelle-tuendern-sample.webp" alt="{{ t.alt.windmill[lang] | safe }}" loading="lazy" width="1200" height="750">
+        <span class="sales-work-card__type">{{ t.package.blog[lang] | safe }}</span>
+        <h3>Windmill Tündern</h3>
+        <p>{{ t.work.windmill[lang] | safe }}</p>
+        <a class="sales-work-card__link" href="{{ t.link.windmill[lang] | safe }}" target="_blank" rel="noopener noreferrer">{{ t.work.view[lang] | safe }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
       </article>
     </div>
   </section>
 
-  <section class="sales-testimonials" id="testimonials" aria-labelledby="testimonials-title">
-    <div class="sales-section-heading">
-      <span class="sales-eyebrow">{{ t.testimonials.eyebrow[lang] | safe }}</span>
+  <section class="sales-section sales-testimonials" id="testimonials" aria-labelledby="testimonials-title">
+    <div class="sales-head">
       <h2 id="testimonials-title">{{ t.testimonials.title[lang] | safe }}</h2>
+      <span class="eyebrow">{{ t.testimonials.eyebrow[lang] | safe }}</span>
     </div>
     <div class="sales-testimonial-grid">
       <blockquote class="sales-testimonial">
@@ -188,127 +200,119 @@
     </div>
   </section>
 
-  <section class="sales-offer" id="prices" aria-labelledby="options-title">
-    <div class="sales-section-heading">
-      <span class="sales-eyebrow">{{ t.pricing.eyebrow[lang] | safe }}</span>
-      <h2 id="options-title">{{ t.pricing.title[lang] | safe }}</h2>
-    </div>
+  <section class="sales-offer full-bleed" id="prices" aria-labelledby="options-title">
+    <div class="sales-offer__inner">
+      <div class="sales-offer__head">
+        <span class="eyebrow">{{ t.pricing.eyebrow[lang] | safe }}</span>
+        <h2 id="options-title">{{ t.pricing.title[lang] | safe }}</h2>
+      </div>
 
-    <div class="sales-includes">
-      <h3>{{ t.pricing.includes_title[lang] | safe }}</h3>
-      <ul>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_design[lang] | safe }}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_seo[lang] | safe }}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_https[lang] | safe }}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_speed[lang] | safe }}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_preview[lang] | safe }}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_launch[lang] | safe }}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_year_one[lang] | safe }}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.pricing.includes_code[lang] | safe }}</li>
-      </ul>
-    </div>
-
-    <div class="sales-package-grid">
-      <article class="sales-package sales-package--recommended">
-        <div class="sales-package__topline">
-          <span class="sales-package__icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span>
+      <div class="sales-package-grid">
+        <article class="sales-package sales-package--recommended">
           <span class="sales-package__badge">{{ t.pricing.recommended[lang] | safe }}</span>
-        </div>
-        <h3>{{ t.package.custom[lang] | safe }}</h3>
-        <p class="sales-package__fit">{{ t.pricing.custom_fit[lang] | safe }}</p>
-        <p class="sales-package__price"><span class="sales-package__price-from">{{ trans(key='svc_price_from_label', lang=lang) }}</span> {{ trans(key='svc_price_from_simple', lang=lang) }}</p>
-        <p class="sales-package__price-note">{{ t.pricing.price_note[lang] | safe }}</p>
-        <ul class="sales-package__uses">
-          <li>{{ t.pricing.custom_use_company[lang] | safe }}</li>
-          <li>Landing pages</li>
-          <li>Portfolios</li>
-          <li>{{ t.pricing.custom_use_catalogue[lang] | safe }}</li>
-        </ul>
-        <p class="sales-package__consideration"><strong>{{ t.pricing.updates_label[lang] | safe }}</strong> {{ t.pricing.custom_updates[lang] | safe }}</p>
-        <div class="sales-package__ongoing">
-          <strong>{{ t.pricing.year_two[lang] | safe }}</strong>
-          <span>{% set yearly = config.extra.pricing_static_hosting + config.extra.pricing_domain %}{{ t.pricing.yearly[lang] | replace(from="{price}", to=yearly ~ "") | safe }}</span>
-          <span>{{ t.pricing.care[lang] | replace(from="{price}", to=config.extra.pricing_static_maintenance ~ "") | safe }}</span>
-        </div>
-        <a class="sales-button sales-button--primary sales-button--full" href="#quote" data-quote-cta data-package="{{ t.package.custom[lang] | safe }}">{{ t.cta.quote[lang] | safe }}</a>
-      </article>
+          <h3>{{ t.package.custom[lang] | safe }}</h3>
+          <p class="sales-package__fit">{{ t.pricing.custom_fit[lang] | safe }}</p>
+          <p class="sales-package__price"><span class="sales-package__price-from">{{ trans(key='svc_price_from_label', lang=lang) }}</span> {{ trans(key='svc_price_from_simple', lang=lang) }}</p>
+          <p class="sales-package__price-note">{{ t.pricing.price_note[lang] | safe }}</p>
+          <ul class="sales-package__uses">
+            <li>{{ t.pricing.custom_use_company[lang] | safe }}</li>
+            <li>Landing pages</li>
+            <li>Portfolios</li>
+            <li>{{ t.pricing.custom_use_catalogue[lang] | safe }}</li>
+          </ul>
+          <p class="sales-package__consideration"><strong>{{ t.pricing.updates_label[lang] | safe }}</strong> {{ t.pricing.custom_updates[lang] | safe }}</p>
+          <div class="sales-package__ongoing">
+            <strong>{{ t.pricing.year_two[lang] | safe }}</strong>
+            <span>{% set yearly = config.extra.pricing_static_hosting + config.extra.pricing_domain %}{{ t.pricing.yearly[lang] | replace(from="{price}", to=yearly ~ "") | safe }}</span>
+            <span>{{ t.pricing.care[lang] | replace(from="{price}", to=config.extra.pricing_static_maintenance ~ "") | safe }}</span>
+          </div>
+          <a class="sales-button sales-button--primary sales-button--full" href="#quote" data-quote-cta data-package="{{ t.package.custom[lang] | safe }}">{{ t.cta.quote[lang] | safe }}</a>
+        </article>
 
-      <article class="sales-package">
-        <div class="sales-package__topline">
-          <span class="sales-package__icon sales-package__icon--purple"><i class="fa-solid fa-newspaper" aria-hidden="true"></i></span>
+        <article class="sales-package">
           <span class="sales-package__badge sales-package__badge--neutral">{{ t.pricing.blog_badge[lang] | safe }}</span>
-        </div>
-        <h3>{{ t.package.blog[lang] | safe }}</h3>
-        <p class="sales-package__fit">{{ t.pricing.blog_fit[lang] | safe }}</p>
-        <p class="sales-package__price"><span class="sales-package__price-from">{{ trans(key='svc_price_from_label', lang=lang) }}</span> {{ trans(key='svc_price_from_pro', lang=lang) }}</p>
-        <p class="sales-package__price-note">{{ t.pricing.price_note[lang] | safe }}</p>
-        <ul class="sales-package__uses">
-          <li>{{ t.pricing.blog_use_company[lang] | safe }}</li>
-          <li>{{ t.pricing.blog_use_news[lang] | safe }}</li>
-          <li>{{ t.pricing.blog_use_cases[lang] | safe }}</li>
-          <li>{{ t.pricing.blog_use_portfolio[lang] | safe }}</li>
-        </ul>
-        <p class="sales-package__consideration"><strong>{{ t.pricing.updates_label[lang] | safe }}</strong> {{ t.pricing.blog_updates[lang] | safe }}</p>
-        <div class="sales-package__ongoing">
-          <strong>{{ t.pricing.year_two[lang] | safe }}</strong>
-          <span>{% set yearly = config.extra.pricing_static_hosting + config.extra.pricing_domain %}{{ t.pricing.yearly[lang] | replace(from="{price}", to=yearly ~ "") | safe }}</span>
-          <span>{{ t.pricing.care_pro[lang] | replace(from="{price}", to=config.extra.pricing_static_pro_maintenance ~ "") | safe }}</span>
-        </div>
-        <a class="sales-button sales-button--primary sales-button--full" href="#quote" data-quote-cta data-package="{{ t.package.blog[lang] | safe }}">{{ t.cta.quote[lang] | safe }}</a>
-      </article>
-    </div>
+          <h3>{{ t.package.blog[lang] | safe }}</h3>
+          <p class="sales-package__fit">{{ t.pricing.blog_fit[lang] | safe }}</p>
+          <p class="sales-package__price"><span class="sales-package__price-from">{{ trans(key='svc_price_from_label', lang=lang) }}</span> {{ trans(key='svc_price_from_pro', lang=lang) }}</p>
+          <p class="sales-package__price-note">{{ t.pricing.price_note[lang] | safe }}</p>
+          <ul class="sales-package__uses">
+            <li>{{ t.pricing.blog_use_company[lang] | safe }}</li>
+            <li>{{ t.pricing.blog_use_news[lang] | safe }}</li>
+            <li>{{ t.pricing.blog_use_cases[lang] | safe }}</li>
+            <li>{{ t.pricing.blog_use_portfolio[lang] | safe }}</li>
+          </ul>
+          <p class="sales-package__consideration"><strong>{{ t.pricing.updates_label[lang] | safe }}</strong> {{ t.pricing.blog_updates[lang] | safe }}</p>
+          <div class="sales-package__ongoing">
+            <strong>{{ t.pricing.year_two[lang] | safe }}</strong>
+            <span>{% set yearly = config.extra.pricing_static_hosting + config.extra.pricing_domain %}{{ t.pricing.yearly[lang] | replace(from="{price}", to=yearly ~ "") | safe }}</span>
+            <span>{{ t.pricing.care_pro[lang] | replace(from="{price}", to=config.extra.pricing_static_pro_maintenance ~ "") | safe }}</span>
+          </div>
+          <a class="sales-button sales-button--full" href="#quote" data-quote-cta data-package="{{ t.package.blog[lang] | safe }}">{{ t.cta.quote[lang] | safe }}</a>
+        </article>
+      </div>
 
-    {# Two rows, not six. Pages and languages, publishing, timeline and year two
-       were each already answered by the cards above or the line below, so the
-       block only carries what nothing else on the page does. #}
-    <div class="sales-scope">
-      <h3>{{ t.pricing.scope_title[lang] | safe }}</h3>
-      <dl>
-        <div><dt>{{ t.pricing.scope_content[lang] | safe }}</dt><dd>{{ t.pricing.scope_content_answer[lang] | safe }}</dd></div>
-        <div><dt>{{ t.pricing.scope_revisions[lang] | safe }}</dt><dd>{{ t.pricing.scope_revisions_answer[lang] | safe }}</dd></div>
-      </dl>
-    </div>
+      <div class="sales-offer__details">
+        <div class="sales-includes">
+          <h3>{{ t.pricing.includes_title[lang] | safe }}</h3>
+          <ul>
+            <li>{{ t.pricing.includes_design[lang] | safe }}</li>
+            <li>{{ t.pricing.includes_seo[lang] | safe }}</li>
+            <li>{{ t.pricing.includes_https[lang] | safe }}</li>
+            <li>{{ t.pricing.includes_speed[lang] | safe }}</li>
+            <li>{{ t.pricing.includes_preview[lang] | safe }}</li>
+            <li>{{ t.pricing.includes_launch[lang] | safe }}</li>
+            <li>{{ t.pricing.includes_year_one[lang] | safe }}</li>
+            <li>{{ t.pricing.includes_code[lang] | safe }}</li>
+          </ul>
+        </div>
 
-    <p class="sales-advice"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> <strong>{{ t.pricing.advice_label[lang] | safe }}</strong> {{ t.pricing.advice[lang] | safe }}</p>
-    <p class="sales-price-context">{{ t.pricing.context[lang] | safe }}</p>
-    <p class="sales-payment-methods"><strong>{{ t.pricing.payment_label[lang] | safe }}</strong> {{ t.pricing.payment[lang] | safe }}</p>
+        {# Two rows, not six: everything else is answered by the cards above. #}
+        <div class="sales-scope">
+          <h3>{{ t.pricing.scope_title[lang] | safe }}</h3>
+          <dl>
+            <div><dt>{{ t.pricing.scope_content[lang] | safe }}</dt><dd>{{ t.pricing.scope_content_answer[lang] | safe }}</dd></div>
+            <div><dt>{{ t.pricing.scope_revisions[lang] | safe }}</dt><dd>{{ t.pricing.scope_revisions_answer[lang] | safe }}</dd></div>
+          </dl>
+          <p class="sales-advice"><strong>{{ t.pricing.advice_label[lang] | safe }}</strong> {{ t.pricing.advice[lang] | safe }}</p>
+          <p class="sales-price-context">{{ t.pricing.context[lang] | safe }}</p>
+          <p class="sales-payment-methods"><strong>{{ t.pricing.payment_label[lang] | safe }}</strong> {{ t.pricing.payment[lang] | safe }}</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-
-
-
-  <section class="sales-process" id="process" aria-labelledby="process-title">
-    <div class="sales-section-heading">
-      <span class="sales-eyebrow">{{ t.process.eyebrow[lang] | safe }}</span>
+  <section class="sales-section sales-process" id="process" aria-labelledby="process-title">
+    <div class="sales-head">
       <h2 id="process-title">{{ t.process.title[lang] | safe }}</h2>
+      <span class="eyebrow">{{ t.process.eyebrow[lang] | safe }}</span>
     </div>
     <ol class="sales-process-grid">
       <li>
-        <span>1</span>
+        <span class="ordinal" aria-hidden="true">01</span>
         <h3>{{ t.process.call_title[lang] | safe }}</h3>
         <p>{{ t.process.call[lang] | safe }}</p>
       </li>
       <li>
-        <span>2</span>
+        <span class="ordinal" aria-hidden="true">02</span>
         <h3>{{ t.process.quote_title[lang] | safe }}</h3>
         <p>{{ t.process.quote[lang] | safe }}</p>
       </li>
       <li>
-        <span>3</span>
+        <span class="ordinal" aria-hidden="true">03</span>
         <h3>{{ t.process.build_title[lang] | safe }}</h3>
         <p>{{ t.process.build[lang] | safe }}</p>
       </li>
       <li>
-        <span>4</span>
+        <span class="ordinal" aria-hidden="true">04</span>
         <h3>{{ t.process.launch_title[lang] | safe }}</h3>
         <p>{{ t.process.launch[lang] | safe }}</p>
       </li>
     </ol>
   </section>
 
-  <section class="sales-faq" id="faq" aria-labelledby="faq-title">
-    <div class="sales-section-heading">
-      <span class="sales-eyebrow">{{ t.faq.eyebrow[lang] | safe }}</span>
+  <section class="sales-section sales-faq" id="faq" aria-labelledby="faq-title">
+    <div class="sales-faq__label">
+      <span class="eyebrow">{{ t.faq.eyebrow[lang] | safe }}</span>
       <h2 id="faq-title">{{ t.faq.title[lang] | safe }}</h2>
     </div>
     <div class="sales-faq__list">
@@ -331,15 +335,16 @@
     </div>
   </section>
 
-  <section class="sales-quote" id="quote" aria-labelledby="quote-title">
+  <section class="sales-quote band full-bleed" id="quote" aria-labelledby="quote-title">
+    <div class="sales-quote__inner">
     <div class="sales-quote__copy">
-      <span class="sales-eyebrow">{{ t.form.eyebrow[lang] | safe }}</span>
+      <span class="eyebrow">{{ t.form.eyebrow[lang] | safe }}</span>
       <h2 id="quote-title">{{ t.form.title[lang] | safe }}</h2>
       <p>{{ t.form.intro[lang] | safe }}</p>
       <ul>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.form.free_call[lang] | safe }}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.form.no_commitment[lang] | safe }}</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> {{ t.form.fixed_quote[lang] | safe }}</li>
+        <li>{{ t.form.free_call[lang] | safe }}</li>
+        <li>{{ t.form.no_commitment[lang] | safe }}</li>
+        <li>{{ t.form.fixed_quote[lang] | safe }}</li>
       </ul>
     </div>
     <form class="sales-quote-form" action="https://api.web3forms.com/submit" method="post" data-quote-form data-quote-key="{{ config.extra.web3forms_key }}" data-quote-thanks="{{ lp }}/services/web-development-thanks/">
@@ -391,46 +396,37 @@
       <p class="sales-quote-form__note"><i class="fa-solid fa-lock" aria-hidden="true"></i> {{ t.form.privacy[lang] | safe }}</p>
       <p class="sales-quote-form__alternative">{{ t.form.direct[lang] | safe }} <a href="mailto:web@chemaclass.com">web@chemaclass.com</a></p>
     </form>
+    </div>
   </section>
 
-  <section class="sales-capability" id="web-apps" aria-labelledby="capability-title">
-    <div class="sales-section-heading">
-      <span class="sales-eyebrow">{{ t.apps.eyebrow[lang] | safe }}</span>
+  <section class="sales-section sales-capability" id="web-apps" aria-labelledby="capability-title">
+    <div class="sales-head">
       <h2 id="capability-title">{{ t.apps.title[lang] | safe }}</h2>
-      <p>{{ t.apps.intro[lang] | safe }}</p>
+      <span class="eyebrow">{{ t.apps.eyebrow[lang] | safe }}</span>
     </div>
+    <p class="sales-capability__intro">{{ t.apps.intro[lang] | safe }}</p>
     <div class="sales-app-grid">
       <a class="sales-app-card sales-app-card--focus-center" href="{{ t.link.miaforo[lang] | safe }}" target="_blank" rel="noopener noreferrer">
         <img src="/images/portfolio/miaforo-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="{{ t.alt.miaforo[lang] | safe }}" loading="lazy" width="1200" height="750">
-        <div class="sales-app-card__body">
-          <div class="sales-app-card__topline">
-            <span>{{ t.apps.type[lang] | safe }}</span>
-            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-          </div>
-          <h3>MIAFORO</h3>
-          <p>{{ t.apps.miaforo[lang] | safe }}</p>
-          <div class="sales-app-card__features">
-            <span><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> {{ t.apps.tag_bookings[lang] | safe }}</span>
-            <span><i class="fa-solid fa-users" aria-hidden="true"></i> {{ t.apps.tag_members[lang] | safe }}</span>
-            <span><i class="fa-solid fa-chart-simple" aria-hidden="true"></i> Panel</span>
-          </div>
-        </div>
+        <span class="sales-app-card__type">{{ t.apps.type[lang] | safe }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+        <h3>MIAFORO</h3>
+        <p>{{ t.apps.miaforo[lang] | safe }}</p>
+        <span class="sales-app-card__features">
+          <span>{{ t.apps.tag_bookings[lang] | safe }}</span>
+          <span>{{ t.apps.tag_members[lang] | safe }}</span>
+          <span>Panel</span>
+        </span>
       </a>
       <a class="sales-app-card sales-app-card--crop-left" href="{{ t.link.tocadi[lang] | safe }}" target="_blank" rel="noopener noreferrer">
         <img src="/images/portfolio/tocadi-sample{% if lang == 'es' %}.es{% endif %}.webp" alt="{{ t.alt.tocadi[lang] | safe }}" loading="lazy" width="1200" height="750">
-        <div class="sales-app-card__body">
-          <div class="sales-app-card__topline">
-            <span>{{ t.apps.type[lang] | safe }}</span>
-            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-          </div>
-          <h3>tocadi</h3>
-          <p>{{ t.apps.tocadi[lang] | safe }}</p>
-          <div class="sales-app-card__features">
-            <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> {{ t.apps.tag_funnels[lang] | safe }}</span>
-            <span><i class="fa-solid fa-file" aria-hidden="true"></i> CSV</span>
-            <span><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> {{ t.apps.tag_mobile[lang] | safe }}</span>
-          </div>
-        </div>
+        <span class="sales-app-card__type">{{ t.apps.type[lang] | safe }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+        <h3>tocadi</h3>
+        <p>{{ t.apps.tocadi[lang] | safe }}</p>
+        <span class="sales-app-card__features">
+          <span>{{ t.apps.tag_funnels[lang] | safe }}</span>
+          <span>CSV</span>
+          <span>{{ t.apps.tag_mobile[lang] | safe }}</span>
+        </span>
       </a>
     </div>
   </section>

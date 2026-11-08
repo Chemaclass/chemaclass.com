@@ -14,33 +14,62 @@
 {% endblock posthead %}
 
 {% block content %}
+  {% if paginator is defined %}{% set shelf_pages = paginator.pages %}{% else %}{% set shelf_pages = section.pages %}{% endif %}
+  {% set pinned_posts = [p for p in section.pages if p.extra.pin] %}
+  {% set show_pinned = true %}
+  {% if paginator is defined and paginator.current_index != 1 %}{% set show_pinned = false %}{% endif %}
+
+  {% set_global seen_years = [] %}
+  {% for post in shelf_pages %}
+    {% if post not in pinned_posts and post.year not in seen_years %}
+      {% set_global seen_years = [...seen_years, post.year] %}
+    {% endif %}
+  {% endfor %}
+
   <div class="readings-index">
-    <div class="readings-header collection-intro">
-      <h1>{{ trans(key="readings_title", lang=lang) }}</h1>
-      <p class="readings-intro">{{ trans(key="readings_intro", lang=lang) }}</p>
+    <header class="page-hero">
+      <div class="page-hero__text">
+        <span class="eyebrow">{{ trans(key="readings_eyebrow", lang=lang) | replace(from="{n}", to=(section.pages | length) ~ "") }}</span>
+        <h1 class="display-title">{{ trans(key="readings_heading_lead", lang=lang) }} <em>{{ trans(key="readings_heading_em", lang=lang) }}</em></h1>
+        <p class="lead">{{ trans(key="readings_intro", lang=lang) }}</p>
+      </div>
+    </header>
+
+    <div class="blog-list">
+      {% if show_pinned and pinned_posts | length > 0 %}
+      <section class="year-block">
+        <div class="year-block__label">
+          <h2 class="year-block__year year-block__year--text">{{ trans(key="pinned", lang=lang) }}</h2>
+        </div>
+        <div class="year-block__body shelf">
+          {% for post in pinned_posts %}
+            {% include "readings/_book.html" %}
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      {% for year in seen_years %}
+        {% set year_count = [p for p in section.pages if p.year == year] | length %}
+        <section class="year-block" id="year-{{ year }}">
+          <div class="year-block__label">
+            <h2 class="year-block__year">{{ year }}</h2>
+            <span class="year-block__meta">{{ year_count }} {% if year_count == 1 %}{{ trans(key="readings_book", lang=lang) }}{% else %}{{ trans(key="readings_books", lang=lang) }}{% endif %}</span>
+          </div>
+          <div class="year-block__body shelf">
+            {% for post in shelf_pages %}
+              {% if post.year == year and post not in pinned_posts %}
+                {% include "readings/_book.html" %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </section>
+      {% endfor %}
     </div>
 
-  {% set pinned_posts = [p for p in section.pages if p.extra.pin] %}
-
-  <div class="blog-list">
-    {# Pinned items belong to the whole collection, so only surface them on page 1 #}
-    {% if paginator.current_index == 1 %}
-      {% for post in pinned_posts %}
-        {{ <content_card post={post} pinned={true} lang={lang} /> }}
-      {% endfor %}
+    {% if paginator is defined %}
+      {{ <pagination_nav paginator={paginator} lang={lang} /> }}
     {% endif %}
-
-    {% for post in paginator.pages %}
-      {% if post not in pinned_posts %}
-        {{ <content_card post={post} lang={lang} /> }}
-      {% endif %}
-    {% endfor %}
+    {% include "partials/hire-cta.html" %}
   </div>
-
-  {{ <pagination_nav paginator={paginator} lang={lang} /> }}
-  {% include "partials/hire-cta.html" %}
-  </div>
-
-
 {% endblock content %}
-
