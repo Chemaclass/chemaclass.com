@@ -18,42 +18,45 @@ html[color-theme=light] #light-mode {
 }
 
 
-// Scroll to top button
+// Scroll to top button: same quiet pill as the search trigger.
 #scroll-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 24px;
+  right: 24px;
   z-index: 1000;
-  border-radius: 9999px;
-  border: 2px solid var(--body-color);
-  width: 44px;
-  height: 44px;
   display: grid;
   place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--preview-divider-color);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--color-subtitle);
+  box-shadow: var(--shadow-sm);
   cursor: pointer;
-  background-color: var(--body-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  opacity: 0.9;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.4s var(--ease-out-expo), opacity 0.4s var(--ease-out-expo);
 
   &:hover {
-    opacity: 1;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
   }
 
-  svg {
-    width: 20px;
-    height: 20px;
+  &:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
   }
 
   &.hidden {
-    transform: translateY(150%);
-    transition: transform 0.5s ease-out;
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
   }
 
   &.show {
+    opacity: 1;
     transform: translateY(0);
-    transition: transform 0.5s ease-in;
   }
-
 }
 
 // Shared actions for the homepage, service pages, and contextual service links.
