@@ -1,0 +1,219 @@
+// Shared building blocks of the editorial design. Page partials compose these
+// instead of restyling the same eyebrow, title or section rule each time.
+
+// Small uppercase label above a title.
+.eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-subtitle);
+  line-height: 1.4;
+
+  &--brass { color: var(--color-brass-text); font-weight: 600; }
+}
+
+// Page title. One word in <em> takes the navy italic.
+.display-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(3rem, 1.6rem + 5.2vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  margin: 0;
+  color: var(--heading-color);
+
+  em {
+    font-style: italic;
+    color: var(--accent-color);
+  }
+}
+
+.lead {
+  font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--color-subtitle);
+  margin: 0;
+  max-width: 40em;
+}
+
+// Top of a listing or landing page: eyebrow, title, lead, optional aside.
+.page-hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem 4rem;
+  padding: clamp(48px, 7vw, 96px) 0 clamp(40px, 5vw, 64px);
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 760px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+// Section heading on a strong rule, with an optional link or note on the right.
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  border-top: 1px solid var(--rule-strong);
+  padding-top: 1.25rem;
+  margin-bottom: clamp(24px, 3vw, 40px);
+
+  h2 {
+    margin: 0;
+    font-size: clamp(1.625rem, 1.3rem + 1vw, 1.875rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+
+  &__aside {
+    font-size: 0.9375rem;
+    color: var(--color-subtitle);
+  }
+
+  &__link {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    white-space: nowrap;
+  }
+}
+
+// Year (or label) in a wide left margin, content on the right. Stacks on
+// tablets and phones.
+.year-block {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 0 64px;
+  margin-bottom: clamp(56px, 7vw, 96px);
+
+  &__label {
+    border-top: 1px solid var(--rule-strong);
+    padding-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  &__year {
+    font-family: var(--font-display);
+    font-size: clamp(2.75rem, 2rem + 2.4vw, 4rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--heading-color);
+    margin: 0;
+  }
+
+  &__meta {
+    font-size: 0.9375rem;
+    color: var(--color-subtitle);
+  }
+
+  &__body {
+    border-top: 1px solid var(--rule-strong);
+    min-width: 0;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: minmax(0, 1fr);
+
+    &__label {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      padding-bottom: 0.5rem;
+    }
+
+    &__body { border-top: none; }
+  }
+}
+
+// Italic brass number: 01, 02, 03.
+.ordinal {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--color-brass-text);
+}
+
+// White sheet on the fog background.
+.sheet {
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-md);
+}
+
+// Rounded filter or tag pill.
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 40px;
+  padding: 0.5rem 1.125rem;
+  border: 1px solid var(--preview-divider-color);
+  border-radius: var(--radius-pill);
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  color: var(--body-color);
+  background: transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    border-color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+  }
+
+  &--active,
+  &[aria-current],
+  &[aria-pressed="true"] {
+    background: var(--heading-color);
+    border-color: var(--heading-color);
+    color: var(--body-bg);
+    font-weight: 500;
+  }
+}
+
+// A section that runs edge to edge inside <main>'s centred column.
+.full-bleed {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+}
+
+// Navy band. Text inside is light in both themes.
+.band {
+  background: var(--band-bg);
+  color: #ffffff;
+
+  h2, h3 { color: #ffffff; }
+  em { color: var(--color-brass-on-accent); font-style: italic; }
+  p, .band__muted { color: var(--color-on-accent-muted); }
+}
+
+// Book cover with a spine-like corner and a soft shadow.
+.book-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 3px 8px 8px 3px;
+  box-shadow: var(--shadow-book);
+  outline: none;
+}
