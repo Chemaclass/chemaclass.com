@@ -249,3 +249,14 @@
 [data-toc-open="true"] .toc-mobile-toggle__chevron {
   transform: rotate(180deg);
 }
+
+// Beside the TOC: the layout matches the cover's width, so the TOC starts under
+// its left edge and the text ends under its right edge.
+@media (min-width: 1025px) {
+  .blog-post-layout {
+    max-width: 1040px;
+    margin: 0 auto;
+    grid-template-columns: minmax(160px, 200px) minmax(0, 1fr);
+    column-gap: 48px;
+  }
+}
