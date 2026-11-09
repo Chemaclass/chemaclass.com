@@ -21,7 +21,6 @@ window.addEventListener('load', function () {
     //////////////////////////
     const $navbar = document.querySelector('.site-header') || document.querySelector('header');
     const $toc = document.getElementById('toc-container');
-    const isTOCHidden = () => (!$toc || $toc.dataset.hideToc === 'true');
 
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
@@ -33,7 +32,7 @@ window.addEventListener('load', function () {
             }
             $scrollToTop.classList.remove('show');
             $scrollToTop.classList.add('hidden');
-            if (!isTOCHidden() && $toc) $toc.classList.remove('toc-top');
+            if ($toc) $toc.classList.remove('toc-top');
         } else if (currentScrollY > lastScrollY) {
             // Scrolling down - navbar hides, TOC moves to top
             if ($navbar) {
@@ -42,7 +41,7 @@ window.addEventListener('load', function () {
             }
             $scrollToTop.classList.remove('show');
             $scrollToTop.classList.add('hidden');
-            if (!isTOCHidden() && $toc) {
+            if ($toc) {
                 $toc.classList.add('toc-top');
                 $toc.classList.remove('toc-navbar-visible');
             }
@@ -54,7 +53,7 @@ window.addEventListener('load', function () {
             }
             $scrollToTop.classList.remove('hidden');
             $scrollToTop.classList.add('show');
-            if (!isTOCHidden() && $toc) {
+            if ($toc) {
                 $toc.classList.add('toc-top');
                 $toc.classList.add('toc-navbar-visible');
             }

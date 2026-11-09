@@ -2,7 +2,7 @@
 //
 // The list itself is rendered at build time by templates/partials/toc.html, so it
 // is on screen with the first paint. This file only adds what needs a browser:
-// scroll spy, the show/hide toggle and its preference, keyboard navigation, and
+// scroll spy, keyboard navigation, and
 // the copy-link anchors on the headings.
 (function() {
   'use strict';
@@ -15,50 +15,11 @@
     offset: 200
   };
 
-  const tocToggle = document.getElementById('toc-toggle');
-  const tocLayout = document.querySelector('.blog-post-layout');
   const copyLinkLabel = document.body.dataset.copyLinkLabel || 'Copy link';
   const copyLinkFailedLabel = document.body.dataset.copyLinkFailedLabel || 'Could not copy the link';
   const sectionLinkLabel = document.body.dataset.sectionLinkLabel || 'Link to this section';
-  const tocPrefKey = 'tocHiddenPreference';
   const compactMediaQuery = window.matchMedia('(max-width: 1024px)');
   let tocContainerRef = null;
-
-  function getSavedPreference() {
-    try {
-      const saved = localStorage.getItem(tocPrefKey);
-      // Default to showing TOC (full-width reading OFF) when no preference saved
-      if (saved === null) return false;
-      return saved === 'true';
-    } catch (e) {
-      return false;
-    }
-  }
-
-  function setTOCState(hidden, persist = true) {
-    if (!tocContainerRef) return;
-    tocContainerRef.dataset.hideToc = hidden ? 'true' : 'false';
-    if (tocLayout) {
-      tocLayout.dataset.tocHidden = hidden ? 'true' : 'false';
-    }
-    if (tocToggle) {
-      // Toggle switch: aria-checked="true" means TOC is visible
-      tocToggle.setAttribute('aria-checked', hidden ? 'false' : 'true');
-    }
-    if (persist) {
-      try {
-        localStorage.setItem(tocPrefKey, hidden ? 'true' : 'false');
-      } catch (e) {
-        // ignore
-      }
-    }
-  }
-
-  function hideToggle() {
-    if (tocToggle) {
-      tocToggle.classList.add('toc-toggle--hidden');
-    }
-  }
 
   function scrollToId(id) {
     const target = document.getElementById(id);
@@ -269,16 +230,10 @@
     tocContainerRef = document.querySelector(CONFIG.tocContainer);
 
     // Too few headings to be worth a panel: the template rendered none.
-    if (!tocContainerRef) {
-      hideToggle();
-      return;
-    }
+    if (!tocContainerRef) return;
 
-    // Narrow screens show the panel as a collapsed disclosure above the article,
-    // so the desktop show/hide switch does not apply, but the links still do.
+    // Narrow screens show the panel as a collapsed disclosure above the article.
     if (compactMediaQuery.matches) {
-      setTOCState(false, false);
-      hideToggle();
       bindTOCLinks();
       bindMobileToggle();
       return;
@@ -292,23 +247,6 @@
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
         history.pushState(null, null, window.location.pathname);
-      });
-    }
-
-    const tocCloseButton = tocContainerRef.querySelector('.toc-close');
-    if (tocCloseButton) {
-      tocCloseButton.addEventListener('click', () => setTOCState(true));
-    }
-
-    // Restore saved preference
-    setTOCState(getSavedPreference(), false);
-
-    // Toggle button
-    if (tocToggle) {
-      tocToggle.classList.remove('toc-toggle--hidden');
-      tocToggle.addEventListener('click', () => {
-        const currentlyHidden = tocContainerRef.dataset.hideToc === 'true';
-        setTOCState(!currentlyHidden);
       });
     }
 
@@ -338,18 +276,6 @@
       }
     }, { passive: true });
 
-    // Keyboard shortcut: 'T' to toggle TOC
-    document.addEventListener('keydown', (e) => {
-      // Ignore if typing in input/textarea or using modifier keys
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
-      if (e.metaKey || e.ctrlKey || e.altKey) return;
-
-      if (e.key === 't' || e.key === 'T') {
-        e.preventDefault();
-        const currentlyHidden = tocContainerRef.dataset.hideToc === 'true';
-        setTOCState(!currentlyHidden);
-      }
-    });
 
     // Initial updates
     updateActiveSection();

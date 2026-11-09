@@ -4,7 +4,7 @@ description = "Book summaries and notes on software craftsmanship, psychology, p
 template = "readings/index.html"
 page_template = "readings/post.html"
 sort_by = "date"
-paginate_by = 20
+aliases = ["/readings/page/1/", "/readings/page/2/", "/readings/page/3/", "/readings/page/4/", "/readings/page/5/"]
 +++
 
 # Readings

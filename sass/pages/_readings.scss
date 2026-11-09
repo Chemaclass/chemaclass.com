@@ -26,8 +26,11 @@
   }
 
   &:hover .book-cover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
   }
+
+  &:hover .blog-card__title { color: var(--accent-color); }
 
   .blog-card__content {
     padding-top: 1rem;
@@ -52,6 +55,16 @@
 
     &:empty { display: none; }
   }
+
+  .blog-card__more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--accent-color);
+  }
+
+  &:hover .blog-card__more { text-decoration: underline; text-underline-offset: 3px; }
 }
 
 .reading-post {

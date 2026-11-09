@@ -14,7 +14,7 @@
 {% endblock posthead %}
 
 {% block content %}
-  <div class="blog-post-layout" data-toc-hidden="false">
+  <div class="blog-post-layout">
     {% include "partials/toc.html" %}
 
     <div class="blog-post-main">
@@ -26,7 +26,6 @@
             {{ <back_arrow /> }}
             {{ section.title | split(pat=" | ") | first }}
           </a>
-          {{ <toc_toggle lang={lang} /> }}
         </div>
 
         <!-- Chapter header -->

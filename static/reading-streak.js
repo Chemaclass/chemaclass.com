@@ -29,7 +29,6 @@
 //     namespaced under 'chemaclass:', and uses the RAW pathname (trailing
 //     slash kept, original case), so its keys never match the two maps above.
 //     profile.js export/import/reset does not cover it.
-//   'tocHiddenPreference' (toc.js) is the string 'true' | 'false'.
 //   'theme' ('dark' | 'light', the only one read) and 'preference-theme'
 //     ('theme-dark' | 'theme-light', written by base.html but never read).
 // ---------------------------------------------------------------------------

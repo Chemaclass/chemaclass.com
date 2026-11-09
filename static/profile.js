@@ -21,16 +21,13 @@
   // #profile-data is a <script type="application/json"> that templates/profile.html
   // writes at build time, so it either parses for every visitor or for none: a
   // failure here is a template bug, not a runtime condition. The empty
-  // { posts: [], series: {}, lang: 'en' } fallback this replaces turned that bug
+  // { posts: [], lang: 'en' } fallback this replaces turned that bug
   // into a dashboard that told the reader they had finished nothing and read it
   // back to them in English. Let the SyntaxError reach the console instead.
   var parsed = JSON.parse(dataEl.textContent);
 
-  // Shape check on top of the parse: a payload that parsed but lacks `series`
-  // still threw further down, which looked identical to this page never loading.
   var payload = {
     posts: Array.isArray(parsed.posts) ? parsed.posts : [],
-    series: (parsed.series && typeof parsed.series === 'object') ? parsed.series : {},
     lang: parsed.lang === 'es' ? 'es' : 'en'
   };
 
@@ -40,13 +37,6 @@
   // Tiny i18n dictionary, kept in JS so we don't pollute config.toml for a
   // single page. Keep strings short and sober.
   var t = es ? {
-    overall: 'Progreso general',
-    overallHint: 'Posts que has terminado en todo el sitio.',
-    blog: 'Blog',
-    readings: 'Lecturas',
-    bySeries: 'Por series',
-    bySeriesHint: 'Progreso a través de cada serie de posts relacionados.',
-    byTag: 'Por temas',
     recent: 'Leídos recientemente',
     recentHint: 'Los últimos 5 posts que terminaste.',
     favorites: 'Guardados',
@@ -59,26 +49,12 @@
     import: 'Importar',
     importInvalid: 'Archivo no válido. Esperaba un export del perfil.',
     importDone: 'Importado: {read} leídos y {favs} guardados añadidos.',
-    of: 'de',
-    posts: 'posts',
-    read: 'leídos',
-    pct: '%',
     remove: 'Quitar',
     doneOn: 'Marcado el',
     savedOn: 'Guardado el',
-    noSeries: 'Sin series aún.',
-    topTags: 'Etiquetas que más lees',
-    noTags: 'Cuando marques posts como leídos, sus etiquetas aparecerán aquí.',
     dataLocal: 'Todos tus datos están en este navegador. Puedes exportarlos, importarlos o borrarlos.',
     tools: 'Herramientas'
   } : {
-    overall: 'Overall progress',
-    overallHint: "Posts you've finished across the site.",
-    blog: 'Blog',
-    readings: 'Readings',
-    bySeries: 'By series',
-    bySeriesHint: 'Progress through each series of related posts.',
-    byTag: 'By topic',
     recent: 'Recently read',
     recentHint: 'The last 5 posts you finished.',
     favorites: 'Saved',
@@ -91,16 +67,9 @@
     import: 'Import',
     importInvalid: 'Invalid file. Expected a profile export.',
     importDone: 'Imported: {read} read and {favs} saved added.',
-    of: 'of',
-    posts: 'posts',
-    read: 'read',
-    pct: '%',
     remove: 'Remove',
     doneOn: 'Marked on',
     savedOn: 'Saved on',
-    noSeries: 'No series yet.',
-    topTags: 'Tags you read most',
-    noTags: 'As you mark posts as read, their tags will show up here.',
     dataLocal: 'All your data lives in this browser. You can export, import, or clear it.',
     tools: 'Tools'
   };
@@ -161,13 +130,7 @@
   }
 
   // Build a path→post index for cross-referencing localStorage keys.
-  // Only posts that got a _key here are kept: render() reads p._key on every
-  // post, and a record whose permalink did not parse left it undefined, so a
-  // single bad entry threw on p._key.indexOf() before the first card was built
-  // and the page sat on its loading skeleton forever. Same for `section`, which
-  // indexes a fixed pair of buckets below.
   var rawPosts = Array.isArray(payload.posts) ? payload.posts : [];
-  var posts = [];
   var byPath = {};
   for (var i = 0; i < rawPosts.length; i++) {
     var p = rawPosts[i];
@@ -176,12 +139,9 @@
     // Every permalink comes from the same `{{ post.permalink }}` in
     // templates/profile.html and Zola always renders it absolute, so new URL
     // either works for all of them or for none. Skipping the odd one silently
-    // dropped a post out of the progress totals and showed the reader a
-    // percentage that was simply wrong, so let a broken permalink throw.
+    // dropped a post from the lists below, so let a broken permalink throw.
     var key = normalize(new URL(p.permalink).pathname);
-    p._key = key;
     byPath[key] = p;
-    posts.push(p);
   }
 
   function el(tag, cls, html) {
@@ -198,10 +158,6 @@
     return d.toLocaleDateString(es ? 'es-ES' : 'en-US', {
       year: 'numeric', month: 'short', day: 'numeric'
     });
-  }
-
-  function pct(done, total) {
-    return total > 0 ? Math.round((done / total) * 100) : 0;
   }
 
   function escapeHTML(s) {
@@ -229,161 +185,11 @@
     var read = loadJSON(READ_KEY);
     var favs = loadJSON(FAV_KEY);
 
-    // Only count posts in this language. A post's URL starts with /es/ in
-    // Spanish, and without the prefix in English.
-    var sectionPosts = { blog: [], readings: [] };
-    for (var i = 0; i < posts.length; i++) {
-      var p = posts[i];
-      var inEs = p._key.indexOf('/es/') === 0;
-      if ((es && !inEs) || (!es && inEs)) continue;
-      sectionPosts[p.section].push(p);
-    }
-
     root.innerHTML = '';
 
-    root.appendChild(renderOverall(sectionPosts, read));
-    root.appendChild(renderSeries(sectionPosts, read));
-    root.appendChild(renderTags(sectionPosts, read));
     root.appendChild(renderRecent(read));
     root.appendChild(renderFavorites(favs));
     root.appendChild(renderTools(read, favs));
-  }
-
-  function renderOverall(sectionPosts, read) {
-    var section = el('section', 'profile-card profile-overall');
-    section.appendChild(el('h2', 'profile-card__title',
-      iconSVG('M22 11.08V12a10 10 0 11-5.93-9.14 M22 4L12 14.01l-3-3') + escapeHTML(t.overall)));
-    section.appendChild(el('p', 'profile-card__hint', escapeHTML(t.overallHint)));
-
-    var grid = el('div', 'profile-overall__grid');
-
-    var prefix = es ? '/es' : '';
-    [
-      ['blog', t.blog, prefix + '/blog/'],
-      ['readings', t.readings, prefix + '/readings/']
-    ].forEach(function (pair) {
-      var key = pair[0], label = pair[1], href = pair[2];
-      var list = sectionPosts[key];
-      var total = list.length;
-      var done = 0;
-      for (var j = 0; j < list.length; j++) {
-        if (read[list[j]._key]) done++;
-      }
-      var p = pct(done, total);
-
-      var tile = document.createElement('a');
-      tile.className = 'profile-tile';
-      tile.href = href;
-      tile.style.setProperty('--profile-pct', p + '%');
-      tile.innerHTML =
-        '<div class="profile-tile__head">' +
-          '<span class="profile-tile__label">' + escapeHTML(label) + '</span>' +
-          '<span class="profile-tile__pct">' + p + t.pct + '</span>' +
-        '</div>' +
-        '<div class="profile-tile__bar" aria-hidden="true"><div class="profile-tile__fill"></div></div>' +
-        '<div class="profile-tile__meta">' +
-          '<strong>' + done + '</strong> ' + escapeHTML(t.of) + ' ' +
-          '<strong>' + total + '</strong> ' + escapeHTML(t.posts) +
-        '</div>';
-      grid.appendChild(tile);
-    });
-
-    section.appendChild(grid);
-    return section;
-  }
-
-  function renderSeries(sectionPosts, read) {
-    var section = el('section', 'profile-card');
-    section.appendChild(el('h2', 'profile-card__title',
-      iconSVG('M12 2L2 7l10 5 10-5-10-5z M2 17l10 5 10-5 M2 12l10 5 10-5') + escapeHTML(t.bySeries)));
-    section.appendChild(el('p', 'profile-card__hint', escapeHTML(t.bySeriesHint)));
-
-    var all = sectionPosts.blog.concat(sectionPosts.readings);
-    var bySeries = {};
-    for (var i = 0; i < all.length; i++) {
-      var p = all[i];
-      if (!p.series) continue;
-      (bySeries[p.series] = bySeries[p.series] || []).push(p);
-    }
-
-    var keys = Object.keys(bySeries);
-    if (keys.length === 0) {
-      section.appendChild(el('p', 'profile-empty', escapeHTML(t.noSeries)));
-      return section;
-    }
-
-    // Sort each series by order, then sort series keys by the dictionary in config.
-    var list = el('div', 'profile-series');
-    keys.sort().forEach(function (key) {
-      var items = bySeries[key].slice().sort(function (a, b) {
-        return (a.series_order || 0) - (b.series_order || 0);
-      });
-      var total = items.length;
-      var done = 0;
-      for (var j = 0; j < items.length; j++) if (read[items[j]._key]) done++;
-      var p = pct(done, total);
-      var titleRaw = (payload.series[key] && payload.series[key].title) || key;
-      var firstHref = items[0] && items[0].permalink;
-
-      var row = document.createElement('a');
-      row.className = 'profile-series__row';
-      row.href = firstHref || '#';
-      row.style.setProperty('--profile-pct', p + '%');
-      row.innerHTML =
-        '<div class="profile-series__head">' +
-          '<span class="profile-series__title">' + escapeHTML(titleRaw) + '</span>' +
-          '<span class="profile-series__count">' + done + '/' + total + '</span>' +
-        '</div>' +
-        '<div class="profile-series__bar" aria-hidden="true"><div class="profile-series__fill"></div></div>';
-      list.appendChild(row);
-    });
-
-    section.appendChild(list);
-    return section;
-  }
-
-  function renderTags(sectionPosts, read) {
-    var section = el('section', 'profile-card');
-    section.appendChild(el('h2', 'profile-card__title',
-      iconSVG('M4 9h16 M4 15h16 M10 3L8 21 M16 3l-2 18') + escapeHTML(t.byTag)));
-    section.appendChild(el('p', 'profile-card__hint', escapeHTML(t.topTags)));
-
-    var counts = {};
-    var all = sectionPosts.blog.concat(sectionPosts.readings);
-    for (var i = 0; i < all.length; i++) {
-      var p = all[i];
-      if (!read[p._key]) continue;
-      (p.tags || []).forEach(function (tag) {
-        counts[tag] = (counts[tag] || 0) + 1;
-      });
-    }
-
-    var entries = Object.keys(counts)
-      .map(function (k) { return { name: k, count: counts[k] }; })
-      .sort(function (a, b) { return b.count - a.count; })
-      .slice(0, 15);
-
-    if (entries.length === 0) {
-      section.appendChild(el('p', 'profile-empty', escapeHTML(t.noTags)));
-      return section;
-    }
-
-    // .tag-chip is the site's own chip, shared with /topics/ and the readings
-    // index. The page used to carry a near-copy of it with a 9px count.
-    var cloud = el('div', 'tag-cloud');
-    entries.forEach(function (e) {
-      var tagUrl = (es ? '/es' : '') + '/tags/' + encodeURIComponent(e.name) + '/';
-      var a = document.createElement('a');
-      a.className = 'tag-chip tag-chip--sm';
-      a.href = tagUrl;
-      a.innerHTML =
-        '<span class="tag-chip__name">' + escapeHTML(e.name) + '</span>' +
-        '<span class="tag-chip__count">' + e.count + '</span>';
-      cloud.appendChild(a);
-    });
-
-    section.appendChild(cloud);
-    return section;
   }
 
   function renderRecent(read) {

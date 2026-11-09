@@ -25,12 +25,6 @@
 <script id="profile-data" type="application/json">
 {
   "lang": "{{ lang }}",
-  "series": {
-    {% for key, s in config.extra.series %}
-      {% if lang == 'es' %}{% set title = s.title_es %}{% else %}{% set title = s.title %}{% endif %}
-      "{{ key }}": { "title": {{ title | json_encode | safe }} }{% if not loop.last %},{% endif %}
-    {% endfor %}
-  },
   "posts": [
     {% set_global first = true %}
     {% for post in blog.pages %}
@@ -38,17 +32,7 @@
       {
         "permalink": "{{ post.permalink | safe }}",
         "title": {{ post.title | json_encode | safe }},
-        "section": "blog",
-        "date": "{{ post.date }}",
-        "tags": {{ post.taxonomies.tags | default(value=[]) | json_encode | safe }},
-        {# json_encode both, because this block has to parse as JSON or the whole
-           dashboard silently empties. A `series_order = "two"` in front matter
-           interpolated bare as `"series_order": two`, which is invalid JSON, and
-           profile.js then fell into its catch and rendered an empty profile in
-           English. Blog posts are caught by the sort in series/single.html, but
-           readings are not: nothing else validates their series fields. #}
-        "series": {{ post.extra.series | default(value='') | json_encode | safe }},
-        "series_order": {{ post.extra.series_order | default(value=0) | json_encode | safe }}
+        "section": "blog"
       }
     {% endfor %}
     {% for post in readings.pages %}
@@ -56,17 +40,7 @@
       {
         "permalink": "{{ post.permalink | safe }}",
         "title": {{ post.title | json_encode | safe }},
-        "section": "readings",
-        "date": "{{ post.date }}",
-        "tags": {{ post.taxonomies.tags | default(value=[]) | json_encode | safe }},
-        {# json_encode both, because this block has to parse as JSON or the whole
-           dashboard silently empties. A `series_order = "two"` in front matter
-           interpolated bare as `"series_order": two`, which is invalid JSON, and
-           profile.js then fell into its catch and rendered an empty profile in
-           English. Blog posts are caught by the sort in series/single.html, but
-           readings are not: nothing else validates their series fields. #}
-        "series": {{ post.extra.series | default(value='') | json_encode | safe }},
-        "series_order": {{ post.extra.series_order | default(value=0) | json_encode | safe }}
+        "section": "readings"
       }
     {% endfor %}
   ]

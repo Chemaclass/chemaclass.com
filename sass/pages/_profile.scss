@@ -1,5 +1,5 @@
 // /profile, client-side reading dashboard. Ruled sections on the fog ground,
-// navy for progress, brass for saved posts.
+// brass for saved posts.
 
 .profile-page {
   max-width: 920px;
@@ -95,141 +95,6 @@
   font-size: 0.95rem;
   margin: 0;
   padding: 0.5rem 0;
-}
-
-// ---- Overall tiles: blog + readings side-by-side ----
-.profile-overall__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.profile-tile {
-  --profile-pct: 0%;
-  background: var(--surface);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-sm);
-  padding: 1.25rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  color: inherit;
-  text-decoration: none;
-  transition: box-shadow 0.2s ease;
-
-  &:hover {
-    border-bottom: 0;
-    box-shadow: var(--shadow-md);
-  }
-
-  &__head {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 0.5rem;
-  }
-
-  &__label {
-    font-weight: 500;
-    color: var(--color-subtitle);
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    font-size: 0.8125rem;
-  }
-
-  &__pct {
-    font-family: var(--font-display);
-    font-size: 2.25rem;
-    font-weight: 500;
-    line-height: 1;
-    font-variant-numeric: tabular-nums;
-    color: var(--heading-color);
-  }
-
-  &__bar {
-    height: 6px;
-    border-radius: 999px;
-    background: var(--preview-divider-color);
-    overflow: hidden;
-  }
-
-  &__fill {
-    display: block;
-    width: var(--profile-pct);
-    height: 100%;
-    background: var(--accent-color);
-    transition: width 0.6s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
-  }
-
-  &__meta {
-    color: var(--color-subtitle);
-    font-size: 0.85rem;
-    font-variant-numeric: tabular-nums;
-
-    strong {
-      color: var(--heading-color);
-    }
-  }
-}
-
-// ---- By series: compact progress rows ----
-.profile-series {
-  display: flex;
-  flex-direction: column;
-}
-
-.profile-series__row {
-  --profile-pct: 0%;
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  padding: 14px 0;
-  border-top: 1px solid var(--preview-divider-color);
-
-  &:hover,
-  &:focus-visible {
-    text-decoration: none;
-    border-bottom: none;
-
-    .profile-series__title { color: var(--accent-color); }
-  }
-}
-
-.profile-series__head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 0.5rem;
-  margin-bottom: 0.3rem;
-}
-
-.profile-series__title {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--heading-color);
-  transition: color 0.2s ease;
-}
-
-.profile-series__count {
-  color: var(--color-subtitle);
-  font-variant-numeric: tabular-nums;
-  font-size: 0.85rem;
-}
-
-.profile-series__bar {
-  height: 4px;
-  border-radius: 999px;
-  background: var(--preview-divider-color);
-  overflow: hidden;
-}
-
-.profile-series__fill {
-  display: block;
-  width: var(--profile-pct);
-  height: 100%;
-  background: var(--accent-color);
-  transition: width 0.6s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
 }
 
 // ---- Recently read + favorites ----
@@ -360,10 +225,7 @@
   }
 }
 
-// The ring from components/_buttons.scss. Only the series row had a focus
-// style, and the tag cloud now inherits .tag-chip's.
-.profile-tile,
-.profile-series__row,
+// The ring from components/_buttons.scss.
 .profile-list__remove,
 .profile-btn {
   &:focus-visible {
@@ -380,8 +242,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .profile-skeleton-card,
-  .profile-tile__fill,
-  .profile-series__fill,
   .profile-list__item,
   .profile-btn {
     animation: none !important;

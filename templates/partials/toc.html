@@ -7,7 +7,7 @@
    into one list. The `level` on each entry drives the class, so a page starting at
    h3 still gets the right indent.
 
-   toc.js only decorates this: scroll spy, the toggle, keyboard nav, and the
+   toc.js only decorates this: scroll spy, keyboard nav, and the
    copy-link anchors on the headings themselves. #}
 
 {% set_global toc_count = 0 %}
@@ -40,7 +40,6 @@
 {% if toc_count >= 2 %}
 <nav
   id="toc-container"
-  data-hide-toc="false"
   aria-label="{{ trans(key='toc_header_title', lang=lang) }}">
   <div id="reading-progress" class="reading-progress"></div>
 
@@ -70,11 +69,6 @@
 
   <div class="toc-header">
     <a class="toc-title" href="#">{{ trans(key="toc_header_title", lang=lang) }}</a>
-    <button type="button" class="toc-close" aria-label="{{ trans(key='toc_close_label', lang=lang) }}">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-        <path d="M4 4l8 8m0-8L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-      </svg>
-    </button>
   </div>
 
   <ul class="toc-list" id="toc-list" role="list">

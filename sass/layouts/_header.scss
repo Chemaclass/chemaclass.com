@@ -145,7 +145,7 @@
   padding-left: 0.5rem;
   border-left: 1px solid var(--preview-divider-color);
 
-  button, .lang-switch, .profile-link {
+  button, .lang-switch, .profile-link, .github-link {
     width: 40px;
     height: 40px;
     display: flex;
@@ -168,6 +168,8 @@
   }
 
   svg { stroke: currentColor; }
+
+  .github-link svg { stroke: none; fill: currentColor; }
 
   .lang-switch {
     font-size: 0.8rem;
@@ -286,7 +288,7 @@
       border-left: none;
       gap: 0.5rem;
 
-      button, .lang-switch, .profile-link {
+      button, .lang-switch, .profile-link, .github-link {
         width: 44px;
         height: 44px;
         border: 1px solid var(--preview-divider-color);

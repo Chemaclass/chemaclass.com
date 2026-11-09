@@ -18,7 +18,6 @@
         {{ trans(key="all_posts", lang=lang) }}
       </a>
       {{ <favorite_toggle lang={lang} /> }}
-      {{ <toc_toggle lang={lang} /> }}
     </div>
 
     <header class="blog-post__header">
@@ -82,7 +81,7 @@
     </div>
     {% endif %}
 
-    <div class="blog-post-layout" data-toc-hidden="false">
+    <div class="blog-post-layout">
       {% include "partials/toc.html" %}
 
       <div class="blog-post-main">

@@ -14,10 +14,8 @@
 {% endblock posthead %}
 
 {% block content %}
-  {% if paginator is defined %}{% set shelf_pages = paginator.pages %}{% else %}{% set shelf_pages = section.pages %}{% endif %}
+  {% set shelf_pages = section.pages %}
   {% set pinned_posts = [p for p in section.pages if p.extra.pin] %}
-  {% set show_pinned = true %}
-  {% if paginator is defined and paginator.current_index != 1 %}{% set show_pinned = false %}{% endif %}
 
   {% set_global seen_years = [] %}
   {% for post in shelf_pages %}
@@ -36,7 +34,7 @@
     </header>
 
     <div class="blog-list">
-      {% if show_pinned and pinned_posts | length > 0 %}
+      {% if pinned_posts | length > 0 %}
       <section class="year-block">
         <div class="year-block__label">
           <h2 class="year-block__year year-block__year--text">{{ trans(key="pinned", lang=lang) }}</h2>
@@ -66,9 +64,5 @@
         </section>
       {% endfor %}
     </div>
-
-    {% if paginator is defined %}
-      {{ <pagination_nav paginator={paginator} lang={lang} /> }}
-    {% endif %}
   </div>
 {% endblock content %}
