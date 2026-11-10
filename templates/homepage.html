@@ -170,6 +170,19 @@
                             <span class="project-card__stars" title="{{ trans(key="home_github_stars", lang=lang) }}"><span aria-hidden="true">★</span> <span class="visually-hidden">{{ trans(key="home_github_stars", lang=lang) }}:</span> {% if project.stars >= 1000 %}{{ (project.stars / 1000) | round(precision=1) }}k{% else %}{{ project.stars }}{% endif %}</span>
                         </span>
                         <span class="project-card__desc">{{ trans(key="home_project_" ~ project.key ~ "_desc", lang=lang) }}. {{ trans(key="home_project_" ~ project.key ~ "_long", lang=lang) }}</span>
+                        {% if project.key == "phel" -%}
+                        <pre class="project-card__snippet"><code>(<span class="sn-kw">ns</span> <span class="sn-fn">app</span>)
+(<span class="sn-kw">defn</span> <span class="sn-fn">greet</span> [name]
+  (<span class="sn-fn">str</span> <span class="sn-str">"Hello, "</span> name <span class="sn-str">"!"</span>))</code></pre>
+                        {%- elif project.key == "bashunit" -%}
+                        <pre class="project-card__snippet"><code><span class="sn-kw">function</span> <span class="sn-fn">test_sum</span>() {
+  <span class="sn-fn">assert_equals</span> <span class="sn-str">4</span> <span class="sn-str">"$(sum 2 2)"</span>
+}</code></pre>
+                        {%- else -%}
+                        <pre class="project-card__snippet"><code><span class="sn-kw">name</span>: <span class="sn-str">conventional-commits</span>
+<span class="sn-kw">globs</span>: <span class="sn-str">"**/*"</span>
+<span class="sn-fn">Use Conventional Commits.</span></code></pre>
+                        {%- endif %}
                     </a>
                 </li>
                 {% endfor %}

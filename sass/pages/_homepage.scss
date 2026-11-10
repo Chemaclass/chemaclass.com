@@ -579,6 +579,32 @@ main:has(.homepage-container) #scroll-to-top {
     color: var(--color-on-accent-muted);
   }
 
+  &__snippet {
+    margin: auto 0 0;
+    padding: 0.875rem 1rem;
+    border-radius: 8px;
+    background: #14171c;
+    box-shadow: none;
+    overflow-x: auto;
+
+    .dark & { background-color: #14171c !important; }
+
+    code {
+      display: block;
+      padding: 0;
+      background: none;
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      color: var(--color-on-accent-muted);
+      white-space: pre;
+    }
+
+    .sn-kw { color: var(--color-brass-on-accent); }
+    .sn-fn { color: #ffffff; }
+    .sn-str { color: #a9d6b8; }
+  }
+
   &:hover &__name { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
 
   @media (max-width: $breakpoint-tablet) {
