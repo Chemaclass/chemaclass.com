@@ -576,10 +576,9 @@
     <link rel="license" href="{{ config.extra.content_license.url | safe }}">
     {% endif %}
 
-    {% block head %}
-      <link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript><link rel="stylesheet" href="/css/fontawesome.min.css"></noscript>
-    {% endblock head %}
+    <link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/fontawesome.min.css"></noscript>
+    {% block head %}{% endblock head %}
     {% block styles %}
       {{ <page_styles css="page.css" preload="sponsor.css" /> }}
     {% endblock styles %}
