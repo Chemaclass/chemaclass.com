@@ -627,3 +627,46 @@ main:has(.homepage-container) #scroll-to-top {
     transform: none;
   }
 }
+
+.home-work {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    height: 100%;
+
+    h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      transition: color 0.2s var(--ease-out-expo);
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--color-subtitle);
+    }
+
+    > span {
+      margin-top: auto;
+      font-size: 0.9375rem;
+      color: var(--accent-color);
+    }
+
+    &:hover h3 { color: var(--accent-color); }
+  }
+}

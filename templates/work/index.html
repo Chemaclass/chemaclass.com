@@ -1,0 +1,9 @@
+{% extends "page.html" %}
+
+{% block content %}
+  <article class="blog-post plain-page">
+    <div class="plain-page__content">
+      {{ section.content | safe }}
+    </div>
+  </article>
+{% endblock content %}

@@ -149,6 +149,25 @@
     </section>
     </div>
 
+    <section class="home-section home-work" aria-labelledby="work-title">
+        <div class="section-head">
+            <h2 id="work-title">{{ trans(key="home_work_title", lang=lang) }}</h2>
+            <a class="section-head__link" href="{{ prefix }}/work/">{{ trans(key="home_work_all", lang=lang) }}</a>
+        </div>
+        <ul class="home-work__grid">
+            {% for path in ["work/bashunit.md", "work/agnostic-ai.md"] %}
+            {% set study = get_page(path=path, lang=lang) %}
+            <li>
+                <a class="home-work__card" href="{{ study.permalink }}">
+                    <h3>{{ study.title }}</h3>
+                    <p>{{ study.description }}</p>
+                    <span>{{ trans(key="home_work_read", lang=lang) }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
     <section class="band full-bleed home-projects" aria-labelledby="projects-title">
         <div class="home-projects__inner">
             <div class="home-projects__head">
