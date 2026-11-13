@@ -222,3 +222,48 @@
   box-shadow: var(--shadow-book);
   outline: none;
 }
+
+.start-here {
+  margin-bottom: clamp(40px, 5vw, 64px);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: clamp(1rem, 0.6rem + 1.2vw, 1.5rem);
+    background: var(--surface);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.25s var(--ease-out-expo), transform 0.25s var(--ease-out-expo);
+
+    &:hover {
+      border-bottom: none;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.375rem;
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      color: var(--heading-color);
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--color-subtitle);
+  }
+}
