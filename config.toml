@@ -250,6 +250,7 @@ home_title_tag = "Jose M. Valera Reales | Software Craftsmanship"
 home_subtitle = "Building software, teams, and ideas"
 home_about = "About"
 home_latest = "Latest writing"
+home_selected = "Selected writing"
 home_eyebrow_role = "Engineering Manager at Kombo"
 home_title_html = "Building software, teams, <em>and ideas.</em>"
 home_all_posts = "All posts →"
@@ -384,6 +385,12 @@ start_here_posts = [
   "blog/2024-03-28-effective-pair-programming.md",
   "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
   "blog/2022-09-25-the-beauty-of-leadership.md",
+]
+
+home_selected_posts = [
+  "blog/2024-03-28-effective-pair-programming.md",
+  "blog/2022-09-25-the-beauty-of-leadership.md",
+  "blog/2025-10-10-ai-gives-you-speed-not-quality.md",
 ]
 
 nav = [
@@ -647,6 +654,7 @@ home_title_tag = "Jose M. Valera Reales | Artesanía del Software"
 home_subtitle = "Construyendo software, equipos e ideas"
 home_about = "Sobre mí"
 home_latest = "Últimos artículos"
+home_selected = "Artículos seleccionados"
 home_eyebrow_role = "Engineering Manager en Kombo"
 home_title_html = "Construyendo software, equipos <em>e ideas.</em>"
 home_all_posts = "Todos los artículos →"

@@ -62,6 +62,29 @@
         <img class="home-hero__portrait" src="{{ profile_image.url }}" alt="{{ trans(key="home_profile_alt", lang=lang) }}" width="560" height="680" decoding="async" fetchpriority="high">
     </section>
 
+    <section class="home-section home-selected" aria-labelledby="selected-title">
+        <div class="section-head">
+            <h2 id="selected-title">{{ trans(key="home_selected", lang=lang) }}</h2>
+        </div>
+        <ul class="home-selected__grid">
+            {% for path in config.extra.home_selected_posts %}
+            {% set post = get_page(path=path, lang=lang) %}
+            {% set reading_time = post.extra.reading_time | default(value=post.reading_time) %}
+            <li>
+                <a href="{{ post.permalink }}" class="home-selected__card">
+                    <span class="home-selected__meta">
+                        {% if post.extra.series %}<span>{{ trans(key="home_series_" ~ post.extra.series, lang=lang) }}</span>{% endif %}
+                        {% if reading_time %}<span>{{ reading_time }} min</span>{% endif %}
+                    </span>
+                    <h3>{{ post.title }}</h3>
+                    {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+                    <span class="home-selected__more">{{ trans(key="home_read_post", lang=lang) }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
     <div class="latest-grid">
     {% set featured = blogs.pages[0] %}
     <section class="home-section home-latest" aria-labelledby="latest-title">
