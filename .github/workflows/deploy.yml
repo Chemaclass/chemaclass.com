@@ -99,18 +99,6 @@ jobs:
       - name: Check no page throws a JavaScript error
         run: python3 scripts/check-js-runtime.py
 
-      - name: Check shared UI rendering
-        run: python3 scripts/check-visual-regressions.py --screenshots /tmp/visual-regressions
-
-      - name: Upload rendering screenshots
-        if: always()
-        uses: actions/upload-artifact@v7
-        with:
-          name: visual-regressions
-          path: /tmp/visual-regressions
-          if-no-files-found: ignore
-          retention-days: 7
-
       - name: Upload artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5

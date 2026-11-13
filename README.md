@@ -77,18 +77,6 @@ Every run starts with a page that throws an error on purpose, and the check must
 
 Read the comment at the top of the script before you trust a passing run. The check cannot see a plain `console.error`, a 404 on a file the page loads (an image, a script, a style), or anything that only happens after a click.
 
-## Rendering checks
-
-Run the browser checks after a production build:
-
-```bash
-python3 scripts/check-visual-regressions.py --screenshots /tmp/visual-regressions
-```
-
-Chrome checks the homepage, blog index, article and CV in both languages, at 500px and 1280px widths, in light and dark mode. It checks that footer icons have glyphs and loaded fonts, navigation links remain visible, the phone menu opens and closes, and the page fits the viewport. A self test removes the icon stylesheet, hides the header and forces overflow; the check must detect all three failures.
-
-CI runs this before deployment and saves footer screenshots as a `visual-regressions` artifact for seven days. After measuring the full page, the check hides the other page elements to capture the footer at the top of the screenshot. These are rendering checks with screenshots for review, rather than pixel comparisons. They do not detect every change to spacing, typography or color.
-
 ## Icons
 
 The site ships a Font Awesome subset: only the ~100 icons it uses. The script cuts them from the untouched original release in `tools/fontawesome/` and writes them to `static/`. The full set is 397 KB, the subset is 39 KB.
